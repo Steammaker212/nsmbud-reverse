@@ -1,0 +1,49 @@
+#pragma once
+
+#include <utility/Direction.h>
+
+#include <heap/seadDisposer.h>
+#include <math/seadVector.h>
+
+class Actor;
+
+class ActorCoinMgr
+{
+    // createInstance()                             Address: 0x026CA474
+    // deleteInstance()                             Address: Deleted
+    // sInstance                                    Address: 0x101DB43C
+    // SingletonDisposer_::~SingletonDisposer_()    Address: 0x026CDF00
+    // SingletonDisposer_::sStaticDisposer          Address: 0x101DB440
+    // SingletonDisposer_::vtbl                     Address: 0x100F4EAC
+    SEAD_SINGLETON_DISPOSER(ActorCoinMgr)
+
+public:
+    struct UpCoinArg
+    {
+        sead::Vector3f pos;
+        DirType dir;
+        u8 count;
+        u8 layer;
+        u8 spawn_height;
+        u8 _13;
+        u8 spacing_decrease;
+        u8 _15;
+        u8 curve_type;
+    };
+    static_assert(sizeof(UpCoinArg) == 0x18);
+
+public:
+    // Address: 0x026CA34C
+    ActorCoinMgr();
+
+    // Address: 0x026CABB4
+    void spawnItemCoin(const sead::Vector3f& pos, DirType dir, s32 player_no) const;
+
+    // Address: 0x026CB06C
+    void createUpCoin(const UpCoinArg& arg, u32 flag = 3) const;
+    // Address: 0x026CBA7C
+    void createUpCoinCB(const UpCoinArg& arg, bool alter_dir, s32 player_no) const;
+
+    // Address: 0x026CBD10
+    void spawnCoinSpringFunsui(const sead::Vector3f& pos, s32 player_no, s32 coin_count, s32 angle_type, Actor* p_eat_die_actor);
+};

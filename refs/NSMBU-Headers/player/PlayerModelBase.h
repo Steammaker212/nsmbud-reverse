@@ -1,0 +1,706 @@
+#pragma once
+
+#include <graphics/FrameCtrl.h>
+#include <utility/Angle3.h>
+
+#include <container/seadSafeArray.h>
+#include <heap/seadDisposer.h>
+#include <math/seadMatrix.h>
+#include <prim/seadRuntimeTypeInfo.h>
+#include <prim/seadSafeString.h>
+
+class AnimModel;
+class ModelResource;
+
+class PlayerModelBase : public sead::IDisposer  // vtbl Address: 0x1016BCE4
+{
+    // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9D24
+    // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101EBA78
+    SEAD_RTTI_BASE(PlayerModelBase)
+
+public:
+    enum Type
+    {
+        cType_Mario = 0,
+        cType_Luigi,
+        cType_NumMario,
+
+        cType_BlueToad = cType_NumMario,
+        cType_YellowToad,
+        cType_NpcToad,      // i.e., Red Toad
+
+        cType_Nabbit,
+        cType_Yoshi,
+        cType_Mii,
+        cType_Num
+    };
+    static_assert(cType_Num == 8);
+    static_assert(sizeof(Type) == 4);
+
+    enum SceneType
+    {
+        cSceneType_Course = 0,
+        cSceneType_CourseSelect,
+        cSceneType_Unknown,
+        cSceneType_2D,              // i.e., for menus
+        cSceneType_Num
+    };
+    static_assert(sizeof(SceneType) == 4);
+    static_assert(cSceneType_Num == 4);
+    
+    enum TexAnmType
+    {
+        cTexAnmType_WaitStatic = 0,
+        cTexAnmType_Wait,
+        cTexAnmType_GoalPutOnCap,
+        cTexAnmType_PropellerGoalPutOnCap,
+        cTexAnmType_PenguinGoalPutOnCap,
+        cTexAnmType_MusaGoalPutOnCap,
+        cTexAnmType_PenguinRideGoalPutOnCap,
+        cTexAnmType_MusaRideGoalPutOnCap,
+        cTexAnmType_GoalPutOnCap_2,
+        cTexAnmType_Dam,
+        cTexAnmType_Jump,
+        cTexAnmType_Jumped,
+        cTexAnmType_Throw,
+        cTexAnmType_CourseIn,
+        cTexAnmType_CoinComp,
+        cTexAnmType_DmGlad,
+        cTexAnmType_DmGlad2,
+        cTexAnmType_DmGlad2Wait,
+        cTexAnmType_DmGlad3,
+        cTexAnmType_DmGlad3Wait,
+        cTexAnmType_DmGlad4Wait,
+        cTexAnmType_DmSad,
+        cTexAnmType_BalloonWaitDisconnect,
+        cTexAnmType_KinopioMGGlad,
+        cTexAnmType_KinopioMGSad,
+        cTexAnmType_DmCourseIn,
+        cTexAnmType_DmSad2,
+        cTexAnmType_KinopioDmThanksGift,
+        cTexAnmType_KinopioDmHail,
+        cTexAnmType_KinopioDmDamage,
+        cTexAnmType_KinopioDmAwawa,
+        cTexAnmType_KinopioDmShoot,
+        cTexAnmType_DmEscort,
+        cTexAnmType_DmEscortWait,
+        cTexAnmType_DmEnding1,
+        cTexAnmType_DmEnding1Wait,
+        cTexAnmType_DmEnding2,
+        cTexAnmType_Num
+    };
+    static_assert(cTexAnmType_Num == 37);
+    static_assert(sizeof(cTexAnmType_Num) == 4);
+
+    enum DarkTargetType
+    {
+        cDarkTargetType_InvTevColor0 = 0,   // Set for normal & tower door
+        cDarkTargetType_TevKColor3          // Set for castle door
+    };
+    static_assert(sizeof(DarkTargetType) == 4);
+
+    enum Flag
+    {
+        cFlag_IsCarry                   = 1 <<  0,
+        cFlag_IsLiftUp                  = 1 <<  1,
+        cFlag_IsBalloonChibiYoshiFly    = 1 <<  2,
+        cFlag_IsBubbleChibiYoshiShake   = 1 <<  3,
+        cFlag_Bit4                      = 1 <<  4,
+        cFlag_Bit5                      = 1 <<  5,
+        cFlag_Bit6                      = 1 <<  6,
+        // ...
+        cFlag_Bit9                      = 1 <<  9,
+        cFlag_IsStarAnm                 = 1 << 10,
+        cFlag_IsOnHDokan                = 1 << 11,
+        cFlag_IsWaitL                   = 1 << 12,
+        cFlag_IsWaitR                   = 1 << 13,
+        cFlag_IsRideCloudWait           = 1 << 14,
+        cFlag_IsRideLiftWait            = 1 << 15,
+
+        cFlag_None                      = 0
+    };
+
+    enum AnmFlagBit
+    {
+        cAnmFlagBit_Sit                 =  0,
+        cAnmFlagBit_Carry,
+        cAnmFlagBit_Hang,
+        cAnmFlagBit_HangCliff,
+        cAnmFlagBit_Swim,
+        cAnmFlagBit_5,
+        cAnmFlagBit_6,
+        cAnmFlagBit_7,
+        cAnmFlagBit_8,
+        cAnmFlagBit_9,
+        cAnmFlagBit_Jump,
+        // ...
+        cAnmFlagBit_Slope               = 12,
+        // ...
+        cAnmFlagBit_Dir_L               = 14,
+        cAnmFlagBit_Dir_R,
+        cAnmFlagBit_16,
+        // ...
+        cAnmFlagBit_Personal_Luigi      = 20,
+        cAnmFlagBit_Personal_Kinopio,
+        cAnmFlagBit_Personal_Musa,
+        cAnmFlagBit_Personal_Penguin,
+        cAnmFlagBit_Personal_Propeller
+    };
+    static_assert(sizeof(AnmFlagBit) == 4);
+
+    enum AnmFlagType
+    {
+        cAnmFlagType_Main = 0,
+        cAnmFlagType_Body,
+        cAnmFlagType_Unknown,
+        cAnmFlagType_Num
+    };
+    static_assert(cAnmFlagType_Num == 3);
+
+    enum FaceAngleOverrideFlag
+    {
+        cFaceAngleOverrideFlag_X = 1 << 0,  // Never used
+        cFaceAngleOverrideFlag_Y = 1 << 1,
+        cFaceAngleOverrideFlag_Z = 1 << 2
+    };
+
+    enum HeadType
+    {
+        cHeadType_Normal = 0,
+        cHeadType_BonusCap
+    };
+    static_assert(sizeof(HeadType) == 4);
+
+    enum RndType
+    {
+        cRndType_Uniform = 0,
+        cRndType_RightSkew
+    };
+
+    enum
+    {
+        cSklAnm_Main = 0,
+        cSklAnm_Body,
+        cSklAnm_BaseNum
+    };
+    static_assert(cSklAnm_BaseNum == 2);
+    
+public:
+    // Address: 0x02920CA8
+    PlayerModelBase(const sead::SafeString& model_res_key, const sead::SafeString& anm_res_key);
+    // Address: 0x02920E8C
+    virtual ~PlayerModelBase();
+
+    virtual void setTexAnmType(TexAnmType type) = 0;
+
+    virtual bool setPersonalAnm(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id, bool body) = 0;
+    virtual bool setPersonalRideAnm(ModelResource** pp_anm_res, sead::BufferedSafeString* p_anm_name, s32 anm_id) = 0;
+
+    virtual void setFootAnmImpl(const ModelResource* p_anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) = 0;
+    virtual void setBodyAnmImpl(const ModelResource* p_anm_res, const sead::SafeString& anm_name, FrameCtrl::PlayMode mode, f32 rate, f32 frame, f32 blend_duration) = 0;
+
+    virtual void setAnmBind() = 0;
+
+    virtual void calcImpl() = 0;
+    virtual void calc2Impl() = 0;
+
+    virtual void setModelRenderPass(s32 idx_opa, s32 idx_xlu) = 0;
+    virtual void setModelG3dRenderFlag(u32 flag) = 0;   // ModelG3d::RenderFlag
+
+    virtual void setDark(DarkTargetType type, f32 value) = 0;
+
+    // Address: 0x02920EE0
+    void calcStoopOffset();
+
+    // Address: 0x02920F88
+    void reset();
+
+    // Address: 0x02920F9C
+    virtual f32 getAnmRate(s32 anm_id);
+    // Address: 0x02920FB0
+    virtual f32 getAnmBlendDuration(s32 anm_id);
+
+    // Address: 0x02921524
+    virtual void setAnm(s32 anm_id, f32 rate, f32 blend_duration = 0.0f, f32 frame = 0.0f);
+    // Address: 0x02921280
+    void setBodyAnm(s32 anm_id, f32 rate, f32 frame = 0.0f, f32 blend_duration = 0.0f);
+    // Address: 0x029219F8
+    void copyLinkAnm(f32 blend_duration);
+
+    // Address: 0x02921444
+    void setLinkAnm(s32 anm_id, f32 rate, f32 blend_duration = 0.0f, f32 frame = 0.0f);
+    // Address: 0x02921A40
+    void setRideAnm(s32 anm_id, f32 rate, f32 blend_duration = 0.0f, f32 frame = 0.0f);
+    // Address: 0x029214F0
+    void setSlopeBodyAnm(f32 blend_duration);
+    virtual void releaseBodyAnm(f32 blend_duration) = 0;
+    virtual void setCarryBodyAnm(f32 blend_duration, bool bubble_reset_frame) = 0;
+
+    // Address: 0x02921DB4
+    void setJumpAnmRand(RndType rnd_type);
+    // Address: 0x02921E50
+    virtual bool getJumpAnmName(sead::BufferedSafeString* p_anm_name, s32 anm_id, bool body);
+
+    // Address: 0x02921088
+    void setRate(f32 rate);
+    // Address: 0x029219F0
+    f32 getRate();
+
+    // Address: 0x02921058
+    void setRateDirect(f32 rate);
+    // Address: 0x029220E0
+    f32 getRateDirect();
+
+    // Address: 0x029220E8
+    virtual void setBodyRate(f32 rate);
+    // Address: 0x029214E0
+    f32 getBodyRate();
+
+    // Address: 0x02920FC4
+    void setRateImpl(s32 skl_anm_idx, f32 rate);
+    // Address: 0x029214B8
+    f32 getRateImpl(s32 skl_anm_idx);
+
+    // Address: 0x0292211C
+    bool isAnmStop();
+    // Address: 0x02922124
+    bool isBodyAnmStop();
+    // Address: 0x029220F0
+    bool isAnmStopImpl(s32 skl_anm_idx);
+
+    // Address: 0x02921178
+    void setFrame(f32 frame);
+    // Address: 0x02921210
+    f32 getFrame();
+
+    // Address: 0x02921170
+    void setFrameDirect(f32 frame);
+    f32 getFrameDirect() { return getFrame(); }
+
+    // Address: 0x0292212C
+    virtual void setBodyFrame(f32 frame);
+    // Address: 0x029214E8
+    f32 getBodyFrame();
+
+    // Address: 0x029210F8
+    void setFrameImpl(s32 skl_anm_idx, f32 frame);
+    // Address: 0x029211E8
+    f32 getFrameImpl(s32 skl_anm_idx);
+
+    // Address: 0x02922158
+    bool checkFrame(f32 frame);
+    // Address: 0x02922160
+    bool checkBodyFrame(f32 frame);
+    // Address: 0x02922134
+    bool checkFrameImpl(s32 skl_anm_idx, f32 frame);
+
+    // Address: 0x02922194
+    bool isAnmLoopFrame();
+    // Address: Deleted
+    bool isBodyAnmLoopFrame();
+    // Address: 0x02922168
+    bool isAnmLoopFrameImpl(s32 skl_anm_idx);
+
+    // Address: 0x0292219C
+    f32 getFrameEnd();
+
+    // Address: 0x02921060
+    bool isBodyAnmOn();
+
+    // Address: 0x029221B0
+    void getJointMtx(sead::Matrixf* p_mtx, s32 index);
+    // Address: 0x029221D4
+    void getJointPos(sead::Vector3f* p_pos, s32 index);
+
+    // Address: 0x02922210
+    virtual void getJointMtx(sead::Matrixf* p_mtx, const sead::SafeString& name);
+    // Address: 0x029222BC
+    void getJointPos(sead::Vector3f* p_pos, const sead::SafeString& name);
+
+    virtual void play() = 0;
+
+    // Address: 0x02922304
+    void calc(const sead::Matrixf& mtx);
+    // Address: 0x029224E8
+    void calc2();
+
+    // Address: 0x029224F8
+    virtual void draw();
+
+    // Address: 0x02922578
+    void cancelCarry();
+
+    // Address: 0x029225AC
+    void onCarry();
+    // Address: 0x029225D0
+    void onLiftUp();
+    // Address: 0x029225F4
+    void onBalloonChibiYoshiFly();
+
+    void onBubbleChibiYoshiShake()
+    {
+        mFlag.set(cFlag_IsBubbleChibiYoshiShake);
+    }
+
+    // Address: 0x0292250C
+    void offCarry();
+    // Address: 0x02922530
+    void offLiftUp();
+    // Address: 0x02922554
+    void offBalloonChibiYoshiFly();
+
+    void offBubbleChibiYoshiShake()
+    {
+        mFlag.reset(cFlag_IsBubbleChibiYoshiShake);
+    }
+
+    // Address: 0x0292123C
+    bool isCarry();
+    // Address: 0x02921218
+    bool isLiftUp();
+
+    bool isBalloonChibiYoshiFly() const
+    {
+        return mFlag.isOn(cFlag_IsBalloonChibiYoshiFly);
+    }
+
+    bool isBubbleChibiYoshiShake() const
+    {
+        return mFlag.isOn(cFlag_IsBubbleChibiYoshiShake);
+    }
+
+    virtual void onStarAnm()
+    {
+        mFlag.set(cFlag_IsStarAnm);
+    }
+
+    virtual void offStarAnm()
+    {
+        mFlag.reset(cFlag_IsStarAnm);
+    }
+
+    bool isStarAnm() const
+    {
+        return mFlag.isOn(cFlag_IsStarAnm);
+    }
+
+    // Address: 0x02922618
+    bool isFootStepTiming();
+
+    // Address: 0x029227D0
+    bool isCourseSelectScene();
+
+    // Address: 0x02921D48
+    u32 rndInt(u32 max);
+
+    virtual f32 getBaseScale() = 0;
+
+    s32 getAnmID() const
+    {
+        return mAnm;
+    }
+
+    ModelResource* getModelResFile() const
+    {
+        return mpModelRes;
+    }
+
+    ModelResource* getAnmResFile() const
+    {
+        return mpAnmRes;
+    }
+
+    const sead::Matrixf& getMtxSr() const
+    {
+        return mMtxSr;
+    }
+
+    sead::Vector3f* getHeadTopPosP()
+    {
+        return &mHeadTopPos;
+    }
+
+    sead::Vector3f* getHeadPosP()
+    {
+        return &mHeadPos;
+    }
+
+    SceneType getSceneType() const
+    {
+        return mSceneType;
+    }
+
+    bool isValidSceneType() const
+    {
+        return 0 <= mSceneType && mSceneType < cSceneType_Num;
+    }
+
+    u32 getAnmFlag(AnmFlagType type) const
+    {
+        return mAnmFlag[type];
+    }
+
+    u32 getAnmFlag() const
+    {
+        return mAnmFlag[cAnmFlagType_Main];
+    }
+
+    u32 getBodyAnmFlag() const
+    {
+        return mAnmFlag[cAnmFlagType_Body];
+    }
+
+    bool isAnmFlag(AnmFlagType type, u32 flag) const
+    {
+        return mAnmFlag[type] & flag;
+    }
+
+    bool isAnmFlagBit(AnmFlagType type, AnmFlagBit bit) const
+    {
+        return isAnmFlag(type, 1 << bit);
+    }
+
+    bool isAnmFlag(u32 flag) const
+    {
+        return isAnmFlag(cAnmFlagType_Main, flag);
+    }
+
+    bool isAnmFlagBit(AnmFlagBit bit) const
+    {
+        return isAnmFlagBit(cAnmFlagType_Main, bit);
+    }
+
+    bool isSitAnm() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Sit);
+    }
+
+    bool isCarryAnm() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Carry);
+    }
+
+    bool isHangAnm() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Hang);
+    }
+
+    bool isHangCliffAnm() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_HangCliff);
+    }
+
+    bool isSwimAnm() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Swim);
+    }
+
+    bool isJumpAnm() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Jump);
+    }
+
+    bool isDirAnm() const
+    {
+        return isAnmFlag(1 << cAnmFlagBit_Dir_L | 1 << cAnmFlagBit_Dir_R);
+    }
+
+    bool isDirAnmL() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Dir_L);
+    }
+
+    bool isDirAnmR() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Dir_R);
+    }
+
+    bool isLuigiPersonalAnm() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Personal_Luigi);
+    }
+
+    bool isMusaPersonalAnm() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Personal_Musa);
+    }
+
+    bool isPenguinPersonalAnm() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Personal_Penguin);
+    }
+
+    bool isPropellerPersonalAnm() const
+    {
+        return isAnmFlagBit(cAnmFlagBit_Personal_Propeller);
+    }
+
+    bool isBodyAnmFlag(u32 flag) const
+    {
+        return isAnmFlag(cAnmFlagType_Body, flag);
+    }
+
+    bool isBodyAnmFlagBit(AnmFlagBit bit) const
+    {
+        return isAnmFlagBit(cAnmFlagType_Body, bit);
+    }
+
+    bool isCarryBodyAnm() const
+    {
+        return isBodyAnmFlagBit(cAnmFlagBit_Carry);
+    }
+
+    bool isJumpBodyAnm() const
+    {
+        return isBodyAnmFlagBit(cAnmFlagBit_Jump);
+    }
+
+    bool isSlopeBodyAnm() const
+    {
+        return isBodyAnmFlagBit(cAnmFlagBit_Slope);
+    }
+
+    bool isPenguinPersonalBodyAnm() const
+    {
+        return isBodyAnmFlagBit(cAnmFlagBit_Personal_Penguin);
+    }
+
+    void changeFaceAngleOverrideFlag(FaceAngleOverrideFlag flag, bool enable)
+    {
+        mFaceAngleOverrideFlag.change(flag, enable);
+    }
+
+    const Angle3& getFaceAngleOverride() const
+    {
+        return mFaceAngleOverride;
+    }
+
+    void setFaceAngleOverride(const Angle3& angle)
+    {
+        mFaceAngleOverride = angle;
+    }
+
+    void resetFaceAngleOverride()
+    {
+        mFaceAngleOverride.x() = 0;
+        mFaceAngleOverride.y() = 0;
+        mFaceAngleOverride.z() = 0;
+    }
+
+    void resetFaceAngleOverrideFlag()
+    {
+        mFaceAngleOverrideFlag.makeAllZero();
+    }
+
+    void onOnHDokan()
+    {
+        mFlag.set(cFlag_IsOnHDokan);
+    }
+
+    void offOnHDokan()
+    {
+        mFlag.reset(cFlag_IsOnHDokan);
+    }
+
+    bool isOnHDokan() const
+    {
+        return mFlag.isOn(cFlag_IsOnHDokan);
+    }
+
+    void onWaitL()
+    {
+        mFlag.set(cFlag_IsWaitL);
+    }
+
+    void onWaitR()
+    {
+        mFlag.set(cFlag_IsWaitR);
+    }
+
+    void offWait()
+    {
+        mFlag.reset(cFlag_IsWaitL);
+        mFlag.reset(cFlag_IsWaitR);
+    }
+
+    bool isWaitL() const
+    {
+        return mFlag.isOn(cFlag_IsWaitL);
+    }
+
+    bool isWaitR() const
+    {
+        return mFlag.isOn(cFlag_IsWaitR);
+    }
+
+    void onRideCloudWait()
+    {
+        mFlag.set(cFlag_IsRideCloudWait);
+    }
+
+    void offRideCloudWait()
+    {
+        mFlag.reset(cFlag_IsRideCloudWait);
+    }
+
+    bool isRideCloudWait() const
+    {
+        return mFlag.isOn(cFlag_IsRideCloudWait);
+    }
+
+    void onRideLiftWait()
+    {
+        mFlag.set(cFlag_IsRideLiftWait);
+    }
+
+    void offRideLiftWait()
+    {
+        mFlag.reset(cFlag_IsRideLiftWait);
+    }
+
+    bool isRideLiftWait() const
+    {
+        return mFlag.isOn(cFlag_IsRideLiftWait);
+    }
+
+protected:
+    ModelResource*          mpModelRes;
+    ModelResource*          mpAnmRes;
+    AnimModel*              mpModel;
+    s32                     mAnm;
+    s32                     mBodyAnm;
+    s32                     mRideAnm;
+    PlayerModelBase*        mpLinkPlayer;
+    sead::Matrixf           mMtxSrt;
+    sead::Matrixf           mMtxSr;
+    sead::Vector3f          mHeadTopPos;
+    sead::Vector3f          mHeadPos;
+    Type                    mType;
+    SceneType               mSceneType;
+    TexAnmType              mTexAnmType;
+    s32                     mDefaultExpressionTimer;
+    f32                     mOffsetY;
+    f32                     mStoopOffsetCurrent;
+    f32                     mStoopOffsetTarget;
+    f32                     mStoopOffsetBlendFramesRemaining;
+    sead::SafeArray<
+        u32,
+        cAnmFlagType_Num
+    >                       mAnmFlag;
+    sead::BitFlag32         mFlag;
+    s32                     mJumpIndex;
+    s32                     mJumpIndexPrev;         // Maybe?
+    Angle3                  mFaceAngleOverride;     // X is always set to 0 and never actually used
+    sead::BitFlag32         mFaceAngleOverrideFlag;
+    bool                    mCarryStateChanged;
+
+    static const s32 cJumpMax = 3;
+
+    // Address: 0x1022AC80
+    static const sead::SafeString cJumpAnmVarDt[];
+    // Address: 0x1022AC98
+    static const sead::SafeString c2JumpAnmVarDt[];
+    // Address: 0x1022ACB0
+    static const sead::SafeString c2JumpedAnmVarDt[];
+};
+static_assert(sizeof(PlayerModelBase) == 0xF0);

@@ -1,0 +1,88 @@
+#pragma once
+
+#include <game/FieldGame.h>
+
+#include <framework/seadCalculateTask.h>
+#include <framework/seadTaskMgr.h>
+
+class GamesceneBase;
+
+class CourseTask : public sead::CalculateTask   // vtbl Address: 0x100B734C
+{
+    // setInstance_()                               Address: 0x024BCA80
+    // deleteInstance()                             Address: Deleted
+    // sInstance                                    Address: 0x101D15F0
+    // SingletonDisposer_::~SingletonDisposer_()    Address: 0x024BC924
+    SEAD_TASK_SINGLETON_DISPOSER(CourseTask)
+
+public:
+    static FieldGameData& getActiveGameData()
+    { 
+        return
+            (instance() != nullptr)
+                ? *instance()->getGameData()
+                : FieldGame::instance()->getGameData();
+    }
+
+public:
+    // Address: 0x024BCAA0
+    CourseTask(const sead::TaskConstructArg& arg);
+    // Address: 0x024BC950
+    virtual ~CourseTask();
+
+    // Address: 0x024C01DC
+    void setSubjectClear();
+    // Address: 0x024C01F4
+    void setSubjectFail();
+
+    GamesceneBase* getGamescene()
+    {
+        return mpGamescene;
+    }
+
+    // Address: 0x024C0D6C
+    bool getGamesceneUnkBool() const;
+
+    FieldGameData* getGameData()
+    {
+        return &mGameData;
+    }
+
+    const FieldGameData* getGameData() const
+    {
+        return &mGameData;
+    }
+
+    FieldPlayerData* getPlayerData(s32 index)
+    {
+        return &mGameData.getPlayerData(index);
+    }
+
+    const FieldPlayerData* getPlayerData(s32 index) const
+    {
+        return &mGameData.getPlayerData(index);
+    }
+
+    FieldGameMode::Mode getGameMode() const
+    {
+        return mGameData.getGameMode().getMode();
+    }
+
+    bool isMiniGame() const
+    {
+        return mGameData.getGameMode().isMiniGame();
+    }
+
+    void incEnemyDown(s32 player_no)
+    {
+        getPlayerData(player_no)->enemy_down_cnt++;
+    }
+
+private:
+    bool            mCourseRestart;
+    GamesceneBase*  mpGamescene;
+    u32             _d0[(0x124 - 0xD0) / sizeof(u32)];
+    FieldGameData   mGameData;
+    u32             _308[(0x5A4 - 0x308) / sizeof(u32)];
+};
+static_assert(sizeof(CourseTask) == 0x5A4);

@@ -1,0 +1,574 @@
+#pragma once
+
+#include <player/PlayerModelBase.h>
+
+class PlayerModelBaseMgr    // vtbl Address: 0x1016BE5C
+{
+public:
+    enum DrawType
+    {
+        cDrawType_Normal = 0,
+        cDrawType_InBalloon,
+        cDrawType_InDistantView
+    };
+
+public:
+    // Address: 0x02922A38
+    PlayerModelBaseMgr();
+
+    virtual void setHeadID(PlayerModelBase::HeadType id)
+    {
+    }
+
+    PlayerModelBase* getModelBase()
+    {
+        return mpModelBase;
+    }
+
+    // Address: 0x02922B3C
+    void setModelBase(PlayerModelBase* p_mdl_base);
+
+    void reset()
+    {
+        mpModelBase->reset();
+    }
+
+    f32 getAnmRate(s32 anm_id)
+    {
+        return mpModelBase->getAnmRate(anm_id);
+    }
+
+    f32 getAnmBlendDuration(s32 anm_id)
+    {
+        return mpModelBase->getAnmBlendDuration(anm_id);
+    }
+
+    // Address: 0x02922A84
+    void setAnm(s32 anm_id, f32 frame = 0.0f);
+    // Address: 0x02922BA4
+    void setAnm(s32 anm_id, f32 blend_duration, f32 frame);
+
+    void setAnm(s32 anm_id, f32 rate, f32 blend_duration, f32 frame)
+    {
+        mpModelBase->setAnm(anm_id, rate, blend_duration, frame);
+    }
+
+    // Address: 0x02922C40
+    void setBodyAnm(s32 anm_id);
+
+    void setBodyAnm(s32 anm_id, f32 rate, f32 frame = 0.0f, f32 blend_duration = 0.0f)
+    {
+        mpModelBase->setBodyAnm(anm_id, rate, frame, blend_duration);
+    }
+
+    void copyLinkAnm(f32 blend_duration)
+    {
+        mpModelBase->copyLinkAnm(blend_duration);
+    }
+
+    void setJumpAnmRand(PlayerModelBase::RndType rnd_type)
+    {
+        mpModelBase->setJumpAnmRand(rnd_type);
+    }
+
+    void setRate(f32 rate)
+    {
+        mpModelBase->setRate(rate);
+    }
+
+    f32 getRate()
+    {
+        return mpModelBase->getRate();
+    }
+
+    void setRateDirect(f32 rate)
+    {
+        mpModelBase->setRateDirect(rate);
+    }
+
+    f32 getRateDirect()
+    {
+        return mpModelBase->getRateDirect();
+    }
+
+    void setBodyRate(f32 rate)
+    {
+        mpModelBase->setBodyRate(rate);
+    }
+
+    f32 getBodyRate()
+    {
+        return mpModelBase->getBodyRate();
+    }
+
+    bool isAnmStop()
+    {
+        return mpModelBase->isAnmStop();
+    }
+
+    bool isBodyAnmStop()
+    {
+        return mpModelBase->isBodyAnmStop();
+    }
+
+    void setFrame(f32 frame)
+    {
+        mpModelBase->setFrame(frame);
+    }
+
+    f32 getFrame()
+    {
+        return mpModelBase->getFrame();
+    }
+
+    void setFrameDirect(f32 frame)
+    {
+        mpModelBase->setFrameDirect(frame);
+    }
+
+    f32 getFrameDirect()
+    {
+        return mpModelBase->getFrameDirect();
+    }
+
+    void setBodyFrame(f32 frame)
+    {
+        mpModelBase->setBodyFrame(frame);
+    }
+
+    f32 getBodyFrame()
+    {
+        return mpModelBase->getBodyFrame();
+    }
+
+    bool checkFrame(f32 frame)
+    {
+        return mpModelBase->checkFrame(frame);
+    }
+
+    bool checkBodyFrame(f32 frame)
+    {
+        return mpModelBase->checkBodyFrame(frame);
+    }
+
+    bool isAnmLoopFrame()
+    {
+        return mpModelBase->isAnmLoopFrame();
+    }
+
+    bool isBodyAnmLoopFrame()
+    {
+        return mpModelBase->isBodyAnmLoopFrame();
+    }
+
+    f32 getFrameEnd()
+    {
+        return mpModelBase->getFrameEnd();
+    }
+
+    bool isBodyAnmOn()
+    {
+        return mpModelBase->isBodyAnmOn();
+    }
+
+    void getJointMtx(sead::Matrixf* p_mtx, s32 index)
+    {
+        mpModelBase->getJointMtx(p_mtx, index);
+    }
+
+    void getJointPos(sead::Vector3f* p_pos, s32 index)
+    {
+        mpModelBase->getJointPos(p_pos, index);
+    }
+
+    void getJointMtx(sead::Matrixf* p_mtx, const sead::SafeString& name)
+    {
+        mpModelBase->getJointMtx(p_mtx, name);
+    }
+
+    void getJointPos(sead::Vector3f* p_pos, const sead::SafeString& name)
+    {
+        mpModelBase->getJointPos(p_pos, name);
+    }
+
+    void play()
+    {
+        mpModelBase->play();
+    }
+
+    void calc(const sead::Matrixf& mtx)
+    {
+        mpModelBase->calc(mtx);
+    }
+
+    void calc2()
+    {
+        mpModelBase->calc2();
+    }
+
+    // Address: 0x02922CA0
+    void draw();
+
+    void cancelCarry()
+    {
+        mpModelBase->cancelCarry();
+    }
+
+    void onCarry()
+    {
+        mpModelBase->onCarry();
+    }
+
+    void onLiftUp()
+    {
+        mpModelBase->onLiftUp();
+    }
+
+    void onBalloonChibiYoshiFly()
+    {
+        mpModelBase->onBalloonChibiYoshiFly();
+    }
+
+    void onBubbleChibiYoshiShake()
+    {
+        mpModelBase->onBubbleChibiYoshiShake();
+    }
+
+    void offCarry()
+    {
+        mpModelBase->offCarry();
+    }
+
+    void offLiftUp()
+    {
+        mpModelBase->offLiftUp();
+    }
+
+    void offBalloonChibiYoshiFly()
+    {
+        mpModelBase->offBalloonChibiYoshiFly();
+    }
+
+    void offBubbleChibiYoshiShake()
+    {
+        mpModelBase->offBubbleChibiYoshiShake();
+    }
+
+    bool isCarry()
+    {
+        return mpModelBase->isCarry();
+    }
+
+    bool isLiftUp()
+    {
+        return mpModelBase->isLiftUp();
+    }
+
+    void onStarAnm()
+    {
+        mpModelBase->onStarAnm();
+    }
+
+    void offStarAnm()
+    {
+        mpModelBase->offStarAnm();
+    }
+
+    bool isFootStepTiming()
+    {
+        return mpModelBase->isFootStepTiming();
+    }
+
+    bool isCourseSelectScene()
+    {
+        return mpModelBase->isCourseSelectScene();
+    }
+
+    f32 getBaseScale()
+    {
+        return mpModelBase->getBaseScale();
+    }
+
+    sead::Vector3f* getHeadTopPosP()
+    {
+        return mpModelBase->getHeadTopPosP();
+    }
+
+    sead::Vector3f* getHeadPosP()
+    {
+        return mpModelBase->getHeadPosP();
+    }
+
+    u32 getAnmFlag(PlayerModelBase::AnmFlagType type) const
+    {
+        return mpModelBase->getAnmFlag(type);
+    }
+
+    u32 getAnmFlag() const
+    {
+        return mpModelBase->getAnmFlag();
+    }
+
+    u32 getBodyAnmFlag() const
+    {
+        return mpModelBase->getBodyAnmFlag();
+    }
+
+    bool isAnmFlag(PlayerModelBase::AnmFlagType type, u32 flag) const
+    {
+        return mpModelBase->isAnmFlag(type, flag);
+    }
+
+    bool isAnmFlagBit(PlayerModelBase::AnmFlagType type, PlayerModelBase::AnmFlagBit bit) const
+    {
+        return mpModelBase->isAnmFlagBit(type, bit);
+    }
+
+    bool isAnmFlag(u32 flag) const
+    {
+        return mpModelBase->isAnmFlag(flag);
+    }
+
+    bool isAnmFlagBit(PlayerModelBase::AnmFlagBit bit) const
+    {
+        return mpModelBase->isAnmFlagBit(bit);
+    }
+
+    bool isSitAnm() const
+    {
+        return mpModelBase->isSitAnm();
+    }
+
+    bool isCarryAnm() const
+    {
+        return mpModelBase->isCarryAnm();
+    }
+
+    bool isHangAnm() const
+    {
+        return mpModelBase->isHangAnm();
+    }
+
+    bool isHangCliffAnm() const
+    {
+        return mpModelBase->isHangCliffAnm();
+    }
+
+    bool isSwimAnm() const
+    {
+        return mpModelBase->isSwimAnm();
+    }
+
+    bool isJumpAnm() const
+    {
+        return mpModelBase->isJumpAnm();
+    }
+
+    bool isDirAnm() const
+    {
+        return mpModelBase->isDirAnm();
+    }
+
+    bool isDirAnmL() const
+    {
+        return mpModelBase->isDirAnmL();
+    }
+
+    bool isDirAnmR() const
+    {
+        return mpModelBase->isDirAnmR();
+    }
+
+    bool isLuigiPersonalAnm() const
+    {
+        return mpModelBase->isLuigiPersonalAnm();
+    }
+
+    bool isMusaPersonalAnm() const
+    {
+        return mpModelBase->isMusaPersonalAnm();
+    }
+
+    bool isPenguinPersonalAnm() const
+    {
+        return mpModelBase->isPenguinPersonalAnm();
+    }
+
+    bool isPropellerPersonalAnm() const
+    {
+        return mpModelBase->isPropellerPersonalAnm();
+    }
+
+    bool isBodyAnmFlag(u32 flag) const
+    {
+        return mpModelBase->isBodyAnmFlag(flag);
+    }
+
+    bool isBodyAnmFlagBit(PlayerModelBase::AnmFlagBit bit) const
+    {
+        return mpModelBase->isBodyAnmFlagBit(bit);
+    }
+
+    bool isCarryBodyAnm() const
+    {
+        return mpModelBase->isCarryBodyAnm();
+    }
+
+    bool isJumpBodyAnm() const
+    {
+        return mpModelBase->isJumpBodyAnm();
+    }
+
+    bool isSlopeBodyAnm() const
+    {
+        return mpModelBase->isSlopeBodyAnm();
+    }
+
+    bool isPenguinPersonalBodyAnm() const
+    {
+        return mpModelBase->isPenguinPersonalBodyAnm();
+    }
+
+    void changeFaceAngleOverrideFlag(PlayerModelBase::FaceAngleOverrideFlag flag, bool enable)
+    {
+        mpModelBase->changeFaceAngleOverrideFlag(flag, enable);
+    }
+
+    const Angle3& getFaceAngleOverride() const
+    {
+        return mpModelBase->getFaceAngleOverride();
+    }
+
+    void setFaceAngleOverride(const Angle3& angle)
+    {
+        mpModelBase->setFaceAngleOverride(angle);
+    }
+
+    void resetFaceAngleOverride()
+    {
+        mpModelBase->resetFaceAngleOverride();
+    }
+
+    void resetFaceAngleOverrideFlag()
+    {
+        mpModelBase->resetFaceAngleOverrideFlag();
+    }
+
+    // Address: 0x02922D8C
+    void setDrawType(DrawType type);
+
+    void setTexAnmType(PlayerModelBase::TexAnmType type)
+    {
+        mpModelBase->setTexAnmType(type);
+    }
+
+    ModelResource* getModelResFile() const
+    {
+        return mpModelBase->getModelResFile();
+    }
+
+    ModelResource* getAnmResFile() const
+    {
+        return mpModelBase->getAnmResFile();
+    }
+
+    s32 getAnmID() const
+    {
+        return mpModelBase->getAnmID();
+    }
+
+    void onOnHDokan()
+    {
+        mpModelBase->onOnHDokan();
+    }
+
+    void offOnHDokan()
+    {
+        mpModelBase->offOnHDokan();
+    }
+
+    bool isOnHDokan() const
+    {
+        return mpModelBase->isOnHDokan();
+    }
+
+    void onWaitL()
+    {
+        mpModelBase->onWaitL();
+    }
+
+    void onWaitR()
+    {
+        mpModelBase->onWaitR();
+    }
+
+    void offWait()
+    {
+        mpModelBase->offWait();
+    }
+
+    bool isWaitL() const
+    {
+        return mpModelBase->isWaitL();
+    }
+
+    bool isWaitR() const
+    {
+        return mpModelBase->isWaitR();
+    }
+
+    void onRideCloudWait()
+    {
+        mpModelBase->onRideCloudWait();
+    }
+
+    void offRideCloudWait()
+    {
+        mpModelBase->offRideCloudWait();
+    }
+
+    bool isRideCloudWait() const
+    {
+        return mpModelBase->isRideCloudWait();
+    }
+
+    void onRideLiftWait()
+    {
+        mpModelBase->onRideLiftWait();
+    }
+
+    void offRideLiftWait()
+    {
+        mpModelBase->offRideLiftWait();
+    }
+
+    bool isRideLiftWait() const
+    {
+        return mpModelBase->isRideLiftWait();
+    }
+
+    void releaseBodyAnm(f32 blend_duration)
+    {
+        mpModelBase->releaseBodyAnm(blend_duration);
+    }
+
+    void setCarryBodyAnm(f32 blend_duration, bool bubble_reset_frame)
+    {
+        mpModelBase->setCarryBodyAnm(blend_duration, bubble_reset_frame);
+    }
+
+    bool isBalloonChibiYoshiFly() const
+    {
+        return mpModelBase->isBalloonChibiYoshiFly();
+    }
+
+    bool isBubbleChibiYoshiShake() const
+    {
+        return mpModelBase->isBubbleChibiYoshiShake();
+    }
+
+protected:
+    PlayerModelBase*    mpModelBase;
+    DrawType            mDrawType;
+};
+static_assert(sizeof(PlayerModelBaseMgr) == 0xC);

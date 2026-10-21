@@ -1,0 +1,513 @@
+#include <player/PlayerBase.h>
+#include <player/PlayerHIO_Air.h>
+#include <player/PlayerHIO_ChibiYoshi.h>
+#include <player/PlayerHIO_Turn.h>
+#include <scroll/BgScrollMgr.h>
+
+ActorBgCollisionCheck::SakaType PlayerBase::getSakaType(DirType dir)
+{
+    s32 saka_type = mSakaType;
+    if (isNowBgCross(cBgCross_IsSaka) && BgUnitCode::getSlipAttr(mBgCheckPlayer.getBgCheckData(cDirType_Down)) == BgUnitCode::cSlipAttr_SakaLowPow)
+    {
+        if (getSakaUpDown(dir) == cSakaUpDown_Downhill)
+        {
+            saka_type--; // treat the slope as one grade gentler
+            if (saka_type < 0)
+                saka_type = 0;
+        }
+    }
+    return static_cast<ActorBgCollisionCheck::SakaType>(saka_type);
+}
+
+static const f32 cSakaMaxSpeedRatio[ActorBgCollisionCheck::cSakaType_Num][PlayerBase::cSakaUpDown_Num] = {
+    //  Downhill    Uphill
+    {   1.0000f,    1.0000f   },    // cSakaType_None
+    {   1.2500f,    0.6875f   },    // cSakaType_Gentle
+    {   1.2500f,    0.6875f   },    // cSakaType_Moderate
+    {   1.4400f,    0.5000f   },    // cSakaType_Steep
+    {   1.6200f,    0.3000f   }     // cSakaType_VerySteep
+};
+
+static const f32 cSakaStopAccele[ActorBgCollisionCheck::cSakaType_Num][PlayerBase::cSakaUpDown_Num] = {
+    //  Downhill    Uphill
+    {   0.0350f,    0.0350f   },    // cSakaType_None
+    {   0.0315f,    0.0460f   },    // cSakaType_Gentle
+    {   0.0280f,    0.0600f   },    // cSakaType_Moderate
+    {   0.0210f,    0.1230f   },    // cSakaType_Steep
+    {   0.0140f,    0.1750f   }     // cSakaType_VerySteep
+};
+
+static const f32 cSakaMoveAccele[ActorBgCollisionCheck::cSakaType_Num][PlayerBase::cSakaUpDown_Num] = {
+    //  Downhill    Uphill
+    {   0.1000f,    0.0300f   },    // cSakaType_None
+    {   0.0400f,    0.0300f   },    // cSakaType_Gentle
+    {   0.0500f,    0.0450f   },    // cSakaType_Moderate
+    {   0.0700f,    0.1200f   },    // cSakaType_Steep
+    {   0.1700f,    0.1700f   }     // cSakaType_VerySteep
+};
+
+static const f32 cSakaSlipOffSpeed[ActorBgCollisionCheck::cSakaType_Num] = {
+    0.0f,   // cSakaType_None
+    0.0f,   // cSakaType_Gentle
+    0.2f,   // cSakaType_Moderate
+    0.4f,   // cSakaType_Steep
+    0.4f    // cSakaType_VerySteep
+};
+
+f32 PlayerBase::getSakaMaxSpeedRatio(DirType dir)
+{
+    if (isNowBgCross(cBgCross_IsSaka))
+        return cSakaMaxSpeedRatio[getSakaType(dir)][getSakaUpDown(dir)];
+    else
+        return 1.0000f;
+}
+
+f32 PlayerBase::getSakaStopAccele(DirType dir)
+{
+    if (isNowBgCross(cBgCross_IsSaka))
+        return cSakaStopAccele[getSakaType(dir)][getSakaUpDown(dir)];
+    else
+        return 0.0350f;
+}
+
+float PlayerBase::getSakaMoveAccele(DirType dir)
+{
+    if (isNowBgCross(cBgCross_IsSaka))
+        return cSakaMoveAccele[getSakaType(dir)][getSakaUpDown(dir)];
+    else
+        return 0.0300f;
+}
+
+float PlayerBase::getIceSakaSlipOffSpeed()
+{
+    return cSakaSlipOffSpeed[mSakaType] * cDirSpeed[mBgCheckPlayer.getSakaDir()];
+}
+
+void PlayerBase::maxFallSpeedSet()
+{
+    mMaxFallSpeed = cMaxFallSpeed;
+}
+
+void PlayerBase::setUnkJumpGravity()
+{
+    const PlayerGravityData& gravity_data = PlayerHIO_ChibiYoshi::cUnkGravityData;
+    setJumpGravity(gravity_data.jump_data.thresholds, gravity_data.jump_data.normal_gravity);
+}
+
+void PlayerBase::setButtonJumpGravity()
+{
+    const PlayerGravityData* p_gravity_data = getGravityData();
+    setJumpGravity(p_gravity_data->jump_data.thresholds, p_gravity_data->jump_data.button_gravity);
+}
+
+void PlayerBase::setNormalJumpGravity()
+{
+    if (mSpeed.y <= 1.5f)
+        mPlayerKey.offStatus(PlayerKey::cStatus_NoJump);
+
+    const PlayerGravityData* p_gravity_data = getGravityData();
+    setJumpGravity(p_gravity_data->jump_data.thresholds, p_gravity_data->jump_data.normal_gravity);
+}
+
+void PlayerBase::setJumpGravity()
+{
+    if (mNoGravityTimer != 0 || isStatus(cStatus_NoGravityUntilFall))
+        mGravity = 0.0f;
+    else if (isStatus(cStatus_UnkJumpGravity))
+        setUnkJumpGravity();
+    else if (mPlayerKey.buttonJump())
+        setButtonJumpGravity();
+    else
+        setNormalJumpGravity();
+}
+
+void PlayerBase::gravitySet()
+{
+    if (isStatus(cStatus_197))
+        return;
+
+    if (isNowBgCross(cBgCross_IsFoot))
+        mGravity = getGravityData()->gravity;
+    else
+        setJumpGravity();
+}
+
+bool PlayerBase::setSandMoveSpeed()
+{
+    if (!isStatus(cStatus_135) && isOnSinkSand())
+    {
+        DirType walk_dir;
+        if (mPlayerKey.buttonWalk(&walk_dir))
+        {
+            if (isStatus(cStatus_Spin))
+                mMaxSpeedF = cDirSpeed[walk_dir];
+            else
+                mMaxSpeedF = 0.5f * cDirSpeed[walk_dir];
+        }
+        else
+        {
+            mMaxSpeedF = 0.0f;
+        }
+        if (mSpeedF * mMaxSpeedF < 0.0f)
+            mSpeedF = 0.0f;
+        else if (sead::Mathf::abs(mSpeedF) > sead::Mathf::abs(mMaxSpeedF))
+            mSpeedF = mMaxSpeedF;
+        return true;
+    }
+    return false;
+}
+
+PlayerBase::PowerChangeType PlayerBase::getPowerChangeType(bool penguin_slide)
+{
+    if (penguin_slide || !isStatus(cStatus_Penguin))
+    {
+        if (isNowBgCross(cBgCross_IsIce))
+            return cPowerChangeType_Ice;
+
+        if (isNowBgCross(cBgCross_IsIceLowSlip) || isNowBgCross(cBgCross_IsSnow))
+            return cPowerChangeType_Snow;
+    }
+    return cPowerChangeType_Normal;
+}
+
+void PlayerBase::moveSpeedSet()
+{
+    if (setSandMoveSpeed())
+        return;
+
+    if (isStatus(cStatus_195))
+        return;
+
+    DirType walk_dir;
+    if (mPlayerKey.buttonWalk(&walk_dir))
+    {
+        if (_4e8)
+        {
+            mMaxSpeedF = cDirSpeed[walk_dir];
+            return;
+        }
+        f32 max_run_speed_lo = getSpeedData()->max_run_speed_lo * cDirSpeed[walk_dir];
+        f32 max_run_speed_hi = getSpeedData()->max_run_speed_hi * cDirSpeed[walk_dir];
+        if (!isNowBgCross(cBgCross_IsFoot))
+        {
+            f32 base_speed = sead::Mathf::abs(mSpeedF);
+            f32 speed = base_speed * cDirSpeed[walk_dir];
+            if (base_speed >= sead::Mathf::abs(max_run_speed_hi) || mPlayerKey.buttonDush())
+                mMaxSpeedF = max_run_speed_hi;
+            else if (base_speed > sead::Mathf::abs(max_run_speed_lo))
+                mMaxSpeedF = speed;
+            else
+                mMaxSpeedF = max_run_speed_lo;
+        }
+        else
+        {
+            if (mPlayerKey.buttonDush())
+                mMaxSpeedF = max_run_speed_hi * getSakaMaxSpeedRatio(walk_dir);
+            else
+                mMaxSpeedF = max_run_speed_lo * getSakaMaxSpeedRatio(walk_dir);
+        }
+    }
+    else
+    {
+        mMaxSpeedF = 0.0f;
+        if (checkSakaReverse())
+            mSpeedF = 0.0f;
+        else if (!isStatus(cStatus_DemoControl))
+        {
+            if (getPowerChangeType() == cPowerChangeType_Ice)
+                mMaxSpeedF = getIceSakaSlipOffSpeed();
+            if (isStatus(cStatus_SlideSlope))
+                mMaxSpeedF = getIceSakaSlipOffSpeed();
+        }
+    }
+
+    if (isNowBgCross(cBgCross_IsFoot))
+        return;
+
+    if (isStatus(cStatus_147))
+        return;
+
+    if (sead::Mathf::abs(mSpeedF) > getSpeedData()->max_run_speed_hi)
+    {
+        if (mSpeedF < 0.0f)
+            mSpeedF = -getSpeedData()->max_run_speed_hi;
+        else
+            mSpeedF = getSpeedData()->max_run_speed_hi;
+    }
+}
+
+void PlayerBase::simpleMoveSpeedSet()
+{
+    if (setSandMoveSpeed())
+        return;
+
+    DirType walk_dir;
+    if (mPlayerKey.buttonWalk(&walk_dir))
+    {
+        if (_4e8)
+        {
+            mMaxSpeedF = cDirSpeed[walk_dir];
+            return;
+        }
+        if (mPlayerKey.buttonDush())
+            mMaxSpeedF = getSpeedData()->max_run_speed_hi * cDirSpeed[walk_dir];
+        else
+            mMaxSpeedF = getSpeedData()->max_run_speed_lo * cDirSpeed[walk_dir];
+    }
+    else
+    {
+        mMaxSpeedF = 0.0f;
+    }
+}
+
+void PlayerBase::icePowerChange(bool slip)
+{
+    PowerChangeType power_change_type = getPowerChangeType();
+    if (power_change_type == cPowerChangeType_Ice || (power_change_type == cPowerChangeType_Snow && slip))
+    {
+        if (mMaxSpeedF != 0.0f)
+        {
+            if (mSpeedF * mMaxSpeedF < 0.0f)
+                mPow *= 0.375f;
+            else
+            {
+                if (!slip)
+                {
+                    if (isNowBgCross(cBgCross_IsSaka))
+                        mPow *= 0.375f;
+                    else if (sead::Mathf::abs(mSpeedF) < 0.5f)
+                        mPow *= 0.25f;
+                }
+            }
+        }
+        else
+        {
+            if (!isNowBgCross(cBgCross_IsSaka) && sead::Mathf::abs(mSpeedF) < 0.5f)
+                mPow = 0.004f;
+            else
+                mPow *= 0.375f;
+        }
+    }
+}
+
+static const f32 cSakaMoveAcceleRatio[PlayerBase::cSakaUpDown_Num] = {
+    1.1f,   // cSakaUpDown_Downhill
+    0.9f    // cSakaUpDown_Uphill
+};
+
+void PlayerBase::slipPowerSet()
+{
+    if (isNowBgCross(cBgCross_IsSaka))
+    {
+        DirType dir = cDirType_Right;
+        if (mSpeedF < 0.0f)
+            dir = cDirType_Left;
+        mPow = getSakaMoveAccele(dir);
+        DirType walk_dir;
+        if (mPlayerKey.buttonWalk(&walk_dir))
+            mPow *= cSakaMoveAcceleRatio[getSakaUpDown(walk_dir)];
+    }
+    else
+    {
+        if (isStatus(cStatus_74))
+            mPow = 0.05f;
+        else
+            mPow = 0.09f;
+    }
+    icePowerChange(true);
+}
+
+void PlayerBase::getSpeedPowerData(PlayerSpeedPowerData& out_data)
+{
+    switch (getPowerChangeType())
+    {
+    case cPowerChangeType_Ice:
+        out_data = getSpeedData()->power_ice;
+        break;
+    case cPowerChangeType_Snow:
+        out_data = getSpeedData()->power_snow;
+        break;
+    default:
+        out_data = getSpeedData()->power_normal;
+        break;
+    }
+}
+
+void PlayerBase::normalPowerSet()
+{
+    if (sead::Mathf::abs(mSpeedF) > getSpeedData()->max_run_speed_hi)
+        mPow = 0.75f;
+    else
+    {
+        PlayerSpeedPowerData power_data;
+        getSpeedPowerData(power_data);
+
+        DirType walk_dir;
+        if (!mPlayerKey.buttonWalk(&walk_dir))
+        {
+            if (isNowBgCross(cBgCross_IsSaka))
+            {
+                DirType dir = cDirType_Right;
+                if (mSpeedF < 0.0f)
+                    dir = cDirType_Left;
+                mPow = getSakaStopAccele(dir);
+            }
+            else if (mSpeedF * cDirSpeed[mDirection] < 0.0f)
+            {
+                mPow = power_data.stop_turn_decel;
+            }
+            else
+            {
+                if (sead::Mathf::abs(mSpeedF) < getSpeedData()->max_run_speed_lo)
+                    mPow = power_data.stop_x_accel;
+                else
+                    mPow = power_data.x_accel_def;
+            }
+            if (isStatus(cStatus_148))
+                mPow *= cTurnPowerUpRate;
+
+            icePowerChange(false);
+        }
+        else
+        {
+            if (mSpeedF * cDirSpeed[mDirection] < 0.0f)
+            {
+                mPow = power_data.turn_decel;
+                if (isStatus(cStatus_148))
+                    mPow *= cTurnPowerUpRate;
+            }
+            else if (isNowBgCross(cBgCross_IsSaka))
+            {
+                DirType dir = cDirType_Right;
+                if (mSpeedF < 0.0f)
+                    dir = cDirType_Left;
+                mPow = getSakaMoveAccele(dir) * cSakaMoveAcceleRatio[getSakaUpDown(walk_dir)];
+                icePowerChange(false);
+            }
+            else
+            {
+                f32 base_speed = sead::Mathf::abs(mSpeedF);
+                f32 base_max_speed = sead::Mathf::abs(mMaxSpeedF);
+                if (base_speed < 0.5f) // Stage 0
+                    mPow = power_data.x_accel_stage0;
+                else if (base_speed < getSpeedData()->max_run_speed_lo) // Stage 1
+                {
+                    if (mPlayerKey.buttonDush())
+                        mPow = power_data.x_accel_stage1_dush;
+                    else
+                        mPow = power_data.x_accel_stage1;
+                }
+                else if (base_speed < getSpeedData()->max_run_speed_md) // Stage 2
+                {
+                    if (base_max_speed < getSpeedData()->max_run_speed_md)
+                        mPow = power_data.x_accel_def;
+                    else
+                        mPow = power_data.x_accel_stage2;
+                }
+                else // Stage 3
+                {
+                    if (base_max_speed < getSpeedData()->max_run_speed_md)
+                        mPow = power_data.x_accel_def;
+                    else
+                        mPow = power_data.x_accel_stage3;
+                }
+            }
+        }
+    }
+}
+
+void PlayerBase::grandPowerSet()
+{
+    if (isOnSinkSand())
+        mPow = getSpeedData()->power_normal.x_accel_stage0;
+    else
+    {
+        if (isStatus(cStatus_73))
+            slipPowerSet(true);
+        else
+            slipPowerSet(false);
+    }
+}
+
+void PlayerBase::airPowerSet()
+{
+    bool is_star = isStar();
+    bool is_luigi_phys = isEnableRDashLuigiPhysics();
+    const PlayerAirData& air_data = PlayerHIO_Air::cData[is_luigi_phys][is_star];
+    if (_4e8 && sead::Mathf::abs(mSpeedF) > 1.0f)
+        mPow = 0.2f;
+    else
+    {
+        DirType walk_dir;
+        if (mPlayerKey.buttonWalk(&walk_dir))
+        {
+            if (mSpeedF * cDirSpeed[walk_dir] < 0.0f)
+                mPow = air_data.turn_decel;
+            else
+            {
+                f32 base_speed = sead::Mathf::abs(mSpeedF);
+                if (base_speed < 0.5f) // Stage 0
+                {
+                    mPow = air_data.x_accel_stage0;
+                }
+                else if (base_speed < getSpeedData()->max_run_speed_lo) // Stage 1
+                {
+                    if (mPlayerKey.buttonDush())
+                        mPow = air_data.x_accel_stage1_dush;
+                    else
+                        mPow = air_data.x_accel_stage1;
+                }
+                else if (base_speed < getSpeedData()->max_run_speed_md) // Stage 2
+                {
+                    mPow = air_data.x_accel_stage2;
+                }
+                else // Stage 3
+                {
+                    mPow = air_data.x_accel_stage3;
+                }
+            }
+        }
+        else
+        {
+            mPow = air_data.x_accel_def;
+        }
+    }
+}
+
+void PlayerBase::powerSet()
+{
+    if (isNowBgCross(cBgCross_IsFoot))
+        grandPowerSet();
+    else
+        airPowerSet();
+}
+
+void PlayerBase::getTurnPowerData(PlayerTurnPowerData& out_data)
+{
+    bool is_star = isStar();
+    bool is_luigi_phys = isEnableRDashLuigiPhysics();
+    switch (getPowerChangeType())
+    {
+    default:
+        break;
+    case cPowerChangeType_Normal:
+        out_data = PlayerHIO_Turn::cData[is_luigi_phys].power_normal[is_star];
+        break;
+    case cPowerChangeType_Ice:
+        out_data = PlayerHIO_Turn::cData[is_luigi_phys].power_ice[is_star];
+        break;
+    case cPowerChangeType_Snow:
+        out_data = PlayerHIO_Turn::cData[is_luigi_phys].power_snow[is_star];
+        break;
+    }
+}
+
+void PlayerBase::setHopAirDrift()
+{
+    const BgScrollMgr& bg_scroll_mgr = *BgScrollMgr::instance();
+    const f32 center_prev = (bg_scroll_mgr.getScreenRectPrev().getMin().x + bg_scroll_mgr.getScreenRectPrev().getMax().x) * 0.5f;
+    const f32 center_now = bg_scroll_mgr.getScreenCenterX();
+    const f32 delta = center_now - center_prev;
+    if (sead::Mathf::abs(delta) > 0.5f)
+        initAirDriftSpeedF(delta * 0.6f, 60.0f);
+}

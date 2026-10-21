@@ -1,0 +1,181 @@
+#pragma once
+
+#include <graphics/AnimModel.h>
+#include <graphics/JointBlendModelCalcRatio.h>
+
+class JointBlendModel : public AnimModel
+{
+public:
+    static JointBlendModel* create(
+        ModelResource* p_mdl_res,
+        Model* p_model,
+        s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+        sead::Heap* heap = nullptr,
+        const sead::PtrArray<ModelResource>* p_anim_mdl_res_array = nullptr
+    );
+
+    static JointBlendModel* create(
+        ModelResource* p_mdl_res,
+        const sead::SafeString& name,
+        s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+        Model::BoundingMode bounding_mode = Model::cBoundingMode_Disable,
+        sead::Heap* heap = nullptr
+    );
+
+    static JointBlendModel* create(
+        ModelResource* p_mdl_res,
+        const sead::SafeString& name,
+        s32 view_num,
+        s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+        Model::BoundingMode bounding_mode,
+        sead::Heap* heap = nullptr
+    );
+
+    static JointBlendModel* create(
+        const sead::SafeString& resource_key,
+        const sead::SafeString& name,
+        s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+        Model::BoundingMode bounding_mode = Model::cBoundingMode_Disable,
+        sead::Heap* heap = nullptr
+    );
+
+    static JointBlendModel* create(
+        const sead::SafeString& resource_key,
+        const sead::SafeString& name,
+        s32 view_num,
+        s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+        Model::BoundingMode bounding_mode,
+        sead::Heap* heap = nullptr
+    );
+
+public:
+    // Address: 0x024DFBF0
+    JointBlendModel(Model* p_model, u32 skl_anim_num, u32 tex_anim_num, u32 shu_anim_num, u32 vis_anim_num, u32 sha_anim_num);
+
+    // Address: 0x024DFC78
+    void init(ModelResource* p_mdl_res, const sead::PtrArray<ModelResource>* p_anim_mdl_res_array = nullptr, sead::Heap* heap = nullptr);
+
+    // Progress frame counters for all bound animations
+    // Note: order against "calcBlend" does not matter (they operate independently)
+    // Address: 0x024DFC7C
+    void playAnmFrameCtrl();
+
+    // Apply animations & do world-space calculations
+    // Note: implicitly calls "calcBlend" first
+    // Note: "playAnmFrameCtrl" should be called at some point before this function
+    // Address: 0x024DFD04
+    void calc();
+
+    // Update current progress of the blend calculation
+    // Note: order against "playAnmFrameCtrl" does not matter (they operate independently)
+    // Address: 0x024DFC80
+    void calcBlend();
+
+    SkeletalAnimation* getCurSklAnim() const { return getSklAnim(mCurAnmIdx); }
+
+    // Address: 0x024DFF9C
+    void setAnm(
+        ModelResource* p_mdl_res,
+        const sead::SafeString& name,
+        f32 blend_duration
+    );
+
+    // Address: 0x024DFFB4
+    void setAnm(
+        const sead::SafeString& name,
+        f32 blend_duration,
+
+        FrameCtrl::PlayMode mode = FrameCtrl::cMode_Repeat,
+        f32 rate = 1.0f,
+        f32 frame = 0.0f
+    );
+
+    // Address: 0x024DFFC4
+    void setAnm(
+        const sead::SafeString& name,
+
+        FrameCtrl::PlayMode mode = FrameCtrl::cMode_Repeat,
+        f32 rate = 1.0f,
+        f32 frame = 0.0f
+    );
+
+private:
+    // Address: 0x024DFD38
+    void setAnm_(
+        ModelResource* p_mdl_res,
+        const sead::SafeString& name,
+        f32 blend_duration,
+
+        FrameCtrl::PlayMode mode = FrameCtrl::cMode_Repeat,
+        f32 rate = 1.0f,
+        f32 frame = 0.0f
+    );
+
+private:
+    JointBlendModelCalcRatio    mCalcRatio;
+    u32                         mCurAnmIdx;
+};
+static_assert(sizeof(JointBlendModel) == 0x48);
+
+inline JointBlendModel* JointBlendModel::create(
+    ModelResource* p_mdl_res,
+    Model* p_model,
+    s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+    sead::Heap* heap,
+    const sead::PtrArray<ModelResource>* p_anim_mdl_res_array
+)
+{
+    JointBlendModel* p_blend_model = new (heap) JointBlendModel(p_model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num);
+    p_blend_model->init(p_mdl_res, p_anim_mdl_res_array, heap);
+    return p_blend_model;
+}
+
+inline JointBlendModel* JointBlendModel::create(
+    ModelResource* p_mdl_res,
+    const sead::SafeString& name,
+    s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+    Model::BoundingMode bounding_mode,
+    sead::Heap* heap
+)
+{
+    Model* p_model = ModelUtil::createG3d(*p_mdl_res, name, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+    return create(p_mdl_res, p_model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap);
+}
+
+inline JointBlendModel* JointBlendModel::create(
+    ModelResource* p_mdl_res,
+    const sead::SafeString& name,
+    s32 view_num,
+    s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+    Model::BoundingMode bounding_mode,
+    sead::Heap* heap
+)
+{
+    Model* p_model = ModelUtil::createG3d(*p_mdl_res, name, view_num, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+    return create(p_mdl_res, p_model, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, heap);
+}
+
+inline JointBlendModel* JointBlendModel::create(
+    const sead::SafeString& resource_key,
+    const sead::SafeString& name,
+    s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+    Model::BoundingMode bounding_mode,
+    sead::Heap* heap
+)
+{
+    ModelResource* p_mdl_res = ModelResourceMgr::instance()->getResource(resource_key);
+    return create(p_mdl_res, name, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+}
+
+inline JointBlendModel* JointBlendModel::create(
+    const sead::SafeString& resource_key,
+    const sead::SafeString& name,
+    s32 view_num,
+    s32 skl_anim_num, s32 tex_anim_num, s32 shu_anim_num, s32 vis_anim_num, s32 sha_anim_num,
+    Model::BoundingMode bounding_mode,
+    sead::Heap* heap
+)
+{
+    ModelResource* p_mdl_res = ModelResourceMgr::instance()->getResource(resource_key);
+    return create(p_mdl_res, name, view_num, skl_anim_num, tex_anim_num, shu_anim_num, vis_anim_num, sha_anim_num, bounding_mode, heap);
+}

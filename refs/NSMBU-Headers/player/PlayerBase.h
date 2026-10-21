@@ -1,0 +1,2937 @@
+#pragma once
+
+#include <actor/Actor.h>
+#include <actor/AttentionLookat.h>
+#include <audio/GameAudio.h>
+#include <collision/ActorBgCollisionPlayerCheck.h>
+#include <effect/EffectObj.h>
+#include <effect/FollowEffect.h>
+#include <game/Quake.h>
+#include <map/NextGotoType.h>
+#include <player/HipdropExEffect.h>
+#include <player/PlayerDrcTouchCB.h>
+#include <player/PlayerEnum.h>
+#include <player/PlayerGravityData.h>
+#include <player/PlayerKey.h>
+#include <player/PlayerSpeedData.h>
+#include <player/PlayerTurnData.h>
+#include <state/FStateMgr.h>
+#include <state/FStateVirtualID.h>
+
+#include <container/seadRingBuffer.h>
+#include <container/seadSafeArray.h>
+
+#define PLAYER_JUMP_SPEED (3.628f)
+
+struct PlayerBgPointHIO
+{
+    ActorBgCollisionCheck::Sensor   sensor_foot;
+    ActorBgCollisionCheck::Sensor   sensor_head;
+    ActorBgCollisionCheck::Sensor   sensor_wall;
+};
+static_assert(sizeof(PlayerBgPointHIO) == 0x24);
+
+class   ActorBoxBgCollision;
+class   PlayerModelBase;
+class   PlayerModelBaseMgr;
+
+class PlayerBase : public Actor // vtbl Address: 0x10166E84
+{
+    // getRuntimeTypeInfoStatic()::typeInfo initialization guard variable   Address: 0x101E9CCC
+    // getRuntimeTypeInfoStatic()::typeInfo                                 Address: 0x101E9CD0
+    SEAD_RTTI_OVERRIDE(PlayerBase, Actor)
+
+public:
+    // Address: 0x10166BC4
+    static const f32 cFireShootFrame;
+
+public:
+    enum DamageType
+    {
+        cDamageType_Hit = 0, 
+        cDamageType_Hit2,
+        cDamageType_HitKnock,
+        cDamageType_Hit3,
+        cDamageType_Knock,
+        cDamageType_Knock2,
+        cDamageType_SmallKnock,
+        cDamageType_SmallKnock2,
+        cDamageType_SmallKnock3,
+        cDamageType_Fire,           // Damages player first if he isn't small or mini, otherwise same as Fire2
+        cDamageType_Fire2,          // Immediately kills the player regardless of the powerup
+        cDamageType_Ice,            // Freezes player if he isn't small or mini, otherwise just kills him
+        cDamageType_Ice2,           // Always freezes the player regardless of the powerup, never kills him
+        cDamageType_Spark,
+        cDamageType_Poison,
+        cDamageType_Kill,           // Instant kill, no damage first
+        cDamageType_DeathCloud,
+        cDamageType_Eaten,          // Instant kill
+        cDamageType_Eaten2,         // Damages player first(?) if he isn't small or mini, otherwise same as Eaten
+        cDamageType_SteppedOn,      // i.e., by another player
+        cDamageType_Num
+    };
+
+    enum Status
+    {
+        cStatus_ActiveThisFrame         =   1,  // NSMBW: Bit 0x01
+        cStatus_DisableUpdate,                  // NSMBW: Bit 0x7D
+        cStatus_DisableAnm,                     // NSMBW: Bit 0x02
+        cStatus_ControlledState,                // NSMBW: Bit 0x03
+        cStatus_DemoMode,                       // NSMBW: Boolean
+        cStatus_DisableSound,                   // NSMBW: Bit 0xB5
+        cStatus_DispOut,                        // NSMBW: Bit 0xB9
+        cStatus_DispOutDanger,                  // NSMBW: Bit 0xBA
+        cStatus_FaderPosSet,
+        cStatus_NoGravityUntilFall,
+        cStatus_JumpAddSpeed,
+
+        cStatus_OutOfPlay               =  14,  // NSMBW: Bit 0x04 (Dead or inside bubble)
+
+        cStatus_Down                    =  16,  // NSMBW: Bit 0x05 (Dead)
+        cStatus_Stunned,                        // NSMBW: Bit 0x06 (Stunned either by electric shock or ice)
+        cStatus_18,                             // NSMBW: Bit 0x07
+        cStatus_Quake,                          // NSMBW: Bit 0x08
+
+        cStatus_Jump                    =  25,  // NSMBW: Bit 0x0A
+        cStatus_Fall,
+
+        cStatus_SinkSandSurfJump        =  29,  // NSMBW: Bit 0x0E
+        cStatus_SitJump,                        // NSMBW: Bit 0x0F
+
+        cStatus_CannonJump              =  32,  // NSMBW: Bit 0x11
+        cStatus_CannonWarp,
+        cStatus_WaitJump,                       // NSMBW: Bit 0x12
+        cStatus_UnkJumpGravity,
+        cStatus_WallSlide,                      // NSMBW: Bit 0x13
+        cStatus_37,
+        cStatus_38,
+        cStatus_39,
+        cStatus_40                      =  40,  // NSMBW: Bit 0x15
+        cStatus_41,                             // NSMBW: Bit 0x16
+
+        cStatus_45                      =  45,  // NSMBW: Bit 0x19
+        cStatus_46,                             // NSMBW: Bit 0x1A
+        cStatus_47,                             // NSMBW: Bit 0x1B
+        cStatus_48,                             // NSMBW: Bit 0x1C
+        cStatus_49,                             // NSMBW: Bit 0x1D
+        cStatus_50,                             // NSMBW: Bit 0x1E
+        cStatus_51,
+        cStatus_52,                             // NSMBW: Bit 0x1F
+
+        cStatus_HipAttackOnEnemy        =  55,  // NSMBW: Bit 0x22
+        cStatus_56,                             // NSMBW: Bit 0xC4
+        cStatus_57,                             // NSMBW: Bit 0x24
+        cStatus_58,
+
+        cStatus_60                      =  60,  // Disable block-hit bounce
+
+        cStatus_62                      =  62,  // Carry-related
+        cStatus_63,
+        cStatus_64,                             // NSMBW: Bit 0x73 (MAYBE)
+
+        cStatus_NoPropelRoll            =  68,  // NSMBW: Bit 0x2A
+        cStatus_Spin,                           // NSMBW: Bit 0x2B
+
+        cStatus_71                      =  71,  // NSMBW: Bit 0x2D
+
+        cStatus_73                      =  73,  // NSMBW: Bit 0x30
+        cStatus_74,                             // NSMBW: Bit 0x31
+
+        cStatus_Vine                    =  76,  // NSMBW: Bit 0x33
+        cStatus_Hang,                           // NSMBW: Bit 0x34
+        cStatus_Pole,                           // NSMBW: Bit 0x35
+        cStatus_PoleRope,                       // NSMBW: Bit 0x36
+        cStatus_KaniHang,                       // NSMBW: Bit 0x37
+
+        cStatus_82                      =  82,
+
+        cStatus_Swim                    =  84,  // NSMBW: Bit 0x3A
+
+        cStatus_89                      =  89,
+
+        cStatus_93                      =  93,
+
+        cStatus_97                      =  97,
+        cStatus_PenguinSwim,                    // NSMBW: Bit 0x3B
+        cStatus_PenguinSlide,                   // NSMBW: Bit 0x3C
+
+        cStatus_InitialSlip             = 102,  // NSMBW: Bit 0x3E
+
+        cStatus_104                     = 104,
+        cStatus_105,
+        cStatus_106,
+        cStatus_RidePlayer,                     // NSMBW: Bit 0x45
+        cStatus_LiftUp,                         // NSMBW: Bit 0x46
+        cStatus_109,                            // NSMBW: Bit 0x47
+        cStatus_110,
+        cStatus_111,                            // NSMBW: Bit 0x48
+
+        cStatus_113                     = 113,  // NSMBW: Bit 0x4A
+        cStatus_RideYoshi,                      // NSMBW: Bit 0x4B
+
+        cStatus_116                     = 116,  // NSMBW: Bit 0x4D
+        cStatus_117,
+        cStatus_118,
+        cStatus_RideCloud,                      // NSMBW: Bit 0x4E
+        cStatus_RideJrCrown,                    // NSMBW: Bit 0x4F
+        cStatus_121,                            // NSMBW: Bit 0x51
+        cStatus_RideBalloon,                    // NSMBW: Bit 0x53
+        cStatus_RideBalloonSetVisible,          // NSMBW: Bit 0x54 (Make visible next frame)
+        cStatus_RideBalloonAll,                 // NSMBW: Bit 0x57
+        cStatus_RideBalloonContVoiceReq,
+        cStatus_RideBalloonCheckAllFade,
+        cStatus_RideNatDone,                    // NSMBW: Bit 0x58 (Ride Nat target reached)
+        cStatus_RideNat,                        // NSMBW: Bit 0x59
+        cStatus_129,                            // NSMBW: Bit 0x5A
+        cStatus_130,                            // NSMBW: Bit 0x5C
+        cStatus_131,                            // NSMBW: Bit 0x5D
+
+        cStatus_133                     = 133,  // NSMBW: Bit 0x5E
+        cStatus_134,                            // NSMBW: Bit 0x61
+        cStatus_135,
+        cStatus_136,                            // NSMBW: Bit 0x62
+        cStatus_137,
+        cStatus_138,
+        cStatus_CanFlyBalloonChibiYoshi,
+        cStatus_CanSetSpeedChibiYoshi,
+        cStatus_141,
+        cStatus_142,
+        cStatus_143,
+
+        cStatus_145                     = 145,  // NSMBW: Bit 0x86
+        cStatus_146,                            // NSMBW: Bit 0x87
+        cStatus_147,                            // NSMBW: Bit 0x88
+        cStatus_148,                            // NSMBW: Bit 0x89
+        cStatus_149,                            // NSMBW: Bit 0x8A (Spin action request maybe?)
+        cStatus_150,                            // NSMBW: Bit 0x2C
+        cStatus_151,                            // NSMBW: Bit 0x8B
+        cStatus_152,                            // NSMBW: Bit 0x8C
+        cStatus_153,                            // NSMBW: Bit 0x8D
+        cStatus_154,                            // NSMBW: Bit 0x8E
+        cStatus_155,
+        cStatus_156,                            // NSMBW: Bit 0x95
+        cStatus_157,                            // NSMBW: Bit 0x8F
+        cStatus_158,                            // NSMBW: Bit 0x91
+
+        cStatus_160                     = 160,
+
+        cStatus_EnableSpin              = 165,  // NSMBW: Bit 0x9F
+        cStatus_166,                            // NSMBW: Bit 0xA0
+
+        cStatus_168                     = 168,
+
+        cStatus_EnableDokanIn           = 171,
+        cStatus_172,                            // NSMBW: Bit 0xA5
+
+        cStatus_FollowMameKuribo        = 174,  // NSMBW: Bit 0xAC
+        cStatus_Invisible,                      // NSMBW: Bit 0xBB
+        cStatus_HideTemporarily,                // NSMBW: Bit 0xBC (for invincibility frames)
+        cStatus_CannonShot,                     // NSMBW: Bit 0xBD
+        cStatus_178,                            // NSMBW: Bit 0xBE
+        cStatus_179,                            // NSMBW: Bit 0xBF
+        cStatus_CanWaterWalk,                   // NSMBW: Bit 0xC1
+        cStatus_IsWaterWalk,                    // NSMBW: Bit 0xC2
+        cStatus_182,                            // NSMBW: Bit 0xC3
+        cStatus_183,
+        cStatus_184,
+        cStatus_185,
+        cStatus_186,
+        cStatus_187,
+        cStatus_188,
+
+        cStatus_191                     = 191,
+
+        cStatus_193                     = 193,
+
+        cStatus_195                     = 195,  // NSMBW: Bit 0x96
+        cStatus_196,                            // NSMBW: Bit 0x97
+        cStatus_197,                            // NSMBW: Bit 0x98
+        cStatus_ZPosSetNone,
+        cStatus_199,                            // NSMBW: Bit 0xA7
+        cStatus_200,                            // NSMBW: Bit 0xA8
+
+        cStatus_NoSwimAction            = 203,  // NSMBW: Bit 0xAA
+        cStatus_204,                            // NSMBW: Bit 0xAB
+        cStatus_Penguin,                        // NSMBW: Bit 0xAD
+        cStatus_206,                            // NSMBW: Bit 0xAE
+        cStatus_207                     = 207,
+        cStatus_208,
+        cStatus_SceneChangeNext,                // NSMBW: Bit 0x64
+        cStatus_DemoDokan,
+
+        cStatus_212                     = 212,  // NSMBW: Bit 0x65
+        cStatus_213,                            // NSMBW: Bit 0x66
+        cStatus_214,                            // NSMBW: Bit 0x67
+        cStatus_215,                            // NSMBW: Bit 0x68
+        cStatus_216,
+        cStatus_217,
+        cStatus_218,                            // NSMBW: Bit 0x69
+        cStatus_219,                            // NSMBW: Bit 0x6A
+        cStatus_220,
+        cStatus_221,                            // NSMBW: Bit 0x6B
+        cStatus_222,
+        cStatus_223,                            // NSMBW: Bit 0x6C
+        cStatus_224,                            // NSMBW: Bit 0x6D
+        cStatus_225,
+        cStatus_226,                            // NSMBW: Bit 0x6E
+        cStatus_227,                            // NSMBW: Bit 0x6F
+
+        cStatus_DemoControlReq          = 235,  // NSMBW: Bit 0x71
+        cStatus_NoSlipSaka,                     // NSMBW: Bit 0x73 (MAYBE)
+        cStatus_237,
+        cStatus_DemoControl,                    // NSMBW: Bit 0x72
+        cStatus_239,                            // NSMBW: Bit 0x74
+        cStatus_240,                            // NSMBW: Bit 0x63 (MAYBE)
+        cStatus_241,                            // NSMBW: Bit 0x60 (MAYBE)
+        cStatus_242,                            // NSMBW: Bit 0x76
+        cStatus_243,
+        cStatus_DemoOnLandStop,                 // NSMBW: Bit 0x5F
+        cStatus_DemoAnmLoop,
+
+        cStatus_IgnoreBgCross           = 247,  // NSMBW: Bit 0x7E
+        cStatus_NoBgCrossUpdate,                // NSMBW: Bit 0x7F
+        cStatus_CheckBg,                        // NSMBW: Bit 0x80
+        cStatus_250,
+        cStatus_ShadowkunCatch,
+        cStatus_252,                            // NSMBW: Bit 0x81
+        cStatus_253,                            // NSMBW: Bit 0xB8
+        cStatus_254,
+        cStatus_ControlledMove,                 // NSMBW: Bit 0x82
+        cStatus_ControlledMoveReq,              // NSMBW: Bit 0x83
+
+        cStatus_258                     = 258,
+        cStatus_SlideSlope,
+        cStatus_DispOutPosYAdj,
+        cStatus_BgPointDataCarryRev,
+        cStatus_RDash_DispPinch,
+        cStatus_263,                            // NSMBW: Bit 0x77
+        cStatus_264,                            // NSMBW: Bit 0x78
+        cStatus_265,                            // NSMBW: Bit 0x79
+        cStatus_NoEntryReactCc,                 // NSMBW: Bit 0x7A
+        cStatus_267,
+
+        cStatus_270                     = 270,  // NSMBW: Bit 0x84
+
+        cStatus_280                     = 280,  // NSMBW: Bit 0xCA
+
+        cStatus_282                     = 282,
+        cStatus_BalloonChibiYoshiFly,
+
+        cStatus_EndingDisableSound      = 286,  // NSMBW: Bit 0x75
+
+        cStatus_LastBit = cStatus_EndingDisableSound,   // Not sure if bit 287 is used
+        cStatus_BitNum,
+        cStatus_MaxBitNum = (cStatus_BitNum + 31) / 32 * 32
+    };
+
+    enum BgCross
+    {
+        cBgCross_IsFoot = 0,                        // NSMBW Bit: 0x00
+        cBgCross_IsHead,                            // NSMBW Bit: 0x01
+        cBgCross_IsWall,                            // NSMBW Bit: 0x02
+        cBgCross_IsWallPressL,                      // NSMBW Bit: 0x03
+        cBgCross_IsWallPressR,                      // NSMBW Bit: 0x04
+        cBgCross_IsWallTouchL,                      // NSMBW Bit: 0x05
+        cBgCross_IsWallTouchR,                      // NSMBW Bit: 0x06
+        cBgCross_CarryRelatedL,                     // NSMBW Bit: 0x07
+        cBgCross_CarryRelatedR,                     // NSMBW Bit: 0x08
+        cBgCross_CarryObjBgCarriedL,                // NSMBW Bit: 0x09
+        cBgCross_CarryObjBgCarriedR,                // NSMBW Bit: 0x0A
+        cBgCross_WalkWallEnableL,
+        cBgCross_WalkWallEnableR,
+        cBgCross_IsWaterPillarL,                    // Maybe?
+        cBgCross_IsWaterPillarR,                    // ^^^
+        cBgCross_15,                                // NSMBW Bit: 0x0B (MAYBE)
+        cBgCross_16,                                // NSMBW Bit: 0x0C
+        cBgCross_17,                                // NSMBW Bit: 0x0D
+        cBgCross_IsUnderwater,                      // NSMBW Bit: 0x0E
+        cBgCross_IsWater,                           // NSMBW Bit: 0x0F (All liquids)
+        cBgCross_IsCompletelyUnderwater,            // NSMBW Bit: 0x10
+        cBgCross_IsWaterShallow,                    // NSMBW Bit: 0x11
+        cBgCross_RDash_IsNonWaterLiquid = 22,       // i.e. Lava, Lava Wave, Poison & Quicksand
+        cBgCross_IsAirWater,                        // NSMBW Bit: 0x12
+        cBgCross_DispSideLimitL,
+        cBgCross_DispSideLimitR,
+        cBgCross_IsSnow,                            // NSMBW Bit: 0x16
+        cBgCross_IsIce,                             // NSMBW Bit: 0x17
+        cBgCross_IsIceLowSlip,                      // NSMBW Bit: 0x18
+        cBgCross_IsSlideSlope,
+        cBgCross_OnSakaUnderRoof,                   // NSMBW Bit: 0x19
+        cBgCross_IsWaterAttr,
+        cBgCross_32,                                // On Ride that's moving up?
+        cBgCross_IsSand,                            // NSMBW Bit: 0x1A
+        cBgCross_IsSinkSand,
+        cBgCross_IsSlightlyInsideSinkSand,          // NSMBW Bit: 0x1B
+        cBgCross_IsPartiallySubmergedInSinkSand,    // NSMBW Bit: 0x1C
+        cBgCross_IsCompletelySubmergedInSinkSand,   // NSMBW Bit: 0x1D
+        cBgCross_IsBeltConveyorL,                   // NSMBW Bit: 0x1E
+        cBgCross_IsBeltConveyorR,                   // NSMBW Bit: 0x1F
+        cBgCross_IsChikuwa,
+        cBgCross_IsChikuwaActor,
+        cBgCross_OnHalf,                            // NSMBW Bit: 0x20
+        cBgCross_OnRide,                            // NSMBW Bit: 0x21
+        cBgCross_IsHold,                            // NSMBW Bit: 0x22 (i.e., Head is touching a horizontal rope)
+        cBgCross_Slip,                              // NSMBW Bit: 0x23 (MAYBE)
+        cBgCross_IsOnHDokan,
+        cBgCross_47,                                // NSMBW Bit: 0x26
+        cBgCross_IsSaka,                            // NSMBW: daPlBase_c::isSaka()
+
+        cBgCross_IsLineSpinLift = 50,
+        cBgCross_IsBlockDRC,
+        cBgCross_IsLiftZenStar,
+        cBgCross_IsFloorGyration,
+        cBgCross_IsFunsui,
+        cBgCross_IsKani,                            // NSMBW Bit: 0x28
+        cBgCross_IsKani2,                           // NSMBW Bit: 0x29
+        cBgCross_IsKani3,                           // NSMBW Bit: 0x2A (Never actually set at runtime)
+        cBgCross_IsPole,                            // NSMBW Bit: 0x2B
+        cBgCross_IsVine,                            // NSMBW Bit: 0x2C (MAYBE)
+        cBgCross_60,                                // NSMBW Bit: 0x2E (MAYBE)
+        cBgCross_61,                                // NSMBW Bit: 0x2F (MAYBE)
+        cBgCross_62,                                // NSMBW Bit: 0x30 (MAYBE)
+        cBgCross_63,                                // NSMBW Bit: 0x33 (MAYBE)
+        cBgCross_64,                                // NSMBW Bit: 0x34 (MAYBE)
+        cBgCross_65,                                // NSMBW Bit: 0x31 (MAYBE)
+        cBgCross_66,                                // NSMBW Bit: 0x35
+        cBgCross_67,                                // NSMBW Bit: 0x36
+        cBgCross_68,                                // NSMBW Bit: 0x37 (MAYBE)
+        cBgCross_69,                                // NSMBW Bit: 0x38
+        cBgCross_70,                                // NSMBW Bit: 0x39
+        cBgCross_71,                                // NSMBW Bit: 0x3A
+
+        cBgCross_HitBgActorYuka = 73,               // NSMBW Bit: 0x3B (MAYBE)
+        cBgCross_74,                                // NSMBW Bit: 0x3D
+        cBgCross_75,                                // NSMBW Bit: 0x3E
+        cBgCross_76,                                // NSMBW Bit: 0x3F
+
+        cBgCross_LastBit = cBgCross_76,             // Explicitly checked in function 0x029586DC
+        cBgCross_BitNum,
+        cBgCross_MaxBitNum = (cBgCross_BitNum + 31) / 32 * 32
+    };
+
+    static const s32 cOldBgCrossFootNum = 10;
+
+    enum BgAttr
+    {
+        cBgAttr_Rock = 0,
+        cBgAttr_Snow,
+        cBgAttr_Sand,
+        cBgAttr_Ice,
+        cBgAttr_Dirt,
+        cBgAttr_Water1,     // Surface of regular water
+        cBgAttr_Cloud,
+        cBgAttr_SandFunsui, // i.e., sand pillar
+        cBgAttr_Manta,      // Used for beanstalk
+        cBgAttr_Beach,
+        cBgAttr_Carpet,
+        cBgAttr_Leaf,
+        cBgAttr_Wood,
+        cBgAttr_Water2,     // Objects with water bg unit code attr
+        cBgAttr_Num
+    };
+    static_assert(cBgAttr_Num == 14);
+    static_assert(sizeof(BgAttr) == 4);
+
+    enum DokanDir
+    {
+        // Button to press to enter the pipe
+        cDokanDir_ButtonUp = 0,
+        cDokanDir_ButtonDown,
+        cDokanDir_ButtonLeft,
+        cDokanDir_ButtonRight,
+        cDokanDir_Num,
+
+        // Direction the pipe is facing
+        cDokanDir_FaceUp = cDokanDir_ButtonDown,
+        cDokanDir_FaceDown = cDokanDir_ButtonUp,
+        cDokanDir_FaceLeft = cDokanDir_ButtonRight,
+        cDokanDir_FaceRight = cDokanDir_ButtonLeft
+    };
+    static_assert(cDokanDir_Num == 4);
+    static_assert(sizeof(DokanDir) == 4);
+
+    enum DokanType
+    {
+        cDokanType_Invalid = 0,
+        cDokanType_Normal,
+        cDokanType_ForwardPipe      // Broken (most likely leftover from NSMBW that wasn't fully stripped)
+    };
+    static_assert(sizeof(DokanType) == 4);
+
+    enum JumpSe
+    {
+        cJumpSe_None = 0,
+        cJumpSe_Normal,
+        cJumpSe_High
+    };
+    static_assert(sizeof(JumpSe) == 4);
+
+    struct JumpInf
+    {
+        f32     speed_y;
+        JumpSe  jump_se_type;
+        u8      _8;
+    };
+    static_assert(sizeof(JumpInf) == 0xC);
+
+    enum WalkAction
+    {
+        cWalkAction_Wait,
+        cWalkAction_Move
+    };
+    static_assert(sizeof(WalkAction) == 4);
+
+    enum HipAction
+    {
+        cHipAction_Ready = 0,
+        cHipAction_AttackStart,
+        cHipAction_AttackFall,
+        cHipAction_Ground,
+        cHipAction_StandNormal,
+        cHipAction_StandNormalEnd,
+        cHipAction_ToStoop,
+        cHipAction_Num
+    };
+    static_assert(sizeof(HipAction) == 4);
+
+    enum JumpAction
+    {
+        cJumpAction_TakeOff = 0,
+        cJumpAction_Air
+    };
+    static_assert(sizeof(JumpAction) == 4);
+
+    enum PoleAction
+    {
+        cPoleAction_Start = 0,
+        cPoleAction_Wait,
+        cPoleAction_Up,
+        cPoleAction_Down
+    };
+    static_assert(sizeof(PoleAction) == 4);
+
+    enum VineAction
+    {
+        cVineAction_Ivy     = 0,
+        cVineAction_Net,
+        cVineAction_Attack,
+        cVineAction_Roll
+    };
+    static_assert(sizeof(VineAction) == 4);
+
+    enum CrouchAction
+    {
+        cCrouchAction_Ground = 0,
+        cCrouchAction_Water
+    };
+    static_assert(sizeof(CrouchAction) == 4);
+
+    enum SlipAction
+    {
+        cSlipAction_Move = 0,
+        cSlipAction_1,
+        cSlipAction_ToStoop,
+        cSlipAction_ToEnd
+    };
+    static_assert(sizeof(SlipAction) == 4);
+
+    enum CloudAction
+    {
+        cCloudAction_Idle = 0,
+        cCloudAction_Move,
+        cCloudAction_Crouch,
+        cCloudAction_CrouchEnd,
+        cCloudAction_FireCreate,
+        cCloudAction_FireCreateEnd,
+        cCloudAction_6,
+        cCloudAction_Throw,
+        cCloudAction_ThrowEnd
+    };
+    static_assert(sizeof(CloudAction) == 4);
+
+    enum SwimAction
+    {
+        cSwimAction_Swim = 0,
+        cSwimAction_Walk,
+        cSwimAction_Penguin,
+        cSwimAction_FireBall,
+        cSwimAction_SwimWithChibi,
+        cSwimAction_SwimWithChibi_CantSpinMaybe
+    };
+    static_assert(sizeof(SwimAction) == 4);
+
+    enum JumpDaiAction
+    {
+        cJumpDaiAction_0 = 0,
+        cJumpDaiAction_1
+    };
+    static_assert(sizeof(JumpDaiAction) == 4);
+
+    enum PlayerJumpDaiAction
+    {
+        cPlayerJumpDaiAction_0 = 0,
+        cPlayerJumpDaiAction_1
+    };
+    static_assert(sizeof(PlayerJumpDaiAction) == 4);
+
+    enum FireAction
+    {
+        cFireAction_0 = 0,
+        cFireAction_1
+    };
+    static_assert(sizeof(FireAction) == 4);
+
+    enum ThrowAction
+    {
+        cThrowAction_0 = 0,
+        cThrowAction_1,
+        cThrowAction_2
+    };
+    static_assert(sizeof(ThrowAction) == 4);
+
+    enum WallSlideAction
+    {
+        cWallSlideAction_Normal = 0,
+        cWallSlideAction_MusasabiSlide
+    };
+    static_assert(sizeof(WallSlideAction) == 4);
+
+    enum CarryPlayerAction
+    {
+        cCarryPlayerAction_Move = 0,
+        cCarryPlayerAction_Crouch,
+        cCarryPlayerAction_2,
+        cCarryPlayerAction_Fire,
+        cCarryPlayerAction_FireEnd
+    };
+    static_assert(sizeof(CarryPlayerAction) == 4);
+
+    enum FlyDamageAction
+    {
+        cFlyDamageAction_0 = 0,
+        cFlyDamageAction_1,
+        cFlyDamageAction_2,
+        cFlyDamageAction_3,
+        cFlyDamageAction_4,
+        cFlyDamageAction_5,
+        cFlyDamageAction_6
+    };
+    static_assert(sizeof(FlyDamageAction) == 4);
+
+    enum BalloonAction
+    {
+        cBalloonAction_0 = 0,
+        cBalloonAction_1,
+        cBalloonAction_2,
+        cBalloonAction_3,
+        cBalloonAction_4,
+        cBalloonAction_5,
+        cBalloonAction_6
+    };
+    static_assert(sizeof(BalloonAction) == 4);
+
+    enum CannonJumpAction
+    {
+        cCannonJumpAction_0 = 0,
+        cCannonJumpAction_1,
+        cCannonJumpAction_2
+    };
+    static_assert(sizeof(CannonJumpAction) == 4);
+
+    enum PropelAction
+    {
+        cPropelAction_BigFly = 0,
+        cPropelAction_Fly,
+        cPropelAction_Fall
+    };
+    static_assert(sizeof(PropelAction) == 4);
+
+    enum SpinHipAttackAction
+    {
+        cSpinHipAttackAction_Fall = 0,
+        cSpinHipAttackAction_Land
+    };
+    static_assert(sizeof(SpinHipAttackAction) == 4);
+
+    enum PenguinSlideAction
+    {
+        cPenguinSlideAction_Move,
+        cPenguinSlideAction_1,
+        cPenguinSlideAction_ToCrouch,
+        cPenguinSlideAction_StandUp
+    };
+    static_assert(sizeof(PenguinSlideAction) == 4);
+
+    enum BalloonChibiYoshiAction
+    {
+        cBalloonChibiYoshiAction_Fly = 0,
+        cBalloonChibiYoshiAction_FallMaybe,
+        cBalloonChibiYoshiAction_PreFallIdk
+    };
+    static_assert(sizeof(BalloonChibiYoshiAction) == 4);
+
+    enum TarzanRopeAction
+    {
+        cTarzanRopeAction_Start = 0,
+        cTarzanRopeAction_Wait,
+        cTarzanRopeAction_Up,
+        cTarzanRopeAction_Down,
+        cTarzanRopeAction_HasigoMove,
+        cTarzanRopeAction_HasigoHangDown,
+        cTarzanRopeAction_HasigoHangUp
+    };
+    static_assert(sizeof(TarzanRopeAction) == 4);
+
+    enum KaniAction
+    {
+        cKaniAction_Walk = 0,
+        cKaniAction_HangInit,
+        cKaniAction_JumpHangInit,
+        cKaniAction_Hang,
+        cKaniAction_HangFall,
+        cKaniAction_HangUp,
+        cKaniAction_HangUpVine
+    };
+    static_assert(sizeof(KaniAction) == 4);
+
+    enum HangAction
+    {
+        cHangAction_Start = 0,
+        cHangAction_Wait,
+        cHangAction_Move
+    };
+    static_assert(sizeof(HangAction) == 4);
+
+    enum AnimePlayAction
+    {
+        cAnimePlayAction_Start = 0,
+        cAnimePlayAction_End = 5,
+
+        cAnimePlayAction_Glad_KimeStart = cAnimePlayAction_Start + 1,
+        cAnimePlayAction_Glad_PutOnCap,
+        cAnimePlayAction_Glad_KimeWait,
+        cAnimePlayAction_Glad_Wait,
+        cAnimePlayAction_Glad_Num,
+
+        cAnimePlayAction_BossAttention_Turn = cAnimePlayAction_Start + 1,
+        cAnimePlayAction_BossAttention_Num,
+
+        cAnimePlayAction_BossKeyGet_Cheer = cAnimePlayAction_Start + 1,
+        cAnimePlayAction_BossKeyGet_Num,
+
+        cAnimePlayAction_TitleSlip_Move = cAnimePlayAction_Start + 1,
+        cAnimePlayAction_TitleSlip_Num
+    };
+    static_assert(sizeof(AnimePlayAction) == 4);
+    static_assert(cAnimePlayAction_Glad_Num <= cAnimePlayAction_End);
+    static_assert(cAnimePlayAction_BossAttention_Num <= cAnimePlayAction_End);
+    static_assert(cAnimePlayAction_BossKeyGet_Num <= cAnimePlayAction_End);
+    static_assert(cAnimePlayAction_TitleSlip_Num <= cAnimePlayAction_End);
+
+    enum FunsuiAction
+    {
+        cFunsuiAction_Ascend = 0,
+        cFunsuiAction_Release
+    };
+    static_assert(sizeof(FunsuiAction) == 4);
+
+    enum BalloonChibiYoshiFlyAction
+    {
+        cBalloonChibiYoshiFlyAction_Fly = 0,
+        cBalloonChibiYoshiFlyAction_Fall,
+        cBalloonChibiYoshiFlyAction_FlyForceFall
+    };
+    static_assert(sizeof(BalloonChibiYoshiFlyAction) == 4);
+
+    union ActionType
+    {
+        WalkAction                  walk;
+        HipAction                   hip;
+        JumpAction                  jump;
+        PoleAction                  pole;
+        VineAction                  vine;
+        CrouchAction                crouch;
+        SlipAction                  slip;
+        CloudAction                 cloud;
+        SwimAction                  swim;
+        JumpDaiAction               jump_dai;
+        PlayerJumpDaiAction         player_jump_dai;
+        FireAction                  fire;
+        ThrowAction                 throw_;
+        WallSlideAction             wall_slide;
+        CarryPlayerAction           carry_player;
+        FlyDamageAction             fly_damage;
+        BalloonAction               balloon;
+        CannonJumpAction            cannon_jump;
+        PropelAction                propel;
+        SpinHipAttackAction         spin_hip_attack;
+        PenguinSlideAction          penguin_slide;
+        BalloonChibiYoshiAction     balloon_chibi_yoshi;
+        TarzanRopeAction            tarzan_rope;
+        KaniAction                  kani;
+        HangAction                  hang;
+        AnimePlayAction             anime_play;
+        FunsuiAction                funsui;
+        BalloonChibiYoshiFlyAction  balloon_chibi_yoshi_fly;
+        // And still many more...
+    };
+    static_assert(sizeof(ActionType) == 4);
+
+    enum DemoNextGotoBlockAction
+    {
+        cDemoNextGotoBlockAction_Walk = 0,
+        cDemoNextGotoBlockAction_SceneChange
+    };
+    static_assert(sizeof(HangAction) == 4);
+
+    enum DemoStartWaitAction
+    {
+        cDemoStartWaitAction_Wait = 0,
+        cDemoStartWaitAction_Move
+    };
+    static_assert(sizeof(DemoStartWaitAction) == 4);
+
+    enum DemoWaitAction
+    {
+        cDemoWaitAction_WaitTurn = 0,
+        cDemoWaitAction_Move,
+        cDemoWaitAction_WaitSingle
+
+    };
+    static_assert(sizeof(DemoWaitAction) == 4);
+
+    enum DemoOutDokanAction
+    {
+        cDemoOutDokanAction_MoveSubAxis = 0,
+        cDemoOutDokanAction_MoveMainAxis,
+        cDemoOutDokanAction_End
+    };
+    static_assert(sizeof(DemoOutDokanAction) == 4);
+
+    enum DemoInDokanAction
+    {
+        cDemoInDokanAction_CheckTurn = 0,
+        cDemoInDokanAction_WaitNextTurn,
+        cDemoInDokanAction_Move,
+        cDemoInDokanAction_WaitNextTurn_UnderwaterKoopaJrDemo,
+        cDemoInDokanAction_End
+    };
+    static_assert(sizeof(DemoInDokanAction) == 4);
+
+    enum DemoGoalAction
+    {
+        cDemoGoalAction_Pole = 0,
+        cDemoGoalAction_MultiJump,
+        cDemoGoalAction_Wait,
+        cDemoGoalAction_KimePose,
+        cDemoGoalAction_RideOffJump,
+        cDemoGoalAction_Run,
+        cDemoGoalAction_PreRun,
+        cDemoGoalAction_Item
+    };
+    static_assert(sizeof(DemoGoalAction) == 4);
+
+    union DemoActionType
+    {
+        DemoNextGotoBlockAction next_goto_block;
+        DemoStartWaitAction     start_wait;
+        DemoWaitAction          wait;
+        DemoOutDokanAction      out_dokan;
+        DemoInDokanAction       in_dokan;
+        DemoGoalAction          goal;
+        // And more...
+    };
+    static_assert(sizeof(DemoActionType) == 4);
+
+    enum DemoControlSubAction
+    {
+        cDemoControlSubAction_Wait = 0,
+        cDemoControlSubAction_Walk,
+        cDemoControlSubAction_Anm,
+        cDemoControlSubAction_AnmSeq,
+        cDemoControlSubAction_4
+    };
+    static_assert(sizeof(DemoControlSubAction) == 4);
+
+    union DemoSubActionType
+    {
+        DemoControlSubAction    control;
+        // And more...
+    };
+    static_assert(sizeof(DemoSubActionType) == 4);
+
+    enum FunsuiType
+    {
+        cFunsuiType_Sand = 0,
+        cFunsuiType_Water,
+        cFunsuiType_Num
+    };
+    static_assert(sizeof(FunsuiType) == 4);
+    static_assert(cFunsuiType_Num == 2);
+
+    enum DemoType
+    {
+        cDemoType_1 = 1,
+
+        cDemoType_3 = 3,
+        cDemoType_4,
+        cDemoType_5,    // CourseOut?
+        cDemoType_ShadowkunCatch
+    };
+
+    enum AnmBlend
+    {
+        cAnmBlend_Disable = 0,
+        cAnmBlend_Enable
+    };
+
+    enum StarSet
+    {
+        cStarSet_Virus = 0,
+        cStarSet_CustomTime,
+        cStarSet_Default
+    };
+
+    enum BounceType
+    {
+        cBounceType_Normal = 0,
+        cBounceType_1,
+        cBounceType_2
+    };
+
+    enum ReductionMode
+    {
+        cReductionMode_None = 0,
+        cReductionMode_JumpDai,
+        cReductionMode_2,
+        cReductionMode_Boyon
+    };
+    static_assert(sizeof(ReductionMode) == 4);
+
+    enum NextGotoBlockDelay
+    {
+        cNextGotoBlockDelay_None = 0,
+        cNextGotoBlockDelay_Normal,
+        cNextGotoBlockDelay_Short
+    };
+    static_assert(sizeof(NextGotoBlockDelay) == 4);
+
+    enum CheckBgDokanInUDRes
+    {
+        cCheckBgDokanInUDRes_Clear = 0,
+        cCheckBgDokanInUDRes_ClearMame,
+        cCheckBgDokanInUDRes_Blocked
+    };
+
+    enum AnimePlayType
+    {
+        cAnimePlayType_Normal = 0,
+        cAnimePlayType_BossSetUp,
+        cAnimePlayType_BossGlad,
+        cAnimePlayType_BossAttention,
+        cAnimePlayType_BossKeyGet,
+        cAnimePlayType_LastBoss2Glad,
+        cAnimePlayType_LastBoss1Glad,
+        cAnimePlayType_TitleSlip,
+        cAnimePlayType_EndingGlad,
+        cAnimePlayType_EndingGladWait,
+        cAnimePlayType_TottenItem
+    };
+    static_assert(sizeof(AnimePlayType) == 4);
+
+    enum ClearType
+    {
+        cClearType_Normal = 0,
+        cClearType_Boss,
+        cClearType_Fanfare,
+        cClearType_LastBoss
+    };
+    static_assert(sizeof(ClearType) == 4);
+
+    enum SakaUpDown
+    {
+        cSakaUpDown_Downhill = 0,
+        cSakaUpDown_Uphill,
+        cSakaUpDown_Num
+    };
+    static_assert(cSakaUpDown_Num == 2);
+
+    enum PowerChangeType
+    {
+        cPowerChangeType_Normal = 0,
+        cPowerChangeType_Ice,
+        cPowerChangeType_Snow,
+        cPowerChangeType_Num
+    };
+    static_assert(cPowerChangeType_Num == 3);
+
+    enum StartSoundType
+    {
+        cStartSoundType_Normal = 0,
+        cStartSoundType_DisableInEnding
+    };
+
+    // Address: 0x10166E60
+    static const f32 cDirSpeed[cDirType_NumX];
+    // Address: 0x10166E68
+    static const f32 cJumpSpeedBase;                // 3.628f
+    // Address: 0x10166E6C
+    static const f32 cUnkZero;                      // 0.0f
+    // Address: 0x10166E70
+    static const f32 cWaterNumaJumpSpeed;           // 0.75f
+    // Address: 0x10166E74
+    static const f32 cMaxFallSpeed;                 // -4.0f
+    // Address: 0x10166E78
+    static const f32 cMaxFallSpeed_Foot;            // -2.0f
+    // Address: 0x10166E7C
+    static const f32 cTurnPowerUpRate;              // 3.0f
+    // Address: 0x10166E80
+    static const f32 cWaterCancelCrouchAnmSpeed;    // 0.1f
+
+    static const s32 cAddCalcAngleYFrameNum_Default = 10;
+    static const s32 cAddCalcAngleYFrameNum_DemoOutDoor = 5;
+
+public:
+    // ------------------------------------ PlayerBase.cpp (1) ------------------------------------ //
+
+    // Address: 0x028F23C0
+    PlayerBase(const ActorCreateParam& param);
+    // Address: 0x028F2CA8
+    virtual ~PlayerBase();
+
+protected:
+    // Address: 0x028F2E78
+    Result create_() override;
+    // Address: 0x028F2F0C
+    bool preExecute_() override;
+    // Address: 0x028F3078
+    bool execute_() override;
+    // Address: 0x028F3534
+    void postExecute_(MainState state) override;
+    // Address: 0x028F36BC
+    bool preDraw_() override;
+
+    // Address: 0x028F372C
+    void blockHitInit_() override;
+
+public:
+    ActorBgCollisionCheck* getBgCheck() override
+    {
+        return &mBgCheckPlayer;
+    }
+
+    // Address: 0x028F376C
+    void setDrawTypeInDistantView();
+    // Address: 0x028F3778
+    void resetDrawType();
+
+    // Address: 0x028F3784
+    bool isKinopio() const;
+    // Address: 0x028F37A8
+    bool isTotten() const;
+
+    // Address: 0x028F37BC
+    bool isMameAction();
+
+    // Address: 0x028F3820
+    sead::Vector3f* getHeadTopPosP();
+    // Address: 0x028F3844
+    sead::Vector3f* getHeadPosP();
+
+    const sead::Vector3f& getLookatPos() const
+    {
+        return *const_cast<PlayerBase*>(this)->getHeadPosP();
+    }
+
+    virtual void executeMain() = 0;
+    virtual void executeLastPlayer() = 0;
+    virtual void executeLastAll() = 0;
+
+    virtual void setPlayerMode(PlayerMode mode, bool temporary)
+    {
+        setPlayerModeImpl(mode, temporary);
+    }
+
+    virtual void setPlayerModeImpl(PlayerMode mode, bool temporary) = 0;
+
+    virtual bool isEnableRDashLuigiPhysics() const
+    {
+        return false;
+    }
+
+    PlayerTallType getTallType()
+    {
+        return getTallType(mMode);
+    }
+
+    virtual PlayerTallType getTallType(PlayerMode mode) = 0;
+
+    virtual void getMaskPos(sead::Vector3f& pos) = 0;
+    virtual void getMaskCaveCheckPos(sead::Vector3f* p_pos, f32* p_y_offset) = 0;
+
+    // Address: 0x028F3854
+    virtual bool vf154();
+
+    // Address: 0x028F389C
+    void setMaskPosInterpType(s32 src_type);
+
+    // Address: 0x028F31C0
+    void calcMaskPos();
+
+    // Address: 0x028F38AC
+    void dokanAdjustMaskPos(sead::Vector3f& mask_pos);
+
+    // Address: 0x028F3948
+    bool checkRideActor(PlayerBase* p_player_other);
+    // Address: 0x028F3978
+    void setRideNat(f32 value);
+    // Address: 0x028F398C
+    void updateRideNat();
+
+    // Address: 0x028F39E4
+    void onFollowMameKuribo();
+    // Address: 0x028F31A0
+    void clearFollowMameKuribo();
+    // Address: 0x028F3A00
+    s32 getFollowMameKuribo();
+    // Address: 0x028F3A08
+    s32 getFollowMameKuriboSpeedType();
+    // Address: 0x028F3A44
+    f32 getFollowMameKuriboSpeedScaleX();
+    // Address: 0x028F3A94
+    f32 getFollowMameKuriboSpeedScaleY();
+
+    // ------------------------------------ PlayerBaseBg.cpp (1) ------------------------------------ //
+
+    // Address: 0x028F6274
+    BgAttr getFootBgAttr(BgUnitCode::Attr attr);
+
+    // Address: 0x028F684C
+    void postBgCrossBase();
+    // Address: 0x028F6298
+    bool checkLedge();
+    // Address: 0x028F658C
+    bool vsPlayerCarryPush();
+
+    // Address: 0x028F6B04
+    void setBcSensorFlagsBase();
+
+    // Address: 0x028F77B4
+    void bgCheck(bool side_view_check);
+
+    // Address: 0x028F86AC
+    void clearBgAndSakaAngle();
+    // Address: 0x028F6CD4
+    void clearBgCheckInfo();
+    // Address: 0x028F6CAC
+    void clearBgSpeed();
+
+    // Address: 0x028F71C0
+    bool checkOnHDokan(const u64& bc_data); // See BgUnitCode
+
+    // Address: 0x028F7204
+    bool checkSinkSand();
+
+    bool isOnSinkSand()
+    {
+        return isNowBgCross(cBgCross_IsSlightlyInsideSinkSand) || isNowBgCross(cBgCross_IsPartiallySubmergedInSinkSand);
+    }
+
+    // Address: 0x028F730C
+    bool checkBgWall(DirType dir);
+
+    // Address: 0x028F73F4
+    f32 getWaterCheckPosY();
+    // Address: 0x028F73B4
+    f32 getWaterOffsetY();
+
+    // Address: 0x028F7428
+    void checkWater();
+
+    virtual const PlayerBgPointHIO* getBgPointData() = 0;
+
+    const ActorBgCollisionCheck::Sensor* getHeadBgPointData()
+    {
+        return &getBgPointData()->sensor_head;
+    }
+
+    const ActorBgCollisionCheck::Sensor* getWallBgPointData()
+    {
+        return &getBgPointData()->sensor_wall;
+    }
+
+    const ActorBgCollisionCheck::Sensor* getFootBgPointData()
+    {
+        return &getBgPointData()->sensor_foot;
+    }
+
+    virtual f32 getStandHeadBgPointY() = 0;
+
+    // Address: 0x028F86EC
+    bool isSlipSaka();
+
+private:
+    inline void checkBgCross_();
+    inline void checkCarryObjBgCarried_(const ActorBgCollisionCheck::Output& output, DirType dir);
+
+public:
+    virtual void checkBgCrossSub() = 0;
+    virtual void postBgCross() = 0;
+
+    // Address: 0x028F872C
+    bool checkBGCrossWall(DirType dir);
+
+    // Address: 0x028F8760
+    bool checkOldBgCrossFoot(s32 frame_cnt);
+
+    virtual void clearJumpActionInfo() = 0;
+
+    // Address: 0x028F87B8
+    void setJumpSandSinkRate();
+
+    // Address: 0x028F87C8
+    Angle getSakaAngle(DirType dir);
+    // Address: 0x028F716C
+    Angle getSakaAngleBySpeed(f32 speed_F);
+    // Address: 0x028F8804
+    SakaUpDown getSakaUpDown(DirType dir);
+
+    Angle getSakaAngle()
+    {
+        return getSakaAngle(mDirection);
+    }
+
+    Angle getSakaAngleBySpeed()
+    {
+        return getSakaAngleBySpeed(mSpeedF);
+    }
+
+    SakaUpDown getSakaUpDown()
+    {
+        return getSakaUpDown(mDirection);
+    }
+
+    // Address: 0x028F76A0
+    void checkDamageBg();
+    // Address: 0x028F8850
+    bool setBgDamage();
+
+    // Address: 0x028F8900
+    void calcNoHitObjBgTimer();
+
+    // Address: 0x028F6EEC
+    void checkSideViewLemit();
+    // Address: 0x028F6D20
+    void revSideLimitCommon(f32 x);
+    // Address: 0x028F6E64
+    void calcSideLimitMultL(f32 x);
+    // Address: 0x028F6EA8
+    void calcSideLimitMultR(f32 x);
+
+private:
+    inline bool checkDispSideLemit_();
+
+public:
+    // Address: 0x028F8944
+    void setLandSakaJumpSpeedF();
+
+    // Address: 0x028F8A1C
+    bool isRideMove();
+
+    // Address: 0x028F8A4C
+    void setNoHitObjBg(Actor* p_no_hit_obj, s32 time);
+
+    // Address: 0x028F8A58
+    void setJumpAddSpeedF(f32 f);
+    // Address: 0x028F8ABC
+    void setAddLiftSpeedF();
+
+    // ------------------------------------ PlayerBaseCc.cpp ------------------------------------ //
+
+    // Address: 0x028F9858
+    virtual void initCollision(const ActorCollisionCheck::CollisionData& cc_data_react, const ActorCollisionCheck::CollisionData& cc_data_attack);
+    // Address: 0x028F98FC
+    virtual void releaseCcData();
+    // Address: 0x028F9A78
+    virtual void clearCcData();
+
+    // Address: 0x028F9AC8
+    bool entryCollision();
+
+    virtual bool vf19C() = 0;
+
+    // Address: 0x028F9CC8
+    void setCcAt(const ActorCollisionCheck::Vec2& center_offset, const ActorCollisionCheck::Vec2& half_size, const ActorCollisionCheck::Attack& attack);
+
+    // Address: 0x028F9D1C
+    void setCcAtBody(const ActorCollisionCheck::Attack& attack);
+    // Address: 0x028F9D2C
+    void setCcAtSlip();
+    // Address: 0x028F9D58
+    void setCcAtPenguinSlip();
+    // Address: 0x028F9D9C
+    void setCcAtHipAttack();
+    // Address: 0x028F9DD4
+    void setCcAtCannon();
+    // Address: 0x028F9E0C
+    void setCcAtStar();
+
+    // Address: 0x028F9E48
+    bool isActionRevisionY();
+    // Address: 0x028F9E6C
+    void setCcPlayerRevY(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other, f32 scale, ActorCollisionCheck::Kind kind);
+    // Address: 0x028FA0DC
+    void setCcPlayerRevParam(f32 param);
+    // Address: 0x028FA108
+    void clearCcPlayerRev();
+    // Address: 0x028FA130
+    bool calcCcPlayerRev(f32*);
+
+    // Address: 0x028FA280
+    void setNoHitPlayer(const PlayerBase* p_player_other, s32 time);
+    // Address: 0x028FA290
+    void updateNoHitPlayer();
+    // Address: 0x028FA2B4
+    const PlayerBase* getNoHitPlayer();
+
+    // Address: 0x028FA350
+    bool isEnableStamp(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
+    // Address: 0x028FA3E0
+    bool isEnableStampPlayerJump(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other);
+
+    // Address: 0x028FA590
+    void setStampReduction(PlayerBase* p_player_other);
+    // Address: 0x028FA544
+    void setReductionScale();
+
+    // Address: 0x028FA62C
+    void setStampPlayerJump(bool allow_high_jump, f32 rev_y);
+
+    // Address: 0x028FA8D8
+    virtual void initStampReduction();
+    // Address: 0x028FA910
+    virtual void calcJumpDaiReductionScale(s32 t, s32 max_t);
+    // Address: 0x028FA97C
+    virtual void setReductionBoyon();
+
+    // Address: 0x028FA830
+    void setStomped();
+
+    // Address: 0x028FA990
+    virtual bool getHeadTopPos(sead::Vector3f& pos);
+
+    // Address: 0x028FAA20
+    void calcReductionScale();
+    // Address: 0x028FAB14
+    void getReductionModelScale(sead::Vector3f* p_scale);
+
+    void setCcEnemyFumiRevExtend()
+    {
+        mCcEnemyFumiRevExtendTimer = 1;
+    }
+
+    bool isCcEnemyFumiRevExtend()
+    {
+        return mCcEnemyFumiRevExtendTimer != 0;
+    }
+
+    // ------------------------------------ PlayerBaseBg.cpp (2) ------------------------------------ //
+
+    // Address: 0x028F8B18
+    void dispPinchRequestRDash();
+
+    // Address: 0x028F8B3C
+    void initDispSideLemit();
+
+    // Address: 0x028F92B0
+    void checkDispOver();
+    // Address: 0x028F9164
+    void checkDisplayOutDead();
+
+    // Address: 0x028F93F8
+    virtual void upperOverCheck();
+
+    // Address: 0x028F8BAC
+    bool isLenientOutCheck();
+
+    // Address: 0x028F8C50
+    void setFallDownDemoBase();
+
+    virtual void setFallDownDemo() = 0;
+
+    // Address: 0x028F8FA8
+    bool checkDispOutLR();
+    // Address: 0x028F9010
+    bool checkBalloonInDispOutLR();
+
+    virtual bool setBalloonInDispOut(s32) = 0;
+    virtual bool setBalloonDispOut() = 0;
+
+    // Address: 0x028F9560
+    bool checkStandUpRoof();
+
+    // Address: 0x028F9694
+    bool isBgPress(Actor* p_actor);
+    // Address: 0x028F9710
+    bool setPressBgDamageBase(DamageType type);
+    // Address: 0x028F8F18
+    bool checkPressBg();
+
+private:
+    inline void underOverCheck_();
+
+    // Address: 0x028F8CD8
+    bool checkPressBgUD_();
+    // Address: 0x028F8D88
+    bool checkPressBgLR_();
+    // Address: 0x028F8C80
+    void setPressBgCollision_(const BgCollision* p_bg_collision);
+
+public:
+    // ------------------------------------ PlayerBaseDemoCreate.cpp ------------------------------------ //
+
+    // Address: 0x028FD318
+    virtual void setCreate(const sead::Vector3f& pos, NextGotoType next_goto_type, DirType dir);
+    // Address: 0x028FD394
+    virtual void reset();
+    // Address: 0x028FD424
+    void resetBg();
+
+    // Address: 0x028FD4C0
+    void setPosAndDir(const sead::Vector3f& pos, DirType dir);
+
+    // Address: 0x028FD588
+    void stopCreateOther();
+
+    // Address: 0x028FD5B0
+    void executeDemoCreate();
+
+private:
+    inline void setCreateAction_(NextGotoType next_goto_type);
+
+public:
+    // Address: 0x028FD684
+    virtual void initialNormal(NextGotoType next_goto_type);
+    // Address: 0x028FDD4C
+    virtual void initialDoor(NextGotoType next_goto_type);
+    // Address: 0x028FD6D0
+    virtual void initialDokan(NextGotoType next_goto_type);
+    // Address: 0x028FD7B4
+    virtual void initialFall(NextGotoType next_goto_type);
+    // Address: 0x028FD800
+    virtual void initialHipAttack(NextGotoType next_goto_type);
+    // Address: 0x028FD84C
+    virtual void initialSlip(NextGotoType next_goto_type);
+    // Address: 0x028FDD50
+    virtual void initialJump(NextGotoType next_goto_type);
+    // Address: 0x028FDD54
+    virtual void initialVine(NextGotoType next_goto_type);
+    // Address: 0x028FDD58
+    virtual void initialShiroBoss(NextGotoType next_goto_type);
+    // Address: 0x028FDD5C
+    virtual void initialFinalBoss(NextGotoType next_goto_type);
+    // Address: 0x028FDD60
+    virtual void initialUnk10(NextGotoType next_goto_type);
+    // Address: 0x028FD8A4
+    virtual void initialUnk27(NextGotoType next_goto_type);
+    // Address: 0x028FDD64
+    virtual void initialBoxingKoopaJr(NextGotoType next_goto_type);
+    // Address: 0x028FDD68
+    virtual void initialTitle(NextGotoType next_goto_type);
+
+    // ------------------------------------ PlayerBaseDemo.cpp (1) ------------------------------------ //
+
+    // StateID_DemoCreate           Address: 0x1022A008
+    // initializeState_DemoCreate   Address: 0x028FD8B4
+    // executeState_DemoCreate      Address: 0x028FD8B8
+    // finalizeState_DemoCreate     Address: 0x028FDD6C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoCreate)
+    // StateID_DemoNone         Address: 0x1022A02C
+    // initializeState_DemoNone Address: 0x028FAC40
+    // executeState_DemoNone    Address: 0x028FACDC
+    // finalizeState_DemoNone   Address: 0x028FD244
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoNone)
+    // StateID_DemoReset            Address: 0x1022A050
+    // initializeState_DemoReset    Address: 0x028FD248
+    // executeState_DemoReset       Address: 0x028FD24C
+    // finalizeState_DemoReset      Address: 0x028FD250
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoReset)
+    // StateID_DemoStartCoinBattle          Address: 0x1022A074
+    // initializeState_DemoStartCoinBattle  Address: 0x028FAEB0
+    // executeState_DemoStartCoinBattle     Address: 0x028FAFB4
+    // finalizeState_DemoStartCoinBattle    Address: 0x028FB05C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoStartCoinBattle)
+    // StateID_DemoGoal         Address: 0x1022A098
+    // initializeState_DemoGoal Address: 0x02901D7C
+    // executeState_DemoGoal    Address: 0x02902988
+    // finalizeState_DemoGoal   Address: 0x02902AE0
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoGoal)
+    // StateID_DemoStartWait            Address: 0x1022A0BC
+    // initializeState_DemoStartWait    Address: 0x028FD938
+    // executeState_DemoStartWait       Address: 0x028FD9E0
+    // finalizeState_DemoStartWait      Address: 0x028FDD70
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoStartWait)
+    // StateID_DemoWait         Address: 0x1022A0E0
+    // initializeState_DemoWait Address: 0x028FDAAC
+    // executeState_DemoWait    Address: 0x028FDB30
+    // finalizeState_DemoWait   Address: 0x028FDD18
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoWait)
+    // StateID_DemoOutDokanU            Address: 0x1022A104
+    // initializeState_DemoOutDokanU    Address: 0x028FDFB4
+    // executeState_DemoOutDokanU       Address: 0x028FE1E4
+    // finalizeState_DemoOutDokanU      Address: 0x028FE21C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoOutDokanU)
+    // StateID_DemoOutDokanD            Address: 0x1022A128
+    // initializeState_DemoOutDokanD    Address: 0x028FE220
+    // executeState_DemoOutDokanD       Address: 0x028FE228
+    // finalizeState_DemoOutDokanD      Address: 0x028FE22C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoOutDokanD)
+    // StateID_DemoOutDokanR            Address: 0x1022A14C
+    // initializeState_DemoOutDokanR    Address: 0x028FE3B4
+    // executeState_DemoOutDokanR       Address: 0x028FE67C
+    // finalizeState_DemoOutDokanR      Address: 0x028FE680
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoOutDokanR)
+    // StateID_DemoOutDokanL            Address: 0x1022A170
+    // initializeState_DemoOutDokanL    Address: 0x028FE684
+    // executeState_DemoOutDokanL       Address: 0x028FE68C
+    // finalizeState_DemoOutDokanL      Address: 0x028FE690
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoOutDokanL)
+    // StateID_DemoOutDokanRollUD           Address: 0x1022A194
+    // initializeState_DemoOutDokanRollUD   Address: 0x028FE7E4
+    // executeState_DemoOutDokanRollUD      Address: 0x028FE824
+    // finalizeState_DemoOutDokanRollUD     Address: 0x028FEBD0
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoOutDokanRollUD)
+    // StateID_DemoOutDokanRollLR           Address: 0x1022A1B8
+    // initializeState_DemoOutDokanRollLR   Address: 0x028FEBD4
+    // executeState_DemoOutDokanRollLR      Address: 0x028FEC34
+    // finalizeState_DemoOutDokanRollLR     Address: 0x028FEDC4
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoOutDokanRollLR)
+    // StateID_DemoInDokanU         Address: 0x1022A1DC
+    // initializeState_DemoInDokanU Address: 0x028FEDC8
+    // executeState_DemoInDokanU    Address: 0x028FF344
+    // finalizeState_DemoInDokanU   Address: 0x028FF3A8
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoInDokanU)
+    // StateID_DemoInDokanD         Address: 0x1022A200
+    // initializeState_DemoInDokanD Address: 0x028FF3AC
+    // executeState_DemoInDokanD    Address: 0x028FF4B8
+    // finalizeState_DemoInDokanD   Address: 0x028FF4BC
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoInDokanD)
+    // StateID_DemoInDokanR         Address: 0x1022A224
+    // initializeState_DemoInDokanR Address: 0x028FF54C
+    // executeState_DemoInDokanR    Address: 0x028FF554
+    // finalizeState_DemoInDokanR   Address: 0x028FF558
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoInDokanR)
+    // StateID_DemoInDokanL         Address: 0x1022A248
+    // initializeState_DemoInDokanL Address: 0x028FF55C
+    // executeState_DemoInDokanL    Address: 0x028FF564
+    // finalizeState_DemoInDokanL   Address: 0x028FF568
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoInDokanL)
+    // StateID_DemoOutDoor          Address: 0x1022A26C
+    // initializeState_DemoOutDoor  Address: 0x028FD254
+    // executeState_DemoOutDoor     Address: 0x028FD258
+    // finalizeState_DemoOutDoor    Address: 0x028FD25C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoOutDoor)
+    // StateID_DemoInDoor           Address: 0x1022A290
+    // initializeState_DemoInDoor   Address: 0x028FD260
+    // executeState_DemoInDoor      Address: 0x028FD264
+    // finalizeState_DemoInDoor     Address: 0x028FD268
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoInDoor)
+    // StateID_DemoNextGotoBlock            Address: 0x1022A2B4
+    // initializeState_DemoNextGotoBlock    Address: 0x028FB068
+    // executeState_DemoNextGotoBlock       Address: 0x028FB404
+    // finalizeState_DemoNextGotoBlock      Address: 0x028FB51C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoNextGotoBlock)
+    // StateID_DemoDown         Address: 0x1022A2D8
+    // initializeState_DemoDown Address: 0x02901CF8
+    // executeState_DemoDown    Address: 0x02901CFC
+    // finalizeState_DemoDown   Address: 0x02901D00
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoDown)
+    // StateID_DemoControl          Address: 0x1022A2FC
+    // initializeState_DemoControl  Address: 0x02900350
+    // executeState_DemoControl     Address: 0x02900420
+    // finalizeState_DemoControl    Address: 0x02900644
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoControl)
+    // StateID_DemoSubjectClearLand         Address: 0x1022A320
+    // initializeState_DemoSubjectClearLand Address: 0x029031E8
+    // executeState_DemoSubjectClearLand    Address: 0x02903288
+    // finalizeState_DemoSubjectClearLand   Address: 0x0290338C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoSubjectClearLand)
+    // StateID_DemoSubjectClearAir          Address: 0x1022A344
+    // initializeState_DemoSubjectClearAir  Address: 0x0290339C
+    // executeState_DemoSubjectClearAir     Address: 0x029033BC
+    // finalizeState_DemoSubjectClearAir    Address: 0x0290340C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoSubjectClearAir)
+    // StateID_DemoShadowFail           Address: 0x1022A368
+    // initializeState_DemoShadowFail   Address: 0x02903F24
+    // executeState_DemoShadowFail      Address: 0x02903F28
+    // finalizeState_DemoShadowFail     Address: 0x02903F2C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, DemoShadowFail)
+
+    // Address: 0x028FAF1C
+    void changeDemoState(const StateID& state_id, s32 param);
+    // Address: 0x028FB568
+    bool executeDemoState();
+
+    bool isDemoState(const StateID& state_id) const
+    {
+        return *mDemoStateMgr.getStateID() == state_id;
+    }
+
+    bool isOldDemoState(const StateID& state_id) const
+    {
+        return *mDemoStateMgr.getOldStateID() == state_id;
+    }
+
+    // ------------------------------------ PlayerBaseDemoDosa.cpp (1) ------------------------------------ //
+
+    virtual void initializeDemoControl(bool carry_chibi_yoshi = true) = 0;
+
+    // Address: 0x029006AC
+    void setControlDemoPos(const sead::Vector3f& pos);
+    // Address: 0x029007C8
+    void setControlDemoDir(DirType dir);
+
+    // Address: 0x0290087C
+    void setControlDemoWait();
+    // Address: 0x029008FC
+    bool isControlDemoWait();
+
+    // Address: 0x02900924
+    void setControlDemoWalk(f32 target_pos_x, f32 speed);
+    // Address: 0x029009F4
+    bool isControlDemoWalk();
+
+    // Address: 0x02900A1C
+    void setControlDemoAnm(s32 anm_id, bool loop);
+    // Address: Deleted
+    bool isControlDemoAnm(s32 anm_id);
+
+    // Address: 0x02900AD0
+    void setControlDemoAnmSeq(AnimePlayType type);
+    // Address: 0x02900AF4
+    bool isControlDemoAnmSeq(AnimePlayType type);
+
+    // Address: 0x02900B34
+    bool isDemoLand();
+    // Address: 0x02900B68
+    bool isBossDemoLand();
+    // Address: 0x02900B6C
+    bool isEnemyStageClearDemoLand();
+
+    // Address: 0x02901A60
+    bool isEnableControlDemoKoopaSwitch();
+    // Address: 0x02900C44
+    bool startControlDemoKoopaSwitch();
+
+    // Address: 0x02900BBC
+    bool startControlDemo(bool status);
+    // Address: 0x02900CB0
+    void endControlDemo();
+
+    // Address: 0x02900D34
+    void checkDemoControl();
+
+    void setEnemyStageClearDemo(const Actor& box)
+    {
+        mSpeed.x = 0.0f;
+        mSpeedF = 0.0f;
+        if (mPos.x >= box.getPos().x)
+            setControlDemoDir(cDirType_Left);
+        else
+            setControlDemoDir(cDirType_Right);
+    }
+
+    // Address: 0x02900CC0
+    bool isUnkDemoLand();
+
+    // ------------------------------------ PlayerBaseDemo.cpp (2) ------------------------------------ //
+
+    // Address: 0x028FB6EC
+    virtual void onDemoType(DemoType type);
+    // Address: 0x028FB704
+    virtual void offDemoType(DemoType type);
+    // Address: 0x028FB71C
+    virtual void offDemoMode();
+    // Address: 0x028FB728
+    virtual bool isDemoMode() const;
+    // Address: 0x028FB738
+    virtual bool isDemoType(DemoType type);
+    // Address: 0x028FB754
+    bool isDemoAll();
+    // Address: 0x028FB764
+    bool isDemo();
+    // Address: 0x028FAEBC
+    void onDemo();
+    // Address: 0x028FABD4
+    void offDemo();
+
+    // Address: 0x028FB7E0
+    void setShadowkunCatchDemo();
+
+    // Address: 0x028FB828
+    bool isDisableDokanInDemo();
+    // Address: 0x028FB948
+    bool isDisableGoalDemo();
+
+    // Address: 0x028FB888
+    bool isDemo3Any();
+    // Address: 0x028FB118
+    bool isDemo5Any();
+
+    // Address: 0x028FB1D8
+    void setFaderPos(const sead::Vector3f& pos);
+    // Address: 0x028FB338
+    void changeNextScene(s32);
+    // Address: 0x028FB9A8
+    bool isSceneChangeWaitDone();
+
+    // Address: 0x028FBA0C
+    bool isDispOutCheckOn();
+
+    // Address: 0x028FBAAC
+    void changeNormalAction();
+
+    // Address: 0x028FBB18
+    bool setNextGotoBlockDemo(s32 dst_next_goto_no, s32 wait_timer, NextGotoBlockDelay delay, bool unk_rdash = false);
+
+    virtual bool isChange() = 0;
+
+    virtual bool vf4F4()
+    {
+        return false;
+    }
+
+    virtual bool setTimeOverDemo() = 0;
+    virtual bool vf504() = 0;
+
+    // ------------------------------------ PlayerBaseDemoGoal.cpp ------------------------------------ //
+
+    // Address: 0x02901D70
+    void setDemoGoalMode(s32 demo_action, s32 demo_sub_action);
+
+    // Address: 0x02902B30
+    bool isEnableGoal();
+    // Address: 0x02902B08
+    bool isEnableGoalCollision();
+
+    // Address: 0x02902B84
+    s32 calcGoalBonusCoinNum();
+
+    // Address: 0x02902BA0
+    bool isGoalRingLand();
+
+    // Address: 0x02902BEC
+    void setDemoGoalBase(const sead::Vector2f& pos, f32 walk_target_pos_x, bool secret_exit);
+
+    virtual void setDemoGoal(const sead::Vector2f& pos, f32 walk_target_pos_x, bool secret_exit) = 0;
+    virtual bool setHideNotGoalPlayer() = 0;
+    virtual bool vf51C(u32) = 0;
+    virtual bool setDoorDemo(Actor*, u32) = 0;
+    virtual void setGoalPoleCatchVoice() = 0;
+
+    // Address: 0x02902ECC
+    virtual void vf534();
+
+    // Address: 0x02902EE4
+    bool setHideNotGoalPlayerBase();
+
+    // Address: 0x02902F78
+    void startKimePoseVoice(ClearType clear_type);
+
+    // Address: 0x02903088
+    bool vf51C_Base(u32);
+
+    // Address: 0x02902338
+    f32 getDemoGoalLandPos();
+    // Address: 0x029023C0
+    s32 calcGoalLandNumFrame(f32 pos, f32 land_pos, f32 jump_speed);
+    // Address: 0x02902408
+    void initGoalMultiJump();
+    // Address: 0x02902520
+    bool calcGoalJump();
+
+    // Address: 0x02901E90
+    void executeDemoGoal_Pole();
+    // Address: 0x02902630
+    void executeDemoGoal_MultiJump();
+    // Address: 0x029028A4
+    void executeDemoGoal_Wait();
+    // Address: 0x02902934
+    void executeDemoGoal_KimePose();
+    virtual void executeDemoGoal_RideOffJump() = 0;
+    virtual void executeDemoGoal_Run() = 0;
+    virtual void executeDemoGoal_PreRun() = 0;
+    virtual void executeDemoGoal_Item() = 0;
+
+    // Address: 0x0290288C
+    void initDemoKimePose();
+    virtual bool updateDemoKimePose(ClearType clear_type) = 0;
+    virtual void finDemoKimePose() = 0;
+
+private:
+    inline void initGoalJump_(const sead::Vector3f& pos, f32 jump_speed);
+
+public:
+    // ------------------------------------ PlayerBaseDokan.cpp ------------------------------------ //
+
+    // Address: 0x028FDDE0
+    void stopOutDokanOther();
+
+    // Address: 0x028FDFBC
+    bool demo_dokan_move_x(f32 step, f32 threshold);
+    // Address: 0x028FE054
+    bool demo_dokan_move_y(f32 step, f32 offset);
+
+    // Address: 0x028FE030
+    void setDokanSE();
+
+    // Address: 0x028FE3BC
+    f32 getWaterDokanCenterOffset(f32 pos_y);
+
+    // Address: 0x028FE750
+    void calcDokanMoveDiff(sead::Vector2f* p_diff = nullptr);
+
+    // Address: 0x028FEEA8
+    bool dokanMoveOut();
+
+    // Address: 0x028FF6A8
+    void setObjDokanIn(ActorBoxBgCollision* p_bg_collision, const sead::Vector3f& pos, s32 dst_next_goto_no, DokanDir dir);
+
+    // Address: 0x028FF744
+    CheckBgDokanInUDRes checkBgDokanInUD(sead::Vector3f* p_pos, DokanDir dir);
+
+    // Address: 0x028FF97C
+    void getDokanInLRWallBgPointData(ActorBgCollisionCheck::Sensor* p_sensor);
+
+    // Address: 0x028FFA48
+    bool checkButtonDokanIn(DokanDir dir);
+
+    // Address: 0x028FFB4C
+    bool isEnableDokanInStatusBase();
+
+    virtual bool isEnableDokanInStatus() = 0;
+    virtual bool isEnableMameDokanIn() = 0;     // I think...?
+
+    // Address: 0x028FFFD4
+    virtual bool setDokanIn(DokanDir dir);
+
+    // Address: 0x028FFBEC
+    bool checkBgDokanIn(sead::Vector3f* p_pos, s32* p_dst_next_goto_no, DokanDir dir);
+    // Address: 0x028FFD8C
+    void setDokanInPos(sead::Vector3f pos, DokanDir dir);
+    // Address: 0x028FFEAC
+    bool setDemoOutDokanAction(s32 dst_next_goto_no, DokanDir dir);
+    // Address: 0x028FF56C
+    bool setDokanInNextGoto(s32 dst_next_goto_no);
+
+    virtual f32 vf584() = 0;
+    virtual void getDokanWallBgPointData(ActorBgCollisionCheck::Sensor* p_sensor) = 0;
+
+    // Address: 0x02900088
+    virtual void setDokanWaitAnm(bool move_in);
+
+    // Address: 0x029000C8
+    void initDemoOutDokanBase();
+
+    virtual void initDemoOutDokan() = 0;
+    // Address: 0x028FE1E8
+    void endDemoOutDokan();
+
+    // Address: 0x028FDE40
+    void initDemoOutDokanUD(DokanDir dir);
+    // Address: 0x028FE06C
+    void executeDemoOutDokanUD();
+
+    // Address: 0x028FE230
+    void initDemoOutDokanLR(DokanDir dir);
+    // Address: 0x028FE4C4
+    void executeDemoOutDokanLR();
+
+    // Address: 0x028FE694
+    void initDemoOutDokanRoll();
+
+    virtual bool setOutDokanAngle() = 0;
+
+    // Address: 0x02900174
+    void initDemoInDokanBase(DokanDir dir);
+
+    virtual void initDemoInDokan(DokanDir dir) = 0;
+    // Address: 0x028FF348
+    void endDemoInDokan();
+
+private:
+    inline void initDemoInDokanUD_(DokanDir dir);
+
+public:
+    // Address: 0x028FF4C0
+    void initDemoInDokanLR(DokanDir dir);
+
+    // Address: 0x028FF004
+    void executeDemoInDokan();
+
+    // Address: 0x029002B4
+    f32 getDokanCannonMoveXStep() const;
+    // Address: 0x029002C0
+    f32 getDokanCannonMoveXThreshold() const;
+    // Address: 0x029002CC
+    f32 getDokanCannonMoveYStep() const;
+    // Address: 0x029002D8
+    f32 getDokanWaitAnmFixFrame() const;
+
+    // ------------------------------------ ??? ------------------------------------ //
+
+    // Address: Deleted
+    virtual void vf5B4();
+
+    // Bounce player
+    virtual bool bouncePlayer1(f32 speed_y, f32 speed_F, bool enable_LR, BounceType bounce_type, JumpSe jump_se_type) = 0;   // Does lots of checks that can cancel the bounce, calls bouncePlayer2 otherwise
+    virtual bool bouncePlayer2(f32 speed_y, f32 speed_F, bool enable_LR, BounceType bounce_type, JumpSe jump_se_type) = 0;
+
+    // Address: 0x02908BCC
+    bool setWaitJumpAction();
+
+    // ------------------------------------ PlayerBaseState.cpp (1) ------------------------------------ //
+
+    // StateID_None         Address: 0x1022A484
+    // initializeState_None Address: 0x02908AE4
+    // executeState_None    Address: 0x02908AE8
+    // finalizeState_None   Address: 0x02908AEC
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, None)
+    // StateID_Walk         Address: 0x1022A4A8
+    // initializeState_Walk Address: 0x02908AF0
+    // executeState_Walk    Address: 0x02906488
+    // finalizeState_Walk   Address: 0x02906530
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Walk)
+    // StateID_Jump         Address: 0x1022A4CC
+    // initializeState_Jump Address: 0x02908C30
+    // executeState_Jump    Address: 0x02908CC8
+    // finalizeState_Jump   Address: 0x02908D70
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Jump)
+    // StateID_Fall         Address: 0x1022A4F0
+    // initializeState_Fall Address: 0x02908E34
+    // executeState_Fall    Address: 0x02908F00
+    // finalizeState_Fall   Address: 0x02908F1C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Fall)
+    // StateID_Land         Address: 0x1022A514
+    // initializeState_Land Address: 0x02909208
+    // executeState_Land    Address: 0x0290920C
+    // finalizeState_Land   Address: 0x02909210
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Land)
+    // StateID_Crouch           Address: 0x1022A538
+    // initializeState_Crouch   Address: 0x02908AF4
+    // executeState_Crouch      Address: 0x02908AF8
+    // finalizeState_Crouch     Address: 0x02908AFC
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Crouch)
+    // StateID_SitJump          Address: 0x1022A55C
+    // initializeState_SitJump  Address: 0x02909214
+    // executeState_SitJump     Address: 0x02909218
+    // finalizeState_SitJump    Address: 0x0290921C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, SitJump)
+    // StateID_Slip         Address: 0x1022A580
+    // initializeState_Slip Address: 0x0290AB70
+    // executeState_Slip    Address: 0x0290B418
+    // finalizeState_Slip   Address: 0x0290B6E4
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Slip)
+    // StateID_Turn         Address: 0x1022A5A4
+    // initializeState_Turn Address: 0x02908B00
+    // executeState_Turn    Address: 0x02908B04
+    // finalizeState_Turn   Address: 0x02908B08
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Turn)
+    // StateID_HipAttack            Address: 0x1022A5C8
+    // initializeState_HipAttack    Address: 0x02909E44
+    // executeState_HipAttack       Address: 0x02909EE4
+    // finalizeState_HipAttack      Address: 0x02909FBC
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, HipAttack)
+    // StateID_Funsui           Address: 0x1022A5EC
+    // initializeState_Funsui   Address: 0x02906540
+    // executeState_Funsui      Address: 0x02906650
+    // finalizeState_Funsui     Address: 0x029068B0
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Funsui)
+    // StateID_Cloud            Address: 0x1022A610
+    // initializeState_Cloud    Address: 0x029068D8
+    // executeState_Cloud       Address: 0x02908B0C
+    // finalizeState_Cloud      Address: 0x02906970
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Cloud)
+    // StateID_Cloud2           Address: 0x1022A634
+    // initializeState_Cloud2   Address: 0x029069B4
+    // executeState_Cloud2      Address: 0x02908B10
+    // finalizeState_Cloud2     Address: 0x029069E8
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Cloud2)   // Unused, but functions almost exactly the same as Cloud
+    // StateID_Swim         Address: 0x1022A658
+    // initializeState_Swim Address: 0x02908B14
+    // executeState_Swim    Address: 0x02908B18
+    // finalizeState_Swim   Address: 0x02908B1C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, Swim)
+    // StateID_JumpDai          Address: 0x1022A67C
+    // initializeState_JumpDai  Address: 0x0290928C
+    // executeState_JumpDai     Address: 0x02909368
+    // finalizeState_JumpDai    Address: 0x02909404
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, JumpDai)
+    // StateID_PlayerJumpDai            Address: 0x1022A6A0
+    // initializeState_PlayerJumpDai    Address: 0x02909524
+    // executeState_PlayerJumpDai       Address: 0x02909654
+    // finalizeState_PlayerJumpDai      Address: 0x02909BA8
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, PlayerJumpDai)
+    // StateID_WaitJump         Address: 0x1022A6C4
+    // initializeState_WaitJump Address: 0x02908F58
+    // executeState_WaitJump    Address: 0x02908FC0
+    // finalizeState_WaitJump   Address: 0x02909038
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, WaitJump)
+    // StateID_AnimePlay            Address: 0x1022A6E8
+    // initializeState_AnimePlay    Address: 0x02900E58
+    // executeState_AnimePlay       Address: 0x029017FC
+    // finalizeState_AnimePlay      Address: 0x02901A04
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, AnimePlay)
+
+    // Address: 0x02906A00
+    void executeState();
+
+    // Address: 0x02906B04
+    void changeState(const StateID& state_id, s32 param);
+    // Address: 0x02906B0C
+    void changeState(const StateID& state_id, const JumpInf& jmp_inf);
+
+    // Address: 0x02906A38
+    void changeStateImpl(const StateID& state_id, s32 param, const JumpInf* p_jmp_inf);
+
+    bool isState(const StateID& state_id) const
+    {
+        return *mStateMgr.getStateID() == state_id;
+    }
+
+    bool isOldState(const StateID& state_id) const
+    {
+        return *mStateMgr.getOldStateID() == state_id;
+    }
+
+    virtual bool checkWalkNextAction() = 0;
+
+    virtual void setWaitActionAnm(AnmBlend blend) = 0;
+    virtual void setWalkActionAnm(AnmBlend blend) = 0;
+    virtual void walkActionInit_Wait(AnmBlend blend) = 0;
+
+    // Address: 0x02906B18
+    void walkAction_SetAnm(AnmBlend blend);
+    // Address: 0x02906B28
+    void walkAction_Move();
+
+    // Address: 0x02906CDC
+    void calcSpeedOnIceLift();
+    // Address: 0x02906E0C
+    void calcAccOnIceLift();
+
+    // Address: 0x02906E8C
+    bool checkTurn();
+    // Address: 0x02906FA4
+    void setTurnEnd();
+
+    virtual bool isWaitFrameCountMax()
+    {
+        return false;
+    }
+
+    // ------------------------------------ PlayerBaseSlip.cpp ------------------------------------ //
+
+    virtual void setSlipAction() = 0;
+
+    // Address: 0x0290B714
+    bool checkSlip();
+    // Address: 0x0290B7B4
+    bool checkCrouchSlip();
+    // Address: 0x0290ABF8
+    bool checkSlipEndKey();
+
+    // Address: 0x0290AB0C
+    f32 getSlipMaxSpeedF();
+
+    // Address: 0x0290ACD0
+    void changeActionSlipEnd(AnmBlend blend);
+
+    // Address: 0x0290B89C
+    void forceSlipToStoop();
+
+    // Address: 0x0290B85C
+    void setSlipAction_ToStoop();
+    // Address: 0x0290AE28
+    bool setSlipAction_ToEnd(AnmBlend blend = cAnmBlend_Enable);
+
+    // Address: 0x0290AF68
+    void setSlipActionEnd();
+    // Address: 0x0290AEE4
+    void setSlipActionViewLimitEnd();
+
+    // Address: 0x0290AF34
+    bool checkSakaReverse();
+
+    // Address: 0x0290AFB8
+    void slipActionMove(bool turned);
+    virtual bool checkSlipMoveEnd() = 0;
+
+    void setSlipEffect()
+    {
+        setSlipSmokeEffect();
+        setSlipSE();
+    }
+
+    // ------------------------------------ PlayerBaseStateKetsuAttack.cpp ------------------------------------ //
+
+    virtual bool setHipAttackOnEnemy(const sead::Vector3f& target_pos) = 0;
+    virtual void setHipBlockBreak() = 0;
+
+private:
+    inline void setHipAttack_Ready_();
+
+public:
+    // Address: 0x0290A020
+    void setHipAttack_AttackStartBase();
+    virtual void setHipAttack_AttackStart() = 0;
+
+    // Address: 0x0290A0C4
+    void setHipAttack_AttackFall();
+
+    // Address: 0x0290A148
+    void setHipAttack_StandNormal();
+
+    // Address: 0x0290A1F8
+    void setHipAttack_StandNormalEndBase();
+    virtual void setHipAttack_StandNormalEnd() = 0;
+
+    // Address: 0x0290A24C
+    void setHipAttack_ToStoop();
+
+    // Address: 0x0290A2A0
+    void HipAction_Ready();
+    // Address: 0x0290A2F0
+    void HipAction_AttackStart();
+    // Address: 0x0290A38C
+    void HipAction_AttackFall();
+    // Address: 0x0290A6C4
+    void HipAction_Ground();
+    // Address: 0x0290A738
+    void HipAction_StandNormal();
+    // Address: 0x0290A8DC
+    void HipAction_StandNormalEnd();
+    // Address: 0x0290A994
+    void HipAction_ToStoop();
+
+    // Address: 0x0290A300
+    void setHipAttackSE();
+
+    // Address: 0x0290A9FC
+    void setHipAttackOnEnemyBase(const sead::Vector3f& target_pos);
+    // Address: 0x02909EBC
+    void updateHipAttackOnEnemy();
+
+    // Address: 0x0290AA24
+    void updateHipDropExEffect();
+
+    // ------------------------------------ PlayerBaseState.cpp (2) ------------------------------------ //
+
+    virtual bool checkCrouch() = 0;
+    // Address: 0x02906FE8
+    void setCrouchActionAnm();
+    // Address: 0x02907108
+    void setCrouchWallSpeed();
+    // Address: 0x0290718C
+    void setCrouchSmokeEffect();
+    // Address: 0x029071E8
+    virtual bool setCancelCrouch();
+    // Address: 0x029072EC
+    virtual bool setCrouchJump();
+
+    // Address: 0x02907354
+    bool checkSitJumpRoof();
+
+    virtual bool setHipAttackToKaniHangAction() = 0;
+
+    virtual bool vf7F4(ActorCollisionCheck* cc_self, ActorCollisionCheck* cc_other) = 0;
+
+    // Address: 0x02907420
+    bool setFunsui(FunsuiType type);
+
+    // Address: 0x02907508
+    bool updateFunsuiPos(f32 x, f32 y);
+
+    // Address: 0x029075F4
+    bool releaseFunsui(f32 speed_y);
+
+    virtual void releaseFunsuiAction() = 0;
+
+    // Address: 0x029076D0
+    bool setCloudOn(Actor* p_cloud_actor);
+    // Address: 0x02906964
+    void cancelCloudOn();
+
+    virtual f32 getCloudOffsetY() = 0;
+
+    // Address: 0x029077B8
+    void getCloudPos(sead::Vector3f& pos);
+
+    // Address: 0x029078D8
+    bool updateCloudMove();
+
+    // Address: 0x02907830
+    Actor* getCloud();
+
+    virtual void throwCarryActor()
+    {
+    }
+
+    // Address: 0x02907A00
+    Angle addCalcAngleY(const Angle& target, f32 rate);
+
+    Angle addCalcAngleY(Angle target, s32 num_frame)
+    {
+        f32 rate = 1.0f / static_cast<f32>(num_frame);
+        return addCalcAngleY(target, rate);
+    }
+
+    // Address: 0x02906608
+    bool turnAngle();
+
+    // Address: 0x02907AA4
+    bool turnBesideAngle(DirType dir);
+
+    bool turnBesideAngle()
+    {
+        return turnBesideAngle(mDirection);
+    }
+
+    // Address: 0x029065F0
+    Angle getMukiAngle(DirType dir);
+
+    Angle getMukiAngle()
+    {
+        return getMukiAngle(mDirection);
+    }
+
+    // Address: 0x02907A60
+    Angle getBesideMukiAngle(DirType dir);
+
+    Angle getBesideMukiAngle()
+    {
+        return getBesideMukiAngle(mDirection);
+    }
+
+    // ------------------------------------ PlayerBaseDemoDosa.cpp (2) ------------------------------------ //
+
+    // Address: 0x02900E78
+    void DemoAnmNormal();
+    // Address: 0x02900F00
+    void DemoAnmBossSetUp();
+    // Address: 0x02900F60
+    void DemoAnmBossGlad();
+    // Address: 0x029010AC
+    void DemoAnmBossAttention();
+    // Address: 0x029011EC
+    void DemoAnmBossKeyGet();
+    // Address: 0x029012A0
+    void DemoAnmLastBoss2Glad();
+    // Address: 0x029013E0
+    void DemoAnmLastBoss1Glad();
+    // Address: 0x0290152C
+    void DemoAnmTitleSlip();
+    // Address: 0x02901634
+    void DemoAnmEndingGlad();
+    // Address: 0x02901780
+    void DemoAnmEndingGladWait();
+    // Address: 0x02901A68
+    virtual void DemoAnmTottenItem();
+
+    // ------------------------------------ PlayerBase.cpp (2) ------------------------------------ //
+
+    // Address: 0x028F3B44
+    void coinJumpOnStampCB(s32 coin_num);
+    // Address: 0x028F3C34
+    void coinFunsuiOnDamageCB(s32 type, Actor* p_eat_die_actor);
+
+private:
+    inline void reduceCoinNum_(s32 coin_num);
+    // Address: 0x028F3AE4
+    s32 adjustCoinReductionNumCB_(s32 coin_num);
+
+public:
+    // Address: 0x028F3ED0
+    virtual void calcTimerProc();
+
+    // Address: 0x028F3FB4
+    virtual void startQuakeShock(Quake::ShockType shock_type);
+    // Address: 0x028F3FD8
+    virtual void startPatternRumble(const char* pattern);
+
+    virtual bool isCarry()
+    {
+        return false;
+    }
+
+    virtual bool isLiftUp()
+    {
+        return false;
+    }
+
+    virtual bool isCarryMamePlayer()
+    {
+        return false;
+    }
+
+    virtual bool isLiftUpExceptMame()
+    {
+        return false;
+    }
+
+    virtual void setZPosition() = 0;
+    virtual void setZPosition(f32 z) = 0;
+    virtual void setZPositionDirect(f32 z) = 0;
+    virtual void offZPosSetNone() = 0;
+
+    // Address: 0x028F3814
+    PlayerModelBase* getModel();
+    // Address: 0x028F3FFC
+    const PlayerModelBase* getModel() const;
+
+    // Address: 0x028F4008
+    void getAnkleCenterPos(sead::Vector3f* p_pos);
+
+    virtual bool isFaceRot()
+    {
+        return false;
+    }
+
+    virtual const PlayerGravityData* getGravityData()
+    {
+        return mpGravityData;
+    }
+
+    // ------------------------------------ PlayerBaseSpeed.cpp ------------------------------------ //
+
+    // Address: 0x02904A6C
+    ActorBgCollisionCheck::SakaType getSakaType(DirType dir);
+
+    // Address: 0x02904ACC
+    f32 getSakaMaxSpeedRatio(DirType dir);
+    // Address: 0x02904B68
+    f32 getSakaStopAccele(DirType dir);
+    // Address: 0x02904C04
+    f32 getSakaMoveAccele(DirType dir);
+    // Address: 0x02904CA0
+    f32 getIceSakaSlipOffSpeed();
+
+    // Address: 0x02904CF4
+    virtual void maxFallSpeedSet();
+    // Address: 0x02904F3C
+    void gravitySet();
+    // Address: 0x02905110
+    void moveSpeedSet();
+    // Address: 0x02905594
+    void simpleMoveSpeedSet();
+    // Address: 0x02906224
+    void powerSet();
+
+    // Address: 0x02905F78
+    void grandPowerSet();
+
+    // Address: 0x029057b0
+    void slipPowerSet();
+    // Address: 0x02905A24
+    void normalPowerSet();
+
+    void slipPowerSet(bool slip)
+    {
+        if (slip)
+            slipPowerSet();
+        else
+            normalPowerSet();
+    }
+
+    // Address: 0x0290603C
+    void airPowerSet();
+
+    // Address: 0x02904E84
+    void setJumpGravity();
+
+    // Address: 0x02904DD8
+    void setNormalJumpGravity();
+    // Address: 0x02904D50
+    void setButtonJumpGravity();
+    // Address: 0x02904D04
+    void setUnkJumpGravity();
+
+    void setJumpGravity(const f32* thresholds, const f32* gravities)
+    {
+        mGravity = gravities[PLAYER_JUMP_GRAVITY_MAX_STAGES];
+        for (s32 i = 0; i < PLAYER_JUMP_GRAVITY_MAX_STAGES; i++)
+        {
+            if (mSpeed.y > thresholds[i])
+            {
+                mGravity = gravities[i];
+                break;
+            }
+        }
+    }
+
+    // Address: 0x02904FB0
+    bool setSandMoveSpeed();
+
+    // Address: 0x029050C8
+    PowerChangeType getPowerChangeType(bool penguin_slide = false);
+
+    // Address: 0x029056C8
+    void icePowerChange(bool slip);
+
+    const PlayerSpeedData* getSpeedData() const
+    {
+        if (isStar())
+            return mpSpeedData_Star;
+        else
+            return mpSpeedData_Normal;
+    }
+
+    // Address: 0x0290587C
+    void getSpeedPowerData(PlayerSpeedPowerData& out_data);
+    // Address: 0x02906238
+    void getTurnPowerData(PlayerTurnPowerData& out_data);
+
+    // Address: 0x029063AC
+    void setHopAirDrift();
+
+    // ------------------------------------ PlayerBase.cpp (3) ------------------------------------ //
+
+    // Address: 0x028F40D8
+    f32 getThrowSpeed();
+    // Address: 0x028F40F0
+    f32 getThrowLoopPosX(f32 x);
+
+    // Address: 0x028F4898
+    void calcPlayerSpeedXY();
+    // Address: 0x028F45E4
+    void posMoveAnglePlayer(const sead::Vector3f& speed);
+    // Address: 0x028F4178
+    void posMoveAnglePenguin(const sead::Vector3f& speed);
+    // Address: 0x028F4CD8
+    void initAirDriftSpeedF(f32 start_val, f32 len_frames);
+    // Address: 0x028F4148
+    void calcAirDriftSpeedF();
+
+    // Address: 0x028F4D48
+    bool setJump(u8, JumpSe jump_se_type);
+    // Address: 0x028F4E50
+    bool setDelayHelpJump();
+    // Address: 0x028F4EE8
+    bool checkJumpTrigger();
+
+    // ------------------------------------ PlayerBaseStateJump.cpp ------------------------------------ //
+
+    virtual void setFallAction() = 0;
+
+    // Address: 0x02909050
+    bool setWaitJump();
+
+private:
+    inline bool setWaitJump_(f32 speed_y);
+
+public:
+    // Address: 0x029090E0
+    void setJumpSpeed();
+
+    // Address: 0x0290911C
+    f32 getJumpSpeedBase();
+
+    virtual f32 getJumpSpeed() = 0;
+    virtual f32 getMoveJumpSpeed() = 0;
+
+    virtual void setJumpSound(JumpSe jump_se_type) = 0;
+    virtual void vf8AC(bool) = 0;
+
+    // ------------------------------------ PlayerBaseStateJumpDai.cpp ------------------------------------ //
+
+    // Address: 0x02909BC0
+    bool setJumpDaiRide();
+
+    // Address: 0x02909C1C
+    bool setPlayerJumpDai(PlayerBase* p_player_other);
+    // Address: 0x0290944C
+    PlayerBase* getPlayerJumpDai();
+
+    // Address: 0x02909D38
+    void setPlayerJumoDaiPos();
+
+    // ------------------------------------ PlayerBaseDemoDown.cpp ------------------------------------ //
+
+    virtual bool isNoDamage() = 0;
+    virtual bool isNoDamagePlayer() = 0;  // Only used by Yoshi, called at 0x0295FAF8
+    virtual bool setNormalDamage(ActorCollisionCheck* p_cc) = 0;
+    virtual bool setDamage(Actor* p_actor, DamageType type) = 0;
+    virtual bool setForcedDamage(Actor* p_actor, DamageType type) = 0;
+    virtual bool setFlyDamage(DamageType type, DirType dir, bool, bool, f32 speed_F, f32 speed_y) = 0;
+    virtual bool setDamage2(Actor* p_actor, DamageType type) = 0;
+    virtual bool setPressBgDamage(DamageType type, bool) = 0;
+
+    // Address: 0x02901AD8
+    bool isFlyDamageType(DamageType type);
+
+    // Address: 0x02901B00
+    void setYoganDamageEffect();
+    // Address: 0x02901C20
+    void setPoisonDamageEffect();
+
+    // ------------------------------------ PlayerBase.cpp (4) ------------------------------------ //
+
+    // Address: 0x028F4F48
+    void clearTreadCount();
+    s8 getTreadCount() const { return mTreadCnt; }
+    // Address: 0x028F4F84
+    s8 calcTreadCount(s32 max);
+
+    void clearComboCount() { mPlComboCnt = 0; }
+    s8 getComboCount() const { return mPlComboCnt; }
+    // Address: 0x028F4FA8
+    s8 calcComboCount(s32 max);
+
+    virtual void clearStarCount() = 0;
+    virtual s8 getStarCount() const = 0;
+    virtual s8 calcStarCount(s32 max) = 0;
+    virtual void setStar(StarSet set_type = cStarSet_Default, s32 time = 0) = 0;
+    virtual bool isStar() const = 0;
+    virtual void endStar() = 0;
+    virtual void setVirusStar(PlayerBase* p_other) = 0;
+
+    virtual void resetLight() // Not exactly sure
+    {
+        onStatus(cStatus_133);
+    }
+
+    // ------------------------------------ PlayerBaseEffect.cpp ------------------------------------ //
+
+    virtual EffectID getHipDropEffectID() = 0;
+    virtual EffectID getHipDropExEffectID() = 0;
+    virtual EffectID getHipDropSurfaceEffectID() = 0;
+    virtual EffectID getHipDropBlurEffectID() = 0;
+    virtual EffectID getSlipSmokeEffectID() = 0;
+    virtual EffectID getTurnBrakeEffectID() = 0;
+    virtual EffectID getTurnBrakeSmokeEffectID() = 0;
+    virtual EffectID getRunSmokeEffectID() = 0;
+    virtual EffectID getDashSmokeEffectID() = 0;
+    virtual EffectID getLandingSmokeEffectID() = 0;
+    virtual EffectID getWaterSplashEffectID(bool big) = 0;
+    virtual EffectID getWaterSplashSEffectID() = 0;
+    virtual EffectID getPoisonSplashEffectID(bool big) = 0;
+    virtual EffectID getLavaSplashEffectID(bool big) = 0;
+    virtual EffectID getLavaWaveSplashEffectID(bool big) = 0;
+
+    // Address: 0x02903FF0
+    void setHipAttackEffect();
+    // Address: 0x029040C0
+    bool updateHipAttackEffect();
+
+    // Address: 0x02904128
+    void setHipAttackDropEffect();
+
+    // Address: 0x02904180
+    void setSlipSmokeEffect();
+    void setBrakeSmokeEffect() { setSlipSmokeEffect(); }
+
+    // Address: 0x02904284
+    virtual void setTurnSmokeEffect(bool with_brake);
+    // Address: 0x02904220
+    void fadeOutTurnEffect();
+
+    // Address: 0x029044B8
+    void setRunFootEffect();
+
+    // Address: 0x02904600
+    void setLandSmokeEffectLight();
+
+    // Address: 0x0290469C
+    void setStartJumpEffect(bool with_smoke);
+    // Address: 0x029046D8
+    void setLandJumpEffect(/* bool with_smoke = true */);
+
+    // Address: 0x0290470C
+    void endWaterFunsuiEffect();
+    // Address: 0x0290475C
+    void updateWaterFunsuiEffect();
+
+    // Address: 0x02904770
+    void setWaterInEffect(const sead::Vector3f& pos, bool deep);
+    // Address: 0x029047E8
+    void setWaterOutEffect(const sead::Vector3f& pos, bool deep);
+    // Address: 0x02904858
+    void updateWaterEffect();
+
+    // Address: 0x02904958
+    void setHipDropExEffect();
+
+    // Address: 0x029049F8
+    void setSandEffect();
+
+    // Address: 0x029049FC
+    void setVsPlHipAttackEffect();
+
+    // ------------------------------------ PlayerBaseVoice.cpp ------------------------------------ //
+
+    // Address: 0x0290B93C
+    bool isDisableSound(StartSoundType type);
+
+    // Address: 0x0290B9A4
+    void startSound(const char* label, StartSoundType type = cStartSoundType_Normal);
+    // Address: 0x0290BA20
+    void startSound(const char* label, s16 seq_var, StartSoundType type = cStartSoundType_Normal);
+
+    // Address: 0x0290BAB0
+    void holdSound(const char* label, StartSoundType type = cStartSoundType_Normal);
+    // Address: 0x0290BB2C
+    void holdSound(const char* label, s16 seq_var, StartSoundType type = cStartSoundType_Normal);
+
+    // Address: 0x0290BBBC
+    void startVoiceSound(PlayerVoiceID voice_id, StartSoundType type = cStartSoundType_Normal);
+
+    // Address: 0x0290BC60
+    void setItemCompleteVoice();
+
+    // Address: 0x0290BC6C
+    void setHitBlockSE();
+
+    // Address: 0x0290BD04
+    void startFootSoundPlayer(const char* label);
+
+    // Address: 0x0290BDEC
+    void setFootSound();
+
+    // Address: 0x0290BD78
+    void setFootSE(BgAttr attr);
+    // Address: 0x0290BE64
+    void setLandSE();
+    // Address: 0x0290BE90
+    void setSlipSE();
+    // Address: 0x0290BF08
+    void setTurnSE();
+
+    // ------------------------------------ PlayerBaseDemoSubject.cpp ------------------------------------ //
+
+    // StateID_SubjectWait          Address: 0x1022A3B8
+    // initializeState_SubjectWait  Address: 0x02903F30
+    // executeState_SubjectWait     Address: 0x02903504
+    // finalizeState_SubjectWait    Address: 0x02903F34
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, SubjectWait)
+    // StateID_SubjectCoinEndWait           Address: 0x1022A3DC
+    // initializeState_SubjectCoinEndWait   Address: 0x02903628
+    // executeState_SubjectCoinEndWait      Address: 0x02903638
+    // finalizeState_SubjectCoinEndWait     Address: 0x02903F38
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, SubjectCoinEndWait)
+    // StateID_SubjectClearGoalWait         Address: 0x1022A400
+    // initializeState_SubjectClearGoalWait Address: 0x02903F3C
+    // executeState_SubjectClearGoalWait    Address: 0x0290363C
+    // finalizeState_SubjectClearGoalWait   Address: 0x02903F40
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, SubjectClearGoalWait)
+    // StateID_SubjectClear         Address: 0x1022A424
+    // initializeState_SubjectClear Address: 0x02903654
+    // executeState_SubjectClear    Address: 0x02903778
+    // finalizeState_SubjectClear   Address: 0x0290379C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, SubjectClear)
+    // StateID_SubjectClearWait         Address: 0x1022A448
+    // initializeState_SubjectClearWait Address: 0x029037B0
+    // executeState_SubjectClearWait    Address: 0x029037FC
+    // finalizeState_SubjectClearWait   Address: 0x0290387C
+    DECLARE_STATE_VIRTUAL_ID_BASE(PlayerBase, SubjectClearWait)
+
+    // Address: 0x0290345C
+    void changeSubjectState(const StateID& state_id);
+    // Address: 0x0290388C
+    void executeSubjectState();
+
+    bool isSubjectState(const StateID& state_id) const
+    {
+        return *mSubjectStateMgr.getStateID() == state_id;
+    }
+
+    bool isOldSubjectState(const StateID& state_id) const
+    {
+        return *mSubjectStateMgr.getOldStateID() == state_id;
+    }
+
+    // Address: 0x02903234
+    void setSubjectClearCourseOut();
+
+    // Address: 0x0290341C
+    bool isSubjectDone();
+
+    // Address: 0x02903464
+    void subjectClearRequest();
+
+    // Address: 0x02903490
+    void trySetSubjectCoinClear();
+
+    // Address: 0x029038C4
+    void setDownFinishSubjectCoin();
+    // Address: 0x0290393C
+    void setDownFinishSubject();
+
+    // Address: 0x029039B0
+    bool setFumiSubjectCoinEndClear();
+
+    virtual void setSubjectCoinTimeUp() = 0;
+    virtual void setSubjectClear() = 0;
+    virtual void setSubjectFail() = 0;
+    virtual void setShadowFail() = 0;
+
+    // ------------------------------------ PlayerBaseAttention.cpp ------------------------------------ //
+
+    // Address: 0x028F5E90
+    void calcHeadAttentionAngle();
+
+private:
+    // Address: 0x028F5554
+    PlayerBase* searchPlayerAttention_(const sead::Vector2f& src_pos);
+    // Address: 0x028F566C
+    bool calcHeadAttentionAngle_(const sead::Vector2f& target_pos, sead::BitFlag32 flag, Angle max_angle_y);
+
+public:
+    // ------------------------------------ Common ------------------------------------ //
+
+    const PlayerKey& getPlayerKey() const
+    {
+        return mPlayerKey;
+    }
+
+    void onStatus(s32 bit)
+    {
+        mStatus.setBit(bit);
+    }
+
+    void offStatus(s32 bit)
+    {
+        mStatus.resetBit(bit);
+    }
+
+    bool isStatus(s32 bit)
+    {
+        return mStatus.isOnBit(bit);
+    }
+
+    void onNowBgCross(s32 bit)
+    {
+        mNowBgCross.setBit(bit);
+    }
+
+    void offNowBgCross(s32 bit)
+    {
+        mNowBgCross.resetBit(bit);
+    }
+
+    bool isNowBgCross(s32 bit)
+    {
+        return mNowBgCross.isOnBit(bit);
+    }
+
+    void onOldBgCross(s32 bit)
+    {
+        mOldBgCross.setBit(bit);
+    }
+
+    void offOldBgCross(s32 bit)
+    {
+        mOldBgCross.resetBit(bit);
+    }
+
+    bool isOldBgCross(s32 bit)
+    {
+        return mOldBgCross.isOnBit(bit);
+    }
+
+    PlayerMode getPlayerMode() const
+    {
+        return mMode;
+    }
+
+protected:
+    s32                                 mExecuteFreezeTimer;
+    PlayerModelBaseMgr*                 mpModelBaseMgr;
+    sead::Vector3f                      _284;
+    s32                                 mMaskPosInterpSrcType;  // Interpolation source; 1 = ankle joints center pos, everything else = player pos
+    s32                                 mMaskPosInterpTimer;
+    sead::Vector3f                      mMaskPos;
+    s32                                 _2a4;
+    PlayerKey                           mPlayerKey;
+    GameAudio::AudioObjctPly            mAudioObj;
+    AttentionLookat                     mAttentionLookat;
+    Bitfield<cStatus_MaxBitNum>         mStatus;
+    f32                                 mHeight;
+    u32                                 _4b8;
+    sead::Vector3f                      mFrameEndPosDelta;
+    sead::Vector3f                      _4c8;
+    const PlayerSpeedData*              mpSpeedData_Normal;
+    const PlayerSpeedData*              mpSpeedData_Star;
+    const PlayerGravityData*            mpGravityData;
+    s32                                 mNoGravityTimer;
+    f32                                 _4e4;
+    bool                                _4e8;
+    sead::Vector3f                      mNextFrameSpeed;
+    u8                                  mPriority;
+    s8                                  mTreadCnt;
+    s8                                  mPlComboCnt;
+    PlayerCharacter                     mCharacter;
+    PlayerMode                          mMode;
+    ActorBgCollisionPlayerCheck         mBgCheckPlayer;
+    ActorBgCollisionCheck::Sensor       mBcSensorHead;
+    ActorBgCollisionCheck::Sensor       mBcSensorFoot;
+    ActorBgCollisionCheck::Sensor       mBcSensorWall;
+    Bitfield<cBgCross_MaxBitNum>        mNowBgCross;
+    Bitfield<cBgCross_MaxBitNum>        mOldBgCross;
+    sead::SafeArray<
+        BOOL,
+        cOldBgCrossFootNum
+    >                                   mOldBgCrossFoot;        // Array of cBgCross_IsFoot of the past 10 frames
+    f32                                 _1b0c;
+    f32                                 mKaniPosY;
+    ActorBgCollisionCheck::SakaType     mSakaType;
+    Angle                               mSpeedSakaAngle;
+    Angle                               mSpeedSakaAnglePrev;
+    Angle                               mBaseSakaAngle;
+    Angle                               mBaseSakaAnglePrev;
+    sead::Vector3f                      _1b28;
+    BgAttr                              mBgAttr;
+    Angle                               mWallAngle;
+    f32                                 mWaterSurfacePosY;
+    f32                                 mWaterSurfacePosYPrev;
+    WaterType                           mWaterType;
+    s32                                 mWaterDepthType;        // TODO: enum
+    sead::Vector3f                      mAirWaterHitPos;        // "AirWater" = Floating Water Bubble
+    Angle                               mAirWaterHitAngle;
+    f32                                 mSinkSandSurfacePosY;
+    sead::Vector2f                      mBgSpeed;
+    sead::Vector2f                      mBgSpeedPrev;
+    f32                                 mSandSinkRate;
+    f32                                 mDispSideLimitPad;
+    bool                                mIsBgDamageEnable;
+    BgUnitCode::TypeInfo_Damage         mDamageBgTypeInfo;
+    sead::FixedRingBuffer<
+        ActorUniqueID,
+        2
+    >                                   mBgPressIDBuffer;
+    ActorUniqueID                       mLineSpinLiftID;
+    u32                                 _1b9c;
+    s32                                 mNoHitObjBgTimer;
+    f32                                 mAirDriftSpeedFStart;
+    f32                                 mAirDriftSpeedF;
+    f32                                 mAirDriftSpeedFDecelStep;
+    f32                                 mAddBgSpeedF;
+    s32                                 mJumpAddSpeedHoldTimer;
+    ActorCollisionCheck                 mCollisionCheck2_React; // First collision check is also for react
+    ActorCollisionCheck                 mCollisionCheck3_React;
+    ActorCollisionCheck                 mCollisionCheck4_Attack;
+    ActorCollisionCheck                 mCollisionCheck5_Attack;
+    PlayerDrcTouchCB                    mDrcTouchCallback;
+    s32                                 mInvincibilityTimer;
+    s32                                 _2060;
+    s32                                 _2064;
+    s32                                 _2068;
+    s32                                 _206c;
+    s32                                 mCcEnemyFumiRevExtendTimer;
+    f32                                 mCcPlayerRevSpeedFScale;
+    f32                                 mCcPlayerRevSpeedFStart;
+    f32                                 mCcPlayerRevSpeedF;
+    f32                                 _2080;
+    bool                                _2084;
+    bool                                _2085;
+    s32                                 mNoHitPlayerTimer;
+    ActorUniqueID                       mNoHitPlayerID;
+    ReductionMode                       mReductionMode;
+    u32                                 mReductionStep;
+    f32                                 mReductionScale;
+    s32                                 mReductionSimpleMoveTimer;
+    s32                                 mNoStampPlayerJumpTimer;
+    sead::SafeArray<
+        u32,
+        cDirType_NumX
+    >                                   _20a4;
+    sead::SafeArray<
+        f32,
+        cDirType_NumX
+    >                                   _20ac;
+    FStateMgr<PlayerBase>               mDemoStateMgr;
+    s32                                 mChangeDemoStateParam;
+    sead::BitFlag32                     mDemoTypeFlag;
+    s32                                 mDemoAction;            // See DemoActionType
+    s32                                 mDemoSubAction;         // See DemoSubActionType
+    s32                                 mDemoActionTimer;
+    s32                                 _20ec;
+    ActorUniqueID                       mPlayerJumpDaiID;
+    s32                                 mDstNextGotoID;
+    NextGotoType                        mNextGotoType;          // i.e., "Create Action"
+    NextGotoBlockDelay                  mNextGotoDelay;
+    sead::Vector2f                      _2100;                  // Target for movement in a specific direction
+    sead::Vector2f                      _2108;                  // Speed ^^^
+    sead::Vector3f                      mFaderPos;
+    bool                                mIsLastPlayer;
+    f32                                 mGoalPoleHeight;
+    f32                                 mGoalBaseLandPos;
+    s32                                 mGoalDemoNo;
+    s32                                 mGoalDemoOrder;
+    f32                                 mGoalBasePosY;
+    s32                                 mGoalYoshiSpitOutTimer;
+    s32                                 mGoalLandTimer;
+    sead::Vector3f                      mGoalLandPos;
+    u32                                 _2148;
+    s32                                 _214c;
+    DokanDir                            mDokanDir;
+    sead::Vector3f                      mDokanPos;
+    sead::Vector3f                      mDokanFaderPos;
+    sead::Vector2f                      mDokanPosMoveDelta;
+    DokanType                           mDokanType;
+    f32                                 mDokanMoveYOffset;
+    f32                                 mDokanMoveXThreshold;
+    u32                                 mDokanInTimerL;
+    u32                                 mDokanInTimerR;
+    ActorBoxBgCollision*                mpDokanBgCollision;
+    bool                                mIsDokanSwim;
+    f32                                 _2190;
+    u32                                 _2194;
+    bool                                _2198;
+    FStateMgr<PlayerBase>               mStateMgr;
+    const JumpInf*                      mpChangeStateJmpInf;
+    s32                                 mChangeStateParam;
+    s32                                 mAction;                // See ActionType
+    s32                                 mActionTimer;
+    s32                                 mActionSubTimer;
+    ActorUniqueID                       mRideActorID;
+    s32                                 _21d8;
+    u32                                 _21dc;
+    s32                                 _21e0;
+    s32                                 _21e4;
+    s32                                 _21e8;
+    FunsuiType                          mFunsuiType;
+    sead::Vector2f                      mFunsuiPos;
+    f32                                 mJumpDaiSpeedFReserve;
+    sead::Vector3f                      mRidePlayerPosDelta;
+    sead::Vector3f                      mHipAttackOnEnemyPos;
+    u32                                 mHipAttackEffectStep;     // Maybe?
+    f32                                 mRideNatPosY;
+    s32                                 mFrameEndFollowMameKuribo;
+    s32                                 mFollowMameKuribo;
+    s32                                 mPenguinSlideCooldown;  // Maybe?
+    AnimePlayType                       mAnimePlayType;
+    EffectObj                           mEffectObjCommon;       // Used for: Wall Slide Effect, Quake Numb Effect, Elec Effect, Fire Jump Smoke Effect, and quite possibly more
+    EffectObj                           mSlipSmokeEffect;
+    EffectObj                           _22fc;
+    EffectObj                           mFootEffect;
+    EffectObj                           mHipAttackDropEffect;
+    FollowEffect                        mHipAttackEffect;
+    sead::Vector3f                      mHipAttackEffectPos;
+    HipdropExEffect                     mHipdropExEffect;
+    EffectObj                           _2498;
+    EffectObj                           _2500;
+    FollowEffect                        mTurnBrakeEffect;
+    FollowEffect                        mTurnBrakeSmokeEffect;
+    BgAttr                              mTurnBrakeBgAttr;
+    bool                                mIsTurnBrakeEffectEnable;
+    bool                                mIsTurnBrakeSmokeEffectEnable;
+    u32                                 _25f0;
+    EffectObj                           mWaterFunsuiEffect;     // Completely dysfunctional
+    u32                                 mWaterFunsuiEffectStep; // 0: Normal, 1: Fade, 2: Destroyed
+    s32                                 mWaterFunsuiEffectTimer;
+    sead::SafeArray<FollowEffect, 3>    mWaterEffect;           // [0] = waterSplash, [2] = waterSplashS
+    FStateMgr<PlayerBase>               mSubjectStateMgr;
+    s32                                 mSubjectClearWaitTimer;
+    bool                                mIsSubjectClear;
+};
+static_assert(sizeof(PlayerBase) == 0x2750);
