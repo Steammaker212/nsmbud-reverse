@@ -1,0 +1,1259 @@
+{
+  "name": "CollisionMgr_vf28",
+  "start_ea": "0x60152c18",
+  "stack_frame": [
+    {
+      "name": "__saved_registers",
+      "offset": "0x0",
+      "size": "0x18",
+      "type": "_DWORD[6]"
+    }
+  ],
+  "lines": [
+    {
+      "address": "0x60152c18",
+      "instruction": "PUSH {R4-R8,LR}",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c1c",
+      "instruction": "MOV R4, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c20",
+      "instruction": "LDR R0, =(off_60C62ECC - 0x60152C30)",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c24",
+      "instruction": "ADD R5, R4, #0x8E0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c28",
+      "instruction": "LDR R0, [PC,R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c2c",
+      "instruction": "LDR R8, [R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c30",
+      "instruction": "LDR R7, [R8,#0x20]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c34",
+      "instruction": "CMP R7, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c38",
+      "instruction": "BNE loc_60152C5C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c3c",
+      "instruction": "B loc_60152D10",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c40",
+      "instruction": "LDR R1, [R4,#0x60]",
+      "segment": ".text",
+      "label": "loc_60152C40"
+    },
+    {
+      "address": "0x60152c44",
+      "instruction": "STR R6, [R1,R0,LSL#2]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c48",
+      "instruction": "LDR R0, [R4,#0x58]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c4c",
+      "instruction": "ADD R0, R0, #1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c50",
+      "instruction": "STR R0, [R4,#0x58]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c54",
+      "instruction": "CMP R7, #0",
+      "segment": ".text",
+      "label": "loc_60152C54"
+    },
+    {
+      "address": "0x60152c58",
+      "instruction": "BEQ loc_60152D10",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c5c",
+      "instruction": "LDM R7, {R6,R7}",
+      "segment": ".text",
+      "label": "loc_60152C5C"
+    },
+    {
+      "address": "0x60152c60",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c64",
+      "instruction": "ADD R1, R6, #0x70",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c68",
+      "instruction": "BL sub_6015A9F4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c6c",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c70",
+      "instruction": "BEQ loc_60152C54",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c74",
+      "instruction": "LDR R0, [R6,#0x130]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c78",
+      "instruction": "LDR R1, [R6,#0x134]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c7c",
+      "instruction": "ORRS R0, R0, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c80",
+      "instruction": "BEQ loc_60152C54",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c84",
+      "instruction": "LDR R0, [R6,#0xA0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c88",
+      "instruction": "LDR R1, [R4,#0x8A4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c8c",
+      "instruction": "LDRB R0, [R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c90",
+      "instruction": "LDRB R1, [R1]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c94",
+      "instruction": "CMP R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c98",
+      "instruction": "BNE loc_60152C54",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152c9c",
+      "instruction": "LDR R0, [R6,#0xA4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ca0",
+      "instruction": "LDR R1, [R4,#0x8A8]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ca4",
+      "instruction": "LDRB R0, [R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ca8",
+      "instruction": "LDRB R1, [R1]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cac",
+      "instruction": "AND R0, R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cb0",
+      "instruction": "TST R0, #0xFF",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cb4",
+      "instruction": "BEQ loc_60152C54",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cb8",
+      "instruction": "LDRB R0, [R6,#0xDC]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cbc",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cc0",
+      "instruction": "BNE loc_60152C54",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cc4",
+      "instruction": "LDR R0, [R6,#0x90]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cc8",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ccc",
+      "instruction": "BEQ loc_60152CFC",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cd0",
+      "instruction": "LDR R1, [R4,#0x894]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cd4",
+      "instruction": "CMP R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cd8",
+      "instruction": "BEQ loc_60152C54",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cdc",
+      "instruction": "LDR R2, [R4,#0x898]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ce0",
+      "instruction": "CMP R2, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ce4",
+      "instruction": "LDRNE R2, [R6,#0x94]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ce8",
+      "instruction": "CMPNE R1, R2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cec",
+      "instruction": "BEQ loc_60152C54",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cf0",
+      "instruction": "LDRB R0, [R0,#0x13]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cf4",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cf8",
+      "instruction": "BNE loc_60152C54",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152cfc",
+      "instruction": "LDR R0, [R4,#0x58]",
+      "segment": ".text",
+      "label": "loc_60152CFC"
+    },
+    {
+      "address": "0x60152d00",
+      "instruction": "LDR R1, [R4,#0x5C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d04",
+      "instruction": "CMP R0, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d08",
+      "instruction": "BGE loc_60152C54",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d0c",
+      "instruction": "B loc_60152C40",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d10",
+      "instruction": "LDR R7, [R8,#0x50]",
+      "segment": ".text",
+      "label": "loc_60152D10"
+    },
+    {
+      "address": "0x60152d14",
+      "instruction": "CMP R7, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d18",
+      "instruction": "BNE loc_60152D3C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d1c",
+      "instruction": "B loc_60152DF0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d20",
+      "instruction": "LDR R1, [R4,#0x60]",
+      "segment": ".text",
+      "label": "loc_60152D20"
+    },
+    {
+      "address": "0x60152d24",
+      "instruction": "STR R6, [R1,R0,LSL#2]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d28",
+      "instruction": "LDR R0, [R4,#0x58]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d2c",
+      "instruction": "ADD R0, R0, #1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d30",
+      "instruction": "STR R0, [R4,#0x58]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d34",
+      "instruction": "CMP R7, #0",
+      "segment": ".text",
+      "label": "loc_60152D34"
+    },
+    {
+      "address": "0x60152d38",
+      "instruction": "BEQ loc_60152DF0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d3c",
+      "instruction": "LDM R7, {R6,R7}",
+      "segment": ".text",
+      "label": "loc_60152D3C"
+    },
+    {
+      "address": "0x60152d40",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d44",
+      "instruction": "ADD R1, R6, #0x70",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d48",
+      "instruction": "BL sub_6015A9F4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d4c",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d50",
+      "instruction": "BEQ loc_60152D34",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d54",
+      "instruction": "LDR R0, [R6,#0x130]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d58",
+      "instruction": "LDR R1, [R6,#0x134]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d5c",
+      "instruction": "ORRS R0, R0, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d60",
+      "instruction": "BEQ loc_60152D34",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d64",
+      "instruction": "LDR R0, [R6,#0xA0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d68",
+      "instruction": "LDR R1, [R4,#0x8A4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d6c",
+      "instruction": "LDRB R0, [R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d70",
+      "instruction": "LDRB R1, [R1]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d74",
+      "instruction": "CMP R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d78",
+      "instruction": "BNE loc_60152D34",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d7c",
+      "instruction": "LDR R0, [R6,#0xA4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d80",
+      "instruction": "LDR R1, [R4,#0x8A8]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d84",
+      "instruction": "LDRB R0, [R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d88",
+      "instruction": "LDRB R1, [R1]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d8c",
+      "instruction": "AND R0, R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d90",
+      "instruction": "TST R0, #0xFF",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d94",
+      "instruction": "BEQ loc_60152D34",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d98",
+      "instruction": "LDRB R0, [R6,#0xDC]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152d9c",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152da0",
+      "instruction": "BNE loc_60152D34",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152da4",
+      "instruction": "LDR R0, [R6,#0x90]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152da8",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dac",
+      "instruction": "BEQ loc_60152DDC",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152db0",
+      "instruction": "LDR R1, [R4,#0x894]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152db4",
+      "instruction": "CMP R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152db8",
+      "instruction": "BEQ loc_60152D34",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dbc",
+      "instruction": "LDR R2, [R4,#0x898]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dc0",
+      "instruction": "CMP R2, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dc4",
+      "instruction": "LDRNE R2, [R6,#0x94]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dc8",
+      "instruction": "CMPNE R1, R2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dcc",
+      "instruction": "BEQ loc_60152D34",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dd0",
+      "instruction": "LDRB R0, [R0,#0x13]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dd4",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dd8",
+      "instruction": "BNE loc_60152D34",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ddc",
+      "instruction": "LDR R0, [R4,#0x58]",
+      "segment": ".text",
+      "label": "loc_60152DDC"
+    },
+    {
+      "address": "0x60152de0",
+      "instruction": "LDR R1, [R4,#0x5C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152de4",
+      "instruction": "CMP R0, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152de8",
+      "instruction": "BGE loc_60152D34",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dec",
+      "instruction": "B loc_60152D20",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152df0",
+      "instruction": "LDR R1, =(sub_60152FF4 - 0x60152E00)",
+      "segment": ".text",
+      "label": "loc_60152DF0"
+    },
+    {
+      "address": "0x60152df4",
+      "instruction": "ADD R0, R4, #0x58",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152df8",
+      "instruction": "ADD R1, PC, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152dfc",
+      "instruction": "BL sub_608DECA0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e00",
+      "instruction": "LDR R0, [R4,#0x9E0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e04",
+      "instruction": "LDR R1, [R4,#0x9E8]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e08",
+      "instruction": "LDR R2, [R4,#0x9F0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e0c",
+      "instruction": "LDR R3, [R4,#0x9F8]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e10",
+      "instruction": "ORR R0, R0, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e14",
+      "instruction": "ORR R0, R0, R2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e18",
+      "instruction": "ORR R0, R0, R3",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e1c",
+      "instruction": "TST R0, #0x1C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e20",
+      "instruction": "BEQ locret_60152FE8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e24",
+      "instruction": "LDR R7, [R8,#0x2C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e28",
+      "instruction": "CMP R7, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e2c",
+      "instruction": "BNE loc_60152E50",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e30",
+      "instruction": "B loc_60152F04",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e34",
+      "instruction": "LDR R1, [R4,#0x60]",
+      "segment": ".text",
+      "label": "loc_60152E34"
+    },
+    {
+      "address": "0x60152e38",
+      "instruction": "STR R6, [R1,R0,LSL#2]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e3c",
+      "instruction": "LDR R0, [R4,#0x58]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e40",
+      "instruction": "ADD R0, R0, #1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e44",
+      "instruction": "STR R0, [R4,#0x58]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e48",
+      "instruction": "CMP R7, #0",
+      "segment": ".text",
+      "label": "loc_60152E48"
+    },
+    {
+      "address": "0x60152e4c",
+      "instruction": "BEQ loc_60152F04",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e50",
+      "instruction": "LDM R7, {R6,R7}",
+      "segment": ".text",
+      "label": "loc_60152E50"
+    },
+    {
+      "address": "0x60152e54",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e58",
+      "instruction": "ADD R1, R6, #0x70",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e5c",
+      "instruction": "BL sub_6015A9F4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e60",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e64",
+      "instruction": "BEQ loc_60152E48",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e68",
+      "instruction": "LDR R0, [R6,#0x130]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e6c",
+      "instruction": "LDR R1, [R6,#0x134]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e70",
+      "instruction": "ORRS R0, R0, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e74",
+      "instruction": "BEQ loc_60152E48",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e78",
+      "instruction": "LDR R0, [R6,#0xA0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e7c",
+      "instruction": "LDR R1, [R4,#0x8A4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e80",
+      "instruction": "LDRB R0, [R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e84",
+      "instruction": "LDRB R1, [R1]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e88",
+      "instruction": "CMP R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e8c",
+      "instruction": "BNE loc_60152E48",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e90",
+      "instruction": "LDR R0, [R6,#0xA4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e94",
+      "instruction": "LDR R1, [R4,#0x8A8]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e98",
+      "instruction": "LDRB R0, [R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152e9c",
+      "instruction": "LDRB R1, [R1]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ea0",
+      "instruction": "AND R0, R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ea4",
+      "instruction": "TST R0, #0xFF",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ea8",
+      "instruction": "BEQ loc_60152E48",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152eac",
+      "instruction": "LDRB R0, [R6,#0xDC]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152eb0",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152eb4",
+      "instruction": "BNE loc_60152E48",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152eb8",
+      "instruction": "LDR R0, [R6,#0x90]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ebc",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ec0",
+      "instruction": "BEQ loc_60152EF0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ec4",
+      "instruction": "LDR R1, [R4,#0x894]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ec8",
+      "instruction": "CMP R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ecc",
+      "instruction": "BEQ loc_60152E48",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ed0",
+      "instruction": "LDR R2, [R4,#0x898]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ed4",
+      "instruction": "CMP R2, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ed8",
+      "instruction": "LDRNE R2, [R6,#0x94]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152edc",
+      "instruction": "CMPNE R1, R2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ee0",
+      "instruction": "BEQ loc_60152E48",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ee4",
+      "instruction": "LDRB R0, [R0,#0x13]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ee8",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152eec",
+      "instruction": "BNE loc_60152E48",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ef0",
+      "instruction": "LDR R0, [R4,#0x58]",
+      "segment": ".text",
+      "label": "loc_60152EF0"
+    },
+    {
+      "address": "0x60152ef4",
+      "instruction": "LDR R1, [R4,#0x5C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152ef8",
+      "instruction": "CMP R0, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152efc",
+      "instruction": "BGE loc_60152E48",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f00",
+      "instruction": "B loc_60152E34",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f04",
+      "instruction": "LDR R6, [R8,#0x38]",
+      "segment": ".text",
+      "label": "loc_60152F04"
+    },
+    {
+      "address": "0x60152f08",
+      "instruction": "CMP R6, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f0c",
+      "instruction": "BNE loc_60152F30",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f10",
+      "instruction": "B locret_60152FE8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f14",
+      "instruction": "LDR R1, [R4,#0x60]",
+      "segment": ".text",
+      "label": "loc_60152F14"
+    },
+    {
+      "address": "0x60152f18",
+      "instruction": "STR R7, [R1,R0,LSL#2]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f1c",
+      "instruction": "LDR R0, [R4,#0x58]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f20",
+      "instruction": "ADD R0, R0, #1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f24",
+      "instruction": "STR R0, [R4,#0x58]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f28",
+      "instruction": "CMP R6, #0",
+      "segment": ".text",
+      "label": "loc_60152F28"
+    },
+    {
+      "address": "0x60152f2c",
+      "instruction": "BEQ locret_60152FE8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f30",
+      "instruction": "LDR R7, [R6]",
+      "segment": ".text",
+      "label": "loc_60152F30"
+    },
+    {
+      "address": "0x60152f34",
+      "instruction": "LDR R6, [R6,#4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f38",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f3c",
+      "instruction": "ADD R1, R7, #0x70",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f40",
+      "instruction": "BL sub_6015A9F4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f44",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f48",
+      "instruction": "BEQ loc_60152F28",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f4c",
+      "instruction": "LDR R0, [R7,#0x130]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f50",
+      "instruction": "LDR R1, [R7,#0x134]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f54",
+      "instruction": "ORRS R0, R0, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f58",
+      "instruction": "BEQ loc_60152F28",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f5c",
+      "instruction": "LDR R0, [R7,#0xA0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f60",
+      "instruction": "LDR R1, [R4,#0x8A4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f64",
+      "instruction": "LDRB R0, [R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f68",
+      "instruction": "LDRB R1, [R1]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f6c",
+      "instruction": "CMP R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f70",
+      "instruction": "BNE loc_60152F28",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f74",
+      "instruction": "LDR R0, [R7,#0xA4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f78",
+      "instruction": "LDR R1, [R4,#0x8A8]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f7c",
+      "instruction": "LDRB R0, [R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f80",
+      "instruction": "LDRB R1, [R1]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f84",
+      "instruction": "AND R0, R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f88",
+      "instruction": "TST R0, #0xFF",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f8c",
+      "instruction": "BEQ loc_60152F28",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f90",
+      "instruction": "LDRB R0, [R7,#0xDC]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f94",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f98",
+      "instruction": "BNE loc_60152F28",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152f9c",
+      "instruction": "LDR R0, [R7,#0x90]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fa0",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fa4",
+      "instruction": "BEQ loc_60152FD4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fa8",
+      "instruction": "LDR R1, [R4,#0x894]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fac",
+      "instruction": "CMP R1, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fb0",
+      "instruction": "BEQ loc_60152F28",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fb4",
+      "instruction": "LDR R2, [R4,#0x898]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fb8",
+      "instruction": "CMP R2, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fbc",
+      "instruction": "LDRNE R2, [R7,#0x94]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fc0",
+      "instruction": "CMPNE R1, R2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fc4",
+      "instruction": "BEQ loc_60152F28",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fc8",
+      "instruction": "LDRB R0, [R0,#0x13]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fcc",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fd0",
+      "instruction": "BNE loc_60152F28",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fd4",
+      "instruction": "LDR R0, [R4,#0x58]",
+      "segment": ".text",
+      "label": "loc_60152FD4"
+    },
+    {
+      "address": "0x60152fd8",
+      "instruction": "LDR R1, [R4,#0x5C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fdc",
+      "instruction": "CMP R0, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fe0",
+      "instruction": "BGE loc_60152F28",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fe4",
+      "instruction": "B loc_60152F14",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60152fe8",
+      "instruction": "POP {R4-R8,PC}",
+      "segment": ".text",
+      "label": "locret_60152FE8"
+    }
+  ]
+}

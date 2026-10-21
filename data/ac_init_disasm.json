@@ -1,0 +1,296 @@
+{
+  "name": "_ZN14ActiveCollider4initEP10StageActorPKNS_4InfoEj",
+  "start_ea": "0x60158de8",
+  "stack_frame": [
+    {
+      "name": "__saved_registers",
+      "offset": "0x0",
+      "size": "0x18",
+      "type": "_DWORD[6]"
+    }
+  ],
+  "lines": [
+    {
+      "address": "0x60158de8",
+      "instruction": "PUSH {R4-R8,LR}",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158dec",
+      "instruction": "MOV R8, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158df0",
+      "instruction": "STR R1, [R8,#0x40]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158df4",
+      "instruction": "ADD R0, R8, #0x74",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158df8",
+      "instruction": "LDM R2!, {R4-R7,R12}",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158dfc",
+      "instruction": "STM R0!, {R4-R7,R12}",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e00",
+      "instruction": "LDM R2, {R4-R7,R12,LR}",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e04",
+      "instruction": "STM R0, {R4-R7,R12,LR}",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e08",
+      "instruction": "MOV R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e0c",
+      "instruction": "STRB R0, [R8,#0x6E]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e10",
+      "instruction": "STR R3, [R8,#0x70]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e14",
+      "instruction": "LDRB R0, [R1,#0x57]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e18",
+      "instruction": "STRB R0, [R8,#0x6C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e1c",
+      "instruction": "LDRB R0, [R1,#0x56]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e20",
+      "instruction": "MOV R1, R8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e24",
+      "instruction": "STRB R0, [R8,#0x6D]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e28",
+      "instruction": "LDR R0, =(off_60C61A34 - 0x60158E34)",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e2c",
+      "instruction": "LDR R0, [PC,R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e30",
+      "instruction": "LDR R5, [R0]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e34",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e38",
+      "instruction": "BL ActiveColliderMgr_isInActiveList",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e3c",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e40",
+      "instruction": "BNE loc_60158E58",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e44",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e48",
+      "instruction": "MOV R1, R8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e4c",
+      "instruction": "BL ActiveColliderMgr_isInCreateList",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e50",
+      "instruction": "CMP R0, #1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e54",
+      "instruction": "BNE locret_60158EA4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e58",
+      "instruction": "MOV R0, R5",
+      "segment": ".text",
+      "label": "loc_60158E58"
+    },
+    {
+      "address": "0x60158e5c",
+      "instruction": "MOV R1, R8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e60",
+      "instruction": "BL ActiveColldierMgr_removeFromActiveList",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e64",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e68",
+      "instruction": "MOV R1, R8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e6c",
+      "instruction": "BL ActiveColldierMgr_removeFromCreateList",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e70",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e74",
+      "instruction": "MOV R1, R8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e78",
+      "instruction": "BL ActiveColldierMgr_removeFromList3",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e7c",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e80",
+      "instruction": "MOV R1, R8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e84",
+      "instruction": "BL ActiveColliderMgr_isInActiveList",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e88",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e8c",
+      "instruction": "POPNE {R4-R8,PC}",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e90",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e94",
+      "instruction": "MOV R1, R8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e98",
+      "instruction": "BL ActiveColliderMgr_isInCreateList",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158e9c",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158ea0",
+      "instruction": "BEQ loc_60158EA8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158ea4",
+      "instruction": "POP {R4-R8,PC}",
+      "segment": ".text",
+      "label": "locret_60158EA4"
+    },
+    {
+      "address": "0x60158ea8",
+      "instruction": "MOV R0, R5",
+      "segment": ".text",
+      "label": "loc_60158EA8"
+    },
+    {
+      "address": "0x60158eac",
+      "instruction": "MOV R1, R8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158eb0",
+      "instruction": "POP {R4-R8,LR}",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60158eb4",
+      "instruction": "B ActiveColliderMgr_addToCreateList",
+      "segment": ".text"
+    }
+  ],
+  "return_type": "int",
+  "arguments": [
+    {
+      "name": "arg0",
+      "type": "int"
+    },
+    {
+      "name": "arg1",
+      "type": "int"
+    },
+    {
+      "name": "arg2",
+      "type": "int *"
+    },
+    {
+      "name": "arg3",
+      "type": "int"
+    }
+  ]
+}

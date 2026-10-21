@@ -1,0 +1,48 @@
+[
+  {
+    "address": "0x604f90e8",
+    "type": "data",
+    "function": {
+      "address": "0x604f90e8",
+      "name": "sub_604F9090",
+      "size": "0x1d4"
+    }
+  },
+  {
+    "address": "0x604f90f0",
+    "type": "data",
+    "function": {
+      "address": "0x604f90f0",
+      "name": "sub_604F9090",
+      "size": "0x1d4"
+    }
+  },
+  {
+    "address": "0x604f9278",
+    "type": "data",
+    "function": null
+  },
+  {
+    "address": "0x6052f21c",
+    "type": "data",
+    "function": {
+      "address": "0x6052f21c",
+      "name": "sub_6052F1C4",
+      "size": "0x1f8"
+    }
+  },
+  {
+    "address": "0x6052f224",
+    "type": "data",
+    "function": {
+      "address": "0x6052f224",
+      "name": "sub_6052F1C4",
+      "size": "0x1f8"
+    }
+  },
+  {
+    "address": "0x6052f3d0",
+    "type": "data",
+    "function": null
+  }
+]

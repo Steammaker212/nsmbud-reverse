@@ -1,0 +1,779 @@
+{
+  "name": "ActiveCollider_doOverlapMaybe",
+  "start_ea": "0x601597e8",
+  "stack_frame": [
+    {
+      "name": "var_10",
+      "offset": "0x4",
+      "size": "0x4",
+      "type": "_DWORD"
+    },
+    {
+      "name": "var_C",
+      "offset": "0x8",
+      "size": "0x4",
+      "type": "_DWORD"
+    },
+    {
+      "name": "var_8",
+      "offset": "0xc",
+      "size": "0x4",
+      "type": "_DWORD"
+    },
+    {
+      "name": "var_4",
+      "offset": "0x10",
+      "size": "0x4",
+      "type": "_DWORD"
+    },
+    {
+      "name": "__saved_registers",
+      "offset": "0x14",
+      "size": "0x24",
+      "type": "_DWORD[9]"
+    }
+  ],
+  "lines": [
+    {
+      "address": "0x601597e8",
+      "instruction": "PUSH {R4-R11,LR}",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601597ec",
+      "instruction": "SUB SP, SP, #0x14",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601597f0",
+      "instruction": "MOV R4, R0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601597f4",
+      "instruction": "MOV R5, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601597f8",
+      "instruction": "MOV R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601597fc",
+      "instruction": "CMP R5, R4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159800",
+      "instruction": "BEQ loc_6015983C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159804",
+      "instruction": "LDR R1, [R4,#0x40]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159808",
+      "instruction": "LDR R2, [R5,#0x40]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015980c",
+      "instruction": "CMP R2, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159810",
+      "instruction": "BEQ loc_6015983C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159814",
+      "instruction": "LDR R3, [R4,#0x44]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159818",
+      "instruction": "CMP R2, R3",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015981c",
+      "instruction": "LDRNE R2, [R5,#0x44]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159820",
+      "instruction": "CMPNE R1, R2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159824",
+      "instruction": "BEQ loc_6015983C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159828",
+      "instruction": "LDRB R1, [R4,#0x6E]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015982c",
+      "instruction": "TST R1, #2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159830",
+      "instruction": "LDRBEQ R1, [R5,#0x6E]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159834",
+      "instruction": "TSTEQ R1, #2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159838",
+      "instruction": "BEQ loc_60159844",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015983c",
+      "instruction": "ADD SP, SP, #0x14",
+      "segment": ".text",
+      "label": "loc_6015983C"
+    },
+    {
+      "address": "0x60159840",
+      "instruction": "POP {R4-R11,PC}",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159844",
+      "instruction": "LDRB R1, [R5,#0x6C]",
+      "segment": ".text",
+      "label": "loc_60159844"
+    },
+    {
+      "address": "0x60159848",
+      "instruction": "LDRB R2, [R4,#0x6C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015984c",
+      "instruction": "AND R1, R2, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159850",
+      "instruction": "TST R1, #0xFF",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159854",
+      "instruction": "BEQ loc_6015983C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159858",
+      "instruction": "LDRB R1, [R5,#0x6D]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015985c",
+      "instruction": "LDRB R2, [R4,#0x6D]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159860",
+      "instruction": "CMP R2, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159864",
+      "instruction": "BNE loc_6015983C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159868",
+      "instruction": "LDR R7, [R5,#0x88]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015986c",
+      "instruction": "LDR R1, [R4,#0x90]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159870",
+      "instruction": "MOV R9, #1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159874",
+      "instruction": "AND R2, R1, R9,LSL R7",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159878",
+      "instruction": "CMP R2, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015987c",
+      "instruction": "BEQ loc_60159A14",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159880",
+      "instruction": "LDR R1, [R4,#0x88]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159884",
+      "instruction": "MOV R8, R9,LSL R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159888",
+      "instruction": "LDR R1, [R5,#0x90]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015988c",
+      "instruction": "ANDS R10, R1, R8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159890",
+      "instruction": "BEQ loc_60159A14",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159894",
+      "instruction": "LDR R1, [R5,#0x98]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159898",
+      "instruction": "LDR R3, [R5,#0x8C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015989c",
+      "instruction": "LDR R12, [R5,#0x94]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598a0",
+      "instruction": "MOV LR, #1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598a4",
+      "instruction": "TST R2, #2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598a8",
+      "instruction": "STR R1, [SP,#0x14+var_10]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598ac",
+      "instruction": "LDR R1, [R5,#0x9C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598b0",
+      "instruction": "STR R1, [SP,#0x14+var_4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598b4",
+      "instruction": "LDR R6, [R4,#0x98]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598b8",
+      "instruction": "LDR R11, [R4,#0x8C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598bc",
+      "instruction": "LDR R1, [R4,#0x94]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598c0",
+      "instruction": "STR R6, [SP,#0x14+var_C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598c4",
+      "instruction": "LDR R6, [R4,#0x9C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598c8",
+      "instruction": "STR R6, [SP,#0x14+var_8]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598cc",
+      "instruction": "AND R6, R1, LR,LSL R3",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598d0",
+      "instruction": "BEQ loc_601598DC",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598d4",
+      "instruction": "CMP R6, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598d8",
+      "instruction": "BEQ loc_6015983C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598dc",
+      "instruction": "AND R11, R12, LR,LSL R11",
+      "segment": ".text",
+      "label": "loc_601598DC"
+    },
+    {
+      "address": "0x601598e0",
+      "instruction": "CMP R11, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598e4",
+      "instruction": "BNE loc_601598F0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598e8",
+      "instruction": "ANDS R1, R10, #2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598ec",
+      "instruction": "BNE loc_6015983C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598f0",
+      "instruction": "LDR R2, =(off_60C61A40 - 0x60159904)",
+      "segment": ".text",
+      "label": "loc_601598F0"
+    },
+    {
+      "address": "0x601598f4",
+      "instruction": "LDR R0, [R4,#0x84]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598f8",
+      "instruction": "LDR R1, [R5,#0x84]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601598fc",
+      "instruction": "LDR R2, [PC,R2]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159900",
+      "instruction": "LDR R2, [R2]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159904",
+      "instruction": "LDR R2, [R2,#0x724]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159908",
+      "instruction": "CMP R2, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015990c",
+      "instruction": "BEQ loc_60159938",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159910",
+      "instruction": "LDR R2, =(dword_60C65D4C - 0x6015991C)",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159914",
+      "instruction": "LDR R2, [PC,R2]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159918",
+      "instruction": "ADD R1, R2, R1,LSL#4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015991c",
+      "instruction": "LDR R2, [R1,R0,LSL#2]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159920",
+      "instruction": "MOV R0, R4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159924",
+      "instruction": "MOV R1, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159928",
+      "instruction": "BLX R2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015992c",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159930",
+      "instruction": "BNE loc_6015995C",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159934",
+      "instruction": "B loc_60159A14",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159938",
+      "instruction": "LDR R2, =(dword_60C65D50 - 0x60159944)",
+      "segment": ".text",
+      "label": "loc_60159938"
+    },
+    {
+      "address": "0x6015993c",
+      "instruction": "LDR R2, [PC,R2]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159940",
+      "instruction": "ADD R1, R2, R1,LSL#4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159944",
+      "instruction": "LDR R2, [R1,R0,LSL#2]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159948",
+      "instruction": "MOV R0, R4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015994c",
+      "instruction": "MOV R1, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159950",
+      "instruction": "BLX R2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159954",
+      "instruction": "CMP R0, #1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159958",
+      "instruction": "BNE loc_60159A14",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015995c",
+      "instruction": "LDR R0, [SP,#0x14+var_10]",
+      "segment": ".text",
+      "label": "loc_6015995C"
+    },
+    {
+      "address": "0x60159960",
+      "instruction": "ANDS R0, R0, #4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159964",
+      "instruction": "BNE loc_60159998",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159968",
+      "instruction": "LDR R2, [R4,#0x5C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015996c",
+      "instruction": "MOV R1, R9,LSL R7",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159970",
+      "instruction": "CMP R6, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159974",
+      "instruction": "ORR R1, R2, R1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159978",
+      "instruction": "STR R1, [R4,#0x5C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015997c",
+      "instruction": "LDRNE R1, [R4,#0x64]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159980",
+      "instruction": "ORRNE R1, R1, R6",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159984",
+      "instruction": "STRNE R1, [R4,#0x64]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159988",
+      "instruction": "CMP R11, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x6015998c",
+      "instruction": "LDRNE R1, [R4,#0x60]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159990",
+      "instruction": "ORRNE R1, R1, R11",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159994",
+      "instruction": "STRNE R1, [R4,#0x60]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159998",
+      "instruction": "LDR R1, [SP,#0x14+var_C]",
+      "segment": ".text",
+      "label": "loc_60159998"
+    },
+    {
+      "address": "0x6015999c",
+      "instruction": "LDR R2, [SP,#0x14+var_8]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599a0",
+      "instruction": "ANDS R7, R1, #4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599a4",
+      "instruction": "BNE loc_601599D4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599a8",
+      "instruction": "LDR R1, [R5,#0x5C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599ac",
+      "instruction": "CMP R6, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599b0",
+      "instruction": "ORR R1, R1, R8",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599b4",
+      "instruction": "STR R1, [R5,#0x5C]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599b8",
+      "instruction": "LDRNE R1, [R5,#0x60]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599bc",
+      "instruction": "ORRNE R1, R1, R6",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599c0",
+      "instruction": "STRNE R1, [R5,#0x60]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599c4",
+      "instruction": "CMP R11, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599c8",
+      "instruction": "LDRNE R1, [R5,#0x64]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599cc",
+      "instruction": "ORRNE R1, R1, R11",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599d0",
+      "instruction": "STRNE R1, [R5,#0x64]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599d4",
+      "instruction": "CMP R2, #0",
+      "segment": ".text",
+      "label": "loc_601599D4"
+    },
+    {
+      "address": "0x601599d8",
+      "instruction": "BEQ loc_601599F0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599dc",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599e0",
+      "instruction": "BNE loc_601599F0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599e4",
+      "instruction": "MOV R0, R4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599e8",
+      "instruction": "MOV R1, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599ec",
+      "instruction": "BLX R2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599f0",
+      "instruction": "CMP R7, #0",
+      "segment": ".text",
+      "label": "loc_601599F0"
+    },
+    {
+      "address": "0x601599f4",
+      "instruction": "BNE loc_60159A14",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599f8",
+      "instruction": "LDR R0, [SP,#0x14+var_4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x601599fc",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159a00",
+      "instruction": "BEQ loc_60159A14",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159a04",
+      "instruction": "LDR R2, [SP,#0x14+var_4]",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159a08",
+      "instruction": "MOV R0, R5",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159a0c",
+      "instruction": "MOV R1, R4",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159a10",
+      "instruction": "BLX R2",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159a14",
+      "instruction": "LDR R0, [R4,#0x5C]",
+      "segment": ".text",
+      "label": "loc_60159A14"
+    },
+    {
+      "address": "0x60159a18",
+      "instruction": "CMP R0, #0",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159a1c",
+      "instruction": "MOVWNE R0, #1",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159a20",
+      "instruction": "ADD SP, SP, #0x14",
+      "segment": ".text"
+    },
+    {
+      "address": "0x60159a24",
+      "instruction": "POP {R4-R11,PC}",
+      "segment": ".text"
+    }
+  ],
+  "return_type": "bool",
+  "arguments": [
+    {
+      "name": "arg0",
+      "type": "int"
+    },
+    {
+      "name": "arg1",
+      "type": "int"
+    }
+  ]
+}

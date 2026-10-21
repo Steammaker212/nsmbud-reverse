@@ -1,0 +1,3353 @@
+[
+  {
+    "address": "0x600260c8",
+    "type": "code",
+    "function": {
+      "address": "0x600260c8",
+      "name": "_ZN8BossBase5vf3E8Ev",
+      "size": "0x1c"
+    }
+  },
+  {
+    "address": "0x6002f12c",
+    "type": "code",
+    "function": {
+      "address": "0x6002f12c",
+      "name": "_ZN12SumoBrosBoss5vf3FCEv",
+      "size": "0x35c"
+    }
+  },
+  {
+    "address": "0x6003401c",
+    "type": "code",
+    "function": {
+      "address": "0x6003401c",
+      "name": "sub_60033F90",
+      "size": "0x224"
+    }
+  },
+  {
+    "address": "0x60034080",
+    "type": "code",
+    "function": {
+      "address": "0x60034080",
+      "name": "sub_60033F90",
+      "size": "0x224"
+    }
+  },
+  {
+    "address": "0x60036af0",
+    "type": "code",
+    "function": {
+      "address": "0x60036af0",
+      "name": "sub_600369F0",
+      "size": "0x1e0"
+    }
+  },
+  {
+    "address": "0x600406e4",
+    "type": "code",
+    "function": {
+      "address": "0x600406e4",
+      "name": "sub_600404E0",
+      "size": "0x55c"
+    }
+  },
+  {
+    "address": "0x60040754",
+    "type": "code",
+    "function": {
+      "address": "0x60040754",
+      "name": "sub_600404E0",
+      "size": "0x55c"
+    }
+  },
+  {
+    "address": "0x6004078c",
+    "type": "code",
+    "function": {
+      "address": "0x6004078c",
+      "name": "sub_600404E0",
+      "size": "0x55c"
+    }
+  },
+  {
+    "address": "0x60050ce4",
+    "type": "code",
+    "function": {
+      "address": "0x60050ce4",
+      "name": "_ZN12BoomBoomBase5vf3FCEv",
+      "size": "0x230"
+    }
+  },
+  {
+    "address": "0x60059d20",
+    "type": "code",
+    "function": {
+      "address": "0x60059d20",
+      "name": "sub_60059C9C",
+      "size": "0xf4"
+    }
+  },
+  {
+    "address": "0x60073cdc",
+    "type": "code",
+    "function": {
+      "address": "0x60073cdc",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073d00",
+    "type": "code",
+    "function": {
+      "address": "0x60073d00",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073d1c",
+    "type": "code",
+    "function": {
+      "address": "0x60073d1c",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073d40",
+    "type": "code",
+    "function": {
+      "address": "0x60073d40",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073d5c",
+    "type": "code",
+    "function": {
+      "address": "0x60073d5c",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073d80",
+    "type": "code",
+    "function": {
+      "address": "0x60073d80",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073d9c",
+    "type": "code",
+    "function": {
+      "address": "0x60073d9c",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073dc0",
+    "type": "code",
+    "function": {
+      "address": "0x60073dc0",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073ddc",
+    "type": "code",
+    "function": {
+      "address": "0x60073ddc",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073df8",
+    "type": "code",
+    "function": {
+      "address": "0x60073df8",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073e18",
+    "type": "code",
+    "function": {
+      "address": "0x60073e18",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073e30",
+    "type": "code",
+    "function": {
+      "address": "0x60073e30",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60073e48",
+    "type": "code",
+    "function": {
+      "address": "0x60073e48",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60074150",
+    "type": "code",
+    "function": {
+      "address": "0x60074150",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x60074184",
+    "type": "code",
+    "function": {
+      "address": "0x60074184",
+      "name": "_ZN11FinalBowser5vf3FCEv",
+      "size": "0xc88"
+    }
+  },
+  {
+    "address": "0x6007ed44",
+    "type": "code",
+    "function": {
+      "address": "0x6007ed44",
+      "name": "sub_6007EC48",
+      "size": "0x424"
+    }
+  },
+  {
+    "address": "0x6007eda8",
+    "type": "code",
+    "function": {
+      "address": "0x6007eda8",
+      "name": "sub_6007EC48",
+      "size": "0x424"
+    }
+  },
+  {
+    "address": "0x60089400",
+    "type": "code",
+    "function": {
+      "address": "0x60089400",
+      "name": "sub_600892F8",
+      "size": "0x1e8"
+    }
+  },
+  {
+    "address": "0x60092b4c",
+    "type": "code",
+    "function": {
+      "address": "0x60092b4c",
+      "name": "sub_60092AFC",
+      "size": "0x444"
+    }
+  },
+  {
+    "address": "0x60092bdc",
+    "type": "code",
+    "function": {
+      "address": "0x60092bdc",
+      "name": "sub_60092AFC",
+      "size": "0x444"
+    }
+  },
+  {
+    "address": "0x60097060",
+    "type": "code",
+    "function": {
+      "address": "0x60097060",
+      "name": "sub_60097040",
+      "size": "0x198"
+    }
+  },
+  {
+    "address": "0x6009cec4",
+    "type": "code",
+    "function": {
+      "address": "0x6009cec4",
+      "name": "_ZN4Iggy5vf3FCEv",
+      "size": "0x2ac"
+    }
+  },
+  {
+    "address": "0x600a7df0",
+    "type": "code",
+    "function": {
+      "address": "0x600a7df0",
+      "name": "sub_600A7D18",
+      "size": "0x228"
+    }
+  },
+  {
+    "address": "0x600ada48",
+    "type": "code",
+    "function": {
+      "address": "0x600ada48",
+      "name": "sub_600AD8C0",
+      "size": "0x23c"
+    }
+  },
+  {
+    "address": "0x600ada60",
+    "type": "code",
+    "function": {
+      "address": "0x600ada60",
+      "name": "sub_600AD8C0",
+      "size": "0x23c"
+    }
+  },
+  {
+    "address": "0x600adaa4",
+    "type": "code",
+    "function": {
+      "address": "0x600adaa4",
+      "name": "sub_600AD8C0",
+      "size": "0x23c"
+    }
+  },
+  {
+    "address": "0x600b5344",
+    "type": "code",
+    "function": {
+      "address": "0x600b5344",
+      "name": "_ZN13KoopalingBase5vf5B8Ev",
+      "size": "0x138"
+    }
+  },
+  {
+    "address": "0x600b9420",
+    "type": "code",
+    "function": {
+      "address": "0x600b9420",
+      "name": "sub_600B9294",
+      "size": "0x2b4"
+    }
+  },
+  {
+    "address": "0x600b9440",
+    "type": "code",
+    "function": {
+      "address": "0x600b9440",
+      "name": "sub_600B9294",
+      "size": "0x2b4"
+    }
+  },
+  {
+    "address": "0x600c4624",
+    "type": "code",
+    "function": {
+      "address": "0x600c4624",
+      "name": "_ZN6Bowser5vf3FCEv",
+      "size": "0x1f4"
+    }
+  },
+  {
+    "address": "0x600c463c",
+    "type": "code",
+    "function": {
+      "address": "0x600c463c",
+      "name": "_ZN6Bowser5vf3FCEv",
+      "size": "0x1f4"
+    }
+  },
+  {
+    "address": "0x600c4654",
+    "type": "code",
+    "function": {
+      "address": "0x600c4654",
+      "name": "_ZN6Bowser5vf3FCEv",
+      "size": "0x1f4"
+    }
+  },
+  {
+    "address": "0x600c4668",
+    "type": "code",
+    "function": {
+      "address": "0x600c4668",
+      "name": "_ZN6Bowser5vf3FCEv",
+      "size": "0x1f4"
+    }
+  },
+  {
+    "address": "0x600c4680",
+    "type": "code",
+    "function": {
+      "address": "0x600c4680",
+      "name": "_ZN6Bowser5vf3FCEv",
+      "size": "0x1f4"
+    }
+  },
+  {
+    "address": "0x600cc340",
+    "type": "code",
+    "function": {
+      "address": "0x600cc340",
+      "name": "sub_600CC2F8",
+      "size": "0x12c"
+    }
+  },
+  {
+    "address": "0x600cd208",
+    "type": "code",
+    "function": {
+      "address": "0x600cd208",
+      "name": "sub_600CD10C",
+      "size": "0x214"
+    }
+  },
+  {
+    "address": "0x600d0340",
+    "type": "code",
+    "function": {
+      "address": "0x600d0340",
+      "name": "sub_600D02F8",
+      "size": "0x108"
+    }
+  },
+  {
+    "address": "0x600d546c",
+    "type": "code",
+    "function": {
+      "address": "0x600d546c",
+      "name": "sub_600D53B0",
+      "size": "0x158"
+    }
+  },
+  {
+    "address": "0x600d8b9c",
+    "type": "code",
+    "function": {
+      "address": "0x600d8b9c",
+      "name": "sub_600D8B78",
+      "size": "0xa0"
+    }
+  },
+  {
+    "address": "0x600d8c4c",
+    "type": "code",
+    "function": {
+      "address": "0x600d8c4c",
+      "name": "sub_600D8C28",
+      "size": "0xa4"
+    }
+  },
+  {
+    "address": "0x600dd41c",
+    "type": "code",
+    "function": {
+      "address": "0x600dd41c",
+      "name": "sub_600DD250",
+      "size": "0x444"
+    }
+  },
+  {
+    "address": "0x600e1f48",
+    "type": "code",
+    "function": {
+      "address": "0x600e1f48",
+      "name": "sub_600E1E98",
+      "size": "0x158"
+    }
+  },
+  {
+    "address": "0x600e1fa4",
+    "type": "code",
+    "function": {
+      "address": "0x600e1fa4",
+      "name": "sub_600E1E98",
+      "size": "0x158"
+    }
+  },
+  {
+    "address": "0x600e4d0c",
+    "type": "code",
+    "function": {
+      "address": "0x600e4d0c",
+      "name": "sub_600E4BC8",
+      "size": "0x23c"
+    }
+  },
+  {
+    "address": "0x600e4d80",
+    "type": "code",
+    "function": {
+      "address": "0x600e4d80",
+      "name": "sub_600E4BC8",
+      "size": "0x23c"
+    }
+  },
+  {
+    "address": "0x600e8c38",
+    "type": "code",
+    "function": {
+      "address": "0x600e8c38",
+      "name": "sub_600E8C14",
+      "size": "0xa4"
+    }
+  },
+  {
+    "address": "0x600e8cec",
+    "type": "code",
+    "function": {
+      "address": "0x600e8cec",
+      "name": "sub_600E8CC8",
+      "size": "0xa8"
+    }
+  },
+  {
+    "address": "0x600eae40",
+    "type": "code",
+    "function": {
+      "address": "0x600eae40",
+      "name": "sub_600EADA4",
+      "size": "0x11c"
+    }
+  },
+  {
+    "address": "0x600ecef4",
+    "type": "code",
+    "function": {
+      "address": "0x600ecef4",
+      "name": "sub_600ECCE0",
+      "size": "0x318"
+    }
+  },
+  {
+    "address": "0x600eff5c",
+    "type": "code",
+    "function": {
+      "address": "0x600eff5c",
+      "name": "sub_600EFDB0",
+      "size": "0x2b8"
+    }
+  },
+  {
+    "address": "0x600effb8",
+    "type": "code",
+    "function": {
+      "address": "0x600effb8",
+      "name": "sub_600EFDB0",
+      "size": "0x2b8"
+    }
+  },
+  {
+    "address": "0x600f6a5c",
+    "type": "code",
+    "function": {
+      "address": "0x600f6a5c",
+      "name": "sub_600F698C",
+      "size": "0x2b8"
+    }
+  },
+  {
+    "address": "0x600f6a80",
+    "type": "code",
+    "function": {
+      "address": "0x600f6a80",
+      "name": "sub_600F698C",
+      "size": "0x2b8"
+    }
+  },
+  {
+    "address": "0x601000e0",
+    "type": "code",
+    "function": {
+      "address": "0x601000e0",
+      "name": "sub_60100090",
+      "size": "0x4fc"
+    }
+  },
+  {
+    "address": "0x60100170",
+    "type": "code",
+    "function": {
+      "address": "0x60100170",
+      "name": "sub_60100090",
+      "size": "0x4fc"
+    }
+  },
+  {
+    "address": "0x60100220",
+    "type": "code",
+    "function": {
+      "address": "0x60100220",
+      "name": "sub_60100090",
+      "size": "0x4fc"
+    }
+  },
+  {
+    "address": "0x6010a584",
+    "type": "code",
+    "function": {
+      "address": "0x6010a584",
+      "name": "sub_6010A3C4",
+      "size": "0x330"
+    }
+  },
+  {
+    "address": "0x60114d5c",
+    "type": "code",
+    "function": {
+      "address": "0x60114d5c",
+      "name": "sub_60114CF8",
+      "size": "0x104"
+    }
+  },
+  {
+    "address": "0x6011ae6c",
+    "type": "code",
+    "function": {
+      "address": "0x6011ae6c",
+      "name": "sub_6011ACC0",
+      "size": "0x658"
+    }
+  },
+  {
+    "address": "0x6011af04",
+    "type": "code",
+    "function": {
+      "address": "0x6011af04",
+      "name": "sub_6011ACC0",
+      "size": "0x658"
+    }
+  },
+  {
+    "address": "0x6011af7c",
+    "type": "code",
+    "function": {
+      "address": "0x6011af7c",
+      "name": "sub_6011ACC0",
+      "size": "0x658"
+    }
+  },
+  {
+    "address": "0x60127c7c",
+    "type": "code",
+    "function": {
+      "address": "0x60127c7c",
+      "name": "sub_60127AC0",
+      "size": "0x2c0"
+    }
+  },
+  {
+    "address": "0x6012c988",
+    "type": "code",
+    "function": {
+      "address": "0x6012c988",
+      "name": "sub_6012C808",
+      "size": "0x318"
+    }
+  },
+  {
+    "address": "0x6012ca00",
+    "type": "code",
+    "function": {
+      "address": "0x6012ca00",
+      "name": "sub_6012C808",
+      "size": "0x318"
+    }
+  },
+  {
+    "address": "0x6012ca8c",
+    "type": "code",
+    "function": {
+      "address": "0x6012ca8c",
+      "name": "sub_6012C808",
+      "size": "0x318"
+    }
+  },
+  {
+    "address": "0x6012dabc",
+    "type": "code",
+    "function": {
+      "address": "0x6012dabc",
+      "name": "sub_6012D9B8",
+      "size": "0x2c0"
+    }
+  },
+  {
+    "address": "0x6012db20",
+    "type": "code",
+    "function": {
+      "address": "0x6012db20",
+      "name": "sub_6012D9B8",
+      "size": "0x2c0"
+    }
+  },
+  {
+    "address": "0x60130974",
+    "type": "code",
+    "function": {
+      "address": "0x60130974",
+      "name": "sub_6013084C",
+      "size": "0x240"
+    }
+  },
+  {
+    "address": "0x601309d4",
+    "type": "code",
+    "function": {
+      "address": "0x601309d4",
+      "name": "sub_6013084C",
+      "size": "0x240"
+    }
+  },
+  {
+    "address": "0x6013343c",
+    "type": "code",
+    "function": {
+      "address": "0x6013343c",
+      "name": "sub_6013335C",
+      "size": "0x210"
+    }
+  },
+  {
+    "address": "0x60133b2c",
+    "type": "code",
+    "function": {
+      "address": "0x60133b2c",
+      "name": "sub_60133B10",
+      "size": "0x20"
+    }
+  },
+  {
+    "address": "0x60134834",
+    "type": "code",
+    "function": {
+      "address": "0x60134834",
+      "name": "sub_60134818",
+      "size": "0x20"
+    }
+  },
+  {
+    "address": "0x60135ca8",
+    "type": "code",
+    "function": {
+      "address": "0x60135ca8",
+      "name": "FireballBase_onCreate",
+      "size": "0x1cc"
+    }
+  },
+  {
+    "address": "0x601375dc",
+    "type": "code",
+    "function": {
+      "address": "0x601375dc",
+      "name": "sub_601375C0",
+      "size": "0x68"
+    }
+  },
+  {
+    "address": "0x601384a4",
+    "type": "code",
+    "function": {
+      "address": "0x601384a4",
+      "name": "sub_60138440",
+      "size": "0x15c"
+    }
+  },
+  {
+    "address": "0x60138508",
+    "type": "code",
+    "function": {
+      "address": "0x60138508",
+      "name": "sub_60138440",
+      "size": "0x15c"
+    }
+  },
+  {
+    "address": "0x6013a09c",
+    "type": "code",
+    "function": {
+      "address": "0x6013a09c",
+      "name": "sub_6013A07C",
+      "size": "0x80"
+    }
+  },
+  {
+    "address": "0x6013cfe8",
+    "type": "code",
+    "function": {
+      "address": "0x6013cfe8",
+      "name": "sub_6013CF8C",
+      "size": "0x160"
+    }
+  },
+  {
+    "address": "0x6013d008",
+    "type": "code",
+    "function": {
+      "address": "0x6013d008",
+      "name": "sub_6013CF8C",
+      "size": "0x160"
+    }
+  },
+  {
+    "address": "0x6013d554",
+    "type": "code",
+    "function": {
+      "address": "0x6013d554",
+      "name": "sub_6013D524",
+      "size": "0xd4"
+    }
+  },
+  {
+    "address": "0x6013d570",
+    "type": "code",
+    "function": {
+      "address": "0x6013d570",
+      "name": "sub_6013D524",
+      "size": "0xd4"
+    }
+  },
+  {
+    "address": "0x6013d590",
+    "type": "code",
+    "function": {
+      "address": "0x6013d590",
+      "name": "sub_6013D524",
+      "size": "0xd4"
+    }
+  },
+  {
+    "address": "0x6013fbe0",
+    "type": "code",
+    "function": {
+      "address": "0x6013fbe0",
+      "name": "sub_6013FB0C",
+      "size": "0x1ac"
+    }
+  },
+  {
+    "address": "0x601402f4",
+    "type": "code",
+    "function": {
+      "address": "0x601402f4",
+      "name": "sub_601402DC",
+      "size": "0x1c"
+    }
+  },
+  {
+    "address": "0x60142658",
+    "type": "code",
+    "function": {
+      "address": "0x60142658",
+      "name": "sub_601425DC",
+      "size": "0x13c"
+    }
+  },
+  {
+    "address": "0x60143fe8",
+    "type": "code",
+    "function": {
+      "address": "0x60143fe8",
+      "name": "sub_60143FB0",
+      "size": "0x1d4"
+    }
+  },
+  {
+    "address": "0x601452c0",
+    "type": "code",
+    "function": {
+      "address": "0x601452c0",
+      "name": "sub_60145258",
+      "size": "0xb4"
+    }
+  },
+  {
+    "address": "0x6014588c",
+    "type": "code",
+    "function": {
+      "address": "0x6014588c",
+      "name": "sub_60145874",
+      "size": "0x1c"
+    }
+  },
+  {
+    "address": "0x60147704",
+    "type": "code",
+    "function": {
+      "address": "0x60147704",
+      "name": "sub_60147654",
+      "size": "0x174"
+    }
+  },
+  {
+    "address": "0x60147734",
+    "type": "code",
+    "function": {
+      "address": "0x60147734",
+      "name": "sub_60147654",
+      "size": "0x174"
+    }
+  },
+  {
+    "address": "0x60158ecc",
+    "type": "code",
+    "function": {
+      "address": "0x60158ecc",
+      "name": "ActiveCollider_init2",
+      "size": "0x20"
+    }
+  },
+  {
+    "address": "0x60158eec",
+    "type": "code",
+    "function": {
+      "address": "0x60158eec",
+      "name": "ActiveCollider_init3",
+      "size": "0x28"
+    }
+  },
+  {
+    "address": "0x60243390",
+    "type": "code",
+    "function": {
+      "address": "0x60243390",
+      "name": "sub_6024313C",
+      "size": "0x4b4"
+    }
+  },
+  {
+    "address": "0x6024ebec",
+    "type": "code",
+    "function": {
+      "address": "0x6024ebec",
+      "name": "sub_6024EB20",
+      "size": "0x318"
+    }
+  },
+  {
+    "address": "0x6024ec60",
+    "type": "code",
+    "function": {
+      "address": "0x6024ec60",
+      "name": "sub_6024EB20",
+      "size": "0x318"
+    }
+  },
+  {
+    "address": "0x602522c0",
+    "type": "code",
+    "function": {
+      "address": "0x602522c0",
+      "name": "sub_6025224C",
+      "size": "0x28c"
+    }
+  },
+  {
+    "address": "0x60252324",
+    "type": "code",
+    "function": {
+      "address": "0x60252324",
+      "name": "sub_6025224C",
+      "size": "0x28c"
+    }
+  },
+  {
+    "address": "0x60255b94",
+    "type": "code",
+    "function": {
+      "address": "0x60255b94",
+      "name": "sub_60255B24",
+      "size": "0x160"
+    }
+  },
+  {
+    "address": "0x60255c04",
+    "type": "code",
+    "function": {
+      "address": "0x60255c04",
+      "name": "sub_60255B24",
+      "size": "0x160"
+    }
+  },
+  {
+    "address": "0x60259078",
+    "type": "code",
+    "function": {
+      "address": "0x60259078",
+      "name": "_ZN3Amp5vf274Ev",
+      "size": "0x14c"
+    }
+  },
+  {
+    "address": "0x60259134",
+    "type": "code",
+    "function": {
+      "address": "0x60259134",
+      "name": "_ZN3Amp5vf274Ev",
+      "size": "0x14c"
+    }
+  },
+  {
+    "address": "0x6025ae44",
+    "type": "code",
+    "function": {
+      "address": "0x6025ae44",
+      "name": "sub_6025AD84",
+      "size": "0x24c"
+    }
+  },
+  {
+    "address": "0x6025d174",
+    "type": "code",
+    "function": {
+      "address": "0x6025d174",
+      "name": "BobOmb_onCreate",
+      "size": "0x2cc"
+    }
+  },
+  {
+    "address": "0x6025d644",
+    "type": "code",
+    "function": {
+      "address": "0x6025d644",
+      "name": "BobOmb_decideFirstState",
+      "size": "0x1ac"
+    }
+  },
+  {
+    "address": "0x6025d6a0",
+    "type": "code",
+    "function": {
+      "address": "0x6025d6a0",
+      "name": "BobOmb_decideFirstState",
+      "size": "0x1ac"
+    }
+  },
+  {
+    "address": "0x60263594",
+    "type": "code",
+    "function": {
+      "address": "0x60263594",
+      "name": "_ZN8BrosBase8onCreateEv",
+      "size": "0x350"
+    }
+  },
+  {
+    "address": "0x602635b8",
+    "type": "code",
+    "function": {
+      "address": "0x602635b8",
+      "name": "_ZN8BrosBase8onCreateEv",
+      "size": "0x350"
+    }
+  },
+  {
+    "address": "0x60266c3c",
+    "type": "code",
+    "function": {
+      "address": "0x60266c3c",
+      "name": "_ZN8BrosBase17executeState_DownEv",
+      "size": "0x260"
+    }
+  },
+  {
+    "address": "0x60266cb0",
+    "type": "code",
+    "function": {
+      "address": "0x60266cb0",
+      "name": "_ZN8BrosBase13endState_DownEv",
+      "size": "0x30"
+    }
+  },
+  {
+    "address": "0x60268468",
+    "type": "code",
+    "function": {
+      "address": "0x60268468",
+      "name": "sub_6026831C",
+      "size": "0x2c8"
+    }
+  },
+  {
+    "address": "0x602684c8",
+    "type": "code",
+    "function": {
+      "address": "0x602684c8",
+      "name": "sub_6026831C",
+      "size": "0x2c8"
+    }
+  },
+  {
+    "address": "0x6026b010",
+    "type": "code",
+    "function": {
+      "address": "0x6026b010",
+      "name": "sub_6026AF40",
+      "size": "0x390"
+    }
+  },
+  {
+    "address": "0x6026b0a4",
+    "type": "code",
+    "function": {
+      "address": "0x6026b0a4",
+      "name": "sub_6026AF40",
+      "size": "0x390"
+    }
+  },
+  {
+    "address": "0x60273f58",
+    "type": "code",
+    "function": {
+      "address": "0x60273f58",
+      "name": "sub_60273EA8",
+      "size": "0x1e8"
+    }
+  },
+  {
+    "address": "0x60276640",
+    "type": "code",
+    "function": {
+      "address": "0x60276640",
+      "name": "_ZN5Fuzzy8onCreateEv",
+      "size": "0x780"
+    }
+  },
+  {
+    "address": "0x6027665c",
+    "type": "code",
+    "function": {
+      "address": "0x6027665c",
+      "name": "_ZN5Fuzzy8onCreateEv",
+      "size": "0x780"
+    }
+  },
+  {
+    "address": "0x602766fc",
+    "type": "code",
+    "function": {
+      "address": "0x602766fc",
+      "name": "_ZN5Fuzzy8onCreateEv",
+      "size": "0x780"
+    }
+  },
+  {
+    "address": "0x60276720",
+    "type": "code",
+    "function": {
+      "address": "0x60276720",
+      "name": "_ZN5Fuzzy8onCreateEv",
+      "size": "0x780"
+    }
+  },
+  {
+    "address": "0x6027b5ec",
+    "type": "code",
+    "function": {
+      "address": "0x6027b5ec",
+      "name": "sub_6027B530",
+      "size": "0x1d0"
+    }
+  },
+  {
+    "address": "0x6027b60c",
+    "type": "code",
+    "function": {
+      "address": "0x6027b60c",
+      "name": "sub_6027B530",
+      "size": "0x1d0"
+    }
+  },
+  {
+    "address": "0x602859f8",
+    "type": "code",
+    "function": {
+      "address": "0x602859f8",
+      "name": "sub_602859BC",
+      "size": "0x284"
+    }
+  },
+  {
+    "address": "0x60285a18",
+    "type": "code",
+    "function": {
+      "address": "0x60285a18",
+      "name": "sub_602859BC",
+      "size": "0x284"
+    }
+  },
+  {
+    "address": "0x602889e8",
+    "type": "code",
+    "function": {
+      "address": "0x602889e8",
+      "name": "sub_60288960",
+      "size": "0x21c"
+    }
+  },
+  {
+    "address": "0x60299548",
+    "type": "code",
+    "function": {
+      "address": "0x60299548",
+      "name": "sub_6029951C",
+      "size": "0x1cc"
+    }
+  },
+  {
+    "address": "0x602995a8",
+    "type": "code",
+    "function": {
+      "address": "0x602995a8",
+      "name": "sub_6029951C",
+      "size": "0x1cc"
+    }
+  },
+  {
+    "address": "0x60299634",
+    "type": "code",
+    "function": {
+      "address": "0x60299634",
+      "name": "sub_6029951C",
+      "size": "0x1cc"
+    }
+  },
+  {
+    "address": "0x60299694",
+    "type": "code",
+    "function": {
+      "address": "0x60299694",
+      "name": "sub_6029951C",
+      "size": "0x1cc"
+    }
+  },
+  {
+    "address": "0x6029b05c",
+    "type": "code",
+    "function": {
+      "address": "0x6029b05c",
+      "name": "sub_6029B030",
+      "size": "0x1d0"
+    }
+  },
+  {
+    "address": "0x6029b0bc",
+    "type": "code",
+    "function": {
+      "address": "0x6029b0bc",
+      "name": "sub_6029B030",
+      "size": "0x1d0"
+    }
+  },
+  {
+    "address": "0x6029b14c",
+    "type": "code",
+    "function": {
+      "address": "0x6029b14c",
+      "name": "sub_6029B030",
+      "size": "0x1d0"
+    }
+  },
+  {
+    "address": "0x6029b1ac",
+    "type": "code",
+    "function": {
+      "address": "0x6029b1ac",
+      "name": "sub_6029B030",
+      "size": "0x1d0"
+    }
+  },
+  {
+    "address": "0x6029dae8",
+    "type": "code",
+    "function": {
+      "address": "0x6029dae8",
+      "name": "_ZN6Thwomp8onCreateEv",
+      "size": "0x350"
+    }
+  },
+  {
+    "address": "0x6029db08",
+    "type": "code",
+    "function": {
+      "address": "0x6029db08",
+      "name": "_ZN6Thwomp8onCreateEv",
+      "size": "0x350"
+    }
+  },
+  {
+    "address": "0x6029db68",
+    "type": "code",
+    "function": {
+      "address": "0x6029db68",
+      "name": "_ZN6Thwomp8onCreateEv",
+      "size": "0x350"
+    }
+  },
+  {
+    "address": "0x6029db88",
+    "type": "code",
+    "function": {
+      "address": "0x6029db88",
+      "name": "_ZN6Thwomp8onCreateEv",
+      "size": "0x350"
+    }
+  },
+  {
+    "address": "0x6029f368",
+    "type": "code",
+    "function": {
+      "address": "0x6029f368",
+      "name": "sub_6029F248",
+      "size": "0x214"
+    }
+  },
+  {
+    "address": "0x602a1010",
+    "type": "code",
+    "function": {
+      "address": "0x602a1010",
+      "name": "sub_602A0F08",
+      "size": "0x1b4"
+    }
+  },
+  {
+    "address": "0x602ac0e0",
+    "type": "code",
+    "function": {
+      "address": "0x602ac0e0",
+      "name": "_ZN9FireSnake8onCreateEv",
+      "size": "0x498"
+    }
+  },
+  {
+    "address": "0x602ac144",
+    "type": "code",
+    "function": {
+      "address": "0x602ac144",
+      "name": "_ZN9FireSnake8onCreateEv",
+      "size": "0x498"
+    }
+  },
+  {
+    "address": "0x602aef74",
+    "type": "code",
+    "function": {
+      "address": "0x602aef74",
+      "name": "sub_602AEF18",
+      "size": "0xa8"
+    }
+  },
+  {
+    "address": "0x602b0524",
+    "type": "code",
+    "function": {
+      "address": "0x602b0524",
+      "name": "sub_602B04B4",
+      "size": "0x20c"
+    }
+  },
+  {
+    "address": "0x602b0584",
+    "type": "code",
+    "function": {
+      "address": "0x602b0584",
+      "name": "sub_602B04B4",
+      "size": "0x20c"
+    }
+  },
+  {
+    "address": "0x602b3fdc",
+    "type": "code",
+    "function": {
+      "address": "0x602b3fdc",
+      "name": "sub_602B3E84",
+      "size": "0x288"
+    }
+  },
+  {
+    "address": "0x602b4044",
+    "type": "code",
+    "function": {
+      "address": "0x602b4044",
+      "name": "sub_602B3E84",
+      "size": "0x288"
+    }
+  },
+  {
+    "address": "0x602b57bc",
+    "type": "code",
+    "function": {
+      "address": "0x602b57bc",
+      "name": "sub_602B5778",
+      "size": "0xc8"
+    }
+  },
+  {
+    "address": "0x602b76e0",
+    "type": "code",
+    "function": {
+      "address": "0x602b76e0",
+      "name": "sub_602B75E4",
+      "size": "0x3cc"
+    }
+  },
+  {
+    "address": "0x602ba878",
+    "type": "code",
+    "function": {
+      "address": "0x602ba878",
+      "name": "sub_602BA73C",
+      "size": "0x2b0"
+    }
+  },
+  {
+    "address": "0x602ba8dc",
+    "type": "code",
+    "function": {
+      "address": "0x602ba8dc",
+      "name": "sub_602BA73C",
+      "size": "0x2b0"
+    }
+  },
+  {
+    "address": "0x602c15c8",
+    "type": "code",
+    "function": {
+      "address": "0x602c15c8",
+      "name": "sub_602C1470",
+      "size": "0x570"
+    }
+  },
+  {
+    "address": "0x602c15e8",
+    "type": "code",
+    "function": {
+      "address": "0x602c15e8",
+      "name": "sub_602C1470",
+      "size": "0x570"
+    }
+  },
+  {
+    "address": "0x602c3f40",
+    "type": "code",
+    "function": {
+      "address": "0x602c3f40",
+      "name": "sub_602C3E04",
+      "size": "0x270"
+    }
+  },
+  {
+    "address": "0x602c3fa0",
+    "type": "code",
+    "function": {
+      "address": "0x602c3fa0",
+      "name": "sub_602C3E04",
+      "size": "0x270"
+    }
+  },
+  {
+    "address": "0x602c5b14",
+    "type": "code",
+    "function": {
+      "address": "0x602c5b14",
+      "name": "sub_602C5A14",
+      "size": "0x6bc"
+    }
+  },
+  {
+    "address": "0x602c5ba0",
+    "type": "code",
+    "function": {
+      "address": "0x602c5ba0",
+      "name": "sub_602C5A14",
+      "size": "0x6bc"
+    }
+  },
+  {
+    "address": "0x602c8230",
+    "type": "code",
+    "function": {
+      "address": "0x602c8230",
+      "name": "sub_602C80F4",
+      "size": "0x454"
+    }
+  },
+  {
+    "address": "0x602c82c0",
+    "type": "code",
+    "function": {
+      "address": "0x602c82c0",
+      "name": "sub_602C80F4",
+      "size": "0x454"
+    }
+  },
+  {
+    "address": "0x602cb2ac",
+    "type": "code",
+    "function": {
+      "address": "0x602cb2ac",
+      "name": "sub_602CB180",
+      "size": "0x190"
+    }
+  },
+  {
+    "address": "0x602cb2e8",
+    "type": "code",
+    "function": {
+      "address": "0x602cb2e8",
+      "name": "sub_602CB180",
+      "size": "0x190"
+    }
+  },
+  {
+    "address": "0x602cef38",
+    "type": "code",
+    "function": {
+      "address": "0x602cef38",
+      "name": "sub_602CEEB8",
+      "size": "0x180"
+    }
+  },
+  {
+    "address": "0x602cefa8",
+    "type": "code",
+    "function": {
+      "address": "0x602cefa8",
+      "name": "sub_602CEEB8",
+      "size": "0x180"
+    }
+  },
+  {
+    "address": "0x602d5500",
+    "type": "code",
+    "function": {
+      "address": "0x602d5500",
+      "name": "_ZN9SledgeBro8onCreateEv",
+      "size": "0x408"
+    }
+  },
+  {
+    "address": "0x602d5560",
+    "type": "code",
+    "function": {
+      "address": "0x602d5560",
+      "name": "_ZN9SledgeBro8onCreateEv",
+      "size": "0x408"
+    }
+  },
+  {
+    "address": "0x602d55c8",
+    "type": "code",
+    "function": {
+      "address": "0x602d55c8",
+      "name": "_ZN9SledgeBro8onCreateEv",
+      "size": "0x408"
+    }
+  },
+  {
+    "address": "0x602da900",
+    "type": "code",
+    "function": {
+      "address": "0x602da900",
+      "name": "sub_602DA884",
+      "size": "0x32c"
+    }
+  },
+  {
+    "address": "0x602da924",
+    "type": "code",
+    "function": {
+      "address": "0x602da924",
+      "name": "sub_602DA884",
+      "size": "0x32c"
+    }
+  },
+  {
+    "address": "0x602e20c0",
+    "type": "code",
+    "function": {
+      "address": "0x602e20c0",
+      "name": "sub_602E209C",
+      "size": "0x4f0"
+    }
+  },
+  {
+    "address": "0x602e2124",
+    "type": "code",
+    "function": {
+      "address": "0x602e2124",
+      "name": "sub_602E209C",
+      "size": "0x4f0"
+    }
+  },
+  {
+    "address": "0x602e2264",
+    "type": "code",
+    "function": {
+      "address": "0x602e2264",
+      "name": "sub_602E209C",
+      "size": "0x4f0"
+    }
+  },
+  {
+    "address": "0x602e22bc",
+    "type": "code",
+    "function": {
+      "address": "0x602e22bc",
+      "name": "sub_602E209C",
+      "size": "0x4f0"
+    }
+  },
+  {
+    "address": "0x602e2324",
+    "type": "code",
+    "function": {
+      "address": "0x602e2324",
+      "name": "sub_602E209C",
+      "size": "0x4f0"
+    }
+  },
+  {
+    "address": "0x602e23a4",
+    "type": "code",
+    "function": {
+      "address": "0x602e23a4",
+      "name": "sub_602E209C",
+      "size": "0x4f0"
+    }
+  },
+  {
+    "address": "0x602e23fc",
+    "type": "code",
+    "function": {
+      "address": "0x602e23fc",
+      "name": "sub_602E209C",
+      "size": "0x4f0"
+    }
+  },
+  {
+    "address": "0x602e2478",
+    "type": "code",
+    "function": {
+      "address": "0x602e2478",
+      "name": "sub_602E209C",
+      "size": "0x4f0"
+    }
+  },
+  {
+    "address": "0x602e24d4",
+    "type": "code",
+    "function": {
+      "address": "0x602e24d4",
+      "name": "sub_602E209C",
+      "size": "0x4f0"
+    }
+  },
+  {
+    "address": "0x602e252c",
+    "type": "code",
+    "function": {
+      "address": "0x602e252c",
+      "name": "sub_602E209C",
+      "size": "0x4f0"
+    }
+  },
+  {
+    "address": "0x602ecee4",
+    "type": "code",
+    "function": {
+      "address": "0x602ecee4",
+      "name": "sub_602ECD30",
+      "size": "0x3d4"
+    }
+  },
+  {
+    "address": "0x602f5d00",
+    "type": "code",
+    "function": {
+      "address": "0x602f5d00",
+      "name": "sub_602F5C24",
+      "size": "0x284"
+    }
+  },
+  {
+    "address": "0x602f5d6c",
+    "type": "code",
+    "function": {
+      "address": "0x602f5d6c",
+      "name": "sub_602F5C24",
+      "size": "0x284"
+    }
+  },
+  {
+    "address": "0x602f907c",
+    "type": "code",
+    "function": {
+      "address": "0x602f907c",
+      "name": "sub_602F9024",
+      "size": "0x16c"
+    }
+  },
+  {
+    "address": "0x602ff0e8",
+    "type": "code",
+    "function": {
+      "address": "0x602ff0e8",
+      "name": "sub_602FEDDC",
+      "size": "0xbf8"
+    }
+  },
+  {
+    "address": "0x602ff108",
+    "type": "code",
+    "function": {
+      "address": "0x602ff108",
+      "name": "sub_602FEDDC",
+      "size": "0xbf8"
+    }
+  },
+  {
+    "address": "0x602ff120",
+    "type": "code",
+    "function": {
+      "address": "0x602ff120",
+      "name": "sub_602FEDDC",
+      "size": "0xbf8"
+    }
+  },
+  {
+    "address": "0x602ff134",
+    "type": "code",
+    "function": {
+      "address": "0x602ff134",
+      "name": "sub_602FEDDC",
+      "size": "0xbf8"
+    }
+  },
+  {
+    "address": "0x602ff14c",
+    "type": "code",
+    "function": {
+      "address": "0x602ff14c",
+      "name": "sub_602FEDDC",
+      "size": "0xbf8"
+    }
+  },
+  {
+    "address": "0x602ff174",
+    "type": "code",
+    "function": {
+      "address": "0x602ff174",
+      "name": "sub_602FEDDC",
+      "size": "0xbf8"
+    }
+  },
+  {
+    "address": "0x602ff190",
+    "type": "code",
+    "function": {
+      "address": "0x602ff190",
+      "name": "sub_602FEDDC",
+      "size": "0xbf8"
+    }
+  },
+  {
+    "address": "0x602ff1ac",
+    "type": "code",
+    "function": {
+      "address": "0x602ff1ac",
+      "name": "sub_602FEDDC",
+      "size": "0xbf8"
+    }
+  },
+  {
+    "address": "0x6030a1c8",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x6030f274",
+    "type": "code",
+    "function": {
+      "address": "0x6030f274",
+      "name": "_ZN6Kanibo8onCreateEv",
+      "size": "0x180"
+    }
+  },
+  {
+    "address": "0x60310c9c",
+    "type": "code",
+    "function": {
+      "address": "0x60310c9c",
+      "name": "_ZN10KaniboTama8onCreateEv",
+      "size": "0x180"
+    }
+  },
+  {
+    "address": "0x60313b38",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x60313b5c",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x60313b78",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x60313b94",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x60313d6c",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x60313d88",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x60313da4",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x603194ac",
+    "type": "code",
+    "function": {
+      "address": "0x603194ac",
+      "name": "sub_60319334",
+      "size": "0x2b8"
+    }
+  },
+  {
+    "address": "0x6031b574",
+    "type": "code",
+    "function": {
+      "address": "0x6031b574",
+      "name": "sub_6031B4DC",
+      "size": "0x2a0"
+    }
+  },
+  {
+    "address": "0x6031b5d8",
+    "type": "code",
+    "function": {
+      "address": "0x6031b5d8",
+      "name": "sub_6031B4DC",
+      "size": "0x2a0"
+    }
+  },
+  {
+    "address": "0x60321398",
+    "type": "code",
+    "function": {
+      "address": "0x60321398",
+      "name": "BanzaiBill_initColliders",
+      "size": "0x35c"
+    }
+  },
+  {
+    "address": "0x603213b4",
+    "type": "code",
+    "function": {
+      "address": "0x603213b4",
+      "name": "BanzaiBill_initColliders",
+      "size": "0x35c"
+    }
+  },
+  {
+    "address": "0x603213d0",
+    "type": "code",
+    "function": {
+      "address": "0x603213d0",
+      "name": "BanzaiBill_initColliders",
+      "size": "0x35c"
+    }
+  },
+  {
+    "address": "0x603213f0",
+    "type": "code",
+    "function": {
+      "address": "0x603213f0",
+      "name": "BanzaiBill_initColliders",
+      "size": "0x35c"
+    }
+  },
+  {
+    "address": "0x6032140c",
+    "type": "code",
+    "function": {
+      "address": "0x6032140c",
+      "name": "BanzaiBill_initColliders",
+      "size": "0x35c"
+    }
+  },
+  {
+    "address": "0x60327cd0",
+    "type": "code",
+    "function": {
+      "address": "0x60327cd0",
+      "name": "sub_60327C20",
+      "size": "0x460"
+    }
+  },
+  {
+    "address": "0x60327d6c",
+    "type": "code",
+    "function": {
+      "address": "0x60327d6c",
+      "name": "sub_60327C20",
+      "size": "0x460"
+    }
+  },
+  {
+    "address": "0x603299d8",
+    "type": "code",
+    "function": {
+      "address": "0x603299d8",
+      "name": "sub_603299B4",
+      "size": "0x118"
+    }
+  },
+  {
+    "address": "0x60329a60",
+    "type": "code",
+    "function": {
+      "address": "0x60329a60",
+      "name": "sub_603299B4",
+      "size": "0x118"
+    }
+  },
+  {
+    "address": "0x6032a3dc",
+    "type": "code",
+    "function": {
+      "address": "0x6032a3dc",
+      "name": "sub_6032A3B8",
+      "size": "0x11c"
+    }
+  },
+  {
+    "address": "0x6032a464",
+    "type": "code",
+    "function": {
+      "address": "0x6032a464",
+      "name": "sub_6032A3B8",
+      "size": "0x11c"
+    }
+  },
+  {
+    "address": "0x6032b6e4",
+    "type": "code",
+    "function": {
+      "address": "0x6032b6e4",
+      "name": "sub_6032B68C",
+      "size": "0x5c"
+    }
+  },
+  {
+    "address": "0x6032bc7c",
+    "type": "code",
+    "function": {
+      "address": "0x6032bc7c",
+      "name": "sub_6032BB6C",
+      "size": "0x35c"
+    }
+  },
+  {
+    "address": "0x6032bcdc",
+    "type": "code",
+    "function": {
+      "address": "0x6032bcdc",
+      "name": "sub_6032BB6C",
+      "size": "0x35c"
+    }
+  },
+  {
+    "address": "0x6032f840",
+    "type": "code",
+    "function": {
+      "address": "0x6032f840",
+      "name": "sub_6032F73C",
+      "size": "0x2bc"
+    }
+  },
+  {
+    "address": "0x6032f8a8",
+    "type": "code",
+    "function": {
+      "address": "0x6032f8a8",
+      "name": "sub_6032F73C",
+      "size": "0x2bc"
+    }
+  },
+  {
+    "address": "0x6033309c",
+    "type": "code",
+    "function": {
+      "address": "0x6033309c",
+      "name": "sub_6033301C",
+      "size": "0x264"
+    }
+  },
+  {
+    "address": "0x603330bc",
+    "type": "code",
+    "function": {
+      "address": "0x603330bc",
+      "name": "sub_6033301C",
+      "size": "0x264"
+    }
+  },
+  {
+    "address": "0x603352fc",
+    "type": "code",
+    "function": {
+      "address": "0x603352fc",
+      "name": "SumoBroLightning_onCreate",
+      "size": "0x1e4"
+    }
+  },
+  {
+    "address": "0x60336cf0",
+    "type": "code",
+    "function": {
+      "address": "0x60336cf0",
+      "name": "sub_60336CCC",
+      "size": "0x124"
+    }
+  },
+  {
+    "address": "0x60336d8c",
+    "type": "code",
+    "function": {
+      "address": "0x60336d8c",
+      "name": "sub_60336CCC",
+      "size": "0x124"
+    }
+  },
+  {
+    "address": "0x6033bea0",
+    "type": "code",
+    "function": {
+      "address": "0x6033bea0",
+      "name": "_ZN10GoombaBase8onCreateEv",
+      "size": "0x138"
+    }
+  },
+  {
+    "address": "0x6033bf04",
+    "type": "code",
+    "function": {
+      "address": "0x6033bf04",
+      "name": "_ZN10GoombaBase8onCreateEv",
+      "size": "0x138"
+    }
+  },
+  {
+    "address": "0x6033fdcc",
+    "type": "code",
+    "function": {
+      "address": "0x6033fdcc",
+      "name": "sub_6033FD70",
+      "size": "0x244"
+    }
+  },
+  {
+    "address": "0x6033fe30",
+    "type": "code",
+    "function": {
+      "address": "0x6033fe30",
+      "name": "sub_6033FD70",
+      "size": "0x244"
+    }
+  },
+  {
+    "address": "0x603481c0",
+    "type": "code",
+    "function": {
+      "address": "0x603481c0",
+      "name": "sub_60348134",
+      "size": "0x288"
+    }
+  },
+  {
+    "address": "0x6034a5a4",
+    "type": "code",
+    "function": {
+      "address": "0x6034a5a4",
+      "name": "sub_6034A51C",
+      "size": "0x4cc"
+    }
+  },
+  {
+    "address": "0x6034a614",
+    "type": "code",
+    "function": {
+      "address": "0x6034a614",
+      "name": "sub_6034A51C",
+      "size": "0x4cc"
+    }
+  },
+  {
+    "address": "0x6034adac",
+    "type": "code",
+    "function": {
+      "address": "0x6034adac",
+      "name": "sub_6034AD68",
+      "size": "0x180"
+    }
+  },
+  {
+    "address": "0x6034b340",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x6034b3a4",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x60351dc4",
+    "type": "code",
+    "function": {
+      "address": "0x60351dc4",
+      "name": "sub_60351BF4",
+      "size": "0x32c"
+    }
+  },
+  {
+    "address": "0x60355e54",
+    "type": "code",
+    "function": {
+      "address": "0x60355e54",
+      "name": "sub_60355DD0",
+      "size": "0x708"
+    }
+  },
+  {
+    "address": "0x60355e70",
+    "type": "code",
+    "function": {
+      "address": "0x60355e70",
+      "name": "sub_60355DD0",
+      "size": "0x708"
+    }
+  },
+  {
+    "address": "0x6035f2ac",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x6035f2fc",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x60360fd0",
+    "type": "code",
+    "function": {
+      "address": "0x60360fd0",
+      "name": "sub_60360FA8",
+      "size": "0x100"
+    }
+  },
+  {
+    "address": "0x60361258",
+    "type": "code",
+    "function": {
+      "address": "0x60361258",
+      "name": "sub_603610B8",
+      "size": "0x204"
+    }
+  },
+  {
+    "address": "0x60361374",
+    "type": "code",
+    "function": {
+      "address": "0x60361374",
+      "name": "sub_60361350",
+      "size": "0xd0"
+    }
+  },
+  {
+    "address": "0x603614c4",
+    "type": "code",
+    "function": {
+      "address": "0x603614c4",
+      "name": "sub_6036147C",
+      "size": "0x124"
+    }
+  },
+  {
+    "address": "0x6036174c",
+    "type": "code",
+    "function": {
+      "address": "0x6036174c",
+      "name": "sub_60361714",
+      "size": "0x148"
+    }
+  },
+  {
+    "address": "0x60361d90",
+    "type": "code",
+    "function": {
+      "address": "0x60361d90",
+      "name": "sub_60361AFC",
+      "size": "0x3bc"
+    }
+  },
+  {
+    "address": "0x603679d4",
+    "type": "code",
+    "function": {
+      "address": "0x603679d4",
+      "name": "sub_60367864",
+      "size": "0x17c"
+    }
+  },
+  {
+    "address": "0x60367aac",
+    "type": "code",
+    "function": {
+      "address": "0x60367aac",
+      "name": "sub_60367A78",
+      "size": "0x48"
+    }
+  },
+  {
+    "address": "0x60368d74",
+    "type": "code",
+    "function": {
+      "address": "0x60368d74",
+      "name": "sub_60368C5C",
+      "size": "0x2f8"
+    }
+  },
+  {
+    "address": "0x6036c4b0",
+    "type": "code",
+    "function": {
+      "address": "0x6036c4b0",
+      "name": "sub_6036C0F0",
+      "size": "0x4a0"
+    }
+  },
+  {
+    "address": "0x6036ede8",
+    "type": "code",
+    "function": {
+      "address": "0x6036ede8",
+      "name": "sub_6036ECF8",
+      "size": "0x23c"
+    }
+  },
+  {
+    "address": "0x6036ee2c",
+    "type": "code",
+    "function": {
+      "address": "0x6036ee2c",
+      "name": "sub_6036ECF8",
+      "size": "0x23c"
+    }
+  },
+  {
+    "address": "0x6036ee44",
+    "type": "code",
+    "function": {
+      "address": "0x6036ee44",
+      "name": "sub_6036ECF8",
+      "size": "0x23c"
+    }
+  },
+  {
+    "address": "0x6037137c",
+    "type": "code",
+    "function": {
+      "address": "0x6037137c",
+      "name": "sub_6037131C",
+      "size": "0x248"
+    }
+  },
+  {
+    "address": "0x60375d04",
+    "type": "code",
+    "function": {
+      "address": "0x60375d04",
+      "name": "sub_60375CB8",
+      "size": "0x160"
+    }
+  },
+  {
+    "address": "0x60380750",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x603878ac",
+    "type": "code",
+    "function": {
+      "address": "0x603878ac",
+      "name": "sub_6038788C",
+      "size": "0xac"
+    }
+  },
+  {
+    "address": "0x6038ae54",
+    "type": "code",
+    "function": {
+      "address": "0x6038ae54",
+      "name": "sub_6038AC64",
+      "size": "0x43c"
+    }
+  },
+  {
+    "address": "0x6038ae70",
+    "type": "code",
+    "function": {
+      "address": "0x6038ae70",
+      "name": "sub_6038AC64",
+      "size": "0x43c"
+    }
+  },
+  {
+    "address": "0x6038ae98",
+    "type": "code",
+    "function": {
+      "address": "0x6038ae98",
+      "name": "sub_6038AC64",
+      "size": "0x43c"
+    }
+  },
+  {
+    "address": "0x6038aecc",
+    "type": "code",
+    "function": {
+      "address": "0x6038aecc",
+      "name": "sub_6038AC64",
+      "size": "0x43c"
+    }
+  },
+  {
+    "address": "0x6038af40",
+    "type": "code",
+    "function": {
+      "address": "0x6038af40",
+      "name": "sub_6038AC64",
+      "size": "0x43c"
+    }
+  },
+  {
+    "address": "0x6038f480",
+    "type": "code",
+    "function": {
+      "address": "0x6038f480",
+      "name": "sub_6038F2EC",
+      "size": "0x360"
+    }
+  },
+  {
+    "address": "0x6038f4a0",
+    "type": "code",
+    "function": {
+      "address": "0x6038f4a0",
+      "name": "sub_6038F2EC",
+      "size": "0x360"
+    }
+  },
+  {
+    "address": "0x6038f544",
+    "type": "code",
+    "function": {
+      "address": "0x6038f544",
+      "name": "sub_6038F2EC",
+      "size": "0x360"
+    }
+  },
+  {
+    "address": "0x60399068",
+    "type": "code",
+    "function": {
+      "address": "0x60399068",
+      "name": "sub_60398E9C",
+      "size": "0x4c8"
+    }
+  },
+  {
+    "address": "0x603990ec",
+    "type": "code",
+    "function": {
+      "address": "0x603990ec",
+      "name": "sub_60398E9C",
+      "size": "0x4c8"
+    }
+  },
+  {
+    "address": "0x603991b0",
+    "type": "code",
+    "function": {
+      "address": "0x603991b0",
+      "name": "sub_60398E9C",
+      "size": "0x4c8"
+    }
+  },
+  {
+    "address": "0x603acc04",
+    "type": "code",
+    "function": {
+      "address": "0x603acc04",
+      "name": "BigBoo_onCreate",
+      "size": "0x528"
+    }
+  },
+  {
+    "address": "0x603accbc",
+    "type": "code",
+    "function": {
+      "address": "0x603accbc",
+      "name": "BigBoo_onCreate",
+      "size": "0x528"
+    }
+  },
+  {
+    "address": "0x603b0b4c",
+    "type": "code",
+    "function": {
+      "address": "0x603b0b4c",
+      "name": "sub_603B0A88",
+      "size": "0x228"
+    }
+  },
+  {
+    "address": "0x603b4e2c",
+    "type": "code",
+    "function": {
+      "address": "0x603b4e2c",
+      "name": "sub_603B4CB8",
+      "size": "0x3ac"
+    }
+  },
+  {
+    "address": "0x603b6e80",
+    "type": "code",
+    "function": {
+      "address": "0x603b6e80",
+      "name": "sub_603B6D04",
+      "size": "0x350"
+    }
+  },
+  {
+    "address": "0x603b6ee4",
+    "type": "code",
+    "function": {
+      "address": "0x603b6ee4",
+      "name": "sub_603B6D04",
+      "size": "0x350"
+    }
+  },
+  {
+    "address": "0x603bd230",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x603bfd70",
+    "type": "code",
+    "function": {
+      "address": "0x603bfd70",
+      "name": "sub_603BFC58",
+      "size": "0x1cc"
+    }
+  },
+  {
+    "address": "0x603c3154",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x603c31fc",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x603c32a0",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x603c3308",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x603c3378",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x603c33dc",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x603c9b18",
+    "type": "code",
+    "function": {
+      "address": "0x603c9b18",
+      "name": "sub_603C99A4",
+      "size": "0x890"
+    }
+  },
+  {
+    "address": "0x603d4274",
+    "type": "code",
+    "function": {
+      "address": "0x603d4274",
+      "name": "sub_603D4164",
+      "size": "0x38c"
+    }
+  },
+  {
+    "address": "0x603de4b0",
+    "type": "code",
+    "function": {
+      "address": "0x603de4b0",
+      "name": "_ZN12RiverPiranha8onCreateEv",
+      "size": "0x434"
+    }
+  },
+  {
+    "address": "0x603de514",
+    "type": "code",
+    "function": {
+      "address": "0x603de514",
+      "name": "_ZN12RiverPiranha8onCreateEv",
+      "size": "0x434"
+    }
+  },
+  {
+    "address": "0x603e135c",
+    "type": "code",
+    "function": {
+      "address": "0x603e135c",
+      "name": "sub_603E133C",
+      "size": "0x25c"
+    }
+  },
+  {
+    "address": "0x603e13bc",
+    "type": "code",
+    "function": {
+      "address": "0x603e13bc",
+      "name": "sub_603E133C",
+      "size": "0x25c"
+    }
+  },
+  {
+    "address": "0x603e1418",
+    "type": "code",
+    "function": {
+      "address": "0x603e1418",
+      "name": "sub_603E133C",
+      "size": "0x25c"
+    }
+  },
+  {
+    "address": "0x603e147c",
+    "type": "code",
+    "function": {
+      "address": "0x603e147c",
+      "name": "sub_603E133C",
+      "size": "0x25c"
+    }
+  },
+  {
+    "address": "0x603e1498",
+    "type": "code",
+    "function": {
+      "address": "0x603e1498",
+      "name": "sub_603E133C",
+      "size": "0x25c"
+    }
+  },
+  {
+    "address": "0x603e14b0",
+    "type": "code",
+    "function": {
+      "address": "0x603e14b0",
+      "name": "sub_603E133C",
+      "size": "0x25c"
+    }
+  },
+  {
+    "address": "0x6059c1fc",
+    "type": "code",
+    "function": {
+      "address": "0x6059c1fc",
+      "name": "sub_6059C0D8",
+      "size": "0x474"
+    }
+  },
+  {
+    "address": "0x6059e140",
+    "type": "code",
+    "function": {
+      "address": "0x6059e140",
+      "name": "sub_6059DEC4",
+      "size": "0x334"
+    }
+  },
+  {
+    "address": "0x605ae030",
+    "type": "code",
+    "function": {
+      "address": "0x605ae030",
+      "name": "sub_605ADFF0",
+      "size": "0x18c"
+    }
+  },
+  {
+    "address": "0x605ae04c",
+    "type": "code",
+    "function": {
+      "address": "0x605ae04c",
+      "name": "sub_605ADFF0",
+      "size": "0x18c"
+    }
+  },
+  {
+    "address": "0x605b2164",
+    "type": "code",
+    "function": {
+      "address": "0x605b2164",
+      "name": "sub_605B2094",
+      "size": "0x2a0"
+    }
+  },
+  {
+    "address": "0x605b7fd4",
+    "type": "code",
+    "function": {
+      "address": "0x605b7fd4",
+      "name": "sub_605B7E84",
+      "size": "0x2d4"
+    }
+  },
+  {
+    "address": "0x605ca860",
+    "type": "code",
+    "function": {
+      "address": "0x605ca860",
+      "name": "sub_605CA760",
+      "size": "0x21c"
+    }
+  },
+  {
+    "address": "0x605ca8c0",
+    "type": "code",
+    "function": {
+      "address": "0x605ca8c0",
+      "name": "sub_605CA760",
+      "size": "0x21c"
+    }
+  },
+  {
+    "address": "0x605cb4a0",
+    "type": "code",
+    "function": {
+      "address": "0x605cb4a0",
+      "name": "sub_605CB470",
+      "size": "0x7c"
+    }
+  },
+  {
+    "address": "0x605cb868",
+    "type": "code",
+    "function": {
+      "address": "0x605cb868",
+      "name": "sub_605CB790",
+      "size": "0x120"
+    }
+  },
+  {
+    "address": "0x605d1528",
+    "type": "code",
+    "function": {
+      "address": "0x605d1528",
+      "name": "sub_605D1344",
+      "size": "0x720"
+    }
+  },
+  {
+    "address": "0x605d3ae8",
+    "type": "code",
+    "function": {
+      "address": "0x605d3ae8",
+      "name": "sub_605D39CC",
+      "size": "0x1bc"
+    }
+  },
+  {
+    "address": "0x605dd3b4",
+    "type": "code",
+    "function": {
+      "address": "0x605dd3b4",
+      "name": "sub_605DD398",
+      "size": "0x5c"
+    }
+  },
+  {
+    "address": "0x605dd3d0",
+    "type": "code",
+    "function": {
+      "address": "0x605dd3d0",
+      "name": "sub_605DD398",
+      "size": "0x5c"
+    }
+  },
+  {
+    "address": "0x605dd3f0",
+    "type": "code",
+    "function": {
+      "address": "0x605dd3f0",
+      "name": "sub_605DD398",
+      "size": "0x5c"
+    }
+  },
+  {
+    "address": "0x605f911c",
+    "type": "code",
+    "function": {
+      "address": "0x605f911c",
+      "name": "sub_605F9100",
+      "size": "0x80"
+    }
+  },
+  {
+    "address": "0x605f9dfc",
+    "type": "code",
+    "function": {
+      "address": "0x605f9dfc",
+      "name": "sub_605F9DE0",
+      "size": "0x80"
+    }
+  },
+  {
+    "address": "0x605fa684",
+    "type": "code",
+    "function": {
+      "address": "0x605fa684",
+      "name": "sub_605FA668",
+      "size": "0x80"
+    }
+  },
+  {
+    "address": "0x605fab88",
+    "type": "code",
+    "function": {
+      "address": "0x605fab88",
+      "name": "sub_605FAB6C",
+      "size": "0x68"
+    }
+  },
+  {
+    "address": "0x605fb2b8",
+    "type": "code",
+    "function": {
+      "address": "0x605fb2b8",
+      "name": "sub_605FB29C",
+      "size": "0x80"
+    }
+  },
+  {
+    "address": "0x60602cc4",
+    "type": "code",
+    "function": {
+      "address": "0x60602cc4",
+      "name": "sub_60602AA8",
+      "size": "0x338"
+    }
+  },
+  {
+    "address": "0x60607bc0",
+    "type": "code",
+    "function": {
+      "address": "0x60607bc0",
+      "name": "sub_60607978",
+      "size": "0x3a4"
+    }
+  },
+  {
+    "address": "0x60607c40",
+    "type": "code",
+    "function": {
+      "address": "0x60607c40",
+      "name": "sub_60607978",
+      "size": "0x3a4"
+    }
+  },
+  {
+    "address": "0x60612580",
+    "type": "code",
+    "function": {
+      "address": "0x60612580",
+      "name": "sub_606123A8",
+      "size": "0x3bc"
+    }
+  },
+  {
+    "address": "0x60612604",
+    "type": "code",
+    "function": {
+      "address": "0x60612604",
+      "name": "sub_606123A8",
+      "size": "0x3bc"
+    }
+  },
+  {
+    "address": "0x60612668",
+    "type": "code",
+    "function": {
+      "address": "0x60612668",
+      "name": "sub_606123A8",
+      "size": "0x3bc"
+    }
+  },
+  {
+    "address": "0x6061ff98",
+    "type": "code",
+    "function": {
+      "address": "0x6061ff98",
+      "name": "sub_6061FF4C",
+      "size": "0x168"
+    }
+  },
+  {
+    "address": "0x6061ffdc",
+    "type": "code",
+    "function": {
+      "address": "0x6061ffdc",
+      "name": "sub_6061FF4C",
+      "size": "0x168"
+    }
+  },
+  {
+    "address": "0x60620028",
+    "type": "code",
+    "function": {
+      "address": "0x60620028",
+      "name": "sub_6061FF4C",
+      "size": "0x168"
+    }
+  },
+  {
+    "address": "0x6062006c",
+    "type": "code",
+    "function": {
+      "address": "0x6062006c",
+      "name": "sub_6061FF4C",
+      "size": "0x168"
+    }
+  },
+  {
+    "address": "0x606228cc",
+    "type": "code",
+    "function": {
+      "address": "0x606228cc",
+      "name": "sub_6062289C",
+      "size": "0x204"
+    }
+  },
+  {
+    "address": "0x6062290c",
+    "type": "code",
+    "function": {
+      "address": "0x6062290c",
+      "name": "sub_6062289C",
+      "size": "0x204"
+    }
+  },
+  {
+    "address": "0x60623e10",
+    "type": "code",
+    "function": {
+      "address": "0x60623e10",
+      "name": "_ZN11FixedIcicle8onCreateEv",
+      "size": "0x1cc"
+    }
+  },
+  {
+    "address": "0x60623e44",
+    "type": "code",
+    "function": {
+      "address": "0x60623e44",
+      "name": "_ZN11FixedIcicle8onCreateEv",
+      "size": "0x1cc"
+    }
+  },
+  {
+    "address": "0x60623e68",
+    "type": "code",
+    "function": {
+      "address": "0x60623e68",
+      "name": "_ZN11FixedIcicle8onCreateEv",
+      "size": "0x1cc"
+    }
+  },
+  {
+    "address": "0x60626494",
+    "type": "code",
+    "function": {
+      "address": "0x60626494",
+      "name": "sub_606262F4",
+      "size": "0x2f8"
+    }
+  },
+  {
+    "address": "0x606264f4",
+    "type": "code",
+    "function": {
+      "address": "0x606264f4",
+      "name": "sub_606262F4",
+      "size": "0x2f8"
+    }
+  },
+  {
+    "address": "0x60629390",
+    "type": "code",
+    "function": {
+      "address": "0x60629390",
+      "name": "sub_606292CC",
+      "size": "0x158"
+    }
+  },
+  {
+    "address": "0x6062d95c",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x60634070",
+    "type": "code",
+    "function": {
+      "address": "0x60634070",
+      "name": "sub_60633F68",
+      "size": "0x16c"
+    }
+  },
+  {
+    "address": "0x60677454",
+    "type": "code",
+    "function": {
+      "address": "0x60677454",
+      "name": "sub_60677418",
+      "size": "0x138"
+    }
+  },
+  {
+    "address": "0x606786bc",
+    "type": "code",
+    "function": {
+      "address": "0x606786bc",
+      "name": "sub_60678570",
+      "size": "0x15c"
+    }
+  },
+  {
+    "address": "0x60678f2c",
+    "type": "code",
+    "function": {
+      "address": "0x60678f2c",
+      "name": "sub_60678ED4",
+      "size": "0x6c"
+    }
+  },
+  {
+    "address": "0x60682fc8",
+    "type": "code",
+    "function": {
+      "address": "0x60682fc8",
+      "name": "sub_60682E98",
+      "size": "0x13c"
+    }
+  },
+  {
+    "address": "0x60689be0",
+    "type": "code",
+    "function": {
+      "address": "0x60689be0",
+      "name": "sub_60689A70",
+      "size": "0x2ec"
+    }
+  },
+  {
+    "address": "0x6069830c",
+    "type": "code",
+    "function": {
+      "address": "0x6069830c",
+      "name": "sub_60698264",
+      "size": "0x158"
+    }
+  },
+  {
+    "address": "0x6069a3f0",
+    "type": "code",
+    "function": {
+      "address": "0x6069a3f0",
+      "name": "sub_6069A238",
+      "size": "0x358"
+    }
+  },
+  {
+    "address": "0x6069ec74",
+    "type": "code",
+    "function": {
+      "address": "0x6069ec74",
+      "name": "sub_6069EB94",
+      "size": "0x278"
+    }
+  },
+  {
+    "address": "0x6069f83c",
+    "type": "code",
+    "function": {
+      "address": "0x6069f83c",
+      "name": "sub_6069F758",
+      "size": "0x2a0"
+    }
+  },
+  {
+    "address": "0x606a051c",
+    "type": "code",
+    "function": {
+      "address": "0x606a051c",
+      "name": "sub_606A0438",
+      "size": "0x2a0"
+    }
+  },
+  {
+    "address": "0x606a11ec",
+    "type": "code",
+    "function": {
+      "address": "0x606a11ec",
+      "name": "sub_606A110C",
+      "size": "0x248"
+    }
+  },
+  {
+    "address": "0x606aebe0",
+    "type": "code",
+    "function": {
+      "address": "0x606aebe0",
+      "name": "sub_606AE938",
+      "size": "0x330"
+    }
+  },
+  {
+    "address": "0x606bcbe4",
+    "type": "code",
+    "function": {
+      "address": "0x606bcbe4",
+      "name": "PowBlock_onCreate",
+      "size": "0x234"
+    }
+  },
+  {
+    "address": "0x606be964",
+    "type": "code",
+    "function": {
+      "address": "0x606be964",
+      "name": "sub_606BE84C",
+      "size": "0x220"
+    }
+  },
+  {
+    "address": "0x606d6068",
+    "type": "code",
+    "function": {
+      "address": "0x606d6068",
+      "name": "sub_606D5E18",
+      "size": "0x41c"
+    }
+  },
+  {
+    "address": "0x606dad64",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x606e0094",
+    "type": "code",
+    "function": {
+      "address": "0x606e0094",
+      "name": "sub_606E0078",
+      "size": "0xe8"
+    }
+  },
+  {
+    "address": "0x606e2090",
+    "type": "code",
+    "function": {
+      "address": "0x606e2090",
+      "name": "sub_606E2074",
+      "size": "0x12c"
+    }
+  },
+  {
+    "address": "0x606ec180",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x606ee20c",
+    "type": "code",
+    "function": {
+      "address": "0x606ee20c",
+      "name": "sub_606EE0F0",
+      "size": "0x264"
+    }
+  },
+  {
+    "address": "0x606f47fc",
+    "type": "code",
+    "function": {
+      "address": "0x606f47fc",
+      "name": "sub_606F4650",
+      "size": "0x3fc"
+    }
+  },
+  {
+    "address": "0x606f4818",
+    "type": "code",
+    "function": {
+      "address": "0x606f4818",
+      "name": "sub_606F4650",
+      "size": "0x3fc"
+    }
+  },
+  {
+    "address": "0x606fe224",
+    "type": "code",
+    "function": {
+      "address": "0x606fe224",
+      "name": "sub_606FE194",
+      "size": "0x21c"
+    }
+  },
+  {
+    "address": "0x607045cc",
+    "type": "code",
+    "function": {
+      "address": "0x607045cc",
+      "name": "sub_607045A4",
+      "size": "0x1a4"
+    }
+  },
+  {
+    "address": "0x607094dc",
+    "type": "code",
+    "function": null
+  },
+  {
+    "address": "0x6070c79c",
+    "type": "code",
+    "function": {
+      "address": "0x6070c79c",
+      "name": "sub_6070C77C",
+      "size": "0x12c"
+    }
+  },
+  {
+    "address": "0x6070c7fc",
+    "type": "code",
+    "function": {
+      "address": "0x6070c7fc",
+      "name": "sub_6070C77C",
+      "size": "0x12c"
+    }
+  },
+  {
+    "address": "0x6070c85c",
+    "type": "code",
+    "function": {
+      "address": "0x6070c85c",
+      "name": "sub_6070C77C",
+      "size": "0x12c"
+    }
+  },
+  {
+    "address": "0x6072d554",
+    "type": "code",
+    "function": {
+      "address": "0x6072d554",
+      "name": "sub_6072D4EC",
+      "size": "0x110"
+    }
+  },
+  {
+    "address": "0x6072fbb0",
+    "type": "code",
+    "function": {
+      "address": "0x6072fbb0",
+      "name": "sub_6072FB00",
+      "size": "0x15c"
+    }
+  },
+  {
+    "address": "0x6073d2d4",
+    "type": "code",
+    "function": {
+      "address": "0x6073d2d4",
+      "name": "sub_6073D120",
+      "size": "0x1dc"
+    }
+  },
+  {
+    "address": "0x6073ff98",
+    "type": "code",
+    "function": {
+      "address": "0x6073ff98",
+      "name": "sub_6073FF2C",
+      "size": "0x1a0"
+    }
+  },
+  {
+    "address": "0x60745148",
+    "type": "code",
+    "function": {
+      "address": "0x60745148",
+      "name": "sub_60745114",
+      "size": "0x58"
+    }
+  },
+  {
+    "address": "0x60764700",
+    "type": "code",
+    "function": {
+      "address": "0x60764700",
+      "name": "sub_607646DC",
+      "size": "0xe4"
+    }
+  },
+  {
+    "address": "0x60764718",
+    "type": "code",
+    "function": {
+      "address": "0x60764718",
+      "name": "sub_607646DC",
+      "size": "0xe4"
+    }
+  },
+  {
+    "address": "0x60764730",
+    "type": "code",
+    "function": {
+      "address": "0x60764730",
+      "name": "sub_607646DC",
+      "size": "0xe4"
+    }
+  },
+  {
+    "address": "0x60764748",
+    "type": "code",
+    "function": {
+      "address": "0x60764748",
+      "name": "sub_607646DC",
+      "size": "0xe4"
+    }
+  },
+  {
+    "address": "0x6076475c",
+    "type": "code",
+    "function": {
+      "address": "0x6076475c",
+      "name": "sub_607646DC",
+      "size": "0xe4"
+    }
+  },
+  {
+    "address": "0x60764774",
+    "type": "code",
+    "function": {
+      "address": "0x60764774",
+      "name": "sub_607646DC",
+      "size": "0xe4"
+    }
+  },
+  {
+    "address": "0x6076478c",
+    "type": "code",
+    "function": {
+      "address": "0x6076478c",
+      "name": "sub_607646DC",
+      "size": "0xe4"
+    }
+  },
+  {
+    "address": "0x607647a0",
+    "type": "code",
+    "function": {
+      "address": "0x607647a0",
+      "name": "sub_607646DC",
+      "size": "0xe4"
+    }
+  },
+  {
+    "address": "0x607647bc",
+    "type": "code",
+    "function": {
+      "address": "0x607647bc",
+      "name": "sub_607646DC",
+      "size": "0xe4"
+    }
+  },
+  {
+    "address": "0x607d2700",
+    "type": "code",
+    "function": {
+      "address": "0x607d2700",
+      "name": "sub_607D26C8",
+      "size": "0xe8"
+    }
+  },
+  {
+    "address": "0x6082d604",
+    "type": "code",
+    "function": {
+      "address": "0x6082d604",
+      "name": "sub_6082D5D8",
+      "size": "0xac"
+    }
+  },
+  {
+    "address": "0x6082f970",
+    "type": "code",
+    "function": {
+      "address": "0x6082f970",
+      "name": "sub_6082F900",
+      "size": "0xf8"
+    }
+  }
+]

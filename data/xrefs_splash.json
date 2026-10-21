@@ -1,0 +1,117 @@
+[
+  {
+    "address": "0x6013b450",
+    "type": "data",
+    "function": {
+      "address": "0x6013b450",
+      "name": "sub_6013B428",
+      "size": "0x44"
+    }
+  },
+  {
+    "address": "0x6013b454",
+    "type": "data",
+    "function": {
+      "address": "0x6013b454",
+      "name": "sub_6013B428",
+      "size": "0x44"
+    }
+  },
+  {
+    "address": "0x6013b46c",
+    "type": "data",
+    "function": null
+  },
+  {
+    "address": "0x6013b4a8",
+    "type": "data",
+    "function": {
+      "address": "0x6013b4a8",
+      "name": "sub_6013B470",
+      "size": "0xc0"
+    }
+  },
+  {
+    "address": "0x6013b4b8",
+    "type": "data",
+    "function": {
+      "address": "0x6013b4b8",
+      "name": "sub_6013B470",
+      "size": "0xc0"
+    }
+  },
+  {
+    "address": "0x6013b534",
+    "type": "data",
+    "function": null
+  },
+  {
+    "address": "0x601415c4",
+    "type": "data",
+    "function": {
+      "address": "0x601415c4",
+      "name": "sub_60141500",
+      "size": "0x368"
+    }
+  },
+  {
+    "address": "0x601415d4",
+    "type": "data",
+    "function": {
+      "address": "0x601415d4",
+      "name": "sub_60141500",
+      "size": "0x368"
+    }
+  },
+  {
+    "address": "0x60141668",
+    "type": "data",
+    "function": {
+      "address": "0x60141668",
+      "name": "sub_60141500",
+      "size": "0x368"
+    }
+  },
+  {
+    "address": "0x6014166c",
+    "type": "data",
+    "function": {
+      "address": "0x6014166c",
+      "name": "sub_60141500",
+      "size": "0x368"
+    }
+  },
+  {
+    "address": "0x601416e0",
+    "type": "data",
+    "function": {
+      "address": "0x601416e0",
+      "name": "sub_60141500",
+      "size": "0x368"
+    }
+  },
+  {
+    "address": "0x601416f0",
+    "type": "data",
+    "function": {
+      "address": "0x601416f0",
+      "name": "sub_60141500",
+      "size": "0x368"
+    }
+  },
+  {
+    "address": "0x6014186c",
+    "type": "data",
+    "function": null
+  },
+  {
+    "address": "0x60141884",
+    "type": "data",
+    "function": null
+  },
+  {
+    "address": "0x6014188c",
+    "type": "data",
+    "function": null
+  }
+]

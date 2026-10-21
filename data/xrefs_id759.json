@@ -1,0 +1,48 @@
+[
+  {
+    "address": "0x60140848",
+    "type": "data",
+    "function": {
+      "address": "0x60140848",
+      "name": "sub_6014083C",
+      "size": "0x180"
+    }
+  },
+  {
+    "address": "0x60140860",
+    "type": "data",
+    "function": {
+      "address": "0x60140860",
+      "name": "sub_6014083C",
+      "size": "0x180"
+    }
+  },
+  {
+    "address": "0x601409d8",
+    "type": "data",
+    "function": null
+  },
+  {
+    "address": "0x602cc28c",
+    "type": "data",
+    "function": {
+      "address": "0x602cc28c",
+      "name": "HammerBros_createHammer",
+      "size": "0x11c"
+    }
+  },
+  {
+    "address": "0x602cc290",
+    "type": "data",
+    "function": {
+      "address": "0x602cc290",
+      "name": "HammerBros_createHammer",
+      "size": "0x11c"
+    }
+  },
+  {
+    "address": "0x602cc360",
+    "type": "data",
+    "function": null
+  }
+]

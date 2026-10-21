@@ -1,0 +1,25 @@
+[
+  {
+    "address": "0x60159938",
+    "type": "data",
+    "function": {
+      "address": "0x60159938",
+      "name": "ActiveCollider_doOverlapMaybe",
+      "size": "0x240"
+    }
+  },
+  {
+    "address": "0x6015993c",
+    "type": "data",
+    "function": {
+      "address": "0x6015993c",
+      "name": "ActiveCollider_doOverlapMaybe",
+      "size": "0x240"
+    }
+  },
+  {
+    "address": "0x60159a30",
+    "type": "data",
+    "function": null
+  }
+]

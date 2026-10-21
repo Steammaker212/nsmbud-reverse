@@ -1,0 +1,1085 @@
+{
+  "data": [
+    {
+      "address": "0x60abbb2f",
+      "length": 19,
+      "string": "SE_PLY_TOUCH_KOOPA"
+    },
+    {
+      "address": "0x60abbcb9",
+      "length": 19,
+      "string": "SE_PLY_CRASH_KOOPA"
+    },
+    {
+      "address": "0x60abc171",
+      "length": 21,
+      "string": "SE_PLY_GET_OFF_CLOWN"
+    },
+    {
+      "address": "0x60abc398",
+      "length": 18,
+      "string": "SE_PLY_CROWN_RISE"
+    },
+    {
+      "address": "0x60abc3b8",
+      "length": 17,
+      "string": "SE_PLY_CROWN_ACC"
+    },
+    {
+      "address": "0x60abc3c9",
+      "length": 26,
+      "string": "SE_PLY_CROWN_LETDOWN_FAST"
+    },
+    {
+      "address": "0x60abe009",
+      "length": 19,
+      "string": "SE_PLY_SPLASH_LAVA"
+    },
+    {
+      "address": "0x60abff08",
+      "length": 23,
+      "string": "SE_PLY_CS_DOKAN_IN_OUT"
+    },
+    {
+      "address": "0x60ac0165",
+      "length": 15,
+      "string": "SE_PLY_CS_JUMP"
+    },
+    {
+      "address": "0x60ac0174",
+      "length": 17,
+      "string": "SE_PLY_CS_JUMP_S"
+    },
+    {
+      "address": "0x60ac0185",
+      "length": 18,
+      "string": "SE_PLY_CS_JUMP_SS"
+    },
+    {
+      "address": "0x60ac0197",
+      "length": 21,
+      "string": "SE_PLY_CS_LAND_POINT"
+    },
+    {
+      "address": "0x60ac01bd",
+      "length": 24,
+      "string": "SE_PLY_CS_ENEMY_CONTACT"
+    },
+    {
+      "address": "0x60ac01d5",
+      "length": 21,
+      "string": "SE_PLY_CS_PLAYER_BYE"
+    },
+    {
+      "address": "0x60ac01ea",
+      "length": 19,
+      "string": "SE_PLY_CS_MOVE_IVY"
+    },
+    {
+      "address": "0x60ac01fd",
+      "length": 23,
+      "string": "SE_PLY_CS_CHANGE_SMALL"
+    },
+    {
+      "address": "0x60ac0214",
+      "length": 15,
+      "string": "SE_PLY_CS_SLIP"
+    },
+    {
+      "address": "0x60ac0232",
+      "length": 20,
+      "string": "SE_PLY_CS_LAND_PNGN"
+    },
+    {
+      "address": "0x60ac0246",
+      "length": 24,
+      "string": "SE_PLY_FOOTNOTE_CS_DIRT"
+    },
+    {
+      "address": "0x60ac025e",
+      "length": 24,
+      "string": "SE_PLY_FOOTNOTE_CS_ROCK"
+    },
+    {
+      "address": "0x60ac0276",
+      "length": 24,
+      "string": "SE_PLY_FOOTNOTE_CS_SAND"
+    },
+    {
+      "address": "0x60ac028e",
+      "length": 24,
+      "string": "SE_PLY_FOOTNOTE_CS_SNOW"
+    },
+    {
+      "address": "0x60ac02a6",
+      "length": 25,
+      "string": "SE_PLY_FOOTNOTE_CS_WATER"
+    },
+    {
+      "address": "0x60ac02bf",
+      "length": 25,
+      "string": "SE_PLY_FOOTNOTE_CS_CLOUD"
+    },
+    {
+      "address": "0x60ac02d8",
+      "length": 24,
+      "string": "SE_PLY_FOOTNOTE_CS_PNGN"
+    },
+    {
+      "address": "0x60ac02f0",
+      "length": 32,
+      "string": "SE_PLY_FOOTNOTE_CS_HASHIGO_NAWA"
+    },
+    {
+      "address": "0x60ac0310",
+      "length": 30,
+      "string": "SE_PLY_FOOTNOTE_CS_HASHIGO_FE"
+    },
+    {
+      "address": "0x60ac032e",
+      "length": 30,
+      "string": "SE_PLY_FOOTNOTE_CS_ROCK_CLIMB"
+    },
+    {
+      "address": "0x60ac034c",
+      "length": 24,
+      "string": "SE_PLY_FOOTNOTE_CS_WOOD"
+    },
+    {
+      "address": "0x60ac0c95",
+      "length": 29,
+      "string": "SE_PLY_CS_CMN_MA_ITEM_SHIMAU"
+    },
+    {
+      "address": "0x60ac0cb2",
+      "length": 21,
+      "string": "SE_PLY_CS_CH_YS_LAND"
+    },
+    {
+      "address": "0x60ac1246",
+      "length": 28,
+      "string": "SE_PLY_CS_GOTO_ENEMY_COURSE"
+    },
+    {
+      "address": "0x60ac1262",
+      "length": 23,
+      "string": "SE_PLY_CSDEMO_KURI_APP"
+    },
+    {
+      "address": "0x60ac1279",
+      "length": 24,
+      "string": "SE_PLY_CSDEMO_KURI_LOOK"
+    },
+    {
+      "address": "0x60ac1291",
+      "length": 28,
+      "string": "SE_PLY_CSDEMO_KURI_TAKEAWAY"
+    },
+    {
+      "address": "0x60ac12ad",
+      "length": 29,
+      "string": "SE_PLY_CSDEMO_KURI_COURSE_IN"
+    },
+    {
+      "address": "0x60ac269c",
+      "length": 21,
+      "string": "SE_PLY_BALLOON_BRAKE"
+    },
+    {
+      "address": "0x60ac98cf",
+      "length": 22,
+      "string": "SE_PLY_GET_ITEM_AGAIN"
+    },
+    {
+      "address": "0x60acd9f0",
+      "length": 21,
+      "string": "SE_PLY_CS_CHANGE_BIG"
+    },
+    {
+      "address": "0x60acda05",
+      "length": 22,
+      "string": "SE_PLY_CS_CHANGE_PRPL"
+    },
+    {
+      "address": "0x60acda1b",
+      "length": 22,
+      "string": "SE_PLY_CS_CHANGE_PNGN"
+    },
+    {
+      "address": "0x60acda31",
+      "length": 22,
+      "string": "SE_PLY_CS_CHANGE_MAME"
+    },
+    {
+      "address": "0x60acda47",
+      "length": 22,
+      "string": "SE_PLY_CS_CHANGE_MSSB"
+    },
+    {
+      "address": "0x60acda5d",
+      "length": 24,
+      "string": "SE_PLY_CS_CHANGE_P_MSSB"
+    },
+    {
+      "address": "0x60acda75",
+      "length": 24,
+      "string": "SE_PLY_CHANGE_KINOPEACH"
+    },
+    {
+      "address": "0x60ad0bd2",
+      "length": 21,
+      "string": "SE_PLY_YOSHI_EAT_NUT"
+    },
+    {
+      "address": "0x60ad0be7",
+      "length": 23,
+      "string": "SE_PLY_YOSHI_EAT_NUT_2"
+    },
+    {
+      "address": "0x60ad0bfe",
+      "length": 23,
+      "string": "SE_PLY_YOSHI_EAT_NUT_3"
+    },
+    {
+      "address": "0x60ad0c15",
+      "length": 23,
+      "string": "SE_PLY_YOSHI_EAT_NUT_4"
+    },
+    {
+      "address": "0x60ad0c2c",
+      "length": 23,
+      "string": "SE_PLY_YOSHI_EAT_NUT_5"
+    },
+    {
+      "address": "0x60ad2096",
+      "length": 26,
+      "string": "SE_PLY_CH_YOSHI_HIT_ENEMY"
+    },
+    {
+      "address": "0x60ad20b0",
+      "length": 25,
+      "string": "SE_PLY_CH_YOSHI_BLLN_FLY"
+    },
+    {
+      "address": "0x60ad20c9",
+      "length": 21,
+      "string": "SE_PLY_CH_YOSHI_BLLN"
+    },
+    {
+      "address": "0x60ad21c5",
+      "length": 26,
+      "string": "SE_PLY_HIT_BROS_FLR_BOUND"
+    },
+    {
+      "address": "0x60ad248c",
+      "length": 24,
+      "string": "SE_PLY_YOSHI_EGG_APPEAR"
+    },
+    {
+      "address": "0x60ad2504",
+      "length": 23,
+      "string": "SE_PLY_HIT_BLOCK_BOUND"
+    },
+    {
+      "address": "0x60ad2551",
+      "length": 21,
+      "string": "SE_PLY_YOSHI_LAY_EGG"
+    },
+    {
+      "address": "0x60ad28b8",
+      "length": 20,
+      "string": "SE_PLY_CH_YOSHI_BBL"
+    },
+    {
+      "address": "0x60ad2923",
+      "length": 19,
+      "string": "SE_PLY_CANNON_SHOT"
+    },
+    {
+      "address": "0x60ad2936",
+      "length": 20,
+      "string": "SE_PLY_CANNON_READY"
+    },
+    {
+      "address": "0x60ad2adf",
+      "length": 26,
+      "string": "SE_PLY_CH_YOSHI_BBL_CATCH"
+    },
+    {
+      "address": "0x60ad2b94",
+      "length": 21,
+      "string": "SE_PLY_CH_YOSHI_KERU"
+    },
+    {
+      "address": "0x60ad2ba9",
+      "length": 21,
+      "string": "SE_PLY_CH_YOSHI_FUMU"
+    },
+    {
+      "address": "0x60ad2bbe",
+      "length": 26,
+      "string": "SE_PLY_WATER_DOKAN_IN_OUT"
+    },
+    {
+      "address": "0x60ad2bd8",
+      "length": 20,
+      "string": "SE_PLY_DOKAN_IN_OUT"
+    },
+    {
+      "address": "0x60ad2c29",
+      "length": 26,
+      "string": "SE_PLY_CH_YOSHI_EGG_BREAK"
+    },
+    {
+      "address": "0x60ad3fb9",
+      "length": 15,
+      "string": "SE_PLY_JUMPDAI"
+    },
+    {
+      "address": "0x60ad3fc8",
+      "length": 20,
+      "string": "SE_PLY_JUMPDAI_HIGH"
+    },
+    {
+      "address": "0x60ad6292",
+      "length": 22,
+      "string": "SE_PLY_CH_YOSHI_LIGHT"
+    },
+    {
+      "address": "0x60ad81f8",
+      "length": 19,
+      "string": "SE_PLY_TARZAN_ROPE"
+    },
+    {
+      "address": "0x60ad820b",
+      "length": 21,
+      "string": "SE_PLY_TARZAN_KUSARI"
+    },
+    {
+      "address": "0x60ad8ad5",
+      "length": 23,
+      "string": "SE_PLY_YOSHI_EGG_BREAK"
+    },
+    {
+      "address": "0x60ad967b",
+      "length": 17,
+      "string": "SE_PLY_LAND_ROCK"
+    },
+    {
+      "address": "0x60ad968c",
+      "length": 15,
+      "string": "SE_PLY_CRASH_S"
+    },
+    {
+      "address": "0x60ad9cf5",
+      "length": 27,
+      "string": "SE_PLY_CH_YOSHI_BBL_CREDIT"
+    },
+    {
+      "address": "0x60ad9da0",
+      "length": 19,
+      "string": "SE_PLY_CHANGE_PRPL"
+    },
+    {
+      "address": "0x60ad9db3",
+      "length": 19,
+      "string": "SE_PLY_CHANGE_PNGN"
+    },
+    {
+      "address": "0x60ad9dc6",
+      "length": 19,
+      "string": "SE_PLY_CHANGE_MSSB"
+    },
+    {
+      "address": "0x60ad9dd9",
+      "length": 21,
+      "string": "SE_PLY_CHANGE_P_MSSB"
+    },
+    {
+      "address": "0x60ad9dee",
+      "length": 18,
+      "string": "SE_PLY_CHANGE_BIG"
+    },
+    {
+      "address": "0x60ad9e00",
+      "length": 19,
+      "string": "SE_PLY_CHANGE_MAME"
+    },
+    {
+      "address": "0x60ad9e13",
+      "length": 20,
+      "string": "SE_PLY_CHANGE_SMALL"
+    },
+    {
+      "address": "0x60ada473",
+      "length": 21,
+      "string": "SE_PLY_SPLASH_POISON"
+    },
+    {
+      "address": "0x60ada488",
+      "length": 19,
+      "string": "SE_PLY_HPDP_SPLASH"
+    },
+    {
+      "address": "0x60ada49b",
+      "length": 24,
+      "string": "SE_PLY_HIP_ATTACK_WATER"
+    },
+    {
+      "address": "0x60ada4b3",
+      "length": 20,
+      "string": "SE_PLY_HIP_ATTACK_M"
+    },
+    {
+      "address": "0x60ada4c7",
+      "length": 23,
+      "string": "SE_PLY_HIP_ATTACK_SOFT"
+    },
+    {
+      "address": "0x60ada4de",
+      "length": 18,
+      "string": "SE_PLY_HIP_ATTACK"
+    },
+    {
+      "address": "0x60ada502",
+      "length": 17,
+      "string": "SE_PLY_SPIN_ONCE"
+    },
+    {
+      "address": "0x60ada513",
+      "length": 17,
+      "string": "SE_PLY_HIT_BLOCK"
+    },
+    {
+      "address": "0x60ada524",
+      "length": 23,
+      "string": "SE_PLY_HIT_GENERAL_OBJ"
+    },
+    {
+      "address": "0x60ada53b",
+      "length": 21,
+      "string": "SE_PLY_FOOTNOTE_PNGN"
+    },
+    {
+      "address": "0x60ada550",
+      "length": 17,
+      "string": "SE_PLY_LAND_PNGN"
+    },
+    {
+      "address": "0x60ada561",
+      "length": 21,
+      "string": "SE_PLY_PNGN_SLIP_SEA"
+    },
+    {
+      "address": "0x60ada576",
+      "length": 13,
+      "string": "SE_PLY_BRAKE"
+    },
+    {
+      "address": "0x60ada583",
+      "length": 18,
+      "string": "SE_PLY_BRAKE_SNOW"
+    },
+    {
+      "address": "0x60ada595",
+      "length": 18,
+      "string": "SE_PLY_BRAKE_SAND"
+    },
+    {
+      "address": "0x60ada5a7",
+      "length": 17,
+      "string": "SE_PLY_BRAKE_ICE"
+    },
+    {
+      "address": "0x60ada5b8",
+      "length": 19,
+      "string": "SE_PLY_BRAKE_WATER"
+    },
+    {
+      "address": "0x60ada5cb",
+      "length": 21,
+      "string": "SE_PLY_FOOTNOTE_ROCK"
+    },
+    {
+      "address": "0x60ada5e0",
+      "length": 21,
+      "string": "SE_PLY_FOOTNOTE_SNOW"
+    },
+    {
+      "address": "0x60ada5f5",
+      "length": 21,
+      "string": "SE_PLY_FOOTNOTE_SAND"
+    },
+    {
+      "address": "0x60ada60a",
+      "length": 21,
+      "string": "SE_PLY_FOOTNOTE_DIRT"
+    },
+    {
+      "address": "0x60ada61f",
+      "length": 22,
+      "string": "SE_PLY_FOOTNOTE_WATER"
+    },
+    {
+      "address": "0x60ada635",
+      "length": 22,
+      "string": "SE_PLY_FOOTNOTE_CLOUD"
+    },
+    {
+      "address": "0x60ada64b",
+      "length": 25,
+      "string": "SE_PLY_FOOTNOTE_BLOWSAND"
+    },
+    {
+      "address": "0x60ada664",
+      "length": 22,
+      "string": "SE_PLY_FOOTNOTE_MANTA"
+    },
+    {
+      "address": "0x60ada67a",
+      "length": 23,
+      "string": "SE_PLY_FOOTNOTE_CARPET"
+    },
+    {
+      "address": "0x60ada691",
+      "length": 21,
+      "string": "SE_PLY_FOOTNOTE_LEAF"
+    },
+    {
+      "address": "0x60ada6a6",
+      "length": 21,
+      "string": "SE_PLY_FOOTNOTE_WOOD"
+    },
+    {
+      "address": "0x60ada6bb",
+      "length": 17,
+      "string": "SE_PLY_LAND_SNOW"
+    },
+    {
+      "address": "0x60ada6cc",
+      "length": 17,
+      "string": "SE_PLY_LAND_SAND"
+    },
+    {
+      "address": "0x60ada6dd",
+      "length": 17,
+      "string": "SE_PLY_LAND_DIRT"
+    },
+    {
+      "address": "0x60ada6ee",
+      "length": 18,
+      "string": "SE_PLY_LAND_WATER"
+    },
+    {
+      "address": "0x60ada700",
+      "length": 18,
+      "string": "SE_PLY_LAND_CLOUD"
+    },
+    {
+      "address": "0x60ada712",
+      "length": 21,
+      "string": "SE_PLY_LAND_BLOWSAND"
+    },
+    {
+      "address": "0x60ada727",
+      "length": 18,
+      "string": "SE_PLY_LAND_MANTA"
+    },
+    {
+      "address": "0x60ada739",
+      "length": 19,
+      "string": "SE_PLY_LAND_CARPET"
+    },
+    {
+      "address": "0x60ada74c",
+      "length": 17,
+      "string": "SE_PLY_LAND_LEAF"
+    },
+    {
+      "address": "0x60ada75d",
+      "length": 12,
+      "string": "SE_PLY_SLIP"
+    },
+    {
+      "address": "0x60ada769",
+      "length": 17,
+      "string": "SE_PLY_SLIP_SNOW"
+    },
+    {
+      "address": "0x60ada77a",
+      "length": 17,
+      "string": "SE_PLY_SLIP_SAND"
+    },
+    {
+      "address": "0x60ada78b",
+      "length": 16,
+      "string": "SE_PLY_SLIP_ICE"
+    },
+    {
+      "address": "0x60ada79b",
+      "length": 12,
+      "string": "SE_PLY_QUAT"
+    },
+    {
+      "address": "0x60ada7a7",
+      "length": 18,
+      "string": "SE_PLY_RIDE_CLOUD"
+    },
+    {
+      "address": "0x60adb706",
+      "length": 24,
+      "string": "SE_PLY_HPDP_SPECIAL_TWO"
+    },
+    {
+      "address": "0x60adb71e",
+      "length": 26,
+      "string": "SE_PLY_HPDP_SPECIAL_THREE"
+    },
+    {
+      "address": "0x60adb738",
+      "length": 25,
+      "string": "SE_PLY_HPDP_SPECIAL_FOUR"
+    },
+    {
+      "address": "0x60adba93",
+      "length": 19,
+      "string": "SE_PLY_SPIN_ATTACK"
+    },
+    {
+      "address": "0x60adbaa6",
+      "length": 22,
+      "string": "SE_PLY_KINOPEACH_JUMP"
+    },
+    {
+      "address": "0x60adbabc",
+      "length": 17,
+      "string": "SE_PLY_MSSB_JUMP"
+    },
+    {
+      "address": "0x60adbacd",
+      "length": 14,
+      "string": "SE_PLY_P_MSSB"
+    },
+    {
+      "address": "0x60adbadb",
+      "length": 17,
+      "string": "SE_PLY_PRPL_JUMP"
+    },
+    {
+      "address": "0x60adbaec",
+      "length": 20,
+      "string": "SE_PLY_BALLOON_SELF"
+    },
+    {
+      "address": "0x60adbb1f",
+      "length": 16,
+      "string": "SE_PLY_OTHER_ON"
+    },
+    {
+      "address": "0x60adbb8f",
+      "length": 15,
+      "string": "SE_PLY_CRASH_L"
+    },
+    {
+      "address": "0x60adbb9e",
+      "length": 18,
+      "string": "SE_PLY_TOUCH_BIRI"
+    },
+    {
+      "address": "0x60adbbb0",
+      "length": 12,
+      "string": "SE_PLY_DOWN"
+    },
+    {
+      "address": "0x60adbbe8",
+      "length": 17,
+      "string": "SE_PLY_BURN_DOWN"
+    },
+    {
+      "address": "0x60adbbf9",
+      "length": 18,
+      "string": "SE_PLY_THROW_FIRE"
+    },
+    {
+      "address": "0x60adbc0b",
+      "length": 21,
+      "string": "SE_PLY_THROW_ICEBALL"
+    },
+    {
+      "address": "0x60adbc53",
+      "length": 24,
+      "string": "SE_PLY_KINOPEACH_FLYING"
+    },
+    {
+      "address": "0x60adbc6b",
+      "length": 19,
+      "string": "SE_PLY_MSSB_FLYING"
+    },
+    {
+      "address": "0x60adbc7e",
+      "length": 17,
+      "string": "SE_PLY_MSSB_FALL"
+    },
+    {
+      "address": "0x60adbc8f",
+      "length": 15,
+      "string": "SE_PLY_ROLLING"
+    },
+    {
+      "address": "0x60adbc9e",
+      "length": 25,
+      "string": "SE_PLY_PRPL_LETDOWN_FAST"
+    },
+    {
+      "address": "0x60adbcb7",
+      "length": 30,
+      "string": "SE_PLY_PRPL_LETDOWN_FAST_LAND"
+    },
+    {
+      "address": "0x60adbcd5",
+      "length": 12,
+      "string": "SE_PLY_JUMP"
+    },
+    {
+      "address": "0x60adbce1",
+      "length": 15,
+      "string": "SE_PLY_2NDJUMP"
+    },
+    {
+      "address": "0x60adbcf0",
+      "length": 15,
+      "string": "SE_PLY_3RDJUMP"
+    },
+    {
+      "address": "0x60adbcff",
+      "length": 14,
+      "string": "SE_PLY_JUMP_S"
+    },
+    {
+      "address": "0x60adbd0d",
+      "length": 17,
+      "string": "SE_PLY_2NDJUMP_S"
+    },
+    {
+      "address": "0x60adbd1e",
+      "length": 17,
+      "string": "SE_PLY_3RDJUMP_S"
+    },
+    {
+      "address": "0x60adbd2f",
+      "length": 15,
+      "string": "SE_PLY_JUMP_SS"
+    },
+    {
+      "address": "0x60adbd3e",
+      "length": 18,
+      "string": "SE_PLY_2NDJUMP_SS"
+    },
+    {
+      "address": "0x60adbd50",
+      "length": 18,
+      "string": "SE_PLY_3RDJUMP_SS"
+    },
+    {
+      "address": "0x60adbd62",
+      "length": 18,
+      "string": "SE_PLY_3RDJUMP_TT"
+    },
+    {
+      "address": "0x60adbd74",
+      "length": 20,
+      "string": "SE_PLY_JUMP_SS_HIGH"
+    },
+    {
+      "address": "0x60adbd88",
+      "length": 19,
+      "string": "SE_PLY_JUMP_S_HIGH"
+    },
+    {
+      "address": "0x60adbd9b",
+      "length": 17,
+      "string": "SE_PLY_JUMP_HIGH"
+    },
+    {
+      "address": "0x60adbdac",
+      "length": 16,
+      "string": "SE_PLY_PRPL_FLY"
+    },
+    {
+      "address": "0x60adbdbc",
+      "length": 29,
+      "string": "SE_PLY_KINOPEACH_FLYING_FAST"
+    },
+    {
+      "address": "0x60adbdd9",
+      "length": 15,
+      "string": "SE_PLY_SHUFFLE"
+    },
+    {
+      "address": "0x60adbde8",
+      "length": 17,
+      "string": "SE_PLY_HANG_MOVE"
+    },
+    {
+      "address": "0x60adbdf9",
+      "length": 19,
+      "string": "SE_PLY_MONKEY_BARS"
+    },
+    {
+      "address": "0x60adbe0c",
+      "length": 17,
+      "string": "SE_PLY_PNGN_SLIP"
+    },
+    {
+      "address": "0x60adbe1d",
+      "length": 17,
+      "string": "SE_PLY_PNGN_JUMP"
+    },
+    {
+      "address": "0x60adbe2e",
+      "length": 18,
+      "string": "SE_PLY_POLE_CATCH"
+    },
+    {
+      "address": "0x60adbe40",
+      "length": 18,
+      "string": "SE_PLY_POLE_CLIMB"
+    },
+    {
+      "address": "0x60adbe52",
+      "length": 18,
+      "string": "SE_PLY_POLE_SLIDE"
+    },
+    {
+      "address": "0x60adbe97",
+      "length": 25,
+      "string": "SE_PLY_PRPL_LETDOWN_SPIN"
+    },
+    {
+      "address": "0x60adbebe",
+      "length": 20,
+      "string": "SE_PLY_MOVE_ROLLING"
+    },
+    {
+      "address": "0x60adbefb",
+      "length": 12,
+      "string": "SE_PLY_SWIM"
+    },
+    {
+      "address": "0x60adbf07",
+      "length": 17,
+      "string": "SE_PLY_SWIM_KICK"
+    },
+    {
+      "address": "0x60adbf18",
+      "length": 24,
+      "string": "SE_PLY_SWIM_KICK_TOTTEN"
+    },
+    {
+      "address": "0x60adbf30",
+      "length": 25,
+      "string": "SE_PLY_SWIM_KICK_PENGUIN"
+    },
+    {
+      "address": "0x60adbf49",
+      "length": 19,
+      "string": "SE_PLY_TOTTEN_SWIM"
+    },
+    {
+      "address": "0x60adbf5c",
+      "length": 17,
+      "string": "SE_PLY_PNGN_SWIM"
+    },
+    {
+      "address": "0x60adbf6d",
+      "length": 23,
+      "string": "SE_PLY_SWIM_WITH_CHIBI"
+    },
+    {
+      "address": "0x60adbf84",
+      "length": 18,
+      "string": "SE_PLY_SPLASH_GEL"
+    },
+    {
+      "address": "0x60adbf96",
+      "length": 19,
+      "string": "SE_PLY_SPLASH_MAME"
+    },
+    {
+      "address": "0x60adbfa9",
+      "length": 14,
+      "string": "SE_PLY_SPLASH"
+    },
+    {
+      "address": "0x60adbfb7",
+      "length": 27,
+      "string": "SE_PLY_SPLASH_SHALLOW_MAME"
+    },
+    {
+      "address": "0x60adbfd2",
+      "length": 22,
+      "string": "SE_PLY_SPLASH_SHALLOW"
+    },
+    {
+      "address": "0x60adbfe8",
+      "length": 22,
+      "string": "SE_PLY_SPLASH_GEL_OUT"
+    },
+    {
+      "address": "0x60adbffe",
+      "length": 18,
+      "string": "SE_PLY_SPLASH_OUT"
+    },
+    {
+      "address": "0x60adc010",
+      "length": 26,
+      "string": "SE_PLY_SPLASH_SHALLOW_OUT"
+    },
+    {
+      "address": "0x60adc02a",
+      "length": 18,
+      "string": "SE_PLY_CATCH_ROPE"
+    },
+    {
+      "address": "0x60adc03c",
+      "length": 20,
+      "string": "SE_PLY_CATCH_KUSARI"
+    },
+    {
+      "address": "0x60adc050",
+      "length": 18,
+      "string": "SE_PLY_CLIMB_ROPE"
+    },
+    {
+      "address": "0x60adc062",
+      "length": 20,
+      "string": "SE_PLY_CLIMB_KUSARI"
+    },
+    {
+      "address": "0x60adc076",
+      "length": 18,
+      "string": "SE_PLY_SLIDE_ROPE"
+    },
+    {
+      "address": "0x60adc088",
+      "length": 20,
+      "string": "SE_PLY_SLIDE_KUSARI"
+    },
+    {
+      "address": "0x60adc09c",
+      "length": 29,
+      "string": "SE_PLY_FOOTNOTE_HASHIGO_NAWA"
+    },
+    {
+      "address": "0x60adc0b9",
+      "length": 17,
+      "string": "SE_PLY_CATCH_IVY"
+    },
+    {
+      "address": "0x60adc0ca",
+      "length": 18,
+      "string": "SE_PLY_LAND_FENCE"
+    },
+    {
+      "address": "0x60adc0dc",
+      "length": 20,
+      "string": "SE_PLY_JUMP_FENCE_S"
+    },
+    {
+      "address": "0x60adc0f0",
+      "length": 21,
+      "string": "SE_PLY_JUMP_FENCE_SS"
+    },
+    {
+      "address": "0x60adc105",
+      "length": 18,
+      "string": "SE_PLY_JUMP_FENCE"
+    },
+    {
+      "address": "0x60adc117",
+      "length": 20,
+      "string": "SE_PLY_ATTACK_FENCE"
+    },
+    {
+      "address": "0x60adc12b",
+      "length": 16,
+      "string": "SE_PLY_MOVE_IVY"
+    },
+    {
+      "address": "0x60adc13b",
+      "length": 18,
+      "string": "SE_PLY_WALK_METAL"
+    },
+    {
+      "address": "0x60adc14d",
+      "length": 27,
+      "string": "SE_PLY_FOOTNOTE_ROCK_CLIMB"
+    },
+    {
+      "address": "0x60adc168",
+      "length": 16,
+      "string": "SE_PLY_ICE_SLIP"
+    },
+    {
+      "address": "0x60adc178",
+      "length": 22,
+      "string": "SE_PLY_MSSB_CATCHWALL"
+    },
+    {
+      "address": "0x60adc18e",
+      "length": 17,
+      "string": "SE_PLY_SLIP_TATE"
+    },
+    {
+      "address": "0x60adc19f",
+      "length": 21,
+      "string": "SE_PLY_MSSB_WALLJUMP"
+    },
+    {
+      "address": "0x60adc1b4",
+      "length": 17,
+      "string": "SE_PLY_KABE_KICK"
+    },
+    {
+      "address": "0x60adc1c5",
+      "length": 24,
+      "string": "SE_PLY_BREAK_FREE_YOSHI"
+    },
+    {
+      "address": "0x60adc2bf",
+      "length": 20,
+      "string": "SE_PLY_YOSHI_TONGUE"
+    },
+    {
+      "address": "0x60adc2f1",
+      "length": 18,
+      "string": "SE_PLY_YOSHI_FIRE"
+    },
+    {
+      "address": "0x60adc314",
+      "length": 24,
+      "string": "SE_PLY_YOSHI_TONGUE_HIT"
+    },
+    {
+      "address": "0x60adc360",
+      "length": 19,
+      "string": "SE_PLY_YOSHI_FJUMP"
+    },
+    {
+      "address": "0x60addf31",
+      "length": 14,
+      "string": "PLAYER_SE_PLY"
+    },
+    {
+      "address": "0x60addf6a",
+      "length": 19,
+      "string": "PLAYER_SE_PLY_JUMP"
+    },
+    {
+      "address": "0x60ade0bc",
+      "length": 22,
+      "string": "SE_PLY_FOOTNOTE_YOSHI"
+    }
+  ],
+  "next_offset": null
+}

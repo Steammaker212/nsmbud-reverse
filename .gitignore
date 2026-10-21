@@ -1,0 +1,45 @@
+# ---- Game binaries & IDA artifacts (never distribute) ----
+*.elf
+*.nso
+*.nsp
+*.xci
+*.pack
+*.szs
+*.i64
+*.id0
+*.id1
+*.id2
+*.idb
+*.nam
+*.til
+*.til.bak
+*.exe
+*.dll
+*.so
+
+# ---- Reference trees (live on the wiiu-reference branch) ----
+refs/
+red-pro2/
+NSMBU-Headers/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---- Editor / OS ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Local scratch ----
+*.tmp
+*.bak
+*.log.tmp
+scratch/
+out/

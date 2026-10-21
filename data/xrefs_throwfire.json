@@ -1,0 +1,25 @@
+[
+  {
+    "address": "0x607aacf8",
+    "type": "data",
+    "function": {
+      "address": "0x607aacf8",
+      "name": "sub_607AABA0",
+      "size": "0x344"
+    }
+  },
+  {
+    "address": "0x607aad04",
+    "type": "data",
+    "function": {
+      "address": "0x607aad04",
+      "name": "sub_607AABA0",
+      "size": "0x344"
+    }
+  },
+  {
+    "address": "0x607aaef8",
+    "type": "data",
+    "function": null
+  }
+]
