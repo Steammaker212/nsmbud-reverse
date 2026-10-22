@@ -99,6 +99,13 @@ def main():
         [sys.executable, "scripts/fix_qualified_names.py", CLEAN, "--write"])
     run("1c/8 fix qualified names (per-function)",
         [sys.executable, "scripts/fix_qualified_names.py", PERFN, "--write"])
+    # The 10 aggregate region files are re-copied from decompiled_clean on every build (step 2), so a
+    # rewrite applied only to the repo copy is undone each time and re-applied each time. Applying it
+    # to the SOURCE as well makes the two trees agree and the build converge.
+    run("1d/9 array labels (clean tree)",
+        [sys.executable, "scripts/fix_array_data_macros.py", CLEAN, "--write"])
+    run("1e/9 array labels (per-function)",
+        [sys.executable, "scripts/fix_array_data_macros.py", PERFN, "--write"])
 
     # 2. assemble corpus
     run("2/7 build corpus", [sys.executable, "scripts/make_decompiled_corpus.py"])
@@ -109,6 +116,13 @@ def main():
     #     because the files are regenerated into decompiled/ by the export, not by this script.
     run("2b/8 fix qualified names (repo tree)",
         [sys.executable, "scripts/fix_qualified_names.py",
+         os.path.join(REPO, "decompiled"), "--write"])
+    # 2b2. ~50 files had their function signature swallowed by a broken header comment:
+    #      `// ---- addr: 0x... */ int __fastcall Foo(int a1)` -- the `/*` had been rewritten to `//`,
+    #      so the signature was commented out and the following `{` opened nothing. That one line was
+    #      the entire "expected identifier or '('" class, the largest remaining error group.
+    run("2b2/9 fix broken signature comments",
+        [sys.executable, "scripts/fix_broken_signature_comment.py",
          os.path.join(REPO, "decompiled"), "--write"])
     # 2c. the data-label JSON that gen_data_header.py consumes listed only 233 labels, but the
     #     corpus references 23,704 distinct dword_/unk_/byte_ names. The 23,471 that were never
@@ -126,6 +140,12 @@ def main():
     # sub-function declarations: 9 exact signatures + 32,164 unprototyped ones. Must precede
     # restructure too, for the same reason the data header must.
     run("3b/7 subfunc header", [sys.executable, "scripts/gen_subfuncs_header.py"])
+    # 3c. data labels that are INDEXED (`dword_X[i]`) cannot use the scalar macro -- at that point
+    #     the macro is an integer and clang rejects the subscript. The header emits an `arr_` pointer
+    #     form for every label; this rewrites only the subscripted uses. Must follow the data header.
+    run("3c/9 array data labels",
+        [sys.executable, "scripts/fix_array_data_macros.py",
+         os.path.join(REPO, "decompiled"), "--write"])
     # 4. one type definition, and the measured include set (also mounts the data header)
     run("4/7 restructure includes", [sys.executable, "scripts/restructure_includes.py"])
     # 5. prelude include in every .c, including the region files just written

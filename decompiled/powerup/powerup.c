@@ -365,7 +365,7 @@ static inline unsigned int uxtb16(unsigned int x)
     for ( i = 0; i != 7; ++i )
     {
       v3 = 0;
-      v4 = dword_60B023BC[i];
+      v4 = arr_dword_60B023BC[i];
       if ( *(_DWORD *)(MEMORY[0xC9CD58] + 16) > v4 )
         v3 = *(_DWORD *)(*(_DWORD *)(MEMORY[0xC9CD58] + 24) + 4 * v4);
       Undefined_ref_91CC00(v3, 3, a1);
@@ -2040,7 +2040,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(v6 + 304) = 0;
           goto LABEL_23;
         }
-        v14 = dword_60B023E0[v13];
+        v14 = arr_dword_60B023E0[v13];
       }
       *(v7 - 10) = v14;
   LABEL_23:
@@ -2315,7 +2315,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v24 + 2) = *(_DWORD *)(v3 + v25 + 308);
       v29 = *(_DWORD *)(v3 + v25 + 304);
       if ( v29 <= 6 )
-        v27 = dword_60B023E0[v29];
+        v27 = arr_dword_60B023E0[v29];
       *(_BYTE *)(v24 + 3) = v27;
       *(_BYTE *)(v24 + 4) = *(_DWORD *)(v26 + 300);
       *(_BYTE *)(v24 + 5) = *(_BYTE *)(v26 + 322);
@@ -8970,8 +8970,8 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v2 = (unsigned __int8)*v1;
     }
-    v3 = flt_60B02588[v2];
-    *(_DWORD *)(result + 120) = dword_60B0257C[v2];
+    v3 = arr_flt_60B02588[v2];
+    *(_DWORD *)(result + 120) = arr_dword_60B0257C[v2];
     *(float *)(result + 124) = (float)(v3 + v3) + 0.3;
     *(_DWORD *)(result + 128) = 0;
     v4 = &flt_6045C53C;
@@ -9117,7 +9117,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v19; // [sp+1Ch] [bp-4h]
   
     v2 = (_BYTE *)(a1 + 6320);
-    Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C9D030[2 * *(unsigned __int8 *)(a1 + 6320) + 3]);
+    Resource = LoadResource(MEMORY[0xC9CA88], &arr_dword_60C9D030[2 * *(unsigned __int8 *)(a1 + 6320) + 3]);
     *((_DWORD *)v2 - 55) = Resource;
     Model2 = Resource_getModel2(Resource, (int)&unk_60C9D0A0 + 8 * (unsigned __int8)*v2, 1, 1, 0, 0, 0, 0, 0);
     v5 = (_DWORD *)__operator_new(48, 0, 4);
@@ -9779,7 +9779,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( *(_BYTE *)(result + 6257) )
     {
-      *(float *)(result + 120) = flt_60AF1EA0[*(_DWORD *)(result + 548)];
+      *(float *)(result + 120) = arr_flt_60AF1EA0[*(_DWORD *)(result + 548)];
       *(_BYTE *)(result + 6257) = 0;
     }
     v1 = MEMORY[0xB025F0];
@@ -10199,7 +10199,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( *(_BYTE *)(result + 6257) )
     {
-      *(float *)(result + 120) = flt_60AF1EA0[*(_DWORD *)(result + 548)];
+      *(float *)(result + 120) = arr_flt_60AF1EA0[*(_DWORD *)(result + 548)];
       *(_BYTE *)(result + 6257) = 0;
     }
     v1 = MEMORY[0xB025F0];
@@ -12897,12 +12897,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v12 = 0;
     v16[0] = v15[0];
     v16[1] = v5;
-    v13[0] = v15[0] + flt_60AF1EE8[v6];
+    v13[0] = v15[0] + arr_flt_60AF1EE8[v6];
     v13[1] = v5;
     v14[0] = v15[0];
     v14[1] = v5 + 16.0;
     if ( TileCheck_check((int)v17, (int)v8, v15, v13, 15) == 1 )
-      *(float *)(a1 + 108) = v9 + flt_60AF2160[*(_DWORD *)(a1 + 80)];
+      *(float *)(a1 + 108) = v9 + arr_flt_60AF2160[*(_DWORD *)(a1 + 80)];
     v11 = 0;
     v12 = 0;
     result = TileCheck_check((int)v17, (int)v8, v16, v14, 15);
@@ -13762,7 +13762,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2 == 1 )
     {
       v6 = 3.4;
-      v7 = *(float *)&dword_60AF2168[*(_DWORD *)(a1 + 80)];
+      v7 = *(float *)&arr_dword_60AF2168[*(_DWORD *)(a1 + 80)];
     }
     else if ( v2 )
     {
@@ -13829,7 +13829,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(_DWORD *)(a1 + 6216);
     if ( v2 == 1 )
     {
-      v4 = flt_60AF1EC0[*(_DWORD *)(a1 + 80)];
+      v4 = arr_flt_60AF1EC0[*(_DWORD *)(a1 + 80)];
     }
     else if ( v2 )
     {
@@ -14055,9 +14055,9 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result == 1 )
       {
         *(_BYTE *)(a1 + 6250) = *(_BYTE *)(v2 + 84);
-        v4 = flt_60AF2078[*(_DWORD *)(a1 + 80)] + *(float *)(v2 + 120);
+        v4 = arr_flt_60AF2078[*(_DWORD *)(a1 + 80)] + *(float *)(v2 + 120);
         if ( fabsf(v4) < 2.5 )
-          v4 = flt_60AF2078[*(_DWORD *)(a1 + 80)];
+          v4 = arr_flt_60AF2078[*(_DWORD *)(a1 + 80)];
         *(float *)(a1 + 120) = v4;
         *(_DWORD *)(a1 + 124) = 1065353216;
         *(_DWORD *)(a1 + 128) = 0;
@@ -14603,11 +14603,11 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v7; // r0
   
     if ( a4 == 1 )
-      return dword_60B0267C[a2];
+      return arr_dword_60B0267C[a2];
     if ( a3 == 15 )
       return 0;
     if ( a2 > 0x19 || ((1 << a2) & 0x24004E0) == 0 )
-      return dword_60B0267C[a2];
+      return arr_dword_60B0267C[a2];
     if ( a3 >= 4 )
       a3 = 0;
     v6 = *(_DWORD *)(MEMORY[0xCC436C] + 4 * a3 + 48);
@@ -14621,7 +14621,7 @@ static inline unsigned int uxtb16(unsigned int x)
       && (v7 = *(_DWORD *)(v6 + 1320) - 1, v7 <= 8)
       && ((0x1FBu >> v7) & 1) != 0 )
     {
-      return dword_60B0267C[a2];
+      return arr_dword_60B0267C[a2];
     }
     else
     {
@@ -14635,7 +14635,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60466074(int a1, int a2)
   {
-    return dword_60B0267C[a2];
+    return arr_dword_60B0267C[a2];
   }
 
 /* ============================================================================
@@ -14671,7 +14671,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = a3;
     if ( a4 || (unsigned int)(a3 - 8) < 2 || a3 == 2 )
     {
-      result = dword_60B0267C[a3];
+      result = arr_dword_60B0267C[a3];
       *a2 = result;
       goto LABEL_7;
     }
@@ -14725,7 +14725,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v15 >= 1 )
       {
         v12 = 0;
-        for ( result = dword_60B0267C[v4]; (v15 & 3) != v12; a2[v12++] = result )
+        for ( result = arr_dword_60B0267C[v4]; (v15 & 3) != v12; a2[v12++] = result )
           ;
         if ( (unsigned int)(v15 - 1) >= 3 )
         {
@@ -14746,7 +14746,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      result = dword_60B0267C[v4];
+      result = arr_dword_60B0267C[v4];
       *a2 = result;
     }
     return result;
@@ -14890,9 +14890,9 @@ static inline unsigned int uxtb16(unsigned int x)
           v20 = v6[v9];
           v18 = a3;
           v10 = a3;
-          _R2 = dword_60AF2614[v8] << 22;
+          _R2 = arr_dword_60AF2614[v8] << 22;
           uxtb16(r2)
-          v17 = (dword_60AF28C4[v8] << 31)
+          v17 = (arr_dword_60AF28C4[v8] << 31)
               | (((unsigned int)a2[5] & 3) << 12)
               | ((_DWORD)a2[6] << 14) & 0x4000
               | (unsigned __int16)((unsigned __int16)a2[7] << 15)
@@ -14941,7 +14941,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v12 = *(_DWORD *)(a2 + 40);
     if ( a4 < 0 )
       v6 = 0;
-    v13 = &dword_60AF28C4[v6];
+    v13 = &arr_dword_60AF28C4[v6];
     v14 = *(_DWORD **)a2;
     if ( v7 == 1 )
       v13 = (_DWORD *)(a2 + 60);
@@ -14953,7 +14953,7 @@ static inline unsigned int uxtb16(unsigned int x)
         | (*(_DWORD *)(a2 + 32) << 16) & 0x30000
         | (*(_DWORD *)(a2 + 36) << 18) & 0xC0000
         | (v12 << 20) & 0x300000;
-    _R2 = dword_60AF2614[v6] << 22;
+    _R2 = arr_dword_60AF2614[v6] << 22;
     uxtb16(r2)
     v22 = v15 | _R2 | (v10 << 24) & 0x1F000000 | (v9 << 30) & 0x40000000;
     return sub_604663F4(v22, v14, v22 | 0x20000000, a3, v24, 0);
@@ -14965,7 +14965,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   unsigned int __fastcall sub_604668FC(int a1, _DWORD *a2, int a3, char a4)
   {
-    return sub_604663F4(dword_60B0267C[a3], a2, ((a4 & 3) << 16) | 0x6000000, dword_60B0267C[a3], 0, 0);
+    return sub_604663F4(arr_dword_60B0267C[a3], a2, ((a4 & 3) << 16) | 0x6000000, arr_dword_60B0267C[a3], 0, 0);
   }
 
 /* ============================================================================
@@ -14974,7 +14974,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   unsigned int __fastcall sub_60466938(int a1, _DWORD *a2, int a3, char a4)
   {
-    return sub_604663F4(dword_60B0267C[a3], a2, ((a4 & 3) << 16) | 0x1000000, dword_60B0267C[a3], 0, 0);
+    return sub_604663F4(arr_dword_60B0267C[a3], a2, ((a4 & 3) << 16) | 0x1000000, arr_dword_60B0267C[a3], 0, 0);
   }
 
 /* ============================================================================
@@ -15048,7 +15048,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   unsigned int __fastcall sub_60466B30(int a1, _DWORD *a2, int a3, unsigned __int8 a4)
   {
-    return sub_604663F4((int)dword_60B0267C, a2, 0x8000000, dword_60B0267C[a3], a4, 0);
+    return sub_604663F4((int)dword_60B0267C, a2, 0x8000000, arr_dword_60B0267C[a3], a4, 0);
   }
 
 /* ============================================================================
@@ -15057,7 +15057,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   unsigned int __fastcall sub_60466B64(int a1, _DWORD *a2, int a3, unsigned __int8 a4)
   {
-    return sub_604663F4((int)dword_60B0267C, a2, 134219776, dword_60B0267C[a3], a4, 0);
+    return sub_604663F4((int)dword_60B0267C, a2, 134219776, arr_dword_60B0267C[a3], a4, 0);
   }
 
 /* ============================================================================
@@ -17218,7 +17218,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( *(_BYTE *)(result + 6257) )
     {
-      *(float *)(result + 120) = flt_60AF1EA0[*(_DWORD *)(result + 548)];
+      *(float *)(result + 120) = arr_flt_60AF1EA0[*(_DWORD *)(result + 548)];
       *(_BYTE *)(result + 6257) = 0;
     }
     v1 = MEMORY[0xB025F0];
@@ -17850,7 +17850,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6046B670(int result)
   {
-    *(_DWORD *)(result + 120) = dword_60AF2170[*(_DWORD *)(result + 80)];
+    *(_DWORD *)(result + 120) = arr_dword_60AF2170[*(_DWORD *)(result + 80)];
     return result;
   }
 
@@ -18094,7 +18094,7 @@ static inline unsigned int uxtb16(unsigned int x)
       case 13:
         *(_DWORD *)(result + 116) = 1165623296;
         v2 = *(_DWORD *)(result + 80);
-        v3 = &flt_60AF1EA0[v2];
+        v3 = &arr_flt_60AF1EA0[v2];
         if ( !*(_DWORD *)(result + 6216) )
           v3 = (float *)(4 * v2 + 11544060);
         *(float *)(result + 120) = *v3;
@@ -18553,7 +18553,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 116) = v1;
     if ( *(_DWORD *)(a1 + 6216) )
     {
-      *(_DWORD *)(a1 + 120) = dword_60AF2168[*(_DWORD *)(a1 + 80)];
+      *(_DWORD *)(a1 + 120) = arr_dword_60AF2168[*(_DWORD *)(a1 + 80)];
       *(_DWORD *)(a1 + 124) = 1075838976;
       v3 = MEMORY[0xB025DC];
       *(_DWORD *)(a1 + 128) = 0;
@@ -18771,9 +18771,9 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result == 1 )
       {
         *(_BYTE *)(a1 + 6250) = *(_BYTE *)(v2 + 84);
-        v4 = flt_60AF2078[*(_DWORD *)(a1 + 80)] + *(float *)(v2 + 120);
+        v4 = arr_flt_60AF2078[*(_DWORD *)(a1 + 80)] + *(float *)(v2 + 120);
         if ( fabsf(v4) < 2.5 )
-          v4 = flt_60AF2078[*(_DWORD *)(a1 + 80)];
+          v4 = arr_flt_60AF2078[*(_DWORD *)(a1 + 80)];
         *(float *)(a1 + 120) = v4;
         *(_DWORD *)(a1 + 124) = 1065353216;
         *(_DWORD *)(a1 + 128) = 0;
@@ -19275,7 +19275,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(v2 - 10) = v5;
     v7 = **(_DWORD **)(v5 + 12);
     v8 = LoadResource(MEMORY[0xC9CA88], (_DWORD *)&unk_60C9D720 + 2 * *v2);
-    SkeletalAnim_play(v7, v8, &dword_60C9D790[2 * *v2]);
+    SkeletalAnim_play(v7, v8, &arr_dword_60C9D790[2 * *v2]);
     *(_DWORD *)(**(_DWORD **)(*(v2 - 10) + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*(v2 - 10) + 12) + 4, 1);
     Vector2_pickBySignAndTag2(**(_DWORD **)(*(v2 - 10) + 12) + 4);
@@ -19835,9 +19835,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v1[0] = 12321336;
     v1[1] = &unk_60AC99BD;
     *(_DWORD *)Profile__Profile(13227976, 4646032, MEMORY[0xAF2DAC], (int)v1, &unk_60B02890, 0) = 12567768;
-    dword_60C9D7E8[0] = 0x40000000;
-    dword_60C9D7E8[1] = -1073741824;
-    dword_60C9D7E8[2] = 1107296256;
+    arr_dword_60C9D7E8[0] = 0x40000000;
+    arr_dword_60C9D7E8[1] = -1073741824;
+    arr_dword_60C9D7E8[2] = 1107296256;
     dword_60C9D7F4 = 1107296256;
     return dword_60C9D7E8;
   }
@@ -21324,7 +21324,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v14; // [sp+1Ch] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 6112);
-    Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C9D920[2 * *(_DWORD *)(a1 + 6112)]);
+    Resource = LoadResource(MEMORY[0xC9CA88], &arr_dword_60C9D920[2 * *(_DWORD *)(a1 + 6112)]);
     *(v2 - 3) = Resource;
     Model2 = Resource_getModel2(Resource, (int)&unk_60C9D960 + 8 * *v2, 1, 1, 0, 0, 0, 0, 0);
     v5 = (_DWORD *)__operator_new(48, 0, 4);
@@ -24853,7 +24853,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else
       {
-        v19 = flt_60B02950[v21];
+        v19 = arr_flt_60B02950[v21];
       }
       *(float *)(**(_DWORD **)(v7 + 3512) + 16) = v19;
       v20 = *(_DWORD *)(MEMORY[0xCD0B40] + 36);
@@ -29055,7 +29055,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = StaffCreditTable_init(v5);
     if ( ((unsigned int)&unk_60C9EAB8 & ~(1615315332 << v7) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9EAB8) )
     {
-      dword_60C9DA68[0] = 12321336;
+      arr_dword_60C9DA68[0] = 12321336;
       dword_60C9DA6C = (int)"CourseName_1-1";
       dword_60C9DA70 = 12321336;
       dword_60C9DA74 = (int)"CourseName_1-2";

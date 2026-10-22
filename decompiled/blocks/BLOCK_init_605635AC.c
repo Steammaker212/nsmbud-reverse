@@ -46,11 +46,11 @@ int __fastcall sub_605635AC(int a1, int a2, int a3);
 /* line: 23 */   {
 /* line: 24, address: 0x60563638 */     v7 = MEMORY[0xCB061C];
 /* line: 25, address: 0x60563648 */     v8 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 360))(a1);
-/* line: 26, address: 0x6056365c */     v9 = sub_605B9F30(v7, dword_60B04164[v8]);
+/* line: 26, address: 0x6056365c */     v9 = sub_605B9F30(v7, arr_dword_60B04164[v8]);
 /* line: 27 */   }
 /* line: 28 */   else
 /* line: 29 */   {
-/* line: 30, address: 0x6056367c */     v9 = dword_60B04164[(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 360))(a1)];
+/* line: 30, address: 0x6056367c */     v9 = arr_dword_60B04164[(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 360))(a1)];
 /* line: 31 */   }
 /* line: 32, address: 0x60563684 */   *(_DWORD *)(a1 + 6856) = v9;
 /* line: 33, address: 0x60563698 */   v10 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 352))(a1);

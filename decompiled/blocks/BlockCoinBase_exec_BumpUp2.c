@@ -1,6 +1,6 @@
 #include "nsmbudx_prelude.h"
 
-// ---- addr: 0x605b68e0 */ int __fastcall BlockCoinBase_executeState_BumpUp2(_BYTE *a1)
+/* ---- addr: 0x605b68e0 */ int __fastcall BlockCoinBase_executeState_BumpUp2(_BYTE *a1)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r0
 /* line: 3 */   _DWORD *v3; // r5
@@ -29,7 +29,7 @@
 /* line: 26 */         && *((int *)a1 + 1723) >= 8
 /* line: 27 */         && (*(int (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 236))(a1) != 3 )
 /* line: 28 */       {
-/* line: 29, address: 0x605b6974 */         *((_DWORD *)a1 + 1723) = dword_60AF4C90[*((_DWORD *)a1 + 1723) - 8];
+/* line: 29, address: 0x605b6974 */         *((_DWORD *)a1 + 1723) = arr_dword_60AF4C90[*((_DWORD *)a1 + 1723) - 8];
 /* line: 30, address: 0x605b6978 */         v5 = *((float *)a1 + 28);
 /* line: 31, address: 0x605b6978 */         v6 = *((_DWORD *)a1 + 29);
 /* line: 32, address: 0x605b697c */         v16 = *((_DWORD *)a1 + 27);
@@ -47,8 +47,8 @@
 /* line: 44, address: 0x605b69f0 */     if ( v7 > 13 )
 /* line: 45, address: 0x605b69f0 */       v9 = 14;
 /* line: 46, address: 0x605b69f4 */     *((_DWORD *)a1 + 1723) = v9;
-/* line: 47, address: 0x605b69fc */     v10 = flt_60B05370[v9];
-/* line: 48, address: 0x605b6a00 */     v11 = dword_60B053AC[v9];
+/* line: 47, address: 0x605b69fc */     v10 = arr_flt_60B05370[v9];
+/* line: 48, address: 0x605b6a00 */     v11 = arr_dword_60B053AC[v9];
 /* line: 49, address: 0x605b6a0c */     *((float *)a1 + 1699) = v10;
 /* line: 50, address: 0x605b6a10 */     *((_DWORD *)a1 + 36) = v11;
 /* line: 51, address: 0x605b6a18 */     v12 = v10;

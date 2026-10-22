@@ -1,6 +1,6 @@
 #include "nsmbudx_prelude.h"
 
-// ---- addr: 0x60563984 */ int __fastcall BlockBase_onDraw(int a1)
+/* ---- addr: 0x60563984 */ int __fastcall BlockBase_onDraw(int a1)
 /* line: 1 */ {
 /* line: 2 */   float v1; // r2
 /* line: 3 */   int v2; // r3

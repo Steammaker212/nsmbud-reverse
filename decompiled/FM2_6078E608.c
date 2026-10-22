@@ -40,7 +40,7 @@ int __fastcall sub_6078E608(_DWORD *a1, int a2);
 /* line: 17, address: 0x6078e61c */   if ( v4 != -1 )
 /* line: 18, address: 0x6078e61c */     a2 = v4;
 /* line: 19, address: 0x6078e624 */   a1[118] = a2;
-/* line: 20, address: 0x6078e63c */   (*(void (__fastcall **)(_DWORD *, _DWORD))(*a1 + 212))(a1, dword_60B0C230[a2]);
+/* line: 20, address: 0x6078e63c */   (*(void (__fastcall **)(_DWORD *, _DWORD))(*a1 + 212))(a1, arr_dword_60B0C230[a2]);
 /* line: 21, address: 0x6078e640 */   v5 = a1[75];
 /* line: 22, address: 0x6078e644 */   v6 = 0;
 /* line: 23, address: 0x6078e64c */   if ( v5 >= 6 )

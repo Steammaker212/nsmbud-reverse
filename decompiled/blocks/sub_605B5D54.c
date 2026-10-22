@@ -77,7 +77,7 @@ float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a
 /* line: 57, address: 0x605b5ecc */       v11 = *((_DWORD *)result + 1716);
 /* line: 58, address: 0x605b5ed8 */       v14 = *((_DWORD *)result + 27);
 /* line: 59, address: 0x605b5ec0 */       v10 = *(float *)&v14;
-/* line: 60, address: 0x605b5eec */       v12 = flt_60AF1EE8[(unsigned __int8)(v11 - 2)];
+/* line: 60, address: 0x605b5eec */       v12 = arr_flt_60AF1EE8[(unsigned __int8)(v11 - 2)];
 /* line: 61, address: 0x605b5efc */       v13 = MEMORY[0xC7F534];
 /* line: 62, address: 0x605b5f00 */       v15[0] = v9 + v12;
 /* line: 63, address: 0x605b5f04 */       mapPositionToScreen(v17, &v14);

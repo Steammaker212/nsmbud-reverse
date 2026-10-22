@@ -113,7 +113,7 @@ void __fastcall sub_605D4BF4(int a1, _DWORD *a2);
 /* line: 90 */       {
 /* line: 91, address: 0x605d4e7c */         sub_605D4F08(a1, &v25, &v25, a2);
 /* line: 92 */       }
-/* line: 93, address: 0x605d4ea4 */       sub_60466B64(MEMORY[0xC9D3E4], &v25, dword_60B05934[*(_DWORD *)(a1 + 728)], *(unsigned __int8 *)(a1 + 86));
+/* line: 93, address: 0x605d4ea4 */       sub_60466B64(MEMORY[0xC9D3E4], &v25, arr_dword_60B05934[*(_DWORD *)(a1 + 728)], *(unsigned __int8 *)(a1 + 86));
 /* line: 94 */     }
 /* line: 95 */     else
 /* line: 96 */     {

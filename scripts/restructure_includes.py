@@ -91,6 +91,25 @@ typedef struct { uint32x4_t val[2]; }  uint32x4x2_t;
 typedef struct { int8x16_t val[2]; }   int8x16x2_t;
 typedef struct { uint8x16_t val[2]; }  uint8x16x2_t;
 
+/* ---- IDA half/byte accessors ----
+ * The decompiler writes `LODWORD(x)`, `HIDWORD(x)`, `LOBYTE(x)` ... for "the low dword of x".
+ * These are used in BOTH directions: as an rvalue (`v = LODWORD(x)`) and as an lvalue
+ * (`LODWORD(v20[1]) = "wrist_l1";`), 2,839 of the 4,617 sites being assignments. A function-like
+ * macro cannot be assigned to, which is why those sites failed with "expression is not assignable".
+ * Defining them as dereferencing casts over the operand's address makes both directions work and
+ * keeps the spelling the decompiler chose.
+ *
+ * Strict aliasing: this is deliberately type-punning through a pointer cast. It is what the original
+ * code does at the instruction level, and the corpus is never actually executed -- it is read. */
+#define LODWORD(x)  (*(uint32_t *)(void *)&(x))
+#define HIDWORD(x)  (*(uint32_t *)(void *)((char *)&(x) + 4))
+#define LOWORD(x)   (*(uint16_t *)(void *)&(x))
+#define HIWORD(x)   (*(uint16_t *)(void *)((char *)&(x) + 2))
+#define LOBYTE(x)   (*(uint8_t  *)(void *)&(x))
+#define HIBYTE(x)   (*(uint8_t  *)(void *)((char *)&(x) + 1))
+#define SLODWORD(x) (*(int32_t  *)(void *)&(x))
+#define SHIDWORD(x) (*(int32_t  *)(void *)((char *)&(x) + 4))
+
 /* ---- C++ allocation operators ----
  * The decompiler prints `operator new(size)` / `operator delete(p)`, which is not C. Those call
  * sites are rewritten to these names by scripts/fix_qualified_names.py.

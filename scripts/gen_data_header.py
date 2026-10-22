@@ -92,6 +92,22 @@ def main():
             "#define %s (*(%s *)(uintptr_t)(0x%08Xu + 0x%08Xu))" % (n, cty, BASE, r["rva"])
         )
 
+    # Pointer form for the same addresses.
+    #
+    # The scalar macro above expands to `(*(T *)(addr))`, which is a VALUE -- so `dword_X[3]` is a
+    # subscript of an integer and clang rejects it ("subscripted value is not an array"). But the
+    # corpus subscripts these labels 2,478 times, meaning "the i-th element starting at that
+    # address". A name cannot be both a scalar and an array, so the subscripted uses get a second,
+    # explicitly-named pointer macro and scripts/fix_array_data_macros.py rewrites `dword_X[` to
+    # `arr_dword_X[`. Both spellings stay greppable and map to the same address.
+    lines += ["", "/* ---- pointer forms, for the sites that index into a table ---- */"]
+    for n in sorted(clean):
+        r = clean[n]
+        cty = CTYPE.get(r["width"], "uint8_t")
+        lines.append(
+            "#define arr_%s ((%s *)(uintptr_t)(0x%08Xu + 0x%08Xu))" % (n, cty, BASE, r["rva"])
+        )
+
     lines += ["", "#endif /* NSMBUDX_DATA_H */", ""]
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

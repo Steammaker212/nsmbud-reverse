@@ -36,7 +36,7 @@ int __fastcall sub_6047C13C(unsigned int a1, unsigned int a2, int *a3);
 /* line: 13, address: 0x6047c170 */   v6 = sub_6047DCCC(v5);
 /* line: 14, address: 0x6047c208 */   if ( ((unsigned int)&unk_60C9EAB8 & ~(1615315332 << v7) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9EAB8) )
 /* line: 15 */   {
-/* line: 16, address: 0x6047c248 */     dword_60C9DA68[0] = 12321336;
+/* line: 16, address: 0x6047c248 */     arr_dword_60C9DA68[0] = 12321336;
 /* line: 17, address: 0x6047c24c */     dword_60C9DA6C = (int)"CourseName_1-1";
 /* line: 18, address: 0x6047c254 */     dword_60C9DA70 = 12321336;
 /* line: 19, address: 0x6047c268 */     dword_60C9DA74 = (int)"CourseName_1-2";
@@ -1088,11 +1088,11 @@ int __fastcall sub_6047C13C(unsigned int a1, unsigned int a2, int *a3);
 /* line: 1065, address: 0x6047d5bc */     LOWORD(a1) = 0;
 /* line: 1066, address: 0x6047d5c4 */   if ( a2 >= 0x3A )
 /* line: 1067, address: 0x6047d5c4 */     a2 = 0;
-/* line: 1068, address: 0x6047d5d4 */   v9 = (unsigned __int8 **)&dword_60C9DA68[116 * (__int16)a1 + 2 * a2];
+/* line: 1068, address: 0x6047d5d4 */   v9 = (unsigned __int8 **)&arr_dword_60C9DA68[116 * (__int16)a1 + 2 * a2];
 /* line: 1069, address: 0x6047d5e0 */   (*((void (__fastcall **)(unsigned __int8 **))*v9 + 3))(v9);
 /* line: 1070, address: 0x6047d5e8 */   if ( !*v9[1] )
 /* line: 1071, address: 0x6047d5f0 */     a2 = *v9[1];
-/* line: 1072, address: 0x6047d5f4 */   v10 = &dword_60C9DA68[116 * (__int16)a1 + 2 * a2];
+/* line: 1072, address: 0x6047d5f4 */   v10 = &arr_dword_60C9DA68[116 * (__int16)a1 + 2 * a2];
 /* line: 1073, address: 0x6047d600 */   (*(void (__fastcall **)(int *))(*v10 + 12))(v10);
 /* line: 1074, address: 0x6047d610 */   v11 = sub_60911638(*(_DWORD *)(v6 + 4), v10[1]);
 /* line: 1075, address: 0x6047d628 */   *a3 = sub_609119F8(v6, v11) >> 1;

@@ -1,6 +1,6 @@
 #include "nsmbudx_prelude.h"
 
-// ---- addr: 0x60564834 */ int __fastcall sub_60564834(int a1)
+/* ---- addr: 0x60564834 */ int __fastcall sub_60564834(int a1)
 /* line: 1 */ {
 /* line: 2 */   float v1; // s0
 /* line: 3 */   float v2; // s1

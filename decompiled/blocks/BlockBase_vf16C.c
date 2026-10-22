@@ -1,6 +1,6 @@
 #include "nsmbudx_prelude.h"
 
-// ---- addr: 0x605640bc */ int __fastcall BlockBase_vf16C(int a1)
+/* ---- addr: 0x605640bc */ int __fastcall BlockBase_vf16C(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r1
 /* line: 3 */   int *v3; // r5

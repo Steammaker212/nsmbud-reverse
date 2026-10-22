@@ -31,6 +31,14 @@ WIDTHS = {
 
 LABEL = re.compile(r"\b((?:dword|unk|byte|word|qword|flt|dbl|off)_([0-9A-Fa-f]{6,8}))\b")
 
+# The corpus may already contain the POINTER spelling `arr_dword_60AF2280` (produced by
+# scripts/fix_array_data_macros.py, which runs on the source trees earlier in the build). A leading
+# `arr_` must be stripped and the BASE label recorded, because gen_data_header.py emits both the
+# scalar macro and the arr_ form from one row. Without this the rewrite is invisible to the label
+# derivation, no macro is emitted for the address, and the file fails with "use of undeclared
+# identifier 'arr_dword_...'" -- which is exactly the regression this comment exists to prevent.
+ARR = re.compile(r"\barr_((?:dword|unk|byte|word|qword|flt|dbl|off)_([0-9A-Fa-f]{6,8}))\b")
+
 
 def main(argv):
     if len(argv) < 3:
@@ -45,8 +53,11 @@ def main(argv):
                 continue
             path = os.path.join(dp, f)
             with open(path, encoding="utf-8", errors="replace") as fh:
-                for m in LABEL.finditer(fh.read()):
-                    found[m.group(1)] = int(m.group(2), 16)
+                body = fh.read()
+            for m in LABEL.finditer(body):
+                found[m.group(1)] = int(m.group(2), 16)
+            for m in ARR.finditer(body):
+                found[m.group(1)] = int(m.group(2), 16)
 
     data = []
     skipped = 0

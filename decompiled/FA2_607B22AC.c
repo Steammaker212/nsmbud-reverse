@@ -119,7 +119,7 @@ int __fastcall sub_607B22AC(int a1);
 /* line: 96 */       {
 /* line: 97, address: 0x607b249c */         v14 = (_DWORD *)(a1 + 11360);
 /* line: 98, address: 0x607b249c */         v13 = *(_DWORD **)(a1 + 11360);
-/* line: 99, address: 0x607b24b8 */         if ( v13[7] != dword_60AF2280[*(_DWORD *)(a1 + 80)] )
+/* line: 99, address: 0x607b24b8 */         if ( v13[7] != arr_dword_60AF2280[*(_DWORD *)(a1 + 80)] )
 /* line: 100 */         {
 /* line: 101, address: 0x607b24d0 */           (*(void (__fastcall **)(_DWORD *))(*v13 + 84))(v13);
 /* line: 102, address: 0x607b24d4 */           v13 = (_DWORD *)*v14;

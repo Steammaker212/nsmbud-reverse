@@ -1,6 +1,6 @@
 #include "nsmbudx_prelude.h"
 
-// ---- addr: 0x60563170 */ void __fastcall MovementBlockCoinBase::~MovementBlockCoinBase(Actor *a1)
+/* ---- addr: 0x60563170 */ void __fastcall MovementBlockCoinBase__dtor(Actor *a1)
 /* line: 1 */ {
 /* line: 2, address: 0x6056318c */   *(_DWORD *)a1 = 12620796;
 /* line: 3, address: 0x60563190 */   ShapedCollider_dtor();

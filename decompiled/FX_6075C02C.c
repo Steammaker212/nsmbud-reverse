@@ -42,7 +42,7 @@ int __fastcall sub_6075C02C(int a1, int a2, int a3, int a4, int a5, int a6, int 
 /* line: 19, address: 0x6075c080 */     if ( v15 != 1 )
 /* line: 20, address: 0x6075c080 */       v15 = 0;
 /* line: 21 */   }
-/* line: 22, address: 0x6075c0a4 */   sub_6078C444(a1, &dword_60CBF198[2 * (v15 | (16 * v15))], a2, a3, a4, a9);
+/* line: 22, address: 0x6075c0a4 */   sub_6078C444(a1, &arr_dword_60CBF198[2 * (v15 | (16 * v15))], a2, a3, a4, a9);
 /* line: 23, address: 0x6075c0c4 */   *(_DWORD *)a1 = 12730588;
 /* line: 24, address: 0x6075c0cc */   v21 = 12321336;
 /* line: 25, address: 0x6075c0dc */   v22 = "MiiAnm";

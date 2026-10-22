@@ -41,7 +41,7 @@ int __fastcall sub_6013FB0C(int a1);
 /* line: 18, address: 0x6013fb2c */   *(_DWORD *)(a1 + 152) = 0;
 /* line: 19, address: 0x6013fb30 */   v2 = *(_DWORD *)(a1 + 20);
 /* line: 20, address: 0x6013fb3c */   *(_DWORD *)(a1 + 80) = v2 & 1;
-/* line: 21, address: 0x6013fb48 */   *(float *)(a1 + 160) = flt_60AF1EC0[v2 & 1];
+/* line: 21, address: 0x6013fb48 */   *(float *)(a1 + 160) = arr_flt_60AF1EC0[v2 & 1];
 /* line: 22, address: 0x6013fb50 */   *(_DWORD *)(a1 + 164) = 0;
 /* line: 23, address: 0x6013fb58 */   *(_DWORD *)(a1 + 156) = -775480206;
 /* line: 24, address: 0x6013fb64 */   *(_DWORD *)(a1 + 144) = 1050253722;

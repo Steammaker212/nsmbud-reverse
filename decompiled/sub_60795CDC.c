@@ -57,7 +57,7 @@ int __fastcall sub_60795CDC(int a1, int a2, int a3);
 /* line: 34, address: 0x60795d24 */   *(_DWORD *)(a1 + 500) = 1097859072;
 /* line: 35, address: 0x60795d30 */   *(_DWORD *)(a1 + 504) = 1102053376;
 /* line: 36, address: 0x60795d38 */   v5 = *(_DWORD *)(a1 + 1320);
-/* line: 37, address: 0x60795d40 */   v6 = flt_60B0C2BC[v5];
+/* line: 37, address: 0x60795d40 */   v6 = arr_flt_60B0C2BC[v5];
 /* line: 38, address: 0x60795d44 */   *(float *)(a1 + 1244) = v6;
 /* line: 39, address: 0x60795d48 */   v7 = v6;
 /* line: 40, address: 0x60795d50 */   v8 = *(_DWORD *)(*(_DWORD *)(a1 + 11360) + 196);

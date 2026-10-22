@@ -29,7 +29,7 @@ int __fastcall sub_6078E608(_DWORD *a1, int a2)
   if ( v4 != -1 )
     a2 = v4;
   a1[118] = a2;
-  (*(void (__fastcall **)(_DWORD *, _DWORD))(*a1 + 212))(a1, dword_60B0C230[a2]);
+  (*(void (__fastcall **)(_DWORD *, _DWORD))(*a1 + 212))(a1, arr_dword_60B0C230[a2]);
   v5 = a1[75];
   v6 = 0;
   if ( v5 >= 6 )
@@ -131,7 +131,7 @@ int __fastcall sub_6078E608(_DWORD *a1, int a2)
   if ( v4 != -1 )
     a2 = v4;
   a1[118] = a2;
-  (*(void (__fastcall **)(_DWORD *, _DWORD))(*a1 + 212))(a1, dword_60B0C230[a2]);
+  (*(void (__fastcall **)(_DWORD *, _DWORD))(*a1 + 212))(a1, arr_dword_60B0C230[a2]);
   v5 = a1[75];
   v6 = 0;
   if ( v5 >= 6 )
@@ -355,7 +355,7 @@ int *__fastcall sub_60787B8C(int a1, int a2, int a3)
         v20 = 1;
         if ( (v17 | 1) == 3 || (v20 = 0, v17 != 6) )
         {
-          v19 = dword_60B0C20C[v17];
+          v19 = arr_dword_60B0C20C[v17];
           if ( (unsigned int)(v19 - 29) <= 3 )
           {
             v95 = v19;
@@ -399,7 +399,7 @@ int *__fastcall sub_60787B8C(int a1, int a2, int a3)
         v23 = 0;
         goto LABEL_91;
       }
-      v23 = dword_60B0C20C[v22];
+      v23 = arr_dword_60B0C20C[v22];
       v46 = v23 - 29;
       v47 = (v16 & (1 << (v23 - 29))) == 0;
       if ( (v16 & (1 << (v23 - 29))) != 0 )
@@ -426,7 +426,7 @@ LABEL_91:
             goto LABEL_104;
           }
 LABEL_99:
-          v50 = dword_60B0C20C[v49];
+          v50 = arr_dword_60B0C20C[v49];
           v51 = v50 - 29;
           v52 = (v16 & (1 << (v50 - 29))) == 0;
           if ( (v16 & (1 << (v50 - 29))) != 0 )
@@ -575,7 +575,7 @@ LABEL_157:
       }
       if ( v35 || (v34 = 0, (unsigned int)(v33 - 5) >= 2) )
       {
-        v19 = dword_60B0C1F4[v33];
+        v19 = arr_dword_60B0C1F4[v33];
         if ( (unsigned int)(v19 - 29) <= 3 )
         {
           v95 = v19;
@@ -622,7 +622,7 @@ LABEL_157:
         goto LABEL_134;
       }
     }
-    v23 = dword_60B0C1F4[v57];
+    v23 = arr_dword_60B0C1F4[v57];
     v61 = v23 - 29;
     v62 = (v16 & (1 << (v23 - 29))) == 0;
     if ( (v16 & (1 << (v23 - 29))) != 0 )
@@ -676,7 +676,7 @@ LABEL_147:
           goto LABEL_147;
         }
       }
-      v50 = dword_60B0C1F4[v64];
+      v50 = arr_dword_60B0C1F4[v64];
       v65 = v50 - 29;
       v66 = (v16 & (1 << (v50 - 29))) == 0;
       if ( (v16 & (1 << (v50 - 29))) != 0 )

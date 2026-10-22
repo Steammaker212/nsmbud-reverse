@@ -40,10 +40,10 @@ int __fastcall sub_607A2F40(unsigned __int8 *a1);
 /* line: 17 */   {
 /* line: 18, address: 0x607a2fd8 */     v3 = (*(int (__fastcall **)(unsigned __int8 *, _DWORD))(*(_DWORD *)a1 + 156))(a1, *((_DWORD *)a1 + 2846));
 /* line: 19, address: 0x607a3014 */     *((float *)a1 + 28) = *((float *)a1 + 28)
-/* line: 20 */                         + (float)(flt_60B0C8A0[(*(int (__fastcall **)(unsigned __int8 *, _DWORD))(*(_DWORD *)a1 + 156))(
+/* line: 20 */                         + (float)(arr_flt_60B0C8A0[(*(int (__fastcall **)(unsigned __int8 *, _DWORD))(*(_DWORD *)a1 + 156))(
 /* line: 21 */                                                  a1,
 /* line: 22 */                                                  *((_DWORD *)a1 + 330))]
-/* line: 23 */                                 - flt_60B0C8A0[v3]);
+/* line: 23 */                                 - arr_flt_60B0C8A0[v3]);
 /* line: 24 */   }
 /* line: 25, address: 0x607a3024 */   if ( (a1[1219] & 2) != 0 )
 /* line: 26, address: 0x607a302c */     sub_607B8AC4(a1);

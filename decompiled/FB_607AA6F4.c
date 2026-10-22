@@ -35,5 +35,5 @@ int __fastcall sub_607AA6F4(int a1);
 /* line: 12, address: 0x607aa73c */     return sub_60236F74(*(char *)(a1 + 84), v2, 1234, a1 + 108, 0, 0);
 /* line: 13, address: 0x607aa744 */   v5 = a1 + 108;
 /* line: 14, address: 0x607aa74c */   v6 = (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 156))(a1, v3);
-/* line: 15, address: 0x607aa77c */   return sub_60236F74(v1, v2, dword_60B0CD60[v6], v5, 0, 0);
+/* line: 15, address: 0x607aa77c */   return sub_60236F74(v1, v2, arr_dword_60B0CD60[v6], v5, 0, 0);
 /* line: 16 */ }
