@@ -5,7 +5,7 @@
 # Addresses are in-image addresses (VA - 0x60000000) and are
 # strictly below NSMBUDX_NSO_MEMORY_SIZE (0x00CD1000).
 #
-# symbols: 19589
+# symbols: 19593
 #
 # Name corrections applied (verified against disassembly):
 #   _ZN10StageActor18directionToPlayerXERK4Vec2
@@ -6136,6 +6136,7 @@ Player_create = 0x00794EA4;
 Player_ctor = 0x00794EC0;
 Player_setPowerupMode = 0x00795CDC;
 SE_OBJ_BOUND_BLOCK_JUMP_HIGH_ref_2_helper = 0x00796388;
+Player_modeToGroupIndex = 0x00796A60;
 Player_vf41 = 0x0079770C;
 registerProfile_Player_create_797FC4 = 0x00797FC4;
 SE_PLY_BALLOON_BRAKE_ref_2 = 0x00798044;
@@ -19220,6 +19221,9 @@ a1h = 0x00B0A8A0;
 aFff333 = 0x00B0A8FC;
 aFff_0 = 0x00B0B084;
 a333 = 0x00B0B2D8;
+Player_modeGroupTable = 0x00B0C300;
+Player_modeGroupDataTable = 0x00B0C8F0;
+Player_heightFallbackBySubtype = 0x00B0CE34;
 
 _ZTSN2nn4font10RectDrawerE = 0x00B14CB0;
 _ZTSN2nn4font16TagProcessorBaseIcEE = 0x00B14CD0;

@@ -152,6 +152,7 @@ int __fastcall sub_60795CDC(int a1, int a2, int a3);  /* 0x00795cdc */
 int __fastcall sub_60796388(int a1);  /* 0x00796388 */
 int __fastcall sub_607965CC(int a1);  /* 0x007965cc */
 int __fastcall sub_60796828(int a1);  /* 0x00796828 */
+int __fastcall sub_60796A60(int a1, int a2);  /* 0x00796a60 */
 int __fastcall sub_60796F0C(int a1);  /* 0x00796f0c */
 int __fastcall sub_607971BC(int a1);  /* 0x007971bc */
 bool __fastcall sub_60797820(_DWORD *a1);  /* 0x00797820 */
