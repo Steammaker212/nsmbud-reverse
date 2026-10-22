@@ -1,4 +1,5 @@
-/* line: 0, address: 0x6000306c */ int __fastcall CollisionActor::CollisionActor(int a1)
+#include "nsmbudx_prelude.h"
+/* line: 0, address: 0x6000306c */ int __fastcall CollisionActor_CollisionActor(int a1)
 /* line: 1 */ {
 /* line: 2, address: 0x60003074 */   StageActor::StageActor();
 /* line: 3, address: 0x6000308c */   *(_DWORD *)a1 = 12321080;

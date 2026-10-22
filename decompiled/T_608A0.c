@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x607608a0 */ int __fastcall sub_607608A0(int result, _DWORD *a2)
 /* line: 1 */ {
 /* line: 2, address: 0x607608a4 */   *(_DWORD *)(result + 12) = 0;

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x601709b4 */ int __fastcall sub_601709B4(int a1, int a2)
 /* line: 1 */ {
 /* line: 2 */   int v3; // r2

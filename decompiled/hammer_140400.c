@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60140400 */ int sub_60140400()
 /* line: 1 */ {
 /* line: 2, address: 0x60140420 */   if ( _cxa_guard_acquire_0(13139240) )

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60461be4 */ int __fastcall sub_60461BE4(int a1)
 /* line: 1 */ {
 /* line: 2, address: 0x60461bf0 */   if ( (*(_DWORD *)(a1 + 20) & 0x1F000000) == 0x9000000 )

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60582b14 */ _BYTE *__fastcall sub_60582B14(int a1, _DWORD *a2, int a3, int a4)
 /* line: 1 */ {
 /* line: 2 */   _DWORD v8[11]; // [sp+4h] [bp-2Ch] BYREF

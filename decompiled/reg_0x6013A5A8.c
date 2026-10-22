@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6013a5a8 */ int sub_6013A5A8()
 /* line: 1 */ {
 /* line: 2 */   _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 
 // ---- addr: 0x60563ab8 */ int __fastcall sub_60563AB8(_DWORD *a1)
 /* line: 1 */ {

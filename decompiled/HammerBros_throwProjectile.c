@@ -1,4 +1,5 @@
-/* line: 0, address: 0x602cc124 */ int __fastcall HammerBros::throwProjectile(int a1)
+#include "nsmbudx_prelude.h"
+/* line: 0, address: 0x602cc124 */ int __fastcall HammerBros_throwProjectile(int a1)
 /* line: 1 */ {
 /* line: 2 */   int result; // r0
 /* line: 3 */   _DWORD *v3; // r4

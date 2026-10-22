@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60461c50 */ int __fastcall sub_60461C50(int a1)
 /* line: 1 */ {
 /* line: 2 */   int result; // r0
@@ -50,7 +51,7 @@
 /* line: 49, address: 0x60461f40 */         v11 = *(float *)(v9 + 4 * v8);
 /* line: 50, address: 0x60461f48 */         goto LABEL_29;
 /* line: 51 */       }
-/* line: 52, address: 0x60461f7c */       v11 = (float)(COERCE_FLOAT((sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000)
+/* line: 52, address: 0x60461f7c */       v11 = (float)(COERCE_FLOAT((sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000)
 /* line: 53 */                   + -1.0)
 /* line: 54 */           * 0.2;
 /* line: 55 */ LABEL_29:

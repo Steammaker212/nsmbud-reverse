@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60135bd8 */ int __fastcall FireballBase_onCreate(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v1; // s0

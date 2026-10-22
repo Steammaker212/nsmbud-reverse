@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x601404e4 */ int __fastcall sub_601404E4(StageActor *a1)
 /* line: 1 */ {
 /* line: 2, address: 0x60140500 */   *(_DWORD *)a1 = 12399284;

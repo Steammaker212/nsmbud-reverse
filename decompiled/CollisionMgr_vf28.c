@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60152c18 */ int __fastcall CollisionMgr_vf28(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r5

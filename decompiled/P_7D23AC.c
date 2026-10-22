@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x607d23ac */ // attributes: thunk
 /* line: 1 */ int operator delete()
 /* line: 2 */ {

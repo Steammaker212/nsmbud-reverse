@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60452edc */ int __fastcall sub_60452EDC(int a1)
 /* line: 1 */ {
 /* line: 2 */   int result; // r0
@@ -66,7 +67,7 @@
 /* line: 65, address: 0x60453104 */       if ( (*(_BYTE *)(MEMORY[0xC99DD4] + 1052) & 0xF) != 0 )
 /* line: 66 */       {
 /* line: 67, address: 0x60453108 */         v5 = *(_DWORD *)(a1 + 1388);
-/* line: 68, address: 0x6045310c */         v6 = nullptr;
+/* line: 68, address: 0x6045310c */         v6 = 0;
 /* line: 69 */       }
 /* line: 70 */       else
 /* line: 71 */       {

@@ -10,13 +10,68 @@
 #pragma once
 
 #include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
+
+#include "structs.h"
+
+/* ---- IDA scalar aliases, at IDA's exact widths ----
+ * The decompiler output uses these; they are not standard C. Defined so this header can be
+ * included. An `_UNKNOWN` parameter is genuinely unresolved, not a real type. */
+#ifndef NSMBUDX_IDA_TYPES
+#define NSMBUDX_IDA_TYPES
+typedef unsigned char      _BYTE;
+typedef unsigned char      _BOOL1;
+typedef unsigned int       _BOOL4;
+typedef unsigned short     _WORD;
+typedef unsigned int       _DWORD;
+typedef unsigned long long _QWORD;
+typedef signed char        _SBYTE;
+typedef signed short       _SWORD;
+typedef signed int         _SDWORD;
+typedef signed long long   _SQWORD;
+typedef unsigned char      _UNKNOWN;
+typedef void              *_PVOID;
+typedef const char        *_LPCSTR;
+#endif
+
+/* ---- opaque forward declarations for qualified names in signatures ---- */
+#ifndef NSMBUDX_OPAQUE_QUALIFIED
+#define NSMBUDX_OPAQUE_QUALIFIED
+struct sead_IDisposer;
+struct sead_IDelegateBase;
+struct sead_Heap;
+struct sead_TreeNode;
+struct nw4f_ut_ResFileAccessor;
+struct nn_Result;
+#endif
+
+/* ---- NEON lane types appearing in signatures ---- */
+#ifndef NSMBUDX_NEON_TYPES
+#define NSMBUDX_NEON_TYPES
+typedef struct { float    v[2]; } float32x2_t;
+typedef struct { float    v[4]; } float32x4_t;
+typedef struct { double   v[2]; } float64x2_t;
+typedef struct { int32_t  v[2]; } int32x2_t;
+typedef struct { int32_t  v[4]; } int32x4_t;
+typedef struct { uint32_t v[4]; } uint32x4_t;
+typedef struct { int8_t   v[16]; } int8x16_t;
+typedef struct { uint8_t  v[16]; } uint8x16_t;
+typedef struct { int32x4_t val[2]; } int32x4x2_t;
+typedef struct { float32x2_t val[2]; } float32x2x2_t;
+typedef struct { float32x4_t val[2]; } float32x4x2_t;
+typedef struct { int32x2_t val[2]; } int32x2x2_t;
+typedef struct { uint32x4_t val[2]; } uint32x4x2_t;
+typedef struct { int8x16_t val[2]; } int8x16x2_t;
+typedef struct { uint8x16_t val[2]; } uint8x16x2_t;
+#endif
 
 /* RVAs are image-relative: VA = 0x60000000 + RVA */
 
 /* ---- player.c ---- */
 unsigned int __fastcall sub_607824B8(unsigned int result, int a2);  /* 0x007824b8 */
 unsigned int __fastcall sub_60782500(unsigned int result, int a2);  /* 0x00782500 */
-int __fastcall sub_607828E8(sead::IDisposer *a1);  /* 0x007828e8 */
+int __fastcall sub_607828E8(struct sead_IDisposer *a1);  /* 0x007828e8 */
 int __fastcall sub_60782A74(int a1, int a2);  /* 0x00782a74 */
 int __fastcall sub_60782C24(int a1, int a2);  /* 0x00782c24 */
 int __fastcall sub_60785024(int a1);  /* 0x00785024 */
@@ -72,7 +127,7 @@ int __fastcall sub_60786CCC(int result, int a2);  /* 0x00786ccc */
 int __fastcall sub_60786CF8(int result, int a2);  /* 0x00786cf8 */
 int __fastcall sub_60786D24(int result, int a2);  /* 0x00786d24 */
 int __fastcall sub_60786D50(int result, int a2);  /* 0x00786d50 */
-int __fastcall sub_60786DD0(sead::IDisposer *a1);  /* 0x00786dd0 */
+int __fastcall sub_60786DD0(struct sead_IDisposer *a1);  /* 0x00786dd0 */
 int __fastcall sub_60786E30(int a1);  /* 0x00786e30 */
 int __fastcall sub_60786EA8(int a1);  /* 0x00786ea8 */
 unsigned int __fastcall sub_60787024(int a1);  /* 0x00787024 */
@@ -166,10 +221,10 @@ int __fastcall sub_60792394(_BYTE *a1, int a2);  /* 0x00792394 */
 bool __fastcall sub_6079265C(int a1);  /* 0x0079265c */
 int __fastcall sub_6079266C(int result);  /* 0x0079266c */
 int __fastcall sub_60792680(_DWORD *a1, int a2);  /* 0x00792680 */
-int __fastcall sub_607926D8(sead::IDisposer *a1);  /* 0x007926d8 */
+int __fastcall sub_607926D8(struct sead_IDisposer *a1);  /* 0x007926d8 */
 bool __fastcall sub_6079270C(int a1, int a2);  /* 0x0079270c */
 int __fastcall sub_607929C0(int a1, _DWORD *a2, _DWORD *a3);  /* 0x007929c0 */
-int __fastcall sub_60792ABC(sead::IDisposer *a1);  /* 0x00792abc */
+int __fastcall sub_60792ABC(struct sead_IDisposer *a1);  /* 0x00792abc */
 int __fastcall sub_60792ACC(int a1);  /* 0x00792acc */
 unsigned __int64 __fastcall sub_60792ADC(int a1, unsigned int a2);  /* 0x00792adc */
 int __fastcall sub_60792B20(int a1, int a2);  /* 0x00792b20 */

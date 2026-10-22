@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x607cbd7c */ _DWORD *__fastcall sub_607CBD7C(int a1)
 /* line: 1 */ {
 /* line: 2 */   unsigned int v2; // r5
@@ -95,11 +96,11 @@
 /* line: 94, address: 0x607cbf70 */     sub_607CD1D4(a1);
 /* line: 95 */   }
 /* line: 96, address: 0x607cbf78 */   result = (_DWORD *)sub_607CFB50(a1);
-/* line: 97, address: 0x607cbf7c */   v32 = result == nullptr;
+/* line: 97, address: 0x607cbf7c */   v32 = result == 0;
 /* line: 98, address: 0x607cbf80 */   if ( result )
 /* line: 99 */   {
 /* line: 100, address: 0x607cbf80 */     result = (_DWORD *)result[155];
-/* line: 101, address: 0x607cbf84 */     v32 = result == nullptr;
+/* line: 101, address: 0x607cbf84 */     v32 = result == 0;
 /* line: 102 */   }
 /* line: 103, address: 0x607cbf88 */   if ( !v32 )
 /* line: 104, address: 0x607cbf98 */     return (_DWORD *)(*(int (__fastcall **)(_DWORD *, int))(*result + 12))(result, a1);

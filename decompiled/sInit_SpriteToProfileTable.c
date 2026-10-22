@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60014724 */ int sInit_SpriteToProfileTable()
 /* line: 1 */ {
 /* line: 2, address: 0x60014754 */   MEMORY[0xC7B7B4] = MEMORY[0xAF3474];

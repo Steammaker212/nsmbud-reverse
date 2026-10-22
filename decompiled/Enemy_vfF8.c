@@ -1,4 +1,5 @@
-/* line: 0, address: 0x602a29ac */ bool __fastcall Enemy::vfF8(int a1, int a2, int a3)
+#include "nsmbudx_prelude.h"
+/* line: 0, address: 0x602a29ac */ bool __fastcall Enemy_vfF8(int a1, int a2, int a3)
 /* line: 1 */ {
 /* line: 2 */   int v6; // r0
 /* line: 3 */   int v7; // r1

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6045d79c */ int __fastcall sub_6045D79C(int a1)
 /* line: 1 */ {
 /* line: 2 */   int Resource; // r8

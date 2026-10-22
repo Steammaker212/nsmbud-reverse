@@ -1,5 +1,6 @@
+#include "nsmbudx_prelude.h"
 
-// ---- addr: 0x605638c8 */ int __fastcall BlockBase::onExecute(_BYTE *a1)
+// ---- addr: 0x605638c8 */ int __fastcall BlockBase_onExecute(_BYTE *a1)
 /* line: 1 */ {
 /* line: 2 */   _BYTE *v2; // r5
 /* line: 3 */ 

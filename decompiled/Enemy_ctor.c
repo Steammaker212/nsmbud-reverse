@@ -1,4 +1,5 @@
-/* line: 0, address: 0x602a1a8c */ int __fastcall Enemy::Enemy(int a1)
+#include "nsmbudx_prelude.h"
+/* line: 0, address: 0x602a1a8c */ int __fastcall Enemy_Enemy(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r3
 /* line: 3 */   int v3; // r5

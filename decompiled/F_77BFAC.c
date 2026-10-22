@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6077bfac */ int sub_6077BFAC()
 /* line: 1 */ {
 /* line: 2, address: 0x6077bffc */   MEMORY[0xCBFBC4] = 12321336;

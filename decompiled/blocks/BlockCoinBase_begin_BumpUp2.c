@@ -1,5 +1,6 @@
+#include "nsmbudx_prelude.h"
 
-// ---- addr: 0x605b6858 */ int __fastcall BlockCoinBase::beginState_BumpUp2(int a1)
+// ---- addr: 0x605b6858 */ int __fastcall BlockCoinBase_beginState_BumpUp2(int a1)
 /* line: 1 */ {
 /* line: 2 */   int *v1; // r4
 /* line: 3 */   int v2; // t1

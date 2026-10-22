@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6014c6e4 */ int __fastcall CollisionMgr_process(unsigned __int8 *a1)
 /* line: 1 */ {
 /* line: 2 */   int result; // r0
@@ -212,7 +213,7 @@
 /* line: 211, address: 0x6014c930 */   v27 = *((float **)a1 + 551);
 /* line: 212, address: 0x6014c934 */   v28 = *((float **)a1 + 552);
 /* line: 213, address: 0x6014c93c */   v29 = 0;
-/* line: 214, address: 0x6014c940 */   v30 = nullptr;
+/* line: 214, address: 0x6014c940 */   v30 = 0;
 /* line: 215, address: 0x6014c950 */   v31 = *v28;
 /* line: 216, address: 0x6014c954 */   v32 = *v27;
 /* line: 217, address: 0x6014c964 */   v33 = *v27 < *v28;
@@ -223,7 +224,7 @@
 /* line: 222, address: 0x6014c974 */     goto LABEL_59;
 /* line: 223, address: 0x6014c978 */   v36 = *((_DWORD *)a1 + 643);
 /* line: 224, address: 0x6014c97c */   v29 = 0;
-/* line: 225, address: 0x6014c980 */   v30 = nullptr;
+/* line: 225, address: 0x6014c980 */   v30 = 0;
 /* line: 226, address: 0x6014c988 */   if ( v36 > 5 )
 /* line: 227, address: 0x6014c988 */     goto LABEL_59;
 /* line: 228, address: 0x6014c990 */   v29 = 1;

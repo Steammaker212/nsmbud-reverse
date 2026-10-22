@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60136f64 */ void __fastcall FireballBase_dtor(int a1)
 /* line: 1 */ {
 /* line: 2 */   LightSource *v2; // r5
@@ -8,7 +9,7 @@
 /* line: 7, address: 0x60136f94 */   LightSource::~LightSource(v2);
 /* line: 8, address: 0x60136fac */   *(_DWORD *)(a1 + 6260) = 12325992;
 /* line: 9, address: 0x60136fb4 */   sub_60237560(a1 + 6260);
-/* line: 10, address: 0x60136fbc */   sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6260));
+/* line: 10, address: 0x60136fbc */   sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6260));
 /* line: 11, address: 0x60136fd0 */   *(_DWORD *)a1 = 12321080;
 /* line: 12, address: 0x60136fd4 */   CollisionMgr_dtor(a1 + 648);
 /* line: 13, address: 0x60136fe0 */   StageActor::~StageActor((StageActor *)a1);

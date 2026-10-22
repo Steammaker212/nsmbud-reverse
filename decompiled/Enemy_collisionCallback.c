@@ -1,4 +1,5 @@
-/* line: 0, address: 0x602a21b0 */ unsigned int __fastcall Enemy::collisionCallback(int a1, _DWORD *a2)
+#include "nsmbudx_prelude.h"
+/* line: 0, address: 0x602a21b0 */ unsigned int __fastcall Enemy_collisionCallback(int a1, _DWORD *a2)
 /* line: 1 */ {
 /* line: 2 */   int (__fastcall ***v4)(_DWORD, int); // r7
 /* line: 3 */   int v5; // r6

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 
 // ---- addr: 0x605635ac */ int __fastcall sub_605635AC(int a1, int a2, int a3)
 /* line: 1 */ {

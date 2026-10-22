@@ -1,4 +1,5 @@
-/* line: 0, address: 0x602a6df4 */ int __fastcall Enemy::collisionHammer(float *a1, int a2, int a3)
+#include "nsmbudx_prelude.h"
+/* line: 0, address: 0x602a6df4 */ int __fastcall Enemy_collisionHammer(float *a1, int a2, int a3)
 /* line: 1 */ {
 /* line: 2 */   int v4; // r0
 /* line: 3 */   int v5; // r1

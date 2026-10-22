@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x604531f8 */ int __fastcall sub_604531F8(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r0
@@ -63,7 +64,7 @@
 /* line: 62, address: 0x60453354 */       _cxa_guard_release_0(13156900);
 /* line: 63 */     }
 /* line: 64, address: 0x60453368 */     v9 = (**(int (__fastcall ***)(_BYTE *, int))v8)(v8, 13156896);
-/* line: 65, address: 0x6045336c */     v10 = v8 == nullptr;
+/* line: 65, address: 0x6045336c */     v10 = v8 == 0;
 /* line: 66, address: 0x60453370 */     if ( v8 )
 /* line: 67, address: 0x60453374 */       v10 = (v9 ^ 1) == 1;
 /* line: 68, address: 0x60453378 */     if ( !v10 )

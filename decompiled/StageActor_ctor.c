@@ -1,4 +1,5 @@
-/* line: 0, address: 0x600002a0 */ int __fastcall StageActor::StageActor(int a1, int a2)
+#include "nsmbudx_prelude.h"
+/* line: 0, address: 0x600002a0 */ int __fastcall StageActor_StageActor(int a1, int a2)
 /* line: 1 */ {
 /* line: 2 */   int v4; // r0
 /* line: 3 */   int v5; // r1

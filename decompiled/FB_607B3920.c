@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x607b3920 */ int sub_607B3920()
 /* line: 1 */ {
 /* line: 2, address: 0x607b3948 */   dword_60CC4BB0 = 0;

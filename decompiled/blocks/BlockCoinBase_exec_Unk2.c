@@ -1,5 +1,6 @@
+#include "nsmbudx_prelude.h"
 
-// ---- addr: 0x605b682c */ _DWORD *__fastcall BlockCoinBase::executeState_BlockCoinBaseUnk2(_DWORD *result)
+// ---- addr: 0x605b682c */ _DWORD *__fastcall BlockCoinBase_executeState_BlockCoinBaseUnk2(_DWORD *result)
 /* line: 1 */ {
 /* line: 2 */   int v1; // r2
 /* line: 3 */   int v2; // r2

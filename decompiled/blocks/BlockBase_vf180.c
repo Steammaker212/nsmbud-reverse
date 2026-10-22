@@ -1,5 +1,6 @@
+#include "nsmbudx_prelude.h"
 
-// ---- addr: 0x60564d8c */ bool __fastcall BlockBase::vf180(int a1)
+// ---- addr: 0x60564d8c */ bool __fastcall BlockBase_vf180(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v1; // r4
 /* line: 3 */   int CurrentState; // r0

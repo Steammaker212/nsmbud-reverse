@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x601597e8 */ bool __fastcall ActiveCollider_doOverlapMaybe(int a1, int a2)
 /* line: 1 */ {
 /* line: 2 */   _BOOL4 result; // r0

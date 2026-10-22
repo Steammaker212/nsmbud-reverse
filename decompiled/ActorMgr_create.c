@@ -1,4 +1,5 @@
-/* line: 0, address: 0x60008138 */ _BYTE *__fastcall ActorMgr::create(_DWORD *a1, int a2, int a3)
+#include "nsmbudx_prelude.h"
+/* line: 0, address: 0x60008138 */ _BYTE *__fastcall ActorMgr_create(_DWORD *a1, int a2, int a3)
 /* line: 1 */ {
 /* line: 2 */   _BYTE *v5; // r0
 /* line: 3 */   _BYTE *v6; // r5
@@ -59,5 +60,5 @@
 /* line: 58, address: 0x60008294 */   v6[19] = 1;
 /* line: 59, address: 0x600082a8 */   sead::ListNode::insertFront_(a1 + 5734, &v6[a1[5737]]);
 /* line: 60, address: 0x600082b8 */   ++a1[5736];
-/* line: 61, address: 0x60008288 */   return nullptr;
+/* line: 61, address: 0x60008288 */   return 0;
 /* line: 62 */ }

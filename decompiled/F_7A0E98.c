@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x607a0e98 */ int __fastcall sub_607A0E98(int a1, int a2, int a3)
 /* line: 1 */ {
 /* line: 2 */   int v4; // r6
@@ -53,7 +54,7 @@
 /* line: 52, address: 0x607a0fc0 */         case 3:
 /* line: 53, address: 0x607a0fc0 */           goto LABEL_20;
 /* line: 54, address: 0x607a0fc0 */         case 1:
-/* line: 55, address: 0x607a10d8 */           sub_607A2894((_DWORD *)a1, nullptr);
+/* line: 55, address: 0x607a10d8 */           sub_607A2894((_DWORD *)a1, 0);
 /* line: 56 */           break;
 /* line: 57, address: 0x607a0fc0 */         case 0:
 /* line: 58, address: 0x607a0fd0 */           goto LABEL_20;

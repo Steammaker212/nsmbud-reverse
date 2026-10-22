@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x602cc244 */ _BYTE *__fastcall HammerBros_createHammer(_DWORD *a1)
 /* line: 1 */ {
 /* line: 2 */   int v1; // s0

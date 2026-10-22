@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60256cfc */ bool __fastcall sub_60256CFC(int a1, int a2, float *a3)
 /* line: 1 */ {
 /* line: 2 */   char v3; // r12

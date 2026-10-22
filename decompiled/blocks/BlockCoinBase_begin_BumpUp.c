@@ -1,5 +1,6 @@
+#include "nsmbudx_prelude.h"
 
-// ---- addr: 0x605b6648 */ int __fastcall BlockCoinBase::beginState_BumpUp(int a1)
+// ---- addr: 0x605b6648 */ int __fastcall BlockCoinBase_beginState_BumpUp(int a1)
 /* line: 1 */ {
 /* line: 2, address: 0x605b6660 */   *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
 /* line: 3, address: 0x605b6664 */   *(_DWORD *)(a1 + 124) = 0x40000000;

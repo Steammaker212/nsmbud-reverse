@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60818168 */ _DWORD *__fastcall StateMgr_ctor(_DWORD *result, int a2, int a3)
 /* line: 1 */ {
 /* line: 2, address: 0x60818168 */   *result = a2;

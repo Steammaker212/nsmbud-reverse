@@ -1,5 +1,6 @@
+#include "nsmbudx_prelude.h"
 
-// ---- addr: 0x605b65a8 */ float *__fastcall BlockCoinBase::vfE8(float *result, int a2)
+// ---- addr: 0x605b65a8 */ float *__fastcall BlockCoinBase_vfE8(float *result, int a2)
 /* line: 1 */ {
 /* line: 2 */   float v2; // s0
 /* line: 3 */   float *v3; // r1

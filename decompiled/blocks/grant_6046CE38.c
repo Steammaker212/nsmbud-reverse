@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6046ce38 */ int __fastcall sub_6046CE38(int a1)
 /* line: 1 */ {
 /* line: 2 */   float v2; // s0

@@ -10,6 +10,61 @@
 #pragma once
 
 #include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
+
+#include "structs.h"
+
+/* ---- IDA scalar aliases, at IDA's exact widths ----
+ * The decompiler output uses these; they are not standard C. Defined so this header can be
+ * included. An `_UNKNOWN` parameter is genuinely unresolved, not a real type. */
+#ifndef NSMBUDX_IDA_TYPES
+#define NSMBUDX_IDA_TYPES
+typedef unsigned char      _BYTE;
+typedef unsigned char      _BOOL1;
+typedef unsigned int       _BOOL4;
+typedef unsigned short     _WORD;
+typedef unsigned int       _DWORD;
+typedef unsigned long long _QWORD;
+typedef signed char        _SBYTE;
+typedef signed short       _SWORD;
+typedef signed int         _SDWORD;
+typedef signed long long   _SQWORD;
+typedef unsigned char      _UNKNOWN;
+typedef void              *_PVOID;
+typedef const char        *_LPCSTR;
+#endif
+
+/* ---- opaque forward declarations for qualified names in signatures ---- */
+#ifndef NSMBUDX_OPAQUE_QUALIFIED
+#define NSMBUDX_OPAQUE_QUALIFIED
+struct sead_IDisposer;
+struct sead_IDelegateBase;
+struct sead_Heap;
+struct sead_TreeNode;
+struct nw4f_ut_ResFileAccessor;
+struct nn_Result;
+#endif
+
+/* ---- NEON lane types appearing in signatures ---- */
+#ifndef NSMBUDX_NEON_TYPES
+#define NSMBUDX_NEON_TYPES
+typedef struct { float    v[2]; } float32x2_t;
+typedef struct { float    v[4]; } float32x4_t;
+typedef struct { double   v[2]; } float64x2_t;
+typedef struct { int32_t  v[2]; } int32x2_t;
+typedef struct { int32_t  v[4]; } int32x4_t;
+typedef struct { uint32_t v[4]; } uint32x4_t;
+typedef struct { int8_t   v[16]; } int8x16_t;
+typedef struct { uint8_t  v[16]; } uint8x16_t;
+typedef struct { int32x4_t val[2]; } int32x4x2_t;
+typedef struct { float32x2_t val[2]; } float32x2x2_t;
+typedef struct { float32x4_t val[2]; } float32x4x2_t;
+typedef struct { int32x2_t val[2]; } int32x2x2_t;
+typedef struct { uint32x4_t val[2]; } uint32x4x2_t;
+typedef struct { int8x16_t val[2]; } int8x16x2_t;
+typedef struct { uint8x16_t val[2]; } uint8x16x2_t;
+#endif
 
 /* RVAs are image-relative: VA = 0x60000000 + RVA */
 
@@ -35,7 +90,7 @@ int __fastcall sub_604511EC(_DWORD *a1, _DWORD *a2, int a3);  /* 0x004511ec */
 int __fastcall sub_60451438(int a1);  /* 0x00451438 */
 int __fastcall sub_6045154C(int a1, int a2, int a3, int *a4, int a5);  /* 0x0045154c */
 int __fastcall sub_60451E68(int a1, int a2);  /* 0x00451e68 */
-int __fastcall sub_60451F74(sead::IDisposer *a1);  /* 0x00451f74 */
+int __fastcall sub_60451F74(struct sead_IDisposer *a1);  /* 0x00451f74 */
 int __fastcall sub_60451FEC(int a1);  /* 0x00451fec */
 int __fastcall sub_6045217C(int a1, int a2, _DWORD *a3, int a4);  /* 0x0045217c */
 int __fastcall sub_60452470(int a1);  /* 0x00452470 */
@@ -138,7 +193,7 @@ int __fastcall sub_60458A04(int a1);  /* 0x00458a04 */
 bool __fastcall sub_60458E68(int a1, int a2);  /* 0x00458e68 */
 int __fastcall sub_60459050(int a1);  /* 0x00459050 */
 int __fastcall sub_60459058(int a1, int a2);  /* 0x00459058 */
-int __fastcall sub_60459144(sead::IDisposer *a1);  /* 0x00459144 */
+int __fastcall sub_60459144(struct sead_IDisposer *a1);  /* 0x00459144 */
 int __fastcall sub_604591A4(int a1);  /* 0x004591a4 */
 bool __fastcall sub_604592A0(int a1, int a2);  /* 0x004592a0 */
 bool __fastcall sub_604593D0(int a1, int a2);  /* 0x004593d0 */
@@ -296,7 +351,7 @@ bool __fastcall sub_60465440(int a1, int a2);  /* 0x00465440 */
 int __fastcall sub_60465544(_DWORD *a1);  /* 0x00465544 */
 int __fastcall sub_60465600(int a1);  /* 0x00465600 */
 int __fastcall sub_60465628(int a1, int a2);  /* 0x00465628 */
-int __fastcall sub_60465C74(sead::IDisposer *a1);  /* 0x00465c74 */
+int __fastcall sub_60465C74(struct sead_IDisposer *a1);  /* 0x00465c74 */
 unsigned int __fastcall sub_60465D70(int a1, unsigned int a2);  /* 0x00465d70 */
 int __fastcall sub_60465E4C(int a1, unsigned int a2, unsigned int a3, int a4);  /* 0x00465e4c */
 int __fastcall sub_60466074(int a1, int a2);  /* 0x00466074 */
@@ -524,7 +579,7 @@ int __fastcall sub_60472ADC(int result);  /* 0x00472adc */
 bool __fastcall sub_60472B20(_DWORD *a1);  /* 0x00472b20 */
 bool __fastcall sub_60473048(int a1, int a2);  /* 0x00473048 */
 int __fastcall sub_6047314C(int a1, _DWORD *a2);  /* 0x0047314c */
-int __fastcall sub_6047321C(sead::IDisposer *a1);  /* 0x0047321c */
+int __fastcall sub_6047321C(struct sead_IDisposer *a1);  /* 0x0047321c */
 bool __fastcall sub_6047322C(int a1, int a2);  /* 0x0047322c */
 int __fastcall sub_60473414(int a1, int a2, int a3);  /* 0x00473414 */
 int __fastcall sub_6047342C(_DWORD *a1);  /* 0x0047342c */
@@ -575,8 +630,8 @@ int __fastcall sub_60475618(int a1, int a2, _DWORD *a3, int a4, int *a5);  /* 0x
 int __fastcall sub_6047566C(int a1, int a2, _DWORD *a3, _DWORD *a4, int *a5);  /* 0x0047566c */
 int __fastcall sub_604756E0(int a1, int a2, _DWORD *a3, int *a4);  /* 0x004756e0 */
 int __fastcall sub_6047572C(int result, _DWORD *a2, int a3, unsigned int a4, int a5);  /* 0x0047572c */
-void __fastcall sub_60475AE8(sead::IDisposer *a1);  /* 0x00475ae8 */
-int __fastcall sub_60475BB8(sead::IDisposer *a1);  /* 0x00475bb8 */
+void __fastcall sub_60475AE8(struct sead_IDisposer *a1);  /* 0x00475ae8 */
+int __fastcall sub_60475BB8(struct sead_IDisposer *a1);  /* 0x00475bb8 */
 int __fastcall sub_60475C8C(int a1);  /* 0x00475c8c */
 int __fastcall sub_60475CDC(_DWORD *a1, _DWORD *a2, int a3, int a4, int a5);  /* 0x00475cdc */
 int __fastcall sub_60476030(int a1, _DWORD *a2, int *a3);  /* 0x00476030 */
@@ -584,7 +639,7 @@ int __fastcall sub_60476094(int a1, int a2);  /* 0x00476094 */
 int __fastcall sub_604762F8(_DWORD *a1, int a2);  /* 0x004762f8 */
 int __fastcall sub_60476388(_DWORD *a1, int a2, _DWORD *a3);  /* 0x00476388 */
 int __fastcall sub_60476434(int a1);  /* 0x00476434 */
-void __fastcall sub_6047643C(sead::IDisposer *a1);  /* 0x0047643c */
+void __fastcall sub_6047643C(struct sead_IDisposer *a1);  /* 0x0047643c */
 int __fastcall sub_604764D0(int a1);  /* 0x004764d0 */
 int __fastcall sub_60476640(int a1, _DWORD *a2);  /* 0x00476640 */
 int __fastcall sub_60476708(int a1);  /* 0x00476708 */
@@ -635,13 +690,13 @@ int __fastcall sub_604791FC(_DWORD *a1);  /* 0x004791fc */
 int __fastcall sub_604793E0(int a1, int a2, int a3);  /* 0x004793e0 */
 int __fastcall sub_604793FC(int a1, int a2);  /* 0x004793fc */
 int __fastcall sub_60479414(int a1, int a2, int a3);  /* 0x00479414 */
-void __fastcall sub_60479520(sead::IDisposer *a1);  /* 0x00479520 */
+void __fastcall sub_60479520(struct sead_IDisposer *a1);  /* 0x00479520 */
 int __fastcall sub_60479524(_DWORD *a1);  /* 0x00479524 */
 int __fastcall sub_60479588(int a1, int a2, _DWORD *a3, int a4);  /* 0x00479588 */
 int __fastcall sub_60479600(int a1, unsigned int a2, _DWORD *a3, _DWORD *a4, _DWORD *a5, int a6);  /* 0x00479600 */
 int __fastcall sub_60479808(int a1, unsigned int a2, _DWORD *a3, _DWORD *a4, int a5);  /* 0x00479808 */
 int __fastcall sub_60479910(int a1, int a2);  /* 0x00479910 */
-int __fastcall sub_60479C34(sead::IDisposer *a1);  /* 0x00479c34 */
+int __fastcall sub_60479C34(struct sead_IDisposer *a1);  /* 0x00479c34 */
 int __fastcall sub_60479C64(int a1, _DWORD *a2);  /* 0x00479c64 */
 int __fastcall sub_60479DF4(int a1, _DWORD *a2);  /* 0x00479df4 */
 int __fastcall sub_60479F28(int a1, _DWORD *a2);  /* 0x00479f28 */
@@ -681,7 +736,7 @@ int __fastcall sub_6047F230(int a1);  /* 0x0047f230 */
 bool __fastcall sub_6047F384(int a1, int a2);  /* 0x0047f384 */
 int __fastcall sub_6047F3B4(_DWORD *a1);  /* 0x0047f3b4 */
 int __fastcall sub_6047F4E4(int a1, _DWORD *a2);  /* 0x0047f4e4 */
-int __fastcall sub_6047F600(sead::IDisposer *a1);  /* 0x0047f600 */
+int __fastcall sub_6047F600(struct sead_IDisposer *a1);  /* 0x0047f600 */
 int __fastcall sub_6047F660(int a1);  /* 0x0047f660 */
 int __fastcall sub_6047F790(int result);  /* 0x0047f790 */
 int __fastcall sub_6047F794(int a1);  /* 0x0047f794 */

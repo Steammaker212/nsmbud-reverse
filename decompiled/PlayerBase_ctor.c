@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6075defc */ int __fastcall PlayerBase_ctor(int a1, int a2)
 /* line: 1 */ {
 /* line: 2 */   int v3; // r1
@@ -173,7 +174,7 @@
 /* line: 172, address: 0x6075e52c */   *(_DWORD *)(a1 + 9652) = 0;
 /* line: 173, address: 0x6075e534 */   *(_DWORD *)(a1 + 9648) = 0;
 /* line: 174, address: 0x6075e53c */   *(_DWORD *)(a1 + 9644) = 0;
-/* line: 175, address: 0x6075e548 */   CollisionMgr_init(a1 + 1328, a1, nullptr, nullptr, nullptr);
+/* line: 175, address: 0x6075e548 */   CollisionMgr_init(a1 + 1328, a1, 0, 0, 0);
 /* line: 176, address: 0x6075e55c */   Player_changeState(a1, 13367324, 0);
 /* line: 177, address: 0x6075e570 */   sub_60766314(a1, 13366140, 0);
 /* line: 178, address: 0x6075e580 */   sub_6076DE28(a1, 13367024);

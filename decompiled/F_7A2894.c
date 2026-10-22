@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x607a2894 */ _DWORD *__fastcall sub_607A2894(_DWORD *a1, _DWORD *a2)
 /* line: 1 */ {
 /* line: 2 */   _DWORD *result; // r0

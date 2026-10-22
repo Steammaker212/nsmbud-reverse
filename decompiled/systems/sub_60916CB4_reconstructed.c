@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* sub_60916CB4 @ RVA 0x916CB4 — hand-reconstructed C
  *
  * This is the single function out of 49,470 that Hex-Rays 9.3 refuses to decompile, even after the

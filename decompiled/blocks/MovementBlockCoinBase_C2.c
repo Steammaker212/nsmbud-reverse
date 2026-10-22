@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 
 // ---- addr: 0x60563170 */ void __fastcall MovementBlockCoinBase::~MovementBlockCoinBase(Actor *a1)
 /* line: 1 */ {

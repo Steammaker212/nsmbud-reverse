@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60451fec */ int __fastcall sub_60451FEC(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r4
@@ -16,7 +17,7 @@
 /* line: 15, address: 0x60452074 */     *(_DWORD *)(v2 + 1280) = 0;
 /* line: 16, address: 0x60452078 */     *(_DWORD *)(v2 + 1316) = 3;
 /* line: 17, address: 0x6045207c */     *(_BYTE *)(v2 + 1320) = 0;
-/* line: 18, address: 0x60452080 */     sead::Random::init((sead::Random *)(v2 + 1340));
+/* line: 18, address: 0x60452080 */     sead::Random::init((struct sead_Random *)(v2 + 1340));
 /* line: 19, address: 0x6045208c */     *(_BYTE *)(v2 + 1356) = 0;
 /* line: 20, address: 0x60452090 */     *(_WORD *)(v2 + 1358) = 120;
 /* line: 21, address: 0x6045209c */     *(_BYTE *)(v2 + 1360) = 0;

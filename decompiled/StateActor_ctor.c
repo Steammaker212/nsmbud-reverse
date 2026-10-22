@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6000929c */ _DWORD *__fastcall StateActor_ctor(_DWORD *a1)
 /* line: 1 */ {
 /* line: 2, address: 0x600092a4 */   CollisionActor::CollisionActor();

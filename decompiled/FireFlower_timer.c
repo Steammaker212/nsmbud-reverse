@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60461904 */ int __fastcall sub_60461904(int a1)
 /* line: 1 */ {
 /* line: 2 */   StateMgr *v2; // r5

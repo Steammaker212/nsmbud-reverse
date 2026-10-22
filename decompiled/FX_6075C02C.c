@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6075c02c */ int __fastcall sub_6075C02C(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
 /* line: 1 */ {
 /* line: 2 */   bool v14; // zf
@@ -40,7 +41,7 @@
 /* line: 39, address: 0x6075c150 */     *(_DWORD *)(a1 + 548) = 3;
 /* line: 40, address: 0x6075c15c */   *(_BYTE *)(MEMORY[0xC9BBD4] + 18064) = *(_BYTE *)(a1 + 540);
 /* line: 41, address: 0x6075c16c */   v21 = 0;
-/* line: 42, address: 0x6075c170 */   v22 = nullptr;
+/* line: 42, address: 0x6075c170 */   v22 = 0;
 /* line: 43, address: 0x6075c174 */   v23 = 0;
 /* line: 44, address: 0x6075c17c */   sub_608DEB0C(&v21, 2, &v24);
 /* line: 45, address: 0x6075c180 */   v17 = v21;

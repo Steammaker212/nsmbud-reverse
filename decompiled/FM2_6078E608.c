@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6078e608 */ int __fastcall sub_6078E608(_DWORD *a1, int a2)
 /* line: 1 */ {
 /* line: 2 */   int v2; // s0
@@ -56,7 +57,7 @@
 /* line: 55, address: 0x6078e704 */     (*(void (__fastcall **)(_DWORD *))(*a1 + 32))(a1);
 /* line: 56 */   }
 /* line: 57, address: 0x6078e708 */   v11 = (int *)a1[73];
-/* line: 58, address: 0x6078e70c */   v12 = v11 == nullptr;
+/* line: 58, address: 0x6078e70c */   v12 = v11 == 0;
 /* line: 59, address: 0x6078e710 */   if ( v11 )
 /* line: 60 */   {
 /* line: 61, address: 0x6078e710 */     v6 = *v11;

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x607a06e0 */ int __fastcall sub_607A06E0(int a1, _DWORD *a2)
 /* line: 1 */ {
 /* line: 2 */   _DWORD *v4; // r7
@@ -19,7 +20,7 @@
 /* line: 18 */   }
 /* line: 19 */   else
 /* line: 20 */   {
-/* line: 21, address: 0x607a076c */     v5 = nullptr;
+/* line: 21, address: 0x607a076c */     v5 = 0;
 /* line: 22 */   }
 /* line: 23, address: 0x607a0778 */   if ( *(_DWORD *)(a1 + 140) == 18 )
 /* line: 24, address: 0x607a0788 */     return sub_6079E3C8(v5, a2);

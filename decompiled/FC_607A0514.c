@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x607a0514 */ int __fastcall sub_607A0514(int a1, int a2)
 /* line: 1 */ {
 /* line: 2 */   _DWORD *v4; // r7
@@ -21,7 +22,7 @@
 /* line: 20 */   }
 /* line: 21 */   else
 /* line: 22 */   {
-/* line: 23, address: 0x607a05a0 */     v5 = nullptr;
+/* line: 23, address: 0x607a05a0 */     v5 = 0;
 /* line: 24 */   }
 /* line: 25, address: 0x607a05a8 */   v6 = *(_DWORD **)(a2 + 64);
 /* line: 26, address: 0x607a05c4 */   if ( _cxa_guard_acquire_0(13087604) )
@@ -35,9 +36,9 @@
 /* line: 34, address: 0x607a0618 */     v8 = (_DWORD *)(*(int (__fastcall **)(_DWORD *, int))*v6)(v6, 13087600);
 /* line: 35, address: 0x607a0620 */     if ( v8 )
 /* line: 36, address: 0x607a0620 */       v8 = v6;
-/* line: 37, address: 0x607a0624 */     v9 = v5 == nullptr;
+/* line: 37, address: 0x607a0624 */     v9 = v5 == 0;
 /* line: 38, address: 0x607a0628 */     if ( v5 )
-/* line: 39, address: 0x607a0628 */       v9 = v8 == nullptr;
+/* line: 39, address: 0x607a0628 */       v9 = v8 == 0;
 /* line: 40, address: 0x607a062c */     if ( !v9 )
 /* line: 41 */     {
 /* line: 42, address: 0x607a063c */       if ( sub_60766708(v8) != 1 )

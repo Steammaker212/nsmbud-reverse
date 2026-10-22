@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 
 // ---- addr: 0x605b6730 */ void BlockCoinBase::endState_BlockCoinBaseUnk1()
 /* line: 1 */ {

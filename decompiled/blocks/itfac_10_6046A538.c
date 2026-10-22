@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6046a538 */ _DWORD *sub_6046A538()
 /* line: 1 */ {
 /* line: 2 */   _DWORD *result; // r0

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6046eda0 */ int sub_6046EDA0()
 /* line: 1 */ {
 /* line: 2 */   int v0; // r4

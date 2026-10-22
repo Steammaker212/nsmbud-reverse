@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 
 // ---- addr: 0x60564d5c */ void BlockBase::vf194()
 /* line: 1 */ {

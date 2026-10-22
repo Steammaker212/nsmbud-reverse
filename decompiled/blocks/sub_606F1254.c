@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x606f1254 */ int __fastcall sub_606F1254(int a1)
 /* line: 1 */ {
 /* line: 2 */   int *v2; // r5
@@ -28,7 +29,7 @@
 /* line: 27, address: 0x606f12c8 */     v5 = *(float *)(MEMORY[0xCC6484] + 116);
 /* line: 28, address: 0x606f1308 */     v6 = (float)(v5 + flt_60B093F4[v4 & 7])
 /* line: 29 */        + flt_60B09418[(5
-/* line: 30 */                      * (unsigned __int64)(unsigned int)sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32];
+/* line: 30 */                      * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32];
 /* line: 31, address: 0x606f130c */     v12[0] = v6;
 /* line: 32, address: 0x606f1310 */     v7 = *(_DWORD *)(a1 + 20);
 /* line: 33, address: 0x606f1314 */     if ( (unsigned __int16)v7 >> 12 )

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6015df58 */ int __fastcall sub_6015DF58(int a1, int a2, int a3)
 /* line: 1 */ {
 /* line: 2, address: 0x6015df68 */   if ( sub_6015DBD8() )

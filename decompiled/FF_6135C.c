@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6046135c */ _DWORD *__fastcall sub_6046135C(_DWORD *a1)
 /* line: 1 */ {
 /* line: 2 */   int v1; // s0
@@ -10,7 +11,7 @@
 /* line: 9 */   float v9; // s4
 /* line: 10 */   float v11; // s6
 /* line: 11 */ 
-/* line: 12, address: 0x60461380 */   CollisionMgr_init((int)(a1 + 162), (int)a1, nullptr, nullptr, nullptr);
+/* line: 12, address: 0x60461380 */   CollisionMgr_init((int)(a1 + 162), (int)a1, 0, 0, 0);
 /* line: 13, address: 0x60461390 */   (*(void (__fastcall **)(_DWORD *))(*a1 + 228))(a1);
 /* line: 14, address: 0x604613a0 */   (*(void (__fastcall **)(_DWORD *))(*a1 + 232))(a1);
 /* line: 15, address: 0x604613b0 */   (*(void (__fastcall **)(_DWORD *))(*a1 + 236))(a1);

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6013a7a4 */ int __fastcall PlayerFireball_ctor(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r0

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60135a90 */ int __fastcall FireballBase_ctor(int a1)
 /* line: 1 */ {
 /* line: 2, address: 0x60135a98 */   StateActor_ctor();

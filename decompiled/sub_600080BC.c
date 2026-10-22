@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x600080bc */ _DWORD *__fastcall sub_600080BC(_DWORD *result, _DWORD *a2)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r12

@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6000a2e8 */ int __fastcall sub_6000A2E8(int a1, unsigned int a2)
 /* line: 1 */ {
 /* line: 2 */   unsigned int v2; // r9
@@ -21,7 +22,7 @@
 /* line: 20, address: 0x6000a324 */     v5 = *(Actor ***)(MEMORY[0xC7B400] + 27180);
 /* line: 21, address: 0x6000a32c */     if ( v4 != v5 )
 /* line: 22 */     {
-/* line: 23, address: 0x6000a334 */       v6 = nullptr;
+/* line: 23, address: 0x6000a334 */       v6 = 0;
 /* line: 24, address: 0x6000a338 */       v7 = -1;
 /* line: 25, address: 0x6000a340 */       result = 11482264;
 /* line: 26, address: 0x6000a344 */       v8 = MEMORY[0xAF3498];

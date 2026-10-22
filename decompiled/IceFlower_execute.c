@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x6045e414 */ int __fastcall sub_6045E414(int a1)
 /* line: 1 */ {
 /* line: 2, address: 0x6045e424 */   StateMgr::execute((StateMgr *)(a1 + 6084));

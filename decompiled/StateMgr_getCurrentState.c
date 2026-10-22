@@ -1,4 +1,5 @@
-/* line: 0, address: 0x60818198 */ int __fastcall StateMgr::getCurrentState(int a1)
+#include "nsmbudx_prelude.h"
+/* line: 0, address: 0x60818198 */ int __fastcall StateMgr_getCurrentState(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r0
 /* line: 3 */   int result; // r0

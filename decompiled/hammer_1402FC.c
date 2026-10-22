@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x601402fc */ int __fastcall sub_601402FC(int a1, int a2)
 /* line: 1 */ {
 /* line: 2, address: 0x60140320 */   if ( _cxa_guard_acquire_0(13139240) )

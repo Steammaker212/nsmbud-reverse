@@ -80,6 +80,86 @@ for group, files in LAYOUT.items():
                     break
 
 # ------------------------------------------------------------ write headers
+# The decompiler emits IDA's scalar aliases and C++-qualified class names. A header that uses them
+# without defining them cannot be included, so both are provided. The typedefs carry IDA's exact
+# widths; the qualified names become opaque structs, because their real layout lives in structs.h
+# (where it was recovered from evidence) and inventing a second definition would conflict.
+IDA_TYPES = """\
+/* ---- IDA scalar aliases, at IDA's exact widths ----
+ * The decompiler output uses these; they are not standard C. Defined so this header can be
+ * included. An `_UNKNOWN` parameter is genuinely unresolved, not a real type. */
+#ifndef NSMBUDX_IDA_TYPES
+#define NSMBUDX_IDA_TYPES
+typedef unsigned char      _BYTE;
+typedef unsigned char      _BOOL1;
+typedef unsigned int       _BOOL4;
+typedef unsigned short     _WORD;
+typedef unsigned int       _DWORD;
+typedef unsigned long long _QWORD;
+typedef signed char        _SBYTE;
+typedef signed short       _SWORD;
+typedef signed int         _SDWORD;
+typedef signed long long   _SQWORD;
+typedef unsigned char      _UNKNOWN;
+typedef void              *_PVOID;
+typedef const char        *_LPCSTR;
+#endif"""
+
+# Qualified names the decompiler emits that have no definition in these headers. Each becomes an
+# opaque type so a pointer to it is well-formed; the recovered layouts, where they exist, are in
+# structs.h. Kept deliberately incomplete: claiming a layout here would be inventing one.
+OPAQUE_QUALIFIED = """\
+/* ---- opaque forward declarations for qualified names in signatures ---- */
+#ifndef NSMBUDX_OPAQUE_QUALIFIED
+#define NSMBUDX_OPAQUE_QUALIFIED
+struct sead_IDisposer;
+struct sead_IDelegateBase;
+struct sead_Heap;
+struct sead_TreeNode;
+struct nw4f_ut_ResFileAccessor;
+struct nn_Result;
+#endif"""
+
+# NEON vector types the decompiler emits as parameter and return types. These are the ARM
+# Advanced SIMD lane types; defined here as plain structs with the correct lane count and width so
+# a prototype is well-formed. They are NOT callable through the standard ABI -- that is a property
+# of the hardware, not of the declaration -- but the signature is now accurate about shape.
+NEON_TYPES = """\
+/* ---- NEON lane types appearing in signatures ---- */
+#ifndef NSMBUDX_NEON_TYPES
+#define NSMBUDX_NEON_TYPES
+typedef struct { float    v[2]; } float32x2_t;
+typedef struct { float    v[4]; } float32x4_t;
+typedef struct { double   v[2]; } float64x2_t;
+typedef struct { int32_t  v[2]; } int32x2_t;
+typedef struct { int32_t  v[4]; } int32x4_t;
+typedef struct { uint32_t v[4]; } uint32x4_t;
+typedef struct { int8_t   v[16]; } int8x16_t;
+typedef struct { uint8_t  v[16]; } uint8x16_t;
+typedef struct { int32x4_t val[2]; } int32x4x2_t;
+typedef struct { float32x2_t val[2]; } float32x2x2_t;
+typedef struct { float32x4_t val[2]; } float32x4x2_t;
+typedef struct { int32x2_t val[2]; } int32x2x2_t;
+typedef struct { uint32x4_t val[2]; } uint32x4x2_t;
+typedef struct { int8x16_t val[2]; } int8x16x2_t;
+typedef struct { uint8x16_t val[2]; } uint8x16x2_t;
+#endif"""
+
+QUAL_RE = re.compile(r"\b([A-Za-z_]\w*(?:::[A-Za-z_]\w*)+)\b")
+
+
+def sanitize_signature(text):
+    """Make a decompiled signature usable in C without changing its meaning.
+
+    `sead::IDisposer` is rewritten to `struct sead_IDisposer`, because `::` is C++ scope
+    resolution and these headers are C. The pointer-ness, argument order and return type are
+    left exactly as Hex-Rays produced them.
+    """
+    # `nn::atk::SoundActor` -> `struct nn_atk_SoundActor` (any nesting depth), because `::`
+    # is C++ scope resolution and these headers are C.
+    return QUAL_RE.sub(lambda m: "struct " + m.group(1).replace("::", "_"), text)
+
+
 incdir = os.path.join(DEST, "include")
 os.makedirs(incdir, exist_ok=True)
 hdr_counts = {}
@@ -97,6 +177,20 @@ for group, files in LAYOUT.items():
     out.append("#pragma once")
     out.append("")
     out.append("#include <stdint.h>")
+    out.append("#include <stddef.h>")
+    out.append("#include <stdbool.h>")
+    out.append("")
+    out.append('#include "structs.h"')
+    out.append("")
+    # Headers previously did not compile: they used IDA's scalar aliases (_BYTE, _DWORD, ...)
+    # and C++-qualified names (sead::IDisposer) that nothing defined. Both are supplied here so
+    # the generated headers can actually be #included. The scalar aliases are defined with the
+    # exact widths IDA uses, so a prototype means the same thing it did in the decompiler.
+    out.append(IDA_TYPES)
+    out.append("")
+    out.append(OPAQUE_QUALIFIED)
+    out.append("")
+    out.append(NEON_TYPES)
     out.append("")
     out.append("/* RVAs are image-relative: VA = 0x60000000 + RVA */")
     out.append("")
@@ -118,7 +212,8 @@ for group, files in LAYOUT.items():
                     if name in seen:
                         break
                     seen.add(name)
-                    out.append(f"{ret} __fastcall {name}({args});  /* {rva} */")
+                    sig = sanitize_signature(f"{ret} __fastcall {name}({args});")
+                    out.append(f"{sig}  /* {rva} */")
                     n += 1
                     break
         out.append("")

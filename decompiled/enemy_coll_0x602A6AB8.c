@@ -1,4 +1,5 @@
-/* line: 0, address: 0x602a6ab8 */ int __fastcall Enemy::collisionFireball(float *a1, int a2, int a3)
+#include "nsmbudx_prelude.h"
+/* line: 0, address: 0x602a6ab8 */ int __fastcall Enemy_collisionFireball(float *a1, int a2, int a3)
 /* line: 1 */ {
 /* line: 2 */   int v4; // r0
 /* line: 3 */   float v5; // s16

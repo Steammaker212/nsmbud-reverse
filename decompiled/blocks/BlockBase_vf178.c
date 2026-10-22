@@ -1,5 +1,6 @@
+#include "nsmbudx_prelude.h"
 
-// ---- addr: 0x60563ed8 */ int __fastcall BlockBase::vf178(int a1)
+// ---- addr: 0x60563ed8 */ int __fastcall BlockBase_vf178(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r0
 /* line: 3 */   float v4[2]; // [sp+0h] [bp-10h] BYREF

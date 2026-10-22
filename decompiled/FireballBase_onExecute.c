@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* line: 0, address: 0x60135e48 */ int __fastcall FireballBase_onExecute(int *a1)
 /* line: 1 */ {
 /* line: 2 */   StateMgr *v2; // r6
