@@ -1,14 +1,48 @@
 # Where things stand
 
-Status: **the rendering fault is solved.** `subsdk0` was malformed; the cause is found,
-fixed, and verified with real code in the module.
+Status: **the Fire Flower fault has a concrete suspect, and it has been removed.**
 
 Last updated: 2026-10-22
 
 ---
 
-## 1. The rendering fault — SOLVED
+## 0. The Fire Flower acts like a normal mushroom - CAUSE FOUND
 
+Tested builds made this a narrow question. The stack worked, models rendered, the Fire
+Flower appeared and could be collected, but it granted nothing:
+
+| build | result |
+|---|---|
+| step7 (4 gate records only) | clean, Fire Flower appears, acts correctly |
+| step9 / step10a / step10b | models fine, collecting the flower does nothing |
+| step11 (dt_init fix) | models fine, collecting the flower does nothing |
+
+So the fault arrived with the records added between step7 and step9. It was never about
+romfs, and never about `subsdk0`.
+
+Every record in the build was then disassembled against retail. Only three files are
+left, 21 records:
+
+* `mode_tables.hks` (16 data records) -- **verified correct**. All six PC-relative
+  readers solve exactly, the relocation targets are genuinely zero-filled `.rodata`,
+  and the retail tables read as documented. See `TABLE_REPOINT_VERIFICATION.md`.
+* `item_grant.hks` (4 instr records) -- **verified additive**. Retail is
+  `CMP R0,#8` / `MOVW R1,#0x1FB` at both call sites; the hooks widen to
+  `cmp r0,#9` / `movw r1,#0x3fb`, which keeps modes 0..9 accepted and adds index 9.
+* `hammer_actor.hks` (7 instr records) -- **REMOVED**. Seven destructive
+  substitutions, five of them in a constructor where they replace the compiler's
+  zero-initialisation stores. See `HAMMER_ACTOR_HOOKS_REMOVED.md`.
+
+That file was the only remaining difference from the known-good step7 build, and it was
+breaking object construction. Best explanation for the symptom: the item existed,
+rendered and was collectable, but its initialised state was wrong, so the mode it
+granted was wrong.
+
+**Next test:** rebuild without `hammer_actor.hks` and collect a Fire Flower.
+
+---
+
+## 1. The rendering fault - SOLVED
 Every build that shipped a `subsdk0` broke model rendering (black figures, missing
 models). Builds with only the IPS rendered cleanly. The game never crashed.
 
@@ -22,7 +56,7 @@ _fini = 0x00000218;
 sweet-dx turns each `.sym` entry into an *absolute* linker-script assignment of
 `address - 0xCD1000`. Because `crt0.s` also defines `_init`, the generated script
 overrode it, and `0x24 - 0xCD1000` wrapped to `0xff32f024`. The module therefore shipped
-`DT_INIT = 0xff32f024` — an entry point outside the module. The dynamic loader branched
+`DT_INIT = 0xff32f024` - an entry point outside the module. The dynamic loader branched
 there at startup, resource loading half-failed, and models rendered as black figures while
 the game kept running.
 
@@ -56,17 +90,17 @@ engineering must work for other patches too.
 
 Recorded because they were mine, not properties of the module:
 
-1. *"The stub declares segments past EOF."* False — with correct NSO0 offsets all three
+1. *"The stub declares segments past EOF."* False - with correct NSO0 offsets all three
    segments fit inside 577 bytes.
-2. *"MOD0's `dynamic` pointer lands in a hole."* False — MOD0 offsets are relative to the
+2. *"MOD0's `dynamic` pointer lands in a hole."* False - MOD0 offsets are relative to the
    MOD0 struct, not module base. `dynamic = 0x1000` is the start of `.rodata`.
 
-A third, earlier: *"the mode tables are written with holes"* — also false. The records are
+A third, earlier: *"the mode tables are written with holes"* - also false. The records are
 16/16/12 bytes, which is exactly 44, so no entry is skipped.
 
 ---
 
-## 2. "Nothing fires" — cause found, fixed
+## 2. "Nothing fires" - cause found, fixed
 
 With the full 36-record set, receiving a Fire Flower produced no fireballs. With only the
 gate records it threw normally.
@@ -103,7 +137,7 @@ sites patched. `scripts/decode_ips.py` checks this on every build.
 
 Removing the bad hooks means Hammer currently gets: the item gate widened, the three mode
 tables extended to 11 entries with the six readers repointed, and the tall-actor type set.
-It does **not** get a throwing path, because that needs real code — which is now possible.
+It does **not** get a throwing path, because that needs real code - which is now possible.
 
 The correct next step is a `hook` with a trampoline on `sub_607AA954`
 (`checkSetFireBall`), whose C++ body returns "may throw" for mode 2 **or** mode 10. That
@@ -127,7 +161,7 @@ Also still open:
 
 | function | RVA | xrefs | sites |
 |---|---|---|---|
-| `sub_6013FB0C` | `0x13FB0C` | **0** — unreachable | `0x13FB38`, `0x13FB68` |
+| `sub_6013FB0C` | `0x13FB0C` | **0** - unreachable | `0x13FB38`, `0x13FB68` |
 | `sub_6014065C` | `0x14065C` | 1 (from `0x13F044`) | `0x140744`, `0x140748`, `0x14074C`, `0x140770`, `0x140778` |
 
 The retail bytes at those addresses also do not match what the hook file claims:
