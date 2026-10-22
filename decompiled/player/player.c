@@ -973,7 +973,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     Model2 = Resource_getModel2(ResArchiveById, (int)&dword_60CC4304, 0, 0, 1, 0, 0, 0, 0);
-    v4 = __operator_new(0x30u, 0, 4);
+    v4 = __operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 644) = v4;
@@ -6689,7 +6689,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
         Model = Resource_getModel2(a1[4], (int)v13, 3, 2, 4, 0, 0, 0, 0);
       v15 = Model;
-      v16 = (_DWORD *)__operator_new(48, 0, 4);
+      v16 = (_DWORD *)__operator_new_al(48, 0, 4);
       v17 = ModelWrapper_ctor(v16, v15, 3, 2, 4, 0, 0);
       v3 = a2;
       ModelWrapper_setup(v17, v12, a2, 0);
@@ -6706,7 +6706,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
           Model2 = Resource_getModel2(v20, (int)v21, 1, 2, 4, 0, 0, 0, 0);
         v23 = Model2;
-        v24 = (_DWORD *)__operator_new(48, 0, 4);
+        v24 = (_DWORD *)__operator_new_al(48, 0, 4);
         v25 = ModelWrapper_ctor(v24, v23, 1, 2, 4, 0, 0);
         v3 = a2;
         result = (int)ModelWrapper_setup(v25, v20, a2, 0);
@@ -6747,7 +6747,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
         v28 = Resource_getModel2(v7, (int)v27, 3, 2, 4, 0, 0, 0, 0);
       v29 = v28;
-      v30 = (_DWORD *)__operator_new(48, 0, 4);
+      v30 = (_DWORD *)__operator_new_al(48, 0, 4);
       v31 = ModelWrapper_ctor(v30, v29, 3, 2, 4, 0, 0);
       result = (int)ModelWrapper_setup(v31, v7, (int)&v35, 0);
       a1[65] = (int)v30;

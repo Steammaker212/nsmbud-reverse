@@ -2030,7 +2030,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v10 = "jugem";
     Model2 = Resource_getModel2(v2, &v9, 1, 0, 0, 0, 0, 0, 0);
-    v5 = __operator_new(48, 0, 4);
+    v5 = __operator_new_al(48, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v6, v3, 0, 0);
     a1[1738] = v5;
@@ -4874,7 +4874,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = 12321336;
     v13 = "cloud";
     Model2 = Resource_getModel2(v2, &v12, 1, 1, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1575] = v4;
@@ -5716,7 +5716,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v19[1] = "pakkun_tane";
     Model2 = Resource_getModel2(v2, (int)v19, 1, 0, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v6, v3, 0, 0);
     a1[1575] = (unsigned int)v5;
@@ -6566,7 +6566,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v22 = 12321336;
           v23 = "killer_rot_houdai_b";
           Model2 = Resource_getModel2(v6, &v22, 1, 0, 0, 0, 0, 0, 0);
-          v8 = __operator_new(48, 0, 4);
+          v8 = __operator_new_al(48, 0, 4);
           v9 = ModelWrapper_ctor(v8, Model2, 1, 0, 0, 0, 0);
           ModelWrapper_setup(v9, v6, 0, 0);
           v10 = 0;
@@ -6582,7 +6582,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v22 = 12321336;
           v23 = "killer_rot_houdai_a";
           v12 = Resource_getModel2(v11, &v22, 1, 0, 0, 0, 0, 0, 0);
-          v13 = __operator_new(48, 0, 4);
+          v13 = __operator_new_al(48, 0, 4);
           v14 = ModelWrapper_ctor(v13, v12, 1, 0, 0, 0, 0);
           ModelWrapper_setup(v14, v11, 0, 0);
           v15 = 0;
@@ -8660,7 +8660,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v15 = "kanibo";
     Model2 = Resource_getModel2(v2, &v14, 2, 1, 0, 0, 0, 0, 0);
-    v5 = __operator_new(72, 0, 4);
+    v5 = __operator_new_al(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, 0, 0);
     a1[1575] = v5;
@@ -11475,7 +11475,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = LoadResource(MEMORY[0xC9CA88], &v24);
     v23 = "karon";
     Model2 = Resource_getModel2(v2, &v22, 2, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(72, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -11511,7 +11511,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v22 = 12321336;
       v23 = v17;
       v18 = Resource_getModel2(v16, &v22, 2, 0, 0, 0, 0, 0, 0);
-      v19 = __operator_new(72, 0, 4);
+      v19 = __operator_new_al(72, 0, 4);
       v20 = ModelWrapper_ctorWithChild(v19, v18, 2, 0, 0, 0, 0);
       j_ModelWrapper_setupModel(v20, v16, 0, 0);
       result = v6 + 4;
@@ -14416,7 +14416,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = 12321336;
     v17 = "karon_head";
     Model2 = Resource_getModel2(v2, &v16, 2, 1, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v6, v2, 0, 0);
     v3[1] = (int)v5;
@@ -15494,7 +15494,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v9 = "keronpa";
     Model2 = Resource_getModel2(ResArchiveById, &v8, 2, 1, 1, 0, 0, 0, 0);
-    v4 = __operator_new(72, 0, 4);
+    v4 = __operator_new_al(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 7124) = v4;
@@ -18596,7 +18596,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "killer";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 13056) = v4;
@@ -21284,7 +21284,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ResArchiveById = Profile__getResArchiveById(a1[3], 0);
     v3 = a1 + 1912;
     Model2 = Resource_getModel2(ResArchiveById, &arr_dword_60C93B00[2 * a1[1912] + 3], 1, 0, 0, 0, 0, 0, 0);
-    v5 = __operator_new(48, 0, 4);
+    v5 = __operator_new_al(48, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v6, ResArchiveById, 0, 0);
     a1[1525] = v5;
@@ -21295,7 +21295,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(**(_DWORD **)(a1[1525] + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(a1[1525] + 12) + 4, 1);
     v8 = Resource_getModel2(ResArchiveById, &arr_dword_60C93B00[2 * a1[1912] + 7], 0, 0, 0, 0, 0, 0, 0);
-    v9 = __operator_new(48, 0, 4);
+    v9 = __operator_new_al(48, 0, 4);
     v10 = ResArchiveById;
     v11 = ModelWrapper_ctor(v9, v8, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v11, ResArchiveById, 0, 0);
@@ -21314,7 +21314,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v18 = v14;
         v19 = v12;
         v20 = Resource_getModel2(v10, &arr_dword_60C93B00[2 * v17 + 11], 0, 0, 0, 0, 0, 0, 0);
-        v21 = __operator_new(48, 0, 4);
+        v21 = __operator_new_al(48, 0, 4);
         v22 = ModelWrapper_ctor(v21, v20, 0, 0, 0, 0, 0);
         ModelWrapper_setup(v22, v10, 0, 0);
         v23 = v16;
@@ -21361,7 +21361,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v1[1912];
     v1 += 1912;
     Model2 = Resource_getModel2(ResArchiveById, &arr_dword_60C93B00[2 * v3 + 3], 1, 0, 0, 0, 0, 0, 0);
-    v5 = __operator_new(48, 0, 4);
+    v5 = __operator_new_al(48, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v6, ResArchiveById, 0, 0);
     *(v1 - 387) = v5;
@@ -21372,12 +21372,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(**(_DWORD **)(*(v1 - 387) + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*(v1 - 387) + 12) + 4, 1);
     v8 = Resource_getModel2(ResArchiveById, &arr_dword_60C93B00[2 * *v1 + 7], 0, 0, 0, 0, 0, 0, 0);
-    v9 = __operator_new(48, 0, 4);
+    v9 = __operator_new_al(48, 0, 4);
     v10 = ModelWrapper_ctor(v9, v8, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v10, ResArchiveById, 0, 0);
     *(v1 - 386) = v9;
     v11 = Resource_getModel2(ResArchiveById, &arr_dword_60C93B00[2 * *v1 + 11], 0, 0, 0, 0, 0, 0, 0);
-    v12 = __operator_new(48, 0, 4);
+    v12 = __operator_new_al(48, 0, 4);
     v13 = ModelWrapper_ctor(v12, v11, 0, 0, 0, 0, 0);
     result = ModelWrapper_setup(v13, ResArchiveById, 0, 0);
     *(v1 - 385) = v12;
@@ -21403,7 +21403,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v9 = "killer_mag_houdai";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v8, 1, 0, 0, 0, 0, 0, 0);
-    v4 = __operator_new(0x30u, 0, 4);
+    v4 = __operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6100) = v4;
@@ -22381,7 +22381,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v9 = "killer_king";
     Model2 = Resource_getModel2(ResArchiveById, &v8, 1, 0, 1, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -23942,7 +23942,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "killer_mag";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 13056) = v4;
@@ -24882,7 +24882,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v22 = "killer";
     Model2 = Resource_getModel2(v2, (int)&v21, 1, 2, 2, 0, 0, 0, 0);
-    v5 = __operator_new(0x30u, 0, 4);
+    v5 = __operator_new_al(0x30u, 0, 4);
     v6 = ModelWrapper_ctor((_DWORD *)v5, Model2, 1, 2, 2, 0, 0);
     ModelWrapper_setup(v6, v3, 0, 0);
     *(_DWORD *)(a1 + 13064) = v5;
@@ -25468,7 +25468,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "killer_mag";
     Model2 = Resource_getModel2(v2, (int)&v9, 1, 0, 1, 0, 0, 0, 0);
-    v4 = __operator_new(0x30u, 0, 4);
+    v4 = __operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[3264] = v4;
@@ -26699,7 +26699,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = 12321336;
     v12 = "huhu";
     Model2 = Resource_getModel2(ResArchiveById, &v11, 2, 0, 1, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(72, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -29350,7 +29350,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13 = 12321336;
     v14 = "KK";
     Model2 = Resource_getModel2(v2, (int)&v13, 2, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6336) = v4;
@@ -30919,7 +30919,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9[0] = 12321336;
     v9[1] = "koton";
     Model2 = Resource_getModel2(ResArchiveById, (int)v9, 1, 0, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v6, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v5;
@@ -34828,7 +34828,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     Model2 = Resource_getModel2(a1, a2, 2, 1, 0, 0, 0, 0, 0);
-    v6 = __operator_new(72, 0, 4);
+    v6 = __operator_new_al(72, 0, 4);
     v7 = ModelWrapper_ctorWithChild(v6, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v7, a1, 0, 0);
     if ( !a3 )
@@ -36911,7 +36911,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v17 = 12321336;
     v18 = "kuriboBig";
     Model2 = Resource_getModel2(v2, &v17, 2, 1, 1, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 1, 0, 0);
     j_ModelWrapper_setupModel(v6, v2, 0, 0);
     v3[1] = (int)v5;
@@ -38722,7 +38722,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11[0] = 12321336;
     v11[1] = "manhole";
     Model2 = Resource_getModel2(v2, (int)v11, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1525] = (unsigned int)v4;
@@ -39579,7 +39579,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "choropoo";
     Model2 = Resource_getModel2(v2, &v9, 1, 0, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(a1 - 1) = v4;
@@ -41586,7 +41586,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1 + 1588;
     v2 = a1[1588];
     Model2 = Resource_getModel2(v2, &unk_60C94A48, 1, 1, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(48, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(48, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v6, v2, 0, 0);
     a1[1589] = v5;
@@ -43308,7 +43308,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C94D00);
     Model2 = Resource_getModel2(Resource, &dword_60C94D08, 1, 0, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     a1[1706] = v4;
@@ -43326,7 +43326,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( result == 1 )
     {
       v8 = Resource_getModel2(Resource, &dword_60C94D18, 1, 0, 0, 0, 0, 0, 0);
-      v9 = __operator_new(48, 0, 4);
+      v9 = __operator_new_al(48, 0, 4);
       v10 = ModelWrapper_ctor(v9, v8, 1, 0, 0, 0, 0);
       ModelWrapper_setup(v10, Resource, 0, 0);
       a1[1708] = v9;
@@ -47138,7 +47138,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = v4;
     v15 = "mouse";
     Model2 = Resource_getModel2(v4, &v14, 1, 0, 0, 0, 0, 0, 0);
-    v7 = __operator_new(48, 0, 4);
+    v7 = __operator_new_al(48, 0, 4);
     v8 = ModelWrapper_ctor(v7, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v8, v5, 0, 0);
     *(_DWORD *)(a1 + 6300) = v7;
@@ -47148,7 +47148,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v14 = 12321336;
       v15 = "mouse_eye_light";
       v10 = Resource_getModel2(v5, &v14, 1, 0, 0, 0, 0, 0, 0);
-      v11 = __operator_new(48, 0, 4);
+      v11 = __operator_new_al(48, 0, 4);
       v12 = ModelWrapper_ctor(v11, v10, 1, 0, 0, 0, 0);
       ModelWrapper_setup(v12, v5, 0, 0);
       *(_DWORD *)(a1 + 6412) = v11;
@@ -49483,7 +49483,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11[0] = 12321336;
     v11[1] = "musasabi";
     Model2 = Resource_getModel2(v4, v11, 2, 1, 0, 0, 0, 0, 0);
-    v6 = (_DWORD *)__operator_new(72, 0, 4);
+    v6 = (_DWORD *)__operator_new_al(72, 0, 4);
     v7 = ModelWrapper_ctorWithChild(v6, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v7, v4, 0, 0);
     *(v3 - 20) = v6;
@@ -51829,25 +51829,25 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v6 = v2 + 2;
       Model2 = Resource_getModel2(Resource, v4, 2, 1, 1, 0, 1, 0, 0);
-      v8 = __operator_new(72, 0, 4);
+      v8 = __operator_new_al(72, 0, 4);
       v9 = ModelWrapper_ctorWithChild(v8, Model2, 2, 1, 1, 0, 1);
       j_ModelWrapper_setupModel(v9, Resource, 0, 0);
       a1[1705] = v8;
       v10 = a1 + 1705;
       v11 = Resource_getModel2(Resource, v6, 1, 1, 1, 0, 0, 0, 0);
-      v12 = __operator_new(48, 0, 4);
+      v12 = __operator_new_al(48, 0, 4);
       ModelWrapper_ctor(v12, v11, 1, 1, 1, 0, 0);
     }
     else
     {
       v13 = Resource_getModel2(Resource, v4, 2, 1, 0, 0, 0, 0, 0);
-      v14 = __operator_new(72, 0, 4);
+      v14 = __operator_new_al(72, 0, 4);
       v15 = ModelWrapper_ctorWithChild(v14, v13, 2, 1, 0, 0, 0);
       j_ModelWrapper_setupModel(v15, Resource, 0, 0);
       a1[1705] = v14;
       v10 = a1 + 1705;
       v16 = Resource_getModel2(Resource, v5, 1, 1, 0, 0, 0, 0, 0);
-      v12 = __operator_new(48, 0, 4);
+      v12 = __operator_new_al(48, 0, 4);
       ModelWrapper_ctor(v12, v16, 1, 1, 0, 0, 0);
     }
     ModelWrapper_setup(v12, Resource, 0, 0);
@@ -54812,7 +54812,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "torpedo";
     Model2 = Resource_getModel2(v2, &v9, 1, 1, 1, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 1, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1] = v4;
@@ -55578,7 +55578,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v8[1] = v3;
     Model2 = Resource_getModel2(ResArchiveById, v8, 0, 0, 0, 0, 0, 0, 0);
-    v5 = __operator_new(72, 0, 4);
+    v5 = __operator_new_al(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 0, 0, 0, 0, 0);
     result = j_ModelWrapper_setupModel(v6, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 1312) = v5;
@@ -56465,7 +56465,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = 12321336;
     v11 = "pakkun_black";
     Model2 = Resource_getModel2(ResArchiveById, &v10, 1, 1, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     a1[1575] = v4;
@@ -57006,7 +57006,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = LoadResource(MEMORY[0xC9CA88], &v13);
     v12 = "wing";
     Model2 = Resource_getModel2(v2, &v11, 2, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(72, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6824) = v4;
@@ -58287,7 +58287,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C95A14);
     Model2 = Resource_getModel2(Resource, (int)&dword_60C95A1C, 1, 0, 0, 0, 0, 0, 0);
-    v4 = __operator_new(0x30u, 0, 4);
+    v4 = __operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     a1[1876] = v4;
@@ -59444,7 +59444,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v4 = a1 + 1525;
       Model2 = Resource_getModel2(ResArchiveById, &unk_60C95CD8, 2, 0, 1, 0, 0, 0, 0);
-      v6 = __operator_new(72, 0, 4);
+      v6 = __operator_new_al(72, 0, 4);
       v7 = ModelWrapper_ctorWithChild(v6, Model2, 2, 0, 1, 0, 0);
       j_ModelWrapper_setupModel(v7, ResArchiveById, 0, 0);
       a1[1526] = v6;
@@ -60251,7 +60251,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8[0] = 12321336;
     v8[1] = "penguin";
     Model2 = Resource_getModel2(ResArchiveById, v8, 2, 0, 0, 0, 0, 0, 0);
-    v4 = __operator_new(72, 0, 4);
+    v4 = __operator_new_al(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     a1[1575] = v4;
@@ -62060,7 +62060,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v20 = 1.7266e-38;
       v21 = COERCE_FLOAT("ice_C1");
       Model2 = Resource_getModel2(ResArchiveById, (int)&v20, 0, 0, 1, 0, 0, 0, 0);
-      v9 = __operator_new(0x30u, 0, 4);
+      v9 = __operator_new_al(0x30u, 0, 4);
       v10 = ModelWrapper_ctor((_DWORD *)v9, Model2, 0, 0, 1, 0, 0);
       ModelWrapper_setup(v10, ResArchiveById, 0, 0);
       *(_DWORD *)(a1 + 6064) = v9;
@@ -63802,7 +63802,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = 12321336;
     v26 = (const char *)arr_dword_60BF0848[v3];
     Model2 = Resource_getModel2(ResArchiveById, &v25, 0, 0, 1, 0, 0, 0, 0);
-    v6 = __operator_new(48, 0, 4);
+    v6 = __operator_new_al(48, 0, 4);
     v7 = ModelWrapper_ctor(v6, Model2, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v7, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v6;
@@ -63827,7 +63827,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = 12321336;
     v26 = "pol_light";
     v13 = Resource_getModel2(ResArchiveById, &v25, 1, 1, 2, 0, 0, 0, 0);
-    v14 = __operator_new(48, 0, 4);
+    v14 = __operator_new_al(48, 0, 4);
     v15 = ModelWrapper_ctor(v14, v13, 1, 1, 2, 0, 0);
     ModelWrapper_setup(v15, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6304) = v14;
@@ -65188,7 +65188,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *v2 )
     {
       Model2 = Resource_getModel2(Resource, v4, 1, 0, 0, 0, 0, 0, 0);
-      v6 = __operator_new(48, 0, 4);
+      v6 = __operator_new_al(48, 0, 4);
       v7 = ModelWrapper_ctor(v6, Model2, 1, 0, 0, 0, 0);
       ModelWrapper_setup(v7, Resource, 0, 0);
       a1[1575] = v6;
@@ -65196,7 +65196,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       v8 = Resource_getModel2(Resource, v4, 1, 1, 0, 0, 0, 0, 0);
-      v9 = __operator_new(48, 0, 4);
+      v9 = __operator_new_al(48, 0, 4);
       v10 = ModelWrapper_ctor(v9, v8, 1, 1, 0, 0, 0);
       ModelWrapper_setup(v10, Resource, 0, 0);
       a1[1575] = v9;
@@ -67989,7 +67989,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v10 = "pukupuku_toge";
     Model2 = Resource_getModel2(v2, &v9, 1, 1, 0, 0, 0, 0, 0);
-    v5 = __operator_new(48, 0, 4);
+    v5 = __operator_new_al(48, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v6, v3, 0, 0);
     *(_DWORD *)(a1 + 6300) = v5;
@@ -71699,7 +71699,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = 12321336;
     v8 = "gabon_rock";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v7, 2, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -80065,7 +80065,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( Resource )
     {
       Model2 = Resource_getModel2(Resource, (int)&dword_60C96C5C, 0, 0, 1, 0, 0, 0, a2);
-      v8 = (_DWORD *)__operator_new(0x30u, a2, 4);
+      v8 = (_DWORD *)__operator_new_al(0x30u, a2, 4);
       v9 = ModelWrapper_ctor(v8, Model2, 0, 0, 1, 0, 0);
       ModelWrapper_setup(v9, v5, 0, a2);
       a1[2] = v8;
@@ -80073,7 +80073,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v10 = a1[1];
         v11 = Resource_getModel2(v10, (int)&dword_60C96C64, 0, 0, 1, 0, 0, 0, a2);
-        v12 = (_DWORD *)__operator_new(0x30u, a2, 4);
+        v12 = (_DWORD *)__operator_new_al(0x30u, a2, 4);
         v13 = ModelWrapper_ctor(v12, v11, 0, 0, 1, 0, 0);
         ModelWrapper_setup(v13, v10, 0, a2);
         a1[3] = v12;
@@ -80091,7 +80091,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v4; // r0
   
-    v4 = (_DWORD *)__operator_new(0x10u, a2, 4);
+    v4 = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     v4[1] = 0;
     v4[2] = 0;
     v4[3] = 0;
@@ -80127,7 +80127,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( Resource )
     {
       Model2 = Resource_getModel2(Resource, (int)&dword_60C96C6C, 0, 0, 1, 0, 0, 0, a2);
-      v8 = (_DWORD *)__operator_new(0x30u, a2, 4);
+      v8 = (_DWORD *)__operator_new_al(0x30u, a2, 4);
       v9 = ModelWrapper_ctor(v8, Model2, 0, 0, 1, 0, 0);
       ModelWrapper_setup(v9, v5, 0, a2);
       a1[2] = v8;
@@ -80135,7 +80135,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v10 = a1[1];
         v11 = Resource_getModel2(v10, (int)&dword_60C96C74, 0, 0, 1, 0, 0, 0, a2);
-        v12 = (_DWORD *)__operator_new(0x30u, a2, 4);
+        v12 = (_DWORD *)__operator_new_al(0x30u, a2, 4);
         v13 = ModelWrapper_ctor(v12, v11, 0, 0, 1, 0, 0);
         ModelWrapper_setup(v13, v10, 0, a2);
         a1[3] = v12;
@@ -80153,7 +80153,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v4; // r0
   
-    v4 = (_DWORD *)__operator_new(0x10u, a2, 4);
+    v4 = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     v4[1] = 0;
     v4[2] = 0;
     v4[3] = 0;
@@ -82181,7 +82181,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = 12321336;
     v13 = "torpedo";
     Model2 = Resource_getModel2(v2, &v12, 1, 1, 1, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 1, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1] = v4;
@@ -84665,7 +84665,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15 = 12321336;
     v16 = "seichan";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v15, 2, 1, 0, 0, 0, 0, 0);
-    v6 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v6 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v7 = ModelWrapper_ctorWithChild(v6, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v7, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v6;
@@ -91111,7 +91111,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v4 = a1 + 1575;
       Model2 = Resource_getModel2(ResArchiveById, &dword_60C976A4, 2, 0, 1, 0, 0, 0, 0);
-      v6 = __operator_new(72, 0, 4);
+      v6 = __operator_new_al(72, 0, 4);
       v7 = ModelWrapper_ctorWithChild(v6, Model2, 2, 0, 1, 0, 0);
       j_ModelWrapper_setupModel(v7, ResArchiveById, 0, 0);
       a1[1576] = v6;
@@ -98750,7 +98750,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v26 = 12321336;
     v27 = (const char *)arr_dword_60BF4758[a2];
     Model2 = Resource_getModel2(ResArchiveById, &v26, 0, 1, 2, 0, 0, 0, 0);
-    v6 = (_DWORD *)__operator_new(48, 0, 4);
+    v6 = (_DWORD *)__operator_new_al(48, 0, 4);
     v7 = ModelWrapper_ctor(v6, Model2, 0, 1, 2, 0, 0);
     ModelWrapper_setup(v7, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 672) = v6;
@@ -101969,7 +101969,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( Resource )
     {
       Model2 = Resource_getModel2(Resource, &unk_60C97B18, 2, 1, 0, 0, 0, 0, 0);
-      v5 = __operator_new(72, 0, 4);
+      v5 = __operator_new_al(72, 0, 4);
       v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 0, 0, 0);
       j_ModelWrapper_setupModel(v6, Resource, 0, 0);
       a1[1526] = v5;
@@ -103073,7 +103073,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v22 = 12321336;
     v23 = "teresaA";
     Model2 = Resource_getModel2(ResArchiveById, &v22, 1, 1, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     a1[1576] = v4;
@@ -103098,7 +103098,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v22 = 12321336;
     v23 = "teresaB";
     v10 = Resource_getModel2(ResArchiveById, &v22, 1, 1, 0, 0, 0, 0, 0);
-    v11 = __operator_new(48, 0, 4);
+    v11 = __operator_new_al(48, 0, 4);
     v12 = ModelWrapper_ctor(v11, v10, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v12, ResArchiveById, 0, 0);
     *(v7 - 87) = v11;
@@ -103116,7 +103116,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v22 = 12321336;
     v23 = "fog";
     v15 = Resource_getModel2(ResArchiveById, &v22, 1, 0, 1, 0, 0, 0, 0);
-    v16 = (_DWORD **)__operator_new(48, 0, 4);
+    v16 = (_DWORD **)__operator_new_al(48, 0, 4);
     v17 = ModelWrapper_ctor(v16, v15, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v17, ResArchiveById, 0, 0);
     *(v7 - 85) = (int)v16;
@@ -105100,7 +105100,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[1575] = v3;
     v4 = v2 % 9;
     Model2 = Resource_getModel2(v3, &arr_dword_60C97C70[2 * (v2 % 9) + 12], 1, 1, 0, 0, 0, 0, 0);
-    v6 = __operator_new(48, 0, 4);
+    v6 = __operator_new_al(48, 0, 4);
     v7 = ModelWrapper_ctor(v6, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v7, v3, 0, 0);
     a1[1576] = v6;
@@ -105111,7 +105111,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = 12321336;
     v26 = "fog";
     v9 = Resource_getModel2(v8, &v25, 1, 0, 1, 0, 0, 0, 0);
-    v10 = __operator_new(48, 0, 4);
+    v10 = __operator_new_al(48, 0, 4);
     v11 = ModelWrapper_ctor(v10, v9, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v11, v8, 0, 0);
     a1[1577] = v10;
@@ -105132,7 +105132,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = 12321336;
     v26 = "teresaB";
     v17 = Resource_getModel2(v16, &v25, 1, 1, 0, 0, 0, 0, 0);
-    v18 = __operator_new(48, 0, 4);
+    v18 = __operator_new_al(48, 0, 4);
     v19 = ModelWrapper_ctor(v18, v17, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v19, v16, 0, 0);
     a1[1578] = v18;
@@ -106799,7 +106799,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v4 = a1 + 1525;
       Model2 = Resource_getModel2(ResArchiveById, &unk_60C97FE8, 2, 0, 1, 0, 0, 0, 0);
-      v6 = __operator_new(72, 0, 4);
+      v6 = __operator_new_al(72, 0, 4);
       v7 = ModelWrapper_ctorWithChild(v6, Model2, 2, 0, 1, 0, 0);
       j_ModelWrapper_setupModel(v7, ResArchiveById, 0, 0);
       a1[1526] = v6;
@@ -107501,7 +107501,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = (char *)&unk_60C980B0 + 8 * *(_DWORD *)(a1 + 11804);
     Resource = LoadResource(MEMORY[0xC9CA88], (_DWORD *)v4 + 19);
     Model2 = Resource_getModel2(Resource, (int)(v4 + 92), 1, 0, 0, 0, 0, 0, 0);
-    v7 = __operator_new(0x30u, 0, 4);
+    v7 = __operator_new_al(0x30u, 0, 4);
     v8 = ModelWrapper_ctor((_DWORD *)v7, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v8, Resource, 0, 0);
     *(v3 - 1376) = v7;
@@ -108979,7 +108979,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = 12321336;
     v19 = "met_toge";
     Model2 = Resource_getModel2(ResArchiveById, &v18, 1, 0, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -108991,14 +108991,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = 12321336;
     v19 = "met_toge_shell";
     v8 = Resource_getModel2(ResArchiveById, &v18, 1, 0, 0, 0, 0, 0, 0);
-    v9 = __operator_new(48, 0, 4);
+    v9 = __operator_new_al(48, 0, 4);
     v10 = ModelWrapper_ctor(v9, v8, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v10, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6304) = v9;
     v18 = 12321336;
     v19 = "met_toge_eye_light";
     v11 = Resource_getModel2(ResArchiveById, &v18, 1, 0, 0, 0, 0, 0, 0);
-    v12 = __operator_new(48, 0, 4);
+    v12 = __operator_new_al(48, 0, 4);
     v13 = ModelWrapper_ctor(v12, v11, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v13, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6308) = v12;
@@ -112742,7 +112742,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C9844C);
     Model2 = Resource_getModel2(Resource, &dword_60C98454, 1, 0, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     a1[1706] = v4;
@@ -114830,7 +114830,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13 = 12321336;
     v14 = "torpedobase";
     Model2 = Resource_getModel2(v2, &v13, 1, 1, 0, 1, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 1, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1] = v4;
@@ -116086,7 +116086,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v24 = v5;
     Model2 = Resource_getModel2(v3, &v23, 2, 0, 0, 0, 0, 0, 0);
-    v7 = (_DWORD *)__operator_new(72, 0, 4);
+    v7 = (_DWORD *)__operator_new_al(72, 0, 4);
     v8 = ModelWrapper_ctorWithChild(v7, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v8, v3, 0, 0);
     v9 = (_DWORD *)(a1 + 14960);
@@ -119894,7 +119894,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return 2;
     v52 = (int *)(a1 + 6300);
     Model2 = Resource_getModel2(v4, (int)&arr_byte_60C98AA0[8 * v3 + 64], 1, 1, 0, 0, 0, 0, 0);
-    v7 = __operator_new(0x30u, 0, 4);
+    v7 = __operator_new_al(0x30u, 0, 4);
     v8 = ModelWrapper_ctor((_DWORD *)v7, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v8, v4, 0, 0);
     *(_DWORD *)(a1 + 6308) = v7;
@@ -126662,7 +126662,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     Model2 = Resource_getModel2(ResArchiveById, &dword_60C98F7C, 2, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(72, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6380) = v4;
@@ -128858,7 +128858,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = LoadResource(MEMORY[0xC9CA88], &v14);
     v13 = "wanwan";
     Model2 = Resource_getModel2(v2, &v12, 1, 1, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1575] = v4;
@@ -128920,7 +128920,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9[1] = "wanwan";
       Resource = LoadResource(MEMORY[0xC9CA88], v9);
       Model2 = Resource_getModel2(Resource, &arr_byte_60C99120[8 * ((i + 1) & 1) + 20], 1, 0, 0, 0, 0, 0, 0);
-      v6 = __operator_new(48, 0, 4);
+      v6 = __operator_new_al(48, 0, 4);
       v7 = ModelWrapper_ctor(v6, Model2, 1, 0, 0, 0, 0);
       ModelWrapper_setup(v7, Resource, 0, 0);
       result = a1 + 6308;
@@ -131187,7 +131187,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = 12321336;
     v12 = "wanwan_kui";
     Model2 = Resource_getModel2(v2, &v11, 1, 0, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6104) = v4;
@@ -131197,7 +131197,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = 12321336;
     v12 = "wanwan_chain_ring";
     v7 = Resource_getModel2(v6, &v11, 1, 0, 0, 0, 0, 0, 0);
-    v8 = __operator_new(48, 0, 4);
+    v8 = __operator_new_al(48, 0, 4);
     v9 = ModelWrapper_ctor(v8, v7, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v9, v6, 0, 0);
     *(_DWORD *)(a1 + 6108) = v8;
@@ -132404,7 +132404,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = 12321336;
     v11 = "pakkun_water";
     Model2 = Resource_getModel2(ResArchiveById, &v10, 2, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(72, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6356) = v4;
@@ -133519,7 +133519,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = 12321336;
     v29 = "woochan";
     Model2 = Resource_getModel2(v2, (int)&v28, 2, 0, 1, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v6, v2, 0, 0);
     v3[1] = (int)v5;
@@ -141063,7 +141063,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     do
     {
       Model2 = Resource_getModel2(Resource, &v5[8 * *(_DWORD *)(a1 + 204)], 0, 1, 1, 0, 0, 0, 0);
-      v7 = __operator_new(48, 0, 4);
+      v7 = __operator_new_al(48, 0, 4);
       v8 = ModelWrapper_ctor(v7, Model2, 0, 1, 1, 0, 0);
       ModelWrapper_setup(v8, Resource, 0, 0);
       *(_DWORD *)(v3 + 4 * v4) = v7;
@@ -141642,7 +141642,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
       }
       Model2 = Resource_getModel2(Resource, (char *)&unk_60C99C90 + 8 * (i & 1) + 8, 0, 0, 0, 0, 0, 0, 0);
-      v7 = __operator_new(48, 0, 4);
+      v7 = __operator_new_al(48, 0, 4);
       v8 = ModelWrapper_ctor(v7, Model2, 0, 0, 0, 0, 0);
       result = ModelWrapper_setup(v8, Resource, 0, 0);
       *v4 = v7;
@@ -142509,7 +142509,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                0,
                0,
                0);
-    v6 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v6 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v7 = ModelWrapper_ctor(v6, Model2, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v7, Resource, 0, 0);
     *(_DWORD *)(a1 + 92) = v6;
@@ -142693,7 +142693,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v9 = "balloon";
     Model2 = Resource_getModel2(v2, (int)&v8, 0, 0, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v6, v3, 0, 0);
     *(_DWORD *)(a1 + 92) = v5;
@@ -143744,22 +143744,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     const char *v19; // [sp+18h] [bp-4h]
   
     sub_6090B310(MEMORY[0xCCF464]);
-    v2 = __operator_new(912, a1, 4);
+    v2 = __operator_new_al(912, a1, 4);
     v18 = 12321336;
     v19 = "DistantView";
     v3 = sub_60443FE0(v2, &v18);
     sub_60444108(v3, 1, 512, 1, 1, a1);
-    v4 = __operator_new(912, a1, 4);
+    v4 = __operator_new_al(912, a1, 4);
     v18 = 12321336;
     v19 = "BGUpdate";
     v5 = sub_60443FE0(v4, &v18);
     sub_60444108(v5, 1, 128, 1, 1, a1);
-    v6 = __operator_new(912, a1, 4);
+    v6 = __operator_new_al(912, a1, 4);
     v18 = 12321336;
     v19 = "3D";
     v7 = sub_60443FE0(v6, &v18);
     sub_60444108(v7, 1, 4096, 5, 26, a1);
-    v8 = __operator_new(912, a1, 4);
+    v8 = __operator_new_al(912, a1, 4);
     v18 = 12321336;
     v17 = v8;
     v19 = "Menu3D";
@@ -143768,25 +143768,25 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = 12321336;
     v10 = MEMORY[0xCD0B40];
     v19 = (const char *)&unk_60AC65BB;
-    v11 = __operator_new(508, a1, 4);
+    v11 = __operator_new_al(508, a1, 4);
     sub_6044364C();
     sub_60958220(v10, v11, 5, &v18, 0, a1);
     sub_60443628(v11, v2);
     v18 = 12321336;
     v19 = (const char *)&unk_60AC65C2;
-    v12 = __operator_new(508, a1, 4);
+    v12 = __operator_new_al(508, a1, 4);
     sub_6044364C();
     sub_60958220(v10, v12, 6, &v18, 0, a1);
     sub_60443628(v12, v4);
     v18 = 12321336;
     v19 = "3D";
-    v13 = __operator_new(508, a1, 4);
+    v13 = __operator_new_al(508, a1, 4);
     sub_6044364C();
     sub_60958220(v10, v13, 9, &v18, 0, a1);
     sub_60443628(v13, v6);
     v18 = 12321336;
     v19 = "2D";
-    v14 = (_DWORD *)__operator_new(420, a1, 4);
+    v14 = (_DWORD *)__operator_new_al(420, a1, 4);
     memset(v14, 0, 0x1A4u);
     sub_60441A3C(v14);
     *v14 = 12555092;
@@ -143794,7 +143794,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60958220(v10, v14, 10, &v18, 0, a1);
     v18 = 12321336;
     v19 = "Menu3D";
-    v15 = __operator_new(508, a1, 4);
+    v15 = __operator_new_al(508, a1, 4);
     sub_6044364C();
     sub_60958220(v10, v15, 15, &v18, 0, a1);
     sub_60443628(v15, v17);
@@ -143815,7 +143815,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     const char *v8; // [sp+Ch] [bp-4h]
   
     sub_6090B310(MEMORY[0xCCF464]);
-    v2 = __operator_new(912, a1, 4);
+    v2 = __operator_new_al(912, a1, 4);
     v7 = 12321336;
     v8 = "FinalKoopa";
     sub_60443FE0(v2, &v7);
@@ -143823,13 +143823,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = 12321336;
     v8 = "FinalKoopa";
     v3 = MEMORY[0xCD0B40];
-    v4 = __operator_new(508, a1, 4);
+    v4 = __operator_new_al(508, a1, 4);
     sub_6044364C();
     sub_60958220(v3, v4, 8, &v7, 0, a1);
     sub_60443628(v4, v2);
     v7 = 12321336;
     v8 = "FinalKoopaShadow";
-    v5 = __operator_new(5456, a1, 4);
+    v5 = __operator_new_al(5456, a1, 4);
     sub_60446220();
     sub_60958220(v3, v5, 7, &v7, 0, a1);
     sub_60443628(v5, v2);
@@ -145791,7 +145791,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_BYTE *)(a1 + 1848) )
     {
       *(_BYTE *)(a1 + 1848) = 0;
-      v2 = __operator_new(56, *(_DWORD *)(a1 + 1840), 4);
+      v2 = __operator_new_al(56, *(_DWORD *)(a1 + 1840), 4);
       *(_DWORD *)(a1 + 1844) = sub_607F34CC(v2, *(_DWORD *)(a1 + 1852), *(_DWORD *)(a1 + 1840));
       *(_DWORD *)(a1 + 1832) = 1;
       v3 = sub_604574C8(MEMORY[0xC9CF18], 1, 1);
@@ -145805,7 +145805,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       nullsub_64(1);
       *(_BYTE *)(a1 + 1849) = 0;
-      v4 = __operator_new(56, *(_DWORD *)(a1 + 1840), 4);
+      v4 = __operator_new_al(56, *(_DWORD *)(a1 + 1840), 4);
       *(_DWORD *)(a1 + 1844) = sub_607F34CC(v4, *(_DWORD *)(a1 + 1852), *(_DWORD *)(a1 + 1840));
       *(_DWORD *)(a1 + 1832) = 1;
       v5 = sub_604574C8(MEMORY[0xC9CF18], 1, 1);
@@ -145834,12 +145834,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (*(_BYTE *)(MEMORY[0xCC6D78] + 44) & 1) != 0 && !*(_BYTE *)(MEMORY[0xC99DD4] + 1380) )
     {
       nullsub_64(1);
-      v6 = __operator_new(56, a1[460], 4);
+      v6 = __operator_new_al(56, a1[460], 4);
       v5 = sub_607F34CC(v6, a2, a1[460]);
     }
     else
     {
-      v4 = __operator_new(60, a1[460], 4);
+      v4 = __operator_new_al(60, a1[460], 4);
       v5 = sub_607F43F4(v4, a2, a1[460]);
     }
     a1[461] = v5;
@@ -145887,7 +145887,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = a1[458];
     if ( result != 1 )
     {
-      v5 = __operator_new(8, a1[460], 4);
+      v5 = __operator_new_al(8, a1[460], 4);
       a1[461] = sub_607F4950(v5, a2, a1[460]);
       a1[458] = 1;
       sub_604574C8(MEMORY[0xC9CF18], 1, 1);
@@ -145910,7 +145910,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = a1[458];
     if ( result != 1 )
     {
-      v5 = __operator_new(8, a1[460], 4);
+      v5 = __operator_new_al(8, a1[460], 4);
       a1[461] = sub_607F49C0(v5, a2, a1[460]);
       a1[458] = 1;
       sub_604574C8(MEMORY[0xC9CF18], 1, 1);
@@ -146495,7 +146495,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12555340;
     v4 = a1[2];
     v5 = a1[3];
@@ -146544,7 +146544,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12555400;
     v4 = a1[2];
     v5 = a1[3];
@@ -147080,7 +147080,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v8; // [sp+8h] [bp-8h] BYREF
     const char *v9; // [sp+Ch] [bp-4h]
   
-    v2 = __operator_new(912, a1, 4);
+    v2 = __operator_new_al(912, a1, 4);
     v8 = 12321336;
     v9 = "3D";
     sub_60443FE0(v2, &v8);
@@ -147088,14 +147088,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v9 = "3D";
     v3 = MEMORY[0xCD0B40];
-    v4 = __operator_new(508, a1, 4);
+    v4 = __operator_new_al(508, a1, 4);
     sub_6044364C();
     sub_60958220(v3, v4, 6, &v8, 0, a1);
     sub_60443628(v4, v2);
     *(_BYTE *)(v4 + 91) = 12;
     v8 = 12321336;
     v9 = "Back2DTV";
-    v5 = (_DWORD *)__operator_new(420, a1, 4);
+    v5 = (_DWORD *)__operator_new_al(420, a1, 4);
     memset(v5, 0, 0x1A4u);
     sub_60441A3C(v5);
     *v5 = 12558308;
@@ -147103,7 +147103,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60958220(v3, v5, 5, &v8, 0, a1);
     v8 = 12321336;
     v9 = "2D";
-    v6 = (_DWORD *)__operator_new(420, a1, 4);
+    v6 = (_DWORD *)__operator_new_al(420, a1, 4);
     memset(v6, 0, 0x1A4u);
     sub_60441A3C(v6);
     *v6 = 12558308;
@@ -147248,7 +147248,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCD0B40];
     v5[0] = 12321336;
     v5[1] = "2D";
-    v3 = (_DWORD *)__operator_new(420, a1, 4);
+    v3 = (_DWORD *)__operator_new_al(420, a1, 4);
     memset(v3, 0, 0x1A4u);
     sub_60441A3C(v3);
     *v3 = 12555472;
@@ -151763,7 +151763,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12555832;
     v4 = a1[2];
     v5 = a1[3];
@@ -151830,7 +151830,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12555892;
     v4 = a1[2];
     v5 = a1[3];
@@ -156427,21 +156427,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     const char *v9; // [sp+10h] [bp-4h]
   
     v2 = MEMORY[0xCD0B40];
-    v3 = __operator_new(912, a1, 4);
+    v3 = __operator_new_al(912, a1, 4);
     v8 = 12321336;
     v9 = "Result";
     sub_60443FE0(v3, &v8);
     sub_60444108(v3, 1, 512, 5, 5, a1);
     v8 = 12321336;
     v9 = "3D";
-    v4 = __operator_new(508, a1, 4);
+    v4 = __operator_new_al(508, a1, 4);
     sub_6044364C();
     sub_60958220(v2, v4, 6, &v8, 0, a1);
     sub_60443628(v4, v3);
     *(_BYTE *)(v4 + 91) = 4;
     v8 = 12321336;
     v9 = "2D";
-    v5 = (_DWORD *)__operator_new(420, a1, 4);
+    v5 = (_DWORD *)__operator_new_al(420, a1, 4);
     memset(v5, 0, 0x1A4u);
     sub_60441A3C(v5);
     *v5 = 12556708;
@@ -156450,7 +156450,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *((_BYTE *)v5 + 91) = 4;
     v8 = 12321336;
     v9 = "2DFront";
-    v6 = (_DWORD *)__operator_new(420, a1, 4);
+    v6 = (_DWORD *)__operator_new_al(420, a1, 4);
     memset(v6, 0, 0x1A4u);
     sub_60441A3C(v6);
     *v6 = 12556708;
@@ -164715,7 +164715,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v8; // [sp+Ch] [bp-8h] BYREF
     const char *v9; // [sp+10h] [bp-4h]
   
-    v2 = __operator_new(912, a1, 4);
+    v2 = __operator_new_al(912, a1, 4);
     v8 = 12321336;
     v9 = "3D";
     sub_60443FE0(v2, &v8);
@@ -164723,7 +164723,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v9 = "3D";
     v3 = MEMORY[0xCD0B40];
-    v4 = __operator_new(508, a1, 4);
+    v4 = __operator_new_al(508, a1, 4);
     sub_6044364C();
     sub_60958220(v3, v4, 5, &v8, 0, a1);
     sub_60443628(v4, v2);
@@ -164731,7 +164731,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v5 = MEMORY[0xCD0B40];
     v9 = "2D";
-    v6 = (_DWORD *)__operator_new(420, a1, 4);
+    v6 = (_DWORD *)__operator_new_al(420, a1, 4);
     memset(v6, 0, 0x1A4u);
     sub_60441A3C(v6);
     *v6 = 12557160;
@@ -167080,7 +167080,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v11 = 0;
       do
       {
-        v12 = __operator_new(140, a4, 4);
+        v12 = __operator_new_al(140, a4, 4);
         v13 = SkeletalAnim_ctor();
         SkeletalAnim_init(v13);
         (*(void (__fastcall **)(_DWORD, int, int))(*(_DWORD *)*v6 + 172))(*v6, v11, v12);
@@ -167101,7 +167101,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v16 = 0;
       do
       {
-        v17 = __operator_new(148, a4, 4);
+        v17 = __operator_new_al(148, a4, 4);
         v18 = ModelWrapper_setup_helper_450DB4();
         ModelWrapper_setup_helper_450E5C(v18, *v6, a2, a3, a4);
         result = (_DWORD *)(*(int (__fastcall **)(_DWORD, int, int))(*(_DWORD *)*v6 + 176))(*v6, v16, v17);
@@ -167121,7 +167121,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v21 = 0;
       do
       {
-        v22 = __operator_new(152, a4, 4);
+        v22 = __operator_new_al(152, a4, 4);
         v23 = ModelWrapper_setup_helper();
         ModelWrapper_setup_helper_445CD0(v23, *v6, a2, a3, a4);
         result = (_DWORD *)(*(int (__fastcall **)(_DWORD, int, int))(*(_DWORD *)*v6 + 180))(*v6, v21, v22);
@@ -167141,7 +167141,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v26 = 0;
       do
       {
-        v27 = __operator_new(240, a4, 4);
+        v27 = __operator_new_al(240, a4, 4);
         v28 = ModelWrapper_setup_helper_451438();
         ModelWrapper_setup_helper_45154C(v28, *v6, a2, a3, a4);
         result = (_DWORD *)(*(int (__fastcall **)(_DWORD, int, int))(*(_DWORD *)*v6 + 184))(*v6, v26, v27);
@@ -167161,7 +167161,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v31 = 0;
       do
       {
-        v32 = __operator_new(136, a4, 4);
+        v32 = __operator_new_al(136, a4, 4);
         v33 = ModelWrapper_setup_helper_446E58();
         ModelWrapper_setup_helper_446F0C(v33, *v6, a2, a3, a4);
         result = (_DWORD *)(*(int (__fastcall **)(_DWORD, int, int))(*(_DWORD *)*v6 + 188))(*v6, v31, v32);
@@ -167602,7 +167602,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6091FDB0(a1 + 344, 1, *(_DWORD *)(a1 + 1764), *(_DWORD *)(a1 + 1756), *(_DWORD *)(a1 + 1760), 1, 1, 0, 0, 1);
     v5 = *(_DWORD *)(a1 + 380);
     v6 = *(_DWORD *)(a1 + 384);
-    v7 = (_DWORD *)__operator_new(28, a2, 4);
+    v7 = (_DWORD *)__operator_new_al(28, a2, 4);
     Slot_construct();
     *v7 = 12557340;
     Slot_initFromResource(v7, v6, a2, v5, 12);
@@ -167729,7 +167729,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6091FDB0(a1 + 1192, 1, 60, *(_DWORD *)(a1 + 1756), *(_DWORD *)(a1 + 1760), 1, 1, 0, 0, 1);
     v5 = *(_DWORD *)(a1 + 1228);
     v6 = *(_DWORD *)(a1 + 1232);
-    v7 = (_DWORD *)__operator_new(28, a2, 4);
+    v7 = (_DWORD *)__operator_new_al(28, a2, 4);
     Slot_construct();
     *v7 = 12557340;
     Slot_initFromResource(v7, v6, a2, v5, 12);
@@ -168778,7 +168778,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12557436;
     v4 = a1[2];
     v5 = a1[3];
@@ -171834,9 +171834,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 20) = 29;
     *(_DWORD *)(a1 + 24) = 854;
     *(_DWORD *)(a1 + 28) = 480;
-    v4 = __operator_new(64, a2, 4);
+    v4 = __operator_new_al(64, a2, 4);
     *(_DWORD *)(a1 + 32) = sub_60919ED8(v4, &v25);
-    v5 = __operator_new(344, a2, 4);
+    v5 = __operator_new_al(344, a2, 4);
     *(_DWORD *)(a1 + 36) = Texture_ctorWithDefaults(v5);
     v6 = *(float *)&v25;
     v7 = *(float *)&v26;
@@ -171849,9 +171849,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 72) = 29;
     *(_DWORD *)(a1 + 76) = 854;
     *(_DWORD *)(a1 + 80) = 480;
-    v8 = __operator_new(64, a2, 4);
+    v8 = __operator_new_al(64, a2, 4);
     *(_DWORD *)(a1 + 84) = sub_60919ED8(v8, &v25);
-    v9 = __operator_new(344, a2, 4);
+    v9 = __operator_new_al(344, a2, 4);
     *(_DWORD *)(a1 + 88) = Texture_ctorWithDefaults(v9);
     v10 = *(float *)&v25;
     v11 = *(float *)&v26;
@@ -171864,9 +171864,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 124) = 29;
     *(_DWORD *)(a1 + 128) = 1280;
     *(_DWORD *)(a1 + 132) = 720;
-    v12 = __operator_new(64, a2, 4);
+    v12 = __operator_new_al(64, a2, 4);
     *(_DWORD *)(a1 + 136) = sub_60919ED8(v12, &v25);
-    v13 = __operator_new(344, a2, 4);
+    v13 = __operator_new_al(344, a2, 4);
     *(_DWORD *)(a1 + 140) = Texture_ctorWithDefaults(v13);
     v14 = *(float *)&v25;
     v15 = *(float *)&v26;
@@ -171891,9 +171891,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 176) = 29;
     *(_DWORD *)(a1 + 180) = 1920;
     *(_DWORD *)(a1 + 184) = 1080;
-    v16 = __operator_new(64, a2, 4);
+    v16 = __operator_new_al(64, a2, 4);
     *(_DWORD *)(a1 + 188) = sub_60919ED8(v16, &v25);
-    v17 = __operator_new(344, a2, 4);
+    v17 = __operator_new_al(344, a2, 4);
     *(_DWORD *)(a1 + 192) = Texture_ctorWithDefaults(v17);
     v18 = *(float *)&v25;
     v19 = *(float *)&v26;
@@ -171906,9 +171906,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 228) = 29;
     *(_DWORD *)(a1 + 232) = 854;
     *(_DWORD *)(a1 + 236) = 480;
-    v20 = __operator_new(64, a2, 4);
+    v20 = __operator_new_al(64, a2, 4);
     *(_DWORD *)(a1 + 240) = sub_60919ED8(v20, &v25);
-    v21 = __operator_new(344, a2, 4);
+    v21 = __operator_new_al(344, a2, 4);
     result = Texture_ctorWithDefaults(v21);
     *(_DWORD *)(a1 + 244) = result;
     v23 = *(float *)&v25;
@@ -173227,7 +173227,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60419A64(a1, CurrentHeap);
     sub_60419C88(a1);
     v20 = a2[21];
-    v17 = __operator_new(148, CurrentHeap, 4);
+    v17 = __operator_new_al(148, CurrentHeap, 4);
     v21 = 12321336;
     v22 = "MiiResource";
     v18 = sub_6090891C(v17, &v21);
@@ -173292,7 +173292,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v12; // [sp+8h] [bp-8h] BYREF
     const char *v13; // [sp+Ch] [bp-4h]
   
-    v6 = __operator_new(96, a4, 4);
+    v6 = __operator_new_al(96, a4, 4);
     v7 = Icon_LAYOUT_Security_agl_shader_ref(v6);
     *(_DWORD *)(a1 + 220) = v7;
     sub_6091E838(v7);
@@ -173453,7 +173453,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[116] = (*(int (__fastcall **)(int, int, int))(*(_DWORD *)a5 + 24))(a5, v7, v8);
     v9 = sub_6083E094(*(_DWORD *)(MEMORY[0xCCFC8C] + 24), a1[193], a1[194]);
     v10 = sub_6083E090(*(_DWORD *)(MEMORY[0xCCFC8C] + 24), a1[193], a1[194]);
-    v11 = (_DWORD *)__operator_new(28, a5, 4);
+    v11 = (_DWORD *)__operator_new_al(28, a5, 4);
     Slot_construct(v11);
     *v11 = 12557340;
     Slot_initFromResource(v11, v9, a5, v10, 0);
@@ -174497,7 +174497,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v6; // r7
     int v7; // r0
   
-    v6 = __operator_new(4728, a2, 4);
+    v6 = __operator_new_al(4728, a2, 4);
     v7 = sub_6041B234();
     sub_6041AFF8(v7, a1, a2, a3);
     return v6;
@@ -174912,7 +174912,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v11 = *(const void **)(v8 + 788);
     }
     qmemcpy(v10, v11, v9);
-    *(_DWORD *)(a1 + 1736) = __operator_new(7152, a4, 1);
+    *(_DWORD *)(a1 + 1736) = __operator_new_al(7152, a4, 1);
     sub_6041BD28(a1, *a2, a2 + 1, a3);
     sub_6041BFD0(a1, *a2, a4);
     MiiMaskTexture_ref(a1, *a2, a4);
@@ -174997,7 +174997,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( result )
         return result;
     }
-    v7 = __operator_new(520, a3, 4);
+    v7 = __operator_new_al(520, a3, 4);
     v8 = sub_60439BC8(v7);
     *v6 = v8;
     *(_DWORD *)(v8 + 224) = a1 + 1159;
@@ -175123,7 +175123,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[36] = (*(int (__fastcall **)(int, int, int))(*(_DWORD *)a4 + 24))(a4, v32, v16);
     v31 = sub_6083DAA8(MEMORY[0xC9BAF4] + 32);
     v17 = sub_6083DAAC(MEMORY[0xC9BAF4] + 32);
-    v18 = (_DWORD *)__operator_new(28, a4, 4);
+    v18 = (_DWORD *)__operator_new_al(28, a4, 4);
     Slot_construct(v18);
     *v18 = 12557340;
     Slot_initFromResource(v18, v31, a4, v17, 0);
@@ -175136,7 +175136,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60913F34(a1[112], a1 + 38);
     v30 = sub_6083DAB0(*(_DWORD *)(MEMORY[0xCCFC8C] + 24), a3);
     v21 = sub_6083DAB4(*(_DWORD *)(MEMORY[0xCCFC8C] + 24), a3);
-    v22 = (_DWORD *)__operator_new(28, a4, 4);
+    v22 = (_DWORD *)__operator_new_al(28, a4, 4);
     Slot_construct(v22);
     *v22 = 12557340;
     Slot_initFromResource(v22, v30, a4, v21, 12);
@@ -175206,7 +175206,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[194] = (*(int (__fastcall **)(int, int, int))(*(_DWORD *)a3 + 24))(a3, v5, v6);
     v7 = sub_6083DE48(*(_DWORD *)(MEMORY[0xCCFC8C] + 24), MEMORY[0xC9BAF4] + 32);
     v8 = sub_6083DE4C(*(_DWORD *)(MEMORY[0xCCFC8C] + 24), MEMORY[0xC9BAF4] + 32);
-    v9 = (_DWORD *)__operator_new(28, a3, 4);
+    v9 = (_DWORD *)__operator_new_al(28, a3, 4);
     Slot_construct(v9);
     *v9 = 12557340;
     Slot_initFromResource(v9, v7, a3, v8, 0);
@@ -175256,7 +175256,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[272] = (*(int (__fastcall **)(int, int, int))(*(_DWORD *)a3 + 24))(a3, v15, v5);
     v6 = sub_6083E1D0(*(_DWORD *)(MEMORY[0xCCFC8C] + 24), MEMORY[0xC9BAF4] + 32, a1[349]);
     v7 = sub_6083E1D4(*(_DWORD *)(MEMORY[0xCCFC8C] + 24), MEMORY[0xC9BAF4] + 32, a1[349]);
-    v8 = (_DWORD *)__operator_new(28, a3, 4);
+    v8 = (_DWORD *)__operator_new_al(28, a3, 4);
     Slot_construct(v8);
     *v8 = 12557340;
     Slot_initFromResource(v8, v6, a3, v7, 0);
@@ -175330,7 +175330,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[436] = (*(int (__fastcall **)(int, int, int))(*(_DWORD *)a3 + 24))(a3, v6, v7);
     v8 = sub_6083DF54(*(_DWORD *)(MEMORY[0xCCFC8C] + 24));
     v9 = sub_6083DF58(*(_DWORD *)(MEMORY[0xCCFC8C] + 24));
-    v10 = (_DWORD *)__operator_new(28, a3, 4);
+    v10 = (_DWORD *)__operator_new_al(28, a3, 4);
     Slot_construct(v10);
     *v10 = 12557340;
     Slot_initFromResource(v10, v8, a3, v9, 0);
@@ -175447,7 +175447,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v15[1] = v17;
           v18 = sub_6083E314(*(_DWORD *)(MEMORY[0xCCFC8C] + 24));
           v19 = sub_6083E318(*(_DWORD *)(MEMORY[0xCCFC8C] + 24));
-          v20 = (_DWORD *)__operator_new(28, a3, 4);
+          v20 = (_DWORD *)__operator_new_al(28, a3, 4);
           Slot_construct(v20);
           *v20 = 12557340;
           Slot_initFromResource(v20, v18, a3, v19, 0);
@@ -175863,7 +175863,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6091FDB0(a1 + 660, 1, 29, *a2, a2[1], 1, 1, 2, 0, 1);
     v6 = a1[669];
     v7 = a1[670];
-    v8 = (_DWORD *)__operator_new(28, a3, 4);
+    v8 = (_DWORD *)__operator_new_al(28, a3, 4);
     Slot_construct(v8);
     *v8 = 12557340;
     Slot_initFromResource(v8, v7, a3, v6, 12);
@@ -175905,7 +175905,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6091FDB0(a1 + 728, 1, 61, *a2, a2[1], 1, 1, 0, 0, 1);
     v6 = a1[737];
     v7 = a1[738];
-    v8 = (_DWORD *)__operator_new(28, a3, 4);
+    v8 = (_DWORD *)__operator_new_al(28, a3, 4);
     Slot_construct(v8);
     *v8 = 12557340;
     Slot_initFromResource(v8, v7, a3, v6, 12);
@@ -178067,7 +178067,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12557740;
     v4 = a1[2];
     v5 = a1[3];
@@ -178259,7 +178259,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12557820;
     v4 = a1[2];
     v5 = a1[3];
@@ -178491,7 +178491,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12557860;
     v4 = a1[2];
     v5 = a1[3];
@@ -179244,7 +179244,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12558048;
     v4 = a1[2];
     v5 = a1[3];
@@ -179339,7 +179339,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60421454(int a1, int a2, int a3)
   {
-    __operator_new(0x34u, a2, a3);
+    __operator_new_al(0x34u, a2, a3);
     return sub_60902E78();
   }
 
@@ -180121,7 +180121,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = (_DWORD *)MEMORY[0xCD0B40];
     v39 = 12321336;
     v40 = "Gather";
-    v7 = (_DWORD *)__operator_new(0x1A4u, 0, 4);
+    v7 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
     memset(v7, 0, 0x1A4u);
     sub_60441A3C(v7);
     *v7 = 12558524;
@@ -180134,7 +180134,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_604448AC(v8, 1, 432, 3, 216, 216, 0);
     v39 = 12321336;
     v40 = (const char *)&unk_60AC7B79;
-    v9 = (_DWORD *)__operator_new(0x1FCu, 0, 4);
+    v9 = (_DWORD *)__operator_new_al(0x1FCu, 0, 4);
     memset(v9, 0, 0x1FCu);
     sub_6044364C((int)v9);
     *v9 = 12558628;
@@ -180143,7 +180143,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60443628(v9, v8);
     v39 = 12321336;
     v40 = "ReflectionLightMap";
-    v10 = (_DWORD *)__operator_new(0x1A4u, 0, 4);
+    v10 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
     memset(v10, 0, 0x1A4u);
     sub_60441A3C(v10);
     *v10 = 12558760;
@@ -180151,7 +180151,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60958220(v6, (int)v10, 2u, &v39, 0, 0);
     v39 = 12321336;
     v40 = "LightMap";
-    v11 = (_DWORD *)__operator_new(0x1A4u, 0, 4);
+    v11 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
     memset(v11, 0, 0x1A4u);
     sub_60441A3C(v11);
     *v11 = 12558760;
@@ -180159,7 +180159,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60958220(v6, (int)v11, 4u, &v39, 0, 0);
     v39 = 12321336;
     v40 = (const char *)&unk_60AC7BA8;
-    v12 = (_DWORD *)__operator_new(0x1A4u, 0, 4);
+    v12 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
     memset(v12, 0, 0x1A4u);
     sub_60441A3C(v12);
     *v12 = 12558308;
@@ -180167,7 +180167,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60958220(v6, (int)v12, 0xEu, &v39, 0, 0);
     v39 = 12321336;
     v40 = (const char *)&unk_60AC7BB2;
-    v13 = (_DWORD *)__operator_new(0x1A4u, 0, 4);
+    v13 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
     memset(v13, 0, 0x1A4u);
     sub_60441A3C(v13);
     *v13 = 12558308;
@@ -180175,7 +180175,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60958220(v6, (int)v13, 0x11u, &v39, 0, 0);
     v39 = 12321336;
     v40 = (const char *)&unk_60AC7BC6;
-    v14 = (_DWORD *)__operator_new(0x1A4u, 0, 4);
+    v14 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
     memset(v14, 0, 0x1A4u);
     sub_60441A3C(v14);
     *v14 = 12558872;
@@ -180183,7 +180183,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60958220(v6, (int)v14, 0x12u, &v39, 0, 0);
     v39 = 12321336;
     v40 = (const char *)&unk_60AC7BD6;
-    v15 = (_DWORD *)__operator_new(0x1A4u, 0, 4);
+    v15 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
     memset(v15, 0, 0x1A4u);
     sub_60441A3C(v15);
     *v15 = 12558976;
@@ -180855,7 +180855,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12558452;
     v4 = a1[2];
     v5 = a1[3];
@@ -180904,7 +180904,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12558504;
     v4 = a1[2];
     v5 = a1[3];
@@ -181158,7 +181158,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12559120;
     v4 = a1[2];
     v5 = a1[3];
@@ -183833,7 +183833,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12559428;
     v4 = a1[2];
     v5 = a1[3];
@@ -184459,7 +184459,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v19 = *(_DWORD *)(MEMORY[0xCD0B50] + 60);
         if ( v19 )
         {
-          v20 = __operator_new(100, v19, 4);
+          v20 = __operator_new_al(100, v19, 4);
           v21 = sub_60420330(v20);
           a2[3] = v21;
           return sub_60420378(v21, a2[1], a2[2]);
@@ -185980,7 +185980,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sead__CriticalSection__unlock((struct sead_CriticalSection *)(v17 + 187));
     if ( v23 > a4 )
       v18 += 18 * a4;
-    v21 = __operator_new(220, v18[2], 4);
+    v21 = __operator_new_al(220, v18[2], 4);
     v18[1] = sub_60420030(v21, v25, v18[3], 1, v15);
     (*(void (__fastcall **)(int))(*(_DWORD *)v15 + 44))(v15);
     sead__CriticalSection__lock(v7);
@@ -186516,7 +186516,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12559696;
     v4 = a1[2];
     v5 = a1[3];
@@ -189948,7 +189948,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           if ( v23 > 14 )
             break;
-          v25 = __operator_new(1224, a2, 4);
+          v25 = __operator_new_al(1224, a2, 4);
           sub_60436A4C(v25, -2, -2);
           v33 = v35[j] & 0xFFFFFF | 0x1000000;
           sub_604186F8((int)v32);
@@ -190041,7 +190041,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( v3 > 14 )
           break;
-        v6 = __operator_new(1224, a2, 4);
+        v6 = __operator_new_al(1224, a2, 4);
         sub_60436A4C(v6, -2, -2);
         v14 = v4 & 0xFFFFFF | 0x5000000;
         sub_604186F8((int)v13);
@@ -190351,7 +190351,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v37; // [sp+1Ch] [bp-8h]
   
     v10 = a10;
-    v14 = __operator_new(744, a10, 4);
+    v14 = __operator_new_al(744, a10, 4);
     sub_60431E20();
     v15 = *(_DWORD *)(a1 + 20);
     (*(void (__fastcall **)(_DWORD *))(*a2 + 12))(a2);
@@ -191981,7 +191981,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a10 == 2 )
     {
       a1[79] |= 0x27u;
-      v16 = (_DWORD *)__operator_new(24, a11, 4);
+      v16 = (_DWORD *)__operator_new_al(24, a11, 4);
       *v16 = 2139095039;
       v16[1] = 2139095039;
       v16[2] = 2139095039;
@@ -192107,7 +192107,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v29 = sub_6086D358(a1 + 10, *(_DWORD *)(MEMORY[0xCCFC8C] + 24));
         v30 = v214;
         v31 = v29;
-        v32 = (_DWORD *)__operator_new(28, v214, 4);
+        v32 = (_DWORD *)__operator_new_al(28, v214, 4);
         Slot_construct(v32);
         *v32 = 12557340;
         Slot_initFromResource(v32, v28, v30, v31, 2);
@@ -195228,7 +195228,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   LABEL_31:
     v28 = sub_6043AF90(v14, v13);
     sub_60432054(a1, v28, *(_DWORD *)(v14 + 28), 1, 0, 0, 0, 0, 0, 0, CurrentHeap);
-    v29 = __operator_new(1456, CurrentHeap, 4);
+    v29 = __operator_new_al(1456, CurrentHeap, 4);
     v30 = sub_6042CDB8(v29);
     a1[287] = v30;
     sub_6042CEF8(v30);
@@ -195421,7 +195421,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   LABEL_22:
     v25 = sub_6043AF90(v11, v10);
     sub_60432054(a1, v25, *(_DWORD *)(v11 + 28), 1, 0, 0, 0, 0, 0, 0, CurrentHeap);
-    v26 = __operator_new(1456, CurrentHeap, 4);
+    v26 = __operator_new_al(1456, CurrentHeap, 4);
     v27 = sub_6042CDB8(v26);
     a1[287] = v27;
     sub_6042CEF8(v27);
@@ -197425,12 +197425,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
   LABEL_15:
-    v17 = (_DWORD *)__operator_new(520, a4, 4);
+    v17 = (_DWORD *)__operator_new_al(520, a4, 4);
     sub_60439BC8(v17);
     if ( !v17 )
       return 0;
     output_bfres_ref((int)v17, a3, a4);
-    v18 = (_DWORD *)__operator_new(64, a4, 4);
+    v18 = (_DWORD *)__operator_new_al(64, a4, 4);
     sead_IDisposer_ctor(v18);
     *v18 = 12560900;
     v18[5] = v18 + 7;
@@ -197999,12 +197999,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               else
               {
   LABEL_92:
-                v39 = (_DWORD *)__operator_new(520, a6, 4);
+                v39 = (_DWORD *)__operator_new_al(520, a6, 4);
                 sub_60439BC8(v39);
                 if ( v39 )
                 {
                   output_bfres_ref_439ED4((int)v39, v44, (int)&v68, 0, a6);
-                  v40 = (_DWORD *)__operator_new(64, a6, 4);
+                  v40 = (_DWORD *)__operator_new_al(64, a6, 4);
                   sead_IDisposer_ctor(v40);
                   *v40 = 12560900;
                   v40[5] = v40 + 7;
@@ -198285,7 +198285,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     signed int v14; // r0
     _DWORD *v16; // [sp+4h] [bp-4h] BYREF
   
-    v7 = (_DWORD *)__operator_new(64, a4, 4);
+    v7 = (_DWORD *)__operator_new_al(64, a4, 4);
     sead_IDisposer_ctor(v7);
     *v7 = 12560900;
     v7[5] = v7 + 7;
@@ -200132,13 +200132,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v6 = *(_DWORD *)(v3 + 16) + 232 * v4;
         v7 = *(unsigned __int16 *)(v6 + 216);
-        v8 = (_DWORD *)__operator_new(44, a2, 4);
+        v8 = (_DWORD *)__operator_new_al(44, a2, 4);
         memset(v8, 0, 0x2Cu);
         sead__CriticalSection__CriticalSection((struct sead_CriticalSection *)v8);
         v8[10] = 0;
         v8[9] = __operator_new[](4 * v7, a2, 4);
         *(_DWORD *)(v6 + 184) = v8;
-        v57 = __operator_new(100, a2, 4);
+        v57 = __operator_new_al(100, a2, 4);
         sub_60420330(v57);
         v59 = (*(int (__fastcall **)(int, int, int))(*(_DWORD *)v5 + 24))(v5, 24 * v7, 4);
         v58 = v7;
@@ -200291,7 +200291,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 }
               }
               v54 = v41;
-              v57 = __operator_new(100, a2, 4);
+              v57 = __operator_new_al(100, a2, 4);
               sub_60420330(v57);
               ++v56[10];
             }
@@ -201704,7 +201704,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a2 << 8 )
     {
       v7 = a2 << 8;
-      v8 = (_DWORD *)__operator_new(28, a5, 4);
+      v8 = (_DWORD *)__operator_new_al(28, a5, 4);
       Slot_construct(v8);
       *v8 = 12557340;
       Slot_initFromResource(v8, 2048, a5, 64, 1);
@@ -201723,7 +201723,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v12 = __operator_new[](*(_DWORD *)(a1 + 72), a5, 256);
       *(_DWORD *)(a1 + 64) = v12;
       *(_DWORD *)(a1 + 68) = v12;
-      v13 = (_DWORD *)__operator_new(28, a5, 4);
+      v13 = (_DWORD *)__operator_new_al(28, a5, 4);
       v14 = Slot_construct(v13);
       *v13 = 12557340;
       Slot_initFromResource(v14, 2048, a5, 64, 1);
@@ -201742,7 +201742,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v18 = __operator_new[](*(_DWORD *)(a1 + 124), a5, 256);
       *(_DWORD *)(a1 + 116) = v18;
       *(_DWORD *)(a1 + 120) = v18;
-      v19 = (_DWORD *)__operator_new(28, a5, 4);
+      v19 = (_DWORD *)__operator_new_al(28, a5, 4);
       v20 = Slot_construct(v19);
       *v19 = 12557340;
       Slot_initFromResource(v20, 2048, a5, 64, 1);
@@ -201765,7 +201765,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      v25 = (_DWORD *)__operator_new(28, a5, 4);
+      v25 = (_DWORD *)__operator_new_al(28, a5, 4);
       Slot_construct(v25);
       *v25 = 12557340;
       Slot_initFromResource(v25, 2048, a5, 64, 1);
@@ -201782,7 +201782,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(a1 + 64) = 0;
       *(_DWORD *)(a1 + 68) = 0;
       *(_DWORD *)(a1 + 72) = 0;
-      v28 = (_DWORD *)__operator_new(28, a5, 4);
+      v28 = (_DWORD *)__operator_new_al(28, a5, 4);
       v29 = Slot_construct(v28);
       *v28 = 12557340;
       Slot_initFromResource(v29, 2048, a5, 64, 1);
@@ -201799,7 +201799,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(a1 + 116) = 0;
       *(_DWORD *)(a1 + 120) = 0;
       *(_DWORD *)(a1 + 124) = 0;
-      v32 = (_DWORD *)__operator_new(28, a5, 4);
+      v32 = (_DWORD *)__operator_new_al(28, a5, 4);
       v33 = Slot_construct(v32);
       *v32 = 12557340;
       Slot_initFromResource(v33, 2048, a5, 64, 1);
@@ -202617,7 +202617,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // [sp+4h] [bp-8h] BYREF
     const char *v8; // [sp+8h] [bp-4h]
   
-    v4 = (struct sead_IDisposer *)__operator_new(0x44u, a2, 4);
+    v4 = (struct sead_IDisposer *)__operator_new_al(0x44u, a2, 4);
     v7 = 12321336;
     v8 = "ReflectionRenderObjLayer";
     v5 = sead_IDisposer_ctor(v4);
@@ -202649,7 +202649,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = a1[404];
     if ( !result )
     {
-      result = __operator_new(0xF0u, a2, 16);
+      result = __operator_new_al(0xF0u, a2, 16);
       a1[404] = result;
     }
     return result;
@@ -203221,7 +203221,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12561772;
     v4 = a1[2];
     v5 = a1[3];
@@ -203791,7 +203791,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     struct sead_IDisposer *v4; // r0
     _DWORD v6[2]; // [sp+0h] [bp-8h] BYREF
   
-    v3 = (struct sead_IDisposer *)__operator_new(0x44u, a2, 4);
+    v3 = (struct sead_IDisposer *)__operator_new_al(0x44u, a2, 4);
     v6[0] = 12321336;
     v6[1] = "RenderObjLayer";
     v4 = sead_IDisposer_ctor(v3);
@@ -203932,7 +203932,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12562068;
     v4 = a1[2];
     v5 = a1[3];
@@ -203987,11 +203987,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = MEMORY[0xC5D314];
       if ( v3 < MEMORY[0xC5D314] )
       {
-        v6 = (int *)__operator_new(12, a2, 4);
-        v7 = __operator_new(148, a2, 4);
+        v6 = (int *)__operator_new_al(12, a2, 4);
+        v7 = __operator_new_al(148, a2, 4);
         v15[0] = 12321336;
         v15[1] = "RenderObjParallelExecuterThread";
-        v8 = (_DWORD *)__operator_new(16, a2, 4);
+        v8 = (_DWORD *)__operator_new_al(16, a2, 4);
         *v8 = 12562104;
         v8[1] = a1;
         v8[2] = 4472432;
@@ -204002,9 +204002,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v15[0] = 1 << v3;
         sub_60908478(v9, v15);
         (*(void (__fastcall **)(int))(*(_DWORD *)*v6 + 24))(*v6);
-        v10 = __operator_new(28, a2, 4);
+        v10 = __operator_new_al(28, a2, 4);
         v6[1] = sub_60907FA4(v10, 1);
-        v11 = (_DWORD *)__operator_new(8, a2, 4);
+        v11 = (_DWORD *)__operator_new_al(8, a2, 4);
         *v11 = 12321336;
         v11[1] = &unk_60ABC94D;
         v6[2] = (int)v11;
@@ -204111,7 +204111,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12562124;
     v4 = a1[2];
     v5 = a1[3];
@@ -206100,7 +206100,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v9; // [sp+Ch] [bp-8h]
     unsigned int v10; // [sp+10h] [bp-4h] BYREF
   
-    v4 = (struct sead_IDisposer *)__operator_new(0x44u, a2, 4);
+    v4 = (struct sead_IDisposer *)__operator_new_al(0x44u, a2, 4);
     v7 = 1.7266e-38;
     v8 = COERCE_FLOAT("ShadowRenderObjLayer");
     v5 = sead_IDisposer_ctor(v4);
@@ -206482,7 +206482,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12562408;
     v4 = a1[2];
     v5 = a1[3];
@@ -206531,7 +206531,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)__operator_new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
     *result = 12562468;
     v4 = a1[2];
     v5 = a1[3];
@@ -207508,7 +207508,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( (*(_BYTE *)(v56 + 8) & 2) == 0 )
             {
   LABEL_34:
-              v26 = (_DWORD *)__operator_new(264, a4, 4);
+              v26 = (_DWORD *)__operator_new_al(264, a4, 4);
               Undefined_ref_9593D4(v26);
               *(_DWORD *)(v22 + 24) = v26;
               *v23 |= 2u;
@@ -207708,7 +207708,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( !*(_DWORD *)(v7 + 32) )
         {
-          v15 = __operator_new(584, a3, 4);
+          v15 = __operator_new_al(584, a3, 4);
           v16 = untitled_ref(v15);
           *(_DWORD *)(v7 + 32) = v16;
           a2 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(v3 + 4) + 16) + 2);

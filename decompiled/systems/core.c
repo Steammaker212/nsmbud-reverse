@@ -26641,7 +26641,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = 12321336;
     v8 = "boss_KK";
     Model2 = Resource_getModel2(v2, (int)&v7, 2, 0, 3, 1, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 3, 1, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     a1[1774] = v4;
@@ -28693,7 +28693,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = 12321336;
     v8 = "KK";
     Model2 = Resource_getModel2(ResArchiveById, &v7, 2, 0, 2, 1, 0, 0, 0);
-    v4 = __operator_new(72, 0, 4);
+    v4 = __operator_new_al(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 2, 1, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     a1[1575] = v4;
@@ -31213,7 +31213,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = 12321336;
     v26 = "koopaJr";
     Model2 = Resource_getModel2(v2, (int)&v25, 2, 0, 1, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     a1[1775] = v4;
@@ -37792,7 +37792,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v61 = 12321336;
       v62 = "koopaJr_clown";
       Model2 = Resource_getModel2(v4, (int)&v61, 2, 1, 0, 0, 0, 0, 0);
-      v7 = (_DWORD *)__operator_new(0x48u, 0, 4);
+      v7 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
       v8 = ModelWrapper_ctorWithChild(v7, Model2, 2, 1, 0, 0, 0);
       j_ModelWrapper_setupModel(v8, v4, 0, 0);
       v5[1369] = (int)v7;
@@ -37857,7 +37857,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v61 = 12321336;
     v62 = "koopaJr_clown_b";
     v35 = Resource_getModel2(v33, (int)&v61, 2, 1, 1, 1, 0, 0, 0);
-    v36 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v36 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v37 = ModelWrapper_ctorWithChild(v36, v35, 2, 1, 1, 1, 0);
     j_ModelWrapper_setupModel(v37, v33, 0, 0);
     v34[1] = (int)v36;
@@ -45361,7 +45361,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v41 = 12321336;
     v42 = "bunbun";
     Model2 = Resource_getModel2(ResArchiveById, &v41, 2, 0, 3, 1, 0, 0, 0);
-    v4 = __operator_new(72, 0, 4);
+    v4 = __operator_new_al(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 3, 1, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     a1[1801] = v4;
@@ -47831,7 +47831,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "kameck";
     Model2 = Resource_getModel2(ResArchiveById, &v9, 2, 0, 1, 0, 0, 0, 0);
-    v5 = __operator_new(72, 0, 4);
+    v5 = __operator_new_al(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v6, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v5;
@@ -53447,7 +53447,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "bunbun_wing";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v9, 2, 0, 1, 0, 0, 0, 0);
-    v4 = __operator_new(0x48u, 0, 4);
+    v4 = __operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild((_DWORD *)v4, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     a1[1959] = v4;
@@ -54940,7 +54940,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15 = 12321336;
     v16 = "koopaJr";
     Model2 = Resource_getModel2(v3, (int)&v15, 2, 0, 1, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, 0, 0);
     v2[1] = (int)v5;
@@ -55777,7 +55777,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v30 = 12321336;
     v31 = "koopaJr_clown";
     Model2 = Resource_getModel2(v2, (int)&v30, 2, 1, 1, 1, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 1, 1, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6304) = v4;
@@ -57313,7 +57313,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = 12321336;
     v20 = "peach";
     Model2 = Resource_getModel2(v2, &v19, 2, 1, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v6, v2, 0, 0);
     *(_DWORD *)(a1 + 6100) = v5;
@@ -57333,7 +57333,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = 12321336;
     v20 = "obj_peach_question";
     v12 = Resource_getModel2(v3, &v19, 1, 0, 0, 0, 0, 0, 0);
-    v13 = (_DWORD *)__operator_new(72, 0, 4);
+    v13 = (_DWORD *)__operator_new_al(72, 0, 4);
     v14 = ModelWrapper_ctorWithChild(v13, v12, 1, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v14, v3, 0, 0);
     v7[1] = v13;
@@ -57878,7 +57878,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15 = "boss_shutter_peach";
     v3 = v2;
     Model2 = Resource_getModel2(v2, &v14, 1, 0, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 1, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, 0, 0);
     *(_DWORD *)(a1 + 6100) = v5;
@@ -64349,7 +64349,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = "koopa";
     v4 = a1[1777];
     Model = Resource_getModel(v2, &v27, 6, 2, 1, 1, 0, 0, 1, v4);
-    v6 = (_DWORD *)__operator_new(0x48u, v4, 4);
+    v6 = (_DWORD *)__operator_new_al(0x48u, v4, 4);
     v7 = ModelWrapper_ctorWithChild(v6, Model, 2, 1, 1, 0, 0);
     j_ModelWrapper_setupModel(v7, v2, (int)&v29, v4);
     a1[1778] = v6;
@@ -64368,7 +64368,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = 12321336;
     v28 = "koopa_shell";
     Model2 = Resource_getModel2(v2, (int)&v27, 1, 0, 0, 0, 0, 0, 0);
-    v13 = __operator_new(0x30u, 0, 4);
+    v13 = __operator_new_al(0x30u, 0, 4);
     v14 = ModelWrapper_ctor((_DWORD *)v13, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v14, v2, (int)&v29, 0);
     a1[1779] = v13;
@@ -64379,7 +64379,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = 12321336;
     v28 = "koopa_shadow";
     v16 = Resource_getModel2(v2, (int)&v27, 0, 0, 0, 0, 0, 0, 0);
-    v17 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v17 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v18 = ModelWrapper_ctor(v17, v16, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v18, v2, 0, 0);
     a1[1780] = v17;
@@ -64392,7 +64392,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v27 = 12321336;
       v28 = "koopa_damage";
       v21 = Resource_getModel(v2, &v27, 6, 0, 0, 1, 0, 0, 1, 0);
-      v22 = __operator_new(0x30u, 0, 4);
+      v22 = __operator_new_al(0x30u, 0, 4);
       v23 = ModelWrapper_ctor((_DWORD *)v22, v21, 0, 0, 1, 0, 0);
       ModelWrapper_setup(v23, v2, 0, 0);
       v26[v20] = v22;
@@ -68526,7 +68526,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = 12321336;
     v20 = "koopa_fire_shadow";
     Model2 = Resource_getModel2(v2, (int)&v19, 0, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6100) = v4;
@@ -73694,7 +73694,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "koopaJr_shell";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v9, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     a1[1903] = (int)v4;
@@ -79331,7 +79331,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v35 = 12321336;
     v36 = "koopaJr_clown";
     Model2 = Resource_getModel2(v2, (int)&v35, 2, 1, 1, 1, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 1, 1, 0);
     j_ModelWrapper_setupModel(v6, v2, 0, 0);
     *(_DWORD *)(a1 + 6304) = v5;
@@ -79396,7 +79396,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v35 = 12321336;
     v36 = "koopaJr_clown_shadow";
     v31 = Resource_getModel2(v30, (int)&v35, 0, 0, 0, 0, 0, 0, 0);
-    v32 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v32 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v33 = ModelWrapper_ctor(v32, v31, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v33, v30, 0, 0);
     *(_DWORD *)(a1 + 7656) = v32;
@@ -84243,7 +84243,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = 12321336;
     v19 = "iggy";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v18, 2, 1, 2, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     a1[1774] = (int)v4;
@@ -84267,7 +84267,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = 12321336;
     v19 = "iggy_shell";
     v11 = Resource_getModel2(ResArchiveById, (int)&v18, 2, 1, 2, 0, 0, 0, 0);
-    v12 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v12 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v13 = ModelWrapper_ctorWithChild(v12, v11, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v13, ResArchiveById, 0, 0);
     a1[1775] = (int)v12;
@@ -88003,7 +88003,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v10 = "room_iggy";
     Model2 = Resource_getModel2(v2, &v9, 0, 0, 1, 0, 0, 0, 0);
-    v5 = __operator_new(48, 0, 4);
+    v5 = __operator_new_al(48, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v6, v3, 0, 0);
     *(_DWORD *)(a1 + 644) = v5;
@@ -91090,7 +91090,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = 12321336;
     v12 = "kameck";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v11, 2, 1, 2, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 7096) = v4;
@@ -94062,7 +94062,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = 12321336;
       v9 = "ice_kameck";
       Model2 = Resource_getModel2(result, &v8, 1, 0, 1, 0, 0, 0, 0);
-      v5 = __operator_new(48, 0, 4);
+      v5 = __operator_new_al(48, 0, 4);
       v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 1, 0, 0);
       ModelWrapper_setup(v6, v3, 0, 0);
       *(_DWORD *)(a1 + 6104) = v5;
@@ -103509,7 +103509,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "ShipIggy";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6188) = v4;
@@ -103706,7 +103706,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "ShipLarry";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6188) = v4;
@@ -103887,7 +103887,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "ShipLemmy";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6188) = v4;
@@ -104068,7 +104068,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "ShipLudwig";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6188) = v4;
@@ -104249,7 +104249,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "ShipMorton";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6188) = v4;
@@ -104430,7 +104430,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "ShipRoy";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6188) = v4;
@@ -105277,7 +105277,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v9 = "boss_cannon";
     Model2 = Resource_getModel2(ResArchiveById, &v8, 1, 0, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6100) = v4;
@@ -105990,7 +105990,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "ShipWendy";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6188) = v4;
@@ -108261,13 +108261,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 7092);
     v2 = (int *)(a1 + 7092);
     Model = Resource_getModel(v3, &dword_60C83C40, 6, 2, 1, 2, 0, 0, 1, 0);
-    v5 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, (int)&v23, 0);
     v2[2] = (int)v5;
     v7 = *v2;
     Model2 = Resource_getModel2(*v2, (int)&dword_60C83C48, 0, 0, 0, 0, 0, 0, 0);
-    v9 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v9 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v10 = ModelWrapper_ctor(v9, Model2, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v10, v7, 0, 0);
     v2[3] = (int)v9;
@@ -108281,7 +108281,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v21 = 12321336;
       v22 = "koopa_damage";
       v14 = Resource_getModel(v13, &v21, 6, 0, 0, 1, 0, 0, 1, 0);
-      v15 = __operator_new(0x30u, 0, 4);
+      v15 = __operator_new_al(0x30u, 0, 4);
       v16 = ModelWrapper_ctor((_DWORD *)v15, v14, 0, 0, 1, 0, 0);
       ModelWrapper_setup(v16, v13, 0, 0);
       v20[8 * v11] = v15;
@@ -111949,7 +111949,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = 12321336;
     v13 = "kameck";
     Model2 = Resource_getModel2(ResArchiveById, &v12, 2, 0, 1, 0, 0, 0, 0);
-    v4 = __operator_new(72, 0, 4);
+    v4 = __operator_new_al(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -113021,7 +113021,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = 12321336;
     v11 = "koopaJr_clown_sphere";
     Model2 = Resource_getModel2(v2, &v10, 1, 0, 1, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1] = v4;
@@ -115008,7 +115008,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = 12321336;
     v12 = "koopaJr_clown_expression";
     Model2 = Resource_getModel2(v2, &v11, 0, 0, 1, 0, 1, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 0, 0, 1, 0, 1);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1] = v4;
@@ -118354,7 +118354,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = 12321336;
     v11 = "koopa_attack";
     Model2 = Resource_getModel2(v2, &v10, 1, 0, 1, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1] = v4;
@@ -119871,7 +119871,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = 12321336;
     v29 = "larry";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v28, 2, 1, 2, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     a1[1774] = (int)v4;
@@ -119918,7 +119918,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = 12321336;
     v29 = "larry_shell";
     v21 = Resource_getModel2(ResArchiveById, (int)&v28, 2, 1, 2, 0, 0, 0, 0);
-    v22 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v22 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v23 = ModelWrapper_ctorWithChild(v22, v21, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v23, ResArchiveById, 0, 0);
     a1[1775] = (int)v22;
@@ -123309,7 +123309,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = 12321336;
     v19 = "lemmy";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v18, 2, 1, 2, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     a1[1774] = (int)v4;
@@ -123333,7 +123333,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = 12321336;
     v19 = "lemmy_shell";
     v11 = Resource_getModel2(ResArchiveById, (int)&v18, 2, 1, 2, 0, 0, 0, 0);
-    v12 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v12 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v13 = ModelWrapper_ctorWithChild(v12, v11, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v13, ResArchiveById, 0, 0);
     a1[1775] = (int)v12;
@@ -125914,7 +125914,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = 12321336;
     v8 = "lemmy_ball";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v7, 2, 0, 1, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6100) = v4;
@@ -127938,7 +127938,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "lemmy_bomb";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 2, 0, 1, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6100) = v4;
@@ -129291,7 +129291,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v26 = "ludwig";
     Model2 = Resource_getModel2(v2, (int)&v25, 2, 1, 2, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, 0, 0);
     *(_DWORD *)(a1 + 7096) = v5;
@@ -129336,7 +129336,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = 12321336;
     v26 = "ludwig_shell";
     v18 = Resource_getModel2(v3, (int)&v25, 2, 1, 2, 0, 0, 0, 0);
-    v19 = (_DWORD *)__operator_new(0x48u, 0, 4);
+    v19 = (_DWORD *)__operator_new_al(0x48u, 0, 4);
     v20 = ModelWrapper_ctorWithChild(v19, v18, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v20, v3, 0, 0);
     v7[1] = v19;

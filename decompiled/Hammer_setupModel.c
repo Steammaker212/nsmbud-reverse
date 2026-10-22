@@ -41,7 +41,7 @@ int __fastcall HammerActor_setupModel(int a1);
 /* line: 18 */          0,
 /* line: 19 */          0,
 /* line: 20 */          0);
-/* line: 21, address: 0x6013fd60 */   v4 = __operator_new(48, 0, 4);
+/* line: 21, address: 0x6013fd60 */   v4 = __operator_new_al(48, 0, 4);
 /* line: 22, address: 0x6013fd68 */   v5 = ModelWrapper_ctor(v4, v3, 1, 0, 0, 0, 0);
 /* line: 23, address: 0x6013fd78 */   ModelWrapper_setup(v5, ResArchiveById, 0, 0);
 /* line: 24, address: 0x6013fd80 */   *(_DWORD *)(a1 + 11824) = v4;

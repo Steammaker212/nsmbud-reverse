@@ -115,6 +115,16 @@ def main():
     run("1g/9 dedupe function blocks (extra tree)",
         [sys.executable, "scripts/dedupe_function_blocks.py",
          os.path.join(PERFN, "decompiled"), "--write"])
+    # Multi-argument allocation calls (`__operator_new(48, 0, 4)`) collide with the database prototype
+    # for the one-argument symbol. They are the aligned/placement overload, so they get their own
+    # name and their own declaration. Must run after fix_qualified_names has produced the base name.
+    run("1h/9 operator arity",
+        [sys.executable, "scripts/fix_operator_arity.py", CLEAN, "--write"])
+    run("1i/9 operator arity (per-function)",
+        [sys.executable, "scripts/fix_operator_arity.py", PERFN, "--write"])
+    run("1j/9 operator arity (repo tree)",
+        [sys.executable, "scripts/fix_operator_arity.py",
+         os.path.join(REPO, "decompiled"), "--write"])
 
     # 2. assemble corpus
     run("2/7 build corpus", [sys.executable, "scripts/make_decompiled_corpus.py"])
@@ -157,6 +167,15 @@ def main():
     # sub-function declarations: 9 exact signatures + 32,164 unprototyped ones. Must precede
     # restructure too, for the same reason the data header must.
     run("3b/7 subfunc header", [sys.executable, "scripts/gen_subfuncs_header.py"])
+    # 3b2. the names NO header declares: 292 nullsub_* stubs (987 call sites), 48 algn_* padding
+    #      labels, the _S<n> SIMD pseudo-registers, float slots and 258 rodata string arrays. Must run
+    #      AFTER the prototype headers exist, because it consults them to skip anything already
+    #      declared -- that check is what keeps it from repeating tier 2's 250 -> 0 failure.
+    run("3b2/9 undeclared calls",
+        [sys.executable, "scripts/gen_undeclared_calls.py",
+         os.path.join(REPO, "decompiled"),
+         os.path.join(REPO, "decompiled", "include"),
+         os.path.join(REPO, "decompiled", "include", "nsmbudx_undeclared.h"), "--write"])
     # 3c. data labels that are INDEXED (`dword_X[i]`) cannot use the scalar macro -- at that point
     #     the macro is an integer and clang rejects the subscript. The header emits an `arr_` pointer
     #     form for every label; this rewrites only the subscripted uses. Must follow the data header.

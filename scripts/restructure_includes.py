@@ -127,6 +127,21 @@ void  _ZdlPv(void *p);
 void  _ZdaPv(void *p);
 
 /* ---- C++ allocation operators ----
+ * NO declarations here. `__operator_new` / `__operator_delete` are real functions with known
+ * addresses (0x008de044, 0x008de3a0) and libs.h declares them from the database. Declaring them again
+ * -- even variadically -- collided with those prototypes: first attempt took the parse count from
+ * 334 to 0, and a variadic retry took it from 432 to 0. The overload question has to be solved at the
+ * CALL SITES instead, by scripts/fix_operator_arity.py, which renames the three-argument (aligned /
+ * placement) form to `__operator_new_al` -- a distinct overload with its own declaration below, so
+ * nothing contradicts the database prototypes. */
+/* The aligned/placement overload, which the decompiler prints as `operator new(size, heap, align)`.
+ * Distinct from the one-argument symbol above, and declared only here. */
+int __fastcall __operator_new_al(unsigned int size, int heap, int align);
+int __fastcall __operator_delete_al(int p, int heap, int align);
+int __fastcall __operator_new_array_al(unsigned int size, int heap, int align);
+int __fastcall __operator_delete_array_al(int p, int heap, int align);
+
+/* ---- C++ allocation operators ----
  * The decompiler prints `operator new(size)` / `operator delete(p)`, which is not C. Those call
  * sites are rewritten to these names by scripts/fix_qualified_names.py.
  *
@@ -182,6 +197,7 @@ def rewrite_prelude(extra_qualified):
         # IDA still names `sub_*` cannot resolve -- and they are 65% of the corpus by count and
         # 75.5% by code bytes. The earlier name export filtered them out entirely.
         '#include "nsmbudx_subfuncs.h"',
+        '#include "nsmbudx_undeclared.h"',
         "",
     ]
     # Only structs.h and libs.h are pulled in, and that is a measured choice, not a guess.

@@ -1834,7 +1834,7 @@ static inline unsigned int uxtb16(unsigned int x)
     switch ( v7 )
     {
       case 2:
-        v8 = __operator_new(236, a4, 4);
+        v8 = __operator_new_al(236, a4, 4);
         *(_DWORD *)(a1 + 1388) = sub_60455CB8(v8);
         (*(void (__fastcall **)(_DWORD *))(*a3 + 12))(a3);
         (*(void (__fastcall **)(_DWORD *))(*a3 + 12))(a3);
@@ -1860,7 +1860,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_60452470(a1);
         break;
       case 1:
-        v12 = __operator_new(236, a4, 4);
+        v12 = __operator_new_al(236, a4, 4);
         v13 = sub_60455CB8(v12);
         *(_DWORD *)(a1 + 1388) = v13;
         sub_60455E7C(v13, a4);
@@ -1869,15 +1869,15 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 1388) = 0;
         break;
     }
-    v14 = __operator_new(404, a4, 4);
+    v14 = __operator_new_al(404, a4, 4);
     *(_DWORD *)(a1 + 1264) = ctor_installTwoVtables(v14);
-    v15 = __operator_new(404, a4, 4);
+    v15 = __operator_new_al(404, a4, 4);
     *(_DWORD *)(a1 + 1268) = ctor_installTwoVtables(v15);
-    v16 = __operator_new(404, a4, 4);
+    v16 = __operator_new_al(404, a4, 4);
     *(_DWORD *)(a1 + 1272) = ctor_installTwoVtables(v16);
-    v17 = __operator_new(404, a4, 4);
+    v17 = __operator_new_al(404, a4, 4);
     *(_DWORD *)(a1 + 1276) = ctor_installTwoVtables(v17);
-    v18 = __operator_new(404, a4, 4);
+    v18 = __operator_new_al(404, a4, 4);
     *(_DWORD *)(a1 + 1280) = ctor_installTwoVtables(v18);
     v19 = *(_DWORD *)(a1 + 1316);
     if ( v19 >= 2 )
@@ -4545,7 +4545,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[1] = 864136;
       a1[2] = v5;
     }
-    v6 = __operator_new(32, a3, 4);
+    v6 = __operator_new_al(32, a3, 4);
     v7 = sub_60905100(v6, a1[2], 864136, 0);
     a1[3] = v7;
     sub_609052F4(v7, 0);
@@ -4591,7 +4591,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[1] = 864136;
       a1[2] = v3;
     }
-    v4 = __operator_new(32, a2, 4);
+    v4 = __operator_new_al(32, a2, 4);
     v5 = sub_60905100(v4, a1[2], 864136, 0);
     a1[3] = v5;
     sub_609052F4(v5, 0);
@@ -9120,7 +9120,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], &arr_dword_60C9D030[2 * *(unsigned __int8 *)(a1 + 6320) + 3]);
     *((_DWORD *)v2 - 55) = Resource;
     Model2 = Resource_getModel2(Resource, (int)&unk_60C9D0A0 + 8 * (unsigned __int8)*v2, 1, 1, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(48, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(48, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v6, Resource, 0, 0);
     *((_DWORD *)v2 - 54) = v5;
@@ -9514,7 +9514,7 @@ static inline unsigned int uxtb16(unsigned int x)
       Model = Resource_getModel(Resource, dword_60BFB318, 6, 1, 1, 1, 0, 0, 1, 0);
     else
       Model = Resource_getModel2(Resource, (int)dword_60BFB318, 1, 1, 1, 0, 0, 0, 0);
-    v9 = __operator_new(48, 0, 4);
+    v9 = __operator_new_al(48, 0, 4);
     v10 = ModelWrapper_ctor((_DWORD *)v9, Model, 1, 1, 1, 0, 0);
     ModelWrapper_setup(v10, v7, 0, 0);
     a1[1] = v9;
@@ -9720,7 +9720,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_fireflower";
     Model2 = Resource_getModel2(Resource, v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -10164,7 +10164,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_iceflower";
     Model2 = Resource_getModel2(Resource, v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -15538,7 +15538,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = LoadResource(MEMORY[0xC9CA88], &v13);
     v12 = "I_kinoko";
     Model2 = Resource_getModel2(v2, (int)&v11, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(48, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -15950,7 +15950,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = LoadResource(MEMORY[0xC9CA88], &v12);
     v11 = "I_kinoko";
     Model2 = Resource_getModel2(v2, (int)&v10, 1, 1, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -16398,7 +16398,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_musasabi";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -16766,7 +16766,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = LoadResource(MEMORY[0xC9CA88], &v12);
     v11 = "I_kinoko";
     Model2 = Resource_getModel2(v2, (int)&v10, 1, 1, 0, 0, 0, 0, 0);
-    v4 = __operator_new(48, 0, 4);
+    v4 = __operator_new_al(48, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -17183,7 +17183,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_crown";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -17556,7 +17556,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_penguin";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -18051,7 +18051,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7[0] = 12321336;
     v7[1] = "I_propeller_model";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     a1[1540] = v4;
@@ -19269,7 +19269,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 6140);
     Resource = LoadResource(MEMORY[0xC9CA88], (_DWORD *)&unk_60C9D720 + 2 * *(_DWORD *)(a1 + 6140));
     Model2 = Resource_getModel2(Resource, (int)&unk_60C9D720 + 8 * *v2 + 56, 1, 1, 0, 0, 0, 0, 0);
-    v5 = __operator_new(48, 0, 4);
+    v5 = __operator_new_al(48, 0, 4);
     v6 = ModelWrapper_ctor((_DWORD *)v5, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v6, Resource, 0, 0);
     *(v2 - 10) = v5;
@@ -19906,7 +19906,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_star";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -20517,7 +20517,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v8 = 12321336;
       v9 = "I_moon";
       Model2 = Resource_getModel2(v3, (int)&v8, 1, 1, 0, 0, 0, 0, 0);
-      v5 = (_DWORD *)__operator_new(0x30u, 0, 4);
+      v5 = (_DWORD *)__operator_new_al(0x30u, 0, 4);
       v6 = ModelWrapper_ctor(v5, Model2, 1, 1, 0, 0, 0);
       ModelWrapper_setup(v6, v3, 0, 0);
       *(_DWORD *)(a1 + 6160) = v5;
@@ -20945,7 +20945,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = LoadResource(MEMORY[0xC9CA88], &v18);
     v17 = "I_musasabi";
     Model2 = Resource_getModel2(v2, (int)&v16, 1, 0, 0, 0, 0, 0, 0);
-    v4 = __operator_new(0x30u, 0, 4);
+    v4 = __operator_new_al(0x30u, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6104) = v4;
@@ -21327,7 +21327,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], &arr_dword_60C9D920[2 * *(_DWORD *)(a1 + 6112)]);
     *(v2 - 3) = Resource;
     Model2 = Resource_getModel2(Resource, (int)&unk_60C9D960 + 8 * *v2, 1, 1, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)__operator_new(48, 0, 4);
+    v5 = (_DWORD *)__operator_new_al(48, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v6, Resource, 0, 0);
     *(v2 - 2) = v5;
@@ -22052,7 +22052,7 @@ static inline unsigned int uxtb16(unsigned int x)
         else
         {
   LABEL_14:
-          v16 = __operator_new(88, a3, 4);
+          v16 = __operator_new_al(88, a3, 4);
           v27 = sub_60476898(v16);
           sub_60472DBC(v7, &v28, &v27);
           v17 = v27;
@@ -22824,7 +22824,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v3; // r0
   
-    v3 = __operator_new(0x14u, a2, a3);
+    v3 = __operator_new_al(0x14u, a2, a3);
     return sub_60901BCC(v3);
   }
 
@@ -22890,11 +22890,11 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[5] = CurrentHeap;
     sub_60855B70(4690912, 4690940);
     (*(void (__fastcall **)(_DWORD *, int))(*a1 + 12))(a1, a2);
-    v5 = __operator_new(84, a2, 4);
+    v5 = __operator_new_al(84, a2, 4);
     v6 = (*(int (__fastcall **)(_DWORD *))(*a1 + 16))(a1);
     sub_60479C44(v5, v6);
     a1[4] = v5;
-    v7 = __operator_new(240, a2, 16);
+    v7 = __operator_new_al(240, a2, 16);
     v8 = sub_60853EC0(v7);
     *(_DWORD *)v8 = 12569292;
     *(_DWORD *)(v8 + 224) = 0;
@@ -22902,12 +22902,12 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(v8 + 232) = v8 + 232;
     *(_DWORD *)(v8 + 236) = v8 + 232;
     a1[6] = v8;
-    v9 = __operator_new(60, a2, 4);
+    v9 = __operator_new_al(60, a2, 4);
     v10 = (_DWORD *)sub_60987E7C(v9, *(_DWORD *)(MEMORY[0xCD0C84] + 852), *(_DWORD *)(MEMORY[0xCD0C84] + 856));
     *v10 = 12571036;
     v10[14] = 1065353216;
     a1[879] = v10;
-    result = __operator_new(48, a2, 16);
+    result = __operator_new_al(48, a2, 16);
     a1[7] = result;
     return result;
   }
@@ -25017,7 +25017,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     CurrentHeap = sead__HeapMgr__getCurrentHeap(MEMORY[0xCCEE90]);
-    v3 = __operator_new(36, CurrentHeap, 4);
+    v3 = __operator_new_al(36, CurrentHeap, 4);
     result = sub_60982D30(v3, *(_DWORD *)(MEMORY[0xCD0C84] + 836), *(_DWORD *)(MEMORY[0xCD0C84] + 856));
     *(_DWORD *)(a1 + 3520) = result;
     return result;
@@ -25155,7 +25155,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v3; // r5
     int v4; // r4
   
-    v3 = (_DWORD *)__operator_new(0x84u, a2, 4);
+    v3 = (_DWORD *)__operator_new_al(0x84u, a2, 4);
     memset(v3, 0, 0x84u);
     sub_6098B61C((struct sead_IDisposer *)v3);
     *v3 = 12569336;
@@ -27596,7 +27596,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v10 += 208 * a2;
     sub_6091FDB0(v10, 1, 29, *a3, a3[1], 1, 1, 0, 0, 1);
     v11 = v10[10];
-    v12 = (_DWORD *)__operator_new(28, a6, 4);
+    v12 = (_DWORD *)__operator_new_al(28, a6, 4);
     Slot_construct(v12);
     *v12 = 12557340;
     Slot_initFromResource(v12, v11, a6, 0x2000, 0);
@@ -27681,7 +27681,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v7 += 208 * a2;
     sub_6091FDB0(v7, 1, 29, *a3, a3[1], 1, 1, 0, 0, 1);
     v8 = v7[10];
-    v9 = (_DWORD *)__operator_new(28, a5, 4);
+    v9 = (_DWORD *)__operator_new_al(28, a5, 4);
     Slot_construct(v9);
     *v9 = 12557340;
     Slot_initFromResource(v9, v8, a5, 0x2000, 0);

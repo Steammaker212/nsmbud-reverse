@@ -54,7 +54,11 @@ def rewrite_qualified(match):
 # 200 delete[] sites, across 40 files -- and every one of those 40 files fails to parse. The
 # replacements are plain C identifiers declared in nsmbudx_types.h, so the call still means the same
 # allocation and the reference stays greppable.
-OPERATOR = re.compile(r"\boperator\s*(new\[\]|delete\[\]|new|delete)\b")
+# The `[]` alternatives must come first so `operator new[]` is not read as `operator new` followed by
+# junk. No trailing \b either: the match ends in `]`, and `\b` after `]` never matches (there is no
+# word boundary between a bracket and whitespace), which is why 257 `operator new[]` sites were left
+# unconverted on the first pass while `operator new` was fine.
+OPERATOR = re.compile(r"\boperator\s*(new\[\]|delete\[\]|new|delete)(?!\w)")
 
 
 def rewrite_operator(match):

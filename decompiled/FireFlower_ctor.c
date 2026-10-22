@@ -37,7 +37,7 @@ int __fastcall sub_6045D79C(int a1);
 /* line: 14, address: 0x6045d800 */   Resource = LoadResource(MEMORY[0xC9CA88], v8);
 /* line: 15, address: 0x6045d804 */   v7[1] = "I_fireflower";
 /* line: 16, address: 0x6045d820 */   Model2 = Resource_getModel2(Resource, v7, 1, 1, 0, 0, 0, 0, 0);
-/* line: 17, address: 0x6045d848 */   v4 = __operator_new(48, 0, 4);
+/* line: 17, address: 0x6045d848 */   v4 = __operator_new_al(48, 0, 4);
 /* line: 18, address: 0x6045d850 */   v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
 /* line: 19, address: 0x6045d860 */   ModelWrapper_setup(v5, Resource, 0, 0);
 /* line: 20, address: 0x6045d868 */   *(_DWORD *)(a1 + 6160) = v4;

@@ -15,6 +15,7 @@
 #include "structs.h"
 #include "nsmbudx_data.h"
 #include "nsmbudx_subfuncs.h"
+#include "nsmbudx_undeclared.h"
 
 #include "libs.h"
 
