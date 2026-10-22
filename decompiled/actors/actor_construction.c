@@ -179,6 +179,229 @@
   }
 
 /* ============================================================================
+ * SE_BOSS_MORTON_STAMP_ref
+ * RVA 0x000f28cc   size 0x1d8   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_MORTON_STAMP_ref(int a1)
+  {
+    int **v2; // r5
+    _DWORD *v3; // r1
+    unsigned int v4; // r0
+    int v5; // r0
+    int (__fastcall *v6)(int, _DWORD *); // r2
+    int v7; // r0
+    _DWORD *v8; // r1
+    unsigned int v9; // r0
+    int v10; // r1
+    unsigned int v11; // r0
+    int result; // r0
+    _DWORD v13[12]; // [sp+4h] [bp-3Ch] BYREF
+    _DWORD v14[3]; // [sp+34h] [bp-Ch] BYREF
+  
+    v2 = (int **)(a1 + 7096);
+    j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 7096));
+    Animation_update(*(_DWORD *)(*v2)[5]);
+    v3 = (_DWORD *)(*v2)[3];
+    v4 = (*v2)[17];
+    if ( (*v2)[2] > v4 )
+      v3 += v4;
+    if ( sub_60418548(*v3 + 4) == 1 )
+    {
+      v5 = **v2;
+      v6 = *(int (__fastcall **)(int, _DWORD *))(*(_DWORD *)v5 + 84);
+      v13[0] = 12321336;
+      v13[1] = "ankle_r1";
+      v7 = v6(v5, v13);
+      (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)**v2 + 108))(**v2, v7, v13);
+      v14[0] = v13[3];
+      v14[1] = v13[7];
+      v14[2] = 1166843904;
+      EffectData_create(321, (int)v14, 0, 0);
+    }
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1320))(a1);
+    CollisionActor::handleGravity(a1);
+    CollisionActor::handleSpeed(a1);
+    if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
+      *(_DWORD *)(a1 + 124) = 0;
+    v8 = (_DWORD *)(*v2)[3];
+    v9 = (*v2)[17];
+    if ( (*v2)[2] > v9 )
+      v8 += v9;
+    if ( sub_60418548(*v8 + 4) == 1 )
+    {
+      AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 8, 1, 0, 0);
+      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_MORTON_STAMP", *(__int16 *)(a1 + 6640), nullptr);
+    }
+    v10 = (*v2)[3];
+    v11 = (*v2)[17];
+    if ( (*v2)[2] > v11 )
+      v10 += 4 * v11;
+    result = *(unsigned __int8 *)(*(_DWORD *)v10 + 28);
+    if ( (result & 0x20) != 0 )
+    {
+      *(_DWORD *)(*(_DWORD *)(a1 + 7108) + 48) = 0;
+      return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13128964);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * jump_quake1_ref
+ * RVA 0x000f2cb4   size 0x150   xrefs 0
+ * ============================================================================ */
+  int __fastcall jump_quake1_ref(int *a1)
+  {
+    int v2; // r0
+    int *v3; // r5
+    int v4; // r1
+    int v5; // r0
+    int v6; // r0
+    int *v7; // r1
+    int v8; // r5
+    float v9; // s16
+    float v10; // s0
+    _DWORD v12[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v3 = a1 + 1774;
+    v2 = a1[1774];
+    v12[0] = 12321336;
+    v12[1] = "jump_quake1";
+    sub_60421AD4(v2, v12, 0);
+    j_ModelWrapper_updateAnims(*v3);
+    if ( (*(int (__fastcall **)(int *))(*a1 + 716))(a1) == 1 )
+    {
+      v4 = a1[1777];
+    }
+    else
+    {
+      v5 = (*(int (__fastcall **)(int *))(*a1 + 720))(a1);
+      v4 = a1[1777];
+      if ( v5 != 1 )
+      {
+        v6 = v4 + 64;
+        v7 = &dword_60C856F4;
+        goto LABEL_6;
+      }
+    }
+    v6 = v4 + 48;
+    v7 = &dword_60C856F0;
+  LABEL_6:
+    v8 = *(_DWORD *)(v6 + 4);
+    v9 = *(float *)v6;
+    a1[25] = *v7;
+    LODWORD(v10) = *(char *)(a1[20] + 11527156);
+    sub_600B2D20(a1);
+    *((float *)a1 + 30) = v9 * (float)((float)SLODWORD(v10) * v10);
+    a1[31] = v8;
+    CollisionActor::handleGravity((int)a1);
+    CollisionActor::handleSpeed((int)a1);
+    (*(void (__fastcall **)(int *))(*a1 + 1232))(a1);
+    (*(void (__fastcall **)(int *))(*a1 + 1284))(a1);
+    *((_WORD *)a1 + 3138) = 10;
+    return 6276;
+  }
+
+/* ============================================================================
+ * SE_BOSS_MORTON_DOWN_LAND1_ref
+ * RVA 0x000f42c8   size 0x16c   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_MORTON_DOWN_LAND1_ref(int a1)
+  {
+    int result; // r0
+    int *v3; // r5
+    float v4; // s0
+    _DWORD v5[3]; // [sp+4h] [bp-Ch] BYREF
+  
+    j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 7096));
+    CollisionActor::handleGravity(a1);
+    CollisionActor::handleSpeed(a1);
+    v3 = (int *)(a1 + 7092);
+    result = *(_DWORD *)(a1 + 7092);
+    switch ( result )
+    {
+      case 3:
+        result = *(unsigned __int16 *)(a1 + 6276);
+        if ( *(_WORD *)(a1 + 6276) )
+          return result;
+        result = *(_DWORD *)(MEMORY[0xC7B420] + 24);
+        if ( !result )
+          return result;
+        *(_BYTE *)(result + 6103) = 1;
+        result = 4;
+  LABEL_13:
+        *v3 = result;
+        return result;
+      case 2:
+        result = MEMORY[0xCC6484];
+        if ( *(float *)(a1 + 112) >= *(float *)(MEMORY[0xCC6484] + 132) )
+          return result;
+        *(_WORD *)(a1 + 6276) = 65;
+        result = 3;
+        goto LABEL_13;
+      case 1:
+        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+        result = *(unsigned __int8 *)(a1 + 2872);
+        if ( (result & 1) != 0 )
+        {
+          *(_DWORD *)(a1 + 120) = 1065353216;
+          *(_DWORD *)(a1 + 124) = 1082130432;
+          *(_DWORD *)(a1 + 128) = 0;
+          if ( *(_DWORD *)(a1 + 80) == 1 )
+            *(_DWORD *)(a1 + 120) = -1082130432;
+          v4 = *(float *)(a1 + 112);
+          v5[0] = *(_DWORD *)(a1 + 108);
+          *(float *)&v5[1] = v4 + 8.0;
+          v5[2] = 1166843904;
+          EffectData_create(320, (int)v5, 0, 0);
+          *v3 = 2;
+          return (int)sub_608134CC(
+                        (_DWORD *)(a1 + 6332),
+                        (int)"SE_BOSS_MORTON_DOWN_LAND1",
+                        *(__int16 *)(a1 + 6640),
+                        nullptr);
+        }
+        break;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * SE_BOSS_MORTON_LAND_ref
+ * RVA 0x000f46e4   size 0x18   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_MORTON_LAND_ref(int a1)
+  {
+    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_MORTON_LAND", nullptr);
+  }
+
+/* ============================================================================
+ * SE_BOSS_CMN_FAT_SHELL_LAND_ref
+ * RVA 0x000f4700   size 0x18   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_CMN_FAT_SHELL_LAND_ref(int a1)
+  {
+    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_LAND", nullptr);
+  }
+
+/* ============================================================================
+ * SE_BOSS_CMN_FAT_SHELL_ROLL_ref
+ * RVA 0x000f471c   size 0x18   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_CMN_FAT_SHELL_ROLL_ref(int a1)
+  {
+    return sub_608134C8((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_ROLL", nullptr);
+  }
+
+/* ============================================================================
+ * SE_BOSS_MORTON_MAGIC_MAKE_SLOW_ref
+ * RVA 0x000f4738   size 0x20   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_MORTON_MAGIC_MAKE_SLOW_ref(int a1)
+  {
+    return sub_6081356C((_DWORD *)(a1 + 6332), (int)"SE_BOSS_MORTON_MAGIC_MAKE_SLOW", *(__int16 *)(a1 + 6640), nullptr);
+  }
+
+/* ============================================================================
  * Actor_giant_SumoBro_patsu_build
  * RVA 0x000f478c   size 0x94   xrefs 0
  * ============================================================================ */
@@ -267,7 +490,7 @@
       v2 = *(_DWORD *)(a1 + 112);
       v11 = *(_DWORD *)(a1 + 108);
       v12 = v2;
-      sub_60808028(MEMORY[0xCC6AF8], &v11, 3);
+      SE_SYS_ref_2(MEMORY[0xCC6AF8], &v11, 3);
     }
     return 1;
   }
@@ -501,7 +724,201 @@
   }
 
 /* ============================================================================
- * sub_600F6C80
+ * SE_BOSS_SANBO_CRASH_ref
+ * RVA 0x000f6214   size 0x16c   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_SANBO_CRASH_ref(int a1)
+  {
+    int v2; // r1
+    bool v3; // zf
+    int v4; // r0
+    int result; // r0
+    int v6; // r0
+    float v7; // r2
+    float v8; // s0
+    float v9; // s2
+    float v10; // r1
+    int v11; // r5
+    float v12[3]; // [sp+4h] [bp-1Ch] BYREF
+    float v13[2]; // [sp+10h] [bp-10h] BYREF
+    float v14[2]; // [sp+18h] [bp-8h] BYREF
+  
+    *(float *)(a1 + 108) = *(float *)(a1 + 120) + *(float *)(a1 + 108);
+    v2 = dword_60C85B44;
+    v3 = (*(_DWORD *)(a1 + 6308) & 1) == 0;
+    v4 = *(_DWORD *)(a1 + 160);
+    if ( v3 )
+      v2 = -dword_60C85B44;
+    *(_DWORD *)(a1 + 160) = v2 + v4;
+    if ( !*(_BYTE *)(a1 + 6304) )
+      *(_DWORD *)(a1 + 156) += dword_60C85B4C;
+    CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+    result = *(_DWORD *)(a1 + 2872);
+    if ( (result & 0x440000) != 0 && (result & 0x10000000) == 0
+      || (result & 0x880000) != 0 && (result &= 0x20000000u) == 0 )
+    {
+      v6 = *(_DWORD *)(a1 + 80);
+      *(_DWORD *)(a1 + 80) = v6 ^ 1;
+      *(_DWORD *)(a1 + 120) = 1036831949;
+      v7 = *(float *)(a1 + 112);
+      v12[0] = *(float *)(a1 + 108);
+      v12[1] = v7;
+      v8 = v12[0];
+      v12[2] = 4500.0;
+      if ( v6 )
+      {
+        v9 = -10.0;
+      }
+      else
+      {
+        v9 = 10.0;
+        *(_DWORD *)(a1 + 120) = -1110651699;
+      }
+      v12[0] = v9 + v8;
+      EffectData_create(329, (int)v12, 0, 0);
+      v10 = *(float *)(a1 + 112);
+      v11 = MEMORY[0xC7F530];
+      v14[0] = *(float *)(a1 + 108);
+      v14[1] = v10;
+      mapPositionToScreen(v13, v14);
+      BasicSoundActor1_playSound(v11, (int)"SE_BOSS_SANBO_CRASH", v13, nullptr);
+      return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13130520);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * SE_BOSS_SANBO_CRASH_ref_2
+ * RVA 0x000f64a4   size 0x2dc   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_SANBO_CRASH_ref_2(int a1)
+  {
+    int v2; // r1
+    int v3; // r0
+    int v4; // r0
+    float v5; // r2
+    float v6; // s0
+    float v7; // s2
+    int v8; // r1
+    int v9; // r5
+    int result; // r0
+    int v11; // r0
+    float *v12; // r1
+    bool v13; // zf
+    int v14; // r0
+    float v15; // s0
+    int v16; // r1
+    int v17; // r5
+    int v18; // r0
+    float *v19; // r1
+    int v20; // r0
+    float v21; // s0
+    int v22; // r1
+    int v23; // r5
+    float v24; // [sp+4h] [bp-1Ch] BYREF
+    float v25; // [sp+8h] [bp-18h]
+    int v26; // [sp+Ch] [bp-14h]
+    float v27[2]; // [sp+10h] [bp-10h] BYREF
+    int v28; // [sp+18h] [bp-8h] BYREF
+    int v29; // [sp+1Ch] [bp-4h]
+  
+    CollisionActor::handleGravity(a1);
+    CollisionActor::handleSpeed(a1);
+    v2 = dword_60C85B44;
+    if ( (*(_DWORD *)(a1 + 6308) & 1) == 0 )
+      v2 = -dword_60C85B44;
+    *(_DWORD *)(a1 + 160) += v2;
+    if ( !*(_BYTE *)(a1 + 6304) )
+      *(_DWORD *)(a1 + 156) += dword_60C85B4C;
+    CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+    v3 = *(_DWORD *)(a1 + 2872);
+    if ( ((v3 & 0x440000) == 0 || (v3 & 0x10000000) != 0) && ((v3 & 0x880000) == 0 || (v3 & 0x20000000) != 0) )
+    {
+      if ( (v3 & 1) != 0 )
+      {
+        v18 = *(_DWORD *)(a1 + 80);
+        v19 = &flt_600F6788;
+        v13 = v18 == 0;
+        v20 = v18 ^ 1;
+        if ( v13 )
+          v19 = &flt_600F678C;
+        *(_DWORD *)(a1 + 80) = v20;
+        *(float *)(a1 + 120) = *v19;
+        v21 = *(float *)(a1 + 112);
+        v24 = *(float *)(a1 + 108);
+        v25 = v21 + -10.0;
+        v26 = 1166843904;
+        EffectData_create(329, (int)&v24, 0, 0);
+        v22 = *(_DWORD *)(a1 + 112);
+        v23 = MEMORY[0xC7F530];
+        v28 = *(_DWORD *)(a1 + 108);
+        v29 = v22;
+        mapPositionToScreen(v27, (float *)&v28);
+        BasicSoundActor1_playSound(v23, (int)"SE_BOSS_SANBO_CRASH", v27, nullptr);
+        return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13130520);
+      }
+      else
+      {
+        result = v3 & 0x10400;
+        if ( result == 1024 )
+        {
+          v11 = *(_DWORD *)(a1 + 80);
+          v12 = &flt_600F6788;
+          v13 = v11 == 0;
+          v14 = v11 ^ 1;
+          if ( v13 )
+            v12 = &flt_600F678C;
+          *(_DWORD *)(a1 + 80) = v14;
+          *(float *)(a1 + 120) = *v12;
+          v15 = *(float *)(a1 + 112);
+          v24 = *(float *)(a1 + 108);
+          v25 = v15 + 10.0;
+          v26 = 1166843904;
+          EffectData_create(329, (int)&v24, 0, 0);
+          v16 = *(_DWORD *)(a1 + 112);
+          v17 = MEMORY[0xC7F530];
+          v28 = *(_DWORD *)(a1 + 108);
+          v29 = v16;
+          mapPositionToScreen(v27, (float *)&v28);
+          BasicSoundActor1_playSound(v17, (int)"SE_BOSS_SANBO_CRASH", v27, nullptr);
+          return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13130520);
+        }
+      }
+    }
+    else
+    {
+      v4 = *(_DWORD *)(a1 + 80);
+      *(_DWORD *)(a1 + 80) = v4 ^ 1;
+      *(_DWORD *)(a1 + 120) = 1036831949;
+      v5 = *(float *)(a1 + 112);
+      v24 = *(float *)(a1 + 108);
+      v25 = v5;
+      v6 = v24;
+      v26 = 1166843904;
+      if ( v4 )
+      {
+        v7 = -10.0;
+      }
+      else
+      {
+        v7 = 10.0;
+        *(_DWORD *)(a1 + 120) = -1110651699;
+      }
+      v24 = v7 + v6;
+      EffectData_create(329, (int)&v24, 0, 0);
+      v8 = *(_DWORD *)(a1 + 112);
+      v9 = MEMORY[0xC7F530];
+      v28 = *(_DWORD *)(a1 + 108);
+      v29 = v8;
+      mapPositionToScreen(v27, (float *)&v28);
+      BasicSoundActor1_playSound(v9, (int)"SE_BOSS_SANBO_CRASH", v27, nullptr);
+      return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13130520);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * deka_sanbo_ref
  * RVA 0x000f6c80   size 0x12c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_600F6C80(int a1)
@@ -601,7 +1018,7 @@
   }
 
 /* ============================================================================
- * sub_600F70E8
+ * SE_BOSS_SANBO_ref
  * RVA 0x000f70e8   size 0x1c0   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_600F70E8(_DWORD *result)
@@ -718,7 +1135,60 @@
   }
 
 /* ============================================================================
- * sub_600F8998
+ * happy_end1_ref
+ * RVA 0x000f8034   size 0x90   xrefs 0
+ * ============================================================================ */
+  int __fastcall happy_end1_ref(int a1)
+  {
+    int v1; // r0
+    int v2; // r4
+    int v3; // r5
+    int ResArchiveById; // r0
+    int v6; // [sp+0h] [bp-8h] BYREF
+    const char *v7; // [sp+4h] [bp-4h]
+  
+    *(_DWORD *)(a1 + 6128) = 0;
+    v2 = a1 + 6100;
+    v1 = *(_DWORD *)(a1 + 6100);
+    v6 = 12321336;
+    v7 = "happy_end1";
+    sub_60421AD4(v1, &v6, 0);
+    v3 = **(_DWORD **)(*(_DWORD *)v2 + 20);
+    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(v2 - 6088), 0);
+    v6 = 12321336;
+    v7 = "happy_end1";
+    return TexAnim_play(v3, ResArchiveById, &v6);
+  }
+
+/* ============================================================================
+ * happy_end_wait_ref
+ * RVA 0x000f87c4   size 0x8c   xrefs 0
+ * ============================================================================ */
+  int __fastcall happy_end_wait_ref(int a1)
+  {
+    int v1; // r0
+    _DWORD *v2; // r4
+    int v3; // r5
+    int ResArchiveById; // r0
+    int v6; // [sp+0h] [bp-8h] BYREF
+    const char *v7; // [sp+4h] [bp-4h]
+  
+    v2 = (_DWORD *)(a1 + 6100);
+    v1 = *(_DWORD *)(a1 + 6100);
+    v6 = 12321336;
+    v7 = "happy_end_wait";
+    sub_60421AD4(v1, &v6, 1);
+    v3 = **(_DWORD **)(*v2 + 20);
+    ResArchiveById = Profile::getResArchiveById(*(v2 - 1522), 0);
+    v6 = 12321336;
+    v7 = "happy_end_wait";
+    TexAnim_play(v3, ResArchiveById, &v6);
+    v2[5] = 210;
+    return 210;
+  }
+
+/* ============================================================================
+ * happy_end_st_wait_ref
  * RVA 0x000f8998   size 0x10c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_600F8998(int a1)
@@ -1379,6 +1849,60 @@
   }
 
 /* ============================================================================
+ * jc_quake_st_ref
+ * RVA 0x000fb460   size 0x1c4   xrefs 0
+ * ============================================================================ */
+  int sub_600FB460()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C85D10 = 0;
+    dword_60C85D14 = 0;
+    dword_60C85D18 = 0;
+    dword_60C85D1C = 12321336;
+    dword_60C85D20 = (int)"jc_wait";
+    dword_60C85D24 = 12321336;
+    dword_60C85D28 = (int)"jc_quake_st";
+    dword_60C85D2C = 12321336;
+    dword_60C85D30 = (int)"jc_quake_ed";
+    dword_60C85D34 = 12321336;
+    dword_60C85D38 = (int)"jc_delight";
+    sub_60000288();
+    v1[0] = 12321336;
+    v1[1] = &unk_60ABDF9D;
+    *(_DWORD *)Profile::Profile(13130888, 1029756, MEMORY[0xAF3854], (int)v1, &unk_60AF6108, 0) = 12382728;
+    MEMORY[0xC85CA4] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC85CA8] = 1104;
+    MEMORY[0xC85CAC] = 1;
+    MEMORY[0xC85CB0] = 1108;
+    MEMORY[0xC85CB4] = 1;
+    MEMORY[0xC85CB8] = 1112;
+    MEMORY[0xC85CBC] = 1;
+    MEMORY[0xC85CA0] = 12383916;
+    MEMORY[0xC85CC0] = 13123948;
+    MEMORY[0xC85CD0] = 1;
+    MEMORY[0xC85CD4] = 1120;
+    MEMORY[0xC85CD8] = 1;
+    MEMORY[0xC85CDC] = 1124;
+    MEMORY[0xC85CE0] = 1;
+    MEMORY[0xC85CC4] = 12383916;
+    MEMORY[0xC85CC8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC85CCC] = 1116;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xC85CE4] = 13123984;
+    MEMORY[0xC85CEC] = MEMORY[0xC7B788];
+    MEMORY[0xC85CF0] = 1128;
+    MEMORY[0xC85CF4] = 1;
+    MEMORY[0xC85CF8] = 1132;
+    MEMORY[0xC85CFC] = 1;
+    MEMORY[0xC85D00] = 1136;
+    MEMORY[0xC85D04] = 1;
+    MEMORY[0xC85CE8] = 12383916;
+    MEMORY[0xC85D08] = 13124020;
+    return 13124020;
+  }
+
+/* ============================================================================
  * Actor_W8course_BowserJr_build
  * RVA 0x000fb67c   size 0x48   xrefs 0
  * ============================================================================ */
@@ -1460,6 +1984,36 @@
   }
 
 /* ============================================================================
+ * jc_squat_ref
+ * RVA 0x000fc458   size 0x48   xrefs 0
+ * ============================================================================ */
+  int __fastcall jc_squat_ref(int a1)
+  {
+    _DWORD *v1; // r0
+    _DWORD v3[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v1 = *(_DWORD **)(a1 + 7100);
+    v3[0] = 12321336;
+    v3[1] = "jc_squat";
+    return sub_60421AE4(v1, (int)v3, 0);
+  }
+
+/* ============================================================================
+ * jc_damage_up_ref
+ * RVA 0x000fc4b4   size 0x48   xrefs 0
+ * ============================================================================ */
+  int __fastcall jc_damage_up_ref(int a1)
+  {
+    _DWORD *v1; // r0
+    _DWORD v3[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v1 = *(_DWORD **)(a1 + 7100);
+    v3[0] = 12321336;
+    v3[1] = "jc_damage_up";
+    return sub_60421AE4(v1, (int)v3, 0);
+  }
+
+/* ============================================================================
  * Actor_W8course_BowserJr_Crown_build
  * RVA 0x000fc708   size 0x194   xrefs 0
  * ============================================================================ */
@@ -1506,6 +2060,245 @@
     *(_DWORD *)(v0 + 9464) = 0;
     *(_DWORD *)(v0 + 9460) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * SE_BOSS_JR_DEMO_CROWN_ATTACKSIGN_ref
+ * RVA 0x000fccd0   size 0x90   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_JR_DEMO_CROWN_ATTACKSIGN_ref(_DWORD *a1)
+  {
+    _DWORD *v2; // r5
+    _DWORD *v3; // r0
+    _DWORD v5[2]; // [sp+0h] [bp-8h] BYREF
+  
+    a1[2339] = dword_60C86020;
+    v2 = a1 + 2369;
+    (*(void (__fastcall **)(_DWORD *, int))(*a1 + 780))(a1, 1);
+    v3 = (_DWORD *)a1[1576];
+    v5[0] = 12321336;
+    v5[1] = "jc_wait";
+    sub_60421AE4(v3, (int)v5, 1);
+    return sub_60813430(v2, (int)"SE_BOSS_JR_DEMO_CROWN_ATTACKSIGN", nullptr);
+  }
+
+/* ============================================================================
+ * jc_quake_st_ref_2
+ * RVA 0x000fce24   size 0x108   xrefs 0
+ * ============================================================================ */
+  int __fastcall jc_quake_st_ref_2(int a1)
+  {
+    _DWORD *v2; // r0
+    int v3; // r5
+    _DWORD v5[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = *(_DWORD **)(a1 + 6304);
+    v5[0] = 12321336;
+    v5[1] = "jc_quake_st";
+    sub_60421AE4(v2, (int)v5, 0);
+    v3 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 624))(a1);
+    if ( _cxa_guard_acquire_0(13113192) )
+    {
+      MEMORY[0xC81764] = 12332212;
+      _cxa_guard_release_0(13113192);
+    }
+    if ( v3 && (**(int (__fastcall ***)(int, int))v3)(v3, 13113188) == 1 )
+      sub_60421AD4(*(_DWORD *)(v3 + 7100), *(_DWORD *)(v3 + 7604) + 8, 0);
+    *(_WORD *)(a1 + 6276) = 10;
+    return 6276;
+  }
+
+/* ============================================================================
+ * SE_BOSS_JR_CROWN_LAND_ref
+ * RVA 0x000fd440   size 0x248   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_JR_CROWN_LAND_ref(int a1)
+  {
+    _DWORD *v2; // r0
+    int v3; // r5
+    int v4; // r3
+    float v5; // s2
+    float v6; // s16
+    int v7; // r6
+    int result; // r0
+    int v9; // [sp+4h] [bp-Ch] BYREF
+    float v10; // [sp+8h] [bp-8h]
+    int v11; // [sp+Ch] [bp-4h]
+  
+    v2 = *(_DWORD **)(a1 + 6304);
+    v9 = 12321336;
+    v10 = COERCE_FLOAT("jc_quake_ed");
+    sub_60421AE4(v2, (int)&v9, 0);
+    v3 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 624))(a1);
+    if ( _cxa_guard_acquire_0(13113192) )
+    {
+      MEMORY[0xC81764] = 12332212;
+      _cxa_guard_release_0(13113192);
+    }
+    if ( v3 && (**(int (__fastcall ***)(int, int))v3)(v3, 13113188) == 1 )
+      sub_60421AD4(*(_DWORD *)(v3 + 7100), *(_DWORD *)(v3 + 7604) + 16, 0);
+    *(_DWORD *)(a1 + 120) = 0;
+    *(_DWORD *)(a1 + 124) = 0;
+    *(_DWORD *)(a1 + 100) = MEMORY[0xAFE3D0];
+    *(_DWORD *)(a1 + 136) = MEMORY[0xAFE3D8];
+    *(_DWORD *)(a1 + 9356) = 0;
+    *(_DWORD *)(a1 + 9352) = 0;
+    v5 = *(float *)(a1 + 112);
+    v9 = *(_DWORD *)(a1 + 108);
+    v10 = v5 + -16.5;
+    sub_60716054(MEMORY[0xCBD254], &v9, 3, v4);
+    v6 = *(float *)(a1 + 112);
+    v7 = *(_DWORD *)(a1 + 108);
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 668))(a1);
+    v9 = v7;
+    v10 = v6 - (float)(v5 + -16.5);
+    v11 = 1166843904;
+    EffectData_create(1067, (int)&v9, 0, 0);
+    *(_WORD *)(a1 + 6278) = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 936))(a1);
+    AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 1, 0, 0);
+    v9 = 15;
+    v10 = MEMORY[0xC263B0];
+    LOBYTE(v11) = 0;
+    sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_LAND", &v9);
+    result = *(_DWORD *)(MEMORY[0xC7B420] + 24);
+    if ( result )
+      return (*(int (__fastcall **)(int))(*(_DWORD *)result + 240))(result);
+    return result;
+  }
+
+/* ============================================================================
+ * jc_quake_st_ref_3
+ * RVA 0x000fde00   size 0x14c   xrefs 0
+ * ============================================================================ */
+  int *__fastcall jc_quake_st_ref_3(int a1)
+  {
+    _DWORD *v2; // r0
+    int v3; // r5
+    const char *v4; // r1
+    int v5; // r5
+    float v7[2]; // [sp+0h] [bp-10h] BYREF
+    int v8; // [sp+8h] [bp-8h] BYREF
+    const char *v9; // [sp+Ch] [bp-4h]
+  
+    v2 = *(_DWORD **)(a1 + 6304);
+    v8 = 12321336;
+    v9 = "jc_quake_st";
+    sub_60421AE4(v2, (int)&v8, 0);
+    v3 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 624))(a1);
+    if ( _cxa_guard_acquire_0(13113192) )
+    {
+      MEMORY[0xC81764] = 12332212;
+      _cxa_guard_release_0(13113192);
+    }
+    if ( v3 && (**(int (__fastcall ***)(int, int))v3)(v3, 13113188) == 1 )
+      sub_60421AD4(*(_DWORD *)(v3 + 7100), *(_DWORD *)(v3 + 7604) + 8, 0);
+    *(_WORD *)(a1 + 6276) = 10;
+    v4 = *(const char **)(a1 + 112);
+    v5 = MEMORY[0xC7F530];
+    v8 = *(_DWORD *)(a1 + 108);
+    v9 = v4;
+    mapPositionToScreen(v7, (float *)&v8);
+    return BasicSoundActor1_playSound(v5, (int)"SE_VOC_JR_GO", v7, nullptr);
+  }
+
+/* ============================================================================
+ * SE_BOSS_JR_CROWN_LAND_ref_2
+ * RVA 0x000fe5ec   size 0x334   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_JR_CROWN_LAND_ref_2(int a1)
+  {
+    _DWORD *v2; // r0
+    int v3; // r5
+    int v4; // r3
+    float v5; // s2
+    float v6; // s0
+    float v7; // r1
+    int v8; // r2
+    float v9; // s16
+    float v10; // s0
+    float v11; // s16
+    float v12; // s18
+    int v13; // r3
+    float v14; // s16
+    int v15; // r5
+    int v17; // [sp+4h] [bp-24h] BYREF
+    float v18; // [sp+8h] [bp-20h]
+    int v19; // [sp+Ch] [bp-1Ch]
+    int v20; // [sp+10h] [bp-18h] BYREF
+    float v21; // [sp+14h] [bp-14h] BYREF
+    int v22; // [sp+18h] [bp-10h] BYREF
+    float v23; // [sp+1Ch] [bp-Ch]
+    int v24; // [sp+20h] [bp-8h]
+  
+    v2 = *(_DWORD **)(a1 + 6304);
+    v22 = 12321336;
+    v23 = COERCE_FLOAT("jc_quake_ed");
+    sub_60421AE4(v2, (int)&v22, 0);
+    v3 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 624))(a1);
+    if ( _cxa_guard_acquire_0(13113192) )
+    {
+      MEMORY[0xC81764] = 12332212;
+      _cxa_guard_release_0(13113192);
+    }
+    if ( v3 && (**(int (__fastcall ***)(int, int))v3)(v3, 13113188) == 1 )
+      sub_60421AD4(*(_DWORD *)(v3 + 7100), *(_DWORD *)(v3 + 7604) + 16, 0);
+    *(_DWORD *)(a1 + 120) = 0;
+    *(_DWORD *)(a1 + 124) = 0;
+    *(_DWORD *)(a1 + 100) = MEMORY[0xAFE3D0];
+    *(_DWORD *)(a1 + 136) = MEMORY[0xAFE3D8];
+    *(_DWORD *)(a1 + 9356) = 0;
+    *(_DWORD *)(a1 + 9352) = 0;
+    v5 = *(float *)(a1 + 112);
+    v22 = *(_DWORD *)(a1 + 108);
+    v6 = v5 + -16.5;
+    v23 = v5 + -16.5;
+    sub_60716054(MEMORY[0xCBD254], &v22, 3, v4);
+    *(_WORD *)(a1 + 6276) = *(_DWORD *)(a1 + 9452);
+    *(_DWORD *)(a1 + 9444) = *(_DWORD *)(a1 + 9448) - 1;
+    *(_WORD *)(a1 + 6278) = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 936))(a1);
+    if ( !*(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
+      goto LABEL_9;
+    v7 = *(float *)(a1 + 112);
+    v8 = *(_DWORD *)(a1 + 116);
+    v22 = *(_DWORD *)(a1 + 108);
+    v23 = v7;
+    v24 = v8;
+    v9 = *(float *)(a1 + 112);
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 668))(a1);
+    v10 = v9 - v6;
+    v21 = v10;
+    v23 = v10;
+    checkLiquidCollisions(&v20, &v21, (float *)&v22, *(unsigned __int8 *)(a1 + 86));
+    v11 = *(float *)(a1 + 112);
+    v12 = v21;
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 668))(a1);
+    v6 = v11 - v10;
+    if ( v12 > v6 )
+    {
+      v17 = *(_DWORD *)(a1 + 108);
+      v18 = v21;
+      v19 = 1166843904;
+      StageActor::createWaterSplash(a1, &v17, 1068, 14, (int)"SE_PLY_SPLASH_LAVA");
+      v17 = *(_DWORD *)(a1 + 108);
+      v18 = v21;
+      TileMgr_splashRelated(MEMORY[0xCBD254], &v17, 5, v13);
+    }
+    else
+    {
+  LABEL_9:
+      v14 = *(float *)(a1 + 112);
+      v15 = *(_DWORD *)(a1 + 108);
+      (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 668))(a1);
+      v22 = v15;
+      v23 = v14 - v6;
+      v24 = 1166843904;
+      EffectData_create(1067, (int)&v22, 0, 0);
+    }
+    AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 1, 0, 0);
+    v22 = 15;
+    v23 = MEMORY[0xC263B0];
+    LOBYTE(v24) = 0;
+    return sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_LAND", &v22);
   }
 
 /* ============================================================================
@@ -1845,6 +2638,132 @@
   }
 
 /* ============================================================================
+ * koopaJr_clown_shadow_ref_2
+ * RVA 0x001009dc   size 0x314   xrefs 0
+ * ============================================================================ */
+  int __fastcall koopaJr_clown_shadow_ref_2(int a1)
+  {
+    int v2; // r5
+    int *v3; // r10
+    int Model2; // r6
+    _DWORD *v5; // r7
+    _DWORD *v6; // r0
+    unsigned int v7; // r2
+    int *v8; // r0
+    int v9; // r1
+    int v10; // r0
+    _DWORD *v11; // r0
+    _DWORD *v12; // r1
+    unsigned int v13; // r2
+    unsigned int v14; // r0
+    _DWORD *v15; // r0
+    int *v16; // r1
+    unsigned int v17; // r2
+    unsigned int v18; // r0
+    int v19; // r0
+    _DWORD *v20; // r0
+    int v21; // r1
+    unsigned int v22; // r2
+    unsigned int v23; // r0
+    int v24; // r0
+    int v25; // r1
+    int v26; // r0
+    int v27; // r0
+    int v28; // r1
+    int v29; // r0
+    int v30; // r5
+    int v31; // r6
+    _DWORD *v32; // r7
+    _DWORD *v33; // r0
+    int result; // r0
+    int v35; // [sp+1Ch] [bp-8h] BYREF
+    const char *v36; // [sp+20h] [bp-4h]
+  
+    v35 = 12321336;
+    v36 = "koopaJr_clown";
+    v2 = LoadResource(MEMORY[0xC9CA88], &v35);
+    *(_DWORD *)(a1 + 6300) = v2;
+    v3 = (int *)(a1 + 6300);
+    v35 = 12321336;
+    v36 = "koopaJr_clown";
+    Model2 = Resource_getModel2(v2, (int)&v35, 2, 1, 1, 1, 0, 0, 0);
+    v5 = (_DWORD *)operator new(0x48u, 0, 4);
+    v6 = sub_60421830(v5, Model2, 2, 1, 1, 1, 0);
+    j_ModelWrapper_setupModel(v6, v2, 0, 0);
+    *(_DWORD *)(a1 + 6304) = v5;
+    v7 = v5[17];
+    v8 = (int *)v5[3];
+    v9 = *(_DWORD *)(a1 + 6300);
+    if ( v5[2] > v7 )
+      v8 += v7;
+    v10 = *v8;
+    v35 = 12321336;
+    v36 = "jc_wait";
+    SkeletalAnim_play(v10, v9, &v35);
+    v11 = *(_DWORD **)(a1 + 6304);
+    v12 = (_DWORD *)v11[3];
+    v13 = v11[2];
+    v14 = v11[17];
+    if ( v13 > v14 )
+      v12 += v14;
+    AnimationCtrl_setRepeat(*v12 + 4, 1);
+    v15 = *(_DWORD **)(a1 + 6304);
+    v16 = (int *)v15[3];
+    v17 = v15[2];
+    v18 = v15[17];
+    if ( v17 > v18 )
+      v16 += v18;
+    v19 = *v16;
+    *(_DWORD *)(v19 + 20) = 0;
+    *(_DWORD *)(v19 + 28) |= 2u;
+    v20 = *(_DWORD **)(a1 + 6304);
+    v21 = v20[3];
+    v22 = v20[2];
+    v23 = v20[17];
+    if ( v22 > v23 )
+      v21 += 4 * v23;
+    *(_DWORD *)(*(_DWORD *)v21 + 24) = 1065353216;
+    *(_DWORD *)(**(_DWORD **)(a1 + 6304) + 36) = 8;
+    v24 = **(_DWORD **)(*(_DWORD *)(a1 + 6304) + 20);
+    *(_DWORD *)(a1 + 6308) = v24;
+    v25 = *v3;
+    v35 = 12321336;
+    v36 = "koopaJr_clown";
+    TexAnim_play(v24, v25, &v35);
+    AnimationCtrl_setRepeat(*(_DWORD *)(a1 + 6308) + 4, 0);
+    v26 = *(_DWORD *)(a1 + 6308);
+    *(_DWORD *)(v26 + 20) = 0;
+    *(_DWORD *)(v26 + 28) |= 2u;
+    *(_DWORD *)(*(_DWORD *)(a1 + 6308) + 24) = 0;
+    v27 = **(_DWORD **)(*(_DWORD *)(a1 + 6304) + 28);
+    *(_DWORD *)(a1 + 6312) = v27;
+    v28 = *v3;
+    v35 = 12321336;
+    v36 = "jc_damage_s";
+    ShuAnim_play(v27, v28, &v35);
+    AnimationCtrl_setRepeat(*(_DWORD *)(a1 + 6312) + 4, 1);
+    v29 = *(_DWORD *)(a1 + 6312);
+    *(_DWORD *)(v29 + 20) = 0;
+    *(_DWORD *)(v29 + 28) |= 2u;
+    *(_DWORD *)(*(_DWORD *)(a1 + 6312) + 24) = 0;
+    v35 = 12321336;
+    v36 = "koopaJr_clown";
+    v30 = LoadResource(MEMORY[0xC9CA88], &v35);
+    v35 = 12321336;
+    v36 = "koopaJr_clown_shadow";
+    v31 = Resource_getModel2(v30, (int)&v35, 0, 0, 0, 0, 0, 0, 0);
+    v32 = (_DWORD *)operator new(0x30u, 0, 4);
+    v33 = ModelWrapper_ctor(v32, v31, 0, 0, 0, 0, 0);
+    ModelWrapper_setup(v33, v30, 0, 0);
+    *(_DWORD *)(a1 + 7656) = v32;
+    *(_DWORD *)(*v32 + 36) = 8;
+    sub_600D061C((int *)a1);
+    result = **(_DWORD **)(a1 + 6320);
+    *(_DWORD *)(result + 36) = 8;
+    return result;
+  }
+
+/* ============================================================================
  * sub_601015CC
  * RVA 0x001015cc   size 0x7c   xrefs 2
  * ============================================================================ */
@@ -1934,7 +2853,7 @@
   }
 
 /* ============================================================================
- * sub_60101B14
+ * SE_BOSS_JR_CROWN_LAND_ref_3
  * RVA 0x00101b14   size 0x4c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60101B14(int a1)
@@ -1946,6 +2865,234 @@
     v2[1] = MEMORY[0xC263B0];
     v3 = 0;
     return sub_60813430(a1 + 9476, "SE_BOSS_JR_CROWN_LAND", v2);
+  }
+
+/* ============================================================================
+ * SE_BOSS_JR_CLOWN_DAMAGE_ref_2
+ * RVA 0x00102060   size 0x660   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_JR_CLOWN_DAMAGE_ref_2(int *a1)
+  {
+    int v2; // r3
+    int *v3; // r7
+    int v4; // r5
+    int v5; // r0
+    int v6; // r5
+    int v7; // r1
+    int v8; // r0
+    float v9; // r1
+    float v10; // s0
+    unsigned int v11; // r0
+    int v12; // r0
+    unsigned int v13; // r0
+    int v14; // r8
+    int v15; // r0
+    float v16; // r1
+    int v17; // r0
+    float v18; // s0
+    int v19; // r5
+    _DWORD *v20; // r6
+    int v21; // r0
+    int v22; // r0
+    float v23; // s2
+    int v24; // r5
+    _DWORD *v25; // r6
+    int v26; // r0
+    int v27; // r0
+    float v28; // s0
+    int v29; // r6
+    _DWORD *v30; // r7
+    int v31; // r0
+    int v32; // r5
+    int v33; // r0
+    int v34; // r3
+    int v36[2]; // [sp+8h] [bp-10h] BYREF
+    float v37; // [sp+10h] [bp-8h] BYREF
+    int v38; // [sp+14h] [bp-4h]
+  
+    j_ModelWrapper_updateAnims(a1[1576]);
+    v3 = a1 + 2364;
+    switch ( a1[2364] )
+    {
+      case 1:
+        if ( !*((_WORD *)a1 + 3138) )
+        {
+          sub_600D1DE0((int)a1);
+          v4 = (*(int (__fastcall **)(int *))(*a1 + 628))(a1);
+          if ( _cxa_guard_acquire_0(13113192) )
+          {
+            MEMORY[0xC81764] = 12332212;
+            _cxa_guard_release_0(13113192);
+          }
+          if ( v4 && (**(int (__fastcall ***)(int, int))v4)(v4, 13113188) == 1 )
+          {
+            *(_DWORD *)(*(_DWORD *)(v4 + 7104) + 24) = 0;
+            v5 = *(_DWORD *)(v4 + 7104);
+            *(_DWORD *)(v5 + 20) = 0;
+            *(_DWORD *)(v5 + 28) |= 2u;
+          }
+          *((_WORD *)a1 + 3138) = 6;
+          *v3 = 2;
+        }
+        goto LABEL_47;
+      case 2:
+        if ( !*((_WORD *)a1 + 3138) )
+        {
+          *((_WORD *)a1 + 3138) = 130;
+          v6 = (*(int (__fastcall **)(int))(*(_DWORD *)a1[1524] + 8))(a1[1524]);
+          if ( v6 == (*(int (**)(void))(MEMORY[0xC85E94] + 8))() )
+          {
+            v7 = 4;
+          }
+          else
+          {
+            v32 = (*(int (__fastcall **)(int))(*(_DWORD *)a1[1524] + 8))(a1[1524]);
+            v33 = (*(int (**)(void))(MEMORY[0xC85F94] + 8))();
+            v7 = 3;
+            if ( v32 == v33 )
+              v7 = 4;
+          }
+          *v3 = v7;
+        }
+        goto LABEL_47;
+      case 3:
+        CollisionActor::handleGravity((int)a1);
+        CollisionActor::handleSpeed((int)a1);
+        a1[40] -= 0x8000000;
+        v8 = a1[20];
+        if ( !v8 )
+        {
+          v9 = *((float *)a1 + 27);
+          if ( v9 < (float)(*(float *)(MEMORY[0xCC6484] + 120) + -32.0) )
+            goto LABEL_31;
+          goto LABEL_29;
+        }
+        if ( v8 == 1 )
+        {
+          v9 = *((float *)a1 + 27);
+          if ( v9 > (float)(*(float *)(MEMORY[0xCC6484] + 112) + 32.0) )
+            goto LABEL_31;
+  LABEL_29:
+          v17 = v8 ^ 1;
+          v18 = (float)*(char *)(v17 + 11527156);
+          a1[20] = v17;
+          *((float *)a1 + 30) = v18 + v18;
+          goto LABEL_31;
+        }
+        v9 = *((float *)a1 + 27);
+  LABEL_31:
+        v19 = a1[2];
+        v20 = (_DWORD *)MEMORY[0xC7F534];
+        v21 = a1[28];
+        v37 = v9;
+        v38 = v21;
+        mapPositionToScreen((float *)v36, &v37);
+        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v20, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v19, (float *)v36, nullptr);
+        if ( *((float *)a1 + 28) >= *((float *)a1 + 1703) )
+        {
+          a1[2355] = 0;
+          *v3 = 4;
+        }
+        goto LABEL_47;
+      case 4:
+        v10 = *((float *)a1 + 30) + *((float *)a1 + 27);
+        *((float *)a1 + 27) = v10;
+        if ( (a1[718] & 1) == 0 )
+        {
+          v11 = a1[2355] + dword_60C86024;
+          a1[2355] = v11;
+          *((float *)a1 + 28) = *((float *)a1 + 1703)
+                              + (float)((float)(*(float *)(((v11 >> 20) & 0xFF0) + 0xB3A484)
+                                              + (float)((float)((float)(v11 & 0xFFFFFF)
+                                                              * *(float *)(((v11 >> 20) & 0xFF0) + 0xB3A488))
+                                                      * 0.000000059605))
+                                      * 16.0);
+        }
+        a1[40] -= 0x8000000;
+        v12 = a1[20];
+        if ( v12 )
+        {
+          if ( v12 != 1 || v10 > (float)(*(float *)(MEMORY[0xCC6484] + 112) + 32.0) )
+          {
+  LABEL_36:
+            v24 = a1[2];
+            v25 = (_DWORD *)MEMORY[0xC7F534];
+            v26 = a1[28];
+            v37 = v10;
+            v38 = v26;
+            mapPositionToScreen((float *)v36, &v37);
+            SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v25, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v24, (float *)v36, nullptr);
+            if ( !*((_WORD *)a1 + 3138) )
+              *v3 = 5;
+            goto LABEL_47;
+          }
+        }
+        else if ( v10 < (float)(*(float *)(MEMORY[0xCC6484] + 120) + -32.0) )
+        {
+          goto LABEL_36;
+        }
+        v22 = v12 ^ 1;
+        v23 = (float)*(char *)(v22 + 11527156);
+        a1[20] = v22;
+        *((float *)a1 + 30) = v23 + v23;
+        goto LABEL_36;
+      case 5:
+        *((float *)a1 + 27) = *((float *)a1 + 30) + *((float *)a1 + 27);
+        if ( (a1[718] & 1) == 0 )
+        {
+          v13 = a1[2355] + dword_60C86024;
+          a1[2355] = v13;
+          *((float *)a1 + 28) = *((float *)a1 + 1703)
+                              + (float)((float)(*(float *)(((v13 >> 20) & 0xFF0) + 0xB3A484)
+                                              + (float)((float)((float)(v13 & 0xFFFFFF)
+                                                              * *(float *)(((v13 >> 20) & 0xFF0) + 0xB3A488))
+                                                      * 0.000000059605))
+                                      * 16.0);
+        }
+        v37 = 0.0;
+        v36[0] = -134217728;
+        v14 = sub_6083246C(a1 + 40, (int *)&v37, v36);
+        v15 = a1[20];
+        if ( !v15 )
+        {
+          v16 = *((float *)a1 + 27);
+          if ( v16 < (float)(*(float *)(MEMORY[0xCC6484] + 120) + -32.0) )
+            goto LABEL_42;
+          goto LABEL_40;
+        }
+        if ( v15 == 1 )
+        {
+          v16 = *((float *)a1 + 27);
+          if ( v16 > (float)(*(float *)(MEMORY[0xCC6484] + 112) + 32.0) )
+            goto LABEL_42;
+  LABEL_40:
+          v27 = v15 ^ 1;
+          v28 = (float)*(char *)(v27 + 11527156);
+          a1[20] = v27;
+          *((float *)a1 + 30) = v28 + v28;
+          goto LABEL_42;
+        }
+        v16 = *((float *)a1 + 27);
+  LABEL_42:
+        v29 = a1[2];
+        v30 = (_DWORD *)MEMORY[0xC7F534];
+        v31 = a1[28];
+        v37 = v16;
+        v38 = v31;
+        mapPositionToScreen((float *)v36, &v37);
+        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v30, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v29, (float *)v36, nullptr);
+        if ( v14 == 1 )
+          (*(void (__fastcall **)(int *, int))(*a1 + 192))(a1, 13131736);
+  LABEL_47:
+        v37 = 0.0;
+        v36[0] = 0x2000000;
+        moveValueTo(a1 + 39, (int *)&v37, v36, v2);
+        v37 = 0.0;
+        v36[0] = 0x2000000;
+        return moveValueTo(a1 + 41, (int *)&v37, v36, v34);
+      default:
+        goto LABEL_47;
+    }
   }
 
 /* ============================================================================
@@ -2033,7 +3180,7 @@
   }
 
 /* ============================================================================
- * sub_601049A0
+ * lift_han_koopa_ref
  * RVA 0x001049a0   size 0x234   xrefs 1
  * ============================================================================ */
   int __fastcall sub_601049A0(int a1)
@@ -2354,7 +3501,7 @@
   }
 
 /* ============================================================================
- * sub_601064B8
+ * lift_han_koopa_ref_2
  * RVA 0x001064b8   size 0x258   xrefs 1
  * ============================================================================ */
   int __fastcall sub_601064B8(_DWORD *a1)
@@ -2771,7 +3918,7 @@
   }
 
 /* ============================================================================
- * sub_60107F40
+ * lift_han_koopa_ref_3
  * RVA 0x00107f40   size 0x234   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60107F40(int a1)
@@ -3067,6 +4214,100 @@
   }
 
 /* ============================================================================
+ * jump_quake1_ref_2
+ * RVA 0x00108dfc   size 0x68   xrefs 0
+ * ============================================================================ */
+  int __fastcall jump_quake1_ref_2(int a1)
+  {
+    int v2; // r0
+    _DWORD v4[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = *(_DWORD *)(a1 + 7096);
+    v4[0] = 12321336;
+    v4[1] = "jump_quake1";
+    sub_60421AD4(v2, v4, 0);
+    *(_WORD *)(a1 + 6276) = 10;
+    return 6276;
+  }
+
+/* ============================================================================
+ * jump_quake2_ref_2
+ * RVA 0x00108f3c   size 0x90   xrefs 0
+ * ============================================================================ */
+  int __fastcall jump_quake2_ref_2(_DWORD *a1)
+  {
+    int v2; // r0
+    int result; // r0
+    _DWORD v4[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = a1[1774];
+    v4[0] = 12321336;
+    v4[1] = "jump_quake2";
+    sub_60421AD4(v2, v4, 0);
+    a1[30] = 0;
+    a1[31] = 0;
+    a1[32] = 0;
+    a1[25] = -1097229926;
+    a1[34] = -1061158912;
+    result = a1[800] | 0x4000200;
+    a1[800] = result;
+    return result;
+  }
+
+/* ============================================================================
+ * SE_VOC_ROY_JUMP_L_ref
+ * RVA 0x0010987c   size 0x104   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_VOC_ROY_JUMP_L_ref(int a1)
+  {
+    int *v2; // r0
+    int *v3; // r1
+  
+    sub_60421AE4(*(_DWORD **)(a1 + 7096), *(_DWORD *)(a1 + 7108) + 8, 0);
+    if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 716))(a1) == 1
+      || (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 720))(a1) == 1 )
+    {
+      v2 = &dword_60C86720;
+      v3 = &dword_60C86708;
+    }
+    else
+    {
+      v2 = &dword_60C86724;
+      v3 = &dword_60C8670C;
+    }
+    *(_DWORD *)(a1 + 100) = *v3;
+    *(_DWORD *)(a1 + 120) = 0;
+    *(_DWORD *)(a1 + 124) = *v2;
+    if ( *(_DWORD *)(a1 + 80) == 1 )
+      *(_DWORD *)(a1 + 120) = 0x80000000;
+    CollisionActor::handleGravity(a1);
+    CollisionActor::handleSpeed(a1);
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1232))(a1);
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1284))(a1);
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_ROY_JUMP_L", *(__int16 *)(a1 + 6640), nullptr);
+  }
+
+/* ============================================================================
+ * jump_shot_ed_ref
+ * RVA 0x00109f78   size 0x84   xrefs 0
+ * ============================================================================ */
+  int __fastcall jump_shot_ed_ref(_DWORD *a1)
+  {
+    _DWORD *v2; // r0
+    _DWORD v4[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = (_DWORD *)a1[1774];
+    v4[0] = 12321336;
+    v4[1] = "jump_shot_ed";
+    sub_60421AE4(v2, (int)v4, 0);
+    a1[30] = 0;
+    a1[31] = 0;
+    a1[32] = 0;
+    (*(void (__fastcall **)(_DWORD *))(*a1 + 1240))(a1);
+    return (*(int (__fastcall **)(_DWORD *))(*a1 + 1288))(a1);
+  }
+
+/* ============================================================================
  * sub_6010A7A4
  * RVA 0x0010a7a4   size 0x374   xrefs 2
  * ============================================================================ */
@@ -3297,6 +4538,72 @@
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13132772);
     }
     return result;
+  }
+
+/* ============================================================================
+ * roy_shell_ref
+ * RVA 0x0010b170   size 0x214   xrefs 0
+ * ============================================================================ */
+  int __fastcall roy_shell_ref(int *a1)
+  {
+    int ResArchiveById; // r9
+    int Model2; // r6
+    _DWORD *v4; // r7
+    _DWORD *v5; // r0
+    unsigned int v6; // r2
+    int *v7; // r0
+    int v8; // r0
+    int v9; // r0
+    int v10; // r0
+    int v11; // r6
+    _DWORD *v12; // r7
+    _DWORD *v13; // r0
+    unsigned int v14; // r2
+    int *v15; // r0
+    int v16; // r0
+    int v18; // [sp+18h] [bp-8h] BYREF
+    const char *v19; // [sp+1Ch] [bp-4h]
+  
+    ResArchiveById = Profile::getResArchiveById(a1[3], 0);
+    v18 = 12321336;
+    v19 = "roy";
+    Model2 = Resource_getModel2(ResArchiveById, (int)&v18, 2, 1, 2, 0, 0, 0, 0);
+    v4 = (_DWORD *)operator new(0x48u, 0, 4);
+    v5 = sub_60421830(v4, Model2, 2, 1, 2, 0, 0);
+    j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
+    a1[1774] = (int)v4;
+    v6 = v4[17];
+    v7 = (int *)v4[3];
+    if ( v4[2] > v6 )
+      v7 += v6;
+    v8 = *v7;
+    v18 = 12321336;
+    v19 = "wait";
+    SkeletalAnim_play(v8, ResArchiveById, &v18);
+    v9 = **(_DWORD **)(a1[1774] + 28);
+    v18 = 12321336;
+    v19 = "damage_s";
+    ShuAnim_play(v9, ResArchiveById, &v18);
+    AnimationCtrl_setRepeat(**(_DWORD **)(a1[1774] + 28) + 4, 1);
+    *(_DWORD *)(**(_DWORD **)(a1[1774] + 28) + 24) = 0;
+    v10 = **(_DWORD **)(a1[1774] + 28);
+    *(_DWORD *)(v10 + 20) = 0;
+    *(_DWORD *)(v10 + 28) |= 2u;
+    v18 = 12321336;
+    v19 = "roy_shell";
+    v11 = Resource_getModel2(ResArchiveById, (int)&v18, 2, 1, 2, 0, 0, 0, 0);
+    v12 = (_DWORD *)operator new(0x48u, 0, 4);
+    v13 = sub_60421830(v12, v11, 2, 1, 2, 0, 0);
+    j_ModelWrapper_setupModel(v13, ResArchiveById, 0, 0);
+    a1[1775] = (int)v12;
+    v14 = v12[17];
+    v15 = (int *)v12[3];
+    if ( v12[2] > v14 )
+      v15 += v14;
+    v16 = *v15;
+    v18 = 12321336;
+    v19 = "shell_model_in";
+    return SkeletalAnim_play(v16, ResArchiveById, &v18);
   }
 
 /* ============================================================================
@@ -3539,7 +4846,7 @@
   }
 
 /* ============================================================================
- * sub_6010C31C
+ * SE_BOSS_ROY_LIFT_APPEAR_ref
  * RVA 0x0010c31c   size 0x1c4   xrefs 3
  * ============================================================================ */
   int __fastcall sub_6010C31C(int a1)
@@ -3703,6 +5010,170 @@
       while ( v2 != v1 );
     }
     return result;
+  }
+
+/* ============================================================================
+ * SE_BOSS_ROY_STEP_ref
+ * RVA 0x0010d204   size 0xf0   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_ROY_STEP_ref(int a1)
+  {
+    _DWORD *v2; // r0
+    int **v3; // r5
+    _DWORD *v4; // r1
+    unsigned int v5; // r2
+    unsigned int v6; // r0
+    int result; // r0
+    int v8; // r0
+    int (__fastcall *v9)(int, _DWORD *); // r2
+    int v10; // r0
+    _DWORD v11[12]; // [sp+4h] [bp-3Ch] BYREF
+    _DWORD v12[3]; // [sp+34h] [bp-Ch] BYREF
+  
+    KoopalingBase::vf5A4((_DWORD *)a1);
+    v3 = (int **)(a1 + 7096);
+    v2 = *(_DWORD **)(a1 + 7096);
+    v4 = (_DWORD *)v2[3];
+    v5 = v2[2];
+    v6 = v2[17];
+    if ( v5 > v6 )
+      v4 += v6;
+    result = sub_60418548(*v4 + 4);
+    if ( result == 1 )
+    {
+      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_ROY_STEP", *(__int16 *)(a1 + 6640), nullptr);
+      v8 = **v3;
+      v9 = *(int (__fastcall **)(int, _DWORD *))(*(_DWORD *)v8 + 84);
+      v11[0] = 12321336;
+      v11[1] = "ankle_r1";
+      v10 = v9(v8, v11);
+      (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)**v3 + 108))(**v3, v10, v11);
+      v12[0] = v11[3];
+      v12[1] = *(_DWORD *)(a1 + 112);
+      v12[2] = 1166843904;
+      return EffectData_create(1028, (int)v12, 0, 0);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * SE_BOSS_ROY_DOWN_LAND1_ref
+ * RVA 0x0010e788   size 0x234   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_ROY_DOWN_LAND1_ref(int a1)
+  {
+    int *v2; // r5
+    int result; // r0
+    float v4; // s0
+    float v5; // s0
+    float v6; // s2
+    _WORD *v7; // r4
+    int v8; // t1
+    _DWORD v9[3]; // [sp+4h] [bp-Ch] BYREF
+  
+    j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 7096));
+    CollisionActor::handleGravity(a1);
+    CollisionActor::handleSpeed(a1);
+    v2 = (int *)(a1 + 7092);
+    result = *(_DWORD *)(a1 + 7092) - 1;
+    switch ( *(_DWORD *)(a1 + 7092) )
+    {
+      case 1:
+        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+        if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
+        {
+          *(_DWORD *)(a1 + 120) = 1065353216;
+          *(_DWORD *)(a1 + 124) = 1082130432;
+          *(_DWORD *)(a1 + 128) = 0;
+          if ( *(_DWORD *)(a1 + 80) == 1 )
+            *(_DWORD *)(a1 + 120) = -1082130432;
+          *v2 = 2;
+          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_ROY_DOWN_LAND1", nullptr);
+          v4 = *(float *)(a1 + 112);
+          v9[0] = *(_DWORD *)(a1 + 108);
+          *(float *)&v9[1] = v4 + 8.0;
+          v9[2] = 1166843904;
+          EffectData_create(1027, (int)v9, 0, 0);
+        }
+        v5 = *(float *)(a1 + 108);
+        v6 = *(float *)(MEMORY[0xCC6484] + 116);
+        if ( v5 > (float)((float)(v6 + *(float *)(a1 + 7488)) + -1.0)
+          || (result = a1 + 7492, v5 < (float)((float)(v6 + *(float *)(a1 + 7492)) + 1.0)) )
+        {
+          result = a1 + 8140;
+          if ( *(float *)(a1 + 112) < (float)(*(float *)(a1 + 8140) + -32.0) )
+          {
+            result = 2;
+            goto LABEL_12;
+          }
+        }
+        break;
+      case 2:
+        result = MEMORY[0xCC6484];
+        if ( *(float *)(a1 + 112) < (float)(*(float *)(MEMORY[0xCC6484] + 132) + -100.0) )
+        {
+          *(_DWORD *)(a1 + 124) = 0;
+          *(_WORD *)(a1 + 6276) = 40;
+          result = 3;
+  LABEL_12:
+          *v2 = result;
+        }
+        break;
+      case 3:
+        v8 = *(unsigned __int16 *)(a1 + 6276);
+        v7 = (_WORD *)(a1 + 6276);
+        result = v8;
+        if ( !v8 )
+        {
+          result = *(_DWORD *)(MEMORY[0xC7B420] + 24);
+          if ( result )
+          {
+            *(_BYTE *)(result + 6103) = 1;
+            *v2 = 4;
+            *v7 = 3;
+            result = 3;
+          }
+        }
+        break;
+      case 4:
+        result = *(unsigned __int16 *)(a1 + 6276);
+        if ( !*(_WORD *)(a1 + 6276) )
+        {
+          *(_BYTE *)(a1 + 8572) = 0;
+          result = 8572;
+        }
+        break;
+      default:
+        return result;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * SE_BOSS_ROY_LAND_ref
+ * RVA 0x0010eef4   size 0x18   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_ROY_LAND_ref(int a1)
+  {
+    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_ROY_LAND", nullptr);
+  }
+
+/* ============================================================================
+ * SE_BOSS_CMN_FAT_SHELL_LAND_ref_2
+ * RVA 0x0010ef10   size 0x18   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_CMN_FAT_SHELL_LAND_ref_2(int a1)
+  {
+    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_LAND", nullptr);
+  }
+
+/* ============================================================================
+ * SE_BOSS_CMN_FAT_SHELL_ROLL_ref_2
+ * RVA 0x0010ef2c   size 0x18   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_CMN_FAT_SHELL_ROLL_ref_2(int a1)
+  {
+    return sub_608134C8((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_ROLL", nullptr);
   }
 
 /* ============================================================================
@@ -3951,7 +5422,7 @@
   }
 
 /* ============================================================================
- * sub_60110D6C
+ * lift_han_hikousen_ref
  * RVA 0x00110d6c   size 0x2bc   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60110D6C(int a1)
@@ -4501,6 +5972,599 @@
   }
 
 /* ============================================================================
+ * jcm_demo_battleA_ref
+ * RVA 0x001126c8   size 0x160   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_demo_battleA_ref(int a1)
+  {
+    int v1; // r0
+    int v2; // r4
+    int v3; // r1
+    int *v4; // r1
+    unsigned int v5; // r0
+    int v6; // r0
+    int v7; // r1
+    unsigned int v8; // r0
+    _DWORD *v9; // r1
+    unsigned int v10; // r0
+    int v11; // r4
+    int result; // r0
+    _DWORD v13[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = a1 + 7100;
+    v1 = *(_DWORD *)(a1 + 7100);
+    v3 = *(_DWORD *)(v2 - 4);
+    v13[0] = 12321336;
+    v13[1] = "jcm_demo_battleA";
+    sub_60421938(v1, v3, v13);
+    v4 = *(int **)(*(_DWORD *)v2 + 12);
+    v5 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v5 )
+      v4 += v5;
+    v6 = *v4;
+    *(_DWORD *)(v6 + 20) = 0;
+    *(_DWORD *)(v6 + 28) |= 2u;
+    v7 = *(_DWORD *)(*(_DWORD *)v2 + 12);
+    v8 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v8 )
+      v7 += 4 * v8;
+    *(_DWORD *)(*(_DWORD *)v7 + 24) = 1065353216;
+    v9 = *(_DWORD **)(*(_DWORD *)v2 + 12);
+    v10 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v10 )
+      v9 += v10;
+    AnimationCtrl_setRepeat(*v9 + 4, 0);
+    *(_BYTE *)(v2 + 164) = 0;
+    *(_DWORD *)(v2 + 548) = 1;
+    v11 = *(_DWORD *)(v2 + 144);
+    result = _cxa_guard_acquire_0(13134640);
+    if ( result )
+    {
+      MEMORY[0xC86B2C] = 12332244;
+      result = _cxa_guard_release_0(13134640);
+    }
+    if ( v11 )
+    {
+      result = (**(int (__fastcall ***)(int, int))v11)(v11, 13134636);
+      if ( result == 1 )
+        return (*(int (__fastcall **)(int, int))(*(_DWORD *)v11 + 192))(v11, 13134820);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * SE_VOC_JR_ref_3
+ * RVA 0x0011284c   size 0x1f8   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_VOC_JR_ref_3(int a1)
+  {
+    int v2; // r0
+    _DWORD *v3; // r6
+    _DWORD *v4; // r0
+    int v5; // r7
+    _DWORD *v6; // r1
+    unsigned int v7; // r2
+    unsigned int v8; // r0
+    _DWORD *v9; // r1
+    _DWORD *v10; // r5
+    unsigned int v11; // r2
+    unsigned int v12; // r3
+    _DWORD *v13; // r0
+    int v14; // r6
+    _DWORD *v15; // r1
+    unsigned int v16; // r0
+    _DWORD *v17; // r1
+    unsigned int v18; // r0
+  
+    v3 = (_DWORD *)(a1 + 7648);
+    v2 = *(_DWORD *)(a1 + 7648);
+    if ( v2 == 2 )
+    {
+      if ( !*(_WORD *)(a1 + 6278) )
+      {
+        *(_BYTE *)(a1 + 7644) = 1;
+        (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13134276);
+      }
+    }
+    else if ( v2 == 1 )
+    {
+      v5 = a1 + 7100;
+      v4 = *(_DWORD **)(a1 + 7100);
+      v6 = (_DWORD *)v4[3];
+      v7 = v4[2];
+      v8 = v4[17];
+      if ( v7 > v8 )
+        v6 += v8;
+      if ( sub_60418548(*v6 + 4) == 1 )
+        *(_BYTE *)(a1 + 7264) = 1;
+      v9 = *(_DWORD **)v5;
+      v10 = *(_DWORD **)(*(_DWORD *)v5 + 12);
+      v11 = *(_DWORD *)(*(_DWORD *)v5 + 8);
+      v12 = *(_DWORD *)(*(_DWORD *)v5 + 68);
+      v13 = v10;
+      if ( v11 > v12 )
+        v13 = &v10[v12];
+      if ( (*(_BYTE *)(*v13 + 28) & 0x20) != 0 )
+      {
+        *(_WORD *)(a1 + 6278) = 20;
+        *v3 = 2;
+        v10 = (_DWORD *)v9[3];
+        v11 = v9[2];
+        v12 = v9[17];
+      }
+      LOWORD(v14) = 932;
+      if ( v11 > v12 )
+        v10 += v12;
+      HIWORD(v14) = 256;
+      if ( sub_60418548(*v10 + 4) == 1 )
+      {
+        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_NOTICE", nullptr);
+        *(_DWORD *)(a1 + 7092) = v14;
+      }
+      else
+      {
+        v15 = *(_DWORD **)(*(_DWORD *)v5 + 12);
+        v16 = *(_DWORD *)(*(_DWORD *)v5 + 68);
+        if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v16 )
+          v15 += v16;
+        if ( sub_60418548(*v15 + 4) == 1 )
+        {
+          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CHOUHATSU1", nullptr);
+          *(_DWORD *)(a1 + 7092) = 16780499;
+        }
+        else
+        {
+          v17 = *(_DWORD **)(*(_DWORD *)v5 + 12);
+          v18 = *(_DWORD *)(*(_DWORD *)v5 + 68);
+          if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v18 )
+            v17 += v18;
+          if ( sub_60418548(*v17 + 4) == 1 )
+          {
+            sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CHOUHATSU2", nullptr);
+            *(_DWORD *)(a1 + 7092) = v14 + 1;
+          }
+        }
+      }
+    }
+    return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1068))(a1);
+  }
+
+/* ============================================================================
+ * jcm_shot_st_wait_ref
+ * RVA 0x001130d0   size 0x1dc   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_shot_st_wait_ref(int a1)
+  {
+    int v2; // r0
+    _DWORD *v3; // r6
+    _DWORD *v4; // r0
+    int v5; // r5
+    int *v6; // r1
+    unsigned int v7; // r2
+    unsigned int v8; // r0
+    int v9; // r0
+    int v10; // r1
+    int *v11; // r1
+    unsigned int v12; // r0
+    int v13; // r0
+    int v14; // r1
+    unsigned int v15; // r0
+    _DWORD *v16; // r1
+    unsigned int v17; // r0
+    int v18; // r5
+    int v19; // r0
+    _DWORD v21[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v3 = (_DWORD *)(a1 + 7648);
+    v2 = *(_DWORD *)(a1 + 7648);
+    if ( v2 == 2 )
+    {
+      if ( !*(_WORD *)(a1 + 6278) )
+        (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13134340);
+    }
+    else if ( v2 == 1 )
+    {
+      v5 = a1 + 7100;
+      v4 = *(_DWORD **)(a1 + 7100);
+      v6 = (int *)v4[3];
+      v7 = v4[2];
+      v8 = v4[17];
+      if ( v7 > v8 )
+        v6 += v8;
+      v9 = *v6;
+      if ( (*(_BYTE *)(*v6 + 28) & 0x20) != 0 )
+      {
+        v10 = *(_DWORD *)(a1 + 7096);
+        v21[0] = 12321336;
+        v21[1] = "jcm_shot_st_wait";
+        SkeletalAnim_play(v9, v10, v21);
+        v11 = *(int **)(*(_DWORD *)v5 + 12);
+        v12 = *(_DWORD *)(*(_DWORD *)v5 + 68);
+        if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v12 )
+          v11 += v12;
+        v13 = *v11;
+        *(_DWORD *)(v13 + 20) = 0;
+        *(_DWORD *)(v13 + 28) |= 2u;
+        v14 = *(_DWORD *)(*(_DWORD *)v5 + 12);
+        v15 = *(_DWORD *)(*(_DWORD *)v5 + 68);
+        if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v15 )
+          v14 += 4 * v15;
+        *(_DWORD *)(*(_DWORD *)v14 + 24) = 1065353216;
+        v16 = *(_DWORD **)(*(_DWORD *)v5 + 12);
+        v17 = *(_DWORD *)(*(_DWORD *)v5 + 68);
+        if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v17 )
+          v16 += v17;
+        AnimationCtrl_setRepeat(*v16 + 4, 1);
+        v18 = *(_DWORD *)(a1 + 7244);
+        if ( _cxa_guard_acquire_0(13134640) )
+        {
+          MEMORY[0xC86B2C] = 12332244;
+          _cxa_guard_release_0(13134640);
+        }
+        if ( v18 )
+        {
+          if ( (**(int (__fastcall ***)(int, int))v18)(v18, 13134636) == 1 )
+          {
+            v19 = *(_DWORD *)(v18 + 9264);
+            if ( v19 )
+              *(_WORD *)(a1 + 6278) = v19;
+          }
+        }
+        *v3 = 2;
+      }
+    }
+    return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1068))(a1);
+  }
+
+/* ============================================================================
+ * jcm_shot_ref
+ * RVA 0x001132d4   size 0xd8   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_shot_ref(int a1)
+  {
+    int v1; // r4
+    _DWORD *v2; // t1
+    int *v3; // r1
+    unsigned int v4; // r0
+    int v5; // r0
+    int v6; // r1
+    int *v7; // r1
+    unsigned int v8; // r0
+    int v9; // r0
+    int v10; // r1
+    unsigned int v11; // r0
+    _DWORD *v12; // r1
+    unsigned int v13; // r0
+    _DWORD v15[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = *(_DWORD **)(a1 + 7100);
+    v1 = a1 + 7100;
+    v3 = (int *)v2[3];
+    v4 = v2[17];
+    if ( v2[2] > v4 )
+      v3 += v4;
+    v5 = *v3;
+    v6 = *(_DWORD *)(v1 - 4);
+    v15[0] = 12321336;
+    v15[1] = "jcm_shot";
+    SkeletalAnim_play(v5, v6, v15);
+    v7 = *(int **)(*(_DWORD *)v1 + 12);
+    v8 = *(_DWORD *)(*(_DWORD *)v1 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v1 + 8) > v8 )
+      v7 += v8;
+    v9 = *v7;
+    *(_DWORD *)(v9 + 20) = 0;
+    *(_DWORD *)(v9 + 28) |= 2u;
+    v10 = *(_DWORD *)(*(_DWORD *)v1 + 12);
+    v11 = *(_DWORD *)(*(_DWORD *)v1 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v1 + 8) > v11 )
+      v10 += 4 * v11;
+    *(_DWORD *)(*(_DWORD *)v10 + 24) = 1065353216;
+    v12 = *(_DWORD **)(*(_DWORD *)v1 + 12);
+    v13 = *(_DWORD *)(*(_DWORD *)v1 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v1 + 8) > v13 )
+      v12 += v13;
+    return AnimationCtrl_setRepeat(*v12 + 4, 0);
+  }
+
+/* ============================================================================
+ * jcm_special_ref
+ * RVA 0x0011362c   size 0xd8   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_special_ref(int a1)
+  {
+    int v1; // r4
+    _DWORD *v2; // t1
+    int *v3; // r1
+    unsigned int v4; // r0
+    int v5; // r0
+    int v6; // r1
+    int *v7; // r1
+    unsigned int v8; // r0
+    int v9; // r0
+    int v10; // r1
+    unsigned int v11; // r0
+    _DWORD *v12; // r1
+    unsigned int v13; // r0
+    _DWORD v15[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = *(_DWORD **)(a1 + 7100);
+    v1 = a1 + 7100;
+    v3 = (int *)v2[3];
+    v4 = v2[17];
+    if ( v2[2] > v4 )
+      v3 += v4;
+    v5 = *v3;
+    v6 = *(_DWORD *)(v1 - 4);
+    v15[0] = 12321336;
+    v15[1] = "jcm_special";
+    SkeletalAnim_play(v5, v6, v15);
+    v7 = *(int **)(*(_DWORD *)v1 + 12);
+    v8 = *(_DWORD *)(*(_DWORD *)v1 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v1 + 8) > v8 )
+      v7 += v8;
+    v9 = *v7;
+    *(_DWORD *)(v9 + 20) = 0;
+    *(_DWORD *)(v9 + 28) |= 2u;
+    v10 = *(_DWORD *)(*(_DWORD *)v1 + 12);
+    v11 = *(_DWORD *)(*(_DWORD *)v1 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v1 + 8) > v11 )
+      v10 += 4 * v11;
+    *(_DWORD *)(*(_DWORD *)v10 + 24) = 1065353216;
+    v12 = *(_DWORD **)(*(_DWORD *)v1 + 12);
+    v13 = *(_DWORD *)(*(_DWORD *)v1 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v1 + 8) > v13 )
+      v12 += v13;
+    return AnimationCtrl_setRepeat(*v12 + 4, 0);
+  }
+
+/* ============================================================================
+ * jcm_damage_s_ref
+ * RVA 0x0011386c   size 0xe8   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_damage_s_ref(_DWORD *a1)
+  {
+    _DWORD *v2; // r4
+    _DWORD *v3; // t1
+    int *v4; // r1
+    unsigned int v5; // r0
+    int v6; // r0
+    int v7; // r1
+    int *v8; // r1
+    unsigned int v9; // r0
+    int v10; // r0
+    int v11; // r1
+    unsigned int v12; // r0
+    _DWORD *v13; // r1
+    unsigned int v14; // r0
+    int result; // r0
+    _DWORD v16[2]; // [sp+0h] [bp-8h] BYREF
+  
+    BowserJrBase::vf450(a1);
+    v3 = (_DWORD *)a1[1775];
+    v2 = a1 + 1775;
+    v4 = (int *)v3[3];
+    v5 = v3[17];
+    if ( v3[2] > v5 )
+      v4 += v5;
+    v6 = *v4;
+    v7 = *(v2 - 1);
+    v16[0] = 12321336;
+    v16[1] = "jcm_damage_s";
+    SkeletalAnim_play(v6, v7, v16);
+    v8 = *(int **)(*v2 + 12);
+    v9 = *(_DWORD *)(*v2 + 68);
+    if ( *(_DWORD *)(*v2 + 8) > v9 )
+      v8 += v9;
+    v10 = *v8;
+    *(_DWORD *)(v10 + 20) = 0;
+    *(_DWORD *)(v10 + 28) |= 2u;
+    v11 = *(_DWORD *)(*v2 + 12);
+    v12 = *(_DWORD *)(*v2 + 68);
+    if ( *(_DWORD *)(*v2 + 8) > v12 )
+      v11 += 4 * v12;
+    *(_DWORD *)(*(_DWORD *)v11 + 24) = 1065353216;
+    v13 = *(_DWORD **)(*v2 + 12);
+    v14 = *(_DWORD *)(*v2 + 68);
+    if ( *(_DWORD *)(*v2 + 8) > v14 )
+      v13 += v14;
+    result = AnimationCtrl_setRepeat(*v13 + 4, 1);
+    v2[137] = 1;
+    *((_BYTE *)v2 + 564) = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * jcm_damage_ref
+ * RVA 0x0011395c   size 0x21c   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_damage_ref(int a1)
+  {
+    int result; // r0
+    _DWORD *v3; // r6
+    int v4; // r5
+    int v5; // r4
+    _DWORD *v6; // t1
+    int *v7; // r1
+    unsigned int v8; // r0
+    int v9; // r0
+    int v10; // r1
+    int *v11; // r1
+    unsigned int v12; // r0
+    int v13; // r0
+    int v14; // r1
+    unsigned int v15; // r0
+    _DWORD *v16; // r1
+    unsigned int v17; // r0
+    unsigned int v18; // r2
+    int v19; // r1
+    int *v20; // r4
+    int v21; // t1
+    unsigned __int8 v22; // r2
+    int v23; // r1
+    _DWORD v24[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v3 = (_DWORD *)(a1 + 7648);
+    result = *(_DWORD *)(a1 + 7648);
+    if ( result == 2 )
+    {
+      if ( !*(_WORD *)(a1 + 6278) )
+        (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13134468);
+      result = a1 + 7664;
+      v18 = *(unsigned __int8 *)(a1 + 7664);
+      if ( v18 <= 2 )
+      {
+        v21 = *(_DWORD *)(a1 + 7104);
+        v20 = (int *)(a1 + 7104);
+        v19 = v21;
+        if ( (*(_BYTE *)(v21 + 28) & 4) != 0 )
+        {
+          v22 = v18 + 1;
+          *(_BYTE *)result = v22;
+          result = v22;
+          if ( v22 == 3 )
+          {
+            *(_DWORD *)(v19 + 24) = 0;
+            v23 = *v20;
+            *(_DWORD *)(v23 + 20) = 0;
+            result = *(_DWORD *)(v23 + 28) | 2;
+            *(_DWORD *)(v23 + 28) = result;
+          }
+        }
+      }
+    }
+    else if ( result == 1 )
+    {
+      v4 = *(_DWORD *)(a1 + 7244);
+      result = _cxa_guard_acquire_0(13134640);
+      if ( result )
+      {
+        MEMORY[0xC86B2C] = 12332244;
+        result = _cxa_guard_release_0(13134640);
+      }
+      if ( v4 )
+      {
+        result = (**(int (__fastcall ***)(int, int))v4)(v4, 13134636);
+        if ( result == 1 )
+        {
+          result = *(unsigned __int8 *)(v4 + 9241);
+          if ( !*(_BYTE *)(v4 + 9241) )
+          {
+            *v3 = 2;
+            *(_WORD *)(a1 + 6278) = 120;
+            v6 = *(_DWORD **)(a1 + 7100);
+            v5 = a1 + 7100;
+            v7 = (int *)v6[3];
+            v8 = v6[17];
+            if ( v6[2] > v8 )
+              v7 += v8;
+            v9 = *v7;
+            v10 = *(_DWORD *)(v5 - 4);
+            v24[0] = 12321336;
+            v24[1] = "jcm_damage";
+            SkeletalAnim_play(v9, v10, v24);
+            v11 = *(int **)(*(_DWORD *)v5 + 12);
+            v12 = *(_DWORD *)(*(_DWORD *)v5 + 68);
+            if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v12 )
+              v11 += v12;
+            v13 = *v11;
+            *(_DWORD *)(v13 + 20) = 0;
+            *(_DWORD *)(v13 + 28) |= 2u;
+            v14 = *(_DWORD *)(*(_DWORD *)v5 + 12);
+            v15 = *(_DWORD *)(*(_DWORD *)v5 + 68);
+            if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v15 )
+              v14 += 4 * v15;
+            *(_DWORD *)(*(_DWORD *)v14 + 24) = 1065353216;
+            v16 = *(_DWORD **)(*(_DWORD *)v5 + 12);
+            v17 = *(_DWORD *)(*(_DWORD *)v5 + 68);
+            if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v17 )
+              v16 += v17;
+            return AnimationCtrl_setRepeat(*v16 + 4, 1);
+          }
+        }
+      }
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * SE_AMB_WATER_SURFACE_DOWN_ref
+ * RVA 0x00113e90   size 0x224   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_AMB_WATER_SURFACE_DOWN_ref(int a1)
+  {
+    int (__fastcall ***v2)(_DWORD, int); // r6
+    int v3; // r5
+    int v4; // r0
+    _DWORD *v5; // r6
+    bool v6; // zf
+    __int64 v7; // r0
+    int v8; // r5
+    _DWORD *v9; // r6
+    float v10; // r0
+    int v11; // r1
+    int v12; // r2
+    int v13; // r3
+    float v15[2]; // [sp+10h] [bp-10h] BYREF
+    float v16[2]; // [sp+18h] [bp-8h] BYREF
+  
+    v2 = *(int (__fastcall ****)(_DWORD, int))(MEMORY[0xC7B420] + 24);
+    if ( _cxa_guard_acquire_0(13107312) )
+    {
+      MEMORY[0xC8006C] = 12329228;
+      _cxa_guard_release_0(13107312);
+    }
+    if ( v2 )
+    {
+      v3 = (**v2)(v2, 13107308);
+      if ( v3 )
+        v3 = (int)v2;
+    }
+    else
+    {
+      v3 = 0;
+    }
+    v5 = (_DWORD *)(a1 + 7648);
+    v4 = *(_DWORD *)(a1 + 7648);
+    switch ( v4 )
+    {
+      case 3:
+        v6 = v3 == 0;
+        if ( v3 )
+          v6 = *(_BYTE *)(v3 + 6136) == 0;
+        if ( !v6 )
+          (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13134596);
+        break;
+      case 2:
+        LODWORD(v7) = sub_6072A6DC(MEMORY[0xCBD8AC], *(unsigned __int8 *)(a1 + 539), *(unsigned __int8 *)(a1 + 540));
+        if ( (*(_QWORD *)(MEMORY[0xCBD8AC] + 16) & v7) == 0 )
+        {
+          sub_60400BE4(MEMORY[0xC99E3C]);
+          if ( v3 )
+          {
+            *(_BYTE *)(v3 + 6134) = 1;
+            *v5 = 3;
+          }
+        }
+        v8 = *(_DWORD *)(a1 + 8);
+        v9 = (_DWORD *)MEMORY[0xC7F534];
+        v10 = *(float *)(MEMORY[0xCC6484] + 128);
+        v16[0] = *(float *)(MEMORY[0xCC6484] + 116);
+        v16[1] = v10;
+        mapPositionToScreen(v15, v16);
+        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v9, (int)"SE_AMB_WATER_SURFACE_DOWN", v8, v15, nullptr);
+        break;
+      case 1:
+        EventMgr_set(MEMORY[0xCBD8AC], (unsigned __int8)(*(_BYTE *)(a1 + 539) - 1), 0, 1, 0, 0, 0, 0);
+        AreaRumbleMgr_rumble2(MEMORY[0xC99E3C], 1, 3, 0);
+        *v5 = 2;
+        break;
+    }
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1068))(a1);
+    return sub_600CE584(a1, v11, v12, v13);
+  }
+
+/* ============================================================================
  * sub_60114E10
  * RVA 0x00114e10   size 0x114   xrefs 1
  * ============================================================================ */
@@ -4757,6 +6821,171 @@
   }
 
 /* ============================================================================
+ * jcm_squat_ref
+ * RVA 0x00116680   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_squat_ref(int a1)
+  {
+    int v2; // r4
+    int v3; // t1
+    int v4; // r1
+    int *v5; // r1
+    unsigned int v6; // r0
+    int v7; // r0
+    int v8; // r1
+    unsigned int v9; // r0
+    _DWORD *v10; // r1
+    unsigned int v11; // r0
+    _DWORD v13[2]; // [sp+0h] [bp-8h] BYREF
+  
+    BowserJrBase::vf45C();
+    v3 = *(_DWORD *)(a1 + 7100);
+    v2 = a1 + 7100;
+    v4 = *(_DWORD *)(v2 - 4);
+    v13[0] = 12321336;
+    v13[1] = "jcm_squat";
+    sub_60421938(v3, v4, v13);
+    v5 = *(int **)(*(_DWORD *)v2 + 12);
+    v6 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v6 )
+      v5 += v6;
+    v7 = *v5;
+    *(_DWORD *)(v7 + 20) = 0;
+    *(_DWORD *)(v7 + 28) |= 2u;
+    v8 = *(_DWORD *)(*(_DWORD *)v2 + 12);
+    v9 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v9 )
+      v8 += 4 * v9;
+    *(_DWORD *)(*(_DWORD *)v8 + 24) = 1065353216;
+    v10 = *(_DWORD **)(*(_DWORD *)v2 + 12);
+    v11 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v11 )
+      v10 += v11;
+    return AnimationCtrl_setRepeat(*v10 + 4, 0);
+  }
+
+/* ============================================================================
+ * jcm_damage_up_ref
+ * RVA 0x00116758   size 0xdc   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_damage_up_ref(int a1)
+  {
+    int v2; // r4
+    _DWORD *v3; // t1
+    int *v4; // r1
+    unsigned int v5; // r0
+    int v6; // r0
+    int v7; // r1
+    int *v8; // r1
+    unsigned int v9; // r0
+    int v10; // r0
+    int v11; // r1
+    unsigned int v12; // r0
+    _DWORD *v13; // r1
+    unsigned int v14; // r0
+    _DWORD v16[2]; // [sp+0h] [bp-8h] BYREF
+  
+    BowserJrBase::vf468(a1);
+    v3 = *(_DWORD **)(a1 + 7100);
+    v2 = a1 + 7100;
+    v4 = (int *)v3[3];
+    v5 = v3[17];
+    if ( v3[2] > v5 )
+      v4 += v5;
+    v6 = *v4;
+    v7 = *(_DWORD *)(v2 - 4);
+    v16[0] = 12321336;
+    v16[1] = "jcm_damage_up";
+    SkeletalAnim_play(v6, v7, v16);
+    v8 = *(int **)(*(_DWORD *)v2 + 12);
+    v9 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v9 )
+      v8 += v9;
+    v10 = *v8;
+    *(_DWORD *)(v10 + 20) = 0;
+    *(_DWORD *)(v10 + 28) |= 2u;
+    v11 = *(_DWORD *)(*(_DWORD *)v2 + 12);
+    v12 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v12 )
+      v11 += 4 * v12;
+    *(_DWORD *)(*(_DWORD *)v11 + 24) = 1065353216;
+    v13 = *(_DWORD **)(*(_DWORD *)v2 + 12);
+    v14 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v14 )
+      v13 += v14;
+    return AnimationCtrl_setRepeat(*v13 + 4, 0);
+  }
+
+/* ============================================================================
+ * jcm_death_ref
+ * RVA 0x00116844   size 0x16c   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_death_ref(int a1)
+  {
+    int v2; // r4
+    _DWORD *v3; // t1
+    int *v4; // r1
+    unsigned int v5; // r0
+    int v6; // r0
+    int v7; // r1
+    int *v8; // r1
+    unsigned int v9; // r0
+    int v10; // r0
+    int v11; // r1
+    unsigned int v12; // r0
+    _DWORD *v13; // r1
+    unsigned int v14; // r0
+    int ActorSlotChecked; // r0
+    int v16; // r0
+    int v17; // r0
+    int result; // r0
+    _DWORD v19[2]; // [sp+0h] [bp-8h] BYREF
+  
+    BowserJrBase::beginState_DieFall(a1);
+    v3 = *(_DWORD **)(a1 + 7100);
+    v2 = a1 + 7100;
+    v4 = (int *)v3[3];
+    v5 = v3[17];
+    if ( v3[2] > v5 )
+      v4 += v5;
+    v6 = *v4;
+    v7 = *(_DWORD *)(v2 - 4);
+    v19[0] = 12321336;
+    v19[1] = "jcm_death";
+    SkeletalAnim_play(v6, v7, v19);
+    v8 = *(int **)(*(_DWORD *)v2 + 12);
+    v9 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v9 )
+      v8 += v9;
+    v10 = *v8;
+    *(_DWORD *)(v10 + 20) = 0;
+    *(_DWORD *)(v10 + 28) |= 2u;
+    v11 = *(_DWORD *)(*(_DWORD *)v2 + 12);
+    v12 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v12 )
+      v11 += 4 * v12;
+    *(_DWORD *)(*(_DWORD *)v11 + 24) = 1056964608;
+    v13 = *(_DWORD **)(*(_DWORD *)v2 + 12);
+    v14 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v14 )
+      v13 += v14;
+    AnimationCtrl_setRepeat(*v13 + 4, 0);
+    ActorSlotChecked = Player_getActorSlotChecked(MEMORY[0xCC436C], 0);
+    if ( ActorSlotChecked )
+      *(_DWORD *)(ActorSlotChecked + 1216) |= 2u;
+    v16 = Player_getActorSlotChecked(MEMORY[0xCC436C], 1u);
+    if ( v16 )
+      *(_DWORD *)(v16 + 1216) |= 2u;
+    v17 = Player_getActorSlotChecked(MEMORY[0xCC436C], 2u);
+    if ( v17 )
+      *(_DWORD *)(v17 + 1216) |= 2u;
+    result = Player_getActorSlotChecked(MEMORY[0xCC436C], 3u);
+    if ( result )
+      *(_DWORD *)(result + 1216) |= 2u;
+    return result;
+  }
+
+/* ============================================================================
  * Actor_underwater_BowserJr_Crown_build
  * RVA 0x00117360   size 0x224   xrefs 0
  * ============================================================================ */
@@ -4820,6 +7049,178 @@
     EffectWrapper_ctor(v0 + 9484);
     *(_DWORD *)(v0 + 9484) = 12325968;
     return v0;
+  }
+
+/* ============================================================================
+ * jcm_demo_battleA_ref_2
+ * RVA 0x0011790c   size 0x1a8   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_demo_battleA_ref_2(int a1)
+  {
+    int v2; // r6
+    int v3; // r1
+    int v4; // r0
+    unsigned int v5; // r5
+    int v6; // r0
+    int v7; // r1
+    int *v8; // r0
+    int v9; // r0
+    _DWORD *v10; // r0
+    int *v11; // r0
+    int v12; // r0
+    int v13; // r0
+    unsigned int v14; // r1
+    int *v15; // r0
+    int v16; // r0
+    int v18; // [sp+0h] [bp-8h] BYREF
+    const char *v19; // [sp+4h] [bp-4h]
+  
+    sub_6040EB10(a1 + 9420);
+    v2 = a1 + 6304;
+    v3 = *(_DWORD *)(a1 + 6300);
+    v4 = **(_DWORD **)(*(_DWORD *)(a1 + 6304) + 12);
+    v18 = 12321336;
+    v19 = "jcm_demo_battleA";
+    SkeletalAnim_play(v4, v3, &v18);
+    v5 = 0;
+    AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)(a1 + 6304) + 12) + 4, 0);
+    v6 = **(_DWORD **)(*(_DWORD *)(a1 + 6304) + 12);
+    *(_DWORD *)(v6 + 20) = 0;
+    *(_DWORD *)(v6 + 28) |= 2u;
+    *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 6304) + 12) + 24) = 1065353216;
+    v7 = *(_DWORD *)(a1 + 6300);
+    v8 = *(int **)(*(_DWORD *)(a1 + 6304) + 12);
+    if ( *(_DWORD *)(*(_DWORD *)(a1 + 6304) + 8) > 1u )
+      ++v8;
+    v9 = *v8;
+    v18 = 12321336;
+    v19 = "jcm_demo_battleA";
+    SkeletalAnim_play(v9, v7, &v18);
+    v10 = *(_DWORD **)(*(_DWORD *)v2 + 12);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > 1u )
+      ++v10;
+    AnimationCtrl_setRepeat(*v10 + 4, 0);
+    v11 = *(int **)(*(_DWORD *)v2 + 12);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > 1u )
+      ++v11;
+    v12 = *v11;
+    *(_DWORD *)(v12 + 20) = 0;
+    *(_DWORD *)(v12 + 28) |= 2u;
+    v13 = *(_DWORD *)(*(_DWORD *)v2 + 12);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > 1u )
+      v13 += 4;
+    *(_DWORD *)(*(_DWORD *)v13 + 24) = 1065353216;
+    *(_BYTE *)(a1 + 9331) = 0;
+    do
+    {
+      v16 = *(_DWORD *)v2;
+      if ( v5 <= 9 && ((1 << v5) & 0x3EC) != 0 )
+      {
+        v15 = *(int **)(v16 + 12);
+      }
+      else
+      {
+        v14 = *(_DWORD *)(v16 + 8);
+        v15 = *(int **)(v16 + 12);
+        if ( v14 > 1 )
+          ++v15;
+      }
+      sub_60448AF4(*v15, v5++);
+    }
+    while ( v5 != 10 );
+    sub_6011E190(a1);
+    *(_BYTE *)(a1 + 9242) = 0;
+    return 9242;
+  }
+
+/* ============================================================================
+ * SE_BOSS_JR_CLOWN_OPEN_ref
+ * RVA 0x00118fec   size 0x14   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_JR_CLOWN_OPEN_ref(int a1)
+  {
+    return sub_60813578((_DWORD *)(a1 + 7008));
+  }
+
+/* ============================================================================
+ * jc_demo_W5_appear_ref
+ * RVA 0x0011a9e0   size 0x1a8   xrefs 0
+ * ============================================================================ */
+  int __fastcall jc_demo_W5_appear_ref(int a1)
+  {
+    float v2; // s0
+    float v3; // s2
+    int v4; // r0
+    _DWORD *v5; // r4
+    _DWORD *v6; // t1
+    int *v7; // r1
+    unsigned int v8; // r0
+    int v9; // r0
+    int v10; // r1
+    _DWORD *v11; // r1
+    unsigned int v12; // r0
+    int *v13; // r1
+    unsigned int v14; // r0
+    int v15; // r0
+    int v16; // r1
+    unsigned int v17; // r0
+    _DWORD v19[2]; // [sp+0h] [bp-8h] BYREF
+  
+    (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 780))(a1, 0);
+    sub_601209A4(a1);
+    v2 = *(float *)(a1 + 8940) + 112.0;
+    v3 = *(float *)(a1 + 8944) + 32.0;
+    *(float *)(a1 + 8952) = v2;
+    *(float *)(a1 + 8956) = v3;
+    v4 = *(_DWORD *)(a1 + 116);
+    *(_DWORD *)(a1 + 8960) = v4;
+    *(float *)(a1 + 108) = v2;
+    *(float *)(a1 + 112) = v3;
+    *(float *)(a1 + 584) = v2;
+    *(float *)(a1 + 588) = v3;
+    *(_DWORD *)(a1 + 592) = v4;
+    *(_DWORD *)(a1 + 616) = v4;
+    *(float *)(a1 + 608) = v2;
+    *(float *)(a1 + 612) = v3;
+    *(_DWORD *)(a1 + 156) = 0;
+    *(_DWORD *)(a1 + 160) = 0;
+    *(_DWORD *)(a1 + 164) = 0;
+    v6 = *(_DWORD **)(a1 + 7656);
+    v5 = (_DWORD *)(a1 + 7656);
+    v7 = (int *)v6[3];
+    v8 = v6[17];
+    if ( v6[2] > v8 )
+      v7 += v8;
+    v9 = *v7;
+    v10 = v5[1];
+    v19[0] = 12321336;
+    v19[1] = "jc_demo_W5_appear";
+    SkeletalAnim_play(v9, v10, v19);
+    v11 = *(_DWORD **)(*v5 + 12);
+    v12 = *(_DWORD *)(*v5 + 68);
+    if ( *(_DWORD *)(*v5 + 8) > v12 )
+      v11 += v12;
+    AnimationCtrl_setRepeat(*v11 + 4, 0);
+    v13 = *(int **)(*v5 + 12);
+    v14 = *(_DWORD *)(*v5 + 68);
+    if ( *(_DWORD *)(*v5 + 8) > v14 )
+      v13 += v14;
+    v15 = *v13;
+    *(_DWORD *)(v15 + 20) = 0;
+    *(_DWORD *)(v15 + 28) |= 2u;
+    v16 = *(_DWORD *)(*v5 + 12);
+    v17 = *(_DWORD *)(*v5 + 68);
+    if ( *(_DWORD *)(*v5 + 8) > v17 )
+      v16 += 4 * v17;
+    *(_DWORD *)(*(_DWORD *)v16 + 24) = 0;
+    *((_BYTE *)v5 + 1675) = 0;
+    *(v5 - 1878) = 1065353216;
+    *(v5 - 1877) = 1065353216;
+    *(v5 - 1876) = 1065353216;
+    v5[408] = 0;
+    *((_BYTE *)v5 - 7121) = 0;
+    *((_BYTE *)v5 + 1677) = 0;
+    return -7121;
   }
 
 /* ============================================================================
@@ -5486,7 +7887,7 @@
       v103[0] = *(float *)(a1 + 108);
       v103[1] = v37;
       mapPositionToScreen(v102, v103);
-      sub_60813BE0(v36, "SE_BOSS_JR_CLOWN_MOVE_WATER", v35, v102, 0);
+      SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v36, "SE_BOSS_JR_CLOWN_MOVE_WATER", v35, v102, 0);
     }
     else
     {
@@ -5833,6 +8234,55 @@
       goto LABEL_19;
     }
     return ModelWrapper_updateModel(*v26);
+  }
+
+/* ============================================================================
+ * koopaJr_clown_m_ref
+ * RVA 0x0011dc88   size 0xfc   xrefs 0
+ * ============================================================================ */
+  int __fastcall koopaJr_clown_m_ref(_DWORD *a1, int a2)
+  {
+    int CurrentState; // r0
+    int v5; // r6
+    int v6; // r0
+    _DWORD *v7; // r7
+    int v8; // r1
+    const char *v9; // r2
+    int v10; // r2
+    int v11; // r1
+    _DWORD v13[2]; // [sp+0h] [bp-8h] BYREF
+  
+    CurrentState = StateMgr::getCurrentState((int)(a1 + 1521));
+    v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+    if ( v5 == (*(int (**)(void))(MEMORY[0xC86D94] + 8))() )
+    {
+      v7 = a1 + 1916;
+      v6 = a1[1916];
+      v8 = a1[1915];
+      v13[0] = 12321336;
+      v9 = "koopaJr_clown";
+    }
+    else
+    {
+      v7 = a1 + 1577;
+      v6 = a1[1577];
+      v8 = a1[1575];
+      v13[0] = 12321336;
+      v9 = "koopaJr_clown_m";
+    }
+    v13[1] = v9;
+    TexAnim_play(v6, v8, v13);
+    AnimationCtrl_setRepeat(*v7 + 4, 0);
+    if ( a2 == 1 )
+      v10 = 1065353216;
+    *(_DWORD *)(*v7 + 24) = 0;
+    v11 = *v7;
+    if ( a2 == 1 )
+      *(_DWORD *)(v11 + 20) = v10;
+    else
+      *(_DWORD *)(v11 + 20) = 0;
+    *(_DWORD *)(v11 + 28) |= 2u;
+    return sub_600D0E78((int)a1, a2);
   }
 
 /* ============================================================================
@@ -6857,7 +9307,7 @@
   }
 
 /* ============================================================================
- * sub_6011FBCC
+ * jcm_delight_ref
  * RVA 0x0011fbcc   size 0x518   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6011FBCC(int a1)
@@ -7307,7 +9757,7 @@
   }
 
 /* ============================================================================
- * sub_601206F4
+ * jc_demo_W5_excite_ref
  * RVA 0x001206f4   size 0xe8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_601206F4(int a1)
@@ -7352,7 +9802,7 @@
   }
 
 /* ============================================================================
- * sub_601207E4
+ * jc_demo_W5_swat_ref
  * RVA 0x001207e4   size 0xc8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_601207E4(int a1)
@@ -7399,7 +9849,7 @@
   }
 
 /* ============================================================================
- * sub_601208B4
+ * jc_demo_W5_shock_ref
  * RVA 0x001208b4   size 0xe8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_601208B4(int a1)
@@ -7512,6 +9962,435 @@
   }
 
 /* ============================================================================
+ * SE_BOSS_JR_ref
+ * RVA 0x00121af4   size 0x744   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_JR_ref(int a1, int a2, int a3, int a4)
+  {
+    int *v5; // r5
+    int v6; // r0
+    int v7; // r0
+    int v8; // r0
+    int v9; // r0
+    int v10; // r1
+    _DWORD *v11; // r0
+    int v12; // r0
+    float v13; // s16
+    float v14; // s18
+    float v15; // s20
+    float v16; // s0
+    float v17; // s0
+    float *v18; // r7
+    int v19; // r5
+    _DWORD *v20; // r6
+    float v21; // r0
+    float *v22; // r7
+    float *v23; // r5
+    float *v24; // r6
+    float v25; // s2
+    float v26; // s20
+    float v27; // s22
+    float v28; // s18
+    float v29; // s16
+    float v30; // s0
+    float v31; // s0
+    int v32; // s0
+    int v33; // r0
+    float v34; // s2
+    float v35; // r1
+    int v36; // r1
+    int v37; // r5
+    _DWORD *v38; // r6
+    int v39; // r1
+    int v40; // r1
+    float v41; // r1
+    int v42; // r5
+    _DWORD *v43; // r6
+    _DWORD *v44; // r0
+    int v45; // r1
+    unsigned int v46; // r2
+    unsigned int v47; // r0
+    int v48; // r3
+    int result; // r0
+    unsigned int v50; // r3
+    int v51; // r1
+    char v52; // r3
+    int *v53; // r4
+    int v54; // t1
+    int v55[2]; // [sp+8h] [bp-10h] BYREF
+    int v56; // [sp+10h] [bp-8h] BYREF
+    float v57; // [sp+14h] [bp-4h]
+  
+    v5 = (int *)(a1 + 9196);
+    switch ( *(_DWORD *)(a1 + 9196) )
+    {
+      case 1:
+        v6 = *(_DWORD *)(a1 + 9248) - 1;
+        *(_DWORD *)(a1 + 9248) = v6;
+        if ( !v6 )
+        {
+          *(_BYTE *)(a1 + 9241) = 0;
+          *v5 = 2;
+          if ( !*(_DWORD *)((*(int (__fastcall **)(int))(*(_DWORD *)a1 + 628))(a1) + 6300) )
+          {
+            (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 9232) + 1140))(*(_DWORD *)(a1 + 9232));
+            (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13135184);
+          }
+        }
+        goto LABEL_51;
+      case 2:
+        CollisionActor::handleSpeed(a1);
+        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+        v7 = *(_DWORD *)(a1 + 2872);
+        if ( (v7 & 0x440000) != 0 && (v7 & 0x10000000) == 0 || (v7 & 0x880000) != 0 && (v7 & 0x20000000) == 0 )
+        {
+          *(float *)(a1 + 120) = -*(float *)(a1 + 120);
+          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_BOUND", nullptr);
+          v7 = *(_DWORD *)(a1 + 2872);
+        }
+        if ( (v7 & 1) != 0 || (v7 & 0x10400) == 0x400 )
+        {
+          *(float *)(a1 + 124) = -*(float *)(a1 + 124);
+          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_BOUND", nullptr);
+        }
+        v8 = *(_DWORD *)(a1 + 9252);
+        *(_DWORD *)(a1 + 9252) = v8 - 1;
+        if ( v8 <= 1 )
+          *v5 = 3;
+        goto LABEL_50;
+      case 3:
+        CollisionActor::handleSpeed(a1);
+        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+        v9 = *(_DWORD *)(a1 + 2872);
+        if ( (v9 & 1) != 0 )
+        {
+          sub_6011F2B4(a1, 0);
+          v36 = 5;
+          if ( !*(_BYTE *)(a1 + 9329) )
+            v36 = 4;
+          v11 = (_DWORD *)(a1 + 7008);
+          *v5 = v36;
+          goto LABEL_49;
+        }
+        if ( (v9 & 0x10400) == 0x400 )
+        {
+          sub_6011F2B4(a1, 1);
+          v10 = 5;
+          if ( !*(_BYTE *)(a1 + 9329) )
+            v10 = 4;
+          v11 = (_DWORD *)(a1 + 7008);
+          *v5 = v10;
+  LABEL_49:
+          sub_60813430(v11, (int)"SE_BOSS_JR_CROWN_BOUND", nullptr);
+          goto LABEL_50;
+        }
+        if ( (v9 & 0x440000) != 0 && (v9 & 0x10000000) == 0 || (v9 & 0x880000) != 0 && (v9 & 0x20000000) == 0 )
+        {
+          if ( *(float *)(a1 + 108) < *(float *)(a1 + 8940) )
+            v39 = 2;
+          else
+            v39 = 3;
+          sub_6011F2B4(a1, v39);
+          v40 = 5;
+          if ( !*(_BYTE *)(a1 + 9329) )
+            v40 = 4;
+          v11 = (_DWORD *)(a1 + 7008);
+          *v5 = v40;
+          goto LABEL_49;
+        }
+  LABEL_50:
+        v41 = *(float *)(a1 + 112);
+        v42 = *(_DWORD *)(a1 + 8);
+        v43 = (_DWORD *)MEMORY[0xC7F534];
+        v56 = *(_DWORD *)(a1 + 108);
+        v57 = v41;
+        mapPositionToScreen((float *)v55, (float *)&v56);
+        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v43, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v42, (float *)v55, nullptr);
+  LABEL_51:
+        v44 = *(_DWORD **)(a1 + 6304);
+        v45 = v44[3];
+        v46 = v44[2];
+        v47 = v44[17];
+        if ( v46 > v47 )
+          v45 += 4 * v47;
+        if ( (*(_BYTE *)(*(_DWORD *)v45 + 28) & 0x20) != 0 )
+          *(_DWORD *)(a1 + 160) += 0x2000000;
+        v56 = 0;
+        v55[0] = 0x2000000;
+        moveValueTo((int *)(a1 + 156), &v56, v55, a4);
+        v56 = 0;
+        v55[0] = 0x2000000;
+        moveValueTo((int *)(a1 + 164), &v56, v55, v48);
+        result = 9416;
+        v50 = *(unsigned __int8 *)(a1 + 9416);
+        if ( v50 <= 2 )
+        {
+          result = a1 + 6312;
+          v51 = *(_DWORD *)(a1 + 6312);
+          if ( (*(_BYTE *)(v51 + 28) & 4) != 0 )
+          {
+            v52 = v50 + 1;
+            *(_BYTE *)(a1 + 9416) = v52;
+            if ( v52 == 3 )
+            {
+              *(_DWORD *)(v51 + 20) = 0;
+              *(_DWORD *)(v51 + 28) |= 2u;
+              *(_DWORD *)(*(_DWORD *)result + 24) = 0;
+              v54 = *(_DWORD *)(a1 + 6324);
+              v53 = (int *)(a1 + 6324);
+              *(_DWORD *)(v54 + 20) = 0;
+              *(_DWORD *)(v54 + 28) |= 2u;
+              result = *v53;
+              *(_DWORD *)(*v53 + 24) = 0;
+            }
+          }
+        }
+        return result;
+      case 4:
+        CollisionActor::handleSpeed(a1);
+        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+        v12 = *(_DWORD *)(a1 + 2872);
+        if ( (v12 & 0x440000) != 0 && (v12 & 0x10000000) == 0
+          || (v12 & 0x880000) != 0 && (v12 & 0x20000000) == 0
+          || (v12 & 1) != 0
+          || (v12 & 0x10400) == 0x400 )
+        {
+          v13 = sqrtf(
+                  (float)((float)(*(float *)(a1 + 124) * *(float *)(a1 + 124))
+                        + (float)((float)(*(float *)(a1 + 120) * 0.5) * (float)(*(float *)(a1 + 120) * 0.5)))
+                + (float)(*(float *)(a1 + 128) * *(float *)(a1 + 128)));
+          v14 = *(float *)(a1 + 9028) - *(float *)(a1 + 112);
+          v15 = *(float *)(a1 + 9024) - *(float *)(a1 + 108);
+          v16 = sqrtf(
+                  (float)((float)(v14 * v14) + (float)(v15 * v15))
+                + (float)((float)(*(float *)(a1 + 9032) - *(float *)(a1 + 116))
+                        * (float)(*(float *)(a1 + 9032) - *(float *)(a1 + 116))));
+          if ( v16 > 0.0 )
+          {
+            v17 = 1.0 / v16;
+            v14 = v14 * v17;
+            v15 = v15 * v17;
+          }
+          v18 = (float *)(a1 + 112);
+          *(float *)(a1 + 120) = (float)(v13 * v15) + (float)(v13 * v15);
+          *(float *)(a1 + 124) = v13 * v14;
+          *v5 = 5;
+          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_BOUND", nullptr);
+        }
+        else
+        {
+          v18 = (float *)(a1 + 112);
+        }
+        v19 = *(_DWORD *)(a1 + 8);
+        v20 = (_DWORD *)MEMORY[0xC7F534];
+        v21 = *v18;
+        v56 = *(_DWORD *)(a1 + 108);
+        v57 = v21;
+        mapPositionToScreen((float *)v55, (float *)&v56);
+        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v20, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v19, (float *)v55, nullptr);
+        goto LABEL_51;
+      case 5:
+        v22 = (float *)(a1 + 9024);
+        v23 = (float *)(a1 + 9028);
+        v24 = (float *)(a1 + 9032);
+        v25 = *(float *)(a1 + 9028) - *(float *)(a1 + 112);
+        if ( sqrtf(
+               (float)((float)(v25 * v25)
+                     + (float)((float)(*(float *)(a1 + 9024) - *(float *)(a1 + 108))
+                             * (float)(*(float *)(a1 + 9024) - *(float *)(a1 + 108))))
+             + (float)((float)(*(float *)(a1 + 9032) - *(float *)(a1 + 116))
+                     * (float)(*(float *)(a1 + 9032) - *(float *)(a1 + 116)))) >= 16.0 )
+        {
+          CollisionActor::handleSpeed(a1);
+          v33 = *(_DWORD *)(a1 + 108);
+          v35 = *(float *)(a1 + 112);
+  LABEL_38:
+          v37 = *(_DWORD *)(a1 + 8);
+          v56 = v33;
+          v57 = v35;
+          v38 = (_DWORD *)MEMORY[0xC7F534];
+          mapPositionToScreen((float *)v55, (float *)&v56);
+          SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v38, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v37, (float *)v55, nullptr);
+          goto LABEL_51;
+        }
+        v26 = *v23 - *(float *)(a1 + 112);
+        v27 = *v22 - *(float *)(a1 + 108);
+        v28 = *v24 - *(float *)(a1 + 116);
+        v29 = (float)((float)(v26 * v26) + (float)(v27 * v27)) + (float)(v28 * v28);
+        if ( sqrtf(v29) > 1.5 )
+        {
+          v30 = sqrtf(v29);
+          if ( v30 > 0.0 )
+          {
+            v31 = 1.0 / v30;
+            v28 = v28 * v31;
+            v26 = v26 * v31;
+            v27 = v27 * v31;
+          }
+          *(float *)&v32 = *(float *)(a1 + 108) + (float)(v27 * 1.5);
+          *(float *)(a1 + 108) = *(float *)&v32;
+          v33 = v32;
+          v34 = *(float *)(a1 + 112) + (float)(v26 * 1.5);
+          *(float *)(a1 + 112) = v34;
+          v35 = v34;
+          *(float *)(a1 + 116) = *(float *)(a1 + 116) + (float)(v28 * 1.5);
+          goto LABEL_38;
+        }
+        *(float *)(a1 + 108) = *v22;
+        *(float *)(a1 + 112) = *v23;
+        *(float *)(a1 + 116) = *v24;
+        return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13135148);
+      default:
+        goto LABEL_51;
+    }
+  }
+
+/* ============================================================================
+ * jcm_death_ref_2
+ * RVA 0x00122c7c   size 0x424   xrefs 0
+ * ============================================================================ */
+  int __fastcall jcm_death_ref_2(_DWORD *a1)
+  {
+    unsigned int v2; // r5
+    int v3; // r6
+    _DWORD *v4; // r6
+    int v5; // r1
+    int v6; // r0
+    int v7; // r0
+    int v8; // r1
+    int *v9; // r0
+    int v10; // r0
+    _DWORD *v11; // r0
+    int *v12; // r0
+    int v13; // r0
+    int v14; // r0
+    unsigned int v15; // r1
+    int *v16; // r0
+    int v17; // r0
+    int v18; // r5
+    int v19; // r6
+    int v20; // r6
+    int v21; // r5
+    _DWORD *v22; // r4
+    int v23; // r0
+    int v24; // r10
+    int *i; // r6
+    int v26; // r5
+    int result; // r0
+    int v28; // [sp+Ch] [bp-8h] BYREF
+    const char *v29; // [sp+10h] [bp-4h]
+  
+    v2 = 0;
+    *((_BYTE *)a1 + 9318) = 0;
+    v3 = (int)(a1 + 2355);
+    (*(void (__fastcall **)(_DWORD *, int))(*a1 + 780))(a1, 2);
+    sub_6040EB10(v3);
+    v4 = a1 + 1576;
+    v5 = a1[1575];
+    v6 = **(_DWORD **)(a1[1576] + 12);
+    v28 = 12321336;
+    v29 = "jcm_death";
+    SkeletalAnim_play(v6, v5, &v28);
+    AnimationCtrl_setRepeat(**(_DWORD **)(a1[1576] + 12) + 4, 0);
+    v7 = **(_DWORD **)(a1[1576] + 12);
+    *(_DWORD *)(v7 + 20) = 0;
+    *(_DWORD *)(v7 + 28) |= 2u;
+    *(_DWORD *)(**(_DWORD **)(a1[1576] + 12) + 24) = 1065353216;
+    v8 = a1[1575];
+    v9 = *(int **)(a1[1576] + 12);
+    if ( *(_DWORD *)(a1[1576] + 8) > 1u )
+      ++v9;
+    v10 = *v9;
+    v28 = 12321336;
+    v29 = "jcm_death";
+    SkeletalAnim_play(v10, v8, &v28);
+    v11 = *(_DWORD **)(*v4 + 12);
+    if ( *(_DWORD *)(*v4 + 8) > 1u )
+      ++v11;
+    AnimationCtrl_setRepeat(*v11 + 4, 0);
+    v12 = *(int **)(*v4 + 12);
+    if ( *(_DWORD *)(*v4 + 8) > 1u )
+      ++v12;
+    v13 = *v12;
+    *(_DWORD *)(v13 + 20) = 0;
+    *(_DWORD *)(v13 + 28) |= 2u;
+    v14 = *(_DWORD *)(*v4 + 12);
+    if ( *(_DWORD *)(*v4 + 8) > 1u )
+      v14 += 4;
+    *(_DWORD *)(*(_DWORD *)v14 + 24) = 1065353216;
+    *((_BYTE *)a1 + 9331) = 0;
+    do
+    {
+      v17 = *v4;
+      if ( v2 <= 9 && ((1 << v2) & 0x3EC) != 0 )
+      {
+        v16 = *(int **)(v17 + 12);
+      }
+      else
+      {
+        v15 = *(_DWORD *)(v17 + 8);
+        v16 = *(int **)(v17 + 12);
+        if ( v15 > 1 )
+          ++v16;
+      }
+      sub_60448AF4(*v16, v2++);
+    }
+    while ( v2 != 10 );
+    v18 = MEMORY[0xC88234];
+    ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], (int)(a1 + 47));
+    ActiveColldierMgr_removeFromCreateList(v18, (int)(a1 + 47));
+    ActiveColldierMgr_removeFromList3(v18, (int)(a1 + 47));
+    v19 = MEMORY[0xC88234];
+    ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], (int)(a1 + 1956));
+    ActiveColldierMgr_removeFromCreateList(v19, (int)(a1 + 1956));
+    ActiveColldierMgr_removeFromList3(v19, (int)(a1 + 1956));
+    v20 = MEMORY[0xC88234];
+    ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], (int)(a1 + 1837));
+    ActiveColldierMgr_removeFromCreateList(v20, (int)(a1 + 1837));
+    ActiveColldierMgr_removeFromList3(v20, (int)(a1 + 1837));
+    v21 = MEMORY[0xC88234];
+    ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], (int)(a1 + 2032));
+    ActiveColldierMgr_removeFromCreateList(v21, (int)(a1 + 2032));
+    ActiveColldierMgr_removeFromList3(v21, (int)(a1 + 2032));
+    ColliderMgr_removeRelated1(MEMORY[0xC8820C], a1 + 1584);
+    ColliderMgr_removeRelated1(MEMORY[0xC8820C], a1 + 2108);
+    v22 = a1 + 1571;
+    a1[1571] = a1[2320];
+    if ( (*(int (__fastcall **)(_DWORD *))(*a1 + 628))(a1) )
+    {
+      v23 = (*(int (__fastcall **)(_DWORD *))(*a1 + 628))(a1);
+      (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v23 + 1040))(v23, *v22);
+    }
+    a1[30] = *(_DWORD *)(4 * *v22 + 0xAFE3F8);
+    a1[31] = 1077936128;
+    a1[32] = 0;
+    a1[33] = 0;
+    a1[34] = -1056964608;
+    a1[35] = 0;
+    a1[26] = 0;
+    a1[25] = -1105618534;
+    a1[29] = 1167867904;
+    v24 = MEMORY[0xAF3184];
+    for ( i = (int *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3184]); ; i = (int *)sub_60008598(MEMORY[0xC7B400], v24) )
+    {
+      v26 = *i;
+      result = _cxa_guard_acquire_0(13087588);
+      if ( result )
+      {
+        MEMORY[0xC7B360] = 12320920;
+        result = _cxa_guard_release_0(13087588);
+      }
+      if ( !v26 )
+        break;
+      result = (**(int (__fastcall ***)(int, int))v26)(v26, 13087584);
+      if ( result != 1 )
+        break;
+      *(_BYTE *)(v26 + 19) = 1;
+    }
+    return result;
+  }
+
+/* ============================================================================
  * Actor_underwater_BowserJr_retreat_pos_build
  * RVA 0x001245c0   size 0x3c   xrefs 0
  * ============================================================================ */
@@ -7560,6 +10439,228 @@
     *(_DWORD *)(v0 + 8152) = 0;
     *(_DWORD *)(v0 + 8156) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * spin_st_wait_ref
+ * RVA 0x00125c9c   size 0x64   xrefs 0
+ * ============================================================================ */
+  int __fastcall spin_st_wait_ref(int a1)
+  {
+    int v2; // r0
+    _DWORD v4[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = *(_DWORD *)(a1 + 7096);
+    v4[0] = 12321336;
+    v4[1] = "spin_st_wait";
+    sub_60421AD4(v2, v4, 1);
+    *(_WORD *)(a1 + 6276) = 15;
+    return 6276;
+  }
+
+/* ============================================================================
+ * spin_jump_ed_ref_2
+ * RVA 0x00125ecc   size 0x60   xrefs 0
+ * ============================================================================ */
+  int __fastcall spin_jump_ed_ref_2(int a1)
+  {
+    int v1; // r2
+    _DWORD v3[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v1 = *(_DWORD *)(a1 + 7096);
+    v3[0] = 12321336;
+    v3[1] = "spin_jump_ed";
+    return sub_60421AD4(v1, v3, 0);
+  }
+
+/* ============================================================================
+ * spin_jump_ref_2
+ * RVA 0x001261d0   size 0xfc   xrefs 0
+ * ============================================================================ */
+  int __fastcall spin_jump_ref_2(int a1)
+  {
+    float *v2; // r5
+    _DWORD *v3; // r0
+    float v4; // s18
+    float v5; // s0
+    int v6; // r3
+    float v7; // s12
+    float v8; // s4
+    float v9; // s0
+    _DWORD v11[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = (float *)(a1 + 7760);
+    v3 = *(_DWORD **)(a1 + 7096);
+    v4 = *v2;
+    v11[0] = 12321336;
+    v11[1] = "spin_jump";
+    sub_60421AE4(v3, (int)v11, 0);
+    v5 = (float)(*v2 * 20.0) * 48.0;
+    v6 = 360 * ((int)v5 / 360);
+    if ( (int)v5 == v6 )
+      v7 = (float)(int)v5;
+    else
+      v7 = (float)v6;
+    v8 = (float)((float)(13.0 / (float)(v4 * 3.0)) + 48.0) + (float)(-6.0 / v4);
+    if ( (float)(int)v5 == v5 )
+      v9 = v7;
+    else
+      v9 = (float)v6;
+    *(float *)(a1 + 8132) = v9 / 48.0;
+    *(_WORD *)(a1 + 6276) = (int)v8;
+    return (int)v8;
+  }
+
+/* ============================================================================
+ * spin_jump_ed_ref_3
+ * RVA 0x0012654c   size 0x80   xrefs 0
+ * ============================================================================ */
+  int __fastcall spin_jump_ed_ref_3(int a1)
+  {
+    int v2; // r0
+    float v3; // s16
+    int result; // r0
+    _DWORD v5[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = *(_DWORD *)(a1 + 7096);
+    v3 = *(float *)(a1 + 7760);
+    v5[0] = 12321336;
+    v5[1] = "spin_jump_ed";
+    sub_60421AD4(v2, v5, 0);
+    result = 30 - (int)(float)(6.0 / v3);
+    *(_WORD *)(a1 + 6276) = result;
+    return result;
+  }
+
+/* ============================================================================
+ * spin_1_ref
+ * RVA 0x00126960   size 0xa4   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall spin_1_ref(_DWORD *a1)
+  {
+    int v2; // r0
+    _DWORD v4[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = a1[1774];
+    v4[0] = 12321336;
+    v4[1] = "spin_1";
+    sub_60421AD4(v2, v4, 0);
+    if ( !(*(int (__fastcall **)(_DWORD *))(*a1 + 716))(a1) )
+      (*(void (__fastcall **)(_DWORD *))(*a1 + 720))(a1);
+    *((_WORD *)a1 + 3138) = 32;
+    *((float *)a1 + 2033) = *((float *)a1 + 1940) * 40.0;
+    return a1 + 2033;
+  }
+
+/* ============================================================================
+ * spin_2_ref
+ * RVA 0x00126d6c   size 0x8c   xrefs 0
+ * ============================================================================ */
+  int __fastcall spin_2_ref(_WORD *a1)
+  {
+    int v2; // r0
+    _DWORD v4[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = *((_DWORD *)a1 + 1774);
+    v4[0] = 12321336;
+    v4[1] = "spin_2";
+    sub_60421AD4(v2, v4, 0);
+    if ( !(*(int (__fastcall **)(_WORD *))(*(_DWORD *)a1 + 716))(a1) )
+      (*(void (__fastcall **)(_WORD *))(*(_DWORD *)a1 + 720))(a1);
+    a1[3138] = 35;
+    return 6276;
+  }
+
+/* ============================================================================
+ * spin_ed_ref
+ * RVA 0x00127144   size 0x60   xrefs 0
+ * ============================================================================ */
+  int __fastcall spin_ed_ref(int a1)
+  {
+    int v2; // r0
+    int result; // r0
+    _DWORD v4[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = *(_DWORD *)(a1 + 7096);
+    v4[0] = 12321336;
+    v4[1] = "spin_ed";
+    result = sub_60421AD4(v2, v4, 0);
+    *(_DWORD *)(a1 + 132) = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * SE_BOSS_WENDY_MAGIC_JUMP_ref
+ * RVA 0x001271b0   size 0x23c   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_WENDY_MAGIC_JUMP_ref(int32x4_t *a1)
+  {
+    __int8 *v2; // r5
+    unsigned __int8 *v3; // r0
+    unsigned __int32 v4; // r1
+    float v5; // r0
+    int v6; // r1
+    unsigned int v7; // r0
+    unsigned __int8 *v9; // r1
+    float v10; // s0
+    float v11; // s2
+    float v12[3]; // [sp+4h] [bp-Ch] BYREF
+  
+    v2 = &a1[443].n128_i8[8];
+    j_ModelWrapper_updateAnims(a1[443].n128_i32[2]);
+    StageActor::accelerateX((float *)a1);
+    CollisionActor::handleGravity((int)a1);
+    CollisionActor::handleSpeed((int)a1);
+    v3 = &a1[508].n128_u8[8];
+    if ( !a1[508].n128_u8[8] )
+    {
+      v4 = a1[179].n128_u32[2];
+      if ( (v4 & 0x440000) != 0 && (v4 & 0x10000000) == 0 || (v4 & 0x880000) != 0 && (v4 & 0x20000000) == 0 )
+      {
+        a1[7].n128_f32[2] = a1[7].n128_f32[2] * -0.5;
+        a1[8].n128_f32[1] = -a1[8].n128_f32[1];
+        *v3 = 1;
+        goto LABEL_7;
+      }
+      v9 = &a1[508].n128_u8[9];
+      if ( !a1[508].n128_u8[9] )
+      {
+        v10 = a1[6].n128_f32[3];
+        v11 = *(float *)(MEMORY[0xCC6484] + 116);
+        if ( v10 >= (float)(v11 + a1[468].n128_f32[0]) )
+        {
+          if ( !a1[5].n128_u32[0] )
+          {
+  LABEL_19:
+            *v9 = 1;
+            a1[7].n128_f32[2] = a1[7].n128_f32[2] * -0.5;
+            a1[8].n128_f32[1] = -a1[8].n128_f32[1];
+            *v3 = 1;
+            goto LABEL_7;
+          }
+        }
+        else if ( v10 <= (float)(v11 + a1[468].n128_f32[1]) && a1[5].n128_u32[0] == 1 )
+        {
+          goto LABEL_19;
+        }
+        *v9 = 0;
+      }
+    }
+  LABEL_7:
+    v5 = a1[510].n128_f32[2];
+    v12[0] = a1[510].n128_f32[1];
+    v12[1] = v5;
+    v12[2] = 4500.0;
+    EffectWrapper_update(a1 + 515, 792, v12, nullptr, nullptr);
+    sub_6081356C(&a1[395].n128_u32[3], (int)"SE_BOSS_WENDY_MAGIC_JUMP", a1[415].n128_i16[0], nullptr);
+    a1[10].n128_u32[0] += (int)(float)((float)(a1[508].n128_f32[1] * MEMORY[0xB0E1E0]) / MEMORY[0xB0E1D8]);
+    v6 = *(_DWORD *)(*(_DWORD *)v2 + 12);
+    v7 = *(_DWORD *)(*(_DWORD *)v2 + 68);
+    if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v7 )
+      v6 += 4 * v7;
+    if ( (*(_BYTE *)(*(_DWORD *)v6 + 28) & 0x10) != 0 )
+      (*(void (__fastcall **)(int32x4_t *, int))(a1->n128_u32[0] + 192))(a1, 13136000);
+    return (*(int (__fastcall **)(int32x4_t *))(a1->n128_u32[0] + 1032))(a1);
   }
 
 /* ============================================================================
@@ -7744,7 +10845,7 @@
   }
 
 /* ============================================================================
- * sub_60129290
+ * SE_BOSS_WENDY_FOOT_ref
  * RVA 0x00129290   size 0xd8   xrefs 3
  * ============================================================================ */
   int __fastcall sub_60129290(int a1)
@@ -7790,6 +10891,514 @@
       return sub_608134CC(v8, v9, v7, 0);
     }
     return result;
+  }
+
+/* ============================================================================
+ * SE_VOC_WEN_POSE_ref
+ * RVA 0x00129434   size 0x18c   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_VOC_WEN_POSE_ref(int *a1)
+  {
+    int *v2; // r5
+    _DWORD *v3; // r1
+    unsigned int v4; // r0
+    _DWORD *v5; // r1
+    unsigned int v6; // r0
+    float v7; // s0
+    int v8; // r1
+    unsigned int v9; // r0
+    int result; // r0
+    int v11; // r0
+    _DWORD v12[3]; // [sp+4h] [bp-Ch] BYREF
+  
+    v2 = a1 + 1774;
+    j_ModelWrapper_updateAnims(a1[1774]);
+    Animation_update(**(_DWORD **)(*v2 + 20));
+    (*(void (__fastcall **)(int *))(*a1 + 1364))(a1);
+    (*(void (__fastcall **)(int *))(*a1 + 1320))(a1);
+    CollisionActor::handleGravity((int)a1);
+    CollisionActor::handleSpeed((int)a1);
+    v3 = *(_DWORD **)(*v2 + 12);
+    v4 = *(_DWORD *)(*v2 + 68);
+    if ( *(_DWORD *)(*v2 + 8) > v4 )
+      v3 += v4;
+    if ( sub_60418548(*v3 + 4) == 1 )
+      sub_608134CC(a1 + 1583, (int)"SE_VOC_WEN_POSE", *((__int16 *)a1 + 3320), nullptr);
+    v5 = *(_DWORD **)(*v2 + 12);
+    v6 = *(_DWORD *)(*v2 + 68);
+    if ( *(_DWORD *)(*v2 + 8) > v6 )
+      v5 += v6;
+    if ( sub_60418548(*v5 + 4) == 1 )
+    {
+      v7 = *((float *)a1 + 28);
+      v12[0] = a1[27];
+      *(float *)&v12[1] = v7 + -2.0;
+      v12[2] = 1166843904;
+      EffectData_create(788, (int)v12, 0, 0);
+      (*(void (__fastcall **)(int *))(*a1 + 1288))(a1);
+    }
+    v8 = *(_DWORD *)(*v2 + 12);
+    v9 = *(_DWORD *)(*v2 + 68);
+    if ( *(_DWORD *)(*v2 + 8) > v9 )
+      v8 += 4 * v9;
+    result = *(unsigned __int8 *)(*(_DWORD *)v8 + 28);
+    if ( (result & 0x20) != 0 )
+    {
+      v11 = *(_DWORD *)(MEMORY[0xC7B420] + 24);
+      if ( v11 )
+        *(_BYTE *)(v11 + 6136) = 1;
+      return (*(int (__fastcall **)(int *, int))(*a1 + 192))(a1, 13135904);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * spin_jump_ref_3
+ * RVA 0x001295d4   size 0x100   xrefs 0
+ * ============================================================================ */
+  int __fastcall spin_jump_ref_3(int a1)
+  {
+    float *v2; // r5
+    int v3; // r0
+    float v4; // s16
+    float v5; // s0
+    int v6; // r3
+    float v7; // s14
+    float v8; // s4
+    float v9; // s0
+    _DWORD v11[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = (float *)(a1 + 7760);
+    v3 = *(_DWORD *)(a1 + 7096);
+    v4 = *v2;
+    v11[0] = 12321336;
+    v11[1] = "spin_jump";
+    sub_60421AD4(v3, v11, 0);
+    v5 = (float)(*v2 * 28.0) * 60.0;
+    v6 = 360 * ((int)v5 / 360);
+    if ( (int)v5 == v6 )
+      v7 = (float)(int)v5;
+    else
+      v7 = (float)v6;
+    v8 = (float)((float)(13.0 / v4) + 60.0) + (float)(-6.0 / (float)(v4 * 3.0));
+    if ( (float)(int)v5 == v5 )
+      v9 = v7;
+    else
+      v9 = (float)v6;
+    *(float *)(a1 + 8132) = v9 / 60.0;
+    *(_WORD *)(a1 + 6276) = (int)v8;
+    return (int)v8;
+  }
+
+/* ============================================================================
+ * SE_BOSS_WENDY_DOWN_LAND1_ref
+ * RVA 0x0012a12c   size 0x18c   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_WENDY_DOWN_LAND1_ref(int a1)
+  {
+    int result; // r0
+    int *v3; // r5
+    float v4; // s0
+    _DWORD v5[3]; // [sp+4h] [bp-Ch] BYREF
+  
+    j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 7096));
+    CollisionActor::handleGravity(a1);
+    CollisionActor::handleSpeed(a1);
+    v3 = (int *)(a1 + 7092);
+    result = *(_DWORD *)(a1 + 7092);
+    switch ( result )
+    {
+      case 3:
+        result = *(unsigned __int16 *)(a1 + 6276);
+        if ( *(_WORD *)(a1 + 6276) )
+          return result;
+        result = *(_DWORD *)(MEMORY[0xC7B420] + 24);
+        if ( !result )
+          return result;
+        *(_BYTE *)(result + 6103) = 1;
+        result = 4;
+  LABEL_14:
+        *v3 = result;
+        return result;
+      case 2:
+        result = MEMORY[0xCC6484];
+        if ( *(float *)(a1 + 112) > *(float *)(MEMORY[0xCC6484] + 132) )
+          return result;
+        *(_WORD *)(a1 + 6276) = 65;
+        result = 3;
+        goto LABEL_14;
+      case 1:
+        result = MEMORY[0xCC6484];
+        if ( *(float *)(a1 + 112) < *(float *)(MEMORY[0xCC6484] + 128) )
+        {
+          CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+          result = *(unsigned __int8 *)(a1 + 2872);
+          if ( (result & 1) != 0 )
+          {
+            *(_DWORD *)(a1 + 120) = 1065353216;
+            *(_DWORD *)(a1 + 124) = 1082130432;
+            *(_DWORD *)(a1 + 128) = 0;
+            if ( *(_DWORD *)(a1 + 80) == 1 )
+              *(_DWORD *)(a1 + 120) = -1082130432;
+            v4 = *(float *)(a1 + 112);
+            v5[0] = *(_DWORD *)(a1 + 108);
+            *(float *)&v5[1] = v4 + 8.0;
+            v5[2] = 1166843904;
+            EffectData_create(789, (int)v5, 0, 0);
+            *v3 = 2;
+            return (int)sub_608134CC(
+                          (_DWORD *)(a1 + 6332),
+                          (int)"SE_BOSS_WENDY_DOWN_LAND1",
+                          *(__int16 *)(a1 + 6640),
+                          nullptr);
+          }
+        }
+        break;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * SE_BOSS_WENDY_LAND_ref
+ * RVA 0x0012a5d0   size 0x20   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_WENDY_LAND_ref(int a1)
+  {
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_LAND", *(__int16 *)(a1 + 6640), nullptr);
+  }
+
+/* ============================================================================
+ * SE_BOSS_WENDY_SHELL_LAND_ref
+ * RVA 0x0012a5f4   size 0x20   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_WENDY_SHELL_LAND_ref(int a1)
+  {
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_SHELL_LAND", *(__int16 *)(a1 + 6640), nullptr);
+  }
+
+/* ============================================================================
+ * SE_BOSS_WENDY_SHELL_ROLL_ref
+ * RVA 0x0012a618   size 0x64   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_WENDY_SHELL_ROLL_ref(int a1)
+  {
+    int CurrentState; // r0
+    int v3; // r5
+    int *result; // r0
+  
+    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+    result = (int *)(*(int (**)(void))(MEMORY[0xC870A0] + 8))();
+    if ( (int *)v3 == result )
+      return sub_6081356C((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_SHELL_ROLL", *(__int16 *)(a1 + 6640), nullptr);
+    return result;
+  }
+
+/* ============================================================================
+ * SE_BOSS_WENDY_JUMP_ref
+ * RVA 0x0012a684   size 0x20   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_BOSS_WENDY_JUMP_ref(int a1)
+  {
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_JUMP", *(__int16 *)(a1 + 6640), nullptr);
+  }
+
+/* ============================================================================
+ * SE_VOC_WEN_ref
+ * RVA 0x0012a6d8   size 0x998   xrefs 0
+ * ============================================================================ */
+  int sub_6012A6D8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C87170 = 0;
+    dword_60C87174 = 0;
+    dword_60C87178 = 0;
+    dword_60C87150 = -1106140492;
+    dword_60C87164 = 1082689673;
+    dword_60C87154 = -1106364188;
+    dword_60C87168 = 1079334230;
+    dword_60C87158 = -1110651699;
+    dword_60C8716C = 1082130432;
+    LODWORD(flt_60C8715C) = (int)(float)((float)(MEMORY[0xB0E1E0] * 0.70312) / MEMORY[0xB0E1D8]);
+    dword_60C87230 = 12321336;
+    dword_60C87160 = (int)(float)((float)(MEMORY[0xB0E1E0] * 0.52734) / MEMORY[0xB0E1D8]);
+    dword_60C8717C = 12321336;
+    dword_60C87180 = (int)"walk";
+    dword_60C87184 = 12321336;
+    dword_60C87188 = (int)"wait";
+    dword_60C87234 = (int)"jump_st";
+    dword_60C87238 = 12321336;
+    dword_60C8723C = (int)"jumpA";
+    dword_60C87240 = 12321336;
+    dword_60C87244 = (int)"jump_st";
+    dword_60C87248 = 12321336;
+    dword_60C8724C = (int)"jumpB";
+    dword_60C87250 = 12321336;
+    dword_60C87254 = (int)"jump_ed";
+    dword_60C87258 = 1065353216;
+    dword_60C8725C = 1084227584;
+    dword_60C87260 = 1065353216;
+    dword_60C87264 = 1086324736;
+    dword_60C87268 = 1065353216;
+    dword_60C8726C = 1085695590;
+    dword_60C87270 = 1065353216;
+    dword_60C87274 = 1087792742;
+    dword_60C8718C = 12321336;
+    v1[0] = 12321336;
+    dword_60C87190 = (int)"throw_st";
+    dword_60C87194 = 12321336;
+    dword_60C87198 = (int)"throw_st_wait";
+    dword_60C8719C = 12321336;
+    dword_60C871A0 = (int)"throw_ed";
+    dword_60C871A4 = 12321336;
+    dword_60C871A8 = (int)"throw_ed_wait";
+    dword_60C871AC = 12321336;
+    dword_60C871B0 = (int)"wand";
+    dword_60C871C0 = 12321336;
+    dword_60C871C4 = (int)"damage";
+    dword_60C871C8 = 12321336;
+    dword_60C871CC = (int)"damage_s";
+    dword_60C871D0 = 12321336;
+    dword_60C871D4 = (int)"shell_in";
+    dword_60C871D8 = 12321336;
+    dword_60C871DC = (int)"shell_out";
+    dword_60C871E0 = 12321336;
+    dword_60C871E4 = (int)"shell_model_in";
+    dword_60C871E8 = 12321336;
+    dword_60C871EC = (int)"shell_model_out";
+    dword_60C871F0 = 12321336;
+    dword_60C871F4 = (int)"wait";
+    dword_60C871F8 = 12321336;
+    dword_60C871FC = (int)"demo_battleA_st";
+    dword_60C87200 = 12321336;
+    dword_60C87204 = (int)"demo_battleA_st_wait";
+    dword_60C87208 = 12321336;
+    dword_60C8720C = (int)"demo_battleA";
+    dword_60C87210 = 12321336;
+    dword_60C87214 = (int)"demo_battleA_wait";
+    dword_60C87218 = 12321336;
+    dword_60C8721C = (int)"demo_escapeA1";
+    dword_60C87220 = 12321336;
+    dword_60C87224 = (int)"demo_escapeA2";
+    dword_60C87228 = 12321336;
+    dword_60C8722C = (int)"demo_escapeA3";
+    v1[1] = &unk_60ABE683;
+    dword_60C87280 = (int)"SE_VOC_WEN_NOTICE1";
+    dword_60C87284 = 1093664768;
+    dword_60C87288 = (int)"SE_VOC_WEN_NOTICE3";
+    dword_60C8728C = 1102053376;
+    dword_60C87290 = (int)"SE_VOC_NO_SOUND";
+    dword_60C87294 = 0;
+    dword_60C87298 = (int)"SE_VOC_WEN_WAKE1";
+    dword_60C8729C = 1090519040;
+    dword_60C872A0 = (int)"SE_VOC_NO_SOUND";
+    dword_60C872A4 = 0;
+    dword_60C872A8 = (int)"SE_VOC_WEN_ESC_JUMP";
+    dword_60C872AC = 0;
+    dword_60C872B0 = (int)"SE_VOC_WEN_MAGIC_SHOT";
+    dword_60C872B4 = 0;
+    dword_60C872B8 = (int)"SE_VOC_WEN_SHELL_OUT";
+    dword_60C872BC = 1102053376;
+    dword_60C872C0 = (int)"SE_VOC_WEN_DAMAGE_S";
+    dword_60C872C4 = 0;
+    dword_60C872C8 = (int)"SE_VOC_WEN_DAMAGE_L";
+    dword_60C872CC = 0;
+    dword_60C872D0 = (int)"SE_VOC_NO_SOUND";
+    dword_60C872D4 = 0;
+    dword_60C872D8 = (int)"SE_VOC_WEN_LOSE_L";
+    dword_60C872DC = 0;
+    dword_60C872E0 = (int)"SE_VOC_WEN_LOSE_S2";
+    dword_60C872E4 = 0;
+    dword_60C872E8 = (int)"SE_VOC_NO_SOUND";
+    dword_60C872EC = 0;
+    dword_60C872F0 = (int)"SE_VOC_NO_SOUND";
+    dword_60C872F4 = 0;
+    *(_DWORD *)Profile::Profile(13135420, 1198288, MEMORY[0xAF3818], (int)v1, &unk_60AF639C, 0) = 12390676;
+    MEMORY[0xC86E58] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC86E5C] = 1620;
+    MEMORY[0xC86E60] = 1;
+    MEMORY[0xC86E64] = 1624;
+    MEMORY[0xC86E68] = 1;
+    MEMORY[0xC86E6C] = 1628;
+    MEMORY[0xC86E70] = 1;
+    MEMORY[0xC86E54] = 12392420;
+    MEMORY[0xC86E74] = 13120720;
+    MEMORY[0xC86E7C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC86E80] = 1644;
+    MEMORY[0xC86E84] = 1;
+    MEMORY[0xC86E88] = 1648;
+    MEMORY[0xC86E8C] = 1;
+    MEMORY[0xC86E90] = 1652;
+    MEMORY[0xC86E94] = 1;
+    MEMORY[0xC86E78] = 12392420;
+    MEMORY[0xC86E98] = 13120792;
+    MEMORY[0xC86EA0] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC86E9C] = 12392440;
+    MEMORY[0xC86EA4] = 1198540;
+    MEMORY[0xC86EA8] = 0;
+    MEMORY[0xC86EAC] = 1199096;
+    MEMORY[0xC86EB0] = 0;
+    MEMORY[0xC86EB4] = 1199704;
+    MEMORY[0xC86EB8] = 0;
+    MEMORY[0xC86EBC] = 12392440;
+    MEMORY[0xC86EC0] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC86EC4] = 1199708;
+    MEMORY[0xC86EC8] = 0;
+    MEMORY[0xC86ECC] = 1200008;
+    MEMORY[0xC86ED0] = 0;
+    MEMORY[0xC86ED4] = 1200612;
+    MEMORY[0xC86ED8] = 0;
+    MEMORY[0xC86EDC] = 12392440;
+    MEMORY[0xC86EE0] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC86EE4] = 1200616;
+    MEMORY[0xC86EE8] = 0;
+    MEMORY[0xC86EEC] = 1200816;
+    MEMORY[0xC86EF0] = 0;
+    MEMORY[0xC86EF4] = 1201396;
+    MEMORY[0xC86EF8] = 0;
+    MEMORY[0xC86EFC] = 12392440;
+    MEMORY[0xC86F00] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC86F04] = 1201400;
+    MEMORY[0xC86F08] = 0;
+    MEMORY[0xC86F0C] = 1201536;
+    MEMORY[0xC86F10] = 0;
+    MEMORY[0xC86F14] = 1201808;
+    MEMORY[0xC86F18] = 0;
+    MEMORY[0xC86F1C] = 12392440;
+    MEMORY[0xC86F20] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC86F24] = 1201812;
+    MEMORY[0xC86F28] = 0;
+    MEMORY[0xC86F2C] = 1202252;
+    MEMORY[0xC86F30] = 0;
+    MEMORY[0xC86F34] = 1202568;
+    MEMORY[0xC86F38] = 0;
+    MEMORY[0xC86F3C] = 12392440;
+    MEMORY[0xC86F40] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC86F44] = 1202572;
+    MEMORY[0xC86F48] = 0;
+    MEMORY[0xC86F4C] = 1202816;
+    MEMORY[0xC86F50] = 0;
+    MEMORY[0xC86F54] = 1203352;
+    MEMORY[0xC86F58] = 0;
+    MEMORY[0xC86F5C] = 12392440;
+    MEMORY[0xC86F60] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC86F64] = 1203356;
+    MEMORY[0xC86F68] = 0;
+    MEMORY[0xC86F6C] = 1203468;
+    MEMORY[0xC86F70] = 0;
+    MEMORY[0xC86F74] = 1203912;
+    MEMORY[0xC86F78] = 0;
+    MEMORY[0xC86F80] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xC86F84] = 1368;
+    MEMORY[0xC86F88] = 1;
+    MEMORY[0xC86F8C] = 1372;
+    MEMORY[0xC86F90] = 1;
+    MEMORY[0xC86F94] = 1376;
+    MEMORY[0xC86F98] = 1;
+    MEMORY[0xC86F7C] = 12392420;
+    MEMORY[0xC86F9C] = 13119892;
+    MEMORY[0xC86FA0] = 12392440;
+    MEMORY[0xC86FA4] = MEMORY[0xC7B788] + 11;
+    MEMORY[0xC86FA8] = 1203916;
+    MEMORY[0xC86FAC] = 0;
+    MEMORY[0xC86FB0] = 1204024;
+    MEMORY[0xC86FB4] = 0;
+    MEMORY[0xC86FB8] = 1204684;
+    MEMORY[0xC86FBC] = 0;
+    MEMORY[0xC86FC0] = 12392440;
+    MEMORY[0xC86FC4] = MEMORY[0xC7B788] + 12;
+    MEMORY[0xC86FC8] = 1204688;
+    MEMORY[0xC86FCC] = 0;
+    MEMORY[0xC86FD0] = 1204956;
+    MEMORY[0xC86FD4] = 0;
+    MEMORY[0xC86FD8] = 1205576;
+    MEMORY[0xC86FDC] = 0;
+    MEMORY[0xC86FE0] = 12392440;
+    MEMORY[0xC86FE4] = MEMORY[0xC7B788] + 13;
+    MEMORY[0xC86FE8] = 1205580;
+    MEMORY[0xC86FEC] = 0;
+    MEMORY[0xC86FF0] = 1205720;
+    MEMORY[0xC86FF4] = 0;
+    MEMORY[0xC86FF8] = 1206080;
+    MEMORY[0xC86FFC] = 0;
+    MEMORY[0xC87000] = 12392440;
+    MEMORY[0xC87004] = MEMORY[0xC7B788] + 14;
+    MEMORY[0xC87008] = 1206084;
+    MEMORY[0xC8700C] = 0;
+    MEMORY[0xC87010] = 1206184;
+    MEMORY[0xC87014] = 0;
+    MEMORY[0xC87018] = 1206620;
+    MEMORY[0xC8701C] = 0;
+    MEMORY[0xC87020] = 12392440;
+    MEMORY[0xC87024] = MEMORY[0xC7B788] + 15;
+    MEMORY[0xC87028] = 1206624;
+    MEMORY[0xC8702C] = 0;
+    MEMORY[0xC87030] = 1206804;
+    MEMORY[0xC87034] = 0;
+    MEMORY[0xC87038] = 1207656;
+    MEMORY[0xC8703C] = 0;
+    MEMORY[0xC87040] = 12392440;
+    MEMORY[0xC87044] = MEMORY[0xC7B788] + 16;
+    MEMORY[0xC87048] = 1207660;
+    MEMORY[0xC8704C] = 0;
+    MEMORY[0xC87050] = 1207812;
+    MEMORY[0xC87054] = 0;
+    MEMORY[0xC87058] = 1208640;
+    MEMORY[0xC8705C] = 0;
+    MEMORY[0xC87060] = 12392440;
+    MEMORY[0xC87064] = MEMORY[0xC7B788] + 17;
+    MEMORY[0xC87068] = 1208644;
+    MEMORY[0xC8706C] = 0;
+    MEMORY[0xC87070] = 1208752;
+    MEMORY[0xC87074] = 0;
+    MEMORY[0xC87078] = 1209344;
+    MEMORY[0xC8707C] = 0;
+    MEMORY[0xC87080] = 12392440;
+    MEMORY[0xC87084] = MEMORY[0xC7B788] + 18;
+    MEMORY[0xC87088] = 1209348;
+    MEMORY[0xC8708C] = 0;
+    MEMORY[0xC87090] = 1209548;
+    MEMORY[0xC87094] = 0;
+    MEMORY[0xC87098] = 1209944;
+    MEMORY[0xC8709C] = 0;
+    MEMORY[0xC870A4] = MEMORY[0xC7B788] + 19;
+    MEMORY[0xC870A8] = 1572;
+    MEMORY[0xC870AC] = 1;
+    MEMORY[0xC870B0] = 1576;
+    MEMORY[0xC870B4] = 1;
+    MEMORY[0xC870B8] = 1580;
+    MEMORY[0xC870BC] = 1;
+    MEMORY[0xC870A0] = 12392420;
+    MEMORY[0xC870C0] = 13120504;
+    MEMORY[0xC870C4] = 12392440;
+    MEMORY[0xC870C8] = MEMORY[0xC7B788] + 20;
+    MEMORY[0xC870CC] = 1209948;
+    MEMORY[0xC870D0] = 0;
+    MEMORY[0xC870D4] = 1209960;
+    MEMORY[0xC870D8] = 0;
+    MEMORY[0xC870DC] = 1210280;
+    MEMORY[0xC870E0] = 0;
+    MEMORY[0xC870E8] = MEMORY[0xC7B788] + 21;
+    MEMORY[0xC870EC] = 1584;
+    MEMORY[0xC870F0] = 1;
+    MEMORY[0xC870F4] = 1588;
+    MEMORY[0xC870F8] = 1;
+    MEMORY[0xC870FC] = 1592;
+    MEMORY[0xC87100] = 1;
+    MEMORY[0xC870E4] = 12392420;
+    MEMORY[0xC87104] = 13120540;
+    MEMORY[0xC7B788] += 22;
+    MEMORY[0xC8710C] = MEMORY[0xC7B788];
+    MEMORY[0xC87110] = 444;
+    MEMORY[0xC87114] = 1;
+    MEMORY[0xC87118] = 448;
+    MEMORY[0xC8711C] = 1;
+    MEMORY[0xC87120] = 452;
+    MEMORY[0xC87124] = 1;
+    MEMORY[0xC87108] = 12392420;
+    MEMORY[0xC87128] = 13104520;
+    return 13104520;
   }
 
 /* ============================================================================
@@ -7886,7 +11495,7 @@
     _DWORD v6[6]; // [sp+0h] [bp-48h] BYREF
     _DWORD v7[12]; // [sp+18h] [bp-30h] BYREF
   
-    sub_6012B514(a1);
+    ice_wendy_ref(a1);
     v2 = *(_DWORD *)(a1 + 112);
     v3 = *(_DWORD *)(a1 + 116);
     *(_DWORD *)(a1 + 1448) = *(_DWORD *)(a1 + 108);
@@ -7917,7 +11526,7 @@
   }
 
 /* ============================================================================
- * sub_6012B514
+ * ice_wendy_ref
  * RVA 0x0012b514   size 0x118   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6012B514(int a1)
@@ -8067,6 +11676,127 @@
   }
 
 /* ============================================================================
+ * gura_anim_S_ref
+ * RVA 0x0012c274   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int __fastcall gura_anim_S_ref(int a1)
+  {
+    int v1; // r0
+    int **v2; // r4
+    int v3; // r0
+    int (__fastcall *v4)(int, int *); // r2
+    int v5; // r0
+    _DWORD v7[3]; // [sp+4h] [bp-3Ch] BYREF
+    int v8; // [sp+10h] [bp-30h] BYREF
+    const char *v9; // [sp+14h] [bp-2Ch]
+    int v10; // [sp+1Ch] [bp-24h]
+    int v11; // [sp+2Ch] [bp-14h]
+    int v12; // [sp+3Ch] [bp-4h]
+  
+    v2 = (int **)(a1 + 6300);
+    v1 = *(_DWORD *)(a1 + 6300);
+    v8 = 12321336;
+    v9 = "gura_anim_S";
+    sub_6040F4B8(v1, (int)&v8, 0);
+    *((_WORD *)v2 - 12) = 60;
+    v3 = **v2;
+    v4 = *(int (__fastcall **)(int, int *))(*(_DWORD *)v3 + 84);
+    v8 = 12321336;
+    v9 = "end";
+    v5 = v4(v3, &v8);
+    (*(void (__fastcall **)(int, int, int *))(*(_DWORD *)**v2 + 108))(**v2, v5, &v8);
+    v7[0] = v10;
+    v7[1] = v11;
+    v7[2] = v12;
+    sub_603EE400(MEMORY[0xC99CDC], (int)v7);
+    v2[168] = (int *)8;
+    return 8;
+  }
+
+/* ============================================================================
+ * SE_BOSS_ICICLE_SIGN_ref
+ * RVA 0x0012c354   size 0x16c   xrefs 0
+ * ============================================================================ */
+  const char *__fastcall SE_BOSS_ICICLE_SIGN_ref(int a1)
+  {
+    int **v2; // r7
+    int v3; // r5
+    _DWORD *v4; // r6
+    const char *v5; // r0
+    int v6; // r0
+    const char *result; // r0
+    _DWORD *v8; // r4
+    int v9; // t1
+    int v10; // r0
+    int (__fastcall *v11)(int, int *); // r2
+    int v12; // r0
+    float v13[3]; // [sp+4h] [bp-3Ch] BYREF
+    int v14; // [sp+10h] [bp-30h] BYREF
+    const char *v15; // [sp+14h] [bp-2Ch]
+    float v16; // [sp+1Ch] [bp-24h]
+    float v17; // [sp+2Ch] [bp-14h]
+    float v18; // [sp+3Ch] [bp-4h]
+  
+    v2 = (int **)(a1 + 6300);
+    ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6300));
+    v3 = (int)*(v2 - 1573);
+    v4 = (_DWORD *)MEMORY[0xC7F534];
+    v5 = (const char *)*(v2 - 1547);
+    v14 = (int)*(v2 - 1548);
+    v15 = v5;
+    mapPositionToScreen(v13, (float *)&v14);
+    SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v4, (int)"SE_BOSS_ICICLE_SIGN", v3, v13, nullptr);
+    v6 = *(_DWORD *)(*v2)[3];
+    if ( (*(_BYTE *)(v6 + 28) & 0x20) != 0 )
+      sub_6041838C(v6 + 4);
+    if ( !*(_WORD *)(a1 + 6276) )
+      (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13136836);
+    v9 = *(_DWORD *)(a1 + 6972);
+    v8 = (_DWORD *)(a1 + 6972);
+    result = (const char *)v9;
+    if ( v9 >= 1 )
+    {
+      *v8 = --result;
+      if ( !result )
+      {
+        v10 = **v2;
+        v11 = *(int (__fastcall **)(int, int *))(*(_DWORD *)v10 + 84);
+        v14 = 12321336;
+        v15 = "end";
+        v12 = v11(v10, &v14);
+        (*(void (__fastcall **)(int, int, int *))(*(_DWORD *)**v2 + 108))(**v2, v12, &v14);
+        v13[0] = v16;
+        v13[1] = v17;
+        v13[2] = v18;
+        return sub_603EE400(MEMORY[0xC99CDC], (int)v13);
+      }
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * rakka_anim_S_ref
+ * RVA 0x0012c4dc   size 0x80   xrefs 0
+ * ============================================================================ */
+  int __fastcall rakka_anim_S_ref(_DWORD *a1)
+  {
+    int v2; // r0
+    _DWORD v4[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v2 = a1[1575];
+    v4[0] = 12321336;
+    v4[1] = "rakka_anim_S";
+    sub_6040F4B8(v2, (int)v4, 0);
+    a1[30] = 0;
+    a1[31] = 0;
+    a1[32] = 0;
+    a1[25] = -1103940813;
+    a1[34] = MEMORY[0xAFE3D8];
+    a1[85] = 4096;
+    return 4096;
+  }
+
+/* ============================================================================
  * sub_6012CB54
  * RVA 0x0012cb54   size 0x104   xrefs 1
  * ============================================================================ */
@@ -8205,6 +11935,226 @@
     *(_DWORD *)(v0 + 11784) = 12325968;
     LightSource::LightSource(v0 + 11888);
     return v0;
+  }
+
+/* ============================================================================
+ * SE_BOSS_WENDY_RING_BOUND_ref
+ * RVA 0x0012dcb0   size 0x570   xrefs 0
+ * ============================================================================ */
+  unsigned int __fastcall SE_BOSS_WENDY_RING_BOUND_ref(int a1)
+  {
+    float v2; // s2
+    float v3; // s4
+    float v4; // s6
+    unsigned int v5; // r1
+    float v6; // r1
+    int v7; // r5
+    float v8; // s18
+    float v9; // s16
+    unsigned int result; // r0
+    int **v11; // r6
+    float v12; // s20
+    float v13; // s22
+    float v14; // s0
+    float v15; // s2
+    float v16; // s16
+    float v17; // s18
+    int v18; // r0
+    bool v19; // zf
+    float v20; // r1
+    float v21; // s0
+    int v22; // r5
+    int v23; // r0
+    bool v24; // zf
+    int v25; // r0
+    bool v26; // zf
+    float v27; // r1
+    float v28; // s0
+    int v29; // r4
+    float v30[3]; // [sp+8h] [bp-28h] BYREF
+    float v31; // [sp+14h] [bp-1Ch] BYREF
+    float v32; // [sp+18h] [bp-18h]
+    int v33; // [sp+1Ch] [bp-14h]
+    float v34[2]; // [sp+20h] [bp-10h] BYREF
+    float v35; // [sp+28h] [bp-8h] BYREF
+    float v36; // [sp+2Ch] [bp-4h]
+  
+    CollisionActor::handleSpeed(a1);
+    v2 = *(float *)(a1 + 144) + (float)((float)(0.7 - *(float *)(a1 + 144)) * 0.2);
+    v3 = *(float *)(a1 + 148) + (float)((float)(0.7 - *(float *)(a1 + 148)) * 0.2);
+    v4 = *(float *)(a1 + 152) + (float)((float)(0.7 - *(float *)(a1 + 152)) * 0.2);
+    *(float *)(a1 + 144) = v2;
+    *(float *)(a1 + 148) = v3;
+    *(float *)(a1 + 152) = v4;
+    *(float *)(a1 + 312) = v2 * 12.0;
+    *(float *)(a1 + 316) = v3 * 12.0;
+    v5 = *(_DWORD *)(a1 + 11464);
+    if ( v5 <= 0x20 )
+      *(_DWORD *)(a1 + 11464) = v5 + 1;
+    v6 = *(float *)(a1 + 112);
+    v30[0] = *(float *)(a1 + 108);
+    v30[1] = v6;
+    v30[2] = 4500.0;
+    EffectWrapper_update((int32x4_t *)(a1 + 11784), 793, v30, nullptr, nullptr);
+    v7 = a1 + 6112;
+    CollisionMgr_process((unsigned __int8 *)(a1 + 6112));
+    v8 = *(float *)(a1 + 108);
+    v9 = *(float *)(a1 + 112);
+    v11 = (int **)(a1 + 8336);
+    result = *(_DWORD *)(a1 + 8336);
+    v12 = *(float *)(a1 + 576);
+    v13 = *(float *)(a1 + 572);
+    if ( (result & 1) != 0 )
+    {
+      if ( sub_6014C4A4(a1 + 6112) == 0x20000000 )
+      {
+  LABEL_11:
+        v14 = (float)(MEMORY[0xB3AA8C] + (float)((float)(MEMORY[0xB3AA90] * 0.0) * 0.000000059605)) * 1.5;
+        v15 = (float)(MEMORY[0xB3AA84] + (float)((float)(MEMORY[0xB3AA88] * 0.0) * 0.000000059605)) * 1.5;
+  LABEL_22:
+        result = 0;
+        *(_DWORD *)(a1 + 128) = 0;
+        *(float *)(a1 + 120) = v14;
+        *(float *)(a1 + 124) = v15;
+        return result;
+      }
+      result = (unsigned int)*v11;
+    }
+    if ( (result & 0x440000) != 0 && (result & 0x10000000) == 0 || (result & 0x880000) != 0 && (result & 0x20000000) == 0 )
+    {
+      if ( sub_6014C658(a1 + 6112, *(_DWORD *)(a1 + 80)) == 0x20000000 )
+        goto LABEL_11;
+      result = (unsigned int)*v11;
+    }
+    if ( (result & 1) != 0 )
+    {
+      if ( sub_6014C4A4(a1 + 6112) == -536870912 )
+      {
+  LABEL_21:
+        v14 = (float)(MEMORY[0xB3A68C] + (float)((float)(MEMORY[0xB3A690] * 0.0) * 0.000000059605)) * 1.5;
+        v15 = (float)(MEMORY[0xB3A684] + (float)((float)(MEMORY[0xB3A688] * 0.0) * 0.000000059605)) * 1.5;
+        goto LABEL_22;
+      }
+      result = (unsigned int)*v11;
+    }
+    if ( (result & 0x440000) != 0 && (result & 0x10000000) == 0 || (result & 0x880000) != 0 && (result & 0x20000000) == 0 )
+    {
+      if ( sub_6014C658(a1 + 6112, *(_DWORD *)(a1 + 80)) == -536870912 )
+        goto LABEL_21;
+      result = (unsigned int)*v11;
+    }
+    v16 = v9 + v12;
+    v17 = v8 + v13;
+    if ( (result & 1) != 0 && *(float *)(a1 + 124) < 0.0 || (result & 0x10400) == 0x400 && *(float *)(a1 + 124) > 0.0 )
+    {
+      v18 = sub_6014B69C(a1 + 6112);
+      v19 = v18 == 0;
+      if ( v18 )
+      {
+        v11 = *(int ***)(v18 + 144);
+        v19 = v11 == nullptr;
+      }
+      if ( !v19 && Actor::getProfileId((int)v11) == MEMORY[0xAF32EC] )
+      {
+        sub_6012CE5C((int)v11);
+        v20 = *(float *)(a1 + 112);
+        v31 = *(float *)(a1 + 108);
+        v32 = v20;
+        v33 = 1166843904;
+        EffectData_create(794, (int)&v31, 0, 0);
+        v21 = *(float *)(a1 + 112) + *(float *)(a1 + 576);
+        v22 = MEMORY[0xC7F534];
+        v35 = *(float *)(a1 + 108) + *(float *)(a1 + 572);
+        v36 = v21;
+        mapPositionToScreen(v34, &v35);
+  LABEL_48:
+        BasicSoundActor2_play(v22, (int)"SE_BOSS_WENDY_RING_DISAPP", v34, nullptr);
+        (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
+        *(_BYTE *)(a1 + 19) = 1;
+        return 1;
+      }
+      v25 = sub_6014B6F8(a1 + 6112);
+      v26 = v25 == 0;
+      if ( v25 )
+      {
+        v7 = *(_DWORD *)(v25 + 144);
+        v26 = v7 == 0;
+      }
+      if ( !v26 && Actor::getProfileId(v7) == MEMORY[0xAF32EC] )
+      {
+  LABEL_47:
+        sub_6012CE5C(v7);
+        v27 = *(float *)(a1 + 112);
+        v31 = *(float *)(a1 + 108);
+        v32 = v27;
+        v33 = 1166843904;
+        EffectData_create(794, (int)&v31, 0, 0);
+        v28 = *(float *)(a1 + 112) + *(float *)(a1 + 576);
+        v22 = MEMORY[0xC7F534];
+        v35 = *(float *)(a1 + 108) + *(float *)(a1 + 572);
+        v36 = v28;
+        mapPositionToScreen(v34, &v35);
+        goto LABEL_48;
+      }
+      *(float *)(a1 + 124) = -*(float *)(a1 + 124);
+      v31 = v17;
+      v32 = v16;
+      v29 = MEMORY[0xC7F534];
+      mapPositionToScreen(&v35, &v31);
+      return (unsigned int)BasicSoundActor2_play(v29, (int)"SE_BOSS_WENDY_RING_BOUND", &v35, nullptr);
+    }
+    if ( (result & 0x440000) != 0 && (result & 0x10000000) == 0
+      || (result & 0x880000) != 0 && (result &= 0x20000000u) == 0 )
+    {
+      v23 = sub_6014B758(a1 + 6112, *(_DWORD *)(a1 + 80));
+      v24 = v23 == 0;
+      if ( v23 )
+      {
+        v7 = *(_DWORD *)(v23 + 144);
+        v24 = v7 == 0;
+      }
+      if ( !v24 && Actor::getProfileId(v7) == MEMORY[0xAF32EC] )
+        goto LABEL_47;
+      *(_DWORD *)(a1 + 80) ^= 1u;
+      *(float *)(a1 + 120) = -*(float *)(a1 + 120);
+      v31 = v17;
+      v32 = v16;
+      v29 = MEMORY[0xC7F534];
+      mapPositionToScreen(&v35, &v31);
+      return (unsigned int)BasicSoundActor2_play(v29, (int)"SE_BOSS_WENDY_RING_BOUND", &v35, nullptr);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * wendy_ring_ref
+ * RVA 0x0012e324   size 0x148   xrefs 0
+ * ============================================================================ */
+  int __fastcall wendy_ring_ref(int a1)
+  {
+    int ResArchiveById; // r8
+    int Model2; // r6
+    _DWORD *v4; // r7
+    _DWORD *v5; // r0
+    _DWORD v7[2]; // [sp+18h] [bp-8h] BYREF
+  
+    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v7[0] = 12321336;
+    v7[1] = "wendy_ring";
+    Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 0, 0, 0, 0, 0);
+    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
+    ModelWrapper_setup(v5, ResArchiveById, 0, 0);
+    *(_DWORD *)(a1 + 6100) = v4;
+    *(float *)(a1 + 116) = *(float *)(a1 + 116) + 32.0;
+    qmemcpy((void *)(a1 + 144), "333?333?333?", 12);
+    *(_DWORD *)(a1 + 568) |= 0x80u;
+    *(_DWORD *)(a1 + 11472) = *(_DWORD *)(a1 + 20) & 7;
+    sub_6012E47C((_DWORD *)a1);
+    StateMgr::changeState((_DWORD *)(a1 + 6084), 13136952);
+    *(_DWORD *)(a1 + 624) = 0;
+    LightSource_update1(a1 + 11888, 37, (_DWORD *)(a1 + 108), nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
+    return 1;
   }
 
 /* ============================================================================
@@ -8428,6 +12378,43 @@
   }
 
 /* ============================================================================
+ * SE_BOSS_WOOGAN_YOKAN_ref
+ * RVA 0x0012f374   size 0xe4   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_BOSS_WOOGAN_YOKAN_ref(_DWORD *a1, int a2, int a3, int a4)
+  {
+    int *v4; // r4
+    int v5; // t1
+    int v6; // r1
+    int v7; // r3
+    int v8; // r5
+    int v9; // r0
+    float v11[2]; // [sp+0h] [bp-10h] BYREF
+    int v12; // [sp+8h] [bp-8h] BYREF
+    int v13; // [sp+Ch] [bp-4h]
+  
+    a1[1554] = 60;
+    v5 = a1[1556];
+    v4 = a1 + 1556;
+    v12 = a1[27];
+    v13 = v5;
+    TileMgr_splashRelated(MEMORY[0xCBD254], &v12, 31, a4);
+    v6 = *v4;
+    v12 = *(v4 - 1529);
+    v13 = v6;
+    TileMgr_splashRelated(MEMORY[0xCBD254], &v12, 14, v7);
+    v8 = MEMORY[0xC7F530];
+    v9 = *(v4 - 1528);
+    v12 = *(v4 - 1529);
+    v13 = v9;
+    mapPositionToScreen(v11, (float *)&v12);
+    BasicSoundActor1_playSound(v8, (int)"SE_BOSS_WOOGAN_YOKAN", v11, nullptr);
+    *(v4 - 1525) = 1065353216;
+    *(v4 - 1531) = -1124744561;
+    return -6124;
+  }
+
+/* ============================================================================
  * sub_60130AAC
  * RVA 0x00130aac   size 0x124   xrefs 1
  * ============================================================================ */
@@ -8626,7 +12613,7 @@
   }
 
 /* ============================================================================
- * sub_6013166C
+ * SE_BOSS_WOOGAN_FIRED_ref
  * RVA 0x0013166c   size 0x1c0   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6013166C(int a1)
@@ -8717,6 +12704,75 @@
   
     v0 = operator new(0x2EB8u);
     return sub_60133EF0(v0);
+  }
+
+/* ============================================================================
+ * bros_boomerang_ref
+ * RVA 0x00133588   size 0xb8   xrefs 0
+ * ============================================================================ */
+  int __fastcall bros_boomerang_ref(int a1)
+  {
+    int ResArchiveById; // r5
+    int Model2; // r6
+    _DWORD *v4; // r7
+    _DWORD *v5; // r0
+    _DWORD v7[2]; // [sp+18h] [bp-8h] BYREF
+  
+    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v7[0] = 12321336;
+    v7[1] = "bros_boomerang";
+    Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 0, 0, 0, 0, 0);
+    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
+    ModelWrapper_setup(v5, ResArchiveById, 0, 0);
+    *(_DWORD *)(a1 + 6472) = v4;
+    return 6472;
+  }
+
+/* ============================================================================
+ * bros_boomerang_model_ref
+ * RVA 0x001337cc   size 0x148   xrefs 0
+ * ============================================================================ */
+  int __fastcall bros_boomerang_model_ref(int a1)
+  {
+    unsigned int *v1; // r4
+    int *v2; // t1
+    int v3; // r0
+    int (__fastcall *v4)(int, float32x2_t *); // r2
+    int v5; // r0
+    float32x2_t v7; // [sp+4h] [bp-3Ch] BYREF
+    float v8; // [sp+Ch] [bp-34h]
+    float v9; // [sp+10h] [bp-30h]
+    float v10; // [sp+14h] [bp-2Ch]
+    float v11; // [sp+18h] [bp-28h]
+    float v12; // [sp+1Ch] [bp-24h]
+    float v13; // [sp+20h] [bp-20h]
+    float v14; // [sp+24h] [bp-1Ch]
+    float v15; // [sp+28h] [bp-18h]
+    float v16; // [sp+2Ch] [bp-14h]
+    float v17; // [sp+30h] [bp-10h]
+    _DWORD v18[3]; // [sp+34h] [bp-Ch] BYREF
+  
+    v2 = *(int **)(a1 + 6472);
+    v1 = (unsigned int *)(a1 + 6472);
+    v3 = *v2;
+    v4 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)*v2 + 84);
+    v7.n64_u32[0] = 12321336;
+    v7.n64_u32[1] = (unsigned __int32)"bros_boomerang_model";
+    v5 = v4(v3, &v7);
+    (*(void (__fastcall **)(_DWORD, int, float32x2_t *))(**(_DWORD **)*v1 + 108))(*(_DWORD *)*v1, v5, &v7);
+    v9 = v9
+       + (float)((float)((float)(v7.n64_f32[1] * flt_60C876A0) + (float)(v7.n64_f32[0] * flt_60C8769C))
+               + (float)(v8 * flt_60C876A4));
+    v13 = v13 + (float)((float)((float)(v11 * flt_60C876A0) + (float)(v10 * flt_60C8769C)) + (float)(v12 * flt_60C876A4));
+    v17 = v17 + (float)((float)((float)(v15 * flt_60C876A0) + (float)(v14 * flt_60C8769C)) + (float)(v16 * flt_60C876A4));
+    Mtx34_rotateX(&v7, v1 - 1579);
+    Mtx34_rotateY(&v7, v1 - 1578);
+    Mtx34_rotateZ(&v7, v1 - 1577);
+    *(float *)v18 = v9;
+    *(float *)&v18[1] = v13;
+    *(float *)&v18[2] = v17;
+    return EffectData_create(531, (int)v18, 0, 0);
   }
 
 /* ============================================================================
@@ -8994,6 +13050,120 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * SE_EMY_DOWN_NO_SCORE_ref
+ * RVA 0x00134dd4   size 0x110   xrefs 0
+ * ============================================================================ */
+  int __fastcall sub_60134DD4(int a1, int a2)
+  {
+    int v3; // r0
+    bool v4; // fnf
+    int v5; // r1
+    int v6; // r1
+    int v7; // r5
+    _DWORD v9[3]; // [sp+0h] [bp-28h] BYREF
+    float v10[3]; // [sp+Ch] [bp-1Ch] BYREF
+    _BYTE v11[8]; // [sp+18h] [bp-10h] BYREF
+    _DWORD v12[2]; // [sp+20h] [bp-8h] BYREF
+  
+    v3 = *(_DWORD *)(a2 + 64);
+    v4 = *(float *)(a1 + 108) < *(float *)(v3 + 108);
+    *(_DWORD *)(a1 + 6104) = v4;
+    v10[0] = (float)((float)(fabsf(*(float *)(v3 + 120)) * 0.35) + 1.75) * *(float *)(4 * v4 + 0xAF6638);
+    v10[1] = 3.75;
+    v10[2] = 0.0;
+    (*(void (__fastcall **)(int, float *, int))(*(_DWORD *)a1 + 308))(a1, v10, 0x10000000);
+    v5 = *(_DWORD *)(a1 + 276);
+    v9[0] = *(_DWORD *)(a1 + 272);
+    v9[1] = v5;
+    v9[2] = 1166843904;
+    EffectData_create(21, v9, 0, 0);
+    v6 = *(_DWORD *)(a1 + 112);
+    v7 = MEMORY[0xC7F530];
+    v12[0] = *(_DWORD *)(a1 + 108);
+    v12[1] = v6;
+    mapPositionToScreen(v11, v12);
+    BasicSoundActor1_playSound(v7, "SE_EMY_DOWN_NO_SCORE", v11, 0);
+    *(_DWORD *)(a1 + 6108) = 2;
+    return 1;
+  }
+
+/* ============================================================================
+ * SE_EMY_DOWN_NO_SCORE_ref_2
+ * RVA 0x00134ef4   size 0x10c   xrefs 0
+ * ============================================================================ */
+  int __fastcall sub_60134EF4(_DWORD *a1, int a2)
+  {
+    int v3; // r0
+    _BOOL4 v4; // r2
+    int v5; // r1
+    int v6; // r1
+    int v7; // r5
+    _DWORD v9[3]; // [sp+0h] [bp-28h] BYREF
+    float v10[3]; // [sp+Ch] [bp-1Ch] BYREF
+    _BYTE v11[8]; // [sp+18h] [bp-10h] BYREF
+    _DWORD v12[2]; // [sp+20h] [bp-8h] BYREF
+  
+    v3 = *(_DWORD *)(a2 + 64);
+    v4 = *(float *)(v3 + 120) < 0.0;
+    a1[1526] = v4;
+    v10[0] = (float)((float)(fabsf(*(float *)(v3 + 120)) * 0.35) + 1.75) * *(float *)(4 * v4 + 0xAF6638);
+    v10[1] = 2.75;
+    v10[2] = 0.0;
+    (*(void (__fastcall **)(_DWORD *, float *, int))(*a1 + 308))(a1, v10, 0x10000000);
+    v5 = a1[69];
+    v9[0] = a1[68];
+    v9[1] = v5;
+    v9[2] = 1166843904;
+    EffectData_create(21, v9, 0, 0);
+    v6 = a1[28];
+    v7 = MEMORY[0xC7F530];
+    v12[0] = a1[27];
+    v12[1] = v6;
+    mapPositionToScreen(v11, v12);
+    BasicSoundActor1_playSound(v7, "SE_EMY_DOWN_NO_SCORE", v11, 0);
+    a1[1527] = 3;
+    return 1;
+  }
+
+/* ============================================================================
+ * SE_EMY_DOWN_NO_SCORE_ref_3
+ * RVA 0x00135010   size 0x10c   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_EMY_DOWN_NO_SCORE_ref_3(int a1, int a2)
+  {
+    int v3; // r0
+    _BOOL4 v4; // r2
+    int v5; // r1
+    float v6; // r1
+    int v7; // r5
+    _DWORD v9[3]; // [sp+0h] [bp-28h] BYREF
+    float v10[3]; // [sp+Ch] [bp-1Ch] BYREF
+    float v11[2]; // [sp+18h] [bp-10h] BYREF
+    float v12[2]; // [sp+20h] [bp-8h] BYREF
+  
+    v3 = *(_DWORD *)(a2 + 64);
+    v4 = *(float *)(v3 + 120) < 0.0;
+    *(_DWORD *)(a1 + 6104) = v4;
+    v10[0] = (float)((float)(fabsf(*(float *)(v3 + 120)) * 0.35) + 1.75) * *(float *)(4 * v4 + 0xAF6638);
+    v10[1] = 2.75;
+    v10[2] = 0.0;
+    (*(void (__fastcall **)(int, float *, int))(*(_DWORD *)a1 + 308))(a1, v10, 201326592);
+    v5 = *(_DWORD *)(a1 + 276);
+    v9[0] = *(_DWORD *)(a1 + 272);
+    v9[1] = v5;
+    v9[2] = 1166843904;
+    EffectData_create(21, (int)v9, 0, 0);
+    v6 = *(float *)(a1 + 112);
+    v7 = MEMORY[0xC7F530];
+    v12[0] = *(float *)(a1 + 108);
+    v12[1] = v6;
+    mapPositionToScreen(v11, v12);
+    BasicSoundActor1_playSound(v7, (int)"SE_EMY_DOWN_NO_SCORE", v11, nullptr);
+    *(_DWORD *)(a1 + 6108) = 4;
+    return 1;
   }
 
 /* ============================================================================
@@ -9332,6 +13502,79 @@
   }
 
 /* ============================================================================
+ * SE_OBJ_EMY_FIRE_SPLASH_ref
+ * RVA 0x001363a8   size 0xd8   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_OBJ_EMY_FIRE_SPLASH_ref(int a1)
+  {
+    float v1; // s0
+    float v3; // r1
+    int v4; // r5
+    float v5; // r2
+    int v6; // r3
+    int v8; // [sp+4h] [bp-14h] BYREF
+    float v9; // [sp+8h] [bp-10h]
+    int v10; // [sp+Ch] [bp-Ch]
+    float v11[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v3 = *(float *)(a1 + 112);
+    v4 = MEMORY[0xC7F534];
+    v8 = *(_DWORD *)(a1 + 108);
+    v9 = v3;
+    mapPositionToScreen(v11, (float *)&v8);
+    BasicSoundActor2_play(v4, (int)"SE_OBJ_EMY_FIRE_SPLASH", v11, nullptr);
+    v8 = *(_DWORD *)(a1 + 108);
+    v9 = v1;
+    v10 = 1166843904;
+    createWaterSplash(MEMORY[0xC99CDC], (int)&v8, *(unsigned __int8 *)(a1 + 86), -1);
+    v5 = *(float *)(a1 + 112);
+    v11[0] = *(float *)(a1 + 108);
+    v11[1] = v5;
+    TileMgr_splashRelated(MEMORY[0xCBD254], v11, 8, v6);
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 296))(a1);
+    *(_BYTE *)(a1 + 6240) = 1;
+    return 6240;
+  }
+
+/* ============================================================================
+ * SE_OBJ_EMY_FIRE_SPLASH_ref_2
+ * RVA 0x00136490   size 0xe0   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_OBJ_EMY_FIRE_SPLASH_ref_2(int a1, float *a2)
+  {
+    int v4; // r1
+    int v5; // r6
+    float v6; // r0
+    int v7; // r3
+    _DWORD v9[2]; // [sp+0h] [bp-8h] BYREF
+    float v10[3]; // [sp+8h] [bp+0h] BYREF
+    int v11; // [sp+14h] [bp+Ch] BYREF
+    int v12; // [sp+18h] [bp+10h]
+    int v13; // [sp+1Ch] [bp+14h]
+  
+    v4 = *(_DWORD *)(a1 + 112);
+    v5 = MEMORY[0xC7F534];
+    v11 = *(_DWORD *)(a1 + 108);
+    v12 = v4;
+    mapPositionToScreen(v10, (float *)&v11);
+    BasicSoundActor2_play(v5, (int)"SE_OBJ_EMY_FIRE_SPLASH", v10, nullptr);
+    v11 = *((_DWORD *)a2 + 1);
+    v12 = *((_DWORD *)a2 + 2);
+    v13 = 1166843904;
+    v6 = a2[3];
+    v10[0] = 0.0;
+    v10[1] = 0.0;
+    v10[2] = v6;
+    EffectData_create(1106, (int)&v11, (int)v10, 0);
+    v9[0] = v11;
+    v9[1] = v12;
+    TileMgr_splashRelated(MEMORY[0xCBD254], v9, 8, v7);
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 296))(a1);
+    *(_BYTE *)(a1 + 6240) = 1;
+    return 6240;
+  }
+
+/* ============================================================================
  * sub_6013657C
  * RVA 0x0013657c   size 0x9c   xrefs 1
  * ============================================================================ */
@@ -9552,6 +13795,34 @@
   }
 
 /* ============================================================================
+ * SE_EMY_FIRE_BROS_FIRE_ref
+ * RVA 0x001376e0   size 0x54   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_EMY_FIRE_BROS_FIRE_ref(int a1)
+  {
+    float v2; // r1
+    float v4[2]; // [sp+0h] [bp-10h] BYREF
+    float v5[2]; // [sp+8h] [bp-8h] BYREF
+  
+    nullsub_6();
+    v2 = *(float *)(a1 + 112);
+    v5[0] = *(float *)(a1 + 108);
+    v5[1] = v2;
+    mapPositionToScreen(v4, v5);
+    return sub_60813570(a1 + 6760, "SE_EMY_FIRE_BROS_FIRE", v4, 0);
+  }
+
+/* ============================================================================
+ * SE_EMY_FIRE_BROS_FIRE_ref_2
+ * RVA 0x001379b0   size 0x28   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_EMY_FIRE_BROS_FIRE_ref_2(_DWORD *a1)
+  {
+    sub_60813578(a1 + 1690);
+    return sub_601367FC(a1);
+  }
+
+/* ============================================================================
  * Actor_keronpa_fire_build
  * RVA 0x00137ecc   size 0xf0   xrefs 0
  * ============================================================================ */
@@ -9695,6 +13966,60 @@
     *(_DWORD *)(result + 6768) = v4;
     *(_BYTE *)(result + 84) = v4;
     return result;
+  }
+
+/* ============================================================================
+ * SE_OBJ_FIREBALL_SPLASH_ref
+ * RVA 0x0013b428   size 0x44   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_OBJ_FIREBALL_SPLASH_ref(int a1)
+  {
+    float v1; // s0
+    int v3; // [sp+4h] [bp-Ch] BYREF
+    float v4; // [sp+8h] [bp-8h]
+    int v5; // [sp+Ch] [bp-4h]
+  
+    v3 = *(_DWORD *)(a1 + 108);
+    v4 = v1;
+    v5 = 1166843904;
+    return StageActor::createWaterSplash(a1, &v3, 834, 8, (int)"SE_OBJ_FIREBALL_SPLASH");
+  }
+
+/* ============================================================================
+ * SE_OBJ_FIREBALL_SPLASH_ref_2
+ * RVA 0x0013b470   size 0xc0   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_OBJ_FIREBALL_SPLASH_ref_2(int a1, float *a2)
+  {
+    int v3; // r5
+    int v4; // r1
+    int v5; // r0
+    float v6; // r0
+    int v7; // r3
+    _DWORD v9[2]; // [sp+0h] [bp-20h] BYREF
+    float v10[3]; // [sp+8h] [bp-18h] BYREF
+    int v11; // [sp+14h] [bp-Ch] BYREF
+    int v12; // [sp+18h] [bp-8h]
+    int v13; // [sp+1Ch] [bp-4h]
+  
+    v3 = MEMORY[0xC7F534];
+    v4 = *(_DWORD *)(a1 + 108);
+    v5 = *(_DWORD *)(a1 + 112);
+    v11 = v4;
+    v12 = v5;
+    mapPositionToScreen(v10, (float *)&v11);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_FIREBALL_SPLASH", v10, nullptr);
+    v11 = *((_DWORD *)a2 + 1);
+    v12 = *((_DWORD *)a2 + 2);
+    v13 = 1166843904;
+    v6 = a2[3];
+    v10[0] = 0.0;
+    v10[1] = 0.0;
+    v10[2] = v6;
+    EffectData_create(1106, (int)&v11, (int)v10, 0);
+    v9[0] = v11;
+    v9[1] = v12;
+    return TileMgr_splashRelated(MEMORY[0xCBD254], v9, 8, v7);
   }
 
 /* ============================================================================
@@ -9924,7 +14249,7 @@
   }
 
 /* ============================================================================
- * sub_6013E288
+ * SE_OBJ_ROCK_LAND_ref
  * RVA 0x0013e288   size 0x178   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6013E288(int a1, int a2)
@@ -10258,6 +14583,96 @@
   }
 
 /* ============================================================================
+ * bros_hammer_model_ref
+ * RVA 0x0013fffc   size 0x148   xrefs 0
+ * ============================================================================ */
+  int __fastcall bros_hammer_model_ref(int a1)
+  {
+    unsigned int *v1; // r4
+    int *v2; // t1
+    int v3; // r0
+    int (__fastcall *v4)(int, float32x2_t *); // r2
+    int v5; // r0
+    float32x2_t v7; // [sp+4h] [bp-3Ch] BYREF
+    float v8; // [sp+Ch] [bp-34h]
+    float v9; // [sp+10h] [bp-30h]
+    float v10; // [sp+14h] [bp-2Ch]
+    float v11; // [sp+18h] [bp-28h]
+    float v12; // [sp+1Ch] [bp-24h]
+    float v13; // [sp+20h] [bp-20h]
+    float v14; // [sp+24h] [bp-1Ch]
+    float v15; // [sp+28h] [bp-18h]
+    float v16; // [sp+2Ch] [bp-14h]
+    float v17; // [sp+30h] [bp-10h]
+    _DWORD v18[3]; // [sp+34h] [bp-Ch] BYREF
+  
+    v2 = *(int **)(a1 + 11824);
+    v1 = (unsigned int *)(a1 + 11824);
+    v3 = *v2;
+    v4 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)*v2 + 84);
+    v7.n64_u32[0] = 12321336;
+    v7.n64_u32[1] = (unsigned __int32)"bros_hammer_model";
+    v5 = v4(v3, &v7);
+    (*(void (__fastcall **)(_DWORD, int, float32x2_t *))(**(_DWORD **)*v1 + 108))(*(_DWORD *)*v1, v5, &v7);
+    v9 = v9
+       + (float)((float)((float)(v7.n64_f32[1] * flt_60C87D40) + (float)(v7.n64_f32[0] * flt_60C87D3C))
+               + (float)(v8 * flt_60C87D44));
+    v13 = v13 + (float)((float)((float)(v11 * flt_60C87D40) + (float)(v10 * flt_60C87D3C)) + (float)(v12 * flt_60C87D44));
+    v17 = v17 + (float)((float)((float)(v15 * flt_60C87D40) + (float)(v14 * flt_60C87D3C)) + (float)(v16 * flt_60C87D44));
+    Mtx34_rotateX(&v7, v1 - 2917);
+    Mtx34_rotateY(&v7, v1 - 2916);
+    Mtx34_rotateZ(&v7, v1 - 2915);
+    *(float *)v18 = v9;
+    *(float *)&v18[1] = v13;
+    *(float *)&v18[2] = v17;
+    return EffectData_create(531, (int)v18, 0, 0);
+  }
+
+/* ============================================================================
+ * SE_OBJ_HAMMER_HIT_BOTH_ref
+ * RVA 0x00140598   size 0x54   xrefs 0
+ * ============================================================================ */
+  int *__fastcall SE_OBJ_HAMMER_HIT_BOTH_ref(int a1)
+  {
+    int v1; // r4
+    float v2; // r1
+    float v3; // r0
+    float v5[2]; // [sp+0h] [bp-10h] BYREF
+    float v6[2]; // [sp+8h] [bp-8h] BYREF
+  
+    v1 = MEMORY[0xC7F534];
+    v2 = *(float *)(a1 + 108);
+    v3 = *(float *)(a1 + 112);
+    v6[0] = v2;
+    v6[1] = v3;
+    mapPositionToScreen(v5, v6);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_HAMMER_HIT_BOTH", v5, nullptr);
+  }
+
+/* ============================================================================
+ * SE_EMY_HAMMER_BROS_HAMMER_ref
+ * RVA 0x001405f4   size 0x60   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_EMY_HAMMER_BROS_HAMMER_ref(float *a1)
+  {
+    int v1; // r4
+    int v2; // r5
+    float v3; // r1
+    float v4; // r0
+    float v6[2]; // [sp+8h] [bp-10h] BYREF
+    float v7[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1 = *((_DWORD *)a1 + 2);
+    v2 = MEMORY[0xC7F530];
+    v3 = a1[27];
+    v4 = a1[28];
+    v7[0] = v3;
+    v7[1] = v4;
+    mapPositionToScreen(v6, v7);
+    return sub_60813814(v2, "SE_EMY_HAMMER_BROS_HAMMER", v1, v6, 0);
+  }
+
+/* ============================================================================
  * sub_6014065C
  * RVA 0x0014065c   size 0x1c0   xrefs 1
  * ============================================================================ */
@@ -10343,7 +14758,7 @@
   }
 
 /* ============================================================================
- * sub_60141500
+ * SE_OBJ_FIREBALL_SPLASH_ref_3
  * RVA 0x00141500   size 0x368   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60141500(int a1)
@@ -10637,6 +15052,156 @@
   }
 
 /* ============================================================================
+ * SE_OBJ_EMY_ICEBALL_DISAPP_ref
+ * RVA 0x00142fe0   size 0x1d4   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_OBJ_EMY_ICEBALL_DISAPP_ref(int a1, _DWORD *a2)
+  {
+    float *v4; // r5
+    unsigned __int8 *v5; // r6
+    int result; // r0
+    float v7; // r1
+    int v8; // r6
+    float v9[2]; // [sp+0h] [bp-10h] BYREF
+    float v10[2]; // [sp+8h] [bp-8h] BYREF
+  
+    v4 = *(float **)(a1 + 64);
+    v5 = (unsigned __int8 *)a2[16];
+    result = *((_DWORD *)v4 + 1684);
+    if ( result != *((_DWORD *)v5 + 2) )
+    {
+      result = v5[533];
+      switch ( v5[533] )
+      {
+        case 0u:
+          if ( Actor::getProfileId((int)v5) == MEMORY[0xAF3498] )
+            goto LABEL_14;
+          result = Actor::getProfileId((int)v5);
+          if ( result == MEMORY[0xAF34A0] )
+            goto LABEL_14;
+          return result;
+        case 1u:
+          goto LABEL_7;
+        case 2u:
+          result = a2[35];
+          if ( result == 15 )
+            return result;
+  LABEL_7:
+          if ( sub_6075EDF8((int)v5) )
+          {
+            result = (*(int (__fastcall **)(unsigned __int8 *))(*(_DWORD *)v5 + 1204))(v5);
+            if ( result != 1 )
+              return result;
+          }
+          result = a2[34];
+          if ( result == 15 )
+            return result;
+          (*(void (__fastcall **)(unsigned __int8 *, float *, int))(*(_DWORD *)v5 + 1168))(v5, v4, 11);
+          (*(void (__fastcall **)(float *))(*(_DWORD *)v4 + 72))(v4);
+          StateMgr::changeState((_DWORD *)v4 + 1521, 13139436);
+          if ( (*(int (__fastcall **)(unsigned __int8 *))(*(_DWORD *)v5 + 1204))(v5) == 1 )
+          {
+            sub_60142A48(v4);
+            v7 = v4[28];
+            v8 = MEMORY[0xC7F534];
+            v10[0] = v4[27];
+            v10[1] = v7;
+            mapPositionToScreen(v9, v10);
+            BasicSoundActor2_play(v8, (int)"SE_OBJ_EMY_ICEBALL_DISAPP", v9, nullptr);
+          }
+  LABEL_15:
+          result = *(unsigned __int8 *)(a1 + 110) | 2;
+          *(_BYTE *)(a1 + 110) = result;
+          break;
+        case 3u:
+          (*(void (__fastcall **)(float *))(*(_DWORD *)v4 + 72))(v4);
+          StateMgr::changeState((_DWORD *)v4 + 1521, 13139436);
+          goto LABEL_15;
+        case 4u:
+          result = a2[35];
+          if ( result != 3 )
+            return result;
+  LABEL_14:
+          sub_600424E0((int)v4);
+          goto LABEL_15;
+        default:
+          return result;
+      }
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * SE_EMY_ICE_BROS_ICE_ref
+ * RVA 0x00143330   size 0x60   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_EMY_ICE_BROS_ICE_ref(float *a1)
+  {
+    float v2; // r1
+    float v4[2]; // [sp+0h] [bp-10h] BYREF
+    float v5[2]; // [sp+8h] [bp-8h] BYREF
+  
+    (*(void (__fastcall **)(float *))(*(_DWORD *)a1 + 248))(a1);
+    v2 = a1[28];
+    v5[0] = a1[27];
+    v5[1] = v2;
+    mapPositionToScreen(v4, v5);
+    return sub_60813570(a1 + 1685, "SE_EMY_ICE_BROS_ICE", v4, 0);
+  }
+
+/* ============================================================================
+ * SE_OBJ_EMY_ICEBALL_DISAPP_ref_2
+ * RVA 0x00143394   size 0xe0   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_OBJ_EMY_ICEBALL_DISAPP_ref_2(int a1)
+  {
+    int v2; // r0
+    int *v3; // r5
+    int result; // r0
+    bool v5; // zf
+    int v6; // r6
+    float v7[2]; // [sp+0h] [bp-10h] BYREF
+    int v8[2]; // [sp+8h] [bp-8h] BYREF
+  
+    StageActor::accelerateX((float *)a1);
+    sub_600035C0(a1);
+    CollisionActor::handleSpeed(a1);
+    if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 252))(a1) == 1 )
+    {
+      v2 = *(_DWORD *)(a1 + 112);
+      v3 = (int *)(a1 + 108);
+  LABEL_6:
+      v6 = MEMORY[0xC7F534];
+      v8[0] = *v3;
+      v8[1] = v2;
+      mapPositionToScreen(v7, (float *)v8);
+      BasicSoundActor2_play(v6, (int)"SE_OBJ_EMY_ICEBALL_DISAPP", v7, nullptr);
+      return sub_600424E0(a1);
+    }
+    v3 = (int *)(a1 + 108);
+    checkLiquidCollisions(v8, (float *)(a1 + 6104), (float *)(a1 + 108), *(unsigned __int8 *)(a1 + 86));
+    result = v8[0];
+    v5 = v8[0] == 0;
+    *(_DWORD *)(a1 + 6100) = v8[0];
+    if ( !v5 && *(float *)(a1 + 112) <= *(float *)(a1 + 6104) )
+    {
+      v2 = *(_DWORD *)(a1 + 112);
+      goto LABEL_6;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * SE_EMY_ICE_BROS_ICE_ref_2
+ * RVA 0x00143480   size 0x28   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_EMY_ICE_BROS_ICE_ref_2(_DWORD *a1)
+  {
+    sub_60813578(a1 + 1685);
+    return sub_60142B14(a1);
+  }
+
+/* ============================================================================
  * PlantIceball_ctor
  * RVA 0x00143930   size 0x58   xrefs 0
  * ============================================================================ */
@@ -10760,6 +15325,29 @@
     *(_DWORD *)(v0 + 6128) = v4;
     *v4 = 12401264;
     return v0;
+  }
+
+/* ============================================================================
+ * mega_hammer_ref
+ * RVA 0x001453b8   size 0xb8   xrefs 0
+ * ============================================================================ */
+  int __fastcall mega_hammer_ref(int a1)
+  {
+    int ResArchiveById; // r5
+    int Model2; // r6
+    _DWORD *v4; // r7
+    _DWORD *v5; // r0
+    _DWORD v7[2]; // [sp+18h] [bp-8h] BYREF
+  
+    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v7[0] = 12321336;
+    v7[1] = "mega_hammer";
+    Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 0, 0, 0, 0, 0);
+    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
+    ModelWrapper_setup(v5, ResArchiveById, 0, 0);
+    *(_DWORD *)(a1 + 6472) = v4;
+    return 6472;
   }
 
 /* ============================================================================
@@ -10891,6 +15479,60 @@
   }
 
 /* ============================================================================
+ * SE_OBJ_ROCK_LAND_ref_2
+ * RVA 0x00145dfc   size 0x15c   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_OBJ_ROCK_LAND_ref_2(int a1)
+  {
+    char *v2; // r7
+    char v3; // r0
+    float v4; // r1
+    int v5; // r5
+    int result; // r0
+    int v7; // [sp+4h] [bp-14h] BYREF
+    float v8[2]; // [sp+8h] [bp-10h] BYREF
+    float v9[2]; // [sp+10h] [bp-8h] BYREF
+  
+    CollisionActor::handleGravity(a1);
+    CollisionActor::handleSpeed(a1);
+    *(_DWORD *)(a1 + 156) += dword_60C880A0;
+    *(_DWORD *)(a1 + 160) += dword_60C880A4;
+    if ( *(_WORD *)(a1 + 6276) == 1 )
+    {
+      *(_DWORD *)(a1 + 312) = 1091567616;
+      *(_DWORD *)(a1 + 316) = 1091567616;
+    }
+    CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+    v2 = (char *)(a1 + 7040);
+    v3 = 0;
+    if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
+    {
+      v3 = 1;
+      if ( !*v2 && !*(_BYTE *)(a1 + 7041) && !*(_WORD *)(a1 + 6278) )
+      {
+        sub_6013E7E0(a1);
+        v4 = *(float *)(a1 + 112);
+        v5 = MEMORY[0xC7F534];
+        v9[0] = *(float *)(a1 + 108);
+        v9[1] = v4;
+        mapPositionToScreen(v8, v9);
+        BasicSoundActor2_play(v5, (int)"SE_OBJ_ROCK_LAND", v8, nullptr);
+        *(_DWORD *)(a1 + 124) = 1071644672;
+        v3 = 1;
+        *(_BYTE *)(a1 + 7041) = 1;
+      }
+    }
+    *v2 = v3;
+    result = checkLiquidCollisions(&v7, v9, (float *)(a1 + 108), *(unsigned __int8 *)(a1 + 86));
+    if ( v7 )
+    {
+      sub_6013E8B4(a1, v7);
+      return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13140076);
+    }
+    return result;
+  }
+
+/* ============================================================================
  * Actor_seichin_snow_ball_build
  * RVA 0x001468d0   size 0xe8   xrefs 0
  * ============================================================================ */
@@ -10919,6 +15561,158 @@
     *(_DWORD *)(v0 + 6752) = 1065353216;
     *(_DWORD *)(v0 + 6756) = 1065353216;
     return v0;
+  }
+
+/* ============================================================================
+ * SE_OBJ_SNOWBALL_GROUND_ref
+ * RVA 0x00146d04   size 0x3fc   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_OBJ_SNOWBALL_GROUND_ref(int a1)
+  {
+    float32x2_t v1; // d0
+    float32x2_t v2; // d2
+    int v4; // r1
+    int v5; // r0
+    int v6; // r1
+    int v7; // r0
+    float v8; // s0
+    float v9; // s0
+    bool v10; // fnf
+    int v11; // r3
+    char v12; // r12
+    int v13; // r0
+    int v14; // r6
+    int v15; // r0
+    float v16; // s16
+    float v17; // s18
+    float v18; // r2
+    int v19; // r6
+    float v20; // s0
+    float v21; // s2
+    int v22; // r0
+    int result; // r0
+    int v24; // [sp+8h] [bp-18h] BYREF
+    int v25; // [sp+Ch] [bp-14h] BYREF
+    float v26[2]; // [sp+10h] [bp-10h] BYREF
+    float v27[2]; // [sp+18h] [bp-8h] BYREF
+  
+    v4 = 0x40000000;
+    v5 = *(_DWORD *)(a1 + 80);
+    if ( v5 == 1 )
+      v4 = -1073741824;
+    v25 = v4;
+    *(_DWORD *)(a1 + 104) = 1008981770;
+    v6 = *(_DWORD *)(a1 + 6428);
+    if ( v6 )
+    {
+      v7 = *(_DWORD *)(a1 + 6432);
+      if ( v7 )
+      {
+        if ( v7 == 1 )
+          v8 = -flt_60AF6ACC[v6];
+        else
+          v8 = 1.0;
+      }
+      else
+      {
+        v8 = flt_60AF6ACC[v6];
+      }
+    }
+    else
+    {
+      v9 = *(float *)(a1 + 120);
+      if ( v9 <= 0.0 )
+        v9 = -v9;
+      v10 = v9 < 0.5;
+      v8 = 1.0;
+      if ( !v10 )
+      {
+        *(_DWORD *)(a1 + 104) = 0;
+        if ( v5 == 1 )
+          v8 = -1.0;
+      }
+    }
+    *(float *)(a1 + 132) = v8 + v8;
+    if ( (*(_DWORD *)(a1 + 5956) & 0xFF00) == 0x300 )
+    {
+      *(float *)(a1 + 104) = (float)((float)(COERCE_FLOAT((sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000)
+                                           + -1.0)
+                                   * 0.05)
+                           + 0.03;
+      *(_DWORD *)(a1 + 132) = 0;
+    }
+    StageActor::accelerateX((float *)a1);
+    CollisionActor::handleGravity(a1);
+    CollisionActor::handleSpeed(a1);
+    *(_DWORD *)(a1 + 6424) = *(float *)(a1 + 120) < 0.0;
+    if ( ((unsigned int)&unk_60C88174 & ~(1611951740 << v12) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C88174) )
+    {
+      dword_60C88170 = (int)(float)((float)(MEMORY[0xB0E1E0] * 2.4609) / MEMORY[0xB0E1D8]);
+      _cxa_guard_release_0(&unk_60C88174);
+    }
+    moveValueTo((int *)(a1 + 160), &v25, &dword_60C88170, v11);
+    v1.n64_u32[0] = *(_DWORD *)(a1 + 120);
+    if ( v1.n64_f32[0] <= 0.0 )
+      v1.n64_f32[0] = -v1.n64_f32[0];
+    v2.n64_u32[0] = 1065811968;
+    v1.n64_f32[0] = v1.n64_f32[0] * 4.9219;
+    v1.n64_u32[0] = (int)(float)((float)(MEMORY[0xB0E1E0] * vmax_f32(v1, v2).n64_f32[0]) / MEMORY[0xB0E1D8]);
+    v13 = v1.n64_u32[0];
+    if ( *(_DWORD *)(a1 + 80) != *(_DWORD *)(a1 + 6424) )
+      v13 = -v1.n64_u32[0];
+    *(_DWORD *)(a1 + 156) += v13;
+    v14 = *(_DWORD *)(a1 + 2872);
+    CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+    if ( sub_60003AE0(a1) == 1 )
+      SE_OBJ_SNOWBALL_CRASH_ref(a1);
+    v15 = *(_DWORD *)(a1 + 2872);
+    if ( (v15 & 1) != 0 )
+    {
+      *(_DWORD *)(a1 + 124) = 0;
+      if ( (v14 & 1) == 0 && !StageActor::isOffScreen((float *)a1) )
+      {
+        v16 = *(float *)(a1 + 120);
+        v17 = *(float *)(a1 + 124);
+        v18 = *(float *)(a1 + 112);
+        v27[0] = *(float *)(a1 + 108);
+        v27[1] = v18;
+        v19 = MEMORY[0xC7F534];
+        mapPositionToScreen(v26, v27);
+        v20 = -v17;
+        v21 = -v16;
+        if ( v17 > 0.0 )
+          v20 = v17;
+        if ( v16 > 0.0 )
+          v21 = v16;
+        if ( v21 >= v20 )
+          v20 = v21;
+        sub_60813BDC(v19, "SE_OBJ_SNOWBALL_GROUND", v26, (int)(float)(v20 * 10.0), 0);
+      }
+      v22 = sub_6014C4A4(a1 + 648);
+      *(_DWORD *)(a1 + 6428) = sub_6014C57C(a1 + 648, v22);
+      *(_DWORD *)(a1 + 6432) = sub_6014C540(a1 + 648);
+      v15 = *(_DWORD *)(a1 + 2872);
+    }
+    if ( (v15 & 0x440000) != 0 && (v15 & 0x10000000) == 0
+      || (v15 & 0x880000) != 0 && (v15 & 0x20000000) == 0
+      || (v15 & 0x10400) == 0x400 )
+    {
+      SE_OBJ_SNOWBALL_CRASH_ref(a1);
+      v15 = *(_DWORD *)(a1 + 2872);
+    }
+    if ( (v15 & 1) == 0 )
+    {
+      checkLiquidCollisions(&v24, nullptr, (float *)(a1 + 108), *(unsigned __int8 *)(a1 + 86));
+      if ( v24 )
+        (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13140288);
+    }
+    result = *(unsigned __int8 *)(a1 + 6437);
+    if ( *(_BYTE *)(a1 + 6437) )
+    {
+      result = *(_DWORD *)(a1 + 6440);
+      *(_DWORD *)(a1 + 124) = result;
+    }
+    return result;
   }
 
 /* ============================================================================
@@ -11041,14 +15835,14 @@
     if ( v3 != (*(int (**)(void))(MEMORY[0xC880E0] + 8))()
       || *(float *)(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 20) > 32.0 )
     {
-      return sub_60147BB0(a1);
+      return SE_OBJ_SNOWBALL_CRASH_ref(a1);
     }
     *(_BYTE *)(a1 + 19) = 1;
     return 1;
   }
 
 /* ============================================================================
- * sub_60147BB0
+ * SE_OBJ_SNOWBALL_CRASH_ref
  * RVA 0x00147bb0   size 0xec   xrefs 13
  * ============================================================================ */
   int __fastcall sub_60147BB0(int a1)
@@ -11093,6 +15887,172 @@
   }
 
 /* ============================================================================
+ * ball_model_ref
+ * RVA 0x001484bc   size 0x418   xrefs 0
+ * ============================================================================ */
+  int __fastcall ball_model_ref(int a1)
+  {
+    float v2; // r1
+    float v3; // r2
+    float v4; // s0
+    int CurrentState; // r0
+    int v6; // r5
+    int v7; // r5
+    int result; // r0
+    __int64 *v9; // r0
+    __int64 *v10; // r2
+    __int64 v11; // d16
+    __int64 v12; // d17
+    __int64 v13; // d17
+    __int64 v14; // d17
+    float *v15; // r4
+    _DWORD *v16; // t1
+    int v17; // r0
+    int (__fastcall *v18)(int, _DWORD *); // r2
+    int v19; // r6
+    float v20; // r0
+    float v21; // r1
+    float v22; // r2
+    float v23; // s4
+    float v24; // s8
+    float v25; // s12
+    unsigned int v26; // r0
+    unsigned int v27; // r3
+    int v28; // s14
+    float *v29; // r0
+    float v30; // s14
+    float v31; // s0
+    float v32; // s2
+    float v33; // s10
+    float v34; // s5
+    float v35; // s6
+    float v36; // s1
+    float v37; // s13
+    float v38; // s9
+    _DWORD **v39; // r4
+    _DWORD *v40; // t1
+    _DWORD v41[3]; // [sp+0h] [bp-70h] BYREF
+    float v42; // [sp+Ch] [bp-64h]
+    float v43; // [sp+1Ch] [bp-54h]
+    float v44; // [sp+2Ch] [bp-44h]
+    __int64 v45; // [sp+30h] [bp-40h] BYREF
+    __int64 v46; // [sp+38h] [bp-38h]
+    __int64 v47; // [sp+40h] [bp-30h]
+    __int64 v48; // [sp+48h] [bp-28h]
+    __int64 v49; // [sp+50h] [bp-20h]
+    __int64 v50; // [sp+58h] [bp-18h]
+    float v51; // [sp+60h] [bp-10h] BYREF
+    float v52; // [sp+64h] [bp-Ch]
+    float v53; // [sp+68h] [bp-8h]
+  
+    v2 = *(float *)(a1 + 148);
+    v3 = *(float *)(a1 + 152);
+    v51 = *(float *)(a1 + 144);
+    v52 = v2;
+    v53 = v3;
+    v4 = *(float *)(a1 + 6756);
+    v51 = v4 * v51;
+    v52 = v4 * v2;
+    v53 = v4 * v3;
+    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+    if ( v6 == (*(int (**)(void))(MEMORY[0xC880E0] + 8))() )
+    {
+      v7 = ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, *(_DWORD *)(a1 + 6412));
+      result = _cxa_guard_acquire_0(13140332);
+      if ( result )
+      {
+        MEMORY[0xC88168] = 12321964;
+        result = _cxa_guard_release_0(13140332);
+      }
+      if ( v7 )
+      {
+        result = (**(int (__fastcall ***)(int, int))v7)(v7, 13140328);
+        if ( result == 1 )
+        {
+          v9 = (__int64 *)(*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(v7 + 6300) + 64))(**(_DWORD **)(v7 + 6300));
+          v10 = v9 + 4;
+          v11 = *v9;
+          v12 = v9[1];
+          v9 += 2;
+          v45 = v11;
+          v46 = v12;
+          v13 = v9[1];
+          v47 = *v9;
+          v48 = v13;
+          v14 = v10[1];
+          v49 = *v10;
+          v50 = v14;
+          v16 = *(_DWORD **)(a1 + 6300);
+          v15 = (float *)(a1 + 6300);
+          (*(void (__fastcall **)(_DWORD))(*(_DWORD *)*v16 + 60))(*v16);
+          (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)v15 + 68))(**(_DWORD **)v15, &v51);
+          ModelWrapper_updateModel(*(_DWORD **)v15);
+          v17 = **(_DWORD **)v15;
+          v18 = *(int (__fastcall **)(int, _DWORD *))(*(_DWORD *)v17 + 84);
+          v41[0] = 12321336;
+          v41[1] = "ball_model";
+          v19 = v18(v17, v41);
+          (*(void (__fastcall **)(_DWORD, int, _DWORD *))(***(_DWORD ***)v15 + 108))(**(_DWORD **)v15, v19, v41);
+          v20 = v42;
+          *(v15 - 1548) = v42;
+          v21 = v43;
+          *(v15 - 1547) = v43;
+          v22 = v44;
+          *(v15 - 1546) = v44;
+          v23 = *(float *)(v7 + 116);
+          v24 = (float)(1.0 - v52) / v52;
+          v25 = v21 + (float)((float)(v21 - *(float *)(v7 + 112)) * v24);
+          v42 = v20 + (float)((float)(v20 - *(float *)(v7 + 108)) * v24);
+          v43 = v25;
+          v44 = v22 + (float)((float)(v22 - v23) * v24);
+          (*(void (__fastcall **)(_DWORD, int, _DWORD *))(***(_DWORD ***)v15 + 104))(**(_DWORD **)v15, v19, v41);
+          *(v15 - 1548) = v42;
+          *(v15 - 1547) = v43;
+          result = LODWORD(v44);
+          *(v15 - 1546) = v44;
+        }
+      }
+    }
+    else
+    {
+      v26 = *(_DWORD *)(a1 + 156);
+      v27 = *(_DWORD *)(a1 + 160);
+      v28 = v26 & 0xFFFFFF;
+      v29 = (float *)(((v26 >> 20) & 0xFF0) + 11773060);
+      v30 = (float)(unsigned int)v28;
+      v31 = (float)(*(_DWORD *)(a1 + 164) & 0xFFFFFF) * 0.000000059605;
+      v32 = (float)(v27 & 0xFFFFFF) * 0.000000059605;
+      v33 = *(float *)(((*(_DWORD *)(a1 + 164) >> 20) & 0xFF0) + 0xB3A48C)
+          + (float)(v31 * *(float *)(((*(_DWORD *)(a1 + 164) >> 20) & 0xFF0) + 0xB3A490));
+      v34 = *(float *)(((v27 >> 20) & 0xFF0) + 0xB3A48C) + (float)(v32 * *(float *)(((v27 >> 20) & 0xFF0) + 0xB3A490));
+      v35 = *(float *)(((*(_DWORD *)(a1 + 164) >> 20) & 0xFF0) + 0xB3A484)
+          + (float)(v31 * *(float *)(((*(_DWORD *)(a1 + 164) >> 20) & 0xFF0) + 0xB3A488));
+      v36 = *(float *)(((v27 >> 20) & 0xFF0) + 0xB3A484) + (float)(v32 * *(float *)(((v27 >> 20) & 0xFF0) + 0xB3A488));
+      v37 = v29[2] + (float)((float)(v30 * 0.000000059605) * v29[3]);
+      v38 = *v29 + (float)((float)(v30 * 0.000000059605) * v29[1]);
+      *(float *)&v45 = v34 * v33;
+      *(float *)&v47 = v34 * v35;
+      *(float *)&v49 = -v36;
+      *((float *)&v45 + 1) = (float)((float)(v38 * v36) * v33) - (float)(v37 * v35);
+      *((float *)&v47 + 1) = (float)(v37 * v33) + (float)((float)(v38 * v36) * v35);
+      *((float *)&v49 + 1) = v38 * v34;
+      *(float *)&v46 = (float)(v36 * (float)(v37 * v33)) + (float)(v38 * v35);
+      *(float *)&v48 = (float)(v36 * (float)(v37 * v35)) - (float)(v38 * v33);
+      *(float *)&v50 = v37 * v34;
+      HIDWORD(v46) = *(_DWORD *)(a1 + 108);
+      HIDWORD(v48) = *(_DWORD *)(a1 + 112);
+      HIDWORD(v50) = *(_DWORD *)(a1 + 116);
+      v40 = *(_DWORD **)(a1 + 6304);
+      v39 = (_DWORD **)(a1 + 6304);
+      (*(void (__fastcall **)(_DWORD, __int64 *))(*(_DWORD *)*v40 + 60))(*v40, &v45);
+      (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v39 + 68))(**v39, &v51);
+      return (*(int (__fastcall **)(_DWORD))(*(_DWORD *)**v39 + 56))(**v39);
+    }
+    return result;
+  }
+
+/* ============================================================================
  * Actor_Wrench_build
  * RVA 0x00148fac   size 0x174   xrefs 0
  * ============================================================================ */
@@ -11133,6 +16093,105 @@
     *(_DWORD *)(v0 + 11876) = 12325968;
     *(_DWORD *)(v0 + 11980) = 12403600;
     return v0;
+  }
+
+/* ============================================================================
+ * SE_EMY_CHOROPU_M_SPANNER_ref
+ * RVA 0x00149320   size 0x2a0   xrefs 0
+ * ============================================================================ */
+  int __fastcall SE_EMY_CHOROPU_M_SPANNER_ref(int a1)
+  {
+    float v2; // s0
+    float v3; // s2
+    int v4; // r6
+    int v5; // r7
+    _BYTE *v6; // r0
+    float v7; // r0
+    float v8; // s0
+    float v9; // s0
+    int v10; // r0
+    int v11; // r1
+    int v12; // r1
+    int v13; // r0
+    float v14; // r3
+    int v15; // r7
+    int v17; // r6
+    float v18; // [sp+8h] [bp-18h] BYREF
+    float v19; // [sp+Ch] [bp-14h]
+    int v20; // [sp+10h] [bp-10h]
+    float v21[2]; // [sp+18h] [bp-8h] BYREF
+  
+    v2 = *(float *)(a1 + 108) + *(float *)(a1 + 120);
+    *(float *)(a1 + 108) = v2;
+    v3 = *(float *)(a1 + 112) + *(float *)(a1 + 124);
+    *(float *)(a1 + 112) = v3;
+    *(float *)(a1 + 116) = *(float *)(a1 + 116) + *(float *)(a1 + 128);
+    v4 = MEMORY[0xC7F530];
+    v5 = *(_DWORD *)(a1 + 8);
+    v18 = v2;
+    v19 = v3;
+    mapPositionToScreen(v21, &v18);
+    sub_60813814(v4, "SE_EMY_CHOROPU_M_SPANNER", v5, v21, 0);
+    v6 = (_BYTE *)(a1 + 11865);
+    if ( *(_BYTE *)(a1 + 11865) )
+      goto LABEL_2;
+    if ( *(_DWORD *)(a1 + 11868) )
+    {
+      if ( (float)(*(float *)(a1 + 11844) - *(float *)(a1 + 108)) >= 21.0 )
+      {
+        *v6 = 1;
+  LABEL_21:
+        v17 = MEMORY[0xC88234];
+        if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 188)
+          && !ActiveColliderMgr_isInCreateList(v17, a1 + 188) )
+        {
+          ActiveColliderMgr_addToCreateList(v17, a1 + 188);
+        }
+      }
+    }
+    else if ( (float)(*(float *)(a1 + 108) - *(float *)(a1 + 11844)) >= 21.0 )
+    {
+      *v6 = 1;
+      goto LABEL_21;
+    }
+  LABEL_2:
+    v7 = *(float *)(a1 + 11856);
+    *(float *)(a1 + 11860) = v7;
+    v8 = *(float *)(MEMORY[0xCC6484] + 124);
+    *(float *)(a1 + 11856) = v8;
+    v9 = (float)(v8 - v7) + *(float *)(a1 + 112);
+    *(float *)(a1 + 112) = v9;
+    if ( v9 >= (float)(*(float *)(a1 + 11848) + 12.0) )
+      *(_DWORD *)(a1 + 124) = 0;
+    *(_DWORD *)(a1 + 116) = 1161936896;
+    nullsub_7(a1 + 6480);
+    v10 = *(_DWORD *)(a1 + 8704);
+    if ( (v10 & 0x440000) != 0 && (v10 & 0x10000000) == 0 )
+      goto LABEL_13;
+    v11 = ((*(_DWORD *)(a1 + 8704) & 0x10400) == 1024) | *(_DWORD *)(a1 + 8704) & 1;
+    if ( (v10 & 0x880000) == 0 )
+    {
+      if ( !v11 )
+        goto LABEL_14;
+      goto LABEL_13;
+    }
+    if ( ((v10 & 0x20000000) == 0) | v11 )
+  LABEL_13:
+      StateMgr::changeState((_DWORD *)(a1 + 6084), 13140432);
+  LABEL_14:
+    v12 = 0x8000000;
+    v13 = *(_DWORD *)(a1 + 11868);
+    if ( !v13 )
+      v12 = -134217728;
+    *(_DWORD *)(a1 + 164) += v12;
+    v14 = *(float *)(a1 + 148);
+    v15 = *(_DWORD *)(a1 + 152);
+    v18 = *(float *)(a1 + 144);
+    v19 = v14;
+    v20 = v15;
+    if ( v13 )
+      v19 = -v19;
+    return EffectWrapper_update((int32x4_t *)(a1 + 11876), 624, (float *)(a1 + 108), (unsigned int *)(a1 + 156), &v18);
   }
 
 /* ============================================================================
@@ -23833,7 +28892,7 @@
       v14 = BYTE2(v12) == 2;
     if ( v14 )
     {
-      sub_605844A4(MEMORY[0xCAF15C], result, v15, (char)v11, v12, HIDWORD(v12));
+      SE_OBJ_GET_COIN_ref_2(MEMORY[0xCAF15C], result, v15, (char)v11, v12, HIDWORD(v12));
       goto LABEL_14;
     }
     if ( BYTE2(v12) != 1 )
@@ -27552,7 +32611,13 @@
       }
       if ( (v12 & 8) != 0 )
       {
-        sub_605844A4(MEMORY[0xCAF15C], v9, v13, (char)v10, *(_DWORD *)(a2[1336] + 40), *(_DWORD *)(a2[1336] + 44));
+        SE_OBJ_GET_COIN_ref_2(
+          MEMORY[0xCAF15C],
+          v9,
+          v13,
+          (char)v10,
+          *(_DWORD *)(a2[1336] + 40),
+          *(_DWORD *)(a2[1336] + 44));
   LABEL_12:
         *(_BYTE *)(a1 + 220) = 1;
         result = *(_DWORD *)(a1 + 140) | 1;
@@ -36654,7 +41719,7 @@
           sub_601FF5A8(MEMORY[0xC8C188], 1);
         return 0;
       case 3:
-        if ( sub_6016F760(a1) != 1 )
+        if ( SE_SYS_MAP_ref(a1) != 1 )
           return 0;
         *(_DWORD *)(a1 + 844) = 0;
         if ( *(int *)(a1 + 948) >= 0 )
@@ -37265,7 +42330,7 @@
   }
 
 /* ============================================================================
- * sub_6016F760
+ * SE_SYS_MAP_ref
  * RVA 0x0016f760   size 0x77c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6016F760(int a1)
@@ -37369,7 +42434,8 @@
   LABEL_14:
       if ( *(_BYTE *)(MEMORY[0xCC6D78] + 20) )
       {
-        if ( sub_604C8564(v6) || (sub_6021B578(MEMORY[0xC8D408], 1048577), v2.n64_f32[0] == 0.0) && v1.n64_f32[1] == 0.0 )
+        if ( sub_604C8564(v6)
+          || (SE_SYS_MAP_TOUCH_ref(MEMORY[0xC8D408], 1048577), v2.n64_f32[0] == 0.0) && v1.n64_f32[1] == 0.0 )
         {
           v15 = 0;
           if ( v13 )
@@ -37541,7 +42607,7 @@
       }
       if ( !sub_604C8564(v6) )
       {
-        sub_6021B578(MEMORY[0xC8D408], 1048577);
+        SE_SYS_MAP_TOUCH_ref(MEMORY[0xC8D408], 1048577);
         if ( v2.n64_f32[0] != 0.0 || v1.n64_f32[1] != 0.0 )
         {
           v45 = v10;
@@ -48310,6 +53376,178 @@
   }
 
 /* ============================================================================
+ * TalkWindow_Sign_00_ref
+ * RVA 0x0018cd98   size 0x410   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6018CD98()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C897D0 = 0;
+    dword_60C897D4 = 0;
+    dword_60C897D8 = 0;
+    dword_60C897DC = 0;
+    dword_60C897E0 = 0;
+    dword_60C897E4 = 0;
+    dword_60C897E8 = 0;
+    dword_60C897EC = 0;
+    dword_60C897F0 = 0;
+    dword_60C897F4 = 0;
+    dword_60C897F8 = 0;
+    dword_60C897FC = 0;
+    dword_60C89800 = 0;
+    dword_60C89804 = 0;
+    dword_60C89808 = 0;
+    dword_60C896FC = 12321336;
+    dword_60C89810 = 0;
+    dword_60C89814 = 0;
+    dword_60C89818 = 0;
+    dword_60C8981C = 0;
+    dword_60C89820 = 0;
+    dword_60C89824 = 0;
+    dword_60C89828 = 0;
+    dword_60C8982C = 0;
+    dword_60C89830 = 0;
+    dword_60C89834 = 0;
+    dword_60C89838 = 0;
+    dword_60C8983C = 0;
+    dword_60C89700 = (int)"TalkWindow_Sign_00";
+    dword_60C89840 = -1018691584;
+    dword_60C89844 = 0;
+    dword_60C89848 = 1133903872;
+    dword_60C8984C = 0;
+    dword_60C89850 = 0;
+    dword_60C89854 = 0;
+    dword_60C89858 = 0;
+    dword_60C8985C = 0;
+    dword_60C89860 = 0;
+    dword_60C89864 = 0;
+    dword_60C89868 = 0;
+    dword_60C8986C = 0;
+    dword_60C89870 = 1137180672;
+    dword_60C89874 = 0;
+    dword_60C89878 = 1137180672;
+    dword_60C8987C = 0;
+    dword_60C89880 = 0;
+    dword_60C89884 = 0;
+    dword_60C89890 = 0;
+    dword_60C89894 = -1007026176;
+    dword_60C89898 = -1006010368;
+    dword_60C8989C = 0;
+    dword_60C898A0 = -1035468800;
+    dword_60C898A4 = -1007026176;
+    dword_60C898A8 = 0;
+    dword_60C898AC = 0;
+    dword_60C898B0 = 0;
+    dword_60C898B4 = 0;
+    dword_60C898B8 = 0;
+    dword_60C898BC = 1159069696;
+    dword_60C898C0 = 0;
+    dword_60C898C4 = 0;
+    dword_60C898C8 = 0;
+    dword_60C898CC = 0;
+    dword_60C898D0 = 0;
+    dword_60C898D4 = 0;
+    MEMORY[0xC894E4] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC894E8] = 84;
+    MEMORY[0xC894EC] = 1;
+    MEMORY[0xC894F0] = 88;
+    MEMORY[0xC894F4] = 1;
+    MEMORY[0xC894F8] = 92;
+    MEMORY[0xC894FC] = 1;
+    MEMORY[0xC894E0] = 12407884;
+    MEMORY[0xC89500] = 12755100;
+    MEMORY[0xC89510] = 1;
+    MEMORY[0xC89514] = 100;
+    MEMORY[0xC89518] = 1;
+    MEMORY[0xC8951C] = 104;
+    MEMORY[0xC89520] = 1;
+    MEMORY[0xC89504] = 12407884;
+    MEMORY[0xC89508] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8950C] = 96;
+    MEMORY[0xC89524] = 12755100;
+    MEMORY[0xC89534] = 1;
+    MEMORY[0xC89538] = 112;
+    MEMORY[0xC8953C] = 1;
+    MEMORY[0xC89540] = 116;
+    MEMORY[0xC89544] = 1;
+    MEMORY[0xC89528] = 12407884;
+    MEMORY[0xC8952C] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC89530] = 108;
+    MEMORY[0xC89548] = 12755100;
+    MEMORY[0xC89558] = 1;
+    MEMORY[0xC8955C] = 124;
+    MEMORY[0xC89560] = 1;
+    MEMORY[0xC89564] = 128;
+    MEMORY[0xC89568] = 1;
+    MEMORY[0xC8954C] = 12407884;
+    MEMORY[0xC89550] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC89554] = 120;
+    MEMORY[0xC8956C] = 12755100;
+    MEMORY[0xC8957C] = 1;
+    MEMORY[0xC89580] = 136;
+    MEMORY[0xC89584] = 1;
+    MEMORY[0xC89588] = 140;
+    MEMORY[0xC8958C] = 1;
+    MEMORY[0xC89570] = 12407884;
+    MEMORY[0xC89574] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC89578] = 132;
+    MEMORY[0xC89590] = 12755100;
+    MEMORY[0xC895A0] = 1;
+    MEMORY[0xC895A4] = 148;
+    MEMORY[0xC895A8] = 1;
+    MEMORY[0xC895AC] = 152;
+    MEMORY[0xC895B0] = 1;
+    MEMORY[0xC89594] = 12407884;
+    MEMORY[0xC89598] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8959C] = 144;
+    MEMORY[0xC895B4] = 12755100;
+    MEMORY[0xC895C4] = 1;
+    MEMORY[0xC895C8] = 160;
+    MEMORY[0xC895CC] = 1;
+    MEMORY[0xC895D0] = 164;
+    MEMORY[0xC895D4] = 1;
+    MEMORY[0xC895B8] = 12407884;
+    MEMORY[0xC895BC] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC895C0] = 156;
+    MEMORY[0xC895D8] = 12755100;
+    MEMORY[0xC895E8] = 1;
+    MEMORY[0xC895EC] = 172;
+    MEMORY[0xC895F0] = 1;
+    MEMORY[0xC895F4] = 176;
+    MEMORY[0xC895F8] = 1;
+    MEMORY[0xC895DC] = 12407884;
+    MEMORY[0xC895E0] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC895E4] = 168;
+    MEMORY[0xC895FC] = 12755100;
+    MEMORY[0xC8960C] = 1;
+    MEMORY[0xC89610] = 184;
+    MEMORY[0xC89614] = 1;
+    MEMORY[0xC89618] = 188;
+    MEMORY[0xC8961C] = 1;
+    MEMORY[0xC89600] = 12407884;
+    MEMORY[0xC89604] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC89608] = 180;
+    MEMORY[0xC89620] = 12755100;
+    MEMORY[0xC7B788] += 10;
+    MEMORY[0xC89628] = MEMORY[0xC7B788];
+    MEMORY[0xC8962C] = 192;
+    MEMORY[0xC89630] = 1;
+    MEMORY[0xC89634] = 196;
+    MEMORY[0xC89638] = 1;
+    MEMORY[0xC8963C] = 200;
+    MEMORY[0xC89640] = 1;
+    v1[0] = 12321336;
+    MEMORY[0xC89624] = 12407884;
+    MEMORY[0xC89644] = 12755100;
+    v1[1] = &unk_60ABF3D0;
+    result = (_DWORD *)Profile::Profile(13145672, 1602108, MEMORY[0xAF3B60], (int)v1, nullptr, 0);
+    *result = 12407636;
+    return result;
+  }
+
+/* ============================================================================
  * sub_6018D208
  * RVA 0x0018d208   size 0x40   xrefs 1
  * ============================================================================ */
@@ -50748,6 +55986,53 @@
         || a1[264]
         || a1[284]
         || a1[304] != 0;
+  }
+
+/* ============================================================================
+ * None_ref
+ * RVA 0x00191c9c   size 0x10c   xrefs 0
+ * ============================================================================ */
+  _UNKNOWN **None_ref()
+  {
+    signed int v0; // r4
+    int v1; // r5
+    char v2; // r6
+  
+    v0 = 0;
+    dword_60C89974 = 0;
+    dword_60C89978 = 0;
+    dword_60C8997C = 0;
+    off_60C89970 = nullptr;
+    dword_60C89984 = (int)&unk_60C8998C;
+    off_60C89980 = (_UNKNOWN *)12322272;
+    dword_60C89988 = 8;
+    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&off_60C89980);
+    off_60C89980 = (_UNKNOWN *)12409068;
+    v1 = dword_60C89984;
+    if ( (char *)dword_60C89984 != "None" )
+    {
+      v2 = MEMORY[0xB3BA34];
+      while ( (unsigned __int8)aNone_0[v0] != MEMORY[0xB3BA34] )
+      {
+        if ( v0 >= 0x80000 )
+        {
+          v0 = 0;
+          break;
+        }
+        if ( (unsigned __int8)aNone_0[v0 + 1] == MEMORY[0xB3BA34] )
+        {
+          ++v0;
+          break;
+        }
+        v0 += 2;
+      }
+      if ( v0 >= dword_60C89988 )
+        v0 = dword_60C89988 - 1;
+      qmemcpy((void *)dword_60C89984, "None", v0);
+      *(_BYTE *)(v1 + v0) = v2;
+    }
+    off_60C89980 = (_UNKNOWN *)12405644;
+    return &off_60C89970;
   }
 
 /* ============================================================================
@@ -57299,9 +62584,9 @@
     sub_60401BB8(0);
     sub_604C4E30(a1 + 2880);
     sub_60544F4C(a1 + 31488);
-    sub_604F0BDC(a1 + 64996);
-    sub_604F5730(a1 + 139476);
-    sub_604FA23C(a1 + 149128);
+    T_InvalidItem_00_ref(a1 + 64996);
+    N_ConfirmWinPos_00_ref(a1 + 139476);
+    T_Kinopio_ref(a1 + 149128);
     sub_60552550(a1 + 157360);
     sub_60515864(a1 + 268980);
     *(_DWORD *)(a1 + 298948) = 8;
@@ -57309,7 +62594,7 @@
     sub_6054C4A4(a1 + 153252);
     sub_60480EAC(a1 + 227624);
     sub_6055DF38(a1 + 240464);
-    sub_604DE39C(a1 + 261300);
+    T_WorldName_00_ref(a1 + 261300);
     sub_604E028C(a1 + 264900);
     sub_603F807C(MEMORY[0xC99DD0]);
     return sub_60401ED4(MEMORY[0xC99E68]);
@@ -58610,7 +63895,7 @@
   }
 
 /* ============================================================================
- * sub_601A5468
+ * obj_baloon_Mii_ref
  * RVA 0x001a5468   size 0x15c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_601A5468(int a1)
@@ -58710,6 +63995,85 @@
     v2[33] = 1075838976;
     v2[34] = 1075838976;
     return v2;
+  }
+
+/* ============================================================================
+ * roll_tate_ref
+ * RVA 0x001a5ef8   size 0x124   xrefs 0
+ * ============================================================================ */
+  int __fastcall roll_tate_ref(int a1)
+  {
+    int v2; // r5
+    int v3; // r0
+    int v4; // r1
+    _DWORD *v5; // r0
+    int *v6; // r1
+    unsigned int v7; // r2
+    unsigned int v8; // r0
+    int v9; // r0
+    int v10; // r1
+    _DWORD *v11; // r0
+    int v12; // r1
+    int *v13; // r1
+    unsigned int v14; // r2
+    unsigned int v15; // r0
+    int v17; // [sp+0h] [bp-8h] BYREF
+    const char *v18; // [sp+4h] [bp-4h]
+  
+    v2 = sub_601E0240(*(_DWORD **)(a1 + 372), *(_DWORD **)(a1 + 376));
+    *(_DWORD *)(a1 + 316) = v2;
+    if ( *(_BYTE *)(a1 + 368) == 5 )
+    {
+      v3 = *(_DWORD *)(a1 + 408);
+      v4 = *(_DWORD *)(a1 + 412);
+      v17 = 12321336;
+      v18 = "wait";
+      sub_60421938(v3, v4, &v17);
+      if ( v2 == 4 )
+      {
+  LABEL_3:
+        v5 = *(_DWORD **)(a1 + 408);
+        v6 = (int *)v5[3];
+        v7 = v5[2];
+        v8 = v5[17];
+        if ( v7 > v8 )
+          v6 += v8;
+        v9 = *v6;
+        v10 = -1072483533;
+  LABEL_13:
+        *(_DWORD *)(v9 + 24) = v10;
+        goto LABEL_14;
+      }
+      v11 = *(_DWORD **)(a1 + 408);
+      if ( v2 == 5 )
+      {
+  LABEL_10:
+        v13 = (int *)v11[3];
+        v14 = v11[2];
+        v15 = v11[17];
+        if ( v14 > v15 )
+          v13 += v15;
+        v9 = *v13;
+        v10 = 1075000115;
+        goto LABEL_13;
+      }
+      v12 = *(_DWORD *)(a1 + 412);
+      v17 = 12321336;
+      v18 = "roll_tate";
+      sub_60421938(v11, v12, &v17);
+      if ( v2 == 3 )
+        goto LABEL_3;
+      if ( v2 == 2 )
+      {
+        v11 = *(_DWORD **)(a1 + 408);
+        goto LABEL_10;
+      }
+    }
+  LABEL_14:
+    *(_DWORD *)(a1 + 432) = sub_608332B0(a1 + 80, *(_DWORD *)(a1 + 376) + 72);
+    *(_DWORD *)(a1 + 200) = 0;
+    *(_DWORD *)(a1 + 448) = 0;
+    return 0;
   }
 
 /* ============================================================================
@@ -58856,6 +64220,55 @@
   }
 
 /* ============================================================================
+ * fly_csdm_ref
+ * RVA 0x001a7b10   size 0x164   xrefs 0
+ * ============================================================================ */
+  int __fastcall fly_csdm_ref(int a1)
+  {
+    float v2; // r0
+    float v3; // r1
+    float v4; // s2
+    int ResArchiveById; // r5
+    int Model; // r6
+    _DWORD *v7; // r7
+    _DWORD *v8; // r0
+    int v9; // r1
+    int v11; // [sp+18h] [bp-8h] BYREF
+    const char *v12; // [sp+1Ch] [bp-4h]
+  
+    v2 = *(float *)(a1 + 80);
+    *(float *)(a1 + 416) = v2;
+    v3 = *(float *)(a1 + 84);
+    *(float *)(a1 + 420) = v3;
+    v4 = *(float *)(a1 + 88);
+    *(float *)(a1 + 424) = v4;
+    *(float *)(a1 + 80) = v2 + 400.0;
+    *(float *)(a1 + 84) = v3 + 250.0;
+    *(float *)(a1 + 88) = v4 + -1800.0;
+    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    *(_DWORD *)(a1 + 272) = ResArchiveById;
+    v11 = 12321336;
+    v12 = "kameck";
+    Model = Resource_getModel(ResArchiveById, &v11, 6, 2, 1, 2, 0, 0, 1, 0);
+    v7 = (_DWORD *)operator new(0x48u, 0, 4);
+    v8 = sub_60421830(v7, Model, 2, 1, 2, 0, 0);
+    j_ModelWrapper_setupModel(v8, ResArchiveById, 0, 0);
+    *(_DWORD *)(a1 + 268) = v7;
+    v9 = *(_DWORD *)(a1 + 272);
+    v11 = 12321336;
+    v12 = "fly_csdm";
+    sub_60421938(v7, v9, &v11);
+    *(_DWORD *)(a1 + 128) = 0;
+    *(_DWORD *)(a1 + 132) = 0;
+    *(_DWORD *)(a1 + 136) = 0;
+    *(_DWORD *)(a1 + 180) = 0;
+    *(_DWORD *)(a1 + 212) = 1112014848;
+    sub_601A7C90(a1);
+    StateMgr::changeState((_DWORD *)(a1 + 296), 13148820);
+    return 1;
+  }
+
+/* ============================================================================
  * sub_601A7C90
  * RVA 0x001a7c90   size 0x290   xrefs 2
  * ============================================================================ */
@@ -58946,6 +64359,87 @@
           11778444);
       }
       return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 268) + 56))(**(_DWORD **)(a1 + 268));
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * fly_magic_ref_3
+ * RVA 0x001a8d60   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int __fastcall fly_magic_ref_3(_DWORD *a1)
+  {
+    int v2; // r0
+    int v3; // r0
+    int result; // r0
+    int v5; // r0
+    int v6; // r1
+    _DWORD v7[2]; // [sp+8h] [bp-8h] BYREF
+  
+    if ( (int)a1[125] < 0 )
+      a1[125] = sub_601E4EA4(MEMORY[0xC8B13C], 147, 0, (int)(a1 + 20), 1);
+    v2 = a1[45] - a1[124];
+    a1[45] = v2;
+    a1[48] = v2;
+    sub_60168EA0((int)a1);
+    v3 = a1[121];
+    if ( !v3 )
+      return StateMgr::changeState(a1 + 74, 13148964);
+    result = v3 - 1;
+    a1[121] = result;
+    if ( result == 60 )
+    {
+      v5 = a1[67];
+      v6 = a1[68];
+      v7[0] = 12321336;
+      v7[1] = "fly_magic";
+      return sub_60421938(v5, v6, v7);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * fly_csdm_ref_2
+ * RVA 0x001a8e68   size 0x118   xrefs 0
+ * ============================================================================ */
+  int __fastcall fly_csdm_ref_2(int a1)
+  {
+    int v2; // r0
+    int result; // r0
+    int v4; // r0
+    int (__fastcall *v5)(int, _DWORD *); // r2
+    int v6; // r0
+    int v7; // r0
+    int v8; // r1
+    _DWORD v9[2]; // [sp+8h] [bp-38h] BYREF
+    _DWORD v10[12]; // [sp+10h] [bp-30h] BYREF
+  
+    if ( *(int *)(a1 + 500) < 0 )
+      *(_DWORD *)(a1 + 500) = sub_601E4EA4(MEMORY[0xC8B13C], 147, 0, a1 + 80, 1);
+    v2 = *(_DWORD *)(a1 + 180) - *(_DWORD *)(a1 + 496);
+    *(_DWORD *)(a1 + 180) = v2;
+    *(_DWORD *)(a1 + 192) = v2;
+    sub_60168EA0(a1);
+    result = *(_DWORD *)(a1 + 484);
+    if ( result )
+    {
+      v4 = **(_DWORD **)(a1 + 268);
+      v5 = *(int (__fastcall **)(int, _DWORD *))(*(_DWORD *)v4 + 84);
+      v10[0] = 12321336;
+      v10[1] = "ef_wand";
+      v6 = v5(v4, v10);
+      (*(void (__fastcall **)(_DWORD, int, _DWORD *))(***(_DWORD ***)(a1 + 268) + 108))(**(_DWORD **)(a1 + 268), v6, v10);
+      sub_602372C0(a1 + 312, 1216, (int)v10, 1);
+      result = *(_DWORD *)(a1 + 484) - 1;
+      *(_DWORD *)(a1 + 484) = result;
+      if ( !result )
+      {
+        v7 = *(_DWORD *)(a1 + 268);
+        v8 = *(_DWORD *)(a1 + 272);
+        v9[0] = 12321336;
+        v9[1] = "fly_csdm";
+        return sub_60421938(v7, v8, v9);
+      }
     }
     return result;
   }
@@ -59115,6 +64609,43 @@
       return ModelWrapper_updateModel(*(_DWORD *)(a1 + 268));
     }
     return result;
+  }
+
+/* ============================================================================
+ * mouth_lower_ref
+ * RVA 0x001aa9b8   size 0x178   xrefs 0
+ * ============================================================================ */
+  int __fastcall mouth_lower_ref(int a1, int a2, int a3, int a4)
+  {
+    int v5; // r0
+    int (__fastcall *v6)(int, int *); // r2
+    int v7; // r0
+    int v9[12]; // [sp+4h] [bp-3Ch] BYREF
+    _DWORD v10[3]; // [sp+34h] [bp-Ch] BYREF
+  
+    if ( *(_DWORD *)(MEMORY[0xCC6D78] + 412) == *(_DWORD *)(a1 + 240) )
+      v9[0] = sub_601691C0(a1);
+    else
+      v9[0] = 0;
+    moveValueTo((int *)(a1 + 180), v9, &dword_60C8A540, a4);
+    if ( sub_60418548(**(_DWORD **)(*(_DWORD *)(a1 + 268) + 12) + 4)
+      || sub_60418548(**(_DWORD **)(*(_DWORD *)(a1 + 268) + 12) + 4)
+      || sub_60418548(**(_DWORD **)(*(_DWORD *)(a1 + 268) + 12) + 4)
+      || sub_60418548(**(_DWORD **)(*(_DWORD *)(a1 + 268) + 12) + 4) == 1 )
+    {
+      v5 = **(_DWORD **)(a1 + 268);
+      v6 = *(int (__fastcall **)(int, int *))(*(_DWORD *)v5 + 84);
+      v9[0] = 12321336;
+      v9[1] = (int)"mouth_lower";
+      v7 = v6(v5, v9);
+      (*(void (__fastcall **)(_DWORD, int, int *))(***(_DWORD ***)(a1 + 268) + 108))(**(_DWORD **)(a1 + 268), v7, v9);
+      v10[0] = v9[3];
+      v10[1] = v9[7];
+      v10[2] = v9[11];
+      sub_601E4C88(MEMORY[0xC8B13C], 193, v10);
+    }
+    sub_601AA83C(a1);
+    return 1;
   }
 
 /* ============================================================================
@@ -59313,6 +64844,67 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * cs_demo_ref
+ * RVA 0x001ab3a8   size 0x1c0   xrefs 0
+ * ============================================================================ */
+  int sub_601AB3A8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8A5F0 = 0;
+    dword_60C8A5F4 = 0;
+    dword_60C8A5F8 = 0;
+    dword_60C8A5FC = 0;
+    dword_60C8A600 = -1036779520;
+    dword_60C8A604 = -1048576000;
+    dword_60C8A608[0] = 12321336;
+    dword_60C8A60C = (int)"cs_demo_wait";
+    dword_60C8A610 = 1065353216;
+    dword_60C8A614 = 1;
+    dword_60C8A618 = 12321336;
+    unk_60C8A61C = "cs_demo_help_me";
+    unk_60C8A620 = 1065353216;
+    unk_60C8A624 = 0;
+    unk_60C8A628 = 12321336;
+    dword_60C8A62C = (int)"cs_demo_help_me_wait";
+    dword_60C8A630 = 1065353216;
+    dword_60C8A634 = 1;
+    sub_60000288();
+    v1[0] = 12321336;
+    v1[1] = &unk_60ABFCD9;
+    *(_DWORD *)Profile::Profile(13149532, 1750448, MEMORY[0xAF3B54], (int)v1, nullptr, 0) = 12411908;
+    MEMORY[0xC8A578] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8A57C] = 92;
+    MEMORY[0xC8A580] = 1;
+    MEMORY[0xC8A584] = 96;
+    MEMORY[0xC8A588] = 1;
+    MEMORY[0xC8A58C] = 100;
+    MEMORY[0xC8A590] = 1;
+    MEMORY[0xC8A574] = 12412056;
+    MEMORY[0xC8A594] = 12755100;
+    MEMORY[0xC8A5A4] = 1;
+    MEMORY[0xC8A5A8] = 108;
+    MEMORY[0xC8A5AC] = 1;
+    MEMORY[0xC8A5B0] = 112;
+    MEMORY[0xC8A5B4] = 1;
+    MEMORY[0xC8A598] = 12412056;
+    MEMORY[0xC8A59C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8A5A0] = 104;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xC8A5B8] = 12755100;
+    MEMORY[0xC8A5C0] = MEMORY[0xC7B788];
+    MEMORY[0xC8A5C4] = 116;
+    MEMORY[0xC8A5C8] = 1;
+    MEMORY[0xC8A5CC] = 120;
+    MEMORY[0xC8A5D0] = 1;
+    MEMORY[0xC8A5BC] = 12412056;
+    MEMORY[0xC8A5D4] = 124;
+    MEMORY[0xC8A5D8] = 1;
+    MEMORY[0xC8A5DC] = 12755100;
+    return 13149652;
   }
 
 /* ============================================================================
@@ -59621,6 +65213,130 @@
   }
 
 /* ============================================================================
+ * cobPeachGates1st_open_ref
+ * RVA 0x001ac414   size 0x2ec   xrefs 0
+ * ============================================================================ */
+  int __fastcall cobPeachGates1st_open_ref(int a1)
+  {
+    int ResArchiveById; // r8
+    int Model; // r6
+    _DWORD *v4; // r7
+    _DWORD *v5; // r0
+    int v6; // r6
+    const char *v7; // r1
+    int v8; // r0
+    int v9; // r0
+    int v10; // r0
+    int v11; // r0
+    int v12; // r1
+    bool v13; // zf
+    int v14; // r6
+    _DWORD *v15; // r0
+    unsigned int v17; // r0
+    int v18; // r1
+    bool v19; // zf
+    int v20; // r0
+    int v21; // r1
+    _DWORD v22[2]; // [sp+1Ch] [bp-14h] BYREF
+    int v23; // [sp+24h] [bp-Ch] BYREF
+    const char *v24; // [sp+28h] [bp-8h]
+    int v25; // [sp+2Ch] [bp-4h]
+  
+    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v23 = 12321336;
+    v24 = "cobPeachGates1st";
+    Model = Resource_getModel(ResArchiveById, &v23, 6, 1, 0, 0, 0, 0, 1, 0);
+    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v5 = ModelWrapper_ctor(v4, Model, 1, 0, 0, 0, 0);
+    ModelWrapper_setup(v5, ResArchiveById, 0, 0);
+    *(_DWORD *)(a1 + 268) = v4;
+    sub_601AC72C(a1);
+    ModelWrapper_updateAnims(*(_DWORD *)(a1 + 268));
+    if ( (*(_BYTE *)(a1 + 216) & 8) == 0 )
+      ModelWrapper_updateModel(*(_DWORD **)(a1 + 268));
+    sub_60427BC8(
+      MEMORY[0xC9BBD4],
+      **(_DWORD **)(a1 + 268),
+      *(unsigned __int8 *)(a1 + 240),
+      *(unsigned __int8 *)(a1 + 244));
+    *(_DWORD *)(a1 + 212) = 1125515264;
+    v6 = *(_DWORD *)(MEMORY[0xCC6D78] + 412);
+    v7 = *(const char **)(MEMORY[0xCC6D78] + 416);
+    v8 = *(_DWORD *)(MEMORY[0xCC6D78] + 420);
+    v23 = v6;
+    v24 = v7;
+    v25 = v8;
+    v9 = sub_601E028C(&v23);
+    v10 = sub_6019A120(v9);
+    *(_BYTE *)(a1 + 272) = 0;
+    if ( v10 == 7 )
+    {
+      v11 = sub_601E028C(&v23);
+      v12 = *(_DWORD *)(a1 + 240);
+      v13 = v6 == v12;
+      if ( v6 == v12 )
+        v13 = v11 == *(_DWORD *)(a1 + 252);
+      if ( v13 )
+      {
+        v17 = sub_601A7618(a1);
+        v18 = *(_DWORD *)(MEMORY[0xCC6D78] + 32);
+        v19 = v18 == 1;
+        if ( v18 != 1 )
+          v19 = v18 == 5;
+        if ( v19 )
+        {
+          if ( sub_601A762C(a1) != 1 )
+            return 1;
+          v14 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 12);
+          v22[0] = 12321336;
+          goto LABEL_11;
+        }
+        if ( v18 == 2 )
+        {
+          if ( v17 <= 6 && ((1 << v17) & 0x54) != 0 )
+            return 1;
+          v20 = a1;
+          v21 = 69;
+        }
+        else if ( v17 <= 9 && ((1 << v17) & 0x30C) != 0 )
+        {
+          v20 = a1;
+          v21 = 72;
+        }
+        else
+        {
+          v20 = a1;
+          v21 = 71;
+        }
+        sub_601863B8(v20, v21, 0);
+        return 1;
+      }
+      if ( sub_601A762C(a1) == 1 )
+      {
+        *(_BYTE *)(a1 + 272) = 1;
+        v14 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 12);
+        v22[0] = 12321336;
+  LABEL_11:
+        v22[1] = "cobPeachGates1st__open";
+        SkeletalAnim_play(v14, ResArchiveById, v22);
+        AnimationCtrl_setRepeat(v14 + 4, 0);
+        v15 = **(_DWORD ***)(*(_DWORD *)(a1 + 268) + 12);
+        v15[6] = 0;
+        v15[5] = v15[2];
+        v15[7] |= 2u;
+      }
+    }
+    else if ( sub_601A762C(a1) == 1 )
+    {
+      *(_BYTE *)(a1 + 272) = 1;
+      v14 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 12);
+      v22[0] = 12321336;
+      goto LABEL_11;
+    }
+    return 1;
+  }
+
+/* ============================================================================
  * sub_601AC72C
  * RVA 0x001ac72c   size 0x180   xrefs 1
  * ============================================================================ */
@@ -59678,6 +65394,129 @@
   }
 
 /* ============================================================================
+ * cobPeachGates1st_ref
+ * RVA 0x001ac908   size 0x2f4   xrefs 0
+ * ============================================================================ */
+  int __fastcall cobPeachGates1st_ref(int a1)
+  {
+    int v2; // r5
+    _DWORD *v3; // r5
+    bool v4; // zf
+    int v5; // r0
+    _DWORD *v6; // r2
+    int v7; // r1
+    int v8; // r0
+    _DWORD *v9; // r2
+    int v10; // r1
+    int v11; // r0
+    int v12; // r0
+    int v13; // r0
+    bool v14; // zf
+    int result; // r0
+    char v16; // r0
+    int v17; // [sp+4h] [bp-14h] BYREF
+    const char *v18; // [sp+8h] [bp-10h]
+    int v19; // [sp+Ch] [bp-Ch] BYREF
+    const char *v20; // [sp+10h] [bp-8h]
+    int v21; // [sp+14h] [bp-4h]
+  
+    v2 = MEMORY[0xC8996C];
+    v21 = sub_6019112C(MEMORY[0xC8996C]);
+    if ( !*(_BYTE *)(v2 + 1384) )
+      goto LABEL_16;
+    v3 = **(_DWORD ***)(*(_DWORD *)(a1 + 268) + 12);
+    if ( v21 > 165 )
+    {
+      if ( v21 == 166 )
+      {
+        v19 = 12321336;
+        v20 = "cobPeachGates1st";
+        v12 = LoadResource(MEMORY[0xC9CA88], &v19);
+        v17 = 12321336;
+        v18 = "cobPeachGates1st__close";
+        SkeletalAnim_play((int)v3, v12, &v17);
+        AnimationCtrl_setRepeat((int)(v3 + 1), 0);
+        v3[5] = 0;
+        v6 = (_DWORD *)(a1 + 80);
+        v7 = 35;
+        v3[7] |= 2u;
+        goto LABEL_15;
+      }
+      if ( v21 != 167 )
+        goto LABEL_16;
+      v19 = 12321336;
+      v20 = "cobPeachGates1st";
+      v8 = LoadResource(MEMORY[0xC9CA88], &v19);
+      v17 = 12321336;
+      v18 = "cobPeachGates1st__out";
+      SkeletalAnim_play((int)v3, v8, &v17);
+      AnimationCtrl_setRepeat((int)(v3 + 1), 0);
+      v9 = (_DWORD *)(a1 + 80);
+      v10 = 34;
+  LABEL_13:
+      sub_601E4C88(MEMORY[0xC8B13C], v10, v9);
+      *(_BYTE *)(a1 + 272) = 1;
+      (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
+      goto LABEL_16;
+    }
+    if ( v21 == 1 )
+    {
+      v19 = 12321336;
+      v20 = "cobPeachGates1st";
+      v11 = LoadResource(MEMORY[0xC9CA88], &v19);
+      v17 = 12321336;
+      v18 = "cobPeachGates1st__open";
+      SkeletalAnim_play((int)v3, v11, &v17);
+      AnimationCtrl_setRepeat((int)(v3 + 1), 0);
+      v9 = (_DWORD *)(a1 + 80);
+      v10 = 33;
+      v3[6] = 1075419546;
+      goto LABEL_13;
+    }
+    v4 = v21 == 165;
+    if ( v21 == 165 )
+      v4 = *(_BYTE *)(a1 + 272) == 0;
+    if ( v4 )
+    {
+      v19 = 12321336;
+      v20 = "cobPeachGates1st";
+      v5 = LoadResource(MEMORY[0xC9CA88], &v19);
+      v17 = 12321336;
+      v18 = "cobPeachGates1st__open";
+      SkeletalAnim_play((int)v3, v5, &v17);
+      AnimationCtrl_setRepeat((int)(v3 + 1), 0);
+      v6 = (_DWORD *)(a1 + 80);
+      v7 = 33;
+      v3[6] = 1075419546;
+  LABEL_15:
+      sub_601E4C88(MEMORY[0xC8B13C], v7, v6);
+    }
+  LABEL_16:
+    v13 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 12);
+    if ( v21 == 166 )
+    {
+      result = *(unsigned __int8 *)(v13 + 28);
+      if ( (result & 0x20) == 0 )
+        return result;
+      v16 = 0;
+    }
+    else
+    {
+      v14 = v21 == 165;
+      if ( v21 == 165 )
+        v14 = *(_BYTE *)(a1 + 272) == 0;
+      if ( !v14 )
+        return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
+      result = *(unsigned __int8 *)(v13 + 28);
+      if ( (result & 0x20) == 0 )
+        return result;
+      v16 = 1;
+    }
+    *(_BYTE *)(a1 + 272) = v16;
+    return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
+  }
+
+/* ============================================================================
  * Actor_PeachCastle_2door_build
  * RVA 0x001ace04   size 0x38   xrefs 0
  * ============================================================================ */
@@ -59692,6 +65531,155 @@
     *(_DWORD *)(result + 268) = 0;
     *(_BYTE *)(result + 272) = 0;
     return result;
+  }
+
+/* ============================================================================
+ * cobPeachGates2nd_open_ref
+ * RVA 0x001ace40   size 0x3b8   xrefs 0
+ * ============================================================================ */
+  int __fastcall cobPeachGates2nd_open_ref(int a1)
+  {
+    int ResArchiveById; // r8
+    int Model; // r6
+    _DWORD *v4; // r7
+    _DWORD *v5; // r0
+    int v6; // r6
+    int v7; // r1
+    int v8; // r0
+    int v9; // r0
+    int v10; // r0
+    int v11; // r0
+    int v12; // r1
+    bool v13; // zf
+    char v14; // r12
+    unsigned int v15; // r0
+    int v16; // r2
+    bool v17; // zf
+    bool v18; // zf
+    int v19; // r0
+    int v20; // r1
+    int v21; // r6
+    _DWORD *v22; // r0
+    _DWORD v24[12]; // [sp+18h] [bp-48h] BYREF
+    _DWORD v25[3]; // [sp+48h] [bp-18h] BYREF
+    _DWORD v26[3]; // [sp+54h] [bp-Ch] BYREF
+  
+    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v24[0] = 12321336;
+    v24[1] = "cobPeachGates2nd";
+    Model = Resource_getModel(ResArchiveById, v24, 6, 1, 0, 0, 0, 0, 1, 0);
+    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v5 = ModelWrapper_ctor(v4, Model, 1, 0, 0, 0, 0);
+    ModelWrapper_setup(v5, ResArchiveById, 0, 0);
+    *(_DWORD *)(a1 + 268) = v4;
+    sub_601AD23C(a1);
+    ModelWrapper_updateAnims(*(_DWORD *)(a1 + 268));
+    if ( (*(_BYTE *)(a1 + 216) & 8) == 0 )
+      ModelWrapper_updateModel(*(_DWORD **)(a1 + 268));
+    sub_60427BC8(
+      MEMORY[0xC9BBD4],
+      **(_DWORD **)(a1 + 268),
+      *(unsigned __int8 *)(a1 + 240),
+      *(unsigned __int8 *)(a1 + 244));
+    *(_DWORD *)(a1 + 212) = 1125515264;
+    v6 = *(_DWORD *)(MEMORY[0xCC6D78] + 412);
+    v7 = *(_DWORD *)(MEMORY[0xCC6D78] + 416);
+    v8 = *(_DWORD *)(MEMORY[0xCC6D78] + 420);
+    v26[0] = v6;
+    v26[1] = v7;
+    v26[2] = v8;
+    v9 = sub_601E028C(v26);
+    v10 = sub_6019A120(v9);
+    *(_BYTE *)(a1 + 272) = 0;
+    if ( v10 == 7 )
+    {
+      v11 = sub_601E028C(v26);
+      v12 = *(_DWORD *)(a1 + 240);
+      v13 = v6 == v12;
+      if ( v6 == v12 )
+        v13 = v11 == *(_DWORD *)(a1 + 252);
+      if ( v13 )
+      {
+        v15 = sub_601A7618(a1);
+        v16 = *(_DWORD *)(MEMORY[0xCC6D78] + 32);
+        v17 = v16 == 1;
+        if ( v16 != 1 )
+          v17 = v16 == 5;
+        if ( !v17 )
+        {
+          if ( v16 == 2 )
+          {
+            v18 = v15 == 4;
+            if ( v15 != 4 )
+              v18 = *(_DWORD *)(MEMORY[0xCC6D78] + 452) == 4;
+            if ( !v18 )
+            {
+              if ( (*(_BYTE *)(MEMORY[0xCC6D78] + 521) & 1) != 0 )
+              {
+                sub_601863B8(a1, 69, 0);
+                sub_601EAA3C();
+              }
+              goto LABEL_26;
+            }
+            v13 = sub_601A763C(a1) == 1;
+            v19 = a1;
+            if ( v13 )
+              v20 = 69;
+            else
+              v20 = 70;
+          }
+          else if ( v15 <= 9 && ((1 << v15) & 0x3CC) != 0 && sub_601A763C(a1) == 1 )
+          {
+            v19 = a1;
+            v20 = 72;
+          }
+          else
+          {
+            v19 = a1;
+            v20 = 71;
+          }
+          sub_601863B8(v19, v20, 0);
+          goto LABEL_26;
+        }
+      }
+    }
+    if ( sub_601A763C(a1) )
+    {
+      *(_BYTE *)(a1 + 272) = 1;
+  LABEL_27:
+      v21 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 12);
+      v24[0] = 12321336;
+      v24[1] = "cobPeachGates2nd__open";
+      SkeletalAnim_play(v21, ResArchiveById, v24);
+      AnimationCtrl_setRepeat(v21 + 4, 0);
+      v22 = **(_DWORD ***)(*(_DWORD *)(a1 + 268) + 12);
+      v22[6] = 0;
+      v22[5] = v22[2];
+      v22[7] |= 2u;
+      goto LABEL_28;
+    }
+  LABEL_26:
+    if ( *(_BYTE *)(a1 + 272) )
+      goto LABEL_27;
+  LABEL_28:
+    if ( ((unsigned int)&unk_60C8A690 & ~(1612370140 << v14) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C8A690) )
+    {
+      dword_60C8A694 = 12321336;
+      dword_60C8A698 = (int)"cobPeachWindow";
+      _cxa_guard_release_0(&unk_60C8A690);
+    }
+    sub_601A02B0(MEMORY[0xC89E00], v25, *(_DWORD *)(a1 + 240), *(_DWORD *)(a1 + 244), (int)&dword_60C8A694);
+    memset(v24, 0, 0x2Cu);
+    BYTE2(v24[8]) = *(_DWORD *)(a1 + 240);
+    BYTE1(v24[8]) = *(_DWORD *)(a1 + 252);
+    LOBYTE(v24[8]) = *(_DWORD *)(a1 + 244);
+    LOBYTE(v24[9]) = *(_DWORD *)(a1 + 248);
+    v24[4] = v25[0];
+    v24[5] = v25[1];
+    v24[6] = v25[2];
+    v24[3] = Profile::get(MEMORY[0xAF3B54]);
+    ActorMgr::create(MEMORY[0xC7B400], (int)v24, 0);
+    return 1;
   }
 
 /* ============================================================================
@@ -59749,6 +65737,105 @@
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 268) + 60))(**(_DWORD **)(a1 + 268), v19);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 268) + 52))(**(_DWORD **)(a1 + 268));
     return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 268) + 56))(**(_DWORD **)(a1 + 268));
+  }
+
+/* ============================================================================
+ * cobPeachGates2nd_ref
+ * RVA 0x001ad418   size 0x270   xrefs 0
+ * ============================================================================ */
+  int __fastcall cobPeachGates2nd_ref(int a1)
+  {
+    int v2; // r5
+    _DWORD *v3; // r5
+    bool v4; // zf
+    int v5; // r0
+    _DWORD *v6; // r2
+    int v7; // r1
+    int v8; // r0
+    int v9; // r0
+    int v10; // r0
+    int result; // r0
+    int v12; // [sp+4h] [bp-14h] BYREF
+    const char *v13; // [sp+8h] [bp-10h]
+    int v14; // [sp+Ch] [bp-Ch] BYREF
+    const char *v15; // [sp+10h] [bp-8h]
+    int v16; // [sp+14h] [bp-4h]
+  
+    v2 = MEMORY[0xC8996C];
+    v16 = sub_6019112C(MEMORY[0xC8996C]);
+    if ( !*(_BYTE *)(v2 + 1384) )
+      goto LABEL_12;
+    v3 = **(_DWORD ***)(*(_DWORD *)(a1 + 268) + 12);
+    if ( v16 == 167 )
+    {
+      v14 = 12321336;
+      v15 = "cobPeachGates2nd";
+      v8 = LoadResource(MEMORY[0xC9CA88], &v14);
+      v12 = 12321336;
+      v13 = "cobPeachGates2nd__out";
+      SkeletalAnim_play((int)v3, v8, &v12);
+      AnimationCtrl_setRepeat((int)(v3 + 1), 0);
+      sub_601E4C88(MEMORY[0xC8B13C], 34, (_DWORD *)(a1 + 80));
+      (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
+      goto LABEL_12;
+    }
+    if ( v16 == 166 )
+    {
+      v14 = 12321336;
+      v15 = "cobPeachGates2nd";
+      v9 = LoadResource(MEMORY[0xC9CA88], &v14);
+      v12 = 12321336;
+      v13 = "cobPeachGates2nd__close";
+      SkeletalAnim_play((int)v3, v9, &v12);
+      AnimationCtrl_setRepeat((int)(v3 + 1), 0);
+      v3[5] = 0;
+      v6 = (_DWORD *)(a1 + 80);
+      v7 = 35;
+      v3[7] |= 2u;
+      goto LABEL_11;
+    }
+    v4 = v16 == 165;
+    if ( v16 == 165 )
+      v4 = *(_BYTE *)(a1 + 272) == 0;
+    if ( v4 )
+    {
+      v14 = 12321336;
+      v15 = "cobPeachGates2nd";
+      v5 = LoadResource(MEMORY[0xC9CA88], &v14);
+      v12 = 12321336;
+      v13 = "cobPeachGates2nd__open";
+      SkeletalAnim_play((int)v3, v5, &v12);
+      AnimationCtrl_setRepeat((int)(v3 + 1), 0);
+      v6 = (_DWORD *)(a1 + 80);
+      v7 = 33;
+      v3[6] = 1075419546;
+  LABEL_11:
+      sub_601E4C88(MEMORY[0xC8B13C], v7, v6);
+    }
+  LABEL_12:
+    v10 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 12);
+    if ( v16 != 167 )
+    {
+      if ( v16 == 166 )
+      {
+        result = *(unsigned __int8 *)(v10 + 28);
+        if ( (result & 0x20) == 0 )
+          return result;
+        *(_BYTE *)(a1 + 272) = 0;
+        return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
+      }
+      if ( v16 != 165 )
+        return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
+    }
+    if ( *(_BYTE *)(a1 + 272) )
+      return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
+    result = *(unsigned __int8 *)(v10 + 28);
+    if ( (result & 0x20) != 0 )
+    {
+      *(_BYTE *)(a1 + 272) = 1;
+      return 1;
+    }
+    return result;
   }
 
 /* ============================================================================
@@ -67984,7 +74071,7 @@
           v13 = *(_DWORD *)(a1 + 268);
           v14 = 22;
           v15 = MEMORY[0xC8B13C];
-          return sub_601E4AC4(v15, v14, v12, v13);
+          return SE_PLY_ref(v15, v14, v12, v13);
         }
       }
       v12 = *(_DWORD *)(a1 + 264);
@@ -67993,7 +74080,7 @@
       {
         v13 = *(_DWORD *)(a1 + 268);
         v14 = 8;
-        return sub_601E4AC4(v15, v14, v12, v13);
+        return SE_PLY_ref(v15, v14, v12, v13);
       }
       return sub_601E4C88(MEMORY[0xC8B13C], 115, a1 + 80, 1);
     }
@@ -68450,7 +74537,7 @@
         sub_601E4A74(MEMORY[0xC8B13C], 0);
       *v2 |= 4u;
     }
-    return sub_601E4AC4(MEMORY[0xC8B13C], 1, *(_DWORD *)(a1 + 264), *(_DWORD *)(a1 + 268));
+    return SE_PLY_ref(MEMORY[0xC8B13C], 1, *(_DWORD *)(a1 + 264), *(_DWORD *)(a1 + 268));
   }
 
 /* ============================================================================
@@ -76549,7 +82636,7 @@
     }
     if ( !v9 )
       v4 = dword_60AFD068[v13];
-    return sub_6080D658(MEMORY[0xCC6B0C], (unsigned __int16)(v4 | v2));
+    return SE_OBJ_CS_WARP_CANNON_FLY_ref(MEMORY[0xCC6B0C], (unsigned __int16)(v4 | v2));
   }
 
 /* ============================================================================
@@ -76637,7 +82724,7 @@
   }
 
 /* ============================================================================
- * sub_601D9B88
+ * TalkWindow_W9_ref
  * RVA 0x001d9b88   size 0x144   xrefs 1
  * ============================================================================ */
   int __fastcall sub_601D9B88(int a1)
@@ -80228,7 +86315,7 @@
             {
               v32 = *v30;
               sub_60024460(v36, &v33);
-              return sub_60813818(v31, v17, v26, v36, v32, 0);
+              return SE_EMY_LIFT_LINE_MOVE_ref_2(v31, v17, v26, v36, v32, 0);
             }
             else
             {
@@ -80250,7 +86337,7 @@
           else
           {
             sub_60024460(v36, &v33);
-            return sub_60813BE0(v28, v17, v26, v36, 0);
+            return SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v28, v17, v26, v36, 0);
           }
         }
       }
@@ -80685,7 +86772,7 @@
   }
 
 /* ============================================================================
- * sub_601E4AC4
+ * SE_PLY_ref
  * RVA 0x001e4ac4   size 0x100   xrefs 14
  * ============================================================================ */
   const char *__fastcall sub_601E4AC4(int a1, int a2, unsigned int a3, int a4)
@@ -80717,7 +86804,7 @@
             v13 = "SE_PLY_FOOTNOTE_CS_PNGN";
           else
             v13 = v9;
-          return (const char *)sub_608147E8(*v11, v13, 0);
+          return (const char *)SE_PLY_FOOTNOTE_YOSHI_ref(*v11, v13, 0);
         }
       }
       else
@@ -84391,6 +90478,179 @@
   }
 
 /* ============================================================================
+ * balloon_shadowkun_ref
+ * RVA 0x001eaf3c   size 0x48c   xrefs 0
+ * ============================================================================ */
+  int __fastcall balloon_shadowkun_ref(int a1)
+  {
+    int ResArchiveById; // r9
+    int Model; // r5
+    _DWORD *v4; // r7
+    _DWORD *v5; // r0
+    char v6; // r12
+    int v7; // r4
+    int v8; // r10
+    int v9; // r5
+    unsigned int v10; // r7
+    int v11; // r0
+    int v12; // r3
+    int *v13; // r6
+    int v14; // r2
+    int v15; // r6
+    int v16; // r4
+    unsigned __int16 *v17; // r0
+    unsigned int v18; // r4
+    unsigned int v19; // r2
+    int v20; // r0
+    int v21; // r1
+    int *v22; // r5
+    int v23; // r5
+    int *v24; // r0
+    int *v25; // r5
+    int v26; // r5
+    int *v27; // r0
+    int v29; // [sp+18h] [bp-14h] BYREF
+    char *v30; // [sp+1Ch] [bp-10h]
+    int v31; // [sp+20h] [bp-Ch]
+    _BYTE v32[8]; // [sp+24h] [bp-8h] BYREF
+  
+    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v29 = 12321336;
+    v30 = "balloon_shadowkun";
+    Model = Resource_getModel(ResArchiveById, &v29, 6, 1, 0, 0, 0, 0, 1, 0);
+    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v5 = ModelWrapper_ctor(v4, Model, 1, 0, 0, 0, 0);
+    ModelWrapper_setup(v5, ResArchiveById, 0, 0);
+    *(_DWORD *)(a1 + 264) = v4;
+    if ( ((unsigned int)&unk_60C8B218 & ~(1612623876 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C8B218) )
+    {
+      off_60C8B21C = (_UNKNOWN *)12321336;
+      dword_60C8B220 = (int)"wait";
+      _cxa_guard_release_0(&unk_60C8B218);
+    }
+    v7 = *(_DWORD *)(ResArchiveById + 20);
+    (*((void (__fastcall **)(_UNKNOWN **))off_60C8B21C + 3))(&off_60C8B21C);
+    v8 = *(_DWORD *)(v7 + 64);
+    if ( v8 )
+    {
+      v9 = dword_60C8B220;
+      if ( dword_60C8B220 )
+        v10 = strlen_0(dword_60C8B220);
+      else
+        v10 = 0;
+      v11 = *(unsigned __int16 *)(v8 + 12);
+      v13 = (int *)(v8 + 8 + 16 * v11);
+      v12 = *v13;
+      if ( *(_DWORD *)(v8 + 8) < *v13 )
+      {
+        v14 = v8 + 8;
+        do
+        {
+          v15 = 0;
+          if ( v10 > v12 >> 3 )
+            v15 = (*(unsigned __int8 *)(v9 + v10 + ~(v12 >> 3)) >> (v12 & 7)) & 1;
+          v16 = *(_DWORD *)(v14 + 16 * v11);
+          v11 = *(unsigned __int16 *)(v14 + 16 * v11 + 2 * v15 + 4);
+          v13 = (int *)(v14 + 16 * v11);
+          v12 = *v13;
+        }
+        while ( v16 < *v13 );
+      }
+      v17 = (unsigned __int16 *)v13[2];
+      v18 = *v17;
+      v19 = v18;
+      if ( v10 < v18 )
+        v19 = v10;
+      if ( v19 )
+      {
+        v20 = memcmp_0(v17 + 1, v9);
+        v21 = v20;
+        if ( !v20 )
+          v21 = 1;
+        if ( v10 < v18 || v20 )
+          goto LABEL_24;
+      }
+      else if ( v10 < v18 )
+      {
+        goto LABEL_27;
+      }
+      v21 = 0;
+      if ( v18 < v10 )
+        v21 = -1;
+  LABEL_24:
+      if ( !v21 && (int)v13 - v8 - 24 >= 0 )
+        SkeletalAnim_play(**(_DWORD **)(*(_DWORD *)(a1 + 264) + 12), ResArchiveById, &off_60C8B21C);
+    }
+  LABEL_27:
+    *(_DWORD *)(**(_DWORD **)(a1 + 264) + 36) = 2;
+    *(_DWORD *)(**(_DWORD **)(a1 + 264) + 348) &= ~4u;
+    *(_BYTE *)(a1 + 272) = 0;
+    v22 = sub_601DB42C();
+    if ( *v22 == -1 )
+    {
+      v25 = sub_601DB46C();
+      if ( *v25 != -1 )
+      {
+        v30 = v32;
+        v29 = 12322272;
+        v31 = 8;
+        sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v29);
+        *v30 = MEMORY[0xB3BA34];
+        v29 = 12405644;
+        sub_6040E074(&v29, *v25, v25[1]);
+        v26 = *v25;
+        (*(void (__fastcall **)(int *))(v29 + 12))(&v29);
+        v27 = sub_601E0404(v26, -1, (int)v30);
+        *(_DWORD *)(a1 + 80) = v27[18];
+        *(_DWORD *)(a1 + 84) = v27[19];
+        *(_DWORD *)(a1 + 88) = v27[20];
+      }
+      *(_DWORD *)(a1 + 128) = 0;
+      *(_DWORD *)(a1 + 132) = 0;
+      *(_DWORD *)(a1 + 136) = 0;
+      *(_BYTE *)(a1 + 216) |= 2u;
+    }
+    else
+    {
+      v30 = v32;
+      v29 = 12322272;
+      v31 = 8;
+      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v29);
+      *v30 = MEMORY[0xB3BA34];
+      v29 = 12405644;
+      sub_6040E074(&v29, *v22, v22[1]);
+      v23 = *v22;
+      (*(void (__fastcall **)(int *))(v29 + 12))(&v29);
+      v24 = sub_601E0404(v23, -1, (int)v30);
+      *(_DWORD *)(a1 + 80) = v24[18];
+      *(_DWORD *)(a1 + 84) = v24[19];
+      *(_DWORD *)(a1 + 88) = v24[20];
+      if ( *(_BYTE *)(MEMORY[0xC8B144] + 63) || *(_BYTE *)(MEMORY[0xC8B144] + 64) )
+      {
+        *(_DWORD *)(a1 + 128) = 0;
+        *(_DWORD *)(a1 + 132) = 0;
+        *(_DWORD *)(a1 + 136) = 0;
+        *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 264) + 12) + 24) = 0;
+      }
+      else if ( sub_601D08B0() == 1 )
+      {
+        *(_DWORD *)(a1 + 128) = 0;
+        *(_DWORD *)(a1 + 132) = 0;
+        *(_DWORD *)(a1 + 136) = 0;
+      }
+      else
+      {
+        *(_DWORD *)(a1 + 128) = 1082130432;
+        *(_DWORD *)(a1 + 132) = 1082130432;
+        *(_DWORD *)(a1 + 136) = 1082130432;
+        *(_BYTE *)(a1 + 272) = 1;
+      }
+    }
+    *(_DWORD *)(a1 + 212) = 1128792064;
+    return 1;
+  }
+
+/* ============================================================================
  * Actor_shadoukun_build
  * RVA 0x001ec418   size 0x14c   xrefs 0
  * ============================================================================ */
@@ -85255,6 +91515,70 @@
   }
 
 /* ============================================================================
+ * W7_cs_appear00_ref
+ * RVA 0x001f4eb0   size 0x20c   xrefs 0
+ * ============================================================================ */
+  int __fastcall W7_cs_appear00_ref(int a1)
+  {
+    int v2; // r5
+    _DWORD *v3; // r0
+    float *v4; // r0
+    float v5; // s4
+    float v6; // s6
+    int v7; // r0
+    int v8; // r1
+    int v9; // r0
+    int result; // r0
+    _DWORD v11[2]; // [sp+4h] [bp-14h] BYREF
+    _DWORD v12[2]; // [sp+Ch] [bp-Ch] BYREF
+    int v13; // [sp+14h] [bp-4h]
+  
+    v2 = *(_DWORD *)(MEMORY[0xCC6D78] + 412);
+    sub_601F2688(a1, 0, 1, 0);
+    v12[0] = -1;
+    v12[1] = -1;
+    v13 = -1;
+    sub_601FA238(MEMORY[0xC8BF58], v12, 0x200000, v2);
+    *(_DWORD *)(a1 + 248) = v13;
+    *(_DWORD *)(a1 + 240) = v2;
+    *(_DWORD *)(a1 + 592) = 12;
+    sub_6019EC34(MEMORY[0xCC6D78] + 456, v12);
+    v3 = (_DWORD *)sub_601E0040(v12);
+    *(_DWORD *)(a1 + 568) = *v3;
+    *(_DWORD *)(a1 + 572) = v3[1];
+    *(_DWORD *)(a1 + 576) = v3[2];
+    v4 = (float *)sub_601FEE28(MEMORY[0xC8C188]);
+    v5 = v4[179];
+    v6 = v4[180];
+    *(float *)(a1 + 80) = v4[178] + 300.0;
+    *(float *)(a1 + 84) = v5 + 1000.0;
+    *(float *)(a1 + 88) = v6 + 900.0;
+    *(float *)(a1 + 840) = *(float *)(a1 + 568) + 0.0;
+    *(float *)(a1 + 844) = *(float *)(a1 + 572) + 300.0;
+    *(float *)(a1 + 848) = *(float *)(a1 + 576) + -500.0;
+    v7 = sub_608332B0(a1 + 80, a1 + 840);
+    *(_DWORD *)(a1 + 880) = v7;
+    *(_DWORD *)(a1 + 192) = v7;
+    *(_DWORD *)(a1 + 180) = v7;
+    *(_DWORD *)(a1 + 200) = 1091043328;
+    *(_BYTE *)(a1 + 932) = 1;
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 352))(a1);
+    sub_601E4C88(MEMORY[0xC8B13C], 90, (_DWORD *)(a1 + 80));
+    v8 = *(_DWORD *)(a1 + 772);
+    v9 = **(_DWORD **)(*(_DWORD *)(a1 + 768) + 12);
+    v11[0] = 12321336;
+    v11[1] = "W7_cs_appear00";
+    SkeletalAnim_play(v9, v8, v11);
+    AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)(a1 + 768) + 12) + 4, 0);
+    *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 768) + 12) + 24) = 0;
+    result = 929 - (int)*(float *)(**(_DWORD **)(*(_DWORD *)(a1 + 768) + 12) + 8);
+    *(_DWORD *)(a1 + 916) = result;
+    *(_DWORD *)(a1 + 920) = 150;
+    *(_DWORD *)(a1 + 596) = 0;
+    return result;
+  }
+
+/* ============================================================================
  * sub_601F664C
  * RVA 0x001f664c   size 0x15c   xrefs 1
  * ============================================================================ */
@@ -85373,6 +91697,52 @@
     if ( result == 1 )
       return EffectData_update(a1 + 776, v9, 0, a1 + 864);
     return result;
+  }
+
+/* ============================================================================
+ * W7_cs_wait00_ref
+ * RVA 0x001f77ec   size 0x15c   xrefs 0
+ * ============================================================================ */
+  int __fastcall W7_cs_wait00_ref(int a1)
+  {
+    __int64 v2; // r0
+    int v3; // r1
+    int v4; // r0
+    float v5; // s0
+    _DWORD v7[2]; // [sp+0h] [bp-8h] BYREF
+  
+    *(_BYTE *)(a1 + 932) = 1;
+    LODWORD(v2) = *(_DWORD *)(a1 + 240);
+    if ( (_DWORD)v2 == 4 )
+    {
+      sub_601F2688(a1, 0, 1, 0);
+      *(float *)(a1 + 84) = *(float *)(a1 + 572) + 200.0;
+      v5 = (float)(*(float *)(a1 + 576) + -250.0) + 0.0;
+      *(float *)(a1 + 88) = v5;
+      *(_DWORD *)(a1 + 80) = *(_DWORD *)(a1 + 568);
+      *(_DWORD *)(a1 + 180) = 0x40000000;
+      *(_DWORD *)(a1 + 192) = 0x40000000;
+      *(_DWORD *)(a1 + 632) = 1132068864;
+      *(_DWORD *)(a1 + 624) = 800;
+      (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 332))(a1, 800);
+      *(float *)(a1 + 200) = v5;
+      v2 = 0x100000000LL / *(int *)(a1 + 624);
+      *(_DWORD *)(a1 + 588) = v2;
+    }
+    else if ( (_DWORD)v2 == 6 )
+    {
+      sub_601F2688(a1, 0, 1, 0);
+      *(_BYTE *)(a1 + 933) = 1;
+      v3 = *(_DWORD *)(a1 + 772);
+      v4 = **(_DWORD **)(*(_DWORD *)(a1 + 768) + 12);
+      v7[0] = 12321336;
+      v7[1] = "W7_cs_wait00";
+      LODWORD(v2) = SkeletalAnim_play(v4, v3, v7);
+      *(float *)(a1 + 80) = *(float *)(a1 + 568) + 0.0;
+      *(float *)(a1 + 84) = *(float *)(a1 + 572) + 100.0;
+      *(float *)(a1 + 88) = *(float *)(a1 + 576) + -400.0;
+    }
+    return v2;
   }
 
 /* ============================================================================

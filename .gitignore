@@ -60,3 +60,6 @@ sweetdx/nso/main
 sweetdx/output*/
 sweetdx/out*/
 atmosphere/
+
+# romfs asset inventory listings, not reverse-engineering output
+*Tree.txt

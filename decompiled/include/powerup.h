@@ -157,6 +157,7 @@ int __fastcall Actor_resuta_build(int a1);  /* 0x0046e490 */
 int __fastcall sub_6046E5D4(int (__fastcall **a1)(_DWORD));  /* 0x0046e5d4 */
 bool __fastcall sub_6046E898(int a1);  /* 0x0046e898 */
 int __fastcall sub_6046EFC4(int a1);  /* 0x0046efc4 */
+int __fastcall I_moon_ref(int a1);  /* 0x0046ff08 */
 int __fastcall sub_60470DD4(_DWORD *a1);  /* 0x00470dd4 */
 int __fastcall sub_604714E4(int a1);  /* 0x004714e4 */
 int __fastcall sub_60471698(int *a1);  /* 0x00471698 */
@@ -261,6 +262,7 @@ int __fastcall sub_6047F124(int a1, int a2);  /* 0x0047f124 */
 bool __fastcall sub_6047F178(int a1, int a2);  /* 0x0047f178 */
 int __fastcall sub_6047F3B4(_DWORD *a1);  /* 0x0047f3b4 */
 int __fastcall sub_6047F660(int a1);  /* 0x0047f660 */
+int __fastcall sub_6047FA7C(int a1);  /* 0x0047fa7c */
 int __fastcall sub_6047FD68(int result);  /* 0x0047fd68 */
 int __fastcall sub_6047FDEC(int a1);  /* 0x0047fdec */
 

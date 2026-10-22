@@ -104,6 +104,7 @@ int __fastcall sub_608098AC(int a1, int a2, int a3, int a4);  /* 0x008098ac */
 int __fastcall SoundSystem_getSoundArchivePlayer(int a1);  /* 0x00809b54 */
 int __fastcall sub_60809B58(int a1, int a2);  /* 0x00809b58 */
 int __fastcall sub_60809B9C(int a1, int a2, int a3);  /* 0x00809b9c */
+bool __fastcall SE_VOC_PCH_LAST_BATTLE_HELP_ref(int a1, _DWORD *a2, int a3);  /* 0x00809d10 */
 int __fastcall sub_6080A0CC(_DWORD *a1);  /* 0x0080a0cc */
 int __fastcall sub_6080A170(int a1, int a2);  /* 0x0080a170 */
 int __fastcall sub_6080A1A0(int a1, int a2);  /* 0x0080a1a0 */
@@ -157,6 +158,7 @@ int __fastcall sub_60813048(int a1);  /* 0x00813048 */
 int __fastcall sub_60813578(_DWORD *a1);  /* 0x00813578 */
 int __fastcall sub_60813818(int a1, int a2, int a3, float *a4, int a5, int *a6);  /* 0x00813818 */
 int __fastcall sub_60813BE0(_DWORD *a1, int a2, int a3, float *a4, int *a5);  /* 0x00813be0 */
+int __fastcall STRM_BGM_LAST_BOSS2_ref(int a1, int a2, int *a3);  /* 0x00813d7c */
 int __fastcall sub_60814010(int a1, int a2, int *a3);  /* 0x00814010 */
 int __fastcall sub_608140D8(int a1, int a2, int a3, int *a4);  /* 0x008140d8 */
 void __fastcall sub_608141A0(int a1, int a2, int *a3, int *a4);  /* 0x008141a0 */
@@ -164,6 +166,7 @@ int __fastcall sub_60814590(int a1, int a2, int *a3);  /* 0x00814590 */
 int __fastcall sub_60814658(int a1, int a2, int a3, int *a4);  /* 0x00814658 */
 int __fastcall sub_60814720(int a1, int a2, int a3, int *a4);  /* 0x00814720 */
 unsigned int __fastcall sub_60814A1C(unsigned int result, unsigned int a2, int a3);  /* 0x00814a1c */
+int __fastcall PLAYER_SE_PLY_JUMP_ref(int *a1);  /* 0x00814e70 */
 int __fastcall sub_60814F00(_DWORD *a1);  /* 0x00814f00 */
 int __fastcall sub_60815080(int a1);  /* 0x00815080 */
 int __fastcall sub_608150FC(int a1);  /* 0x008150fc */
@@ -322,6 +325,7 @@ int __fastcall UserInfo_init(int a1);  /* 0x0082ca70 */
 int __fastcall UserInfo_getUid(int a1, _DWORD *a2);  /* 0x0082cad4 */
 int __fastcall Actor_otosukuroru_build(int a1);  /* 0x0082cb04 */
 int __fastcall sub_6082CB20(int a1, int a2);  /* 0x0082cb20 */
+int __fastcall sub_6082DAA0(int a1);  /* 0x0082daa0 */
 int __fastcall Actor_kun_build(int a1);  /* 0x0082de6c */
 int __fastcall Actor_grass_flower_Tag_build(int a1);  /* 0x0082e5ac */
 int __fastcall Actor_Bowser_exclusive_eriaOBJ_build(int a1);  /* 0x0082e818 */
@@ -332,6 +336,7 @@ int __fastcall Actor_shadou_read_Tag_2_build(int a1);  /* 0x0082ffe8 */
 int __fastcall sub_6083007C(int a1);  /* 0x0083007c */
 int __fastcall sub_6083038C(int a1, int a2);  /* 0x0083038c */
 int __fastcall sub_60830400(int a1, int a2);  /* 0x00830400 */
+int __fastcall STRM_BGM_SHORT_RESULT_ref(int a1);  /* 0x0083080c */
 int __fastcall Actor_zumu_build(int a1);  /* 0x00831cc0 */
 int __fastcall Actor_zumu_RDash_build(int a1);  /* 0x00831f80 */
 int __fastcall moveValueTo(int *a1, int *a2, int *a3, int a4);  /* 0x00832424 */
@@ -1639,7 +1644,7 @@ int __fastcall sub_608E8584(int a1, _DWORD *a2);  /* 0x008e8584 */
 int __fastcall sub_608E86B8(int a1, _DWORD *a2, int a3, int a4, int a5);  /* 0x008e86b8 */
 int __fastcall sub_608E8770(int a1, int a2, int a3);  /* 0x008e8770 */
 int __fastcall sub_608E8914(int a1, int a2);  /* 0x008e8914 */
-int __fastcall sub_608E8A4C(int a1, int a2);  /* 0x008e8a4c */
+int __fastcall sub_608E8A4C(int argc, const char **argv, const char **envp);  /* 0x008e8a4c */
 int __fastcall sub_608E8EFC(int a1, _DWORD *a2);  /* 0x008e8efc */
 void __fastcall sub_608E906C(int a1, int a2);  /* 0x008e906c */
 int __fastcall sub_608E93BC(int a1, _DWORD *a2);  /* 0x008e93bc */
@@ -2426,6 +2431,7 @@ int __fastcall sub_609885B8(int a1, char a2, char a3);  /* 0x009885b8 */
 int __fastcall sub_609898C0(int a1);  /* 0x009898c0 */
 unsigned int __fastcall sub_60989920(_DWORD *a1, int a2, int a3, int a4, unsigned int a5, int a6);  /* 0x00989920 */
 int __fastcall sub_609899A4(_DWORD *a1, int a2, int a3, int a4, int a5);  /* 0x009899a4 */
+int __fastcall play_ref(int a1, int a2);  /* 0x00989a38 */
 int __fastcall sub_60989CC8(float *a1, int a2);  /* 0x00989cc8 */
 int __fastcall sub_60989E30(_DWORD *a1);  /* 0x00989e30 */
 int __fastcall sub_6098A12C(int a1, signed int a2, int a3);  /* 0x0098a12c */

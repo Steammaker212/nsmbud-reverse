@@ -1,11 +1,18 @@
 # Naming method, and what it can and cannot support
 
-Coverage is **9.7%** of 48,331 functions. That number is deliberately conservative: a wrong
+Coverage is **14.0%** of 48,331 functions. That number is deliberately conservative: a wrong
 name is worse than no name, because it propagates into every decompiled caller and into the
 generated headers. This document records what each naming method actually proves, so the
 low coverage is understandable rather than mysterious.
 
 ## What works
+
+### String references -- 1,370 <STRING>_ref names
+
+A function that references a string is named after the longest common token prefix of all its
+strings, plus _ref. This asserts only that the string is referenced. A first attempt that
+claimed more was audited, found wrong in every case checked, and fully reverted. See
+[NAMING_RULES.md](NAMING_RULES.md) for why that matters.
 
 ### Developer debug tags -- 694 actor constructors
 

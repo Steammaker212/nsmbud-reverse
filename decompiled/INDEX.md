@@ -12,7 +12,12 @@ symbol names applied so cross-calls read by name.
 
 ## Naming
 
-Only 11.2% of functions are named, and that is deliberate. [NAMING.md](NAMING.md) and [ACTOR_NAMES.md](ACTOR_NAMES.md)
+Only 14.0% of functions are named, and that is deliberate. [NAMING.md](NAMING.md) and [ACTOR_NAMES.md](ACTOR_NAMES.md) record what the names mean.
+
+Most of the remaining names end in `_ref`, which claims only that the function
+references that string -- not that it is the thing the string names. See
+[NAMING_RULES.md](NAMING_RULES.md) for why that distinction was worth throwing
+away 2,450 names over.
 records which methods work, which do not, and why a wrong name is worse than
 none.
 
@@ -62,8 +67,8 @@ all.
 
 | Subsystem | Functions | Prototypes |
 |---|---|---|
-| `player/` | 438 | 381 |
-| `powerup/` | 322 | 255 |
-| `actors/` | 4,375 | 2,927 |
-| `systems/` | 5,393 | 3,411 |
-| `libs/` | 3,352 | 2,521 |
+| `player/` | 452 | 392 |
+| `powerup/` | 328 | 257 |
+| `actors/` | 4,669 | 3,139 |
+| `systems/` | 5,935 | 3,789 |
+| `libs/` | 3,358 | 2,527 |
