@@ -9,6 +9,16 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 void _nnDetailNintendoSdkRuntimeObjectFile();
 void Actor__afterExecute();
 int Actor__befreDraw();
@@ -395,7 +405,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ActiveColldierMgr_removeFromList3(v3, v2);
     ActiveCollider_dtor(v2);
     Actor__dtor(a1);
-    return __operator_delete();
+    return __operator_delete(0);
   }
 
 /* ============================================================================

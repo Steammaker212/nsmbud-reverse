@@ -9,6 +9,16 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _DWORD *__fastcall sub_6021F408(int a1, int a2, int a3);
 _DWORD *__fastcall sub_6020AB88(int a1, int a2);
 int sub_6020AE98();
@@ -32656,7 +32666,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_6092D260(v2 + 456);
       if ( *(_DWORD *)(v2 + 352) )
       {
-        __operator_delete();
+        __operator_delete(0);
         *(_DWORD *)(v2 + 352) = 0;
       }
       nullsub_113(v2 + 168);
@@ -33414,7 +33424,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(a1 + 4628) = 2306104;
       *(_DWORD *)(a1 + 4632) = 0;
       *(_DWORD *)(a1 + 4620) = 12424452;
-      sead::SafeStringBase<char>::operator=(a1 + 4600, &v5);
+      sead__SafeStringBase_char__operator_assign(a1 + 4600, &v5);
       *(_DWORD *)(a1 + 4608) = 1;
       v2 = *(_DWORD **)(MEMORY[0xCD0B40] + 36);
       if ( *(_DWORD *)(MEMORY[0xCD0B40] + 32) > 5u )
@@ -33427,7 +33437,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 4696) = 2306132;
     *(_DWORD *)(a1 + 4700) = 0;
     *(_DWORD *)(a1 + 4688) = 12424452;
-    sead::SafeStringBase<char>::operator=(a1 + 4668, &v5);
+    sead__SafeStringBase_char__operator_assign(a1 + 4668, &v5);
     *(_DWORD *)(a1 + 4676) = 1;
     v3 = *(_DWORD **)(MEMORY[0xCD0B40] + 36);
     if ( *(_DWORD *)(MEMORY[0xCD0B40] + 32) > 5u )
@@ -34630,7 +34640,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = 1065353216;
     v23 = 1065353216;
     if ( sub_604377C4(a1[3]) == 1 )
-      sead::SafeStringBase<char>::operator=(v28, &unk_60C8D948);
+      sead__SafeStringBase_char__operator_assign(v28, &unk_60C8D948);
     sub_604377B0(a1[3]);
     v24 = v4;
     v25 = v5;
@@ -39848,7 +39858,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = 0;
     v15 = 0;
     v5[1] = "Effect/Eset.param";
-    sead::SafeStringBase<char>::operator=(v6, v5);
+    sead__SafeStringBase_char__operator_assign(v6, v5);
     v7 = a2;
     *a1 = sub_608E6154(*(_DWORD *)(MEMORY[0xCCEBD0] + 28), v6);
     result = v13 / 0x14;
@@ -126133,7 +126143,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           (*(void (__fastcall **)(_BYTE *, _DWORD *))(*v6 + 44))(v11, v6);
         else
           (*(void (__fastcall **)(_BYTE *, _DWORD *))(*v6 + 40))(v11, v6);
-        sead::SafeStringBase<char>::operator=(&v12, v11);
+        sead__SafeStringBase_char__operator_assign(&v12, v11);
         ResArchiveById = Profile__getResArchiveById(a1[3], 0);
         v10[0] = 12321336;
         v10[1] = v13;

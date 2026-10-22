@@ -131,6 +131,13 @@ def main():
     run("1j/9 operator arity (repo tree)",
         [sys.executable, "scripts/fix_operator_arity.py",
          os.path.join(REPO, "decompiled"), "--write"])
+    # The opposite mismatch: a bare C++ `operator delete` is printed with NO argument, so the rename
+    # leaves a zero-argument C call against a one-parameter declaration. 26 sites, and they were the
+    # first error in 3 files. Runs on both the source trees and the repo copy for the same reason the
+    # arity fix does -- the region files are recopied from decompiled_clean every build.
+    for tag, target in (("1k/9", CLEAN), ("1l/9", PERFN), ("1m/9", os.path.join(REPO, "decompiled"))):
+        run("%s operator zero-arg" % tag,
+            [sys.executable, "scripts/fix_operator_zero_arg.py", target, "--write"])
 
     # 2. assemble corpus
     run("2/7 build corpus", [sys.executable, "scripts/make_decompiled_corpus.py"])

@@ -9,6 +9,16 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _DWORD *__fastcall sub_60603510(int a1);
 _DWORD *__fastcall FlagSwitchBase__FlagSwitchBase(_DWORD *a1);
 _DWORD *__fastcall sub_6068B390(_DWORD *result);
@@ -86228,7 +86238,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v15[2]; // [sp+18h] [bp-8h] BYREF
   
     *a1 = a2;
-    sead::SafeStringBase<char>::operator=(a1 + 1, a3 + 8);
+    sead__SafeStringBase_char__operator_assign(a1 + 1, a3 + 8);
     Model2 = Resource_getModel2(a2, a3, 0, 1, 0, 0, 0, 0, 0);
     v9 = (int *)__operator_new_al(48, 0, 4);
     v10 = ModelWrapper_ctor(v9, Model2, 0, 1, 0, 0, 0);
@@ -187058,7 +187068,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 = "item_icon.8";
   LABEL_9:
       v21 = v7;
-      sead::SafeStringBase<char>::operator=((int)v22, (int)&v20);
+      sead__SafeStringBase_char__operator_assign((int)v22, (int)&v20);
     }
     sub_60479910(a1 + 6856, MEMORY[0xC7B3E4]);
     v8 = (int *)(a1 + 6100);

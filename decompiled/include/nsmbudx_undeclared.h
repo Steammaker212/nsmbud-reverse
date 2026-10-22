@@ -686,6 +686,7 @@ extern const char aWipeinPlayernu[];  /* 2 reference(s) */
 /* ---- static arrays reached through a class scope ----
  * `Kanjibo::AnimNamesWait[i]` is a static array, not a member of an object. C has no
  * scopes, so the flattened name is the honest equivalent and the index still works. */
+extern const uint16_t Kanjibo__AnimNamesWait[];  /* 10 reference(s) */
 extern const uint16_t agl__DTA[];  /* 1 reference(s) */
 
 /* ---- tables the code indexes ----
@@ -700,5 +701,12 @@ extern uint32_t RollingHill_typeInfos[];  /* 5 reference(s) */
  * function's ADDRESS, so an unprototyped declaration is exactly right here: it makes the
  * identifier a function designator, which decays to a pointer, and the cast in the source
  * then supplies the signature the call uses. No arity is claimed. */
+
+/* ---- ARM condition-flag pseudo-registers ----
+ * IDA writes `_ZF = a == b;` and then tests `!_ZF` in the next statement. These are not program
+ * variables; they are the condition codes being materialised as a value. A file-scope int is enough,
+ * because each is always assigned before it is read. */
+int _CF;  /* 5 assignment(s) */
+int _ZF;  /* 20 assignment(s) */
 
 #endif /* NSMBUDX_UNDECLARED_H */

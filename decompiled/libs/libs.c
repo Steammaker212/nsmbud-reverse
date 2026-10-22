@@ -9,6 +9,17 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+int __fastcall sead__SafeStringBase_char__operator_assign(int result, int a2);
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 float *__fastcall sub_608002B0(int a1);
 void sub_608039A4();
 _BYTE *__fastcall sub_60800F08(float *a1, int **a2);
@@ -22389,7 +22400,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[67] = 8491620;
     a1[68] = 0;
     a1[65] = 12755572;
-    sead::SafeStringBase<char>::operator=((int)(a1 + 60), (int)v4);
+    sead__SafeStringBase_char__operator_assign((int)(a1 + 60), (int)v4);
     a1[62] = 1;
     v2 = *(int **)(MEMORY[0xCD0B40] + 36);
     if ( *(_DWORD *)(MEMORY[0xCD0B40] + 32) > 0x11u )
@@ -23938,7 +23949,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[60] = 8500788;
     a1[61] = 0;
     a1[58] = 12756148;
-    sead::SafeStringBase<char>::operator=((int)(a1 + 53), (int)v4);
+    sead__SafeStringBase_char__operator_assign((int)(a1 + 53), (int)v4);
     a1[55] = 2;
     v2 = *(int **)(MEMORY[0xCD0B40] + 36);
     if ( *(_DWORD *)(MEMORY[0xCD0B40] + 32) > 0x14u )
@@ -24504,7 +24515,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         memset(&v55[5], 0, 28);
         v56 = 1;
         v57 = 0;
-        sead::SafeStringBase<char>::operator=(v55, v58);
+        sead__SafeStringBase_char__operator_assign(v55, v58);
         v4 = (int (__fastcall ***)(_DWORD, int))sead_ResourceMgr_OpenFileRelated(MEMORY[0xCCEF7C], v55);
         if ( _cxa_guard_acquire_0(13220652) )
         {
@@ -28080,7 +28091,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13 = 0;
       v20 = 1;
       v21 = 0;
-      sead::SafeStringBase<char>::operator=(v9, &v22);
+      sead__SafeStringBase_char__operator_assign(v9, &v22);
       v18 = v6;
       v11 = a2;
       v13 = 0x2000;
@@ -28183,7 +28194,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v21 = 0;
       v28 = 1;
       v29 = 0;
-      sead::SafeStringBase<char>::operator=(v17, &v30);
+      sead__SafeStringBase_char__operator_assign(v17, &v30);
       v26 = v7;
       v19 = a2;
       while ( (unsigned __int8)aEffect_1[v8] != v6 )
@@ -28436,7 +28447,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         qmemcpy(v8, v9, v13);
         *((_BYTE *)v8 + v13) = v11;
       }
-      sead::SafeStringBase<char>::operator=(v7 + 4, &v25);
+      sead__SafeStringBase_char__operator_assign(v7 + 4, &v25);
       ++*(_DWORD *)(a1 + 12);
       v23 = sub_6041FD48(a1, *(_DWORD **)a1, v7);
       *(_DWORD *)a1 = v23;
@@ -28562,7 +28573,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v47 = v60;
         v46 = v56;
         v39 = v3;
-        sead::SafeStringBase<char>::operator=(v38, &v51);
+        sead__SafeStringBase_char__operator_assign(v38, &v51);
         v42 = 0x2000;
         v41 = 0x2000;
         v40 = v3;
@@ -29627,7 +29638,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v125[13] = 0;
     v125[5] = 4096;
     v116 = "System/Agl/agl_resource.Nin_NX_NVN.release.sarc";
-    sead::SafeStringBase<char>::operator=(v125, &v115);
+    sead__SafeStringBase_char__operator_assign(v125, &v115);
     v26 = (int (__fastcall ***)(_DWORD, int))sead_ResourceMgr_OpenFileRelated(MEMORY[0xCCEF7C], v125);
     if ( _cxa_guard_acquire_0(13220644) )
     {
@@ -29821,7 +29832,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v61 = 0;
     v68 = 1;
     v69 = 0;
-    sead::SafeStringBase<char>::operator=(&v56, &v79);
+    sead__SafeStringBase_char__operator_assign(&v56, &v79);
     v66 = v5;
     v59 = a2;
     v61 = 0x2000;
@@ -29895,7 +29906,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v51 = v74;
       v50 = v70;
       v43 = v9;
-      sead::SafeStringBase<char>::operator=(v42, &v79);
+      sead__SafeStringBase_char__operator_assign(v42, &v79);
       v46 = 0x2000;
       v45 = 0x2000;
       v44 = v9;
@@ -180574,7 +180585,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_608DC1A8(int a1, int a2)
   {
-    sead::SafeStringBase<char>::operator=(a1 + 36, a2);
+    sead__SafeStringBase_char__operator_assign(a1 + 36, a2);
     *(_DWORD *)(a1 + 4) = 1;
     return 1;
   }
@@ -190595,7 +190606,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(int *))(v18 + 12))(&v18);
     v13[0] = 12321336;
     v13[1] = v19;
-    sead::SafeStringBase<char>::operator=(v14, v13);
+    sead__SafeStringBase_char__operator_assign(v14, v13);
     result = sub_608E6154(v4, v14);
     *(_DWORD *)(a2 + 36) = v15;
     *(_DWORD *)(a2 + 40) = v16;
@@ -192948,7 +192959,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v7[0] = 12321336;
       v7[1] = a3;
-      sead::SafeStringBase<char>::operator=(a1 + 37, v7);
+      sead__SafeStringBase_char__operator_assign(a1 + 37, v7);
     }
     return a1;
   }
@@ -193376,7 +193387,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 488) = 0;
     v8 = 12321336;
     v9 = a3;
-    sead::SafeStringBase<char>::operator=(a1 + 348, &v8);
+    sead__SafeStringBase_char__operator_assign(a1 + 348, &v8);
     sead__MethodTreeNode__lock_((struct sead_MethodTreeNode *)(a1 + 312));
     v5 = *(void (__fastcall ****)(_DWORD, int, int))(a1 + 384);
     if ( v5 )
@@ -193393,7 +193404,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v8 = 12321336;
       v9 = a3;
-      sead::SafeStringBase<char>::operator=(a1 + 348, &v8);
+      sead__SafeStringBase_char__operator_assign(a1 + 348, &v8);
     }
     sead__MethodTreeNode__lock_((struct sead_MethodTreeNode *)(a1 + 392));
     *(_DWORD *)(a1 + 440) = a1;
@@ -193403,7 +193414,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sead__MethodTreeNode__unlock_((struct sead_MethodTreeNode *)(a1 + 392));
     v8 = 12321336;
     v9 = "calcCore_";
-    sead::SafeStringBase<char>::operator=(a1 + 428, &v8);
+    sead__SafeStringBase_char__operator_assign(a1 + 428, &v8);
     return a1;
   }
 
@@ -195195,26 +195206,26 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[147] = 0;
     v17 = 12321336;
     v18 = "sead::RootCalc";
-    sead::SafeStringBase<char>::operator=(a1 + 19, &v17);
+    sead__SafeStringBase_char__operator_assign(a1 + 19, &v17);
     v17 = 12321336;
     v18 = "sead::SysCalc";
-    sead::SafeStringBase<char>::operator=(a1 + 39, &v17);
+    sead__SafeStringBase_char__operator_assign(a1 + 39, &v17);
     v17 = 12321336;
     v18 = "sead::AppCalc";
-    sead::SafeStringBase<char>::operator=(a1 + 59, &v17);
+    sead__SafeStringBase_char__operator_assign(a1 + 59, &v17);
     v17 = 12321336;
     v18 = "sead::RootDraw";
-    sead::SafeStringBase<char>::operator=(a1 + 79, &v17);
+    sead__SafeStringBase_char__operator_assign(a1 + 79, &v17);
     v17 = 12321336;
     v18 = "sead::SysDraw";
-    sead::SafeStringBase<char>::operator=(a1 + 99, &v17);
+    sead__SafeStringBase_char__operator_assign(a1 + 99, &v17);
     v17 = 12321336;
     v18 = "sead::AppDraw";
-    sead::SafeStringBase<char>::operator=(a1 + 119, &v17);
+    sead__SafeStringBase_char__operator_assign(a1 + 119, &v17);
     v17 = 12321336;
     v2 = (struct sead_MethodTreeNode *)(a1 + 50);
     v18 = "sead::AppDrawFinal";
-    sead::SafeStringBase<char>::operator=(a1 + 139, &v17);
+    sead__SafeStringBase_char__operator_assign(a1 + 139, &v17);
     v3 = (struct sead_MethodTreeNode *)(a1 + 30);
     sead__MethodTreeNode__pushBackChild((int)(a1 + 10), a1 + 30);
     sead__MethodTreeNode__pushBackChild((int)(a1 + 10), a1 + 50);
@@ -195844,7 +195855,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[25] = 1;
     v13[0] = 12321336;
     v13[1] = a3;
-    sead::SafeStringBase<char>::operator=(a1 + 9, v13);
+    sead__SafeStringBase_char__operator_assign(a1 + 9, v13);
     return a1;
   }
 
@@ -196310,7 +196321,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[12] = v6;
     v15[0] = 12321336;
     v15[1] = "NullFader";
-    sead::SafeStringBase<char>::operator=(v6 + 9, v15);
+    sead__SafeStringBase_char__operator_assign(v6 + 9, v15);
     *(_DWORD *)(a1[12] + 96) = 4;
     result = (_DWORD *)__operator_new_al(0x18u, v2, 4);
     v8 = a1[38];
@@ -196720,7 +196731,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       do
       {
         if ( *v7 )
-          sead::SafeStringBase<char>::operator=(*v7 + 16, v5 + 9);
+          sead__SafeStringBase_char__operator_assign(*v7 + 16, v5 + 9);
         ++v7;
         --v6;
       }
@@ -197470,7 +197481,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               do
               {
                 if ( *v23 )
-                  sead::SafeStringBase<char>::operator=(*v23 + 16, v21 + 9);
+                  sead__SafeStringBase_char__operator_assign(*v23 + 16, v21 + 9);
                 ++v23;
                 --v22;
               }
@@ -199110,7 +199121,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = 0;
     v15 = 0;
     v16 = 0;
-    sead::SafeStringBase<char>::operator=((int)v7, a3);
+    sead__SafeStringBase_char__operator_assign((int)v7, a3);
     v8 = a2;
     v9 = 4096;
     v10 = 4096;
@@ -206552,7 +206563,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v60 = 0;
         v61 = 0;
         v62 = 0;
-        sead::SafeStringBase<char>::operator=(v53, &v49);
+        sead__SafeStringBase_char__operator_assign(v53, &v49);
         v54 = *(_DWORD *)(a3 + 20);
         v55 = -32;
         result = sub_608E8914(MEMORY[0xCCEBD0], (int)v53);
@@ -206752,7 +206763,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 qmemcpy((void *)v45, (const void *)v49, v30);
                 *(_BYTE *)(v38 + v30) = v39;
               }
-              sead::SafeStringBase<char>::operator=(v41 + 20, &v44);
+              sead__SafeStringBase_char__operator_assign(v41 + 20, &v44);
             }
           }
   LABEL_71:
@@ -207189,7 +207200,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v10 != 16 );
       }
-      sead::SafeStringBase<char>::operator=(a1 + 20, a2 + 1);
+      sead__SafeStringBase_char__operator_assign(a1 + 20, a2 + 1);
       v11 = a2[3];
       if ( v11 )
         v11 = sub_608FC14C(a1, (int *)&v15, (int)a2);
@@ -207215,61 +207226,61 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     nn__oe__GetDesiredLanguage((struct nn_oe *)v2);
     v0 = 0;
     nn__settings__LanguageCode__Make(v3, 0);
-    if ( !nn::settings::operator==(v3, v2) )
+    if ( !nn__settings__operator_eq(v3, v2) )
     {
       v0 = 1;
       nn__settings__LanguageCode__Make(v3, 1);
-      if ( !nn::settings::operator==(v3, v2) )
+      if ( !nn__settings__operator_eq(v3, v2) )
       {
         nn__settings__LanguageCode__Make(v3, 13);
-        if ( !nn::settings::operator==(v3, v2) )
+        if ( !nn__settings__operator_eq(v3, v2) )
         {
           nn__settings__LanguageCode__Make(v3, 14);
-          if ( !nn::settings::operator==(v3, v2) )
+          if ( !nn__settings__operator_eq(v3, v2) )
           {
             nn__settings__LanguageCode__Make(v3, 12);
             v0 = 2;
-            if ( !nn::settings::operator==(v3, v2) )
+            if ( !nn__settings__operator_eq(v3, v2) )
             {
               v0 = 2;
               nn__settings__LanguageCode__Make(v3, 2);
-              if ( !nn::settings::operator==(v3, v2) )
+              if ( !nn__settings__operator_eq(v3, v2) )
               {
                 nn__settings__LanguageCode__Make(v3, 3);
-                if ( !nn::settings::operator==(v3, v2) )
+                if ( !nn__settings__operator_eq(v3, v2) )
                 {
                   nn__settings__LanguageCode__Make(v3, 4);
-                  if ( !nn::settings::operator==(v3, v2) )
+                  if ( !nn__settings__operator_eq(v3, v2) )
                   {
                     nn__settings__LanguageCode__Make(v3, 5);
-                    if ( !nn::settings::operator==(v3, v2) )
+                    if ( !nn__settings__operator_eq(v3, v2) )
                     {
                       nn__settings__LanguageCode__Make(v3, 8);
-                      if ( !nn::settings::operator==(v3, v2) )
+                      if ( !nn__settings__operator_eq(v3, v2) )
                       {
                         nn__settings__LanguageCode__Make(v3, 9);
-                        if ( !nn::settings::operator==(v3, v2) )
+                        if ( !nn__settings__operator_eq(v3, v2) )
                         {
                           nn__settings__LanguageCode__Make(v3, 10);
-                          if ( !nn::settings::operator==(v3, v2) )
+                          if ( !nn__settings__operator_eq(v3, v2) )
                           {
                             nn__settings__LanguageCode__Make(v3, 7);
                             v0 = 3;
-                            if ( !nn::settings::operator==(v3, v2) )
+                            if ( !nn__settings__operator_eq(v3, v2) )
                             {
                               nn__settings__LanguageCode__Make(v3, 6);
                               v0 = 4;
-                              if ( !nn::settings::operator==(v3, v2) )
+                              if ( !nn__settings__operator_eq(v3, v2) )
                               {
                                 nn__settings__LanguageCode__Make(v3, 15);
-                                if ( !nn::settings::operator==(v3, v2) )
+                                if ( !nn__settings__operator_eq(v3, v2) )
                                 {
                                   nn__settings__LanguageCode__Make(v3, 11);
                                   v0 = 5;
-                                  if ( !nn::settings::operator==(v3, v2) )
+                                  if ( !nn__settings__operator_eq(v3, v2) )
                                   {
                                     nn__settings__LanguageCode__Make(v3, 16);
-                                    v0 = nn::settings::operator==(v3, v2);
+                                    v0 = nn__settings__operator_eq(v3, v2);
                                     if ( v0 )
                                       return 5;
                                   }
@@ -207304,64 +207315,64 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     nn__oe__GetDesiredLanguage((struct nn_oe *)v2);
     v0 = 0;
     nn__settings__LanguageCode__Make(v3, 0);
-    if ( !nn::settings::operator==(v3, v2) )
+    if ( !nn__settings__operator_eq(v3, v2) )
     {
       v0 = 1;
       nn__settings__LanguageCode__Make(v3, 1);
-      if ( !nn::settings::operator==(v3, v2) )
+      if ( !nn__settings__operator_eq(v3, v2) )
       {
         nn__settings__LanguageCode__Make(v3, 12);
-        if ( !nn::settings::operator==(v3, v2) )
+        if ( !nn__settings__operator_eq(v3, v2) )
         {
           nn__settings__LanguageCode__Make(v3, 2);
           v0 = 3;
-          if ( !nn::settings::operator==(v3, v2) )
+          if ( !nn__settings__operator_eq(v3, v2) )
           {
             nn__settings__LanguageCode__Make(v3, 13);
-            if ( !nn::settings::operator==(v3, v2) )
+            if ( !nn__settings__operator_eq(v3, v2) )
             {
               nn__settings__LanguageCode__Make(v3, 3);
               v0 = 4;
-              if ( !nn::settings::operator==(v3, v2) )
+              if ( !nn__settings__operator_eq(v3, v2) )
               {
                 nn__settings__LanguageCode__Make(v3, 4);
                 v0 = 5;
-                if ( !nn::settings::operator==(v3, v2) )
+                if ( !nn__settings__operator_eq(v3, v2) )
                 {
                   nn__settings__LanguageCode__Make(v3, 5);
                   v0 = 2;
-                  if ( !nn::settings::operator==(v3, v2) )
+                  if ( !nn__settings__operator_eq(v3, v2) )
                   {
                     nn__settings__LanguageCode__Make(v3, 14);
-                    if ( !nn::settings::operator==(v3, v2) )
+                    if ( !nn__settings__operator_eq(v3, v2) )
                     {
                       nn__settings__LanguageCode__Make(v3, 6);
                       v0 = 10;
-                      if ( !nn::settings::operator==(v3, v2) )
+                      if ( !nn__settings__operator_eq(v3, v2) )
                       {
                         nn__settings__LanguageCode__Make(v3, 11);
-                        if ( !nn::settings::operator==(v3, v2) )
+                        if ( !nn__settings__operator_eq(v3, v2) )
                         {
                           nn__settings__LanguageCode__Make(v3, 15);
-                          if ( !nn::settings::operator==(v3, v2) )
+                          if ( !nn__settings__operator_eq(v3, v2) )
                           {
                             nn__settings__LanguageCode__Make(v3, 16);
-                            if ( !nn::settings::operator==(v3, v2) )
+                            if ( !nn__settings__operator_eq(v3, v2) )
                             {
                               nn__settings__LanguageCode__Make(v3, 7);
                               v0 = 9;
-                              if ( !nn::settings::operator==(v3, v2) )
+                              if ( !nn__settings__operator_eq(v3, v2) )
                               {
                                 nn__settings__LanguageCode__Make(v3, 8);
                                 v0 = 7;
-                                if ( !nn::settings::operator==(v3, v2) )
+                                if ( !nn__settings__operator_eq(v3, v2) )
                                 {
                                   nn__settings__LanguageCode__Make(v3, 9);
                                   v0 = 6;
-                                  if ( !nn::settings::operator==(v3, v2) )
+                                  if ( !nn__settings__operator_eq(v3, v2) )
                                   {
                                     nn__settings__LanguageCode__Make(v3, 10);
-                                    v0 = nn::settings::operator==(v3, v2);
+                                    v0 = nn__settings__operator_eq(v3, v2);
                                     if ( v0 )
                                       return 8;
                                   }
@@ -207940,7 +207951,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN4sead14SafeStringBaseIcEaSERKS1_
  * RVA 0x008fdb48   size 0xc   xrefs 234
  * ============================================================================ */
-  int __fastcall sead::SafeStringBase<char>::operator=(int result, int a2)
+  int __fastcall sead__SafeStringBase_char__operator_assign(int result, int a2)
   {
     *(_DWORD *)(result + 4) = *(_DWORD *)(a2 + 4);
     return result;
@@ -212301,7 +212312,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v23 = 0;
     v24 = 0;
     v25 = 0;
-    sead::SafeStringBase<char>::operator=((int)v14, a2);
+    sead__SafeStringBase_char__operator_assign((int)v14, a2);
     v15 = *(_DWORD *)(a2 + 24);
     v16 = *(_DWORD *)(a2 + 28);
     v19 = *(_DWORD *)(a2 + 32);
@@ -212964,13 +212975,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a4 )
     {
   LABEL_2:
-      sead::SafeStringBase<char>::operator=(&v40, a3);
+      sead__SafeStringBase_char__operator_assign(&v40, a3);
       v9 = 1;
     }
     else
     {
   LABEL_37:
-      sead::SafeStringBase<char>::operator=(&v40, &v36);
+      sead__SafeStringBase_char__operator_assign(&v40, &v36);
       v9 = 0;
       a4 = 0;
     }
@@ -216128,7 +216139,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   LABEL_20:
       v22[1] = v12;
       v22[0] = 12321336;
-      sead::SafeStringBase<char>::operator=((int)&v23, (int)v22);
+      sead__SafeStringBase_char__operator_assign((int)&v23, (int)v22);
       v20 = v23;
     }
     else
@@ -232105,7 +232116,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = *(_DWORD *)(a4 + 4);
     *a1 = v8;
-    return sead::SafeStringBase<char>::operator=(a1 + 1, v7);
+    return sead__SafeStringBase_char__operator_assign(a1 + 1, v7);
   }
 
 /* ============================================================================
@@ -235061,7 +235072,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8[11] = 0;
     *(_DWORD *)(a1 + 4) = v8;
     v8[8] = 0;
-    sead::SafeStringBase<char>::operator=(*(_DWORD *)(a1 + 4), a2);
+    sead__SafeStringBase_char__operator_assign(*(_DWORD *)(a1 + 4), a2);
     *(_DWORD *)(*(_DWORD *)(a1 + 4) + 12) = a1;
     *(_DWORD *)(*(_DWORD *)(a1 + 4) + 36) = 4;
     *(_DWORD *)(*(_DWORD *)(a1 + 4) + 48) = 0;
@@ -235308,8 +235319,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v11 = *(_DWORD *)(v31 + 8);
         if ( *(_DWORD *)(*(_DWORD *)v6 + 24) > i )
           v10 += 28 * i;
-        sead::SafeStringBase<char>::operator=(v10, &v29);
-        sead::SafeStringBase<char>::operator=(v10 + 8, v28);
+        sead__SafeStringBase_char__operator_assign(v10, &v29);
+        sead__SafeStringBase_char__operator_assign(v10 + 8, v28);
         *(_WORD *)(v10 + 24) = 1;
         if ( v11 >= 1 )
         {
@@ -235601,7 +235612,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = a1[151];
     if ( a1[150] > a2 )
       v6 += 12 * a2;
-    sead::SafeStringBase<char>::operator=(v6 + 4, a3);
+    sead__SafeStringBase_char__operator_assign(v6 + 4, a3);
     result = a1[1];
     v8 = *(_DWORD *)(result + 16);
     if ( v8 )
@@ -235612,7 +235623,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10 = *v9;
         if ( *(v9 - 1) > a2 )
           v10 += 12 * a2;
-        result = sead::SafeStringBase<char>::operator=(v10 + 4, a3);
+        result = sead__SafeStringBase_char__operator_assign(v10 + 4, a3);
         v9 += 234;
         --v8;
       }
@@ -235764,7 +235775,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = a1[153];
     if ( a1[152] > a2 )
       v6 += 12 * a2;
-    sead::SafeStringBase<char>::operator=(v6 + 4, a3);
+    sead__SafeStringBase_char__operator_assign(v6 + 4, a3);
     result = a1[1];
     v8 = *(_DWORD *)(result + 16);
     if ( v8 )
@@ -235775,7 +235786,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10 = *v9;
         if ( *(v9 - 1) > a2 )
           v10 += 12 * a2;
-        result = sead::SafeStringBase<char>::operator=(v10 + 4, a3);
+        result = sead__SafeStringBase_char__operator_assign(v10 + 4, a3);
         v9 += 234;
         --v8;
       }
@@ -235887,7 +235898,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = a1[159];
     if ( a1[158] > a2 )
       v6 += 12 * a2;
-    sead::SafeStringBase<char>::operator=(v6 + 4, a3);
+    sead__SafeStringBase_char__operator_assign(v6 + 4, a3);
     result = a1[1];
     v8 = *(_DWORD *)(result + 16);
     if ( v8 )
@@ -235898,7 +235909,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10 = *v9;
         if ( *(v9 - 1) > a2 )
           v10 += 12 * a2;
-        result = sead::SafeStringBase<char>::operator=(v10 + 4, a3);
+        result = sead__SafeStringBase_char__operator_assign(v10 + 4, a3);
         v9 += 234;
         --v8;
       }
@@ -236050,7 +236061,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = a1[161];
     if ( a1[160] > a2 )
       v6 += 12 * a2;
-    sead::SafeStringBase<char>::operator=(v6 + 4, a3);
+    sead__SafeStringBase_char__operator_assign(v6 + 4, a3);
     result = a1[1];
     v8 = *(_DWORD *)(result + 16);
     if ( v8 )
@@ -236061,7 +236072,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10 = *v9;
         if ( *(v9 - 1) > a2 )
           v10 += 12 * a2;
-        result = sead::SafeStringBase<char>::operator=(v10 + 4, a3);
+        result = sead__SafeStringBase_char__operator_assign(v10 + 4, a3);
         v9 += 234;
         --v8;
       }
@@ -236173,7 +236184,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = a1[155];
     if ( a1[154] > a2 )
       v6 += 12 * a2;
-    sead::SafeStringBase<char>::operator=(v6 + 4, a3);
+    sead__SafeStringBase_char__operator_assign(v6 + 4, a3);
     result = a1[1];
     v8 = *(_DWORD *)(result + 16);
     if ( v8 )
@@ -236184,7 +236195,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10 = *v9;
         if ( *(v9 - 1) > a2 )
           v10 += 12 * a2;
-        result = sead::SafeStringBase<char>::operator=(v10 + 4, a3);
+        result = sead__SafeStringBase_char__operator_assign(v10 + 4, a3);
         v9 += 234;
         --v8;
       }
@@ -236336,7 +236347,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = a1[157];
     if ( a1[156] > a2 )
       v6 += 12 * a2;
-    sead::SafeStringBase<char>::operator=(v6 + 4, a3);
+    sead__SafeStringBase_char__operator_assign(v6 + 4, a3);
     result = a1[1];
     v8 = *(_DWORD *)(result + 16);
     if ( v8 )
@@ -236347,7 +236358,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10 = *v9;
         if ( *(v9 - 1) > a2 )
           v10 += 12 * a2;
-        result = sead::SafeStringBase<char>::operator=(v10 + 4, a3);
+        result = sead__SafeStringBase_char__operator_assign(v10 + 4, a3);
         v9 += 234;
         --v8;
       }
@@ -238265,7 +238276,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v15 = *(_DWORD *)(v12[20] + 32);
         v31 = 12321336;
         v32 = (const char *)(v15 + 16);
-        sead::SafeStringBase<char>::operator=(v12 + 4, &v31);
+        sead__SafeStringBase_char__operator_assign(v12 + 4, &v31);
         v16 = v13[1];
         if ( v16 )
         {
@@ -260983,7 +260994,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v16 > *(unsigned __int8 *)(a1 + 334) )
       v17 += 92 * *(unsigned __int8 *)(a1 + 334);
     *(_DWORD *)(a1 + 316) = *(_DWORD *)(v17 + 20);
-    sead::SafeStringBase<char>::operator=(a1 + 308, a3);
+    sead__SafeStringBase_char__operator_assign(a1 + 308, a3);
     sub_60920BBC((int *)a1);
     *(_WORD *)(a1 + 338) = a5;
     return 338;
@@ -267318,9 +267329,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v14; // [sp+30h] [bp+20h]
   
     v6 = agl_default_ref(v11);
-    sead::SafeStringBase<char>::operator=(v6, a1 + 36);
-    sead::SafeStringBase<char>::operator=(v12, a1 + 36);
-    sead::SafeStringBase<char>::operator=(v13, a2);
+    sead__SafeStringBase_char__operator_assign(v6, a1 + 36);
+    sead__SafeStringBase_char__operator_assign(v12, a1 + 36);
+    sead__SafeStringBase_char__operator_assign(v13, a2);
     v14 = a1 + 120;
     v7 = 0;
     if ( sub_60967F54(*(_DWORD *)off_60C79B8C, a3, v11, 0x1000000) == 1 )
@@ -267332,7 +267343,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10[1] = 11778612;
         v9[0] = 0;
         v9[1] = a1;
-        sead::SafeStringBase<char>::operator=(v10, a1 + 120);
+        sead__SafeStringBase_char__operator_assign(v10, a1 + 120);
         (**(void (__fastcall ***)(int, _DWORD *))(*(_DWORD *)(a1 + 116) + 4))(*(_DWORD *)(a1 + 116) + 4, v9);
       }
     }
@@ -267358,9 +267369,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v17; // [sp+438h] [bp+20h]
   
     v6 = agl_default_ref(v14);
-    sead::SafeStringBase<char>::operator=(v6, a1 + 9);
-    sead::SafeStringBase<char>::operator=(v15, a1 + 9);
-    sead::SafeStringBase<char>::operator=(v16, a2);
+    sead__SafeStringBase_char__operator_assign(v6, a1 + 9);
+    sead__SafeStringBase_char__operator_assign(v15, a1 + 9);
+    sead__SafeStringBase_char__operator_assign(v16, a2);
     v17 = a1 + 30;
     v7 = *(_DWORD *)off_60C79B8C;
     v8 = sub_60968528(*(_DWORD *)off_60C79B8C, v14);
@@ -267373,7 +267384,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60968868(v7, v8);
     (*(void (__fastcall **)(_DWORD *))(a1[9] + 12))(a1 + 9);
     sub_604209A4(v13, (int)"%%AGL_ROOT%%/tools/temporary/param_temp.b%s");
-    sead::SafeStringBase<char>::operator=(v16, v13);
+    sead__SafeStringBase_char__operator_assign(v16, v13);
     v9 = 0;
     v17 = 0;
     if ( sub_60968528(v7, v14) >= 0 )
@@ -276582,7 +276593,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = *(unsigned __int16 *)(a3 + 26);
     v26[0] = 12321336;
     v26[1] = 11778612;
-    sead::SafeStringBase<char>::operator=(v26, a5);
+    sead__SafeStringBase_char__operator_assign(v26, a5);
     if ( v10 <= 1 )
       v10 = 1;
     if ( v11 > v12 )
@@ -281384,7 +281395,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           sub_6091BBEC(&v50, v49, *v10, a5);
           v13 = &v52[4 * v46];
           v13[1] = v50;
-          sead::SafeStringBase<char>::operator=(v13 + 2, &v51);
+          sead__SafeStringBase_char__operator_assign(v13 + 2, &v51);
           v14 = -1;
           v15 = *(_DWORD *)(*v45 + 24);
           if ( v15 )
@@ -281594,7 +281605,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v37[4 * v33] = v7;
           v12 = &v37[4 * v33];
           v12[1] = v10;
-          sead::SafeStringBase<char>::operator=(v12 + 2, v8 + 1);
+          sead__SafeStringBase_char__operator_assign(v12 + 2, v8 + 1);
           ++v33;
         }
         v8 += 4;
@@ -282046,7 +282057,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 {
   LABEL_53:
                   *(_DWORD *)(v22 + 4 + 16 * v37) = v49;
-                  sead::SafeStringBase<char>::operator=(v22 + 4 + 16 * v37 + 4, v50);
+                  sead__SafeStringBase_char__operator_assign(v22 + 4 + 16 * v37 + 4, v50);
                   v42 = *(_DWORD *)(v22 + 260);
                   *(_DWORD *)(v22 + 260) = v42 + 1;
                   *(_BYTE *)(v22 + 4 + 16 * v42 + 12) = v23;
@@ -293150,7 +293161,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v12 == MEMORY[0xB3BA34] )
           goto LABEL_9;
       }
-      sead::SafeStringBase<char>::operator=(&v37, a3 + 24);
+      sead__SafeStringBase_char__operator_assign(&v37, a3 + 24);
     }
     if ( !*(_BYTE *)(a3 + 40) )
     {
@@ -293376,7 +293387,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v12 == MEMORY[0xB3BA34] )
           goto LABEL_15;
       }
-      sead::SafeStringBase<char>::operator=(&v38, a2 + 6);
+      sead__SafeStringBase_char__operator_assign(&v38, a2 + 6);
     }
     v14 = *(_DWORD *)(MEMORY[0xCD0B50] + 60);
     v25 = 12321336;
@@ -293392,7 +293403,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v35 = 0;
     v36 = 0;
     v37 = 0;
-    sead::SafeStringBase<char>::operator=(&v25, &v38);
+    sead__SafeStringBase_char__operator_assign(&v25, &v38);
     v29 = v14;
     v30 = a2[9];
     v15 = sub_608E6154(a1[5], &v25);
@@ -296373,7 +296384,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v3 = "Layer(GPUCalc)";
   LABEL_7:
         v4[1] = v3;
-        result = sead::SafeStringBase<char>::operator=(result + 4, v4);
+        result = sead__SafeStringBase_char__operator_assign(result + 4, v4);
         break;
       default:
         return result;
@@ -315083,7 +315094,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = 12405792;
     v15[0] = dword_60C79F94 + 8;
     v19[52] = 0;
-    sead::SafeStringBase<char>::operator=((int)v20, (int)a3);
+    sead__SafeStringBase_char__operator_assign((int)v20, (int)a3);
     v21 = a2;
     v22 = a2;
     v10 = 12321336;
@@ -316016,7 +316027,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *((_BYTE *)a1 + 120) = a6;
     v16 = 12321336;
     v17 = a4;
-    sead::SafeStringBase<char>::operator=((int)(a1 + 23), (int)&v16);
+    sead__SafeStringBase_char__operator_assign((int)(a1 + 23), (int)&v16);
     *((_BYTE *)a1 + 124) = 1;
     *((_BYTE *)a1 + 127) = a7;
     a1[13] = (*(int (__fastcall **)(int *, int))(*a1 + 80))(a1, a3);
@@ -316409,7 +316420,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 20) = a2;
     v5[0] = 12321336;
     v5[1] = a3;
-    sead::SafeStringBase<char>::operator=(a1 + 92, v5);
+    sead__SafeStringBase_char__operator_assign(a1 + 92, v5);
     result = *(unsigned __int8 *)(a1 + 130) | 8;
     *(_BYTE *)(a1 + 130) = result;
     return result;
@@ -332729,7 +332740,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v25 = "?";
         if ( v19 > v21 )
           v22 += v20;
-        sead::SafeStringBase<char>::operator=(v22, &v24);
+        sead__SafeStringBase_char__operator_assign(v22, &v24);
         v19 = *a1;
         ++v21;
         v20 += 8;
@@ -332738,7 +332749,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v24 = 12321336;
     v25 = a2;
-    return sead::SafeStringBase<char>::operator=(a1 + 4, &v24);
+    return sead__SafeStringBase_char__operator_assign(a1 + 4, &v24);
   }
 
 /* ============================================================================

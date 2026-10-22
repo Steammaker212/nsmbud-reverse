@@ -7,6 +7,16 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _DWORD *__fastcall sub_604551B4(int a1);
 _DWORD *__fastcall sub_60459270(_DWORD *result);
 _BYTE *__fastcall sub_60455400(int a1);
@@ -4606,7 +4616,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18 = 0;
     v19 = 0;
     v20 = 0;
-    sead::SafeStringBase<char>::operator=(v9, a2);
+    sead__SafeStringBase_char__operator_assign(v9, a2);
     v10 = a1[2];
     v11 = a1[1];
     sub_608E8914(MEMORY[0xCCEBD0], v9);
@@ -10519,7 +10529,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor(a1 + 162);
     StageActor__dtor((StageActor *)a1);
-    return __operator_delete();
+    return __operator_delete(0);
   }
 
 /* ============================================================================
@@ -15916,7 +15926,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor(a1 + 162);
     StageActor__dtor((Actor *)a1);
-    return __operator_delete();
+    return __operator_delete(0);
   }
 
 /* ============================================================================
@@ -21982,7 +21992,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v23 = 0;
     (*((void (__fastcall **)(const char **))*a2 + 3))(a2);
     sub_6017D5C0(v10, "Layout/anim_text/%s.bin", a2[1]);
-    sead::SafeStringBase<char>::operator=(v11, v10);
+    sead__SafeStringBase_char__operator_assign(v11, v10);
     v13 = a3;
     v12 = a3;
     v19 = v24;
@@ -22712,7 +22722,7 @@ static inline unsigned int uxtb16(unsigned int x)
         qmemcpy(v8, v9, v13);
         *((_BYTE *)v8 + v13) = v11;
       }
-      sead::SafeStringBase<char>::operator=(v7 + 4, &v25);
+      sead__SafeStringBase_char__operator_assign(v7 + 4, &v25);
       ++*(_DWORD *)(a1 + 12);
       v23 = sub_6041FD48(a1, *(_DWORD **)a1, v7);
       *(_DWORD *)a1 = v23;
@@ -23155,7 +23165,7 @@ static inline unsigned int uxtb16(unsigned int x)
         qmemcpy(v10, v11, v15);
         *((_BYTE *)v10 + v15) = v13;
       }
-      sead::SafeStringBase<char>::operator=(v7 + 4, &v29);
+      sead__SafeStringBase_char__operator_assign(v7 + 4, &v29);
       ++*(_DWORD *)(a1 + 12);
       v27 = sub_6041FD48(a1, *(_DWORD **)a1, v7);
       *(_DWORD *)a1 = v27;
@@ -23617,7 +23627,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v28 = a1[878];
         if ( a1[877] > a2 )
           v28 += 20 * a2;
-        sead::SafeStringBase<char>::operator=(v28 + 4, a3);
+        sead__SafeStringBase_char__operator_assign(v28 + 4, a3);
         if ( a4 )
         {
           if ( a4 == 2 )
@@ -23658,7 +23668,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v24 = a1[878];
     if ( a1[877] > a2 )
       v24 += 20 * a2;
-    sead::SafeStringBase<char>::operator=(v24 + 4, a3);
+    sead__SafeStringBase_char__operator_assign(v24 + 4, a3);
     result = a1[878];
     if ( a1[877] > a2 )
       result += 20 * a2;

@@ -67,6 +67,31 @@ def rewrite_template_call(match):
 # Restricted to a trailing `[` so nothing else is caught.
 QUALIFIED_ARRAY = re.compile(r"\b([A-Za-z_]\w*(?:::[A-Za-z_~]\w*)+)\b(?=\s*\[)")
 
+# A qualified OPERATOR call: sead::SafeStringBase<char>::operator=(dst, src).
+#
+# The components above only allow word characters, and `operator=` is a keyword plus punctuation, so
+# every one of these survived the rewrite and stayed C++. Matched as its own case; the template
+# argument is optional because both `sead::X::operator=` and `sead::X<char>::operator=` occur.
+QUALIFIED_OPERATOR = re.compile(
+    r"\b([A-Za-z_]\w*(?:::[A-Za-z_~]\w*)+)"
+    r"(<[A-Za-z_0-9:_,\.\* ]*>)?"
+    r"::operator\s*(=|\[\]|\(\)|new\[\]|delete\[\]|new|delete|\+|-|\*|/|==|!=|<<|>>)(?=\s*\()"
+)
+
+OPNAME = {"=": "assign", "[]": "index", "()": "call", "new[]": "new_array",
+          "delete[]": "delete_array", "new": "new", "delete": "delete",
+          "+": "add", "-": "sub", "*": "mul", "/": "div", "==": "eq", "!=": "ne",
+          "<<": "shl", ">>": "shr"}
+
+
+def rewrite_qualified_operator(match):
+    head, targs, op = match.group(1), match.group(2) or "", match.group(3)
+    flat = head.replace("::", "__")
+    if targs:
+        inner = targs[1:-1].strip().replace("::", "_").replace("*", "ptr").replace(",", "_").replace(" ", "")
+        flat += "_" + inner
+    return "%s__operator_%s" % (flat, OPNAME.get(op, "op"))
+
 
 # Destructor spelling, applied to the captured run before the :: replacement.
 DTOR = re.compile(r"^(.*?)::~(\w+)$")
@@ -147,10 +172,11 @@ def transform(text):
     for is_code, chunk in split_code_mask(text):
         if is_code:
             new, k0 = TEMPLATE_CALL.subn(rewrite_template_call, chunk)
+            new, kq = QUALIFIED_OPERATOR.subn(rewrite_qualified_operator, new)
             new, k1 = QUALIFIED_ARRAY.subn(rewrite_qualified, new)
             new, k = CALL.subn(rewrite_qualified, new)
             new, k2 = OPERATOR.subn(rewrite_operator, new)
-            changed += k0 + k1 + k + k2
+            changed += k0 + kq + k1 + k + k2
             out.append(new)
         else:
             out.append(chunk)

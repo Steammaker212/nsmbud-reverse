@@ -38,13 +38,23 @@ FLOATSLOT = re.compile(r"\b(float_s\d+)\b")
 STRINGARRAY = re.compile(r"\b(a[A-Z][A-Za-z0-9_]{4,})\b")
 # `Kanjibo::AnimNamesWait[...]` -- a static array reached through a class scope. In C a scope is only
 # part of a name, so this flattens to Kanjibo__AnimNamesWait and becomes an ordinary array.
+#
+# The ALREADY-FLATTENED form must be matched too. fix_qualified_names runs before this generator, so by
+# the time it looks, the text reads `Kanjibo__AnimNamesWait[` and the `::` pattern finds nothing -- which
+# is why this was declared but not declared: 10 uses, no declaration, the file still failed. The
+# flattened form is recognisable by the `Word__Word` shape the rewriting convention produces.
 SCOPED_ARRAY = re.compile(r"\b([A-Za-z_]\w*)::([A-Za-z_]\w*)\s*\[")
+FLAT_SCOPED_ARRAY = re.compile(r"\b([A-Z]\w*__[A-Z]\w*)\s*\[")
 # Bare table names the decompiler references that no header declares.
 TABLE = re.compile(r"\b([A-Za-z_]\w*_(?:typeInfos|rotations|Table|table))\b")
 # `sub_X` used as a CAST TARGET rather than called: ((void (*)(...))sub_60106C90)(...).
 # A prototype does not give that expression an address; an address-pinned array does not either, so
 # these are declared as function designators -- see the note emitted in the header.
 FN_PTR = re.compile(r"\)\s*\(\s*(sub_[0-9A-Fa-f]{6,8})\s*\)")
+# IDA leaks ARM condition-flag pseudo-registers into the C text: `_ZF = v3 == 0;` then `if (!_ZF)`.
+# These are not variables of the program, they are artefacts of how the condition codes were read, so a
+# local declaration is the honest fix -- the value is genuinely used as a boolean at that point.
+FLAGREG = re.compile(r"\b(_[ZNCFV]{1,2})\s*=(?!=)")
 
 
 def declared_names(headers_dir, self_name):
@@ -81,7 +91,7 @@ def main(argv):
     have = declared_names(inc, os.path.basename(out))
 
     used = {"nullsub": {}, "algn": {}, "simd": {}, "floats": {}, "str": {},
-            "scoped": {}, "table": {}, "fnptr": {}}
+            "scoped": {}, "table": {}, "fnptr": {}, "flags": {}}
     for dp, _, fs in os.walk(root):
         for f in fs:
             if not f.endswith(".c"):
@@ -101,10 +111,14 @@ def main(argv):
             for m in SCOPED_ARRAY.finditer(text):
                 flat = "%s__%s" % (m.group(1), m.group(2))
                 used["scoped"][flat] = used["scoped"].get(flat, 0) + 1
+            for m in FLAT_SCOPED_ARRAY.finditer(text):
+                used["scoped"][m.group(1)] = used["scoped"].get(m.group(1), 0) + 1
             for m in TABLE.finditer(text):
                 used["table"][m.group(1)] = used["table"].get(m.group(1), 0) + 1
             for m in FN_PTR.finditer(text):
                 used["fnptr"][m.group(1)] = used["fnptr"].get(m.group(1), 0) + 1
+            for m in FLAGREG.finditer(text):
+                used["flags"][m.group(1)] = used["flags"].get(m.group(1), 0) + 1
 
     lines = [
         "/* NSMBU Deluxe (Switch) v1.0.0 -- callables and data the corpus uses that no header declared",
@@ -215,10 +229,18 @@ def main(argv):
                      % (name, used["fnptr"][name]))
         n_fnptr += 1
 
+    lines += ["", "/* ---- ARM condition-flag pseudo-registers ----", " * IDA writes `_ZF = a == b;` and then tests `!_ZF` in the next statement. These are not program", " * variables; they are the condition codes being materialised as a value. A file-scope int is enough,", " * because each is always assigned before it is read. */"]
+    n_flag = 0
+    for name in sorted(used["flags"]):
+        if name in have:
+            continue
+        lines.append("int %s;  /* %d assignment(s) */" % (name, used["flags"][name]))
+        n_flag += 1
+
     lines += ["", "#endif /* NSMBUDX_UNDECLARED_H */", ""]
 
-    print("declared: nullsub %d, algn %d, simd %d, float %d, str %d, scoped %d, table %d, fnptr %d"
-          % (n_null, n_algn, n_simd, n_float, n_str, n_scoped, n_table, n_fnptr))
+    print("declared: nullsub %d, algn %d, simd %d, float %d, str %d, scoped %d, table %d, fnptr %d, flags %d"
+          % (n_null, n_algn, n_simd, n_float, n_str, n_scoped, n_table, n_fnptr, n_flag))
     if write:
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, "w", encoding="utf-8", newline="\n") as fh:

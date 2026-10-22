@@ -34,5 +34,5 @@ int __fastcall sub_6013B808(int a1);
 /* line: 11, address: 0x6013b874 */   *(_DWORD *)a1 = 12321080;
 /* line: 12, address: 0x6013b878 */   CollisionMgr_dtor(a1 + 648);
 /* line: 13, address: 0x6013b880 */   StageActor__dtor((StageActor *)a1);
-/* line: 14 */   return __operator_delete();
+/* line: 14 */   return __operator_delete(0);
 /* line: 15 */ }

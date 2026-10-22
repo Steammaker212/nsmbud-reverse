@@ -3592,6 +3592,7 @@ int __fastcall sub_608FCA38(int result, int a2, int a3, int a4);  /* 0x008fca38 
 int __fastcall sub_608FCB98(int a1, int *a2);  /* 0x008fcb98 */
 int __fastcall sub_608FD324(int *a1, _DWORD *a2);  /* 0x008fd324 */
 int __fastcall sub_608FD64C(char *a1, int *a2, int a3, char *a4, int a5, _DWORD *a6, _DWORD *a7, bool *a8);  /* 0x008fd64c */
+int __fastcall sead__SafeStringBase_char__operator_assign(int result, int a2);  /* 0x008fdb48 */
 int __fastcall sub_608FDB54(int result, int a2);  /* 0x008fdb54 */
 int __fastcall sub_608FDB60(int a1, _DWORD *a2);  /* 0x008fdb60 */
 int __fastcall sub_608FDC20(int a1, _DWORD *a2);  /* 0x008fdc20 */

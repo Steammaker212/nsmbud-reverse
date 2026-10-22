@@ -7,6 +7,16 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _BYTE *__fastcall sub_60502210(int a1, _DWORD *a2, int a3);
 _DWORD *__fastcall sub_604B63E0(_DWORD *result, int a2, unsigned int a3);
 _DWORD *__fastcall sub_60498EB0(_DWORD *a1);
@@ -7556,7 +7566,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3768, &v20, 11);
     v20 = 12321336;
     v21 = (int)"ChallengeSelect";
-    sead::SafeStringBase<char>::operator=(a1 + 4780, &v20);
+    sead__SafeStringBase_char__operator_assign(a1 + 4780, &v20);
     sub_6048D158(a1);
     ListEntry_setDword172(a1 + 3768, a1 + 5864, "SE_SYS_PAUSE");
     if ( ((unsigned int)&unk_60C9FD54 & ~(1615374508 << v8) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9FD54) )
@@ -8245,7 +8255,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = sub_60492B4C(0);
       v17 = 12321336;
       v18 = v5;
-      sead::SafeStringBase<char>::operator=(v19, &v17);
+      sead__SafeStringBase_char__operator_assign(v19, &v17);
       v6 = sub_60492B4C(1);
       v17 = 12321336;
       v18 = v6;
@@ -14607,7 +14617,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 964, &v13, 14);
     v13 = 12321336;
     v14 = "ChallengeSelectWindow";
-    sead::SafeStringBase<char>::operator=(a1 + 1217, &v13);
+    sead__SafeStringBase_char__operator_assign(a1 + 1217, &v13);
     a1[1228] = 2;
     a1[1229] = 2;
     a1[1230] = 2;
@@ -22074,7 +22084,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3636, 11545616, 9);
     v8 = 12321336;
     v9 = "ChangeTeam";
-    sead::SafeStringBase<char>::operator=(a1 + 4648, &v8);
+    sead__SafeStringBase_char__operator_assign(a1 + 4648, &v8);
     v8 = 12321336;
     v9 = "Pa_Return_00";
     v10 = 12321336;
@@ -25744,19 +25754,19 @@ static inline unsigned int uxtb16(unsigned int x)
     v11[1] = 11778612;
     if ( a4 == 3 )
     {
-      sead::SafeStringBase<char>::operator=(v13, &dword_60CA12E0);
-      sead::SafeStringBase<char>::operator=(v12, &dword_60CA12D8);
+      sead__SafeStringBase_char__operator_assign(v13, &dword_60CA12E0);
+      sead__SafeStringBase_char__operator_assign(v12, &dword_60CA12D8);
       v8 = &off_60CA12F8;
     }
     else
     {
       if ( a4 != 2 )
         return result;
-      sead::SafeStringBase<char>::operator=(v13, &dword_60CA12D8);
-      sead::SafeStringBase<char>::operator=(v12, &dword_60CA12E0);
+      sead__SafeStringBase_char__operator_assign(v13, &dword_60CA12D8);
+      sead__SafeStringBase_char__operator_assign(v12, &dword_60CA12E0);
       v8 = &off_60CA12F0;
     }
-    sead::SafeStringBase<char>::operator=(v11, v8);
+    sead__SafeStringBase_char__operator_assign(v11, v8);
     v9 = 0;
     ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 2u, v11, (int)&dword_60CA1340, 0);
     if ( a3 >= 7 )
@@ -25845,7 +25855,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v27 = 12321336;
         v28 = 11778612;
-        sead::SafeStringBase<char>::operator=(&v27, &dword_60CA12E0);
+        sead__SafeStringBase_char__operator_assign(&v27, &dword_60CA12E0);
         if ( v5 >= 7 )
           v5 = 0;
         v6 = arr_dword_60BFDD80[v5];
@@ -25868,7 +25878,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v27 = 12321336;
         v28 = 11778612;
-        sead::SafeStringBase<char>::operator=(&v27, &dword_60CA12E0);
+        sead__SafeStringBase_char__operator_assign(&v27, &dword_60CA12E0);
         if ( v5 >= 7 )
           v5 = 0;
         v10 = arr_dword_60BFDD80[v5];
@@ -30936,7 +30946,7 @@ static inline unsigned int uxtb16(unsigned int x)
         return result;
       v6 = &off_60CA1768;
     }
-    sead::SafeStringBase<char>::operator=(v14, v6);
+    sead__SafeStringBase_char__operator_assign(v14, v6);
     v7 = (_DWORD *)(a1 + 64);
     if ( a3 == 1 )
     {
@@ -33122,7 +33132,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60502210(a1 + 3608, &v4, 8);
       v3[0] = 12321336;
       v3[1] = "CoinEditMenu";
-      sead::SafeStringBase<char>::operator=(a1 + 4620, v3);
+      sead__SafeStringBase_char__operator_assign(a1 + 4620, v3);
       ListEntry_setBool208(a1 + 3608, &unk_60B02E70, 1);
       ListEntry_setBool208(a1 + 3608, &unk_60B02E74, 1);
       sub_604B1478(a1);
@@ -36983,7 +36993,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v4[0] = 12321336;
       v4[1] = sub_60473DA4(v2 + 4);
-      sead::SafeStringBase<char>::operator=(v5, v4);
+      sead__SafeStringBase_char__operator_assign(v5, v4);
     }
     a1[520] = sub_60502E60(a1, &dword_60CA2500);
     a1[521] = sub_60502E60(a1, &dword_60CA2508);
@@ -36998,7 +37008,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[530] = sub_60502E60(a1, &dword_60CA2550);
     a1[531] = sub_60502E60(a1, &dword_60CA2558);
     sub_60502210(a1, a1 + 520, 17);
-    sead::SafeStringBase<char>::operator=(a1 + 253, v5);
+    sead__SafeStringBase_char__operator_assign(a1 + 253, v5);
     sub_6050292C(a1, 15);
     sub_60502994(a1, 15);
     sub_60502960(a1, 15);
@@ -38004,7 +38014,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v15[0] = 12321336;
           v15[1] = "ModelPlayWindow_WinText_03";
-          sead::SafeStringBase<char>::operator=(&v16, v15);
+          sead__SafeStringBase_char__operator_assign(&v16, v15);
         }
         MessageQueue_postType3(&v16, a1[915], 0);
         MessageQueue_postType3(&v16, a1[916], 0);
@@ -38704,10 +38714,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = a1 + 6;
     a1[7] = 11778612;
     a1[8] = a2;
-    sead::SafeStringBase<char>::operator=(a1, a4);
-    sead::SafeStringBase<char>::operator=(v8, a5);
-    sead::SafeStringBase<char>::operator=(v9, a6);
-    sead::SafeStringBase<char>::operator=(v10, a3);
+    sead__SafeStringBase_char__operator_assign(a1, a4);
+    sead__SafeStringBase_char__operator_assign(v8, a5);
+    sead__SafeStringBase_char__operator_assign(v9, a6);
+    sead__SafeStringBase_char__operator_assign(v10, a3);
     return a1;
   }
 
@@ -42141,7 +42151,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 564, v5, 11);
     v5[0] = 12321336;
     v5[1] = (int)"CourseSelectFree";
-    sead::SafeStringBase<char>::operator=(a1 + 1576, v5);
+    sead__SafeStringBase_char__operator_assign(a1 + 1576, v5);
     v5[0] = 0;
     ListEntry_setBool208(a1 + 564, v5, 1);
     *(_BYTE *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
@@ -45513,7 +45523,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 1014, 11546304, 4);
     v7[0] = 12321336;
     v7[1] = "CourseSelectGuide";
-    sead::SafeStringBase<char>::operator=(v1 + 1267, v7);
+    sead__SafeStringBase_char__operator_assign(v1 + 1267, v7);
     ListEntry_setDword172(v2, 11546304, "SE_SYS_MAP_VIEW_MODE");
     ListEntry_setDword172(v2, 11546308, "SE_SYS_MAP_VIEW_QUIT");
     v3 = v1 + 1027;
@@ -50045,7 +50055,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3800, &v7, 11);
     v7 = 12321336;
     v8 = "CourseSelectVS";
-    sead::SafeStringBase<char>::operator=(a1 + 4812, &v7);
+    sead__SafeStringBase_char__operator_assign(a1 + 4812, &v7);
     if ( ((unsigned int)&unk_60CA4D00 & ~(1615645932 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA4D00) )
     {
       dword_60CA4E0C = 0;
@@ -50285,7 +50295,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = InOut_Pos_ref(0);
     v10 = 12321336;
     v11 = (const char *)v5;
-    sead::SafeStringBase<char>::operator=(&v12, &v10);
+    sead__SafeStringBase_char__operator_assign(&v12, &v10);
     v6 = InOut_Pos_ref(1);
     v10 = 12321336;
     v11 = (const char *)v6;
@@ -50383,7 +50393,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(0);
     v20 = 12321336;
     v21 = (const char *)v6;
-    sead::SafeStringBase<char>::operator=(&v22, &v20);
+    sead__SafeStringBase_char__operator_assign(&v22, &v20);
     v7 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(1);
     v20 = 12321336;
     v21 = (const char *)v7;
@@ -51139,7 +51149,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v23[1] = 11778612;
     v18 = 12321336;
     v19 = Out_Select_Mode_ref(0);
-    sead::SafeStringBase<char>::operator=(&v20, &v18);
+    sead__SafeStringBase_char__operator_assign(&v20, &v18);
     v13 = Out_Select_Mode_ref(1);
     v18 = 12321336;
     v19 = v13;
@@ -54543,7 +54553,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3900, &v6, 12);
     v6 = 12321336;
     v7 = "CourseSelVSWin";
-    sead::SafeStringBase<char>::operator=(a1 + 4912, &v6);
+    sead__SafeStringBase_char__operator_assign(a1 + 4912, &v6);
     *(_BYTE *)(a1 + 4945) = 1;
     return 4945;
   }
@@ -55897,7 +55907,7 @@ static inline unsigned int uxtb16(unsigned int x)
                                1);
     v5 = 12321336;
     v6 = "CourseSelVSConfirm";
-    sead::SafeStringBase<char>::operator=(a1 + 4652, &v5);
+    sead__SafeStringBase_char__operator_assign(a1 + 4652, &v5);
     *(_DWORD *)(List_getNthNode(a1 + 3692, 1) - *(_DWORD *)(a1 + 3704) + 192) = 0;
     *(_DWORD *)(List_getNthNode(a1 + 3692, 2) - *(_DWORD *)(a1 + 3704) + 192) = 0;
     v5 = 0;
@@ -56985,7 +56995,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3692, &v8, 14);
     v8 = 12321336;
     v9 = "CourseSelVSRandom";
-    sead::SafeStringBase<char>::operator=(a1 + 4704, &v8);
+    sead__SafeStringBase_char__operator_assign(a1 + 4704, &v8);
     v8 = 1;
     ListEntry_setDword172(a1 + 3692, &v8, "SE_SYS_COURSE_IN");
     v8 = 0;
@@ -66715,7 +66725,7 @@ static inline unsigned int uxtb16(unsigned int x)
       case 5:
         v3 = &dword_60CA5AA4;
   LABEL_7:
-        sead::SafeStringBase<char>::operator=(&v5, v3);
+        sead__SafeStringBase_char__operator_assign(&v5, v3);
         break;
       default:
         break;
@@ -67071,7 +67081,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return result;
     v48 = 12321336;
     v49 = MEMORY[0xC5CB34];
-    sead::SafeStringBase<char>::operator=(&v48, &dword_60CA5AAC);
+    sead__SafeStringBase_char__operator_assign(&v48, &dword_60CA5AAC);
     v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 7);
     if ( v4 )
     {
@@ -67168,7 +67178,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_35:
     if ( *(int *)(MEMORY[0xC9A1E0] + 724) >= 1 )
     {
-      sead::SafeStringBase<char>::operator=(&v48, &dword_60CA5AC4);
+      sead__SafeStringBase_char__operator_assign(&v48, &dword_60CA5AC4);
       v24 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 9);
       if ( v24 )
       {
@@ -67199,7 +67209,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( *(float *)(a1 + 62864) >= 100.0 )
     {
-      sead::SafeStringBase<char>::operator=(&v48, &dword_60CA5ABC);
+      sead__SafeStringBase_char__operator_assign(&v48, &dword_60CA5ABC);
       v31 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 9);
       if ( v31 )
       {
@@ -67233,7 +67243,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v30 )
       (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)v29 + 104))(v29);
   LABEL_63:
-    sead::SafeStringBase<char>::operator=(&v48, &dword_60CA5AB4);
+    sead__SafeStringBase_char__operator_assign(&v48, &dword_60CA5AB4);
     v36 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 8);
     if ( v36 )
     {
@@ -70274,7 +70284,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 14396, a1 + 16484, 17);
     v10 = 12321336;
     v11 = "Help";
-    sead::SafeStringBase<char>::operator=(a1 + 15408, &v10);
+    sead__SafeStringBase_char__operator_assign(a1 + 15408, &v10);
     if ( ((unsigned int)&unk_60CA60C8 & ~(1615773944 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA60C8) )
     {
       dword_60CA6148 = 12321336;
@@ -73368,7 +73378,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 11522, &v8, 10);
     v7[0] = 12321336;
     v7[1] = "ItemList";
-    sead::SafeStringBase<char>::operator=(v1 + 11775, v7);
+    sead__SafeStringBase_char__operator_assign(v1 + 11775, v7);
     ListEntry_setDword172(v2, &unk_60B03214, "SE_SYS_BACK");
     ListEntry_setBool208(v2, &unk_60B03214, 1);
     v3 = v1 + 11535;
@@ -76439,7 +76449,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 7548, &v5, 10);
     v4[0] = 12321336;
     v4[1] = "ItemStock";
-    return sead::SafeStringBase<char>::operator=(a1 + 8560, v4);
+    return sead__SafeStringBase_char__operator_assign(a1 + 8560, v4);
   }
 
 /* ============================================================================
@@ -77981,7 +77991,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3720, v4, 9);
     v4[0] = 12321336;
     v4[1] = (int)"ItemStockConfirm";
-    sead::SafeStringBase<char>::operator=(a1 + 4732, v4);
+    sead__SafeStringBase_char__operator_assign(a1 + 4732, v4);
     v4[0] = 0;
     return ListEntry_setDword172(a1 + 3720, v4, "SE_SYS_BACK");
   }
@@ -80410,7 +80420,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 35508, 11548064, v7);
     v20 = 12321336;
     v21 = "MiiSelectButton";
-    sead::SafeStringBase<char>::operator=(a1 + 36520, &v20);
+    sead__SafeStringBase_char__operator_assign(a1 + 36520, &v20);
     sub_6050292C(a1 + 35508, 15);
     sub_605029C8(a1 + 35508, 15);
     ListEntry_setDword172(v6, &unk_60B035AC, "SE_SYS_PAGE");
@@ -82096,7 +82106,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 56, a1 + 2136, 17);
     v4[0] = 12321336;
     v4[1] = "ChangePlayerNum";
-    sead::SafeStringBase<char>::operator=(a1 + 1068, v4);
+    sead__SafeStringBase_char__operator_assign(a1 + 1068, v4);
     sub_6050292C(a1 + 56, 15);
     sub_60502960(a1 + 56, 15);
     sub_60502994(a1 + 56, 15);
@@ -82934,7 +82944,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3588, 11548408, 6);
     v3[0] = 12321336;
     v3[1] = "OverlayDialog";
-    sead::SafeStringBase<char>::operator=(a1 + 4600, v3);
+    sead__SafeStringBase_char__operator_assign(a1 + 4600, v3);
     sub_6047F28C((_DWORD *)(a1 + 3628), (int)"SE_SYS_DECIDE", 15);
     sub_6047F340((_DWORD *)(a1 + 3628), (int)"SE_SYS_CURSOR", 15);
     sub_6047F2C8((_DWORD *)(a1 + 3628), (int)"SE_SYS_CE_BTN_OVER", 15);
@@ -87347,7 +87357,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v21[1] = 11778612;
     v15 = 12321336;
     v16 = sub_60506B54(0);
-    sead::SafeStringBase<char>::operator=(&v17, &v15);
+    sead__SafeStringBase_char__operator_assign(&v17, &v15);
     v6 = sub_60506B54(1);
     v15 = 12321336;
     v16 = v6;
@@ -87449,7 +87459,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v22[1] = 11778612;
     v15 = 12321336;
     v16 = sub_605067A0(0);
-    sead::SafeStringBase<char>::operator=(&v17, &v15);
+    sead__SafeStringBase_char__operator_assign(&v17, &v15);
     v11 = sub_605067A0(1);
     v15 = 12321336;
     v16 = v11;
@@ -91450,7 +91460,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v16[1] = 11778612;
     v12 = 12321336;
     v13 = CharaSet_Team_Loop_ref(0);
-    sead::SafeStringBase<char>::operator=(v14, &v12);
+    sead__SafeStringBase_char__operator_assign(v14, &v12);
     v7 = CharaSet_Team_Loop_ref(1);
     v12 = 12321336;
     v13 = v7;
@@ -95237,7 +95247,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v2 != 35 );
     sub_60502210(a1 + 3704, (_DWORD *)(a1 + 5784), 17);
-    sead::SafeStringBase<char>::operator=(a1 + 4716, v5);
+    sead__SafeStringBase_char__operator_assign(a1 + 4716, v5);
     sub_6050292C(a1 + 3704, 15);
     sub_60502994(a1 + 3704, 15);
     sub_60502960(a1 + 3704, 15);
@@ -97509,7 +97519,7 @@ static inline unsigned int uxtb16(unsigned int x)
         goto LABEL_7;
       v4 = &off_60CA8694;
     }
-    sead::SafeStringBase<char>::operator=((int)v21, (int)v4);
+    sead__SafeStringBase_char__operator_assign((int)v21, (int)v4);
     if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v21, (int)&dword_60CA868C, 0) == 1 )
       ArrayOf20_getEntryPtr(a1 + 48, 0);
   LABEL_7:
@@ -97865,7 +97875,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = MEMORY[0xC5CB34];
       v2 = &off_60CA869C;
     }
-    sead::SafeStringBase<char>::operator=((int)&v5, (int)v2);
+    sead__SafeStringBase_char__operator_assign((int)&v5, (int)v2);
     v3 = a1 + 12;
     result = ArrayOf20_insertEntry(v3, 0, &v5, (int)&dword_60CA868C, 0);
     if ( result == 1 )
@@ -98062,7 +98072,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 16))(a1);
     v5[0] = 12321336;
     v5[1] = v3;
-    sead::SafeStringBase<char>::operator=(a1 + 4608, v5);
+    sead__SafeStringBase_char__operator_assign(a1 + 4608, v5);
     sub_6050292C(v2, 15);
     sub_60502960(v2, 15);
     sub_60502994(v2, 15);
@@ -98106,7 +98116,7 @@ static inline unsigned int uxtb16(unsigned int x)
         goto LABEL_8;
       v5 = &off_60CA8694;
     }
-    sead::SafeStringBase<char>::operator=(v14, v5);
+    sead__SafeStringBase_char__operator_assign(v14, v5);
     if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v14, (int)&dword_60CA868C, 0) == 1 )
     {
       v6 = ArrayOf20_getEntryPtr(a1 + 48, 0);
@@ -99160,7 +99170,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14[1] = 11778612;
     v7 = 12321336;
     v8 = WipeIn_LevelNum_Mode_Loop_Out_ref(0);
-    sead::SafeStringBase<char>::operator=(&v9, &v7);
+    sead__SafeStringBase_char__operator_assign(&v9, &v7);
     v2 = WipeIn_LevelNum_Mode_Loop_Out_ref(1);
     v7 = 12321336;
     v8 = v2;
@@ -103021,7 +103031,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[1] = 11778612;
     v5 = 12321336;
     v6 = T_Random_00_T_World_00_T_Round_00_ref(0);
-    sead::SafeStringBase<char>::operator=(v7, &v5);
+    sead__SafeStringBase_char__operator_assign(v7, &v5);
     v2 = T_Random_00_T_World_00_T_Round_00_ref(1);
     v5 = 12321336;
     v6 = v2;
@@ -103079,7 +103089,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v17[1] = 11778612;
     v9 = 12321336;
     v10 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(0);
-    sead::SafeStringBase<char>::operator=(&v11, &v9);
+    sead__SafeStringBase_char__operator_assign(&v11, &v9);
     v3 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(1);
     v9 = 12321336;
     v10 = v3;
@@ -105271,7 +105281,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210((int)(a1 + 927), v11, 15);
     v11[0] = 12321336;
     v11[1] = (int)"RecordList";
-    sead::SafeStringBase<char>::operator=(a1 + 1180, v11);
+    sead__SafeStringBase_char__operator_assign(a1 + 1180, v11);
     v11[0] = 1;
     ListEntry_setDword172(a1 + 927, v11, "SE_SYS_PAGE");
     v11[0] = 0;
@@ -107820,7 +107830,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v12[1] = 11778612;
     v6 = 12321336;
     v7 = sub_60523944(0);
-    sead::SafeStringBase<char>::operator=(&v8, &v6);
+    sead__SafeStringBase_char__operator_assign(&v8, &v6);
     v2 = sub_60523944(1);
     v6 = 12321336;
     v7 = v2;
@@ -120890,7 +120900,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 15700, (_DWORD *)0xB03A28, 17);
     v11 = 12321336;
     v12 = "SaveDataSelect";
-    sead::SafeStringBase<char>::operator=(a1 + 16712, &v11);
+    sead__SafeStringBase_char__operator_assign(a1 + 16712, &v11);
     sub_6050292C(a1 + 15700, 15);
     sub_60502960(a1 + 15700, 15);
     sub_60502994(a1 + 15700, 15);
@@ -124320,7 +124330,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 15680, (_DWORD *)0xB03A74, 17);
     v10 = 12321336;
     v11 = "SaveDataSelectDL";
-    sead::SafeStringBase<char>::operator=(a1 + 16692, &v10);
+    sead__SafeStringBase_char__operator_assign(a1 + 16692, &v10);
     sub_6050292C(a1 + 15680, 15);
     sub_60502960(a1 + 15680, 15);
     sub_60502994(a1 + 15680, 15);
@@ -126311,7 +126321,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 31800, (_DWORD *)0xB03AAC, 18);
     v9 = 12321336;
     v10 = "SaveDataSelectWin";
-    sead::SafeStringBase<char>::operator=(a1 + 32812, &v9);
+    sead__SafeStringBase_char__operator_assign(a1 + 32812, &v9);
     sub_6050292C(a1 + 31800, 15);
     sub_60502960(a1 + 31800, 15);
     sub_60502994(a1 + 31800, 15);
@@ -129129,7 +129139,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3632, &v5, 8);
     v4[0] = 12321336;
     v4[1] = "SelectMenu";
-    sead::SafeStringBase<char>::operator=(a1 + 4644, v4);
+    sead__SafeStringBase_char__operator_assign(a1 + 4644, v4);
     ListEntry_setDword172(a1 + 3632, dword_60B03AD8, "SE_SYS_BACK");
     ListEntry_setBool208(a1 + 3632, dword_60B03AD8, 1);
     *(_DWORD *)(List_getNthNode(a1 + 3684, 2) - *(_DWORD *)(a1 + 3696) + 176) = "SE_SYS_BACK_BTN_OVER";
@@ -131140,7 +131150,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3700, v3, 9);
     v3[0] = 12321336;
     v3[1] = (int)"SetUpBtn";
-    sead::SafeStringBase<char>::operator=(a1 + 4712, v3);
+    sead__SafeStringBase_char__operator_assign(a1 + 4712, v3);
     *(_DWORD *)(List_getNthNode(a1 + 3752, 0) - *(_DWORD *)(a1 + 3764) + 192) = 0;
     v3[0] = 2;
     ListEntry_setDword172(a1 + 3700, v3, "SE_SYS_PAGE");
@@ -138136,7 +138146,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 17840, v9, 15);
     v9[0] = 12321336;
     v9[1] = (int)"StarCoinList";
-    sead::SafeStringBase<char>::operator=(a1 + 18852, v9);
+    sead__SafeStringBase_char__operator_assign(a1 + 18852, v9);
     v9[0] = 0;
     ListEntry_setBool208(a1 + 17840, v9, 1);
     v4 = a1 + 17892;
@@ -140892,7 +140902,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210((int)(a1 + 1455), (_DWORD *)0xB040BC, 8);
     v11 = 12321336;
     v12 = "TeamSelect";
-    sead::SafeStringBase<char>::operator=(a1 + 1708, &v11);
+    sead__SafeStringBase_char__operator_assign(a1 + 1708, &v11);
     a1[903] = sub_60473B4C(v2);
     sub_60556FD4(a1);
     sub_6050292C((int)(a1 + 1455), 15);
@@ -144422,7 +144432,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = InOutR_InOutL_ref(0);
     v9 = 12321336;
     v10 = (const char *)v3;
-    sead::SafeStringBase<char>::operator=(&v6, &v9);
+    sead__SafeStringBase_char__operator_assign(&v6, &v9);
     v4 = InOutR_InOutL_ref(1);
     v9 = 12321336;
     v10 = (const char *)v4;
@@ -144453,7 +144463,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[1] = 11778612;
     v5 = 12321336;
     v6 = (const char *)sub_6055C594(0);
-    sead::SafeStringBase<char>::operator=(v7, &v5);
+    sead__SafeStringBase_char__operator_assign(v7, &v5);
     v2 = sub_6055C594(1);
     v5 = 12321336;
     v6 = (const char *)v2;
@@ -144480,7 +144490,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3608, &v5, 9);
     v5 = 12321336;
     v6 = "VSModeSelect";
-    sead::SafeStringBase<char>::operator=(a1 + 4620, &v5);
+    sead__SafeStringBase_char__operator_assign(a1 + 4620, &v5);
     v5 = 0;
     ListEntry_setDword172(a1 + 3608, &v5, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 176) = "SE_SYS_BACK_BTN_OVER";
@@ -146108,7 +146118,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502210(a1 + 3692, (_DWORD *)0xB040C4, 1);
     v4[0] = 12321336;
     v4[1] = "WarpSelectWindow";
-    sead::SafeStringBase<char>::operator=(a1 + 4704, v4);
+    sead__SafeStringBase_char__operator_assign(a1 + 4704, v4);
     ListEntry_setDword172(v2, 11550924, "SE_SYS_PAGE");
     ListEntry_setDword172(v2, 11550920, "SE_SYS_PAGE");
     ListEntry_setDword172(v2, 11550928, "SE_SYS_BACK");

@@ -9,6 +9,16 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _DWORD *__fastcall ModelWrapper_ctor(_DWORD *a1, int a2, int a3, int a4, int a5, int a6, int a7);
 _DWORD *__fastcall ModelWrapper_setup(_DWORD *result, int a2, int a3, int a4);
 int *__fastcall sub_603405F4(int a1);
@@ -142723,7 +142733,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = (_DWORD *)(a1 + 96);
     v3 = (*(_DWORD *)(a1 + 84) >> 4) & 3;
-    sead::SafeStringBase<char>::operator=(a1 + 96, 8 * v3 + 13212896);
+    sead__SafeStringBase_char__operator_assign(a1 + 96, 8 * v3 + 13212896);
     Resource = LoadResource(MEMORY[0xC9CA88], v2);
     Model2 = Resource_getModel2(
                Resource,
@@ -144719,7 +144729,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 1920) = 4141228;
     *(_DWORD *)(a1 + 1924) = 0;
     *(_DWORD *)(a1 + 1912) = 12555320;
-    sead::SafeStringBase<char>::operator=(a1 + 1892, &v34);
+    sead__SafeStringBase_char__operator_assign(a1 + 1892, &v34);
     *(_DWORD *)(a1 + 1900) = 2;
     *(_DWORD *)(a1 + 1904) = -50;
     v4 = *(_DWORD **)(v3 + 36);
@@ -144732,7 +144742,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 1988) = 4141248;
     *(_DWORD *)(a1 + 1992) = 0;
     *(_DWORD *)(a1 + 1980) = 12555360;
-    sead::SafeStringBase<char>::operator=(a1 + 1960, &v34);
+    sead__SafeStringBase_char__operator_assign(a1 + 1960, &v34);
     *(_DWORD *)(a1 + 1968) = 1;
     sub_609553AC(**(_DWORD **)(v3 + 36), a1 + 1944);
     v34 = 12321336;
@@ -144741,7 +144751,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 2056) = 4141716;
     *(_DWORD *)(a1 + 2060) = 0;
     *(_DWORD *)(a1 + 2048) = 12555360;
-    sead::SafeStringBase<char>::operator=(a1 + 2028, &v34);
+    sead__SafeStringBase_char__operator_assign(a1 + 2028, &v34);
     *(_DWORD *)(a1 + 2036) = 1;
     v5 = *(_DWORD **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 6u )
@@ -144753,7 +144763,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 2124) = 4141748;
     *(_DWORD *)(a1 + 2128) = 0;
     *(_DWORD *)(a1 + 2116) = 12555360;
-    sead::SafeStringBase<char>::operator=(a1 + 2096, &v34);
+    sead__SafeStringBase_char__operator_assign(a1 + 2096, &v34);
     *(_DWORD *)(a1 + 2104) = 1;
     v6 = *(_DWORD **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 7u )
@@ -144765,7 +144775,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 2192) = 4141780;
     *(_DWORD *)(a1 + 2196) = 0;
     *(_DWORD *)(a1 + 2184) = 12555360;
-    sead::SafeStringBase<char>::operator=(a1 + 2164, &v34);
+    sead__SafeStringBase_char__operator_assign(a1 + 2164, &v34);
     *(_DWORD *)(a1 + 2172) = 1;
     v7 = *(_DWORD **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 9u )
@@ -144777,7 +144787,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 2260) = 4141896;
     *(_DWORD *)(a1 + 2264) = 0;
     *(_DWORD *)(a1 + 2252) = 12555320;
-    sead::SafeStringBase<char>::operator=(a1 + 2232, &v34);
+    sead__SafeStringBase_char__operator_assign(a1 + 2232, &v34);
     *(_DWORD *)(a1 + 2240) = 2;
     *(_DWORD *)(a1 + 2244) = 50;
     v8 = *(_DWORD **)(v3 + 36);
@@ -144790,7 +144800,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 2328) = 4141916;
     *(_DWORD *)(a1 + 2332) = 0;
     *(_DWORD *)(a1 + 2320) = 12555360;
-    sead::SafeStringBase<char>::operator=(a1 + 2300, &v34);
+    sead__SafeStringBase_char__operator_assign(a1 + 2300, &v34);
     *(_DWORD *)(a1 + 2308) = 1;
     v9 = *(_DWORD **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 0xAu )
@@ -144802,7 +144812,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 2396) = 4142656;
     *(_DWORD *)(a1 + 2400) = 0;
     *(_DWORD *)(a1 + 2388) = 12555360;
-    sead::SafeStringBase<char>::operator=(a1 + 2368, &v34);
+    sead__SafeStringBase_char__operator_assign(a1 + 2368, &v34);
     *(_DWORD *)(a1 + 2376) = 1;
     v10 = *(_DWORD **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 0xEu )
@@ -144814,7 +144824,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 2464) = 4142696;
     *(_DWORD *)(a1 + 2468) = 0;
     *(_DWORD *)(a1 + 2456) = 12555360;
-    sead::SafeStringBase<char>::operator=(a1 + 2436, &v34);
+    sead__SafeStringBase_char__operator_assign(a1 + 2436, &v34);
     *(_DWORD *)(a1 + 2444) = 1;
     v11 = *(_DWORD **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 0x14u )
@@ -144858,7 +144868,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 2532) = 4142700;
     *(_DWORD *)(a1 + 2536) = 0;
     *(_DWORD *)(a1 + 2524) = 12555360;
-    sead::SafeStringBase<char>::operator=(a1 + 2504, &v34);
+    sead__SafeStringBase_char__operator_assign(a1 + 2504, &v34);
     *(_DWORD *)(a1 + 2512) = 1;
     v22 = *(_DWORD **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 0xFu )
@@ -150201,7 +150211,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[240] = 4170240;
     a1[241] = 0;
     a1[238] = 12555852;
-    sead::SafeStringBase<char>::operator=((int)(a1 + 233), (int)&v10);
+    sead__SafeStringBase_char__operator_assign((int)(a1 + 233), (int)&v10);
     a1[235] = 1;
     v4 = *(int **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 0x14u )
@@ -150213,7 +150223,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[257] = 4170244;
     a1[258] = 0;
     a1[255] = 12555852;
-    sead::SafeStringBase<char>::operator=((int)(a1 + 250), (int)&v10);
+    sead__SafeStringBase_char__operator_assign((int)(a1 + 250), (int)&v10);
     a1[252] = 1;
     v5 = *(int **)(MEMORY[0xCD0B40] + 36);
     if ( *(_DWORD *)(MEMORY[0xCD0B40] + 32) > 0xEu )
@@ -153278,7 +153288,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = 0;
     v13 = 0;
     v7[1] = "Subject/HIOSubjectData_NX.exbin";
-    sead::SafeStringBase<char>::operator=(v8, v7);
+    sead__SafeStringBase_char__operator_assign(v8, v7);
     v3 = (const void *)sub_608E6154(*(_DWORD *)(MEMORY[0xCCEBD0] + 32), v8);
     *a1 = v3;
     if ( v3 )
@@ -168186,7 +168196,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[3197] = 4260428;
     a1[3198] = 0;
     a1[3195] = 12557416;
-    sead::SafeStringBase<char>::operator=(a1 + 3190, &v3);
+    sead__SafeStringBase_char__operator_assign(a1 + 3190, &v3);
     a1[3192] = 2;
     return a1;
   }
@@ -173334,10 +173344,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60913ABC(a1 + 190);
     sub_60913AD4(a1 + 190);
     if ( a1[116] )
-      __operator_delete();
+      __operator_delete(0);
     sub_6083CD6C(a1 + 106, *(_DWORD *)(MEMORY[0xCCFC8C] + 24));
     if ( a1[114] )
-      __operator_delete();
+      __operator_delete(0);
     if ( a1[55] )
     {
       sub_6091D490(a1[56]);
@@ -173351,20 +173361,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     sub_6083EACC(a1 + 51, *(_DWORD *)(MEMORY[0xCCFC8C] + 24));
     if ( a1[54] )
-      __operator_delete();
+      __operator_delete(0);
     if ( a1[52] )
-      __operator_delete();
+      __operator_delete(0);
     sub_60916668(MEMORY[0xCCFC8C], a1[46]);
     a1[46] = -1;
     a1[47] = -1;
     sub_6083B4C8(a1 + 16, *(_DWORD *)(MEMORY[0xCCFC8C] + 24));
     nullsub_1345(a1 + 8, *(_DWORD *)(MEMORY[0xCCFC8C] + 24));
     if ( a1[13] )
-      __operator_delete();
+      __operator_delete(0);
     if ( a1[11] )
-      __operator_delete();
+      __operator_delete(0);
     if ( a1[9] )
-      __operator_delete();
+      __operator_delete(0);
     return nullsub_124(a1 + 655);
   }
 
@@ -173938,7 +173948,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v2 > i )
           v6 = (_DWORD *)((char *)v6 + v4);
         if ( *v6 )
-          __operator_delete();
+          __operator_delete(0);
         if ( v3 == i )
           break;
         v2 = a1[206];
@@ -173963,7 +173973,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v8 > j )
           v12 = (_DWORD *)((char *)v12 + v10);
         if ( *v12 )
-          __operator_delete();
+          __operator_delete(0);
         if ( v9 == j )
           break;
         v8 = a1[204];
@@ -174310,7 +174320,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         qmemcpy(v8, v9, v13);
         *((_BYTE *)v8 + v13) = v11;
       }
-      sead::SafeStringBase<char>::operator=(v7 + 4, &v25);
+      sead__SafeStringBase_char__operator_assign(v7 + 4, &v25);
       ++a1[3];
       v23 = sub_6041FD48(a1, *a1, v7);
       *a1 = v23;
@@ -174459,7 +174469,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         qmemcpy(v9, v10, v14);
         *((_BYTE *)v9 + v14) = v12;
       }
-      sead::SafeStringBase<char>::operator=(v7 + 4, &v27);
+      sead__SafeStringBase_char__operator_assign(v7 + 4, &v27);
       ++a1[3];
       v25 = sub_6041FD48(a1, *a1, v7);
       *a1 = v25;
@@ -174979,7 +174989,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_6041C99C(a1);
         if ( *(_DWORD *)(a1 + 72) )
         {
-          __operator_delete();
+          __operator_delete(0);
           *(_DWORD *)(a1 + 72) = 0;
         }
       }
@@ -175058,7 +175068,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6041C99C(a1);
     if ( *(_DWORD *)(a1 + 72) )
     {
-      __operator_delete();
+      __operator_delete(0);
       *(_DWORD *)(a1 + 72) = 0;
     }
     MEMORY[0xCC79E4](a1 + 4664);
@@ -175144,7 +175154,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     MiiMaskTexture_ref(a1, *a2, a4);
     if ( *(_DWORD *)(a1 + 1736) )
     {
-      __operator_delete();
+      __operator_delete(0);
       *(_DWORD *)(a1 + 1736) = 0;
     }
     sub_6041C300(a1, a2 + 1, a4);
@@ -175261,7 +175271,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_60913ABC(a1 + 2040);
       sub_60913AD4(a1 + 2040);
       if ( *(_DWORD *)(a1 + 1744) )
-        __operator_delete();
+        __operator_delete(0);
       *(_DWORD *)(a1 + 1744) = 0;
     }
     if ( *(_DWORD *)(a1 + 1088) )
@@ -175283,7 +175293,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_60913ABC(a1 + 1384);
       sub_60913AD4(a1 + 1384);
       if ( *(_DWORD *)(a1 + 1088) )
-        __operator_delete();
+        __operator_delete(0);
       *(_DWORD *)(a1 + 1088) = 0;
     }
     return sub_6041C894(a1);
@@ -175749,7 +175759,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_60913ABC(v2 + 296);
         sub_60913AD4(v2 + 296);
         if ( *(_DWORD *)(v2 + 4) )
-          __operator_delete();
+          __operator_delete(0);
         *(_DWORD *)(v2 + 4) = 0;
         ++v4;
         v3 += 312;
@@ -175817,7 +175827,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_60913ABC(a1 + 268);
       sub_60913AD4(a1 + 268);
       if ( a1[194] )
-        __operator_delete();
+        __operator_delete(0);
       a1[194] = 0;
       return 0;
     }
@@ -175858,7 +175868,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_60913ABC(a1 + 110);
       sub_60913AD4(a1 + 110);
       if ( a1[36] )
-        __operator_delete();
+        __operator_delete(0);
       a1[36] = 0;
       return 0;
     }
@@ -179325,7 +179335,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v22 = 0;
     v9 = "Env/env_pack.szs";
-    sead::SafeStringBase<char>::operator=(v10, &v8);
+    sead__SafeStringBase_char__operator_assign(v10, &v8);
     v8 = 12321336;
     v18 = v24;
     v12 = a2;
@@ -180095,7 +180105,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sead__MethodTreeNode__unlock_((struct sead_MethodTreeNode *)(a1 + 184));
     v6 = 12321336;
     v7 = "LayerMgr";
-    sead::SafeStringBase<char>::operator=(a1 + 220, &v6);
+    sead__SafeStringBase_char__operator_assign(a1 + 220, &v6);
     sead__MethodTreeNode__lock_((struct sead_MethodTreeNode *)(a1 + 264));
     *(_DWORD *)(a1 + 312) = a1;
     *(_DWORD *)(a1 + 316) = 4334004;
@@ -180104,7 +180114,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sead__MethodTreeNode__unlock_((struct sead_MethodTreeNode *)(a1 + 264));
     v6 = 12321336;
     v7 = "LayerMgr";
-    sead::SafeStringBase<char>::operator=(a1 + 300, &v6);
+    sead__SafeStringBase_char__operator_assign(a1 + 300, &v6);
     *(_DWORD *)(a1 + 644) = 904;
     *(_DWORD *)(a1 + 17128) = 0;
     return a1;
@@ -180495,7 +180505,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *((_DWORD *)v34 + 11) = 4336588;
     *((_DWORD *)v34 + 12) = 0;
     *((_DWORD *)v34 + 9) = 12559080;
-    sead::SafeStringBase<char>::operator=((char *)v35 + 16, &v39);
+    sead__SafeStringBase_char__operator_assign((char *)v35 + 16, &v39);
     *((_DWORD *)v34 + 6) = 1;
     sub_6095802C(v25, 0, v34);
     sub_6095802C(v25, 2, v34);
@@ -183510,7 +183520,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[1718] = 4355528;
     a1[1719] = 0;
     a1[1716] = 12559408;
-    sead::SafeStringBase<char>::operator=((int)(a1 + 1711), (int)&v7);
+    sead__SafeStringBase_char__operator_assign((int)(a1 + 1711), (int)&v7);
     a1[1713] = 2;
     sub_609553AC(v3, (int)(a1 + 1707));
     v4 = *(int **)(MEMORY[0xCD0B40] + 36);
@@ -183523,7 +183533,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[1701] = 4355952;
     a1[1702] = 0;
     a1[1699] = 12559408;
-    sead::SafeStringBase<char>::operator=((int)(a1 + 1694), (int)&v7);
+    sead__SafeStringBase_char__operator_assign((int)(a1 + 1694), (int)&v7);
     a1[1696] = 2;
     return sub_609553AC(v5, (int)(a1 + 1690));
   }
@@ -197893,7 +197903,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         qmemcpy(v8, v9, v13);
         *((_BYTE *)v8 + v13) = v11;
       }
-      sead::SafeStringBase<char>::operator=(v7 + 4, &v25);
+      sead__SafeStringBase_char__operator_assign(v7 + 4, &v25);
       ++*(_DWORD *)(a1 + 12);
       v23 = sub_6041FD48(a1, *(_DWORD **)a1, v7);
       *(_DWORD *)a1 = v23;
@@ -198072,7 +198082,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v20 == "sarc" )
           {
   LABEL_35:
-            sead::SafeStringBase<char>::operator=(v60, &v68);
+            sead__SafeStringBase_char__operator_assign(v60, &v68);
             v23 = (int (__fastcall ***)(_DWORD, int))sead_ResourceMgr_OpenFileRelated(MEMORY[0xCCEF7C], v60);
             if ( _cxa_guard_acquire_0(13220644) )
             {
@@ -200546,7 +200556,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v50 = *(_DWORD *)v3 + 2;
     v61[0] = 12321336;
     v61[1] = v50;
-    return sead::SafeStringBase<char>::operator=(v56 + 8, v61);
+    return sead__SafeStringBase_char__operator_assign(v56 + 8, v61);
   }
 
 /* ============================================================================
@@ -202857,7 +202867,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *((_DWORD *)v4 + 11) = 4464380;
     *((_DWORD *)v4 + 12) = 0;
     *((_DWORD *)v4 + 9) = 12561752;
-    sead::SafeStringBase<char>::operator=((int)v5 + 16, (int)&v7);
+    sead__SafeStringBase_char__operator_assign((int)v5 + 16, (int)&v7);
     *((_DWORD *)v4 + 6) = 2;
     sub_609553AC((int)a1, (int)v4);
     v7 = 12321336;
@@ -202866,7 +202876,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[120] = 4466724;
     a1[121] = 0;
     a1[118] = 12561752;
-    sead::SafeStringBase<char>::operator=((int)(a1 + 113), (int)&v7);
+    sead__SafeStringBase_char__operator_assign((int)(a1 + 113), (int)&v7);
     a1[115] = 2;
     a1[116] = 100;
     v7 = 12321336;
@@ -204031,7 +204041,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *((_DWORD *)v3 + 11) = 4470756;
     *((_DWORD *)v3 + 12) = 0;
     *((_DWORD *)v3 + 9) = 12562028;
-    sead::SafeStringBase<char>::operator=((int)v4 + 16, (int)v6);
+    sead__SafeStringBase_char__operator_assign((int)v4 + 16, (int)v6);
     *((_DWORD *)v3 + 6) = 1;
     return sub_609553AC(a1, (int)v3);
   }
@@ -206340,7 +206350,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *((_DWORD *)v4 + 11) = 4482664;
     *((_DWORD *)v4 + 12) = 0;
     *((_DWORD *)v4 + 9) = 12562388;
-    sead::SafeStringBase<char>::operator=((int)v5 + 16, (int)&v7);
+    sead__SafeStringBase_char__operator_assign((int)v5 + 16, (int)&v7);
     *((_DWORD *)v4 + 6) = 2;
     sub_609553AC((int)a1, (int)v4);
     v7 = 1.7266e-38;
@@ -206349,7 +206359,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[1350] = 4483404;
     a1[1351] = 0;
     a1[1348] = 12562388;
-    sead::SafeStringBase<char>::operator=((int)(a1 + 1343), (int)&v7);
+    sead__SafeStringBase_char__operator_assign((int)(a1 + 1343), (int)&v7);
     a1[1345] = 2;
     a1[1346] = 100;
     v10 = 1;
@@ -207651,7 +207661,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 v32 = &v58[v31];
                 v33 = &v30[v31];
                 v30[v31 + 1] = v58[v31 + 1];
-                sead::SafeStringBase<char>::operator=(&v30[v31 + 2], &v58[v31 + 2]);
+                sead__SafeStringBase_char__operator_assign(&v30[v31 + 2], &v58[v31 + 2]);
                 v31 += 4;
                 *((_BYTE *)v33 + 16) = *((_BYTE *)v32 + 16);
               }
@@ -207750,7 +207760,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v28 = &v58[v27];
             v29 = &v26[v27];
             v26[v27 + 1] = v58[v27 + 1];
-            sead::SafeStringBase<char>::operator=(&v26[v27 + 2], &v58[v27 + 2]);
+            sead__SafeStringBase_char__operator_assign(&v26[v27 + 2], &v58[v27 + 2]);
             v27 += 4;
             *((_BYTE *)v29 + 16) = *((_BYTE *)v28 + 16);
           }

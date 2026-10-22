@@ -49,7 +49,7 @@ _DWORD * __fastcall sub_6040FF08(_DWORD *a1);
 /* line: 29, address: 0x60410044 */   a1[3197] = 4260428;
 /* line: 30, address: 0x6041004c */   a1[3198] = 0;
 /* line: 31, address: 0x6041005c */   a1[3195] = 12557416;
-/* line: 32, address: 0x60410064 */   sead::SafeStringBase<char>::operator=(a1 + 3190, &v3);
+/* line: 32, address: 0x60410064 */   sead__SafeStringBase_char__operator_assign(a1 + 3190, &v3);
 /* line: 33, address: 0x6041006c */   a1[3192] = 2;
 /* line: 34, address: 0x60410078 */   return a1;
 /* line: 35 */ }

@@ -9,6 +9,16 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _DWORD *__fastcall ActiveColldierMgr_removeFromActiveList(_DWORD *result, int a2);
 _DWORD *__fastcall CollisionMgr_setSensor(int a1, int *a2, int a3);
 float *__fastcall sub_600F5A20(int a1, int a2, int a3);
@@ -4367,7 +4377,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = "deka_sanbo_body";
     }
     v9 = v2;
-    sead::SafeStringBase<char>::operator=(v10, &v8);
+    sead__SafeStringBase_char__operator_assign(v10, &v8);
     v8 = 12321336;
     v9 = "deka_sanbo";
     v3 = LoadResource(MEMORY[0xC9CA88], &v8);
@@ -41458,7 +41468,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor__dtor((StageActor *)a1);
-    return __operator_delete();
+    return __operator_delete(0);
   }
 
 /* ============================================================================
@@ -44011,7 +44021,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((char *)a1 + 648);
     StageActor__dtor(a1);
-    return __operator_delete();
+    return __operator_delete(0);
   }
 
 /* ============================================================================
@@ -166002,7 +166012,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 288) = 2091564;
     *(_DWORD *)(a1 + 292) = 0;
     *(_DWORD *)(a1 + 280) = 12420164;
-    sead::SafeStringBase<char>::operator=(a1 + 260, (int)&v41);
+    sead__SafeStringBase_char__operator_assign(a1 + 260, (int)&v41);
     *(_DWORD *)(a1 + 268) = 2;
     sub_609553AC(**(_DWORD **)(v3 + 36), a1 + 244);
     v41 = 12321336;
@@ -166011,7 +166021,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 424) = 2092132;
     *(_DWORD *)(a1 + 428) = 0;
     *(_DWORD *)(a1 + 416) = 12420204;
-    sead::SafeStringBase<char>::operator=(a1 + 396, (int)&v41);
+    sead__SafeStringBase_char__operator_assign(a1 + 396, (int)&v41);
     *(_DWORD *)(a1 + 404) = 1;
     v4 = *(int **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 7u )
@@ -166023,7 +166033,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 356) = 2092172;
     *(_DWORD *)(a1 + 360) = 0;
     *(_DWORD *)(a1 + 348) = 12420204;
-    sead::SafeStringBase<char>::operator=(a1 + 328, (int)&v41);
+    sead__SafeStringBase_char__operator_assign(a1 + 328, (int)&v41);
     *(_DWORD *)(a1 + 336) = 1;
     v5 = *(int **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 8u )
@@ -166035,7 +166045,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 492) = 2092468;
     *(_DWORD *)(a1 + 496) = 0;
     *(_DWORD *)(a1 + 484) = 12420204;
-    sead::SafeStringBase<char>::operator=(a1 + 464, (int)&v41);
+    sead__SafeStringBase_char__operator_assign(a1 + 464, (int)&v41);
     *(_DWORD *)(a1 + 472) = 1;
     v6 = *(int **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 9u )
@@ -166047,7 +166057,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 560) = 2092520;
     *(_DWORD *)(a1 + 564) = 0;
     *(_DWORD *)(a1 + 552) = 12420204;
-    sead::SafeStringBase<char>::operator=(a1 + 532, (int)&v41);
+    sead__SafeStringBase_char__operator_assign(a1 + 532, (int)&v41);
     *(_DWORD *)(a1 + 540) = 1;
     v7 = *(int **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 0xAu )
@@ -166059,7 +166069,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 628) = 2092552;
     *(_DWORD *)(a1 + 632) = 0;
     *(_DWORD *)(a1 + 620) = 12420204;
-    sead::SafeStringBase<char>::operator=(a1 + 600, (int)&v41);
+    sead__SafeStringBase_char__operator_assign(a1 + 600, (int)&v41);
     *(_DWORD *)(a1 + 608) = 1;
     v8 = *(int **)(v3 + 36);
     if ( *(_DWORD *)(v3 + 32) > 6u )

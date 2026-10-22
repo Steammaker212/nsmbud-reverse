@@ -9,6 +9,16 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 int sub_607878A0();
 int *__fastcall sub_60787B8C(int a1, int a2, int a3);
 int sub_6078AFBC();
@@ -331,7 +341,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13 = 0;
       v14 = 0;
       v15 = 0;
-      sead::SafeStringBase<char>::operator=(v6, v5);
+      sead__SafeStringBase_char__operator_assign(v6, v5);
       v7 = 0;
       v2[4] = sub_608E6154(v3, v6);
       MEMORY[0xCC2C60] = v2;
