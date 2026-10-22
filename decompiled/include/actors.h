@@ -2206,7 +2206,6 @@ unsigned int __fastcall sub_601BAA8C(int a1);  /* 0x001baa8c */
 int __fastcall sub_601BAC64(int a1, float *a2, float *a3, float *a4);  /* 0x001bac64 */
 int __fastcall sub_601BB050(int a1);  /* 0x001bb050 */
 int __fastcall sub_601BB568(int result);  /* 0x001bb568 */
-int __fastcall sub_601BB580(int result);  /* 0x001bb580 */
 int __fastcall sub_601BB584(int a1);  /* 0x001bb584 */
 int __fastcall sub_601BB5F0(int result);  /* 0x001bb5f0 */
 int __fastcall sub_601BB600(int a1);  /* 0x001bb600 */
@@ -2446,7 +2445,6 @@ int __fastcall sub_601D6EBC(int a1);  /* 0x001d6ebc */
 int __fastcall sub_601D6EC8(int a1);  /* 0x001d6ec8 */
 int __fastcall sub_601D6F50(int a1);  /* 0x001d6f50 */
 int __fastcall sub_601D6F74(int a1);  /* 0x001d6f74 */
-int __fastcall sub_601D6FB4(int result);  /* 0x001d6fb4 */
 int __fastcall sub_601D6FB8(int a1);  /* 0x001d6fb8 */
 int __fastcall sub_601D7024(int a1);  /* 0x001d7024 */
 int __fastcall sub_601D7414(int a1, int a2);  /* 0x001d7414 */

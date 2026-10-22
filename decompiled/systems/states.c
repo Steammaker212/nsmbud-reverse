@@ -76948,7 +76948,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 6112) + 68))(**(_DWORD **)(a1 + 6112), a1 + 144);
     (*(void (__fastcall **)(_DWORD, _DWORD *))(*(_DWORD *)**v6 + 60))(**v6, v27);
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6112));
-    sub_604218E0(*(_DWORD **)(a1 + 6112));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 6112));
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v6 + 52))(**v6);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v6 + 56))(**v6);
     v7 = **(_DWORD **)(a1 + 6112);
@@ -80441,7 +80441,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = (float *)(a1 + 6112);
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 6112) + 60))(**(_DWORD **)(a1 + 6112), &v43);
     (*(void (__fastcall **)(_DWORD, _DWORD **))(***(_DWORD ***)v18 + 68))(**(_DWORD **)v18, (_DWORD **)v18 - 1492);
-    sub_604218E0(*(_DWORD **)v18);
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)v18);
     j_ModelWrapper_updateAnims(*(_DWORD *)v18);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)v18 + 52))(**(_DWORD **)v18);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)v18 + 56))(**(_DWORD **)v18);
@@ -80485,7 +80485,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v26 = (_DWORD **)(a1 + 6116);
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 6116) + 60))(**(_DWORD **)(a1 + 6116), &v43);
     (*(void (__fastcall **)(_DWORD, _DWORD **))(*(_DWORD *)**v26 + 68))(**v26, (_DWORD **)v18 - 1492);
-    sub_604218E0(*(_DWORD **)(a1 + 6116));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 6116));
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6116));
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v26 + 52))(**v26);
     v27 = **(_DWORD **)(a1 + 6116);
@@ -108901,7 +108901,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v20 += v21;
       Animation_update(*v20);
     }
-    sub_604218E0(*v19);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v19);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v19 + 52))(**v19);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v19 + 56))(**v19);
     return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 204))(a1);
@@ -150287,15 +150287,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       case 0:
         *(_BYTE *)(*(_DWORD *)(a1 + 6100) + 6184) = 1;
-        sub_606FFC34(*(_DWORD *)(a1 + 6104), 1);
+        Object_changeStateByIndex(*(_DWORD *)(a1 + 6104), 1);
         *(_BYTE *)(*(_DWORD *)(a1 + 6104) + 6184) = 1;
         *(_BYTE *)(*(_DWORD *)(a1 + 6108) + 6184) = 1;
-        sub_606FFC34(*(_DWORD *)(a1 + 6112), 1);
+        Object_changeStateByIndex(*(_DWORD *)(a1 + 6112), 1);
         *(_BYTE *)(*(_DWORD *)(a1 + 6112) + 6184) = 1;
         *(_BYTE *)(*(_DWORD *)(a1 + 6116) + 6184) = 1;
         v6 = *(_DWORD *)(a1 + 6120);
         v5 = (_DWORD *)(a1 + 6120);
-        sub_606FFC34(v6, 1);
+        Object_changeStateByIndex(v6, 1);
         *(_BYTE *)(*v5 + 6184) = 1;
         *(_BYTE *)(v5[1] + 6184) = 1;
         result = 2;
@@ -150362,13 +150362,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 6128) = result;
         if ( !v11 )
           return result;
-        sub_606FFC34(*(_DWORD *)(a1 + 6100), 3);
-        sub_606FFC34(*(_DWORD *)(a1 + 6104), 3);
-        sub_606FFC34(*(_DWORD *)(a1 + 6108), 3);
-        sub_606FFC34(*(_DWORD *)(a1 + 6112), 3);
-        sub_606FFC34(*(_DWORD *)(a1 + 6116), 3);
-        sub_606FFC34(*(_DWORD *)(a1 + 6120), 3);
-        sub_606FFC34(*(_DWORD *)(a1 + 6124), 3);
+        Object_changeStateByIndex(*(_DWORD *)(a1 + 6100), 3);
+        Object_changeStateByIndex(*(_DWORD *)(a1 + 6104), 3);
+        Object_changeStateByIndex(*(_DWORD *)(a1 + 6108), 3);
+        Object_changeStateByIndex(*(_DWORD *)(a1 + 6112), 3);
+        Object_changeStateByIndex(*(_DWORD *)(a1 + 6116), 3);
+        Object_changeStateByIndex(*(_DWORD *)(a1 + 6120), 3);
+        Object_changeStateByIndex(*(_DWORD *)(a1 + 6124), 3);
         result = 6;
         goto LABEL_34;
       case 5:
@@ -150411,7 +150411,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v15 = *(_DWORD *)(v14 + 4 * v13);
       if ( !v12 )
         break;
-      sub_606FFC34(v15, 2);
+      Object_changeStateByIndex(v15, 2);
       if ( v13 == 6 )
         goto LABEL_22;
   LABEL_17:
@@ -150551,13 +150551,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       a1[1532] = result;
       if ( v5 )
       {
-        sub_606FFC34(a1[1525], 3);
-        sub_606FFC34(a1[1526], 3);
-        sub_606FFC34(a1[1527], 3);
-        sub_606FFC34(a1[1528], 3);
-        sub_606FFC34(a1[1529], 3);
-        sub_606FFC34(a1[1530], 3);
-        sub_606FFC34(a1[1531], 3);
+        Object_changeStateByIndex(a1[1525], 3);
+        Object_changeStateByIndex(a1[1526], 3);
+        Object_changeStateByIndex(a1[1527], 3);
+        Object_changeStateByIndex(a1[1528], 3);
+        Object_changeStateByIndex(a1[1529], 3);
+        Object_changeStateByIndex(a1[1530], 3);
+        Object_changeStateByIndex(a1[1531], 3);
         result = 6;
         goto LABEL_7;
       }
@@ -150568,15 +150568,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       case 0:
         *(_BYTE *)(a1[1525] + 6184) = 1;
-        sub_606FFC34(a1[1525], 1);
+        Object_changeStateByIndex(a1[1525], 1);
         *(_BYTE *)(a1[1526] + 6184) = 1;
         *(_BYTE *)(a1[1527] + 6184) = 1;
         *(_BYTE *)(a1[1528] + 6184) = 1;
-        sub_606FFC34(a1[1528], 1);
+        Object_changeStateByIndex(a1[1528], 1);
         *(_BYTE *)(a1[1529] + 6184) = 1;
         *(_BYTE *)(a1[1530] + 6184) = 1;
         *(_BYTE *)(a1[1531] + 6184) = 1;
-        sub_606FFC34(a1[1531], 1);
+        Object_changeStateByIndex(a1[1531], 1);
         result = 2;
         goto LABEL_7;
       case 1:
@@ -150675,7 +150675,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v14 = v13[v11];
       if ( !v12 )
         break;
-      sub_606FFC34(v14, 2);
+      Object_changeStateByIndex(v14, 2);
       if ( v11 == 6 )
         goto LABEL_26;
   LABEL_21:
@@ -150817,13 +150817,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       a1[1532] = result;
       if ( v5 )
       {
-        sub_606FFC34(a1[1525], 3);
-        sub_606FFC34(a1[1526], 3);
-        sub_606FFC34(a1[1527], 3);
-        sub_606FFC34(a1[1528], 3);
-        sub_606FFC34(a1[1529], 3);
-        sub_606FFC34(a1[1530], 3);
-        sub_606FFC34(a1[1531], 3);
+        Object_changeStateByIndex(a1[1525], 3);
+        Object_changeStateByIndex(a1[1526], 3);
+        Object_changeStateByIndex(a1[1527], 3);
+        Object_changeStateByIndex(a1[1528], 3);
+        Object_changeStateByIndex(a1[1529], 3);
+        Object_changeStateByIndex(a1[1530], 3);
+        Object_changeStateByIndex(a1[1531], 3);
         result = 6;
         goto LABEL_7;
       }
@@ -150835,14 +150835,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       case 0:
         *(_BYTE *)(a1[1525] + 6184) = 1;
         *(_BYTE *)(a1[1526] + 6184) = 1;
-        sub_606FFC34(a1[1526], 1);
+        Object_changeStateByIndex(a1[1526], 1);
         *(_BYTE *)(a1[1527] + 6184) = 1;
         *(_BYTE *)(a1[1528] + 6184) = 1;
         *(_BYTE *)(a1[1529] + 6184) = 1;
         v8 = a1[1530];
         v7 = a1 + 1530;
         *(_BYTE *)(v8 + 6184) = 1;
-        sub_606FFC34(*v7, 1);
+        Object_changeStateByIndex(*v7, 1);
         *(_BYTE *)(v7[1] + 6184) = 1;
         result = 2;
         goto LABEL_7;
@@ -150942,7 +150942,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v16 = v15[v14];
       if ( !v13 )
         break;
-      sub_606FFC34(v16, 2);
+      Object_changeStateByIndex(v16, 2);
       if ( v14 == 6 )
         goto LABEL_26;
   LABEL_21:
@@ -151084,13 +151084,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       a1[1532] = result;
       if ( v5 )
       {
-        sub_606FFC34(a1[1525], 3);
-        sub_606FFC34(a1[1526], 3);
-        sub_606FFC34(a1[1527], 3);
-        sub_606FFC34(a1[1528], 3);
-        sub_606FFC34(a1[1529], 3);
-        sub_606FFC34(a1[1530], 3);
-        sub_606FFC34(a1[1531], 3);
+        Object_changeStateByIndex(a1[1525], 3);
+        Object_changeStateByIndex(a1[1526], 3);
+        Object_changeStateByIndex(a1[1527], 3);
+        Object_changeStateByIndex(a1[1528], 3);
+        Object_changeStateByIndex(a1[1529], 3);
+        Object_changeStateByIndex(a1[1530], 3);
+        Object_changeStateByIndex(a1[1531], 3);
         result = 6;
         goto LABEL_7;
       }
@@ -151103,12 +151103,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_BYTE *)(a1[1525] + 6184) = 1;
         *(_BYTE *)(a1[1526] + 6184) = 1;
         *(_BYTE *)(a1[1527] + 6184) = 1;
-        sub_606FFC34(a1[1527], 1);
+        Object_changeStateByIndex(a1[1527], 1);
         *(_BYTE *)(a1[1528] + 6184) = 1;
         v8 = a1[1529];
         v7 = a1 + 1529;
         *(_BYTE *)(v8 + 6184) = 1;
-        sub_606FFC34(*v7, 1);
+        Object_changeStateByIndex(*v7, 1);
         *(_BYTE *)(v7[1] + 6184) = 1;
         *(_BYTE *)(v7[2] + 6184) = 1;
         result = 2;
@@ -151209,7 +151209,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v16 = v15[v14];
       if ( !v13 )
         break;
-      sub_606FFC34(v16, 2);
+      Object_changeStateByIndex(v16, 2);
       if ( v14 == 6 )
         goto LABEL_26;
   LABEL_21:
@@ -151349,13 +151349,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       a1[1532] = result;
       if ( v5 )
       {
-        sub_606FFC34(a1[1525], 3);
-        sub_606FFC34(a1[1526], 3);
-        sub_606FFC34(a1[1527], 3);
-        sub_606FFC34(a1[1528], 3);
-        sub_606FFC34(a1[1529], 3);
-        sub_606FFC34(a1[1530], 3);
-        sub_606FFC34(a1[1531], 3);
+        Object_changeStateByIndex(a1[1525], 3);
+        Object_changeStateByIndex(a1[1526], 3);
+        Object_changeStateByIndex(a1[1527], 3);
+        Object_changeStateByIndex(a1[1528], 3);
+        Object_changeStateByIndex(a1[1529], 3);
+        Object_changeStateByIndex(a1[1530], 3);
+        Object_changeStateByIndex(a1[1531], 3);
         result = 6;
         goto LABEL_7;
       }
@@ -151366,15 +151366,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       case 0:
         *(_BYTE *)(a1[1525] + 6184) = 1;
-        sub_606FFC34(a1[1525], 1);
+        Object_changeStateByIndex(a1[1525], 1);
         *(_BYTE *)(a1[1526] + 6184) = 1;
         *(_BYTE *)(a1[1527] + 6184) = 1;
         *(_BYTE *)(a1[1528] + 6184) = 1;
-        sub_606FFC34(a1[1528], 1);
+        Object_changeStateByIndex(a1[1528], 1);
         *(_BYTE *)(a1[1529] + 6184) = 1;
         *(_BYTE *)(a1[1530] + 6184) = 1;
         *(_BYTE *)(a1[1531] + 6184) = 1;
-        sub_606FFC34(a1[1531], 1);
+        Object_changeStateByIndex(a1[1531], 1);
         result = 2;
         goto LABEL_7;
       case 1:
@@ -151473,7 +151473,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v14 = v13[v11];
       if ( !v12 )
         break;
-      sub_606FFC34(v14, 2);
+      Object_changeStateByIndex(v14, 2);
       if ( v11 == 6 )
         goto LABEL_26;
   LABEL_21:
@@ -151604,15 +151604,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         case 0:
           *(_BYTE *)(a1[1525] + 6184) = 1;
           *(_BYTE *)(a1[1526] + 6184) = 1;
-          sub_606FFC34(a1[1526], 1);
+          Object_changeStateByIndex(a1[1526], 1);
           *(_BYTE *)(a1[1527] + 6184) = 1;
           *(_BYTE *)(a1[1528] + 6184) = 1;
-          sub_606FFC34(a1[1528], 1);
+          Object_changeStateByIndex(a1[1528], 1);
           *(_BYTE *)(a1[1529] + 6184) = 1;
           v8 = a1[1530];
           v7 = a1 + 1530;
           *(_BYTE *)(v8 + 6184) = 1;
-          sub_606FFC34(*v7, 1);
+          Object_changeStateByIndex(*v7, 1);
           *(_BYTE *)(v7[1] + 6184) = 1;
           result = 2;
           goto LABEL_7;
@@ -151659,7 +151659,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *(_DWORD *)(v14[v13] + 6136) = dword_60B095DC[v13];
             v15 = v14[v13];
             if ( ((0x2Au >> v13) & 1) != 0 )
-              sub_606FFC34(v15, 2);
+              Object_changeStateByIndex(v15, 2);
             else
               *(_BYTE *)(v15 + 6185) = 1;
             ++v13;
@@ -151728,13 +151728,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[1532] = result;
     if ( v5 )
     {
-      sub_606FFC34(a1[1525], 3);
-      sub_606FFC34(a1[1526], 3);
-      sub_606FFC34(a1[1527], 3);
-      sub_606FFC34(a1[1528], 3);
-      sub_606FFC34(a1[1529], 3);
-      sub_606FFC34(a1[1530], 3);
-      sub_606FFC34(a1[1531], 3);
+      Object_changeStateByIndex(a1[1525], 3);
+      Object_changeStateByIndex(a1[1526], 3);
+      Object_changeStateByIndex(a1[1527], 3);
+      Object_changeStateByIndex(a1[1528], 3);
+      Object_changeStateByIndex(a1[1529], 3);
+      Object_changeStateByIndex(a1[1530], 3);
+      Object_changeStateByIndex(a1[1531], 3);
       result = 6;
   LABEL_7:
       *v3 = result;
@@ -151868,13 +151868,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       a1[1532] = result;
       if ( v5 )
       {
-        sub_606FFC34(a1[1525], 3);
-        sub_606FFC34(a1[1526], 3);
-        sub_606FFC34(a1[1527], 3);
-        sub_606FFC34(a1[1528], 3);
-        sub_606FFC34(a1[1529], 3);
-        sub_606FFC34(a1[1530], 3);
-        sub_606FFC34(a1[1531], 3);
+        Object_changeStateByIndex(a1[1525], 3);
+        Object_changeStateByIndex(a1[1526], 3);
+        Object_changeStateByIndex(a1[1527], 3);
+        Object_changeStateByIndex(a1[1528], 3);
+        Object_changeStateByIndex(a1[1529], 3);
+        Object_changeStateByIndex(a1[1530], 3);
+        Object_changeStateByIndex(a1[1531], 3);
         result = 6;
         goto LABEL_7;
       }
@@ -151885,13 +151885,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       case 0:
         *(_BYTE *)(a1[1525] + 6184) = 1;
-        sub_606FFC34(a1[1525], 1);
+        Object_changeStateByIndex(a1[1525], 1);
         *(_BYTE *)(a1[1526] + 6184) = 1;
         *(_BYTE *)(a1[1527] + 6184) = 1;
         v8 = a1[1528];
         v7 = a1 + 1528;
         *(_BYTE *)(v8 + 6184) = 1;
-        sub_606FFC34(*v7, 1);
+        Object_changeStateByIndex(*v7, 1);
         *(_BYTE *)(v7[1] + 6184) = 1;
         *(_BYTE *)(v7[2] + 6184) = 1;
         *(_BYTE *)(v7[3] + 6184) = 1;
@@ -151993,7 +151993,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v16 = v15[v13];
       if ( !v14 )
         break;
-      sub_606FFC34(v16, 2);
+      Object_changeStateByIndex(v16, 2);
       if ( v13 == 6 )
         goto LABEL_26;
   LABEL_21:
@@ -152133,13 +152133,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       a1[1532] = result;
       if ( v5 )
       {
-        sub_606FFC34(a1[1525], 3);
-        sub_606FFC34(a1[1526], 3);
-        sub_606FFC34(a1[1527], 3);
-        sub_606FFC34(a1[1528], 3);
-        sub_606FFC34(a1[1529], 3);
-        sub_606FFC34(a1[1530], 3);
-        sub_606FFC34(a1[1531], 3);
+        Object_changeStateByIndex(a1[1525], 3);
+        Object_changeStateByIndex(a1[1526], 3);
+        Object_changeStateByIndex(a1[1527], 3);
+        Object_changeStateByIndex(a1[1528], 3);
+        Object_changeStateByIndex(a1[1529], 3);
+        Object_changeStateByIndex(a1[1530], 3);
+        Object_changeStateByIndex(a1[1531], 3);
         result = 6;
         goto LABEL_7;
       }
@@ -152153,11 +152153,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_BYTE *)(a1[1526] + 6184) = 1;
         *(_BYTE *)(a1[1527] + 6184) = 1;
         *(_BYTE *)(a1[1528] + 6184) = 1;
-        sub_606FFC34(a1[1528], 1);
+        Object_changeStateByIndex(a1[1528], 1);
         *(_BYTE *)(a1[1529] + 6184) = 1;
         *(_BYTE *)(a1[1530] + 6184) = 1;
         *(_BYTE *)(a1[1531] + 6184) = 1;
-        sub_606FFC34(a1[1531], 1);
+        Object_changeStateByIndex(a1[1531], 1);
         result = 2;
         goto LABEL_7;
       case 1:
@@ -152256,7 +152256,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v14 = v13[v12];
       if ( !v11 )
         break;
-      sub_606FFC34(v14, 2);
+      Object_changeStateByIndex(v14, 2);
       if ( v12 == 6 )
         goto LABEL_26;
   LABEL_21:
@@ -154274,7 +154274,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_606FFC34
+ * Object_changeStateByIndex
  * RVA 0x006ffc34   size 0x18   xrefs 84
  * ============================================================================ */
   int __fastcall sub_606FFC34(int a1, int a2)
@@ -166710,7 +166710,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = *(_WORD *)(v63 + 60);
     *(_BYTE *)(v1 + 13654) = *(_BYTE *)(v63 + 62);
     *(_WORD *)(v1 + 13652) = v19;
-    sub_60917754(v1 + 13656, v1 + 12840);
+    Object_copyFrom(v1 + 13656, v1 + 12840);
     *(_DWORD *)(v1 + 13856) = *(_DWORD *)(v1 + 13040);
     v20 = *(_DWORD *)(v5 + 4);
     v21 = *(_DWORD *)(v5 + 8);
@@ -166742,7 +166742,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v32 = *(_WORD *)(v5 + 60);
     *(_BYTE *)(v1 + 13926) = *(_BYTE *)(v5 + 62);
     *(_WORD *)(v1 + 13924) = v32;
-    sub_60917754(v1 + 13928, v1 + 13112);
+    Object_copyFrom(v1 + 13928, v1 + 13112);
     *(_DWORD *)(v1 + 14128) = *(_DWORD *)(v1 + 13312);
     sub_60449E68(v1, v63, v5, v60, v1 + 13592, v1 + 13864, v6, v6, v6, v6, v6, 3, -1);
     if ( !v56 )
@@ -169557,7 +169557,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60727EFC(a1 + 4294);
     sub_60727EFC(a1 + 3206);
     sub_60414A80(a1 + 2556);
-    sub_60919C90(a1 + 2536);
+    Slot_detachChild(a1 + 2536);
     sub_60921BD4(a1 + 2452);
     sub_60922478(a1 + 2384);
     a1[2377] = 12557504;
@@ -169591,7 +169591,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60917AE4(a1 + 930);
     Object_releaseHandle(a1 + 864);
     sub_60917AE4(a1 + 844);
-    sub_60919C90(a1 + 824);
+    Slot_detachChild(a1 + 824);
     sub_60921BD4(a1 + 740);
     sub_60922478(a1 + 672);
     a1[665] = 12557504;
@@ -169600,7 +169600,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Slot_destroy(a1 + 658);
     Object_releaseHandle(a1 + 590);
     sub_60917AE4(a1 + 570);
-    sub_60919C90(a1 + 550);
+    Slot_detachChild(a1 + 550);
     sub_60921BD4(a1 + 466);
     sub_60922478(a1 + 398);
     a1[255] = 12557388;
@@ -170358,7 +170358,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v30 = *(_WORD *)(v17 + 60);
       *(_BYTE *)(a1 + 6286) = *(_BYTE *)(v17 + 62);
       *(_WORD *)(a1 + 6284) = v30;
-      sub_60917754(a1 + 6288, v17 + 64);
+      Object_copyFrom(a1 + 6288, v17 + 64);
       *(_DWORD *)(a1 + 6488) = *(_DWORD *)(v17 + 264);
       v31 = (unsigned int *)(a1 + 6496);
       do
@@ -170415,7 +170415,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       LOWORD(v36) = *(_WORD *)(v37 + 60);
       *(_BYTE *)(a1 + 5590) = *(_BYTE *)(v37 + 62);
       *(_WORD *)(a1 + 5588) = v36;
-      sub_60917754(a1 + 5592, v37 + 64);
+      Object_copyFrom(a1 + 5592, v37 + 64);
       *(_DWORD *)(a1 + 5792) = *(_DWORD *)(v37 + 264);
       *(_DWORD *)(a1 + 5800) = *(_DWORD *)(v37 + 272);
       *(_DWORD *)(a1 + 5804) = *(_DWORD *)(v37 + 276);
@@ -170477,7 +170477,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v75 = *(_WORD *)(v62 + 60);
       *(_BYTE *)(a1 + 5934) = *(_BYTE *)(v62 + 62);
       *(_WORD *)(a1 + 5932) = v75;
-      sub_60917754(a1 + 5936, v62 + 64);
+      Object_copyFrom(a1 + 5936, v62 + 64);
       *(_DWORD *)(a1 + 6136) = *(_DWORD *)(v62 + 264);
       *(_DWORD *)(a1 + 6144) = *(_DWORD *)(v62 + 272);
       *(_DWORD *)(a1 + 6148) = *(_DWORD *)(v62 + 276);
@@ -170665,7 +170665,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v28 = *(_WORD *)(v14 + 60);
       *(_BYTE *)(a1 + 7950) = *(_BYTE *)(v14 + 62);
       *(_WORD *)(a1 + 7948) = v28;
-      sub_60917754(a1 + 7952, v14 + 64);
+      Object_copyFrom(a1 + 7952, v14 + 64);
       *(_DWORD *)(a1 + 8152) = *(_DWORD *)(v14 + 264);
       v29 = (unsigned int *)(a1 + 8160);
       do
@@ -170957,7 +170957,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v35 = *(_WORD *)(v21 + 60);
     *(_BYTE *)(a1 + 4478) = *(_BYTE *)(v21 + 62);
     *(_WORD *)(a1 + 4476) = v35;
-    sub_60917754(a1 + 4480, v21 + 64);
+    Object_copyFrom(a1 + 4480, v21 + 64);
     *(_DWORD *)(a1 + 4680) = *(_DWORD *)(v21 + 264);
     v92 = (_DWORD **)(a1 + 5112);
     v36 = (unsigned int *)(a1 + 4688);
@@ -171016,7 +171016,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v56 = *(_WORD *)(v43 + 60);
     *(_BYTE *)(a1 + 4830) = *(_BYTE *)(v43 + 62);
     *(_WORD *)(a1 + 4828) = v56;
-    sub_60917754(a1 + 4832, v43 + 64);
+    Object_copyFrom(a1 + 4832, v43 + 64);
     *(_DWORD *)(a1 + 5032) = *(_DWORD *)(v43 + 264);
     v57 = (unsigned int *)(a1 + 5040);
     do
@@ -171072,7 +171072,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v77 = *((_WORD *)v64 + 30);
     *(_BYTE *)(a1 + 5182) = *((_BYTE *)v64 + 62);
     *(_WORD *)(a1 + 5180) = v77;
-    sub_60917754(a1 + 5184, v64 + 16);
+    Object_copyFrom(a1 + 5184, v64 + 16);
     v78 = (unsigned int *)(a1 + 5392);
     *(_DWORD *)(a1 + 5384) = v64[66];
     do
@@ -171570,7 +171570,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v31 = *(_WORD *)(v17 + 60);
       *(_BYTE *)(a1 + 6702) = *(_BYTE *)(v17 + 62);
       *(_WORD *)(a1 + 6700) = v31;
-      sub_60917754(a1 + 6704, v17 + 64);
+      Object_copyFrom(a1 + 6704, v17 + 64);
       v32 = a1 + 6984;
       *(_DWORD *)(a1 + 6904) = *(_DWORD *)(v17 + 264);
       v33 = (unsigned int *)(a1 + 6912);
@@ -171885,7 +171885,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = *(_WORD *)(v12 + 60);
     *(_BYTE *)(a1 + 7118) = *(_BYTE *)(v12 + 62);
     *(_WORD *)(a1 + 7116) = v27;
-    sub_60917754(a1 + 7120, v12 + 64);
+    Object_copyFrom(a1 + 7120, v12 + 64);
     *(_DWORD *)(a1 + 7320) = *(_DWORD *)(v12 + 264);
     v28 = (unsigned int *)(a1 + 7328);
     do
@@ -172174,7 +172174,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = *(_WORD *)(v12 + 60);
     *(_BYTE *)(a1 + 7118) = *(_BYTE *)(v12 + 62);
     *(_WORD *)(a1 + 7116) = v27;
-    sub_60917754(a1 + 7120, v12 + 64);
+    Object_copyFrom(a1 + 7120, v12 + 64);
     *(_DWORD *)(a1 + 7320) = *(_DWORD *)(v12 + 264);
     v28 = (unsigned int *)(a1 + 7328);
     do
@@ -173487,7 +173487,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = *(_WORD *)(v111 + 84);
     *(_BYTE *)(v111 + 2270) = *(_BYTE *)(v111 + 86);
     *(_WORD *)(v111 + 2268) = v27;
-    sub_60917754(v111 + 2272, v111 + 88);
+    Object_copyFrom(v111 + 2272, v111 + 88);
     *(_DWORD *)(v111 + 2472) = *(_DWORD *)(v111 + 288);
     v28 = (unsigned int *)(v111 + 2480);
     do
@@ -174081,7 +174081,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v23 = *(_WORD *)(v8 + 60);
     *(_BYTE *)(a1 + 2622) = *(_BYTE *)(v8 + 62);
     *(_WORD *)(a1 + 2620) = v23;
-    sub_60917754(a1 + 2624, v8 + 64);
+    Object_copyFrom(a1 + 2624, v8 + 64);
     *(_DWORD *)(a1 + 2824) = *(_DWORD *)(v8 + 264);
     v24 = (unsigned int *)(a1 + 2832);
     do
@@ -178225,7 +178225,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Slot_destroy(a1 + 813);
     a1[806] = 12721668;
     Slot_destroy(a1 + 806);
-    sub_60919C90(a1 + 18);
+    Slot_detachChild(a1 + 18);
     a1[10] = 12556228;
     Slot_destroy(a1 + 10);
     a1[3] = 12556228;
@@ -178248,7 +178248,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Slot_destroy((int)(a1 + 813));
     a1[806] = 12721668;
     Slot_destroy((int)(a1 + 806));
-    sub_60919C90(a1 + 18);
+    Slot_detachChild(a1 + 18);
     a1[10] = 12556228;
     Slot_destroy((int)(a1 + 10));
     a1[3] = 12556228;
@@ -183689,7 +183689,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ActorMgr_unregisterIfActive(a1 + 7320);
     sead::IDisposer::~IDisposer(v3);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6664));
-    sub_60026BFC(v2);
+    SoundActor_destroySevenDisposers(v2);
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -183714,7 +183714,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ActorMgr_unregisterIfActive(a1 + 7320);
     sead::IDisposer::~IDisposer(v3);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6664));
-    sub_60026BFC(v2);
+    SoundActor_destroySevenDisposers(v2);
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -183803,7 +183803,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v1; // r0
   
-    v1 = sub_60026BFC(a1);
+    v1 = SoundActor_destroySevenDisposers(a1);
     return operator delete(v1);
   }
 
@@ -195393,9 +195393,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v3; // r0
   
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 648));
-    sub_604218E0(*(_DWORD **)(a1 + 648));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 648));
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 652));
-    sub_604218E0(*(_DWORD **)(a1 + 652));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 652));
     if ( (*(_BYTE *)(a1 + 20) & 1) == 0 )
       *(_DWORD *)(a1 + 688) += 0x4000000;
     v2 = *(_DWORD *)(a1 + 696);
@@ -196284,7 +196284,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v3; // r0
   
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 644));
-    sub_604218E0(*(_DWORD **)(a1 + 644));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 644));
     v2 = *(_DWORD *)(a1 + 648);
     if ( v2 )
       *(_DWORD *)(a1 + 648) = v2 - 1;
@@ -201372,7 +201372,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_BYTE *)(a1 + 535) )
     {
       j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 648));
-      sub_604218E0(*(_DWORD **)(a1 + 648));
+      AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 648));
     }
     StateMgr::execute((_DWORD *)(a1 + 736));
     sub_60233544(MEMORY[0xC8D904]);
@@ -210692,7 +210692,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ActiveCollider_dtor(a1 + 7136);
     sub_60154380(a1 + 1328);
     PlayerLookTarget_vf0(a1 + 1160);
-    sub_60026BFC(v2);
+    SoundActor_destroySevenDisposers(v2);
     StageActor::~StageActor((StageActor *)a1);
   }
 
@@ -217810,7 +217810,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     if ( !MEMORY[0xC99DD4] || (result = *(_DWORD *)(MEMORY[0xC99DD4] + 764), result != 3) )
     {
-      a1[40] = sub_60773F3C((int)a1, a1[20]);
+      a1[40] = FixedPoint_selectSign((int)a1, a1[20]);
       a1[2432] = a3;
       return sub_60766314((int)a1, 13366104, 0);
     }
@@ -218837,7 +218837,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( !result )
           {
             a1[306] |= 1u;
-            sub_60794954(a1[162], 191);
+            Object_callSlots19And21(a1[162], 191);
   LABEL_22:
             result = 5;
   LABEL_23:
@@ -218939,7 +218939,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = a1[2486];
         if ( result )
           return result;
-        sub_60794954(a1[162], 0);
+        Object_callSlots19And21(a1[162], 0);
         a1[301] &= ~0x10u;
         result = 5;
         break;
@@ -218976,7 +218976,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(_DWORD *)(a1 + 9940);
     if ( result == 1 )
     {
-      v9 = sub_60773F3C(a1, *(_DWORD *)(a1 + 80));
+      v9 = FixedPoint_selectSign(a1, *(_DWORD *)(a1 + 80));
       v8 = 119304647;
       result = moveValueTo(a1 + 160, &v9, &v8, v7);
       if ( result != 1 )
@@ -219042,7 +219042,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = a1[2486];
         if ( result )
           return result;
-        sub_60794954(a1[162], 0);
+        Object_callSlots19And21(a1[162], 0);
         a1[301] &= ~0x10u;
         result = 5;
         break;
@@ -219096,7 +219096,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = a1[2486];
         if ( result )
           return result;
-        sub_60794954(a1[162], 0);
+        Object_callSlots19And21(a1[162], 0);
         a1[301] &= ~0x10u;
         result = 5;
         break;
@@ -219221,7 +219221,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = a1[2486];
         if ( result )
           return result;
-        sub_60794954(a1[162], 191);
+        Object_callSlots19And21(a1[162], 191);
         a1[301] &= ~0x10u;
         result = 5;
         break;
@@ -220158,7 +220158,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         break;
       case 4:
         if ( sub_607868D4(a1 + 688, 0)
-          || (v21 = sub_60773F3C(a1, *(_DWORD *)(a1 + 80)),
+          || (v21 = FixedPoint_selectSign(a1, *(_DWORD *)(a1 + 80)),
               v20 = 0x8000000,
               result = moveValueTo(a1 + 160, &v21, &v20, v9),
               result == 1) )
@@ -220344,7 +220344,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 9828) = v4 - v1;
     *(_DWORD *)(a1 + 9832) = v5;
     *(float *)(a1 + 112) = *(float *)(a1 + 112) + 2.0;
-    *(_DWORD *)(a1 + 160) = sub_60773F3C(a1, *(_DWORD *)(a1 + 80));
+    *(_DWORD *)(a1 + 160) = FixedPoint_selectSign(a1, *(_DWORD *)(a1 + 80));
     return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 740))(a1, 0);
   }
 
@@ -220406,7 +220406,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 9824) = v3;
     *(float *)(a1 + 9828) = v6;
     *(_DWORD *)(a1 + 9832) = v4;
-    *(_DWORD *)(a1 + 160) = sub_60773F3C(a1, *(_DWORD *)(a1 + 80));
+    *(_DWORD *)(a1 + 160) = FixedPoint_selectSign(a1, *(_DWORD *)(a1 + 80));
     return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 740))(a1, 1);
   }
 
@@ -220450,7 +220450,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     PlayerBase_dispatchVirtual3(a1[162], 137);
     a1[303] |= 0x20u;
     a1[20] = 1;
-    a1[40] = sub_60773F3C((int)a1, 1);
+    a1[40] = FixedPoint_selectSign((int)a1, 1);
     return (*(int (__fastcall **)(_DWORD *, int))(*a1 + 740))(a1, 3);
   }
 
@@ -220494,7 +220494,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     PlayerBase_dispatchVirtual3(a1[162], 137);
     a1[303] |= 0x20u;
     a1[20] = 0;
-    a1[40] = sub_60773F3C((int)a1, 0);
+    a1[40] = FixedPoint_selectSign((int)a1, 0);
     return (*(int (__fastcall **)(_DWORD *, int))(*a1 + 740))(a1, 2);
   }
 
@@ -220970,7 +220970,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( result )
       return result;
-    v22 = sub_60773F3C((int)a1, *((_DWORD *)a1 + 20));
+    v22 = FixedPoint_selectSign((int)a1, *((_DWORD *)a1 + 20));
     result = sub_60773F88(a1, &v22);
     if ( result )
       return result;
@@ -223531,7 +223531,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
   
-    a1[40] = sub_60773F3C((int)a1, a1[20]);
+    a1[40] = FixedPoint_selectSign((int)a1, a1[20]);
     a1[22] = 0;
     a1[23] = 0;
     a1[25] = 0;
@@ -223775,7 +223775,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[306] |= 0x800u;
     if ( a1[2491] )
       a1[304] |= 0x200000u;
-    sub_60794954(a1[162], 6);
+    Object_callSlots19And21(a1[162], 6);
     return sub_6075F54C((int)a1);
   }
 
@@ -223835,7 +223835,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[302] |= 4u;
     sub_6078667C(a1 + 172, 6);
     PlayerBase_dispatchVirtual3(a1[162], 0);
-    result = sub_60773F3C((int)a1, a1[20]);
+    result = FixedPoint_selectSign((int)a1, a1[20]);
     a1[40] = result;
     return result;
   }
@@ -225626,7 +225626,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v8 && (v14 = 1, *(float *)(a1 + 88) < 0.0) )
     {
   LABEL_19:
-      *(_DWORD *)(a1 + 160) = sub_60773F3C(a1, v14);
+      *(_DWORD *)(a1 + 160) = FixedPoint_selectSign(a1, v14);
       *(_DWORD *)(a1 + 80) ^= 1u;
       return Player_changeState(a1, 13367576, 0);
     }
@@ -225652,7 +225652,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( *(float *)(a1 + 88) > 0.0 )
         {
   LABEL_22:
-          *(_DWORD *)(a1 + 160) = sub_60773F3C(a1, v13);
+          *(_DWORD *)(a1 + 160) = FixedPoint_selectSign(a1, v13);
           *(_DWORD *)(a1 + 80) ^= 1u;
         }
       }
@@ -225893,7 +225893,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( a2 == 1 )
         PlayerBase_dispatchVirtual3(v7, 23);
       else
-        sub_60794954(v7, 23);
+        Object_callSlots19And21(v7, 23);
       return 1;
     }
     return result;
@@ -226480,7 +226480,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60773F3C
+ * FixedPoint_selectSign
  * RVA 0x00773f3c   size 0x10   xrefs 90
  * ============================================================================ */
   int __fastcall sub_60773F3C(int a1, int a2)

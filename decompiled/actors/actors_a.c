@@ -1375,7 +1375,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = v3(v2, v8);
     (*(void (__fastcall **)(_DWORD, int, __int64 *))(***(_DWORD ***)(a1 + 372) + 108))(**(_DWORD **)(a1 + 372), v4, v8);
     sub_60237454(a1 + 380, v8, 1);
-    sub_60168DF8(a1);
+    Object_updateScaleFromPacked(a1);
     v5 = *(float *)(a1 + 128) + 0.1;
     *(float *)(a1 + 128) = v5;
     *(float *)(a1 + 132) = *(float *)(a1 + 132) + 0.1;
@@ -1436,7 +1436,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = v3(v2, v8);
     (*(void (__fastcall **)(_DWORD, int, __int64 *))(***(_DWORD ***)(a1 + 372) + 108))(**(_DWORD **)(a1 + 372), v4, v8);
     sub_60237454(a1 + 380, v8, 1);
-    sub_60168DF8(a1);
+    Object_updateScaleFromPacked(a1);
     sub_6020339C(a1);
     v5 = *(float *)(a1 + 80);
     v6 = *(float *)(a1 + 512);
@@ -1475,7 +1475,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r3
     int result; // r0
   
-    sub_60168DF8(a1);
+    Object_updateScaleFromPacked(a1);
     *(float *)(a1 + 200) = *(float *)(a1 + 200) * 0.8;
     result = moveValueTo((int *)(a1 + 180), (int *)(a1 + 552), &dword_60C8C5C0, v2);
     if ( result == 1 )
@@ -1529,7 +1529,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = v3(v2, v7);
     (*(void (__fastcall **)(_DWORD, int, __int64 *))(***(_DWORD ***)(a1 + 372) + 108))(**(_DWORD **)(a1 + 372), v4, v7);
     sub_60237454(a1 + 380, v7, 1);
-    sub_60168DF8(a1);
+    Object_updateScaleFromPacked(a1);
     v5 = *(float *)(a1 + 128) + -0.1;
     *(float *)(a1 + 128) = v5;
     *(float *)(a1 + 132) = *(float *)(a1 + 132) + -0.1;
@@ -1798,7 +1798,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
     float v3; // s0
   
-    result = sub_60168DF8(a1);
+    result = Object_updateScaleFromPacked(a1);
     v3 = *(float *)(a1 + 528);
     if ( *(float *)(a1 + 84) < v3 )
     {
@@ -4188,7 +4188,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v38 = v38 + (float)((float)((float)(v35 * 0.0) - (float)(v36 * 40.0)) + (float)(v37 * 0.0));
       }
       (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 268) + 60))(**(_DWORD **)(a1 + 268), &v27);
-      sub_604218E0(*(_DWORD *)(a1 + 268));
+      AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)(a1 + 268));
       (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 268) + 52))(**(_DWORD **)(a1 + 268));
       return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 268) + 56))(**(_DWORD **)(a1 + 268));
     }
@@ -5530,7 +5530,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(int **)(a1 + 400);
     if ( result == (int *)2 )
     {
-      result = (int *)sub_60168DF8(a1);
+      result = (int *)Object_updateScaleFromPacked(a1);
       *(float *)(a1 + 204) = *(float *)(a1 + 204) + 0.0;
       v7 = *(float *)(a1 + 128) + -0.3;
       *(float *)(a1 + 128) = v7;
@@ -5547,7 +5547,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else if ( result == (int *)1 )
     {
-      sub_60168DF8(a1);
+      Object_updateScaleFromPacked(a1);
       v8 = *(_DWORD *)(a1 + 392);
       if ( v8 < 0 && v8 != 0x80000000 )
         v8 = -v8;
@@ -5563,7 +5563,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else if ( !result )
     {
-      sub_60168DF8(a1);
+      Object_updateScaleFromPacked(a1);
       v4 = -1;
       v6 = (int **)(a1 + 396);
       v5 = *(_DWORD *)(a1 + 396);
@@ -6438,7 +6438,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v33[2] = v11[20];
         v33[1] = v13;
         v33[0] = v12;
-        sub_60168DF8(a1);
+        Object_updateScaleFromPacked(a1);
         sub_60169030(a1, v34, v33, 6u);
         if ( sub_60168910((float *)a1, v34, v33) != 1 )
         {
@@ -7529,7 +7529,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v34[2] = v11[20];
         v34[1] = v13;
         v34[0] = v12;
-        sub_60168DF8((int)a1);
+        Object_updateScaleFromPacked((int)a1);
         sub_60169030((int)a1, v35, v34, 6u);
         if ( sub_60168910((float *)a1, v35, v34) == 1 )
         {
@@ -8618,7 +8618,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     int result; // r0
   
-    sub_60168DF8(a1);
+    Object_updateScaleFromPacked(a1);
     v2 = *(_DWORD *)(a1 + 440);
     if ( !v2 )
       return StateMgr::changeState((_DWORD *)(a1 + 284), 13159564);
@@ -8685,7 +8685,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v10; // [sp+0h] [bp-8h] BYREF
     int v11; // [sp+4h] [bp-4h] BYREF
   
-    sub_60168DF8(a1);
+    Object_updateScaleFromPacked(a1);
     v2 = *(float *)(a1 + 84);
     if ( *(float *)(a1 + 204) < 0.0 )
     {
@@ -8894,7 +8894,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(int **)(a1 + 448);
     if ( result == (int *)2 )
     {
-      result = (int *)sub_60168DF8(a1);
+      result = (int *)Object_updateScaleFromPacked(a1);
       *(float *)(a1 + 204) = *(float *)(a1 + 204) + 0.0;
       v7 = *(float *)(a1 + 128) + -0.3;
       *(float *)(a1 + 128) = v7;
@@ -8911,7 +8911,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else if ( result == (int *)1 )
     {
-      sub_60168DF8(a1);
+      Object_updateScaleFromPacked(a1);
       v8 = *(_DWORD *)(a1 + 432);
       if ( v8 < 0 && v8 != 0x80000000 )
         v8 = -v8;
@@ -8927,7 +8927,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else if ( !result )
     {
-      sub_60168DF8(a1);
+      Object_updateScaleFromPacked(a1);
       v4 = -1;
       v6 = (int **)(a1 + 440);
       v5 = *(_DWORD *)(a1 + 440);
@@ -9049,7 +9049,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v14 = 34;
       do
       {
-        sub_60168DF8(a1);
+        Object_updateScaleFromPacked(a1);
         v17 = *(float *)(a1 + 84) - *(float *)(a1 + 396);
         v18 = *(float *)(a1 + 80) - *(float *)(a1 + 392);
         if ( sqrtf(
@@ -9930,7 +9930,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v17; // [sp+4h] [bp-4h] BYREF
   
     ++*(_DWORD *)(a1 + 432);
-    sub_60168DF8(a1);
+    Object_updateScaleFromPacked(a1);
     result = *(_DWORD *)(a1 + 420);
     switch ( result )
     {
@@ -10220,7 +10220,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 416);
     if ( v3 >= 1 )
       *(_DWORD *)(a1 + 416) = v3 - 1;
-    sub_60168DF8(a1);
+    Object_updateScaleFromPacked(a1);
     v5 = 0;
     switch ( *(_DWORD *)(a1 + 420) )
     {
@@ -10809,7 +10809,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         break;
       case 9:
-        sub_60168DF8(a1);
+        Object_updateScaleFromPacked(a1);
         v4.n64_u32[1] = 1036831949;
         result = (int)Float_clampWithSign((float *)(a1 + 120));
         v1.n64_u32[0] = 3.0;
@@ -13101,7 +13101,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(int **)(a1 + 468);
     if ( result == (int *)2 )
     {
-      sub_60168DF8(a1);
+      Object_updateScaleFromPacked(a1);
       *(float *)(a1 + 204) = *(float *)(a1 + 204) + 0.0;
       v7 = *(float *)(a1 + 128) + -0.3;
       *(float *)(a1 + 128) = v7;
@@ -13132,7 +13132,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else if ( result == (int *)1 )
     {
-      sub_60168DF8(a1);
+      Object_updateScaleFromPacked(a1);
       v12 = *(_DWORD *)(a1 + 472);
       if ( v12 < 0 && v12 != 0x80000000 )
         v12 = -v12;
@@ -13148,7 +13148,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else if ( !result )
     {
-      sub_60168DF8(a1);
+      Object_updateScaleFromPacked(a1);
       v4 = -1;
       v6 = (int **)(a1 + 464);
       v5 = *(_DWORD *)(a1 + 464);
@@ -34689,7 +34689,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a2 != 1 )
     {
       j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 4));
-      sub_604218E0(*(_DWORD *)(a1 + 4));
+      AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)(a1 + 4));
       sub_6042FCB0(MEMORY[0xC9C2D0], *(_DWORD *)(a1 + 12));
     }
     sub_60421880(*(_DWORD *)(a1 + 4));
@@ -40858,7 +40858,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)*v4 + 60))(*v4, &v17);
     (*(void (__fastcall **)(_DWORD, _DWORD **))(***(_DWORD ***)v1 + 68))(**(_DWORD **)v1, (_DWORD **)v1 + 1429);
     Animation_update(*((_DWORD *)v1 + 1));
-    sub_604218E0(*(_DWORD *)v1);
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)v1);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)v1 + 52))(**(_DWORD **)v1);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)v1 + 56))(**(_DWORD **)v1);
     v5 = **(_DWORD **)v1;
@@ -51791,7 +51791,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v11 != (*(int (**)(void))(MEMORY[0xC8DDF8] + 8))() )
       j_ModelWrapper_updateAnims(*v9);
-    sub_604218E0(*v9);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v9);
     sub_60421880(*v9);
     result = *(_DWORD *)(a1 + 6336);
     if ( result )
@@ -51834,7 +51834,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v18 = (_DWORD **)(a1 + 6308);
         (*(void (__fastcall **)(_DWORD, int *))(*(_DWORD *)*v19 + 60))(*v19, &v21);
         j_ModelWrapper_updateAnims(*v18);
-        sub_604218E0(*v18);
+        AnimationCtrl_switchBothHalvesIfEnabled(*v18);
         (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v18 + 52))(**v18);
         return (*(int (__fastcall **)(_DWORD))(*(_DWORD *)**v18 + 56))(**v18);
       }
@@ -51912,7 +51912,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 6304) + 60))(**(_DWORD **)(a1 + 6304), &v19);
     (*(void (__fastcall **)(int, int))(*(_DWORD *)**v8 + 68))(**v8, a1 + 12144);
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6304));
-    sub_604218E0(*(_DWORD *)(a1 + 6304));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)(a1 + 6304));
     sub_60421880(*(_DWORD *)(a1 + 6304));
     result = *(_DWORD *)(a1 + 6336);
     if ( result )
@@ -51931,7 +51931,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v13 = (_DWORD **)(a1 + 6308);
         (*(void (__fastcall **)(_DWORD, _DWORD *))(*(_DWORD *)*v14 + 60))(*v14, v15);
         j_ModelWrapper_updateAnims(*v13);
-        sub_604218E0(*v13);
+        AnimationCtrl_switchBothHalvesIfEnabled(*v13);
         (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v13 + 52))(**v13);
         return (*(int (__fastcall **)(_DWORD))(*(_DWORD *)**v13 + 56))(**v13);
       }
@@ -57536,7 +57536,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v24 = v24 + (float)((float)((float)(v21 * 0.0) - (float)(v22 * 40.0)) + (float)(v23 * 0.0));
     (*(void (__fastcall **)(_DWORD, float *))(**a1[1] + 60))(*a1[1], &v13);
     (*(void (__fastcall **)(_DWORD, _DWORD ***))(**a1[1] + 68))(*a1[1], a1 + 8);
-    sub_604218E0(a1[1]);
+    AnimationCtrl_switchBothHalvesIfEnabled(a1[1]);
     (*(void (__fastcall **)(_DWORD))(**a1[1] + 52))(*a1[1]);
     ((void (__fastcall *)(_DWORD ***))(*a1)[4])(a1);
     (*(void (__fastcall **)(_DWORD))(**a1[1] + 56))(*a1[1]);
@@ -60367,7 +60367,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (*v3 & 1) == 0 )
     {
       j_ModelWrapper_updateAnims(a1[1588]);
-      sub_604218E0(a1[1588]);
+      AnimationCtrl_switchBothHalvesIfEnabled(a1[1588]);
     }
     SE_EMY_BH_HIBANA_ref(a1);
     ActorScaler_execute(a1 + 1677);
@@ -64297,7 +64297,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = (_DWORD **)(a1 + 6300);
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 6300) + 60))(**(_DWORD **)(a1 + 6300), &v12);
     (*(void (__fastcall **)(_DWORD, int))(*(_DWORD *)**v10 + 68))(**v10, a1 + 12436);
-    sub_604218E0(*(_DWORD *)(a1 + 6300));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)(a1 + 6300));
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v10 + 52))(**v10);
     sub_602640A0(a1);
     return (*(int (__fastcall **)(_DWORD))(*(_DWORD *)**v10 + 56))(**v10);
@@ -89087,7 +89087,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Mtx34_rotateZ(v8, &v7);
     (*(void (__fastcall **)(_DWORD, _DWORD *))(***(_DWORD ***)(a1 + 40) + 60))(**(_DWORD **)(a1 + 40), v8);
     (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 40) + 68))(**(_DWORD **)(a1 + 40), a1 + 88);
-    sub_604218E0(*(_DWORD *)(a1 + 40));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)(a1 + 40));
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 40) + 52))(**(_DWORD **)(a1 + 40));
     sub_60290260(a1);
     return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 40) + 56))(**(_DWORD **)(a1 + 40));
@@ -94433,7 +94433,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6029970C(int a1)
   {
-    sub_604218E0(*(_DWORD **)(a1 + 6300));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 6300));
     return sub_602A33AC(a1);
   }
 
@@ -101623,7 +101623,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 += 1526;
     (*(void (__fastcall **)(int, _DWORD *))(*(_DWORD *)*v4 + 60))(*v4, v14);
     (*(void (__fastcall **)(int, int **))(*(_DWORD *)**v1 + 68))(**v1, v1 - 1490);
-    sub_604218E0(*v1);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v1);
     (*(void (__fastcall **)(int))(*(_DWORD *)**v1 + 52))(**v1);
     (*(void (__fastcall **)(int))(*(_DWORD *)**v1 + 56))(**v1);
     v5 = **v1;
@@ -106588,7 +106588,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v20 = *((_DWORD **)v1 + 1575);
     v1 += 1575;
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)*v20 + 60))(*v20, v34);
-    sub_604218E0(*(_DWORD *)v1);
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)v1);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)v1 + 52))(**(_DWORD **)v1);
     v21 = **(_DWORD **)v1;
     v22 = *(int (__fastcall **)(int, int *))(*(_DWORD *)v21 + 84);
@@ -108931,13 +108931,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v5 )
       {
         j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6300));
-        sub_604218E0(*(_DWORD **)(a1 + 6300));
+        AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 6300));
         v10 = (_DWORD **)(a1 + 6304);
         v9 = *(_DWORD *)(a1 + 6304);
         if ( v9 )
         {
           j_ModelWrapper_updateAnims(v9);
-          sub_604218E0(*v10);
+          AnimationCtrl_switchBothHalvesIfEnabled(*v10);
           if ( *v10 )
           {
             v11 = *(_DWORD *)(*v10)[7];
@@ -109006,13 +109006,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       goto LABEL_9;
     }
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6300));
-    sub_604218E0(*(_DWORD **)(a1 + 6300));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 6300));
     v7 = (_DWORD **)(a1 + 6304);
     v6 = *(_DWORD *)(a1 + 6304);
     if ( v6 )
     {
       j_ModelWrapper_updateAnims(v6);
-      sub_604218E0(*v7);
+      AnimationCtrl_switchBothHalvesIfEnabled(*v7);
       if ( *v7 )
       {
         v8 = *(_DWORD *)(*v7)[7];
@@ -111383,7 +111383,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     *(_DWORD *)a1 = 12467056;
     *(_DWORD *)(a1 + 6312) = 12467732;
-    sub_60026BFC((_DWORD *)(a1 + 6352));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6352));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -111401,7 +111401,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *(_DWORD *)a1 = 12467056;
     *(_DWORD *)(a1 + 6312) = 12467732;
-    sub_60026BFC((_DWORD *)(a1 + 6352));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6352));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -117781,7 +117781,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v14 != (*(int (**)(void))(MEMORY[0xC908C0] + 8))() && !a2 )
       j_ModelWrapper_updateAnims(*v12);
-    sub_604218E0(*v12);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v12);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v12 + 52))(**v12);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v12 + 56))(**v12);
     (*(void (__fastcall **)(_DWORD, _DWORD, int))(*(_DWORD *)**v12 + 108))(**v12, 0, a1 + 6360);
@@ -127561,7 +127561,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = v21 + (float)((float)((float)(v18 * 0.0) - (float)(v19 * 10.0)) + (float)(v20 * 0.0));
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 4) + 60))(**(_DWORD **)(a1 + 4), &v10);
     (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 4) + 68))(**(_DWORD **)(a1 + 4), a2);
-    sub_604218E0(*(_DWORD *)(a1 + 4));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)(a1 + 4));
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 4) + 52))(**(_DWORD **)(a1 + 4));
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 4) + 56))(**(_DWORD **)(a1 + 4));
     return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 52))(a1, *(_DWORD *)(a1 + 4));
@@ -132804,7 +132804,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v15 = v15 + (float)((float)((float)-(float)(v8 * v12) - (float)(v13 * v9)) - (float)(v14 * v10));
       v19 = v19 + (float)((float)((float)-(float)(v8 * v16) - (float)(v17 * v9)) - (float)(v18 * v10));
       v23 = v23 + (float)((float)((float)-(float)(v8 * v20) - (float)(v21 * v9)) - (float)(v22 * v10));
-      sub_604218E0(*(_DWORD *)(a1 + 6300));
+      AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)(a1 + 6300));
       v11 = **(_DWORD **)(a1 + 6300);
       (*(void (__fastcall **)(int, float *))(*(_DWORD *)v11 + 60))(v11, &v12);
       (*(void (__fastcall **)(int, int))(*(_DWORD *)v11 + 68))(v11, a1 + 6792);
@@ -139399,7 +139399,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v49; // [sp+A4h] [bp-4h]
   
     sub_602E6B18();
-    sub_604218E0(*a1);
+    AnimationCtrl_switchBothHalvesIfEnabled(*a1);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**a1 + 52))(**a1);
     v38 = 1.0;
     v39 = 0.0;
@@ -139747,7 +139747,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v4 > v5 )
       v3 += v5;
     Animation_update(*v3);
-    return sub_604218E0(*a1);
+    return AnimationCtrl_switchBothHalvesIfEnabled(*a1);
   }
 
 /* ============================================================================
@@ -149146,7 +149146,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v16();
       j_ModelWrapper_updateAnims(*v12);
     }
-    sub_604218E0(*v12);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v12);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v12 + 52))(**v12);
     return (*(int (__fastcall **)(_DWORD))(*(_DWORD *)**v12 + 56))(**v12);
   }
@@ -151305,7 +151305,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       || (v12 = 0, sub_602A588C(a1) == 1) )
     {
       j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6304));
-      sub_604218E0(*(_DWORD **)(a1 + 6304));
+      AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 6304));
       ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6308));
       ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6312));
       v13 = v12 == 1;

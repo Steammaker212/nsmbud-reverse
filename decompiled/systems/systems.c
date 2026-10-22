@@ -669,7 +669,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 515;
     Disposer_allocateChildren(a1 + 515, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v5 = 12321336;
     v6 = "BaloonGuide.bflyt";
     message_ref(v2, &v5, 0, 0, 0);
@@ -720,7 +720,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604811D4(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 12837) )
-      return sub_60473B88((_DWORD *)(result + 2060), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 2060), a2, 0);
     return result;
   }
 
@@ -1181,7 +1181,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"BonusTime.bflyt";
     message_ref(v2, v7, 0, 0, 0);
@@ -1286,7 +1286,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60481E84(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3670) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -1602,7 +1602,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"BootSceneDL.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -1694,7 +1694,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60482638(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3590) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -2032,7 +2032,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[2620] = 14;
     v2 = a1 + 835;
     Disposer_allocateChildren(a1 + 835, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v31 = (char *)&v33;
     v30 = 12322272;
     v32 = 70;
@@ -2230,7 +2230,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604830AC(int a1, _DWORD *a2)
   {
-    return sub_60473B88((_DWORD *)(a1 + 3340), a2, 0);
+    return RenderParams_applyModelTransform((_DWORD *)(a1 + 3340), a2, 0);
   }
 
 /* ============================================================================
@@ -2766,7 +2766,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"ChallengeCompleteWindow.bflyt";
     message_ref(v2, v5, 0, 0, 0);
@@ -2846,7 +2846,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60483E10(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3637) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -3074,7 +3074,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v3 = *(_DWORD *)(a1 + 3648);
     v4 = (_DWORD *)(a1 + 40);
-    result = sub_604746E4((int)v4, (_DWORD *)0xC9F008, &dword_60C9F170[2 * v3]);
+    result = ListNode_findByKey((int)v4, (_DWORD *)0xC9F008, &dword_60C9F170[2 * v3]);
     if ( result != -1 )
       return sub_604742D0(v4, 0, (_DWORD *)0xC9F008, result, 0);
     return result;
@@ -3106,7 +3106,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v3 = *(_DWORD *)(a1 + 3648);
     v4 = (_DWORD *)(a1 + 40);
-    result = sub_604746E4((int)v4, (_DWORD *)0xC9F008, &dword_60C9F170[2 * v3 + 8]);
+    result = ListNode_findByKey((int)v4, (_DWORD *)0xC9F008, &dword_60C9F170[2 * v3 + 8]);
     if ( result != -1 )
       return sub_604742D0(v4, 0, (_DWORD *)0xC9F010, result, 0);
     return result;
@@ -3455,7 +3455,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ChallengeFailure.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -3536,7 +3536,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60485068(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3593) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -4106,7 +4106,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(_DWORD *)(a1 + 4);
     v15 = 12321336;
     v16 = "Game";
-    sub_60475C8C(v4);
+    Player_allocateSlotObject(v4);
     v5 = *(_DWORD **)(a1 + 4);
     v15 = 12321336;
     v16 = "ChallengeRetryWindow.bflyt";
@@ -6806,7 +6806,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 0;
     v3 = a1 + 9;
     Disposer_allocateChildren(a1 + 9, 0);
-    sub_60475C8C((int)v3);
+    Player_allocateSlotObject((int)v3);
     v20 = 12321336;
     v21 = "ChallengeSelect.bflyt";
     message_ref(v3, &v20, (int)(a1 + 952), 0, 0);
@@ -7849,7 +7849,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v24 = sub_604923E4(1);
     v21 = 12321336;
     v22 = sub_60492798(v4);
-    a1[3446] = sub_604746E4(v3, &v23, &v21);
+    a1[3446] = ListNode_findByKey(v3, &v23, &v21);
     v25 = 1;
     if ( ((unsigned int)&unk_60C9FD78 & ~(1615378340 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9FD78) )
     {
@@ -7870,7 +7870,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = sub_60492798(v8);
     v21 = 12321336;
     v22 = v10;
-    a1[3447] = sub_604746E4(v3, &v23, &v21);
+    a1[3447] = ListNode_findByKey(v3, &v23, &v21);
     v25 = 2;
     if ( ((unsigned int)&unk_60C9FD78 & ~(1615378544 << v11) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9FD78) )
     {
@@ -7889,7 +7889,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = sub_60492798(v12);
     v21 = 12321336;
     v22 = v14;
-    a1[3448] = sub_604746E4(v3, &v23, &v21);
+    a1[3448] = ListNode_findByKey(v3, &v23, &v21);
     v25 = 3;
     if ( ((unsigned int)&unk_60C9FD78 & ~(1615378744 << v15) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9FD78) )
     {
@@ -7909,7 +7909,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v19 = sub_60492798(v17);
     v21 = 12321336;
     v22 = v19;
-    result = sub_604746E4(v3, &v23, &v21);
+    result = ListNode_findByKey(v3, &v23, &v21);
     a1[3449] = result;
     return result;
   }
@@ -9070,7 +9070,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 13817);
     if ( result )
     {
-      sub_60473B88((_DWORD *)(a1 + 36), a2, 0);
+      RenderParams_applyModelTransform((_DWORD *)(a1 + 36), a2, 0);
       sub_60495660(*(_DWORD *)(a1 + 14240), a2);
       sub_604EE17C(*(_DWORD *)(a1 + 14244), a2);
       sub_6054550C(a1 + 14248, a2);
@@ -10798,14 +10798,14 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (_DWORD *)(a1 + 36);
     v20 = 12321336;
     v21 = sub_60492798(dword_60C9FDAC);
-    v4 = sub_604746E4(a1 + 36, &v22, &v20);
+    v4 = ListNode_findByKey(a1 + 36, &v22, &v20);
     v5 = sub_604923E4(4);
     v22 = 12321336;
     v23 = v5;
     v6 = sub_60492798(dword_60C9FDB0);
     v20 = 12321336;
     v21 = v6;
-    v7 = sub_604746E4(a1 + 36, &v22, &v20);
+    v7 = ListNode_findByKey(a1 + 36, &v22, &v20);
     v10 = *(unsigned __int8 *)(a1 + 47817);
     v9 = (_BYTE *)(a1 + 47817);
     v8 = v10;
@@ -13833,7 +13833,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = sub_604962DC(1u);
     v5[0] = 12321336;
     v5[1] = "G_Return_00";
-    v2 = sub_604746E4((int)v1, &v6, v5);
+    v2 = ListNode_findByKey((int)v1, &v6, v5);
     v3 = sub_604962DC(1u);
     v6 = 12321336;
     v7 = v3;
@@ -13997,7 +13997,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = sub_604962DC(1u);
     v5[0] = 12321336;
     v5[1] = "G_Return_00";
-    v2 = sub_604746E4((int)v1, &v6, v5);
+    v2 = ListNode_findByKey((int)v1, &v6, v5);
     v3 = sub_604962DC(1u);
     v6 = 12321336;
     v7 = v3;
@@ -14221,7 +14221,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = a1;
     v2 = a1 + 9;
     Disposer_allocateChildren(a1 + 9, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v7 = 12321336;
     v8 = "ChallengeSelectWindow.bflyt";
     message_ref(v2, &v7, (int)(v1 + 974), 0, 0);
@@ -14659,7 +14659,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60495660(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 5937) )
-      return sub_60473B88((_DWORD *)(result + 36), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 36), a2, 0);
     return result;
   }
 
@@ -17124,7 +17124,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = a1;
     v2 = a1 + 16;
     Disposer_allocateChildren(a1 + 16, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v7 = &v9;
     v6 = 12322272;
     v8 = 70;
@@ -17402,7 +17402,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 146854);
     if ( result )
     {
-      sub_60473B88((_DWORD *)(a1 + 64), a2, 0);
+      RenderParams_applyModelTransform((_DWORD *)(a1 + 64), a2, 0);
       sub_604A4C4C(a1 + 5728, a2);
       sub_604A4C4C(a1 + 26284, a2);
       sub_604A4C4C(a1 + 46840, a2);
@@ -21602,7 +21602,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     if ( !*(_BYTE *)(MEMORY[0xC99DEC] + 522) && *(int *)(a1 + 22496) <= 2 )
     {
-      sub_6047EFCC(a1 + 3676, 1);
+      IntrusiveList_getNthFromHead(a1 + 3676, 1);
       *(_BYTE *)(a1 + 4137) = 1;
     }
     *(_BYTE *)(a1 + 22500) = 0;
@@ -21776,7 +21776,7 @@ static inline unsigned int uxtb16(unsigned int x)
       thunk_sub_60909E64((char *)a1 + v12);
       thunk_sub_60909E64(&a1[v15]);
       thunk_sub_60909E64(&a1[v14]);
-      sub_60026BFC(&a1[v4]);
+      SoundActor_destroySevenDisposers(&a1[v4]);
       sead::IDisposer::~IDisposer(v7);
       v1 = v12 - 2988;
       v4 -= 747;
@@ -21843,7 +21843,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 44);
     Disposer_allocateChildren((_DWORD *)(a1 + 44), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v8 = 12321336;
     v9 = "ChangeTeam.bflyt";
     message_ref(v2, &v8, a1 + 3676, 0, 0);
@@ -21941,10 +21941,10 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 20296) = -1;
     *(_DWORD *)(a1 + 20300) = -1;
     *(_DWORD *)(a1 + 20292) = -1;
-    *(_DWORD *)(a1 + 20292) = sub_604746E4((int)v2, (_DWORD *)0xCA0B5C, &dword_60CA101C);
-    *(_DWORD *)(a1 + 20300) = sub_604746E4((int)v2, (_DWORD *)0xCA0B64, &dword_60CA101C);
-    *(_DWORD *)(a1 + 20296) = sub_604746E4((int)v2, (_DWORD *)0xCA0B5C, &dword_60CA1024);
-    *(_DWORD *)(a1 + 20304) = sub_604746E4((int)v2, (_DWORD *)0xCA0B64, &dword_60CA1024);
+    *(_DWORD *)(a1 + 20292) = ListNode_findByKey((int)v2, (_DWORD *)0xCA0B5C, &dword_60CA101C);
+    *(_DWORD *)(a1 + 20300) = ListNode_findByKey((int)v2, (_DWORD *)0xCA0B64, &dword_60CA101C);
+    *(_DWORD *)(a1 + 20296) = ListNode_findByKey((int)v2, (_DWORD *)0xCA0B5C, &dword_60CA1024);
+    *(_DWORD *)(a1 + 20304) = ListNode_findByKey((int)v2, (_DWORD *)0xCA0B64, &dword_60CA1024);
     v20 = 12321336;
     v21 = "Pa_Index_00";
     sub_6050B5E4(a1 + 5716, v2, &v20);
@@ -22485,7 +22485,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604A18B8(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 22503) )
-      return sub_60473B88((_DWORD *)(result + 44), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 44), a2, 0);
     return result;
   }
 
@@ -24395,7 +24395,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v6 = (_DWORD *)(a1 + 48);
     Disposer_allocateChildren((_DWORD *)(a1 + 48), 0);
-    sub_60475C8C((int)v6);
+    Player_allocateSlotObject((int)v6);
     v13 = (char *)&v15;
     v12 = 12322272;
     v14 = 70;
@@ -24699,7 +24699,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604A4C4C(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 20543) )
-      return sub_60473B88((_DWORD *)(result + 48), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 48), a2, 0);
     return result;
   }
 
@@ -29371,7 +29371,7 @@ static inline unsigned int uxtb16(unsigned int x)
       thunk_sub_60909E64(v10 + v5);
       thunk_sub_60909E64(v9 + v5 + 93184);
       thunk_sub_60909E64(v3 + v5);
-      sub_60026BFC((_DWORD *)(v6 + v5));
+      SoundActor_destroySevenDisposers((_DWORD *)(v6 + v5));
       sead::IDisposer::~IDisposer((struct sead_IDisposer *)(v2 + v5));
       v5 -= 2988;
     }
@@ -29424,7 +29424,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 16;
     Disposer_allocateChildren(a1 + 16, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = &v8;
     v5 = 12322272;
     v7 = 70;
@@ -29674,7 +29674,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 279731);
     if ( result )
     {
-      sub_60473B88((_DWORD *)(a1 + 64), a2, 0);
+      RenderParams_applyModelTransform((_DWORD *)(a1 + 64), a2, 0);
       sub_604A4C4C(a1 + 3732, a2);
       sub_604A4C4C(a1 + 24288, a2);
       sub_604A4C4C(a1 + 44844, a2);
@@ -31443,7 +31443,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 36);
     Disposer_allocateChildren((_DWORD *)(a1 + 36), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"CoinEditCursor.bflyt";
     message_ref(v2, v5, 0, 0, 0);
@@ -32958,7 +32958,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 20);
     Disposer_allocateChildren((_DWORD *)(a1 + 20), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"CoinEditMenu.bflyt";
     message_ref(v2, v5, a1 + 3648, 0, 0);
@@ -33243,7 +33243,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(result + 38101) )
     {
       if ( *(_BYTE *)(result + 38102) )
-        return sub_60473B88((_DWORD *)(result + 20), a2, 0);
+        return RenderParams_applyModelTransform((_DWORD *)(result + 20), a2, 0);
     }
     return result;
   }
@@ -33692,7 +33692,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = *(_DWORD *)(a1 + 4);
         v19 = 12321336;
         v20 = "G_AreaGuide_00";
-        v7 = sub_604746E4(v6, (_DWORD *)0xCA1B44, &v19);
+        v7 = ListNode_findByKey(v6, (_DWORD *)0xCA1B44, &v19);
         sub_60474420(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xCA1B44, v7, 0);
       }
     }
@@ -34124,7 +34124,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(_DWORD *)(a1 + 4);
     v10 = 12321336;
     v11 = "Game";
-    sub_60475C8C(v4);
+    Player_allocateSlotObject(v4);
     v5 = *(_DWORD **)(a1 + 4);
     v10 = 12321336;
     v11 = "CoinEditScene.bflyt";
@@ -37248,7 +37248,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 4);
     Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     *(_DWORD *)(a1 + 3652) = 0;
     CurrentHeap = sead::HeapMgr::getCurrentHeap(MEMORY[0xCCEE90]);
     if ( CurrentHeap )
@@ -37355,7 +37355,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(result + 3720) )
       v2 = *(_BYTE *)(result + 3721) == 0;
     if ( !v2 )
-      return sub_60473B88((_DWORD *)(result + 4), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 4), a2, 0);
     return result;
   }
 
@@ -38814,7 +38814,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v4 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v4);
+    Player_allocateSlotObject((int)v4);
     v9[0] = 12321336;
     v9[1] = (int)"Continue.bflyt";
     message_ref(v4, v9, 0, 0, 0);
@@ -38986,7 +38986,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604BAE74(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3697) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -39388,7 +39388,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_BYTE *)(a1 + 3640) = 0;
       Disposer_allocateChildren((_DWORD *)(a1 + 84), 0);
-      sub_60475C8C(a1 + 84);
+      Player_allocateSlotObject(a1 + 84);
       v8[0] = 12321336;
       v8[1] = (int)"CountDownStart.bflyt";
       message_ref((_DWORD *)(a1 + 84), v8, 0, 0, 0);
@@ -39508,7 +39508,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(result + 3640) )
     {
       if ( *(_BYTE *)(result + 3632) )
-        return sub_60473B88((_DWORD *)(result + 84), a2, 0);
+        return RenderParams_applyModelTransform((_DWORD *)(result + 84), a2, 0);
     }
     return result;
   }
@@ -39884,7 +39884,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[2620] = 14;
     v2 = a1 + 835;
     Disposer_allocateChildren(a1 + 835, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v31 = (char *)&v33;
     v30 = 12322272;
     v32 = 70;
@@ -40045,7 +40045,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604BC580(int a1, _DWORD *a2)
   {
-    return sub_60473B88((_DWORD *)(a1 + 3340), a2, 0);
+    return RenderParams_applyModelTransform((_DWORD *)(a1 + 3340), a2, 0);
   }
 
 /* ============================================================================
@@ -41909,7 +41909,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = a1[1];
     v9 = 12321336;
     v10 = "FreeMenu";
-    sub_60475C8C(v4);
+    Player_allocateSlotObject(v4);
     v5 = (_DWORD *)a1[1];
     v9 = 12321336;
     v10 = "CourseSelectFree.bflyt";
@@ -42335,7 +42335,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604C04BC(int a1, _DWORD *a2)
   {
-    return sub_60473B88(*(_DWORD **)(a1 + 4), a2, 0);
+    return RenderParams_applyModelTransform(*(_DWORD **)(a1 + 4), a2, 0);
   }
 
 /* ============================================================================
@@ -43396,10 +43396,10 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F24);
     }
-    *(_DWORD *)(a1 + 13944) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AF4, &dword_60CA2FC8);
-    *(_DWORD *)(a1 + 13948) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AF4, &dword_60CA2FD0);
-    *(_DWORD *)(a1 + 13952) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AF4, &dword_60CA2FD8);
-    *(_DWORD *)(a1 + 13956) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AF4, &dword_60CA2FE0);
+    *(_DWORD *)(a1 + 13944) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AF4, &dword_60CA2FC8);
+    *(_DWORD *)(a1 + 13948) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AF4, &dword_60CA2FD0);
+    *(_DWORD *)(a1 + 13952) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AF4, &dword_60CA2FD8);
+    *(_DWORD *)(a1 + 13956) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AF4, &dword_60CA2FE0);
     if ( ((unsigned int)&unk_60CA2F28 & ~(1615601780 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA2F28) )
     {
       dword_60CA3120 = 12321336;
@@ -43427,17 +43427,17 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F28);
     }
-    *(_DWORD *)(a1 + 13960) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3120);
-    *(_DWORD *)(a1 + 13964) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3128);
-    *(_DWORD *)(a1 + 13968) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3130);
-    *(_DWORD *)(a1 + 13972) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3138);
-    *(_DWORD *)(a1 + 13976) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3140);
-    *(_DWORD *)(a1 + 13980) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3148);
-    *(_DWORD *)(a1 + 13984) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3150);
-    *(_DWORD *)(a1 + 13988) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3158);
-    *(_DWORD *)(a1 + 13992) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3160);
-    *(_DWORD *)(a1 + 13996) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3168);
-    *(_DWORD *)(a1 + 14000) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3170);
+    *(_DWORD *)(a1 + 13960) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3120);
+    *(_DWORD *)(a1 + 13964) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3128);
+    *(_DWORD *)(a1 + 13968) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3130);
+    *(_DWORD *)(a1 + 13972) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3138);
+    *(_DWORD *)(a1 + 13976) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3140);
+    *(_DWORD *)(a1 + 13980) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3148);
+    *(_DWORD *)(a1 + 13984) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3150);
+    *(_DWORD *)(a1 + 13988) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3158);
+    *(_DWORD *)(a1 + 13992) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3160);
+    *(_DWORD *)(a1 + 13996) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3168);
+    *(_DWORD *)(a1 + 14000) = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3170);
     *(_BYTE *)(a1 + 14162) = 1;
     *(_DWORD *)(a1 + 5084) = 1;
     *(_DWORD *)(a1 + 14140) = 10;
@@ -45279,7 +45279,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 12;
     Disposer_allocateChildren(a1 + 12, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = 12321336;
     v7 = "CourseSelectScene.bflyt";
     message_ref(v2, &v6, (int)(a1 + 1024), 0, 0);
@@ -45675,7 +45675,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604C5D88(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 14168) )
-      return sub_60473B88((_DWORD *)(result + 48), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 48), a2, 0);
     return result;
   }
 
@@ -46104,7 +46104,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v8[0] = 12321336;
           v8[1] = "G_Flag_00";
-          v6 = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AE4, v8);
+          v6 = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AE4, v8);
           v3 = 1;
           if ( v6 != -1 )
           {
@@ -46287,7 +46287,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F18);
     }
-    v7 = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AEC, (_DWORD *)&unk_60CA2EF0 + 2 * a2 + 25);
+    v7 = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AEC, (_DWORD *)&unk_60CA2EF0 + 2 * a2 + 25);
     v8 = *(_DWORD *)(a1 + 4 * dword_60B02F14[a2] + 13796);
     *(_BYTE *)(v8 + 64) |= 1u;
     v9 = dword_60B02F2C[a2];
@@ -46321,7 +46321,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F1C);
     }
-    v5 = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AEC, &dword_60CA2F70[2 * a2]);
+    v5 = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2AEC, &dword_60CA2F70[2 * a2]);
     v6 = *(_DWORD *)(a1 + 4 * dword_60B02F20[a2] + 13796);
     *(_BYTE *)(v6 + 64) |= 1u;
     v7 = dword_60B02F2C[a2];
@@ -46462,7 +46462,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v13[0] = 12321336;
     v13[1] = "G_PlayerNum_00";
-    result = sub_604746E4(a1 + 48, (_DWORD *)0xCA2ADC, v13);
+    result = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2ADC, v13);
     if ( result != -1 )
     {
       sub_604742D0((_DWORD *)(a1 + 48), 0x17u, (_DWORD *)0xCA2ADC, result, 0);
@@ -49601,7 +49601,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     sub_604CC7F4();
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C(a1 + 40);
+    Player_allocateSlotObject(a1 + 40);
     v17 = 12321336;
     v18 = (int)"CourseSelectVS.bflyt";
     message_ref((_DWORD *)(a1 + 40), &v17, a1 + 3840, 0, 0);
@@ -50070,7 +50070,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Registry_iterateAndRegister(a1 + 5720, 0);
     sub_609094C4(v2, 240, MEMORY[0xB023FC], MEMORY[0xB023FD]);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C(a1 + 40);
+    Player_allocateSlotObject(a1 + 40);
     v12 = 12321336;
     v13 = (int)"CourseSelectVSConfirm.bflyt";
     message_ref((_DWORD *)(a1 + 40), &v12, a1 + 3680, 0, 0);
@@ -50167,7 +50167,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 1;
     *(_DWORD *)(a1 + 13276) = v3;
     Disposer_allocateChildren((_DWORD *)(a1 + 44), 0);
-    sub_60475C8C(a1 + 44);
+    Player_allocateSlotObject(a1 + 44);
     v22 = 12321336;
     v23 = (int)"CourseSelectVSRandom.bflyt";
     message_ref((_DWORD *)(a1 + 44), &v22, a1 + 3732, 0, 0);
@@ -50939,7 +50939,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Registry_iterateAndRegister(a1 + 52204, 0);
     sub_609094C4(a1 + 52204, 240, MEMORY[0xB023FC], MEMORY[0xB023FD]);
     Disposer_allocateChildren((_DWORD *)(a1 + 60), 0);
-    sub_60475C8C(a1 + 60);
+    Player_allocateSlotObject(a1 + 60);
     v20 = 12321336;
     v21 = (int)"CourseSelectVSWin.bflyt";
     message_ref((_DWORD *)(a1 + 60), &v20, a1 + 3940, 0, 0);
@@ -51407,11 +51407,11 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 20241);
     if ( result )
     {
-      sub_60473B88((_DWORD *)(a1 + 40), a2, 0);
+      RenderParams_applyModelTransform((_DWORD *)(a1 + 40), a2, 0);
       if ( *(_BYTE *)(a1 + 21905) )
-        sub_60473B88((_DWORD *)(a1 + 21908), a2, 0);
+        RenderParams_applyModelTransform((_DWORD *)(a1 + 21908), a2, 0);
       if ( *(_BYTE *)(a1 + 35269) )
-        sub_60473B88((_DWORD *)(a1 + 35276), a2, 0);
+        RenderParams_applyModelTransform((_DWORD *)(a1 + 35276), a2, 0);
       return sub_6054550C(a1 + 55740, a2);
     }
     return result;
@@ -51525,7 +51525,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v21 = sub_604DABE0(4);
       v19[0] = 12321336;
       v19[1] = "G_PlayerNum_00";
-      v3 = sub_604746E4(a1 + 40, &v20, v19);
+      v3 = ListNode_findByKey(a1 + 40, &v20, v19);
       v4 = sub_604DABE0(4);
       v20 = 12321336;
       v21 = v4;
@@ -53125,14 +53125,14 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (_DWORD *)(a1 + 40);
     v20 = 12321336;
     v21 = sub_604DAF94(dword_60CA4D98);
-    v4 = sub_604746E4(a1 + 40, &v22, &v20);
+    v4 = ListNode_findByKey(a1 + 40, &v22, &v20);
     v5 = sub_604DABE0(12);
     v22 = 12321336;
     v23 = v5;
     v6 = sub_604DAF94(dword_60CA4D9C);
     v20 = 12321336;
     v21 = v6;
-    v7 = sub_604746E4(a1 + 40, &v22, &v20);
+    v7 = ListNode_findByKey(a1 + 40, &v22, &v20);
     v10 = *(unsigned __int8 *)(a1 + 615723);
     v9 = (_BYTE *)(a1 + 615723);
     v8 = v10;
@@ -57142,14 +57142,14 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (_DWORD *)(a1 + 44);
     v20 = 12321336;
     v21 = sub_604DD940(dword_60CA4DE8);
-    v4 = sub_604746E4(a1 + 44, &v22, &v20);
+    v4 = ListNode_findByKey(a1 + 44, &v22, &v20);
     v5 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
     v22 = 12321336;
     v23 = v5;
     v6 = sub_604DD940(dword_60CA4DEC);
     v20 = 12321336;
     v21 = v6;
-    v7 = sub_604746E4(a1 + 44, &v22, &v20);
+    v7 = ListNode_findByKey(a1 + 44, &v22, &v20);
     v10 = *(unsigned __int8 *)(a1 + 20497);
     v9 = (_BYTE *)(a1 + 20497);
     v8 = v10;
@@ -60647,7 +60647,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"CourseSelectWorldName.bflyt";
     message_ref(v2, v6, 0, 0, 0);
@@ -60748,7 +60748,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DE7DC(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3598) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -60904,7 +60904,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(result + 494) )
         v2 = *(_BYTE *)(result + 12) == 0;
       if ( !v2 )
-        return sub_60473B88(*(_DWORD **)(result + 4), a2, 0);
+        return RenderParams_applyModelTransform(*(_DWORD **)(result + 4), a2, 0);
     }
     return result;
   }
@@ -61039,7 +61039,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 4);
     Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v4[0] = 12321336;
     v4[1] = "DarknessFrame.bflyt";
     message_ref(v2, v4, 0, 0, 0);
@@ -61084,7 +61084,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DECEC(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3553) )
-      return sub_60473B88((_DWORD *)(result + 4), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 4), a2, 0);
     return result;
   }
 
@@ -62157,7 +62157,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"EventWindow.bflyt";
     message_ref(v2, v5, 0, 0, 0);
@@ -62239,7 +62239,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604E06B8(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 4074) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -63020,7 +63020,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 10;
     Disposer_allocateChildren(a1 + 10, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"Command.bflyt";
     message_ref(v2, v7, 0, 0, 0);
@@ -63248,7 +63248,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604E20C0(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 5746) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -64443,7 +64443,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v8[0] = 12321336;
     v8[1] = (int)"GameOver.bflyt";
     message_ref(v2, v8, 0, 0, 0);
@@ -64900,7 +64900,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 20523);
     if ( result )
     {
-      sub_60473B88((_DWORD *)(a1 + 40), a2, 0);
+      RenderParams_applyModelTransform((_DWORD *)(a1 + 40), a2, 0);
       sub_604BAE74(a1 + 3608, a2);
       sub_604BAE74(a1 + 7308, a2);
       sub_604BAE74(a1 + 11008, a2);
@@ -65799,7 +65799,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v13; // [sp+5Ch] [bp-4h]
   
     Disposer_allocateChildren(*(_DWORD **)(a1 + 4), 0);
-    sub_60475C8C(*(_DWORD *)(a1 + 4));
+    Player_allocateSlotObject(*(_DWORD *)(a1 + 4));
     v9 = &v11;
     v8 = 12322272;
     v10 = 70;
@@ -67804,7 +67804,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 20);
     if ( result )
     {
-      sub_60473B88(*(_DWORD **)(a1 + 4), a2, 0);
+      RenderParams_applyModelTransform(*(_DWORD **)(a1 + 4), a2, 0);
       return sub_60481E84(a1 + 840, a2);
     }
     return result;
@@ -68714,7 +68714,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5E9C);
     }
-    v3 = sub_604746E4(a1[1], (_DWORD *)0xCA5CF4, &dword_60CA5F80[2 * (a1[1139] - a1[136])]);
+    v3 = ListNode_findByKey(a1[1], (_DWORD *)0xCA5CF4, &dword_60CA5F80[2 * (a1[1139] - a1[136])]);
     if ( v3 != -1 )
       sub_604742D0((_DWORD *)a1[1], 3u, (_DWORD *)0xCA5CF4, v3, 0);
     return SE_SYS_CH_TARGET_MEDAL_ref(a1, a1[136]);
@@ -68855,7 +68855,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5EA0);
     }
-    result = sub_604746E4(a1[1], (_DWORD *)0xCA5CFC, &dword_60CA5FD0[2 * (a1[1139] - a1[1138])]);
+    result = ListNode_findByKey(a1[1], (_DWORD *)0xCA5CFC, &dword_60CA5FD0[2 * (a1[1139] - a1[1138])]);
     if ( result != -1 )
       return sub_604742D0((_DWORD *)a1[1], 4u, (_DWORD *)0xCA5CFC, result, 0);
     return result;
@@ -69045,7 +69045,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(_DWORD *)(a1 + 4);
     v10 = 12321336;
     v11 = "Game";
-    sub_60475C8C(v4);
+    Player_allocateSlotObject(v4);
     v5 = *(_DWORD **)(a1 + 4);
     v10 = 12321336;
     v11 = "ChallengeGameScene.bflyt";
@@ -70049,7 +70049,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     Model_s_Nin_NX_NVN_szs_ref_834E7C(&dword_60CA60D0, 0);
     Disposer_allocateChildren((_DWORD *)(a1 + 10808), 0);
-    sub_60475C8C(a1 + 10808);
+    Player_allocateSlotObject(a1 + 10808);
     v10 = 12321336;
     v11 = "Help.bflyt";
     message_ref((_DWORD *)(a1 + 10808), &v10, a1 + 14436, 0, 0);
@@ -70626,7 +70626,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604ECF80(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 23748) )
-      return sub_60473B88((_DWORD *)(result + 10808), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 10808), a2, 0);
     return result;
   }
 
@@ -71382,7 +71382,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 10;
     Disposer_allocateChildren(a1 + 10, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v5 = 12321336;
     v6 = "InfoWindow.bflyt";
     message_ref(v2, &v5, 0, 0, 0);
@@ -71431,7 +71431,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604EE17C(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 10833) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -72936,7 +72936,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 18096);
     thunk_sub_60909E64(a1 + 17995);
     thunk_sub_60909E64(v2);
-    sub_60026BFC(a1 + 17780);
+    SoundActor_destroySevenDisposers(a1 + 17780);
     sead::IDisposer::~IDisposer(v3);
     a1[17019] = 12556340;
     a1[17740] = 12325992;
@@ -72950,7 +72950,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 17349);
     thunk_sub_60909E64(a1 + 17248);
     thunk_sub_60909E64(a1 + 17147);
-    sub_60026BFC(a1 + 17033);
+    SoundActor_destroySevenDisposers(a1 + 17033);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 17019));
     a1[16272] = 12556340;
     a1[16993] = 12325992;
@@ -72964,7 +72964,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 16602);
     thunk_sub_60909E64(a1 + 16501);
     thunk_sub_60909E64(a1 + 16400);
-    sub_60026BFC(a1 + 16286);
+    SoundActor_destroySevenDisposers(a1 + 16286);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16272));
     a1[15525] = 12556340;
     a1[16246] = 12325992;
@@ -72978,7 +72978,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 15855);
     thunk_sub_60909E64(a1 + 15754);
     thunk_sub_60909E64(a1 + 15653);
-    sub_60026BFC(a1 + 15539);
+    SoundActor_destroySevenDisposers(a1 + 15539);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15525));
     a1[14778] = 12556340;
     a1[15499] = 12325992;
@@ -72992,7 +72992,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 15108);
     thunk_sub_60909E64(a1 + 15007);
     thunk_sub_60909E64(a1 + 14906);
-    sub_60026BFC(a1 + 14792);
+    SoundActor_destroySevenDisposers(a1 + 14792);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14778));
     a1[14031] = 12556340;
     a1[14752] = 12325992;
@@ -73006,10 +73006,10 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 14361);
     thunk_sub_60909E64(a1 + 14260);
     thunk_sub_60909E64(a1 + 14159);
-    sub_60026BFC(a1 + 14045);
+    SoundActor_destroySevenDisposers(a1 + 14045);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14031));
     sub_6050A4C4(a1 + 12227);
-    sub_60026BFC(a1 + 12147);
+    SoundActor_destroySevenDisposers(a1 + 12147);
     thunk_sub_60909E64(a1 + 12046);
     sub_605021B0(a1 + 11522);
     Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10630));
@@ -73126,7 +73126,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Disposer_allocateChildren(a1 + 10630, 0);
     v7 = 12321336;
     v8 = "CourseSelect";
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
     {
       v7 = 12321336;
@@ -73574,7 +73574,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604F1F98(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 74478) )
-      return sub_60473B88((_DWORD *)(result + 42520), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 42520), a2, 0);
     return result;
   }
 
@@ -74693,7 +74693,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
       {
         *v2 = 15;
-        sub_6047EFCC(a1 + 7588, v4);
+        IntrusiveList_getNthFromHead(a1 + 7588, v4);
         result = a1 + 7548;
         if ( v5 < 0x100 )
           result += v5;
@@ -74832,7 +74832,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
       {
         *v2 = 15;
-        sub_6047EFCC(a1 + 7588, v4);
+        IntrusiveList_getNthFromHead(a1 + 7588, v4);
         result = a1 + 7548;
         if ( v5 < 0x100 )
           result += v5;
@@ -74915,7 +74915,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(*(_DWORD *)(v5 + 3584) + 64) |= 1u;
       SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CS_NEW_ITEM_WINDOW_ADD_ITEM", 0);
       *v2 = 15;
-      sub_6047EFCC((int)(a1 + 1897), v7);
+      IntrusiveList_getNthFromHead((int)(a1 + 1897), v7);
       *((_BYTE *)a1 + v7 + 8048) = 1;
       return (int)a1 + v7;
     }
@@ -75901,7 +75901,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     v6[1] = 12321336;
     v6[2] = (int)"CourseSelect";
-    sub_60475C8C(a1 + 40);
+    Player_allocateSlotObject(a1 + 40);
     message_ref((_DWORD *)(a1 + 40), &dword_60CA6CE0[2 * v3 + 4], a1 + 7588, 0, 0);
     if ( ((unsigned int)&unk_60CA6C6C & ~(1615813488 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA6C6C) )
     {
@@ -76285,7 +76285,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604F6B30(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 7141) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -77660,7 +77660,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v3 = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
     Disposer_allocateChildren((_DWORD *)a1, 0);
-    sub_60475C8C(a1);
+    Player_allocateSlotObject(a1);
     message_ref((_DWORD *)a1, &dword_60CA6CE0[2 * v3 + 16], a1 + 3760, 0, 0);
     (*(void (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3520) + 12))(*(_DWORD *)(a1 + 3520), 10029528, 0);
     v4 = sub_60473B4C(a1);
@@ -78672,7 +78672,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"TalkWindow.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -78912,7 +78912,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604FAC64(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3685) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -80200,7 +80200,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v4 = (_DWORD *)(a1 + 31900);
     Disposer_allocateChildren((_DWORD *)(a1 + 31900), 0);
-    sub_60475C8C((int)v4);
+    Player_allocateSlotObject((int)v4);
     v20 = 12321336;
     v21 = "MiiSelectWindow.bflyt";
     message_ref(v4, &v20, a1 + 35548, 0, 0);
@@ -80614,8 +80614,8 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_DWORD *)(a1 + 39788) = -1;
     *(_DWORD *)(a1 + 39792) = -1;
-    *(_DWORD *)(a1 + 39788) = sub_604746E4(a1 + 31900, (_DWORD *)0xCA70A0, &dword_60CA7304);
-    *(_DWORD *)(a1 + 39792) = sub_604746E4(a1 + 31900, (_DWORD *)0xCA70A0, &dword_60CA730C);
+    *(_DWORD *)(a1 + 39788) = ListNode_findByKey(a1 + 31900, (_DWORD *)0xCA70A0, &dword_60CA7304);
+    *(_DWORD *)(a1 + 39792) = ListNode_findByKey(a1 + 31900, (_DWORD *)0xCA70A0, &dword_60CA730C);
     sub_605028F0(a1 + 35508, 11548068, 1);
     sub_605028F0(a1 + 35508, 11548072, 1);
     if ( ((unsigned int)&unk_60CA72C0 & ~(1615845168 << v10) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA72C0) )
@@ -80728,7 +80728,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604FDA70(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 40099) )
-      return sub_60473B88((_DWORD *)(result + 31900), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 31900), a2, 0);
     return result;
   }
 
@@ -80852,7 +80852,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v6 )
       {
         v7 = dword_60B035D8[a2 % 9];
-        sub_6047EFCC(v3 + 35548, v7);
+        IntrusiveList_getNthFromHead(v3 + 35548, v7);
         *(_BYTE *)(v3 + v7 + 36008) = 1;
         if ( a2 <= 0x35 )
         {
@@ -80881,23 +80881,23 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v7; // r5
   
     v2 = (int)(a1 + 35548);
-    sub_6047EFCC((int)(a1 + 35548), 0);
+    IntrusiveList_getNthFromHead((int)(a1 + 35548), 0);
     a1[36008] = 1;
-    sub_6047EFCC(v2, 1);
+    IntrusiveList_getNthFromHead(v2, 1);
     a1[36009] = 1;
-    sub_6047EFCC(v2, 2);
+    IntrusiveList_getNthFromHead(v2, 2);
     a1[36010] = 1;
-    sub_6047EFCC(v2, 3);
+    IntrusiveList_getNthFromHead(v2, 3);
     a1[36011] = 1;
-    sub_6047EFCC(v2, 4);
+    IntrusiveList_getNthFromHead(v2, 4);
     a1[36012] = 1;
-    sub_6047EFCC(v2, 5);
+    IntrusiveList_getNthFromHead(v2, 5);
     a1[36013] = 1;
-    sub_6047EFCC(v2, 6);
+    IntrusiveList_getNthFromHead(v2, 6);
     a1[36014] = 1;
-    sub_6047EFCC(v2, 7);
+    IntrusiveList_getNthFromHead(v2, 7);
     a1[36015] = 1;
-    sub_6047EFCC(v2, 8);
+    IntrusiveList_getNthFromHead(v2, 8);
     a1[36016] = 1;
     v3 = 0;
     result = a1 + 40014;
@@ -81373,7 +81373,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 4);
     Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v3[0] = 12321336;
     v3[1] = (int)"MovieFrame.bflyt";
     message_ref(v1, v3, 0, 0, 0);
@@ -81416,7 +81416,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604FE788(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3553) )
-      return sub_60473B88((_DWORD *)(result + 4), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 4), a2, 0);
     return result;
   }
 
@@ -81432,7 +81432,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)(a1 + 52) &= ~2u;
     v2 = (_DWORD *)(a1 + 2140);
-    v3 = sub_604746E4(a1 + 2140, &off_60CA7420, &dword_60CA7428);
+    v3 = ListNode_findByKey(a1 + 2140, &off_60CA7420, &dword_60CA7428);
     if ( v3 != -1 )
       sub_604742D0(v2, 0, &off_60CA7420, v3, 0);
     if ( ArrayOf20_getEntryPtr((int)v2, 0) )
@@ -81457,7 +81457,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     a1[13] = 2;
     v2 = a1 + 535;
-    v3 = sub_604746E4((int)(a1 + 535), &off_60CA7420, &dword_60CA7428);
+    v3 = ListNode_findByKey((int)(a1 + 535), &off_60CA7420, &dword_60CA7428);
     if ( v3 != -1 )
       sub_604742D0(v2, 0, &off_60CA7420, v3, 0);
     if ( ArrayOf20_getEntryPtr((int)v2, 0) )
@@ -81493,7 +81493,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 1108) = 0;
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 96));
     v2 = (_DWORD *)(a1 + 2140);
-    v3 = sub_604746E4((int)v2, &off_60CA7418, &dword_60CA7428);
+    v3 = ListNode_findByKey((int)v2, &off_60CA7418, &dword_60CA7428);
     if ( v3 != -1 )
       sub_604742D0(v2, 0, &off_60CA7418, v3, 0);
     return sub_608091F4(MEMORY[0xCC6AF8], (int)"STRM_BGM_NX_STAFF_CREDIT", 40, 90, 0, 0);
@@ -81626,7 +81626,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v2; // r3
   
     v1 = (_DWORD *)(a1 + 2140);
-    v2 = sub_604746E4(a1 + 2140, &off_60CA7420, &dword_60CA7428);
+    v2 = ListNode_findByKey(a1 + 2140, &off_60CA7420, &dword_60CA7428);
     if ( v2 != -1 )
       sub_604742D0(v1, 0, &off_60CA7420, v2, 0);
     ArrayOf20_getEntryPtr((int)v1, 0);
@@ -81778,7 +81778,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 535;
     Disposer_allocateChildren(a1 + 535, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v7 = &v9;
     v6 = 12322272;
     v8 = 70;
@@ -82778,7 +82778,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v8 = &v10;
     v7 = 12322272;
     v9 = 70;
@@ -84578,7 +84578,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = (unsigned __int8)*v7;
     if ( !*v7 )
     {
-      sub_6047EFCC(a1 + 40, a2);
+      IntrusiveList_getNthFromHead(a1 + 40, a2);
       result = (unsigned __int8)*v7;
       if ( !*v7 )
       {
@@ -90854,13 +90854,13 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(_DWORD *)(a1 + 36);
     if ( (v2 & 1) != 0 )
     {
-      v5 = sub_604746E4(a1 + 40, &dword_60CA7ECC, &dword_60CA7ED4);
+      v5 = ListNode_findByKey(a1 + 40, &dword_60CA7ECC, &dword_60CA7ED4);
       if ( v5 != -1 )
         sub_604742D0((_DWORD *)(a1 + 40), 0, &dword_60CA7ECC, v5, 0);
     }
     else if ( (v2 & 2) != 0 )
     {
-      v3 = sub_604746E4(a1 + 40, &dword_60CA7EC4, &dword_60CA7ED4);
+      v3 = ListNode_findByKey(a1 + 40, &dword_60CA7EC4, &dword_60CA7ED4);
       if ( v3 != -1 )
         sub_604742D0((_DWORD *)(a1 + 40), 0, &dword_60CA7EC4, v3, 0);
       v4 = sub_60473B4C(a1 + 40);
@@ -90933,7 +90933,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v10 = 2;
     sub_60474848((int)v3, &dword_60CA7EDC, &v10);
-    v7 = sub_604746E4((int)v3, &dword_60CA7EC4, &dword_60CA7ED4);
+    v7 = ListNode_findByKey((int)v3, &dword_60CA7EC4, &dword_60CA7ED4);
     if ( v7 != -1 )
       sub_604742D0(v3, 0, &dword_60CA7EC4, v7, 0);
     result = ArrayOf20_getEntryPtr(v3, 0);
@@ -95015,7 +95015,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 56);
     Disposer_allocateChildren((_DWORD *)(a1 + 56), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = &v8;
     v5 = 12322272;
     v7 = 70;
@@ -95177,7 +95177,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(result + 9572) )
       v2 = *(_BYTE *)(result + 9574) == 0;
     if ( !v2 )
-      return sub_60473B88((_DWORD *)(result + 56), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 56), a2, 0);
     return result;
   }
 
@@ -96662,7 +96662,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v18 = 1;
           *(_BYTE *)(v17 + 208) = 1;
           v19 = *(_DWORD *)(v14 + 4 * v2);
-          sub_6047EFCC(v50, v19);
+          IntrusiveList_getNthFromHead(v50, v19);
         }
         v20 = v51;
         if ( v19 < 0x100 )
@@ -96697,7 +96697,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           *(_BYTE *)(List_getNthNode(v15, v29) - *(_DWORD *)(v51 + 3768) + 208) = 1;
           v31 = *v30;
-          sub_6047EFCC(v50, *v30);
+          IntrusiveList_getNthFromHead(v50, *v30);
           v32 = v51;
           if ( v31 < 0x100 )
             v32 = v51 + v31;
@@ -97833,7 +97833,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 12;
     Disposer_allocateChildren(a1 + 12, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = &v8;
     v5 = 12322272;
     v7 = 70;
@@ -98333,13 +98333,13 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (result[14973] || (result[44] & 1) != 0) && result[14976] )
       {
         v2 = result + 48;
-        return (_BYTE *)sub_60473B88(v2, a2, 0);
+        return (_BYTE *)RenderParams_applyModelTransform(v2, a2, 0);
       }
     }
     else if ( (result[29957] || (result[15028] & 1) != 0) && result[29960] )
     {
       v2 = result + 15032;
-      return (_BYTE *)sub_60473B88(v2, a2, 0);
+      return (_BYTE *)RenderParams_applyModelTransform(v2, a2, 0);
     }
     return result;
   }
@@ -98962,7 +98962,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 36);
     Disposer_allocateChildren((_DWORD *)(a1 + 36), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v9 = 12321336;
     v10 = (int)"PreGameChallenge.bflyt";
     message_ref(v1, &v9, 0, 0, 0);
@@ -99083,7 +99083,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60516CC8(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3672) )
-      return sub_60473B88((_DWORD *)(result + 36), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 36), a2, 0);
     return result;
   }
 
@@ -99823,7 +99823,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Pa_Zanki_ref_2();
     v6 = 3;
     sub_604751FC(a1 + 40, a1 + 21672, &dword_60CA88B4, &v6);
-    v3 = sub_604746E4(a1 + 40, &off_60CA8888, &dword_60CA88CC);
+    v3 = ListNode_findByKey(a1 + 40, &off_60CA8888, &dword_60CA88CC);
     if ( v3 != -1 )
     {
       sub_604742D0((_DWORD *)(a1 + 40), 0, &off_60CA8888, v3, 0);
@@ -99857,7 +99857,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v9 = &v11;
     v8 = 12322272;
     v10 = 70;
@@ -99927,7 +99927,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051812C(int a1, _DWORD *a2)
   {
-    return sub_60473B88((_DWORD *)(a1 + 40), a2, 0);
+    return RenderParams_applyModelTransform((_DWORD *)(a1 + 40), a2, 0);
   }
 
 /* ============================================================================
@@ -99962,7 +99962,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v25; // [sp+4h] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 40);
-    v3 = sub_604746E4(a1 + 40, &off_60CA8888, &dword_60CA88CC);
+    v3 = ListNode_findByKey(a1 + 40, &off_60CA8888, &dword_60CA88CC);
     if ( v3 != -1 )
     {
       sub_604742D0(v2, 0, &off_60CA8888, v3, 0);
@@ -99976,7 +99976,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( (unsigned int)(sub_603FD0B4(v4) - 1) <= 3 )
       {
-        v6 = sub_604746E4((int)v2, &dword_60CA8898, &dword_60CA88DC);
+        v6 = ListNode_findByKey((int)v2, &dword_60CA8898, &dword_60CA88DC);
         if ( v6 != -1 )
         {
           sub_604742D0(v2, 2u, &dword_60CA8898, v6, 0);
@@ -100060,7 +100060,7 @@ static inline unsigned int uxtb16(unsigned int x)
           sub_603FD0B4(v22);
       }
     }
-    result = sub_604746E4((int)v20, &off_60CA8890, &dword_60CA88E4);
+    result = ListNode_findByKey((int)v20, &off_60CA8890, &dword_60CA88E4);
     if ( result != -1 )
     {
       sub_604742D0(v20, 3u, &off_60CA8890, result, 0);
@@ -100084,7 +100084,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int result; // r0
   
     v1 = (_DWORD *)(a1 + 40);
-    result = sub_604746E4(a1 + 40, &dword_60CA88A0, &dword_60CA88CC);
+    result = ListNode_findByKey(a1 + 40, &dword_60CA88A0, &dword_60CA88CC);
     if ( result != -1 )
     {
       sub_604742D0(v1, 0, &dword_60CA88A0, result, 0);
@@ -100360,7 +100360,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"PreGameEdit.bflyt";
     message_ref(v2, v6, 0, 0, 0);
@@ -100450,7 +100450,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60518E58(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3612) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -100800,7 +100800,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 9;
     Disposer_allocateChildren(a1 + 9, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v11 = 12321336;
     v12 = (int)"PreGameFree.bflyt";
     message_ref(v2, &v11, 0, 0, 0);
@@ -100972,7 +100972,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60519968(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 18300) )
-      return sub_60473B88((_DWORD *)(result + 36), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 36), a2, 0);
     return result;
   }
 
@@ -101290,7 +101290,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_608FDE40(v18);
     v16 = 12321336;
     v17 = sub_6051A8DC(4);
-    v13 = sub_604746E4((int)v5, &v16, v18);
+    v13 = ListNode_findByKey((int)v5, &v16, v18);
     v14 = sub_6051A8DC(4);
     v16 = 12321336;
     v17 = v14;
@@ -102199,7 +102199,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = *(_DWORD *)(a1 + 4);
       v10[1] = 12321336;
       v10[2] = "Common";
-      sub_60475C8C(v5);
+      Player_allocateSlotObject(v5);
       result = message_ref(*(_DWORD **)(a1 + 4), &dword_60CA8CC0[i], 0, 0, 0);
       if ( result == 1 )
       {
@@ -102369,7 +102369,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051BD20(int a1, _DWORD *a2)
   {
-    sub_60473B88(*(_DWORD **)(a1 + 4), a2, 0);
+    RenderParams_applyModelTransform(*(_DWORD **)(a1 + 4), a2, 0);
     return sub_6051812C(a1 + 62552, a2);
   }
 
@@ -102876,7 +102876,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 36);
     Disposer_allocateChildren((_DWORD *)(a1 + 36), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v11 = 12321336;
     v12 = (int)"PreGameVS.bflyt";
     message_ref(v2, &v11, 0, 0, 0);
@@ -103328,7 +103328,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6051D12C(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 4012) )
-      return sub_60473B88((_DWORD *)(result + 36), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 36), a2, 0);
     return result;
   }
 
@@ -104915,7 +104915,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 10;
     Disposer_allocateChildren(a1 + 10, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = 12321336;
     v7 = "RecordList.bflyt";
     message_ref(v2, &v6, (int)(a1 + 937), 0, 0);
@@ -105654,7 +105654,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v5 = (_DWORD *)(a1 + 36);
           v10 = 12321336;
           v11 = sub_605231B8(8u);
-          v6 = sub_604746E4(a1 + 36, &v12, &v10);
+          v6 = ListNode_findByKey(a1 + 36, &v12, &v10);
           v7 = 12;
         }
         else
@@ -105669,7 +105669,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v5 = (_DWORD *)(a1 + 36);
           v10 = 12321336;
           v11 = sub_605231B8(8u);
-          v6 = sub_604746E4(a1 + 36, &v12, &v10);
+          v6 = ListNode_findByKey(a1 + 36, &v12, &v10);
           v7 = 11;
         }
       }
@@ -105680,7 +105680,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = (_DWORD *)(a1 + 36);
         v10 = 12321336;
         v11 = sub_605231B8(8u);
-        v6 = sub_604746E4(a1 + 36, &v12, &v10);
+        v6 = ListNode_findByKey(a1 + 36, &v12, &v10);
         v7 = 13;
       }
       v8 = sub_6052283C(v7);
@@ -105912,7 +105912,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     sub_608169AC(MEMORY[0xCC6B68]);
     a1[967] = 12556016;
-    sub_60026BFC(a1 + 991);
+    SoundActor_destroySevenDisposers(a1 + 991);
     Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 9));
     return a1;
   }
@@ -106006,7 +106006,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 9;
     Disposer_allocateChildren(a1 + 9, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v13 = 12321336;
     v14 = (int)"ResultChallenge.bflyt";
     message_ref(v2, &v13, 0, 0, 0);
@@ -106186,7 +106186,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6052132C(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 4303) )
-      return sub_60473B88((_DWORD *)(result + 36), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 36), a2, 0);
     return result;
   }
 
@@ -106636,7 +106636,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = (_DWORD *)(a1 + 36);
       v8 = 12321336;
       v9 = sub_605231B8(9);
-      v4 = sub_604746E4((int)v3, &v10, &v8);
+      v4 = ListNode_findByKey((int)v3, &v10, &v8);
       v5 = 11;
     }
     else if ( v2 == 4 )
@@ -106646,7 +106646,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = (_DWORD *)(a1 + 36);
       v8 = 12321336;
       v9 = sub_605231B8(9);
-      v4 = sub_604746E4((int)v3, &v10, &v8);
+      v4 = ListNode_findByKey((int)v3, &v10, &v8);
       v5 = 12;
     }
     else
@@ -106658,7 +106658,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = (_DWORD *)(a1 + 36);
         v8 = 12321336;
         v9 = sub_605231B8(9);
-        v4 = sub_604746E4((int)v3, &v10, &v8);
+        v4 = ListNode_findByKey((int)v3, &v10, &v8);
         v5 = 13;
       }
       else
@@ -106667,7 +106667,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = (_DWORD *)(a1 + 36);
         v8 = 12321336;
         v9 = sub_605231B8(9);
-        v4 = sub_604746E4((int)v3, &v10, &v8);
+        v4 = ListNode_findByKey((int)v3, &v10, &v8);
         v5 = 14;
       }
     }
@@ -107624,7 +107624,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v12[2]; // [sp+28h] [bp-8h] BYREF
   
     Disposer_allocateChildren(a1, 0);
-    sub_60475C8C((int)a1);
+    Player_allocateSlotObject((int)a1);
     v8 = 12321336;
     v9 = (int)"ResultChallengeScreen.bflyt";
     message_ref(a1, &v8, 0, 0, 0);
@@ -107671,7 +107671,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6052384C(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3548) )
-      return sub_60473B88((_DWORD *)result, a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)result, a2, 0);
     return result;
   }
 
@@ -109783,7 +109783,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CAA318 + 12))(&dword_60CAA318);
     v4 = 12321336;
     v5 = dword_60CAA31C;
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     (*(void (__fastcall **)(int *))(dword_60CAA320 + 12))(&dword_60CAA320);
     v4 = 12321336;
     v5 = dword_60CAA324;
@@ -111649,7 +111649,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = (_DWORD *)(a1 + 44);
     v16[0] = 12321336;
     v16[1] = v12;
-    v14 = sub_604746E4((int)v13, (_DWORD *)0xCA9984, v16);
+    v14 = ListNode_findByKey((int)v13, (_DWORD *)0xCA9984, v16);
     sub_604742D0(v13, a2 + 4, (_DWORD *)0xCA9984, v14, 0);
     sub_6047455C(v13, a2 + 4);
     sub_6047459C(v13, a2 + 4);
@@ -111709,7 +111709,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v15 = (_DWORD *)(a1 + 44);
     v18[0] = 12321336;
     v18[1] = v14;
-    v16 = sub_604746E4((int)v15, (_DWORD *)0xCA9984, v18);
+    v16 = ListNode_findByKey((int)v15, (_DWORD *)0xCA9984, v18);
     sub_604742D0(v15, a2 + 4, (_DWORD *)0xCA9984, v16, 0);
     sub_6047455C(v15, a2 + 4);
     sub_6047459C(v15, a2 + 4);
@@ -112808,7 +112808,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 4);
     Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ResultVSScreen.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -114275,7 +114275,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 72);
     Disposer_allocateChildren((_DWORD *)(a1 + 72), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"ResultFree.bflyt";
     message_ref(v2, v5, 0, 0, 0);
@@ -114745,7 +114745,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6052DC30(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 56) )
-      return sub_60473B88((_DWORD *)(result + 72), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 72), a2, 0);
     return result;
   }
 
@@ -114804,7 +114804,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA6AC);
     }
-    v6 = sub_604746E4(a1 + 72, &dword_60CAA6E0, &dword_60CAA710[2 * v5 + 8]);
+    v6 = ListNode_findByKey(a1 + 72, &dword_60CAA6E0, &dword_60CAA710[2 * v5 + 8]);
     sub_604742D0((_DWORD *)(a1 + 72), a2 + 2, &dword_60CAA6E0, v6, 0);
     *(_BYTE *)(a1 + v5 + 68) = 0;
     return a1 + v5;
@@ -114838,7 +114838,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA6AC);
     }
-    v6 = sub_604746E4((int)v3, &dword_60CAA6E0, &dword_60CAA710[2 * v5 + 8]);
+    v6 = ListNode_findByKey((int)v3, &dword_60CAA6E0, &dword_60CAA710[2 * v5 + 8]);
     return sub_604742D0(v3, a2 + 2, &dword_60CAA6F0, v6, 1);
   }
 
@@ -115595,7 +115595,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ResultMiniGame.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -115929,7 +115929,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6052F970(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 10977) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -117727,7 +117727,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = (_DWORD *)(v1 + 36);
     if ( v3 )
       sub_6047DEC8((_DWORD *)(v1 + 36), v3, 1);
-    v5 = sub_604746E4(v1 + 36, &dword_60CAAD00, &dword_60CAAC1C);
+    v5 = ListNode_findByKey(v1 + 36, &dword_60CAAD00, &dword_60CAAC1C);
     if ( v5 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 6u, &dword_60CAAD00, v5, 0);
     if ( ArrayOf20_getEntryPtr(v1 + 36, 6) )
@@ -117747,7 +117747,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = sub_604749C4(v9);
     if ( v10 )
       sub_6047DEC8((_DWORD *)(v1 + 36), v10, 1);
-    v11 = sub_604746E4(v1 + 36, &dword_60CAAD00, &dword_60CAAC14);
+    v11 = ListNode_findByKey(v1 + 36, &dword_60CAAD00, &dword_60CAAC14);
     if ( v11 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 5u, &dword_60CAAD00, v11, 0);
     if ( ArrayOf20_getEntryPtr(v1 + 36, 5) )
@@ -117761,7 +117761,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v15 = *(void (**)(void))(v14 + 104);
       v15();
     }
-    v16 = sub_604746E4(v1 + 36, &dword_60CAACD0, &dword_60CAAC24);
+    v16 = ListNode_findByKey(v1 + 36, &dword_60CAACD0, &dword_60CAAC24);
     if ( v16 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 7u, &dword_60CAACD0, v16, 0);
     if ( ArrayOf20_getEntryPtr(v1 + 36, 7) )
@@ -117769,7 +117769,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v17 = ArrayOf20_getEntryPtr(v1 + 36, 7);
       (*(void (__fastcall **)(int))(*(_DWORD *)v17 + 96))(v17);
     }
-    v18 = sub_604746E4(v1 + 36, &dword_60CAACA8, &dword_60CAAC74);
+    v18 = ListNode_findByKey(v1 + 36, &dword_60CAACA8, &dword_60CAAC74);
     if ( v18 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 0x11u, &dword_60CAACA8, v18, 0);
     if ( ArrayOf20_getEntryPtr(v1 + 36, 17) )
@@ -117782,7 +117782,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v21 = *(void (**)(void))(v20 + 104);
       v21();
     }
-    v22 = sub_604746E4(v1 + 36, &dword_60CAACB0, &dword_60CAAC8C);
+    v22 = ListNode_findByKey(v1 + 36, &dword_60CAACB0, &dword_60CAAC8C);
     if ( v22 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 0x14u, &dword_60CAACB0, v22, 0);
     v23 = *(_DWORD *)(v1 + 3992);
@@ -117792,10 +117792,10 @@ static inline unsigned int uxtb16(unsigned int x)
     else
       v25 = *(void (**)(void))(v24 + 104);
     v25();
-    v26 = sub_604746E4(v1 + 36, &off_60CAACF0, &dword_60CAAC84);
+    v26 = ListNode_findByKey(v1 + 36, &off_60CAACF0, &dword_60CAAC84);
     if ( v26 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 0x13u, &off_60CAACF0, v26, 1);
-    v27 = sub_604746E4(v1 + 36, &off_60CAACF8, &dword_60CAABF4);
+    v27 = ListNode_findByKey(v1 + 36, &off_60CAACF8, &dword_60CAABF4);
     if ( v27 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 1u, &off_60CAACF8, v27, 0);
     if ( ArrayOf20_getEntryPtr(v1 + 36, 1) )
@@ -117809,7 +117809,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v31 = 0;
       if ( v30 < 0x15 )
         v31 = dword_60B039EC[i];
-      v32 = sub_604746E4((int)v4, &dword_60CAACB8, &dword_60CAABEC[2 * v31]);
+      v32 = ListNode_findByKey((int)v4, &dword_60CAACB8, &dword_60CAABEC[2 * v31]);
       if ( v32 != -1 )
         sub_604742D0(v4, v30, &dword_60CAACB8, v32, 0);
       if ( ArrayOf20_getEntryPtr(v4, v30) )
@@ -117825,7 +117825,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v1 = v33;
       }
     }
-    v37 = sub_604746E4((int)v4, &dword_60CAACC0, &dword_60CAAC7C);
+    v37 = ListNode_findByKey((int)v4, &dword_60CAACC0, &dword_60CAAC7C);
     if ( v37 != -1 )
       sub_604742D0(v4, 0x12u, &dword_60CAACC0, v37, 0);
     if ( ArrayOf20_getEntryPtr(v4, 18) )
@@ -117838,7 +117838,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v40 = *(void (**)(void))(v39 + 104);
       v40();
     }
-    v41 = sub_604746E4((int)v4, &dword_60CAACC8, &dword_60CAAC2C);
+    v41 = ListNode_findByKey((int)v4, &dword_60CAACC8, &dword_60CAAC2C);
     if ( v41 != -1 )
       sub_604742D0(v4, 8u, &dword_60CAACC8, v41, 0);
     v42 = ArrayOf20_getEntryPtr(v4, 8);
@@ -117871,7 +117871,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a2 >= 3 )
       a2 = 0;
     v6 = &dword_60CAAD10[2 * a2];
-    result = sub_604746E4((int)v5, v6, &dword_60CAABFC);
+    result = ListNode_findByKey((int)v5, v6, &dword_60CAABFC);
     if ( result != -1 )
       return sub_604742D0(v5, 2u, v6, result, 0);
     return result;
@@ -117921,7 +117921,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v2 += 2;
       }
     }
-    result = sub_604746E4((int)v1, &off_60CAACF8, &dword_60CAABF4);
+    result = ListNode_findByKey((int)v1, &off_60CAACF8, &dword_60CAABF4);
     if ( result != -1 )
       return sub_604742D0(v1, 1u, &off_60CAACF8, result, 0);
     return result;
@@ -118435,13 +118435,13 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60532800(a1 + 8080);
       *v9 = v12;
     }
-    sub_6047EFCC(a1 + 15740, 0);
+    IntrusiveList_getNthFromHead(a1 + 15740, 0);
     *(_BYTE *)(a1 + 16200) = 1;
-    sub_6047EFCC(a1 + 15740, 1);
+    IntrusiveList_getNthFromHead(a1 + 15740, 1);
     *(_BYTE *)(a1 + 16201) = 1;
-    sub_6047EFCC(a1 + 15740, 2);
+    IntrusiveList_getNthFromHead(a1 + 15740, 2);
     *(_BYTE *)(a1 + 16202) = 1;
-    sub_6047EFCC(a1 + 15740, 3);
+    IntrusiveList_getNthFromHead(a1 + 15740, 3);
     *(_BYTE *)(a1 + 16203) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52632) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52636) + 64) |= 1u;
@@ -119576,14 +119576,14 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1;
     v2 = (_DWORD *)(a1 + 15740);
-    sub_6047EFCC(a1 + 15740, 0);
+    IntrusiveList_getNthFromHead(a1 + 15740, 0);
     *(_BYTE *)(v1 + 16200) = 1;
     v1 += 16200;
-    sub_6047EFCC((int)v2, 1);
+    IntrusiveList_getNthFromHead((int)v2, 1);
     *(_BYTE *)(v1 + 1) = 1;
-    sub_6047EFCC((int)v2, 2);
+    IntrusiveList_getNthFromHead((int)v2, 2);
     *(_BYTE *)(v1 + 2) = 1;
-    sub_6047EFCC((int)v2, 3);
+    IntrusiveList_getNthFromHead((int)v2, 3);
     *(_BYTE *)(v1 + 3) = 1;
     *(_BYTE *)(*(_DWORD *)(v1 + 36432) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(v1 + 36436) + 64) |= 1u;
@@ -119691,14 +119691,14 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60531DEC(a1 + 4068);
     sub_60531DEC(a1 + 8080);
     v9 = (_DWORD *)(a1 + 15740);
-    sub_6047EFCC(a1 + 15740, 0);
+    IntrusiveList_getNthFromHead(a1 + 15740, 0);
     *(_BYTE *)(a1 + 16200) = 1;
     v10 = a1 + 16200;
-    sub_6047EFCC((int)v9, 1);
+    IntrusiveList_getNthFromHead((int)v9, 1);
     *(_BYTE *)(v10 + 1) = 1;
-    sub_6047EFCC((int)v9, 2);
+    IntrusiveList_getNthFromHead((int)v9, 2);
     *(_BYTE *)(v10 + 2) = 1;
-    sub_6047EFCC((int)v9, 3);
+    IntrusiveList_getNthFromHead((int)v9, 3);
     *(_BYTE *)(v10 + 3) = 1;
     *(_BYTE *)(*(_DWORD *)(v10 + 36432) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(v10 + 36436) + 64) |= 1u;
@@ -119788,19 +119788,19 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16728) = 1;
     *(_DWORD *)(a1 + 16732) = 1;
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADBC, 0);
-    sub_6047EFCC(a1 + 15740, 5);
+    IntrusiveList_getNthFromHead(a1 + 15740, 5);
     *(_BYTE *)(a1 + 16205) = 1;
-    sub_6047EFCC(a1 + 15740, 4);
+    IntrusiveList_getNthFromHead(a1 + 15740, 4);
     *(_BYTE *)(a1 + 16204) = 1;
-    sub_6047EFCC(a1 + 15740, 6);
+    IntrusiveList_getNthFromHead(a1 + 15740, 6);
     *(_BYTE *)(a1 + 16206) = 1;
-    sub_6047EFCC(a1 + 15740, 0);
+    IntrusiveList_getNthFromHead(a1 + 15740, 0);
     *(_BYTE *)(a1 + 16200) = 1;
-    sub_6047EFCC(a1 + 15740, 1);
+    IntrusiveList_getNthFromHead(a1 + 15740, 1);
     *(_BYTE *)(a1 + 16201) = 1;
-    sub_6047EFCC(a1 + 15740, 2);
+    IntrusiveList_getNthFromHead(a1 + 15740, 2);
     *(_BYTE *)(a1 + 16202) = 1;
-    sub_6047EFCC(a1 + 15740, 3);
+    IntrusiveList_getNthFromHead(a1 + 15740, 3);
     *(_BYTE *)(a1 + 16203) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52632) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52636) + 64) |= 1u;
@@ -120038,13 +120038,13 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 52496) = *v2;
     *(_DWORD *)(a1 + 52468) = 2;
     StateMgr_resetAndMaybeChange(v3);
-    sub_6047EFCC(a1 + 15740, 0);
+    IntrusiveList_getNthFromHead(a1 + 15740, 0);
     *(_BYTE *)(a1 + 16200) = 1;
-    sub_6047EFCC(a1 + 15740, 1);
+    IntrusiveList_getNthFromHead(a1 + 15740, 1);
     *(_BYTE *)(a1 + 16201) = 1;
-    sub_6047EFCC(a1 + 15740, 2);
+    IntrusiveList_getNthFromHead(a1 + 15740, 2);
     *(_BYTE *)(a1 + 16202) = 1;
-    sub_6047EFCC(a1 + 15740, 3);
+    IntrusiveList_getNthFromHead(a1 + 15740, 3);
     *(_BYTE *)(a1 + 16203) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52632) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52636) + 64) |= 1u;
@@ -120245,13 +120245,13 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADF4, 0);
-    sub_6047EFCC(a1 + 15740, 0);
+    IntrusiveList_getNthFromHead(a1 + 15740, 0);
     *(_BYTE *)(a1 + 16200) = 1;
-    sub_6047EFCC(a1 + 15740, 1);
+    IntrusiveList_getNthFromHead(a1 + 15740, 1);
     *(_BYTE *)(a1 + 16201) = 1;
-    sub_6047EFCC(a1 + 15740, 2);
+    IntrusiveList_getNthFromHead(a1 + 15740, 2);
     *(_BYTE *)(a1 + 16202) = 1;
-    sub_6047EFCC(a1 + 15740, 3);
+    IntrusiveList_getNthFromHead(a1 + 15740, 3);
     *(_BYTE *)(a1 + 16203) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52632) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52636) + 64) |= 1u;
@@ -120340,13 +120340,13 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r0
   
     v2 = (_DWORD *)(a1 + 15740);
-    sub_6047EFCC(a1 + 15740, 0);
+    IntrusiveList_getNthFromHead(a1 + 15740, 0);
     *(_BYTE *)(a1 + 16200) = 1;
-    sub_6047EFCC((int)v2, 1);
+    IntrusiveList_getNthFromHead((int)v2, 1);
     *(_BYTE *)(a1 + 16201) = 1;
-    sub_6047EFCC((int)v2, 2);
+    IntrusiveList_getNthFromHead((int)v2, 2);
     *(_BYTE *)(a1 + 16202) = 1;
-    sub_6047EFCC((int)v2, 3);
+    IntrusiveList_getNthFromHead((int)v2, 3);
     *(_BYTE *)(a1 + 16203) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52632) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52636) + 64) |= 1u;
@@ -120388,19 +120388,19 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053630C(int a1)
   {
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADDC, 0);
-    sub_6047EFCC(a1 + 15740, 5);
+    IntrusiveList_getNthFromHead(a1 + 15740, 5);
     *(_BYTE *)(a1 + 16205) = 1;
-    sub_6047EFCC(a1 + 15740, 4);
+    IntrusiveList_getNthFromHead(a1 + 15740, 4);
     *(_BYTE *)(a1 + 16204) = 1;
-    sub_6047EFCC(a1 + 15740, 6);
+    IntrusiveList_getNthFromHead(a1 + 15740, 6);
     *(_BYTE *)(a1 + 16206) = 1;
-    sub_6047EFCC(a1 + 15740, 0);
+    IntrusiveList_getNthFromHead(a1 + 15740, 0);
     *(_BYTE *)(a1 + 16200) = 1;
-    sub_6047EFCC(a1 + 15740, 1);
+    IntrusiveList_getNthFromHead(a1 + 15740, 1);
     *(_BYTE *)(a1 + 16201) = 1;
-    sub_6047EFCC(a1 + 15740, 2);
+    IntrusiveList_getNthFromHead(a1 + 15740, 2);
     *(_BYTE *)(a1 + 16202) = 1;
-    sub_6047EFCC(a1 + 15740, 3);
+    IntrusiveList_getNthFromHead(a1 + 15740, 3);
     *(_BYTE *)(a1 + 16203) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52632) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52636) + 64) |= 1u;
@@ -120655,7 +120655,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 12092);
     Disposer_allocateChildren((_DWORD *)(a1 + 12092), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v11 = 12321336;
     v12 = "SaveDataSelect.bflyt";
     message_ref(v2, &v11, a1 + 15740, 0, 0);
@@ -121278,8 +121278,8 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB298);
     }
-    *(_DWORD *)(a1 + 54696) = sub_604746E4(a1 + 12092, (_DWORD *)0xCAADB4, &dword_60CAB2C0);
-    *(_DWORD *)(a1 + 54700) = sub_604746E4(a1 + 12092, (_DWORD *)0xCAADB4, &dword_60CAB2C8);
+    *(_DWORD *)(a1 + 54696) = ListNode_findByKey(a1 + 12092, (_DWORD *)0xCAADB4, &dword_60CAB2C0);
+    *(_DWORD *)(a1 + 54700) = ListNode_findByKey(a1 + 12092, (_DWORD *)0xCAADB4, &dword_60CAB2C8);
     v10 = *(unsigned __int8 *)(*(_DWORD *)(MEMORY[0xCC6E04] + 40) + 7);
     if ( v10 > 2 )
       v10 = 0;
@@ -121410,7 +121410,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 83627);
     if ( result )
     {
-      sub_60473B88((_DWORD *)(a1 + 12092), a2, 0);
+      RenderParams_applyModelTransform((_DWORD *)(a1 + 12092), a2, 0);
       result = *(unsigned __int8 *)(a1 + 83629);
       if ( *(_BYTE *)(a1 + 83629) )
         return sub_60541DE8(a1 + 17780, a2);
@@ -121912,13 +121912,13 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60532800(a1 + 8080);
       *v9 = v12;
     }
-    sub_6047EFCC(a1 + 15720, 0);
+    IntrusiveList_getNthFromHead(a1 + 15720, 0);
     *(_BYTE *)(a1 + 16180) = 1;
-    sub_6047EFCC(a1 + 15720, 1);
+    IntrusiveList_getNthFromHead(a1 + 15720, 1);
     *(_BYTE *)(a1 + 16181) = 1;
-    sub_6047EFCC(a1 + 15720, 2);
+    IntrusiveList_getNthFromHead(a1 + 15720, 2);
     *(_BYTE *)(a1 + 16182) = 1;
-    sub_6047EFCC(a1 + 15720, 3);
+    IntrusiveList_getNthFromHead(a1 + 15720, 3);
     *(_BYTE *)(a1 + 16183) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52580) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52584) + 64) |= 1u;
@@ -122939,14 +122939,14 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1;
     v2 = (_DWORD *)(a1 + 15720);
-    sub_6047EFCC(a1 + 15720, 0);
+    IntrusiveList_getNthFromHead(a1 + 15720, 0);
     *(_BYTE *)(v1 + 16180) = 1;
     v1 += 16180;
-    sub_6047EFCC((int)v2, 1);
+    IntrusiveList_getNthFromHead((int)v2, 1);
     *(_BYTE *)(v1 + 1) = 1;
-    sub_6047EFCC((int)v2, 2);
+    IntrusiveList_getNthFromHead((int)v2, 2);
     *(_BYTE *)(v1 + 2) = 1;
-    sub_6047EFCC((int)v2, 3);
+    IntrusiveList_getNthFromHead((int)v2, 3);
     *(_BYTE *)(v1 + 3) = 1;
     *(_BYTE *)(*(_DWORD *)(v1 + 36400) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(v1 + 36404) + 64) |= 1u;
@@ -123059,14 +123059,14 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60531DEC(a1 + 4068);
     sub_60531DEC(a1 + 8080);
     v9 = (_DWORD *)(a1 + 15720);
-    sub_6047EFCC(a1 + 15720, 0);
+    IntrusiveList_getNthFromHead(a1 + 15720, 0);
     *(_BYTE *)(a1 + 16180) = 1;
     v10 = a1 + 16180;
-    sub_6047EFCC((int)v9, 1);
+    IntrusiveList_getNthFromHead((int)v9, 1);
     *(_BYTE *)(v10 + 1) = 1;
-    sub_6047EFCC((int)v9, 2);
+    IntrusiveList_getNthFromHead((int)v9, 2);
     *(_BYTE *)(v10 + 2) = 1;
-    sub_6047EFCC((int)v9, 3);
+    IntrusiveList_getNthFromHead((int)v9, 3);
     *(_BYTE *)(v10 + 3) = 1;
     *(_BYTE *)(*(_DWORD *)(v10 + 36400) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(v10 + 36404) + 64) |= 1u;
@@ -123161,13 +123161,13 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16708) = 1;
     *(_DWORD *)(a1 + 16712) = 1;
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB44C, 0);
-    sub_6047EFCC(a1 + 15720, 0);
+    IntrusiveList_getNthFromHead(a1 + 15720, 0);
     *(_BYTE *)(a1 + 16180) = 1;
-    sub_6047EFCC(a1 + 15720, 1);
+    IntrusiveList_getNthFromHead(a1 + 15720, 1);
     *(_BYTE *)(a1 + 16181) = 1;
-    sub_6047EFCC(a1 + 15720, 2);
+    IntrusiveList_getNthFromHead(a1 + 15720, 2);
     *(_BYTE *)(a1 + 16182) = 1;
-    sub_6047EFCC(a1 + 15720, 3);
+    IntrusiveList_getNthFromHead(a1 + 15720, 3);
     *(_BYTE *)(a1 + 16183) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52580) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52584) + 64) |= 1u;
@@ -123432,13 +123432,13 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 52476) = *v3;
     *(_DWORD *)(a1 + 52448) = 2;
     StateMgr_resetAndMaybeChange(v2);
-    sub_6047EFCC(a1 + 15720, 0);
+    IntrusiveList_getNthFromHead(a1 + 15720, 0);
     *(_BYTE *)(a1 + 16180) = 1;
-    sub_6047EFCC(a1 + 15720, 1);
+    IntrusiveList_getNthFromHead(a1 + 15720, 1);
     *(_BYTE *)(a1 + 16181) = 1;
-    sub_6047EFCC(a1 + 15720, 2);
+    IntrusiveList_getNthFromHead(a1 + 15720, 2);
     *(_BYTE *)(a1 + 16182) = 1;
-    sub_6047EFCC(a1 + 15720, 3);
+    IntrusiveList_getNthFromHead(a1 + 15720, 3);
     *(_BYTE *)(a1 + 16183) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52580) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52584) + 64) |= 1u;
@@ -123635,13 +123635,13 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB484, 0);
-    sub_6047EFCC(a1 + 15720, 0);
+    IntrusiveList_getNthFromHead(a1 + 15720, 0);
     *(_BYTE *)(a1 + 16180) = 1;
-    sub_6047EFCC(a1 + 15720, 1);
+    IntrusiveList_getNthFromHead(a1 + 15720, 1);
     *(_BYTE *)(a1 + 16181) = 1;
-    sub_6047EFCC(a1 + 15720, 2);
+    IntrusiveList_getNthFromHead(a1 + 15720, 2);
     *(_BYTE *)(a1 + 16182) = 1;
-    sub_6047EFCC(a1 + 15720, 3);
+    IntrusiveList_getNthFromHead(a1 + 15720, 3);
     *(_BYTE *)(a1 + 16183) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52580) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52584) + 64) |= 1u;
@@ -123742,13 +123742,13 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r0
   
     v2 = (_DWORD *)(a1 + 15720);
-    sub_6047EFCC(a1 + 15720, 0);
+    IntrusiveList_getNthFromHead(a1 + 15720, 0);
     *(_BYTE *)(a1 + 16180) = 1;
-    sub_6047EFCC((int)v2, 1);
+    IntrusiveList_getNthFromHead((int)v2, 1);
     *(_BYTE *)(a1 + 16181) = 1;
-    sub_6047EFCC((int)v2, 2);
+    IntrusiveList_getNthFromHead((int)v2, 2);
     *(_BYTE *)(a1 + 16182) = 1;
-    sub_6047EFCC((int)v2, 3);
+    IntrusiveList_getNthFromHead((int)v2, 3);
     *(_BYTE *)(a1 + 16183) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52580) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52584) + 64) |= 1u;
@@ -123788,13 +123788,13 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053C7FC(int a1)
   {
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB46C, 0);
-    sub_6047EFCC(a1 + 15720, 0);
+    IntrusiveList_getNthFromHead(a1 + 15720, 0);
     *(_BYTE *)(a1 + 16180) = 1;
-    sub_6047EFCC(a1 + 15720, 1);
+    IntrusiveList_getNthFromHead(a1 + 15720, 1);
     *(_BYTE *)(a1 + 16181) = 1;
-    sub_6047EFCC(a1 + 15720, 2);
+    IntrusiveList_getNthFromHead(a1 + 15720, 2);
     *(_BYTE *)(a1 + 16182) = 1;
-    sub_6047EFCC(a1 + 15720, 3);
+    IntrusiveList_getNthFromHead(a1 + 15720, 3);
     *(_BYTE *)(a1 + 16183) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52580) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52584) + 64) |= 1u;
@@ -124086,7 +124086,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 12092);
     Disposer_allocateChildren((_DWORD *)(a1 + 12092), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v10 = 12321336;
     v11 = "SaveDataSelectDL.bflyt";
     message_ref(v2, &v10, a1 + 15720, 0, 0);
@@ -124677,7 +124677,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB940);
     }
-    *(_DWORD *)(a1 + 54636) = sub_604746E4(a1 + 12092, (_DWORD *)0xCAB444, &dword_60CAB968);
+    *(_DWORD *)(a1 + 54636) = ListNode_findByKey(a1 + 12092, (_DWORD *)0xCAB444, &dword_60CAB968);
     v9 = *(unsigned __int8 *)(*(_DWORD *)(MEMORY[0xCC6E04] + 40) + 7);
     if ( v9 <= 3 )
       LOBYTE(v9) = 3;
@@ -124796,7 +124796,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 83567);
     if ( result )
     {
-      sub_60473B88((_DWORD *)(a1 + 12092), a2, 0);
+      RenderParams_applyModelTransform((_DWORD *)(a1 + 12092), a2, 0);
       result = *(unsigned __int8 *)(a1 + 83569);
       if ( *(_BYTE *)(a1 + 83569) )
         return sub_60541DE8(a1 + 17760, a2);
@@ -126069,7 +126069,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Disposer_allocateChildren((_DWORD *)(a1 + 28128), 0);
     v9 = 12321336;
     v10 = "Title";
-    sub_60475C8C((int)v4);
+    Player_allocateSlotObject((int)v4);
     if ( *v3 )
     {
       v9 = 12321336;
@@ -126404,7 +126404,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60541DE8(int a1, _DWORD *a2)
   {
-    return sub_60473B88((_DWORD *)(a1 + 28128), a2, 0);
+    return RenderParams_applyModelTransform((_DWORD *)(a1 + 28128), a2, 0);
   }
 
 /* ============================================================================
@@ -126711,7 +126711,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 60);
     Disposer_allocateChildren((_DWORD *)(a1 + 60), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"Screen.bflyt";
     message_ref(v2, v6, 0, 0, 0);
@@ -126778,7 +126778,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605425EC(int result, _DWORD *a2)
   {
     if ( !*(_BYTE *)(result + 3609) )
-      return sub_60473B88((_DWORD *)(result + 60), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 60), a2, 0);
     return result;
   }
 
@@ -127044,7 +127044,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 4);
     Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"SelectBG.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -127100,7 +127100,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60542C10(int a1, _DWORD *a2)
   {
-    return sub_60473B88((_DWORD *)(a1 + 4), a2, 0);
+    return RenderParams_applyModelTransform((_DWORD *)(a1 + 4), a2, 0);
   }
 
 /* ============================================================================
@@ -127160,7 +127160,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 4);
     Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"SelectCursor.bflyt";
     message_ref(v2, v6, 0, 0, 0);
@@ -127284,7 +127284,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(result + 3584) )
     {
       if ( *(_BYTE *)(*(_DWORD *)(result + 3552) + 208) )
-        return sub_60473B88((_DWORD *)(result + 4), a2, 0);
+        return RenderParams_applyModelTransform((_DWORD *)(result + 4), a2, 0);
     }
     return result;
   }
@@ -127427,7 +127427,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 4);
     Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"SelectCursorMini.bflyt";
     message_ref(v2, v6, 0, 0, 0);
@@ -127553,7 +127553,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(result + 3580) )
     {
       if ( *(_BYTE *)(*(_DWORD *)(result + 3552) + 208) )
-        return sub_60473B88((_DWORD *)(result + 4), a2, 0);
+        return RenderParams_applyModelTransform((_DWORD *)(result + 4), a2, 0);
     }
     return result;
   }
@@ -128980,7 +128980,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 11;
     Disposer_allocateChildren(a1 + 11, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = 12321336;
     v7 = "SelectMenu.bflyt";
     message_ref(v2, &v6, (int)(a1 + 918), 0, 0);
@@ -129080,7 +129080,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 33498);
     if ( result )
     {
-      sub_60473B88((_DWORD *)(a1 + 44), a2, 0);
+      RenderParams_applyModelTransform((_DWORD *)(a1 + 44), a2, 0);
       return sub_60548F10(a1 + 5712, a2);
     }
     return result;
@@ -130911,7 +130911,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     v6[1] = 12321336;
     v6[2] = (int)"Common";
-    sub_60475C8C(a1 + 40);
+    Player_allocateSlotObject(a1 + 40);
     message_ref((_DWORD *)(a1 + 40), (_DWORD *)&unk_60CAC6A0 + 2 * v3 + 6, a1 + 3740, 0, 0);
     if ( ((unsigned int)&unk_60CAC6A4 & ~(1616150144 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAC6A4) )
     {
@@ -131388,7 +131388,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60548F10(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 16441) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -132108,7 +132108,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ShadowClear.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -132191,7 +132191,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054A134(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3593) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -132505,7 +132505,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 44);
     Disposer_allocateChildren((_DWORD *)(a1 + 44), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = 12321336;
     v7 = "ShadowDirectArrow.bflyt";
     message_ref(v2, &v6, 0, 0, 0);
@@ -132607,7 +132607,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = *(unsigned __int8 *)(a1 + 3637);
       if ( *(_BYTE *)(a1 + 3637) )
-        return sub_60473B88((_DWORD *)(a1 + 44), a2, 0);
+        return RenderParams_applyModelTransform((_DWORD *)(a1 + 44), a2, 0);
     }
     return result;
   }
@@ -133079,7 +133079,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ShadowFail.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -133162,7 +133162,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054B6D4(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3593) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -133436,7 +133436,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ShadowStartMessage.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -133519,7 +133519,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054BDBC(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3593) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -133995,7 +133995,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"TalkWindow.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -134207,7 +134207,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054CDC4(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3689) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -134423,7 +134423,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 4);
     Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v4[0] = 12321336;
     v4[1] = "Skip.bflyt";
     message_ref(v2, v4, 0, 0, 0);
@@ -134448,7 +134448,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054D180(int a1, _DWORD *a2)
   {
-    return sub_60473B88((_DWORD *)(a1 + 4), a2, 0);
+    return RenderParams_applyModelTransform((_DWORD *)(a1 + 4), a2, 0);
   }
 
 /* ============================================================================
@@ -135202,7 +135202,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 10;
     Disposer_allocateChildren(a1 + 10, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"PointGet.bflyt";
     message_ref(v2, v7, 0, 0, 0);
@@ -135422,7 +135422,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054EAB4(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3823) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -136223,7 +136223,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"SpeedUp.bflyt";
     message_ref(v2, v5, 0, 0, 0);
@@ -136342,7 +136342,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055026C(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3609) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -136553,7 +136553,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 84);
     Disposer_allocateChildren((_DWORD *)(a1 + 84), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = 12321336;
     v7 = "StaffCreditScene.bflyt";
     message_ref(v2, &v6, 0, 0, 0);
@@ -136810,7 +136810,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60550B84(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 40) )
-      return sub_60473B88((_DWORD *)(result + 84), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 84), a2, 0);
     return result;
   }
 
@@ -137820,10 +137820,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60552E98(a1);
     v5 = 12321336;
     v6 = "G_ArrowBtnL_00";
-    *(_DWORD *)(a1 + 70252) = sub_604746E4(a1 + 44, (_DWORD *)0xCAD020, &v5);
+    *(_DWORD *)(a1 + 70252) = ListNode_findByKey(a1 + 44, (_DWORD *)0xCAD020, &v5);
     v5 = 12321336;
     v6 = "G_ArrowBtnR_00";
-    *(_DWORD *)(a1 + 70256) = sub_604746E4(a1 + 44, (_DWORD *)0xCAD020, &v5);
+    *(_DWORD *)(a1 + 70256) = ListNode_findByKey(a1 + 44, (_DWORD *)0xCAD020, &v5);
     return Registry_iterateAndRegister(a1 + 27148, 0);
   }
 
@@ -137841,7 +137841,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 11;
     Disposer_allocateChildren(a1 + 11, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = 12321336;
     v7 = "StarCoinList.bflyt";
     message_ref(v2, &v6, (int)(a1 + 4470), 0, 0);
@@ -138099,11 +138099,11 @@ static inline unsigned int uxtb16(unsigned int x)
       v8 = *(_BYTE *)(v5[1] + 64);
       *(_BYTE *)(v6 + 64) = v7 & 0xFE;
       *(_BYTE *)(v5[1] + 64) &= ~1u;
-      sub_60473B88(v5 - 4446, a2, 0);
+      RenderParams_applyModelTransform(v5 - 4446, a2, 0);
       *(_BYTE *)(*v5 + 64) = *(_BYTE *)(*v5 + 64) & 0xFE | v7 & 1;
       *(_BYTE *)(v5[1] + 64) = *(_BYTE *)(v5[1] + 64) & 0xFE | v8 & 1;
-      sub_60473B88(v5 - 2659, a2, 0);
-      return sub_60473B88(v5 - 1774, a2, 0);
+      RenderParams_applyModelTransform(v5 - 2659, a2, 0);
+      return RenderParams_applyModelTransform(v5 - 1774, a2, 0);
     }
     return result;
   }
@@ -138632,7 +138632,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *v5 == *(_DWORD *)(a1 + 70244) - 1 )
       {
         v4 = 1;
-        sub_6047EFCC(a1 + 17880, 1);
+        IntrusiveList_getNthFromHead(a1 + 17880, 1);
         *(_BYTE *)(a1 + 18341) = 1;
         v6 = 17832;
   LABEL_12:
@@ -138652,7 +138652,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( !*v7 )
       {
-        sub_6047EFCC(a1 + 17880, 0);
+        IntrusiveList_getNthFromHead(a1 + 17880, 0);
         v4 = 1;
         *(_BYTE *)(a1 + 18340) = 1;
         v6 = 17828;
@@ -139030,7 +139030,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     Disposer_allocateChildren(a1, 0);
-    sub_60475C8C((int)a1);
+    Player_allocateSlotObject((int)a1);
     v4[0] = 12321336;
     v4[1] = (int)"StarCoinListWin.bflyt";
     message_ref(a1, v4, 0, 0, 0);
@@ -140680,7 +140680,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 11;
     Disposer_allocateChildren(a1 + 11, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v11 = 12321336;
     v12 = "TeamSelect.bflyt";
     message_ref(v2, &v11, (int)(a1 + 1465), 0, 0);
@@ -140832,7 +140832,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605572C8(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 18826) )
-      return sub_60473B88((_DWORD *)(result + 44), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 44), a2, 0);
     return result;
   }
 
@@ -141571,7 +141571,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 40);
     *(_BYTE *)(a1 + 3689) = a2;
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"TeamSelectGround.bflyt";
     message_ref(v2, v5, 0, 0, 0);
@@ -141780,7 +141780,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     RenderParams_defaultInit(v5);
     v5[0] = 1;
-    return sub_60473B88((_DWORD *)(a1 + 40), a2, (int)v5);
+    return RenderParams_applyModelTransform((_DWORD *)(a1 + 40), a2, (int)v5);
   }
 
 /* ============================================================================
@@ -142366,7 +142366,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v1);
+    Player_allocateSlotObject((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"TheEnd.bflyt";
     message_ref(v1, v4, 0, 0, 0);
@@ -142456,7 +142456,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60559478(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3594) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -142722,7 +142722,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 64);
     Disposer_allocateChildren((_DWORD *)(a1 + 64), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"TimeLimit.bflyt";
     message_ref(v2, v7, 0, 0, 0);
@@ -142791,7 +142791,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60559CE4(int a1, _DWORD *a2)
   {
-    return sub_60473B88((_DWORD *)(a1 + 64), a2, 0);
+    return RenderParams_applyModelTransform((_DWORD *)(a1 + 64), a2, 0);
   }
 
 /* ============================================================================
@@ -143151,7 +143151,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"TimeUp.bflyt";
     message_ref(v2, v6, 0, 0, 0);
@@ -143261,7 +143261,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055A604(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 3701) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -143674,7 +143674,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Disposer_allocateChildren(a1 + 10, 0);
     v9 = 12321336;
     v10 = "Title";
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 16) )
     {
       v9 = 12321336;
@@ -143864,7 +143864,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055B46C(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 4037) )
-      return sub_60473B88((_DWORD *)(result + 40), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 40), a2, 0);
     return result;
   }
 
@@ -144222,7 +144222,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 9;
     Disposer_allocateChildren(a1 + 9, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = 12321336;
     v7 = "VSModeSelect.bflyt";
     message_ref(v2, &v6, (int)(a1 + 912), 0, 0);
@@ -144340,7 +144340,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055BE74(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 13309) )
-      return sub_60473B88((_DWORD *)(result + 36), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 36), a2, 0);
     return result;
   }
 
@@ -145878,7 +145878,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 11;
     Disposer_allocateChildren(a1 + 11, 0);
-    sub_60475C8C((int)v2);
+    Player_allocateSlotObject((int)v2);
     v6 = 12321336;
     v7 = "WarpSelectWindow.bflyt";
     message_ref(v2, &v6, (int)(a1 + 933), 0, 0);
@@ -146342,7 +146342,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055F20C(int result, _DWORD *a2)
   {
     if ( *(_BYTE *)(result + 13751) )
-      return sub_60473B88((_DWORD *)(result + 44), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(result + 44), a2, 0);
     return result;
   }
 
@@ -147573,7 +147573,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v7 = *(_DWORD *)(a1 + 68);
       if ( v7 >= 9 )
         v7 = 0;
-      return sub_60473B88((_DWORD *)(a1 + 3548 * v7 + 76), a2, 0);
+      return RenderParams_applyModelTransform((_DWORD *)(a1 + 3548 * v7 + 76), a2, 0);
     }
     return result;
   }
@@ -147623,7 +147623,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v10 = 0;
         v8 = (_DWORD *)(a1 + 3548 * v10 + 76);
       }
-      return sub_60473B88(v8, a2, 0);
+      return RenderParams_applyModelTransform(v8, a2, 0);
     }
     return result;
   }
@@ -147954,7 +147954,7 @@ static inline unsigned int uxtb16(unsigned int x)
     for ( i = 0; i != 12; i += 2 )
     {
       Disposer_allocateChildren(v4, 0);
-      sub_60475C8C((int)v4);
+      Player_allocateSlotObject((int)v4);
       if ( message_ref(v4, &dword_60CAE2A0[i], 0, 0, 0) == 1 )
       {
         if ( ((unsigned int)&unk_60CAE20C & ~(1616255500 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAE20C) )
@@ -147974,7 +147974,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v8 = a1 + 5326;
     Disposer_allocateChildren(a1 + 5326, 0);
-    sub_60475C8C((int)(a1 + 5326));
+    Player_allocateSlotObject((int)(a1 + 5326));
     if ( message_ref(a1 + 5326, &dword_60CAE2D0, 0, 0, 0) )
     {
       if ( ((unsigned int)&unk_60CAE210 & ~(1616255740 << v9) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAE210) )
@@ -147991,7 +147991,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v10(v8, &dword_60CAE230, &v15);
     }
     Disposer_allocateChildren(a1 + 6213, 0);
-    sub_60475C8C((int)(a1 + 6213));
+    Player_allocateSlotObject((int)(a1 + 6213));
     result = message_ref(a1 + 6213, &dword_60CAE2D8, 0, 0, 0);
     if ( result == 1 )
     {
@@ -204082,7 +204082,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v33 = v250;
       *(_BYTE *)(v12 + 35518) = v251;
       *(_WORD *)(v12 + 35516) = v33;
-      sub_60917754(v12 + 35520, v252);
+      Object_copyFrom(v12 + 35520, v252);
       *(_DWORD *)(v12 + 35720) = v253;
       Object_releaseHandle(v252);
       v34 = MEMORY[0xCBD254];
@@ -214642,7 +214642,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v50 = *(_DWORD *)(a1 + 116);
         (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v14 + 60))(**v14, &v39);
         (*(void (__fastcall **)(_DWORD, int))(*(_DWORD *)**v14 + 68))(**v14, 11778444);
-        sub_604218E0(*v14);
+        AnimationCtrl_switchBothHalvesIfEnabled(*v14);
         (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v14 + 52))(**v14);
         if ( (unsigned int)*(char *)(a1 + 6976) <= 3 )
         {
@@ -214711,7 +214711,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18[11] = *(float *)(a1 + 116);
     v14 = (_DWORD **)(a1 + 6100);
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 6100) + 60))(**(_DWORD **)(a1 + 6100), v18);
-    sub_604218E0(*(_DWORD **)(a1 + 6100));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 6100));
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v14 + 52))(**v14);
     if ( (unsigned int)*(char *)(a1 + 6976) <= 3 && *(_BYTE *)(a1 + 6519) )
     {

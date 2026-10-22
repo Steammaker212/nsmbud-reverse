@@ -20141,7 +20141,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1 + 6332;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6644));
-    sub_60026BFC(v2);
+    SoundActor_destroySevenDisposers(v2);
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -20162,7 +20162,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1 + 6332;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6644));
-    sub_60026BFC(v2);
+    SoundActor_destroySevenDisposers(v2);
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -21052,7 +21052,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60026BFC
+ * SoundActor_destroySevenDisposers
  * RVA 0x00026bfc   size 0xc0   xrefs 81
  * ============================================================================ */
   int __fastcall sub_60026BFC(_DWORD *a1)
@@ -21087,7 +21087,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v1; // r0
   
-    v1 = sub_60026BFC(a1);
+    v1 = SoundActor_destroySevenDisposers(a1);
     return operator delete(v1);
   }
 
@@ -27702,7 +27702,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC((_DWORD *)(a1 + 6332));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -27732,7 +27732,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC((_DWORD *)(a1 + 6332));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -29459,7 +29459,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     EffectData_release((int)(a1 + 1622));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1622));
     LightSource::~LightSource((struct sead_IDisposer *)(a1 + 1604));
-    sub_60026BFC(v2);
+    SoundActor_destroySevenDisposers(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -29481,7 +29481,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     EffectData_release((int)(a1 + 1622));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1622));
     LightSource::~LightSource((struct sead_IDisposer *)(a1 + 1604));
-    sub_60026BFC(v2);
+    SoundActor_destroySevenDisposers(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -32453,7 +32453,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC((_DWORD *)(a1 + 6332));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -32483,7 +32483,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC((_DWORD *)(a1 + 6332));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -36605,7 +36605,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(_DWORD, _DWORD *))(***(_DWORD ***)(a1 + 11776) + 60))(**(_DWORD **)(a1 + 11776), v47);
     (*(void (__fastcall **)(int, int))(*(_DWORD *)**v10 + 68))(**v10, a1 + 144);
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 11776));
-    sub_604218E0(*(_DWORD *)(a1 + 11776));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)(a1 + 11776));
     (*(void (__fastcall **)(int))(*(_DWORD *)**v10 + 52))(**v10);
     v38 = 1065353216;
     v39 = 1065353216;
@@ -41458,7 +41458,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7724));
     *(_DWORD *)a1 = 12367148;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7348));
-    sub_60026BFC(v2);
+    SoundActor_destroySevenDisposers(v2);
     ColliderBase_dtor((struct sead_IDisposer *)(a1 + 6336));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag(a1 + 6152);
@@ -41488,7 +41488,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7724));
     *(_DWORD *)a1 = 12367148;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7348));
-    sub_60026BFC(v2);
+    SoundActor_destroySevenDisposers(v2);
     ColliderBase_dtor((struct sead_IDisposer *)(a1 + 6336));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag(a1 + 6152);
@@ -43967,7 +43967,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     EffectData_release(a1 + 7972);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7972));
     *(_DWORD *)a1 = 12335004;
-    sub_60026BFC((_DWORD *)(a1 + 7528));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 7528));
     *(_DWORD *)(a1 + 7356) = 12325992;
     EffectData_release(a1 + 7356);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7356));
@@ -43977,7 +43977,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor(v2);
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6644));
-    sub_60026BFC((_DWORD *)(a1 + 6332));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -44441,7 +44441,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *a1 = 12335004;
     v2 = (struct sead_IDisposer *)(a1 + 1661);
-    sub_60026BFC(a1 + 1882);
+    SoundActor_destroySevenDisposers(a1 + 1882);
     a1[1839] = 12325992;
     EffectData_release(a1 + 1839);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1839));
@@ -44451,7 +44451,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC(a1 + 1583);
+    SoundActor_destroySevenDisposers(a1 + 1583);
     *a1 = 12462088;
     Array_compactByFlag();
     *a1 = 12321080;
@@ -47053,7 +47053,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *(_DWORD *)a1 = 12335004;
     v2 = (struct sead_IDisposer *)(a1 + 6644);
-    sub_60026BFC((_DWORD *)(a1 + 7528));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 7528));
     *(_DWORD *)(a1 + 7356) = 12325992;
     EffectData_release(a1 + 7356);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7356));
@@ -47063,7 +47063,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC((_DWORD *)(a1 + 6332));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -47912,7 +47912,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 += 1575;
     (*(void (__fastcall **)(int, float *))(*(_DWORD *)*v18 + 60))(*v18, v25);
     (*(void (__fastcall **)(int, int **))(*(_DWORD *)**v1 + 68))(**v1, v1 - 1539);
-    sub_604218E0(*v1);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v1);
     (*(void (__fastcall **)(int))(*(_DWORD *)**v1 + 52))(**v1);
     (*(void (__fastcall **)(int))(*(_DWORD *)**v1 + 56))(**v1);
     v19 = **v1;
@@ -49041,7 +49041,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     EffectData_release(a1 + 1993);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1993));
     *a1 = 12335004;
-    sub_60026BFC(v2);
+    SoundActor_destroySevenDisposers(v2);
     a1[1839] = 12325992;
     EffectData_release(a1 + 1839);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1839));
@@ -49051,7 +49051,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 1661));
-    sub_60026BFC(a1 + 1583);
+    SoundActor_destroySevenDisposers(a1 + 1583);
     *a1 = 12462088;
     Array_compactByFlag();
     *a1 = 12321080;
@@ -53525,7 +53525,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Mtx34_rotateZ(&v20, (unsigned int *)(a1 + 164));
     v5 = (int **)(a1 + 7204);
     (*(void (__fastcall **)(_DWORD, float32x2_t *))(***(_DWORD ***)(a1 + 7204) + 60))(**(_DWORD **)(a1 + 7204), &v20);
-    sub_604218E0(*(_DWORD **)(a1 + 7204));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 7204));
     v19 = *(float *)(a1 + 152);
     v18 = *(float *)(a1 + 148);
     v17 = *(float *)(a1 + 144);
@@ -54279,7 +54279,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *(_DWORD *)a1 = 12335004;
     v2 = (struct sead_IDisposer *)(a1 + 6644);
-    sub_60026BFC((_DWORD *)(a1 + 7528));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 7528));
     *(_DWORD *)(a1 + 7356) = 12325992;
     EffectData_release(a1 + 7356);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7356));
@@ -54289,7 +54289,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC((_DWORD *)(a1 + 6332));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -55042,7 +55042,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)*v17 + 60))(*v17, &v21);
       (*(void (__fastcall **)(_DWORD, int *))(**(_DWORD **)*v16 + 68))(*(_DWORD *)*v16, v16 - 1739);
       j_ModelWrapper_updateAnims(*v16);
-      sub_604218E0((_DWORD *)*v16);
+      AnimationCtrl_switchBothHalvesIfEnabled((_DWORD *)*v16);
       (*(void (__fastcall **)(_DWORD))(**(_DWORD **)*v16 + 52))(*(_DWORD *)*v16);
       return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)*v16 + 56))(*(_DWORD *)*v16);
     }
@@ -55144,7 +55144,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC((_DWORD *)(a1 + 6332));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -55174,7 +55174,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC((_DWORD *)(a1 + 6332));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -55980,7 +55980,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 7656) += dword_60C81084;
     Mtx34_rotateX(&v48, (unsigned int *)(a1 + 7656));
     (*(void (__fastcall **)(int, int, float32x2_t *, int))(*(_DWORD *)**v10 + 96))(**v10, v14, &v48, 11778444);
-    sub_604218E0(*v10);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v10);
     (*(void (__fastcall **)(int))(*(_DWORD *)**v10 + 56))(**v10);
     v25 = **v10;
     v26 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v25 + 84);
@@ -56125,7 +56125,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12367148;
     v2 = (struct sead_IDisposer *)(a1 + 6336);
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7348));
-    sub_60026BFC((_DWORD *)(a1 + 7008));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 7008));
     ColliderBase_dtor(v2);
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
@@ -56146,7 +56146,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12367148;
     v2 = (struct sead_IDisposer *)(a1 + 6336);
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7348));
-    sub_60026BFC((_DWORD *)(a1 + 7008));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 7008));
     ColliderBase_dtor(v2);
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
@@ -57437,7 +57437,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v22 = v1 + 1525;
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)*v1[1525] + 60))(*v1[1525], &v31);
     (*(void (__fastcall **)(_DWORD, _DWORD **))(*(_DWORD *)**v22 + 68))(**v22, v1 + 36);
-    sub_604218E0(v1[1525]);
+    AnimationCtrl_switchBothHalvesIfEnabled(v1[1525]);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v22 + 52))(**v22);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v22 + 56))(**v22);
     v30[0] = 1099431936;
@@ -57464,7 +57464,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 += 1526;
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)*v28 + 60))(*v28, &v31);
     (*(void (__fastcall **)(_DWORD, _DWORD *))(*(_DWORD *)**v1 + 68))(**v1, v30);
-    sub_604218E0(*v1);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v1);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v1 + 52))(**v1);
     return (*(int (__fastcall **)(_DWORD))(*(_DWORD *)**v1 + 56))(**v1);
   }
@@ -57967,7 +57967,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 += 1525;
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)*v21 + 60))(*v21, v23);
     (*(void (__fastcall **)(_DWORD, _DWORD **))(***(_DWORD ***)v1 + 68))(**(_DWORD **)v1, (_DWORD **)v1 - 1489);
-    sub_604218E0(*(_DWORD *)v1);
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)v1);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)v1 + 52))(**(_DWORD **)v1);
     return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)v1 + 56))(**(_DWORD **)v1);
   }
@@ -64525,7 +64525,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v27 = (_DWORD **)(a1 + 7112);
       (*(void (__fastcall **)(_DWORD, float32x2_t *))(***(_DWORD ***)(a1 + 7112) + 60))(**(_DWORD **)(a1 + 7112), &v53);
       (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v27 + 68))(**v27, &v64);
-      sub_604218E0(*(_DWORD **)(a1 + 7112));
+      AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 7112));
       (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v27 + 52))(**v27);
       v28 = (*(int (__fastcall **)(_DWORD, _DWORD))(*(_DWORD *)**v27 + 132))(**v27, *(_DWORD *)(a1 + 7532));
       v52 = 0;
@@ -66804,7 +66804,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 1661));
-    sub_60026BFC(a1 + 1583);
+    SoundActor_destroySevenDisposers(a1 + 1583);
     *a1 = 12462088;
     Array_compactByFlag();
     *a1 = 12321080;
@@ -69281,7 +69281,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *a1 = 12349400;
     v2 = (struct sead_IDisposer *)(a1 + 1529);
-    sub_60026BFC(a1 + 1667);
+    SoundActor_destroySevenDisposers(a1 + 1667);
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1590));
     a1[1547] = 12325992;
     EffectData_release((int)(a1 + 1547));
@@ -69303,7 +69303,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *a1 = 12349400;
     v2 = (struct sead_IDisposer *)(a1 + 1529);
-    sub_60026BFC(a1 + 1667);
+    SoundActor_destroySevenDisposers(a1 + 1667);
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1590));
     a1[1547] = 12325992;
     EffectData_release((int)(a1 + 1547));
@@ -73930,7 +73930,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             &v30);
           (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v21 + 68))(**v21, &v41);
           j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 7100));
-          sub_604218E0(*(_DWORD **)(a1 + 7100));
+          AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 7100));
           (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v21 + 52))(**v21);
           CurrentState = StateMgr::getCurrentState(a1 + 6084);
           v23 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -73979,7 +73979,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             &v30);
           (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v20 + 68))(**v20, &v41);
           j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 7100));
-          sub_604218E0(*(_DWORD **)(a1 + 7100));
+          AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 7100));
           (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v20 + 52))(**v20);
           if ( *(_BYTE *)(a1 + 7608) )
           {
@@ -75501,7 +75501,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12326268;
     ActiveCollider_dtor(v2);
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 1661));
-    sub_60026BFC(a1 + 1583);
+    SoundActor_destroySevenDisposers(a1 + 1583);
     *a1 = 12462088;
     Array_compactByFlag();
     *a1 = 12321080;
@@ -79560,7 +79560,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v73.n64_u32[1] = (unsigned __int32)"cover";
     v17 = v16(v15, &v73);
     (*(void (__fastcall **)(int, int, _DWORD))(*(_DWORD *)**v10 + 136))(**v10, v17, 0);
-    sub_604218E0(*(_DWORD **)(a1 + 6304));
+    AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 6304));
     (*(void (__fastcall **)(int))(*(_DWORD *)**v10 + 52))(**v10);
     v18 = **(_DWORD **)(a1 + 6304);
     v19 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v18 + 84);
@@ -80607,14 +80607,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 9784) = 12325992;
     EffectData_release(a1 + 9784);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 9784));
-    sub_60026BFC((_DWORD *)(a1 + 9476));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 9476));
     ColliderBase_dtor((struct sead_IDisposer *)(a1 + 8928));
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 8272));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7964));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7660));
     *(_DWORD *)a1 = 12367148;
     ActiveCollider_dtor(v2);
-    sub_60026BFC((_DWORD *)(a1 + 7008));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 7008));
     ColliderBase_dtor((struct sead_IDisposer *)(a1 + 6336));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
@@ -80639,14 +80639,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 9784) = 12325992;
     EffectData_release(a1 + 9784);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 9784));
-    sub_60026BFC((_DWORD *)(a1 + 9476));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 9476));
     ColliderBase_dtor((struct sead_IDisposer *)(a1 + 8928));
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 8272));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7964));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7660));
     *(_DWORD *)a1 = 12367148;
     ActiveCollider_dtor(v2);
-    sub_60026BFC((_DWORD *)(a1 + 7008));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 7008));
     ColliderBase_dtor((struct sead_IDisposer *)(a1 + 6336));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
@@ -84347,7 +84347,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v16 = v16 + (float)((float)(v6 - v5) * 0.5);
     }
     (*(void (__fastcall **)(int, float *))(*(_DWORD *)**v4 + 68))(**v4, &v14);
-    sub_604218E0(*v4);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v4);
     (*(void (__fastcall **)(int))(*(_DWORD *)**v4 + 52))(**v4);
     v8 = **v4;
     v9 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v8 + 84);
@@ -86905,7 +86905,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC(a1 + 1583);
+    SoundActor_destroySevenDisposers(a1 + 1583);
     *a1 = 12462088;
     Array_compactByFlag();
     *a1 = 12321080;
@@ -91228,7 +91228,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v33 = v33 + (float)((float)(v23 - v22) * 0.7);
     }
     (*(void (__fastcall **)(int, float *))(*(_DWORD *)**v2 + 68))(**v2, &v31);
-    sub_604218E0(*v2);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v2);
     (*(void (__fastcall **)(int))(*(_DWORD *)**v2 + 52))(**v2);
     v25 = **v2;
     v26 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v25 + 84);
@@ -107908,7 +107908,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 7100));
       Bowser::onExecute((_DWORD *)a1);
-      sub_604218E0(*(_DWORD **)(a1 + 7100));
+      AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 7100));
     }
     Bowser::onExecute((_DWORD *)a1);
     StateMgr::execute((_DWORD *)(a1 + 6084));
@@ -109795,7 +109795,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 1661));
-    sub_60026BFC(a1 + 1583);
+    SoundActor_destroySevenDisposers(a1 + 1583);
     *a1 = 12462088;
     Array_compactByFlag();
     *a1 = 12321080;
@@ -111919,7 +111919,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = (_DWORD **)(a1 + 6300);
       (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 6300) + 60))(**(_DWORD **)(a1 + 6300));
       (*(void (__fastcall **)(_DWORD, int))(*(_DWORD *)**v3 + 68))(**v3, v2);
-      sub_604218E0(*(_DWORD **)(a1 + 6300));
+      AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 6300));
       (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v3 + 52))(**v3);
       (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v3 + 56))(**v3);
     }
@@ -111996,7 +111996,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = (_DWORD **)(a1 + 1575);
       (*(void (__fastcall **)(_DWORD))(*(_DWORD *)*v5 + 60))(*v5);
       (*(void (__fastcall **)(_DWORD, _DWORD **))(*(_DWORD *)**v4 + 68))(**v4, v4 - 1539);
-      sub_604218E0(*v4);
+      AnimationCtrl_switchBothHalvesIfEnabled(*v4);
       (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v4 + 52))(**v4);
       (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v4 + 56))(**v4);
     }
@@ -114729,7 +114729,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
-    sub_60026BFC((_DWORD *)(a1 + 6332));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -116315,7 +116315,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12367148;
     v2 = (struct sead_IDisposer *)(a1 + 6336);
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7348));
-    sub_60026BFC((_DWORD *)(a1 + 7008));
+    SoundActor_destroySevenDisposers((_DWORD *)(a1 + 7008));
     ColliderBase_dtor(v2);
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag((_BYTE *)(a1 + 6152));
@@ -120028,7 +120028,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v25 = v25 + (float)((float)(v15 - v12) * v8);
     }
     (*(void (__fastcall **)(int, float32x2_t *))(*(_DWORD *)**v9 + 68))(**v9, &v24);
-    sub_604218E0(*v9);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v9);
     (*(void (__fastcall **)(int))(*(_DWORD *)**v9 + 52))(**v9);
     v16 = **v9;
     v17 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v16 + 84);
@@ -123412,7 +123412,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v14 = v14 + (float)((float)(v4 - v3) * 0.7);
     }
     (*(void (__fastcall **)(int, float *))(*(_DWORD *)**v2 + 68))(**v2, &v12);
-    sub_604218E0(*v2);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v2);
     (*(void (__fastcall **)(int))(*(_DWORD *)**v2 + 52))(**v2);
     v6 = **v2;
     v7 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v6 + 84);
@@ -129439,7 +129439,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v22 = v22 + (float)((float)(v15 - v12) * v8);
     }
     (*(void (__fastcall **)(int, float32x2_t *))(*(_DWORD *)**v9 + 68))(**v9, &v21);
-    sub_604218E0(*v9);
+    AnimationCtrl_switchBothHalvesIfEnabled(*v9);
     (*(void (__fastcall **)(int))(*(_DWORD *)**v9 + 52))(**v9);
     v16 = **v9;
     v17 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v16 + 84);

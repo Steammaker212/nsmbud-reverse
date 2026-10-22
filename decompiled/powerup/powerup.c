@@ -339,7 +339,7 @@ static inline unsigned int uxtb16(unsigned int x)
         Slot_destroy(v3 + 228);
         v3[221] = 12556228;
         Slot_destroy(v3 + 221);
-        sub_60919C90(v3 + 168);
+        Slot_detachChild(v3 + 168);
         sub_60921BD4(v3 + 84);
         sub_60922478(v3 + 16);
         operator delete(v3);
@@ -4194,20 +4194,20 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60455558(int a1, unsigned __int8 *a2)
   {
-    sub_60905558(a1, *a2);
-    sub_60905558(a1, a2[1]);
-    sub_60905558(a1, a2[2]);
-    sub_60905558(a1, a2[3]);
-    sub_60905558(a1, a2[4]);
-    sub_60905558(a1, a2[5]);
-    sub_60905558(a1, a2[6]);
-    sub_60905558(a1, a2[7]);
+    Object_callSlot12(a1, *a2);
+    Object_callSlot12(a1, a2[1]);
+    Object_callSlot12(a1, a2[2]);
+    Object_callSlot12(a1, a2[3]);
+    Object_callSlot12(a1, a2[4]);
+    Object_callSlot12(a1, a2[5]);
+    Object_callSlot12(a1, a2[6]);
+    Object_callSlot12(a1, a2[7]);
     sub_60905584(a1, *((unsigned __int16 *)a2 + 4));
     sub_60905584(a1, *((unsigned __int16 *)a2 + 5));
-    sub_60905558(a1, a2[12]);
-    sub_60905558(a1, a2[13]);
-    sub_60905558(a1, a2[14]);
-    return sub_60905558(a1, a2[15]);
+    Object_callSlot12(a1, a2[12]);
+    Object_callSlot12(a1, a2[13]);
+    Object_callSlot12(a1, a2[14]);
+    return Object_callSlot12(a1, a2[15]);
   }
 
 /* ============================================================================
@@ -4237,19 +4237,19 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604556B0(int a1, unsigned __int8 *a2)
   {
-    sub_60905558(a1, *a2);
-    sub_60905558(a1, a2[1]);
-    sub_60905558(a1, a2[2]);
-    sub_60905558(a1, a2[3]);
-    sub_60905558(a1, a2[4]);
-    sub_60905558(a1, a2[5]);
-    sub_60905558(a1, a2[6]);
-    sub_60905558(a1, a2[7]);
+    Object_callSlot12(a1, *a2);
+    Object_callSlot12(a1, a2[1]);
+    Object_callSlot12(a1, a2[2]);
+    Object_callSlot12(a1, a2[3]);
+    Object_callSlot12(a1, a2[4]);
+    Object_callSlot12(a1, a2[5]);
+    Object_callSlot12(a1, a2[6]);
+    Object_callSlot12(a1, a2[7]);
     sub_60905634(a1, *((_DWORD *)a2 + 2));
-    sub_60905558(a1, a2[12]);
-    sub_60905558(a1, a2[13]);
-    sub_60905558(a1, a2[14]);
-    return sub_60905558(a1, a2[15]);
+    Object_callSlot12(a1, a2[12]);
+    Object_callSlot12(a1, a2[13]);
+    Object_callSlot12(a1, a2[14]);
+    return Object_callSlot12(a1, a2[15]);
   }
 
 /* ============================================================================
@@ -4300,22 +4300,22 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_609055DC(a1, *(char *)(a2 + 66));
     sub_609055DC(a1, *(char *)(a2 + 67));
     sub_609055DC(a1, *(char *)(a2 + 68));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 69));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 70));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 71));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 72));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 73));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 69));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 70));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 71));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 72));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 73));
     sub_60905584(a1, *(unsigned __int16 *)(a2 + 74));
     sub_60905634(a1, *(_DWORD *)(a2 + 76));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 80));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 81));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 82));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 83));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 80));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 81));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 82));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 83));
     sub_60905660(a1);
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 88));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 89));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 90));
-    return sub_60905558(a1, *(unsigned __int8 *)(a2 + 91));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 88));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 89));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 90));
+    return Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 91));
   }
 
 /* ============================================================================
@@ -4345,10 +4345,10 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60455A58(int a1, int a2)
   {
     sub_609055B0(a1, *(_DWORD *)a2);
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 4));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 5));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 6));
-    sub_60905558(a1, *(unsigned __int8 *)(a2 + 7));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 4));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 5));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 6));
+    Object_callSlot12(a1, *(unsigned __int8 *)(a2 + 7));
     sub_609055B0(a1, *(_DWORD *)(a2 + 8));
     sub_609055B0(a1, *(_DWORD *)(a2 + 12));
     sub_609055B0(a1, *(_DWORD *)(a2 + 16));
@@ -4375,8 +4375,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60455B20(int a1, unsigned __int8 *a2)
   {
-    sub_60905558(a1, *a2);
-    sub_60905558(a1, a2[1]);
+    Object_callSlot12(a1, *a2);
+    Object_callSlot12(a1, a2[1]);
     return sub_60905584(a1, *((unsigned __int16 *)a2 + 1));
   }
 
@@ -4423,10 +4423,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60455C08(int a1, unsigned __int8 *a2)
   {
-    sub_60905558(a1, *a2);
-    sub_60905558(a1, a2[1]);
-    sub_60905558(a1, a2[2]);
-    sub_60905558(a1, a2[3]);
+    Object_callSlot12(a1, *a2);
+    Object_callSlot12(a1, a2[1]);
+    Object_callSlot12(a1, a2[2]);
+    Object_callSlot12(a1, a2[3]);
     return sub_609055B0(a1, *((_DWORD *)a2 + 1));
   }
 
@@ -4446,8 +4446,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60455C70(int a1, unsigned __int8 *a2)
   {
-    sub_60905558(a1, *a2);
-    return sub_60905558(a1, a2[1]);
+    Object_callSlot12(a1, *a2);
+    return Object_callSlot12(a1, a2[1]);
   }
 
 /* ============================================================================
@@ -4466,7 +4466,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60455C98(int a1, unsigned __int8 *a2)
   {
-    return sub_60905558(a1, *a2);
+    return Object_callSlot12(a1, *a2);
   }
 
 /* ============================================================================
@@ -4485,7 +4485,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60455CA4(int a1, unsigned __int8 *a2)
   {
-    return sub_60905558(a1, *a2);
+    return Object_callSlot12(a1, *a2);
   }
 
 /* ============================================================================
@@ -23272,7 +23272,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60473B88
+ * RenderParams_applyModelTransform
  * RVA 0x00473b88   size 0x138   xrefs 86
  * ============================================================================ */
   int __fastcall sub_60473B88(_DWORD *a1, _DWORD *a2, int a3)
@@ -23970,7 +23970,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     unsigned int v8; // r3
   
-    v8 = sub_604746E4(a1, a3, a4);
+    v8 = ListNode_findByKey(a1, a3, a4);
     if ( v8 == -1 )
       return 0;
     sub_604742D0(a1, a2, a3, v8, a5);
@@ -23978,7 +23978,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604746E4
+ * ListNode_findByKey
  * RVA 0x004746e4   size 0x140   xrefs 85
  * ============================================================================ */
   int __fastcall sub_604746E4(int a1, _DWORD *a2, _DWORD *a3)
@@ -25027,7 +25027,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60475C8C
+ * Player_allocateSlotObject
  * RVA 0x00475c8c   size 0x48   xrefs 90
  * ============================================================================ */
   int __fastcall sub_60475C8C(int a1)
@@ -25724,7 +25724,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v14 == v55 )
         {
   LABEL_23:
-          v18 = sub_60855BC8(220);
+          v18 = Object_freeViaGlobal(220);
           v19 = v18;
           if ( !v18 )
             goto LABEL_88;
@@ -25756,7 +25756,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v20 == v55 )
           {
   LABEL_33:
-            v19 = sub_60855BC8(220);
+            v19 = Object_freeViaGlobal(220);
             if ( !v19 )
               goto LABEL_88;
             SE_SYS_BTN_OVER_ref();
@@ -25790,7 +25790,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( v24 == v55 )
             {
   LABEL_43:
-              v19 = sub_60855BC8(220);
+              v19 = Object_freeViaGlobal(220);
               if ( !v19 )
                 goto LABEL_88;
               SE_SYS_BTN_OVER_ref();
@@ -25847,7 +25847,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 if ( v33 == v55 )
                 {
   LABEL_64:
-                  v19 = sub_60855BC8(228);
+                  v19 = Object_freeViaGlobal(228);
                   if ( v19 )
                   {
                     SE_SYS_BTN_OVER_ref();
@@ -25987,7 +25987,7 @@ static inline unsigned int uxtb16(unsigned int x)
                       return result;
                     }
   LABEL_86:
-                    v19 = sub_60855BC8(220);
+                    v19 = Object_freeViaGlobal(220);
                     if ( v19 )
                     {
                       SE_SYS_BTN_OVER_ref();
@@ -26000,7 +26000,7 @@ static inline unsigned int uxtb16(unsigned int x)
                     goto LABEL_89;
                   }
   LABEL_74:
-                  v19 = sub_60855BC8(260);
+                  v19 = Object_freeViaGlobal(260);
                   if ( v19 )
                   {
                     SE_SYS_BTN_OVER_ref();
@@ -27577,7 +27577,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v6 = (_DWORD *)(a1 + 12);
     Disposer_allocateChildren((_DWORD *)(a1 + 12), a4);
-    sub_60475C8C((int)v6);
+    Player_allocateSlotObject((int)v6);
     message_ref(v6, a3, 0, 0, 0);
     return (*(int (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3532) + 12))(
              *(_DWORD *)(a1 + 3532),
@@ -27824,7 +27824,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v20 = *(_WORD *)(v4 + 60);
         v42 = *(_BYTE *)(v4 + 62);
         v41 = v20;
-        sub_60917754(v43, v4 + 64);
+        Object_copyFrom(v43, v4 + 64);
         v43[50] = *(_DWORD *)(v4 + 264);
         do
           v21 = __ldrex(&v44);
@@ -28081,7 +28081,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v1 = *(_DWORD *)(a1 + 72);
-    v2 = (_DWORD *)sub_60855BC8(84);
+    v2 = (_DWORD *)Object_freeViaGlobal(84);
     if ( !v2 )
       return 0;
     result = sub_609804BC(v2, v1);
@@ -30859,7 +30859,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047EFCC
+ * IntrusiveList_getNthFromHead
  * RVA 0x0047efcc   size 0x50   xrefs 89
  * ============================================================================ */
   int __fastcall sub_6047EFCC(int result, int a2)
