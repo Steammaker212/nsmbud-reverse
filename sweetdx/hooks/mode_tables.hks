@@ -1,69 +1,164 @@
-@Power-up mode lookup tables.
+@Power-up mode lookup tables: relocate three 10-entry tables to 11-entry copies so
+@ power-up mode 10 has a real slot, and repoint the readers at the copies.
 @
-@ ALL SIX "redirect" HOOKS AND ALL 29 "data" HOOKS WERE REMOVED on 2026-10-22 after
-@ they caused severe rendering corruption in-game and a crash on Hammer pickup.
+@ ===========================================================================
+@ RESTORED 2026-10-22 after a corrected analysis. Read this before editing.
+@ ===========================================================================
 @
-@ WHY THE REDIRECTS WERE WRONG
-@ ----------------------------
-@ Each redirect wrote a word that is not an instruction. Retail and patched values are
-@ both small integers (< 0x01000000) that differ by a near-constant amount:
+@ These hooks were briefly removed because I misread them. I recorded the six reader
+@ words as "pointing live lookups at executable code", treating their stored values as
+@ absolute addresses. They are not addresses. They are PC-relative offsets, used by the
+@ standard ARM literal-pool idiom:
 @
-@     site        retail word   patched word   delta
-@     0x78C58C    0x0037FCF0    0x003BCE98     +0x3D1A8
-@     0x78E604    0x0037DC70    0x003BAE18     +0x3D1A8
-@     0x78E7E8    0x0037DC00    0x003BADA8     +0x3D1A8
-@     0x795FF0    0x00376578    0x003B3664     +0x3D0EC
-@     0x7960F8    0x003762A4    0x003B3390     +0x3D0EC
-@     0x7982D8    0x00374128    0x003B11E0     +0x3D0B8
+@     LDR Rn, =(table - pc)
+@     LDR Rn, [PC, Rn]              ; Rn = table address
 @
-@ A near-constant positive delta across unrelated addresses is what you see when a
-@ build's internal code layout shifted and absolute pointers were recomputed, not when
-@ six independent pointers are deliberately retargeted. Note this is NOT a relink in the
-@ ELF sense: the retail and reference images have byte-identical program headers (same
-@ 5 segments, same file offsets, same sizes). Any shifting happened INSIDE .text.
-@ We do not have a confirmed explanation for these six words, and we no longer need one:
-@ the labels were wrong, which is enough to disqualify them.
+@ so `stored + pc = table`. Applying that relation:
 @
-@ The labels said "redirect to the relocated body-type/height/draw-offset table". They
-@ do not. What is actually at each patched target:
+@     site 0x78C58C  retail 0x0037FCF0 + pc 0x0078C540 = 0x00B0C230  real body table
+@                    ours   0x003BCE98 + pc 0x0078C540 = 0x00B493D8  relocated body table
 @
-@     retail 0x37FCF0 -> an array of pointers (0x8EAD88, 0x8E3064, 0x8EAF60, ...)
-@     patched 0x3BCE98 -> ARM code (0xE30D270A = movw r2, 0xD70A)
+@ All six resolve exactly, and the relocated tables below match the reference build
+@ byte-for-byte (verified for height, body, balloon and tall-actor). The original hooks
+@ were correct in both bytes and meaning. The error was mine, in the analysis.
 @
-@ Both sides point into .text, and the patched side points at executable instructions.
-@ Nothing anywhere in either image points at 0xB493A8, where the data hooks wrote their
-@ float tables. So the two halves of this file contradicted each other: the tables were
-@ written to a region no reader was redirected to, and the readers were pointed at code.
+@ WHY THE RELOCATION IS NEEDED AT ALL
+@ -----------------------------------
+@ Three tables are indexed by the power-up mode and have exactly 10 entries, modes 0..9:
 @
-@ The two height sites (0x795FF0, 0x7960F8) feed per-actor height and draw-offset
-@ lookups, which is why rendering broke globally and immediately -- before any Hammer
-@ was involved -- rather than only when the Hammer appeared.
+@     body     0xB0C230  [1,0,0,1,2,3,0,4,4,5]
+@     height   0xB0C2BC  [16,31,31,6,31,31,31,31,31,31]
+@     balloon  0xB0C34C  [0,-4,-4,4,-5,-2,-4,-4,-4,0]
 @
-@ Only `mode_six_or_ten` below is a real instruction edit, so only it survives. It is
-@ load-bearing: retail's 0x1FB mode mask lacks bit 9, and 0x3FB adds it, which is what
-@ makes power-up mode 10 reachable at all.
+@ A fourth, reached through a variable-index getter at 0x60796A60, starts at 0xB0C300:
+@
+@     tall     0xB0C300  [1,2,2,0,2,2,2,2,2,2]
+@
+@ Mode 10 reads index 10 of each. In retail that lands on whatever follows the table:
+@ body[10] = 165 (not a valid body type), height[10] = 0.0. Extending in place is
+@ impossible -- the words after each table belong to something else -- so the reference
+@ build relocated copies and repointed the readers. We do the same, at the same RVAs.
+@
+@ ELEVEN ENTRIES EACH, mode 10 last:
+@
+@     height  0xB493A8 ... mode 10 = 31.0
+@     body    0xB493D8 ... mode 10 = 0    (body type 0 = Normal)
+@     balloon 0xB49404 ... mode 10 = -4.0
+@     tall    0xB0C328     mode 10 = 2    (this one IS extended in place: it is the
+@                                          spare word right after the 10 entries)
+@
+@ TYPE: everything below is `data`. The six reader words are DCD literals, not
+@ instructions; tagging them `instr` worked only because the assembler happened to
+@ reproduce the same bytes. `data` removes that round-trip risk entirely.
 
+@ --- reader repoints: body table (three readers) ---------------------------
+body_reader_a:
+    @ 0x78C58C: DCD 0x00B493D8 - 0x0078C540
+    type:    data
+    data:    98 CE 3B 00
+    address: 0x0078C58C
+
+body_reader_b:
+    @ 0x78E604: DCD 0x00B493D8 - 0x0078E5C0
+    type:    data
+    data:    18 AE 3B 00
+    address: 0x0078E604
+
+body_reader_c:
+    @ 0x78E7E8: DCD 0x00B493D8 - 0x0078E630
+    type:    data
+    data:    A8 AD 3B 00
+    address: 0x0078E7E8
+
+@ --- reader repoints: height table (two readers) --------------------------
+height_reader_a:
+    @ 0x795FF0: DCD 0x00B493A8 - 0x00795D44
+    type:    data
+    data:    64 36 3B 00
+    address: 0x00795FF0
+
+height_reader_b:
+    @ 0x7960F8: DCD 0x00B493A8 - 0x00796018
+    type:    data
+    data:    90 33 3B 00
+    address: 0x007960F8
+
+@ --- reader repoint: balloon offset table ---------------------------------
+balloon_reader:
+    @ 0x7982D8: DCD 0x00B49404 - 0x00798224
+    type:    data
+    data:    E0 11 3B 00
+    address: 0x007982D8
+
+@ --- relocated tables: 11 entries each, mode 10 last --------------
+@ Bytes below were read directly out of convertedmain.hammer_b.elf at these
+@ RVAs, not transcribed by hand. That matters: an earlier hand-written version
+@ had four wrong bytes in the balloon table and over-ran its span.
+
+@ height table @ 0x00b493a8  (modes 0..9 identical to retail; mode 10 = 31.0)
+@   values: [16.0, 31.0, 31.0, 6.0, 31.0, 31.0, 31.0, 31.0, 31.0, 31.0, 31.0]
+height_table_0:
+    type:    data
+    data:    00 00 80 41 00 00 F8 41 00 00 F8 41 00 00 C0 40
+    address: 0x00b493a8
+
+height_table_1:
+    type:    data
+    data:    00 00 F8 41 00 00 F8 41 00 00 F8 41 00 00 F8 41
+    address: 0x00b493b8
+
+height_table_2:
+    type:    data
+    data:    00 00 F8 41 00 00 F8 41 00 00 F8 41
+    address: 0x00b493c8
+
+@ body table @ 0x00b493d8  (modes 0..9 identical to retail; mode 10 = 0 (body type 0 = Normal))
+@   values: [1, 0, 0, 1, 2, 3, 0, 4, 4, 5, 0]
+body_table_0:
+    type:    data
+    data:    01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00
+    address: 0x00b493d8
+
+body_table_1:
+    type:    data
+    data:    02 00 00 00 03 00 00 00 00 00 00 00 04 00 00 00
+    address: 0x00b493e8
+
+body_table_2:
+    type:    data
+    data:    04 00 00 00 05 00 00 00 00 00 00 00
+    address: 0x00b493f8
+
+@ balloon table @ 0x00b49404  (modes 0..9 identical to retail; mode 10 = -4.0)
+@   values: [0.0, -4.0, -4.0, 4.0, -5.0, -2.0, -4.0, -4.0, -4.0, 0.0, -4.0]
+balloon_table_0:
+    type:    data
+    data:    00 00 00 00 00 00 80 C0 00 00 80 C0 00 00 80 40
+    address: 0x00b49404
+
+balloon_table_1:
+    type:    data
+    data:    00 00 A0 C0 00 00 00 C0 00 00 80 C0 00 00 80 C0
+    address: 0x00b49414
+
+balloon_table_2:
+    type:    data
+    data:    00 00 80 C0 00 00 00 00 00 00 80 C0
+    address: 0x00b49424
+
+@ --- tall-actor type: mode 10 extended IN PLACE --------------------------
+tall_actor_type_hammer:
+    @ 0xB0C328 is element [10] of the table at 0xB0C300 (base + 10*4), read via a
+    @ variable-index getter at 0x60796A60 with no bounds check. Retail has 0 here;
+    @ the Hammer build uses 2. It is the spare word after the ten real entries, so no
+    @ relocation is needed for this one.
+    type:    data
+    data:    02 00 00 00
+    address: 0x00B0C328
+
+@ --- a gate that must also accept mode 10 --------------------------------
 mode_six_or_ten:
-    @ A gate that special-cases mode 6 now also special-cases mode 10.
     @ Retail e3500002 (cmp r0, #2) -> e350000a (cmp r0, #0xa).
     type:    instr
     instruction: cmp r0, #0xa
     address: 0x0078E6A8
-
-@ ---------------------------------------------------------------------------
-@ REMOVED -- kept as a record, not as hooks. Do not re-enable without new evidence.
-@
-@   body_table_redirect_a    instr @ 0x0078C58C   target is code, not a table
-@   body_table_redirect_b    instr @ 0x0078E604   target is code, not a table
-@   body_table_redirect_c    instr @ 0x0078E7E8   target is code, not a table
-@   height_table_redirect_a  instr @ 0x00795FF0   target is code, not a table
-@   height_table_redirect_b  instr @ 0x007960F8   target is code, not a table
-@   draw_offset_redirect     instr @ 0x007982D8   target is code, not a table
-@
-@   tall_actor_type_hammer   data  @ 0x00B0C328
-@   height_table_slot_10     data  @ 0x00B493A8
-@   patch_b493ac..b4942c     data  @ 0x00B493AC..0x00B4942C  (28 further words)
-@
-@ The data words are not lost: their values are recorded in sweetdx/docs/BUILD_FIXES.md
-@ and in the original hook files under sweetdx/hooks_reference/.
-@ ---------------------------------------------------------------------------

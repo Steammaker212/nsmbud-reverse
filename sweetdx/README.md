@@ -12,43 +12,56 @@ and [codedx](https://github.com/RicBent/codedx).
 
 ```
 sweetdx/
-  code/       .cpp sources   -- the readable findings
-  hooks/      .hks files     -- the patches, in SweetDX's hook language
-  symbols/    .sym file      -- 3,174 recovered symbol addresses
-  include/    .h headers     -- class layouts recovered from the binary
+  code/         .cpp sources   -- the readable findings (compiled)
+  hooks/        .hks files     -- the shipped patches
+  experimental/ .hks files     -- NOT loaded; unproven hooks, see below
+  findings/     .cpp files     -- readable notes that must NOT be compiled
+  symbols/      .sym file      -- 3,172 recovered symbol addresses
+  include/      .h headers     -- class layouts recovered from the binary
 ```
 
-SweetDX requires exactly these four folders plus `nso/main` (the game's original
-NSO, which you supply — it is not distributed here).
+SweetDX requires exactly `code/`, `hooks/`, `symbols/`, `include/` plus `nso/main` (the
+game's original NSO, which you supply — it is not distributed here). `experimental/` and
+`findings/` are not read by SweetDX; they are kept so the work is not lost.
 
-**This project builds.** With SweetDX v0.0.3 it compiles and links cleanly, producing
-a `subsdk0` and an IPS patch, and the produced IPS was verified to contain the four
-Hammer byte-sites exactly. See [BUILD_FIXES.md](BUILD_FIXES.md) for the five faults
-that had to be fixed to get there, and the verification that the Hammer bytes really
-landed.
+**`findings/` is not a style choice.** Any `.cpp` in `code/` runs its file-scope
+constructors when `subsdk0` loads. `Profile`'s constructor does `Profiles[id] = this`
+unconditionally, so declaring a `Profile` at file scope **replaces** whatever the game
+already registered under that id. That is exactly what broke the first build. Findings
+that merely *describe* an engine object go in `findings/`.
+
+**This project builds.** With SweetDX v0.0.3 it compiles and links cleanly and emits a
+`subsdk0` (577 bytes) and an IPS patch (428 bytes, 36 records, 240 patched bytes). Every
+critical byte was then re-read out of the IPS and checked against the reference build —
+see [VERIFICATION.md](VERIFICATION.md). [BUILD_FIXES.md](BUILD_FIXES.md) covers the five
+build faults that had to be fixed first.
 
 **It also broke the game when it was actually run.** The first in-console test showed
-severe rendering corruption in the level and a crash on touching the Hammer. Two
-independent causes were found and fixed: six "table redirect" hooks that pointed live
-per-actor lookups at executable code, and a compiled `Profile` object that overwrote the
-game's own profiles 530/539 at load. Read
+severe rendering corruption in the level and a crash on touching the Hammer. One cause is
+fixed and one is quarantined; read
 [INCIDENT_2026-10-22.md](docs/INCIDENT_2026-10-22.md) before trusting anything here. The
-fixes have **not** been tested in-game yet, so treat this as unverified.
+fixes have **not** been tested in-game, so treat this as unverified.
 
 That article is worth reading for a second reason: a clean build and a byte-exact patch
-proved nothing about correctness. Both defects passed every check in this repo at the
+proved nothing about correctness. The real defects passed every check in this repo at the
 time, including a validator that compared hook bytes to a reference image — because the
 hooks *did* reproduce the reference image faithfully. They were simply hooked to the
 wrong things. See [docs/IDA_VERIFICATION.md](docs/IDA_VERIFICATION.md).
+
+The article also documents a mistake I made *while writing it*: I removed six hooks
+believing they pointed table lookups at executable code, when the words are PC-relative
+offsets that decode correctly. They are restored. The correction is in the doc rather than
+quietly fixed, because the reasoning error is the useful part.
 
 
 ## What is in here
 
 | Finding | Where |
 |---|---|
-| Cheep Cheep family (profiles 530–547) | `code/pukupuku.cpp` |
+| Cheep Cheep family (profiles 530–547) | `findings/pukupuku.cpp` (not compiled) |
 | Hammer as a new power-up (mode 10) | `code/powerup_modes.cpp` + `hooks/hammer_*.hks` |
-| Power-up mode table + item-grant gate | `hooks/item_grant.hks`, `hooks/mode_tables.hks` |
+| Power-up mode tables + item-grant gate | `hooks/item_grant.hks`, `hooks/mode_tables.hks` |
+| Unproven Hammer hooks | `experimental/hammer_profile_experimental.hks` |
 | Actor class layouts | `include/actor/*.h` |
 | Symbol addresses | `symbols/nsmbudx.sym` |
 | Build faults and their evidence | `BUILD_FIXES.md` |
@@ -58,6 +71,18 @@ wrong things. See [docs/IDA_VERIFICATION.md](docs/IDA_VERIFICATION.md).
 > with the tool and is not vendored here. Our earlier `code/profiles.cpp`
 > reimplemented it and produced a duplicate-symbol link error, so it is retired to
 > `_retired/` with the reasoning preserved rather than deleted.
+
+## What the shipped build does, and does not, enable
+
+`hooks/` contains the gate and the tables but **not** `grant_hammer_mode`, so the default
+build widens the mode-10 gate and prepares the per-mode tables without providing a way to
+enter mode 10. That is deliberate: it isolates the rendering fix, which is the cause with
+the strongest evidence behind it, so the next test measures one thing.
+
+To enable the Hammer, copy `experimental/hammer_profile_experimental.hks` into `hooks/`
+and delete the hooks you have not yet justified. The bisection order is in the incident
+doc.
+
 
 ## The hook files reproduce the entire patch
 
@@ -76,12 +101,9 @@ still broke rendering and crashed. Fidelity to a reference image only proves you
 it accurately; it says nothing about whether the words you copied are instructions, or
 whether the pointers point at tables.
 
-Two of the six removed redirects were originally tagged `instr` and described as table
-redirects. They reproduced the reference build *perfectly* and were still wrong. Coverage
-was never the right question.
-
-The current set is 21 `instr` + 4 `data`, with 34 addresses excluded deliberately and
-listed by name in `scripts/validate_sweetdx_project.py`.
+The current set is 36 hooks across 4 files (32 `instr` + 13 `data` records, some `data`
+hooks spanning multiple words). Five addresses are excluded deliberately and named in
+`scripts/validate_sweetdx_project.py`, each with the reason it is quarantined.
 
 ## Addresses are in-image addresses
 
@@ -90,6 +112,15 @@ SweetDX. The image is `0x00CD1000` bytes, so every address is below that. Our
 generator refuses to emit anything outside it: 524 inventory entries were
 rejected for that reason, including one that SweetDX would have linked to a
 nonsense location.
+
+Note the two different addressing conventions in the artefacts, which caused real
+confusion here:
+
+* `.hks` `address:` = RVA (VA − base).
+* IPS record offsets = **RVA + 0x100**, because the NSO has a 0x100-byte header.
+* IDA works in **VAs**. Every IDA script in `scripts/` adds `BASE = 0x60000000`
+  explicitly; passing an RVA gives zero xrefs.
+
 
 ## Build
 

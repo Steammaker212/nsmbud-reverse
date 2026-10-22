@@ -47,3 +47,7 @@ out/
 # ---- Third-party GPL-3.0 reference (never vendor; see docs/CODEDX_REFERENCE.md) ----
 codedx/
 
+
+# ---- SweetDX input: the retail NSO, supplied by the user, never committed ----
+# sweetdx/nso/README.md is tracked; the 8 MB image next to it is not.
+sweetdx/nso/main

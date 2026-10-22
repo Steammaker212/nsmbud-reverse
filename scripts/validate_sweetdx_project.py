@@ -258,32 +258,45 @@ def check_hooks():
     diffs = [i for i in range(min(len(a), len(b))) if a[i] != b[i]]
     expected = sorted({(off2va(SA, i) // 4) * 4 for i in diffs if off2va(SA, i)})
 
-    missing = [v for v in expected if v not in patched]
-    extra = [v for v in patched if v not in expected]
+    # A hook is a multi-byte write, so it covers every word its payload touches -- not
+    # just the word at its start address. Build the covered-word set by span, otherwise
+    # every multi-byte `data` hook looks like it covers only its first word and the
+    # rest of the span shows up as unexplained.
+    covered = {}
+    for va, data in patched.items():
+        for k in range(0, len(data), 4):
+            covered[va + k] = va
 
-    # Deliberate exclusions. These addresses DO differ in the reference build, but we
-    # do not ship hooks for them, because we established the hooks were wrong. They are
-    # listed explicitly rather than by pattern so that each one stays visible and any
-    # NEW uncovered address still fails the check.
+    missing = [v for v in expected if v not in covered]
+
+    # A hook is "extra" only if NONE of the words it writes actually changed. A single
+    # word inside a legitimate span can be a no-op: the relocated tables copy retail's
+    # values into the same bytes for modes 0..9, so e.g. 0xB49404 is 0.0 in both images
+    # and its byte content is identical even though the hook span around it is real.
+    extra = [va for va in patched
+             if not any((va + k) in expected for k in range(0, len(patched[va]), 4))]
+
+    # Exclusions: addresses that differ in the reference build but for which the DEFAULT
+    # build ships no hook, because they are quarantined in sweetdx/experimental/ (a
+    # directory SweetDX does not glob). Each one is a deliberate decision, not an
+    # oversight, and each must be named here.
     #
-    # 0x6078C58C / 0x6078E604 / 0x6078E7E8 / 0x60795FF0 / 0x607960F8 / 0x607982D8
-    #     The six "table redirect" hooks. They wrote words whose retail and patched
-    #     values are both small integers differing by a near-constant +0x3D0B8..+0x3D1A8,
-    #     and the patched values point into .text at executable instructions rather than
-    #     at any table. Applying them in-game corrupted per-actor height and draw-offset
-    #     lookups, breaking rendering globally. See docs/INCIDENT_2026-10-22.md.
-    # 0x60B493A8 .. 0x60B4942C (the float tables) and 0x60B0C328
-    #     Written to .rodata that is all zeros in retail, with no reader redirected to
-    #     them. They fed nothing.
+    # 0x6045DDCC  grant_hammer_mode         `mov r2,#0xa`. Verified correct, but it turns
+    #                                      on mode 10, and mode 10 is only fully wired up
+    #                                      by the hooks below. Shipping it alone is what
+    #                                      produced an in-game regression.
+    # 0x60AF6620  hammer_actor_info_flags   writes into a SHARED global ActorInfo record
+    # 0x60BD3208  hammer_actor_info_subtype magic subtype 19, no corroborating evidence
+    # 0x60BD3210  hammer_actor_info_dist    packed field, semantics undecoded
+    # 0x60C61BE4  hammer_profile_cell       replaces the Fire Flower identity check
+    #                                      (476 -> 759) instead of adding a Hammer slot;
+    #                                      buys nothing that item_grant.hks does not
     EXCLUDED = {
-        0x6078C58C, 0x6078E604, 0x6078E7E8,
-        0x60795FF0, 0x607960F8, 0x607982D8,
-        0x60B0C328,
-        0x60B493A8, 0x60B493AC, 0x60B493B0, 0x60B493B4, 0x60B493B8, 0x60B493BC,
-        0x60B493C0, 0x60B493C4, 0x60B493C8, 0x60B493CC, 0x60B493D0, 0x60B493D8,
-        0x60B493E4, 0x60B493E8, 0x60B493EC, 0x60B493F4, 0x60B493F8, 0x60B493FC,
-        0x60B49408, 0x60B4940C, 0x60B49410, 0x60B49414, 0x60B49418, 0x60B4941C,
-        0x60B49420, 0x60B49424, 0x60B4942C,
+        0x6045DDCC,
+        0x60AF6620,
+        0x60BD3208,
+        0x60BD3210,
+        0x60C61BE4,
     }
     unexplained = [v for v in missing if v not in EXCLUDED]
     excluded_hit = [v for v in missing if v in EXCLUDED]
