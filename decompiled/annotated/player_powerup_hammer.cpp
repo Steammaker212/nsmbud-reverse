@@ -10,9 +10,9 @@
  *   MD5 f8a2e4c3616b8a99632b8ffe68938c34
  *
  * Patched output: convertedmain.hammer_b.elf
- *   MD5    e8dbb86b7a96d3077dad8d4aeec95a7a
- *   SHA256 a8e72cbe4fc84ea82961c1aa08dba0180d71e242fcc39966b2589b44ea20d920
- *   91 differing bytes, all accounted for
+ *   MD5    1134cf5f37d16a55f150fadebc3dfb87
+ *   SHA256 b596b1572f6d1a2cf0b72ca23882ebc10267ae22aefd8b1e8b0ffc1600e3a562
+ *   115 differing bytes, all accounted for
  *
  * PROVENANCE / CONFIDENCE
  *   [V]  verified in IDA *and* byte-checked against the ELF
@@ -517,11 +517,67 @@ static constexpr u32 cTallTypeYOffsetsVA = 0x60B0C8A0;
 
 // --- balloon offset Y, c_balloon_offset_y @ 0x60B0C34C --------------------
 // Verified live values (11 slots): 0, -4, -4, 4, -5, -2, -4, -4, -4, 0, 0
-// Index 10 is already 0.0, and the neighbouring values are non-zero, so this
-// table has an extra slot of room. Optional patch if Hammer+Balloon is
-// reachable: 0x60B0C374 0.0 -> -4.0.                              [V]/[P]
-static constexpr u32 cBalloonOffsetYVA = 0x60B0C34C;
-static constexpr u32 cBalloonIdx10     = 0x60B0C374;   // currently 0.0
+// This table is indexed by mMode DIRECTLY (no -1), so index 10 is Hammer.
+//
+// The shipped build RELOCATES it rather than patching index 10 in place: the
+// table is copied to 0x60B49404 with index 10 = -4.0, and the consumer literal
+// at 0x607982D8 is redirected. That makes it a THIRD relocated table, beyond
+// height and body -- an earlier write-up said "not applied", which is stale.
+//
+//   consumer sub_60798204:
+//     0x60798218  ldr  r6, [r4, #0x528]     ; mMode
+//     0x6079821c  add  r0, pc, r0
+//     0x60798220  add  r0, r0, r6, lsl #2   ; table[mMode]
+//     0x60798224  vldr s16, [r0]
+//
+// Only 136 of the block's 160 bytes are used; the 24-byte tail stays zero.  [V]
+static constexpr u32 cBalloonOffsetYVA     = 0x60B0C34C;  // original, untouched
+static constexpr u32 cBalloonOffsetYNewVA  = 0x60B49404;  // relocated copy
+static constexpr u32 cBalloonIdx10New      = -4.0f;       // [P] applied
+
+// ---------------------------------------------------------------------------
+// Item-grant gate  (two call sites, both patched)
+// ---------------------------------------------------------------------------
+/**
+ * Both sites test the item's power-up mode against a bitmask:
+ *
+ *     ldr  r0, [rX, #0x528]     ; mMode
+ *     sub  r0, r0, #1           ; index = mMode - 1
+ *     cmp  r0, #9               ; was #8
+ *     bhi  out
+ *     uxth r0, r0
+ *     movw r1, #0x3FB           ; was #0x1FB
+ *     mov  r2, #1
+ *     tst  r2, r1, lsr r0       ; bit( mMode - 1 ) of mask
+ *     beq  out
+ *
+ * Because the index is (mMode - 1), BIT 9 corresponds to MODE 10:
+ *
+ *     0x1FB = bits 0,1,3,4,5,6,7,8
+ *     0x3FB = bits 0,1,3,4,5,6,7,8,9    <- correct
+ *     0x5FB = bits 0,1,3,4,5,6,7,8,10   <- WRONG, sets bit 10 = mode 11
+ *
+ * An earlier proposal used 0x5FB and would still have rejected Hammer
+ * players. 0x3FB is right, independently re-derived here.
+ */
+static constexpr u32 cItemGateSites[2] = { 0x60465F34, 0x60466000 };
+static constexpr u32 cItemGateMaskSites[2] = { 0x60465F40, 0x6046600C };
+
+// ---------------------------------------------------------------------------
+// Extra mode gate at 0x6078E6A8  (not in the original Approach B table)
+// ---------------------------------------------------------------------------
+/**
+ * A 10th mode-10 instruction patch, distinct from the nine documented ones.
+ *
+ *   0x6078E6A0  cmp  r0, #6
+ *   0x6078E6A4  beq  0x6078E6BC       ; mode 6 -> r1 = 3
+ *   0x6078E6A8  cmp  r0, #0xA         ; was #2   <-- patched
+ *   0x6078E6B0  movne r1, #1
+ *   0x6078E6B4  moveq r1, #2          ; mode 10 -> r1 = 2
+ *
+ * Byte change: E3500002 -> E350000A.                              [V]
+ */
+static constexpr u32 cExtraModeGateVA = 0x6078E6A8;
 
 
 // ===========================================================================
@@ -739,8 +795,8 @@ static constexpr u32 cTallTypeIdx10PatchVA = 0x60B0C328;   // [P] -> u32 2
  *
  * PATCHED OUTPUT
  *   convertedmain.hammer_b.elf
- *     MD5    e8dbb86b7a96d3077dad8d4aeec95a7a
- *     SHA256 a8e72cbe4fc84ea82961c1aa08dba0180d71e242fcc39966b2589b44ea20d920
+ *     MD5    1134cf5f37d16a55f150fadebc3dfb87
+ *     SHA256 b596b1572f6d1a2cf0b72ca23882ebc10267ae22aefd8b1e8b0ffc1600e3a562
  *     size   13085363 bytes (unchanged -- no section grew)
  *
  * INDEPENDENT RE-VERIFICATION
@@ -756,7 +812,15 @@ static constexpr u32 cTallTypeIdx10PatchVA = 0x60B0C328;   // [P] -> u32 2
  *     - new height table = [16,31,31,6,31,31,31,31,31,31,31]
  *     - new body table   = [1,0,0,1,2,3,0,4,4,5,0]
  *     - padding block bytes 88..160 still zero
- *     - total differing bytes: 91, all accounted for
+ *     - total differing bytes: 115, all accounted for (59 regions, 0 unknown)
+ *
+ *   Category breakdown of the 115 bytes:
+ *     A  32  Approach A -- 11 Hammer actor/projectile patches
+ *     B  14  Approach B -- 9 mode-10 gates + tall type[10]
+ *     C   4  item-grant gate (2x cmp r0,#9, 2x movw #0x3FB)
+ *     D  18  6 literal redirects (2 height, 3 body, 1 balloon)
+ *     E   1  extra mode gate at 0x6078E6A8
+ *     T  46  relocated table contents (height + body + balloon)
  *
  * SECTION MAPPING (parsed from program headers, not hardcoded)
  *   PT_LOAD 0: vaddr 0x60000000 filesz 0x09AE990 off 0x00045C

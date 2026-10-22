@@ -530,7 +530,7 @@ The fire state object is at RVA `0xCC4D6C` (the call sites decode to
 
 ### 7.5 Final patch table
 
-**A. Mode-10 patches (11 words + 2 tables + 5 literals)**
+**A. Mode-10 patches (11 words + 3 tables + 6 literals)**
 
 | # | VA | file offset | original | new | purpose |
 |---|---|---|---|---|---|
@@ -552,6 +552,8 @@ The fire state object is at RVA `0xCC4D6C` (the call sites decode to
 | 16 | `0x6078C58C` | `0x0078C9E8` | `F0 FC 37 00` | `98 CE 3B 00` | body literal |
 | 17 | `0x6078E604` | `0x0078EA60` | `70 DC 37 00` | `18 AE 3B 00` | body literal |
 | 18 | `0x6078E7E8` | `0x0078EC44` | `00 DC 37 00` | `A8 AD 3B 00` | body literal |
+| 19 | `0x60B49404` | `0x00B491F0` | zero padding | ride/balloon offset-y table (11 floats) | ride[10] = -4.0 |
+| 20 | `0x607982D8` | `0x00798734` | `28 41 37 00` | `E0 11 3B 00` | ride/balloon offset-y literal, `sub_60798204` |
 
 **B. Hammer actor/projectile patches (Approach A, unchanged)**
 
@@ -570,9 +572,16 @@ instructions at `0x6013FB38`/`0x6013FB68`, and the five ctor field patches at
   (`sub_607A2F40`) before `vf+0x90`.
 - **No Hammer suit model.** Mode 10 uses body type 0 (Normal) and colour type 2 (Fire), i.e. a
   Fire-coloured Normal body. A true Hammer suit needs new model resources, not just code.
-- **Balloon offset.** `c_balloon_offset_y[10]` at `0x60B0C374` is 0.0 (the next table starts at
-  `0x60B0C378` = 13.0). If Hammer can be held while riding Balloon Yoshi, optionally patch the
-  word to `-4.0` (`00 00 80 C0`). This is cosmetic (balloon draw offset), not a crash.
+- **Balloon/ride offset — applied via relocation.** Two tables are involved: `flt_60B0C34C`
+  (`sub_60798204`, 4-byte stride, indexed by `mMode`: `*(a2+4) += flt[mMode]` when riding) and a
+  `{dx,dy}` Vec2 table **baseed at `0x60B0C374`** (`sub_6079A890`, 8-byte stride, indexed by
+  `getTallType`: Mini `{0.0,13.0}`, Small `{2.0,17.0}`, Normal `{2.0,30.0}`). The planned in-place
+  write of `-4.0` at `0x60B0C374` would have silently changed the **Mini dx (0.0 → -4.0)** because
+  that word is the first picture-aligned dword of the Vec2 table. The applied fix is a relocated
+  11-entry ride table at `0x60B49404` (values `0.0,-4.0,-4.0,4.0,-5.0,-2.0,-4.0,-4.0,-4.0,0.0`
+  copied verbatim + index 10 = `-4.0`, matching Normal's `flt[1]`) with the single literal at
+  `0x607982D8` redirected. Mode 10 otherwise reads index 10 = 0.0 safely (no OOB), so this is
+  cosmetic only.
 - **Runtime-unproven items:** direction bit 4 from `player+0x2F10`; double-hit risk between the
   body CollisionMgr and Info #1 ActiveCollider; Hammer spawn velocity/position inherited from
   the fireball path; model/animation stability while switching to mode 10. These require an
@@ -581,14 +590,14 @@ instructions at `0x6013FB38`/`0x6013FB68`, and the five ctor field patches at
 ### 7.7 Build and verification
 
 - Source: `convertedmain.rebased.elf`, MD5 `f8a2e4c3616b8a99632b8ffe68938c34`.
-- Patched copy: `convertedmain.hammer_b.elf`, MD5 `e8dbb86b7a96d3077dad8d4aeec95a7a`,
-  SHA-256 `a8e72cbe4fc84ea82961c1aa08dba0180d71e242fcc39966b2589b44ea20d920`.
-- 91 differing bytes; every difference is accounted for by the table above (no unexpected
+- Patched copy: `convertedmain.hammer_b.elf`, MD5 `36d93427d294d5274224921c4f759ea1`,
+  SHA-256 `dac971d71536c5395c1f0d60393e632b8d8b14d6389f05017dbbcff7a2653858`.
+- 111 differing bytes; every difference is accounted for by the table above (no unexpected
   diffs).
 - All original byte sequences matched before writing; all new instruction words were decoded
   with Capstone (`mov r2,#10`, `movhi r3,#1`, `cmp rX,#10`, `movw r3,#0x464`).
-- The five redirected literals were re-read from the patched file and their effective
-  `add pc` targets are `0x60B493A8` (height) and `0x60B493D8` (body).
+- The six redirected literals were re-read from the patched file; their effective
+  `add pc` targets are `0x60B493A8` (height), `0x60B493D8` (body), `0x60B49404` (ride offset-y).
 - Reproducible scripts: `.rea/apply_approach_b.py` (write + diff), `.rea/verify_approach_b.py`
   (original-byte check; update its table rows if re-run), `.rea/check_new_words.py` (Capstone).
 
@@ -653,6 +662,9 @@ instructions at `0x6013FB38`/`0x6013FB68`, and the five ctor field patches at
 | `0x60B0C300` | tall-type table (10 dwords; index 10 is padding) |
 | `0x60B493A8` | new 11-entry height table (Approach B; `.rodata` zero-padding block) |
 | `0x60B493D8` | new 11-entry body-ID table (Approach B; same block) |
+| `0x60B49404` | new 11-entry ride/balloon offset-y table (Approach B; same block) |
+| `0x60B0C34C` | ride/balloon offset-y table, 4-stride, indexed by `mMode` (`sub_60798204`) |
+| `0x60B0C374` | `{dx,dy}` Vec2 table, 8-stride, indexed by `getTallType` (`sub_6079A890`) — shares its first dword with the old ride[10] slot |
 | `0x60CA6BB8` | power-up model table (20 entries) |
 | `0x60C24D08` | player vtable entry containing `0x60795CDC` |
 
@@ -681,3 +693,145 @@ Hammer+533           = actor category (0 = projectile)
 ---
 
 *Report generated from the live IDA database; decompiled artifacts are in `.rea/`.*
+
+## 10. Block family deep dive: ?/brick contents-to-item pipeline (new)
+
+This section documents the complete chain from a block's stored contents to the
+power-up item granted to the player, as reverse engineered at instruction level
+from `convertedmain.rebased.elf`. Curated annotated source:
+`.rea/decomp/QB_pipeline_summary.c`; raw decompiles of every referenced function
+are alongside it (`ITEM_gate_60465E4C.c`, `ITEM_give_helper_60463998.c`,
+`BLOCK_init_605635AC.c`, `BLOCK_populate_604663F4.c`, `BLOCK_gate_wrap_60466328.c`, ...).
+
+### 10.1 The lookup chain
+
+```
+tile contents (actor+24, 5 bits)
+  -> action code   = dword_60B04164[contents]          (.rodata, codes 0..25)
+  -> itemId        = dword_60B0267C[code]              (11 entries, ids 0..10; ids >10 clamp to 0)
+  -> Profile cell  = dword_60C9D3F4[4*(itemId+1)]      (one-time fill in sub_604663F4)
+  -> Profile::get  -> item class factory (see 10.3)
+```
+
+Only the code-7 spawner (`sub_605B5BDC` case 0 -> `sub_605B5A3C`) reaches the
+`dword_60B0267C` lookup. A side code-7 branch in `sub_605B6238` (player present,
+block-type 0) calls `sub_605B5FA8` directly, bypassing the class gate.
+
+### 10.2 Item-id to power-up-mode map (behaviorally verified)
+
+Every item class grants its power-up through the shared helper
+`sub_60463998(itemActor, &out, mode, contact)`; the mode is the player
+power-up value. The 14 grant handlers were located by scanning all `bl 60463998`
+sites, and each item's grant handler was pinned to its class by the
+`.data/.relro` cell that references it (always **vtable cell 56**, i.e.
+vtableVA+0xE0):
+
+| itemId | profile | factory | grant fn | mode | r3 | identity (icon-table evidence) |
+|-------:|--------:|---------|----------|-----:|---:|--------------------------------|
+| 0 | 591 | 0x60467808 | 0x60467F48 | 1 | 1 | Mushroom (I_kinoko) |
+| 1 | 592 | 0x6045D76C | 0x6045DDC0 | 2 | 1 | Fire Flower (I_fireflower) |
+| 2 | 854 | 0x6046EDA0 | 0x6046F8FC | 1 | 0 | LightMask glow class, silent grant |
+| 3 | 593 | 0x60468284 | 0x60468AD8 | 3 | 1 | Propeller suit (I_propeller) |
+| 4 | 594 | 0x6045E2E0 | 0x6045E938 | 6 | 1 | Star (I_star) |
+| 5 | 595 | 0x6046BA10 | 0x6046C364 | 4 | 1 | Penguin suit (I_penguin) |
+| 6 | 596 | 0x6046AEF0 | 0x6046B6BC | 5 | 1 | Mini mushroom (kinoko icon slot 5) |
+| 7 | 597 | 0x604698EC | 0x6046A078 | 1 | 0 | Silent no-suit (1UP-ish) |
+| 8 | 598 | 0x60468EBC | 0x604695B0 | 7 | 1 | Ice Flower (I_iceflower) |
+| 9 | 599 | 0x6046FEC8 | 0x60470430 | 1 | 0 | Silent no-suit (1UP-ish) |
+| 10 | 601 | 0x6046A538 | 0x6046AB90 | 9 | 1 | Yoshi egg (I_yoshichibi_egg) |
+
+Supporting evidence: the icon-name mapper `sub_6045CC68` fills two identical
+12-slot tables at `0x60C9D040` / `0x60C9D0A0` in the order
+`I_kinoko, I_fireflower, I_propeller, I_penguin, I_kinoko, I_star,
+I_iceflower, I_yoshichibi_egg, I_yoshichibi_egg, I_musasabi, I_kinoko,
+I_crown`, consistent with `index = player mMode - 1`. **No base-game item grants
+mode 10** (musasabi / flying-squirrel row) - that row exists but is only reached
+through Approach B, where our patched fire flower grants mode 10.
+
+Helper semantics (`sub_60463998`): target player resolved from the item's
++6208 player-index field; the same player RTTI check as the block gate;
+`contact==1` -> `sub_607A2820(player, mode)==1` rejects (item remains),
+otherwise the player virtual at +1376 (`canChangeTo`) decides:
+grant (`out=1`, `sub_607A27A8` applies the change) or already-have feedback
+(`out=2`, `SE_PLY_GET_ITEM_AGAIN` + score popup). `contact==0` is the silent
+path used by ids 2/7/9.
+
+### 10.3 The item-eligibility gate and the Approach B hazard (`sub_60465E4C`)
+
+Action codes in mask `0x24004E0` = {5, 6, 7, 10, 22, 25} require a target
+player whose `mMode-1` passes a bit-mask test:
+
+```
+ldr  r0,[r6,#0x528]   ; player mMode
+sub  r0,r0,#1
+cmp  r0,#8            ; <= 8 allowed
+bhi  reject
+movw r1,#0x1FB        ; mode-bit mask {1,2,4,5,6,7,8,9}  (mMode 3 excluded!)
+tst  r2,r1,lsr r0
+beq  reject
+```
+
+Two copies of this sequence exist in the function (two call paths):
+
+| site | instruction | VA | current | required for hammer (mMode 10) |
+|------|-------------|----|---------|-------------------------------|
+| A | `cmp r0,#8` | `0x60465F34` | `#8` | `#9` |
+| A | `movw r1,#0x1FB` | `0x60465F40` | `0x1FB` | `0x3FB` |
+| B | `cmp r0,#8` | `0x60466000` | `#8` | `#9` |
+| B | `movw r1,#0x1FB` | `0x6046600C` | `0x1FB` | `0x3FB` |
+
+With sense-code 7 the mask bit for our hammer mode (`mMode-1 == 9`) bit 9 of
+`0x1FB` is **clear**, so a mode-10 player currently receives nothing from an
+item block - this is a regression of Approach B that must be fixed before
+runtime testing. **APPLIED 2026-10-21** to the patched copy only
+(`convertedmain.hammer_b.elf`, new MD5 `1134cf5f37d16a55f150fadebc3dfb87`;
+original `convertedmain.rebased.elf` untouched). Note: the mask addend is
+bit 9 = 0x200 (0x1FB -> 0x3FB); an earlier 0x5FB proposal was wrong (it sets
+bit 10) and was caught before shipping.
+
+After the gate passes, `sub_60466328` calls `sub_604663F4` which spawns the item
+(`Profile::get(dword_60C9D3F4[4*(itemId+1)])`).
+
+### 10.4 Block-class field map and identity status
+
+Instance offsets (decimal): contents `+24` (5-bit), code `+6856`, param
+`+6860`, empty-flag `+6876`, **gate-bypass `+6877`**, bumpable `+7376`,
+block-type `+7368`, shape id `+7296`, contents-LUT `+7300`, build param
+`+7304`, tile-height `+7400`. Uses `sub_605635AC(a1, a2, a3)` = shared init
+reloading `+6856 = dword_60B04164[getContents()]`.
+
+All 29 block-family vtables keep the base break functions (cells 94/95,
+`0x60563ED8`/`0x60563FC0`) except **t3 = BrickBlockHuge**, which overrides them
+(`0x60566100`/`0x60566228`) - breaking is otherwise driven by the generic
+block-type path, not per-class overrides.
+
+Evidence-graded identities:
+
+| class | evidence | tentative identity |
+|-------|----------|--------------------|
+| t3 | huge collider types 10/11, overrides break cells | BrickBlockHuge (confident) |
+| t17 | block-type 1, collider 8 at +6120, code-21 empty handling (+6876), code-13 flag (+6896), contents LUT +7300, param +6852, single/tall profile split (`MEMORY[0xAF31BC]`) | item tile block cluster (?/brick/coin) - candidate question block |
+| t18-t21 | same family markers (6856/6876/7368), variant param handling | tile block variants (brick/coin siblings) |
+| t10/t11 | `+7296=49`, collider 7, tile-contents parse helpers `sub_6056EAA4` / `sub_605736E0` | contents-parser subclasses |
+| t13 | multi-tile (`+7400`), `sub_605635AC(a1,0,0)` | multi-tile coin block |
+| t23/t24 | block-type 0, `+6872 = 1/2`, collider 7, t24 calls `checkLiquidCollisions` | liquid/ambient variants |
+| t27 | **only** class setting `+6877 = 1` (item-gate bypass); uses own contents loader `sub_60563BB8(a1,0)` | special spawn-always block (question-block candidate B) |
+
+Definitive tile-to-class naming would require decoding
+`sInit_SpriteToProfileTable` (0x60014724, 13 KB relocated-pointer fill); the
+profile-id cells the registrations read (`0x60AF2E..-0x60AF3xxx` `.rodata`
+region) are elements of one contiguous id array (228..., 591-601, 854), which
+matches the id-cell reading convention `Profile::Profile(..., idCell, ...)`.
+
+### 10.5 Remaining open items
+
+- Verify the applied 4-instruction mode-10 gate patch at runtime (emulator).
+- Disambiguation of t17-cluster class names (question vs brick vs coin brick) via
+  `sInit_SpriteToProfileTable` decode, or behavioral runtime observation.
+- item2 (profile 854, LightMask 6992-byte class): grant is `mode 1, r3=0`; full
+  role (likely star variant orbubble-ambient item) not conclusively named.
+- The three mode-4 grant handlers (`0x6046C364` vtable cell 56 of item5,
+  plus `0x6046BB70` countdown variant and `0x6046CE38` floating variant) suggest
+  penguin suit has state-dependent grant paths; the far reference of
+  `0x6046BB70` at `0x60C6C794` (outside the item vtable block) is unexplained.
+

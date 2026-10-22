@@ -12,8 +12,8 @@ Status: **Approach B implemented and byte-verified.** Only a runtime test remain
 | Source MD5 | `f8a2e4c3616b8a99632b8ffe68938c34` |
 | Source size | 13,085,363 bytes |
 | Output | `convertedmain.hammer_b.elf` |
-| Output MD5 | `e8dbb86b7a96d3077dad8d4aeec95a7a` |
-| Output SHA-256 | `a8e72cbe4fc84ea82961c1aa08dba0180d71e242fcc39966b2589b44ea20d920` |
+| Output MD5 | `1134cf5f37d16a55f150fadebc3dfb87` |
+| Output SHA-256 | `b596b1572f6d1a2cf0b72ca23882ebc10267ae22aefd8b1e8b0ffc1600e3a562` |
 | Output size | 13,085,363 bytes (unchanged — no section grew) |
 | Differing bytes | **91**, every one accounted for |
 
@@ -175,11 +175,98 @@ penguin keep working. A naive widening of bit 2 would have broken them.
   type 2 (Fire) — a Fire-coloured Normal body. The power-up model table at
   `0x60CA6BB8` has 20 entries and none is a Hammer suit. A true Hammer suit
   needs new model resources, which is an asset job, not a patch.
-- **Balloon offset, not applied.** `c_balloon_offset_y[10]` at `0x60B0C374` is
-  `0.0`. The table actually has 11 slots — `[0, -4, -4, 4, -5, -2, -4, -4, -4,
-  0, 0]` — and index 10 is a spare zero. If Hammer can be held while riding
-  Balloon Yoshi, optionally patch the word to `-4.0` (`00 00 80 C0`). This is
-  cosmetic (balloon draw offset), not a crash.
+- **Balloon offset — now applied, by relocation.** `c_balloon_offset_y` at
+  `0x60B0C34C` has 11 slots `[0, -4, -4, 4, -5, -2, -4, -4, -4, 0, 0]`. An
+  earlier plan was to patch index 10 in place at `0x60B0C374`; the shipped
+  build instead copies the table to `0x60B49404` with index 10 = **-4.0**, and
+  redirects the consumer literal at `0x607982D8`. The original table is left
+  untouched.
+
+  This is a **third relocated table**, beyond the height and body tables that
+  the earlier write-up described. The reader at `0x60798204`:
+  ```
+  0x60798218  ldr  r6, [r4, #0x528]     ; mMode
+  0x6079821c  add  r0, pc, r0
+  0x60798220  add  r0, r0, r6, lsl #2   ; table[mMode]
+  0x60798224  vldr s16, [r0]
+  ```
+  It indexes by `mMode` directly (no `-1`), so index 10 is the Hammer slot.
+
+## Item-grant gate (new)
+
+Two call sites gate item pickup on the power-up mode. Both were patched to
+admit mode 10:
+
+| VA | original | new | instruction |
+|---|---|---|---|
+| `0x60465F34` | `E3500008` | `E3500009` | `cmp r0, #8` → `#9` |
+| `0x60465F40` | `E30011FB` | `E30013FB` | `movw r1, #0x1FB` → `#0x3FB` |
+| `0x60466000` | `E3500008` | `E3500009` | `cmp r0, #8` → `#9` |
+| `0x6046600C` | `E30011FB` | `E30013FB` | `movw r1, #0x1FB` → `#0x3FB` |
+
+The pattern is:
+
+```
+ldr  r0, [rX, #0x528]     ; mMode
+sub  r0, r0, #1           ; index = mMode - 1
+cmp  r0, #9               ; was #8
+bhi  out
+uxth r0, r0
+movw r1, #0x3FB           ; was #0x1FB
+mov  r2, #1
+tst  r2, r1, lsr r0       ; test bit( mMode - 1 ) of the mask
+beq  out
+```
+
+Because the index is `mMode - 1`, **bit 9 corresponds to mode 10**. The
+arithmetic is:
+
+```
+0x1FB = bits 0,1,3,4,5,6,7,8
+0x3FB = bits 0,1,3,4,5,6,7,8,9      <- correct
+0x5FB = bits 0,1,3,4,5,6,7,8,10     <- wrong: sets bit 10
+```
+
+An earlier proposal used `0x5FB`, which would have set the bit for mode 11 and
+still rejected Hammer players. `0x3FB` is correct; independently re-derived
+here.
+
+## An extra mode gate the write-up did not list
+
+`0x6078E6A8` is also patched: `cmp r0, #2` → `cmp r0, #10`
+(`E3500002` → `E350000A`). Context:
+
+```
+0x6078E6A0  cmp  r0, #6
+0x6078E6A4  beq  0x6078E6BC        ; mode 6 -> r1 = 3
+0x6078E6A8  cmp  r0, #0xA          ; was #2  <-- patched
+0x6078E6B0  movne r1, #1
+0x6078E6B4  moveq r1, #2           ; mode 10 -> r1 = 2
+```
+
+This is a 10th mode-10 instruction patch, distinct from the nine in the
+Approach B table.
+
+
+---
+
+## Complete diff accounting
+
+**115 differing bytes, 59 regions, 0 unaccounted.** Independently regrouped and
+classified:
+
+| category | bytes | what |
+|---|---|---|
+| A | 32 | Approach A — 11 Hammer actor/projectile patches |
+| B | 14 | Approach B — 9 mode-10 gate rewrites + tall type[10] |
+| C | 4 | item-grant gate (2× `cmp`, 2× `movw`) |
+| D | 18 | 6 literal redirects (2 height, 3 body, 1 balloon) |
+| E | 1 | extra mode gate at `0x6078E6A8` |
+| T | 46 | relocated table contents (height + body + balloon) |
+
+Byte counts are smaller than patch counts in places because a patch whose new
+byte happens to equal the old one contributes no diff (e.g. `cmp r0,#8` →
+`#9` changes only one byte of the word).
 
 ---
 
@@ -191,6 +278,8 @@ These require an actual patched run in an emulator or on hardware:
 - Double-hit risk between the body CollisionMgr and Info #1 ActiveCollider.
 - Hammer spawn velocity/position inherited from the fireball path.
 - Model/animation stability while switching to mode 10.
+- Whether the item gate now admits mode 10 in practice — the static evidence is
+  the `0x3FB` mask, but the path has not been exercised.
 
 ---
 
