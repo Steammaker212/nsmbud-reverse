@@ -106,6 +106,15 @@ def main():
         [sys.executable, "scripts/fix_array_data_macros.py", CLEAN, "--write"])
     run("1e/9 array labels (per-function)",
         [sys.executable, "scripts/fix_array_data_macros.py", PERFN, "--write"])
+    # Duplicate function blocks live in the SOURCE region files, so they are re-copied on every build
+    # and re-dropped on every build. Removing them at the source is what makes the build converge.
+    run("1f/9 dedupe function blocks (clean tree)",
+        [sys.executable, "scripts/dedupe_function_blocks.py", CLEAN, "--write"])
+    # modes.c and projectile.c are copied from EXTRA (.rea\decompiled), not from the clean tree, so
+    # that is the copy that keeps re-introducing the duplicate. Both sources must be clean.
+    run("1g/9 dedupe function blocks (extra tree)",
+        [sys.executable, "scripts/dedupe_function_blocks.py",
+         os.path.join(PERFN, "decompiled"), "--write"])
 
     # 2. assemble corpus
     run("2/7 build corpus", [sys.executable, "scripts/make_decompiled_corpus.py"])
@@ -123,6 +132,14 @@ def main():
     #      the entire "expected identifier or '('" class, the largest remaining error group.
     run("2b2/9 fix broken signature comments",
         [sys.executable, "scripts/fix_broken_signature_comment.py",
+         os.path.join(REPO, "decompiled"), "--write"])
+    # 2b3. two region files defined the same function twice. The second banner in each case pointed
+    #      INSIDE the function (0x78e6a8 is within the 0x1e0-byte function at 0x78e608), so IDA
+    #      returned the containing function and the pseudocode was emitted twice -- "redefinition of
+    #      'sub_6078E608'" costs the whole file. Must run after the copy above and BEFORE the label
+    #      derivation, so the duplicate's callees do not inflate the data-label set.
+    run("2b3/9 dedupe function blocks",
+        [sys.executable, "scripts/dedupe_function_blocks.py",
          os.path.join(REPO, "decompiled"), "--write"])
     # 2c. the data-label JSON that gen_data_header.py consumes listed only 233 labels, but the
     #     corpus references 23,704 distinct dword_/unk_/byte_ names. The 23,471 that were never
@@ -159,6 +176,15 @@ def main():
         if os.path.exists(hdr):
             run("5b/8 dedupe %s.h" % g,
                 [sys.executable, "scripts/dedupe_header_decls.py", hdr, "--write"])
+    # 5c. four one-line thunks are DEFINED with `()` -- unspecified arguments -- while libs.h
+    #     declares the same name with one parameter. In C those conflict outright, costing the whole
+    #     file for a one-call body. Only names the headers declare with exactly one parameter are
+    #     touched, so the ~70 other `()` thunks that parse fine are left alone. Must run AFTER the
+    #     headers exist (this step) but before the final verify.
+    run("5c/9 thunk signatures",
+        [sys.executable, "scripts/fix_thunk_signatures.py",
+         os.path.join(REPO, "decompiled"),
+         "--headers", os.path.join(REPO, "decompiled", "include"), "--write"])
     # 6. forward declarations. This is NEUTRAL for parsing (measured identical with and without)
     #    and is NOT run by default: it inserts thousands of prototypes into every region file for no
     #    compile benefit. Pass --hoist to enable it. Kept as a stage because a reader may want the

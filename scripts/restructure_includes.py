@@ -110,6 +110,22 @@ typedef struct { uint8x16_t val[2]; }  uint8x16x2_t;
 #define SLODWORD(x) (*(int32_t  *)(void *)&(x))
 #define SHIDWORD(x) (*(int32_t  *)(void *)((char *)&(x) + 4))
 
+/* ---- Itanium-mangled operator entry points reached by thunks ----
+ * Four functions are pure thunks of the form
+ *
+ *     int __operator_delete() { return _ZdlPv(); }
+ *
+ * `_ZdlPv` (the Itanium mangling of `operator delete(void*)`) is declared nowhere, so those files
+ * failed with "use of undeclared identifier '_ZdlPv'". The thunk bodies declare an `int` result,
+ * which is what IDA inferred from the decompiled text; `operator delete` returns void in the Itanium
+ * ABI and the value is simply never used, so these are declared real-ABI-shaped (void) and the
+ * thunks are rewritten by scripts/fix_thunk_signatures.py to wrap the call in a cast-free return of
+ * 0 rather than inventing a value. */
+void *_Znwm(unsigned int size);
+void *_Znam(unsigned int size);
+void  _ZdlPv(void *p);
+void  _ZdaPv(void *p);
+
 /* ---- C++ allocation operators ----
  * The decompiler prints `operator new(size)` / `operator delete(p)`, which is not C. Those call
  * sites are rewritten to these names by scripts/fix_qualified_names.py.

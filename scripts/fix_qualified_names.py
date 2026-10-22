@@ -63,8 +63,7 @@ def rewrite_operator(match):
     return "__operator_" + kind.replace("[]", "_array")
 
 
-def split_code_mask(text):
-    """Yield (is_code, chunk) so rewrites never touch strings or comments."""
+def split_code_mask(text):    """Yield (is_code, chunk) so rewrites never touch strings or comments."""
     i = 0
     n = len(text)
     start = 0
