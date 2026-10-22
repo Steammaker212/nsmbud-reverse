@@ -1,6 +1,6 @@
 # Wii U profile IDs → Deluxe: alignment verified
 
-**Question:** can the 20 Cheep Cheep profiles (Wii U IDs 530–547, 887) be
+**Question:** can the 20 Cheep Cheep profiles (Wii U IDs 530–547) be
 reused for the Deluxe bee reskin?
 
 **Answer: yes, the IDs carry over unchanged — and they are contiguous.**
@@ -60,7 +60,7 @@ The 20 IDs you listed are **real, present, and addressable** in Deluxe:
 | 541 | Flying Mecha Cheep | Airborne variant |
 | 542–546 | Spawners (湧き出し) | Wave generators |
 | 547 | Cheep Cheep Formation (フォーメーション) | Grouped pattern |
-| 887 | Course Select Jumping Cheep | Menus only |
+| 887 | 説明キノピオ / Explanation Kinopio | **Correction:** a Toad NPC, not a Cheep Cheep |
 
 **Best fit for a bee:** 540 (Jumping) or 534 (Deep/homing) for behaviour, with
 539 (`pukupuku_toge`) as the model-override target since its `.szs` is loose on

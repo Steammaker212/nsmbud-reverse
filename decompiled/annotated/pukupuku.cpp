@@ -53,13 +53,32 @@ static_assert(sizeof(ResourceName) == 8);
 // ---------------------------------------------------------------------------
 /**
  * Deluxe profile IDs (verified present in the 0x60AF3474 table at
- * indices 63..80):
+ * indices 63..80). Names below are the game's own, taken from codedx's
+ * doc/profiles.csv (911 entries, IDs 0-910) -- see docs/CODEDX_REFERENCE.md.
  *
- *   530 Cheep Cheep            531 Grouped           532 Medium
- *   533 Grouped Medium         534 Deep (homing)     535 Deep Medium
- *   536 Eep (fleeing)          537 Eep Medium        538 Mecha
- *   539 Spiny                  540 Jumping           541 Flying Mecha
- *   542..546 spawners          547 Formation
+ *   ID   Japanese              English (codedx)
+ *   530  プクプク               Pukpuk
+ *   531  グループプクプク       Group puk puk
+ *   532  プクプク（中）         Pukpuk (middle)
+ *   533  グループプクプク（中） Group (middle)
+ *   534  サーチプクプク         Search puk puk
+ *   535  サーチプクプク（中）   Search (middle)
+ *   536  にげプクプク           Nige-puk-puk (fleeing)
+ *   537  にげプクプク（中）     Nige (middle)
+ *   538  メカプクプク           Mekakupupuk (mecha)
+ *   539  トゲプク               Togepuku (spiny)
+ *   540  飛びプク               Jumping
+ *   541  飛びメカプク           Flying mechanism
+ *   542  プクプク(湧き出し)     Pukpuk (spawning)
+ *   543  サーチプクプク(湧き出し) Search (spawning)
+ *   544  にげプクプク(湧き出し) Nige (spawning)
+ *   545  飛びプク(湧き出し)     Jump (spawning)
+ *   546  飛びメカプク(湧き出し) Jump Mecha (spawning)
+ *   547  プクプク(フォーメーション) Pukpuk (formation)
+ *
+ * CORRECTION: an earlier note listed ID 887 alongside this family. 887 is
+ * 説明キノピオ / "Explanation Kinopio" -- a Toad explainer NPC, not a Cheep
+ * Cheep. The family is exactly 530-547.
  *
  * This class implements the behaviour behind 530/532 and is reused by the
  * others via the profile table; 539 (Spiny) and 538 (Mecha) get their own
@@ -82,7 +101,7 @@ private:
 
     /* +0x174 [V] */ ModelWrapper*   mpModel;          // wrapper over the mdx
     /* +0x178 [V] */ void*           mpResource;       // archive handle
-    /* +0x180 [V] */ void*           mpSomething;      // = sub_608336A8(+0x230)
+    /* +0x180 [?] */ void*           mpSomething;      // = sub_608336A8(+0x230)
 
     /* +0x0B4 [V] */ f32             mPosRefX;         // copied from +0x50
     /* +0x0C0 [V] */ u32             mPad_0C0;         // zeroed
@@ -93,10 +112,49 @@ private:
     /* +0x1F8 [V] */ f32             mSwimSpeedY;      // 64.0f
     /* +0x1FC [V] */ f32             mTurnRate;        // 32.0f  (0x42000000)
     /* +0x200 [V] */ f32             mAccel;           // 32.0f
-
-    /* +0x1F0 [?] */ f32             mSpawnOffsetX;    // pos.x + table[type]
-    /* +0x1F8 [?] */ f32             mSpawnOffsetY;    // pos.y + bias
 };
+
+// ---------------------------------------------------------------------------
+// CROSS-CHECK AGAINST codedx (see docs/CODEDX_REFERENCE.md)
+// ---------------------------------------------------------------------------
+//
+// codedx (github.com/RicBent/codedx) is a Switch-side code injection framework
+// built for THIS SAME GAME BUILD. All 414 of its symbols resolve at identical
+// VAs in our IDB, so its class headers are authoritative field names.
+//
+// CONFIRMED by codedx:
+//   +0x50            StageActor::direction            (u32)
+//   +0x54            StageActor::playerId             (s8, init -1)
+//   +0x55            StageActor::_55                  (init -1)
+//   +0x56            StageActor::_56                  (init buildInfo->_20)
+//   +0x57            StageActor::_57                  (init 1)
+//   +0x6C            StageActor::position             (Vec3)
+//   +0x78            StageActor::speed                (Vec3)
+//   +0x90            StageActor::scale                (Vec3)
+//   +0xBC            StageActor::aCollider            (ActiveCollider)
+//   +0x215           StageActor::type                 (3 = Enemy)
+//   +0x288           CollisionActor::collisionMgr     (ActorCollisionMgr)
+//   +0x17B0          MultiStateActor::states          (StateWrapper)
+//   +0x1808          Enemy::freezeMgr                 (EnemyFreezeMgr)
+//   +0x189A          end of Enemy                     (sizeof == 6298)
+//
+// Our +0x189C model slot is therefore just past Enemy's end -- a derived-class
+// member. That is consistent and needs no change.
+//
+// UNRESOLVED -- do not trust blindly:
+//   +0x174 / +0x178. setupModel writes them with R4 == this, but codedx says
+//   aCollider (0xBC) is 0x130 bytes, which would span 0xBC..0x1EC and swallow
+//   both offsets. Either codedx's ActiveCollider size comment is wrong (0xB8
+//   would make 0x174 land exactly at a derived class's first member), or
+//   Pukupuku does not derive from Enemy. The disassembly is ground truth for
+//   the offsets themselves; only their *meaning* is in doubt.
+//
+//   +0x0C0 / +0x0C8 / +0x0CC also fall inside aCollider under codedx's layout
+//   and carry the same caveat.
+//
+// The ctor's allocation is 11968 bytes (confirmed at 0x60375830, profile 539's
+// factory), so there is room for a derived class well past 0x189A.
+
 
 
 // ---------------------------------------------------------------------------

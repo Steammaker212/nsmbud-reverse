@@ -43,3 +43,7 @@ desktop.ini
 *.log.tmp
 scratch/
 out/
+
+# ---- Third-party GPL-3.0 reference (never vendor; see docs/CODEDX_REFERENCE.md) ----
+codedx/
+
