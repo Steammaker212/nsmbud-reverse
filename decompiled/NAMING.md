@@ -73,14 +73,38 @@ were applied and then all reverted; the database now contains **zero** `Actor_*_
 names. This is recorded because it is the obvious trap: the strings are present, nearby, and
 plausible, and they are not actor names.
 
-### RTTI — the data is not where expected
+### RTTI — genuinely stripped from this binary
 
-The plan was to read each constructor's vtable, take `vtable[-4]` as the `type_info`, and
-demangle `type_info+4`. Zero of 775 constructors resolved. The cause is that on ARM the
-vtable address is loaded through the literal pool rather than built with `MOVW`/`MOVT`, so
-the constant-scan did not find it. Doing this properly means resolving pool loads, which is
-the same machinery the string attribution already uses — a reasonable next step, not a dead
-end.
+The plan was to read each constructor's vtable, take the `type_info` pointer from the two
+words before it, and demangle the name at `type_info+4`. This failed twice, and the second
+attempt found the real reason: **the RTTI pointers are zero.**
+
+```
+_ZTV10StageActor   symbol at 0x00bc000c
+   0x00bc0004 [-0x08]  0x0000000000  (zero)
+   0x00bc0008 [-0x04]  0x0000000000  (zero)
+   0x00bc000c [+0x00]  0x000000260c   <- first virtual function
+```
+
+All four vtable probes (`StageActor`, `Actor`, `Enemy`, `CollisionActor`) show zero in both
+RTTI slots. The linker stripped them, which is normal for a shipped game. So there is no
+class name to recover this way at all — the mangled symbols that *do* exist in the binary
+(`_ZTV10StageActor`, `_ZN12SumoBrosBoss...`) come from the symbol file we curated, not from
+in-binary RTTI.
+
+One related detail, which matters for anyone reading constructor disassembly: constructors
+load the vtable indirectly because it is patched at runtime from a pointer in `.data`:
+
+```
+LDR R0, =(dword_60C62BD0 - pc)   ; address of the pointer slot
+LDR R0, [PC, R0]                 ; load the pointer
+ADD R0, R0, #8                   ; skip the two RTTI slots
+STR R0, [object]                 ; store the vtable into the object
+```
+
+So vtable identity lives in `.data`, not `.rodata`, and the `+8` confirms the two RTTI
+slots exist but are unused.
+
 
 ## What this means for the objective
 
@@ -92,10 +116,11 @@ recovered.
 The remaining 90% are unnamed because the evidence to name them has not been extracted yet,
 not because they are unimportant. The concrete next steps, in order of expected yield:
 
-1. **Resolve RTTI through literal pools.** Every polymorphic class then names itself. This
-   is the largest remaining win and reuses working machinery.
-2. **Decode `Profile` → sprite name via the sprite table.** `sInit_SpriteToProfileTable`
-   copies a stride-4 id array from `0xAF3474`; the sprite names live in a parallel table and
-   the two need joining through the profile id.
-3. **Attribute remaining strings to the 15,889 functions currently excluded for having no
-   code xref**, in case some are table-driven initialisers like `ItemNameTable_init`.
+1. **Join the sprite table to the profile map.** `sInit_SpriteToProfileTable` copies a
+   stride-4 id array from `0xAF3474` into `0xC7B7B4`; the sprite *names* live in a parallel
+   table. Both halves exist and only need joining through the profile id. This is the
+   largest remaining win.
+2. **Decode the `Profile` → name path** that the engine itself uses to print or look up an
+   actor, which is a code path rather than a data layout, so it cannot be wrong.
+3. **Attribute strings to the 15,889 functions currently excluded for having no code
+   xref**, in case more of them are table-driven initialisers like `ItemNameTable_init`.
