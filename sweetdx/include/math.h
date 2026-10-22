@@ -2,12 +2,26 @@
 
 #include "types.h"
 
+// types.h already defines the M_PI family; defer to it when it is in scope so the
+// two headers cannot disagree (that mismatch was a -Wmacro-redefined warning).
+#ifndef M_2PI
 #define M_2PI       6.283185307f
+#endif
+#ifndef M_PI
 #define M_PI        3.141592653f
+#endif
+#ifndef M_PI_2
 #define M_PI_2      1.570796326f
+#endif
+#ifndef M_PI_4
 #define M_PI_4      0.785398163f
+#endif
+#ifndef M_SQRT2
 #define M_SQRT2     1.414213562f
+#endif
+#ifndef M_SQRT1_2
 #define M_SQRT1_2   0.707106781f
+#endif
 
 // These resolve to the game's own math routines through symbols/nsmbudx.sym.
 f32 sin(f32 x);

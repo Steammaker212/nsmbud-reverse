@@ -17,7 +17,35 @@ typedef double              f64;
 
 typedef unsigned int        size_t32;
 
+// ---------------------------------------------------------------------------
+// Standard type names.
+//
+// sweet-dx builds with -nostdlib and no C library for armv7l-none-eabihf, so
+// <stddef.h>/<stdarg.h> names are not available. Its own upstream headers use the
+// standard spellings, so we must supply them here. Widths come from the compiler's
+// builtin macros instead of being hardcoded, which keeps them correct for AArch32.
+// ---------------------------------------------------------------------------
+typedef __SIZE_TYPE__       size_t;
+typedef __UINTPTR_TYPE__    uintptr_t;
+typedef __PTRDIFF_TYPE__    ptrdiff_t;
+typedef __builtin_va_list   va_list;
+
+#ifndef va_start
+#define va_start(ap, last)  __builtin_va_start(ap, last)
+#endif
+#ifndef va_end
+#define va_end(ap)          __builtin_va_end(ap)
+#endif
+#ifndef va_arg
+#define va_arg(ap, type)    __builtin_va_arg(ap, type)
+#endif
+#ifndef va_copy
+#define va_copy(dst, src)   __builtin_va_copy(dst, src)
+#endif
+
+#ifndef NULL
 #define NULL 0
+#endif
 
 // A small assertion helper that does not pull in a libc.
 #define ASSERT_SIZE(T, N) \

@@ -2,6 +2,12 @@
 
 #include "types.h"
 
+// SafeString is a TYPEDEF of SafeStringBase<char> in the real game, not a
+// distinct class. Defining it as its own class here changed the mangled
+// name of every function taking a sead::SafeString&, so SweetDX could not
+// resolve hooks like Profile::Profile (it expects SafeStringBase<char>).
+#include "sead/safestring.h"
+
 // The subset of Nintendo's SEAD library that actors actually touch.
 namespace sead
 {
@@ -17,18 +23,12 @@ public:
     u8    _C;
 };
 
-// A non-owning string view. Same 8-byte shape as SafeString.
-class SafeString
-{
-public:
-    SafeString();
-    SafeString(const char* s);
-
-    const char* cstr() const { return mStr; }
-
-    const char* mStr;
-    u32         mLength;
-};
+// SafeString lives in sead/safestring.h as `using SafeString = SafeStringBase<char>;`
+// because that is what it is in the real game: a typedef, not a distinct class.
+// Redeclaring it here as an unrelated class changed the mangled name of every
+// function taking a sead::SafeString&, so hooks could no longer resolve their
+// symbols (Profile::Profile expected RKN4sead14SafeStringBaseIcEE).
+#include "sead/safestring.h"
 
 struct Color4f
 {
@@ -46,10 +46,7 @@ public:
     static Heap* getCurrentHeap();
 };
 
-template <typename T>
-class SafeStringBase : public SafeString
-{
-};
+// SafeStringBase<T> is defined in sead/safestring.h, included above.
 
 } // namespace sead
 

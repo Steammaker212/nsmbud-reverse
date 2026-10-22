@@ -21,6 +21,12 @@ sweetdx/
 SweetDX requires exactly these four folders plus `nso/main` (the game's original
 NSO, which you supply — it is not distributed here).
 
+**This project builds.** With SweetDX v0.0.3 it compiles and links cleanly, producing
+a `subsdk0` and an IPS patch, and the produced IPS was verified to contain the four
+Hammer byte-sites exactly. See [BUILD_FIXES.md](BUILD_FIXES.md) for the five faults
+that had to be fixed to get there, and the verification that the Hammer bytes really
+landed.
+
 ## What is in here
 
 | Finding | Where |
@@ -28,9 +34,15 @@ NSO, which you supply — it is not distributed here).
 | Cheep Cheep family (profiles 530–547) | `code/pukupuku.cpp` |
 | Hammer as a new power-up (mode 10) | `code/powerup_modes.cpp` + `hooks/hammer_*.hks` |
 | Power-up mode table + item-grant gate | `hooks/item_grant.hks`, `hooks/mode_tables.hks` |
-| Custom profile system | `code/profiles.cpp` |
 | Actor class layouts | `include/actor/*.h` |
 | Symbol addresses | `symbols/nsmbudx.sym` |
+| Build faults and their evidence | `BUILD_FIXES.md` |
+| Retired custom-profile code (see note) | `_retired/profiles.cpp` |
+
+> **Custom profiles** are handled by SweetDX's own `code/profile.cpp`, which ships
+> with the tool and is not vendored here. Our earlier `code/profiles.cpp`
+> reimplemented it and produced a duplicate-symbol link error, so it is retired to
+> `_retired/` with the reasoning preserved rather than deleted.
 
 ## The hook files reproduce the entire patch
 

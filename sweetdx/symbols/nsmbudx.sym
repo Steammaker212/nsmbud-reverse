@@ -1,3 +1,20 @@
+# nsmbudx.sym -- NSMBU Deluxe (Switch) symbol addresses
+#
+# Format: `name = 0xADDRESS;` where ADDRESS is an in-image address (VA - 0x60000000).
+#
+# IMPORTANT: do not list a symbol here if our own subsdk code defines it.
+#
+# sweet-dx converts every entry into an absolute linker-script assignment of
+# `address - NSMBUDX_NSO_MEMORY_SIZE` (0xCD1000). For addresses below that offset the
+# value wraps negative into 0xFFxxxxxx, and any hook on it then tries to branch to
+# 0x100xxxxxx -- outside the +-32 MiB ARM branch range. We hit exactly that:
+#
+#     Branch from 0x000182A0 to 0x1000182A0 is out of range
+#
+# caused by listing Profile::get (0x182A0) and the Profile constructor (0x17F6C) here
+# while profile.cpp compiles its own versions into subsdk0. Those two are removed; the
+# addresses are preserved in symbols/nsmbudx_removed.sym for reference.
+
 # nsmbudx.sym -- symbols for New Super Mario Bros. U Deluxe v1.0.0
 # Generated from the nsmbud-reverse IDB inventory.
 #
@@ -146,12 +163,10 @@ LineFollower_start = 0x0000F370;
 _ZN9NullState5getIdEv = 0x00013DB4;
 sInit_SpriteToProfileTable = 0x00014724;
 
-_ZN7ProfileC2EPFP5ActorPK14ActorBuildInfoEjPvPK9ActorInfoj = 0x00017F6C;
 Profile_loadResources = 0x00017FCC;
 sead_SomeString_sprtintf = 0x0001819C;
 Profile_unsetResourcesLoaded = 0x00018238;
 _ZN7Profile17getResArchiveByIdEj = 0x0001824C;
-_ZN7Profile3getEj = 0x000182A0;
 Profile_getPriority = 0x0001839C;
 Profile_getHasResources = 0x000183C8;
 Profile_getResourceCountById = 0x000183F0;

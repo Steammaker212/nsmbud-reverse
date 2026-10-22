@@ -1,0 +1,8 @@
+# Symbol addresses removed from nsmbudx.sym.
+# These are DEFINED by our own subsdk code, so listing them in a .sym
+# file made the generated linker script override our definitions and
+# send hooks to a wrapped 0x100xxxxxx address outside branch range.
+# Kept here so the addresses are not lost.
+
+_ZN7ProfileC2EPFP5ActorPK14ActorBuildInfoEjPvPK9ActorInfoj = 0x00017F6C;
+_ZN7Profile3getEj = 0x000182A0;
