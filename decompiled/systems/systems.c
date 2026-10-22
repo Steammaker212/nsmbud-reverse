@@ -7799,7 +7799,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v29 = 11778612;
     v25 = 12321336;
     v26 = sub_604912FC(0);
-    MEMORY[0xBC0240](&v28, &v25);
+    ((int (*)(int, int))MEMORY[0xBC0240])(&v28, &v25);
     Disposer_allocateChildren((_DWORD *)(a1 + 6704), 0);
     v3 = Pa_ArrowBtnL_00_Pa_ArrowBtnR_00_ref(0);
     v25 = 12321336;
@@ -8421,7 +8421,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v33 = 11778612;
     v17 = 12321336;
     v18 = sub_604918C8(0);
-    MEMORY[0xBC0240](&v20, &v17);
+    ((int (*)(int, int))MEMORY[0xBC0240])(&v20, &v17);
     v19 = 1;
     v2 = sub_604918C8(1);
     v17 = 12321336;
@@ -8861,7 +8861,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14[9] = 11778612;
     v11 = 12321336;
     v12 = sub_604923E4(0);
-    MEMORY[0xBC0240](v14, &v11);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v14, &v11);
     v13 = 1;
     v3 = sub_604923E4(1);
     v11 = 12321336;
@@ -12014,7 +12014,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18[1] = 11778612;
     v10 = 12321336;
     v11 = sub_60492F00(0);
-    MEMORY[0xBC0240](v12, &v10);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v12, &v10);
     v2 = sub_60492F00(1);
     v10 = 12321336;
     v11 = v2;
@@ -15267,7 +15267,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = 11778612;
     v12[0] = 12321336;
     v12[1] = P_Image_00_ref(0);
-    MEMORY[0xBC0240](&v13, v12);
+    ((int (*)(int, int))MEMORY[0xBC0240])(&v13, v12);
     v12[0] = 1;
     __Player__applyPowerUpTransform((int)(a1 + 9), (int)(a1 + 936), (int)&v13, v12);
     sub_60494B0C(a1);
@@ -15374,7 +15374,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14[17] = 11778612;
     v11 = 12321336;
     v12 = sub_60496978(0);
-    MEMORY[0xBC0240](v14, &v11);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v14, &v11);
     v13 = 1;
     v2 = sub_60496978(1);
     v11 = 12321336;
@@ -15462,7 +15462,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v16[17] = 11778612;
     v13 = 12321336;
     v14 = (const char *)sub_60496D2C(0);
-    MEMORY[0xBC0240](v16, &v13);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v16, &v13);
     v15 = 1;
     v2 = sub_60496D2C(1);
     v13 = 12321336;
@@ -26135,7 +26135,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v26 = v12;
         sead__SafeStringBase_char__assureTerminationImpl_(&v27);
         v13 = v28;
-        MEMORY[0xBC0244](&v25);
+        ((int (*)(int))MEMORY[0xBC0244])(&v25);
         if ( v13 == v26 )
         {
   sub_604A50D4__LABEL_22:
@@ -26361,7 +26361,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v26 = v12;
         sead__SafeStringBase_char__assureTerminationImpl_(&v27);
         v13 = v28;
-        MEMORY[0xBC0244](&v25);
+        ((int (*)(int))MEMORY[0xBC0244])(&v25);
         if ( v13 == v26 )
         {
   sub_604A54F8__LABEL_22:
@@ -31146,7 +31146,7 @@ static inline unsigned int uxtb16(unsigned int x)
         (*(void (__fastcall **)(int *))(v39 + 12))(&v39);
         (*(void (__fastcall **)(int *))(v39 + 12))(&v39);
         v27 = v40;
-        MEMORY[0xBC0244](&v37);
+        ((int (*)(int))MEMORY[0xBC0244])(&v37);
         if ( v27 == v38 )
         {
   sub_604AC434__LABEL_41:
@@ -31215,7 +31215,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(int *))(v39 + 12))(&v39);
       (*(void (__fastcall **)(int *))(v39 + 12))(&v39);
       v7 = v40;
-      MEMORY[0xBC0244](&v37);
+      ((int (*)(int))MEMORY[0xBC0244])(&v37);
       if ( v7 == v38 )
       {
   sub_604AC434__LABEL_11:
@@ -50881,7 +50881,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10[9] = 11778612;
     v7 = 12321336;
     v8 = sub_604DA264(0);
-    MEMORY[0xBC0240](v10, &v7);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v10, &v7);
     v9 = 1;
     v2 = sub_604DA264(1);
     v7 = 12321336;
@@ -50932,7 +50932,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10[7] = 11778612;
     v7 = 12321336;
     v8 = (const char *)sub_604DA618(0);
-    MEMORY[0xBC0240](v10, &v7);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v10, &v7);
     v9 = 1;
     v2 = sub_604DA618(1);
     v7 = 12321336;
@@ -56778,7 +56778,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8[5] = 11778612;
     v5 = 12321336;
     v6 = (const char *)Pa_Return_00_Pa_BtnLB_00_Pa_BtnRB_00_ref(0);
-    MEMORY[0xBC0240](v8, &v5);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v8, &v5);
     v7 = 1;
     v2 = Pa_Return_00_Pa_BtnLB_00_Pa_BtnRB_00_ref(1);
     v5 = 12321336;
@@ -57818,7 +57818,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[7] = 11778612;
     v6 = 12321336;
     v7 = sub_604DD378(0);
-    MEMORY[0xBC0240](v9, &v6);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v9, &v6);
     v8 = 1;
     v2 = sub_604DD378(1);
     v6 = 12321336;
@@ -57868,7 +57868,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v11[9] = 11778612;
     v8 = 12321336;
     v9 = (const char *)sub_604DD72C(0);
-    MEMORY[0xBC0240](v11, &v8);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v11, &v8);
     v10 = 1;
     v2 = sub_604DD72C(1);
     v8 = 12321336;
@@ -67991,7 +67991,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
       (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
       v6 = v49;
-      MEMORY[0xBC0244](&v46);
+      ((int (*)(int))MEMORY[0xBC0244])(&v46);
       if ( v6 == v47 )
         goto sub_604E6E64__LABEL_13;
       for ( i = 1; ; i += 2 )
@@ -87377,7 +87377,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v21[1] = 11778612;
     v13 = 12321336;
     v14 = sub_605057D8(0);
-    MEMORY[0xBC0240](v15, &v13);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v15, &v13);
     v6 = sub_605057D8(1);
     v13 = 12321336;
     v14 = v6;
@@ -87440,7 +87440,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v15[1] = 11778612;
     v8 = 12321336;
     v9 = sub_60505B8C(0);
-    MEMORY[0xBC0240](v10, &v8);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v10, &v8);
     v2 = sub_60505B8C(1);
     v8 = 12321336;
     v9 = v2;
@@ -92312,7 +92312,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = 11778612;
     v3[0] = 12321336;
     v3[1] = P_MiiIcon_00_ref(0);
-    MEMORY[0xBC0240](v4, v3);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v4, v3);
     v3[0] = 1;
     sub_604752D4(a1 + 60, a1 + 3640, v4, v3);
     result = Heap_allocate(32, 0, 4, 0);
@@ -93162,7 +93162,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = 11778612;
     v3[0] = 12321336;
     v3[1] = P_MiiIcon_00_ref_50D228(0);
-    MEMORY[0xBC0240](v4, v3);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v4, v3);
     v3[0] = 1;
     sub_604752D4(a1, a1 + 3540, v4, v3);
     result = Heap_allocate(32, 0, 4, 0);
@@ -100129,7 +100129,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v17[1] = 11778612;
     v9 = 12321336;
     v10 = sub_605173CC(0);
-    MEMORY[0xBC0240](v11, &v9);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v11, &v9);
     v2 = sub_605173CC(1);
     v9 = 12321336;
     v10 = v2;
@@ -101979,7 +101979,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[7] = 11778612;
     v6 = 12321336;
     v7 = sub_6051A314(0);
-    MEMORY[0xBC0240](v9, &v6);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v9, &v6);
     v8 = 1;
     v2 = sub_6051A314(1);
     v6 = 12321336;
@@ -102023,7 +102023,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[7] = 11778612;
     v6 = 12321336;
     v7 = sub_6051A528(0);
-    MEMORY[0xBC0240](v9, &v6);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v9, &v6);
     v8 = 1;
     v2 = sub_6051A528(1);
     v6 = 12321336;
@@ -107030,7 +107030,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8[3] = 11778612;
     v5 = 12321336;
     v6 = N_PlayerPos_00_N_Score_00_ref(0);
-    MEMORY[0xBC0240](v8, &v5);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v8, &v5);
     v7 = 1;
     v2 = N_PlayerPos_00_N_Score_00_ref(1);
     v5 = 12321336;
@@ -132177,7 +132177,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18[1] = 11778612;
     v15 = 12321336;
     v16 = sub_6054963C(0);
-    MEMORY[0xBC0240](v18, &v15);
+    ((int (*)(int, int))MEMORY[0xBC0240])(v18, &v15);
     v17 = 0;
     v3 = a1 + 9352;
     Disposer_allocateChildren((_DWORD *)(a1 + 9352), 0);

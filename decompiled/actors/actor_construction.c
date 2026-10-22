@@ -99157,7 +99157,7 @@ sub_60181FC0__LABEL_147:
     (*(void (__fastcall **)(_DWORD *))(*v28 + 12))(v28);
     (*(void (__fastcall **)(_DWORD *))(*v28 + 12))(v28);
     v68 = v28[1];
-    MEMORY[0xBC0244](&v112);
+    ((int (*)(int))MEMORY[0xBC0244])(&v112);
     if ( v68 == v113 )
     {
   sub_6018EDF4__LABEL_60:
@@ -147213,7 +147213,7 @@ sub_601D2928__LABEL_216:
     (*(void (__fastcall **)(_DWORD *))(*v14 + 12))(v14);
     (*(void (__fastcall **)(_DWORD *))(*v14 + 12))(v14);
     v15 = (const char *)v14[1];
-    MEMORY[0xBC0244](&v42);
+    ((int (*)(int))MEMORY[0xBC0244])(&v42);
     if ( v15 == v43 )
     {
   sub_601D8DEC__LABEL_19:
@@ -153901,7 +153901,7 @@ sub_601D2928__LABEL_216:
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         v6 = (const char *)v5[1];
-        MEMORY[0xBC0244](&v72);
+        ((int (*)(int))MEMORY[0xBC0244])(&v72);
         if ( v6 == v73 )
           goto sub_601E5C14__LABEL_98;
         v7 = v5[1];
@@ -153926,7 +153926,7 @@ sub_601D2928__LABEL_216:
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         v12 = (const char *)v5[1];
-        MEMORY[0xBC0244](&v70);
+        ((int (*)(int))MEMORY[0xBC0244])(&v70);
         if ( v12 == v71 )
           goto sub_601E5C14__LABEL_98;
         v13 = v5[1];
@@ -153950,7 +153950,7 @@ sub_601D2928__LABEL_216:
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         v17 = (const char *)v5[1];
-        MEMORY[0xBC0244](&v68);
+        ((int (*)(int))MEMORY[0xBC0244])(&v68);
         if ( v17 == v69 )
           goto sub_601E5C14__LABEL_98;
         v18 = v5[1];
@@ -153974,7 +153974,7 @@ sub_601D2928__LABEL_216:
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         v22 = (const char *)v5[1];
-        MEMORY[0xBC0244](&v66);
+        ((int (*)(int))MEMORY[0xBC0244])(&v66);
         if ( v22 == v67 )
           goto sub_601E5C14__LABEL_98;
         v23 = v5[1];
@@ -153998,7 +153998,7 @@ sub_601D2928__LABEL_216:
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         v27 = (const char *)v5[1];
-        MEMORY[0xBC0244](&v64);
+        ((int (*)(int))MEMORY[0xBC0244])(&v64);
         if ( v27 == v65 )
           goto sub_601E5C14__LABEL_98;
         v28 = v5[1];
@@ -154022,7 +154022,7 @@ sub_601D2928__LABEL_216:
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         v32 = (const char *)v5[1];
-        MEMORY[0xBC0244](&v62);
+        ((int (*)(int))MEMORY[0xBC0244])(&v62);
         if ( v32 == v63 )
           goto sub_601E5C14__LABEL_98;
         v33 = v5[1];
@@ -154046,7 +154046,7 @@ sub_601D2928__LABEL_216:
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         v37 = (const char *)v5[1];
-        MEMORY[0xBC0244](&v60);
+        ((int (*)(int))MEMORY[0xBC0244])(&v60);
         if ( v37 == v61 )
           goto sub_601E5C14__LABEL_98;
         v38 = v5[1];
@@ -154070,7 +154070,7 @@ sub_601D2928__LABEL_216:
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         (*(void (__fastcall **)(_DWORD *))(*v5 + 12))(v5);
         v42 = (const char *)v5[1];
-        MEMORY[0xBC0244](&v58);
+        ((int (*)(int))MEMORY[0xBC0244])(&v58);
         if ( v42 == v59 )
           goto sub_601E5C14__LABEL_98;
         v43 = v5[1];

@@ -11822,7 +11822,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         (*(void (__fastcall **)(_DWORD *))(*v4 + 12))(v4);
         (*(void (__fastcall **)(_DWORD *))(*v4 + 12))(v4);
         v5 = (const char *)v4[1];
-        MEMORY[0xBC0244](&v18);
+        ((int (*)(int))MEMORY[0xBC0244])(&v18);
         if ( v5 == v19 )
           return 1;
         v6 = v4[1];
@@ -33994,7 +33994,7 @@ sub_6022C360__LABEL_122:
     sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v97);
     v97 = 12405816;
     v14 = v98;
-    MEMORY[0xBC0244](&v93);
+    ((int (*)(int))MEMORY[0xBC0244])(&v93);
     v15 = v94;
     if ( v14 != v94 )
     {
@@ -34149,7 +34149,7 @@ sub_6022C360__LABEL_122:
     sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v93);
     v93 = 12424404;
     v25 = (char *)v94;
-    MEMORY[0xBC0244](&v86);
+    ((int (*)(int))MEMORY[0xBC0244])(&v86);
     v26 = v87;
     if ( v25 != v87 )
     {

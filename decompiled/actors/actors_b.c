@@ -149686,24 +149686,24 @@ sub_603B7478__LABEL_57:
     for ( i = 0; i != 2400; i += 8 )
     {
       v3 = a1 + i;
-      *(_BYTE *)v3 = MEMORY[0xC5CB00](*(unsigned __int8 *)(a1 + i));
-      *(_BYTE *)(v3 + 1) = MEMORY[0xC5CB00](*(unsigned __int8 *)(a1 + i + 1));
-      *(_WORD *)(v3 + 4) = MEMORY[0xC5CB08](*(unsigned __int16 *)(a1 + i + 4));
-      v4 = MEMORY[0xC5CB08](*(unsigned __int16 *)(a1 + i + 6));
+      *(_BYTE *)v3 = ((int (*)(int))MEMORY[0xC5CB00])(*(unsigned __int8 *)(a1 + i));
+      *(_BYTE *)(v3 + 1) = ((int (*)(int))MEMORY[0xC5CB00])(*(unsigned __int8 *)(a1 + i + 1));
+      *(_WORD *)(v3 + 4) = ((int (*)(int))MEMORY[0xC5CB08])(*(unsigned __int16 *)(a1 + i + 4));
+      v4 = ((int (*)(int))MEMORY[0xC5CB08])(*(unsigned __int16 *)(a1 + i + 6));
       *(_WORD *)(v3 + 6) = v4;
     }
-    *(_BYTE *)(a1 + 2400) = MEMORY[0xC5CB00](*(unsigned __int8 *)(a1 + 2400));
-    *(_BYTE *)(a1 + 2401) = MEMORY[0xC5CB00](*(unsigned __int8 *)(a1 + 2401));
-    *(_DWORD *)(a1 + 2404) = MEMORY[0xC5CB10](*(_DWORD *)(a1 + 2404));
-    *(_DWORD *)(a1 + 2408) = MEMORY[0xC5CB10](*(_DWORD *)(a1 + 2408));
-    *(_BYTE *)(a1 + 2412) = MEMORY[0xC5CB00](*(unsigned __int8 *)(a1 + 2412));
-    *(_BYTE *)(a1 + 2413) = MEMORY[0xC5CB00](*(unsigned __int8 *)(a1 + 2413));
-    *(_DWORD *)(a1 + 2416) = MEMORY[0xC5CB10](*(_DWORD *)(a1 + 2416));
-    *(_DWORD *)(a1 + 2420) = MEMORY[0xC5CB10](*(_DWORD *)(a1 + 2420));
-    *(_BYTE *)(a1 + 2424) = MEMORY[0xC5CB00](*(unsigned __int8 *)(a1 + 2424));
-    *(_BYTE *)(a1 + 2425) = MEMORY[0xC5CB00](*(unsigned __int8 *)(a1 + 2425));
-    *(_DWORD *)(a1 + 2428) = MEMORY[0xC5CB10](*(_DWORD *)(a1 + 2428));
-    result = MEMORY[0xC5CB10](*(_DWORD *)(a1 + 2432));
+    *(_BYTE *)(a1 + 2400) = ((int (*)(int))MEMORY[0xC5CB00])(*(unsigned __int8 *)(a1 + 2400));
+    *(_BYTE *)(a1 + 2401) = ((int (*)(int))MEMORY[0xC5CB00])(*(unsigned __int8 *)(a1 + 2401));
+    *(_DWORD *)(a1 + 2404) = ((int (*)(int))MEMORY[0xC5CB10])(*(_DWORD *)(a1 + 2404));
+    *(_DWORD *)(a1 + 2408) = ((int (*)(int))MEMORY[0xC5CB10])(*(_DWORD *)(a1 + 2408));
+    *(_BYTE *)(a1 + 2412) = ((int (*)(int))MEMORY[0xC5CB00])(*(unsigned __int8 *)(a1 + 2412));
+    *(_BYTE *)(a1 + 2413) = ((int (*)(int))MEMORY[0xC5CB00])(*(unsigned __int8 *)(a1 + 2413));
+    *(_DWORD *)(a1 + 2416) = ((int (*)(int))MEMORY[0xC5CB10])(*(_DWORD *)(a1 + 2416));
+    *(_DWORD *)(a1 + 2420) = ((int (*)(int))MEMORY[0xC5CB10])(*(_DWORD *)(a1 + 2420));
+    *(_BYTE *)(a1 + 2424) = ((int (*)(int))MEMORY[0xC5CB00])(*(unsigned __int8 *)(a1 + 2424));
+    *(_BYTE *)(a1 + 2425) = ((int (*)(int))MEMORY[0xC5CB00])(*(unsigned __int8 *)(a1 + 2425));
+    *(_DWORD *)(a1 + 2428) = ((int (*)(int))MEMORY[0xC5CB10])(*(_DWORD *)(a1 + 2428));
+    result = ((int (*)(int))MEMORY[0xC5CB10])(*(_DWORD *)(a1 + 2432));
     *(_DWORD *)(a1 + 2432) = result;
     return result;
   }
@@ -171720,12 +171720,12 @@ sub_603F8408__LABEL_96:
     Slot_initWithOwnerAndOffset(v82, a1 + 471, 0);
     for ( i = 0; i != 17; ++i )
     {
-      v11 = MEMORY[0xCC73E8](a1[95]);
+      v11 = ((int (*)(int))MEMORY[0xCC73E8])(a1[95]);
       v12 = (_WORD *)(v11 + Slot_getRelativeOffset(a1 + 92) + v9);
       v9 += 2;
       *v12 = i;
     }
-    v13 = MEMORY[0xCC73E8](a1[95]);
+    v13 = ((int (*)(int))MEMORY[0xCC73E8])(a1[95]);
     *(_WORD *)(v13 + Slot_getRelativeOffset(a1 + 92) + 34) = 1;
     Slot_initWithOwnerAndOffset(v81, a1 + 92, 0);
     v14 = a1[94];
@@ -171734,13 +171734,13 @@ sub_603F8408__LABEL_96:
     v90 = v81[2];
     sub_60919D48(a1 + 258, &v88, 1, v14 >> 1);
     a1[260] = 6;
-    v15 = MEMORY[0xCC73E8](a1[102]);
+    v15 = ((int (*)(int))MEMORY[0xCC73E8])(a1[102]);
     v16 = Slot_getRelativeOffset(a1 + 99);
     *(_DWORD *)(v15 + v16) = MEMORY[0xB3B95C];
     v17 = v15 + v16;
     *(_DWORD *)(v17 + 4) = MEMORY[0xB3B960];
     *(_DWORD *)(v17 + 8) = MEMORY[0xB3B964];
-    v18 = MEMORY[0xCC73E8](a1[102]);
+    v18 = ((int (*)(int))MEMORY[0xCC73E8])(a1[102]);
     v19 = v18 + Slot_getRelativeOffset(a1 + 99);
     v20 = 28;
     v21 = 0;
@@ -171755,14 +171755,14 @@ sub_603F8408__LABEL_96:
       v27 = *(float *)(((v24 >> 20) & 0xFF0) + 0xB3A48C);
       v28 = *(float *)(((v24 >> 20) & 0xFF0) + 0xB3A490);
       v29 = (float)(v24 & 0xFFFFFF);
-      v30 = MEMORY[0xCC73E8](a1[102]);
+      v30 = ((int (*)(int))MEMORY[0xCC73E8])(a1[102]);
       v31 = v29 * 0.000000059605;
       *(float *)(v30 + Slot_getRelativeOffset(a1 + 99) + v20 - 12) = v27 + (float)(v28 * v31);
-      v32 = MEMORY[0xCC73E8](a1[102]);
+      v32 = ((int (*)(int))MEMORY[0xCC73E8])(a1[102]);
       *(float *)(v32 + Slot_getRelativeOffset(a1 + 99) + v20 - 8) = v25 + (float)(v26 * v31);
-      v33 = MEMORY[0xCC73E8](a1[102]);
+      v33 = ((int (*)(int))MEMORY[0xCC73E8])(a1[102]);
       *(_DWORD *)(v33 + Slot_getRelativeOffset(a1 + 99) + v20 - 4) = 0;
-      v34 = MEMORY[0xCC73E8](a1[102]);
+      v34 = ((int (*)(int))MEMORY[0xCC73E8])(a1[102]);
       ++v21;
       *(_DWORD *)(v34 + Slot_getRelativeOffset(a1 + 99) + v20) = 1065353216;
       v20 += 16;
@@ -171777,11 +171777,11 @@ sub_603F8408__LABEL_96:
     Array8_releaseSlot(a1 + 174, 0, a1 + 106, 0);
     Array8_releaseSlot(a1 + 174, 3, a1 + 106, 1);
     sub_60921F90(a1 + 174);
-    v36 = MEMORY[0xCC73E8](a1[281]);
+    v36 = ((int (*)(int))MEMORY[0xCC73E8])(a1[281]);
     *(_WORD *)(v36 + Slot_getRelativeOffset(v71)) = 0;
-    v37 = MEMORY[0xCC73E8](a1[281]);
+    v37 = ((int (*)(int))MEMORY[0xCC73E8])(a1[281]);
     *(_WORD *)(v37 + Slot_getRelativeOffset(v71) + 2) = 1;
-    v38 = MEMORY[0xCC73E8](a1[281]);
+    v38 = ((int (*)(int))MEMORY[0xCC73E8])(a1[281]);
     *(_WORD *)(v38 + Slot_getRelativeOffset(v71) + 4) = 2;
     Slot_initWithOwnerAndOffset(v79, v71, 0);
     v39 = a1[280];
@@ -171790,27 +171790,27 @@ sub_603F8408__LABEL_96:
     v90 = v79[2];
     sub_60919D48(a1 + 444, &v88, 1, v39 >> 1);
     a1[446] = 4;
-    v40 = MEMORY[0xCC73E8](a1[288]);
+    v40 = ((int (*)(int))MEMORY[0xCC73E8])(a1[288]);
     v41 = Slot_getRelativeOffset(v72);
     *(_DWORD *)(v40 + v41) = MEMORY[0xB3B95C];
     v42 = v40 + v41;
     *(_DWORD *)(v42 + 4) = MEMORY[0xB3B960];
     *(_DWORD *)(v42 + 8) = MEMORY[0xB3B964];
-    v43 = MEMORY[0xCC73E8](a1[288]);
+    v43 = ((int (*)(int))MEMORY[0xCC73E8])(a1[288]);
     *(_DWORD *)(v43 + Slot_getRelativeOffset(v72) + 12) = 0;
-    v44 = MEMORY[0xCC73E8](a1[288]);
+    v44 = ((int (*)(int))MEMORY[0xCC73E8])(a1[288]);
     v45 = (_DWORD *)(v44 + Slot_getRelativeOffset(v72));
     v45[4] = 1065353216;
     v45[5] = 1065353216;
     v45[6] = 0;
-    v46 = MEMORY[0xCC73E8](a1[288]);
+    v46 = ((int (*)(int))MEMORY[0xCC73E8])(a1[288]);
     *(_DWORD *)(v46 + Slot_getRelativeOffset(v72) + 28) = 1065353216;
-    v47 = MEMORY[0xCC73E8](a1[288]);
+    v47 = ((int (*)(int))MEMORY[0xCC73E8])(a1[288]);
     v48 = (_DWORD *)(v47 + Slot_getRelativeOffset(v72));
     v48[8] = 1065353216;
     v48[9] = -1082130432;
     v48[10] = 0;
-    v49 = MEMORY[0xCC73E8](a1[288]);
+    v49 = ((int (*)(int))MEMORY[0xCC73E8])(a1[288]);
     *(_DWORD *)(v49 + Slot_getRelativeOffset(v72) + 44) = 1065353216;
     Slot_initWithOwnerAndOffset(v78, v72, 0);
     sub_609225B8(a1 + 292, v78, 16, 48);
@@ -171820,17 +171820,17 @@ sub_603F8408__LABEL_96:
     Array8_releaseSlot(v35 + 360, 0, v35 + 292, 0);
     Array8_releaseSlot(v35 + 360, 3, v35 + 292, 1);
     sub_60921F90(a1 + 360);
-    v50 = MEMORY[0xCC73E8](a1[467]);
+    v50 = ((int (*)(int))MEMORY[0xCC73E8])(a1[467]);
     *(_WORD *)(v50 + Slot_getRelativeOffset(v73)) = 0;
-    v51 = MEMORY[0xCC73E8](a1[467]);
+    v51 = ((int (*)(int))MEMORY[0xCC73E8])(a1[467]);
     *(_WORD *)(v51 + Slot_getRelativeOffset(v73) + 2) = 1;
-    v52 = MEMORY[0xCC73E8](a1[467]);
+    v52 = ((int (*)(int))MEMORY[0xCC73E8])(a1[467]);
     *(_WORD *)(v52 + Slot_getRelativeOffset(v73) + 4) = 2;
-    v53 = MEMORY[0xCC73E8](a1[467]);
+    v53 = ((int (*)(int))MEMORY[0xCC73E8])(a1[467]);
     *(_WORD *)(v53 + Slot_getRelativeOffset(v73) + 6) = 1;
-    v54 = MEMORY[0xCC73E8](a1[467]);
+    v54 = ((int (*)(int))MEMORY[0xCC73E8])(a1[467]);
     *(_WORD *)(v54 + Slot_getRelativeOffset(v73) + 8) = 2;
-    v55 = MEMORY[0xCC73E8](a1[467]);
+    v55 = ((int (*)(int))MEMORY[0xCC73E8])(a1[467]);
     *(_WORD *)(v55 + Slot_getRelativeOffset(v73) + 10) = 3;
     Slot_initWithOwnerAndOffset(v77, v73, 0);
     v56 = a1[466];
@@ -171839,34 +171839,34 @@ sub_603F8408__LABEL_96:
     v90 = v77[2];
     sub_60919D48(a1 + 630, &v88, 1, v56 >> 1);
     a1[632] = 4;
-    v57 = MEMORY[0xCC73E8](a1[474]);
+    v57 = ((int (*)(int))MEMORY[0xCC73E8])(a1[474]);
     v58 = Slot_getRelativeOffset(v74);
     *(_DWORD *)(v57 + v58) = -1090519040;
     v59 = v57 + v58;
     *(_DWORD *)(v59 + 4) = 0;
     *(_DWORD *)(v59 + 8) = 0;
-    v60 = MEMORY[0xCC73E8](a1[474]);
+    v60 = ((int (*)(int))MEMORY[0xCC73E8])(a1[474]);
     *(_DWORD *)(v60 + Slot_getRelativeOffset(v74) + 12) = 1065353216;
-    v61 = MEMORY[0xCC73E8](a1[474]);
+    v61 = ((int (*)(int))MEMORY[0xCC73E8])(a1[474]);
     v62 = (_DWORD *)(v61 + Slot_getRelativeOffset(v74));
     v62[4] = 1056964608;
     v62[5] = 0;
     v62[6] = 0;
-    v63 = MEMORY[0xCC73E8](a1[474]);
+    v63 = ((int (*)(int))MEMORY[0xCC73E8])(a1[474]);
     *(_DWORD *)(v63 + Slot_getRelativeOffset(v74) + 28) = 1065353216;
-    v64 = MEMORY[0xCC73E8](a1[474]);
+    v64 = ((int (*)(int))MEMORY[0xCC73E8])(a1[474]);
     v65 = (_DWORD *)(v64 + Slot_getRelativeOffset(v74));
     v65[8] = -1090519040;
     v65[9] = -1082130432;
     v65[10] = 0;
-    v66 = MEMORY[0xCC73E8](a1[474]);
+    v66 = ((int (*)(int))MEMORY[0xCC73E8])(a1[474]);
     *(_DWORD *)(v66 + Slot_getRelativeOffset(v74) + 44) = 1065353216;
-    v67 = MEMORY[0xCC73E8](a1[474]);
+    v67 = ((int (*)(int))MEMORY[0xCC73E8])(a1[474]);
     v68 = (_DWORD *)(v67 + Slot_getRelativeOffset(v74));
     v68[12] = 1056964608;
     v68[13] = -1082130432;
     v68[14] = 0;
-    v69 = MEMORY[0xCC73E8](a1[474]);
+    v69 = ((int (*)(int))MEMORY[0xCC73E8])(a1[474]);
     *(_DWORD *)(v69 + Slot_getRelativeOffset(v74) + 60) = 1065353216;
     Slot_initWithOwnerAndOffset(v76, v74, 0);
     sub_609225B8(a1 + 478, v76, 16, 64);
@@ -172148,9 +172148,9 @@ sub_603F8408__LABEL_96:
           Sound_setTrackVolume(v28, a2, 4, &v126);
         v32 = *(_DWORD *)(v124 + 192);
         v33 = v123[260];
-        v34 = MEMORY[0xCC746C](v121);
+        v34 = ((int (*)(int))MEMORY[0xCC746C])(v121);
         a2 = v124;
-        MEMORY[0xCC7874](v32, v33, v123[259], 18, v34, HIDWORD(v34));
+        ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v32, v33, v123[259], 18, v34, HIDWORD(v34));
         v13 = *(_DWORD *)(v13 + 4);
         v14 = v13 - 76;
       }
@@ -172249,9 +172249,9 @@ sub_603F8408__LABEL_96:
           Sound_setTrackVolume(v54, a2, 4, &v126);
         v58 = *(_DWORD *)(v124 + 192);
         v59 = v123[260];
-        v60 = MEMORY[0xCC746C](v123 + 266);
+        v60 = ((int (*)(int))MEMORY[0xCC746C])(v123 + 266);
         a2 = v124;
-        MEMORY[0xCC7874](v58, v59, v123[259], 18, v60, HIDWORD(v60));
+        ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v58, v59, v123[259], 18, v60, HIDWORD(v60));
         v39 = *(_DWORD *)(v39 + 4);
         v40 = v39 - 76;
       }
@@ -174855,7 +174855,7 @@ sub_603F8408__LABEL_96:
       do
       {
         v6 = (_DWORD *)v6[1];
-        if ( !MEMORY[0xCC79F0](v8 + 4664, MEMORY[0xCC79F0], 0, 0, v14) )
+        if ( !((int (*)(int, int, int, int, int))MEMORY[0xCC79F0])(v8 + 4664, MEMORY[0xCC79F0], 0, 0, v14) )
         {
           sub_6041A1C4(a1, v8 + 4648);
           sead__ListNode__erase_((struct sead_ListNode *)&v8[a1[490]]);
@@ -175606,7 +175606,7 @@ sub_603F8408__LABEL_96:
     a1[23] = 1065353216;
     a1[349] = a2[12];
     a1[350] = nn__mii__GetExpressionCount((struct nn_mii *)a2[12], v15);
-    MEMORY[0xCC79E0](a1 + 1166, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+    ((int (*)(int, int))MEMORY[0xCC79E0])(a1 + 1166, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
     if ( !CurrentHeap )
       CurrentHeap = sead__HeapMgr__getCurrentHeap(MEMORY[0xCCEE90]);
     if ( !a4 )
@@ -175889,7 +175889,7 @@ sub_603F8408__LABEL_96:
       __operator_delete(0);
       *(_DWORD *)(a1 + 72) = 0;
     }
-    MEMORY[0xCC79E4](a1 + 4664);
+    ((int (*)(int))MEMORY[0xCC79E4])(a1 + 4664);
     *(_BYTE *)(a1 + 29) = 1;
     return sead__CriticalSection__unlock(v2);
   }
@@ -177267,7 +177267,7 @@ sub_603F8408__LABEL_96:
     v41[18] = 0;
     v41[19] = 1065353216;
     v41[20] = 0;
-    MEMORY[0xC5D024]();
+    ((int (*)(void))MEMORY[0xC5D024])();
     sub_6090C344(v39);
     sub_60921A90(a1 + 4424, 0);
     Table12_lookupAndDispatchSlot3(a1 + 4424, *(_DWORD *)(a1 + 4432), 0, v42, 0, 3);
@@ -178056,7 +178056,7 @@ sub_603F8408__LABEL_96:
         (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
         (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
         v8 = v49;
-        MEMORY[0xBC0244](&v44);
+        ((int (*)(int))MEMORY[0xBC0244])(&v44);
         result = (int)v45;
         if ( v8 != v45 )
         {
@@ -178080,7 +178080,7 @@ sub_603F8408__LABEL_96:
           (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
           (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
           v12 = v49;
-          MEMORY[0xBC0244](&v42);
+          ((int (*)(int))MEMORY[0xBC0244])(&v42);
           result = (int)v43;
           if ( v12 != v43 )
           {
@@ -178104,7 +178104,7 @@ sub_603F8408__LABEL_96:
             (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
             (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
             v16 = v49;
-            MEMORY[0xBC0244](&v40);
+            ((int (*)(int))MEMORY[0xBC0244])(&v40);
             result = (int)v41;
             if ( v16 != v41 )
             {
@@ -178128,7 +178128,7 @@ sub_603F8408__LABEL_96:
               (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
               (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
               v20 = v49;
-              MEMORY[0xBC0244](&v38);
+              ((int (*)(int))MEMORY[0xBC0244])(&v38);
               result = (int)v39;
               if ( v20 != v39 )
               {
@@ -178152,7 +178152,7 @@ sub_603F8408__LABEL_96:
                 (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
                 (*(void (__fastcall **)(int *))(v48 + 12))(&v48);
                 v24 = v49;
-                MEMORY[0xBC0244](&v36);
+                ((int (*)(int))MEMORY[0xBC0244])(&v36);
                 result = (int)v37;
                 if ( v24 != v37 )
                 {
@@ -178659,10 +178659,10 @@ sub_603F8408__LABEL_96:
     int v10; // r2
   
     v4 = MEMORY[0xC9BAF4];
-    MEMORY[0xCC7970](*(_DWORD *)(a2 + 192), 48);
+    ((int (*)(int, int))MEMORY[0xCC7970])(*(_DWORD *)(a2 + 192), 48);
     sub_6083EAF4(v4 + 204, a2 + 8, a1 + 1740, v4 + 184);
     v5 = MEMORY[0xC9BAF4];
-    MEMORY[0xCC7970](*(_DWORD *)(a2 + 192), 48);
+    ((int (*)(int, int))MEMORY[0xCC7970])(*(_DWORD *)(a2 + 192), 48);
     if ( *(int *)(a1 + 1400) >= 1 )
     {
       v6 = v5 + 184;
@@ -178682,7 +178682,7 @@ sub_603F8408__LABEL_96:
     }
     if ( (*(_BYTE *)(a1 + 24) & 2) != 0 )
       sub_6041F274(a1, a2);
-    return MEMORY[0xCC7978](*(_DWORD *)(a2 + 192), a1 + 4664, 0, 1);
+    return ((int (*)(int, int, int, int))MEMORY[0xCC7978])(*(_DWORD *)(a2 + 192), a1 + 4664, 0, 1);
   }
 
 /* ============================================================================
@@ -178726,7 +178726,7 @@ sub_603F8408__LABEL_96:
     _BYTE v37[24]; // [sp+C4h] [bp-18h] BYREF
   
     v4 = MEMORY[0xC9BAF4];
-    MEMORY[0xCC7970](*(_DWORD *)(a2 + 192), 50);
+    ((int (*)(int, int))MEMORY[0xCC7970])(*(_DWORD *)(a2 + 192), 50);
     Object_callSlot7(a1 + 4328, a2);
     v5 = Bounds_initFromPlatformLimits(v37, a1 + 4328);
     Rect_computeOverlapBlend(v5, a2, a1 + 4328);
@@ -178933,7 +178933,7 @@ sub_603F8408__LABEL_96:
     if ( sub_6083DCFC(a3) == 1 )
     {
       v9 = (_DWORD *)sub_6083DD0C(a3);
-      v10 = MEMORY[0xCC72C8](*(_DWORD *)(MEMORY[0xCCFC8C] + 28), *v9, v7[46]);
+      v10 = ((int (*)(int, int, int))MEMORY[0xCC72C8])(*(_DWORD *)(MEMORY[0xCCFC8C] + 28), *v9, v7[46]);
       sub_6091D95C(v8);
       if ( *(int *)(v8 + 632) >= 1 )
       {
@@ -178942,14 +178942,14 @@ sub_603F8408__LABEL_96:
         {
           v34 = *(_DWORD *)(a2 + 192);
           v12 = sub_60916E38(1);
-          MEMORY[0xCC783C](v34, v12, *(char *)(v11 + 1), MEMORY[0xCC783C], v10, HIDWORD(v10));
+          ((int (*)(int, int, int, int, int, int))MEMORY[0xCC783C])(v34, v12, *(char *)(v11 + 1), MEMORY[0xCC783C], v10, HIDWORD(v10));
         }
       }
     }
     v32 = *(_DWORD *)(v8 + 616);
     v13 = *(_DWORD *)(v8 + 620);
     v35 = a3;
-    LODWORD(v14) = MEMORY[0xCC746C](a1 + 4472);
+    LODWORD(v14) = ((int (*)(int))MEMORY[0xCC746C])(a1 + 4472);
     v15 = *(unsigned __int16 *)(a1 + 4464) * *(unsigned __int8 *)(a1 + 4461);
     if ( a4 == 9 )
       ++v15;
@@ -178959,14 +178959,14 @@ sub_603F8408__LABEL_96:
     sub_6041FB58(a1 + 4424, a2, &v36, v13, 0, *(_DWORD *)(a1 + 4436));
     v16 = *(_DWORD *)(v8 + 616);
     v17 = *(_DWORD *)(v8 + 620);
-    v18 = MEMORY[0xCC746C](a1 + 4568);
+    v18 = ((int (*)(int))MEMORY[0xCC746C])(a1 + 4568);
     v19 = (a4 + *(unsigned __int16 *)(a1 + 4560) * *(unsigned __int8 *)(a1 + 4557)) * *(_DWORD *)(a1 + 4536);
     v36 = v18 + (unsigned int)v19;
     if ( v16 > 2 )
       v17 += 24;
     sub_6041FB58(a1 + 4520, a2, &v36, v17, 0, *(_DWORD *)(a1 + 4532));
-    MEMORY[0xCC7810](*(_DWORD *)(a2 + 192), v7[108], v7[112]);
-    MEMORY[0xCC7814](*(_DWORD *)(a2 + 192), v7[107], v7[110]);
+    ((int (*)(int, int, int))MEMORY[0xCC7810])(*(_DWORD *)(a2 + 192), v7[108], v7[112]);
+    ((int (*)(int, int, int))MEMORY[0xCC7814])(*(_DWORD *)(a2 + 192), v7[107], v7[110]);
     v38 = 0;
     v37 = 0;
     v36 = 0;
@@ -178974,7 +178974,7 @@ sub_603F8408__LABEL_96:
     v20 = sub_6083DCF0(v35, 0);
     v21 = sub_6083DD1C(v35, 0);
     sub_60835528(v20, &v36);
-    MEMORY[0xCC781C](*(_DWORD *)(a2 + 192), **(char **)(v8 + 604), v36, HIDWORD(v36), v21);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC781C])(*(_DWORD *)(a2 + 192), **(char **)(v8 + 604), v36, HIDWORD(v36), v21);
     if ( sub_6083DCDC(v35, 1) == 1 )
     {
       v20 = sub_6083DCF0(v35, 1);
@@ -178985,7 +178985,7 @@ sub_603F8408__LABEL_96:
     sub_60835528(v20, &v36);
     if ( v22 > 1 )
       v23 += 12;
-    MEMORY[0xCC781C](*(_DWORD *)(a2 + 192), *v23, v36, HIDWORD(v36), v21);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC781C])(*(_DWORD *)(a2 + 192), *v23, v36, HIDWORD(v36), v21);
     if ( sub_6083DCDC(v35, 2) == 1 )
     {
       v20 = sub_6083DCF0(v35, 2);
@@ -178996,7 +178996,7 @@ sub_603F8408__LABEL_96:
     sub_60835528(v20, &v36);
     if ( v24 > 2 )
       v25 += 24;
-    MEMORY[0xCC781C](*(_DWORD *)(a2 + 192), *v25, v36, HIDWORD(v36), v21);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC781C])(*(_DWORD *)(a2 + 192), *v25, v36, HIDWORD(v36), v21);
     if ( sub_6083DCDC(v35, 4) == 1 )
     {
       v20 = sub_6083DCF0(v35, 4);
@@ -179007,12 +179007,12 @@ sub_603F8408__LABEL_96:
     sub_60835528(v20, &v36);
     if ( v26 > 3 )
       v27 += 36;
-    MEMORY[0xCC781C](*(_DWORD *)(a2 + 192), *v27, v36, HIDWORD(v36), v21);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC781C])(*(_DWORD *)(a2 + 192), *v27, v36, HIDWORD(v36), v21);
     v28 = sub_6083DD28(v35);
     sub_60835528(v28, &v36);
     v29 = *(_DWORD *)(a2 + 192);
     v30 = sub_6083DD30(v35);
-    return MEMORY[0xCC7874](v29, 4, 1, v30, v36, HIDWORD(v36));
+    return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v29, 4, 1, v30, v36, HIDWORD(v36));
   }
 
 /* ============================================================================
@@ -184524,7 +184524,7 @@ sub_603F8408__LABEL_96:
         v20 = MEMORY[0xB3B8E4];
         v21 = MEMORY[0xB3B8EC];
         v22 = MEMORY[0xB3B8F4];
-        MEMORY[0xC5D078](&v15, v16);
+        ((int (*)(int, int))MEMORY[0xC5D078])(&v15, v16);
         sub_6090C77C(v14);
         v13 = sub_6090BDE0(v14);
         sub_60924DD0(a1 + 17144, v16, v13, a3);
@@ -185011,7 +185011,7 @@ sub_603F8408__LABEL_96:
     v38 = "fcl";
     sead__SafeStringBase_char__assureTerminationImpl_(&v39);
     v14 = v40;
-    MEMORY[0xBC0244](&v37);
+    ((int (*)(int))MEMORY[0xBC0244])(&v37);
     if ( v14 == v38 )
     {
   sub_604283E0__LABEL_23:
@@ -187979,7 +187979,7 @@ sub_603F8408__LABEL_96:
       v5 = 0;
       do
       {
-        v6 = MEMORY[0xCC73E8](v4[179]);
+        v6 = ((int (*)(int))MEMORY[0xCC73E8])(v4[179]);
         v7 = v6 + Slot_getRelativeOffset(v4 + 176);
         v8 = (_DWORD *)(a2 + v5);
         *(_DWORD *)(v7 + v5) = *(_DWORD *)(a2 + v5);
@@ -188034,17 +188034,17 @@ sub_603F8408__LABEL_96:
     v2 = a1 + 732;
     Slot_initFromResource(a1 + 732, 24, 0, 4, 0);
     Slot_initWithOwnerAndOffset(v11, v2, 0);
-    v3 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 744));
+    v3 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 744));
     *(_DWORD *)(v3 + Slot_getRelativeOffset(v2)) = 0;
-    v4 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 744));
+    v4 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 744));
     *(_DWORD *)(v4 + Slot_getRelativeOffset(v2) + 4) = 1;
-    v5 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 744));
+    v5 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 744));
     *(_DWORD *)(v5 + Slot_getRelativeOffset(v2) + 8) = 2;
-    v6 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 744));
+    v6 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 744));
     *(_DWORD *)(v6 + Slot_getRelativeOffset(v2) + 12) = 2;
-    v7 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 744));
+    v7 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 744));
     *(_DWORD *)(v7 + Slot_getRelativeOffset(v2) + 16) = 3;
-    v8 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 744));
+    v8 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 744));
     *(_DWORD *)(v8 + Slot_getRelativeOffset(v2) + 20) = 0;
     Slot_initWithOwnerAndOffset(v10, v2, 0);
     v12[0] = v10[0];
@@ -188154,8 +188154,8 @@ sub_603F8408__LABEL_96:
     sub_60922278((int)(a1 + 72), a2);
     v14 = *(_DWORD *)(a2 + 192);
     v15 = a1[158];
-    v16 = MEMORY[0xCC746C](a1 + 164);
-    return MEMORY[0xCC7874](v14, v15, a1[157], 6, v16, HIDWORD(v16));
+    v16 = ((int (*)(int))MEMORY[0xCC746C])(a1 + 164);
+    return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v14, v15, a1[157], 6, v16, HIDWORD(v16));
   }
 
 /* ============================================================================
@@ -189638,7 +189638,7 @@ sub_603F8408__LABEL_96:
     char v13; // [sp+35h] [bp-3Bh]
     char v14; // [sp+61h] [bp-Fh]
   
-    MEMORY[0xCC7970](*(_DWORD *)(a2 + 192), 50);
+    ((int (*)(int, int))MEMORY[0xCC7970])(*(_DWORD *)(a2 + 192), 50);
     Object_lockedReleaseIfFlag2(*a1, a2, 1);
     RenderParams_defaultInit(v10);
     v12 = 1;
@@ -189865,7 +189865,7 @@ sub_603F8408__LABEL_96:
     sub_60835528(v43, &v47);
     v44 = *(_DWORD *)(a2 + 192);
     v45 = sub_6083DD30(a3);
-    return MEMORY[0xCC7874](v44, 4, 1, v45, v47, v48);
+    return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v44, 4, 1, v45, v47, v48);
   }
 
 /* ============================================================================
@@ -189894,7 +189894,7 @@ sub_603F8408__LABEL_96:
     char v21; // [sp+35h] [bp-3Bh]
     char v22; // [sp+61h] [bp-Fh]
   
-    MEMORY[0xCC7970](*(_DWORD *)(a2 + 192), 50);
+    ((int (*)(int, int))MEMORY[0xCC7970])(*(_DWORD *)(a2 + 192), 50);
     Object_lockedReleaseIfFlag2(*a1, a2, 1);
     v4 = RenderParams_defaultInit(v17);
     v20 = 1;
@@ -189963,8 +189963,8 @@ sub_603F8408__LABEL_96:
     int v14; // [sp+10h] [bp-8h]
     int v15; // [sp+14h] [bp-4h]
   
-    MEMORY[0xCC7810](*(_DWORD *)(a2 + 192), a1[356], a1[360]);
-    MEMORY[0xCC7814](*(_DWORD *)(a2 + 192), a1[355], a1[358]);
+    ((int (*)(int, int, int))MEMORY[0xCC7810])(*(_DWORD *)(a2 + 192), a1[356], a1[360]);
+    ((int (*)(int, int, int))MEMORY[0xCC7814])(*(_DWORD *)(a2 + 192), a1[355], a1[358]);
     v15 = 0;
     v14 = 0;
     v13 = 0;
@@ -189974,7 +189974,7 @@ sub_603F8408__LABEL_96:
     v7 = sub_6083DCF0(a3, 0);
     v8 = sub_6083DD1C(a3, 0);
     sub_60835528(v7, &v12);
-    MEMORY[0xCC781C](*(_DWORD *)(a2 + 192), **(char **)(v6 + 604), v12, v13, v8);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC781C])(*(_DWORD *)(a2 + 192), **(char **)(v6 + 604), v12, v13, v8);
     if ( sub_6083DCDC(a3, 2) == 1 )
     {
       v7 = sub_6083DCF0(a3, 2);
@@ -189986,7 +189986,7 @@ sub_603F8408__LABEL_96:
     if ( *v9 != -1 )
     {
       sub_60835528(v7, &v12);
-      MEMORY[0xCC781C](*(_DWORD *)(a2 + 192), *(char *)v9, v12, v13, v8);
+      ((int (*)(int, int, int, int, int))MEMORY[0xCC781C])(*(_DWORD *)(a2 + 192), *(char *)v9, v12, v13, v8);
     }
     if ( sub_6083DCDC(a3, 1) == 1 )
     {
@@ -190000,7 +190000,7 @@ sub_603F8408__LABEL_96:
     if ( *(_DWORD *)v10 != -1 )
     {
       sub_60835528(v7, &v12);
-      return MEMORY[0xCC781C](*(_DWORD *)(a2 + 192), *v10, v12, v13, v8);
+      return ((int (*)(int, int, int, int, int))MEMORY[0xCC781C])(*(_DWORD *)(a2 + 192), *v10, v12, v13, v8);
     }
     return result;
   }
@@ -193561,7 +193561,7 @@ sub_603F8408__LABEL_96:
       (*(void (__fastcall **)(int *))(v62 + 12))(&v62);
       (*(void (__fastcall **)(int *))(v62 + 12))(&v62);
       v16 = v63;
-      MEMORY[0xBC0244](&v60);
+      ((int (*)(int))MEMORY[0xBC0244])(&v60);
       if ( v16 == v61 )
         goto sub_60433658__LABEL_26;
       for ( i = 1; ; i += 2 )
@@ -194440,7 +194440,7 @@ sub_603F8408__LABEL_96:
         if ( a4[218] > *(_DWORD *)a2 )
           v24 += 96 * *(_DWORD *)a2;
         v75 = *(unsigned __int16 *)(v24 + 40) * (unsigned int)*(unsigned __int8 *)(v24 + 37) * *(_DWORD *)(v24 + 16)
-            + MEMORY[0xCC746C](v24 + 48);
+            + ((int (*)(int))MEMORY[0xCC746C])(v24 + 48);
         sub_6041FB58(v24, v23, &v75, v25, 0, *(_DWORD *)(v24 + 12));
         v26 = *(_DWORD *)(a2 + 16);
         v27 = *(_DWORD **)(v26 + 20);
@@ -194526,7 +194526,7 @@ sub_603F8408__LABEL_96:
         *(_DWORD *)(a2 + 20) = v68;
         if ( (*(_BYTE *)(v69 + 628) & 1) != 0 && !*(_BYTE *)(a1 + 436) )
         {
-          MEMORY[0xCC77F0](*(_DWORD *)(*(_DWORD *)(a2 + 44) + 192), 1, v69 + 640);
+          ((int (*)(int, int, int))MEMORY[0xCC77F0])(*(_DWORD *)(*(_DWORD *)(a2 + 44) + 192), 1, v69 + 640);
         }
         else
         {
@@ -194584,7 +194584,7 @@ sub_603F8408__LABEL_96:
         v65 = a2;
         if ( (*(_BYTE *)(v69 + 44) & 1) != 0 )
         {
-          MEMORY[0xCC77F0](*(_DWORD *)(*(_DWORD *)(a2 + 44) + 192), 1, v69 + 56);
+          ((int (*)(int, int, int))MEMORY[0xCC77F0])(*(_DWORD *)(*(_DWORD *)(a2 + 44) + 192), 1, v69 + 56);
         }
         else
         {
@@ -202456,7 +202456,7 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
     {
       v6 = a1 + 584 * a3;
       if ( (*(_BYTE *)(v6 + 44) & 1) != 0 )
-        return MEMORY[0xCC77F0](*(_DWORD *)(a2 + 192), 1, v6 + 56);
+        return ((int (*)(int, int, int))MEMORY[0xCC77F0])(*(_DWORD *)(a2 + 192), 1, v6 + 56);
     }
     RenderParams_defaultInit(v11);
     v7 = a3 & 3;
@@ -203152,40 +203152,40 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
     Slot_initWithOwnerAndOffset(v39, a1 + 2, 0);
     Slot_initFromResource(a1 + 9, 12, 0, 4, 0);
     Slot_initWithOwnerAndOffset(v38, a1 + 9, 0);
-    v4 = MEMORY[0xCC73E8](a1[5]);
+    v4 = ((int (*)(int))MEMORY[0xCC73E8])(a1[5]);
     v5 = Slot_getRelativeOffset(a1 + 2);
     *(_DWORD *)(v4 + v5) = -1082130432;
     v6 = v4 + v5;
     *(_DWORD *)(v6 + 4) = 1065353216;
     *(_DWORD *)(v6 + 8) = 0;
-    v7 = MEMORY[0xCC73E8](a1[5]);
+    v7 = ((int (*)(int))MEMORY[0xCC73E8])(a1[5]);
     v8 = (_DWORD *)(v7 + Slot_getRelativeOffset(a1 + 2));
     v8[5] = 1065353216;
     v8[6] = 1065353216;
     v8[7] = 0;
-    v9 = MEMORY[0xCC73E8](a1[5]);
+    v9 = ((int (*)(int))MEMORY[0xCC73E8])(a1[5]);
     v10 = (_DWORD *)(v9 + Slot_getRelativeOffset(a1 + 2));
     v10[10] = -1082130432;
     v10[11] = -1082130432;
     v10[12] = 0;
-    v11 = MEMORY[0xCC73E8](a1[5]);
+    v11 = ((int (*)(int))MEMORY[0xCC73E8])(a1[5]);
     v12 = (_DWORD *)(v11 + Slot_getRelativeOffset(a1 + 2));
     v12[15] = 1065353216;
     v12[16] = -1082130432;
     v12[17] = 0;
-    v13 = MEMORY[0xCC73E8](a1[5]);
+    v13 = ((int (*)(int))MEMORY[0xCC73E8])(a1[5]);
     v14 = v13 + Slot_getRelativeOffset(a1 + 2);
     *(_DWORD *)(v14 + 12) = 0;
     *(_DWORD *)(v14 + 16) = 0;
-    v15 = MEMORY[0xCC73E8](a1[5]);
+    v15 = ((int (*)(int))MEMORY[0xCC73E8])(a1[5]);
     v16 = v15 + Slot_getRelativeOffset(a1 + 2);
     *(_DWORD *)(v16 + 32) = 1065353216;
     *(_DWORD *)(v16 + 36) = 0;
-    v17 = MEMORY[0xCC73E8](a1[5]);
+    v17 = ((int (*)(int))MEMORY[0xCC73E8])(a1[5]);
     v18 = v17 + Slot_getRelativeOffset(a1 + 2);
     *(_DWORD *)(v18 + 52) = 0;
     *(_DWORD *)(v18 + 56) = 1065353216;
-    v19 = MEMORY[0xCC73E8](a1[5]);
+    v19 = ((int (*)(int))MEMORY[0xCC73E8])(a1[5]);
     v20 = v19 + Slot_getRelativeOffset(a1 + 2);
     *(_DWORD *)(v20 + 72) = 1065353216;
     *(_DWORD *)(v20 + 76) = 1065353216;
@@ -203200,17 +203200,17 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
     v42 = v36[2];
     sub_60922794(a1 + 16, &v40, a1[83]);
     sub_60922730(a1 + 16, 0, a1[83]);
-    v22 = MEMORY[0xCC73E8](a1[12]);
+    v22 = ((int (*)(int))MEMORY[0xCC73E8])(a1[12]);
     *(_WORD *)(v22 + Slot_getRelativeOffset(a1 + 9)) = 0;
-    v23 = MEMORY[0xCC73E8](a1[12]);
+    v23 = ((int (*)(int))MEMORY[0xCC73E8])(a1[12]);
     *(_WORD *)(v23 + Slot_getRelativeOffset(a1 + 9) + 2) = 2;
-    v24 = MEMORY[0xCC73E8](a1[12]);
+    v24 = ((int (*)(int))MEMORY[0xCC73E8])(a1[12]);
     *(_WORD *)(v24 + Slot_getRelativeOffset(a1 + 9) + 4) = 1;
-    v25 = MEMORY[0xCC73E8](a1[12]);
+    v25 = ((int (*)(int))MEMORY[0xCC73E8])(a1[12]);
     *(_WORD *)(v25 + Slot_getRelativeOffset(a1 + 9) + 6) = 1;
-    v26 = MEMORY[0xCC73E8](a1[12]);
+    v26 = ((int (*)(int))MEMORY[0xCC73E8])(a1[12]);
     *(_WORD *)(v26 + Slot_getRelativeOffset(a1 + 9) + 8) = 2;
-    v27 = MEMORY[0xCC73E8](a1[12]);
+    v27 = ((int (*)(int))MEMORY[0xCC73E8])(a1[12]);
     *(_WORD *)(v27 + Slot_getRelativeOffset(a1 + 9) + 10) = 3;
     Slot_initWithOwnerAndOffset(v35, a1 + 9, 0);
     v28 = a1[11];
@@ -203470,8 +203470,8 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
     sub_60922278(a1 + 104, *(_DWORD *)(a2 + 40));
     v16 = a1[86];
     v17 = *(_DWORD *)(*(_DWORD *)(a2 + 40) + 192);
-    v18 = MEMORY[0xCC746C](a1 + 92);
-    MEMORY[0xCC7874](v17, v16, a1[85], 6, v18, HIDWORD(v18));
+    v18 = ((int (*)(int))MEMORY[0xCC746C])(a1 + 92);
+    ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v17, v16, a1[85], 6, v18, HIDWORD(v18));
     Object_releaseHandle(&v22);
     return Object_releaseHalfwordHandle(v21);
   }
@@ -203931,7 +203931,7 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
                 v99 = v15 * v99;
                 v100 = v15 * v100;
               }
-              MEMORY[0xC5D024](&v90, v91);
+              ((int (*)(int, int))MEMORY[0xC5D024])(&v90, v91);
               v16 = *(_DWORD *)(*(_DWORD *)(a1 + 432) + 76);
               if ( !v16 )
                 v16 = 13437584;
@@ -204957,7 +204957,7 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
         {
           sub_60445224(*(_DWORD **)(result + 420), *(_DWORD *)(result + 424), a2);
   sub_604437E4__LABEL_14:
-          result = MEMORY[0xCC78FC](*(_DWORD *)(a2[10] + 192));
+          result = ((int (*)(int))MEMORY[0xCC78FC])(*(_DWORD *)(a2[10] + 192));
         }
         break;
       default:
@@ -204972,7 +204972,7 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
  * ============================================================================ */
   int __fastcall sub_60443908(int a1, int a2)
   {
-    return MEMORY[0xCC78FC](*(_DWORD *)(a2 + 192));
+    return ((int (*)(int))MEMORY[0xCC78FC])(*(_DWORD *)(a2 + 192));
   }
 
 /* ============================================================================
@@ -207435,7 +207435,7 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
           v42[21] = v29;
           v42[22] = v30;
           v42[23] = v31;
-          MEMORY[0xC5D078](&v41, v42);
+          ((int (*)(int, int))MEMORY[0xC5D078])(&v41, v42);
           sub_6090CE08((int)v40);
           sub_60444EDC(*(_DWORD **)(a1 + 420), *(_DWORD *)(a1 + 424), (int)&v41, (int)v40, 0, *(_DWORD *)(a1 + 428), 0);
           nullsub_113(v40);
@@ -207488,10 +207488,10 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
     v11 = 0;
     v8 &= 0xFFFFFFF0;
     RenderParams_updateFromModel(v4, *(_DWORD *)(a2 + 8));
-    MEMORY[0xCC78FC](*(_DWORD *)(*(_DWORD *)(a2 + 8) + 192));
+    ((int (*)(int))MEMORY[0xCC78FC])(*(_DWORD *)(*(_DWORD *)(a2 + 8) + 192));
     if ( *(_BYTE *)(a1 + 5448) )
       sub_60445328(*(_DWORD *)(a1 + 420), *(_DWORD *)(a1 + 424), *(_DWORD *)(a1 + 5352));
-    MEMORY[0xCC78FC](*(_DWORD *)(*(_DWORD *)(a2 + 8) + 192));
+    ((int (*)(int))MEMORY[0xCC78FC])(*(_DWORD *)(*(_DWORD *)(a2 + 8) + 192));
     v5 = (unsigned __int8 *)RenderParams_defaultInit((int)v7);
     return RenderParams_updateFromModel(v5, *(_DWORD *)(a2 + 8));
   }
@@ -214461,56 +214461,56 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
       v19 = 0;
       do
       {
-        v20 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+        v20 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
         v21 = (_DWORD *)(v20 + Slot_getRelativeOffset(a1 + 912) + v18);
         v21[10] = 0;
         v21[11] = 0;
         v21[12] = 0;
         v21[13] = 0;
-        v22 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+        v22 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
         v23 = (_DWORD *)(v22 + Slot_getRelativeOffset(a1 + 912) + v18);
         v23[14] = 0;
         v23[15] = 0;
         v23[16] = 0;
         v23[17] = 0;
-        v24 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+        v24 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
         v25 = (_DWORD *)(v24 + Slot_getRelativeOffset(a1 + 912) + v18);
         v25[3] = 0;
         v25[4] = 0;
         v25[5] = 0;
-        v26 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+        v26 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
         v27 = v26 + Slot_getRelativeOffset(a1 + 912);
         *(_DWORD *)(v27 + v18) = 0;
         v28 = v27 + v18;
         *(_DWORD *)(v28 + 4) = 0;
         *(_DWORD *)(v28 + 8) = 0;
-        v29 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+        v29 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
         v30 = v29 + Slot_getRelativeOffset(a1 + 912) + v18;
         *(_DWORD *)(v30 + 24) = 0;
         *(_DWORD *)(v30 + 28) = 0;
-        v31 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+        v31 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
         v32 = v31 + Slot_getRelativeOffset(a1 + 912) + v18;
         *(_DWORD *)(v32 + 32) = 0;
         *(_DWORD *)(v32 + 36) = 0;
-        v33 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+        v33 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
         v34 = (_DWORD *)(v33 + Slot_getRelativeOffset(a1 + 912) + v18);
         v34[18] = 0;
         v34[19] = 0;
         v34[20] = 0;
         v34[21] = 0;
-        v35 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+        v35 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
         v36 = (_DWORD *)(v35 + Slot_getRelativeOffset(a1 + 912) + v18);
         v36[22] = 0;
         v36[23] = 0;
         v36[24] = 0;
         v36[25] = 0;
-        v37 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+        v37 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
         v38 = (_DWORD *)(v37 + Slot_getRelativeOffset(a1 + 912) + v18);
         v38[26] = 0;
         v38[27] = 0;
         v38[28] = 0;
         v38[29] = 0;
-        v39 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+        v39 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
         ++v19;
         v40 = (_DWORD *)(v39 + Slot_getRelativeOffset(a1 + 912) + v18);
         v18 += 136;
@@ -214690,17 +214690,17 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
       v10 = 0;
       do
       {
-        v11 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 896));
+        v11 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 896));
         *(_DWORD *)(v11 + Slot_getRelativeOffset(a1 + 884) + v8 - 20) = v9;
-        v12 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 896));
+        v12 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 896));
         *(_DWORD *)(v12 + Slot_getRelativeOffset(a1 + 884) + v8 - 16) = v9 + 1;
-        v13 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 896));
+        v13 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 896));
         *(_DWORD *)(v13 + Slot_getRelativeOffset(a1 + 884) + v8 - 12) = v9 + 2;
-        v14 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 896));
+        v14 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 896));
         *(_DWORD *)(v14 + Slot_getRelativeOffset(a1 + 884) + v8 - 8) = v9 + 2;
-        v15 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 896));
+        v15 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 896));
         *(_DWORD *)(v15 + Slot_getRelativeOffset(a1 + 884) + v8 - 4) = v9 + 3;
-        v16 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 896));
+        v16 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 896));
         ++v10;
         *(_DWORD *)(v16 + Slot_getRelativeOffset(a1 + 884) + v8) = v9;
         v9 += 4;
@@ -214933,10 +214933,10 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
           {
             v17 = *(_DWORD *)(a2 + 192);
             v18 = *(_DWORD *)(a1 + 680);
-            v25 = MEMORY[0xCC746C](a1 + 704) + (unsigned int)(6 * v13 * *(_DWORD *)(a1 + 700));
+            v25 = ((int (*)(int))MEMORY[0xCC746C])(a1 + 704) + (unsigned int)(6 * v13 * *(_DWORD *)(a1 + 700));
             v19 = v18;
             a2 = v26;
-            MEMORY[0xCC7874](v17, v19, *(_DWORD *)(a1 + 676), v11 - 6 * v13, v25, HIDWORD(v25));
+            ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v17, v19, *(_DWORD *)(a1 + 676), v11 - 6 * v13, v25, HIDWORD(v25));
           }
           v14 = *(unsigned __int8 **)(a1 + 2288);
           v9 = *(_DWORD *)(a1 + 860);
@@ -214960,8 +214960,8 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
     sub_60922278(v10, a2);
     v21 = *(_DWORD *)(a2 + 192);
     v22 = *(_DWORD *)(a1 + 680);
-    v23 = MEMORY[0xCC746C](v20);
-    MEMORY[0xCC7874](
+    v23 = ((int (*)(int))MEMORY[0xCC746C])(v20);
+    ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(
       v21,
       v22,
       *(_DWORD *)(a1 + 676),

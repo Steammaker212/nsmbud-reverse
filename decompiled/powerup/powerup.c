@@ -259,8 +259,8 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9 = *(_DWORD *)(a2 + 192);
       v10 = a1[170];
-      v11 = MEMORY[0xCC746C](a1 + 176);
-      return MEMORY[0xCC7874](
+      v11 = ((int (*)(int))MEMORY[0xCC746C])(a1 + 176);
+      return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(
                v9,
                v10,
                a1[169],
@@ -299,7 +299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v10 = *(_DWORD *)(a1 + 856);
       v11 = *(_DWORD *)(a1 + 876);
-      v12 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
+      v12 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 924));
       v13 = Slot_getRelativeOffset(a1 + 912);
       if ( a3 >= 1 )
       {
@@ -28259,7 +28259,7 @@ MenuLayoutTable_init__LABEL_89:
           v8 = (_DWORD *)Object_freeViaGlobalWithSize(272, 16);
           LetterAnimOn_ref((int)v8, (int)a4, a5, a6, v26);
           *v8 = 12571188;
-          MEMORY[0xBFD2A0](v8, a2, *(_DWORD *)(MEMORY[0xCCF464] + 36), a6, v26);
+          ((int (*)(int, int, int, int, int))MEMORY[0xBFD2A0])(v8, a2, *(_DWORD *)(MEMORY[0xCCF464] + 36), a6, v26);
           break;
         case 829715056:
           v14 = Object_freeViaGlobalWithSize(192, 16);

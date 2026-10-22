@@ -136,6 +136,12 @@ def main():
     rc, tail = run([os.path.join(REPO, "scripts", "fix_asm_escapes.py"), "--apply"])
     print("inline ARM escapes: %s" % tail)
 
+    # MEMORY[addr](args) is the decompiler's rendering of an indirect call through a pointer stored at an
+    # absolute image offset. As written it indexes a uint32_t and tries to call the VALUE, which is why 1,280
+    # sites reported "called object type 'uint32_t' is not a function". Rewritten as a cast function pointer.
+    rc, tail = run([os.path.join(REPO, "scripts", "fix_memory_calls.py"), "--write"])
+    print("indirect calls: %s" % tail)
+
     # Header prototypes are aligned to the definitions BEFORE they are relaxed: alignment needs the real
     # parameter list to compare against, and relaxing first would discard it.
     rc, tail = run([os.path.join(REPO, "scripts", "align_header_prototypes.py"), "--write"])

@@ -31104,7 +31104,7 @@ sub_6081CA7C__LABEL_157:
     sead__BufferedSafeStringBase_char__assureTerminationImpl_(v126);
     *(_DWORD *)v126 = 12756624;
     v8 = *(char **)&v126[4];
-    MEMORY[0xBC0244](&v115);
+    ((int (*)(int))MEMORY[0xBC0244])(&v115);
     v9 = v116;
     if ( v8 != v116 )
     {
@@ -43435,16 +43435,16 @@ sub_6082756C__LABEL_84:
     v4 = 8;
     if ( (v2 & 0x10) != 0 )
     {
-      MEMORY[0xCC72BC](*a1, 4, &v10);
+      ((int (*)(int, int, int))MEMORY[0xCC72BC])(*a1, 4, &v10);
       v4 = v10;
       if ( v10 <= 8 )
         v4 = 8;
     }
     if ( (v2 & 0x200) != 0 )
     {
-      MEMORY[0xCC72BC](*a1, 13, &v9);
+      ((int (*)(int, int, int))MEMORY[0xCC72BC])(*a1, 13, &v9);
       v5 = v9;
-      MEMORY[0xCC72BC](*a1, 53, &v9);
+      ((int (*)(int, int, int))MEMORY[0xCC72BC])(*a1, 53, &v9);
       if ( v4 < v5 )
         v4 = v5;
       if ( v4 < v9 )
@@ -43452,7 +43452,7 @@ sub_6082756C__LABEL_84:
     }
     if ( (v2 & 0x800) != 0 )
     {
-      MEMORY[0xCC72BC](*a1, 10, &v8);
+      ((int (*)(int, int, int))MEMORY[0xCC72BC])(*a1, 10, &v8);
       if ( v4 < v8 )
         v4 = v8;
     }
@@ -43490,12 +43490,12 @@ sub_6082756C__LABEL_84:
     char v11; // r2
     _BYTE v13[64]; // [sp+0h] [bp-40h] BYREF
   
-    MEMORY[0xCC7448](v13);
-    MEMORY[0xCC7444](v13, *a2);
-    MEMORY[0xCC744C](v13, *a4, a5, *a3);
+    ((int (*)(int))MEMORY[0xCC7448])(v13);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v13, *a2);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v13, *a4, a5, *a3);
     *(_DWORD *)(a1 + 8) = a1 + 16;
-    MEMORY[0xCC745C]();
-    v9 = MEMORY[0xCC7400](*a4);
+    ((int (*)(void))MEMORY[0xCC745C])();
+    v9 = ((int (*)(int))MEMORY[0xCC7400])(*a4);
     v10 = *(_BYTE *)(a1 + 1);
     v11 = v10 & 0xFC;
     if ( (v9 & 4) != 0 )
@@ -43511,7 +43511,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_60835494(int a1)
   {
-    MEMORY[0xCC7464](*(_DWORD *)(a1 + 8));
+    ((int (*)(int))MEMORY[0xCC7464])(*(_DWORD *)(a1 + 8));
     *(_DWORD *)(a1 + 8) = 0;
     *(_BYTE *)a1 = 0;
     return 0;
@@ -43523,7 +43523,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_608354C4(int a1)
   {
-    return MEMORY[0xCC7468](*(_DWORD *)(a1 + 8));
+    return ((int (*)(int))MEMORY[0xCC7468])(*(_DWORD *)(a1 + 8));
   }
 
 /* ============================================================================
@@ -43533,7 +43533,7 @@ sub_6082756C__LABEL_84:
   int __fastcall sub_608354E0(int result)
   {
     if ( (*(_BYTE *)(result + 1) & 2) != 0 )
-      return MEMORY[0xCC7470](*(_DWORD *)(result + 8));
+      return ((int (*)(int))MEMORY[0xCC7470])(*(_DWORD *)(result + 8));
     return result;
   }
 
@@ -43544,7 +43544,7 @@ sub_6082756C__LABEL_84:
   int __fastcall sub_60835504(int result)
   {
     if ( (*(_BYTE *)(result + 1) & 2) != 0 )
-      return MEMORY[0xCC7474](*(_DWORD *)(result + 8));
+      return ((int (*)(int))MEMORY[0xCC7474])(*(_DWORD *)(result + 8));
     return result;
   }
 
@@ -43556,7 +43556,7 @@ sub_6082756C__LABEL_84:
   {
     __int64 result; // r0
   
-    result = MEMORY[0xCC746C](*(_DWORD *)(a1 + 8));
+    result = ((int (*)(int))MEMORY[0xCC746C])(*(_DWORD *)(a1 + 8));
     *(_QWORD *)a2 = result;
     *(_DWORD *)(a2 + 8) = 0;
     *(_DWORD *)(a2 + 12) = 0;
@@ -43579,7 +43579,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_60835574(int a1, int a2, int a3, int a4)
   {
-    return MEMORY[0xCC78A4](*(_DWORD *)(a1 + 184), a2, a3, a4);
+    return ((int (*)(int, int, int, int))MEMORY[0xCC78A4])(*(_DWORD *)(a1 + 184), a2, a3, a4);
   }
 
 /* ============================================================================
@@ -43593,7 +43593,7 @@ sub_6082756C__LABEL_84:
   
     v4 = *(_DWORD *)(a1 + 184);
     v7 = sub_6083AB50(a2);
-    return MEMORY[0xCC7870](v4, v7, a4, a3);
+    return ((int (*)(int, int, int, int))MEMORY[0xCC7870])(v4, v7, a4, a3);
   }
 
 /* ============================================================================
@@ -43607,7 +43607,7 @@ sub_6082756C__LABEL_84:
   
     v6 = *(_DWORD *)(a1 + 184);
     v9 = sub_6083AB50(a2);
-    return MEMORY[0xCC787C](v6, v9, a4, a3, a6, a5);
+    return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC787C])(v6, v9, a4, a3, a6, a5);
   }
 
 /* ============================================================================
@@ -43625,7 +43625,7 @@ sub_6082756C__LABEL_84:
     v9 = sub_6083AB50(a2);
     v10 = sub_6083AC8C(a3);
     v11 = nullsub_70(*a4, a4[1], a4[2], a4[3]);
-    return MEMORY[0xCC7878](v6, v9, v10, a5, v11, HIDWORD(v11), a6);
+    return ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7878])(v6, v9, v10, a5, v11, HIDWORD(v11), a6);
   }
 
 /* ============================================================================
@@ -43643,7 +43643,7 @@ sub_6082756C__LABEL_84:
     v11 = sub_6083AB50(a2);
     v12 = sub_6083AC8C(a3);
     v13 = nullsub_70(*a4, a4[1], a4[2], a4[3]);
-    return MEMORY[0xCC7880](v8, v11, v12, a5, v13, HIDWORD(v13), a6, a8, a7);
+    return ((int (*)(int, int, int, int, int, int, int, int, int))MEMORY[0xCC7880])(v8, v11, v12, a5, v13, HIDWORD(v13), a6, a8, a7);
   }
 
 /* ============================================================================
@@ -43669,27 +43669,27 @@ sub_6082756C__LABEL_84:
         v6 = *(_DWORD *)(a2 + 40);
         do
         {
-          MEMORY[0xCC77F8](v5, v6);
+          ((int (*)(int, int))MEMORY[0xCC77F8])(v5, v6);
           v5 = *(_DWORD *)(a1 + 184);
           v6 += 8;
           --v4;
         }
         while ( v4 );
       }
-      MEMORY[0xCC77FC](v5, a2 + 52);
-      MEMORY[0xCC7800](*(_DWORD *)(a1 + 184), a2 + 48);
-      MEMORY[0xCC78F0](*(_DWORD *)(a1 + 184), a2 + 56);
-      MEMORY[0xCC780C](*(_DWORD *)(a1 + 184), a2 + 128);
-      MEMORY[0xCC78E4](*(_DWORD *)(a1 + 184), 3, *(_DWORD *)(a2 + 136));
-      MEMORY[0xCC78E8](*(_DWORD *)(a1 + 184), 3, *(_DWORD *)(a2 + 140));
-      MEMORY[0xCC78EC](*(_DWORD *)(a1 + 184), 2, *(_DWORD *)(a2 + 144));
-      MEMORY[0xCC78EC](*(_DWORD *)(a1 + 184), 1, *(_DWORD *)(a2 + 148));
+      ((int (*)(int, int))MEMORY[0xCC77FC])(v5, a2 + 52);
+      ((int (*)(int, int))MEMORY[0xCC7800])(*(_DWORD *)(a1 + 184), a2 + 48);
+      ((int (*)(int, int))MEMORY[0xCC78F0])(*(_DWORD *)(a1 + 184), a2 + 56);
+      ((int (*)(int, int))MEMORY[0xCC780C])(*(_DWORD *)(a1 + 184), a2 + 128);
+      ((int (*)(int, int, int))MEMORY[0xCC78E4])(*(_DWORD *)(a1 + 184), 3, *(_DWORD *)(a2 + 136));
+      ((int (*)(int, int, int))MEMORY[0xCC78E8])(*(_DWORD *)(a1 + 184), 3, *(_DWORD *)(a2 + 140));
+      ((int (*)(int, int, int))MEMORY[0xCC78EC])(*(_DWORD *)(a1 + 184), 2, *(_DWORD *)(a2 + 144));
+      ((int (*)(int, int, int))MEMORY[0xCC78EC])(*(_DWORD *)(a1 + 184), 1, *(_DWORD *)(a2 + 148));
       if ( (*(_BYTE *)(a2 + 154) & 8) == 0 )
-        MEMORY[0xCC78C4](*(_DWORD *)(a1 + 184), 0);
-      MEMORY[0xCC7810](*(_DWORD *)(a1 + 184), *(_DWORD *)(a2 + 16), *(_DWORD *)(a2 + 32));
-      MEMORY[0xCC7814](*(_DWORD *)(a1 + 184), *(_DWORD *)(a2 + 12), *(_DWORD *)(a2 + 24));
+        ((int (*)(int, int))MEMORY[0xCC78C4])(*(_DWORD *)(a1 + 184), 0);
+      ((int (*)(int, int, int))MEMORY[0xCC7810])(*(_DWORD *)(a1 + 184), *(_DWORD *)(a2 + 16), *(_DWORD *)(a2 + 32));
+      ((int (*)(int, int, int))MEMORY[0xCC7814])(*(_DWORD *)(a1 + 184), *(_DWORD *)(a2 + 12), *(_DWORD *)(a2 + 24));
       if ( (*(_BYTE *)(a2 + 2) & 1) != 0 )
-        MEMORY[0xCC784C](*(_DWORD *)(a1 + 184), *(_DWORD *)(a2 + 160));
+        ((int (*)(int, int))MEMORY[0xCC784C])(*(_DWORD *)(a1 + 184), *(_DWORD *)(a2 + 160));
     }
     v7 = *(_DWORD *)(a2 + 168);
     if ( !v7 )
@@ -43702,10 +43702,10 @@ sub_6082756C__LABEL_84:
     {
   sub_60835704__LABEL_13:
       v9 = sub_6083AC38(63);
-      return MEMORY[0xCC7818](*(_DWORD *)(a1 + 184), v8, v9);
+      return ((int (*)(int, int, int))MEMORY[0xCC7818])(*(_DWORD *)(a1 + 184), v8, v9);
     }
     v9 = *(_DWORD *)(v7 + 4);
-    return MEMORY[0xCC7818](*(_DWORD *)(a1 + 184), v8, v9);
+    return ((int (*)(int, int, int))MEMORY[0xCC7818])(*(_DWORD *)(a1 + 184), v8, v9);
   }
 
 /* ============================================================================
@@ -43717,20 +43717,20 @@ sub_6082756C__LABEL_84:
     unsigned int v4; // r0
     int result; // r0
   
-    MEMORY[0xCC7808](*(_DWORD *)(a1 + 184), a2);
-    MEMORY[0xCC78FC](*(_DWORD *)(a1 + 184));
-    MEMORY[0xCC7804](*(_DWORD *)(a1 + 184), a2 + 4);
+    ((int (*)(int, int))MEMORY[0xCC7808])(*(_DWORD *)(a1 + 184), a2);
+    ((int (*)(int))MEMORY[0xCC78FC])(*(_DWORD *)(a1 + 184));
+    ((int (*)(int, int))MEMORY[0xCC7804])(*(_DWORD *)(a1 + 184), a2 + 4);
     v4 = *(unsigned __int8 *)(a2 + 45);
     if ( (v4 & 1) != 0 )
     {
-      MEMORY[0xCC7904](*(_DWORD *)(a1 + 184), *(_DWORD *)(a2 + 28));
+      ((int (*)(int, int))MEMORY[0xCC7904])(*(_DWORD *)(a1 + 184), *(_DWORD *)(a2 + 28));
       v4 = *(unsigned __int8 *)(a2 + 45);
     }
-    MEMORY[0xCC790C](*(_DWORD *)(a1 + 184), ((v4 >> 1) & 1) == 0);
-    MEMORY[0xCC7908](*(_DWORD *)(a1 + 184), ((*(unsigned __int8 *)(a2 + 45) >> 2) & 1) == 0);
+    ((int (*)(int, int))MEMORY[0xCC790C])(*(_DWORD *)(a1 + 184), ((v4 >> 1) & 1) == 0);
+    ((int (*)(int, int))MEMORY[0xCC7908])(*(_DWORD *)(a1 + 184), ((*(unsigned __int8 *)(a2 + 45) >> 2) & 1) == 0);
     result = *(unsigned __int8 *)(a1 + 1);
     if ( (result & 2) != 0 )
-      return MEMORY[0xCC7910](*(_DWORD *)(a1 + 184), (*(unsigned __int8 *)(a2 + 45) >> 3) & 1);
+      return ((int (*)(int, int))MEMORY[0xCC7910])(*(_DWORD *)(a1 + 184), (*(unsigned __int8 *)(a2 + 45) >> 3) & 1);
     return result;
   }
 
@@ -43751,16 +43751,16 @@ sub_6082756C__LABEL_84:
       v6 = *a2;
       do
       {
-        MEMORY[0xCC77F8](v5, v6);
+        ((int (*)(int, int))MEMORY[0xCC77F8])(v5, v6);
         v5 = *(_DWORD *)(a1 + 184);
         --v4;
         v6 += 8;
       }
       while ( v4 );
     }
-    MEMORY[0xCC77FC](v5, a2 + 3);
-    MEMORY[0xCC7800](*(_DWORD *)(a1 + 184), a2 + 2);
-    return MEMORY[0xCC78F0](*(_DWORD *)(a1 + 184), a2 + 4);
+    ((int (*)(int, int))MEMORY[0xCC77FC])(v5, a2 + 3);
+    ((int (*)(int, int))MEMORY[0xCC7800])(*(_DWORD *)(a1 + 184), a2 + 2);
+    return ((int (*)(int, int))MEMORY[0xCC78F0])(*(_DWORD *)(a1 + 184), a2 + 4);
   }
 
 /* ============================================================================
@@ -43771,14 +43771,14 @@ sub_6082756C__LABEL_84:
   {
     int result; // r0
   
-    MEMORY[0xCC780C](*(_DWORD *)(a1 + 184), a2);
-    MEMORY[0xCC78E4](*(_DWORD *)(a1 + 184), 3, *(_DWORD *)(a2 + 8));
-    MEMORY[0xCC78E8](*(_DWORD *)(a1 + 184), 3, *(_DWORD *)(a2 + 12));
-    MEMORY[0xCC78EC](*(_DWORD *)(a1 + 184), 2, *(_DWORD *)(a2 + 16));
-    MEMORY[0xCC78EC](*(_DWORD *)(a1 + 184), 1, *(_DWORD *)(a2 + 20));
+    ((int (*)(int, int))MEMORY[0xCC780C])(*(_DWORD *)(a1 + 184), a2);
+    ((int (*)(int, int, int))MEMORY[0xCC78E4])(*(_DWORD *)(a1 + 184), 3, *(_DWORD *)(a2 + 8));
+    ((int (*)(int, int, int))MEMORY[0xCC78E8])(*(_DWORD *)(a1 + 184), 3, *(_DWORD *)(a2 + 12));
+    ((int (*)(int, int, int))MEMORY[0xCC78EC])(*(_DWORD *)(a1 + 184), 2, *(_DWORD *)(a2 + 16));
+    ((int (*)(int, int, int))MEMORY[0xCC78EC])(*(_DWORD *)(a1 + 184), 1, *(_DWORD *)(a2 + 20));
     result = *(unsigned __int8 *)(a2 + 26);
     if ( (result & 8) == 0 )
-      return MEMORY[0xCC78C4](*(_DWORD *)(a1 + 184), 0);
+      return ((int (*)(int, int))MEMORY[0xCC78C4])(*(_DWORD *)(a1 + 184), 0);
     return result;
   }
 
@@ -43788,8 +43788,8 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_60835BA8(int a1, _DWORD *a2)
   {
-    MEMORY[0xCC7810](*(_DWORD *)(a1 + 184), a2[2], a2[6]);
-    return MEMORY[0xCC7814](*(_DWORD *)(a1 + 184), a2[1], a2[4]);
+    ((int (*)(int, int, int))MEMORY[0xCC7810])(*(_DWORD *)(a1 + 184), a2[2], a2[6]);
+    return ((int (*)(int, int, int))MEMORY[0xCC7814])(*(_DWORD *)(a1 + 184), a2[1], a2[4]);
   }
 
 /* ============================================================================
@@ -43811,10 +43811,10 @@ sub_6082756C__LABEL_84:
     {
   sub_60835BF8__LABEL_5:
       v5 = sub_6083AC38(a3);
-      return MEMORY[0xCC7818](*(_DWORD *)(a1 + 184), v4, v5);
+      return ((int (*)(int, int, int))MEMORY[0xCC7818])(*(_DWORD *)(a1 + 184), v4, v5);
     }
     v5 = *(_DWORD *)(a2 + 4);
-    return MEMORY[0xCC7818](*(_DWORD *)(a1 + 184), v4, v5);
+    return ((int (*)(int, int, int))MEMORY[0xCC7818])(*(_DWORD *)(a1 + 184), v4, v5);
   }
 
 /* ============================================================================
@@ -43884,7 +43884,7 @@ sub_6082756C__LABEL_84:
   
     v6 = *(_DWORD *)(a1 + 184);
     v7 = nullsub_70(*a3, a3[1], a3[2], a3[3]);
-    return MEMORY[0xCC781C](v6, a2, v7, HIDWORD(v7), a5);
+    return ((int (*)(int, int, int, int, int))MEMORY[0xCC781C])(v6, a2, v7, HIDWORD(v7), a5);
   }
 
 /* ============================================================================
@@ -43899,18 +43899,18 @@ sub_6082756C__LABEL_84:
     int v7; // r6
     int v8; // r5
   
-    MEMORY[0xCC78C0](*(_DWORD *)(a1 + 184));
-    MEMORY[0xCC78B0](*(_DWORD *)(a1 + 184), 0, 1, a2 + 4);
-    result = MEMORY[0xCC78BC](*(_DWORD *)(a1 + 184), 0, 1, a2 + 12);
+    ((int (*)(int))MEMORY[0xCC78C0])(*(_DWORD *)(a1 + 184));
+    ((int (*)(int, int, int, int))MEMORY[0xCC78B0])(*(_DWORD *)(a1 + 184), 0, 1, a2 + 4);
+    result = ((int (*)(int, int, int, int))MEMORY[0xCC78BC])(*(_DWORD *)(a1 + 184), 0, 1, a2 + 12);
     v5 = a2[2];
     if ( v5 >= 2 )
     {
       v6 = *a2;
       v7 = v5 - 1;
-      MEMORY[0xCC78B0](*(_DWORD *)(a1 + 184), 1, v5 - 1, v6);
+      ((int (*)(int, int, int, int))MEMORY[0xCC78B0])(*(_DWORD *)(a1 + 184), 1, v5 - 1, v6);
       v8 = v6 + 16 * v7;
-      MEMORY[0xCC78C8](*(_DWORD *)(a1 + 184), 1, v7, v8);
-      return MEMORY[0xCC78BC](*(_DWORD *)(a1 + 184), 1, v7, v8 + 8 * v7);
+      ((int (*)(int, int, int, int))MEMORY[0xCC78C8])(*(_DWORD *)(a1 + 184), 1, v7, v8);
+      return ((int (*)(int, int, int, int))MEMORY[0xCC78BC])(*(_DWORD *)(a1 + 184), 1, v7, v8 + 8 * v7);
     }
     return result;
   }
@@ -43948,7 +43948,7 @@ sub_6082756C__LABEL_84:
     int v35; // [sp+ACh] [bp-8h] BYREF
     int v36; // [sp+B0h] [bp-4h] BYREF
   
-    v10 = MEMORY[0xCC757C](*(_DWORD *)(a2 + 8));
+    v10 = ((int (*)(int))MEMORY[0xCC757C])(*(_DWORD *)(a2 + 8));
     v11 = v10 == 6;
     v12 = &v34;
     if ( v10 != 6 )
@@ -43971,7 +43971,7 @@ sub_6082756C__LABEL_84:
       v14 = 1;
     *v13 = v14;
   sub_60835E70__LABEL_9:
-    v15 = MEMORY[0xCC757C](*(_DWORD *)(a4 + 8));
+    v15 = ((int (*)(int))MEMORY[0xCC757C])(*(_DWORD *)(a4 + 8));
     v16 = *(_DWORD *)(a5 + 4);
     v17 = v15 == 6;
     v18 = &v29;
@@ -44014,11 +44014,11 @@ sub_6082756C__LABEL_84:
     v27[3] = *(_DWORD *)(a5 + 12);
     v27[4] = v20;
     v27[5] = v22;
-    MEMORY[0xCC7528](v26);
-    MEMORY[0xCC752C](v26, *(unsigned __int16 *)(a3 + 24), 1);
-    MEMORY[0xCC7528](v25);
-    MEMORY[0xCC752C](v25, *(unsigned __int16 *)(a5 + 24), 1);
-    return MEMORY[0xCC7924](*(_DWORD *)(a1 + 184), *(_DWORD *)(a4 + 8), v25, v27, *(_DWORD *)(a2 + 8), v26, v28, a6 & 1);
+    ((int (*)(int))MEMORY[0xCC7528])(v26);
+    ((int (*)(int, int, int))MEMORY[0xCC752C])(v26, *(unsigned __int16 *)(a3 + 24), 1);
+    ((int (*)(int))MEMORY[0xCC7528])(v25);
+    ((int (*)(int, int, int))MEMORY[0xCC752C])(v25, *(unsigned __int16 *)(a5 + 24), 1);
+    return ((int (*)(int, int, int, int, int, int, int, int))MEMORY[0xCC7924])(*(_DWORD *)(a1 + 184), *(_DWORD *)(a4 + 8), v25, v27, *(_DWORD *)(a2 + 8), v26, v28, a6 & 1);
   }
 
 /* ============================================================================
@@ -44078,18 +44078,18 @@ sub_6082756C__LABEL_84:
     v20 = 0;
     if ( v4 )
     {
-      MEMORY[0xCC7544](v4, &v19, v17);
-      MEMORY[0xCC7558](v4, &v18);
+      ((int (*)(int, int, int))MEMORY[0xCC7544])(v4, &v19, v17);
+      ((int (*)(int, int))MEMORY[0xCC7558])(v4, &v18);
     }
     else
     {
       v19 = 0;
-      v18 = MEMORY[0xCC757C](v5);
+      v18 = ((int (*)(int))MEMORY[0xCC757C])(v5);
     }
-    v9 = MEMORY[0xCC7580](v5);
-    v10 = MEMORY[0xCC7584](v5);
+    v9 = ((int (*)(int))MEMORY[0xCC7580])(v5);
+    v10 = ((int (*)(int))MEMORY[0xCC7584])(v5);
     v24 = v10;
-    v11 = MEMORY[0xCC7588](v5);
+    v11 = ((int (*)(int))MEMORY[0xCC7588])(v5);
     v12 = 1;
     v25 = v11;
     if ( v9 >> v19 > 1 )
@@ -44125,7 +44125,7 @@ sub_6082756C__LABEL_84:
         v25 = a4[1];
       }
     }
-    return MEMORY[0xCC7930](*(_DWORD *)(a1 + 184), v5, v4, &v20, a3, 15);
+    return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7930])(*(_DWORD *)(a1 + 184), v5, v4, &v20, a3, 15);
   }
 
 /* ============================================================================
@@ -44135,7 +44135,7 @@ sub_6082756C__LABEL_84:
   int __fastcall sub_6083625C(int result, __int16 a2)
   {
     if ( (a2 & 0x49C0) != 0 )
-      return MEMORY[0xCC7970](*(_DWORD *)(result + 184), 1);
+      return ((int (*)(int, int))MEMORY[0xCC7970])(*(_DWORD *)(result + 184), 1);
     return result;
   }
 
@@ -44155,7 +44155,7 @@ sub_6082756C__LABEL_84:
     if ( (v2 & 0x2050) != 0 )
       v3 |= 0x20u;
     if ( v3 )
-      return MEMORY[0xCC7970](*(_DWORD *)(result + 184), v3);
+      return ((int (*)(int, int))MEMORY[0xCC7970])(*(_DWORD *)(result + 184), v3);
     return result;
   }
 
@@ -44170,11 +44170,11 @@ sub_6082756C__LABEL_84:
     __int64 v10; // kr00_8
     int v11; // r0
   
-    v8 = MEMORY[0xCC72C8](**(_DWORD **)(a1 + 8), *a4, *a5);
+    v8 = ((int (*)(int, int, int))MEMORY[0xCC72C8])(**(_DWORD **)(a1 + 8), *a4, *a5);
     v9 = *(_DWORD *)(a1 + 184);
     v10 = v8;
     v11 = sub_6083AC24(a3);
-    return MEMORY[0xCC783C](v9, v11, a2, MEMORY[0xCC783C], v10, HIDWORD(v10));
+    return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC783C])(v9, v11, a2, MEMORY[0xCC783C], v10, HIDWORD(v10));
   }
 
 /* ============================================================================
@@ -44190,7 +44190,7 @@ sub_6082756C__LABEL_84:
     v5 = *(_DWORD *)(a1 + 184);
     v8 = sub_6083AC24(a3);
     v9 = nullsub_70(*a4, a4[1], a4[2], a4[3]);
-    return MEMORY[0xCC7824](v5, v8, a2, MEMORY[0xCC7824], v9, HIDWORD(v9), a5);
+    return ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(v5, v8, a2, MEMORY[0xCC7824], v9, HIDWORD(v9), a5);
   }
 
 /* ============================================================================
@@ -44206,7 +44206,7 @@ sub_6082756C__LABEL_84:
     v5 = *(_DWORD *)(a1 + 184);
     v8 = sub_6083AC24(a3);
     v9 = nullsub_70(*a4, a4[1], a4[2], a4[3]);
-    return MEMORY[0xCC7834](v5, v8, a2, MEMORY[0xCC7834], v9, HIDWORD(v9), a5);
+    return ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7834])(v5, v8, a2, MEMORY[0xCC7834], v9, HIDWORD(v9), a5);
   }
 
 /* ============================================================================
@@ -44299,11 +44299,11 @@ sub_6082756C__LABEL_84:
     v6 = nullsub_69(*a3);
     *(_DWORD *)a1 = a1 + 16;
     *(_DWORD *)(a1 + 8) = a3[2];
-    MEMORY[0xCC73C0](v8, *a2);
-    MEMORY[0xCC73C4](v8);
-    MEMORY[0xCC73CC](v8, v6);
-    MEMORY[0xCC73C8](v8, a3[2], a3[1]);
-    MEMORY[0xCC73DC](*(_DWORD *)a1, v8);
+    ((int (*)(int, int))MEMORY[0xCC73C0])(v8, *a2);
+    ((int (*)(int))MEMORY[0xCC73C4])(v8);
+    ((int (*)(int, int))MEMORY[0xCC73CC])(v8, v6);
+    ((int (*)(int, int, int))MEMORY[0xCC73C8])(v8, a3[2], a3[1]);
+    ((int (*)(int, int))MEMORY[0xCC73DC])(*(_DWORD *)a1, v8);
     *(_BYTE *)(a1 + 273) &= ~1u;
     *(_BYTE *)(a1 + 272) = 1;
     return 1;
@@ -44315,7 +44315,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_60836614(int a1)
   {
-    MEMORY[0xCC73E4](*(_DWORD *)a1);
+    ((int (*)(int))MEMORY[0xCC73E4])(*(_DWORD *)a1);
     *(_DWORD *)(a1 + 8) = 0;
     *(_BYTE *)(a1 + 272) = 0;
     return 0;
@@ -44327,7 +44327,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_60836644(_DWORD *a1)
   {
-    return MEMORY[0xCC73E8](*a1);
+    return ((int (*)(int))MEMORY[0xCC73E8])(*a1);
   }
 
 /* ============================================================================
@@ -44980,39 +44980,39 @@ sub_6082756C__LABEL_84:
     int v31; // [sp+24h] [bp-8h]
     int v32; // [sp+28h] [bp-4h] BYREF
   
-    MEMORY[0xCC72BC](a1, 40, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 40, &v32);
     v2 = v32;
-    MEMORY[0xCC72BC](a1, 41, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 41, &v32);
     v31 = v32;
-    MEMORY[0xCC72BC](a1, 42, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 42, &v32);
     v30 = v32;
-    MEMORY[0xCC72BC](a1, 50, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 50, &v32);
     v29 = v32;
-    MEMORY[0xCC72BC](a1, 59, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 59, &v32);
     v28 = v32;
-    MEMORY[0xCC72BC](a1, 66, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 66, &v32);
     v27 = v32;
-    MEMORY[0xCC72BC](a1, 67, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 67, &v32);
     v26 = v32;
-    MEMORY[0xCC72BC](a1, 68, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 68, &v32);
     v25 = v32;
-    MEMORY[0xCC72BC](a1, 69, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 69, &v32);
     v24 = v32;
-    MEMORY[0xCC72BC](a1, 71, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 71, &v32);
     v23 = v32;
-    MEMORY[0xCC72BC](a1, 72, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 72, &v32);
     v22 = v32;
-    MEMORY[0xCC72BC](a1, 73, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 73, &v32);
     v3 = v32;
-    MEMORY[0xCC72BC](a1, 74, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 74, &v32);
     v4 = v32;
-    MEMORY[0xCC72BC](a1, 75, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 75, &v32);
     v5 = v32;
-    MEMORY[0xCC72BC](a1, 76, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 76, &v32);
     v6 = v32;
-    MEMORY[0xCC72BC](a1, 87, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 87, &v32);
     v7 = v32;
-    MEMORY[0xCC72BC](a1, 90, &v32);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1, 90, &v32);
     v8 = v2 != 0;
     if ( v31 )
       v8 |= 2u;
@@ -45116,14 +45116,14 @@ sub_6082756C__LABEL_84:
     {
       v5[12] = a3;
       v6 = a4 - a1 + v5[2];
-      v7 = MEMORY[0xCC73F4](*a3) + v6;
+      v7 = ((int (*)(int))MEMORY[0xCC73F4])(*a3) + v6;
     }
     else
     {
       v8 = (_DWORD *)v5[8];
       sub_60836538((int)v8, a2, *(_DWORD **)(a1 + 40));
       v5[12] = v8;
-      v7 = MEMORY[0xCC73F4](*v8);
+      v7 = ((int (*)(int))MEMORY[0xCC73F4])(*v8);
     }
     v9 = *(_DWORD *)(a1 + 28);
     if ( v9 >= 1 )
@@ -45201,29 +45201,29 @@ sub_6082756C__LABEL_84:
     int v13; // r1
     _BYTE v15[96]; // [sp+0h] [bp-60h] BYREF
   
-    MEMORY[0xCC75DC](v15);
-    MEMORY[0xCC75D8](v15, *(_DWORD *)a2);
+    ((int (*)(int))MEMORY[0xCC75DC])(v15);
+    ((int (*)(int, int))MEMORY[0xCC75D8])(v15, *(_DWORD *)a2);
     v6 = ((int (__fastcall *)(_DWORD))loc_6083AB64)(*((unsigned __int16 *)a3 + 3));
     v7 = ((int (__fastcall *)(_DWORD))loc_6083ABD4)(*((unsigned __int16 *)a3 + 3));
-    MEMORY[0xCC75E0](v15, v6, v7);
+    ((int (*)(int, int, int))MEMORY[0xCC75E0])(v15, v6, v7);
     v8 = sub_6083AC10(*a3);
     v9 = sub_6083AC10(a3[1]);
     v10 = sub_6083AC10(a3[2]);
-    MEMORY[0xCC75E4](v15, v8, v9, v10);
-    MEMORY[0xCC75E8](v15);
-    MEMORY[0xCC75EC](v15);
+    ((int (*)(int, int, int, int))MEMORY[0xCC75E4])(v15, v8, v9, v10);
+    ((int (*)(int))MEMORY[0xCC75E8])(v15);
+    ((int (*)(int))MEMORY[0xCC75EC])(v15);
     v11 = *((unsigned __int16 *)a3 + 3);
     v12 = sub_6083AC78(a3[3]);
-    MEMORY[0xCC75F0](v15, (v11 >> 7) & 1, v12);
-    MEMORY[0xCC75F4](v15, (char *)&unk_60B0E3F0 + 16 * a3[4]);
+    ((int (*)(int, int, int))MEMORY[0xCC75F0])(v15, (v11 >> 7) & 1, v12);
+    ((int (*)(int, int))MEMORY[0xCC75F4])(v15, (char *)&unk_60B0E3F0 + 16 * a3[4]);
     if ( (a3[6] & 0x40) != 0 )
-      MEMORY[0xCC7600](v15);
+      ((int (*)(int))MEMORY[0xCC7600])(v15);
     v13 = 0;
     if ( (*(_BYTE *)(a2 + 12300) & 1) != 0 )
       v13 = arr_dword_60B0E420[HIBYTE(*((unsigned __int16 *)a3 + 3)) & 3];
-    MEMORY[0xCC7604](v15, v13);
+    ((int (*)(int, int))MEMORY[0xCC7604])(v15, v13);
     *(_DWORD *)(a1 + 8) = a1 + 16;
-    MEMORY[0xCC7638]();
+    ((int (*)(void))MEMORY[0xCC7638])();
     *(_BYTE *)(a1 + 1) &= ~1u;
     *(_BYTE *)a1 = 1;
     return 1;
@@ -45235,7 +45235,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_6083B4C8(int a1)
   {
-    MEMORY[0xCC763C](*(_DWORD *)(a1 + 8));
+    ((int (*)(int))MEMORY[0xCC763C])(*(_DWORD *)(a1 + 8));
     *(_DWORD *)(a1 + 8) = 0;
     *(_BYTE *)a1 = 0;
     return 0;
@@ -45335,7 +45335,7 @@ sub_6082756C__LABEL_84:
   
     *(_DWORD *)(a1 + 8) = a1 + 16;
     *(_BYTE *)(a1 + 1) = *(_BYTE *)a3;
-    MEMORY[0xCC73B0]();
+    ((int (*)(void))MEMORY[0xCC73B0])();
     if ( !*(_BYTE *)(a3 + 1) )
     {
       v48 = 0;
@@ -45381,7 +45381,7 @@ sub_6082756C__LABEL_84:
           }
         }
       }
-      if ( !MEMORY[0xCC73BC](*(_DWORD *)(a1 + 8), v48, v79) )
+      if ( !((int (*)(int, int, int))MEMORY[0xCC73BC])(*(_DWORD *)(a1 + 8), v48, v79) )
         return 3;
       if ( (*(_BYTE *)a3 & 2) != 0 )
         *(_DWORD *)(a1 + 208) = *(_DWORD *)(a3 + 120);
@@ -45399,10 +45399,10 @@ sub_6082756C__LABEL_84:
       nn__os__LockMutex(&unk_60CC7A54);
       v9 = (void (__fastcall **)(_BYTE *))sub_6083AFB8();
       v9[5](v73);
-      MEMORY[0xCC72BC](*a2, 47, &v72);
-      MEMORY[0xCC72BC](*a2, 46, &v71);
-      MEMORY[0xCC72BC](*a2, 49, &v70);
-      MEMORY[0xCC72BC](*a2, 48, &v69);
+      ((int (*)(int, int, int))MEMORY[0xCC72BC])(*a2, 47, &v72);
+      ((int (*)(int, int, int))MEMORY[0xCC72BC])(*a2, 46, &v71);
+      ((int (*)(int, int, int))MEMORY[0xCC72BC])(*a2, 49, &v70);
+      ((int (*)(int, int, int))MEMORY[0xCC72BC])(*a2, 48, &v69);
       v8 = 3;
       if ( v74 >= v72 && v74 <= v71 && v75 >= v70 && v75 <= v69 )
       {
@@ -45529,12 +45529,12 @@ sub_6082756C__LABEL_84:
                         }
                         while ( v40 < v68[92] );
                       }
-                      MEMORY[0xCC73C0](v89, *a2);
-                      MEMORY[0xCC73C4](v89);
-                      MEMORY[0xCC73CC](v89, 97);
-                      MEMORY[0xCC73C8](v89, v68[65], v67);
-                      MEMORY[0xCC73DC](v68, v89);
-                      v42 = MEMORY[0xCC73F4](v68);
+                      ((int (*)(int, int))MEMORY[0xCC73C0])(v89, *a2);
+                      ((int (*)(int))MEMORY[0xCC73C4])(v89);
+                      ((int (*)(int, int))MEMORY[0xCC73CC])(v89, 97);
+                      ((int (*)(int, int, int))MEMORY[0xCC73C8])(v89, v68[65], v67);
+                      ((int (*)(int, int))MEMORY[0xCC73DC])(v68, v89);
+                      v42 = ((int (*)(int))MEMORY[0xCC73F4])(v68);
                       if ( (int)v68[92] >= 1 )
                       {
                         v43 = v68 + 68;
@@ -45572,7 +45572,7 @@ sub_6082756C__LABEL_84:
             if ( !v8 )
             {
               v8 = 3;
-              if ( MEMORY[0xCC73BC](
+              if ( ((int (*)(int, int, int))MEMORY[0xCC73BC])(
                      *(_DWORD *)(a1 + 8),
                      *(_DWORD *)(*(_DWORD *)(a1 + 216) + 368),
                      *(_DWORD *)(a1 + 216) + 272) == 1 )
@@ -45611,14 +45611,14 @@ sub_6082756C__LABEL_84:
     _DWORD *v3; // r5
     int v4; // r0
   
-    result = MEMORY[0xCC73B4](*(_DWORD *)(a1 + 8));
+    result = ((int (*)(int))MEMORY[0xCC73B4])(*(_DWORD *)(a1 + 8));
     *(_DWORD *)(a1 + 8) = 0;
     v3 = *(_DWORD **)(a1 + 216);
     if ( v3 )
     {
       if ( v3[64] )
       {
-        MEMORY[0xCC73E4](*(_DWORD *)(a1 + 216));
+        ((int (*)(int))MEMORY[0xCC73E4])(*(_DWORD *)(a1 + 216));
         free(v3[64]);
         v3[64] = 0;
         v3[65] = 0;
@@ -45962,13 +45962,13 @@ sub_6082756C__LABEL_84:
     char v17; // r1
     char v18; // r0
   
-    MEMORY[0xCC7734](a1);
+    ((int (*)(int))MEMORY[0xCC7734])(a1);
     v5 = sub_6083ACA0(a3[2]);
-    MEMORY[0xCC7738](a1, v5);
+    ((int (*)(int, int))MEMORY[0xCC7738])(a1, v5);
     v6 = sub_6083AB28(a3[1]);
-    MEMORY[0xCC773C](a1, v6);
+    ((int (*)(int, int))MEMORY[0xCC773C])(a1, v6);
     v7 = sub_6083AB3C(*a3);
-    MEMORY[0xCC7740](a1, v7);
+    ((int (*)(int, int))MEMORY[0xCC7740])(a1, v7);
     v8 = *((_DWORD *)a3 + 3);
     v9 = 0;
     *(float *)(a1 + 32) = (float)v8;
@@ -45984,14 +45984,14 @@ sub_6082756C__LABEL_84:
       v12 = 7;
     if ( v8 )
       v12 = 7;
-    MEMORY[0xCC7744](a1, v12);
+    ((int (*)(int, int))MEMORY[0xCC7744])(a1, v12);
     *(_DWORD *)(a1 + 28) = *((_DWORD *)a3 + 7);
-    MEMORY[0xCC76D8](a1 + 4);
-    MEMORY[0xCC76DC](a1 + 4, (*((unsigned __int16 *)a3 + 2) >> 1) & 1);
+    ((int (*)(int))MEMORY[0xCC76D8])(a1 + 4);
+    ((int (*)(int, int))MEMORY[0xCC76DC])(a1 + 4, (*((unsigned __int16 *)a3 + 2) >> 1) & 1);
     if ( a3[24] > 1u )
       v9 = a3[24];
-    MEMORY[0xCC76E0](a1 + 4, v9);
-    MEMORY[0xCC76E4](a1 + 4, *((_WORD *)a3 + 13) & 1);
+    ((int (*)(int, int))MEMORY[0xCC76E0])(a1 + 4, v9);
+    ((int (*)(int, int))MEMORY[0xCC76E4])(a1 + 4, *((_WORD *)a3 + 13) & 1);
     v14 = *(_BYTE *)(a1 + 45);
     v15 = v14 & 0xFE;
     if ( (*((_WORD *)a3 + 2) & 2) != 0 )
@@ -46095,9 +46095,9 @@ sub_6082756C__LABEL_84:
     a1[5] = *((_DWORD *)a3 + 2);
     a1[6] = *((_DWORD *)a3 + 3);
     a1[7] = *((_DWORD *)a3 + 4);
-    MEMORY[0xCC76B0](a1 + 2);
+    ((int (*)(int))MEMORY[0xCC76B0])(a1 + 2);
     v8 = a1 + 3;
-    MEMORY[0xCC76CC](a1 + 3);
+    ((int (*)(int))MEMORY[0xCC76CC])(a1 + 3);
     v21 = a1;
     *((_BYTE *)a1 + 37) = *a3;
     v9 = *((_WORD *)a3 + 1);
@@ -46113,18 +46113,18 @@ sub_6082756C__LABEL_84:
         if ( v11 )
           v11 = v10;
         v12 = (_BYTE *)(v23 + 32 * v11);
-        MEMORY[0xCC76B4](v7, v10, *v12 & 1);
-        MEMORY[0xCC7674](v5);
-        MEMORY[0xCC7678](v5, v10);
+        ((int (*)(int, int, int))MEMORY[0xCC76B4])(v7, v10, *v12 & 1);
+        ((int (*)(int))MEMORY[0xCC7674])(v5);
+        ((int (*)(int, int))MEMORY[0xCC7678])(v5, v10);
         v13 = sub_6083AB00((unsigned __int8)v12[1]);
         v14 = sub_6083AB00((unsigned __int8)v12[2]);
         v15 = sub_6083AB00((unsigned __int8)v12[4]);
         v16 = sub_6083AB00((unsigned __int8)v12[5]);
-        MEMORY[0xCC767C](v5, v13, v14, v15, v16);
+        ((int (*)(int, int, int, int, int))MEMORY[0xCC767C])(v5, v13, v14, v15, v16);
         v17 = sub_6083AAEC((unsigned __int8)v12[3]);
         v18 = sub_6083AAEC((unsigned __int8)v12[6]);
-        MEMORY[0xCC7680](v5, v17, v18);
-        MEMORY[0xCC76D0](
+        ((int (*)(int, int, int))MEMORY[0xCC7680])(v5, v17, v18);
+        ((int (*)(int, int, int, int, int, int))MEMORY[0xCC76D0])(
           v22,
           v10,
           v12[7] & 1,
@@ -46141,7 +46141,7 @@ sub_6082756C__LABEL_84:
     if ( (v9 & 8) != 0 )
     {
       v19 = sub_6083AB14(a3[1]);
-      MEMORY[0xCC76B8](v7, v19);
+      ((int (*)(int, int))MEMORY[0xCC76B8])(v7, v19);
     }
     *((_BYTE *)v21 + 36) = 1;
     return 1;
@@ -46191,24 +46191,24 @@ sub_6082756C__LABEL_84:
     int result; // r0
   
     *(_WORD *)(a1 + 26) = *((_WORD *)a3 + 2);
-    MEMORY[0xCC7758](a1);
-    MEMORY[0xCC775C](a1, *((_WORD *)a3 + 2) & 1);
-    MEMORY[0xCC7760](a1, (*((unsigned __int16 *)a3 + 2) >> 1) & 1);
-    MEMORY[0xCC7768](a1, (*((unsigned __int16 *)a3 + 2) >> 2) & 1);
+    ((int (*)(int))MEMORY[0xCC7758])(a1);
+    ((int (*)(int, int))MEMORY[0xCC775C])(a1, *((_WORD *)a3 + 2) & 1);
+    ((int (*)(int, int))MEMORY[0xCC7760])(a1, (*((unsigned __int16 *)a3 + 2) >> 1) & 1);
+    ((int (*)(int, int))MEMORY[0xCC7768])(a1, (*((unsigned __int16 *)a3 + 2) >> 2) & 1);
     v5 = sub_6083AAB0(*a3);
-    MEMORY[0xCC7764](a1, v5);
+    ((int (*)(int, int))MEMORY[0xCC7764])(a1, v5);
     v6 = sub_6083AAD8(a3[27]);
-    MEMORY[0xCC776C](a1, 2, v6);
+    ((int (*)(int, int, int))MEMORY[0xCC776C])(a1, 2, v6);
     v7 = sub_6083AAC4(a3[24]);
     v8 = sub_6083AAC4(a3[25]);
     v9 = sub_6083AAC4(a3[26]);
-    MEMORY[0xCC7770](a1, 2, v7, v8, v9);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC7770])(a1, 2, v7, v8, v9);
     v10 = sub_6083AAD8(a3[11]);
-    MEMORY[0xCC776C](a1, 1, v10);
+    ((int (*)(int, int, int))MEMORY[0xCC776C])(a1, 1, v10);
     v11 = sub_6083AAC4(a3[8]);
     v12 = sub_6083AAC4(a3[9]);
     v13 = sub_6083AAC4(a3[10]);
-    MEMORY[0xCC7770](a1, 1, v11, v12, v13);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC7770])(a1, 1, v11, v12, v13);
     *(_DWORD *)(a1 + 16) = a3[28];
     *(_DWORD *)(a1 + 20) = a3[12];
     *(_DWORD *)(a1 + 8) = a3[1];
@@ -46348,10 +46348,10 @@ sub_6082756C__LABEL_84:
       {
         v9 = *((_DWORD *)a3 + 4);
         v10 = v6 + v7;
-        MEMORY[0xCC77A0](v6 + v7);
+        ((int (*)(int))MEMORY[0xCC77A0])(v6 + v7);
         v11 = (_DWORD *)(v9 + 2 * v7);
-        MEMORY[0xCC77A4](v10, *v11);
-        MEMORY[0xCC77A8](v10, v11[1]);
+        ((int (*)(int, int))MEMORY[0xCC77A4])(v10, *v11);
+        ((int (*)(int, int))MEMORY[0xCC77A8])(v10, v11[1]);
         if ( i >= a3[1] )
           break;
         v7 += 8;
@@ -46384,10 +46384,10 @@ sub_6082756C__LABEL_84:
             {
   sub_6083CA08__LABEL_12:
               v19 = *(_DWORD *)(a1 + 24) + 4 * v18;
-              MEMORY[0xCC778C](v19);
+              ((int (*)(int))MEMORY[0xCC778C])(v19);
               v20 = sub_6083AA20(*(_DWORD *)(v16 + 12));
-              MEMORY[0xCC7790](v19, v20, *(_DWORD *)(v16 + 8));
-              MEMORY[0xCC7794](v19, *(unsigned __int16 *)(v16 + 4));
+              ((int (*)(int, int, int))MEMORY[0xCC7790])(v19, v20, *(_DWORD *)(v16 + 8));
+              ((int (*)(int, int))MEMORY[0xCC7794])(v19, *(unsigned __int16 *)(v16 + 4));
               if ( v13 < v18 )
                 v13 = v18;
               v33[(unsigned int)v18 >> 5] |= 1 << (v18 & 0x1F);
@@ -46409,10 +46409,10 @@ sub_6082756C__LABEL_84:
         if ( v23 >= 0 )
         {
           v24 = *(_DWORD *)(a1 + 24) + 4 * v23;
-          MEMORY[0xCC778C](v24);
+          ((int (*)(int))MEMORY[0xCC778C])(v24);
           v25 = sub_6083AA20(*(_DWORD *)(v22 + 12));
-          MEMORY[0xCC7790](v24, v25, *(_DWORD *)(v22 + 8));
-          MEMORY[0xCC7794](v24, *(unsigned __int16 *)(v22 + 4));
+          ((int (*)(int, int, int))MEMORY[0xCC7790])(v24, v25, *(_DWORD *)(v22 + 8));
+          ((int (*)(int, int))MEMORY[0xCC7794])(v24, *(unsigned __int16 *)(v22 + 4));
           if ( v13 < v23 )
             v13 = v23;
           v33[(unsigned int)v23 >> 5] |= 1 << (v23 & 0x1F);
@@ -46443,7 +46443,7 @@ sub_6082756C__LABEL_84:
       do
       {
         if ( (v33[v29 >> 5] & (1 << (v29 & 0x1F))) == 0 )
-          MEMORY[0xCC778C](*(_DWORD *)(a1 + 24) + v28);
+          ((int (*)(int))MEMORY[0xCC778C])(*(_DWORD *)(a1 + 24) + v28);
         ++v29;
         v28 += 4;
       }
@@ -46624,7 +46624,7 @@ sub_6082756C__LABEL_84:
     _BYTE v3[128]; // [sp+0h] [bp-80h] BYREF
   
     sub_6083CFA0(v3, *a1, a2);
-    return MEMORY[0xCC74C8](v3);
+    return ((int (*)(int))MEMORY[0xCC74C8])(v3);
   }
 
 /* ============================================================================
@@ -46651,23 +46651,23 @@ sub_6082756C__LABEL_84:
     v6 = *((_DWORD *)a3 + 8);
     v7 = ((int (__fastcall *)(_DWORD, bool, bool))loc_60836490)(a3[1], v6 > 1, *((unsigned __int16 *)a3 + 4) > 1u);
     v8 = sub_6083AA9C(v7);
-    MEMORY[0xCC748C](a1);
-    MEMORY[0xCC7488](a1, a2);
-    MEMORY[0xCC7498](a1, *((_DWORD *)a3 + 5));
+    ((int (*)(int))MEMORY[0xCC748C])(a1);
+    ((int (*)(int, int))MEMORY[0xCC7488])(a1, a2);
+    ((int (*)(int, int))MEMORY[0xCC7498])(a1, *((_DWORD *)a3 + 5));
     v9 = *((_DWORD *)a3 + 6);
     if ( v8 == 3 )
       v9 = v6;
-    MEMORY[0xCC749C](a1, v9);
+    ((int (*)(int, int))MEMORY[0xCC749C])(a1, v9);
     v10 = *((_DWORD *)a3 + 7);
     if ( (v8 | 2) == 6 )
       v10 = v6;
-    MEMORY[0xCC74A0](a1, v10);
-    MEMORY[0xCC74B0](a1, *((unsigned __int16 *)a3 + 3));
+    ((int (*)(int, int))MEMORY[0xCC74A0])(a1, v10);
+    ((int (*)(int, int))MEMORY[0xCC74B0])(a1, *((unsigned __int16 *)a3 + 3));
     if ( *((unsigned __int16 *)a3 + 4) >= 2u )
-      MEMORY[0xCC74B8](a1);
-    MEMORY[0xCC7494](a1, v8);
+      ((int (*)(int))MEMORY[0xCC74B8])(a1);
+    ((int (*)(int, int))MEMORY[0xCC7494])(a1, v8);
     v11 = sub_6083A9A4(*((_DWORD *)a3 + 3));
-    MEMORY[0xCC74B4](a1, v11);
+    ((int (*)(int, int))MEMORY[0xCC74B4])(a1, v11);
     v12 = 4;
     v13 = *((_DWORD *)a3 + 4) & 0x180;
     if ( v13 )
@@ -46678,18 +46678,18 @@ sub_6082756C__LABEL_84:
       v15 = 57;
       if ( !v13 )
         v15 = 56;
-      MEMORY[0xCC72BC](a2, v15, &v19);
+      ((int (*)(int, int, int))MEMORY[0xCC72BC])(a2, v15, &v19);
       v16 = sub_608363F8(*((_DWORD *)a3 + 5), *((int *)a3 + 3) >> 8);
-      MEMORY[0xCC74D8](a1, (v16 + v19 - 1) & -v19);
+      ((int (*)(int, int))MEMORY[0xCC74D8])(a1, (v16 + v19 - 1) & -v19);
       v17 = 64;
       if ( !v13 )
         v17 = 16;
       v14 |= v17;
     }
-    MEMORY[0xCC7490](a1, v14);
+    ((int (*)(int, int))MEMORY[0xCC7490])(a1, v14);
     result = *a3;
     if ( (result & 1) != 0 )
-      return MEMORY[0xCC74D4](a1, a3 + 36);
+      return ((int (*)(int, int))MEMORY[0xCC74D4])(a1, a3 + 36);
     return result;
   }
 
@@ -46702,7 +46702,7 @@ sub_6082756C__LABEL_84:
     _BYTE v3[128]; // [sp+0h] [bp-80h] BYREF
   
     sub_6083CFA0((int)v3, *a1, a2);
-    return MEMORY[0xCC74C4](v3);
+    return ((int (*)(int))MEMORY[0xCC74C4])(v3);
   }
 
 /* ============================================================================
@@ -46724,10 +46724,10 @@ sub_6082756C__LABEL_84:
     _BYTE v10[128]; // [sp+8h] [bp-80h] BYREF
   
     sub_6083CFA0((int)v10, *a2, a3);
-    MEMORY[0xCC74CC](v10, *a4, a5);
+    ((int (*)(int, int, int))MEMORY[0xCC74CC])(v10, *a4, a5);
     nullsub_76(v10, a3, a4, a5, a6);
     *(_DWORD *)(a1 + 8) = a1 + 16;
-    MEMORY[0xCC7560]();
+    ((int (*)(void))MEMORY[0xCC7560])();
     *(_BYTE *)(a1 + 1) &= ~1u;
     *(_BYTE *)a1 = 1;
     return 1;
@@ -46739,7 +46739,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_6083D2EC(int a1)
   {
-    MEMORY[0xCC7568](*(_DWORD *)(a1 + 8));
+    ((int (*)(int))MEMORY[0xCC7568])(*(_DWORD *)(a1 + 8));
     *(_DWORD *)(a1 + 8) = 0;
     *(_BYTE *)a1 = 0;
     return 0;
@@ -46771,14 +46771,14 @@ sub_6082756C__LABEL_84:
     v5 = a1 + 24;
     *(_QWORD *)(a1 + 8) = *(_QWORD *)(*((_DWORD *)a3 + 12) + 8);
     *(_DWORD *)(a1 + 16) = v5;
-    MEMORY[0xCC7528](v5);
-    MEMORY[0xCC752C](*(_DWORD *)(a1 + 16), *((unsigned __int16 *)a3 + 8), *((unsigned __int16 *)a3 + 9));
+    ((int (*)(int))MEMORY[0xCC7528])(v5);
+    ((int (*)(int, int, int))MEMORY[0xCC752C])(*(_DWORD *)(a1 + 16), *((unsigned __int16 *)a3 + 8), *((unsigned __int16 *)a3 + 9));
     if ( *a3 != 2 )
-      MEMORY[0xCC7530](*(_DWORD *)(a1 + 16), *((_DWORD *)a3 + 8), *((_DWORD *)a3 + 9));
+      ((int (*)(int, int, int))MEMORY[0xCC7530])(*(_DWORD *)(a1 + 16), *((_DWORD *)a3 + 8), *((_DWORD *)a3 + 9));
     v6 = *(_DWORD *)(a1 + 16);
     v7 = sub_6083A9A4(*((_DWORD *)a3 + 1));
     sub_6083D824(v6, v7, *(_DWORD *)(a1 + 8));
-    MEMORY[0xCC7538](
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC7538])(
       *(_DWORD *)(a1 + 16),
       arr_dword_60B0E474[a3[8]],
       arr_dword_60B0E474[a3[9]],
@@ -46787,10 +46787,10 @@ sub_6082756C__LABEL_84:
     v8 = a3[1];
     if ( a3[1] )
       v8 = 1;
-    MEMORY[0xCC753C](*(_DWORD *)(a1 + 16), v8);
+    ((int (*)(int, int))MEMORY[0xCC753C])(*(_DWORD *)(a1 + 16), v8);
     v9 = *(_DWORD *)(a1 + 16);
     v10 = sub_6083AA9C(*a3);
-    MEMORY[0xCC7540](v9, v10);
+    ((int (*)(int, int))MEMORY[0xCC7540])(v9, v10);
     *(_BYTE *)(a1 + 1) &= ~1u;
     *(_BYTE *)a1 = 1;
     return 1;
@@ -46834,15 +46834,15 @@ sub_6082756C__LABEL_84:
     v5 = a1 + 24;
     *(_QWORD *)(a1 + 8) = *(_QWORD *)(*((_DWORD *)a3 + 6) + 8);
     *(_DWORD *)(a1 + 16) = v5;
-    MEMORY[0xCC7528](v5);
-    MEMORY[0xCC752C](*(_DWORD *)(a1 + 16), *((unsigned __int16 *)a3 + 1), 1);
-    MEMORY[0xCC7530](*(_DWORD *)(a1 + 16), *((_DWORD *)a3 + 2), *((_DWORD *)a3 + 3));
+    ((int (*)(int))MEMORY[0xCC7528])(v5);
+    ((int (*)(int, int, int))MEMORY[0xCC752C])(*(_DWORD *)(a1 + 16), *((unsigned __int16 *)a3 + 1), 1);
+    ((int (*)(int, int, int))MEMORY[0xCC7530])(*(_DWORD *)(a1 + 16), *((_DWORD *)a3 + 2), *((_DWORD *)a3 + 3));
     v6 = *(_DWORD *)(a1 + 16);
     v7 = sub_6083A9A4(*((_DWORD *)a3 + 1));
-    MEMORY[0xCC7534](v6, v7);
+    ((int (*)(int, int))MEMORY[0xCC7534])(v6, v7);
     v8 = *(_DWORD *)(a1 + 16);
     v9 = sub_6083AA9C(*a3);
-    MEMORY[0xCC7540](v8, v9);
+    ((int (*)(int, int))MEMORY[0xCC7540])(v8, v9);
     result = *(_BYTE *)(a1 + 1) & 0xFE;
     *(_BYTE *)(a1 + 1) = result;
     *(_BYTE *)a1 = 1;
@@ -47107,7 +47107,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_6083D824(int a1, int a2)
   {
-    return MEMORY[0xCC7534](a1, a2);
+    return ((int (*)(int, int))MEMORY[0xCC7534])(a1, a2);
   }
 
 /* ============================================================================
@@ -52875,7 +52875,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_60847898(int a1, int a2)
   {
-    return MEMORY[0xCC73EC](**(_DWORD **)a1, *(_DWORD *)(a1 + 8), a2);
+    return ((int (*)(int, int, int))MEMORY[0xCC73EC])(**(_DWORD **)a1, *(_DWORD *)(a1 + 8), a2);
   }
 
 /* ============================================================================
@@ -64551,7 +64551,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_60855BA4(int a1, int a2)
   {
-    return MEMORY[0xCC7F88](a1, a2, MEMORY[0xCC7F90]);
+    return ((int (*)(int, int, int))MEMORY[0xCC7F88])(a1, a2, MEMORY[0xCC7F90]);
   }
 
 /* ============================================================================
@@ -64560,7 +64560,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_60855BC8(int a1)
   {
-    return MEMORY[0xCC7F88](a1, 4, MEMORY[0xCC7F90]);
+    return ((int (*)(int, int, int))MEMORY[0xCC7F88])(a1, 4, MEMORY[0xCC7F90]);
   }
 
 /* ============================================================================
@@ -64569,7 +64569,7 @@ sub_6082756C__LABEL_84:
  * ============================================================================ */
   int __fastcall sub_60855BF0(int a1)
   {
-    return MEMORY[0xCC7F8C](a1, MEMORY[0xCC7F90]);
+    return ((int (*)(int, int))MEMORY[0xCC7F8C])(a1, MEMORY[0xCC7F90]);
   }
 
 /* ============================================================================
@@ -64643,7 +64643,7 @@ sub_6082756C__LABEL_84:
     if ( v8 )
     {
       v9 = sub_60855A40(v8);
-      MEMORY[0xCC7F8C](v9, MEMORY[0xCC7F90]);
+      ((int (*)(int, int))MEMORY[0xCC7F8C])(v9, MEMORY[0xCC7F90]);
     }
     a1[4] = 0;
     v10 = (_BYTE *)a1[3];
@@ -64654,7 +64654,7 @@ sub_6082756C__LABEL_84:
       if ( v11 )
       {
         (**v11)(a1[3]);
-        MEMORY[0xCC7F8C](v11, MEMORY[0xCC7F90]);
+        ((int (*)(int, int))MEMORY[0xCC7F8C])(v11, MEMORY[0xCC7F90]);
       }
       a1[3] = 0;
     }
@@ -64676,7 +64676,7 @@ sub_6082756C__LABEL_84:
         v17 = *(v12 - 1);
         v16 = v12 - 1;
         (*(void (__fastcall **)(_DWORD *))(v17 + 4))(v16);
-        MEMORY[0xCC7F8C](v16, MEMORY[0xCC7F90]);
+        ((int (*)(int, int))MEMORY[0xCC7F8C])(v16, MEMORY[0xCC7F90]);
         v12 = v14;
       }
       while ( v14 != v13 );
@@ -65364,7 +65364,7 @@ sub_608561CC__LABEL_136:
     int v5; // t1
     int v6; // r3
   
-    v2 = MEMORY[0xCC7F88](36, 4, MEMORY[0xCC7F90]);
+    v2 = ((int (*)(int, int, int))MEMORY[0xCC7F88])(36, 4, MEMORY[0xCC7F90]);
     if ( !v2 )
       return 0;
     result = sub_60850328(v2);
@@ -65402,7 +65402,7 @@ sub_608561CC__LABEL_136:
       a2[1] = v4;
     }
     (*(void (__fastcall **)(_DWORD *))(*a2 + 4))(a2);
-    return MEMORY[0xCC7F8C](a2, MEMORY[0xCC7F90]);
+    return ((int (*)(int, int))MEMORY[0xCC7F8C])(a2, MEMORY[0xCC7F90]);
   }
 
 /* ============================================================================
@@ -65456,7 +65456,7 @@ sub_608561CC__LABEL_136:
     {
       if ( v23 )
       {
-        v18 = MEMORY[0xCC7F88](52, 4, MEMORY[0xCC7F90]);
+        v18 = ((int (*)(int, int, int))MEMORY[0xCC7F88])(52, 4, MEMORY[0xCC7F90]);
         v19 = (_DWORD *)v18;
         if ( v18 )
         {
@@ -65477,7 +65477,7 @@ sub_608561CC__LABEL_136:
     else if ( v23 )
     {
       v11 = sub_60851D10(&v22);
-      v12 = MEMORY[0xCC7F88](4 * v11 + 56, 4, MEMORY[0xCC7F90]);
+      v12 = ((int (*)(int, int, int))MEMORY[0xCC7F88])(4 * v11 + 56, 4, MEMORY[0xCC7F90]);
       v13 = (_DWORD *)v12;
       if ( v12 )
       {
@@ -65628,7 +65628,7 @@ sub_608561CC__LABEL_136:
       v7 = *(_DWORD *)(a3 + 4) == 0;
     if ( !v7 )
     {
-      v8 = MEMORY[0xCC7F88](36, 4, MEMORY[0xCC7F90]);
+      v8 = ((int (*)(int, int, int))MEMORY[0xCC7F88])(36, 4, MEMORY[0xCC7F90]);
       v9 = (_DWORD *)v8;
       if ( v8 )
       {
@@ -66085,7 +66085,7 @@ sub_608561CC__LABEL_136:
       switch ( a4 )
       {
         case 829716596:
-          v15 = MEMORY[0xCC7F88](272, 16, MEMORY[0xCC7F90]);
+          v15 = ((int (*)(int, int, int))MEMORY[0xCC7F88])(272, 16, MEMORY[0xCC7F90]);
           v9 = v15;
           if ( v15 )
             sub_6085C340(v15, (int)a2, (int)a3, v18, (int)a5, a6, a7);
@@ -66094,12 +66094,12 @@ sub_608561CC__LABEL_136:
           (*(void (__fastcall **)(int, _DWORD *, _DWORD *, int, _DWORD *))(*(_DWORD *)v9 + 108))(v9, a2, a3, a7, v18);
           break;
         case 829715056:
-          v16 = MEMORY[0xCC7F88](192, 16, MEMORY[0xCC7F90]);
+          v16 = ((int (*)(int, int, int))MEMORY[0xCC7F88])(192, 16, MEMORY[0xCC7F90]);
           if ( v16 )
             return sub_60859AE4(v16, a5, a6, a7);
           break;
         case 829317488:
-          v12 = MEMORY[0xCC7F88](176, 16, MEMORY[0xCC7F90]);
+          v12 = ((int (*)(int, int, int))MEMORY[0xCC7F88])(176, 16, MEMORY[0xCC7F90]);
           if ( v12 )
             return (_DWORD *)sub_60857B80(v12, a5, a7);
           break;
@@ -66110,17 +66110,17 @@ sub_608561CC__LABEL_136:
       switch ( a4 )
       {
         case 828598640:
-          v13 = MEMORY[0xCC7F88](208, 16, MEMORY[0xCC7F90]);
+          v13 = ((int (*)(int, int, int))MEMORY[0xCC7F88])(208, 16, MEMORY[0xCC7F90]);
           if ( v13 )
             return (_DWORD *)sub_60859D08(v13, (int)a2, (int)a3, (int)a5, a6, a7);
           break;
         case 828665442:
-          v14 = MEMORY[0xCC7F88](176, 16, MEMORY[0xCC7F90]);
+          v14 = ((int (*)(int, int, int))MEMORY[0xCC7F88])(176, 16, MEMORY[0xCC7F90]);
           if ( v14 )
             return (_DWORD *)sub_60864E60(v14, a5, a6, a7);
           break;
         case 828665463:
-          v10 = MEMORY[0xCC7F88](240, 16, MEMORY[0xCC7F90]);
+          v10 = ((int (*)(int, int, int))MEMORY[0xCC7F88])(240, 16, MEMORY[0xCC7F90]);
           if ( v10 )
             return (_DWORD *)sub_60860664(v10, a2, a3, (int)a5, a6, a7);
           break;
@@ -66145,7 +66145,7 @@ sub_608561CC__LABEL_136:
            *(_DWORD *)(a1 + 36),
            1651276148,
            v13);
-    v10 = (_DWORD *)MEMORY[0xCC7F88](56, 4, MEMORY[0xCC7F90]);
+    v10 = (_DWORD *)((int (*)(int, int, int))MEMORY[0xCC7F88])(56, 4, MEMORY[0xCC7F90]);
     if ( v10 )
     {
       *v10 = 12952072;
@@ -81166,12 +81166,12 @@ sub_608561CC__LABEL_136:
     v6 = *(_DWORD *)(a1 + 12);
     if ( (v6 & 0x200) != 0 )
     {
-      MEMORY[0xCC76BC](
+      ((int (*)(int, int))MEMORY[0xCC76BC])(
         *(_DWORD *)(a1 + 44) + 8,
         arr_dword_60AF4FB0[*(unsigned __int8 *)(*(_DWORD *)(a1 + 20) + ((8 * v6) & 0x18) + (v6 & 0x30) + 20 * ((v6 >> 2) & 3))]);
-      MEMORY[0xCC7900](*(_DWORD *)(a2 + 184));
+      ((int (*)(int))MEMORY[0xCC7900])(*(_DWORD *)(a2 + 184));
       sub_60835A38(a2, *(int **)(a1 + 44));
-      MEMORY[0xCC76BC](*(_DWORD *)(a1 + 44) + 8, 8);
+      ((int (*)(int, int))MEMORY[0xCC76BC])(*(_DWORD *)(a1 + 44) + 8, 8);
     }
     else
     {
@@ -81408,12 +81408,12 @@ sub_608561CC__LABEL_136:
     v4 = *(_DWORD *)(a1 + 12);
     if ( (v4 & 0x200) == 0 )
       return sub_60835A38(a2, *(int **)(a1 + 44));
-    MEMORY[0xCC76BC](
+    ((int (*)(int, int))MEMORY[0xCC76BC])(
       *(_DWORD *)(a1 + 44) + 8,
       arr_dword_60AF4FB0[*(unsigned __int8 *)(*(_DWORD *)(a1 + 20) + ((8 * v4) & 0x18) + (v4 & 0x30) + 20 * ((v4 >> 2) & 3))]);
-    MEMORY[0xCC7900](*(_DWORD *)(a2 + 184));
+    ((int (*)(int))MEMORY[0xCC7900])(*(_DWORD *)(a2 + 184));
     sub_60835A38(a2, *(int **)(a1 + 44));
-    return MEMORY[0xCC76BC](*(_DWORD *)(a1 + 44) + 8, 8);
+    return ((int (*)(int, int))MEMORY[0xCC76BC])(*(_DWORD *)(a1 + 44) + 8, 8);
   }
 
 /* ============================================================================
@@ -124065,8 +124065,8 @@ sub_608945B8__LABEL_83:
     v24[5] = 32;
     v24[4] = 32;
     v24[3] = 32;
-    MEMORY[0xCC75AC](MEMORY[0xCC81A8], 0, v24, v8);
-    MEMORY[0xCC75BC](MEMORY[0xCC81A8], 0, v24);
+    ((int (*)(int, int, int, int))MEMORY[0xCC75AC])(MEMORY[0xCC81A8], 0, v24, v8);
+    ((int (*)(int, int, int))MEMORY[0xCC75BC])(MEMORY[0xCC81A8], 0, v24);
     return (*(int (__fastcall **)(int, int))(*(_DWORD *)v21 + 12))(v21, v8);
   }
 
@@ -133881,7 +133881,7 @@ sub_60899E38__LABEL_88:
  * ============================================================================ */
   int __fastcall sub_608A7D74(_DWORD *a1)
   {
-    return MEMORY[0xCC73E0](*a1);
+    return ((int (*)(int))MEMORY[0xCC73E0])(*a1);
   }
 
 /* ============================================================================
@@ -133890,7 +133890,7 @@ sub_60899E38__LABEL_88:
  * ============================================================================ */
   int __fastcall sub_608A7D8C(int a1)
   {
-    return MEMORY[0xCC7460](*(_DWORD *)(a1 + 8));
+    return ((int (*)(int))MEMORY[0xCC7460])(*(_DWORD *)(a1 + 8));
   }
 
 /* ============================================================================
@@ -133899,7 +133899,7 @@ sub_60899E38__LABEL_88:
  * ============================================================================ */
   int __fastcall sub_608A7DA4(int a1)
   {
-    return MEMORY[0xCC7640](*(_DWORD *)(a1 + 8));
+    return ((int (*)(int))MEMORY[0xCC7640])(*(_DWORD *)(a1 + 8));
   }
 
 /* ============================================================================
@@ -195724,17 +195724,17 @@ sub_608DF448__LABEL_158:
     {
       v18 = 0;
       Nvn_resolveDeviceFunctions(0, result);
-      MEMORY[0xCC72A4](&v46);
+      ((int (*)(int))MEMORY[0xCC72A4])(&v46);
       if ( *(_BYTE *)(a1 + 110) )
         v18 = sub_608F29EC(*(_DWORD *)(a1 + 144));
-      MEMORY[0xCC72A8](&v46, v18);
+      ((int (*)(int, int))MEMORY[0xCC72A8])(&v46, v18);
       v19 = __operator_new_al(0x3000u, a2, 8);
       result = (int (__fastcall *)(int, const char *))v14(v19, &v46);
       if ( result )
       {
         Nvn_resolveDeviceFunctions(v19, v16);
-        MEMORY[0xCC72BC](v19, 0, &v46);
-        MEMORY[0xCC72BC](v19, 1, &v45);
+        ((int (*)(int, int, int))MEMORY[0xCC72BC])(v19, 0, &v46);
+        ((int (*)(int, int, int))MEMORY[0xCC72BC])(v19, 1, &v45);
         result = (int (__fastcall *)(int, const char *))v46;
         if ( v46 == 53 )
         {
@@ -195743,7 +195743,7 @@ sub_608DF448__LABEL_158:
           {
             if ( *(_BYTE *)(a1 + 110) || *(_BYTE *)(a1 + 111) )
             {
-              MEMORY[0xCC72D4](v19, dword_60C797E8, 0, 1);
+              ((int (*)(int, int, int, int))MEMORY[0xCC72D4])(v19, dword_60C797E8, 0, 1);
               v20 = *(_BYTE *)(a1 + 111);
               v21 = *(_BYTE *)(a1 + 110) == 0;
             }
@@ -195762,38 +195762,38 @@ sub_608DF448__LABEL_158:
             v23 = __operator_new_al(0x170u, a2, 4);
             MEMORY[0xCCF464] = sub_608F2530(v23, &v46);
             sub_6090B2B4();
-            MEMORY[0xCC7330](&v46);
-            MEMORY[0xCC7334](&v46, 1);
-            MEMORY[0xCC732C](&v46, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+            ((int (*)(int))MEMORY[0xCC7330])(&v46);
+            ((int (*)(int, int))MEMORY[0xCC7334])(&v46, 1);
+            ((int (*)(int, int))MEMORY[0xCC732C])(&v46, *(_DWORD *)(MEMORY[0xCCF464] + 24));
             v45 = *(_DWORD *)(a1 + 132);
             v24 = v45;
             if ( v45 == -1 )
             {
-              MEMORY[0xCC72BC](v19, 85, &v45);
+              ((int (*)(int, int, int))MEMORY[0xCC72BC])(v19, 85, &v45);
               v24 = v45;
             }
-            MEMORY[0xCC733C](&v46, v24);
+            ((int (*)(int, int))MEMORY[0xCC733C])(&v46, v24);
             v45 = *(_DWORD *)(a1 + 136);
             v25 = v45;
             if ( v45 == -1 )
             {
-              MEMORY[0xCC72BC](v19, 82, &v45);
+              ((int (*)(int, int, int))MEMORY[0xCC72BC])(v19, 82, &v45);
               v25 = v45;
             }
-            MEMORY[0xCC7338](&v46, v25);
+            ((int (*)(int, int))MEMORY[0xCC7338])(&v46, v25);
             v45 = *(_DWORD *)(a1 + 140);
             v26 = v45;
             if ( v45 == -1 )
             {
-              MEMORY[0xCC72BC](v19, 92, &v45);
+              ((int (*)(int, int, int))MEMORY[0xCC72BC])(v19, 92, &v45);
               v26 = v45;
             }
-            MEMORY[0xCC7340](&v46, v26);
-            v27 = MEMORY[0xCC7344](&v46);
+            ((int (*)(int, int))MEMORY[0xCC7340])(&v46, v26);
+            v27 = ((int (*)(int))MEMORY[0xCC7344])(&v46);
             v28 = (*(int (__fastcall **)(int, int, int))(*(_DWORD *)a2 + 24))(a2, v27, 4096);
-            MEMORY[0xCC7348](&v46, v28, v27);
+            ((int (*)(int, int, int))MEMORY[0xCC7348])(&v46, v28, v27);
             *(_DWORD *)(a1 + 268) = __operator_new_al(0x2000u, a2, 8);
-            MEMORY[0xCC7350]();
+            ((int (*)(void))MEMORY[0xCC7350])();
             sub_608F290C(MEMORY[0xCCF464], *(_DWORD *)(a1 + 268));
             v29 = __operator_new_al(0x3Cu, a2, 4);
             *(_DWORD *)(a1 + 216) = sub_608F1AA4(v29);
@@ -195817,44 +195817,44 @@ sub_608DF448__LABEL_158:
             }
             v34 = *(_DWORD *)(MEMORY[0xCCF464] + 24);
             *(_DWORD *)(a1 + 236) = __operator_new_al(0xA0u, a2, 8);
-            MEMORY[0xCC77B4]();
+            ((int (*)(void))MEMORY[0xCC77B4])();
             *(_DWORD *)(a1 + 228) = __operator_new_al(0x100u, a2, 8);
-            MEMORY[0xCC73C4](&v46);
-            MEMORY[0xCC73C0](&v46, v34);
-            MEMORY[0xCC73CC](&v46, 18);
+            ((int (*)(int))MEMORY[0xCC73C4])(&v46);
+            ((int (*)(int, int))MEMORY[0xCC73C0])(&v46, v34);
+            ((int (*)(int, int))MEMORY[0xCC73CC])(&v46, 18);
             v35 = __operator_new_array_al(dword_60CCEBE4, a2, 4096);
-            MEMORY[0xCC73C8](&v46, v35, dword_60CCEBE4);
-            MEMORY[0xCC73DC](*(_DWORD *)(a1 + 228), &v46);
+            ((int (*)(int, int, int))MEMORY[0xCC73C8])(&v46, v35, dword_60CCEBE4);
+            ((int (*)(int, int))MEMORY[0xCC73DC])(*(_DWORD *)(a1 + 228), &v46);
             v45 = 0;
-            MEMORY[0xCC72BC](v34, 20, &v45);
+            ((int (*)(int, int, int))MEMORY[0xCC72BC])(v34, 20, &v45);
             *(_DWORD *)(a1 + 232) = (*(int (__fastcall **)(int, _DWORD, int))(*(_DWORD *)a2 + 24))(
                                       a2,
                                       *(_DWORD *)(a1 + 116),
                                       v45);
-            MEMORY[0xCC77C0](*(_DWORD *)(a1 + 236), dword_60C797EC);
-            MEMORY[0xCC77C4](*(_DWORD *)(a1 + 236), *(_DWORD *)(a1 + 236));
+            ((int (*)(int, int))MEMORY[0xCC77C0])(*(_DWORD *)(a1 + 236), dword_60C797EC);
+            ((int (*)(int, int))MEMORY[0xCC77C4])(*(_DWORD *)(a1 + 236), *(_DWORD *)(a1 + 236));
             sub_608F2914(MEMORY[0xCCF464], *(_DWORD *)(a1 + 236));
-            MEMORY[0xCC72BC](v19, 25, &v45);
-            MEMORY[0xCC72BC](v19, 26, &v44);
-            MEMORY[0xCC72BC](v19, 24, &v43);
+            ((int (*)(int, int, int))MEMORY[0xCC72BC])(v19, 25, &v45);
+            ((int (*)(int, int, int))MEMORY[0xCC72BC])(v19, 26, &v44);
+            ((int (*)(int, int, int))MEMORY[0xCC72BC])(v19, 24, &v43);
             v36 = v44 + (v45 + v43 * *(_DWORD *)(a1 + 120) - 1) / (unsigned int)v45 * v45 - 1;
             *(_DWORD *)(a1 + 252) = (4095 - v36 % v44 + v36) & 0xFFFFF000;
             *(_DWORD *)(a1 + 248) = __operator_new_al(0x100u, a2, 8);
-            MEMORY[0xCC73C4](&v46);
-            MEMORY[0xCC73C0](&v46, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-            MEMORY[0xCC73CC](&v46, 33);
+            ((int (*)(int))MEMORY[0xCC73C4])(&v46);
+            ((int (*)(int, int))MEMORY[0xCC73C0])(&v46, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+            ((int (*)(int, int))MEMORY[0xCC73CC])(&v46, 33);
             v37 = __operator_new_array_al(*(_DWORD *)(a1 + 252), a2, 4096);
-            MEMORY[0xCC73C8](&v46, v37, *(_DWORD *)(a1 + 252));
-            MEMORY[0xCC73DC](*(_DWORD *)(a1 + 248), &v46);
-            MEMORY[0xCC7444](&v46, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-            MEMORY[0xCC7448](&v46);
-            MEMORY[0xCC744C](&v46, *(_DWORD *)(a1 + 228), *(_DWORD *)(a1 + 112), 32);
+            ((int (*)(int, int, int))MEMORY[0xCC73C8])(&v46, v37, *(_DWORD *)(a1 + 252));
+            ((int (*)(int, int))MEMORY[0xCC73DC])(*(_DWORD *)(a1 + 248), &v46);
+            ((int (*)(int, int))MEMORY[0xCC7444])(&v46, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+            ((int (*)(int))MEMORY[0xCC7448])(&v46);
+            ((int (*)(int, int, int, int))MEMORY[0xCC744C])(&v46, *(_DWORD *)(a1 + 228), *(_DWORD *)(a1 + 112), 32);
             *(_DWORD *)(a1 + 240) = __operator_new_al(0x30u, a2, 8);
-            MEMORY[0xCC745C]();
-            *(_DWORD *)(a1 + 244) = MEMORY[0xCC7468](*(_DWORD *)(a1 + 240));
+            ((int (*)(void))MEMORY[0xCC745C])();
+            *(_DWORD *)(a1 + 244) = ((int (*)(int))MEMORY[0xCC7468])(*(_DWORD *)(a1 + 240));
             v38 = __operator_new_al(0x40u, a2, 8);
             *(_DWORD *)(a1 + 288) = v38;
-            MEMORY[0xCC79E0](v38, v19);
+            ((int (*)(int, int))MEMORY[0xCC79E0])(v38, v19);
             if ( *(_BYTE *)(a1 + 108) )
               *(_DWORD *)(a1 + 176) = sub_608F1654(a2, a3, *(_DWORD *)(a1 + 100), *(_DWORD *)(a1 + 104));
             v39 = __operator_new_al(0x94u, a2, 4);
@@ -196050,16 +196050,16 @@ sub_608DF448__LABEL_158:
         v3(1);
       sub_608F4A80((int)v14);
       v15 = *(_DWORD *)(a1 + 236);
-      MEMORY[0xCC77C8](v15, *(_DWORD *)(a1 + 228), 0, *(_DWORD *)(a1 + 112));
-      MEMORY[0xCC77CC](*(_DWORD *)(a1 + 236), *(_DWORD *)(a1 + 232), *(_DWORD *)(a1 + 116));
-      MEMORY[0xCC77E8](*(_DWORD *)(a1 + 236));
+      ((int (*)(int, int, int, int))MEMORY[0xCC77C8])(v15, *(_DWORD *)(a1 + 228), 0, *(_DWORD *)(a1 + 112));
+      ((int (*)(int, int, int))MEMORY[0xCC77CC])(*(_DWORD *)(a1 + 236), *(_DWORD *)(a1 + 232), *(_DWORD *)(a1 + 116));
+      ((int (*)(int))MEMORY[0xCC77E8])(*(_DWORD *)(a1 + 236));
       *(_BYTE *)(MEMORY[0xCCF464] + 364) = 1;
       v4 = *(_DWORD *)(a1 + 236);
-      v5 = MEMORY[0xCC746C](*(_DWORD *)(a1 + 240));
-      MEMORY[0xCC7940](v4, 16, v5, HIDWORD(v5));
-      MEMORY[0xCC7980](*(_DWORD *)(a1 + 236), MEMORY[0xCCF464] + 80);
-      MEMORY[0xCC797C](*(_DWORD *)(a1 + 236), MEMORY[0xCCF464] + 48);
-      MEMORY[0xCC7984](*(_DWORD *)(a1 + 236), *(_DWORD *)(a1 + 248), 0, *(_DWORD *)(a1 + 252));
+      v5 = ((int (*)(int))MEMORY[0xCC746C])(*(_DWORD *)(a1 + 240));
+      ((int (*)(int, int, int, int))MEMORY[0xCC7940])(v4, 16, v5, HIDWORD(v5));
+      ((int (*)(int, int))MEMORY[0xCC7980])(*(_DWORD *)(a1 + 236), MEMORY[0xCCF464] + 80);
+      ((int (*)(int, int))MEMORY[0xCC797C])(*(_DWORD *)(a1 + 236), MEMORY[0xCCF464] + 48);
+      ((int (*)(int, int, int, int))MEMORY[0xCC7984])(*(_DWORD *)(a1 + 236), *(_DWORD *)(a1 + 248), 0, *(_DWORD *)(a1 + 252));
       v7 = *(_DWORD *)(a1 + 176);
       if ( v7 )
       {
@@ -196087,10 +196087,10 @@ sub_608DF448__LABEL_158:
       if ( v10 || (v10 = *(_DWORD *)(a1 + 176)) != 0 )
         (*(void (__fastcall **)(int, _BYTE *, _DWORD))(*(_DWORD *)v10 + 16))(v10, v14, *(_DWORD *)(a1 + 216));
       v11 = *(_DWORD *)(a1 + 236);
-      v12 = MEMORY[0xCC746C](*(_DWORD *)(a1 + 240));
-      MEMORY[0xCC7940](v11, 0, v12 + 16, (unsigned __int64)(v12 + 16) >> 32);
+      v12 = ((int (*)(int))MEMORY[0xCC746C])(*(_DWORD *)(a1 + 240));
+      ((int (*)(int, int, int, int))MEMORY[0xCC7940])(v11, 0, v12 + 16, (unsigned __int64)(v12 + 16) >> 32);
       *(_BYTE *)(MEMORY[0xCCF464] + 364) = 0;
-      *(_QWORD *)(a1 + 304) = MEMORY[0xCC77EC](*(_DWORD *)(a1 + 236));
+      *(_QWORD *)(a1 + 304) = ((int (*)(int))MEMORY[0xCC77EC])(*(_DWORD *)(a1 + 236));
       if ( !*(_BYTE *)(a1 + 344) )
         (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 128))(a1);
       sub_608F4AD4((int)v14);
@@ -196154,16 +196154,16 @@ sub_608DF448__LABEL_158:
       v3 = MEMORY[0xCCF464] + 236;
       sead__CriticalSection__lock(MEMORY[0xCCF464] + 236);
       *(_BYTE *)(a1 + 345) = 1;
-      MEMORY[0xCC735C](*(_DWORD *)(a1 + 268), 1, a1 + 304);
-      MEMORY[0xCC79EC](*(_DWORD *)(a1 + 268), *(_DWORD *)(a1 + 288), 0, 0);
-      MEMORY[0xCC7360](*(_DWORD *)(a1 + 268));
+      ((int (*)(int, int, int))MEMORY[0xCC735C])(*(_DWORD *)(a1 + 268), 1, a1 + 304);
+      ((int (*)(int, int, int, int))MEMORY[0xCC79EC])(*(_DWORD *)(a1 + 268), *(_DWORD *)(a1 + 288), 0, 0);
+      ((int (*)(int))MEMORY[0xCC7360])(*(_DWORD *)(a1 + 268));
       v4 = *(_DWORD *)(a1 + 260);
-      v5 = MEMORY[0xCC77D4](*(_DWORD *)(a1 + 236));
+      v5 = ((int (*)(int))MEMORY[0xCC77D4])(*(_DWORD *)(a1 + 236));
       if ( v4 > v5 )
         v5 = v4;
       *(_DWORD *)(a1 + 260) = v5;
       v6 = *(_DWORD *)(a1 + 264);
-      v7 = MEMORY[0xCC77E0](*(_DWORD *)(a1 + 236));
+      v7 = ((int (*)(int))MEMORY[0xCC77E0])(*(_DWORD *)(a1 + 236));
       if ( v6 > v7 )
         v7 = v6;
       *(_DWORD *)(a1 + 264) = v7;
@@ -196283,7 +196283,7 @@ sub_608DF448__LABEL_158:
             }
           }
         }
-        MEMORY[0xCC79F0](*(_DWORD *)(a1 + 288), MEMORY[0xCC79F0], -1, -1, v15);
+        ((int (*)(int, int, int, int, int))MEMORY[0xCC79F0])(*(_DWORD *)(a1 + 288), MEMORY[0xCC79F0], -1, -1, v15);
         v13 = *(void (__fastcall **)(int))(a1 + 220);
         if ( v13 )
           v13(1);
@@ -201460,9 +201460,9 @@ sub_608DF448__LABEL_158:
     int result; // r0
   
     if ( (a3 & 1) != 0 )
-      result = MEMORY[0xCC7894](*(_DWORD *)(a2 + 192), 0, a4, 15);
+      result = ((int (*)(int, int, int, int))MEMORY[0xCC7894])(*(_DWORD *)(a2 + 192), 0, a4, 15);
     if ( (a3 & 6) != 0 )
-      return MEMORY[0xCC78A0](*(_DWORD *)(a2 + 192), (a3 >> 1) & 1, a5, (a3 >> 2) & 1);
+      return ((int (*)(int, int, int, int))MEMORY[0xCC78A0])(*(_DWORD *)(a2 + 192), (a3 >> 1) & 1, a5, (a3 >> 2) & 1);
     return result;
   }
 
@@ -201489,7 +201489,7 @@ sub_608DF448__LABEL_158:
     v4 = *(_DWORD *)(a3 + 20);
     if ( v4 >= 3 )
       v4 = 0;
-    return MEMORY[0xCC7924](*(_DWORD *)(a2 + 192), *(_DWORD *)(a1 + 28), 0, v7, *(_DWORD *)(a3 + 4 * v4 + 24), 0, v6, 1);
+    return ((int (*)(int, int, int, int, int, int, int, int))MEMORY[0xCC7924])(*(_DWORD *)(a2 + 192), *(_DWORD *)(a1 + 28), 0, v7, *(_DWORD *)(a3 + 4 * v4 + 24), 0, v6, 1);
   }
 
 /* ============================================================================
@@ -201524,45 +201524,45 @@ sub_608DF448__LABEL_158:
     _BYTE v33[132]; // [sp+E8h] [bp-84h] BYREF
   
     v23 = *(_DWORD *)(MEMORY[0xCCF464] + 24);
-    MEMORY[0xCC7488](v33, v23);
-    MEMORY[0xCC748C](v33);
-    MEMORY[0xCC74A8](v33, a3, a4);
-    MEMORY[0xCC7494](v33, 1);
-    MEMORY[0xCC74B4](v33, 37);
-    MEMORY[0xCC7490](v33, 8);
+    ((int (*)(int, int))MEMORY[0xCC7488])(v33, v23);
+    ((int (*)(int))MEMORY[0xCC748C])(v33);
+    ((int (*)(int, int, int))MEMORY[0xCC74A8])(v33, a3, a4);
+    ((int (*)(int, int))MEMORY[0xCC7494])(v33, 1);
+    ((int (*)(int, int))MEMORY[0xCC74B4])(v33, 37);
+    ((int (*)(int, int))MEMORY[0xCC7490])(v33, 8);
     qmemcpy(v32, v33, sizeof(v32));
-    MEMORY[0xCC74B4](v32, 53);
+    ((int (*)(int, int))MEMORY[0xCC74B4])(v32, 53);
     v30 = __operator_new_al(0x100u, a1, 8);
     v22 = __operator_new_al(0xC0u, a1, 8);
     v25 = a1;
     v26 = __operator_new_al(0xC0u, a1, 8);
-    v7 = MEMORY[0xCC74C4](v33);
-    v8 = MEMORY[0xCC74C8](v32);
-    v9 = MEMORY[0xCC74C4](v32);
-    MEMORY[0xCC73C4](v31);
-    MEMORY[0xCC73C0](v31, v23);
-    MEMORY[0xCC73CC](v31, 161);
+    v7 = ((int (*)(int))MEMORY[0xCC74C4])(v33);
+    v8 = ((int (*)(int))MEMORY[0xCC74C8])(v32);
+    v9 = ((int (*)(int))MEMORY[0xCC74C4])(v32);
+    ((int (*)(int))MEMORY[0xCC73C4])(v31);
+    ((int (*)(int, int))MEMORY[0xCC73C0])(v31, v23);
+    ((int (*)(int, int))MEMORY[0xCC73CC])(v31, 161);
     v10 = (4095 - (v7 + v8 - 1) % v8 + v7 + v8 - 1 + v9) & 0xFFFFF000;
     v11 = __operator_new_array_al(v10, a1, 4096);
-    MEMORY[0xCC73C8](v31, v11, v10);
-    MEMORY[0xCC73DC](v30, v31);
-    MEMORY[0xCC74CC](v33, v30, 0);
-    v24 = MEMORY[0xCC74C4](v33);
-    v12 = MEMORY[0xCC74C8](v32);
-    MEMORY[0xCC7560](v22, v33);
+    ((int (*)(int, int, int))MEMORY[0xCC73C8])(v31, v11, v10);
+    ((int (*)(int, int))MEMORY[0xCC73DC])(v30, v31);
+    ((int (*)(int, int, int))MEMORY[0xCC74CC])(v33, v30, 0);
+    v24 = ((int (*)(int))MEMORY[0xCC74C4])(v33);
+    v12 = ((int (*)(int))MEMORY[0xCC74C8])(v32);
+    ((int (*)(int, int))MEMORY[0xCC7560])(v22, v33);
     v13 = (struct sead_CriticalSection *)(MEMORY[0xCCF464] + 272);
     sead__CriticalSection__lock((struct sead_CriticalSection *)(MEMORY[0xCCF464] + 272));
     v14 = MEMORY[0xCCF464];
     v15 = sub_608F28E8(MEMORY[0xCCF464]);
-    MEMORY[0xCC7410](v14 + 48, v15, v22, 0);
+    ((int (*)(int, int, int, int))MEMORY[0xCC7410])(v14 + 48, v15, v22, 0);
     sead__CriticalSection__unlock(v13);
-    MEMORY[0xCC74CC](v32, v30, (v24 + v12 - 1) / v12 * v12);
-    MEMORY[0xCC7560](v26, v32);
+    ((int (*)(int, int, int))MEMORY[0xCC74CC])(v32, v30, (v24 + v12 - 1) / v12 * v12);
+    ((int (*)(int, int))MEMORY[0xCC7560])(v26, v32);
     v16 = (struct sead_CriticalSection *)(MEMORY[0xCCF464] + 272);
     sead__CriticalSection__lock((struct sead_CriticalSection *)(MEMORY[0xCCF464] + 272));
     v17 = MEMORY[0xCCF464];
     v18 = sub_608F28E8(MEMORY[0xCCF464]);
-    MEMORY[0xCC7410](v17 + 48, v18, v26, 0);
+    ((int (*)(int, int, int, int))MEMORY[0xCC7410])(v17 + 48, v18, v26, 0);
     sead__CriticalSection__unlock(v16);
     result = __operator_new_al(0x24u, v25, 4);
     *(_DWORD *)result = dword_60C797E4 + 8;
@@ -201621,8 +201621,8 @@ sub_608DF448__LABEL_158:
     int v1; // r4
   
     v1 = a1 + 20;
-    MEMORY[0xCC7368](*(_DWORD *)(MEMORY[0xCCF464] + 28), *(_DWORD *)(a1 + 12), *(_DWORD *)(a1 + 20));
-    return MEMORY[0xCC7398](*(_DWORD *)(v1 - 8), *(_DWORD *)(v1 - 4), v1);
+    ((int (*)(int, int, int))MEMORY[0xCC7368])(*(_DWORD *)(MEMORY[0xCCF464] + 28), *(_DWORD *)(a1 + 12), *(_DWORD *)(a1 + 20));
+    return ((int (*)(int, int, int))MEMORY[0xCC7398])(*(_DWORD *)(v1 - 8), *(_DWORD *)(v1 - 4), v1);
   }
 
 /* ============================================================================
@@ -201631,7 +201631,7 @@ sub_608DF448__LABEL_158:
  * ============================================================================ */
   int __fastcall sub_608F1B60(int a1, int a2, int a3, int a4, int a5)
   {
-    return MEMORY[0xCC79F0](*(_DWORD *)(a1 + 16), MEMORY[0xCC79F0], -1, -1, a5);
+    return ((int (*)(int, int, int, int, int))MEMORY[0xCC79F0])(*(_DWORD *)(a1 + 16), MEMORY[0xCC79F0], -1, -1, a5);
   }
 
 /* ============================================================================
@@ -201645,7 +201645,7 @@ sub_608DF448__LABEL_158:
     *(_BYTE *)(a1 + 40) = a2;
     result = *(_DWORD *)(a1 + 12);
     if ( result )
-      return MEMORY[0xCC73A4]();
+      return ((int (*)(void))MEMORY[0xCC73A4])();
     return result;
   }
 
@@ -201691,7 +201691,7 @@ sub_608DF448__LABEL_158:
     result = *(unsigned __int8 *)(a1 + 42);
     if ( result )
     {
-      MEMORY[0xCC73A8](
+      ((int (*)(int, int, int, int, int))MEMORY[0xCC73A8])(
         *(_DWORD *)(a1 + 12),
         *(_DWORD *)(a1 + 44),
         *(_DWORD *)(a1 + 48),
@@ -201760,14 +201760,14 @@ sub_608DF448__LABEL_158:
       v12 = v34;
       do
       {
-        MEMORY[0xCC7488](v12, v6);
-        MEMORY[0xCC748C](v12);
-        MEMORY[0xCC74A8](v12, (unsigned int)v4, (unsigned int)v5);
-        MEMORY[0xCC7494](v12, 1);
-        MEMORY[0xCC74B4](v12, 37);
-        MEMORY[0xCC7490](v12, 1);
-        v13 = MEMORY[0xCC74C4](v12);
-        v14 = MEMORY[0xCC74C8](v12);
+        ((int (*)(int, int))MEMORY[0xCC7488])(v12, v6);
+        ((int (*)(int))MEMORY[0xCC748C])(v12);
+        ((int (*)(int, int, int))MEMORY[0xCC74A8])(v12, (unsigned int)v4, (unsigned int)v5);
+        ((int (*)(int, int))MEMORY[0xCC7494])(v12, 1);
+        ((int (*)(int, int))MEMORY[0xCC74B4])(v12, 37);
+        ((int (*)(int, int))MEMORY[0xCC7490])(v12, 1);
+        v13 = ((int (*)(int))MEMORY[0xCC74C4])(v12);
+        v14 = ((int (*)(int))MEMORY[0xCC74C8])(v12);
         v12 += 128;
         --v10;
         v11 = v11 - (v13 + v14 - 1) % v14 + v13 + v14 - 1;
@@ -201780,12 +201780,12 @@ sub_608DF448__LABEL_158:
     {
       v15 = 0;
     }
-    MEMORY[0xCC73C4](v33);
-    MEMORY[0xCC73C0](v33, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC73CC](v33, 36);
+    ((int (*)(int))MEMORY[0xCC73C4])(v33);
+    ((int (*)(int, int))MEMORY[0xCC73C0])(v33, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int, int))MEMORY[0xCC73CC])(v33, 36);
     v16 = __operator_new_array_al(v15, v3, 4096);
-    MEMORY[0xCC73C8](v33, v16, v15);
-    MEMORY[0xCC73DC](v9, v33);
+    ((int (*)(int, int, int))MEMORY[0xCC73C8])(v33, v16, v15);
+    ((int (*)(int, int))MEMORY[0xCC73DC])(v9, v33);
     if ( *(unsigned __int8 *)(v32 + 41) < 3u )
       v8 = *(unsigned __int8 *)(v32 + 41);
     if ( v8 )
@@ -201796,13 +201796,13 @@ sub_608DF448__LABEL_158:
       do
       {
         *v19 = __operator_new_al(0xC0u, v3, 8);
-        MEMORY[0xCC74CC](v18, v9, v17);
+        ((int (*)(int, int, int))MEMORY[0xCC74CC])(v18, v9, v17);
         v20 = v3;
-        v21 = MEMORY[0xCC74C4](v18);
+        v21 = ((int (*)(int))MEMORY[0xCC74C4])(v18);
         v22 = v9;
-        v23 = MEMORY[0xCC74C8](v18);
+        v23 = ((int (*)(int))MEMORY[0xCC74C8])(v18);
         v24 = *v19++;
-        MEMORY[0xCC7560](v24, v18);
+        ((int (*)(int, int))MEMORY[0xCC7560])(v24, v18);
         v25 = v21 + v23;
         v3 = v20;
         v18 += 128;
@@ -201815,20 +201815,20 @@ sub_608DF448__LABEL_158:
     }
     v27 = v32;
     *(_DWORD *)(v32 + 12) = __operator_new_al(0x180u, v3, 8);
-    MEMORY[0xCC7374](v33);
-    MEMORY[0xCC7370](v33, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7378](v33, *(_DWORD *)(v32 + 36));
-    MEMORY[0xCC737C](v33, *(unsigned __int8 *)(v27 + 41), v27 + 24);
-    MEMORY[0xCC7380](v33, *(unsigned __int8 *)(v32 + 40));
-    MEMORY[0xCC738C](*(_DWORD *)(v32 + 12), v33);
-    MEMORY[0xCC736C](*(_DWORD *)(MEMORY[0xCCF464] + 28), *(_DWORD *)(v27 + 12), v27 + 20);
+    ((int (*)(int))MEMORY[0xCC7374])(v33);
+    ((int (*)(int, int))MEMORY[0xCC7370])(v33, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int, int))MEMORY[0xCC7378])(v33, *(_DWORD *)(v32 + 36));
+    ((int (*)(int, int, int))MEMORY[0xCC737C])(v33, *(unsigned __int8 *)(v27 + 41), v27 + 24);
+    ((int (*)(int, int))MEMORY[0xCC7380])(v33, *(unsigned __int8 *)(v32 + 40));
+    ((int (*)(int, int))MEMORY[0xCC738C])(*(_DWORD *)(v32 + 12), v33);
+    ((int (*)(int, int, int))MEMORY[0xCC736C])(*(_DWORD *)(MEMORY[0xCCF464] + 28), *(_DWORD *)(v27 + 12), v27 + 20);
     *(_DWORD *)(v32 + 44) = 0;
     *(_DWORD *)(v32 + 48) = 0;
     *(_DWORD *)(v32 + 52) = (unsigned int)v4;
     *(_DWORD *)(v32 + 56) = (unsigned int)v5;
     v28 = __operator_new_al(0x40u, v3, 8);
     *(_DWORD *)(v32 + 16) = v28;
-    return MEMORY[0xCC79E0](v28, v31);
+    return ((int (*)(int, int))MEMORY[0xCC79E0])(v28, v31);
   }
 
 /* ============================================================================
@@ -201975,7 +201975,7 @@ sub_608DF448__LABEL_158:
     *(_BYTE *)(a1 + 364) = 0;
     *(_BYTE *)(a1 + 365) = *(_BYTE *)(a2 + 8);
     *(_BYTE *)(a1 + 366) = *(_BYTE *)(a2 + 9);
-    MEMORY[0xCC72DC](*(_DWORD *)(a1 + 24), 1);
+    ((int (*)(int, int))MEMORY[0xCC72DC])(*(_DWORD *)(a1 + 24), 1);
     return a1;
   }
 
@@ -202017,38 +202017,38 @@ sub_608DF448__LABEL_158:
     *v5 = a1[6];
     *(_BYTE *)(a1[9] + 12296) = 1;
     *(_DWORD *)(a1[9] + 12300) = sub_6083ACBC(a1[6]);
-    MEMORY[0xCC72BC](a1[6], 15, &v19);
-    MEMORY[0xCC72BC](a1[6], 16, &v18);
-    MEMORY[0xCC72BC](a1[6], 17, &v17);
-    MEMORY[0xCC72BC](a1[6], 18, &v16);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1[6], 15, &v19);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1[6], 16, &v18);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1[6], 17, &v17);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(a1[6], 18, &v16);
     a1[54] = __operator_new_al(0x100u, a2, 4);
     v6 = a1[57];
     v7 = a1[58];
     v8 = v18;
     v9 = v19;
-    MEMORY[0xCC73C4](v15);
-    MEMORY[0xCC73C0](v15, a1[6]);
-    MEMORY[0xCC73CC](v15, 34);
+    ((int (*)(int))MEMORY[0xCC73C4])(v15);
+    ((int (*)(int, int))MEMORY[0xCC73C0])(v15, a1[6]);
+    ((int (*)(int, int))MEMORY[0xCC73CC])(v15, 34);
     v10 = (v9 * v6 + v8 * v7 + 4095) & 0xFFFFF000;
     v11 = __operator_new_array_al(v10, a2, 4096);
-    MEMORY[0xCC73C8](v15, v11, v10);
-    MEMORY[0xCC73DC](a1[54], v15);
-    MEMORY[0xCC7424](a1 + 20, a1[54], 0, a1[58]);
-    MEMORY[0xCC7404](a1 + 12, a1[54], v18 * a1[58], a1[57]);
+    ((int (*)(int, int, int))MEMORY[0xCC73C8])(v15, v11, v10);
+    ((int (*)(int, int))MEMORY[0xCC73DC])(a1[54], v15);
+    ((int (*)(int, int, int, int))MEMORY[0xCC7424])(a1 + 20, a1[54], 0, a1[58]);
+    ((int (*)(int, int, int, int))MEMORY[0xCC7404])(a1 + 12, a1[54], v18 * a1[58], a1[57]);
     a1[55] = v16;
     a1[56] = v17;
     nn__os__GetSystemTick((struct nn_os *)v15);
     *(_QWORD *)off_60C798C0 = v15[0];
-    MEMORY[0xCC75DC](v15);
-    MEMORY[0xCC75D8](v15, a1[6]);
-    MEMORY[0xCC7638](a1 + 28, v15);
+    ((int (*)(int))MEMORY[0xCC75DC])(v15);
+    ((int (*)(int, int))MEMORY[0xCC75D8])(v15, a1[6]);
+    ((int (*)(int, int))MEMORY[0xCC7638])(a1 + 28, v15);
     sead__CriticalSection__lock((int)(a1 + 77));
     v12 = (unsigned int *)(a1 + 55);
     do
       v13 = __ldrex(v12);
     while ( __strex(v13 + 1, v12) );
     a1[52] = v13;
-    MEMORY[0xCC7430](a1 + 20, v13, a1 + 28);
+    ((int (*)(int, int, int))MEMORY[0xCC7430])(a1 + 20, v13, a1 + 28);
     return sead__CriticalSection__unlock((int)(a1 + 77));
   }
 
@@ -202138,7 +202138,7 @@ sub_608DF448__LABEL_158:
   int __fastcall sub_608F2924(int result)
   {
     if ( *(_BYTE *)(result + 365) )
-      return MEMORY[0xCC7300](*(_DWORD *)(result + 24), 5);
+      return ((int (*)(int, int))MEMORY[0xCC7300])(*(_DWORD *)(result + 24), 5);
     return result;
   }
 
@@ -202179,7 +202179,7 @@ sub_608DF448__LABEL_158:
     __int64 result; // r0
     __int64 v4; // [sp+0h] [bp-8h] BYREF
   
-    v2 = MEMORY[0xCC72FC](*(_DWORD *)(MEMORY[0xCCF464] + 24));
+    v2 = ((int (*)(int))MEMORY[0xCC72FC])(*(_DWORD *)(MEMORY[0xCCF464] + 24));
     nn__os__ConvertToTick(&v4, HIDWORD(v2), v2, HIDWORD(v2));
     result = v4;
     *a1 = v4;
@@ -202437,18 +202437,18 @@ sub_608DF448__LABEL_158:
   
     v7 = *(_DWORD *)(MEMORY[0xCCF464] + 24);
     v39 = a1 + 24;
-    MEMORY[0xCC73B0](a1 + 24, v7);
-    MEMORY[0xCC73C4](v43);
-    MEMORY[0xCC73C0](v43, v7);
-    MEMORY[0xCC73CC](v43, 98);
+    ((int (*)(int, int))MEMORY[0xCC73B0])(a1 + 24, v7);
+    ((int (*)(int))MEMORY[0xCC73C4])(v43);
+    ((int (*)(int, int))MEMORY[0xCC73C0])(v43, v7);
+    ((int (*)(int, int))MEMORY[0xCC73CC])(v43, 98);
     v8 = (a4 + 4095) & 0xFFFFF000;
-    MEMORY[0xCC73C8](v43, a3, v8);
-    MEMORY[0xCC73DC](a1 + 264, v43);
-    MEMORY[0xCC7444](v42, v7);
-    MEMORY[0xCC7448](v42);
-    MEMORY[0xCC744C](v42, a1 + 264, 0, v8);
-    MEMORY[0xCC745C](a1 + 216, v42);
-    v9 = MEMORY[0xCC746C](a1 + 216);
+    ((int (*)(int, int, int))MEMORY[0xCC73C8])(v43, a3, v8);
+    ((int (*)(int, int))MEMORY[0xCC73DC])(a1 + 264, v43);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v42, v7);
+    ((int (*)(int))MEMORY[0xCC7448])(v42);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v42, a1 + 264, 0, v8);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 216, v42);
+    v9 = ((int (*)(int))MEMORY[0xCC746C])(a1 + 216);
     v10 = ((unsigned __int64)(unsigned int)a3[2] + v9) >> 32;
     v41[0] = a3[2] + v9;
     v41[1] = v10;
@@ -202458,33 +202458,33 @@ sub_608DF448__LABEL_158:
     v41[4] = v11;
     v41[5] = v9;
     v41[6] = (char *)a3 + a3[1];
-    MEMORY[0xCC73BC](v39, 2, v41);
-    MEMORY[0xCC778C](a1 + 520);
-    MEMORY[0xCC778C](a1 + 524);
-    MEMORY[0xCC778C](a1 + 528);
-    MEMORY[0xCC7790](a1 + 520, 34, 0);
-    MEMORY[0xCC7790](a1 + 524, 22, 12);
-    MEMORY[0xCC7790](a1 + 528, 46, 20);
-    MEMORY[0xCC77A0](a1 + 536);
-    MEMORY[0xCC77A4](a1 + 536, 36);
+    ((int (*)(int, int, int))MEMORY[0xCC73BC])(v39, 2, v41);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 520);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 524);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 528);
+    ((int (*)(int, int, int))MEMORY[0xCC7790])(a1 + 520, 34, 0);
+    ((int (*)(int, int, int))MEMORY[0xCC7790])(a1 + 524, 22, 12);
+    ((int (*)(int, int, int))MEMORY[0xCC7790])(a1 + 528, 46, 20);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 536);
+    ((int (*)(int, int))MEMORY[0xCC77A4])(a1 + 536, 36);
     v12 = *(_DWORD *)(a1 + 1964);
-    MEMORY[0xCC73C4](v43);
-    MEMORY[0xCC73C0](v43, v7);
-    MEMORY[0xCC73CC](v43, 34);
+    ((int (*)(int))MEMORY[0xCC73C4])(v43);
+    ((int (*)(int, int))MEMORY[0xCC73C0])(v43, v7);
+    ((int (*)(int, int))MEMORY[0xCC73CC])(v43, 34);
     v13 = (v12 + 20479) & 0xFFFFF000;
     v14 = __operator_new_array_al(v13, a2, 4096);
-    MEMORY[0xCC73C8](v43, v14, v13);
-    MEMORY[0xCC73DC](a1 + 544, v43);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 0, 144);
-    MEMORY[0xCC745C](a1 + 800, v43);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 144, 12);
-    MEMORY[0xCC745C](a1 + 848, v43);
-    v15 = (int *)MEMORY[0xCC7468](a1 + 800);
-    v16 = (_BYTE *)MEMORY[0xCC7468](a1 + 848);
+    ((int (*)(int, int, int))MEMORY[0xCC73C8])(v43, v14, v13);
+    ((int (*)(int, int))MEMORY[0xCC73DC])(a1 + 544, v43);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 0, 144);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 800, v43);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 144, 12);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 848, v43);
+    v15 = (int *)((int (*)(int))MEMORY[0xCC7468])(a1 + 800);
+    v16 = (_BYTE *)((int (*)(int))MEMORY[0xCC7468])(a1 + 848);
     sub_608F4FB4(v15, v16);
     v15[3] = 0;
     v15[4] = 0;
@@ -202494,11 +202494,11 @@ sub_608DF448__LABEL_158:
     v15[22] = 1065353216;
     v15[30] = 1065353216;
     v15[31] = 1065353216;
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 156, 8);
-    MEMORY[0xCC745C](a1 + 896, v43);
-    v17 = (_BYTE *)MEMORY[0xCC7468](a1 + 896);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 156, 8);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 896, v43);
+    v17 = (_BYTE *)((int (*)(int))MEMORY[0xCC7468])(a1 + 896);
     v17[5] = 0;
     v17[3] = 0;
     v17[2] = 1;
@@ -202508,88 +202508,88 @@ sub_608DF448__LABEL_158:
     v17 += 4;
     v17[3] = 0;
     v17[2] = 2;
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 164, 72);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 164, 72);
     ((void (*)(void))MEMORY[0xCC745C])();
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 236, 4);
-    MEMORY[0xCC745C](a1 + 992, v43);
-    v18 = (int *)MEMORY[0xCC7468](a1 + 944);
-    v19 = MEMORY[0xCC7468](a1 + 992);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 236, 4);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 992, v43);
+    v18 = (int *)((int (*)(int))MEMORY[0xCC7468])(a1 + 944);
+    v19 = ((int (*)(int))MEMORY[0xCC7468])(a1 + 992);
     sub_608F5830(v18, v19);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 240, 288);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 240, 288);
     ((void (*)(void))MEMORY[0xCC745C])();
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 528, 72);
-    MEMORY[0xCC745C](a1 + 1088, v43);
-    v20 = (int *)MEMORY[0xCC7468](a1 + 1040);
-    v21 = (void *)MEMORY[0xCC7468](a1 + 1088);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 528, 72);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1088, v43);
+    v20 = (int *)((int (*)(int))MEMORY[0xCC7468])(a1 + 1040);
+    v21 = (void *)((int (*)(int))MEMORY[0xCC7468])(a1 + 1088);
     sub_608F5144(v20, v21);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 600, 288);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 600, 288);
     ((void (*)(void))MEMORY[0xCC745C])();
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 888, 34);
-    MEMORY[0xCC745C](a1 + 1184, v43);
-    v22 = (int *)MEMORY[0xCC7468](a1 + 1136);
-    v23 = (void *)MEMORY[0xCC7468](a1 + 1184);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 888, 34);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1184, v43);
+    v22 = (int *)((int (*)(int))MEMORY[0xCC7468])(a1 + 1136);
+    v23 = (void *)((int (*)(int))MEMORY[0xCC7468])(a1 + 1184);
     sub_608F5318(v22, v23);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 924, 1224);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 924, 1224);
     ((void (*)(void))MEMORY[0xCC745C])();
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 2148, 384);
-    MEMORY[0xCC745C](a1 + 1280, v43);
-    v24 = MEMORY[0xCC7468](a1 + 1232);
-    v25 = MEMORY[0xCC7468](a1 + 1280);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 2148, 384);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1280, v43);
+    v24 = ((int (*)(int))MEMORY[0xCC7468])(a1 + 1232);
+    v25 = ((int (*)(int))MEMORY[0xCC7468])(a1 + 1280);
     sub_608F534C(v24, v25, 8, 4);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 2532, 4680);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 2532, 4680);
     ((void (*)(void))MEMORY[0xCC745C])();
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 7212, 1536);
-    MEMORY[0xCC745C](a1 + 1376, v43);
-    v26 = MEMORY[0xCC7468](a1 + 1328);
-    v27 = MEMORY[0xCC7468](a1 + 1376);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 7212, 1536);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1376, v43);
+    v26 = ((int (*)(int))MEMORY[0xCC7468])(a1 + 1328);
+    v27 = ((int (*)(int))MEMORY[0xCC7468])(a1 + 1376);
     sub_608F534C(v26, v27, 16, 8);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 8748, 612);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 8748, 612);
     ((void (*)(void))MEMORY[0xCC745C])();
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 9360, 96);
-    MEMORY[0xCC745C](a1 + 1472, v43);
-    v28 = COERCE_FLOAT(MEMORY[0xCC7468](a1 + 1424));
-    v29 = MEMORY[0xCC7468](a1 + 1472);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 9360, 96);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1472, v43);
+    v28 = COERCE_FLOAT(((int (*)(int))MEMORY[0xCC7468])(a1 + 1424));
+    v29 = ((int (*)(int))MEMORY[0xCC7468])(a1 + 1472);
     sub_608F5718(v28, v29, 16);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 9456, 1188);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 9456, 1188);
     ((void (*)(void))MEMORY[0xCC745C])();
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 10644, 192);
-    MEMORY[0xCC745C](a1 + 1568, v43);
-    v30 = COERCE_FLOAT(MEMORY[0xCC7468](a1 + 1520));
-    v31 = MEMORY[0xCC7468](a1 + 1568);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 10644, 192);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1568, v43);
+    v30 = COERCE_FLOAT(((int (*)(int))MEMORY[0xCC7468])(a1 + 1520));
+    v31 = ((int (*)(int))MEMORY[0xCC7468])(a1 + 1568);
     sub_608F5718(v30, v31, 32);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 10836, 32);
-    MEMORY[0xCC745C](a1 + 1616, v43);
-    v32 = (_WORD *)MEMORY[0xCC7468](a1 + 1616);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 10836, 32);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1616, v43);
+    v32 = (_WORD *)((int (*)(int))MEMORY[0xCC7468])(a1 + 1616);
     *v32 = 0;
     v32[1] = 1;
     v32[2] = 2;
@@ -202606,11 +202606,11 @@ sub_608DF448__LABEL_158:
     v32[13] = 13;
     v32[14] = 14;
     v32[15] = 15;
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 10868, 64);
-    MEMORY[0xCC745C](a1 + 1664, v43);
-    v33 = (_WORD *)MEMORY[0xCC7468](a1 + 1664);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 10868, 64);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1664, v43);
+    v33 = (_WORD *)((int (*)(int))MEMORY[0xCC7468])(a1 + 1664);
     *v33 = 0;
     v33[1] = 1;
     v33[2] = 2;
@@ -202643,33 +202643,33 @@ sub_608DF448__LABEL_158:
     v33[29] = 29;
     v33[30] = 30;
     v33[31] = 31;
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 10932, 1224);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 10932, 1224);
     ((void (*)(void))MEMORY[0xCC745C])();
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 12156, 384);
-    MEMORY[0xCC745C](a1 + 1760, v43);
-    v34 = MEMORY[0xCC7468](a1 + 1712);
-    v35 = (_WORD *)MEMORY[0xCC7468](a1 + 1760);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 12156, 384);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1760, v43);
+    v34 = ((int (*)(int))MEMORY[0xCC7468])(a1 + 1712);
+    v35 = (_WORD *)((int (*)(int))MEMORY[0xCC7468])(a1 + 1760);
     sub_608F5918(v34, v35, 16);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 12540, 2376);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 12540, 2376);
     ((void (*)(void))MEMORY[0xCC745C])();
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 14916, 768);
-    MEMORY[0xCC745C](a1 + 1856, v43);
-    v36 = MEMORY[0xCC7468](a1 + 1808);
-    v37 = (_WORD *)MEMORY[0xCC7468](a1 + 1856);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 14916, 768);
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1856, v43);
+    v36 = ((int (*)(int))MEMORY[0xCC7468])(a1 + 1808);
+    v37 = (_WORD *)((int (*)(int))MEMORY[0xCC7468])(a1 + 1856);
     sub_608F5918(v36, v37, 32);
-    MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-    MEMORY[0xCC7448](v43);
-    MEMORY[0xCC744C](v43, a1 + 544, 15872, *(_DWORD *)(a1 + 1964));
-    MEMORY[0xCC745C](a1 + 1904, v43);
-    result = MEMORY[0xCC7468](a1 + 1904);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC7448])(v43);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v43, a1 + 544, 15872, *(_DWORD *)(a1 + 1964));
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 1904, v43);
+    result = ((int (*)(int))MEMORY[0xCC7468])(a1 + 1904);
     *(_DWORD *)(a1 + 1952) = result;
     return result;
   }
@@ -202782,9 +202782,9 @@ sub_608DF448__LABEL_158:
       if ( v9 + 256 - *(_DWORD *)(a1 + 1960) <= v10 )
       {
         v11 = *(_DWORD *)(a2 + 192);
-        MEMORY[0xCC7818](v11, a1 + 24, 31);
-        MEMORY[0xCC7810](v11, 3, a1 + 520);
-        MEMORY[0xCC7814](v11, 1, a1 + 536);
+        ((int (*)(int, int, int))MEMORY[0xCC7818])(v11, a1 + 24, 31);
+        ((int (*)(int, int, int))MEMORY[0xCC7810])(v11, 3, a1 + 520);
+        ((int (*)(int, int, int))MEMORY[0xCC7814])(v11, 1, a1 + 536);
         v12.n64_u64[0] = a4[1].n64_u64[0];
         v13.n64_u64[0] = a4[3].n64_u64[0];
         v34 = *(float32x4_t *)(a3 + 16);
@@ -202824,8 +202824,8 @@ sub_608DF448__LABEL_158:
         v32[1] = vaddq_f32(v27, v23);
         v32[2] = vaddq_f32(vextq_s8(v25, v25, 4u), v24);
         v32[3] = vaddq_f32(vextq_s8(v30, v30, 4u), vmlaq_lane_f32(v29, v19, *(float32x2_t *)&v22.n128_i8[8], 0));
-        v33 = MEMORY[0xCC746C](a1 + 1904);
-        return MEMORY[0xCC7824](
+        v33 = ((int (*)(int))MEMORY[0xCC746C])(a1 + 1904);
+        return ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(
                  v11,
                  0,
                  0,
@@ -202931,8 +202931,8 @@ sub_608DF448__LABEL_158:
     result = *(unsigned __int8 *)(a1 + 1968);
     if ( !result )
     {
-      v18 = MEMORY[0xCC746C](a7);
-      MEMORY[0xCC781C](a2, 0, v18, HIDWORD(v18), 36 * a8);
+      v18 = ((int (*)(int))MEMORY[0xCC746C])(a7);
+      ((int (*)(int, int, int, int, int))MEMORY[0xCC781C])(a2, 0, v18, HIDWORD(v18), 36 * a8);
       v19 = (unsigned int *)(a1 + 1956);
       if ( *(_BYTE *)(a1 + 1969) )
       {
@@ -202996,9 +202996,9 @@ sub_608DF448__LABEL_158:
             *(_DWORD *)(v29 + 108) = v41;
           }
           v63 = a1 + 1904;
-          v64 = MEMORY[0xCC746C](a1 + 1904);
+          v64 = ((int (*)(int))MEMORY[0xCC746C])(a1 + 1904);
           LODWORD(v65) = 0;
-          MEMORY[0xCC7824](a2, 0, 1, MEMORY[0xCC7824], v64 + v28, (v64 + (unsigned __int64)(unsigned int)v28) >> 32, 256);
+          ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(a2, 0, 1, MEMORY[0xCC7824], v64 + v28, (v64 + (unsigned __int64)(unsigned int)v28) >> 32, 256);
           v67 = *(_DWORD *)(a1 + 1952);
           v68 = v28 + 256;
           if ( a11 )
@@ -203020,8 +203020,8 @@ sub_608DF448__LABEL_158:
             HIDWORD(v65) = 0;
           }
           *(_QWORD *)(v68 + v67) = v65;
-          v70 = MEMORY[0xCC746C](v63);
-          MEMORY[0xCC7824](a2, 1, 0, MEMORY[0xCC7824], v70 + v68, (unsigned __int64)(v70 + v68) >> 32, 8);
+          v70 = ((int (*)(int))MEMORY[0xCC746C])(v63);
+          ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(a2, 1, 0, MEMORY[0xCC7824], v70 + v68, (unsigned __int64)(v70 + v68) >> 32, 8);
           goto sub_608F4134__LABEL_23;
         }
       }
@@ -203067,11 +203067,11 @@ sub_608DF448__LABEL_158:
           *(_DWORD *)(v50 + 4) = v59;
           *(_DWORD *)(v50 + 8) = v60;
           *(_DWORD *)(v50 + 12) = v61;
-          v62 = MEMORY[0xCC746C](a1 + 1904);
-          MEMORY[0xCC7824](a2, 0, 1, MEMORY[0xCC7824], v62 + v49, (v62 + (unsigned __int64)(unsigned int)v49) >> 32, 96);
+          v62 = ((int (*)(int))MEMORY[0xCC746C])(a1 + 1904);
+          ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(a2, 0, 1, MEMORY[0xCC7824], v62 + v49, (v62 + (unsigned __int64)(unsigned int)v49) >> 32, 96);
   sub_608F4134__LABEL_23:
-          v71 = MEMORY[0xCC746C](a9);
-          return MEMORY[0xCC7874](a2, a3, 1, a10, v71, HIDWORD(v71));
+          v71 = ((int (*)(int))MEMORY[0xCC746C])(a9);
+          return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(a2, a3, 1, a10, v71, HIDWORD(v71));
         }
       }
       *(_BYTE *)(a1 + 1968) = 1;
@@ -206479,7 +206479,7 @@ sub_608DF448__LABEL_158:
     sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v38);
     v38 = dword_60C79910 + 8;
     v7 = v39;
-    MEMORY[0xBC0244](&v36);
+    ((int (*)(int))MEMORY[0xBC0244])(&v36);
     v8 = v37;
     v34 = a2;
     if ( v7 != v37 )
@@ -208207,7 +208207,7 @@ sub_608DF448__LABEL_158:
     sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v50);
     v50 = dword_60C79910 + 8;
     v7 = v51;
-    MEMORY[0xBC0244](&v48);
+    ((int (*)(int))MEMORY[0xBC0244])(&v48);
     v8 = v49;
     v46 = a2;
     v47 = v3;
@@ -209489,7 +209489,7 @@ sub_608DF448__LABEL_158:
     sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v32);
     v32 = dword_60C79910 + 8;
     v7 = v33;
-    MEMORY[0xBC0244](&v30);
+    ((int (*)(int))MEMORY[0xBC0244])(&v30);
     v8 = v31;
     v29 = a2;
     if ( v7 != v31 )
@@ -223880,8 +223880,8 @@ sub_608DF448__LABEL_158:
     _BYTE v16[12]; // [sp+30h] [bp-Ch] BYREF
   
     v3 = *(_DWORD *)(a2 + 192);
-    MEMORY[0xCC7674](v16);
-    MEMORY[0xCC76B0](v14);
+    ((int (*)(int))MEMORY[0xCC7674])(v16);
+    ((int (*)(int))MEMORY[0xCC76B0])(v14);
     v4 = *((_DWORD *)a1 + 1);
     v11 = v3;
     if ( v4 )
@@ -223891,12 +223891,12 @@ sub_608DF448__LABEL_158:
       {
         if ( (v4 & (1 << i)) != 0 )
         {
-          MEMORY[0xCC76B4](v14, i, 1);
-          MEMORY[0xCC7678](v16, i);
-          MEMORY[0xCC767C](v16, a1[v5 + 40], a1[v5 + 42], a1[v5 + 41], a1[v5 + 43]);
+          ((int (*)(int, int, int))MEMORY[0xCC76B4])(v14, i, 1);
+          ((int (*)(int, int))MEMORY[0xCC7678])(v16, i);
+          ((int (*)(int, int, int, int, int))MEMORY[0xCC767C])(v16, a1[v5 + 40], a1[v5 + 42], a1[v5 + 41], a1[v5 + 43]);
           v3 = v11;
-          MEMORY[0xCC7680](v16, a1[v5 + 44], a1[v5 + 45]);
-          MEMORY[0xCC77F8](v11, v16);
+          ((int (*)(int, int, int))MEMORY[0xCC7680])(v16, a1[v5 + 44], a1[v5 + 45]);
+          ((int (*)(int, int))MEMORY[0xCC77F8])(v11, v16);
         }
         if ( v5 == 42 )
           break;
@@ -223904,13 +223904,13 @@ sub_608DF448__LABEL_158:
         v5 += 6;
       }
     }
-    MEMORY[0xCC76B8](v14, 3);
-    MEMORY[0xCC7800](v3, v14);
-    MEMORY[0xCC78F0](v3, a1 + 8);
+    ((int (*)(int, int))MEMORY[0xCC76B8])(v14, 3);
+    ((int (*)(int, int))MEMORY[0xCC7800])(v3, v14);
+    ((int (*)(int, int))MEMORY[0xCC78F0])(v3, a1 + 8);
     v7 = 0;
     for ( j = 0; j != 8; ++j )
     {
-      MEMORY[0xCC76D0](
+      ((int (*)(int, int, int, int, int, int))MEMORY[0xCC76D0])(
         v15,
         j,
         (*((_DWORD *)a1 + 7) >> v7) & 1,
@@ -223919,28 +223919,28 @@ sub_608DF448__LABEL_158:
         (*((_DWORD *)a1 + 7) >> v7 >> 3) & 1);
       v7 += 4;
     }
-    MEMORY[0xCC77FC](v11, v15);
-    MEMORY[0xCC775C](v13, *a1);
-    MEMORY[0xCC7760](v13, a1[1]);
-    MEMORY[0xCC7764](v13, a1[88]);
-    MEMORY[0xCC7768](v13, a1[3]);
-    MEMORY[0xCC776C](v13, 3, a1[94]);
-    MEMORY[0xCC7770](v13, 3, a1[91], a1[92], a1[93]);
-    MEMORY[0xCC780C](v11, v13);
+    ((int (*)(int, int))MEMORY[0xCC77FC])(v11, v15);
+    ((int (*)(int, int))MEMORY[0xCC775C])(v13, *a1);
+    ((int (*)(int, int))MEMORY[0xCC7760])(v13, a1[1]);
+    ((int (*)(int, int))MEMORY[0xCC7764])(v13, a1[88]);
+    ((int (*)(int, int))MEMORY[0xCC7768])(v13, a1[3]);
+    ((int (*)(int, int, int))MEMORY[0xCC776C])(v13, 3, a1[94]);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC7770])(v13, 3, a1[91], a1[92], a1[93]);
+    ((int (*)(int, int))MEMORY[0xCC780C])(v11, v13);
     if ( a1[3] )
     {
-      MEMORY[0xCC78E4](v11, 3, *((_DWORD *)a1 + 9));
-      MEMORY[0xCC78E8](v11, 3, 255);
-      MEMORY[0xCC78EC](v11, 3, *((_DWORD *)a1 + 8));
+      ((int (*)(int, int, int))MEMORY[0xCC78E4])(v11, 3, *((_DWORD *)a1 + 9));
+      ((int (*)(int, int, int))MEMORY[0xCC78E8])(v11, 3, 255);
+      ((int (*)(int, int, int))MEMORY[0xCC78EC])(v11, 3, *((_DWORD *)a1 + 8));
     }
-    MEMORY[0xCC7738](v12, a1[89]);
-    MEMORY[0xCC773C](v12, 1);
-    MEMORY[0xCC7740](v12, a1[95]);
+    ((int (*)(int, int))MEMORY[0xCC7738])(v12, a1[89]);
+    ((int (*)(int, int))MEMORY[0xCC773C])(v12, 1);
+    ((int (*)(int, int))MEMORY[0xCC7740])(v12, a1[95]);
     v9 = a1[97];
     if ( a1[97] )
       v9 = 4;
-    MEMORY[0xCC7744](v12, v9);
-    return MEMORY[0xCC7808](v11, v12);
+    ((int (*)(int, int))MEMORY[0xCC7744])(v12, v9);
+    return ((int (*)(int, int))MEMORY[0xCC7808])(v11, v12);
   }
 
 /* ============================================================================
@@ -223952,19 +223952,19 @@ sub_608DF448__LABEL_158:
     int result; // r0
     _BYTE v5[8]; // [sp+8h] [bp-8h] BYREF
   
-    MEMORY[0xCC775C](v5, *a1);
-    MEMORY[0xCC7760](v5, a1[1]);
-    MEMORY[0xCC7764](v5, a1[88]);
-    MEMORY[0xCC7768](v5, a1[3]);
-    MEMORY[0xCC776C](v5, 3, a1[94]);
-    MEMORY[0xCC7770](v5, 3, a1[91], a1[92], a1[93]);
-    MEMORY[0xCC780C](*(_DWORD *)(a2 + 192), v5);
+    ((int (*)(int, int))MEMORY[0xCC775C])(v5, *a1);
+    ((int (*)(int, int))MEMORY[0xCC7760])(v5, a1[1]);
+    ((int (*)(int, int))MEMORY[0xCC7764])(v5, a1[88]);
+    ((int (*)(int, int))MEMORY[0xCC7768])(v5, a1[3]);
+    ((int (*)(int, int, int))MEMORY[0xCC776C])(v5, 3, a1[94]);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC7770])(v5, 3, a1[91], a1[92], a1[93]);
+    ((int (*)(int, int))MEMORY[0xCC780C])(*(_DWORD *)(a2 + 192), v5);
     result = a1[3];
     if ( a1[3] )
     {
-      MEMORY[0xCC78E4](*(_DWORD *)(a2 + 192), 3, *((_DWORD *)a1 + 9));
-      MEMORY[0xCC78E8](*(_DWORD *)(a2 + 192), 3, 255);
-      return MEMORY[0xCC78EC](*(_DWORD *)(a2 + 192), 3, *((_DWORD *)a1 + 8));
+      ((int (*)(int, int, int))MEMORY[0xCC78E4])(*(_DWORD *)(a2 + 192), 3, *((_DWORD *)a1 + 9));
+      ((int (*)(int, int, int))MEMORY[0xCC78E8])(*(_DWORD *)(a2 + 192), 3, 255);
+      return ((int (*)(int, int, int))MEMORY[0xCC78EC])(*(_DWORD *)(a2 + 192), 3, *((_DWORD *)a1 + 8));
     }
     return result;
   }
@@ -223982,7 +223982,7 @@ sub_608DF448__LABEL_158:
     v4 = 0;
     for ( i = 0; i != 8; ++i )
     {
-      MEMORY[0xCC76D0](
+      ((int (*)(int, int, int, int, int, int))MEMORY[0xCC76D0])(
         v7,
         i,
         (*(_DWORD *)(a1 + 28) >> v4) & 1,
@@ -223991,7 +223991,7 @@ sub_608DF448__LABEL_158:
         (*(_DWORD *)(a1 + 28) >> v4 >> 3) & 1);
       v4 += 4;
     }
-    return MEMORY[0xCC77FC](*(_DWORD *)(a2 + 192), v7);
+    return ((int (*)(int, int))MEMORY[0xCC77FC])(*(_DWORD *)(a2 + 192), v7);
   }
 
 /* ============================================================================
@@ -224009,8 +224009,8 @@ sub_608DF448__LABEL_158:
     _BYTE v10[12]; // [sp+18h] [bp-Ch] BYREF
   
     v8 = *(_DWORD *)(a2 + 192);
-    MEMORY[0xCC7674](v10);
-    MEMORY[0xCC76B0](v9);
+    ((int (*)(int))MEMORY[0xCC7674])(v10);
+    ((int (*)(int))MEMORY[0xCC76B0])(v9);
     v3 = *(_DWORD *)(a1 + 4);
     if ( v3 )
     {
@@ -224021,8 +224021,8 @@ sub_608DF448__LABEL_158:
       {
         if ( (v3 & (1 << v5)) != 0 )
         {
-          MEMORY[0xCC76B4](v9, v5, 1);
-          MEMORY[0xCC7678](v10, v5);
+          ((int (*)(int, int, int))MEMORY[0xCC76B4])(v9, v5, 1);
+          ((int (*)(int, int))MEMORY[0xCC7678])(v10, v5);
           (*(void (__fastcall **)(_BYTE *, _DWORD, _DWORD, _DWORD, _DWORD, int))v7)(
             v10,
             *(unsigned __int8 *)(a1 + v4 + 40),
@@ -224030,8 +224030,8 @@ sub_608DF448__LABEL_158:
             *(unsigned __int8 *)(a1 + v4 + 41),
             *(unsigned __int8 *)(a1 + v4 + 43),
             v7);
-          MEMORY[0xCC7680](v10, *(unsigned __int8 *)(a1 + v4 + 44), *(unsigned __int8 *)(a1 + v4 + 45));
-          MEMORY[0xCC77F8](v8, v10);
+          ((int (*)(int, int, int))MEMORY[0xCC7680])(v10, *(unsigned __int8 *)(a1 + v4 + 44), *(unsigned __int8 *)(a1 + v4 + 45));
+          ((int (*)(int, int))MEMORY[0xCC77F8])(v8, v10);
         }
         if ( v4 == 42 )
           break;
@@ -224040,8 +224040,8 @@ sub_608DF448__LABEL_158:
         v4 += 6;
       }
     }
-    MEMORY[0xCC76B8](v9, 3);
-    return MEMORY[0xCC7800](v8, v9);
+    ((int (*)(int, int))MEMORY[0xCC76B8])(v9, 3);
+    return ((int (*)(int, int))MEMORY[0xCC7800])(v8, v9);
   }
 
 /* ============================================================================
@@ -224050,7 +224050,7 @@ sub_608DF448__LABEL_158:
  * ============================================================================ */
   int __fastcall sub_6090BC28(int a1, int a2)
   {
-    return MEMORY[0xCC78F0](*(_DWORD *)(a2 + 192), a1 + 8);
+    return ((int (*)(int, int))MEMORY[0xCC78F0])(*(_DWORD *)(a2 + 192), a1 + 8);
   }
 
 /* ============================================================================
@@ -224062,14 +224062,14 @@ sub_608DF448__LABEL_158:
     int v4; // r1
     _BYTE v6[4]; // [sp+4h] [bp-4h] BYREF
   
-    MEMORY[0xCC7738](v6, a1[89]);
-    MEMORY[0xCC773C](v6, 1);
-    MEMORY[0xCC7740](v6, a1[95]);
+    ((int (*)(int, int))MEMORY[0xCC7738])(v6, a1[89]);
+    ((int (*)(int, int))MEMORY[0xCC773C])(v6, 1);
+    ((int (*)(int, int))MEMORY[0xCC7740])(v6, a1[95]);
     v4 = a1[97];
     if ( a1[97] )
       v4 = 4;
-    MEMORY[0xCC7744](v6, v4);
-    return MEMORY[0xCC7808](*(_DWORD *)(a2 + 192), v6);
+    ((int (*)(int, int))MEMORY[0xCC7744])(v6, v4);
+    return ((int (*)(int, int))MEMORY[0xCC7808])(*(_DWORD *)(a2 + 192), v6);
   }
 
 /* ============================================================================
@@ -226324,8 +226324,8 @@ sub_608DF448__LABEL_158:
     v18 = v12 - v18;
     v14 = *(_DWORD *)(a2 + 192);
     v15 = (unsigned int)(float)((float)(v7 / v6) * v13);
-    MEMORY[0xCC78B8](v14, (int)v17, (int)v18, v15, (unsigned int)v11);
-    return MEMORY[0xCC78AC](v14, (int)v17, (int)v18, v15, (unsigned int)v11);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC78B8])(v14, (int)v17, (int)v18, v15, (unsigned int)v11);
+    return ((int (*)(int, int, int, int, int))MEMORY[0xCC78AC])(v14, (int)v17, (int)v18, v15, (unsigned int)v11);
   }
 
 /* ============================================================================
@@ -226457,7 +226457,7 @@ sub_608DF448__LABEL_158:
       v6 = *(float *)(a1 + 16) - *(float *)(a1 + 8);
     }
     v7 = a3[6] - a3[4];
-    return MEMORY[0xCC78AC](
+    return ((int (*)(int, int, int, int, int))MEMORY[0xCC78AC])(
              *(_DWORD *)(a2 + 192),
              (int)v10[0],
              (int)(float)((float)(v7 - (float)((float)(v8 / a3[2]) * v7)) - v10[1]),
@@ -226485,7 +226485,7 @@ sub_608DF448__LABEL_158:
       v6 = *(float *)(a1 + 16) - *(float *)(a1 + 8);
     }
     v7 = a3[6] - a3[4];
-    return MEMORY[0xCC78B8](
+    return ((int (*)(int, int, int, int, int))MEMORY[0xCC78B8])(
              *(_DWORD *)(a2 + 192),
              (int)v10[0],
              (int)(float)((float)(v7 - (float)((float)(v8 / a3[2]) * v7)) - v10[1]),
@@ -231070,7 +231070,7 @@ sub_608DF448__LABEL_158:
     v2 = result;
     if ( a2 )
     {
-      MEMORY[0xCC7970](*(_DWORD *)(result + 192), a2 & 3 | (2 * a2) & 8 | 0x10);
+      ((int (*)(int, int))MEMORY[0xCC7970])(*(_DWORD *)(result + 192), a2 & 3 | (2 * a2) & 8 | 0x10);
       *(_DWORD *)(v2 + 416) = 0;
       *(_DWORD *)(v2 + 420) = 0;
       return 0;
@@ -231297,9 +231297,9 @@ sub_608DF448__LABEL_158:
     result = *a1;
     if ( result )
     {
-      result = MEMORY[0xCC7400](result);
+      result = ((int (*)(int))MEMORY[0xCC7400])(result);
       if ( (result & 4) != 0 )
-        return MEMORY[0xCC73EC](*a1, a1[1], a2);
+        return ((int (*)(int, int, int))MEMORY[0xCC73EC])(*a1, a1[1], a2);
     }
     return result;
   }
@@ -231315,9 +231315,9 @@ sub_608DF448__LABEL_158:
     result = *a1;
     if ( result )
     {
-      result = MEMORY[0xCC7400](result);
+      result = ((int (*)(int))MEMORY[0xCC7400])(result);
       if ( (result & 4) != 0 )
-        return MEMORY[0xCC73F0](*a1, a1[1], a2);
+        return ((int (*)(int, int, int))MEMORY[0xCC73F0])(*a1, a1[1], a2);
     }
     return result;
   }
@@ -231707,16 +231707,16 @@ sub_608DF448__LABEL_158:
     }
     v5 = *(_DWORD *)(v3 + 28);
     v6 = *(_DWORD *)(MEMORY[0xCCFC8C] + 28);
-    MEMORY[0xCC73C4](v51);
-    MEMORY[0xCC73C0](v51, v6);
-    MEMORY[0xCC73CC](v51, 98);
-    MEMORY[0xCC73C8](v51, v3 + v5, (*(_DWORD *)(*v2 + 24) + 4095) & 0xFFFFF000);
+    ((int (*)(int))MEMORY[0xCC73C4])(v51);
+    ((int (*)(int, int))MEMORY[0xCC73C0])(v51, v6);
+    ((int (*)(int, int))MEMORY[0xCC73CC])(v51, 98);
+    ((int (*)(int, int, int))MEMORY[0xCC73C8])(v51, v3 + v5, (*(_DWORD *)(*v2 + 24) + 4095) & 0xFFFFF000);
     v7 = v3 + 32;
-    MEMORY[0xCC73DC](v7, v51);
-    MEMORY[0xCC7444](v50, v6);
-    MEMORY[0xCC7448](v50);
-    MEMORY[0xCC744C](v50, v7, 0, (*(_DWORD *)(*v2 + 24) + 4095) & 0xFFFFF000);
-    MEMORY[0xCC745C](*v2 + 288, v50);
+    ((int (*)(int, int))MEMORY[0xCC73DC])(v7, v51);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v50, v6);
+    ((int (*)(int))MEMORY[0xCC7448])(v50);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v50, v7, 0, (*(_DWORD *)(*v2 + 24) + 4095) & 0xFFFFF000);
+    ((int (*)(int, int))MEMORY[0xCC745C])(*v2 + 288, v50);
     v8 = *v2 + *(_DWORD *)(*v2 + 20) + 336;
     if ( !v4 )
     {
@@ -232206,8 +232206,8 @@ sub_608DF448__LABEL_158:
  * ============================================================================ */
   int __fastcall sub_6091491C(_DWORD *a1)
   {
-    MEMORY[0xCC7464](*a1 + 288);
-    return MEMORY[0xCC73E4](*a1 + 32);
+    ((int (*)(int))MEMORY[0xCC7464])(*a1 + 288);
+    return ((int (*)(int))MEMORY[0xCC73E4])(*a1 + 32);
   }
 
 /* ============================================================================
@@ -232262,11 +232262,11 @@ sub_608DF448__LABEL_158:
     _BYTE v13[8]; // [sp+68h] [bp+40h] BYREF
   
     v7 = *a4;
-    MEMORY[0xCC73C4](v12);
-    MEMORY[0xCC73C0](v12, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+    ((int (*)(int))MEMORY[0xCC73C4])(v12);
+    ((int (*)(int, int))MEMORY[0xCC73C0])(v12, *(_DWORD *)(MEMORY[0xCCF464] + 24));
     v9 = v7 & 0xFFFFDF8 | 0x201;
-    MEMORY[0xCC73CC](v12, v9);
-    MEMORY[0xCC73C8](v12, 0, a3);
+    ((int (*)(int, int))MEMORY[0xCC73CC])(v12, v9);
+    ((int (*)(int, int, int))MEMORY[0xCC73C8])(v12, 0, a3);
     sub_6091718C(MEMORY[0xCCFC8C], a1, v12);
     v11[0] = a5;
     memset(&v11[2], 0, 16);
@@ -232292,7 +232292,7 @@ sub_608DF448__LABEL_158:
     result = *(_DWORD *)(a1 + 256);
     if ( result < 0 )
     {
-      MEMORY[0xCC73E4](a1);
+      ((int (*)(int))MEMORY[0xCC73E4])(a1);
       result = *(_DWORD *)(a1 + 256) & 0x7FFFFFFF;
       *(_DWORD *)(a1 + 256) = result;
     }
@@ -232361,10 +232361,10 @@ sub_608DF448__LABEL_158:
                    0);
         v15 = v12[2];
         v16 = *a7;
-        MEMORY[0xCC73C4](v18);
-        MEMORY[0xCC73C0](v18, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-        MEMORY[0xCC73CC](v18, v16 & 0xFFFFFFF);
-        MEMORY[0xCC73C8](v18, v15, v8);
+        ((int (*)(int))MEMORY[0xCC73C4])(v18);
+        ((int (*)(int, int))MEMORY[0xCC73C0])(v18, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+        ((int (*)(int, int))MEMORY[0xCC73CC])(v18, v16 & 0xFFFFFFF);
+        ((int (*)(int, int, int))MEMORY[0xCC73C8])(v18, v15, v8);
         sub_6091718C(MEMORY[0xCCFC8C], v12 + 4, v18);
         v13 = v12;
         v12[68] = *a7 | 0x80000000;
@@ -232509,7 +232509,7 @@ sub_608DF448__LABEL_158:
     v4[70] = 0;
     if ( (int)v4[68] < 0 )
     {
-      MEMORY[0xCC73E4](v4 + 4);
+      ((int (*)(int))MEMORY[0xCC73E4])(v4 + 4);
       v4[68] &= ~0x80000000;
     }
     v13 = v4[1];
@@ -232574,7 +232574,7 @@ sub_608DF448__LABEL_158:
       i[70] = 0;
       if ( (int)i[68] < 0 )
       {
-        MEMORY[0xCC73E4](i + 4);
+        ((int (*)(int))MEMORY[0xCC73E4])(i + 4);
         i[68] &= ~0x80000000;
       }
       v7 = i[1];
@@ -232965,10 +232965,10 @@ sub_608DF448__LABEL_158:
         v28 = v24;
         v29 = v26 + v14;
         *(_DWORD *)(v26 + v14 + 256) = 0;
-        MEMORY[0xCC73C4](v34);
-        MEMORY[0xCC73C0](v34, *(_DWORD *)(MEMORY[0xCCF464] + 24));
-        MEMORY[0xCC73CC](v34, v13 & 0xFFFFFFF);
-        MEMORY[0xCC73C8](v34, v27, v14);
+        ((int (*)(int))MEMORY[0xCC73C4])(v34);
+        ((int (*)(int, int))MEMORY[0xCC73C0])(v34, *(_DWORD *)(MEMORY[0xCCF464] + 24));
+        ((int (*)(int, int))MEMORY[0xCC73CC])(v34, v13 & 0xFFFFFFF);
+        ((int (*)(int, int, int))MEMORY[0xCC73C8])(v34, v27, v14);
         sub_6091718C(MEMORY[0xCCFC8C], v27 + v14, v34);
         *(_DWORD *)(v29 + 256) = v13 | 0x80000000;
         sub_60913F8C(v25, v27, v28, v27 + v14);
@@ -233157,7 +233157,7 @@ sub_608DF448__LABEL_158:
  * ============================================================================ */
   int __fastcall sub_60915B7C(int a1, int a2)
   {
-    return MEMORY[0xCC78F8](*(_DWORD *)(a2 + 192));
+    return ((int (*)(int))MEMORY[0xCC78F8])(*(_DWORD *)(a2 + 192));
   }
 
 /* ============================================================================
@@ -233166,7 +233166,7 @@ sub_608DF448__LABEL_158:
  * ============================================================================ */
   int __fastcall sub_60915B94(int a1, int a2, int a3)
   {
-    return MEMORY[0xCC790C](*(_DWORD *)(a2 + 192), a3);
+    return ((int (*)(int, int))MEMORY[0xCC790C])(*(_DWORD *)(a2 + 192), a3);
   }
 
 /* ============================================================================
@@ -233541,7 +233541,7 @@ sub_608DF448__LABEL_158:
       }
     }
     v34 = sub_60920E00(43);
-    return MEMORY[0xCC72E4](*(_DWORD *)(a1 + 28), 11820236, v34);
+    return ((int (*)(int, int, int))MEMORY[0xCC72E4])(*(_DWORD *)(a1 + 28), 11820236, v34);
   }
 
 /* ============================================================================
@@ -233584,7 +233584,7 @@ sub_608DF448__LABEL_158:
       v10 = 0;
       if ( *(_DWORD *)(a1 + 200) > (unsigned int)v9 )
         v10 = *(_DWORD *)(*(_DWORD *)(a1 + 208) + 4 * v9);
-      if ( !MEMORY[0xCC766C](v10, a2) )
+      if ( !((int (*)(int, int))MEMORY[0xCC766C])(v10, a2) )
       {
   sub_60916308__LABEL_2:
         v5 = *(unsigned __int16 *)(a1 + 198);
@@ -233639,7 +233639,7 @@ sub_608DF448__LABEL_158:
       goto sub_60916308__LABEL_2;
     v18 = 4 * v17;
     v19 = *(_DWORD **)(a1 + 208);
-    while ( !MEMORY[0xCC766C](*v19, a2) )
+    while ( !((int (*)(int, int))MEMORY[0xCC766C])(*v19, a2) )
     {
       v18 -= 4;
       ++v19;
@@ -233692,7 +233692,7 @@ sub_608DF448__LABEL_158:
       v10 = (struct sead_CriticalSection *)(MEMORY[0xCCF464] + 308);
       sead__CriticalSection__lock((struct sead_CriticalSection *)(MEMORY[0xCCF464] + 308));
       v7 = v9 + a2;
-      MEMORY[0xCC7430](MEMORY[0xCCF464] + 80, v7, v8);
+      ((int (*)(int, int, int))MEMORY[0xCC7430])(MEMORY[0xCCF464] + 80, v7, v8);
       ++*(_WORD *)(a1 + 228);
       ++*(_WORD *)(v8 + 96);
       v11 = *(_BYTE *)(v8 + 100);
@@ -233767,7 +233767,7 @@ sub_608DF448__LABEL_158:
     v5 = *(_DWORD *)(a1 + 192);
     if ( v4 > v3 )
       v5 += 104 * v3;
-    return MEMORY[0xCC766C](v5, a3) != 0;
+    return ((int (*)(int, int))MEMORY[0xCC766C])(v5, a3) != 0;
   }
 
 /* ============================================================================
@@ -233776,7 +233776,7 @@ sub_608DF448__LABEL_158:
  * ============================================================================ */
   bool sub_6091671C()
   {
-    return MEMORY[0xCC75D0]() != 0;
+    return ((int (*)(void))MEMORY[0xCC75D0])() != 0;
   }
 
 /* ============================================================================
@@ -233855,7 +233855,7 @@ sub_608DF448__LABEL_158:
             v16 = (struct sead_CriticalSection *)(MEMORY[0xCCF464] + 272);
             sead__CriticalSection__lock((struct sead_CriticalSection *)(MEMORY[0xCCF464] + 272));
             v17 = v15 + v9;
-            MEMORY[0xCC7410](MEMORY[0xCCF464] + 48, v17, a2, a3);
+            ((int (*)(int, int, int, int))MEMORY[0xCC7410])(MEMORY[0xCCF464] + 48, v17, a2, a3);
             sead__CriticalSection__unlock(v16);
             do
               v18 = __ldrex(v7);
@@ -233902,9 +233902,9 @@ sub_608DF448__LABEL_158:
             v36 = (struct sead_CriticalSection *)(MEMORY[0xCCF464] + 272);
             sead__CriticalSection__lock((struct sead_CriticalSection *)(MEMORY[0xCCF464] + 272));
             v17 = v34 + v20;
-            MEMORY[0xCC7410](MEMORY[0xCCF464] + 48, v34 + v20, a2, 0);
+            ((int (*)(int, int, int, int))MEMORY[0xCC7410])(MEMORY[0xCCF464] + 48, v34 + v20, a2, 0);
             sead__CriticalSection__unlock(v36);
-            v26 = MEMORY[0xCC7578](a2);
+            v26 = ((int (*)(int))MEMORY[0xCC7578])(a2);
             v27 = v24 + 2;
             if ( (v26 & 8) != 0 )
             {
@@ -234006,11 +234006,11 @@ sub_608DF448__LABEL_158:
     v3 = *(_DWORD *)(a2 + 192);
     v4 = MEMORY[0xCCF464] + 236;
     sead__CriticalSection__lock(MEMORY[0xCCF464] + 236);
-    v6 = MEMORY[0xCC77EC](v3);
-    MEMORY[0xCC735C](*(_DWORD *)(a1 + 32), 1, &v6);
-    MEMORY[0xCC7364](*(_DWORD *)(a1 + 32));
+    v6 = ((int (*)(int))MEMORY[0xCC77EC])(v3);
+    ((int (*)(int, int, int))MEMORY[0xCC735C])(*(_DWORD *)(a1 + 32), 1, &v6);
+    ((int (*)(int))MEMORY[0xCC7364])(*(_DWORD *)(a1 + 32));
     sub_608F2924(MEMORY[0xCCF464]);
-    MEMORY[0xCC77E8](v3);
+    ((int (*)(int))MEMORY[0xCC77E8])(v3);
     return sead__CriticalSection__unlock(v4);
   }
 
@@ -234071,7 +234071,7 @@ sub_608DF448__LABEL_158:
           v15 = v14;
         v16[4] = v15;
         v16[5] = v11;
-        return MEMORY[0xCC7930](*(_DWORD *)(a2 + 192), a3 + 64, 0, v16, &unk_60CCFC90, 15);
+        return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7930])(*(_DWORD *)(a2 + 192), a3 + 64, 0, v16, &unk_60CCFC90, 15);
       }
     }
     return result;
@@ -234138,7 +234138,7 @@ sub_608DF448__LABEL_158:
     v5 = *(_DWORD *)(a2 + 4);
     v6 = 0;
     if ( *(_DWORD *)a2 )
-      v6 = MEMORY[0xCC73E8](*(_DWORD *)a2);
+      v6 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)a2);
     qmemcpy(v4, (const void *)(v6 + v5), *(_DWORD *)(a2 + 40));
     memset(v15, 0, 12);
     v7 = *(unsigned __int16 *)(a2 + 24);
@@ -234171,8 +234171,8 @@ sub_608DF448__LABEL_158:
   sub_60916E94__LABEL_15:
     v13 = a2 + 64;
     v15[5] = v12;
-    MEMORY[0xCC75AC](v13, 0, v15, v4);
-    MEMORY[0xCC75BC](v13, 0, v15);
+    ((int (*)(int, int, int, int))MEMORY[0xCC75AC])(v13, 0, v15, v4);
+    ((int (*)(int, int, int))MEMORY[0xCC75BC])(v13, 0, v15);
     return (*(int (__fastcall **)(int, void *))(*(_DWORD *)v3 + 28))(v3, v4);
   }
 
@@ -234195,10 +234195,10 @@ sub_608DF448__LABEL_158:
     _BYTE v17[68]; // [sp+200h] [bp-44h] BYREF
   
     sub_60913B04(a2, *(_DWORD *)(a3 + 40));
-    MEMORY[0xCC7444](v17, a1[7]);
-    MEMORY[0xCC7448](v17);
-    MEMORY[0xCC744C](v17, *a2, a2[1], *(_DWORD *)(a3 + 40));
-    MEMORY[0xCC745C](v16, v17);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v17, a1[7]);
+    ((int (*)(int))MEMORY[0xCC7448])(v17);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v17, *a2, a2[1], *(_DWORD *)(a3 + 40));
+    ((int (*)(int, int))MEMORY[0xCC745C])(v16, v17);
     memset(v15, 0, 12);
     v6 = *(unsigned __int16 *)(a3 + 24);
     if ( v6 <= 1 )
@@ -234213,11 +234213,11 @@ sub_608DF448__LABEL_158:
     v9 = sub_60913508((int)v13);
     sub_60913814(v9);
     v10 = v14;
-    v11 = MEMORY[0xCC746C](v16);
-    MEMORY[0xCC7920](v10, a3 + 64, 0, v15, v11, HIDWORD(v11), 0);
+    v11 = ((int (*)(int))MEMORY[0xCC746C])(v16);
+    ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7920])(v10, a3 + 64, 0, v15, v11, HIDWORD(v11), 0);
     (*(void (__fastcall **)(_DWORD *, _BYTE *))(*a1 + 16))(a1, v13);
     sub_6091361C((int)v13);
-    MEMORY[0xCC7464](v16);
+    ((int (*)(int))MEMORY[0xCC7464])(v16);
     sub_60913B5C(a2, *(_DWORD *)(a3 + 40));
     return sub_60913598((int)v13);
   }
@@ -234245,7 +234245,7 @@ sub_608DF448__LABEL_158:
  * ============================================================================ */
   int __fastcall sub_6091718C(int a1, int a2, int a3)
   {
-    return MEMORY[0xCC73DC](a2, a3);
+    return ((int (*)(int, int))MEMORY[0xCC73DC])(a2, a3);
   }
 
 /* ============================================================================
@@ -234271,19 +234271,19 @@ sub_608DF448__LABEL_158:
     }
     else
     {
-      result = MEMORY[0xCC783C](v10, 0, v11, MEMORY[0xCC783C], a3, a4);
+      result = ((int (*)(int, int, int, int, int, int))MEMORY[0xCC783C])(v10, 0, v11, MEMORY[0xCC783C], a3, a4);
       v12 = 1;
     }
     v13 = a5[1];
     if ( v13 != -1 )
     {
-      result = MEMORY[0xCC783C](v10, 1, v13, MEMORY[0xCC783C], a3, a4);
+      result = ((int (*)(int, int, int, int, int, int))MEMORY[0xCC783C])(v10, 1, v13, MEMORY[0xCC783C], a3, a4);
       v12 |= 2u;
     }
     v14 = a5[2];
     if ( v14 != -1 )
     {
-      result = MEMORY[0xCC783C](v10, 2, v14, MEMORY[0xCC783C], a3, a4);
+      result = ((int (*)(int, int, int, int, int, int))MEMORY[0xCC783C])(v10, 2, v14, MEMORY[0xCC783C], a3, a4);
       v12 |= 4u;
     }
     v15 = a5[3];
@@ -234294,7 +234294,7 @@ sub_608DF448__LABEL_158:
     }
     else
     {
-      MEMORY[0xCC783C](v10, 5, v15, MEMORY[0xCC783C], a3, a4);
+      ((int (*)(int, int, int, int, int, int))MEMORY[0xCC783C])(v10, 5, v15, MEMORY[0xCC783C], a3, a4);
       v12 |= 8u;
     }
     result = *(unsigned __int8 *)(v9 + 43);
@@ -234325,17 +234325,17 @@ sub_608DF448__LABEL_158:
     }
     else
     {
-      result = MEMORY[0xCC7844](v8, 0);
+      result = ((int (*)(int, int))MEMORY[0xCC7844])(v8, 0);
       v9 = 1;
     }
     if ( a5[1] != -1 )
     {
-      result = MEMORY[0xCC7844](v8, 1);
+      result = ((int (*)(int, int))MEMORY[0xCC7844])(v8, 1);
       v9 |= 2u;
     }
     if ( a5[2] != -1 )
     {
-      result = MEMORY[0xCC7844](v8, 2);
+      result = ((int (*)(int, int))MEMORY[0xCC7844])(v8, 2);
       v9 |= 4u;
     }
     if ( a5[3] == -1 )
@@ -234345,7 +234345,7 @@ sub_608DF448__LABEL_158:
     }
     else
     {
-      MEMORY[0xCC7844](v8, 5);
+      ((int (*)(int, int))MEMORY[0xCC7844])(v8, 5);
       v9 |= 8u;
     }
     result = *(unsigned __int8 *)(v7 + 43);
@@ -234430,7 +234430,7 @@ sub_608DF448__LABEL_158:
     v2 = *(_DWORD *)(a1 + 192);
     if ( v2 != -1 && sub_60916A94(MEMORY[0xCCFC8C], v2) == 1 && (*(_BYTE *)(a1 + 196) & 1) != 0 )
     {
-      MEMORY[0xCC7568](a1);
+      ((int (*)(int))MEMORY[0xCC7568])(a1);
       *(_BYTE *)(a1 + 196) &= ~1u;
     }
     *(_DWORD *)(a1 + 192) = -1;
@@ -234448,7 +234448,7 @@ sub_608DF448__LABEL_158:
     v2 = *(_DWORD *)(a1 + 192);
     if ( v2 != -1 && sub_60916A94(MEMORY[0xCCFC8C], v2) == 1 && (*(_BYTE *)(a1 + 196) & 1) != 0 )
     {
-      MEMORY[0xCC7568](a1);
+      ((int (*)(int))MEMORY[0xCC7568])(a1);
       *(_BYTE *)(a1 + 196) &= ~1u;
     }
     *(_DWORD *)(a1 + 192) = -1;
@@ -234488,7 +234488,7 @@ sub_608DF448__LABEL_158:
     v4 = *(_DWORD *)(a1 + 192);
     if ( v4 != -1 && sub_60916A94(MEMORY[0xCCFC8C], v4) == 1 && (*(_BYTE *)(a1 + 196) & 1) != 0 )
     {
-      MEMORY[0xCC7568](a1);
+      ((int (*)(int))MEMORY[0xCC7568])(a1);
       *(_BYTE *)(a1 + 196) &= ~1u;
     }
     *(_DWORD *)(a1 + 192) = -1;
@@ -234525,7 +234525,7 @@ sub_608DF448__LABEL_158:
       v10 = *(_DWORD *)(a1 + 192);
       if ( v10 != -1 && sub_60916A94(MEMORY[0xCCFC8C], v10) == 1 && (*(_BYTE *)(a1 + 196) & 1) != 0 )
       {
-        MEMORY[0xCC7568](a1);
+        ((int (*)(int))MEMORY[0xCC7568])(a1);
         *(_BYTE *)(a1 + 196) &= ~1u;
       }
       *(_DWORD *)(a1 + 192) = -1;
@@ -234559,7 +234559,7 @@ sub_608DF448__LABEL_158:
     v6 = *(_DWORD *)(a1 + 192);
     if ( v6 != -1 && sub_60916A94(MEMORY[0xCCFC8C], v6) == 1 && (*(_BYTE *)(a1 + 196) & 1) != 0 )
     {
-      MEMORY[0xCC7568](a1);
+      ((int (*)(int))MEMORY[0xCC7568])(a1);
       *(_BYTE *)(a1 + 196) &= ~1u;
     }
     *(_DWORD *)(a1 + 192) = -1;
@@ -234686,7 +234686,7 @@ sub_608DF448__LABEL_158:
     }
     else
     {
-      result = MEMORY[0xCC72C8](*(_DWORD *)(MEMORY[0xCCFC8C] + 28), a2, v3);
+      result = ((int (*)(int, int, int))MEMORY[0xCC72C8])(*(_DWORD *)(MEMORY[0xCCFC8C] + 28), a2, v3);
       *(_QWORD *)a1 = result;
     }
     return result;
@@ -234711,7 +234711,7 @@ sub_608DF448__LABEL_158:
   {
     __int64 result; // r0
   
-    result = MEMORY[0xCC72D0](*(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+    result = ((int (*)(int))MEMORY[0xCC72D0])(*(_DWORD *)(MEMORY[0xCCFC8C] + 28));
     *a1 = result;
     return result;
   }
@@ -235555,30 +235555,30 @@ sub_608DF448__LABEL_158:
     v6 = result;
     if ( a4 )
     {
-      v7 = MEMORY[0xCC746C](*(_DWORD *)(a3 + 8));
+      v7 = ((int (*)(int))MEMORY[0xCC746C])(*(_DWORD *)(a3 + 8));
       v8 = v7;
       v9 = *(_DWORD *)(v6 + 192);
       v10 = HIDWORD(v7);
       if ( *a2 != 255 )
       {
         v11 = sub_60916E38(0);
-        MEMORY[0xCC7824](v9, v11, (char)*a2, MEMORY[0xCC7824], v8, v10, a4);
+        ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(v9, v11, (char)*a2, MEMORY[0xCC7824], v8, v10, a4);
       }
       if ( a2[1] != 255 )
       {
         v12 = sub_60916E38(1);
-        MEMORY[0xCC7824](v9, v12, (char)a2[1], MEMORY[0xCC7824], v8, v10, a4);
+        ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(v9, v12, (char)a2[1], MEMORY[0xCC7824], v8, v10, a4);
       }
       if ( a2[2] != 255 )
       {
         v13 = sub_60916E38(2);
-        MEMORY[0xCC7824](v9, v13, (char)a2[2], MEMORY[0xCC7824], v8, v10, a4);
+        ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(v9, v13, (char)a2[2], MEMORY[0xCC7824], v8, v10, a4);
       }
       result = a2[3];
       if ( result != 255 )
       {
         v14 = sub_60916E38(3);
-        return MEMORY[0xCC7824](v9, v14, (char)a2[3], MEMORY[0xCC7824], v8, v10, a4);
+        return ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(v9, v14, (char)a2[3], MEMORY[0xCC7824], v8, v10, a4);
       }
     }
     return result;
@@ -235592,7 +235592,7 @@ sub_608DF448__LABEL_158:
   {
     __int64 v7; // r0
   
-    v7 = MEMORY[0xCC72C8](*(_DWORD *)(MEMORY[0xCCFC8C] + 28), *a4, *a3);
+    v7 = ((int (*)(int, int, int))MEMORY[0xCC72C8])(*(_DWORD *)(MEMORY[0xCCFC8C] + 28), *a4, *a3);
     return sub_609171A8(MEMORY[0xCCFC8C], a1, v7, SHIDWORD(v7), a2, *a4);
   }
 
@@ -235951,15 +235951,15 @@ sub_608DF448__LABEL_158:
       v3 = v2 & 0xFE;
     *(_BYTE *)(a1 + 20) = v3;
     *(_DWORD *)(a1 + 24) = 0;
-    MEMORY[0xCC77B4](*(_DWORD *)(a1 + 576), *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
-    MEMORY[0xCC77C0](*(_DWORD *)(a1 + 576), dword_60C79B70);
-    MEMORY[0xCC77C4](*(_DWORD *)(a1 + 576), a1);
-    MEMORY[0xCC77CC](*(_DWORD *)(a1 + 576), *(_DWORD *)(a1 + 40), *(_DWORD *)(a1 + 568));
+    ((int (*)(int, int))MEMORY[0xCC77B4])(*(_DWORD *)(a1 + 576), *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+    ((int (*)(int, int))MEMORY[0xCC77C0])(*(_DWORD *)(a1 + 576), dword_60C79B70);
+    ((int (*)(int, int))MEMORY[0xCC77C4])(*(_DWORD *)(a1 + 576), a1);
+    ((int (*)(int, int, int))MEMORY[0xCC77CC])(*(_DWORD *)(a1 + 576), *(_DWORD *)(a1 + 40), *(_DWORD *)(a1 + 568));
     v4 = *(_DWORD *)(a1 + 16);
     if ( v4 <= 0x200 )
       v4 = 512;
-    MEMORY[0xCC77C8](*(_DWORD *)(a1 + 576), *(_DWORD *)(a1 + 4), *(_DWORD *)(a1 + 8), v4);
-    MEMORY[0xCC77E8](*(_DWORD *)(a1 + 576));
+    ((int (*)(int, int, int, int))MEMORY[0xCC77C8])(*(_DWORD *)(a1 + 576), *(_DWORD *)(a1 + 4), *(_DWORD *)(a1 + 8), v4);
+    ((int (*)(int))MEMORY[0xCC77E8])(*(_DWORD *)(a1 + 576));
     *(_BYTE *)(a1 + 20) |= 8u;
     return 1;
   }
@@ -235973,16 +235973,16 @@ sub_608DF448__LABEL_158:
     int v2; // r0
     char v3; // r1
   
-    *(_QWORD *)(a1 + 32) = MEMORY[0xCC77EC](*(_DWORD *)(a1 + 576));
-    *(_DWORD *)(a1 + 572) = MEMORY[0xCC77E0](*(_DWORD *)(a1 + 576));
-    v2 = MEMORY[0xCC77D4](*(_DWORD *)(a1 + 576));
+    *(_QWORD *)(a1 + 32) = ((int (*)(int))MEMORY[0xCC77EC])(*(_DWORD *)(a1 + 576));
+    *(_DWORD *)(a1 + 572) = ((int (*)(int))MEMORY[0xCC77E0])(*(_DWORD *)(a1 + 576));
+    v2 = ((int (*)(int))MEMORY[0xCC77D4])(*(_DWORD *)(a1 + 576));
     if ( v2 || *(_DWORD *)(a1 + 572) )
       v3 = *(_BYTE *)(a1 + 20) | 1;
     else
       v3 = *(_BYTE *)(a1 + 20) & 0xFE;
     *(_BYTE *)(a1 + 20) = v3;
     *(_DWORD *)(a1 + 24) = v2;
-    MEMORY[0xCC77B8](*(_DWORD *)(a1 + 576));
+    ((int (*)(int))MEMORY[0xCC77B8])(*(_DWORD *)(a1 + 576));
     *(_DWORD *)(a1 + 576) = 0;
     *(_BYTE *)(a1 + 20) = *(_BYTE *)(a1 + 20) & 0xF5 | 2;
     return *(_DWORD *)(a1 + 24);
@@ -236012,15 +236012,15 @@ sub_608DF448__LABEL_158:
     *(_DWORD *)(a1 + 16) = v4;
     *(_BYTE *)(a1 + 20) = *(_BYTE *)(a1 + 20) & 0xFC | (*(_DWORD *)(a1 + 572) != 0);
     *(_DWORD *)(a1 + 24) = 0;
-    MEMORY[0xCC77B4](*(_DWORD *)(a1 + 576), *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
-    MEMORY[0xCC77C0](*(_DWORD *)(a1 + 576), dword_60C79B70);
-    MEMORY[0xCC77C4](*(_DWORD *)(a1 + 576), a1);
-    MEMORY[0xCC77CC](*(_DWORD *)(a1 + 576), *(_DWORD *)(a1 + 40), *(_DWORD *)(a1 + 568));
+    ((int (*)(int, int))MEMORY[0xCC77B4])(*(_DWORD *)(a1 + 576), *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+    ((int (*)(int, int))MEMORY[0xCC77C0])(*(_DWORD *)(a1 + 576), dword_60C79B70);
+    ((int (*)(int, int))MEMORY[0xCC77C4])(*(_DWORD *)(a1 + 576), a1);
+    ((int (*)(int, int, int))MEMORY[0xCC77CC])(*(_DWORD *)(a1 + 576), *(_DWORD *)(a1 + 40), *(_DWORD *)(a1 + 568));
     v9 = *(_DWORD *)(a1 + 16);
     if ( v9 <= 0x200 )
       v9 = 512;
-    MEMORY[0xCC77C8](*(_DWORD *)(a1 + 576), *(_DWORD *)(a1 + 4), *(_DWORD *)(a1 + 8), v9);
-    MEMORY[0xCC77E8](*(_DWORD *)(a1 + 576));
+    ((int (*)(int, int, int, int))MEMORY[0xCC77C8])(*(_DWORD *)(a1 + 576), *(_DWORD *)(a1 + 4), *(_DWORD *)(a1 + 8), v9);
+    ((int (*)(int))MEMORY[0xCC77E8])(*(_DWORD *)(a1 + 576));
     *(_BYTE *)(a1 + 20) |= 8u;
     return 1;
   }
@@ -236070,16 +236070,16 @@ sub_608DF448__LABEL_158:
     v35 = 0;
     v36 = 0;
     v37 = 0;
-    *(_QWORD *)(a1 + 32) = MEMORY[0xCC77EC](*(_DWORD *)(a1 + 576));
-    *(_DWORD *)(a1 + 572) = MEMORY[0xCC77E0](*(_DWORD *)(a1 + 576));
-    v4 = MEMORY[0xCC77D4](*(_DWORD *)(a1 + 576));
+    *(_QWORD *)(a1 + 32) = ((int (*)(int))MEMORY[0xCC77EC])(*(_DWORD *)(a1 + 576));
+    *(_DWORD *)(a1 + 572) = ((int (*)(int))MEMORY[0xCC77E0])(*(_DWORD *)(a1 + 576));
+    v4 = ((int (*)(int))MEMORY[0xCC77D4])(*(_DWORD *)(a1 + 576));
     if ( v4 || *(_DWORD *)(a1 + 572) )
       v5 = *(_BYTE *)(a1 + 20) | 1;
     else
       v5 = *(_BYTE *)(a1 + 20) & 0xFE;
     *(_BYTE *)(a1 + 20) = v5;
     *(_DWORD *)(a1 + 24) = v4;
-    MEMORY[0xCC77B8](*(_DWORD *)(a1 + 576));
+    ((int (*)(int))MEMORY[0xCC77B8])(*(_DWORD *)(a1 + 576));
     v6 = 0;
     *(_DWORD *)(a1 + 576) = 0;
     v7 = *(_BYTE *)(a1 + 20) & 0xF5;
@@ -236094,14 +236094,14 @@ sub_608DF448__LABEL_158:
       Slot_initFromResource((int)v9, v8, a2, 4, 1);
       Slot_initWithOwnerAndOffset(&v35, (int)v9, 0);
       if ( v35 )
-        v6 = MEMORY[0xCC73E8](v35);
+        v6 = ((int (*)(int))MEMORY[0xCC73E8])(v35);
       v10 = 0;
       v11 = 0;
       v12 = (void *)(v6 + v36);
       v13 = *(_DWORD *)(a1 + 4);
       v14 = *(_DWORD *)(a1 + 8);
       if ( v13 )
-        v11 = MEMORY[0xCC73E8](v13);
+        v11 = ((int (*)(int))MEMORY[0xCC73E8])(v13);
       qmemcpy(v12, (const void *)(v11 + v14), *(_DWORD *)(a1 + 24));
       sub_60913B04(&v35, *(_DWORD *)(a1 + 24));
       v15 = *(_DWORD *)(a1 + 24);
@@ -236112,13 +236112,13 @@ sub_608DF448__LABEL_158:
         v18 = v17 + v15;
         if ( v16 )
         {
-          v19 = MEMORY[0xCC73E8](v16) + v18 + 63;
+          v19 = ((int (*)(int))MEMORY[0xCC73E8])(v16) + v18 + 63;
           v20 = *(_DWORD *)(a1 + 4);
           v17 = *(_DWORD *)(a1 + 8);
           v21 = v19 & 0xFFFFFFC0;
           if ( v20 )
           {
-            v22 = MEMORY[0xCC73E8](v20);
+            v22 = ((int (*)(int))MEMORY[0xCC73E8])(v20);
             v20 = *(_DWORD *)(a1 + 4);
             v23 = *(_DWORD *)(a1 + 8);
           }
@@ -236201,8 +236201,8 @@ sub_608DF448__LABEL_158:
     v2 = *(_DWORD *)(MEMORY[0xCCFC8C] + 32);
     v3 = (struct sead_CriticalSection *)(MEMORY[0xCCF464] + 236);
     sead__CriticalSection__lock((struct sead_CriticalSection *)(MEMORY[0xCCF464] + 236));
-    MEMORY[0xCC735C](v2, 1, a1 + 32);
-    MEMORY[0xCC7360](v2);
+    ((int (*)(int, int, int))MEMORY[0xCC735C])(v2, 1, a1 + 32);
+    ((int (*)(int))MEMORY[0xCC7360])(v2);
     return sead__CriticalSection__unlock(v3);
   }
 
@@ -236220,7 +236220,7 @@ sub_608DF448__LABEL_158:
     result = *(_DWORD *)(a1 + 4);
     if ( result )
     {
-      MEMORY[0xCC73E8](result);
+      ((int (*)(int))MEMORY[0xCC73E8])(result);
       v3 = 0;
       v4 = MEMORY[0xCCFB50] % 500LL;
       v5 = MEMORY[0xCCFB50] / 500LL;
@@ -236479,7 +236479,7 @@ sub_608DF448__LABEL_158:
     v2 = a1 + 3;
     if ( a1[3] )
     {
-      MEMORY[0xCC7464](a1 + 8);
+      ((int (*)(int))MEMORY[0xCC7464])(a1 + 8);
       sub_60913AD4(v2);
       a1[6] = 0;
       a1[7] = 0;
@@ -236499,7 +236499,7 @@ sub_608DF448__LABEL_158:
     v2 = a1 + 3;
     if ( a1[3] )
     {
-      MEMORY[0xCC7464](a1 + 8);
+      ((int (*)(int))MEMORY[0xCC7464])(a1 + 8);
       sub_60913AD4(v2);
     }
     return __operator_delete((int)a1);
@@ -236526,7 +236526,7 @@ sub_608DF448__LABEL_158:
     v9 = a1 + 8;
     if ( a1[3] )
     {
-      MEMORY[0xCC7464](a1 + 8);
+      ((int (*)(int))MEMORY[0xCC7464])(a1 + 8);
       sub_60913AD4(v8);
       a1[6] = 0;
       a1[7] = 0;
@@ -236542,10 +236542,10 @@ sub_608DF448__LABEL_158:
     if ( a3 == 1 )
       v12 = 2;
     a1[7] = v12;
-    MEMORY[0xCC7444](v17, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
-    MEMORY[0xCC7448](v17);
-    MEMORY[0xCC744C](v17, a1[3], a1[4], a1[6] * a1[7]);
-    MEMORY[0xCC745C](v9, v17);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v17, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+    ((int (*)(int))MEMORY[0xCC7448])(v17);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v17, a1[3], a1[4], a1[6] * a1[7]);
+    ((int (*)(int, int))MEMORY[0xCC745C])(v9, v17);
     v13 = a1[7];
     v14 = a1[4];
     v15 = a1[5];
@@ -236823,7 +236823,7 @@ sub_608DF448__LABEL_158:
         v12[8] = v18;
         v12[9] = v19;
         if ( *(_WORD *)(v9 + 60) == 29 )
-          MEMORY[0xCC7534](&v28[5 * v8], 56);
+          ((int (*)(int, int))MEMORY[0xCC7534])(&v28[5 * v8], 56);
         v5 = v24;
         v29[v8] = v12;
         v3 = v25;
@@ -236932,7 +236932,7 @@ sub_608DF448__LABEL_158:
     {
   sub_6091A624__LABEL_10:
       if ( (a3 & 1) != 0 )
-        result = MEMORY[0xCC7894](v11[48], 0, a4, 15);
+        result = ((int (*)(int, int, int, int))MEMORY[0xCC7894])(v11[48], 0, a4, 15);
       v12 = (a3 & 6) == 0;
       if ( (a3 & 6) != 0 )
       {
@@ -236944,7 +236944,7 @@ sub_608DF448__LABEL_158:
         v13 = a3 & 4;
         if ( (a3 & 4) != 0 )
           v13 = 255;
-        return MEMORY[0xCC78A0](v11[48], (a3 >> 1) & 1, a5, v13);
+        return ((int (*)(int, int, int, int))MEMORY[0xCC78A0])(v11[48], (a3 >> 1) & 1, a5, v13);
       }
     }
     return result;
@@ -236964,7 +236964,7 @@ sub_608DF448__LABEL_158:
     if ( a4 )
     {
       if ( (a4 & 1) != 0 )
-        result = MEMORY[0xCC7894](*(_DWORD *)(a2 + 192), a3, a5, 15);
+        result = ((int (*)(int, int, int, int))MEMORY[0xCC7894])(*(_DWORD *)(a2 + 192), a3, a5, 15);
       v9 = (a4 & 6) == 0;
       if ( (a4 & 6) != 0 )
       {
@@ -236976,7 +236976,7 @@ sub_608DF448__LABEL_158:
         v10 = a4 & 4;
         if ( (a4 & 4) != 0 )
           v10 = 255;
-        return MEMORY[0xCC78A0](*(_DWORD *)(a2 + 192), (a4 >> 1) & 1, a6, v10);
+        return ((int (*)(int, int, int, int))MEMORY[0xCC78A0])(*(_DWORD *)(a2 + 192), (a4 >> 1) & 1, a6, v10);
       }
     }
     return result;
@@ -237071,7 +237071,7 @@ sub_608DF448__LABEL_158:
       }
       result = Rect_computeOverlapBlend(a7, a2, (float *)a1);
       if ( (v10 & 1) != 0 )
-        result = MEMORY[0xCC7894](*(_DWORD *)(a2 + 192), a3, a5, 15);
+        result = ((int (*)(int, int, int, int))MEMORY[0xCC7894])(*(_DWORD *)(a2 + 192), a3, a5, 15);
       v22 = (v10 & 6) == 0;
       if ( (v10 & 6) != 0 )
       {
@@ -237083,7 +237083,7 @@ sub_608DF448__LABEL_158:
         v23 = v10 & 4;
         if ( (v10 & 4) != 0 )
           v23 = 255;
-        return MEMORY[0xCC78A0](*(_DWORD *)(a2 + 192), (v10 >> 1) & 1, a6, v23);
+        return ((int (*)(int, int, int, int))MEMORY[0xCC78A0])(*(_DWORD *)(a2 + 192), (v10 >> 1) & 1, a6, v23);
       }
     }
     return result;
@@ -237151,7 +237151,7 @@ sub_608DF448__LABEL_158:
     a1[72] = 0;
     a1[73] = 0;
     a1[74] = 0;
-    MEMORY[0xCC7528](a1 + 76);
+    ((int (*)(int))MEMORY[0xCC7528])(a1 + 76);
     return a1;
   }
 
@@ -237169,7 +237169,7 @@ sub_608DF448__LABEL_158:
     a1[72] = 0;
     a1[73] = 0;
     a1[74] = 0;
-    MEMORY[0xCC7528](a1 + 76);
+    ((int (*)(int))MEMORY[0xCC7528])(a1 + 76);
     return a1;
   }
 
@@ -237200,16 +237200,16 @@ sub_608DF448__LABEL_158:
     _BYTE v3[132]; // [sp+0h] [bp-88h] BYREF
     int v4; // [sp+84h] [bp-4h] BYREF
   
-    MEMORY[0xCC72BC](*(_DWORD *)(MEMORY[0xCCFC8C] + 28), 54, &v4);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(*(_DWORD *)(MEMORY[0xCCFC8C] + 28), 54, &v4);
     a1[71] = v4;
     if ( *a1 )
     {
-      result = MEMORY[0xCC7564](a1 + 16);
+      result = ((int (*)(int))MEMORY[0xCC7564])(a1 + 16);
     }
     else
     {
       sub_60920CD4(a1, v3);
-      result = MEMORY[0xCC751C](v3);
+      result = ((int (*)(int))MEMORY[0xCC751C])(v3);
     }
     a1[70] = result;
     return result;
@@ -237224,8 +237224,8 @@ sub_608DF448__LABEL_158:
     int v2; // r5
   
     v2 = a1 + 304;
-    MEMORY[0xCC752C](a1 + 304, *(unsigned __int8 *)(a1 + 278), 1);
-    return MEMORY[0xCC7530](v2, *(unsigned __int16 *)(a1 + 276), 1);
+    ((int (*)(int, int, int))MEMORY[0xCC752C])(a1 + 304, *(unsigned __int8 *)(a1 + 278), 1);
+    return ((int (*)(int, int, int))MEMORY[0xCC7530])(v2, *(unsigned __int16 *)(a1 + 276), 1);
   }
 
 /* ============================================================================
@@ -237237,8 +237237,8 @@ sub_608DF448__LABEL_158:
     int v2; // r5
   
     v2 = a1 + 304;
-    MEMORY[0xCC752C](a1 + 304, *(unsigned __int8 *)(a1 + 278), 0);
-    return MEMORY[0xCC7530](v2, *(unsigned __int16 *)(a1 + 276), 1);
+    ((int (*)(int, int, int))MEMORY[0xCC752C])(a1 + 304, *(unsigned __int8 *)(a1 + 278), 0);
+    return ((int (*)(int, int, int))MEMORY[0xCC7530])(v2, *(unsigned __int16 *)(a1 + 276), 1);
   }
 
 /* ============================================================================
@@ -238048,7 +238048,7 @@ sub_608DF448__LABEL_158:
  * ============================================================================ */
   int __fastcall sub_6091B890(_DWORD *a1, int a2, int a3, int a4)
   {
-    return MEMORY[0xCC793C](
+    return ((int (*)(int, int, int, int, int, int, int, int))MEMORY[0xCC793C])(
              *(_DWORD *)(a2 + 192),
              4 * a3,
              *(_DWORD *)(*(_DWORD *)off_60C79B7C + 96),
@@ -238424,7 +238424,7 @@ sub_608DF448__LABEL_158:
     v5 = *(_BYTE *)(a1 + 8);
     if ( (v5 & 1) != 0 )
     {
-      MEMORY[0xCC73B4](a1 + 728);
+      ((int (*)(int))MEMORY[0xCC73B4])(a1 + 728);
       v5 = *(_BYTE *)(a1 + 8);
     }
     *(_BYTE *)(a1 + 8) = v5 & 0xFE;
@@ -240285,10 +240285,10 @@ sub_608DF448__LABEL_158:
     while ( v3 != 4 );
     if ( v36 )
     {
-      MEMORY[0xCC73B4](a1 + 728);
+      ((int (*)(int))MEMORY[0xCC73B4])(a1 + 728);
       *(_BYTE *)(a1 + 8) &= ~1u;
     }
-    MEMORY[0xCC73B0](a1 + 728, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+    ((int (*)(int, int))MEMORY[0xCC73B0])(a1 + 728, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
     v11 = *(_DWORD *)(a1 + 652);
     v12 = (_DWORD *)(a1 + 920);
     if ( v11 )
@@ -240347,7 +240347,7 @@ sub_608DF448__LABEL_158:
       v31[1] = v30;
       v31[2] = v26[3];
     }
-    v32 = MEMORY[0xCC73BC](a1 + 728, v14, v37);
+    v32 = ((int (*)(int, int, int))MEMORY[0xCC73BC])(a1 + 728, v14, v37);
     v33 = *(_BYTE *)(a1 + 8);
     if ( v32 )
     {
@@ -240498,13 +240498,13 @@ sub_608DF448__LABEL_158:
       if ( !v8 )
         sub_6091380C(a2, v7, 0);
       v9 = *(_DWORD *)(a2 + 192);
-      MEMORY[0xCC7818](v9, a1 + 728, 63);
+      ((int (*)(int, int, int))MEMORY[0xCC7818])(v9, a1 + 728, 63);
       result = *(_DWORD *)(*(_DWORD *)(a1 + 4) + 48);
       if ( result >= 1 )
       {
         v10 = sub_60916E38(0);
         v11 = off_60C79B7C;
-        MEMORY[0xCC7824](
+        ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(
           v9,
           v10,
           0,
@@ -240513,7 +240513,7 @@ sub_608DF448__LABEL_158:
           *(_DWORD *)(*(_DWORD *)off_60C79B7C + 100),
           *(_DWORD *)(*(_DWORD *)off_60C79B7C + 28));
         v12 = sub_60916E38(1);
-        MEMORY[0xCC7824](
+        ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(
           v9,
           v12,
           0,
@@ -240522,7 +240522,7 @@ sub_608DF448__LABEL_158:
           *(_DWORD *)(*(_DWORD *)v11 + 100),
           *(_DWORD *)(*(_DWORD *)v11 + 28));
         v13 = sub_60916E38(2);
-        MEMORY[0xCC7824](
+        ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(
           v9,
           v13,
           0,
@@ -240531,7 +240531,7 @@ sub_608DF448__LABEL_158:
           *(_DWORD *)(*(_DWORD *)v11 + 100),
           *(_DWORD *)(*(_DWORD *)v11 + 28));
         v14 = sub_60916E38(3);
-        return MEMORY[0xCC7824](
+        return ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(
                  v9,
                  v14,
                  0,
@@ -240682,7 +240682,7 @@ sub_608DF448__LABEL_158:
  * ============================================================================ */
   int __fastcall sub_6091E108(int a1, int a2, int a3, int a4, int a5)
   {
-    return MEMORY[0xCC78A4](*(_DWORD *)(a2 + 192), a3, a4, a5);
+    return ((int (*)(int, int, int, int))MEMORY[0xCC78A4])(*(_DWORD *)(a2 + 192), a3, a4, a5);
   }
 
 /* ============================================================================
@@ -240693,10 +240693,10 @@ sub_608DF448__LABEL_158:
   {
     __int64 v6; // r2
   
-    v6 = MEMORY[0xCC746C](a3 + 48)
+    v6 = ((int (*)(int))MEMORY[0xCC746C])(a3 + 48)
        + a5
        + (a4 + *(unsigned __int16 *)(a3 + 40) * (unsigned int)*(unsigned __int8 *)(a3 + 37)) * *(_DWORD *)(a3 + 16);
-    return MEMORY[0xCC78A8](*(_DWORD *)(a2 + 192), MEMORY[0xCC78A8], v6, HIDWORD(v6));
+    return ((int (*)(int, int, int, int))MEMORY[0xCC78A8])(*(_DWORD *)(a2 + 192), MEMORY[0xCC78A8], v6, HIDWORD(v6));
   }
 
 /* ============================================================================
@@ -241264,7 +241264,7 @@ sub_608DF448__LABEL_158:
           if ( v5[7] > v18 )
             v19 += 936 * v18;
           sub_6091C948(v19, (int)v17, a5);
-          v20 = MEMORY[0xCC746C](v5[5] + 288);
+          v20 = ((int (*)(int))MEMORY[0xCC746C])(v5[5] + 288);
           v42 = v19;
           v21 = *(_DWORD **)(v19 + 4);
           v22 = v21[4];
@@ -242964,11 +242964,11 @@ sub_608DF448__LABEL_158:
       v16 = v13 >> a5;
     v21[4] = v16;
     v21[5] = 1;
-    MEMORY[0xCC7528](v20);
-    MEMORY[0xCC752C](v20, a5, 1);
-    MEMORY[0xCC7528](v19);
-    MEMORY[0xCC752C](v19, a5, 1);
-    return MEMORY[0xCC7924](*(_DWORD *)(a2 + 192), a1 + 32, v20, v22, a3 + 32, v19, v21, 0);
+    ((int (*)(int))MEMORY[0xCC7528])(v20);
+    ((int (*)(int, int, int))MEMORY[0xCC752C])(v20, a5, 1);
+    ((int (*)(int))MEMORY[0xCC7528])(v19);
+    ((int (*)(int, int, int))MEMORY[0xCC752C])(v19, a5, 1);
+    return ((int (*)(int, int, int, int, int, int, int, int))MEMORY[0xCC7924])(*(_DWORD *)(a2 + 192), a1 + 32, v20, v22, a3 + 32, v19, v21, 0);
   }
 
 /* ============================================================================
@@ -243028,11 +243028,11 @@ sub_608DF448__LABEL_158:
       v19 = v9 >> a5;
     v24[4] = v19;
     v24[5] = 1;
-    MEMORY[0xCC7528](v23);
-    MEMORY[0xCC752C](v23, a7, 1);
-    MEMORY[0xCC7528](v22);
-    MEMORY[0xCC752C](v22, a5, 1);
-    return MEMORY[0xCC7924](*(_DWORD *)(a2 + 192), a1 + 32, v23, v25, a3 + 32, v22, v24, 0);
+    ((int (*)(int))MEMORY[0xCC7528])(v23);
+    ((int (*)(int, int, int))MEMORY[0xCC752C])(v23, a7, 1);
+    ((int (*)(int))MEMORY[0xCC7528])(v22);
+    ((int (*)(int, int, int))MEMORY[0xCC752C])(v22, a5, 1);
+    return ((int (*)(int, int, int, int, int, int, int, int))MEMORY[0xCC7924])(*(_DWORD *)(a2 + 192), a1 + 32, v23, v25, a3 + 32, v22, v24, 0);
   }
 
 /* ============================================================================
@@ -243205,12 +243205,12 @@ sub_608DF448__LABEL_158:
         v14 = ((-v6 & 3u) + v6) << v10 >> 2;
         v29 = v31;
         v15 = ((-v7 & 3u) + v7) << v10 >> 2;
-        MEMORY[0xCC7528](v31);
-        MEMORY[0xCC7540](v31, *(unsigned __int16 *)(*a3 + 34));
+        ((int (*)(int))MEMORY[0xCC7528])(v31);
+        ((int (*)(int, int))MEMORY[0xCC7540])(v31, *(unsigned __int16 *)(*a3 + 34));
         v16 = sub_6097136C(v8);
-        MEMORY[0xCC7534](v31, v16);
-        MEMORY[0xCC752C](v31, a3[2], 1);
-        MEMORY[0xCC7530](v31, a3[1], 1);
+        ((int (*)(int, int))MEMORY[0xCC7534])(v31, v16);
+        ((int (*)(int, int, int))MEMORY[0xCC752C])(v31, a3[2], 1);
+        ((int (*)(int, int, int))MEMORY[0xCC7530])(v31, a3[1], 1);
         ((void (__fastcall *)(_DWORD, int, int *, _DWORD **, _DWORD, _DWORD, int, int))MEMORY[0xCC7954])(
           *(_DWORD *)(a2 + 192),
           1,
@@ -243289,11 +243289,11 @@ sub_608DF448__LABEL_158:
         v13 = a1[1];
         memset(v14, 0, sizeof(v14));
         sub_60972534(a1 + 6, v15);
-        MEMORY[0xCC74CC](v15, v10, v13);
-        MEMORY[0xCC7560](v14, v15);
+        ((int (*)(int, int, int))MEMORY[0xCC74CC])(v15, v10, v13);
+        ((int (*)(int, int))MEMORY[0xCC7560])(v14, v15);
         result = sub_60917844((int)(a1 + 16), v14, 0, a1[66], 1);
         if ( !result )
-          return MEMORY[0xCC7568](v14);
+          return ((int (*)(int))MEMORY[0xCC7568])(v14);
         return result;
       }
       return sub_60917654((int)(a1 + 16));
@@ -243320,11 +243320,11 @@ sub_608DF448__LABEL_158:
       v3 = result[1];
       memset(v4, 0, sizeof(v4));
       sub_60972534(v1 + 6, v5);
-      MEMORY[0xCC74CC](v5, v2, v3);
-      MEMORY[0xCC7560](v4, v5);
+      ((int (*)(int, int, int))MEMORY[0xCC74CC])(v5, v2, v3);
+      ((int (*)(int, int))MEMORY[0xCC7560])(v4, v5);
       result = (_DWORD *)sub_60917844((int)(v1 + 16), v4, 0, v1[66], 1);
       if ( !result )
-        return (_DWORD *)MEMORY[0xCC7568](v4);
+        return (_DWORD *)((int (*)(int))MEMORY[0xCC7568])(v4);
     }
     return result;
   }
@@ -243380,11 +243380,11 @@ sub_608DF448__LABEL_158:
       v17 = a1[1];
       memset(v18, 0, sizeof(v18));
       sub_60972534(a1 + 6, v19);
-      MEMORY[0xCC74CC](v19, v16, v17);
-      MEMORY[0xCC7560](v18, v19);
+      ((int (*)(int, int, int))MEMORY[0xCC74CC])(v19, v16, v17);
+      ((int (*)(int, int))MEMORY[0xCC7560])(v18, v19);
       result = sub_60917844((int)(a1 + 16), v18, 0, a1[66], 1);
       if ( !result )
-        return MEMORY[0xCC7568](v18);
+        return ((int (*)(int))MEMORY[0xCC7568])(v18);
     }
     return result;
   }
@@ -243415,11 +243415,11 @@ sub_608DF448__LABEL_158:
       v5 = a1[1];
       memset(v6, 0, sizeof(v6));
       sub_60972534(a1 + 6, v7);
-      MEMORY[0xCC74CC](v7, v4, v5);
-      MEMORY[0xCC7560](v6, v7);
+      ((int (*)(int, int, int))MEMORY[0xCC74CC])(v7, v4, v5);
+      ((int (*)(int, int))MEMORY[0xCC7560])(v6, v7);
       result = sub_60917844((int)(a1 + 16), v6, 0, a1[66], 1);
       if ( !result )
-        return MEMORY[0xCC7568](v6);
+        return ((int (*)(int))MEMORY[0xCC7568])(v6);
     }
     return result;
   }
@@ -243805,23 +243805,23 @@ sub_608DF448__LABEL_158:
     v4 = v2;
     if ( (a2 & 0x3E) != 0 )
     {
-      MEMORY[0xCC75D8](v7, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
-      MEMORY[0xCC75DC](v7);
-      MEMORY[0xCC75E0](
+      ((int (*)(int, int))MEMORY[0xCC75D8])(v7, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+      ((int (*)(int))MEMORY[0xCC75DC])(v7);
+      ((int (*)(int, int, int))MEMORY[0xCC75E0])(
         v7,
         *(unsigned __int8 *)(v3 + 317) + 2 * *(unsigned __int8 *)(v3 + 318),
         *(unsigned __int8 *)(v3 + 316));
-      MEMORY[0xCC75E4](v7, *(unsigned __int8 *)(v3 + 319), *(unsigned __int8 *)(v3 + 320), *(unsigned __int8 *)(v3 + 321));
-      MEMORY[0xCC75E8](v7);
-      MEMORY[0xCC75EC](v7);
-      MEMORY[0xCC75F0](v7, (*(unsigned __int8 *)(v3 + 332) >> 2) & 1, *(unsigned __int8 *)(v3 + 323));
-      MEMORY[0xCC75F4](v7, v3 + 288);
-      MEMORY[0xCC7600](v7);
-      MEMORY[0xCC7604](v7, 0);
+      ((int (*)(int, int, int, int))MEMORY[0xCC75E4])(v7, *(unsigned __int8 *)(v3 + 319), *(unsigned __int8 *)(v3 + 320), *(unsigned __int8 *)(v3 + 321));
+      ((int (*)(int))MEMORY[0xCC75E8])(v7);
+      ((int (*)(int))MEMORY[0xCC75EC])(v7);
+      ((int (*)(int, int, int))MEMORY[0xCC75F0])(v7, (*(unsigned __int8 *)(v3 + 332) >> 2) & 1, *(unsigned __int8 *)(v3 + 323));
+      ((int (*)(int, int))MEMORY[0xCC75F4])(v7, v3 + 288);
+      ((int (*)(int))MEMORY[0xCC7600])(v7);
+      ((int (*)(int, int))MEMORY[0xCC7604])(v7, 0);
       memset(v6, 0, sizeof(v6));
-      MEMORY[0xCC7638](v6, v7);
+      ((int (*)(int, int))MEMORY[0xCC7638])(v6, v7);
       v5 = sub_60917B1C(v3, (int)v6);
-      result = MEMORY[0xCC763C](v6);
+      result = ((int (*)(int))MEMORY[0xCC763C])(v6);
       v4 = v2;
       if ( v5 )
         v4 = 1;
@@ -243831,8 +243831,8 @@ sub_608DF448__LABEL_158:
       result = *(unsigned __int8 *)(v3 + 332);
       if ( (result & 2) != 0 )
       {
-        MEMORY[0xCC7528](v7);
-        MEMORY[0xCC7538](
+        ((int (*)(int))MEMORY[0xCC7528])(v7);
+        ((int (*)(int, int, int, int, int))MEMORY[0xCC7538])(
           v7,
           *(unsigned __int8 *)(v3 + 324),
           *(unsigned __int8 *)(v3 + 325),
@@ -243901,7 +243901,7 @@ sub_608DF448__LABEL_158:
     result = *(unsigned __int8 *)(a1 + 38);
     if ( (result & 4) != 0 )
     {
-      MEMORY[0xCC7464](a1 + 48);
+      ((int (*)(int))MEMORY[0xCC7464])(a1 + 48);
       result = *(_BYTE *)(a1 + 38) & 0xFB;
       *(_BYTE *)(a1 + 38) = result;
     }
@@ -244132,11 +244132,11 @@ sub_608DF448__LABEL_158:
     if ( v7 )
     {
       if ( (*(_BYTE *)(a1 + 38) & 4) != 0 )
-        MEMORY[0xCC7464](a1 + 48);
-      MEMORY[0xCC7444](v16, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
-      MEMORY[0xCC7448](v16);
-      MEMORY[0xCC744C](v16, *(_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 28), *(_DWORD *)(a1 + 20));
-      MEMORY[0xCC745C](a1 + 48, v16);
+        ((int (*)(int))MEMORY[0xCC7464])(a1 + 48);
+      ((int (*)(int, int))MEMORY[0xCC7444])(v16, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+      ((int (*)(int))MEMORY[0xCC7448])(v16);
+      ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v16, *(_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 28), *(_DWORD *)(a1 + 20));
+      ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 48, v16);
       *(_BYTE *)(a1 + 38) |= 4u;
       v7 = *(_DWORD *)(a1 + 24);
     }
@@ -244144,7 +244144,7 @@ sub_608DF448__LABEL_158:
     *(_BYTE *)(a1 + 37) = 0;
     v14 = *(_DWORD *)(a1 + 28);
     if ( v7 )
-      v13 = MEMORY[0xCC73E8](v7);
+      v13 = ((int (*)(int))MEMORY[0xCC73E8])(v7);
     *(_DWORD *)(a1 + 8) = v13 + v14;
     return v13 + v14;
   }
@@ -244256,7 +244256,7 @@ sub_608DF448__LABEL_158:
  * ============================================================================ */
   int __fastcall sub_60921AC8(int a1, int a2, int a3, int a4, int a5, int a6, int a7)
   {
-    return MEMORY[0xCC7824](a2, a3, a4, a4, a5, a6, a7);
+    return ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7824])(a2, a3, a4, a4, a5, a6, a7);
   }
 
 /* ============================================================================
@@ -244646,40 +244646,40 @@ sub_608DF448__LABEL_158:
     int v16; // [sp+8h] [bp-4h]
   
     v2 = a1 + 144;
-    MEMORY[0xCC778C](a1 + 144);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 144);
     v3 = a1 + 208;
-    MEMORY[0xCC77A0](a1 + 208);
-    MEMORY[0xCC778C](a1 + 148);
-    MEMORY[0xCC77A0](a1 + 216);
-    MEMORY[0xCC778C](a1 + 152);
-    MEMORY[0xCC77A0](a1 + 224);
-    MEMORY[0xCC778C](a1 + 156);
-    MEMORY[0xCC77A0](a1 + 232);
-    MEMORY[0xCC778C](a1 + 160);
-    MEMORY[0xCC77A0](a1 + 240);
-    MEMORY[0xCC778C](a1 + 164);
-    MEMORY[0xCC77A0](a1 + 248);
-    MEMORY[0xCC778C](a1 + 168);
-    MEMORY[0xCC77A0](a1 + 256);
-    MEMORY[0xCC778C](a1 + 172);
-    MEMORY[0xCC77A0](a1 + 264);
-    MEMORY[0xCC778C](a1 + 176);
-    MEMORY[0xCC77A0](a1 + 272);
-    MEMORY[0xCC778C](a1 + 180);
-    MEMORY[0xCC77A0](a1 + 280);
-    MEMORY[0xCC778C](a1 + 184);
-    MEMORY[0xCC77A0](a1 + 288);
-    MEMORY[0xCC778C](a1 + 188);
-    MEMORY[0xCC77A0](a1 + 296);
-    MEMORY[0xCC778C](a1 + 192);
-    MEMORY[0xCC77A0](a1 + 304);
-    MEMORY[0xCC778C](a1 + 196);
-    MEMORY[0xCC77A0](a1 + 312);
-    MEMORY[0xCC778C](a1 + 200);
-    MEMORY[0xCC77A0](a1 + 320);
-    MEMORY[0xCC778C](a1 + 204);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 208);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 148);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 216);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 152);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 224);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 156);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 232);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 160);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 240);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 164);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 248);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 168);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 256);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 172);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 264);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 176);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 272);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 180);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 280);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 184);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 288);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 188);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 296);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 192);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 304);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 196);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 312);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 200);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 320);
+    ((int (*)(int))MEMORY[0xCC778C])(a1 + 204);
     v16 = a1;
-    MEMORY[0xCC77A0](a1 + 328);
+    ((int (*)(int))MEMORY[0xCC77A0])(a1 + 328);
     for ( i = 0; i != 64; i += 4 )
     {
       v5 = v2 + 2 * i;
@@ -244692,14 +244692,14 @@ sub_608DF448__LABEL_158:
         v10 = v6 + 56;
         if ( v7 < 0x10 )
           v8 = (char)v7;
-        MEMORY[0xCC7790](v2 + i, *(_DWORD *)(v10 + 12 * v8), *(_DWORD *)(v10 + 12 * v8 + 4));
-        MEMORY[0xCC7794](v2 + i, *(char *)(v5 - 135));
+        ((int (*)(int, int, int))MEMORY[0xCC7790])(v2 + i, *(_DWORD *)(v10 + 12 * v8), *(_DWORD *)(v10 + 12 * v8 + 4));
+        ((int (*)(int, int))MEMORY[0xCC7794])(v2 + i, *(char *)(v5 - 135));
         v11 = *(unsigned __int8 *)(v5 - 136);
         v12 = 0;
         if ( v11 < 0x10 )
           v12 = (char)v11;
         if ( *(_BYTE *)(v9 + 12 * v12 + 9) )
-          MEMORY[0xCC77A8](v16 + 8 * *(char *)(v5 - 135) + 208, 1);
+          ((int (*)(int, int))MEMORY[0xCC77A8])(v16 + 8 * *(char *)(v5 - 135) + 208, 1);
       }
     }
     v13 = *(_DWORD *)(v16 + 132);
@@ -244709,7 +244709,7 @@ sub_608DF448__LABEL_158:
       do
       {
         if ( *(_DWORD *)v14 )
-          MEMORY[0xCC77A4](v3, *(_DWORD *)(*(_DWORD *)v14 + 260));
+          ((int (*)(int, int))MEMORY[0xCC77A4])(v3, *(_DWORD *)(*(_DWORD *)v14 + 260));
         v3 += 8;
         --v13;
         v14 += 4;
@@ -244736,8 +244736,8 @@ sub_608DF448__LABEL_158:
     __int64 v9; // r0
   
     v3 = *(_DWORD *)(a2 + 192);
-    MEMORY[0xCC7810](v3, 16, a1 + 144);
-    result = MEMORY[0xCC7814](v3, 16, a1 + 208);
+    ((int (*)(int, int, int))MEMORY[0xCC7810])(v3, 16, a1 + 144);
+    result = ((int (*)(int, int, int))MEMORY[0xCC7814])(v3, 16, a1 + 208);
     v5 = *(_DWORD *)(a1 + 132);
     if ( v5 )
     {
@@ -244749,8 +244749,8 @@ sub_608DF448__LABEL_158:
         v8 = *(_DWORD *)(v6 + 4 * v7);
         if ( v8 )
         {
-          v9 = MEMORY[0xCC746C](v8 + 8);
-          result = MEMORY[0xCC781C](v3, v7, v9, HIDWORD(v9), *(_DWORD *)(v8 + 268));
+          v9 = ((int (*)(int))MEMORY[0xCC746C])(v8 + 8);
+          result = ((int (*)(int, int, int, int, int))MEMORY[0xCC781C])(v3, v7, v9, HIDWORD(v9), *(_DWORD *)(v8 + 268));
         }
         ++v7;
       }
@@ -244850,7 +244850,7 @@ sub_608DF448__LABEL_158:
     v2 = a1 + 248;
     if ( *(_DWORD *)(a1 + 248) )
     {
-      MEMORY[0xCC7464](a1 + 8);
+      ((int (*)(int))MEMORY[0xCC7464])(a1 + 8);
       *(_BYTE *)(a1 + 64) = 0;
       *(_BYTE *)(a1 + 76) = 0;
       *(_BYTE *)(a1 + 88) = 0;
@@ -244887,7 +244887,7 @@ sub_608DF448__LABEL_158:
     v2 = (_DWORD *)(a1 + 248);
     if ( *(_DWORD *)(a1 + 248) )
     {
-      MEMORY[0xCC7464](a1 + 8);
+      ((int (*)(int))MEMORY[0xCC7464])(a1 + 8);
       *(_BYTE *)(a1 + 64) = 0;
       *(_BYTE *)(a1 + 76) = 0;
       *(_BYTE *)(a1 + 88) = 0;
@@ -244928,7 +244928,7 @@ sub_608DF448__LABEL_158:
     v8 = a1 + 248;
     if ( *(_DWORD *)(a1 + 248) )
     {
-      MEMORY[0xCC7464](a1 + 8);
+      ((int (*)(int))MEMORY[0xCC7464])(a1 + 8);
       *(_BYTE *)(a1 + 64) = 0;
       *(_BYTE *)(a1 + 76) = 0;
       *(_BYTE *)(a1 + 88) = 0;
@@ -244967,10 +244967,10 @@ sub_608DF448__LABEL_158:
     }
     *(_DWORD *)(a1 + 264) = v11;
     *(_DWORD *)(a1 + 268) = a4;
-    MEMORY[0xCC7444](v16, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
-    MEMORY[0xCC7448](v16);
-    MEMORY[0xCC744C](v16, *(_DWORD *)(a1 + 248), *(_DWORD *)(a1 + 252), *(_DWORD *)(a1 + 268));
-    MEMORY[0xCC745C](a1 + 8, v16);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v16, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+    ((int (*)(int))MEMORY[0xCC7448])(v16);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v16, *(_DWORD *)(a1 + 248), *(_DWORD *)(a1 + 252), *(_DWORD *)(a1 + 268));
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 8, v16);
     v12 = *(_DWORD *)(a1 + 252);
     v13 = *(_DWORD *)(a1 + 268);
     v14 = *(_DWORD *)(a1 + 256);
@@ -245034,11 +245034,11 @@ sub_608DF448__LABEL_158:
     a1[63] = v5;
     a1[62] = v4;
     a1[67] = a3;
-    MEMORY[0xCC7464](a1 + 2);
-    MEMORY[0xCC7444](v7, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
-    MEMORY[0xCC7448](v7);
-    MEMORY[0xCC744C](v7, a1[62], a1[63], a1[67]);
-    return MEMORY[0xCC745C](a1 + 2, v7);
+    ((int (*)(int))MEMORY[0xCC7464])(a1 + 2);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v7, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+    ((int (*)(int))MEMORY[0xCC7448])(v7);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v7, a1[62], a1[63], a1[67]);
+    return ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 2, v7);
   }
 
 /* ============================================================================
@@ -254734,42 +254734,42 @@ sub_60925854__LABEL_105:
       {
         if ( v10 == 1 )
         {
-          v30 = MEMORY[0xCC73E8](*v13);
+          v30 = ((int (*)(int))MEMORY[0xCC73E8])(*v13);
           v31 = v30 + Slot_getRelativeOffset(v6);
           v32 = v6;
           *(_DWORD *)(v31 + 16 * v12) = -1082130432;
           *(_DWORD *)(v31 + 16 * v12 + 4) = 1065353216;
           v33 = arr_dword_60AF2CF4[v11];
-          v34 = MEMORY[0xCC73E8](*v13);
+          v34 = ((int (*)(int))MEMORY[0xCC73E8])(*v13);
           v35 = v34 + Slot_getRelativeOffset(v32) + 16 * v12;
           v36 = (float)v11;
           *(_DWORD *)(v35 + 8) = v33;
           *(float *)(v35 + 12) = (float)v11;
-          v37 = MEMORY[0xCC73E8](*v13);
+          v37 = ((int (*)(int))MEMORY[0xCC73E8])(*v13);
           v61 = v11;
           v38 = 16 * v12 + 16;
           v39 = v37 + Slot_getRelativeOffset(v32);
           *(_DWORD *)(v39 + v38) = -1082130432;
           *(_DWORD *)(v39 + v38 + 4) = -1082130432;
-          v40 = MEMORY[0xCC73E8](*v13);
+          v40 = ((int (*)(int))MEMORY[0xCC73E8])(*v13);
           v41 = v40 + Slot_getRelativeOffset(v32) + v38;
           *(_DWORD *)(v41 + 8) = v33;
           *(float *)(v41 + 12) = v36;
-          v42 = MEMORY[0xCC73E8](*v13);
+          v42 = ((int (*)(int))MEMORY[0xCC73E8])(*v13);
           v43 = 16 * v12 + 32;
           v44 = v42 + Slot_getRelativeOffset(v32);
           *(_DWORD *)(v44 + v43) = 1065353216;
           *(_DWORD *)(v44 + v43 + 4) = -1082130432;
-          v45 = MEMORY[0xCC73E8](*v13);
+          v45 = ((int (*)(int))MEMORY[0xCC73E8])(*v13);
           v46 = v45 + Slot_getRelativeOffset(v32) + v43;
           *(_DWORD *)(v46 + 8) = v33;
           *(float *)(v46 + 12) = v36;
-          v47 = MEMORY[0xCC73E8](*v13);
+          v47 = ((int (*)(int))MEMORY[0xCC73E8])(*v13);
           v48 = 16 * v12 + 48;
           v49 = v47 + Slot_getRelativeOffset(v32);
           *(_DWORD *)(v49 + v48) = 1065353216;
           *(_DWORD *)(v49 + v48 + 4) = 1065353216;
-          v50 = MEMORY[0xCC73E8](*v13);
+          v50 = ((int (*)(int))MEMORY[0xCC73E8])(*v13);
           v51 = Slot_getRelativeOffset(v32);
           v10 = v59;
           v12 += 4;
@@ -254801,11 +254801,11 @@ sub_60925854__LABEL_105:
             {
               v24 = cosf_0(v21, v8, v10);
               sinf_0(v24);
-              v25 = MEMORY[0xCC73E8](*v16);
+              v25 = ((int (*)(int))MEMORY[0xCC73E8])(*v16);
               v26 = v25 + Slot_getRelativeOffset(v17);
               *(float *)(v26 + v18 - 12) = (float)((float)v23 * 6.2832) / v14;
               *(float *)(v26 + v20) = (float)((float)v23 * 6.2832) / v14;
-              v27 = MEMORY[0xCC73E8](*v16);
+              v27 = ((int (*)(int))MEMORY[0xCC73E8])(*v16);
               v28 = v27 + Slot_getRelativeOffset(v17);
               v20 += 16;
               v8 = v28 + v63;
@@ -254909,24 +254909,24 @@ sub_60925854__LABEL_105:
           do
           {
             v32 = v7;
-            v11 = MEMORY[0xCC73E8](*v8);
+            v11 = ((int (*)(int))MEMORY[0xCC73E8])(*v8);
             ++v9;
             *(_WORD *)(v11 + Slot_getRelativeOffset(v3) + v10 - 10) = v5;
             v12 = v9 / v4;
             v13 = v3;
             v14 = v9 - v12 * v33;
             v31 = v14 + v29;
-            v30 = MEMORY[0xCC73E8](*v8);
+            v30 = ((int (*)(int))MEMORY[0xCC73E8])(*v8);
             *(_WORD *)(v30 + Slot_getRelativeOffset(v13) + v10 - 8) = v14 + v29;
-            v15 = MEMORY[0xCC73E8](*v8);
+            v15 = ((int (*)(int))MEMORY[0xCC73E8])(*v8);
             *(_WORD *)(v15 + Slot_getRelativeOffset(v13) + v10 - 6) = v14 + v28;
             v3 = v13;
             v4 = v33;
-            v16 = MEMORY[0xCC73E8](*v8);
+            v16 = ((int (*)(int))MEMORY[0xCC73E8])(*v8);
             *(_WORD *)(v16 + Slot_getRelativeOffset(v3) + v10 - 4) = v5;
-            v17 = MEMORY[0xCC73E8](*v8);
+            v17 = ((int (*)(int))MEMORY[0xCC73E8])(*v8);
             *(_WORD *)(v17 + Slot_getRelativeOffset(v3) + v10 - 2) = v33 + v5;
-            v18 = MEMORY[0xCC73E8](*v8);
+            v18 = ((int (*)(int))MEMORY[0xCC73E8])(*v8);
             LOWORD(v5) = v5 + 1;
             v19 = (_WORD *)(v18 + Slot_getRelativeOffset(v3) + v10);
             v10 += 12;
@@ -256255,8 +256255,8 @@ sub_60925854__LABEL_105:
         {
           v25 = v23[696];
           v26 = *(_DWORD *)(a2 + 192);
-          v27 = MEMORY[0xCC746C](v23 + 702);
-          return (_DWORD *)MEMORY[0xCC7874](v26, v25, v23[695], v24, v27, HIDWORD(v27));
+          v27 = ((int (*)(int))MEMORY[0xCC746C])(v23 + 702);
+          return (_DWORD *)((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v26, v25, v23[695], v24, v27, HIDWORD(v27));
         }
         return result;
       }
@@ -256269,8 +256269,8 @@ sub_60925854__LABEL_105:
   sub_609301A4__LABEL_24:
       v28 = *(_DWORD *)(a2 + 192);
       v29 = *(_DWORD *)(v20 + 904);
-      v30 = MEMORY[0xCC746C](v20 + 928);
-      return (_DWORD *)MEMORY[0xCC7874](v28, v29, *(_DWORD *)(v20 + 900), v21, v30, HIDWORD(v30));
+      v30 = ((int (*)(int))MEMORY[0xCC746C])(v20 + 928);
+      return (_DWORD *)((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v28, v29, *(_DWORD *)(v20 + 900), v21, v30, HIDWORD(v30));
     }
     v10 = *(_DWORD *)(a3 + 12);
     if ( !*(_BYTE *)(v10 + 76) )
@@ -256298,8 +256298,8 @@ sub_60925854__LABEL_105:
       v16 = a1 + 744 * v12;
       v17 = *(_DWORD *)(a2 + 192);
       v18 = *(_DWORD *)(v16 + 2784);
-      v19 = MEMORY[0xCC746C](v16 + 2808);
-      return (_DWORD *)MEMORY[0xCC7874](v17, v18, *(_DWORD *)(v16 + 2780), v15, v19, HIDWORD(v19));
+      v19 = ((int (*)(int))MEMORY[0xCC746C])(v16 + 2808);
+      return (_DWORD *)((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v17, v18, *(_DWORD *)(v16 + 2780), v15, v19, HIDWORD(v19));
     }
     return result;
   }
@@ -259333,8 +259333,8 @@ sub_60925854__LABEL_105:
     {
       v23 = *(_DWORD *)(a2 + 192);
       v24 = *(_DWORD *)(v21 + 904);
-      v25 = MEMORY[0xCC746C](v21 + 928);
-      return (void *)MEMORY[0xCC7874](v23, v24, *(_DWORD *)(v21 + 900), v22, v25, HIDWORD(v25));
+      v25 = ((int (*)(int))MEMORY[0xCC746C])(v21 + 928);
+      return (void *)((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v23, v24, *(_DWORD *)(v21 + 900), v22, v25, HIDWORD(v25));
     }
     return result;
   }
@@ -259539,8 +259539,8 @@ sub_60925854__LABEL_105:
     {
       v46 = *(_DWORD *)(a2 + 192);
       v47 = *(_DWORD *)(v44 + 384);
-      v48 = MEMORY[0xCC746C](v44 + 408);
-      MEMORY[0xCC7874](v46, v47, *(_DWORD *)(v44 + 380), v45, v48, HIDWORD(v48));
+      v48 = ((int (*)(int))MEMORY[0xCC746C])(v44 + 408);
+      ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v46, v47, *(_DWORD *)(v44 + 380), v45, v48, HIDWORD(v48));
     }
     return Object_lockedUpdateIfFlag40(MEMORY[0xCD09F8], v8);
   }
@@ -261048,11 +261048,11 @@ sub_60925854__LABEL_105:
     {
       v50 = *(_DWORD *)(a1 + 192);
       v51 = v48[2];
-      v52 = MEMORY[0xCC746C](v48 + 8);
+      v52 = ((int (*)(int))MEMORY[0xCC746C])(v48 + 8);
       v152 = HIDWORD(v52);
       HIDWORD(v52) = v51;
       v10 = a6;
-      MEMORY[0xCC7874](v50, HIDWORD(v52), v48[1], v49, v52, v152);
+      ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v50, HIDWORD(v52), v48[1], v49, v52, v152);
     }
     v53 = MEMORY[0xB3A48C] + (float)(MEMORY[0xB3A490] * 0.0);
     v54 = MEMORY[0xB3A484] + (float)(MEMORY[0xB3A488] * 0.0);
@@ -261362,7 +261362,7 @@ sub_60925854__LABEL_105:
     Slot_constructDefaults(v17);
     v18 = 1;
     sub_60915B7C(MEMORY[0xCCFC8C], a1);
-    MEMORY[0xCC7870](*(_DWORD *)(a1 + 192), v18, 0, 2);
+    ((int (*)(int, int, int, int))MEMORY[0xCC7870])(*(_DWORD *)(a1 + 192), v18, 0, 2);
     return Slot_detachChild(v17);
   }
 
@@ -261957,8 +261957,8 @@ sub_60925854__LABEL_105:
     {
       v78 = v11[2094];
       v70 = *(_DWORD *)(a1 + 192);
-      v71 = MEMORY[0xCC746C](v11 + 2100);
-      MEMORY[0xCC7874](v70, v78, v11[2093], v69, v71, HIDWORD(v71));
+      v71 = ((int (*)(int))MEMORY[0xCC746C])(v11 + 2100);
+      ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v70, v78, v11[2093], v69, v71, HIDWORD(v71));
       v20 = a6;
     }
     result = a8;
@@ -261981,8 +261981,8 @@ sub_60925854__LABEL_105:
       {
         v74 = *(_DWORD *)(a1 + 192);
         v75 = v11[1042];
-        v76 = MEMORY[0xCC746C](v11 + 1048);
-        return MEMORY[0xCC7874](v74, v75, v11[1041], v73, v76, HIDWORD(v76));
+        v76 = ((int (*)(int))MEMORY[0xCC746C])(v11 + 1048);
+        return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v74, v75, v11[1041], v73, v76, HIDWORD(v76));
       }
     }
     return result;
@@ -262040,8 +262040,8 @@ sub_60925854__LABEL_105:
     {
       v14 = *(_DWORD *)(a1 + 192);
       v15 = v9[1122];
-      v16 = MEMORY[0xCC746C](v9 + 1128);
-      return MEMORY[0xCC7874](v14, v15, v9[1121], v13, v16, HIDWORD(v16));
+      v16 = ((int (*)(int))MEMORY[0xCC746C])(v9 + 1128);
+      return ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v14, v15, v9[1121], v13, v16, HIDWORD(v16));
     }
     return result;
   }
@@ -262198,8 +262198,8 @@ sub_60925854__LABEL_105:
       {
         v35 = *(_DWORD *)(a1 + 192);
         v36 = *(_DWORD *)(v33 + 904);
-        v37 = MEMORY[0xCC746C](v33 + 928);
-        MEMORY[0xCC7874](v35, v36, *(_DWORD *)(v33 + 900), v34, v37, HIDWORD(v37));
+        v37 = ((int (*)(int))MEMORY[0xCC746C])(v33 + 928);
+        ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v35, v36, *(_DWORD *)(v33 + 900), v34, v37, HIDWORD(v37));
       }
       Object_releaseHandle((int)&v43);
       return Object_releaseHalfwordHandle((int)v42);
@@ -262894,11 +262894,11 @@ sub_60925854__LABEL_105:
           {
             v72 = *(_DWORD *)(v56 + 192);
             v73 = *(_DWORD *)(v70 + 1424);
-            v74 = MEMORY[0xCC746C](v70 + 1448);
+            v74 = ((int (*)(int))MEMORY[0xCC746C])(v70 + 1448);
             v76 = v74;
             LODWORD(v74) = v72;
             a1 = v56;
-            MEMORY[0xCC7874](v74, v73, *(_DWORD *)(v70 + 1420), v71, v76, HIDWORD(v74));
+            ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v74, v73, *(_DWORD *)(v70 + 1420), v71, v76, HIDWORD(v74));
           }
           ++LODWORD(v66);
         }
@@ -262923,11 +262923,11 @@ sub_60925854__LABEL_105:
           {
             v63 = *(_DWORD *)(a1 + 192);
             v64 = *(_DWORD *)(v61 + 1424);
-            v65 = MEMORY[0xCC746C](v61 + 1448);
+            v65 = ((int (*)(int))MEMORY[0xCC746C])(v61 + 1448);
             v77 = HIDWORD(v65);
             HIDWORD(v65) = v64;
             a1 = v56;
-            MEMORY[0xCC7880](v63, HIDWORD(v65), *(_DWORD *)(v61 + 1420), v62, v65, v77, 0, 0, v78);
+            ((int (*)(int, int, int, int, int, int, int, int, int))MEMORY[0xCC7880])(v63, HIDWORD(v65), *(_DWORD *)(v61 + 1420), v62, v65, v77, 0, 0, v78);
           }
           ++LODWORD(v57);
         }
@@ -263021,8 +263021,8 @@ sub_60925854__LABEL_105:
     {
       v31 = *(_DWORD *)(a1 + 192);
       v32 = *(_DWORD *)(v29 + 384);
-      v33 = MEMORY[0xCC746C](v29 + 408);
-      return (void *)MEMORY[0xCC7874](v31, v32, *(_DWORD *)(v29 + 380), v30, v33, HIDWORD(v33));
+      v33 = ((int (*)(int))MEMORY[0xCC746C])(v29 + 408);
+      return (void *)((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v31, v32, *(_DWORD *)(v29 + 380), v30, v33, HIDWORD(v33));
     }
     return result;
   }
@@ -263109,8 +263109,8 @@ sub_60925854__LABEL_105:
     {
       v32 = *(_DWORD *)(a1 + 192);
       v33 = *(_DWORD *)(v30 + 384);
-      v34 = MEMORY[0xCC746C](v30 + 408);
-      return (void *)MEMORY[0xCC7874](v32, v33, *(_DWORD *)(v30 + 380), v31, v34, HIDWORD(v34));
+      v34 = ((int (*)(int))MEMORY[0xCC746C])(v30 + 408);
+      return (void *)((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v32, v33, *(_DWORD *)(v30 + 380), v31, v34, HIDWORD(v34));
     }
     return result;
   }
@@ -264879,8 +264879,8 @@ sub_60925854__LABEL_105:
     {
       v63 = *(_DWORD *)(a1 + 192);
       v64 = *(_DWORD *)(v61 + 384);
-      v65 = MEMORY[0xCC746C](v61 + 408);
-      MEMORY[0xCC7874](v63, v64, *(_DWORD *)(v61 + 380), v62, v65, HIDWORD(v65));
+      v65 = ((int (*)(int))MEMORY[0xCC746C])(v61 + 408);
+      ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v63, v64, *(_DWORD *)(v61 + 380), v62, v65, HIDWORD(v65));
     }
     return nullsub_113(v75);
   }
@@ -264958,8 +264958,8 @@ sub_60925854__LABEL_105:
     {
       v18 = *(_DWORD *)(a1 + 192);
       v19 = *(_DWORD *)(v16 + 904);
-      v20 = MEMORY[0xCC746C](v16 + 928);
-      return (void *)MEMORY[0xCC7874](v18, v19, *(_DWORD *)(v16 + 900), v17, v20, HIDWORD(v20));
+      v20 = ((int (*)(int))MEMORY[0xCC746C])(v16 + 928);
+      return (void *)((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v18, v19, *(_DWORD *)(v16 + 900), v17, v20, HIDWORD(v20));
     }
     return result;
   }
@@ -265391,8 +265391,8 @@ sub_60925854__LABEL_105:
     {
       v34 = *(_DWORD *)(a1 + 192);
       v35 = *(_DWORD *)(v32 + 904);
-      v36 = MEMORY[0xCC746C](v32 + 928);
-      return (void *)MEMORY[0xCC7874](v34, v35, *(_DWORD *)(v32 + 900), v33, v36, HIDWORD(v36));
+      v36 = ((int (*)(int))MEMORY[0xCC746C])(v32 + 928);
+      return (void *)((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v34, v35, *(_DWORD *)(v32 + 900), v33, v36, HIDWORD(v36));
     }
     return result;
   }
@@ -265546,8 +265546,8 @@ sub_60925854__LABEL_105:
     {
       v34 = *(_DWORD *)(a1 + 192);
       v35 = *(_DWORD *)(v32 + 904);
-      v36 = MEMORY[0xCC746C](v32 + 928);
-      return (void *)MEMORY[0xCC7874](v34, v35, *(_DWORD *)(v32 + 900), v33, v36, HIDWORD(v36));
+      v36 = ((int (*)(int))MEMORY[0xCC746C])(v32 + 928);
+      return (void *)((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v34, v35, *(_DWORD *)(v32 + 900), v33, v36, HIDWORD(v36));
     }
     return result;
   }
@@ -272704,19 +272704,19 @@ sub_60945324__LABEL_155:
     v36[26] = 1065353216;
     do
     {
-      v6 = MEMORY[0xCC73E8](a1[8]);
+      v6 = ((int (*)(int))MEMORY[0xCC73E8])(a1[8]);
       v7 = v6 + Slot_getRelativeOffset(v5);
       v8 = (char *)&v31 + v4;
       *(_DWORD *)(v7 + v4) = *(int *)((char *)&v31 + v4);
       v9 = v7 + v4;
       *(_DWORD *)(v9 + 4) = *(int *)((char *)&v31 + v4 + 4);
       *(_DWORD *)(v9 + 8) = *(int *)((char *)&v33 + v4);
-      v10 = MEMORY[0xCC73E8](a1[8]);
+      v10 = ((int (*)(int))MEMORY[0xCC73E8])(a1[8]);
       v11 = (_DWORD *)(v10 + Slot_getRelativeOffset(v5) + v4);
       v11[3] = *(int *)((char *)&v34 + v4);
       v11[4] = v36[v4 / 4 - 1];
       v11[5] = v36[v4 / 4];
-      v12 = MEMORY[0xCC73E8](a1[8]);
+      v12 = ((int (*)(int))MEMORY[0xCC73E8])(a1[8]);
       v13 = v12 + Slot_getRelativeOffset(v5) + v4;
       v4 += 32;
       *(_DWORD *)(v13 + 24) = *((_DWORD *)v8 + 6);
@@ -272730,17 +272730,17 @@ sub_60945324__LABEL_155:
     Array16_setEntryParams(a1 + 26, 2, 22, 24, 0);
     Slot_initFromResource((int)(a1 + 12), 12, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v29, (int)(a1 + 12), 0);
-    v14 = MEMORY[0xCC73E8](a1[15]);
+    v14 = ((int (*)(int))MEMORY[0xCC73E8])(a1[15]);
     *(_WORD *)(v14 + Slot_getRelativeOffset(a1 + 12)) = 0;
-    v15 = MEMORY[0xCC73E8](a1[15]);
+    v15 = ((int (*)(int))MEMORY[0xCC73E8])(a1[15]);
     *(_WORD *)(v15 + Slot_getRelativeOffset(a1 + 12) + 2) = 2;
-    v16 = MEMORY[0xCC73E8](a1[15]);
+    v16 = ((int (*)(int))MEMORY[0xCC73E8])(a1[15]);
     *(_WORD *)(v16 + Slot_getRelativeOffset(a1 + 12) + 4) = 1;
-    v17 = MEMORY[0xCC73E8](a1[15]);
+    v17 = ((int (*)(int))MEMORY[0xCC73E8])(a1[15]);
     *(_WORD *)(v17 + Slot_getRelativeOffset(a1 + 12) + 6) = 1;
-    v18 = MEMORY[0xCC73E8](a1[15]);
+    v18 = ((int (*)(int))MEMORY[0xCC73E8])(a1[15]);
     *(_WORD *)(v18 + Slot_getRelativeOffset(a1 + 12) + 8) = 2;
-    v19 = MEMORY[0xCC73E8](a1[15]);
+    v19 = ((int (*)(int))MEMORY[0xCC73E8])(a1[15]);
     *(_WORD *)(v19 + Slot_getRelativeOffset(a1 + 12) + 10) = 3;
     Slot_initWithOwnerAndOffset(&v26, (int)(a1 + 12), 0);
     v31 = v26;
@@ -272749,13 +272749,13 @@ sub_60945324__LABEL_155:
     sub_60919D48(a1 + 94, &v31, 1, 6);
     Slot_initFromResource((int)(a1 + 19), 8, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v25, (int)(a1 + 19), 0);
-    v20 = MEMORY[0xCC73E8](a1[22]);
+    v20 = ((int (*)(int))MEMORY[0xCC73E8])(a1[22]);
     *(_WORD *)(v20 + Slot_getRelativeOffset(a1 + 19)) = 0;
-    v21 = MEMORY[0xCC73E8](a1[22]);
+    v21 = ((int (*)(int))MEMORY[0xCC73E8])(a1[22]);
     *(_WORD *)(v21 + Slot_getRelativeOffset(a1 + 19) + 2) = 1;
-    v22 = MEMORY[0xCC73E8](a1[22]);
+    v22 = ((int (*)(int))MEMORY[0xCC73E8])(a1[22]);
     *(_WORD *)(v22 + Slot_getRelativeOffset(a1 + 19) + 4) = 3;
-    v23 = MEMORY[0xCC73E8](a1[22]);
+    v23 = ((int (*)(int))MEMORY[0xCC73E8])(a1[22]);
     *(_WORD *)(v23 + Slot_getRelativeOffset(a1 + 19) + 6) = 2;
     Slot_initWithOwnerAndOffset(&v26, (int)(a1 + 19), 0);
     v31 = v26;
@@ -272828,19 +272828,19 @@ sub_60945324__LABEL_155:
     v31[18] = 0x40000000;
     do
     {
-      v6 = MEMORY[0xCC73E8](a1[137]);
+      v6 = ((int (*)(int))MEMORY[0xCC73E8])(a1[137]);
       v7 = v6 + Slot_getRelativeOffset(v5);
       v8 = (char *)&v26 + v4;
       *(_DWORD *)(v7 + v4) = *(int *)((char *)&v26 + v4);
       v9 = v7 + v4;
       *(_DWORD *)(v9 + 4) = *(int *)((char *)&v26 + v4 + 4);
       *(_DWORD *)(v9 + 8) = *(int *)((char *)&v28 + v4);
-      v10 = MEMORY[0xCC73E8](a1[137]);
+      v10 = ((int (*)(int))MEMORY[0xCC73E8])(a1[137]);
       v11 = (_DWORD *)(v10 + Slot_getRelativeOffset(v5) + v4);
       v11[3] = *(int *)((char *)&v29 + v4);
       v11[4] = v31[v4 / 4 - 1];
       v11[5] = v31[v4 / 4];
-      v12 = MEMORY[0xCC73E8](a1[137]);
+      v12 = ((int (*)(int))MEMORY[0xCC73E8])(a1[137]);
       v13 = v12 + Slot_getRelativeOffset(v5) + v4;
       v4 += 32;
       *(_DWORD *)(v13 + 24) = *((_DWORD *)v8 + 6);
@@ -272854,11 +272854,11 @@ sub_60945324__LABEL_155:
     Array16_setEntryParams(a1 + 156, 2, 22, 24, 0);
     Slot_initFromResource((int)(a1 + 141), 6, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v24, (int)(a1 + 141), 0);
-    v14 = MEMORY[0xCC73E8](a1[144]);
+    v14 = ((int (*)(int))MEMORY[0xCC73E8])(a1[144]);
     *(_WORD *)(v14 + Slot_getRelativeOffset(a1 + 141)) = 0;
-    v15 = MEMORY[0xCC73E8](a1[144]);
+    v15 = ((int (*)(int))MEMORY[0xCC73E8])(a1[144]);
     *(_WORD *)(v15 + Slot_getRelativeOffset(a1 + 141) + 2) = 2;
-    v16 = MEMORY[0xCC73E8](a1[144]);
+    v16 = ((int (*)(int))MEMORY[0xCC73E8])(a1[144]);
     *(_WORD *)(v16 + Slot_getRelativeOffset(a1 + 141) + 4) = 1;
     Slot_initWithOwnerAndOffset(v23, (int)(a1 + 141), 0);
     v26 = v23[0];
@@ -272867,11 +272867,11 @@ sub_60945324__LABEL_155:
     sub_60919D48(a1 + 224, &v26, 1, 3);
     Slot_initFromResource((int)(a1 + 148), 6, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v22, (int)(a1 + 148), 0);
-    v17 = MEMORY[0xCC73E8](a1[151]);
+    v17 = ((int (*)(int))MEMORY[0xCC73E8])(a1[151]);
     *(_WORD *)(v17 + Slot_getRelativeOffset(a1 + 148)) = 0;
-    v18 = MEMORY[0xCC73E8](a1[151]);
+    v18 = ((int (*)(int))MEMORY[0xCC73E8])(a1[151]);
     *(_WORD *)(v18 + Slot_getRelativeOffset(a1 + 148) + 2) = 2;
-    v19 = MEMORY[0xCC73E8](a1[151]);
+    v19 = ((int (*)(int))MEMORY[0xCC73E8])(a1[151]);
     *(_WORD *)(v19 + Slot_getRelativeOffset(a1 + 148) + 4) = 1;
     Slot_initWithOwnerAndOffset(v21, (int)(a1 + 148), 0);
     v26 = v21[0];
@@ -273107,19 +273107,19 @@ sub_60945324__LABEL_155:
     v35[186] = 1065353216;
     do
     {
-      v6 = MEMORY[0xCC73E8](a1[267]);
+      v6 = ((int (*)(int))MEMORY[0xCC73E8])(a1[267]);
       v7 = v6 + Slot_getRelativeOffset(v5);
       v8 = (char *)&v30 + v4;
       *(_DWORD *)(v7 + v4) = *(int *)((char *)&v30 + v4);
       v9 = v7 + v4;
       *(_DWORD *)(v9 + 4) = *(int *)((char *)&v30 + v4 + 4);
       *(_DWORD *)(v9 + 8) = *(int *)((char *)&v32 + v4);
-      v10 = MEMORY[0xCC73E8](a1[267]);
+      v10 = ((int (*)(int))MEMORY[0xCC73E8])(a1[267]);
       v11 = (_DWORD *)(v10 + Slot_getRelativeOffset(v5) + v4);
       v11[3] = *(int *)((char *)&v33 + v4);
       v11[4] = v35[v4 / 4 - 1];
       v11[5] = v35[v4 / 4];
-      v12 = MEMORY[0xCC73E8](a1[267]);
+      v12 = ((int (*)(int))MEMORY[0xCC73E8])(a1[267]);
       v13 = v12 + Slot_getRelativeOffset(v5) + v4;
       v4 += 32;
       *(_DWORD *)(v13 + 24) = *((_DWORD *)v8 + 6);
@@ -273136,7 +273136,7 @@ sub_60945324__LABEL_155:
     Slot_initWithOwnerAndOffset(v28, (int)(a1 + 271), 0);
     do
     {
-      v15 = MEMORY[0xCC73E8](a1[274]);
+      v15 = ((int (*)(int))MEMORY[0xCC73E8])(a1[274]);
       v16 = Slot_getRelativeOffset(a1 + 271);
       v17 = *(_WORD *)((char *)&unk_60B466D2 + v14);
       v18 = (_WORD *)(v15 + v16 + v14);
@@ -273154,7 +273154,7 @@ sub_60945324__LABEL_155:
     Slot_initWithOwnerAndOffset(v26, (int)(a1 + 278), 0);
     do
     {
-      v20 = MEMORY[0xCC73E8](a1[281]);
+      v20 = ((int (*)(int))MEMORY[0xCC73E8])(a1[281]);
       v21 = Slot_getRelativeOffset(a1 + 278);
       v22 = *(_WORD *)((char *)&unk_60B4671A + v19);
       v23 = (_WORD *)(v20 + v21 + v19);
@@ -273345,19 +273345,19 @@ sub_60945324__LABEL_155:
     v35[122] = 0;
     do
     {
-      v6 = MEMORY[0xCC73E8](a1[397]);
+      v6 = ((int (*)(int))MEMORY[0xCC73E8])(a1[397]);
       v7 = v6 + Slot_getRelativeOffset(v5);
       v8 = (char *)&v30 + v4;
       *(_DWORD *)(v7 + v4) = *(int *)((char *)&v30 + v4);
       v9 = v7 + v4;
       *(_DWORD *)(v9 + 4) = *(int *)((char *)&v30 + v4 + 4);
       *(_DWORD *)(v9 + 8) = *(int *)((char *)&v32 + v4);
-      v10 = MEMORY[0xCC73E8](a1[397]);
+      v10 = ((int (*)(int))MEMORY[0xCC73E8])(a1[397]);
       v11 = (_DWORD *)(v10 + Slot_getRelativeOffset(v5) + v4);
       v11[3] = *(int *)((char *)&v33 + v4);
       v11[4] = v35[v4 / 4 - 1];
       v11[5] = v35[v4 / 4];
-      v12 = MEMORY[0xCC73E8](a1[397]);
+      v12 = ((int (*)(int))MEMORY[0xCC73E8])(a1[397]);
       v13 = v12 + Slot_getRelativeOffset(v5) + v4;
       v4 += 32;
       *(_DWORD *)(v13 + 24) = *((_DWORD *)v8 + 6);
@@ -273374,7 +273374,7 @@ sub_60945324__LABEL_155:
     Slot_initWithOwnerAndOffset(v28, (int)(a1 + 401), 0);
     do
     {
-      v15 = MEMORY[0xCC73E8](a1[404]);
+      v15 = ((int (*)(int))MEMORY[0xCC73E8])(a1[404]);
       v16 = Slot_getRelativeOffset(a1 + 401);
       v17 = *(_WORD *)((char *)&unk_60B4677A + v14);
       v18 = (_WORD *)(v15 + v16 + v14);
@@ -273392,7 +273392,7 @@ sub_60945324__LABEL_155:
     Slot_initWithOwnerAndOffset(v26, (int)(a1 + 408), 0);
     do
     {
-      v20 = MEMORY[0xCC73E8](a1[411]);
+      v20 = ((int (*)(int))MEMORY[0xCC73E8])(a1[411]);
       v21 = Slot_getRelativeOffset(a1 + 408);
       v22 = *(_WORD *)((char *)&unk_60B4679E + v19);
       v23 = (_WORD *)(v20 + v21 + v19);
@@ -274886,7 +274886,7 @@ sub_60945324__LABEL_155:
       v34 = v42;
       if ( v42 )
       {
-        MEMORY[0xCC73E8](v42);
+        ((int (*)(int))MEMORY[0xCC73E8])(v42);
         v34 = v42;
       }
       v50 = v34;
@@ -274900,7 +274900,7 @@ sub_60945324__LABEL_155:
       v35 = v42;
       if ( v42 )
       {
-        MEMORY[0xCC73E8](v42);
+        ((int (*)(int))MEMORY[0xCC73E8])(v42);
         v35 = v42;
       }
       v50 = v35;
@@ -274914,7 +274914,7 @@ sub_60945324__LABEL_155:
       v36 = v42;
       if ( v42 )
       {
-        MEMORY[0xCC73E8](v42);
+        ((int (*)(int))MEMORY[0xCC73E8])(v42);
         v36 = v42;
       }
       v50 = v36;
@@ -274944,7 +274944,7 @@ sub_60945324__LABEL_155:
     _DWORD v15[3]; // [sp+4h] [bp-Ch] BYREF
   
     if ( *a2 )
-      v6 = MEMORY[0xCC73E8](*a2);
+      v6 = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     else
       v6 = 0;
     v7 = a2[1];
@@ -275016,7 +275016,7 @@ sub_60945324__LABEL_155:
     int v27; // [sp+Ch] [bp-4h]
   
     if ( *a2 )
-      result = MEMORY[0xCC73E8](*a2);
+      result = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     else
       result = 0;
     v10 = a2[1];
@@ -275296,7 +275296,7 @@ sub_60945324__LABEL_155:
     _DWORD v30[3]; // [sp+14h] [bp-Ch] BYREF
   
     if ( *a2 )
-      v7 = MEMORY[0xCC73E8](*a2);
+      v7 = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     else
       v7 = 0;
     v28 = a2;
@@ -275476,7 +275476,7 @@ sub_60945324__LABEL_155:
     result = *a2;
     if ( *a2 )
     {
-      result = MEMORY[0xCC73E8](result);
+      result = ((int (*)(int))MEMORY[0xCC73E8])(result);
       v11 = result;
     }
     else
@@ -275941,7 +275941,7 @@ sub_60945324__LABEL_155:
     v41 = v7 * a3;
     v8 = (float)a4 + 1.0;
     if ( *a2 )
-      v9 = MEMORY[0xCC73E8](*a2);
+      v9 = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     else
       v9 = 0;
     v10 = 3.1416 / v8;
@@ -276101,7 +276101,7 @@ sub_60945324__LABEL_155:
     int v88; // [sp+30h] [bp-4h]
   
     if ( *a2 )
-      result = MEMORY[0xCC73E8](*a2);
+      result = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     else
       result = 0;
     v11 = a4 >> 1;
@@ -276392,7 +276392,7 @@ sub_60945324__LABEL_155:
   
     v8 = 0;
     if ( *a2 )
-      v8 = MEMORY[0xCC73E8](*a2);
+      v8 = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     v9 = a2[1];
     *(_DWORD *)(v8 + v9) = 0;
     v10 = (_DWORD *)(v8 + v9);
@@ -276573,7 +276573,7 @@ sub_60945324__LABEL_155:
     int v54; // [sp+20h] [bp-4h]
   
     if ( *a2 )
-      result = MEMORY[0xCC73E8](*a2);
+      result = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     else
       result = 0;
     v11 = a2[1];
@@ -276813,7 +276813,7 @@ sub_60945324__LABEL_155:
     v7 = a5;
     v10 = 0;
     if ( *a2 )
-      v10 = MEMORY[0xCC73E8](*a2);
+      v10 = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     v11 = a2[1];
     v12 = 1065353216;
     *(_DWORD *)(v10 + v11) = 0;
@@ -277142,7 +277142,7 @@ sub_60945324__LABEL_155:
   
     v9 = a5;
     if ( *a2 )
-      result = MEMORY[0xCC73E8](*a2);
+      result = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     else
       result = 0;
     v121 = a5 - (1 << a7);
@@ -277467,7 +277467,7 @@ sub_60945324__LABEL_155:
     v8 = 0;
     v9 = *a2;
     if ( v9 )
-      v8 = MEMORY[0xCC73E8](v9);
+      v8 = ((int (*)(int))MEMORY[0xCC73E8])(v9);
     v10 = 0;
     v37 = a4 + 2;
     v38 = a2;
@@ -277663,7 +277663,7 @@ sub_60945324__LABEL_155:
     int v68; // [sp+38h] [bp-4h]
   
     if ( *a2 )
-      result = MEMORY[0xCC73E8](*a2);
+      result = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     else
       result = 0;
     v11 = a2[1];
@@ -277972,7 +277972,7 @@ sub_60945324__LABEL_155:
   
     v9 = v6;
     if ( *a2 )
-      v12 = MEMORY[0xCC73E8](*a2);
+      v12 = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     else
       v12 = 0;
     v13 = a4 + 1;
@@ -278205,7 +278205,7 @@ sub_60945324__LABEL_155:
   
     v6 = a2;
     if ( *a2 )
-      result = MEMORY[0xCC73E8](*a2);
+      result = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     else
       result = 0;
     v11 = v6[1];
@@ -278577,39 +278577,39 @@ sub_60945324__LABEL_155:
         case 4:
         case 5:
         case 6:
-          v6 = MEMORY[0xC5CB10](255);
+          v6 = ((int (*)(int))MEMORY[0xC5CB10])(255);
           goto agl_utl_PrimitiveTexture_ref__LABEL_7;
         case 7:
         case 8:
-          v6 = MEMORY[0xC5CB10](-1);
+          v6 = ((int (*)(int))MEMORY[0xC5CB10])(-1);
           goto agl_utl_PrimitiveTexture_ref__LABEL_7;
         case 9:
         case 10:
         case 11:
         case 12:
         case 13:
-          v6 = MEMORY[0xC5CB10](0);
+          v6 = ((int (*)(int))MEMORY[0xC5CB10])(0);
           goto agl_utl_PrimitiveTexture_ref__LABEL_7;
         case 14:
-          v9 = MEMORY[0xC5CB10](-16776961);
+          v9 = ((int (*)(int))MEMORY[0xC5CB10])(-16776961);
           goto agl_utl_PrimitiveTexture_ref__LABEL_26;
         case 15:
-          v9 = MEMORY[0xC5CB10](16711935);
+          v9 = ((int (*)(int))MEMORY[0xC5CB10])(16711935);
           goto agl_utl_PrimitiveTexture_ref__LABEL_26;
         case 16:
-          v9 = MEMORY[0xC5CB10](0xFFFF);
+          v9 = ((int (*)(int))MEMORY[0xC5CB10])(0xFFFF);
           goto agl_utl_PrimitiveTexture_ref__LABEL_26;
         case 17:
-          v9 = MEMORY[0xC5CB10](-2139062017);
+          v9 = ((int (*)(int))MEMORY[0xC5CB10])(-2139062017);
           goto agl_utl_PrimitiveTexture_ref__LABEL_26;
         case 18:
-          v9 = MEMORY[0xC5CB10](-1962934017);
+          v9 = ((int (*)(int))MEMORY[0xC5CB10])(-1962934017);
           goto agl_utl_PrimitiveTexture_ref__LABEL_26;
         case 19:
-          v9 = MEMORY[0xC5CB10](6553855);
+          v9 = ((int (*)(int))MEMORY[0xC5CB10])(6553855);
           goto agl_utl_PrimitiveTexture_ref__LABEL_26;
         case 20:
-          v9 = MEMORY[0xC5CB10](35839);
+          v9 = ((int (*)(int))MEMORY[0xC5CB10])(35839);
   agl_utl_PrimitiveTexture_ref__LABEL_26:
           v2 = v9;
           v7 = v3;
@@ -278699,7 +278699,7 @@ sub_60945324__LABEL_155:
           if ( v50 == 25 )
           {
             if ( v52 )
-              v14 = MEMORY[0xCC73E8](v52);
+              v14 = ((int (*)(int))MEMORY[0xCC73E8])(v52);
             else
               v14 = 0;
             v16 = Object_getCountOrDefault(v55);
@@ -278714,7 +278714,7 @@ sub_60945324__LABEL_155:
                 v20 = 0;
                 do
                 {
-                  v21 = MEMORY[0xC5CB10](arr_dword_60B467E0[v20]);
+                  v21 = ((int (*)(int))MEMORY[0xC5CB10])(arr_dword_60B467E0[v20]);
                   v22 = v56;
                   if ( v56 <= 1u )
                     v22 = 1;
@@ -278736,7 +278736,7 @@ sub_60945324__LABEL_155:
           else
           {
             if ( v52 )
-              v15 = MEMORY[0xCC73E8](v52);
+              v15 = ((int (*)(int))MEMORY[0xCC73E8])(v52);
             else
               v15 = 0;
             if ( v59 >= 4 )
@@ -278958,7 +278958,7 @@ sub_60945324__LABEL_155:
     v4 = (int)(a1 + 210);
     Slot_initFromResource((int)(a1 + 210), 16, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v16, v4, 0);
-    v5 = MEMORY[0xCC73E8](v2[213]);
+    v5 = ((int (*)(int))MEMORY[0xCC73E8])(v2[213]);
     v6 = Slot_getRelativeOffset(v4);
     *(_DWORD *)(v5 + v6) = 1065353216;
     v7 = (_DWORD *)(v5 + v6);
@@ -278970,7 +278970,7 @@ sub_60945324__LABEL_155:
     Array16_setEntryParams(v2 + 6, 0, 46, 0, 0);
     Slot_initFromResource((int)(v2 + 217), 16, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v16, (int)(v2 + 217), 0);
-    v8 = MEMORY[0xCC73E8](v2[220]);
+    v8 = ((int (*)(int))MEMORY[0xCC73E8])(v2[220]);
     v9 = Slot_getRelativeOffset(v2 + 217);
     *(_DWORD *)(v8 + v9) = 0;
     v10 = (_DWORD *)(v8 + v9);
@@ -278982,7 +278982,7 @@ sub_60945324__LABEL_155:
     Array16_setEntryParams(v2 + 74, 0, 46, 0, 0);
     Slot_initFromResource((int)(v2 + 224), 16, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v16, (int)(v2 + 224), 0);
-    v11 = MEMORY[0xCC73E8](v2[227]);
+    v11 = ((int (*)(int))MEMORY[0xCC73E8])(v2[227]);
     v12 = Slot_getRelativeOffset(v2 + 224);
     *(_DWORD *)(v11 + v12) = 0;
     v13 = (_DWORD *)(v11 + v12);
@@ -287204,7 +287204,7 @@ s_sOrder_d_ref__LABEL_111:
     v47 = a1;
     v9 = *(_DWORD *)(a1 + 1076);
     if ( v8 )
-      v10 = MEMORY[0xCC73E8](v8);
+      v10 = ((int (*)(int))MEMORY[0xCC73E8])(v8);
     else
       v10 = 0;
     if ( a2 >= 1 )
@@ -287287,7 +287287,7 @@ s_sOrder_d_ref__LABEL_111:
     v33 = *(_DWORD *)(v47 + 1708);
     if ( v32 )
     {
-      v34 = MEMORY[0xCC73E8](v32);
+      v34 = ((int (*)(int))MEMORY[0xCC73E8])(v32);
       if ( a3 < 1 )
         goto sub_6095B8EC__LABEL_29;
     }
@@ -287652,12 +287652,12 @@ s_sOrder_d_ref__LABEL_111:
               v13 = ((int (*)(void))MEMORY[0xCC73E8])();
             else
               v13 = 0;
-            *(_DWORD *)(v13 + v12 + 4 * v5) = MEMORY[0xC5CB10](v11 | (v11 << 24) | (v11 << 16) | (v11 << 8));
+            *(_DWORD *)(v13 + v12 + 4 * v5) = ((int (*)(int))MEMORY[0xC5CB10])(v11 | (v11 << 24) | (v11 << 16) | (v11 << 8));
           }
           else
           {
             v14 = a1[111];
-            *(_BYTE *)(MEMORY[0xCC73E8](a1[110]) + v14 + v5) = v11;
+            *(_BYTE *)(((int (*)(int))MEMORY[0xCC73E8])(a1[110]) + v14 + v5) = v11;
           }
           ++v6;
           ++v5;
@@ -287685,12 +287685,12 @@ s_sOrder_d_ref__LABEL_111:
             v21 = ((int (*)(void))MEMORY[0xCC73E8])();
           else
             v21 = 0;
-          *(_DWORD *)(v21 + v20 + v16) = MEMORY[0xC5CB10](v19 | (v19 << 24) | (v19 << 16) | (v19 << 8));
+          *(_DWORD *)(v21 + v20 + v16) = ((int (*)(int))MEMORY[0xC5CB10])(v19 | (v19 << 24) | (v19 << 16) | (v19 << 8));
         }
         else
         {
           v22 = a1[111];
-          *(_BYTE *)(MEMORY[0xCC73E8](a1[110]) + v22 + v27 + v15) = v19;
+          *(_BYTE *)(((int (*)(int))MEMORY[0xCC73E8])(a1[110]) + v22 + v27 + v15) = v19;
         }
         ++v15;
         v16 += 4;
@@ -296294,11 +296294,11 @@ s_sOrder_d_ref__LABEL_111:
         {
           v60 = *(_DWORD *)(a2 + 192);
           v61 = *(_DWORD *)(v58 + 904);
-          v62 = MEMORY[0xCC746C](v58 + 928);
+          v62 = ((int (*)(int))MEMORY[0xCC746C])(v58 + 928);
           v129 = HIDWORD(v62);
           HIDWORD(v62) = v61;
           v55 = a2;
-          MEMORY[0xCC7874](v60, HIDWORD(v62), *(_DWORD *)(v58 + 900), v59, v62, v129);
+          ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v60, HIDWORD(v62), *(_DWORD *)(v58 + 900), v59, v62, v129);
         }
         v63 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)v134 + 28) + 420) + 4);
         v64 = *(_DWORD *)(v63 + 20);
@@ -296747,7 +296747,7 @@ s_sOrder_d_ref__LABEL_111:
       v29 = v8 * v29;
       v30 = v8 * v30;
     }
-    MEMORY[0xC5D024](&v15, &v16);
+    ((int (*)(int, int))MEMORY[0xC5D024])(&v15, &v16);
     v9 = v17;
     v10 = a1 + 4;
     *a1 = v16;
@@ -297787,7 +297787,7 @@ s_sOrder_d_ref__LABEL_111:
       sub_6091FDB0((int)v12, 1, 29, 32, 32, 1, 1, 0, 0, 1);
       Slot_initWithOwnerAndOffset(&v9, (int)(a1 + 18), 0);
       if ( v9 )
-        v4 = MEMORY[0xCC73E8](v9);
+        v4 = ((int (*)(int))MEMORY[0xCC73E8])(v9);
       qmemcpy((void *)&v10[v4], v6, v12[10]);
       Slot_initWithOwnerAndOffset(&v9, (int)(a1 + 18), 0);
       v8[0] = v9;
@@ -301781,7 +301781,7 @@ sub_60970920__LABEL_129:
  * ============================================================================ */
   int __fastcall sub_60971910(int a1, int a2, int a3, int a4, int a5, int a6, int a7)
   {
-    return MEMORY[0xCC7834](a2, a3, a4, a4, a5, a6, a7);
+    return ((int (*)(int, int, int, int, int, int, int))MEMORY[0xCC7834])(a2, a3, a4, a4, a5, a6, a7);
   }
 
 /* ============================================================================
@@ -301795,7 +301795,7 @@ sub_60970920__LABEL_129:
     *(_WORD *)(a1 + 276) = a3;
     *(_BYTE *)(a1 + 278) = a2;
     sub_60917C1C(a1 + 280);
-    MEMORY[0xCC7528](a1 + 288);
+    ((int (*)(int))MEMORY[0xCC7528])(a1 + 288);
     return a1;
   }
 
@@ -301925,9 +301925,9 @@ sub_60970920__LABEL_129:
       else
       {
         if ( *(_WORD *)(a1 + 34) == 8 )
-          MEMORY[0xCC7540](a1 + 288, 4);
-        MEMORY[0xCC752C](a1 + 288, *(unsigned __int8 *)(a1 + 278), 1);
-        MEMORY[0xCC7530](a1 + 288, *(unsigned __int16 *)(a1 + 276), 0);
+          ((int (*)(int, int))MEMORY[0xCC7540])(a1 + 288, 4);
+        ((int (*)(int, int, int))MEMORY[0xCC752C])(a1 + 288, *(unsigned __int8 *)(a1 + 278), 1);
+        ((int (*)(int, int, int))MEMORY[0xCC7530])(a1 + 288, *(unsigned __int16 *)(a1 + 276), 0);
         sub_60920CA8(a1, a1 + 288);
         sub_60917A78(a1 + 64);
         sub_60917C30((__int64 *)(a1 + 280));
@@ -302021,7 +302021,7 @@ sub_60970920__LABEL_129:
   _DWORD *__fastcall sub_60971D78(_DWORD *a1)
   {
     *a1 = dword_60C79E40 + 8;
-    MEMORY[0xCC7464](a1 + 12);
+    ((int (*)(int))MEMORY[0xCC7464])(a1 + 12);
     a1[5] = 12557356;
     Slot_destroy((int)(a1 + 5));
     return a1;
@@ -302034,7 +302034,7 @@ sub_60970920__LABEL_129:
   int __fastcall sub_60971DD0(_DWORD *a1)
   {
     *a1 = dword_60C79E40 + 8;
-    MEMORY[0xCC7464](a1 + 12);
+    ((int (*)(int))MEMORY[0xCC7464])(a1 + 12);
     a1[5] = 12557356;
     Slot_destroy((int)(a1 + 5));
     return __operator_delete((int)a1);
@@ -302057,11 +302057,11 @@ sub_60970920__LABEL_129:
     Slot_initWithOwnerAndOffset(v8, v4, 0);
     v5 = v8[0];
     v6 = v8[1];
-    MEMORY[0xCC7444](v8, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
-    MEMORY[0xCC7448](v8);
-    MEMORY[0xCC744C](v8, v5, v6, *(_DWORD *)(a1 + 28));
-    MEMORY[0xCC745C](a1 + 48, v8);
-    result = MEMORY[0xCC746C](a1 + 48);
+    ((int (*)(int, int))MEMORY[0xCC7444])(v8, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+    ((int (*)(int))MEMORY[0xCC7448])(v8);
+    ((int (*)(int, int, int, int))MEMORY[0xCC744C])(v8, v5, v6, *(_DWORD *)(a1 + 28));
+    ((int (*)(int, int))MEMORY[0xCC745C])(a1 + 48, v8);
+    result = ((int (*)(int))MEMORY[0xCC746C])(a1 + 48);
     *(_QWORD *)(a1 + 96) = result;
     return result;
   }
@@ -302105,7 +302105,7 @@ sub_60970920__LABEL_129:
     v7 = a2[1];
     v8 = 0;
     if ( *a2 )
-      v8 = MEMORY[0xCC73E8](*a2);
+      v8 = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     v9 = v8 + v7 + 1;
     v10 = (char *)&unk_60B46A69;
     do
@@ -302286,7 +302286,7 @@ sub_60970920__LABEL_129:
     v7 = a2[1];
     v8 = 0;
     if ( *a2 )
-      v8 = MEMORY[0xCC73E8](*a2);
+      v8 = ((int (*)(int))MEMORY[0xCC73E8])(*a2);
     v9 = (_BYTE *)(v8 + v7);
     do
     {
@@ -302387,15 +302387,15 @@ sub_60970920__LABEL_129:
     int result; // r0
     _DWORD v3[32]; // [sp+0h] [bp-80h] BYREF
   
-    MEMORY[0xCC72BC](*(_DWORD *)(MEMORY[0xCCFC8C] + 28), 57, v3);
+    ((int (*)(int, int, int))MEMORY[0xCC72BC])(*(_DWORD *)(MEMORY[0xCCFC8C] + 28), 57, v3);
     *((_DWORD *)a1 + 7) = (v3[0] + *((unsigned __int8 *)a1 + 27) * *a1 - 1) & -v3[0];
     sub_60972534(a1, v3);
-    a1[12] = MEMORY[0xCC74E0](v3);
-    *((_DWORD *)a1 + 4) = MEMORY[0xCC74C4](v3);
-    *((_DWORD *)a1 + 3) = MEMORY[0xCC74C8](v3);
+    a1[12] = ((int (*)(int))MEMORY[0xCC74E0])(v3);
+    *((_DWORD *)a1 + 4) = ((int (*)(int))MEMORY[0xCC74C4])(v3);
+    *((_DWORD *)a1 + 3) = ((int (*)(int))MEMORY[0xCC74C8])(v3);
     result = *(unsigned __int8 *)(MEMORY[0xCCFC8C] + 824);
     if ( (result & 1) != 0 )
-      return MEMORY[0xCC74E4](v3);
+      return ((int (*)(int))MEMORY[0xCC74E4])(v3);
     return result;
   }
 
@@ -302411,36 +302411,36 @@ sub_60970920__LABEL_129:
     unsigned int v7; // r2
     int v8; // r1
   
-    MEMORY[0xCC7488](a2, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
-    MEMORY[0xCC748C](a2);
+    ((int (*)(int, int))MEMORY[0xCC7488])(a2, *(_DWORD *)(MEMORY[0xCCFC8C] + 28));
+    ((int (*)(int))MEMORY[0xCC748C])(a2);
     v4 = a1[5];
     if ( v4 == 8 && a1[2] > 6u )
       v4 = 9;
     v5 = a1[3];
-    MEMORY[0xCC7494](a2, v4);
-    MEMORY[0xCC7498](a2, *a1);
-    MEMORY[0xCC749C](a2, a1[1]);
-    MEMORY[0xCC74A0](a2, a1[2]);
-    MEMORY[0xCC74B0](a2, *((unsigned __int8 *)a1 + 9));
-    MEMORY[0xCC74B4](a2, v5);
-    MEMORY[0xCC74BC](
+    ((int (*)(int, int))MEMORY[0xCC7494])(a2, v4);
+    ((int (*)(int, int))MEMORY[0xCC7498])(a2, *a1);
+    ((int (*)(int, int))MEMORY[0xCC749C])(a2, a1[1]);
+    ((int (*)(int, int))MEMORY[0xCC74A0])(a2, a1[2]);
+    ((int (*)(int, int))MEMORY[0xCC74B0])(a2, *((unsigned __int8 *)a1 + 9));
+    ((int (*)(int, int))MEMORY[0xCC74B4])(a2, v5);
+    ((int (*)(int, int, int, int, int))MEMORY[0xCC74BC])(
       a2,
       *((unsigned __int8 *)a1 + 32),
       *((unsigned __int8 *)a1 + 33),
       *((unsigned __int8 *)a1 + 34),
       *((unsigned __int8 *)a1 + 35));
-    MEMORY[0xCC74B8](a2);
+    ((int (*)(int))MEMORY[0xCC74B8])(a2);
     v6 = 0;
-    MEMORY[0xCC74C0](a2, 0);
+    ((int (*)(int, int))MEMORY[0xCC74C0])(a2, 0);
     v7 = *((unsigned __int8 *)a1 + 26);
     if ( (v7 & 1) != 0 )
     {
-      MEMORY[0xCC74D8](a2, *((_DWORD *)a1 + 7));
+      ((int (*)(int, int))MEMORY[0xCC74D8])(a2, *((_DWORD *)a1 + 7));
       v7 = *((unsigned __int8 *)a1 + 26);
       v6 = 64;
     }
     v8 = sub_60916E4C(MEMORY[0xCCFC8C], (v7 >> 1) & 1, (v7 >> 2) & 1, v5) | v6;
-    return MEMORY[0xCC7490](a2, v8);
+    return ((int (*)(int, int))MEMORY[0xCC7490])(a2, v8);
   }
 
 /* ============================================================================
@@ -303475,7 +303475,7 @@ sub_60970920__LABEL_129:
       Slot_initWithOwnerAndOffset(&v59, (int)v20, 0);
       if ( v59 )
       {
-        v22 = MEMORY[0xCC73E8](v59);
+        v22 = ((int (*)(int))MEMORY[0xCC73E8])(v59);
         v23 = v60;
         v58[0] = v59;
         v58[1] = v60;
@@ -305531,7 +305531,7 @@ sub_60970920__LABEL_129:
           do
           {
             v24 = *v21++;
-            MEMORY[0xCC77F0](v34, 1, v24 + 32);
+            ((int (*)(int, int, int))MEMORY[0xCC77F0])(v34, 1, v24 + 32);
             v23 -= 4;
           }
           while ( v23 );
@@ -305551,7 +305551,7 @@ sub_60970920__LABEL_129:
         v18 = 4 * v17;
         do
         {
-          MEMORY[0xCC77F0](*(_DWORD *)(a2 + 192), 1, *v16 + 32);
+          ((int (*)(int, int, int))MEMORY[0xCC77F0])(*(_DWORD *)(a2 + 192), 1, *v16 + 32);
           if ( (*(_BYTE *)(a1 + 2353) & 0x10) != 0 )
             (*(void (__fastcall **)(_DWORD, int))(*MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], a2);
           v18 -= 4;
@@ -305644,7 +305644,7 @@ sub_60970920__LABEL_129:
     v7[0] = v1[1];
     v7[1] = v5 + v3;
     v7[2] = v4;
-    *(_DWORD *)(MEMORY[0xCC73E8](v7[0]) + v5 + v3) = -286331154;
+    *(_DWORD *)(((int (*)(int))MEMORY[0xCC73E8])(v7[0]) + v5 + v3) = -286331154;
     return sub_60913B04(v7, 4);
   }
 
@@ -305876,7 +305876,7 @@ sub_60970920__LABEL_129:
       Slot_initFromResource(a1 + 4, v10, a6, 4, 1);
       v12 = 0;
       Slot_initWithOwnerAndOffset(v40, a1 + 4, 0);
-      v13 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 16));
+      v13 = ((int (*)(int))MEMORY[0xCC73E8])(*(_DWORD *)(a1 + 16));
       v14 = Slot_getRelativeOffset(a1 + 4);
       v15 = *(_DWORD *)(a1 + 12);
       if ( v15 >> 2 )
@@ -308094,7 +308094,7 @@ sub_60970920__LABEL_129:
     v8 = *(_DWORD *)(a1 + 1648);
     v9 = v6 + v7 * v5;
     if ( v8 )
-      v10 = MEMORY[0xCC73E8](v8);
+      v10 = ((int (*)(int))MEMORY[0xCC73E8])(v8);
     else
       v10 = 0;
     *(_DWORD *)(a1 + 1632) = v10 + v9;
@@ -308111,7 +308111,7 @@ sub_60970920__LABEL_129:
         v14 = *((_DWORD *)v13 - 4);
         v15 = *((_DWORD *)v13 - 3) + *v13 * v4 * *((_DWORD *)v13 - 6);
         if ( v14 )
-          v16 = MEMORY[0xCC73E8](v14);
+          v16 = ((int (*)(int))MEMORY[0xCC73E8])(v14);
         else
           v16 = 0;
         result = v16 + v15;
@@ -308131,7 +308131,7 @@ sub_60970920__LABEL_129:
         v19 = *((_DWORD *)v18 - 4);
         v20 = *((_DWORD *)v18 - 3) + *v18 * v4 * *((_DWORD *)v18 - 6);
         if ( v19 )
-          v21 = MEMORY[0xCC73E8](v19);
+          v21 = ((int (*)(int))MEMORY[0xCC73E8])(v19);
         else
           v21 = 0;
         result = v21 + v20;
@@ -308865,12 +308865,12 @@ sub_60970920__LABEL_129:
     Object_acquireSpinlockWithTimeout(*(int **)(a4 + 16), a2, *(char **)(v100 + 636));
     v45 = *(char **)(v100 + 620);
     v102[0] = *(unsigned __int16 *)(v26 + 1664) * (unsigned int)*(unsigned __int8 *)(v26 + 1661) * *(_DWORD *)(v26 + 1640)
-            + MEMORY[0xCC746C](v26 + 1672);
+            + ((int (*)(int))MEMORY[0xCC746C])(v26 + 1672);
     sub_6041FB58(v26 + 1624, a2, v102, v45, 0, *(_DWORD *)(v26 + 1636));
     v46 = *(_DWORD *)(v100 + 616);
     v47 = *(char **)(v100 + 620);
     v102[0] = *(unsigned __int16 *)(v24 + 2168) * (unsigned int)*(unsigned __int8 *)(v24 + 2165) * *(_DWORD *)(v24 + 2144)
-            + MEMORY[0xCC746C](v24 + 2176);
+            + ((int (*)(int))MEMORY[0xCC746C])(v24 + 2176);
     if ( v46 > 1 )
       v47 += 12;
     v48 = v47;
@@ -308974,7 +308974,7 @@ sub_60970920__LABEL_129:
           v77 += 96 * v52;
         v78 = *(_DWORD *)(v100 + 616);
         v79 = *(char **)(v100 + 620);
-        v80 = MEMORY[0xCC746C](v77 + 48);
+        v80 = ((int (*)(int))MEMORY[0xCC746C])(v77 + 48);
         v81 = *(unsigned __int16 *)(v77 + 40) * *(unsigned __int8 *)(v77 + 37) * *(_DWORD *)(v77 + 16);
         v102[0] = v80 + (unsigned int)v81;
         if ( v78 > 2 )
@@ -308990,11 +308990,11 @@ sub_60970920__LABEL_129:
         {
           v85 = *(_DWORD *)(v75 + 192);
           v86 = *(_DWORD *)(v83 + 904);
-          v87 = MEMORY[0xCC746C](v83 + 928);
+          v87 = ((int (*)(int))MEMORY[0xCC746C])(v83 + 928);
           v88 = v87;
           LODWORD(v87) = v85;
           v49 = v101;
-          MEMORY[0xCC7874](v87, v86, *(_DWORD *)(v83 + 900), v84, v88, HIDWORD(v87));
+          ((int (*)(int, int, int, int, int, int))MEMORY[0xCC7874])(v87, v86, *(_DWORD *)(v83 + 900), v84, v88, HIDWORD(v87));
         }
         result = *(unsigned __int8 *)(v49 + 601);
         v24 = v95;
@@ -311142,7 +311142,7 @@ sub_60970920__LABEL_129:
       v73 = "BC3";
       sead__SafeStringBase_char__assureTerminationImpl_(&v74);
       v14 = v75;
-      MEMORY[0xBC0244](&v72);
+      ((int (*)(int))MEMORY[0xBC0244])(&v72);
       if ( v14 == v73 )
       {
   sub_6097DDB0__LABEL_15:

@@ -52,6 +52,10 @@ struct sead_ThreadUtil;
 /* Incomplete types for C++-qualified names. These MUST precede the prototype headers below: if a
    header mentions `struct nn_oe *` before the struct is declared, C creates a NEW type scoped to
    that prototype, and every later `struct nn_oe *` is a different type. */
+
+/* Incomplete types for C++-qualified names. These MUST precede the prototype headers below: if a
+   header mentions `struct nn_oe *` before the struct is declared, C creates a NEW type scoped to
+   that prototype, and every later `struct nn_oe *` is a different type. */
 #include "nsmbudx_neon.h"
 #include "nsmbudx_data_symbols.h"
 #include "structs.h"
