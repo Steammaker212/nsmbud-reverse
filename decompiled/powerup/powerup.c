@@ -9569,7 +9569,7 @@
   }
 
 /* ============================================================================
- * sub_60465E4C
+ * ItemId_resolveGuardedByPlayerMode
  * RVA 0x00465e4c   size 0x1e4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60465E4C(int a1, unsigned int a2, unsigned int a3, int a4)
@@ -9714,7 +9714,7 @@
   {
     int v6; // r0
   
-    v6 = sub_60465E4C(a1, a3, *(_DWORD *)(a2 + 32), *(unsigned __int8 *)(a2 + 13));
+    v6 = ItemId_resolveGuardedByPlayerMode(a1, a3, *(_DWORD *)(a2 + 32), *(unsigned __int8 *)(a2 + 13));
     return sub_604663F4(
              v6,
              *(_DWORD *)a2,

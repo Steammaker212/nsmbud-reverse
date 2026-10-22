@@ -60,40 +60,66 @@ Three things follow directly from reading it:
 | `0x466000` | `CMP R0,#8` | `CMP R0,#9` |
 | `0x46600C` | `MOVW R1,#0x1FB` | `MOVW R1,#0x3FB` |
 
-That widens the *permission* check to include mode 9. It does not touch what item is granted,
+That widens the *permission* check to include mode 10 (since the index is mode-1). It does not touch what item is granted,
 which mode is written, or whether the fire-flower capability is enabled. If the mask was
 never the blocker for the fire flower — and the report says a fire flower *is* received and
 *does* act normally — then widening it is correctly a no-op. **The patch is additive and
 harmless; it is simply on the wrong function for this symptom.**
 
-## Where the real behaviour must come from
+## The field is a 4-byte word, not a byte — corrected
 
-The mode byte `Player + 0x528` **is** written in several places, with a distinguishing shape:
+An earlier version of this document said `+0x528` was byte-sized, because the `0x45xxxx`
+functions touch it with `STRB`. That was wrong, and the correction matters because the whole
+table-indexing argument depends on the field width.
 
-| site | instruction | form |
-|---|---|---|
-| `0x452EDC` | `STRB R0, [R4,#0x528]` | **byte** store, in a small dedicated function |
-| `0x4531F8` | `STRB R0, [R4,#0x528]` | **byte** store, `MOV R0,#1` before it |
-| `0x451FEC` | `STRB R5,[R4,#0x528]` | byte store, `R5 = 0` (clearing to small Mario) |
-| `0x795CDC` | `STR R1,[R4,#0x528]` | word store, also copies old value to `+0x2C78` |
-| `0x190428` | `STR R1,[R0,#0x528]` | word store inside a run of `+0x518..+0x528` |
-| `0x9318FC` | `STR R11,[R4,#0x528]` | word store, large function |
+Every access to displacement `0x528` in the player region, grouped by mnemonic:
 
-The two `STRB` functions at **`0x452EDC`** and **`0x4531F8`** are the strongest candidates for
-the actual power-up transition: they are small, dedicated, and write a *byte*, which matches
-the field's declared width. `0x4531F8` sets `R0 = 1` before the store, i.e. it is the
-"Mushroom → Super" path.
+```
+player   LDR     209
+player   LDREQ    23
+player   LDRNE     2
+player   STR       4
+------------------------
+word accesses:    238
+byte accesses:      0
+```
 
-Note the earlier retracted claim: the field is **`+0x528` (1320), byte-sized**. Many hits on
-this displacement are unrelated structs — 311 functions touch it — so only the ones on a
-verified Player pointer count.
+238 word accesses and **zero** byte accesses. The three `LDR` sites that index the height table
+all use `LSL#2`, i.e. a dword stride, which only makes sense for a 4-byte index. And
+`Player_setPowerupMode` reads and writes it with a full `LDR`/`STR`.
 
-## What to do next, stated as a test
+So the `STRB R0,[R4,#0x528]` sites in the `0x45xxxx` range are a **different struct** that
+happens to share the displacement. They are not player mode writes and must not be treated as
+such — which retires the "`0x452EDC` / `0x4531F8` are the power-up transition" hypothesis that
+the earlier version of this document proposed. Both of those functions still read as hardcoded
+transitions to mode 0 and mode 1 respectively, but on some other object.
 
-Read `0x452EDC` and `0x4531F8` and identify which one the fire-flower pickup calls. If
-neither is called for a fire flower, the grant path is elsewhere and the mode is being set by
-a table-driven constructor instead. That is the check that will actually move the Fire Flower,
-and it does not depend on any further guessing.
+## What is actually established
+
+| fact | evidence |
+|---|---|
+| the setter is `0x795CDC`, now `Player_setPowerupMode` | `LDR R0,[R4,#0x528]` → `STR R0,[R4,R2]` (R2=0x2C78) → `STR R1,[R4,#0x528]` |
+| it indexes the height table by mode with **no clamp** | `LDR R2,[R4,#0x528]` then `LDR R0,[R0,R2,LSL#2]`, no bounds test |
+| the gate subtracts 1 before testing | `LDR R0,[R6,#0x528]` → `SUB R0,R0,#1` → `CMP R0,#8` → `TST R2,R1,LSR R0` |
+| the gate is an id resolver, and its result is conditional on **another** player's mode | returns `dword_60B0267C[a2]`, gated on `a3`'s mode; `a3>=4` is forced to 0, `a3==15` means none |
+
+Since the gate index is `mode-1` and `0x1FB` = bits 0,1,3,4,5,6,7,8, the modes it accepts are
+**1,2,4,5,6,7,8,9** — it excludes mode 3 and mode 10. `0x3FB` adds bit 9, i.e. accepts mode 10.
+That is the correct extension for a Hammer mode, and it is what `item_grant.hks` writes.
+
+## The open problem, stated honestly
+
+`Player_setPowerupMode` has **zero xrefs**: no `BL` reaches it, and its address (even or with
+the Thumb bit set) appears nowhere in data. So it cannot currently be shown to be called at
+all. Either its callers were folded into an inlined path, or its address is computed rather
+than loaded.
+
+That is the next real question, and it is not answered by guessing at another hook. The way to
+settle it is a debugger, which the project already has configured: set a breakpoint on
+`0x795CDC` (runtime address = `base + 0x795CDC`, `base` from the module list), collect a fire
+flower, and see whether it hits. If it hits, the stack gives the caller. If it never hits, the
+mode is being set by a genuinely different function and this whole line of reasoning needs
+replacing.
 
 **No hook should be added for this until that is read.** A single ARM `cmp` cannot express
 "mode 2 or 10" anyway; anything needing membership must be a real `hook` with a trampoline in

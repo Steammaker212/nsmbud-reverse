@@ -44,9 +44,14 @@
  * The question block's own item id is set by a separate argument in its spawn call and
  * must be read from that call site rather than assumed from this ordering.
  *
- * The player's current power-up mode is a BYTE at Player + 0x528 (1320 decimal),
- * written with STRB. A mode of 10 (Hammer) is outside these ten-entry tables, which is
- * why adding it needs new table entries rather than an existing slot.
+ * The player's current power-up mode is a 4-byte WORD at Player + 0x528 (1320 decimal).
+ * It is read and written with LDR/STR, and the mode tables are indexed with LSL#2 (dword
+ * stride). An earlier note here claimed it was a byte written with STRB -- that was wrong.
+ * Every access to 0x528 in the player region is a word access (238 of them, zero byte
+ * accesses); the STRB sites at 0x45xxxx are a different struct sharing the displacement.
+ *
+ * The mode is used as a DIRECT index into the ten-entry tables with no clamp, so a mode of
+ * 10 (Hammer) reads past the end and needs a real 11th entry rather than an existing slot.
  */
 #ifndef NSMBUDX_ITEM_TABLE_H
 #define NSMBUDX_ITEM_TABLE_H
@@ -100,8 +105,12 @@ extern const float Nsmbudx_heightByMode[NSMBUDX_POWERUP_MODE_COUNT];
 /* Balloon offset per mode. dword stride, RVA 0x00B0C34C. */
 extern const float Nsmbudx_balloonByMode[NSMBUDX_POWERUP_MODE_COUNT];
 
-/* The player's active power-up mode is a byte at this offset in the Player object. */
+/* The player's active power-up mode is a 4-byte word at this offset in the Player object. */
 #define NSMBUDX_PLAYER_OFF_MODE 0x528
+
+/* The previous mode is saved here by Player_setPowerupMode (RVA 0x795CDC) before the new
+ * mode is written, so a revert (damage shrink, etc.) knows what to return to. */
+#define NSMBUDX_PLAYER_OFF_PREV_MODE 0x2C78
 
 /* Six PC-relative readers that index these tables. Each loads the table with
  * `LDR Rt, =table - pc` then `LDR Rt, [PC, Rt]`, so the stored word is
