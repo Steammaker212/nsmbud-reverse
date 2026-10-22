@@ -25,7 +25,7 @@ import re
 import shutil
 
 REPO = r"C:\Users\Saif Khan\Downloads\nsmbud-reverse"
-SRC = r"C:\Users\Saif Khan\Downloads\main.idb\.rea\decompiled_full"
+SRC = r"C:\Users\Saif Khan\Downloads\main.idb\.rea\decompiled_all"
 EXTRA = r"C:\Users\Saif Khan\Downloads\main.idb\.rea\decompiled"
 DEST = os.path.join(REPO, "decompiled")
 SYM = os.path.join(REPO, "sweetdx", "symbols", "nsmbudx.sym")
