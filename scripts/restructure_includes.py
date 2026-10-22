@@ -133,6 +133,10 @@ def rewrite_prelude(extra_qualified):
         '#include "nsmbudx_types.h"',
         '#include "structs.h"',
         '#include "nsmbudx_data.h"',
+        # Declarations for the auto-named functions. Without this, calls to the 32,173 functions
+        # IDA still names `sub_*` cannot resolve -- and they are 65% of the corpus by count and
+        # 75.5% by code bytes. The earlier name export filtered them out entirely.
+        '#include "nsmbudx_subfuncs.h"',
         "",
     ]
     # Only structs.h and libs.h are pulled in, and that is a measured choice, not a guess.

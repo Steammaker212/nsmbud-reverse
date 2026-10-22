@@ -90,6 +90,9 @@ def main():
     #    nsmbudx_data.h does not exist yet the prelude cannot reference it. Getting this backwards
     #    silently dropped 31 files (250 -> 219) with no error, because the include still resolved.
     run("3/7 data header", [sys.executable, "scripts/gen_data_header.py"])
+    # sub-function declarations: 9 exact signatures + 32,164 unprototyped ones. Must precede
+    # restructure too, for the same reason the data header must.
+    run("3b/7 subfunc header", [sys.executable, "scripts/gen_subfuncs_header.py"])
     # 4. one type definition, and the measured include set (also mounts the data header)
     run("4/7 restructure includes", [sys.executable, "scripts/restructure_includes.py"])
     # 5. prelude include in every .c, including the region files just written

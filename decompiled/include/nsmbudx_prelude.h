@@ -14,6 +14,7 @@
 #include "nsmbudx_types.h"
 #include "structs.h"
 #include "nsmbudx_data.h"
+#include "nsmbudx_subfuncs.h"
 
 #include "libs.h"
 
