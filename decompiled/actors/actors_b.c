@@ -11051,7 +11051,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN10KaniboTamaD0Ev
  * RVA 0x00311bb4   size 0x84   xrefs 0
  * ============================================================================ */
-  int __fastcall KaniboTama__dtor(_BYTE *a1)
+  int __fastcall KaniboTama__dtor_00311bb4(_BYTE *a1)
   {
     struct sead_IDisposer *v2; // r5
     int v3; // r0
@@ -14416,7 +14416,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN8DryBonesD0Ev
  * RVA 0x00318040   size 0x84   xrefs 0
  * ============================================================================ */
-  int __fastcall DryBones__dtor(_BYTE *a1)
+  int __fastcall DryBones__dtor_00318040(_BYTE *a1)
   {
     struct sead_IDisposer *v2; // r5
     int v3; // r0
@@ -36455,7 +36455,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN10GoombaBaseD0Ev
  * RVA 0x0033e53c   size 0x78   xrefs 0
  * ============================================================================ */
-  int __fastcall GoombaBase__dtor(_BYTE *a1)
+  int __fastcall GoombaBase__dtor_0033e53c(_BYTE *a1)
   {
     _BYTE *v2; // r5
     int v3; // r0
@@ -78794,7 +78794,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN5PokeyD0Ev
  * RVA 0x00384afc   size 0xac   xrefs 0
  * ============================================================================ */
-  int __fastcall Pokey__dtor(_BYTE *a1)
+  int __fastcall Pokey__dtor_00384afc(_BYTE *a1)
   {
     struct sead_IDisposer *v2; // r5
     int v3; // r0
@@ -99312,7 +99312,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN10ShellEnemyD0Ev
  * RVA 0x003a52f0   size 0xa0   xrefs 0
  * ============================================================================ */
-  int __fastcall ShellEnemy__dtor(_BYTE *a1)
+  int __fastcall ShellEnemy__dtor_003a52f0(_BYTE *a1)
   {
     struct sead_IDisposer *v2; // r5
     int v3; // r0
@@ -134103,7 +134103,7 @@ sub_603B7478__LABEL_57:
  * _ZN12RiverPiranhaD0Ev
  * RVA 0x003e0068   size 0xac   xrefs 0
  * ============================================================================ */
-  int __fastcall RiverPiranha__dtor(_BYTE *a1)
+  int __fastcall RiverPiranha__dtor_003e0068(_BYTE *a1)
   {
     int v2; // r0
   
@@ -182279,7 +182279,7 @@ sub_603F8408__LABEL_96:
  * _ZN11LightSourceD0Ev
  * RVA 0x00423ca0   size 0x30   xrefs 0
  * ============================================================================ */
-  int __fastcall LightSource__dtor(struct sead_IDisposer *a1)
+  int __fastcall LightSource__dtor_00423ca0(struct sead_IDisposer *a1)
   {
     _DWORD *v1; // r1
     struct sead_IDisposer *v2; // r0

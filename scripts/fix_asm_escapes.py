@@ -220,7 +220,11 @@ for path in iter_sources():
     if new == text:
         continue
 
-    # insert the helpers actually used, after the last #include line
+    # insert the helpers actually used, after the last #include line -- but only those NOT already defined.
+    # The earlier version gated only on the converted instruction and so re-emitted the whole helper block on
+    # every run, which is how libs.c ended up with two copies of uxtb16() and a "redefinition" error.
+    needed = {h for h in needed
+              if not re.search(r"static inline [\w \t\*]+ " + re.escape(h) + r"\s*\(", new)}
     if needed:
         block = ""
         if "uxtb16" in needed:

@@ -559,7 +559,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN10StageActorD0Ev
  * RVA 0x00000568   size 0x64   xrefs 0
  * ============================================================================ */
-  int __fastcall StageActor__dtor(Actor *a1)
+  int __fastcall StageActor__dtor_00000568(Actor *a1)
   {
     char *v2; // r5
     int v3; // r6
@@ -2607,7 +2607,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN5ActorD0Ev
  * RVA 0x00002e5c   size 0x8c   xrefs 0
  * ============================================================================ */
-  int __fastcall Actor__dtor(_DWORD *a1)
+  int __fastcall Actor__dtor_00002e5c(_DWORD *a1)
   {
     char *v1; // r6
     char *v3; // r0
@@ -3717,7 +3717,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN14CollisionActorD0Ev
  * RVA 0x00003fc4   size 0x30   xrefs 0
  * ============================================================================ */
-  int __fastcall CollisionActor__dtor(Actor *a1)
+  int __fastcall CollisionActor__dtor_00003fc4(Actor *a1)
   {
     int v2; // r0
   
@@ -8189,7 +8189,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN15MultiStateActorD0Ev
  * RVA 0x000096b8   size 0x30   xrefs 0
  * ============================================================================ */
-  int __fastcall MultiStateActor__dtor(Actor *a1)
+  int __fastcall MultiStateActor__dtor_000096b8(Actor *a1)
   {
     int v2; // r0
   
@@ -21435,7 +21435,7 @@ sub_6000FD08__LABEL_240:
  * _ZN8BossBaseD0Ev
  * RVA 0x000263a8   size 0x80   xrefs 0
  * ============================================================================ */
-  int __fastcall BossBase__dtor(_BYTE *a1)
+  int __fastcall BossBase__dtor_000263a8(_BYTE *a1)
   {
     _DWORD *v2; // r5
     int v3; // r0
@@ -28996,7 +28996,7 @@ sub_6000FD08__LABEL_240:
  * _ZN12SumoBrosBossD0Ev
  * RVA 0x00031e10   size 0xd8   xrefs 0
  * ============================================================================ */
-  int __fastcall SumoBrosBoss__dtor(int a1)
+  int __fastcall SumoBrosBoss__dtor_00031e10(int a1)
   {
     struct sead_IDisposer *v2; // r5
     struct sead_IDisposer *v3; // r6
@@ -45645,7 +45645,7 @@ sub_60045DB4__LABEL_181:
  * _ZN10BoomBoomW1D0Ev
  * RVA 0x0004f138   size 0x16c   xrefs 0
  * ============================================================================ */
-  int __fastcall BoomBoomW1__dtor(int a1)
+  int __fastcall BoomBoomW1__dtor_0004f138(int a1)
   {
     struct sead_IDisposer *v2; // r8
     struct sead_IDisposer *v3; // r6
@@ -48746,7 +48746,7 @@ sub_60045DB4__LABEL_181:
  * _ZN12BoomBoomBaseD0Ev
  * RVA 0x000538b4   size 0xe4   xrefs 0
  * ============================================================================ */
-  int __fastcall BoomBoomBase__dtor(int a1)
+  int __fastcall BoomBoomBase__dtor_000538b4(int a1)
   {
     struct sead_IDisposer *v2; // r5
     int v3; // r0
@@ -68518,7 +68518,7 @@ sub_60045DB4__LABEL_181:
  * _ZN11FinalBowserD0Ev
  * RVA 0x00079200   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall FinalBowser__dtor(_DWORD *a1)
+  int __fastcall FinalBowser__dtor_00079200(_DWORD *a1)
   {
     int v1; // r0
   
@@ -88133,7 +88133,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
  * _ZN4IggyD0Ev
  * RVA 0x000a0ff8   size 0x6c   xrefs 0
  * ============================================================================ */
-  int __fastcall Iggy__dtor(_DWORD *a1)
+  int __fastcall Iggy__dtor_000a0ff8(_DWORD *a1)
   {
     struct sead_IDisposer *v2; // r5
     int v3; // r0
@@ -102835,7 +102835,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
  * _ZN13KoopalingBaseD0Ev
  * RVA 0x000b7e64   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall KoopalingBase__dtor(_DWORD *a1)
+  int __fastcall KoopalingBase__dtor_000b7e64(_DWORD *a1)
   {
     int v1; // r0
   
@@ -111631,7 +111631,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
  * _ZN6BowserD0Ev
  * RVA 0x000c782c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall Bowser__dtor(_DWORD *a1)
+  int __fastcall Bowser__dtor_000c782c(_DWORD *a1)
   {
     int v1; // r0
   
@@ -116535,7 +116535,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
  * _ZN12BowserJrBaseD0Ev
  * RVA 0x000cfeb4   size 0xd8   xrefs 0
  * ============================================================================ */
-  int __fastcall BowserJrBase__dtor(int a1)
+  int __fastcall BowserJrBase__dtor_000cfeb4(int a1)
   {
     struct sead_IDisposer *v2; // r5
     struct sead_IDisposer *v3; // r6

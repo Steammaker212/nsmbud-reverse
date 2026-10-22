@@ -265,7 +265,6 @@ int __fastcall Thwomp_updateModel(float *a1);
 bool __fastcall sub_6029E430(int a1);
 int __fastcall sub_6029F478(int a1);
 int __fastcall sub_6029F5DC(_DWORD *a1);
-int __fastcall Enemy__Enemy(int a1);
 int __fastcall Enemy__beforeExecute(_BYTE *a1);
 bool __fastcall sub_602A1F74(int a1);
 int __fastcall Enemy__vfC8(int a1, int a2, int a3);
@@ -289,6 +288,7 @@ int __fastcall Enemy__vf1A0(int a1, int a2);
 int __fastcall Enemy__vf1AC(int a1, int a2);
 int __fastcall ActorScaler_execute(int a1);
 int __fastcall sub_602A3F7C(int a1, int a2);
+_DWORD *__fastcall Enemy__Enemy(_DWORD *a1, int a2);
 _DWORD *__fastcall sub_602A40A0(_DWORD *a1, int a2);
 unsigned __int64 __fastcall sub_602A546C(int **a1);
 int __fastcall Enemy_killSpin(int a1, int a2);
@@ -328,6 +328,7 @@ _DWORD *__fastcall Enemy__vf238(_DWORD *result);
 _DWORD *__fastcall sub_602A99C0(_DWORD *result);
 int __fastcall FireSnake_ctor(int a1);
 int __fastcall sub_602ADA1C(float *a1);
+int __fastcall FireSnake__onDraw(_DWORD **a1, int a2, int a3, int a4, int a5);
 int __fastcall sub_602AF1E0(_DWORD **a1);
 int __fastcall sub_602B06E0(_DWORD *a1);
 int *__fastcall sub_602B0A24(int a1);
@@ -59828,7 +59829,7 @@ sub_6022C360__LABEL_122:
  * _ZN3AmpD0Ev
  * RVA 0x00259c7c   size 0xa0   xrefs 0
  * ============================================================================ */
-  int __fastcall Amp__dtor(_BYTE *a1)
+  int __fastcall Amp__dtor_00259c7c(_BYTE *a1)
   {
     LightSource *v2; // r5
     int v3; // r0
@@ -67937,7 +67938,7 @@ sub_6022C360__LABEL_122:
  * _ZN8BrosBaseD0Ev
  * RVA 0x00267498   size 0xa0   xrefs 0
  * ============================================================================ */
-  int __fastcall BrosBase__dtor(_BYTE *a1)
+  int __fastcall BrosBase__dtor_00267498(_BYTE *a1)
   {
     int v2; // r5
     int v3; // r0
@@ -77779,7 +77780,7 @@ sub_6022C360__LABEL_122:
  * _ZN5FuzzyD0Ev
  * RVA 0x002788c0   size 0xa0   xrefs 0
  * ============================================================================ */
-  int __fastcall Fuzzy__dtor(_BYTE *a1)
+  int __fastcall Fuzzy__dtor_002788c0(_BYTE *a1)
   {
     int v2; // r5
     int v3; // r0
@@ -99709,7 +99710,7 @@ sub_60283D2C__LABEL_14:
  * _ZN6ThwompD0Ev
  * RVA 0x0029efa0   size 0x90   xrefs 0
  * ============================================================================ */
-  int __fastcall Thwomp__dtor(_BYTE *a1)
+  int __fastcall Thwomp__dtor_0029efa0(_BYTE *a1)
   {
     int v2; // r0
   
@@ -101376,7 +101377,7 @@ sub_60283D2C__LABEL_14:
  * _ZN5EnemyC2EPK14ActorBuildInfo
  * RVA 0x002a1a8c   size 0x130   xrefs 113
  * ============================================================================ */
-  int __fastcall Enemy__Enemy(int a1)
+  int __fastcall Enemy__Enemy_002a1a8c(int a1)
   {
     int v2; // r3
     int v3; // r5
@@ -109341,7 +109342,7 @@ sub_60283D2C__LABEL_14:
  * _ZN9FireSnake6onDrawEv
  * RVA 0x002ad3d0   size 0x140   xrefs 0
  * ============================================================================ */
-  int __fastcall FireSnake__onDraw(int a1)
+  int __fastcall FireSnake__onDraw_002ad3d0(int a1)
   {
     int CurrentState; // r0
     int v3; // r5
@@ -110105,7 +110106,7 @@ sub_60283D2C__LABEL_14:
  * _ZN9FireSnakeD0Ev
  * RVA 0x002ae908   size 0xa0   xrefs 0
  * ============================================================================ */
-  int __fastcall FireSnake__dtor(_BYTE *a1)
+  int __fastcall FireSnake__dtor_002ae908(_BYTE *a1)
   {
     LightSource *v2; // r5
     int v3; // r0
@@ -133676,7 +133677,7 @@ sub_60283D2C__LABEL_14:
  * _ZN9SledgeBroD0Ev
  * RVA 0x002d77bc   size 0xbc   xrefs 0
  * ============================================================================ */
-  int __fastcall SledgeBro__dtor(_BYTE *a1)
+  int __fastcall SledgeBro__dtor_002d77bc(_BYTE *a1)
   {
     struct sead_IDisposer *v2; // r5
     int v3; // r0

@@ -264,7 +264,7 @@ int __fastcall sub_60849630(_DWORD *a1);
 int __fastcall sub_60849D30(float *a1, int a2);
 int __fastcall sub_6084A430(int a1, float32x4_t *a2, int a3, int a4);
 int __fastcall sub_6084A664(int a1, _DWORD *a2);
-int __fastcall sub_6084A81C(int a1, int a2, int a3, int a4, float *a5);
+int __fastcall sub_6084A81C(int a1, int a2, int a3, int a4, float a5, float *a6);
 int __fastcall sub_6084B178(int result);
 int __fastcall sub_6084B2A0(_DWORD *a1);
 int __fastcall sub_6084B8F0(int a1, int a2, int a3, unsigned int a4, _DWORD *a5, unsigned int *a6);
@@ -1275,10 +1275,10 @@ int __fastcall sub_608DDBD0(int result, int a2, int a3);
 int __fastcall sub_608DDBDC(int result, int a2);
 _DWORD *__fastcall sub_608DDE28(int a1, int a2, int a3, int a4, int a5, int a6);
 int __fastcall __operator_new(unsigned int a1);
-int __fastcall __operator_new_array_al(unsigned int a1);
 int __fastcall sub_608DE1A4(unsigned int a1, int a2);
 int __fastcall sub_608DE200(unsigned int a1, int a2);
 int __fastcall __operator_new_al(unsigned int a1, int CurrentHeap, int a3);
+int __fastcall __operator_new_array_al(unsigned int a1, int CurrentHeap, int a3);
 int __fastcall __operator_delete(int a1);
 int __fastcall __operator_delete_array_al(int a1);
 int *__fastcall sead__ListNode__insertFront_(int *result, _DWORD *a2);
@@ -1543,7 +1543,7 @@ int __fastcall sub_6090E680(int result, float *a2, float *a3);
 int __fastcall sub_6090E95C(int a1, int a2, float *a3);
 float *__fastcall sub_6090EA30(float *result, float *a2, float *a3);
 int __fastcall sead__GlobalRandom__createInstance(struct sead_Heap *a1);
-unsigned int __fastcall sead__Random__init(unsigned int *a1);
+int *__fastcall sead__Random__init(int *result, int a2, int a3, int a4, int a5);
 unsigned int __fastcall sead__Random__getU32(int *a1);
 _BYTE *__fastcall sead__Base64__encode(_BYTE *result, unsigned __int8 *a2, unsigned int a3, int a4);
 int __fastcall sead__Base64__decode(int a1, unsigned int a2, unsigned __int8 *a3, unsigned int a4, unsigned int *a5);
@@ -1573,6 +1573,7 @@ _DWORD *__fastcall sub_6091228C(_DWORD *a1);
 int __fastcall sub_609122C0(int a1);
 int __fastcall sub_609122C8(int a1);
 int __fastcall sub_609122D0(int result);
+int __fastcall sead__Framework__initialize(struct nn_os *a1, int a2, unsigned int a3);
 unsigned int __fastcall decompressYaz0(_BYTE *a1, int a2);
 int __fastcall sub_60912E1C(int result);
 int __fastcall sub_60912E2C(int result, signed int a2, int a3);
@@ -2122,11 +2123,6 @@ unsigned int __fastcall sub_6099EE5C(int a1);
 /* ---- helpers replacing Hex-Rays `__asm` escapes (see scripts/fix_asm_escapes.py) ----
  * Each is the exact C equivalent of one NEON/VFP instruction the decompiler had no
  * idiom for. Kept small and named so the intent is visible at the call site. */
-static inline unsigned int uxtb16(unsigned int x)
-{
-    /* UXTB16: keep bits [7:0] and [23:16], clear the rest. */
-    return x & 0x00FF00FFu;
-}
 
 /* Lane-wise NEON compare against zero. The ARM form produces all-ones (0xFFFFFFFF) for
  * true and 0 for false in every 32-bit lane, so these return -1 / 0. */
@@ -5790,8 +5786,8 @@ sub_608044F0__LABEL_19:
     _S4 = 0;
     if ( v37 > _S0 )
       _S0 = v37;
-    vmaxnm_f32(float_s0, float_s4)
-    if ( !_ZF )
+    _S0 = vmaxnm_f32(float_s0, float_s4)
+    if ( !_ZF );
       goto sub_608044F0__LABEL_49;
 sub_608044F0__LABEL_23:
     v44 = (v87 & a5) == 0;
@@ -5824,13 +5820,13 @@ sub_608044F0__LABEL_23:
     _S4 = 0;
     if ( v37 > _S0 )
       _S0 = v37;
-    vmaxnm_f32(float_s0, float_s4)
+    _S0 = vmaxnm_f32(float_s0, float_s4);
     goto sub_608044F0__LABEL_23;
   }
   _S4 = 0;
   if ( v37 > _S0 )
     _S0 = (float)(v34 - v33) / 398.22;
-  vmaxnm_f32(float_s0, float_s4)
+  _S0 = vmaxnm_f32(float_s0, float_s4);
 sub_608044F0__LABEL_49:
   v51 = v12 & a6;
   v52 = sub_607FF980(a3);
@@ -32854,13 +32850,13 @@ sub_6081CA7C__LABEL_157:
       v25 = 0;
       if ( v19 <= 6 )
       {
-        v25 = dword_60B0DEC0[v19];
-        v24 = dword_60B0DEA0[v19];
-        v23 = dword_60B0DE80[v19];
-        v22 = dword_60B0DE60[v19];
-        v21 = dword_60B0DE40[v19];
-        v20 = dword_60B0DE20[v19];
-        v18 = dword_60B0DE00[v19];
+        v25 = arr_dword_60B0DEC0[v19];
+        v24 = arr_dword_60B0DEA0[v19];
+        v23 = arr_dword_60B0DE80[v19];
+        v22 = arr_dword_60B0DE60[v19];
+        v21 = arr_dword_60B0DE40[v19];
+        v20 = arr_dword_60B0DE20[v19];
+        v18 = arr_dword_60B0DE00[v19];
       }
     }
     else
@@ -91540,7 +91536,7 @@ sub_608561CC__LABEL_136:
  * _ZN2nn3g3d12ShapeAnimObj4BindEPKNS0_8ModelObjE
  * RVA 0x00874398   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall nn__g3d__ShapeAnimObj__Bind(int a1, _DWORD *a2)
+  int __fastcall nn__g3d__ShapeAnimObj__Bind_00874398(int a1, _DWORD *a2)
   {
     return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 16))(a1, *a2);
   }
@@ -95495,7 +95491,7 @@ sub_608561CC__LABEL_136:
  * _ZN2nn3g3d15SkeletalAnimObj4BindEPKNS0_8ModelObjE
  * RVA 0x0087849c   size 0x40   xrefs 0
  * ============================================================================ */
-  int __fastcall nn__g3d__SkeletalAnimObj__Bind(int a1, int a2)
+  int __fastcall nn__g3d__SkeletalAnimObj__Bind_0087849c(int a1, int a2)
   {
     int v3; // r5
     int v4; // r6
@@ -135362,7 +135358,7 @@ sub_60899E38__LABEL_88:
  * _ZN2nn3atk10SoundActorD0Ev
  * RVA 0x008a9794   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall nn__atk__SoundActor__dtor(int a1)
+  int __fastcall nn__atk__SoundActor__dtor_008a9794(int a1)
   {
     int v1; // r0
   
@@ -135406,7 +135402,7 @@ sub_60899E38__LABEL_88:
  * _ZN2nn3atk10SoundActor10SetupSoundEPNS0_11SoundHandleEjPKNS0_14SoundStartable9StartInfoEPv
  * RVA 0x008a97e0   size 0x48   xrefs 0
  * ============================================================================ */
-  int __fastcall nn__atk__SoundActor__SetupSound(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 *a5)
+  int __fastcall nn__atk__SoundActor__SetupSound_008a97e0(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 *a5)
   {
     if ( *(_BYTE *)(a1 + 116) )
       return sub_608AB194(*(_DWORD *)(a1 + 4), a2, a3, 0, a1, *a5, 0, a4);
@@ -135476,7 +135472,7 @@ sub_60899E38__LABEL_88:
  * _ZN2nn3atk10SoundActor16detail_GetItemIdEPKcS3_
  * RVA 0x008a9934   size 0x20   xrefs 0
  * ============================================================================ */
-  int __fastcall nn__atk__SoundActor__detail_GetItemId(int a1)
+  int __fastcall nn__atk__SoundActor__detail_GetItemId_008a9934(int a1)
   {
     if ( *(_BYTE *)(a1 + 116) )
       return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 4) + 16))(*(_DWORD *)(a1 + 4));
@@ -184996,7 +184992,7 @@ sub_60899E38__LABEL_88:
  * _Znaj
  * RVA 0x008de09c   size 0x54   xrefs 32
  * ============================================================================ */
-  int __fastcall __operator_new_array_al(unsigned int a1)
+  int __fastcall __operator_new_array_al_008de09c(unsigned int a1)
   {
     int CurrentHeap; // r0
   
@@ -185013,7 +185009,7 @@ sub_60899E38__LABEL_88:
  * _ZnwjRKSt9nothrow_t
  * RVA 0x008de0f4   size 0x54   xrefs 0
  * ============================================================================ */
-  int __fastcall __operator_new(unsigned int a1)
+  int __fastcall __operator_new_008de0f4(unsigned int a1)
   {
     int CurrentHeap; // r0
   
@@ -185030,7 +185026,7 @@ sub_60899E38__LABEL_88:
  * _ZnajRKSt9nothrow_t
  * RVA 0x008de14c   size 0x54   xrefs 0
  * ============================================================================ */
-  int __fastcall __operator_new_array_al(unsigned int a1)
+  int __fastcall __operator_new_array_al_008de14c(unsigned int a1)
   {
     int CurrentHeap; // r0
   
@@ -185169,7 +185165,7 @@ sub_60899E38__LABEL_88:
  * _ZdlPvRKSt9nothrow_t
  * RVA 0x008de458   size 0x58   xrefs 0
  * ============================================================================ */
-  _DWORD *__fastcall __operator_delete(void *a1)
+  _DWORD *__fastcall __operator_delete_008de458(void *a1)
   {
     _DWORD *result; // r0
   
@@ -185189,7 +185185,7 @@ sub_60899E38__LABEL_88:
  * _ZdaPvRKSt9nothrow_t
  * RVA 0x008de4b4   size 0x58   xrefs 0
  * ============================================================================ */
-  _DWORD *__fastcall __operator_delete_array_al(void *a1)
+  _DWORD *__fastcall __operator_delete_array_al_008de4b4(void *a1)
   {
     _DWORD *result; // r0
   
@@ -187719,7 +187715,7 @@ sub_608DF448__LABEL_158:
  * _ZN4sead16NinJoyNpadDeviceD0Ev
  * RVA 0x008e0f90   size 0x74   xrefs 0
  * ============================================================================ */
-  int __fastcall sead__NinJoyNpadDevice__dtor(int *a1)
+  int __fastcall sead__NinJoyNpadDevice__dtor_008e0f90(int *a1)
   {
     int *v2; // r6
     struct sead_IDisposer *v3; // r5
@@ -196572,7 +196568,7 @@ sub_608DF448__LABEL_158:
  * _ZN4sead13CalculateTaskD0Ev
  * RVA 0x008ebd00   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall sead__CalculateTask__dtor(_DWORD *a1)
+  int __fastcall sead__CalculateTask__dtor_008ebd00(_DWORD *a1)
   {
     struct sead_IDisposer *v2; // r5
     int v3; // r1
@@ -197953,7 +197949,7 @@ sub_608DF448__LABEL_158:
  * _ZN4sead9Framework10initializeERKNS0_13InitializeArgE
  * RVA 0x008ed684   size 0xcc   xrefs 1
  * ============================================================================ */
-  int __fastcall sead__Framework__initialize(_DWORD *a1)
+  int __fastcall sead__Framework__initialize_008ed684(_DWORD *a1)
   {
     int v1; // r4
     int v2; // r5
@@ -199496,7 +199492,7 @@ sub_608DF448__LABEL_158:
  * _ZN4sead8TaskBaseD0Ev
  * RVA 0x008ef4c8   size 0x94   xrefs 0
  * ============================================================================ */
-  int __fastcall sead__TaskBase__dtor(struct sead_IDisposer *a1, int a2)
+  int __fastcall sead__TaskBase__dtor_008ef4c8(struct sead_IDisposer *a1, int a2)
   {
     int v3; // r0
     bool v4; // zf
@@ -204290,7 +204286,7 @@ sub_608DF448__LABEL_158:
  * _ZN4sead9IDisposerD0Ev
  * RVA 0x008f5c94   size 0x38   xrefs 0
  * ============================================================================ */
-  int __fastcall sead__IDisposer__dtor(_DWORD *a1)
+  int __fastcall sead__IDisposer__dtor_008f5c94(_DWORD *a1)
   {
     unsigned int v2; // r0
   
@@ -220845,7 +220841,7 @@ sub_608DF448__LABEL_158:
  * _ZN4sead15CriticalSectionD0Ev
  * RVA 0x00907f58   size 0x30   xrefs 0
  * ============================================================================ */
-  int __fastcall sead__CriticalSection__dtor(struct sead_IDisposer *a1)
+  int __fastcall sead__CriticalSection__dtor_00907f58(struct sead_IDisposer *a1)
   {
     struct sead_IDisposer *v2; // r0
   
@@ -222414,7 +222410,7 @@ sub_608DF448__LABEL_158:
  * _ZN4sead13ControllerMgrD0Ev
  * RVA 0x009098d4   size 0x3c   xrefs 0
  * ============================================================================ */
-  int __fastcall sead__ControllerMgr__dtor(int a1)
+  int __fastcall sead__ControllerMgr__dtor_009098d4(int a1)
   {
     int v1; // r0
   
@@ -226527,7 +226523,7 @@ sub_608DF448__LABEL_158:
  * _ZN4sead12GlobalRandom18SingletonDisposer_D0Ev
  * RVA 0x0090eacc   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sead__GlobalRandom__SingletonDisposer___dtor(struct sead_IDisposer *a1)
+  int __fastcall sead__GlobalRandom__SingletonDisposer___dtor_0090eacc(struct sead_IDisposer *a1)
   {
     struct sead_IDisposer *v1; // r0
   
@@ -226567,7 +226563,7 @@ sub_608DF448__LABEL_158:
  * _ZN4sead6Random4initEv
  * RVA 0x0090ebb4   size 0x60   xrefs 6
  * ============================================================================ */
-  unsigned int __fastcall sead__Random__init(unsigned int *a1)
+  unsigned int __fastcall sead__Random__init_0090ebb4(unsigned int *a1)
   {
     unsigned int result; // r0
     unsigned int v3; // r2

@@ -21545,7 +21545,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN11FixedIcicleD0Ev
  * RVA 0x00624674   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall FixedIcicle__dtor(_BYTE *a1)
+  int __fastcall FixedIcicle__dtor_00624674(_BYTE *a1)
   {
     int v2; // r0
   

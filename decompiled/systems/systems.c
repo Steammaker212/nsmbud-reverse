@@ -197763,7 +197763,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBaseD0Ev
  * RVA 0x005b6da0   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase__dtor(int a1)
+  int __fastcall BlockCoinBase__dtor_005b6da0(int a1)
   {
     int v2; // r0
   
@@ -215780,7 +215780,7 @@ sub_605C4308__LABEL_213:
  * _ZN21MovementBlockCoinBaseD0Ev
  * RVA 0x005d0c28   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase__dtor(int a1)
+  int __fastcall MovementBlockCoinBase__dtor_005d0c28(int a1)
   {
     int v2; // r0
   

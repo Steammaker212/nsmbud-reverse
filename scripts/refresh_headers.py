@@ -131,10 +131,25 @@ def main():
     rc, tail = run([os.path.join(REPO, "scripts", "fix_bare_neon.py")])
     print("bare NEON: %s" % tail)
 
+    # Convert Hex-Rays `__asm { ... }` escapes into plain C. This belongs in the pipeline because it was
+    # previously pointed at a stale output directory and therefore converted nothing while reporting success.
+    rc, tail = run([os.path.join(REPO, "scripts", "fix_asm_escapes.py"), "--apply"])
+    print("inline ARM escapes: %s" % tail)
+
     # Header prototypes are aligned to the definitions BEFORE they are relaxed: alignment needs the real
     # parameter list to compare against, and relaxing first would discard it.
     rc, tail = run([os.path.join(REPO, "scripts", "align_header_prototypes.py"), "--write"])
     print("header prototypes: %s" % tail)
+
+    # Collapse duplicate helper definitions and, only where unambiguous, align in-file prototypes to the
+    # header. Both are repairs for earlier passes that were not idempotent.
+    rc, tail = run([os.path.join(REPO, "scripts", "repair_dup_helpers.py"), "--write"])
+    print("helper/prototype repair: %s" % tail)
+
+    # Give same-named functions from different mangled names distinct identifiers. Three adaptors all
+    # demangle to __operator_new_array_al, and defining all three is what "conflicting types" was reporting.
+    rc, tail = run([os.path.join(REPO, "scripts", "disambiguate_redifinitions.py"), "--write"])
+    print("redefinition disambiguation: %s" % tail)
 
     # NOTE: do NOT relax the headers. A header prototype and a full prototype in the .c file genuinely
     # conflict -- "conflicting types for sub_6080E034" is libs.h:242 `()` against libs.c:69 with five
