@@ -2357,7 +2357,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
   
-    sub_60603510();
+    sub_60603510(a1);
     result = *(_DWORD *)(a1 + 164) - 0x8000000;
     *(_DWORD *)(a1 + 164) = result;
     return result;
@@ -3428,7 +3428,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       return StageActor__delete(a1, 0);
     }
-    v3 = (int (__fastcall ***)(_DWORD, int))FlagSwitchBase__onExecute();
+    v3 = (int (__fastcall ***)(_DWORD, int))FlagSwitchBase__onExecute(a1);
     result = _cxa_guard_acquire_0(13087588);
     if ( result )
     {

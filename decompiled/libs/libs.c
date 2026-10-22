@@ -3274,7 +3274,7 @@ static inline int32x4_t vcle_zero_q(float a, float b, float c, float d)
     v8 = (_DWORD *)__operator_new(32);
     *(_DWORD *)(a1 + 36) = sub_607FF5D8(v8);
     v9 = __operator_new(64);
-    *(_DWORD *)(a1 + 40) = sub_60804474(v9, a4);
+    *(_DWORD *)(a1 + 40) = sub_60804474(v9);
     v10 = __operator_new(36);
     *(_DWORD *)(a1 + 44) = sub_607FED54(v10, *(_DWORD *)(a2 + 4));
     v11 = __operator_new(36);
@@ -32687,7 +32687,7 @@ sub_6081CA7C__LABEL_157:
   int v4; // r7
   int v5; // r8
   int v6; // r0
-  nn::oe *v7; // r0
+  nn__oe *v7; // r0
   int OperationMode; // r2
   int v9; // r0
   int v10; // r10
@@ -32737,8 +32737,8 @@ sub_6081CA7C__LABEL_157:
     v6 = *(_DWORD *)(a1 + 40);
     v42 = &`vtable for'sead::SafeStringBase<char>;
     v43 = "AppBootCnt";
-    v7 = (nn::oe *)sub_6074EC10(v3, &v42, *(_DWORD *)(v6 + 44124));
-    OperationMode = nn::oe::GetOperationMode(v7);
+    v7 = (nn__oe *)sub_6074EC10(v3, &v42, *(_DWORD *)(v6 + 44124));
+    OperationMode = nn__oe__GetOperationMode(v7);
     v42 = &`vtable for'sead::SafeStringBase<char>;
     if ( OperationMode != 1 )
       OperationMode = 0;
@@ -53085,7 +53085,7 @@ sub_6082756C__LABEL_84:
     v9 = (void *)sub_608478BC(a5);
     v10 = (const void *)sub_608478C4(a5);
     v11 = sub_608478CC(a5, v6, v5);
-    return ((_DWORD (__fastcall *)(struct nn_util *__hidden, void *, unsigned int, const void *, unsigned int, void *))nn::util::DecompressZlib)(
+    return ((_DWORD (__fastcall *)(struct nn_util *__hidden, void *, unsigned int, const void *, unsigned int, void *))nn__util__DecompressZlib)(
              a2,
              v9,
              v11,
@@ -160200,7 +160200,7 @@ sub_60899E38__LABEL_88:
   
     *(_DWORD *)(a1 + 556) = a6;
     sub_608D0780(v11);
-    v11[0] = "nn::atk::detail::driver::SoundThread";
+    v11[0] = "nn__atk__detail__driver__SoundThread";
     v11[1] = a3;
     v11[2] = a4;
     v11[3] = a5;
@@ -161380,7 +161380,7 @@ sub_60899E38__LABEL_88:
     v12 = 0;
     *(_BYTE *)(a1 + 316) = 0;
     sub_608D0780(v14);
-    v14[0] = "nn::atk::detail::TaskThread";
+    v14[0] = "nn__atk__detail__TaskThread";
     v14[1] = a3;
     v14[2] = a4;
     v14[3] = a5;

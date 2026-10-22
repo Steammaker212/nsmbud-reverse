@@ -2555,7 +2555,7 @@ int _nnDetailNintendoSdkRuntimeObjectFileRefer()
     *(_DWORD *)(a1 + 44) = -1;
     *(_DWORD *)(a1 + 48) = 0;
     *(_DWORD *)(a1 + 52) = 0;
-    v5 = ActorMgrRelated_getById(v4 + 27168);
+    v5 = ActorMgrRelated_getById(v4 + 27168, 0);
     *(_DWORD *)(a1 + 56) = v5;
     *(_DWORD *)(a1 + 60) = 0;
     *(_DWORD *)(a1 + 64) = 0;

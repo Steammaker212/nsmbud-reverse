@@ -2873,7 +2873,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3[121] = 0;
     v3[193] = 0;
     v3[265] = 0;
-    result = sub_607872F4();
+    result = sub_607872F4(a1, a1);
     if ( !result )
     {
       result = sub_607878A0();

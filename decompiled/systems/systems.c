@@ -3873,7 +3873,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // [sp+4h] [bp-4h] BYREF
   
     *(_DWORD *)(a1 + 3640) = a2;
-    sub_60483AF8();
+    sub_60483AF8(a1);
     if ( ((unsigned int)&unk_60C9F118 & ~(1615346172 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9F118) )
     {
       dword_60C9F1D0 = 12321336;

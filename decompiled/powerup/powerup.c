@@ -2990,7 +2990,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else
       {
-        nn::hid::GetTouchScreenState<1u>(v20);
+        nn__hid__GetTouchScreenState(v20);
         v4 = v21 > 0;
         v2 = MEMORY[0xC99DD4];
       }
@@ -3008,7 +3008,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( ((unsigned __int8)v4 & (*(_BYTE *)(MEMORY[0xC9A684] + 17) == 40)) == 0 )
             goto sub_60453764__LABEL_30;
         }
-        nn::hid::GetTouchScreenState<1u>(v20);
+        nn__hid__GetTouchScreenState(v20);
         if ( v21 > 0 )
         {
           v13 = (float)((float)v23 / 720.0) * 720.0;
@@ -3273,7 +3273,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_BYTE *)(a1 + 1404) = v9;
       if ( *(_DWORD *)(a1 + 1388) )
-        sub_604564C4();
+        sub_604564C4(a1, 0);
     }
   sub_60453D7C__LABEL_22:
     *(_BYTE *)(v1 + 1406) = 0;
@@ -3847,7 +3847,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD v1[14]; // [sp+0h] [bp-38h] BYREF
   
-    nn::hid::GetTouchScreenState<1u>(v1);
+    nn__hid__GetTouchScreenState(v1);
     return v1[2] > 0;
   }
 
@@ -3861,7 +3861,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v4; // s2
     _DWORD v5[14]; // [sp+0h] [bp-38h] BYREF
   
-    nn::hid::GetTouchScreenState<1u>(v5);
+    nn__hid__GetTouchScreenState(v5);
     if ( v5[2] < 1 )
       return 0;
     result = 1;
@@ -7859,7 +7859,7 @@ sub_60459990__LABEL_150:
       v64 = v56;
       v65 = v56;
     }
-    v57 = nn::hid::ShowControllerSupport(v62, &v64);
+    v57 = nn__hid__ShowControllerSupport(v62, &v64);
     v58 = *(_DWORD *)(v1 + 24);
     if ( v58 <= 1 && v57 && *(_BYTE *)(v1 + 81) )
       *(_BYTE *)(v1 + 85) = 1;

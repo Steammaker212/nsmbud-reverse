@@ -16683,7 +16683,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, a1[8]) )
       {
         if ( ((0x552u >> a1[5]) & 1) != 0 )
-          sub_602187D4();
+          sub_602187D4(a1);
         else
           sub_602187C8();
       }

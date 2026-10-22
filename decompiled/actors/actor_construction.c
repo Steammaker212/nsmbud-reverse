@@ -14436,7 +14436,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( *(float *)&v1 > 0.0 )
         {
           v21.n64_f32[0] = *(float *)&v1 + -0.05;
-          v21.n64_u32[0] = vmax_f32_v2(v21, v2).n64_u32[0];
+          v21.n64_f32[0] = fmaxf(v21.n64_f32[0], v2.n64_f32[0]);
         }
         v18 = v18 + *(float *)&v1;
         LODWORD(v1) = v21.n64_u32[0];
