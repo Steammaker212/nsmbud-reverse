@@ -42,6 +42,23 @@ def main(argv):
     write = "--write" in argv
 
     defs = {}
+    # authoritative/ holds fresh Hex-Rays output taken from main.i64. When a function was re-decompiled there,
+    # that signature is the one to trust -- merging it into a .c file does NOT update a stale header prototype,
+    # which is how sub_6084A81C ended up declared with 5 parameters in libs.h while its corrected definition has
+    # 6 (the fifth is a float, and there is a sixth pointer). Read those first so setdefault keeps them.
+    auth = os.path.join(ROOT, "authoritative")
+    auth_names = set()
+    if os.path.isdir(auth):
+        for fn in sorted(os.listdir(auth)):
+            if not fn.endswith(".c"):
+                continue
+            t = open(os.path.join(auth, fn), encoding="utf-8", errors="replace").read()
+            for m in DEF.finditer(t):
+                auth_names.add(m.group("name"))
+                defs.setdefault(m.group("name"),
+                                (norm(m.group("ret")), m.group("conv"), norm(m.group("params"))))
+    print("authoritative definitions: %d" % len(defs))
+
     for dirpath, _, names in os.walk(ROOT):
         if "include" in dirpath or "authoritative" in dirpath:
             continue
@@ -74,7 +91,7 @@ def main(argv):
             # `()` and `(int, int, float *, char, float *)` genuinely conflict. Only NON-ZERO disagreements are
             # a real question about the calling convention, and those are reported instead of rewritten.
             hdr_n = np(m.group("params"))
-            if hdr_n != 0 and hdr_n != np(dparams):
+            if hdr_n != 0 and hdr_n != np(dparams) and name not in auth_names:
                 arity.append((fn, name, np(m.group("params")), np(dparams)))
                 return m.group(0)
             new = "%s %s %s(%s);%s" % (ret, conv, name, dparams, m.group("tail"))

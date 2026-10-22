@@ -396,7 +396,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * RVA 0x00000298   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int _nnDetailNintendoSdkRuntimeObjectFileRefer()
+  int _nnDetailNintendoSdkRuntimeObjectFile(void);
+
+int _nnDetailNintendoSdkRuntimeObjectFileRefer()
   {
     return _nnDetailNintendoSdkRuntimeObjectFile();
   }
@@ -405,9 +407,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * __nnDetailNintendoSdkRuntimeObjectFile
  * RVA 0x0000029c   size 0x4   xrefs 1
  * ============================================================================ */
-  void _nnDetailNintendoSdkRuntimeObjectFile()
+  int _nnDetailNintendoSdkRuntimeObjectFile()
   {
-    ;
+    return 0;
   }
 
 /* ============================================================================

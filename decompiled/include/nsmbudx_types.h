@@ -46,13 +46,26 @@ typedef const char        *_LPCSTR;
  * `.n64_u32[i]` -- its name for "the i-th 32-bit word of this quadword" -- 916 times, 556 of those as
  * ASSIGNMENT TARGETS (`v2.n64_u32[0] = 0;`). A struct cannot offer both names, and a macro cannot be an
  * assignment target, so the union is the only shape that makes both spellings legal and writable. */
-typedef union { float v[2]; float n64_f32[2]; uint32_t n64_u32[2]; uint64_t n64_u64[1]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1]; } float32x2_t;
-typedef union { float v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1];; int n_i; long long n_ll; } float32x4_t;
-typedef struct { double   v[2]; } float64x2_t;
-typedef union { int32_t v[2]; float n64_f32[2]; uint32_t n64_u32[2]; uint64_t n64_u64[1]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1]; } int32x2_t;
+typedef union { float v[2]; double n64_f64[2]; float n64_f32[2]; uint32_t n64_u32[2]; uint64_t n64_u64[2]; int32_t n64_i32[2]; uint8_t n64_u8[8]; int16_t n64_i16[4]; uint16_t n64_u16[4]; int8_t n64_i8[8]; int64_t n64_i64[1]; float n128_f32[4]; double n128_f64[2]; uint32_t n128_u32[4]; uint64_t n128_u64[2]; int32_t n128_i32[4]; uint8_t n128_u8[16]; int16_t n128_i16[8]; uint16_t n128_u16[8]; int8_t n128_i8[16]; int64_t n128_i64[2]; int n_i; long long n_ll; unsigned long long n_ull; unsigned int n_ui; unsigned short n_us; unsigned char n_uc; signed char n_sc; float n_f; double n_d; } nsmbudx_vec64_t;
+typedef union { float v[4]; double n128_f64[2]; float n128_f32[4]; uint32_t n128_u32[4]; uint64_t n128_u64[2]; int32_t n128_i32[4]; uint8_t n128_u8[16]; int16_t n128_i16[8]; uint16_t n128_u16[8]; int8_t n128_i8[16]; int64_t n128_i64[2]; float n64_f32[4]; double n64_f64[2]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; int32_t n64_i32[4]; uint8_t n64_u8[16]; int16_t n64_i16[8]; uint16_t n64_u16[8]; int8_t n64_i8[16]; int64_t n64_i64[2]; int n_i; long long n_ll; unsigned long long n_ull; unsigned int n_ui; unsigned short n_us; unsigned char n_uc; signed char n_sc; float n_f; double n_d; } nsmbudx_vec128_t;
 
-typedef union { int32_t v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1];; int n_i; long long n_ll; } int32x4_t;
-typedef union { uint32_t v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1];; int n_i; long long n_ll; } uint32x4_t;
+/* float32x2_t aliases the shared 64-bit lane union: Hex-Rays reinterprets between element types
+ * without a conversion, so distinct unions would make every such transfer an error. */
+typedef nsmbudx_vec64_t float32x2_t;
+/* float32x4_t aliases the shared 128-bit lane union: Hex-Rays reinterprets between element types
+ * without a conversion, so distinct unions would make every such transfer an error. */
+typedef nsmbudx_vec128_t float32x4_t;
+typedef struct { double   v[2]; } float64x2_t;
+/* int32x2_t aliases the shared 64-bit lane union: Hex-Rays reinterprets between element types
+ * without a conversion, so distinct unions would make every such transfer an error. */
+typedef nsmbudx_vec64_t int32x2_t;
+
+/* int32x4_t aliases the shared 128-bit lane union: Hex-Rays reinterprets between element types
+ * without a conversion, so distinct unions would make every such transfer an error. */
+typedef nsmbudx_vec128_t int32x4_t;
+/* uint32x4_t aliases the shared 128-bit lane union: Hex-Rays reinterprets between element types
+ * without a conversion, so distinct unions would make every such transfer an error. */
+typedef nsmbudx_vec128_t uint32x4_t;
 /* These are UNIONS, not structs. The corpus writes casts like `(int8x16_t)0` and `(int8x16_t)0x3F80...`,
    and a cast to a struct type is invalid C. A union with an integer member of matching size makes the cast
    legal, which is how the surrounding code uses these types. */
@@ -117,7 +130,9 @@ void  _ZdaPv(void *p);
 int __fastcall __operator_new_al(unsigned int a1, int CurrentHeap, int a3);
 int __fastcall __operator_delete_al(int p, int heap, int align);
 int __fastcall __operator_new_array_al(unsigned int a1, int CurrentHeap, int a3);
-int __fastcall __operator_delete_array_al(int p, int heap, int align);
+/* One parameter. The definition takes int and every one of the ~180 call sites passes a single
+ * argument; an earlier header guess (p, heap, align) never matched either. */
+int __fastcall __operator_delete_array_al(int p);
 
 /* ---- C++ allocation operators ----
  * The decompiler prints `operator new(size)` / `operator delete(p)`, which is not C. Those call

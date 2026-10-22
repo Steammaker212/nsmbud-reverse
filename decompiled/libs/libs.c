@@ -1543,7 +1543,7 @@ int __fastcall sub_6090E680(int result, float *a2, float *a3);
 int __fastcall sub_6090E95C(int a1, int a2, float *a3);
 float *__fastcall sub_6090EA30(float *result, float *a2, float *a3);
 int __fastcall sead__GlobalRandom__createInstance(struct sead_Heap *a1);
-int *__fastcall sead__Random__init(int *result, int a2, int a3, int a4, int a5);
+int *__fastcall sead__Random__init_0090ec14(int *result, int a2, int a3, int a4, int a5);
 unsigned int __fastcall sead__Random__getU32(int *a1);
 _BYTE *__fastcall sead__Base64__encode(_BYTE *result, unsigned __int8 *a2, unsigned int a3, int a4);
 int __fastcall sead__Base64__decode(int a1, unsigned int a2, unsigned __int8 *a3, unsigned int a4, unsigned int *a5);
@@ -226585,7 +226585,7 @@ sub_608DF448__LABEL_158:
  * _ZN4sead6Random4initEjjjj
  * RVA 0x0090ec14   size 0x3c   xrefs 1
  * ============================================================================ */
-  int *__fastcall sead__Random__init(int *result, int a2, int a3, int a4, int a5)
+  int *__fastcall sead__Random__init_0090ec14(int *result, int a2, int a3, int a4, int a5)
   {
     int v5; // lr
   
