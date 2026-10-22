@@ -89,7 +89,9 @@ def main(argv):
                     else:
                         seen.add(body)
 
-            # 2. declare every called-but-elsewhere-defined function this file does not already declare
+            # 2. declare every called-but-elsewhere-defined function this file does not already declare.
+            # Skip anything the shared headers declare: those are already visible, and re-declaring a name
+            # whose header prototype was deliberately relaxed to `()` would reintroduce the arity conflict.
             defined_here = {m.group("name") for m in DEF.finditer(t)}
             declared = set(re.findall(r"^[ \t]*[A-Za-z_][\w \t\*]*?__\w+\s+(\w+)\s*\(", t, re.M))
             missing = []

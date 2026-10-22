@@ -1,5 +1,9 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_BYTE * __fastcall ActorMgr__create();
+
+
 /* ---- forward declarations for functions defined below ---- */
 _BYTE * __fastcall HammerBros_createHammer(_DWORD *a1);
 

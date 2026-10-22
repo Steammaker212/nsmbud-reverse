@@ -1,25 +1,29 @@
 #include "nsmbudx_prelude.h"
 
-/* ---- forward declarations for functions defined below ---- */
-void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_BYTE * __fastcall ActorMgr__create();
+
 
 /* ---- forward declarations for functions defined below ---- */
-void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);
+void __fastcall sub_605839E8();
 
 /* ---- forward declarations for functions defined below ---- */
-void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);
+void __fastcall sub_605839E8();
 
 /* ---- forward declarations for functions defined below ---- */
-void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);
+void __fastcall sub_605839E8();
 
 /* ---- forward declarations for functions defined below ---- */
-void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);
+void __fastcall sub_605839E8();
 
 /* ---- forward declarations for functions defined below ---- */
-void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);
+void __fastcall sub_605839E8();
 
 /* ---- forward declarations for functions defined below ---- */
-void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);
+void __fastcall sub_605839E8();
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall sub_605839E8();
 /* line: 0, address: 0x605839e8 */ void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6)
 /* line: 1 */ {
 /* line: 2 */   int v7; // r9

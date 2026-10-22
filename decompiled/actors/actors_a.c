@@ -1,5 +1,42 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_BYTE * __fastcall ActorMgr__create();
+int * __fastcall BasicSoundActor1_playSound();
+int * __fastcall BasicSoundActor2_play();
+_DWORD * __fastcall CollisionMgr_setSensor();
+unsigned __int16 * __fastcall LevelArea_getLocation();
+bool __fastcall LightSource_update1();
+int __fastcall LightSource_update2();
+_DWORD * __fastcall ModelWrapper_ctor();
+struct nn_atk_SoundActor * __fastcall MovingSoundActor_ctor();
+float32x4_t * __fastcall Mtx34_rotateY();
+_DWORD * __fastcall MultiStateActor__MultiStateActor();
+_DWORD * __fastcall SolidOnTopCollider_setPointMetaRelated();
+_BYTE * __fastcall StageActor__delete();
+_DWORD * __fastcall StateMgr_ctor();
+const char * __fastcall createWaterSplash();
+float * __fastcall mapPositionToScreen();
+_DWORD * __fastcall sub_600080BC();
+_DWORD * __fastcall sub_6000B63C();
+_DWORD * __fastcall sub_6000BAC8();
+_DWORD * __fastcall sub_60165340();
+_DWORD * __fastcall sub_6017793C();
+_DWORD * __fastcall sub_60186FC0();
+_BYTE * __fastcall sub_60187030();
+_DWORD * __fastcall sub_603F55F8();
+_BYTE * __fastcall sub_6040A298();
+unsigned __int16 * __fastcall sub_6045195C();
+float * __fastcall sub_605ED0DC();
+float * __fastcall sub_606D465C();
+float * __fastcall sub_60718220();
+unsigned __int16 * __fastcall sub_60727620();
+unsigned __int8 * __fastcall sub_60727908();
+int * __fastcall sub_6083224C();
+float * __fastcall sub_60833AF0();
+float * __fastcall sub_6090A308();
+
+
 #include <math.h>
 
 /* ---- forward declarations: these are called above where they are defined ---- */

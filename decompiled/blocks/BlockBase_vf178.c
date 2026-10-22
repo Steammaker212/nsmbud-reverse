@@ -1,5 +1,9 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_BYTE * __fastcall StageActor__delete();
+
+
 /* ---- addr: 0x60563ed8 */ int __fastcall BlockBase_vf178(int a1)
 /* line: 1 */ {
 /* line: 2 */   int v2; // r0

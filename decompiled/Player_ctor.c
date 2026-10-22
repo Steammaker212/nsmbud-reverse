@@ -1,5 +1,10 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_DWORD * __fastcall sub_60786324();
+_DWORD * __fastcall sub_60794B48();
+
+
 /* ---- forward declarations for functions defined below ---- */
 int __fastcall Player_ctor(int a1, int a2);
 

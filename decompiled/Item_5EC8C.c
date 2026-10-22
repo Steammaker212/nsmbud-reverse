@@ -1,5 +1,9 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_DWORD * __fastcall MultiStateActor__MultiStateActor();
+
+
 /* ---- forward declarations for functions defined below ---- */
 int __fastcall sub_6045EC8C(int a1);
 

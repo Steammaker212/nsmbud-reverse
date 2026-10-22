@@ -1,5 +1,10 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_BYTE * __fastcall ActorMgr__create();
+_BYTE * __fastcall sub_605B586C();
+
+
 /* ---- forward declarations for functions defined below ---- */
 float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);
 

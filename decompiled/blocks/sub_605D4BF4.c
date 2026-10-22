@@ -1,5 +1,9 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_BYTE * __fastcall sub_60584B74();
+
+
 /* ---- forward declarations for functions defined below ---- */
 void __fastcall sub_605D4BF4(int a1, _DWORD *a2);
 

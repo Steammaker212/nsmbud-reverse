@@ -1,5 +1,31 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_BYTE * __fastcall ActorMgr__create();
+_DWORD * __fastcall AnimationBase_ctor();
+int * __fastcall BasicSoundActor2_play();
+_DWORD * __fastcall CollisionMgr_setSensor();
+_DWORD * __fastcall ModelWrapper_ctor();
+_DWORD * __fastcall MultiStateActor__MultiStateActor();
+_DWORD * __fastcall PlayerLookTarget_ctor();
+_DWORD * __fastcall StateMgr_ctor();
+float * __fastcall mapPositionToScreen();
+int __fastcall sub_603F6984();
+_DWORD * __fastcall sub_6041FD48();
+_BYTE * __fastcall sub_60787A24();
+_DWORD * __fastcall sub_60852BBC();
+_DWORD * __fastcall sub_60853354();
+int * __fastcall sub_6085402C();
+_DWORD * __fastcall sub_60855C6C();
+_DWORD * __fastcall sub_609051E4();
+_DWORD * __fastcall sub_60908C2C();
+char * __fastcall sub_6091171C();
+_DWORD * __fastcall sub_60982D30();
+_DWORD * __fastcall sub_60984774();
+_DWORD * __fastcall sub_6098620C();
+int * __fastcall sub_6098E28C();
+
+
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 int __fastcall sub_60452470(int a1);

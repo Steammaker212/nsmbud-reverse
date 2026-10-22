@@ -1,4 +1,8 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_DWORD * __fastcall sub_6078667C();
+
 /* NSMBU Deluxe v1.0.0 -- projectile decompilation
  * Generated from the IDB; RVAs are image-relative (VA - 0x60000000).
  * Pseudocode is machine-produced and lightly readable; treat types and

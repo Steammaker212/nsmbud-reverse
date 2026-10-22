@@ -1,5 +1,44 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_BYTE * __fastcall ActorMgr__create();
+int * __fastcall BasicSoundActor1_playSound();
+int * __fastcall BasicSoundActor2_play();
+_DWORD * __fastcall CollisionMgr_setSensor();
+bool __fastcall LightSource_update1();
+int __fastcall LightSource_update2();
+_DWORD * __fastcall ModelWrapper_ctor();
+_DWORD * __fastcall ShapedCollider_ctor2();
+_DWORD * __fastcall SolidOnTopCollider_setPointMetaRelated();
+_BYTE * __fastcall StageActor__delete();
+_DWORD * __fastcall StateMgr_ctor();
+unsigned __int16 * __fastcall TileMgr_setTile();
+const char * __fastcall createWaterSplash();
+_DWORD * __fastcall sub_6000BAC8();
+_DWORD * __fastcall sub_60165340();
+int __fastcall sub_603F6984();
+_DWORD * __fastcall sub_603FD91C();
+_DWORD * __fastcall sub_603FDEBC();
+_DWORD * __fastcall sub_6047F0B0();
+_DWORD * __fastcall sub_6047F28C();
+_DWORD * __fastcall sub_6047F2C8();
+_DWORD * __fastcall sub_6047F304();
+_DWORD * __fastcall sub_6047F340();
+unsigned int * __fastcall sub_6047F3A8();
+_DWORD * __fastcall sub_606DF458();
+int * __fastcall sub_60716978();
+int * __fastcall sub_60718110();
+int * __fastcall sub_60718198();
+unsigned __int16 * __fastcall sub_60727620();
+int * __fastcall sub_60813CA0();
+float * __fastcall sub_60833454();
+_DWORD * __fastcall sub_60855928();
+float * __fastcall sub_6090A384();
+char * __fastcall sub_6091171C();
+_DWORD * __fastcall sub_6091872C();
+_DWORD * __fastcall sub_6098E754();
+
+
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 int __fastcall sub_60480FC8(_DWORD *a1);
@@ -441,7 +480,7 @@ int __fastcall sub_60509C50(int a1, int a2, _DWORD *a3, int a4);
 int __fastcall sub_60509CB8(int a1);
 int __fastcall sub_6050A308(int a1);
 int __fastcall sub_6050A4C4(int a1);
-int __fastcall sub_6050A4EC(int a1, int a2, _DWORD *a3, char a4, char a5);
+int __fastcall sub_6050A4EC();
 int __fastcall sub_6050A660(int a1);
 int __fastcall sub_6050A704(int a1, int a2, _DWORD *a3, _DWORD *a4, char a5, char a6);
 int __fastcall sub_6050A8A4(int a1);
@@ -739,7 +778,7 @@ int __fastcall sub_6057A4C4(int a1);
 int __fastcall sub_6057D09C(int a1);
 int __fastcall sub_6057D990(_DWORD *a1);
 int __fastcall sub_6057E594(_DWORD *a1);
-void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);
+void __fastcall sub_605839E8();
 int __fastcall sub_60584408(int a1, unsigned int a2, int a3);
 int __fastcall sub_60584678(int a1, float *a2, int a3);
 int __fastcall sub_60584FEC(int a1, float *a2);

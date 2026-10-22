@@ -87,6 +87,48 @@ def main(argv):
             if write:
                 open(path, "w", encoding="utf-8", newline="").write(new)
     print("total: %d (write=%s)" % (total, write))
+
+    # The same rule has to be applied to the prototypes INSIDE the .c aggregates. A header that declares a
+    # mixed-arity name `()` still conflicts with a full prototype in the .c file that includes it:
+    #
+    #     libs.h   unsigned int __fastcall sub_6080E034();                                  <- relaxed
+    #     libs.c   unsigned int __fastcall sub_6080E034(int, int, float *, char, float *);   <- conflict
+    #
+    # Declarations only: a DEFINITION keeps its real parameter list.
+    inc_total = 0
+    for dirpath, _, names in os.walk(ROOT):
+        if "include" in dirpath or "authoritative" in dirpath:
+            continue
+        for fn in sorted(names):
+            if not fn.endswith(".c"):
+                continue
+            path = os.path.join(dirpath, fn)
+            t = open(path, encoding="utf-8", errors="replace").read()
+            hits = []
+
+            def repl2(m):
+                name = m.group("name")
+                if name not in mixed or not m.group("params").strip():
+                    return m.group(0)
+                hits.append(name)
+                return "%s %s %s();%s" % (m.group("ret").strip(), m.group("conv"), name, m.group("tail"))
+
+            # A DEFINITION must keep its parameters: relaxing it would leave the body referring to names
+            # that no longer exist. Only prototypes are rewritten, so record the byte ranges of definitions
+            # and skip any match that starts one.
+            def_ranges = [(m.start(), m.end()) for m in DEF.finditer(t)]
+
+            def is_definition(pos):
+                return any(a <= pos < b for a, b in def_ranges)
+
+            new = PROTO.sub(lambda m: m.group(0) if is_definition(m.start()) else repl2(m), t)
+            if hits:
+                inc_total += len(hits)
+                print("  %-40s %3d in-file declaration(s) made old-style"
+                      % (os.path.relpath(path, ROOT), len(hits)))
+                if write:
+                    open(path, "w", encoding="utf-8", newline="").write(new)
+    print("in-file declarations relaxed: %d" % inc_total)
     return 0
 
 

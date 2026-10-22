@@ -1,5 +1,9 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- called here with a partial argument list: declared old-style so the call is legal ---- */
+_DWORD * __fastcall StateMgr_ctor();
+
+
 /* ---- forward declarations for functions defined below ---- */
 int __fastcall PlayerBase_ctor(int a1, int a2);
 
