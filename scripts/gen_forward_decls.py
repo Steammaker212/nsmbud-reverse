@@ -51,10 +51,29 @@ def process(path, write):
         return 0
 
     needed.sort()
-    block = "\n".join(sig + ";" for _, sig in needed)
+    # De-duplicate: the same function can be reached from several call sites.
+    seen = set()
+    uniq = []
+    for at, sig in needed:
+        if sig in seen:
+            continue
+        seen.add(sig)
+        uniq.append((at, sig))
+    block = "\n".join(sig + ";" for _, sig in uniq)
+
+    # REPLACE the existing block rather than inserting another copy. The first version inserted ahead of
+    # whatever followed the marker on every run, so the marker ended up 25 times in player.c with 155
+    # duplicated declarations.
     first = text.index(MARKER)
     head = text[:first]
-    rest = text[first + len(MARKER):].lstrip("\r\n")
+    # everything from the marker up to the next blank-line-delimited non-declaration is the old block
+    rest = text[first + len(MARKER):]
+    lines = rest.split("\n")
+    k = 0
+    while k < len(lines) and (lines[k].strip() == "" or lines[k].strip() == MARKER
+                               or lines[k].rstrip().endswith(";")):
+        k += 1
+    rest = "\n".join(lines[k:]).lstrip("\n")
     new = head + MARKER + "\n\n" + block + "\n\n" + rest
     if write:
         open(path, "w", encoding="utf-8", newline="").write(new)
