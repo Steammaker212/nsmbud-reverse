@@ -12,6 +12,7 @@
 #define NSMBUDX_PRELUDE_H
 
 #include "nsmbudx_types.h"
+#include "nsmbudx_neon.h"
 #include "nsmbudx_data_symbols.h"
 #include "structs.h"
 #include "nsmbudx_recovered_types.h"

@@ -888,36 +888,5 @@ float32x4_t vsubq_f32(float32x4_t a, float32x4_t b);  /* 106 use(s) */
  * Declared unprototyped: the real lane and predicate signatures differ per intrinsic, and inventing
  * one per name would state things about the instruction that were never checked. Callers get a
  * declaration and clang stops treating them as undeclared identifiers. */
-int vabsq_f32();  /* 1 use(s) */
-int vandq_s64();  /* 8 use(s) */
-int vbslq_s64();  /* 173 use(s) */
-int vcgeq_f32();  /* 11 use(s) */
-int vcgtq_f32();  /* 24 use(s) */
-int vcvt_f32_s32();  /* 20 use(s) */
-int vdup_lane_s32();  /* 19 use(s) */
-int vdupq_lane_s32();  /* 339 use(s) */
-int vext_s8();  /* 2 use(s) */
-int vextq_s8();  /* 560 use(s) */
-int vld1q_dup_f32();  /* 86 use(s) */
-int vmax_f32_v2();  /* 119 use(s) */
-int vmlaq_f32();  /* 170 use(s) */
-int vmlaq_lane_f32();  /* 894 use(s) */
-int vmlsq_f32();  /* 67 use(s) */
-int vmlsq_lane_f32();  /* 10 use(s) */
-int vmul_f32_v2();  /* 1 use(s) */
-int vmulq_lane_f32();  /* 46 use(s) */
-int vmulq_n_f32();  /* 462 use(s) */
-int vnegq_f32();  /* 6 use(s) */
-int vorrq_s64();  /* 1 use(s) */
-int vpadd_f32();  /* 103 use(s) */
-int vrecpeq_f32();  /* 18 use(s) */
-int vrev64q_s32();  /* 1 use(s) */
-int vrsqrteq_f32();  /* 69 use(s) */
-int vtbl2_s8();  /* 403 use(s) */
-int vtbl4_s8();  /* 94 use(s) */
-int vtrn_s32();  /* 18 use(s) */
-int vtrnq_s32();  /* 13 use(s) */
-int vuzpq_s32();  /* 4 use(s) */
-int vzipq_s32();  /* 380 use(s) */
 
 #endif /* NSMBUDX_UNDECLARED_H */

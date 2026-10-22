@@ -47,14 +47,20 @@ typedef const char        *_LPCSTR;
  * ASSIGNMENT TARGETS (`v2.n64_u32[0] = 0;`). A struct cannot offer both names, and a macro cannot be an
  * assignment target, so the union is the only shape that makes both spellings legal and writable. */
 typedef union { float v[2]; float n64_f32[2]; uint32_t n64_u32[2]; uint64_t n64_u64[1]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1]; } float32x2_t;
-typedef union { float v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1]; } float32x4_t;
+typedef union { float v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1];; int n_i; long long n_ll; } float32x4_t;
 typedef struct { double   v[2]; } float64x2_t;
 typedef union { int32_t v[2]; float n64_f32[2]; uint32_t n64_u32[2]; uint64_t n64_u64[1]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1]; } int32x2_t;
 
-typedef union { int32_t v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1]; } int32x4_t;
-typedef union { uint32_t v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1]; } uint32x4_t;
-typedef struct { int8_t   v[16]; } int8x16_t;
-typedef struct { uint8_t  v[16]; } uint8x16_t;
+typedef union { int32_t v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1];; int n_i; long long n_ll; } int32x4_t;
+typedef union { uint32_t v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; uint8_t n64_u8[8]; int32_t n64_i32[2]; int64_t n64_i64[1];; int n_i; long long n_ll; } uint32x4_t;
+/* These are UNIONS, not structs. The corpus writes casts like `(int8x16_t)0` and `(int8x16_t)0x3F80...`,
+   and a cast to a struct type is invalid C. A union with an integer member of matching size makes the cast
+   legal, which is how the surrounding code uses these types. */
+typedef union { int8_t v[16]; uint8_t n128_u8[16]; int32_t n128_i32[4]; uint32_t n128_u32[4];
+                int64_t v64[2]; uint64_t n128_u64[2]; float n128_f32[4];
+                int n_i; long long n_ll; } int8x16_t;   /* scalar members make `(int8x16_t)N` casts legal */
+typedef union { uint8_t v[16]; int8_t n128_i8[16]; uint32_t n128_u32[4]; int32_t n128_i32[4];
+                uint64_t n128_u64[2]; } uint8x16_t;
 typedef struct { int32x4_t val[2]; }   int32x4x2_t;
 typedef struct { int32x2_t val[2]; }   int32x2x2_t;
 typedef struct { float32x2_t val[2]; } float32x2x2_t;

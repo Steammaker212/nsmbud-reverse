@@ -117,6 +117,19 @@ def main():
     rc, tail = run([os.path.join(REPO, "scripts", "sync_decls.py"),
                     "--all", os.path.join(REPO, "decompiled"), "--write"])
     print("declarations: %s" % tail)
+
+    # Order matters: the forward-declaration block is REBUILT from the definitions, so it runs BEFORE the
+    # arity relaxer. Running the other way round re-emits full prototypes over the relaxed ones from the
+    # previous pass, and the arity errors come straight back.
+    rc, tail = run([os.path.join(REPO, "scripts", "gen_forward_decls.py"),
+                    os.path.join(REPO, "decompiled"), "--write"])
+    print("forward declarations: %s" % tail)
+
+    rc, tail = run([os.path.join(REPO, "scripts", "relax_arity2.py")])
+    print("arity relaxation: %s" % tail)
+
+    rc, tail = run([os.path.join(REPO, "scripts", "fix_bare_neon.py")])
+    print("bare NEON: %s" % tail)
     return 0
 
 
