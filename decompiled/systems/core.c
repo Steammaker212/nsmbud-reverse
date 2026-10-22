@@ -2165,7 +2165,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60002B6C
+ * ActorMgr_unregisterIfActive
  * RVA 0x00002b6c   size 0x20   xrefs 257
  * ============================================================================ */
   int __fastcall sub_60002B6C(int result)
@@ -6939,7 +6939,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60008598
+ * ActorMgr_findByType
  * RVA 0x00008598   size 0x34   xrefs 287
  * ============================================================================ */
   int __fastcall sub_60008598(int a1, int a2)
@@ -8522,7 +8522,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = *((_DWORD *)&unk_60C7B440 + i + 1);
       while ( 1 )
       {
-        v10 = *(_DWORD *)sub_60008598(v8, v9);
+        v10 = *(_DWORD *)ActorMgr_findByType(v8, v9);
         if ( _cxa_guard_acquire_0(13087784) )
         {
           MEMORY[0xC7B424] = 12321964;
@@ -12594,7 +12594,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6000F7B8
+ * FixedPoint_atan2
  * RVA 0x0000f7b8   size 0xf4   xrefs 249
  * ============================================================================ */
   unsigned int sub_6000F7B8()
@@ -12668,7 +12668,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       && v11 >= 0.0
       || (result = 0, v10 >= 0.0) && v11 < 0.0 )
     {
-      v13 = sub_6000F7B8() - 1056964608;
+      v13 = FixedPoint_atan2() - 1056964608;
       result = 0;
       if ( v13 >> 25 <= 0x20 )
       {
@@ -12719,7 +12719,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       && v10 >= 0.0
       || (result = 0, v9 >= 0.0) && v10 < 0.0 )
     {
-      v12 = sub_6000F7B8();
+      v12 = FixedPoint_atan2();
       result = 0;
       v13 = v12 + 0x1000000;
       if ( (v12 + 0x1000000) >> 25 <= 0x20 )
@@ -12772,7 +12772,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       && v10 >= 0.0
       || (result = 0, v9 >= 0.0) && v10 < 0.0 )
     {
-      v12 = sub_6000F7B8();
+      v12 = FixedPoint_atan2();
       result = 0;
       v13 = v12 + 0x1000000;
       if ( (v12 + 0x1000000) >> 25 <= 0x20 )
@@ -12825,7 +12825,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       && v11 >= 0.0
       || (result = 0, v10 >= 0.0) && v11 < 0.0 )
     {
-      v13 = sub_6000F7B8() - 1056964608;
+      v13 = FixedPoint_atan2() - 1056964608;
       result = 0;
       if ( v13 >> 25 <= 0x20 )
       {
@@ -20785,7 +20785,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BossBase_vf3A4(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_STOMPED", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_STOMPED",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -20794,7 +20798,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BossBase_vf3A8(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_STOMPED_LAST1", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_STOMPED_LAST1",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -20803,7 +20811,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BossBase_vf3AC(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_STAR_DEF", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_DAMAGE_STAR_DEF",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -20812,7 +20824,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BossBase_vf3B0(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_STAR_LAST", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_DAMAGE_STAR_LAST",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -20821,7 +20837,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BossBase_vf3B4(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_DEF", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_DAMAGE_DEF",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -20830,7 +20850,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BossBase_vf3B8(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_DAMAGE_LAST",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -20847,7 +20871,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = "SE_BOSS_CMN_DAMAGE_FIRE_DEF";
     else
       v3 = "SE_BOSS_CMN_DAMAGE_FIRE";
-    return sub_608134CC(v2, (int)v3, a1[3320], 0);
+    return SoundActor_tryStartSoundIfFree4(v2, (int)v3, a1[3320], 0);
   }
 
 /* ============================================================================
@@ -20861,8 +20885,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v1 = (__int16 *)(a1 + 6640);
     v2 = (_DWORD *)(a1 + 6332);
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *(__int16 *)(a1 + 6640), 0);
-    return sub_608134CC(v2, (int)"SE_BOSS_CMN_DAMAGE_FIRE_LAST", *v1, 0);
+    SoundActor_tryStartSoundIfFree4(
+      (_DWORD *)(a1 + 6332),
+      (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE",
+      *(__int16 *)(a1 + 6640),
+      0);
+    return SoundActor_tryStartSoundIfFree4(v2, (int)"SE_BOSS_CMN_DAMAGE_FIRE_LAST", *v1, 0);
   }
 
 /* ============================================================================
@@ -20879,7 +20907,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = "SE_BOSS_CMN_DAMAGE_FIRE_DEF";
     else
       v3 = "SE_BOSS_CMN_DAMAGE_FIRE";
-    return sub_608134CC(v2, (int)v3, a1[3320], 0);
+    return SoundActor_tryStartSoundIfFree4(v2, (int)v3, a1[3320], 0);
   }
 
 /* ============================================================================
@@ -20893,8 +20921,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v1 = (__int16 *)(a1 + 6640);
     v2 = (_DWORD *)(a1 + 6332);
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *(__int16 *)(a1 + 6640), 0);
-    return sub_608134CC(v2, (int)"SE_BOSS_CMN_DAMAGE_FIRE_LAST", *v1, 0);
+    SoundActor_tryStartSoundIfFree4(
+      (_DWORD *)(a1 + 6332),
+      (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE",
+      *(__int16 *)(a1 + 6640),
+      0);
+    return SoundActor_tryStartSoundIfFree4(v2, (int)"SE_BOSS_CMN_DAMAGE_FIRE_LAST", *v1, 0);
   }
 
 /* ============================================================================
@@ -20903,7 +20935,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BossBase_vf3CC(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_STAR_DEF", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_DAMAGE_STAR_DEF",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -20912,7 +20948,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BossBase_vf3D0(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -21052,16 +21092,6 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60026CD4
- * RVA 0x00026cd4   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  int *__fastcall sub_60026CD4(_DWORD *a1, int a2, int *a3)
-  {
-    return sub_60813430(a1, a2, a3);
-  }
-
-/* ============================================================================
  * sub_60026CD8
  * RVA 0x00026cd8   size 0x4   xrefs 0
  * ============================================================================ */
@@ -21069,16 +21099,6 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int *__fastcall sub_60026CD8(_DWORD *a1, int a2, int *a3)
   {
     return sub_608134C8(a1, a2, a3);
-  }
-
-/* ============================================================================
- * sub_60026CDC
- * RVA 0x00026cdc   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  int *__fastcall sub_60026CDC(_DWORD *a1, int a2, int a3, int *a4)
-  {
-    return sub_608134CC(a1, a2, a3, a4);
   }
 
 /* ============================================================================
@@ -21797,7 +21817,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC7F70C] = 12320992;
       _cxa_guard_release_0(13104912);
     }
-    return a2 == 13104908 || sub_60027FB0(a2);
+    return a2 == 13104908 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -21874,7 +21894,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60027FB0
+ * StaticInit_guardRegister2
  * RVA 0x00027fb0   size 0x188   xrefs 245
  * ============================================================================ */
   bool __fastcall sub_60027FB0(int a1)
@@ -23056,19 +23076,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 = v3[17];
       if ( v6 > v7 )
         v5 += v7;
-      if ( sub_60418548(*v5 + 4) == 1 )
+      if ( Float2_equalTest(*v5 + 4) == 1 )
       {
         v8 = (_DWORD *)(a1 + 6332);
         v9 = "SE_VOC_BKK_SHIKO1";
   LABEL_10:
-        sub_60813430(v8, (int)v9, 0);
+        SoundActor_tryStartSoundIfFree(v8, (int)v9, 0);
         goto LABEL_11;
       }
       v10 = *(_DWORD **)(*(_DWORD *)v4 + 12);
       v11 = *(_DWORD *)(*(_DWORD *)v4 + 68);
       if ( *(_DWORD *)(*(_DWORD *)v4 + 8) > v11 )
         v10 += v11;
-      if ( sub_60418548(*v10 + 4) == 1 )
+      if ( Float2_equalTest(*v10 + 4) == 1 )
       {
         v8 = (_DWORD *)(a1 + 6332);
         v9 = "SE_VOC_BKK_SHIKO2";
@@ -23201,7 +23221,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 308) = 1099956224;
         *(_DWORD *)(a1 + 6836) = 0;
         *(_DWORD *)(a1 + 6840) = 1103101952;
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_SHIKO", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_SHIKO", 0);
         AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 1, 0, 0);
         sub_6002FAA0((unsigned __int8 *)a1);
         *(_WORD *)(a1 + 7422) = 30;
@@ -23352,7 +23372,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v39 = 15;
           v40 = MEMORY[0xC263B4];
           LOBYTE(v41) = 0;
-          sub_60813430((_DWORD *)a1 + 1583, (int)"SE_BOSS_KK_LAND", &v39);
+          SoundActor_tryStartSoundIfFree((_DWORD *)a1 + 1583, (int)"SE_BOSS_KK_LAND", &v39);
           AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 7, 1, 0, 0);
           *((_DWORD *)a1 + 39) = 0;
           *((_DWORD *)a1 + 30) = 0;
@@ -23418,7 +23438,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             a1[7426] = 16;
           }
           *((_DWORD *)a1 + 29) = 1153138688;
-          sub_60813430((_DWORD *)a1 + 1583, (int)"SE_VOC_BKK_RCV_JUMP", 0);
+          SoundActor_tryStartSoundIfFree((_DWORD *)a1 + 1583, (int)"SE_VOC_BKK_RCV_JUMP", 0);
           goto LABEL_39;
         }
         break;
@@ -23445,7 +23465,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v39 = 15;
           v40 = MEMORY[0xC263B4];
           LOBYTE(v41) = 0;
-          sub_60813430((_DWORD *)a1 + 1583, (int)"SE_BOSS_KK_LAND", &v39);
+          SoundActor_tryStartSoundIfFree((_DWORD *)a1 + 1583, (int)"SE_BOSS_KK_LAND", &v39);
           AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 7, 1, 0, 0);
   LABEL_39:
           result = (unsigned __int8)*v5 + 1;
@@ -23625,7 +23645,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v25 = 15;
           v26 = MEMORY[0xC263B4];
           LOBYTE(v27) = 0;
-          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_LAND", &v25);
+          SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_LAND", &v25);
           AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 6, 1, 0, 0);
           *(_DWORD *)(a1 + 120) = 0;
           *(_DWORD *)(a1 + 124) = 0;
@@ -23857,7 +23877,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v41 = 15;
           v42 = MEMORY[0xC263B4];
           LOBYTE(v43) = 0;
-          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_LAND", &v41);
+          SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_LAND", &v41);
           AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 6, 1, 0, 0);
           if ( !*(_BYTE *)(a1 + 7433) )
           {
@@ -23893,19 +23913,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13 = v9[17];
       if ( v12 > v13 )
         v11 += v13;
-      if ( sub_60418548(*v11 + 4) == 1 )
+      if ( Float2_equalTest(*v11 + 4) == 1 )
       {
         v14 = (_DWORD *)(a1 + 6332);
         v15 = "SE_VOC_BKK_RCV_SIGN";
   LABEL_36:
-        sub_60813430(v14, (int)v15, 0);
+        SoundActor_tryStartSoundIfFree(v14, (int)v15, 0);
         goto LABEL_37;
       }
       v20 = *(_DWORD **)(*(_DWORD *)v10 + 12);
       v21 = *(_DWORD *)(*(_DWORD *)v10 + 68);
       if ( *(_DWORD *)(*(_DWORD *)v10 + 8) > v21 )
         v20 += v21;
-      if ( sub_60418548(*v20 + 4) == 1 )
+      if ( Float2_equalTest(*v20 + 4) == 1 )
       {
         v14 = (_DWORD *)(a1 + 6332);
         v15 = "SE_VOC_BKK_RCV_SHAKE";
@@ -23928,8 +23948,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = (unsigned __int8)*v8;
     if ( (*(float *)(v26 + 20) <= 65.0 || v27 != 15) && (v27 != 5 || (*(_BYTE *)(v26 + 28) & 0x20) == 0) )
       goto LABEL_26;
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_BKK_JUMP", 0);
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_JUMP_L", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_BKK_JUMP", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_JUMP_L", 0);
     *(_DWORD *)(a1 + 3180) |= 4u;
     *(_DWORD *)(a1 + 3188) |= 4u;
     *(_DWORD *)(a1 + 3204) |= 4u;
@@ -24775,7 +24795,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
     {
       *(_BYTE *)(a1 + 7442) = 0;
     }
@@ -24785,7 +24805,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = (*v3)[17];
       if ( (*v3)[2] > v8 )
         v7 += v8;
-      if ( sub_60418548(*v7 + 4) == 1 )
+      if ( Float2_equalTest(*v7 + 4) == 1 )
       {
         v9 = *(_DWORD *)(a1 + 112);
         v10 = *(_DWORD *)(a1 + 116);
@@ -24834,19 +24854,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = (*v3)[17];
     if ( (*v3)[2] > v21 )
       v20 += v21;
-    if ( sub_60418548(*v20 + 4) == 1 )
+    if ( Float2_equalTest(*v20 + 4) == 1 )
     {
       v22 = (_DWORD *)(a1 + 6332);
       v23 = "SE_BOSS_KK_MAGIC_STOCK";
   LABEL_23:
-      sub_60813430(v22, (int)v23, 0);
+      SoundActor_tryStartSoundIfFree(v22, (int)v23, 0);
       goto LABEL_24;
     }
     v24 = (_DWORD *)(*v3)[3];
     v25 = (*v3)[17];
     if ( (*v3)[2] > v25 )
       v24 += v25;
-    if ( sub_60418548(*v24 + 4) == 1 )
+    if ( Float2_equalTest(*v24 + 4) == 1 )
     {
       v22 = (_DWORD *)(a1 + 6332);
       v23 = "SE_VOC_BKK_TRANSFORM";
@@ -25219,8 +25239,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( (*(_BYTE *)(*(_DWORD *)v6 + 28) & 0x20) == 0 )
           goto LABEL_51;
         LODWORD(v8) = 0;
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_BKK_JUMP", 0);
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_JUMP_L", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_BKK_JUMP", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_JUMP_L", 0);
         *(_DWORD *)(a1 + 3180) |= 4u;
         *(_DWORD *)(a1 + 3188) |= 4u;
         *(_DWORD *)(a1 + 3204) |= 4u;
@@ -25381,7 +25401,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v42 = 15;
             v43 = MEMORY[0xC263B4];
             LOBYTE(v44) = 0;
-            sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_LAND", &v42);
+            SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_LAND", &v42);
             AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 6, 1, 0, 0);
             if ( !*(_BYTE *)(a1 + 7433) )
             {
@@ -25608,19 +25628,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 = v3[17];
       if ( v6 > v7 )
         v5 += v7;
-      if ( sub_60418548(*v5 + 4) == 1 )
+      if ( Float2_equalTest(*v5 + 4) == 1 )
       {
         v8 = (_DWORD *)(a1 + 6332);
         v9 = "SE_VOC_BKK_SHIKO1";
   LABEL_10:
-        sub_60813430(v8, (int)v9, 0);
+        SoundActor_tryStartSoundIfFree(v8, (int)v9, 0);
         goto LABEL_11;
       }
       v10 = *(_DWORD **)(*(_DWORD *)v4 + 12);
       v11 = *(_DWORD *)(*(_DWORD *)v4 + 68);
       if ( *(_DWORD *)(*(_DWORD *)v4 + 8) > v11 )
         v10 += v11;
-      if ( sub_60418548(*v10 + 4) == 1 )
+      if ( Float2_equalTest(*v10 + 4) == 1 )
       {
         v8 = (_DWORD *)(a1 + 6332);
         v9 = "SE_VOC_BKK_SHIKO2";
@@ -25736,7 +25756,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 308) = 1099956224;
         *(_DWORD *)(a1 + 6836) = 0;
         *(_DWORD *)(a1 + 6840) = 1103101952;
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_SHIKO", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_SHIKO", 0);
         AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 1, 0, 0);
         sub_6002FAA0((unsigned __int8 *)a1);
         *(_WORD *)(a1 + 7422) = 30;
@@ -26428,7 +26448,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v9[0] = v4;
           v9[2] = 1166843904;
           EffectData_create(971, v9, 0, 0);
-          sub_60813430(a1 + 6332, "SE_BOSS_KK_FALL", 0);
+          SoundActor_tryStartSoundIfFree(a1 + 6332, "SE_BOSS_KK_FALL", 0);
           *(_DWORD *)(a1 + 3180) &= ~4u;
           *(_DWORD *)(a1 + 3188) &= ~4u;
           *(_DWORD *)(a1 + 3204) &= ~4u;
@@ -26856,7 +26876,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v10 = (_DWORD *)(v5 + 6332);
   LABEL_13:
-        sub_60813430(v10, (int)"SE_OBJ_NO_DAMAGE_BOUND", 0);
+        SoundActor_tryStartSoundIfFree(v10, (int)"SE_OBJ_NO_DAMAGE_BOUND", 0);
         return (*(int (__fastcall **)(float *, unsigned int, int))(*(_DWORD *)v6 + 1168))(v6, v5, 4);
       }
       if ( v9 == 1 && v6[28] < *(float *)(v5 + 112) )
@@ -26890,7 +26910,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v14 = v13;
   LABEL_7:
       (*(void (__fastcall **)(int, int, _DWORD, _DWORD))(*(_DWORD *)v13 + 748))(v14, 1, 0, 0);
-      sub_60813430((_DWORD *)(v5 + 6332), (int)"SE_OBJ_NO_DAMAGE_BOUND", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(v5 + 6332), (int)"SE_OBJ_NO_DAMAGE_BOUND", 0);
       result = *(unsigned __int8 *)(v13 + 1217);
       if ( (result & 1) != 0 )
       {
@@ -27051,8 +27071,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                           v30[1] = v29;
                           v30[2] = 0;
                           sub_602A38A4(a1, v30);
-                          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_EMY_DOWN", 0);
-                          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_BKK_DAMAGE_FROM_UNDER", 0);
+                          SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_EMY_DOWN", 0);
+                          SoundActor_tryStartSoundIfFree(
+                            (_DWORD *)(a1 + 6332),
+                            (int)"SE_VOC_BKK_DAMAGE_FROM_UNDER",
+                            0);
                           return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13105352);
                         }
                       }
@@ -27176,8 +27199,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = a1 + 6332;
     if ( (*(int (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 728))(a1) != 1 )
-      return sub_60813430(v2, (int)"SE_VOC_BKK_DAMAGE_S", 0);
-    sub_60813430(v2, (int)"SE_VOC_BKK_DAMAGE_L", 0);
+      return SoundActor_tryStartSoundIfFree(v2, (int)"SE_VOC_BKK_DAMAGE_S", 0);
+    SoundActor_tryStartSoundIfFree(v2, (int)"SE_VOC_BKK_DAMAGE_L", 0);
     PlayerLookTargetMgr_remove(MEMORY[0xC7B464], (int)(a1 + 6644));
     v3 = (_DWORD *)MEMORY[0xCC436C];
     v4 = *(_DWORD *)(MEMORY[0xCC436C] + 32);
@@ -27948,7 +27971,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall SumoBrosBoss_vf3C0(int a1)
   {
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *(__int16 *)(a1 + 6640), 0);
+    SoundActor_tryStartSoundIfFree4(
+      (_DWORD *)(a1 + 6332),
+      (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE",
+      *(__int16 *)(a1 + 6640),
+      0);
     return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 980))(a1);
   }
 
@@ -27958,7 +27985,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SumoBrosBoss_vf3D4(int a1)
   {
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_BKK_LOSE", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_BKK_LOSE", 0);
   }
 
 /* ============================================================================
@@ -28143,7 +28170,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int sub_60032630()
   {
-    return *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF383C]);
+    return *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF383C]);
   }
 
 /* ============================================================================
@@ -28198,7 +28225,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC7F70C] = 12320992;
       _cxa_guard_release_0(13104912);
     }
-    return a2 == 13104908 || sub_60027FB0(a2);
+    return a2 == 13104908 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -28967,7 +28994,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall SE_OBJ_BOSS_KK_THUNDER_SEPARATE_ref(_DWORD *a1)
   {
-    sub_60813430(a1 + 1527, (int)"SE_OBJ_BOSS_KK_THUNDER_SEPARATE", 0);
+    SoundActor_tryStartSoundIfFree(a1 + 1527, (int)"SE_OBJ_BOSS_KK_THUNDER_SEPARATE", 0);
     return (*(int (__fastcall **)(_DWORD *, int))(*a1 + 192))(a1, 13106520);
   }
 
@@ -29133,7 +29160,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
       v6 = 13106456;
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, v6);
-    sub_60813430((_DWORD *)(a1 + 6108), (int)"SE_OBJ_BOSS_KK_THUNDER", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6108), (int)"SE_OBJ_BOSS_KK_THUNDER", 0);
     return 1;
   }
 
@@ -29703,7 +29730,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = v4[17];
       if ( v7 > v8 )
         v6 += v8;
-      if ( sub_60418548(*v6 + 4) == 1 )
+      if ( Float2_equalTest(*v6 + 4) == 1 )
         *(_BYTE *)(a1 + 7264) = 1;
       v9 = *(_DWORD **)v5;
       v10 = *(_DWORD **)(*(_DWORD *)v5 + 12);
@@ -29722,9 +29749,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( v11 > v12 )
         v10 += v12;
-      if ( sub_60418548(*v10 + 4) == 1 )
+      if ( Float2_equalTest(*v10 + 4) == 1 )
       {
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_NOTICE", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_NOTICE", 0);
         LOWORD(v14) = 932;
   LABEL_29:
         HIWORD(v14) = 256;
@@ -29735,9 +29762,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v16 = *(_DWORD *)(*(_DWORD *)v5 + 68);
       if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v16 )
         v15 += v16;
-      if ( sub_60418548(*v15 + 4) == 1 )
+      if ( Float2_equalTest(*v15 + 4) == 1 )
       {
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CHOUHATSU1", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CHOUHATSU1", 0);
         LOWORD(v14) = 3283;
         goto LABEL_29;
       }
@@ -29745,9 +29772,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v18 = *(_DWORD *)(*(_DWORD *)v5 + 68);
       if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v18 )
         v17 += v18;
-      if ( sub_60418548(*v17 + 4) == 1 )
+      if ( Float2_equalTest(*v17 + 4) == 1 )
       {
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CHARGE_POWER", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CHARGE_POWER", 0);
       }
       else
       {
@@ -29755,9 +29782,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v20 = *(_DWORD *)(*(_DWORD *)v5 + 68);
         if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v20 )
           v19 += v20;
-        if ( sub_60418548(*v19 + 4) == 1 )
+        if ( Float2_equalTest(*v19 + 4) == 1 )
         {
-          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_GO", 0);
+          SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_GO", 0);
           LOWORD(v14) = 2231;
           goto LABEL_29;
         }
@@ -30018,8 +30045,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_PUNCH_GO", 0);
+    if ( Float2_equalTest(*v4 + 4) == 1 )
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_PUNCH_GO", 0);
     v7 = *(_DWORD *)(*(_DWORD *)v3 + 12);
     v8 = *(_DWORD *)(*(_DWORD *)v3 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v3 + 8) > v8 )
@@ -30218,7 +30245,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( *(_DWORD *)(*(_DWORD *)v7 + 8) > v19 )
           v18 += v19;
         AnimationCtrl_setRepeat(*v18 + 4, 0);
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_PRE_ACTION", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_PRE_ACTION", 0);
         v20 = 2;
         goto LABEL_22;
       case 2:
@@ -30277,10 +30304,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v39 = v35[17];
         if ( v38 > v39 )
           v37 += v39;
-        if ( sub_60418548(*v37 + 4) == 1 )
+        if ( Float2_equalTest(*v37 + 4) == 1 )
         {
           *(_BYTE *)(a1 + 7785) = 1;
-          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_BOMB_THROW", 0);
+          SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_BOMB_THROW", 0);
           v40 = *(_DWORD *)(a1 + 112);
           v41 = MEMORY[0xC7F530];
           v67[0] = *(_DWORD *)(a1 + 108);
@@ -30452,7 +30479,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_DWORD *)(*(_DWORD *)v3 + 8) > v15 )
       v14 += v15;
     AnimationCtrl_setRepeat(*v14 + 4, 0);
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_PRE_ACTION", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_PRE_ACTION", 0);
     *(_DWORD *)(a1 + 7772) = 1;
     *(_DWORD *)(a1 + 7648) = *(_DWORD *)(*(_DWORD *)(a1 + 7244) + 160);
     *(_BYTE *)(a1 + 7786) = 0;
@@ -30603,10 +30630,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v26 = v22[17];
         if ( v25 > v26 )
           v24 += v26;
-        if ( sub_60418548(*v24 + 4) == 1 )
+        if ( Float2_equalTest(*v24 + 4) == 1 )
         {
           *(_BYTE *)(a1 + 7786) = 1;
-          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_BOMB_THROW", 0);
+          SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_BOMB_THROW", 0);
           v27 = *(_DWORD *)(a1 + 112);
           v28 = MEMORY[0xC7F530];
           v32 = *(_DWORD *)(a1 + 108);
@@ -30815,9 +30842,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v20 = v16[17];
     if ( v19 > v20 )
       v18 += v20;
-    if ( sub_60418548(*v18 + 4) == 1 )
+    if ( Float2_equalTest(*v18 + 4) == 1 )
     {
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_READY", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_READY", 0);
       LOWORD(v21) = 3285;
   LABEL_23:
       HIWORD(v21) = 256;
@@ -30828,9 +30855,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v23 = *(_DWORD *)(*(_DWORD *)v17 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v17 + 8) > v23 )
       v22 += v23;
-    if ( sub_60418548(*v22 + 4) == 1 )
+    if ( Float2_equalTest(*v22 + 4) == 1 )
     {
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_GO", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_GO", 0);
       LOWORD(v21) = 2231;
       goto LABEL_23;
     }
@@ -30912,7 +30939,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int *v4; // r2
     int v5; // r1
   
-    v2 = sub_6000F7B8();
+    v2 = FixedPoint_atan2();
     a1[1782] = v2;
     v4 = a1 + 1782;
     v5 = 238609294;
@@ -31266,7 +31293,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 7724) = *(float *)(v4 + 108) - *(float *)(a1 + 7132);
       *(float *)(a1 + 7728) = v5;
       *(_DWORD *)(a1 + 7732) = 0;
-      v6 = sub_6000F7B8();
+      v6 = FixedPoint_atan2();
       v8 = v6;
       if ( v6 >= 0x20000000 )
         v8 = 0x20000000;
@@ -31449,7 +31476,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( *(_DWORD *)(*(_DWORD *)v13 + 8) > v102 )
           v101 += v102;
         AnimationCtrl_setRepeat(*v101 + 4, a3);
-        sub_60813430(a1 + 6332, "SE_VOC_JR_PROV2", 0);
+        SoundActor_tryStartSoundIfFree(a1 + 6332, "SE_VOC_JR_PROV2", 0);
         *(_DWORD *)(a1 + 7092) = 16779445;
         return 7092;
       case 3:
@@ -31666,7 +31693,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( *(_DWORD *)(*(_DWORD *)v66 + 8) > v74 )
           v73 += v74;
         AnimationCtrl_setRepeat(*v73 + 4, a3);
-        sub_60813430(v66 - 768, "SE_VOC_JR_AGITATE", 0);
+        SoundActor_tryStartSoundIfFree(v66 - 768, "SE_VOC_JR_AGITATE", 0);
         *(_DWORD *)(v66 - 8) = 16780500;
         return 16780500;
       case 20:
@@ -32777,7 +32804,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BowserJrBase_vf3C0(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_FIRE_DEF", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_DAMAGE_FIRE_DEF",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -33330,31 +33361,31 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
     {
       (*(void (__fastcall **)(_DWORD *, int))(*a1 + 780))(a1, 3);
-      sub_60813430(a1 + 1752, (int)"SE_BOSS_JR_CLOWN_COME_BOXER", 0);
+      SoundActor_tryStartSoundIfFree(a1 + 1752, (int)"SE_BOSS_JR_CLOWN_COME_BOXER", 0);
     }
     v7 = *(_DWORD **)(*v3 + 12);
     v8 = *(_DWORD *)(*v3 + 68);
     if ( *(_DWORD *)(*v3 + 8) > v8 )
       v7 += v8;
-    if ( sub_60418548(*v7 + 4) == 1 )
+    if ( Float2_equalTest(*v7 + 4) == 1 )
       (*(void (__fastcall **)(_DWORD *, int))(*a1 + 780))(a1, 1);
     v9 = *(_DWORD **)(*v3 + 12);
     v10 = *(_DWORD *)(*v3 + 68);
     if ( *(_DWORD *)(*v3 + 8) > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) )
+    if ( Float2_equalTest(*v9 + 4) )
       goto LABEL_15;
     v11 = *(_DWORD **)(*v3 + 12);
     v12 = *(_DWORD *)(*v3 + 68);
     if ( *(_DWORD *)(*v3 + 8) > v12 )
       v11 += v12;
-    if ( sub_60418548(*v11 + 4) == 1 )
+    if ( Float2_equalTest(*v11 + 4) == 1 )
     {
   LABEL_15:
-      sub_60813430(a1 + 1752, (int)"SE_BOSS_JR_CLOWN_PUNCH", 0);
+      SoundActor_tryStartSoundIfFree(a1 + 1752, (int)"SE_BOSS_JR_CLOWN_PUNCH", 0);
       v13 = sub_600D1798(a1);
       v14 = *v13;
       v21 = v13[1];
@@ -33366,7 +33397,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = *(_DWORD *)(*v3 + 68);
     if ( *(_DWORD *)(*v3 + 8) > v16 )
       v15 += v16;
-    if ( sub_60418548(*v15 + 4) == 1 )
+    if ( Float2_equalTest(*v15 + 4) == 1 )
     {
       v17 = sub_600D1798(a1);
       v18 = *v17;
@@ -33505,7 +33536,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 11496) = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31;
         *(_DWORD *)(a1 + 11500) = 0;
         *(_BYTE *)(a1 + 11676) = 1;
-        sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_JAB", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_JAB", 0);
       }
     }
     *(_DWORD *)(a1 + 11492) = v4;
@@ -33552,7 +33583,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         *(_DWORD *)(a1 + 11500) = v2 + 1;
         sub_60045DB4(a1, 3, 0, 1);
-        sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_JAB", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_JAB", 0);
       }
     }
     v6 = *(float *)(MEMORY[0xCC6484] + 112);
@@ -33968,11 +33999,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v24 = *v21 + 4;
         if ( *(_BYTE *)(a1 + 11691) )
         {
-          if ( !sub_60418548(v24) )
+          if ( !Float2_equalTest(v24) )
             goto LABEL_43;
           goto LABEL_42;
         }
-        v32 = sub_60418548(v24);
+        v32 = Float2_equalTest(v24);
         v33 = 1;
         if ( v32 )
           goto LABEL_41;
@@ -33980,15 +34011,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v35 = *(_DWORD *)(*(_DWORD *)v20 + 68);
         if ( *(_DWORD *)(*(_DWORD *)v20 + 8) > v35 )
           v34 += v35;
-        v36 = sub_60418548(*v34 + 4);
+        v36 = Float2_equalTest(*v34 + 4);
         v33 = 0;
         if ( v36 )
         {
   LABEL_41:
           *(_BYTE *)(a1 + 11695) = v33;
   LABEL_42:
-          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_DOUBLE_PUNCH", 0);
-          sub_60813430((_DWORD *)(*(_DWORD *)(a1 + 11456) + 6332), (int)"SE_VOC_JR_JAB_L", 0);
+          SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_DOUBLE_PUNCH", 0);
+          SoundActor_tryStartSoundIfFree((_DWORD *)(*(_DWORD *)(a1 + 11456) + 6332), (int)"SE_VOC_JR_JAB_L", 0);
         }
   LABEL_43:
         v37 = *(_DWORD *)(*(_DWORD *)v20 + 12);
@@ -34164,14 +34195,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v20 = *v17 + 4;
     if ( *(_BYTE *)(a1 + 11691) )
     {
-      result = (int *)sub_60418548(v20);
+      result = (int *)Float2_equalTest(v20);
       if ( result != (int *)1 )
         return result;
       v22 = (_BYTE *)(a1 + 11695);
     }
     else
     {
-      v23 = sub_60418548(v20);
+      v23 = Float2_equalTest(v20);
       v24 = 1;
       if ( !v23 )
       {
@@ -34179,7 +34210,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v26 = *(_DWORD *)(*(_DWORD *)v16 + 68);
         if ( *(_DWORD *)(*(_DWORD *)v16 + 8) > v26 )
           v25 += v26;
-        result = (int *)sub_60418548(*v25 + 4);
+        result = (int *)Float2_equalTest(*v25 + 4);
         v24 = 0;
         if ( !result )
           return result;
@@ -34187,19 +34218,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_BYTE *)(a1 + 11695) = v24;
       v22 = (_BYTE *)(a1 + 11695);
     }
-    sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_DOUBLE_PUNCH", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_DOUBLE_PUNCH", 0);
     result = (int *)(unsigned __int8)*v22;
     if ( result == (int *)1 )
     {
       v27 = (_DWORD *)(*(_DWORD *)(a1 + 11456) + 6332);
       v28 = "SE_VOC_JR_JAB_R";
-      return sub_60813430(v27, (int)v28, 0);
+      return SoundActor_tryStartSoundIfFree(v27, (int)v28, 0);
     }
     if ( !*v22 )
     {
       v27 = (_DWORD *)(*(_DWORD *)(a1 + 11456) + 6332);
       v28 = "SE_VOC_JR_JAB_L";
-      return sub_60813430(v27, (int)v28, 0);
+      return SoundActor_tryStartSoundIfFree(v27, (int)v28, 0);
     }
     return result;
   }
@@ -34533,7 +34564,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             ++v10;
           }
           while ( v10 != 15 );
-          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_POSE", 0);
+          SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_POSE", 0);
           *v5 = 3;
           v13 = *(void (**)(void))(**(_DWORD **)(a1 + 11456) + 192);
           goto LABEL_21;
@@ -35102,7 +35133,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_WORD *)(a1 + 6278) = 5;
         v7 = (_DWORD *)(a1 + 7008);
   LABEL_18:
-        sub_60813430(v7, (int)"SE_BOSS_JR_CLOWN_PUNCH_REVERSE", 0);
+        SoundActor_tryStartSoundIfFree(v7, (int)"SE_BOSS_JR_CLOWN_PUNCH_REVERSE", 0);
         goto LABEL_19;
       }
       v13 = a1;
@@ -35256,7 +35287,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10 = *(_DWORD **)(v8 + 12);
         if ( v9 > 1 )
           ++v10;
-        if ( sub_60418548(*v10 + 4) == 1 )
+        if ( Float2_equalTest(*v10 + 4) == 1 )
           (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 780))(a1, 3);
       }
       v11 = *(_DWORD *)(a1 + 6304);
@@ -35324,7 +35355,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = *(float *)(v18 + 20);
     if ( *v4 >= 2 && !*(_BYTE *)(a1 + 11684) )
     {
-      if ( sub_60418548(v18 + 4) == 1 )
+      if ( Float2_equalTest(v18 + 4) == 1 )
       {
         v30 = *(_DWORD *)(a1 + 11552);
         if ( v30 < 1 )
@@ -35433,9 +35464,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v56 = *(_DWORD **)(*(_DWORD *)v15 + 12);
       if ( *(_DWORD *)(*(_DWORD *)v15 + 8) > 1u )
         ++v56;
-      if ( sub_60418548(*v56 + 4) == 1 )
+      if ( Float2_equalTest(*v56 + 4) == 1 )
       {
-        sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_PUNCH_REVERSE_FAST", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_PUNCH_REVERSE_FAST", 0);
         v57 = *(_DWORD *)(a1 + 11580);
         v63[0] = *(_DWORD *)(a1 + 11576);
         v63[1] = v57;
@@ -35736,7 +35767,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = (float *)(a1 + 11788);
     v3 = (float *)(a1 + 112);
-    sub_60832560((float *)(a1 + 112));
+    Float_clampWithSign((float *)(a1 + 112));
     v4 = (int *)(a1 + 11492);
     switch ( *(_DWORD *)(a1 + 11492) )
     {
@@ -35880,7 +35911,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v12 = v9[17];
         if ( v11 > v12 )
           v10 += v12;
-        if ( sub_60418548(*v10 + 4) == 1 )
+        if ( Float2_equalTest(*v10 + 4) == 1 )
         {
           *(_BYTE *)(*(_DWORD *)(*(_DWORD *)(a1 + 11456) + 7916) + 6351) = 1;
           *(_WORD *)(a1 + 6278) = 35;
@@ -36258,7 +36289,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 11144) = v6;
       *(float *)(a1 + 11148) = v7;
       *(_DWORD *)(a1 + 11152) = v5;
-      v8 = sub_6000F7B8();
+      v8 = FixedPoint_atan2();
       *(_DWORD *)(a1 + 11428) = v8;
       v9 = (_DWORD *)(a1 + 11428);
       if ( v8 <= 83513261 )
@@ -36296,7 +36327,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         *v11 = 238609280;
       }
-      sub_6000F7B8();
+      FixedPoint_atan2();
       *(_DWORD *)(a1 + 11420) = 0;
       if ( *(_BYTE *)(a1 + 11796) )
       {
@@ -37517,13 +37548,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v20 = *v17;
       if ( v12 )
       {
-        if ( !sub_60418548(v20 + 4) )
+        if ( !Float2_equalTest(v20 + 4) )
         {
           v21 = *(_DWORD **)(*(_DWORD *)v16 + 12);
           v22 = *(_DWORD *)(*(_DWORD *)v16 + 68);
           if ( *(_DWORD *)(*(_DWORD *)v16 + 8) > v22 )
             v21 += v22;
-          if ( sub_60418548(*v21 + 4) != 1 )
+          if ( Float2_equalTest(*v21 + 4) != 1 )
             goto LABEL_41;
         }
         goto LABEL_40;
@@ -40070,7 +40101,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = -238609294;
     v3 = *(float *)(*(_DWORD *)(*(_DWORD *)(a1 + 11456) + 7912) + 7624) - *(float *)(a1 + 108);
-    v4 = sub_6000F7B8() > 0xE38E38D;
+    v4 = FixedPoint_atan2() > 0xE38E38D;
     v5 = -238609294;
     if ( v4 )
       v5 = 238609294;
@@ -40103,7 +40134,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       *v7 = v8;
     }
-    if ( sub_6000F7B8() > 0xE38E38D )
+    if ( FixedPoint_atan2() > 0xE38E38D )
       v2 = 238609294;
     *(_DWORD *)(a1 + 11420) = v2;
     v13 = -*(_DWORD *)(a1 + 11800);
@@ -40686,7 +40717,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     sub_60045DB4(a1, 28, 0, 1);
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 780))(a1, 3);
-    sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_COME_BOXER", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_COME_BOXER", 0);
     *(_DWORD *)(a1 + 156) = 0;
     *(_DWORD *)(a1 + 160) = 0;
     *(_DWORD *)(a1 + 164) = 0;
@@ -40783,22 +40814,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = v4[17];
       if ( v7 > v8 )
         v6 += v8;
-      if ( sub_60418548(*v6 + 4) == 1 )
+      if ( Float2_equalTest(*v6 + 4) == 1 )
         (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 780))(a1, 1);
       v9 = *(_DWORD **)(*(_DWORD *)v5 + 12);
       v10 = *(_DWORD *)(*(_DWORD *)v5 + 68);
       if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v10 )
         v9 += v10;
-      if ( sub_60418548(*v9 + 4) )
+      if ( Float2_equalTest(*v9 + 4) )
         goto LABEL_13;
       v11 = *(_DWORD **)(*(_DWORD *)v5 + 12);
       v12 = *(_DWORD *)(*(_DWORD *)v5 + 68);
       if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v12 )
         v11 += v12;
-      if ( sub_60418548(*v11 + 4) == 1 )
+      if ( Float2_equalTest(*v11 + 4) == 1 )
       {
   LABEL_13:
-        sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_PUNCH", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_PUNCH", 0);
         v13 = sub_600D1798((_DWORD *)a1);
         v14 = *v13;
         v25 = v13[1];
@@ -40823,7 +40854,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( v16 > v17 )
         v15 += v17;
-      result = sub_60418548(*v15 + 4);
+      result = Float2_equalTest(*v15 + 4);
       if ( result == 1 )
       {
         v19 = sub_600D1798((_DWORD *)a1);
@@ -43291,7 +43322,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = v2[17];
       if ( v5 > v6 )
         v4 += v6;
-      if ( sub_60418548(*v4 + 4) == 1 )
+      if ( Float2_equalTest(*v4 + 4) == 1 )
       {
         (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1140))(a1);
       }
@@ -43301,7 +43332,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v8 = *(_DWORD *)(*(_DWORD *)v3 + 68);
         if ( *(_DWORD *)(*(_DWORD *)v3 + 8) > v8 )
           v7 += v8;
-        if ( sub_60418548(*v7 + 4) == 1 )
+        if ( Float2_equalTest(*v7 + 4) == 1 )
           (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1144))(a1);
       }
     }
@@ -43320,13 +43351,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v15 = v11[17];
       if ( v14 > v15 )
         v13 += v15;
-      if ( sub_60418548(*v13 + 4) )
+      if ( Float2_equalTest(*v13 + 4) )
         goto LABEL_18;
       v16 = *(_DWORD **)(*(_DWORD *)v12 + 12);
       v17 = *(_DWORD *)(*(_DWORD *)v12 + 68);
       if ( *(_DWORD *)(*(_DWORD *)v12 + 8) > v17 )
         v16 += v17;
-      result = sub_60418548(*v16 + 4);
+      result = Float2_equalTest(*v16 + 4);
       if ( result == 1 )
       {
   LABEL_18:
@@ -43522,7 +43553,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v11 = 12321336;
       v12 = "run2";
-      sub_60421AD4(v4, &v11, 1);
+      dispatch_forwardThisSecondWord(v4, &v11, 1);
       v5 = 0;
     }
     else
@@ -43530,7 +43561,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = 1;
       v11 = 12321336;
       v12 = "run1";
-      sub_60421AD4(v4, &v11, 1);
+      dispatch_forwardThisSecondWord(v4, &v11, 1);
     }
     *(_BYTE *)(a1 + 7944) = v5;
     v10[0] = 12321336;
@@ -43603,13 +43634,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = *(_DWORD *)(*v2 + 68);
       if ( *(_DWORD *)(*v2 + 8) > v4 )
         v3 += v4;
-      if ( sub_60418548(*v3 + 4) )
+      if ( Float2_equalTest(*v3 + 4) )
         goto LABEL_12;
       v5 = *(_DWORD **)(*v2 + 12);
       v6 = *(_DWORD *)(*v2 + 68);
       if ( *(_DWORD *)(*v2 + 8) > v6 )
         v5 += v6;
-      if ( sub_60418548(*v5 + 4) == 1 )
+      if ( Float2_equalTest(*v5 + 4) == 1 )
       {
   LABEL_12:
         a1[31] = 1082130432;
@@ -43679,7 +43710,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           v16 = 12321336;
           v17 = "run1";
-          sub_60421AD4(v12, &v16, 1);
+          dispatch_forwardThisSecondWord(v12, &v16, 1);
           *v11 = 1;
         }
         goto LABEL_39;
@@ -43696,7 +43727,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v16 = 12321336;
       v17 = "run2";
-      sub_60421AD4(v12, &v16, 1);
+      dispatch_forwardThisSecondWord(v12, &v16, 1);
       *v11 = 0;
     }
   LABEL_39:
@@ -43735,7 +43766,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6.n64_u32[1] = *(_DWORD *)(*(_DWORD *)v5 + 24);
     v10[0] = 12321336;
     v10[1] = "run1";
-    sub_60421AD4(v3, v10, 1);
+    dispatch_forwardThisSecondWord(v3, v10, 1);
     v9[0] = 12321336;
     v9[1] = "run";
     ((void (__fastcall *)(int, _DWORD *, int, int))sub_60051794)(a1, v9, 1, v7);
@@ -44129,7 +44160,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf474(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_FOOT_L", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_FOOT_L",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44138,7 +44173,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf478(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_FOOT_R", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_FOOT_R",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44147,7 +44186,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf47C(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 7528), (int)"SE_EMY_BUNBUN_MAWASU_TATE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 7528),
+             (int)"SE_EMY_BUNBUN_MAWASU_TATE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44165,7 +44208,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf484(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_STOMPED", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_STOMPED",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44174,7 +44221,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf488(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_FUKKATSU", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_FUKKATSU",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44183,7 +44234,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf48C(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_FALL", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_FALL",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44192,7 +44247,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf490(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_CRASH", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_CRASH",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44201,7 +44260,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf494(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_DEMO_INTRODUCE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BUN_DEMO_INTRODUCE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44210,7 +44273,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf498(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_DOWN_JUMP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BUN_DOWN_JUMP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44219,7 +44286,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf49C(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_RCV_SHAKE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BUN_RCV_SHAKE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44228,7 +44299,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf4A0(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_RCV_JUMP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BUN_RCV_JUMP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44237,7 +44312,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf4A4(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_ATTACKSIGN", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BUN_ATTACKSIGN",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44246,7 +44325,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf4A8(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_JUMP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BUN_JUMP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44255,7 +44338,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf4AC(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_DAMAGE_L", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BUN_DAMAGE_L",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44264,7 +44351,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf4B0(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_DAMAGE_S", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BUN_DAMAGE_S",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44273,7 +44364,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall BoomBoomBase_vf4B4(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_LOSE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BUN_LOSE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -44500,7 +44595,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = 12321336;
     v6[1] = "demo_battleA_st_wait";
     v1 = a1 + 7204;
-    sub_60421AD4(*(_DWORD *)(a1 + 7204), v6, 0);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7204), v6, 0);
     v5[0] = 12321336;
     v5[1] = "demo_battleA_st_wait";
     v2 = **(_DWORD **)(*(_DWORD *)v1 + 36);
@@ -45442,7 +45537,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60051780(int a1, int a2, int a3)
   {
-    return sub_60421AD4(*(_DWORD *)(a1 + 7204), a2, a3);
+    return dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7204), a2, a3);
   }
 
 /* ============================================================================
@@ -46239,7 +46334,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = 12321336;
     v6[1] = "demo_battleA_st";
     v1 = a1 + 7204;
-    sub_60421AD4(*(_DWORD *)(a1 + 7204), v6, 0);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7204), v6, 0);
     v5[0] = 12321336;
     v5[1] = "demo_battleA_st";
     v2 = **(_DWORD **)(*(_DWORD *)v1 + 36);
@@ -46284,13 +46379,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v4 )
       v3 += v4;
-    if ( sub_60418548(*v3 + 4) == 1 )
-      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_DEMO_APPEAR", *(__int16 *)(a1 + 6640), 0);
+    if ( Float2_equalTest(*v3 + 4) == 1 )
+      SoundActor_tryStartSoundIfFree4(
+        (_DWORD *)(a1 + 6332),
+        (int)"SE_VOC_BUN_DEMO_APPEAR",
+        *(__int16 *)(a1 + 6640),
+        0);
     v5 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v6 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v6 )
       v5 += v6;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
     {
       v7 = *(_DWORD *)(a1 + 112);
       v11[0] = *(_DWORD *)(a1 + 108);
@@ -46329,7 +46428,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = 12321336;
     v6[1] = "demo_battleA";
     v1 = a1 + 7204;
-    sub_60421AD4(*(_DWORD *)(a1 + 7204), v6, 0);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7204), v6, 0);
     v5[0] = 12321336;
     v5[1] = "demo_battleA";
     v2 = **(_DWORD **)(*(_DWORD *)v1 + 36);
@@ -46387,25 +46486,25 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = (*v2)[17];
     if ( (*v2)[2] > v4 )
       v3 += v4;
-    if ( sub_60418548(*v3 + 4) == 1 )
+    if ( Float2_equalTest(*v3 + 4) == 1 )
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1172))(a1);
     v5 = (_DWORD *)(*v2)[3];
     v6 = (*v2)[17];
     if ( (*v2)[2] > v6 )
       v5 += v6;
-    if ( sub_60418548(*v5 + 4) )
+    if ( Float2_equalTest(*v5 + 4) )
       goto LABEL_14;
     v7 = (_DWORD *)(*v2)[3];
     v8 = (*v2)[17];
     if ( (*v2)[2] > v8 )
       v7 += v8;
-    if ( sub_60418548(*v7 + 4) )
+    if ( Float2_equalTest(*v7 + 4) )
       goto LABEL_14;
     v9 = (_DWORD *)(*v2)[3];
     v10 = (*v2)[17];
     if ( (*v2)[2] > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) == 1 )
+    if ( Float2_equalTest(*v9 + 4) == 1 )
     {
   LABEL_14:
       v11 = **v2;
@@ -46423,19 +46522,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15 = (*v2)[17];
     if ( (*v2)[2] > v15 )
       v14 += v15;
-    if ( sub_60418548(*v14 + 4) )
+    if ( Float2_equalTest(*v14 + 4) )
       goto LABEL_24;
     v16 = (_DWORD *)(*v2)[3];
     v17 = (*v2)[17];
     if ( (*v2)[2] > v17 )
       v16 += v17;
-    if ( sub_60418548(*v16 + 4) )
+    if ( Float2_equalTest(*v16 + 4) )
       goto LABEL_24;
     v18 = (_DWORD *)(*v2)[3];
     v19 = (*v2)[17];
     if ( (*v2)[2] > v19 )
       v18 += v19;
-    if ( sub_60418548(*v18 + 4) == 1 )
+    if ( Float2_equalTest(*v18 + 4) == 1 )
     {
   LABEL_24:
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1120))(a1);
@@ -46471,7 +46570,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = 12321336;
     v6[1] = "wait";
     v1 = a1 + 7204;
-    sub_60421AD4(*(_DWORD *)(a1 + 7204), v6, 1);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7204), v6, 1);
     v5[0] = 12321336;
     v5[1] = "wait";
     v2 = **(_DWORD **)(*(_DWORD *)v1 + 36);
@@ -46619,7 +46718,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = 12321336;
     v6[1] = "return";
     v1 = (_DWORD *)(a1 + 7204);
-    sub_60421AD4(*(_DWORD *)(a1 + 7204), v6, 0);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7204), v6, 0);
     v5[0] = 12321336;
     v5[1] = "return";
     v2 = **(_DWORD **)(*v1 + 36);
@@ -46690,7 +46789,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
     {
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1180))(a1);
     }
@@ -46700,7 +46799,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = *(_DWORD *)(*(_DWORD *)v3 + 68);
       if ( *(_DWORD *)(*(_DWORD *)v3 + 8) > v9 )
         v8 += v9;
-      if ( sub_60418548(*v8 + 4) == 1 )
+      if ( Float2_equalTest(*v8 + 4) == 1 )
         (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1184))(a1);
     }
     v10 = *(_DWORD **)(*(_DWORD *)v3 + 12);
@@ -46733,7 +46832,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v11 > v12 )
       v10 += v12;
-    if ( sub_60418548(*v10 + 4) == 1 )
+    if ( Float2_equalTest(*v10 + 4) == 1 )
     {
       *(_DWORD *)(a1 + 304) = 0;
       *(_DWORD *)(a1 + 308) = 1099327078;
@@ -47256,7 +47355,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       dword_60C80878 = MEMORY[0xAF37D8];
       _cxa_guard_release_0(&unk_60C80860);
     }
-    v3 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(
+    v3 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(
                                                 MEMORY[0xC7B400],
                                                 *((_DWORD *)&unk_60C80860 + *(_DWORD *)(a1 + 6124) + 1));
     if ( _cxa_guard_acquire_0(13087588) )
@@ -47347,7 +47446,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC7F70C] = 12320992;
       _cxa_guard_release_0(13104912);
     }
-    return a2 == 13104908 || sub_60027FB0(a2);
+    return a2 == 13104908 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -48356,7 +48455,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = (*v2)[17];
     if ( (*v2)[2] > v4 )
       v3 += v4;
-    if ( sub_60418548(*v3 + 4) == 1 )
+    if ( Float2_equalTest(*v3 + 4) == 1 )
       (*(void (__fastcall **)(int *))(*a1 + 1172))(a1);
     v5 = (*v2)[3];
     v6 = (*v2)[17];
@@ -48382,13 +48481,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = (*v2)[17];
     if ( (*v2)[2] > v12 )
       v11 += v12;
-    if ( sub_60418548(*v11 + 4) )
+    if ( Float2_equalTest(*v11 + 4) )
       goto LABEL_20;
     v13 = (_DWORD *)(*v2)[3];
     v14 = (*v2)[17];
     if ( (*v2)[2] > v14 )
       v13 += v14;
-    if ( sub_60418548(*v13 + 4) == 1 )
+    if ( Float2_equalTest(*v13 + 4) == 1 )
     {
   LABEL_20:
       (*(void (__fastcall **)(int *))(*a1 + 1120))(a1);
@@ -48398,7 +48497,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = (*v2)[17];
     if ( (*v2)[2] > v16 )
       v15 += v16;
-    if ( sub_60418548(*v15 + 4) == 1 )
+    if ( Float2_equalTest(*v15 + 4) == 1 )
     {
       face_1_ref((int)a1, v20);
       sub_602375C4((int32x4_t *)(a1 + 1865), 1205, v20, 0, 0);
@@ -48987,7 +49086,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_VOC_BUN_DEMO_INTRODUCE_BUN2_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_DEMO_INTRODUCE_BUN2", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BUN_DEMO_INTRODUCE_BUN2",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -48996,7 +49099,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_LAND_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_LAND", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_LAND",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -49584,39 +49691,39 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v4 )
       v3 += v4;
-    if ( sub_60418548(*v3 + 4) == 1 )
+    if ( Float2_equalTest(*v3 + 4) == 1 )
       (*(void (__fastcall **)(int *))(*a1 + 1172))(a1);
     v5 = *(_DWORD **)(*v2 + 12);
     v6 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v6 )
       v5 += v6;
-    if ( sub_60418548(*v5 + 4) )
+    if ( Float2_equalTest(*v5 + 4) )
       goto LABEL_11;
     v7 = *(_DWORD **)(*v2 + 12);
     v8 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v8 )
       v7 += v8;
-    if ( sub_60418548(*v7 + 4) == 1 )
+    if ( Float2_equalTest(*v7 + 4) == 1 )
   LABEL_11:
       (*(void (__fastcall **)(int *))(*a1 + 1324))(a1);
     v9 = *(_DWORD **)(*v2 + 12);
     v10 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) )
+    if ( Float2_equalTest(*v9 + 4) )
       goto LABEL_18;
     v11 = *(_DWORD **)(*v2 + 12);
     v12 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v12 )
       v11 += v12;
-    if ( sub_60418548(*v11 + 4) == 1 )
+    if ( Float2_equalTest(*v11 + 4) == 1 )
   LABEL_18:
       (*(void (__fastcall **)(int *))(*a1 + 1120))(a1);
     v13 = *(_DWORD **)(*v2 + 12);
     v14 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v14 )
       v13 += v14;
-    if ( sub_60418548(*v13 + 4) == 1 )
+    if ( Float2_equalTest(*v13 + 4) == 1 )
     {
       face_1_ref((int)a1, v18);
       sub_602375C4((int32x4_t *)(a1 + 1865), 1205, v18, 0, 0);
@@ -49687,7 +49794,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[1801];
     v4[0] = 12321336;
     v4[1] = "jump_st";
-    result = sub_60421AD4(v2, v4, 0);
+    result = dispatch_forwardThisSecondWord(v2, v4, 0);
     a1[31] = 0;
     a1[25] = 0;
     return result;
@@ -49762,7 +49869,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = (float *)(a1 + 7204);
     v10[0] = 12321336;
     v10[1] = "jumpA";
-    sub_60421AD4(v6, v10, 0);
+    dispatch_forwardThisSecondWord(v6, v10, 0);
     v7 = *(_DWORD *)(*(_DWORD *)v5 + 12);
     v8 = *(_DWORD *)(*(_DWORD *)v5 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v8 )
@@ -49818,7 +49925,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[1801];
     v4[0] = 12321336;
     v4[1] = "jump_ed";
-    sub_60421AD4(v2, v4, 0);
+    dispatch_forwardThisSecondWord(v2, v4, 0);
     result = (*(int (__fastcall **)(_DWORD *))(*a1 + 1120))(a1);
     a1[30] = 0;
     a1[31] = 0;
@@ -49960,7 +50067,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_STOMPED_WATER_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_STOMPED_WATER", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_STOMPED_WATER",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -49969,7 +50080,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_FUKKATSU_WATER_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_FUKKATSU_WATER", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_FUKKATSU_WATER",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -49978,7 +50093,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_FALL_WATER_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_FALL_WATER", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_FALL_WATER",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -49987,7 +50106,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_LAND_WATER_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_LAND_WATER", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_LAND_WATER",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -50005,7 +50128,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_JUMP_WATER_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_JUMP_WATER", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_JUMP_WATER",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -50439,7 +50566,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_STOMPED_ICE_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_STOMPED_ICE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_STOMPED_ICE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -50448,7 +50579,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_FUKKATSU_ICE_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_FUKKATSU_ICE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_FUKKATSU_ICE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -50457,7 +50592,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_FALL_ICE_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_FALL_ICE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_FALL_ICE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -50466,7 +50605,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_LAND_ICE_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_LAND_ICE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_LAND_ICE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -50475,7 +50618,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_JUMP_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_JUMP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_JUMP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51142,7 +51289,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(MEMORY[0xC7B420] + 24);
     if ( v2 )
       (*(void (__fastcall **)(int))(*(_DWORD *)v2 + 240))(v2);
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_MAGIC_STOCK", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_MAGIC_STOCK",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51182,19 +51333,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v4 )
       v3 += v4;
-    if ( sub_60418548(*v3 + 4) == 1 )
-      sub_608134CC(a1 + 1583, (int)"SE_EMY_BUNBUN_W5_BECOME_BIG", *((__int16 *)a1 + 3320), 0);
+    if ( Float2_equalTest(*v3 + 4) == 1 )
+      SoundActor_tryStartSoundIfFree4(a1 + 1583, (int)"SE_EMY_BUNBUN_W5_BECOME_BIG", *((__int16 *)a1 + 3320), 0);
     v5 = *(_DWORD **)(*v2 + 12);
     v6 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v6 )
       v5 += v6;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
       EffectData_setEffectId((int)(a1 + 2262), 1177);
     v7 = *(_DWORD **)(*v2 + 12);
     v8 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v8 )
       v7 += v8;
-    if ( sub_60418548(*v7 + 4) == 1 )
+    if ( Float2_equalTest(*v7 + 4) == 1 )
     {
       face_1_ref((int)a1, v16);
       sub_602375C4((int32x4_t *)(a1 + 1865), 1206, v16, 0, 0);
@@ -51203,7 +51354,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) == 1 )
+    if ( Float2_equalTest(*v9 + 4) == 1 )
       (*(void (__fastcall **)(_DWORD *))(*a1 + 1172))(a1);
     v11 = *(_DWORD *)(*v2 + 12);
     v12 = *(_DWORD *)(*v2 + 68);
@@ -51317,7 +51468,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 = a1;
     spin_jump_ed_ref(a1);
     AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 6, 1, 0, 0);
-    sub_60813430((_DWORD *)(v1 + 6332), (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(v1 + 6332), (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", 0);
     v1 += 8744;
     v2 = MEMORY[0xC88234];
     ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], v1);
@@ -51344,7 +51495,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = v2[17];
     if ( v4 > v5 )
       v3 += v5;
-    result = sub_60418548(*v3 + 4);
+    result = Float2_equalTest(*v3 + 4);
     if ( result == 1 )
     {
       *(_DWORD *)(a1 + 312) = 1104674816;
@@ -51361,7 +51512,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     jump_ed_ref(a1);
     AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 6, 1, 0, 0);
-    return sub_60813430(a1 + 1583, (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", 0);
+    return SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", 0);
   }
 
 /* ============================================================================
@@ -51455,7 +51606,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_BIG_FOOT_L_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_BIG_FOOT_L", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_BIG_FOOT_L",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51464,7 +51619,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_BIG_FOOT_R_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_BIG_FOOT_R", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_BIG_FOOT_R",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51473,7 +51632,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_BIG_MAWASU_TATE_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 7528), (int)"SE_EMY_BUNBUN_BIG_MAWASU_TATE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 7528),
+             (int)"SE_EMY_BUNBUN_BIG_MAWASU_TATE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51491,7 +51654,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_BIG_STOMPED_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_BIG_STOMPED", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_BIG_STOMPED",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51500,7 +51667,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_BIG_FUKKATSU_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_BIG_FUKKATSU", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_BIG_FUKKATSU",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51509,7 +51680,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_BIG_FALL_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_BIG_FALL", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_BIG_FALL",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51518,7 +51693,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_BIG_CRASH_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_BIG_CRASH", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_BIG_CRASH",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51527,7 +51706,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_VOC_BIGBUN_DEMO_INTRODUCE_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BIGBUN_DEMO_INTRODUCE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BIGBUN_DEMO_INTRODUCE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51536,7 +51719,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_VOC_BIGBUN_DOWN_JUMP_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BIGBUN_DOWN_JUMP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BIGBUN_DOWN_JUMP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51545,7 +51732,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_VOC_BIGBUN_RCV_SHAKE_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BIGBUN_RCV_SHAKE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BIGBUN_RCV_SHAKE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51554,7 +51745,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_VOC_BIGBUN_RCV_JUMP_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BIGBUN_RCV_JUMP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BIGBUN_RCV_JUMP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51563,7 +51758,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_VOC_BIGBUN_ATTACKSIGN_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BIGBUN_ATTACKSIGN", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BIGBUN_ATTACKSIGN",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51572,7 +51771,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_VOC_BIGBUN_JUMP_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BIGBUN_JUMP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BIGBUN_JUMP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51581,7 +51784,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_VOC_BIGBUN_DAMAGE_L_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BIGBUN_DAMAGE_L", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BIGBUN_DAMAGE_L",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51590,7 +51797,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_VOC_BIGBUN_DAMAGE_S_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BIGBUN_DAMAGE_S", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BIGBUN_DAMAGE_S",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51599,7 +51810,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_VOC_BIGBUN_LOSE_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BIGBUN_LOSE", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_BIGBUN_LOSE",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51608,7 +51823,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_BIG_LAND_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_BIG_LAND", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_BIG_LAND",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51617,7 +51836,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_EMY_BUNBUN_BIG_JUMP_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_BIG_JUMP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_BIG_JUMP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -51827,14 +52050,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *((_DWORD *)a1 + 1801);
     v15 = 1.7266e-38;
     v16 = COERCE_FLOAT("fly_wait");
-    sub_60421AD4(v3, &v15, 1);
+    dispatch_forwardThisSecondWord(v3, &v15, 1);
     v14[0] = 12321336;
     v14[1] = "fly_wait";
     sub_60051794((int)a1, (int)v14, 1);
     v4 = *((_DWORD *)a1 + 1959);
     v15 = 1.7266e-38;
     v16 = COERCE_FLOAT("fly_wing_wait");
-    sub_60421AD4(v4, &v15, 1);
+    dispatch_forwardThisSecondWord(v4, &v15, 1);
     (*(void (__fastcall **)(float *))(*(_DWORD *)a1 + 1188))(a1);
     StageActor::distanceToPlayer(a1, (int)&v15);
     if ( *((_DWORD *)a1 + 1965) == 1 && (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 724))(a1) == 1 )
@@ -51905,11 +52128,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_BYTE *)(a1 + 7936) )
       {
         v7 = 0;
-        sub_608134CC(v6, (int)"SE_EMY_BUNBUN_WING1", v5, 0);
+        SoundActor_tryStartSoundIfFree4(v6, (int)"SE_EMY_BUNBUN_WING1", v5, 0);
       }
       else
       {
-        sub_608134CC(v6, (int)"SE_EMY_BUNBUN_WING2", v5, 0);
+        SoundActor_tryStartSoundIfFree4(v6, (int)"SE_EMY_BUNBUN_WING2", v5, 0);
         v7 = 1;
       }
       *(_BYTE *)(a1 + 7936) = v7;
@@ -51923,8 +52146,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       *(_DWORD *)(a1 + 120) = 0;
     }
-    sub_60832560((float *)(a1 + 120));
-    sub_60832560((float *)(a1 + 124));
+    Float_clampWithSign((float *)(a1 + 120));
+    Float_clampWithSign((float *)(a1 + 124));
     CollisionActor::handleSpeed(a1);
     result = sub_6005EAFC(a1, *(_DWORD *)(a1 + 80), v9, v10);
     v12 = *(unsigned __int16 *)(a1 + 6276) == 0;
@@ -51959,11 +52182,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7204);
     v10 = 12321336;
     v11 = "fly_attack";
-    sub_60421AD4(v2, &v10, 1);
+    dispatch_forwardThisSecondWord(v2, &v10, 1);
     v3 = *(_DWORD *)(a1 + 7836);
     v10 = 12321336;
     v11 = "fly_wing_attack";
-    sub_60421AD4(v3, &v10, 1);
+    dispatch_forwardThisSecondWord(v3, &v10, 1);
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 716))(a1)
       || (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 720))(a1) == 1 )
     {
@@ -51985,7 +52208,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 136) = -(float)(v4 * v8);
     *(_DWORD *)(a1 + 140) = 0;
     *(_WORD *)(a1 + 6276) = (int)v4;
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_FLYING_SLOW", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_FLYING_SLOW",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -52012,11 +52239,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7204);
     v13 = 12321336;
     v14 = "fly_wait";
-    sub_60421AD4(v2, &v13, 1);
+    dispatch_forwardThisSecondWord(v2, &v13, 1);
     v3 = *(_DWORD *)(a1 + 7836);
     v13 = 12321336;
     v14 = "fly_wing_wait";
-    sub_60421AD4(v3, &v13, 1);
+    dispatch_forwardThisSecondWord(v3, &v13, 1);
     v4 = *(float *)(a1 + 7856) + 112.0;
     *(float *)(a1 + 7892) = v4;
     v5 = *(_DWORD *)(a1 + 116);
@@ -52079,14 +52306,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 7204);
     v10 = 12321336;
     v11 = "fly_wait";
-    sub_60421AD4(v3, &v10, 1);
+    dispatch_forwardThisSecondWord(v3, &v10, 1);
     v9[0] = 12321336;
     v9[1] = "fly_wait";
     sub_60051794(a1, (int)v9, 1);
     v4 = *(_DWORD *)(a1 + 7836);
     v10 = 12321336;
     v11 = "fly_wing_wait";
-    sub_60421AD4(v4, &v10, 1);
+    dispatch_forwardThisSecondWord(v4, &v10, 1);
     *(_DWORD *)(a1 + 120) = 0;
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 128) = 0;
@@ -52147,11 +52374,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_BYTE *)(a1 + 7936) )
       {
         v7 = 0;
-        sub_608134CC(v6, (int)"SE_EMY_BUNBUN_WING1", v5, 0);
+        SoundActor_tryStartSoundIfFree4(v6, (int)"SE_EMY_BUNBUN_WING1", v5, 0);
       }
       else
       {
-        sub_608134CC(v6, (int)"SE_EMY_BUNBUN_WING2", v5, 0);
+        SoundActor_tryStartSoundIfFree4(v6, (int)"SE_EMY_BUNBUN_WING2", v5, 0);
         v7 = 1;
       }
       *(_BYTE *)(a1 + 7936) = v7;
@@ -52428,7 +52655,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 120) = (float)(*(float *)(a1 + 7876) - *(float *)(a1 + 108)) / v2;
     *(_WORD *)(a1 + 6276) = (int)v2;
     *(_DWORD *)(a1 + 7912) = 0;
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_FLYING_FAST", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_EMY_BUNBUN_FLYING_FAST",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -52471,11 +52702,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v23 = 12321336;
       v24 = "fly_attack2";
-      sub_60421AD4(v2, &v23, 1);
+      dispatch_forwardThisSecondWord(v2, &v23, 1);
       v6 = *((_DWORD *)a1 + 1959);
       v23 = 12321336;
       v24 = "fly_wing_attack2";
-      sub_60421AD4(v6, &v23, 1);
+      dispatch_forwardThisSecondWord(v6, &v23, 1);
       *((_DWORD *)a1 + 1978) = 0;
     }
     else
@@ -52492,11 +52723,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = *((_DWORD *)a1 + 1801);
     v23 = 12321336;
     v24 = "fly_attack";
-    sub_60421AD4(v7, &v23, 1);
+    dispatch_forwardThisSecondWord(v7, &v23, 1);
     v8 = *((_DWORD *)a1 + 1959);
     v23 = 12321336;
     v24 = "fly_wing_attack";
-    sub_60421AD4(v8, &v23, 1);
+    dispatch_forwardThisSecondWord(v8, &v23, 1);
   LABEL_11:
     CollisionMgr_process(a1 + 648);
     v9 = *((_DWORD *)a1 + 718);
@@ -52578,11 +52809,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7204);
     v11 = 12321336;
     v12 = "fly_wait";
-    sub_60421AD4(v2, &v11, 1);
+    dispatch_forwardThisSecondWord(v2, &v11, 1);
     v3 = *(_DWORD *)(a1 + 7836);
     v11 = 12321336;
     v12 = "fly_wing_wait";
-    sub_60421AD4(v3, &v11, 1);
+    dispatch_forwardThisSecondWord(v3, &v11, 1);
     *(float *)(a1 + 7892) = *(float *)(a1 + 7856) + 112.0;
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 716))(a1)
       || (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 720))(a1) == 1 )
@@ -52657,11 +52888,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_BYTE *)(a1 + 7936) )
       {
         v7 = 0;
-        sub_608134CC(v6, (int)"SE_EMY_BUNBUN_WING1", v5, 0);
+        SoundActor_tryStartSoundIfFree4(v6, (int)"SE_EMY_BUNBUN_WING1", v5, 0);
       }
       else
       {
-        sub_608134CC(v6, (int)"SE_EMY_BUNBUN_WING2", v5, 0);
+        SoundActor_tryStartSoundIfFree4(v6, (int)"SE_EMY_BUNBUN_WING2", v5, 0);
         v7 = 1;
       }
       *(_BYTE *)(a1 + 7936) = v7;
@@ -52765,7 +52996,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 = *(_DWORD *)(a1 + 7204);
       v15 = 12321336;
       v16 = "fly_wait";
-      sub_60421AD4(v7, &v15, 1);
+      dispatch_forwardThisSecondWord(v7, &v15, 1);
       v14[0] = 12321336;
       v14[1] = "fly_wait";
       sub_60051794(a1, (int)v14, 1);
@@ -52773,7 +53004,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = *(_DWORD *)(a1 + 7836);
       v15 = 12321336;
       v16 = "fly_wing_wait";
-      sub_60421AD4(v9, &v15, 1);
+      dispatch_forwardThisSecondWord(v9, &v15, 1);
       *(_DWORD *)(a1 + 7920) = 0;
       v10 = (*(int (__fastcall **)(_DWORD))(*(_DWORD *)*v3 + 8))(*v3);
       if ( v10 == (*(int (**)(void))(MEMORY[0xC80DD0] + 8))()
@@ -52872,11 +53103,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_BYTE *)(a1 + 7936) )
       {
         v9 = 0;
-        sub_608134CC(v8, (int)"SE_EMY_BUNBUN_WING1", v7, 0);
+        SoundActor_tryStartSoundIfFree4(v8, (int)"SE_EMY_BUNBUN_WING1", v7, 0);
       }
       else
       {
-        sub_608134CC(v8, (int)"SE_EMY_BUNBUN_WING2", v7, 0);
+        SoundActor_tryStartSoundIfFree4(v8, (int)"SE_EMY_BUNBUN_WING2", v7, 0);
         v9 = 1;
       }
       *(_BYTE *)(a1 + 7936) = v9;
@@ -53111,11 +53342,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_BYTE *)(a1 + 7936) )
       {
         v7 = 0;
-        sub_608134CC(v6, (int)"SE_EMY_BUNBUN_WING1", v5, 0);
+        SoundActor_tryStartSoundIfFree4(v6, (int)"SE_EMY_BUNBUN_WING1", v5, 0);
       }
       else
       {
-        sub_608134CC(v6, (int)"SE_EMY_BUNBUN_WING2", v5, 0);
+        SoundActor_tryStartSoundIfFree4(v6, (int)"SE_EMY_BUNBUN_WING2", v5, 0);
         v7 = 1;
       }
       *(_BYTE *)(a1 + 7936) = v7;
@@ -53358,7 +53589,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v21; // [sp+8h] [bp-8h] BYREF
   
     StageActor::distanceToPlayer((float *)a1, (int)&v21);
-    v2 = sub_6000F7B8();
+    v2 = FixedPoint_atan2();
     *(_DWORD *)(a1 + 7932) = v2;
     v3 = (int *)(a1 + 7932);
     v4 = dword_60C80F08;
@@ -53404,7 +53635,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v6 <= v9 )
         *v7 = v9;
     }
-    v10 = (int)(float)((float)(int)sub_6000F7B8() * 0.4);
+    v10 = (int)(float)((float)(int)FixedPoint_atan2() * 0.4);
     *(_DWORD *)(a1 + 7924) = v10;
     v12 = (int *)(a1 + 7924);
     v13 = dword_60C80F00;
@@ -53723,11 +53954,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_BYTE *)(a1 + 7936) )
       {
         v7 = 0;
-        sub_608134CC(v6, (int)"SE_EMY_BUNBUN_WING1", v5, 0);
+        SoundActor_tryStartSoundIfFree4(v6, (int)"SE_EMY_BUNBUN_WING1", v5, 0);
       }
       else
       {
-        sub_608134CC(v6, (int)"SE_EMY_BUNBUN_WING2", v5, 0);
+        SoundActor_tryStartSoundIfFree4(v6, (int)"SE_EMY_BUNBUN_WING2", v5, 0);
         v7 = 1;
       }
       *(_BYTE *)(a1 + 7936) = v7;
@@ -53778,7 +54009,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(MEMORY[0xC7B420] + 24);
     if ( v3 )
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 240))(v3);
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_MAGIC_STOCK", *(__int16 *)(a1 + 6640), 0);
+    SoundActor_tryStartSoundIfFree4(
+      (_DWORD *)(a1 + 6332),
+      (int)"SE_EMY_BUNBUN_MAGIC_STOCK",
+      *(__int16 *)(a1 + 6640),
+      0);
     *(_DWORD *)(a1 + 120) = 0;
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 128) = 0;
@@ -53837,10 +54072,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
     {
       sub_6005251C(a1);
-      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_BUNBUN_W6_TRANSFORM", *(__int16 *)(a1 + 6640), 0);
+      SoundActor_tryStartSoundIfFree4(
+        (_DWORD *)(a1 + 6332),
+        (int)"SE_EMY_BUNBUN_W6_TRANSFORM",
+        *(__int16 *)(a1 + 6640),
+        0);
     }
     v8 = (_DWORD *)(a1 + 7844);
     result = *(_DWORD *)(a1 + 7844);
@@ -53901,7 +54140,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = *v20;
         if ( *(float *)(*v20 + 20) >= 97.0 )
         {
-          sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_BUN_CHANGE_WING", *(__int16 *)(a1 + 6640), 0);
+          SoundActor_tryStartSoundIfFree4(
+            (_DWORD *)(a1 + 6332),
+            (int)"SE_VOC_BUN_CHANGE_WING",
+            *(__int16 *)(a1 + 6640),
+            0);
           *v8 = 3;
           result = 3;
         }
@@ -54586,27 +54829,27 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_AGITATE_KAMECK", 0);
+    if ( Float2_equalTest(*v4 + 4) == 1 )
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_AGITATE_KAMECK", 0);
     v7 = *(_DWORD **)(*(_DWORD *)v3 + 12);
     v8 = *(_DWORD *)(*(_DWORD *)v3 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v3 + 8) > v8 )
       v7 += v8;
-    if ( sub_60418548(*v7 + 4) == 1 )
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_TALK_KMC1", 0);
+    if ( Float2_equalTest(*v7 + 4) == 1 )
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_TALK_KMC1", 0);
     v9 = *(_DWORD **)(*(_DWORD *)v3 + 12);
     v10 = *(_DWORD *)(*(_DWORD *)v3 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v3 + 8) > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) == 1 )
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_TALK_KMC2", 0);
+    if ( Float2_equalTest(*v9 + 4) == 1 )
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_TALK_KMC2", 0);
     v11 = *(_DWORD **)(*(_DWORD *)v3 + 12);
     v12 = *(_DWORD *)(*(_DWORD *)v3 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v3 + 8) > v12 )
       v11 += v12;
-    result = (int *)sub_60418548(*v11 + 4);
+    result = (int *)Float2_equalTest(*v11 + 4);
     if ( result == (int *)1 )
-      return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_TALK_KMC3", 0);
+      return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_TALK_KMC3", 0);
     return result;
   }
 
@@ -55147,7 +55390,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
     {
       v7 = a1[28];
       v8 = MEMORY[0xC7F534];
@@ -55194,7 +55437,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v10 > v11 )
       v9 += v11;
-    if ( sub_60418548(*v9 + 4) == 1 )
+    if ( Float2_equalTest(*v9 + 4) == 1 )
     {
       v21 = *(float *)a1;
       v22 = 1;
@@ -55206,7 +55449,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v24 = *(_DWORD *)(*v3 + 68);
     if ( *(_DWORD *)(*v3 + 8) > v24 )
       v23 += v24;
-    if ( sub_60418548(*v23 + 4) == 1 )
+    if ( Float2_equalTest(*v23 + 4) == 1 )
     {
       v21 = *(float *)a1;
       v22 = 0;
@@ -56326,7 +56569,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = Enemy::vfC8(a1, a2, a3);
     if ( v4 == 1 )
     {
-      v5 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+      v5 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
       if ( _cxa_guard_acquire_0(13111556) )
       {
         MEMORY[0xC81100] = 12347112;
@@ -56731,7 +56974,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v4 )
       v3 += v4;
-    if ( sub_60418548(*v3 + 4) == 1 )
+    if ( Float2_equalTest(*v3 + 4) == 1 )
     {
       v5 = MEMORY[0xC7F530];
       v6 = a1[1529];
@@ -56744,7 +56987,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v8 )
       v7 += v8;
-    if ( sub_60418548(*v7 + 4) == 1 )
+    if ( Float2_equalTest(*v7 + 4) == 1 )
     {
       v9 = a1[1532];
       v10 = MEMORY[0xC7F530];
@@ -56861,7 +57104,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v4 )
       v3 += v4;
-    if ( sub_60418548(*v3 + 4) == 1 )
+    if ( Float2_equalTest(*v3 + 4) == 1 )
     {
       v5 = MEMORY[0xC7F530];
       v6 = *(float *)(a1 + 6116);
@@ -57281,7 +57524,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC811F4] = 12320992;
       _cxa_guard_release_0(13111800);
     }
-    return a2 == 13111796 || sub_60027FB0(a2);
+    return a2 == 13111796 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -57779,7 +58022,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8127C] = 12320992;
       _cxa_guard_release_0(13111936);
     }
-    return a2 == 13111932 || sub_60027FB0(a2);
+    return a2 == 13111932 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -58075,14 +58318,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 += 4 * v8;
     *(_DWORD *)(*(_DWORD *)v7 + 24) = 1065353216;
     AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 21, 3, 0, 0);
-    sub_60813430((_DWORD *)(v3 - 780), (int)"SE_BOSS_KOOPA_L_LAND", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(v3 - 780), (int)"SE_BOSS_KOOPA_L_LAND", 0);
     v9 = *(const char **)(v3 - 7000);
     v14 = *(_DWORD *)(v3 - 7004);
     v15 = v9;
     v16 = 1166843904;
     EffectData_create(1097, (int)&v14, 0, v3 - 6968);
     *(_DWORD *)(v3 - 6988) = 0;
-    v10 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v10 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     result = _cxa_guard_acquire_0(13111556);
     if ( result )
     {
@@ -58204,8 +58447,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v4 )
       v3 += v4;
-    if ( sub_60418548(*v3 + 4) == 1 )
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_SHOUT", 0);
+    if ( Float2_equalTest(*v3 + 4) == 1 )
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_SHOUT", 0);
     v5 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v6 = *(_DWORD *)(*(_DWORD *)v2 + 8);
     v7 = *(_DWORD *)(*(_DWORD *)v2 + 68);
@@ -58222,13 +58465,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v6 > v7 )
       v5 += v7;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
       AreaRumbleMgr_rumble2(MEMORY[0xC99E3C], 7, 3, 0);
     v10 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v11 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v11 )
       v10 += v11;
-    if ( sub_60418548(*v10 + 4) == 1 )
+    if ( Float2_equalTest(*v10 + 4) == 1 )
       sub_60400BE4(MEMORY[0xC99E3C]);
     v12 = *(_DWORD *)(*(_DWORD *)v2 + 12);
     v13 = *(_DWORD *)(*(_DWORD *)v2 + 68);
@@ -58304,7 +58547,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = *(_DWORD *)(*(_DWORD *)v2 + 68);
       if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v5 )
         v4 += v5;
-      result = sub_60418548(*v4 + 4);
+      result = Float2_equalTest(*v4 + 4);
       if ( result == 1 )
       {
         *(_DWORD *)(a1 + 25360) = 1;
@@ -58462,7 +58705,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // t1
   
     *(_BYTE *)(a1 + 25365) = 1;
-    v1 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v1 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     result = _cxa_guard_acquire_0(13111556);
     if ( result )
     {
@@ -58504,7 +58747,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v11[2]; // [sp+0h] [bp-10h] BYREF
     _DWORD v12[2]; // [sp+8h] [bp-8h] BYREF
   
-    v2 = *(void (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v2 = *(void (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     if ( _cxa_guard_acquire_0(13111556) )
     {
       MEMORY[0xC81100] = 12347112;
@@ -58584,7 +58827,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(v1 - 1748) = 0;
     *(v1 - 1747) = 0;
     *(v1 - 1746) = 0;
-    sub_60813430(v1 - 195, (int)"SE_BOSS_KOOPA_L_LAND", 0);
+    SoundActor_tryStartSoundIfFree(v1 - 195, (int)"SE_BOSS_KOOPA_L_LAND", 0);
     v11 = (const char *)*(v1 - 1750);
     v14 = *(v1 - 1751);
     v15 = v11;
@@ -58945,14 +59188,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = (*v2)[17];
     if ( (*v2)[2] > v6 )
       v5 += v6;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
     {
       v7 = (int *)(a1 + 25372);
       v8 = *(_DWORD *)(a1 + 25372);
       if ( v8 == 15 )
       {
         AreaRumbleMgr_rumble2(MEMORY[0xC99E3C], 2, 3, 0);
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_SHOUT2", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_SHOUT2", 0);
         *(_DWORD *)(a1 + 25380) = 288;
         v8 = *v7;
       }
@@ -58981,7 +59224,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = (*v2)[17];
     if ( (*v2)[2] > v12 )
       v11 += v12;
-    if ( sub_60418548(*v11 + 4) == 1 )
+    if ( Float2_equalTest(*v11 + 4) == 1 )
     {
       EffectData_setEffectId(a1 + 25804, 1100);
       *(_BYTE *)(a1 + 25892) = 1;
@@ -58990,7 +59233,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = (*v2)[17];
     if ( (*v2)[2] > v14 )
       v13 += v14;
-    if ( sub_60418548(*v13 + 4) == 1 )
+    if ( Float2_equalTest(*v13 + 4) == 1 )
       *(_BYTE *)(a1 + 25892) = 0;
     v15 = (*v2)[3];
     v16 = (*v2)[2];
@@ -59080,7 +59323,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // t1
   
     *(_BYTE *)(a1 + 25365) = 1;
-    v1 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v1 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     result = _cxa_guard_acquire_0(13111556);
     if ( result )
     {
@@ -59203,7 +59446,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v6 )
       v5 += v6;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
     {
       AreaRumbleMgr_rumble2(MEMORY[0xC99E3C], 2, 3, 0);
       EffectData_setEffectId((int)(a1 + 12700), 600);
@@ -59218,14 +59461,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v10 = a1 + 3166;
       v11 = "SE_VOC_KP_L_SHOUT_BURNER";
   LABEL_13:
-      sub_60813430(v10, (int)v11, 0);
+      SoundActor_tryStartSoundIfFree(v10, (int)v11, 0);
       goto LABEL_14;
     }
     v12 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v13 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v13 )
       v12 += v13;
-    if ( sub_60418548(*v12 + 4) == 1 )
+    if ( Float2_equalTest(*v12 + 4) == 1 )
     {
       sub_60400BE4(MEMORY[0xC99E3C]);
       EffectData_release((int)(a1 + 12692));
@@ -59423,7 +59666,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         moveValueTo((int *)(a1 + 160), v26, &v25, 11773060);
       }
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v8 = *(float *)((((unsigned int)dword_60C81770 >> 20) & 0xFF0) + 0xB3A484)
          + (float)((float)((float)(dword_60C81770 & 0xFFFFFF)
@@ -59459,11 +59702,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_60072C54(a1) == 1 )
     {
       AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 1, 0, 0);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_FOOT", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_FOOT", 0);
       if ( sub_60072C54(a1) == 1 )
         EffectData_create(1096, a1 + 7512, 0, a1 + 144);
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       (*(void (__fastcall **)(_DWORD, _DWORD, int *))(***(_DWORD ***)v2 + 108))(
         **(_DWORD **)v2,
@@ -59471,7 +59714,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v26);
       sub_60237610(a1 + 25596, 591, (int)v26, 1);
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       (*(void (__fastcall **)(_DWORD, _DWORD, int *))(***(_DWORD ***)v2 + 108))(
         **(_DWORD **)v2,
@@ -59479,7 +59722,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v26);
       sub_60237610(a1 + 25660, 591, (int)v26, 1);
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v10 = MEMORY[0xC88234];
       if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 10964)
@@ -59488,7 +59731,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         ActiveColliderMgr_addToCreateList(v10, a1 + 10964);
       }
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v11 = MEMORY[0xC88234];
       if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 11268)
@@ -59497,21 +59740,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         ActiveColliderMgr_addToCreateList(v11, a1 + 11268);
       }
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v12 = MEMORY[0xC88234];
       ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], a1 + 10964);
       ActiveColldierMgr_removeFromCreateList(v12, a1 + 10964);
       ActiveColldierMgr_removeFromList3(v12, a1 + 10964);
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v13 = MEMORY[0xC88234];
       ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], a1 + 11268);
       ActiveColldierMgr_removeFromCreateList(v13, a1 + 11268);
       ActiveColldierMgr_removeFromList3(v13, a1 + 11268);
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v14 = MEMORY[0xC88234];
       ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], a1 + 7620);
@@ -59519,7 +59762,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       ActiveColldierMgr_removeFromList3(v14, a1 + 7620);
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 24296));
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v15 = MEMORY[0xC88234];
       if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 7620)
@@ -59529,25 +59772,25 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       ColliderMgr_add(MEMORY[0xC8820C], (_DWORD *)(a1 + 24296));
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v16 = (_DWORD *)(a1 + 6332);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_SWING1", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_SWING1", 0);
     }
     else
     {
-      if ( sub_60418548(v7) != 1 )
+      if ( Float2_equalTest(v7) != 1 )
         goto LABEL_49;
       v16 = (_DWORD *)(a1 + 6332);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_SWING2", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_SWING2", 0);
     }
-    sub_60813430(v16, (int)"SE_BOSS_KOOPA_ATTACK", 0);
+    SoundActor_tryStartSoundIfFree(v16, (int)"SE_BOSS_KOOPA_ATTACK", 0);
   LABEL_49:
     sub_6007446C(a1);
     v26[0] = 0;
     if ( *(_DWORD *)(a1 + 25368) <= 3u )
     {
-      v18 = sub_6000F7B8();
+      v18 = FixedPoint_atan2();
       v20 = v18 < 0;
       v26[0] = v18;
       if ( v18 < 0 )
@@ -59672,7 +59915,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                                                            * *(float *)(((*(_DWORD *)(a1 + 160) >> 20) & 0xFF0) + 0xB3A488))
                                                    * 0.000000059605)));
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       *(float *)(a1 + 104) = *(float *)(a1 + 120) / 26.0;
       *(_DWORD *)(a1 + 132) = 0;
@@ -59680,29 +59923,29 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_60072C54(a1) == 1 )
     {
       AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 21, 3, 0, 0);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_FOOT", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_FOOT", 0);
       v8 = *(_DWORD *)(a1 + 112);
       v17[0] = *(_DWORD *)(a1 + 7512);
       v17[1] = v8;
       v17[2] = 1166843904;
       EffectData_create(1101, (int)v17, 0, a1 + 144);
     }
-    if ( sub_60418548(v7) || sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) || Float2_equalTest(v7) == 1 )
     {
       v9 = (_DWORD *)(a1 + 6332);
       v10 = "SE_VOC_KP_L_STAMPSIGN";
   LABEL_16:
-      sub_60813430(v9, (int)v10, 0);
+      SoundActor_tryStartSoundIfFree(v9, (int)v10, 0);
       goto LABEL_17;
     }
-    if ( sub_60418548(v7) || sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) || Float2_equalTest(v7) == 1 )
     {
       v9 = (_DWORD *)(a1 + 6332);
       v10 = "SE_VOC_KP_L_STAMP";
       goto LABEL_16;
     }
   LABEL_17:
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v11 = a1 + 10356;
   LABEL_23:
@@ -59711,7 +59954,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         ActiveColliderMgr_addToCreateList(v13, v11);
       goto LABEL_26;
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v12 = MEMORY[0xC88234];
       ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], a1 + 10356);
@@ -59719,7 +59962,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       ActiveColldierMgr_removeFromList3(v12, a1 + 10356);
       goto LABEL_26;
     }
-    if ( sub_60418548(v7) == 1 )
+    if ( Float2_equalTest(v7) == 1 )
     {
       v11 = a1 + 10356;
       goto LABEL_23;
@@ -59960,7 +60203,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 7144) |= 2u;
     *(_DWORD *)(a1 + 26108) = 0;
     *(_BYTE *)(a1 + 25365) = 0;
-    v9 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v9 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     if ( _cxa_guard_acquire_0(13111556) )
     {
       MEMORY[0xC81100] = 12347112;
@@ -59970,7 +60213,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_BYTE *)(v9 + 15262) = 1;
     *(_QWORD *)(a1 + 120) = 0x40C0000000000000LL;
     *(_DWORD *)(a1 + 100) = -1102263091;
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_SHELL_IN", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_SHELL_IN", 0);
   }
 
 /* ============================================================================
@@ -60071,7 +60314,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8[1] = v5;
       v8[2] = 1166843904;
       EffectData_create(1102, (int)v8, 0, a1 + 144);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_SHELL_LAND", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_SHELL_LAND", 0);
       v6 = *(_DWORD *)(a1 + 26112);
       result = v6 - 1;
       *(_DWORD *)(a1 + 26112) = v6 - 1;
@@ -60167,7 +60410,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v26 = v4;
         v27 = 1166843904;
         EffectData_create(1102, (int)&v25, 0, a1 + 144);
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_SHELL_LAND", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_SHELL_LAND", 0);
       }
       *(_DWORD *)(a1 + 124) = 0;
       v5 = *(_DWORD *)(a1 + 112);
@@ -60436,7 +60679,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     SkeletalAnim_play(**(_DWORD **)(v10 + 12), v8, v12);
     AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v9 + 12) + 4, 0);
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v9 + 12) + 24) = 1065353216;
-    return sub_60813430((_DWORD *)(v9 - 784), (int)"SE_BOSS_KOOPA_L_SHELL_OUT", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)(v9 - 784), (int)"SE_BOSS_KOOPA_L_SHELL_OUT", 0);
   }
 
 /* ============================================================================
@@ -60472,13 +60715,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v5 )
       v4 += v5;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
       *(_DWORD *)(a1 + 7144) |= 1u;
     v6 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v7 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v7 )
       v6 += v7;
-    if ( sub_60418548(*v6 + 4) == 1 )
+    if ( Float2_equalTest(*v6 + 4) == 1 )
     {
       *(_DWORD *)(a1 + 7144) &= ~2u;
       sub_600758EC(a1);
@@ -60591,7 +60834,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     AnimationCtrl_setRepeat(**(_DWORD **)(*v3 + 20) + 4, 0);
     *(_DWORD *)(**(_DWORD **)(*v3 + 20) + 24) = 1065353216;
     AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 1, 0, 0);
-    return sub_60813430(v3 - 195, (int)"SE_BOSS_KOOPA_L_FOOT", 0);
+    return SoundActor_tryStartSoundIfFree(v3 - 195, (int)"SE_BOSS_KOOPA_L_FOOT", 0);
   }
 
 /* ============================================================================
@@ -60661,7 +60904,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     TexAnim_play(**(_DWORD **)(*(_DWORD *)v3 + 20), v8, v11);
     AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v3 + 20) + 4, 0);
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v3 + 20) + 24) = 1065353216;
-    v9 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3880]);
+    v9 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3880]);
     if ( _cxa_guard_acquire_0(13113184) )
     {
       MEMORY[0xC8175C] = 12349076;
@@ -62441,7 +62684,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           if ( (**(int (__fastcall ***)(int, int))v6)(v6, 13087600) == 1 )
           {
-            v9 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+            v9 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
             if ( _cxa_guard_acquire_0(13111556) )
             {
               MEMORY[0xC81100] = 12347112;
@@ -62512,7 +62755,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v9 = (char)v8;
           *(_WORD *)(a1 + 2 * v9 + 6140) = 32;
           (*(void (__fastcall **)(unsigned __int8 *, int, _DWORD))(*(_DWORD *)v4 + 1172))(v4, a1, 0);
-          v10 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+          v10 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
           result = _cxa_guard_acquire_0(13111556);
           if ( result )
           {
@@ -62749,7 +62992,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 v64[0] = v59 - (float)(v54 * 16.0);
                 v64[1] = v60 - (float)(v53 * 16.0);
                 EffectData_create(1146, (int)v64, 0, 0);
-                sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_PLY_TOUCH_KOOPA", 0);
+                SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_PLY_TOUCH_KOOPA", 0);
               }
               *(float *)(v8 + 15244) = v54 * 6.0;
               *(float *)(v8 + 15248) = v53 * 6.0;
@@ -63294,7 +63537,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v12 = v9[17];
       if ( v11 > v12 )
         v10 += v12;
-      if ( sub_60418548(*v10 + 4) == 1 )
+      if ( Float2_equalTest(*v10 + 4) == 1 )
       {
   LABEL_7:
         v13 = 7444;
@@ -63316,7 +63559,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v17 > v18 )
         v16 += v18;
       v19 = 0;
-      if ( sub_60418548(*v16 + 4) == 1 )
+      if ( Float2_equalTest(*v16 + 4) == 1 )
         goto LABEL_12;
       return v19;
     }
@@ -63330,7 +63573,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v28 = v25[17];
       if ( v27 > v28 )
         v26 += v28;
-      if ( sub_60418548(*v26 + 4) == 1 )
+      if ( Float2_equalTest(*v26 + 4) == 1 )
         goto LABEL_7;
       v15 = *(_DWORD **)(a1 + 7112);
       goto LABEL_9;
@@ -63347,13 +63590,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v35 = v31[17];
     if ( v34 > v35 )
       v33 += v35;
-    if ( sub_60418548(*v33 + 4) == 1 )
+    if ( Float2_equalTest(*v33 + 4) == 1 )
       goto LABEL_7;
     v36 = *(_DWORD **)(*(_DWORD *)v32 + 12);
     v37 = *(_DWORD *)(*(_DWORD *)v32 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v32 + 8) > v37 )
       v36 += v37;
-    if ( sub_60418548(*v36 + 4) == 1 )
+    if ( Float2_equalTest(*v36 + 4) == 1 )
     {
   LABEL_12:
       v13 = 7420;
@@ -63432,7 +63675,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xC7B400];
     if ( MEMORY[0xC7B400] && *(float *)(a1 + 12) < (float)(*(float *)(a1 + 16) * 0.7) )
     {
-      v3 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+      v3 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
       result = _cxa_guard_acquire_0(13113144);
       if ( result )
       {
@@ -64020,7 +64263,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r6
     int v5; // [sp+0h] [bp-8h] BYREF
   
-    v2 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v2 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     if ( _cxa_guard_acquire_0(13111556) )
     {
       MEMORY[0xC81100] = 12347112;
@@ -64426,7 +64669,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     signed int v10; // [sp+4h] [bp-4h] BYREF
   
     v10 = 0;
-    v2 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v2 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     if ( _cxa_guard_acquire_0(13111556) )
     {
       MEMORY[0xC81100] = 12347112;
@@ -64434,7 +64677,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v2 && (**(int (__fastcall ***)(int, int))v2)(v2, 13111552) == 1 && *(_DWORD *)(v2 + 15240) <= 3u )
     {
-      v4 = sub_6000F7B8();
+      v4 = FixedPoint_atan2();
       v10 = v4;
       v5 = dword_60C81788;
       v6 = v4 < dword_60C81788;
@@ -64527,7 +64770,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v13 != (*(int (**)(void))(MEMORY[0xC813CC] + 8))() )
         goto LABEL_23;
     }
-    v14 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v14 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     if ( _cxa_guard_acquire_0(13111556) )
     {
       MEMORY[0xC81100] = 12347112;
@@ -65042,16 +65285,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[1575] % a1[1576];
     v3 = v2 + a2;
     if ( v2 <= 50 && v3 >= 51 )
-      return sub_60813430(a1 + 1583, "SE_VOC_KP_L_DAMAGE_FIRST", 0);
+      return SoundActor_tryStartSoundIfFree(a1 + 1583, "SE_VOC_KP_L_DAMAGE_FIRST", 0);
     if ( v2 <= 40 && v3 >= 41 )
-      return sub_60813430(a1 + 1583, "SE_VOC_KP_L_DAMAGE_SECOND", 0);
+      return SoundActor_tryStartSoundIfFree(a1 + 1583, "SE_VOC_KP_L_DAMAGE_SECOND", 0);
     if ( v2 <= 30 && v3 >= 31 )
-      return sub_60813430(a1 + 1583, "SE_VOC_KP_L_DAMAGE_THERD", 0);
+      return SoundActor_tryStartSoundIfFree(a1 + 1583, "SE_VOC_KP_L_DAMAGE_THERD", 0);
     if ( v2 <= 20 && v3 >= 21 )
-      return sub_60813430(a1 + 1583, "SE_VOC_KP_L_DAMAGE_FOURTH", 0);
+      return SoundActor_tryStartSoundIfFree(a1 + 1583, "SE_VOC_KP_L_DAMAGE_FOURTH", 0);
     if ( v2 > 10 || v3 < 11 )
       return (*(int (__fastcall **)(_DWORD *))(*a1 + 984))(a1);
-    return sub_60813430(a1 + 1583, "SE_VOC_KP_L_DAMAGE_FIFTH", 0);
+    return SoundActor_tryStartSoundIfFree(a1 + 1583, "SE_VOC_KP_L_DAMAGE_FIFTH", 0);
   }
 
 /* ============================================================================
@@ -65496,7 +65739,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return 1;
       }
     }
-    v4 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v4 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     if ( _cxa_guard_acquire_0(13111556) )
     {
       MEMORY[0xC81100] = 12347112;
@@ -65717,7 +65960,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v5; // r0
     int v6; // r4
   
-    v0 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v0 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     if ( _cxa_guard_acquire_0(13111556) )
     {
       MEMORY[0xC81100] = 12347112;
@@ -65885,7 +66128,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = -dword_60C81770;
     if ( *(_DWORD *)(a1 + 160) == v4 )
       return sub_60077DC8(a1);
-    v6 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+    v6 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
     if ( _cxa_guard_acquire_0(13111556) )
     {
       MEMORY[0xC81100] = 12347112;
@@ -66041,7 +66284,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         goto LABEL_70;
       }
-      v8 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+      v8 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
       if ( _cxa_guard_acquire_0(13111556) )
       {
         MEMORY[0xC81100] = 12347112;
@@ -66049,7 +66292,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( v8 && (**(int (__fastcall ***)(int, int))v8)(v8, 13111552) == 1 && *(_DWORD *)(v8 + 15240) <= 3u )
       {
-        v9 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+        v9 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
         if ( _cxa_guard_acquire_0(13111556) )
         {
           MEMORY[0xC81100] = 12347112;
@@ -66277,29 +66520,29 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 += v4;
     v5 = *v3;
     v6 = *v3 + 4;
-    if ( sub_60418548(v6) == 1 )
+    if ( Float2_equalTest(v6) == 1 )
     {
       AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 1, 0, 0);
-      sub_60813430(a1 + 1583, (int)"SE_BOSS_KOOPA_L_FOOT", 0);
+      SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_BOSS_KOOPA_L_FOOT", 0);
     }
-    if ( sub_60418548(v6) == 1 )
+    if ( Float2_equalTest(v6) == 1 )
     {
       AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 1, 0, 0);
-      sub_60813430(a1 + 1583, (int)"SE_BOSS_KOOPA_L_FOOT", 0);
+      SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_BOSS_KOOPA_L_FOOT", 0);
     }
-    if ( sub_60418548(v6) == 1 )
+    if ( Float2_equalTest(v6) == 1 )
     {
       AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 1, 0, 0);
-      sub_60813430(a1 + 1583, (int)"SE_BOSS_KOOPA_L_FOOT", 0);
+      SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_BOSS_KOOPA_L_FOOT", 0);
     }
-    if ( sub_60418548(v6) == 1 )
-      sub_60813430(a1 + 1583, (int)"SE_VOC_KP_L_FALLING", 0);
-    if ( sub_60418548(v6) == 1 )
+    if ( Float2_equalTest(v6) == 1 )
+      SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_VOC_KP_L_FALLING", 0);
+    if ( Float2_equalTest(v6) == 1 )
       AreaRumbleMgr_rumble2(MEMORY[0xC99E3C], 8, 3, 0);
-    if ( sub_60418548(v6) == 1 )
+    if ( Float2_equalTest(v6) == 1 )
       sub_60400BE4(MEMORY[0xC99E3C]);
-    if ( sub_60418548(v6) == 1 )
-      sub_60813430(a1 + 1583, (int)"SE_VOC_KP_L_LAST_DAMAGE", 0);
+    if ( Float2_equalTest(v6) == 1 )
+      SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_VOC_KP_L_LAST_DAMAGE", 0);
     result = *(unsigned __int8 *)(v5 + 28);
     if ( (result & 0x20) != 0 )
       return (*(int (__fastcall **)(_DWORD *, int))(*a1 + 192))(a1, 13113040);
@@ -66343,7 +66586,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_WORD *)(a1 + 6278) == 1 )
     {
       AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 3, 0, 0);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_CRASH", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_L_CRASH", 0);
       v2 = *(_DWORD *)(MEMORY[0xC7B420] + 24);
       if ( _cxa_guard_acquire_0(13111808) )
       {
@@ -66556,7 +66799,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ActiveCollider_dtor(a1 + 1981);
     ActiveCollider_dtor(a1 + 1905);
     a1[1773] = 12348984;
-    sub_60002B6C(a1 + 1773);
+    ActorMgr_unregisterIfActive(a1 + 1773);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1773));
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
@@ -66833,7 +67076,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall FinalBowser_vf3A8(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_STOMPED", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_STOMPED",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -66860,7 +67107,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall FinalBowser_vf3D8(int a1)
   {
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_DAMAGE_S", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_DAMAGE_S", 0);
   }
 
 /* ============================================================================
@@ -66869,7 +67116,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall FinalBowser_vf3DC(int a1)
   {
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_DAMAGE", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_L_DAMAGE", 0);
   }
 
 /* ============================================================================
@@ -66913,7 +67160,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   struct sead_IDisposer *__fastcall sub_600794F8(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12348984;
-    sub_60002B6C((int)a1);
+    ActorMgr_unregisterIfActive((int)a1);
     return sead::IDisposer::~IDisposer(a1);
   }
 
@@ -66926,7 +67173,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12348984;
-    sub_60002B6C((int)a1);
+    ActorMgr_unregisterIfActive((int)a1);
     v2 = sead::IDisposer::~IDisposer(a1);
     return operator delete((int)v2);
   }
@@ -67458,7 +67705,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int (__fastcall ***v0)(_DWORD, int); // r4
     int result; // r0
   
-    v0 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3880]);
+    v0 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3880]);
     if ( _cxa_guard_acquire_0(13087588) )
     {
       MEMORY[0xC7B360] = 12320920;
@@ -67729,7 +67976,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_BYTE *)(MEMORY[0xC9CF0C] + 1393) = 1;
     *(_DWORD *)(MEMORY[0xCC436C] + 140) = -1;
     v2 = MEMORY[0xCC6484];
-    v3 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v3 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     if ( _cxa_guard_acquire_0(13113144) )
     {
       MEMORY[0xC81734] = 12328872;
@@ -67828,7 +68075,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC7F70C] = 12320992;
       _cxa_guard_release_0(13104912);
     }
-    return a2 == 13104908 || sub_60027FB0(a2);
+    return a2 == 13104908 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -67939,7 +68186,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = (float *)(a1 + 6352);
     v3 = *(float *)(a1 + 112);
-    sub_60832560((float *)(a1 + 112));
+    Float_clampWithSign((float *)(a1 + 112));
     v4 = *(float *)(a1 + 112);
     *(float *)(a1 + 124) = v4 - v3;
     if ( v4 <= (float)(*v2 + 0.1) && *(float *)(a1 + 588) > (float)(*v2 + -0.1) )
@@ -67964,7 +68211,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13[1] = v9;
     mapPositionToScreen(v12, v13);
     SE_EMY_LIFT_LINE_MOVE_ref_2(v8, (int)"SE_BOSS_KOOPA_L_FIRE_CONTINUE", v10, v12, 0, 0);
-    *(_DWORD *)(a1 + 164) = sub_6000F7B8() - 0x40000000;
+    *(_DWORD *)(a1 + 164) = FixedPoint_atan2() - 0x40000000;
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_802A0((_DWORD *)a1);
     return StageActor::cullCheck(a1, 4);
@@ -68795,7 +69042,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           if ( (**(int (__fastcall ***)(int, int))v6)(v6, 13087600) == 1 )
           {
-            v9 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+            v9 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
             if ( _cxa_guard_acquire_0(13111556) )
             {
               MEMORY[0xC81100] = 12347112;
@@ -68855,7 +69102,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = 0;
     if ( *(_DWORD *)(a1 + 6344) > 3u )
       return v2;
-    v2 = sub_6000F7B8();
+    v2 = FixedPoint_atan2();
     v3 = *(_DWORD *)(a1 + 56);
     if ( _cxa_guard_acquire_0(13087588) )
     {
@@ -69007,7 +69254,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC81920] = 12320992;
       _cxa_guard_release_0(13113636);
     }
-    return a2 == 13113632 || sub_60027FB0(a2);
+    return a2 == 13113632 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -69746,7 +69993,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (**(int (__fastcall ***)(int, int))v3)(v3, 13111552) == 1 )
         (*(void (__fastcall **)(int, int))(*(_DWORD *)v3 + 192))(v3, 13115392);
     }
-    v4 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v4 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     if ( _cxa_guard_acquire_0(13113144) )
     {
       MEMORY[0xC81734] = 12328872;
@@ -69869,7 +70116,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           (*(void (__fastcall **)(int, int))(*(_DWORD *)v4 + 192))(v4, 13131412);
       }
       (*(void (__fastcall **)(_DWORD *, int))(*a1 + 192))(a1, 13123912);
-      v5 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+      v5 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
       result = _cxa_guard_acquire_0(13113144);
       if ( result )
       {
@@ -69999,14 +70246,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = v3[17];
     if ( v6 > v7 )
       v5 += v7;
-    if ( sub_60418548(*v5 + 4) == 1 )
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_DOWN_LAND1", 0);
+    if ( Float2_equalTest(*v5 + 4) == 1 )
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_DOWN_LAND1", 0);
     v8 = *(_DWORD **)(*(_DWORD *)v4 + 12);
     v9 = *(_DWORD *)(*(_DWORD *)v4 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v4 + 8) > v9 )
       v8 += v9;
-    if ( sub_60418548(*v8 + 4) == 1 )
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_DOWN_LAND2", 0);
+    if ( Float2_equalTest(*v8 + 4) == 1 )
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_DOWN_LAND2", 0);
     if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
     {
       v10 = sub_6014B69C(v2);
@@ -70075,7 +70322,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v13[1] = v2;
         v13[2] = 1166843904;
         EffectData_create(1080, (int)v13, 0, 0);
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_LAND", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_LAND", 0);
       }
       *(_DWORD *)(a1 + 120) = 0;
       *(_DWORD *)(a1 + 124) = 0;
@@ -70088,7 +70335,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = v3[17];
     if ( v6 > v7 )
       v5 += v7;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
     {
       v8 = *(float *)&dword_60C81F4C;
       *(_DWORD *)(a1 + 124) = dword_60C81F4C;
@@ -70284,8 +70531,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 80) = v12 < 0.0;
     *(_DWORD *)(a1 + 6276) = 3932200;
     v13 = (_DWORD *)(a1 + 6332);
-    sub_60813430(v13, (int)"SE_BOSS_JR_JUMP_L", 0);
-    return sub_60813430(v13, (int)"SE_VOC_JR_JUMP", 0);
+    SoundActor_tryStartSoundIfFree(v13, (int)"SE_BOSS_JR_JUMP_L", 0);
+    return SoundActor_tryStartSoundIfFree(v13, (int)"SE_VOC_JR_JUMP", 0);
   }
 
 /* ============================================================================
@@ -70420,7 +70667,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = v4;
       v7 = 1166843904;
       EffectData_create(1080, (int)&v5, 0, 0);
-      return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_LAND", 0);
+      return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_LAND", 0);
     }
     return result;
   }
@@ -70608,7 +70855,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = v7[17];
     if ( v10 > v11 )
       v9 += v11;
-    if ( sub_60418548(*v9 + 4) == 1 )
+    if ( Float2_equalTest(*v9 + 4) == 1 )
     {
       memset(&v26[1], 0, 0x28u);
       v12 = *(unsigned __int8 *)(a1 + 7248);
@@ -70688,7 +70935,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
     {
       memset(&v16[1], 0, 0x28u);
       v7 = *(unsigned __int8 *)(a1 + 7248);
@@ -70798,7 +71045,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4[0] = 12321336;
     v4[1] = "lkpjc_throw_enemy2_st";
     sub_60421AE4(v2, (int)v4, 0);
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_PRE_ACTION", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_PRE_ACTION", 0);
   }
 
 /* ============================================================================
@@ -70868,10 +71115,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = v3[17];
     if ( v6 > v7 )
       v5 += v7;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
     {
       sub_6008BC88((int)a1);
-      sub_60813430(a1 + 1583, (int)"SE_VOC_JR_BOMB_THROW", 0);
+      SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_VOC_JR_BOMB_THROW", 0);
     }
     v8 = *(_DWORD *)(*v4 + 12);
     v9 = *(_DWORD *)(*v4 + 68);
@@ -70972,8 +71219,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1[25] = dword_60C81F2C;
     v1[34] = v3 ^ 0x80000000;
     v1 += 1583;
-    sub_60813430(v1, (int)"SE_BOSS_JR_JUMP_L", 0);
-    return sub_60813430(v1, (int)"SE_VOC_JR_JUMP", 0);
+    SoundActor_tryStartSoundIfFree(v1, (int)"SE_BOSS_JR_JUMP_L", 0);
+    return SoundActor_tryStartSoundIfFree(v1, (int)"SE_VOC_JR_JUMP", 0);
   }
 
 /* ============================================================================
@@ -70997,7 +71244,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = v2[17];
     if ( v4 > v5 )
       v3 += v5;
-    result = sub_60418548(*v3 + 4);
+    result = Float2_equalTest(*v3 + 4);
     if ( result == 1 )
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13114444);
     return result;
@@ -71028,7 +71275,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = v1[1904];
     v1 += 1904;
     *v1 = v4 | 2;
-    return sub_60813430(v1 - 321, (int)"SE_BOSS_CMN_SHELL_IN", 0);
+    return SoundActor_tryStartSoundIfFree(v1 - 321, (int)"SE_BOSS_CMN_SHELL_IN", 0);
   }
 
 /* ============================================================================
@@ -71137,7 +71384,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(unsigned __int8 *)(a1 + 2872);
     if ( (result & 1) != 0 && *(float *)(a1 + 124) < 0.0 )
     {
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_SHELL_LAND", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_SHELL_LAND", 0);
       v4 = *(float *)(a1 + 112);
       v11 = *(_DWORD *)(a1 + 108);
       v12 = v4;
@@ -71368,7 +71615,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v22 = v16 + 2.0;
       }
       EffectData_create(1082, (int)&v21, 0, 0);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_SHELL_LAND", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_SHELL_LAND", 0);
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13114508);
     }
     return result;
@@ -71404,7 +71651,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = v1[1904];
     v1 += 1904;
     *v1 = v4 & 0xFFFFFFFE;
-    return sub_60813430(v1 - 321, (int)"SE_VOC_JR_RECORVER", 0);
+    return SoundActor_tryStartSoundIfFree(v1 - 321, (int)"SE_VOC_JR_RECORVER", 0);
   }
 
 /* ============================================================================
@@ -71433,13 +71680,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
       a1[1904] |= 1u;
     v7 = *(_DWORD **)(*v3 + 12);
     v8 = *(_DWORD *)(*v3 + 68);
     if ( *(_DWORD *)(*v3 + 8) > v8 )
       v7 += v8;
-    result = (_DWORD *)sub_60418548(*v7 + 4);
+    result = (_DWORD *)Float2_equalTest(*v7 + 4);
     if ( result == (_DWORD *)1 )
     {
       v11 = a1[1904];
@@ -71615,8 +71862,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(v1 + 132) = 0;
     *(_DWORD *)(v1 + 104) = 0;
     v1 += 6332;
-    sub_60813430((_DWORD *)v1, (int)"SE_VOC_JR_RECORVER", 0);
-    return sub_60813430((_DWORD *)v1, (int)"SE_BOSS_CMN_SHELL_OUT", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)v1, (int)"SE_VOC_JR_RECORVER", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)v1, (int)"SE_BOSS_CMN_SHELL_OUT", 0);
   }
 
 /* ============================================================================
@@ -71665,13 +71912,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = v3[17];
     if ( v6 > v7 )
       v5 += v7;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
       *(_DWORD *)(a1 + 7616) |= 1u;
     v8 = *(_DWORD **)(*(_DWORD *)v4 + 12);
     v9 = *(_DWORD *)(*(_DWORD *)v4 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v4 + 8) > v9 )
       v8 += v9;
-    if ( sub_60418548(*v8 + 4) == 1 )
+    if ( Float2_equalTest(*v8 + 4) == 1 )
     {
       *(_DWORD *)(a1 + 7616) &= ~2u;
       *(_DWORD *)(a1 + 320) = 0;
@@ -71781,7 +72028,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v13 = v5 + 2.0;
         }
         EffectData_create(1082, (int)&v12, 0, 0);
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_SHELL_LAND", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_SHELL_LAND", 0);
       }
       v9 = sub_6014B69C(a1 + 648);
       v10 = v9 == 0;
@@ -71968,7 +72215,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v9 = v2 + 2.0;
       }
       EffectData_create(1082, (int)&v8, 0, 0);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_SHELL_LAND", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_SHELL_LAND", 0);
     }
     sub_602A25F8(a1);
     result = SE_VOC_JR_PRE_RECORVER_ref(a1);
@@ -72075,7 +72322,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v17 = v4 + 2.0;
       }
       EffectData_create(1082, (int)&v16, 0, 0);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_SHELL_LAND", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_SHELL_LAND", 0);
     }
     sub_602A25F8(a1);
     v9 = *(_DWORD *)(a1 + 80);
@@ -72158,8 +72405,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1[32] = 0;
     v1[25] = dword_60C81F3C;
     v1 += 1583;
-    sub_60813430(v1, (int)"SE_VOC_JR_RECORVER", 0);
-    return sub_60813430(v1, (int)"SE_BOSS_CMN_SHELL_OUT", 0);
+    SoundActor_tryStartSoundIfFree(v1, (int)"SE_VOC_JR_RECORVER", 0);
+    return SoundActor_tryStartSoundIfFree(v1, (int)"SE_BOSS_CMN_SHELL_OUT", 0);
   }
 
 /* ============================================================================
@@ -72216,13 +72463,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = v4[17];
     if ( v7 > v8 )
       v6 += v8;
-    if ( sub_60418548(*v6 + 4) == 1 )
+    if ( Float2_equalTest(*v6 + 4) == 1 )
       *(_DWORD *)(a1 + 7616) |= 1u;
     v9 = *(_DWORD **)(*(_DWORD *)v5 + 12);
     v10 = *(_DWORD *)(*(_DWORD *)v5 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v5 + 8) > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) == 1 )
+    if ( Float2_equalTest(*v9 + 4) == 1 )
     {
       *(_DWORD *)(a1 + 7616) &= ~2u;
       *(_DWORD *)(a1 + 320) = 0;
@@ -72328,7 +72575,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ShuAnim_play(v5, v6, &v8);
     AnimationCtrl_setRepeat(a1[1776] + 4, 1);
     *(_DWORD *)(a1[1776] + 24) = 1065353216;
-    sub_60813430(a1 + 1583, (int)"SE_VOC_JR_ANGRY", 0);
+    SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_VOC_JR_ANGRY", 0);
     sub_600CEBC0(a1);
     a1[39] = 0;
     a1[40] = 0;
@@ -72540,7 +72787,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
     {
       v7 = *(float *)&dword_60C81F4C;
       *(_DWORD *)(a1 + 124) = dword_60C81F4C;
@@ -72625,13 +72872,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
       *(_DWORD *)(a1 + 7616) |= 1u;
     v7 = *(_DWORD **)(*(_DWORD *)v3 + 12);
     v8 = *(_DWORD *)(*(_DWORD *)v3 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v3 + 8) > v8 )
       v7 += v8;
-    if ( sub_60418548(*v7 + 4) == 1 )
+    if ( Float2_equalTest(*v7 + 4) == 1 )
       *(_DWORD *)(a1 + 7616) &= ~2u;
     v9 = *(_DWORD *)(*(_DWORD *)v3 + 12);
     v10 = *(_DWORD *)(*(_DWORD *)v3 + 68);
@@ -72682,7 +72929,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "lkp_run";
     sub_60421AE4(v3, (int)v7, 1);
-    v4 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v4 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     if ( _cxa_guard_acquire_0(13113144) )
     {
       MEMORY[0xC81734] = 12328872;
@@ -72755,7 +73002,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r5
     _DWORD v6[2]; // [sp+0h] [bp-8h] BYREF
   
-    v2 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v2 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     if ( _cxa_guard_acquire_0(13113144) )
     {
       MEMORY[0xC81734] = 12328872;
@@ -72793,7 +73040,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v5; // r3
     int v6; // r1
   
-    v2 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v2 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     result = _cxa_guard_acquire_0(13113144);
     if ( result )
     {
@@ -72805,7 +73052,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = (**v2)(v2, 13113140);
       if ( result == 1 )
       {
-        v4 = sub_6000F7B8() - *(_DWORD *)(a1 + 164);
+        v4 = FixedPoint_atan2() - *(_DWORD *)(a1 + 164);
         v6 = -536870912;
         *(_DWORD *)(a1 + 7128) = v4;
         if ( v4 < -536870912 || (v6 = 357913941, v4 > 357913941) )
@@ -72899,7 +73146,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
     {
       v7 = *(_DWORD *)(MEMORY[0xC7B420] + 24);
       if ( _cxa_guard_acquire_0(13111808) )
@@ -72914,16 +73161,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = *(_DWORD *)(*(_DWORD *)v3 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v3 + 8) > v9 )
       v8 += v9;
-    if ( sub_60418548(*v8 + 4) == 1 )
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CRYING", 0);
+    if ( Float2_equalTest(*v8 + 4) == 1 )
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CRYING", 0);
     v10 = *(_DWORD **)(*(_DWORD *)v3 + 12);
     v11 = *(_DWORD *)(*(_DWORD *)v3 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v3 + 8) > v11 )
       v10 += v11;
-    if ( sub_60418548(*v10 + 4) == 1 )
+    if ( Float2_equalTest(*v10 + 4) == 1 )
     {
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_JUMP_L", 0);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_ESCAPE", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_JR_JUMP_L", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_ESCAPE", 0);
     }
     result = *(unsigned __int16 *)(a1 + 6276);
     if ( result == 1 )
@@ -73191,7 +73438,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60088BD4(int a1)
   {
-    sub_60813430(a1 + 6332, "SE_BOSS_JR_DAMAGE_KOOPA", 0);
+    SoundActor_tryStartSoundIfFree(a1 + 6332, "SE_BOSS_JR_DAMAGE_KOOPA", 0);
     return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13114828);
   }
 
@@ -75004,7 +75251,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = *(float *)(**(_DWORD **)(*(_DWORD *)(a1 + 7612) + 12) + 8);
       if ( (float)v5 > v6 )
       {
-        v7 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+        v7 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
         if ( _cxa_guard_acquire_0(13113144) )
         {
           MEMORY[0xC81734] = 12328872;
@@ -75017,7 +75264,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (float)*v4 < v6 && !*(_BYTE *)(a1 + 7700) )
       {
         *(_BYTE *)(a1 + 7700) = 1;
-        sub_60813430(a1 + 6332, "SE_VOC_JR_PRE_RECORVER", 0);
+        SoundActor_tryStartSoundIfFree(a1 + 6332, "SE_VOC_JR_PRE_RECORVER", 0);
         v8 = *v4;
       }
       if ( !v8 )
@@ -75617,7 +75864,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v6; // r1
     int result; // r0
   
-    v2 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v2 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     if ( _cxa_guard_acquire_0(13113144) )
     {
       MEMORY[0xC81734] = 12328872;
@@ -75660,7 +75907,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6304));
     v2 = *(float *)(a1 + 112);
     v3 = *(float *)(a1 + 15296);
-    sub_60832560((float *)(a1 + 112));
+    Float_clampWithSign((float *)(a1 + 112));
     v4 = v3;
     v5 = *(float *)(a1 + 112);
     *(float *)(a1 + 124) = v2 - v5;
@@ -75702,7 +75949,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4[1] = "jc_delight";
     sub_60421AE4(v2, (int)v4, 0);
     (*(void (__fastcall **)(_DWORD *, int))(*a1 + 780))(a1, 4);
-    sub_60813430(a1 + 2369, (int)"SE_VOC_JR_PROV2", 0);
+    SoundActor_tryStartSoundIfFree(a1 + 2369, (int)"SE_VOC_JR_PROV2", 0);
     a1[30] = 0;
     a1[33] = 0;
     a1[26] = 0;
@@ -75767,7 +76014,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 124) = *(float *)(a1 + 100) + *(float *)(a1 + 124);
     CollisionActor::handleSpeed(a1);
     sub_601005C0(a1);
-    v2 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v2 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     if ( _cxa_guard_acquire_0(13113144) )
     {
       MEMORY[0xC81734] = 12328872;
@@ -75811,7 +76058,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v5[2]; // [sp+8h] [bp-8h] BYREF
   
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6304));
-    sub_60832560((float *)(a1 + 112));
+    Float_clampWithSign((float *)(a1 + 112));
     v2 = *(float *)(a1 + 112);
     v5[0] = *(float *)(a1 + 108);
     v5[1] = v2;
@@ -75952,7 +76199,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (result & 1) != 0 )
     {
       if ( *(float *)(a1 + 124) < -1.0 )
-        sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
       *(_DWORD *)(a1 + 124) = 0;
       return 0;
     }
@@ -75990,7 +76237,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_607B8A08(v4, a1);
       sub_60093838(a1);
     }
-    v5 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v5 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     if ( _cxa_guard_acquire_0(13113144) )
     {
       MEMORY[0xC81734] = 12328872;
@@ -76003,7 +76250,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_6040810C(MEMORY[0xC9A1E8]);
       *(_BYTE *)(a1 + 15260) = 0;
     }
-    return sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_RIDE", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_RIDE", 0);
   }
 
 /* ============================================================================
@@ -76072,7 +76319,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6304));
     v2 = *(float *)(a1 + 112);
     v3 = *(float *)(a1 + 6812) + -120.0;
-    sub_60832560((float *)(a1 + 112));
+    Float_clampWithSign((float *)(a1 + 112));
     v4 = v3;
     v5 = *(float *)(a1 + 112);
     *(float *)(a1 + 124) = v5 - v2;
@@ -76244,7 +76491,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_6078663C(v7) == 1 )
     {
       *(_DWORD *)(a1 + 124) = 1076258406;
-      sub_60813430(v2 + 793, (int)"SE_PLY_CROWN_ACC", 0);
+      SoundActor_tryStartSoundIfFree(v2 + 793, (int)"SE_PLY_CROWN_ACC", 0);
       v12 = a1 + 15396;
       if ( sub_60235E50(a1 + 15396) != 1
         || (v12 = a1 + 15460, !sub_60235E50(a1 + 15460))
@@ -76617,7 +76864,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = 1;
       if ( v3 <= (float)(*(float *)(MEMORY[0xCC6484] + 120) + -80.0) )
       {
-        v4 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+        v4 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
         if ( _cxa_guard_acquire_0(13113144) )
         {
           MEMORY[0xC81734] = 12328872;
@@ -76650,7 +76897,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 4 * v8 + 15276) = 60;
       }
     }
-    sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_PLY_GET_OFF_CLOWN", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 9476), (int)"SE_PLY_GET_OFF_CLOWN", 0);
     *(_DWORD *)(a1 + 80) = v2 ^ 1;
     v9 = 1056964608;
     *(_DWORD *)(a1 + 120) = 1056964608;
@@ -76689,7 +76936,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(unsigned __int8 *)(a1 + 2872);
     if ( (result & 1) != 0 && *(float *)(a1 + 124) < 0.0 )
     {
-      sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13115520);
     }
     return result;
@@ -76763,7 +77010,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = 1;
       if ( v3 <= (float)(*(float *)(MEMORY[0xCC6484] + 120) + -80.0) )
       {
-        v4 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+        v4 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
         if ( _cxa_guard_acquire_0(13113144) )
         {
           MEMORY[0xC81734] = 12328872;
@@ -76796,7 +77043,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 4 * v8 + 15276) = 60;
       }
     }
-    sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_PLY_GET_OFF_CLOWN", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 9476), (int)"SE_PLY_GET_OFF_CLOWN", 0);
     *(_DWORD *)(a1 + 80) = v2 ^ 1;
     v9 = 1069547520;
     *(_DWORD *)(a1 + 120) = 1069547520;
@@ -76833,7 +77080,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(unsigned __int8 *)(a1 + 2872);
     if ( (result & 1) != 0 )
     {
-      sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13115520);
     }
     return result;
@@ -76862,7 +77109,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     unsigned int v6; // r0
     int v7; // r0
   
-    sub_60813430((_DWORD *)a1 + 2369, (int)"SE_PLY_GET_OFF_CLOWN", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)a1 + 2369, (int)"SE_PLY_GET_OFF_CLOWN", 0);
     (*(void (__fastcall **)(float *, int))(*(_DWORD *)a1 + 780))(a1, 2);
     if ( (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 624))(a1) )
     {
@@ -76873,7 +77120,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v3 = 0;
         if ( v2 <= (float)(*(float *)(MEMORY[0xCC6484] + 120) + -80.0) )
         {
-          v4 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+          v4 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
           if ( _cxa_guard_acquire_0(13113144) )
           {
             MEMORY[0xC81734] = 12328872;
@@ -76932,7 +77179,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(unsigned __int8 *)(a1 + 2872);
     if ( (result & 1) != 0 )
     {
-      sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13115520);
     }
     return result;
@@ -77020,7 +77267,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (result & 1) != 0 )
     {
       if ( *(float *)(a1 + 124) < *(float *)(a1 + 100) )
-        sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
       *(_DWORD *)(a1 + 124) = 0;
       return 0;
     }
@@ -77099,7 +77346,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_6040810C(MEMORY[0xC9A1E8]);
       *(_BYTE *)(a1 + 15260) = 0;
     }
-    return sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_RIDE", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_RIDE", 0);
   }
 
 /* ============================================================================
@@ -77463,7 +77710,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6304));
     v2 = *(float *)(a1 + 6812);
-    sub_60832560((float *)(a1 + 112));
+    Float_clampWithSign((float *)(a1 + 112));
     v3 = *(float *)(a1 + 112);
     v6[0] = *(float *)(a1 + 108);
     v6[1] = v3;
@@ -77779,7 +78026,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                   v21 = 1;
                   if ( v18 <= (float)(*(float *)(MEMORY[0xCC6484] + 120) + -80.0) )
                   {
-                    v22 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+                    v22 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
                     if ( _cxa_guard_acquire_0(13113144) )
                     {
                       MEMORY[0xC81734] = 12328872;
@@ -78107,7 +78354,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                       v81 = 1;
                       if ( v78 <= (float)(*(float *)(MEMORY[0xCC6484] + 120) + -80.0) )
                       {
-                        v82 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+                        v82 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
                         if ( _cxa_guard_acquire_0(13113144) )
                         {
                           MEMORY[0xC81734] = 12328872;
@@ -78240,7 +78487,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v56 = 1;
           if ( v57 <= (float)(*(float *)(MEMORY[0xCC6484] + 120) + -80.0) )
           {
-            v90 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+            v90 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
             v58 = _cxa_guard_acquire_0(13113144);
             v59 = (int (__fastcall ***)(_DWORD, int))v90;
             if ( v58 )
@@ -78479,7 +78726,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v29 = 0;
               if ( v28 <= (float)(*(float *)(MEMORY[0xCC6484] + 120) + -80.0) )
               {
-                v30 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+                v30 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
                 if ( _cxa_guard_acquire_0(13113144) )
                 {
                   MEMORY[0xC81734] = 12328872;
@@ -79509,7 +79756,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v15; // r3
     int v16; // r3
   
-    v2 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v2 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     if ( _cxa_guard_acquire_0(13113144) )
     {
       MEMORY[0xC81734] = 12328872;
@@ -79517,7 +79764,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v2 )
       (**v2)(v2, 13113140);
-    v3 = sub_6000F7B8();
+    v3 = FixedPoint_atan2();
     a1[2337] = v3;
     v4 = a1 + 2337;
     v5 = a1 + 2335;
@@ -79545,7 +79792,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v10 )
       v11 = -v11;
     a1[2336] = v11;
-    v12 = sub_6000F7B8();
+    v12 = FixedPoint_atan2();
     *v5 = v12;
     if ( LODWORD(flt_60C8234C) + 119304647 > 0 )
       v8 = LODWORD(flt_60C8234C) + 119304647;
@@ -79594,7 +79841,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( v3 <= *(float *)(MEMORY[0xCC6484] + 120) )
       {
-        v4 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+        v4 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
         if ( _cxa_guard_acquire_0(13113144) )
         {
           MEMORY[0xC81734] = 12328872;
@@ -79777,7 +80024,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = (*(int (__fastcall **)(_DWORD *))(*a1 + 908))(a1);
     if ( result == 1 )
     {
-      v3 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+      v3 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
       if ( _cxa_guard_acquire_0(13113144) )
       {
         MEMORY[0xC81734] = 12328872;
@@ -79845,7 +80092,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v7 = -v7;
         if ( v7 <= 16.0 )
         {
-          v8 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+          v8 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
           if ( _cxa_guard_acquire_0(13113144) )
           {
             MEMORY[0xC81734] = 12328872;
@@ -79871,7 +80118,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      v10 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+      v10 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
       if ( _cxa_guard_acquire_0(13113144) )
       {
         MEMORY[0xC81734] = 12328872;
@@ -79913,7 +80160,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     bool v10; // fnf
   
     sub_60101770(a1);
-    v2 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v2 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     result = (float *)_cxa_guard_acquire_0(13113144);
     if ( result )
     {
@@ -80061,7 +80308,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r5
     int result; // r0
   
-    v2 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v2 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     if ( _cxa_guard_acquire_0(13113144) )
     {
       MEMORY[0xC81734] = 12328872;
@@ -80091,7 +80338,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r5
     int result; // r0
   
-    v2 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v2 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     result = _cxa_guard_acquire_0(13113144);
     if ( result )
     {
@@ -80230,7 +80477,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v10; // s16
     float v11; // s16
   
-    v3 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3300]);
+    v3 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
     if ( _cxa_guard_acquire_0(13113144) )
     {
       MEMORY[0xC81734] = 12328872;
@@ -80860,7 +81107,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( result == 1 )
           {
             (*(void (__fastcall **)(_DWORD *, int, int))(*v5 + 1164))(v5, a1, a2);
-            v9 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
+            v9 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32FC]);
             result = _cxa_guard_acquire_0(13111556);
             if ( result )
             {
@@ -80958,7 +81205,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     ActiveCollider::init(a1 + 188, a1, dword_60BC7BF0, 0);
     StageActor::distanceToPlayer((float *)a1, (int)&v8);
-    v2 = sub_6000F7B8();
+    v2 = FixedPoint_atan2();
     v3 = *(_DWORD *)(a1 + 56);
     if ( _cxa_guard_acquire_0(13087588) )
     {
@@ -81473,7 +81720,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 7096);
     v8[0] = 12321336;
     v8[1] = "run";
-    sub_60421AD4(v3, v8, 1);
+    dispatch_forwardThisSecondWord(v3, v8, 1);
     *(_DWORD *)(a1 + 80) = StageActor::directionToPlayerX(a1, (int *)(a1 + 108));
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 716))(a1)
       || (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 720))(a1) == 1 )
@@ -81552,20 +81799,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v6 )
       v5 += v6;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
     {
       v7 = a1[415].n128_i16[0];
       v8 = &a1[395].n128_u32[3];
       v9 = "SE_BOSS_IGGY_FOOT_L";
   LABEL_12:
-      sub_608134CC(v8, (int)v9, v7, 0);
+      SoundActor_tryStartSoundIfFree4(v8, (int)v9, v7, 0);
       goto LABEL_13;
     }
     v10 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v11 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v11 )
       v10 += v11;
-    if ( sub_60418548(*v10 + 4) == 1 )
+    if ( Float2_equalTest(*v10 + 4) == 1 )
     {
       v7 = a1[415].n128_i16[0];
       v8 = &a1[395].n128_u32[3];
@@ -81619,7 +81866,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 7096);
     v8[0] = 12321336;
     v8[1] = "run";
-    sub_60421AD4(v3, v8, 1);
+    dispatch_forwardThisSecondWord(v3, v8, 1);
     *(_DWORD *)(a1 + 80) = StageActor::directionToPlayerX(a1, (int *)(a1 + 108)) ^ 1;
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 716))(a1)
       || (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 720))(a1) == 1 )
@@ -81646,7 +81893,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 100) = 0;
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_IGG_INTO_DOKAN", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_IGG_INTO_DOKAN",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -81692,20 +81943,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v6 )
       v5 += v6;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
     {
       v7 = a1[415].n128_i16[0];
       v8 = &a1[395].n128_u32[3];
       v9 = "SE_BOSS_IGGY_FOOT_L";
   LABEL_12:
-      sub_608134CC(v8, (int)v9, v7, 0);
+      SoundActor_tryStartSoundIfFree4(v8, (int)v9, v7, 0);
       goto LABEL_13;
     }
     v10 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v11 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v11 )
       v10 += v11;
-    if ( sub_60418548(*v10 + 4) == 1 )
+    if ( Float2_equalTest(*v10 + 4) == 1 )
     {
       v7 = a1[415].n128_i16[0];
       v8 = &a1[395].n128_u32[3];
@@ -81828,7 +82079,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v7[0] = 12321336;
     v7[1] = "sliding";
-    sub_60421AD4(v2, v7, 1);
+    dispatch_forwardThisSecondWord(v2, v7, 1);
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 716))(a1) == 1 )
     {
       v3 = (float *)(a1 + 120);
@@ -81853,7 +82104,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 100) = 0;
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_IGGY_SLIP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_IGGY_SLIP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -81937,7 +82192,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[1774];
     v4[0] = 12321336;
     v4[1] = "throw_st";
-    sub_60421AD4(v2, v4, 0);
+    dispatch_forwardThisSecondWord(v2, v4, 0);
     a1[30] = 0;
     a1[31] = 0;
     a1[32] = 0;
@@ -82021,7 +82276,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 = *(_DWORD *)(a1 + 7096);
     v9[0] = 12321336;
     v9[1] = "throw_st_wait";
-    sub_60421AD4(v1, v9, 1);
+    dispatch_forwardThisSecondWord(v1, v9, 1);
     v3 = *(int **)(*v2 + 28);
     if ( *(_DWORD *)(*v2 + 24) > 1u )
       ++v3;
@@ -82119,7 +82374,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v11 += v12;
       v13 = *v11;
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1200))(a1);
-      result = sub_60418548(v13 + 4);
+      result = Float2_equalTest(v13 + 4);
       if ( result == 1 )
       {
         U32 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
@@ -82222,7 +82477,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[1774];
     v6[0] = 12321336;
     v6[1] = "wait";
-    sub_60421AD4(v2, v6, 1);
+    dispatch_forwardThisSecondWord(v2, v6, 1);
     a1[30] = 0;
     a1[31] = 0;
     a1[32] = 0;
@@ -82268,7 +82523,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v4[0] = 12321336;
     v4[1] = "throw_st";
-    sub_60421AD4(v2, v4, 0);
+    dispatch_forwardThisSecondWord(v2, v4, 0);
     *(_DWORD *)(a1 + 120) = 0;
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 128) = 0;
@@ -82354,7 +82609,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 = *(_DWORD *)(a1 + 7096);
     v9[0] = 12321336;
     v9[1] = "throw_st_wait";
-    sub_60421AD4(v1, v9, 1);
+    dispatch_forwardThisSecondWord(v1, v9, 1);
     v3 = *(int **)(*v2 + 28);
     if ( *(_DWORD *)(*v2 + 24) > 1u )
       ++v3;
@@ -82387,7 +82642,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v4[0] = 12321336;
     v4[1] = "throw_ed";
-    sub_60421AD4(v2, v4, 0);
+    dispatch_forwardThisSecondWord(v2, v4, 0);
     *(_DWORD *)(a1 + 7092) = 1;
     return 7092;
   }
@@ -82440,7 +82695,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v6[0] = 12321336;
     v6[1] = "throw_ed_wait";
-    sub_60421AD4(v2, v6, 1);
+    dispatch_forwardThisSecondWord(v2, v6, 1);
     *(_WORD *)(a1 + 6276) = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1068))(a1);
     v5 = *(unsigned __int8 *)(a1 + 8204);
     v4 = (_BYTE *)(a1 + 8204);
@@ -82469,7 +82724,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 7096));
     v4 = 0;
     *(_DWORD *)(a1 + 7124) = sub_600B2FD4(a1, v2, v3);
-    v5 = sub_6000F7B8();
+    v5 = FixedPoint_atan2();
     *(_DWORD *)(a1 + 7172) = v5;
     if ( v5 > 0 || (v4 = dword_60C82878, v5 > dword_60C82878) )
       *(_DWORD *)(a1 + 7172) = v4;
@@ -82603,7 +82858,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 7096);
     v8[0] = 12321336;
     v8[1] = "run";
-    sub_60421AD4(v3, v8, 1);
+    dispatch_forwardThisSecondWord(v3, v8, 1);
     *(_DWORD *)(a1 + 80) = StageActor::directionToPlayerX(a1, (int *)(a1 + 108));
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 716))(a1)
       || (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 720))(a1) == 1 )
@@ -82673,7 +82928,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     j_ModelWrapper_updateAnims(a1[443].n128_i32[2]);
     v5 = 0;
     a1[445].n128_u32[1] = sub_600B2FD4((int)a1, v3, v4);
-    v6 = sub_6000F7B8();
+    v6 = FixedPoint_atan2();
     a1[448].n128_u32[1] = v6;
     if ( v6 > 0 || (v5 = dword_60C82878, v6 > dword_60C82878) )
       a1[448].n128_u32[1] = v5;
@@ -82693,20 +82948,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) == 1 )
+    if ( Float2_equalTest(*v9 + 4) == 1 )
     {
       v11 = a1[415].n128_i16[0];
       v12 = &a1[395].n128_u32[3];
       v13 = "SE_BOSS_IGGY_FOOT_L";
   LABEL_15:
-      sub_608134CC(v12, (int)v13, v11, 0);
+      SoundActor_tryStartSoundIfFree4(v12, (int)v13, v11, 0);
       goto LABEL_16;
     }
     v14 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v15 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v15 )
       v14 += v15;
-    if ( sub_60418548(*v14 + 4) == 1 )
+    if ( Float2_equalTest(*v14 + 4) == 1 )
     {
       v11 = a1[415].n128_i16[0];
       v12 = &a1[395].n128_u32[3];
@@ -82760,7 +83015,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 7096);
     v8[0] = 12321336;
     v8[1] = "run";
-    sub_60421AD4(v3, v8, 1);
+    dispatch_forwardThisSecondWord(v3, v8, 1);
     *(_DWORD *)(a1 + 80) = StageActor::directionToPlayerX(a1, (int *)(a1 + 108));
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 716))(a1)
       || (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 720))(a1) == 1 )
@@ -82831,7 +83086,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     j_ModelWrapper_updateAnims(a1[443].n128_i32[2]);
     v5 = 0;
     a1[445].n128_u32[1] = sub_600B2FD4((int)a1, v3, v4);
-    v6 = sub_6000F7B8();
+    v6 = FixedPoint_atan2();
     a1[448].n128_u32[1] = v6;
     if ( v6 > 0 || (v5 = dword_60C82878, v6 > dword_60C82878) )
       a1[448].n128_u32[1] = v5;
@@ -82851,20 +83106,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) == 1 )
+    if ( Float2_equalTest(*v9 + 4) == 1 )
     {
       v11 = a1[415].n128_i16[0];
       v12 = &a1[395].n128_u32[3];
       v13 = "SE_BOSS_IGGY_FOOT_L";
   LABEL_15:
-      sub_608134CC(v12, (int)v13, v11, 0);
+      SoundActor_tryStartSoundIfFree4(v12, (int)v13, v11, 0);
       goto LABEL_16;
     }
     v14 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v15 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v15 )
       v14 += v15;
-    if ( sub_60418548(*v14 + 4) == 1 )
+    if ( Float2_equalTest(*v14 + 4) == 1 )
     {
       v11 = a1[415].n128_i16[0];
       v12 = &a1[395].n128_u32[3];
@@ -82974,7 +83229,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 7096);
     v8[0] = 12321336;
     v8[1] = "run";
-    sub_60421AD4(v3, v8, 1);
+    dispatch_forwardThisSecondWord(v3, v8, 1);
     *(_DWORD *)(a1 + 80) = StageActor::directionToPlayerX(a1, (int *)(a1 + 108)) ^ 1;
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 716))(a1)
       || (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 720))(a1) == 1 )
@@ -82999,7 +83254,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 100) = 0;
     *(_DWORD *)(a1 + 164) = 0x80000000;
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_IGG_INTO_DOKAN", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_IGG_INTO_DOKAN",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -83035,7 +83294,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     j_ModelWrapper_updateAnims(a1[443].n128_i32[2]);
     v5 = 0;
     a1[445].n128_u32[1] = sub_600B2FD4((int)a1, v3, v4);
-    v6 = sub_6000F7B8();
+    v6 = FixedPoint_atan2();
     a1[448].n128_u32[1] = v6;
     if ( v6 > 0 || (v5 = dword_60C82878, v6 > dword_60C82878) )
       a1[448].n128_u32[1] = v5;
@@ -83055,20 +83314,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) == 1 )
+    if ( Float2_equalTest(*v9 + 4) == 1 )
     {
       v11 = a1[415].n128_i16[0];
       v12 = &a1[395].n128_u32[3];
       v13 = "SE_BOSS_IGGY_FOOT_L";
   LABEL_15:
-      sub_608134CC(v12, (int)v13, v11, 0);
+      SoundActor_tryStartSoundIfFree4(v12, (int)v13, v11, 0);
       goto LABEL_16;
     }
     v14 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v15 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v15 )
       v14 += v15;
-    if ( sub_60418548(*v14 + 4) == 1 )
+    if ( Float2_equalTest(*v14 + 4) == 1 )
     {
       v11 = a1[415].n128_i16[0];
       v12 = &a1[395].n128_u32[3];
@@ -83119,7 +83378,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v7[0] = 12321336;
     v7[1] = "sliding";
-    sub_60421AD4(v2, v7, 1);
+    dispatch_forwardThisSecondWord(v2, v7, 1);
     *(_DWORD *)(a1 + 164) = 0x80000000;
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 716))(a1) == 1 )
     {
@@ -83145,7 +83404,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 100) = 0;
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_IGGY_SLIP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_IGGY_SLIP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -83240,12 +83503,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v4[0] = 12321336;
     v4[1] = "jump_st";
-    sub_60421AD4(v2, v4, 0);
+    dispatch_forwardThisSecondWord(v2, v4, 0);
     *(_DWORD *)(a1 + 80) = StageActor::directionToPlayerX(a1, (int *)(a1 + 108));
     *(_DWORD *)(a1 + 120) = 0;
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 128) = 0;
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_IGG_JUMP", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_IGG_JUMP",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -83370,7 +83637,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v7[0] = 12321336;
       v7[1] = "wait";
-      sub_60421AD4(v3, v7, 1);
+      dispatch_forwardThisSecondWord(v3, v7, 1);
     }
     result = *(unsigned __int16 *)(a1 + 6276);
     if ( !*(_WORD *)(a1 + 6276) )
@@ -84792,7 +85059,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = (float *)(a1 + 8212);
     if ( *v2 < *(float *)(a1 + 8212) )
     {
-      sub_60832560(v2);
+      Float_clampWithSign(v2);
       if ( *v2 >= (float)(*v4 + -0.05) )
         *v2 = *v4;
       v5 = MEMORY[0xC7F534];
@@ -84802,7 +85069,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v10[1] = v6;
       mapPositionToScreen(v9, v10);
       SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v5, "SE_AMB_MAGMA_RISE", v7, v9, 0);
-      v8 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF2E7C]);
+      v8 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF2E7C]);
       result = _cxa_guard_acquire_0(13117512);
       if ( result )
       {
@@ -84847,7 +85114,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (float)(v5 + 0.05) < v6 )
         v5 = v6;
       *v3 = v5;
-      v7 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF2E7C]);
+      v7 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF2E7C]);
       result = _cxa_guard_acquire_0(13117512);
       if ( result )
       {
@@ -84907,7 +85174,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = "SE_VOC_IGG_MAGIC_MAKE_FAST";
     else
       v2 = "SE_VOC_IGG_MAGIC_MAKE";
-    return sub_60813430(v1, (int)v2, 0);
+    return SoundActor_tryStartSoundIfFree(v1, (int)v2, 0);
   }
 
 /* ============================================================================
@@ -84916,7 +85183,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall Iggy_vf534(int a1)
   {
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_IGG_MAGIC_SHOT", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_IGG_MAGIC_SHOT", 0);
   }
 
 /* ============================================================================
@@ -84971,7 +85238,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = v2[17];
     if ( v4 > v5 )
       v3 += v5;
-    if ( sub_60418548(*v3 + 4) == 1 )
+    if ( Float2_equalTest(*v3 + 4) == 1 )
     {
       v6 = a1[28];
       v8[0] = a1[27];
@@ -85022,7 +85289,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v4; // s0
   
     sub_60421AE4(*(_DWORD **)(a1 + 7096), *(_DWORD *)(a1 + 7120) + 24, 0);
-    v2 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF2E7C]);
+    v2 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF2E7C]);
     result = _cxa_guard_acquire_0(13117512);
     if ( result )
     {
@@ -85091,13 +85358,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v4 )
       v3 += v4;
-    if ( sub_60418548(*v3 + 4) == 1 )
+    if ( Float2_equalTest(*v3 + 4) == 1 )
     {
       v5 = sub_60232E8C(MEMORY[0xC8D904]);
       *(_DWORD *)(v5 + 20) = 1065353216;
       *(_DWORD *)(v5 + 4) = 1140457472;
       AnimationCtrl_setRepeat(v5, 0);
-      v6 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3170]);
+      v6 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3170]);
       if ( _cxa_guard_acquire_0(13117528) )
       {
         MEMORY[0xC82854] = 12320956;
@@ -85110,10 +85377,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v8 )
       v7 += v8;
-    if ( sub_60418548(*v7 + 4) == 1 )
+    if ( Float2_equalTest(*v7 + 4) == 1 )
     {
       sub_60026050(a1);
-      sub_608134CC((_DWORD *)a1 + 1583, (int)"SE_VOC_IGG_DEMO_AGITATE", *((__int16 *)a1 + 3320), 0);
+      SoundActor_tryStartSoundIfFree4(
+        (_DWORD *)a1 + 1583,
+        (int)"SE_VOC_IGG_DEMO_AGITATE",
+        *((__int16 *)a1 + 3320),
+        0);
       *((_BYTE *)a1 + 8206) = 1;
     }
     v9 = *(_DWORD *)(*(_DWORD *)v2 + 12);
@@ -85260,7 +85531,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *((_DWORD *)a1 + 1774);
     v11[0] = 12321336;
     v11[1] = "throw_jump";
-    sub_60421AD4(v2, v11, 0);
+    dispatch_forwardThisSecondWord(v2, v11, 0);
     if ( (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 716))(a1) == 1 )
     {
       v3 = *((_DWORD *)a1 + 1777);
@@ -85382,7 +85653,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = (*v2)[17];
     if ( (*v2)[2] > v11 )
       v10 += v11;
-    if ( sub_60418548(*v10 + 4) )
+    if ( Float2_equalTest(*v10 + 4) )
       return ((int (__fastcall *)(_DWORD **, int))(*a1)[48])(a1, 13116788);
     v12 = (*v2)[3];
     v13 = (*v2)[17];
@@ -85507,7 +85778,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 += v7;
     v8 = *v5 + 4;
     (*(void (__fastcall **)(int *))(v2 + 1180))(a1);
-    if ( sub_60418548(v8) == 1 && a1[1794] != 2 )
+    if ( Float2_equalTest(v8) == 1 && a1[1794] != 2 )
     {
       Iggy::vf61C(a1);
       a1[1794] = 2;
@@ -86457,7 +86728,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall KoopalingBase_vf504(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_JUMP_M", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_JUMP_M",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -86466,7 +86741,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall KoopalingBase_vf508(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_SMART_LAND", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_SMART_LAND",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -86475,7 +86754,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall KoopalingBase_vf50C(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_SMART_SHELL_LAND", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_SMART_SHELL_LAND",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -86484,7 +86767,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall KoopalingBase_vf510(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_SHELL_IN", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_SHELL_IN",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -86493,7 +86780,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall KoopalingBase_vf514(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_SHELL_OUT", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_CMN_SHELL_OUT",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -86529,7 +86820,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall Iggy_vf694(int a1)
   {
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_IGG_JUMP", 0);
+    return SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_IGG_JUMP", 0);
   }
 
 /* ============================================================================
@@ -87333,7 +87624,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v33 = v3;
       v34 = v2;
     }
-    *(float *)&v19 = COERCE_FLOAT(sub_6000F7B8());
+    *(float *)&v19 = COERCE_FLOAT(FixedPoint_atan2());
     v20 = *(_DWORD *)(a1 + 56);
     if ( _cxa_guard_acquire_0(13117488) )
     {
@@ -87373,7 +87664,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v33 >= 0.0 )
     {
-      v28 = sub_6000F7B8();
+      v28 = FixedPoint_atan2();
       v29 = v19;
       v24 = flt_60C82A30;
       v30 = v28 - LODWORD(flt_60C82A30);
@@ -87385,7 +87676,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      v23 = sub_6000F7B8();
+      v23 = FixedPoint_atan2();
       v24 = flt_60C82A30;
       v25 = LODWORD(flt_60C82A30) + v23;
       if ( v19 < v25 )
@@ -87792,7 +88083,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_600A3D1C(a1);
     if ( !*(_BYTE *)(a1 + 3076) )
     {
-      v2 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3828]);
+      v2 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3828]);
       if ( _cxa_guard_acquire_0(13087588) )
       {
         MEMORY[0xC7B360] = 12320920;
@@ -88204,7 +88495,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v17 = 12321336;
     v18 = "fly_magic";
-    sub_60421AD4(v2, &v17, 1);
+    dispatch_forwardThisSecondWord(v2, &v17, 1);
     v4 = *(int **)(*(_DWORD *)v3 + 28);
     if ( *(_DWORD *)(*(_DWORD *)v3 + 24) > 1u )
       ++v4;
@@ -88319,7 +88610,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         goto LABEL_2;
       }
-      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_KMC_BLOCK_MAKE", *(__int16 *)(a1 + 6640), 0);
+      SoundActor_tryStartSoundIfFree4(
+        (_DWORD *)(a1 + 6332),
+        (int)"SE_VOC_KMC_BLOCK_MAKE",
+        *(__int16 *)(a1 + 6640),
+        0);
     }
   LABEL_2:
     v8 = *(_DWORD *)(a1 + 80);
@@ -88522,7 +88817,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[443].n128_u32[2];
     v5[0] = 12321336;
     v5[1] = "fly_appear";
-    sub_60421AD4(v3, v5, 0);
+    dispatch_forwardThisSecondWord(v3, v5, 0);
     a1[515].n128_u32[3] = 0;
     a1[515].n128_f32[2] = v2 / 24.0;
     sub_602375C4(a1 + 516, 104, &a1[6].n128_f32[3], 0, 0);
@@ -88595,7 +88890,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v12 )
       v11 += v12;
-    if ( sub_60418548(*v11 + 4) == 1 )
+    if ( Float2_equalTest(*v11 + 4) == 1 )
       (*(void (__fastcall **)(int32x4_t *))(a1->n128_u32[0] + 76))(a1);
     v13 = *(_DWORD *)(*(_DWORD *)v2 + 12);
     v14 = *(_DWORD *)(*(_DWORD *)v2 + 68);
@@ -88669,7 +88964,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[443].n128_u32[2];
     v7[0] = 12321336;
     v7[1] = "fly_disappear";
-    sub_60421AD4(v3, v7, 0);
+    dispatch_forwardThisSecondWord(v3, v7, 0);
     a1[515].n128_u32[3] = 1065353216;
     v4 = *(_DWORD *)(a1[443].n128_u32[2] + 12);
     v5 = *(_DWORD *)(a1[443].n128_u32[2] + 68);
@@ -88734,7 +89029,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v11 )
       v10 += v11;
-    if ( sub_60418548(*v10 + 4) == 1 )
+    if ( Float2_equalTest(*v10 + 4) == 1 )
       (*(void (__fastcall **)(int32x4_t *))(a1->n128_u32[0] + 72))(a1);
     v12 = *(_DWORD *)(*(_DWORD *)v2 + 12);
     v13 = *(_DWORD *)(*(_DWORD *)v2 + 68);
@@ -88761,7 +89056,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v4[0] = 12321336;
     v4[1] = "fly_wait";
-    sub_60421AD4(v2, v4, 1);
+    dispatch_forwardThisSecondWord(v2, v4, 1);
     *(_WORD *)(a1 + 6276) = 60;
     return 6276;
   }
@@ -88853,7 +89148,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v4[0] = 12321336;
     v4[1] = "fly_st";
-    sub_60421AD4(v2, v4, 0);
+    dispatch_forwardThisSecondWord(v2, v4, 0);
     *(_DWORD *)(a1 + 7172) = 0;
     return 7172;
   }
@@ -88881,7 +89176,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = *(_DWORD *)(*v2 + 68);
       if ( *(_DWORD *)(*v2 + 8) > v6 )
         v5 += v6;
-      result = sub_60418548(*v5 + 4);
+      result = Float2_equalTest(*v5 + 4);
       if ( result == 1 )
         return (*(int (__fastcall **)(unsigned __int8 *, int))(*(_DWORD *)a1 + 192))(a1, 13118616);
     }
@@ -88938,7 +89233,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v8[0] = 12321336;
       v8[1] = "fly";
-      sub_60421AD4(v3, v8, 1);
+      dispatch_forwardThisSecondWord(v3, v8, 1);
     }
     v6 = *(float *)(a1 + 108);
     result = MEMORY[0xCC6484];
@@ -88966,7 +89261,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v8[0] = 12321336;
     v8[1] = "fly_wait";
-    sub_60421AD4(v2, v8, 1);
+    dispatch_forwardThisSecondWord(v2, v8, 1);
     v3 = *(_DWORD *)(a1 + 80) ^ 1;
     *(_DWORD *)(a1 + 80) = v3;
     v4 = *(char *)(v3 + 11527156);
@@ -89062,7 +89357,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = a1[443].n128_u32[2];
     v11[0] = 12321336;
     v11[1] = "fly_disappear";
-    sub_60421AD4(v7, v11, 0);
+    dispatch_forwardThisSecondWord(v7, v11, 0);
     a1[515].n128_u32[3] = 1065353216;
     v8 = *(_DWORD *)(a1[443].n128_u32[2] + 12);
     v9 = *(_DWORD *)(a1[443].n128_u32[2] + 68);
@@ -89131,7 +89426,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v11 )
       v10 += v11;
-    if ( sub_60418548(*v10 + 4) == 1 )
+    if ( Float2_equalTest(*v10 + 4) == 1 )
       (*(void (__fastcall **)(int32x4_t *))(a1->n128_u32[0] + 72))(a1);
     v12 = *(_DWORD *)(*(_DWORD *)v2 + 12);
     v13 = *(_DWORD *)(*(_DWORD *)v2 + 68);
@@ -89237,7 +89532,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[443].n128_u32[2];
     v7[0] = 12321336;
     v7[1] = "fly_appear";
-    sub_60421AD4(v2, v7, 0);
+    dispatch_forwardThisSecondWord(v2, v7, 0);
     a1[515].n128_u32[3] = 0;
     v4 = *(_DWORD *)(*(_DWORD *)v3 + 12);
     v5 = *(_DWORD *)(*(_DWORD *)v3 + 68);
@@ -89315,7 +89610,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v14 )
       v13 += v14;
-    if ( sub_60418548(*v13 + 4) == 1 )
+    if ( Float2_equalTest(*v13 + 4) == 1 )
       (*(void (__fastcall **)(int32x4_t *))(a1->n128_u32[0] + 76))(a1);
     v15 = *(_DWORD *)(*(_DWORD *)v2 + 12);
     v16 = *(_DWORD *)(*(_DWORD *)v2 + 68);
@@ -89380,7 +89675,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 = a1[1774];
     v23[0] = 12321336;
     v23[1] = "fly_throw3";
-    sub_60421AD4(v1, v23, 0);
+    dispatch_forwardThisSecondWord(v1, v23, 0);
     v3 = *(v2 - 1745);
     v4 = *((_DWORD *)v2 - 1746);
     v5 = *((_DWORD *)v2 - 1747);
@@ -89484,7 +89779,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = *(_DWORD *)(*v2 + 68);
       if ( *(_DWORD *)(*v2 + 8) > v8 )
         v7 += v8;
-      if ( sub_60418548(*v7 + 4) )
+      if ( Float2_equalTest(*v7 + 4) )
         goto LABEL_9;
       v9 = *(_DWORD *)(*v2 + 12);
       v10 = *(_DWORD *)(*v2 + 68);
@@ -89618,7 +89913,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = *(_DWORD *)(a1 + 7096);
       v19[0] = 12321336;
       v19[1] = "fly_throw2";
-      sub_60421AD4(v4, v19, 0);
+      dispatch_forwardThisSecondWord(v4, v19, 0);
       v6 = *(int **)(*(_DWORD *)(a1 + 7096) + 28);
       if ( *(_DWORD *)(*(_DWORD *)(a1 + 7096) + 24) > 1u )
         ++v6;
@@ -89739,7 +90034,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v14 = *(_DWORD *)(*v2 + 68);
       if ( *(_DWORD *)(*v2 + 8) > v14 )
         v13 += v14;
-      result = sub_60418548(*v13 + 4);
+      result = Float2_equalTest(*v13 + 4);
       if ( result == 1 )
       {
         v16 = a1 + 1795;
@@ -89861,7 +90156,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 7096);
     v4[0] = 12321336;
     v4[1] = "fly_throw2_wait";
-    sub_60421AD4(v2, v4, 1);
+    dispatch_forwardThisSecondWord(v2, v4, 1);
     *(_WORD *)(a1 + 6276) = 80;
     return 6276;
   }
@@ -91788,7 +92083,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[1774];
     v4[0] = 12321336;
     v4[1] = "demo_battleA";
-    sub_60421AD4(v2, v4, 0);
+    dispatch_forwardThisSecondWord(v2, v4, 0);
     result = (*(int (__fastcall **)(_DWORD *))(*a1 + 1316))(a1);
     a1[30] = 0;
     a1[31] = 0;
@@ -91832,7 +92127,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v5 <= 97.0 )
       sub_6081356C((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KAMECK_DEMO_FLY_STOP", *(__int16 *)(a1 + 6640), 0);
     if ( v5 == 37.0 )
-      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KAMECK_DEMO_FLY_KAITEN", *(__int16 *)(a1 + 6640), 0);
+      SoundActor_tryStartSoundIfFree4(
+        (_DWORD *)(a1 + 6332),
+        (int)"SE_BOSS_KAMECK_DEMO_FLY_KAITEN",
+        *(__int16 *)(a1 + 6640),
+        0);
     if ( v5 >= 231.0 )
       sub_6081356C((_DWORD *)(a1 + 6332), (int)"SE_EMY_KAMECK_FLY_START", *(__int16 *)(a1 + 6640), 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1040))(a1);
@@ -92069,7 +92368,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = (*v2)[17];
       if ( (*v2)[2] > v9 )
         v8 += v9;
-      if ( sub_60418548(*v8 + 4) )
+      if ( Float2_equalTest(*v8 + 4) )
         goto LABEL_9;
       v10 = (*v2)[3];
       v11 = (*v2)[17];
@@ -92103,8 +92402,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( v12 != 32 );
         v16 = *(__int16 *)(a1 + 6640);
         v15 = (__int16 *)(a1 + 6640);
-        sub_608134CC((_DWORD *)v15 - 77, (int)"SE_VOC_KMC_BLOCK_FALL", v16, 0);
-        sub_608134CC((_DWORD *)v15 - 77, (int)"SE_BOSS_KAMECK_MAGIC_SHOT", *v15, 0);
+        SoundActor_tryStartSoundIfFree4((_DWORD *)v15 - 77, (int)"SE_VOC_KMC_BLOCK_FALL", v16, 0);
+        SoundActor_tryStartSoundIfFree4((_DWORD *)v15 - 77, (int)"SE_BOSS_KAMECK_MAGIC_SHOT", *v15, 0);
         *v19 = 2;
         return 2;
       }
@@ -92358,7 +92657,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( *(_DWORD *)(a1 + 80) == 1 )
             *(_DWORD *)(a1 + 120) = -1082130432;
           (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1240))(a1);
-          sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KAMECK_DOWN_BOUND", *(__int16 *)(a1 + 6640), 0);
+          SoundActor_tryStartSoundIfFree4(
+            (_DWORD *)(a1 + 6332),
+            (int)"SE_BOSS_KAMECK_DOWN_BOUND",
+            *(__int16 *)(a1 + 6640),
+            0);
           *v3 = 2;
         }
         result = MEMORY[0xCC6484];
@@ -92615,7 +92918,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_KAMECK_APPEAR_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KAMECK_APPEAR", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_KAMECK_APPEAR",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -92624,7 +92931,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_KAMECK_DISAPPEAR_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KAMECK_DISAPPEAR", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_BOSS_KAMECK_DISAPPEAR",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -93120,7 +93431,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int (__fastcall ***v0)(_DWORD, int); // r4
     int result; // r0
   
-    v0 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3844]);
+    v0 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3844]);
     if ( _cxa_guard_acquire_0(13087588) )
     {
       MEMORY[0xC7B360] = 12320920;
@@ -93159,7 +93470,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC7F70C] = 12320992;
       _cxa_guard_release_0(13104912);
     }
-    return a2 == 13104908 || sub_60027FB0(a2);
+    return a2 == 13104908 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -95274,8 +95585,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 340) |= 0x1000u;
     *(_DWORD *)(a1 + 344) = 722536;
     StageActor::distanceToPlayer((float *)a1, (int)&v14);
-    v2 = sub_6000F7B8();
-    v3 = sub_6000F7B8();
+    v2 = FixedPoint_atan2();
+    v3 = FixedPoint_atan2();
     if ( *(_BYTE *)(a1 + 6764) )
     {
       v4 = *(_DWORD *)(a1 + 6768);
@@ -95291,7 +95602,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       goto LABEL_32;
     }
-    v7 = sub_6000F7B8();
+    v7 = FixedPoint_atan2();
     v8 = v7;
     if ( v14 >= 0.0 )
     {
@@ -96930,7 +97241,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         sub_6075F960(v4);
         sub_6075F960(v4);
-        result = sub_6000F7B8();
+        result = FixedPoint_atan2();
         *(_DWORD *)(a1 + 7172) = result;
         v5 = (_DWORD *)(a1 + 7172);
         if ( result >= -417566264 )
@@ -97324,9 +97635,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v6 = v3[17];
           if ( v5 > v6 )
             v4 += v6;
-          result = sub_60418548(*v4 + 4);
+          result = Float2_equalTest(*v4 + 4);
           if ( result == 1 )
-            return (int)sub_608134CC((_DWORD *)(a1 + 6332), **(_DWORD **)(a1 + 8116), *(__int16 *)(a1 + 6640), 0);
+            return (int)SoundActor_tryStartSoundIfFree4(
+                          (_DWORD *)(a1 + 6332),
+                          **(_DWORD **)(a1 + 8116),
+                          *(__int16 *)(a1 + 6640),
+                          0);
         }
       }
     }
@@ -97364,8 +97679,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v7 = *(_DWORD *)(*v5 + 68);
           if ( *(_DWORD *)(*v5 + 8) > v7 )
             v6 += v7;
-          if ( sub_60418548(*v6 + 4) == 1 )
-            sub_608134CC(v3, (*v2)[2], *v4, 0);
+          if ( Float2_equalTest(*v6 + 4) == 1 )
+            SoundActor_tryStartSoundIfFree4(v3, (*v2)[2], *v4, 0);
         }
         result = *v2;
         if ( (char *)(*v2)[4] != "SE_VOC_NO_SOUND" )
@@ -97374,9 +97689,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v9 = *(_DWORD *)(*v5 + 68);
           if ( *(_DWORD *)(*v5 + 8) > v9 )
             v8 += v9;
-          result = (int *)sub_60418548(*v8 + 4);
+          result = (int *)Float2_equalTest(*v8 + 4);
           if ( result == (int *)1 )
-            return sub_608134CC(v3, (*v2)[4], *v4, 0);
+            return SoundActor_tryStartSoundIfFree4(v3, (*v2)[4], *v4, 0);
         }
       }
     }
@@ -97412,8 +97727,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v7 = *(_DWORD *)(*v5 + 68);
         if ( *(_DWORD *)(*v5 + 8) > v7 )
           v6 += v7;
-        if ( sub_60418548(*v6 + 4) == 1 )
-          sub_608134CC(v3, (*v2)[6], *v4, 0);
+        if ( Float2_equalTest(*v6 + 4) == 1 )
+          SoundActor_tryStartSoundIfFree4(v3, (*v2)[6], *v4, 0);
       }
       result = *v2;
       if ( (char *)(*v2)[8] != "SE_VOC_NO_SOUND" )
@@ -97422,9 +97737,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v9 = *(_DWORD *)(*v5 + 68);
         if ( *(_DWORD *)(*v5 + 8) > v9 )
           v8 += v9;
-        result = (int *)sub_60418548(*v8 + 4);
+        result = (int *)Float2_equalTest(*v8 + 4);
         if ( result == (int *)1 )
-          return sub_608134CC(v3, (*v2)[8], *v4, 0);
+          return SoundActor_tryStartSoundIfFree4(v3, (*v2)[8], *v4, 0);
       }
     }
     return result;
@@ -97444,7 +97759,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = *(char **)(v1 + 40);
       if ( v2 != "SE_VOC_NO_SOUND" )
-        return sub_608134CC(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
+        return SoundActor_tryStartSoundIfFree4(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
     }
     return result;
   }
@@ -97463,7 +97778,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = *(char **)(v1 + 48);
       if ( v2 != "SE_VOC_NO_SOUND" )
-        return sub_608134CC(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
+        return SoundActor_tryStartSoundIfFree4(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
     }
     return result;
   }
@@ -97491,9 +97806,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 = v4[17];
       if ( v6 > v7 )
         v5 += v7;
-      result = (int *)sub_60418548(*v5 + 4);
+      result = (int *)Float2_equalTest(*v5 + 4);
       if ( result == (int *)1 )
-        return sub_608134CC((_DWORD *)(a1 + 6332), *(_DWORD *)(*(_DWORD *)v3 + 56), *(__int16 *)(a1 + 6640), 0);
+        return SoundActor_tryStartSoundIfFree4(
+                 (_DWORD *)(a1 + 6332),
+                 *(_DWORD *)(*(_DWORD *)v3 + 56),
+                 *(__int16 *)(a1 + 6640),
+                 0);
     }
     return result;
   }
@@ -97512,7 +97831,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = *(char **)(v1 + 64);
       if ( v2 != "SE_VOC_NO_SOUND" )
-        return sub_608134CC(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
+        return SoundActor_tryStartSoundIfFree4(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
     }
     return result;
   }
@@ -97531,7 +97850,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = *(char **)(v1 + 72);
       if ( v2 != "SE_VOC_NO_SOUND" )
-        return sub_608134CC(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
+        return SoundActor_tryStartSoundIfFree4(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
     }
     return result;
   }
@@ -97550,10 +97869,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = *(char **)(v1 + 80);
       if ( v2 != "SE_VOC_NO_SOUND" )
-        return sub_608134CC(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
+        return SoundActor_tryStartSoundIfFree4(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
       v2 = *(char **)(v1 + 72);
       if ( v2 != "SE_VOC_NO_SOUND" )
-        return sub_608134CC(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
+        return SoundActor_tryStartSoundIfFree4(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
     }
     return result;
   }
@@ -97572,7 +97891,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = *(char **)(v1 + 88);
       if ( v2 != "SE_VOC_NO_SOUND" )
-        return sub_608134CC(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
+        return SoundActor_tryStartSoundIfFree4(result + 1583, (int)v2, *((__int16 *)result + 3320), 0);
     }
     return result;
   }
@@ -97608,8 +97927,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v7 = *(_DWORD *)(*v5 + 68);
         if ( *(_DWORD *)(*v5 + 8) > v7 )
           v6 += v7;
-        if ( sub_60418548(*v6 + 4) == 1 )
-          sub_608134CC(v3, (*v2)[24], *v4, 0);
+        if ( Float2_equalTest(*v6 + 4) == 1 )
+          SoundActor_tryStartSoundIfFree4(v3, (*v2)[24], *v4, 0);
       }
       if ( (char *)(*v2)[26] != "SE_VOC_NO_SOUND" )
       {
@@ -97617,8 +97936,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v9 = *(_DWORD *)(*v5 + 68);
         if ( *(_DWORD *)(*v5 + 8) > v9 )
           v8 += v9;
-        if ( sub_60418548(*v8 + 4) == 1 )
-          sub_608134CC(v3, (*v2)[26], *v4, 0);
+        if ( Float2_equalTest(*v8 + 4) == 1 )
+          SoundActor_tryStartSoundIfFree4(v3, (*v2)[26], *v4, 0);
       }
       result = *v2;
       if ( (char *)(*v2)[28] != "SE_VOC_NO_SOUND" )
@@ -97627,9 +97946,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v11 = *(_DWORD *)(*v5 + 68);
         if ( *(_DWORD *)(*v5 + 8) > v11 )
           v10 += v11;
-        result = (int *)sub_60418548(*v10 + 4);
+        result = (int *)Float2_equalTest(*v10 + 4);
         if ( result == (int *)1 )
-          return sub_608134CC(v3, (*v2)[28], *v4, 0);
+          return SoundActor_tryStartSoundIfFree4(v3, (*v2)[28], *v4, 0);
       }
     }
     return result;
@@ -97655,7 +97974,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = *(_DWORD *)(a1[1774] + 68);
     if ( *(_DWORD *)(a1[1774] + 8) > v5 )
       v4 += v5;
-    return sub_60418548(*v4 + 4) != 0;
+    return Float2_equalTest(*v4 + 4) != 0;
   }
 
 /* ============================================================================
@@ -98591,7 +98910,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v12 += v13;
         v14 = *v12;
         (*(void (__fastcall **)(float *))(*(_DWORD *)a1 + 1200))(a1);
-        result = sub_60418548(v14 + 4);
+        result = Float2_equalTest(v14 + 4);
         if ( result == 1 )
         {
           *((_DWORD *)a1 + 1784) = (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 1116))(a1);
@@ -98724,7 +99043,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v12 = *(_DWORD *)(*v5 + 68);
             if ( *(_DWORD *)(*v5 + 8) > v12 )
               v11 += v12;
-            result = sub_60418548(*v11 + 4);
+            result = Float2_equalTest(*v11 + 4);
             if ( result == 1 )
             {
               v7[20] = a1[20];
@@ -99992,7 +100311,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v10 += v11;
         v12 = *v10;
         (*(void (__fastcall **)(int *))(*a1 + 1188))(a1);
-        result = sub_60418548(v12 + 4);
+        result = Float2_equalTest(v12 + 4);
         v8 = *v9;
         if ( result == 1 )
         {
@@ -100008,7 +100327,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v13 += v14;
         v15 = *v13;
         (*(void (__fastcall **)(int *))(*a1 + 1192))(a1);
-        result = sub_60418548(v15 + 4);
+        result = Float2_equalTest(v15 + 4);
         v8 = *v9;
         if ( result == 1 )
         {
@@ -101137,7 +101456,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       dword_60C835EC = MEMORY[0xAF3820];
       _cxa_guard_release_0(&unk_60C835D0);
     }
-    v3 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(
+    v3 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(
                                                 MEMORY[0xC7B400],
                                                 *((_DWORD *)&unk_60C835D0 + *(_DWORD *)(a1 + 6124) + 1));
     if ( _cxa_guard_acquire_0(13087588) )
@@ -101342,7 +101661,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC7F70C] = 12320992;
       _cxa_guard_release_0(13104912);
     }
-    return a2 == 13104908 || sub_60027FB0(a2);
+    return a2 == 13104908 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -101673,7 +101992,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 6192) = v10[27] + v10[143];
     *(float *)(a1 + 6196) = v10[28] + v10[144];
     *(float *)(a1 + 6200) = v10[29] + v10[145];
-    v11 = sub_6000F7B8();
+    v11 = FixedPoint_atan2();
     v12 = v11;
     *(_DWORD *)(a1 + 6444) = v11;
     if ( v11 < 0 )
@@ -101767,7 +102086,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 6192) = v7[27] + v7[143];
     *(float *)(a1 + 6196) = v7[28] + v7[144];
     *(float *)(a1 + 6200) = v7[29] + v7[145];
-    *v2 = sub_6000F7B8();
+    *v2 = FixedPoint_atan2();
     v8 = *(int (__fastcall ****)(_DWORD, int))(a1 + 56);
     result = _cxa_guard_acquire_0(13121208);
     if ( result )
@@ -102360,7 +102679,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 200))(a1);
-      result = sub_6000F7B8();
+      result = FixedPoint_atan2();
     }
   LABEL_33:
     _S0 = 1140850688;
@@ -103026,7 +103345,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8371C] = 12320992;
       _cxa_guard_release_0(13121312);
     }
-    return a2 == 13121308 || sub_60027FB0(a2);
+    return a2 == 13121308 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -103233,7 +103552,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8371C] = 12320992;
       _cxa_guard_release_0(13121312);
     }
-    return a2 == 13121308 || sub_60027FB0(a2);
+    return a2 == 13121308 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -103430,7 +103749,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8371C] = 12320992;
       _cxa_guard_release_0(13121312);
     }
-    return a2 == 13121308 || sub_60027FB0(a2);
+    return a2 == 13121308 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -103611,7 +103930,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8371C] = 12320992;
       _cxa_guard_release_0(13121312);
     }
-    return a2 == 13121308 || sub_60027FB0(a2);
+    return a2 == 13121308 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -103792,7 +104111,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8371C] = 12320992;
       _cxa_guard_release_0(13121312);
     }
-    return a2 == 13121308 || sub_60027FB0(a2);
+    return a2 == 13121308 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -103973,7 +104292,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8371C] = 12320992;
       _cxa_guard_release_0(13121312);
     }
-    return a2 == 13121308 || sub_60027FB0(a2);
+    return a2 == 13121308 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -104154,7 +104473,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8371C] = 12320992;
       _cxa_guard_release_0(13121312);
     }
-    return a2 == 13121308 || sub_60027FB0(a2);
+    return a2 == 13121308 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -105448,7 +105767,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC83924] = 12320992;
       _cxa_guard_release_0(13121832);
     }
-    return a2 == 13121828 || sub_60027FB0(a2);
+    return a2 == 13121828 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -105714,7 +106033,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8371C] = 12320992;
       _cxa_guard_release_0(13121312);
     }
-    return a2 == 13121308 || sub_60027FB0(a2);
+    return a2 == 13121308 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -106191,7 +106510,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v17 = v13[17];
       if ( v16 > v17 )
         v15 += v17;
-      if ( sub_60418548(*v15 + 4) == 1 )
+      if ( Float2_equalTest(*v15 + 4) == 1 )
         AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 6, 1, 0, 0);
       v18 = *(_DWORD *)(*(_DWORD *)v14 + 12);
       v19 = *(_DWORD *)(*(_DWORD *)v14 + 68);
@@ -106235,7 +106554,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v36 = v26;
         v37 = v21;
         EffectData_create(1089, (int)&v35, 0, a1 + 144);
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_LAND", 0);
+        SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KOOPA_LAND", 0);
         *v6 = 2;
         return 2;
       }
@@ -106276,7 +106595,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v36 = v31;
       v37 = v30;
       EffectData_create(1089, (int)&v35, 0, a1 + 144);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_JUMP_L", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_JUMP_L", 0);
       v32 = (_DWORD *)(a1 + 7112);
       *v32 = 3;
       dispatch_setFlag1(*v8, *(v32 - 4), &dword_60C83B8C);
@@ -106501,13 +106820,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = v3[17];
     if ( v3[2] > v5 )
       v4 += v5;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
       AreaRumbleMgr_rumble2(MEMORY[0xC99E3C], 8, 2, 0);
     v6 = (_DWORD *)(*v2)[3];
     v7 = (*v2)[17];
     if ( (*v2)[2] > v7 )
       v6 += v7;
-    if ( sub_60418548(*v6 + 4) == 1 )
+    if ( Float2_equalTest(*v6 + 4) == 1 )
       sub_60400BE4(MEMORY[0xC99E3C]);
     v9 = (_DWORD *)(a1 + 9764);
     v8 = *(_DWORD *)(a1 + 9764);
@@ -106660,16 +106979,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
     {
       AreaRumbleMgr_rumble2(MEMORY[0xC99E3C], 8, 3, 0);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_SHOUT", 0);
+      SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_KP_SHOUT", 0);
     }
     v7 = (_DWORD *)(*v3)[3];
     v8 = (*v3)[17];
     if ( (*v3)[2] > v8 )
       v7 += v8;
-    if ( sub_60418548(*v7 + 4) == 1 )
+    if ( Float2_equalTest(*v7 + 4) == 1 )
       sub_60400BE4(MEMORY[0xC99E3C]);
     if ( sub_60235E50(a1 + 7920) == 1 )
     {
@@ -106862,8 +107181,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[31] = 0;
     a1[32] = 0;
     a1[25] = MEMORY[0xAFE3D0];
-    sub_60813430(a1 + 1583, (int)"SE_BOSS_KOOPA_FALL", 0);
-    sub_60813430(a1 + 1583, (int)"SE_VOC_KP_FALL", 0);
+    SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_BOSS_KOOPA_FALL", 0);
+    SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_VOC_KP_FALL", 0);
     a1[2440] = 1;
     result = a1[1777] & 0xFFFFFFFB;
     a1[1777] = result;
@@ -108184,9 +108503,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = (*(int (__fastcall **)(int, int, float *))(*(_DWORD *)v8 + 108))(v8, v9, &v17);
           if ( (v21[0] != 0.0 || v21[2] != 0.0) && (v17 != 0.0 || v19 != 0.0) )
           {
-            v10 = sub_6000F7B8();
+            v10 = FixedPoint_atan2();
             v11 = abs32(v10);
-            v12 = sub_6000F7B8();
+            v12 = FixedPoint_atan2();
             v14 = v12;
             if ( v12 >= 0x10000000 )
               v14 = 0x10000000;
@@ -108423,7 +108742,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       dword_60C83D04 = (int)"SE_BOSS_CMN_DAMAGE_FIRE_LAST";
       _cxa_guard_release_0(&unk_60C83C20);
     }
-    sub_608134CC(a1 + 6332, *((_DWORD *)&flt_60C83CA0 + a2 + 20), *(__int16 *)(a1 + 6640), 0);
+    SoundActor_tryStartSoundIfFree4(a1 + 6332, *((_DWORD *)&flt_60C83CA0 + a2 + 20), *(__int16 *)(a1 + 6640), 0);
     if ( ((unsigned int)&unk_60C83C24 & ~(1611423292 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C83C24) )
     {
       dword_60C83D10[0] = (int)"SE_VOC_KP_DAMAGE_FEVER";
@@ -108447,7 +108766,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v6 = "SE_VOC_KP_DAMAGE_SECOND";
       }
     }
-    return sub_60813430(a1 + 6332, v6, 0);
+    return SoundActor_tryStartSoundIfFree(a1 + 6332, v6, 0);
   }
 
 /* ============================================================================
@@ -109043,13 +109362,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(float *)(*v5 + 24) < 0.0 )
     {
       v9 = 0;
-      if ( !sub_60418548(v8 + 4) )
+      if ( !Float2_equalTest(v8 + 4) )
       {
         v10 = (_DWORD *)(*v4)[3];
         v11 = (*v4)[17];
         if ( (*v4)[2] > v11 )
           v10 += v11;
-        result = sub_60418548(*v10 + 4);
+        result = Float2_equalTest(*v10 + 4);
         v9 = 1;
         if ( result != 1 )
           return result;
@@ -109083,16 +109402,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_600024C4(a1);
       v20 = v19;
       EffectData_create(1088, &v18, 0, a1 + 144);
-      return sub_60813430(a1 + 6332, "SE_BOSS_KOOPA_FOOT", 0);
+      return SoundActor_tryStartSoundIfFree(a1 + 6332, "SE_BOSS_KOOPA_FOOT", 0);
     }
     v9 = 0;
-    if ( sub_60418548(v8 + 4) )
+    if ( Float2_equalTest(v8 + 4) )
       goto LABEL_14;
     v12 = (_DWORD *)(*v4)[3];
     v13 = (*v4)[17];
     if ( (*v4)[2] > v13 )
       v12 += v13;
-    result = sub_60418548(*v12 + 4);
+    result = Float2_equalTest(*v12 + 4);
     v9 = 1;
     if ( result )
       goto LABEL_14;
@@ -109281,7 +109600,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( !v13 || (result = v13 - 1, (*v14 = result) == 0) )
         {
           AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 22, 3, 0, 0);
-          sub_60813430(a1 + 6332, "SE_BOSS_KOOPA_CRASH", 0);
+          SoundActor_tryStartSoundIfFree(a1 + 6332, "SE_BOSS_KOOPA_CRASH", 0);
           *v14 = 30;
           *v6 = 3;
           result = 30;
@@ -110131,7 +110450,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int (__fastcall ***v0)(_DWORD, int); // r4
     int result; // r0
   
-    v0 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3858]);
+    v0 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3858]);
     if ( _cxa_guard_acquire_0(13087588) )
     {
       MEMORY[0xC7B360] = 12320920;
@@ -110159,7 +110478,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v5; // r0
   
     v0 = MEMORY[0xAF314C];
-    v1 = (int *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF314C]);
+    v1 = (int *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF314C]);
     result = *(int **)(MEMORY[0xC7B400] + 27180);
     if ( v1 != result )
     {
@@ -110187,7 +110506,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v3 = v4;
           }
         }
-        v1 = (int *)sub_60008598(MEMORY[0xC7B400], v0);
+        v1 = (int *)ActorMgr_findByType(MEMORY[0xC7B400], v0);
         result = *(int **)(MEMORY[0xC7B400] + 27180);
       }
       while ( v1 != result );
@@ -110424,7 +110743,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( *(_BYTE *)(a1 + 6120) )
           (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 244))(a1);
-        v6 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF329C]);
+        v6 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF329C]);
         if ( _cxa_guard_acquire_0(13123508) )
         {
           MEMORY[0xC83FB0] = 12320968;
@@ -111151,7 +111470,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC7F70C] = 12320992;
       _cxa_guard_release_0(13104912);
     }
-    return a2 == 13104908 || sub_60027FB0(a2);
+    return a2 == 13104908 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -111518,7 +111837,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v4 )
       v3 += v4;
-    result = (int *)sub_60418548(*v3 + 4);
+    result = (int *)Float2_equalTest(*v3 + 4);
     if ( result == (int *)1 )
     {
       v6 = *(float *)(a1 + 112);
@@ -112354,7 +112673,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC840A4] = 12320992;
       _cxa_guard_release_0(13123752);
     }
-    return a2 == 13123748 || sub_60027FB0(a2);
+    return a2 == 13123748 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -113668,7 +113987,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( result == 1 )
         {
           v5 = *(float *)(v4 + 108) - *(float *)(a1 + 7132);
-          v6 = sub_6000F7B8();
+          v6 = FixedPoint_atan2();
           *(_DWORD *)(a1 + 7128) = v6;
           v7 = (int *)(a1 + 7128);
           v8 = v6 - *(_DWORD *)(a1 + 164) - *(_DWORD *)(*(_DWORD *)(a1 + 7244) + 164);
@@ -113730,7 +114049,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = "SE_VOC_JR_DAMAGE_L";
     else
       v2 = "SE_VOC_JR_DAMAGE_S";
-    return sub_60813430(v1, (int)v2, 0);
+    return SoundActor_tryStartSoundIfFree(v1, (int)v2, 0);
   }
 
 /* ============================================================================
@@ -113740,7 +114059,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall BowserJrBase_vf370(_DWORD *a1)
   {
     BossBase::vf2B8();
-    sub_60813430(a1 + 1583, (int)"SE_VOC_JR_DAMAGE_LAST", 0);
+    SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_VOC_JR_DAMAGE_LAST", 0);
     return (*(int (__fastcall **)(_DWORD *))(*a1 + 800))(a1);
   }
 
@@ -113872,7 +114191,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     StageActor::removeActiveColliders(a1);
     if ( *(unsigned __int8 *)(a2 + 84) <= 3u )
       sub_60025B84(a1, a2, a1 + 108, 6u);
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_DAMAGE_LAST", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_DAMAGE_LAST", 0);
     (*(void (__fastcall **)(_DWORD, bool, _DWORD))(**(_DWORD **)(a1 + 7244) + 680))(
       *(_DWORD *)(a1 + 7244),
       (float)(*(float *)(a1 + 108) - *(float *)(a1 + 7168)) >= 0.0,
@@ -113924,7 +114243,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ActiveColldierMgr_removeFromList3(v5, v4);
     if ( *(unsigned __int8 *)(a2 + 84) <= 3u )
       sub_60025B84(a1, a2, a1 + 108, 6u);
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", 0);
     (*(void (__fastcall **)(_DWORD, bool, int))(**(_DWORD **)(a1 + 7244) + 680))(
       *(_DWORD *)(a1 + 7244),
       (float)(*(float *)(a1 + 108) - *(float *)(a1 + 7168)) >= 0.0,
@@ -113972,7 +114291,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ActiveColldierMgr_removeFromList3(v5, v4);
     if ( *(unsigned __int8 *)(a2 + 84) <= 3u )
       sub_60025B84(a1, a2, a1 + 108, 6u);
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", 0);
     (*(void (__fastcall **)(_DWORD, bool, int))(**(_DWORD **)(a1 + 7244) + 680))(
       *(_DWORD *)(a1 + 7244),
       (float)(*(float *)(a1 + 108) - *(float *)(a1 + 7168)) >= 0.0,
@@ -114028,7 +114347,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(a1 + 7244),
       (float)(*(float *)(a1 + 108) - *(float *)(a1 + 7168)) >= 0.0,
       0);
-    sub_60813430(v2, (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", 0);
+    SoundActor_tryStartSoundIfFree(v2, (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", 0);
     return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13123948);
   }
 
@@ -114144,7 +114463,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       (float)(*(float *)(a1 + 108) - *(float *)(a1 + 7168)) >= 0.0,
       1);
     (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 7244) + 816))(*(_DWORD *)(a1 + 7244));
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", 0);
     (*(void (__fastcall **)(_DWORD, const char *, int, _DWORD, _DWORD))(*MEMORY[0xC7F530] + 40))(
       MEMORY[0xC7F530],
       "SE_BOSS_CMN_DAMAGE_FIRE_LAST",
@@ -116273,7 +116592,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       dword_60C84330 = MEMORY[0xAF3A0C];
       _cxa_guard_release_0(&unk_60C84324);
     }
-    v3 = *(int (__fastcall ****)(_DWORD, int))sub_60008598(
+    v3 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(
                                                 MEMORY[0xC7B400],
                                                 *((_DWORD *)&unk_60C84324 + *(unsigned __int8 *)(a1 + 6122) + 1));
     if ( _cxa_guard_acquire_0(13087588) )
@@ -117748,7 +118067,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC7F70C] = 12320992;
       _cxa_guard_release_0(13104912);
     }
-    return a2 == 13104908 || sub_60027FB0(a2);
+    return a2 == 13104908 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -118402,7 +118721,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC84398] = 12320992;
       _cxa_guard_release_0(13124508);
     }
-    return a2 == 13124504 || sub_60027FB0(a2);
+    return a2 == 13124504 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -119039,7 +119358,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 8156);
     if ( !v2 )
     {
-      v4 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF2F20]);
+      v4 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF2F20]);
       result = _cxa_guard_acquire_0(13087588);
       if ( result )
       {
@@ -119125,7 +119444,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     unsigned int v8; // r0
     _DWORD v10[2]; // [sp+0h] [bp-8h] BYREF
   
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_LAR_INTO_WATERPILLAR", *(__int16 *)(a1 + 6640), 0);
+    SoundActor_tryStartSoundIfFree4(
+      (_DWORD *)(a1 + 6332),
+      (int)"SE_VOC_LAR_INTO_WATERPILLAR",
+      *(__int16 *)(a1 + 6640),
+      0);
     v3 = a1 + 7096;
     v2 = *(_DWORD *)(a1 + 7096);
     ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
@@ -120225,9 +120548,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 += 4 * v4;
     v5 = *(float *)(*(_DWORD *)v2 + 20);
     if ( v5 == 47.0 || v5 == 8.0 )
-      return sub_60813430(result + 1583, (int)"SE_BOSS_LARRY_RAMP_JUMP", 0);
+      return SoundActor_tryStartSoundIfFree(result + 1583, (int)"SE_BOSS_LARRY_RAMP_JUMP", 0);
     if ( v5 == 60.0 || v5 == 21.0 )
-      return sub_60813430(result + 1583, (int)"SE_BOSS_CMN_SMART_LAND", 0);
+      return SoundActor_tryStartSoundIfFree(result + 1583, (int)"SE_BOSS_CMN_SMART_LAND", 0);
     return result;
   }
 
@@ -120318,7 +120641,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13[1] = v11 + v10;
     result = TileCheck_check(v9, 0, v14, v13, 15);
     if ( v8 > 10.0 && result == 1 && v8 < (float)(v7 + -10.0) )
-      return sub_60421AD4(*v3, *(_DWORD *)(a1 + 7108) + 8, 0);
+      return dispatch_forwardThisSecondWord(*v3, *(_DWORD *)(a1 + 7108) + 8, 0);
     return result;
   }
 
@@ -121031,7 +121354,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( **(unsigned __int8 **)(v2 + 20) != MEMORY[0xB3BA34] )
     {
       v3 = a1 + 1774;
-      sub_60421AD4(a1[1774], v2 + 16, 1);
+      dispatch_forwardThisSecondWord(a1[1774], v2 + 16, 1);
       v4 = *(_DWORD **)(a1[1774] + 12);
       v5 = *(_DWORD *)(a1[1774] + 68);
       if ( *(_DWORD *)(a1[1774] + 8) > v5 )
@@ -121141,7 +121464,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( **(unsigned __int8 **)(v2 + 4) != MEMORY[0xB3BA34] )
     {
       v3 = a1 + 1774;
-      sub_60421AD4(a1[1774], v2, 1);
+      dispatch_forwardThisSecondWord(a1[1774], v2, 1);
       v4 = *(_DWORD **)(a1[1774] + 12);
       v5 = *(_DWORD *)(a1[1774] + 68);
       if ( *(_DWORD *)(a1[1774] + 8) > v5 )
@@ -121260,7 +121583,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *(_DWORD *)(a1 + 128) = 0;
           if ( *(_DWORD *)(a1 + 80) == 1 )
             *(_DWORD *)(a1 + 120) = -1082130432;
-          sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_LARRY_DOWN_LAND1", *(__int16 *)(a1 + 6640), 0);
+          SoundActor_tryStartSoundIfFree4(
+            (_DWORD *)(a1 + 6332),
+            (int)"SE_BOSS_LARRY_DOWN_LAND1",
+            *(__int16 *)(a1 + 6640),
+            0);
           *v3 = 1;
           *(_BYTE *)(a1 + 6056) = 1;
           result = 1;
@@ -121675,8 +122002,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v1 = (__int16 *)(a1 + 6640);
     v2 = (_DWORD *)(a1 + 6332);
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_FIRE_LAST", *(__int16 *)(a1 + 6640), 0);
-    return sub_608134CC(v2, (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *v1, 0);
+    SoundActor_tryStartSoundIfFree4(
+      (_DWORD *)(a1 + 6332),
+      (int)"SE_BOSS_CMN_DAMAGE_FIRE_LAST",
+      *(__int16 *)(a1 + 6640),
+      0);
+    return SoundActor_tryStartSoundIfFree4(v2, (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *v1, 0);
   }
 
 /* ============================================================================
@@ -121690,8 +122021,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v1 = (__int16 *)(a1 + 6640);
     v2 = (_DWORD *)(a1 + 6332);
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_STAR_LAST", *(__int16 *)(a1 + 6640), 0);
-    return sub_608134CC(v2, (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *v1, 0);
+    SoundActor_tryStartSoundIfFree4(
+      (_DWORD *)(a1 + 6332),
+      (int)"SE_BOSS_CMN_DAMAGE_STAR_LAST",
+      *(__int16 *)(a1 + 6640),
+      0);
+    return SoundActor_tryStartSoundIfFree4(v2, (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *v1, 0);
   }
 
 /* ============================================================================
@@ -121800,7 +122135,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = v1[17];
     if ( v3 > v4 )
       v2 += v4;
-    return sub_60418548(*v2 + 4);
+    return Float2_equalTest(*v2 + 4);
   }
 
 /* ============================================================================
@@ -121828,7 +122163,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = "SE_BOSS_CMN_SMART_SHELL_LAND";
     else
       v4 = "SE_BOSS_LARRY_SHELL_LAND";
-    return sub_608134CC(v3, (int)v4, v2, 0);
+    return SoundActor_tryStartSoundIfFree4(v3, (int)v4, v2, 0);
   }
 
 /* ============================================================================
@@ -122251,18 +122586,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = v3[17];
     if ( v6 > v7 )
       v5 += v7;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
     {
       v8 = "SE_BOSS_LEMMY_RUSH_FOOT_F_L";
   LABEL_9:
-      sub_60813430(v2, (int)v8, 0);
+      SoundActor_tryStartSoundIfFree(v2, (int)v8, 0);
       goto LABEL_10;
     }
     v9 = *(_DWORD **)(*v4 + 12);
     v10 = *(_DWORD *)(*v4 + 68);
     if ( *(_DWORD *)(*v4 + 8) > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) == 1 )
+    if ( Float2_equalTest(*v9 + 4) == 1 )
     {
       v8 = "SE_BOSS_LEMMY_RUSH_FOOT_F_R";
       goto LABEL_9;
@@ -122414,18 +122749,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = v3[17];
     if ( v6 > v7 )
       v5 += v7;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
     {
       v8 = "SE_BOSS_LEMMY_RUSH_FOOT_F_L";
   LABEL_9:
-      sub_60813430(v2, (int)v8, 0);
+      SoundActor_tryStartSoundIfFree(v2, (int)v8, 0);
       goto LABEL_10;
     }
     v9 = *(_DWORD **)(*v4 + 12);
     v10 = *(_DWORD *)(*v4 + 68);
     if ( *(_DWORD *)(*v4 + 8) > v10 )
       v9 += v10;
-    if ( sub_60418548(*v9 + 4) == 1 )
+    if ( Float2_equalTest(*v9 + 4) == 1 )
     {
       v8 = "SE_BOSS_LEMMY_RUSH_FOOT_F_R";
       goto LABEL_9;
@@ -123548,8 +123883,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = a1 + 3166;
     v8 = "SE_BOSS_LEMMY_MAGIC_SHOT";
   LABEL_6:
-    sub_608134CC(v7, (int)v8, v6, 0);
-    return sub_608134CC(v4, (int)"SE_VOC_LEM_MAGIC_SHOT", *v3, 0);
+    SoundActor_tryStartSoundIfFree4(v7, (int)v8, v6, 0);
+    return SoundActor_tryStartSoundIfFree4(v4, (int)"SE_VOC_LEM_MAGIC_SHOT", *v3, 0);
   }
 
 /* ============================================================================
@@ -123814,7 +124149,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = v2[17];
     if ( v4 > v5 )
       v3 += v5;
-    if ( sub_60418548(*v3 + 4) == 1 )
+    if ( Float2_equalTest(*v3 + 4) == 1 )
     {
       v6 = a1[28];
       v8[0] = a1[27];
@@ -123911,7 +124246,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *v3;
     if ( *(float *)(*v3 + 20) == 17.0 )
     {
-      sub_60813430(a1 + 1583, (int)"SE_BOSS_LEMMY_RAMP_LAND", 0);
+      SoundActor_tryStartSoundIfFree(a1 + 1583, (int)"SE_BOSS_LEMMY_RAMP_LAND", 0);
       v7 = a1[28];
       v8[0] = a1[27];
       v8[1] = v7;
@@ -123976,7 +124311,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_600E36A4(v2, (int)v4, 0);
     }
     *(_DWORD *)(a1 + 7136) = sub_600DE710(a1);
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_LEM_BOMB_TORIDASU", *(__int16 *)(a1 + 6640), 0);
+    return SoundActor_tryStartSoundIfFree4(
+             (_DWORD *)(a1 + 6332),
+             (int)"SE_VOC_LEM_BOMB_TORIDASU",
+             *(__int16 *)(a1 + 6640),
+             0);
   }
 
 /* ============================================================================
@@ -124004,7 +124343,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = v2[17];
     if ( v4 > v5 )
       v3 += v5;
-    if ( sub_60418548(*v3 + 4) )
+    if ( Float2_equalTest(*v3 + 4) )
     {
       v6 = *(_DWORD *)(a1 + 112);
       v13[0] = *(_DWORD *)(a1 + 108);
@@ -124013,7 +124352,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       EffectData_create(248, (int)v13, 0, 0);
       v7 = (__int16 *)(a1 + 6640);
       v8 = (_DWORD *)(a1 + 6332);
-      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_LEMMY_RUSH_FOOT_R", *(__int16 *)(a1 + 6640), 0);
+      SoundActor_tryStartSoundIfFree4(
+        (_DWORD *)(a1 + 6332),
+        (int)"SE_BOSS_LEMMY_RUSH_FOOT_R",
+        *(__int16 *)(a1 + 6640),
+        0);
     }
     else
     {
@@ -124168,14 +124511,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v6 )
       v5 += v6;
-    if ( sub_60418548(*v5 + 4) == 1 )
+    if ( Float2_equalTest(*v5 + 4) == 1 )
     {
       v7 = *(_DWORD *)(a1 + 112);
       v11[0] = *(_DWORD *)(a1 + 108);
       v11[1] = v7;
       v11[2] = 1166843904;
       EffectData_create(248, (int)v11, 0, 0);
-      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_LEMMY_RUSH_FOOT_L", *(__int16 *)(a1 + 6640), 0);
+      SoundActor_tryStartSoundIfFree4(
+        (_DWORD *)(a1 + 6332),
+        (int)"SE_BOSS_LEMMY_RUSH_FOOT_L",
+        *(__int16 *)(a1 + 6640),
+        0);
     }
     result = *(_DWORD *)(a1 + 7092);
     if ( result == 2 )
@@ -124511,7 +124858,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v2[17];
     if ( v5 > v6 )
       v4 += v6;
-    if ( sub_60418548(*v4 + 4) == 1 )
+    if ( Float2_equalTest(*v4 + 4) == 1 )
       a1[31] = 1086324736;
     j_ModelWrapper_updateAnims(*v3);
     CollisionActor::handleGravity((int)a1);
@@ -124540,7 +124887,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v11 += v12;
           v13 = *v11;
           (*(void (__fastcall **)(unsigned int *))(*a1 + 1188))(a1);
-          result = sub_60418548(v13 + 4);
+          result = Float2_equalTest(v13 + 4);
           v9 = *v10;
           if ( result == 1 )
           {
@@ -124556,7 +124903,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v14 += v15;
           v16 = *v14;
           (*(void (__fastcall **)(unsigned int *))(*a1 + 1192))(a1);
-          result = sub_60418548(v16 + 4);
+          result = Float2_equalTest(v16 + 4);
           v9 = *v10;
           if ( result == 1 )
           {
@@ -124575,7 +124922,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v18 = *(_DWORD *)(*v3 + 68);
         if ( *(_DWORD *)(*v3 + 8) > v18 )
           v17 += v18;
-        result = sub_60418548(*v17 + 4);
+        result = Float2_equalTest(*v17 + 4);
         if ( result == 1 )
         {
           v19 = *(_DWORD *)(*v3 + 12);
@@ -124748,7 +125095,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *(_DWORD *)(a1 + 128) = 0;
           if ( *(_DWORD *)(a1 + 80) == 1 )
             *(_DWORD *)(a1 + 120) = -1082130432;
-          sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_LEMMY_DOWN_LAND1", *(__int16 *)(a1 + 6640), 0);
+          SoundActor_tryStartSoundIfFree4(
+            (_DWORD *)(a1 + 6332),
+            (int)"SE_BOSS_LEMMY_DOWN_LAND1",
+            *(__int16 *)(a1 + 6640),
+            0);
           (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1240))(a1);
           result = 2;
           goto LABEL_13;
@@ -125655,7 +126006,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC84B50] = 12320992;
       _cxa_guard_release_0(13126484);
     }
-    return a2 == 13126480 || sub_60027FB0(a2);
+    return a2 == 13126480 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -126395,7 +126746,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC84B50] = 12320992;
       _cxa_guard_release_0(13126484);
     }
-    return a2 == 13126480 || sub_60027FB0(a2);
+    return a2 == 13126480 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -127749,7 +128100,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC84B50] = 12320992;
       _cxa_guard_release_0(13126484);
     }
-    return a2 == 13126480 || sub_60027FB0(a2);
+    return a2 == 13126480 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -127902,7 +128253,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( !(*(int (__fastcall **)(int))(*(_DWORD *)v5 + 716))(v5) )
       (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 720))(v5);
-    sub_60421AD4(*(_DWORD *)(a1 + 7096), &v13, 1);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), &v13, 1);
     *(_DWORD *)(a1 + 100) = 0;
     *(_DWORD *)(a1 + 120) = 0;
     *(_DWORD *)(a1 + 124) = 0;
@@ -127925,7 +128276,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = 7092;
     *(_DWORD *)(a1 + 7092) = 1;
     if ( v10 != v6 )
-      return (int)sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_LUDWIG_MOVE", *(__int16 *)(a1 + 6640), 0);
+      return (int)SoundActor_tryStartSoundIfFree4(
+                    (_DWORD *)(a1 + 6332),
+                    (int)"SE_BOSS_LUDWIG_MOVE",
+                    *(__int16 *)(a1 + 6640),
+                    0);
     return result;
   }
 
@@ -128014,7 +128369,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v3 = *(_DWORD *)(a1 + 7108);
     }
-    sub_60421AD4(*(_DWORD *)(a1 + 7096), v3, 0);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), v3, 0);
     *(_DWORD *)(a1 + 120) = 0;
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 128) = 0;
@@ -128074,7 +128429,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
   
     v2 = (_BYTE *)(a1 + 8132);
-    sub_60421AD4(*(_DWORD *)(a1 + 7096), *(_DWORD *)(a1 + 7108) + 8, 0);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), *(_DWORD *)(a1 + 7108) + 8, 0);
     if ( *v2 )
     {
       v3 = *(_DWORD *)(a1 + 56);
@@ -128192,7 +128547,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_600E6ABC(_DWORD *a1)
   {
-    sub_60421AD4(a1[1774], a1[1777] + 32, 0);
+    dispatch_forwardThisSecondWord(a1[1774], a1[1777] + 32, 0);
     a1[30] = 0;
     a1[31] = 0;
     a1[32] = 0;
@@ -128275,7 +128630,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 128) = 0;
     v7[0] = 12321336;
     v7[1] = "split_ed";
-    sub_60421AD4(*(_DWORD *)(a1 + 7096), v7, 0);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), v7, 0);
     *(_DWORD *)(a1 + 8148) = 0;
     v2 = (_DWORD *)(a1 + 8148);
     v3 = *(_DWORD *)(a1 + 8168);
@@ -128293,9 +128648,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v6 = *(__int16 *)(a1 + 6640);
       v5 = (__int16 *)(a1 + 6640);
-      sub_608134CC((_DWORD *)v5 - 77, (int)"SE_VOC_LUD_TRANSFORM", v6, 0);
-      sub_608134CC((_DWORD *)v5 - 77, (int)"SE_BOSS_LUDWIG_TRANSFORM", *v5, 0);
-      sub_608134CC((_DWORD *)v5 - 77, (int)"SE_BOSS_LUDWIG_KAITEN", *v5, 0);
+      SoundActor_tryStartSoundIfFree4((_DWORD *)v5 - 77, (int)"SE_VOC_LUD_TRANSFORM", v6, 0);
+      SoundActor_tryStartSoundIfFree4((_DWORD *)v5 - 77, (int)"SE_BOSS_LUDWIG_TRANSFORM", *v5, 0);
+      SoundActor_tryStartSoundIfFree4((_DWORD *)v5 - 77, (int)"SE_BOSS_LUDWIG_KAITEN", *v5, 0);
       return EffectData_create(1050, (int)(v5 - 3266), 0, 0);
     }
     return result;
@@ -128325,7 +128680,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( v5 == 1 )
       {
-        sub_60832560((float *)(a1 + 108));
+        Float_clampWithSign((float *)(a1 + 108));
         EffectWrapper_update((int32x4_t *)(a1 + 7804), 1051, (float *)(a1 + 108), 0, 0);
         if ( *(float *)(a1 + 108) == *(float *)(a1 + 8156) )
           *(_DWORD *)(a1 + 7092) = 2;
@@ -128421,7 +128776,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = *(_DWORD *)(a1 + 56);
     if ( !(*(int (__fastcall **)(int))(*(_DWORD *)v2 + 716))(v2) )
       (*(int (__fastcall **)(int))(*(_DWORD *)v2 + 720))(v2);
-    sub_60421AD4(*(_DWORD *)(a1 + 7096), v4, 1);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), v4, 1);
     *(_DWORD *)(a1 + 120) = 0;
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 128) = 0;
@@ -128462,7 +128817,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v3[0] = 12321336;
     v3[1] = "jumpA";
-    sub_60421AD4(a1[1774], v3, 0);
+    dispatch_forwardThisSecondWord(a1[1774], v3, 0);
     a1[30] = 0;
     a1[31] = 0;
     a1[32] = 0;
@@ -128511,10 +128866,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         a1[34] = dword_60C852B0;
         v7 = *((__int16 *)a1 + 3320);
         v6 = (__int16 *)(a1 + 1660);
-        sub_608134CC((_DWORD *)v6 - 77, (int)"SE_BOSS_LUDWIG_DOWN", v7, 0);
+        SoundActor_tryStartSoundIfFree4((_DWORD *)v6 - 77, (int)"SE_BOSS_LUDWIG_DOWN", v7, 0);
         result = (unsigned __int8)*v3;
         if ( !*v3 )
-          result = (int)sub_608134CC((_DWORD *)v6 - 77, (int)"SE_VOC_LUD_LAND", *v6, 0);
+          result = (int)SoundActor_tryStartSoundIfFree4((_DWORD *)v6 - 77, (int)"SE_VOC_LUD_LAND", *v6, 0);
         break;
       case 2:
         result = *((unsigned __int8 *)a1 + 2872);
@@ -128524,9 +128879,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           a1[31] = 0;
           v11 = 12321336;
           v12 = "jump_ed";
-          sub_60421AD4(*v2, &v11, 0);
+          dispatch_forwardThisSecondWord(*v2, &v11, 0);
           KoopalingBase::vf4D8(a1);
-          sub_608134CC(a1 + 1583, (int)"SE_BOSS_LUDWIG_LAND", *((__int16 *)a1 + 3320), 0);
+          SoundActor_tryStartSoundIfFree4(a1 + 1583, (int)"SE_BOSS_LUDWIG_LAND", *((__int16 *)a1 + 3320), 0);
           *((_WORD *)a1 + 3138) = 30;
           result = 6276;
         }
@@ -128541,7 +128896,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           v11 = 12321336;
           v12 = "wait";
-          sub_60421AD4(v8, &v11, 0);
+          dispatch_forwardThisSecondWord(v8, &v11, 0);
         }
         result = *((unsigned __int16 *)a1 + 3138);
         if ( !*((_WORD *)a1 + 3138) )
@@ -129104,7 +129459,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     signed int result; // r0
     int v3; // r2
   
-    result = sub_6000F7B8();
+    result = FixedPoint_atan2();
     v3 = -119304647;
     *(_DWORD *)(a1 + 7172) = result;
     if ( result < -119304647 || (v3 = 417566264, result > 417566264) )
@@ -129994,7 +130349,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 7092) = 1;
     v18 = *(_DWORD *)(a1 + 7108);
     if ( **(unsigned __int8 **)(v18 + 4) != MEMORY[0xB3BA34] )
-      sub_60421AD4(*(_DWORD *)(a1 + 7096), v18 + 16, 0);
+      dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), v18 + 16, 0);
     *(_BYTE *)(a1 + 8232) = 0;
     *(_DWORD *)(a1 + 7172) = 0;
     return 7172;
@@ -130207,7 +130562,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v4 = *(_DWORD *)(a1 + 56);
       if ( !(*(int (__fastcall **)(int))(*(_DWORD *)v4 + 716))(v4) )
         (*(int (__fastcall **)(int))(*(_DWORD *)v4 + 720))(v4);
-      return sub_60421AD4(*(_DWORD *)(a1 + 7096), v8, 0);
+      return dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), v8, 0);
     }
     else
     {
@@ -130217,7 +130572,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = *(_DWORD *)(a1 + 7112);
       if ( !(*(int (__fastcall **)(int))(*(_DWORD *)v5 + 716))(v5) )
         (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 720))(v5);
-      return sub_60421AD4(*(_DWORD *)(a1 + 7096), v6, 0);
+      return dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), v6, 0);
     }
   }
 
@@ -130315,7 +130670,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !(*(int (__fastcall **)(int))(*(_DWORD *)v2 + 716))(v2) )
       (*(int (__fastcall **)(int))(*(_DWORD *)v2 + 720))(v2);
     v5 = (int **)(a1 + 7096);
-    sub_60421AD4(*(_DWORD *)(a1 + 7096), v4, 1);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), v4, 1);
     v6 = *v3;
     v18[0] = 12321336;
     v18[1] = *(_DWORD *)(v6 + 36);
@@ -130428,7 +130783,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v5 + 16;
     if ( !(*(int (__fastcall **)(int))(*(_DWORD *)v2 + 716))(v2) )
       (*(int (__fastcall **)(int))(*(_DWORD *)v2 + 720))(v2);
-    sub_60421AD4(*(_DWORD *)(a1 + 7096), v6, 0);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), v6, 0);
     ActiveCollider::init(a1 + 7184, a1, dword_60BCE2E8, 0);
     v7 = MEMORY[0xC88234];
     if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 7184)
@@ -130439,7 +130794,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 7092) = 1;
     result = (int *)(unsigned __int8)*v4;
     if ( !*v4 )
-      return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_LUD_MAGIC_SHOT", *(__int16 *)(a1 + 6640), 0);
+      return SoundActor_tryStartSoundIfFree4(
+               (_DWORD *)(a1 + 6332),
+               (int)"SE_VOC_LUD_MAGIC_SHOT",
+               *(__int16 *)(a1 + 6640),
+               0);
     return result;
   }
 
@@ -130558,7 +130917,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = v4 + 24;
     if ( !(*(int (__fastcall **)(int))(*(_DWORD *)v3 + 716))(v3) )
       (*(int (__fastcall **)(int))(*(_DWORD *)v3 + 720))(v3);
-    sub_60421AD4(*(_DWORD *)(a1 + 7096), v5, 1);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), v5, 1);
     *(_DWORD *)(a1 + 7152) = 0;
     result = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1068))(a1);
     *(_WORD *)(a1 + 6276) = result;
@@ -131466,7 +131825,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 116) = 1153138688;
     v14[0] = 12321336;
     v14[1] = "damage";
-    sub_60421AD4(*(_DWORD *)(a1 + 7096), v14, 1);
+    dispatch_forwardThisSecondWord(*(_DWORD *)(a1 + 7096), v14, 1);
     *(_BYTE *)(a1 + 6136) = 0;
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
     *(_DWORD *)(a1 + 120) = 0;
@@ -131549,7 +131908,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *(_DWORD *)(a1 + 128) = 0;
           if ( *(_DWORD *)(a1 + 80) == 1 )
             *(_DWORD *)(a1 + 120) = -1082130432;
-          sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_LARRY_DOWN_LAND1", *(__int16 *)(a1 + 6640), 0);
+          SoundActor_tryStartSoundIfFree4(
+            (_DWORD *)(a1 + 6332),
+            (int)"SE_BOSS_LARRY_DOWN_LAND1",
+            *(__int16 *)(a1 + 6640),
+            0);
           *v3 = 1;
           result = 1;
         }
@@ -131711,7 +132074,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall SE_BOSS_LUDWIG_DISAPPEAR_ref(int a1)
   {
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_LUDWIG_DISAPPEAR", *(__int16 *)(a1 + 6640), 0);
+    SoundActor_tryStartSoundIfFree4(
+      (_DWORD *)(a1 + 6332),
+      (int)"SE_BOSS_LUDWIG_DISAPPEAR",
+      *(__int16 *)(a1 + 6640),
+      0);
     return EffectData_create(1052, a1 + 108, 0, 0);
   }
 
@@ -132291,7 +132658,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = v1[17];
     if ( v3 > v4 )
       v2 += v4;
-    return sub_60418548(*v2 + 4);
+    return Float2_equalTest(*v2 + 4);
   }
 
 /* ============================================================================
@@ -132560,8 +132927,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v1 = (__int16 *)(a1 + 6640);
     v2 = (_DWORD *)(a1 + 6332);
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_FIRE_LAST", *(__int16 *)(a1 + 6640), 0);
-    return sub_608134CC(v2, (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *v1, 0);
+    SoundActor_tryStartSoundIfFree4(
+      (_DWORD *)(a1 + 6332),
+      (int)"SE_BOSS_CMN_DAMAGE_FIRE_LAST",
+      *(__int16 *)(a1 + 6640),
+      0);
+    return SoundActor_tryStartSoundIfFree4(v2, (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *v1, 0);
   }
 
 /* ============================================================================
@@ -132575,8 +132946,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v1 = (__int16 *)(a1 + 6640);
     v2 = (_DWORD *)(a1 + 6332);
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_STAR_LAST", *(__int16 *)(a1 + 6640), 0);
-    return sub_608134CC(v2, (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *v1, 0);
+    SoundActor_tryStartSoundIfFree4(
+      (_DWORD *)(a1 + 6332),
+      (int)"SE_BOSS_CMN_DAMAGE_STAR_LAST",
+      *(__int16 *)(a1 + 6640),
+      0);
+    return SoundActor_tryStartSoundIfFree4(v2, (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", *v1, 0);
   }
 
 /* ============================================================================
@@ -133009,7 +133384,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[1774];
     v4[0] = 12321336;
     v4[1] = "jump_quake2";
-    sub_60421AD4(v2, v4, 0);
+    dispatch_forwardThisSecondWord(v2, v4, 0);
     a1[30] = 0;
     a1[31] = 0;
     a1[32] = 0;
@@ -133073,19 +133448,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 7096);
     v7 = 12321336;
     v8 = "jump_quake_ed";
-    sub_60421AD4(v3, &v7, 0);
+    dispatch_forwardThisSecondWord(v3, &v7, 0);
     *(_DWORD *)(a1 + 120) = 0;
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 128) = 0;
     AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 0, 1, 0, 0);
     sub_600F14EC((unsigned __int8 *)a1);
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_MOR_QUAKE", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_VOC_MOR_QUAKE", 0);
     v4 = *(const char **)(a1 + 112);
     v7 = *(_DWORD *)(a1 + 108);
     v8 = v4;
     v9 = 1166843904;
     EffectData_create(319, (int)&v7, 0, 0);
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", 0);
+    SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", 0);
     v5 = *(_DWORD *)(a1 + 7136);
     if ( v5 )
       v2 = (_BYTE *)ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, v5);
@@ -133150,7 +133525,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int *__fastcall SE_VOC_MOR_FURIKABURI_ref(int *result)
   {
     if ( result[1795] >= 2 )
-      return sub_608134CC(result + 1583, (int)"SE_VOC_MOR_FURIKABURI", *((__int16 *)result + 3320), 0);
+      return SoundActor_tryStartSoundIfFree4(
+               result + 1583,
+               (int)"SE_VOC_MOR_FURIKABURI",
+               *((__int16 *)result + 3320),
+               0);
     return result;
   }
 

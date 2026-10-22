@@ -442,7 +442,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall SE_SYS_CS_READ_BALLOON_ON_ref(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 2060), 0, (_DWORD *)0xC9ECD8, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 2060), 0, (_DWORD *)0xC9ECD8, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CS_READ_BALLOON_ON", 0);
   }
 
@@ -466,7 +466,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60480AC8(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 2060), 0, (_DWORD *)0xC9ECE0, 1);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 2060), 0, (_DWORD *)0xC9ECE0, 1);
   }
 
 /* ============================================================================
@@ -599,7 +599,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1656;
     *(_WORD *)(a1 + 12836) = 0;
     sub_6050A4C4(a1 + 5608);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 2060));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 2060));
     thunk_sub_60909E64(v2);
     thunk_sub_60909E64(a1 + 1252);
     thunk_sub_60909E64(a1 + 848);
@@ -620,7 +620,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 1656);
     *(_WORD *)(a1 + 12836) = 0;
     sub_6050A4C4(a1 + 5608);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 2060));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 2060));
     thunk_sub_60909E64(v2);
     thunk_sub_60909E64((_DWORD *)(a1 + 1252));
     thunk_sub_60909E64((_DWORD *)(a1 + 848));
@@ -739,8 +739,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 12832) = a2;
     *(_WORD *)(a1 + 12836) = 257;
     *(_BYTE *)(a1 + 12838) = 0;
-    sub_6047E0EC((_DWORD *)(8 * a3 + 13233384), *(_DWORD *)(a1 + 12824), 0);
-    sub_60473DE4((_DWORD *)(v3 + 2060), 0, (_DWORD *)0xC9ECD8, 0);
+    MessageQueue_postType3((_DWORD *)(8 * a3 + 13233384), *(_DWORD *)(a1 + 12824), 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(v3 + 2060), 0, (_DWORD *)0xC9ECD8, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(v3 + 5572) + 104))(**(_DWORD **)(v3 + 5572));
     sub_60473B58(v3 + 2060, 14, 0);
     *(_DWORD *)(v3 + 5648) = 1;
@@ -961,7 +961,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 40);
     sub_6047DEC8((_DWORD *)(a1 + 40), *(_DWORD *)(a1 + 3596), 1);
     sub_6047DEC8(v2, *(_DWORD *)(a1 + 3600), 1);
-    result = sub_60473DE4(v2, 0, (_DWORD *)0xC9EE00, 0);
+    result = ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xC9EE00, 0);
     *(_BYTE *)(a1 + 3669) = 1;
     *(_DWORD *)(a1 + 3656) = 0;
     return result;
@@ -1152,7 +1152,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60481980(_DWORD *a1)
   {
     *a1 = 12571692;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -1163,7 +1163,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604819AC(_DWORD *a1)
   {
     *a1 = 12571692;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -1462,7 +1462,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60481FF8(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xC9EEC4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xC9EEC4, 0);
     *(_WORD *)(a1 + 3588) = 1;
     return 3588;
   }
@@ -1497,7 +1497,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60482070(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xC9EECC, 1);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xC9EECC, 1);
   }
 
 /* ============================================================================
@@ -1517,7 +1517,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604820B0(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xC9EED4, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xC9EED4, 0);
   }
 
 /* ============================================================================
@@ -1575,7 +1575,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60482208(_DWORD *a1)
   {
     *a1 = 12571820;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -1586,7 +1586,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60482238(_DWORD *a1)
   {
     *a1 = 12571820;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -1969,7 +1969,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12571948;
     v2 = (struct sead_IDisposer *)(a1 + 835);
     sub_60504098(a1 + 1724);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return sub_60471D18(a1);
   }
 
@@ -1985,7 +1985,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12571948;
     v2 = (struct sead_IDisposer *)(a1 + 835);
     sub_60504098(a1 + 1724);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     v3 = sub_60471D18(a1);
     return operator delete((int)v3);
   }
@@ -2710,7 +2710,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60483978(_DWORD *a1)
   {
     *a1 = 12572128;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -2721,7 +2721,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604839A4(_DWORD *a1)
   {
     *a1 = 12572128;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -2897,13 +2897,13 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a4 == 1 )
     {
       *(_DWORD *)(a1 + 3648) = 0;
-      sub_6047E0EC(dword_60C9F130, *(_DWORD *)(a1 + 3604), 0);
+      MessageQueue_postType3(dword_60C9F130, *(_DWORD *)(a1 + 3604), 0);
       v9 = *(_DWORD *)(a1 + 3648);
       v10 = v9 + 4;
       v11 = &dword_60C9F130[2 * v9];
       if ( v10 >= 8 )
         v10 = 0;
-      sub_6047E0EC(v11, *(_DWORD *)(a1 + 3604 + 4 * v10), 0);
+      MessageQueue_postType3(v11, *(_DWORD *)(a1 + 3604 + 4 * v10), 0);
     }
     else
     {
@@ -2935,13 +2935,13 @@ static inline unsigned int uxtb16(unsigned int x)
       v20 = *((_DWORD *)v18 + 20);
       v19 = v18 + 80;
       (*(void (__fastcall **)(char *))(v20 + 12))(v19);
-      sub_6047E0EC(&dword_60C9F130[2 * v13], v17, 1);
+      MessageQueue_postType3(&dword_60C9F130[2 * v13], v17, 1);
       v21 = *(_DWORD *)(a1 + 3648);
       if ( (unsigned int)(v21 + 4) < 8 )
         v14 = v21 + 4;
       v22 = *(_DWORD *)(v15 + 4 * v14);
       (*(void (__fastcall **)(char *))(*(_DWORD *)v19 + 12))(v19);
-      sub_6047E0EC(&dword_60C9F130[2 * v21], v22, 1);
+      MessageQueue_postType3(&dword_60C9F130[2 * v21], v22, 1);
     }
     v23 = *(_DWORD *)(a1 + 3648);
     v24 = 0;
@@ -3314,7 +3314,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3594) = 1;
     v3[0] = 12321336;
     v3[1] = "InOut";
-    result = sub_60473DE4((_DWORD *)(a1 + 40), 0, v3, 0);
+    result = ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, v3, 0);
     *(_BYTE *)(a1 + 3593) = 1;
     return result;
   }
@@ -3428,7 +3428,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60484D24(_DWORD *a1)
   {
     *a1 = 12572256;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -3439,7 +3439,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60484D50(_DWORD *a1)
   {
     *a1 = 12572256;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -3778,7 +3778,7 @@ static inline unsigned int uxtb16(unsigned int x)
       case 0u:
         v4 = 1;
         v5 = 0;
-        sub_60473DE4(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xC9F2D8, 0);
+        ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xC9F2D8, 0);
         *(_DWORD *)(a1 + 20) = 0;
         sub_604DE988(a1);
         sub_6047EBB4(a1 + 24, **(_DWORD **)(a1 + 16));
@@ -3790,7 +3790,7 @@ static inline unsigned int uxtb16(unsigned int x)
         goto LABEL_6;
       case 1u:
         v5 = 1;
-        sub_60473DE4(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xC9F2E0, 0);
+        ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xC9F2E0, 0);
         v6 = 2;
         *(_DWORD *)(a1 + 20) = 2;
         sub_604DE988(a1);
@@ -3804,7 +3804,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v4 = 3;
         goto LABEL_6;
       case 2u:
-        sub_60473DE4(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xC9F2E8, 0);
+        ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xC9F2E8, 0);
         v6 = 4;
         *(_DWORD *)(a1 + 20) = 4;
         sub_604DE988(a1);
@@ -3819,7 +3819,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = 2;
         goto LABEL_6;
       case 3u:
-        sub_60473DE4(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xC9F2F0, 0);
+        ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xC9F2F0, 0);
         v6 = 6;
         *(_DWORD *)(a1 + 20) = 6;
         sub_604DE988(a1);
@@ -3841,7 +3841,7 @@ static inline unsigned int uxtb16(unsigned int x)
         break;
     }
     sub_6045BF58(a1 + 88, 0);
-    sub_60473DE4(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xC9F2D0, 0);
+    ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xC9F2D0, 0);
     *(_BYTE *)(a1 + 12) = 1;
     result = sub_60478680((int)"SE_SYS_DIALOGUE_IN", 9);
     *(_BYTE *)(a1 + 598) = 0;
@@ -4209,7 +4209,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 492) = 1;
     *(_DWORD *)(a1 + 80) = 2;
     sub_60402084(MEMORY[0xC99E68], 2u);
-    return sub_60473DE4(*(_DWORD **)(a1 + 4), 2u, (_DWORD *)0xC9F2F8, 1);
+    return ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 2u, (_DWORD *)0xC9F2F8, 1);
   }
 
 /* ============================================================================
@@ -4548,16 +4548,6 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604867D8
- * RVA 0x004867d8   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_604867D8(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
-  }
-
-/* ============================================================================
  * sub_604867DC
  * RVA 0x004867dc   size 0x10   xrefs 0
  * ============================================================================ */
@@ -4565,7 +4555,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -4979,7 +4969,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v17 = sub_60492F00(1u);
     v24 = 12321336;
     v25 = v17;
-    sub_60473DE4(v16, 4u, &v24, 0);
+    ArrayOf5_lookupByIndex(v16, 4u, &v24, 0);
     v18 = *v8;
     if ( (unsigned int)*v8 >= 4 )
       v18 = 0;
@@ -4987,11 +4977,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v20 = sub_60492F00(0);
     v24 = 12321336;
     v25 = v20;
-    sub_60473DE4(v19, 4u, &v24, 0);
+    ArrayOf5_lookupByIndex(v19, 4u, &v24, 0);
     v21 = sub_604912FC(0);
     v24 = 12321336;
     v25 = v21;
-    sub_60473DE4((_DWORD *)(a1 + 6704), 0, &v24, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 6704), 0, &v24, 0);
     v22 = *(_DWORD *)(a1 + 4796);
     sub_6048E23C(a1, 0, v22);
     sub_6048EBD4(a1, v22);
@@ -5148,7 +5138,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v16 = sub_60492F00(1u);
     v18 = 12321336;
     v19 = v16;
-    sub_60473DE4(v15, 4u, &v18, 0);
+    ArrayOf5_lookupByIndex(v15, 4u, &v18, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
   }
 
@@ -5301,7 +5291,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v17 = sub_60492F00(1u);
     v24 = 12321336;
     v25 = v17;
-    sub_60473DE4(v16, 4u, &v24, 0);
+    ArrayOf5_lookupByIndex(v16, 4u, &v24, 0);
     v18 = *v8;
     if ( (unsigned int)*v8 >= 4 )
       v18 = 0;
@@ -5309,11 +5299,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v20 = sub_60492F00(0);
     v24 = 12321336;
     v25 = v20;
-    sub_60473DE4(v19, 4u, &v24, 0);
+    ArrayOf5_lookupByIndex(v19, 4u, &v24, 0);
     v21 = sub_604912FC(0);
     v24 = 12321336;
     v25 = v21;
-    sub_60473DE4((_DWORD *)(a1 + 10244), 0, &v24, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 10244), 0, &v24, 0);
     v22 = *(_DWORD *)(a1 + 4796);
     sub_6048E23C(a1, 0, v22);
     sub_6048EBD4(a1, v22);
@@ -5470,7 +5460,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v16 = sub_60492F00(1u);
     v18 = 12321336;
     v19 = v16;
-    sub_60473DE4(v15, 4u, &v18, 0);
+    ArrayOf5_lookupByIndex(v15, 4u, &v18, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
   }
 
@@ -5571,7 +5561,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_604923E4(2u);
-    sub_60473DE4((_DWORD *)(a1 + 36), 4u, v3, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 4u, v3, 0);
     return sub_608169AC(MEMORY[0xCC6B68]);
   }
 
@@ -5895,7 +5885,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_604923E4(2u);
-    sub_60473DE4((_DWORD *)(a1 + 36), 4u, v3, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 4u, v3, 0);
     return sub_608169AC(MEMORY[0xCC6B68]);
   }
 
@@ -6084,7 +6074,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v6[0] = 12321336;
     v6[1] = sub_604923E4(2u);
-    sub_60473DE4((_DWORD *)(a1 + 36), 4u, v6, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 4u, v6, 0);
     v4 = *(_DWORD **)(a1 + 14236);
     v3 = (_DWORD *)(a1 + 14236);
     result = v4;
@@ -6228,7 +6218,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_604923E4(2u);
-    return sub_60473DE4((_DWORD *)(a1 + 36), 4u, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 4u, v3, 0);
   }
 
 /* ============================================================================
@@ -6303,7 +6293,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_604923E4(2u);
-    return sub_60473DE4((_DWORD *)(a1 + 36), 4u, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 4u, v3, 0);
   }
 
 /* ============================================================================
@@ -6649,18 +6639,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047643C((struct sead_IDisposer *)(a1 + 5122));
     sub_6047643C((struct sead_IDisposer *)(a1 + 3352));
     sub_605021B0(a1 + 1884);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 18));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 18));
     return a1;
-  }
-
-/* ============================================================================
- * sub_604898E8
- * RVA 0x004898e8   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_604898E8(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
   }
 
 /* ============================================================================
@@ -7995,7 +7975,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v12 = sub_604923E4(3);
     v14 = 12321336;
     v15 = v12;
-    return sub_60473DE4(v4, 5u, &v14, 1);
+    return ArrayOf5_lookupByIndex(v4, 5u, &v14, 1);
   }
 
 /* ============================================================================
@@ -8607,7 +8587,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v11 = sub_60492F00(4);
         v13[0] = 12321336;
         v13[1] = v11;
-        sub_60473DE4(v5, 2u, v13, 0);
+        ArrayOf5_lookupByIndex(v5, 2u, v13, 0);
         v12 = (_DWORD *)v5[878];
         if ( v5[877] > 2u )
           v12 += 10;
@@ -9067,7 +9047,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v8 = *(_DWORD **)(a1 + 4 * v7 + 13800);
           v9[0] = 12321336;
           v9[1] = sub_60492F00(5);
-          result = sub_60473DE4(v8, 3u, v9, 1);
+          result = ArrayOf5_lookupByIndex(v8, 3u, v9, 1);
           *v6 = 0;
         }
       }
@@ -9132,7 +9112,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v8 = 12321336;
       v9 = sub_604923E4(2);
-      sub_60473DE4((_DWORD *)(a1 + 36), 4u, &v8, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 4u, &v8, 0);
       v4 = *(_DWORD *)(a1 + 3548);
       if ( *(_DWORD *)(a1 + 3544) > 4u )
         v4 += 80;
@@ -9142,7 +9122,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v8 = 12321336;
       v9 = sub_604923E4(2);
-      sub_60473DE4((_DWORD *)(a1 + 36), 4u, &v8, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 4u, &v8, 0);
       v6 = *(_DWORD *)(a1 + 3548);
       if ( *(_DWORD *)(a1 + 3544) > 4u )
         v6 += 80;
@@ -9187,12 +9167,12 @@ static inline unsigned int uxtb16(unsigned int x)
         v9 = sub_60492F00(2);
         v12 = 12321336;
         v13 = v9;
-        sub_60473DE4(v7, 0, &v12, 0);
+        ArrayOf5_lookupByIndex(v7, 0, &v12, 0);
         v10 = sub_60492F00(3);
         v12 = 12321336;
         v13 = v10;
         v6 = 1;
-        sub_60473DE4(v7, 1u, &v12, 1);
+        ArrayOf5_lookupByIndex(v7, 1u, &v12, 1);
         sub_604745C0(v7, 1);
         v1 = (float)(v1 * (float)(COERCE_FLOAT((sead::Random::getU32(v8) >> 9) | 0x3F800000) + -1.0)) + 0.0;
         result = sub_6047455C(v7, 1);
@@ -9303,7 +9283,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(v4[v7] + 64) &= ~1u;
     v13 = 12321336;
     v14 = sub_60492F00(4);
-    sub_60473DE4(a1, 2u, &v13, 0);
+    ArrayOf5_lookupByIndex(a1, 2u, &v13, 0);
     v8 = v15;
     if ( v15 >= 3 )
       v8 = 0;
@@ -9318,7 +9298,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = sub_60492F00(5);
     v13 = 12321336;
     v14 = v11;
-    return sub_60473DE4(a1, 3u, &v13, 1);
+    return ArrayOf5_lookupByIndex(a1, 3u, &v13, 1);
   }
 
 /* ============================================================================
@@ -9394,7 +9374,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v18 + 64) = v19;
       v20[0] = 12321336;
       v20[1] = sub_60492F00(4);
-      sub_60473DE4(v9, 2u, v20, 0);
+      ArrayOf5_lookupByIndex(v9, 2u, v20, 0);
       sub_60473B58(a1 + 9, 14, 0);
       a1[11949] = 2;
       return 47796;
@@ -9456,7 +9436,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_29:
       v22 = 12321336;
       v23 = sub_60492F00(6);
-      sub_60473DE4(v4, 2u, &v22, 0);
+      ArrayOf5_lookupByIndex(v4, 2u, &v22, 0);
       v6 = 1;
     }
     else
@@ -9495,7 +9475,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v18 + 64) = v19;
       v22 = 12321336;
       v23 = sub_60492F00(4);
-      sub_60473DE4(v4, 2u, &v22, 0);
+      ArrayOf5_lookupByIndex(v4, 2u, &v22, 0);
       sub_60473B58(a1 + 9, 14, 0);
     }
     a1[11949] = v6;
@@ -10970,7 +10950,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = sub_60492F00(0);
     v10 = 12321336;
     v11 = v8;
-    return sub_60473DE4(a1, 4u, &v10, 0);
+    return ArrayOf5_lookupByIndex(a1, 4u, &v10, 0);
   }
 
 /* ============================================================================
@@ -13218,7 +13198,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -13537,7 +13517,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_604962DC(1u);
-    sub_60473DE4((_DWORD *)(a1 + 36), 1u, v3, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 1u, v3, 0);
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
     return SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 10);
   }
@@ -14189,16 +14169,6 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6049487C
- * RVA 0x0049487c   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_6049487C(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
-  }
-
-/* ============================================================================
  * B_Btn_00_ref
  * RVA 0x00494884   size 0x158   xrefs 1
  * ============================================================================ */
@@ -14251,7 +14221,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = sub_604962DC(10);
     v13 = 12321336;
     v14 = v10;
-    return sub_60473DE4(a1 + 9, 4u, &v13, 1);
+    return ArrayOf5_lookupByIndex(a1 + 9, 4u, &v13, 1);
   }
 
 /* ============================================================================
@@ -14830,7 +14800,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v17 = sub_604962DC(3);
         v75 = 12321336;
         v76 = (const char *)v17;
-        sub_60473DE4((_DWORD *)(a1 + 36), 2u, &v75, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 2u, &v75, 0);
         v18 = 1;
         goto LABEL_13;
       case 2u:
@@ -14839,14 +14809,14 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_11:
         v75 = 12321336;
         v76 = (const char *)v15;
-        sub_60473DE4((_DWORD *)(a1 + 36), 2u, &v75, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 2u, &v75, 0);
         v75 = v16;
         goto LABEL_14;
       case 3u:
         v19 = sub_604962DC(5);
         v75 = 12321336;
         v76 = (const char *)v19;
-        sub_60473DE4((_DWORD *)(a1 + 36), 2u, &v75, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 2u, &v75, 0);
         v18 = 3;
   LABEL_13:
         v75 = v18;
@@ -14863,7 +14833,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v21 = sub_604962DC(13);
     v75 = 12321336;
     v76 = (const char *)v21;
-    sub_60473DE4((_DWORD *)(a1 + 36), 7u, &v75, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 7u, &v75, 0);
     if ( sub_6040E22C(*(unsigned __int8 *)(v8 + 32), v22) != 1 )
     {
       v23 = v72;
@@ -14880,7 +14850,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v24 = v73;
   LABEL_21:
       v67 = v24;
-      sub_6047E0EC(&v75, *(_DWORD *)(a1 + 3780), 2);
+      MessageQueue_postType3(&v75, *(_DWORD *)(a1 + 3780), 2);
       v25 = *(_DWORD **)(a1 + 3548);
       if ( *(_DWORD *)(a1 + 3544) > 7u )
         v25 += 35;
@@ -14895,30 +14865,30 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_27:
     v75 = 12321336;
     v76 = "ChallengeSelectWindow_CourseName_00";
-    sub_6047E0EC(&v75, *(_DWORD *)(a1 + 3752), 1);
+    MessageQueue_postType3(&v75, *(_DWORD *)(a1 + 3752), 1);
     v75 = 12321336;
     v76 = "ChallengeSelectWindow_CourseName_00";
-    sub_6047E0EC(&v75, *(_DWORD *)(a1 + 3748), 1);
+    MessageQueue_postType3(&v75, *(_DWORD *)(a1 + 3748), 1);
     v75 = 12321336;
     v76 = "ChallengeSelectWindow_Text_00";
-    sub_6047E0EC(&v75, *(_DWORD *)(a1 + 3760), 1);
+    MessageQueue_postType3(&v75, *(_DWORD *)(a1 + 3760), 1);
     v75 = 12321336;
     v76 = "ChallengeSelectWindow_Text_00";
-    sub_6047E0EC(&v75, *(_DWORD *)(a1 + 3756), 1);
+    MessageQueue_postType3(&v75, *(_DWORD *)(a1 + 3756), 1);
     v75 = 12321336;
     v76 = "ChallengeSelectWindow_GoldCondition_00";
-    sub_6047E0EC(&v75, *(_DWORD *)(a1 + 3768), 1);
+    MessageQueue_postType3(&v75, *(_DWORD *)(a1 + 3768), 1);
     v75 = 12321336;
     v76 = "ChallengeSelectWindow_SilverCondition_00";
-    sub_6047E0EC(&v75, *(_DWORD *)(a1 + 3772), 1);
+    MessageQueue_postType3(&v75, *(_DWORD *)(a1 + 3772), 1);
     v75 = 12321336;
     v76 = "ChallengeSelectWindow_BronzeCondition_00";
-    sub_6047E0EC(&v75, *(_DWORD *)(a1 + 3776), 1);
+    MessageQueue_postType3(&v75, *(_DWORD *)(a1 + 3776), 1);
     v27 = sub_604962DC(14);
     v75 = 12321336;
     v76 = (const char *)v27;
     v28 = 0;
-    sub_60473DE4((_DWORD *)(a1 + 36), 8u, &v75, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 8u, &v75, 0);
     if ( (unsigned int)(v23 - 3) > 2 )
     {
       v36 = *(_DWORD **)(a1 + 3548);
@@ -14955,7 +14925,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v67 = v14 % 0x64;
       v32 = &dword_60CA0540[2 * v28];
   LABEL_33:
-      sub_6047E0EC(v32, v31, v30);
+      MessageQueue_postType3(v32, v31, v30);
       v33 = *(_DWORD **)(a1 + 3548);
       if ( *(_DWORD *)(a1 + 3544) > 8u )
         v33 += 40;
@@ -14985,13 +14955,13 @@ static inline unsigned int uxtb16(unsigned int x)
     v37 = sub_604962DC(0);
     v75 = 12321336;
     v76 = (const char *)v37;
-    sub_60473DE4((_DWORD *)(a1 + 36), 0, &v75, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, &v75, 0);
     sub_6047455C(a1 + 36, 0);
     sub_6047459C(a1 + 36, 0);
     v38 = sub_604962DC(11);
     v75 = 12321336;
     v76 = (const char *)v38;
-    sub_60473DE4((_DWORD *)(a1 + 36), 5u, &v75, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 5u, &v75, 0);
     v39 = *(int ***)(a1 + 3548);
     if ( *(_DWORD *)(a1 + 3544) > 5u )
       v39 += 25;
@@ -15010,7 +14980,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v49 = sub_604962DC(8);
           v75 = 12321336;
           v76 = (const char *)v49;
-          sub_60473DE4((_DWORD *)(a1 + 36), 3u, &v75, 0);
+          ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 3u, &v75, 0);
           *(_BYTE *)(List_getNthNode(a1 + 3908, 4) - *(_DWORD *)(a1 + 3920) + 208) = 1;
           *(_BYTE *)(List_getNthNode(a1 + 3908, 5) - *(_DWORD *)(a1 + 3920) + 208) = 1;
           *(_BYTE *)(List_getNthNode(a1 + 3908, 6) - *(_DWORD *)(a1 + 3920) + 208) = 1;
@@ -15029,7 +14999,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v75 = 12321336;
       v76 = (const char *)v47;
-      sub_60473DE4((_DWORD *)(a1 + 36), 3u, &v75, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 3u, &v75, 0);
       *(_BYTE *)(List_getNthNode(a1 + 3908, 4) - *(_DWORD *)(a1 + 3920) + 208) = 1;
       *(_BYTE *)(List_getNthNode(a1 + 3908, 5) - *(_DWORD *)(a1 + 3920) + 208) = 1;
       *(_BYTE *)(List_getNthNode(a1 + 3908, 6) - *(_DWORD *)(a1 + 3920) + 208) = 1;
@@ -15050,7 +15020,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v50 = sub_604962DC(9);
     v75 = 12321336;
     v76 = (const char *)v50;
-    sub_60473DE4((_DWORD *)(a1 + 36), 3u, &v75, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 3u, &v75, 0);
     *(_BYTE *)(List_getNthNode(v42, 4) - *v43 + 208) = 0;
     *(_BYTE *)(List_getNthNode(v42, 5) - *v43 + 208) = 0;
     *(_BYTE *)(List_getNthNode(v42, 6) - *v43 + 208) = 0;
@@ -15060,7 +15030,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v51 = sub_604962DC(12);
     v75 = 12321336;
     v76 = (const char *)v51;
-    sub_60473DE4((_DWORD *)(a1 + 36), 6u, &v75, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 6u, &v75, 0);
     v52 = *(int ***)(a1 + 3548);
     if ( *(_DWORD *)(a1 + 3544) > 6u )
       v52 += 30;
@@ -15898,7 +15868,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -17117,18 +17087,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604A4320(a1 + 6571);
     sub_604A4320(a1 + 1432);
     sub_605021B0(a1 + 912);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 16));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 16));
     return a1;
-  }
-
-/* ============================================================================
- * sub_60498FA8
- * RVA 0x00498fa8   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_60498FA8(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
   }
 
 /* ============================================================================
@@ -17974,7 +17934,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -18129,7 +18089,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         *(_DWORD *)(a1 + 5336) = dword_60B02BEC[*(_DWORD *)(*(_DWORD *)(a1 + 3632) + 376)];
         sub_6049C294(a1, (int *)(a1 + 5336));
-        sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
         sub_604745C0(a1 + 44, 0);
         sub_6047455C(a1 + 44, 0);
         v6 = 13240584;
@@ -18151,7 +18111,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         *(_BYTE *)(a1 + 5356) = 1;
   LABEL_15:
-        sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
         sub_604745C0(a1 + 44, 0);
         sub_6047455C(a1 + 44, 0);
         v6 = 13240392;
@@ -18174,7 +18134,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( *(_DWORD *)(a1 + 3632) )
         *(_DWORD *)(a1 + 3632) = 0;
-      sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
       sub_6047455C(a1 + 44, 0);
       v6 = 13240328;
       return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
@@ -18184,7 +18144,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(_DWORD *)(a1 + 5332);
       if ( !result )
       {
-        sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C8, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C8, 0);
         *(_BYTE *)(*(_DWORD *)(a1 + 3700) + 64) &= ~1u;
         *(_BYTE *)(*(_DWORD *)(a1 + 3712) + 64) &= ~1u;
         *(_BYTE *)(*(_DWORD *)(a1 + 3708) + 65) = -1;
@@ -18270,7 +18230,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     sub_6049C294(a1, (int *)(a1 + 5336));
     v2 = 0;
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
     *(_BYTE *)(a1 + 5350) = 1;
     if ( ((unsigned int)&unk_60CA09F4 & ~(1615441132 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA09F4) )
     {
@@ -18446,7 +18406,7 @@ static inline unsigned int uxtb16(unsigned int x)
         _cxa_guard_release_0(&unk_60CA09F8);
       }
       v3 = (_DWORD *)(a1 + 44);
-      sub_60473DE4((_DWORD *)(a1 + 44), 1u, (_DWORD *)&unk_60CA0A50 + 2 * *(_DWORD *)(a1 + 5336) + 16, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 1u, (_DWORD *)&unk_60CA0A50 + 2 * *(_DWORD *)(a1 + 5336) + 16, 0);
       v4 = 13240248;
     }
     else
@@ -18492,7 +18452,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604741D8((_DWORD *)(a1 + 44), 1u, v6, 0);
       v4 = 13240240;
     }
-    sub_60473DE4(v3, 0, (_DWORD *)v4, 0);
+    ArrayOf5_lookupByIndex(v3, 0, (_DWORD *)v4, 0);
     *(_BYTE *)(*(_DWORD *)(a1 + 3696) + 64) &= ~1u;
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
   }
@@ -18564,7 +18524,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     sub_603FCFF8(MEMORY[0xC99DEC] + 16, v5);
-    sub_6047E0EC((_DWORD *)0xCA07E0, a1[923], 1);
+    MessageQueue_postType3((_DWORD *)0xCA07E0, a1[923], 1);
     sub_6049C484((int)a1, *v3);
     result = a1[924];
     *(_BYTE *)(result + 64) |= 1u;
@@ -18577,7 +18537,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049B540(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C0, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C0, 0);
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
     *(_BYTE *)(a1 + 5350) = 1;
     return 5350;
@@ -18613,7 +18573,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049B5E4(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C8, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C8, 0);
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
     *(_BYTE *)(a1 + 5350) = 1;
     *(_BYTE *)(a1 + 5354) = 1;
@@ -18679,7 +18639,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v1; // r4
   
     v1 = a1 + 44;
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C8, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C8, 0);
     sub_604745C0(v1, 0);
     return sub_6047455C(v1, 0);
   }
@@ -18832,7 +18792,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049B9C8(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07D8, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07D8, 0);
     *(_BYTE *)(a1 + 5350) = 1;
     return 5350;
   }
@@ -18867,7 +18827,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049BA44(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07D0, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07D0, 0);
     *(_BYTE *)(a1 + 5350) = 1;
     return 5350;
   }
@@ -19096,7 +19056,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047455C(a1 + 44, 1);
     sub_6049C484(a1, *a2);
     sub_603FCFF8(MEMORY[0xC99DEC] + 16, *a2);
-    return sub_6047E0EC((_DWORD *)0xCA07E0, *(_DWORD *)(a1 + 3692), 1);
+    return MessageQueue_postType3((_DWORD *)0xCA07E0, *(_DWORD *)(a1 + 3692), 1);
   }
 
 /* ============================================================================
@@ -19129,7 +19089,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 13240184;
     else
       v5 = (int)&dword_60CA0B20[2 * a2];
-    return sub_60473DE4((_DWORD *)(a1 + 44), 2u, (_DWORD *)v5, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 2u, (_DWORD *)v5, 0);
   }
 
 /* ============================================================================
@@ -19311,9 +19271,9 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_6:
     *(_BYTE *)(MEMORY[0xC99E2C] + 820548) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 20252) + 64) |= 1u;
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B5C, 0);
-    sub_60473DE4((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCA0B8C, 0);
-    sub_60473DE4((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCA0B94, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B5C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCA0B8C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCA0B94, 0);
     v8 = *(_DWORD *)(a1 + 5752);
     v7 = a1 + 5752;
     *(_DWORD *)v7 = v8 | 2;
@@ -19795,7 +19755,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = (_DWORD *)(a1 + 44);
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B64, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B64, 0);
     sub_604741D8(v2, 1u, (_DWORD *)0xCA0B8C, 0);
     *(_BYTE *)(a1 + 20308) = 1;
     *(_BYTE *)(a1 + 20309) = 1;
@@ -20062,8 +20022,8 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_BYTE *)(*(_DWORD *)(a1 + 20212) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 20252) + 64) |= 1u;
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B6C, 0);
-    sub_60473DE4((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCA0B8C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B6C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCA0B8C, 0);
     *(_BYTE *)(a1 + 20308) = 1;
     *(_BYTE *)(a1 + 20309) = 1;
     *(_BYTE *)(a1 + 22501) = 1;
@@ -20439,11 +20399,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 20264) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 20252) + 64) |= 1u;
     v4 = (_DWORD *)(a1 + 44);
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B5C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B5C, 0);
     *(_BYTE *)(v3 + 44) = 1;
     if ( !*(_BYTE *)(*(_DWORD *)v2 + 65) )
     {
-      sub_60473DE4(v4, 1u, (_DWORD *)0xCA0B8C, 0);
+      ArrayOf5_lookupByIndex(v4, 1u, (_DWORD *)0xCA0B8C, 0);
       *(_BYTE *)(a1 + 20309) = 1;
     }
     *(_BYTE *)(a1 + 22501) = 1;
@@ -20472,7 +20432,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v2; // r5
   
     v2 = (_DWORD *)(a1 + 44);
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B74, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B74, 0);
     sub_604741D8(v2, 1u, (_DWORD *)0xCA0B8C, 0);
     *(_BYTE *)(a1 + 20308) = 1;
     *(_BYTE *)(a1 + 20309) = 1;
@@ -20515,7 +20475,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1[5054] + 64) |= 1u;
     *(_BYTE *)(*v1 + 64) |= 1u;
     *(_BYTE *)(a1[5068] + 64) |= 1u;
-    sub_60473DE4(a1 + 11, 0, (_DWORD *)0xCA0B7C, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 0, (_DWORD *)0xCA0B7C, 0);
     *((_BYTE *)v2 + 36) = 1;
     *((_BYTE *)v2 + 2229) = 1;
     sub_60502548((int)(v2 - 4159));
@@ -20632,7 +20592,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049E518(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B84, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B84, 0);
     *(_BYTE *)(a1 + 20308) = 1;
     *(_BYTE *)(a1 + 22501) = 1;
     return 22501;
@@ -20813,8 +20773,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 20260) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 20264) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 20252) + 64) |= 1u;
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B5C, 0);
-    sub_60473DE4(v2, 1u, (_DWORD *)0xCA0B8C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B5C, 0);
+    ArrayOf5_lookupByIndex(v2, 1u, (_DWORD *)0xCA0B8C, 0);
     *(_BYTE *)(a1 + 20308) = 1;
     *(_BYTE *)(a1 + 20309) = 1;
     *(_BYTE *)(a1 + 22501) = 1;
@@ -20858,8 +20818,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(v2[5] + 64) &= ~1u;
     *(_BYTE *)(*v1 + 64) |= 1u;
     *(_BYTE *)(*v2 + 64) |= 1u;
-    sub_60473DE4(a1 + 11, 0, (_DWORD *)0xCA0B6C, 0);
-    result = sub_60473DE4(v3, 1u, (_DWORD *)0xCA0B8C, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 0, (_DWORD *)0xCA0B6C, 0);
+    result = ArrayOf5_lookupByIndex(v3, 1u, (_DWORD *)0xCA0B8C, 0);
     *((_BYTE *)v2 + 56) = 1;
     *((_BYTE *)v2 + 57) = 1;
     *((_BYTE *)v2 + 2249) = 1;
@@ -21012,7 +20972,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = (_DWORD *)(a1 + 44);
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B84, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B84, 0);
     sub_604741D8(v2, 1u, (_DWORD *)0xCA0B8C, 0);
     sub_604741D8(v2, 2u, (_DWORD *)0xCA0B94, 0);
     *(_BYTE *)(a1 + 20308) = 1;
@@ -21314,8 +21274,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1[5051] + 64) |= 1u;
     *(_BYTE *)(*v2 + 64) |= 1u;
     *(_BYTE *)(*v1 + 64) |= 1u;
-    sub_60473DE4(a1 + 11, 0, (_DWORD *)0xCA0B5C, 0);
-    result = sub_60473DE4(v3, 1u, (_DWORD *)0xCA0B8C, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 0, (_DWORD *)0xCA0B5C, 0);
+    result = ArrayOf5_lookupByIndex(v3, 1u, (_DWORD *)0xCA0B8C, 0);
     *((_BYTE *)v2 + 52) = 1;
     *((_BYTE *)v2 + 53) = 1;
     *((_BYTE *)v2 + 2245) = 1;
@@ -21623,7 +21583,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 44);
     if ( *(_BYTE *)(MEMORY[0xC99DEC] + 522) )
       *(_BYTE *)(a1 + 12982) = 1;
-    sub_60473DE4(v2, 0, (_DWORD *)0xCA0B64, 0);
+    ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCA0B64, 0);
     sub_604741D8(v2, 1u, (_DWORD *)0xCA0B8C, 0);
     v4 = *(_DWORD *)(a1 + 5752);
     v3 = a1 + 5752;
@@ -21680,7 +21640,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // t1
   
     v1 = a1;
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B84, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0B84, 0);
     v2 = *(_DWORD *)(v1 + 5752);
     v1 += 5752;
     *(_DWORD *)v1 = v2 | 1;
@@ -21859,7 +21819,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60558120(a1 + 2324);
     sub_6050B5C8(a1 + 1429);
     sub_605021B0(a1 + 909);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 11));
     return a1;
   }
 
@@ -24434,18 +24394,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 13232);
     sub_6050A4C4(a1 + 6016);
     sub_605021B0(a1 + 3936);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 48));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 48));
     return a1;
-  }
-
-/* ============================================================================
- * sub_604A4354
- * RVA 0x004a4354   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_604A4354(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
   }
 
 /* ============================================================================
@@ -25528,7 +25478,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v26 = 12321336;
         v27 = "PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v26, v19, 1);
+        MessageQueue_postType3(&v26, v19, 1);
         if ( sub_60474F28(v18) == 1 )
           sub_60474EEC(v18);
       }
@@ -25540,7 +25490,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v26 = 12321336;
         v27 = "PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v26, v20, 1);
+        MessageQueue_postType3(&v26, v20, 1);
         if ( sub_60474F28(v18) == 1 )
           sub_60474EEC(v18);
       }
@@ -25552,7 +25502,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v26 = 12321336;
         v27 = "PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v26, v21, 1);
+        MessageQueue_postType3(&v26, v21, 1);
         if ( sub_60474F28(v18) == 1 )
           sub_60474EEC(v18);
       }
@@ -25564,7 +25514,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v26 = 12321336;
         v27 = "PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v26, v22, 1);
+        MessageQueue_postType3(&v26, v22, 1);
         if ( sub_60474F28(v18) == 1 )
           sub_60474EEC(v18);
       }
@@ -25576,7 +25526,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v26 = 12321336;
         v27 = "PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v26, v23, 1);
+        MessageQueue_postType3(&v26, v23, 1);
         if ( sub_60474F28(v18) == 1 )
           sub_60474EEC(v18);
       }
@@ -25589,7 +25539,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v26 = 12321336;
         v27 = "PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v26, v25, 1);
+        MessageQueue_postType3(&v26, v25, 1);
         result = sub_60474F28(v18);
         if ( result == 1 )
           result = sub_60474EEC(v18);
@@ -25782,7 +25732,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v27 = 12321336;
         v28 = (int)"PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v27, v18, 1);
+        MessageQueue_postType3(&v27, v18, 1);
         if ( sub_60474F28(v3) == 1 )
           sub_60474EEC(v3);
       }
@@ -25794,7 +25744,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v27 = 12321336;
         v28 = (int)"PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v27, v19, 1);
+        MessageQueue_postType3(&v27, v19, 1);
         if ( sub_60474F28(v3) == 1 )
           sub_60474EEC(v3);
       }
@@ -25806,7 +25756,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v27 = 12321336;
         v28 = (int)"PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v27, v20, 1);
+        MessageQueue_postType3(&v27, v20, 1);
         if ( sub_60474F28(v3) == 1 )
           sub_60474EEC(v3);
       }
@@ -25818,7 +25768,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v27 = 12321336;
         v28 = (int)"PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v27, v21, 1);
+        MessageQueue_postType3(&v27, v21, 1);
         if ( sub_60474F28(v3) == 1 )
           sub_60474EEC(v3);
       }
@@ -25830,7 +25780,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v27 = 12321336;
         v28 = (int)"PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v27, v22, 1);
+        MessageQueue_postType3(&v27, v22, 1);
         if ( sub_60474F28(v3) == 1 )
           sub_60474EEC(v3);
       }
@@ -25843,7 +25793,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v27 = 12321336;
         v28 = (int)"PaCharacterSelector_Zanki_00";
-        sub_6047E0EC(&v27, v24, 1);
+        MessageQueue_postType3(&v27, v24, 1);
         result = sub_60474F28(v3);
         if ( result == 1 )
           return sub_60474EEC(v3);
@@ -26498,7 +26448,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -27565,7 +27515,7 @@ static inline unsigned int uxtb16(unsigned int x)
                1);
         v10 = sub_604749C4(v9);
         if ( v10 )
-          sub_6047E0EC(&dword_60CA16D0, v10, 0);
+          MessageQueue_postType3(&dword_60CA16D0, v10, 0);
       }
       result = a1[20];
       if ( result )
@@ -27579,7 +27529,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   1);
           v13 = sub_604749C4(v12);
           if ( v13 )
-            sub_6047E0EC(&dword_60CA16D8, v13, 0);
+            MessageQueue_postType3(&dword_60CA16D8, v13, 0);
         }
         result = a1[20];
         if ( result )
@@ -27593,7 +27543,7 @@ static inline unsigned int uxtb16(unsigned int x)
                     1);
             v16 = sub_604749C4(v15);
             if ( v16 )
-              sub_6047E0EC(&dword_60CA16D0, v16, 0);
+              MessageQueue_postType3(&dword_60CA16D0, v16, 0);
           }
           result = a1[20];
           if ( result )
@@ -27607,7 +27557,7 @@ static inline unsigned int uxtb16(unsigned int x)
                       1);
               result = sub_604749C4(v17);
               if ( result )
-                return sub_6047E0EC(&dword_60CA16D8, result, 0);
+                return MessageQueue_postType3(&dword_60CA16D8, result, 0);
             }
           }
         }
@@ -28165,7 +28115,7 @@ static inline unsigned int uxtb16(unsigned int x)
                1);
         v10 = sub_604749C4(v9);
         if ( v10 )
-          sub_6047E0EC(&dword_60CA16E0, v10, 0);
+          MessageQueue_postType3(&dword_60CA16E0, v10, 0);
       }
       result = a1[20];
       if ( result )
@@ -28179,7 +28129,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   1);
           result = sub_604749C4(v11);
           if ( result )
-            return sub_6047E0EC(&dword_60CA16E8, result, 0);
+            return MessageQueue_postType3(&dword_60CA16E8, result, 0);
         }
       }
     }
@@ -29079,7 +29029,7 @@ static inline unsigned int uxtb16(unsigned int x)
                1);
         v10 = sub_604749C4(v9);
         if ( v10 )
-          sub_6047E0EC(&dword_60CA16E0, v10, 0);
+          MessageQueue_postType3(&dword_60CA16E0, v10, 0);
       }
       result = *(_DWORD *)(a1 + 80);
       if ( result )
@@ -29093,7 +29043,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   1);
           result = sub_604749C4(v11);
           if ( result )
-            return sub_6047E0EC(&dword_60CA16E8, result, 0);
+            return MessageQueue_postType3(&dword_60CA16E8, result, 0);
         }
       }
     }
@@ -29452,18 +29402,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604A4320(v8 + 44844);
     sub_604A4320(v8 + 24288);
     sub_604A4320(v8 + 3732);
-    sub_60475AE8((struct sead_IDisposer *)(v8 + 64));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(v8 + 64));
     return v8;
-  }
-
-/* ============================================================================
- * sub_604AB57C
- * RVA 0x004ab57c   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_604AB57C(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
   }
 
 /* ============================================================================
@@ -31132,7 +31072,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -31358,7 +31298,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604AE61C(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 36), 0, &dword_60CA1858, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, &dword_60CA1858, 0);
     *(_BYTE *)(a1 + 3664) = 1;
     return 1;
   }
@@ -31507,18 +31447,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604AE884(int a1)
   {
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 36));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 36));
     return a1;
-  }
-
-/* ============================================================================
- * sub_604AE89C
- * RVA 0x004ae89c   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_604AE89C(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
   }
 
 /* ============================================================================
@@ -31668,7 +31598,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)(v4 + 48) = v3;
     *(float *)(v4 + 52) = v3;
     *(_BYTE *)(v4 + 64) |= 0x10u;
-    sub_60473DE4((_DWORD *)(a1 + 36), 1u, &dword_60CA1860, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 1u, &dword_60CA1860, 0);
     sub_6047455C(a1 + 36, 1);
     sub_6047459C(a1 + 36, 1);
     v5 = *(unsigned __int8 *)(a1 + 3667);
@@ -31676,8 +31606,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3667) = v5 ^ 1;
     if ( !v5 )
       v6 = &dword_60CA1880;
-    sub_60473DE4((_DWORD *)(a1 + 36), 3u, v6, 0);
-    return sub_60473DE4((_DWORD *)(a1 + 36), 4u, &dword_60CA18A0, 1);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 3u, v6, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 4u, &dword_60CA18A0, 1);
   }
 
 /* ============================================================================
@@ -31709,7 +31639,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = &dword_60CA1878;
       if ( a2 )
         v3 = &dword_60CA1880;
-      return sub_60473DE4(v2, 3u, v3, 0);
+      return ArrayOf5_lookupByIndex(v2, 3u, v3, 0);
     }
     return result;
   }
@@ -31768,7 +31698,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = &dword_60CA1870;
       if ( *(_BYTE *)(a1 + 3667) )
         v3 = &dword_60CA1868;
-      sub_60473DE4((_DWORD *)(a1 + 36), 2u, v3, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 2u, v3, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13244424);
     }
     return result;
@@ -31919,7 +31849,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -32056,7 +31986,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045BF58(a1 + 5688, 0);
     *(_BYTE *)(a1 + 38100) = 0;
     *(_BYTE *)(a1 + 38102) = 1;
-    sub_60473DE4((_DWORD *)(a1 + 20), 0, (_DWORD *)0xCA1914, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 20), 0, (_DWORD *)0xCA1914, 0);
     v3 = ArrayOf20_getEntryPtr(a1 + 20, 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
     sub_60473B58((_DWORD *)(a1 + 20), 0xEu, 0);
@@ -32227,7 +32157,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502548(a1 + 3608);
     *(_WORD *)(a1 + 4660) = 0;
     sub_6047EABC((_DWORD *)(a1 + 3648));
-    sub_60473DE4((_DWORD *)(a1 + 20), 0, (_DWORD *)0xCA1914, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 20), 0, (_DWORD *)0xCA1914, 0);
     *(_DWORD *)(MEMORY[0xC99DD4] + 1376) |= 1u;
     sub_603F5020(MEMORY[0xC99D70]);
     sub_604B2528(a1);
@@ -32285,7 +32215,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     sub_603F5010(MEMORY[0xC99D70]);
-    sub_60473DE4(a1 + 5, 0, (_DWORD *)0xCA191C, 0);
+    ArrayOf5_lookupByIndex(a1 + 5, 0, (_DWORD *)0xCA191C, 0);
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CE_MENU_OUT", 0);
     *(_BYTE *)(a1[1542] + 64) &= ~1u;
     *(_BYTE *)(a1[1543] + 64) &= ~1u;
@@ -32985,7 +32915,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047643C((struct sead_IDisposer *)(a1 + 1551));
     thunk_sub_60909E64(a1 + 1422);
     sub_605021B0(a1 + 902);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 5));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 5));
     return a1;
   }
 
@@ -33313,7 +33243,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v11 = (_DWORD *)(result + 20);
         if ( v9 == 1 )
-          sub_60473DE4(v11, 2u, (_DWORD *)0xCA1944, 0);
+          ArrayOf5_lookupByIndex(v11, 2u, (_DWORD *)0xCA1944, 0);
         else
           sub_604741D8(v11, 2u, (_DWORD *)0xCA1944, 0);
         *v1 = 1;
@@ -33570,7 +33500,7 @@ static inline unsigned int uxtb16(unsigned int x)
       case 4u:
         v3 = 13244732;
   LABEL_6:
-        sub_60473DE4((_DWORD *)(a1 + 20), 1u, (_DWORD *)v3, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)(a1 + 20), 1u, (_DWORD *)v3, 0);
         break;
       default:
         break;
@@ -33788,10 +33718,10 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v19 = 12321336;
     v20 = "CoinEditScene_Coin_00";
-    sub_6047E0EC(&v19, *(_DWORD *)(a1 + 588), 1);
+    MessageQueue_postType3(&v19, *(_DWORD *)(a1 + 588), 1);
     v19 = 12321336;
     v20 = "CoinEditScene_StarCoin_00";
-    sub_6047E0EC(&v19, *(_DWORD *)(a1 + 592), 1);
+    MessageQueue_postType3(&v19, *(_DWORD *)(a1 + 592), 1);
     *(_BYTE *)(MEMORY[0xC99D70] + 1873) = 0;
     v8 = *(_DWORD *)(a1 + 32);
     if ( v8 )
@@ -34460,10 +34390,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v6 = 12321336;
     v7 = "CoinEditScene_Coin_00";
-    sub_6047E0EC(&v6, *(_DWORD *)(a1 + 588), 1);
+    MessageQueue_postType3(&v6, *(_DWORD *)(a1 + 588), 1);
     v6 = 12321336;
     v7 = "CoinEditScene_StarCoin_00";
-    sub_6047E0EC(&v6, *(_DWORD *)(a1 + 592), 1);
+    MessageQueue_postType3(&v6, *(_DWORD *)(a1 + 592), 1);
     sub_604DEA08(a1, 0);
     *(_DWORD *)(a1 + 14920) = 0;
     *(_DWORD *)(a1 + 14924) = 1;
@@ -34472,16 +34402,16 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 20) = v2;
     sub_604DE988(a1);
     sub_6047EBB4(a1 + 24, *(_DWORD *)(*(_DWORD *)(a1 + 16) + 4 * v2));
-    sub_60473DE4((_DWORD *)(a1 + 4172), 0, (_DWORD *)0xCA1B8C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 4172), 0, (_DWORD *)0xCA1B8C, 0);
     if ( *(_BYTE *)(MEMORY[0xCBC000] + 148) == 1 )
     {
-      sub_60473DE4((_DWORD *)(a1 + 632), 0, (_DWORD *)0xCA1B8C, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 632), 0, (_DWORD *)0xCA1B8C, 0);
       v3 = (_DWORD *)(a1 + 4172);
       goto LABEL_5;
     }
     if ( !*(_BYTE *)(MEMORY[0xCBC000] + 148) )
     {
-      sub_60473DE4((_DWORD *)(a1 + 4172), 0, (_DWORD *)0xCA1B8C, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 4172), 0, (_DWORD *)0xCA1B8C, 0);
       v3 = (_DWORD *)(a1 + 632);
   LABEL_5:
       sub_604741D8(v3, 0, (_DWORD *)0xCA1B8C, 0);
@@ -34559,7 +34489,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r2
     int v5; // r5
   
-    sub_60473DE4(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xCA1B44, 0);
+    ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xCA1B44, 0);
     v2 = *(_DWORD *)(MEMORY[0xC99DD4] + 912);
     switch ( v2 )
     {
@@ -34579,12 +34509,12 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = *(_DWORD **)(a1 + 4);
         v4 = 13245260;
   LABEL_6:
-        sub_60473DE4(v3, 2u, (_DWORD *)v4, 0);
+        ArrayOf5_lookupByIndex(v3, 2u, (_DWORD *)v4, 0);
         break;
       default:
         break;
     }
-    sub_60473DE4(*(_DWORD **)(a1 + 4), 3u, (_DWORD *)0xCA1B6C, 0);
+    ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 3u, (_DWORD *)0xCA1B6C, 0);
     v5 = *(_DWORD *)(a1 + 584);
     *(float *)(v5 + 24) = *(float *)(*(_DWORD *)(a1 + 552) + 24)
                         + (float)((float)(1 - v2 + *(_DWORD *)(MEMORY[0xC99D70] + 1864))
@@ -34836,7 +34766,7 @@ static inline unsigned int uxtb16(unsigned int x)
                               result = a1 + 14816;
                               if ( v6 <= *(float *)(a1 + 14816) )
                               {
-                                sub_60473DE4(*(_DWORD **)(a1 + 4), 9u, (_DWORD *)0xCA1B7C, 0);
+                                ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 9u, (_DWORD *)0xCA1B7C, 0);
                                 result = MEMORY[0xCA1910];
                                 *(_DWORD *)(MEMORY[0xCA1910] + 38084) = 1;
                                 *v3 = 1;
@@ -34877,7 +34807,7 @@ static inline unsigned int uxtb16(unsigned int x)
                            && *(float *)(a1 + 14808) <= v6
                            && v6 <= *(float *)(a1 + 14816) )
                     {
-                      sub_60473DE4(*(_DWORD **)(a1 + 4), 9u, (_DWORD *)0xCA1B7C, 0);
+                      ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 9u, (_DWORD *)0xCA1B7C, 0);
                       *(_DWORD *)(MEMORY[0xCA1910] + 38084) = 1;
                       *v3 = 1;
                       *v4 = 1;
@@ -35246,7 +35176,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 14937);
     if ( !result )
     {
-      sub_60473DE4(*(_DWORD **)(a1 + 4), 4u, (_DWORD *)0xCA1B74, 0);
+      ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 4u, (_DWORD *)0xCA1B74, 0);
       *v3 = 1;
       v4 = *(unsigned __int8 *)(MEMORY[0xCBC000] + 148);
       v5 = v4 == 0;
@@ -35260,7 +35190,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
         v7 = "CoinEditScene_Attention_01";
       v8[1] = v7;
-      return sub_6047E0EC(v8, v6, 0);
+      return MessageQueue_postType3(v8, v6, 0);
     }
     return result;
   }
@@ -35368,7 +35298,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(MEMORY[0xCBC000] + 148) == 1 )
       {
         sub_606EB5C8(MEMORY[0xCBC000], 0);
-        sub_60473DE4(a1 + 1043, 0, (_DWORD *)0xCA1B8C, 0);
+        ArrayOf5_lookupByIndex(a1 + 1043, 0, (_DWORD *)0xCA1B8C, 0);
         v3 = a1 + 158;
         goto LABEL_7;
       }
@@ -35380,7 +35310,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !*(_BYTE *)(MEMORY[0xCBC000] + 148) )
       {
         sub_606EB5C8(MEMORY[0xCBC000], 1);
-        sub_60473DE4(a1 + 158, 0, (_DWORD *)0xCA1B8C, 0);
+        ArrayOf5_lookupByIndex(a1 + 158, 0, (_DWORD *)0xCA1B8C, 0);
         v3 = a1 + 1043;
   LABEL_7:
         sub_604741D8(v3, 0, (_DWORD *)0xCA1B8C, 0);
@@ -35648,16 +35578,6 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604B5BA4
- * RVA 0x004b5ba4   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_604B5BA4(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
-  }
-
-/* ============================================================================
  * sub_604B5BA8
  * RVA 0x004b5ba8   size 0x10   xrefs 0
  * ============================================================================ */
@@ -35665,7 +35585,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -37264,18 +37184,8 @@ static inline unsigned int uxtb16(unsigned int x)
       operator delete(v3);
       a1[913] = 0;
     }
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return a1;
-  }
-
-/* ============================================================================
- * sub_604B7A3C
- * RVA 0x004b7a3c   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_604B7A3C(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
   }
 
 /* ============================================================================
@@ -37295,7 +37205,7 @@ static inline unsigned int uxtb16(unsigned int x)
       operator delete(v3);
       a1[913] = 0;
     }
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -37884,10 +37794,10 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v16 = 12321336;
         v17 = v6;
-        sub_6047E0EC(&v16, a1[917], 0);
-        sub_6047E0EC(&v16, a1[920], 0);
-        sub_6047E0EC(&v16, a1[923], 0);
-        sub_6047E0EC(&v16, a1[926], 0);
+        MessageQueue_postType3(&v16, a1[917], 0);
+        MessageQueue_postType3(&v16, a1[920], 0);
+        MessageQueue_postType3(&v16, a1[923], 0);
+        MessageQueue_postType3(&v16, a1[926], 0);
         result = a1[931];
         v5 = 1;
       }
@@ -37898,10 +37808,10 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v16 = 12321336;
         v17 = v8;
-        sub_6047E0EC(&v16, a1[918], 0);
-        sub_6047E0EC(&v16, a1[921], 0);
-        sub_6047E0EC(&v16, a1[924], 0);
-        sub_6047E0EC(&v16, a1[927], 0);
+        MessageQueue_postType3(&v16, a1[918], 0);
+        MessageQueue_postType3(&v16, a1[921], 0);
+        MessageQueue_postType3(&v16, a1[924], 0);
+        MessageQueue_postType3(&v16, a1[927], 0);
         result = a1[931];
         v5 = 1;
       }
@@ -37914,10 +37824,10 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v16 = 12321336;
         v17 = v11;
-        sub_6047E0EC(&v16, a1[919], 0);
-        sub_6047E0EC(&v16, a1[922], 0);
-        sub_6047E0EC(&v16, a1[925], 0);
-        sub_6047E0EC(&v16, a1[928], 0);
+        MessageQueue_postType3(&v16, a1[919], 0);
+        MessageQueue_postType3(&v16, a1[922], 0);
+        MessageQueue_postType3(&v16, a1[925], 0);
+        MessageQueue_postType3(&v16, a1[928], 0);
         result = a1[931];
         v5 = 1;
       }
@@ -37934,8 +37844,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v15[1] = "ModelPlayWindow_WinText_03";
           sead::SafeStringBase<char>::operator=(&v16, v15);
         }
-        sub_6047E0EC(&v16, a1[915], 0);
-        sub_6047E0EC(&v16, a1[916], 0);
+        MessageQueue_postType3(&v16, a1[915], 0);
+        MessageQueue_postType3(&v16, a1[916], 0);
         v5 = 1;
       }
       v13 = a1 + 1;
@@ -38201,7 +38111,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -38654,10 +38564,10 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      sub_60473DE4((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCA2570, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCA2570, 0);
       result = *(_DWORD *)(a1 + 3692);
       if ( !result )
-        result = sub_60473DE4((_DWORD *)(a1 + 40), 2u, (_DWORD *)0xCA2578, 0);
+        result = ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 2u, (_DWORD *)0xCA2578, 0);
       *(_DWORD *)(a1 + 3684) = 1;
       *(_BYTE *)(a1 + 3696) = 0;
     }
@@ -38713,7 +38623,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v8 = *(_DWORD *)(v7 + 176);
         v9[0] = 12321336;
         v9[1] = v8;
-        sub_6047E0EC(v9, v7, 1);
+        MessageQueue_postType3(v9, v7, 1);
         sub_60478680((int)"SE_SYS_COUNT_ZANKI", 9);
         result = *(_DWORD *)(a1 + 3692) + 1;
         *(_DWORD *)(a1 + 3692) = result;
@@ -38761,7 +38671,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA2568, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA2568, 0);
       *(_DWORD *)(a1 + 3680) = 1;
       *(_BYTE *)(a1 + 3696) = 0;
       return 1;
@@ -38814,7 +38724,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v7 = *(_DWORD *)(v6 + 176);
         v8[0] = 12321336;
         v8[1] = v7;
-        sub_6047E0EC(v8, v6, 1);
+        MessageQueue_postType3(v8, v6, 1);
         result = *(_DWORD *)(a1 + 3692) + 1;
         *(_DWORD *)(a1 + 3692) = result;
         *(_BYTE *)(a1 + 3696) = 1;
@@ -38895,18 +38805,8 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604BA75C(_DWORD *a1)
   {
     *a1 = 12574964;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
-  }
-
-/* ============================================================================
- * sub_604BA788
- * RVA 0x004ba788   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_604BA788(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
   }
 
 /* ============================================================================
@@ -38916,7 +38816,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604BA790(_DWORD *a1)
   {
     *a1 = 12574964;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -39066,19 +38966,19 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3697) = 1;
     *(_DWORD *)(a1 + 3680) = 0;
     *(_DWORD *)(a1 + 3684) = 0;
-    sub_60473DE4((_DWORD *)(a1 + 40), 3u, (_DWORD *)0xCA2560, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 3u, (_DWORD *)0xCA2560, 0);
     sub_604745EC(a1 + 40, 3u, 0);
     sub_6047455C(a1 + 40, 3);
     v4 = *(_DWORD *)(a1 + 3652);
     v5 = *(_DWORD *)(v4 + 176);
     v9 = 12321336;
     v10 = v5;
-    sub_6047E0EC(&v9, v4, 1);
+    MessageQueue_postType3(&v9, v4, 1);
     v6 = *(_DWORD *)(a1 + 3656);
     v7 = *(_DWORD *)(v6 + 176);
     v9 = 12321336;
     v10 = v7;
-    sub_6047E0EC(&v9, v6, 1);
+    MessageQueue_postType3(&v9, v6, 1);
     return StateMgr::changeState((_DWORD *)(a1 + 24), 13247872);
   }
 
@@ -39287,7 +39187,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -39301,7 +39201,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCA2670] == a1 )
     {
       MEMORY[0xCA2670] = 0;
-      sub_60475AE8((struct sead_IDisposer *)(MEMORY[0xCA2674] + 84));
+      Disposer_destroyAllocated((struct sead_IDisposer *)(MEMORY[0xCA2674] + 84));
       MEMORY[0xCA2674] = 0;
     }
     return sead::IDisposer::~IDisposer(a1);
@@ -39319,7 +39219,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCA2670] == a1 )
     {
       MEMORY[0xCA2670] = 0;
-      sub_60475AE8((struct sead_IDisposer *)(MEMORY[0xCA2674] + 84));
+      Disposer_destroyAllocated((struct sead_IDisposer *)(MEMORY[0xCA2674] + 84));
       MEMORY[0xCA2674] = 0;
     }
     v2 = sead::IDisposer::~IDisposer(a1);
@@ -39396,7 +39296,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 11480456;
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
       v2 = 11480460;
-    v3 = (int *)sub_60008598(MEMORY[0xC7B400], *(_DWORD *)v2);
+    v3 = (int *)ActorMgr_findByType(MEMORY[0xC7B400], *(_DWORD *)v2);
     if ( !v3 )
       goto LABEL_11;
     v4 = *v3;
@@ -39462,10 +39362,10 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_VS_COUNT", 0);
       v4[0] = 12321336;
       v4[1] = "CountDownStart_Count_00";
-      sub_6047E0EC(v4, *(_DWORD *)(a1 + 16), 1);
+      MessageQueue_postType3(v4, *(_DWORD *)(a1 + 16), 1);
       v3 = 13248184;
   LABEL_9:
-      sub_60473DE4((_DWORD *)(a1 + 84), 0, (_DWORD *)v3, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 84), 0, (_DWORD *)v3, 0);
       result = *(_DWORD *)(a1 + 3636);
       goto LABEL_10;
     }
@@ -39941,7 +39841,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12575248;
     v2 = (struct sead_IDisposer *)(a1 + 835);
     sub_60507C90(a1 + 1724);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return sub_60471D18(a1);
   }
 
@@ -39957,7 +39857,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12575248;
     v2 = (struct sead_IDisposer *)(a1 + 835);
     sub_60507C90(a1 + 1724);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     v3 = sub_60471D18(a1);
     return operator delete((int)v3);
   }
@@ -40384,7 +40284,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v3; // r1
     _DWORD *v4; // r0
   
-    sub_60473DE4(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xCA27A0, 0);
+    ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 1u, (_DWORD *)0xCA27A0, 0);
     v2 = *(_DWORD *)(a1 + 4);
     v3 = *(_DWORD *)(v2 + 3508);
     v4 = *(_DWORD **)(v2 + 3512);
@@ -41164,7 +41064,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605094B8(a1 + 17428);
     v3 = *(_DWORD **)(a1 + 4);
     v4 = 0;
-    sub_60473DE4(v3, 1u, (_DWORD *)0xCA27A0, 0);
+    ArrayOf5_lookupByIndex(v3, 1u, (_DWORD *)0xCA27A0, 0);
     v5 = sub_60508FA4(v2);
     if ( v5 < 0x20 )
       v4 = v5;
@@ -41735,7 +41635,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604BEDE8(int a1)
   {
-    return sub_60473DE4(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xCA2790, 0);
+    return ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xCA2790, 0);
   }
 
 /* ============================================================================
@@ -42362,8 +42262,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)(MEMORY[0xC9A1E0] + 532) = 0;
-    sub_60473DE4(*(_DWORD **)(a1 + 4), 2u, (_DWORD *)0xCA27A8, 1);
-    sub_60473DE4(*(_DWORD **)(a1 + 4), 4u, (_DWORD *)0xCA2798, 0);
+    ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 2u, (_DWORD *)0xCA27A8, 1);
+    ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 4u, (_DWORD *)0xCA2798, 0);
     v2 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 4);
     return (*(int (__fastcall **)(int))(*(_DWORD *)v2 + 96))(v2);
   }
@@ -43447,7 +43347,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604741D8((_DWORD *)(a1 + 48), 0, (_DWORD *)0xCA2AD4, 0);
     *(_BYTE *)(a1 + 13892) = 1;
     sub_6047455C((int)v2, 0);
-    sub_60473DE4(v2, 0xCu, (_DWORD *)0xCA2AFC, 0);
+    ArrayOf5_lookupByIndex(v2, 0xCu, (_DWORD *)0xCA2AFC, 0);
     sub_604745C0((int)v2, 0xCu);
     *(float *)(a1 + 14124) = 1.0;
     *(_BYTE *)(a1 + 14168) = 0;
@@ -45329,18 +45229,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 1635);
     thunk_sub_60909E64(a1 + 1534);
     sub_605021B0(a1 + 1014);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 12));
     return a1;
-  }
-
-/* ============================================================================
- * sub_604C4DA4
- * RVA 0x004c4da4   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_604C4DA4(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
   }
 
 /* ============================================================================
@@ -45357,7 +45247,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 1635);
     thunk_sub_60909E64(a1 + 1534);
     sub_605021B0(a1 + 1014);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 12));
     return operator delete((int)a1);
   }
 
@@ -46374,7 +46264,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     *(_DWORD *)(v5 + 424) = v4;
-    sub_6047E0EC((_DWORD *)0xCA2B24, *(_DWORD *)(a1 + 13836), 0);
+    MessageQueue_postType3((_DWORD *)0xCA2B24, *(_DWORD *)(a1 + 13836), 0);
     *(_DWORD *)(v5 + 424) = v2;
     if ( v2 < 0 || (unsigned int)(v2 - 34) <= 0x17 && ((1 << (v2 - 34)) & 0x800009) != 0 || v3 <= 6 )
     {
@@ -46388,7 +46278,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v10 = 13249332;
       else
         v10 = 13249324;
-      result = sub_6047E0EC((_DWORD *)v10, *(_DWORD *)(a1 + 13840), 0);
+      result = MessageQueue_postType3((_DWORD *)v10, *(_DWORD *)(a1 + 13840), 0);
     }
     *(_DWORD *)(v5 + 412) = v6;
     *(_DWORD *)(v5 + 424) = v7;
@@ -47280,7 +47170,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -47294,7 +47184,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_604DABE0(0xBu);
-    return sub_60473DE4((_DWORD *)(a1 + 40), 3u, v3, 1);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 3u, v3, 1);
   }
 
 /* ============================================================================
@@ -47338,7 +47228,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = sub_604DABE0(0);
     v10 = 12321336;
     v11 = (const char *)v6;
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, &v10, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, &v10, 0);
     sub_6047455C(a1 + 40, 0);
     sub_6047459C(a1 + 40, 0);
     if ( *(_DWORD *)(a1 + 21860) == -1 )
@@ -47394,7 +47284,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_604DABE0(3u);
-    return sub_60473DE4((_DWORD *)(a1 + 40), 4u, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 4u, v3, 0);
   }
 
 /* ============================================================================
@@ -47809,7 +47699,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v4[0] = 12321336;
     v4[1] = sub_604DABE0(3u);
-    return sub_60473DE4((_DWORD *)(a1 + 40), 4u, v4, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 4u, v4, 0);
   }
 
 /* ============================================================================
@@ -47871,7 +47761,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_604DABE0(0xAu);
-    sub_60473DE4((_DWORD *)(a1 + 40), 6u, v3, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 6u, v3, 0);
     *(_DWORD *)(a1 + 4828) = 256;
     sub_60502548(a1 + 3800);
     *(_WORD *)(a1 + 4852) = 0;
@@ -48085,7 +47975,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 0;
     v5 = 12321336;
     v6 = sub_604DABE0(3u);
-    sub_60473DE4((_DWORD *)(a1 + 40), 4u, &v5, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 4u, &v5, 0);
     v3 = sub_604DABE0(0xAu);
     v5 = 12321336;
     v6 = v3;
@@ -48165,7 +48055,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6040135C(MEMORY[0xC99E44], v3[22322], v4);
     v9 = 12321336;
     v10 = "CouseSelectVSRandom_World_00";
-    sub_6047E0EC(&v9, a1[9725], 1);
+    MessageQueue_postType3(&v9, a1[9725], 1);
     StateMgr::changeState(a1 + 8813, 13254808);
     v5 = sub_604DABE0(3u);
     v6 = a1 + 10;
@@ -48175,7 +48065,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = sub_604DABE0(0xAu);
     v9 = 12321336;
     v10 = (const char *)v7;
-    return sub_60473DE4(v6, 6u, &v9, 0);
+    return ArrayOf5_lookupByIndex(v6, 6u, &v9, 0);
   }
 
 /* ============================================================================
@@ -48224,7 +48114,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 0;
     v5 = 12321336;
     v6 = sub_604DABE0(3u);
-    sub_60473DE4((_DWORD *)(a1 + 40), 4u, &v5, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 4u, &v5, 0);
     v3 = sub_604DABE0(0xAu);
     v5 = 12321336;
     v6 = v3;
@@ -48285,7 +48175,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604CA010(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 5880), 0, &dword_60CA4D68, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 5880), 0, &dword_60CA4D68, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAUSE", 0);
   }
 
@@ -48471,7 +48361,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 2;
     v6 = 12321336;
     v7 = sub_604DABE0(2u);
-    sub_60473DE4(a1 + 10, 1u, &v6, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 1u, &v6, 0);
     v3 = sub_604DABE0(3u);
     v6 = 12321336;
     v7 = v3;
@@ -48528,7 +48418,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v6 = 12321336;
     v7 = sub_604DABE0(1u);
-    sub_60473DE4(a1 + 10, 1u, &v6, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 1u, &v6, 0);
     v2 = sub_604DABE0(3u);
     v6 = 12321336;
     v7 = v2;
@@ -48873,7 +48763,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v11; // [sp+10h] [bp-4h] BYREF
   
     v2 = 0;
-    sub_60473DE4((_DWORD *)(a1 + 9420), 0, &dword_60CA4D68, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 9420), 0, &dword_60CA4D68, 0);
     v3 = *(_DWORD *)(a1 + 615700);
     v10 = a1;
     if ( v3 >= 0xA )
@@ -49025,7 +48915,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 2;
     v6[0] = 12321336;
     v6[1] = sub_604DABE0(2u);
-    sub_60473DE4(a1 + 10, 1u, v6, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 1u, v6, 0);
     v6[2] = 0;
     v3 = a1[153927];
     if ( v3 != 2 )
@@ -49090,7 +48980,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v11; // [sp+10h] [bp-4h] BYREF
   
     v2 = 0;
-    sub_60473DE4((_DWORD *)(a1 + 12960), 0, &dword_60CA4D68, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12960), 0, &dword_60CA4D68, 0);
     v3 = *(_DWORD *)(a1 + 615700);
     v10 = a1;
     if ( v3 >= 0xA )
@@ -49241,7 +49131,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v6[0] = 12321336;
     v6[1] = sub_604DABE0(1u);
-    sub_60473DE4(a1 + 10, 1u, v6, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 1u, v6, 0);
     v6[2] = 1;
     v2 = a1[153927];
     if ( v2 == 2 )
@@ -49623,11 +49513,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047643C((struct sead_IDisposer *)(a1 + 11141));
     sub_6047643C((struct sead_IDisposer *)(a1 + 10256));
     sub_605021B0(a1 + 9731);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 8819));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 8819));
     sub_6050A4C4(a1 + 7004);
     thunk_sub_60909E64(a1 + 6897);
     sub_605021B0(a1 + 6377);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 5477));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 5477));
     thunk_sub_60909E64(a1 + 5364);
     thunk_sub_60909E64(a1 + 5263);
     thunk_sub_60909E64(a1 + 5162);
@@ -49637,7 +49527,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047643C((struct sead_IDisposer *)(a1 + 2355));
     sub_6047643C((struct sead_IDisposer *)(a1 + 1470));
     sub_605021B0(a1 + 950);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -49650,43 +49540,43 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 526000);
     sub_604D9DF8(a1 + 479776);
     sub_605021B0(a1 + 477696);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 473856));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 473856));
     thunk_sub_60909E64(a1 + 473356);
     sub_604D9DF8(a1 + 427132);
     sub_605021B0(a1 + 425052);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 421212));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 421212));
     thunk_sub_60909E64(a1 + 420712);
     sub_604D9DF8(a1 + 374488);
     sub_605021B0(a1 + 372408);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 368568));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 368568));
     thunk_sub_60909E64(a1 + 368068);
     sub_604D9DF8(a1 + 321844);
     sub_605021B0(a1 + 319764);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 315924));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 315924));
     thunk_sub_60909E64(a1 + 315424);
     sub_604D9DF8(a1 + 269200);
     sub_605021B0(a1 + 267120);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 263280));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 263280));
     thunk_sub_60909E64(a1 + 262780);
     sub_604D9DF8(a1 + 216556);
     sub_605021B0(a1 + 214476);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 210636));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 210636));
     thunk_sub_60909E64(a1 + 210136);
     sub_604D9DF8(a1 + 163912);
     sub_605021B0(a1 + 161832);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 157992));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 157992));
     thunk_sub_60909E64(a1 + 157492);
     sub_604D9DF8(a1 + 111268);
     sub_605021B0(a1 + 109188);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 105348));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 105348));
     thunk_sub_60909E64(a1 + 104848);
     sub_604D9DF8(a1 + 58624);
     sub_605021B0(a1 + 56544);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 52704));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 52704));
     thunk_sub_60909E64(a1 + 52204);
     sub_604D9DF8(a1 + 5980);
     sub_605021B0(a1 + 3900);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 60));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 60));
     return a1;
   }
 
@@ -50243,12 +50133,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = InOut_Pos_ref(1);
     v12 = 12321336;
     v13 = v7;
-    sub_60473DE4((_DWORD *)(a1 + 40), 1u, &v12, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, &v12, 0);
     sub_6047459C(a1 + 40, 1);
     v8 = InOut_Pos_ref(0);
     v12 = 12321336;
     v13 = v8;
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, &v12, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, &v12, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
     sub_60473B58(a1 + 40, 14, 0);
     *(_BYTE *)(a1 + 6144) = *(_DWORD *)(MEMORY[0xC99DEC] + 508) == 3;
@@ -50382,14 +50272,14 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_9:
       v22 = 12321336;
       v23 = v16;
-      sub_60473DE4((_DWORD *)(a1 + 44), 1u, &v22, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 1u, &v22, 0);
       sub_604745C0(a1 + 44, 1);
       sub_6047455C(a1 + 44, 1);
     }
     v17 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(0);
     v22 = 12321336;
     v23 = v17;
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, &v22, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, &v22, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3556) + 104))(**(_DWORD **)(a1 + 3556));
     return sub_60473B58(a1 + 44, 14, 0);
   }
@@ -50499,7 +50389,7 @@ static inline unsigned int uxtb16(unsigned int x)
     CourseSelectVS_Index_00_ref(a1);
     v17[0] = 12321336;
     v17[1] = sub_604DABE0(1);
-    sub_60473DE4(a1 + 10, 1u, v17, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 1u, v17, 0);
     v14 = (_DWORD *)a1[888];
     if ( a1[887] > 1u )
       v14 += 5;
@@ -51376,7 +51266,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      sub_6047E0EC(v6, v2, 1);
+      MessageQueue_postType3(v6, v2, 1);
       *(_BYTE *)(a1[943] + 64) |= 1u;
     }
     v3 = a1[944];
@@ -51386,7 +51276,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      sub_6047E0EC(v6, v3, 1);
+      MessageQueue_postType3(v6, v3, 1);
       *(_BYTE *)(a1[944] + 64) |= 1u;
     }
     v4 = a1[945];
@@ -51397,7 +51287,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      sub_6047E0EC(v6, v4, 1);
+      MessageQueue_postType3(v6, v4, 1);
       result = a1[945];
       *(_BYTE *)(result + 64) |= 1u;
     }
@@ -51666,7 +51556,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = sub_604DABE0(10);
       v20 = 12321336;
       v21 = v6;
-      sub_60473DE4((_DWORD *)(a1 + 40), 6u, &v20, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 6u, &v20, 0);
       v7 = *(_DWORD **)(a1 + 3552);
       if ( *(_DWORD *)(a1 + 3548) > 6u )
         v7 += 30;
@@ -51857,7 +51747,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v27 = v41[5465];
       if ( v27 >= 5 )
         v27 = 0;
-      sub_60473DE4(v41 + 10, 2u, &dword_60CA4E60[2 * v27], 0);
+      ArrayOf5_lookupByIndex(v41 + 10, 2u, &dword_60CA4E60[2 * v27], 0);
       if ( ((unsigned int)&unk_60CA4D18 & ~(1615667360 << v28) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA4D18) )
       {
         dword_60CA4D88 = 12321336;
@@ -51888,7 +51778,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v34 = dword_60CA4D90;
       if ( (unsigned int)dword_60CA4D90 >= 5 )
         v34 = 0;
-      sub_6047E0EC(&dword_60CA4D88, v41[v34 + 941], 1);
+      MessageQueue_postType3(&dword_60CA4D88, v41[v34 + 941], 1);
       v35 = v41[5055];
       if ( v35 )
       {
@@ -51908,7 +51798,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v40 = dword_60CA4D94;
       if ( (unsigned int)dword_60CA4D94 >= 5 )
         v40 = 0;
-      return sub_6047E0EC(&dword_60CA4D88, v41[v40 + 941], 1);
+      return MessageQueue_postType3(&dword_60CA4D88, v41[v40 + 941], 1);
     }
     return result;
   }
@@ -52277,7 +52167,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 4928) = v31[0];
     v31[0] = 12321336;
     v31[1] = Out_Select_Mode_ref(2);
-    sub_60473DE4((_DWORD *)(a1 + 60), 2u, v31, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 60), 2u, v31, 0);
     sub_6047455C(a1 + 60, 2);
     sub_6047459C(a1 + 60, 2);
     result = v32;
@@ -53485,7 +53375,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 6136) = 0;
       v14 = 12321336;
       v15 = (const char *)InOut_Pos_ref(1);
-      sub_60473DE4((_DWORD *)(a1 + 40), 1u, &v14, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, &v14, 0);
       sub_6047455C(a1 + 40, 1);
       sub_6047459C(a1 + 40, 1);
       *(_BYTE *)(a1 + 6133) = 0;
@@ -53501,7 +53391,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 6136) = 0;
         v14 = 12321336;
         v15 = (const char *)InOut_Pos_ref(1);
-        sub_60473DE4((_DWORD *)(a1 + 40), 1u, &v14, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, &v14, 0);
         sub_6047455C(a1 + 40, 1);
         sub_6047459C(a1 + 40, 1);
         *(_BYTE *)(a1 + 6133) = 0;
@@ -53521,7 +53411,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v14 = 12321336;
       v15 = (const char *)InOut_Pos_ref(1);
-      sub_60473DE4((_DWORD *)(a1 + 40), 1u, &v14, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, &v14, 0);
       sub_6047455C(a1 + 40, 1);
       sub_6047459C(a1 + 40, 1);
       *(_BYTE *)(a1 + 6132) = v8;
@@ -53534,7 +53424,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = (unsigned __int8)*v6;
     v14 = 12321336;
     v15 = "CourseSelectVS_World_00";
-    sub_6047E0EC(&v14, *(_DWORD *)(a1 + 3612), 1);
+    MessageQueue_postType3(&v14, *(_DWORD *)(a1 + 3612), 1);
     if ( ((unsigned int)&unk_60CA4D40 & ~(1615676648 << v10) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA4D40) )
     {
       dword_60CA4E18 = 12321336;
@@ -53544,7 +53434,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D40);
     }
-    sub_6047E0EC(&dword_60CA4E00[2 * v9 + 6], *(_DWORD *)(a1 + 3608), 0);
+    MessageQueue_postType3(&dword_60CA4E00[2 * v9 + 6], *(_DWORD *)(a1 + 3608), 0);
     if ( ((unsigned int)&unk_60CA4D44 & ~(1615676812 << v11) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA4D44) )
     {
       dword_60CA4E28 = 12321336;
@@ -53558,7 +53448,7 @@ static inline unsigned int uxtb16(unsigned int x)
             *(_DWORD *)(a1 + 3620),
             "T_Btn_00",
             1);
-    return sub_6047E0EC(&dword_60CA4E00[2 * v9 + 10], v12, 0);
+    return MessageQueue_postType3(&dword_60CA4E00[2 * v9 + 10], v12, 0);
   }
 
 /* ============================================================================
@@ -53932,7 +53822,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604D70FC(a1);
     v3[0] = 12321336;
     v3[1] = Out_Select_Mode_ref(0);
-    return sub_60473DE4((_DWORD *)(a1 + 60), 0, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 60), 0, v3, 0);
   }
 
 /* ============================================================================
@@ -53959,7 +53849,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = Out_Select_Mode_ref(1u);
-    return sub_60473DE4((_DWORD *)(a1 + 60), 1u, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 60), 1u, v3, 0);
   }
 
 /* ============================================================================
@@ -54068,11 +53958,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604D70FC(a1);
     v4 = 12321336;
     v5 = Out_Select_Mode_ref(0);
-    sub_60473DE4((_DWORD *)(a1 + 60), 0, &v4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 60), 0, &v4, 0);
     v2 = Out_Select_Mode_ref(1u);
     v4 = 12321336;
     v5 = v2;
-    sub_60473DE4((_DWORD *)(a1 + 60), 1u, &v4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 60), 1u, &v4, 0);
     *(_DWORD *)(a1 + 52612) = 6;
     return 52612;
   }
@@ -54756,7 +54646,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(v10 + 64) = v11 | 1;
         v25 = 12321336;
         v26 = "Level";
-        sub_60473DE4(v6, 0, &v25, 0);
+        ArrayOf5_lookupByIndex(v6, 0, &v25, 0);
         sub_6047455C(v6, 0);
         sub_6047459C(v6, 0);
   LABEL_13:
@@ -54813,7 +54703,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_BYTE *)(result + 64) = v18 | 1;
           v25 = 12321336;
           v26 = "Level";
-          sub_60473DE4(v15, 0, &v25, 0);
+          ArrayOf5_lookupByIndex(v15, 0, &v25, 0);
           sub_6047455C(v15, 0);
           result = sub_6047459C(v15, 0);
           goto LABEL_28;
@@ -55519,7 +55409,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = 1;
     result = sub_60475570(a1 + 60, (int)&v8, v7, (int)&dword_60CA4DB8, &v6);
     if ( v8 )
-      return sub_6047E0EC(&dword_60CA4DC0, v8, 1);
+      return MessageQueue_postType3(&dword_60CA4DC0, v8, 1);
     return result;
   }
 
@@ -55584,7 +55474,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 37) = 1;
     v3[0] = 12321336;
     v3[1] = InOut_Pos_ref(0);
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, v3, 0);
   }
 
 /* ============================================================================
@@ -56041,7 +55931,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 40) = 0;
     v6[0] = 12321336;
     v6[1] = InOut_ScrollToR_ScrollToL_LoopArrow_ref(0);
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, v6, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, v6, 0);
     v6[0] = 257;
     v2 = *(_DWORD *)(a1 + 13276);
     v3 = 0;
@@ -56486,7 +56376,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_604DC7E0(0);
-    sub_60473DE4(a1 + 1448, 0, v3, 0);
+    ArrayOf5_lookupByIndex(a1 + 1448, 0, v3, 0);
     *(_BYTE *)(a1[1443] + 64) &= ~1u;
     *(_BYTE *)(a1[1444] + 64) &= ~1u;
     *(_BYTE *)(a1[1445] + 64) &= ~1u;
@@ -56565,7 +56455,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v3 = 12321336;
       v4 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(2u);
-      sub_60473DE4(v1 - 3308, 1u, &v3, 0);
+      ArrayOf5_lookupByIndex(v1 - 3308, 1u, &v3, 0);
     }
     else
     {
@@ -56629,7 +56519,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_604DC7E0(0);
-    sub_60473DE4(a1 + 2333, 0, v3, 0);
+    ArrayOf5_lookupByIndex(a1 + 2333, 0, v3, 0);
     *(_BYTE *)(a1[1443] + 64) &= ~1u;
     *(_BYTE *)(a1[1444] + 64) &= ~1u;
     *(_BYTE *)(a1[1445] + 64) &= ~1u;
@@ -56708,7 +56598,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v3 = 12321336;
       v4 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(1u);
-      sub_60473DE4(v1 - 3308, 1u, &v3, 0);
+      ArrayOf5_lookupByIndex(v1 - 3308, 1u, &v3, 0);
     }
     else
     {
@@ -60641,8 +60531,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604DE124(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA4FC4, 0);
-    sub_6047E0EC((_DWORD *)0xCA4FD4, *(_DWORD *)(a1 + 3588), 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA4FC4, 0);
+    MessageQueue_postType3((_DWORD *)0xCA4FD4, *(_DWORD *)(a1 + 3588), 0);
     *(_BYTE *)(a1 + 3597) = 1;
     *(_BYTE *)(a1 + 3598) = 1;
     return 1;
@@ -60689,7 +60579,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604DE1DC(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA4FCC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA4FCC, 0);
     *(_BYTE *)(a1 + 3597) = 1;
     return 1;
   }
@@ -60749,7 +60639,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604DE33C(_DWORD *a1)
   {
     *a1 = 12576864;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -60760,7 +60650,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DE36C(_DWORD *a1)
   {
     *a1 = 12576864;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -61143,7 +61033,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604DEB94(_DWORD *a1)
   {
     *a1 = 12576992;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -61154,7 +61044,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DEBC0(_DWORD *a1)
   {
     *a1 = 12576992;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -61421,7 +61311,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_BYTE *)(v3 + 64) = v4 & 0xFE;
     }
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA508C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA508C, 0);
     sub_60502548(a1 + 3592);
     *(_WORD *)(a1 + 4644) = 0;
     sub_6047EABC((_DWORD *)(a1 + 3632));
@@ -61756,7 +61646,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604DF878(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA51D4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA51D4, 0);
     *(_BYTE *)(a1 + 7165) = 1;
     *(_BYTE *)(a1 + 7166) = 1;
     return 7166;
@@ -61792,7 +61682,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604DF8FC(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA51DC, 1);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA51DC, 1);
   }
 
 /* ============================================================================
@@ -61944,7 +61834,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v31; // [sp+4h] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_60473DE4((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCA5288, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCA5288, 0);
     v3 = *(int ***)(a1 + 3552);
     if ( *(_DWORD *)(a1 + 3548) > 1u )
       v3 += 5;
@@ -61954,7 +61844,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else
       v5 = *(void (**)(void))(v4 + 104);
     v5();
-    sub_60473DE4(v2, 0, (_DWORD *)0xCA5270, 0);
+    ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCA5270, 0);
     v6 = sub_60473B4C(v2);
     sub_6098F1D4(v6);
     sub_6050A660(*(_DWORD *)(a1 + 4 * *(unsigned __int8 *)(a1 + 4075) + 4060));
@@ -61969,25 +61859,25 @@ static inline unsigned int uxtb16(unsigned int x)
       v10 = v9[1];
       v30 = 12321336;
       v31 = v10;
-      sub_6047E0EC(&v30, *(_DWORD *)(a1 + 4044), 0);
+      MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4044), 0);
       v11 = *(_DWORD **)(a1 + 4012);
       (*(void (__fastcall **)(_DWORD *))(*v11 + 12))(v11);
       v12 = v11[1];
       v30 = 12321336;
       v31 = v12;
-      sub_6047E0EC(&v30, *(_DWORD *)(a1 + 4048), 0);
+      MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4048), 0);
       v13 = *(_DWORD **)(a1 + 4016);
       (*(void (__fastcall **)(_DWORD *))(*v13 + 12))(v13);
       v14 = v13[1];
       v30 = 12321336;
       v31 = v14;
-      sub_6047E0EC(&v30, *(_DWORD *)(a1 + 4052), 0);
+      MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4052), 0);
       v15 = *(_DWORD **)(a1 + 4016);
       (*(void (__fastcall **)(_DWORD *))(*v15 + 12))(v15);
       v16 = v15[1];
       v30 = 12321336;
       v31 = v16;
-      sub_6047E0EC(&v30, *(_DWORD *)(a1 + 4056), 0);
+      MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4056), 0);
       v17 = "SE_SYS_COMPLETE_MESSAGE_GREEN";
     }
     else
@@ -62001,13 +61891,13 @@ static inline unsigned int uxtb16(unsigned int x)
         v22 = v18[1];
         v30 = 12321336;
         v31 = v22;
-        sub_6047E0EC(&v30, *(_DWORD *)(a1 + 4028), 0);
+        MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4028), 0);
         v23 = *(_DWORD **)(a1 + 4012);
         (*(void (__fastcall **)(_DWORD *))(*v23 + 12))(v23);
         v24 = v23[1];
         v30 = 12321336;
         v31 = v24;
-        sub_6047E0EC(&v30, *(_DWORD *)(a1 + 4032), 0);
+        MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4032), 0);
       }
       else
       {
@@ -62015,26 +61905,26 @@ static inline unsigned int uxtb16(unsigned int x)
         v19 = v18[1];
         v30 = 12321336;
         v31 = v19;
-        sub_6047E0EC(&v30, *(_DWORD *)(a1 + 4028), 1);
+        MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4028), 1);
         v20 = *(_DWORD **)(a1 + 4012);
         (*(void (__fastcall **)(_DWORD *))(*v20 + 12))(v20);
         v21 = v20[1];
         v30 = 12321336;
         v31 = v21;
-        sub_6047E0EC(&v30, *(_DWORD *)(a1 + 4032), 1);
+        MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4032), 1);
       }
       v25 = *(_DWORD **)(a1 + 4016);
       (*(void (__fastcall **)(_DWORD *))(*v25 + 12))(v25);
       v26 = v25[1];
       v30 = 12321336;
       v31 = v26;
-      sub_6047E0EC(&v30, *(_DWORD *)(a1 + 4036), 0);
+      MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4036), 0);
       v27 = *(_DWORD **)(a1 + 4016);
       (*(void (__fastcall **)(_DWORD *))(*v27 + 12))(v27);
       v28 = v27[1];
       v30 = 12321336;
       v31 = v28;
-      sub_6047E0EC(&v30, *(_DWORD *)(a1 + 4040), 0);
+      MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4040), 0);
       v17 = "SE_SYS_COMPLETE_MESSAGE_YELLOW";
     }
     sub_60478680((int)v17, 9);
@@ -62104,7 +61994,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604DFFC8(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA5278, 1);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA5278, 1);
   }
 
 /* ============================================================================
@@ -62163,7 +62053,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604E008C(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA5280, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA5280, 0);
     *(_BYTE *)(a1 + 4073) = 1;
     return 1;
   }
@@ -62231,7 +62121,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12577048;
     v2 = (struct sead_IDisposer *)(a1 + 10);
     thunk_sub_60909E64(a1 + 902);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return a1;
   }
 
@@ -62246,7 +62136,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12577048;
     v2 = (struct sead_IDisposer *)(a1 + 10);
     thunk_sub_60909E64(a1 + 902);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return operator delete((int)a1);
   }
 
@@ -62771,7 +62661,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604E1050(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA53EC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA53EC, 0);
     *(_BYTE *)(a1 + 5744) = 1;
     return 5744;
   }
@@ -62848,7 +62738,7 @@ static inline unsigned int uxtb16(unsigned int x)
           goto LABEL_11;
         v7 += 2;
       }
-      sub_60473DE4(a1 + 10, 0, (_DWORD *)&unk_60CA5424 + 2 * v2, 1);
+      ArrayOf5_lookupByIndex(a1 + 10, 0, (_DWORD *)&unk_60CA5424 + 2 * v2, 1);
     }
   LABEL_11:
     v10 = v2 == 20;
@@ -63005,7 +62895,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604E1474(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA5414, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA5414, 0);
     *(_BYTE *)(a1 + 5744) = 1;
     *(_BYTE *)(a1 + 5747) = 1;
     return 5747;
@@ -63116,7 +63006,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 1122);
     thunk_sub_60909E64(a1 + 1021);
     thunk_sub_60909E64(a1 + 920);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -63132,7 +63022,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 1122);
     thunk_sub_60909E64(a1 + 1021);
     thunk_sub_60909E64(a1 + 920);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -63632,7 +63522,7 @@ static inline unsigned int uxtb16(unsigned int x)
                     if ( v14 == MEMORY[0xB3BA34] )
                       return sub_6047459C(v7, 0);
                   }
-                  sub_60473DE4(v7, 0, v9, 1);
+                  ArrayOf5_lookupByIndex(v7, 0, v9, 1);
                   return sub_6047455C(v7, 0);
                 }
               }
@@ -63730,7 +63620,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v13 == MEMORY[0xB3BA34] )
             return result;
         }
-        return sub_60473DE4(v6, 0, v8, a3);
+        return ArrayOf5_lookupByIndex(v6, 0, v8, a3);
       }
     }
     return result;
@@ -63970,7 +63860,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604E2CBC(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA56AC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA56AC, 0);
     *(_BYTE *)(a1 + 20521) = 1;
     return 20521;
   }
@@ -64070,7 +63960,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604E2E0C(int a1)
   {
     *(_BYTE *)(MEMORY[0xCC6D78] + 109055) = 1;
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA56B4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA56B4, 0);
     *(_BYTE *)(a1 + 20521) = 1;
     return 20521;
   }
@@ -64115,10 +64005,10 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v1; // r5
   
     v1 = (_DWORD *)(a1 + 40);
-    sub_60473DE4((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCA56A4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCA56A4, 0);
     sub_604745EC((int)v1, 1u, 0);
     sub_6047455C((int)v1, 1u);
-    return sub_60473DE4(v1, 0, (_DWORD *)0xCA56BC, 0);
+    return ArrayOf5_lookupByIndex(v1, 0, (_DWORD *)0xCA56BC, 0);
   }
 
 /* ============================================================================
@@ -64449,7 +64339,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604E34D0(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA56C4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA56C4, 0);
     return sub_60478680((int)"SE_SYS_DIALOGUE_OUT_AUTO", 9);
   }
 
@@ -64534,7 +64424,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604BA75C(a1 + 2752);
     sub_604BA75C(a1 + 1827);
     sub_604BA75C(a1 + 902);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -64554,7 +64444,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604BA75C(a1 + 2752);
     sub_604BA75C(a1 + 1827);
     sub_604BA75C(a1 + 902);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -65175,7 +65065,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = *(_DWORD *)(v2 + 176);
         v5[0] = 12321336;
         v5[1] = v3;
-        sub_6047E0EC(v5, v2, 1);
+        MessageQueue_postType3(v5, v2, 1);
       }
     }
     sub_604E7960(a1, 1);
@@ -65554,7 +65444,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = *(_DWORD *)(v2 + 176);
         v5[0] = 12321336;
         v5[1] = v3;
-        sub_6047E0EC(v5, v2, 1);
+        MessageQueue_postType3(v5, v2, 1);
       }
     }
     return sub_604E7960(a1, 1);
@@ -65988,7 +65878,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = 11480456;
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
       v4 = 11480460;
-    v5 = (int *)sub_60008598(MEMORY[0xC7B400], *(_DWORD *)v4);
+    v5 = (int *)ActorMgr_findByType(MEMORY[0xC7B400], *(_DWORD *)v4);
     if ( v5 )
     {
       v6 = *v5;
@@ -66022,7 +65912,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v12 = 11480456;
             if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
               v12 = 11480460;
-            v11 = sub_60008598(MEMORY[0xC7B400], *(_DWORD *)v12);
+            v11 = ActorMgr_findByType(MEMORY[0xC7B400], *(_DWORD *)v12);
             if ( v11 )
             {
               v13 = *(_DWORD *)v11;
@@ -67570,7 +67460,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v7 = *(_DWORD *)(v6 + 176);
         v12 = 12321336;
         v13 = v7;
-        return sub_6047E0EC(&v12, v6, 1);
+        return MessageQueue_postType3(&v12, v6, 1);
       }
     }
     return result;
@@ -67749,16 +67639,6 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604E8054
- * RVA 0x004e8054   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_604E8054(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
-  }
-
-/* ============================================================================
  * sub_604E8058
  * RVA 0x004e8058   size 0x10   xrefs 0
  * ============================================================================ */
@@ -67766,7 +67646,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -67964,7 +67844,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5C9C = (int)"GameScene_Coin_00";
       _cxa_guard_release_0(&unk_60CA5C90);
     }
-    return sub_6047E0EC(&dword_60CA5C98, *(_DWORD *)(*(_DWORD *)(a1 + 12) + 4 * *(_DWORD *)(a1 + 264)), 1);
+    return MessageQueue_postType3(&dword_60CA5C98, *(_DWORD *)(*(_DWORD *)(a1 + 12) + 4 * *(_DWORD *)(a1 + 264)), 1);
   }
 
 /* ============================================================================
@@ -68344,7 +68224,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(MEMORY[0xC9A684] + 17) != 42 )
         goto LABEL_53;
       v13 = 13087744;
-      v14 = (int *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF32F0]);
+      v14 = (int *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF32F0]);
       v15 = *(int **)(MEMORY[0xC7B400] + 27180);
       v16 = v14 == v15;
       if ( v14 != v15 )
@@ -68460,7 +68340,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v22; // [sp+24h] [bp-4h]
   
     v3 = 13087744;
-    result = sub_60008598(MEMORY[0xC7B400], a2);
+    result = ActorMgr_findByType(MEMORY[0xC7B400], a2);
     v5 = *(_DWORD *)(MEMORY[0xC7B400] + 27180);
     v6 = result == v5;
     if ( result != v5 )
@@ -68785,7 +68665,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604E97D8(int a1)
   {
-    sub_60473DE4(*(_DWORD **)(a1 + 4), 2u, (_DWORD *)0xCA5CEC, 0);
+    ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 2u, (_DWORD *)0xCA5CEC, 0);
     return SE_SYS_CH_TARGET_MEDAL_ref((_DWORD *)a1, *(_DWORD *)(a1 + 544));
   }
 
@@ -68911,7 +68791,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604E9B4C(int a1)
   {
-    sub_60473DE4(*(_DWORD **)(a1 + 4), 5u, (_DWORD *)0xCA5D04, 0);
+    ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 5u, (_DWORD *)0xCA5D04, 0);
     return SE_SYS_CH_TARGET_MEDAL_ref((_DWORD *)a1, *(_DWORD *)(a1 + 4552));
   }
 
@@ -69635,12 +69515,12 @@ static inline unsigned int uxtb16(unsigned int x)
       v11 = (_DWORD *)a1[1];
       if ( v5 == 3 )
       {
-        result = sub_60473DE4(v11, 0, (_DWORD *)0xCA5CDC, 0);
+        result = ArrayOf5_lookupByIndex(v11, 0, (_DWORD *)0xCA5CDC, 0);
         *v10 = 3;
       }
       else
       {
-        sub_60473DE4(v11, 0, (_DWORD *)&unk_60CA5E90 + 2 * v5 + 6, 0);
+        ArrayOf5_lookupByIndex(v11, 0, (_DWORD *)&unk_60CA5E90 + 2 * v5 + 6, 0);
         CurrentState = StateMgr::getCurrentState((int)(a1 + 1134));
         v13 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         result = (*(int (**)(void))(MEMORY[0xCA5D24] + 8))();
@@ -69842,7 +69722,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v4[11]; // [sp+Ch] [bp-2Ch] BYREF
   
     v1 = a1;
-    sub_60473DE4(a1 + 2702, 0, &dword_60CA60F0, 0);
+    ArrayOf5_lookupByIndex(a1 + 2702, 0, &dword_60CA60F0, 0);
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA60D8 + 3))(&off_60CA60D8);
     v2 = v1[5934];
     v1 += 5934;
@@ -69915,7 +69795,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // r0
     int v12; // r0
   
-    sub_60473DE4(a1 + 2702, 0, &dword_60CA60E8, 0);
+    ArrayOf5_lookupByIndex(a1 + 2702, 0, &dword_60CA60E8, 0);
     v2 = a1 + 5934;
     v3 = a1[5936];
     v4 = v3 < 1;
@@ -70164,7 +70044,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     sub_6050A4C4(a1 + 16496);
     sub_605021B0(a1 + 14396);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10808));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10808));
     sub_604ED418((struct sead_IDisposer *)(a1 + 7212));
     sub_604ED418((struct sead_IDisposer *)(a1 + 3624));
     sub_604ED418((struct sead_IDisposer *)(a1 + 36));
@@ -71145,7 +71025,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( a2 >= 2 )
       a2 = 0;
-    sub_60473DE4((_DWORD *)a1, 0, (_DWORD *)&unk_60CA6160 + 2 * a2 + 5, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)a1, 0, (_DWORD *)&unk_60CA6160 + 2 * a2 + 5, 0);
     *(_BYTE *)(a1 + 3584) = 1;
     return 1;
   }
@@ -71170,7 +71050,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v6; // r1
   
     v4 = 1;
-    result = sub_60473DE4((_DWORD *)a1, 1u, &dword_60BFECBC, 0);
+    result = ArrayOf5_lookupByIndex((_DWORD *)a1, 1u, &dword_60BFECBC, 0);
     if ( a2 == 1 )
     {
       v6 = *(_DWORD **)(a1 + 3512);
@@ -71266,7 +71146,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604ED9B4(_DWORD *a1)
   {
-    return sub_60473DE4(a1, 0, &dword_60BFECE0, 0);
+    return ArrayOf5_lookupByIndex(a1, 0, &dword_60BFECE0, 0);
   }
 
 /* ============================================================================
@@ -71289,7 +71169,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604EDA20(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA61A8, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA61A8, 0);
     return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
   }
 
@@ -71313,7 +71193,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall SE_SYS_NEW_OSHIRASE_ref(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA61A8, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA61A8, 0);
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_NEW_OSHIRASE", 0);
     sub_604EE4B0(a1);
     SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 10);
@@ -71343,7 +71223,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     unsigned int result; // r0
   
-    sub_60473DE4((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCA61B0, 1);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCA61B0, 1);
     result = *(_DWORD *)(a1 + 3652) & 0xFFFFFFEB | 4;
     *(_DWORD *)(a1 + 3652) = result;
     return result;
@@ -71410,7 +71290,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604EDC64(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA61B8, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA61B8, 0);
   }
 
 /* ============================================================================
@@ -71484,7 +71364,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 10832) = 0;
     thunk_sub_60909E64((_DWORD *)(a1 + 10836));
     sub_6050A4C4(a1 + 3616);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return a1;
   }
 
@@ -71501,7 +71381,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 10832) = 0;
     thunk_sub_60909E64((_DWORD *)(a1 + 10836));
     sub_6050A4C4(a1 + 3616);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return operator delete(a1);
   }
 
@@ -71702,8 +71582,8 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     v4 = (_DWORD *)((char *)&unk_60CA62A0 + 8 * (*(_DWORD *)(sub_60834644(v3) + 492) == 4) + 28);
-    sub_6047E0EC(v4, *(_DWORD *)(a1 + 3608), 0);
-    return sub_6047E0EC(v4, *(_DWORD *)(a1 + 3612), 0);
+    MessageQueue_postType3(v4, *(_DWORD *)(a1 + 3608), 0);
+    return MessageQueue_postType3(v4, *(_DWORD *)(a1 + 3612), 0);
   }
 
 /* ============================================================================
@@ -71914,9 +71794,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r0
   
     v2 = (_DWORD *)(a1 + 42520);
-    sub_60473DE4((_DWORD *)(a1 + 42520), 0, (_DWORD *)0xCA62E4, 0);
-    sub_60473DE4(v2, 1u, (_DWORD *)0xCA6304, 0);
-    sub_60473DE4((_DWORD *)(a1 + 4), 0, (_DWORD *)0xCA62E4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 42520), 0, (_DWORD *)0xCA62E4, 0);
+    ArrayOf5_lookupByIndex(v2, 1u, (_DWORD *)0xCA6304, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 4), 0, (_DWORD *)0xCA62E4, 0);
     sub_604F293C(a1);
     v3 = sub_60473B4C((int)v2);
     sub_6098F1D4(v3);
@@ -72563,7 +72443,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = v4;
     }
     ((void (__fastcall *)(int, unsigned int *, int, _DWORD))sub_6047E13C)(3, &v8, v2, 0);
-    sub_60473DE4((_DWORD *)(a1 + 42520), 0, (_DWORD *)0xCA62EC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 42520), 0, (_DWORD *)0xCA62EC, 0);
     v5 = a1 + 46088;
     v6 = (int *)MEMORY[0xCC6D78];
     if ( *(int *)(MEMORY[0xCC6D78] + 98488) <= 14 )
@@ -72660,7 +72540,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604EFBE0(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 42520), 0, (_DWORD *)0xCA62F4, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 42520), 0, (_DWORD *)0xCA62F4, 0);
   }
 
 /* ============================================================================
@@ -72816,10 +72696,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502548(a1 + 46088);
     *(_WORD *)(a1 + 47140) = 0;
     sub_6047EABC((_DWORD *)(a1 + 46128));
-    sub_60473DE4((_DWORD *)(a1 + 42520), 0, (_DWORD *)0xCA62FC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 42520), 0, (_DWORD *)0xCA62FC, 0);
     if ( !*(_BYTE *)(a1 + 74479) )
       sub_604741D8((_DWORD *)(a1 + 42520), 1u, (_DWORD *)0xCA6304, 0);
-    sub_60473DE4((_DWORD *)(a1 + 4), 0, (_DWORD *)0xCA62FC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 4), 0, (_DWORD *)0xCA62FC, 0);
     *(_BYTE *)(a1 + 74477) = 1;
     JUMPOUT(0x608169B8);
   }
@@ -73172,7 +73052,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60026BFC(a1 + 12147);
     thunk_sub_60909E64(a1 + 12046);
     sub_605021B0(a1 + 11522);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10630));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10630));
     sub_6047643C((struct sead_IDisposer *)(a1 + 9736));
     sub_6047643C((struct sead_IDisposer *)(a1 + 8851));
     sub_6047643C((struct sead_IDisposer *)(a1 + 7966));
@@ -74215,7 +74095,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 48896) = SE_PLY_ref_2_helper_helper_1E2F00(MEMORY[0xC8B13C], a2);
         *(_DWORD *)(a1 + 48900) = sub_600243A0(*(_DWORD *)(v9 + 56628));
         sub_60814A1C(a1 + 48588, 54, 0);
-        v10 = sub_601CF9C0(MEMORY[0xC8AEF0]);
+        v10 = ActorMgr_findAndInstantiate(MEMORY[0xC8AEF0]);
         return sub_601D9B20(v10);
       }
       v11 = *(_DWORD *)(result + 58668);
@@ -74482,7 +74362,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = 0;
     if ( (unsigned int)(a2 + 1) >= 0xC )
       v8 = 0;
-    sub_60473DE4((_DWORD *)(a1 + 3540 * v8 + 4), 0, v7, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3540 * v8 + 4), 0, v7, 0);
     v10 = 0;
     v11 = a1 + 74360;
     if ( (unsigned int)(2 * a2) < 0x14 )
@@ -74795,8 +74675,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604F3F60(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67A4, 0);
-    sub_60473DE4((_DWORD *)(a1 + 3596), 0, (_DWORD *)0xCA67EC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67A4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3596), 0, (_DWORD *)0xCA67EC, 0);
     *(_BYTE *)(a1 + 7142) = 0;
     *(_BYTE *)(a1 + 7142) = *(_BYTE *)(MEMORY[0xCC6D78] + 20) ^ 1;
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
@@ -74823,7 +74703,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604F404C(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67AC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67AC, 0);
     *(_DWORD *)(a1 + 9640) = 40;
     return 9640;
   }
@@ -74894,7 +74774,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604F4148(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67B4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67B4, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_OUT_AUTO", 0);
   }
 
@@ -74928,8 +74808,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604F41D0(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67BC, 0);
-    sub_60473DE4((_DWORD *)(a1 + 3596), 0, (_DWORD *)0xCA67EC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67BC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3596), 0, (_DWORD *)0xCA67EC, 0);
     *(_BYTE *)(a1 + 7142) = 0;
     *(_BYTE *)(a1 + 7142) = *(_BYTE *)(MEMORY[0xCC6D78] + 20) ^ 1;
     SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 4);
@@ -75008,7 +74888,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604F4378(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67C4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67C4, 0);
     *(_DWORD *)(a1 + 9640) = 30;
     return 9640;
   }
@@ -75113,7 +74993,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604F455C(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67CC, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67CC, 0);
   }
 
 /* ============================================================================
@@ -75153,7 +75033,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r1
     int result; // r0
   
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67CC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67CC, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 108))(**(_DWORD **)(a1 + 3552));
     *(_BYTE *)(a1 + 8591) = 0;
     *(_BYTE *)(a1 + 8588) = 1;
@@ -75258,7 +75138,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         else
         {
-          sub_60473DE4((_DWORD *)v15, 1u, (_DWORD *)0xCA6ABC, 0);
+          ArrayOf5_lookupByIndex((_DWORD *)v15, 1u, (_DWORD *)0xCA6ABC, 0);
           *(_BYTE *)(v15 + 3596) = 1;
           sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
         }
@@ -75282,7 +75162,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         else
         {
-          sub_60473DE4(*(_DWORD **)(v9 + 4 * v10), 1u, (_DWORD *)0xCA6ABC, 0);
+          ArrayOf5_lookupByIndex(*(_DWORD **)(v9 + 4 * v10), 1u, (_DWORD *)0xCA6ABC, 0);
           *(_BYTE *)(v11 + 3596) = 1;
           sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
         }
@@ -75321,7 +75201,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         else
         {
-          sub_60473DE4(*(_DWORD **)(*(_DWORD *)(a1 + 9628) + 4 * v6), 1u, (_DWORD *)0xCA6AB4, 0);
+          ArrayOf5_lookupByIndex(*(_DWORD **)(*(_DWORD *)(a1 + 9628) + 4 * v6), 1u, (_DWORD *)0xCA6AB4, 0);
           *(_BYTE *)(v31 + 3596) = 1;
           sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
         }
@@ -75345,7 +75225,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         else
         {
-          sub_60473DE4(*(_DWORD **)(v25 + 4 * v26), 1u, (_DWORD *)0xCA6AB4, 0);
+          ArrayOf5_lookupByIndex(*(_DWORD **)(v25 + 4 * v26), 1u, (_DWORD *)0xCA6AB4, 0);
           *(_BYTE *)(v27 + 3596) = 1;
           sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
         }
@@ -75539,7 +75419,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604F4E20(int a1)
   {
     sub_60502548(a1 + 7548);
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67D4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67D4, 0);
     sub_604F7AB4(*(_DWORD **)(a1 + 9636), *(_DWORD *)(a1 + 9628), *(_DWORD **)(a1 + 9632));
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
   }
@@ -75689,7 +75569,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_BYTE *)(v3 + 64) = v4;
     v5 = 0;
-    sub_60473DE4(a1 + 10, 0, (_DWORD *)0xCA67DC, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 0, (_DWORD *)0xCA67DC, 0);
     v6 = *v2;
     v7 = *v1;
     v8 = 0;
@@ -75714,7 +75594,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(v9 + 3592) = v12;
         if ( v12 != 10 )
         {
-          sub_60473DE4((_DWORD *)v9, 0, (_DWORD *)(8 * v12 + 13265612), 0);
+          ArrayOf5_lookupByIndex((_DWORD *)v9, 0, (_DWORD *)(8 * v12 + 13265612), 0);
           v13 = 1;
         }
         *(_BYTE *)(v9 + 3580) = v13;
@@ -75933,7 +75813,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605021B0(a1 + 7548);
     thunk_sub_60909E64(a1 + 7144);
     sub_6047643C((struct sead_IDisposer *)(a1 + 3596));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -75963,7 +75843,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605021B0(a1 + 7548);
     thunk_sub_60909E64((_DWORD *)(a1 + 7144));
     sub_6047643C((struct sead_IDisposer *)(a1 + 3596));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 40));
     return operator delete(a1);
   }
 
@@ -76505,7 +76385,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(v7 + 3592) = v10;
         if ( v8 != 15 )
         {
-          sub_60473DE4((_DWORD *)v7, 0, (_DWORD *)(8 * v10 + 13265612), 0);
+          ArrayOf5_lookupByIndex((_DWORD *)v7, 0, (_DWORD *)(8 * v10 + 13265612), 0);
           v9 = 1;
         }
         *(_BYTE *)(v7 + 3580) = v9;
@@ -76725,7 +76605,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(v9 + 3592) = v12;
       if ( v12 != 10 )
       {
-        sub_60473DE4((_DWORD *)v9, 0, (_DWORD *)(8 * v12 + 13265612), 0);
+        ArrayOf5_lookupByIndex((_DWORD *)v9, 0, (_DWORD *)(8 * v12 + 13265612), 0);
         v11 = *(_BYTE *)(v9 + 3597) ^ 1;
       }
       *(_BYTE *)(v9 + 3580) = v11;
@@ -76780,7 +76660,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(v7 + 3592) = v8;
         if ( v8 != 10 )
         {
-          sub_60473DE4((_DWORD *)v7, 0, (_DWORD *)(8 * v8 + 13265612), 0);
+          ArrayOf5_lookupByIndex((_DWORD *)v7, 0, (_DWORD *)(8 * v8 + 13265612), 0);
           v9 = *(_BYTE *)(v7 + 3597) ^ 1;
         }
         v10 = &a1[i];
@@ -76825,7 +76705,7 @@ static inline unsigned int uxtb16(unsigned int x)
           _cxa_guard_release_0(&unk_60CA6C7C);
         }
       }
-      return sub_6047E0EC(&dword_60CA6CAC, *(_DWORD *)(a1 + 3588), 0);
+      return MessageQueue_postType3(&dword_60CA6CAC, *(_DWORD *)(a1 + 3588), 0);
     }
     else if ( a2 >= 1 )
     {
@@ -76835,7 +76715,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CA6CB8 = (int)"ItemStock_DelItem_00";
         _cxa_guard_release_0(&unk_60CA6C80);
       }
-      return sub_6047E0EC(&dword_60CA6CB4, *(_DWORD *)(a1 + 3588), 1);
+      return MessageQueue_postType3(&dword_60CA6CB4, *(_DWORD *)(a1 + 3588), 1);
     }
     return result;
   }
@@ -77427,7 +77307,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60476388((_DWORD *)a1, a2, a3);
     v19 = 13;
     sub_60474848(a1, (_DWORD *)0xCA6ACC, &v19);
-    sub_60473DE4((_DWORD *)a1, 2u, (_DWORD *)0xCA6AC4, 1);
+    ArrayOf5_lookupByIndex((_DWORD *)a1, 2u, (_DWORD *)0xCA6AC4, 1);
     v6 = ArrayOf20_getEntryPtr(a1, 2);
     v7 = (struct sead_Random *)MEMORY[0xCCF4E4];
     v8 = sub_608502E4(v6);
@@ -78231,7 +78111,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v2 )
       v3 = 0;
     sub_6050A660(*(_DWORD *)(a1 + 4 * v3 + 3668));
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA6EA4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA6EA4, 0);
     *(_BYTE *)(a1 + 3688) = 0;
     *(_BYTE *)(a1 + 3685) = 1;
     v4 = *(_DWORD **)(a1 + 4096);
@@ -78312,7 +78192,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604F98D8(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA6EC4, 1);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA6EC4, 1);
   }
 
 /* ============================================================================
@@ -78537,7 +78417,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA6EBC, 0);
+    result = ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA6EBC, 0);
     *(_BYTE *)(a1 + 3688) = 0;
     return result;
   }
@@ -78630,7 +78510,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 0;
     *(_DWORD *)(*(_DWORD *)(a1 + 4 * v3 + 3668) + 36) = *(_DWORD *)(*(_DWORD *)(a1 + 4 * v3 + 3668) + 36) & 0xFFFFFF5F
                                                       | 0x20;
-    sub_60473DE4((_DWORD *)(a1 + 40), 2u, (_DWORD *)0xCA6EAC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 2u, (_DWORD *)0xCA6EAC, 0);
     *(_BYTE *)(a1 + 3689) = 0;
     *(_BYTE *)(a1 + 3686) = 1;
     return 1;
@@ -78670,7 +78550,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // [sp+Ch] [bp-4h]
   
     v1 = a1;
-    sub_60473DE4(a1 + 10, 2u, (_DWORD *)0xCA6EB4, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 2u, (_DWORD *)0xCA6EB4, 0);
     v3 = (_DWORD **)(v1 + 1024);
     v2 = (_DWORD *)v1[1024];
     (*(void (__fastcall **)(_DWORD *))(*v2 + 12))(v2);
@@ -78784,7 +78664,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3684) = 0;
     thunk_sub_60909E64(a1 + 3692);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return a1;
   }
 
@@ -78800,7 +78680,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3684) = 0;
     thunk_sub_60909E64((_DWORD *)(a1 + 3692));
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return operator delete(a1);
   }
 
@@ -79101,7 +78981,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = a1 + 40;
     *(_BYTE *)(a1 + 3687) = 0;
     *(_DWORD *)(a1 + 4096) = a2;
-    sub_60473DE4((_DWORD *)(a1 + 40), 3u, (_DWORD *)0xCA6ECC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 3u, (_DWORD *)0xCA6ECC, 0);
     v6 = *(int ***)(a1 + 3552);
     if ( *(_DWORD *)(a1 + 3548) > 3u )
       v6 += 15;
@@ -79362,7 +79242,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int *v31; // [sp+Ch] [bp-8h]
   
     v2 = (_DWORD *)(a1 + 31900);
-    sub_60473DE4((_DWORD *)(a1 + 31900), 1u, (_DWORD *)0xCA70B8, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 31900), 1u, (_DWORD *)0xCA70B8, 0);
     v3 = ArrayOf20_getEntryPtr((int)v2, 1u);
     v4 = (int *)v3;
     if ( v3 )
@@ -79398,7 +79278,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
       }
     }
-    sub_60473DE4(v2, 0, (_DWORD *)0xCA70A8, 0);
+    ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCA70A8, 0);
     v10 = ArrayOf20_getEntryPtr((int)v2, 0);
     if ( v10 )
       (*(void (__fastcall **)(int))(*(_DWORD *)v10 + 104))(v10);
@@ -79469,7 +79349,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       memset((void *)(a1 + 40014), 0, 0x36u);
     }
-    sub_6047E0EC((_DWORD *)0xCA70D0, *(_DWORD *)(a1 + 37756), 2);
+    MessageQueue_postType3((_DWORD *)0xCA70D0, *(_DWORD *)(a1 + 37756), 2);
     sub_60502694(a1 + 35508);
     *(_BYTE *)(a1 + 36549) = 1;
     return 36549;
@@ -79839,7 +79719,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(a1 + 40100) )
     {
       v3 = 0;
-      sub_60473DE4(v2, 0, (_DWORD *)0xCA70A8, 0);
+      ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCA70A8, 0);
       v4 = (_DWORD *)(a1 + 40080);
       sub_604FE050(a1, *(_DWORD *)(a1 + 40080));
       v5 = MEMORY[0xC99E1C];
@@ -79890,7 +79770,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else
     {
       v16 = 0;
-      sub_60473DE4(v2, 0, (_DWORD *)0xCA70B0, 0);
+      ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCA70B0, 0);
       v17 = (_DWORD *)(a1 + 40080);
       sub_604FE050(a1, *(_DWORD *)(a1 + 40080) - 1);
       v18 = MEMORY[0xC99E1C];
@@ -80302,7 +80182,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 9543);
     thunk_sub_60909E64(a1 + 9442);
     sub_605021B0(a1 + 8877);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 7975));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 7975));
     sub_6047643C((struct sead_IDisposer *)(a1 + 7090));
     sub_6047643C((struct sead_IDisposer *)(a1 + 6205));
     sub_6047643C((struct sead_IDisposer *)(a1 + 5320));
@@ -81517,7 +81397,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604FE64C(_DWORD *a1)
   {
     *a1 = 12578732;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -81528,7 +81408,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604FE678(_DWORD *a1)
   {
     *a1 = 12578732;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -82591,7 +82471,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v7; // r4
   
     v2 = a1 + 40;
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA74B8, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA74B8, 0);
     v3 = sub_60473B4C(v2);
     sub_6098F1D4(v3);
     *(_BYTE *)(a1 + 7749) = 1;
@@ -82789,7 +82669,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605005B4(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA74C0, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA74C0, 0);
     *(_BYTE *)(a1 + 7750) = 1;
     return 7750;
   }
@@ -82889,7 +82769,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 1526);
     thunk_sub_60909E64(a1 + 1425);
     sub_605021B0(a1 + 897);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -82906,7 +82786,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 1526);
     thunk_sub_60909E64(a1 + 1425);
     sub_605021B0(a1 + 897);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -83156,7 +83036,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = dword_60B03708[v8];
       if ( v9 >= 4 )
         v9 = 0;
-      return sub_6047E0EC((_DWORD *)&unk_60CA7590 + 2 * v8 + 25, *(_DWORD *)(a1 + 4 * v9 + 5672), 0);
+      return MessageQueue_postType3((_DWORD *)&unk_60CA7590 + 2 * v8 + 25, *(_DWORD *)(a1 + 4 * v9 + 5672), 0);
     }
     return result;
   }
@@ -83203,7 +83083,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = dword_60B0371C[v8];
       if ( v9 >= 4 )
         v9 = 0;
-      return sub_6047E0EC(&dword_60CA7610[2 * v8], *(_DWORD *)(a1 + 4 * v9 + 5672), 0);
+      return MessageQueue_postType3(&dword_60CA7610[2 * v8], *(_DWORD *)(a1 + 4 * v9 + 5672), 0);
     }
     return result;
   }
@@ -86358,7 +86238,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v15 = sub_605057D8(*((_DWORD *)&unk_60CA78E0 + v14 + 3));
     v24 = 12321336;
     v25 = v15;
-    sub_60473DE4(a1, 1u, &v24, 0);
+    ArrayOf5_lookupByIndex(a1, 1u, &v24, 0);
     v16 = (_DWORD *)a1[878];
     if ( a1[877] > 1u )
       v16 += 5;
@@ -86392,7 +86272,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v21 = sub_605057D8(6);
     v24 = 12321336;
     v25 = v21;
-    sub_60473DE4(a1, 2u, &v24, 0);
+    ArrayOf5_lookupByIndex(a1, 2u, &v24, 0);
     sub_6047455C(a1, 2);
     return sub_6047459C(a1, 2);
   }
@@ -86622,7 +86502,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v9 = 12321336;
       v10 = v7;
-      sub_60473DE4((_DWORD *)a1, 0, &v9, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)a1, 0, &v9, 0);
       result = (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3512) + 104))(**(_DWORD **)(a1 + 3512));
       if ( v3 < 0.0 )
         return result;
@@ -86666,7 +86546,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3904) = 0;
     v3[0] = 12321336;
     v3[1] = sub_605057D8(0);
-    sub_60473DE4((_DWORD *)a1, 0, v3, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)a1, 0, v3, 0);
     return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3512) + 104))(**(_DWORD **)(a1 + 3512));
   }
 
@@ -86695,7 +86575,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3904) = 1;
     v3[0] = 12321336;
     v3[1] = sub_605057D8(1);
-    sub_60473DE4((_DWORD *)a1, 0, v3, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)a1, 0, v3, 0);
     return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3512) + 104))(**(_DWORD **)(a1 + 3512));
   }
 
@@ -86757,7 +86637,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3904) = 0;
     v3[0] = 12321336;
     v3[1] = sub_605057D8(0);
-    return sub_60473DE4((_DWORD *)a1, 0, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)a1, 0, v3, 0);
   }
 
 /* ============================================================================
@@ -86771,7 +86651,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3904) = 1;
     v3[0] = 12321336;
     v3[1] = sub_605057D8(1);
-    return sub_60473DE4((_DWORD *)a1, 0, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)a1, 0, v3, 0);
   }
 
 /* ============================================================================
@@ -86785,7 +86665,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3904) = 1;
     v3[0] = 12321336;
     v3[1] = sub_605057D8(1);
-    sub_60473DE4((_DWORD *)a1, 0, v3, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)a1, 0, v3, 0);
     return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3512) + 108))(**(_DWORD **)(a1 + 3512));
   }
 
@@ -86830,7 +86710,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = 0;
         v19 = 12321336;
         v20 = sub_605057D8(1);
-        sub_60473DE4((_DWORD *)a1, 0, &v19, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)a1, 0, &v19, 0);
         v7 = 0;
         if ( a2 < 0x43 )
           v7 = a2;
@@ -86860,7 +86740,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(a1 + 3904) = 0;
         v19 = 12321336;
         v20 = sub_605057D8(0);
-        sub_60473DE4((_DWORD *)a1, 0, &v19, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)a1, 0, &v19, 0);
         v8 = a1 + 3636;
         v14 = a2 - 1;
         if ( a2 - 1 >= 0x43 )
@@ -87353,7 +87233,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = sub_605067A0(1);
     v17 = 12321336;
     v18 = v9;
-    sub_60473DE4(a1, 1u, &v17, 0);
+    ArrayOf5_lookupByIndex(a1, 1u, &v17, 0);
     v10 = (_DWORD *)a1[878];
     if ( a1[877] > 1u )
       v10 += 5;
@@ -87361,7 +87241,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = sub_605067A0(2);
     v17 = 12321336;
     v18 = v11;
-    sub_60473DE4(a1, 2u, &v17, 0);
+    ArrayOf5_lookupByIndex(a1, 2u, &v17, 0);
     v12 = (_DWORD *)a1[878];
     if ( a1[877] > 2u )
       v12 += 10;
@@ -87369,7 +87249,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = sub_605067A0(0);
     v17 = 12321336;
     v18 = v13;
-    sub_60473DE4(a1, 0, &v17, 0);
+    ArrayOf5_lookupByIndex(a1, 0, &v17, 0);
     (*(void (__fastcall **)(_DWORD))(**(_DWORD **)a1[878] + 104))(*(_DWORD *)a1[878]);
     return PaChallengeMenuBtn_CourseName_00_ref(a1, a5);
   }
@@ -87499,11 +87379,11 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[905] = *((_DWORD *)&unk_60CA7A10 + v6 + 2);
     v21 = 12321336;
     v22 = sub_605067A0(2);
-    sub_60473DE4(a1, 2u, &v21, 0);
+    ArrayOf5_lookupByIndex(a1, 2u, &v21, 0);
     v7 = sub_605067A0(1);
     v21 = 12321336;
     v22 = v7;
-    sub_60473DE4(a1, 1u, &v21, 0);
+    ArrayOf5_lookupByIndex(a1, 1u, &v21, 0);
     v8 = a1[905];
     if ( (unsigned int)(v8 - 2) >= 3 )
     {
@@ -87542,7 +87422,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = sub_605067A0(3);
     v21 = 12321336;
     v22 = v14;
-    sub_60473DE4(a1, 3u, &v21, 1);
+    ArrayOf5_lookupByIndex(a1, 3u, &v21, 1);
     sub_604745C0(a1, 3);
     sead::Random::getU32(MEMORY[0xCCF4E4]);
     sub_6047455C(a1, 3);
@@ -87550,7 +87430,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v16 = sub_605067A0(0);
     v21 = 12321336;
     v22 = v16;
-    sub_60473DE4(a1, 0, &v21, 0);
+    ArrayOf5_lookupByIndex(a1, 0, &v21, 0);
     sub_6047455C(a1, 0);
     sub_6047459C(a1, 0);
     v21 = 0;
@@ -87565,7 +87445,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18 = *(&v21 + v17);
     if ( v18 < 4 )
       v15 = v18;
-    return sub_6047E0EC(v20, a1[v15 + 900], 1);
+    return MessageQueue_postType3(v20, a1[v15 + 900], 1);
   }
 
 /* ============================================================================
@@ -89102,14 +88982,14 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7B44);
     }
-    sub_6047E0EC(&dword_60CA7BB0, a1[920], 0);
-    sub_6047E0EC(&dword_60CA7BB8, a1[921], 0);
-    sub_6047E0EC(&dword_60CA7BC0, a1[922], 0);
-    sub_6047E0EC(&dword_60CA7BC8, a1[923], 0);
-    sub_6047E0EC(&dword_60CA7BD0, a1[924], 0);
-    sub_6047E0EC(&dword_60CA7BD8, a1[925], 0);
-    sub_6047E0EC(&dword_60CA7BE0, a1[926], 0);
-    sub_6047E0EC(&dword_60CA7BE8, a1[927], 0);
+    MessageQueue_postType3(&dword_60CA7BB0, a1[920], 0);
+    MessageQueue_postType3(&dword_60CA7BB8, a1[921], 0);
+    MessageQueue_postType3(&dword_60CA7BC0, a1[922], 0);
+    MessageQueue_postType3(&dword_60CA7BC8, a1[923], 0);
+    MessageQueue_postType3(&dword_60CA7BD0, a1[924], 0);
+    MessageQueue_postType3(&dword_60CA7BD8, a1[925], 0);
+    MessageQueue_postType3(&dword_60CA7BE0, a1[926], 0);
+    MessageQueue_postType3(&dword_60CA7BE8, a1[927], 0);
     if ( ((unsigned int)&unk_60CA7B48 & ~(1615891028 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA7B48) )
     {
       dword_60CA7BF0 = 12321336;
@@ -89233,7 +89113,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (result & 1) != 0 )
       {
         *(_BYTE *)(a1 + 3754) = 0;
-        return sub_60473DE4((_DWORD *)(a1 + 40), 5u, &off_60CA7CA8, 1);
+        return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 5u, &off_60CA7CA8, 1);
       }
     }
     return result;
@@ -89256,7 +89136,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3751) = 1;
     if ( *(_DWORD *)(a1 + 3732) == 1 )
     {
-      sub_60473DE4((_DWORD *)(a1 + 40), 4u, &dword_60CA7C60, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 4u, &dword_60CA7C60, 0);
       result = *(_DWORD *)(a1 + 3736);
     }
     if ( result == 1 )
@@ -89400,7 +89280,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1[932];
     if ( v2 >= 0xA )
       v2 = 0;
-    sub_6047E0EC(v7, a1[v2 + 920], 1);
+    MessageQueue_postType3(v7, a1[v2 + 920], 1);
     sub_605093C8(a1);
     result = ArrayOf20_insertEntry(a1 + 10, 4u, &dword_60CA7C60, (int)&dword_60CA7CD0, 0);
     if ( result == 1 )
@@ -89585,7 +89465,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605097CC(_DWORD *a1)
   {
-    sub_60473DE4(a1 + 10, 2u, &dword_60CA7C90, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 2u, &dword_60CA7C90, 0);
     *(_BYTE *)(a1[930] + 65) = -1;
     sub_60509668((int)a1, a1[928]);
     return sub_60509668((int)a1, a1[929]);
@@ -89597,7 +89477,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605098E0(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 2u, &dword_60CA7CA0, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 2u, &dword_60CA7CA0, 0);
   }
 
 /* ============================================================================
@@ -90896,7 +90776,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050B0F8(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA7E10, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA7E10, 0);
     *(_BYTE *)(a1 + 3592) = 1;
     *(_BYTE *)(a1 + 3591) = 1;
     return 1;
@@ -90953,7 +90833,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050B1A0(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA7E18, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA7E18, 0);
     *(_BYTE *)(a1 + 3591) = 1;
     return 1;
   }
@@ -92327,7 +92207,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v5[0] = 12321336;
         v5[1] = "CourseSelectVS_Score_00";
-        sub_6047E0EC(v5, v4, 1);
+        MessageQueue_postType3(v5, v4, 1);
       }
       *(_BYTE *)(a1 + 3568) = 0;
       return 0;
@@ -92613,7 +92493,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v11 = 12321336;
       v12 = "CourseSelectScene_Zanki1P_00";
       sub_6050DF34(a1, a1[5], 0);
-      return sub_6047E0EC(&v11, v2, 1);
+      return MessageQueue_postType3(&v11, v2, 1);
     }
     return result;
   }
@@ -93081,7 +92961,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v9 = 12321336;
         v10 = "CourseSelectScene_Zanki1P_00";
-        sub_6047E0EC(&v9, v7, 1);
+        MessageQueue_postType3(&v9, v7, 1);
       }
     }
     result = a1[916];
@@ -93684,7 +93564,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v6 = 12321336;
         v7 = "CourseSelectScene_Zanki1P_00";
-        sub_6047E0EC(&v6, v4, 1);
+        MessageQueue_postType3(&v6, v4, 1);
       }
     }
     result = a1[946];
@@ -95043,7 +94923,7 @@ static inline unsigned int uxtb16(unsigned int x)
       thunk_sub_60909E64(v2 + 9584);
       sub_60506EB8(v2 + 5924);
       sub_605021B0(v2 + 3704);
-      sub_60475AE8((struct sead_IDisposer *)(v2 + 56));
+      Disposer_destroyAllocated((struct sead_IDisposer *)(v2 + 56));
       MEMORY[0xCA83DC] = 0;
     }
     sead::IDisposer::~IDisposer(a1);
@@ -95185,14 +95065,14 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v7 = 12321336;
         v8 = "PauseGame_Exit_01";
-        sub_6047E0EC(&v7, v5, 0);
+        MessageQueue_postType3(&v7, v5, 0);
       }
       v6 = *(_DWORD *)(a1 + 9548);
       if ( v6 )
       {
         v7 = 12321336;
         v8 = "PauseGame_Exit_01";
-        sub_6047E0EC(&v7, v6, 0);
+        MessageQueue_postType3(&v7, v6, 0);
       }
     }
     *(_BYTE *)(a1 + 9572) = 0;
@@ -97319,7 +97199,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v3; // r4
     int v4; // t1
   
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA84E8, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA84E8, 0);
     *(_BYTE *)(a1 + 5685) = 1;
     *(_BYTE *)(a1 + 5687) = 1;
     *(_BYTE *)(a1 + 5686) = 0;
@@ -97398,7 +97278,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60513E80(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA84F0, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA84F0, 0);
     *(_BYTE *)(a1 + 5687) = 1;
     return 5687;
   }
@@ -98012,7 +97892,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 12));
     return operator delete((int)a1);
   }
 
@@ -98421,7 +98301,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 6981);
     sub_6050A4C4(a1 + 5165);
     sub_605021B0(a1 + 4645);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 3758));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 3758));
     *a1 = 12581160;
     thunk_sub_60909E64(a1 + 3639);
     thunk_sub_60909E64(a1 + 3538);
@@ -98430,7 +98310,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 3235);
     sub_6050A4C4(a1 + 1419);
     sub_605021B0(a1 + 899);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 12));
     return a1;
   }
 
@@ -98451,7 +98331,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 12));
     return a1;
   }
 
@@ -98732,7 +98612,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 12));
     return operator delete((int)a1);
   }
 
@@ -98814,7 +98694,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 12));
     return operator delete((int)a1);
   }
 
@@ -99081,7 +98961,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_OUT", 0);
     v3[0] = 12321336;
     v3[1] = WipeIn_LevelNum_Mode_Loop_Out_ref(4u);
-    return sub_60473DE4((_DWORD *)(a1 + 36), 0, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, v3, 0);
   }
 
 /* ============================================================================
@@ -99324,24 +99204,24 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = (_DWORD *)(a1 + 36);
     v11 = 12321336;
     v12 = WipeIn_LevelNum_Mode_Loop_Out_ref(0);
-    sub_60473DE4(v4, 0, &v11, 0);
+    ArrayOf5_lookupByIndex(v4, 0, &v11, 0);
     v5 = WipeIn_LevelNum_Mode_Loop_Out_ref(1);
     v11 = 12321336;
     v12 = v5;
-    sub_60473DE4(v4, 1u, &v11, 0);
+    ArrayOf5_lookupByIndex(v4, 1u, &v11, 0);
     v6 = ArrayOf20_getEntryPtr(v4, 1);
     (*(void (__fastcall **)(int))(*(_DWORD *)v6 + 96))(v6);
     sub_603FD93C(v3);
     v7 = WipeIn_LevelNum_Mode_Loop_Out_ref(2);
     v11 = 12321336;
     v12 = v7;
-    sub_60473DE4(v4, 2u, &v11, 0);
+    ArrayOf5_lookupByIndex(v4, 2u, &v11, 0);
     v8 = ArrayOf20_getEntryPtr(v4, 2);
     (*(void (__fastcall **)(int))(*(_DWORD *)v8 + 96))(v8);
     v9 = WipeIn_LevelNum_Mode_Loop_Out_ref(3);
     v11 = 12321336;
     v12 = v9;
-    return sub_60473DE4(v4, 3u, &v11, 1);
+    return ArrayOf5_lookupByIndex(v4, 3u, &v11, 1);
   }
 
 /* ============================================================================
@@ -99360,25 +99240,25 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_603FD91C(MEMORY[0xC9A1F0] + 16, *(unsigned __int8 *)(v2 + 564));
     v4 = 12321336;
     v5 = "PreGameChallengeTime_Text_00";
-    sub_6047E0EC(&v4, a1[917], 1);
+    MessageQueue_postType3(&v4, a1[917], 1);
     v4 = 12321336;
     v5 = "PreGameChallengeTime_Text_00";
-    sub_6047E0EC(&v4, a1[916], 1);
+    MessageQueue_postType3(&v4, a1[916], 1);
     v4 = 12321336;
     v5 = "PreGameChallengeTime_Gold_00";
-    sub_6047E0EC(&v4, a1[911], 1);
+    MessageQueue_postType3(&v4, a1[911], 1);
     v4 = 12321336;
     v5 = "PreGameChallengeTime_Silver_00";
-    sub_6047E0EC(&v4, a1[912], 1);
+    MessageQueue_postType3(&v4, a1[912], 1);
     v4 = 12321336;
     v5 = "PreGameChallengeTime_Bronze_00";
-    sub_6047E0EC(&v4, a1[913], 1);
+    MessageQueue_postType3(&v4, a1[913], 1);
     v4 = 12321336;
     v5 = "PreGameChallengeTime_Title_00";
-    sub_6047E0EC(&v4, a1[915], 1);
+    MessageQueue_postType3(&v4, a1[915], 1);
     v4 = 12321336;
     v5 = "PreGameChallengeTime_Title_00";
-    return sub_6047E0EC(&v4, a1[914], 1);
+    return MessageQueue_postType3(&v4, a1[914], 1);
   }
 
 /* ============================================================================
@@ -100004,7 +99884,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050D8F4(a1 + 10860);
     sub_6050D8F4(a1 + 7256);
     sub_6050D8F4(a1 + 3652);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -100493,7 +100373,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605188A4(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8954, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8954, 0);
   }
 
 /* ============================================================================
@@ -100532,7 +100412,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605189C8(_DWORD *a1)
   {
     *a1 = 12581640;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -100543,7 +100423,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605189F8(_DWORD *a1)
   {
     *a1 = 12581640;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -100586,8 +100466,8 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v6[0] = 1;
     sub_60475334((int)v2, a1 + 3608, &dword_60CA89C8, v6);
-    sub_60473DE4(v2, 0, (_DWORD *)0xCA8944, 0);
-    return sub_60473DE4(v2, 1u, (_DWORD *)0xCA894C, 1);
+    ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCA8944, 0);
+    return ArrayOf5_lookupByIndex(v2, 1u, (_DWORD *)0xCA894C, 1);
   }
 
 /* ============================================================================
@@ -100665,8 +100545,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = a1;
     StateMgr::changeState(a1 + 6, 13273436);
     v1 += 10;
-    sub_60473DE4(v1, 0, (_DWORD *)0xCA8944, 0);
-    return sub_60473DE4(v1, 1u, (_DWORD *)0xCA894C, 1);
+    ArrayOf5_lookupByIndex(v1, 0, (_DWORD *)0xCA8944, 0);
+    return ArrayOf5_lookupByIndex(v1, 1u, (_DWORD *)0xCA894C, 1);
   }
 
 /* ============================================================================
@@ -100817,7 +100697,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 36);
     v3[0] = 12321336;
     v3[1] = sub_6051A8DC(0);
-    sub_60473DE4(v1, 0, v3, 0);
+    ArrayOf5_lookupByIndex(v1, 0, v3, 0);
     sub_60473B58(v1, 14, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_COURSE_PAGE_IN", 0);
   }
@@ -100856,7 +100736,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_6051A8DC(7u);
-    sub_60473DE4((_DWORD *)(a1 + 36), 0, v3, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, v3, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_COURSE_PAGE_OUT", 0);
   }
 
@@ -100946,7 +100826,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60506EB8(a1 + 2765);
     sub_60506EB8(a1 + 1860);
     sub_60506EB8(a1 + 955);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 9));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 9));
     return a1;
   }
 
@@ -100961,7 +100841,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60506EB8(a1 + 2765);
     sub_60506EB8(a1 + 1860);
     sub_60506EB8(a1 + 955);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 9));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 9));
     return operator delete((int)a1);
   }
 
@@ -101214,7 +101094,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047DEC8(a1 + 9, a1[7], 2);
     v5[0] = 12321336;
     v5[1] = sub_6051A8DC(8);
-    sub_60473DE4(a1 + 9, 6u, v5, 0);
+    ArrayOf5_lookupByIndex(a1 + 9, 6u, v5, 0);
     result = ArrayOf20_getEntryPtr(a1 + 9, 6);
     if ( result )
       return (*(int (__fastcall **)(int))(*(_DWORD *)result + 96))(result);
@@ -101243,7 +101123,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v6[0] = 12321336;
       v6[1] = "PreGameFree_BestTime_01";
-      sub_6047E0EC(v6, v3, 0);
+      MessageQueue_postType3(v6, v3, 0);
     }
     result = *(_DWORD *)(a1 + 20);
     v5 = *(_BYTE **)(result + 12);
@@ -101391,7 +101271,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = 0;
     v9[0] = 12321336;
     v9[1] = sub_6051A8DC(1);
-    sub_60473DE4((_DWORD *)(a1 + 36), 1u, v9, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 1u, v9, 0);
     v4 = ArrayOf20_getEntryPtr(v2 - 3716, 1);
     (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 96))(v4);
     for ( i = 0; i != 4; ++i )
@@ -101455,7 +101335,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = (_DWORD *)(a1 + 36);
     v19[0] = 12321336;
     v19[1] = sub_6051A8DC(3);
-    sub_60473DE4(v5, 3u, v19, 0);
+    ArrayOf5_lookupByIndex(v5, 3u, v19, 0);
     v6 = ArrayOf20_getEntryPtr(v5, 3);
     if ( (float)v2 <= (float)(unsigned int)sub_608502E4(v6) )
     {
@@ -101465,7 +101345,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = sub_6051A8DC(2);
     v19[0] = 12321336;
     v19[1] = v8;
-    sub_60473DE4(v5, 2u, v19, 0);
+    ArrayOf5_lookupByIndex(v5, 2u, v19, 0);
     v9 = ArrayOf20_getEntryPtr(v5, 2);
     if ( (float)(8 - v4) <= (float)(unsigned int)sub_608502E4(v9) )
     {
@@ -101475,7 +101355,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = sub_6051A8DC(5);
     v19[0] = 12321336;
     v19[1] = v11;
-    sub_60473DE4(v5, 4u, v19, 0);
+    ArrayOf5_lookupByIndex(v5, 4u, v19, 0);
     v12 = ArrayOf20_getEntryPtr(v5, 4);
     (*(void (__fastcall **)(int))(*(_DWORD *)v12 + 96))(v12);
     sub_60473B58(v5, 14, 0);
@@ -102181,7 +102061,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(v5 + 28) = v4;
     *(_DWORD *)(v5 + 32) = 0;
     *(_BYTE *)(v5 + 64) |= 0x10u;
-    sub_60473DE4(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xCA8C00, 0);
+    ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xCA8C00, 0);
     return sub_605184C0(a1 + 62552);
   }
 
@@ -102292,23 +102172,23 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_6051B3D4(int a1)
   {
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 58368));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 54720));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 51072));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 47424));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 43776));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 40128));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 36480));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 32832));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 29184));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 25536));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 21888));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 18240));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 14592));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10944));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 7296));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 3648));
-    sub_60475AE8((struct sead_IDisposer *)a1);
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 58368));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 54720));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 51072));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 47424));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 43776));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 40128));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 36480));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 32832));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 29184));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 25536));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 21888));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 18240));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 14592));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10944));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 7296));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 3648));
+    Disposer_destroyAllocated((struct sead_IDisposer *)a1);
   }
 
 /* ============================================================================
@@ -102501,7 +102381,7 @@ static inline unsigned int uxtb16(unsigned int x)
           _cxa_guard_release_0(&unk_60CA8D5C);
         }
         sub_604754E4(*(_DWORD *)(a1 + 4), (int *)(a1 + 62168), &dword_60CA8D60, 1);
-        sub_60473DE4(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xCA8BF0, 0);
+        ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xCA8BF0, 0);
         v6 = *(_DWORD **)(a1 + 4);
         v9[0] = 12321336;
         v9[1] = "G_Loop_00";
@@ -102530,7 +102410,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = 12321336;
     v8 = "PreGameStory_WorldCourse_00";
     v2 = a1 + 15540;
-    sub_6047E0EC(&v7, a1[15540], 0);
+    MessageQueue_postType3(&v7, a1[15540], 0);
     *(_BYTE *)(*v2 + 64) |= 1u;
     v3 = a1[15541];
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
@@ -102544,7 +102424,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = "PreGameStory_WorldName_00";
     }
     v8 = v4;
-    sub_6047E0EC(&v7, v3, 0);
+    MessageQueue_postType3(&v7, v3, 0);
     *(_BYTE *)(a1[15541] + 64) |= 1u;
     v5 = sub_60473B4C(a1[1]);
     result = (*(int (__fastcall **)(int, const char *, int))(*(_DWORD *)v5 + 48))(v5, "N_WorldCourse_00", 1);
@@ -102903,7 +102783,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(5u);
-    sub_60473DE4((_DWORD *)(a1 + 36), 0, v3, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, v3, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_OUT", 0);
   }
 
@@ -103012,7 +102892,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051C650(int a1)
   {
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 36));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 36));
     return a1;
   }
 
@@ -103804,13 +103684,13 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v62 = 12321336;
       v63 = "PreGameVS_Round_01";
-      sub_6047E0EC(&v62, v59, 0);
+      MessageQueue_postType3(&v62, v59, 0);
     }
     else
     {
       v62 = 12321336;
       v63 = "PreGameVS_Round_00";
-      sub_6047E0EC(&v62, v59, 2);
+      MessageQueue_postType3(&v62, v59, 2);
     }
     if ( !*(_BYTE *)(a1 + 4014) )
     {
@@ -103838,27 +103718,27 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v7 = 12321336;
     v8 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(0);
-    sub_60473DE4((_DWORD *)(a1 + 36), 0, &v7, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, &v7, 0);
     v2 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(4);
     v7 = 12321336;
     v8 = v2;
-    sub_60473DE4((_DWORD *)(a1 + 36), 4u, &v7, 1);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 4u, &v7, 1);
     v3 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(1);
     v7 = 12321336;
     v8 = v3;
-    sub_60473DE4((_DWORD *)(a1 + 36), 1u, &v7, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 1u, &v7, 0);
     sub_6047455C(a1 + 36, 1);
     sub_6047459C(a1 + 36, 1);
     v4 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(3);
     v7 = 12321336;
     v8 = v4;
-    sub_60473DE4((_DWORD *)(a1 + 36), 3u, &v7, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 3u, &v7, 0);
     sub_6047455C(a1 + 36, 3);
     sub_6047459C(a1 + 36, 3);
     v5 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(2);
     v7 = 12321336;
     v8 = v5;
-    sub_60473DE4((_DWORD *)(a1 + 36), 2u, &v7, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 2u, &v7, 0);
     sub_6047455C(a1 + 36, 2);
     return sub_6047459C(a1 + 36, 2);
   }
@@ -104627,7 +104507,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
     float v3; // s0
   
-    sub_60473DE4((_DWORD *)a1, 0, &dword_60CA8FC4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)a1, 0, &dword_60CA8FC4, 0);
     sub_604745C0(a1, 0);
     sub_6047455C(a1, 0);
     sub_6047459C(a1, 0);
@@ -104700,7 +104580,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1 + 40;
     *(_BYTE *)(a1 + 13005) = 1;
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8FD4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8FD4, 0);
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_RECORD_PAGE_IN", 0);
     v2 = sub_60473B4C(v1);
     return sub_6098F1D4(v2);
@@ -104874,7 +104754,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall SE_SYS_RECORD_PAGE_IN_ref_2(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8FDC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8FDC, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_RECORD_PAGE_IN", 0);
   }
 
@@ -105043,7 +104923,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64((_DWORD *)(a1 + 13008));
     sub_6050A4C4(a1 + 5788);
     sub_605021B0((_DWORD *)(a1 + 3708));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -105062,7 +104942,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64((_DWORD *)(a1 + 13008));
     sub_6050A4C4(a1 + 5788);
     sub_605021B0((_DWORD *)(a1 + 3708));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 40));
     return operator delete(a1);
   }
 
@@ -105190,46 +105070,46 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475334((int)(a1 + 10), (int)(a1 + 907), &dword_60CA9190, &v4);
     v4 = 12321336;
     v5 = "RecordList_CoinNum_00";
-    sub_6047E0EC(&v4, a1[907], 1);
+    MessageQueue_postType3(&v4, a1[907], 1);
     v4 = 12321336;
     v5 = "RecordList_SCoinNum_00";
-    sub_6047E0EC(&v4, a1[908], 1);
+    MessageQueue_postType3(&v4, a1[908], 1);
     v4 = 12321336;
     v5 = "RecordList_GoalNum_00";
-    sub_6047E0EC(&v4, a1[909], 1);
+    MessageQueue_postType3(&v4, a1[909], 1);
     v4 = 12321336;
     v5 = "RecordList_3UPMoonNum_00";
-    sub_6047E0EC(&v4, a1[910], 1);
+    MessageQueue_postType3(&v4, a1[910], 1);
     v4 = 12321336;
     v5 = "RecordList_ClapNum_00";
-    sub_6047E0EC(&v4, a1[911], 1);
+    MessageQueue_postType3(&v4, a1[911], 1);
     v4 = 12321336;
     v5 = "RecordList_Assist_00";
-    sub_6047E0EC(&v4, a1[912], 1);
+    MessageQueue_postType3(&v4, a1[912], 1);
     v4 = 12321336;
     v5 = "RecordList_MiniAssist_00";
-    sub_6047E0EC(&v4, a1[913], 1);
+    MessageQueue_postType3(&v4, a1[913], 1);
     v4 = 12321336;
     v5 = "RecordList_ShadowNum_00";
-    sub_6047E0EC(&v4, a1[914], 1);
+    MessageQueue_postType3(&v4, a1[914], 1);
     v4 = 12321336;
     v5 = "RecordList_KuriboNum_00";
-    sub_6047E0EC(&v4, a1[915], 1);
+    MessageQueue_postType3(&v4, a1[915], 1);
     v4 = 12321336;
     v5 = "RecordList_ItemNum_00";
-    sub_6047E0EC(&v4, a1[916], 1);
+    MessageQueue_postType3(&v4, a1[916], 1);
     v4 = 12321336;
     v5 = "RecordList_YosshiNum_00";
-    sub_6047E0EC(&v4, a1[917], 1);
+    MessageQueue_postType3(&v4, a1[917], 1);
     v4 = 12321336;
     v5 = "RecordList_CYosshiNum_00";
-    sub_6047E0EC(&v4, a1[918], 1);
+    MessageQueue_postType3(&v4, a1[918], 1);
     v4 = 12321336;
     v5 = "RecordList_Goal1UPNum_00";
-    sub_6047E0EC(&v4, a1[919], 1);
+    MessageQueue_postType3(&v4, a1[919], 1);
     v4 = 12321336;
     v5 = "RecordList_GoalHanabiNum_00";
-    return sub_6047E0EC(&v4, a1[920], 1);
+    return MessageQueue_postType3(&v4, a1[920], 1);
   }
 
 /* ============================================================================
@@ -105451,7 +105331,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( !v7 )
         return result;
-      return sub_60473DE4(v6, 1u, (_DWORD *)0xCA8FE4, 1);
+      return ArrayOf5_lookupByIndex(v6, 1u, (_DWORD *)0xCA8FE4, 1);
     }
     if ( (*(_DWORD *)(List_getNthNode(a1 + 3760, 1) - *(_DWORD *)(a1 + 3772) + 4) | 2) == 3 )
       goto LABEL_3;
@@ -105471,7 +105351,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v8 = result == 0;
     }
     if ( v8 )
-      return sub_60473DE4(v6, 1u, (_DWORD *)0xCA8FE4, 1);
+      return ArrayOf5_lookupByIndex(v6, 1u, (_DWORD *)0xCA8FE4, 1);
     return result;
   }
 
@@ -105492,16 +105372,16 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (_DWORD *)(a1 + 40);
     *(_BYTE *)(a1 + 13004) = 1;
     *(_BYTE *)(a1 + 15028) = 1;
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8FDC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8FDC, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
     v8 = 12321336;
     v9 = "RecordList_Assist_00";
-    sub_6047E0EC(&v8, *(_DWORD *)(a1 + 3648), 1);
+    MessageQueue_postType3(&v8, *(_DWORD *)(a1 + 3648), 1);
     v8 = 12321336;
     v9 = "RecordList_MiniAssist_00";
-    sub_6047E0EC(&v8, *(_DWORD *)(a1 + 3652), 1);
+    MessageQueue_postType3(&v8, *(_DWORD *)(a1 + 3652), 1);
     StateMgr::changeState((_DWORD *)(a1 + 24), 13275156);
-    sub_60473DE4(v3, 2u, (_DWORD *)0xCA8FEC, 0);
+    ArrayOf5_lookupByIndex(v3, 2u, (_DWORD *)0xCA8FEC, 0);
     v4 = *(int ***)(a1 + 3552);
     if ( *(_DWORD *)(a1 + 3548) > 2u )
       v4 += 10;
@@ -105643,7 +105523,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 36);
     v3[0] = 12321336;
     v3[1] = sub_6052283C(1u);
-    sub_60473DE4(v1, 1u, v3, 0);
+    ArrayOf5_lookupByIndex(v1, 1u, v3, 0);
     sub_6047455C((int)v1, 1u);
     return sub_6047459C((int)v1, 1u);
   }
@@ -105706,7 +105586,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 36);
     v4[0] = 12321336;
     v4[1] = sub_6052283C(2u);
-    sub_60473DE4(v1, 2u, v4, 0);
+    ArrayOf5_lookupByIndex(v1, 2u, v4, 0);
     *(_DWORD *)(ArrayOf20_getEntryPtr((int)v1, 2u) + 16) = 0;
     v2 = ArrayOf20_getEntryPtr((int)v1, 2u);
     return (*(int (__fastcall **)(int))(*(_DWORD *)v2 + 96))(v2);
@@ -105785,7 +105665,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v4 = (_DWORD *)(a1 + 36);
         v5 = 3;
       }
-      sub_60473DE4(v4, v5, &v7, 0);
+      ArrayOf5_lookupByIndex(v4, v5, &v7, 0);
       if ( *(_BYTE *)(a1 + 4309) )
         v6 = 13275756;
       else
@@ -105891,7 +105771,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = sub_6052283C(4u);
       v12 = 12321336;
       v13 = v9;
-      sub_60473DE4(v5, 4u, &v12, 0);
+      ArrayOf5_lookupByIndex(v5, 4u, &v12, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13275788);
     }
     return result;
@@ -105978,7 +105858,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9[0] = 12321336;
       v9[1] = sub_6052283C(0xFu);
-      sub_60473DE4((_DWORD *)(a1 + 36), 0xAu, v9, 1);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0xAu, v9, 1);
     }
     if ( *(_DWORD *)v3 == 140 )
       *(_BYTE *)(a1 + 4300) = 1;
@@ -106113,18 +105993,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_608169AC(MEMORY[0xCC6B68]);
     a1[967] = 12556016;
     sub_60026BFC(a1 + 991);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 9));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 9));
     return a1;
-  }
-
-/* ============================================================================
- * sub_60520E10
- * RVA 0x00520e10   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_60520E10(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
   }
 
 /* ============================================================================
@@ -106274,7 +106144,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = sub_6052283C(2);
     v10 = 12321336;
     v11 = v7;
-    sub_60473DE4(v2, 2u, &v10, 0);
+    ArrayOf5_lookupByIndex(v2, 2u, &v10, 0);
     v8 = (_DWORD *)a1[887];
     if ( a1[886] > 2u )
       v8 += 10;
@@ -106454,16 +106324,16 @@ static inline unsigned int uxtb16(unsigned int x)
     v19 = 12321336;
     v20 = "ResultChallenge_Text_00";
     v18 = v4;
-    sub_6047E0EC(&v19, *(_DWORD *)(a1 + 3852), 1);
+    MessageQueue_postType3(&v19, *(_DWORD *)(a1 + 3852), 1);
     v19 = 12321336;
     v20 = "ResultChallenge_Text_00";
-    sub_6047E0EC(&v19, *(_DWORD *)(a1 + 3848), 1);
+    MessageQueue_postType3(&v19, *(_DWORD *)(a1 + 3848), 1);
     v19 = 12321336;
     v20 = "ResultChallenge_CourseName_00";
-    sub_6047E0EC(&v19, *(_DWORD *)(a1 + 3844), 1);
+    MessageQueue_postType3(&v19, *(_DWORD *)(a1 + 3844), 1);
     v19 = 12321336;
     v20 = "ResultChallenge_CourseName_00";
-    sub_6047E0EC(&v19, *(_DWORD *)(a1 + 3840), 1);
+    MessageQueue_postType3(&v19, *(_DWORD *)(a1 + 3840), 1);
     v8 = 999;
     if ( *(_BYTE *)(a1 + 4320) )
       v8 = 999999;
@@ -106585,7 +106455,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v17 = "ResultChallenge_Score_00";
       v9 = *(_DWORD *)(a1 + 3796);
     }
-    sub_6047E0EC(&v16, v9, v8);
+    MessageQueue_postType3(&v16, v9, v8);
     if ( a4 )
     {
       if ( *v7 )
@@ -106602,16 +106472,16 @@ static inline unsigned int uxtb16(unsigned int x)
         v17 = "ResultChallenge_Score_00";
         v11 = *(_DWORD *)(a1 + 3808);
       }
-      sub_6047E0EC(&v16, v11, v10);
+      MessageQueue_postType3(&v16, v11, v10);
     }
     else
     {
       v16 = 12321336;
       v17 = "ResultChallenge_NoBestScore_00";
-      sub_6047E0EC(&v16, *(_DWORD *)(a1 + 3808), 0);
+      MessageQueue_postType3(&v16, *(_DWORD *)(a1 + 3808), 0);
       v16 = 12321336;
       v17 = "ResultChallenge_NoBestScore_00";
-      sub_6047E0EC(&v16, *(_DWORD *)(a1 + 3812), 0);
+      MessageQueue_postType3(&v16, *(_DWORD *)(a1 + 3812), 0);
       *a2 = *(_DWORD *)(MEMORY[0xC9A1F0] + 6508);
       *(_BYTE *)(a1 + 4313) = 1;
     }
@@ -106647,7 +106517,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v9 = 12321336;
     v10 = sub_6052283C(10);
-    sub_60473DE4((_DWORD *)(a1 + 36), 7u, &v9, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 7u, &v9, 0);
     sub_6047455C(a1 + 36, 7);
     sub_6047459C(a1 + 36, 7);
     if ( ((unsigned int)&unk_60CA9770 & ~(1615993200 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA9770) )
@@ -106664,11 +106534,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = sub_6052283C(*((_DWORD *)&unk_60CA9770 + v5 + 5));
     v9 = 12321336;
     v10 = v6;
-    sub_60473DE4((_DWORD *)(a1 + 36), 6u, &v9, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 6u, &v9, 0);
     v7 = sub_6052283C(0);
     v9 = 12321336;
     v10 = v7;
-    sub_60473DE4((_DWORD *)(a1 + 36), 0, &v9, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, &v9, 0);
     sub_6047455C(a1 + 36, 0);
     sub_6047459C(a1 + 36, 0);
     return sub_60522068(a1);
@@ -106807,14 +106677,14 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v5 = MEMORY[0xB3BA34];
         if ( **((unsigned __int8 **)&unk_60CA9770 + 2 * v4 + 10) != MEMORY[0xB3BA34] )
-          sub_6047E0EC((_DWORD *)&unk_60CA9770 + 2 * v4 + 9, *(_DWORD *)(a1 + 3800), 0);
+          MessageQueue_postType3((_DWORD *)&unk_60CA9770 + 2 * v4 + 9, *(_DWORD *)(a1 + 3800), 0);
         if ( *(unsigned __int8 *)dword_60CA97F0[2 * v4 + 1] != v5 )
-          sub_6047E0EC(&dword_60CA97F0[2 * v4], *(_DWORD *)(a1 + 3816), 0);
+          MessageQueue_postType3(&dword_60CA97F0[2 * v4], *(_DWORD *)(a1 + 3816), 0);
         if ( *(unsigned __int8 *)dword_60CA9850[2 * v4 + 1] != v5 )
-          sub_6047E0EC(&dword_60CA9850[2 * v4], *(_DWORD *)(a1 + 3792), 0);
+          MessageQueue_postType3(&dword_60CA9850[2 * v4], *(_DWORD *)(a1 + 3792), 0);
         result = *(unsigned __int8 *)dword_60CA98B0[2 * v4 + 1];
         if ( result != v5 )
-          return sub_6047E0EC(&dword_60CA98B0[2 * v4], *(_DWORD *)(a1 + 3820), 0);
+          return MessageQueue_postType3(&dword_60CA98B0[2 * v4], *(_DWORD *)(a1 + 3820), 0);
       }
     }
     return result;
@@ -107792,7 +107662,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -107915,7 +107785,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_6:
         v5[0] = 12321336;
         v5[1] = v4;
-        result = sub_60473DE4((_DWORD *)a1, 0, v5, 0);
+        result = ArrayOf5_lookupByIndex((_DWORD *)a1, 0, v5, 0);
         break;
       default:
         return result;
@@ -108077,7 +107947,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60523C60(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA995C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA995C, 0);
     return sub_60528300(a1);
   }
 
@@ -108104,7 +107974,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall SE_SYS_CB_RESULT_ref(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCA996C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCA996C, 0);
     sub_60528300(a1);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_RESULT", 0);
   }
@@ -108353,7 +108223,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605240F0(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCA9974, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCA9974, 0);
   }
 
 /* ============================================================================
@@ -108576,7 +108446,7 @@ static inline unsigned int uxtb16(unsigned int x)
         while ( (int)v12 < *v2 );
       }
     }
-    sub_60473DE4(a1 + 11, 3u, (_DWORD *)0xCA997C, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 3u, (_DWORD *)0xCA997C, 0);
     return sub_60528300((int)a1);
   }
 
@@ -108798,7 +108668,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     sub_60528DF4((int)a1);
-    sub_60473DE4(a1 + 11, 3u, (_DWORD *)0xCA997C, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 3u, (_DWORD *)0xCA997C, 0);
     return sub_60528300((int)a1);
   }
 
@@ -108865,7 +108735,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 4660) = 60;
     if ( *(_BYTE *)(a1 + 4674) )
     {
-      sub_60473DE4((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCA9964, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCA9964, 0);
       *(_DWORD *)(a1 + 4664) = 1;
       sub_60528300(a1);
       return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_FINAL_RESULT", 0);
@@ -109083,7 +108953,7 @@ static inline unsigned int uxtb16(unsigned int x)
         while ( (int)v12 < *v2 );
       }
     }
-    sub_60473DE4(a1 + 11, 3u, (_DWORD *)0xCA997C, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 3u, (_DWORD *)0xCA997C, 0);
     a1[1166] = 5;
     return sub_60528300((int)a1);
   }
@@ -109152,7 +109022,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall SE_SYS_CB_FINAL_RESULT_ref_2(_DWORD *a1)
   {
     a1[1165] = 60;
-    sub_60473DE4(a1 + 11, 1u, (_DWORD *)0xCA9964, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 1u, (_DWORD *)0xCA9964, 0);
     a1[1166] = 1;
     sub_60528300((int)a1);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_FINAL_RESULT", 0);
@@ -109466,7 +109336,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     sub_60528DF4((int)a1);
-    sub_60473DE4(a1 + 11, 3u, (_DWORD *)0xCA997C, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 3u, (_DWORD *)0xCA997C, 0);
     a1[1166] = 5;
     return sub_60528300((int)a1);
   }
@@ -109602,7 +109472,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    sub_60473DE4(a1 + 11, 3u, (_DWORD *)0xCA997C, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 3u, (_DWORD *)0xCA997C, 0);
     *(_BYTE *)(a1[1001] + 64) |= 1u;
     result = a1[1019];
     if ( result )
@@ -109813,7 +109683,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12582712;
     v2 = (struct sead_IDisposer *)(a1 + 11);
     thunk_sub_60909E64(a1 + 1054);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return a1;
   }
 
@@ -109828,7 +109698,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12582712;
     v2 = (struct sead_IDisposer *)(a1 + 11);
     thunk_sub_60909E64(a1 + 1054);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return operator delete((int)a1);
   }
 
@@ -110323,9 +110193,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v42[4] = a1[987];
     v42[5] = a1[1029];
     v42[6] = a1[1026];
-    sub_60473DE4(a1 + 11, 8u, (_DWORD *)0xCA998C, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 8u, (_DWORD *)0xCA998C, 0);
     v42[7] = *(_DWORD *)(ArrayOf20_getEntryPtr(a1 + 11, 8) + 12);
-    sub_60473DE4(a1 + 11, 9u, (_DWORD *)0xCA9994, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 9u, (_DWORD *)0xCA9994, 0);
     v8 = 0;
     v40 = v4;
     v42[8] = *(_DWORD *)(ArrayOf20_getEntryPtr(a1 + 11, 9) + 12);
@@ -110975,7 +110845,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else
       v3 = 13278756;
     StateMgr::changeState(v2, v3);
-    sub_60473DE4((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCA996C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCA996C, 0);
     v4 = *(_DWORD **)(a1 + 3556);
     if ( *(_DWORD *)(a1 + 3552) > 2u )
       v4 += 10;
@@ -111060,7 +110930,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v16 = 12321336;
           v17 = "ResultVS_RoundFinal_00";
-          sub_6047E0EC(&v16, *(_DWORD *)(a1 + 4048), 0);
+          MessageQueue_postType3(&v16, *(_DWORD *)(a1 + 4048), 0);
           v16 = 12321336;
           v17 = "ResultVS_RoundFinal_00";
           v3 = *(_DWORD *)(a1 + 4040);
@@ -111072,23 +110942,23 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v9 )
           --v9;
         v10 = &dword_60CAA370[2 * v9 + 12];
-        sub_6047E0EC(v10, *(_DWORD *)(a1 + 4048), 0);
+        MessageQueue_postType3(v10, *(_DWORD *)(a1 + 4048), 0);
         v3 = *(_DWORD *)(a1 + 4040);
         v5 = v10;
-        return sub_6047E0EC(v5, v3, 0);
+        return MessageQueue_postType3(v5, v3, 0);
       case 1:
         *(_BYTE *)(*(_DWORD *)(a1 + 3980) + 64) |= 1u;
         *(_BYTE *)(*(_DWORD *)(a1 + 4052) + 64) |= 1u;
         *(_BYTE *)(*(_DWORD *)(a1 + 4044) + 64) |= 1u;
         v16 = 12321336;
         v17 = "ResultVS_Result_00";
-        sub_6047E0EC(&v16, *(_DWORD *)(a1 + 4052), 0);
+        MessageQueue_postType3(&v16, *(_DWORD *)(a1 + 4052), 0);
         v16 = 12321336;
         v17 = "ResultVS_Result_00";
         v3 = *(_DWORD *)(a1 + 4044);
   LABEL_9:
         v5 = &v16;
-        return sub_6047E0EC(v5, v3, 0);
+        return MessageQueue_postType3(v5, v3, 0);
       case 3:
         *(_BYTE *)(*(_DWORD *)(a1 + 3988) + 64) |= 1u;
         result = *(_DWORD *)(a1 + 4060);
@@ -111400,7 +111270,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v21; // [sp+0h] [bp-8h] BYREF
     const char *v22; // [sp+4h] [bp-4h]
   
-    sub_60473DE4(a1 + 11, 9u, (_DWORD *)0xCA9994, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 9u, (_DWORD *)0xCA9994, 0);
     v2 = a1 + 1155;
     if ( (int)a1[1155] >= 1 )
     {
@@ -111440,10 +111310,10 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v21 = 12321336;
     v22 = "ResultVS_Score_00";
-    sub_6047E0EC(&v21, a1[1027], 1);
+    MessageQueue_postType3(&v21, a1[1027], 1);
     v21 = 12321336;
     v22 = "ResultVS_Score_00";
-    sub_6047E0EC(&v21, a1[1028], 1);
+    MessageQueue_postType3(&v21, a1[1028], 1);
     v12 = a1[1008];
     *(_DWORD *)(v12 + 28) = 0;
     *(_BYTE *)(v12 + 64) |= 0x10u;
@@ -112024,7 +111894,7 @@ static inline unsigned int uxtb16(unsigned int x)
     LetterAnimOn_ref_98530C(v10, a3[6], a4);
     a1[10] = v10;
     sub_608589FC(a1[9], v10);
-    sub_6047E0EC((_DWORD *)0xCAA27C, a1[10], 1);
+    MessageQueue_postType3((_DWORD *)0xCAA27C, a1[10], 1);
     v11 = operator new(52);
     v12 = (_DWORD *)sub_608523B8(v11);
     *v12 = 12797644;
@@ -112367,7 +112237,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a1[13] < 9999 )
       v1 = a1[13];
     a1[14] = v1;
-    return sub_6047E0EC((_DWORD *)0xCAA27C, a1[10], 1);
+    return MessageQueue_postType3((_DWORD *)0xCAA27C, a1[10], 1);
   }
 
 /* ============================================================================
@@ -112990,7 +112860,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12583072;
     *(_BYTE *)(a1 + 3552) = 0;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 4));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 4));
     return a1;
   }
 
@@ -113002,7 +112872,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12583072;
     *(_BYTE *)(a1 + 3552) = 0;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 4));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 4));
     return operator delete(a1);
   }
 
@@ -113031,7 +112901,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v4[0] = 1;
     sub_60476030((int)v1, &dword_60CAA444, v4);
-    return sub_60473DE4(v1, 0, (_DWORD *)0xC00090, 1);
+    return ArrayOf5_lookupByIndex(v1, 0, (_DWORD *)0xC00090, 1);
   }
 
 /* ============================================================================
@@ -114215,7 +114085,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v21 = v20;
         return G_FreeDigit_00_ref(a1, v21);
       case 3:
-        sub_60473DE4((_DWORD *)(a1 + 72), 0, &dword_60CAA6D0, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)(a1 + 72), 0, &dword_60CAA6D0, 0);
         result = 4;
         goto LABEL_67;
       case 4:
@@ -114235,7 +114105,7 @@ static inline unsigned int uxtb16(unsigned int x)
       case 5:
         if ( result <= 0 )
         {
-          sub_60473DE4((_DWORD *)(a1 + 72), 0, &dword_60CAA6D8, 0);
+          ArrayOf5_lookupByIndex((_DWORD *)(a1 + 72), 0, &dword_60CAA6D8, 0);
           *(_DWORD *)(a1 + 52) = 6;
           return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_TIME_APPEAR", 0);
         }
@@ -114245,7 +114115,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (result & 1) != 0 )
         {
           *(_DWORD *)(a1 + 52) = 7;
-          return sub_60473DE4((_DWORD *)(a1 + 72), 1u, &dword_60CAA6E8, 1);
+          return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 72), 1u, &dword_60CAA6E8, 1);
         }
         return result;
       case 7:
@@ -114446,7 +114316,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6052CEE8(_DWORD *a1)
   {
     *a1 = 12583232;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 18));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 18));
     return a1;
   }
 
@@ -114457,7 +114327,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6052CF18(_DWORD *a1)
   {
     *a1 = 12583232;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 18));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 18));
     return operator delete((int)a1);
   }
 
@@ -114634,13 +114504,13 @@ static inline unsigned int uxtb16(unsigned int x)
       v2.n64_f32[0] = vmin_f32(v2, v1).n64_f32[0];
       v22 = 12321336;
       v23 = "ResultFree_BestTime_00";
-      sub_6047E0EC(&v22, v7, 2);
+      MessageQueue_postType3(&v22, v7, 2);
     }
     else
     {
       v22 = 12321336;
       v23 = "ResultFree_BestTime_01";
-      sub_6047E0EC(&v22, v7, 0);
+      MessageQueue_postType3(&v22, v7, 0);
     }
     v8 = *(float *)(v5 + 696);
     if ( v8 > 10000.0 )
@@ -114750,8 +114620,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v19 = *(_DWORD *)(MEMORY[0xC9A1E0] + 532);
     if ( v19 >= 8 )
       v19 = 0;
-    sub_6047E0EC(&dword_60CAA750[2 * v19], *(_DWORD *)(a1 + 3756), 0);
-    sub_60473DE4((_DWORD *)(a1 + 72), 0, &dword_60CAA6C8, 0);
+    MessageQueue_postType3(&dword_60CAA750[2 * v19], *(_DWORD *)(a1 + 3756), 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 72), 0, &dword_60CAA6C8, 0);
     v20 = ArrayOf20_getEntryPtr(a1 + 72, 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)v20 + 104))(v20);
     sub_6052DB30(a1);
@@ -114931,7 +114801,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v2 = &dword_60CAA6B0;
         break;
     }
-    return sub_60473DE4(v1, 0, v2, 0);
+    return ArrayOf5_lookupByIndex(v1, 0, v2, 0);
   }
 
 /* ============================================================================
@@ -115458,7 +115328,7 @@ static inline unsigned int uxtb16(unsigned int x)
     bool v5; // zf
     int v6; // r2
   
-    sub_60473DE4(a1 + 10, 0, (_DWORD *)0xCAA7E8, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 0, (_DWORD *)0xCAA7E8, 0);
     result = *(_DWORD *)(a1[915] + 172);
     v3 = *(_WORD *)result;
     a1[2848] = 0;
@@ -115652,7 +115522,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6052EB2C(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAA7F8, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAA7F8, 0);
   }
 
 /* ============================================================================
@@ -115736,7 +115606,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 10976) = 0;
     thunk_sub_60909E64(a1 + 10984);
     sub_6050A4C4(a1 + 3760);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return a1;
   }
 
@@ -115753,7 +115623,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 10976) = 0;
     thunk_sub_60909E64((_DWORD *)(a1 + 10984));
     sub_6050A4C4(a1 + 3760);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return operator delete(a1);
   }
 
@@ -115822,7 +115692,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v4[0] = 3;
     sub_60476030((int)v1, &dword_60CAAA8C, v4);
-    return sub_60473DE4(v1, 1u, (_DWORD *)0xCAA7F0, 1);
+    return ArrayOf5_lookupByIndex(v1, 1u, (_DWORD *)0xCAA7F0, 1);
   }
 
 /* ============================================================================
@@ -115850,7 +115720,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475334(a1 + 40, a1 + 3660, &dword_60CAAAA4, &v5);
     v4[0] = 12321336;
     v4[1] = "ResultMiniGame_Text_00";
-    return sub_6047E0EC(v4, *(_DWORD *)(a1 + 3660), 0);
+    return MessageQueue_postType3(v4, *(_DWORD *)(a1 + 3660), 0);
   }
 
 /* ============================================================================
@@ -118683,7 +118553,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047EABC((_DWORD *)(a1 + 15740));
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
     {
-      sub_60473DE4((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAADCC, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAADCC, 0);
       sub_604745C0(a1 + 12092, 1u);
       sub_6047455C(a1 + 12092, 1u);
     }
@@ -118701,7 +118571,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6053341C(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADAC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADAC, 0);
     *(_BYTE *)(a1 + 83625) = 1;
     *(_BYTE *)(a1 + 83627) = 1;
     return 83627;
@@ -118790,7 +118660,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60533640(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAADCC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAADCC, 0);
     *(_BYTE *)(a1 + 83625) = 1;
     return 83625;
   }
@@ -119186,7 +119056,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60474420((_DWORD *)(a1 + 12092), 3u, (_DWORD *)0xCAADB4, *(_DWORD *)(a1 + 54700), 0);
     *v3 = 0;
     *(_DWORD *)(a1 + 83576) = *(_DWORD *)(a1 + 16728);
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADFC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADFC, 0);
     *(_BYTE *)(a1 + 83625) = 1;
     *(_BYTE *)(a1 + 83637) = 1;
     sub_60502548(a1 + 15700);
@@ -119549,7 +119419,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 52612) + 64) |= 1u;
     v2 = (_DWORD *)(a1 + 12092);
     sub_604741D8((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAADCC, 0);
-    sub_60473DE4(v2, 0, (_DWORD *)0xCAADBC, 0);
+    ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCAADBC, 0);
     *(_BYTE *)(a1 + 83625) = 1;
     sub_60538E88(a1);
     sub_60502548(a1 + 15700);
@@ -119726,7 +119596,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(_DWORD *)(a1 + 16728) - 1;
     if ( v4 <= 2 )
       *v2 = v4;
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADC4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADC4, 0);
     *(_BYTE *)(a1 + 83625) = 1;
     *(_BYTE *)(a1 + 83629) = 1;
     *(_DWORD *)(a1 + 52492) = *v2;
@@ -119817,7 +119687,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(v1 + 36468) + 64) |= 1u;
     sub_6047F01C(v2, 0);
     *(_BYTE *)v1 = 1;
-    sub_60473DE4((_DWORD *)(v1 - 4108), 0, (_DWORD *)0xCAADD4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(v1 - 4108), 0, (_DWORD *)0xCAADD4, 0);
     *(_BYTE *)(v1 + 67425) = 1;
     *(_BYTE *)(*(_DWORD *)(v1 + 36400) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(v1 + 36404) + 64) &= ~1u;
@@ -119932,7 +119802,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(v10 + 36468) + 64) |= 1u;
     sub_6047F01C(v9, 0);
     *(_BYTE *)v10 = 1;
-    sub_60473DE4((_DWORD *)(v10 - 4108), 0, (_DWORD *)0xCAADD4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(v10 - 4108), 0, (_DWORD *)0xCAADD4, 0);
     *(_BYTE *)(v10 + 67425) = 1;
     *(_BYTE *)(*(_DWORD *)(v10 + 36400) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(v10 + 36404) + 64) &= ~1u;
@@ -120092,7 +119962,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 12092);
     sub_604741D8((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAADCC, 0);
-    sub_60473DE4(v2, 0, (_DWORD *)0xCAADDC, 0);
+    ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCAADDC, 0);
     *(_BYTE *)(a1 + 83625) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52600) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52604) + 64) |= 1u;
@@ -120252,7 +120122,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(_DWORD *)(a1 + 16728) - 1;
     if ( v4 <= 2 )
       *v2 = v4;
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADE4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADE4, 0);
     *(_BYTE *)(a1 + 83625) = 1;
     *(_BYTE *)(a1 + 83629) = 1;
     *(_DWORD *)(a1 + 52496) = *v2;
@@ -120386,7 +120256,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     *(_BYTE *)(a1 + 52506) = 0;
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADEC, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADEC, 0);
     *(_BYTE *)(a1 + 83625) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52600) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52604) + 64) &= ~1u;
@@ -120525,7 +120395,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60536070(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADF4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADF4, 0);
     sub_605390B8(a1, *(_DWORD *)(a1 + 52500));
     sub_60531DEC(a1 + 56);
     sub_60531DEC(a1 + 4068);
@@ -120849,7 +120719,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 52676);
     sub_60540D10(a1 + 17780);
     sub_605021B0(a1 + 15700);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 12092));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 12092));
     sub_60531B7C(a1 + 8080);
     sub_60531B7C(a1 + 4068);
     sub_60531B7C(a1 + 56);
@@ -122169,7 +122039,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60539A00(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB43C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB43C, 0);
     *(_BYTE *)(a1 + 83565) = 1;
     *(_BYTE *)(a1 + 83567) = 1;
     return 83567;
@@ -122250,7 +122120,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60539BC8(int a1)
   {
     *(_BYTE *)(*(_DWORD *)(a1 + 52576) + 64) |= 1u;
-    sub_60473DE4((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAB45C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAB45C, 0);
     *(_BYTE *)(a1 + 83565) = 1;
     return 83565;
   }
@@ -122683,7 +122553,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6053A62C(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB48C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB48C, 0);
     *(_BYTE *)(a1 + 83567) = 1;
     return 83567;
   }
@@ -122890,7 +122760,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 52572) + 64) |= 1u;
     v2 = (_DWORD *)(a1 + 12092);
     sub_604741D8((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAB45C, 0);
-    sub_60473DE4(v2, 0, (_DWORD *)0xCAB44C, 0);
+    ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCAB44C, 0);
     *(_BYTE *)(a1 + 83565) = 1;
     sub_6053F0DC(a1);
     sub_60502548(a1 + 15680);
@@ -123089,7 +122959,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(_DWORD *)(a1 + 16708) - 1;
     if ( v4 <= 2 )
       *v3 = v4;
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB454, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB454, 0);
     *(_BYTE *)(a1 + 83565) = 1;
     *(_BYTE *)(a1 + 83569) = 1;
     *(_DWORD *)(a1 + 52472) = *v3;
@@ -123178,7 +123048,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(v1 + 36428) + 64) |= 1u;
     sub_6047F01C(v2, 0);
     *(_BYTE *)v1 = 1;
-    sub_60473DE4((_DWORD *)(v1 - 4088), 0, (_DWORD *)0xCAB464, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(v1 - 4088), 0, (_DWORD *)0xCAB464, 0);
     *(_BYTE *)(v1 + 67385) = 1;
     *(_BYTE *)(*(_DWORD *)(v1 + 36380) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(v1 + 36384) + 64) &= ~1u;
@@ -123298,7 +123168,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(v10 + 36428) + 64) |= 1u;
     sub_6047F01C(v9, 0);
     *(_BYTE *)v10 = 1;
-    sub_60473DE4((_DWORD *)(v10 - 4088), 0, (_DWORD *)0xCAB464, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(v10 - 4088), 0, (_DWORD *)0xCAB464, 0);
     *(_BYTE *)(v10 + 67385) = 1;
     *(_BYTE *)(*(_DWORD *)(v10 + 36380) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(v10 + 36384) + 64) &= ~1u;
@@ -123464,7 +123334,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 12092);
     sub_604741D8((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAB45C, 0);
-    sub_60473DE4(v2, 0, (_DWORD *)0xCAB46C, 0);
+    ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCAB46C, 0);
     *(_BYTE *)(a1 + 83565) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52560) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52564) + 64) |= 1u;
@@ -123646,7 +123516,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(_DWORD *)(a1 + 16708) - 1;
     if ( v4 <= 2 )
       *v3 = v4;
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB474, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB474, 0);
     *(_BYTE *)(a1 + 83565) = 1;
     *(_BYTE *)(a1 + 83569) = 1;
     *(_DWORD *)(a1 + 52476) = *v3;
@@ -123776,7 +123646,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     *(_BYTE *)(a1 + 52486) = 0;
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB47C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB47C, 0);
     *(_BYTE *)(a1 + 83565) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 52560) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52564) + 64) &= ~1u;
@@ -123920,7 +123790,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6053C554(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB484, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAB484, 0);
     sub_6053F30C(a1, *(_DWORD *)(a1 + 52480));
     sub_60531DEC(a1 + 56);
     sub_60531DEC(a1 + 4068);
@@ -124281,7 +124151,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 52616);
     sub_60540D10(a1 + 17760);
     sub_605021B0(a1 + 15680);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 12092));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 12092));
     sub_60531B7C(a1 + 8080);
     sub_60531B7C(a1 + 4068);
     sub_60531B7C(a1 + 56);
@@ -124924,7 +124794,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60473B58(v3, 5, 0);
       StateMgr::execute(v14);
     }
-    sub_60473DE4(v3, 1u, (_DWORD *)0xCAB45C, 0);
+    ArrayOf5_lookupByIndex(v3, 1u, (_DWORD *)0xCAB45C, 0);
     sub_604745C0(v3, 1);
     sub_6047455C(v3, 1);
     return sub_60473B58(v3, 5, 0);
@@ -125392,7 +125262,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60473B58((_DWORD *)(a1 + 28128), 0xEu, 0);
     sub_605324A4(a1 + 4, *v2);
     sub_605324A4(a1 + 4016, *v2);
-    sub_60473DE4((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA74, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA74, 0);
     *(_BYTE *)(a1 + 34724) = 1;
     sub_60478680((int)"SE_SYS_DIALOGUE_IN", 15);
     return sub_6081699C(MEMORY[0xCC6B68]);
@@ -125639,7 +125509,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 31784) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 31788) + 64) |= 1u;
     sub_60541DF8(a1, *v3, 1u);
-    sub_60473DE4((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA7C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA7C, 0);
     *(_BYTE *)(a1 + 34724) = 1;
     *(_BYTE *)(a1 + 34727) = 0;
     *(_BYTE *)(a1 + 34729) = 1;
@@ -125714,7 +125584,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = 0;
     *(_DWORD *)(a1 + 32832) = 4;
-    sub_60473DE4((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA84, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA84, 0);
     *(_BYTE *)(a1 + 34724) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 31696) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 31708) + 64) |= 1u;
@@ -125928,7 +125798,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_60540490(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA8C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA8C, 0);
     *(_BYTE *)(a1 + 34724) = 1;
     *(_BYTE *)(*(_DWORD *)(a1 + 31728) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 31732) + 64) |= 1u;
@@ -126107,7 +125977,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605324A4(a1 + 24076, *(_DWORD *)(a1 + 34720));
     *(_BYTE *)(*(_DWORD *)(a1 + 31720) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 31724) + 64) |= 1u;
-    sub_60473DE4((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA94, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA94, 0);
     *(_BYTE *)(*(_DWORD *)(a1 + 31752) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 31756) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 31760) + 64) |= 1u;
@@ -126234,7 +126104,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 8571);
     thunk_sub_60909E64(a1 + 8470);
     sub_605021B0(a1 + 7950);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 7032));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 7032));
     sub_60531B7C(v2);
     sub_60531B7C(a1 + 5016);
     sub_60531B7C(a1 + 4013);
@@ -126258,7 +126128,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 8571);
     thunk_sub_60909E64(a1 + 8470);
     sub_605021B0(a1 + 7950);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 7032));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 7032));
     sub_60531B7C(v2);
     sub_60531B7C((int)(a1 + 5016));
     sub_60531B7C((int)(a1 + 4013));
@@ -126902,7 +126772,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60542284(_DWORD *a1)
   {
     *a1 = 12584332;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 15));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 15));
     return a1;
   }
 
@@ -126913,7 +126783,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605422B4(_DWORD *a1)
   {
     *a1 = 12584332;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 15));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 15));
     return operator delete((int)a1);
   }
 
@@ -127071,7 +126941,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v1 = result + 60;
       *(_BYTE *)(*(_DWORD *)(result + 20) + 64) |= 1u;
-      sub_60473DE4((_DWORD *)(result + 60), 0, (_DWORD *)0xCABE08, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(result + 60), 0, (_DWORD *)0xCABE08, 0);
       return sub_60473B58(v1, 14, 0);
     }
     return result;
@@ -127086,7 +126956,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     *(_BYTE *)(*(_DWORD *)(a1 + 20) + 64) |= 1u;
-    result = sub_60473DE4((_DWORD *)(a1 + 60), 0, (_DWORD *)0xCABE10, 0);
+    result = ArrayOf5_lookupByIndex((_DWORD *)(a1 + 60), 0, (_DWORD *)0xCABE10, 0);
     *(_BYTE *)(a1 + 3608) = 0;
     return result;
   }
@@ -127237,7 +127107,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60542914(_DWORD *a1)
   {
     *a1 = 12584476;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -127248,7 +127118,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60542940(_DWORD *a1)
   {
     *a1 = 12584476;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -127279,10 +127149,10 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v4[0] = 2;
     sub_60476030((int)v1, &dword_60CABE44, v4);
-    sub_60473DE4(v1, 1u, (_DWORD *)0xC0060C, 1);
+    ArrayOf5_lookupByIndex(v1, 1u, (_DWORD *)0xC0060C, 1);
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
     {
-      sub_60473DE4(v1, 0, (_DWORD *)0xC00604, 0);
+      ArrayOf5_lookupByIndex(v1, 0, (_DWORD *)0xC00604, 0);
       sub_604745C0(v1, 0);
     }
     else
@@ -127303,7 +127173,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(MEMORY[0xCAADA8] + 83637) )
     {
       *(_BYTE *)(MEMORY[0xCAADA8] + 83637) = 0;
-      sub_60473DE4((_DWORD *)(a1 + 4), 0, (_DWORD *)0xC00604, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 4), 0, (_DWORD *)0xC00604, 0);
     }
     v4 = (_DWORD *)(a1 + 4);
     if ( *(_BYTE *)(MEMORY[0xCAB438] + 83576) )
@@ -127352,7 +127222,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60542CBC(_DWORD *a1)
   {
     *a1 = 12584500;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -127363,7 +127233,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60542CE8(_DWORD *a1)
   {
     *a1 = 12584500;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -127413,7 +127283,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047518C((int)v2, a1 + 3560, &dword_60CABE70, v6);
     if ( *(_BYTE *)(a1 + 3586) )
       *(_BYTE *)(a1 + 3584) = 0;
-    return sub_60473DE4(v2, 0, (_DWORD *)0xC00624, 1);
+    return ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xC00624, 1);
   }
 
 /* ============================================================================
@@ -127619,7 +127489,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054322C(_DWORD *a1)
   {
     *a1 = 12584524;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -127630,7 +127500,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60543258(_DWORD *a1)
   {
     *a1 = 12584524;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -127679,7 +127549,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047518C((int)v2, a1 + 3556, &dword_60CABEB0, v6);
     if ( *(_BYTE *)(a1 + 3582) )
       *(_BYTE *)(a1 + 3580) = 0;
-    return sub_60473DE4(v2, 0, (_DWORD *)0xC0063C, 1);
+    return ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xC0063C, 1);
   }
 
 /* ============================================================================
@@ -127885,7 +127755,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6045B330(MEMORY[0xC9CFB8], 0);
       sub_60478638(v1);
     }
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABEE4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABEE4, 0);
     *(_DWORD *)(a1 + 33472) = 0;
     *(_BYTE *)(a1 + 33497) = 1;
     *(_BYTE *)(a1 + 33498) = 1;
@@ -128088,7 +127958,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60543BF8(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABF04, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABF04, 0);
   }
 
 /* ============================================================================
@@ -128753,7 +128623,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6045B330(MEMORY[0xC9CFB8], 0);
       sub_60478638(v1);
     }
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABF0C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABF0C, 0);
     *(_BYTE *)(a1 + 33497) = 1;
     *(_WORD *)(a1 + 4684) = 0;
     return sub_6047EABC((_DWORD *)(a1 + 3672));
@@ -128843,7 +128713,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE *v3; // r4
     int v4; // t1
   
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABEF4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABEF4, 0);
     *(_BYTE *)(a1 + 33497) = 1;
     sub_60502548(a1 + 3632);
     v4 = *(unsigned __int8 *)(a1 + 33504);
@@ -128934,7 +128804,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE *v3; // r4
     int v4; // t1
   
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABF14, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABF14, 0);
     *(_BYTE *)(a1 + 33497) = 1;
     sub_60502548(a1 + 3632);
     v4 = *(unsigned __int8 *)(a1 + 33504);
@@ -129135,7 +129005,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 24204);
     sub_60547AA4(a1 + 5712);
     sub_605021B0(a1 + 3632);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 44));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 44));
     return a1;
   }
 
@@ -130290,10 +130160,10 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1165] = v3;
     a1[7855] = v3;
     a1[7857] = v3;
-    sub_60473DE4(a1 + 11, 1u, (_DWORD *)0xCABEEC, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 1u, (_DWORD *)0xCABEEC, 0);
     sub_6047455C(a1 + 11, 1);
     sub_6047459C(a1 + 11, 1);
-    sub_60473DE4(a1 + 11, 2u, (_DWORD *)0xCABEFC, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 2u, (_DWORD *)0xCABEFC, 0);
     sub_6047455C(a1 + 11, 2);
     return sub_6047459C(a1 + 11, 2);
   }
@@ -130430,10 +130300,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = a1 + 10;
-    sub_60473DE4(a1 + 10, 0, (_DWORD *)0xCAC3F0, 0);
-    sub_60473DE4(a1 + 1453, 0, (_DWORD *)0xCAC3F0, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 0, (_DWORD *)0xCAC3F0, 0);
+    ArrayOf5_lookupByIndex(a1 + 1453, 0, (_DWORD *)0xCAC3F0, 0);
     a1[1182] = 0;
-    sub_60473DE4(v2, 1u, (_DWORD *)0xCAC408, 0);
+    ArrayOf5_lookupByIndex(v2, 1u, (_DWORD *)0xCAC408, 0);
     v3 = a1 + 4616;
     v4 = a1[919];
     if ( *(_DWORD *)(MEMORY[0xC9CFB8] + 16) )
@@ -130461,7 +130331,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6();
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
     sub_6045B330(MEMORY[0xC9CFB8], a1[4109]);
-    sub_60473DE4(v2, 2u, (_DWORD *)0xCAC410, 0);
+    ArrayOf5_lookupByIndex(v2, 2u, (_DWORD *)0xCAC410, 0);
     result = ArrayOf20_getEntryPtr((int)v2, 2u);
     if ( result )
       return (*(int (__fastcall **)(int))(*(_DWORD *)result + 96))(result);
@@ -130563,8 +130433,8 @@ static inline unsigned int uxtb16(unsigned int x)
     char v3; // r1
     int result; // r0
   
-    sub_60473DE4(a1 + 10, 0, (_DWORD *)0xCAC3F8, 0);
-    sub_60473DE4(a1 + 1453, 0, (_DWORD *)0xCAC3F8, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 0, (_DWORD *)0xCAC3F8, 0);
+    ArrayOf5_lookupByIndex(a1 + 1453, 0, (_DWORD *)0xCAC3F8, 0);
     v2 = a1[919];
     v3 = *(_BYTE *)(v2 + 64);
     if ( a1[4616] )
@@ -130640,7 +130510,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_6054963C(0);
-    return sub_60473DE4((_DWORD *)(a1 + 12892), 0, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12892), 0, v3, 0);
   }
 
 /* ============================================================================
@@ -130683,7 +130553,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = sub_6054963C(0);
-    return sub_60473DE4((_DWORD *)(a1 + 9352), 0, v3, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 9352), 0, v3, 0);
   }
 
 /* ============================================================================
@@ -130724,7 +130594,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    sub_60473DE4(a1 + 10, 1u, (_DWORD *)0xCAC408, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 1u, (_DWORD *)0xCAC408, 0);
     *(_BYTE *)(a1[919] + 64) |= 1u;
     *(_BYTE *)(a1[920] + 64) |= 1u;
     result = a1[918];
@@ -130790,7 +130660,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    sub_60473DE4(a1 + 10, 1u, (_DWORD *)0xCAC400, 0);
+    ArrayOf5_lookupByIndex(a1 + 10, 1u, (_DWORD *)0xCAC400, 0);
     *(_BYTE *)(a1[919] + 64) |= 1u;
     *(_BYTE *)(a1[920] + 64) |= 1u;
     result = a1[918];
@@ -131046,7 +130916,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047643C((struct sead_IDisposer *)(a1 + 9352));
     sub_6047643C((struct sead_IDisposer *)(a1 + 5812));
     sub_605021B0(a1 + 3700);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -131067,7 +130937,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047643C((struct sead_IDisposer *)(a1 + 9352));
     sub_6047643C((struct sead_IDisposer *)(a1 + 5812));
     sub_605021B0((_DWORD *)(a1 + 3700));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 40));
     return operator delete(a1);
   }
 
@@ -132196,7 +132066,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = "In";
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, v3, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, v3, 0);
     *(_BYTE *)(a1 + 3593) = 1;
     return 1;
   }
@@ -132236,7 +132106,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2[0] = 12321336;
     v2[1] = "Out";
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, v2, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, v2, 0);
   }
 
 /* ============================================================================
@@ -132301,7 +132171,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60549DD8(_DWORD *a1)
   {
     *a1 = 12584912;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -132312,7 +132182,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60549E08(_DWORD *a1)
   {
     *a1 = 12584912;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -132564,7 +132434,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3638) = 1;
     *(_BYTE *)(a1 + 3637) = 1;
     v2 = 13087744;
-    result = (int *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3454]);
+    result = (int *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3454]);
     v4 = *(int **)(MEMORY[0xC7B400] + 27180);
     v5 = result == v4;
     if ( result != v4 )
@@ -132589,9 +132459,9 @@ static inline unsigned int uxtb16(unsigned int x)
         *v6 = *(_DWORD *)(v2 + 108);
         v6[1] = v8;
         v6[2] = v9;
-        sub_60473DE4(v7, 2u, (_DWORD *)0xCAC804, 0);
-        sub_60473DE4(v7, 0, (_DWORD *)0xCAC80C, 1);
-        return (int *)sub_60473DE4(v7, 1u, (_DWORD *)0xCAC814, 0);
+        ArrayOf5_lookupByIndex(v7, 2u, (_DWORD *)0xCAC804, 0);
+        ArrayOf5_lookupByIndex(v7, 0, (_DWORD *)0xCAC80C, 1);
+        return (int *)ArrayOf5_lookupByIndex(v7, 1u, (_DWORD *)0xCAC814, 0);
       }
     }
     return result;
@@ -132696,7 +132566,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054A5D8(_DWORD *a1)
   {
     *a1 = 12585040;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 11));
     return a1;
   }
 
@@ -132707,7 +132577,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054A608(_DWORD *a1)
   {
     *a1 = 12585040;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 11));
     return operator delete((int)a1);
   }
 
@@ -132850,7 +132720,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v9; // s0
     float v10; // s4
   
-    v1 = (int *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3454]);
+    v1 = (int *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3454]);
     v2 = 0;
     v3 = *(int **)(MEMORY[0xC7B400] + 27180);
     v4 = v1 == v3;
@@ -132914,7 +132784,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v20; // [sp+14h] [bp-14h]
     _DWORD v21[4]; // [sp+18h] [bp-10h] BYREF
   
-    result = sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3454]);
+    result = ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3454]);
     if ( result != *(_DWORD *)(MEMORY[0xC7B400] + 27180) )
     {
       v3 = *(_DWORD *)result;
@@ -132995,7 +132865,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v9; // s4
     float v10; // s2
   
-    v1 = (int *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3454]);
+    v1 = (int *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3454]);
     v2 = 0;
     v3 = *(int **)(MEMORY[0xC7B400] + 27180);
     v4 = v1 == v3;
@@ -133167,7 +133037,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3594) = 1;
     v3[0] = 12321336;
     v3[1] = "In";
-    result = sub_60473DE4((_DWORD *)(a1 + 40), 0, v3, 0);
+    result = ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, v3, 0);
     *(_BYTE *)(a1 + 3593) = 1;
     return result;
   }
@@ -133208,7 +133078,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3594) = 1;
     v2[0] = 12321336;
     v2[1] = "Out";
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, v2, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, v2, 0);
   }
 
 /* ============================================================================
@@ -133272,7 +133142,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054B378(_DWORD *a1)
   {
     *a1 = 12585168;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -133283,7 +133153,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054B3A8(_DWORD *a1)
   {
     *a1 = 12585168;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -133524,7 +133394,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3594) = 1;
     v3[0] = 12321336;
     v3[1] = "In";
-    result = sub_60473DE4((_DWORD *)(a1 + 40), 0, v3, 0);
+    result = ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, v3, 0);
     *(_BYTE *)(a1 + 3593) = 1;
     return result;
   }
@@ -133565,7 +133435,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3594) = 1;
     v2[0] = 12321336;
     v2[1] = "Out";
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, v2, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, v2, 0);
   }
 
 /* ============================================================================
@@ -133629,7 +133499,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054BA64(_DWORD *a1)
   {
     *a1 = 12585296;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -133640,7 +133510,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054BA90(_DWORD *a1)
   {
     *a1 = 12585296;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -133886,7 +133756,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v2 )
       v3 = 0;
     sub_6050A660(*(_DWORD *)(a1 + 4 * v3 + 3672));
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCACA14, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCACA14, 0);
     if ( *(_BYTE *)(a1 + 4104) )
     {
       v5 = *(_DWORD **)(a1 + 4096);
@@ -133895,7 +133765,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = v5[1];
       v13 = 12321336;
       v14 = v6;
-      sub_6047E0EC(&v13, *(v4 - 108), 0);
+      MessageQueue_postType3(&v13, *(v4 - 108), 0);
       v7 = *v4;
       (*(void (__fastcall **)(_DWORD))(*(_DWORD *)*v4 + 12))(*v4);
       v8 = *(_DWORD *)(v7 + 4);
@@ -133912,7 +133782,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v14 = v11;
       v9 = *(_DWORD *)(a1 + 3660);
     }
-    sub_6047E0EC(&v13, v9, 0);
+    MessageQueue_postType3(&v13, v9, 0);
     SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 10);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
   }
@@ -133937,7 +133807,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054C074(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCACA34, 1);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCACA34, 1);
   }
 
 /* ============================================================================
@@ -134068,7 +133938,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall SE_SYS_DIALOGUE_OUT_ref_2(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCACA2C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCACA2C, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_OUT", 0);
   }
 
@@ -134155,7 +134025,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3688) = 0;
     thunk_sub_60909E64(a1 + 3692);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return a1;
   }
 
@@ -134171,7 +134041,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3688) = 0;
     thunk_sub_60909E64((_DWORD *)(a1 + 3692));
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return operator delete(a1);
   }
 
@@ -134450,7 +134320,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3688) = 1;
     *(_BYTE *)(a1 + 3689) = 1;
     *(_DWORD *)(a1 + 4096) = a2;
-    sub_60473DE4((_DWORD *)(a1 + 40), 3u, (_DWORD *)0xCACA3C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 3u, (_DWORD *)0xCACA3C, 0);
     if ( *v5 )
     {
       *(_DWORD *)(a1 + 3684) = 2;
@@ -134617,7 +134487,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054D06C(_DWORD *a1)
   {
     *a1 = 12585552;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -134628,7 +134498,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054D098(_DWORD *a1)
   {
     *a1 = 12585552;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -134951,7 +134821,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v5 = 7;
           goto LABEL_9;
         case '#':
-          sub_60473DE4((_DWORD *)(a1 + 40), 3u, (_DWORD *)0xCACBEC, 1);
+          ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 3u, (_DWORD *)0xCACBEC, 1);
           v14 = 4;
           break;
         case '$':
@@ -135008,7 +134878,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = v5;
     if ( v5 >= 8 )
       v8 = 0;
-    sub_6047E0EC(v17, *(_DWORD *)(a1 + 4 * v8 + 3648), 1);
+    MessageQueue_postType3(v17, *(_DWORD *)(a1 + 4 * v8 + 3648), 1);
     if ( v2 == 1 )
     {
   LABEL_25:
@@ -135237,7 +135107,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float *result; // r0
   
     v2 = a1 + 40;
-    sub_60473DE4((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCACBD4, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCACBD4, 0);
     sub_6047455C(v2, 1u);
     v3 = ArrayOf20_getEntryPtr(v2, 1u);
     (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 96))(v3);
@@ -135276,7 +135146,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[936] = 0;
     sub_6054F09C((int)a1);
     sub_60407E18(MEMORY[0xC9A1E8], (int)a1);
-    return sub_60473DE4(a1 + 10, 2u, (_DWORD *)0xCACBDC, 0);
+    return ArrayOf5_lookupByIndex(a1 + 10, 2u, (_DWORD *)0xCACBDC, 0);
   }
 
 /* ============================================================================
@@ -135289,7 +135159,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     if ( (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 40, 2u) + 51) & 1) != 0 )
-      sub_60473DE4(v2, 2u, (_DWORD *)0xCACBE4, 1);
+      ArrayOf5_lookupByIndex(v2, 2u, (_DWORD *)0xCACBE4, 1);
     if ( MEMORY[0xCC6484] )
       *(float *)(a1 + 3788) = *(float *)(MEMORY[0xCC6484] + 124) + 320.0;
     return sub_6054F09C(a1);
@@ -135392,7 +135262,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054E2FC(_DWORD *a1)
   {
     *a1 = 12585568;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -135403,7 +135273,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054E32C(_DWORD *a1)
   {
     *a1 = 12585568;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -135680,7 +135550,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (unsigned int)result >= 6 )
         result = 0;
       v8 = *(_DWORD *)(v7 + 72 * result + 36);
-      sub_60473DE4(v6, 0, (_DWORD *)0xCACBCC, 0);
+      ArrayOf5_lookupByIndex(v6, 0, (_DWORD *)0xCACBCC, 0);
       switch ( v8 )
       {
         case 6:
@@ -136137,7 +136007,7 @@ static inline unsigned int uxtb16(unsigned int x)
         StateMgr::changeState(a1 + 6, 13290892);
         a1[950] = 0;
       }
-      sub_60473DE4(a1 + 10, 1u, (_DWORD *)0xCACBD4, 0);
+      ArrayOf5_lookupByIndex(a1 + 10, 1u, (_DWORD *)0xCACBD4, 0);
       sub_6047455C(a1 + 10, 1);
       v9 = ArrayOf20_getEntryPtr(a1 + 10, 1);
       return (*(int (__fastcall **)(int))(*(_DWORD *)v9 + 96))(v9);
@@ -136221,7 +136091,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = "PointGet_1UP_00";
       v3 = *(_DWORD *)(a1 + 3660);
     }
-    return sub_6047E0EC(&v5, v3, 1);
+    return MessageQueue_postType3(&v5, v3, 1);
   }
 
 /* ============================================================================
@@ -136347,7 +136217,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054FBB4(int a1)
   {
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCACF00, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCACF00, 0);
   }
 
 /* ============================================================================
@@ -136405,7 +136275,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12585696;
     *(_WORD *)(a1 + 3608) = 0;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -136417,7 +136287,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12585696;
     *(_WORD *)(a1 + 3608) = 0;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 40));
     return operator delete(a1);
   }
 
@@ -136456,7 +136326,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v5[0] = 1;
     sub_60476030((int)v2, &dword_60CACF6C, v5);
-    sub_60473DE4(v2, 0, (_DWORD *)0xCACF00, 0);
+    ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCACF00, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
     return sub_60473B58(v2, 14, 0);
   }
@@ -136579,11 +136449,11 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 13291280;
     else
       v3 = 13291272;
-    sub_6047E0EC((_DWORD *)v3, *(_DWORD *)(a1 + 3588), 0);
-    sub_6047E0EC((_DWORD *)v3, *(_DWORD *)(a1 + 3592), 0);
-    sub_6047E0EC((_DWORD *)v3, *(_DWORD *)(a1 + 3596), 0);
-    sub_6047E0EC((_DWORD *)v3, *(_DWORD *)(a1 + 3600), 0);
-    sub_6047E0EC((_DWORD *)v3, *(_DWORD *)(a1 + 3604), 0);
+    MessageQueue_postType3((_DWORD *)v3, *(_DWORD *)(a1 + 3588), 0);
+    MessageQueue_postType3((_DWORD *)v3, *(_DWORD *)(a1 + 3592), 0);
+    MessageQueue_postType3((_DWORD *)v3, *(_DWORD *)(a1 + 3596), 0);
+    MessageQueue_postType3((_DWORD *)v3, *(_DWORD *)(a1 + 3600), 0);
+    MessageQueue_postType3((_DWORD *)v3, *(_DWORD *)(a1 + 3604), 0);
     return StateMgr::changeState((_DWORD *)(a1 + 24), 13291320);
   }
 
@@ -136744,7 +136614,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60550564(_DWORD *a1)
   {
     *a1 = 12585824;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 21));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 21));
     return a1;
   }
 
@@ -136755,7 +136625,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60550590(_DWORD *a1)
   {
     *a1 = 12585824;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 21));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 21));
     return operator delete((int)a1);
   }
 
@@ -137274,8 +137144,8 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605511F8(int a1)
   {
     *(_BYTE *)(a1 + 41) = 1;
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD000, 0);
-    return sub_60473DE4((_DWORD *)(a1 + 3652), 0, (_DWORD *)0xCAD000, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD000, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3652), 0, (_DWORD *)0xCAD000, 0);
   }
 
 /* ============================================================================
@@ -137460,7 +137330,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 13291544;
     else
       v3 = 13291536;
-    sub_60473DE4(a1 + 11, 1u, (_DWORD *)v3, 0);
+    ArrayOf5_lookupByIndex(a1 + 11, 1u, (_DWORD *)v3, 0);
     v5 = a1 + 17555;
     v4 = a1[17555];
     if ( v4 )
@@ -137653,8 +137523,8 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60551970(int a1)
   {
     *(_DWORD *)(MEMORY[0xCC6D78] + 44) &= ~8u;
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD008, 0);
-    return sub_60473DE4((_DWORD *)(a1 + 3652), 0, (_DWORD *)0xCAD008, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD008, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3652), 0, (_DWORD *)0xCAD008, 0);
   }
 
 /* ============================================================================
@@ -137875,7 +137745,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 69336);
     sub_60555668(a1 + 69248);
     sub_60555668(a1 + 69160);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 65480));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 65480));
     sub_60555668(a1 + 65388);
     sub_60555668(a1 + 65300);
     sub_60555668(a1 + 65212);
@@ -137888,7 +137758,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 64596);
     sub_60555668(a1 + 64508);
     sub_60555668(a1 + 64420);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 60740));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 60740));
     sub_60555668(a1 + 60648);
     sub_60555668(a1 + 60560);
     sub_60555668(a1 + 60472);
@@ -137901,7 +137771,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 59856);
     sub_60555668(a1 + 59768);
     sub_60555668(a1 + 59680);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 56000));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 56000));
     sub_60555668(a1 + 55908);
     sub_60555668(a1 + 55820);
     sub_60555668(a1 + 55732);
@@ -137914,7 +137784,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 55116);
     sub_60555668(a1 + 55028);
     sub_60555668(a1 + 54940);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 51260));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 51260));
     sub_60555668(a1 + 51168);
     sub_60555668(a1 + 51080);
     sub_60555668(a1 + 50992);
@@ -137927,7 +137797,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 50376);
     sub_60555668(a1 + 50288);
     sub_60555668(a1 + 50200);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 46520));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 46520));
     sub_60555668(a1 + 46428);
     sub_60555668(a1 + 46340);
     sub_60555668(a1 + 46252);
@@ -137940,7 +137810,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 45636);
     sub_60555668(a1 + 45548);
     sub_60555668(a1 + 45460);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 41780));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 41780));
     sub_60555668(a1 + 41688);
     sub_60555668(a1 + 41600);
     sub_60555668(a1 + 41512);
@@ -137953,7 +137823,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 40896);
     sub_60555668(a1 + 40808);
     sub_60555668(a1 + 40720);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 37040));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 37040));
     sub_60555668(a1 + 36948);
     sub_60555668(a1 + 36860);
     sub_60555668(a1 + 36772);
@@ -137966,7 +137836,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 36156);
     sub_60555668(a1 + 36068);
     sub_60555668(a1 + 35980);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 32300));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 32300));
     sub_60555668(a1 + 32208);
     sub_60555668(a1 + 32120);
     sub_60555668(a1 + 32032);
@@ -137979,7 +137849,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 31416);
     sub_60555668(a1 + 31328);
     sub_60555668(a1 + 31240);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 27560));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 27560));
     thunk_sub_60909E64(a1 + 27148);
     sub_6050A4C4(a1 + 19932);
     sub_605021B0(a1 + 17840);
@@ -137987,7 +137857,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047643C((struct sead_IDisposer *)(a1 + 10732));
     sub_6047643C((struct sead_IDisposer *)(a1 + 7192));
     sub_6047643C((struct sead_IDisposer *)(a1 + 3652));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 44));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 44));
     return a1;
   }
 
@@ -138522,8 +138392,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v27 = 13291632;
     else
       v27 = 13291624;
-    sub_6047E0EC((_DWORD *)v27, *(_DWORD *)(a1 + 17824), 0);
-    sub_60473DE4((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCAD010, 0);
+    MessageQueue_postType3((_DWORD *)v27, *(_DWORD *)(a1 + 17824), 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCAD010, 0);
     v28 = *(_DWORD **)(a1 + 3556);
     if ( *(_DWORD *)(a1 + 3552) > 1u )
       v28 += 5;
@@ -138546,9 +138416,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)v24 + 64) = v34;
     v35 = sub_60473B4C(a1 + 44);
     sub_6098F1D4(v35);
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD000, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD000, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3556) + 104))(**(_DWORD **)(a1 + 3556));
-    sub_60473DE4((_DWORD *)(a1 + 3652), 0, (_DWORD *)0xCAD000, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3652), 0, (_DWORD *)0xCAD000, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 7164) + 104))(**(_DWORD **)(a1 + 7164));
     sub_60473B58(a1 + 44, 14, 0);
     return StateMgr::changeState((_DWORD *)(a1 + 24), 13291672);
@@ -139207,7 +139077,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAD340);
     }
     sub_604754E4(a1, (int *)(a1 + 3668), &dword_60CAD350, 2);
-    sub_60473DE4((_DWORD *)a1, 1u, (_DWORD *)0xCAD2C4, 1);
+    ArrayOf5_lookupByIndex((_DWORD *)a1, 1u, (_DWORD *)0xCAD2C4, 1);
     v6 = 0;
     v7 = 0;
     v8 = 144 * a2 + 11549608;
@@ -139231,7 +139101,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047459C(a1, 1);
     v13[0] = 12321336;
     v13[1] = "StarCoinListWin_WorldName_00";
-    sub_6047E0EC(v13, *(_DWORD *)(a1 + 3656), 1);
+    MessageQueue_postType3(v13, *(_DWORD *)(a1 + 3656), 1);
     *(_BYTE *)(*(_DWORD *)(a1 + 3568) + 64) &= ~1u;
     *(_BYTE *)(a1 + 4737) = 0;
     v11 = sub_60473B4C(a1);
@@ -139405,7 +139275,7 @@ static inline unsigned int uxtb16(unsigned int x)
     LetterAnimOn_ref_98530C(v17, a4, a8);
     v20[0] = 12321336;
     v20[1] = "StarCoinListWin_CourseNum_00";
-    sub_6047E0EC(v20, v17, 1);
+    MessageQueue_postType3(v20, v17, 1);
     sub_60855928(*(_DWORD *)(a1 + 4), v17);
     sub_608589FC(a6, v17);
     sub_608503F8(a1 + 52, *(_DWORD *)(MEMORY[0xCCF464] + 36), *(_DWORD *)(a8 + 36), *(_DWORD *)(a5 + 12));
@@ -139554,7 +139424,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v13 = *(_DWORD *)(v10 - 4);
       v14 = *(_DWORD *)v10;
-      sub_60473DE4((_DWORD *)v3, 0, (_DWORD *)0xCAD2B4, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)v3, 0, (_DWORD *)0xCAD2B4, 0);
       (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(v3 + 3512) + 108))(**(_DWORD **)(v3 + 3512));
       if ( *(_BYTE *)(v10 + 4) )
       {
@@ -139570,7 +139440,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v16 = sub_60408230(v41, v13, v14);
         if ( sub_603F69FC(v42, (unsigned __int8)v13, (unsigned __int8)v14) <= 1 )
         {
-          sub_60473DE4((_DWORD *)v3, 0, (_DWORD *)0xCAD2BC, 0);
+          ArrayOf5_lookupByIndex((_DWORD *)v3, 0, (_DWORD *)0xCAD2BC, 0);
           (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(v3 + 3512) + 108))(**(_DWORD **)(v3 + 3512));
           v16 = 0x80;
         }
@@ -139619,7 +139489,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v17 = sub_60408230(v41, v13, v14);
         if ( sub_603F69FC(v42, (unsigned __int8)v13, (unsigned __int8)v14) <= 1 )
         {
-          sub_60473DE4((_DWORD *)v3, 0, (_DWORD *)0xCAD2BC, 0);
+          ArrayOf5_lookupByIndex((_DWORD *)v3, 0, (_DWORD *)0xCAD2BC, 0);
           (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(v3 + 3512) + 108))(**(_DWORD **)(v3 + 3512));
           v17 = 0x80;
         }
@@ -139678,12 +139548,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = v43;
     v46[0] = 12321336;
     v46[1] = "StarCoinListWin_TotalSCoin_00";
-    sub_6047E0EC(v46, *(_DWORD *)(v3 + 3660), 1);
+    MessageQueue_postType3(v46, *(_DWORD *)(v3 + 3660), 1);
     *(_BYTE *)(v3 + 4737) = 0;
     if ( v43 == v9 )
     {
       *(_BYTE *)(v3 + 4737) = 1;
-      sub_60473DE4((_DWORD *)v3, 1u, (_DWORD *)0xCAD2C4, 1);
+      ArrayOf5_lookupByIndex((_DWORD *)v3, 1u, (_DWORD *)0xCAD2C4, 1);
     }
     return v7;
   }
@@ -139776,8 +139646,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_BYTE *)(a1 + 18826) = 1;
     v2 = (_DWORD *)(a1 + 44);
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD448, 0);
-    result = sub_60473DE4(v2, 1u, (_DWORD *)0xCAD460, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD448, 0);
+    result = ArrayOf5_lookupByIndex(v2, 1u, (_DWORD *)0xCAD460, 0);
     *(_BYTE *)(a1 + 3648) = 1;
     *(_BYTE *)(a1 + 3649) = 1;
     return result;
@@ -140363,7 +140233,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502548(a1 + 5820);
     *(_WORD *)(a1 + 6872) = 0;
     sub_6047EABC((_DWORD *)(a1 + 5860));
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD450, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD450, 0);
     sub_604741D8((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCAD460, 0);
     *(_BYTE *)(a1 + 3648) = 1;
     *(_BYTE *)(a1 + 3649) = 1;
@@ -140524,7 +140394,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 44);
     sub_604741D8((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD450, 0);
-    sub_60473DE4(v2, 1u, (_DWORD *)0xCAD460, 0);
+    ArrayOf5_lookupByIndex(v2, 1u, (_DWORD *)0xCAD460, 0);
     *(_BYTE *)(a1 + 3648) = 1;
     *(_BYTE *)(a1 + 3649) = 1;
     *(_BYTE *)(a1 + 11587) = 0;
@@ -140855,7 +140725,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 1115);
     thunk_sub_60909E64(a1 + 1014);
     thunk_sub_60909E64(a1 + 913);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 11));
     return a1;
   }
 
@@ -140877,7 +140747,7 @@ static inline unsigned int uxtb16(unsigned int x)
     thunk_sub_60909E64(a1 + 1115);
     thunk_sub_60909E64(a1 + 1014);
     thunk_sub_60909E64(a1 + 913);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 11));
     return operator delete((int)a1);
   }
 
@@ -141539,9 +141409,9 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     *(_BYTE *)(a1 + 3688) = 0;
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD668, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD668, 0);
     *(_BYTE *)(a1 + 3672) = 1;
-    sub_60473DE4(v2, 1u, (_DWORD *)0xCAD670, 0);
+    ArrayOf5_lookupByIndex(v2, 1u, (_DWORD *)0xCAD670, 0);
     *(_BYTE *)(a1 + 3673) = 1;
     *(_BYTE *)(a1 + 3688) = 1;
     *(_BYTE *)(a1 + 3685) = 1;
@@ -141648,7 +141518,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = sub_60473DE4((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCAD670, 0);
+    result = ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCAD670, 0);
     *(_BYTE *)(a1 + 3673) = 1;
     *(_BYTE *)(a1 + 3688) = 1;
     *(_BYTE *)(a1 + 3685) = 1;
@@ -141763,7 +141633,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60558120(_DWORD *a1)
   {
     *a1 = 12586208;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -141774,7 +141644,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60558150(_DWORD *a1)
   {
     *a1 = 12586208;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -142305,7 +142175,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60558BB4(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD7B8, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD7B8, 0);
     *(_BYTE *)(a1 + 3597) = 1;
     *(_BYTE *)(a1 + 3598) = 1;
     return 1;
@@ -142342,7 +142212,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60558C2C(int a1)
   {
     *(_DWORD *)(a1 + 3592) = 300;
-    return sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD7C0, 1);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD7C0, 1);
   }
 
 /* ============================================================================
@@ -142424,7 +142294,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60558E84(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD85C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD85C, 0);
     *(_BYTE *)(a1 + 3593) = 1;
     *(_BYTE *)(a1 + 3594) = 1;
     return 1;
@@ -142485,7 +142355,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60558F30(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD864, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD864, 0);
     *(_BYTE *)(a1 + 3593) = 1;
     return 1;
   }
@@ -142559,7 +142429,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605590B4(_DWORD *a1)
   {
     *a1 = 12586356;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -142570,7 +142440,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605590E0(_DWORD *a1)
   {
     *a1 = 12586356;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -142898,7 +142768,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v3 / 60 != *(_DWORD *)(a1 + 3616) )
       {
         *(_DWORD *)(a1 + 3616) = v3 / 60;
-        sub_60473DE4((_DWORD *)(a1 + 64), 0, (_DWORD *)0xCAD934, 0);
+        ArrayOf5_lookupByIndex((_DWORD *)(a1 + 64), 0, (_DWORD *)0xCAD934, 0);
       }
       return sub_6047DEC8((_DWORD *)(a1 + 64), *(_DWORD *)(a1 + 24), 1);
     }
@@ -142912,7 +142782,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605598C0(_DWORD *a1)
   {
     *a1 = 12586500;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 16));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 16));
     return a1;
   }
 
@@ -142923,7 +142793,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605598EC(_DWORD *a1)
   {
     *a1 = 12586500;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 16));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 16));
     return operator delete((int)a1);
   }
 
@@ -143044,7 +142914,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_BYTE *)(a1 + 3625) = 0;
     *(_BYTE *)(a1 + 3626) = 1;
-    return sub_60473DE4((_DWORD *)(a1 + 64), 0, (_DWORD *)0xCAD92C, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 64), 0, (_DWORD *)0xCAD92C, 0);
   }
 
 /* ============================================================================
@@ -143058,7 +142928,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3625);
     if ( !result )
     {
-      sub_60473DE4((_DWORD *)(a1 + 64), 0, (_DWORD *)0xCAD93C, 0);
+      ArrayOf5_lookupByIndex((_DWORD *)(a1 + 64), 0, (_DWORD *)0xCAD93C, 0);
       *(_BYTE *)(a1 + 3625) = 1;
       return 1;
     }
@@ -143188,7 +143058,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60559EA8(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD984, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD984, 0);
     *(_BYTE *)(a1 + 3701) = 1;
     *(_BYTE *)(a1 + 3702) = 1;
     return 1;
@@ -143261,7 +143131,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60559F80(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD98C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCAD98C, 0);
     *(_BYTE *)(a1 + 3702) = 1;
     return 1;
   }
@@ -143335,7 +143205,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (struct sead_IDisposer *)(a1 + 897);
     EffectData_release((int)(a1 + 897));
     sead::IDisposer::~IDisposer(v3);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return a1;
   }
 
@@ -143354,7 +143224,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (struct sead_IDisposer *)(a1 + 897);
     EffectData_release((int)(a1 + 897));
     sead::IDisposer::~IDisposer(v3);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return operator delete((int)a1);
   }
 
@@ -143642,7 +143512,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055A7C8(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCADA4C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCADA4C, 0);
     *(_BYTE *)(a1 + 4038) = 1;
     return 1;
   }
@@ -143686,7 +143556,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055A858(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCADA54, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCADA54, 0);
     *(_BYTE *)(a1 + 4038) = 1;
     return 1;
   }
@@ -143720,7 +143590,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCADA64, 1);
+    result = ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCADA64, 1);
     *(_BYTE *)(a1 + 4041) = 1;
     *(_BYTE *)(a1 + 4042) = 0;
     *(_BYTE *)(a1 + 4038) = 0;
@@ -143776,7 +143646,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055A9D4(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCADA5C, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCADA5C, 0);
     *(_BYTE *)(a1 + 4038) = 1;
     return 1;
   }
@@ -143856,7 +143726,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12586756;
     v2 = (struct sead_IDisposer *)(a1 + 10);
     thunk_sub_60909E64(a1 + 902);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return a1;
   }
 
@@ -143871,7 +143741,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12586756;
     v2 = (struct sead_IDisposer *)(a1 + 10);
     thunk_sub_60909E64(a1 + 902);
-    sub_60475AE8(v2);
+    Disposer_destroyAllocated(v2);
     return operator delete((int)a1);
   }
 
@@ -143955,14 +143825,14 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(MEMORY[0xCC6D78] + 20) = 1;
     v9 = 12321336;
     v10 = "Title_Title_00";
-    sub_6047E0EC(&v9, a1[1003], 0);
+    MessageQueue_postType3(&v9, a1[1003], 0);
     v9 = 12321336;
     v10 = "Title_Title_00";
-    sub_6047E0EC(&v9, a1[1004], 0);
+    MessageQueue_postType3(&v9, a1[1004], 0);
     *(_BYTE *)(v7 + 20) = 1;
     v9 = 12321336;
     v10 = "Title_Ver_00";
-    sub_6047E0EC(&v9, a1[1005], 3);
+    MessageQueue_postType3(&v9, a1[1005], 3);
     *(_BYTE *)(a1[1005] + 64) &= ~1u;
     return sub_6045BF58((int)(a1 + 902), 0);
   }
@@ -144223,7 +144093,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = InOutR_InOutL_ref(1u);
     v4[0] = 12321336;
     v4[1] = v2;
-    return sub_60473DE4(v1, 0, v4, 0);
+    return ArrayOf5_lookupByIndex(v1, 0, v4, 0);
   }
 
 /* ============================================================================
@@ -144581,7 +144451,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = InOutR_InOutL_ref(1);
     v5[0] = 12321336;
     v5[1] = v3;
-    sub_60473DE4((_DWORD *)(a1 + 36), 0, v5, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, v5, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3548) + 104))(**(_DWORD **)(a1 + 3548));
     sub_60473B58(a1 + 36, 14, 0);
     return StateMgr::changeState((_DWORD *)(a1 + 20), 13294612);
@@ -145327,7 +145197,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *v13 = 9;
     }
-    sub_60473DE4((_DWORD *)(v5 + 44), 0, (_DWORD *)0xCADD20, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(v5 + 44), 0, (_DWORD *)0xCADD20, 0);
     *(_BYTE *)(v5 + 13584) = 1;
     v15 = *v13;
     if ( *v13 < 0 )
@@ -145655,7 +145525,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(unsigned __int8 *)(a1 + 13752) ^ 1;
     if ( v1 >= 2 )
       v1 = 0;
-    return sub_60473DE4((_DWORD *)(a1 + 3540 * v1 + 13756), 0, (_DWORD *)0xCADD68, 0);
+    return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3540 * v1 + 13756), 0, (_DWORD *)0xCADD68, 0);
   }
 
 /* ============================================================================
@@ -145723,7 +145593,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v7 = 13294888;
     else
       v7 = 13294896;
-    sub_60473DE4((_DWORD *)(a1 + 44), 1u, (_DWORD *)v7, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 1u, (_DWORD *)v7, 0);
     sub_6055F98C(a1);
     *(_BYTE *)(a1 + 13585) = 1;
     *(_BYTE *)(a1 + 13749) = 1;
@@ -145861,7 +145731,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055DABC(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCADD40, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCADD40, 0);
     *(_BYTE *)(a1 + 13584) = 1;
     *(_BYTE *)(a1 + 13749) = 1;
     return sub_608169AC(MEMORY[0xCC6B68]);
@@ -145916,7 +145786,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055DB8C(int a1)
   {
-    sub_60473DE4((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCADD40, 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCADD40, 0);
     *(_BYTE *)(a1 + 13584) = 1;
     *(_BYTE *)(a1 + 13749) = 1;
     return sub_608169AC(MEMORY[0xCC6B68]);
@@ -146019,7 +145889,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 1544);
     thunk_sub_60909E64(a1 + 1443);
     sub_605021B0(a1 + 923);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 11));
     return a1;
   }
 
@@ -146035,7 +145905,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4((int)(a1 + 1544));
     thunk_sub_60909E64(a1 + 1443);
     sub_605021B0(a1 + 923);
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 11));
     return operator delete((int)a1);
   }
 
@@ -146741,7 +146611,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v7 = v3 == 0;
       if ( !v7 )
       {
-        sub_6047E0EC((_DWORD *)0xCADD58, v3, 1);
+        MessageQueue_postType3((_DWORD *)0xCADD58, v3, 1);
         v4 = *v5;
       }
       v8 = *(_DWORD *)(v2 + 13452);
@@ -146751,7 +146621,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v10 = v8 == 0;
       if ( !v10 )
       {
-        sub_6047E0EC((_DWORD *)0xCADD58, v8, 1);
+        MessageQueue_postType3((_DWORD *)0xCADD58, v8, 1);
         v4 = *v5;
       }
       v11 = *(_DWORD *)(v2 + 13448);
@@ -146760,7 +146630,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result )
         v12 = v11 == 0;
       if ( !v12 )
-        return sub_6047E0EC((_DWORD *)0xCADD58, v11, 1);
+        return MessageQueue_postType3((_DWORD *)0xCADD58, v11, 1);
     }
     return result;
   }
@@ -146866,7 +146736,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v14 = (_DWORD *)(a1 + 44);
         sub_6047457C(v14, 2);
-        sub_60473DE4(v14, 2u, (_DWORD *)0xCADD38, 0);
+        ArrayOf5_lookupByIndex(v14, 2u, (_DWORD *)0xCADD38, 0);
         result = sub_6047455C(v14, 2);
         *v13 = 0;
       }
@@ -146882,7 +146752,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v20 >= 0xE )
         v20 = 0;
       v21 = *(float *)(*(_DWORD *)(a1 + 4 * v20 + 13392) + 24) - v5[6];
-      v22 = sub_6000F7B8();
+      v22 = FixedPoint_atan2();
       *(_BYTE *)(*v16 + 64) |= 1u;
       v23 = *(float *)(((v22 >> 20) & 0xFF0) + 0xB3A48C);
       v24 = *(float *)(((v22 >> 20) & 0xFF0) + 0xB3A490);
@@ -147028,7 +146898,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(unsigned __int8 *)(a1 + 13750);
       if ( !*(_BYTE *)(a1 + 13750) )
       {
-        result = sub_60473DE4((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCADD38, 1);
+        result = ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCADD38, 1);
         *(_BYTE *)(a1 + 13750) = 1;
       }
     }
@@ -147659,25 +147529,25 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60560CD8(_DWORD *a1)
   {
     a1[7989] = 12587188;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 15089));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 14202));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 13315));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 12428));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 11541));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 10654));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 9767));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 8880));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 7993));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 15089));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 14202));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 13315));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 12428));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 11541));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 10654));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 9767));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 8880));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 7993));
     *a1 = 12587188;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 7100));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 6213));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 5326));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 4439));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 3552));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 2665));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1778));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 891));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 4));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 7100));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 6213));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 5326));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 4439));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 3552));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 2665));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1778));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 891));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 4));
     return a1;
   }
 
@@ -148002,7 +147872,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = *(_DWORD *)(a1 + 8);
     if ( v3 >= 9 )
       v3 = 0;
-    sub_60473DE4((_DWORD *)(a1 + 3548 * v3 + 16), 0, &dword_60CAE260[2 * *(_DWORD *)(a1 + 12)], 0);
+    ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3548 * v3 + 16), 0, &dword_60CAE260[2 * *(_DWORD *)(a1 + 12)], 0);
     *(_WORD *)(a1 + 31952) = 1;
     return 31952;
   }
@@ -148087,15 +147957,15 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605616C8(_DWORD *a1)
   {
     *a1 = 12587188;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 7100));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 6213));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 5326));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 4439));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 3552));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 2665));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1778));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 891));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 4));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 7100));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 6213));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 5326));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 4439));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 3552));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 2665));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1778));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 891));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 4));
     return a1;
   }
 
@@ -148106,15 +147976,15 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60561750(_DWORD *a1)
   {
     *a1 = 12587188;
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 7100));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 6213));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 5326));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 4439));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 3552));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 2665));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 1778));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 891));
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 4));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 7100));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 6213));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 5326));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 4439));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 3552));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 2665));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 1778));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 891));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 4));
     return operator delete((int)a1);
   }
 
@@ -156878,7 +156748,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // r4
   
     v0 = MEMORY[0xAF3A80];
-    v1 = (int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3A80]);
+    v1 = (int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3A80]);
     if ( v1 == *(int (__fastcall *****)(_DWORD, int))(MEMORY[0xC7B400] + 27180) )
     {
   LABEL_7:
@@ -156941,7 +156811,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         if ( v2 && (**v2)(v2, 13087584) )
           return 0;
-        v1 = (int (__fastcall ****)(_DWORD, int))sub_60008598(MEMORY[0xC7B400], v0);
+        v1 = (int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], v0);
         if ( v1 == *(int (__fastcall *****)(_DWORD, int))(MEMORY[0xC7B400] + 27180) )
           goto LABEL_7;
       }
@@ -169457,7 +169327,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v7 = v5[a2];
     v8 = v6[a2];
-    v9 = sub_6000F7B8();
+    v9 = FixedPoint_atan2();
     v10 = sqrtf((float)(v7 * v7) + (float)(v8 * v8));
     v11 = *(float *)(a1 + 108);
     v12 = *(float *)(a1 + 112);
@@ -169514,7 +169384,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = (float *)&unk_60AF21A0;
     }
     v7 = sqrtf((float)(v5[a3] * v5[a3]) + (float)(v6[a3] * v6[a3]));
-    v8 = *(_DWORD *)(a1 + 164) - sub_6000F7B8();
+    v8 = *(_DWORD *)(a1 + 164) - FixedPoint_atan2();
     v9 = (float *)((v8 >> 20) & 0xFF0);
     result = v8 & 0xFFFFFF;
     v9 += 2943265;
@@ -170179,7 +170049,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 }
                 if ( v29 && (**v29)(v29, 13087584) == 1 )
                 {
-                  v30 = sub_6000F7B8() - 0x40000000;
+                  v30 = FixedPoint_atan2() - 0x40000000;
                   *(_DWORD *)(a1 + 164) = v30;
                   *(_DWORD *)(a1 + 7492) = v30;
                 }
@@ -174007,7 +173877,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1527;
     if ( a1[1527] )
       return (*(int (__fastcall **)(int *, int))(*a1 + 192))(a1, 13301524);
-    v3 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3150]);
+    v3 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3150]);
     if ( _cxa_guard_acquire_0(13087588) )
     {
       MEMORY[0xC7B360] = 12320920;
@@ -179073,7 +178943,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_WORD *)(a1 + 8052) = v17 | 2;
       sub_605DBDAC(a1);
     }
-    result = sub_60832560(&v35);
+    result = Float_clampWithSign(&v35);
     v19 = v35;
     v20 = (float)((float)(1.0 - v35) * 0.75) + 1.0;
     *(float *)(a1 + 144) = v20;
@@ -180252,7 +180122,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BOOL4 v9; // r1
     int v10; // r1
   
-    sub_60832560(a1 + 20);
+    Float_clampWithSign(a1 + 20);
     *(_DWORD *)(a1 + 24) += 50331648;
     *(_DWORD *)(a1 + 28) -= 83820544;
     if ( (*(_BYTE *)(a1 + 16) & 2) != 0 )
@@ -181187,7 +181057,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAFB38] = 12320992;
       _cxa_guard_release_0(13302588);
     }
-    return a2 == 13302584 || sub_60027FB0(a2);
+    return a2 == 13302584 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -181645,7 +181515,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAFB38] = 12320992;
       _cxa_guard_release_0(13302588);
     }
-    return a2 == 13302584 || sub_60027FB0(a2);
+    return a2 == 13302584 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -182414,7 +182284,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAFB38] = 12320992;
       _cxa_guard_release_0(13302588);
     }
-    return a2 == 13302584 || sub_60027FB0(a2);
+    return a2 == 13302584 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -182844,7 +182714,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAFB38] = 12320992;
       _cxa_guard_release_0(13302588);
     }
-    return a2 == 13302584 || sub_60027FB0(a2);
+    return a2 == 13302584 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -183567,7 +183437,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v8 >= (float)(v9 + -64.0) )
         {
           if ( v8 > (float)(v9 + -16.0) )
-            return (int)sub_60832560((float *)(a1 + 112));
+            return (int)Float_clampWithSign((float *)(a1 + 112));
         }
         else
         {
@@ -183934,7 +183804,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
   LABEL_10:
       v6 = *(float *)(a1 + 6308);
-      result = sub_60832560((float *)(a1 + 112));
+      result = Float_clampWithSign((float *)(a1 + 112));
       if ( v6 == 0.0 )
         return (float *)(*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13303124);
     }
@@ -184823,7 +184693,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 22364;
     a1[22416] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 22416);
-    sub_60002B6C(a1 + 22416);
+    ActorMgr_unregisterIfActive(a1 + 22416);
     sead::IDisposer::~IDisposer(v3);
     a1[18252] = 12615976;
     nullsub_1720();
@@ -184836,7 +184706,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor(a1 + 18082);
     *a1 = 12616008;
     a1[18064] = 12348984;
-    sub_60002B6C(a1 + 18064);
+    ActorMgr_unregisterIfActive(a1 + 18064);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18064));
     a1[1725] = 12615992;
     nullsub_1721();
@@ -186542,7 +186412,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
-    sub_60002B6C(a1 + 18064);
+    ActorMgr_unregisterIfActive(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
     nullsub_1721();
@@ -186566,7 +186436,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
-    sub_60002B6C(a1 + 18064);
+    ActorMgr_unregisterIfActive(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
     nullsub_1721();
@@ -187527,7 +187397,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 18082));
     *a1 = 12616008;
     a1[18064] = 12348984;
-    sub_60002B6C((int)(a1 + 18064));
+    ActorMgr_unregisterIfActive((int)(a1 + 18064));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18064));
     a1[1725] = 12615992;
     nullsub_1721();
@@ -187559,7 +187429,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 18082));
     *a1 = 12616008;
     a1[18064] = 12348984;
-    sub_60002B6C((int)(a1 + 18064));
+    ActorMgr_unregisterIfActive((int)(a1 + 18064));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18064));
     a1[1725] = 12615992;
     nullsub_1721();
@@ -187775,7 +187645,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
-    sub_60002B6C(a1 + 18064);
+    ActorMgr_unregisterIfActive(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
     nullsub_1721();
@@ -188500,7 +188370,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
-    sub_60002B6C(a1 + 18064);
+    ActorMgr_unregisterIfActive(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
     nullsub_1721();
@@ -188738,7 +188608,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
-    sub_60002B6C(a1 + 18064);
+    ActorMgr_unregisterIfActive(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
     nullsub_1721();
@@ -189164,7 +189034,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
-    sub_60002B6C(a1 + 18064);
+    ActorMgr_unregisterIfActive(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
     nullsub_1721();
@@ -189573,7 +189443,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
-    sub_60002B6C(a1 + 18064);
+    ActorMgr_unregisterIfActive(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
     nullsub_1721();
@@ -190477,7 +190347,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
-    sub_60002B6C(a1 + 18064);
+    ActorMgr_unregisterIfActive(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
     nullsub_1721();
@@ -191166,7 +191036,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB02B0] = 12320992;
       _cxa_guard_release_0(13304500);
     }
-    return a2 == 13304496 || sub_60027FB0(a2);
+    return a2 == 13304496 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -191899,7 +191769,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB02B0] = 12320992;
       _cxa_guard_release_0(13304500);
     }
-    return a2 == 13304496 || sub_60027FB0(a2);
+    return a2 == 13304496 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -192042,7 +191912,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB02B0] = 12320992;
       _cxa_guard_release_0(13304500);
     }
-    return a2 == 13304496 || sub_60027FB0(a2);
+    return a2 == 13304496 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -192266,7 +192136,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB02B0] = 12320992;
       _cxa_guard_release_0(13304500);
     }
-    return a2 == 13304496 || sub_60027FB0(a2);
+    return a2 == 13304496 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -192477,7 +192347,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB02B0] = 12320992;
       _cxa_guard_release_0(13304500);
     }
-    return a2 == 13304496 || sub_60027FB0(a2);
+    return a2 == 13304496 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -192716,7 +192586,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB02B0] = 12320992;
       _cxa_guard_release_0(13304500);
     }
-    return a2 == 13304496 || sub_60027FB0(a2);
+    return a2 == 13304496 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -193891,7 +193761,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD *)(MEMORY[0xC7B400] + 27180);
     v3 = MEMORY[0xAF3014];
-    v4 = sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF3014]);
+    v4 = ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3014]);
     result = 0;
     if ( v4 != v2 )
     {
@@ -193913,7 +193783,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v16 <= (float)(v15 * *v6) && v16 >= (float)-(float)(v15 * *v6) )
             break;
         }
-        v4 = sub_60008598(MEMORY[0xC7B400], v3);
+        v4 = ActorMgr_findByType(MEMORY[0xC7B400], v3);
         if ( v4 == v2 )
           return 0;
       }
@@ -193933,7 +193803,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB0460] = 12320992;
       _cxa_guard_release_0(13304932);
     }
-    return a2 == 13304928 || sub_60027FB0(a2);
+    return a2 == 13304928 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -197192,28 +197062,28 @@ static inline unsigned int uxtb16(unsigned int x)
   
     a1[35] = 12348984;
     v2 = (struct sead_IDisposer *)(a1 + 35);
-    sub_60002B6C(a1 + 35);
+    ActorMgr_unregisterIfActive(a1 + 35);
     sead::IDisposer::~IDisposer(v2);
     a1[30] = 12348984;
-    sub_60002B6C(a1 + 30);
+    ActorMgr_unregisterIfActive(a1 + 30);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 30));
     a1[25] = 12348984;
-    sub_60002B6C(a1 + 25);
+    ActorMgr_unregisterIfActive(a1 + 25);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 25));
     a1[20] = 12348984;
-    sub_60002B6C(a1 + 20);
+    ActorMgr_unregisterIfActive(a1 + 20);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 20));
     a1[15] = 12348984;
-    sub_60002B6C(a1 + 15);
+    ActorMgr_unregisterIfActive(a1 + 15);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15));
     a1[10] = 12348984;
-    sub_60002B6C(a1 + 10);
+    ActorMgr_unregisterIfActive(a1 + 10);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 10));
     a1[5] = 12348984;
-    sub_60002B6C(a1 + 5);
+    ActorMgr_unregisterIfActive(a1 + 5);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 5));
     *a1 = 12348984;
-    sub_60002B6C(a1);
+    ActorMgr_unregisterIfActive(a1);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)a1);
   }
 
@@ -197393,7 +197263,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( a1[4] )
     {
-      sub_60002B6C(a1);
+      ActorMgr_unregisterIfActive(a1);
       v2 = 1;
     }
     else
@@ -197405,7 +197275,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = 0;
       if ( v2 )
         return result;
-      sub_60002B6C(a1 + 5);
+      ActorMgr_unregisterIfActive(a1 + 5);
       v2 = 1;
     }
     if ( a1[14] )
@@ -197413,7 +197283,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = 0;
       if ( v2 )
         return result;
-      sub_60002B6C(a1 + 10);
+      ActorMgr_unregisterIfActive(a1 + 10);
       v2 = 1;
     }
     if ( a1[19] )
@@ -197421,7 +197291,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = 0;
       if ( v2 )
         return result;
-      sub_60002B6C(a1 + 15);
+      ActorMgr_unregisterIfActive(a1 + 15);
       v2 = 1;
     }
     if ( a1[24] )
@@ -197429,7 +197299,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = 0;
       if ( v2 )
         return result;
-      sub_60002B6C(a1 + 20);
+      ActorMgr_unregisterIfActive(a1 + 20);
       v2 = 1;
     }
     if ( a1[29] )
@@ -197437,7 +197307,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = 0;
       if ( v2 )
         return result;
-      sub_60002B6C(a1 + 25);
+      ActorMgr_unregisterIfActive(a1 + 25);
       v2 = 1;
     }
     if ( a1[34] )
@@ -197445,7 +197315,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = 0;
       if ( v2 )
         return result;
-      sub_60002B6C(a1 + 30);
+      ActorMgr_unregisterIfActive(a1 + 30);
       v2 = 1;
     }
     result = 0;
@@ -197453,7 +197323,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return 1;
     if ( !v2 )
     {
-      sub_60002B6C(a1 + 35);
+      ActorMgr_unregisterIfActive(a1 + 35);
       return 1;
     }
     return result;
@@ -198077,7 +197947,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB0610] = 12320992;
       _cxa_guard_release_0(13305364);
     }
-    return a2 == 13305360 || sub_60027FB0(a2);
+    return a2 == 13305360 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -199834,7 +199704,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB06F8] = 12320992;
       _cxa_guard_release_0(13305596);
     }
-    return a2 == 13305592 || sub_60027FB0(a2);
+    return a2 == 13305592 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -199897,52 +199767,52 @@ static inline unsigned int uxtb16(unsigned int x)
   
     a1[75] = 12348984;
     v2 = (struct sead_IDisposer *)(a1 + 75);
-    sub_60002B6C(a1 + 75);
+    ActorMgr_unregisterIfActive(a1 + 75);
     sead::IDisposer::~IDisposer(v2);
     a1[70] = 12348984;
-    sub_60002B6C(a1 + 70);
+    ActorMgr_unregisterIfActive(a1 + 70);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 70));
     a1[65] = 12348984;
-    sub_60002B6C(a1 + 65);
+    ActorMgr_unregisterIfActive(a1 + 65);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 65));
     a1[60] = 12348984;
-    sub_60002B6C(a1 + 60);
+    ActorMgr_unregisterIfActive(a1 + 60);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 60));
     a1[55] = 12348984;
-    sub_60002B6C(a1 + 55);
+    ActorMgr_unregisterIfActive(a1 + 55);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 55));
     a1[50] = 12348984;
-    sub_60002B6C(a1 + 50);
+    ActorMgr_unregisterIfActive(a1 + 50);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 50));
     a1[45] = 12348984;
-    sub_60002B6C(a1 + 45);
+    ActorMgr_unregisterIfActive(a1 + 45);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 45));
     a1[40] = 12348984;
-    sub_60002B6C(a1 + 40);
+    ActorMgr_unregisterIfActive(a1 + 40);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 40));
     a1[35] = 12348984;
-    sub_60002B6C(a1 + 35);
+    ActorMgr_unregisterIfActive(a1 + 35);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 35));
     a1[30] = 12348984;
-    sub_60002B6C(a1 + 30);
+    ActorMgr_unregisterIfActive(a1 + 30);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 30));
     a1[25] = 12348984;
-    sub_60002B6C(a1 + 25);
+    ActorMgr_unregisterIfActive(a1 + 25);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 25));
     a1[20] = 12348984;
-    sub_60002B6C(a1 + 20);
+    ActorMgr_unregisterIfActive(a1 + 20);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 20));
     a1[15] = 12348984;
-    sub_60002B6C(a1 + 15);
+    ActorMgr_unregisterIfActive(a1 + 15);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15));
     a1[10] = 12348984;
-    sub_60002B6C(a1 + 10);
+    ActorMgr_unregisterIfActive(a1 + 10);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 10));
     a1[5] = 12348984;
-    sub_60002B6C(a1 + 5);
+    ActorMgr_unregisterIfActive(a1 + 5);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 5));
     *a1 = 12348984;
-    sub_60002B6C(a1);
+    ActorMgr_unregisterIfActive(a1);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)a1);
   }
 
@@ -202310,7 +202180,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 80) = 0;
     }
     sub_608337E0(a1 + 24);
-    sub_60832560(a1 + 76);
+    Float_clampWithSign(a1 + 76);
     v3 = *(_DWORD *)(a1 + 60) + 0x800000;
     *(_DWORD *)(a1 + 60) = v3;
     v4 = *(float *)(((v3 >> 20) & 0xFF0) + 0xB3A484)
@@ -203142,7 +203012,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v3 = *(_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF329C]);
+      v3 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF329C]);
       if ( _cxa_guard_acquire_0(13306256) )
       {
         MEMORY[0xCB098C] = 12623072;
@@ -204505,7 +204375,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v23 = *((struct sead_ListNode **)v2 + 1);
           if ( *((_BYTE *)v3 + 3656) )
           {
-            sub_60832560(v3);
+            Float_clampWithSign(v3);
             if ( *v3 < 0.001 )
               *((_BYTE *)v3 + 3656) = 0;
           }
@@ -204587,7 +204457,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v12[280] = 0.0;
               *((_BYTE *)v13 + v11) = 2;
             }
-            v14 = sub_60832560(v12);
+            v14 = Float_clampWithSign(v12);
             if ( *v12 < 0.0001 )
             {
               v14 = 2;
@@ -204666,7 +204536,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( *((_BYTE *)v3 + 3656) )
         {
           v11 = *v3;
-          sub_60832560(v3);
+          Float_clampWithSign(v3);
           v12 = *v3;
           v13 = v11 - *v3;
           if ( v13 <= 0.0 )
@@ -204745,7 +204615,7 @@ static inline unsigned int uxtb16(unsigned int x)
                                                        * *(float *)(((v25 >> 20) & 0xFF0) + 0xB3A488))
                                                * 0.000000059605)));
           *((_DWORD *)v16 + 280) = v25 + *((_DWORD *)v3 + 918);
-          sub_60832560(v16);
+          Float_clampWithSign(v16);
           if ( *v16 < 0.0001 )
           {
             *(v16 - 280) = 0.0;
@@ -206869,7 +206739,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v26 = 0;
     if ( (v31 & 1) != 0 )
     {
-      result = sub_6000F7B8();
+      result = FixedPoint_atan2();
       v26 = 417566264;
       if ( result < 417566264 )
         v26 = result;
@@ -207322,7 +207192,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAFB38] = 12320992;
       _cxa_guard_release_0(13302588);
     }
-    return a2 == 13302584 || sub_60027FB0(a2);
+    return a2 == 13302584 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -209705,7 +209575,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8F390] = 12320992;
       _cxa_guard_release_0(13169556);
     }
-    return a2 == 13169552 || sub_60027FB0(a2);
+    return a2 == 13169552 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -210749,7 +210619,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8F390] = 12320992;
       _cxa_guard_release_0(13169556);
     }
-    return a2 == 13169552 || sub_60027FB0(a2);
+    return a2 == 13169552 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -211539,7 +211409,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8F390] = 12320992;
       _cxa_guard_release_0(13169556);
     }
-    return a2 == 13169552 || sub_60027FB0(a2);
+    return a2 == 13169552 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -211719,8 +211589,8 @@ static inline unsigned int uxtb16(unsigned int x)
       return sub_605CDC78(a1 + 648, a2);
     v4 = *(_DWORD *)(MEMORY[0xC7B400] + 27180);
     v5 = MEMORY[0xAF2DC8];
-    v6 = sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF2DC8]);
-    for ( i = 0; v6 != v4; v6 = sub_60008598(MEMORY[0xC7B400], v5) )
+    v6 = ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF2DC8]);
+    for ( i = 0; v6 != v4; v6 = ActorMgr_findByType(MEMORY[0xC7B400], v5) )
     {
       if ( *(unsigned __int8 *)(*(_DWORD *)v6 + 29) == v2 )
       {
@@ -212185,7 +212055,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else
       {
-        sub_60832560((float *)(a1 + 56));
+        Float_clampWithSign((float *)(a1 + 56));
         v6 = 13307844;
       }
       return StateMgr::changeState((_DWORD *)(a1 + 20), v6);
@@ -212579,7 +212449,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB107C] = 12320992;
       _cxa_guard_release_0(13308032);
     }
-    return a2 == 13308028 || sub_60027FB0(a2);
+    return a2 == 13308028 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -212966,7 +212836,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v3 = *(_DWORD *)(MEMORY[0xC7B400] + 27180);
       v4 = MEMORY[0xAF2DCC];
-      result = sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF2DCC]);
+      result = ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF2DCC]);
       v6 = (_DWORD *)result;
       if ( result != v3 )
       {
@@ -212979,7 +212849,7 @@ static inline unsigned int uxtb16(unsigned int x)
             sub_606C12E0(*v6);
             *(_BYTE *)(v8 + 6136) = 1;
           }
-          result = sub_60008598(MEMORY[0xC7B400], v4);
+          result = ActorMgr_findByType(MEMORY[0xC7B400], v4);
           v6 = (_DWORD *)result;
         }
         while ( result != v3 );
@@ -213011,12 +212881,12 @@ static inline unsigned int uxtb16(unsigned int x)
       return sub_606C12E0(a1);
     v2 = *(_DWORD *)(MEMORY[0xC7B400] + 27180);
     v3 = MEMORY[0xAF2DCC];
-    result = sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF2DCC]);
+    result = ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF2DCC]);
     for ( i = (_DWORD *)result; result != v2; i = (_DWORD *)result )
     {
       if ( v1 >> 28 == *(_DWORD *)(*i + 20) >> 28 )
         sub_606C12E0(*i);
-      result = sub_60008598(MEMORY[0xC7B400], v3);
+      result = ActorMgr_findByType(MEMORY[0xC7B400], v3);
     }
     return result;
   }
@@ -213089,7 +212959,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB107C] = 12320992;
       _cxa_guard_release_0(13308032);
     }
-    return a2 == 13308028 || sub_60027FB0(a2);
+    return a2 == 13308028 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -215171,7 +215041,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB1200] = 12320992;
       _cxa_guard_release_0(13308420);
     }
-    return a2 == 13308416 || sub_60027FB0(a2);
+    return a2 == 13308416 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -216174,7 +216044,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(a1 + 812) == 2 )
     {
       Mtx34_rotateZ(&v11, a1 + 816);
-      sub_60832560(a1 + 808);
+      Float_clampWithSign(a1 + 808);
       v2 = (float)(*(float *)(a1 + 808) * -0.1) + 1.0;
       v12 = v12 * v2;
       v16 = v2 * v16;
@@ -217290,7 +217160,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v8 == (*(int (**)(void))(MEMORY[0xCB1228] + 8))() )
         {
           a1[187] = *(_DWORD *)(a2 + 8);
-          a1[204] = sub_6000F7B8();
+          a1[204] = FixedPoint_atan2();
           StateMgr::changeState(a1 + 235, 13308488);
           return 1;
         }
@@ -218236,7 +218106,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6264) |= 0x22u;
     *(_DWORD *)(a1 + 6260) = v2 | 0x210;
     sub_605EAB48(a1 + 6064);
-    v3 = sub_6000F7B8();
+    v3 = FixedPoint_atan2();
     v4 = *(v1 - 1545);
     *(v1 - 1526) = v3;
     v5 = 0x40000000;
@@ -218317,7 +218187,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v7 < 8.0 )
         v11 = v8 | 0x80000000;
       *v9 = v11;
-      result = sub_6000F7B8();
+      result = FixedPoint_atan2();
       *(v9 - 1527) = result;
     }
     return result;
@@ -223369,7 +223239,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v14 = v3 - v3;
               if ( (float)(v3 - v3) != 0.0 )
               {
-                result = sub_6000F7B8();
+                result = FixedPoint_atan2();
                 v15 = result - 0x40000000;
                 if ( (int)(result - 0x40000000) < 0 )
                 {
@@ -225318,7 +225188,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = *(_DWORD *)(MEMORY[0xC7B400] + 27180);
       v7 = *(float *)(MEMORY[0xCC6484] + 128);
       v8 = MEMORY[0xAF38D8];
-      v9 = sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF38D8]);
+      v9 = ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF38D8]);
       if ( v9 != v6 )
       {
         if ( v4 < v7 )
@@ -225328,7 +225198,7 @@ static inline unsigned int uxtb16(unsigned int x)
             while ( (float)((float)(*(float *)(*(_DWORD *)v9 + 6136) + *(float *)(*(_DWORD *)v9 + 6144)) * 0.5) >= v7
                  || !sub_6015AB38((float *)(*(_DWORD *)v9 + 6132)) )
             {
-              v9 = sub_60008598(v5, v8);
+              v9 = ActorMgr_findByType(v5, v8);
               if ( v9 == v6 )
                 goto LABEL_19;
             }
@@ -225338,7 +225208,7 @@ static inline unsigned int uxtb16(unsigned int x)
             while ( (float)((float)(*(float *)(*(_DWORD *)v9 + 6136) + *(float *)(*(_DWORD *)v9 + 6144)) * 0.5) == v7
                  || !sub_6015AB38((float *)(*(_DWORD *)v9 + 6132)) )
             {
-              v9 = sub_60008598(v5, v8);
+              v9 = ActorMgr_findByType(v5, v8);
               if ( v9 == v6 )
                 goto LABEL_19;
             }
@@ -225350,13 +225220,13 @@ static inline unsigned int uxtb16(unsigned int x)
           while ( (float)((float)(*(float *)(*(_DWORD *)v9 + 6136) + *(float *)(*(_DWORD *)v9 + 6144)) * 0.5) <= v7
                || !sub_6015AB38((float *)(*(_DWORD *)v9 + 6132)) )
           {
-            v9 = sub_60008598(v5, v8);
+            v9 = ActorMgr_findByType(v5, v8);
             if ( v9 == v6 )
               goto LABEL_19;
           }
           goto LABEL_24;
         }
-        while ( sub_60008598(v5, v8) != v6 )
+        while ( ActorMgr_findByType(v5, v8) != v6 )
           ;
       }
   LABEL_19:
@@ -225411,13 +225281,13 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = MEMORY[0xC7B400];
       v5 = *(_DWORD **)(MEMORY[0xC7B400] + 27180);
       v6 = MEMORY[0xAF38D8];
-      v7 = (_DWORD *)sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF38D8]);
+      v7 = (_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF38D8]);
       if ( v7 != v5 )
       {
         v8 = (float *)(v3 + 40);
         while ( !*v7 || !sub_6015AB38(v8) && sub_6015AB38(v8) != 1 || !sub_6015AB38(v8) && !sub_6015AB38(v8) )
         {
-          v7 = (_DWORD *)sub_60008598(v4, v6);
+          v7 = (_DWORD *)ActorMgr_findByType(v4, v6);
           if ( v7 == v5 )
             return v2;
         }
@@ -226655,8 +226525,8 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           if ( v10 < v37 )
           {
-            sub_60832560((float *)(v7 + 8));
-            sub_60832560((float *)(v7 + 12));
+            Float_clampWithSign((float *)(v7 + 8));
+            Float_clampWithSign((float *)(v7 + 12));
           }
         }
         else if ( v11 == 2 )
@@ -227062,7 +226932,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
       }
       v19 = *((int (__fastcall ***)(_DWORD, int))v6 + 2);
-      v20 = sub_6000F7B8();
+      v20 = FixedPoint_atan2();
       v21 = *(_DWORD *)(a1 + 6456);
       v22 = *(_DWORD *)(a1 + 6448);
       if ( v21 < v22 )
@@ -228982,7 +228852,7 @@ static inline unsigned int uxtb16(unsigned int x)
                              * (float)(*(float *)(((v7 >> 20) & 0xFF0) + 0xB3A484)
                                      + (float)(*(float *)(((v7 >> 20) & 0xFF0) + 0xB3A488) * v9)))) >= 0.0 )
             v3.n64_f32[0] = MEMORY[0xB05B94] + (float)(sqrtf((float)(v12 * v12) + (float)(v10 * v10)) * 0.35);
-          v14 = sub_6000F7B8();
+          v14 = FixedPoint_atan2();
           v16 = *(_DWORD *)(v5 + 6264);
           v15 = (int *)(v5 + 6264);
           *v15 = v16 | 2;
@@ -229753,7 +229623,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB1BCC] = 12320992;
       _cxa_guard_release_0(13310928);
     }
-    return a2 == 13310924 || sub_60027FB0(a2);
+    return a2 == 13310924 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -235122,7 +234992,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB0610] = 12320992;
       _cxa_guard_release_0(13305364);
     }
-    return a2 == 13305360 || sub_60027FB0(a2);
+    return a2 == 13305360 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -235915,7 +235785,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB1F08] = 12320992;
       _cxa_guard_release_0(13311756);
     }
-    return a2 == 13311752 || sub_60027FB0(a2);
+    return a2 == 13311752 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -236457,7 +236327,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB1F08] = 12320992;
       _cxa_guard_release_0(13311756);
     }
-    return a2 == 13311752 || sub_60027FB0(a2);
+    return a2 == 13311752 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -236931,7 +236801,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB1F08] = 12320992;
       _cxa_guard_release_0(13311756);
     }
-    return a2 == 13311752 || sub_60027FB0(a2);
+    return a2 == 13311752 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -237434,7 +237304,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB1F08] = 12320992;
       _cxa_guard_release_0(13311756);
     }
-    return a2 == 13311752 || sub_60027FB0(a2);
+    return a2 == 13311752 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -245030,7 +244900,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD *)(MEMORY[0xC7B400] + 27180);
     v3 = MEMORY[0xAF2DF8];
-    v4 = sub_60008598(MEMORY[0xC7B400], MEMORY[0xAF2DF8]);
+    v4 = ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF2DF8]);
     if ( v4 == v2 )
     {
   LABEL_4:
@@ -245043,7 +244913,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = *(int (__fastcall ****)(_DWORD, int))v4;
         if ( *(char *)(*(_DWORD *)v4 + 6120) == a1 )
           break;
-        v4 = sub_60008598(MEMORY[0xC7B400], v3);
+        v4 = ActorMgr_findByType(MEMORY[0xC7B400], v3);
         if ( v4 == v2 )
           goto LABEL_4;
       }

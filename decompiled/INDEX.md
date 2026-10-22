@@ -68,7 +68,7 @@ all.
 | Subsystem | Functions | Prototypes |
 |---|---|---|
 | `player/` | 898 | 793 |
-| `powerup/` | 868 | 689 |
-| `actors/` | 12,580 | 9,365 |
-| `systems/` | 16,513 | 12,134 |
+| `powerup/` | 867 | 688 |
+| `actors/` | 12,578 | 9,365 |
+| `systems/` | 16,498 | 12,121 |
 | `libs/` | 7,293 | 5,364 |

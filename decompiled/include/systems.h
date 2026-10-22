@@ -194,7 +194,6 @@ int __fastcall sub_60486770(int result, _DWORD *a2);  /* 0x00486770 */
 int __fastcall sub_60486780(int a1, int a2);  /* 0x00486780 */
 int __fastcall sub_604867A8(int a1);  /* 0x004867a8 */
 int __fastcall sub_604867B0(int a1);  /* 0x004867b0 */
-void __fastcall sub_604867D8(struct sead_IDisposer *a1);  /* 0x004867d8 */
 int __fastcall sub_604867DC(struct sead_IDisposer *a1);  /* 0x004867dc */
 int __fastcall sub_604867F8(_DWORD *a1);  /* 0x004867f8 */
 int __fastcall sub_604868B0(int a1);  /* 0x004868b0 */
@@ -241,7 +240,6 @@ int __fastcall sub_6048906C(_DWORD *a1);  /* 0x0048906c */
 int __fastcall sub_6048912C(int a1);  /* 0x0048912c */
 int __fastcall sub_6048921C(int a1);  /* 0x0048921c */
 int __fastcall sub_60489270(int a1);  /* 0x00489270 */
-void __fastcall sub_604898E8(struct sead_IDisposer *a1);  /* 0x004898e8 */
 int __fastcall sub_604898F0(int a1);  /* 0x004898f0 */
 int __fastcall sub_60489D24(_DWORD *a1);  /* 0x00489d24 */
 int __fastcall sub_6048A1A0(int a1);  /* 0x0048a1a0 */
@@ -371,7 +369,6 @@ int __fastcall sub_604945A8(int a1);  /* 0x004945a8 */
 int __fastcall sub_604945F0(int a1);  /* 0x004945f0 */
 void __fastcall sub_60494628(int a1);  /* 0x00494628 */
 int __fastcall sub_6049468C(int a1);  /* 0x0049468c */
-void __fastcall sub_6049487C(struct sead_IDisposer *a1);  /* 0x0049487c */
 int __fastcall sub_60494884(_DWORD *a1, int a2);  /* 0x00494884 */
 int __fastcall sub_604949EC(int *a1);  /* 0x004949ec */
 int __fastcall sub_60494B0C(int a1);  /* 0x00494b0c */
@@ -421,7 +418,6 @@ int __fastcall sub_604986AC(int result);  /* 0x004986ac */
 int __fastcall sub_604986CC(int a1);  /* 0x004986cc */
 int __fastcall sub_60498834(int a1);  /* 0x00498834 */
 int __fastcall sub_60498980(int a1);  /* 0x00498980 */
-void __fastcall sub_60498FA8(struct sead_IDisposer *a1);  /* 0x00498fa8 */
 int __fastcall sub_60498FAC(_DWORD *a1, int a2, int a3);  /* 0x00498fac */
 int __fastcall sub_60499110(int *a1);  /* 0x00499110 */
 int __fastcall sub_60499348(int a1);  /* 0x00499348 */
@@ -592,7 +588,6 @@ int __fastcall sub_604A3ED8(int a1);  /* 0x004a3ed8 */
 int __fastcall sub_604A3F98(int a1);  /* 0x004a3f98 */
 int __fastcall sub_604A3FE4(int a1);  /* 0x004a3fe4 */
 int __fastcall sub_604A4320(int a1);  /* 0x004a4320 */
-void __fastcall sub_604A4354(struct sead_IDisposer *a1);  /* 0x004a4354 */
 int __fastcall sub_604A435C(int a1, int a2, int a3, int a4);  /* 0x004a435c */
 int __fastcall sub_604A46E8(int a1, unsigned int a2, int a3);  /* 0x004a46e8 */
 int __fastcall sub_604A4AE4(int a1, unsigned int a2);  /* 0x004a4ae4 */
@@ -664,7 +659,6 @@ int __fastcall sub_604AAB3C(int a1);  /* 0x004aab3c */
 int __fastcall sub_604AAC94(int a1);  /* 0x004aac94 */
 int __fastcall sub_604AAEB4(int a1);  /* 0x004aaeb4 */
 int __fastcall sub_604AB390(int a1);  /* 0x004ab390 */
-void __fastcall sub_604AB57C(struct sead_IDisposer *a1);  /* 0x004ab57c */
 int __fastcall sub_604AB584(_DWORD *a1);  /* 0x004ab584 */
 int __fastcall sub_604AB640(_DWORD *a1);  /* 0x004ab640 */
 int __fastcall sub_604AB860(int a1);  /* 0x004ab860 */
@@ -701,7 +695,6 @@ int __fastcall sub_604AE718(int result);  /* 0x004ae718 */
 int __fastcall sub_604AE73C(int result);  /* 0x004ae73c */
 int __fastcall sub_604AE748(int a1);  /* 0x004ae748 */
 int __fastcall sub_604AE884(int a1);  /* 0x004ae884 */
-void __fastcall sub_604AE89C(struct sead_IDisposer *a1);  /* 0x004ae89c */
 int __fastcall sub_604AE8A0(int a1);  /* 0x004ae8a0 */
 int __fastcall sub_604AED20(int a1);  /* 0x004aed20 */
 int __fastcall sub_604AEE94(int a1);  /* 0x004aee94 */
@@ -797,7 +790,6 @@ int __fastcall sub_604B5B3C(int result, _DWORD *a2);  /* 0x004b5b3c */
 int __fastcall sub_604B5B4C(int a1, int a2);  /* 0x004b5b4c */
 int __fastcall sub_604B5B74(int a1);  /* 0x004b5b74 */
 int __fastcall sub_604B5B7C(int a1);  /* 0x004b5b7c */
-void __fastcall sub_604B5BA4(struct sead_IDisposer *a1);  /* 0x004b5ba4 */
 int __fastcall sub_604B5BA8(struct sead_IDisposer *a1);  /* 0x004b5ba8 */
 int __fastcall sub_604B5BB8(int result);  /* 0x004b5bb8 */
 int __fastcall SE_SYS_FS_FINISHED_ref(int a1);  /* 0x004b5bd0 */
@@ -839,7 +831,6 @@ int __fastcall sub_604B74B0(int a1, int a2);  /* 0x004b74b0 */
 int __fastcall sub_604B74E8(int a1, unsigned int a2);  /* 0x004b74e8 */
 unsigned int __fastcall sub_604B763C(int a1, unsigned int a2);  /* 0x004b763c */
 int __fastcall sub_604B78EC(int a1);  /* 0x004b78ec */
-void __fastcall sub_604B7A3C(struct sead_IDisposer *a1);  /* 0x004b7a3c */
 int __fastcall sub_604B7A40(_DWORD *a1);  /* 0x004b7a40 */
 int __fastcall sub_604B7A8C(int a1);  /* 0x004b7a8c */
 int __fastcall sub_604B7B70(int a1);  /* 0x004b7b70 */
@@ -872,7 +863,6 @@ int __fastcall SE_SYS_CONTINUE_DONE_ref_2(int a1);  /* 0x004ba4f0 */
 int __fastcall sub_604BA5F4(int result);  /* 0x004ba5f4 */
 int __fastcall sub_604BA600(int result);  /* 0x004ba600 */
 int __fastcall sub_604BA62C(int a1);  /* 0x004ba62c */
-void __fastcall sub_604BA788(struct sead_IDisposer *a1);  /* 0x004ba788 */
 int __fastcall sub_604BA790(_DWORD *a1);  /* 0x004ba790 */
 int __fastcall sub_604BA7C0(int a1, int a2);  /* 0x004ba7c0 */
 int __fastcall sub_604BAD30(int a1, _DWORD *a2);  /* 0x004bad30 */
@@ -1029,7 +1019,6 @@ int __fastcall sub_604C45C0(int result);  /* 0x004c45c0 */
 int __fastcall sub_604C45D8(_BYTE *a1);  /* 0x004c45d8 */
 int __fastcall sub_604C46E4(int a1);  /* 0x004c46e4 */
 int __fastcall sub_604C46FC(int a1);  /* 0x004c46fc */
-void __fastcall sub_604C4DA4(struct sead_IDisposer *a1);  /* 0x004c4da4 */
 int __fastcall sub_604C4DAC(_DWORD *a1);  /* 0x004c4dac */
 int __fastcall sub_604C4E30(int a1);  /* 0x004c4e30 */
 int __fastcall sub_604C4FBC(_DWORD *a1);  /* 0x004c4fbc */
@@ -1533,7 +1522,6 @@ int __fastcall sub_604E7FEC(int result, _DWORD *a2);  /* 0x004e7fec */
 int __fastcall sub_604E7FFC(int a1, int a2);  /* 0x004e7ffc */
 int __fastcall sub_604E8024(int a1);  /* 0x004e8024 */
 int __fastcall sub_604E802C(int a1);  /* 0x004e802c */
-void __fastcall sub_604E8054(struct sead_IDisposer *a1);  /* 0x004e8054 */
 int __fastcall sub_604E8058(struct sead_IDisposer *a1);  /* 0x004e8058 */
 int __fastcall sub_604E8710(int a1, _DWORD *a2);  /* 0x004e8710 */
 int __fastcall GameScene_Coin_00_ref(int a1);  /* 0x004e8748 */
@@ -2521,7 +2509,6 @@ int __fastcall SE_SYS_CH_RESULT_GET_ref(int a1);  /* 0x005208f8 */
 int __fastcall sub_60520B08(int a1);  /* 0x00520b08 */
 int __fastcall SE_SYS_FS_PROCESSING_ref(int a1);  /* 0x00520b24 */
 int __fastcall sub_60520BB0(int a1);  /* 0x00520bb0 */
-void __fastcall sub_60520E10(struct sead_IDisposer *a1);  /* 0x00520e10 */
 int __fastcall sub_60520E18(int a1);  /* 0x00520e18 */
 int __fastcall sub_60520F5C(_DWORD *a1);  /* 0x00520f5c */
 int __fastcall sub_60521144(int a1);  /* 0x00521144 */

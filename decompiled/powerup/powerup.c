@@ -336,9 +336,9 @@ static inline unsigned int uxtb16(unsigned int x)
         Object_releaseHandle(v3 + 334);
         sub_60917AE4(v3 + 314);
         v3[228] = 12562648;
-        sub_60913C18(v3 + 228);
+        Slot_destroy(v3 + 228);
         v3[221] = 12556228;
-        sub_60913C18(v3 + 221);
+        Slot_destroy(v3 + 221);
         sub_60919C90(v3 + 168);
         sub_60921BD4(v3 + 84);
         sub_60922478(v3 + 16);
@@ -550,7 +550,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v1; // r0
   
     *a1 = 12562648;
-    v1 = sub_60913C18((int)a1);
+    v1 = Slot_destroy((int)a1);
     return operator delete(v1);
   }
 
@@ -561,7 +561,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60450D78(_DWORD *a1)
   {
     *a1 = 12562648;
-    return sub_60913C18((int)a1);
+    return Slot_destroy((int)a1);
   }
 
 /* ============================================================================
@@ -573,7 +573,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v1; // r0
   
     *a1 = 12562648;
-    v1 = sub_60913C18((int)a1);
+    v1 = Slot_destroy((int)a1);
     return operator delete(v1);
   }
 
@@ -3926,8 +3926,8 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      sub_60832560(v6);
-      sub_60832560(a1 + 1279);
+      Float_clampWithSign(v6);
+      Float_clampWithSign(a1 + 1279);
     }
     a1[1280] = v4;
     sub_604AF054(a1 + 361, v6);
@@ -9436,7 +9436,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC9D024] = 12320992;
       _cxa_guard_release_0(13226024);
     }
-    return a2 == 13226020 || sub_60027FB0(a2);
+    return a2 == 13226020 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -19444,7 +19444,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC99874] = 12320992;
       _cxa_guard_release_0(13211768);
     }
-    return a2 == 13211764 || sub_60027FB0(a2);
+    return a2 == 13211764 || StaticInit_guardRegister2(a2);
   }
 
 /* ============================================================================
@@ -23443,7 +23443,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60473DE4
+ * ArrayOf5_lookupByIndex
  * RVA 0x00473de4   size 0xf4   xrefs 436
  * ============================================================================ */
   int __fastcall sub_60473DE4(_DWORD *a1, unsigned int a2, _DWORD *a3, int a4)
@@ -24957,7 +24957,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60475AE8
+ * Disposer_destroyAllocated
  * RVA 0x00475ae8   size 0xb8   xrefs 233
  * ============================================================================ */
   void __fastcall sub_60475AE8(struct sead_IDisposer *a1)
@@ -27536,18 +27536,8 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       while ( v2 );
     }
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 3));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 3));
     return a1;
-  }
-
-/* ============================================================================
- * sub_60479520
- * RVA 0x00479520   size 0x4   xrefs 0
- * ============================================================================ */
-  // attributes: thunk
-  void __fastcall sub_60479520(struct sead_IDisposer *a1)
-  {
-    sub_60475AE8(a1);
   }
 
 /* ============================================================================
@@ -27573,7 +27563,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       while ( v2 );
     }
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 3));
+    Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 3));
     return operator delete((int)a1);
   }
 
@@ -27627,10 +27617,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6091FDB0(v10, 1, 29, *a3, a3[1], 1, 1, 0, 0, 1);
     v11 = v10[10];
     v12 = (_DWORD *)operator new(28, a6, 4);
-    sub_60913BB4(v12);
+    Slot_construct(v12);
     *v12 = 12557340;
     sub_60913D88(v12, v11, a6, 0x2000, 0);
-    sub_60913A6C(&v24, v12, 0);
+    Slot_initWithOwnerAndOffset(&v24, v12, 0);
     v13 = v25;
     v14 = v26;
     v10[68] = v24;
@@ -27712,10 +27702,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6091FDB0(v7, 1, 29, *a3, a3[1], 1, 1, 0, 0, 1);
     v8 = v7[10];
     v9 = (_DWORD *)operator new(28, a5, 4);
-    sub_60913BB4(v9);
+    Slot_construct(v9);
     *v9 = 12557340;
     sub_60913D88(v9, v8, a5, 0x2000, 0);
-    sub_60913A6C(&v15, v9, 0);
+    Slot_initWithOwnerAndOffset(&v15, v9, 0);
     v10 = v16;
     v11 = v17;
     v7[68] = v15;
@@ -27796,7 +27786,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v4 = v29 + 832 * v2;
         if ( *(_BYTE *)(a1 + 3561) )
         {
-          sub_60473DE4(v3, 0, (_DWORD *)(v4 + 752), 0);
+          ArrayOf5_lookupByIndex(v3, 0, (_DWORD *)(v4 + 752), 0);
           v5 = ArrayOf20_getEntryPtr(v3, 0);
           (*(void (__fastcall **)(int))(*(_DWORD *)v5 + 96))(v5);
         }
@@ -27898,7 +27888,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    sub_60475AE8(a1);
+    Disposer_destroyAllocated(a1);
     return operator delete(v1);
   }
 
@@ -29909,7 +29899,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047E0EC
+ * MessageQueue_postType3
  * RVA 0x0047e0ec   size 0x50   xrefs 183
  * ============================================================================ */
   int __fastcall sub_6047E0EC(_DWORD *a1, int a2, int a3)

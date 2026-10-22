@@ -646,7 +646,6 @@ int __fastcall sub_604791FC(_DWORD *a1);  /* 0x004791fc */
 int __fastcall sub_604793E0(int a1, int a2, int a3);  /* 0x004793e0 */
 int __fastcall sub_604793FC(int a1, int a2);  /* 0x004793fc */
 int __fastcall sub_60479414(int a1, int a2, int a3);  /* 0x00479414 */
-void __fastcall sub_60479520(struct sead_IDisposer *a1);  /* 0x00479520 */
 int __fastcall sub_60479524(_DWORD *a1);  /* 0x00479524 */
 int __fastcall sub_60479588(int a1, int a2, _DWORD *a3, int a4);  /* 0x00479588 */
 int __fastcall sub_60479600(int a1, unsigned int a2, _DWORD *a3, _DWORD *a4, _DWORD *a5, int a6);  /* 0x00479600 */
