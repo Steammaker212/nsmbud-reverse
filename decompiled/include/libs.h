@@ -69,6 +69,7 @@ unsigned int __fastcall sub_6080686C(int a1);  /* 0x0080686c */
 int __fastcall sub_60806AE4(int result, _DWORD *a2, float32x4_t *a3, char a4, int a5, int a6, int a7);  /* 0x00806ae4 */
 int __fastcall SoundSystem_createInstance(int a1);  /* 0x00806f40 */
 int __fastcall sub_60807150(int result);  /* 0x00807150 */
+int __fastcall SoundSystem_getSoundArchive(int a1);  /* 0x00807560 */
 int __fastcall sub_60807574(_DWORD *a1);  /* 0x00807574 */
 int __fastcall sub_608075F8(int a1);  /* 0x008075f8 */
 int __fastcall sub_608078E0(int a1);  /* 0x008078e0 */
@@ -100,6 +101,7 @@ int __fastcall sub_60809384(int result, int *a2, int a3);  /* 0x00809384 */
 int __fastcall sub_6080954C(int a1, int *a2);  /* 0x0080954c */
 int __fastcall sub_60809604(int a1, int a2, int a3, int a4);  /* 0x00809604 */
 int __fastcall sub_608098AC(int a1, int a2, int a3, int a4);  /* 0x008098ac */
+int __fastcall SoundSystem_getSoundArchivePlayer(int a1);  /* 0x00809b54 */
 int __fastcall sub_60809B58(int a1, int a2);  /* 0x00809b58 */
 int __fastcall sub_60809B9C(int a1, int a2, int a3);  /* 0x00809b9c */
 int __fastcall sub_6080A0CC(_DWORD *a1);  /* 0x0080a0cc */
@@ -257,6 +259,7 @@ int __fastcall sub_608228E4(int a1, int a2, int a3, _DWORD *a4);  /* 0x008228e4 
 int __fastcall sub_6082293C(int a1, _DWORD *a2);  /* 0x0082293c */
 void __fastcall sub_60822A48(_DWORD *a1);  /* 0x00822a48 */
 int __fastcall sub_608248F0(int a1, int a2);  /* 0x008248f0 */
+int __fastcall RumbleMgr_create(int a1);  /* 0x008264f8 */
 int __fastcall sub_60826878(int a1);  /* 0x00826878 */
 int __fastcall sub_6082693C(int a1, int a2);  /* 0x0082693c */
 unsigned int __fastcall sub_60826C60(int a1, int a2, _BYTE *a3);  /* 0x00826c60 */
@@ -817,8 +820,10 @@ int __fastcall sub_60881DA8(int result, int a2, char a3);  /* 0x00881da8 */
 int __fastcall sub_60881E38(_DWORD *a1, _DWORD *a2);  /* 0x00881e38 */
 int __fastcall sub_6088203C(int a1, int a2);  /* 0x0088203c */
 int __fastcall sub_608820E8(int a1, int a2, int a3);  /* 0x008820e8 */
+void __fastcall debugPrintRelated3(const char *a1);  /* 0x00882120 */
 int __fastcall sub_60882124(int a1, int a2);  /* 0x00882124 */
 int __fastcall sub_608821A8(int a1);  /* 0x008821a8 */
+void __fastcall debugPrintRelated(const char *a1);  /* 0x0088239c */
 unsigned int __fastcall sub_60882748(int a1, _DWORD *a2, int a3, int a4, int a5);  /* 0x00882748 */
 int __fastcall sub_608828C4(int a1, int a2, int *a3, int a4);  /* 0x008828c4 */
 int __fastcall sub_608831F0(int a1, float32x2_t *a2, float32x2_t *a3, _DWORD *a4, int a5, _DWORD *a6, int a7, int a8);  /* 0x008831f0 */
@@ -968,6 +973,7 @@ int __fastcall sub_608A9234(int result);  /* 0x008a9234 */
 int __fastcall sub_608A92A8(int a1, int a2);  /* 0x008a92a8 */
 int __fastcall sub_608A92F0(int a1, int a2, int a3, int a4);  /* 0x008a92f0 */
 int __fastcall sub_608A937C(int a1);  /* 0x008a937c */
+int __fastcall nn_atk_SoundArchive_ctor(int result);  /* 0x008a9954 */
 int __fastcall sub_608A9AA4(int a1, int a2);  /* 0x008a9aa4 */
 int __fastcall sub_608A9AEC(int a1, int a2, int a3, int a4);  /* 0x008a9aec */
 int __fastcall sub_608A9B50(int a1, int a2);  /* 0x008a9b50 */

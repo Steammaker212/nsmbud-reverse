@@ -1067,6 +1067,7 @@ int __fastcall sub_6056143C(int a1);  /* 0x0056143c */
 int __fastcall sub_605617DC(_DWORD *a1);  /* 0x005617dc */
 int __fastcall sub_60561FA8(int a1);  /* 0x00561fa8 */
 bool __fastcall sub_60562274(int a1);  /* 0x00562274 */
+int __fastcall nnMain(nn::os *a1);  /* 0x00562698 */
 int __fastcall sub_60562ABC(int a1);  /* 0x00562abc */
 bool __fastcall sub_605632C0(int a1);  /* 0x005632c0 */
 int __fastcall sub_605635AC(int a1, int a2, int a3);  /* 0x005635ac */
@@ -1241,17 +1242,33 @@ int __fastcall TerrainActor_onDraw(int a1, int a2, int a3, int a4);  /* 0x005a50
 int __fastcall sub_605A512C(int a1);  /* 0x005a512c */
 int __fastcall sub_605A51B0(int a1, int a2);  /* 0x005a51b0 */
 int __fastcall sub_605A53E4(int a1);  /* 0x005a53e4 */
+int __fastcall TerrainActor_vfD4(int result);  /* 0x005a548c */
+int __fastcall TerrainActor_vfE0(int result);  /* 0x005a5594 */
+float __fastcall TerrainActor_vfE4(int a1);  /* 0x005a55ac */
+bool __fastcall TerrainActor_checkRTTi(int a1, int a2);  /* 0x005a5660 */
+void __fastcall TerrainActor_dtor(_DWORD *a1);  /* 0x005a5764 */
+int __fastcall TerrainActor_dtorFree(_DWORD *a1);  /* 0x005a5808 */
 int __fastcall sub_605A6A98(int a1);  /* 0x005a6a98 */
 int __fastcall sub_605A6BFC(int a1);  /* 0x005a6bfc */
 void __fastcall sub_605A6FE0(int a1, int a2, int a3);  /* 0x005a6fe0 */
 int __fastcall sub_605A788C(int **a1);  /* 0x005a788c */
+int __fastcall Lava_onCreate(int a1);  /* 0x005a7d68 */
 int __fastcall sub_605A8104(_DWORD *a1);  /* 0x005a8104 */
 int __fastcall sub_605A8604(int result);  /* 0x005a8604 */
 int __fastcall sub_605A955C(int **a1);  /* 0x005a955c */
+int __fastcall Poison_onCreate(int a1);  /* 0x005a9a20 */
+int __fastcall Poison_onExecute(int a1);  /* 0x005aa034 */
+bool __fastcall Poison_checkRTTI(int a1, int a2);  /* 0x005aa430 */
+int __fastcall Poison_dtorFree(_DWORD *a1);  /* 0x005aa5a8 */
+int __fastcall Quicksand_onCreate(int a1);  /* 0x005aa7a4 */
 int __fastcall sub_605AAB4C(_DWORD **a1);  /* 0x005aab4c */
 int __fastcall sub_605AB664(int a1);  /* 0x005ab664 */
 int __fastcall sub_605AC130(int a1);  /* 0x005ac130 */
 int __fastcall sub_605AC470(int a1);  /* 0x005ac470 */
+int __fastcall Water_onExecute(int a1);  /* 0x005ac75c */
+int __fastcall Water_onDraw(int a1);  /* 0x005ac930 */
+bool __fastcall Water_checkRTTI(int a1, int a2);  /* 0x005aca40 */
+int __fastcall Water_dtorFree(_DWORD *a1);  /* 0x005acbb8 */
 int __fastcall sub_605ACD1C(int a1);  /* 0x005acd1c */
 int __fastcall sub_605AD678(int result);  /* 0x005ad678 */
 unsigned int __fastcall sub_605AD9C8(int a1);  /* 0x005ad9c8 */
@@ -1387,7 +1404,11 @@ int __fastcall sub_605CE840(int result, _DWORD *a2, _QWORD *a3, int a4);  /* 0x0
 int __fastcall sub_605CE9B4(int a1, int a2);  /* 0x005ce9b4 */
 int __fastcall sub_605CEA9C(int a1);  /* 0x005cea9c */
 int __fastcall sub_605CEB6C(int a1);  /* 0x005ceb6c */
+int __fastcall TileGod_onCreate(int a1);  /* 0x005cef60 */
+int __fastcall TileGod_onExecute(int a1);  /* 0x005cf660 */
 int __fastcall sub_605CF690(int a1);  /* 0x005cf690 */
+bool __fastcall TileGod_checkRTTI(int a1, int a2);  /* 0x005cf804 */
+int __fastcall TileGod_dtorFree(Actor *a1);  /* 0x005cf908 */
 int __fastcall sub_605D0024(int a1);  /* 0x005d0024 */
 int __fastcall sub_605D006C(int result);  /* 0x005d006c */
 int __fastcall sub_605D00B8(int a1);  /* 0x005d00b8 */
@@ -1595,13 +1616,19 @@ int __fastcall sub_605ED5C0(int result);  /* 0x005ed5c0 */
 int __fastcall sub_605ED718(int a1);  /* 0x005ed718 */
 int __fastcall sub_605EDA64(_DWORD *a1);  /* 0x005eda64 */
 unsigned int __fastcall sub_605F1AA8(int a1);  /* 0x005f1aa8 */
+int __fastcall StarCoin_onCreate(float *a1);  /* 0x005f35cc */
+int __fastcall StarCoin_onExecute(int a1);  /* 0x005f3714 */
+int __fastcall StarCoin_dtorFree(Actor *a1);  /* 0x005f3a48 */
 int __fastcall StarCoinBase_ctor(int a1);  /* 0x005f3b14 */
 int __fastcall sub_605F43EC(int a1, int a2);  /* 0x005f43ec */
 int __fastcall sub_605F46C0(int a1);  /* 0x005f46c0 */
+int __fastcall StarCoinBase_onDraw(int a1, int a2, int a3, int a4);  /* 0x005f485c */
 int __fastcall StarCoinBase_updateModel(_DWORD *a1);  /* 0x005f488c */
 int __fastcall sub_605F4A94(unsigned __int8 *a1);  /* 0x005f4a94 */
 int __fastcall sub_605F4B14(int a1);  /* 0x005f4b14 */
 float __fastcall sub_605F53A8(int a1);  /* 0x005f53a8 */
+bool __fastcall StarCoinBase_checkRTTI(int a1, int a2);  /* 0x005f5510 */
+int __fastcall StarCoinBase_dtorFree(Actor *a1);  /* 0x005f5614 */
 int __fastcall sub_605F7478(int a1);  /* 0x005f7478 */
 int __fastcall sub_605F7AC0(int a1);  /* 0x005f7ac0 */
 int __fastcall sub_605F7FA4(int a1);  /* 0x005f7fa4 */
@@ -1647,9 +1674,16 @@ int __fastcall sub_60608074(int a1);  /* 0x00608074 */
 int __fastcall sub_606087C0(int a1, _DWORD *a2);  /* 0x006087c0 */
 int __fastcall sub_60608FF8(int a1, unsigned int a2);  /* 0x00608ff8 */
 int __fastcall sub_60609110(int result);  /* 0x00609110 */
+int __fastcall RollingHill_ctor(int a1);  /* 0x006097c8 */
+int __fastcall RollingHill_onCreate(int a1);  /* 0x00609b28 */
 int __fastcall RollingHill_updateModel(int a1);  /* 0x00609dc8 */
+int __fastcall RollingHill_onExecute(unsigned int a1);  /* 0x00609fa4 */
 unsigned int __fastcall sub_6060A088(unsigned int result);  /* 0x0060a088 */
 int __fastcall sub_6060A200(_DWORD *a1);  /* 0x0060a200 */
+int __fastcall RollingHill_onDraw(int a1, int a2, int a3, int a4);  /* 0x0060a354 */
+bool __fastcall RollingHill_checkRTTI(int a1, int a2);  /* 0x0060a474 */
+void __fastcall RollingHill_dtor(int a1);  /* 0x0060a65c */
+int __fastcall RollingHill_dtorFree(int a1);  /* 0x0060a68c */
 int __fastcall sub_6060B2F8(int a1, __int64 *a2);  /* 0x0060b2f8 */
 int __fastcall sub_6060B51C(int a1, int a2, int a3);  /* 0x0060b51c */
 int __fastcall sub_6060B6A8(int a1);  /* 0x0060b6a8 */
@@ -1764,6 +1798,11 @@ int __fastcall sub_6063473C(int a1, int a2);  /* 0x0063473c */
 int __fastcall sub_60634B08(_DWORD *a1);  /* 0x00634b08 */
 int __fastcall sub_60634F48(int a1);  /* 0x00634f48 */
 int __fastcall sub_606356DC(int a1);  /* 0x006356dc */
+int __fastcall RopeLadder_onCreate(int a1);  /* 0x00635ca8 */
+int __fastcall RopeLadder_onExecute(int a1);  /* 0x00635e70 */
+int __fastcall RopeLadder_onDraw(int a1, int a2, int a3, int a4);  /* 0x006360ec */
+void __fastcall RopeLadder_dtor(int a1);  /* 0x00636110 */
+int __fastcall RopeLadder_dtorFree(int a1);  /* 0x00636140 */
 int __fastcall sub_606361F8(int a1, float *a2, _DWORD *a3);  /* 0x006361f8 */
 unsigned int __fastcall sub_6063633C(int a1, int a2, int a3, int a4, int a5);  /* 0x0063633c */
 int __fastcall sub_60636C00(int result, int a2);  /* 0x00636c00 */
@@ -1912,8 +1951,14 @@ int __fastcall sub_6066FAC0(_DWORD *a1, int a2);  /* 0x0066fac0 */
 int __fastcall sub_6066FCB4(int a1);  /* 0x0066fcb4 */
 int __fastcall sub_606702FC(int a1);  /* 0x006702fc */
 int __fastcall sub_60670C2C(int a1);  /* 0x00670c2c */
+int __fastcall SpinningStar_onCreate(int a1);  /* 0x00672aac */
 int __fastcall sub_60672DC8(float *a1);  /* 0x00672dc8 */
+int __fastcall SpinningStar_onExecute(int a1);  /* 0x00673140 */
+int __fastcall SpinningStar_onDraw(int a1, int a2, int a3, int a4);  /* 0x0067348c */
 int __fastcall sub_606734DC(_WORD *a1);  /* 0x006734dc */
+bool __fastcall SpinningStar_checkRTTI(int a1, int a2);  /* 0x006736ac */
+void __fastcall SpinningStar_dtor(int a1);  /* 0x006737b0 */
+int __fastcall SpinningStar_dtorFree(int a1);  /* 0x00673800 */
 int __fastcall sub_60673858(int a1);  /* 0x00673858 */
 int __fastcall sub_60674470(int result, float *a2);  /* 0x00674470 */
 int __fastcall sub_60674EA4(int a1, int a2);  /* 0x00674ea4 */
@@ -2088,6 +2133,9 @@ int __fastcall sub_606AE7F4(int a1, int a2);  /* 0x006ae7f4 */
 int __fastcall sub_606AEC9C(int a1);  /* 0x006aec9c */
 int __fastcall sub_606AF2F8(int a1);  /* 0x006af2f8 */
 void __fastcall sub_606AF450(int a1);  /* 0x006af450 */
+int __fastcall MovementHandler_executeState_FindController(int a1);  /* 0x006af948 */
+int __fastcall MovementHandler_beginState_Linked(int result);  /* 0x006af978 */
+int __fastcall MovementHandler_executeState_Linked(int a1);  /* 0x006af984 */
 int __fastcall MovementHandler_findMovementController(int a1);  /* 0x006afce8 */
 int __fastcall MovementHandler_initFromStruct(int a1, int *a2);  /* 0x006b09f0 */
 int __fastcall MovementHandler_init3(int a1, int *a2, int a3, char a4, _DWORD *a5, char a6, char a7, char a8, int a9);  /* 0x006b0af8 */
@@ -2105,6 +2153,7 @@ int __fastcall sub_606B1DF8(int result);  /* 0x006b1df8 */
 int __fastcall sub_606B1F50(int result);  /* 0x006b1f50 */
 int __fastcall sub_606B1F8C(int result);  /* 0x006b1f8c */
 int __fastcall sub_606B2104(int result);  /* 0x006b2104 */
+int __fastcall State_MovementHandler_dtorFree(int a1);  /* 0x006b235c */
 int __fastcall sub_606B2940(int a1);  /* 0x006b2940 */
 int __fastcall sub_606B2A18(int a1, unsigned int a2, unsigned int a3, char a4, char a5, char a6);  /* 0x006b2a18 */
 int __fastcall sub_606B2C4C(int a1);  /* 0x006b2c4c */
@@ -2144,6 +2193,8 @@ int __fastcall sub_606BAB90(int a1, int a2);  /* 0x006bab90 */
 int __fastcall sub_606BB7B8(int a1);  /* 0x006bb7b8 */
 int __fastcall sub_606BB874(int a1, unsigned int a2, int a3, int a4, int a5, int a6, int a7, int a8);  /* 0x006bb874 */
 int __fastcall sub_606BBA3C(int a1);  /* 0x006bba3c */
+int __fastcall PowBlock_ctor(_DWORD *a1);  /* 0x006bc194 */
+int __fastcall PowBlock_onCreate(int a1);  /* 0x006bcb34 */
 int __fastcall sub_606BCDA4(int a1);  /* 0x006bcda4 */
 bool __fastcall sub_606BFC24(int a1);  /* 0x006bfc24 */
 int __fastcall sub_606C0AF8(int a1);  /* 0x006c0af8 */
@@ -2158,6 +2209,7 @@ int __fastcall sub_606C4544(int a1);  /* 0x006c4544 */
 int __fastcall sub_606C4608(int a1, unsigned int a2, int a3, int a4, int a5, int a6, int a7, int a8);  /* 0x006c4608 */
 int __fastcall sub_606C480C(int a1);  /* 0x006c480c */
 int __fastcall sub_606C4880(int a1);  /* 0x006c4880 */
+int __fastcall RedCoin_onCreate(int a1);  /* 0x006c4ed8 */
 int __fastcall sub_606C59CC(int a1);  /* 0x006c59cc */
 int __fastcall sub_606C5AA0(int a1);  /* 0x006c5aa0 */
 int __fastcall sub_606C5B88(int *a1, int a2, int a3, _DWORD *a4);  /* 0x006c5b88 */
@@ -2167,6 +2219,7 @@ int __fastcall sub_606C6638(int a1);  /* 0x006c6638 */
 int __fastcall sub_606C70B4(int a1);  /* 0x006c70b4 */
 int __fastcall sub_606C75EC(int a1);  /* 0x006c75ec */
 int __fastcall sub_606C77EC(int result);  /* 0x006c77ec */
+int __fastcall RedCoin_onExecute(int a1);  /* 0x006c79a0 */
 int __fastcall sub_606C7B7C(int result);  /* 0x006c7b7c */
 int __fastcall sub_606C7C4C(int a1);  /* 0x006c7c4c */
 int __fastcall sub_606C7EB8(int a1);  /* 0x006c7eb8 */
@@ -2180,6 +2233,7 @@ int __fastcall sub_606C8C0C(int a1);  /* 0x006c8c0c */
 int __fastcall sub_606C8E88(int a1);  /* 0x006c8e88 */
 int __fastcall sub_606C9B04(int a1, int a2);  /* 0x006c9b04 */
 int __fastcall sub_606CA124(_DWORD *a1, int a2, int a3);  /* 0x006ca124 */
+int __fastcall StoneEye_onCreate(_DWORD *a1);  /* 0x006ca1ec */
 bool __fastcall sub_606CA390(Actor *a1);  /* 0x006ca390 */
 int __fastcall sub_606CA41C(int a1, int a2);  /* 0x006ca41c */
 int __fastcall sub_606CA9C4(int a1);  /* 0x006ca9c4 */
@@ -2212,7 +2266,11 @@ int __fastcall sub_606D4980(float *a1, unsigned int *a2, int a3, float *a4, int 
 int __fastcall sub_606D4ABC(int a1);  /* 0x006d4abc */
 int __fastcall sub_606D4B48(int a1);  /* 0x006d4b48 */
 int __fastcall sub_606D4BD4(int a1);  /* 0x006d4bd4 */
+int __fastcall Seaweed_onCreate(int a1);  /* 0x006d4ca8 */
+int __fastcall Seaweed_onExecute(int a1);  /* 0x006d4f08 */
+int __fastcall Seaweed_onDraw(int a1, int a2, int a3, int a4);  /* 0x006d4f58 */
 signed int __fastcall Seaweed_setupModels(int a1);  /* 0x006d4fb8 */
+int __fastcall Seaweed_dtorFree(Actor *a1);  /* 0x006d5540 */
 bool __fastcall sub_606D5768(int a1);  /* 0x006d5768 */
 int __fastcall sub_606D7EA4(int a1);  /* 0x006d7ea4 */
 int __fastcall sub_606D8338(_DWORD *a1, _DWORD *a2, int a3);  /* 0x006d8338 */
@@ -2232,6 +2290,8 @@ bool __fastcall sub_606E2CAC(_DWORD *a1);  /* 0x006e2cac */
 int __fastcall sub_606E2E20(int a1);  /* 0x006e2e20 */
 int __fastcall sub_606E369C(int a1);  /* 0x006e369c */
 int __fastcall sub_606E3D88(int a1);  /* 0x006e3d88 */
+int __fastcall Chain_ctor(int a1);  /* 0x006e4be8 */
+int __fastcall SwingingVine_ctor(int a1);  /* 0x006e4db8 */
 int __fastcall sub_606E5000(int a1, int a2);  /* 0x006e5000 */
 int __fastcall sub_606E5160(int result);  /* 0x006e5160 */
 unsigned int __fastcall sub_606E5468(int a1);  /* 0x006e5468 */
@@ -2324,8 +2384,11 @@ int __fastcall sub_607002CC(int a1, int a2);  /* 0x007002cc */
 int __fastcall sub_6070098C(int a1);  /* 0x0070098c */
 int __fastcall sub_60700A2C(int a1);  /* 0x00700a2c */
 bool __fastcall sub_60700AA4(int a1);  /* 0x00700aa4 */
+int __fastcall FloatingBubble_onCreate(int a1);  /* 0x00703160 */
 int __fastcall sub_607035EC(int a1, int a2);  /* 0x007035ec */
 int __fastcall sub_6070382C(_DWORD *a1);  /* 0x0070382c */
+int __fastcall FloatingBubble_onExecute(int a1);  /* 0x007039a4 */
+int __fastcall FloatingBubble_onDraw(int a1, int a2, int a3, int a4);  /* 0x00703c2c */
 int __fastcall sub_60703E9C(int a1, float *a2);  /* 0x00703e9c */
 int __fastcall sub_607045A4(int a1);  /* 0x007045a4 */
 int __fastcall sub_60704A44(int a1);  /* 0x00704a44 */
@@ -2394,6 +2457,7 @@ void __fastcall sub_6071AA3C(_DWORD *a1, int a2);  /* 0x0071aa3c */
 void __fastcall sub_6071ABC8(int a1);  /* 0x0071abc8 */
 int __fastcall sub_6071AE28(int a1);  /* 0x0071ae28 */
 int __fastcall sub_6071B084(int a1, int a2);  /* 0x0071b084 */
+int __fastcall TilesetManager_getTileLayer(int a1, unsigned int a2, unsigned int a3);  /* 0x0071b2d4 */
 int __fastcall sub_6071B2FC(int a1, unsigned int a2, int a3, unsigned int a4);  /* 0x0071b2fc */
 int __fastcall sub_6071B638(int a1, _WORD *a2);  /* 0x0071b638 */
 int __fastcall sub_6071B680(int *a1, int a2);  /* 0x0071b680 */
@@ -2474,6 +2538,7 @@ int __fastcall sub_607276B8(int a1, _BYTE *a2, float *a3);  /* 0x007276b8 */
 int __fastcall sub_60727798(int a1, _BYTE *a2, float *a3);  /* 0x00727798 */
 int __fastcall sub_60727950(_DWORD *a1, int a2);  /* 0x00727950 */
 int __fastcall sub_607279C0(int *a1);  /* 0x007279c0 */
+int __fastcall Level_getArea(int a1, unsigned int a2);  /* 0x00727c60 */
 int __fastcall sub_60727C80(int a1, int a2);  /* 0x00727c80 */
 int __fastcall sub_60727D48(int a1, int a2);  /* 0x00727d48 */
 int __fastcall sub_60727E50(int a1);  /* 0x00727e50 */
@@ -2896,6 +2961,7 @@ bool __fastcall sub_6077B798(int a1, int a2);  /* 0x0077b798 */
 /* ---- core.c ---- */
 int __fastcall sub_600005D4(int a1, int *a2);  /* 0x000005d4 */
 unsigned int __fastcall sub_60000A44(int a1, int a2, int a3);  /* 0x00000a44 */
+int __fastcall StageAcor_handleYspeed(int result);  /* 0x00000ffc */
 int __fastcall sub_60001018(int result);  /* 0x00001018 */
 int __fastcall sub_60001050(int a1, int a2);  /* 0x00001050 */
 int __fastcall sub_600010DC(int a1, int a2, float *a3);  /* 0x000010dc */
@@ -2945,6 +3011,7 @@ int __fastcall sub_600074EC(int a1);  /* 0x000074ec */
 int __fastcall sub_60007858(int a1, int a2);  /* 0x00007858 */
 int __fastcall sub_60007B5C(int a1, int a2);  /* 0x00007b5c */
 int __fastcall sub_60007BF0(int result, int *a2);  /* 0x00007bf0 */
+int __fastcall ActorMgr_unk(int a1, int *a2);  /* 0x00007c5c */
 int __fastcall sub_60007C88(_DWORD *a1);  /* 0x00007c88 */
 int __fastcall sub_600082CC(int a1, int a2, char a3);  /* 0x000082cc */
 int __fastcall sub_60008458(_DWORD *a1, Actor *a2);  /* 0x00008458 */
@@ -2976,6 +3043,7 @@ bool __fastcall sub_6000ADDC(int a1, int a2);  /* 0x0000addc */
 bool __fastcall sub_6000AED0(int a1, int a2);  /* 0x0000aed0 */
 bool __fastcall sub_6000B0F8(_DWORD *a1);  /* 0x0000b0f8 */
 void __fastcall sub_6000B29C(sead::IDisposer *a1);  /* 0x0000b29c */
+int __fastcall PlayerLookTargetList_add(int a1, int a2);  /* 0x0000b4d4 */
 int __fastcall sub_6000B538(int a1, int a2, float *a3);  /* 0x0000b538 */
 int __fastcall sub_6000B690(unsigned int *a1, int a2);  /* 0x0000b690 */
 int __fastcall sub_6000BB08(unsigned int *a1);  /* 0x0000bb08 */
@@ -3007,11 +3075,18 @@ int __fastcall sub_60013668(int a1);  /* 0x00013668 */
 int __fastcall sub_600138E0(int a1);  /* 0x000138e0 */
 int __fastcall sub_60013B40(int a1);  /* 0x00013b40 */
 int __fastcall Profile_loadResources(int result, int a2);  /* 0x00017fcc */
+int __fastcall Profile_unsetResourcesLoaded(int result);  /* 0x00018238 */
+int __fastcall Profile_getPriority(unsigned int a1);  /* 0x0001839c */
+int __fastcall Profile_getHasResources(unsigned int a1);  /* 0x000183c8 */
+int __fastcall Profile_getResourceCountById(unsigned int a1);  /* 0x000183f0 */
+int __fastcall Profile_getResourceListById(unsigned int a1);  /* 0x00020ff0 */
 int __fastcall sub_60021018(int a1);  /* 0x00021018 */
 int __fastcall sub_600210C8(int result, int a2);  /* 0x000210c8 */
 int __fastcall sub_60021148(int a1, int a2, int a3, int a4);  /* 0x00021148 */
 int __fastcall sub_600213C4(int a1, _DWORD *a2);  /* 0x000213c4 */
 int __fastcall sub_60021460(int a1, int a2);  /* 0x00021460 */
+int __fastcall EffectWrapper_dtorFree(sead::IDisposer *a1);  /* 0x00021864 */
+bool __fastcall EffectWrapper_checkRTTI(int a1, int a2);  /* 0x00021898 */
 void __fastcall sub_60021B50(int a1, int a2, int a3, int a4);  /* 0x00021b50 */
 int __fastcall sub_60021C70(int a1, int a2);  /* 0x00021c70 */
 int __fastcall sub_600220C0(int a1, int a2);  /* 0x000220c0 */
@@ -3025,7 +3100,9 @@ int __fastcall sub_600228F4(int a1, int a2, int a3);  /* 0x000228f4 */
 int __fastcall sub_600229B0(int a1, int a2, int a3);  /* 0x000229b0 */
 int __fastcall sub_60022A80(int a1, _DWORD *a2, unsigned int a3);  /* 0x00022a80 */
 int __fastcall sub_60022BA0(int a1);  /* 0x00022ba0 */
+int __fastcall BootScene_create(int a1);  /* 0x00022c68 */
 int __fastcall sub_60022CC0(int a1, int *a2, int a3);  /* 0x00022cc0 */
+int __fastcall AreaTask_create(int a1);  /* 0x00022dcc */
 int __fastcall sub_60022DF8(int a1, int *a2);  /* 0x00022df8 */
 int __fastcall sub_60022E9C(int a1);  /* 0x00022e9c */
 int __fastcall sub_60023294(int a1);  /* 0x00023294 */
@@ -3037,9 +3114,13 @@ int __fastcall sub_60023CB0(int *a1);  /* 0x00023cb0 */
 int __fastcall sub_60023FA8(int a1);  /* 0x00023fa8 */
 int __fastcall sub_600242D8(_WORD *a1, _BYTE *a2, _BYTE *a3, _BYTE *a4, __int16 a5);  /* 0x000242d8 */
 int __fastcall sub_60024494(_DWORD *a1);  /* 0x00024494 */
+int __fastcall TitleScene_create(int a1);  /* 0x00024728 */
+int __fastcall GameSetupScene_create(int a1);  /* 0x00024808 */
+int __fastcall CourseSelectTask_create(int a1);  /* 0x000248e8 */
 void __fastcall sub_60025AF4(int a1, int a2, int a3, unsigned int a4);  /* 0x00025af4 */
 void __fastcall sub_60025B84(int a1, int a2, int a3, unsigned int a4);  /* 0x00025b84 */
 int __fastcall sub_60026BFC(_DWORD *a1);  /* 0x00026bfc */
+int __fastcall MovingSoundActorHandle_dtorFree(int *a1);  /* 0x00026d94 */
 bool __fastcall sub_60026DC8(int a1);  /* 0x00026dc8 */
 int __fastcall sub_60027390(_DWORD *a1);  /* 0x00027390 */
 int __fastcall sub_600276AC(int a1);  /* 0x000276ac */
@@ -3080,6 +3161,10 @@ int __fastcall sub_60047D84(int a1, float *a2);  /* 0x00047d84 */
 int __fastcall sub_6004816C(int a1);  /* 0x0004816c */
 int __fastcall sub_60048388(int a1);  /* 0x00048388 */
 int __fastcall sub_60048550(int a1);  /* 0x00048550 */
+bool __fastcall ColliderBase_vf10(int a1, int a2, char a3);  /* 0x0004b9b0 */
+int __fastcall ColliderBase_vf14(int a1, int a2);  /* 0x0004b9e8 */
+int __fastcall RectCollider_dtorFree(int a1);  /* 0x0004ba1c */
+bool __fastcall RectCollider_checkRTTI(int a1, int a2);  /* 0x0004ba2c */
 bool __fastcall sub_6004BAA8(int a1);  /* 0x0004baa8 */
 int __fastcall sub_6004C420(int a1, float *a2, float *a3);  /* 0x0004c420 */
 int __fastcall sub_6004C5C4(int a1);  /* 0x0004c5c4 */
@@ -3192,6 +3277,8 @@ int __fastcall sub_600A3C08(int a1);  /* 0x000a3c08 */
 int __fastcall sub_600A3D1C(int a1);  /* 0x000a3d1c */
 int __fastcall sub_600A3FD4(int a1);  /* 0x000a3fd4 */
 int __fastcall sub_600A4024(int a1);  /* 0x000a4024 */
+int __fastcall SolidOnTopColliderWrapper_dtorFree(sead::IDisposer *a1);  /* 0x000a462c */
+bool __fastcall SolidOnTopColliderWrapper_checkRTTI(int a1, int a2);  /* 0x000a463c */
 int __fastcall sub_600A6A90(int a1);  /* 0x000a6a90 */
 int __fastcall sub_600A724C(int a1);  /* 0x000a724c */
 int __fastcall sub_600A7890(int a1);  /* 0x000a7890 */
@@ -3279,6 +3366,7 @@ int __fastcall sub_600D6760(int a1);  /* 0x000d6760 */
 int __fastcall sub_600D8F9C(int a1);  /* 0x000d8f9c */
 int __fastcall sub_600DA384(_DWORD *a1);  /* 0x000da384 */
 int __fastcall sub_600DBC58(_DWORD *a1);  /* 0x000dbc58 */
+int __fastcall MtxTranslateGetItFromHere(int a1);  /* 0x000ddef0 */
 int __fastcall sub_600DE710(int a1);  /* 0x000de710 */
 int __fastcall sub_600E2170(int a1);  /* 0x000e2170 */
 int __fastcall sub_600E21F0(int a1, int a2);  /* 0x000e21f0 */

@@ -7621,6 +7621,89 @@
   }
 
 /* ============================================================================
+ * ItemNameTable_init
+ * RVA 0x0045cc68   size 0x26c   xrefs 0
+ * ============================================================================ */
+  int sub_6045CC68()
+  {
+    _DWORD v1[2]; // [sp+14h] [bp-8h] BYREF
+  
+    dword_60C9D030 = 0;
+    dword_60C9D034 = 0;
+    dword_60C9D038 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC97FF;
+    Profile::Profile(13225932, 4572096, MEMORY[0xAF39D0], (int)v1, &unk_60B02558, 36);
+    dword_60C9D03C = 12321336;
+    MEMORY[0xC9CFE8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC9CFE4] = 12563196;
+    MEMORY[0xC9CFEC] = 4572284;
+    MEMORY[0xC9CFF0] = 0;
+    MEMORY[0xC9CFF4] = 4572484;
+    MEMORY[0xC9CFF8] = 0;
+    MEMORY[0xC9CFFC] = 4572580;
+    MEMORY[0xC9D000] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xC9D008] = MEMORY[0xC7B788];
+    MEMORY[0xC9D004] = 12563196;
+    MEMORY[0xC9D00C] = 4572584;
+    MEMORY[0xC9D010] = 0;
+    MEMORY[0xC9D014] = 4572764;
+    MEMORY[0xC9D018] = 0;
+    MEMORY[0xC9D01C] = 4572784;
+    MEMORY[0xC9D020] = 0;
+    dword_60C9D040 = (int)"I_kinoko";
+    dword_60C9D044 = 12321336;
+    dword_60C9D048 = (int)"I_fireflower";
+    dword_60C9D04C = 12321336;
+    dword_60C9D050 = (int)"I_propeller";
+    dword_60C9D054 = 12321336;
+    dword_60C9D058 = (int)"I_penguin";
+    dword_60C9D05C = 12321336;
+    dword_60C9D060 = (int)"I_kinoko";
+    dword_60C9D064 = 12321336;
+    dword_60C9D068 = (int)"I_star";
+    dword_60C9D06C = 12321336;
+    dword_60C9D070 = (int)"I_iceflower";
+    dword_60C9D074 = 12321336;
+    dword_60C9D078 = (int)"I_yoshichibi_egg";
+    dword_60C9D07C = 12321336;
+    dword_60C9D080 = (int)"I_yoshichibi_egg";
+    dword_60C9D084 = 12321336;
+    unk_60C9D088 = "I_musasabi";
+    unk_60C9D08C = 12321336;
+    unk_60C9D090 = "I_kinoko";
+    dword_60C9D094 = 12321336;
+    dword_60C9D098 = (int)"I_crown";
+    sub_60000288();
+    unk_60C9D0A0 = 12321336;
+    unk_60C9D0A4 = "I_kinoko";
+    dword_60C9D0A8 = 12321336;
+    dword_60C9D0AC = (int)"I_fireflower";
+    dword_60C9D0B0 = 12321336;
+    unk_60C9D0B4 = "I_propeller_model";
+    unk_60C9D0B8 = 12321336;
+    unk_60C9D0BC = "I_penguin";
+    dword_60C9D0C0 = 12321336;
+    dword_60C9D0C4 = (int)"I_kinoko";
+    dword_60C9D0C8 = 12321336;
+    dword_60C9D0CC = (int)"I_star";
+    dword_60C9D0D0 = 12321336;
+    dword_60C9D0D4 = (int)"I_iceflower";
+    dword_60C9D0D8 = 12321336;
+    dword_60C9D0DC = (int)"I_yoshichibi_egg";
+    dword_60C9D0E0 = 12321336;
+    dword_60C9D0E4 = (int)"I_yoshichibi_egg";
+    dword_60C9D0E8 = 12321336;
+    unk_60C9D0EC = "I_musasabi";
+    unk_60C9D0F0 = 12321336;
+    unk_60C9D0F4 = "I_kinoko";
+    dword_60C9D0F8 = 12321336;
+    dword_60C9D0FC = (int)"I_crown";
+    return sub_60000288();
+  }
+
+/* ============================================================================
  * sub_6045D18C
  * RVA 0x0045d18c   size 0x34   xrefs 1
  * ============================================================================ */
@@ -14104,6 +14187,411 @@
   }
 
 /* ============================================================================
+ * MenuLayoutTable_init
+ * RVA 0x00476a7c   size 0x9d4   xrefs 0
+ * ============================================================================ */
+  int __fastcall sub_60476A7C(int a1, int a2, int a3, char **a4)
+  {
+    char *v7; // r7
+    int result; // r0
+    int v9; // r4
+    int v10; // r2
+    int i; // r1
+    int v12; // r3
+    int v13; // r3
+    char *v14; // r7
+    int j; // r1
+    int v16; // r3
+    int v17; // r3
+    int v18; // r0
+    int v19; // r7
+    char *v20; // r7
+    int k; // r1
+    int v22; // r3
+    int v23; // r3
+    char *v24; // r7
+    int m; // r1
+    int v26; // r3
+    int v27; // r3
+    int v28; // r0
+    char *v29; // r7
+    int n; // r1
+    int v31; // r3
+    int v32; // r3
+    char *v33; // r7
+    int ii; // r1
+    int v35; // r3
+    int v36; // r3
+    char *v37; // r7
+    int jj; // r1
+    int v39; // r3
+    int v40; // r3
+    char *v41; // r7
+    int kk; // r1
+    int v43; // r3
+    int v44; // r3
+    bool v45; // zf
+    int mm; // r1
+    int v47; // r3
+    int nn; // r1
+    int v49; // r3
+    int i1; // r1
+    int v51; // r3
+    int i2; // r1
+    int v53; // r3
+    int v54; // [sp+0h] [bp-10h] BYREF
+    const char *v55; // [sp+4h] [bp-Ch]
+    int v56; // [sp+8h] [bp-8h] BYREF
+    char *v57; // [sp+Ch] [bp-4h]
+  
+    v7 = *a4;
+    v56 = 12321336;
+    v57 = v7;
+    result = (int)"NormalButton";
+    if ( v7 != "NormalButton" )
+    {
+      v9 = MEMORY[0xB3BA34];
+      for ( result = 0; result < 524289; ++result )
+      {
+        v10 = (unsigned __int8)v7[result];
+        if ( v10 != (unsigned __int8)aNormalbutton[result] )
+          break;
+        if ( v10 == MEMORY[0xB3BA34] )
+          return result;
+      }
+      v54 = 12321336;
+      v55 = "DecisionButton";
+      sead::SafeStringBase<char>::assureTerminationImpl_(&v54);
+      result = (int)v55;
+      if ( v7 != v55 )
+      {
+        for ( i = 1; ; i += 2 )
+        {
+          v12 = (unsigned __int8)v57[i - 1];
+          if ( v12 != (unsigned __int8)v55[i - 1] )
+            break;
+          if ( v12 == v9 )
+            return result;
+          if ( i >= 524289 )
+            break;
+          v13 = (unsigned __int8)v57[i];
+          if ( v13 != (unsigned __int8)v55[i] )
+            break;
+          if ( v13 == v9 )
+            return result;
+        }
+        v54 = 12321336;
+        v55 = "CursorDecisionButton";
+        (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+        (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+        v14 = v57;
+        (*(void (__fastcall **)(int *))(v54 + 12))(&v54);
+        if ( v14 == v55 )
+        {
+  LABEL_23:
+          v18 = sub_60855BC8(220);
+          v19 = v18;
+          if ( !v18 )
+            goto LABEL_88;
+          sub_60478B70(v18);
+        }
+        else
+        {
+          for ( j = 1; ; j += 2 )
+          {
+            v16 = (unsigned __int8)v57[j - 1];
+            if ( v16 != (unsigned __int8)v55[j - 1] )
+              break;
+            if ( v16 == v9 )
+              goto LABEL_23;
+            if ( j >= 524289 )
+              break;
+            v17 = (unsigned __int8)v57[j];
+            if ( v17 != (unsigned __int8)v55[j] )
+              break;
+            if ( v17 == v9 )
+              goto LABEL_23;
+          }
+          v54 = 12321336;
+          v55 = "CursorNormalButton";
+          (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+          (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+          v20 = v57;
+          (*(void (__fastcall **)(int *))(v54 + 12))(&v54);
+          if ( v20 == v55 )
+          {
+  LABEL_33:
+            v19 = sub_60855BC8(220);
+            if ( !v19 )
+              goto LABEL_88;
+            sub_604776F0();
+            *(_DWORD *)v19 = 12570580;
+            *(_DWORD *)(v19 + 8) |= 0x20u;
+            *(_DWORD *)(v19 + 164) = 1;
+          }
+          else
+          {
+            for ( k = 1; ; k += 2 )
+            {
+              v22 = (unsigned __int8)v57[k - 1];
+              if ( v22 != (unsigned __int8)v55[k - 1] )
+                break;
+              if ( v22 == v9 )
+                goto LABEL_33;
+              if ( k >= 524289 )
+                break;
+              v23 = (unsigned __int8)v57[k];
+              if ( v23 != (unsigned __int8)v55[k] )
+                break;
+              if ( v23 == v9 )
+                goto LABEL_33;
+            }
+            v54 = 12321336;
+            v55 = "CursorNormalButtonArrowL";
+            (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+            (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+            v24 = v57;
+            (*(void (__fastcall **)(int *))(v54 + 12))(&v54);
+            if ( v24 == v55 )
+            {
+  LABEL_43:
+              v19 = sub_60855BC8(220);
+              if ( !v19 )
+                goto LABEL_88;
+              sub_604776F0();
+              *(_DWORD *)(v19 + 8) |= 0x20u;
+              *(_DWORD *)(v19 + 164) = 1;
+              v28 = 12569660;
+            }
+            else
+            {
+              for ( m = 1; ; m += 2 )
+              {
+                v26 = (unsigned __int8)v57[m - 1];
+                if ( v26 != (unsigned __int8)v55[m - 1] )
+                  break;
+                if ( v26 == v9 )
+                  goto LABEL_43;
+                if ( m >= 524289 )
+                  break;
+                v27 = (unsigned __int8)v57[m];
+                if ( v27 != (unsigned __int8)v55[m] )
+                  break;
+                if ( v27 == v9 )
+                  goto LABEL_43;
+              }
+              v54 = 12321336;
+              v55 = "CursorNormalButtonArrowR";
+              (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+              (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+              v29 = v57;
+              (*(void (__fastcall **)(int *))(v54 + 12))(&v54);
+              if ( v29 != v55 )
+              {
+                for ( n = 1; ; n += 2 )
+                {
+                  v31 = (unsigned __int8)v57[n - 1];
+                  if ( v31 != (unsigned __int8)v55[n - 1] )
+                    break;
+                  if ( v31 == v9 )
+                    goto LABEL_53;
+                  if ( n >= 524289 )
+                    break;
+                  v32 = (unsigned __int8)v57[n];
+                  if ( v32 != (unsigned __int8)v55[n] )
+                    break;
+                  if ( v32 == v9 )
+                    goto LABEL_53;
+                }
+                v54 = 12321336;
+                v55 = "CursorCheckButton";
+                (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                v33 = v57;
+                (*(void (__fastcall **)(int *))(v54 + 12))(&v54);
+                if ( v33 == v55 )
+                {
+  LABEL_64:
+                  v19 = sub_60855BC8(228);
+                  if ( v19 )
+                  {
+                    sub_604776F0();
+                    *(_DWORD *)v19 = 12570124;
+                    *(_BYTE *)(v19 + 220) = 0;
+                    *(_DWORD *)(v19 + 224) = 0;
+                    *(_DWORD *)(v19 + 8) |= 0x20u;
+                    *(_DWORD *)(v19 + 164) = 2;
+                  }
+                  else
+                  {
+                    v19 = 0;
+                  }
+                  result = sub_60478970((_DWORD *)v19, (int)a4, a3);
+                }
+                else
+                {
+                  for ( ii = 1; ; ii += 2 )
+                  {
+                    v35 = (unsigned __int8)v57[ii - 1];
+                    if ( v35 != (unsigned __int8)v55[ii - 1] )
+                      break;
+                    if ( v35 == v9 )
+                      goto LABEL_64;
+                    if ( ii >= 524289 )
+                      break;
+                    v36 = (unsigned __int8)v57[ii];
+                    if ( v36 != (unsigned __int8)v55[ii] )
+                      break;
+                    if ( v36 == v9 )
+                      goto LABEL_64;
+                  }
+                  v54 = 12321336;
+                  v55 = "CursorDragButton";
+                  (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                  (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                  v37 = v57;
+                  (*(void (__fastcall **)(int *))(v54 + 12))(&v54);
+                  if ( v37 != v55 )
+                  {
+                    for ( jj = 1; ; jj += 2 )
+                    {
+                      v39 = (unsigned __int8)v57[jj - 1];
+                      if ( v39 != (unsigned __int8)v55[jj - 1] )
+                        break;
+                      if ( v39 == v9 )
+                        goto LABEL_74;
+                      if ( jj >= 524289 )
+                        break;
+                      v40 = (unsigned __int8)v57[jj];
+                      if ( v40 != (unsigned __int8)v55[jj] )
+                        break;
+                      if ( v40 == v9 )
+                        goto LABEL_74;
+                    }
+                    v54 = 12321336;
+                    v55 = "CursorPushButton";
+                    (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                    (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                    v41 = v57;
+                    (*(void (__fastcall **)(int *))(v54 + 12))(&v54);
+                    if ( v41 != v55 )
+                    {
+                      for ( kk = 1; ; kk += 2 )
+                      {
+                        v43 = (unsigned __int8)v57[kk - 1];
+                        if ( v43 != (unsigned __int8)v55[kk - 1] )
+                          break;
+                        if ( v43 == v9 )
+                          goto LABEL_86;
+                        if ( kk >= 524289 )
+                          break;
+                        v44 = (unsigned __int8)v57[kk];
+                        if ( v44 != (unsigned __int8)v55[kk] )
+                          break;
+                        if ( v44 == v9 )
+                          goto LABEL_86;
+                      }
+                      (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                      (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                      result = (int)v57;
+                      if ( v57 != "SelectButton" )
+                      {
+                        for ( mm = 0; mm < 524289; ++mm )
+                        {
+                          v47 = (unsigned __int8)v57[mm];
+                          if ( v47 != (unsigned __int8)aSelectbutton[mm] )
+                            break;
+                          if ( v47 == v9 )
+                            return result;
+                        }
+                        (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                        (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                        result = (int)v57;
+                        if ( v57 != "CheckButton" )
+                        {
+                          for ( nn = 0; nn < 524289; ++nn )
+                          {
+                            v49 = (unsigned __int8)v57[nn];
+                            if ( v49 != (unsigned __int8)aCheckbutton[nn] )
+                              break;
+                            if ( v49 == v9 )
+                              return result;
+                          }
+                          (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                          (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                          result = (int)v57;
+                          if ( v57 != "FlexibleTextBoxR" )
+                          {
+                            for ( i1 = 0; i1 < 524289; ++i1 )
+                            {
+                              v51 = (unsigned __int8)v57[i1];
+                              if ( v51 != (unsigned __int8)aFlexibletextbo[i1] )
+                                break;
+                              if ( v51 == v9 )
+                                return result;
+                            }
+                            (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                            (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                            result = (int)v57;
+                            if ( v57 != "FlexibleTextBoxL" )
+                            {
+                              for ( i2 = 0; i2 < 524289; ++i2 )
+                              {
+                                v53 = (unsigned __int8)v57[i2];
+                                if ( v53 != (unsigned __int8)aFlexibletextbo_0[i2] )
+                                  break;
+                                if ( v53 == v9 )
+                                  return result;
+                              }
+                              (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
+                              return (*(int (__fastcall **)(int *))(v56 + 12))(&v56);
+                            }
+                          }
+                        }
+                      }
+                      return result;
+                    }
+  LABEL_86:
+                    v19 = sub_60855BC8(220);
+                    if ( v19 )
+                    {
+                      sub_604776F0();
+                      *(_DWORD *)v19 = 12570732;
+                      *(_DWORD *)(v19 + 164) = 4;
+                      goto LABEL_89;
+                    }
+  LABEL_88:
+                    v19 = 0;
+                    goto LABEL_89;
+                  }
+  LABEL_74:
+                  v19 = sub_60855BC8(260);
+                  if ( v19 )
+                  {
+                    sub_604776F0();
+                    *(_DWORD *)v19 = 12570428;
+                    *(_DWORD *)(v19 + 220) = 0;
+                    *(_WORD *)(v19 + 240) = 0;
+                    *(_DWORD *)(v19 + 8) |= 0x20u;
+                    *(_DWORD *)(v19 + 164) = 3;
+                  }
+                  else
+                  {
+                    v19 = 0;
+                  }
+                  result = sub_60478D70((_DWORD *)v19, (int)a4, a3);
+                }
+  LABEL_90:
+                v45 = v19 == 0;
+                if ( v19 )
+                {
+                  v9 = *(_DWORD *)(a1 + 4);
+                  v45 = v9 == 0;
+                }
+                if ( !v45 )
+                {
+
+/* ============================================================================
  * sub_60477558
  * RVA 0x00477558   size 0xe4   xrefs 2
  * ============================================================================ */
@@ -15606,7 +16094,7 @@
   }
 
 /* ============================================================================
- * sub_6047BEC0
+ * WorldNameTable_init
  * RVA 0x0047bec0   size 0x228   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6047BEC0(_WORD *a1, unsigned int a2)
@@ -15625,7 +16113,7 @@
     __int16 *v15; // r3
     __int16 v16; // r7
   
-    v4 = sub_6047DCCC(6);
+    v4 = StaffCreditTable_init(6);
     if ( ((unsigned int)&unk_60C9EAD0 & ~(1615314664 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9EAD0) )
     {
       dword_60C9EAD4 = 12321336;
@@ -15710,7 +16198,7 @@
   }
 
 /* ============================================================================
- * sub_6047C13C
+ * CourseNameTable_init
  * RVA 0x0047c13c   size 0x1518   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6047C13C(unsigned int a1, unsigned int a2, int *a3)
@@ -15726,7 +16214,7 @@
     v5 = 1;
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
       v5 = 2;
-    v6 = sub_6047DCCC(v5);
+    v6 = StaffCreditTable_init(v5);
     if ( ((unsigned int)&unk_60C9EAB8 & ~(1615315332 << v7) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9EAB8) )
     {
       dword_60C9DA68[0] = 12321336;
@@ -16137,7 +16625,7 @@
     int v20; // [sp+218h] [bp-40h] BYREF
   
     v5 = nullptr;
-    v6 = sub_6047DCCC(0);
+    v6 = StaffCreditTable_init(0);
     v18 = &v20;
     v17 = 12322272;
     v19 = 64;
@@ -16370,7 +16858,7 @@
   }
 
 /* ============================================================================
- * sub_6047DCCC
+ * StaffCreditTable_init
  * RVA 0x0047dccc   size 0x14c   xrefs 9
  * ============================================================================ */
   int __fastcall sub_6047DCCC(int a1)
@@ -16463,7 +16951,7 @@
     int v19; // [sp+30h] [bp-204h]
     int v20; // [sp+34h] [bp-200h] BYREF
   
-    v10 = sub_6047DCCC(a1);
+    v10 = StaffCreditTable_init(a1);
     if ( !v10 )
       return 0;
     (*(void (__fastcall **)(_DWORD *))(*a2 + 12))(a2);

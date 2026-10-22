@@ -91,8 +91,11 @@ int __fastcall sub_60128E08(_DWORD *a1);  /* 0x00128e08 */
 int __fastcall sub_60128F34(unsigned int *a1);  /* 0x00128f34 */
 unsigned int __fastcall sub_60129174(_DWORD *a1);  /* 0x00129174 */
 int __fastcall sub_60129290(int a1);  /* 0x00129290 */
+int __fastcall WendyFloor_onCreate(int a1);  /* 0x0012b40c */
 int __fastcall sub_6012B514(int a1);  /* 0x0012b514 */
 int __fastcall WendyFloor_updateModel(int a1);  /* 0x0012b63c */
+int __fastcall WendyFloor_onExecute(int a1);  /* 0x0012b7a4 */
+int __fastcall WendyFloor_onDraw(int a1, int a2, int a3, int a4);  /* 0x0012b7cc */
 int __fastcall sub_6012CB54(int a1);  /* 0x0012cb54 */
 int __fastcall sub_6012CC68(_DWORD *a1);  /* 0x0012cc68 */
 int __fastcall sub_6012CE5C(int a1);  /* 0x0012ce5c */
@@ -107,13 +110,24 @@ int __fastcall sub_6013483C(_DWORD *a1);  /* 0x0013483c */
 int __fastcall sub_60134914(int a1);  /* 0x00134914 */
 unsigned int __fastcall sub_601349FC(int a1, _DWORD *a2);  /* 0x001349fc */
 int __fastcall FireballBase_ctor(int a1);  /* 0x00135a90 */
+int __fastcall FireballBase_onCreate(int a1);  /* 0x00135bd8 */
+int __fastcall FireballBase_beforeExecute(int a1);  /* 0x00135db0 */
+int __fastcall FireballBase_onExecute(int *a1);  /* 0x00135e48 */
+int __fastcall FireballBase_onDraw(int a1);  /* 0x0013616c */
+int __fastcall FireballBase_onDelete(_BYTE *a1);  /* 0x00136184 */
+int __fastcall FireballBase_removeActiveColliders(int a1);  /* 0x001361b0 */
+int __fastcall FireballBase_addActiveColliders(int a1);  /* 0x001361fc */
 int __fastcall sub_601362A0(int a1);  /* 0x001362a0 */
 int __fastcall sub_6013657C(int a1);  /* 0x0013657c */
 int __fastcall sub_601367FC(_DWORD *a1);  /* 0x001367fc */
 int __fastcall sub_60136894(int a1);  /* 0x00136894 */
 int __fastcall sub_60136948(int a1);  /* 0x00136948 */
+bool __fastcall FireballBase_checkRTTI(int a1, int a2);  /* 0x00136e60 */
+void __fastcall FireballBase_dtor(int a1);  /* 0x00136f64 */
+int __fastcall FireballBase_dtorFree(int a1);  /* 0x00136ff0 */
 int __fastcall sub_60138104(int a1, float *a2);  /* 0x00138104 */
 int __fastcall sub_60138350(int a1);  /* 0x00138350 */
+int __fastcall PlayerFireball_ctor(int a1);  /* 0x0013a7a4 */
 int __fastcall sub_6013D46C(int a1);  /* 0x0013d46c */
 int __fastcall sub_6013D794(int a1);  /* 0x0013d794 */
 int __fastcall sub_6013D830(int a1);  /* 0x0013d830 */
@@ -123,6 +137,7 @@ int __fastcall sub_6013E7E0(int a1);  /* 0x0013e7e0 */
 int __fastcall sub_6013E8B4(int a1, int a2);  /* 0x0013e8b4 */
 int __fastcall sub_6013E980(int a1);  /* 0x0013e980 */
 int __fastcall sub_6013EA98(int a1);  /* 0x0013ea98 */
+int __fastcall HammerActor_setupModel(int a1);  /* 0x0013fcd4 */
 int __fastcall sub_6013FDC0(int a1);  /* 0x0013fdc0 */
 int __fastcall sub_6014065C(int a1);  /* 0x0014065c */
 int __fastcall sub_60141500(int a1);  /* 0x00141500 */
@@ -144,6 +159,7 @@ int __fastcall sub_6014B69C(int a1);  /* 0x0014b69c */
 int __fastcall sub_6014B6F8(int a1);  /* 0x0014b6f8 */
 int __fastcall sub_6014B758(int a1, int a2);  /* 0x0014b758 */
 int __fastcall CollisionMgr_dtor(int a1);  /* 0x0014b840 */
+int __fastcall CollisionMgr_dtorFree(int a1);  /* 0x0014b9d8 */
 int __fastcall CollisionMgr_init(int result, int a2, int *a3, int *a4, float *a5);  /* 0x0014b9e8 */
 int __fastcall CollisionMgr_vf18(_BYTE *a1);  /* 0x0014bbc8 */
 int __fastcall sub_6014BF68(int a1);  /* 0x0014bf68 */
@@ -182,6 +198,9 @@ int __fastcall checkLiquidCollisions(int *a1, float *a2, float *a3, int a4);  /*
 int __fastcall physics_21893E8(int *a1, float *a2, _BYTE *a3, float *a4, int a5);  /* 0x001522f8 */
 int __fastcall sub_601529D0(_DWORD *a1, float *a2, char a3);  /* 0x001529d0 */
 int __fastcall sub_60152B40(char a1);  /* 0x00152b40 */
+int __fastcall CollisionMgr_vf28(int a1);  /* 0x00152c18 */
+bool __fastcall CollisionMgr_checkRTTI(int a1, int a2);  /* 0x0015303c */
+int __fastcall ColliderMgr_dtorFree(sead::IDisposer *a1);  /* 0x00153470 */
 int __fastcall ColliderMgr_add(_DWORD *a1, _DWORD *a2);  /* 0x001535ac */
 bool __fastcall sub_601536B0(int a1, int a2);  /* 0x001536b0 */
 int __fastcall ColliderMgr_removeRelated1(_DWORD *a1, _DWORD *a2);  /* 0x001536e8 */
@@ -192,9 +211,18 @@ int __fastcall sub_60153898(_DWORD *a1, _DWORD *a2, __int64 *a3, __int64 *a4);  
 int __fastcall sub_60153A98(int result, int a2);  /* 0x00153a98 */
 int __fastcall ColliderMgr_removeFromList4(int result, int a2);  /* 0x00153ad0 */
 int __fastcall ColliderMgr_removeFromList5(_DWORD *a1, int a2);  /* 0x00153b08 */
+int __fastcall ColliderList_insertBack(int result, int a2);  /* 0x00153bcc */
 int __fastcall ColliderMgr_removeRelated2(int result, int a2);  /* 0x00153c00 */
+int __fastcall ColliderList_remove(int result, int a2);  /* 0x00153c94 */
 int __fastcall sub_60153D08(int result);  /* 0x00153d08 */
 int __fastcall sub_60153D8C(_DWORD *a1, float *a2);  /* 0x00153d8c */
+int __fastcall ColliderList_insertFront(int result, int a2);  /* 0x001540c0 */
+int __fastcall ColliderList_clear(int result);  /* 0x001540f4 */
+bool __fastcall ActorCollisionMgr_checkRTTI(int a1, int a2);  /* 0x00154140 */
+int __fastcall ActorCollisionMgr_dtorFree(int a1);  /* 0x001542b4 */
+int __fastcall ActorCollisionMgr_vf1C(int a1);  /* 0x001542c4 */
+int __fastcall ActorCollisionMgr_vf20(int a1);  /* 0x001542cc */
+int __fastcall ActorCollisionMgr_vf24(int a1);  /* 0x001542d4 */
 int __fastcall sub_601542DC(int a1);  /* 0x001542dc */
 int __fastcall sub_60154380(_DWORD *a1);  /* 0x00154380 */
 int __fastcall sub_60154420(int a1, int a2);  /* 0x00154420 */
@@ -221,17 +249,33 @@ bool __fastcall sub_60157050(int a1, int a2);  /* 0x00157050 */
 int __fastcall CircularCollider_init(int a1, int a2);  /* 0x001571b0 */
 int __fastcall CircularCollider_initImpl(int a1, _DWORD *a2, int a3);  /* 0x00157200 */
 int __fastcall sub_601573D4(_DWORD *a1, int a2, int a3, int a4, int a5);  /* 0x001573d4 */
+int __fastcall CircularCollider_vf18(int a1);  /* 0x00157444 */
 int __fastcall CircularCollider_execute(int a1);  /* 0x00157450 */
+int __fastcall CircularCollider_vf20(int a1, int a2, _BYTE *a3, _DWORD *a4, int a5, int a6);  /* 0x001575e8 */
+bool __fastcall CircularCollider_vf24(_DWORD *a1, _BYTE *a2, float *a3, float *a4, unsigned int a5, _DWORD *a6);  /* 0x00157944 */
 int __fastcall sub_60157A48(int a1, int a2, float *a3, float *a4, int a5, int a6);  /* 0x00157a48 */
 int __fastcall sub_60157D3C(int a1, int a2, int a3, float *a4, int a5, int a6);  /* 0x00157d3c */
+bool __fastcall CircularCollider_vf28(int a1, bool *a2, float *a3);  /* 0x00157f64 */
+int __fastcall CircularCollider_vf2C(int a1, _DWORD *a2);  /* 0x00158088 */
+int __fastcall CircularCollider_vf30(_DWORD *a1);  /* 0x0015809c */
+int __fastcall CircularCollider_vf34(int result);  /* 0x001580d4 */
+bool __fastcall CircularCollider_vf3C(int a1, float *a2);  /* 0x001581f8 */
 int __fastcall sub_601582D8(int result, int a2, unsigned int a3);  /* 0x001582d8 */
+int __fastcall CircularCollider_dtorFree(sead::IDisposer *a1);  /* 0x001585dc */
+bool __fastcall CircularCollider_checkRTTI(int a1, int a2);  /* 0x001585ec */
+bool __fastcall CircularCollider_vf10(int a1, int a2, char a3);  /* 0x00158760 */
+int __fastcall CircularCollider_vf14(int a1, int a2);  /* 0x00158798 */
 int __fastcall ActiveCollider_ctor(int a1);  /* 0x00158c7c */
 void __fastcall ActiveCollider_dtor(sead::IDisposer *a1);  /* 0x00158cf8 */
+int __fastcall ActiveCollider_dtorFree(sead::IDisposer *a1);  /* 0x00158d54 */
 void __fastcall ActiveCollider_reset(_DWORD *a1);  /* 0x00158db4 */
+int __fastcall ActiveCollider_init2(int a1, int a2, int *a3, unsigned __int8 *a4, int a5);  /* 0x00158ebc */
+int __fastcall ActiveCollider_init3(int a1, int a2, int *a3, _BYTE *a4, int a5, int a6);  /* 0x00158edc */
 int __fastcall sub_60158F04(int a1, int a2);  /* 0x00158f04 */
 int __fastcall sub_60158FA8(int a1, int a2);  /* 0x00158fa8 */
 int __fastcall sub_6015907C(int a1, int a2);  /* 0x0015907c */
 int __fastcall sub_6015913C(int a1, int a2);  /* 0x0015913c */
+bool __fastcall ActiveCollider_check5C(int a1, int a2);  /* 0x001591fc */
 int __fastcall sub_601592A4(int a1, float *a2);  /* 0x001592a4 */
 bool __fastcall sub_60159438(int a1, float *a2);  /* 0x00159438 */
 bool __fastcall ActiveCollider_doOverlapMaybe(int a1, int a2);  /* 0x001597e8 */
@@ -249,10 +293,14 @@ bool __fastcall sub_6015ABF4(float *a1, float *a2);  /* 0x0015abf4 */
 int __fastcall sub_6015AD30(float *a1);  /* 0x0015ad30 */
 int __fastcall ActiveColldierMgr_removeFromCreateList(int result, int a2);  /* 0x0015b0e4 */
 bool __fastcall ActiveColliderMgr_isInActiveList(int a1, int a2);  /* 0x0015b178 */
+int __fastcall ActiveColliderMgr_inserBack(int result, int a2);  /* 0x0015b1fc */
+int __fastcall ActiveColliderMgr_remove(int result, int a2);  /* 0x0015b37c */
 void __fastcall ActiveColliderMgr_addToCreateList(int a1, int a2);  /* 0x0015b3f0 */
 bool __fastcall ActiveColliderMgr_isInCreateList(int a1, int a2);  /* 0x0015b454 */
 int __fastcall ActiveColldierMgr_removeFromList3(int result, int a2);  /* 0x0015b48c */
 int __fastcall sub_6015B918(_DWORD *a1, float *a2);  /* 0x0015b918 */
+int __fastcall ActiveColliderMgr_insertFront(int result, int a2);  /* 0x0015bb4c */
+int __fastcall ActiveColliderMgr_vf10(int result);  /* 0x0015bb80 */
 int __fastcall sub_6015BDB8(int a1, int a2);  /* 0x0015bdb8 */
 int __fastcall sub_6015BE08(int a1, _DWORD *a2, int a3);  /* 0x0015be08 */
 int __fastcall sub_6015C588(int result, float *a2, float *a3);  /* 0x0015c588 */
@@ -271,17 +319,27 @@ int __fastcall sub_6015DD58(int a1, _DWORD *a2, float *a3);  /* 0x0015dd58 */
 int __fastcall sub_6015DF58(int a1, int a2, int a3);  /* 0x0015df58 */
 int __fastcall ColliderNode_ctor(int a1);  /* 0x0015df90 */
 int __fastcall sub_6015DFC0(int a1);  /* 0x0015dfc0 */
+void __fastcall SolidOnTopCollider_dtor(sead::IDisposer *a1);  /* 0x0015e124 */
+int __fastcall SolidOnTopCollider_dtorFree(sead::IDisposer *a1);  /* 0x0015e128 */
 int __fastcall SolidOnTopCollider_init2(_DWORD *a1, int a2, int a3, signed int a4, int a5);  /* 0x0015e138 */
 int __fastcall SolidOnTopCollider_init(int a1, int a2, int a3);  /* 0x0015e3a0 */
 int __fastcall SolidOnTopCollider_initImpl(_DWORD *a1, _DWORD *a2, _DWORD *a3);  /* 0x0015e3f0 */
 int __fastcall sub_6015E4F0(int a1);  /* 0x0015e4f0 */
+int __fastcall SolidOnTopCollider_vf18(int a1);  /* 0x0015e824 */
+int __fastcall SolidOnTopCollider_vf30(_DWORD *a1);  /* 0x0015e830 */
+int __fastcall SolidOnTopCollider_vf38(int result, _QWORD *a2);  /* 0x0015ea70 */
 int __fastcall SolidOnTopCollider_execute(int a1);  /* 0x0015eab4 */
+int __fastcall SolidOnTopCollider_vf20(int a1, int a2, int a3, float *a4, float *a5, unsigned __int8 a6);  /* 0x0015eb28 */
 bool __fastcall sub_6015EE3C(int a1, float *a2, float *a3, int a4, int a5);  /* 0x0015ee3c */
 unsigned int __fastcall sub_6015F088(int a1, float *a2, int a3);  /* 0x0015f088 */
 unsigned int __fastcall sub_6015F1FC(int a1, float *a2, int a3);  /* 0x0015f1fc */
+bool __fastcall SolidOnTopCollider_vf24(_DWORD *a1, int a2, float *a3, float *a4, unsigned int a5, int a6);  /* 0x0015f904 */
+int __fastcall SolidOnTopCollider_vf2C(int a1, _DWORD *a2);  /* 0x0015fbd0 */
 int __fastcall sub_6015FBE4(int result, int a2, unsigned int a3);  /* 0x0015fbe4 */
+bool __fastcall SolidOnTopCollider_checkRTTI(int a1, int a2);  /* 0x0015fe58 */
 void __fastcall ColliderBase_dtor(sead::IDisposer *a1);  /* 0x001600e4 */
 int __fastcall sub_601601B8(_DWORD *a1);  /* 0x001601b8 */
+int __fastcall ColliderBase_dtorFree(sead::IDisposer *a1);  /* 0x00160200 */
 int __fastcall sub_60160210(int result, int a2);  /* 0x00160210 */
 int __fastcall sub_6016024C(int result, int a2);  /* 0x0016024c */
 int __fastcall sub_60160288(int result, int a2);  /* 0x00160288 */
@@ -309,25 +367,48 @@ int __fastcall sub_60161340(int a1, _DWORD *a2, int a3);  /* 0x00161340 */
 int __fastcall sub_601614BC(int a1);  /* 0x001614bc */
 int __fastcall sub_601615A0(int a1, int a2, int a3);  /* 0x001615a0 */
 int __fastcall sub_601616E8(int a1, float *a2);  /* 0x001616e8 */
+bool __fastcall ColliderBase_checkRTTI(int a1, int a2);  /* 0x0016188c */
+void __fastcall ShapedCollider_dtor(sead::IDisposer *a1);  /* 0x00161bd8 */
+int __fastcall ShapedCollider_dtorFree(sead::IDisposer *a1);  /* 0x00161bdc */
 int __fastcall sub_60161BEC(_DWORD *a1, int a2, int a3, signed int a4, int a5);  /* 0x00161bec */
 int __fastcall sub_60161E18(int a1, int a2, int a3, int a4);  /* 0x00161e18 */
 int __fastcall sub_60161E68(int a1, _DWORD *a2, _DWORD *a3, int a4);  /* 0x00161e68 */
+int __fastcall ShapedCollider_vf18(int a1);  /* 0x00161f5c */
+int __fastcall ShapedCollider_vf30(_DWORD *a1);  /* 0x00161f68 */
+int __fastcall ShapedCollider_vf34(int a1);  /* 0x00161ff8 */
+unsigned int __fastcall ShapedCollider_vf40(int a1);  /* 0x00162170 */
+int __fastcall ShapedCollider_vf38(int result, _QWORD *a2);  /* 0x001624ac */
+int __fastcall ShapedCollider_vf3C(int a1, float *a2);  /* 0x001624f0 */
 int __fastcall ShapedCollider_execute(_DWORD *a1, int a2, int a3, int a4);  /* 0x00162638 */
+int __fastcall ShapedCollider_vf20(int a1, int a2, _BYTE *a3, int a4, float *a5, unsigned __int8 a6);  /* 0x001626b8 */
+bool __fastcall ShapedCollider_vf24(int a1, int a2, float *a3, int a4, unsigned int a5, _DWORD *a6);  /* 0x00162a98 */
 int __fastcall sub_60162BF0(int a1, int a2, float *a3, float *a4, int a5, int a6);  /* 0x00162bf0 */
 int __fastcall sub_60163440(int a1, int a2, int a3, _DWORD *a4, int a5, int a6);  /* 0x00163440 */
 int __fastcall sub_6016377C(int a1, int a2, int a3, int a4);  /* 0x0016377c */
 int __fastcall sub_601638EC(int a1, int a2, float *a3, float *a4, int a5, float *a6);  /* 0x001638ec */
 int __fastcall sub_601644C4(int a1, int a2, int a3, float *a4, int a5, int a6);  /* 0x001644c4 */
+int __fastcall ShapedCollider_vf28(int a1, _BYTE *a2, float *a3);  /* 0x00164c1c */
+int __fastcall ShapedCollider_vf2C(int a1, _DWORD *a2);  /* 0x00164ddc */
 int __fastcall sub_60164DF0(int result, int a2, unsigned int a3);  /* 0x00164df0 */
+bool __fastcall ShapedCollider_checkRTTI(int a1, int a2);  /* 0x001650b8 */
 int __fastcall ShapedCollider_init(int a1, int a2, _DWORD *a3);  /* 0x0016522c */
 void __fastcall SwingingCollider_dtor(sead::IDisposer *a1);  /* 0x001653ec */
+int __fastcall SwingingCollider_dtorFree(sead::IDisposer *a1);  /* 0x00165424 */
 int __fastcall sub_60165460(_DWORD *a1, int a2, int a3, signed int a4, int a5);  /* 0x00165460 */
 int __fastcall sub_60165590(_DWORD *a1, _DWORD *a2, _DWORD *a3, int a4);  /* 0x00165590 */
 int __fastcall sub_601656B0(int result);  /* 0x001656b0 */
 int __fastcall sub_601658F0(int result, int a2);  /* 0x001658f0 */
 int __fastcall sub_60165934(int result, int a2);  /* 0x00165934 */
+int __fastcall SwingingCollider_vf18(int a1);  /* 0x00165978 */
+int __fastcall SwingingCollider_vf30(_DWORD *a1);  /* 0x00165984 */
+int __fastcall SwingingCollider_vf34(int result);  /* 0x001659e4 */
+int __fastcall SwingingCollider_vf3C(int a1, float *a2);  /* 0x00165be0 */
 int __fastcall SwingingCollider_execute(_DWORD *a1, int a2, int a3, int a4);  /* 0x00165cc4 */
 int __fastcall sub_60165D48(int result);  /* 0x00165d48 */
+int __fastcall SwingingCollider_vf24(int a1, int a2, int a3, float *a4, int a5, float *a6);  /* 0x00165f80 */
+int __fastcall SwingingCollider_vf28(int a1, _BYTE *a2, float *a3);  /* 0x00166490 */
+int __fastcall SwingingCollider_vf2C(int a1, _DWORD *a2);  /* 0x0016660c */
+bool __fastcall SwingingCollider_checkRTTI(int a1, int a2);  /* 0x00166620 */
 int __fastcall sub_60166AE0(float *a1, float *a2, int *a3, int *a4);  /* 0x00166ae0 */
 int __fastcall sub_60166BF0(float *a1, float *a2, float *a3);  /* 0x00166bf0 */
 int __fastcall sub_60166CF0(float *a1, float *a2, float *a3);  /* 0x00166cf0 */
@@ -335,6 +416,7 @@ int __fastcall sub_60166DF0(float *a1, float *a2, int a3);  /* 0x00166df0 */
 unsigned int __fastcall sub_60166E60(unsigned int result, float *a2, int a3, int a4, int a5);  /* 0x00166e60 */
 bool __fastcall sub_6016717C(float *a1, float *a2);  /* 0x0016717c */
 int __fastcall sub_60167218(float *a1, float *a2, float *a3);  /* 0x00167218 */
+int __fastcall RectCollider_vf28(int a1, _BYTE *a2, float *a3);  /* 0x001672fc */
 int __fastcall sub_601675C0(int a1);  /* 0x001675c0 */
 int __fastcall sub_60167638(int a1);  /* 0x00167638 */
 int __fastcall sub_601679DC(int a1, float *a2, int a3, _BYTE *a4);  /* 0x001679dc */
@@ -1229,6 +1311,7 @@ int __fastcall sub_60253E2C(int a1);  /* 0x00253e2c */
 int __fastcall sub_60253F94(int a1, int a2, char a3);  /* 0x00253f94 */
 int __fastcall sub_60254000(int a1, int a2, int a3, int a4, int a5);  /* 0x00254000 */
 int __fastcall sub_602547D8(int result);  /* 0x002547d8 */
+int __fastcall GiantWiggler_onCreate(int a1);  /* 0x002554cc */
 int __fastcall sub_602559BC(int a1);  /* 0x002559bc */
 void __fastcall sub_60255B24(int a1);  /* 0x00255b24 */
 int __fastcall sub_602561CC(int a1, _DWORD *a2);  /* 0x002561cc */
@@ -1253,6 +1336,7 @@ int __fastcall BobOmb_onExecute(_DWORD *a1);  /* 0x0025db1c */
 int __fastcall sub_6025DE4C(int a1);  /* 0x0025de4c */
 int __fastcall sub_6025DEB0(int a1);  /* 0x0025deb0 */
 int __fastcall BobOmb_onDraw(int a1);  /* 0x0025dfc4 */
+int __fastcall BobOmb_onDelete(int a1);  /* 0x0025e020 */
 int __fastcall sub_6025E2A8(int a1);  /* 0x0025e2a8 */
 int __fastcall sub_6025F29C(int a1, int a2, int a3);  /* 0x0025f29c */
 int __fastcall sub_6025F338(int a1, int a2, int a3);  /* 0x0025f338 */
@@ -1396,6 +1480,7 @@ int __fastcall sub_602A358C(float *a1, unsigned int a2, int a3, unsigned int a4,
 int __fastcall sub_602A38A4(int a1, int *a2);  /* 0x002a38a4 */
 int __fastcall ActorScaler_execute(int a1);  /* 0x002a3f10 */
 int __fastcall sub_602A3F7C(int a1, int a2);  /* 0x002a3f7c */
+int __fastcall ActorScaler_getOwnerScale(int a1);  /* 0x002a3fec */
 int __fastcall sub_602A52A0(int *a1);  /* 0x002a52a0 */
 unsigned __int64 __fastcall sub_602A546C(int **a1);  /* 0x002a546c */
 bool __fastcall sub_602A5688(int a1);  /* 0x002a5688 */
@@ -1413,6 +1498,8 @@ int __fastcall sub_602A7624(int a1);  /* 0x002a7624 */
 int __fastcall sub_602A7BAC(int a1, int a2);  /* 0x002a7bac */
 void __fastcall sub_602A7CEC(char *a1);  /* 0x002a7cec */
 int __fastcall sub_602A8254(int a1);  /* 0x002a8254 */
+int __fastcall StateVirtual_Enemy_dtorFree(int a1);  /* 0x002a82e8 */
+int __fastcall StateVirtual_Enemy_getId(int a1);  /* 0x002a82ec */
 int __fastcall sub_602A852C(int a1, _DWORD *a2);  /* 0x002a852c */
 int __fastcall sub_602A8904(int a1, _DWORD *a2);  /* 0x002a8904 */
 int __fastcall sub_602A8B10(int a1, _DWORD *a2);  /* 0x002a8b10 */
@@ -1651,6 +1738,10 @@ int __fastcall sub_6030D7A4(int a1, int a2);  /* 0x0030d7a4 */
 int __fastcall sub_6030DC78(int a1, unsigned int a2);  /* 0x0030dc78 */
 int __fastcall sub_6030F9FC(int a1);  /* 0x0030f9fc */
 int __fastcall sub_603101A4(int result, int a2, int a3);  /* 0x003101a4 */
+int __fastcall DryBones_beginState_Walk(int a1);  /* 0x00312034 */
+int __fastcall DryBones_executeState_Walk(_BYTE *a1);  /* 0x0031215c */
+int __fastcall DryBones_beginState_Turn(int a1);  /* 0x003124f8 */
+int __fastcall DryBones_executeState_Turn(int a1);  /* 0x00312618 */
 int __fastcall sub_603128EC(int a1);  /* 0x003128ec */
 int __fastcall sub_60314424(int a1);  /* 0x00314424 */
 int __fastcall sub_6031467C(int a1, _DWORD *a2, int a3);  /* 0x0031467c */
@@ -1700,11 +1791,16 @@ int __fastcall sub_60322150(int32x4_t *a1);  /* 0x00322150 */
 int __fastcall sub_6032232C(int a1, int a2, int a3);  /* 0x0032232c */
 int __fastcall sub_603251C8(int a1);  /* 0x003251c8 */
 int __fastcall sub_60325724(int a1);  /* 0x00325724 */
+int __fastcall BillBlaster_onDraw(int a1);  /* 0x00326148 */
+int __fastcall BillBlaster_onDelete(int a1);  /* 0x00326298 */
 int __fastcall sub_603262C0(int *a1);  /* 0x003262c0 */
 int __fastcall sub_60326550(_DWORD *a1);  /* 0x00326550 */
 int __fastcall sub_60326850(_DWORD *a1);  /* 0x00326850 */
 int __fastcall sub_60326A08(int a1);  /* 0x00326a08 */
 int __fastcall sub_60326F6C(int a1);  /* 0x00326f6c */
+bool __fastcall BillBlaster_checkRTTI(int a1, int a2);  /* 0x00327264 */
+void __fastcall BillBlaster_dtor(int a1);  /* 0x00327368 */
+int __fastcall BillBlaster_dtorFree(int a1);  /* 0x003273b8 */
 int __fastcall sub_60327B64(int a1);  /* 0x00327b64 */
 int __fastcall sub_60328098(int a1);  /* 0x00328098 */
 int __fastcall sub_60328190(int a1);  /* 0x00328190 */
@@ -1712,6 +1808,7 @@ int __fastcall sub_60328C1C(int a1);  /* 0x00328c1c */
 int __fastcall sub_60328FF4(int a1);  /* 0x00328ff4 */
 unsigned int __fastcall sub_6032963C(int a1);  /* 0x0032963c */
 int __fastcall sub_6032A15C(int a1);  /* 0x0032a15c */
+int __fastcall BanzaiBill_onCreate(int a1);  /* 0x0032a9dc */
 unsigned int __fastcall sub_6032C0DC(int a1);  /* 0x0032c0dc */
 int __fastcall sub_6032D740(int a1);  /* 0x0032d740 */
 int __fastcall sub_6032EA68(int a1);  /* 0x0032ea68 */
@@ -1726,6 +1823,8 @@ int __fastcall sub_603337C8(int a1);  /* 0x003337c8 */
 int __fastcall sub_60333938(int a1);  /* 0x00333938 */
 int __fastcall sub_60333E90(int a1);  /* 0x00333e90 */
 unsigned int __fastcall sub_6033410C(unsigned int result, int a2, int a3);  /* 0x0033410c */
+int __fastcall SumoBroLightning_executeState_Down(int a1);  /* 0x00334cac */
+int __fastcall SumoBroLightning_onCreate(int a1);  /* 0x00335270 */
 int __fastcall sub_60336E10(int a1);  /* 0x00336e10 */
 int __fastcall sub_603370CC(int a1, int a2);  /* 0x003370cc */
 int __fastcall sub_60338D58(int a1);  /* 0x00338d58 */
@@ -1778,24 +1877,32 @@ int __fastcall sub_60355C1C(int a1, int a2);  /* 0x00355c1c */
 int __fastcall sub_60356538(int a1, int a2);  /* 0x00356538 */
 int __fastcall sub_60357164(int a1);  /* 0x00357164 */
 int __fastcall sub_60357274(int a1);  /* 0x00357274 */
+int __fastcall KoopaTroopa_ctor(_DWORD *a1);  /* 0x0035851c */
 int __fastcall sub_60359C04(int a1, _DWORD *a2, int a3);  /* 0x00359c04 */
+int __fastcall KoopaTroopa_onCreate(int a1);  /* 0x00359d98 */
 int __fastcall sub_6035A168(_DWORD *a1);  /* 0x0035a168 */
 int __fastcall sub_6035A5CC(int a1);  /* 0x0035a5cc */
+int __fastcall KoopaTroopa_beforeExecute(_DWORD *a1);  /* 0x0035a73c */
 int __fastcall sub_6035A898(_DWORD *a1);  /* 0x0035a898 */
+int __fastcall KoopaTroopa_onExecute(int a1);  /* 0x0035a97c */
 int __fastcall sub_6035ABA0(int a1);  /* 0x0035aba0 */
 int __fastcall sub_6035ADF0(int a1);  /* 0x0035adf0 */
 int __fastcall KoopaTroopa_onDraw(int a1);  /* 0x0035b0dc */
+int __fastcall KoopaTroopa_onDelete(int a1);  /* 0x0035b18c */
 int __fastcall sub_6035B2D0(int a1, int a2, int a3);  /* 0x0035b2d0 */
 int __fastcall sub_6035B5B0(int a1, int a2, int a3);  /* 0x0035b5b0 */
 void __fastcall sub_6035B720(int a1);  /* 0x0035b720 */
 int __fastcall sub_6035C488(ShellEnemy *a1, int a2, int a3, int a4);  /* 0x0035c488 */
 int __fastcall sub_6035C5B4(int a1, int a2);  /* 0x0035c5b4 */
 bool __fastcall sub_6035C618(int a1);  /* 0x0035c618 */
+int __fastcall KoopaTroopa_decideFirstState(int *a1);  /* 0x0035c740 */
 int __fastcall sub_6035C96C(int a1, int a2, int a3, int a4);  /* 0x0035c96c */
 int __fastcall sub_6035CA00(int a1, int a2);  /* 0x0035ca00 */
 int __fastcall sub_6035CAF8(_DWORD *a1);  /* 0x0035caf8 */
 int __fastcall sub_6035CC80(int a1);  /* 0x0035cc80 */
 int __fastcall sub_6035CD74(int a1);  /* 0x0035cd74 */
+int __fastcall KoopaTroopa_endState_Slide(int a1);  /* 0x0035d174 */
+int __fastcall KoopaTroopa_executeState_Slide(int a1);  /* 0x0035d18c */
 int __fastcall sub_6035D5E4(_BYTE *a1);  /* 0x0035d5e4 */
 bool __fastcall sub_6035DB18(int a1);  /* 0x0035db18 */
 int __fastcall sub_6035F524(int *a1);  /* 0x0035f524 */
@@ -1997,8 +2104,10 @@ void __fastcall sub_603A9C74(int a1);  /* 0x003a9c74 */
 int __fastcall sub_603A9F54(int a1);  /* 0x003a9f54 */
 int __fastcall sub_603AB0A4(_DWORD *a1);  /* 0x003ab0a4 */
 int __fastcall sub_603AB2E0(_DWORD *a1, int a2);  /* 0x003ab2e0 */
+int __fastcall BigBoo_onCreate(int a1);  /* 0x003ac8f8 */
 int __fastcall sub_603ACE60(int *a1);  /* 0x003ace60 */
 int __fastcall sub_603AD244(_DWORD **a1);  /* 0x003ad244 */
+int __fastcall BigBoo_onExecute(int a1);  /* 0x003ad5c4 */
 int __fastcall sub_603AD914(int *a1, int a2);  /* 0x003ad914 */
 int __fastcall sub_603ADA8C(int *a1, int a2);  /* 0x003ada8c */
 int __fastcall sub_603ADC3C(_DWORD *a1);  /* 0x003adc3c */
@@ -2010,7 +2119,12 @@ int __fastcall sub_603AE61C(int a1);  /* 0x003ae61c */
 int __fastcall sub_603B0CC0(_DWORD *a1);  /* 0x003b0cc0 */
 int __fastcall sub_603B1028(_DWORD **a1);  /* 0x003b1028 */
 unsigned int __fastcall sub_603B1A78(int a1);  /* 0x003b1a78 */
+int __fastcall BooCircle_onCreate(int a1);  /* 0x003b2328 */
+int __fastcall BooCircle_onExecute(int a1);  /* 0x003b2604 */
 int __fastcall sub_603B2690(int result, unsigned int a2, float *a3);  /* 0x003b2690 */
+bool __fastcall BooCircle_checkRTTI(int a1, int a2);  /* 0x003b2a64 */
+void __fastcall BooCircle_dtor(Actor *a1);  /* 0x003b2b68 */
+int __fastcall BooCircle_dtorFree(Actor *a1);  /* 0x003b2b98 */
 int __fastcall sub_603B3948(int *a1);  /* 0x003b3948 */
 int __fastcall sub_603B3C4C(int result);  /* 0x003b3c4c */
 int __fastcall sub_603B51BC(int a1);  /* 0x003b51bc */
@@ -2411,12 +2525,14 @@ bool __fastcall sub_6040E4C8(int a1);  /* 0x0040e4c8 */
 int __fastcall sub_6040E5B0(unsigned int a1, unsigned int a2, int a3);  /* 0x0040e5b0 */
 int __fastcall sub_6040E820(int result);  /* 0x0040e820 */
 int __fastcall sub_6040E87C(int result);  /* 0x0040e87c */
+int __fastcall Animation_update(int a1);  /* 0x0040e904 */
 int __fastcall sub_6040E90C(int a1, signed int a2);  /* 0x0040e90c */
 int __fastcall sub_6040EB10(int result);  /* 0x0040eb10 */
 int __fastcall sub_6040EB64(int result);  /* 0x0040eb64 */
 int __fastcall sub_6040EC24(int a1, int a2);  /* 0x0040ec24 */
 unsigned int __fastcall sub_6040ECCC(int a1, int a2, float *a3, unsigned int a4);  /* 0x0040eccc */
 int __fastcall ModelWrapper_updateAnims(int result);  /* 0x0040f3cc */
+int __fastcall ModelWrapper_updateModel(_DWORD *a1);  /* 0x0040f48c */
 int __fastcall sub_6040F4B8(int a1, int a2, int a3);  /* 0x0040f4b8 */
 int __fastcall sub_6040F514(_DWORD *a1, unsigned int a2, int a3, int a4);  /* 0x0040f514 */
 int __fastcall sub_6040F8F4(int a1, int a2, int a3);  /* 0x0040f8f4 */
@@ -2521,6 +2637,7 @@ int __fastcall sub_60420D88(int a1, int a2);  /* 0x00420d88 */
 int __fastcall sub_6042105C(int a1, int a2);  /* 0x0042105c */
 int __fastcall sub_604210B8(int a1, int a2);  /* 0x004210b8 */
 int __fastcall sub_60421114(int a1, int a2);  /* 0x00421114 */
+int __fastcall sead_Decompressor_dtorFree(sead::IDisposer *a1);  /* 0x00421174 */
 int __fastcall sub_60421880(_DWORD *a1);  /* 0x00421880 */
 int __fastcall sub_604218E0(_DWORD *a1);  /* 0x004218e0 */
 int __fastcall sub_6042194C(_DWORD *a1, int a2, int a3, int a4);  /* 0x0042194c */

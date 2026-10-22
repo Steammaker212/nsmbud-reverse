@@ -16546,9 +16546,9 @@
         if ( v5 )
           a2 = 0;
         v7 = 9 * a2;
-        if ( (char *)&unk_60CA1E08 + 4 * v7 )
+        if ( (char *)&dword_60CA1E08 + 4 * v7 )
         {
-          if ( (unsigned int)(*((_DWORD *)&unk_60CA1E08 + v7 + 8) - 1) <= 1 )
+          if ( (unsigned int)(*((_DWORD *)&dword_60CA1E08 + v7 + 8) - 1) <= 1 )
           {
             v8 = dword_60CA24BC;
             v9 = sub_6047482C(v4 + 4, 2);
@@ -16636,9 +16636,9 @@
         if ( v5 )
           a2 = 0;
         v7 = 9 * a2;
-        if ( (char *)&unk_60CA1E08 + 4 * v7 )
+        if ( (char *)&dword_60CA1E08 + 4 * v7 )
         {
-          if ( (unsigned int)(*((_DWORD *)&unk_60CA1E08 + v7 + 8) - 1) <= 1 )
+          if ( (unsigned int)(*((_DWORD *)&dword_60CA1E08 + v7 + 8) - 1) <= 1 )
           {
             v8 = 2;
             v9 = dword_60CA24BC;
@@ -16715,9 +16715,9 @@
       if ( v4 )
         a2 = 0;
       v6 = 9 * a2;
-      if ( (char *)&unk_60CA1E08 + 4 * v6 )
+      if ( (char *)&dword_60CA1E08 + 4 * v6 )
       {
-        if ( (unsigned int)(*((_DWORD *)&unk_60CA1E08 + v6 + 8) - 1) <= 1 )
+        if ( (unsigned int)(*((_DWORD *)&dword_60CA1E08 + v6 + 8) - 1) <= 1 )
         {
           v7 = dword_60CA24BC;
           v8 = sub_6047482C(result + 4, 2);
@@ -16797,9 +16797,9 @@
       if ( v4 )
         a2 = 0;
       v6 = 9 * a2;
-      if ( (char *)&unk_60CA1E08 + 4 * v6 )
+      if ( (char *)&dword_60CA1E08 + 4 * v6 )
       {
-        if ( (unsigned int)(*((_DWORD *)&unk_60CA1E08 + v6 + 8) - 1) <= 1 )
+        if ( (unsigned int)(*((_DWORD *)&dword_60CA1E08 + v6 + 8) - 1) <= 1 )
         {
           v7 = 2;
           v8 = dword_60CA24BC;
@@ -16863,7 +16863,7 @@
       sead::SafeStringBase<char>::operator=(v5, v4);
     }
     a1[520] = sub_60502E60(a1, &dword_60CA2500);
-    a1[521] = sub_60502E60(a1, &unk_60CA2508);
+    a1[521] = sub_60502E60(a1, &dword_60CA2508);
     a1[522] = sub_60502E60(a1, &dword_60CA2510);
     a1[523] = sub_60502E60(a1, &dword_60CA2518);
     a1[524] = sub_60502E60(a1, &dword_60CA2520);
@@ -16935,7 +16935,7 @@
     if ( v5 )
       a2 = 0;
     v7 = 9 * a2;
-    if ( !(_UNKNOWN *)((char *)&unk_60CA1E08 + 4 * v7) || (unsigned int)(dword_60CA1E28[v7] - 1) > 1 )
+    if ( !(_UNKNOWN *)((char *)&dword_60CA1E08 + 4 * v7) || (unsigned int)(dword_60CA1E28[v7] - 1) > 1 )
       goto LABEL_19;
     v8 = dword_60CA24BC;
     v9 = sub_6047482C(v4 + 4, 2);
@@ -17027,9 +17027,9 @@
       if ( v4 )
         a2 = 0;
       v6 = 9 * a2;
-      if ( (char *)&unk_60CA1E08 + 4 * v6 )
+      if ( (char *)&dword_60CA1E08 + 4 * v6 )
       {
-        v7 = *((_DWORD *)&unk_60CA1E08 + v6 + 8);
+        v7 = *((_DWORD *)&dword_60CA1E08 + v6 + 8);
         if ( v7 == 2 )
         {
           v10 = 2;
@@ -33472,7 +33472,7 @@
     int v15; // [sp+28h] [bp-104h]
     int v16; // [sp+2Ch] [bp-100h] BYREF
   
-    v12 = sub_6047DCCC(7);
+    v12 = StaffCreditTable_init(7);
     v11 = *(_DWORD *)(v12 + 8);
     if ( v11 < 1 )
       return 0;
@@ -39306,7 +39306,7 @@
     int v43; // [sp+44h] [bp-104h]
     int v44; // [sp+48h] [bp-100h] BYREF
   
-    v1 = sub_6047DCCC(10);
+    v1 = StaffCreditTable_init(10);
     result = *(_DWORD *)(v1 + 8);
     if ( result >= 1 )
     {
@@ -70991,6 +70991,174 @@
   }
 
 /* ============================================================================
+ * nninitStartup
+ * RVA 0x00562650   size 0x48   xrefs 0
+ * ============================================================================ */
+  int *nninitStartup()
+  {
+    unsigned int v0; // r2
+    void *v2; // [sp+4h] [bp-24h] BYREF
+    int v3; // [sp+8h] [bp-20h] BYREF
+    unsigned int v4; // [sp+10h] [bp-18h]
+  
+    sub_60822BF8();
+    nn::os::QueryMemoryInfo(&v3);
+    nn::os::SetMemoryHeapSize((nn::os *)((v3 - v4) & 0xFFE00000), v4);
+    nn::os::AllocateMemoryBlock((nn::os *)&v2, (unsigned int *)0x2000000, v0);
+    return nn::init::InitializeAllocator(v2, 0x2000000u);
+  }
+
+/* ============================================================================
+ * nnMain
+ * RVA 0x00562698   size 0x370   xrefs 0
+ * ============================================================================ */
+  int __fastcall nnMain(nn::os *a1)
+  {
+    nn::os *HostArgc; // r0
+    char v2; // r6
+    int v3; // r4
+    int v4; // r2
+    int v5; // r6
+    int v6; // r5
+    nn::oe *v7; // r0
+    int v8; // r6
+    int v9; // r4
+    _DWORD v11[2]; // [sp+Ch] [bp-170h] BYREF
+    _DWORD v12[2]; // [sp+14h] [bp-168h] BYREF
+    int v13; // [sp+1Ch] [bp-160h] BYREF
+    const char *v14; // [sp+20h] [bp-15Ch]
+    int v15; // [sp+24h] [bp-158h]
+    int v16; // [sp+28h] [bp-154h]
+    int v17; // [sp+2Ch] [bp-150h]
+    int v18; // [sp+30h] [bp-14Ch]
+    int v19; // [sp+34h] [bp-148h]
+    char v20; // [sp+38h] [bp-144h]
+    char v21; // [sp+39h] [bp-143h]
+    char v22; // [sp+3Ah] [bp-142h]
+    char v23; // [sp+3Bh] [bp-141h]
+    int v24; // [sp+3Ch] [bp-140h]
+    int v25; // [sp+40h] [bp-13Ch]
+    int v26; // [sp+44h] [bp-138h]
+    int v27; // [sp+48h] [bp-134h]
+    int v28; // [sp+4Ch] [bp-130h]
+    int v29; // [sp+50h] [bp-12Ch]
+    int v30; // [sp+54h] [bp-128h]
+    int v31; // [sp+58h] [bp-124h]
+    int v32; // [sp+5Ch] [bp-120h]
+    int v33; // [sp+60h] [bp-11Ch]
+    int v34; // [sp+64h] [bp-118h]
+    _DWORD v35[2]; // [sp+68h] [bp-114h] BYREF
+    int v36; // [sp+70h] [bp-10Ch] BYREF
+    char *v37; // [sp+74h] [bp-108h]
+    int v38; // [sp+78h] [bp-104h]
+    _DWORD v39[64]; // [sp+7Ch] [bp-100h] BYREF
+  
+    HostArgc = (nn::os *)nn::os::GetHostArgc(a1);
+    nn::os::GetHostArgv(HostArgc);
+    nn::os::QueryMemoryInfo(&v36);
+    v37 = (char *)v39;
+    v36 = 12322272;
+    v38 = 256;
+    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v36);
+    v2 = MEMORY[0xB3BA34];
+    *v37 = MEMORY[0xB3BA34];
+    v36 = 12424380;
+    v13 = 12321336;
+    v14 = "PROJECT_ROOT";
+    sub_608FD644(&v36, &v13);
+    v36 = 12322272;
+    v37 = (char *)v39;
+    v38 = 256;
+    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v36);
+    *v37 = v2;
+    v13 = 12321336;
+    v36 = 12424380;
+    v14 = "SEAD_NIN_CONTENT_DIR";
+    sub_608FD644(&v36, &v13);
+    v36 = 12322272;
+    v37 = (char *)v39;
+    v38 = 256;
+    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v36);
+    *v37 = v2;
+    v13 = 12321336;
+    v36 = 12424380;
+    v14 = "SEAD_NIN_SAVE_DIR";
+    sub_608FD644(&v36, &v13);
+    sub_608ED664(v35);
+    nn::os::QueryMemoryInfo(&v36);
+    v35[0] = v39[0] - v39[1];
+    sead::GameFrameworkNx::initialize(v35);
+    v3 = 0;
+    v13 = 1;
+    v17 = MEMORY[0xB45CE8];
+    v14 = (const char *)MEMORY[0xB45CDC];
+    v15 = MEMORY[0xB45CE0];
+    v16 = MEMORY[0xB45CE4];
+    v23 = 0;
+    v36 = 12321336;
+    v4 = 0;
+    v26 = 4096;
+    v29 = -1;
+    v30 = -1;
+    v31 = -1;
+    v32 = 0;
+    v33 = 8492;
+    v34 = 2;
+    v20 = 0;
+    v12[0] = 1156579328;
+    v12[1] = 1149698048;
+    v18 = 1920;
+    v19 = 1080;
+    v21 = 1;
+    v22 = 0;
+    v27 = 0x1000000;
+    v28 = 0;
+    v24 = 0x100000;
+    v25 = 0x100000;
+    v37 = "Framework";
+    if ( MEMORY[0xCCEEA4] )
+      v4 = *MEMORY[0xCCEEAC];
+    v5 = sead::ExpHeap::create(0, &v36, v4, 4, 1, 0);
+    v6 = operator new(368, v5, 4);
+    sub_608183C8(v6, &v13);
+    v7 = (nn::oe *)(*(int (__fastcall **)(int))(*(_DWORD *)v5 + 20))(v5);
+    nn::oe::Initialize(v7);
+    nn::oe::SetPerformanceConfiguration(1, 65537);
+    nn::oe::SetPerformanceConfiguration(0, 131075);
+    nn::oe::SetFocusHandlingMode(2);
+    v36 = 12321336;
+    v37 = "FwGraphicSystem";
+    if ( MEMORY[0xCCEEA4] )
+      v3 = *MEMORY[0xCCEEAC];
+    v8 = 0;
+    v9 = sead::ExpHeap::create(0, &v36, v3, 4, 1, 0);
+    sub_608EA13C(v6, v9, v12);
+    (*(void (__fastcall **)(int))(*(_DWORD *)v9 + 20))(v9);
+    v11[0] = 2;
+    v11[1] = 5646928;
+    sub_608EF048(&v36, v11);
+    sub_608ED674(v11);
+    if ( MEMORY[0xCCEEA4] )
+      v8 = *MEMORY[0xCCEEAC];
+    return (*(int (__fastcall **)(int, int, int *, _DWORD *))(*(_DWORD *)v6 + 20))(v6, v8, &v36, v11);
+  }
+
+/* ============================================================================
+ * CreateRootTask
+ * RVA 0x00562a50   size 0x44   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall CreateRootTask(int a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+  
+    v2 = operator new(0xC0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    result = (_DWORD *)CalculateTask2_ctor(v2, a1, "RootTask");
+    *result = 12756468;
+    return result;
+  }
+
+/* ============================================================================
  * sub_60562ABC
  * RVA 0x00562abc   size 0x2f8   xrefs 2
  * ============================================================================ */
@@ -71130,6 +71298,154 @@
       goto LABEL_31;
     }
     return v2;
+  }
+
+/* ============================================================================
+ * _ZN21MovementBlockCoinBaseD2Ev
+ * RVA 0x00563170   size 0x48   xrefs 0
+ * ============================================================================ */
+  void __fastcall MovementBlockCoinBase::~MovementBlockCoinBase(Actor *a1)
+  {
+    *(_DWORD *)a1 = 12620796;
+    ShapedCollider_dtor();
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor((char *)a1 + 648);
+    StageActor::~StageActor(a1);
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase4vfC4Ev
+ * RVA 0x00563268   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::vfC4()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase4vfC8Ev
+ * RVA 0x0056326c   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::vfC8()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase4vfD0Ev
+ * RVA 0x00563270   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::vfD0()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase4vfD8Ev
+ * RVA 0x00563274   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::vfD8()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase4vfDCEv
+ * RVA 0x00563278   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::vfDC()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN21MovementBlockCoinBase5vf14CEv
+ * RVA 0x0056327c   size 0x4   xrefs 0
+ * ============================================================================ */
+  void MovementBlockCoinBase::vf14C()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN21MovementBlockCoinBase5vf154Ev
+ * RVA 0x00563280   size 0x8   xrefs 0
+ * ============================================================================ */
+  int MovementBlockCoinBase::vf154()
+  {
+    return 0;
+  }
+
+/* ============================================================================
+ * _ZN21MovementBlockCoinBase5vf158Ev
+ * RVA 0x00563288   size 0x4   xrefs 0
+ * ============================================================================ */
+  void MovementBlockCoinBase::vf158()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN21MovementBlockCoinBase5vf15CEv
+ * RVA 0x0056328c   size 0x4   xrefs 0
+ * ============================================================================ */
+  void MovementBlockCoinBase::vf15C()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf164Ev
+ * RVA 0x00563290   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockBase::vf164()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase11getContentsEv
+ * RVA 0x00563294   size 0x18   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::getContents(int a1)
+  {
+    return HIBYTE(*(_DWORD *)(a1 + 24)) & 0x10 | *(_DWORD *)(a1 + 24) & 0xF;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf184Ev
+ * RVA 0x005632ac   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockBase::vf184()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf188Ev
+ * RVA 0x005632b0   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockBase::vf188()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf18CEv
+ * RVA 0x005632b4   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockBase::vf18C()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf190Ev
+ * RVA 0x005632b8   size 0x8   xrefs 0
+ * ============================================================================ */
+  int BlockBase::vf190()
+  {
+    return 0;
   }
 
 /* ============================================================================
@@ -71277,6 +71593,70 @@
       goto LABEL_16;
     }
     return result;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase9onExecuteEv
+ * RVA 0x005638c8   size 0xbc   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::onExecute(_BYTE *a1)
+  {
+    _BYTE *v2; // r5
+  
+    if ( a1[7312] )
+    {
+      v2 = a1 + 6120;
+      if ( !sub_60003B88(a1, a1 + 6120) )
+        sub_6069B070(a1 + 7240, a1 + 108);
+    }
+    else
+    {
+      v2 = a1 + 6120;
+    }
+    StateMgr::execute((_DWORD *)a1 + 1521);
+    (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 372))(a1);
+    *((_DWORD *)a1 + 1591) = *((_DWORD *)a1 + 41);
+    ShapedCollider_execute(v2);
+    (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 388))(a1);
+    sub_605B2D70(a1);
+    if ( a1[7384] )
+      StageActor::cullCheck((StageActor *)a1, 0x10u);
+    return 1;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase6onDrawEv
+ * RVA 0x00563984   size 0x68   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::onDraw(int a1)
+  {
+    float v1; // r2
+    int v2; // r3
+    _DWORD v4[3]; // [sp+8h] [bp-10h] BYREF
+    int v5; // [sp+14h] [bp-4h] BYREF
+  
+    v5 = 0;
+    v1 = *(float *)(a1 + 112);
+    v2 = *(_DWORD *)(a1 + 116);
+    v4[0] = *(_DWORD *)(a1 + 108);
+    v4[2] = v2;
+    *(float *)&v4[1] = v1 + 8.0;
+    ((void (__fastcall *)(_DWORD, _DWORD, _DWORD *, int *, int))DrawMgr_drawTile)(
+      MEMORY[0xC9CD1C],
+      *(_DWORD *)(a1 + 7296),
+      v4,
+      &v5,
+      a1 + 144);
+    return 1;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase15damageFromUnderEv
+ * RVA 0x00563a08   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockBase::damageFromUnder()
+  {
+    ;
   }
 
 /* ============================================================================
@@ -71479,6 +71859,43 @@
   }
 
 /* ============================================================================
+ * _ZN9BlockBase5vf160Ev
+ * RVA 0x00563e44   size 0x8c   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::vf160(int a1)
+  {
+    int v2; // r0
+    int v3; // r0
+    int v4; // r1
+  
+    v2 = sub_605B9FEC(MEMORY[0xCB061C], a1 + 6980, *(unsigned __int8 *)(MEMORY[0xC9A684] + 18));
+    if ( v2 == 3 )
+    {
+      if ( !*(_DWORD *)(a1 + 7372) )
+      {
+        v3 = 6856;
+        v4 = 12;
+        goto LABEL_7;
+      }
+      return 1;
+    }
+    if ( v2 != 2 )
+    {
+      if ( v2 == 1 )
+      {
+        *(_DWORD *)(a1 + 7368) = 2;
+        v3 = 7296;
+        v4 = 50;
+  LABEL_7:
+        *(_DWORD *)(a1 + v3) = v4;
+        return 1;
+      }
+      return 1;
+    }
+    return 0;
+  }
+
+/* ============================================================================
  * _ZN9BlockBase5vf178Ev
  * RVA 0x00563ed8   size 0xd8   xrefs 1
  * ============================================================================ */
@@ -71504,6 +71921,74 @@
     sub_605BA078(MEMORY[0xCB061C], a1 + 6980, 2, *(unsigned __int8 *)(MEMORY[0xC9A684] + 18));
     ColliderMgr_removeRelated1(MEMORY[0xC8820C], a1 + 6120);
     return StageActor::delete((StageActor *)a1, 1u);
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf17CEv
+ * RVA 0x00563fc0   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::vf17C(int a1)
+  {
+    _DWORD v3[2]; // [sp+4h] [bp-Ch] BYREF
+    char v4; // [sp+Ch] [bp-4h]
+    char v5; // [sp+Dh] [bp-3h]
+    __int16 v6; // [sp+Eh] [bp-2h]
+  
+    v3[0] = *(_DWORD *)(a1 + 108);
+    *(float *)&v3[1] = *(float *)(a1 + 112) + 8.0;
+    v4 = *(_BYTE *)(a1 + 6849);
+    v5 = *(_BYTE *)(a1 + 6850);
+    v6 = *(_WORD *)(2 * *(_DWORD *)(a1 + 7368) + 0xB0545C);
+    sub_605B9AD4(MEMORY[0xCB061C], v3, 0, *(unsigned __int8 *)(a1 + 6879));
+    sub_605BA078(MEMORY[0xCB061C], a1 + 6980, 2, *(unsigned __int8 *)(MEMORY[0xC9A684] + 18));
+    ColliderMgr_removeRelated1(MEMORY[0xC8820C], a1 + 6120);
+    return StageActor::delete((StageActor *)a1, 1u);
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf16CEv
+ * RVA 0x005640bc   size 0xec   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::vf16C(int a1)
+  {
+    int v2; // r1
+    int *v3; // r5
+    int v4; // r0
+    int v5; // r1
+    unsigned int v6; // r0
+  
+    v2 = 1;
+    v3 = (int *)(a1 + 6856);
+    if ( *(_DWORD *)(a1 + 6856) == 13 )
+    {
+      v4 = sub_605B9044(MEMORY[0xCB061C], a1 + 6980);
+      v2 = 0;
+      if ( (v4 | 1) == 3 )
+      {
+        v5 = 12;
+        if ( v4 == 3 )
+          v5 = 14;
+        *v3 = v5;
+        v2 = 1;
+      }
+    }
+    v6 = *(_DWORD *)(a1 + 7368);
+    if ( v6 == 1 )
+    {
+      if ( ((unsigned __int8)v2 & (*v3 != 21)) == 0 )
+        goto LABEL_12;
+    }
+    else if ( v2 != 1 )
+    {
+      goto LABEL_11;
+    }
+    sub_605BA078(MEMORY[0xCB061C], a1 + 6980, 1, *(unsigned __int8 *)(MEMORY[0xC9A684] + 18));
+    v6 = *(_DWORD *)(a1 + 7368);
+  LABEL_11:
+    if ( v6 <= 1 )
+  LABEL_12:
+      sub_605B6364(a1, v3, *(char *)(a1 + 6850));
+    return sub_605641B4(a1);
   }
 
 /* ============================================================================
@@ -71982,6 +72467,44 @@
   }
 
 /* ============================================================================
+ * _ZN9BlockBase11spawnItemUpEv
+ * RVA 0x00564ba8   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int BlockBase::spawnItemUp()
+  {
+    return sub_605649F8();
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase4vfCCEv
+ * RVA 0x00564bac   size 0x14   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall BlockBase::vfCC(int a1)
+  {
+    return CollisionMgr_setSensor(a1 + 648, (int *)(a1 + 6968), 3);
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase13spawnItemDownEv
+ * RVA 0x00564bc0   size 0x24   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::spawnItemDown(int a1)
+  {
+    CollisionMgr_setSensor(a1 + 648, 0, 3);
+    return sub_605649F8(a1);
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase4vfE4Ev
+ * RVA 0x00564be4   size 0x14   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::vfE4(int a1)
+  {
+    return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13296376);
+  }
+
+/* ============================================================================
  * sub_60564BFC
  * RVA 0x00564bfc   size 0x13c   xrefs 3
  * ============================================================================ */
@@ -72061,6 +72584,354 @@
   }
 
 /* ============================================================================
+ * _ZN9BlockBase4vfF4Ev
+ * RVA 0x00564d3c   size 0x1c   xrefs 0
+ * ============================================================================ */
+  int BlockBase::vfF4()
+  {
+    int result; // r0
+  
+    if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
+      return sub_60564BFC();
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf194Ev
+ * RVA 0x00564d5c   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockBase::vf194()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf19CEv
+ * RVA 0x00564d60   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockBase::vf19C()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf198Ev
+ * RVA 0x00564d64   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::vf198(int a1)
+  {
+    *(_DWORD *)(a1 + 6880) = 0;
+    return sub_605643B8(a1);
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf1A0Ev
+ * RVA 0x00564d74   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockBase::vf1A0()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf1A8Ev
+ * RVA 0x00564d78   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockBase::vf1A8()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf1A4Ev
+ * RVA 0x00564d7c   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::vf1A4(int a1)
+  {
+    *(_DWORD *)(a1 + 6880) = 0;
+    return sub_60564BFC();
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf180Ev
+ * RVA 0x00564d8c   size 0x88   xrefs 0
+ * ============================================================================ */
+  bool __fastcall BlockBase::vf180(int a1)
+  {
+    int v1; // r4
+    int CurrentState; // r0
+    int v3; // r5
+    int v5; // r0
+    int v6; // r4
+  
+    v1 = a1 + 6084;
+    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+    if ( v3 == (*(int (**)(void))(MEMORY[0xCB111C] + 8))() )
+      return 1;
+    v5 = StateMgr::getCurrentState(v1);
+    v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
+    return v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
+  }
+
+/* ============================================================================
+ * _ZNK9BlockBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
+ * RVA 0x00564e1c   size 0x130   xrefs 0
+ * ============================================================================ */
+  bool __fastcall BlockBase::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13296372) )
+    {
+      MEMORY[0xCAE2F0] = 12404984;
+      _cxa_guard_release_0(13296372);
+    }
+    if ( a2 == 13296368 )
+      return 1;
+    if ( _cxa_guard_acquire_0(13142632) )
+    {
+      MEMORY[0xC88A64] = 12404996;
+      _cxa_guard_release_0(13142632);
+    }
+    if ( a2 == 13142628 )
+      return 1;
+    if ( _cxa_guard_acquire_0(13087620) )
+    {
+      MEMORY[0xC7B380] = 12320968;
+      _cxa_guard_release_0(13087620);
+    }
+    return a2 == 13087616 || sub_60026DC8(a2);
+  }
+
+/* ============================================================================
+ * _ZNK9BlockBase18getRuntimeTypeInfoEv
+ * RVA 0x00564f94   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int BlockBase::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13296372) )
+    {
+      MEMORY[0xCAE2F0] = 12404984;
+      _cxa_guard_release_0(13296372);
+    }
+    return 13296368;
+  }
+
+/* ============================================================================
+ * _ZN9BlockBaseD0Ev
+ * RVA 0x00565008   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::~BlockBase(int a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12620796;
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor(a1 + 648);
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v2);
+  }
+
+/* ============================================================================
+ * _ZN9BlockBase5vf170Ev
+ * RVA 0x0056505c   size 0xc   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockBase::vf170(int a1)
+  {
+    return a1 + 108;
+  }
+
+/* ============================================================================
+ * _ZN14BrickBlockHuge6createEPK14ActorBuildInfo
+ * RVA 0x00565ac8   size 0x3c   xrefs 0
+ * ============================================================================ */
+  int BrickBlockHuge::create()
+  {
+    int v0; // r0
+    int result; // r0
+  
+    v0 = operator new(7400);
+    result = BlockBase::BlockBase(v0);
+    *(_DWORD *)result = 12588656;
+    *(_WORD *)(result + 7396) = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN14BrickBlockHuge8onCreateEv
+ * RVA 0x00565ca8   size 0x22c   xrefs 0
+ * ============================================================================ */
+  int __fastcall BrickBlockHuge::onCreate(int a1)
+  {
+    _DWORD *v2; // r7
+    int v3; // r1
+    int result; // r0
+    int v5; // r1
+  
+    *(_DWORD *)(a1 + 7368) = 1;
+    v2 = (_DWORD *)(a1 + 7368);
+    *(_DWORD *)(a1 + 7296) = 48;
+    *(_BYTE *)(a1 + 7376) = 1;
+    *(_DWORD *)(a1 + 7288) = 1;
+    v3 = sub_605635AC(a1, 1, 1);
+    result = 2;
+    if ( v3 == 1 )
+    {
+      *(_DWORD *)(a1 + 6968) = -1049624576;
+      *(_DWORD *)(a1 + 6972) = 1097859072;
+      *(_DWORD *)(a1 + 6976) = -1048576000;
+      *(_DWORD *)(a1 + 6776) = -1048576000;
+      *(_DWORD *)(a1 + 6780) = 1098907648;
+      *(_DWORD *)(a1 + 6784) = 1098907648;
+      *(_DWORD *)(a1 + 6788) = -1048576000;
+      sub_60165340(a1 + 6120);
+      ColliderBase_setType(a1 + 6120, 10);
+      if ( (*(_BYTE *)(a1 + 27) & 1) != 0 )
+        *(_DWORD *)(a1 + 6344) = 5;
+      if ( *(_DWORD *)(a1 + 6856) == 21 )
+      {
+        *(_BYTE *)(a1 + 6876) = 1;
+      }
+      else if ( *v2 == 2 )
+      {
+        ColliderBase_setType(a1 + 6120, 11);
+      }
+      sub_60563AB8(a1);
+      *(_DWORD *)(a1 + 7352) = 0;
+      *(_DWORD *)(a1 + 7356) = -1048576000;
+      *(_DWORD *)(a1 + 7360) = 1098907648;
+      *(_DWORD *)(a1 + 7364) = -1048576000;
+      *(_DWORD *)(a1 + 500) = 1149239296;
+      *(_DWORD *)(a1 + 504) = 1149239296;
+      *(_DWORD *)(a1 + 508) = 1115684864;
+      *(_DWORD *)(a1 + 512) = 1115684864;
+      *(_DWORD *)(a1 + 516) = 1149239296;
+      *(_DWORD *)(a1 + 520) = 1149239296;
+      *(_DWORD *)(a1 + 524) = 1157627904;
+      *(_DWORD *)(a1 + 528) = 1157627904;
+      *(_DWORD *)(a1 + 7280) = 1124073472;
+      *(_DWORD *)(a1 + 7284) = 1124073472;
+      sub_605D0024(a1);
+      if ( *(_DWORD *)(MEMORY[0xC99DD4] + 764) == 3 )
+      {
+        ColliderMgr_add(MEMORY[0xC8820C], a1 + 6120);
+        ShapedCollider_execute(a1 + 6120);
+      }
+      if ( *(_DWORD *)(a1 + 6856) == 21 )
+      {
+        (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13296552);
+      }
+      else
+      {
+        if ( *v2 == 2 )
+          v5 = 13296412;
+        else
+          v5 = 13296376;
+        (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, v5);
+      }
+      return 1;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN14BrickBlockHuge9onExecuteEv
+ * RVA 0x00565ee8   size 0xbc   xrefs 0
+ * ============================================================================ */
+  int __fastcall BrickBlockHuge::onExecute(int a1)
+  {
+    _DWORD *v2; // r5
+    int CurrentState; // r0
+    int v4; // r6
+    int v5; // r1
+    int v6; // r2
+    int v7; // r3
+  
+    v2 = (_DWORD *)(a1 + 6120);
+    if ( !sub_60003B88(a1, (_DWORD *)(a1 + 6120)) )
+      sub_6069B070((float *)(a1 + 7240), (float *)(a1 + 108));
+    StateMgr::execute((_DWORD *)(a1 + 6084));
+    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+    if ( v4 != (*(int (**)(void))(MEMORY[0xCAE3E8] + 8))() )
+    {
+      v5 = a1 + 6796;
+      *(float *)(a1 + 112) = *(float *)(a1 + 6984) + *(float *)(a1 + 6796);
+    }
+    ShapedCollider_execute(v2, v5, v6, v7);
+    sub_605B2D70(a1);
+    StageActor::cullCheck(a1, 16);
+    return 1;
+  }
+
+/* ============================================================================
+ * _ZN14BrickBlockHuge6onDrawEv
+ * RVA 0x00565fa8   size 0x154   xrefs 0
+ * ============================================================================ */
+  int __fastcall BrickBlockHuge::onDraw(int a1)
+  {
+    int v2; // r7
+    int v3; // r6
+    float v4; // r1
+    int v5; // r2
+    int v6; // r1
+    int v7; // r1
+    float v8; // s0
+    float v9; // s2
+    int v10; // r1
+    int v11; // r1
+    float v13; // [sp+8h] [bp-10h] BYREF
+    float v14; // [sp+Ch] [bp-Ch]
+    int v15; // [sp+10h] [bp-8h]
+    int v16; // [sp+14h] [bp-4h] BYREF
+  
+    v2 = *(_DWORD *)(a1 + 7368);
+    v3 = a1 + 144;
+    v16 = 0;
+    v4 = *(float *)(a1 + 112);
+    v5 = *(_DWORD *)(a1 + 116);
+    v13 = *(float *)(a1 + 108);
+    v14 = v4;
+    v15 = v5;
+    v6 = 112;
+    if ( v2 == 2 )
+      v6 = 116;
+    v13 = v13 - (float)((float)(*(float *)(a1 + 144) * 16.0) * 0.5);
+    v14 = v14 + (float)((float)(*(float *)(a1 + 148) * 16.0) * 0.5);
+    DrawMgr_drawTile(MEMORY[0xC9CD1C], v6, (int)&v13, &v16, v3);
+    v7 = 113;
+    if ( v2 == 2 )
+      v7 = 117;
+    v13 = v13 + (float)(*(float *)(a1 + 144) * 16.0);
+    DrawMgr_drawTile(MEMORY[0xC9CD1C], v7, (int)&v13, &v16, v3);
+    v8 = *(float *)(a1 + 108);
+    v9 = *(float *)(a1 + 112);
+    v10 = 128;
+    if ( v2 == 2 )
+      v10 = 132;
+    v15 = *(_DWORD *)(a1 + 116);
+    v13 = v8 - (float)((float)(*(float *)(a1 + 144) * 16.0) * 0.5);
+    v14 = v9 - (float)((float)(*(float *)(a1 + 148) * 16.0) * 0.5);
+    DrawMgr_drawTile(MEMORY[0xC9CD1C], v10, (int)&v13, &v16, v3);
+    v11 = 129;
+    if ( v2 == 2 )
+      v11 = 133;
+    v13 = v13 + (float)(*(float *)(a1 + 144) * 16.0);
+    DrawMgr_drawTile(MEMORY[0xC9CD1C], v11, (int)&v13, &v16, v3);
+    return 1;
+  }
+
+/* ============================================================================
+ * _ZN14BrickBlockHuge5vf178Ev
+ * RVA 0x00566100   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall BrickBlockHuge::vf178(int a1)
+  {
+    return sub_60566104(a1);
+  }
+
+/* ============================================================================
  * sub_60566104
  * RVA 0x00566104   size 0x10c   xrefs 4
  * ============================================================================ */
@@ -72096,6 +72967,57 @@
     sub_60813BDC(v6, "SE_OBJ_BLOCK_BREAK", v11, 1, v5);
     sub_605D0140(a1);
     return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13296616);
+  }
+
+/* ============================================================================
+ * _ZN14BrickBlockHuge5vf17CEv
+ * RVA 0x00566228   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall BrickBlockHuge::vf17C(int a1)
+  {
+    return sub_60566104(a1);
+  }
+
+/* ============================================================================
+ * _ZN14BrickBlockHuge15spawnCoinShowerEv
+ * RVA 0x0056622c   size 0xd8   xrefs 0
+ * ============================================================================ */
+  void __fastcall BrickBlockHuge::spawnCoinShower(int a1)
+  {
+    float v2; // r1
+    int v3; // r2
+    int v4; // r5
+    float v5; // r1
+    int v6; // r3
+    int v7; // [sp+8h] [bp-20h] BYREF
+    float v8; // [sp+Ch] [bp-1Ch]
+    int v9; // [sp+10h] [bp-18h]
+    float v10[2]; // [sp+18h] [bp-10h] BYREF
+    float v11[2]; // [sp+20h] [bp-8h] BYREF
+  
+    v2 = *(float *)(a1 + 112);
+    v3 = *(_DWORD *)(a1 + 116);
+    v7 = *(_DWORD *)(a1 + 108);
+    v8 = v2;
+    v9 = v3;
+    if ( *(_BYTE *)(a1 + 6868) || *(_DWORD *)(a1 + 6864) == 2 )
+    {
+      v4 = MEMORY[0xC7F534];
+      v8 = v8 + 20.0;
+      v5 = *(float *)(a1 + 112);
+      v11[0] = *(float *)(a1 + 108);
+      v11[1] = v5;
+      mapPositionToScreen(v10, v11);
+      BasicSoundActor2_play(v4, "SE_OBJ_GET_COIN_SHOWER", v10, 0);
+      v6 = 2;
+    }
+    else
+    {
+      v6 = 3;
+      v8 = v8 + -12.0;
+    }
+    sub_605839E8(MEMORY[0xCAF15C], &v7, 5, v6, *(_BYTE *)(a1 + 86), 1);
   }
 
 /* ============================================================================
@@ -72152,6 +73074,26 @@
   }
 
 /* ============================================================================
+ * _ZN14BrickBlockHuge11spawnItemUpEv
+ * RVA 0x00566488   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall BrickBlockHuge::spawnItemUp(int a1)
+  {
+    return sub_60566310(a1);
+  }
+
+/* ============================================================================
+ * _ZN14BrickBlockHuge13spawnItemDownEv
+ * RVA 0x0056648c   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall BrickBlockHuge::spawnItemDown(int a1)
+  {
+    return sub_60566310(a1);
+  }
+
+/* ============================================================================
  * sub_60566490
  * RVA 0x00566490   size 0x184   xrefs 2
  * ============================================================================ */
@@ -72204,6 +73146,58 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * _ZN14BrickBlockHuge5vf180Ev
+ * RVA 0x00566628   size 0x88   xrefs 0
+ * ============================================================================ */
+  bool __fastcall BrickBlockHuge::vf180(int a1)
+  {
+    int v1; // r4
+    int CurrentState; // r0
+    int v3; // r5
+    int v5; // r0
+    int v6; // r4
+  
+    v1 = a1 + 6084;
+    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+    if ( v3 == (*(int (**)(void))(MEMORY[0xCAE3A8] + 8))() )
+      return 1;
+    v5 = StateMgr::getCurrentState(v1);
+    v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
+    return v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
+  }
+
+/* ============================================================================
+ * _ZNK14BrickBlockHuge18getRuntimeTypeInfoEv
+ * RVA 0x005666c0   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int BrickBlockHuge::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13296652) )
+    {
+      MEMORY[0xCAE408] = 12587752;
+      _cxa_guard_release_0(13296652);
+    }
+    return 13296648;
+  }
+
+/* ============================================================================
+ * _ZN14BrickBlockHugeD0Ev
+ * RVA 0x00566734   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall BrickBlockHuge::~BrickBlockHuge(int a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12620796;
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor(a1 + 648);
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v2);
   }
 
 /* ============================================================================
@@ -72505,6 +73499,416 @@
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 6104) + 60))(**(_DWORD **)(a1 + 6104), v18);
     (*(void (__fastcall **)(_DWORD, _DWORD **))(*(_DWORD *)**v16 + 68))(**v16, v16 - 1490);
     return ModelWrapper_updateModel(*v16);
+  }
+
+/* ============================================================================
+ * _ZN11FlyingBlock6createEPK14ActorBuildInfo
+ * RVA 0x00568888   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *FlyingBlock::create()
+  {
+    int v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = operator new(0x1CE0u);
+    result = (_DWORD *)BlockBase::BlockBase(v0);
+    *result = 12590228;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN11FlyingBlock8onCreateEv
+ * RVA 0x005688b8   size 0x230   xrefs 0
+ * ============================================================================ */
+  int __fastcall FlyingBlock::onCreate(int a1)
+  {
+    _DWORD *v2; // r9
+    unsigned int v3; // r0
+    int v4; // r1
+    int result; // r0
+    int v6; // r0
+    float v7; // s0
+    int ProfileId; // r0
+    float *v9; // r2
+    int v10; // s0
+    float *v11; // r2
+    int v12; // s2
+    int v13; // r1
+  
+    *(_DWORD *)(a1 + 7368) = 0;
+    v2 = (_DWORD *)(a1 + 7368);
+    *(_DWORD *)(a1 + 7296) = 49;
+    v3 = *(_DWORD *)(a1 + 20);
+    *(_DWORD *)(a1 + 6852) = (v3 >> 8) & 1;
+    *(_DWORD *)(a1 + 7372) = (v3 >> 12) & 1;
+    *(_DWORD *)(a1 + 6908) = (*(_DWORD *)(a1 + 24) >> 13) & 1;
+    *(_DWORD *)(a1 + 7360) = 1096810496;
+    *(_DWORD *)(a1 + 7364) = -1056964608;
+    *(_BYTE *)(a1 + 87) = *(_BYTE *)(((v3 >> 8) & 1) + 0xB0536C);
+    ColliderBase_setType(a1 + 6120, 7);
+    v4 = sub_605635AC(a1, 1, 1);
+    result = 2;
+    if ( v4 == 1 )
+    {
+      if ( *(_DWORD *)(MEMORY[0xC99DD4] + 764) == 4 && (*(_BYTE *)(a1 + 25) & 0x10) != 0 )
+        sub_60003D84(a1);
+      *(_DWORD *)(a1 + 7300) = *(_DWORD *)((char *)&unk_60AF2188 + ((*(_DWORD *)(a1 + 24) >> 2) & 4));
+      *(_DWORD *)(a1 + 7304) = *(unsigned __int8 *)(a1 + 28);
+      sub_60563C28(a1);
+      v6 = *(_DWORD *)(a1 + 7304);
+      if ( v6 )
+        *(_BYTE *)(a1 + 6878) = 1;
+      if ( *(_DWORD *)(a1 + 7300) == 3 )
+      {
+        if ( v6 )
+        {
+          v7 = -32.0;
+          *(_DWORD *)(a1 + 7352) = 1098907648;
+          *(_DWORD *)(a1 + 7356) = -1040187392;
+        }
+        else
+        {
+          v7 = -18.0;
+        }
+        *(float *)(a1 + 7364) = v7;
+      }
+      else
+      {
+        *(_DWORD *)(a1 + 7352) = 1096810496;
+      }
+      ProfileId = Actor::getProfileId((Actor *)a1);
+      v9 = &flt_60568AFC;
+      *(_DWORD *)(a1 + 500) = 1149239296;
+      if ( ProfileId == MEMORY[0xAF31B0] )
+        v9 = &flt_60568B00;
+      v10 = *(_DWORD *)v9;
+      v11 = &flt_60568B04;
+      if ( ProfileId == MEMORY[0xAF31B0] )
+        v11 = &flt_60568B08;
+      v12 = *(_DWORD *)v11;
+      *(_DWORD *)(a1 + 504) = v10;
+      *(_DWORD *)(a1 + 516) = 1140850688;
+      *(_DWORD *)(a1 + 520) = v12;
+      *(_DWORD *)(a1 + 524) = 1149239296;
+      *(_DWORD *)(a1 + 528) = 1149239296;
+      *(_DWORD *)(a1 + 508) = 1107296256;
+      *(_DWORD *)(a1 + 512) = 1115684864;
+      *(_DWORD *)(a1 + 7280) = 1115684864;
+      *(_DWORD *)(a1 + 7284) = 1115684864;
+      sub_605D0024(a1);
+      if ( *v2 == 2 )
+        v13 = 13296412;
+      else
+        v13 = 13296376;
+      (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, v13);
+      return 1;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN11FlyingBlock5vf184Ev
+ * RVA 0x00568b14   size 0x2c   xrefs 0
+ * ============================================================================ */
+  int __fastcall FlyingBlock::vf184(int a1)
+  {
+    int result; // r0
+  
+    result = Actor::getProfileId(a1);
+    if ( result == MEMORY[0xAF31B0] )
+      return sub_60563A0C(a1);
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN11FlyingBlock5vf188Ev
+ * RVA 0x00568b44   size 0x88   xrefs 0
+ * ============================================================================ */
+  int __fastcall FlyingBlock::vf188(int result)
+  {
+    bool v1; // zf
+  
+    v1 = *(_BYTE *)(MEMORY[0xCC6D8C] + 17) == 0;
+    if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
+      v1 = *(_DWORD *)(result + 7304) == 0;
+    if ( !v1 && *(_DWORD *)(result + 7300) == 3 )
+    {
+      if ( *(_BYTE *)(result + 539) )
+        return EventMgr_set(MEMORY[0xCBD8AC], (unsigned __int8)(*(_BYTE *)(result + 539) - 1), 0, 1, 0, 0, 0, 0);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN11FlyingBlock5vf18CEv
+ * RVA 0x00568bd4   size 0x98   xrefs 0
+ * ============================================================================ */
+  int __fastcall FlyingBlock::vf18C(int a1)
+  {
+    int result; // r0
+    int v3; // r0
+    int v4; // r1
+    int v5; // r2
+  
+    result = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
+    if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
+    {
+      result = Actor::getProfileId(a1);
+      if ( result == MEMORY[0xAF31B0] )
+      {
+        result = a1 + 6884;
+        if ( (float)((float)(*(float *)(a1 + 6888) * *(float *)(a1 + 6888))
+                   + (float)(*(float *)(a1 + 6884) * *(float *)(a1 + 6884))) > 65536.0 )
+        {
+          v3 = *(_DWORD *)(a1 + 108);
+          v4 = *(_DWORD *)(a1 + 112);
+          v5 = *(_DWORD *)(a1 + 116);
+          *(_DWORD *)(a1 + 584) = v3;
+          *(_DWORD *)(a1 + 588) = v4;
+          *(_DWORD *)(a1 + 592) = v5;
+          *(_DWORD *)(a1 + 608) = v3;
+          *(_DWORD *)(a1 + 612) = v4;
+          *(_DWORD *)(a1 + 616) = v5;
+          return sub_60160948((_DWORD *)(a1 + 6120));
+        }
+      }
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN11FlyingBlock5vf190Ev
+ * RVA 0x00568c78   size 0x6c   xrefs 0
+ * ============================================================================ */
+  bool __fastcall FlyingBlock::vf190(int a1)
+  {
+    return *(_BYTE *)(MEMORY[0xCC6D8C] + 17)
+        && Actor::getProfileId(a1) == MEMORY[0xAF31B0]
+        && *(_DWORD *)(a1 + 7300)
+        && *(_DWORD *)(a1 + 7304) != 0;
+  }
+
+/* ============================================================================
+ * _ZNK11FlyingBlock18getRuntimeTypeInfoEv
+ * RVA 0x00568cf4   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int FlyingBlock::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13297032) )
+    {
+      MEMORY[0xCAE584] = 12587752;
+      _cxa_guard_release_0(13297032);
+    }
+    return 13297028;
+  }
+
+/* ============================================================================
+ * _ZN11FlyingBlockD0Ev
+ * RVA 0x00568d68   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall FlyingBlock::~FlyingBlock(int a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12620796;
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor(a1 + 648);
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v2);
+  }
+
+/* ============================================================================
+ * _ZN20FlyingBlockForAmbush6createEPK14ActorBuildInfo
+ * RVA 0x00569474   size 0x3c   xrefs 0
+ * ============================================================================ */
+  _DWORD *FlyingBlockForAmbush::create()
+  {
+    int v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = operator new(0x1CE0u);
+    result = (_DWORD *)BlockBase::BlockBase(v0);
+    *result = 12591112;
+    result[1847] = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN20FlyingBlockForAmbush8onCreateEv
+ * RVA 0x005694b4   size 0x1a8   xrefs 0
+ * ============================================================================ */
+  int __fastcall FlyingBlockForAmbush::onCreate(int a1)
+  {
+    unsigned int v2; // r0
+    int v3; // r1
+    int result; // r0
+    int v5; // r0
+  
+    *(_DWORD *)(a1 + 7368) = 0;
+    *(_DWORD *)(a1 + 7296) = 49;
+    v2 = *(_DWORD *)(a1 + 20);
+    *(_DWORD *)(a1 + 6852) = (v2 >> 8) & 1;
+    *(_DWORD *)(a1 + 7372) = (v2 >> 12) & 1;
+    *(_DWORD *)(a1 + 7360) = 1096810496;
+    *(_DWORD *)(a1 + 7364) = -1056964608;
+    *(_BYTE *)(a1 + 87) = *(_BYTE *)(((v2 >> 8) & 1) + 0xB0536C);
+    ColliderBase_setType(a1 + 6120, 7);
+    v3 = sub_605635AC(a1, 1, 1);
+    result = 2;
+    if ( v3 == 1 )
+    {
+      *(_DWORD *)(a1 + 6856) = sub_60563BB8(a1, 7);
+      *(_DWORD *)(a1 + 7300) = *(_DWORD *)((char *)&unk_60AF2188 + ((*(_DWORD *)(a1 + 24) >> 2) & 4));
+      *(_DWORD *)(a1 + 7304) = *(unsigned __int8 *)(a1 + 28);
+      sub_60563C28(a1);
+      v5 = *(_DWORD *)(a1 + 7304);
+      if ( v5 )
+        *(_BYTE *)(a1 + 6878) = 1;
+      if ( *(_DWORD *)(a1 + 7300) == 3 )
+      {
+        if ( v5 )
+        {
+          *(_DWORD *)(a1 + 7352) = 1098907648;
+          *(_DWORD *)(a1 + 7356) = -1040187392;
+        }
+        *(_DWORD *)(a1 + 7364) = -1040187392;
+      }
+      else
+      {
+        *(_DWORD *)(a1 + 7352) = 1096810496;
+      }
+      *(_DWORD *)(a1 + 500) = 1149239296;
+      *(_DWORD *)(a1 + 504) = 1149239296;
+      *(_DWORD *)(a1 + 508) = 1107296256;
+      *(_DWORD *)(a1 + 512) = 1115684864;
+      *(_DWORD *)(a1 + 516) = 1140850688;
+      *(_DWORD *)(a1 + 520) = 1140850688;
+      *(_DWORD *)(a1 + 524) = 1149239296;
+      *(_DWORD *)(a1 + 528) = 1149239296;
+      *(_DWORD *)(a1 + 7280) = 1115684864;
+      *(_DWORD *)(a1 + 7284) = 1115684864;
+      sub_605D0024(a1);
+      (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13296376);
+      return 1;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN20FlyingBlockForAmbush9onExecuteEv
+ * RVA 0x00569668   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int __fastcall FlyingBlockForAmbush::onExecute(int a1)
+  {
+    _DWORD *v2; // r5
+    int v3; // r2
+    int v4; // r3
+    int CurrentState; // r0
+    int v6; // r5
+  
+    if ( *(_BYTE *)(a1 + 7312) )
+    {
+      v2 = (_DWORD *)(a1 + 6120);
+      if ( !sub_60003B88(a1, (_DWORD *)(a1 + 6120)) )
+        sub_6069B070((float *)(a1 + 7240), (float *)(a1 + 108));
+    }
+    else
+    {
+      v2 = (_DWORD *)(a1 + 6120);
+    }
+    StateMgr::execute((_DWORD *)(a1 + 6084));
+    BlockBase::vf174(a1);
+    *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
+    ShapedCollider_execute(v2, 6364, v3, v4);
+    sub_605B2D70(a1);
+    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+    if ( v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))() )
+      StageActor::cullCheck(a1, 0);
+    return 1;
+  }
+
+/* ============================================================================
+ * _ZN20FlyingBlockForAmbush5vf16CEv
+ * RVA 0x00569738   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  unsigned int __fastcall FlyingBlockForAmbush::vf16C(int a1)
+  {
+    return sub_605641B4(a1);
+  }
+
+/* ============================================================================
+ * _ZN20FlyingBlockForAmbush5vf1A0Ev
+ * RVA 0x0056973c   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall FlyingBlockForAmbush::vf1A0(int result)
+  {
+    *(_DWORD *)(result + 7388) = 420;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN20FlyingBlockForAmbush5vf1A8Ev
+ * RVA 0x0056974c   size 0x4   xrefs 0
+ * ============================================================================ */
+  void FlyingBlockForAmbush::vf1A8()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN20FlyingBlockForAmbush5vf1A4Ev
+ * RVA 0x00569750   size 0x9c   xrefs 0
+ * ============================================================================ */
+  int __fastcall FlyingBlockForAmbush::vf1A4(_DWORD *a1)
+  {
+    int v2; // r2
+    int v3; // r2
+  
+    a1[1720] = 0;
+    v2 = a1[1847];
+    if ( !v2 || (v3 = v2 - 1, (a1[1847] = v3) == 0) )
+    {
+      a1[1842] = 0;
+      a1[1824] = 49;
+      a1[1608] = 5977228;
+      a1[1609] = 5978420;
+      a1[1610] = 5980432;
+      (*(void (__fastcall **)(_DWORD *, int))(*a1 + 192))(a1, 13296376);
+    }
+    return sub_60564BFC((int)a1);
+  }
+
+/* ============================================================================
+ * _ZNK20FlyingBlockForAmbush18getRuntimeTypeInfoEv
+ * RVA 0x00569804   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int FlyingBlockForAmbush::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13297156) )
+    {
+      MEMORY[0xCAE600] = 12587752;
+      _cxa_guard_release_0(13297156);
+    }
+    return 13297152;
+  }
+
+/* ============================================================================
+ * _ZN20FlyingBlockForAmbushD0Ev
+ * RVA 0x00569878   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall FlyingBlockForAmbush::~FlyingBlockForAmbush(int a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12620796;
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor(a1 + 648);
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v2);
   }
 
 /* ============================================================================
@@ -73030,16 +74434,16 @@
     int result; // r0
   
     v1 = (int *)(a1 + 7456);
-    v2 = sub_60788DFC(MEMORY[0xCC436C], 0);
+    v2 = Player_getActorSlotChecked(MEMORY[0xCC436C], 0);
     if ( (v2 || (v2 = sub_607891A0(MEMORY[0xCC436C], 0)) != 0) && sub_6078663C(v2 + 688) == 1 )
       *v1 |= 1u;
-    v3 = sub_60788DFC(MEMORY[0xCC436C], 1u);
+    v3 = Player_getActorSlotChecked(MEMORY[0xCC436C], 1u);
     if ( (v3 || (v3 = sub_607891A0(MEMORY[0xCC436C], 1)) != 0) && sub_6078663C(v3 + 688) == 1 )
       *v1 |= 2u;
-    v4 = sub_60788DFC(MEMORY[0xCC436C], 2u);
+    v4 = Player_getActorSlotChecked(MEMORY[0xCC436C], 2u);
     if ( (v4 || (v4 = sub_607891A0(MEMORY[0xCC436C], 2)) != 0) && sub_6078663C(v4 + 688) == 1 )
       *v1 |= 4u;
-    result = sub_60788DFC(MEMORY[0xCC436C], 3u);
+    result = Player_getActorSlotChecked(MEMORY[0xCC436C], 3u);
     if ( result || (result = sub_607891A0(MEMORY[0xCC436C], 3)) != 0 )
     {
       result = sub_6078663C(result + 688);
@@ -74475,6 +75879,67 @@
   }
 
 /* ============================================================================
+ * _ZN14BabyYoshiBlock6createEPK14ActorBuildInfo
+ * RVA 0x005767dc   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *BabyYoshiBlock::create()
+  {
+    int v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = operator new(0x1CE0u);
+    result = (_DWORD *)BlockBase::BlockBase(v0);
+    *result = 12599508;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN14BabyYoshiBlock8onCreateEv
+ * RVA 0x0057680c   size 0x120   xrefs 0
+ * ============================================================================ */
+  int __fastcall BabyYoshiBlock::onCreate(int a1)
+  {
+    _DWORD *v2; // r5
+    int v3; // r1
+    int result; // r0
+    int v5; // r1
+  
+    *(_DWORD *)(a1 + 7368) = 0;
+    v2 = (_DWORD *)(a1 + 7368);
+    *(_DWORD *)(a1 + 7296) = 49;
+    *(_DWORD *)(a1 + 6852) = 0;
+    *(_DWORD *)(a1 + 7352) = 1096810496;
+    *(_DWORD *)(a1 + 7356) = -1056964608;
+    *(_DWORD *)(a1 + 7360) = 1096810496;
+    *(_DWORD *)(a1 + 7364) = -1056964608;
+    *(_BYTE *)(a1 + 87) = MEMORY[0xB0536C];
+    ColliderBase_setType(a1 + 6120, 7);
+    v3 = sub_605635AC(a1, 1, 0);
+    result = 2;
+    if ( v3 == 1 )
+    {
+      *(_DWORD *)(a1 + 500) = 1115684864;
+      *(_DWORD *)(a1 + 504) = 1115684864;
+      *(_DWORD *)(a1 + 508) = 1107296256;
+      *(_DWORD *)(a1 + 512) = 1107296256;
+      *(_DWORD *)(a1 + 516) = 1140850688;
+      *(_DWORD *)(a1 + 520) = 1140850688;
+      *(_DWORD *)(a1 + 524) = 1149239296;
+      *(_DWORD *)(a1 + 528) = 1149239296;
+      *(_DWORD *)(a1 + 7280) = 1115684864;
+      *(_DWORD *)(a1 + 7284) = 1115684864;
+      sub_605D0024(a1);
+      if ( *v2 == 2 )
+        v5 = 13296412;
+      else
+        v5 = 13296376;
+      (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, v5);
+      return 1;
+    }
+    return result;
+  }
+
+/* ============================================================================
  * sub_60576A00
  * RVA 0x00576a00   size 0x170   xrefs 2
  * ============================================================================ */
@@ -74530,6 +75995,128 @@
     *(_DWORD *)(a1 + 6436) = 5980176;
     *(_DWORD *)(a1 + 6440) = 5982828;
     return ColliderBase_setType((__int64 *)(a1 + 6120), 12);
+  }
+
+/* ============================================================================
+ * _ZN14BabyYoshiBlock11spawnItemUpEv
+ * RVA 0x00576b8c   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall BabyYoshiBlock::spawnItemUp(int a1)
+  {
+    return sub_60576A00(a1);
+  }
+
+/* ============================================================================
+ * _ZN14BabyYoshiBlock13spawnItemDownEv
+ * RVA 0x00576b90   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall BabyYoshiBlock::spawnItemDown(int a1)
+  {
+    return sub_60576A00(a1);
+  }
+
+/* ============================================================================
+ * _ZNK14BabyYoshiBlock18getRuntimeTypeInfoEv
+ * RVA 0x00576b9c   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int BabyYoshiBlock::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13298696) )
+    {
+      MEMORY[0xCAEC04] = 12587752;
+      _cxa_guard_release_0(13298696);
+    }
+    return 13298692;
+  }
+
+/* ============================================================================
+ * _ZN14BabyYoshiBlockD0Ev
+ * RVA 0x00576c10   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall BabyYoshiBlock::~BabyYoshiBlock(int a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12620796;
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor(a1 + 648);
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v2);
+  }
+
+/* ============================================================================
+ * ActorCoin_create
+ * RVA 0x00576eec   size 0x4c   xrefs 0
+ * ============================================================================ */
+  _DWORD *ActorCoin_create()
+  {
+    int v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = operator new(0x1D48u);
+    result = (_DWORD *)CoinBase::CoinBase(v0);
+    *result = 12599944;
+    result[1871] = 0;
+    result[1872] = 0;
+    result[1873] = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase4vf94Ev
+ * RVA 0x00577458   size 0xc   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::vf94(int a1)
+  {
+    return *(unsigned __int8 *)(a1 + 7466);
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase4vf9CEv
+ * RVA 0x00577464   size 0x8   xrefs 0
+ * ============================================================================ */
+  int CoinBase::vf9C()
+  {
+    return 1;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase4vfCCEv
+ * RVA 0x005774c0   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::vfCC()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase4vfE4Ev
+ * RVA 0x005774c4   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::vfE4()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase4vfF4Ev
+ * RVA 0x005774c8   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::vfF4()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase5vf160Ev
+ * RVA 0x005774cc   size 0x8   xrefs 0
+ * ============================================================================ */
+  int CoinBase::vf160()
+  {
+    return 1;
   }
 
 /* ============================================================================
@@ -74825,6 +76412,31 @@
   }
 
 /* ============================================================================
+ * _ZN8CoinBase5vf154Ev
+ * RVA 0x00579f9c   size 0x14   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::vf154(int a1)
+  {
+    int result; // r0
+  
+    result = *(unsigned __int16 *)(a1 + 7376);
+    if ( result )
+      return 2;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase5vf164Ev
+ * RVA 0x00579fb0   size 0x18   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::vf164(int result)
+  {
+    *(_DWORD *)(result + 7440) = 3;
+    *(_DWORD *)(result + 620) = result + 7424;
+    return result;
+  }
+
+/* ============================================================================
  * sub_60579FC8
  * RVA 0x00579fc8   size 0x9c   xrefs 2
  * ============================================================================ */
@@ -74885,6 +76497,45 @@
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 7348) = v4;
     return 7348;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase4vfA0Ev
+ * RVA 0x0057a134   size 0x94   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::vfA0(int result, int a2)
+  {
+    int v2; // r4
+    int CurrentState; // r0
+    int v4; // r5
+  
+    v2 = result;
+    if ( a2 == 1 )
+    {
+      CurrentState = StateMgr::getCurrentState(result + 6084);
+      v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+      result = (*(int (**)(void))(MEMORY[0xCB10FC] + 8))();
+      if ( v4 == result )
+      {
+        result = *(unsigned __int8 *)(v2 + 7292);
+        if ( !*(_BYTE *)(v2 + 7292) )
+        {
+          result = sub_60584FEC(MEMORY[0xCAF15C], (float *)(v2 + 108));
+          if ( result == 1 )
+            return (*(int (__fastcall **)(int, int))(*(_DWORD *)v2 + 192))(v2, 13299016);
+        }
+      }
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase15damageFromUnderEv
+ * RVA 0x0057a1d4   size 0x4   xrefs 0
+ * ============================================================================ */
+  void CoinBase::damageFromUnder()
+  {
+    ;
   }
 
 /* ============================================================================
@@ -75081,6 +76732,30 @@
     *(_DWORD *)(a1 + 3200) |= 0x20000u;
     *(_DWORD *)(a1 + 7380) = 0;
     return 7380;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase4vf8CEv
+ * RVA 0x0057a650   size 0x18   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::vf8C(int result)
+  {
+    *(_BYTE *)(result + 7466) = 1;
+    *(_DWORD *)(result + 120) = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase4vf90Ev
+ * RVA 0x0057a668   size 0x14   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::vf90(int result)
+  {
+    int v1; // s0
+  
+    *(_BYTE *)(result + 7466) = 0;
+    *(_DWORD *)(result + 124) = v1;
+    return result;
   }
 
 /* ============================================================================
@@ -75305,6 +76980,77 @@
   }
 
 /* ============================================================================
+ * _ZN8CoinBase11splashWaterEP4Vec3
+ * RVA 0x0057ab10   size 0x44   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::splashWater(int a1, _DWORD *a2)
+  {
+    int v3; // r2
+    int v4; // r3
+    _DWORD v6[2]; // [sp+0h] [bp-8h] BYREF
+  
+    EffectData_create(972, (int)a2, 0, a1 + 144);
+    v3 = a2[1];
+    v6[0] = *a2;
+    v6[1] = v3;
+    return TileMgr_splashRelated(MEMORY[0xCBD254], v6, 6, v4);
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase10splashLavaEP4Vec3
+ * RVA 0x0057ab58   size 0x50   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::splashLava(int a1, _DWORD *a2)
+  {
+    int v3; // r2
+    int v4; // r3
+    _DWORD v6[2]; // [sp+0h] [bp-8h] BYREF
+  
+    *(_BYTE *)(a1 + 19) = 1;
+    EffectData_create(974, (int)a2, 0, a1 + 144);
+    v3 = a2[1];
+    v6[0] = *a2;
+    v6[1] = v3;
+    return TileMgr_splashRelated(MEMORY[0xCBD254], v6, 16, v4);
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase14splashLavaWaveEP4Vec3
+ * RVA 0x0057abac   size 0x50   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::splashLavaWave(int a1, _DWORD *a2)
+  {
+    int v3; // r2
+    int v4; // r3
+    _DWORD v6[2]; // [sp+0h] [bp-8h] BYREF
+  
+    *(_BYTE *)(a1 + 19) = 1;
+    EffectData_create(975, (int)a2, 0, a1 + 144);
+    v3 = a2[1];
+    v6[0] = *a2;
+    v6[1] = v3;
+    return TileMgr_splashRelated(MEMORY[0xCBD254], v6, 16, v4);
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase12splashPoisonEP4Vec3
+ * RVA 0x0057ac00   size 0x50   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::splashPoison(int a1, _DWORD *a2)
+  {
+    int v3; // r2
+    int v4; // r3
+    _DWORD v6[2]; // [sp+0h] [bp-8h] BYREF
+  
+    *(_BYTE *)(a1 + 19) = 1;
+    EffectData_create(973, (int)a2, 0, a1 + 144);
+    v3 = a2[1];
+    v6[0] = *a2;
+    v6[1] = v3;
+    return TileMgr_splashRelated(MEMORY[0xCBD254], v6, 23, v4);
+  }
+
+/* ============================================================================
  * sub_6057AC54
  * RVA 0x0057ac54   size 0x40   xrefs 1
  * ============================================================================ */
@@ -75478,6 +77224,298 @@
       *(_BYTE *)(result + 19) = 1;
     }
     return result;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase5vf16CEv
+ * RVA 0x0057af9c   size 0x164   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::vf16C(int a1)
+  {
+    int v3[4]; // [sp+0h] [bp-10h] BYREF
+  
+    *(_DWORD *)(a1 + 120) = 0;
+    *(_DWORD *)(a1 + 124) = 1061997773;
+    *(_DWORD *)(a1 + 128) = 0;
+    *(_DWORD *)(a1 + 132) = 1082130432;
+    *(_DWORD *)(a1 + 136) = -1056964608;
+    *(_DWORD *)(a1 + 140) = 0;
+    *(_DWORD *)(a1 + 100) = -1110651699;
+    if ( *(_DWORD *)(MEMORY[0xC7B420] + 32) )
+    {
+      *(_DWORD *)(a1 + 6048) = -1132462080;
+      *(_DWORD *)(a1 + 6040) = 1056964608;
+      *(_DWORD *)(a1 + 6044) = -1090519040;
+      *(_BYTE *)(a1 + 6056) = 1;
+    }
+    if ( *(_BYTE *)(a1 + 7340) )
+      MovementBlockCoinBase::vf150(a1);
+    *(_BYTE *)(a1 + 7402) = 1;
+    sub_6057A4C4(a1);
+    CollisionMgr_setSensor(a1 + 648, dword_60B047E8, 0);
+    v3[1] = 1065353216;
+    v3[0] = -1082130432;
+    v3[2] = -1061158912;
+    CollisionMgr_setSensor(a1 + 648, v3, 1);
+    *(_DWORD *)(a1 + 3200) |= 0x800000u;
+    *(_DWORD *)(a1 + 80) = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31;
+    *(_BYTE *)(a1 + 7464) = 0;
+    *(_DWORD *)(a1 + 7372) = 2;
+    *(_DWORD *)(a1 + 6004) = 1036831949;
+    *(_BYTE *)(a1 + 536) = 1;
+    return 6004;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase5vf174Ev
+ * RVA 0x0057b10c   size 0x4   xrefs 0
+ * ============================================================================ */
+  void CoinBase::vf174()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase5vf178Ev
+ * RVA 0x0057b2d4   size 0xec   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::vf178(int a1)
+  {
+    unsigned int U32; // r0
+    int v3; // r1
+    float v4; // s16
+    float v5; // s0
+  
+    *(_DWORD *)(a1 + 132) = 1082130432;
+    *(_DWORD *)(a1 + 136) = -1056964608;
+    *(_DWORD *)(a1 + 140) = 0;
+    *(_DWORD *)(a1 + 100) = -1105199104;
+    U32 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
+    v3 = *(_DWORD *)(a1 + 7396);
+    v4 = (float)(dword_60AF2964[v3] & HIWORD(U32)) * 0.00024414;
+    if ( v4 >= flt_60AF2974[v3] )
+      v4 = v4 - flt_60AF2984[v3];
+    v5 = -v4;
+    if ( (sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) & 1) == 0 )
+      v5 = v4;
+    *(float *)(a1 + 120) = v5;
+    *(_DWORD *)(a1 + 124) = 0;
+    *(_DWORD *)(a1 + 128) = 0;
+    *(_DWORD *)(a1 + 104) = 0;
+    *(_BYTE *)(a1 + 7402) = 1;
+    return sub_6057A4C4(a1);
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase5vf180Ev
+ * RVA 0x0057b3d8   size 0x4   xrefs 0
+ * ============================================================================ */
+  void CoinBase::vf180()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase5vf17CEv
+ * RVA 0x0057b3dc   size 0x2d8   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::vf17C(int a1)
+  {
+    int result; // r0
+    int v3; // r1
+    int *v4; // r7
+    int v5; // r0
+    float v6; // r1
+    int v7; // r5
+    int v8; // r0
+    int v9; // r0
+    float v10; // s2
+    __int16 v11; // r0
+    float v12[2]; // [sp+0h] [bp-18h] BYREF
+    int v13; // [sp+8h] [bp-10h] BYREF
+    float v14; // [sp+Ch] [bp-Ch]
+    int v15; // [sp+10h] [bp-8h]
+  
+    if ( sub_605D01D4(a1) == 1 )
+      return MovementBlockCoinBase::vf150(a1);
+    StageActor::accelerateX((float *)a1);
+    CollisionActor::handleGravity(a1);
+    CollisionActor::handleSpeed(a1);
+    CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+    if ( sub_60003460(a1) == 1 )
+    {
+      *(_DWORD *)(a1 + 124) = 0;
+      v4 = (int *)(a1 + 7380);
+      v3 = *(_DWORD *)(a1 + 7380);
+      if ( v3 > 2 )
+      {
+        if ( v3 == 3 )
+        {
+          *v4 = 4;
+          *(_DWORD *)(a1 + 120) = 0;
+        }
+        else
+        {
+          v8 = sub_6014C4A4(a1 + 648);
+          switch ( sub_6014C57C(a1 + 648, v8) )
+          {
+            case 0:
+              break;
+            case 1:
+              v9 = 3;
+              goto LABEL_17;
+            case 2:
+              v9 = 2;
+              goto LABEL_17;
+            case 3:
+              v9 = 1;
+              goto LABEL_17;
+            case 4:
+              v9 = 0;
+              goto LABEL_17;
+            default:
+              v9 = 4;
+  LABEL_17:
+              *(_DWORD *)(a1 + 104) = 1031798784;
+              *(_DWORD *)(a1 + 132) = dword_60B047F4[v9];
+              if ( sub_6014C540(a1 + 648) )
+                *(float *)(a1 + 132) = -*(float *)(a1 + 132);
+              break;
+          }
+        }
+      }
+      else
+      {
+        v5 = v3 + 1;
+        *v4 = v3 + 1;
+        if ( !v3 )
+        {
+          v6 = *(float *)(a1 + 112);
+          v7 = MEMORY[0xC7F534];
+          v13 = *(_DWORD *)(a1 + 108);
+          v14 = v6;
+          mapPositionToScreen(v12, (float *)&v13);
+          BasicSoundActor2_play(v7, "SE_OBJ_COIN_BOUND", v12, 0);
+          v5 = *v4;
+        }
+        *(float *)(a1 + 124) = flt_60AF2994[v5];
+        *(float *)(a1 + 120) = *(float *)(a1 + 120) * 0.5;
+        if ( *(_DWORD *)(a1 + 7388) == 2 )
+          *(_DWORD *)(a1 + 3192) &= ~0x40000000u;
+      }
+    }
+    if ( sub_6000346C(a1) == 1 )
+      *(float *)(a1 + 120) = -*(float *)(a1 + 120);
+    if ( sub_60003AE0(a1) == 1 )
+    {
+      v10 = *(float *)(a1 + 112);
+      v13 = *(_DWORD *)(a1 + 108);
+      v14 = v10 + 8.0;
+      v15 = 1166843904;
+      EffectData_create(1233, (int)&v13, 0, a1 + 144);
+      *(_BYTE *)(a1 + 19) = 1;
+    }
+    if ( !*(_WORD *)(a1 + 7332) )
+      goto LABEL_28;
+    result = *(unsigned __int16 *)(a1 + 7332) - 1;
+    *(_WORD *)(a1 + 7332) = result;
+    if ( (unsigned __int16)result > 0xB3u )
+      return result;
+    if ( (_WORD)result )
+    {
+      result = a1 + 7334;
+      if ( *(_WORD *)(a1 + 7334) )
+      {
+        *(_WORD *)result = *(_WORD *)(a1 + 7334) - 1;
+      }
+      else
+      {
+        *(_WORD *)result = 4;
+        v11 = *(_WORD *)(a1 + 7336) ^ 1;
+        *(_WORD *)(a1 + 7336) = v11;
+        result = v11 == 0;
+        *(_BYTE *)(a1 + 535) = result;
+      }
+    }
+    else
+    {
+  LABEL_28:
+      *(_BYTE *)(a1 + 19) = 1;
+      return 1;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBase5vf168Ev
+ * RVA 0x0057b8ac   size 0x48   xrefs 0
+ * ============================================================================ */
+  bool __fastcall CoinBase::vf168(int a1)
+  {
+    int CurrentState; // r0
+    int v2; // r4
+  
+    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    v2 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+    return v2 == (*(int (**)(void))(MEMORY[0xCB111C] + 8))();
+  }
+
+/* ============================================================================
+ * _ZNK8CoinBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
+ * RVA 0x0057b8f8   size 0x130   xrefs 0
+ * ============================================================================ */
+  bool __fastcall CoinBase::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13142624) )
+    {
+      MEMORY[0xC88A5C] = 12404984;
+      _cxa_guard_release_0(13142624);
+    }
+    if ( a2 == 13142620 )
+      return 1;
+    if ( _cxa_guard_acquire_0(13142632) )
+    {
+      MEMORY[0xC88A64] = 12404996;
+      _cxa_guard_release_0(13142632);
+    }
+    if ( a2 == 13142628 )
+      return 1;
+    if ( _cxa_guard_acquire_0(13087620) )
+    {
+      MEMORY[0xC7B380] = 12320968;
+      _cxa_guard_release_0(13087620);
+    }
+    return a2 == 13087616 || sub_60026DC8(a2);
+  }
+
+/* ============================================================================
+ * _ZNK8CoinBase18getRuntimeTypeInfoEv
+ * RVA 0x0057ba70   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int CoinBase::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13142624) )
+    {
+      MEMORY[0xC88A5C] = 12404984;
+      _cxa_guard_release_0(13142624);
+    }
+    return 13142620;
+  }
+
+/* ============================================================================
+ * _ZN8CoinBaseD0Ev
+ * RVA 0x0057bae4   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall CoinBase::~CoinBase(int a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12620796;
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor(a1 + 648);
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v2);
   }
 
 /* ============================================================================
@@ -83132,6 +85170,24 @@
   }
 
 /* ============================================================================
+ * TerrainActor_updateModel
+ * RVA 0x005a2c08   size 0x4   xrefs 0
+ * ============================================================================ */
+  void TerrainActor_updateModel()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * TerrainActor_draw
+ * RVA 0x005a2c0c   size 0x4   xrefs 0
+ * ============================================================================ */
+  void TerrainActor_draw()
+  {
+    ;
+  }
+
+/* ============================================================================
  * TerrainActor_ctor
  * RVA 0x005a2e8c   size 0xd0   xrefs 8
  * ============================================================================ */
@@ -83535,6 +85591,215 @@
   }
 
 /* ============================================================================
+ * TerrainActor_vfD4
+ * RVA 0x005a548c   size 0x1c   xrefs 0
+ * ============================================================================ */
+  int __fastcall TerrainActor_vfD4(int result)
+  {
+    *(_WORD *)(result + 6890) = 10 * (*(_BYTE *)(result + 23) & 0xF);
+    return result;
+  }
+
+/* ============================================================================
+ * TerrainActor_vfDC
+ * RVA 0x005a54a8   size 0x4   xrefs 0
+ * ============================================================================ */
+  void TerrainActor_vfDC()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * TerrainActor_vfD8
+ * RVA 0x005a54ac   size 0xe4   xrefs 0
+ * ============================================================================ */
+  float *__fastcall TerrainActor_vfD8(int a1)
+  {
+    float *v1; // r1
+    float v2; // s0
+    float v3; // s2
+    _WORD *v4; // r2
+    int v5; // r3
+    float *result; // r0
+    float v7; // s2
+  
+    v1 = (float *)(a1 + 6876);
+    v2 = *(float *)(a1 + 6876);
+    v3 = *(float *)(a1 + 112) + v2;
+    *(float *)(a1 + 6844) = v3;
+    v4 = (_WORD *)(a1 + 6890);
+    v5 = *(unsigned __int16 *)(a1 + 6890);
+    if ( *(_WORD *)(a1 + 6890) )
+    {
+      *v4 = v5 - 1;
+      return (float *)(v5 - 1);
+    }
+    else
+    {
+      v7 = v3 - *(float *)(a1 + 6872);
+      if ( (*(_BYTE *)(a1 + 21) & 8) == 0 && *(_BYTE *)(a1 + 6894) )
+        *(float *)(a1 + 6916) = v7;
+      *(float *)(a1 + 6128) = v7;
+      *(float *)(a1 + 6860) = (float)(v7 + *(float *)(a1 + 6856)) - *(float *)(a1 + 6116);
+      if ( !*(_DWORD *)(a1 + 6836) )
+      {
+        *(float *)(MEMORY[0xCBD254] + 24) = v7;
+        v2 = *v1;
+      }
+      result = (float *)(a1 + 6868);
+      *v1 = *result + v2;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * TerrainActor_vfE0
+ * RVA 0x005a5594   size 0x14   xrefs 0
+ * ============================================================================ */
+  int __fastcall TerrainActor_vfE0(int result)
+  {
+    *(_DWORD *)(result + 6860) = *(_DWORD *)(result + 6856);
+    return result;
+  }
+
+/* ============================================================================
+ * TerrainActor_vfE8
+ * RVA 0x005a55a8   size 0x4   xrefs 0
+ * ============================================================================ */
+  void TerrainActor_vfE8()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * TerrainActor_vfE4
+ * RVA 0x005a55ac   size 0xac   xrefs 0
+ * ============================================================================ */
+  float __fastcall TerrainActor_vfE4(int a1)
+  {
+    float v1; // s0
+    float *v2; // r2
+    float v3; // s2
+    float *v4; // r1
+    float result; // r0
+  
+    v1 = *(float *)(a1 + 112) + *(float *)(MEMORY[0xCC6484] + 316);
+    if ( (*(_BYTE *)(a1 + 21) & 8) == 0 && *(_BYTE *)(a1 + 6894) )
+      *(float *)(a1 + 6916) = v1;
+    v2 = (float *)(a1 + 6856);
+    *(float *)(a1 + 6128) = v1;
+    v3 = *(float *)(a1 + 6856);
+    v4 = (float *)(a1 + 6860);
+    *(float *)(a1 + 6860) = (float)(v1 + v3) - *(float *)(a1 + 6116);
+    if ( *(_DWORD *)(a1 + 6836) )
+    {
+      *v4 = v3;
+      return v3;
+    }
+    else
+    {
+      *(float *)(MEMORY[0xCBD254] + 24) = v1;
+      result = *v2;
+      *v4 = *v2;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * TerrainActor_checkRTTi
+ * RVA 0x005a5660   size 0x78   xrefs 0
+ * ============================================================================ */
+  bool __fastcall TerrainActor_checkRTTi(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13117520) )
+    {
+      MEMORY[0xC8284C] = 12320968;
+      _cxa_guard_release_0(13117520);
+    }
+    return a2 == 13117516 || sub_60026DC8(a2);
+  }
+
+/* ============================================================================
+ * TerrainActor_getRTTI
+ * RVA 0x005a56f0   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int TerrainActor_getRTTI()
+  {
+    if ( _cxa_guard_acquire_0(13117520) )
+    {
+      MEMORY[0xC8284C] = 12320968;
+      _cxa_guard_release_0(13117520);
+    }
+    return 13117516;
+  }
+
+/* ============================================================================
+ * TerrainActor_dtor
+ * RVA 0x005a5764   size 0x94   xrefs 0
+ * ============================================================================ */
+  void __fastcall TerrainActor_dtor(_DWORD *a1)
+  {
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
+  
+    *a1 = 12616008;
+    v2 = (sead::IDisposer *)(a1 + 1534);
+    a1[18064] = 12348984;
+    v3 = (sead::IDisposer *)(a1 + 18064);
+    sub_60002B6C(a1 + 18064);
+    sead::IDisposer::~IDisposer(v3);
+    a1[1725] = 12615992;
+    nullsub_1721();
+    ShapedCollider_dtor(v2);
+    *a1 = 12321080;
+    CollisionMgr_dtor((int)(a1 + 162));
+    StageActor::~StageActor((Actor *)a1);
+  }
+
+/* ============================================================================
+ * TerrainActor_dtorFree
+ * RVA 0x005a5808   size 0x98   xrefs 0
+ * ============================================================================ */
+  int __fastcall TerrainActor_dtorFree(_DWORD *a1)
+  {
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
+    int v4; // r0
+  
+    *a1 = 12616008;
+    v2 = (sead::IDisposer *)(a1 + 1534);
+    a1[18064] = 12348984;
+    v3 = (sead::IDisposer *)(a1 + 18064);
+    sub_60002B6C(a1 + 18064);
+    sead::IDisposer::~IDisposer(v3);
+    a1[1725] = 12615992;
+    nullsub_1721();
+    ShapedCollider_dtor(v2);
+    *a1 = 12321080;
+    CollisionMgr_dtor((int)(a1 + 162));
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v4);
+  }
+
+/* ============================================================================
+ * TerrainActor_vfC4
+ * RVA 0x005a58b0   size 0x4   xrefs 0
+ * ============================================================================ */
+  void TerrainActor_vfC4()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * TerrainActor_vfC8
+ * RVA 0x005a58b4   size 0x4   xrefs 0
+ * ============================================================================ */
+  void TerrainActor_vfC8()
+  {
+    ;
+  }
+
+/* ============================================================================
  * sub_605A6A98
  * RVA 0x005a6a98   size 0x118   xrefs 1
  * ============================================================================ */
@@ -83659,6 +85924,21 @@
   }
 
 /* ============================================================================
+ * CloudTerrainActor_ctor
+ * RVA 0x005a77a8   size 0x30   xrefs 0
+ * ============================================================================ */
+  _DWORD *CloudTerrainActor_ctor()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x11A88u);
+    result = TerrainActor_ctor(v0);
+    *result = 12616584;
+    return result;
+  }
+
+/* ============================================================================
  * sub_605A788C
  * RVA 0x005a788c   size 0x1c0   xrefs 1
  * ============================================================================ */
@@ -83715,6 +85995,130 @@
     v11(v10, 1, 11543476, &v15, 11778372);
     result = **a1;
     *(_DWORD *)(result + 36) = 15;
+    return result;
+  }
+
+/* ============================================================================
+ * Lava_ctor
+ * RVA 0x005a7d30   size 0x30   xrefs 0
+ * ============================================================================ */
+  _DWORD *Lava_ctor()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x11A90u);
+    result = TerrainActor_ctor(v0);
+    *result = 12616828;
+    return result;
+  }
+
+/* ============================================================================
+ * Lava_onCreate
+ * RVA 0x005a7d68   size 0x378   xrefs 0
+ * ============================================================================ */
+  int __fastcall Lava_onCreate(int a1)
+  {
+    int inited; // r1
+    int result; // r0
+    int v4; // r0
+    int v5; // r5
+    float v6; // s2
+    float v7; // s0
+    float v8; // s6
+    float v9; // s2
+    int v10; // r3
+    int v11; // r1
+    int CurrentState; // r0
+    int v13; // r5
+    unsigned int v14; // r0
+  
+    inited = TerrainActor_initLocation(a1);
+    result = 2;
+    if ( inited == 1 )
+    {
+      ++*(_DWORD *)(MEMORY[0xC7B420] + 32);
+      if ( (*(_BYTE *)(a1 + 27) & 0x10) != 0 )
+        *(_BYTE *)(a1 + 6895) = 1;
+      v4 = *(_DWORD *)(a1 + 20);
+      if ( (v4 & 0x800) == 0 )
+      {
+        *(float *)(a1 + 6856) = *(float *)(a1 + 6856) - MEMORY[0xB04E9C];
+        *(_BYTE *)(a1 + 6894) = 1;
+        sub_60002B50(a1 + 72256);
+        v4 = *(_DWORD *)(a1 + 20);
+      }
+      v5 = v4 & 0x400;
+      if ( *(_DWORD *)(a1 + 6836) == 1 )
+      {
+        v6 = *(float *)(a1 + 6856);
+        v7 = *(float *)(a1 + 6852);
+        v8 = v6 * -0.5;
+        v9 = v6 + 48.0;
+        *(float *)(a1 + 492) = v7 * 0.5;
+        *(float *)(a1 + 496) = v8;
+        *(float *)(a1 + 500) = v7;
+        *(float *)(a1 + 504) = v9;
+        *(float *)(a1 + 508) = v7;
+        *(float *)(a1 + 512) = v9;
+        ColliderBase_setType((__int64 *)(a1 + 6136), 20);
+        ColliderMgr_add(MEMORY[0xC8820C], (_DWORD *)(a1 + 6136));
+        *(_BYTE *)(a1 + 6893) = 1;
+        if ( *(_BYTE *)(a1 + 6894) )
+          TerrainEffects_init(a1 + 6900, 0, v5 != 0, 1, *(_DWORD *)(a1 + 72272));
+      }
+      else
+      {
+        *(_DWORD *)(a1 + 6872) = 1077936128;
+        sub_605A5114(a1);
+        *(_DWORD *)(MEMORY[0xCBD254] + 10276) = 3;
+        if ( *(_BYTE *)(a1 + 6894) )
+        {
+          if ( (*(_BYTE *)(a1 + 24) & 1) != 0 )
+            v10 = 3;
+          else
+            v10 = 1;
+          TerrainEffects_init(a1 + 6900, 1, v5 != 0, v10, *(_DWORD *)(a1 + 72272));
+        }
+        sub_605A512C(a1);
+      }
+      v11 = 0;
+      if ( (*(_BYTE *)(a1 + 21) & 1) != 0 )
+      {
+        v11 = 1;
+        *(_BYTE *)(MEMORY[0xCBD830] + 1509) = 1;
+      }
+      sub_605A51B0(a1, v11);
+      CurrentState = StateMgr::getCurrentState(a1 + 6084);
+      v13 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+      if ( v13 == (*(int (**)(void))(MEMORY[0xCAFEE8] + 8))() )
+        sub_605A512C(a1);
+      sub_605A53E4(a1);
+      sub_605A8104((_DWORD *)a1);
+      sub_605A4EAC(a1);
+      (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 204))(a1);
+      sub_605A8604(a1);
+      if ( *(_BYTE *)(a1 + 6894) )
+      {
+        v14 = *(_DWORD *)(a1 + 24);
+        if ( (v14 & 1) != 0 )
+        {
+          TerrainEffects_setWaveValues(
+            a1 + 6900,
+            (unsigned __int8)v14 >> 4,
+            HIWORD(v14) & 0xF,
+            (v14 >> 8) & 0xF,
+            (v14 >> 20) & 0xF,
+            (unsigned __int16)v14 >> 12,
+            HIBYTE(v14) & 0xF);
+          *(_BYTE *)(a1 + 6892) = 1;
+        }
+        TerrainEffects_update(a1 + 6900);
+      }
+      *(_DWORD *)(a1 + 76) |= 2u;
+      *(_DWORD *)(MEMORY[0xC7B420] + 940) = *(_DWORD *)(a1 + 112);
+      return 1;
+    }
     return result;
   }
 
@@ -83926,6 +86330,21 @@
   }
 
 /* ============================================================================
+ * MistEffect_ctor
+ * RVA 0x005a9488   size 0x30   xrefs 0
+ * ============================================================================ */
+  _DWORD *MistEffect_ctor()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x11A88u);
+    result = TerrainActor_ctor(v0);
+    *result = 12617092;
+    return result;
+  }
+
+/* ============================================================================
  * sub_605A955C
  * RVA 0x005a955c   size 0x1b0   xrefs 1
  * ============================================================================ */
@@ -83983,6 +86402,95 @@
     result = **a1;
     *(_DWORD *)(result + 36) = 15;
     return result;
+  }
+
+/* ============================================================================
+ * Poison_ctor
+ * RVA 0x005a99ec   size 0x30   xrefs 0
+ * ============================================================================ */
+  _DWORD *Poison_ctor()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x11A90u);
+    result = TerrainActor_ctor(v0);
+    *result = 12617336;
+    return result;
+  }
+
+/* ============================================================================
+ * Poison_onCreate
+ * RVA 0x005a9a20   size 0x280   xrefs 0
+ * ============================================================================ */
+  int __fastcall Poison_onCreate(int a1)
+  {
+    int inited; // r1
+    int result; // r0
+    float v4; // s2
+    float v5; // s0
+    int v6; // r0
+    char v7; // r1
+    int CurrentState; // r0
+    int v9; // r5
+  
+    inited = TerrainActor_initLocation(a1);
+    result = 2;
+    if ( inited != 1 )
+      return result;
+    ++*(_DWORD *)(MEMORY[0xC7B420] + 32);
+    if ( (*(_BYTE *)(a1 + 21) & 8) == 0 )
+    {
+      *(float *)(a1 + 6856) = *(float *)(a1 + 6856) - MEMORY[0xB04E9C];
+      *(_BYTE *)(a1 + 6894) = 1;
+      sub_60002B50(a1 + 72256);
+    }
+    if ( *(_DWORD *)(a1 + 6836) == 1 )
+    {
+      v4 = *(float *)(a1 + 6856);
+      v5 = *(float *)(a1 + 6852);
+      *(float *)(a1 + 492) = v5 * 0.5;
+      *(float *)(a1 + 496) = v4 * -0.5;
+      *(float *)(a1 + 500) = v5;
+      *(float *)(a1 + 504) = v4;
+      *(float *)(a1 + 508) = v5;
+      *(float *)(a1 + 512) = v4;
+      ColliderBase_setType((__int64 *)(a1 + 6136), 21);
+      ColliderMgr_add(MEMORY[0xC8820C], (_DWORD *)(a1 + 6136));
+      *(_BYTE *)(a1 + 6893) = 1;
+      if ( *(_BYTE *)(a1 + 6894) )
+      {
+        v6 = *(_DWORD *)(a1 + 72272);
+        v7 = 0;
+  LABEL_9:
+        TerrainEffects_init(a1 + 6900, v7, 0, 2, v6);
+      }
+    }
+    else
+    {
+      *(_DWORD *)(a1 + 6872) = 1082130432;
+      sub_605A5114(a1);
+      *(_DWORD *)(MEMORY[0xCBD254] + 10276) = 5;
+      if ( *(_BYTE *)(a1 + 6894) )
+      {
+        v6 = *(_DWORD *)(a1 + 72272);
+        v7 = 1;
+        goto LABEL_9;
+      }
+    }
+    sub_605A51B0(a1, 0);
+    sub_605A53E4(a1);
+    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    v9 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+    if ( v9 == (*(int (**)(void))(MEMORY[0xCB0008] + 8))() )
+      sub_605A512C(a1);
+    sub_605A9CB8((_DWORD **)a1);
+    sub_605A4EAC(a1);
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 204))(a1);
+    if ( *(_BYTE *)(a1 + 6894) )
+      TerrainEffects_update(a1 + 6900);
+    *(_DWORD *)(a1 + 76) |= 2u;
+    return 1;
   }
 
 /* ============================================================================
@@ -84080,6 +86588,241 @@
   }
 
 /* ============================================================================
+ * Poison_onExecute
+ * RVA 0x005aa034   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall Poison_onExecute(int a1)
+  {
+    return TerrainActor_onExecute(a1);
+  }
+
+/* ============================================================================
+ * Poison_checkRTTI
+ * RVA 0x005aa430   size 0xd4   xrefs 0
+ * ============================================================================ */
+  bool __fastcall Poison_checkRTTI(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13304156) )
+    {
+      MEMORY[0xCB0158] = 12354376;
+      _cxa_guard_release_0(13304156);
+    }
+    if ( a2 == 13304152 )
+      return 1;
+    if ( _cxa_guard_acquire_0(13117520) )
+    {
+      MEMORY[0xC8284C] = 12320968;
+      _cxa_guard_release_0(13117520);
+    }
+    return a2 == 13117516 || sub_60026DC8(a2);
+  }
+
+/* ============================================================================
+ * Poison_getRTTI
+ * RVA 0x005aa534   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int Poison_getRTTI()
+  {
+    if ( _cxa_guard_acquire_0(13304156) )
+    {
+      MEMORY[0xCB0158] = 12354376;
+      _cxa_guard_release_0(13304156);
+    }
+    return 13304152;
+  }
+
+/* ============================================================================
+ * Poison_dtorFree
+ * RVA 0x005aa5a8   size 0x98   xrefs 0
+ * ============================================================================ */
+  int __fastcall Poison_dtorFree(_DWORD *a1)
+  {
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
+    int v4; // r0
+  
+    *a1 = 12616008;
+    v2 = (sead::IDisposer *)(a1 + 1534);
+    a1[18064] = 12348984;
+    v3 = (sead::IDisposer *)(a1 + 18064);
+    sub_60002B6C(a1 + 18064);
+    sead::IDisposer::~IDisposer(v3);
+    a1[1725] = 12615992;
+    nullsub_1721();
+    ShapedCollider_dtor(v2);
+    *a1 = 12321080;
+    CollisionMgr_dtor((int)(a1 + 162));
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v4);
+  }
+
+/* ============================================================================
+ * Quicksand_ctor
+ * RVA 0x005aa770   size 0x30   xrefs 0
+ * ============================================================================ */
+  _DWORD *Quicksand_ctor()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x11A88u);
+    result = TerrainActor_ctor(v0);
+    *result = 12617600;
+    return result;
+  }
+
+/* ============================================================================
+ * Quicksand_onCreate
+ * RVA 0x005aa7a4   size 0x388   xrefs 0
+ * ============================================================================ */
+  int __fastcall Quicksand_onCreate(int a1)
+  {
+    int inited; // r1
+    int result; // r0
+    float v4; // s0
+    float v5; // s2
+    int v6; // r0
+    char v7; // r1
+    float v8; // s2
+    int v9; // r1
+    int v10; // r0
+    int **v11; // r9
+    int *v12; // r0
+    int v13; // r3
+    int v14; // r4
+    int v15; // r5
+    int v16; // r6
+    int v17; // r7
+    int v18; // r4
+    int v19; // r5
+    int v20; // r6
+    int v21; // r7
+    int v22; // r12
+    int v23; // r5
+    void (__fastcall *v24)(int, int); // r4
+    int v25; // r0
+    int v26; // [sp+8h] [bp-30h]
+    int v27; // [sp+Ch] [bp-2Ch]
+    int v28; // [sp+10h] [bp-28h]
+    int v29; // [sp+14h] [bp-24h]
+    int v30; // [sp+18h] [bp-20h]
+    int v31; // [sp+1Ch] [bp-1Ch]
+    int v32; // [sp+20h] [bp-18h]
+    int v33; // [sp+24h] [bp-14h]
+    int v34; // [sp+28h] [bp-10h]
+    int v35; // [sp+2Ch] [bp-Ch]
+    int v36; // [sp+30h] [bp-8h]
+    int v37; // [sp+34h] [bp-4h]
+  
+    inited = TerrainActor_initLocation(a1);
+    result = 2;
+    if ( inited != 1 )
+      return result;
+    ++*(_DWORD *)(MEMORY[0xC7B420] + 32);
+    if ( (*(_BYTE *)(a1 + 21) & 8) == 0 )
+    {
+      *(float *)(a1 + 6856) = *(float *)(a1 + 6856) - MEMORY[0xB04E9C];
+      *(_BYTE *)(a1 + 6894) = 1;
+      sub_60002B50(a1 + 72256);
+    }
+    if ( *(_DWORD *)(a1 + 6836) == 1 )
+    {
+      *(float *)(a1 + 6860) = *(float *)(a1 + 6860) + -8.0;
+      v4 = *(float *)(a1 + 6852);
+      v5 = *(float *)(a1 + 6856);
+      *(float *)(a1 + 492) = v4 * 0.5;
+      *(float *)(a1 + 496) = v5 * -0.5;
+      *(float *)(a1 + 500) = v4;
+      *(float *)(a1 + 504) = v5;
+      *(float *)(a1 + 508) = v4;
+      *(float *)(a1 + 512) = v5;
+      ColliderBase_setType((__int64 *)(a1 + 6136), 22);
+      *(_DWORD *)(a1 + 6360) = 2;
+      ColliderMgr_add(MEMORY[0xC8820C], (_DWORD *)(a1 + 6136));
+      *(_BYTE *)(a1 + 6893) = 1;
+      if ( *(_BYTE *)(a1 + 6894) )
+      {
+        v6 = *(_DWORD *)(a1 + 72272);
+        v7 = 0;
+  LABEL_9:
+        TerrainEffects_init(a1 + 6900, v7, 1, 4, v6);
+      }
+    }
+    else
+    {
+      *(_DWORD *)(a1 + 6812) = 0;
+      *(_DWORD *)(a1 + 6808) = 0;
+      *(_DWORD *)(a1 + 6804) = 0;
+      *(_DWORD *)(a1 + 6800) = 0;
+      *(_DWORD *)(a1 + 6796) = 0;
+      *(_DWORD *)(a1 + 6792) = 0;
+      v8 = *(float *)(a1 + 6856);
+      *(_DWORD *)(a1 + 6816) = *(_DWORD *)(a1 + 6852);
+      *(float *)(a1 + 6820) = -(float)(v8 + 64.0);
+      *(_DWORD *)(a1 + 6824) = 0;
+      ShapedCollider_init(a1 + 6136, a1, (_DWORD *)(a1 + 6792));
+      ColliderBase_setType((__int64 *)(a1 + 6136), 22);
+      *(_DWORD *)(a1 + 6360) = 2;
+      ColliderMgr_add(MEMORY[0xC8820C], (_DWORD *)(a1 + 6136));
+      *(_BYTE *)(a1 + 6893) = 1;
+      if ( *(_BYTE *)(a1 + 6894) )
+      {
+        v7 = 1;
+        v6 = *(_DWORD *)(a1 + 72272);
+        goto LABEL_9;
+      }
+    }
+    if ( (*(_BYTE *)(a1 + 27) & 0x20) != 0 )
+      v9 = 13303852;
+    else
+      v9 = 13303496;
+    (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, v9);
+    sub_605AAB4C((_DWORD **)a1);
+    sub_605A4EAC(a1);
+    v11 = (int **)(a1 + 72324);
+    v10 = *(_DWORD *)(a1 + 72324);
+    if ( v10 )
+    {
+      ModelWrapper_updateAnims(v10);
+      v12 = (int *)(*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 6104) + 64))(**(_DWORD **)(a1 + 6104));
+      v13 = *v12;
+      v14 = v12[1];
+      v15 = v12[2];
+      v16 = v12[3];
+      v17 = v12[4];
+      v12 += 5;
+      v26 = v13;
+      v27 = v14;
+      v28 = v15;
+      v29 = v16;
+      v30 = v17;
+      v18 = v12[1];
+      v19 = v12[2];
+      v20 = v12[3];
+      v21 = v12[4];
+      v22 = v12[5];
+      v31 = *v12;
+      v32 = v18;
+      v33 = v19;
+      v34 = v20;
+      v35 = v21;
+      v36 = v22;
+      v37 = 1139146752;
+      (*(void (__fastcall **)(int))(*(_DWORD *)**v11 + 60))(**v11);
+      v23 = **v11;
+      v24 = *(void (__fastcall **)(int, int))(*(_DWORD *)v23 + 68);
+      v25 = (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 6104) + 72))(**(_DWORD **)(a1 + 6104));
+      v24(v23, v25);
+      ModelWrapper_updateModel(*v11);
+    }
+    if ( *(_BYTE *)(a1 + 6894) )
+      TerrainEffects_update(a1 + 6900);
+    *(_DWORD *)(a1 + 76) |= 2u;
+    return 1;
+  }
+
+/* ============================================================================
  * sub_605AAB4C
  * RVA 0x005aab4c   size 0x274   xrefs 1
  * ============================================================================ */
@@ -84151,6 +86894,25 @@
     a1[16555] = v14;
     result = *v14;
     *(_DWORD *)(*v14 + 36) = 11;
+    return result;
+  }
+
+/* ============================================================================
+ * Water_ctor
+ * RVA 0x005ab254   size 0x50   xrefs 0
+ * ============================================================================ */
+  _DWORD *Water_ctor()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x11A98u);
+    result = TerrainActor_ctor(v0);
+    *result = 12617864;
+    result[18081] = 0x40000000;
+    result[18082] = 0;
+    result[18083] = 0;
+    result[18084] = 0;
     return result;
   }
 
@@ -84761,6 +87523,218 @@
       return (*(int (__fastcall **)(int, int, float *))(*(_DWORD *)v8 + 12))(v8, 1, v9);
     }
     return result;
+  }
+
+/* ============================================================================
+ * Water_onExecute
+ * RVA 0x005ac75c   size 0x1c8   xrefs 0
+ * ============================================================================ */
+  int __fastcall Water_onExecute(int a1)
+  {
+    int v2; // r8
+    int v3; // r0
+    float v4; // s0
+    float v5; // s2
+    int v6; // r2
+    int v7; // r3
+    _DWORD **v8; // r6
+    int v9; // r0
+    int **v10; // r10
+    int *v11; // r0
+    int v12; // r3
+    int v13; // r4
+    int v14; // r5
+    int v15; // r6
+    int v16; // r7
+    int v17; // r4
+    int v18; // r5
+    int v19; // r6
+    int v20; // r7
+    int v21; // r12
+    int v22; // r6
+    void (__fastcall *v23)(int, int); // r4
+    int v24; // r0
+    float v26[3]; // [sp+4h] [bp-40h] BYREF
+    int v27; // [sp+10h] [bp-34h] BYREF
+    int v28; // [sp+14h] [bp-30h]
+    int v29; // [sp+18h] [bp-2Ch]
+    int v30; // [sp+1Ch] [bp-28h]
+    int v31; // [sp+20h] [bp-24h]
+    int v32; // [sp+24h] [bp-20h]
+    int v33; // [sp+28h] [bp-1Ch]
+    int v34; // [sp+2Ch] [bp-18h]
+    int v35; // [sp+30h] [bp-14h]
+    int v36; // [sp+34h] [bp-10h]
+    int v37; // [sp+38h] [bp-Ch]
+    int v38; // [sp+3Ch] [bp-8h]
+  
+    v2 = TerrainActor_onExecute(a1);
+    if ( !*(_BYTE *)(a1 + 6894) && !*(_DWORD *)(a1 + 6836) )
+    {
+      v3 = *(_DWORD *)(a1 + 6132);
+      v4 = *(float *)(MEMORY[0xCC6484] + 104);
+      v5 = *(float *)(MEMORY[0xCC6484] + 108);
+      v6 = *(_DWORD *)(MEMORY[0xCC6484] + 116);
+      v7 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
+      v27 = 1065353216;
+      v28 = 0;
+      v29 = 0;
+      v31 = 0;
+      v32 = 1065353216;
+      v33 = 0;
+      v35 = 0;
+      v36 = 0;
+      v37 = 1065353216;
+      v30 = v6;
+      v34 = v7;
+      v38 = v3;
+      v26[0] = v4 * 0.0625;
+      v26[1] = v5 * 0.0625;
+      v26[2] = 1.0;
+      v8 = (_DWORD **)(a1 + 6104);
+      (*(void (__fastcall **)(_DWORD, int *))(***(_DWORD ***)(a1 + 6104) + 60))(**(_DWORD **)(a1 + 6104), &v27);
+      (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v8 + 68))(**v8, v26);
+      (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v8 + 56))(**v8);
+    }
+    if ( !*(_DWORD *)(MEMORY[0xC995D0] + 32) )
+    {
+      v10 = (int **)(a1 + 72328);
+      v9 = *(_DWORD *)(a1 + 72328);
+      if ( v9 )
+      {
+        ModelWrapper_updateAnims(v9);
+        v11 = (int *)(*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 6104) + 64))(**(_DWORD **)(a1 + 6104));
+        v12 = *v11;
+        v13 = v11[1];
+        v14 = v11[2];
+        v15 = v11[3];
+        v16 = v11[4];
+        v11 += 5;
+        v27 = v12;
+        v28 = v13;
+        v29 = v14;
+        v30 = v15;
+        v31 = v16;
+        v17 = v11[1];
+        v18 = v11[2];
+        v19 = v11[3];
+        v20 = v11[4];
+        v21 = v11[5];
+        v32 = *v11;
+        v33 = v17;
+        v34 = v18;
+        v35 = v19;
+        v36 = v20;
+        v37 = v21;
+        v38 = -972251136;
+        (*(void (__fastcall **)(int))(*(_DWORD *)**v10 + 60))(**v10);
+        v22 = **v10;
+        v23 = *(void (__fastcall **)(int, int))(*(_DWORD *)v22 + 68);
+        v24 = (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 6104) + 72))(**(_DWORD **)(a1 + 6104));
+        v23(v22, v24);
+        ModelWrapper_updateModel(*v10);
+      }
+      sub_605AC130(a1);
+    }
+    return v2;
+  }
+
+/* ============================================================================
+ * Water_onDraw
+ * RVA 0x005ac930   size 0x100   xrefs 0
+ * ============================================================================ */
+  int __fastcall Water_onDraw(int a1)
+  {
+    int v2; // r2
+    int v3; // r3
+    int *v4; // r0
+    int v5; // r2
+    int v6; // r3
+    int *v7; // r0
+    int v8; // r2
+    int v9; // r3
+    _DWORD *v10; // r1
+    int savedregs; // [sp+0h] [bp+0h]
+  
+    sub_605AC470(a1);
+    if ( !*(_BYTE *)(a1 + 6894) && !*(_DWORD *)(a1 + 6836) )
+      sub_60445608(*(_DWORD **)(*(_DWORD *)(MEMORY[0xC9CD1C] + 292) + 420), **(_DWORD **)(a1 + 6104), 2, -1);
+    v4 = *(int **)(a1 + 72328);
+    if ( v4 )
+    {
+      sub_60418078(*v4, 0, 0);
+      DrawMgr_drawModel2(MEMORY[0xC9CD1C], *(_DWORD **)(a1 + 72328), v5, v6, savedregs);
+    }
+    v7 = *(int **)(a1 + 72336);
+    if ( v7 )
+    {
+      sub_60418078(*v7, 0, 0);
+      DrawMgr_drawModel2(MEMORY[0xC9CD1C], *(_DWORD **)(a1 + 72336), v8, v9, savedregs);
+    }
+    v10 = *(_DWORD **)(a1 + 72332);
+    if ( v10 )
+      DrawMgr_drawModel2(MEMORY[0xC9CD1C], v10, v2, v3, savedregs);
+    return TerrainActor_onDraw(a1, (int)v10, v2, v3);
+  }
+
+/* ============================================================================
+ * Water_checkRTTI
+ * RVA 0x005aca40   size 0xd4   xrefs 0
+ * ============================================================================ */
+  bool __fastcall Water_checkRTTI(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13304256) )
+    {
+      MEMORY[0xCB01BC] = 12354376;
+      _cxa_guard_release_0(13304256);
+    }
+    if ( a2 == 13304252 )
+      return 1;
+    if ( _cxa_guard_acquire_0(13117520) )
+    {
+      MEMORY[0xC8284C] = 12320968;
+      _cxa_guard_release_0(13117520);
+    }
+    return a2 == 13117516 || sub_60026DC8(a2);
+  }
+
+/* ============================================================================
+ * Water_getRTTI
+ * RVA 0x005acb44   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int Water_getRTTI()
+  {
+    if ( _cxa_guard_acquire_0(13304256) )
+    {
+      MEMORY[0xCB01BC] = 12354376;
+      _cxa_guard_release_0(13304256);
+    }
+    return 13304252;
+  }
+
+/* ============================================================================
+ * Water_dtorFree
+ * RVA 0x005acbb8   size 0x98   xrefs 0
+ * ============================================================================ */
+  int __fastcall Water_dtorFree(_DWORD *a1)
+  {
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
+    int v4; // r0
+  
+    *a1 = 12616008;
+    v2 = (sead::IDisposer *)(a1 + 1534);
+    a1[18064] = 12348984;
+    v3 = (sead::IDisposer *)(a1 + 18064);
+    sub_60002B6C(a1 + 18064);
+    sead::IDisposer::~IDisposer(v3);
+    a1[1725] = 12615992;
+    nullsub_1721();
+    ShapedCollider_dtor(v2);
+    *a1 = 12321080;
+    CollisionMgr_dtor((int)(a1 + 162));
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v4);
   }
 
 /* ============================================================================
@@ -85788,6 +88762,46 @@
     }
     v10 = v8 + v10;
     return (float *)sub_605B624C(a1, &v9, 0, 0, 0);
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBaseD2Ev
+ * RVA 0x005b1bec   size 0x48   xrefs 0
+ * ============================================================================ */
+  void __fastcall BlockCoinBase::~BlockCoinBase(int a1)
+  {
+    *(_DWORD *)a1 = 12620796;
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor(a1 + 648);
+    StageActor::~StageActor((Actor *)a1);
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase11spawnItemUpEv
+ * RVA 0x005b1c90   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::spawnItemUp()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase13spawnItemDownEv
+ * RVA 0x005b1c94   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::spawnItemDown()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase4vfECEv
+ * RVA 0x005b1c98   size 0x8   xrefs 0
+ * ============================================================================ */
+  int BlockCoinBase::vfEC()
+  {
+    return 0;
   }
 
 /* ============================================================================
@@ -87308,6 +90322,53 @@
   }
 
 /* ============================================================================
+ * _ZN13BlockCoinBase15spawnCoinShowerEv
+ * RVA 0x005b5958   size 0xd8   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::spawnCoinShower(int a1)
+  {
+    float v2; // r1
+    int v3; // r2
+    int v4; // r5
+    int v5; // r1
+    int v6; // r3
+    int v8; // [sp+8h] [bp-20h] BYREF
+    float v9; // [sp+Ch] [bp-1Ch]
+    int v10; // [sp+10h] [bp-18h]
+    _BYTE v11[8]; // [sp+18h] [bp-10h] BYREF
+    _DWORD v12[2]; // [sp+20h] [bp-8h] BYREF
+  
+    v2 = *(float *)(a1 + 112);
+    v3 = *(_DWORD *)(a1 + 116);
+    v8 = *(_DWORD *)(a1 + 108);
+    v9 = v2;
+    v10 = v3;
+    if ( *(_BYTE *)(a1 + 6868) || *(_DWORD *)(a1 + 6864) == 2 )
+    {
+      v4 = MEMORY[0xC7F534];
+      v9 = v9 + 16.0;
+      v5 = *(_DWORD *)(a1 + 112);
+      v12[0] = *(_DWORD *)(a1 + 108);
+      v12[1] = v5;
+      mapPositionToScreen(v11, v12);
+      BasicSoundActor2_play(v4, "SE_OBJ_GET_COIN_SHOWER", v11, 0);
+      v6 = 2;
+    }
+    else
+    {
+      v6 = 3;
+      v9 = v9 + -8.0;
+    }
+    return ((int (__fastcall *)(_DWORD, int *, int, int, _DWORD, int))sub_605839E8)(
+             MEMORY[0xCAF15C],
+             &v8,
+             5,
+             v6,
+             *(unsigned __int8 *)(a1 + 86),
+             1);
+  }
+
+/* ============================================================================
  * sub_605B5A3C
  * RVA 0x005b5a3c   size 0x194   xrefs 2
  * ============================================================================ */
@@ -87799,6 +90860,452 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase4vfE8Ev
+ * RVA 0x005b65a8   size 0xa0   xrefs 0
+ * ============================================================================ */
+  float *__fastcall BlockCoinBase::vfE8(float *result, int a2)
+  {
+    float v2; // s0
+    float *v3; // r1
+    float v4; // s2
+    float v5; // s0
+    float v6; // s2
+    float v7; // s0
+  
+    v2 = result[31];
+    if ( a2 == 1 )
+    {
+      if ( v2 <= 0.0 )
+      {
+  LABEL_7:
+        v3 = result + 36;
+        v6 = result[36] - result[1701];
+        result[36] = v6;
+        v7 = result[1700];
+        if ( v6 <= v7 )
+          *v3 = v7;
+        goto LABEL_9;
+      }
+    }
+    else if ( v2 >= 0.0 )
+    {
+      goto LABEL_7;
+    }
+    v3 = result + 36;
+    v4 = result[1701] + result[36];
+    result[36] = v4;
+    v5 = result[1702];
+    if ( v4 >= v5 )
+      *v3 = v5;
+  LABEL_9:
+    result[37] = *v3;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase17beginState_BumpUpEv
+ * RVA 0x005b6648   size 0x40   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::beginState_BumpUp(int a1)
+  {
+    *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
+    *(_DWORD *)(a1 + 124) = 0x40000000;
+    *(_DWORD *)(a1 + 6812) = 1049616187;
+    *(_DWORD *)(a1 + 6880) = 1;
+    return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 196))(a1);
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase15endState_BumpUpEv
+ * RVA 0x005b6688   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::endState_BumpUp()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase19executeState_BumpUpEv
+ * RVA 0x005b668c   size 0x94   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::executeState_BumpUp(int a1)
+  {
+    float v2; // s0
+  
+    v2 = *(float *)(a1 + 124) - *(float *)(a1 + 6812);
+    if ( v2 <= -2.0 )
+      v2 = 2.0;
+    *(float *)(a1 + 124) = v2;
+    (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 232))(a1, 1);
+    *(float *)(a1 + 108) = *(float *)(a1 + 108) + *(float *)(a1 + 120);
+    *(float *)(a1 + 112) = *(float *)(a1 + 112) + *(float *)(a1 + 124);
+    *(float *)(a1 + 116) = *(float *)(a1 + 116) + *(float *)(a1 + 128);
+    CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+    return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 208))(a1);
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase28beginState_BlockCoinBaseUnk1Ev
+ * RVA 0x005b6720   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::beginState_BlockCoinBaseUnk1(int result)
+  {
+    *(_BYTE *)(result + 6868) = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase26endState_BlockCoinBaseUnk1Ev
+ * RVA 0x005b6730   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::endState_BlockCoinBaseUnk1()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase30executeState_BlockCoinBaseUnk1Ev
+ * RVA 0x005b6734   size 0x14   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::executeState_BlockCoinBaseUnk1(int a1)
+  {
+    return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13305068);
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase19beginState_BumpDownEv
+ * RVA 0x005b674c   size 0x40   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::beginState_BumpDown(int a1)
+  {
+    *(_DWORD *)(a1 + 6880) = 2;
+    *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
+    *(_DWORD *)(a1 + 124) = -1073741824;
+    *(_DWORD *)(a1 + 6812) = 1049616187;
+    return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 200))(a1);
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase17endState_BumpDownEv
+ * RVA 0x005b678c   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::endState_BumpDown()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase21executeState_BumpDownEv
+ * RVA 0x005b6790   size 0x88   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::executeState_BumpDown(int a1)
+  {
+    float32x2_t v1; // d0
+    float32x2_t v2; // d2
+  
+    v2.n64_u32[0] = 2.0;
+    v1.n64_f32[0] = *(float *)(a1 + 6812) + *(float *)(a1 + 124);
+    *(_DWORD *)(a1 + 124) = vmin_f32(v1, v2).n64_u32[0];
+    (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 232))(a1, 2);
+    *(float *)(a1 + 108) = *(float *)(a1 + 108) + *(float *)(a1 + 120);
+    *(float *)(a1 + 112) = *(float *)(a1 + 112) + *(float *)(a1 + 124);
+    *(float *)(a1 + 116) = *(float *)(a1 + 116) + *(float *)(a1 + 128);
+    CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+    return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 216))(a1);
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase28beginState_BlockCoinBaseUnk2Ev
+ * RVA 0x005b6818   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::beginState_BlockCoinBaseUnk2(int result)
+  {
+    *(_DWORD *)(result + 6816) = 6;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase26endState_BlockCoinBaseUnk2Ev
+ * RVA 0x005b6828   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::endState_BlockCoinBaseUnk2()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase30executeState_BlockCoinBaseUnk2Ev
+ * RVA 0x005b682c   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall BlockCoinBase::executeState_BlockCoinBaseUnk2(_DWORD *result)
+  {
+    int v1; // r2
+    int v2; // r2
+  
+    v1 = result[1704];
+    if ( !v1 )
+      return (_DWORD *)(*(int (__fastcall **)(_DWORD *))(*result + 220))(result);
+    v2 = v1 - 1;
+    result[1704] = v2;
+    if ( !v2 )
+      return (_DWORD *)(*(int (__fastcall **)(_DWORD *))(*result + 220))(result);
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase18beginState_BumpUp2Ev
+ * RVA 0x005b6858   size 0x84   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::beginState_BumpUp2(int a1)
+  {
+    int *v1; // r4
+    int v2; // t1
+  
+    v1 = (int *)a1;
+    *(_DWORD *)(a1 + 6892) = 0;
+    *(_BYTE *)(a1 + 6960) = 0;
+    *(_DWORD *)(a1 + 6964) = 0;
+    *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
+    *(_DWORD *)(a1 + 6796) = 0;
+    *(_DWORD *)(a1 + 124) = 0x40000000;
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 196))(a1);
+    CollisionMgr_setSensor(v1 + 162, v1 + 1526, 2);
+    v2 = v1[1564];
+    v1 += 1564;
+    *v1 = v2 | 0x400;
+    v1[156] = 1;
+    return 1;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase16endState_BumpUp2Ev
+ * RVA 0x005b68dc   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::endState_BumpUp2()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase20executeState_BumpUp2Ev
+ * RVA 0x005b68e0   size 0x240   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::executeState_BumpUp2(_BYTE *a1)
+  {
+    int v2; // r0
+    _DWORD *v3; // r5
+    int v4; // r0
+    float v5; // r1
+    int v6; // r2
+    int v7; // r0
+    float *v8; // r6
+    int v9; // r2
+    float v10; // r0
+    int v11; // r2
+    float v12; // s0
+    float v13; // s0
+    float v14; // s16
+    int v16; // [sp+0h] [bp-10h] BYREF
+    float v17; // [sp+4h] [bp-Ch]
+    int v18; // [sp+8h] [bp-8h]
+  
+    if ( *((_DWORD *)a1 + 1724) )
+    {
+      v3 = a1 + 6964;
+      v2 = *((_DWORD *)a1 + 1741);
+      if ( !v2 || (v4 = v2 - 1, (*v3 = v4) == 0) )
+      {
+        if ( sub_605B4CC4(a1) == 1
+          && *((int *)a1 + 1723) >= 8
+          && (*(int (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 236))(a1) != 3 )
+        {
+          *((_DWORD *)a1 + 1723) = dword_60AF4C90[*((_DWORD *)a1 + 1723) - 8];
+          v5 = *((float *)a1 + 28);
+          v6 = *((_DWORD *)a1 + 29);
+          v16 = *((_DWORD *)a1 + 27);
+          v17 = v5;
+          v18 = v6;
+          v17 = *((float *)a1 + 1699) + v5;
+          ((void (__fastcall *)(_DWORD, int *, int, _DWORD))sub_60582B14)(MEMORY[0xCAF15C], &v16, 2, (char)a1[6850]);
+          a1[6960] = 1;
+          *v3 = 8;
+        }
+      }
+      v7 = *((_DWORD *)a1 + 1723);
+      v8 = (float *)(a1 + 6796);
+      v9 = v7 + 1;
+      if ( v7 > 13 )
+        v9 = 14;
+      *((_DWORD *)a1 + 1723) = v9;
+      v10 = flt_60B05370[v9];
+      v11 = dword_60B053AC[v9];
+      *((float *)a1 + 1699) = v10;
+      *((_DWORD *)a1 + 36) = v11;
+      v12 = v10;
+      *((_DWORD *)a1 + 37) = v11;
+    }
+    else
+    {
+      v13 = *((float *)a1 + 31) + -0.281;
+      if ( v13 <= -2.0 )
+        v13 = 2.0;
+      *((float *)a1 + 31) = v13;
+      (*(void (__fastcall **)(_BYTE *, int))(*(_DWORD *)a1 + 232))(a1, 1);
+      v8 = (float *)(a1 + 6796);
+      v12 = *((float *)a1 + 31) + *((float *)a1 + 1699);
+      *((float *)a1 + 1699) = v12;
+    }
+    v14 = *((float *)a1 + 28);
+    *((float *)a1 + 28) = v14 + v12;
+    CollisionMgr_process(a1 + 648);
+    *((float *)a1 + 28) = v14;
+    if ( *v8 <= 0.0 )
+    {
+      *((_DWORD *)a1 + 1564) &= ~0x400u;
+      CollisionMgr_setSensor(a1 + 648, 0, 2);
+      *v8 = 0.0;
+      *((_DWORD *)a1 + 1725) = 0;
+      (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 212))(a1);
+      if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
+        a1[6879] = 0;
+    }
+    return (*(int (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 244))(a1);
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase20beginState_BumpDown2Ev
+ * RVA 0x005b6b38   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::beginState_BumpDown2(int a1)
+  {
+    *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
+    *(_DWORD *)(a1 + 6796) = 0;
+    *(_DWORD *)(a1 + 124) = -1073741824;
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 204))(a1);
+    *(_DWORD *)(a1 + 6880) = 2;
+    return 6880;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase18endState_BumpDown2Ev
+ * RVA 0x005b6b84   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::endState_BumpDown2()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase22executeState_BumpDown2Ev
+ * RVA 0x005b6b88   size 0xb4   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::executeState_BumpDown2(int a1)
+  {
+    float32x2_t v1; // d0
+    float32x2_t v2; // d2
+  
+    v2.n64_u32[0] = 2.0;
+    v1.n64_f32[0] = *(float *)(a1 + 124) + 0.281;
+    *(_DWORD *)(a1 + 124) = vmin_f32(v1, v2).n64_u32[0];
+    (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 232))(a1, 2);
+    *(float *)(a1 + 6796) = *(float *)(a1 + 124) + *(float *)(a1 + 6796);
+    CollisionMgr_process((unsigned __int8 *)(a1 + 648));
+    if ( *(float *)(a1 + 6796) >= 0.0 )
+    {
+      *(_DWORD *)(a1 + 6796) = 0;
+      (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 224))(a1);
+      *(_DWORD *)(a1 + 6900) = 0;
+    }
+    else if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
+    {
+      *(_BYTE *)(a1 + 6868) = 1;
+    }
+    return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 244))(a1);
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase24beginState_BlockCoinUnk3Ev
+ * RVA 0x005b6c40   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::beginState_BlockCoinUnk3(int result)
+  {
+    *(_DWORD *)(result + 6816) = 6;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase22endState_BlockCoinUnk3Ev
+ * RVA 0x005b6c50   size 0x4   xrefs 0
+ * ============================================================================ */
+  void BlockCoinBase::endState_BlockCoinUnk3()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBase26executeState_BlockCoinUnk3Ev
+ * RVA 0x005b6c54   size 0x48   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::executeState_BlockCoinUnk3(_DWORD *a1)
+  {
+    _DWORD *v2; // r0
+    int v3; // r1
+    int v4; // t1
+    int v5; // r1
+  
+    v4 = a1[1704];
+    v2 = a1 + 1704;
+    v3 = v4;
+    if ( !v4 || (v5 = v3 - 1, (*v2 = v5) == 0) )
+      (*(void (__fastcall **)(_DWORD *))(*a1 + 228))(a1);
+    return (*(int (__fastcall **)(_DWORD *))(*a1 + 244))(a1);
+  }
+
+/* ============================================================================
+ * _ZNK13BlockCoinBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
+ * RVA 0x005b6c9c   size 0x78   xrefs 0
+ * ============================================================================ */
+  bool __fastcall BlockCoinBase::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13087620) )
+    {
+      MEMORY[0xC7B380] = 12320968;
+      _cxa_guard_release_0(13087620);
+    }
+    return a2 == 13087616 || sub_60026DC8(a2);
+  }
+
+/* ============================================================================
+ * _ZNK13BlockCoinBase18getRuntimeTypeInfoEv
+ * RVA 0x005b6d2c   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int BlockCoinBase::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13087620) )
+    {
+      MEMORY[0xC7B380] = 12320968;
+      _cxa_guard_release_0(13087620);
+    }
+    return 13087616;
+  }
+
+/* ============================================================================
+ * _ZN13BlockCoinBaseD0Ev
+ * RVA 0x005b6da0   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall BlockCoinBase::~BlockCoinBase(int a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12620796;
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor(a1 + 648);
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v2);
   }
 
 /* ============================================================================
@@ -96288,6 +99795,188 @@
   }
 
 /* ============================================================================
+ * TileGod_ctor
+ * RVA 0x005cef18   size 0x44   xrefs 0
+ * ============================================================================ */
+  _DWORD *TileGod_ctor()
+  {
+    _DWORD *v0; // r5
+  
+    v0 = (_DWORD *)operator new(0x1800u);
+    MultiStateActor::MultiStateActor(v0);
+    *v0 = 12627208;
+    memset(v0 + 1526, 0, 0x21u);
+    return v0;
+  }
+
+/* ============================================================================
+ * TileGod_onCreate
+ * RVA 0x005cef60   size 0x2d8   xrefs 0
+ * ============================================================================ */
+  int __fastcall TileGod_onCreate(int a1)
+  {
+    unsigned int v1; // r1
+    unsigned int v2; // r12
+    unsigned int v3; // r1
+    unsigned int v4; // r5
+    int v5; // r2
+    _BYTE *v6; // r8
+    int v7; // r9
+    int v8; // r4
+    int v9; // r5
+    unsigned int v10; // r6
+    int v11; // r4
+    int v12; // lr
+    int v13; // r6
+    int v14; // r4
+    int v15; // r3
+    unsigned int v16; // r5
+    int v17; // r4
+    int result; // r0
+    __int16 v19; // r6
+    unsigned int v20; // s0
+    unsigned int v21; // lr
+    int *v22; // r7
+    unsigned int v23; // r4
+    int v24; // r5
+    int v25; // r0
+    __int16 v26; // r5
+    unsigned __int16 v27; // r10
+    __int16 v28; // r0
+    _DWORD *v29; // [sp+4h] [bp-18h]
+    unsigned int *v30; // [sp+Ch] [bp-10h]
+    int v31; // [sp+10h] [bp-Ch]
+    int v32; // [sp+14h] [bp-8h]
+    unsigned int *v33; // [sp+18h] [bp-4h]
+  
+    v1 = *(_DWORD *)(a1 + 24);
+    v2 = v1 & 0xF;
+    *(_DWORD *)(a1 + 6116) = v2;
+    v3 = (v1 >> 8) & 0xF;
+    *(_DWORD *)(a1 + 6112) = v3;
+    v4 = *(_DWORD *)(a1 + 20);
+    *(_DWORD *)(a1 + 6124) = (unsigned __int16)v4 >> 12;
+    v5 = HIWORD(v4) & 0xF;
+    *(_DWORD *)(a1 + 6132) = v5;
+    *(_DWORD *)(a1 + 6128) = v4 >> 28;
+    *(_BYTE *)(a1 + 6136) = 0;
+    v6 = (_BYTE *)(a1 + 6136);
+    v33 = (unsigned int *)(a1 + 6112);
+    if ( !v3 )
+    {
+      v3 = 1;
+      *v33 = 1;
+    }
+    v30 = (unsigned int *)(a1 + 6116);
+    if ( !v2 )
+    {
+      v2 = 1;
+      *v30 = 1;
+    }
+    v7 = (v4 >> 8) & 0xF;
+    *(_DWORD *)(a1 + 6120) = v7;
+    v8 = *(unsigned __int8 *)(a1 + 539);
+    if ( *(_BYTE *)(a1 + 539) )
+    {
+      v9 = v8 - 33;
+      v10 = 1u >> (33 - v8);
+      v11 = 1 << (v8 - 1);
+      if ( v9 >= 0 )
+      {
+        v10 = 1 << v9;
+        v11 = 0;
+      }
+      v12 = *(_DWORD *)(MEMORY[0xCBD8AC] + 20) & v10;
+      v13 = *(_DWORD *)(MEMORY[0xCBD8AC] + 16) & v11;
+    }
+    else
+    {
+      v13 = 0;
+      v12 = 0;
+    }
+    v14 = *(unsigned __int8 *)(a1 + 540);
+    if ( *(_BYTE *)(a1 + 540) )
+    {
+      v15 = v14 - 33;
+      v16 = 1u >> (33 - v14);
+      v17 = 1 << (v14 - 1);
+      if ( v15 >= 0 )
+      {
+        v16 = 1 << v15;
+        v17 = 0;
+      }
+      v12 |= *(_DWORD *)(MEMORY[0xCBD8AC] + 20) & v16;
+      v13 |= *(_DWORD *)(MEMORY[0xCBD8AC] + 16) & v17;
+    }
+    *(_DWORD *)(a1 + 6104) = v13;
+    *(_DWORD *)(a1 + 6108) = v12;
+    if ( !(v13 | v12) )
+      return 1;
+    v29 = (_DWORD *)(a1 + 6128);
+    if ( v7 )
+    {
+      sub_605CF244(a1, 1, 1, 1);
+      *v6 = 1;
+    }
+    else
+    {
+      v19 = v5 != 2;
+      v20 = (unsigned int)*(float *)(a1 + 108);
+      v21 = v3;
+      v22 = (int *)(a1 + 6132);
+      v23 = (unsigned int)(float)-*(float *)(a1 + 112) & 0xFFF0;
+      v24 = v5 != 2;
+      v25 = 0;
+      do
+      {
+        if ( v21 )
+        {
+          v31 = v24;
+          v26 = v20 & 0xFFF0;
+          v27 = 0;
+          v32 = v25;
+          do
+          {
+            if ( v19 )
+            {
+              TileMgr_setTile(MEMORY[0xCBD254], v26, (unsigned __int16)v23, 0, 0);
+              v5 = *v22;
+              v3 = *v33;
+            }
+            v28 = v5;
+            ++v27;
+            v26 += 16;
+            if ( v5 )
+              v28 = 1;
+            v19 ^= v28;
+          }
+          while ( v27 < v3 );
+          v24 = v31;
+          v21 = v3;
+          v2 = *v30;
+          v25 = v32;
+        }
+        else
+        {
+          v21 = 0;
+        }
+        ++v25;
+        LOWORD(v23) = v23 + 16;
+        if ( v5 )
+        {
+          v19 = v24 ^ 1;
+          v24 ^= 1u;
+        }
+      }
+      while ( (unsigned __int16)v25 < v2 );
+    }
+    result = 2;
+    if ( !*v29 )
+      return 1;
+    return result;
+  }
+
+/* ============================================================================
  * sub_605CF244
  * RVA 0x005cf244   size 0x3f4   xrefs 3
  * ============================================================================ */
@@ -96470,6 +100159,18 @@
   }
 
 /* ============================================================================
+ * TileGod_onExecute
+ * RVA 0x005cf660   size 0x30   xrefs 0
+ * ============================================================================ */
+  int __fastcall TileGod_onExecute(int a1)
+  {
+    sub_605CF690(a1);
+    if ( !*(_BYTE *)(a1 + 6136) )
+      StageActor::cullCheck(a1, 0);
+    return 1;
+  }
+
+/* ============================================================================
  * sub_605CF690
  * RVA 0x005cf690   size 0x16c   xrefs 1
  * ============================================================================ */
@@ -96574,6 +100275,48 @@
   }
 
 /* ============================================================================
+ * TileGod_checkRTTI
+ * RVA 0x005cf804   size 0x78   xrefs 0
+ * ============================================================================ */
+  bool __fastcall TileGod_checkRTTI(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13308152) )
+    {
+      MEMORY[0xCB10F4] = 12320968;
+      _cxa_guard_release_0(13308152);
+    }
+    return a2 == 13308148 || sub_60026DC8(a2);
+  }
+
+/* ============================================================================
+ * TileGod_getRTTI
+ * RVA 0x005cf894   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int TileGod_getRTTI()
+  {
+    if ( _cxa_guard_acquire_0(13308152) )
+    {
+      MEMORY[0xCB10F4] = 12320968;
+      _cxa_guard_release_0(13308152);
+    }
+    return 13308148;
+  }
+
+/* ============================================================================
+ * TileGod_dtorFree
+ * RVA 0x005cf908   size 0x30   xrefs 0
+ * ============================================================================ */
+  int __fastcall TileGod_dtorFree(Actor *a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor((int)a1 + 648);
+    StageActor::~StageActor(a1);
+    return operator delete(v2);
+  }
+
+/* ============================================================================
  * _ZN21MovementBlockCoinBaseC2EPK14ActorBuildInfo
  * RVA 0x005cfa04   size 0x118   xrefs 2
  * ============================================================================ */
@@ -96629,6 +100372,15 @@
     if ( *(_BYTE *)(result + 7312) )
       return sub_6069B070(result + 7240, result + 108);
     return result;
+  }
+
+/* ============================================================================
+ * _ZN21MovementBlockCoinBase4vfECEv
+ * RVA 0x005d009c   size 0x18   xrefs 0
+ * ============================================================================ */
+  int __fastcall MovementBlockCoinBase::vfEC(int a1)
+  {
+    return sub_605B9044(MEMORY[0xCB061C], a1 + 6980);
   }
 
 /* ============================================================================
@@ -96968,6 +100720,76 @@
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13308156);
     }
     return result;
+  }
+
+/* ============================================================================
+ * _ZN21MovementBlockCoinBase11spawnItemUpEv
+ * RVA 0x005d0a80   size 0x20   xrefs 0
+ * ============================================================================ */
+  int __fastcall MovementBlockCoinBase::spawnItemUp(_DWORD *a1)
+  {
+    a1[1699] = 0;
+    return (*(int (__fastcall **)(_DWORD *, int))(*a1 + 192))(a1, 13308188);
+  }
+
+/* ============================================================================
+ * _ZN21MovementBlockCoinBase13spawnItemDownEv
+ * RVA 0x005d0aa4   size 0xc   xrefs 0
+ * ============================================================================ */
+  int __fastcall MovementBlockCoinBase::spawnItemDown(int a1)
+  {
+    return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 212))(a1);
+  }
+
+/* ============================================================================
+ * _ZNK21MovementBlockCoinBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
+ * RVA 0x005d0ab0   size 0xd4   xrefs 0
+ * ============================================================================ */
+  bool __fastcall MovementBlockCoinBase::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13142632) )
+    {
+      MEMORY[0xC88A64] = 12404996;
+      _cxa_guard_release_0(13142632);
+    }
+    if ( a2 == 13142628 )
+      return 1;
+    if ( _cxa_guard_acquire_0(13087620) )
+    {
+      MEMORY[0xC7B380] = 12320968;
+      _cxa_guard_release_0(13087620);
+    }
+    return a2 == 13087616 || sub_60026DC8(a2);
+  }
+
+/* ============================================================================
+ * _ZNK21MovementBlockCoinBase18getRuntimeTypeInfoEv
+ * RVA 0x005d0bb4   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int MovementBlockCoinBase::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13142632) )
+    {
+      MEMORY[0xC88A64] = 12404996;
+      _cxa_guard_release_0(13142632);
+    }
+    return 13142628;
+  }
+
+/* ============================================================================
+ * _ZN21MovementBlockCoinBaseD0Ev
+ * RVA 0x005d0c28   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall MovementBlockCoinBase::~MovementBlockCoinBase(int a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12620796;
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor(a1 + 648);
+    StageActor::~StageActor((Actor *)a1);
+    return operator delete(v2);
   }
 
 /* ============================================================================
@@ -108719,6 +112541,155 @@
   }
 
 /* ============================================================================
+ * StarCoin_ctor
+ * RVA 0x005f357c   size 0x4c   xrefs 0
+ * ============================================================================ */
+  _DWORD *StarCoin_ctor()
+  {
+    int v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = operator new(0x1838u);
+    result = (_DWORD *)StarCoinBase_ctor(v0);
+    *result = 12632916;
+    result[1547] = 0;
+    result[1548] = 0;
+    result[1549] = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * StarCoin_onCreate
+ * RVA 0x005f35cc   size 0x140   xrefs 0
+ * ============================================================================ */
+  int __fastcall StarCoin_onCreate(float *a1)
+  {
+    int v2; // r1
+    int result; // r0
+    float v4; // s0
+    unsigned int v5; // r2
+    float v6; // s0
+    bool v7; // zf
+    int v8; // r0
+    int v9; // r1
+    float v10; // s0
+    int v11; // r0
+    int v12; // [sp+0h] [bp-8h] BYREF
+    float v13; // [sp+4h] [bp-4h] BYREF
+  
+    v2 = sub_605F43EC((int)a1, ((_DWORD)a1[5] & 0x10000000) != 0 || ((_DWORD)a1[5] & 0x20000000) != 0);
+    result = 2;
+    if ( v2 == 1 )
+    {
+      v4 = a1[28];
+      *((_DWORD *)a1 + 1537) = 1;
+      v5 = *((_DWORD *)a1 + 5);
+      v6 = v4 + 3.0;
+      v7 = (v5 & 0x20000000) == 0;
+      *((_DWORD *)a1 + 1538) = (v5 >> 18) & 3;
+      v8 = (v5 >> 17) & 1;
+      v9 = 6156;
+      if ( (v5 & 0x20000000) != 0 )
+        v5 = 0;
+      *((_DWORD *)a1 + 1539) = v8;
+      if ( !v7 )
+        v9 = (int)(a1 + 1539);
+      v10 = v6 + -16.0;
+      v11 = (*((_DWORD *)a1 + 6) >> 28) & 1;
+      *((_DWORD *)a1 + 1549) = v11;
+      a1[27] = a1[27] + 16.0;
+      a1[28] = v10;
+      a1[1547] = v10;
+      if ( !v7 )
+        *(_DWORD *)v9 = v5;
+      if ( v11 )
+      {
+        a1[1548] = *(float *)(MEMORY[0xC7B420] + 944);
+        v13 = 0.0;
+        checkLiquidCollisions(&v12, &v13, a1 + 27, *((unsigned __int8 *)a1 + 86));
+        a1[28] = a1[1547] + (float)(v13 - a1[1548]);
+      }
+      (*(void (__fastcall **)(float *, int))(*(_DWORD *)a1 + 192))(a1, 13312480);
+      StarCoinBase_updateModel(a1);
+      return 1;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * StarCoin_onExecute
+ * RVA 0x005f3714   size 0x19c   xrefs 0
+ * ============================================================================ */
+  int __fastcall StarCoin_onExecute(int a1)
+  {
+    int v2; // r5
+    int CurrentState; // r0
+    int v4; // r5
+    int v5; // r5
+    float v6; // s0
+    float v7; // s2
+    int v8; // r0
+    int v10; // [sp+0h] [bp-8h] BYREF
+    float v11; // [sp+4h] [bp-4h] BYREF
+  
+    v2 = a1 + 6084;
+    StateMgr::execute((_DWORD *)(a1 + 6084));
+    if ( (*(_BYTE *)(a1 + 23) & 0x10) != 0 )
+    {
+      v5 = *(_DWORD *)(a1 + 56);
+      if ( _cxa_guard_acquire_0(13226972) )
+      {
+        MEMORY[0xC9D3D8] = 12320968;
+        _cxa_guard_release_0(13226972);
+      }
+      if ( v5 && (**(int (__fastcall ***)(int, int))v5)(v5, 13226968) == 1 )
+      {
+        *(_DWORD *)(a1 + 108) = *(_DWORD *)(v5 + 7800);
+        v6 = MEMORY[0xB04CD8];
+        v7 = *(float *)(v5 + 7804);
+        *(float *)(a1 + 112) = v7;
+        *(_DWORD *)(a1 + 116) = *(_DWORD *)(v5 + 7808);
+        *(float *)(a1 + 112) = v6 + v7;
+        v8 = *(_DWORD *)(v5 + 8176);
+        *(_DWORD *)(a1 + 144) = v8;
+        *(_DWORD *)(a1 + 148) = v8;
+        *(_DWORD *)(a1 + 152) = v8;
+      }
+    }
+    else
+    {
+      CurrentState = StateMgr::getCurrentState(v2);
+      v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+      if ( v4 != (*(int (**)(void))(MEMORY[0xCB2200] + 8))() )
+      {
+        if ( *(_DWORD *)(a1 + 6196) )
+        {
+          v11 = 0.0;
+          checkLiquidCollisions(&v10, &v11, (float *)(a1 + 108), *(unsigned __int8 *)(a1 + 86));
+          *(float *)(a1 + 112) = *(float *)(a1 + 6188) + (float)(v11 - *(float *)(a1 + 6192));
+        }
+        StageActor::cullCheck(a1, 0);
+      }
+    }
+    StarCoinBase_updateModel((_DWORD *)a1);
+    return 1;
+  }
+
+/* ============================================================================
+ * StarCoin_dtorFree
+ * RVA 0x005f3a48   size 0x30   xrefs 0
+ * ============================================================================ */
+  int __fastcall StarCoin_dtorFree(Actor *a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor((int)a1 + 648);
+    StageActor::~StageActor(a1);
+    return operator delete(v2);
+  }
+
+/* ============================================================================
  * StarCoinBase_ctor
  * RVA 0x005f3b14   size 0x78   xrefs 5
  * ============================================================================ */
@@ -108889,6 +112860,27 @@
     ModelWrapper_setup(v6, v7, 0, 0);
     *(_DWORD *)(a1 + 6104) = v5;
     return 6104;
+  }
+
+/* ============================================================================
+ * StarCoinBase_onDraw
+ * RVA 0x005f485c   size 0x24   xrefs 0
+ * ============================================================================ */
+  int __fastcall StarCoinBase_onDraw(int a1, int a2, int a3, int a4)
+  {
+    int savedregs; // [sp+0h] [bp+0h]
+  
+    DrawMgr_drawModel2(MEMORY[0xC9CD1C], *(_DWORD **)(a1 + 6104), a3, a4, savedregs);
+    return 1;
+  }
+
+/* ============================================================================
+ * StarCoinBase_onDelete
+ * RVA 0x005f4884   size 0x8   xrefs 0
+ * ============================================================================ */
+  int StarCoinBase_onDelete()
+  {
+    return 1;
   }
 
 /* ============================================================================
@@ -109182,6 +113174,66 @@
       *(_DWORD *)LODWORD(result) = 1;
     }
     return result;
+  }
+
+/* ============================================================================
+ * StarCoinBase_checkRTTI
+ * RVA 0x005f5510   size 0x78   xrefs 0
+ * ============================================================================ */
+  bool __fastcall StarCoinBase_checkRTTI(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13302004) )
+    {
+      MEMORY[0xCAF8F0] = 12320968;
+      _cxa_guard_release_0(13302004);
+    }
+    return a2 == 13302000 || sub_60026DC8(a2);
+  }
+
+/* ============================================================================
+ * StarCoinBase_getRTTI
+ * RVA 0x005f55a0   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int StarCoinBase_getRTTI()
+  {
+    if ( _cxa_guard_acquire_0(13302004) )
+    {
+      MEMORY[0xCAF8F0] = 12320968;
+      _cxa_guard_release_0(13302004);
+    }
+    return 13302000;
+  }
+
+/* ============================================================================
+ * StarCoinBase_dtorFree
+ * RVA 0x005f5614   size 0x30   xrefs 0
+ * ============================================================================ */
+  int __fastcall StarCoinBase_dtorFree(Actor *a1)
+  {
+    int v2; // r0
+  
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor((int)a1 + 648);
+    StageActor::~StageActor(a1);
+    return operator delete(v2);
+  }
+
+/* ============================================================================
+ * StarCoinBase_onCreate
+ * RVA 0x005f5648   size 0x8   xrefs 0
+ * ============================================================================ */
+  int StarCoinBase_onCreate()
+  {
+    return 1;
+  }
+
+/* ============================================================================
+ * StarCoinBase_onExecute
+ * RVA 0x005f5650   size 0x8   xrefs 0
+ * ============================================================================ */
+  int StarCoinBase_onExecute()
+  {
+    return 1;
   }
 
 /* ============================================================================

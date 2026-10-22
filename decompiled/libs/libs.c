@@ -4505,6 +4505,18 @@
   }
 
 /* ============================================================================
+ * SoundSystem_getSoundArchive
+ * RVA 0x00807560   size 0x14   xrefs 38
+ * ============================================================================ */
+  int __fastcall SoundSystem_getSoundArchive(int a1)
+  {
+    int v1; // r0
+  
+    v1 = sub_60805BA8(a1);
+    return sub_608DC930(*(_DWORD *)(v1 + 456));
+  }
+
+/* ============================================================================
  * sub_60807574
  * RVA 0x00807574   size 0x84   xrefs 13
  * ============================================================================ */
@@ -6642,6 +6654,16 @@
     v8[2] = a4;
     v6 = sub_60805BA8(a1);
     return ((int (__fastcall *)(int, int, int, _DWORD *))sub_608AD258)(v6 + 8, a2, a3, v8) == 0;
+  }
+
+/* ============================================================================
+ * SoundSystem_getSoundArchivePlayer
+ * RVA 0x00809b54   size 0x4   xrefs 36
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall SoundSystem_getSoundArchivePlayer(int a1)
+  {
+    return sub_60805BA8(a1);
   }
 
 /* ============================================================================
@@ -14485,6 +14507,16 @@
   }
 
 /* ============================================================================
+ * BasicSoundActor1_playSound
+ * RVA 0x0081380c   size 0x4   xrefs 286
+ * ============================================================================ */
+  // attributes: thunk
+  int *__fastcall BasicSoundActor1_playSound(int a1, int a2, float *a3, int *a4)
+  {
+    return BasicSoundActor_play(a1, a2, a3, a4);
+  }
+
+/* ============================================================================
  * sub_60813818
  * RVA 0x00813818   size 0xf8   xrefs 19
  * ============================================================================ */
@@ -14675,6 +14707,16 @@
       }
     }
     return a2;
+  }
+
+/* ============================================================================
+ * BasicSoundActor2_play
+ * RVA 0x00813bd8   size 0x4   xrefs 366
+ * ============================================================================ */
+  // attributes: thunk
+  int *__fastcall BasicSoundActor2_play(int a1, int a2, float *a3, int *a4)
+  {
+    return BasicSoundActor_play(a1, a2, a3, a4);
   }
 
 /* ============================================================================
@@ -17758,6 +17800,21 @@
   }
 
 /* ============================================================================
+ * StateMgr_ctor
+ * RVA 0x00818168   size 0x2c   xrefs 198
+ * ============================================================================ */
+  _DWORD *__fastcall StateMgr_ctor(_DWORD *result, int a2, int a3)
+  {
+    *result = a2;
+    result[1] = 0;
+    result[2] = 0;
+    result[3] = 12755100;
+    if ( *(_DWORD *)(a3 + 4) != -1 )
+      result[1] = a3;
+    return result;
+  }
+
+/* ============================================================================
  * _ZN8StateMgr15getCurrentStateEv
  * RVA 0x00818198   size 0x38   xrefs 2239
  * ============================================================================ */
@@ -17854,6 +17911,29 @@
     (*(void (__fastcall **)(int, int *))(*(_DWORD *)*a1 + 20))(*a1, v5);
     result = (*(int (__fastcall **)(int, int))(*(_DWORD *)*a1 + 8))(*a1, a2);
     a1[2] = result;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN9StateBaseD0Ev
+ * RVA 0x00818320   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall StateBase::~StateBase(int a1)
+  {
+    return operator delete(a1);
+  }
+
+/* ============================================================================
+ * CalculateTask2_ctor
+ * RVA 0x00818330   size 0x1c   xrefs 12
+ * ============================================================================ */
+  _DWORD *__fastcall CalculateTask2_ctor(_DWORD *a1, int a2, int a3)
+  {
+    _DWORD *result; // r0
+  
+    result = sead::CalculateTask::CalculateTask(a1, a2, a3);
+    *result = 12755136;
     return result;
   }
 
@@ -22992,6 +23072,18 @@
   }
 
 /* ============================================================================
+ * RumbleMgr_create
+ * RVA 0x008264f8   size 0x2c   xrefs 0
+ * ============================================================================ */
+  int __fastcall RumbleMgr_create(int a1)
+  {
+    int v2; // r0
+  
+    v2 = operator new(0xA28u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    return RumbleMgr_ctor(v2, a1);
+  }
+
+/* ============================================================================
  * sub_60826878
  * RVA 0x00826878   size 0xb0   xrefs 1
  * ============================================================================ */
@@ -27235,6 +27327,75 @@
   }
 
 /* ============================================================================
+ * _ZN8BgCenterC1EPK14ActorBuildInfo
+ * RVA 0x0082d154   size 0x3c   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall BgCenter::BgCenter(_DWORD *a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+    int v4; // r2
+    int v5; // r3
+  
+    v2 = operator new(0x5Cu);
+    result = (_DWORD *)Actor::Actor(v2, (int)a1);
+    *result = 12757084;
+    v4 = a1[5];
+    v5 = a1[6];
+    result[20] = a1[4];
+    result[21] = v4;
+    result[22] = v5;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZNK8BgCenter27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
+ * RVA 0x0082d194   size 0xd0   xrefs 0
+ * ============================================================================ */
+  bool __fastcall BgCenter::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13162764) )
+    {
+      MEMORY[0xC8D908] = 12320920;
+      _cxa_guard_release_0(13162764);
+    }
+    if ( a2 == 13162760 )
+      return 1;
+    if ( _cxa_guard_acquire_0(13087596) )
+    {
+      MEMORY[0xC7B368] = 12320932;
+      _cxa_guard_release_0(13087596);
+    }
+    return a2 == 13087592;
+  }
+
+/* ============================================================================
+ * _ZNK8BgCenter18getRuntimeTypeInfoEv
+ * RVA 0x0082d294   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int BgCenter::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13162764) )
+    {
+      MEMORY[0xC8D908] = 12320920;
+      _cxa_guard_release_0(13162764);
+    }
+    return 13162760;
+  }
+
+/* ============================================================================
+ * _ZN8BgCenterD0Ev
+ * RVA 0x0082d308   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall BgCenter::~BgCenter(_DWORD *a1)
+  {
+    _DWORD *v1; // r0
+  
+    v1 = Actor::~Actor(a1);
+    return operator delete((int)v1);
+  }
+
+/* ============================================================================
  * sub_6082ED70
  * RVA 0x0082ed70   size 0x248   xrefs 1
  * ============================================================================ */
@@ -30326,6 +30487,43 @@
   }
 
 /* ============================================================================
+ * free
+ * RVA 0x0083515c   size 0x18   xrefs 8
+ * ============================================================================ */
+  void *__fastcall free(void *result)
+  {
+    if ( result )
+      return (void *)nn::mem::StandardAllocator::Free((nn::mem::StandardAllocator *)&unk_60CC7278, result);
+    return result;
+  }
+
+/* ============================================================================
+ * calloc
+ * RVA 0x00835178   size 0x74   xrefs 0
+ * ============================================================================ */
+  void *__fastcall calloc(int a1, int a2)
+  {
+    size_t v2; // r4
+    void *v3; // r0
+    void *v4; // r5
+  
+    if ( dword_60CC72A0 )
+    {
+      v2 = a2 * a1;
+      v3 = (void *)nn::mem::StandardAllocator::Allocate((nn::mem::StandardAllocator *)&unk_60CC7278, a2 * a1);
+      v4 = v3;
+      if ( v3 )
+      {
+        memset(v3, 0, v2);
+        return v4;
+      }
+      *(_DWORD *)_errno_location_0() = 12;
+    }
+    *(_DWORD *)_errno_location_0() = 12;
+    return nullptr;
+  }
+
+/* ============================================================================
  * realloc
  * RVA 0x008351f4   size 0x50   xrefs 1
  * ============================================================================ */
@@ -31574,7 +31772,7 @@
       }
     }
     v4 = 0;
-    if ( v2 != (char *)&unk_60C2B5F8 && *(_DWORD *)v2 <= a1 )
+    if ( v2 != (char *)&dword_60C2B5F8 && *(_DWORD *)v2 <= a1 )
       return *((_DWORD *)v2 + 1);
     return v4;
   }
@@ -32516,6 +32714,16 @@
         return *(_DWORD *)(*(_DWORD *)(v21 + 56) + 4 * (v26 + (v67 >> 4)));
     }
     return v20;
+  }
+
+/* ============================================================================
+ * _ZN2nn2os5MutexD2Ev
+ * RVA 0x0083c2ec   size 0x14   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::os::Mutex::~Mutex(int a1)
+  {
+    nn::os::FinalizeMutex(a1);
+    return a1;
   }
 
 /* ============================================================================
@@ -58239,6 +58447,15 @@
   }
 
 /* ============================================================================
+ * _ZN2nn3g3d7AnimObjD2Ev
+ * RVA 0x0086ac5c   size 0x4   xrefs 0
+ * ============================================================================ */
+  void nn::g3d::AnimObj::~AnimObj()
+  {
+    ;
+  }
+
+/* ============================================================================
  * sub_6086AC64
  * RVA 0x0086ac64   size 0x168   xrefs 3
  * ============================================================================ */
@@ -66152,6 +66369,111 @@
   }
 
 /* ============================================================================
+ * _ZN2nn3g3d12ShapeAnimObj4BindEPKNS0_8ModelObjE
+ * RVA 0x00874398   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::g3d::ShapeAnimObj::Bind(int a1, _DWORD *a2)
+  {
+    return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 16))(a1, *a2);
+  }
+
+/* ============================================================================
+ * _ZN2nn3g3d12ShapeAnimObj8BindFastEPKNS0_8ResModelE
+ * RVA 0x008743a8   size 0x194   xrefs 0
+ * ============================================================================ */
+  int *__fastcall nn::g3d::ShapeAnimObj::BindFast(int a1, int a2)
+  {
+    _DWORD *v3; // r11
+    int v4; // r10
+    int v5; // r1
+    int v6; // r6
+    int v7; // r0
+    int v8; // r7
+    int v9; // r3
+    int v10; // r2
+    _BYTE *v11; // r0
+    int v12; // t1
+    int v13; // r5
+    int *result; // r0
+    int v15; // r2
+    int v16; // r5
+    int v17; // r6
+  
+    v3 = (_DWORD *)(a1 + 56);
+    sub_6086A2A4(a1 + 56, *(_WORD *)(a2 + 106));
+    sub_6086A340((int)v3, *(unsigned __int16 **)(*(_DWORD *)(a1 + 68) + 40));
+    v4 = *(unsigned __int16 *)(a1 + 64);
+    if ( *(_WORD *)(a1 + 64) )
+    {
+      v5 = 0;
+      do
+      {
+        v6 = *(_DWORD *)(*v3 + 4 * v5) & 0x7FFF;
+        if ( v6 != 0x7FFF )
+        {
+          v7 = *(_DWORD *)(a1 + 72) + 48 * v5;
+          v8 = *(unsigned __int16 *)(v7 + 34);
+          if ( *(_WORD *)(v7 + 34) )
+          {
+            v9 = *(_DWORD *)(v7 + 40);
+            v10 = 0;
+            v11 = (_BYTE *)(*(_DWORD *)(v7 + 24) + 9);
+            do
+            {
+              *(_BYTE *)(*(_DWORD *)(a1 + 84) + v9++) = *v11;
+              v12 = (char)*v11;
+              v11 += 16;
+              v13 = 0x10000;
+              if ( v12 >= 0 )
+                v13 = 1;
+              --v8;
+              v10 |= v13;
+            }
+            while ( v8 );
+            if ( (v10 & 0x10001) == 0x10000 )
+            {
+              *(_DWORD *)(*v3 + 4 * v5) |= 0xC0007FFF;
+              *(_DWORD *)(*v3 + 4 * v6) |= 0x3FFF8000u;
+            }
+          }
+        }
+        ++v5;
+      }
+      while ( v5 != v4 );
+    }
+    *(_WORD *)(a1 + 60) |= 1u;
+    *(_DWORD *)(a1 + 44) = MEMORY[0xB151A4];
+    result = *(int **)(a1 + 40);
+    if ( (int)result >= 1 && (int)result <= *(_DWORD *)(a1 + 36) )
+    {
+      result = nullptr;
+      v15 = 0;
+      do
+      {
+        ++v15;
+        *(int *)((char *)result + *(_DWORD *)(a1 + 32)) = 2139095040;
+        result += 3;
+      }
+      while ( v15 < *(_DWORD *)(a1 + 40) );
+    }
+    v16 = *(unsigned __int16 *)(a1 + 64);
+    if ( *(_WORD *)(a1 + 64) )
+    {
+      v17 = 40;
+      do
+      {
+        result = nn::g3d::ResVertexShapeAnim::Initialize(
+                   (int *)(*(_DWORD *)(a1 + 72) + v17 - 40),
+                   (_DWORD *)(*(_DWORD *)(a1 + 48) + 4 * *(_DWORD *)(*(_DWORD *)(a1 + 72) + v17)));
+        v17 += 48;
+        --v16;
+      }
+      while ( v16 );
+    }
+    return result;
+  }
+
+/* ============================================================================
  * _ZN2nn3g3d12ShapeAnimObj9CalculateEv
  * RVA 0x00874540   size 0x114   xrefs 1
  * ============================================================================ */
@@ -66211,6 +66533,94 @@
       *(_DWORD *)(a1 + 44) = result;
     }
     return result;
+  }
+
+/* ============================================================================
+ * _ZNK2nn3g3d12ShapeAnimObj7ApplyToEPNS0_8ModelObjE
+ * RVA 0x00874654   size 0x148   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::g3d::ShapeAnimObj::ApplyTo(int result, int a2)
+  {
+    int v2; // r9
+    int v3; // r7
+    int v4; // r2
+    _DWORD *v5; // r10
+    _DWORD *v6; // r4
+    _DWORD *v7; // r11
+    int v8; // r3
+    unsigned int v9; // r2
+    int v10; // r8
+    float v11; // s2
+    float *v12; // r6
+    unsigned int v13; // r3
+    int v14; // r2
+    int v15; // r5
+    int v16; // r1
+    int v18; // [sp+4h] [bp-4h]
+  
+    v18 = *(unsigned __int16 *)(result + 64);
+    if ( *(_WORD *)(result + 64) )
+    {
+      v2 = 0;
+      do
+      {
+        if ( *(int *)(*(_DWORD *)(result + 56) + 4 * v2) >= 0 )
+        {
+          v3 = *(_DWORD *)(result + 84);
+          v4 = *(_DWORD *)(a2 + 32) + 56 * (*(_DWORD *)(*(_DWORD *)(result + 56) + 4 * v2) & 0x7FFF);
+          v5 = (_DWORD *)(v4 + 28);
+          v6 = (_DWORD *)(v4 + 4);
+          v7 = (_DWORD *)(v4 + 24);
+          v8 = *(_DWORD *)(result + 72) + 48 * v2;
+          v9 = *(unsigned __int16 *)(v8 + 34);
+          v10 = *(_DWORD *)(v8 + 40);
+          if ( v9 < 2 )
+          {
+            v11 = 1.0;
+          }
+          else
+          {
+            v11 = 1.0;
+            v12 = (float *)(*(_DWORD *)(result + 48) + 4 * v10 + 4);
+            v13 = v9 - 1;
+            v14 = v10 + 1;
+            do
+            {
+              v15 = *(char *)(v3 + v14);
+              if ( v15 != -1 )
+              {
+                v11 = v11 - *v12;
+                *(float *)(*v7 + 4 * v15) = *v12;
+                *v6 |= 2u;
+                *(_DWORD *)(*v5 + 4 * (v15 >> 5)) |= 1 << (v15 & 0x1F);
+                v3 = *(_DWORD *)(result + 84);
+              }
+              ++v12;
+              --v13;
+              ++v14;
+            }
+            while ( v13 );
+          }
+          v16 = *(char *)(v3 + v10);
+          *(float *)(*v7 + 4 * v16) = v11;
+          *v6 |= 2u;
+          *(_DWORD *)(*v5 + 4 * (v16 >> 5)) |= 1 << (v16 & 0x1F);
+        }
+        ++v2;
+      }
+      while ( v2 != v18 );
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN2nn3g3d12ShapeAnimObjD0Ev
+ * RVA 0x0087479c   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall nn::g3d::ShapeAnimObj::~ShapeAnimObj(int a1)
+  {
+    return operator delete(a1);
   }
 
 /* ============================================================================
@@ -68413,6 +68823,102 @@
   }
 
 /* ============================================================================
+ * _ZN2nn3g3d15SkeletalAnimObj4BindEPKNS0_8ResModelE
+ * RVA 0x00878460   size 0x3c   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::g3d::SkeletalAnimObj::Bind(int a1, int a2)
+  {
+    int v3; // r5
+    int v4; // r6
+  
+    v3 = *(_DWORD *)(a2 + 32);
+    *(_DWORD *)(a1 + 80) &= ~0x20u;
+    v4 = sub_60878088(a1, v3);
+    sub_608782F4(a1, v3);
+    return v4;
+  }
+
+/* ============================================================================
+ * _ZN2nn3g3d15SkeletalAnimObj4BindEPKNS0_8ModelObjE
+ * RVA 0x0087849c   size 0x40   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::g3d::SkeletalAnimObj::Bind(int a1, int a2)
+  {
+    int v3; // r5
+    int v4; // r6
+  
+    v3 = **(_DWORD **)(a2 + 28);
+    *(_DWORD *)(a1 + 80) &= ~0x20u;
+    v4 = sub_60878088(a1, v3);
+    sub_608782F4(a1, v3);
+    return v4;
+  }
+
+/* ============================================================================
+ * _ZN2nn3g3d15SkeletalAnimObj8BindFastEPKNS0_8ResModelE
+ * RVA 0x008784dc   size 0xa8   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::g3d::SkeletalAnimObj::BindFast(int a1, int a2)
+  {
+    int v3; // r4
+    int v4; // r6
+    int v5; // r0
+    int v6; // r0
+    int v7; // r2
+  
+    v3 = *(_DWORD *)(a2 + 32);
+    v4 = a1 + 56;
+    *(_DWORD *)(a1 + 80) &= ~0x20u;
+    sub_6086A2A4(a1 + 56, *(_WORD *)(v3 + 76));
+    sub_6086A340(v4, *(unsigned __int16 **)(*(_DWORD *)(a1 + 68) + 40));
+    *(_WORD *)(a1 + 60) |= 1u;
+    *(_DWORD *)(a1 + 44) = MEMORY[0xB151A4];
+    v5 = *(_DWORD *)(a1 + 40);
+    if ( v5 >= 1 && v5 <= *(_DWORD *)(a1 + 36) )
+    {
+      v6 = 0;
+      v7 = 0;
+      do
+      {
+        ++v7;
+        *(_DWORD *)(*(_DWORD *)(a1 + 32) + v6) = 2139095040;
+        v6 += 12;
+      }
+      while ( v7 < *(_DWORD *)(a1 + 40) );
+    }
+    return sub_608782F4(a1, v3);
+  }
+
+/* ============================================================================
+ * _ZN2nn3g3d15SkeletalAnimObj11ClearResultEv
+ * RVA 0x00878588   size 0x44   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::g3d::SkeletalAnimObj::ClearResult(int result)
+  {
+    int v1; // r4
+    int v2; // r6
+    int *v3; // r5
+    int v4; // r7
+  
+    v1 = result;
+    v2 = *(unsigned __int16 *)(result + 64);
+    if ( *(_WORD *)(result + 64) )
+    {
+      v3 = *(int **)(result + 48);
+      v4 = 0;
+      do
+      {
+        result = sub_608726A8(*(_DWORD *)(v1 + 72) + v4, v3, nullptr);
+        v4 += 40;
+        --v2;
+        v3 += 12;
+      }
+      while ( v2 );
+    }
+    return result;
+  }
+
+/* ============================================================================
  * sub_608785CC
  * RVA 0x008785cc   size 0x64   xrefs 1
  * ============================================================================ */
@@ -68463,6 +68969,17 @@
       *((_DWORD *)a1 + 11) = result;
     }
     return result;
+  }
+
+/* ============================================================================
+ * _ZNK2nn3g3d15SkeletalAnimObj7ApplyToEPNS0_8ModelObjE
+ * RVA 0x00878698   size 0x2c   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::g3d::SkeletalAnimObj::ApplyTo(int a1, int a2)
+  {
+    return (*(int (__fastcall **)(int, _DWORD))(((*(_DWORD *)(*(_DWORD *)(a1 + 68) + 72) >> 9) & 0x38) + 0xC5A878))(
+             a1 + (*(int *)(((*(_DWORD *)(*(_DWORD *)(a1 + 68) + 72) >> 9) & 0x38) + 0xC5A87C) >> 1),
+             *(_DWORD *)(a2 + 28));
   }
 
 /* ============================================================================
@@ -68729,6 +69246,16 @@
     result = *(_DWORD *)(a1 + 8) | 4;
     *(_DWORD *)(a1 + 8) = result;
     return result;
+  }
+
+/* ============================================================================
+ * _ZN2nn3g3d15SkeletalAnimObjD0Ev
+ * RVA 0x00879fb0   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall nn::g3d::SkeletalAnimObj::~SkeletalAnimObj(int a1)
+  {
+    return operator delete(a1);
   }
 
 /* ============================================================================
@@ -73504,6 +74031,15 @@
   }
 
 /* ============================================================================
+ * debugPrintRelated2
+ * RVA 0x00882024   size 0x4   xrefs 9
+ * ============================================================================ */
+  void debugPrintRelated2()
+  {
+    ;
+  }
+
+/* ============================================================================
  * sub_6088203C
  * RVA 0x0088203c   size 0x48   xrefs 3
  * ============================================================================ */
@@ -73525,6 +74061,15 @@
   int __fastcall sub_608820E8(int a1, int a2, int a3)
   {
     return (*(int (__fastcall **)(_DWORD, int, int))(*MEMORY[0xCC7FE8] + 8))(MEMORY[0xCC7FE8], (a1 + a3 - 1) & -a3, a2);
+  }
+
+/* ============================================================================
+ * debugPrintRelated3
+ * RVA 0x00882120   size 0x4   xrefs 41
+ * ============================================================================ */
+  void __fastcall debugPrintRelated3(const char *a1)
+  {
+    ;
   }
 
 /* ============================================================================
@@ -73607,6 +74152,15 @@
     }
     MEMORY[0xCC7FF4] = 0;
     return 13402100;
+  }
+
+/* ============================================================================
+ * debugPrintRelated
+ * RVA 0x0088239c   size 0x4   xrefs 26
+ * ============================================================================ */
+  void __fastcall debugPrintRelated(const char *a1)
+  {
+    ;
   }
 
 /* ============================================================================
@@ -98385,6 +98939,145 @@
   }
 
 /* ============================================================================
+ * _ZN2nn3atk10SoundActorD0Ev
+ * RVA 0x008a9794   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::atk::SoundActor::~SoundActor(int a1)
+  {
+    int v1; // r0
+  
+    v1 = nn::atk::SoundActor::~SoundActor(a1);
+    return operator delete(v1);
+  }
+
+/* ============================================================================
+ * _ZNK2nn3atk10SoundActor20GetPlayingSoundCountEi
+ * RVA 0x008a97a4   size 0x2c   xrefs 7
+ * ============================================================================ */
+  int __fastcall nn::atk::SoundActor::GetPlayingSoundCount(int a1, int a2)
+  {
+    int v2; // r0
+    int v3; // r2
+    int v4; // r1
+    int result; // r0
+  
+    v2 = *(_DWORD *)(a1 + 4 * a2 + 72);
+    v3 = *(_DWORD *)(v2 + 8);
+    v4 = v2 + 4;
+    result = 0;
+    while ( v3 != v4 )
+    {
+      v3 = *(_DWORD *)(v3 + 4);
+      ++result;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN2nn3atk10SoundActor21SetPlayableSoundCountEii
+ * RVA 0x008a97d0   size 0x10   xrefs 3
+ * ============================================================================ */
+  int __fastcall nn::atk::SoundActor::SetPlayableSoundCount(int a1, int a2, int a3)
+  {
+    return nn::atk::detail::ExternalSoundPlayer::SetPlayableSoundCount(*(_DWORD *)(a1 + 4 * a2 + 72), a3);
+  }
+
+/* ============================================================================
+ * _ZN2nn3atk10SoundActor10SetupSoundEPNS0_11SoundHandleEjPKNS0_14SoundStartable9StartInfoEPv
+ * RVA 0x008a97e0   size 0x48   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::atk::SoundActor::SetupSound(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 *a5)
+  {
+    if ( *(_BYTE *)(a1 + 116) )
+      return sub_608AB194(*(_DWORD *)(a1 + 4), a2, a3, 0, a1, *a5, 0, a4);
+    else
+      return 17;
+  }
+
+/* ============================================================================
+ * _ZN2nn3atk10SoundActor10SetupSoundEPNS0_11SoundHandleEjPKcPKNS0_14SoundStartable9StartInfoEPv
+ * RVA 0x008a9828   size 0x48   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::atk::SoundActor::SetupSound(int a1, _DWORD *a2, int a3, int a4, int a5, unsigned __int8 *a6)
+  {
+    if ( *(_BYTE *)(a1 + 116) )
+      return sub_608AB194(*(_DWORD *)(a1 + 4), a2, a3, 0, a1, *a6, a4, a5);
+    else
+      return 17;
+  }
+
+/* ============================================================================
+ * _ZN2nn3atk10SoundActor32detail_SetupSoundWithAmbientInfoEPNS0_11SoundHandleEjPKcPKNS0_14SoundStartable9StartInfoEPNS0_6detail10BasicSound11AmbientInfoEPv
+ * RVA 0x008a9870   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::atk::SoundActor::detail_SetupSoundWithAmbientInfo(
+          int a1,
+          _DWORD *a2,
+          int a3,
+          int a4,
+          int a5,
+          int a6,
+          unsigned __int8 *a7)
+  {
+    if ( *(_BYTE *)(a1 + 116) )
+      return sub_608AB194(*(_DWORD *)(a1 + 4), a2, a3, a6, a1, *a7, a4, a5);
+    else
+      return 17;
+  }
+
+/* ============================================================================
+ * _ZN2nn3atk10SoundActor17detail_SetupSoundEPNS0_11SoundHandleEjbPKcPKNS0_14SoundStartable9StartInfoE
+ * RVA 0x008a98bc   size 0x58   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::atk::SoundActor::detail_SetupSound(int a1, int a2, int a3, char a4, int a5, int a6)
+  {
+    _BYTE v7[4]; // [sp+Ch] [bp-4h] BYREF
+  
+    v7[0] = a4;
+    if ( a5 )
+      return (*(int (__fastcall **)(int, int, int, int, int, _BYTE *))(*(_DWORD *)a1 + 24))(a1, a2, a3, a5, a6, v7);
+    else
+      return (*(int (__fastcall **)(int, int, int, int, _BYTE *))(*(_DWORD *)a1 + 20))(a1, a2, a3, a6, v7);
+  }
+
+/* ============================================================================
+ * _ZN2nn3atk10SoundActor16detail_GetItemIdEPKc
+ * RVA 0x008a9914   size 0x20   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::atk::SoundActor::detail_GetItemId(int a1)
+  {
+    if ( *(_BYTE *)(a1 + 116) )
+      return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 4) + 12))(*(_DWORD *)(a1 + 4));
+    else
+      return -1;
+  }
+
+/* ============================================================================
+ * _ZN2nn3atk10SoundActor16detail_GetItemIdEPKcS3_
+ * RVA 0x008a9934   size 0x20   xrefs 0
+ * ============================================================================ */
+  int __fastcall nn::atk::SoundActor::detail_GetItemId(int a1)
+  {
+    if ( *(_BYTE *)(a1 + 116) )
+      return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 4) + 16))(*(_DWORD *)(a1 + 4));
+    else
+      return -1;
+  }
+
+/* ============================================================================
+ * nn_atk_SoundArchive_ctor
+ * RVA 0x008a9954   size 0x24   xrefs 2
+ * ============================================================================ */
+  int __fastcall nn_atk_SoundArchive_ctor(int result)
+  {
+    *(_DWORD *)result = dword_60C794C8 + 8;
+    *(_DWORD *)(result + 4) = 0;
+    *(_DWORD *)(result + 8) = 0;
+    *(_WORD *)(result + 12) = 47;
+    return result;
+  }
+
+/* ============================================================================
  * _ZNK2nn3atk12SoundArchive12GetItemLabelEj
  * RVA 0x008a9a04   size 0x48   xrefs 10
  * ============================================================================ */
@@ -103603,6 +104296,19 @@
   }
 
 /* ============================================================================
+ * _ZN2nn3atk6detail19ExternalSoundPlayerC1Ev
+ * RVA 0x008b0720   size 0x24   xrefs 4
+ * ============================================================================ */
+  _DWORD *__fastcall nn::atk::detail::ExternalSoundPlayer::ExternalSoundPlayer(_DWORD *result)
+  {
+    *result = dword_60C795AC + 8;
+    result[1] = result + 1;
+    result[2] = result + 1;
+    result[3] = 1;
+    return result;
+  }
+
+/* ============================================================================
  * sub_608B0748
  * RVA 0x008b0748   size 0x4c   xrefs 4
  * ============================================================================ */
@@ -104475,6 +105181,27 @@
   }
 
 /* ============================================================================
+ * _ZNK2nn3atk6detail16SoundArchiveFile15StringBlockBody9GetStringEj
+ * RVA 0x008b1648   size 0x2c   xrefs 1
+ * ============================================================================ */
+  int __fastcall nn::atk::detail::SoundArchiveFile::StringBlockBody::GetString(int a1, int a2)
+  {
+    bool v3; // zf
+    int result; // r0
+  
+    v3 = a2 == -1;
+    result = 0;
+    if ( a2 != -1 )
+    {
+      a1 += *(_DWORD *)(a1 + 4);
+      v3 = a1 == 0;
+    }
+    if ( !v3 )
+      return a1 + *(_DWORD *)(a1 + 12 * a2 + 8);
+    return result;
+  }
+
+/* ============================================================================
  * sub_608B1674
  * RVA 0x008b1674   size 0xe8   xrefs 1
  * ============================================================================ */
@@ -105167,6 +105894,21 @@
       result[4] = v16;
     }
     return result;
+  }
+
+/* ============================================================================
+ * _ZNK2nn3atk6detail22SoundArchiveFileReader9GetItemIdEPKc
+ * RVA 0x008b21b0   size 0x1c   xrefs 1
+ * ============================================================================ */
+  int __fastcall nn::atk::detail::SoundArchiveFileReader::GetItemId(int a1, int a2)
+  {
+    int v2; // r0
+  
+    v2 = *(_DWORD *)(a1 + 56);
+    if ( v2 )
+      return sub_608B1674(v2, 1, a2);
+    else
+      return -1;
   }
 
 /* ============================================================================
@@ -135933,6 +136675,40 @@
   }
 
 /* ============================================================================
+ * _ZnwjRKSt9nothrow_t
+ * RVA 0x008de0f4   size 0x54   xrefs 0
+ * ============================================================================ */
+  int __fastcall operator new(unsigned int a1)
+  {
+    int CurrentHeap; // r0
+  
+    if ( !MEMORY[0xCCEE90] )
+      return malloc(a1);
+    CurrentHeap = sead::HeapMgr::getCurrentHeap(MEMORY[0xCCEE90]);
+    if ( CurrentHeap )
+      return (*(int (__fastcall **)(int, unsigned int, int))(*(_DWORD *)CurrentHeap + 24))(CurrentHeap, a1, 4);
+    else
+      return 0;
+  }
+
+/* ============================================================================
+ * _ZnajRKSt9nothrow_t
+ * RVA 0x008de14c   size 0x54   xrefs 0
+ * ============================================================================ */
+  int __fastcall operator new[](unsigned int a1)
+  {
+    int CurrentHeap; // r0
+  
+    if ( !MEMORY[0xCCEE90] )
+      return malloc(a1);
+    CurrentHeap = sead::HeapMgr::getCurrentHeap(MEMORY[0xCCEE90]);
+    if ( CurrentHeap )
+      return (*(int (__fastcall **)(int, unsigned int, int))(*(_DWORD *)CurrentHeap + 24))(CurrentHeap, a1, 4);
+    else
+      return 0;
+  }
+
+/* ============================================================================
  * sub_608DE1A4
  * RVA 0x008de1a4   size 0x58   xrefs 22
  * ============================================================================ */
@@ -136051,6 +136827,63 @@
       if ( result )
         return (*(int (__fastcall **)(int, int))(*(_DWORD *)result + 28))(result, a1);
     }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZdlPvRKSt9nothrow_t
+ * RVA 0x008de458   size 0x58   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall operator delete(void *a1)
+  {
+    _DWORD *result; // r0
+  
+    result = (_DWORD *)MEMORY[0xCCEE90];
+    if ( !MEMORY[0xCCEE90] )
+      return free(a1);
+    if ( a1 )
+    {
+      result = sead::HeapMgr::findContainHeap(MEMORY[0xCCEE90], (int)a1);
+      if ( result )
+        return (_DWORD *)(*(int (__fastcall **)(_DWORD *, void *))(*result + 28))(result, a1);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZdaPvRKSt9nothrow_t
+ * RVA 0x008de4b4   size 0x58   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall operator delete[](void *a1)
+  {
+    _DWORD *result; // r0
+  
+    result = (_DWORD *)MEMORY[0xCCEE90];
+    if ( !MEMORY[0xCCEE90] )
+      return free(a1);
+    if ( a1 )
+    {
+      result = sead::HeapMgr::findContainHeap(MEMORY[0xCCEE90], (int)a1);
+      if ( result )
+        return (_DWORD *)(*(int (__fastcall **)(_DWORD *, void *))(*result + 28))(result, a1);
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN4sead8ListNode12insertFront_EPS0_
+ * RVA 0x008de528   size 0x1c   xrefs 122
+ * ============================================================================ */
+  int *__fastcall sead::ListNode::insertFront_(int *result, _DWORD *a2)
+  {
+    int v2; // r2
+  
+    v2 = *result;
+    *result = (int)a2;
+    *a2 = v2;
+    a2[1] = result;
+    if ( v2 )
+      *(_DWORD *)(v2 + 4) = a2;
     return result;
   }
 
@@ -136834,6 +137667,19 @@
   }
 
 /* ============================================================================
+ * _ZN4sead8TreeNodeC2Ev
+ * RVA 0x008def80   size 0x18   xrefs 15
+ * ============================================================================ */
+  _DWORD *__fastcall sead::TreeNode::TreeNode(_DWORD *result)
+  {
+    *result = 0;
+    result[1] = 0;
+    result[2] = 0;
+    result[3] = 0;
+    return result;
+  }
+
+/* ============================================================================
  * sub_608DEFB0
  * RVA 0x008defb0   size 0xe0   xrefs 8
  * ============================================================================ */
@@ -137244,6 +138090,236 @@
     sub_60908478(a1 + 8422, &v8);
     sub_609085F8(a1 + 8422);
     return a1;
+  }
+
+/* ============================================================================
+ * _ZN4sead16NinJoyNpadDeviceD2Ev
+ * RVA 0x008e0ee0   size 0x70   xrefs 0
+ * ============================================================================ */
+  int *__fastcall sead::NinJoyNpadDevice::~NinJoyNpadDevice(int *a1)
+  {
+    int *v2; // r6
+    sead::IDisposer *v3; // r5
+    int v4; // r0
+  
+    *a1 = dword_60C79754 + 8;
+    v2 = a1 + 8428;
+    v3 = (sead::IDisposer *)(a1 + 8422);
+    (*(void (__fastcall **)(int *, _DWORD))(a1[8422] + 40))(a1 + 8422, 0);
+    v4 = dword_60C79758 + 92;
+    *(_DWORD *)v3 = dword_60C79758 + 8;
+    *v2 = v4;
+    sead::CriticalSection::~CriticalSection((sead::CriticalSection *)(a1 + 8542));
+    sub_609084A8(v3);
+    return a1;
+  }
+
+/* ============================================================================
+ * _ZN4sead16NinJoyNpadDeviceD0Ev
+ * RVA 0x008e0f90   size 0x74   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::NinJoyNpadDevice::~NinJoyNpadDevice(int *a1)
+  {
+    int *v2; // r6
+    sead::IDisposer *v3; // r5
+    int v4; // r0
+  
+    *a1 = dword_60C79754 + 8;
+    v2 = a1 + 8428;
+    v3 = (sead::IDisposer *)(a1 + 8422);
+    (*(void (__fastcall **)(int *, _DWORD))(a1[8422] + 40))(a1 + 8422, 0);
+    v4 = dword_60C79758 + 92;
+    *(_DWORD *)v3 = dword_60C79758 + 8;
+    *v2 = v4;
+    sead::CriticalSection::~CriticalSection((sead::CriticalSection *)(a1 + 8542));
+    sub_609084A8(v3);
+    return operator delete((int)a1);
+  }
+
+/* ============================================================================
+ * _ZN4sead16NinJoyNpadDevice4calcEv
+ * RVA 0x008e100c   size 0x23c   xrefs 0
+ * ============================================================================ */
+  unsigned int __fastcall sead::NinJoyNpadDevice::calc(int a1, const unsigned int *a2)
+  {
+    int v2; // r11
+    unsigned int v3; // r5
+    unsigned int result; // r0
+    bool v5; // zf
+    int v6; // r0
+    unsigned int v7; // r7
+    int v8; // r10
+    int v9; // r6
+    char NpadStyleSet; // r0
+    int v11; // r9
+    int v12; // r8
+    int *v13; // r8
+    int v14; // t1
+    int VibrationDeviceHandles; // r0
+    int *v16; // r7
+    unsigned int v17; // r4
+    unsigned int v18; // r0
+    unsigned int v19; // r4
+    unsigned int v20; // r0
+    _DWORD *v21; // r10
+    int v22; // t1
+    unsigned int v23; // r7
+    unsigned int v24; // r1
+    int v25; // [sp+4h] [bp-8h]
+    int v26; // [sp+8h] [bp-4h] BYREF
+  
+    v2 = a1;
+    v3 = 0;
+    result = *(_DWORD *)(a1 + 20);
+    v25 = v2;
+    do
+    {
+      v5 = v3 == result;
+      v6 = v3;
+      v7 = v3;
+      if ( v5 )
+      {
+        v6 = 32;
+        v7 = 8;
+      }
+      v26 = v6;
+      if ( v7 >= 9 )
+        v7 = 0;
+      v8 = v2 + 3736 * v7;
+      v9 = v8 + 64;
+      NpadStyleSet = nn::hid::GetNpadStyleSet((nn::hid *)&v26, a2);
+      if ( (NpadStyleSet & 4) != 0 )
+      {
+        nn::hid::GetNpadStates(v8 + 64, 16, &v26);
+        v11 = 2;
+      }
+      else if ( (NpadStyleSet & 1) != 0 )
+      {
+        nn::hid::GetNpadStates(v8 + 64, 16, &v26);
+        v11 = 0;
+      }
+      else if ( (NpadStyleSet & 8) != 0 )
+      {
+        nn::hid::GetNpadStates(v8 + 64, 16, &v26);
+        v11 = 3;
+      }
+      else if ( (NpadStyleSet & 0x10) != 0 )
+      {
+        nn::hid::GetNpadStates(v8 + 64, 16, &v26);
+        v11 = 4;
+      }
+      else
+      {
+        v11 = 5;
+        if ( (NpadStyleSet & 2) != 0 )
+        {
+          nn::hid::GetNpadStates(v8 + 64, 16, &v26);
+          v11 = 1;
+        }
+      }
+      v12 = v2 + 4 * v7;
+      v14 = *(_DWORD *)(v12 + 28);
+      v13 = (int *)(v12 + 28);
+      if ( v14 != v11 )
+      {
+        if ( v11 == 5 )
+        {
+          *(_DWORD *)(v8 + 704) = 0;
+          *(_DWORD *)(v8 + 708) = 0;
+        }
+        else
+        {
+          *(_DWORD *)(v8 + 704) = nn::hid::GetSixAxisSensorHandles(v8 + 712, 2, &v26, 1 << v11);
+          VibrationDeviceHandles = nn::hid::GetVibrationDeviceHandles(v8 + 3792, 2, &v26, 1 << v11);
+          *(_DWORD *)(v8 + 708) = VibrationDeviceHandles;
+          v16 = (int *)(v8 + 708);
+          a2 = *(const unsigned int **)(v8 + 704);
+          if ( (int)a2 >= 1 )
+          {
+            v17 = 0;
+            do
+            {
+              v18 = 0;
+              if ( v17 < 2 )
+                v18 = v17;
+              nn::hid::StartSixAxisSensor(v8 + 4 * v18 + 712);
+              ++v17;
+            }
+            while ( (signed int)v17 < *(_DWORD *)(v8 + 704) );
+            VibrationDeviceHandles = *v16;
+            v2 = v25;
+          }
+          if ( VibrationDeviceHandles >= 1 )
+          {
+            v19 = 0;
+            do
+            {
+              v20 = 0;
+              if ( v19 < 2 )
+                v20 = v19;
+              nn::hid::InitializeVibrationDevice(v8 + 4 * v20 + 3792);
+              ++v19;
+            }
+            while ( (int)v19 < *v16 );
+          }
+        }
+        *v13 = v11;
+      }
+      v22 = *(_DWORD *)(v8 + 704);
+      v21 = (_DWORD *)(v8 + 704);
+      if ( v22 >= 1 )
+      {
+        v23 = 0;
+        do
+        {
+          v24 = 0;
+          if ( v23 < 2 )
+            v24 = v23;
+          nn::hid::GetSixAxisSensorStates(v9 + 1536 * v24 + 656, 16, v9 + 4 * v24 + 648);
+          ++v23;
+        }
+        while ( (signed int)v23 < *v21 );
+      }
+      result = *(_DWORD *)(v2 + 20);
+      ++v3;
+    }
+    while ( v3 <= result );
+    return result;
+  }
+
+/* ============================================================================
+ * _ZNK4sead16NinJoyNpadDevice27checkDerivedRuntimeTypeInfoEPKNS_15RuntimeTypeInfo9InterfaceE
+ * RVA 0x008e133c   size 0xd0   xrefs 0
+ * ============================================================================ */
+  bool __fastcall sead::NinJoyNpadDevice::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13225896) )
+    {
+      MEMORY[0xC9CFA4] = 12562904;
+      _cxa_guard_release_0(13225896);
+    }
+    if ( a2 == 13225892 )
+      return 1;
+    if ( _cxa_guard_acquire_0(13225904) )
+    {
+      MEMORY[0xC9CFAC] = 12320932;
+      _cxa_guard_release_0(13225904);
+    }
+    return a2 == 13225900;
+  }
+
+/* ============================================================================
+ * _ZNK4sead16NinJoyNpadDevice18getRuntimeTypeInfoEv
+ * RVA 0x008e143c   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int sead::NinJoyNpadDevice::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13225896) )
+    {
+      MEMORY[0xC9CFA4] = 12562904;
+      _cxa_guard_release_0(13225896);
+    }
+    return 13225892;
   }
 
 /* ============================================================================
@@ -140472,6 +141548,18 @@
   }
 
 /* ============================================================================
+ * _ZN4sead15GameFrameworkNx10initializeERKNS_9Framework13InitializeArgE
+ * RVA 0x008ea004   size 0x10   xrefs 1
+ * ============================================================================ */
+  int __fastcall sead::GameFrameworkNx::initialize(_DWORD *a1)
+  {
+    nn::oe *v1; // r0
+  
+    v1 = (nn::oe *)sead::GameFramework::initialize(a1);
+    return nn::oe::Initialize(v1);
+  }
+
+/* ============================================================================
  * sub_608EA014
  * RVA 0x008ea014   size 0xd8   xrefs 1
  * ============================================================================ */
@@ -140849,6 +141937,280 @@
   }
 
 /* ============================================================================
+ * _ZN4sead13CalculateTaskD0Ev
+ * RVA 0x008ebd00   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::CalculateTask::~CalculateTask(_DWORD *a1)
+  {
+    sead::IDisposer *v2; // r5
+    int v3; // r1
+    int v4; // r0
+  
+    *a1 = dword_60C79814 + 8;
+    a1[28] = 12558408;
+    v2 = (sead::IDisposer *)(a1 + 28);
+    sead::MethodTreeNode::detachAll(a1 + 28);
+    sead::IDisposer::~IDisposer(v2);
+    sead::TaskBase::~TaskBase((sead::IDisposer *)a1, v3);
+    return operator delete(v4);
+  }
+
+/* ============================================================================
+ * _ZNK4sead13CalculateTask37getCorrespondingMethodTreeMgrTypeInfoEv
+ * RVA 0x008ebd54   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int sead::CalculateTask::getCorrespondingMethodTreeMgrTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13220680) )
+    {
+      MEMORY[0xC9BB44] = 12320932;
+      _cxa_guard_release_0(13220680);
+    }
+    return 13220676;
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask4calcEv
+ * RVA 0x008ebdc8   size 0x4   xrefs 0
+ * ============================================================================ */
+  void sead::CalculateTask::calc()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask14attachCalcImplEv
+ * RVA 0x008ebdcc   size 0x8c   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::CalculateTask::attachCalcImpl(_DWORD *a1)
+  {
+    sead::CriticalSection *v2; // r4
+    int v3; // r0
+    int v4; // r0
+    int v5; // r0
+    sead::MethodTreeNode *v6; // r2
+    sead::TaskBase *v7; // r0
+    int v8; // r1
+  
+    v2 = (sead::CriticalSection *)(sead::TaskBase::getMethodTreeMgr(a1) + 4);
+    sead::CriticalSection::lock(v2);
+    v3 = a1[4];
+    if ( v3 )
+      v4 = *(_DWORD *)(v3 + 16);
+    else
+      v4 = 0;
+    if ( !a1[25] )
+    {
+      v6 = (sead::MethodTreeNode *)(a1 + 28);
+      v7 = (sead::TaskBase *)a1;
+      v8 = 0;
+  LABEL_9:
+      sead::TaskBase::attachMethodWithCheck(v7, v8, v6);
+      return sead::CriticalSection::unlock(v2);
+    }
+    if ( !v4 )
+    {
+      v6 = (sead::MethodTreeNode *)(a1 + 28);
+      v7 = (sead::TaskBase *)a1;
+      v8 = 1;
+      goto LABEL_9;
+    }
+    v5 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v4 + 80))(v4, 1);
+    sead::MethodTreeNode::pushBackChild(v5, a1 + 28);
+    return sead::CriticalSection::unlock(v2);
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask14attachDrawImplEv
+ * RVA 0x008ebe58   size 0x4   xrefs 0
+ * ============================================================================ */
+  void sead::CalculateTask::attachDrawImpl()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask14detachCalcImplEv
+ * RVA 0x008ebe5c   size 0x8   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::CalculateTask::detachCalcImpl(int a1)
+  {
+    return sead::MethodTreeNode::detachAll((_DWORD *)(a1 + 112));
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask14detachDrawImplEv
+ * RVA 0x008ebe64   size 0x4   xrefs 0
+ * ============================================================================ */
+  void sead::CalculateTask::detachDrawImpl()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask9pauseCalcEb
+ * RVA 0x008ebe68   size 0x78   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::CalculateTask::pauseCalc(_DWORD *a1, int a2)
+  {
+    sead::MethodTreeNode *v4; // r4
+    void (__fastcall ***v5)(_DWORD, sead::MethodTreeNode *, int); // r0
+    int v6; // r0
+  
+    v4 = (sead::MethodTreeNode *)(a1 + 28);
+    sead::MethodTreeNode::lock_((sead::MethodTreeNode *)(a1 + 28));
+    v5 = (void (__fastcall ***)(_DWORD, sead::MethodTreeNode *, int))a1[46];
+    if ( a2 == 1 )
+    {
+      if ( v5 )
+        (**v5)(v5, v4, 1);
+      v6 = 1;
+    }
+    else
+    {
+      if ( v5 )
+        (**v5)(v5, v4, 0);
+      v6 = 0;
+    }
+    a1[45] = v6;
+    return sead::MethodTreeNode::unlock_(v4);
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask9pauseDrawEb
+ * RVA 0x008ebee0   size 0x4   xrefs 0
+ * ============================================================================ */
+  void sead::CalculateTask::pauseDraw()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask12pauseCalcRecEb
+ * RVA 0x008ebee4   size 0x78   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::CalculateTask::pauseCalcRec(_DWORD *a1, int a2)
+  {
+    sead::MethodTreeNode *v4; // r4
+    void (__fastcall ***v5)(_DWORD, sead::MethodTreeNode *, int); // r0
+    int v6; // r0
+  
+    v4 = (sead::MethodTreeNode *)(a1 + 28);
+    sead::MethodTreeNode::lock_((sead::MethodTreeNode *)(a1 + 28));
+    v5 = (void (__fastcall ***)(_DWORD, sead::MethodTreeNode *, int))a1[46];
+    if ( a2 == 1 )
+    {
+      if ( v5 )
+        (**v5)(v5, v4, 3);
+      v6 = 3;
+    }
+    else
+    {
+      if ( v5 )
+        (**v5)(v5, v4, 0);
+      v6 = 0;
+    }
+    a1[45] = v6;
+    return sead::MethodTreeNode::unlock_(v4);
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask12pauseDrawRecEb
+ * RVA 0x008ebf5c   size 0x4   xrefs 0
+ * ============================================================================ */
+  void sead::CalculateTask::pauseDrawRec()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask14pauseCalcChildEb
+ * RVA 0x008ebf60   size 0x78   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::CalculateTask::pauseCalcChild(_DWORD *a1, int a2)
+  {
+    sead::MethodTreeNode *v4; // r4
+    void (__fastcall ***v5)(_DWORD, sead::MethodTreeNode *, int); // r0
+    int v6; // r0
+  
+    v4 = (sead::MethodTreeNode *)(a1 + 28);
+    sead::MethodTreeNode::lock_((sead::MethodTreeNode *)(a1 + 28));
+    v5 = (void (__fastcall ***)(_DWORD, sead::MethodTreeNode *, int))a1[46];
+    if ( a2 == 1 )
+    {
+      if ( v5 )
+        (**v5)(v5, v4, 2);
+      v6 = 2;
+    }
+    else
+    {
+      if ( v5 )
+        (**v5)(v5, v4, 0);
+      v6 = 0;
+    }
+    a1[45] = v6;
+    return sead::MethodTreeNode::unlock_(v4);
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask14pauseDrawChildEb
+ * RVA 0x008ebfd8   size 0x4   xrefs 0
+ * ============================================================================ */
+  void sead::CalculateTask::pauseDrawChild()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN4sead13CalculateTask17getMethodTreeNodeEi
+ * RVA 0x008ebfdc   size 0x14   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::CalculateTask::getMethodTreeNode(int a1, unsigned int a2)
+  {
+    int v2; // r2
+  
+    v2 = 0;
+    if ( a2 < 2 )
+      return a1 + 112;
+    return v2;
+  }
+
+/* ============================================================================
+ * _ZNK4sead13CalculateTask27checkDerivedRuntimeTypeInfoEPKNS_15RuntimeTypeInfo9InterfaceE
+ * RVA 0x008ebff0   size 0xd0   xrefs 0
+ * ============================================================================ */
+  bool __fastcall sead::CalculateTask::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13156868) )
+    {
+      MEMORY[0xC8C200] = 12420040;
+      _cxa_guard_release_0(13156868);
+    }
+    if ( a2 == 13156864 )
+      return 1;
+    if ( _cxa_guard_acquire_0(13156876) )
+    {
+      MEMORY[0xC8C208] = 12320932;
+      _cxa_guard_release_0(13156876);
+    }
+    return a2 == 13156872;
+  }
+
+/* ============================================================================
+ * _ZNK4sead13CalculateTask18getRuntimeTypeInfoEv
+ * RVA 0x008ec0f0   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int sead::CalculateTask::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13156868) )
+    {
+      MEMORY[0xC8C200] = 12420040;
+      _cxa_guard_release_0(13156868);
+    }
+    return 13156864;
+  }
+
+/* ============================================================================
  * _ZN4sead13NullFaderTaskC1ERKNS_16TaskConstructArgE
  * RVA 0x008ec1e8   size 0x34   xrefs 1
  * ============================================================================ */
@@ -141040,6 +142402,34 @@
     }
     sead::CriticalSection::unlock(v6);
     return v7;
+  }
+
+/* ============================================================================
+ * _ZNK4sead8TaskBase27checkDerivedRuntimeTypeInfoEPKNS_15RuntimeTypeInfo9InterfaceE
+ * RVA 0x008ed02c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  bool __fastcall sead::TaskBase::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  {
+    if ( _cxa_guard_acquire_0(13156876) )
+    {
+      MEMORY[0xC8C208] = 12320932;
+      _cxa_guard_release_0(13156876);
+    }
+    return a2 == 13156872;
+  }
+
+/* ============================================================================
+ * _ZNK4sead8TaskBase18getRuntimeTypeInfoEv
+ * RVA 0x008ed0b0   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int sead::TaskBase::getRuntimeTypeInfo()
+  {
+    if ( _cxa_guard_acquire_0(13156876) )
+    {
+      MEMORY[0xC8C208] = 12320932;
+      _cxa_guard_release_0(13156876);
+    }
+    return 13156872;
   }
 
 /* ============================================================================
@@ -141315,6 +142705,20 @@
   }
 
 /* ============================================================================
+ * _ZN4sead14MethodTreeNode5lock_Ev
+ * RVA 0x008ee29c   size 0x10   xrefs 33
+ * ============================================================================ */
+  sead::CriticalSection *__fastcall sead::MethodTreeNode::lock_(int a1)
+  {
+    sead::CriticalSection *result; // r0
+  
+    result = *(sead::CriticalSection **)(a1 + 60);
+    if ( result )
+      return (sead::CriticalSection *)sead::CriticalSection::lock(result);
+    return result;
+  }
+
+/* ============================================================================
  * _ZNK4sead14MethodTreeNode15attachMutexRec_EPNS_15CriticalSectionE
  * RVA 0x008ee2ac   size 0x44   xrefs 4
  * ============================================================================ */
@@ -141344,6 +142748,20 @@
       }
     }
     while ( !v7 );
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN4sead14MethodTreeNode7unlock_Ev
+ * RVA 0x008ee2f0   size 0x10   xrefs 33
+ * ============================================================================ */
+  sead::CriticalSection *__fastcall sead::MethodTreeNode::unlock_(int a1)
+  {
+    sead::CriticalSection *result; // r0
+  
+    result = *(sead::CriticalSection **)(a1 + 60);
+    if ( result )
+      return (sead::CriticalSection *)sead::CriticalSection::unlock(result);
     return result;
   }
 
@@ -142089,6 +143507,102 @@
   }
 
 /* ============================================================================
+ * _ZN4sead8TaskBaseD0Ev
+ * RVA 0x008ef4c8   size 0x94   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::TaskBase::~TaskBase(sead::IDisposer *a1, int a2)
+  {
+    int v3; // r0
+    bool v4; // zf
+    int v5; // r1
+    int v6; // r0
+    int v7; // r5
+    sead::IDisposer *v8; // r0
+  
+    *(_DWORD *)a1 = dword_60C7987C + 8;
+    v3 = *((_DWORD *)a1 + 23);
+    v4 = v3 == 0;
+    if ( v3 )
+    {
+      a2 = *((_DWORD *)a1 + 5);
+      v4 = a2 == 0;
+    }
+    if ( !v4 )
+    {
+      v5 = *(_DWORD *)(a2 + 16);
+      while ( 1 )
+      {
+        sead::TaskMgr::destroyTaskSync(v3, v5);
+        v6 = *((_DWORD *)a1 + 5);
+        if ( !v6 )
+          break;
+        v5 = *(_DWORD *)(v6 + 16);
+        v3 = *((_DWORD *)a1 + 23);
+      }
+    }
+    *((_DWORD *)a1 + 24) = 7;
+    sead::TreeNode::detachAll((_DWORD *)a1 + 4);
+    v7 = *((_DWORD *)a1 + 16);
+    if ( v7 )
+    {
+      *((_DWORD *)a1 + 16) = 0;
+      sead::ListNode::erase_((_DWORD *)a1 + 13);
+      --*(_DWORD *)(v7 + 8);
+    }
+    v8 = sead::IDisposer::~IDisposer(a1);
+    return operator delete((int)v8);
+  }
+
+/* ============================================================================
+ * _ZN4sead8TaskBase7prepareEv
+ * RVA 0x008ef58c   size 0x4   xrefs 1
+ * ============================================================================ */
+  void sead::TaskBase::prepare()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN4sead8TaskBase11enterCommonEv
+ * RVA 0x008ef590   size 0x64   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::TaskBase::enterCommon(int a1)
+  {
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 60))(a1);
+    (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 64))(a1);
+    (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 16))(a1, 0);
+    (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 20))(a1, 0);
+    return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 48))(a1);
+  }
+
+/* ============================================================================
+ * _ZN4sead8TaskBase5enterEv
+ * RVA 0x008ef5f4   size 0x4   xrefs 0
+ * ============================================================================ */
+  void sead::TaskBase::enter()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN4sead8TaskBase4exitEv
+ * RVA 0x008ef5f8   size 0x4   xrefs 0
+ * ============================================================================ */
+  void sead::TaskBase::exit()
+  {
+    ;
+  }
+
+/* ============================================================================
+ * _ZN4sead8TaskBase7onEventERKNS_9TaskEventE
+ * RVA 0x008ef5fc   size 0x4   xrefs 0
+ * ============================================================================ */
+  void sead::TaskBase::onEvent()
+  {
+    ;
+  }
+
+/* ============================================================================
  * sub_608EF600
  * RVA 0x008ef600   size 0xa4   xrefs 2
  * ============================================================================ */
@@ -142161,6 +143675,37 @@
       while ( (int)v5 < (int)v3 );
     }
     return sead::CriticalSection::unlock(v2);
+  }
+
+/* ============================================================================
+ * _ZN4sead8TaskBase11doneDestroyEv
+ * RVA 0x008ef74c   size 0x10   xrefs 2
+ * ============================================================================ */
+  int __fastcall sead::TaskBase::doneDestroy(int result)
+  {
+    *(_DWORD *)(result + 48) |= 4u;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZNK4sead8TaskBase16getMethodTreeMgrEv
+ * RVA 0x008ef768   size 0x10   xrefs 5
+ * ============================================================================ */
+  int __fastcall sead::TaskBase::getMethodTreeMgr(int a1)
+  {
+    return *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(a1 + 92) + 40) + 32);
+  }
+
+/* ============================================================================
+ * _ZN4sead8TaskBase21attachMethodWithCheckEiPNS_14MethodTreeNodeE
+ * RVA 0x008ef778   size 0x18   xrefs 4
+ * ============================================================================ */
+  int __fastcall sead::TaskBase::attachMethodWithCheck(int a1)
+  {
+    int v1; // r0
+  
+    v1 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(a1 + 92) + 40) + 32);
+    return (*(int (__fastcall **)(int))(*(_DWORD *)v1 + 16))(v1);
   }
 
 /* ============================================================================
@@ -144963,6 +146508,30 @@
   }
 
 /* ============================================================================
+ * _ZN4sead9IDisposerD0Ev
+ * RVA 0x008f5c94   size 0x38   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::IDisposer::~IDisposer(_DWORD *a1)
+  {
+    unsigned int v2; // r0
+  
+    *a1 = dword_60C798F8 + 8;
+    v2 = a1[1];
+    if ( v2 >= 2 )
+      sead::Heap::removeDisposer_(v2, (int)a1);
+    return operator delete((int)a1);
+  }
+
+/* ============================================================================
+ * _ZN4sead7ExpHeap6createEmRKNS_14SafeStringBaseIcEEPNS_4HeapEiNS5_13HeapDirectionEb
+ * RVA 0x008f5d44   size 0x24   xrefs 63
+ * ============================================================================ */
+  int __fastcall sead::ExpHeap::create(int a1, int a2, _DWORD *a3, int a4, int a5, int a6)
+  {
+    return sead::ExpHeap::tryCreate(a1, a2, a3, a4, a5, a6);
+  }
+
+/* ============================================================================
  * _ZN4sead7ExpHeap9tryCreateEmRKNS_14SafeStringBaseIcEEPNS_4HeapEiNS5_13HeapDirectionEb
  * RVA 0x008f5d68   size 0x2dc   xrefs 6
  * ============================================================================ */
@@ -147440,6 +149009,21 @@
   }
 
 /* ============================================================================
+ * _ZN4sead7HeapMgr15setCurrentHeap_EPNS_4HeapE
+ * RVA 0x008fac4c   size 0x2c   xrefs 121
+ * ============================================================================ */
+  int __fastcall sead::HeapMgr::setCurrentHeap_(int a1, int a2)
+  {
+    int TlsValue; // r0
+    int v4; // r1
+  
+    TlsValue = nn::os::GetTlsValue(*(_DWORD *)(*(_DWORD *)off_60C79854 + 72));
+    v4 = *(_DWORD *)(TlsValue + 100);
+    *(_DWORD *)(TlsValue + 100) = a2;
+    return v4;
+  }
+
+/* ============================================================================
  * sub_608FAC7C
  * RVA 0x008fac7c   size 0x5c   xrefs 1
  * ============================================================================ */
@@ -149236,6 +150820,45 @@
       return v34;
     }
     return v18;
+  }
+
+/* ============================================================================
+ * _ZN4sead14SafeStringBaseIcEaSERKS1_
+ * RVA 0x008fdb48   size 0xc   xrefs 234
+ * ============================================================================ */
+  int __fastcall sead::SafeStringBase<char>::operator=(int result, int a2)
+  {
+    *(_DWORD *)(result + 4) = *(_DWORD *)(a2 + 4);
+    return result;
+  }
+
+/* ============================================================================
+ * _ZNK4sead22BufferedSafeStringBaseIcE22assureTerminationImpl_Ev
+ * RVA 0x008fdd9c   size 0x18   xrefs 583
+ * ============================================================================ */
+  int __fastcall sead::BufferedSafeStringBase<char>::assureTerminationImpl_(int a1)
+  {
+    int result; // r0
+  
+    result = *(_DWORD *)(a1 + 4) + *(_DWORD *)(a1 + 8);
+    *(_BYTE *)(result - 1) = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN4sead22BufferedSafeStringBaseIcE7formatVEPKcSt9__va_list
+ * RVA 0x008fddcc   size 0x28   xrefs 10
+ * ============================================================================ */
+  int __fastcall sead::BufferedSafeStringBase<char>::formatV(int a1)
+  {
+    unsigned int v1; // r4
+    int result; // r0
+  
+    v1 = *(_DWORD *)(a1 + 8);
+    result = sead::StringUtil::vsnprintf(*(_DWORD *)(a1 + 4), v1);
+    if ( result < 0 )
+      return v1 - 1;
+    return result;
   }
 
 /* ============================================================================
@@ -154159,6 +155782,262 @@
   }
 
 /* ============================================================================
+ * ReadAndDecompSZS
+ * RVA 0x009040cc   size 0x548   xrefs 0
+ * ============================================================================ */
+  _BYTE *__fastcall ReadAndDecompSZS(int a1, _DWORD *a2, int a3, unsigned int *a4, unsigned int *a5, _BYTE *a6)
+  {
+    int CurrentHeap; // r7
+    _BYTE *v11; // r8
+    _BYTE *v12; // r0
+    int v13; // r0
+    unsigned __int8 *v14; // r11
+    int v15; // r0
+    bool v16; // cc
+    int v17; // r6
+    unsigned int v18; // r5
+    int v19; // r0
+    unsigned int v20; // r1
+    int v21; // r8
+    unsigned int v22; // r0
+    unsigned int v23; // r6
+    unsigned int v24; // r0
+    int v25; // r3
+    _BYTE *v26; // r5
+    int v27; // r2
+    unsigned int v28; // r2
+    int v29; // r10
+    int (__fastcall **v30)(_DWORD); // r4
+    int v31; // r4
+    int v32; // r0
+    int v33; // r6
+    int v34; // r0
+    int v35; // r0
+    bool v37; // zf
+    unsigned int v38; // [sp+4h] [bp-58h]
+    unsigned int *v39; // [sp+8h] [bp-54h]
+    unsigned int v40; // [sp+Ch] [bp-50h]
+    _DWORD v41[3]; // [sp+10h] [bp-4Ch] BYREF
+    __int16 v42; // [sp+1Ch] [bp-40h]
+    char v43; // [sp+1Eh] [bp-3Eh]
+    int v44; // [sp+20h] [bp-3Ch]
+    __int16 v45; // [sp+24h] [bp-38h]
+    char v46; // [sp+26h] [bp-36h]
+    unsigned int v47; // [sp+28h] [bp-34h] BYREF
+    _DWORD v48[12]; // [sp+2Ch] [bp-30h] BYREF
+  
+    CurrentHeap = a2[3];
+    if ( !CurrentHeap )
+      CurrentHeap = sead::HeapMgr::getCurrentHeap(MEMORY[0xCCEE90]);
+    v11 = nullptr;
+    if ( (a2[8] & 0x1F) == 0 )
+    {
+      memset(&v48[1], 0, 44);
+      v48[0] = 12557552;
+      v12 = (_BYTE *)a2[10];
+      if ( v12 )
+        v13 = sub_608E6578(v12, v48, (int)a2, 0, a2[11]);
+      else
+        v13 = sub_608E86B8(MEMORY[0xCCEBD0], v48, (int)a2, 0, a2[11]);
+      v11 = nullptr;
+      if ( !v13 )
+        goto LABEL_73;
+      v14 = *(unsigned __int8 **)(a1 + 80);
+      if ( !v14 )
+      {
+        v14 = (unsigned __int8 *)sub_608DE334(*(_DWORD *)(a1 + 76), CurrentHeap, -32);
+        if ( !v14 )
+          goto LABEL_73;
+      }
+      v11 = nullptr;
+      v47 = 0;
+      v15 = sub_608E7C10((int)v48, &v47, (int)v14, *(_DWORD *)(a1 + 76));
+      v16 = v15 != 0;
+      if ( v15 )
+        v16 = v47 > 0xF;
+      if ( !v16 )
+      {
+        if ( *(_DWORD *)(a1 + 80) )
+          goto LABEL_73;
+  LABEL_14:
+        operator delete[]((int)v14);
+        goto LABEL_73;
+      }
+      v39 = a4;
+      v17 = 4 * MEMORY[0xB3B9B8] + 12962556;
+      v18 = (*(int (__fastcall **)(_DWORD))(4 * MEMORY[0xB3B9B8] + 0xC5CB0C))(*((_DWORD *)v14 + 1));
+      v19 = (*(int (__fastcall **)(_DWORD))(v17 + 16))(*((_DWORD *)v14 + 2));
+      v20 = a2[7];
+      v21 = v19;
+      v22 = a2[8];
+      v23 = v20;
+      if ( !v20 )
+        v23 = v18;
+      if ( v18 <= v20 )
+        v23 = v18;
+      if ( v22 )
+        v24 = (v22 + v23 - 1) / v22 * v22;
+      else
+        v24 = (v23 + 31) & 0xFFFFFFE0;
+      v40 = v24;
+      v25 = 0;
+      v26 = (_BYTE *)a2[6];
+      if ( !v26 )
+      {
+        if ( _cxa_guard_acquire_0(13220652) )
+        {
+          MEMORY[0xC9BB28] = 12558156;
+          _cxa_guard_release_0(13220652);
+        }
+        if ( a3 && (**(int (__fastcall ***)(int, int))a3)(a3, 13220648) == 1 )
+        {
+          v27 = a2[5];
+          if ( v27 )
+          {
+            if ( v27 <= 32 )
+              v27 = 32;
+          }
+          else
+          {
+            if ( !v21 )
+              v21 = (*(int (__fastcall **)(int))(*(_DWORD *)a3 + 16))(a3);
+            if ( v21 <= 32 )
+              v21 = 32;
+            v27 = (((int)a2[4] >> 31) | 1) * v21;
+          }
+        }
+        else
+        {
+          v27 = -32 * (((int)a2[4] >> 31) | 1);
+        }
+        v26 = (_BYTE *)sub_608DE334(v40, CurrentHeap, v27);
+        if ( !v26 )
+        {
+  LABEL_40:
+          v11 = nullptr;
+          if ( *(_DWORD *)(a1 + 80) )
+            goto LABEL_73;
+          goto LABEL_14;
+        }
+        v25 = 1;
+      }
+      v28 = v47;
+      if ( v47 >= *(_DWORD *)(a1 + 76) )
+      {
+        LOBYTE(v29) = v25;
+        v41[0] = v26;
+        v38 = v23;
+        v41[1] = 0;
+        v46 = 16;
+        v44 = 0;
+        v45 = 0;
+        v43 = 0;
+        v42 = 0;
+        v41[2] = v23;
+        if ( v25 )
+        {
+          for ( ; v47; v28 = v47 )
+          {
+            v32 = sub_60903B44((int)v41, v14, v28);
+            if ( v32 )
+            {
+              if ( v32 < 0 || (v33 = 0, !sub_608E7C10((int)v48, &v47, (int)v14, *(_DWORD *)(a1 + 76))) )
+              {
+                operator delete[]((int)v26);
+                v33 = 1;
+                if ( !*(_DWORD *)(a1 + 80) )
+                  goto LABEL_48;
+              }
+            }
+            else
+            {
+              v33 = 3;
+            }
+            v34 = v33;
+            if ( (v33 & 3) != 0 )
+              goto LABEL_63;
+          }
+          goto LABEL_64;
+        }
+        if ( !v47 )
+          goto LABEL_64;
+        while ( 1 )
+        {
+          v35 = sub_60903B44((int)v41, v14, v28);
+          if ( v35 )
+          {
+            if ( v35 < 0 || (v33 = 0, !sub_608E7C10((int)v48, &v47, (int)v14, *(_DWORD *)(a1 + 76))) )
+            {
+              v33 = 1;
+              if ( !*(_DWORD *)(a1 + 80) )
+              {
+  LABEL_48:
+                operator delete[]((int)v14);
+                v34 = 1;
+  LABEL_63:
+                if ( v34 == 3 )
+                {
+  LABEL_64:
+                  v23 = v38;
+                  goto LABEL_65;
+                }
+                v37 = v33 == 0;
+                v23 = v38;
+                v11 = nullptr;
+                if ( !v37 )
+                {
+  LABEL_73:
+                  v48[0] = 12557552;
+                  if ( v48[2] )
+                    sub_608E6738((_BYTE *)v48[2], (int)v48);
+                  return v11;
+                }
+  LABEL_65:
+                if ( !*(_DWORD *)(a1 + 80) )
+                  operator delete[]((int)v14);
+                v11 = v26;
+                if ( v39 )
+                  *v39 = v23;
+                if ( a5 )
+                  *a5 = v40;
+                if ( a6 )
+                  *a6 = v29;
+                goto LABEL_73;
+              }
+            }
+          }
+          else
+          {
+            v33 = 3;
+          }
+          v34 = v33;
+          if ( (v33 & 3) != 0 )
+            goto LABEL_63;
+          v28 = v47;
+          if ( !v47 )
+            goto LABEL_64;
+        }
+      }
+      v29 = v25;
+      v30 = (int (__fastcall **)(_DWORD))(4 * MEMORY[0xB3B9B8] + 12962572);
+      if ( (*(int (__fastcall **)(_DWORD))(4 * MEMORY[0xB3B9B8] + 0xC5CB0C))(*(_DWORD *)v14) == 1499560496 )
+      {
+        v31 = (*v30)(*((_DWORD *)v14 + 1));
+        if ( v31 <= v40 )
+        {
+          decompressYaz0(v26, (int)v14);
+          if ( v31 >= 0 )
+            goto LABEL_65;
+        }
+      }
+      if ( v29 == 1 )
+        operator delete[]((int)v26);
+      goto LABEL_40;
+    }
+    return v11;
+  }
+
+/* ============================================================================
  * sub_60904900
  * RVA 0x00904900   size 0x78   xrefs 1
  * ============================================================================ */
@@ -154794,6 +156673,49 @@
   }
 
 /* ============================================================================
+ * _ZN4sead15CriticalSectionD2Ev
+ * RVA 0x00907f28   size 0x2c   xrefs 70
+ * ============================================================================ */
+  sead::IDisposer *__fastcall sead::CriticalSection::~CriticalSection(sead::IDisposer *a1)
+  {
+    *(_DWORD *)a1 = dword_60C799C4 + 8;
+    nn::os::FinalizeMutex((char *)a1 + 16);
+    return sead::IDisposer::~IDisposer(a1);
+  }
+
+/* ============================================================================
+ * _ZN4sead15CriticalSectionD0Ev
+ * RVA 0x00907f58   size 0x30   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::CriticalSection::~CriticalSection(sead::IDisposer *a1)
+  {
+    sead::IDisposer *v2; // r0
+  
+    *(_DWORD *)a1 = dword_60C799C4 + 8;
+    nn::os::FinalizeMutex((char *)a1 + 16);
+    v2 = sead::IDisposer::~IDisposer(a1);
+    return operator delete((int)v2);
+  }
+
+/* ============================================================================
+ * _ZN4sead15CriticalSection4lockEv
+ * RVA 0x00907f8c   size 0x8   xrefs 257
+ * ============================================================================ */
+  int __fastcall sead::CriticalSection::lock(int a1)
+  {
+    return nn::os::LockMutex(a1 + 16);
+  }
+
+/* ============================================================================
+ * _ZN4sead15CriticalSection6unlockEv
+ * RVA 0x00907f9c   size 0x8   xrefs 274
+ * ============================================================================ */
+  int __fastcall sead::CriticalSection::unlock(int a1)
+  {
+    return nn::os::UnlockMutex(a1 + 16);
+  }
+
+/* ============================================================================
  * sub_60907FA4
  * RVA 0x00907fa4   size 0x38   xrefs 4
  * ============================================================================ */
@@ -155132,6 +157054,16 @@
   }
 
 /* ============================================================================
+ * _ZN4sead9ThreadMgr10initializeEPNS_4HeapE
+ * RVA 0x00908b14   size 0x4   xrefs 1
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall sead::ThreadMgr::initialize(nn::os *a1, int a2)
+  {
+    return sub_60908808(a1, a2);
+  }
+
+/* ============================================================================
  * sub_60908B18
  * RVA 0x00908b18   size 0xf8   xrefs 1
  * ============================================================================ */
@@ -155185,6 +157117,15 @@
     nn::os::FreeTlsSlot(a1[18]);
     sead::CriticalSection::~CriticalSection(v2);
     return a1;
+  }
+
+/* ============================================================================
+ * _ZN4sead10ThreadUtil29ConvertPrioritySeadToPlatformEi
+ * RVA 0x00908c28   size 0x4   xrefs 9
+ * ============================================================================ */
+  void sead::ThreadUtil::ConvertPrioritySeadToPlatform()
+  {
+    ;
   }
 
 /* ============================================================================
@@ -155629,6 +157570,42 @@
   }
 
 /* ============================================================================
+ * _ZN4sead13ControllerMgr7prepareEv
+ * RVA 0x009096c0   size 0x104   xrefs 0
+ * ============================================================================ */
+  int (__fastcall ***__fastcall sead::ControllerMgr::prepare(_DWORD *a1))(_DWORD, _DWORD *)
+  {
+    int v2; // r5
+    int (__fastcall ***result)(_DWORD, _DWORD *); // r0
+    _DWORD *v4; // r0
+    _DWORD *v5; // r0
+  
+    v2 = a1[11];
+    if ( _cxa_guard_acquire_0(13396928) )
+    {
+      MEMORY[0xCC6BBC] = 12755416;
+      _cxa_guard_release_0(13396928);
+    }
+    if ( v2 && (**(int (__fastcall ***)(int, int))v2)(v2, 13396924) == 1 )
+    {
+      sead::PtrArrayImpl::allocBuffer((int)(a1 + 53), *(_DWORD *)(v2 + 4), 0, 4);
+      result = *(int (__fastcall ****)(_DWORD, _DWORD *))(v2 + 8);
+      if ( result )
+        return (int (__fastcall ***)(_DWORD, _DWORD *))(**result)(result, a1);
+    }
+    else
+    {
+      sead::PtrArrayImpl::allocBuffer((int)(a1 + 53), 16, 0, 4);
+      v4 = (_DWORD *)operator new(0x85A0u, 0, 4);
+      v5 = sead::NinJoyNpadDevice::NinJoyNpadDevice(v4, (int)a1, 0);
+      sead::ListNode::insertFront_(a1 + 49, (_DWORD *)((char *)v5 + a1[52]));
+      result = (int (__fastcall ***)(_DWORD, _DWORD *))(a1[51] + 1);
+      a1[51] = result;
+    }
+    return result;
+  }
+
+/* ============================================================================
  * sub_609097DC
  * RVA 0x009097dc   size 0x44   xrefs 1
  * ============================================================================ */
@@ -155653,6 +157630,127 @@
         return 0;
     }
     return result;
+  }
+
+/* ============================================================================
+ * _ZN4sead13ControllerMgr4calcEv
+ * RVA 0x00909820   size 0x7c   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::ControllerMgr::calc(_DWORD *a1)
+  {
+    _DWORD *v2; // r6
+    _DWORD *v3; // r5
+    int v4; // r7
+    char *v5; // r0
+    int result; // r0
+    int *v7; // r5
+    int v8; // t1
+  
+    v2 = (_DWORD *)a1[50];
+    v3 = a1 + 49;
+    if ( v2 != a1 + 49 )
+    {
+      v4 = a1[52];
+      v5 = (char *)v2 - v4;
+      do
+      {
+        (*(void (__fastcall **)(char *))(*(_DWORD *)v5 + 16))(v5);
+        v2 = (_DWORD *)v2[1];
+        v5 = (char *)v2 - v4;
+      }
+      while ( (char *)v2 - v4 != (char *)v3 - a1[52] );
+    }
+    result = a1[53];
+    if ( result )
+    {
+      v7 = (int *)a1[55];
+      do
+      {
+        v8 = *v7++;
+        (*(void (__fastcall **)(int))(*(_DWORD *)v8 + 16))(v8);
+        result = a1[55] + 4 * a1[53];
+      }
+      while ( v7 != (int *)result );
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN4sead13ControllerMgrD2Ev
+ * RVA 0x0090989c   size 0x30   xrefs 0
+ * ============================================================================ */
+  void __fastcall sead::ControllerMgr::~ControllerMgr(int a1)
+  {
+    *(_DWORD *)a1 = dword_60C799F4 + 8;
+    if ( *(_BYTE *)(a1 + 192) )
+      MEMORY[0xCCF448] = 0;
+    sead::CalculateTask::~CalculateTask(a1);
+  }
+
+/* ============================================================================
+ * _ZN4sead13ControllerMgrD0Ev
+ * RVA 0x009098d4   size 0x3c   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::ControllerMgr::~ControllerMgr(int a1)
+  {
+    int v1; // r0
+  
+    *(_DWORD *)a1 = dword_60C799F4 + 8;
+    if ( *(_BYTE *)(a1 + 192) )
+      MEMORY[0xCCF448] = 0;
+    sead::CalculateTask::~CalculateTask(a1);
+    return operator delete(v1);
+  }
+
+/* ============================================================================
+ * _ZNK4sead13ControllerMgr27checkDerivedRuntimeTypeInfoEPKNS_15RuntimeTypeInfo9InterfaceE
+ * RVA 0x00909918   size 0x12c   xrefs 0
+ * ============================================================================ */
+  bool __fastcall sead::ControllerMgr::checkDerivedRuntimeTypeInfo(int a1, void *a2)
+  {
+    char v2; // r12
+    int v4; // r5
+  
+    if ( (dword_60C79864 & ~(1620089136 << v2) & 1) == 0 && _cxa_guard_acquire_0(dword_60C79864) )
+    {
+      *(_DWORD *)off_60C79868 = 12420028;
+      _cxa_guard_release_0(dword_60C79864);
+    }
+    v4 = 1;
+    if ( a2 != off_60C79868 )
+    {
+      if ( _cxa_guard_acquire_0(13156868) )
+      {
+        MEMORY[0xC8C200] = 12420040;
+        _cxa_guard_release_0(13156868);
+      }
+      if ( a2 != (void *)13156864 )
+      {
+        if ( _cxa_guard_acquire_0(13156876) )
+        {
+          MEMORY[0xC8C208] = 12320932;
+          _cxa_guard_release_0(13156876);
+        }
+        return a2 == (void *)13156872;
+      }
+    }
+    return v4;
+  }
+
+/* ============================================================================
+ * _ZNK4sead13ControllerMgr18getRuntimeTypeInfoEv
+ * RVA 0x00909a8c   size 0x5c   xrefs 0
+ * ============================================================================ */
+  void *sead::ControllerMgr::getRuntimeTypeInfo()
+  {
+    char v0; // r12
+  
+    if ( (dword_60C79864 & ~(1620089504 << v0) & 1) == 0 && _cxa_guard_acquire_0(dword_60C79864) )
+    {
+      *(_DWORD *)off_60C79868 = 12420028;
+      _cxa_guard_release_0(dword_60C79864);
+    }
+    return off_60C79868;
   }
 
 /* ============================================================================
@@ -158008,6 +160106,39 @@
   }
 
 /* ============================================================================
+ * _ZN4sead12GlobalRandom18SingletonDisposer_D2Ev
+ * RVA 0x0090ea78   size 0x44   xrefs 0
+ * ============================================================================ */
+  sead::IDisposer *__fastcall sead::GlobalRandom::SingletonDisposer_::~SingletonDisposer_(sead::IDisposer *a1)
+  {
+    *(_DWORD *)a1 = dword_60C79A58 + 8;
+    if ( *(sead::IDisposer **)off_60C79A5C == a1 )
+    {
+      *(_DWORD *)off_60C79A5C = 0;
+      MEMORY[0xCCF4E4] = 0;
+    }
+    return sead::IDisposer::~IDisposer(a1);
+  }
+
+/* ============================================================================
+ * _ZN4sead12GlobalRandom18SingletonDisposer_D0Ev
+ * RVA 0x0090eacc   size 0x50   xrefs 0
+ * ============================================================================ */
+  int __fastcall sead::GlobalRandom::SingletonDisposer_::~SingletonDisposer_(sead::IDisposer *a1)
+  {
+    sead::IDisposer *v1; // r0
+  
+    *(_DWORD *)a1 = dword_60C79A58 + 8;
+    if ( *(sead::IDisposer **)off_60C79A5C == a1 )
+    {
+      *(_DWORD *)off_60C79A5C = 0;
+      MEMORY[0xCCF4E4] = 0;
+    }
+    v1 = sead::IDisposer::~IDisposer(a1);
+    return operator delete((int)v1);
+  }
+
+/* ============================================================================
  * _ZN4sead12GlobalRandom14createInstanceEPNS_4HeapE
  * RVA 0x0090eb2c   size 0x78   xrefs 1
  * ============================================================================ */
@@ -158092,6 +160223,22 @@
     v3 = v1 ^ (v1 << 11) ^ ((v1 ^ (unsigned int)(v1 << 11)) >> 8) ^ v2 ^ (v2 >> 19);
     a1[3] = v3;
     return v3;
+  }
+
+/* ============================================================================
+ * _ZNK4sead6Random10getContextEPjS1_S1_S1_
+ * RVA 0x0090ec84   size 0x28   xrefs 1
+ * ============================================================================ */
+  int __fastcall sead::Random::getContext(_DWORD *a1, _DWORD *a2, _DWORD *a3, _DWORD *a4, _DWORD *a5)
+  {
+    int result; // r0
+  
+    *a2 = *a1;
+    *a3 = a1[1];
+    *a4 = a1[2];
+    result = a1[3];
+    *a5 = result;
+    return result;
   }
 
 /* ============================================================================
@@ -172153,7 +174300,7 @@
     }
     else if ( a3 == 1 )
     {
-      v9 = (unsigned __int8 *)&unk_60B4658F + 4 * (unsigned __int8)a2;
+      v9 = (unsigned __int8 *)&byte_60B4658F + 4 * (unsigned __int8)a2;
       *(_WORD *)(v6 + 6) = *v9;
       v7 = (unsigned __int16 *)(v6 + 6);
       v8 = v9[1];
@@ -208722,7 +210869,7 @@
     v45 = (float)(v88 + v106) * 0.5;
     do
     {
-      v46 = (_DWORD *)((char *)&unk_60B468C4 + 16 * v42);
+      v46 = (_DWORD *)((char *)&dword_60B468C4 + 16 * v42);
       v47 = &v88 + 3 * *v46;
       v48 = &v88 + 3 * v46[2];
       v49 = v48[1] - v47[1];

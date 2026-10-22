@@ -138,6 +138,7 @@ int __fastcall sub_607949A4(int a1, int a2);  /* 0x007949a4 */
 int __fastcall sub_607949E8(int a1);  /* 0x007949e8 */
 int __fastcall sub_60794A90(int result, int a2);  /* 0x00794a90 */
 int __fastcall sub_60794BDC(int a1, int a2, int a3, unsigned int a4, int a5);  /* 0x00794bdc */
+int __fastcall Player_create(int a1);  /* 0x00794ea4 */
 int __fastcall Player_ctor(int a1, int a2);  /* 0x00794ec0 */
 int __fastcall sub_6079569C(int a1);  /* 0x0079569c */
 int __fastcall sub_607957E0(int a1);  /* 0x007957e0 */
@@ -168,6 +169,7 @@ int __fastcall sub_607995FC(int a1);  /* 0x007995fc */
 bool __fastcall sub_6079983C(int a1, int a2);  /* 0x0079983c */
 bool __fastcall sub_607998FC(int a1);  /* 0x007998fc */
 bool __fastcall sub_60799960(int a1);  /* 0x00799960 */
+int __fastcall sub_6079A618(int a1, float *a2, int a3);  /* 0x0079a618 */
 int __fastcall sub_6079A758(int a1);  /* 0x0079a758 */
 int __fastcall sub_6079A890(_DWORD *a1);  /* 0x0079a890 */
 int __fastcall sub_6079AE3C(int a1, int a2, int a3, int a4);  /* 0x0079ae3c */
@@ -217,6 +219,9 @@ int __fastcall sub_607A1DF4(int a1, int a2);  /* 0x007a1df4 */
 int __fastcall sub_607A1E6C(int a1);  /* 0x007a1e6c */
 int __fastcall Player_stun(int a1, int a2);  /* 0x007a1f5c */
 int __fastcall sub_607A1FFC(int a1);  /* 0x007a1ffc */
+int __fastcall Player_beginState_Stunned(_DWORD *a1);  /* 0x007a205c */
+int __fastcall Player_endState_Stunned(int *a1);  /* 0x007a20e0 */
+int __fastcall Player_executeState_Stunned(_DWORD *a1);  /* 0x007a214c */
 int __fastcall sub_607A2628(int a1, int a2);  /* 0x007a2628 */
 int __fastcall sub_607A2684(int a1);  /* 0x007a2684 */
 int __fastcall sub_607A27A8(_DWORD *a1, int a2);  /* 0x007a27a8 */
@@ -290,6 +295,7 @@ int __fastcall sub_607AE4BC(int a1);  /* 0x007ae4bc */
 int __fastcall sub_607AE904(int a1, int a2);  /* 0x007ae904 */
 int __fastcall sub_607AEA48(_BYTE *a1);  /* 0x007aea48 */
 unsigned int __fastcall sub_607AF000(int a1);  /* 0x007af000 */
+unsigned int __fastcall sub_607AF67C(int a1, int a2);  /* 0x007af67c */
 int __fastcall sub_607AF910(int a1, int a2);  /* 0x007af910 */
 int __fastcall sub_607AFBB0(int a1);  /* 0x007afbb0 */
 int __fastcall sub_607AFD98(int a1);  /* 0x007afd98 */

@@ -10,6 +10,12 @@ symbol names applied so cross-calls read by name.
 | Symbols applied | 3,170 |
 | Files | 11 source files, 5 subsystems |
 
+## Naming
+
+Only 9.7% of functions are named, and that is deliberate. [NAMING.md](NAMING.md)
+records which methods work, which do not, and why a wrong name is worse than
+none.
+
 ## Layout
 
 | Directory | Contents |
@@ -47,15 +53,17 @@ python scripts/make_decompiled_corpus.py                     # lay out repo
 
 ## Coverage
 
-Only functions that are **live** (at least one incoming code xref) and at
-least `0x30` bytes are included. That skips ~16.9k unreferenced functions,
-~11.2k small thunks, and ~8.9k jump-table stubs. 32,897 of the image's 49,470
-functions have no incoming xref at all.
+Only **live** functions (at least one incoming code xref) of at least
+`0x30` bytes are included, plus **every named function regardless of xrefs** --
+table-driven static initialisers are called indirectly and would otherwise be
+dropped. That excludes ~15.9k unreferenced unnamed functions and ~10.1k small
+unnamed thunks. 32,897 of the image's 49,470 functions have no incoming xref at
+all.
 
 | Subsystem | Functions | Prototypes |
 |---|---|---|
-| `player/` | 430 | 375 |
-| `powerup/` | 303 | 253 |
-| `actors/` | 3,282 | 2,753 |
-| `systems/` | 3,841 | 3,280 |
-| `libs/` | 3,229 | 2,506 |
+| `player/` | 437 | 381 |
+| `powerup/` | 305 | 254 |
+| `actors/` | 4,151 | 2,870 |
+| `systems/` | 4,960 | 3,368 |
+| `libs/` | 3,334 | 2,512 |

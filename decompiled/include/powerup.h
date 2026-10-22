@@ -214,6 +214,7 @@ int __fastcall sub_6047684C(int result);  /* 0x0047684c */
 int __fastcall sub_60476898(int a1);  /* 0x00476898 */
 int __fastcall sub_60476920(int a1, int a2);  /* 0x00476920 */
 int __fastcall sub_604769E0(int a1, int a2);  /* 0x004769e0 */
+int __fastcall sub_60476A7C(int a1, int a2, int a3, char **a4);  /* 0x00476a7c */
 int __fastcall sub_6047778C(_DWORD *a1, int a2, int a3);  /* 0x0047778c */
 int __fastcall sub_60477B30(_DWORD *a1, int a2);  /* 0x00477b30 */
 int __fastcall sub_60478080(int a1);  /* 0x00478080 */

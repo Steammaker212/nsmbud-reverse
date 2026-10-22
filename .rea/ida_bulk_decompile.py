@@ -92,10 +92,14 @@ for ea in idautils.Functions():
         continue
 
     size = f.end_ea - f.start_ea
-    if size < MIN_SIZE:
+    is_named = not (nm.startswith("sub_") or nm.startswith("nullsub_") or not nm)
+    if size < MIN_SIZE and not is_named:
         stats["skipped_small"] += 1
         continue
-    if xrefs_to(ea) == 0:
+    # Named functions are always kept even with no code xrefs: the table-driven static
+    # initialisers (ItemNameTable_init and friends) are called indirectly, so a code-xref
+    # count of zero does not mean dead. Only unnamed functions need the liveness filter.
+    if xrefs_to(ea) == 0 and not is_named:
         stats["skipped_dead"] += 1
         continue
 
