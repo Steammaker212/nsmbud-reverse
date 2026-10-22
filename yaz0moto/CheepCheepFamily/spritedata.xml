@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<!--
+    Cheep Cheep Family: field additions for Yaz0moto.
+
+    WHAT THIS ADDS, AND WHY IT IS DEFENSIBLE
+    ========================================
+    The retail game binds every Pukupuku-family actor to the shared movement
+    system in its onCreate:
+
+        movementHandler.link(position,
+                             movementHandler.getMaskForMovementType(settings2 & 0xFF),
+                             movementId);
+
+    Two things follow, and both are checkable against the stock editor's own data:
+
+      * settings2 & 0xFF is the low byte of settings2. Yaz0moto stores settings2
+        across nybbles 13-20 with nybble 20 holding bits 0-3, so that low byte is
+        exactly nybbles 19-20.
+      * movementId is Actor+0x1C, stored at nybbles 21-22.
+
+    The base game already documents nybble 19-20 as "Movement Type" and 21-22 as
+    "Movement ID" on 143 other sprites, so this is the engine's existing
+    convention, not something invented here.
+
+    Yet none of the eighteen Cheep-family sprites exposes those two nybbles
+    (except the two grouped variants, which use 21-22 for their Group ID). That
+    is the gap this patch closes: you can attach a Cheep Cheep to a movement
+    controller without hand-editing raw nybbles.
+
+    WHAT THIS DELIBERATELY DOES NOT DO
+    ==================================
+    * It does not touch `notes`. The merge behaviour for that attribute is not
+      documented and could replace the base game's text, which would be a
+      regression.
+    * It does not rename any sprite.
+    * It does not write to a nybble the base game already uses. Each sprite below
+      was checked against the extracted "occupied nybble" set; sprites 615 and
+      723 are given only 19-20 because 21-22 is their Group ID.
+    * It does not claim the UNUSED sprites are usable. They are left as they are.
+
+    CONFIDENCE
+    ==========
+    The movement binding comes from our decompilation of the Cheep Cheep
+    constructor path and is cross-checked against the editor's own convention on
+    143 sprites. It is not confirmed by loading a level in-game. If movement
+    controllers turn out not to affect a given variant, that variant's two fields
+    are inert rather than harmful.
+-->
+<sprites>
+
+    <!-- ===== swimming variants ===== -->
+
+    <!-- profile 530 -->
+    <sprite id="101" name="Cheep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement"
+               comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement"
+               comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+
+    <!-- profile 532 -->
+    <sprite id="113" name="Medium-sized Cheep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement"
+               comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement"
+               comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+
+    <!-- profile 538 -->
+    <sprite id="482" name="Mecha Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement"
+               comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement"
+               comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+
+    <!-- ===== following variants ===== -->
+
+    <!-- profile 534 -->
+    <sprite id="588" name="Deep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- profile 535 -->
+    <sprite id="589" name="Medium Deep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- profile 536 -->
+    <sprite id="590" name="Eep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- profile 537 -->
+    <sprite id="591" name="Medium Eep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- ===== spiny / jumping ===== -->
+
+    <!-- profile 539 -->
+    <sprite id="120" name="Spiny Cheep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- profile 540 -->
+    <sprite id="129" name="Jumping Cheep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- profile 541 -->
+    <sprite id="587" name="Flying Mecha Cheep [UNUSED]">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- ===== grouped variants =====
+         These two already use nybble 21-22 for the Group ID, so only the
+         movement type nybble is added. -->
+
+    <!-- profile 531 -->
+    <sprite id="615" name="Grouped Cheep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement"
+               comment="Nybbles 21-22 are the Group ID on this sprite, so a movement ID is not available here." />
+    </sprite>
+
+    <!-- profile 533 -->
+    <sprite id="723" name="Medium-sized Grouped Cheep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement"
+               comment="Nybbles 21-22 are the Group ID on this sprite, so a movement ID is not available here." />
+    </sprite>
+
+    <!-- ===== spawn / area variants ===== -->
+
+    <!-- profile 542 -->
+    <sprite id="106" name="Cheep Cheep Spawn Location [UNUSED]">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- profile 543 -->
+    <sprite id="592" name="Searching Cheep Cheep [UNUSED]">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- profile 544 -->
+    <sprite id="597" name="Eep Cheep Spawner [UNUSED]">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- profile 545 -->
+    <sprite id="131" name="Jumping Cheep Cheep Spawn Area">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- profile 546 -->
+    <sprite id="586" name="Flying Mecha Cheep Spawner [UNUSED]">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- profile 547 -->
+    <sprite id="114" name="Cheep Cheep Formation [UNUSED]">
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+</sprites>

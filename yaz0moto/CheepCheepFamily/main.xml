@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+    Cheep Cheep Family — a Yaz0moto patch for New Super Mario Bros. U Deluxe.
+
+    This exposes fields that exist in the game's code but that the stock editor
+    does not surface, and groups the eighteen Pukupuku-family sprites under one
+    view. It adds; it does not relabel or contradict anything the base game
+    already documents.
+
+    See README.md for what is verified and what is not.
+-->
+<game name="Cheep Cheep Family (RE)"
+      version="1.0"
+      description="Exposes movement binding on the Cheep Cheep family, and groups all eighteen Pukupuku sprites into one view. Derived from reverse engineering the retail Deluxe binary."
+      base="New Super Mario Bros. U Deluxe"
+      patchReleaseUrl="https://github.com/Steammaker212/nsmbud-reverse">
+
+    <!-- New fields on existing sprites: merged on top of the base definitions. -->
+    <file name="spritedata"       path="spritedata.xml"       patch="true" />
+
+    <!-- A dedicated view, so the family stops being scattered across the
+         Underwater / Beach / Enemies categories. -->
+    <file name="spritecategories" path="spritecategories.xml" patch="true" />
+
+</game>
