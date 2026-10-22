@@ -1,0 +1,25 @@
+[
+  {"rva": "0x1536B0", "name": "Object_isSelfLinkedOrEmptyNeighbour",
+   "why": "returns 1 unless a2's fields +20/+24 are both zero, in which case it compares a1+20 against a2+16 -- a link-validity test"},
+
+  {"rva": "0x8C2698", "name": "MessageQueue_allocWithBlocking",
+   "why": "uses nn::os::TryReceiveMessageQueue / TrySendMessageQueue / SendMessageQueue / ReceiveMessageQueue -- the allocate-with-wait path used by the command emitter at 0x8B7240"},
+
+  {"rva": "0x921DF0", "name": "Array8_releaseSlot",
+   "why": "for a2 != -1, indexes a1 + 8*a2, and when that slot is set calls sub_60921EB8 then stores 255"},
+
+  {"rva": "0x478680", "name": "Sound_dispatchByKind",
+   "why": "special-cases kind 15 through sub_60807FC0 with 1048577, then routes bits 4 and 8 of the kind to SoundPlayer_updateWithLocation"},
+
+  {"rva": "0x90E438", "name": "Bounds_initFromPlatformLimits",
+   "why": "writes the float bit patterns 2139095039 and -8388609 (max/min float sentinels) into result[1..4], installs vptr dword_60C79A54+8, and reads the limit at off_60C79A28"},
+
+  {"rva": "0x867E38", "name": "Object_getChildDword32PlusOffset",
+   "why": "reads the dword at (*(a2+192))+32, returning 0 when absent or that value plus a1+32 when present"},
+
+  {"rva": "0x7865BC", "name": "Object_clearBitInField4",
+   "why": "clears bit a2 of the dword at +4"},
+
+  {"rva": "0x1916EC", "name": "getIndexTableBase",
+   "why": "returns the raw dword at +1296 -- the accessor paired with hasIndexTable and the two table lookups"}
+]

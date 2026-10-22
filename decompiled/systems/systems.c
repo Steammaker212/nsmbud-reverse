@@ -981,7 +981,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       a1[914] = v2 + 1;
       if ( v2 == 18 )
-        sub_60478680((int)"SE_SYS_CONTINUE_DONE", 9);
+        Sound_dispatchByKind((int)"SE_SYS_CONTINUE_DONE", 9);
     }
     result = *(unsigned __int8 *)(a1[888] + 16);
     if ( *(_BYTE *)(a1[888] + 16) )
@@ -3843,7 +3843,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Registry_iterateAndRegister(a1 + 88, 0);
     ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xC9F2D0, 0);
     *(_BYTE *)(a1 + 12) = 1;
-    result = sub_60478680((int)"SE_SYS_DIALOGUE_IN", 9);
+    result = Sound_dispatchByKind((int)"SE_SYS_DIALOGUE_IN", 9);
     *(_BYTE *)(a1 + 598) = 0;
     *(_BYTE *)(a1 + 597) = 0;
     return result;
@@ -18220,7 +18220,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA0A40 = (int)"SE_SYS_CTRL_3_CONNECTED_TV";
       _cxa_guard_release_0(&unk_60CA09F4);
     }
-    sub_60478680(*((_DWORD *)&unk_60CA09D0 + *(_DWORD *)(a1 + 5332) + 25), 9);
+    Sound_dispatchByKind(*((_DWORD *)&unk_60CA09D0 + *(_DWORD *)(a1 + 5332) + 25), 9);
     if ( (unsigned int)(*(_DWORD *)(a1 + 5332) + 8) < 0xE )
       v2 = *(_DWORD *)(a1 + 5332) + 8;
     result = *(_DWORD *)(a1 + 4 * v2 + 3636);
@@ -23525,7 +23525,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 v11 = *(float *)(a1 + 20508);
                 if ( *(float *)(a1 + 20516) <= v11 && v11 <= *(float *)(a1 + 20524) )
                 {
-                  sub_60478680((int)"SE_SYS_BTN_OVER", 15);
+                  Sound_dispatchByKind((int)"SE_SYS_BTN_OVER", 15);
                   *(_BYTE *)(a1 + 40) = 1;
                   v5 = 13242768;
                   return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
@@ -27811,7 +27811,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         while ( (signed int)v28 < *(_DWORD *)(a1 + 279736) );
       }
-      sub_60478680((int)"SE_SYS_BACK", 15);
+      Sound_dispatchByKind((int)"SE_SYS_BACK", 15);
       StateMgr_resetAndMaybeChange(a1 + 85956);
       *(_WORD *)(a1 + 87008) = 0;
       IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
@@ -28246,7 +28246,7 @@ static inline unsigned int uxtb16(unsigned int x)
           result = *(unsigned __int8 *)(a1 + 86468);
           if ( !*(_BYTE *)(a1 + 86468) )
             return result;
-          sub_60478680((int)"SE_SYS_BACK", 15);
+          Sound_dispatchByKind((int)"SE_SYS_BACK", 15);
           *(_BYTE *)(a1 + 56) = 1;
           v3 = 13243888;
         }
@@ -28262,7 +28262,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( !*(_BYTE *)(a1 + 86468) )
       {
-        sub_60478680((int)"SE_SYS_BACK", 15);
+        Sound_dispatchByKind((int)"SE_SYS_BACK", 15);
         StateMgr_resetAndMaybeChange(a1 + 85956);
         *(_WORD *)(a1 + 87008) = 0;
         IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
@@ -30267,7 +30267,7 @@ static inline unsigned int uxtb16(unsigned int x)
               (*(void (__fastcall **)(int, int))(*(_DWORD *)v5 + 4))(v5, 1);
               v8 = "SE_SYS_MII_CAP_ON";
             }
-            result = sub_60478680((int)v8, 15);
+            result = Sound_dispatchByKind((int)v8, 15);
           }
         }
       }
@@ -35624,7 +35624,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else
       v4 = "SE_SYS_DIALOGUE_IN";
   LABEL_7:
-    sub_60478680((int)v4, v5);
+    Sound_dispatchByKind((int)v4, v5);
     *(_BYTE *)(a1 + 3720) = 1;
     *(_BYTE *)(a1 + 3777) = 1;
     *(_DWORD *)(a1 + 3780) = 4;
@@ -35724,7 +35724,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( sub_604B6400(a1) == 1 && sub_6047F384(a1 + 3792, 0x4000) )
     {
-      sub_60478680((int)"SE_SYS_BACK", 9);
+      Sound_dispatchByKind((int)"SE_SYS_BACK", 9);
       v3 = (_DWORD *)(a1 + 3748);
   LABEL_17:
       StateMgr::changeState(v3, 13245880);
@@ -38594,7 +38594,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v9[0] = 12321336;
         v9[1] = v8;
         MessageQueue_postType3(v9, v7, 1);
-        sub_60478680((int)"SE_SYS_COUNT_ZANKI", 9);
+        Sound_dispatchByKind((int)"SE_SYS_COUNT_ZANKI", 9);
         result = *(_DWORD *)(a1 + 3692) + 1;
         *(_DWORD *)(a1 + 3692) = result;
         *(_BYTE *)(a1 + 3696) = 1;
@@ -38667,7 +38667,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(unsigned __int8 *)(*(_DWORD *)(a1 + 3552) + 16);
       if ( *(_BYTE *)(*(_DWORD *)(a1 + 3552) + 16) )
       {
-        sub_60478680((int)"SE_SYS_CONTINUE_DONE", 9);
+        Sound_dispatchByKind((int)"SE_SYS_CONTINUE_DONE", 9);
         if ( *(int *)(a1 + 3660) <= 0 )
         {
           *(_DWORD *)(a1 + 3680) = 2;
@@ -43459,7 +43459,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     bool v4; // zf
   
-    if ( sub_601916EC(MEMORY[0xC8996C]) == 51 )
+    if ( getIndexTableBase(MEMORY[0xC8996C]) == 51 )
     {
       v2 = 13249548;
       return StateMgr::changeState((_DWORD *)(a1 + 24), v2);
@@ -46644,7 +46644,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 14140) = 1;
         *(_BYTE *)(a1 + 14174) = 1;
   LABEL_32:
-        sub_60478680((int)"SE_SYS_PAUSE", 9);
+        Sound_dispatchByKind((int)"SE_SYS_PAUSE", 9);
         break;
       case 2:
         if ( v5 != 3 )
@@ -61897,7 +61897,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MessageQueue_postType3(&v30, *(_DWORD *)(a1 + 4040), 0);
       v17 = "SE_SYS_COMPLETE_MESSAGE_YELLOW";
     }
-    sub_60478680((int)v17, 9);
+    Sound_dispatchByKind((int)v17, 9);
     result = MEMORY[0xCC6D78];
     if ( !*(_BYTE *)(MEMORY[0xCC6D78] + 20) )
       *(_BYTE *)(MEMORY[0xCC6D78] + 20) = 1;
@@ -61986,7 +61986,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v2; // r0
   
-    sub_60478680((int)"SE_SYS_DIALOGUE_OUT", 9);
+    Sound_dispatchByKind((int)"SE_SYS_DIALOGUE_OUT", 9);
     v2 = *(_DWORD *)(a1 + 4 * *(unsigned __int8 *)(a1 + 4075) + 4060);
     *(_DWORD *)(v2 + 36) |= 2u;
     *(_BYTE *)(a1 + 4073) = 1;
@@ -64310,7 +64310,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604E34D0(int a1)
   {
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA56C4, 0);
-    return sub_60478680((int)"SE_SYS_DIALOGUE_OUT_AUTO", 9);
+    return Sound_dispatchByKind((int)"SE_SYS_DIALOGUE_OUT_AUTO", 9);
   }
 
 /* ============================================================================
@@ -65345,7 +65345,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *v9 = --result;
       if ( !result )
-        return sub_60478680((int)"SE_SYS_STAR_COIN_PAY", 9);
+        return Sound_dispatchByKind((int)"SE_SYS_STAR_COIN_PAY", 9);
     }
     return result;
   }
@@ -71889,7 +71889,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( sub_604F31CC(a1, v5) )
         {
-          sub_60478680((int)"SE_SYS_DECIDE", 9);
+          Sound_dispatchByKind((int)"SE_SYS_DECIDE", 9);
           v6 = (_DWORD *)(a1 + 42504);
           v7 = 13263936;
           return StateMgr::changeState(v6, v7);
@@ -71924,7 +71924,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v7 = 13264032;
             return StateMgr::changeState(v6, v7);
           }
-          return sub_60478680((int)"SE_SYS_INVALID", 9);
+          return Sound_dispatchByKind((int)"SE_SYS_INVALID", 9);
         }
         else if ( !*(_BYTE *)(a1 + 47134) )
         {
@@ -71970,7 +71970,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 goto LABEL_45;
             }
           }
-          sub_60478680((int)"SE_SYS_INVALID", 9);
+          Sound_dispatchByKind((int)"SE_SYS_INVALID", 9);
           result = v3;
   LABEL_45:
           *v2 = result;
@@ -72107,7 +72107,7 @@ static inline unsigned int uxtb16(unsigned int x)
       case 0xE:
         v5 = "SE_PLY_CHANGE_KINOPEACH";
   LABEL_11:
-        sub_60478680((int)v5, 9);
+        Sound_dispatchByKind((int)v5, 9);
         break;
       default:
         break;
@@ -72312,7 +72312,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(List_getNthNode(v2, 8) - *v1 + 188) = 1;
     *(_BYTE *)(List_getNthNode(v2, 9) - *v1 + 188) = 1;
     *(_BYTE *)(List_getNthNode(v2, 10) - *v1 + 188) = 1;
-    sub_60478680((int)"SE_SYS_INVALID", 9);
+    Sound_dispatchByKind((int)"SE_SYS_INVALID", 9);
     result = v1[7072];
     *(_BYTE *)(result + 64) &= ~1u;
     return result;
@@ -79759,7 +79759,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     if ( *(_DWORD *)(a1 + 40104) != 1 )
-      sub_60478680((int)"SE_SYS_PAGE", 15);
+      Sound_dispatchByKind((int)"SE_SYS_PAGE", 15);
     *(_BYTE *)(a1 + 40097) = 1;
     return 40097;
   }
@@ -82435,7 +82435,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047F28C(v7, (int)"SE_SYS_DECIDE", 9);
     sub_6047F340(v7, (int)"SE_SYS_CURSOR", 9);
     sub_6047F37C(v7, 9);
-    return sub_60478680((int)"SE_SYS_DIALOGUE_IN", 9);
+    return Sound_dispatchByKind((int)"SE_SYS_DIALOGUE_IN", 9);
   }
 
 /* ============================================================================
@@ -95198,9 +95198,9 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605115FC(int a1)
   {
     if ( *(_DWORD *)(Global_getContextVtable(a1) + 492) == 3 )
-      return sub_60478680((int)"SE_SYS_PAUSE", 5);
+      return Sound_dispatchByKind((int)"SE_SYS_PAUSE", 5);
     else
-      return sub_60478680((int)"SE_SYS_PAUSE", 9);
+      return Sound_dispatchByKind((int)"SE_SYS_PAUSE", 9);
   }
 
 /* ============================================================================
@@ -99699,7 +99699,7 @@ static inline unsigned int uxtb16(unsigned int x)
             result = (int)(float)(*(float *)(result + 48) * 100.0);
             if ( result >= 1 )
             {
-              sub_60478680((int)"SE_SYS_SHA_ICON_APPEAR", 9);
+              Sound_dispatchByKind((int)"SE_SYS_SHA_ICON_APPEAR", 9);
               *v14 = 1;
               return 1;
             }
@@ -118962,7 +118962,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
-    sub_60478680((int)"SE_SYS_CHANGE_MODE_RDASH", 15);
+    Sound_dispatchByKind((int)"SE_SYS_CHANGE_MODE_RDASH", 15);
     return sub_6082B6B8(MEMORY[0xCC6E04]);
   }
 
@@ -119325,7 +119325,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
-    return sub_60478680((int)"SE_SYS_FS_DELETE", 15);
+    return Sound_dispatchByKind((int)"SE_SYS_FS_DELETE", 15);
   }
 
 /* ============================================================================
@@ -119872,7 +119872,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
-    return sub_60478680((int)"SE_SYS_FS_COPY", 15);
+    return Sound_dispatchByKind((int)"SE_SYS_FS_COPY", 15);
   }
 
 /* ============================================================================
@@ -122397,7 +122397,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
-    return sub_60478680((int)"SE_SYS_CHANGE_MODE_RDASH", 15);
+    return Sound_dispatchByKind((int)"SE_SYS_CHANGE_MODE_RDASH", 15);
   }
 
 /* ============================================================================
@@ -122666,7 +122666,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
-    return sub_60478680((int)"SE_SYS_FS_DELETE", 15);
+    return Sound_dispatchByKind((int)"SE_SYS_FS_DELETE", 15);
   }
 
 /* ============================================================================
@@ -123244,7 +123244,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
-    return sub_60478680((int)"SE_SYS_FS_COPY", 15);
+    return Sound_dispatchByKind((int)"SE_SYS_FS_COPY", 15);
   }
 
 /* ============================================================================
@@ -125164,7 +125164,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605324A4(a1 + 4016, *v2);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA74, 0);
     *(_BYTE *)(a1 + 34724) = 1;
-    sub_60478680((int)"SE_SYS_DIALOGUE_IN", 15);
+    Sound_dispatchByKind((int)"SE_SYS_DIALOGUE_IN", 15);
     return sub_6081699C(MEMORY[0xCC6B68]);
   }
 
@@ -125287,7 +125287,7 @@ static inline unsigned int uxtb16(unsigned int x)
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 31840));
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA74, 0);
     *(_BYTE *)(a1 + 34724) = 1;
-    sub_60478680((int)"SE_SYS_BACK", 15);
+    Sound_dispatchByKind((int)"SE_SYS_BACK", 15);
     return sub_608169AC(MEMORY[0xCC6B68]);
   }
 
@@ -125432,7 +125432,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( *(_BYTE *)(*(_DWORD *)(a1 + 31784) + 65) )
       {
-        sub_60478680((int)"SE_SYS_FS_FINISHED", 15);
+        Sound_dispatchByKind((int)"SE_SYS_FS_FINISHED", 15);
         *v2 = 1;
       }
       sub_6080840C(MEMORY[0xCC6AF8], (int)"SE_SYS_FS_PROCESSING", 1, 0, 0);
@@ -125469,7 +125469,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 34692) = 2;
     *(_DWORD *)(a1 + 34688) = 0;
     sub_608169AC(MEMORY[0xCC6B68]);
-    return sub_60478680((int)"SE_SYS_DIALOGUE_OUT_AUTO", 15);
+    return Sound_dispatchByKind((int)"SE_SYS_DIALOGUE_OUT_AUTO", 15);
   }
 
 /* ============================================================================
@@ -125523,7 +125523,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_BYTE *)(a1 + 34725) = 0;
     *(_BYTE *)(a1 + 34726) = 0;
-    sub_60478680((int)"SE_SYS_DIALOGUE_IN", 15);
+    Sound_dispatchByKind((int)"SE_SYS_DIALOGUE_IN", 15);
     return sub_6081699C(MEMORY[0xCC6B68]);
   }
 
@@ -125792,7 +125792,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = *(_DWORD *)(a1 + 34704);
         if ( (v6 & 0x4000) != 0 || (v7 = *(_DWORD *)(a1 + 34708), (v7 & 0x4000) != 0) )
         {
-          sub_60478680((int)"SE_SYS_BACK", 15);
+          Sound_dispatchByKind((int)"SE_SYS_BACK", 15);
           return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286492);
         }
         else
@@ -125904,7 +125904,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( *(_BYTE *)(*(_DWORD *)(a1 + 31760) + 65) )
       {
-        sub_60478680((int)"SE_SYS_FS_FINISHED", 15);
+        Sound_dispatchByKind((int)"SE_SYS_FS_FINISHED", 15);
         *v2 = 1;
       }
       sub_6080840C(MEMORY[0xCC6AF8], (int)"SE_SYS_FS_PROCESSING", 1, 0, 0);
@@ -125941,7 +125941,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 34692) = 2;
     *(_DWORD *)(a1 + 34688) = 0;
     sub_608169AC(MEMORY[0xCC6B68]);
-    return sub_60478680((int)"SE_SYS_DIALOGUE_OUT_AUTO", 15);
+    return Sound_dispatchByKind((int)"SE_SYS_DIALOGUE_OUT_AUTO", 15);
   }
 
 /* ============================================================================
@@ -140262,7 +140262,7 @@ static inline unsigned int uxtb16(unsigned int x)
           IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 5860));
           *(_DWORD *)(a1 + 40) = 13292936;
           StateMgr::changeState((_DWORD *)(a1 + 24), 13292776);
-          return sub_60478680((int)"SE_SYS_BACK", 15);
+          return Sound_dispatchByKind((int)"SE_SYS_BACK", 15);
         }
         if ( (v5 & 0x80) != 0 )
         {
@@ -144905,7 +144905,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCADD20, 0);
     ArrayOf5_setEntryFloat16((int)v2, 0);
     *v3 = 1;
-    sub_60478680((int)"SE_SYS_DIALOGUE_IN", 9);
+    Sound_dispatchByKind((int)"SE_SYS_DIALOGUE_IN", 9);
     ArrayOf5_lookupByIndex2(v2, 1u, (_DWORD *)0xCADD28, 0);
     result = ArrayOf5_setEntryFloat16((int)v2, 1u);
     *v1 = 1;
@@ -144954,7 +144954,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int sub_6055CBE8()
   {
-    return sub_60478680((int)"SE_SYS_DIALOGUE_IN", 9);
+    return Sound_dispatchByKind((int)"SE_SYS_DIALOGUE_IN", 9);
   }
 
 /* ============================================================================
@@ -145452,7 +145452,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int sub_6055D82C()
   {
-    return sub_60478680((int)"SE_SYS_PAGE", 9);
+    return Sound_dispatchByKind((int)"SE_SYS_PAGE", 9);
   }
 
 /* ============================================================================
@@ -151437,7 +151437,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( (*(_QWORD *)(MEMORY[0xCBD8AC] + 16) & v8) == 0 )
             {
               a1[7312] = 0;
-              if ( sub_601536B0(MEMORY[0xC8820C], a1 + 6120) == 1 )
+              if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 6120) == 1 )
                 ColliderMgr_removeRelated1(MEMORY[0xC8820C], a1 + 6120);
             }
           }
@@ -209648,7 +209648,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v10[2]; // [sp+10h] [bp-8h] BYREF
   
     v4 = (_DWORD *)(a1 + 6160);
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 6160) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 6160) )
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], v4);
     v5 = MEMORY[0xC88234];
     ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], a1 + 188);
@@ -210375,7 +210375,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 156) = 0x40000000;
     *(_DWORD *)(a1 + 160) = 0;
     *(_DWORD *)(a1 + 164) = 0;
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 6160) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 6160) )
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 6160));
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
       v3 = &qword_60CB0E18;

@@ -1811,7 +1811,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607865BC
+ * Object_clearBitInField4
  * RVA 0x007865bc   size 0x14   xrefs 50
  * ============================================================================ */
   int __fastcall sub_607865BC(int result, char a2)
@@ -14559,7 +14559,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   LABEL_9:
       *v2 = 0;
   LABEL_10:
-      sub_607865BC(v2 - 2685, 1);
+      Object_clearBitInField4(v2 - 2685, 1);
     }
   LABEL_11:
     v9 = (_DWORD *)(a1 + 11432);
@@ -14586,7 +14586,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   LABEL_19:
     *v9 = 0;
   LABEL_20:
-    sub_607865BC(v6, 2);
+    Object_clearBitInField4(v6, 2);
   LABEL_21:
     result = (_DWORD *)(a1 + 11436);
     v14 = *(_DWORD *)(a1 + 11436);
@@ -14606,13 +14606,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         goto LABEL_27;
   LABEL_29:
       *result = 0;
-      return (_DWORD *)sub_607865BC(v6, 3);
+      return (_DWORD *)Object_clearBitInField4(v6, 3);
     }
   LABEL_27:
     v16 = v14 - 1;
     *result = v16;
     if ( !v16 )
-      return (_DWORD *)sub_607865BC(v6, 3);
+      return (_DWORD *)Object_clearBitInField4(v6, 3);
     return result;
   }
 
@@ -17004,8 +17004,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 188))(a1);
       *(_BYTE *)(a1 + 12453) = 1;
-      sub_607865BC(a1 + 688, 5);
-      return sub_607865BC(a1 + 688, 6);
+      Object_clearBitInField4(a1 + 688, 5);
+      return Object_clearBitInField4(a1 + 688, 6);
     }
     return result;
   }
@@ -18001,8 +18001,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_BYTE *)(MEMORY[0xCC436C] + 157) &= ~(1 << *(_BYTE *)(a1 + 84));
     *(_DWORD *)(a1 + 1208) &= ~1u;
     *(_DWORD *)(a1 + 1220) &= 0xCFFFFFFF;
-    sub_607865BC(a1 + 688, 2);
-    sub_607865BC(v2, 6);
+    Object_clearBitInField4(a1 + 688, 2);
+    Object_clearBitInField4(v2, 6);
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1204))(a1);
     v6 = *(float *)(a1 + 88);
     v7 = (int *)(a1 + 1276);
@@ -21058,7 +21058,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[306] &= 0xFFFFBA3F;
     a1[304] &= ~0x100u;
     a1[305] &= ~0x100000u;
-    return sub_607865BC(a1 + 172, 2);
+    return Object_clearBitInField4(a1 + 172, 2);
   }
 
 /* ============================================================================
@@ -21306,7 +21306,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
   
-    sub_607865BC(a1 + 172, 1);
+    Object_clearBitInField4(a1 + 172, 1);
     a1[40] = FixedPoint_selectSign((int)a1, a1[20]);
     a1[301] &= ~0x80000u;
     result = (*(int (__fastcall **)(int *))(*a1 + 1064))(a1);
@@ -21482,7 +21482,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     (*(void (__fastcall **)(_DWORD *, int))(*a1 + 628))(a1, 1);
     a1[301] &= ~0x20000u;
-    sub_607865BC((int)(a1 + 172), 1);
+    Object_clearBitInField4((int)(a1 + 172), 1);
     result = (*(int (__fastcall **)(_DWORD *))(*a1 + 1064))(a1);
     if ( result == 1 )
     {
@@ -23074,7 +23074,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_607A4A88(int a1)
   {
     *(_DWORD *)(a1 + 1232) &= 0xDFFF7FFF;
-    return sub_607865BC(a1 + 688, 1);
+    return Object_clearBitInField4(a1 + 688, 1);
   }
 
 /* ============================================================================
@@ -30053,7 +30053,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[302] &= 0xFF0FFFFF;
     a1[306] = v2 & 0xFFFFFBFB;
     a1[307] = v3 & 0xFFFDBBFF;
-    sub_607865BC((int)(a1 + 172), 6);
+    Object_clearBitInField4((int)(a1 + 172), 6);
     return sub_607957D4((int)a1, 0);
   }
 
@@ -30669,9 +30669,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !sub_607C16A0(a1, 0) && !sub_607AEA48((_BYTE *)a1) && !sub_607AC8CC(a1) )
     {
       if ( (*(_BYTE *)(a1 + 6900) & 0x60) != 0 )
-        sub_607865BC(a1 + 688, 2);
+        Object_clearBitInField4(a1 + 688, 2);
       if ( *(float *)(a1 + 124) <= 0.0 )
-        sub_607865BC(a1 + 688, 5);
+        Object_clearBitInField4(a1 + 688, 5);
       v2 = 0;
       v3 = *(_DWORD *)(a1 + 9940);
       if ( v3 == 1 )
@@ -31101,7 +31101,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( result )
       return result;
     if ( (*(_BYTE *)(a1 + 6900) & 0x60) != 0 )
-      sub_607865BC(a1 + 688, 2);
+      Object_clearBitInField4(a1 + 688, 2);
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1392))(a1) == 1 )
       return Player_changeState(a1, 13388732, 1);
     if ( !*(_DWORD *)(a1 + 9940) )
@@ -31204,8 +31204,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1[306] = v3 & 0xFFFFB03B;
     v1[307] = v4 & 0xFFFDBFFF;
     v1 += 172;
-    sub_607865BC((int)v1, 5);
-    return sub_607865BC((int)v1, 6);
+    Object_clearBitInField4((int)v1, 5);
+    return Object_clearBitInField4((int)v1, 6);
   }
 
 /* ============================================================================
@@ -31496,7 +31496,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v3 <= 1.5 )
     {
-      sub_607865BC(a1 + 688, 6);
+      Object_clearBitInField4(a1 + 688, 6);
       v3 = *(float *)(a1 + 124);
     }
     *(_DWORD *)(a1 + 100) = MEMORY[0xB0B2B8];
@@ -34895,7 +34895,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Object_callSlots19And21(a1 + 11356, 6);
     *(_DWORD *)(*(_DWORD *)(a1 + 11360) + 208) &= ~0x20u;
     *v2 = 0;
-    sub_607865BC(a1 + 688, 2);
+    Object_clearBitInField4(a1 + 688, 2);
     return sub_60763400(a1);
   }
 
@@ -35853,7 +35853,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 1224) = v2 & 0xFFFFBBFB;
     *(_DWORD *)(a1 + 9580) = 0;
     *(_DWORD *)(a1 + 9788) = 0;
-    result = sub_607865BC(a1 + 688, 5);
+    result = Object_clearBitInField4(a1 + 688, 5);
     v4 = *(float *)(a1 + 88);
     if ( v4 <= 0.0 )
       v4 = -v4;
@@ -36129,7 +36129,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v5; // r0
   
     v2 = (_DWORD *)(a1 + 688);
-    sub_607865BC(a1 + 688, 4);
+    Object_clearBitInField4(a1 + 688, 4);
     if ( *(_DWORD *)(a1 + 1320) == 4 )
       sub_6078667C(v2, 4);
     *(_DWORD *)(a1 + 1220) &= ~0x2000000u;
@@ -36482,11 +36482,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[307] &= ~0x8000u;
     a1[301] &= ~0x2000000u;
     a1[306] = v3 & 0xFFFFBA2B;
-    sub_607865BC((int)(a1 + 172), 5);
-    sub_607865BC(v2, 6);
-    sub_607865BC(v2, 2);
-    sub_607865BC(v2, 1);
-    sub_607865BC(v2, 7);
+    Object_clearBitInField4((int)(a1 + 172), 5);
+    Object_clearBitInField4(v2, 6);
+    Object_clearBitInField4(v2, 2);
+    Object_clearBitInField4(v2, 1);
+    Object_clearBitInField4(v2, 7);
     a1[40] = FixedPoint_selectSign((int)a1, a1[20]);
     a1[3025] = 0;
     result = ActorMgr_findAndInstantiate3();
@@ -36662,7 +36662,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       goto LABEL_4;
     if ( a1[31] >= 0.0 )
       goto LABEL_4;
-    sub_607865BC(a1 + 172, 5);
+    Object_clearBitInField4(a1 + 172, 5);
     *((_DWORD *)a1 + 306) |= 0x400u;
     v2 = 1;
     if ( !sub_607AC8CC((int)a1) )

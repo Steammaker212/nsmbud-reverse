@@ -26309,7 +26309,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD, _DWORD))(**(_DWORD **)(a1 + 112) + 92))(*(_DWORD *)(a1 + 112), 0);
       result = *(unsigned __int8 *)(a1 + 188);
       if ( !*(_BYTE *)(a1 + 188) )
-        return sub_60478680(*(_DWORD *)(a1 + 180), *(_DWORD *)(a1 + 200));
+        return Sound_dispatchByKind(*(_DWORD *)(a1 + 180), *(_DWORD *)(a1 + 200));
     }
     else
     {
@@ -26338,7 +26338,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     if ( !*(_BYTE *)(a1 + 188) )
-      sub_60478680(*(_DWORD *)(a1 + 172), *(_DWORD *)(a1 + 192));
+      Sound_dispatchByKind(*(_DWORD *)(a1 + 172), *(_DWORD *)(a1 + 192));
     result = *(_DWORD *)(a1 + 116);
     if ( *(_BYTE *)(a1 + 160) )
     {
@@ -26571,7 +26571,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         result = *(unsigned __int8 *)(a1 + 188);
         if ( !*(_BYTE *)(a1 + 188) )
-          return sub_60478680(*(_DWORD *)(a1 + 176), *(_DWORD *)(a1 + 196));
+          return Sound_dispatchByKind(*(_DWORD *)(a1 + 176), *(_DWORD *)(a1 + 196));
       }
     }
     else if ( !a2 )
@@ -26589,7 +26589,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60478220(int result)
   {
     if ( !*(_BYTE *)(result + 188) )
-      return sub_60478680(*(_DWORD *)(result + 176), *(_DWORD *)(result + 196));
+      return Sound_dispatchByKind(*(_DWORD *)(result + 176), *(_DWORD *)(result + 196));
     return result;
   }
 
@@ -26826,7 +26826,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60478680
+ * Sound_dispatchByKind
  * RVA 0x00478680   size 0xbc   xrefs 51
  * ============================================================================ */
   int __fastcall sub_60478680(int a1, int a2)
@@ -26862,7 +26862,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60478750(int result)
   {
     if ( !*(_BYTE *)(result + 188) && !*(_BYTE *)(result + 160) )
-      return sub_60478680(*(_DWORD *)(result + 184), *(_DWORD *)(result + 204));
+      return Sound_dispatchByKind(*(_DWORD *)(result + 184), *(_DWORD *)(result + 204));
     return result;
   }
 
@@ -27834,7 +27834,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v36[2] = 1065353216;
         v36[3] = 0;
         sub_6091A624(v38, v24, 1, v36, 0);
-        v25 = sub_6090E438(v37, v38);
+        v25 = Bounds_initFromPlatformLimits(v37, v38);
         Rect_computeOverlapBlend(v25, *(_DWORD *)(a2 + 40), v38);
         sub_6090C7F8(v36, v37);
         v26 = RenderParams_defaultInit(v35);

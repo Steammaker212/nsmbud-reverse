@@ -596,7 +596,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           *(_DWORD *)(a1 + 340) = 1;
           *(_DWORD *)(a1 + 352) = 40;
-          if ( sub_601916EC(MEMORY[0xC8996C]) == 27 )
+          if ( getIndexTableBase(MEMORY[0xC8996C]) == 27 )
             *(_DWORD *)(a1 + 352) += 60;
           *(_DWORD *)(a1 + 320) = 1086324736;
           v4 = (_DWORD *)(a1 + 320);
@@ -1576,7 +1576,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v3 = 13157752;
           goto LABEL_11;
         case 20:
-          if ( sub_601916EC(MEMORY[0xC8996C]) == 32 )
+          if ( getIndexTableBase(MEMORY[0xC8996C]) == 32 )
           {
             v3 = 13157720;
   LABEL_11:
@@ -2007,7 +2007,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         StateMgr::changeState((_DWORD *)a1 + 71, v3);
         goto LABEL_9;
       }
-      if ( sub_601916EC(v2) == 5 )
+      if ( getIndexTableBase(v2) == 5 )
       {
         v4 = sub_6019172C(v2);
         if ( v4 )
@@ -5694,7 +5694,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         StateMgr::changeState((_DWORD *)a1 + 71, v3);
         goto LABEL_8;
       }
-      if ( sub_601916EC(v2) == 95 || sub_601916EC(v2) == 96 )
+      if ( getIndexTableBase(v2) == 95 || getIndexTableBase(v2) == 96 )
       {
         v3 = 13158548;
         goto LABEL_7;
@@ -6145,7 +6145,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = sub_60185D08((Actor *)a1);
       if ( result == 1 )
       {
-        if ( sub_601916EC(MEMORY[0xC8996C]) == 32 )
+        if ( getIndexTableBase(MEMORY[0xC8996C]) == 32 )
         {
           v3 = ActorMgr_findAndInstantiate(MEMORY[0xC8AEF0]);
           v4 = FixedPoint_atan2_byRegs(a1 + 20, v3 + 80);
@@ -8011,7 +8011,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = sub_60185D08(a1);
       if ( result == 1 )
       {
-        if ( sub_601916EC(MEMORY[0xC8996C]) == 32 )
+        if ( getIndexTableBase(MEMORY[0xC8996C]) == 32 )
         {
           v3 = ActorMgr_findAndInstantiate(MEMORY[0xC8AEF0]);
           v4 = FixedPoint_atan2_byRegs((char *)a1 + 80, v3 + 80);
@@ -8754,7 +8754,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
       if ( result == 36 )
       {
-        if ( sub_601916EC(MEMORY[0xC8996C]) == 32 )
+        if ( getIndexTableBase(MEMORY[0xC8996C]) == 32 )
           StateMgr::changeState(a1 + 71, 13159564);
         return (*(int (__fastcall **)(_DWORD *))(*a1 + 72))(a1);
       }
@@ -17067,7 +17067,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *v24 = 0.0 - (float)(v35 - v37);
     v26 = (float *)(a1 + 708);
     v27 = (float *)(a1 + 700);
-    if ( sub_601916EC(MEMORY[0xC8996C]) == 34 )
+    if ( getIndexTableBase(MEMORY[0xC8996C]) == 34 )
     {
       v18 = *(float *)(a1 + 628);
       v23 = *(float *)(a1 + 636);
@@ -17355,7 +17355,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 716) = *(_DWORD *)(a1 + 704);
     *(_DWORD *)(a1 + 720) = *(_DWORD *)(a1 + 708);
     *(_BYTE *)(a1 + 1452) = 0;
-    v4 = sub_601916EC(MEMORY[0xC8996C]);
+    v4 = getIndexTableBase(MEMORY[0xC8996C]);
     v6 = (unsigned int)(v4 - 76) > 5;
     if ( (unsigned int)(v4 - 76) >= 5 )
       v6 = (unsigned int)(v4 - 34) > 1;
@@ -18966,7 +18966,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6021CE80(_DWORD *a1)
   {
-    if ( sub_601916EC(MEMORY[0xC8996C]) == 112 )
+    if ( getIndexTableBase(MEMORY[0xC8996C]) == 112 )
     {
       a1[157] = a1[244];
       a1[158] = a1[245];

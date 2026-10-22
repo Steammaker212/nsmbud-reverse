@@ -99022,7 +99022,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       dword_60C979C8 = 0;
       _cxa_guard_release_0(&unk_60C97990);
     }
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 8) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 8) )
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 8));
     if ( *(_BYTE *)(a2 + *(_DWORD *)(a1 + 724)) )
     {
@@ -99611,7 +99611,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int *v29; // [sp+8h] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 6312);
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 6312) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 6312) )
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], v2);
     v3 = MEMORY[0xC9784C] + *(float *)(a1 + 7008);
     *(float *)(a1 + 7008) = v3;
@@ -99635,7 +99635,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v29 = (int *)(a1 + 23568);
     if ( v9 >= v8 )
     {
-      if ( sub_601536B0(MEMORY[0xC8820C], a1 + 7104) )
+      if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 7104) )
         ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 7104));
       v10 = MEMORY[0xC9784C] + *(float *)(a1 + 7800);
       *(float *)(a1 + 7800) = v10;
@@ -99666,7 +99666,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v17 >= *v29 )
           v18 = v17 % *v29;
         v19 = a1 + 784 * v18;
-        if ( sub_601536B0(MEMORY[0xC8820C], v19 + 7896) )
+        if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], v19 + 7896) )
           ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(v19 + 7896));
         ++v17;
         v20 = MEMORY[0xC9784C] + *(float *)(v19 + 8592);
@@ -99793,7 +99793,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _BYTE *result; // r0
   
     v2 = (_DWORD *)(a1 + 6312);
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 6312) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 6312) )
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], v2);
     v3 = MEMORY[0xC9784C] + *(float *)(a1 + 7008);
     *(float *)(a1 + 7008) = v3;
@@ -99812,7 +99812,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 6980) = v5 + *(float *)(a1 + 7004);
     *(float *)(a1 + 6984) = v3 + v6;
     *(float *)(a1 + 6988) = v7 + *(float *)(a1 + 7012);
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 7104) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 7104) )
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 7104));
     v8 = MEMORY[0xC9784C] + *(float *)(a1 + 7800);
     *(float *)(a1 + 7800) = v8;
@@ -99838,7 +99838,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v15 = a1 + 7896;
       do
       {
-        if ( sub_601536B0(MEMORY[0xC8820C], v15) )
+        if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], v15) )
           ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)v15);
         ++v14;
         v16 = MEMORY[0xC9784C] + *(float *)(v15 + 696);
@@ -99978,7 +99978,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v1 = a1;
     v2 = (_DWORD *)(a1 + 7104);
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 7104) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 7104) )
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], v2);
     v3 = MEMORY[0xC9784C] + *(float *)(v1 + 7800);
     *(float *)(v1 + 7800) = v3;
@@ -100012,7 +100012,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v32 = (_DWORD *)(v1 + 23600);
       if ( v10 > v11 - 2 )
       {
-        if ( sub_601536B0(MEMORY[0xC8820C], v1 + 6312) )
+        if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], v1 + 6312) )
           ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(v1 + 6312));
         v12 = MEMORY[0xC9784C] + *(float *)(v1 + 7008);
         *(float *)(v1 + 7008) = v12;
@@ -100046,7 +100046,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v20 %= v11;
           v21 = v1;
           v22 = v1 + 784 * v20;
-          if ( sub_601536B0(MEMORY[0xC8820C], v22 + 7896) )
+          if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], v22 + 7896) )
             ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(v22 + 7896));
           --v19;
           v23 = MEMORY[0xC9784C] + *(float *)(v22 + 8592);
@@ -170722,8 +170722,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Array16_setEntryParams(a1 + 106, 0, 34, 0, 0);
     Array16_setEntryParams(a1 + 106, 1, 10, 12, 0);
     sub_60921D30(a1 + 174, 1, v75);
-    sub_60921DF0(a1 + 174, 0, a1 + 106, 0);
-    sub_60921DF0(a1 + 174, 3, a1 + 106, 1);
+    Array8_releaseSlot(a1 + 174, 0, a1 + 106, 0);
+    Array8_releaseSlot(a1 + 174, 3, a1 + 106, 1);
     sub_60921F90(a1 + 174);
     v36 = MEMORY[0xCC73E8](a1[281]);
     *(_WORD *)(v36 + Slot_getRelativeOffset(v71)) = 0;
@@ -170765,8 +170765,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Array16_setEntryParams(a1 + 292, 0, 34, 0, 0);
     Array16_setEntryParams(a1 + 292, 1, 10, 12, 0);
     sub_60921D30(a1 + 360, 1, v75);
-    sub_60921DF0(v35 + 360, 0, v35 + 292, 0);
-    sub_60921DF0(v35 + 360, 3, v35 + 292, 1);
+    Array8_releaseSlot(v35 + 360, 0, v35 + 292, 0);
+    Array8_releaseSlot(v35 + 360, 3, v35 + 292, 1);
     sub_60921F90(a1 + 360);
     v50 = MEMORY[0xCC73E8](a1[467]);
     *(_WORD *)(v50 + Slot_getRelativeOffset(v73)) = 0;
@@ -170821,8 +170821,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Array16_setEntryParams(a1 + 478, 0, 34, 0, 0);
     Array16_setEntryParams(a1 + 478, 1, 10, 12, 0);
     sub_60921D30(a1 + 546, 1, v75);
-    sub_60921DF0(a1 + 546, 0, a1 + 478, 0);
-    sub_60921DF0(a1 + 546, 3, a1 + 478, 1);
+    Array8_releaseSlot(a1 + 546, 0, a1 + 478, 0);
+    Array8_releaseSlot(a1 + 546, 3, a1 + 478, 1);
     return sub_60921F90(a1 + 546);
   }
 
@@ -171690,7 +171690,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v6 )
     {
       Object_copyAndAdjust(a1 + 3704, v6);
-      v7 = sub_6090E438(v8, v5);
+      v7 = Bounds_initFromPlatformLimits(v8, v5);
       Rect_computeOverlapBlend(v7, *(_DWORD *)(a2 + 40), v5);
       sub_60934560(a1 + 16, *(_DWORD *)(a2 + 40), 0, v5, v8, a1 + 3704, 0, 0, 0);
       result = Object_lockedUpdateIfFlag40(MEMORY[0xCD09F8], *(_DWORD *)(a1 + 4048));
@@ -172130,7 +172130,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v22 = a1 + 52 * v3;
     v24 = *(_DWORD *)(v22 + 32);
     v23 = (float *)(v22 + 32);
-    v25 = sub_6090E438(v109, v24);
+    v25 = Bounds_initFromPlatformLimits(v109, v24);
     Rect_computeOverlapBlend(v25, *v18, *(_DWORD *)v23);
     RenderParams_updateFromModel(a1 + 276, *v18);
     v26 = (float)(v113 - v111) / (float)(*(float *)(v20 + 24) - *(float *)(v20 + 16));
@@ -172334,7 +172334,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_6093F8F4(v90, v102, v109, &v106, v105, v108, 11778372);
   LABEL_49:
     Object_resolveSlotFromGlobal(*(_DWORD *)(*(_DWORD *)v94 + 28), *v98);
-    v88 = sub_6090E438(v101, v96);
+    v88 = Bounds_initFromPlatformLimits(v101, v96);
     Rect_computeOverlapBlend(v88, *v98, v96);
     Object_callSlot7(v96, *v98);
     Object_releaseHandle(v104);
@@ -177674,7 +177674,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = MEMORY[0xC9BAF4];
     MEMORY[0xCC7970](*(_DWORD *)(a2 + 192), 50);
     Object_callSlot7(a1 + 4328, a2);
-    v5 = sub_6090E438(v37, a1 + 4328);
+    v5 = Bounds_initFromPlatformLimits(v37, a1 + 4328);
     Rect_computeOverlapBlend(v5, a2, a1 + 4328);
     v28 = a1 + 4328;
     sub_6091A624(a1 + 4328, a2, 7, a1 + 4404, 255);
@@ -179983,7 +179983,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v2 == 1 && (*(_DWORD *)(v4 + 2352) & 0x400) != 0 )
       *(_DWORD *)(v3 + 272) = v4 + 1600;
     Object_callSlot7(v5, v12);
-    v6 = sub_6090E438(v11, (int)v5);
+    v6 = Bounds_initFromPlatformLimits(v11, (int)v5);
     Rect_computeOverlapBlend((int)v6, (int)v12, v5);
     v7 = *(unsigned __int8 *)(a1 + 689);
     if ( *(_BYTE *)(a1 + 689) )
@@ -187020,9 +187020,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Array16_setEntryParams(a1 + 16, 1, 22, 12, 0);
     Array16_setEntryParams(a1 + 16, 2, 46, 20, 0);
     sub_60921D30(a1 + 288, 1, 0);
-    sub_60921DF0(a1 + 288, 0, a1 + 16, 0);
-    sub_60921DF0(a1 + 288, 2, a1 + 16, 1);
-    sub_60921DF0(a1 + 288, 6, a1 + 16, 2);
+    Array8_releaseSlot(a1 + 288, 0, a1 + 16, 0);
+    Array8_releaseSlot(a1 + 288, 2, a1 + 16, 1);
+    Array8_releaseSlot(a1 + 288, 6, a1 + 16, 2);
     sub_60921F90(a1 + 288);
     return sub_60922730(a1 + 16, 0, *(_DWORD *)(a1 + 284));
   }
@@ -202123,13 +202123,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60921D30(a1 + 104, 1, a2);
     v30 = a1[1];
     sub_6091D95C(v30);
-    sub_60921DF0(a1 + 104, **(char **)(v30 + 604), a1 + 16, 0);
+    Array8_releaseSlot(a1 + 104, **(char **)(v30 + 604), a1 + 16, 0);
     v31 = a1[1];
     sub_6091D95C(v31);
     v32 = *(char **)(v31 + 604);
     if ( *(_DWORD *)(v31 + 600) > 1u )
       v32 += 12;
-    sub_60921DF0(v29, *v32, v21, 1);
+    Array8_releaseSlot(v29, *v32, v21, 1);
     return sub_60921F90(v29);
   }
 
@@ -202282,7 +202282,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Object_resolveSlotFromGlobal(v31, *(_DWORD *)(a2 + 40));
     agl_TextureSampler_copy_ref(v48, *(_DWORD *)(v4 + 28));
     Object_callSlot7(a1 + 1096, *(_DWORD *)(a2 + 40));
-    v32 = sub_6090E438(v43, a1 + 1096);
+    v32 = Bounds_initFromPlatformLimits(v43, a1 + 1096);
     Rect_computeOverlapBlend(v32, *(_DWORD *)(a2 + 40), a1 + 1096);
     v33 = (float)(v47 - v45) / (float)(*(float *)(v4 + 24) - *(float *)(v4 + 16));
     v42[0] = (float)(v46 - v44) / (float)(*(float *)(v4 + 20) - *(float *)(v4 + 12));
@@ -203058,7 +203058,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             LOWORD(v90) = 257;
             v91[0] &= ~1u;
             RenderParams_updateFromModel(v70, a2[10]);
-            v71 = sub_6090E438(v89, a1 + 1208);
+            v71 = Bounds_initFromPlatformLimits(v89, a1 + 1208);
 
 /* ============================================================================
  * sub_60442824
@@ -213622,16 +213622,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Array16_setEntryParams(a1 + 64, 8, 46, 104, 0);
     Array16_setEntryParams(a1 + 64, 9, 46, 120, 0);
     sub_60921D30(a1 + 336, 1, 0);
-    sub_60921DF0(a1 + 336, 0, a1 + 64, 0);
-    sub_60921DF0(a1 + 336, 5, a1 + 64, 1);
-    sub_60921DF0(a1 + 336, 2, a1 + 64, 2);
-    sub_60921DF0(a1 + 336, 3, a1 + 64, 3);
-    sub_60921DF0(a1 + 336, 6, a1 + 64, 4);
-    sub_60921DF0(a1 + 336, 7, a1 + 64, 5);
-    sub_60921DF0(a1 + 336, 8, a1 + 64, 6);
-    sub_60921DF0(a1 + 336, 9, a1 + 64, 7);
-    sub_60921DF0(a1 + 336, 10, a1 + 64, 8);
-    sub_60921DF0(a1 + 336, 11, a1 + 64, 9);
+    Array8_releaseSlot(a1 + 336, 0, a1 + 64, 0);
+    Array8_releaseSlot(a1 + 336, 5, a1 + 64, 1);
+    Array8_releaseSlot(a1 + 336, 2, a1 + 64, 2);
+    Array8_releaseSlot(a1 + 336, 3, a1 + 64, 3);
+    Array8_releaseSlot(a1 + 336, 6, a1 + 64, 4);
+    Array8_releaseSlot(a1 + 336, 7, a1 + 64, 5);
+    Array8_releaseSlot(a1 + 336, 8, a1 + 64, 6);
+    Array8_releaseSlot(a1 + 336, 9, a1 + 64, 7);
+    Array8_releaseSlot(a1 + 336, 10, a1 + 64, 8);
+    Array8_releaseSlot(a1 + 336, 11, a1 + 64, 9);
     sub_60921F90(a1 + 336);
     result = sub_60922730((_DWORD *)(a1 + 64), 0, *(_DWORD *)(a1 + 332));
     *(_BYTE *)(a1 + 754) = 1;

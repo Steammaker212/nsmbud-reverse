@@ -18103,7 +18103,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(a1 + 144) = v6;
       *(_DWORD *)(a1 + 148) = v6;
       *(_DWORD *)(a1 + 152) = v6;
-      if ( !*(_BYTE *)(a1 + 6584) && sub_601536B0(MEMORY[0xC8820C], a1 + 6104) )
+      if ( !*(_BYTE *)(a1 + 6584) && Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 6104) )
         *(_BYTE *)(a1 + 19) = 1;
       sub_6011104C(a1);
       return 1;
@@ -56180,7 +56180,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_601536B0
+ * Object_isSelfLinkedOrEmptyNeighbour
  * RVA 0x001536b0   size 0x38   xrefs 52
  * ============================================================================ */
   bool __fastcall sub_601536B0(int a1, int a2)
@@ -83152,7 +83152,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = MEMORY[0xC8996C];
     if ( hasIndexTable(MEMORY[0xC8996C]) == 1
       && *(_BYTE *)(v4 + 1384)
-      && sub_601916EC(v4) == 39
+      && getIndexTableBase(v4) == 39
       && Table_tryGetEntryByIndexPair(v4) == 58 )
     {
       StateMgr::changeState((_DWORD *)(a1 + 284), 13143256);
@@ -93942,7 +93942,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = hasIndexTable(MEMORY[0xC8996C]);
         if ( result == 1 )
         {
-          result = sub_601916EC(MEMORY[0xC8996C]);
+          result = getIndexTableBase(MEMORY[0xC8996C]);
           if ( result == 31 )
           {
             (*(void (__fastcall **)(_DWORD *))(*a1 + 140))(a1);
@@ -97849,7 +97849,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_601916EC
+ * getIndexTableBase
  * RVA 0x001916ec   size 0x8   xrefs 50
  * ============================================================================ */
   int __fastcall sub_601916EC(int a1)
@@ -100652,7 +100652,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = (float *)Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
       if ( result == (float *)165 )
       {
-        result = (float *)sub_601916EC(v2);
+        result = (float *)getIndexTableBase(v2);
         if ( result != (float *)67 )
           return result;
         Float_clampWithSign((float *)(a1 + 200));
@@ -100669,7 +100669,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           if ( result == (float *)48 )
           {
-            result = (float *)sub_601916EC(v2);
+            result = (float *)getIndexTableBase(v2);
             if ( result == (float *)67 )
             {
               Float_clampWithSign((float *)(a1 + 200));
@@ -100686,7 +100686,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = (float *)Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( result == (float *)48 )
     {
-      result = (float *)sub_601916EC(v2);
+      result = (float *)getIndexTableBase(v2);
       if ( result == (float *)67 )
       {
         Float_clampWithSign((float *)(a1 + 200));
@@ -102250,7 +102250,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1385) && sub_60185D08(a1) )
     {
-      if ( sub_601916EC(MEMORY[0xC8996C]) == 67 || sub_601916EC(MEMORY[0xC8996C]) == 94 )
+      if ( getIndexTableBase(MEMORY[0xC8996C]) == 67 || getIndexTableBase(MEMORY[0xC8996C]) == 94 )
         v2 = 13146992;
       else
         v2 = 13146960;
@@ -111749,7 +111749,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(unsigned __int8 *)(a1 + 308);
     if ( result )
     {
-      if ( !hasIndexTable(MEMORY[0xC8996C]) || (result = sub_601916EC(MEMORY[0xC8996C]), result == 33) )
+      if ( !hasIndexTable(MEMORY[0xC8996C]) || (result = getIndexTableBase(MEMORY[0xC8996C]), result == 33) )
       {
         result = *(unsigned __int8 *)(MEMORY[0xC8B144] + 67);
         if ( *(_BYTE *)(MEMORY[0xC8B144] + 67) )
@@ -114758,7 +114758,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           (*(void (__fastcall **)(_DWORD *))(*a1 + 124))(a1);
           goto LABEL_12;
         case 20:
-          if ( sub_601916EC(MEMORY[0xC8996C]) == 32 )
+          if ( getIndexTableBase(MEMORY[0xC8996C]) == 32 )
             (*(void (__fastcall **)(_DWORD *, int))(*a1 + 128))(a1, 3);
   LABEL_12:
           result = (*(int (__fastcall **)(_DWORD *))(*a1 + 72))(a1);
@@ -117991,7 +117991,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = StateMgr::changeState(v5, v3);
           break;
         case 20:
-          if ( sub_601916EC(MEMORY[0xC8996C]) == 32 )
+          if ( getIndexTableBase(MEMORY[0xC8996C]) == 32 )
           {
             (*(void (__fastcall **)(_DWORD *, int))(*a1 + 128))(a1, 3);
             StateMgr::changeState(a1 + 71, 13149996);
@@ -118647,7 +118647,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v14);
       (*(void (__fastcall **)(_DWORD, _BYTE *))(***(_DWORD ***)(a1 + 376) + 60))(**(_DWORD **)(a1 + 376), v14);
       (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 376) + 56))(**(_DWORD **)(a1 + 376));
-      if ( *(_DWORD *)(a1 + 352) == 3 && hasIndexTable(MEMORY[0xC8996C]) && sub_601916EC(MEMORY[0xC8996C]) == 39 )
+      if ( *(_DWORD *)(a1 + 352) == 3 && hasIndexTable(MEMORY[0xC8996C]) && getIndexTableBase(MEMORY[0xC8996C]) == 39 )
       {
         CurrentState = StateMgr::getCurrentState(a1 + 284);
         v7 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -119786,7 +119786,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     if ( sub_601C4404() == 1 )
       StateMgr::execute((_DWORD *)(a1 + 904));
-    if ( hasIndexTable(MEMORY[0xC8996C]) != 1 || *(_DWORD *)(a1 + 1032) == 3 && sub_601916EC(MEMORY[0xC8996C]) == 39 )
+    if ( hasIndexTable(MEMORY[0xC8996C]) != 1 || *(_DWORD *)(a1 + 1032) == 3 && getIndexTableBase(MEMORY[0xC8996C]) == 39 )
       sub_601B2404(a1);
     sub_601861EC(a1);
     sub_601B28C4(a1);
@@ -128281,7 +128281,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = MEMORY[0xC8996C];
     v19 = ActorMgr_findAndInstantiate(MEMORY[0xC8AEF0]);
     v39 = Table_tryGetEntryByIndexPair(v18);
-    sub_601916EC(v18);
+    getIndexTableBase(v18);
     if ( *(_BYTE *)(v18 + 1384) && (unsigned int)(v39 - 5) >> 1 <= 0xA2 )
       /* ARM switch-dispatch idiom; the switch below is the implementation */ (void)0
     switch ( v39 )
@@ -130570,7 +130570,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       case 0:
         v3 = MEMORY[0xC8996C];
-        result = sub_601916EC(MEMORY[0xC8996C]);
+        result = getIndexTableBase(MEMORY[0xC8996C]);
         if ( result == 115 )
         {
           result = Table_tryGetEntryByIndexPair(v3);
@@ -131342,7 +131342,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     bool v6; // zf
     int v7; // [sp+4h] [bp-4h]
   
-    v2 = sub_601916EC(MEMORY[0xC8996C]) - 34;
+    v2 = getIndexTableBase(MEMORY[0xC8996C]) - 34;
     result = 1;
     switch ( v2 )
     {
@@ -153785,7 +153785,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( *v3 == *(_DWORD *)(MEMORY[0xCC6D78] + 428)
         && v3[1] == *(_DWORD *)(MEMORY[0xCC6D78] + 440)
-        && sub_601916EC(v2) == 30 )
+        && getIndexTableBase(v2) == 30 )
       {
         goto LABEL_8;
       }
@@ -156479,7 +156479,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     if ( a1[94] )
     {
-      if ( sub_601916EC(MEMORY[0xC8996C]) == 97 )
+      if ( getIndexTableBase(MEMORY[0xC8996C]) == 97 )
       {
         result = *(unsigned __int8 *)(ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]) + 1371);
         if ( !result )
@@ -157348,7 +157348,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       switch ( result )
       {
         case 13:
-          if ( sub_601916EC(v2) == 14 || sub_601916EC(v2) == 15 )
+          if ( getIndexTableBase(v2) == 14 || getIndexTableBase(v2) == 15 )
             (*(void (__fastcall **)(float *))(*(_DWORD *)a1 + 380))(a1);
           return (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 72))(a1);
         case 14:
@@ -157455,9 +157455,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = Table_getEntryByIndexPair(v2);
           if ( result != 8 )
             return result;
-          if ( sub_601916EC(v2) != 14 )
+          if ( getIndexTableBase(v2) != 14 )
           {
-            result = sub_601916EC(v2);
+            result = getIndexTableBase(v2);
             if ( result != 15 )
               return result;
           }
@@ -157588,9 +157588,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = Table_getEntryByIndexPair(v2);
         if ( result != 8 )
           return result;
-        if ( sub_601916EC(v2) != 14 )
+        if ( getIndexTableBase(v2) != 14 )
         {
-          result = sub_601916EC(v2);
+          result = getIndexTableBase(v2);
           if ( result != 15 )
             return result;
         }
@@ -161050,7 +161050,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
   
     (*(void (__fastcall **)(_DWORD *))(*a1 + 352))(a1);
-    result = sub_601916EC(MEMORY[0xC8996C]);
+    result = getIndexTableBase(MEMORY[0xC8996C]);
     if ( (unsigned int)(result - 52) <= 2 )
     {
       result = sub_601E4EA4(MEMORY[0xC8B13C], result - 5, 0, (int)(a1 + 20), 1);
@@ -161317,18 +161317,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         case 132:
           (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
           v4 = *(_DWORD *)(a1 + 592);
-          v5 = sub_601916EC(MEMORY[0xC8996C]);
+          v5 = getIndexTableBase(MEMORY[0xC8996C]);
           if ( !v4 )
           {
-            if ( v5 == 52 || sub_601916EC(MEMORY[0xC8996C]) == 53 )
+            if ( v5 == 52 || getIndexTableBase(MEMORY[0xC8996C]) == 53 )
               goto LABEL_28;
             goto LABEL_27;
           }
           if ( v5 == 52 )
             goto LABEL_38;
-          if ( sub_601916EC(MEMORY[0xC8996C]) == 53 )
+          if ( getIndexTableBase(MEMORY[0xC8996C]) == 53 )
             goto LABEL_38;
-          result = sub_601916EC(MEMORY[0xC8996C]);
+          result = getIndexTableBase(MEMORY[0xC8996C]);
           if ( result == 54 )
             goto LABEL_38;
           return result;
@@ -161556,7 +161556,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           else
           {
   LABEL_63:
-            if ( sub_601916EC(MEMORY[0xC8996C]) == 64 )
+            if ( getIndexTableBase(MEMORY[0xC8996C]) == 64 )
               sub_601F74B4(a1);
           }
           return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
@@ -161572,7 +161572,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           else
           {
-            if ( sub_601916EC(MEMORY[0xC8996C]) == 54 )
+            if ( getIndexTableBase(MEMORY[0xC8996C]) == 54 )
             {
               *(_DWORD *)(a1 + 632) = 1147207680;
               v12 = *(float *)(a1 + 576);
@@ -161616,10 +161616,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = *(_DWORD *)(a1 + 592);
       if ( result )
         return result;
-      if ( sub_601916EC(MEMORY[0xC8996C]) != 52 && sub_601916EC(MEMORY[0xC8996C]) != 53 )
+      if ( getIndexTableBase(MEMORY[0xC8996C]) != 52 && getIndexTableBase(MEMORY[0xC8996C]) != 53 )
       {
   LABEL_27:
-        result = sub_601916EC(MEMORY[0xC8996C]);
+        result = getIndexTableBase(MEMORY[0xC8996C]);
         if ( result != 54 )
           return result;
       }

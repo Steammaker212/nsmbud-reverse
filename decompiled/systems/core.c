@@ -34044,12 +34044,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v2; // r5
   
     v2 = (_DWORD *)(a1 + 10032);
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 10032) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 10032) )
     {
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], v2);
       sub_601601B8(v2);
     }
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 10432) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 10432) )
     {
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 10432));
       sub_601601B8(v2);
@@ -34902,14 +34902,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       sub_60045DB4(a1, 21, 0, 1);
       v39 = (_DWORD *)(a1 + 8856);
-      if ( !sub_601536B0(MEMORY[0xC8820C], (int)v39) )
+      if ( !Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], (int)v39) )
         goto LABEL_42;
     }
     else
     {
       sub_60045DB4(a1, 15, 0, 1);
       v39 = (_DWORD *)(a1 + 8336);
-      if ( !sub_601536B0(MEMORY[0xC8820C], (int)v39) )
+      if ( !Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], (int)v39) )
       {
   LABEL_42:
         Object_updateSubObjectsAndRefresh(v39);
@@ -35303,22 +35303,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else if ( !*(_WORD *)(a1 + 6278) )
       {
-        if ( sub_601536B0(MEMORY[0xC8820C], a1 + 8336) )
+        if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 8336) )
         {
           ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 8336));
           sub_601601B8((_DWORD *)(a1 + 8336));
         }
-        if ( sub_601536B0(MEMORY[0xC8820C], a1 + 8856) )
+        if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 8856) )
         {
           ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 8856));
           sub_601601B8((_DWORD *)(a1 + 8856));
         }
-        if ( sub_601536B0(MEMORY[0xC8820C], a1 + 10032) )
+        if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 10032) )
         {
           ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 10032));
           sub_601601B8((_DWORD *)(a1 + 10032));
         }
-        if ( sub_601536B0(MEMORY[0xC8820C], a1 + 10432) )
+        if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 10432) )
         {
           ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 10432));
           sub_601601B8((_DWORD *)(a1 + 10032));
@@ -35561,7 +35561,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[11679] = 1;
     a1[11693] = 0;
     a1[11694] = 0;
-    result = sub_601536B0(MEMORY[0xC8820C], (int)(a1 + 6336));
+    result = Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], (int)(a1 + 6336));
     if ( !result )
       return ColliderMgr_removeRelated1(MEMORY[0xC8820C], v1);
     return result;
@@ -40276,14 +40276,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_601601B8((_DWORD *)(a1 + 8856));
     ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 6336));
     sub_601601B8((_DWORD *)(a1 + 6336));
-    if ( !sub_601536B0(MEMORY[0xC8820C], a1 + 6336) )
+    if ( !Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 6336) )
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 6336));
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 10032) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 10032) )
     {
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 10032));
       sub_601601B8((_DWORD *)(a1 + 10032));
     }
-    if ( sub_601536B0(MEMORY[0xC8820C], a1 + 10432) )
+    if ( Object_isSelfLinkedOrEmptyNeighbour(MEMORY[0xC8820C], a1 + 10432) )
     {
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 10432));
       sub_601601B8((_DWORD *)(a1 + 10032));
