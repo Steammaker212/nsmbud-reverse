@@ -1,0 +1,58 @@
+@Hammer power-up: the throw path (fireball code reused for Hammer).
+@
+@ Generated from the verified byte diff between the stock NSMBU Deluxe v1.0.0
+@ main NSO and the Hammer power-up build. Every hook below corresponds to a
+@ word that actually differs; the full diff is 115 bytes across 59 regions with
+@ nothing unaccounted for.
+@
+@ SweetDX format: an unindented 'name:' header, indented 'key: value' fields,
+@ and '@' comments. 'instr' hooks are reassembled by clang and were round-trip
+@ verified against the patched bytes; 'data' hooks are written verbatim.
+
+can_change_to_hammer:
+    @ canChangeTo: accept mode 10.
+    type:    instr
+    instruction: movhi r3, #1
+    address: 0x007A2708
+
+check_set_fireball_mode:
+    @ checkSetFireBall: accept mode 10.
+    type:    instr
+    instruction: cmp r1, #0xa
+    address: 0x007AA9BC
+
+set_fireball_action_mode:
+    @ setFireBallAction: treat mode 10 as the projectile-throwing mode.
+    type:    instr
+    instruction: cmp r0, #0xa
+    address: 0x007AAA88
+
+create_fireball_a_mode:
+    @ createFireBall: accept mode 10 at the first guard.
+    type:    instr
+    instruction: cmp r0, #0xa
+    address: 0x007AABB8
+
+create_fireball_b_mode:
+    @ createFireBall: accept mode 10 at the second guard.
+    type:    instr
+    instruction: cmp r0, #0xa
+    address: 0x007AAC94
+
+execute_mode_guard:
+    @ Projectile execute: accept mode 10.
+    type:    instr
+    instruction: cmp r1, #0xa
+    address: 0x007AAFF4
+
+execute_mode_mask:
+    @ Projectile execute: extend the mode mask to include bit 10 (0x464).
+    type:    instr
+    instruction: movw r3, #0x464
+    address: 0x007AB000
+
+execute_mode_guard2:
+    @ Projectile execute: accept mode 10 at the second guard.
+    type:    instr
+    instruction: cmp r0, #0xa
+    address: 0x007AB0E4

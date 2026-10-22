@@ -260,8 +260,37 @@ def check_hooks():
 
     missing = [v for v in expected if v not in patched]
     extra = [v for v in patched if v not in expected]
-    check("hooks cover every changed word", not missing,
-          str([hex(v) for v in missing[:3]]) if missing else f"{len(expected)} words")
+
+    # Deliberate exclusions. These addresses DO differ in the reference build, but we
+    # do not ship hooks for them, because we established the hooks were wrong. They are
+    # listed explicitly rather than by pattern so that each one stays visible and any
+    # NEW uncovered address still fails the check.
+    #
+    # 0x6078C58C / 0x6078E604 / 0x6078E7E8 / 0x60795FF0 / 0x607960F8 / 0x607982D8
+    #     The six "table redirect" hooks. They wrote words whose retail and patched
+    #     values are both small integers differing by a near-constant +0x3D0B8..+0x3D1A8,
+    #     and the patched values point into .text at executable instructions rather than
+    #     at any table. Applying them in-game corrupted per-actor height and draw-offset
+    #     lookups, breaking rendering globally. See docs/INCIDENT_2026-10-22.md.
+    # 0x60B493A8 .. 0x60B4942C (the float tables) and 0x60B0C328
+    #     Written to .rodata that is all zeros in retail, with no reader redirected to
+    #     them. They fed nothing.
+    EXCLUDED = {
+        0x6078C58C, 0x6078E604, 0x6078E7E8,
+        0x60795FF0, 0x607960F8, 0x607982D8,
+        0x60B0C328,
+        0x60B493A8, 0x60B493AC, 0x60B493B0, 0x60B493B4, 0x60B493B8, 0x60B493BC,
+        0x60B493C0, 0x60B493C4, 0x60B493C8, 0x60B493CC, 0x60B493D0, 0x60B493D8,
+        0x60B493E4, 0x60B493E8, 0x60B493EC, 0x60B493F4, 0x60B493F8, 0x60B493FC,
+        0x60B49408, 0x60B4940C, 0x60B49410, 0x60B49414, 0x60B49418, 0x60B4941C,
+        0x60B49420, 0x60B49424, 0x60B4942C,
+    }
+    unexplained = [v for v in missing if v not in EXCLUDED]
+    excluded_hit = [v for v in missing if v in EXCLUDED]
+
+    check("hooks cover every changed word (exclusions documented)", not unexplained,
+          str([hex(v) for v in unexplained[:3]]) if unexplained
+          else f"{len(expected)} words, {len(excluded_hit)} deliberately excluded")
     check("no hook targets an unchanged word", not extra,
           str([hex(v) for v in extra[:3]]) if extra else "")
 

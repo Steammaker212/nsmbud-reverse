@@ -1,3 +1,42 @@
+// ===========================================================================
+// RECOVERED CODE WRITEUP -- NOT COMPILED. Lives in findings/, not code/.
+// ===========================================================================
+//
+// This file used to live in code/ and WAS compiled into subsdk0. That was the
+// cause of a crash, so it must stay out of the build.
+//
+// Why it was dangerous
+// --------------------
+// The two definitions at the bottom of this file are FILE-SCOPE objects:
+//
+//     const Profile pukupukuProfile(..., ProfileId::Pukupuku, ...);
+//     const Profile pukupukuTogeProfile(..., ProfileId::PukupukuToge, ...);
+//
+// ProfileId::Pukupuku and ProfileId::PukupukuToge are RETAIL ids (530 and 539),
+// not custom ids, so these constructors run at subsdk load time with retail ids.
+// The real Profile constructor at 0x60017F6C ends with:
+//
+//     movw r3, #0x392          ; 914 = NUM PROFILES
+//     cmp  r2, r3              ; r2 = id
+//     movlo r1, r2             ; if id < 914, index = id
+//     ldr  r2, [pc, #0x10]
+//     add  r2, pc, r2          ; r2 = &profiles[]
+//     str  r0, [r2, r1, lsl #2] ; profiles[id] = this   <-- UNCONDITIONAL
+//
+// So merely loading the subsdk REPLACED the game's own Pukupuku (530) and
+// PukupukuToge (539) profiles with these reconstructions. Every Cheep Cheep and
+// Spiny Cheep Cheep in every level would then be constructed by our code, which
+// sets mpModel from ModelWrapper::create(pukupuku,pukupuku), leaves
+// mpResource null, and does not reproduce the retail behaviour.
+//
+// Rendering corruption across the level, and crashes on actor spawn, follow
+// directly from that. The reconstruction is still useful as documentation of the
+// field layout, and the offsets marked [V] remain verified -- but it must not be
+// compiled. If you ever want a real custom actor, give it an id >= 914 and use
+// PROFILE_RESOURCES so it lands in the custom arrays instead of over a retail slot.
+//
+// ===========================================================================
+
 #include "actor/enemy.h"
 #include "profile.h"
 #include "profileid.h"

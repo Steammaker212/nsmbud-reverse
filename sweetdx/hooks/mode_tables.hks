@@ -1,195 +1,69 @@
-@Power-up mode lookup tables (height, body type, draw offset).
+@Power-up mode lookup tables.
 @
-@ Generated from the verified byte diff between the stock NSMBU Deluxe v1.0.0
-@ main NSO and the Hammer power-up build. Every hook below corresponds to a
-@ word that actually differs; the full diff is 115 bytes across 59 regions with
-@ nothing unaccounted for.
+@ ALL SIX "redirect" HOOKS AND ALL 29 "data" HOOKS WERE REMOVED on 2026-10-22 after
+@ they caused severe rendering corruption in-game and a crash on Hammer pickup.
 @
-@ SweetDX format: an unindented 'name:' header, indented 'key: value' fields,
-@ and '@' comments. 'instr' hooks are reassembled by clang and were round-trip
-@ verified against the patched bytes; 'data' hooks are written verbatim.
-
-body_table_redirect_a:
-    @ Redirect to the relocated body-type table.
-    type:    instr
-    instruction: mlaseq fp, r8, lr, ip
-    address: 0x0078C58C
-
-body_table_redirect_b:
-    @ Redirect to the relocated body-type table (second reader).
-    type:    instr
-    instruction: eorseq sl, fp, r8, lsl lr
-    address: 0x0078E604
+@ WHY THE REDIRECTS WERE WRONG
+@ ----------------------------
+@ Each redirect wrote a word that is not an instruction. Retail and patched values are
+@ both small integers (< 0x01000000) that differ by a near-constant amount:
+@
+@     site        retail word   patched word   delta
+@     0x78C58C    0x0037FCF0    0x003BCE98     +0x3D1A8
+@     0x78E604    0x0037DC70    0x003BAE18     +0x3D1A8
+@     0x78E7E8    0x0037DC00    0x003BADA8     +0x3D1A8
+@     0x795FF0    0x00376578    0x003B3664     +0x3D0EC
+@     0x7960F8    0x003762A4    0x003B3390     +0x3D0EC
+@     0x7982D8    0x00374128    0x003B11E0     +0x3D0B8
+@
+@ A near-constant positive delta across unrelated addresses is what you see when a
+@ build's internal code layout shifted and absolute pointers were recomputed, not when
+@ six independent pointers are deliberately retargeted. Note this is NOT a relink in the
+@ ELF sense: the retail and reference images have byte-identical program headers (same
+@ 5 segments, same file offsets, same sizes). Any shifting happened INSIDE .text.
+@ We do not have a confirmed explanation for these six words, and we no longer need one:
+@ the labels were wrong, which is enough to disqualify them.
+@
+@ The labels said "redirect to the relocated body-type/height/draw-offset table". They
+@ do not. What is actually at each patched target:
+@
+@     retail 0x37FCF0 -> an array of pointers (0x8EAD88, 0x8E3064, 0x8EAF60, ...)
+@     patched 0x3BCE98 -> ARM code (0xE30D270A = movw r2, 0xD70A)
+@
+@ Both sides point into .text, and the patched side points at executable instructions.
+@ Nothing anywhere in either image points at 0xB493A8, where the data hooks wrote their
+@ float tables. So the two halves of this file contradicted each other: the tables were
+@ written to a region no reader was redirected to, and the readers were pointed at code.
+@
+@ The two height sites (0x795FF0, 0x7960F8) feed per-actor height and draw-offset
+@ lookups, which is why rendering broke globally and immediately -- before any Hammer
+@ was involved -- rather than only when the Hammer appeared.
+@
+@ Only `mode_six_or_ten` below is a real instruction edit, so only it survives. It is
+@ load-bearing: retail's 0x1FB mode mask lacks bit 9, and 0x3FB adds it, which is what
+@ makes power-up mode 10 reachable at all.
 
 mode_six_or_ten:
     @ A gate that special-cases mode 6 now also special-cases mode 10.
+    @ Retail e3500002 (cmp r0, #2) -> e350000a (cmp r0, #0xa).
     type:    instr
     instruction: cmp r0, #0xa
     address: 0x0078E6A8
 
-body_table_redirect_c:
-    @ Redirect to the relocated body-type table (third reader).
-    type:    instr
-    instruction: eorseq sl, fp, r8, lsr #27
-    address: 0x0078E7E8
-
-height_table_redirect_a:
-    @ Redirect to the relocated height table.
-    type:    instr
-    instruction: eorseq r3, fp, r4, ror #12
-    address: 0x00795FF0
-
-height_table_redirect_b:
-    @ Redirect to the relocated height table (second reader).
-    type:    instr
-    instruction: mlaseq fp, r0, r3, r3
-    address: 0x007960F8
-
-draw_offset_redirect:
-    @ Redirect to the relocated draw-offset table.
-    type:    instr
-    instruction: eorseq r1, fp, r0, ror #3
-    address: 0x007982D8
-
-tall_actor_type_hammer:
-    @ Tall-actor table: mode 10 uses body type 2.
-    type:    data
-    data:    02 00 00 00
-    address: 0x00B0C328
-
-height_table_slot_10:
-    @ Relocated height table: mode 10 height.
-    type:    data
-    data:    00 00 80 41
-    address: 0x00B493A8
-
-patch_b493ac:
-    type:    data
-    data:    00 00 F8 41
-    address: 0x00B493AC
-
-patch_b493b0:
-    type:    data
-    data:    00 00 F8 41
-    address: 0x00B493B0
-
-patch_b493b4:
-    type:    data
-    data:    00 00 C0 40
-    address: 0x00B493B4
-
-patch_b493b8:
-    type:    data
-    data:    00 00 F8 41
-    address: 0x00B493B8
-
-patch_b493bc:
-    type:    data
-    data:    00 00 F8 41
-    address: 0x00B493BC
-
-patch_b493c0:
-    type:    data
-    data:    00 00 F8 41
-    address: 0x00B493C0
-
-patch_b493c4:
-    type:    data
-    data:    00 00 F8 41
-    address: 0x00B493C4
-
-patch_b493c8:
-    type:    data
-    data:    00 00 F8 41
-    address: 0x00B493C8
-
-patch_b493cc:
-    type:    data
-    data:    00 00 F8 41
-    address: 0x00B493CC
-
-patch_b493d0:
-    type:    data
-    data:    00 00 F8 41
-    address: 0x00B493D0
-
-body_table_slot_10:
-    @ Relocated body-type table: mode 10 body.
-    type:    data
-    data:    01 00 00 00
-    address: 0x00B493D8
-
-patch_b493e4:
-    type:    data
-    data:    01 00 00 00
-    address: 0x00B493E4
-
-patch_b493e8:
-    type:    data
-    data:    02 00 00 00
-    address: 0x00B493E8
-
-patch_b493ec:
-    type:    data
-    data:    03 00 00 00
-    address: 0x00B493EC
-
-patch_b493f4:
-    type:    data
-    data:    04 00 00 00
-    address: 0x00B493F4
-
-patch_b493f8:
-    type:    data
-    data:    04 00 00 00
-    address: 0x00B493F8
-
-patch_b493fc:
-    type:    data
-    data:    05 00 00 00
-    address: 0x00B493FC
-
-patch_b49408:
-    type:    data
-    data:    00 00 80 C0
-    address: 0x00B49408
-
-patch_b4940c:
-    type:    data
-    data:    00 00 80 C0
-    address: 0x00B4940C
-
-patch_b49410:
-    type:    data
-    data:    00 00 80 40
-    address: 0x00B49410
-
-patch_b49414:
-    type:    data
-    data:    00 00 A0 C0
-    address: 0x00B49414
-
-patch_b49418:
-    type:    data
-    data:    00 00 00 C0
-    address: 0x00B49418
-
-patch_b4941c:
-    type:    data
-    data:    00 00 80 C0
-    address: 0x00B4941C
-
-patch_b49420:
-    type:    data
-    data:    00 00 80 C0
-    address: 0x00B49420
-
-patch_b49424:
-    type:    data
-    data:    00 00 80 C0
-    address: 0x00B49424
-
-patch_b4942c:
-    type:    data
-    data:    00 00 80 C0
-    address: 0x00B4942C
+@ ---------------------------------------------------------------------------
+@ REMOVED -- kept as a record, not as hooks. Do not re-enable without new evidence.
+@
+@   body_table_redirect_a    instr @ 0x0078C58C   target is code, not a table
+@   body_table_redirect_b    instr @ 0x0078E604   target is code, not a table
+@   body_table_redirect_c    instr @ 0x0078E7E8   target is code, not a table
+@   height_table_redirect_a  instr @ 0x00795FF0   target is code, not a table
+@   height_table_redirect_b  instr @ 0x007960F8   target is code, not a table
+@   draw_offset_redirect     instr @ 0x007982D8   target is code, not a table
+@
+@   tall_actor_type_hammer   data  @ 0x00B0C328
+@   height_table_slot_10     data  @ 0x00B493A8
+@   patch_b493ac..b4942c     data  @ 0x00B493AC..0x00B4942C  (28 further words)
+@
+@ The data words are not lost: their values are recorded in sweetdx/docs/BUILD_FIXES.md
+@ and in the original hook files under sweetdx/hooks_reference/.
+@ ---------------------------------------------------------------------------
