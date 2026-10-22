@@ -1774,7 +1774,7 @@ static inline unsigned int uxtb16(unsigned int x)
     char v2; // r12
     int v4; // [sp+4h] [bp-4h] BYREF
   
-    sub_60480FC8();
+    sub_60480FC8((_DWORD *)a1);
     if ( ((unsigned int)&unk_60C9EDE4 & ~(1615335120 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9EDE4) )
     {
       dword_60C9EDE8 = 12321336;
@@ -2693,7 +2693,8 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13233884);
     *(_DWORD *)(a1 + 4) = 12571856;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1);
+    *(_DWORD *)(a1 + 40) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;

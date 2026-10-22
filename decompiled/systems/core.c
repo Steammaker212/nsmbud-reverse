@@ -1078,7 +1078,7 @@ int _nnDetailNintendoSdkRuntimeObjectFileRefer()
             if ( v23 || (v24 = *(float *)(v22 + 108), result = 0, v24 > v17) )
             {
   _ZN10StageActor9cullCheckEj__LABEL_30:
-              v25 = sub_60007318(v29, *(unsigned __int8 *)(a1 + 532));
+              v25 = sub_60007318(v29);
               result = 1;
               if ( !v25 )
               {
@@ -1418,7 +1418,7 @@ int _nnDetailNintendoSdkRuntimeObjectFileRefer()
       }
       *(_BYTE *)(a1 + 85) = -1;
     }
-    result = sub_60001488(a1, a2, a3);
+    result = sub_60001488((float *)a1, a2);
     v18 = result;
     if ( result )
     {
@@ -1509,7 +1509,7 @@ int _nnDetailNintendoSdkRuntimeObjectFileRefer()
         _S4 = (float)((float)((float)(v10[28] + v10[144]) - v4) * (float)((float)(v10[28] + v10[144]) - v4))
             + (float)(v12 * v12);
         v14 = _S4 < 3.4028e38;
-        _S0 = vminnm_f32(float_s4, float_s8)
+        _S0 = vminnm_f32(float_s4, float_s8);
         if ( !v14 );
           v10 = 0;
         result = v10;

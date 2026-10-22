@@ -2726,7 +2726,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12733044;
       MEMORY[0xCC4368] = v4;
-      result = sub_60786EA8();
+      result = sub_60786EA8(v3);
       MEMORY[0xCC436C] = result;
     }
     return result;
@@ -2821,7 +2821,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 32) = 0;
     *(_DWORD *)(a1 + 140) = 0;
     *(_BYTE *)(a1 + 136) = 0;
-    sub_60787118();
+    sub_60787118(a1, a1);
     result = sub_6040E3D0(MEMORY[0xC9A684]);
     if ( !result )
     {

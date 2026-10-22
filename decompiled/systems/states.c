@@ -1565,7 +1565,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
   
-    sub_60603510();
+    sub_60603510(a1);
     result = *(_DWORD *)(a1 + 164) - 0x8000000;
     *(_DWORD *)(a1 + 164) = result;
     return result;
@@ -1800,7 +1800,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB2840] = 12320992;
       _cxa_guard_release_0(13314116);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB2840])(13314112, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB2840])(13314112, a2);
   }
 
 /* ============================================================================
@@ -3329,7 +3329,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB2910] = 12320968;
       _cxa_guard_release_0(13314324);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB2910])(13314320, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB2910])(13314320, a2);
   }
 
 /* ============================================================================
@@ -14284,7 +14284,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC88A4C] = 12320968;
       _cxa_guard_release_0(13142608);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC88A4C])(13142604, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC88A4C])(13142604, a2);
   }
 
 /* ============================================================================
@@ -15310,7 +15310,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB33E4] = 12461268;
       _cxa_guard_release_0(13317096);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB33E4])(13317092, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB33E4])(13317092, a2);
   }
 
 /* ============================================================================
@@ -15446,7 +15446,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB342C] = 12320992;
       _cxa_guard_release_0(13317168);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB342C])(13317164, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB342C])(13317164, a2);
   }
 
 /* ============================================================================
@@ -15923,7 +15923,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB0610] = 12320992;
       _cxa_guard_release_0(13305364);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB0610])(13305360, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB0610])(13305360, a2);
   }
 
 /* ============================================================================
@@ -19510,7 +19510,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB3824] = 12321964;
       _cxa_guard_release_0(13318184);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB3824])(13318180, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB3824])(13318180, a2);
   }
 
 /* ============================================================================
@@ -29452,7 +29452,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB4238] = 12658436;
       _cxa_guard_release_0(13320764);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB4238])(13320760, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB4238])(13320760, a2);
   }
 
 /* ============================================================================
@@ -29468,7 +29468,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB4240] = 12320992;
       _cxa_guard_release_0(13320772);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB4240])(13320768, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB4240])(13320768, a2);
   }
 
 /* ============================================================================
@@ -35187,7 +35187,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB54E8] = 12660220;
       _cxa_guard_release_0(13325548);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB54E8])(13325544, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB54E8])(13325544, a2);
   }
 
 /* ============================================================================
@@ -35203,7 +35203,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB54F0] = 12320992;
       _cxa_guard_release_0(13325556);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB54F0])(13325552, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB54F0])(13325552, a2);
   }
 
 /* ============================================================================
@@ -36698,7 +36698,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB5590] = 12660208;
       _cxa_guard_release_0(13325716);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB5590])(13325712, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB5590])(13325712, a2);
   }
 
 /* ============================================================================
@@ -40099,7 +40099,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB5A5C] = 12661904;
       _cxa_guard_release_0(13326944);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB5A5C])(13326940, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB5A5C])(13326940, a2);
   }
 
 /* ============================================================================
@@ -40115,7 +40115,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB5A64] = 12320992;
       _cxa_guard_release_0(13326952);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB5A64])(13326948, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB5A64])(13326948, a2);
   }
 
 /* ============================================================================
@@ -46121,7 +46121,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB6040] = 12320992;
       _cxa_guard_release_0(13328452);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB6040])(13328448, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB6040])(13328448, a2);
   }
 
 /* ============================================================================
@@ -49024,7 +49024,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB62B4] = 12385496;
       _cxa_guard_release_0(13329080);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB62B4])(13329076, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB62B4])(13329076, a2);
   }
 
 /* ============================================================================
@@ -52221,7 +52221,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB6404] = 12320992;
       _cxa_guard_release_0(13329416);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB6404])(13329412, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB6404])(13329412, a2);
   }
 
 /* ============================================================================
@@ -60459,7 +60459,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB6B78] = 12385496;
       _cxa_guard_release_0(13331324);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB6B78])(13331320, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB6B78])(13331320, a2);
   }
 
 /* ============================================================================
@@ -63893,7 +63893,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB6DE8] = 12660208;
       _cxa_guard_release_0(13331948);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB6DE8])(13331944, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB6DE8])(13331944, a2);
   }
 
 /* ============================================================================
@@ -67391,7 +67391,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB73DC] = 12671204;
       _cxa_guard_release_0(13333472);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB73DC])(13333468, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB73DC])(13333468, a2);
   }
 
 /* ============================================================================
@@ -67407,7 +67407,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB73E4] = 12671216;
       _cxa_guard_release_0(13333480);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB73E4])(13333476, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB73E4])(13333476, a2);
   }
 
 /* ============================================================================
@@ -67423,7 +67423,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB73EC] = 12320992;
       _cxa_guard_release_0(13333488);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB73EC])(13333484, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB73EC])(13333484, a2);
   }
 
 /* ============================================================================
@@ -76386,7 +76386,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB7FB0] = 12320992;
       _cxa_guard_release_0(13336500);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB7FB0])(13336496, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB7FB0])(13336496, a2);
   }
 
 /* ============================================================================
@@ -86739,7 +86739,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB84C4] = 12660220;
       _cxa_guard_release_0(13337800);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB84C4])(13337796, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB84C4])(13337796, a2);
   }
 
 /* ============================================================================
@@ -86818,7 +86818,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB8FC8] = 12679036;
       _cxa_guard_release_0(13340620);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB8FC8])(13340616, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB8FC8])(13340616, a2);
   }
 
 /* ============================================================================
@@ -98203,7 +98203,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB99A4] = 12320992;
       _cxa_guard_release_0(13343144);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB99A4])(13343140, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB99A4])(13343140, a2);
   }
 
 /* ============================================================================
@@ -99394,7 +99394,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB9B1C] = 12320992;
       _cxa_guard_release_0(13343520);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB9B1C])(13343516, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB9B1C])(13343516, a2);
   }
 
 /* ============================================================================
@@ -99660,7 +99660,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB9B14] = 12687632;
       _cxa_guard_release_0(13343512);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB9B14])(13343508, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB9B14])(13343508, a2);
   }
 
 /* ============================================================================
@@ -100423,7 +100423,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB9B6C] = 12687872;
       _cxa_guard_release_0(13343600);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB9B6C])(13343596, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB9B6C])(13343596, a2);
   }
 
 /* ============================================================================
@@ -102103,7 +102103,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCB9D40] = 12671204;
       _cxa_guard_release_0(13344068);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCB9D40])(13344064, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCB9D40])(13344064, a2);
   }
 
 /* ============================================================================
@@ -103637,7 +103637,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCBA104] = 12671192;
       _cxa_guard_release_0(13345032);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBA104])(13345028, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBA104])(13345028, a2);
   }
 
 /* ============================================================================
@@ -109440,7 +109440,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCBA460] = 12320968;
       _cxa_guard_release_0(13345892);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBA460])(13345888, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBA460])(13345888, a2);
   }
 
 /* ============================================================================
@@ -111238,7 +111238,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCBA458] = 12693372;
       _cxa_guard_release_0(13345884);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBA458])(13345880, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBA458])(13345880, a2);
   }
 
 /* ============================================================================
@@ -123639,7 +123639,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCBB28C] = 12670088;
       _cxa_guard_release_0(13349520);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBB28C])(13349516, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBB28C])(13349516, a2);
   }
 
 /* ============================================================================
@@ -124570,7 +124570,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCBB304] = 12700908;
       _cxa_guard_release_0(13349640);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBB304])(13349636, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBB304])(13349636, a2);
   }
 
 /* ============================================================================
@@ -131419,7 +131419,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC88160] = 12321964;
       _cxa_guard_release_0(13140324);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC88160])(13140320, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC88160])(13140320, a2);
   }
 
 /* ============================================================================
@@ -135071,7 +135071,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCBBC6C] = 12618448;
       _cxa_guard_release_0(13352048);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBBC6C])(13352044, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBBC6C])(13352044, a2);
   }
 
 /* ============================================================================
@@ -155853,7 +155853,7 @@ SE_SYS_CE_ref_3__LABEL_11:
       MEMORY[0xC98A94] = 12320992;
       _cxa_guard_release_0(13208216);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC98A94])(13208212, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC98A94])(13208212, a2);
   }
 
 /* ============================================================================
@@ -156624,7 +156624,7 @@ SE_SYS_CE_ref_3__LABEL_11:
       MEMORY[0xCBC68C] = 12716608;
       _cxa_guard_release_0(13354640);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBC68C])(13354636, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBC68C])(13354636, a2);
   }
 
 /* ============================================================================
@@ -187156,7 +187156,7 @@ sub_60721780__LABEL_56:
       MEMORY[0xC99D7C] = 12320920;
       _cxa_guard_release_0(13213056);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC99D7C])(13213052, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC99D7C])(13213052, a2);
   }
 
 /* ============================================================================
@@ -198767,7 +198767,7 @@ sub_60721780__LABEL_56:
       MEMORY[0xCBE69C] = 12320956;
       _cxa_guard_release_0(13362848);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBE69C])(13362844, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBE69C])(13362844, a2);
   }
 
 /* ============================================================================
@@ -202297,7 +202297,7 @@ sub_60721780__LABEL_56:
       MEMORY[0xCBE94C] = 12320956;
       _cxa_guard_release_0(13363536);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBE94C])(13363532, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBE94C])(13363532, a2);
   }
 
 /* ============================================================================
@@ -209117,7 +209117,7 @@ sub_60753720__LABEL_496:
       MEMORY[0xCBEC8C] = 12729944;
       _cxa_guard_release_0(13364368);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBEC8C])(13364364, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBEC8C])(13364364, a2);
   }
 
 /* ============================================================================
@@ -209133,7 +209133,7 @@ sub_60753720__LABEL_496:
       MEMORY[0xCBEC94] = 12320932;
       _cxa_guard_release_0(13364376);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCBEC94])(13364372, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCBEC94])(13364372, a2);
   }
 
 /* ============================================================================

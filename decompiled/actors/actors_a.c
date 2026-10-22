@@ -555,7 +555,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8C230] = 12320932;
       _cxa_guard_release_0(13156916);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC8C230])(13156912, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC8C230])(13156912, a2);
   }
 
 /* ============================================================================
@@ -16676,7 +16676,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, a1[7]) )
       {
         if ( ((0xA4Au >> a1[5]) & 1) != 0 )
-          sub_602187D4();
+          sub_602187D4(a1);
         else
           sub_602187C8();
       }

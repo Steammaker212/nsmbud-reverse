@@ -3046,7 +3046,7 @@ static inline int32x4_t vcle_zero_q(float a, float b, float c, float d)
       if ( *(_DWORD *)(v12 + 764) == 2 && sub_608024DC() == 1 )
       {
         v15 = __operator_new(76);
-        v16 = sub_60801EC4(v15, a2, a5);
+        v16 = sub_60801EC4(v15, a2);
         *(_DWORD *)(a1 + 36) = v16;
         goto sub_60801120__LABEL_7;
       }
@@ -3108,7 +3108,7 @@ static inline int32x4_t vcle_zero_q(float a, float b, float c, float d)
     int v3; // r0
   
     if ( *(_DWORD *)(a1 + 28) )
-      sub_60800CB8();
+      sub_60800CB8(a1);
     v2 = *(_DWORD *)(a1 + 36);
     if ( v2 )
       v3 = *(unsigned __int8 *)(v2 + 69);

@@ -1231,7 +1231,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[1710] = 1103101952;
     CollisionMgr_setSensor((int)(a1 + 162), dword_60AF5FA4, 3);
     CollisionMgr_setSensor(v1, dword_60AF5FB0, 2);
-    CollisionMgr_setSensor(v1, (int *)flt_60AF5FBC, 0);
+    /* flt_60AF5FBC is a float accessor macro (a value), not a pointer; the sensor destination is the
+ * caller's own scratch buffer at v1. */
+    CollisionMgr_setSensor(v1, (int *)&flt_60AF5FBC, 0);
     v3[1] = 1103101952;
     v3[0] = 1094713344;
     v3[2] = -1050673152;
@@ -1747,7 +1749,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       result = ActiveColliderMgr_isInCreateList(v12, v11);
       if ( !result )
-        return ActiveColliderMgr_addToCreateList(v12, v11);
+        ActiveColliderMgr_addToCreateList(v12, v11);
+  return 1;
     }
     return result;
   }
@@ -4698,7 +4701,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 80) = *(float *)(a1 + 108) >= *(float *)(MEMORY[0xCC6484] + 116);
     *(_DWORD *)(a1 + 6308) = (unsigned __int8)v2 >> 4;
     deka_sanbo_ref(a1);
-    CollisionMgr_init(a1 + 648, a1, dword_60AF601C, dword_60AF6028, flt_60AF6034);
+    CollisionMgr_init(a1 + 648, a1, &dword_60AF601C, &dword_60AF6028, &flt_60AF6034);
     *(_DWORD *)(a1 + 3200) |= 0x800u;
     *(_DWORD *)(a1 + 3192) |= 0x800u;
     *(_DWORD *)(a1 + 3176) |= 0x800u;

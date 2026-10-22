@@ -886,11 +886,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32((float32x4_t)0x3F800000uLL, v27.n64_f32[0]), v3, v27, 1), v4, v28, 0);
     v7 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32((float32x4_t)0x3F800000uLL, v29.n64_f32[0]), v3, v29, 1), v4, v30, 0);
     v8 = vdupq_lane_s32(v32, 1);
-    v9 = vextq_s8((int8x16_t)vzipq_s32(v5, v5).val, (int8x16_t)0, 0xCu);
+    /* vzipq_s32 returns an int32x4x2_t; vextq_s8 needs the second vector of the pair, and the
+ * all-zero operand is a vector value rather than a pointer cast. */
+    v9 = vextq_s8(*(int8x16_t *)&vzipq_s32(v5, v5).val[1], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v10 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32((float32x4_t)0x3F800000uLL, v31.n64_f32[0]), v3, v31, 1), v4, v32, 0);
-    v11 = vextq_s8((int8x16_t)vzipq_s32(v8, v8).val, (int8x16_t)0, 0xCu);
+    v11 = vextq_s8(*(int8x16_t *)&vzipq_s32(v8, v8).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v12 = vdupq_lane_s32(v28, 1);
-    v13 = vextq_s8((int8x16_t)vzipq_s32(v12, v12).val, (int8x16_t)0, 0xCu);
+    v13 = vextq_s8(*(int8x16_t *)&vzipq_s32(v12, v12).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v1[536] = (_DWORD *)vaddq_f32(vextq_s8(v13, v13, 4u), v6).n128_u32[3];
     v1[537] = (_DWORD *)vaddq_f32(vextq_s8(v9, v9, 4u), v7).n128_u32[3];
     v1[538] = (_DWORD *)vaddq_f32(vextq_s8(v11, v11, 4u), v10).n128_u32[3];
@@ -902,7 +904,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v17 = vmlaq_lane_f32(vmulq_n_f32((float32x4_t)0x3F800000uLL, v27.n64_f32[0]), v10, v27, 1);
     v13.n128_u64[0] = 0;
     v13.n128_u64[1] = 1065353216;
-    v18 = vextq_s8((int8x16_t)vzipq_s32(v14, v14).val, (int8x16_t)0, 0xCu);
+    v18 = vextq_s8(*(int8x16_t *)&vzipq_s32(v14, v14).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v19 = vmlaq_lane_f32(
             vmlaq_lane_f32(vmulq_n_f32((float32x4_t)0x3F800000uLL, v29.n64_f32[0]), v10, v29, 1),
             v13,
@@ -913,8 +915,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v13,
             v32,
             0);
-    v21 = vextq_s8((int8x16_t)vzipq_s32(v15, v15).val, (int8x16_t)0, 0xCu);
-    v22 = vextq_s8((int8x16_t)vzipq_s32(v16, v16).val, (int8x16_t)0, 0xCu);
+    v21 = vextq_s8(*(int8x16_t *)&vzipq_s32(v15, v15).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
+    v22 = vextq_s8(*(int8x16_t *)&vzipq_s32(v16, v16).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v17.n128_u32[3] = vaddq_f32(vextq_s8(v18, v18, 4u), vmlaq_lane_f32(v17, v13, v28, 0)).n128_u32[3];
     v23 = vextq_s8(v22, v22, 4u);
     v26 = (_DWORD *)v17.n128_u32[3];
@@ -1297,8 +1299,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15 = vdupq_lane_s32(v11, 1);
     v16.n128_u64[0] = 0;
     v16.n128_u64[1] = 1065353216;
-    v17 = vextq_s8((int8x16_t)vzipq_s32(v14, v14).val, (int8x16_t)0LL, 0xCu);
-    v18 = vextq_s8((int8x16_t)vzipq_s32(v15, v15).val, (int8x16_t)0LL, 0xCu);
+    v17 = vextq_s8(*(int8x16_t *)&vzipq_s32(v14, v14).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
+    v18 = vextq_s8(*(int8x16_t *)&vzipq_s32(v15, v15).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     *a2 = vaddq_f32(
             vextq_s8(v17, v17, 4u),
             vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v12, v19.n64_f32[0]), v13, v19, 1), v16, (float32x2_t)v20, 0)).n128_u32[3];
@@ -1705,7 +1707,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v34 = v25 - v28;
     v35 = v23 + v27;
     v36 = v26 - v28;
-    (vminnm_f32(float_s3, float_s14), vmaxnm_f32(float_s3, float_s14), vminnm_f32(float_s5, float_s14), vmaxnm_f32(float_s5, float_s14))
+    (vminnm_f32(float_s3, float_s14), vmaxnm_f32(float_s3, float_s14), vminnm_f32(float_s5, float_s14), vmaxnm_f32(float_s5, float_s14));
     if ( _S7 <= v30 )
       v45 = _S7;
     else
@@ -73353,9 +73355,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
            v5,
            *(float32x2_t *)&v18.n128_i8[8],
            0);
-    v8 = vextq_s8((int8x16_t)vzipq_s32(v3, v3).val, (int8x16_t)0, 0xCu);
+    v8 = vextq_s8(*(int8x16_t *)&vzipq_s32(v3, v3).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v9 = vdupq_lane_s32(*(int32x2_t *)&v18.n128_i8[8], 1);
-    v10 = vextq_s8((int8x16_t)vzipq_s32(v4, v4).val, (int8x16_t)0, 0xCu);
+    v10 = vextq_s8(*(int8x16_t *)&vzipq_s32(v4, v4).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v16 = vaddq_f32(
             vextq_s8(v8, v8, 4u),
             vmlaq_lane_f32(
@@ -73367,7 +73369,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v5,
               *(float32x2_t *)&v16.n128_i8[8],
               0));
-    v11 = vextq_s8((int8x16_t)vzipq_s32(v9, v9).val, (int8x16_t)0, 0xCu);
+    v11 = vextq_s8(*(int8x16_t *)&vzipq_s32(v9, v9).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v17 = vaddq_f32(vextq_s8(v10, v10, 4u), v6);
     v18 = vaddq_f32(vextq_s8(v11, v11, 4u), v7);
     v12 = (_DWORD *)v16.n128_u32[3];
@@ -158464,13 +158466,13 @@ sub_603F8408__LABEL_96:
       v39 = vdupq_lane_s32(v53, 1);
       v40 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v56, v52.n64_f32[0]), v57, v52, 1), v58, v53, 0);
       v41 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v56, v54.n64_f32[0]), v57, v54, 1), v58, v55, 0);
-      v42 = vextq_s8((int8x16_t)vzipq_s32(v38, v38).val, (int8x16_t)0, 0xCu);
+      v42 = vextq_s8(*(int8x16_t *)&vzipq_s32(v38, v38).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
       v43 = vdupq_lane_s32(v55, 1);
-      v44 = vextq_s8((int8x16_t)vzipq_s32(v39, v39).val, (int8x16_t)0, 0xCu);
+      v44 = vextq_s8(*(int8x16_t *)&vzipq_s32(v39, v39).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
       v56 = vaddq_f32(
               vextq_s8(v42, v42, 4u),
               vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v56, v50.n64_f32[0]), v57, v50, 1), v58, v51, 0));
-      v45 = vextq_s8((int8x16_t)vzipq_s32(v43, v43).val, (int8x16_t)0, 0xCu);
+      v45 = vextq_s8(*(int8x16_t *)&vzipq_s32(v43, v43).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
       v57 = vaddq_f32(vextq_s8(v44, v44, 4u), v40);
       v58 = vaddq_f32(vextq_s8(v45, v45, 4u), v41);
       v36 = v58.n128_f32[2];
@@ -177261,15 +177263,15 @@ sub_603F8408__LABEL_96:
     v10.n128_u64[1] = 0xC294666600000000LL;
     v11.n128_u64[0] = 0;
     v11.n128_u64[1] = 0x3FB3333340E00000LL;
-    v12 = vextq_s8((int8x16_t)vzipq_s32(v6, v6).val, (int8x16_t)0, 0xCu);
-    v13 = vextq_s8((int8x16_t)vzipq_s32(v8, v8).val, (int8x16_t)0, 0xCu);
+    v12 = vextq_s8(*(int8x16_t *)&vzipq_s32(v6, v6).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
+    v13 = vextq_s8(*(int8x16_t *)&vzipq_s32(v8, v8).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v14 = vmlaq_lane_f32(
             vmlaq_lane_f32(vmulq_n_f32((float32x4_t)0x40E00000uLL, v42[0].n64_f32[0]), v10, v42[0], 1),
             v11,
             v5,
             0);
     v15 = vdupq_lane_s32(v9, 1);
-    v16 = vextq_s8((int8x16_t)vzipq_s32(v15, v15).val, (int8x16_t)0, 0xCu);
+    v16 = vextq_s8(*(int8x16_t *)&vzipq_s32(v15, v15).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v47[0] = vaddq_f32(vextq_s8(v12, v12, 4u), v14);
     v47[1] = vaddq_f32(
                vextq_s8(v13, v13, 4u),
@@ -189435,11 +189437,11 @@ sub_603F8408__LABEL_96:
             v36,
             v12,
             0);
-    v18 = vextq_s8((int8x16_t)vzipq_s32(v13, v13).val, (int8x16_t)0, 0xCu);
+    v18 = vextq_s8(*(int8x16_t *)&vzipq_s32(v13, v13).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v19 = vdupq_lane_s32(v12, 1);
-    v20 = vextq_s8((int8x16_t)vzipq_s32(v14, v14).val, (int8x16_t)0, 0xCu);
+    v20 = vextq_s8(*(int8x16_t *)&vzipq_s32(v14, v14).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v33 = vaddq_f32(vextq_s8(v18, v18, 4u), v15);
-    v21 = vextq_s8((int8x16_t)vzipq_s32(v19, v19).val, (int8x16_t)0, 0xCu);
+    v21 = vextq_s8(*(int8x16_t *)&vzipq_s32(v19, v19).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v34 = vaddq_f32(vextq_s8(v20, v20, 4u), v16);
     v35 = vaddq_f32(vextq_s8(v21, v21, 4u), v17);
     v28 = v33;
@@ -191818,7 +191820,7 @@ sub_603F8408__LABEL_96:
     v13 = vdupq_lane_s32(v11, 1);
     v14.n64_u64[0] = a4[5].n64_u64[0];
     v15 = vdupq_lane_s32(v14, 1);
-    v16 = vextq_s8((int8x16_t)vzipq_s32(v12, v12).val, (int8x16_t)0, 0xCu);
+    v16 = vextq_s8(*(int8x16_t *)&vzipq_s32(v12, v12).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v17 = *(float32x4_t *)(a3 + 32);
     v18 = vmlaq_lane_f32(
             vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a3, a4->n64_f32[0]), v77, (float32x2_t)a4->n64_u64[0], 1),
@@ -191826,8 +191828,8 @@ sub_603F8408__LABEL_96:
             v10,
             0);
     v19 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a3, a4[2].n64_f32[0]), v77, a4[2], 1), v17, v11, 0);
-    v20 = vextq_s8((int8x16_t)vzipq_s32(v13, v13).val, (int8x16_t)0, 0xCu);
-    v21 = vextq_s8((int8x16_t)vzipq_s32(v15, v15).val, (int8x16_t)0, 0xCu);
+    v20 = vextq_s8(*(int8x16_t *)&vzipq_s32(v13, v13).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
+    v21 = vextq_s8(*(int8x16_t *)&vzipq_s32(v15, v15).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v22 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a3, a4[4].n64_f32[0]), v77, a4[4], 1), v17, v14, 0);
     v23 = vaddq_f32(vextq_s8(v16, v16, 4u), v18);
     v24 = vextq_s8(v20, v20, 4u);
@@ -191836,7 +191838,7 @@ sub_603F8408__LABEL_96:
     v26 = vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a3, a4[6].n64_f32[0]), v77, a4[6], 1);
     v72[0] = v23;
     v72[1] = vaddq_f32(v24, v19);
-    v27 = vextq_s8((int8x16_t)vzipq_s32(v25, v25).val, (int8x16_t)0, 0xCu);
+    v27 = vextq_s8(*(int8x16_t *)&vzipq_s32(v25, v25).val[0], *(int8x16_t *)&(nsmbudx_vec128_t){0}, 0xCu);
     v72[2] = vaddq_f32(vextq_s8(v21, v21, 4u), v22);
     v72[3] = vaddq_f32(vextq_s8(v27, v27, 4u), vmlaq_lane_f32(v26, v17, *(float32x2_t *)&v20.n128_i8[8], 0));
     Table12_lookupAndDispatchSlot3(v8, *(_DWORD *)(v8 + 8), 0, a3, 0, 3);

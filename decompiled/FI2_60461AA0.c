@@ -41,7 +41,7 @@ int __fastcall sub_60461AA0(int result);
 /* line: 18, address: 0x60461b20 */     if ( result == 1 )
 /* line: 19 */     {
 /* line: 20, address: 0x60461b30 */       sub_6035750C(v2, v5);
-/* line: 21, address: 0x60461b3c */       sub_6083316C(v1 + 156, v5);
+/* line: 21, address: 0x60461b3c */       sub_6083316C((unsigned int *)(v1 + 156));
 /* line: 22, address: 0x60461b48 */       sub_60833200(v1 + 144, v5);
 /* line: 23, address: 0x60461b50 */       *(_DWORD *)(v1 + 108) = v5[3];
 /* line: 24, address: 0x60461b58 */       *(_DWORD *)(v1 + 112) = v5[7];

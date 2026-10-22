@@ -1964,7 +1964,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( v11 == MEMORY[0xB3BA34] )
               goto challenge_replay_ref__LABEL_13;
           }
-          sub_60455D54(*(_DWORD *)(a1 + 1388), a3, a4, "challenge_replay");
+          sub_60455D54(*(_DWORD *)(a1 + 1388), a3, a4);
         }
         sub_60455EF4(*(_DWORD *)(a1 + 1388));
         sub_60452470(a1);
@@ -2034,7 +2034,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v25 = *(_DWORD *)(a1 + 1328);
       v26 = *(_DWORD *)(a1 + 1332);
     }
-    sead__Random__init((struct sead_Random *)(a1 + 1340), v24, v25, v26, v23);
+    sead__Random__init((struct sead_Random *)(a1 + 1340));
     if ( *(_DWORD *)(a1 + 1316) == 1 )
     {
       sub_604528CC(a1);
@@ -2776,7 +2776,7 @@ static inline unsigned int uxtb16(unsigned int x)
     while ( v12 != 4 );
     sub_60453694(a1);
     sub_60453764(a1);
-    sub_60453AA8(a1);
+    sub_60453AA8(a1, 0);
     sub_60453D7C(a1);
     sub_60453F44(a1);
     return sub_60454344(a1);

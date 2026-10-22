@@ -69,11 +69,21 @@ typedef nsmbudx_vec128_t uint32x4_t;
 /* These are UNIONS, not structs. The corpus writes casts like `(int8x16_t)0` and `(int8x16_t)0x3F80...`,
    and a cast to a struct type is invalid C. A union with an integer member of matching size makes the cast
    legal, which is how the surrounding code uses these types. */
-typedef union { int8_t v[16]; uint8_t n128_u8[16]; int32_t n128_i32[4]; uint32_t n128_u32[4];
-                int64_t v64[2]; uint64_t n128_u64[2]; float n128_f32[4];
-                int n_i; long long n_ll; } int8x16_t;   /* scalar members make `(int8x16_t)N` casts legal */
-typedef union { uint8_t v[16]; int8_t n128_i8[16]; uint32_t n128_u32[4]; int32_t n128_i32[4];
-                uint64_t n128_u64[2]; } uint8x16_t;
+/* These were separate unions, which made every transfer between the byte, halfword and float views of the same
+   128-bit register an error -- exactly the reinterprets Hex-Rays emits constantly, e.g.
+
+       v9 = vextq_s8((int8x16_t)vzipq_s32(v5, v5).val[0], ...);   int8x16_t passed where int8x16_t is expected
+       vaddq_f32(vextq_s8(v9, v9, 4u), v6)                       int8x16_t passed where float32x4_t is expected
+
+   They now alias the shared 128-bit lane union, which carries int8_t/uint8_t/int16_t/... members, so a cast such
+   as `(int8x16_t)0` and `(int8x16_t)0x3F800000uLL` is still legal (a union with a scalar member permits it) while
+   the register views interoperate. */
+typedef nsmbudx_vec128_t int8x16_t;
+typedef nsmbudx_vec128_t uint8x16_t;
+typedef nsmbudx_vec128_t int16x8_t;
+typedef nsmbudx_vec128_t uint16x8_t;
+typedef nsmbudx_vec128_t int64x2_t;
+typedef nsmbudx_vec128_t uint64x2_t;
 typedef struct { int32x4_t val[2]; }   int32x4x2_t;
 typedef struct { int32x2_t val[2]; }   int32x2x2_t;
 typedef struct { float32x2_t val[2]; } float32x2x2_t;
