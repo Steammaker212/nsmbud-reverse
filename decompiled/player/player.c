@@ -11117,6 +11117,181 @@
   }
 
 /* ============================================================================
+ * Player_setPowerupMode
+ * RVA 0x00795cdc   size 0x314   xrefs 0
+ * ============================================================================ */
+  int __fastcall sub_60795CDC(int a1, int a2, int a3)
+  {
+    int v5; // r2
+    float v6; // r0
+    float v7; // s0
+    int v8; // r0
+    float v9; // s2
+    float v10; // s0
+    _BOOL4 v11; // r1
+    float v12; // s0
+    float v13; // s4
+    float v14; // s2
+    _BOOL4 v15; // r2
+    int v16; // r0
+    int v17; // r7
+    int v18; // r6
+    int v19; // r0
+    int v20; // r1
+    int v21; // r0
+    int v22; // r0
+    int v23; // r7
+    int v24; // r1
+    int v25; // r0
+    _WORD *v26; // r1
+    __int16 v27; // r2
+    int result; // r0
+    unsigned int v29; // r0
+    int v30; // r1
+  
+    *(_DWORD *)(a1 + 11384) = *(_DWORD *)(a1 + 1320);
+    *(_DWORD *)(a1 + 1320) = a2;
+    sub_6078E608(*(_DWORD *)(a1 + 11368));
+    *(_DWORD *)(a1 + 492) = 0;
+    *(_DWORD *)(a1 + 496) = 1101004800;
+    *(_DWORD *)(a1 + 500) = 1097859072;
+    *(_DWORD *)(a1 + 504) = 1102053376;
+    v5 = *(_DWORD *)(a1 + 1320);
+    v6 = flt_60B0C2BC[v5];
+    *(float *)(a1 + 1244) = v6;
+    v7 = v6;
+    v8 = *(_DWORD *)(*(_DWORD *)(a1 + 11360) + 196);
+    if ( (v8 & 1) != 0 )
+    {
+      v10 = v7 * 0.25;
+    }
+    else
+    {
+      v9 = v7 * -0.5;
+      v10 = v7 * 0.5;
+      if ( (v8 & 4) != 0 )
+        v10 = v9;
+    }
+    v11 = 0;
+    *(_DWORD *)(a1 + 572) = 0;
+    *(float *)(a1 + 576) = v10;
+    v12 = 16.0;
+    *(_DWORD *)(a1 + 580) = 0;
+    v13 = *(float *)(a1 + 7068);
+    if ( v5 == 3 )
+      v12 = 8.0;
+    if ( v13 >= v12 )
+    {
+      if ( v13 <= v12 )
+        goto LABEL_19;
+      v14 = v13 + -0.1;
+      v15 = v13 < (float)(v13 + -0.1);
+      v11 = (float)(v13 + -0.1) <= v12;
+    }
+    else
+    {
+      v14 = v13 + 0.1;
+      v15 = (float)(v13 + 0.1) < v13;
+      if ( (float)(v13 + 0.1) >= v12 )
+        v11 = 1;
+    }
+    if ( v11 )
+      v14 = v12;
+    if ( !v15 )
+      v12 = v14;
+    *(float *)(a1 + 7068) = v12;
+  LABEL_19:
+    v16 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 152))(a1);
+    v17 = *(_DWORD *)(a1 + 1320);
+    v18 = v16;
+    v19 = sub_6075EE0C(a1);
+    if ( v18 == 1 )
+    {
+      if ( v17 == 3 )
+      {
+        v20 = 2;
+        if ( v19 )
+          v20 = 6;
+      }
+      else
+      {
+        v20 = 7;
+        if ( !v19 )
+        {
+          v21 = sub_6075EDF8(a1, 7);
+          v20 = 3;
+          if ( v21 )
+            v20 = 9;
+        }
+      }
+    }
+    else if ( v17 == 3 )
+    {
+      if ( v19 )
+        v19 = 4;
+      v20 = v19;
+    }
+    else
+    {
+      v20 = 5;
+      if ( !v19 )
+      {
+        v22 = sub_6075EDF8(a1, 5);
+        v20 = 1;
+        if ( v22 )
+          v20 = 8;
+      }
+    }
+    *(_DWORD *)(a1 + 1276) = 240 * v20 + 11580596;
+    *(_DWORD *)(a1 + 1280) = 240 * v20 + 11580716;
+    v23 = a1 + 1280;
+    if ( !(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1204))(a1) )
+      v23 = a1 + 1276;
+    *(_DWORD *)(a1 + 104) = *(_DWORD *)(*(_DWORD *)v23 + 32);
+    *(_DWORD *)(a1 + 1284) = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1100))(a1);
+    v24 = *(_DWORD *)(a1 + 1228);
+    *(_DWORD *)(a1 + 1228) = v24 & 0xFFF7FFFF;
+    v25 = *(_DWORD *)(a1 + 1320);
+    if ( (unsigned int)(v25 - 7) < 3 )
+    {
+      *(_BYTE *)(a1 + 12917) = 1;
+  LABEL_46:
+      v26 = (_WORD *)(a1 + 6690);
+      v27 = *(_WORD *)(a1 + 6690) & 0xFFF7;
+      goto LABEL_47;
+    }
+    if ( v25 == 5 )
+    {
+      *(_DWORD *)(a1 + 1228) = v24 | 0x80000;
+      goto LABEL_46;
+    }
+    if ( v25 == 4 )
+    {
+      sub_607AE108(a1);
+      *(_BYTE *)(a1 + 12453) = 1;
+      v25 = *(_DWORD *)(a1 + 1320);
+    }
+    v26 = (_WORD *)(a1 + 6690);
+    v27 = *(_WORD *)(a1 + 6690) & 0xFFF7;
+    if ( v25 == 3 )
+      v27 = *(_WORD *)(a1 + 6690) | 8;
+  LABEL_47:
+    *v26 = v27;
+    result = sub_600243A0();
+    *(_DWORD *)(a1 + 1152) = result;
+    if ( !a3 )
+    {
+      v29 = *(unsigned __int8 *)(a1 + 84);
+      v30 = 0;
+      if ( v29 < 6 )
+        v30 = (char)v29;
+      result = MEMORY[0xC99DD4] + 72 * v30;
+      *(_DWORD *)(result + 300) = *(_DWORD *)(a1 + 1320);
+    }
+    return result;
+  }
+
+/* ============================================================================
  * sub_60796004
  * RVA 0x00796004   size 0xf4   xrefs 1
  * ============================================================================ */
