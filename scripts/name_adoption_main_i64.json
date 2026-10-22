@@ -1,0 +1,35 @@
+{
+ "renames": {
+  "SwingingCollider_vf4": "ColliderBase_vf10",
+  "ShapedCollider_vf5": "ColliderBase_vf14",
+  "ActorCollisionMgr_vf5": "CollisionMgr_vf14",
+  "ActorCollisionMgr_vf6": "CollisionMgr_vf18",
+  "ActorCollisionMgr_vf10": "CollisionMgr_vf28",
+  "ActiveColliderMgrList_vf4": "ActiveColliderMgr_vf10",
+  "sub_601603F8": "ColliderBase_vf30",
+  "BobOmb_vf154": "j_Enemy_vf268",
+  "sub_6027D580": "j_Enemy_vf264",
+  "sub_60301164": "j_Enemy_vf140",
+  "sub_603C675C": "j_Enemy_vf114",
+  "sub_603D5E24": "j_Enemy_vf118"
+ },
+ "rva": {
+  "1684": "_ZN10StageActor11afterCreateEj",
+  "309680": "ColliderBase_vf10",
+  "309736": "ColliderBase_vf14",
+  "1356560": "CollisionMgr_vf14",
+  "1358792": "CollisionMgr_vf18",
+  "1387544": "CollisionMgr_vf28",
+  "1424256": "ActiveColliderMgr_vf10",
+  "1442808": "ColliderBase_vf30",
+  "2493516": "j_Enemy_vf268",
+  "2610560": "j_Enemy_vf264",
+  "3150180": "j_Enemy_vf140",
+  "3958620": "j_Enemy_vf114",
+  "4021796": "j_Enemy_vf118",
+  "5662392": "_ZNK14BrickBlockHuge27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE",
+  "5672172": "_ZNK11FlyingBlock27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE",
+  "5675004": "_ZNK20FlyingBlockForAmbush27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE",
+  "5729172": "_ZNK14BabyYoshiBlock27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE"
+ }
+}
