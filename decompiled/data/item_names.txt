@@ -1,0 +1,26 @@
+# Item name table extracted from NSMBU Deluxe v1.0.0 (Switch)
+# built by ItemNameTable_build (RVA 0x004F2044)
+# record: { uint32 vtable = 0x00BC0000, char* name }
+#
+# index  name            meaning
+# -----  --------------  ------------------------
+      0  Kinoko          Mushroom
+      1  FireFlower      Fire Flower
+      2  Star            Super Star
+      3  IceFlower       Ice Flower
+      4  Propeller       Propeller Mushroom
+      5  MameKinoko      Mini Mushroom
+      6  Penguin         Penguin Suit
+      7  NutKinoko       Acorn Mushroom
+      8  PNutKinoko      P-Acorn
+      9  PeachCrown      Peachette's crown
+
+# Power-up mode tables (dword stride), read back from memory:
+#   body    0x00B0C230  [1, 0, 0, 1, 2, 3, 0, 4, 4, 5]
+#   height  0x00B0C2BC  [16.0, 31.0, 31.0, 6.0, 31.0, 31.0, 31.0, 31.0, 31.0, 31.0]
+#   balloon 0x00B0C34C  [0.0, -4.0, -4.0, 4.0, -5.0, -2.0, -4.0, -4.0, -4.0, 0.0]
+#
+# Player power-up mode is a BYTE at Player + 0x528.
+#
+# CORRECTION: an earlier note said item value 3 = Fire Flower. That is wrong;
+# index 1 is FireFlower and index 3 is IceFlower.
