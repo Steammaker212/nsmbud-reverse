@@ -31460,409 +31460,492 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_60037BB0
  * RVA 0x00037bb0   size 0x98c   xrefs 15
  * ============================================================================ */
-  int __fastcall sub_60037BB0(int a1, int a2, int a3)
-  {
-    int v3; // s0
-    int v4; // s1
-    int v7; // r0
-    _BYTE *v8; // r5
-    int v9; // r1
-    const char *v10; // r2
-    const char *v11; // r2
-    int v12; // r0
-    int v13; // r7
-    int v14; // r1
-    const char *v15; // r2
-    _DWORD *v16; // t1
-    int *v17; // r1
-    unsigned int v18; // r0
-    int v19; // r0
-    int v20; // r1
-    const char *v21; // r2
-    _DWORD *v22; // t1
-    int *v23; // r1
-    unsigned int v24; // r0
-    _DWORD *v25; // t1
-    int *v26; // r1
-    unsigned int v27; // r0
-    _DWORD *v28; // t1
-    int *v29; // r1
-    unsigned int v30; // r0
-    _DWORD *v31; // t1
-    int *v32; // r1
-    unsigned int v33; // r0
-    _DWORD *v34; // t1
-    int *v35; // r1
-    unsigned int v36; // r0
-    _DWORD *v37; // t1
-    int *v38; // r1
-    unsigned int v39; // r0
-    _DWORD *v40; // t1
-    int *v41; // r1
-    unsigned int v42; // r0
-    _DWORD *v43; // t1
-    int *v44; // r1
-    unsigned int v45; // r0
-    _DWORD *v46; // t1
-    int *v47; // r1
-    unsigned int v48; // r0
-    const char *v49; // r2
-    _DWORD *v50; // t1
-    int *v51; // r1
-    unsigned int v52; // r0
-    _DWORD *v53; // t1
-    int *v54; // r1
-    unsigned int v55; // r0
-    _DWORD *v56; // t1
-    int *v57; // r1
-    unsigned int v58; // r0
-    _DWORD *v59; // t1
-    int *v60; // r1
-    unsigned int v61; // r0
-    _DWORD *v62; // t1
-    int *v63; // r1
-    unsigned int v64; // r0
-    int v65; // r0
-    int v66; // r5
-    int v67; // r1
-    int *v68; // r1
-    unsigned int v69; // r0
-    int v70; // r0
-    int v71; // r1
-    unsigned int v72; // r0
-    _DWORD *v73; // r1
-    unsigned int v74; // r0
-    int v76; // r0
-    int v77; // r5
-    int v78; // r1
-    int *v79; // r1
-    unsigned int v80; // r0
-    int v81; // r0
-    int v82; // r1
-    unsigned int v83; // r0
-    _DWORD *v84; // r1
-    unsigned int v85; // r0
-    int v86; // r0
-    _DWORD *v87; // r5
-    int v88; // r1
-    int *v89; // r1
-    unsigned int v90; // r0
-    int v91; // r0
-    int v92; // r1
-    unsigned int v93; // r0
-    _DWORD *v94; // r1
-    unsigned int v95; // r0
-    int *v96; // r1
-    unsigned int v97; // r0
-    int v98; // r0
-    int v99; // r1
-    unsigned int v100; // r0
-    _DWORD *v101; // r1
-    unsigned int v102; // r0
-    int *v103; // r1
-    unsigned int v104; // r0
-    int v105; // r0
-    int v106; // r1
-    unsigned int v107; // r0
-    _DWORD *v108; // r1
-    unsigned int v109; // r0
-    int v110; // [sp+0h] [bp-8h] BYREF
-    const char *v111; // [sp+4h] [bp-4h]
-  
-    switch ( a2 )
-    {
-      case 0:
-        v8 = (_BYTE *)(a1 + 7100);
-        v7 = *(_DWORD *)(a1 + 7100);
-        v9 = *((_DWORD *)v8 - 1);
-        if ( v8[688] )
-        {
-          v110 = 12321336;
-          v10 = "jc_wait";
-          goto sub_60037BB0__LABEL_63;
-        }
-        v110 = 12321336;
-        v11 = "jcb_wait";
-        goto sub_60037BB0__LABEL_89;
-      case 1:
-        v8 = (_BYTE *)(a1 + 7100);
-        v7 = *(_DWORD *)(a1 + 7100);
-        v9 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v11 = "jcb_demo_battleA";
-  sub_60037BB0__LABEL_89:
-        v111 = v11;
-        goto sub_60037BB0__LABEL_90;
-      case 2:
-        v13 = a1 + 7100;
-        v12 = *(_DWORD *)(a1 + 7100);
-        v14 = *(_DWORD *)(a1 + 7096);
-        if ( *(_BYTE *)(a1 + 7788) )
-        {
-          v110 = 12321336;
-          v15 = "jc_delight";
-        }
-        else
-        {
-          v110 = 12321336;
-          v15 = "jcb_delight";
-        }
-        v111 = v15;
-        dispatch_setFlag1(v12, v14, &v110);
-        v96 = *(int **)(*(_DWORD *)v13 + 12);
-        v97 = *(_DWORD *)(*(_DWORD *)v13 + 68);
-        if ( *(_DWORD *)(*(_DWORD *)v13 + 8) > v97 )
-          v96 += v97;
-        v98 = *v96;
-        *(_DWORD *)(v98 + 20) = v3;
-        *(_DWORD *)(v98 + 28) |= 2u;
-        v99 = *(_DWORD *)(*(_DWORD *)v13 + 12);
-        v100 = *(_DWORD *)(*(_DWORD *)v13 + 68);
-        if ( *(_DWORD *)(*(_DWORD *)v13 + 8) > v100 )
-          v99 += 4 * v100;
-        *(_DWORD *)(*(_DWORD *)v99 + 24) = v4;
-        v101 = *(_DWORD **)(*(_DWORD *)v13 + 12);
-        v102 = *(_DWORD *)(*(_DWORD *)v13 + 68);
-        if ( *(_DWORD *)(*(_DWORD *)v13 + 8) > v102 )
-          v101 += v102;
-        AnimationCtrl_setRepeat(*v101 + 4, a3);
-        SoundActor_tryStartSoundIfFree(a1 + 6332, "SE_VOC_JR_PROV2", 0);
-        *(_DWORD *)(a1 + 7092) = 16779445;
-        return 7092;
-      case 3:
-        v16 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v17 = (int *)v16[3];
-        v18 = v16[17];
-        if ( v16[2] > v18 )
-          v17 += v18;
-        v19 = *v17;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_straight_w_st";
-        goto sub_60037BB0__LABEL_54;
-      case 4:
-        v22 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v23 = (int *)v22[3];
-        v24 = v22[17];
-        if ( v22[2] > v24 )
-          v23 += v24;
-        v19 = *v23;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_straight_w";
-        goto sub_60037BB0__LABEL_54;
-      case 5:
-        v25 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v26 = (int *)v25[3];
-        v27 = v25[17];
-        if ( v25[2] > v27 )
-          v26 += v27;
-        v19 = *v26;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_attack_st";
-        goto sub_60037BB0__LABEL_54;
-      case 6:
-        v28 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v29 = (int *)v28[3];
-        v30 = v28[17];
-        if ( v28[2] > v30 )
-          v29 += v30;
-        v19 = *v29;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_attack_st_wait";
-        goto sub_60037BB0__LABEL_54;
-      case 7:
-        v31 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v32 = (int *)v31[3];
-        v33 = v31[17];
-        if ( v31[2] > v33 )
-          v32 += v33;
-        v19 = *v32;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_attack_ed_l";
-        goto sub_60037BB0__LABEL_54;
-      case 8:
-        v34 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v35 = (int *)v34[3];
-        v36 = v34[17];
-        if ( v34[2] > v36 )
-          v35 += v36;
-        v19 = *v35;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_attack_ed_r";
-        goto sub_60037BB0__LABEL_54;
-      case 9:
-        v37 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v38 = (int *)v37[3];
-        v39 = v37[17];
-        if ( v37[2] > v39 )
-          v38 += v39;
-        v19 = *v38;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_attack_ed_wait";
-        goto sub_60037BB0__LABEL_54;
-      case 10:
-        v40 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v41 = (int *)v40[3];
-        v42 = v40[17];
-        if ( v40[2] > v42 )
-          v41 += v42;
-        v19 = *v41;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_throw_enemy_st";
-        goto sub_60037BB0__LABEL_54;
-      case 11:
-        v43 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v44 = (int *)v43[3];
-        v45 = v43[17];
-        if ( v43[2] > v45 )
-          v44 += v45;
-        v19 = *v44;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_throw_enemy_ed";
-        goto sub_60037BB0__LABEL_54;
-      case 12:
-        v46 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v47 = (int *)v46[3];
-        v48 = v46[17];
-        if ( v46[2] > v48 )
-          v47 += v48;
-        v19 = *v47;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_throw_enemy2_st";
-        goto sub_60037BB0__LABEL_54;
-      case 13:
-        v8 = (_BYTE *)(a1 + 7100);
-        v7 = *(_DWORD *)(a1 + 7100);
-        v9 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v49 = "jcb_throw_enemy2_ed";
-        goto sub_60037BB0__LABEL_72;
-      case 14:
-        v50 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v51 = (int *)v50[3];
-        v52 = v50[17];
-        if ( v50[2] > v52 )
-          v51 += v52;
-        v19 = *v51;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_fire";
-        goto sub_60037BB0__LABEL_54;
-      case 15:
-        v53 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v54 = (int *)v53[3];
-        v55 = v53[17];
-        if ( v53[2] > v55 )
-          v54 += v55;
-        v19 = *v54;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_damage_s";
-        goto sub_60037BB0__LABEL_54;
-      case 16:
-        v56 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v57 = (int *)v56[3];
-        v58 = v56[17];
-        if ( v56[2] > v58 )
-          v57 += v58;
-        v19 = *v57;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_damage";
-        goto sub_60037BB0__LABEL_54;
-      case 17:
-        v59 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v60 = (int *)v59[3];
-        v61 = v59[17];
-        if ( v59[2] > v61 )
-          v60 += v61;
-        v19 = *v60;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_squat";
-        goto sub_60037BB0__LABEL_54;
-      case 18:
-        v62 = *(_DWORD **)(a1 + 7100);
-        v8 = (_BYTE *)(a1 + 7100);
-        v63 = (int *)v62[3];
-        v64 = v62[17];
-        if ( v62[2] > v64 )
-          v63 += v64;
-        v19 = *v63;
-        v20 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v21 = "jcb_damage_up";
-  sub_60037BB0__LABEL_54:
-        v111 = v21;
-        SkeletalAnim_play(v19, v20, &v110);
-        goto sub_60037BB0__LABEL_91;
-      case 19:
-        v66 = a1 + 7100;
-        v65 = *(_DWORD *)(a1 + 7100);
-        v67 = *(_DWORD *)(v66 - 4);
-        v110 = 12321336;
-        v111 = "jc_demo_W7_excite";
-        dispatch_setFlag1(v65, v67, &v110);
-        v68 = *(int **)(*(_DWORD *)v66 + 12);
-        v69 = *(_DWORD *)(*(_DWORD *)v66 + 68);
-        if ( *(_DWORD *)(*(_DWORD *)v66 + 8) > v69 )
-          v68 += v69;
-        v70 = *v68;
-        *(_DWORD *)(v70 + 20) = v3;
-        *(_DWORD *)(v70 + 28) |= 2u;
-        v71 = *(_DWORD *)(*(_DWORD *)v66 + 12);
-        v72 = *(_DWORD *)(*(_DWORD *)v66 + 68);
-        if ( *(_DWORD *)(*(_DWORD *)v66 + 8) > v72 )
-          v71 += 4 * v72;
-        *(_DWORD *)(*(_DWORD *)v71 + 24) = v4;
-        v73 = *(_DWORD **)(*(_DWORD *)v66 + 12);
-        v74 = *(_DWORD *)(*(_DWORD *)v66 + 68);
-        if ( *(_DWORD *)(*(_DWORD *)v66 + 8) > v74 )
-          v73 += v74;
-        AnimationCtrl_setRepeat(*v73 + 4, a3);
-        SoundActor_tryStartSoundIfFree(v66 - 768, "SE_VOC_JR_AGITATE", 0);
-        *(_DWORD *)(v66 - 8) = 16780500;
-        return 16780500;
-      case 20:
-        v8 = (_BYTE *)(a1 + 7100);
-        v7 = *(_DWORD *)(a1 + 7100);
-        v9 = *((_DWORD *)v8 - 1);
-        v110 = 12321336;
-        v10 = "jc_demo_W7_punch";
-        goto sub_60037BB0__LABEL_63;
-      case 21:
-        v77 = a1 + 7100;
-        v76 = *(_DWORD *)(a1 + 7100);
-        v78 = *(_DWORD *)(v77 - 4);
-        v110 = 12321336;
-        v111 = "jc_demo_W7_shock";
-        dispatch_setFlag1(v76, v78, &v110);
+  void __fastcall sub_60037BB0(int a1, int a2, int a3, float a4, float a5)
+{
+  _DWORD *v9; // r0
+  _BYTE *v10; // r5
+  int v11; // r1
+  const char *v12; // r2
+  const char *v13; // r2
+  _DWORD *v14; // r0
+  int v15; // r7
+  int v16; // r1
+  const char *v17; // r2
+  _DWORD *v18; // t1
+  int *v19; // r1
+  unsigned int v20; // r0
+  int v21; // r0
+  int v22; // r1
+  const char *v23; // r2
+  _DWORD *v24; // t1
+  int *v25; // r1
+  unsigned int v26; // r0
+  _DWORD *v27; // t1
+  int *v28; // r1
+  unsigned int v29; // r0
+  _DWORD *v30; // t1
+  int *v31; // r1
+  unsigned int v32; // r0
+  _DWORD *v33; // t1
+  int *v34; // r1
+  unsigned int v35; // r0
+  _DWORD *v36; // t1
+  int *v37; // r1
+  unsigned int v38; // r0
+  _DWORD *v39; // t1
+  int *v40; // r1
+  unsigned int v41; // r0
+  _DWORD *v42; // t1
+  int *v43; // r1
+  unsigned int v44; // r0
+  _DWORD *v45; // t1
+  int *v46; // r1
+  unsigned int v47; // r0
+  _DWORD *v48; // t1
+  int *v49; // r1
+  unsigned int v50; // r0
+  const char *v51; // r2
+  _DWORD *v52; // t1
+  int *v53; // r1
+  unsigned int v54; // r0
+  _DWORD *v55; // t1
+  int *v56; // r1
+  unsigned int v57; // r0
+  _DWORD *v58; // t1
+  int *v59; // r1
+  unsigned int v60; // r0
+  _DWORD *v61; // t1
+  int *v62; // r1
+  unsigned int v63; // r0
+  _DWORD *v64; // t1
+  int *v65; // r1
+  unsigned int v66; // r0
+  _DWORD *v67; // r0
+  int v68; // r5
+  int v69; // r1
+  int *v70; // r1
+  unsigned int v71; // r0
+  int v72; // r0
+  int v73; // r1
+  unsigned int v74; // r0
+  int v75; // r1
+  unsigned int v76; // r0
+  _DWORD *v77; // r0
+  int v78; // r5
+  int v79; // r1
+  int *v80; // r1
+  unsigned int v81; // r0
+  int v82; // r0
+  int v83; // r1
+  unsigned int v84; // r0
+  int v85; // r1
+  unsigned int v86; // r0
+  _DWORD *v87; // r0
+  _DWORD *v88; // r5
+  int v89; // r1
+  int *v90; // r1
+  unsigned int v91; // r0
+  int v92; // r0
+  int v93; // r1
+  unsigned int v94; // r0
+  int v95; // r1
+  unsigned int v96; // r0
+  int *v97; // r1
+  unsigned int v98; // r0
+  int v99; // r0
+  int v100; // r1
+  unsigned int v101; // r0
+  int v102; // r1
+  unsigned int v103; // r0
+  int *v104; // r1
+  unsigned int v105; // r0
+  int v106; // r0
+  int v107; // r1
+  unsigned int v108; // r0
+  int v109; // r1
+  unsigned int v110; // r0
+  int (**v111)(); // [sp+0h] [bp-30h] BYREF
+  const char *v112; // [sp+4h] [bp-2Ch]
 
+  switch ( a2 )
+  {
+    case 0:
+      v10 = (_BYTE *)(a1 + 7100);
+      v9 = *(_DWORD **)(a1 + 7100);
+      v11 = *((_DWORD *)v10 - 1);
+      if ( v10[688] )
+      {
+        v111 = &`vtable for'sead::SafeStringBase<char>;
+        v12 = "jc_wait";
+        goto sub_60037BB0__LABEL_63;
+      }
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v13 = "jcb_wait";
+      goto sub_60037BB0__LABEL_89;
+    case 1:
+      v10 = (_BYTE *)(a1 + 7100);
+      v9 = *(_DWORD **)(a1 + 7100);
+      v11 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v13 = "jcb_demo_battleA";
+sub_60037BB0__LABEL_89:
+      v112 = v13;
+      goto sub_60037BB0__LABEL_90;
+    case 2:
+      v15 = a1 + 7100;
+      v14 = *(_DWORD **)(a1 + 7100);
+      v16 = *(_DWORD *)(a1 + 7096);
+      if ( *(_BYTE *)(a1 + 7788) )
+      {
+        v111 = &`vtable for'sead::SafeStringBase<char>;
+        v17 = "jc_delight";
+      }
+      else
+      {
+        v111 = &`vtable for'sead::SafeStringBase<char>;
+        v17 = "jcb_delight";
+      }
+      v112 = v17;
+      sub_60421938(v14, v16, (int)&v111);
+      v97 = *(int **)(*(_DWORD *)v15 + 12);
+      v98 = *(_DWORD *)(*(_DWORD *)v15 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v15 + 8) > v98 )
+        v97 += v98;
+      v99 = *v97;
+      *(float *)(v99 + 20) = a4;
+      *(_DWORD *)(v99 + 28) |= 2u;
+      v100 = *(_DWORD *)(*(_DWORD *)v15 + 12);
+      v101 = *(_DWORD *)(*(_DWORD *)v15 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v15 + 8) > v101 )
+        v100 += 4 * v101;
+      *(float *)(*(_DWORD *)v100 + 24) = a5;
+      v102 = *(_DWORD *)(*(_DWORD *)v15 + 12);
+      v103 = *(_DWORD *)(*(_DWORD *)v15 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v15 + 8) > v103 )
+        v102 += 4 * v103;
+      AnimationCtrl_setRepeat((ModelAnimation *)(*(_DWORD *)v102 + 4), a3);
+      sub_60813430(a1 + 6332, "SE_VOC_JR_PROV2", 0);
+      *(_DWORD *)(a1 + 7092) = 16779445;
+      return;
+    case 3:
+      v18 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v19 = (int *)v18[3];
+      v20 = v18[17];
+      if ( v18[2] > v20 )
+        v19 += v20;
+      v21 = *v19;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_straight_w_st";
+      goto sub_60037BB0__LABEL_54;
+    case 4:
+      v24 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v25 = (int *)v24[3];
+      v26 = v24[17];
+      if ( v24[2] > v26 )
+        v25 += v26;
+      v21 = *v25;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_straight_w";
+      goto sub_60037BB0__LABEL_54;
+    case 5:
+      v27 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v28 = (int *)v27[3];
+      v29 = v27[17];
+      if ( v27[2] > v29 )
+        v28 += v29;
+      v21 = *v28;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_attack_st";
+      goto sub_60037BB0__LABEL_54;
+    case 6:
+      v30 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v31 = (int *)v30[3];
+      v32 = v30[17];
+      if ( v30[2] > v32 )
+        v31 += v32;
+      v21 = *v31;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_attack_st_wait";
+      goto sub_60037BB0__LABEL_54;
+    case 7:
+      v33 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v34 = (int *)v33[3];
+      v35 = v33[17];
+      if ( v33[2] > v35 )
+        v34 += v35;
+      v21 = *v34;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_attack_ed_l";
+      goto sub_60037BB0__LABEL_54;
+    case 8:
+      v36 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v37 = (int *)v36[3];
+      v38 = v36[17];
+      if ( v36[2] > v38 )
+        v37 += v38;
+      v21 = *v37;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_attack_ed_r";
+      goto sub_60037BB0__LABEL_54;
+    case 9:
+      v39 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v40 = (int *)v39[3];
+      v41 = v39[17];
+      if ( v39[2] > v41 )
+        v40 += v41;
+      v21 = *v40;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_attack_ed_wait";
+      goto sub_60037BB0__LABEL_54;
+    case 10:
+      v42 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v43 = (int *)v42[3];
+      v44 = v42[17];
+      if ( v42[2] > v44 )
+        v43 += v44;
+      v21 = *v43;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_throw_enemy_st";
+      goto sub_60037BB0__LABEL_54;
+    case 11:
+      v45 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v46 = (int *)v45[3];
+      v47 = v45[17];
+      if ( v45[2] > v47 )
+        v46 += v47;
+      v21 = *v46;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_throw_enemy_ed";
+      goto sub_60037BB0__LABEL_54;
+    case 12:
+      v48 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v49 = (int *)v48[3];
+      v50 = v48[17];
+      if ( v48[2] > v50 )
+        v49 += v50;
+      v21 = *v49;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_throw_enemy2_st";
+      goto sub_60037BB0__LABEL_54;
+    case 13:
+      v10 = (_BYTE *)(a1 + 7100);
+      v9 = *(_DWORD **)(a1 + 7100);
+      v11 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v51 = "jcb_throw_enemy2_ed";
+      goto sub_60037BB0__LABEL_72;
+    case 14:
+      v52 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v53 = (int *)v52[3];
+      v54 = v52[17];
+      if ( v52[2] > v54 )
+        v53 += v54;
+      v21 = *v53;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_fire";
+      goto sub_60037BB0__LABEL_54;
+    case 15:
+      v55 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v56 = (int *)v55[3];
+      v57 = v55[17];
+      if ( v55[2] > v57 )
+        v56 += v57;
+      v21 = *v56;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_damage_s";
+      goto sub_60037BB0__LABEL_54;
+    case 16:
+      v58 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v59 = (int *)v58[3];
+      v60 = v58[17];
+      if ( v58[2] > v60 )
+        v59 += v60;
+      v21 = *v59;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_damage";
+      goto sub_60037BB0__LABEL_54;
+    case 17:
+      v61 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v62 = (int *)v61[3];
+      v63 = v61[17];
+      if ( v61[2] > v63 )
+        v62 += v63;
+      v21 = *v62;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_squat";
+      goto sub_60037BB0__LABEL_54;
+    case 18:
+      v64 = *(_DWORD **)(a1 + 7100);
+      v10 = (_BYTE *)(a1 + 7100);
+      v65 = (int *)v64[3];
+      v66 = v64[17];
+      if ( v64[2] > v66 )
+        v65 += v66;
+      v21 = *v65;
+      v22 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v23 = "jcb_damage_up";
+sub_60037BB0__LABEL_54:
+      v112 = v23;
+      SkeletalAnim_play(v21, v22, (int)&v111);
+      goto sub_60037BB0__LABEL_91;
+    case 19:
+      v68 = a1 + 7100;
+      v67 = *(_DWORD **)(a1 + 7100);
+      v69 = *(_DWORD *)(v68 - 4);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v112 = "jc_demo_W7_excite";
+      sub_60421938(v67, v69, (int)&v111);
+      v70 = *(int **)(*(_DWORD *)v68 + 12);
+      v71 = *(_DWORD *)(*(_DWORD *)v68 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v68 + 8) > v71 )
+        v70 += v71;
+      v72 = *v70;
+      *(float *)(v72 + 20) = a4;
+      *(_DWORD *)(v72 + 28) |= 2u;
+      v73 = *(_DWORD *)(*(_DWORD *)v68 + 12);
+      v74 = *(_DWORD *)(*(_DWORD *)v68 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v68 + 8) > v74 )
+        v73 += 4 * v74;
+      *(float *)(*(_DWORD *)v73 + 24) = a5;
+      v75 = *(_DWORD *)(*(_DWORD *)v68 + 12);
+      v76 = *(_DWORD *)(*(_DWORD *)v68 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v68 + 8) > v76 )
+        v75 += 4 * v76;
+      AnimationCtrl_setRepeat((ModelAnimation *)(*(_DWORD *)v75 + 4), a3);
+      sub_60813430(v68 - 768, "SE_VOC_JR_AGITATE", 0);
+      *(_DWORD *)(v68 - 8) = 16780500;
+      return;
+    case 20:
+      v10 = (_BYTE *)(a1 + 7100);
+      v9 = *(_DWORD **)(a1 + 7100);
+      v11 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v12 = "jc_demo_W7_punch";
+      goto sub_60037BB0__LABEL_63;
+    case 21:
+      v78 = a1 + 7100;
+      v77 = *(_DWORD **)(a1 + 7100);
+      v79 = *(_DWORD *)(v78 - 4);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v112 = "jc_demo_W7_shock";
+      sub_60421938(v77, v79, (int)&v111);
+      v80 = *(int **)(*(_DWORD *)v78 + 12);
+      v81 = *(_DWORD *)(*(_DWORD *)v78 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v78 + 8) > v81 )
+        v80 += v81;
+      v82 = *v80;
+      *(float *)(v82 + 20) = a4;
+      *(_DWORD *)(v82 + 28) |= 2u;
+      v83 = *(_DWORD *)(*(_DWORD *)v78 + 12);
+      v84 = *(_DWORD *)(*(_DWORD *)v78 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v78 + 8) > v84 )
+        v83 += 4 * v84;
+      *(float *)(*(_DWORD *)v83 + 24) = a5;
+      v85 = *(_DWORD *)(*(_DWORD *)v78 + 12);
+      v86 = *(_DWORD *)(*(_DWORD *)v78 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v78 + 8) > v86 )
+        v85 += 4 * v86;
+      AnimationCtrl_setRepeat((ModelAnimation *)(*(_DWORD *)v85 + 4), a3);
+      sub_60813430(v78 - 768, "SE_VOC_JR_SURPRISE", 0);
+      *(_DWORD *)(v78 - 8) = 16779450;
+      return;
+    case 22:
+      v10 = (_BYTE *)(a1 + 7100);
+      v9 = *(_DWORD **)(a1 + 7100);
+      v11 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v51 = "jc_demo_W7_shock2";
+sub_60037BB0__LABEL_72:
+      v112 = v51;
+      goto sub_60037BB0__LABEL_90;
+    case 23:
+      v88 = (_DWORD *)(a1 + 7100);
+      v87 = *(_DWORD **)(a1 + 7100);
+      v89 = *(v88 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v112 = "jc_demo_W7_panic";
+      sub_60421938(v87, v89, (int)&v111);
+      v90 = *(int **)(*v88 + 12);
+      v91 = *(_DWORD *)(*v88 + 68);
+      if ( *(_DWORD *)(*v88 + 8) > v91 )
+        v90 += v91;
+      v92 = *v90;
+      *(float *)(v92 + 20) = a4;
+      *(_DWORD *)(v92 + 28) |= 2u;
+      v93 = *(_DWORD *)(*v88 + 12);
+      v94 = *(_DWORD *)(*v88 + 68);
+      if ( *(_DWORD *)(*v88 + 8) > v94 )
+        v93 += 4 * v94;
+      *(float *)(*(_DWORD *)v93 + 24) = a5;
+      v95 = *(_DWORD *)(*v88 + 12);
+      v96 = *(_DWORD *)(*v88 + 68);
+      if ( *(_DWORD *)(*v88 + 8) > v96 )
+        v95 += 4 * v96;
+      AnimationCtrl_setRepeat((ModelAnimation *)(*(_DWORD *)v95 + 4), a3);
+      *(_BYTE *)(v88[203] + 7682) = 1;
+      sub_60813430(v88 - 192, "SE_VOC_JR_ASERU", 0);
+      return;
+    default:
+      v10 = (_BYTE *)(a1 + 7100);
+      v9 = *(_DWORD **)(a1 + 7100);
+      v11 = *((_DWORD *)v10 - 1);
+      v111 = &`vtable for'sead::SafeStringBase<char>;
+      v12 = "jcb_wait";
+sub_60037BB0__LABEL_63:
+      v112 = v12;
+sub_60037BB0__LABEL_90:
+      sub_60421938(v9, v11, (int)&v111);
+sub_60037BB0__LABEL_91:
+      v104 = *(int **)(*(_DWORD *)v10 + 12);
+      v105 = *(_DWORD *)(*(_DWORD *)v10 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v10 + 8) > v105 )
+        v104 += v105;
+      v106 = *v104;
+      *(float *)(v106 + 20) = a4;
+      *(_DWORD *)(v106 + 28) |= 2u;
+      v107 = *(_DWORD *)(*(_DWORD *)v10 + 12);
+      v108 = *(_DWORD *)(*(_DWORD *)v10 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v10 + 8) > v108 )
+        v107 += 4 * v108;
+      *(float *)(*(_DWORD *)v107 + 24) = a5;
+      v109 = *(_DWORD *)(*(_DWORD *)v10 + 12);
+      v110 = *(_DWORD *)(*(_DWORD *)v10 + 68);
+      if ( *(_DWORD *)(*(_DWORD *)v10 + 8) > v110 )
+        v109 += 4 * v110;
+      AnimationCtrl_setRepeat((ModelAnimation *)(*(_DWORD *)v109 + 4), a3);
+      return;
   }
-  }
+}
+
 /* ============================================================================
  * sub_60038624
  * RVA 0x00038624   size 0x8   xrefs 1
@@ -39161,410 +39244,733 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_60045DB4
  * RVA 0x00045db4   size 0x15ac   xrefs 28
  * ============================================================================ */
-  int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4)
-  {
-    const char *v6; // r0
-    unsigned int v7; // r5
-    int v8; // r4
-    _DWORD *v9; // r0
-    int result; // r0
-    unsigned int v11; // r5
-    int v12; // r4
-    _DWORD *v13; // r0
-    unsigned int v14; // r5
-    int v15; // r4
-    _DWORD *v16; // r0
-    unsigned int v17; // r5
-    int v18; // r4
-    _DWORD *v19; // r0
-    unsigned int v20; // r5
-    int v21; // r4
-    _DWORD *v22; // r0
-    unsigned int v23; // r5
-    int v24; // r4
-    _DWORD *v25; // r0
-    unsigned int v26; // r5
-    int v27; // r4
-    _DWORD *v28; // r0
-    unsigned int v29; // r5
-    int v30; // r4
-    _DWORD *v31; // r0
-    unsigned int v32; // r5
-    int v33; // r4
-    _DWORD *v34; // r0
-    unsigned int v35; // r5
-    int v36; // r4
-    _DWORD *v37; // r0
-    unsigned int v38; // r5
-    int v39; // r4
-    _DWORD *v40; // r0
-    unsigned int v41; // r5
-    int v42; // r4
-    _DWORD *v43; // r0
-    unsigned int v44; // r5
-    int v45; // r4
-    _DWORD *v46; // r0
-    unsigned int v47; // r5
-    int v48; // r4
-    _DWORD *v49; // r0
-    unsigned int v50; // r5
-    int v51; // r4
-    _DWORD *v52; // r0
-    unsigned int v53; // r5
-    int v54; // r4
-    _DWORD *v55; // r0
-    unsigned int v56; // r5
-    int v57; // r4
-    _DWORD *v58; // r0
-    unsigned int v59; // r5
-    int v60; // r4
-    _DWORD *v61; // r0
-    unsigned int v62; // r5
-    int v63; // r4
-    _DWORD *v64; // r0
-    unsigned int v65; // r5
-    int v66; // r4
-    _DWORD *v67; // r0
-    unsigned int v68; // r5
-    int v69; // r4
-    _DWORD *v70; // r0
-    unsigned int v71; // r5
-    int v72; // r4
-    _DWORD *v73; // r0
-    unsigned int v74; // r5
-    int v75; // r4
-    _DWORD *v76; // r0
-    unsigned int v77; // r5
-    int v78; // r4
-    _DWORD *v79; // r0
-    unsigned int v80; // r5
-    int v81; // r4
-    _DWORD *v82; // r0
-    unsigned int v83; // r5
-    int v84; // r4
-    _DWORD *v85; // r0
-    unsigned int v86; // r5
-    int v87; // r4
-    _DWORD *v88; // r0
-    unsigned int v89; // r5
-    int v90; // r4
-    _DWORD *v91; // r0
-    unsigned int v92; // r5
-    int v93; // r4
-    _DWORD *v94; // r0
-    unsigned int v95; // r5
-    int v96; // r4
-    _DWORD *v97; // r0
-    int v98; // [sp+0h] [bp-8h] BYREF
-    const char *v99; // [sp+4h] [bp-4h]
-  
-    switch ( a2 )
-    {
-      case 0:
-        if ( *(_BYTE *)(a1 + 11796) )
-        {
-          v98 = 12321336;
-          v6 = "jc_wait";
-          goto sub_60045DB4__LABEL_181;
-        }
-        v98 = 12321336;
-        v99 = "jcb_wait";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_demo_battleA";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v92 = -2;
-        v93 = a1 + 6304;
-        do
-        {
-          v94 = *(_DWORD **)(*(_DWORD *)v93 + 12);
-          if ( v92 >= 0xF && *(_DWORD *)(*(_DWORD *)v93 + 8) > 1u )
-            ++v94;
-          result = CollisionMask_markPair(*v94, v92 + 2);
-          ++v92;
-        }
-        while ( v92 != 15 );
-        return result;
-      case 1:
-        v98 = 12321336;
-        v99 = "jcb_demo_battleA";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_demo_battleA";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v11 = -2;
-        v12 = a1 + 6304;
-        do
-        {
-          v13 = *(_DWORD **)(*(_DWORD *)v12 + 12);
-          if ( v11 >= 0xF && *(_DWORD *)(*(_DWORD *)v12 + 8) > 1u )
-            ++v13;
-          result = CollisionMask_markPair(*v13, v11 + 2);
-          ++v11;
-        }
-        while ( v11 != 15 );
-        return result;
-      case 2:
-        if ( a4 == 1 )
-          sub_6040EB10(a1 + 11712);
-        v98 = 12321336;
-        v99 = "jcb_wait";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_wait";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v14 = -2;
-        v15 = a1 + 6304;
-        do
-        {
-          v16 = *(_DWORD **)(*(_DWORD *)v15 + 12);
-          if ( v14 >= 0xF && *(_DWORD *)(*(_DWORD *)v15 + 8) > 1u )
-            ++v16;
-          result = CollisionMask_markPair(*v16, v14 + 2);
-          ++v14;
-        }
-        while ( v14 != 15 );
-        return result;
-      case 3:
-        sub_6040EB10(a1 + 11712);
-        v98 = 12321336;
-        v99 = "jcb_jab";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_jab";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v17 = -2;
-        v18 = a1 + 6304;
-        do
-        {
-          v19 = *(_DWORD **)(*(_DWORD *)v18 + 12);
-          if ( v17 >= 0xF && *(_DWORD *)(*(_DWORD *)v18 + 8) > 1u )
-            ++v19;
-          result = CollisionMask_markPair(*v19, v17 + 2);
-          ++v17;
-        }
-        while ( v17 != 15 );
-        return result;
-      case 4:
-        if ( *(_BYTE *)(a1 + 11796) )
-        {
-          v98 = 12321336;
-          v6 = "jc_delight";
-          goto sub_60045DB4__LABEL_181;
-        }
-        sub_6040EB10(a1 + 11712);
-        v98 = 12321336;
-        v99 = "jcb_delight";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_delight";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v95 = -2;
-        v96 = a1 + 6304;
-        do
-        {
-          v97 = *(_DWORD **)(*(_DWORD *)v96 + 12);
-          if ( v95 >= 0xF && *(_DWORD *)(*(_DWORD *)v96 + 8) > 1u )
-            ++v97;
-          result = CollisionMask_markPair(*v97, v95 + 2);
-          ++v95;
-        }
-        while ( v95 != 15 );
-        return result;
-      case 5:
-        sub_6040EB10(a1 + 11712);
-        v98 = 12321336;
-        v99 = "jcb_straight_move_back";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_straight_move_back";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v20 = -2;
-        v21 = a1 + 6304;
-        do
-        {
-          v22 = *(_DWORD **)(*(_DWORD *)v21 + 12);
-          if ( v20 >= 0xF && *(_DWORD *)(*(_DWORD *)v21 + 8) > 1u )
-            ++v22;
-          result = CollisionMask_markPair(*v22, v20 + 2);
-          ++v20;
-        }
-        while ( v20 != 15 );
-        return result;
-      case 6:
-        sub_6040EB10(a1 + 11712);
-        v98 = 12321336;
-        v99 = "jcb_straight_move_down";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_straight_move_down";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v23 = -2;
-        v24 = a1 + 6304;
-        do
-        {
-          v25 = *(_DWORD **)(*(_DWORD *)v24 + 12);
-          if ( v23 >= 0xF && *(_DWORD *)(*(_DWORD *)v24 + 8) > 1u )
-            ++v25;
-          result = CollisionMask_markPair(*v25, v23 + 2);
-          ++v23;
-        }
-        while ( v23 != 15 );
-        return result;
-      case 7:
-        v98 = 12321336;
-        v99 = "jcb_straight_w_st";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_straight_w_st";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v26 = -2;
-        v27 = a1 + 6304;
-        do
-        {
-          v28 = *(_DWORD **)(*(_DWORD *)v27 + 12);
-          if ( v26 >= 0xF && *(_DWORD *)(*(_DWORD *)v27 + 8) > 1u )
-            ++v28;
-          result = CollisionMask_markPair(*v28, v26 + 2);
-          ++v26;
-        }
-        while ( v26 != 15 );
-        return result;
-      case 8:
-        sub_6040EB10(a1 + 11712);
-        v98 = 12321336;
-        v99 = "jcb_straight_w";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_straight_w";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v29 = -2;
-        v30 = a1 + 6304;
-        do
-        {
-          v31 = *(_DWORD **)(*(_DWORD *)v30 + 12);
-          if ( v29 >= 0xF && *(_DWORD *)(*(_DWORD *)v30 + 8) > 1u )
-            ++v31;
-          result = CollisionMask_markPair(*v31, v29 + 2);
-          ++v29;
-        }
-        while ( v29 != 15 );
-        return result;
-      case 9:
-        sub_6040EB10(a1 + 11712);
-        v98 = 12321336;
-        v99 = "jcb_wait";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_sphere_st";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v32 = -2;
-        v33 = a1 + 6304;
-        do
-        {
-          v34 = *(_DWORD **)(*(_DWORD *)v33 + 12);
-          if ( v32 >= 0xF && *(_DWORD *)(*(_DWORD *)v33 + 8) > 1u )
-            ++v34;
-          result = CollisionMask_markPair(*v34, v32 + 2);
-          ++v32;
-        }
-        while ( v32 != 15 );
-        return result;
-      case 10:
-        sub_6040EB10(a1 + 11712);
-        v98 = 12321336;
-        v99 = "jcb_wait";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, a3);
-        v98 = 12321336;
-        v99 = "jcb_sphere_ed";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v35 = -2;
-        v36 = a1 + 6304;
-        do
-        {
-          v37 = *(_DWORD **)(*(_DWORD *)v36 + 12);
-          if ( v35 >= 0xF && *(_DWORD *)(*(_DWORD *)v36 + 8) > 1u )
-            ++v37;
-          result = CollisionMask_markPair(*v37, v35 + 2);
-          ++v35;
-        }
-        while ( v35 != 15 );
-        return result;
-      case 11:
-        v98 = 12321336;
-        v99 = "jcb_wait";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, 1);
-        v98 = 12321336;
-        v99 = "jcb_attack_st";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v38 = -2;
-        v39 = a1 + 6304;
-        do
-        {
-          v40 = *(_DWORD **)(*(_DWORD *)v39 + 12);
-          if ( v38 >= 0xF && *(_DWORD *)(*(_DWORD *)v39 + 8) > 1u )
-            ++v40;
-          result = CollisionMask_markPair(*v40, v38 + 2);
-          ++v38;
-        }
-        while ( v38 != 15 );
-        return result;
-      case 12:
-        sub_6040EB10(a1 + 11712);
-        v98 = 12321336;
-        v99 = "jcb_wait";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, 1);
-        v98 = 12321336;
-        v99 = "jcb_attack_st_wait";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v41 = -2;
-        v42 = a1 + 6304;
-        do
-        {
-          v43 = *(_DWORD **)(*(_DWORD *)v42 + 12);
-          if ( v41 >= 0xF && *(_DWORD *)(*(_DWORD *)v42 + 8) > 1u )
-            ++v43;
-          result = CollisionMask_markPair(*v43, v41 + 2);
-          ++v41;
-        }
-        while ( v41 != 15 );
-        return result;
-      case 13:
-        v98 = 12321336;
-        v99 = "jcb_wait";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, 1);
-        v98 = 12321336;
-        v99 = "jcb_attack_st_r";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v44 = -2;
-        v45 = a1 + 6304;
-        do
-        {
-          v46 = *(_DWORD **)(*(_DWORD *)v45 + 12);
-          if ( v44 >= 0xF && *(_DWORD *)(*(_DWORD *)v45 + 8) > 1u )
-            ++v46;
-          result = CollisionMask_markPair(*v46, v44 + 2);
-          ++v44;
-        }
-        while ( v44 != 15 );
-        return result;
-      case 14:
-        sub_6040EB10(a1 + 11712);
-        v98 = 12321336;
-        v99 = "jcb_wait";
-        ((void (__fastcall *)(int, _DWORD, int *, int))AnimationPlayer_startFullSequence)(a1, 0, &v98, 1);
-        v98 = 12321336;
-        v99 = "jcb_attack_st_r_wait";
-        ((void (__fastcall *)(int, int, int *, int))AnimationPlayer_startFullSequence)(a1, 1, &v98, a3);
-        v47 = -2;
-        v48 = a1 + 6304;
-        do
-        {
-          v49 = *(_DWORD **)(*(_DWORD *)v48 + 12);
+  int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
+{
+  const char *v10; // r0
+  unsigned int v11; // r5
+  int v12; // r4
+  _DWORD *v13; // r0
+  int result; // r0
+  unsigned int v15; // r5
+  int v16; // r4
+  _DWORD *v17; // r0
+  unsigned int v18; // r5
+  int v19; // r4
+  _DWORD *v20; // r0
+  unsigned int v21; // r5
+  int v22; // r4
+  _DWORD *v23; // r0
+  unsigned int v24; // r5
+  int v25; // r4
+  _DWORD *v26; // r0
+  unsigned int v27; // r5
+  int v28; // r4
+  _DWORD *v29; // r0
+  unsigned int v30; // r5
+  int v31; // r4
+  _DWORD *v32; // r0
+  unsigned int v33; // r5
+  int v34; // r4
+  _DWORD *v35; // r0
+  unsigned int v36; // r5
+  int v37; // r4
+  _DWORD *v38; // r0
+  unsigned int v39; // r5
+  int v40; // r4
+  _DWORD *v41; // r0
+  unsigned int v42; // r5
+  int v43; // r4
+  _DWORD *v44; // r0
+  unsigned int v45; // r5
+  int v46; // r4
+  _DWORD *v47; // r0
+  unsigned int v48; // r5
+  int v49; // r4
+  _DWORD *v50; // r0
+  unsigned int v51; // r5
+  int v52; // r4
+  _DWORD *v53; // r0
+  unsigned int v54; // r5
+  int v55; // r4
+  _DWORD *v56; // r0
+  unsigned int v57; // r5
+  int v58; // r4
+  _DWORD *v59; // r0
+  unsigned int v60; // r5
+  int v61; // r4
+  _DWORD *v62; // r0
+  unsigned int v63; // r5
+  int v64; // r4
+  _DWORD *v65; // r0
+  unsigned int v66; // r5
+  int v67; // r4
+  _DWORD *v68; // r0
+  unsigned int v69; // r5
+  int v70; // r4
+  _DWORD *v71; // r0
+  unsigned int v72; // r5
+  int v73; // r4
+  _DWORD *v74; // r0
+  unsigned int v75; // r5
+  int v76; // r4
+  _DWORD *v77; // r0
+  unsigned int v78; // r5
+  int v79; // r4
+  _DWORD *v80; // r0
+  unsigned int v81; // r5
+  int v82; // r4
+  _DWORD *v83; // r0
+  unsigned int v84; // r5
+  int v85; // r4
+  _DWORD *v86; // r0
+  unsigned int v87; // r5
+  int v88; // r4
+  _DWORD *v89; // r0
+  unsigned int v90; // r5
+  int v91; // r4
+  _DWORD *v92; // r0
+  unsigned int v93; // r5
+  int v94; // r4
+  _DWORD *v95; // r0
+  unsigned int v96; // r5
+  int v97; // r4
+  _DWORD *v98; // r0
+  unsigned int v99; // r5
+  int v100; // r4
+  _DWORD *v101; // r0
+  int (**v102)(); // [sp+0h] [bp-30h] BYREF
+  const char *v103; // [sp+4h] [bp-2Ch]
 
+  switch ( a2 )
+  {
+    case 0:
+      if ( *(_BYTE *)(a1 + 11796) )
+      {
+        v102 = &`vtable for'sead::SafeStringBase<char>;
+        v10 = "jc_wait";
+        goto sub_60045DB4__LABEL_181;
+      }
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_demo_battleA";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, 0.0, 0.0);
+      v96 = -2;
+      v97 = a1 + 6304;
+      do
+      {
+        v98 = *(_DWORD **)(*(_DWORD *)v97 + 12);
+        if ( v96 >= 0xF && *(_DWORD *)(*(_DWORD *)v97 + 8) > 1u )
+          ++v98;
+        result = sub_60448AF4(*v98, v96 + 2);
+        ++v96;
+      }
+      while ( v96 != 15 );
+      return result;
+    case 1:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_demo_battleA";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_demo_battleA";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v15 = -2;
+      v16 = a1 + 6304;
+      do
+      {
+        v17 = *(_DWORD **)(*(_DWORD *)v16 + 12);
+        if ( v15 >= 0xF && *(_DWORD *)(*(_DWORD *)v16 + 8) > 1u )
+          ++v17;
+        result = sub_60448AF4(*v17, v15 + 2);
+        ++v15;
+      }
+      while ( v15 != 15 );
+      return result;
+    case 2:
+      if ( a4 == 1 )
+        sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v18 = -2;
+      v19 = a1 + 6304;
+      do
+      {
+        v20 = *(_DWORD **)(*(_DWORD *)v19 + 12);
+        if ( v18 >= 0xF && *(_DWORD *)(*(_DWORD *)v19 + 8) > 1u )
+          ++v20;
+        result = sub_60448AF4(*v20, v18 + 2);
+        ++v18;
+      }
+      while ( v18 != 15 );
+      return result;
+    case 3:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_jab";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_jab";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v21 = -2;
+      v22 = a1 + 6304;
+      do
+      {
+        v23 = *(_DWORD **)(*(_DWORD *)v22 + 12);
+        if ( v21 >= 0xF && *(_DWORD *)(*(_DWORD *)v22 + 8) > 1u )
+          ++v23;
+        result = sub_60448AF4(*v23, v21 + 2);
+        ++v21;
+      }
+      while ( v21 != 15 );
+      return result;
+    case 4:
+      if ( *(_BYTE *)(a1 + 11796) )
+      {
+        v102 = &`vtable for'sead::SafeStringBase<char>;
+        v10 = "jc_delight";
+        goto sub_60045DB4__LABEL_181;
+      }
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_delight";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_delight";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v99 = -2;
+      v100 = a1 + 6304;
+      do
+      {
+        v101 = *(_DWORD **)(*(_DWORD *)v100 + 12);
+        if ( v99 >= 0xF && *(_DWORD *)(*(_DWORD *)v100 + 8) > 1u )
+          ++v101;
+        result = sub_60448AF4(*v101, v99 + 2);
+        ++v99;
+      }
+      while ( v99 != 15 );
+      return result;
+    case 5:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_straight_move_back";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_straight_move_back";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v24 = -2;
+      v25 = a1 + 6304;
+      do
+      {
+        v26 = *(_DWORD **)(*(_DWORD *)v25 + 12);
+        if ( v24 >= 0xF && *(_DWORD *)(*(_DWORD *)v25 + 8) > 1u )
+          ++v26;
+        result = sub_60448AF4(*v26, v24 + 2);
+        ++v24;
+      }
+      while ( v24 != 15 );
+      return result;
+    case 6:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_straight_move_down";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_straight_move_down";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v27 = -2;
+      v28 = a1 + 6304;
+      do
+      {
+        v29 = *(_DWORD **)(*(_DWORD *)v28 + 12);
+        if ( v27 >= 0xF && *(_DWORD *)(*(_DWORD *)v28 + 8) > 1u )
+          ++v29;
+        result = sub_60448AF4(*v29, v27 + 2);
+        ++v27;
+      }
+      while ( v27 != 15 );
+      return result;
+    case 7:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_straight_w_st";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_straight_w_st";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v30 = -2;
+      v31 = a1 + 6304;
+      do
+      {
+        v32 = *(_DWORD **)(*(_DWORD *)v31 + 12);
+        if ( v30 >= 0xF && *(_DWORD *)(*(_DWORD *)v31 + 8) > 1u )
+          ++v32;
+        result = sub_60448AF4(*v32, v30 + 2);
+        ++v30;
+      }
+      while ( v30 != 15 );
+      return result;
+    case 8:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_straight_w";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_straight_w";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v33 = -2;
+      v34 = a1 + 6304;
+      do
+      {
+        v35 = *(_DWORD **)(*(_DWORD *)v34 + 12);
+        if ( v33 >= 0xF && *(_DWORD *)(*(_DWORD *)v34 + 8) > 1u )
+          ++v35;
+        result = sub_60448AF4(*v35, v33 + 2);
+        ++v33;
+      }
+      while ( v33 != 15 );
+      return result;
+    case 9:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_sphere_st";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v36 = -2;
+      v37 = a1 + 6304;
+      do
+      {
+        v38 = *(_DWORD **)(*(_DWORD *)v37 + 12);
+        if ( v36 >= 0xF && *(_DWORD *)(*(_DWORD *)v37 + 8) > 1u )
+          ++v38;
+        result = sub_60448AF4(*v38, v36 + 2);
+        ++v36;
+      }
+      while ( v36 != 15 );
+      return result;
+    case 10:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_sphere_ed";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v39 = -2;
+      v40 = a1 + 6304;
+      do
+      {
+        v41 = *(_DWORD **)(*(_DWORD *)v40 + 12);
+        if ( v39 >= 0xF && *(_DWORD *)(*(_DWORD *)v40 + 8) > 1u )
+          ++v41;
+        result = sub_60448AF4(*v41, v39 + 2);
+        ++v39;
+      }
+      while ( v39 != 15 );
+      return result;
+    case 11:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_st";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v42 = -2;
+      v43 = a1 + 6304;
+      do
+      {
+        v44 = *(_DWORD **)(*(_DWORD *)v43 + 12);
+        if ( v42 >= 0xF && *(_DWORD *)(*(_DWORD *)v43 + 8) > 1u )
+          ++v44;
+        result = sub_60448AF4(*v44, v42 + 2);
+        ++v42;
+      }
+      while ( v42 != 15 );
+      return result;
+    case 12:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_st_wait";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v45 = -2;
+      v46 = a1 + 6304;
+      do
+      {
+        v47 = *(_DWORD **)(*(_DWORD *)v46 + 12);
+        if ( v45 >= 0xF && *(_DWORD *)(*(_DWORD *)v46 + 8) > 1u )
+          ++v47;
+        result = sub_60448AF4(*v47, v45 + 2);
+        ++v45;
+      }
+      while ( v45 != 15 );
+      return result;
+    case 13:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_st_r";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v48 = -2;
+      v49 = a1 + 6304;
+      do
+      {
+        v50 = *(_DWORD **)(*(_DWORD *)v49 + 12);
+        if ( v48 >= 0xF && *(_DWORD *)(*(_DWORD *)v49 + 8) > 1u )
+          ++v50;
+        result = sub_60448AF4(*v50, v48 + 2);
+        ++v48;
+      }
+      while ( v48 != 15 );
+      return result;
+    case 14:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_st_r_wait";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v51 = -2;
+      v52 = a1 + 6304;
+      do
+      {
+        v53 = *(_DWORD **)(*(_DWORD *)v52 + 12);
+        if ( v51 >= 0xF && *(_DWORD *)(*(_DWORD *)v52 + 8) > 1u )
+          ++v53;
+        result = sub_60448AF4(*v53, v51 + 2);
+        ++v51;
+      }
+      while ( v51 != 15 );
+      return result;
+    case 15:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_ed_r";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_ed_r";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v54 = -2;
+      v55 = a1 + 6304;
+      do
+      {
+        v56 = *(_DWORD **)(*(_DWORD *)v55 + 12);
+        if ( v54 >= 0xF && *(_DWORD *)(*(_DWORD *)v55 + 8) > 1u )
+          ++v56;
+        result = sub_60448AF4(*v56, v54 + 2);
+        ++v54;
+      }
+      while ( v54 != 15 );
+      return result;
+    case 16:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_ed_r_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_ed_r_wait";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v57 = -2;
+      v58 = a1 + 6304;
+      do
+      {
+        v59 = *(_DWORD **)(*(_DWORD *)v58 + 12);
+        if ( v57 >= 0xF && *(_DWORD *)(*(_DWORD *)v58 + 8) > 1u )
+          ++v59;
+        result = sub_60448AF4(*v59, v57 + 2);
+        ++v57;
+      }
+      while ( v57 != 15 );
+      return result;
+    case 17:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_return_r";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_return_r";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v60 = -2;
+      v61 = a1 + 6304;
+      do
+      {
+        v62 = *(_DWORD **)(*(_DWORD *)v61 + 12);
+        if ( v60 >= 0xF && *(_DWORD *)(*(_DWORD *)v61 + 8) > 1u )
+          ++v62;
+        result = sub_60448AF4(*v62, v60 + 2);
+        ++v60;
+      }
+      while ( v60 != 15 );
+      return result;
+    case 18:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_off_r";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_off_r";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v63 = -2;
+      v64 = a1 + 6304;
+      do
+      {
+        v65 = *(_DWORD **)(*(_DWORD *)v64 + 12);
+        if ( v63 >= 0xF && *(_DWORD *)(*(_DWORD *)v64 + 8) > 1u )
+          ++v65;
+        result = sub_60448AF4(*v65, v63 + 2);
+        ++v63;
+      }
+      while ( v63 != 15 );
+      return result;
+    case 19:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_st_l";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v66 = -2;
+      v67 = a1 + 6304;
+      do
+      {
+        v68 = *(_DWORD **)(*(_DWORD *)v67 + 12);
+        if ( v66 >= 0xF && *(_DWORD *)(*(_DWORD *)v67 + 8) > 1u )
+          ++v68;
+        result = sub_60448AF4(*v68, v66 + 2);
+        ++v66;
+      }
+      while ( v66 != 15 );
+      return result;
+    case 20:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_st_l_wait";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v69 = -2;
+      v70 = a1 + 6304;
+      do
+      {
+        v71 = *(_DWORD **)(*(_DWORD *)v70 + 12);
+        if ( v69 >= 0xF && *(_DWORD *)(*(_DWORD *)v70 + 8) > 1u )
+          ++v71;
+        result = sub_60448AF4(*v71, v69 + 2);
+        ++v69;
+      }
+      while ( v69 != 15 );
+      return result;
+    case 21:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_ed_l";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_ed_l";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v72 = -2;
+      v73 = a1 + 6304;
+      do
+      {
+        v74 = *(_DWORD **)(*(_DWORD *)v73 + 12);
+        if ( v72 >= 0xF && *(_DWORD *)(*(_DWORD *)v73 + 8) > 1u )
+          ++v74;
+        result = sub_60448AF4(*v74, v72 + 2);
+        ++v72;
+      }
+      while ( v72 != 15 );
+      return result;
+    case 22:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_ed_l_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_ed_l_wait";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v75 = -2;
+      v76 = a1 + 6304;
+      do
+      {
+        v77 = *(_DWORD **)(*(_DWORD *)v76 + 12);
+        if ( v75 >= 0xF && *(_DWORD *)(*(_DWORD *)v76 + 8) > 1u )
+          ++v77;
+        result = sub_60448AF4(*v77, v75 + 2);
+        ++v75;
+      }
+      while ( v75 != 15 );
+      return result;
+    case 23:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_return_l";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_return_l";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v78 = -2;
+      v79 = a1 + 6304;
+      do
+      {
+        v80 = *(_DWORD **)(*(_DWORD *)v79 + 12);
+        if ( v78 >= 0xF && *(_DWORD *)(*(_DWORD *)v79 + 8) > 1u )
+          ++v80;
+        result = sub_60448AF4(*v80, v78 + 2);
+        ++v78;
+      }
+      while ( v78 != 15 );
+      return result;
+    case 24:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_off_l";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_attack_off_l";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v81 = -2;
+      v82 = a1 + 6304;
+      do
+      {
+        v83 = *(_DWORD **)(*(_DWORD *)v82 + 12);
+        if ( v81 >= 0xF && *(_DWORD *)(*(_DWORD *)v82 + 8) > 1u )
+          ++v83;
+        result = sub_60448AF4(*v83, v81 + 2);
+        ++v81;
+      }
+      while ( v81 != 15 );
+      return result;
+    case 25:
+      sub_6040EB10(a1 + 11712);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_damage_s";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_damage_s";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v84 = -2;
+      v85 = a1 + 6304;
+      do
+      {
+        v86 = *(_DWORD **)(*(_DWORD *)v85 + 12);
+        if ( v84 >= 0xF && *(_DWORD *)(*(_DWORD *)v85 + 8) > 1u )
+          ++v86;
+        result = sub_60448AF4(*v86, v84 + 2);
+        ++v84;
+      }
+      while ( v84 != 15 );
+      return result;
+    case 26:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_damage";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_damage";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v87 = -2;
+      v88 = a1 + 6304;
+      do
+      {
+        v89 = *(_DWORD **)(*(_DWORD *)v88 + 12);
+        if ( v87 >= 0xF && *(_DWORD *)(*(_DWORD *)v88 + 8) > 1u )
+          ++v89;
+        result = sub_60448AF4(*v89, v87 + 2);
+        ++v87;
+      }
+      while ( v87 != 15 );
+      return result;
+    case 27:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_rage";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_rage";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v90 = -2;
+      v91 = a1 + 6304;
+      do
+      {
+        v92 = *(_DWORD **)(*(_DWORD *)v91 + 12);
+        if ( v90 >= 0xF && *(_DWORD *)(*(_DWORD *)v91 + 8) > 1u )
+          ++v92;
+        result = sub_60448AF4(*v92, v90 + 2);
+        ++v90;
+      }
+      while ( v90 != 15 );
+      return result;
+    case 28:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_damage_up";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_damage_up";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v93 = -2;
+      v94 = a1 + 6304;
+      do
+      {
+        v95 = *(_DWORD **)(*(_DWORD *)v94 + 12);
+        if ( v93 >= 0xF && *(_DWORD *)(*(_DWORD *)v94 + 8) > 1u )
+          ++v95;
+        result = sub_60448AF4(*v95, v93 + 2);
+        ++v93;
+      }
+      while ( v93 != 15 );
+      return result;
+    case 29:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v10 = "jc_demo_W7_excite";
+      goto sub_60045DB4__LABEL_181;
+    case 30:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v10 = "jc_demo_W7_punch";
+      goto sub_60045DB4__LABEL_181;
+    case 31:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v10 = "jc_demo_W7_shock";
+      goto sub_60045DB4__LABEL_181;
+    case 32:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v10 = "jc_demo_W7_shock2";
+      goto sub_60045DB4__LABEL_181;
+    case 33:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v10 = "jc_demo_W7_panic";
+sub_60045DB4__LABEL_181:
+      v103 = v10;
+      result = ((int (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      break;
+    default:
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
+      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = "jcb_wait";
+      ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
+      v11 = -2;
+      v12 = a1 + 6304;
+      do
+      {
+        v13 = *(_DWORD **)(*(_DWORD *)v12 + 12);
+        if ( v11 >= 0xF && *(_DWORD *)(*(_DWORD *)v12 + 8) > 1u )
+          ++v13;
+        result = sub_60448AF4(*v13, v11 + 2);
+        ++v11;
+      }
+      while ( v11 != 15 );
+      break;
   }
-  }
-  }
+  return result;
+}
+
 /* ============================================================================
  * AnimationPlayer_startFullSequence
  * RVA 0x00047464   size 0x180   xrefs 72
@@ -78304,273 +78710,284 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * SE_OBJ_NO_DAMAGE_BOUND_ref_91144
  * RVA 0x00091144   size 0xf1c   xrefs 0
  * ============================================================================ */
-  unsigned int __fastcall sub_60091144(int a1, int a2)
+  void __fastcall sub_60091144(ActiveCollider *a1, ActiveCollider *a2)
+{
+  char v2; // r12
+  StageActor *owner; // r6
+  StageActor *v6; // r4
+  int v7; // r5
+  char v8; // r12
+  bool v9; // zf
+  int type; // r0
+  unsigned int v11; // r0
+  unsigned int *v12; // r7
+  StateBase *CurrentState; // r0
+  int v14; // r6
+  int v15; // r2
+  unsigned int v16; // r0
+  float v17; // s0
+  float v18; // s16
+  float v19; // s0
+  float v20; // s18
+  float v21; // s0
+  float v22; // s20
+  float v23; // s0
+  float v24; // s20
+  float v25; // s22
+  float v26; // s18
+  float v27; // s16
+  StateBase *v28; // r0
+  int v29; // r5
+  StateBase *v30; // r0
+  int v31; // r5
+  StateBase *v32; // r0
+  int v33; // r5
+  StateBase *v34; // r0
+  int v35; // r5
+  float v36; // s0
+  float v37; // s0
+  float v38; // s0
+  float v39; // s0
+  StateBase *v40; // r0
+  int v41; // r5
+  float x; // s0
+  int v43; // r1
+  unsigned int playerId; // r0
+  StateBase *v45; // r0
+  int v46; // r5
+  StateBase *v47; // r0
+  int v48; // r5
+  StateBase *v49; // r0
+  int v50; // r5
+  float v51; // s0
+  float v52; // s16
+  float v53; // s0
+  unsigned int v54; // r0
+  int v55; // r0
+  int v56; // r5
+  char v57; // r12
+  StateBase *v58; // r0
+  int v59; // r10
+  StateBase *v60; // r0
+  int v61; // r5
+  StateBase *v62; // r0
+  int v63; // r6
+  StateBase *v64; // r0
+  int v65; // r6
+  StateBase *v66; // r0
+  int v67; // r10
+  StateBase *v68; // r0
+  int v69; // r9
+  unsigned int v70; // r9
+  int v71; // r11
+  int v72; // r10
+  float v73; // s0
+  int (__fastcall ***v74)(_DWORD, int *); // r3
+  char v75; // r12
+  int v76; // r0
+  StateBase *v77; // r0
+  int v78; // r5
+  StateBase *v79; // r0
+  int v80; // r5
+  StateBase *v81; // r0
+  int v82; // r5
+  int v83; // r0
+  bool v84; // zf
+  StateBase *v85; // r0
+  int v86; // r10
+  StateBase *v87; // r0
+  int v88; // r10
+  StateBase *v89; // r0
+  int v90; // r6
+  StateBase *v91; // r0
+  int v92; // r6
+  StateBase *v93; // r0
+  int v94; // r6
+  float v95; // s0
+  unsigned int v96; // r11
+  unsigned int v97; // r6
+  int v98; // r10
+  int v99; // r9
+  char v100; // r12
+  int v101; // r0
+  int v102; // r0
+  int v103; // r0
+  float v104; // s0
+  float y; // r1
+  int v106; // r5
+  int (__fastcall ***v107)(_DWORD, int *); // [sp+4h] [bp-5Ch]
+  Vec2 out; // [sp+8h] [bp-58h] BYREF
+  Vec3 position; // [sp+10h] [bp-50h] BYREF
+
+  owner = a1->owner;
+  v6 = a2->owner;
+  if ( ((unsigned int)&dword_60C81104 & ~(1611207028 << v2) & 1) == 0 && _cxa_guard_acquire(&dword_60C81104) )
   {
-    float v2; // s0
-    int v5; // r6
-    int v6; // r4
-    unsigned int result; // r0
-    int v8; // r5
-    bool v9; // zf
-    unsigned int *v10; // r7
-    int CurrentState; // r0
-    int v12; // r6
-    int v13; // r2
-    unsigned int v14; // r0
-    float v15; // s20
-    float v16; // s22
-    float v17; // s18
-    float v18; // s16
-    int v19; // r0
-    int v20; // r5
-    int v21; // r0
-    int v22; // r5
-    int v23; // r0
-    int v24; // r5
-    int v25; // r0
-    int v26; // r5
-    float v27; // s0
-    float v28; // s0
-    float v29; // s0
-    int v30; // r0
-    int v31; // r5
-    float v32; // s0
-    int v33; // r1
-    unsigned int v34; // r0
-    int v35; // r0
-    int v36; // r5
-    int v37; // r0
-    int v38; // r5
-    int v39; // r0
-    int v40; // r5
-    int v41; // r5
-    int v42; // r0
-    int v43; // r10
-    int v44; // r0
-    int v45; // r5
-    int v46; // r0
-    int v47; // r6
-    int v48; // r0
-    int v49; // r6
-    int v50; // r0
-    int v51; // r10
-    int v52; // r0
-    int v53; // r9
-    unsigned int v54; // r9
-    int v55; // r11
-    int v56; // r10
-    float v57; // s0
-    int v58; // r0
-    int (__fastcall ***v59)(_DWORD, int); // r3
-    int v60; // r0
-    int v61; // r5
-    int v62; // r0
-    int v63; // r5
-    int v64; // r0
-    int v65; // r5
-    int v66; // r0
-    bool v67; // zf
-    int v68; // r0
-    int v69; // r10
-    int v70; // r0
-    int v71; // r10
-    int v72; // r0
-    int v73; // r6
-    int v74; // r0
-    int v75; // r6
-    int v76; // r0
-    int v77; // r6
-    float v78; // s0
-    unsigned int v79; // r11
-    unsigned int v80; // r6
-    int v81; // r10
-    int v82; // r9
-    int v83; // r2
-    int v84; // r0
-    int v85; // r0
-    int v86; // r2
-    float v87; // s0
-    float v88; // r1
-    int v89; // r5
-    int v90; // [sp+4h] [bp-14h]
-    float v91[2]; // [sp+8h] [bp-10h] BYREF
-    float v92[2]; // [sp+10h] [bp-8h] BYREF
-  
-    v5 = *(_DWORD *)(a1 + 64);
-    v6 = *(_DWORD *)(a2 + 64);
-    result = _cxa_guard_acquire_0(13111556);
-    if ( result )
+    dword_60C81100 = (int)&off_60BC66E8;
+    _cxa_guard_release(&dword_60C81104);
+  }
+  if ( !owner )
+    return;
+  v7 = (*(int (__fastcall **)(StageActor *, int *))owner->_.vtable)(owner, &dword_60C81100);
+  if ( v7 )
+    v7 = (int)owner;
+  v9 = v6 == 0;
+  if ( v6 )
+    v9 = v7 == 0;
+  if ( v9 )
+    return;
+  type = (unsigned __int8)v6->type;
+  if ( !v6->type )
+  {
+    if ( Actor::getProfileId(&v6->_) != 392 )
     {
-      MEMORY[0xC81100] = 12347112;
-      result = _cxa_guard_release_0(13111556);
+      Enemy::collisionCallback(a1, a2);
+      return;
     }
-    if ( !v5 )
-      return result;
-    result = (**(int (__fastcall ***)(int, int))v5)(v5, 13111552);
-    v8 = result;
-    if ( result )
-      v8 = v5;
-    v9 = v6 == 0;
-    if ( v6 )
-      v9 = v8 == 0;
-    if ( v9 )
-      return result;
-    result = *(unsigned __int8 *)(v6 + 533);
-    if ( !*(_BYTE *)(v6 + 533) )
+    if ( Actor::getProfileId(v6->_.parent) == 726 )
+      return;
+    sub_602EE7B8(v6, v6->direction, v6->playerId);
+SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31:
+    a2->field_6E |= 2u;
+    return;
+  }
+  if ( type != 3 )
+  {
+    if ( type == 1 )
     {
-      if ( Actor__getProfileId(v6) != MEMORY[0xAF3348] )
-        return Enemy__collisionCallback(a1, (_DWORD *)a2);
-      result = Actor__getProfileId(*(_DWORD *)(v6 + 56));
-      if ( result == MEMORY[0xAF3880] )
-        return result;
-      sub_602EE7B8(v6, *(_DWORD *)(v6 + 80), *(char *)(v6 + 84));
-  SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_29:
-      result = *(unsigned __int8 *)(a2 + 110) | 2;
-      *(_BYTE *)(a2 + 110) = result;
-      return result;
-    }
-    if ( result != 3 )
-    {
-      if ( result == 1 )
+      if ( ((unsigned int)&dword_60C7B374 & ~(1611207188 << v8) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B374) )
       {
-        if ( _cxa_guard_acquire_0(13087604) )
+        dword_60C7B370 = (int)&off_60BC00B0;
+        _cxa_guard_release(&dword_60C7B374);
+      }
+      if ( (*(int (__fastcall **)(StageActor *, int *))v6->_.vtable)(v6, &dword_60C7B370) == 1 )
+      {
+        v12 = (unsigned int *)(v7 + 15240);
+        v11 = *(_DWORD *)(v7 + 15240);
+        if ( v11 > 3 || v6->playerId != v11 )
         {
-          MEMORY[0xC7B370] = 12320944;
-          _cxa_guard_release_0(13087604);
-        }
-        result = (**(int (__fastcall ***)(int, int))v6)(v6, 13087600);
-        if ( result == 1 )
-        {
-          v10 = (unsigned int *)(v8 + 15240);
-          result = *(_DWORD *)(v8 + 15240);
-          if ( result > 3 || *(char *)(v6 + 84) != result )
+          if ( (BYTE1(v6[1].effectOffset.x) & 1) != 0 )
           {
-            if ( (*(_BYTE *)(v6 + 1217) & 1) != 0 )
+            v43 = 0;
+            a2->field_6E |= 2u;
+            playerId = (unsigned __int8)v6->playerId;
+            if ( playerId < 4 )
+              v43 = (char)playerId;
+            *(_WORD *)(v7 + 2 * v43 + 6140) = 32;
+          }
+          else
+          {
+            if ( a2->info.category == 7 )
             {
-              v33 = 0;
-              *(_BYTE *)(a2 + 110) |= 2u;
-              v34 = *(unsigned __int8 *)(v6 + 84);
-              if ( v34 < 4 )
-                v33 = (char)v34;
-              result = v8 + 2 * v33;
-              *(_WORD *)(result + 6140) = 32;
+              CurrentState = StateMgr::getCurrentState((StateMgr *)(v7 + 6084));
+              v14 = (*((int (__fastcall **)(StateBase *))CurrentState->vtable + 2))(CurrentState);
+              if ( v14 == (*(int (**)(void))(dword_60C82220 + 8))() )
+              {
+                if ( *(_BYTE *)(v7 + 15261) )
+                {
+                  *(_BYTE *)(v7 + 15261) = 0;
+                  *(_DWORD *)(v7 + 80) = v6->position.x >= *(float *)(v7 + 108);
+                  (*(void (__fastcall **)(int, void *))(*(_DWORD *)v7 + 192))(v7, &unk_60C82240);
+                }
+              }
             }
-            else
+            if ( (LOBYTE(v6[1].effectOffset.x) & 0x30) != 0 )
             {
-              if ( *(_DWORD *)(a2 + 140) == 7 )
+              (*(void (__fastcall **)(StageActor *, int, int))(v6->_.vtable + 1168))(v6, v7, 4);
+              v15 = 0;
+              a2->field_6E |= 2u;
+              v6[14].field_230 = 32;
+              v16 = (unsigned __int8)v6->playerId;
+              if ( v16 < 4 )
+                v15 = (char)v16;
+              *(_WORD *)(v7 + 2 * v15 + 6140) = 32;
+            }
+            else if ( v6->position.y > (float)(*(float *)(v7 + 112) + 12.0) )
+            {
+              if ( *v12 >= 4
+                && ((v62 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+                     v63 = (*((int (__fastcall **)(StateBase *))v62->vtable + 2))(v62),
+                     v63 == (*(int (**)(void))(dword_60C82060 + 8))())
+                 || (v64 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+                     v65 = (*((int (__fastcall **)(StateBase *))v64->vtable + 2))(v64),
+                     v65 == (*(int (**)(void))(dword_60C82080 + 8))())) )
               {
-                CurrentState = StateMgr__getCurrentState(v8 + 6084);
-                v12 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
-                if ( v12 == (*(int (**)(void))(MEMORY[0xC82220] + 8))() )
-                {
-                  if ( *(_BYTE *)(v8 + 15261) )
-                  {
-                    *(_BYTE *)(v8 + 15261) = 0;
-                    *(_DWORD *)(v8 + 80) = *(float *)(v6 + 108) >= *(float *)(v8 + 108);
-                    (*(void (__fastcall **)(int, int))(*(_DWORD *)v8 + 192))(v8, 13115968);
-                  }
-                }
+                *v12 = v6->playerId;
+                (*(void (__fastcall **)(int, int *))(*(_DWORD *)v7 + 192))(v7, &dword_60C820A0);
               }
-              result = *(unsigned __int8 *)(v6 + 1216);
-              if ( (result & 0x30) != 0 )
+              else
               {
-                (*(void (__fastcall **)(int, int, int))(*(_DWORD *)v6 + 1168))(v6, v8, 4);
-                v13 = 0;
-                *(_BYTE *)(a2 + 110) |= 2u;
-                *(_DWORD *)(v6 + 9576) = 32;
-                v14 = *(unsigned __int8 *)(v6 + 84);
-                if ( v14 < 4 )
-                  v13 = (char)v14;
-                result = v8 + 2 * v13;
-                *(_WORD *)(result + 6140) = 32;
-              }
-              else if ( *(float *)(v6 + 112) > (float)(*(float *)(v8 + 112) + 12.0) )
-              {
-                if ( *v10 >= 4
-                  && ((v46 = StateMgr__getCurrentState(v8 + 6084),
-                       v47 = (*(int (__fastcall **)(int))(*(_DWORD *)v46 + 8))(v46),
-                       v47 == (*(int (**)(void))(MEMORY[0xC82060] + 8))())
-                   || (v48 = StateMgr__getCurrentState(v8 + 6084),
-                       v49 = (*(int (__fastcall **)(int))(*(_DWORD *)v48 + 8))(v48),
-                       v49 == (*(int (**)(void))(MEMORY[0xC82080] + 8))())) )
+                v89 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084));
+                v90 = (*((int (__fastcall **)(StateBase *))v89->vtable + 2))(v89);
+                if ( v90 == (*(int (**)(void))(dword_60C820E0 + 8))()
+                  || (v91 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+                      v92 = (*((int (__fastcall **)(StateBase *))v91->vtable + 2))(v91),
+                      v92 == (*(int (**)(void))(dword_60C82200 + 8))())
+                  || (v93 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+                      v94 = (*((int (__fastcall **)(StateBase *))v93->vtable + 2))(v93),
+                      v94 == (*(int (**)(void))(dword_60C820C0 + 8))()) )
                 {
-                  *v10 = *(char *)(v6 + 84);
-                  return (*(int (__fastcall **)(int, int))(*(_DWORD *)v8 + 192))(v8, 13115552);
-                }
-                else
-                {
-                  v72 = StateMgr__getCurrentState(v8 + 6084);
-                  v73 = (*(int (__fastcall **)(int))(*(_DWORD *)v72 + 8))(v72);
-                  if ( v73 == (*(int (**)(void))(MEMORY[0xC820E0] + 8))()
-                    || (v74 = StateMgr__getCurrentState(v8 + 6084),
-                        v75 = (*(int (__fastcall **)(int))(*(_DWORD *)v74 + 8))(v74),
-                        v75 == (*(int (**)(void))(MEMORY[0xC82200] + 8))())
-                    || (v76 = StateMgr__getCurrentState(v8 + 6084),
-                        v77 = (*(int (__fastcall **)(int))(*(_DWORD *)v76 + 8))(v76),
-                        v77 == (*(int (**)(void))(MEMORY[0xC820C0] + 8))()) )
+                  v95 = *(float *)(v7 + 108);
+                  v96 = *v12;
+                  v97 = 0;
+                  v98 = 0;
+                  if ( v95 >= (float)(*(float *)(dword_60CC6484 + 112) + 80.0) )
                   {
-                    v78 = *(float *)(v8 + 108);
-                    v79 = *v10;
-                    v80 = 0;
-                    v81 = 0;
-                    if ( v78 >= (float)(*(float *)(MEMORY[0xCC6484] + 112) + 80.0) )
+                    v98 = 1;
+                    if ( v95 <= (float)(*(float *)(dword_60CC6484 + 120) + -80.0) )
                     {
-                      v81 = 1;
-                      if ( v78 <= (float)(*(float *)(MEMORY[0xCC6484] + 120) + -80.0) )
+                      v99 = *(_DWORD *)sub_60008598(ActorMgr::instance, 374, *(_DWORD *)(ActorMgr::instance + 27172));
+                      if ( ((unsigned int)&dword_60C81738 & ~(1611210248 << v100) & 1) == 0
+                        && _cxa_guard_acquire(&dword_60C81738) )
                       {
-                        v82 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
-                        if ( _cxa_guard_acquire_0(13113144) )
-                        {
-                          MEMORY[0xC81734] = 12328872;
-                          _cxa_guard_release_0(13113144);
-                        }
-                        if ( v82 && (**(int (__fastcall ***)(int, int))v82)(v82, 13113140) == 1 )
-                        {
-                          if ( *(float *)(v82 + 108) <= *(float *)(v8 + 108) )
-                            v81 = 0;
-                        }
-                        else
-                        {
-                          v81 = 0;
-                        }
+                        dword_60C81734 = (int)&off_60BC1FA8;
+                        _cxa_guard_release(&dword_60C81738);
                       }
-                    }
-                    SE_PLY_CRASH_KOOPA_ref(v8, v81);
-                    if ( v79 < 4 )
-                      v80 = v79;
-                    v84 = *(_DWORD *)(MEMORY[0xCC436C] + 4 * v80 + 48);
-                    *(_DWORD *)(v8 + 8420) = v84;
-                    *(_DWORD *)(v8 + 9076) = v84;
-                    *(_DWORD *)(v8 + 256) = v84;
-                    sub_6010005C(v8, v79, v83);
-                    *(_BYTE *)(a2 + 110) |= 2u;
-                    *v10 = *(char *)(v6 + 84);
-                    return (*(int (__fastcall **)(int, int))(*(_DWORD *)v8 + 192))(v8, 13115552);
-                  }
-                  else
-                  {
-                    result = *(char *)(v6 + 84);
-                    if ( *v10 != result )
-                    {
-                      if ( (unsigned __int8)result >= 4u )
-                        result = 0;
-                      result = *(_DWORD *)(v8 + 4 * result + 9460);
-                      if ( (int)result < 1 )
+                      if ( v99 && (**(int (__fastcall ***)(int, int *))v99)(v99, &dword_60C81734) == 1 )
                       {
-                        sub_602A3178((_DWORD *)v6);
-                        v88 = *(float *)(v6 + 112);
-                        v89 = MEMORY[0xC7F530];
-                        v92[0] = *(float *)(v6 + 108);
-                        v92[1] = v88;
-                        mapPositionToScreen(v91, v92);
-                        return (unsigned int)BasicSoundActor1_playSound(v89, (int)"SE_OBJ_NO_DAMAGE_BOUND", v91, 0);
+                        if ( *(float *)(v99 + 108) <= *(float *)(v7 + 108) )
+                          v98 = 0;
                       }
                       else
                       {
-                        v87 = *(float *)(v6 + 124);
-                        *(float *)(v6 + 180) = *(float *)(v6 + 120) + *(float *)(v6 + 180);
-                        *(float *)(v6 + 184) = v87 + *(float *)(v6 + 184);
+                        v98 = 0;
                       }
+                    }
+                  }
+                  sub_60090FE8(v7, v98);
+                  if ( v96 < 4 )
+                    v97 = v96;
+                  v101 = *(_DWORD *)(PlayerMgr_instance + 4 * v97 + 48);
+                  *(_DWORD *)(v7 + 8420) = v101;
+                  *(_DWORD *)(v7 + 9076) = v101;
+                  *(_DWORD *)(v7 + 256) = v101;
+                  sub_6010005C(v7, v96);
+                  a2->field_6E |= 2u;
+                  *v12 = v6->playerId;
+                  (*(void (__fastcall **)(int, int *))(*(_DWORD *)v7 + 192))(v7, &dword_60C820A0);
+                }
+                else
+                {
+                  v103 = v6->playerId;
+                  if ( *v12 != v103 )
+                  {
+                    if ( (unsigned __int8)v103 >= 4u )
+                      v103 = 0;
+                    if ( *(int *)(v7 + 4 * v103 + 9460) < 1 )
+                    {
+                      sub_602A3178(v6, &dword_60CC4B7C);
+                      y = v6->position.y;
+                      v106 = Global_BasicSoundActor1;
+                      position.x = v6->position.x;
+                      position.y = y;
+                      mapPositionToScreen(&out, &position);
+                      BasicSoundActor1_playSound(v106, "SE_OBJ_NO_DAMAGE_BOUND", (int)&out, 0);
+                    }
+                    else
+                    {
+                      v104 = v6->speed.y;
+                      *(float *)&v6->field_B4 = v6->speed.x + *(float *)&v6->field_B4;
+                      *(float *)&v6->field_B8 = v104 + *(float *)&v6->field_B8;
                     }
                   }
                 }
@@ -78579,133 +78996,243 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
         }
       }
-      return result;
     }
-    if ( Actor__getProfileId(v6) != MEMORY[0xAF3880] )
+    return;
+  }
+  if ( Actor::getProfileId(&v6->_) != 726 )
+  {
+    owner = (StageActor *)v7;
+    goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_58;
+  }
+  ActiveCollider_getCenterX(a2);
+  v18 = v17;
+  ActiveCollider_getCenterX(a1);
+  v20 = v19;
+  ActiveCollider_getCenterY(a2);
+  v22 = v21;
+  ActiveCollider_getCenterY(a1);
+  v24 = v22 - v23;
+  v25 = v18 - v20;
+  v26 = (float)(v24 * v24) + (float)(v25 * v25);
+  v27 = sqrtf(v26);
+  if ( sub_6009219C(v6) != 1 || v27 >= 24.0 )
+  {
+    owner = (StageActor *)v7;
+    goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_40;
+  }
+  if ( v6->speed.y > 0.0 )
+  {
+    owner = (StageActor *)v7;
+    goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_40;
+  }
+  v58 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084));
+  v59 = (*((int (__fastcall **)(StateBase *))v58->vtable + 2))(v58);
+  if ( v59 == (*(int (**)(void))(dword_60C82260 + 8))() )
+  {
+    owner = (StageActor *)v7;
+    goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_40;
+  }
+  if ( *(_DWORD *)(v7 + 15240) >= 4u
+    && ((v85 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+         v86 = (*((int (__fastcall **)(StateBase *))v85->vtable + 2))(v85),
+         v86 == (*(int (**)(void))(dword_60C82220 + 8))())
+     || (v87 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+         v88 = (*((int (__fastcall **)(StateBase *))v87->vtable + 2))(v87),
+         v88 == (*(int (**)(void))(dword_60C82080 + 8))())) )
+  {
+    sub_60088B8C(v6);
+    (*(void (__fastcall **)(int, int *))(*(_DWORD *)v7 + 192))(v7, &dword_60C82260);
+  }
+  else
+  {
+    v66 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084));
+    v67 = (*((int (__fastcall **)(StateBase *))v66->vtable + 2))(v66);
+    if ( v67 != (*(int (**)(void))(dword_60C820E0 + 8))() )
     {
-      v5 = v8;
-      goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_56;
-    }
-    ActiveCollider_getCenterX();
-    ActiveCollider_getCenterX();
-    ActiveCollider_getCenterY();
-    ActiveCollider_getCenterY();
-    v15 = v2 - v2;
-    v16 = v2 - v2;
-    v17 = (float)(v15 * v15) + (float)(v16 * v16);
-    v18 = sqrtf(v17);
-    if ( !sub_6009219C(v6) || v18 >= 24.0 )
-    {
-      v5 = v8;
-      goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_38;
-    }
-    if ( *(float *)(v6 + 124) > 0.0 )
-    {
-      v5 = v8;
-      goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_38;
-    }
-    v42 = StateMgr__getCurrentState(v8 + 6084);
-    v43 = (*(int (__fastcall **)(int))(*(_DWORD *)v42 + 8))(v42);
-    if ( v43 == (*(int (**)(void))(MEMORY[0xC82260] + 8))() )
-    {
-      v5 = v8;
-      goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_38;
-    }
-    if ( *(_DWORD *)(v8 + 15240) >= 4u
-      && ((v68 = StateMgr__getCurrentState(v8 + 6084),
-           v69 = (*(int (__fastcall **)(int))(*(_DWORD *)v68 + 8))(v68),
-           v69 == (*(int (**)(void))(MEMORY[0xC82220] + 8))())
-       || (v70 = StateMgr__getCurrentState(v8 + 6084),
-           v71 = (*(int (__fastcall **)(int))(*(_DWORD *)v70 + 8))(v70),
-           v71 == (*(int (**)(void))(MEMORY[0xC82080] + 8))())) )
-    {
-      sub_60088B8C((_BYTE *)v6);
-      (*(void (__fastcall **)(int, int))(*(_DWORD *)v8 + 192))(v8, 13116000);
-    }
-    else
-    {
-      v50 = StateMgr__getCurrentState(v8 + 6084);
-      v51 = (*(int (__fastcall **)(int))(*(_DWORD *)v50 + 8))(v50);
-      if ( v51 != (*(int (**)(void))(MEMORY[0xC820E0] + 8))() )
+      v68 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084));
+      v69 = (*((int (__fastcall **)(StateBase *))v68->vtable + 2))(v68);
+      if ( v69 != (*(int (**)(void))(dword_60C82200 + 8))() )
       {
-        v52 = StateMgr__getCurrentState(v8 + 6084);
-        v53 = (*(int (__fastcall **)(int))(*(_DWORD *)v52 + 8))(v52);
-        if ( v53 != (*(int (**)(void))(MEMORY[0xC82200] + 8))() )
-        {
-          v5 = v8;
-          goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_38;
-        }
+        owner = (StageActor *)v7;
+        goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_40;
       }
-      sub_60088B8C((_BYTE *)v6);
-      (*(void (__fastcall **)(int, int))(*(_DWORD *)v8 + 192))(v8, 13116000);
-      v54 = *(_DWORD *)(v8 + 15240);
-      v55 = 0;
-      v56 = 0;
-      if ( v54 < 4 )
-        v55 = *(_DWORD *)(v8 + 15240);
-      if ( *(_DWORD *)(MEMORY[0xCC436C] + 4 * v55 + 32) )
+    }
+    sub_60088B8C(v6);
+    (*(void (__fastcall **)(int, int *))(*(_DWORD *)v7 + 192))(v7, &dword_60C82260);
+    v70 = *(_DWORD *)(v7 + 15240);
+    v71 = 0;
+    v72 = 0;
+    if ( v70 < 4 )
+      v71 = *(_DWORD *)(v7 + 15240);
+    if ( *(_DWORD *)(PlayerMgr_instance + 4 * v71 + 32) )
+    {
+      v73 = *(float *)(v7 + 108);
+      if ( v73 >= (float)(*(float *)(dword_60CC6484 + 112) + 80.0) )
       {
-        v57 = *(float *)(v8 + 108);
-        if ( v57 >= (float)(*(float *)(MEMORY[0xCC6484] + 112) + 80.0) )
+        v72 = 1;
+        if ( v73 <= (float)(*(float *)(dword_60CC6484 + 120) + -80.0) )
         {
-          v56 = 1;
-          if ( v57 <= (float)(*(float *)(MEMORY[0xCC6484] + 120) + -80.0) )
+          v74 = *(int (__fastcall ****)(_DWORD, int *))sub_60008598(
+                                                         ActorMgr::instance,
+                                                         374,
+                                                         *(_DWORD *)(ActorMgr::instance + 27172));
+          v107 = v74;
+          if ( ((unsigned int)&dword_60C81738 & ~(1611209492 << v75) & 1) == 0 )
           {
-            v90 = *(_DWORD *)ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3300]);
-            v58 = _cxa_guard_acquire_0(13113144);
-            v59 = (int (__fastcall ***)(_DWORD, int))v90;
-            if ( v58 )
+            v76 = _cxa_guard_acquire(&dword_60C81738);
+            v74 = v107;
+            if ( v76 )
             {
-              MEMORY[0xC81734] = 12328872;
-              _cxa_guard_release_0(13113144);
-              v59 = (int (__fastcall ***)(_DWORD, int))v90;
-            }
-            if ( v59 && (**v59)(v59, 13113140) == 1 )
-            {
-              if ( *(float *)(v90 + 108) <= *(float *)(v8 + 108) )
-                v56 = 0;
-            }
-            else
-            {
-              v56 = 0;
+              dword_60C81734 = (int)&off_60BC1FA8;
+              _cxa_guard_release(&dword_60C81738);
+              v74 = v107;
             }
           }
-        }
-        SE_PLY_CRASH_KOOPA_ref(v8, v56);
-        v85 = *(_DWORD *)(MEMORY[0xCC436C] + 4 * v55 + 48);
-        *(_DWORD *)(v8 + 8420) = v85;
-        *(_DWORD *)(v8 + 9076) = v85;
-        *(_DWORD *)(v8 + 256) = v85;
-        sub_6010005C(v8, v54, v86);
-        *(_DWORD *)(v8 + 9436) = v54;
-        *(_DWORD *)(v8 + 9440) = 60;
-      }
-    }
-    *(_BYTE *)(a2 + 110) |= 2u;
-  SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_38:
-    if ( !sub_6009219C(v6) && !*(_BYTE *)(v6 + 7248) )
-    {
-      v19 = StateMgr__getCurrentState(v6 + 6084);
-      v20 = (*(int (__fastcall **)(int))(*(_DWORD *)v19 + 8))(v19);
-      if ( v20 != (*(int (**)(void))(MEMORY[0xC81D0C] + 8))() )
-      {
-        if ( *(_DWORD *)(v5 + 15240) < 4u )
-          goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_45;
-        v21 = StateMgr__getCurrentState(v5 + 6084);
-        v22 = (*(int (__fastcall **)(int))(*(_DWORD *)v21 + 8))(v21);
-        if ( v22 != (*(int (**)(void))(MEMORY[0xC82220] + 8))() )
-        {
-          v23 = StateMgr__getCurrentState(v5 + 6084);
-          v24 = (*(int (__fastcall **)(int))(*(_DWORD *)v23 + 8))(v23);
-          if ( v24 != (*(int (**)(void))(MEMORY[0xC82080] + 8))() )
-            goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_45;
+          if ( v74 && (**v74)(v74, &dword_60C81734) == 1 )
+          {
+            if ( *((float *)v107 + 27) <= *(float *)(v7 + 108) )
+              v72 = 0;
+          }
+          else
+          {
+            v72 = 0;
+          }
         }
       }
+      sub_60090FE8(v7, v72);
+      v102 = *(_DWORD *)(PlayerMgr_instance + 4 * v71 + 48);
+      *(_DWORD *)(v7 + 8420) = v102;
+      *(_DWORD *)(v7 + 9076) = v102;
+      *(_DWORD *)(v7 + 256) = v102;
+      sub_6010005C(v7, v70);
+      *(_DWORD *)(v7 + 9436) = v70;
+      *(_DWORD *)(v7 + 9440) = 60;
     }
-    v25 = StateMgr__getCurrentState(v6 + 6084);
-    v26 = (*(int (__fastcall **)(int))(*(_DWORD *)v25 + 8))(v25);
-
   }
+  a2->field_6E |= 2u;
+SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_40:
+  if ( !sub_6009219C(v6) && !LOBYTE(v6[11].rotation.z) )
+  {
+    v28 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v29 = (*((int (__fastcall **)(StateBase *))v28->vtable + 2))(v28);
+    if ( v29 != (*(int (**)(void))(dword_60C81D0C + 8))() )
+    {
+      if ( owner[23].aCollider.field_F0 < 4u )
+        goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_47;
+      v30 = StateMgr::getCurrentState((StateMgr *)&owner[9].aCollider.field_64);
+      v31 = (*((int (__fastcall **)(StateBase *))v30->vtable + 2))(v30);
+      if ( v31 != (*(int (**)(void))(dword_60C82220 + 8))() )
+      {
+        v32 = StateMgr::getCurrentState((StateMgr *)&owner[9].aCollider.field_64);
+        v33 = (*((int (__fastcall **)(StateBase *))v32->vtable + 2))(v32);
+        if ( v33 != (*(int (**)(void))(dword_60C82080 + 8))() )
+          goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_47;
+      }
+    }
+  }
+  v34 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+  v35 = (*((int (__fastcall **)(StateBase *))v34->vtable + 2))(v34);
+  if ( v35 == (*(int (**)(void))(dword_60C81D8C + 8))() )
+  {
+SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_47:
+    v36 = sqrtf(v26);
+    if ( v36 > 0.0 )
+    {
+      v37 = 1.0 / v36;
+      v24 = v24 * v37;
+      v25 = v25 * v37;
+    }
+    v38 = (*(float (__fastcall **)(StageActor *))(owner->_.vtable + 668))(owner) + (float)(a1->info.distToEdge.x * 0.5);
+    if ( v27 < v38 )
+    {
+      v39 = v38 - v27;
+      *(float *)&v6->field_B4 = *(float *)&v6->field_B4 + (float)(v25 * v39);
+      *(float *)&v6->field_B8 = *(float *)&v6->field_B8 + (float)(v24 * v39);
+    }
+    v40 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v41 = (*((int (__fastcall **)(StateBase *))v40->vtable + 2))(v40);
+    if ( v41 == (*(int (**)(void))(dword_60C81D8C + 8))() )
+      x = v6->speed.x;
+    else
+      x = v6->maxSpeed.x;
+    v6->speed.x = -x;
+  }
+SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_58:
+  if ( Actor::getProfileId(&v6->_) != 728 )
+    goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65;
+  v45 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+  v46 = (*((int (__fastcall **)(StateBase *))v45->vtable + 2))(v45);
+  if ( v46 == (*((int (**)(void))BobOmb_StateID_Kicked._._.vtable + 2))()
+    || (v47 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64),
+        v48 = (*((int (__fastcall **)(StateBase *))v47->vtable + 2))(v47),
+        v48 == (*(int (**)(void))(dword_60C8E2E0 + 8))()) )
+  {
+    v49 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v50 = (*((int (__fastcall **)(StateBase *))v49->vtable + 2))(v49);
+    if ( v50 != (*((int (**)(void))stru_60C8E1CC._.vtable + 2))() )
+SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_62:
+      sub_6025E064(v6);
+  }
+  else
+  {
+    v60 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v61 = (*((int (__fastcall **)(StateBase *))v60->vtable + 2))(v60);
+    if ( v61 == (*((int (**)(void))stru_60C8EA70._.vtable + 2))() )
+    {
+      sub_602A58B4(v6, a1->owner);
+      goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_64;
+    }
+    v77 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v78 = (*((int (__fastcall **)(StateBase *))v77->vtable + 2))(v77);
+    if ( v78 == (*(int (**)(void))(dword_60C810B8 + 8))() )
+      goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_64;
+    v79 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v80 = (*((int (__fastcall **)(StateBase *))v79->vtable + 2))(v79);
+    if ( v80 == (*(int (**)(void))(dword_60C810D8 + 8))() || owner->speed.y >= 0.0 )
+      goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_64;
+    v81 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v82 = (*((int (__fastcall **)(StateBase *))v81->vtable + 2))(v81);
+    v83 = (*((int (**)(void))stru_60C8E1CC._.vtable + 2))();
+    v84 = v82 == v83;
+    if ( v82 != v83 )
+      v84 = (v6[4].aCollider.field_6C & 1) == 0;
+    if ( !v84 )
+      goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_62;
+  }
+  ActiveCollider_getCenterX(a1);
+  v52 = v51;
+  ActiveCollider_getCenterX(a2);
+  sub_60063CC8(v6, v52 > v53);
+SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_64:
+  a2->field_6E |= 2u;
+SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
+  if ( Actor::getProfileId(&v6->_) == 441 )
+  {
+    v54 = owner[23].aCollider.field_F0;
+    if ( v54 <= 3 )
+    {
+      v55 = PlayerMgr_instance + 4 * v54;
+      v56 = *(_DWORD *)(v55 + 32);
+      if ( v56 )
+      {
+        if ( sub_607B8A50(*(_DWORD *)(v55 + 32), owner) == 1 )
+        {
+          if ( ((unsigned int)dword_60C7B430 & ~(1611208740 << v57) & 1) == 0 && _cxa_guard_acquire(dword_60C7B430) )
+          {
+            Enemy_RTTI = (int)&off_60BC00C8;
+            _cxa_guard_release(dword_60C7B430);
+          }
+          if ( (*(int (__fastcall **)(StageActor *, int *))v6->_.vtable)(v6, &Enemy_RTTI) == 1 )
+          {
+            Enemy::collisionCallback(a2, (ActiveCollider *)(v56 + 188));
+            goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* ============================================================================
  * sub_6009219C
  * RVA 0x0009219c   size 0x154   xrefs 2

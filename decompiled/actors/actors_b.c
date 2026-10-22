@@ -149412,409 +149412,525 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * RVA 0x003f8408   size 0x1188   xrefs 0
  * ============================================================================ */
   int __fastcall sub_603F8408(int a1)
+{
+  int v2; // r0
+  int v3; // r5
+  int v4; // r0
+  _BOOL4 v5; // r1
+  bool v6; // zf
+  int v7; // r0
+  _DWORD *v8; // r9
+  bool v9; // r2
+  unsigned int v10; // r3
+  int v11; // r5
+  int v12; // r0
+  int v13; // r7
+  int v14; // r1
+  int (***v15)(); // r2
+  int v16; // r5
+  int v17; // r0
+  int v18; // r6
+  int v19; // r5
+  int v20; // r0
+  int v21; // r6
+  int v22; // r5
+  int v23; // r0
+  int v24; // r6
+  int v25; // r5
+  int v26; // r0
+  int v27; // r6
+  int v28; // r10
+  int v29; // r0
+  int v30; // r5
+  int v31; // r4
+  int v32; // r7
+  int Area; // r0
+  const char *v34; // r4
+  int v35; // r0
+  const char *v36; // r4
+  int v37; // r0
+  const char *v38; // r4
+  int v39; // r0
+  const char *v40; // r4
+  int v41; // r5
+  _DWORD *v42; // r9
+  _WORD *v43; // r1
+  unsigned __int16 v44; // r10
+  unsigned __int16 v45; // r7
+  unsigned __int16 v46; // r5
+  int v47; // r1
+  int v48; // r2
+  int v49; // r0
+  bool v50; // zf
+  unsigned int v51; // r1
+  unsigned int v52; // r3
+  _DWORD *v53; // r2
+  int v54; // r0
+  int v55; // r1
+  int v56; // r5
+  int v57; // r0
+  int v58; // r6
+  int v59; // r5
+  int v60; // r0
+  int v61; // r6
+  int v62; // r5
+  int v63; // r0
+  int v64; // r6
+  void (__fastcall ***v65)(_DWORD); // r0
+  signed int *v66; // r0
+  int v67; // r0
+  int v69; // [sp+Ch] [bp-44h]
+  _DWORD v70[2]; // [sp+10h] [bp-40h] BYREF
+  int (**v71)(); // [sp+18h] [bp-38h] BYREF
+  const char *v72; // [sp+1Ch] [bp-34h]
+  int v73; // [sp+20h] [bp-30h]
+  int v74; // [sp+24h] [bp-2Ch] BYREF
+
+  if ( (unsigned int)(*(_DWORD *)(dword_60CC6C28 + 16) - 1) <= 1 )
+    sub_6081AF10();
+  v2 = nullsub_14(0);
+  sub_600238B8(v2);
+  sub_6040D2FC(LevelInfo_instance);
+  qmemcpy((void *)(a1 + 272), (const void *)(dword_60C99DEC + 16), 0x280u);
+  sub_603FCFB8(a1 + 272);
+  *(_BYTE *)(a1 + 1388) = 0;
+  *(_BYTE *)(a1 + 1396) = 0;
+  *(_BYTE *)(a1 + 1397) = 0;
+  *(_BYTE *)(dword_60CC6D78 + 109050) = 0;
+  v3 = LevelInfo_instance;
+  if ( !sub_6040E3D0(LevelInfo_instance) && sub_6040E438(v3) != 1 )
   {
-    int v2; // r5
-    int v3; // r0
-    _BOOL4 v4; // r1
-    bool v5; // zf
-    int v6; // r1
-    int v7; // r0
-    _DWORD *v8; // r9
-    bool v9; // r2
-    unsigned int v10; // r3
-    int v11; // r5
-    int v12; // r7
-    char v13; // r11
-    int v14; // r1
-    int v15; // r2
-    int v16; // r1
-    int v17; // r5
-    int v18; // r6
-    int v19; // r5
-    int v20; // r6
-    int v21; // r5
-    int v22; // r6
-    int v23; // r5
-    int v24; // r6
-    int v25; // r10
-    int v26; // r5
-    int v27; // r4
-    int v28; // r7
-    int Area; // r0
-    char *v30; // r4
-    int v31; // r0
-    char *v32; // r4
-    int v33; // r0
-    char *v34; // r4
-    int v35; // r0
-    char *v36; // r4
-    int v37; // r5
-    _DWORD *v38; // r9
-    _WORD *v39; // r1
-    unsigned __int16 v40; // r10
-    unsigned __int16 v41; // r7
-    unsigned __int16 v42; // r5
-    int v43; // r1
-    int v44; // r2
-    int v45; // r0
-    bool v46; // zf
-    unsigned int v47; // r1
-    unsigned int v48; // r3
-    _DWORD *v49; // r2
-    int v50; // r0
-    int v51; // r1
-    int v52; // r5
-    int v53; // r6
-    int v54; // r5
-    int v55; // r6
-    int v56; // r5
-    int v57; // r6
-    void (__fastcall ***v58)(_DWORD); // r0
-    int v59; // r0
-    int v60; // r0
-    _DWORD *v61; // r0
-    int v62; // r0
-    int v63; // r0
-    int v64; // r0
-    _DWORD *v65; // r0
-    int v66; // r0
-    int v67; // r0
-    int v68; // r0
-    int v69; // r0
-    int v70; // r0
-    int v71; // r0
-    int v72; // r0
-    int v73; // r0
-    _DWORD *v74; // r0
-    int v75; // r0
-    int v76; // r0
-    int v78; // [sp+Ch] [bp-20h]
-    _DWORD v79[2]; // [sp+10h] [bp-1Ch] BYREF
-    int v80; // [sp+18h] [bp-14h] BYREF
-    char *v81; // [sp+1Ch] [bp-10h]
-    int v82; // [sp+20h] [bp-Ch]
-    int v83; // [sp+24h] [bp-8h] BYREF
-  
-    if ( (unsigned int)(*(_DWORD *)(MEMORY[0xCC6C28] + 16) - 1) <= 1 )
-      sub_6081AF10();
-    nullsub_14(0);
-    sub_600238B8();
-    sub_6040D2FC(MEMORY[0xC9A684]);
-    qmemcpy((void *)(a1 + 272), (const void *)(MEMORY[0xC99DEC] + 16), 0x280u);
-    sub_603FCFB8(a1 + 272);
-    *(_BYTE *)(a1 + 1388) = 0;
-    *(_BYTE *)(a1 + 1396) = 0;
-    *(_BYTE *)(a1 + 1397) = 0;
-    *(_BYTE *)(MEMORY[0xCC6D78] + 109050) = 0;
-    v2 = MEMORY[0xC9A684];
-    if ( !sub_6040E3D0(MEMORY[0xC9A684]) && sub_6040E438(v2) != 1 )
-    {
-      v3 = sub_603F6960(a1 + 272, *(unsigned __int8 *)(v2 + 16), *(unsigned __int8 *)(v2 + 17));
-      v4 = 0;
-      if ( *(_BYTE *)(v2 + 30) == 2 )
-        v4 = *(_DWORD *)(v2 + 32) != 2;
-      v5 = v3 == -1;
-      if ( v3 != -1 )
-        v5 = v4;
-      if ( v5 )
-        sub_603F692C(a1 + 272);
-    }
-    *(_BYTE *)(a1 + 733) = *(_BYTE *)(a1 + 288);
-    *(_BYTE *)(a1 + 734) = *(_BYTE *)(a1 + 289);
-    *(_BYTE *)(a1 + 735) = *(_BYTE *)(a1 + 290);
-    *(_BYTE *)(a1 + 736) = sub_60408230(
-                             MEMORY[0xCC6D78] + 52,
-                             *(_BYTE *)(MEMORY[0xC9A684] + 16),
-                             *(_BYTE *)(MEMORY[0xC9A684] + 17));
-    v8 = (_DWORD *)(a1 + 764);
-    v7 = *(_DWORD *)(a1 + 764);
-    if ( v7 )
-    {
-      if ( (unsigned int)(v7 - 1) > 1 )
-        goto sub_603F8408__LABEL_18;
-    }
-    else if ( (*(_BYTE *)(MEMORY[0xCC6D78] + 44) & 5) != 0 )
-    {
+    v4 = sub_603F6960(a1 + 272, *(unsigned __int8 *)(v3 + 16), *(unsigned __int8 *)(v3 + 17));
+    v5 = 0;
+    if ( *(_BYTE *)(v3 + 30) == 2 )
+      v5 = *(_DWORD *)(v3 + 32) != 2;
+    v6 = v4 == -1;
+    if ( v4 != -1 )
+      v6 = v5;
+    if ( v6 )
+      sub_603F692C(a1 + 272, v5);
+  }
+  *(_BYTE *)(a1 + 733) = *(_BYTE *)(a1 + 288);
+  *(_BYTE *)(a1 + 734) = *(_BYTE *)(a1 + 289);
+  *(_BYTE *)(a1 + 735) = *(_BYTE *)(a1 + 290);
+  *(_BYTE *)(a1 + 736) = sub_60408230(
+                           dword_60CC6D78 + 52,
+                           *(unsigned __int8 *)(LevelInfo_instance + 16),
+                           *(unsigned __int8 *)(LevelInfo_instance + 17));
+  v8 = (_DWORD *)(a1 + 764);
+  v7 = *(_DWORD *)(a1 + 764);
+  if ( v7 )
+  {
+    if ( (unsigned int)(v7 - 1) > 1 )
       goto sub_603F8408__LABEL_18;
-    }
-    if ( !sub_6040E3D0(MEMORY[0xC9A684]) )
-      sub_6040E538(MEMORY[0xC9A684]);
-  sub_603F8408__LABEL_18:
-    if ( *v8 == 3 || sub_6040E510(MEMORY[0xC9A684], v6) || sub_6040E438(MEMORY[0xC9A684]) == 1 )
-      *(_BYTE *)(a1 + 732) = 0;
+  }
+  else if ( (*(_BYTE *)(dword_60CC6D78 + 44) & 5) != 0 )
+  {
+    goto sub_603F8408__LABEL_18;
+  }
+  if ( !sub_6040E3D0(LevelInfo_instance) )
+    sub_6040E538(LevelInfo_instance);
+sub_603F8408__LABEL_18:
+  if ( *v8 == 3 || sub_6040E510(LevelInfo_instance) || sub_6040E438(LevelInfo_instance) == 1 )
+    *(_BYTE *)(a1 + 732) = 0;
+  v9 = 0;
+  if ( *(_BYTE *)(dword_60CC6D78 + 109032) )
+  {
+    v10 = *(unsigned __int8 *)(LevelInfo_instance + 16);
     v9 = 0;
-    if ( *(_BYTE *)(MEMORY[0xCC6D78] + 109032) )
+    if ( v10 <= 6 )
+      v9 = (*(_BYTE *)(dword_60CC6D78 + 109034) & (unsigned __int8)(1 << v10)) != 0;
+  }
+  v69 = a1 + 272;
+  *(_BYTE *)(a1 + 908) = v9;
+  v11 = 1;
+  v71 = &`vtable for'sead::SafeStringBase<char>;
+  v72 = "InputMgr";
+  v12 = sead::ExpHeap::create(0, (int)&v71, 0, 4, 1, 0);
+  v13 = v12;
+  if ( v12 )
+    v11 = sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v12);
+  sub_60451FEC(0);
+  if ( **(_BYTE **)(dword_60CC6D78 + 140) )
+  {
+    v15 = (int (***)())(dword_60CC6D78 + 136);
+    v14 = 2;
+  }
+  else
+  {
+    v15 = &off_60C5CB30;
+    v14 = *v8 == 4;
+  }
+  sub_6045217C(dword_60C9CF0C, v14, v15, 0);
+  (*(void (__fastcall **)(int))(*(_DWORD *)v13 + 20))(v13);
+  if ( v11 != 1 )
+    sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v11);
+  sub_603E50C0(0);
+  sub_600074EC();
+  sub_60009B2C(0);
+  sub_60729104(0);
+  sub_6071A7C8(0);
+  sub_6071B890(0);
+  sub_607188FC(0);
+  sub_60786E30(0);
+  sub_605E7988(0);
+  sub_603F7A24(0);
+  sub_6015AE88(0);
+  sub_6072990C(0);
+  sub_606E8BAC(0);
+  sub_60004170(0);
+  sub_605823C8(0);
+  sub_605B8CBC(0);
+  sub_60021ADC(0);
+  sub_603FC4E4(0);
+  ColliderMgr_createInstance(0);
+  sub_601675C0(0);
+  sub_60253E2C(0);
+  sub_603FD628(0);
+  sub_60726854(0);
+  sub_60407C0C(0);
+  sub_603F7FF8(0);
+  sub_60401BB8(0);
+  sub_603F9738(a1);
+  sub_603EFADC(0);
+  v16 = 1;
+  v71 = &`vtable for'sead::SafeStringBase<char>;
+  v72 = "TexQuadMgrInstance";
+  v17 = sead::ExpHeap::create(0, (int)&v71, 0, 4, 1, 0);
+  v18 = v17;
+  if ( v17 )
+    v16 = sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v17);
+  sub_6044EE58(0);
+  (*(void (__fastcall **)(int))(*(_DWORD *)v18 + 20))(v18);
+  if ( v16 != 1 )
+    sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v16);
+  v19 = 1;
+  v71 = &`vtable for'sead::SafeStringBase<char>;
+  v72 = "MaskMgrInstance";
+  v20 = sead::ExpHeap::create(0, (int)&v71, 0, 4, 1, 0);
+  v21 = v20;
+  if ( v20 )
+    v19 = sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v20);
+  MaskManager_createInstance_(0);
+  (*(void (__fastcall **)(int))(*(_DWORD *)v21 + 20))(v21);
+  if ( v19 != 1 )
+    sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v19);
+  sub_603F5508(0);
+  sub_606E69A0(0);
+  sub_606E6A1C(dword_60CBBFA4);
+  v22 = 1;
+  v71 = &`vtable for'sead::SafeStringBase<char>;
+  v72 = "DynamicLightMgr";
+  v23 = sead::ExpHeap::create(0, (int)&v71, 0, 4, 1, 0);
+  v24 = v23;
+  if ( v23 )
+    v22 = sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v23);
+  sub_604117C4(0);
+  sub_60413E08(dword_60C9A698, 0);
+  (*(void (__fastcall **)(int))(*(_DWORD *)v24 + 20))(v24);
+  if ( v22 != 1 )
+    sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v22);
+  sub_60731168(0);
+  sub_60731290(dword_60CBDBF8);
+  sub_6042F520(0);
+  if ( sub_603FD554(a1 + 764) == 1 )
+  {
+    v25 = 1;
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = "WmModeDB";
+    v26 = sead::ExpHeap::create(0, (int)&v71, 0, 4, 1, 0);
+    v27 = v26;
+    if ( v26 )
+      v25 = sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v26);
+    sub_6042F798(dword_60C9C2D0, 0);
+    (*(void (__fastcall **)(int))(*(_DWORD *)v27 + 20))(v27);
+    if ( v25 != 1 )
+      sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v25);
+  }
+  sub_60726908(dword_60CBD894, 0);
+  v28 = 1;
+  v71 = &`vtable for'sead::SafeStringBase<char>;
+  v72 = "CourseUnitData";
+  v29 = sead::ExpHeap::create(0, (int)&v71, 0, 4, 1, 0);
+  v30 = v29;
+  if ( v29 )
+    v28 = sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v29);
+  if ( (unsigned int)(*(_DWORD *)(dword_60CC6C28 + 16) - 1) >= 2 )
+  {
+    v31 = LevelInfo_instance;
+    v72 = (const char *)&v74;
+    v71 = &BufferedSafeStringBase_char_vtable_probably;
+    v73 = 8;
+    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v71);
+    *v72 = 0;
+    v71 = &off_60BD4B8C;
+    sub_60727C38(*(unsigned __int8 *)(v31 + 16), *(unsigned __int8 *)(v31 + 17), (int)&v71);
+    v32 = ArchiveManagerMaybe_instance;
+    ((void (__fastcall *)(int (***)()))v71[3])(&v71);
+    v70[0] = &`vtable for'sead::SafeStringBase<char>;
+    v70[1] = v72;
+    sub_60820F8C(v32, v70, 0);
+    Level_createInstance(0);
+    sub_607279C0((_DWORD *)Level_instance);
+  }
+  Area = Level_getArea(Level_instance, 0);
+  if ( Area )
+  {
+    v34 = *(const char **)(Area + 4);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v34;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v34 + 32;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v34 + 64;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v34 + 96;
+    sub_603F9BD8(&v71);
+  }
+  v35 = Level_getArea(Level_instance, 1u);
+  if ( v35 )
+  {
+    v36 = *(const char **)(v35 + 4);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v36;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v36 + 32;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v36 + 64;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v36 + 96;
+    sub_603F9BD8(&v71);
+  }
+  v37 = Level_getArea(Level_instance, 2u);
+  if ( v37 )
+  {
+    v38 = *(const char **)(v37 + 4);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v38;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v38 + 32;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v38 + 64;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v38 + 96;
+    sub_603F9BD8(&v71);
+  }
+  v39 = Level_getArea(Level_instance, 3u);
+  if ( v39 )
+  {
+    v40 = *(const char **)(v39 + 4);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v40;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v40 + 32;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v40 + 64;
+    sub_603F9BD8(&v71);
+    v71 = &`vtable for'sead::SafeStringBase<char>;
+    v72 = v40 + 96;
+    sub_603F9BD8(&v71);
+  }
+  (*(void (__fastcall **)(int))(*(_DWORD *)v30 + 20))(v30);
+  if ( v28 != 1 )
+    sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v28);
+  v41 = LevelInfo_instance;
+  sub_6040D310(LevelInfo_instance);
+  sub_6040D3F4(v41, *(_DWORD *)(v41 + 24));
+  *(_BYTE *)(a1 + 194) = *(_DWORD *)(v41 + 24) == 2;
+  sub_60582544(dword_60CAF15C);
+  if ( *(_DWORD *)(a1 + 764) == 3 )
+    *(_DWORD *)(a1 + 912) = sub_603F9D9C();
+  sub_60023F68();
+  LoadProfileArchives(1, 0);
+  if ( sub_603FD564(a1 + 764) == 1 )
+    sub_6023446C(*(_DWORD *)(a1 + 4 * *(_DWORD *)(a1 + 88) + 68));
+  sub_603FD69C(dword_60C99DF4);
+  if ( *v8 == 4 )
+    sub_604089F4(dword_60C9A1F0, *(unsigned __int8 *)(dword_60C9A1F0 + 6558));
+  if ( !sub_604091F0(dword_60C9A1F0) )
+  {
+    v42 = (_DWORD *)Level_getArea(Level_instance, *(unsigned __int8 *)(LevelInfo_instance + 18));
+    v43 = (_WORD *)v42[2];
+    v44 = v43[11];
+    v45 = v43[10];
+    v46 = v43[5];
+    if ( !v44 )
+      v44 = 200;
+    if ( *(_BYTE *)(dword_60CC6D78 + 109032) )
+      v44 = 100;
+    if ( !v43[10] )
+      v45 = 300;
+    if ( *(_BYTE *)(dword_60CC6D78 + 109032) )
+      v45 = 100;
+    if ( !v43[5] )
+      v46 = 500;
+    if ( *(_BYTE *)(dword_60CC6D78 + 109032) )
+      v46 = 100;
+    if ( !sub_6040E3D0(LevelInfo_instance) && sub_603FD0E8(v69) == 1 )
     {
-      v10 = *(unsigned __int8 *)(MEMORY[0xC9A684] + 16);
-      v9 = 0;
-      if ( v10 <= 6 )
-        v9 = (*(_BYTE *)(MEMORY[0xCC6D78] + 109034) & (unsigned __int8)(1 << v10)) != 0;
+      v44 += 100;
+      v45 += 100;
+      v46 += 100;
     }
-    v78 = a1 + 272;
-    *(_BYTE *)(a1 + 908) = v9;
-    v11 = 1;
-    v80 = 12321336;
-    v81 = "InputMgr";
-    v12 = sead__ExpHeap__create(0, &v80, 0, 4, 1, 0);
-    if ( v12 )
-      v11 = sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    sub_60451FEC(0);
-    v13 = MEMORY[0xB3BA34];
-    if ( **(unsigned __int8 **)(MEMORY[0xCC6D78] + 140) == MEMORY[0xB3BA34] )
+    v47 = v42[2];
+    v48 = *(unsigned __int8 *)(v47 + 16);
+    v49 = *(unsigned __int8 *)(LevelInfo_instance + 19);
+    v50 = v49 == v48;
+    if ( v49 != v48 )
+      v50 = v49 == *(unsigned __int8 *)(v47 + 19);
+    if ( v50 )
+      goto sub_603F8408__LABEL_95;
+    v51 = v42[38];
+    if ( !v51 )
+      goto sub_603F8408__LABEL_95;
+    v52 = 0;
+    v53 = (_DWORD *)(v42[8] + 8);
+    while ( *((_WORD *)v53 - 4) != 25 || v49 != (unsigned __int8)BYTE2(*v53) )
     {
-      v15 = 12962608;
-      v14 = *v8 == 4;
+      ++v52;
+      v53 += 6;
+      if ( v52 >= v51 )
+        goto sub_603F8408__LABEL_95;
+    }
+    if ( (*v53 & 0xF) == 1 )
+    {
+      v55 = v44;
+      v54 = dword_60C99DE4;
+      goto sub_603F8408__LABEL_96;
+    }
+    if ( (*v53 & 0xF) != 0 )
+    {
+sub_603F8408__LABEL_95:
+      v54 = dword_60C99DE4;
+      v55 = v46;
     }
     else
     {
-      v15 = MEMORY[0xCC6D78] + 136;
-      v14 = 2;
+      v55 = v45;
+      v54 = dword_60C99DE4;
     }
-    challenge_replay_ref(MEMORY[0xC9CF0C], v14, (_DWORD *)v15, 0);
-    (*(void (__fastcall **)(int))(*(_DWORD *)v12 + 20))(v12);
-    if ( v11 != 1 )
-      sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    sub_603E50C0(0);
-    sub_600074EC(0);
-    sub_60009B2C(0);
-    sub_60729104(0);
-    sub_6071A7C8(0);
-    sub_6071B890(0);
-    sub_607188FC(0);
-    sub_60786E30(0);
-    sub_605E7988(0);
-    sub_603F7A24(0);
-    sub_6015AE88(0);
-    sub_6072990C(0);
-    sub_606E8BAC(0);
-    sub_60004170(0);
-    sub_605823C8(0);
-    sub_605B8CBC(0);
-    sub_60021ADC(0);
-    sub_603FC4E4(0);
-    ColliderMgr_createInstance(0);
-    sub_601675C0(0);
-    sub_60253E2C(0);
-    sub_603FD628(0);
-    sub_60726854(0);
-    sub_60407C0C(0);
-    sub_603F7FF8(0);
-    sub_60401BB8(0);
-    sub_603F9738((_DWORD *)a1, v16);
-    sub_603EFADC(0);
-    v17 = 1;
-    v80 = 12321336;
-    v81 = "TexQuadMgrInstance";
-    v18 = sead__ExpHeap__create(0, &v80, 0, 4, 1, 0);
-    if ( v18 )
-      v17 = sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    sub_6044EE58(0);
-    (*(void (__fastcall **)(int))(*(_DWORD *)v18 + 20))(v18);
-    if ( v17 != 1 )
-      sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    v19 = 1;
-    v80 = 12321336;
-    v81 = "MaskMgrInstance";
-    v20 = sead__ExpHeap__create(0, &v80, 0, 4, 1, 0);
-    if ( v20 )
-      v19 = sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    MaskManager_createInstance_(0);
-    (*(void (__fastcall **)(int))(*(_DWORD *)v20 + 20))(v20);
-    if ( v19 != 1 )
-      sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    sub_603F5508(0);
-    sub_606E69A0(0);
-    sub_606E6A1C(MEMORY[0xCBBFA4]);
-    v21 = 1;
-    v80 = 12321336;
-    v81 = "DynamicLightMgr";
-    v22 = sead__ExpHeap__create(0, &v80, 0, 4, 1, 0);
-    if ( v22 )
-      v21 = sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    sub_604117C4(0);
-    sub_60413E08(MEMORY[0xC9A698]);
-    (*(void (__fastcall **)(int))(*(_DWORD *)v22 + 20))(v22);
-    if ( v21 != 1 )
-      sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    sub_60731168(0);
-    sub_60731290(MEMORY[0xCBDBF8]);
-    sub_6042F520(0);
-    if ( sub_603FD554(a1 + 764) == 1 )
-    {
-      v23 = 1;
-      v80 = 12321336;
-      v81 = "WmModeDB";
-      v24 = sead__ExpHeap__create(0, &v80, 0, 4, 1, 0);
-      if ( v24 )
-        v23 = sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-      WmModeDBTmpHeap_ref(MEMORY[0xC9C2D0], 0);
-      (*(void (__fastcall **)(int))(*(_DWORD *)v24 + 20))(v24);
-      if ( v23 != 1 )
-        sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    }
-    obj_coin_blue_ref_3(MEMORY[0xCBD894], 0);
-    v25 = 1;
-    v80 = 12321336;
-    v81 = "CourseUnitData";
-    v26 = sead__ExpHeap__create(0, &v80, 0, 4, 1, 0);
-    if ( v26 )
-      v25 = sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    if ( (unsigned int)(*(_DWORD *)(MEMORY[0xCC6C28] + 16) - 1) >= 2 )
-    {
-      v27 = MEMORY[0xC9A684];
-      v81 = (char *)&v83;
-      v80 = 12322272;
-      v82 = 8;
-      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v80);
-      *v81 = v13;
-      v80 = 12405644;
-      sub_60727C38(*(unsigned __int8 *)(v27 + 16), *(unsigned __int8 *)(v27 + 17), &v80);
-      v28 = MEMORY[0xCC6D94];
-      (*(void (__fastcall **)(int *))(v80 + 12))(&v80);
-      v79[0] = 12321336;
-      v79[1] = v81;
-      sub_60820F8C(v28, (int)v79, 0);
-      Level_createInstance(0);
-      sub_607279C0(MEMORY[0xCBD89C]);
-    }
-    Area = Level_getArea(MEMORY[0xCBD89C]);
-    if ( Area )
-    {
-      v30 = *(char **)(Area + 4);
-      v80 = 12321336;
-      v81 = v30;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v30 + 32;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v30 + 64;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v30 + 96;
-      sub_603F9BD8(&v80);
-    }
-    v31 = Level_getArea(MEMORY[0xCBD89C]);
-    if ( v31 )
-    {
-      v32 = *(char **)(v31 + 4);
-      v80 = 12321336;
-      v81 = v32;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v32 + 32;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v32 + 64;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v32 + 96;
-      sub_603F9BD8(&v80);
-    }
-    v33 = Level_getArea(MEMORY[0xCBD89C]);
-    if ( v33 )
-    {
-      v34 = *(char **)(v33 + 4);
-      v80 = 12321336;
-      v81 = v34;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v34 + 32;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v34 + 64;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v34 + 96;
-      sub_603F9BD8(&v80);
-    }
-    v35 = Level_getArea(MEMORY[0xCBD89C]);
-    if ( v35 )
-    {
-      v36 = *(char **)(v35 + 4);
-      v80 = 12321336;
-      v81 = v36;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v36 + 32;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v36 + 64;
-      sub_603F9BD8(&v80);
-      v80 = 12321336;
-      v81 = v36 + 96;
-      sub_603F9BD8(&v80);
-    }
-    (*(void (__fastcall **)(int))(*(_DWORD *)v26 + 20))(v26);
-    if ( v25 != 1 )
-      sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    v37 = MEMORY[0xC9A684];
-    sub_6040D310(MEMORY[0xC9A684]);
-    sub_6040D3F4(v37, *(_DWORD *)(v37 + 24));
-    *(_BYTE *)(a1 + 194) = *(_DWORD *)(v37 + 24) == 2;
-    sub_60582544(MEMORY[0xCAF15C]);
-    if ( *(_DWORD *)(a1 + 764) == 3 )
-      *(_DWORD *)(a1 + 912) = sub_603F9D9C();
-    sub_60023F68();
-    LoadProfileArchives(1, 0);
-    if ( sub_603FD564(a1 + 764) == 1 )
-      Model_s_Nin_NX_NVN_szs_ref(*(_DWORD *)(a1 + 4 * *(_DWORD *)(a1 + 88) + 68));
-    sub_603FD69C(MEMORY[0xC99DF4]);
-    if ( *v8 == 4 )
-      sub_604089F4(MEMORY[0xC9A1F0], *(unsigned __int8 *)(MEMORY[0xC9A1F0] + 6558));
-    if ( !sub_604091F0(MEMORY[0xC9A1F0]) )
-    {
-      v38 = (_DWORD *)Level_getArea(MEMORY[0xCBD89C]);
-      v39 = (_WORD *)v38[2];
-      v40 = v39[11];
-      v41 = v39[10];
-      v42 = v39[5];
-      if ( !v40 )
-        v40 = 200;
-      if ( *(_BYTE *)(MEMORY[0xCC6D78] + 109032) )
-        v40 = 100;
-      if ( !v39[10] )
-        v41 = 300;
-      if ( *(_BYTE *)(MEMORY[0xCC6D78] + 109032) )
-        v41 = 100;
-      if ( !v39[5] )
-        v42 = 500;
-      if ( *(_BYTE *)(MEMORY[0xCC6D78] + 109032) )
-        v42 = 100;
-      if ( !sub_6040E3D0(MEMORY[0xC9A684]) && sub_603FD0E8(v78) )
-      {
-        v40 += 100;
-        v41 += 100;
-        v42 += 100;
-      }
-      v43 = v38[2];
-      v44 = *(unsigned __int8 *)(v43 + 16);
-      v45 = *(unsigned __int8 *)(MEMORY[0xC9A684] + 19);
-      v46 = v45 == v44;
-      if ( v45 != v44 )
-        v46 = v45 == *(unsigned __int8 *)(v43 + 19);
-      if ( v46 )
-        goto sub_603F8408__LABEL_95;
-      v47 = v38[38];
-      if ( !v47 )
-        goto sub_603F8408__LABEL_95;
-      v48 = 0;
-      v49 = (_DWORD *)(v38[8] + 8);
-      while ( *((_WORD *)v49 - 4) != 25 || v45 != (unsigned __int8)BYTE2(*v49) )
-      {
-        ++v48;
-        v49 += 6;
-        if ( v48 >= v47 )
-          goto sub_603F8408__LABEL_95;
-      }
-      if ( (*v49 & 0xF) == 1 )
-      {
-        v51 = v40;
-        v50 = MEMORY[0xC99DE4];
+sub_603F8408__LABEL_96:
+    sub_603FC56C(v54, v55);
+  }
+  sub_60007B5C(ActorMgr::instance, 0);
+  sub_60787024(PlayerMgr_instance, v69);
+  sub_605E7E8C(dword_60CB1BE4, v69);
+  sub_60729980(EventMgr::instance);
+  v56 = 1;
+  v71 = &`vtable for'sead::SafeStringBase<char>;
+  v72 = "BgGlobal";
+  v57 = sead::ExpHeap::create(0, (int)&v71, 0, 4, 1, 0);
+  v58 = v57;
+  if ( v57 )
+    v56 = sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v57);
+  sub_6071AA08(TilesetMgr_instance, 0);
+  (*(void (__fastcall **)(int))(*(_DWORD *)v58 + 20))(v58);
+  if ( v56 != 1 )
+    sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v56);
+  v59 = 1;
+  v71 = &`vtable for'sead::SafeStringBase<char>;
+  v72 = "BgRenderer";
+  v60 = sead::ExpHeap::create(0, (int)&v71, 0, 4, 1, 0);
+  v61 = v60;
+  if ( v60 )
+    v59 = sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v60);
+  sub_6071C67C((_DWORD *)dword_60CBD830, 0);
+  (*(void (__fastcall **)(int))(*(_DWORD *)v61 + 20))(v61);
+  if ( v59 != 1 )
+    sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v59);
+  v62 = 1;
+  v71 = &`vtable for'sead::SafeStringBase<char>;
+  v72 = "TexQuad";
+  v63 = sead::ExpHeap::create(0, (int)&v71, 0, 4, 1, 0);
+  v64 = v63;
+  if ( v63 )
+    v62 = sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v63);
+  sub_60450BAC(dword_60C9CEF0);
+  (*(void (__fastcall **)(int))(*(_DWORD *)v64 + 20))(v64);
+  if ( v62 != 1 )
+    sead::HeapMgr::setCurrentHeap_(sead::HeapMgr::sInstance, v62);
+  v65 = *(void (__fastcall ****)(_DWORD))(a1 + 196);
+  if ( v65 )
+    (**v65)(v65);
+  if ( *(_DWORD *)(a1 + 200) )
+    sub_605505C0();
+  if ( dword_60C9EBB4 )
+    nullsub_24();
+  if ( dword_60CA2674 )
+    sub_604BB6B8();
+  if ( dword_60C9F2CC )
+    sub_60485B7C();
+  if ( *(_DWORD *)(a1 + 204) )
+    sub_6055A1D4();
+  v66 = *(signed int **)(a1 + 208);
+  if ( v66 )
+    sub_604BC0EC(v66);
+  if ( *(_DWORD *)(a1 + 220) )
+    sub_6054BAC0();
+  if ( *(_DWORD *)(a1 + 224) )
+    sub_6054B3D8();
+  if ( *(_DWORD *)(a1 + 228) )
+    sub_60549E38();
+  if ( *(_DWORD *)(a1 + 212) )
+    sub_60482AB8();
+  if ( *(_DWORD *)(a1 + 216) )
+    sub_60484D80();
+  if ( *(_DWORD *)(a1 + 232) )
+    sub_604FE6A8();
+  if ( *(_DWORD *)(a1 + 236) )
+    sub_60547BF4();
+  if ( *(_DWORD *)(a1 + 256) )
+  {
+    sub_6052CF48();
+    sub_6052D264(*(_DWORD *)(a1 + 256));
+  }
+  if ( *(_DWORD *)(a1 + 240) )
+    sub_6051F028();
+  if ( *(_DWORD *)(a1 + 244) )
+    sub_604FEEFC();
+  if ( *(_DWORD *)(a1 + 248) )
+    sub_60480EAC();
+  if ( *(_DWORD *)(a1 + 252) )
+    sub_60480EAC();
+  if ( *(_DWORD *)(a1 + 260) )
+    sub_6055ABE4();
+  if ( *(_DWORD *)(a1 + 264) )
+    sub_6054D0C8();
+  if ( *(_DWORD *)(a1 + 268) )
+    sub_6054FD98();
+  sub_60407D28(dword_60C9A1E8);
+  sub_603F807C(dword_60C99DD0);
+  sub_60401ED4(dword_60C99E68);
+  if ( dword_60CA83DC )
+    sub_60510E6C();
+  nullsub_30(dword_60CA7344);
+  sub_603EFBA8(dword_60C99D6C);
+  if ( dword_60CA059C )
+    sub_60498FAC(dword_60CA059C, 10, 15);
+  if ( dword_60C99E24 )
+    sub_603FEF70();
+  if ( dword_60C99E1C )
+    sub_603FE52C();
+  sub_605422E4(dword_60CABDE4);
+  if ( dword_60CAD908 )
+    sub_6055991C();
+  sub_60377120(0);
+  sub_603771C8(dword_60C96478);
+  v67 = sub_607F5EBC(dword_60CC62E4, a1);
+  return sub_600240A4(v67);
+}
 
-  }
-  }
-  }
 /* ============================================================================
  * sub_603F9728
  * RVA 0x003f9728   size 0x10   xrefs 1
@@ -197972,410 +198088,422 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * PlayerStates_loadModelResources_helper_43B8B0
  * RVA 0x0043b8b0   size 0x9fc   xrefs 1
  * ============================================================================ */
-  int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, int a6)
+  signed int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, void *heap)
+{
+  int v9; // r0
+  const char *v10; // r6
+  const char *v11; // r9
+  int v12; // r4
+  signed int v13; // r9
+  signed int v14; // r0
+  int v15; // r9
+  int v16; // r5
+  int v17; // r2
+  bool v18; // cc
+  char *v19; // r2
+  int i; // r0
+  int (__fastcall ***v21)(_DWORD, int *); // r6
+  char v22; // r12
+  char *v23; // r0
+  int *v24; // r6
+  int *v25; // r9
+  int v26; // r0
+  signed int v27; // r10
+  int v28; // r7
+  int v29; // r10
+  signed int v30; // r6
+  _DWORD *v31; // r7
+  int *v32; // r9
+  int *v33; // r0
+  int v34; // r1
+  int v35; // r3
+  bool v36; // nf
+  _DWORD *v37; // r0
+  int v38; // r7
+  sead_IDisposer *v39; // r10
+  int *containingHeap; // r9
+  bool v41; // zf
+  int (__fastcall ***v43)(_DWORD, int *); // [sp+Ch] [bp-304h]
+  int *v44; // [sp+Ch] [bp-304h]
+  int v45; // [sp+1Ch] [bp-2F4h]
+  int v46; // [sp+24h] [bp-2ECh]
+  int v47; // [sp+34h] [bp-2DCh]
+  int *v48; // [sp+40h] [bp-2D0h]
+  int *v49; // [sp+40h] [bp-2D0h]
+  const char *v50; // [sp+54h] [bp-2BCh]
+  const char *v51; // [sp+80h] [bp-290h]
+  int v52; // [sp+84h] [bp-28Ch]
+  sead_IDisposer *v53; // [sp+88h] [bp-288h] BYREF
+  int (**v54)(); // [sp+8Ch] [bp-284h] BYREF
+  int *v55; // [sp+90h] [bp-280h]
+  int v56; // [sp+94h] [bp-27Ch]
+  int v57; // [sp+98h] [bp-278h] BYREF
+  _DWORD v58[12]; // [sp+D8h] [bp-238h] BYREF
+  char v59; // [sp+108h] [bp-208h]
+  int v60; // [sp+10Ch] [bp-204h]
+  sead_IDisposer v61; // [sp+110h] [bp-200h] BYREF
+  int v62; // [sp+120h] [bp-1F0h]
+  int v63; // [sp+124h] [bp-1ECh]
+  sead_IDisposer *v64; // [sp+128h] [bp-1E8h]
+  int v65; // [sp+12Ch] [bp-1E4h]
+  int (**v66)(); // [sp+130h] [bp-1E0h] BYREF
+  int *v67; // [sp+134h] [bp-1DCh]
+  int v68; // [sp+138h] [bp-1D8h]
+  int v69; // [sp+13Ch] [bp-1D4h] BYREF
+  int (**v70)(); // [sp+15Ch] [bp-1B4h] BYREF
+  char *v71; // [sp+160h] [bp-1B0h]
+  int v72; // [sp+164h] [bp-1ACh]
+  int v73; // [sp+168h] [bp-1A8h] BYREF
+  char v74; // [sp+268h] [bp-A8h]
+  _DWORD v75[11]; // [sp+26Ch] [bp-A4h] BYREF
+  _BYTE v76[120]; // [sp+298h] [bp-78h] BYREF
+
+  v9 = sub_60822808(ArchiveManagerMaybe_instance);
+  sub_6043C320(v76, v9);
+  memset(&v75[1], 0, 40);
+  v75[0] = &off_60BFAA14;
+  v70 = &`vtable for'sead::SafeStringBase<char>;
+  v71 = &byte_60ABC94D;
+  sub_608E6B4C(v76, v75, &v70);
+  if ( !v75[1] )
   {
-    int v9; // r0
-    int v10; // r8
-    const char *v11; // r6
-    const char *v12; // r9
-    int v13; // r4
-    signed int v14; // r9
-    signed int v15; // r0
-    int v16; // r9
-    int v17; // r5
-    int v18; // r2
-    bool v19; // cc
-    char *v20; // r2
-    int i; // r0
-    int v22; // r1
-    int (__fastcall ***v23)(_DWORD, int); // r6
-    unsigned __int8 *v24; // r0
-    int *v25; // r6
-    int *v26; // r9
-    int v27; // r0
-    signed int v28; // r10
-    int v29; // r7
-    int v30; // r10
-    signed int v31; // r6
-    _DWORD *v32; // r7
-    int *v33; // r9
-    int *v34; // r0
-    int v35; // r1
-    int v36; // r3
-    bool v37; // nf
-    _DWORD *v38; // r0
-    _DWORD *v39; // r7
-    _DWORD *v40; // r10
-    int *v41; // r9
-    bool v42; // zf
-    int v44; // [sp+Ch] [bp-2E0h]
-    int *v45; // [sp+Ch] [bp-2E0h]
-    int v46; // [sp+1Ch] [bp-2D0h]
-    int v47; // [sp+20h] [bp-2CCh]
-    int v48; // [sp+24h] [bp-2C8h]
-    int v49; // [sp+34h] [bp-2B8h]
-    int *v50; // [sp+40h] [bp-2ACh]
-    int *v51; // [sp+40h] [bp-2ACh]
-    const char *v52; // [sp+54h] [bp-298h]
-    const char *v53; // [sp+80h] [bp-26Ch]
-    int v54; // [sp+84h] [bp-268h]
-    _DWORD *v55; // [sp+88h] [bp-264h] BYREF
-    int v56; // [sp+8Ch] [bp-260h] BYREF
-    int *v57; // [sp+90h] [bp-25Ch]
-    int v58; // [sp+94h] [bp-258h]
-    int v59; // [sp+98h] [bp-254h] BYREF
-    _DWORD v60[12]; // [sp+D8h] [bp-214h] BYREF
-    char v61; // [sp+108h] [bp-1E4h]
-    int v62; // [sp+10Ch] [bp-1E0h]
-    _DWORD v63[8]; // [sp+110h] [bp-1DCh] BYREF
-    int v64; // [sp+130h] [bp-1BCh] BYREF
-    int *v65; // [sp+134h] [bp-1B8h]
-    int v66; // [sp+138h] [bp-1B4h]
-    int v67; // [sp+13Ch] [bp-1B0h] BYREF
-    int v68; // [sp+15Ch] [bp-190h] BYREF
-    unsigned __int8 *v69; // [sp+160h] [bp-18Ch]
-    int v70; // [sp+164h] [bp-188h]
-    int v71; // [sp+168h] [bp-184h] BYREF
-    char v72; // [sp+268h] [bp-84h]
-    _DWORD v73[11]; // [sp+26Ch] [bp-80h] BYREF
-    _BYTE v74[84]; // [sp+298h] [bp-54h] BYREF
-  
-    v9 = sub_60822808(MEMORY[0xCC6D94], a2);
-    sub_6043C320(v74, v9);
-    memset(&v73[1], 0, 0x28u);
-    v73[0] = 12560916;
-    v68 = 12321336;
-    v69 = (unsigned __int8 *)&unk_60ABC94D;
-    sub_608E6B4C(v74, v73, &v68);
-    if ( !v73[1] )
+    v12 = -1;
+    goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_102;
+  }
+  v46 = a4;
+  v71 = (char *)&v73;
+  v70 = &BufferedSafeStringBase_char_vtable_probably;
+  v72 = 256;
+  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v70);
+  *v71 = 0;
+  v47 = a1;
+  v70 = &off_60BD94BC;
+  v74 = 0;
+  v45 = a1 + 16;
+  v10 = ".";
+  v11 = "sarc";
+  v52 = 0;
+  while ( sub_608E7F80(v75, &v70, 1) )
+  {
+    if ( !v74 )
     {
-      v13 = -1;
-      goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_101;
-    }
-    v48 = a4;
-    v47 = a3;
-    v69 = (unsigned __int8 *)&v71;
-    v68 = 12322272;
-    v70 = 256;
-    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v68);
-    v10 = MEMORY[0xB3BA34];
-    *v69 = MEMORY[0xB3BA34];
-    v49 = a1;
-    v68 = 12424380;
-    v72 = 0;
-    v46 = a1 + 16;
-    v11 = ".";
-    v12 = "sarc";
-    v54 = 0;
-    while ( sub_608E7F80(v73, &v68, 1) )
-    {
-      if ( !v72 )
+      v51 = v11;
+      v50 = v10;
+      v61.vtable = (int)&`vtable for'sead::SafeStringBase<char>;
+      v61.containingHeap = (int)v10;
+      v16 = sub_6043C4B4(&v70, &v61);
+      v61.vtable = (int)off_60C5CB68;
+      v62 = 0;
+      v63 = 0;
+      v64 = &v61;
+      v65 = 0;
+      sead_IDisposer_ctor(&v61);
+      v61.vtable = (int)off_60C5CB68;
+      v67 = &v69;
+      v66 = &BufferedSafeStringBase_char_vtable_probably;
+      v68 = 32;
+      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v66);
+      *(_BYTE *)v67 = 0;
+      v58[0] = &`vtable for'sead::SafeStringBase<char>;
+      v66 = &off_60BD4C20;
+      v61.vtable = (int)off_60BF9EF4;
+      v58[1] = &byte_60B3BA34;
+      v58[3] = 0;
+      v58[4] = 32;
+      memset(&v58[5], 0, 16);
+      v58[11] = 0;
+      v59 = 1;
+      v60 = 0;
+      v58[10] = v76;
+      v58[9] = &v61;
+      v58[2] = heap;
+      v55 = &v57;
+      v54 = &BufferedSafeStringBase_char_vtable_probably;
+      v56 = 64;
+      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v54);
+      *(_BYTE *)v55 = 0;
+      v54 = &off_60BD4BF0;
+      if ( v16 >= 0 )
       {
-        v53 = v12;
-        v52 = v11;
-        v63[0] = 12321336;
-        v63[1] = v11;
-        v17 = sub_6043C4B4(&v68, v63);
-        v63[0] = 12962664;
-        v63[4] = 0;
-        v63[5] = 0;
-        v63[6] = v63;
-        v63[7] = 0;
-        sead_IDisposer_ctor(v63);
-        v63[0] = 12962664;
-        v65 = &v67;
-        v64 = 12322272;
-        v66 = 32;
-        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v64);
-        *(_BYTE *)v65 = v10;
-        v60[0] = 12321336;
-        v64 = 12405792;
-        v63[0] = 12558068;
-        v60[1] = 11778612;
-        v60[3] = 0;
-        v60[4] = 32;
-        memset(&v60[5], 0, 16);
-        v60[11] = 0;
-        v61 = 1;
-        v62 = 0;
-        v60[10] = v74;
-        v60[9] = v63;
-        v60[2] = a6;
-        v57 = &v59;
-        v56 = 12322272;
-        v58 = 64;
-        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v56);
-        *(_BYTE *)v57 = v10;
-        v56 = 12405744;
-        if ( v17 >= 0 )
+        ((void (__fastcall *)(int (***)()))v70[3])(&v70);
+        v17 = 0;
+        while ( v71[v17] )
         {
-          (*(void (__fastcall **)(int *))(v68 + 12))(&v68);
-          v18 = 0;
-          while ( v69[v18] != v10 )
+          if ( !v71[v17 + 1] )
           {
-            if ( v69[v18 + 1] == v10 )
-            {
-              ++v18;
-              break;
-            }
-            if ( v69[v18 + 2] == v10 )
-            {
-              v18 += 2;
-              break;
-            }
-            v19 = v18 + 2 <= 0x7FFFF;
-            v18 += 3;
-            if ( !v19 )
-            {
-              v18 = 0;
-              break;
-            }
+            ++v17;
+            break;
           }
-          v19 = v18 <= v17;
-          v20 = (char *)MEMORY[0xC5CB34];
-          if ( !v19 )
-            v20 = (char *)&v69[v17 + 1];
-          if ( v20 == "sarc" )
+          if ( !v71[v17 + 2] )
           {
-  PlayerStates_loadModelResources_helper_43B8B0__LABEL_35:
-            sead__SafeStringBase_char__operator_assign(v60, &v68);
-            v23 = (int (__fastcall ***)(_DWORD, int))sead_ResourceMgr_OpenFileRelated(MEMORY[0xCCEF7C], v60);
-            if ( _cxa_guard_acquire_0(13220644) )
+            v17 += 2;
+            break;
+          }
+          v18 = v17 + 2 <= 0x7FFFF;
+          v17 += 3;
+          if ( !v18 )
+          {
+            v17 = 0;
+            break;
+          }
+        }
+        v18 = v17 <= v16;
+        v19 = off_60C5CB34;
+        if ( !v18 )
+          v19 = &v71[v16 + 1];
+        if ( v19 == "sarc" )
+        {
+PlayerStates_loadModelResources_helper_43B8B0__LABEL_35:
+          sead::SafeStringBase<char>::operator=((int)v58, (int)&v70);
+          v21 = (int (__fastcall ***)(_DWORD, int *))sead_ResourceMgr_OpenFileRelated(
+                                                       sead::ResourceMgr::sInstance,
+                                                       (int)v58);
+          if ( ((unsigned int)&dword_60C9BB24 & ~(1615052296 << v22) & 1) == 0 && _cxa_guard_acquire(&dword_60C9BB24) )
+          {
+            dword_60C9BB20 = (int)&off_60BF9F40;
+            _cxa_guard_release(&dword_60C9BB24);
+          }
+          if ( v21 && (**v21)(v21, &dword_60C9BB20) == 1 )
+          {
+            v43 = v21;
+            if ( v72 <= v16 )
             {
-              MEMORY[0xC9BB20] = 12558144;
-              _cxa_guard_release_0(13220644);
+              ((void (__fastcall *)(int (***)()))v70[3])(&v70);
             }
-            if ( v23 && (**v23)(v23, 13220640) == 1 )
+            else
             {
-              v44 = (int)v23;
-              if ( v70 <= v17 )
-              {
-                (*(void (__fastcall **)(int *))(v68 + 12))(&v68);
-              }
-              else
-              {
-                v24 = v69;
-                if ( v17 > 0 )
-                  v24 = &v69[v17];
-                *v24 = v10;
-              }
-              v25 = v57;
+              v23 = v71;
+              if ( v16 > 0 )
+                v23 = &v71[v16];
+              *v23 = 0;
+            }
+            v24 = v55;
+            (*(void (__fastcall **)(_DWORD *))(*a5 + 12))(a5);
+            v25 = (int *)a5[1];
+            if ( v24 != v25 )
+            {
               (*(void (__fastcall **)(_DWORD *))(*a5 + 12))(a5);
-              v26 = (int *)a5[1];
-              if ( v25 != v26 )
+              v26 = a5[1];
+              v27 = 0;
+              while ( *(_BYTE *)(v26 + v27) )
               {
-                (*(void (__fastcall **)(_DWORD *))(*a5 + 12))(a5);
-                v27 = a5[1];
+                if ( !*(_BYTE *)(v26 + v27 + 1) )
+                {
+                  ++v27;
+                  break;
+                }
+                if ( !*(_BYTE *)(v26 + v27 + 2) )
+                {
+                  v27 += 2;
+                  break;
+                }
+                v18 = v27 + 2 <= 0x7FFFF;
+                v27 += 3;
+                if ( !v18 )
+                {
+                  v27 = 0;
+                  break;
+                }
+              }
+              if ( v27 >= v56 )
+                v27 = v56 - 1;
+              qmemcpy(v24, v25, v27);
+              *((_BYTE *)v24 + v27) = 0;
+            }
+            v48 = v55;
+            ((void (__fastcall *)(int (***)()))v54[3])(&v54);
+            v28 = 0;
+            while ( *((_BYTE *)v55 + v28) )
+            {
+              if ( !*((_BYTE *)v55 + v28 + 1) )
+              {
+                ++v28;
+                break;
+              }
+              if ( !*((_BYTE *)v55 + v28 + 2) )
+              {
+                v28 += 2;
+                break;
+              }
+              v18 = v28 + 2 <= 0x7FFFF;
+              v28 += 3;
+              if ( !v18 )
+              {
                 v28 = 0;
-                while ( *(unsigned __int8 *)(v27 + v28) != v10 )
-                {
-                  if ( *(unsigned __int8 *)(v27 + v28 + 1) == v10 )
-                  {
-                    ++v28;
-                    break;
-                  }
-                  if ( *(unsigned __int8 *)(v27 + v28 + 2) == v10 )
-                  {
-                    v28 += 2;
-                    break;
-                  }
-                  v19 = v28 + 2 <= 0x7FFFF;
-                  v28 += 3;
-                  if ( !v19 )
-                  {
-                    v28 = 0;
-                    break;
-                  }
-                }
-                if ( v28 >= v58 )
-                  v28 = v58 - 1;
-                qmemcpy(v25, v26, v28);
-                *((_BYTE *)v25 + v28) = v10;
+                break;
               }
-              v50 = v57;
-              (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
-              v29 = 0;
-              while ( *((unsigned __int8 *)v57 + v29) != v10 )
+            }
+            ((void (__fastcall *)(int (***)()))v70[3])(&v70);
+            v29 = 0;
+            v30 = 0;
+            if ( v28 > 0 )
+              v29 = v28;
+            while ( v71[v30] )
+            {
+              if ( !v71[v30 + 1] )
               {
-                if ( *((unsigned __int8 *)v57 + v29 + 1) == v10 )
-                {
-                  ++v29;
-                  break;
-                }
-                if ( *((unsigned __int8 *)v57 + v29 + 2) == v10 )
-                {
-                  v29 += 2;
-                  break;
-                }
-                v19 = v29 + 2 <= 0x7FFFF;
-                v29 += 3;
-                if ( !v19 )
-                {
-                  v29 = 0;
-                  break;
-                }
+                ++v30;
+                break;
               }
-              (*(void (__fastcall **)(int *))(v68 + 12))(&v68);
-              v30 = 0;
-              v31 = 0;
-              if ( v29 > 0 )
-                v30 = v29;
-              while ( v69[v31] != v10 )
+              if ( !v71[v30 + 2] )
               {
-                if ( v69[v31 + 1] == v10 )
-                {
-                  ++v31;
-                  break;
-                }
-                if ( v69[v31 + 2] == v10 )
-                {
-                  v31 += 2;
-                  break;
-                }
-                v19 = v31 + 2 <= 0x7FFFF;
-                v31 += 3;
-                if ( !v19 )
-                {
-                  v31 = 0;
-                  break;
-                }
+                v30 += 2;
+                break;
               }
-              if ( v31 >= v58 - v30 )
-                v31 = v58 - v30 - 1;
-              if ( v31 >= 1 )
+              v18 = v30 + 2 <= 0x7FFFF;
+              v30 += 3;
+              if ( !v18 )
               {
-                (*(void (__fastcall **)(int *))(v68 + 12))(&v68);
-                qmemcpy((char *)v50 + v30, v69, v31);
-                if ( v31 + v30 > v29 )
-                  *((_BYTE *)v50 + v31 + v30) = v10;
+                v30 = 0;
+                break;
               }
-              v32 = *(_DWORD **)(v49 + 16);
-              if ( v32 )
+            }
+            if ( v30 >= v56 - v29 )
+              v30 = v56 - v29 - 1;
+            if ( v30 >= 1 )
+            {
+              ((void (__fastcall *)(int (***)()))v70[3])(&v70);
+              qmemcpy((char *)v48 + v29, v71, v30);
+              if ( v30 + v29 > v28 )
+                *((_BYTE *)v48 + v30 + v29) = 0;
+            }
+            v31 = *(_DWORD **)(v47 + 16);
+            if ( v31 )
+            {
+              while ( 2 )
               {
-                while ( 2 )
+                ((void (__fastcall *)(int (***)()))v54[3])(&v54);
+                ((void (__fastcall *)(int (***)()))v54[3])(&v54);
+                v32 = v55;
+                (*(void (__fastcall **)(_DWORD *))(v31[4] + 12))(v31 + 4);
+                v33 = (int *)v31[5];
+                if ( v32 != v33 )
                 {
-                  (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
-                  (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
-                  v33 = v57;
-                  (*(void (__fastcall **)(_DWORD *))(v32[4] + 12))(v32 + 4);
-                  v34 = (int *)v32[5];
-                  if ( v33 != v34 )
+                  v34 = 0;
+                  while ( 1 )
                   {
-                    v35 = 0;
-                    while ( 1 )
+                    v35 = *((unsigned __int8 *)v55 + v34);
+                    v36 = v35 - *((unsigned __int8 *)v33 + v34) < 0;
+                    if ( v35 != *((unsigned __int8 *)v33 + v34) )
+                      break;
+                    if ( *((_BYTE *)v55 + v34) )
                     {
-                      v36 = *((unsigned __int8 *)v57 + v35);
-                      v37 = v36 - *((unsigned __int8 *)v34 + v35) < 0;
-                      if ( v36 != *((unsigned __int8 *)v34 + v35) )
-                        break;
-                      if ( v36 != v10 && ++v35 < 0x80000 )
+                      if ( ++v34 < 0x80000 )
                         continue;
-                      if ( !v32 )
-                        goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_92;
-                      goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_91;
                     }
-                    v38 = v32 + 2;
-                    if ( v37 )
-                      v38 = v32 + 1;
-                    v32 = (_DWORD *)*v38;
-                    if ( *v38 )
-                      continue;
+                    if ( !v31 )
+                      goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_93;
                     goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_92;
                   }
-                  break;
+                  v37 = v31 + 2;
+                  if ( v36 )
+                    v37 = v31 + 1;
+                  v31 = (_DWORD *)*v37;
+                  if ( *v37 )
+                    continue;
+                  goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_93;
                 }
-  PlayerStates_loadModelResources_helper_43B8B0__LABEL_91:
-                if ( !*(_DWORD *)(v32[6] + 60) )
-                  goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_92;
-              }
-              else
-              {
-  PlayerStates_loadModelResources_helper_43B8B0__LABEL_92:
-                v39 = (_DWORD *)__operator_new_al(520, a6, 4);
-                sub_60439BC8(v39);
-                if ( v39 )
-                {
-                  output_bfres_ref_439ED4((int)v39, v44, (int)&v68, 0, a6);
-                  v40 = (_DWORD *)__operator_new_al(64, a6, 4);
-                  sead_IDisposer_ctor(v40);
-                  *v40 = 12560900;
-                  v40[5] = v40 + 7;
-                  v40[4] = 12322272;
-                  v40[6] = 32;
-                  sead__BufferedSafeStringBase_char__assureTerminationImpl_(v40 + 4);
-                  *(_BYTE *)v40[5] = v10;
-                  v40[4] = 12405792;
-                  v40[15] = v39;
-                  v41 = (int *)v40[5];
-                  (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
-                  v51 = v41;
-                  v42 = v41 == v57;
-                  v16 = v48;
-                  if ( !v42 )
-                  {
-                    v45 = v57;
-                    (*(void (__fastcall **)(int *))(v56 + 12))(&v56);
-                    v14 = 0;
-                    while ( *((unsigned __int8 *)v57 + v14) != v10 )
-                    {
-                      if ( *((unsigned __int8 *)v57 + v14 + 1) == v10 )
-                      {
-                        ++v14;
-                        break;
-                      }
-                      if ( *((unsigned __int8 *)v57 + v14 + 2) == v10 )
-                      {
-                        v14 += 2;
-                        break;
-                      }
-                      v19 = v14 + 2 <= 0x7FFFF;
-                      v14 += 3;
-                      if ( !v19 )
-                      {
-                        v14 = 0;
-                        break;
-                      }
-                    }
-                    v15 = v40[6];
-                    if ( v14 >= v15 )
-                      v14 = v15 - 1;
-                    qmemcpy(v51, v45, v14);
-                    *((_BYTE *)v51 + v14) = v10;
-                    v16 = v48;
-                  }
-                  v55 = v40;
-                  sub_6043B624(v46, &v56, &v55);
-                  if ( v47 )
-                  {
-                    if ( v54 < v16 )
-                      *(_DWORD *)(v47 + 4 * v54) = v39;
-                  }
-                  ++v54;
-                }
-              }
-              v11 = v52;
-              v12 = v53;
-              goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_4;
-            }
-          }
-          else
-          {
-            for ( i = 0; i < 524289; ++i )
-            {
-              v22 = (unsigned __int8)v20[i];
-              if ( v22 != (unsigned __int8)v12[i] )
                 break;
-              if ( v22 == v10 )
-                goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_35;
+              }
+PlayerStates_loadModelResources_helper_43B8B0__LABEL_92:
+              if ( !*(_DWORD *)(v31[6] + 60) )
+                goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_93;
             }
+            else
+            {
+PlayerStates_loadModelResources_helper_43B8B0__LABEL_93:
+              v38 = operator new(0x208u, heap, 4);
+              sub_60439BC8();
+              if ( v38 )
+              {
+                sub_60439ED4(v38, v43, &v70, 0, heap);
+                v39 = (sead_IDisposer *)operator new(0x40u, heap, 4);
+                sead_IDisposer_ctor(v39);
+                v39->vtable = (int)off_60BFAA04;
+                v39[1].containingHeap = (int)&v39[1].field_C;
+                v39[1].vtable = (int)&BufferedSafeStringBase_char_vtable_probably;
+                v39[1].field_8 = 32;
+                sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v39[1]);
+                *(_BYTE *)v39[1].containingHeap = 0;
+                v39[1].vtable = (int)&off_60BD4C20;
+                v39[3].field_C = v38;
+                containingHeap = (int *)v39[1].containingHeap;
+                ((void (__fastcall *)(int (***)()))v54[3])(&v54);
+                v49 = containingHeap;
+                v41 = containingHeap == v55;
+                v15 = v46;
+                if ( !v41 )
+                {
+                  v44 = v55;
+                  ((void (__fastcall *)(int (***)()))v54[3])(&v54);
+                  v13 = 0;
+                  while ( *((_BYTE *)v55 + v13) )
+                  {
+                    if ( !*((_BYTE *)v55 + v13 + 1) )
+                    {
+                      ++v13;
+                      break;
+                    }
+                    if ( !*((_BYTE *)v55 + v13 + 2) )
+                    {
+                      v13 += 2;
+                      break;
+                    }
+                    v18 = v13 + 2 <= 0x7FFFF;
+                    v13 += 3;
+                    if ( !v18 )
+                    {
+                      v13 = 0;
+                      break;
+                    }
+                  }
+                  v14 = v39[1].field_8;
+                  if ( v13 >= v14 )
+                    v13 = v14 - 1;
+                  qmemcpy(v49, v44, v13);
+                  *((_BYTE *)v49 + v13) = 0;
+                  v15 = v46;
+                }
+                v53 = v39;
+                sub_6043B624(v45, &v54, &v53);
+                if ( a3 )
+                {
+                  if ( v52 < v15 )
+                    *(_DWORD *)(a3 + 4 * v52) = v38;
+                }
+                ++v52;
+              }
+            }
+            v10 = v50;
+            v11 = v51;
+            goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_4;
           }
-          v11 = v52;
         }
-  PlayerStates_loadModelResources_helper_43B8B0__LABEL_4:
+        else
+        {
+          for ( i = 0; i < 524289; ++i )
+          {
+            if ( v19[i] != v11[i] )
+              break;
+            if ( !v19[i] )
+              goto PlayerStates_loadModelResources_helper_43B8B0__LABEL_35;
+          }
+        }
+        v10 = v50;
+      }
+PlayerStates_loadModelResources_helper_43B8B0__LABEL_4:
+      sub_60902104(&v61);
+    }
+  }
+  v12 = v52;
+PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
+  v75[0] = &off_60BFAA14;
+  if ( v75[2] )
+    sub_608E6B98(v75[2], v75);
+  sub_608E60A4(v76);
+  return v12;
+}
 
-  }
-  }
-  }
 /* ============================================================================
  * sub_6043C320
  * RVA 0x0043c320   size 0x178   xrefs 6
