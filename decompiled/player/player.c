@@ -10877,7 +10877,7 @@
     *(_DWORD *)(a1 + 1152) = sub_600243A0(*(_DWORD *)(a1 + 1320));
     *(_DWORD *)(a1 + 964) = *(char *)(a1 + 84);
     sub_600210C8(a1 + 11488, a1);
-    sub_6075E76C(a1);
+    PlayerBase_vf5(a1);
     *(_BYTE *)(a1 + 15076) = 1;
     return 1;
   }
@@ -10903,7 +10903,7 @@
     int v0; // r1
     _BOOL4 result; // r0
   
-    v0 = sub_6075ED80();
+    v0 = PlayerBase_vf11();
     result = 0;
     if ( v0 == 1 )
       return !MEMORY[0xC99DD4] || *(_DWORD *)(MEMORY[0xC99DD4] + 764) != 3;
@@ -10940,7 +10940,7 @@
     int v2; // r1
     int result; // r0
   
-    v2 = sub_6075E8F8();
+    v2 = PlayerBase_vf7();
     result = 0;
     if ( v2 == 1 && (!MEMORY[0xC99DD4] || *(_DWORD *)(MEMORY[0xC99DD4] + 764) != 3) )
     {
@@ -10961,7 +10961,7 @@
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1436))(a1);
       sub_6079592C(a1);
     }
-    return sub_6075EAFC(a1, a2);
+    return PlayerBase_vf9(a1, a2);
   }
 
 /* ============================================================================
@@ -12111,7 +12111,7 @@
     a1[2879] = 12325992;
     sub_60237560(a1 + 2879);
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 2879));
-    return sub_6075E5C0(a1);
+    return PlayerBase_vf2(a1);
   }
 
 /* ============================================================================

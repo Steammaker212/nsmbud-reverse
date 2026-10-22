@@ -2465,7 +2465,7 @@
     v2 = 0;
     if ( StageActor::beforeExecute(a1) == 1 )
     {
-      sub_6014BBC8((_BYTE *)(a1 + 648));
+      ActorCollisionMgr_vf6((_BYTE *)(a1 + 648));
       *(_BYTE *)(a1 + 6053) = 0;
       v3 = (_DWORD *)(a1 + 6024);
       *(_DWORD *)(a1 + 6032) = *(_DWORD *)(a1 + 6024);
@@ -2524,7 +2524,7 @@
  * ============================================================================ */
   int __fastcall CollisionActor::onDelete(int a1)
   {
-    sub_6014B310(a1 + 648);
+    ActorCollisionMgr_vf5(a1 + 648);
     return Actor::onDelete();
   }
 
@@ -8453,7 +8453,7 @@
   }
 
 /* ============================================================================
- * sub_6000B29C
+ * PlayerLookTarget_vf0
  * RVA 0x0000b29c   size 0x40   xrefs 38
  * ============================================================================ */
   void __fastcall sub_6000B29C(sead::IDisposer *a1)
@@ -8462,6 +8462,21 @@
     if ( MEMORY[0xC7B464] )
       PlayerLookTargetMgr_remove(MEMORY[0xC7B464], a1);
     sead::IDisposer::~IDisposer(a1);
+  }
+
+/* ============================================================================
+ * PlayerLookTarget_vf1
+ * RVA 0x0000b2e4   size 0x44   xrefs 0
+ * ============================================================================ */
+  int __fastcall PlayerLookTarget_vf1(sead::IDisposer *a1)
+  {
+    sead::IDisposer *v2; // r0
+  
+    *(_DWORD *)a1 = 12321988;
+    if ( MEMORY[0xC7B464] )
+      PlayerLookTargetMgr_remove(MEMORY[0xC7B464], (int)a1);
+    v2 = sead::IDisposer::~IDisposer(a1);
+    return operator delete((int)v2);
   }
 
 /* ============================================================================
@@ -12103,6 +12118,15 @@
   }
 
 /* ============================================================================
+ * Profile_vf0
+ * RVA 0x000182c0   size 0x8   xrefs 0
+ * ============================================================================ */
+  int Profile_vf0()
+  {
+    return 1;
+  }
+
+/* ============================================================================
  * Profile_getPriority
  * RVA 0x0001839c   size 0x28   xrefs 3
  * ============================================================================ */
@@ -14408,7 +14432,7 @@
   }
 
 /* ============================================================================
- * sub_60024494
+ * BasicSoundActor_vf0
  * RVA 0x00024494   size 0x94   xrefs 6
  * ============================================================================ */
   int __fastcall sub_60024494(_DWORD *a1)
@@ -14428,7 +14452,105 @@
     sub_608AC1C0(a1 + 45);
     sub_608AC1C0(a1 + 40);
     sub_608AC1C0(a1 + 35);
-    return sub_60812900(a1);
+    return SoundActor_vf0(a1);
+  }
+
+/* ============================================================================
+ * BasicSoundActor1_vf1
+ * RVA 0x0002452c   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall BasicSoundActor1_vf1(_DWORD *a1)
+  {
+    int v1; // r0
+  
+    v1 = BasicSoundActor_vf0(a1);
+    return operator delete(v1);
+  }
+
+/* ============================================================================
+ * BasicSoundActor1_vf9
+ * RVA 0x0002453c   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int *__fastcall BasicSoundActor1_vf9(int a1, int a2, float *a3, int *a4)
+  {
+    float v4; // s2
+    float v6[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v4 = (float)((float)(a3[1] - *(float *)(MEMORY[0xCC6484] + 128)) + (float)(a3[1] - *(float *)(MEMORY[0xCC6484] + 128)))
+       / *(float *)(MEMORY[0xCC6484] + 108);
+    v6[0] = (float)((float)(*a3 - *(float *)(MEMORY[0xCC6484] + 116)) + (float)(*a3 - *(float *)(MEMORY[0xCC6484] + 116)))
+          / *(float *)(MEMORY[0xCC6484] + 104);
+    v6[1] = v4;
+    return BasicSoundActor1_playSound(a1, a2, v6, a4);
+  }
+
+/* ============================================================================
+ * BasicSoundActor1_vf10
+ * RVA 0x0002459c   size 0x64   xrefs 0
+ * ============================================================================ */
+  int __fastcall BasicSoundActor1_vf10(int a1, int a2, float *a3, int a4, int a5)
+  {
+    float v5; // s2
+    float v6; // s10
+    float v7; // s4
+    float v9[2]; // [sp+8h] [bp-8h] BYREF
+  
+    v5 = a3[1];
+    v6 = *(float *)(MEMORY[0xCC6484] + 128);
+    v7 = *(float *)(MEMORY[0xCC6484] + 108);
+    v9[0] = (float)((float)(*a3 - *(float *)(MEMORY[0xCC6484] + 116)) + (float)(*a3 - *(float *)(MEMORY[0xCC6484] + 116)))
+          / *(float *)(MEMORY[0xCC6484] + 104);
+    v9[1] = (float)((float)(v5 - v6) + (float)(v5 - v6)) / v7;
+    return sub_60813810(a1, a2, v9, a4, a5);
+  }
+
+/* ============================================================================
+ * BasicSoundActor2_vf1
+ * RVA 0x00024604   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall BasicSoundActor2_vf1(_DWORD *a1)
+  {
+    int v1; // r0
+  
+    v1 = BasicSoundActor2_vf0(a1);
+    return operator delete(v1);
+  }
+
+/* ============================================================================
+ * BasicSoundActor2_vf9
+ * RVA 0x00024614   size 0x5c   xrefs 0
+ * ============================================================================ */
+  int *__fastcall BasicSoundActor2_vf9(int a1, int a2, float *a3, int *a4)
+  {
+    float v4; // s2
+    float v6[2]; // [sp+0h] [bp-8h] BYREF
+  
+    v4 = (float)((float)(a3[1] - *(float *)(MEMORY[0xCC6484] + 128)) + (float)(a3[1] - *(float *)(MEMORY[0xCC6484] + 128)))
+       / *(float *)(MEMORY[0xCC6484] + 108);
+    v6[0] = (float)((float)(*a3 - *(float *)(MEMORY[0xCC6484] + 116)) + (float)(*a3 - *(float *)(MEMORY[0xCC6484] + 116)))
+          / *(float *)(MEMORY[0xCC6484] + 104);
+    v6[1] = v4;
+    return BasicSoundActor2_play(a1, a2, v6, a4);
+  }
+
+/* ============================================================================
+ * BasicSoundActor2_vf10
+ * RVA 0x00024674   size 0x64   xrefs 0
+ * ============================================================================ */
+  int __fastcall BasicSoundActor2_vf10(int a1, int a2, float *a3, int a4, int a5)
+  {
+    float v5; // s2
+    float v6; // s10
+    float v7; // s4
+    float v9[2]; // [sp+8h] [bp-8h] BYREF
+  
+    v5 = a3[1];
+    v6 = *(float *)(MEMORY[0xCC6484] + 128);
+    v7 = *(float *)(MEMORY[0xCC6484] + 108);
+    v9[0] = (float)((float)(*a3 - *(float *)(MEMORY[0xCC6484] + 116)) + (float)(*a3 - *(float *)(MEMORY[0xCC6484] + 116)))
+          / *(float *)(MEMORY[0xCC6484] + 104);
+    v9[1] = (float)((float)(v5 - v6) + (float)(v5 - v6)) / v7;
+    return sub_60813BDC(a1, a2, v9, a4, a5);
   }
 
 /* ============================================================================
@@ -15586,7 +15708,7 @@
     *(_DWORD *)a1 = 12326268;
     v2 = a1 + 6332;
     ActiveCollider_dtor((sead::IDisposer *)(a1 + 6720));
-    sub_6000B29C((sead::IDisposer *)(a1 + 6644));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 6644));
     sub_60026BFC(v2);
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
@@ -15607,7 +15729,7 @@
     *(_DWORD *)a1 = 12326268;
     v2 = a1 + 6332;
     ActiveCollider_dtor((sead::IDisposer *)(a1 + 6720));
-    sub_6000B29C((sead::IDisposer *)(a1 + 6644));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 6644));
     sub_60026BFC(v2);
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
@@ -16482,7 +16604,7 @@
     a1[39] = 12327420;
     sub_608AC1C0(a1 + 43);
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 39));
-    return sub_60812900(a1);
+    return SoundActor_vf0(a1);
   }
 
 /* ============================================================================
@@ -19174,7 +19296,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7108));
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((sead::IDisposer *)(a1 + 6720));
-    sub_6000B29C(v2);
+    PlayerLookTarget_vf0(v2);
     sub_60026BFC((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0((_BYTE *)(a1 + 6152));
@@ -19204,7 +19326,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7108));
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((sead::IDisposer *)(a1 + 6720));
-    sub_6000B29C(v2);
+    PlayerLookTarget_vf0(v2);
     sub_60026BFC((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0((_BYTE *)(a1 + 6152));
@@ -26073,6 +26195,30 @@
   }
 
 /* ============================================================================
+ * SwingingCollider_vf4
+ * RVA 0x0004b9b0   size 0x30   xrefs 0
+ * ============================================================================ */
+  bool __fastcall ColliderBase_vf10(int a1, int a2, char a3)
+  {
+    int v4; // [sp+4h] [bp-4h] BYREF
+  
+    v4 = a2;
+    return sub_6015A8D0(&v4, (_DWORD *)0xAF76F8, (_DWORD *)0xAF7708, a3);
+  }
+
+/* ============================================================================
+ * ShapedCollider_vf5
+ * RVA 0x0004b9e8   size 0x2c   xrefs 0
+ * ============================================================================ */
+  int __fastcall ColliderBase_vf14(int a1, int a2)
+  {
+    int v3; // [sp+4h] [bp-4h] BYREF
+  
+    v3 = a2;
+    return sub_6015A964(&v3, (_DWORD *)0xAF76F8, (int *)0xAF7708);
+  }
+
+/* ============================================================================
  * RectCollider_dtorFree
  * RVA 0x0004ba1c   size 0x10   xrefs 0
  * ============================================================================ */
@@ -26147,6 +26293,15 @@
       }
     }
     return v2;
+  }
+
+/* ============================================================================
+ * SolidOnTopCollider_vf10
+ * RVA 0x0004c118   size 0x8   xrefs 0
+ * ============================================================================ */
+  int SolidOnTopCollider_vf28()
+  {
+    return 0;
   }
 
 /* ============================================================================
@@ -27784,7 +27939,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7252));
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor(v2);
-    sub_6000B29C((sead::IDisposer *)(a1 + 6644));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 6644));
     sub_60026BFC((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0((_BYTE *)(a1 + 6152));
@@ -28178,7 +28333,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1813));
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
-    sub_6000B29C(v2);
+    PlayerLookTarget_vf0(v2);
     sub_60026BFC(a1 + 1583);
     *a1 = 12462088;
     sub_602F36E0();
@@ -30240,7 +30395,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7252));
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((sead::IDisposer *)(a1 + 6720));
-    sub_6000B29C(v2);
+    PlayerLookTarget_vf0(v2);
     sub_60026BFC((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0((_BYTE *)(a1 + 6152));
@@ -31281,7 +31436,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1813));
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
-    sub_6000B29C((sead::IDisposer *)(a1 + 1661));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 1661));
     sub_60026BFC(a1 + 1583);
     *a1 = 12462088;
     sub_602F36E0();
@@ -33146,7 +33301,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7268));
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((sead::IDisposer *)(a1 + 6720));
-    sub_6000B29C(v2);
+    PlayerLookTarget_vf0(v2);
     sub_60026BFC((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0((_BYTE *)(a1 + 6152));
@@ -33778,6 +33933,28 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * BobOmb_vf2
+ * RVA 0x000640cc   size 0x9c   xrefs 0
+ * ============================================================================ */
+  void __fastcall BobOmb_vf2(_BYTE *a1)
+  {
+    sead::IDisposer *v2; // r5
+  
+    *(_DWORD *)a1 = 12431056;
+    v2 = (sead::IDisposer *)(a1 + 6532);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6756));
+    *((_DWORD *)a1 + 1651) = 12325992;
+    sub_60237560((int)(a1 + 6604));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6604));
+    LightSource::~LightSource(v2);
+    *(_DWORD *)a1 = 12462088;
+    sub_602F36E0(a1 + 6152);
+    *(_DWORD *)a1 = 12321080;
+    CollisionMgr_dtor((int)(a1 + 648));
+    StageActor::~StageActor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -40968,7 +41145,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1773));
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
-    sub_6000B29C((sead::IDisposer *)(a1 + 1661));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 1661));
     sub_60026BFC(a1 + 1583);
     *a1 = 12462088;
     sub_602F36E0();
@@ -45041,7 +45218,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1817));
     *a1 = 12326268;
     ActiveCollider_dtor(v2);
-    sub_6000B29C((sead::IDisposer *)(a1 + 1661));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 1661));
     sub_60026BFC(a1 + 1583);
     *a1 = 12462088;
     sub_602F36E0();
@@ -50348,7 +50525,7 @@
     ActiveCollider_dtor(a1 + 1796);
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
-    sub_6000B29C(v2);
+    PlayerLookTarget_vf0(v2);
     sub_60026BFC(a1 + 1583);
     *a1 = 12462088;
     sub_602F36E0();
@@ -63734,7 +63911,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1824));
     *a1 = 12326268;
     ActiveCollider_dtor(a1 + 1680);
-    sub_6000B29C((sead::IDisposer *)(a1 + 1661));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 1661));
     sub_60026BFC(a1 + 1583);
     *a1 = 12462088;
     sub_602F36E0();
@@ -66179,7 +66356,7 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7268));
     *(_DWORD *)a1 = 12326268;
     ActiveCollider_dtor((sead::IDisposer *)(a1 + 6720));
-    sub_6000B29C(v2);
+    PlayerLookTarget_vf0(v2);
     sub_60026BFC((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0((_BYTE *)(a1 + 6152));

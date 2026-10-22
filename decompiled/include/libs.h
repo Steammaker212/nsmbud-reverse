@@ -153,14 +153,19 @@ int __fastcall sub_608109FC(int result, int *a2);  /* 0x008109fc */
 int __fastcall sub_60810FDC(int a1, int a2, int a3);  /* 0x00810fdc */
 int __fastcall sub_608111C0(int a1, int a2, float *a3, int a4, int *a5);  /* 0x008111c0 */
 int __fastcall sub_60811618(int result, int a2, float *a3);  /* 0x00811618 */
+int __fastcall BasicSoundActor_vf10(int a1, int a2, float *a3, int a4, int *a5);  /* 0x00812208 */
+int __fastcall BasicSoundActor_vf1(_DWORD *a1);  /* 0x008127f4 */
 void __fastcall sub_60812900(nn::atk::SoundActor *a1);  /* 0x00812900 */
+int __fastcall SoundActor_vf1(_DWORD *a1);  /* 0x0081293c */
 int __fastcall sub_60812980(_DWORD *a1, int *a2);  /* 0x00812980 */
+int __fastcall SoundActor_vf8(_DWORD *a1, int a2, int a3);  /* 0x00812a30 */
 int __fastcall sub_60812AA8(_DWORD *a1, _DWORD *a2, _DWORD *a3, int a4);  /* 0x00812aa8 */
 int __fastcall sub_60812E98(int a1, int a2, int a3, int a4);  /* 0x00812e98 */
 bool __fastcall sub_60812FD8(int a1, int a2, int *a3, char a4, int a5);  /* 0x00812fd8 */
 int __fastcall sub_60813048(int a1);  /* 0x00813048 */
 int __fastcall sub_60813578(_DWORD *a1);  /* 0x00813578 */
 int __fastcall sub_60813818(int a1, int a2, int a3, float *a4, int a5, int *a6);  /* 0x00813818 */
+int __fastcall BasicSoundActor2_vf0(_DWORD *a1);  /* 0x00813bd4 */
 int __fastcall sub_60813BE0(_DWORD *a1, int a2, int a3, float *a4, int *a5);  /* 0x00813be0 */
 int __fastcall STRM_BGM_LAST_BOSS2_ref(int a1, int a2, int *a3);  /* 0x00813d7c */
 int __fastcall sub_60814010(int a1, int a2, int *a3);  /* 0x00814010 */
@@ -265,7 +270,11 @@ int __fastcall sub_60822808(int a1, _DWORD *a2);  /* 0x00822808 */
 int __fastcall sub_608228E4(int a1, int a2, int a3, _DWORD *a4);  /* 0x008228e4 */
 int __fastcall sub_6082293C(int a1, _DWORD *a2);  /* 0x0082293c */
 void __fastcall sub_60822A48(_DWORD *a1);  /* 0x00822a48 */
+int __fastcall RootTask_vf10(sead::TaskBase *a1);  /* 0x00822c24 */
+int __fastcall sub_60822C28(int a1);  /* 0x00822c28 */
 int __fastcall sub_608248F0(int a1, int a2);  /* 0x008248f0 */
+int __fastcall RootTask_vf1(int a1);  /* 0x00825400 */
+bool __fastcall RootTask_vf2(int a1, int a2);  /* 0x00825410 */
 int __fastcall RumbleMgr_create(int a1);  /* 0x008264f8 */
 int __fastcall sub_60826878(int a1);  /* 0x00826878 */
 int __fastcall sub_6082693C(int a1, int a2);  /* 0x0082693c */

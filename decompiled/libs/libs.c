@@ -13871,6 +13871,16 @@
   }
 
 /* ============================================================================
+ * BasicSoundActor_vf10
+ * RVA 0x00812208   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall BasicSoundActor_vf10(int a1, int a2, float *a3, int a4, int *a5)
+  {
+    return sub_608111C0(a1, a2, a3, a4, a5);
+  }
+
+/* ============================================================================
  * sub_6081220C
  * RVA 0x0081220c   size 0xb0   xrefs 5
  * ============================================================================ */
@@ -14106,6 +14116,18 @@
   }
 
 /* ============================================================================
+ * BasicSoundActor_vf1
+ * RVA 0x008127f4   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall BasicSoundActor_vf1(_DWORD *a1)
+  {
+    int v1; // r0
+  
+    v1 = BasicSoundActor_vf0(a1);
+    return operator delete(v1);
+  }
+
+/* ============================================================================
  * SoundActor_ctor
  * RVA 0x00812804   size 0xe0   xrefs 3
  * ============================================================================ */
@@ -14140,7 +14162,7 @@
   }
 
 /* ============================================================================
- * sub_60812900
+ * SoundActor_vf0
  * RVA 0x00812900   size 0x38   xrefs 4
  * ============================================================================ */
   void __fastcall sub_60812900(nn::atk::SoundActor *a1)
@@ -14154,6 +14176,25 @@
       operator delete(v2);
     }
     nn::atk::SoundActor::~SoundActor(a1);
+  }
+
+/* ============================================================================
+ * SoundActor_vf1
+ * RVA 0x0081293c   size 0x3c   xrefs 0
+ * ============================================================================ */
+  int __fastcall SoundActor_vf1(_DWORD *a1)
+  {
+    int v2; // r0
+    int v3; // r0
+  
+    *a1 = 12749592;
+    if ( a1[33] )
+    {
+      v2 = nullsub_62();
+      operator delete(v2);
+    }
+    v3 = nn::atk::SoundActor::~SoundActor((int)a1);
+    return operator delete(v3);
   }
 
 /* ============================================================================
@@ -14193,6 +14234,29 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * SoundActor_vf8
+ * RVA 0x00812a30   size 0x70   xrefs 0
+ * ============================================================================ */
+  int __fastcall SoundActor_vf8(_DWORD *a1, int a2, int a3)
+  {
+    int v5; // r0
+    _DWORD v7[4]; // [sp+4h] [bp-24h] BYREF
+    _DWORD v8[4]; // [sp+14h] [bp-14h] BYREF
+    unsigned __int8 v9; // [sp+27h] [bp-1h] BYREF
+  
+    v9 = 0;
+    v5 = sub_60808F58(MEMORY[0xCC6AF8]);
+    if ( a3 > 3 )
+      a3 = -1;
+    v8[0] = 12749636;
+    v8[1] = v5;
+    v8[2] = &v9;
+    v8[3] = a3;
+    sub_60812AA8(v7, a1, v8, 0);
+    return v9;
   }
 
 /* ============================================================================
@@ -15059,6 +15123,16 @@
       }
     }
     return a2;
+  }
+
+/* ============================================================================
+ * BasicSoundActor2_vf0
+ * RVA 0x00813bd4   size 0x4   xrefs 2
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall BasicSoundActor2_vf0(_DWORD *a1)
+  {
+    return BasicSoundActor_vf0(a1);
   }
 
 /* ============================================================================
@@ -23164,6 +23238,421 @@
   }
 
 /* ============================================================================
+ * RootTask_vf10
+ * RVA 0x00822c24   size 0x4   xrefs 0
+ * ============================================================================ */
+  // attributes: thunk
+  int __fastcall RootTask_vf10(sead::TaskBase *a1)
+  {
+    return sub_60818350(a1);
+  }
+
+/* ============================================================================
+ * RootTask_vf24
+ * RVA 0x00822c28   size 0x1b00   xrefs 0
+ * ============================================================================ */
+  int __fastcall sub_60822C28(int a1)
+  {
+    int v2; // r4
+    int v3; // r5
+    sead::IDisposer *v4; // r0
+    char v5; // r12
+    nn::diag *v6; // r0
+    _DWORD *v7; // r4
+    char *v8; // r4
+    const char *v9; // r5
+    signed int v10; // r6
+    char v11; // r7
+    bool v12; // cc
+    _DWORD *v13; // r4
+    _DWORD *v14; // r0
+    _DWORD *v15; // r4
+    _DWORD *v16; // r0
+    int v17; // r4
+    int v18; // r5
+    sead::IDisposer *v19; // r4
+    int v20; // r6
+    int v21; // r9
+    int v22; // r4
+    int v23; // r5
+    signed int i; // r7
+    int v25; // r5
+    int (__fastcall ***v26)(_DWORD, int); // r7
+    int v27; // r4
+    int v28; // r4
+    int v29; // r0
+    int v30; // r1
+    int v31; // r7
+    unsigned int v32; // r2
+    _BYTE *v33; // r6
+    int v34; // r3
+    int v35; // r1
+    _BYTE *v36; // r0
+    int v37; // r4
+    _DWORD *v38; // r4
+    int v39; // r4
+    int v40; // r5
+    int v41; // r4
+    int v42; // r6
+    int v43; // r0
+    char v44; // r11
+    unsigned int v45; // r0
+    const char *v46; // r0
+    int (__fastcall ***v47)(_DWORD, int); // r7
+    char v48; // r12
+    int v49; // r5
+    int v50; // r2
+    int v51; // r3
+    int v52; // r0
+    int v53; // r5
+    int v54; // r0
+    char v55; // r11
+    unsigned int v56; // r0
+    const char *v57; // r0
+    int (__fastcall ***v58)(_DWORD, int); // r4
+    int v59; // r6
+    sead::Heap *v60; // r5
+    int v61; // r0
+    int *v62; // r0
+    int v63; // r0
+    int v64; // r0
+    int v65; // r6
+    char v66; // r11
+    sead::IDisposer *v67; // r0
+    int *v68; // r9
+    int (__fastcall ***v69)(_DWORD, int); // r4
+    int v70; // r0
+    int v71; // r4
+    int v72; // r4
+    int v73; // r0
+    int v74; // r5
+    int v75; // r4
+    unsigned __int64 v76; // r2
+    __int64 v77; // r0
+    bool v78; // vf
+    int result; // r0
+    int v80; // [sp+14h] [bp-298h]
+    int v81; // [sp+14h] [bp-298h]
+    int v82; // [sp+18h] [bp-294h]
+    int v83; // [sp+18h] [bp-294h]
+    int v84; // [sp+18h] [bp-294h]
+    int v85; // [sp+1Ch] [bp-290h]
+    _DWORD v86[2]; // [sp+20h] [bp-28Ch] BYREF
+    __int64 v87; // [sp+28h] [bp-284h] BYREF
+    __int16 v88; // [sp+30h] [bp-27Ch]
+    int v89; // [sp+38h] [bp-274h] BYREF
+    int *v90; // [sp+3Ch] [bp-270h]
+    int v91; // [sp+40h] [bp-26Ch]
+    int v92; // [sp+44h] [bp-268h]
+    int v93; // [sp+48h] [bp-264h]
+    int v94; // [sp+4Ch] [bp-260h]
+    char v95; // [sp+50h] [bp-25Ch]
+    int v96; // [sp+54h] [bp-258h]
+    int v97; // [sp+58h] [bp-254h]
+    int v98; // [sp+5Ch] [bp-250h]
+    __int64 v99; // [sp+60h] [bp-24Ch]
+    __int16 v100; // [sp+68h] [bp-244h]
+    int v101; // [sp+6Ch] [bp-240h] BYREF
+    int v102; // [sp+70h] [bp-23Ch]
+    sead::Heap *v103; // [sp+74h] [bp-238h]
+    sead::Heap *v104; // [sp+78h] [bp-234h]
+    int v105; // [sp+7Ch] [bp-230h]
+    int v106; // [sp+80h] [bp-22Ch]
+    int v107; // [sp+84h] [bp-228h]
+    int v108; // [sp+88h] [bp-224h]
+    int v109; // [sp+8Ch] [bp-220h]
+    int *v110; // [sp+90h] [bp-21Ch]
+    int v111; // [sp+94h] [bp-218h]
+    int v112; // [sp+98h] [bp-214h]
+    char v113; // [sp+9Ch] [bp-210h]
+    int v114; // [sp+A0h] [bp-20Ch]
+    int v115; // [sp+A4h] [bp-208h] BYREF
+    const char *v116; // [sp+A8h] [bp-204h]
+    int v117; // [sp+B4h] [bp-1F8h]
+    int v118; // [sp+B8h] [bp-1F4h]
+    int *v119; // [sp+BCh] [bp-1F0h]
+    int v120; // [sp+C0h] [bp-1ECh]
+    int v121; // [sp+C4h] [bp-1E8h] BYREF
+    _BYTE *v122; // [sp+C8h] [bp-1E4h]
+    int v123; // [sp+CCh] [bp-1E0h]
+    _BYTE v124[32]; // [sp+D0h] [bp-1DCh] BYREF
+    _DWORD v125[32]; // [sp+F0h] [bp-1BCh] BYREF
+    _BYTE v126[124]; // [sp+170h] [bp-13Ch] BYREF
+    int v127; // [sp+1ECh] [bp-C0h]
+    char v128; // [sp+2A9h] [bp-3h]
+    char v129; // [sp+2AAh] [bp-2h]
+  
+    v2 = 1;
+    *(_DWORD *)v126 = 12321336;
+    *(_DWORD *)&v126[4] = "RegionLanguageMgr";
+    v3 = sead::ExpHeap::create(0, v126, 0, 4, 1, 0);
+    if ( v3 )
+      v2 = sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
+    v4 = sub_608FC0A4(nullptr);
+    *(_DWORD *)v126 = MEMORY[0xC5CB2C];
+    *(_DWORD *)&v126[4] = 12321336;
+    *(_DWORD *)&v126[8] = 11778612;
+    *(_DWORD *)&v126[24] = 0;
+    *(_DWORD *)&v126[12] = "System/RegionLangMask.txt";
+    *(_DWORD *)&v126[16] = "System/DevRegionLang.txt";
+    *(_DWORD *)&v126[20] = v3;
+    sub_608FCB98((int)v4, (int *)v126);
+    (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 20))(v3);
+    if ( v2 != 1 )
+      sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
+    sub_6081BEE0(0);
+    sub_6081BFFC(MEMORY[0xCC6C3C], 0);
+    sub_6081E020(0);
+    if ( ((unsigned int)&unk_60CC6DD0 & ~(1619144020 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CC6DD0) )
+    {
+      dword_60CC6D98 = 12756576;
+      dword_60CC6D9C = 0x10000;
+      dword_60CC6DA0 = 0x2000;
+      dword_60CC6DA4 = 0x2000;
+      dword_60CC6DA8 = 9010;
+      dword_60CC6DAC = 1;
+      dword_60CC6DB0 = 5133;
+      byte_60CC6DB4 = 1;
+      _cxa_guard_release_0(&unk_60CC6DD0);
+    }
+    dword_60CC6DA0 = 0x40000;
+    dword_60CC6DA4 = 0x40000;
+    dword_60CC6D9C = 3145728;
+    dword_60CC6DB0 &= 0xFFFFFFEE;
+    v6 = (nn::diag *)sub_608ED418(v126);
+    *(_DWORD *)v126 = &dword_60CC6D98;
+    *(_DWORD *)&v126[4] = 0;
+    if ( !nn::diag::IsDebuggerAttached(v6) )
+    {
+      *(_QWORD *)&v126[8] = 25LL * MEMORY[0xCCFB50];
+      *(_DWORD *)&v126[16] = 0x10000;
+    }
+    (*(void (__fastcall **)(_DWORD, int, _BYTE *))(**(_DWORD **)(*(_DWORD *)(a1 + 92) + 40) + 24))(
+      *(_DWORD *)(*(_DWORD *)(a1 + 92) + 40),
+      a1,
+      v126);
+    if ( MEMORY[0xCCEBFC] )
+      *(_BYTE *)(MEMORY[0xCCEBFC] + 204) = 0;
+    UserInfo_createInstance(0);
+    UserInfo_init(MEMORY[0xCC6E1C]);
+    v7 = (_DWORD *)operator new(0x5Cu);
+    *(_DWORD *)v126 = 12321336;
+    *(_DWORD *)&v126[4] = "save";
+    sub_608E3820((int)v7, (int)v126);
+    *(_DWORD *)v126 = 12321336;
+    *(_DWORD *)&v126[4] = "save";
+    sub_608E83B4(MEMORY[0xCCEBD0], v7, v126);
+    UserInfo_getUid(MEMORY[0xCC6E1C], v126);
+    if ( *(_QWORD *)v126 || *(_QWORD *)&v126[8] )
+      nn::fs::MountSaveData("save", v126);
+    memset(&v125[1], 0, 0x28u);
+    v125[0] = 12560916;
+    v115 = 12321336;
+    v116 = "%PROJECT_ROOT%/App/Debug/Save";
+    *(_DWORD *)&v126[4] = &v126[12];
+    *(_DWORD *)v126 = 12322272;
+    *(_DWORD *)&v126[8] = 260;
+    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v126);
+    *(_DWORD *)v126 = 12756624;
+    v8 = *(char **)&v126[4];
+    MEMORY[0xBC0244](&v115);
+    v9 = v116;
+    if ( v8 != v116 )
+    {
+      (*(void (__fastcall **)(int *))(v115 + 12))(&v115);
+      v10 = 0;
+      v11 = MEMORY[0xB3BA34];
+      while ( (unsigned __int8)v116[v10] != MEMORY[0xB3BA34] )
+      {
+        if ( (unsigned __int8)v116[v10 + 1] == MEMORY[0xB3BA34] )
+        {
+          ++v10;
+          break;
+        }
+        if ( (unsigned __int8)v116[v10 + 2] == MEMORY[0xB3BA34] )
+        {
+          v10 += 2;
+          break;
+        }
+        v12 = v10 + 2 <= 0x7FFFF;
+        v10 += 3;
+        if ( !v12 )
+        {
+          v10 = 0;
+          break;
+        }
+      }
+      if ( v10 >= *(int *)&v126[8] )
+        v10 = *(_DWORD *)&v126[8] - 1;
+      qmemcpy(v8, v9, v10);
+      v8[v10] = v11;
+    }
+    *(_DWORD *)v126 = 12555912;
+    v13 = (_DWORD *)operator new(0x16Cu);
+    v115 = 12321336;
+    v116 = "%PROJECT_ROOT%";
+    v14 = sub_6081A0C0(v13, (int)&v115);
+    if ( sub_608E6138(v14) == 1 )
+    {
+      v115 = 12321336;
+      v116 = "/App/Debug/Save";
+      sub_608E6D00(v13, &v115, 1604);
+    }
+    v15 = (_DWORD *)operator new(0x16Cu);
+    v16 = sub_6081A0C0(v15, (int)v126);
+    if ( sub_608E6138(v16) == 1 )
+    {
+      v115 = 12321336;
+      v116 = "debug";
+      sub_608E83B4(MEMORY[0xCCEBD0], v15, &v115);
+    }
+    v125[0] = 12560916;
+    if ( v125[2] )
+      sub_608E6B98((_BYTE *)v125[2], (int)v125);
+    v17 = 1;
+    *(_DWORD *)v126 = 12321336;
+    *(_DWORD *)&v126[4] = "ResMgr";
+    v18 = sead::ExpHeap::create(0, v126, 0, 4, 1, 0);
+    if ( v18 )
+      v17 = sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
+    sub_60820E5C(0);
+    sub_60820F34(MEMORY[0xCC6D94], v18);
+    (*(void (__fastcall **)(int))(*(_DWORD *)v18 + 20))(v18);
+    if ( v17 != 1 )
+      sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
+    *(_DWORD *)v126 = 12321336;
+    *(_DWORD *)&v126[4] = "System/PrimitiveRenderer/primitive_drawer_nvn_shader.bin";
+    sub_608F4C80(0, v126);
+    v19 = (sead::IDisposer *)operator new(0x4Cu);
+    *(_DWORD *)v19 = 12962664;
+    *((_DWORD *)v19 + 4) = 0;
+    *((_DWORD *)v19 + 5) = 0;
+    *((_DWORD *)v19 + 6) = v19;
+    *((_DWORD *)v19 + 7) = 0;
+    sead_IDisposer_ctor(v19);
+    *(_DWORD *)v19 = 12962664;
+    *((_DWORD *)v19 + 9) = (char *)v19 + 44;
+    *((_DWORD *)v19 + 8) = 12322272;
+    *((_DWORD *)v19 + 10) = 32;
+    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((char *)v19 + 32);
+    v20 = MEMORY[0xB3BA34];
+    **((_BYTE **)v19 + 9) = MEMORY[0xB3BA34];
+    *(_DWORD *)v126 = 12321336;
+    *(_DWORD *)&v126[4] = "sarc";
+    *((_DWORD *)v19 + 8) = 12405792;
+    *(_DWORD *)v19 = 12558068;
+    sub_6090261C(MEMORY[0xCCEF7C], v19, v126);
+    nn::os::GetSystemTick((nn::os *)v126);
+    *(_DWORD *)v126 = 12321336;
+    v21 = 1;
+    *(_DWORD *)&v126[4] = "AglHeap";
+    v22 = sead::ExpHeap::create(0, v126, 0, 4, 1, 0);
+    if ( v22 )
+      v21 = sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
+    sub_609195BC((int)v126);
+    v23 = *(_DWORD *)&v126[48];
+    if ( *(char **)&v126[48] != "Filter = designer" )
+    {
+      for ( i = 0; (unsigned __int8)aFilterDesigner[i] != v20; i += 2 )
+      {
+        if ( i > 0x7FFFF )
+        {
+          i = 0;
+          break;
+        }
+        if ( (unsigned __int8)aFilterDesigner[i + 1] == v20 )
+        {
+          ++i;
+          break;
+        }
+      }
+      if ( i >= *(int *)&v126[52] )
+        i = *(_DWORD *)&v126[52] - 1;
+      qmemcpy(*(void **)&v126[48], "Filter = designer", i);
+      *(_BYTE *)(v23 + i) = v20;
+    }
+    v25 = 0;
+    *(_QWORD *)v126 = 0x80000000000000LL;
+    *(_QWORD *)&v126[8] = 0x80000000000000LL;
+    *(_DWORD *)&v126[28] = 0x100000;
+    *(_DWORD *)&v126[16] = 256;
+    *(_DWORD *)&v126[20] = 100663296;
+    *(_DWORD *)&v126[24] = 83886080;
+    v128 = 1;
+    v129 = 1;
+    *(_DWORD *)v126 = sead::HeapMgr::getCurrentHeap(MEMORY[0xCCEE90]);
+    (*(void (__fastcall **)(_DWORD))(**(_DWORD **)v126 + 60))(*(_DWORD *)v126);
+    sub_60919748((int)v126);
+    *(_DWORD *)v126 = 0;
+    nullsub_117(0);
+    v125[0] = 12321336;
+    v115 = 12321336;
+    v125[1] = 11778612;
+    v125[2] = 0;
+    v125[3] = 0;
+    v125[4] = 32;
+    memset(&v125[6], 0, 24);
+    LOBYTE(v125[12]) = 1;
+    v125[13] = 0;
+    v125[5] = 4096;
+    v116 = "System/Agl/agl_resource.Nin_NX_NVN.release.sarc";
+    sead::SafeStringBase<char>::operator=(v125, &v115);
+    v26 = (int (__fastcall ***)(_DWORD, int))sead_ResourceMgr_OpenFileRelated(MEMORY[0xCCEF7C], v125);
+    if ( _cxa_guard_acquire_0(13220644) )
+    {
+      MEMORY[0xC9BB20] = 12558144;
+      _cxa_guard_release_0(13220644);
+    }
+    if ( v26 )
+    {
+      v25 = (**v26)(v26, 13220640);
+      if ( v25 )
+        v25 = (int)v26;
+    }
+    sub_60919C10(v25);
+    MEMORY[0xCCFCA0] = 0;
+    (*(void (__fastcall **)(int))(*(_DWORD *)v22 + 20))(v22);
+    if ( v21 != 1 )
+      sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
+    *(_DWORD *)v126 = 12321336;
+    *(_DWORD *)&v126[4] = "GfxParameter";
+    v27 = sead::ExpHeap::tryCreate(0, (int)v126, nullptr, 4, 1, 0);
+    sub_60420BFC(v27);
+    sub_60420D88(MEMORY[0xC9BAFC], v27);
+    (*(void (__fastcall **)(int))(*(_DWORD *)v27 + 20))(v27);
+    *(_DWORD *)v126 = 12321336;
+    *(_DWORD *)&v126[4] = "FrameBufferKeeper";
+    v28 = sead::ExpHeap::tryCreate(0, (int)v126, nullptr, 4, 1, 0);
+    sub_604172E8(v28);
+    sub_60417498(MEMORY[0xC9BAAC], v28);
+    (*(void (__fastcall **)(int))(*(_DWORD *)v28 + 20))(v28);
+    nn::os::GetSystemTick((nn::os *)v126);
+    *(_QWORD *)v126 = 0x8248C400000002LL;
+    v29 = sub_608EF048((int)v125, (int *)v126);
+    v125[23] = a1;
+    v30 = MEMORY[0xCCEEA4];
+    if ( MEMORY[0xCCEEA4] >= 1 )
+    {
+      v31 = MEMORY[0xCCEEA4] & 3;
+      v32 = MEMORY[0xCCEEA4] - 1;
+      if ( (MEMORY[0xCCEEA4] & 3) != 0 )
+      {
+        v33 = (_BYTE *)(v29 + 24);
+        v34 = 0;
+        do
+        {
+          ++v34;
+          *v33 = 1;
+          v33 += 20;
+        }
+        while ( v31 != v34 );
+      }
+      else
+      {
+        v34 = 0;
+      }
+
+/* ============================================================================
  * sub_608248F0
  * RVA 0x008248f0   size 0xa38   xrefs 1
  * ============================================================================ */
@@ -23545,6 +24034,69 @@
     sead::IDisposer::~IDisposer((sead::IDisposer *)&v56);
     sub_60902104(v70);
     return sub_608E60A4(v74);
+  }
+
+/* ============================================================================
+ * RootTask_vf12
+ * RVA 0x008253ec   size 0x10   xrefs 0
+ * ============================================================================ */
+  int RootTask_vf12()
+  {
+    return sub_607F5E34(MEMORY[0xCC62E4]);
+  }
+
+/* ============================================================================
+ * RootTask_vf1
+ * RVA 0x00825400   size 0x10   xrefs 0
+ * ============================================================================ */
+  int __fastcall RootTask_vf1(int a1)
+  {
+    int v1; // r0
+  
+    sead::CalculateTask::~CalculateTask(a1);
+    return operator delete(v1);
+  }
+
+/* ============================================================================
+ * RootTask_vf2
+ * RVA 0x00825410   size 0x3c4   xrefs 0
+ * ============================================================================ */
+  bool __fastcall RootTask_vf2(int a1, int a2)
+  {
+    int v3; // r5
+  
+    if ( _cxa_guard_acquire_0(13397444) )
+    {
+      MEMORY[0xCC6DC0] = 12555308;
+      _cxa_guard_release_0(13397444);
+    }
+    v3 = 1;
+    if ( a2 != 13397440 )
+    {
+      if ( _cxa_guard_acquire_0(13156860) )
+      {
+        MEMORY[0xC8C1F8] = 12420028;
+        _cxa_guard_release_0(13156860);
+      }
+      if ( a2 != 13156856 )
+      {
+        if ( _cxa_guard_acquire_0(13156868) )
+        {
+          MEMORY[0xC8C200] = 12420040;
+          _cxa_guard_release_0(13156868);
+        }
+        if ( a2 != 13156864 )
+        {
+          if ( _cxa_guard_acquire_0(13156876) )
+          {
+            MEMORY[0xC8C208] = 12320932;
+            _cxa_guard_release_0(13156876);
+          }
+          return a2 == 13156872;
+        }
+      }
+    }
+    return v3;
   }
 
 /* ============================================================================
