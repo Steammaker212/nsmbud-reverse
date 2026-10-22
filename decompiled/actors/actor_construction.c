@@ -1833,7 +1833,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10[1] = "morton_hummer";
     v6 = v5(v4, v10);
     (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)**v2 + 108))(**v2, v6, v10);
-    sub_602372C0((int)(a1 + 2137), 331, (int)v10, 0);
+    EffectSlot_startEffectInstance((int)(a1 + 2137), 331, (int)v10, 0);
     v7 = (*v2)[3];
     v8 = (*v2)[17];
     if ( (*v2)[2] > v8 )
@@ -1932,7 +1932,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13 = "morton_hummer";
       v7 = v6(v5, &v12);
       (*(void (__fastcall **)(int, int, int *))(*(_DWORD *)**v2 + 108))(**v2, v7, &v12);
-      sub_602372C0((int)(a1 + 2111), 330, (int)&v12, 0);
+      EffectSlot_startEffectInstance((int)(a1 + 2111), 330, (int)&v12, 0);
       (*(void (__fastcall **)(int *))(*a1 + 1312))(a1);
     }
     v8 = **v2;
@@ -1941,7 +1941,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13 = "morton_hummer";
     v10 = v9(v8, &v12);
     (*(void (__fastcall **)(int, int, int *))(*(_DWORD *)**v2 + 108))(**v2, v10, &v12);
-    sub_602372C0((int)(a1 + 2137), 331, (int)&v12, 0);
+    EffectSlot_startEffectInstance((int)(a1 + 2137), 331, (int)&v12, 0);
     result = a1[1782];
     a1[1782] = result - 1;
     if ( v4 && result <= 1 )
@@ -2186,7 +2186,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v37 = "morton_hummer";
       v17 = v16(v15, &v36);
       (*(void (__fastcall **)(int, int, int *))(*(_DWORD *)**v2 + 108))(**v2, v17, &v36);
-      sub_602372C0((int)(a1 + 2137), 331, (int)&v36, 0);
+      EffectSlot_startEffectInstance((int)(a1 + 2137), 331, (int)&v36, 0);
       v18 = (int *)(*v2)[3];
       v19 = (*v2)[17];
       if ( (*v2)[2] > v19 )
@@ -5456,7 +5456,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v10; // [sp+14h] [bp-4h]
   
     v2 = sub_60788F8C(MEMORY[0xCC436C], 1);
-    v3 = sub_60834614();
+    v3 = Global_getContextVtable();
     v4 = sub_603FD0B4(v3);
     if ( v2 < 0 && v4 == 1 )
     {
@@ -5506,7 +5506,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v10; // [sp+14h] [bp-4h]
   
     v2 = sub_60788F8C(MEMORY[0xCC436C], 0);
-    v3 = sub_60834614();
+    v3 = Global_getContextVtable();
     v4 = sub_603FD0B4(v3);
     if ( v2 < 0 && v4 == 1 )
     {
@@ -66823,7 +66823,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60160948
+ * Object_updateSubObjectsAndRefresh
  * RVA 0x00160948   size 0x7c   xrefs 69
  * ============================================================================ */
   int __fastcall sub_60160948(_DWORD *a1)
@@ -77569,7 +77569,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // [sp+4h] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v4 = sub_6019112C(MEMORY[0xC8996C]);
+    v4 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) )
     {
       switch ( v4 )
@@ -77872,7 +77872,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v6 = 2;
         goto LABEL_28;
       case 2:
-        sub_6019112C(MEMORY[0xC8996C]);
+        Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
         *(_DWORD *)(a1 + 840) = 3;
         *(_DWORD *)(a1 + 768) = 9;
         *(_DWORD *)(a1 + 776) = 0;
@@ -82653,7 +82653,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v20; // [sp+14h] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v20 = sub_6019112C(MEMORY[0xC8996C]);
+    v20 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) )
     {
       v3 = **(_DWORD ***)(*(_DWORD *)(a1 + 268) + 12);
@@ -82932,7 +82932,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = *(unsigned __int8 *)(v3 + 1384);
         if ( *(_BYTE *)(v3 + 1384) )
         {
-          result = sub_6019112C(v3);
+          result = Table_tryGetEntryByIndexPair(v3);
           if ( result == 200 )
           {
             result = 0;
@@ -83150,8 +83150,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 84) = *(float *)(a1 + 508) + v3;
     }
     v4 = MEMORY[0xC8996C];
-    if ( hasIndexTable(MEMORY[0xC8996C]) == 1 && *(_BYTE *)(v4 + 1384) && sub_601916EC(v4) == 39 && sub_6019112C(v4) == 58 )
+    if ( hasIndexTable(MEMORY[0xC8996C]) == 1
+      && *(_BYTE *)(v4 + 1384)
+      && sub_601916EC(v4) == 39
+      && Table_tryGetEntryByIndexPair(v4) == 58 )
+    {
       StateMgr::changeState((_DWORD *)(a1 + 284), 13143256);
+    }
     return sub_60177448(MEMORY[0xC88E60], a1 + 324);
   }
 
@@ -83299,7 +83304,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = *(unsigned __int8 *)(v2 + 1384);
       if ( *(_BYTE *)(v2 + 1384) )
       {
-        result = sub_6019112C(v2);
+        result = Table_tryGetEntryByIndexPair(v2);
         switch ( result )
         {
           case 16:
@@ -83807,7 +83812,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v10[1] = "skl_root";
       v4 = v3(v2, v10);
       (*(void (__fastcall **)(_DWORD, int, _DWORD *))(***(_DWORD ***)(a1 + 376) + 108))(**(_DWORD **)(a1 + 376), v4, v10);
-      sub_602372C0(a1 + 388, 1139, (int)v10, 1);
+      EffectSlot_startEffectInstance(a1 + 388, 1139, (int)v10, 1);
     }
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1385) )
     {
@@ -83823,7 +83828,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = MEMORY[0xC8996C];
     if ( hasIndexTable(MEMORY[0xC8996C]) == 1 && *(_BYTE *)(v7 + 1384) )
     {
-      v8 = sub_6019112C(v7);
+      v8 = Table_tryGetEntryByIndexPair(v7);
       if ( *(_BYTE *)(a1 + 628) )
       {
         if ( ((unsigned int)(v8 - 16) > 0x14 || ((1 << (v8 - 16)) & 0x1B0007) == 0) && v8 != 201 && v8 != 203 )
@@ -86892,7 +86897,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v34; // [sp+4Ch] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v34 = sub_6019112C(MEMORY[0xC8996C]);
+    v34 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) )
     {
       switch ( v34 )
@@ -91722,7 +91727,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = MEMORY[0xC88F90];
       if ( !MEMORY[0xC88F90] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC88F90] )
         {
@@ -91765,7 +91770,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             _cxa_guard_release_0(13144076);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC88F94] + 12))(13143956);
-          sub_608FBCE4(13144080, MEMORY[0xC88F98], 18);
+          String_copyUntilTerminator(13144080, MEMORY[0xC88F98], 18);
           MEMORY[0xC88F90] = 13144080;
         }
         sead::CriticalSection::unlock(v4);
@@ -91899,7 +91904,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = MEMORY[0xC89058];
       if ( !MEMORY[0xC89058] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC89058] )
         {
@@ -91946,7 +91951,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             _cxa_guard_release_0(13144452);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC8905C] + 12))(13144156);
-          sub_608FBCE4(13144456, MEMORY[0xC89060], 31);
+          String_copyUntilTerminator(13144456, MEMORY[0xC89060], 31);
           MEMORY[0xC89058] = 13144456;
         }
         sead::CriticalSection::unlock(v4);
@@ -92080,7 +92085,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = MEMORY[0xC89204];
       if ( !MEMORY[0xC89204] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC89204] )
         {
@@ -92127,7 +92132,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             _cxa_guard_release_0(13144904);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC89208] + 12))(13144584);
-          sub_608FBCE4(13144908, MEMORY[0xC8920C], 32);
+          String_copyUntilTerminator(13144908, MEMORY[0xC8920C], 32);
           MEMORY[0xC89204] = 13144908;
         }
         sead::CriticalSection::unlock(v4);
@@ -92261,7 +92266,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = MEMORY[0xC893CC];
       if ( !MEMORY[0xC893CC] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC893CC] )
         {
@@ -92304,7 +92309,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             _cxa_guard_release_0(13145160);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC893D0] + 12))(13145040);
-          sub_608FBCE4(13145164, MEMORY[0xC893D4], 12);
+          String_copyUntilTerminator(13145164, MEMORY[0xC893D4], 12);
           MEMORY[0xC893CC] = 13145164;
         }
         sead::CriticalSection::unlock(v4);
@@ -94575,7 +94580,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v14; // [sp+5Ch] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v14 = sub_6019112C(MEMORY[0xC8996C]);
+    v14 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) && (unsigned int)(v14 - 7) >> 1 <= 0xA6 )
       /* ARM switch-dispatch idiom; the switch below is the implementation */ (void)0
     result = v14 - 7;
@@ -97576,7 +97581,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6019112C
+ * Table_tryGetEntryByIndexPair
  * RVA 0x0019112c   size 0x30   xrefs 70
  * ============================================================================ */
   int __fastcall sub_6019112C(int a1)
@@ -98384,7 +98389,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v26; // [sp+Ch] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v26 = sub_6019112C(MEMORY[0xC8996C]);
+    v26 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) )
     {
       switch ( v26 )
@@ -98941,7 +98946,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v13; // [sp+Ch] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v13 = sub_6019112C(MEMORY[0xC8996C]);
+    v13 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) )
     {
       v3 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 12);
@@ -99497,7 +99502,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = **(_DWORD **)(a1[67] + 12);
     v3 = MEMORY[0xC8996C];
-    v7 = sub_6019112C(MEMORY[0xC8996C]);
+    v7 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v3 + 1384) )
     {
       if ( v7 == 82 )
@@ -99840,7 +99845,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = **(_DWORD **)(a1[67] + 12);
     v3 = MEMORY[0xC8996C];
-    v5 = sub_6019112C(MEMORY[0xC8996C]);
+    v5 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v3 + 1384) )
     {
       if ( v5 == 82 )
@@ -100621,7 +100626,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xC8996C];
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
     {
-      result = sub_6019112C(MEMORY[0xC8996C]);
+      result = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
       if ( result == 156 )
         return StateMgr::changeState((_DWORD *)(a1 + 284), 13147088);
     }
@@ -100644,7 +100649,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xC8996C];
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
     {
-      result = (float *)sub_6019112C(MEMORY[0xC8996C]);
+      result = (float *)Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
       if ( result == (float *)165 )
       {
         result = (float *)sub_601916EC(v2);
@@ -100678,7 +100683,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       return (float *)StateMgr::changeState((_DWORD *)(a1 + 284), v4);
     }
-    result = (float *)sub_6019112C(MEMORY[0xC8996C]);
+    result = (float *)Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( result == (float *)48 )
     {
       result = (float *)sub_601916EC(v2);
@@ -102257,7 +102262,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
       {
         v3 = *(int (__fastcall **)(Actor *, int))(*(_DWORD *)a1 + 84);
-        v4 = sub_6019112C(MEMORY[0xC8996C]);
+        v4 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
         if ( !v3(a1, v4) )
           (*(void (__fastcall **)(Actor *))(*(_DWORD *)a1 + 72))(a1);
       }
@@ -105325,7 +105330,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = MEMORY[0xC8996C];
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
       {
-        result = sub_6019112C(MEMORY[0xC8996C]);
+        result = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
         v3 = result == 16;
         if ( result != 16 )
           v3 = result == 17;
@@ -105838,7 +105843,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(Actor *))(*(_DWORD *)a1 + 84))(a1);
     if ( hasIndexTable(MEMORY[0xC8996C]) && *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
     {
-      sub_6019112C(MEMORY[0xC8996C]);
+      Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
       (*(void (__fastcall **)(Actor *))(*(_DWORD *)a1 + 72))(a1);
     }
     *((_DWORD *)a1 + 23) = *((_DWORD *)a1 + 20);
@@ -112531,7 +112536,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = (_DWORD *)MEMORY[0xC8996C];
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
     {
-      result = (_DWORD *)(sub_6019112C(MEMORY[0xC8996C]) - 32);
+      result = (_DWORD *)(Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]) - 32);
       switch ( (unsigned int)result )
       {
         case 0u:
@@ -112793,7 +112798,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
       {
-        v3 = sub_6019112C(MEMORY[0xC8996C]) - 32;
+        v3 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]) - 32;
         if ( v3 > 0x14 || ((1 << v3) & 0x100019) == 0 )
           (*(void (__fastcall **)(Actor *))(*(_DWORD *)a1 + 72))(a1);
       }
@@ -113654,7 +113659,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v19; // [sp+1Ch] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v19 = sub_6019112C(MEMORY[0xC8996C]);
+    v19 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( !*(_BYTE *)(v2 + 1384) )
       goto LABEL_27;
     switch ( v19 )
@@ -114219,7 +114224,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v10[1] = "ef_wand";
       v6 = v5(v4, v10);
       (*(void (__fastcall **)(_DWORD, int, _DWORD *))(***(_DWORD ***)(a1 + 268) + 108))(**(_DWORD **)(a1 + 268), v6, v10);
-      sub_602372C0(a1 + 312, 1216, (int)v10, 1);
+      EffectSlot_startEffectInstance(a1 + 312, 1216, (int)v10, 1);
       result = *(_DWORD *)(a1 + 484) - 1;
       *(_DWORD *)(a1 + 484) = result;
       if ( !result )
@@ -114737,7 +114742,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xC8996C];
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
     {
-      result = sub_6019112C(MEMORY[0xC8996C]) - 16;
+      result = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]) - 16;
       switch ( result )
       {
         case 0:
@@ -114980,7 +114985,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
       {
-        v2 = sub_6019112C(MEMORY[0xC8996C]) - 16;
+        v2 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]) - 16;
         if ( v2 > 0x14 || ((1 << v2) & 0x100007) == 0 )
           (*(void (__fastcall **)(Actor *))(*(_DWORD *)a1 + 72))(a1);
       }
@@ -116274,7 +116279,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v14; // [sp+4h] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v14 = sub_6019112C(MEMORY[0xC8996C]);
+    v14 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) && v14 == 219 )
     {
       if ( a1[71] != 1 )
@@ -116818,7 +116823,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v21; // [sp+14h] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v21 = sub_6019112C(MEMORY[0xC8996C]);
+    v21 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( !*(_BYTE *)(v2 + 1384) )
       goto LABEL_16;
     v3 = **(_DWORD ***)(*(_DWORD *)(a1 + 268) + 12);
@@ -117243,7 +117248,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v16; // [sp+14h] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v16 = sub_6019112C(MEMORY[0xC8996C]);
+    v16 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( !*(_BYTE *)(v2 + 1384) )
       goto LABEL_12;
     v3 = **(_DWORD ***)(*(_DWORD *)(a1 + 268) + 12);
@@ -117714,7 +117719,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15[1] = "skl_root";
     v13 = v12(v11, v15);
     (*(void (__fastcall **)(_DWORD, int, _DWORD *))(***(_DWORD ***)(a1 + 372) + 108))(**(_DWORD **)(a1 + 372), v13, v15);
-    result = sub_602372C0(a1 + 384, 904, (int)v15, 1);
+    result = EffectSlot_startEffectInstance(a1 + 384, 904, (int)v15, 1);
     if ( *(int *)(a1 + 364) >= 0 )
     {
       sub_601E4F60(MEMORY[0xC8B13C]);
@@ -117954,7 +117959,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xC8996C];
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
     {
-      result = sub_6019112C(MEMORY[0xC8996C]) - 16;
+      result = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]) - 16;
       switch ( result )
       {
         case 0:
@@ -118484,7 +118489,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
       {
-        v2 = sub_6019112C(MEMORY[0xC8996C]) - 16;
+        v2 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]) - 16;
         if ( v2 > 0x14 || ((1 << v2) & 0x180007) == 0 )
           (*(void (__fastcall **)(Actor *))(*(_DWORD *)a1 + 72))(a1);
       }
@@ -128270,7 +128275,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 72))(a1);
     v18 = MEMORY[0xC8996C];
     v19 = ActorMgr_findAndInstantiate(MEMORY[0xC8AEF0]);
-    v39 = sub_6019112C(v18);
+    v39 = Table_tryGetEntryByIndexPair(v18);
     sub_601916EC(v18);
     if ( *(_BYTE *)(v18 + 1384) && (unsigned int)(v39 - 5) >> 1 <= 0xA2 )
       /* ARM switch-dispatch idiom; the switch below is the implementation */ (void)0
@@ -128930,7 +128935,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v18; // [sp+28h] [bp-8h]
     int v19; // [sp+2Ch] [bp-4h]
   
-    v5 = sub_6019112C(MEMORY[0xC8996C]);
+    v5 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( (a1[66] | 1) == 7 )
     {
       if ( v5 == 320 )
@@ -129560,7 +129565,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
     int v5; // r0
   
-    v2 = sub_6019112C(MEMORY[0xC8996C]);
+    v2 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     v3 = v2 == 320;
     if ( v2 == 320 )
       v3 = (a1[66] | 1) == 7;
@@ -129578,7 +129583,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v5 != 1 )
           return sub_601C2CF8(a1);
         a1[59] = MEMORY[0xAFC208];
-        if ( sub_6019112C(MEMORY[0xC8996C]) == 320 )
+        if ( Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]) == 320 )
           sub_601C2A9C(a1, 11519000);
         else
           sub_601C2BE0(a1, 11518980);
@@ -130563,7 +130568,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = sub_601916EC(MEMORY[0xC8996C]);
         if ( result == 115 )
         {
-          result = sub_6019112C(v3);
+          result = Table_tryGetEntryByIndexPair(v3);
           if ( result == 325 )
           {
             result = 1;
@@ -131363,7 +131368,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             dword_60C8AEC4 = 151;
             _cxa_guard_release_0(&unk_60C8AEA0);
           }
-          v7 = sub_6019112C(MEMORY[0xC8996C]);
+          v7 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
           result = 1;
           if ( v7 != dword_60C8AEA4
             && v7 != dword_60C8AEA8
@@ -131819,7 +131824,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v12 = v10[0];
         v13 = v10[1];
         v14 = v10[2];
-        return (float *)sub_602372C0(v1 + 195, v3, v11, 0);
+        return (float *)EffectSlot_startEffectInstance(v1 + 195, v3, v11, 0);
       }
     }
     return result;
@@ -135540,7 +135545,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v72; // [sp+44h] [bp-4h]
   
     v5 = MEMORY[0xC8996C];
-    v72 = sub_6019112C(MEMORY[0xC8996C]);
+    v72 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v5 + 1384) )
     {
       v6 = v72;
@@ -145817,7 +145822,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = *(_DWORD *)(MEMORY[0xCC6D78] + 412);
     v3 = MEMORY[0xC8996C];
-    v275 = sub_6019112C(MEMORY[0xC8996C]);
+    v275 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     v6 = -894784854;
     i = v2 == 4;
     if ( *(_BYTE *)(v3 + 1384) )
@@ -153743,7 +153748,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // [sp+4h] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v7 = sub_6019112C(MEMORY[0xC8996C]);
+    v7 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     v3 = sub_601DB42C();
     if ( *(_BYTE *)(v2 + 1384) )
     {
@@ -154532,7 +154537,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v9; // [sp+4h] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v9 = sub_6019112C(MEMORY[0xC8996C]);
+    v9 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) )
     {
       if ( v9 == 247 )
@@ -157230,7 +157235,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
       {
         v3 = *(int (__fastcall **)(_DWORD *, int))(*a1 + 372);
-        v4 = sub_6019112C(MEMORY[0xC8996C]);
+        v4 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
         if ( !v3(a1, v4) )
           (*(void (__fastcall **)(_DWORD *))(*a1 + 72))(a1);
       }
@@ -157332,7 +157337,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !hasIndexTable(MEMORY[0xC8996C]) )
       return StateMgr::changeState((_DWORD *)a1 + 72, 13153840);
     v2 = MEMORY[0xC8996C];
-    result = sub_6019112C(MEMORY[0xC8996C]);
+    result = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) )
     {
       switch ( result )
@@ -159337,7 +159342,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     StateMgr::execute((_DWORD *)a1 + 72);
     if ( hasIndexTable(MEMORY[0xC8996C]) && *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
     {
-      sub_6019112C(MEMORY[0xC8996C]);
+      Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
       (*(void (__fastcall **)(Actor *))(*(_DWORD *)a1 + 72))(a1);
     }
     (*(void (__fastcall **)(Actor *))(*(_DWORD *)a1 + 92))(a1);
@@ -161296,7 +161301,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xC8996C];
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
     {
-      result = sub_6019112C(MEMORY[0xC8996C]);
+      result = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
       v20 = result;
       switch ( result )
       {
@@ -161592,7 +161597,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       return result;
     }
-    result = sub_6019112C(MEMORY[0xC8996C]);
+    result = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     LODWORD(v18[0]) = result;
     if ( result > 70 )
     {
@@ -162259,7 +162264,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _BYTE v3[48]; // [sp+0h] [bp-30h] BYREF
   
     skl_root_ref_1F28F8(a1, (int)v3);
-    return sub_602372C0(a1 + 440, 1129, (int)v3, 0);
+    return EffectSlot_startEffectInstance(a1 + 440, 1129, (int)v3, 0);
   }
 
 /* ============================================================================
@@ -162697,7 +162702,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( result == 1 )
     {
       v7 = MEMORY[0xC8996C];
-      v9 = sub_6019112C(MEMORY[0xC8996C]);
+      v9 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
       result = *(unsigned __int8 *)(v7 + 1384);
       if ( *(_BYTE *)(v7 + 1384) )
       {
@@ -164318,7 +164323,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v8; // [sp+4h] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v8 = sub_6019112C(MEMORY[0xC8996C]);
+    v8 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) )
     {
       if ( v8 == 322 )
@@ -164732,7 +164737,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v14; // [sp+Ch] [bp-4h]
   
     v2 = MEMORY[0xC8996C];
-    v14 = sub_6019112C(MEMORY[0xC8996C]);
+    v14 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v2 + 1384) )
     {
       v3 = v14 == 90;
@@ -165012,7 +165017,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 12);
     v3 = MEMORY[0xC8996C];
-    v6 = sub_6019112C(MEMORY[0xC8996C]);
+    v6 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v3 + 1384) && v6 == 83 )
     {
       AnimationCtrl_setRepeat(v2 + 4, 0);
@@ -165274,7 +165279,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 12);
     v3 = MEMORY[0xC8996C];
-    v6 = sub_6019112C(MEMORY[0xC8996C]);
+    v6 = Table_tryGetEntryByIndexPair(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v3 + 1384) && v6 == 83 )
     {
       AnimationCtrl_setRepeat(v2 + 4, 0);

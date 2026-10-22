@@ -74,7 +74,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = *v8;
     if ( v10 )
     {
-      sub_60920EC8(a1 + 1256, v10);
+      Object_copyAndAdjust(a1 + 1256, v10);
       v11 = *(_DWORD *)(a1 + 2296);
       v12 = *(_DWORD *)(a1 + 2300);
       *(_BYTE *)(a1 + 1575) = *(_DWORD *)(a1 + 2292);
@@ -105,7 +105,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v20 = *v19;
     if ( v20 )
     {
-      sub_60920EC8(a1 + 1600, v20);
+      Object_copyAndAdjust(a1 + 1600, v20);
       v21 = *(_DWORD *)(a1 + 2296);
       v22 = *(_DWORD *)(a1 + 2300);
       *(_BYTE *)(a1 + 1919) = *(_DWORD *)(a1 + 2292);
@@ -133,7 +133,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( result == 1 )
     {
-      sub_60920EC8(a1 + 1944, *(_DWORD *)(a1 + 12 * *(unsigned __int8 *)(*(_DWORD *)(a1 + 2288) + a3) + 952));
+      Object_copyAndAdjust(a1 + 1944, *(_DWORD *)(a1 + 12 * *(unsigned __int8 *)(*(_DWORD *)(a1 + 2288) + a3) + 952));
       v30 = *(_DWORD *)(a1 + 32);
       sub_6091D95C(v30);
       v31 = *(_DWORD *)(v30 + 636);
@@ -24693,7 +24693,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604755C4
+ * Object_collectChildrenIntoArray
  * RVA 0x004755c4   size 0x54   xrefs 67
  * ============================================================================ */
   int __fastcall sub_604755C4(int a1, int a2, _DWORD *a3, int a4, int *a5)
@@ -27844,7 +27844,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v46 = v6;
         }
         sub_6091AC94(v40);
-        sub_609200A0(v4);
+        Object_getCountOrDefault(v4);
         sub_60919ED8(v38, v4 + 744);
         v39 = v40;
         Object_callSlot7(v38, *(_DWORD *)(a2 + 40));

@@ -3207,7 +3207,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(result + 616) = v4;
       *(float *)(result + 608) = v3;
       *(float *)(result + 612) = v2;
-      return sub_60160948(a2);
+      return Object_updateSubObjectsAndRefresh(a2);
     }
     return result;
   }
@@ -18766,20 +18766,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_60024494(_DWORD *a1)
   {
     *a1 = 12749480;
-    sub_608AC1C0(a1 + 100);
-    sub_608AC1C0(a1 + 95);
-    sub_608AC1C0(a1 + 90);
-    sub_608AC1C0(a1 + 85);
-    sub_608AC1C0(a1 + 80);
-    sub_608AC1C0(a1 + 75);
-    sub_608AC1C0(a1 + 70);
-    sub_608AC1C0(a1 + 65);
-    sub_608AC1C0(a1 + 60);
-    sub_608AC1C0(a1 + 55);
-    sub_608AC1C0(a1 + 50);
-    sub_608AC1C0(a1 + 45);
-    sub_608AC1C0(a1 + 40);
-    sub_608AC1C0(a1 + 35);
+    LinkedList_unlinkSelf(a1 + 100);
+    LinkedList_unlinkSelf(a1 + 95);
+    LinkedList_unlinkSelf(a1 + 90);
+    LinkedList_unlinkSelf(a1 + 85);
+    LinkedList_unlinkSelf(a1 + 80);
+    LinkedList_unlinkSelf(a1 + 75);
+    LinkedList_unlinkSelf(a1 + 70);
+    LinkedList_unlinkSelf(a1 + 65);
+    LinkedList_unlinkSelf(a1 + 60);
+    LinkedList_unlinkSelf(a1 + 55);
+    LinkedList_unlinkSelf(a1 + 50);
+    LinkedList_unlinkSelf(a1 + 45);
+    LinkedList_unlinkSelf(a1 + 40);
+    LinkedList_unlinkSelf(a1 + 35);
     return SoundActor_vf0(a1);
   }
 
@@ -21059,22 +21059,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     *a1 = 12749408;
     a1[69] = 12327420;
-    sub_608AC1C0(a1 + 73);
+    LinkedList_unlinkSelf(a1 + 73);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 69));
     a1[63] = 12327420;
-    sub_608AC1C0(a1 + 67);
+    LinkedList_unlinkSelf(a1 + 67);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 63));
     a1[57] = 12327420;
-    sub_608AC1C0(a1 + 61);
+    LinkedList_unlinkSelf(a1 + 61);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 57));
     a1[51] = 12327420;
-    sub_608AC1C0(a1 + 55);
+    LinkedList_unlinkSelf(a1 + 55);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 51));
     a1[45] = 12327420;
-    sub_608AC1C0(a1 + 49);
+    LinkedList_unlinkSelf(a1 + 49);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 45));
     a1[39] = 12327420;
-    sub_608AC1C0(a1 + 43);
+    LinkedList_unlinkSelf(a1 + 43);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 39));
     return SoundActor_vf0(a1);
   }
@@ -21142,7 +21142,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   struct sead_IDisposer *__fastcall MovingSoundActorHandle_dtor(int *a1)
   {
     *a1 = 12327420;
-    sub_608AC1C0(a1 + 4);
+    LinkedList_unlinkSelf(a1 + 4);
     return sead::IDisposer::~IDisposer((struct sead_IDisposer *)a1);
   }
 
@@ -21155,7 +21155,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     struct sead_IDisposer *v2; // r0
   
     *a1 = 12327420;
-    sub_608AC1C0(a1 + 4);
+    LinkedList_unlinkSelf(a1 + 4);
     v2 = sead::IDisposer::~IDisposer((struct sead_IDisposer *)a1);
     return operator delete((int)v2);
   }
@@ -27070,7 +27070,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                           v30[0] = *(_DWORD *)(a1 + 108);
                           v30[1] = v29;
                           v30[2] = 0;
-                          sub_602A38A4(a1, v30);
+                          Effect_spawnType21(a1, v30);
                           SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_EMY_DOWN", 0);
                           SoundActor_tryStartSoundIfFree(
                             (_DWORD *)(a1 + 6332),
@@ -34912,7 +34912,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !sub_601536B0(MEMORY[0xC8820C], (int)v39) )
       {
   LABEL_42:
-        sub_60160948(v39);
+        Object_updateSubObjectsAndRefresh(v39);
         ColliderMgr_add(MEMORY[0xC8820C], v39);
       }
     }
@@ -34970,7 +34970,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_BYTE *)(a1 + 11693) = 1;
     *(_BYTE *)(a1 + 11694) = 1;
     v7 = (_DWORD *)(a1 + 6336);
-    sub_60160948(v7);
+    Object_updateSubObjectsAndRefresh(v7);
     return ColliderMgr_add(MEMORY[0xC8820C], v7);
   }
 
@@ -43221,7 +43221,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)v1->n128_u32[0],
       v5,
       v13);
-    sub_602372C0((int)&v1[48], 386, (int)v13, 1);
+    EffectSlot_startEffectInstance((int)&v1[48], 386, (int)v13, 1);
     v6 = *(_DWORD *)v1->n128_u32[0];
     v7 = *(int (__fastcall **)(int, _DWORD *))(*(_DWORD *)v6 + 84);
     v12[0] = 12321336;
@@ -43231,7 +43231,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)v1->n128_u32[0],
       v8,
       v12);
-    sub_602372C0((int)&v1[54].n128_i32[2], 387, (int)v12, 1);
+    EffectSlot_startEffectInstance((int)&v1[54].n128_i32[2], 387, (int)v12, 1);
     v11[0] = *(float *)&v13[3];
     v11[1] = *(float *)&v13[7];
     v11[2] = *(float *)&v13[11];
@@ -47747,7 +47747,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14[1] = "ef_wand";
     v5 = v4(v3, v14);
     (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)**v2 + 108))(**v2, v5, v14);
-    sub_602372C0(a1 + 6320, 801, (int)v14, 1);
+    EffectSlot_startEffectInstance(a1 + 6320, 801, (int)v14, 1);
     v6 = (_DWORD *)(a1 + 6316);
     if ( *(_DWORD *)(a1 + 6316) == 2 )
     {
@@ -51046,7 +51046,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)v1->n128_u32[0],
       v5,
       v13);
-    sub_602372C0((int)&v1[48], 386, (int)v13, 1);
+    EffectSlot_startEffectInstance((int)&v1[48], 386, (int)v13, 1);
     v6 = *(_DWORD *)v1->n128_u32[0];
     v7 = *(int (__fastcall **)(int, _DWORD *))(*(_DWORD *)v6 + 84);
     v12[0] = 12321336;
@@ -51056,7 +51056,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)v1->n128_u32[0],
       v8,
       v12);
-    sub_602372C0((int)&v1[54].n128_i32[2], 387, (int)v12, 1);
+    EffectSlot_startEffectInstance((int)&v1[54].n128_i32[2], 387, (int)v12, 1);
     v11[0] = *(float *)&v13[3];
     v11[1] = *(float *)&v13[7];
     v11[2] = *(float *)&v13[11];
@@ -68750,7 +68750,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v3; // r3
     int savedregs; // [sp+0h] [bp+0h]
   
-    sub_602372C0(a1 + 6188, 579, a1 + 6292, 1);
+    EffectSlot_startEffectInstance(a1 + 6188, 579, a1 + 6292, 1);
     if ( *(_BYTE *)(a1 + 6104) )
       DrawMgr_drawModel2(MEMORY[0xC9CD1C], *(_DWORD **)(a1 + 6100), v2, v3, savedregs);
     return 1;
@@ -81317,7 +81317,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16[3] = *(float *)(a1 + 108);
     v16[7] = *(float *)(a1 + 112);
     v16[11] = *(float *)(a1 + 116);
-    return sub_602372C0(a1 + 6328, 1085, (int)v16, 0);
+    return EffectSlot_startEffectInstance(a1 + 6328, 1085, (int)v16, 0);
   }
 
 /* ============================================================================
@@ -88595,7 +88595,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25[1] = "ef_wand";
     v5 = v4(v3, v25);
     (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)**v2 + 108))(**v2, v5, v25);
-    sub_602372C0(a1 + 8424, 801, (int)v25, 1);
+    EffectSlot_startEffectInstance(a1 + 8424, 801, (int)v25, 1);
     v6 = *(float *)(MEMORY[0xCC6484] + 112);
     v7 = *(float *)(MEMORY[0xCC6484] + 120);
     if ( !*(_BYTE *)(a1 + 6313) )
@@ -92363,7 +92363,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v20[1] = "ef_wand";
       v7 = v6(v5, v20);
       (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)**v2 + 108))(**v2, v7, v20);
-      sub_602372C0(a1 + 8528, 1058, (int)v20, 0);
+      EffectSlot_startEffectInstance(a1 + 8528, 1058, (int)v20, 0);
       v8 = (_DWORD *)(*v2)[3];
       v9 = (*v2)[17];
       if ( (*v2)[2] > v9 )
@@ -95734,7 +95734,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = a1[29];
     v16 = -1073741824;
     Mtx34_rotateX(&v17, &v16);
-    return sub_602372C0((int)(a1 + 1582), 1060, (int)&v17, 0);
+    return EffectSlot_startEffectInstance((int)(a1 + 1582), 1060, (int)&v17, 0);
   }
 
 /* ============================================================================
@@ -102401,7 +102401,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = a1[29];
     v16 = -1073741824;
     Mtx34_rotateX(&v17, &v16);
-    return sub_602372C0((int)(a1 + 1582), dword_60AF2314[a1[1555]], (int)&v17, 0);
+    return EffectSlot_startEffectInstance((int)(a1 + 1582), dword_60AF2314[a1[1555]], (int)&v17, 0);
   }
 
 /* ============================================================================
@@ -106878,7 +106878,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v23 = *v17;
       v24 = (*(int (__fastcall **)(int, int *))(*(_DWORD *)*v17 + 84))(*v17, &v27);
       (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)v23 + 108))(v23, v24, v29);
-      sub_602372C0(a1 + 7816, 1093, (int)v29, 1);
+      EffectSlot_startEffectInstance(a1 + 7816, 1093, (int)v29, 1);
       v18 = (*v2)[3];
       v19 = (*v2)[2];
       v20 = (*v2)[17];
@@ -107892,7 +107892,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v21 = **(_DWORD **)(a1 + 7100);
             v22 = (*(int (__fastcall **)(int, int *))(*(_DWORD *)v21 + 84))(v21, v24);
             (*(void (__fastcall **)(int, int, int *))(*(_DWORD *)v21 + 108))(v21, v22, v23);
-            sub_602372C0(a1 + 7816, v20, (int)v23, 1);
+            EffectSlot_startEffectInstance(a1 + 7816, v20, (int)v23, 1);
           }
           Bowser::onExecute((_DWORD *)a1);
           ActorScaler_execute(a1 + 7764);
@@ -111897,7 +111897,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[1] = "ef_wand";
     v4 = v3(v2, v6);
     (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)**v1 + 108))(**v1, v4, v6);
-    return sub_602372C0((int)(v1 + 2), 801, (int)v6, 1);
+    return EffectSlot_startEffectInstance((int)(v1 + 2), 801, (int)v6, 1);
   }
 
 /* ============================================================================
@@ -112483,7 +112483,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v29[2] = (float)(v27 * v24) * v21;
     v29[6] = -(float)(v26 * v21);
     v29[10] = (float)(v27 * v22) * v21;
-    return ((int (__fastcall *)(int, int, float *, int))sub_602372C0)(a1 + 6100, 579, v29, 1);
+    return ((int (__fastcall *)(int, int, float *, int))EffectSlot_startEffectInstance)(a1 + 6100, 579, v29, 1);
   }
 
 /* ============================================================================
@@ -130626,7 +130626,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v13[1] = "ef_magic";
         v11 = v10(v9, v13);
         (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)**v2 + 108))(**v2, v11, v13);
-        sub_602372C0(a1 + 7804, 1046, (int)v13, 0);
+        EffectSlot_startEffectInstance(a1 + 7804, 1046, (int)v13, 0);
         v12[0] = v13[3];
         v12[1] = v13[7];
         v12[2] = v13[11];
@@ -130708,7 +130708,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v20[1] = "ef_magic";
     v16 = v15(v14, v20);
     (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)**v5 + 108))(**v5, v16, v20);
-    sub_602372C0(a1 + 7804, 1046, (int)v20, 0);
+    EffectSlot_startEffectInstance(a1 + 7804, 1046, (int)v20, 0);
     v19[0] = v20[3];
     v19[1] = v20[7];
     v19[2] = v20[11];
@@ -130740,7 +130740,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11[1] = "ef_magic";
     v5 = v4(v3, v11);
     (*(void (__fastcall **)(_DWORD, int, _DWORD *))(**(_DWORD **)a1[1774] + 108))(*(_DWORD *)a1[1774], v5, v11);
-    sub_602372C0((int)(a1 + 1951), 1046, (int)v11, 0);
+    EffectSlot_startEffectInstance((int)(a1 + 1951), 1046, (int)v11, 0);
     v10[0] = v11[3];
     v10[1] = v11[7];
     v10[2] = v11[11];
@@ -130883,7 +130883,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v12[1] = "ef_magic";
       v8 = v7(v6, v12);
       (*(void (__fastcall **)(int, int, _DWORD *))(*(_DWORD *)**v2 + 108))(**v2, v8, v12);
-      sub_602372C0((int)(a1 + 1951), 1046, (int)v12, 0);
+      EffectSlot_startEffectInstance((int)(a1 + 1951), 1046, (int)v12, 0);
       v11[0] = v12[3];
       v11[1] = v12[7];
       v11[2] = v12[11];

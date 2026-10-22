@@ -26,7 +26,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r1
     bool v5; // zf
   
-    result = sub_60834614();
+    result = Global_getContextVtable();
     if ( MEMORY[0xC99DD4] )
     {
       result = *(_DWORD *)(result + 492);
@@ -8112,7 +8112,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6050270C(v5, v6, 1);
       *(_DWORD *)(List_getNthNode(v4, v6) - *(_DWORD *)(a1 + 3832) + 176) = "SE_SYS_SCROLL_LIST_BTN_OVER";
       *(_DWORD *)(List_getNthNode(v4, v6) - *(_DWORD *)(a1 + 3832) + 180) = "SE_SYS_SCROLL_LIST_BTN_OVER_OFF";
-      sub_605028F0(v5, v9 + v2, 0);
+      ListEntry_setBool208(v5, v9 + v2, 0);
       v7 = List_getNthNode(v4, *(_DWORD *)(v9 + v2));
       v2 += 4;
       result = v7 - *(_DWORD *)(a1 + 3832);
@@ -8852,7 +8852,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         if ( !v8 )
         {
-          sub_605028F0(a1 + 3768, v6, 1);
+          ListEntry_setBool208(a1 + 3768, v6, 1);
           *(_BYTE *)(List_getNthNode(a1 + 3820, *v6) - *(_DWORD *)(a1 + 3832) + 208) = 0;
         }
         ++v6;
@@ -8877,19 +8877,19 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = a1 + 942;
-    sub_605028F0(a1 + 942, a1 + 1462, 1);
+    ListEntry_setBool208(a1 + 942, a1 + 1462, 1);
     *(_BYTE *)(List_getNthNode(a1 + 955, a1[1462]) - a1[958] + 208) = 0;
-    sub_605028F0(v2, a1 + 1463, 1);
+    ListEntry_setBool208(v2, a1 + 1463, 1);
     *(_BYTE *)(List_getNthNode(a1 + 955, a1[1463]) - a1[958] + 208) = 0;
-    sub_605028F0(v2, a1 + 1464, 1);
+    ListEntry_setBool208(v2, a1 + 1464, 1);
     *(_BYTE *)(List_getNthNode(a1 + 955, a1[1464]) - a1[958] + 208) = 0;
-    sub_605028F0(v2, a1 + 1465, 1);
+    ListEntry_setBool208(v2, a1 + 1465, 1);
     *(_BYTE *)(List_getNthNode(a1 + 955, a1[1465]) - a1[958] + 208) = 0;
-    sub_605028F0(v2, a1 + 1466, 1);
+    ListEntry_setBool208(v2, a1 + 1466, 1);
     *(_BYTE *)(List_getNthNode(a1 + 955, a1[1466]) - a1[958] + 208) = 0;
-    sub_605028F0(v2, a1 + 1467, 1);
+    ListEntry_setBool208(v2, a1 + 1467, 1);
     *(_BYTE *)(List_getNthNode(a1 + 955, a1[1467]) - a1[958] + 208) = 0;
-    sub_605028F0(v2, a1 + 1468, 1);
+    ListEntry_setBool208(v2, a1 + 1468, 1);
     result = List_getNthNode(a1 + 955, a1[1468]) - a1[958];
     *(_BYTE *)(result + 208) = 0;
     return result;
@@ -11608,7 +11608,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9F820];
       if ( !MEMORY[0xC9F820] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9F820] )
         {
@@ -11647,7 +11647,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13236280);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC9F824] + 12))(13236260);
-          sub_608FBCE4(13236284, MEMORY[0xC9F828], 1);
+          String_copyUntilTerminator(13236284, MEMORY[0xC9F828], 1);
           MEMORY[0xC9F820] = 13236284;
         }
         sead::CriticalSection::unlock(v4);
@@ -11677,7 +11677,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9F840];
       if ( !MEMORY[0xC9F840] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9F840] )
         {
@@ -11716,7 +11716,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13236340);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC9F844] + 12))(13236292);
-          sub_608FBCE4(13236344, MEMORY[0xC9F848], 2);
+          String_copyUntilTerminator(13236344, MEMORY[0xC9F848], 2);
           MEMORY[0xC9F840] = 13236344;
         }
         sead::CriticalSection::unlock(v4);
@@ -11850,7 +11850,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9F880];
       if ( !MEMORY[0xC9F880] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9F880] )
         {
@@ -11893,7 +11893,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13236480);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC9F884] + 12))(13236356);
-          sub_608FBCE4(13236484, MEMORY[0xC9F888], 7);
+          String_copyUntilTerminator(13236484, MEMORY[0xC9F888], 7);
           MEMORY[0xC9F880] = 13236484;
         }
         sead::CriticalSection::unlock(v4);
@@ -12027,7 +12027,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9F920];
       if ( !MEMORY[0xC9F920] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9F920] )
         {
@@ -12076,7 +12076,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13236900);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC9F924] + 12))(13236516);
-          sub_608FBCE4(13236904, MEMORY[0xC9F928], 24);
+          String_copyUntilTerminator(13236904, MEMORY[0xC9F928], 24);
           MEMORY[0xC9F920] = 13236904;
         }
         sead::CriticalSection::unlock(v4);
@@ -12210,7 +12210,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9FB08];
       if ( !MEMORY[0xC9FB08] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9FB08] )
         {
@@ -12252,7 +12252,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13237104);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC9FB0C] + 12))(13237004);
-          sub_608FBCE4(13237108, MEMORY[0xC9FB10], 4);
+          String_copyUntilTerminator(13237108, MEMORY[0xC9FB10], 4);
           MEMORY[0xC9FB08] = 13237108;
         }
         sead::CriticalSection::unlock(v4);
@@ -12386,7 +12386,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9FB84];
       if ( !MEMORY[0xC9FB84] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9FB84] )
         {
@@ -12425,7 +12425,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13237188);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC9FB88] + 12))(13237128);
-          sub_608FBCE4(13237192, MEMORY[0xC9FB8C], 5);
+          String_copyUntilTerminator(13237192, MEMORY[0xC9FB8C], 5);
           MEMORY[0xC9FB84] = 13237192;
         }
         sead::CriticalSection::unlock(v4);
@@ -12559,7 +12559,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9FBDC];
       if ( !MEMORY[0xC9FBDC] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9FBDC] )
         {
@@ -12602,7 +12602,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13237332);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC9FBE0] + 12))(13237216);
-          sub_608FBCE4(13237336, MEMORY[0xC9FBE4], 8);
+          String_copyUntilTerminator(13237336, MEMORY[0xC9FBE4], 8);
           MEMORY[0xC9FBDC] = 13237336;
         }
         sead::CriticalSection::unlock(v4);
@@ -12736,7 +12736,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9FC78];
       if ( !MEMORY[0xC9FC78] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9FC78] )
         {
@@ -12775,7 +12775,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13237436);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC9FC7C] + 12))(13237372);
-          sub_608FBCE4(13237440, MEMORY[0xC9FC80], 3);
+          String_copyUntilTerminator(13237440, MEMORY[0xC9FC80], 3);
           MEMORY[0xC9FC78] = 13237440;
         }
         sead::CriticalSection::unlock(v4);
@@ -12909,7 +12909,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9FCCC];
       if ( !MEMORY[0xC9FCCC] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9FCCC] )
         {
@@ -12948,7 +12948,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13237540);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xC9FCD0] + 12))(13237456);
-          sub_608FBCE4(13237544, MEMORY[0xC9FCD4], 7);
+          String_copyUntilTerminator(13237544, MEMORY[0xC9FCD4], 7);
           MEMORY[0xC9FCCC] = 13237544;
         }
         sead::CriticalSection::unlock(v4);
@@ -14469,7 +14469,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(List_getNthNode(a1 + 977, v13) - a1[980] + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 977, v13) - a1[980] + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     *(_DWORD *)(List_getNthNode(a1 + 977, v13) - a1[980] + 204) = 0;
-    sub_605028F0(a1 + 964, &v13, 1);
+    ListEntry_setBool208(a1 + 964, &v13, 1);
     result = List_getNthNode(a1 + 977, v13) - a1[980];
     *(_BYTE *)(result + 208) = 0;
     return result;
@@ -15087,7 +15087,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA01D0];
       if ( !MEMORY[0xCA01D0] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA01D0] )
         {
@@ -15131,7 +15131,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13238888);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA01D4] + 12))(13238740);
-          sub_608FBCE4(13238892, MEMORY[0xCA01D8], 15);
+          String_copyUntilTerminator(13238892, MEMORY[0xCA01D8], 15);
           MEMORY[0xCA01D0] = 13238892;
         }
         sead::CriticalSection::unlock(v4);
@@ -15265,7 +15265,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA02A8];
       if ( !MEMORY[0xCA02A8] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA02A8] )
         {
@@ -15304,7 +15304,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13238980);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA02AC] + 12))(13238956);
-          sub_608FBCE4(13238984, MEMORY[0xCA02B0], 1);
+          String_copyUntilTerminator(13238984, MEMORY[0xCA02B0], 1);
           MEMORY[0xCA02A8] = 13238984;
         }
         sead::CriticalSection::unlock(v4);
@@ -15386,7 +15386,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA02CC];
       if ( !MEMORY[0xCA02CC] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA02CC] )
         {
@@ -15430,7 +15430,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13239156);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA02D0] + 12))(13238992);
-          sub_608FBCE4(13239160, MEMORY[0xCA02D4], 9);
+          String_copyUntilTerminator(13239160, MEMORY[0xCA02D4], 9);
           MEMORY[0xCA02CC] = 13239160;
         }
         sead::CriticalSection::unlock(v4);
@@ -15564,7 +15564,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA039C];
       if ( !MEMORY[0xCA039C] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA039C] )
         {
@@ -15608,7 +15608,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13239368);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA03A0] + 12))(13239200);
-          sub_608FBCE4(13239372, MEMORY[0xCA03A4], 9);
+          String_copyUntilTerminator(13239372, MEMORY[0xCA03A4], 9);
           MEMORY[0xCA039C] = 13239372;
         }
         sead::CriticalSection::unlock(v4);
@@ -16017,11 +16017,11 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_BYTE *)(a1 + 146856) = 1;
     *(_DWORD *)(a1 + 146852) = 0x10000;
-    v2 = (_BYTE *)sub_60834614(146852);
+    v2 = (_BYTE *)Global_getContextVtable(146852);
     v3 = sub_603FD0B4(v2);
     *(_DWORD *)(a1 + 146864) = v3;
     *(_DWORD *)(a1 + 146860) = v3;
-    v4 = (_DWORD *)sub_60834614(v3);
+    v4 = (_DWORD *)Global_getContextVtable(v3);
     *(_DWORD *)(a1 + 128724) = sub_603FCFF8((int)v4, 0);
     *(_DWORD *)(a1 + 128728) = sub_603FCFF8((int)v4, 1);
     *(_DWORD *)(a1 + 128732) = sub_603FCFF8((int)v4, 2);
@@ -16057,7 +16057,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v5; // r0
     int v6; // r1
   
-    v2 = sub_60834614(0x7CA3A4u);
+    v2 = Global_getContextVtable(0x7CA3A4u);
     if ( MEMORY[0xC99DD4] && (v3 = *(_DWORD *)(v2 + 492), v3 <= 4) && ((1 << v3) & 0x16) != 0 )
     {
       *(_BYTE *)(a1 + 56) = 1;
@@ -16156,7 +16156,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = 13239840;
       }
     }
-    else if ( *(_DWORD *)(sub_60834614(v3) + 492) )
+    else if ( *(_DWORD *)(Global_getContextVtable(v3) + 492) )
     {
       *(_BYTE *)(a1 + 146852) = 1;
       *(_BYTE *)(a1 + 56) = 1;
@@ -17173,7 +17173,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ListEntry_setDword172(v2, &unk_60B02B7C, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 3700, 8) - *(_DWORD *)(a1 + 3712) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3700, 8) - *(_DWORD *)(a1 + 3712) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    sub_605028F0(v2, &unk_60B02B7C, 1);
+    ListEntry_setBool208(v2, &unk_60B02B7C, 1);
     ListEntry_setDword172(v2, &unk_60B02B78, "SE_SYS_PAGE");
     *(_DWORD *)(List_getNthNode(a1 + 3700, 0) - *(_DWORD *)(a1 + 3712) + 184) = "SE_SYS_PAGE";
     ListEntry_setDword172(v2, &unk_60B02B80, "SE_SYS_PAGE");
@@ -17603,7 +17603,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( *(_BYTE *)(a1 + 146844) )
     {
-      v2 = sub_60834614();
+      v2 = Global_getContextVtable();
       v3 = *(_DWORD *)(a1 + 128724);
       if ( v3 != sub_603FCFF8(v2, 0)
         || (v4 = *(_DWORD *)(a1 + 128728), v4 != sub_603FCFF8(v2, 1))
@@ -17612,7 +17612,7 @@ static inline unsigned int uxtb16(unsigned int x)
         || (v7 = *(_DWORD *)(a1 + 128740), v7 != sub_603FCFF8(v2, 4))
         || (v8 = *(_DWORD *)(a1 + 128744), result = sub_603FCFF8(v2, 5), v8 != result) )
       {
-        result = *(_DWORD *)(sub_60834614() + 492);
+        result = *(_DWORD *)(Global_getContextVtable() + 492);
         switch ( result )
         {
           case 0:
@@ -17643,7 +17643,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         else
         {
-          result = *(_DWORD *)(sub_60834614() + 492);
+          result = *(_DWORD *)(Global_getContextVtable() + 492);
           if ( !result )
             return sub_6082B538(MEMORY[0xCC6E04]);
         }
@@ -19120,7 +19120,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 20276) = 0;
     v17 = (_DWORD *)(a1 + 25056);
     v1 = (_DWORD *)(a1 + 25872);
-    v2 = sub_60834614(a1);
+    v2 = Global_getContextVtable(a1);
     for ( i = 0; i != 4; ++i )
     {
       v4 = 0;
@@ -21955,7 +21955,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050292C(v7, 9);
     sub_605029C8(v7, 9);
     ListEntry_setDword172(v7, &unk_60B02C14, "SE_SYS_BACK");
-    sub_605028F0(v7, &unk_60B02C14, 1);
+    ListEntry_setBool208(v7, &unk_60B02C14, 1);
     ListEntry_setDword172(v7, 11545616, "SE_SYS_BACK");
     sub_60558180(a1 + 9296, 0);
     sub_605585A4(a1 + 9296);
@@ -24433,9 +24433,9 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502994(a1 + 3936, 15);
     sub_605029C8(a1 + 3936, 15);
     ListEntry_setDword172(a1 + 3936, &unk_60B02CF8, "SE_SYS_CURSOR");
-    sub_605028F0(a1 + 3936, &unk_60B02CF8, 1);
+    ListEntry_setBool208(a1 + 3936, &unk_60B02CF8, 1);
     ListEntry_setDword172(a1 + 3936, &unk_60B02CFC, "SE_SYS_CURSOR");
-    sub_605028F0(a1 + 3936, &unk_60B02CFC, 1);
+    ListEntry_setBool208(a1 + 3936, &unk_60B02CFC, 1);
     *(_BYTE *)(a1 + 4990) = 1;
     *(_DWORD *)(a1 + 20484) = a3;
     *(_DWORD *)(a1 + 20488) = a4;
@@ -24826,7 +24826,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = a2;
     if ( a2 >= 6 )
       v4 = 0;
-    v5 = sub_60834614();
+    v5 = Global_getContextVtable();
     if ( MEMORY[0xC89E18] || MEMORY[0xC99DD4] || (v6 = *(_DWORD *)(v5 + 492), v6 <= 4) && ((1 << v6) & 0x16) != 0 )
     {
       v7 = v5 + 72 * v4;
@@ -25380,7 +25380,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = 2;
     if ( (v4 & 0xFFFFFFFE) == 2 )
     {
-      v5 = *(_DWORD *)(((int (*)(void))sub_60834614)() + 492);
+      v5 = *(_DWORD *)(((int (*)(void))Global_getContextVtable)() + 492);
       v6 = 6;
       if ( v5 == 2 )
       {
@@ -25440,7 +25440,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     sub_604A5C00(a1, *v3, v2, *(_DWORD *)(a1 + 20492));
     v13 = sub_604A5D68(a1, v2);
-    v14 = (_DWORD *)sub_60834614(v13);
+    v14 = (_DWORD *)Global_getContextVtable(v13);
     v15 = *(_DWORD *)(a1 + 20460);
     if ( v15 )
     {
@@ -25695,7 +25695,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     v13 = sub_604A5D68(a1, a3);
-    v14 = (_DWORD *)sub_60834614(v13);
+    v14 = (_DWORD *)Global_getContextVtable(v13);
     v15 = *(_DWORD *)(a1 + 20460);
     if ( v15 )
     {
@@ -27411,7 +27411,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result += 2988;
       if ( v2 >= 61 )
       {
-        if ( *(_DWORD *)(sub_60834614(result) + 492) == 2 && *(int *)(a1 + 279736) >= 3 )
+        if ( *(_DWORD *)(Global_getContextVtable(result) + 492) == 2 && *(int *)(a1 + 279736) >= 3 )
         {
           *(_BYTE *)(a1 + 56) = 1;
           v6 = 13243792;
@@ -28769,7 +28769,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     qmemcpy(v15, v14, 0x90u);
     sub_60834718((int)v15, 6);
-    v12 = sub_60834614(v11);
+    v12 = Global_getContextVtable(v11);
     if ( *(_DWORD *)(v12 + 32) == 6 && *(_BYTE *)(v12 + 48) )
       sub_6081F2B8(MEMORY[0xCC6D78], 0, *(_DWORD *)(v12 + 44));
     if ( *(_DWORD *)(v12 + 104) == 6 && *(_BYTE *)(v12 + 120) )
@@ -28913,7 +28913,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     qmemcpy(v15, v14, 0x90u);
     sub_60834718((int)v15, 6);
-    v12 = sub_60834614(v11);
+    v12 = Global_getContextVtable(v11);
     if ( *(_DWORD *)(v12 + 32) == 6 && *(_BYTE *)(v12 + 48) )
       sub_6081F2B8(MEMORY[0xCC6D78], 0, *(_DWORD *)(v12 + 44));
     if ( *(_DWORD *)(v12 + 104) == 6 && *(_BYTE *)(v12 + 120) )
@@ -29478,7 +29478,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 += 86020;
     *(_DWORD *)(v4 - v5 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v3, 12) - *(_DWORD *)v1 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    sub_605028F0(v2, &unk_60B02D4C, 1);
+    ListEntry_setBool208(v2, &unk_60B02D4C, 1);
     ListEntry_setDword172(v2, &unk_60B02D48, "SE_SYS_BACK");
     ListEntry_setDword172(v2, &unk_60B02D50, "SE_SYS_BTN_GAME_START");
     ListEntry_setDword172(v2, &unk_60B02D54, "SE_SYS_BACK");
@@ -29729,7 +29729,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      sub_60834614(v6);
+      Global_getContextVtable(v6);
       *(_DWORD *)(a1 + 16) |= 1u;
       *(_DWORD *)(a1 + 279736) = a2;
       result = MEMORY[0xC99E24];
@@ -32931,8 +32931,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v3[0] = 12321336;
       v3[1] = "CoinEditMenu";
       sead::SafeStringBase<char>::operator=(a1 + 4620, v3);
-      sub_605028F0(a1 + 3608, &unk_60B02E70, 1);
-      sub_605028F0(a1 + 3608, &unk_60B02E74, 1);
+      ListEntry_setBool208(a1 + 3608, &unk_60B02E70, 1);
+      ListEntry_setBool208(a1 + 3608, &unk_60B02E74, 1);
       sub_604B1478(a1);
       return (_BYTE *)(*(int (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3540) + 12))(
                         *(_DWORD *)(a1 + 3540),
@@ -33049,23 +33049,23 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA1A8C);
     }
     v16 = 1;
-    sub_604755C4((int)(a1 + 5), (int)(a1 + 1542), &dword_60CA1AF0, (int)&dword_60CA1A9C, &v16);
+    Object_collectChildrenIntoArray((int)(a1 + 5), (int)(a1 + 1542), &dword_60CA1AF0, (int)&dword_60CA1A9C, &v16);
     v16 = 1;
-    sub_604755C4((int)(a1 + 5), (int)(a1 + 1543), &dword_60CA1AF8, (int)&dword_60CA1A9C, &v16);
+    Object_collectChildrenIntoArray((int)(a1 + 5), (int)(a1 + 1543), &dword_60CA1AF8, (int)&dword_60CA1A9C, &v16);
     v16 = 1;
-    sub_604755C4((int)(a1 + 5), (int)(a1 + 1544), &dword_60CA1B00, (int)&dword_60CA1A9C, &v16);
+    Object_collectChildrenIntoArray((int)(a1 + 5), (int)(a1 + 1544), &dword_60CA1B00, (int)&dword_60CA1A9C, &v16);
     v16 = 1;
-    sub_604755C4((int)(a1 + 5), (int)(a1 + 1545), &dword_60CA1B08, (int)&dword_60CA1A9C, &v16);
+    Object_collectChildrenIntoArray((int)(a1 + 5), (int)(a1 + 1545), &dword_60CA1B08, (int)&dword_60CA1A9C, &v16);
     v16 = 1;
-    sub_604755C4((int)(a1 + 5), (int)(a1 + 1546), &dword_60CA1B10, (int)&dword_60CA1A9C, &v16);
+    Object_collectChildrenIntoArray((int)(a1 + 5), (int)(a1 + 1546), &dword_60CA1B10, (int)&dword_60CA1A9C, &v16);
     v16 = 1;
-    sub_604755C4((int)(a1 + 5), (int)(a1 + 1547), &dword_60CA1B18, (int)&dword_60CA1A9C, &v16);
+    Object_collectChildrenIntoArray((int)(a1 + 5), (int)(a1 + 1547), &dword_60CA1B18, (int)&dword_60CA1A9C, &v16);
     v16 = 1;
-    sub_604755C4((int)(a1 + 5), (int)(a1 + 1548), &dword_60CA1B20, (int)&dword_60CA1A9C, &v16);
+    Object_collectChildrenIntoArray((int)(a1 + 5), (int)(a1 + 1548), &dword_60CA1B20, (int)&dword_60CA1A9C, &v16);
     v16 = 1;
-    sub_604755C4((int)(a1 + 5), (int)(a1 + 1549), &dword_60CA1B28, (int)&dword_60CA1A9C, &v16);
+    Object_collectChildrenIntoArray((int)(a1 + 5), (int)(a1 + 1549), &dword_60CA1B28, (int)&dword_60CA1A9C, &v16);
     v16 = 1;
-    sub_604755C4((int)(a1 + 5), (int)(a1 + 1550), &dword_60CA1B30, (int)&dword_60CA1A9C, &v16);
+    Object_collectChildrenIntoArray((int)(a1 + 5), (int)(a1 + 1550), &dword_60CA1B30, (int)&dword_60CA1A9C, &v16);
     Disposer_allocateChildren(a1 + 1551, 0);
     sub_60476388(a1 + 1551, (int)(a1 + 5), &dword_60CA1AF0);
     if ( ((unsigned int)&unk_60CA1A90 & ~(1615534076 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1A90) )
@@ -34332,16 +34332,16 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v9 = a1[1];
     v18[0] = 1;
-    sub_604755C4(v9, (int)(a1 + 154), &dword_60CA1C2C, (int)&dword_60CA1C1C, v18);
+    Object_collectChildrenIntoArray(v9, (int)(a1 + 154), &dword_60CA1C2C, (int)&dword_60CA1C1C, v18);
     v10 = a1[1];
     v18[0] = 1;
-    sub_604755C4(v10, (int)(a1 + 155), &dword_60CA1C34, (int)&dword_60CA1C1C, v18);
+    Object_collectChildrenIntoArray(v10, (int)(a1 + 155), &dword_60CA1C34, (int)&dword_60CA1C1C, v18);
     v11 = a1[1];
     v18[0] = 1;
-    sub_604755C4(v11, (int)(a1 + 156), &dword_60CA1C3C, (int)&dword_60CA1C24, v18);
+    Object_collectChildrenIntoArray(v11, (int)(a1 + 156), &dword_60CA1C3C, (int)&dword_60CA1C24, v18);
     v12 = a1[1];
     v18[0] = 1;
-    sub_604755C4(v12, (int)(a1 + 157), &dword_60CA1C44, (int)&dword_60CA1C24, v18);
+    Object_collectChildrenIntoArray(v12, (int)(a1 + 157), &dword_60CA1C44, (int)&dword_60CA1C24, v18);
     v13 = a1[1];
     v18[0] = 1;
     sub_60475570(v13, (int)(a1 + 147), &dword_60CA1C34, (int)&dword_60CA1C0C, v18);
@@ -37808,7 +37808,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v16 = 12321336;
         v17 = v12;
-        if ( result == 35 && *(_DWORD *)(sub_60834614(35) + 32) == 1 )
+        if ( result == 35 && *(_DWORD *)(Global_getContextVtable(35) + 32) == 1 )
         {
           v15[0] = 12321336;
           v15[1] = "ModelPlayWindow_WinText_03";
@@ -37848,7 +37848,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( MEMORY[0xC99DD4] )
         {
-          if ( *(_DWORD *)(sub_60834614(MEMORY[0xC99DD4]) + 492) == 4 && MEMORY[0xC9A1F0] )
+          if ( *(_DWORD *)(Global_getContextVtable(MEMORY[0xC99DD4]) + 492) == 4 && MEMORY[0xC9A1F0] )
           {
             sub_60408934();
           }
@@ -37858,11 +37858,11 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( (unsigned int)(v4 - 36) >= 2 )
             {
               if ( v4 == 35 )
-                sub_60834614(35);
+                Global_getContextVtable(35);
             }
             else
             {
-              sub_60834614(v4);
+              Global_getContextVtable(v4);
             }
           }
         }
@@ -41951,16 +41951,16 @@ static inline unsigned int uxtb16(unsigned int x)
     v5[1] = (int)"CourseSelectFree";
     sead::SafeStringBase<char>::operator=(a1 + 1576, v5);
     v5[0] = 0;
-    sub_605028F0(a1 + 564, v5, 1);
+    ListEntry_setBool208(a1 + 564, v5, 1);
     *(_BYTE *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
     v5[0] = 1;
-    sub_605028F0(a1 + 564, v5, 1);
+    ListEntry_setBool208(a1 + 564, v5, 1);
     *(_BYTE *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
     v5[0] = 2;
-    sub_605028F0(a1 + 564, v5, 1);
+    ListEntry_setBool208(a1 + 564, v5, 1);
     *(_BYTE *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
     v5[0] = 3;
-    sub_605028F0(a1 + 564, v5, 1);
+    ListEntry_setBool208(a1 + 564, v5, 1);
     *(_BYTE *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
     *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 192) = 0;
     v5[0] = 0;
@@ -42026,23 +42026,23 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v4 = a1[1];
     v10 = 1;
-    sub_604755C4(v4, (int)(a1 + 662), &dword_60CA2AA0, (int)&dword_60CA2A78, &v10);
+    Object_collectChildrenIntoArray(v4, (int)(a1 + 662), &dword_60CA2AA0, (int)&dword_60CA2A78, &v10);
     a1[667] = *(_DWORD *)(a1[662] + 28);
     v5 = a1[1];
     v10 = 1;
-    sub_604755C4(v5, (int)(a1 + 663), &dword_60CA2AA8, (int)&dword_60CA2A80, &v10);
+    Object_collectChildrenIntoArray(v5, (int)(a1 + 663), &dword_60CA2AA8, (int)&dword_60CA2A80, &v10);
     a1[668] = *(_DWORD *)(a1[663] + 28);
     v6 = a1[1];
     v10 = 1;
-    sub_604755C4(v6, (int)(a1 + 664), &dword_60CA2AB0, (int)&dword_60CA2A88, &v10);
+    Object_collectChildrenIntoArray(v6, (int)(a1 + 664), &dword_60CA2AB0, (int)&dword_60CA2A88, &v10);
     a1[669] = *(_DWORD *)(a1[664] + 28);
     v7 = a1[1];
     v10 = 1;
-    sub_604755C4(v7, (int)(a1 + 665), &dword_60CA2AB8, (int)dword_60CA2A90, &v10);
+    Object_collectChildrenIntoArray(v7, (int)(a1 + 665), &dword_60CA2AB8, (int)dword_60CA2A90, &v10);
     a1[670] = *(_DWORD *)(a1[665] + 28);
     v8 = a1[1];
     v10 = 1;
-    sub_604755C4(v8, (int)(a1 + 666), &dword_60CA2AC0, (int)&dword_60CA2A98, &v10);
+    Object_collectChildrenIntoArray(v8, (int)(a1 + 666), &dword_60CA2AC0, (int)&dword_60CA2A98, &v10);
     result = *(_DWORD *)(a1[666] + 28);
     a1[671] = result;
     return result;
@@ -45246,12 +45246,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = 2;
     sub_60475334(a1 + 48, a1 + 13836, &dword_60CA2F44, &v4);
     sub_604C56B0(a1);
-    sub_605028F0(a1 + 4056, &unk_60B02ED0, 1);
-    sub_605028F0(a1 + 4056, &unk_60B02ED4, 1);
-    sub_605028F0(a1 + 4056, &unk_60B02ED8, 1);
-    sub_605028F0(a1 + 4056, &unk_60B02EDC, 1);
-    sub_605028F0(a1 + 4056, &unk_60B02EE0, 1);
-    sub_605028F0(a1 + 4056, &unk_60B02EE4, 1);
+    ListEntry_setBool208(a1 + 4056, &unk_60B02ED0, 1);
+    ListEntry_setBool208(a1 + 4056, &unk_60B02ED4, 1);
+    ListEntry_setBool208(a1 + 4056, &unk_60B02ED8, 1);
+    ListEntry_setBool208(a1 + 4056, &unk_60B02EDC, 1);
+    ListEntry_setBool208(a1 + 4056, &unk_60B02EE0, 1);
+    ListEntry_setBool208(a1 + 4056, &unk_60B02EE4, 1);
     return Registry_iterateAndRegister(a1 + 6136, 0);
   }
 
@@ -45451,17 +45451,17 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA2F10);
     }
     v4 = 1;
-    sub_604755C4(a1 + 48, a1 + 13868, &dword_60CA3050, (int)&dword_60CA2F34, &v4);
+    Object_collectChildrenIntoArray(a1 + 48, a1 + 13868, &dword_60CA3050, (int)&dword_60CA2F34, &v4);
     v4 = 1;
-    sub_604755C4(a1 + 48, a1 + 13872, &dword_60CA3058, (int)&dword_60CA2F34, &v4);
+    Object_collectChildrenIntoArray(a1 + 48, a1 + 13872, &dword_60CA3058, (int)&dword_60CA2F34, &v4);
     v4 = 1;
-    sub_604755C4(a1 + 48, a1 + 13876, &dword_60CA3060, (int)&dword_60CA2F34, &v4);
+    Object_collectChildrenIntoArray(a1 + 48, a1 + 13876, &dword_60CA3060, (int)&dword_60CA2F34, &v4);
     v4 = 1;
-    sub_604755C4(a1 + 48, a1 + 13880, &dword_60CA3068, (int)&dword_60CA2F34, &v4);
+    Object_collectChildrenIntoArray(a1 + 48, a1 + 13880, &dword_60CA3068, (int)&dword_60CA2F34, &v4);
     v4 = 1;
-    sub_604755C4(a1 + 48, a1 + 13884, &dword_60CA3070, (int)&dword_60CA2F34, &v4);
+    Object_collectChildrenIntoArray(a1 + 48, a1 + 13884, &dword_60CA3070, (int)&dword_60CA2F34, &v4);
     v4 = 1;
-    return sub_604755C4(a1 + 48, a1 + 13888, &dword_60CA3078, (int)&dword_60CA2F34, &v4);
+    return Object_collectChildrenIntoArray(a1 + 48, a1 + 13888, &dword_60CA3078, (int)&dword_60CA2F34, &v4);
   }
 
 /* ============================================================================
@@ -49863,15 +49863,15 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v7 = dword_60CA4E0C;
     v9 = dword_60CA4E0C;
-    sub_605028F0(a1 + 3800, &v9, 0);
+    ListEntry_setBool208(a1 + 3800, &v9, 0);
     *(_BYTE *)(List_getNthNode(a1 + 3852, v9) - *(_DWORD *)(a1 + 3864) + 208) = 0;
     v7 = dword_60CA4E10;
     v9 = dword_60CA4E10;
-    sub_605028F0(a1 + 3800, &v9, 0);
+    ListEntry_setBool208(a1 + 3800, &v9, 0);
     *(_BYTE *)(List_getNthNode(a1 + 3852, v9) - *(_DWORD *)(a1 + 3864) + 208) = 0;
     v7 = dword_60CA4E14;
     v9 = dword_60CA4E14;
-    sub_605028F0(a1 + 3800, &v9, 0);
+    ListEntry_setBool208(a1 + 3800, &v9, 0);
     *(_BYTE *)(List_getNthNode(a1 + 3852, v9) - *(_DWORD *)(a1 + 3864) + 208) = 0;
     v7 = 0;
     v9 = 0;
@@ -55713,7 +55713,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     *(_DWORD *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 204) = 0;
-    sub_605028F0(a1 + 3640, &v5, 1);
+    ListEntry_setBool208(a1 + 3640, &v5, 1);
     *(_BYTE *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 208) = 0;
     *(_BYTE *)(a1 + 4685) = 1;
     return 4685;
@@ -56801,7 +56801,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     *(_DWORD *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 204) = 0;
-    sub_605028F0(a1 + 3692, &v8, 1);
+    ListEntry_setBool208(a1 + 3692, &v8, 1);
     *(_BYTE *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 208) = 0;
     if ( ((unsigned int)&unk_60CA4D48 & ~(1615696384 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA4D48) )
     {
@@ -56810,11 +56810,11 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v8 = dword_60CA4DC8;
     v10 = dword_60CA4DC8;
-    sub_605028F0(a1 + 3692, &v10, 0);
+    ListEntry_setBool208(a1 + 3692, &v10, 0);
     *(_BYTE *)(List_getNthNode(a1 + 3744, v10) - *(_DWORD *)(a1 + 3756) + 208) = 0;
     v8 = dword_60CA4DCC;
     v10 = dword_60CA4DCC;
-    sub_605028F0(a1 + 3692, &v10, 0);
+    ListEntry_setBool208(a1 + 3692, &v10, 0);
     *(_BYTE *)(List_getNthNode(a1 + 3744, v10) - *(_DWORD *)(a1 + 3756) + 208) = 0;
     *(_BYTE *)(a1 + 4737) = 1;
     v8 = 2;
@@ -56861,27 +56861,27 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = 1;
     v10 = 12321336;
     v11 = v3 + 136;
-    sub_604755C4((int)(a1 + 11), (int)(a1 + 1443), &v10, (int)&dword_60CA4DD0, &v9);
+    Object_collectChildrenIntoArray((int)(a1 + 11), (int)(a1 + 1443), &v10, (int)&dword_60CA4DD0, &v9);
     v4 = a1[919];
     v10 = 12321336;
     v9 = 1;
     v11 = v4 + 136;
-    sub_604755C4((int)(a1 + 11), (int)(a1 + 1444), &v10, (int)&dword_60CA4DD0, &v9);
+    Object_collectChildrenIntoArray((int)(a1 + 11), (int)(a1 + 1444), &v10, (int)&dword_60CA4DD0, &v9);
     v5 = a1[920];
     v10 = 12321336;
     v9 = 1;
     v11 = v5 + 136;
-    sub_604755C4((int)(a1 + 11), (int)(a1 + 1445), &v10, (int)&dword_60CA4DD0, &v9);
+    Object_collectChildrenIntoArray((int)(a1 + 11), (int)(a1 + 1445), &v10, (int)&dword_60CA4DD0, &v9);
     v6 = a1[921];
     v10 = 12321336;
     v9 = 1;
     v11 = v6 + 136;
-    sub_604755C4((int)(a1 + 11), (int)(a1 + 1446), &v10, (int)&dword_60CA4DD8, &v9);
+    Object_collectChildrenIntoArray((int)(a1 + 11), (int)(a1 + 1446), &v10, (int)&dword_60CA4DD8, &v9);
     v7 = a1[922];
     v10 = 12321336;
     v9 = 1;
     v11 = v7 + 136;
-    return sub_604755C4((int)(a1 + 11), (int)(a1 + 1447), &v10, (int)&dword_60CA4DD8, &v9);
+    return Object_collectChildrenIntoArray((int)(a1 + 11), (int)(a1 + 1447), &v10, (int)&dword_60CA4DD8, &v9);
   }
 
 /* ============================================================================
@@ -57226,7 +57226,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4278];
       if ( !MEMORY[0xCA4278] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4278] )
         {
@@ -57265,7 +57265,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13255348);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA427C] + 12))(13255292);
-          sub_608FBCE4(13255352, MEMORY[0xCA4280], 3);
+          String_copyUntilTerminator(13255352, MEMORY[0xCA4280], 3);
           MEMORY[0xCA4278] = 13255352;
         }
         sead::CriticalSection::unlock(v4);
@@ -57399,7 +57399,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA42C4];
       if ( !MEMORY[0xCA42C4] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA42C4] )
         {
@@ -57438,7 +57438,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13255452);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA42C8] + 12))(13255368);
-          sub_608FBCE4(13255456, MEMORY[0xCA42CC], 5);
+          String_copyUntilTerminator(13255456, MEMORY[0xCA42CC], 5);
           MEMORY[0xCA42C4] = 13255456;
         }
         sead::CriticalSection::unlock(v4);
@@ -57572,7 +57572,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4334];
       if ( !MEMORY[0xCA4334] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4334] )
         {
@@ -57611,7 +57611,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13255552);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4338] + 12))(13255480);
-          sub_608FBCE4(13255556, MEMORY[0xCA433C], 4);
+          String_copyUntilTerminator(13255556, MEMORY[0xCA433C], 4);
           MEMORY[0xCA4334] = 13255556;
         }
         sead::CriticalSection::unlock(v4);
@@ -57745,7 +57745,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4394];
       if ( !MEMORY[0xCA4394] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4394] )
         {
@@ -57784,7 +57784,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13255648);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4398] + 12))(13255576);
-          sub_608FBCE4(13255652, MEMORY[0xCA439C], 4);
+          String_copyUntilTerminator(13255652, MEMORY[0xCA439C], 4);
           MEMORY[0xCA4394] = 13255652;
         }
         sead::CriticalSection::unlock(v4);
@@ -57814,7 +57814,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA43F4];
       if ( !MEMORY[0xCA43F4] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA43F4] )
         {
@@ -57857,7 +57857,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13255796);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA43F8] + 12))(13255672);
-          sub_608FBCE4(13255800, MEMORY[0xCA43FC], 13);
+          String_copyUntilTerminator(13255800, MEMORY[0xCA43FC], 13);
           MEMORY[0xCA43F4] = 13255800;
         }
         sead::CriticalSection::unlock(v4);
@@ -57991,7 +57991,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA44AC];
       if ( !MEMORY[0xCA44AC] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA44AC] )
         {
@@ -58034,7 +58034,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13255980);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA44B0] + 12))(13255856);
-          sub_608FBCE4(13255984, MEMORY[0xCA44B4], 9);
+          String_copyUntilTerminator(13255984, MEMORY[0xCA44B4], 9);
           MEMORY[0xCA44AC] = 13255984;
         }
         sead::CriticalSection::unlock(v4);
@@ -58168,7 +58168,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4554];
       if ( !MEMORY[0xCA4554] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4554] )
         {
@@ -58226,7 +58226,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13256816);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4558] + 12))(13256024);
-          sub_608FBCE4(13256820, MEMORY[0xCA455C], 49);
+          String_copyUntilTerminator(13256820, MEMORY[0xCA455C], 49);
           MEMORY[0xCA4554] = 13256820;
         }
         sead::CriticalSection::unlock(v4);
@@ -58360,7 +58360,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4938];
       if ( !MEMORY[0xCA4938] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4938] )
         {
@@ -58405,7 +58405,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257216);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA493C] + 12))(13257020);
-          sub_608FBCE4(13257220, MEMORY[0xCA4940], 13);
+          String_copyUntilTerminator(13257220, MEMORY[0xCA4940], 13);
           MEMORY[0xCA4938] = 13257220;
         }
         sead::CriticalSection::unlock(v4);
@@ -58539,7 +58539,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4A38];
       if ( !MEMORY[0xCA4A38] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4A38] )
         {
@@ -58578,7 +58578,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257308);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4A3C] + 12))(13257276);
-          sub_608FBCE4(13257312, MEMORY[0xCA4A40], 3);
+          String_copyUntilTerminator(13257312, MEMORY[0xCA4A40], 3);
           MEMORY[0xCA4A38] = 13257312;
         }
         sead::CriticalSection::unlock(v4);
@@ -58712,7 +58712,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4A6C];
       if ( !MEMORY[0xCA4A6C] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4A6C] )
         {
@@ -58751,7 +58751,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257352);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4A70] + 12))(13257328);
-          sub_608FBCE4(13257356, MEMORY[0xCA4A74], 2);
+          String_copyUntilTerminator(13257356, MEMORY[0xCA4A74], 2);
           MEMORY[0xCA4A6C] = 13257356;
         }
         sead::CriticalSection::unlock(v4);
@@ -58781,7 +58781,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4A94];
       if ( !MEMORY[0xCA4A94] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4A94] )
         {
@@ -58820,7 +58820,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257404);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4A98] + 12))(13257368);
-          sub_608FBCE4(13257408, MEMORY[0xCA4A9C], 2);
+          String_copyUntilTerminator(13257408, MEMORY[0xCA4A9C], 2);
           MEMORY[0xCA4A94] = 13257408;
         }
         sead::CriticalSection::unlock(v4);
@@ -58954,7 +58954,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4AC8];
       if ( !MEMORY[0xCA4AC8] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4AC8] )
         {
@@ -58993,7 +58993,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257472);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4ACC] + 12))(13257420);
-          sub_608FBCE4(13257476, MEMORY[0xCA4AD0], 3);
+          String_copyUntilTerminator(13257476, MEMORY[0xCA4AD0], 3);
           MEMORY[0xCA4AC8] = 13257476;
         }
         sead::CriticalSection::unlock(v4);
@@ -59127,7 +59127,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4B10];
       if ( !MEMORY[0xCA4B10] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4B10] )
         {
@@ -59166,7 +59166,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257512);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4B14] + 12))(13257492);
-          sub_608FBCE4(13257516, MEMORY[0xCA4B18], 1);
+          String_copyUntilTerminator(13257516, MEMORY[0xCA4B18], 1);
           MEMORY[0xCA4B10] = 13257516;
         }
         sead::CriticalSection::unlock(v4);
@@ -59196,7 +59196,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4B30];
       if ( !MEMORY[0xCA4B30] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4B30] )
         {
@@ -59235,7 +59235,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257564);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4B34] + 12))(13257524);
-          sub_608FBCE4(13257568, MEMORY[0xCA4B38], 2);
+          String_copyUntilTerminator(13257568, MEMORY[0xCA4B38], 2);
           MEMORY[0xCA4B30] = 13257568;
         }
         sead::CriticalSection::unlock(v4);
@@ -59369,7 +59369,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4B68];
       if ( !MEMORY[0xCA4B68] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4B68] )
         {
@@ -59408,7 +59408,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257632);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4B6C] + 12))(13257580);
-          sub_608FBCE4(13257636, MEMORY[0xCA4B70], 4);
+          String_copyUntilTerminator(13257636, MEMORY[0xCA4B70], 4);
           MEMORY[0xCA4B68] = 13257636;
         }
         sead::CriticalSection::unlock(v4);
@@ -59438,7 +59438,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4BB4];
       if ( !MEMORY[0xCA4BB4] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4BB4] )
         {
@@ -59477,7 +59477,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257680);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4BB8] + 12))(13257656);
-          sub_608FBCE4(13257684, MEMORY[0xCA4BBC], 1);
+          String_copyUntilTerminator(13257684, MEMORY[0xCA4BBC], 1);
           MEMORY[0xCA4BB4] = 13257684;
         }
         sead::CriticalSection::unlock(v4);
@@ -59611,7 +59611,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4BD8];
       if ( !MEMORY[0xCA4BD8] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4BD8] )
         {
@@ -59650,7 +59650,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257760);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4BDC] + 12))(13257692);
-          sub_608FBCE4(13257764, MEMORY[0xCA4BE0], 4);
+          String_copyUntilTerminator(13257764, MEMORY[0xCA4BE0], 4);
           MEMORY[0xCA4BD8] = 13257764;
         }
         sead::CriticalSection::unlock(v4);
@@ -59784,7 +59784,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4C34];
       if ( !MEMORY[0xCA4C34] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4C34] )
         {
@@ -59823,7 +59823,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257868);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4C38] + 12))(13257784);
-          sub_608FBCE4(13257872, MEMORY[0xCA4C3C], 5);
+          String_copyUntilTerminator(13257872, MEMORY[0xCA4C3C], 5);
           MEMORY[0xCA4C34] = 13257872;
         }
         sead::CriticalSection::unlock(v4);
@@ -59853,7 +59853,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4CA4];
       if ( !MEMORY[0xCA4CA4] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4CA4] )
         {
@@ -59892,7 +59892,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13257960);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA4CA8] + 12))(13257896);
-          sub_608FBCE4(13257964, MEMORY[0xCA4CAC], 4);
+          String_copyUntilTerminator(13257964, MEMORY[0xCA4CAC], 4);
           MEMORY[0xCA4CA4] = 13257964;
         }
         sead::CriticalSection::unlock(v4);
@@ -65028,7 +65028,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( MEMORY[0xCC6D78] )
     {
-      *(_DWORD *)(a1 + 544) = *(_DWORD *)(sub_60834614(MEMORY[0xCC6D78]) + 452);
+      *(_DWORD *)(a1 + 544) = *(_DWORD *)(Global_getContextVtable(MEMORY[0xCC6D78]) + 452);
       v2 = *(_DWORD *)(a1 + 62840);
       if ( v2 )
       {
@@ -65153,7 +65153,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 4560) = 1;
   LABEL_26:
     v15 = *(_DWORD *)(a1 + 62860);
-    v16 = (_BYTE *)sub_60834614(62860);
+    v16 = (_BYTE *)Global_getContextVtable(62860);
     v17 = sub_603FD0B4(v16);
     v18 = v15 - v17;
     if ( v15 != v17 )
@@ -65177,12 +65177,12 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
   LABEL_35:
-    v19 = (_BYTE *)sub_60834614(v17);
+    v19 = (_BYTE *)Global_getContextVtable(v17);
     *(_DWORD *)(a1 + 62860) = sub_603FD0B4(v19);
     sub_604E6D24(a1);
     sub_604E7960(a1, 0);
     v20 = sub_604E7C78(a1, 0);
-    v21 = *(_DWORD *)(sub_60834614(v20) + 456);
+    v21 = *(_DWORD *)(Global_getContextVtable(v20) + 456);
     if ( *(_DWORD *)(a1 + 548) != v21 )
     {
       *(_DWORD *)(a1 + 548) = v21;
@@ -65407,7 +65407,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( MEMORY[0xCC6D78] )
     {
-      *(_DWORD *)(a1 + 544) = *(_DWORD *)(sub_60834614(MEMORY[0xCC6D78]) + 452);
+      *(_DWORD *)(a1 + 544) = *(_DWORD *)(Global_getContextVtable(MEMORY[0xCC6D78]) + 452);
       v2 = *(_DWORD *)(a1 + 62840);
       if ( v2 )
       {
@@ -65433,7 +65433,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r0
     int v7; // r7
   
-    v2 = sub_60834614(a1);
+    v2 = Global_getContextVtable(a1);
     if ( *(_BYTE *)(v2 + 20) )
     {
       v3 = 0;
@@ -65462,7 +65462,7 @@ static inline unsigned int uxtb16(unsigned int x)
             *v4 = v6;
           }
         }
-        v2 = sub_60834614(v6);
+        v2 = Global_getContextVtable(v6);
       }
       while ( *(_BYTE *)(v2 + 72 * v3 + 20) );
     }
@@ -65498,8 +65498,8 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v5 = sub_60834614(0);
-      v6 = sub_60834614(v5);
+      v5 = Global_getContextVtable(0);
+      v6 = Global_getContextVtable(v5);
       if ( *(_BYTE *)(v6 + 20) )
       {
         v7 = 1;
@@ -65520,7 +65520,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v11 = *v9 | 1;
             *v9 = v11;
           }
-          v6 = sub_60834614(v11);
+          v6 = Global_getContextVtable(v11);
           if ( v7 > 3 )
             break;
           v12 = v6 + v8;
@@ -65864,7 +65864,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     v7 = sub_604E5CC0((_DWORD *)a1);
-    v8 = *(_DWORD *)(sub_60834614(v7) + 492);
+    v8 = *(_DWORD *)(Global_getContextVtable(v7) + 492);
     switch ( v8 )
     {
       case 0:
@@ -65905,7 +65905,7 @@ static inline unsigned int uxtb16(unsigned int x)
             }
           }
         }
-        v14 = (_BYTE *)sub_60834614(v11);
+        v14 = (_BYTE *)Global_getContextVtable(v11);
         *(_DWORD *)(a1 + 62860) = sub_603FD0B4(v14);
         *(_DWORD *)(a1 + 4552) = 0;
         v9 = (_DWORD *)(a1 + 4536);
@@ -65959,7 +65959,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = MEMORY[0xCC6D78];
     if ( MEMORY[0xCC6D78] )
     {
-      v3 = *(_DWORD *)(sub_60834614(MEMORY[0xCC6D78]) + 492);
+      v3 = *(_DWORD *)(Global_getContextVtable(MEMORY[0xCC6D78]) + 492);
       if ( v3 == 2 )
       {
         v6 = sub_604E6204();
@@ -65985,7 +65985,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else if ( (*(_BYTE *)(MEMORY[0xCC6D78] + 44) & 1) != 0 )
       {
-        v7 = sub_60834614(MEMORY[0xCC6D78]);
+        v7 = Global_getContextVtable(MEMORY[0xCC6D78]);
         v4 = 1;
         v8 = *(_DWORD *)(v7 + 32) == 0;
         if ( a1[11089] != v8 )
@@ -66037,7 +66037,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v10 == v4 )
         {
   LABEL_11:
-          v8 = (_BYTE *)sub_60834614(v10);
+          v8 = (_BYTE *)Global_getContextVtable(v10);
           sub_603FD0B4(v8);
           return (*(int (__fastcall **)(int))(*(_DWORD *)v3 + 96))(v3);
         }
@@ -66256,18 +66256,18 @@ static inline unsigned int uxtb16(unsigned int x)
     bool v15; // zf
   
     v1 = 0;
-    if ( *(_DWORD *)(sub_60834614(a1) + 492) != 2 )
+    if ( *(_DWORD *)(Global_getContextVtable(a1) + 492) != 2 )
       return v1;
-    v2 = sub_60834614(2);
-    v3 = sub_60834614(v2);
+    v2 = Global_getContextVtable(2);
+    v3 = Global_getContextVtable(v2);
     if ( !*(_BYTE *)(v3 + 20) )
       return v1;
     v4 = *(_DWORD *)(v3 + 40);
-    v5 = sub_60834614(v3);
+    v5 = Global_getContextVtable(v3);
     if ( !*(_BYTE *)(v5 + 92) )
       return v1;
     v6 = *(_DWORD *)(v5 + 112);
-    v7 = sub_60834614(v5);
+    v7 = Global_getContextVtable(v5);
     if ( !*(_BYTE *)(v7 + 164) )
       return v1;
     v8 = *(_DWORD *)(v7 + 184);
@@ -66282,7 +66282,7 @@ static inline unsigned int uxtb16(unsigned int x)
       ++v6;
     if ( v8 == 1 )
       ++v6;
-    v10 = sub_60834614(v8);
+    v10 = Global_getContextVtable(v8);
     if ( *(_BYTE *)(v10 + 236) )
     {
       v11 = *(_DWORD *)(v10 + 256);
@@ -66290,9 +66290,9 @@ static inline unsigned int uxtb16(unsigned int x)
         ++v9;
       if ( v11 == 1 )
         ++v6;
-      v10 = *(unsigned __int8 *)(sub_60834614(v11) + 308);
+      v10 = *(unsigned __int8 *)(Global_getContextVtable(v11) + 308);
       if ( v10 )
-        v10 = sub_60834614(v10);
+        v10 = Global_getContextVtable(v10);
       v12 = v6 == 3;
       if ( v6 == 3 )
       {
@@ -66562,7 +66562,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = *(_DWORD *)(a1 + 62856);
     if ( v3 <= 3 )
     {
-      v5 = sub_60834614(v3);
+      v5 = Global_getContextVtable(v3);
       v6 = 0;
       v2 = 0;
       v1 = 0;
@@ -66575,8 +66575,8 @@ static inline unsigned int uxtb16(unsigned int x)
         v1 = *v4;
       }
     }
-    v7 = sub_60834614(v3);
-    result = sub_60834614(v7);
+    v7 = Global_getContextVtable(v3);
+    result = Global_getContextVtable(v7);
     if ( *(_BYTE *)(result + 20) )
     {
       v9 = *(_DWORD *)(result + 72);
@@ -66585,7 +66585,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v1 = 0;
         v2 = v9;
       }
-      result = sub_60834614(v9);
+      result = Global_getContextVtable(v9);
       if ( *(_BYTE *)(result + 92) )
       {
         v10 = *(_DWORD *)(result + 144);
@@ -66594,7 +66594,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v1 = 1;
           v2 = v10;
         }
-        result = sub_60834614(v10);
+        result = Global_getContextVtable(v10);
         if ( *(_BYTE *)(result + 164) )
         {
           v11 = *(_DWORD *)(result + 216);
@@ -66603,7 +66603,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v1 = 2;
             v2 = v11;
           }
-          result = sub_60834614(v11);
+          result = Global_getContextVtable(v11);
           if ( *(_BYTE *)(result + 236) )
           {
             v12 = *(_DWORD *)(result + 288);
@@ -66612,7 +66612,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v1 = 3;
               v2 = v12;
             }
-            result = sub_60834614(v12);
+            result = Global_getContextVtable(v12);
             if ( *(_BYTE *)(result + 308) )
             {
               v13 = *(_DWORD *)(result + 360);
@@ -66621,7 +66621,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 v1 = 4;
                 v2 = v13;
               }
-              result = sub_60834614(v13);
+              result = Global_getContextVtable(v13);
               if ( *(_BYTE *)(result + 380) )
               {
                 result = *(_DWORD *)(result + 432);
@@ -66679,14 +66679,14 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // r1
     _DWORD *v11; // r1
   
-    result = sub_60834614(a1);
+    result = Global_getContextVtable(a1);
     v3 = 0;
     v4 = 0;
     v5 = 0;
     v6 = 0;
     do
     {
-      result = sub_60834614(result) + v3;
+      result = Global_getContextVtable(result) + v3;
       if ( !*(_BYTE *)(result + 20) )
         break;
       v7 = *(_DWORD *)(result + 40);
@@ -66772,8 +66772,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v12; // r0
     int v13; // r1
   
-    v2 = sub_60834614(a1);
-    result = sub_60834614(v2);
+    v2 = Global_getContextVtable(a1);
+    result = Global_getContextVtable(v2);
     if ( *(_BYTE *)(result + 20) )
     {
       v4 = 0;
@@ -66808,7 +66808,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v12 = v9[11091] | 2;
           v9[11091] = v12;
         }
-        result = sub_60834614(v12);
+        result = Global_getContextVtable(v12);
         if ( (int)++v5 > 3 )
           break;
         v13 = result + v4;
@@ -67392,7 +67392,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = MEMORY[0xCC6D78];
     if ( MEMORY[0xCC6D78] )
     {
-      v5 = *(_DWORD *)(sub_60834614(MEMORY[0xCC6D78]) + 452);
+      v5 = *(_DWORD *)(Global_getContextVtable(MEMORY[0xCC6D78]) + 452);
       if ( !a2 )
       {
         result = *(_DWORD *)(a1 + 544);
@@ -70116,11 +70116,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502994(a1 + 14396, 15);
     sub_605029C8(a1 + 14396, 15);
     ListEntry_setDword172(a1 + 14396, a1 + 16476, "SE_SYS_PAGE");
-    sub_605028F0(a1 + 14396, a1 + 16476, 1);
+    ListEntry_setBool208(a1 + 14396, a1 + 16476, 1);
     ListEntry_setDword172(a1 + 14396, a1 + 16480, "SE_SYS_PAGE");
-    sub_605028F0(a1 + 14396, a1 + 16480, 1);
+    ListEntry_setBool208(a1 + 14396, a1 + 16480, 1);
     ListEntry_setDword172(a1 + 14396, a1 + 16484, "SE_SYS_BACK");
-    sub_605028F0(a1 + 14396, a1 + 16484, 1);
+    ListEntry_setBool208(a1 + 14396, a1 + 16484, 1);
     *(_DWORD *)(List_getNthNode(a1 + 14448, *v3) - *(_DWORD *)(a1 + 14460) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 14448, *v3) - *(_DWORD *)(a1 + 14460) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     v7 = sub_604EC71C();
@@ -73061,7 +73061,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA6594);
     }
     v12 = 1;
-    sub_604755C4(a1 + 42520, a1 + 74440, &dword_60CA6718, (int)&dword_60CA65A0, &v12);
+    Object_collectChildrenIntoArray(a1 + 42520, a1 + 74440, &dword_60CA6718, (int)&dword_60CA65A0, &v12);
     if ( ((unsigned int)&unk_60CA6598 & ~(1615793388 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA6598) )
     {
       dword_60CA65A8 = 12321336;
@@ -73178,7 +73178,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7[1] = "ItemList";
     sead::SafeStringBase<char>::operator=(v1 + 11775, v7);
     ListEntry_setDword172(v2, &unk_60B03214, "SE_SYS_BACK");
-    sub_605028F0(v2, &unk_60B03214, 1);
+    ListEntry_setBool208(v2, &unk_60B03214, 1);
     v3 = v1 + 11535;
     v4 = List_getNthNode(v1 + 11535, 0);
     v5 = v1[11538];
@@ -80222,11 +80222,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050292C(a1 + 35508, 15);
     sub_605029C8(a1 + 35508, 15);
     ListEntry_setDword172(v6, &unk_60B035AC, "SE_SYS_PAGE");
-    sub_605028F0(v6, &unk_60B035AC, 1);
+    ListEntry_setBool208(v6, &unk_60B035AC, 1);
     v18 = a1;
     *(_DWORD *)(List_getNthNode(a1 + 35560, 18) - *(_DWORD *)(a1 + 35572) + 184) = "SE_SYS_PAGE";
     ListEntry_setDword172(v6, &unk_60B035B0, "SE_SYS_PAGE");
-    sub_605028F0(v6, &unk_60B035B0, 1);
+    ListEntry_setBool208(v6, &unk_60B035B0, 1);
     v8 = List_getNthNode(a1 + 35560, 19);
     v9 = *(_DWORD *)(a1 + 35572);
     v10 = 0;
@@ -80606,8 +80606,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 39792) = -1;
     *(_DWORD *)(a1 + 39788) = ListNode_findByKey(a1 + 31900, (_DWORD *)0xCA70A0, &dword_60CA7304);
     *(_DWORD *)(a1 + 39792) = ListNode_findByKey(a1 + 31900, (_DWORD *)0xCA70A0, &dword_60CA730C);
-    sub_605028F0(a1 + 35508, 11548068, 1);
-    sub_605028F0(a1 + 35508, 11548072, 1);
+    ListEntry_setBool208(a1 + 35508, 11548068, 1);
+    ListEntry_setBool208(a1 + 35508, 11548072, 1);
     if ( ((unsigned int)&unk_60CA72C0 & ~(1615845168 << v10) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA72C0) )
     {
       dword_60CA72DC = 12321336;
@@ -80616,9 +80616,9 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA72C0);
     }
     v12 = 1;
-    sub_604755C4(a1 + 31900, a1 + 37760, &dword_60CA7288, (int)&dword_60CA72DC, &v12);
+    Object_collectChildrenIntoArray(a1 + 31900, a1 + 37760, &dword_60CA7288, (int)&dword_60CA72DC, &v12);
     v12 = 1;
-    return sub_604755C4(a1 + 31900, a1 + 37764, &dword_60CA7290, (int)&dword_60CA72DC, &v12);
+    return Object_collectChildrenIntoArray(a1 + 31900, a1 + 37764, &dword_60CA7290, (int)&dword_60CA72DC, &v12);
   }
 
 /* ============================================================================
@@ -81912,7 +81912,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ListEntry_setDword172(a1 + 56, a1 + 2136, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 108, *(_DWORD *)(a1 + 2136)) - *(_DWORD *)(a1 + 120) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 108, *(_DWORD *)(a1 + 2136)) - *(_DWORD *)(a1 + 120) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    return sub_605028F0(a1 + 56, a1 + 2136, 1);
+    return ListEntry_setBool208(a1 + 56, a1 + 2136, 1);
   }
 
 /* ============================================================================
@@ -84165,7 +84165,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605028F0
+ * ListEntry_setBool208
  * RVA 0x005028f0   size 0x3c   xrefs 69
  * ============================================================================ */
   int __fastcall sub_605028F0(int a1, _DWORD *a2, int a3)
@@ -86755,7 +86755,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA77F0];
       if ( !MEMORY[0xCA77F0] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA77F0] )
         {
@@ -86797,7 +86797,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13269076);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA77F4] + 12))(13268980);
-          sub_608FBCE4(13269080, MEMORY[0xCA77F8], 7);
+          String_copyUntilTerminator(13269080, MEMORY[0xCA77F8], 7);
           MEMORY[0xCA77F0] = 13269080;
         }
         sead::CriticalSection::unlock(v4);
@@ -86931,7 +86931,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7874];
       if ( !MEMORY[0xCA7874] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7874] )
         {
@@ -86970,7 +86970,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13269184);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA7878] + 12))(13269112);
-          sub_608FBCE4(13269188, MEMORY[0xCA787C], 6);
+          String_copyUntilTerminator(13269188, MEMORY[0xCA787C], 6);
           MEMORY[0xCA7874] = 13269188;
         }
         sead::CriticalSection::unlock(v4);
@@ -87407,7 +87407,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7934];
       if ( !MEMORY[0xCA7934] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7934] )
         {
@@ -87446,7 +87446,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13269364);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA7938] + 12))(13269304);
-          sub_608FBCE4(13269368, MEMORY[0xCA793C], 4);
+          String_copyUntilTerminator(13269368, MEMORY[0xCA793C], 4);
           MEMORY[0xCA7934] = 13269368;
         }
         sead::CriticalSection::unlock(v4);
@@ -87580,7 +87580,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7988];
       if ( !MEMORY[0xCA7988] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7988] )
         {
@@ -87622,7 +87622,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13269488);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA798C] + 12))(13269388);
-          sub_608FBCE4(13269492, MEMORY[0xCA7990], 4);
+          String_copyUntilTerminator(13269492, MEMORY[0xCA7990], 4);
           MEMORY[0xCA7988] = 13269492;
         }
         sead::CriticalSection::unlock(v4);
@@ -91478,7 +91478,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7F0C];
       if ( !MEMORY[0xCA7F0C] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7F0C] )
         {
@@ -91517,7 +91517,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13270836);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA7F10] + 12))(13270800);
-          sub_608FBCE4(13270840, MEMORY[0xCA7F14], 3);
+          String_copyUntilTerminator(13270840, MEMORY[0xCA7F14], 3);
           MEMORY[0xCA7F0C] = 13270840;
         }
         sead::CriticalSection::unlock(v4);
@@ -91651,7 +91651,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7F44];
       if ( !MEMORY[0xCA7F44] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7F44] )
         {
@@ -91690,7 +91690,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13270884);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA7F48] + 12))(13270856);
-          sub_608FBCE4(13270888, MEMORY[0xCA7F4C], 1);
+          String_copyUntilTerminator(13270888, MEMORY[0xCA7F4C], 1);
           MEMORY[0xCA7F44] = 13270888;
         }
         sead::CriticalSection::unlock(v4);
@@ -91824,7 +91824,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7F6C];
       if ( !MEMORY[0xCA7F6C] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7F6C] )
         {
@@ -91863,7 +91863,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13270940);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA7F70] + 12))(13270896);
-          sub_608FBCE4(13270944, MEMORY[0xCA7F74], 3);
+          String_copyUntilTerminator(13270944, MEMORY[0xCA7F74], 3);
           MEMORY[0xCA7F6C] = 13270944;
         }
         sead::CriticalSection::unlock(v4);
@@ -92224,7 +92224,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7FF0];
       if ( !MEMORY[0xCA7FF0] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7FF0] )
         {
@@ -92263,7 +92263,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13271056);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA7FF4] + 12))(13271028);
-          sub_608FBCE4(13271060, MEMORY[0xCA7FF8], 1);
+          String_copyUntilTerminator(13271060, MEMORY[0xCA7FF8], 1);
           MEMORY[0xCA7FF0] = 13271060;
         }
         sead::CriticalSection::unlock(v4);
@@ -92293,7 +92293,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8018];
       if ( !MEMORY[0xCA8018] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8018] )
         {
@@ -92332,7 +92332,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13271092);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA801C] + 12))(13271068);
-          sub_608FBCE4(13271096, MEMORY[0xCA8020], 1);
+          String_copyUntilTerminator(13271096, MEMORY[0xCA8020], 1);
           MEMORY[0xCA8018] = 13271096;
         }
         sead::CriticalSection::unlock(v4);
@@ -94375,7 +94375,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3 = (int *)(a1 + 9568);
     v2 = *(_DWORD *)(a1 + 9568);
-    v4 = sub_60834614(9568);
+    v4 = Global_getContextVtable(9568);
     v5 = v2;
     if ( v2 >= 6 )
       v5 = 0;
@@ -94968,7 +94968,7 @@ static inline unsigned int uxtb16(unsigned int x)
         (*(void (__fastcall **)(int))(*(_DWORD *)v2 + 104))(v2);
     }
     v3 = T_Btn_00_ref_511208(a1);
-    if ( !*(_DWORD *)(sub_60834614(v3) + 492) && MEMORY[0xCC6D78] && *(_BYTE *)(MEMORY[0xCC6D78] + 109032) )
+    if ( !*(_DWORD *)(Global_getContextVtable(v3) + 492) && MEMORY[0xCC6D78] && *(_BYTE *)(MEMORY[0xCC6D78] + 109032) )
     {
       v5 = *(_DWORD *)(a1 + 9544);
       if ( v5 )
@@ -95197,7 +95197,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605115FC(int a1)
   {
-    if ( *(_DWORD *)(sub_60834614(a1) + 492) == 3 )
+    if ( *(_DWORD *)(Global_getContextVtable(a1) + 492) == 3 )
       return sub_60478680((int)"SE_SYS_PAUSE", 5);
     else
       return sub_60478680((int)"SE_SYS_PAUSE", 9);
@@ -95235,7 +95235,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( !v6 )
       {
-        result = *(_DWORD *)(sub_60834614(result) + 492);
+        result = *(_DWORD *)(Global_getContextVtable(result) + 492);
         if ( !result )
         {
           v7 = sub_6019A628(*(_BYTE *)(v1 + 16), *(_BYTE *)(v1 + 17));
@@ -96496,7 +96496,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = ArrayOf20_getEntryPtr(v1, 1);
       if ( result )
       {
-        if ( *(_DWORD *)(sub_60834614(result) + 492) == 4 && MEMORY[0xC9A1F0] )
+        if ( *(_DWORD *)(Global_getContextVtable(result) + 492) == 4 && MEMORY[0xC9A1F0] )
           sub_60408934();
         result = ArrayOf20_getEntryPtr(v1, 1);
         if ( result )
@@ -96522,7 +96522,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = ArrayOf20_getEntryPtr(v1, 5);
       if ( result )
       {
-        sub_60834614(result);
+        Global_getContextVtable(result);
         result = ArrayOf20_getEntryPtr(v1, 5);
         if ( result )
           return (*(int (__fastcall **)(int))(*(_DWORD *)result + 96))(result);
@@ -96715,7 +96715,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
   LABEL_41:
     v33 = sub_60511640(v51);
-    result = *(_DWORD *)(sub_60834614(v33) + 492);
+    result = *(_DWORD *)(Global_getContextVtable(v33) + 492);
     if ( result )
       return result;
     if ( MEMORY[0xC9A684] )
@@ -97322,7 +97322,7 @@ static inline unsigned int uxtb16(unsigned int x)
       ArrayOf20_getEntryPtr(a1 + 48, 0);
   LABEL_7:
     *v3 = 3;
-    v5 = sub_60834614(3);
+    v5 = Global_getContextVtable(3);
     v7 = *(_DWORD *)(a1 + 12924);
     if ( (*(_DWORD *)(v5 + 492) & 0xFFFFFFFE) == 2 )
     {
@@ -97876,7 +97876,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502994(v2, 15);
     sub_605029C8(v2, 15);
     ListEntry_setDword172(v2, a1 + 12892, "SE_SYS_BACK");
-    sub_605028F0(v2, (_DWORD *)(a1 + 12892), 1);
+    ListEntry_setBool208(v2, (_DWORD *)(a1 + 12892), 1);
     *(_DWORD *)(List_getNthNode(a1 + 3648, *(_DWORD *)(a1 + 12892)) - *(_DWORD *)(a1 + 3660) + 176) = "SE_SYS_BACK_BTN_OVER";
     result = List_getNthNode(a1 + 3648, *(_DWORD *)(a1 + 12892)) - *(_DWORD *)(a1 + 3660);
     *(_DWORD *)(result + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
@@ -99208,7 +99208,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA877C];
       if ( !MEMORY[0xCA877C] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA877C] )
         {
@@ -99247,7 +99247,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13273008);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA8780] + 12))(13272960);
-          sub_608FBCE4(13273012, MEMORY[0xCA8784], 5);
+          String_copyUntilTerminator(13273012, MEMORY[0xCA8784], 5);
           MEMORY[0xCA877C] = 13273012;
         }
         sead::CriticalSection::unlock(v4);
@@ -99381,7 +99381,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA87C8];
       if ( !MEMORY[0xCA87C8] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA87C8] )
         {
@@ -99423,7 +99423,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13273132);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA87CC] + 12))(13273036);
-          sub_608FBCE4(13273136, MEMORY[0xCA87D0], 7);
+          String_copyUntilTerminator(13273136, MEMORY[0xCA87D0], 7);
           MEMORY[0xCA87C8] = 13273136;
         }
         sead::CriticalSection::unlock(v4);
@@ -101324,7 +101324,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8A74];
       if ( !MEMORY[0xCA8A74] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8A74] )
         {
@@ -101363,7 +101363,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13273792);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA8A78] + 12))(13273720);
-          sub_608FBCE4(13273796, MEMORY[0xCA8A7C], 4);
+          String_copyUntilTerminator(13273796, MEMORY[0xCA8A7C], 4);
           MEMORY[0xCA8A74] = 13273796;
         }
         sead::CriticalSection::unlock(v4);
@@ -101393,7 +101393,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8AD4];
       if ( !MEMORY[0xCA8AD4] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8AD4] )
         {
@@ -101432,7 +101432,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13273884);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA8AD8] + 12))(13273816);
-          sub_608FBCE4(13273888, MEMORY[0xCA8ADC], 4);
+          String_copyUntilTerminator(13273888, MEMORY[0xCA8ADC], 4);
           MEMORY[0xCA8AD4] = 13273888;
         }
         sead::CriticalSection::unlock(v4);
@@ -101566,7 +101566,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8B30];
       if ( !MEMORY[0xCA8B30] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8B30] )
         {
@@ -101608,7 +101608,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13274004);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA8B34] + 12))(13273908);
-          sub_608FBCE4(13274008, MEMORY[0xCA8B38], 9);
+          String_copyUntilTerminator(13274008, MEMORY[0xCA8B38], 9);
           MEMORY[0xCA8B30] = 13274008;
         }
         sead::CriticalSection::unlock(v4);
@@ -103964,7 +103964,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8E3C];
       if ( !MEMORY[0xCA8E3C] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8E3C] )
         {
@@ -104003,7 +104003,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13274744);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA8E40] + 12))(13274688);
-          sub_608FBCE4(13274748, MEMORY[0xCA8E44], 6);
+          String_copyUntilTerminator(13274748, MEMORY[0xCA8E44], 6);
           MEMORY[0xCA8E3C] = 13274748;
         }
         sead::CriticalSection::unlock(v4);
@@ -104033,7 +104033,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8E94];
       if ( !MEMORY[0xCA8E94] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8E94] )
         {
@@ -104072,7 +104072,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13274824);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA8E98] + 12))(13274776);
-          sub_608FBCE4(13274828, MEMORY[0xCA8E9C], 3);
+          String_copyUntilTerminator(13274828, MEMORY[0xCA8E9C], 3);
           MEMORY[0xCA8E94] = 13274828;
         }
         sead::CriticalSection::unlock(v4);
@@ -104879,11 +104879,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = 1;
     v5 = 12321336;
     v6 = "Pa_ArrowL_00";
-    sub_604755C4(a1 + 40, a1 + 15036, &v5, (int)&dword_60CA9134, &v4);
+    Object_collectChildrenIntoArray(a1 + 40, a1 + 15036, &v5, (int)&dword_60CA9134, &v4);
     v5 = 12321336;
     v4 = 1;
     v6 = "Pa_ArrowR_00";
-    sub_604755C4(a1 + 40, a1 + 15040, &v5, (int)&dword_60CA9134, &v4);
+    Object_collectChildrenIntoArray(a1 + 40, a1 + 15040, &v5, (int)&dword_60CA9134, &v4);
     Registry_iterateAndRegister(a1 + 13008, 0);
     Registry_iterateAndRegister(a1 + 13412, 1);
     Registry_iterateAndRegister(a1 + 13816, 2);
@@ -105090,7 +105090,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ListEntry_setDword172(a1 + 927, v11, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 940, v11[0]) - a1[943] + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 940, v11[0]) - a1[943] + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    sub_605028F0((int)(a1 + 927), v11, 1);
+    ListEntry_setBool208((int)(a1 + 927), v11, 1);
     result = List_getNthNode(a1 + 940, v11[0]) - a1[943];
     *(_BYTE *)(result + 208) = 0;
     return result;
@@ -106857,7 +106857,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA939C];
       if ( !MEMORY[0xCA939C] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA939C] )
         {
@@ -106901,7 +106901,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13276240);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA93A0] + 12))(13276064);
-          sub_608FBCE4(13276244, MEMORY[0xCA93A4], 16);
+          String_copyUntilTerminator(13276244, MEMORY[0xCA93A4], 16);
           MEMORY[0xCA939C] = 13276244;
         }
         sead::CriticalSection::unlock(v4);
@@ -107035,7 +107035,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA9494];
       if ( !MEMORY[0xCA9494] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA9494] )
         {
@@ -107074,7 +107074,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13276352);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA9498] + 12))(13276312);
-          sub_608FBCE4(13276356, MEMORY[0xCA949C], 2);
+          String_copyUntilTerminator(13276356, MEMORY[0xCA949C], 2);
           MEMORY[0xCA9494] = 13276356;
         }
         sead::CriticalSection::unlock(v4);
@@ -107104,7 +107104,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA94CC];
       if ( !MEMORY[0xCA94CC] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA94CC] )
         {
@@ -107153,7 +107153,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13276724);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA94D0] + 12))(13276368);
-          sub_608FBCE4(13276728, MEMORY[0xCA94D4], 19);
+          String_copyUntilTerminator(13276728, MEMORY[0xCA94D4], 19);
           MEMORY[0xCA94CC] = 13276728;
         }
         sead::CriticalSection::unlock(v4);
@@ -107287,7 +107287,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA9684];
       if ( !MEMORY[0xCA9684] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA9684] )
         {
@@ -107332,7 +107332,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13276992);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA9688] + 12))(13276808);
-          sub_608FBCE4(13276996, MEMORY[0xCA968C], 11);
+          String_copyUntilTerminator(13276996, MEMORY[0xCA968C], 11);
           MEMORY[0xCA9684] = 13276996;
         }
         sead::CriticalSection::unlock(v4);
@@ -107722,7 +107722,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA9908];
       if ( !MEMORY[0xCA9908] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA9908] )
         {
@@ -107761,7 +107761,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13277512);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCA990C] + 12))(13277452);
-          sub_608FBCE4(13277516, MEMORY[0xCA9910], 4);
+          String_copyUntilTerminator(13277516, MEMORY[0xCA9910], 4);
           MEMORY[0xCA9908] = 13277516;
         }
         sead::CriticalSection::unlock(v4);
@@ -114947,7 +114947,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCAA540];
       if ( !MEMORY[0xCAA540] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCAA540] )
         {
@@ -114994,7 +114994,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13280852);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCAA544] + 12))(13280580);
-          sub_608FBCE4(13280856, MEMORY[0xCAA548], 17);
+          String_copyUntilTerminator(13280856, MEMORY[0xCAA548], 17);
           MEMORY[0xCAA540] = 13280856;
         }
         sead::CriticalSection::unlock(v4);
@@ -120704,7 +120704,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502994(a1 + 15700, 15);
     sub_605029C8(a1 + 15700, 15);
     ListEntry_setDword172(v4, &dword_60B03A2C, "SE_SYS_BACK");
-    sub_605028F0(v4, &dword_60B03A2C, 1);
+    ListEntry_setBool208(v4, &dword_60B03A2C, 1);
     v6 = a1 + 15752;
     v7 = List_getNthNode(a1 + 15752, 9);
     v9 = *(_DWORD *)(a1 + 15764);
@@ -120712,15 +120712,15 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(v7 - v9 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v6, 9) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     ListEntry_setDword172(v4, &dword_60B03A30, "SE_SYS_BACK");
-    sub_605028F0(v4, &dword_60B03A30, 1);
+    ListEntry_setBool208(v4, &dword_60B03A30, 1);
     *(_DWORD *)(List_getNthNode(v6, 10) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v6, 10) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     ListEntry_setDword172(v4, &dword_60B03A34, "SE_SYS_BACK");
-    sub_605028F0(v4, &dword_60B03A34, 1);
+    ListEntry_setBool208(v4, &dword_60B03A34, 1);
     *(_DWORD *)(List_getNthNode(v6, 11) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v6, 11) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     ListEntry_setDword172(v4, &dword_60B03A38, "SE_SYS_BACK");
-    sub_605028F0(v4, &dword_60B03A38, 1);
+    ListEntry_setBool208(v4, &dword_60B03A38, 1);
     *(_DWORD *)(List_getNthNode(v6, 12) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v6, 12) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     Registry_iterateAndRegister((int)(v8 + 9228), 0);
@@ -121240,25 +121240,25 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAB294);
     }
     v19[0] = 1;
-    sub_604755C4(a1 + 12092, a1 + 52632, &dword_60CAB350, (int)&dword_60CAB2B8, v19);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52632, &dword_60CAB350, (int)&dword_60CAB2B8, v19);
     v19[0] = 1;
-    sub_604755C4(a1 + 12092, a1 + 52636, &dword_60CAB358, (int)&dword_60CAB2B8, v19);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52636, &dword_60CAB358, (int)&dword_60CAB2B8, v19);
     v19[0] = 1;
-    sub_604755C4(a1 + 12092, a1 + 52640, &dword_60CAB360, (int)&dword_60CAB2B8, v19);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52640, &dword_60CAB360, (int)&dword_60CAB2B8, v19);
     v19[0] = 1;
-    sub_604755C4(a1 + 12092, a1 + 52644, &dword_60CAB368, (int)&dword_60CAB2B8, v19);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52644, &dword_60CAB368, (int)&dword_60CAB2B8, v19);
     v19[0] = 1;
-    sub_604755C4(a1 + 12092, a1 + 52648, &dword_60CAB370, (int)&dword_60CAB2B8, v19);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52648, &dword_60CAB370, (int)&dword_60CAB2B8, v19);
     v19[0] = 1;
-    sub_604755C4(a1 + 12092, a1 + 52652, &dword_60CAB378, (int)&dword_60CAB2B8, v19);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52652, &dword_60CAB378, (int)&dword_60CAB2B8, v19);
     v19[0] = 1;
-    sub_604755C4(a1 + 12092, a1 + 52656, &dword_60CAB308, (int)&dword_60CAB2B8, v19);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52656, &dword_60CAB308, (int)&dword_60CAB2B8, v19);
     v19[0] = 1;
-    sub_604755C4(a1 + 12092, a1 + 52660, &dword_60CAB310, (int)&dword_60CAB2B8, v19);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52660, &dword_60CAB310, (int)&dword_60CAB2B8, v19);
     v19[0] = 1;
-    sub_604755C4(a1 + 12092, a1 + 52664, &dword_60CAB318, (int)&dword_60CAB2B8, v19);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52664, &dword_60CAB318, (int)&dword_60CAB2B8, v19);
     v19[0] = 1;
-    sub_604755C4(a1 + 12092, a1 + 52668, &dword_60CAB320, (int)&dword_60CAB2B8, v19);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52668, &dword_60CAB320, (int)&dword_60CAB2B8, v19);
     if ( ((unsigned int)&unk_60CAB298 & ~(1616087128 << v9) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAB298) )
     {
       dword_60CAB2C0 = 12321336;
@@ -124134,13 +124134,13 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502994(a1 + 15680, 15);
     sub_605029C8(a1 + 15680, 15);
     ListEntry_setDword172(a1 + 15680, &dword_60B03A78, "SE_SYS_BACK");
-    sub_605028F0(a1 + 15680, &dword_60B03A78, 1);
+    ListEntry_setBool208(a1 + 15680, &dword_60B03A78, 1);
     ListEntry_setDword172(a1 + 15680, &dword_60B03A7C, "SE_SYS_BACK");
-    sub_605028F0(a1 + 15680, &dword_60B03A7C, 1);
+    ListEntry_setBool208(a1 + 15680, &dword_60B03A7C, 1);
     ListEntry_setDword172(a1 + 15680, &dword_60B03A80, "SE_SYS_BACK");
-    sub_605028F0(a1 + 15680, &dword_60B03A80, 1);
+    ListEntry_setBool208(a1 + 15680, &dword_60B03A80, 1);
     ListEntry_setDword172(a1 + 15680, &dword_60B03A84, "SE_SYS_BACK");
-    sub_605028F0(a1 + 15680, &dword_60B03A84, 1);
+    ListEntry_setBool208(a1 + 15680, &dword_60B03A84, 1);
     v5 = a1 + 15732;
     v6 = List_getNthNode(a1 + 15732, 7);
     v8 = *(_DWORD *)(a1 + 15744);
@@ -124645,21 +124645,21 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAB93C);
     }
     v16 = 1;
-    sub_604755C4(a1 + 12092, a1 + 52580, &dword_60CAB990, (int)&dword_60CAB960, &v16);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52580, &dword_60CAB990, (int)&dword_60CAB960, &v16);
     v16 = 1;
-    sub_604755C4(a1 + 12092, a1 + 52584, &dword_60CAB998, (int)&dword_60CAB960, &v16);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52584, &dword_60CAB998, (int)&dword_60CAB960, &v16);
     v16 = 1;
-    sub_604755C4(a1 + 12092, a1 + 52588, &dword_60CAB9A0, (int)&dword_60CAB960, &v16);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52588, &dword_60CAB9A0, (int)&dword_60CAB960, &v16);
     v16 = 1;
-    sub_604755C4(a1 + 12092, a1 + 52592, &dword_60CAB9A8, (int)&dword_60CAB960, &v16);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52592, &dword_60CAB9A8, (int)&dword_60CAB960, &v16);
     v16 = 1;
-    sub_604755C4(a1 + 12092, a1 + 52596, v17, (int)&dword_60CAB960, &v16);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52596, v17, (int)&dword_60CAB960, &v16);
     v16 = 1;
-    sub_604755C4(a1 + 12092, a1 + 52600, v18, (int)&dword_60CAB960, &v16);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52600, v18, (int)&dword_60CAB960, &v16);
     v16 = 1;
-    sub_604755C4(a1 + 12092, a1 + 52604, v19, (int)&dword_60CAB960, &v16);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52604, v19, (int)&dword_60CAB960, &v16);
     v16 = 1;
-    sub_604755C4(a1 + 12092, a1 + 52608, v20, (int)&dword_60CAB960, &v16);
+    Object_collectChildrenIntoArray(a1 + 12092, a1 + 52608, v20, (int)&dword_60CAB960, &v16);
     if ( ((unsigned int)&unk_60CAB940 & ~(1616112568 << v8) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAB940) )
     {
       dword_60CAB968 = 12321336;
@@ -126124,11 +126124,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502960(a1 + 31800, 15);
     sub_60502994(a1 + 31800, 15);
     sub_605029C8(a1 + 31800, 15);
-    sub_605028F0(a1 + 31800, &dword_60B03AB0, 1);
-    sub_605028F0(a1 + 31800, &dword_60B03AB4, 1);
-    sub_605028F0(a1 + 31800, &dword_60B03AB8, 1);
-    sub_605028F0(a1 + 31800, &dword_60B03ABC, 1);
-    sub_605028F0(a1 + 31800, &dword_60B03AC0, 1);
+    ListEntry_setBool208(a1 + 31800, &dword_60B03AB0, 1);
+    ListEntry_setBool208(a1 + 31800, &dword_60B03AB4, 1);
+    ListEntry_setBool208(a1 + 31800, &dword_60B03AB8, 1);
+    ListEntry_setBool208(a1 + 31800, &dword_60B03ABC, 1);
+    ListEntry_setBool208(a1 + 31800, &dword_60B03AC0, 1);
     ListEntry_setDword172(a1 + 31800, 11549356, "SE_SYS_BACK");
     sub_60502A24(a1 + 31800, dword_60B03AC4, 5, 1);
     Registry_iterateAndRegister(a1 + 33880, 0);
@@ -128939,7 +128939,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = "SelectMenu";
     sead::SafeStringBase<char>::operator=(a1 + 4644, v4);
     ListEntry_setDword172(a1 + 3632, dword_60B03AD8, "SE_SYS_BACK");
-    sub_605028F0(a1 + 3632, dword_60B03AD8, 1);
+    ListEntry_setBool208(a1 + 3632, dword_60B03AD8, 1);
     *(_DWORD *)(List_getNthNode(a1 + 3684, 2) - *(_DWORD *)(a1 + 3696) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3684, 2) - *(_DWORD *)(a1 + 3696) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_60545310(a1);
@@ -130952,11 +130952,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(List_getNthNode(a1 + 3752, 0) - *(_DWORD *)(a1 + 3764) + 192) = 0;
     v3[0] = 2;
     ListEntry_setDword172(a1 + 3700, v3, "SE_SYS_PAGE");
-    sub_605028F0(a1 + 3700, v3, 1);
+    ListEntry_setBool208(a1 + 3700, v3, 1);
     *(_BYTE *)(List_getNthNode(a1 + 3752, v3[0]) - *(_DWORD *)(a1 + 3764) + 208) = 0;
     v3[0] = 1;
     ListEntry_setDword172(a1 + 3700, v3, "SE_SYS_PAGE");
-    sub_605028F0(a1 + 3700, v3, 1);
+    ListEntry_setBool208(a1 + 3700, v3, 1);
     result = List_getNthNode(a1 + 3752, v3[0]) - *(_DWORD *)(a1 + 3764);
     *(_BYTE *)(result + 208) = 0;
     return result;
@@ -130999,16 +130999,16 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAC6B0);
     }
     v4 = 1;
-    sub_604755C4((int)(a1 + 10), (int)(a1 + 1445), &dword_60CAC720, (int)&dword_60CAC6F8, &v4);
+    Object_collectChildrenIntoArray((int)(a1 + 10), (int)(a1 + 1445), &dword_60CAC720, (int)&dword_60CAC6F8, &v4);
     a1[1449] = *(_DWORD *)(a1[1445] + 28);
     v4 = 1;
-    sub_604755C4((int)(a1 + 10), (int)(a1 + 1446), &dword_60CAC728, (int)&dword_60CAC700, &v4);
+    Object_collectChildrenIntoArray((int)(a1 + 10), (int)(a1 + 1446), &dword_60CAC728, (int)&dword_60CAC700, &v4);
     a1[1450] = *(_DWORD *)(a1[1446] + 28);
     v4 = 1;
-    sub_604755C4((int)(a1 + 10), (int)(a1 + 1447), &dword_60CAC730, (int)&dword_60CAC708, &v4);
+    Object_collectChildrenIntoArray((int)(a1 + 10), (int)(a1 + 1447), &dword_60CAC730, (int)&dword_60CAC708, &v4);
     a1[1451] = *(_DWORD *)(a1[1447] + 28);
     v4 = 1;
-    sub_604755C4((int)(a1 + 10), (int)(a1 + 1448), &dword_60CAC738, (int)&dword_60CAC710, &v4);
+    Object_collectChildrenIntoArray((int)(a1 + 10), (int)(a1 + 1448), &dword_60CAC738, (int)&dword_60CAC710, &v4);
     result = *(_DWORD *)(a1[1448] + 28);
     a1[1452] = result;
     return result;
@@ -131711,7 +131711,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCAC640];
       if ( !MEMORY[0xCAC640] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCAC640] )
         {
@@ -131750,7 +131750,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13289048);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCAC644] + 12))(13289028);
-          sub_608FBCE4(13289052, MEMORY[0xCAC648], 1);
+          String_copyUntilTerminator(13289052, MEMORY[0xCAC648], 1);
           MEMORY[0xCAC640] = 13289052;
         }
         sead::CriticalSection::unlock(v4);
@@ -131780,7 +131780,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCAC660];
       if ( !MEMORY[0xCAC660] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCAC660] )
         {
@@ -131819,7 +131819,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13289108);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCAC664] + 12))(13289060);
-          sub_608FBCE4(13289112, MEMORY[0xCAC668], 2);
+          String_copyUntilTerminator(13289112, MEMORY[0xCAC668], 2);
           MEMORY[0xCAC660] = 13289112;
         }
         sead::CriticalSection::unlock(v4);
@@ -134708,7 +134708,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v15 = *(_DWORD *)(a1 + 3716);
           if ( v15 >= 4 )
             v15 = 0;
-          sub_60773630(*(_DWORD *)(MEMORY[0xCC436C] + 4 * v15 + 32), 69, 0);
+          Player_checkTwoFlagsAndDispatch2(*(_DWORD *)(MEMORY[0xCC436C] + 4 * v15 + 32), 69, 0);
           v3 = 6;
           v5 = 6;
           goto LABEL_9;
@@ -134716,7 +134716,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v16 = *(_DWORD *)(a1 + 3716);
           if ( v16 >= 4 )
             v16 = 0;
-          sub_60773630(*(_DWORD *)(MEMORY[0xCC436C] + 4 * v16 + 32), 69, 0);
+          Player_checkTwoFlagsAndDispatch2(*(_DWORD *)(MEMORY[0xCC436C] + 4 * v16 + 32), 69, 0);
           v3 = 7;
           v5 = 7;
           goto LABEL_9;
@@ -137946,17 +137946,17 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[1] = (int)"StarCoinList";
     sead::SafeStringBase<char>::operator=(a1 + 18852, v9);
     v9[0] = 0;
-    sub_605028F0(a1 + 17840, v9, 1);
+    ListEntry_setBool208(a1 + 17840, v9, 1);
     v4 = a1 + 17892;
     v5 = List_getNthNode(a1 + 17892, 0);
     v7 = *(_DWORD *)(a1 + 17904);
     v6 = (_DWORD *)(a1 + 17904);
     *(_BYTE *)(v5 - v7 + 208) = 0;
     v9[0] = 1;
-    sub_605028F0(v3, v9, 1);
+    ListEntry_setBool208(v3, v9, 1);
     *(_BYTE *)(List_getNthNode(v4, 1) - *v6 + 208) = 0;
     v9[0] = 2;
-    sub_605028F0(v3, v9, 1);
+    ListEntry_setBool208(v3, v9, 1);
     *(_BYTE *)(List_getNthNode(v4, 2) - *v6 + 208) = 0;
     *(_DWORD *)(List_getNthNode(v4, 0) - *v6 + 192) = 0;
     *(_DWORD *)(List_getNthNode(v4, 1) - *v6 + 192) = 0;
@@ -138000,11 +138000,11 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAD1B8);
     }
     v4 = 1;
-    sub_604755C4(a1 + 44, a1 + 19920, &dword_60CAD228, (int)&dword_60CAD210, &v4);
+    Object_collectChildrenIntoArray(a1 + 44, a1 + 19920, &dword_60CAD228, (int)&dword_60CAD210, &v4);
     v4 = 1;
-    sub_604755C4(a1 + 44, a1 + 19924, &dword_60CAD230, (int)&dword_60CAD218, &v4);
+    Object_collectChildrenIntoArray(a1 + 44, a1 + 19924, &dword_60CAD230, (int)&dword_60CAD218, &v4);
     v4 = 1;
-    return sub_604755C4(a1 + 44, a1 + 19928, &dword_60CAD238, (int)&dword_60CAD220, &v4);
+    return Object_collectChildrenIntoArray(a1 + 44, a1 + 19928, &dword_60CAD238, (int)&dword_60CAD220, &v4);
   }
 
 /* ============================================================================
@@ -140708,7 +140708,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502994((int)(a1 + 1455), 15);
     sub_605029C8((int)(a1 + 1455), 15);
     ListEntry_setDword172(a1 + 1455, dword_60B040C0, "SE_SYS_BACK");
-    sub_605028F0((int)(a1 + 1455), dword_60B040C0, 1);
+    ListEntry_setBool208((int)(a1 + 1455), dword_60B040C0, 1);
     v5 = a1 + 1468;
     v6 = List_getNthNode(a1 + 1468, 2);
     v8 = a1[1471];
@@ -140980,11 +140980,11 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAD61C);
     }
     v6 = 1;
-    sub_604755C4(a1 + 44, a1 + 3636, a2, (int)&dword_60CAD630, &v6);
+    Object_collectChildrenIntoArray(a1 + 44, a1 + 3636, a2, (int)&dword_60CAD630, &v6);
     v6 = 1;
-    sub_604755C4(a1 + 44, a1 + 3640, a2 + 2, (int)&dword_60CAD638, &v6);
+    Object_collectChildrenIntoArray(a1 + 44, a1 + 3640, a2 + 2, (int)&dword_60CAD638, &v6);
     v6 = 1;
-    return sub_604755C4(a1 + 44, a1 + 3644, a2 + 4, (int)&dword_60CAD640, &v6);
+    return Object_collectChildrenIntoArray(a1 + 44, a1 + 3644, a2 + 4, (int)&dword_60CAD640, &v6);
   }
 
 /* ============================================================================
@@ -144294,7 +144294,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     *(_DWORD *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 204) = 0;
-    sub_605028F0(a1 + 3608, &v5, 1);
+    ListEntry_setBool208(a1 + 3608, &v5, 1);
     *(_BYTE *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 208) = 0;
     v5 = 2;
     *(_DWORD *)(List_getNthNode(a1 + 3660, 2) - *(_DWORD *)(a1 + 3672) + 192) = 0;
@@ -144492,7 +144492,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCADC94];
       if ( !MEMORY[0xCADC94] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCADC94] )
         {
@@ -144531,7 +144531,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13294772);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCADC98] + 12))(13294744);
-          sub_608FBCE4(13294776, MEMORY[0xCADC9C], 2);
+          String_copyUntilTerminator(13294776, MEMORY[0xCADC9C], 2);
           MEMORY[0xCADC94] = 13294776;
         }
         sead::CriticalSection::unlock(v4);
@@ -144665,7 +144665,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCADCC0];
       if ( !MEMORY[0xCADCC0] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCADCC0] )
         {
@@ -144704,7 +144704,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13294852);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCADCC4] + 12))(13294788);
-          sub_608FBCE4(13294856, MEMORY[0xCADCC8], 3);
+          String_copyUntilTerminator(13294856, MEMORY[0xCADCC8], 3);
           MEMORY[0xCADCC0] = 13294856;
         }
         sead::CriticalSection::unlock(v4);
@@ -145922,9 +145922,9 @@ static inline unsigned int uxtb16(unsigned int x)
     ListEntry_setDword172(v2, 11550928, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 3744, 4) - *(_DWORD *)(a1 + 3756) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3744, 4) - *(_DWORD *)(a1 + 3756) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    sub_605028F0(v2, (_DWORD *)0xB040CC, 1);
-    sub_605028F0(v2, (_DWORD *)0xB040C8, 1);
-    sub_605028F0(v2, (_DWORD *)0xB040D0, 1);
+    ListEntry_setBool208(v2, (_DWORD *)0xB040CC, 1);
+    ListEntry_setBool208(v2, (_DWORD *)0xB040C8, 1);
+    ListEntry_setBool208(v2, (_DWORD *)0xB040D0, 1);
     result = List_getNthNode(a1 + 3744, 0) - *(_DWORD *)(a1 + 3756);
     *(_DWORD *)(result + 192) = 0;
     return result;
@@ -146072,11 +146072,11 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAE054);
     }
     v6 = 1;
-    sub_604755C4(a1 + 44, a1 + 13564, &dword_60CAE0C0, (int)&dword_60CAE064, &v6);
+    Object_collectChildrenIntoArray(a1 + 44, a1 + 13564, &dword_60CAE0C0, (int)&dword_60CAE064, &v6);
     v6 = 1;
-    sub_604755C4(a1 + 44, a1 + 13568, &dword_60CAE0C8, (int)&dword_60CAE064, &v6);
+    Object_collectChildrenIntoArray(a1 + 44, a1 + 13568, &dword_60CAE0C8, (int)&dword_60CAE064, &v6);
     v6 = 1;
-    sub_604755C4(a1 + 44, a1 + 13572, &dword_60CAE0D0, (int)&dword_60CAE064, &v6);
+    Object_collectChildrenIntoArray(a1 + 44, a1 + 13572, &dword_60CAE0D0, (int)&dword_60CAE064, &v6);
     if ( ((unsigned int)&unk_60CAE058 & ~(1616243476 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAE058) )
     {
       dword_60CAE08C = 12321336;
@@ -146094,9 +146094,9 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAE05C);
     }
     v5 = 1;
-    sub_604755C4(a1 + 44, a1 + 13576, &dword_60CAE08C, (int)&dword_60CAE06C, &v5);
+    Object_collectChildrenIntoArray(a1 + 44, a1 + 13576, &dword_60CAE08C, (int)&dword_60CAE06C, &v5);
     v5 = 1;
-    return sub_604755C4(a1 + 44, a1 + 13580, &dword_60CAE094, (int)&dword_60CAE06C, &v5);
+    return Object_collectChildrenIntoArray(a1 + 44, a1 + 13580, &dword_60CAE094, (int)&dword_60CAE06C, &v5);
   }
 
 /* ============================================================================
@@ -147103,7 +147103,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCADFF4];
       if ( !MEMORY[0xCADFF4] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCADFF4] )
         {
@@ -147142,7 +147142,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13295656);
           }
           (*(void (__fastcall **)(int))(MEMORY[0xCADFF8] + 12))(13295608);
-          sub_608FBCE4(13295660, MEMORY[0xCADFFC], 2);
+          String_copyUntilTerminator(13295660, MEMORY[0xCADFFC], 2);
           MEMORY[0xCADFF4] = 13295660;
         }
         sead::CriticalSection::unlock(v4);
@@ -148719,7 +148719,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(float *)(a1 + 608) = v6;
           *(float *)(a1 + 612) = v9;
           *(_DWORD *)(a1 + 616) = v12;
-          sub_60160948((_DWORD *)(a1 + 6120));
+          Object_updateSubObjectsAndRefresh((_DWORD *)(a1 + 6120));
         }
       }
       v13 = *(_DWORD *)(a1 + 20);
@@ -148829,7 +148829,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(float *)(a1 + 608) = v12;
           *(float *)(a1 + 612) = v10;
           *(_DWORD *)(a1 + 616) = v14;
-          sub_60160948((_DWORD *)(a1 + 6120));
+          Object_updateSubObjectsAndRefresh((_DWORD *)(a1 + 6120));
           v10 = *(float *)(a1 + 112);
         }
       }
@@ -152465,7 +152465,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 608) = v3;
           *(_DWORD *)(a1 + 612) = v4;
           *(_DWORD *)(a1 + 616) = v5;
-          return sub_60160948((_DWORD *)(a1 + 6120));
+          return Object_updateSubObjectsAndRefresh((_DWORD *)(a1 + 6120));
         }
       }
     }
@@ -156744,7 +156744,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *((_DWORD *)a1 + 152) = v2;
     *((_DWORD *)a1 + 153) = v3;
     *((_DWORD *)a1 + 154) = v4;
-    sub_60160948((_DWORD *)a1 + 1530);
+    Object_updateSubObjectsAndRefresh((_DWORD *)a1 + 1530);
     CurrentState = StateMgr::getCurrentState((int)a1 + 6084);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
@@ -158178,7 +158178,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(float *)(a1 + 608) = v10;
       *(float *)(a1 + 612) = v11;
       v13 = (_DWORD *)(a1 + 6120);
-      sub_60160948((_DWORD *)(a1 + 6120));
+      Object_updateSubObjectsAndRefresh((_DWORD *)(a1 + 6120));
       v5 = *(_DWORD *)(a1 + 164);
     }
     *(_DWORD *)(a1 + 6364) = v5;
@@ -160227,7 +160227,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *(_DWORD *)(a1 + 608) = v12;
               *(_DWORD *)(a1 + 612) = v13;
               *(_DWORD *)(a1 + 616) = v14;
-              sub_60160948((_DWORD *)(a1 + 6120));
+              Object_updateSubObjectsAndRefresh((_DWORD *)(a1 + 6120));
             }
             if ( *(_BYTE *)(a1 + 7128) )
               *(_BYTE *)(a1 + 7488) = 1;
@@ -170245,7 +170245,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *(_DWORD *)(a1 + 608) = v15;
               *(_DWORD *)(a1 + 612) = v16;
               *(_DWORD *)(a1 + 616) = v17;
-              sub_60160948((_DWORD *)(a1 + 6120));
+              Object_updateSubObjectsAndRefresh((_DWORD *)(a1 + 6120));
             }
             goto LABEL_29;
           }
@@ -170958,7 +170958,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 616) = v11;
         *(float *)(a1 + 608) = v9;
         *(float *)(a1 + 612) = v10;
-        sub_60160948((_DWORD *)(a1 + 6120));
+        Object_updateSubObjectsAndRefresh((_DWORD *)(a1 + 6120));
       }
       *(_DWORD *)(a1 + 492) = 0;
       *(_DWORD *)(a1 + 496) = 1090519040;
@@ -171060,7 +171060,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(float *)(a1 + 608) = v10;
       *(float *)(a1 + 612) = v11;
       v13 = (_DWORD *)(a1 + 6120);
-      sub_60160948((_DWORD *)(a1 + 6120));
+      Object_updateSubObjectsAndRefresh((_DWORD *)(a1 + 6120));
     }
     *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
     ShapedCollider_execute(v13, 6364, v6, v7);
@@ -171567,7 +171567,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(float *)(a1 + 608) = v10;
       *(float *)(a1 + 612) = v11;
       v13 = (_DWORD *)(a1 + 6120);
-      sub_60160948((_DWORD *)(a1 + 6120));
+      Object_updateSubObjectsAndRefresh((_DWORD *)(a1 + 6120));
       v5 = *(_DWORD *)(a1 + 164);
     }
     *(_DWORD *)(a1 + 6364) = v5;
@@ -193463,7 +193463,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 144) = 1065353216;
     v1 = (_DWORD *)(a1 + 6104);
     ColliderMgr_add(MEMORY[0xC8820C], (_DWORD *)(a1 + 6104));
-    return sub_60160948(v1);
+    return Object_updateSubObjectsAndRefresh(v1);
   }
 
 /* ============================================================================
@@ -207259,7 +207259,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v19 = a2[3];
       v23 = a2[7];
       v27 = a2[11];
-      sub_602372C0((int)(a1 + 2), 605, (int)&v16, 1);
+      EffectSlot_startEffectInstance((int)(a1 + 2), 605, (int)&v16, 1);
       v9 = a2[7];
       v10 = *a1;
       v11 = a1[1];
@@ -207276,7 +207276,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *((unsigned __int8 *)a1 + 296);
     }
     if ( (result & 2) != 0 )
-      return sub_602372C0((int)(a1 + 28), 32, (int)a2, 0);
+      return EffectSlot_startEffectInstance((int)(a1 + 28), 32, (int)a2, 0);
     return result;
   }
 
@@ -227558,7 +227558,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (*(_BYTE *)(a1 + 6261) & 1) != 0 )
     {
       sub_605EAB0C(a1 + 6064, v8, 6);
-      sub_602372C0(a1 + 7792, 754, (int)v8, 1);
+      EffectSlot_startEffectInstance(a1 + 7792, 754, (int)v8, 1);
     }
     result = sub_605DD6E8(a1);
     if ( result == 1 )
@@ -234098,7 +234098,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 608) = v7;
       *(_DWORD *)(a1 + 612) = v8;
       *(_DWORD *)(a1 + 616) = v9;
-      sub_60160948((_DWORD *)(a1 + 6104));
+      Object_updateSubObjectsAndRefresh((_DWORD *)(a1 + 6104));
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13311420);
     }
     return result;
