@@ -3754,6 +3754,8 @@ int __fastcall SE_AMB_BROOM_W8_ref(int a1);  /* 0x000d6260 */
 int __fastcall SE_OBJ_KROOM_SHUTTER_CLOSE_ref(int a1);  /* 0x000d62f8 */
 int __fastcall sub_600D6760(int a1);  /* 0x000d6760 */
 int __fastcall SE_VOC_LAR_INTO_WATERPILLAR_ref(int a1);  /* 0x000d728c */
+int __fastcall Object_invokeSlot37(int *a1);  /* 0x000d7390 */
+int __fastcall Object_invokeSlot37_b(int a1);  /* 0x000d79c4 */
 int __fastcall larry_magic_wand_root_ref(int a1);  /* 0x000d8000 */
 int __fastcall sub_600D8F9C(int a1);  /* 0x000d8f9c */
 int __fastcall throw_st_wait_f_ref(int a1);  /* 0x000d9f38 */

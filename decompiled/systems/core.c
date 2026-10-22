@@ -65085,6 +65085,22 @@
   }
 
 /* ============================================================================
+ * Object_invokeSlot37
+ * RVA 0x000d7390   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int __fastcall Object_invokeSlot37(int *a1)
+  {
+    int result; // r0
+  
+    CollisionActor::handleSpeed((int)a1);
+    j_ModelWrapper_updateAnims(a1[1774]);
+    result = (*(int (__fastcall **)(int *))(*a1 + 148))(a1);
+    if ( !result )
+      return (*(int (__fastcall **)(int *, int))(*a1 + 192))(a1, 13124728);
+    return result;
+  }
+
+/* ============================================================================
  * Actor_Larry_build
  * RVA 0x000d77c4   size 0x12c   xrefs 0
  * ============================================================================ */
@@ -65124,6 +65140,49 @@
     *(_DWORD *)(v0 + 8124) = 0;
     *(_DWORD *)(v0 + 8120) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * Object_invokeSlot37_b
+ * RVA 0x000d79c4   size 0x150   xrefs 0
+ * ============================================================================ */
+  int __fastcall Object_invokeSlot37_b(int a1)
+  {
+    int CurrentState; // r0
+    int v3; // r6
+    int v4; // r0
+    int v5; // r6
+    int v6; // r0
+    int v7; // r6
+    int v8; // r0
+    int v9; // r6
+    int v10; // r0
+    int v11; // r5
+  
+    if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 148))(a1) == 1 )
+    {
+      CurrentState = StateMgr::getCurrentState(a1 + 6084);
+      v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
+      if ( v3 == (*(int (**)(void))(MEMORY[0xC84520] + 8))() )
+        goto LABEL_7;
+      v4 = StateMgr::getCurrentState(a1 + 6084);
+      v5 = (*(int (__fastcall **)(int))(*(_DWORD *)v4 + 8))(v4);
+      if ( v5 == (*(int (**)(void))(MEMORY[0xC84544] + 8))()
+        || (v6 = StateMgr::getCurrentState(a1 + 6084),
+            v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 8))(v6),
+            v7 == (*(int (**)(void))(MEMORY[0xC84568] + 8))())
+        || (v8 = StateMgr::getCurrentState(a1 + 6084),
+            v9 = (*(int (__fastcall **)(int))(*(_DWORD *)v8 + 8))(v8),
+            v9 == (*(int (**)(void))(MEMORY[0xC8458C] + 8))())
+        || (v10 = StateMgr::getCurrentState(a1 + 6084),
+            v11 = (*(int (__fastcall **)(int))(*(_DWORD *)v10 + 8))(v10),
+            v11 == (*(int (**)(void))(MEMORY[0xC8461C] + 8))()) )
+      {
+  LABEL_7:
+        (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13124696);
+      }
+    }
+    return KoopalingBase::onExecute(a1);
   }
 
 /* ============================================================================

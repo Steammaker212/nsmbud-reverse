@@ -107,19 +107,38 @@ Since the gate index is `mode-1` and `0x1FB` = bits 0,1,3,4,5,6,7,8, the modes i
 **1,2,4,5,6,7,8,9** — it excludes mode 3 and mode 10. `0x3FB` adds bit 9, i.e. accepts mode 10.
 That is the correct extension for a Hammer mode, and it is what `item_grant.hks` writes.
 
-## The open problem, stated honestly
+## It is a virtual method — slot 37
 
-`Player_setPowerupMode` has **zero xrefs**: no `BL` reaches it, and its address (even or with
-the Thumb bit set) appears nowhere in data. So it cannot currently be shown to be called at
-all. Either its callers were folded into an inlined path, or its address is computed rather
-than loaded.
+`Player_setPowerupMode` has zero *code* xrefs, which in this binary means nothing: 66.5% of all
+functions have none, including everything registered at runtime. Searching data for the absolute
+address finds nothing either, because **this binary stores RVAs in its tables, not absolute
+pointers**. Searching for the bare RVA finds it immediately:
 
-That is the next real question, and it is not answered by guessing at another hook. The way to
-settle it is a debugger, which the project already has configured: set a breakpoint on
-`0x795CDC` (runtime address = `base + 0x795CDC`, `base` from the module list), collect a fire
-flower, and see whether it hits. If it hits, the stack gives the caller. If it never hits, the
-mode is being set by a genuinely different function and this whole line of reasoning needs
-replacing.
+| hit | vtable | slots | slot index | byte offset |
+|---|---|---|---|---|
+| `0xC24D08` | `0xC24C74`..`0xC2522C` | 367 | **37** | **`0x94`** |
+| `0xC25468` | `0xC253D4`..`0xC2598C` | 367 | **37** | **`0x94`** |
+
+Both are Player vtables (they begin with `_ZN5Actor12beforeCreateEv`'s slot, then
+`sub_6079569C`, i.e. the Player hierarchy). The `[−8]` and `[−4]` words before each run are both
+`0`, so RTTI is stripped, consistent with everything else in this image.
+
+So dispatch is `LDR R0,[player]; LDR R0,[R0,#0x94]; BLX R0`. That is why a `cmp` patch was
+never going to reach this function.
+
+Identifying *which* of the 55 generic `[Rt,#0x94]` + `BLX` sequences passes a Player is not
+statically possible — the pattern is identical for every class, since the code holds an opaque
+object pointer. That requires the runtime type, i.e. the debugger.
+
+## The remaining step
+
+The project already has a debugger configured. Break on `base + 0x795CDC`, collect a fire
+flower, and see whether it hits. If it hits, the stack names the caller and the grant path is
+identified. If it never hits, the mode is set by a genuinely different function and this whole
+line of reasoning needs replacing.
+
+See [CALL_GRAPH_METHOD.md](../../decompiled/CALL_GRAPH_METHOD.md) for the three failed search
+strategies that led here, which apply to every function in the image.
 
 **No hook should be added for this until that is read.** A single ARM `cmp` cannot express
 "mode 2 or 10" anyway; anything needing membership must be a real `hook` with a trampoline in
