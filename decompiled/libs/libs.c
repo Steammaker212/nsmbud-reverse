@@ -2166,9 +2166,9 @@ static inline int32x4_t vcle_zero_q(float a, float b, float c, float d)
 
 /* VMINNM/VMAXNM are IEEE-754 minNum/maxNum: they return the non-NaN operand when one
  * input is NaN. That is exactly what fminf/fmaxf do, unlike `a<b?a:b`. */
-static inline float vminnm_f32(float a, float b) { return fminf(a, b); }
-static inline float vmaxnm_f32(float a, float b) { return fmaxf(a, b); }
-static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
+/* duplicate helper removed */
+/* duplicate helper removed */
+/* duplicate helper removed */
 /* NSMBU Deluxe (Switch) v1.0.0 -- libs subsystem
  * Bulk Hex-Rays output. RVAs are image-relative (VA - 0x60000000).
  * Types and field offsets are inferred; names marked sub_XXXX are unnamed.
