@@ -68,6 +68,7 @@ typedef struct ActiveCollider {
     uint8_t field_006D;   /* +0x006D */
     uint8_t field_006E;   /* +0x006E */
     /* struct size >= 0x6f (111) */
+    uint8_t _pad_to_sizeof[0xBE];   /* +0x072 .. total 0x130, matches main.i64 sizeof */
 } ActiveCollider;
 
 /* Actor -- 25 member(s) proven
@@ -319,6 +320,7 @@ typedef struct BossBase {
     uint8_t  _pad_1B70[0x130];
     uint32_t field_1B70;   /* +0x1B70 */
     /* struct size >= 0x1b74 (7028) */
+    uint8_t _pad_to_sizeof[0x40];   /* +0x1B74 .. total 0x1BB4, matches main.i64 sizeof */
 } BossBase;
 
 /* Bowser -- 103 member(s) proven
@@ -683,6 +685,7 @@ typedef struct ColliderBase {
     uint32_t field_011C;   /* +0x011C */
     uint32_t field_0120;   /* +0x0120 */
     /* struct size >= 0x124 (292) */
+    uint8_t _pad_to_sizeof[0x30];   /* +0x124 .. total 0x154, matches main.i64 sizeof */
 } ColliderBase;
 
 /* ColliderNode -- 4 member(s) proven
@@ -1049,6 +1052,7 @@ typedef struct Enemy {
     uint8_t field_1899;   /* +0x1899 */
     uint8_t field_189A;   /* +0x189A */
     /* struct size >= 0x189b (6299) */
+    uint8_t _pad_to_sizeof[0x1];   /* +0x189B .. total 0x189C, matches main.i64 sizeof */
 } Enemy;
 
 /* EnemyFreezeMgr -- 13 member(s) proven
@@ -1487,6 +1491,7 @@ typedef struct LineFollower {
     uint32_t field_000C;   /* +0x000C */
     uint32_t field_0010;   /* +0x0010 */
     /* struct size >= 0x14 (20) */
+    uint8_t _pad_to_sizeof[0x7C];   /* +0x014 .. total 0x90, matches main.i64 sizeof */
 } LineFollower;
 
 /* MaskManager -- 59 member(s) proven
@@ -1653,6 +1658,7 @@ typedef struct MovementHandler {
     uint32_t field_00E0;   /* +0x00E0 */
     uint32_t field_00E4;   /* +0x00E4 */
     /* struct size >= 0xe8 (232) */
+    uint8_t _pad_to_sizeof[0x10];   /* +0x0E8 .. total 0xF8, matches main.i64 sizeof */
 } MovementHandler;
 
 /* MovingSoundActor -- 25 member(s) proven
@@ -1695,6 +1701,7 @@ typedef struct MovingSoundActor {
     uint32_t field_0124;   /* +0x0124 */
     uint32_t field_0128;   /* +0x0128 */
     /* struct size >= 0x12c (300) */
+    uint8_t _pad_to_sizeof[0x8];   /* +0x12C .. total 0x134, matches main.i64 sizeof */
 } MovingSoundActor;
 
 /* MultiPlayCourseSelectScene -- 44 member(s) proven
@@ -2523,6 +2530,7 @@ typedef struct StarCoinBase {
     uint8_t  _pad_1824[0x3];
     uint32_t field_1824;   /* +0x1824 */
     /* struct size >= 0x1828 (6184) */
+    uint8_t _pad_to_sizeof[0x4];   /* +0x1828 .. total 0x182C, matches main.i64 sizeof */
 } StarCoinBase;
 
 /* StateActor -- 3 member(s) proven
@@ -2535,6 +2543,7 @@ typedef struct StateActor {
     uint32_t field_17BC;   /* +0x17BC */
     uint32_t field_17C0;   /* +0x17C0 */
     /* struct size >= 0x17c4 (6084) */
+    uint8_t _pad_to_sizeof[0x10];   /* +0x17C4 .. total 0x17D4, matches main.i64 sizeof */
 } StateActor;
 
 /* StateMgr -- 4 member(s) proven
@@ -3192,6 +3201,7 @@ typedef struct BrosBase {
     uint32_t field_30AC;   /* +0x30AC */
     uint16_t field_30B0;   /* +0x30B0 */
     /* struct size >= 0x30b2 (12466) */
+    uint8_t _pad_to_sizeof[0x6];   /* +0x30B2 .. total 0x30B8, matches main.i64 sizeof */
 } BrosBase;
 
 /* FireballBase -- 23 member(s) proven

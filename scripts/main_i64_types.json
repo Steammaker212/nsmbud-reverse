@@ -1,0 +1,884 @@
+[
+ {
+  "ordinal": 38,
+  "name": "__n64",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 39,
+  "name": "__n128",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 40,
+  "name": "int8x8_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 41,
+  "name": "uint8x8_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 42,
+  "name": "int16x4_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 43,
+  "name": "int32x2_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 44,
+  "name": "uint16x4_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 45,
+  "name": "uint32x2_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 46,
+  "name": "int8x16_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 47,
+  "name": "int16x8_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 48,
+  "name": "int32x4_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 49,
+  "name": "int64x2_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 50,
+  "name": "uint8x16_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 51,
+  "name": "uint16x8_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 52,
+  "name": "uint32x4_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 53,
+  "name": "uint64x2_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 54,
+  "name": "poly8x8_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 55,
+  "name": "poly16x4_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 56,
+  "name": "poly16x8_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 57,
+  "name": "poly8x16_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 58,
+  "name": "float32x2_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 59,
+  "name": "float32x4_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 60,
+  "name": "float64x2_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 61,
+  "name": "poly128_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 63,
+  "name": "Profile",
+  "size": 24,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 64,
+  "name": "Actor",
+  "size": 80,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 65,
+  "name": "ActorBuildInfo",
+  "size": 44,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 66,
+  "name": "sead_ListNode",
+  "size": 8,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 67,
+  "name": "StageActor",
+  "size": 644,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 68,
+  "name": "sead_IDisposer",
+  "size": 16,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 69,
+  "name": "ActiveCollider",
+  "size": 304,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 70,
+  "name": "Vec2",
+  "size": 8,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 71,
+  "name": "Vec3",
+  "size": 12,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 72,
+  "name": "ActorInfo",
+  "size": 36,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 73,
+  "name": "CollisionActor",
+  "size": 6064,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 74,
+  "name": "MultiStateActor",
+  "size": 6104,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 75,
+  "name": "StateBase",
+  "size": 8,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 77,
+  "name": "State",
+  "size": 32,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 78,
+  "name": "StateVirtual",
+  "size": 36,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 79,
+  "name": "StateMgr",
+  "size": 16,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 80,
+  "name": "StateMethodExecuter",
+  "size": 12,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 83,
+  "name": "StateExecuter",
+  "size": 16,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 85,
+  "name": "StateActor",
+  "size": 6100,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 86,
+  "name": "Enemy",
+  "size": 6300,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 87,
+  "name": "sead::SafeString",
+  "size": 8,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 89,
+  "name": "CooliganSunglasses",
+  "size": 748,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 91,
+  "name": "int32x4x2_t",
+  "size": 32,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 92,
+  "name": "Seaweed",
+  "size": 664,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 93,
+  "name": "AnimationsList",
+  "size": 8,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 94,
+  "name": "ModelWrapper",
+  "size": 48,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 95,
+  "name": "Mtx34",
+  "size": 48,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 96,
+  "name": "Vec3i",
+  "size": 12,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 97,
+  "name": "StateWrapper",
+  "size": 36,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 98,
+  "name": "ActiveColliderInfo",
+  "size": 44,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 99,
+  "name": "EnemyFreezeMgr",
+  "size": 77,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 100,
+  "name": "EnemyFreezeMgr_Info",
+  "size": 32,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 107,
+  "name": "$BDF88968CAE1EA74E42809B9AE857E7C",
+  "size": 4,
+  "kind": "enum",
+  "fields": []
+ },
+ {
+  "ordinal": 108,
+  "name": "_Unwind_Reason_Code",
+  "size": 4,
+  "kind": "enum",
+  "fields": []
+ },
+ {
+  "ordinal": 118,
+  "name": "CarryableEnemy",
+  "size": 6350,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 119,
+  "name": "EnemyFreezeMgr_Flags",
+  "size": 3,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 120,
+  "name": "CollisionMgr",
+  "size": 5352,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 121,
+  "name": "CollisionMgr_Sensor",
+  "size": 12,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 122,
+  "name": "TileCheck",
+  "size": 76,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 123,
+  "name": "TileCheck_Param",
+  "size": 12,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 124,
+  "name": "TileCheck_Result",
+  "size": 36,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 125,
+  "name": "FireballBase",
+  "size": 6760,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 126,
+  "name": "RevealMaskRelated",
+  "size": 40,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 127,
+  "name": "EffectWrapper",
+  "size": 104,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 128,
+  "name": "LightSource",
+  "size": 72,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 129,
+  "name": "Amp",
+  "size": 6925,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 130,
+  "name": "struc_55",
+  "size": 104,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 132,
+  "name": "MovementHandler",
+  "size": 248,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 133,
+  "name": "BrosBase",
+  "size": 12472,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 134,
+  "name": "EffectData",
+  "size": 64,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 135,
+  "name": "UserInfo",
+  "size": 24,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 136,
+  "name": "ColliderBase",
+  "size": 340,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 140,
+  "name": "ModelAnimation",
+  "size": 28,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 141,
+  "name": "BulletBillTemp",
+  "size": 7284,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 142,
+  "name": "FixedIcicle",
+  "size": 6616,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 143,
+  "name": "ActiveColliderMgr",
+  "size": 64,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 144,
+  "name": "ActiveColliderMgrList",
+  "size": 12,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 145,
+  "name": "ActiveColliderNode",
+  "size": 12,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 146,
+  "name": "ColliderListNode",
+  "size": 12,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 147,
+  "name": "CircularCollider",
+  "size": 400,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 148,
+  "name": "RollingHill",
+  "size": 1082,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 149,
+  "name": "ColliderOwnerInfo",
+  "size": 20,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 150,
+  "name": "CircularColliderInfo",
+  "size": 32,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 151,
+  "name": "ColliderMgr",
+  "size": 100,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 152,
+  "name": "ColliderList",
+  "size": 12,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 153,
+  "name": "RollingHill_TypeInfo",
+  "size": 24,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 154,
+  "name": "SolidOnTopCollider",
+  "size": 372,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 155,
+  "name": "TrampolineCloud",
+  "size": 6628,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 156,
+  "name": "SolidOnTopColliderWrapper",
+  "size": 0,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 157,
+  "name": "SolidOnTopColliderInfo",
+  "size": 24,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 158,
+  "name": "ColliderNode",
+  "size": 32,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 159,
+  "name": "ColliderNodeUnk1",
+  "size": 16,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 160,
+  "name": "ShapedCollider",
+  "size": 364,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 161,
+  "name": "RectCollider",
+  "size": 656,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 162,
+  "name": "ShapedColliderInfo",
+  "size": 36,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 164,
+  "name": "StarCoinBase",
+  "size": 6188,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 165,
+  "name": "StarCoin",
+  "size": 6200,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 166,
+  "name": "LineFollower",
+  "size": 144,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 167,
+  "name": "BossBase",
+  "size": 7092,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 168,
+  "name": "PlayerLookTarget",
+  "size": 44,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 169,
+  "name": "ActorScaler",
+  "size": 32,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 170,
+  "name": "SoundActor",
+  "size": 140,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 171,
+  "name": "MovingSoundActor",
+  "size": 308,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 172,
+  "name": "MovingSoundActorHandle",
+  "size": 24,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 174,
+  "name": "nn_atk_SoundActor",
+  "size": 124,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 183,
+  "name": "float16x4_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 184,
+  "name": "float16x8_t",
+  "size": 16,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 185,
+  "name": "int16x2_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 186,
+  "name": "uint16x2_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 187,
+  "name": "float16x2_t",
+  "size": 8,
+  "kind": "union",
+  "fields": []
+ },
+ {
+  "ordinal": 188,
+  "name": "svint8_t",
+  "size": 1,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 189,
+  "name": "svuint8_t",
+  "size": 1,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 190,
+  "name": "svint16_t",
+  "size": 2,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 191,
+  "name": "svuint16_t",
+  "size": 2,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 192,
+  "name": "svint32_t",
+  "size": 4,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 193,
+  "name": "svuint32_t",
+  "size": 4,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 194,
+  "name": "svint64_t",
+  "size": 8,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 195,
+  "name": "svuint64_t",
+  "size": 8,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 196,
+  "name": "svbool_t",
+  "size": 1,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 197,
+  "name": "svfloat32_t",
+  "size": 4,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 198,
+  "name": "svfloat64_t",
+  "size": 8,
+  "kind": "struct",
+  "fields": []
+ },
+ {
+  "ordinal": 199,
+  "name": "svfloat16_t",
+  "size": 2,
+  "kind": "struct",
+  "fields": []
+ }
+]
