@@ -1,4 +1,3 @@
-#include "nsmbudx_prelude.h"
 
 #include <math.h>
 
@@ -914,7 +913,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v2 )
       v3 = (int (__fastcall ***)(_DWORD, int))ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, v2);
     else
-      v3 = 0;
+      v3 = nullptr;
     if ( _cxa_guard_acquire_0(13129432) )
     {
       MEMORY[0xC856D4] = 12321964;
@@ -1377,14 +1376,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = (_DWORD *)(a1 + 6332);
     if ( v3 == (*(int (**)(void))(MEMORY[0xC854E0] + 8))() )
     {
-      sub_60813430(v4, (int)"SE_BOSS_CMN_JUMP_L", 0);
+      sub_60813430(v4, (int)"SE_BOSS_CMN_JUMP_L", nullptr);
       v5 = "SE_VOC_MOR_JUMP_L";
     }
     else
     {
       v5 = "SE_BOSS_CMN_JUMP_S";
     }
-    return sub_60813430(v4, (int)v5, 0);
+    return sub_60813430(v4, (int)v5, nullptr);
   }
 
 /* ============================================================================
@@ -1469,7 +1468,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_60418548(*v8 + 4) == 1 )
     {
       AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 8, 1, 0, 0);
-      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_MORTON_STAMP", *(__int16 *)(a1 + 6640), 0);
+      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_MORTON_STAMP", *(__int16 *)(a1 + 6640), nullptr);
     }
     v10 = (*v2)[3];
     v11 = (*v2)[17];
@@ -2142,7 +2141,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     v11 = a1[1784];
-    if ( !v11 || (v12 = (_DWORD *)ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, v11)) == 0 )
+    if ( !v11 || (v12 = (_DWORD *)ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, v11)) == nullptr )
     {
       a1[1773] = 2;
   LABEL_18:
@@ -2207,7 +2206,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v31 = *((__int16 *)a1 + 3320);
           v30 = (__int16 *)(a1 + 1660);
           v24 = v30 - 154;
-          sub_608134CC((_DWORD *)v30 - 77, (int)"SE_VOC_MOR_QUAKE", v31, 0);
+          sub_608134CC((_DWORD *)v30 - 77, (int)"SE_VOC_MOR_QUAKE", v31, nullptr);
           v25 = *v30;
           v26 = "SE_BOSS_MORTON_HAMMER_ATTACK_LAST";
         }
@@ -2216,11 +2215,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v23 = *((__int16 *)a1 + 3320);
           v22 = (__int16 *)(a1 + 1660);
           v24 = v22 - 154;
-          sub_608134CC((_DWORD *)v22 - 77, (int)"SE_VOC_MOR_MAGIC_SHOT", v23, 0);
+          sub_608134CC((_DWORD *)v22 - 77, (int)"SE_VOC_MOR_MAGIC_SHOT", v23, nullptr);
           v25 = *v22;
           v26 = "SE_BOSS_MORTON_HAMMER_ATTACK";
         }
-        sub_608134CC(v24, (int)v26, v25, 0);
+        sub_608134CC(v24, (int)v26, v25, nullptr);
         goto LABEL_31;
       }
     }
@@ -2413,9 +2412,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 7092) = 1;
     v11 = a1 + 648;
     CollisionMgr_setSensor(v11, dword_60AF5FEC, 3);
-    CollisionMgr_setSensor(v11, 0, 2);
-    CollisionMgr_setSensor(v11, 0, 0);
-    return CollisionMgr_setSensor(v11, 0, 1);
+    CollisionMgr_setSensor(v11, nullptr, 2);
+    CollisionMgr_setSensor(v11, nullptr, 0);
+    return CollisionMgr_setSensor(v11, nullptr, 1);
   }
 
 /* ============================================================================
@@ -2475,7 +2474,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                         (_DWORD *)(a1 + 6332),
                         (int)"SE_BOSS_MORTON_DOWN_LAND1",
                         *(__int16 *)(a1 + 6640),
-                        0);
+                        nullptr);
         }
         break;
     }
@@ -2516,18 +2515,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   void __fastcall sub_600F4544(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
   
     *a1 = 12379044;
-    v2 = (struct sead_IDisposer *)(a1 + 2030);
+    v2 = (sead::IDisposer *)(a1 + 2030);
     a1[2137] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 2137);
+    v3 = (sead::IDisposer *)(a1 + 2137);
     sub_60237560((int)(a1 + 2137));
     sead::IDisposer::~IDisposer(v3);
     a1[2111] = 12325992;
     sub_60237560((int)(a1 + 2111));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 2111));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 2111));
     ActiveCollider_dtor(v2);
     KoopalingBase::~KoopalingBase(a1);
   }
@@ -2538,19 +2537,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_600F45C4(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12379044;
-    v2 = (struct sead_IDisposer *)(a1 + 2030);
+    v2 = (sead::IDisposer *)(a1 + 2030);
     a1[2137] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 2137);
+    v3 = (sead::IDisposer *)(a1 + 2137);
     sub_60237560((int)(a1 + 2137));
     sead::IDisposer::~IDisposer(v3);
     a1[2111] = 12325992;
     sub_60237560((int)(a1 + 2111));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 2111));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 2111));
     ActiveCollider_dtor(v2);
     KoopalingBase::~KoopalingBase(a1);
     return operator delete(v4);
@@ -2642,7 +2641,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_MORTON_LAND_ref(int a1)
   {
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_MORTON_LAND", 0);
+    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_MORTON_LAND", nullptr);
   }
 
 /* ============================================================================
@@ -2651,7 +2650,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_CMN_FAT_SHELL_LAND_ref(int a1)
   {
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_LAND", 0);
+    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_LAND", nullptr);
   }
 
 /* ============================================================================
@@ -2660,7 +2659,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_CMN_FAT_SHELL_ROLL_ref(int a1)
   {
-    return sub_608134C8((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_ROLL", 0);
+    return sub_608134C8((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_ROLL", nullptr);
   }
 
 /* ============================================================================
@@ -2669,7 +2668,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_MORTON_MAGIC_MAKE_SLOW_ref(int a1)
   {
-    return sub_6081356C((_DWORD *)(a1 + 6332), (int)"SE_BOSS_MORTON_MAGIC_MAKE_SLOW", *(__int16 *)(a1 + 6640), 0);
+    return sub_6081356C((_DWORD *)(a1 + 6332), (int)"SE_BOSS_MORTON_MAGIC_MAKE_SLOW", *(__int16 *)(a1 + 6640), nullptr);
   }
 
 /* ============================================================================
@@ -2953,7 +2952,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8[0] = *(float *)(a1 + 108);
       v8[1] = v3;
       mapPositionToScreen(v7, v8);
-      SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v5, (int)"SE_AMB_SANDPILLAR_SIGN", v4, v7, 0);
+      SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v5, (int)"SE_AMB_SANDPILLAR_SIGN", v4, v7, nullptr);
       --*v2;
     }
     result = *(_DWORD *)(a1 + 6316);
@@ -3016,7 +3015,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8[0] = *(float *)(a1 + 108);
       v8[1] = v3;
       mapPositionToScreen(v7, v8);
-      SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v5, (int)"SE_AMB_SANDPILLAR_SIGN", v4, v7, 0);
+      SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v5, (int)"SE_AMB_SANDPILLAR_SIGN", v4, v7, nullptr);
       --*v2;
     }
     result = *(_DWORD *)(a1 + 6320);
@@ -3793,7 +3792,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v14[0] = *(float *)(a1 + 108);
       v14[1] = v10;
       mapPositionToScreen(v13, v14);
-      BasicSoundActor1_playSound(v11, (int)"SE_BOSS_SANBO_CRASH", v13, 0);
+      BasicSoundActor1_playSound(v11, (int)"SE_BOSS_SANBO_CRASH", v13, nullptr);
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13130520);
     }
     return result;
@@ -3909,7 +3908,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v28 = *(_DWORD *)(a1 + 108);
         v29 = v22;
         mapPositionToScreen(v27, (float *)&v28);
-        BasicSoundActor1_playSound(v23, (int)"SE_BOSS_SANBO_CRASH", v27, 0);
+        BasicSoundActor1_playSound(v23, (int)"SE_BOSS_SANBO_CRASH", v27, nullptr);
         return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13130520);
       }
       else
@@ -3935,7 +3934,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v28 = *(_DWORD *)(a1 + 108);
           v29 = v16;
           mapPositionToScreen(v27, (float *)&v28);
-          BasicSoundActor1_playSound(v17, (int)"SE_BOSS_SANBO_CRASH", v27, 0);
+          BasicSoundActor1_playSound(v17, (int)"SE_BOSS_SANBO_CRASH", v27, nullptr);
           return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13130520);
         }
       }
@@ -3966,7 +3965,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v28 = *(_DWORD *)(a1 + 108);
       v29 = v8;
       mapPositionToScreen(v27, (float *)&v28);
-      BasicSoundActor1_playSound(v9, (int)"SE_BOSS_SANBO_CRASH", v27, 0);
+      BasicSoundActor1_playSound(v9, (int)"SE_BOSS_SANBO_CRASH", v27, nullptr);
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13130520);
     }
     return result;
@@ -4393,7 +4392,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_600F7454(_BYTE *a1)
   {
     *(_DWORD *)a1 = 12381592;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6396));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6396));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -4410,7 +4409,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     *(_DWORD *)a1 = 12381592;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6396));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6396));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -4466,7 +4465,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9[0] = v5;
     v9[1] = v6;
     mapPositionToScreen(v8, v9);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_FIREBALL_DISAPP", v8, 0);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_FIREBALL_DISAPP", v8, nullptr);
     return 0;
   }
 
@@ -6680,21 +6679,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_600FC598(int a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *(_DWORD *)a1 = 12365964;
-    v2 = (struct sead_IDisposer *)(a1 + 6644);
+    v2 = (sead::IDisposer *)(a1 + 6644);
     *(_DWORD *)(a1 + 7372) = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 7372);
+    v3 = (sead::IDisposer *)(a1 + 7372);
     sub_60237560(a1 + 7372);
     sead::IDisposer::~IDisposer(v3);
     *(_DWORD *)(a1 + 7268) = 12325992;
     sub_60237560(a1 + 7268);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7268));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7268));
     *(_DWORD *)a1 = 12326268;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
     sub_60026BFC((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
@@ -6758,7 +6757,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(v0 + 9448) = 0;
     *(_DWORD *)(v0 + 9452) = 15;
     *(_DWORD *)(v0 + 9456) = 0;
-    MovingSoundActor_ctor((struct nn_atk_SoundActor *)(v0 + 9476), 0, 1);
+    MovingSoundActor_ctor((nn::atk::SoundActor *)(v0 + 9476), 0, 1);
     *(_DWORD *)(v0 + 9476) = 12327348;
     EffectWrapper_ctor(v0 + 9784);
     *(_DWORD *)(v0 + 9784) = 12325968;
@@ -6859,7 +6858,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8[0] = *(float *)(a1 + 108);
     v8[1] = v4;
     mapPositionToScreen(v7, v8);
-    result = sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v7, 0);
+    result = sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v7, nullptr);
     v6 = v3 - v2;
     if ( (float)(v3 - v2) <= 0.0 )
       v6 = -(float)(v3 - v2);
@@ -6898,7 +6897,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60421AE4(v3, (int)v5, 0);
     (*(void (__fastcall **)(_DWORD *, int))(*a1 + 780))(a1, 4);
     a1[2339] = dword_60C8601C;
-    return sub_60813430(a1 + 2369, (int)"SE_VOC_JR_PROV2", 0);
+    return sub_60813430(a1 + 2369, (int)"SE_VOC_JR_PROV2", nullptr);
   }
 
 /* ============================================================================
@@ -6922,7 +6921,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8[0] = *(float *)(a1 + 108);
     v8[1] = v3;
     mapPositionToScreen(v7, v8);
-    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v7, 0);
+    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v7, nullptr);
     v4 = *(_DWORD *)(*(_DWORD *)v2 + 12);
     v5 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v5 )
@@ -6950,7 +6949,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[0] = 12321336;
     v5[1] = "jc_wait";
     sub_60421AE4(v3, (int)v5, 1);
-    return sub_60813430(v2, (int)"SE_BOSS_JR_DEMO_CROWN_ATTACKSIGN", 0);
+    return sub_60813430(v2, (int)"SE_BOSS_JR_DEMO_CROWN_ATTACKSIGN", nullptr);
   }
 
 /* ============================================================================
@@ -7032,7 +7031,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[0] = *(float *)(a1 + 108);
     v5[1] = v2;
     mapPositionToScreen(v4, v5);
-    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v4, 0);
+    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v4, nullptr);
     if ( !*(_WORD *)(a1 + 6276) )
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13131252);
     return CollisionMgr_process((unsigned __int8 *)(a1 + 648));
@@ -7063,7 +7062,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[0] = *(float *)(a1 + 108);
     v5[1] = v2;
     mapPositionToScreen(v4, v5);
-    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v4, 0);
+    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v4, nullptr);
     if ( !*(_WORD *)(a1 + 6276) )
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13131284);
     return CollisionMgr_process((unsigned __int8 *)(a1 + 648));
@@ -7137,13 +7136,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = *(_DWORD *)(a1 + 9328);
     v7 = v3;
     v8 = v2;
-    EffectWrapper_update((int32x4_t *)(a1 + 9784), 1066, (float *)&v6, 0, (float *)(a1 + 144));
+    EffectWrapper_update((int32x4_t *)(a1 + 9784), 1066, (float *)&v6, nullptr, (float *)(a1 + 144));
     *(_DWORD *)(a1 + 160) += 596523264;
     v4 = *(_DWORD *)(a1 + 112);
     v6 = *(_DWORD *)(a1 + 108);
     v7 = v4;
     mapPositionToScreen(v9, (float *)&v6);
-    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v9, 0);
+    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v9, nullptr);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     result = *(unsigned __int8 *)(a1 + 2872);
     if ( (result & 1) != 0 )
@@ -7335,7 +7334,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = *(float *)(a1 + 108);
     v6[1] = v2;
     mapPositionToScreen(v5, v6);
-    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v5, 0);
+    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v5, nullptr);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     sub_600D17F4(a1);
     sub_601005C0(a1);
@@ -7394,7 +7393,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8[0] = *(float *)(a1 + 108);
     v8[1] = v4;
     mapPositionToScreen(v7, v8);
-    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v7, 0);
+    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v7, nullptr);
     sub_601005C0(a1);
     result = *(unsigned __int16 *)(a1 + 6276);
     if ( !*(_WORD *)(a1 + 6276) )
@@ -7472,7 +7471,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = *(_DWORD *)(a1 + 108);
     v9 = v4;
     mapPositionToScreen(v7, (float *)&v8);
-    return BasicSoundActor1_playSound(v5, (int)"SE_VOC_JR_GO", v7, 0);
+    return BasicSoundActor1_playSound(v5, (int)"SE_VOC_JR_GO", v7, nullptr);
   }
 
 /* ============================================================================
@@ -7491,7 +7490,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[0] = *(float *)(a1 + 108);
     v5[1] = v2;
     mapPositionToScreen(v4, v5);
-    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v4, 0);
+    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v4, nullptr);
     if ( !*(_WORD *)(a1 + 6276) )
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13131508);
     return CollisionMgr_process((unsigned __int8 *)(a1 + 648));
@@ -7522,7 +7521,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[0] = *(float *)(a1 + 108);
     v5[1] = v2;
     mapPositionToScreen(v4, v5);
-    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v4, 0);
+    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v4, nullptr);
     if ( !*(_WORD *)(a1 + 6276) )
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13131540);
     return CollisionMgr_process((unsigned __int8 *)(a1 + 648));
@@ -7602,13 +7601,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = *(_DWORD *)(a1 + 9328);
     v13 = v3;
     v14 = v2;
-    EffectWrapper_update((int32x4_t *)(a1 + 9784), 1066, (float *)&v12, 0, (float *)(a1 + 144));
+    EffectWrapper_update((int32x4_t *)(a1 + 9784), 1066, (float *)&v12, nullptr, (float *)(a1 + 144));
     *(_DWORD *)(a1 + 160) += 596523264;
     v4 = *(float *)(a1 + 112);
     v12 = *(_DWORD *)(a1 + 108);
     v13 = v4;
     mapPositionToScreen(v15, (float *)&v12);
-    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v15, 0);
+    sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CROWN_DOWNATTACK", (int)v15, nullptr);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
     {
@@ -7880,7 +7879,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 780))(a1, 4);
         if ( v4 )
           sub_60421AD4(*(_DWORD *)(v4 + 7100), *(_DWORD *)(v4 + 7604) + 24, 0);
-        sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_VOC_JR_PROV2", 0);
+        sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_VOC_JR_PROV2", nullptr);
       }
     }
     *(_DWORD *)(a1 + 124) = 1082130432;
@@ -7926,7 +7925,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14[0] = a1[27];
     v14[1] = v3;
     mapPositionToScreen(v13, v14);
-    sub_60813574((_DWORD *)a1 + 2369, (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v13, 0);
+    sub_60813574((_DWORD *)a1 + 2369, (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v13, nullptr);
     CollisionMgr_process((unsigned __int8 *)a1 + 648);
     sub_600D17F4((int)a1);
     sub_601005C0((int)a1);
@@ -8048,7 +8047,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 9356) = dword_60C8601C;
     result = (int *)*(unsigned __int8 *)(a1 + 2872);
     if ( ((unsigned __int8)result & 1) != 0 )
-      return sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", 0);
+      return sub_60813430((_DWORD *)(a1 + 9476), (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", nullptr);
     return result;
   }
 
@@ -8079,7 +8078,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = *(_DWORD *)(a1 + 108);
       v10 = v6;
       mapPositionToScreen(v8, (float *)&v9);
-      sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v8, 0);
+      sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v8, nullptr);
       CollisionMgr_process((unsigned __int8 *)(a1 + 648));
       sub_600D17F4(a1);
       sub_601005C0(a1);
@@ -8100,7 +8099,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = *(_DWORD *)(a1 + 108);
       v10 = v4;
       mapPositionToScreen(v8, (float *)&v9);
-      sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v8, 0);
+      sub_60813574((_DWORD *)(a1 + 9476), (int)"SE_BOSS_JR_CLOWN_MOVE", (int)v8, nullptr);
       CollisionMgr_process((unsigned __int8 *)(a1 + 648));
       sub_600D17F4(a1);
       sub_601005C0(a1);
@@ -8132,7 +8131,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[1] = "jc_delight";
     sub_60421AE4(v3, (int)v5, 0);
     (*(void (__fastcall **)(_DWORD *, int))(*a1 + 780))(a1, 4);
-    return sub_60813430(a1 + 2369, (int)"SE_VOC_JR_PROV2", 0);
+    return sub_60813430(a1 + 2369, (int)"SE_VOC_JR_PROV2", nullptr);
   }
 
 /* ============================================================================
@@ -8243,7 +8242,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = (float *)result;
       if ( result )
         v5 = v2;
-      v6 = v5 == 0;
+      v6 = v5 == nullptr;
       if ( v5 )
       {
         a2 = *(_DWORD *)(a2 + 2196);
@@ -8277,7 +8276,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v11[0] = *(float *)(a2 + 108);
               v11[1] = v8;
               mapPositionToScreen(v10, v11);
-              return (int)BasicSoundActor1_playSound(v9, (int)"SE_OBJ_NO_DAMAGE_BOUND", v10, 0);
+              return (int)BasicSoundActor1_playSound(v9, (int)"SE_OBJ_NO_DAMAGE_BOUND", v10, nullptr);
             }
           }
         }
@@ -8332,7 +8331,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v7 = v5;
       if ( v4 )
       {
-        v8 = v7 == 0;
+        v8 = v7 == nullptr;
         if ( v7 )
         {
           result = *(unsigned __int8 *)(v4 + 1216);
@@ -8382,11 +8381,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = (float *)result;
       if ( result )
         v6 = v4;
-      v7 = v6 == 0;
+      v7 = v6 == nullptr;
       if ( v6 )
       {
         v4 = *(float **)(a2 + 64);
-        v7 = v4 == 0;
+        v7 = v4 == nullptr;
       }
       if ( !v7 )
       {
@@ -9485,7 +9484,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v20 )
       {
         v6 = *(float **)(v20 + 144);
-        v7 = v6 == 0;
+        v7 = v6 == nullptr;
       }
       if ( !v7 )
       {
@@ -9853,7 +9852,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v37 = v9;
         v38 = v21;
         mapPositionToScreen((float *)v36, &v37);
-        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v20, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v19, (float *)v36, 0);
+        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v20, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v19, (float *)v36, nullptr);
         if ( *((float *)a1 + 28) >= *((float *)a1 + 1703) )
         {
           a1[2355] = 0;
@@ -9887,7 +9886,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v37 = v10;
             v38 = v26;
             mapPositionToScreen((float *)v36, &v37);
-            SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v25, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v24, (float *)v36, 0);
+            SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v25, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v24, (float *)v36, nullptr);
             if ( !*((_WORD *)a1 + 3138) )
               *v3 = 5;
             goto LABEL_47;
@@ -9946,7 +9945,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v37 = v16;
         v38 = v31;
         mapPositionToScreen((float *)v36, &v37);
-        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v30, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v29, (float *)v36, 0);
+        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v30, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v29, (float *)v36, nullptr);
         if ( v14 == 1 )
           (*(void (__fastcall **)(int *, int))(*a1 + 192))(a1, 13131736);
   LABEL_47:
@@ -9987,7 +9986,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v4 && (**(int (__fastcall ***)(int, int))v4)(v4, 13113188) == 1 )
       (*(void (__fastcall **)(int, int))(*(_DWORD *)v4 + 192))(v4, 13124020);
-    result = sub_60813430(a1 + 1752, (int)"SE_BOSS_JR_CROWN_FUKKATSU", 0);
+    result = sub_60813430(a1 + 1752, (int)"SE_BOSS_JR_CROWN_FUKKATSU", nullptr);
     a1[39] = 0;
     a1[40] = 0;
     a1[41] = 0;
@@ -10110,23 +10109,23 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_60102CA0(int a1)
   {
     _DWORD *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v3; // r6
   
     *(_DWORD *)a1 = 12383948;
     v2 = (_DWORD *)(a1 + 7008);
     *(_DWORD *)(a1 + 9784) = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 9784);
+    v3 = (sead::IDisposer *)(a1 + 9784);
     sub_60237560(a1 + 9784);
     sead::IDisposer::~IDisposer(v3);
     sub_60026BFC((_DWORD *)(a1 + 9476));
-    ColliderBase_dtor((struct sead_IDisposer *)(a1 + 8928));
-    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 8272));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7964));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7660));
+    ColliderBase_dtor((sead::IDisposer *)(a1 + 8928));
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 8272));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7964));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7660));
     *(_DWORD *)a1 = 12367148;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7348));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7348));
     sub_60026BFC(v2);
-    ColliderBase_dtor((struct sead_IDisposer *)(a1 + 6336));
+    ColliderBase_dtor((sead::IDisposer *)(a1 + 6336));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -10141,24 +10140,24 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_60102DAC(int a1)
   {
     _DWORD *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *(_DWORD *)a1 = 12383948;
     v2 = (_DWORD *)(a1 + 7008);
     *(_DWORD *)(a1 + 9784) = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 9784);
+    v3 = (sead::IDisposer *)(a1 + 9784);
     sub_60237560(a1 + 9784);
     sead::IDisposer::~IDisposer(v3);
     sub_60026BFC((_DWORD *)(a1 + 9476));
-    ColliderBase_dtor((struct sead_IDisposer *)(a1 + 8928));
-    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 8272));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7964));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7660));
+    ColliderBase_dtor((sead::IDisposer *)(a1 + 8928));
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 8272));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7964));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7660));
     *(_DWORD *)a1 = 12367148;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7348));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7348));
     sub_60026BFC(v2);
-    ColliderBase_dtor((struct sead_IDisposer *)(a1 + 6336));
+    ColliderBase_dtor((sead::IDisposer *)(a1 + 6336));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -10260,7 +10259,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C86088 = 2761136;
     v1[0] = 12321336;
     v1[1] = &unk_60ABDFC7;
-    *(_DWORD *)Profile::Profile(13131068, 1033992, MEMORY[0xAF32F0], (int)v1, 0, 4) = 12383936;
+    *(_DWORD *)Profile::Profile(13131068, 1033992, MEMORY[0xAF32F0], (int)v1, nullptr, 4) = 12383936;
     MEMORY[0xC85D58] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC85D54] = 12384940;
     MEMORY[0xC85D5C] = 1034412;
@@ -10929,7 +10928,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(float *)(a1 + 6772) = *(float *)(a1 + 108) + *(float *)(a1 + 6596);
         *(_DWORD *)(a1 + 6776) = v8;
         *(_DWORD *)(a1 + 6780) = v9;
-        sub_602375C4((int32x4_t *)(a1 + 6708), 1221, (float *)(a1 + 6772), 0, 0);
+        sub_602375C4((int32x4_t *)(a1 + 6708), 1221, (float *)(a1 + 6772), nullptr, nullptr);
         v15 = (float)*(int *)(a1 + 6684) + 2.0;
         v16 = 1065353216;
         v17 = 1065353216;
@@ -10939,7 +10938,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v15 = *(float *)(a1 + 108);
         v16 = v10;
         mapPositionToScreen(v21, &v15);
-        BasicSoundActor2_play(v11, (int)"SE_OBJ_CMN_SPLASH_LAVA", v21, 0);
+        BasicSoundActor2_play(v11, (int)"SE_OBJ_CMN_SPLASH_LAVA", v21, nullptr);
         *(_BYTE *)(a1 + 6704) = 0;
         for ( i = *(_DWORD **)(a1 + 6360); i; i = (_DWORD *)i[1] )
         {
@@ -10958,7 +10957,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     if ( sub_60235E50(a1 + 6708) == 1 )
-      EffectData_update((int32x4_t *)(a1 + 6708), (float *)(a1 + 6772), 0, 0);
+      EffectData_update((int32x4_t *)(a1 + 6708), (float *)(a1 + 6772), nullptr, nullptr);
     *(_DWORD *)(a1 + 156) += dword_60C861A8;
     *(_DWORD *)(a1 + 164) += dword_60C861AC;
     result = MEMORY[0xCC6484];
@@ -11325,7 +11324,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_6010536C(int a1)
   {
     *(_DWORD *)a1 = 12385292;
-    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
+    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -11340,7 +11339,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     *(_DWORD *)a1 = 12385292;
-    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
+    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -11664,7 +11663,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(float *)(a1 + 6760) = *(float *)(a1 + 108) + *(float *)(a1 + 6196);
         *(_DWORD *)(a1 + 6764) = v9;
         *(_DWORD *)(a1 + 6768) = v10;
-        sub_602375C4((int32x4_t *)(a1 + 6696), 1221, (float *)(a1 + 6760), 0, 0);
+        sub_602375C4((int32x4_t *)(a1 + 6696), 1221, (float *)(a1 + 6760), nullptr, nullptr);
         v16 = (float)*(int *)(a1 + 6188) + 2.0;
         v17 = 1065353216;
         v18 = 1065353216;
@@ -11674,7 +11673,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v16 = *(float *)(a1 + 108);
         v17 = v11;
         mapPositionToScreen(v22, &v16);
-        BasicSoundActor2_play(v12, (int)"SE_OBJ_CMN_SPLASH_LAVA", v22, 0);
+        BasicSoundActor2_play(v12, (int)"SE_OBJ_CMN_SPLASH_LAVA", v22, nullptr);
         for ( i = *(_DWORD **)(a1 + 6456); i; i = (_DWORD *)i[1] )
         {
           if ( *i )
@@ -11692,7 +11691,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     if ( sub_60235E50(a1 + 6696) == 1 )
-      EffectData_update((int32x4_t *)(a1 + 6696), (float *)(a1 + 6760), 0, 0);
+      EffectData_update((int32x4_t *)(a1 + 6696), (float *)(a1 + 6760), nullptr, nullptr);
     *(_DWORD *)(a1 + 156) += dword_60C86258;
     *(_DWORD *)(a1 + 164) += dword_60C8625C;
     result = MEMORY[0xCC6484];
@@ -12100,17 +12099,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = result == MEMORY[0xAF2D58];
     if ( !v9 )
       goto LABEL_33;
-    v10 = 0;
-    v11 = 0;
+    v10 = nullptr;
+    v11 = nullptr;
     if ( result == v8 )
       v10 = v7;
     if ( result == MEMORY[0xAF2D58] )
       v11 = v7;
     if ( result == v8 )
-      v11 = 0;
-    v12 = v10 == 0;
+      v11 = nullptr;
+    v12 = v10 == nullptr;
     if ( !v10 )
-      v12 = v11 == 0;
+      v12 = v11 == nullptr;
     if ( !v12 )
     {
       if ( !*v6 )
@@ -12379,7 +12378,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_60106F6C(int a1)
   {
     *(_DWORD *)a1 = 12385528;
-    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6200));
+    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6200));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -12394,7 +12393,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     *(_DWORD *)a1 = 12385528;
-    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6200));
+    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6200));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -12802,7 +12801,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(float *)(a1 + 6772) = *(float *)(a1 + 108) + *(float *)(a1 + 6596);
         *(_DWORD *)(a1 + 6776) = v8;
         *(_DWORD *)(a1 + 6780) = v9;
-        sub_602375C4((int32x4_t *)(a1 + 6708), 1221, (float *)(a1 + 6772), 0, 0);
+        sub_602375C4((int32x4_t *)(a1 + 6708), 1221, (float *)(a1 + 6772), nullptr, nullptr);
         v15 = (float)*(int *)(a1 + 6684) + 2.0;
         v16 = 1065353216;
         v17 = 1065353216;
@@ -12812,7 +12811,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v15 = *(float *)(a1 + 108);
         v16 = v10;
         mapPositionToScreen(v21, &v15);
-        BasicSoundActor2_play(v11, (int)"SE_OBJ_CMN_SPLASH_LAVA", v21, 0);
+        BasicSoundActor2_play(v11, (int)"SE_OBJ_CMN_SPLASH_LAVA", v21, nullptr);
         *(_BYTE *)(a1 + 6704) = 0;
         for ( i = *(_DWORD **)(a1 + 6360); i; i = (_DWORD *)i[1] )
         {
@@ -12831,7 +12830,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     if ( sub_60235E50(a1 + 6708) == 1 )
-      EffectData_update((int32x4_t *)(a1 + 6708), (float *)(a1 + 6772), 0, 0);
+      EffectData_update((int32x4_t *)(a1 + 6708), (float *)(a1 + 6772), nullptr, nullptr);
     *(_DWORD *)(a1 + 156) += dword_60C86334;
     *(_DWORD *)(a1 + 164) += dword_60C86338;
     result = MEMORY[0xCC6484];
@@ -13198,7 +13197,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_6010890C(int a1)
   {
     *(_DWORD *)a1 = 12385764;
-    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
+    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -13213,7 +13212,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     *(_DWORD *)a1 = 12385764;
-    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
+    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -13481,13 +13480,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = *(_DWORD *)(a1 + 108);
     v13 = v4;
     v14 = 1166843904;
-    sub_602375C4((int32x4_t *)(a1 + 8508), 1026, (float *)&v12, 0, 0);
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", 0);
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_ROY_QUAKE", 0);
+    sub_602375C4((int32x4_t *)(a1 + 8508), 1026, (float *)&v12, nullptr, nullptr);
+    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", nullptr);
+    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_ROY_QUAKE", nullptr);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1044))(a1);
     sub_6010BB78((float *)a1, 0xBu, 0);
     sub_6010BB78((float *)a1, 0x1Bu, 1u);
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_KILLER_SHOT", *(__int16 *)(a1 + 6640), 0);
+    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_KILLER_SHOT", *(__int16 *)(a1 + 6640), nullptr);
     v5 = **v3;
     v6 = *(int (__fastcall **)(int, int *))(*(_DWORD *)v5 + 84);
     v12 = 12321336;
@@ -13615,7 +13614,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     CollisionActor::handleSpeed(a1);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1232))(a1);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1284))(a1);
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_ROY_JUMP_L", *(__int16 *)(a1 + 6640), 0);
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_ROY_JUMP_L", *(__int16 *)(a1 + 6640), nullptr);
   }
 
 /* ============================================================================
@@ -13703,7 +13702,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_DWORD *)(a1 + 80) == 1 )
       v6 = 25;
     sub_6010BDF4(a1, v6);
-    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_SR_KILLER_SHOT", *(__int16 *)(a1 + 6640), 0);
+    sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_EMY_SR_KILLER_SHOT", *(__int16 *)(a1 + 6640), nullptr);
     v7 = **v5;
     v8 = *(int (__fastcall **)(int, int *))(*(_DWORD *)v7 + 84);
     v26 = 12321336;
@@ -13937,7 +13936,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       LODWORD(v12) = *(_DWORD *)(a1 + 108);
       HIDWORD(v12) = v3;
       v13 = 1166843904;
-      EffectData_update((int32x4_t *)(a1 + 8508), (float *)&v12, 0, 0);
+      EffectData_update((int32x4_t *)(a1 + 8508), (float *)&v12, nullptr, nullptr);
     }
     if ( sub_60235E50(a1 + 8380) == 1 )
     {
@@ -14352,7 +14351,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v5 <= (float)((float)(v7 + *(float *)(a1 + 7488)) + -1.0)
         && (v6 = 1, v5 >= (float)((float)(v7 + *(float *)(a1 + 7492)) + 1.0)) )
       {
-        v8 = 100LL * (unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340));
+        v8 = 100LL * (unsigned int)sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340));
         if ( HIDWORD(v8) > 0x4F )
         {
           return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13132844);
@@ -15226,8 +15225,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = "SE_BOSS_CMN_JUMP_L";
     else
       v4 = "SE_BOSS_CMN_JUMP_S";
-    sub_60813430((_DWORD *)(a1 + 6332), (int)v4, 0);
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_ROY_JUMP_L", *(__int16 *)(a1 + 6640), 0);
+    sub_60813430((_DWORD *)(a1 + 6332), (int)v4, nullptr);
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_ROY_JUMP_L", *(__int16 *)(a1 + 6640), nullptr);
   }
 
 /* ============================================================================
@@ -15612,7 +15611,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = sub_60418548(*v4 + 4);
     if ( result == 1 )
     {
-      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_ROY_STEP", *(__int16 *)(a1 + 6640), 0);
+      sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_ROY_STEP", *(__int16 *)(a1 + 6640), nullptr);
       v8 = **v3;
       v9 = *(int (__fastcall **)(int, _DWORD *))(*(_DWORD *)v8 + 84);
       v11[0] = 12321336;
@@ -15770,7 +15769,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v33 = v32;
       v34 = *(_DWORD *)(a1 + 112);
       v35 = 1166843904;
-      EffectWrapper_update((int32x4_t *)(a1 + 8276), 1029, (float *)&v33, 0, 0);
+      EffectWrapper_update((int32x4_t *)(a1 + 8276), 1029, (float *)&v33, nullptr, nullptr);
       v6 = **v2;
       v7 = *(int (__fastcall **)(int, _DWORD *))(*(_DWORD *)v6 + 84);
       v30[0] = 12321336;
@@ -15780,7 +15779,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v33 = v32;
       v34 = *(_DWORD *)(a1 + 112);
       v35 = 1166843904;
-      EffectWrapper_update((int32x4_t *)(a1 + 8172), 1029, (float *)&v33, 0, 0);
+      EffectWrapper_update((int32x4_t *)(a1 + 8172), 1029, (float *)&v33, nullptr, nullptr);
     }
     v10 = (_WORD *)(a1 + 6276);
     v9 = *(unsigned __int16 *)(a1 + 6276);
@@ -16368,7 +16367,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( *(_DWORD *)(a1 + 80) == 1 )
             *(_DWORD *)(a1 + 120) = -1082130432;
           *v2 = 2;
-          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_ROY_DOWN_LAND1", 0);
+          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_ROY_DOWN_LAND1", nullptr);
           v4 = *(float *)(a1 + 112);
           v9[0] = *(_DWORD *)(a1 + 108);
           *(float *)&v9[1] = v4 + 8.0;
@@ -16463,16 +16462,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   void __fastcall sub_6010EAD8(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12386000;
     a1[2069] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 2069);
+    v2 = (sead::IDisposer *)(a1 + 2069);
     sub_60237560((int)(a1 + 2069));
     sead::IDisposer::~IDisposer(v2);
     a1[2043] = 12325992;
     sub_60237560((int)(a1 + 2043));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 2043));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 2043));
     KoopalingBase::~KoopalingBase(a1);
   }
 
@@ -16482,17 +16481,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6010EB48(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *a1 = 12386000;
     a1[2069] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 2069);
+    v2 = (sead::IDisposer *)(a1 + 2069);
     sub_60237560((int)(a1 + 2069));
     sead::IDisposer::~IDisposer(v2);
     a1[2043] = 12325992;
     sub_60237560((int)(a1 + 2043));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 2043));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 2043));
     KoopalingBase::~KoopalingBase(a1);
     return operator delete(v3);
   }
@@ -16712,7 +16711,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_ROY_LAND_ref(int a1)
   {
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_ROY_LAND", 0);
+    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_ROY_LAND", nullptr);
   }
 
 /* ============================================================================
@@ -16721,7 +16720,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_CMN_FAT_SHELL_LAND_ref_2(int a1)
   {
-    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_LAND", 0);
+    return sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_LAND", nullptr);
   }
 
 /* ============================================================================
@@ -16730,7 +16729,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_CMN_FAT_SHELL_ROLL_ref_2(int a1)
   {
-    return sub_608134C8((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_ROLL", 0);
+    return sub_608134C8((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_FAT_SHELL_ROLL", nullptr);
   }
 
 /* ============================================================================
@@ -18211,7 +18210,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_60111A38(int a1)
   {
     *(_DWORD *)a1 = 12387920;
-    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
+    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -18226,7 +18225,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     *(_DWORD *)a1 = 12387920;
-    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
+    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -18243,7 +18242,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v1[0] = 12321336;
     v1[1] = &unk_60ABE397;
-    Profile::Profile(13134024, 1116164, MEMORY[0xAF3168], (int)v1, 0, 2);
+    Profile::Profile(13134024, 1116164, MEMORY[0xAF3168], (int)v1, nullptr, 2);
     MEMORY[0xC868E4] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC868E0] = 12388124;
     MEMORY[0xC868E8] = 1116588;
@@ -18412,11 +18411,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     hasPlayer = (float *)PlayerMgr_hasPlayer(MEMORY[0xCC436C], 1);
-    v7 = hasPlayer == 0;
+    v7 = hasPlayer == nullptr;
     if ( hasPlayer )
     {
       hasPlayer = *(float **)(MEMORY[0xCC436C] + 52);
-      v7 = hasPlayer == 0;
+      v7 = hasPlayer == nullptr;
     }
     if ( !v7 )
     {
@@ -18819,7 +18818,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       HIWORD(v14) = 256;
       if ( sub_60418548(*v10 + 4) == 1 )
       {
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_NOTICE", 0);
+        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_NOTICE", nullptr);
         *(_DWORD *)(a1 + 7092) = v14;
       }
       else
@@ -18830,7 +18829,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v15 += v16;
         if ( sub_60418548(*v15 + 4) == 1 )
         {
-          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CHOUHATSU1", 0);
+          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CHOUHATSU1", nullptr);
           *(_DWORD *)(a1 + 7092) = 16780499;
         }
         else
@@ -18841,7 +18840,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v17 += v18;
           if ( sub_60418548(*v17 + 4) == 1 )
           {
-            sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CHOUHATSU2", 0);
+            sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_CHOUHATSU2", nullptr);
             *(_DWORD *)(a1 + 7092) = v14 + 1;
           }
         }
@@ -18920,7 +18919,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     jcm_delight_ref(v16);
     sub_60813578((_DWORD *)(a1 + 6332));
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_PROV2", 0);
+    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_PROV2", nullptr);
     *(_DWORD *)(a1 + 7092) = 16779445;
     *(_DWORD *)(a1 + 7648) = 1;
     return 7648;
@@ -19102,7 +19101,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v12 += v13;
     AnimationCtrl_setRepeat(*v12 + 4, 0);
     sub_60813578(v1 - 192);
-    sub_60813430(v1 - 192, (int)"SE_VOC_JR_READY", 0);
+    sub_60813430(v1 - 192, (int)"SE_VOC_JR_READY", nullptr);
     *(v1 - 2) = 16780501;
     *(v1 - 1735) = 0;
     v1[137] = 1;
@@ -19275,7 +19274,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_60418548(*v4 + 4) == 1 )
     {
       sub_60813578((_DWORD *)(a1 + 6332));
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_GO", 0);
+      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_GO", nullptr);
       *(_DWORD *)(a1 + 7092) = 16779447;
     }
     v7 = *(_DWORD **)v3;
@@ -19477,7 +19476,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 += v6;
     if ( sub_60418548(*v4 + 4) == 1 )
     {
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_READY_FOR_MANY", 0);
+      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_READY_FOR_MANY", nullptr);
       LOWORD(v7) = 934;
   LABEL_9:
       HIWORD(v7) = 256;
@@ -19497,8 +19496,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v14[0] = *(float *)(a1 + 108);
       v14[1] = v10;
       mapPositionToScreen(v13, v14);
-      BasicSoundActor2_play(v11, (int)"SE_BOSS_JR_TORPEDO_SHOT", v13, 0);
-      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_GO", 0);
+      BasicSoundActor2_play(v11, (int)"SE_BOSS_JR_TORPEDO_SHOT", v13, nullptr);
+      sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_JR_GO", nullptr);
       LOWORD(v7) = 2231;
       goto LABEL_9;
     }
@@ -19827,7 +19826,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v16[0] = *(float *)(MEMORY[0xCC6484] + 116);
         v16[1] = v10;
         mapPositionToScreen(v15, v16);
-        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v9, (int)"SE_AMB_WATER_SURFACE_DOWN", v8, v15, 0);
+        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v9, (int)"SE_AMB_WATER_SURFACE_DOWN", v8, v15, nullptr);
         break;
       case 1:
         EventMgr_set(MEMORY[0xCBD8AC], (unsigned __int8)(*(_BYTE *)(a1 + 539) - 1), 0, 1, 0, 0, 0, 0);
@@ -20063,7 +20062,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v16 = (int)v24;
         }
         jc_demo_W5_excite_ref(v16);
-        sub_60813430(a1 + 1583, (int)"SE_VOC_JR_AGITATE", 0);
+        sub_60813430(a1 + 1583, (int)"SE_VOC_JR_AGITATE", nullptr);
         a1[1773] = 16780500;
         result = 4;
         break;
@@ -20173,7 +20172,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v40 += v42;
         if ( sub_60418548(*v40 + 4) == 1 )
         {
-          sub_60813430(a1 + 1583, (int)"SE_VOC_JR_READY", 0);
+          sub_60813430(a1 + 1583, (int)"SE_VOC_JR_READY", nullptr);
           a1[1773] = 16780501;
           return 16780501;
         }
@@ -20186,7 +20185,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = sub_60418548(*v68 + 4);
           if ( result == 1 )
           {
-            sub_60813430(a1 + 1583, (int)"SE_VOC_JR_GO", 0);
+            sub_60813430(a1 + 1583, (int)"SE_VOC_JR_GO", nullptr);
             a1[1773] = 16779447;
             return 7092;
           }
@@ -20240,7 +20239,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v57 = (int)v65;
         }
         jc_demo_W5_shock_ref(v57);
-        sub_60813430(a1 + 1583, (int)"SE_VOC_JR_SURPRISE", 0);
+        sub_60813430(a1 + 1583, (int)"SE_VOC_JR_SURPRISE", nullptr);
         a1[1773] = 16779450;
         result = 8;
         break;
@@ -21322,21 +21321,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60116AA8(int a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *(_DWORD *)a1 = 12365964;
-    v2 = (struct sead_IDisposer *)(a1 + 6644);
+    v2 = (sead::IDisposer *)(a1 + 6644);
     *(_DWORD *)(a1 + 7372) = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 7372);
+    v3 = (sead::IDisposer *)(a1 + 7372);
     sub_60237560(a1 + 7372);
     sead::IDisposer::~IDisposer(v3);
     *(_DWORD *)(a1 + 7268) = 12325992;
     sub_60237560(a1 + 7268);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7268));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7268));
     *(_DWORD *)a1 = 12326268;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6720));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6720));
     PlayerLookTarget_vf0(v2);
     sub_60026BFC((_DWORD *)(a1 + 6332));
     *(_DWORD *)a1 = 12462088;
@@ -22157,7 +22156,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_60448AF4(*v15, v9++);
     }
     while ( v9 != 10 );
-    sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_GO", 0);
+    sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_GO", nullptr);
     *(_DWORD *)(a1 + 9340) = 2;
     return 9340;
   }
@@ -22400,7 +22399,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v23 > 1 )
           ++v24;
         if ( sub_60418548(*v24 + 4) == 1 )
-          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_CLOSE", 0);
+          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CLOWN_CLOSE", nullptr);
         v25 = *(_DWORD *)(*(_DWORD *)v21 + 12);
         if ( *(_DWORD *)(*(_DWORD *)v21 + 8) > 1u )
           v25 += 4;
@@ -22858,7 +22857,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_60448AF4(*v15, v5++);
     }
     while ( v5 != 10 );
-    sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_TURN", 0);
+    sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_TURN", nullptr);
     *(_BYTE *)(a1 + 9242) = 0;
     *(_DWORD *)(a1 + 9196) = 2;
     result = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 628))(a1);
@@ -26942,13 +26941,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( (v7 & 0x440000) != 0 && (v7 & 0x10000000) == 0 || (v7 & 0x880000) != 0 && (v7 & 0x20000000) == 0 )
         {
           *(float *)(a1 + 120) = -*(float *)(a1 + 120);
-          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_BOUND", 0);
+          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_BOUND", nullptr);
           v7 = *(_DWORD *)(a1 + 2872);
         }
         if ( (v7 & 1) != 0 || (v7 & 0x10400) == 0x400 )
         {
           *(float *)(a1 + 124) = -*(float *)(a1 + 124);
-          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_BOUND", 0);
+          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_BOUND", nullptr);
         }
         v8 = *(_DWORD *)(a1 + 9252);
         *(_DWORD *)(a1 + 9252) = v8 - 1;
@@ -26978,7 +26977,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v11 = (_DWORD *)(a1 + 7008);
           *v5 = v10;
   LABEL_49:
-          sub_60813430(v11, (int)"SE_BOSS_JR_CROWN_BOUND", 0);
+          sub_60813430(v11, (int)"SE_BOSS_JR_CROWN_BOUND", nullptr);
           goto LABEL_50;
         }
         if ( (v9 & 0x440000) != 0 && (v9 & 0x10000000) == 0 || (v9 & 0x880000) != 0 && (v9 & 0x20000000) == 0 )
@@ -27002,7 +27001,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v56 = *(_DWORD *)(a1 + 108);
         v57 = v41;
         mapPositionToScreen((float *)v55, (float *)&v56);
-        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v43, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v42, (float *)v55, 0);
+        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v43, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v42, (float *)v55, nullptr);
   LABEL_51:
         v44 = *(_DWORD **)(a1 + 6304);
         v45 = v44[3];
@@ -27072,7 +27071,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *(float *)(a1 + 120) = (float)(v13 * v15) + (float)(v13 * v15);
           *(float *)(a1 + 124) = v13 * v14;
           *v5 = 5;
-          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_BOUND", 0);
+          sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_BOUND", nullptr);
         }
         else
         {
@@ -27084,7 +27083,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v56 = *(_DWORD *)(a1 + 108);
         v57 = v21;
         mapPositionToScreen((float *)v55, (float *)&v56);
-        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v20, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v19, (float *)v55, 0);
+        SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v20, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v19, (float *)v55, nullptr);
         goto LABEL_51;
       case 5:
         v22 = (float *)(a1 + 9024);
@@ -27107,7 +27106,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v57 = v35;
           v38 = (_DWORD *)MEMORY[0xC7F534];
           mapPositionToScreen((float *)v55, (float *)&v56);
-          SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v38, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v37, (float *)v55, 0);
+          SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v38, (int)"SE_BOSS_JR_CLOWN_DAMAGE", v37, (float *)v55, nullptr);
           goto LABEL_51;
         }
         v26 = *v23 - *(float *)(a1 + 112);
@@ -27248,7 +27247,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_60448AF4(*v19, v9++);
       }
       while ( v9 != 10 );
-      sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_FUKKATSU", 0);
+      sub_60813430((_DWORD *)(a1 + 7008), (int)"SE_BOSS_JR_CROWN_FUKKATSU", nullptr);
       *(_DWORD *)(a1 + 156) = 0;
       *(_DWORD *)(a1 + 160) = 0;
       *(_DWORD *)(a1 + 164) = 0;
@@ -27717,22 +27716,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_60123C5C(int a1)
   {
     _DWORD *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v3; // r6
   
     *(_DWORD *)a1 = 12389564;
     v2 = (_DWORD *)(a1 + 7008);
     *(_DWORD *)(a1 + 9484) = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 9484);
+    v3 = (sead::IDisposer *)(a1 + 9484);
     sub_60237560(a1 + 9484);
     sead::IDisposer::~IDisposer(v3);
     nullsub_407(a1 + 9420);
-    ColliderBase_dtor((struct sead_IDisposer *)(a1 + 8432));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 8128));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7824));
+    ColliderBase_dtor((sead::IDisposer *)(a1 + 8432));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 8128));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7824));
     *(_DWORD *)a1 = 12367148;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7348));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7348));
     sub_60026BFC(v2);
-    ColliderBase_dtor((struct sead_IDisposer *)(a1 + 6336));
+    ColliderBase_dtor((sead::IDisposer *)(a1 + 6336));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -27747,23 +27746,23 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_60123D58(int a1)
   {
     _DWORD *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *(_DWORD *)a1 = 12389564;
     v2 = (_DWORD *)(a1 + 7008);
     *(_DWORD *)(a1 + 9484) = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 9484);
+    v3 = (sead::IDisposer *)(a1 + 9484);
     sub_60237560(a1 + 9484);
     sead::IDisposer::~IDisposer(v3);
     nullsub_407(a1 + 9420);
-    ColliderBase_dtor((struct sead_IDisposer *)(a1 + 8432));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 8128));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7824));
+    ColliderBase_dtor((sead::IDisposer *)(a1 + 8432));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 8128));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7824));
     *(_DWORD *)a1 = 12367148;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7348));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7348));
     sub_60026BFC(v2);
-    ColliderBase_dtor((struct sead_IDisposer *)(a1 + 6336));
+    ColliderBase_dtor((sead::IDisposer *)(a1 + 6336));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0((_BYTE *)(a1 + 6152));
     *(_DWORD *)a1 = 12321080;
@@ -28421,7 +28420,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4[0] = 12321336;
     v4[1] = "inabauer";
     sub_60421AD4(v2, v4, 1);
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_WEN_INABAUAR", *(__int16 *)(a1 + 6640), 0);
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_WEN_INABAUAR", *(__int16 *)(a1 + 6640), nullptr);
   }
 
 /* ============================================================================
@@ -28564,7 +28563,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       (*(void (__fastcall **)(_DWORD *))(*a1 + 720))(a1);
     a1[26] = 1017370378;
     if ( a1[20] == 1 )
-      sub_608134CC(a1 + 1583, (int)"SE_VOC_WEN_POSE", *((__int16 *)a1 + 3320), 0);
+      sub_608134CC(a1 + 1583, (int)"SE_VOC_WEN_POSE", *((__int16 *)a1 + 3320), nullptr);
     *((_WORD *)a1 + 4068) = 0;
     return 8136;
   }
@@ -28841,7 +28840,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15 = (*(int (__fastcall **)(int32x4_t *))(a1->n128_u32[0] + 1216))(a1) * v10;
     v14 = (int)(float)((float)(a1[508].n128_f32[1] * MEMORY[0xB0E1E0]) / MEMORY[0xB0E1D8]);
     sub_6083246C(&a1[10], &v15, &v14);
-    EffectWrapper_update(a1 + 528, 1006, &a1[510].n128_f32[1], 0, 0);
+    EffectWrapper_update(a1 + 528, 1006, &a1[510].n128_f32[1], nullptr, nullptr);
     v11 = *(_DWORD *)(*(_DWORD *)v2 + 12);
     v12 = *(_DWORD *)(*(_DWORD *)v2 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v12 )
@@ -28943,7 +28942,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 += 4 * v10;
     if ( *(float *)(*(_DWORD *)v9 + 20) >= 13.0 )
       a1[10].n128_u32[0] += (int)(float)((float)(a1[508].n128_f32[1] * MEMORY[0xB0E1E0]) / MEMORY[0xB0E1D8]);
-    EffectWrapper_update(a1 + 528, 1006, &a1[510].n128_f32[1], 0, 0);
+    EffectWrapper_update(a1 + 528, 1006, &a1[510].n128_f32[1], nullptr, nullptr);
     v11 = a1[6].n128_f32[3];
     v12 = *(float *)(MEMORY[0xCC6484] + 116);
     if ( v11 < (float)(v12 + a1[468].n128_f32[0]) )
@@ -29011,7 +29010,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      EffectWrapper_update(a1 + 528, 1006, &a1[510].n128_f32[1], 0, 0);
+      EffectWrapper_update(a1 + 528, 1006, &a1[510].n128_f32[1], nullptr, nullptr);
       v2 = a1[5].n128_u32[0];
     }
     v4 = *(char *)(v2 + 11527156);
@@ -29169,7 +29168,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v18 = 1166843904;
       EffectData_create(791, (int)&v16, 0, 0);
       (*(void (__fastcall **)(int32x4_t *))(a1->n128_u32[0] + 1676))(a1);
-      sub_608134CC(&a1[395].n128_u32[3], (int)"SE_VOC_WEN_TURN", a1[415].n128_i16[0], 0);
+      sub_608134CC(&a1[395].n128_u32[3], (int)"SE_VOC_WEN_TURN", a1[415].n128_i16[0], nullptr);
     }
     CollisionActor::handleGravity((int)a1);
     CollisionActor::handleSpeed((int)a1);
@@ -29221,8 +29220,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v16 = a1[510].n128_u32[1];
       v17 = v11;
       v18 = 1166843904;
-      EffectWrapper_update(a1 + 515, 792, (float *)&v16, 0, 0);
-      sub_6081356C(&a1[395].n128_u32[3], (int)"SE_BOSS_WENDY_MAGIC_JUMP", a1[415].n128_i16[0], 0);
+      EffectWrapper_update(a1 + 515, 792, (float *)&v16, nullptr, nullptr);
+      sub_6081356C(&a1[395].n128_u32[3], (int)"SE_BOSS_WENDY_MAGIC_JUMP", a1[415].n128_i16[0], nullptr);
     }
     if ( !a1[392].n128_u16[2] )
       (*(void (__fastcall **)(int32x4_t *, int))(a1->n128_u32[0] + 192))(a1, 13135936);
@@ -29328,8 +29327,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12[0] = a1[510].n128_f32[1];
     v12[1] = v5;
     v12[2] = 4500.0;
-    EffectWrapper_update(a1 + 515, 792, v12, 0, 0);
-    sub_6081356C(&a1[395].n128_u32[3], (int)"SE_BOSS_WENDY_MAGIC_JUMP", a1[415].n128_i16[0], 0);
+    EffectWrapper_update(a1 + 515, 792, v12, nullptr, nullptr);
+    sub_6081356C(&a1[395].n128_u32[3], (int)"SE_BOSS_WENDY_MAGIC_JUMP", a1[415].n128_i16[0], nullptr);
     a1[10].n128_u32[0] += (int)(float)((float)(a1[508].n128_f32[1] * MEMORY[0xB0E1E0]) / MEMORY[0xB0E1D8]);
     v6 = *(_DWORD *)(*(_DWORD *)v2 + 12);
     v7 = *(_DWORD *)(*(_DWORD *)v2 + 68);
@@ -29361,7 +29360,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60128E08((_DWORD *)a1);
     sub_60128F34((unsigned int *)a1);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1332))(a1);
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_MAGIC_SHOT", *(__int16 *)(a1 + 6640), 0);
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_MAGIC_SHOT", *(__int16 *)(a1 + 6640), nullptr);
   }
 
 /* ============================================================================
@@ -29541,7 +29540,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     if ( sub_60235E50((int)&a1[511]) == 1 )
-      EffectData_update(a1 + 511, &a1[510].n128_f32[1], 0, 0);
+      EffectData_update(a1 + 511, &a1[510].n128_f32[1], nullptr, nullptr);
     return 1;
   }
 
@@ -30109,7 +30108,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v13; // s2
     _DWORD v15[12]; // [sp+0h] [bp-30h] BYREF
   
-    if ( (*(_BYTE *)(a1 + 7176) & 2) != 0 || (v3 = (_DWORD **)(a1 + 7096), (v2 = *(int **)(a1 + 7096)) == 0) )
+    if ( (*(_BYTE *)(a1 + 7176) & 2) != 0 || (v3 = (_DWORD **)(a1 + 7096), (v2 = *(int **)(a1 + 7096)) == nullptr) )
     {
       v11 = *(float *)(a1 + 112);
       v12 = *(_DWORD *)(a1 + 116);
@@ -30423,7 +30422,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_601293F4(int32x4_t *a1)
   {
     KoopalingBase::vf66C((int *)a1);
-    return sub_602375C4(a1 + 511, 787, &a1[510].n128_f32[1], 0, 0);
+    return sub_602375C4(a1 + 511, 787, &a1[510].n128_f32[1], nullptr, nullptr);
   }
 
 /* ============================================================================
@@ -30456,7 +30455,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_DWORD *)(*v2 + 8) > v4 )
       v3 += v4;
     if ( sub_60418548(*v3 + 4) == 1 )
-      sub_608134CC(a1 + 1583, (int)"SE_VOC_WEN_POSE", *((__int16 *)a1 + 3320), 0);
+      sub_608134CC(a1 + 1583, (int)"SE_VOC_WEN_POSE", *((__int16 *)a1 + 3320), nullptr);
     v5 = *(_DWORD **)(*v2 + 12);
     v6 = *(_DWORD *)(*v2 + 68);
     if ( *(_DWORD *)(*v2 + 8) > v6 )
@@ -30584,7 +30583,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( a1[392].n128_u16[2] )
       {
         a1[10].n128_u32[0] += (int)(float)((float)(a1[508].n128_f32[1] * MEMORY[0xB0E1E0]) / MEMORY[0xB0E1D8]);
-        EffectWrapper_update(a1 + 528, 1006, &a1[510].n128_f32[1], 0, 0);
+        EffectWrapper_update(a1 + 528, 1006, &a1[510].n128_f32[1], nullptr, nullptr);
       }
       else
       {
@@ -30593,7 +30592,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v12 > 5 )
           v12 = 0;
         a1[507].n128_u32[3] = v12;
-        EffectWrapper_update(a1 + 528, 1006, &a1[510].n128_f32[1], 0, 0);
+        EffectWrapper_update(a1 + 528, 1006, &a1[510].n128_f32[1], nullptr, nullptr);
       }
     }
     else
@@ -30890,9 +30889,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 7092) = 1;
     v11 = a1 + 648;
     CollisionMgr_setSensor(v11, dword_60AF6454, 3);
-    CollisionMgr_setSensor(v11, 0, 0);
-    CollisionMgr_setSensor(v11, 0, 1);
-    return CollisionMgr_setSensor(v11, 0, 2);
+    CollisionMgr_setSensor(v11, nullptr, 0);
+    CollisionMgr_setSensor(v11, nullptr, 1);
+    return CollisionMgr_setSensor(v11, nullptr, 2);
   }
 
 /* ============================================================================
@@ -30955,7 +30954,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                           (_DWORD *)(a1 + 6332),
                           (int)"SE_BOSS_WENDY_DOWN_LAND1",
                           *(__int16 *)(a1 + 6640),
-                          0);
+                          nullptr);
           }
         }
         break;
@@ -30997,19 +30996,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   void __fastcall sub_6012A3CC(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12390688;
     a1[2112] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 2112);
+    v2 = (sead::IDisposer *)(a1 + 2112);
     sub_60237560((int)(a1 + 2112));
     sead::IDisposer::~IDisposer(v2);
     a1[2086] = 12325992;
     sub_60237560((int)(a1 + 2086));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 2086));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 2086));
     a1[2060] = 12325992;
     sub_60237560((int)(a1 + 2060));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 2060));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 2060));
     KoopalingBase::~KoopalingBase(a1);
   }
 
@@ -31019,20 +31018,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6012A458(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *a1 = 12390688;
     a1[2112] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 2112);
+    v2 = (sead::IDisposer *)(a1 + 2112);
     sub_60237560((int)(a1 + 2112));
     sead::IDisposer::~IDisposer(v2);
     a1[2086] = 12325992;
     sub_60237560((int)(a1 + 2086));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 2086));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 2086));
     a1[2060] = 12325992;
     sub_60237560((int)(a1 + 2060));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 2060));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 2060));
     KoopalingBase::~KoopalingBase(a1);
     return operator delete(v3);
   }
@@ -31153,7 +31152,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_WENDY_LAND_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_LAND", *(__int16 *)(a1 + 6640), 0);
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_LAND", *(__int16 *)(a1 + 6640), nullptr);
   }
 
 /* ============================================================================
@@ -31162,7 +31161,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_WENDY_SHELL_LAND_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_SHELL_LAND", *(__int16 *)(a1 + 6640), 0);
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_SHELL_LAND", *(__int16 *)(a1 + 6640), nullptr);
   }
 
 /* ============================================================================
@@ -31179,7 +31178,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (int *)(*(int (**)(void))(MEMORY[0xC870A0] + 8))();
     if ( (int *)v3 == result )
-      return sub_6081356C((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_SHELL_ROLL", *(__int16 *)(a1 + 6640), 0);
+      return sub_6081356C((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_SHELL_ROLL", *(__int16 *)(a1 + 6640), nullptr);
     return result;
   }
 
@@ -31189,7 +31188,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int *__fastcall SE_BOSS_WENDY_JUMP_ref(int a1)
   {
-    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_JUMP", *(__int16 *)(a1 + 6640), 0);
+    return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_BOSS_WENDY_JUMP", *(__int16 *)(a1 + 6640), nullptr);
   }
 
 /* ============================================================================
@@ -31509,7 +31508,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN10WendyFloorC3EPK14ActorBuildInfo
  * RVA 0x0012b26c   size 0x50   xrefs 0
  * ============================================================================ */
-  _DWORD *__fastcall WendyFloor_WendyFloor(int a1)
+  _DWORD *__fastcall WendyFloor::WendyFloor(int a1)
   {
     _DWORD *v2; // r5
   
@@ -31811,7 +31810,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_6012B9D8(int a1)
   {
     *(_DWORD *)a1 = 12392472;
-    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 648));
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 648));
     StageActor::~StageActor((Actor *)a1);
   }
 
@@ -31824,7 +31823,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     *(_DWORD *)a1 = 12392472;
-    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 648));
+    ShapedCollider_dtor((sead::IDisposer *)(a1 + 648));
     StageActor::~StageActor((Actor *)a1);
     return operator delete(v2);
   }
@@ -31833,7 +31832,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6012BA3C
  * RVA 0x0012ba3c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6012BA3C(struct sead_IDisposer *a1)
+  int __fastcall sub_6012BA3C(sead::IDisposer *a1)
   {
     int v1; // r0
   
@@ -31900,7 +31899,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v1[0] = 12321336;
     v1[1] = &unk_60ABE8EE;
-    result = (_DWORD *)Profile::Profile(13136632, 1225324, MEMORY[0xAF316C], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13136632, 1225324, MEMORY[0xAF316C], (int)v1, nullptr, 0);
     *result = 12392460;
     return result;
   }
@@ -32225,7 +32224,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = (int)*(v2 - 1548);
     v15 = v5;
     mapPositionToScreen(v13, (float *)&v14);
-    SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v4, (int)"SE_BOSS_ICICLE_SIGN", v3, v13, 0);
+    SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v4, (int)"SE_BOSS_ICICLE_SIGN", v3, v13, nullptr);
     v6 = *(_DWORD *)(*v2)[3];
     if ( (*(_BYTE *)(v6 + 28) & 0x20) != 0 )
       sub_6041838C(v6 + 4);
@@ -32320,7 +32319,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v14[0] = v7;
       v14[1] = v8;
       mapPositionToScreen(v13, v14);
-      BasicSoundActor2_play(v6, (int)"SE_OBJ_ICICLE_BREAK", v13, 0);
+      BasicSoundActor2_play(v6, (int)"SE_OBJ_ICICLE_BREAK", v13, nullptr);
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13136740);
     }
     return result;
@@ -32372,7 +32371,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v16[0] = v9;
       v16[1] = v10;
       mapPositionToScreen(v15, v16);
-      BasicSoundActor2_play(v7, (int)"SE_OBJ_ICICLE_BREAK", v15, 0);
+      BasicSoundActor2_play(v7, (int)"SE_OBJ_ICICLE_BREAK", v15, nullptr);
       (*(void (__fastcall **)(float *, int))(*(_DWORD *)v2 + 192))(v2, 13136740);
       return 1;
     }
@@ -32400,7 +32399,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 144) = 0x40000000;
     *(_DWORD *)(a1 + 148) = 0x40000000;
     *(_DWORD *)(a1 + 152) = 0x40000000;
-    CollisionMgr_init(a1 + 648, a1, dword_60AF6484, 0, 0);
+    CollisionMgr_init(a1 + 648, a1, dword_60AF6484, nullptr, nullptr);
     *(_DWORD *)(a1 + 3200) |= 0x800u;
     if ( ((unsigned int)&unk_60C873F0 & ~(1611843728 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C873F0) )
     {
@@ -32626,7 +32625,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( result != (float *)a2 )
     {
       v3 = *(float **)(a3 + 64);
-      v8 = v3 == 0;
+      v8 = v3 == nullptr;
     }
     if ( !v8 )
     {
@@ -32737,12 +32736,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   void __fastcall sub_6012D2C4(_BYTE *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12392700;
-    v2 = (struct sead_IDisposer *)(a1 + 6304);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7280));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6976));
+    v2 = (sead::IDisposer *)(a1 + 6304);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7280));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6976));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
@@ -32757,13 +32756,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6012D34C(_BYTE *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12392700;
-    v2 = (struct sead_IDisposer *)(a1 + 6304);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7280));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6976));
+    v2 = (sead::IDisposer *)(a1 + 6304);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7280));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6976));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
@@ -32817,7 +32816,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14[0] = v7;
     v14[1] = v8;
     mapPositionToScreen(v13, v14);
-    BasicSoundActor2_play(v5, (int)"SE_OBJ_ICICLE_BREAK", v13, 0);
+    BasicSoundActor2_play(v5, (int)"SE_OBJ_ICICLE_BREAK", v13, nullptr);
     (*(void (__fastcall **)(float *, int))(*(_DWORD *)a1 + 192))(a1, 13136740);
     return 1;
   }
@@ -32875,7 +32874,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14[0] = v7;
     v14[1] = v8;
     mapPositionToScreen(v13, v14);
-    BasicSoundActor2_play(v5, (int)"SE_OBJ_ICICLE_BREAK", v13, 0);
+    BasicSoundActor2_play(v5, (int)"SE_OBJ_ICICLE_BREAK", v13, nullptr);
     (*(void (__fastcall **)(float *, int))(*(_DWORD *)a1 + 192))(a1, 13136740);
     return 1;
   }
@@ -32900,7 +32899,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9[0] = v5;
     v9[1] = v6;
     mapPositionToScreen(v8, v9);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_FIREBALL_DISAPP", v8, 0);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_FIREBALL_DISAPP", v8, nullptr);
     return 0;
   }
 
@@ -33114,7 +33113,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v20[0] = *(float *)(a1 + 108) + *(float *)(a1 + 572);
       v20[1] = v16;
       mapPositionToScreen(v19, v20);
-      BasicSoundActor2_play(v17, (int)"SE_BOSS_WENDY_RING_DISAPP", v19, 0);
+      BasicSoundActor2_play(v17, (int)"SE_BOSS_WENDY_RING_DISAPP", v19, nullptr);
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
       *(_BYTE *)(a1 + 19) = 1;
       return 1;
@@ -33180,7 +33179,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v30[0] = *(float *)(a1 + 108);
     v30[1] = v6;
     v30[2] = 4500.0;
-    EffectWrapper_update((int32x4_t *)(a1 + 11784), 793, v30, 0, 0);
+    EffectWrapper_update((int32x4_t *)(a1 + 11784), 793, v30, nullptr, nullptr);
     v7 = a1 + 6112;
     CollisionMgr_process((unsigned __int8 *)(a1 + 6112));
     v8 = *(float *)(a1 + 108);
@@ -33237,7 +33236,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v18 )
       {
         v11 = *(int ***)(v18 + 144);
-        v19 = v11 == 0;
+        v19 = v11 == nullptr;
       }
       if ( !v19 && Actor::getProfileId((int)v11) == MEMORY[0xAF32EC] )
       {
@@ -33253,7 +33252,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v36 = v21;
         mapPositionToScreen(v34, &v35);
   LABEL_48:
-        BasicSoundActor2_play(v22, (int)"SE_BOSS_WENDY_RING_DISAPP", v34, 0);
+        BasicSoundActor2_play(v22, (int)"SE_BOSS_WENDY_RING_DISAPP", v34, nullptr);
         (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
         *(_BYTE *)(a1 + 19) = 1;
         return 1;
@@ -33286,7 +33285,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v32 = v16;
       v29 = MEMORY[0xC7F534];
       mapPositionToScreen(&v35, &v31);
-      return (unsigned int)BasicSoundActor2_play(v29, (int)"SE_BOSS_WENDY_RING_BOUND", &v35, 0);
+      return (unsigned int)BasicSoundActor2_play(v29, (int)"SE_BOSS_WENDY_RING_BOUND", &v35, nullptr);
     }
     if ( (result & 0x440000) != 0 && (result & 0x10000000) == 0
       || (result & 0x880000) != 0 && (result &= 0x20000000u) == 0 )
@@ -33306,7 +33305,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v32 = v16;
       v29 = MEMORY[0xC7F534];
       mapPositionToScreen(&v35, &v31);
-      return (unsigned int)BasicSoundActor2_play(v29, (int)"SE_BOSS_WENDY_RING_BOUND", &v35, 0);
+      return (unsigned int)BasicSoundActor2_play(v29, (int)"SE_BOSS_WENDY_RING_BOUND", &v35, nullptr);
     }
     return result;
   }
@@ -33363,7 +33362,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6012E47C((_DWORD *)a1);
     StateMgr::changeState((_DWORD *)(a1 + 6084), 13136952);
     *(_DWORD *)(a1 + 624) = 0;
-    LightSource_update1(a1 + 11888, 37, (_DWORD *)(a1 + 108), 0, 0, 0, 0, 0, 0);
+    LightSource_update1(a1 + 11888, 37, (_DWORD *)(a1 + 108), nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
     return 1;
   }
 
@@ -33452,7 +33451,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v5; // r3
     int v7; // [sp+0h] [bp-18h]
   
-    LightSource_update1(a1 + 11888, 37, (_DWORD *)(a1 + 108), 0, 0, 0, 0, 0, 0);
+    LightSource_update1(a1 + 11888, 37, (_DWORD *)(a1 + 108), nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
     CurrentState = StateMgr::getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 != (*(int (**)(void))(MEMORY[0xC87438] + 8))() )
@@ -33693,7 +33692,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v13[0] = *(float *)(v2 + 108) + *(float *)(v2 + 572);
             v13[1] = v9;
             mapPositionToScreen(v12, v13);
-            BasicSoundActor2_play(v10, (int)"SE_BOSS_WENDY_RING_DISAPP", v12, 0);
+            BasicSoundActor2_play(v10, (int)"SE_BOSS_WENDY_RING_DISAPP", v12, nullptr);
             (*(void (__fastcall **)(int))(*(_DWORD *)v2 + 72))(v2);
             *(_BYTE *)(v2 + 19) = 1;
             LODWORD(result) = 1;
@@ -33742,11 +33741,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *(_DWORD *)a1 = 12393500;
     v2 = a1 + 6112;
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 11888));
+    LightSource::~LightSource((sead::IDisposer *)(a1 + 11888));
     *(_DWORD *)(a1 + 11784) = 12325992;
     sub_60237560(a1 + 11784);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 11784));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 11476));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 11784));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 11476));
     CollisionMgr_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -33764,11 +33763,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *(_DWORD *)a1 = 12393500;
     v2 = a1 + 6112;
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 11888));
+    LightSource::~LightSource((sead::IDisposer *)(a1 + 11888));
     *(_DWORD *)(a1 + 11784) = 12325992;
     sub_60237560(a1 + 11784);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 11784));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 11476));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 11784));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 11476));
     CollisionMgr_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -33907,7 +33906,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = *(v4 - 1529);
     v13 = v9;
     mapPositionToScreen(v11, (float *)&v12);
-    BasicSoundActor1_playSound(v8, (int)"SE_BOSS_WOOGAN_YOKAN", v11, 0);
+    BasicSoundActor1_playSound(v8, (int)"SE_BOSS_WOOGAN_YOKAN", v11, nullptr);
     *(v4 - 1525) = 1065353216;
     *(v4 - 1531) = -1124744561;
     return -6124;
@@ -33976,13 +33975,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13 = MEMORY[0xC7F530];
     v22 = v12;
     mapPositionToScreen(v20, &v21);
-    BasicSoundActor1_playSound(v13, (int)"SE_BOSS_WOOGAN_APPEAR", v20, 0);
+    BasicSoundActor1_playSound(v13, (int)"SE_BOSS_WOOGAN_APPEAR", v20, nullptr);
     v14 = *(v1 - 1528);
     v15 = MEMORY[0xC7F530];
     v21 = *(v1 - 1529);
     v22 = v14;
     mapPositionToScreen(v20, &v21);
-    return BasicSoundActor1_playSound(v15, (int)"SE_VOC_WOG_APPEAR", v20, 0);
+    return BasicSoundActor1_playSound(v15, (int)"SE_VOC_WOG_APPEAR", v20, nullptr);
   }
 
 /* ============================================================================
@@ -34054,7 +34053,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = a1[27];
     v12 = v6;
     mapPositionToScreen(v10, (float *)&v11);
-    BasicSoundActor1_playSound(v5, (int)"SE_VOC_WOG_ATTACK_SIGN", v10, 0);
+    BasicSoundActor1_playSound(v5, (int)"SE_VOC_WOG_ATTACK_SIGN", v10, nullptr);
     a1[20] = StageActor::directionToPlayerX((int)a1, a1 + 27);
     v7 = (const char *)a1[1556];
     v11 = a1[27];
@@ -34184,7 +34183,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = 0;
     if ( !a1[5].n128_u32[0] )
       v26 = 0x80000000;
-    EffectWrapper_update(a1 + 382, 1010, v28, &v25, 0);
+    EffectWrapper_update(a1 + 382, 1010, v28, &v25, nullptr);
     v7 = *v3;
     v8 = a1[7].n128_f32[0];
     if ( v8 <= *v3 && a1[36].n128_f32[3] > v7 || v8 >= v7 && a1[36].n128_f32[3] < v7 )
@@ -34405,7 +34404,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 80) = StageActor::directionToPlayerX(a1, (int *)(a1 + 108));
     *(float *)(a1 + 112) = *(float *)(a1 + 112) + -72.0;
     checkLiquidCollisions(&v11, (float *)(a1 + 6224), (float *)(a1 + 108), *(unsigned __int8 *)(a1 + 86));
-    CollisionMgr_init(a1 + 648, a1, 0, dword_60AF6530, flt_60AF653C);
+    CollisionMgr_init(a1 + 648, a1, nullptr, dword_60AF6530, flt_60AF653C);
     v5 = *(_DWORD *)(a1 + 3184);
     v6 = *(_DWORD *)(a1 + 3176) | 0x50000800;
     *(_DWORD *)(a1 + 3192) |= 0x50000800u;
@@ -34426,7 +34425,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 508) = 1123811328;
     *(_DWORD *)(a1 + 512) = 1123811328;
     v10 = 1065353216;
-    LightSource_update1(a1 + 6596, 36, (_DWORD *)(a1 + 108), 0, &v10, 0, 0, 0, 0);
+    LightSource_update1(a1 + 6596, 36, (_DWORD *)(a1 + 108), nullptr, &v10, nullptr, nullptr, nullptr, nullptr);
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13137040);
     sub_60130BE0(a1);
     return 1;
@@ -34755,7 +34754,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v6; // [sp+14h] [bp-4h] BYREF
   
     v6 = (float)(*(float *)(a1 + 144) + 1.0) + -1.6;
-    LightSource_update1(a1 + 6596, 36, (_DWORD *)(a1 + 108), 0, &v6, 0, 0, 0, 0);
+    LightSource_update1(a1 + 6596, 36, (_DWORD *)(a1 + 108), nullptr, &v6, nullptr, nullptr, nullptr, nullptr);
     DrawMgr_drawModel2(MEMORY[0xC9CD1C], *(_DWORD **)(a1 + 6104), v2, v3, v5);
     return 1;
   }
@@ -34831,7 +34830,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v13 = *(_DWORD *)(v4 + 108);
               v14 = v10;
               mapPositionToScreen(v12, (float *)&v13);
-              BasicSoundActor2_play(v11, (int)"SE_OBJ_PNGN_ICEBALL_DISAPP", v12, 0);
+              BasicSoundActor2_play(v11, (int)"SE_OBJ_PNGN_ICEBALL_DISAPP", v12, nullptr);
             }
             else
             {
@@ -34842,7 +34841,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v13 = *(_DWORD *)(v4 + 108);
               v14 = v8;
               mapPositionToScreen(v12, (float *)&v13);
-              BasicSoundActor2_play(v9, (int)"SE_OBJ_FIREBALL_DISAPP", v12, 0);
+              BasicSoundActor2_play(v9, (int)"SE_OBJ_FIREBALL_DISAPP", v12, nullptr);
             }
             return SE_BOSS_WOOGAN_FIRED_ref(v6);
           }
@@ -35014,15 +35013,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   void __fastcall sub_60131A18(int a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12393824;
-    v2 = (struct sead_IDisposer *)(a1 + 6284);
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6596));
+    v2 = (sead::IDisposer *)(a1 + 6284);
+    LightSource::~LightSource((sead::IDisposer *)(a1 + 6596));
     ActiveCollider_dtor(v2);
     *(_DWORD *)(a1 + 6112) = 12325992;
     sub_60237560(a1 + 6112);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6112));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -35034,16 +35033,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60131AA4(int a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12393824;
-    v2 = (struct sead_IDisposer *)(a1 + 6284);
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6596));
+    v2 = (sead::IDisposer *)(a1 + 6284);
+    LightSource::~LightSource((sead::IDisposer *)(a1 + 6596));
     ActiveCollider_dtor(v2);
     *(_DWORD *)(a1 + 6112) = 12325992;
     sub_60237560(a1 + 6112);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6112));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -35077,7 +35076,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C87588 = (int)(float)((float)(MEMORY[0xB0E1E0] * 3.0) / MEMORY[0xB0E1D8]);
     v1[0] = 12321336;
     v1[1] = &unk_60ABE9CF;
-    *(_DWORD *)Profile::Profile(13137016, 1241576, MEMORY[0xAF3830], (int)v1, 0, 0) = 12393812;
+    *(_DWORD *)Profile::Profile(13137016, 1241576, MEMORY[0xAF3830], (int)v1, nullptr, 0) = 12393812;
     MEMORY[0xC87494] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC87490] = 12394120;
     MEMORY[0xC87498] = 1241900;
@@ -35620,7 +35619,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ActiveColldierMgr_removeFromCreateList(v4, a1 + 6132);
     ActiveColldierMgr_removeFromList3(v4, a1 + 6132);
     *(_DWORD *)(a1 + 100) = -1107296256;
-    return CollisionMgr_init(a1 + 6600, a1, 0, 0, 0);
+    return CollisionMgr_init(a1 + 6600, a1, nullptr, nullptr, nullptr);
   }
 
 /* ============================================================================
@@ -36201,7 +36200,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12394328;
     CollisionMgr_dtor(a1 + 6600);
     *(_DWORD *)a1 = 12394784;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6132));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -36218,7 +36217,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12394328;
     CollisionMgr_dtor(a1 + 6600);
     *(_DWORD *)a1 = 12394784;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6132));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -36964,7 +36963,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12[0] = *(float *)(a1 + 108);
     v12[1] = v6;
     mapPositionToScreen(v11, v12);
-    BasicSoundActor1_playSound(v7, (int)"SE_EMY_DOWN_NO_SCORE", v11, 0);
+    BasicSoundActor1_playSound(v7, (int)"SE_EMY_DOWN_NO_SCORE", v11, nullptr);
     *(_DWORD *)(a1 + 6108) = 4;
     return 1;
   }
@@ -37010,7 +37009,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = *a2;
     v11 = v7;
     mapPositionToScreen(v9, (float *)&v10);
-    return BasicSoundActor2_play(v6, (int)"SE_OBJ_CMN_SPLASH", v9, 0);
+    return BasicSoundActor2_play(v6, (int)"SE_OBJ_CMN_SPLASH", v9, nullptr);
   }
 
 /* ============================================================================
@@ -37220,7 +37219,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_60135780(int a1)
   {
     *(_DWORD *)a1 = 12394784;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6132));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -37235,7 +37234,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     *(_DWORD *)a1 = 12394784;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6132));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -37709,10 +37708,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(float *)(a1 + 120) > 0.0 )
       v2 = 0x80000000;
     *(_DWORD *)(a1 + 6252) = v2;
-    EffectWrapper_update((int32x4_t *)(a1 + 6260), 0, (float *)(a1 + 108), (unsigned int *)(a1 + 6248), 0);
+    EffectWrapper_update((int32x4_t *)(a1 + 6260), 0, (float *)(a1 + 108), (unsigned int *)(a1 + 6248), nullptr);
     v3 = (_DWORD *)(a1 + 108);
     v4 = a1 + 6364;
-    LightSource_update1(v4, 0, v3, 0, 0, 0, 0, 0, 0);
+    LightSource_update1(v4, 0, v3, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
     return LightSource_unkUpdate3(v4);
   }
 
@@ -37737,7 +37736,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = *(_DWORD *)(a1 + 108);
     v9 = v3;
     mapPositionToScreen(v11, (float *)&v8);
-    BasicSoundActor2_play(v4, (int)"SE_OBJ_EMY_FIRE_SPLASH", v11, 0);
+    BasicSoundActor2_play(v4, (int)"SE_OBJ_EMY_FIRE_SPLASH", v11, nullptr);
     v8 = *(_DWORD *)(a1 + 108);
     v9 = v1;
     v10 = 1166843904;
@@ -37772,7 +37771,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = *(_DWORD *)(a1 + 108);
     v12 = v4;
     mapPositionToScreen(v10, (float *)&v11);
-    BasicSoundActor2_play(v5, (int)"SE_OBJ_EMY_FIRE_SPLASH", v10, 0);
+    BasicSoundActor2_play(v5, (int)"SE_OBJ_EMY_FIRE_SPLASH", v10, nullptr);
     v11 = *((_DWORD *)a2 + 1);
     v12 = *((_DWORD *)a2 + 2);
     v13 = 1166843904;
@@ -37836,7 +37835,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = *(_DWORD *)(a1 + 108);
     v9 = v2;
     mapPositionToScreen(v7, (float *)&v8);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_SPLASH_LAVA", v7, 0);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_SPLASH_LAVA", v7, nullptr);
     v4 = *(_DWORD *)(a1 + 112);
     v8 = *(_DWORD *)(a1 + 108);
     v9 = v4;
@@ -37867,7 +37866,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = *(_DWORD *)(a1 + 108);
     v9 = v3;
     mapPositionToScreen(v11, (float *)&v8);
-    BasicSoundActor2_play(v4, (int)"SE_OBJ_CMN_SPLASH_POISON", v11, 0);
+    BasicSoundActor2_play(v4, (int)"SE_OBJ_CMN_SPLASH_POISON", v11, nullptr);
     v8 = *(_DWORD *)(a1 + 108);
     v9 = v1;
     v10 = 1166843904;
@@ -37985,7 +37984,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( result )
       {
         v1 = *(float **)(result + 144);
-        v4 = v1 == 0;
+        v4 = v1 == nullptr;
       }
       if ( !v4 )
       {
@@ -38114,7 +38113,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      v4 = 0;
+      v4 = nullptr;
     }
     (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)v4 + 72))(v4);
     (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)v4 + 296))(v4);
@@ -38196,7 +38195,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6260) = 12325992;
     sub_60237560(a1 + 6260);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6260));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6260));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((StageActor *)a1);
@@ -38213,11 +38212,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *(_DWORD *)a1 = 12395168;
     v2 = (LightSource *)(a1 + 6364);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6436));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6436));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6260) = 12325992;
     sub_60237560(a1 + 6260);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6260));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6260));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -38242,7 +38241,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_EMY_FIRE_DISAPP", v5, 0);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_EMY_FIRE_DISAPP", v5, nullptr);
   }
 
 /* ============================================================================
@@ -38391,7 +38390,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v0 = (_DWORD *)operator new(0x1BA0u);
     FireballBase_ctor((int)v0);
     *v0 = 12395636;
-    *(_DWORD *)MovingSoundActor_ctor((struct nn_atk_SoundActor *)(v0 + 1690), 0, 1) = 12327348;
+    *(_DWORD *)MovingSoundActor_ctor((nn::atk::SoundActor *)(v0 + 1690), 0, 1) = 12327348;
     return v0;
   }
 
@@ -38540,8 +38539,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(float *)(a1 + 120) > 0.0 )
       v2 = 0x80000000;
     *(_DWORD *)(a1 + 6252) = v2;
-    EffectWrapper_update((int32x4_t *)(a1 + 6260), 3, (float *)(a1 + 108), (unsigned int *)(a1 + 6248), 0);
-    return LightSource_update1(a1 + 6364, 0, (_DWORD *)(a1 + 108), 0, 0, 0, 0, 0, 0);
+    EffectWrapper_update((int32x4_t *)(a1 + 6260), 3, (float *)(a1 + 108), (unsigned int *)(a1 + 6248), nullptr);
+    return LightSource_update1(a1 + 6364, 0, (_DWORD *)(a1 + 108), nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
   }
 
 /* ============================================================================
@@ -38751,17 +38750,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   void __fastcall sub_60137BC4(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12395636;
-    v2 = (struct sead_IDisposer *)(a1 + 1609);
+    v2 = (sead::IDisposer *)(a1 + 1609);
     sub_60026BFC(a1 + 1690);
     *a1 = 12395168;
     ActiveCollider_dtor(v2);
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 1591));
+    LightSource::~LightSource((sead::IDisposer *)(a1 + 1591));
     a1[1565] = 12325992;
     sub_60237560((int)(a1 + 1565));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1565));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1565));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -38773,18 +38772,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60137C74(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *a1 = 12395636;
-    v2 = (struct sead_IDisposer *)(a1 + 1609);
+    v2 = (sead::IDisposer *)(a1 + 1609);
     sub_60026BFC(a1 + 1690);
     *a1 = 12395168;
     ActiveCollider_dtor(v2);
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 1591));
+    LightSource::~LightSource((sead::IDisposer *)(a1 + 1591));
     a1[1565] = 12325992;
     sub_60237560((int)(a1 + 1565));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1565));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1565));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -38920,7 +38919,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v11[1] = v6;
             v7 = MEMORY[0xC7F534];
             mapPositionToScreen(v10, v11);
-            BasicSoundActor2_play(v7, (int)"SE_OBJ_EMY_FIRE_DISAPP", v10, 0);
+            BasicSoundActor2_play(v7, (int)"SE_OBJ_EMY_FIRE_DISAPP", v10, nullptr);
             EffectData_create(4, (int)v9, 0, 0);
             *(_BYTE *)(v3 + 19) = 1;
           }
@@ -39055,7 +39054,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[36] = dword_60C87980;
     a1[37] = v2;
     a1[38] = v3;
-    CollisionMgr_init((int)(a1 + 162), (int)a1, dword_60AF6730, 0, 0);
+    CollisionMgr_init((int)(a1 + 162), (int)a1, dword_60AF6730, nullptr, nullptr);
     ActiveCollider::init((int)(a1 + 47), (int)a1, dword_60BD270C, 0);
     v4 = MEMORY[0xC88234];
     if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], (int)(a1 + 47))
@@ -39092,7 +39091,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = a1 + 6084;
     StateMgr::execute((_DWORD *)(a1 + 6084));
-    LightSource_update1(a1 + 6276, 59, (_DWORD *)(a1 + 108), 0, 0, 0, 0, 0, 0);
+    LightSource_update1(a1 + 6276, 59, (_DWORD *)(a1 + 108), nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
     LightSource_unkUpdate3(a1 + 6276);
     CurrentState = StateMgr::getCurrentState(v2);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -39119,7 +39118,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v4 = 17;
       else
         v4 = 18;
-      EffectWrapper_update((int32x4_t *)(a1 + 6172), v4, (float *)(a1 + 108), 0, (float *)(a1 + 144));
+      EffectWrapper_update((int32x4_t *)(a1 + 6172), v4, (float *)(a1 + 108), nullptr, (float *)(a1 + 144));
     }
     return 1;
   }
@@ -39324,7 +39323,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v17[0] = v13;
         v17[1] = v14;
         mapPositionToScreen(v16, v17);
-        BasicSoundActor2_play(v12, (int)"SE_OBJ_EMY_FIRE_DISAPP", v16, 0);
+        BasicSoundActor2_play(v12, (int)"SE_OBJ_EMY_FIRE_DISAPP", v16, nullptr);
         EffectData_create(4, (int)&v13, 0, 0);
         *(_BYTE *)(a1 + 19) = 1;
         return 1;
@@ -39420,7 +39419,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v14[1] = v8;
               v9 = MEMORY[0xC7F534];
               mapPositionToScreen(v13, v14);
-              BasicSoundActor2_play(v9, (int)"SE_OBJ_EMY_FIRE_DISAPP", v13, 0);
+              BasicSoundActor2_play(v9, (int)"SE_OBJ_EMY_FIRE_DISAPP", v13, nullptr);
               EffectData_create(4, (int)&v10, 0, 0);
               *(_BYTE *)(v4 + 19) = 1;
             }
@@ -39485,15 +39484,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   void __fastcall sub_60138F1C(int a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12396064;
-    v2 = (struct sead_IDisposer *)(a1 + 6276);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6348));
+    v2 = (sead::IDisposer *)(a1 + 6276);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6348));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6172) = 12325992;
     sub_60237560(a1 + 6172);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6172));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6172));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -39505,16 +39504,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60138FA8(int a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12396064;
-    v2 = (struct sead_IDisposer *)(a1 + 6276);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6348));
+    v2 = (sead::IDisposer *)(a1 + 6276);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6348));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6172) = 12325992;
     sub_60237560(a1 + 6172);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6172));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6172));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -39782,16 +39781,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60139600(int a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12396064;
-    v2 = (struct sead_IDisposer *)(a1 + 6276);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6348));
+    v2 = (sead::IDisposer *)(a1 + 6276);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6348));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6172) = 12325992;
     sub_60237560(a1 + 6172);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6172));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6172));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -40231,7 +40230,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = v5 * v3;
     v9 = v5 * v4;
     EffectWrapper_update((int32x4_t *)(a1 + 6260), 2, (float *)(a1 + 108), (unsigned int *)(a1 + 6248), &v7);
-    return LightSource_update1(a1 + 6364, 0, v2, 0, 0, 0, 0, 0, 0);
+    return LightSource_update1(a1 + 6364, 0, v2, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
   }
 
 /* ============================================================================
@@ -40378,16 +40377,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall PlantFireball_vf3(int a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12395168;
-    v2 = (struct sead_IDisposer *)(a1 + 6364);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6436));
+    v2 = (sead::IDisposer *)(a1 + 6364);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6436));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6260) = 12325992;
     sub_60237560(a1 + 6260);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6260));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6260));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -40757,7 +40756,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (*(_BYTE *)(a2 + 148) & 2) != 0 )
     {
       v4 = *(float **)(result + 64);
-      v5 = v4 == 0;
+      v5 = v4 == nullptr;
       if ( v4 )
       {
         v2 = *(_DWORD *)(a2 + 64);
@@ -41008,7 +41007,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = v4;
     v12 = v5;
     mapPositionToScreen(v10, (float *)&v11);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_FIREBALL_SPLASH", v10, 0);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_FIREBALL_SPLASH", v10, nullptr);
     v11 = *((_DWORD *)a2 + 1);
     v12 = *((_DWORD *)a2 + 2);
     v13 = 1166843904;
@@ -41179,7 +41178,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6260) = 12325992;
     sub_60237560(a1 + 6260);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6260));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6260));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((StageActor *)a1);
@@ -41214,7 +41213,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_FIREBALL_DISAPP", v5, 0);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_FIREBALL_DISAPP", v5, nullptr);
   }
 
 /* ============================================================================
@@ -41331,7 +41330,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = *(float *)(a1 + 108);
     v6[1] = v2;
     mapPositionToScreen(v5, v6);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_SPLASH", v5, 0);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_SPLASH", v5, nullptr);
     *(_DWORD *)(a1 + 100) = -1098068787;
     *(_DWORD *)(a1 + 136) = -1084647014;
     *(_DWORD *)(a1 + 328) = 0;
@@ -41491,15 +41490,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   void __fastcall sub_6013C708(_BYTE *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12398196;
-    v2 = (struct sead_IDisposer *)(a1 + 6428);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6732));
+    v2 = (sead::IDisposer *)(a1 + 6428);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6732));
     ActiveCollider_dtor(v2);
     *((_DWORD *)a1 + 1577) = 12325992;
     sub_60237560((int)(a1 + 6308));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6308));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6308));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -41513,16 +41512,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6013C7B4(_BYTE *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12398196;
-    v2 = (struct sead_IDisposer *)(a1 + 6428);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6732));
+    v2 = (sead::IDisposer *)(a1 + 6428);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6732));
     ActiveCollider_dtor(v2);
     *((_DWORD *)a1 + 1577) = 12325992;
     sub_60237560((int)(a1 + 6308));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6308));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6308));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -41917,7 +41916,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = *(float *)(a1 + 108);
     v6[1] = v2;
     mapPositionToScreen(v5, v6);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_SPLASH", v5, 0);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_SPLASH", v5, nullptr);
     *(_DWORD *)(a1 + 100) = -1098068787;
     *(_DWORD *)(a1 + 136) = -1084647014;
     *(_DWORD *)(a1 + 328) = 0;
@@ -42709,7 +42708,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9[0] = v5;
     v9[1] = v6;
     mapPositionToScreen(v8, v9);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_FIREBALL_DISAPP", v8, 0);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_FIREBALL_DISAPP", v8, nullptr);
     *(_BYTE *)(a2 + 110) |= 2u;
     return 1;
   }
@@ -42735,7 +42734,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = *(float *)(v2 + 108);
     v8 = v3;
     mapPositionToScreen(v10, &v7);
-    BasicSoundActor2_play(v4, (int)"SE_OBJ_PNGN_ICEBALL_DISAPP", v10, 0);
+    BasicSoundActor2_play(v4, (int)"SE_OBJ_PNGN_ICEBALL_DISAPP", v10, nullptr);
     v5 = *(_DWORD *)(v2 + 112);
     v7 = *(float *)(v2 + 108);
     v8 = v5;
@@ -43020,16 +43019,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6013ED50(_BYTE *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12398196;
-    v2 = (struct sead_IDisposer *)(a1 + 6428);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6732));
+    v2 = (sead::IDisposer *)(a1 + 6428);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6732));
     ActiveCollider_dtor(v2);
     *((_DWORD *)a1 + 1577) = 12325992;
     sub_60237560((int)(a1 + 6308));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6308));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6308));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -43769,7 +43768,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_HAMMER_HIT_BOTH", v5, 0);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_HAMMER_HIT_BOTH", v5, nullptr);
   }
 
 /* ============================================================================
@@ -44741,15 +44740,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   void __fastcall sub_60141D80(int a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12400128;
-    v2 = (struct sead_IDisposer *)(a1 + 6356);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6428));
+    v2 = (sead::IDisposer *)(a1 + 6356);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6428));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6252) = 12325992;
     sub_60237560(a1 + 6252);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6252));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6252));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -44761,16 +44760,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60141E0C(int a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12400128;
-    v2 = (struct sead_IDisposer *)(a1 + 6356);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6428));
+    v2 = (sead::IDisposer *)(a1 + 6356);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6428));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6252) = 12325992;
     sub_60237560(a1 + 6252);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6252));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6252));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -44783,7 +44782,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60141EA4(int a1)
   {
-    return EffectWrapper_update((int32x4_t *)(a1 + 6252), 5, (float *)(a1 + 108), 0, 0);
+    return EffectWrapper_update((int32x4_t *)(a1 + 6252), 5, (float *)(a1 + 108), nullptr, nullptr);
   }
 
 /* ============================================================================
@@ -44938,7 +44937,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       _cxa_guard_release_0(13116372);
     }
     v2 = 0;
-    v3 = 0;
+    v3 = nullptr;
     if ( v1 )
     {
       v3 = (_DWORD *)(*(int (__fastcall **)(_DWORD *, int))*v1)(v1, 13116368);
@@ -45086,7 +45085,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v6 != (*(int (**)(void))(MEMORY[0xC87DEC] + 8))() )
       {
         (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 256))(a1);
-        LightSource_update1(a1 + 6356, 1, (_DWORD *)(a1 + 108), 0, 0, 0, 0, 0, 0);
+        LightSource_update1(a1 + 6356, 1, (_DWORD *)(a1 + 108), nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
         LightSource_unkUpdate3(a1 + 6356);
       }
       v7 = *(_DWORD *)(a1 + 6120);
@@ -45330,16 +45329,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60142CF0(int a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12400128;
-    v2 = (struct sead_IDisposer *)(a1 + 6356);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6428));
+    v2 = (sead::IDisposer *)(a1 + 6356);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6428));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6252) = 12325992;
     sub_60237560(a1 + 6252);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6252));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6252));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -45466,7 +45465,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_601424B4(v0);
     *v0 = 12400472;
     v0[1684] = 0;
-    *(_DWORD *)MovingSoundActor_ctor((struct nn_atk_SoundActor *)(v0 + 1685), 0, 1) = 12327348;
+    *(_DWORD *)MovingSoundActor_ctor((nn::atk::SoundActor *)(v0 + 1685), 0, 1) = 12327348;
     return v0;
   }
 
@@ -45526,7 +45525,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v10[0] = v4[27];
             v10[1] = v7;
             mapPositionToScreen(v9, v10);
-            BasicSoundActor2_play(v8, (int)"SE_OBJ_EMY_ICEBALL_DISAPP", v9, 0);
+            BasicSoundActor2_play(v8, (int)"SE_OBJ_EMY_ICEBALL_DISAPP", v9, nullptr);
           }
   LABEL_15:
           result = *(unsigned __int8 *)(a1 + 110) | 2;
@@ -45643,7 +45642,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8[0] = *v3;
       v8[1] = v2;
       mapPositionToScreen(v7, (float *)v8);
-      BasicSoundActor2_play(v6, (int)"SE_OBJ_EMY_ICEBALL_DISAPP", v7, 0);
+      BasicSoundActor2_play(v6, (int)"SE_OBJ_EMY_ICEBALL_DISAPP", v7, nullptr);
       return SE_OBJ_PNGN_ICEBALL_DISAPP_ref(a1);
     }
     v3 = (int *)(a1 + 108);
@@ -45720,17 +45719,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   void __fastcall sub_6014362C(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12400472;
-    v2 = (struct sead_IDisposer *)(a1 + 1607);
+    v2 = (sead::IDisposer *)(a1 + 1607);
     sub_60026BFC(a1 + 1685);
     *a1 = 12400128;
     ActiveCollider_dtor(v2);
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 1589));
+    LightSource::~LightSource((sead::IDisposer *)(a1 + 1589));
     a1[1563] = 12325992;
     sub_60237560((int)(a1 + 1563));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1563));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1563));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -45742,18 +45741,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601436DC(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *a1 = 12400472;
-    v2 = (struct sead_IDisposer *)(a1 + 1607);
+    v2 = (sead::IDisposer *)(a1 + 1607);
     sub_60026BFC(a1 + 1685);
     *a1 = 12400128;
     ActiveCollider_dtor(v2);
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 1589));
+    LightSource::~LightSource((sead::IDisposer *)(a1 + 1589));
     a1[1563] = 12325992;
     sub_60237560((int)(a1 + 1563));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1563));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1563));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -45766,7 +45765,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60143794(int a1)
   {
-    return EffectWrapper_update((int32x4_t *)(a1 + 6252), 8, (float *)(a1 + 108), 0, 0);
+    return EffectWrapper_update((int32x4_t *)(a1 + 6252), 8, (float *)(a1 + 108), nullptr, nullptr);
   }
 
 /* ============================================================================
@@ -45864,11 +45863,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = (float *)result;
       if ( result )
         v6 = (float *)v4;
-      v7 = v6 == 0;
+      v7 = v6 == nullptr;
       if ( v6 )
       {
         v4 = (unsigned __int8 *)a2[16];
-        v7 = v4 == 0;
+        v7 = v4 == nullptr;
       }
       if ( !v7 )
       {
@@ -45932,7 +45931,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                     v11[0] = v6[27];
                     v11[1] = v8;
                     mapPositionToScreen(v10, v11);
-                    BasicSoundActor2_play(v9, (int)"SE_OBJ_PNGN_ICEBALL_DISAPP", v10, 0);
+                    BasicSoundActor2_play(v9, (int)"SE_OBJ_PNGN_ICEBALL_DISAPP", v10, nullptr);
                   }
                   else
                   {
@@ -46270,16 +46269,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601444E8(int a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12400128;
-    v2 = (struct sead_IDisposer *)(a1 + 6356);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6428));
+    v2 = (sead::IDisposer *)(a1 + 6356);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6428));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6252) = 12325992;
     sub_60237560(a1 + 6252);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6252));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6252));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -47027,7 +47026,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12401352;
     CollisionMgr_dtor(a1 + 6488);
     *(_DWORD *)a1 = 12394784;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6132));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -47044,7 +47043,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12401352;
     CollisionMgr_dtor(a1 + 6488);
     *(_DWORD *)a1 = 12394784;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6132));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -47208,7 +47207,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v9[0] = *(float *)(a1 + 108);
         v9[1] = v4;
         mapPositionToScreen(v8, v9);
-        BasicSoundActor2_play(v5, (int)"SE_OBJ_ROCK_LAND", v8, 0);
+        BasicSoundActor2_play(v5, (int)"SE_OBJ_ROCK_LAND", v8, nullptr);
         *(_DWORD *)(a1 + 124) = 1071644672;
         v3 = 1;
         *(_BYTE *)(a1 + 7041) = 1;
@@ -47240,7 +47239,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = *(float *)(a1 + 108);
     v6[1] = v2;
     mapPositionToScreen(v5, v6);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_SPLASH", v5, 0);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_SPLASH", v5, nullptr);
     *(_DWORD *)(a1 + 100) = -1098068787;
     *(_DWORD *)(a1 + 136) = -1084647014;
     *(_DWORD *)(a1 + 328) = 0;
@@ -47265,7 +47264,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r1
     int result; // r0
   
-    CollisionMgr_init((int)(a1 + 162), (int)a1, dword_60AF6A64, dword_60AF6A70, 0);
+    CollisionMgr_init((int)(a1 + 162), (int)a1, dword_60AF6A64, dword_60AF6A70, nullptr);
     a1[800] |= 0x5C000E00u;
     v2 = a1[796];
     a1[794] |= 0x4C000600u;
@@ -47394,16 +47393,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60146620(_BYTE *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12398196;
-    v2 = (struct sead_IDisposer *)(a1 + 6428);
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6732));
+    v2 = (sead::IDisposer *)(a1 + 6428);
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6732));
     ActiveCollider_dtor(v2);
     *((_DWORD *)a1 + 1577) = 12325992;
     sub_60237560((int)(a1 + 6308));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6308));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6308));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -47762,7 +47761,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( (v15 & 1) == 0 )
     {
-      checkLiquidCollisions(&v24, 0, (float *)(a1 + 108), *(unsigned __int8 *)(a1 + 86));
+      checkLiquidCollisions(&v24, nullptr, (float *)(a1 + 108), *(unsigned __int8 *)(a1 + 86));
       if ( v24 )
         (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13140288);
     }
@@ -47828,7 +47827,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v10 = *(_DWORD *)(a1 + 108);
       v11 = v5;
       mapPositionToScreen(v9, (float *)&v10);
-      BasicSoundActor1_playSound(v6, (int)"SE_OBJ_CMN_SPLASH", v9, 0);
+      BasicSoundActor1_playSound(v6, (int)"SE_OBJ_CMN_SPLASH", v9, nullptr);
     }
     v7 = *(_DWORD *)(a1 + 112);
     v10 = *(_DWORD *)(a1 + 108);
@@ -48432,7 +48431,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = *(float *)(v3 + 108);
     v9 = v4;
     mapPositionToScreen(v11, &v8);
-    BasicSoundActor2_play(v5, (int)"SE_OBJ_PNGN_ICEBALL_DISAPP", v11, 0);
+    BasicSoundActor2_play(v5, (int)"SE_OBJ_PNGN_ICEBALL_DISAPP", v11, nullptr);
     v6 = *(_DWORD *)(v3 + 112);
     v8 = *(float *)(v3 + 108);
     v9 = v6;
@@ -48808,10 +48807,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_60148B74(_BYTE *a1)
   {
     *(_DWORD *)a1 = 12402424;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6444));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6444));
     *((_DWORD *)a1 + 1577) = 12325992;
     sub_60237560((int)(a1 + 6308));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6308));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6308));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -48828,10 +48827,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     *(_DWORD *)a1 = 12402424;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6444));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6444));
     *((_DWORD *)a1 + 1577) = 12325992;
     sub_60237560((int)(a1 + 6308));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6308));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6308));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -48971,7 +48970,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C880C4 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABEE25;
-    *(_DWORD *)Profile::Profile(13140168, 1337552, MEMORY[0xAF3740], (int)v1, 0, 160) = 12402412;
+    *(_DWORD *)Profile::Profile(13140168, 1337552, MEMORY[0xAF3740], (int)v1, nullptr, 160) = 12402412;
     MEMORY[0xC880E4] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC880E0] = 12403172;
     MEMORY[0xC880E8] = 1337796;
@@ -49565,17 +49564,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_60149F50(_DWORD *a1)
   {
     int v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v3; // r6
   
     *a1 = 12403192;
     v2 = (int)(a1 + 1620);
     a1[2969] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 2969);
+    v3 = (sead::IDisposer *)(a1 + 2969);
     sub_60237560((int)(a1 + 2969));
     sead::IDisposer::~IDisposer(v3);
     CollisionMgr_dtor(v2);
     *a1 = 12394784;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1533));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1533));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -49588,18 +49587,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_60149FF0(_DWORD *a1)
   {
     int v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12403192;
     v2 = (int)(a1 + 1620);
     a1[2969] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 2969);
+    v3 = (sead::IDisposer *)(a1 + 2969);
     sub_60237560((int)(a1 + 2969));
     sead::IDisposer::~IDisposer(v3);
     CollisionMgr_dtor(v2);
     *a1 = 12394784;
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1533));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1533));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -51567,7 +51566,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = *((float **)a1 + 551);
     v28 = *((float **)a1 + 552);
     v29 = 0;
-    v30 = 0;
+    v30 = nullptr;
     v31 = *v28;
     v32 = *v27;
     v33 = *v27 < *v28;
@@ -51578,7 +51577,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       goto LABEL_59;
     v36 = *((_DWORD *)a1 + 643);
     v29 = 0;
-    v30 = 0;
+    v30 = nullptr;
     if ( v36 > 5 )
       goto LABEL_59;
     v29 = 1;
@@ -52379,7 +52378,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       goto LABEL_56;
     if ( *(_BYTE *)(a1 + 2344) )
     {
-      v12 = 0;
+      v12 = nullptr;
       if ( !*(_BYTE *)(a1 + 2348) )
         v12 = (float *)(a1 + 2392);
     }
@@ -53879,7 +53878,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v71 = 0.0;
             v72 = 0.0;
             v73 = 0;
-            v74 = 0;
+            v74 = nullptr;
             v76 = 0;
             v77 = 0;
             v78 = 0;
@@ -53978,7 +53977,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v71 = 0.0;
             v72 = 0.0;
             v73 = 0;
-            v74 = 0;
+            v74 = nullptr;
             v76 = 0;
             v77 = 0;
             v78 = 0;
@@ -56000,10 +55999,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ColliderMgr_dtor
  * RVA 0x0015341c   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall ColliderMgr_dtor(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall ColliderMgr_dtor(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12403828;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88208] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88208] == a1 )
     {
       MEMORY[0xC88208] = 0;
       MEMORY[0xC8820C] = 0;
@@ -56015,12 +56014,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ColliderMgr_dtorFree
  * RVA 0x00153470   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall ColliderMgr_dtorFree(struct sead_IDisposer *a1)
+  int __fastcall ColliderMgr_dtorFree(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12403828;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88208] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88208] == a1 )
     {
       MEMORY[0xC88208] = 0;
       MEMORY[0xC8820C] = 0;
@@ -59675,7 +59674,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * CircularCollider_dtorFree
  * RVA 0x001585dc   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall CircularCollider_dtorFree(struct sead_IDisposer *a1)
+  int __fastcall CircularCollider_dtorFree(sead::IDisposer *a1)
   {
     int v1; // r0
   
@@ -59865,7 +59864,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ActiveCollider_dtor
  * RVA 0x00158cf8   size 0x54   xrefs 734
  * ============================================================================ */
-  void __fastcall ActiveCollider_dtor(struct sead_IDisposer *a1)
+  void __fastcall ActiveCollider_dtor(sead::IDisposer *a1)
   {
     int v2; // r5
   
@@ -59881,10 +59880,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ActiveCollider_dtorFree
  * RVA 0x00158d54   size 0x58   xrefs 0
  * ============================================================================ */
-  int __fastcall ActiveCollider_dtorFree(struct sead_IDisposer *a1)
+  int __fastcall ActiveCollider_dtorFree(sead::IDisposer *a1)
   {
     int v2; // r5
-    struct sead_IDisposer *v3; // r0
+    sead::IDisposer *v3; // r0
   
     *(_DWORD *)a1 = 12404824;
     v2 = MEMORY[0xC88234];
@@ -59915,7 +59914,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN14ActiveCollider4initEP10StageActorPKNS_4InfoEj
  * RVA 0x00158de8   size 0xd0   xrefs 383
  * ============================================================================ */
-  int __fastcall ActiveCollider_init(int a1, int a2, int *a3, int a4)
+  int __fastcall ActiveCollider::init(int a1, int a2, int *a3, int a4)
   {
     _DWORD *v5; // r0
     _DWORD *v6; // r2
@@ -61649,10 +61648,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6015ADD4
  * RVA 0x0015add4   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_6015ADD4(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_6015ADD4(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12404840;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88230] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88230] == a1 )
     {
       MEMORY[0xC88230] = 0;
       MEMORY[0xC88234] = 0;
@@ -61664,12 +61663,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6015AE28
  * RVA 0x0015ae28   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6015AE28(struct sead_IDisposer *a1)
+  int __fastcall sub_6015AE28(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12404840;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88230] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88230] == a1 )
     {
       MEMORY[0xC88230] = 0;
       MEMORY[0xC88234] = 0;
@@ -62026,7 +62025,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   LABEL_22:
       *(_DWORD *)(a2 + 56) = 0;
       *(_DWORD *)(a2 + 60) = 0;
-      return 0;
+      return nullptr;
     }
     return result;
   }
@@ -63348,7 +63347,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6015C948
  * RVA 0x0015c948   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6015C948(struct sead_IDisposer *a1)
+  int __fastcall sub_6015C948(sead::IDisposer *a1)
   {
     int v1; // r0
   
@@ -64407,13 +64406,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
            v14 = v13[76],
            v21 = v13[77],
            v20 = v14,
-           (v15 = *(int (__fastcall ****)(_DWORD, int *))(a1 + 12)) == 0)
+           (v15 = *(int (__fastcall ****)(_DWORD, int *))(a1 + 12)) == nullptr)
        || (**v15)(v15, &v20) == 1) )
     {
       result = 1;
       if ( a2 )
       {
-        v22 = 0;
+        v22 = nullptr;
         a2[2] = 0;
         v17 = v20;
         v18 = v21;
@@ -64674,7 +64673,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * RVA 0x0015e124   size 0x4   xrefs 155
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall SolidOnTopCollider_dtor(struct sead_IDisposer *a1)
+  void __fastcall SolidOnTopCollider_dtor(sead::IDisposer *a1)
   {
     ColliderBase_dtor(a1);
   }
@@ -64683,7 +64682,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * SolidOnTopCollider_dtorFree
  * RVA 0x0015e128   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall SolidOnTopCollider_dtorFree(struct sead_IDisposer *a1)
+  int __fastcall SolidOnTopCollider_dtorFree(sead::IDisposer *a1)
   {
     int v1; // r0
   
@@ -66315,7 +66314,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ColliderBase_dtor
  * RVA 0x001600e4   size 0xcc   xrefs 52
  * ============================================================================ */
-  void __fastcall ColliderBase_dtor(struct sead_IDisposer *a1)
+  void __fastcall ColliderBase_dtor(sead::IDisposer *a1)
   {
     _DWORD *v2; // r5
   
@@ -66354,7 +66353,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ColliderBase_dtorFree
  * RVA 0x00160200   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall ColliderBase_dtorFree(struct sead_IDisposer *a1)
+  int __fastcall ColliderBase_dtorFree(sead::IDisposer *a1)
   {
     int v1; // r0
   
@@ -67357,7 +67356,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v11 = *(_BYTE *)(*(_DWORD *)v7 + 3) == 0;
           if ( !v11
             && ((*(_BYTE *)(a1 + 138) & 1) != 0
-             || (v12 = *(int (__fastcall **)(_DWORD))(a1 + 328)) != 0
+             || (v12 = *(int (__fastcall **)(_DWORD))(a1 + 328)) != nullptr
              && (*(int (__fastcall **)(int))(*(_DWORD *)a2 + 28))(a2)
              && v12(*(_DWORD *)(a1 + 144)) == 1) )
           {
@@ -67714,7 +67713,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * RVA 0x00161bd8   size 0x4   xrefs 513
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall ShapedCollider_dtor(struct sead_IDisposer *a1)
+  void __fastcall ShapedCollider_dtor(sead::IDisposer *a1)
   {
     ColliderBase_dtor(a1);
   }
@@ -67723,7 +67722,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ShapedCollider_dtorFree
  * RVA 0x00161bdc   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall ShapedCollider_dtorFree(struct sead_IDisposer *a1)
+  int __fastcall ShapedCollider_dtorFree(sead::IDisposer *a1)
   {
     int v1; // r0
   
@@ -68394,7 +68393,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v26 = v19 + v22;
           v27 = v20 + v23;
           v28 = v19 + v24;
-          sub_6090ECAC(a2, &v25, 0);
+          sub_6090ECAC(a2, &v25, nullptr);
           if ( (float)(v20 + v23) <= v16 )
             break;
           v15 = *(_DWORD *)(a1 + 348);
@@ -70517,7 +70516,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * SwingingCollider_dtor
  * RVA 0x001653ec   size 0x34   xrefs 6
  * ============================================================================ */
-  void __fastcall SwingingCollider_dtor(struct sead_IDisposer *a1)
+  void __fastcall SwingingCollider_dtor(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12405256;
     (*(void (__fastcall **)(_DWORD *))(*((_DWORD *)a1 + 85) + 16))((_DWORD *)a1 + 85);
@@ -70528,7 +70527,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * SwingingCollider_dtorFree
  * RVA 0x00165424   size 0x38   xrefs 0
  * ============================================================================ */
-  int __fastcall SwingingCollider_dtorFree(struct sead_IDisposer *a1)
+  int __fastcall SwingingCollider_dtorFree(sead::IDisposer *a1)
   {
     int v2; // r0
   
@@ -71048,7 +71047,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v23[1] = v20;
       v23[2] = v17 + v19;
       v23[3] = v21;
-      sub_6090ECAC(a2, v23, 0);
+      sub_6090ECAC(a2, v23, nullptr);
       v6 += 2;
       if ( v21 <= v9 )
         return 1;
@@ -72091,7 +72090,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v6 )
     {
       v5 = 1;
-      v7 = a2 == 0;
+      v7 = a2 == nullptr;
     }
     if ( !v7 )
     {
@@ -72465,18 +72464,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601674BC
  * RVA 0x001674bc   size 0x70   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_601674BC(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_601674BC(sead::IDisposer *a1)
   {
     int v2; // r7
   
     *(_DWORD *)a1 = 12405372;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88A6C] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88A6C] == a1 )
     {
       MEMORY[0xC88A6C] = 0;
       v2 = MEMORY[0xC88A70];
-      ShapedCollider_dtor((struct sead_IDisposer *)(MEMORY[0xC88A70] + 1136));
-      ShapedCollider_dtor((struct sead_IDisposer *)(v2 + 552));
-      SolidOnTopCollider_dtor((struct sead_IDisposer *)(v2 + 104));
+      ShapedCollider_dtor((sead::IDisposer *)(MEMORY[0xC88A70] + 1136));
+      ShapedCollider_dtor((sead::IDisposer *)(v2 + 552));
+      SolidOnTopCollider_dtor((sead::IDisposer *)(v2 + 104));
       MEMORY[0xC88A70] = 0;
     }
     return sead::IDisposer::~IDisposer(a1);
@@ -72486,19 +72485,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6016753C
  * RVA 0x0016753c   size 0x74   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6016753C(struct sead_IDisposer *a1)
+  int __fastcall sub_6016753C(sead::IDisposer *a1)
   {
     int v2; // r7
-    struct sead_IDisposer *v3; // r0
+    sead::IDisposer *v3; // r0
   
     *(_DWORD *)a1 = 12405372;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88A6C] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88A6C] == a1 )
     {
       MEMORY[0xC88A6C] = 0;
       v2 = MEMORY[0xC88A70];
-      ShapedCollider_dtor((struct sead_IDisposer *)(MEMORY[0xC88A70] + 1136));
-      ShapedCollider_dtor((struct sead_IDisposer *)(v2 + 552));
-      SolidOnTopCollider_dtor((struct sead_IDisposer *)(v2 + 104));
+      ShapedCollider_dtor((sead::IDisposer *)(MEMORY[0xC88A70] + 1136));
+      ShapedCollider_dtor((sead::IDisposer *)(v2 + 552));
+      SolidOnTopCollider_dtor((sead::IDisposer *)(v2 + 104));
       MEMORY[0xC88A70] = 0;
     }
     v3 = sead::IDisposer::~IDisposer(a1);
@@ -73027,7 +73026,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6016800C
  * RVA 0x0016800c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6016800C(struct sead_IDisposer *a1)
+  int __fastcall sub_6016800C(sead::IDisposer *a1)
   {
     int v1; // r0
   
@@ -73125,7 +73124,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601683A0
  * RVA 0x001683a0   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_601683A0(struct sead_IDisposer *a1)
+  int __fastcall sub_601683A0(sead::IDisposer *a1)
   {
     int v1; // r0
   
@@ -74287,10 +74286,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_60169F70
  * RVA 0x00169f70   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_60169F70(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_60169F70(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12405704;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88ABC] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88ABC] == a1 )
     {
       MEMORY[0xC88ABC] = 0;
       MEMORY[0xC88AC0] = 0;
@@ -74302,12 +74301,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_60169FC4
  * RVA 0x00169fc4   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60169FC4(struct sead_IDisposer *a1)
+  int __fastcall sub_60169FC4(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12405704;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88ABC] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88ABC] == a1 )
     {
       MEMORY[0xC88ABC] = 0;
       MEMORY[0xC88AC0] = 0;
@@ -74392,7 +74391,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a1[4] < a1[5] )
     {
       v3 = (_DWORD *)a1[7];
-      v4 = 0;
+      v4 = nullptr;
       if ( v3 )
       {
         a1[7] = *v3;
@@ -74503,7 +74502,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v76[19]; // [sp+30Ch] [bp-9Ch] BYREF
     _BYTE v77[80]; // [sp+358h] [bp-50h] BYREF
   
-    nn::os::GetSystemTick((struct nn_os *)v77);
+    nn::os::GetSystemTick((nn::os *)v77);
     sub_6016ACE0(v77, "Model/CS_W1%s.szs", ".Nin_NX_NVN");
     v76[0] = 0;
     v76[1] = &v73;
@@ -74513,7 +74512,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a1[4] < a1[5] )
     {
       v2 = (_DWORD *)a1[7];
-      v3 = 0;
+      v3 = nullptr;
       if ( v2 )
       {
         a1[7] = *v2;
@@ -74539,7 +74538,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v7 )
         a1[7] = *v7;
       else
-        v7 = 0;
+        v7 = nullptr;
       v8 = sub_6016B268(v7, &v73);
       v9 = a1[4];
       if ( v9 < a1[5] )
@@ -74557,7 +74556,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a1[4] < a1[5] )
     {
       v10 = (_DWORD *)a1[7];
-      v11 = 0;
+      v11 = nullptr;
       if ( v10 )
       {
         a1[7] = *v10;
@@ -74583,7 +74582,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v14 )
         a1[7] = *v14;
       else
-        v14 = 0;
+        v14 = nullptr;
       v15 = sub_6016B268(v14, &v67);
       v16 = a1[4];
       if ( v16 < a1[5] )
@@ -74601,7 +74600,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a1[4] < a1[5] )
     {
       v17 = (_DWORD *)a1[7];
-      v18 = 0;
+      v18 = nullptr;
       if ( v17 )
       {
         a1[7] = *v17;
@@ -74627,7 +74626,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v21 )
         a1[7] = *v21;
       else
-        v21 = 0;
+        v21 = nullptr;
       v22 = sub_6016B268(v21, &v61);
       v23 = a1[4];
       if ( v23 < a1[5] )
@@ -74648,7 +74647,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v24 )
         a1[7] = *v24;
       else
-        v24 = 0;
+        v24 = nullptr;
       v25 = sub_6016B268(v24, &v58);
       v26 = a1[4];
       if ( v26 < a1[5] )
@@ -74669,7 +74668,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v27 )
         a1[7] = *v27;
       else
-        v27 = 0;
+        v27 = nullptr;
       v28 = sub_6016B268(v27, &v55);
       v29 = a1[4];
       if ( v29 < a1[5] )
@@ -74690,7 +74689,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v30 )
         a1[7] = *v30;
       else
-        v30 = 0;
+        v30 = nullptr;
       v31 = sub_6016B268(v30, &v52);
       v32 = a1[4];
       if ( v32 < a1[5] )
@@ -74711,7 +74710,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v33 )
         a1[7] = *v33;
       else
-        v33 = 0;
+        v33 = nullptr;
       v34 = sub_6016B268(v33, &v49);
       v35 = a1[4];
       if ( v35 < a1[5] )
@@ -74732,7 +74731,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v36 )
         a1[7] = *v36;
       else
-        v36 = 0;
+        v36 = nullptr;
       v37 = sub_6016B268(v36, &v46);
       v38 = a1[4];
       if ( v38 < a1[5] )
@@ -74754,7 +74753,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v40 )
         a1[7] = *v40;
       else
-        v40 = 0;
+        v40 = nullptr;
       result = sub_6016B268(v40, &v43);
       v41 = a1[4];
       if ( v41 < a1[5] )
@@ -76342,7 +76341,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      v8 = 0;
+      v8 = nullptr;
     }
     v9 = v8[20];
     v10 = v8[21];
@@ -79538,7 +79537,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     flt_60C88BC0 = 0.0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABF0AB;
-    result = (_DWORD *)Profile::Profile(13142724, 1488468, MEMORY[0xAF3A90], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13142724, 1488468, MEMORY[0xAF3A90], (int)v1, nullptr, 0);
     *result = 12405840;
     return result;
   }
@@ -81307,10 +81306,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_60172AB0
  * RVA 0x00172ab0   size 0x64   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_60172AB0(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_60172AB0(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12406048;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88BC4] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88BC4] == a1 )
     {
       MEMORY[0xC88BC4] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC88BC8])(MEMORY[0xC88BC8]);
@@ -81323,12 +81322,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_60172B24
  * RVA 0x00172b24   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60172B24(struct sead_IDisposer *a1)
+  int __fastcall sub_60172B24(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v2; // r0
+    sead::IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12406048;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88BC4] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88BC4] == a1 )
     {
       MEMORY[0xC88BC4] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC88BC8])(MEMORY[0xC88BC8]);
@@ -82326,7 +82325,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v16 = 1;
             v18 = 0;
             v26 = 1;
-            v27 = 0;
+            v27 = nullptr;
   LABEL_56:
             v53 = v37;
             goto LABEL_57;
@@ -82404,7 +82403,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v54 = 0;
   LABEL_31:
     v26 = 0;
-    v27 = 0;
+    v27 = nullptr;
   LABEL_57:
     if ( ((unsigned int)&unk_60C88C00 & ~(1612136032 << v14) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C88C00) )
     {
@@ -82421,7 +82420,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v43 = *((_DWORD *)&unk_60C88C00 + v42 + 1);
     memset(v55, 0, 0x2Cu);
     v55[34] = v42;
-    v44 = 0;
+    v44 = nullptr;
     v55[32] = *(_DWORD *)(a1 + 244);
     *(_DWORD *)&v55[28] = 0x40000000;
     *(_DWORD *)&v55[16] = *(_DWORD *)(a1 + 80);
@@ -82812,7 +82811,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C88BD4 = 0;
     v1[0] = 12321336;
     v1[1] = &aCourseselecto;
-    result = (_DWORD *)Profile::Profile(13143000, 1521632, MEMORY[0xAF3A94], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13143000, 1521632, MEMORY[0xAF3A94], (int)v1, nullptr, 0);
     *result = 12406168;
     return result;
   }
@@ -84095,11 +84094,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   _DWORD *__fastcall sub_6017664C(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12406304;
     a1[97] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 97);
+    v2 = (sead::IDisposer *)(a1 + 97);
     sub_60237560((int)(a1 + 97));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12407388;
@@ -84113,12 +84112,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601766B8(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12406304;
     a1[97] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 97);
+    v2 = (sead::IDisposer *)(a1 + 97);
     sub_60237560((int)(a1 + 97));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12407388;
@@ -84305,7 +84304,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C88E48 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABF157;
-    *(_DWORD *)Profile::Profile(13143072, 1526640, MEMORY[0xAF3B0C], (int)v1, 0, 0) = 12406292;
+    *(_DWORD *)Profile::Profile(13143072, 1526640, MEMORY[0xAF3B0C], (int)v1, nullptr, 0) = 12406292;
     dword_60C88E4C = 1106247680;
     dword_60C88E50 = 0;
     dword_60C88E54 = 0;
@@ -84446,10 +84445,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_60177050
  * RVA 0x00177050   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_60177050(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_60177050(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12406504;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88E5C] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88E5C] == a1 )
     {
       MEMORY[0xC88E5C] = 0;
       MEMORY[0xC88E60] = 0;
@@ -84461,12 +84460,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601770A4
  * RVA 0x001770a4   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_601770A4(struct sead_IDisposer *a1)
+  int __fastcall sub_601770A4(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12406504;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88E5C] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88E5C] == a1 )
     {
       MEMORY[0xC88E5C] = 0;
       MEMORY[0xC88E60] = 0;
@@ -84608,7 +84607,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v2 )
         result[7] = *v2;
       else
-        v2 = 0;
+        v2 = nullptr;
       v3 = (_DWORD *)(a2 + 4);
       *v2 = 12406520;
       v4 = v3[1];
@@ -84752,7 +84751,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v12 )
           a1[268] = *v12;
         else
-          v12 = 0;
+          v12 = nullptr;
         v14 = (_DWORD *)(v10 + 4);
         *v12 = 12406520;
         v15 = v14[1];
@@ -84797,7 +84796,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v13 )
           a1[268] = *v13;
         else
-          v13 = 0;
+          v13 = nullptr;
         v20 = (_DWORD *)(v10 + 4);
         *v13 = 12406520;
         v21 = v20[1];
@@ -84927,10 +84926,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_60177968
  * RVA 0x00177968   size 0x64   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_60177968(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_60177968(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12406536;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88E64] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88E64] == a1 )
     {
       MEMORY[0xC88E64] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC88E68])(MEMORY[0xC88E68]);
@@ -84943,12 +84942,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601779DC
  * RVA 0x001779dc   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_601779DC(struct sead_IDisposer *a1)
+  int __fastcall sub_601779DC(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v2; // r0
+    sead::IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12406536;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88E64] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88E64] == a1 )
     {
       MEMORY[0xC88E64] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC88E68])(MEMORY[0xC88E68]);
@@ -85650,7 +85649,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           return result;
       }
       if ( ++v4 >= 256 )
-        return 0;
+        return nullptr;
     }
     return result;
   }
@@ -85900,7 +85899,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C88E98 = 0;
     v2[0] = 12321336;
     v2[1] = &unk_60ABF18F;
-    v0 = (_DWORD *)Profile::Profile(13143660, 1542788, MEMORY[0xAF3AB0], (int)v2, 0, 0);
+    v0 = (_DWORD *)Profile::Profile(13143660, 1542788, MEMORY[0xAF3AB0], (int)v2, nullptr, 0);
     dword_60C88E9C = 12321336;
     *v0 = 12406632;
     dword_60C88EA0 = (int)"cobCourseClear";
@@ -87026,10 +87025,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6017B72C
  * RVA 0x0017b72c   size 0x64   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_6017B72C(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_6017B72C(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12406744;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88ECC] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88ECC] == a1 )
     {
       MEMORY[0xC88ECC] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC88ED0])(MEMORY[0xC88ED0]);
@@ -87042,12 +87041,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6017B7A0
  * RVA 0x0017b7a0   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6017B7A0(struct sead_IDisposer *a1)
+  int __fastcall sub_6017B7A0(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v2; // r0
+    sead::IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12406744;
-    if ( (struct sead_IDisposer *)MEMORY[0xC88ECC] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC88ECC] == a1 )
     {
       MEMORY[0xC88ECC] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC88ED0])(MEMORY[0xC88ED0]);
@@ -91659,7 +91658,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
     int v3; // r0
-    struct sead_CriticalSection *v4; // r5
+    sead::CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -91670,7 +91669,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = MEMORY[0xC88F90];
       if ( !MEMORY[0xC88F90] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (sead::CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC88F90] )
         {
@@ -91836,7 +91835,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
     int v3; // r0
-    struct sead_CriticalSection *v4; // r5
+    sead::CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -91847,7 +91846,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = MEMORY[0xC89058];
       if ( !MEMORY[0xC89058] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (sead::CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC89058] )
         {
@@ -92017,7 +92016,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
     int v3; // r0
-    struct sead_CriticalSection *v4; // r5
+    sead::CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -92028,7 +92027,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = MEMORY[0xC89204];
       if ( !MEMORY[0xC89204] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (sead::CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC89204] )
         {
@@ -92198,7 +92197,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
     int v3; // r0
-    struct sead_CriticalSection *v4; // r5
+    sead::CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -92209,7 +92208,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = MEMORY[0xC893CC];
       if ( !MEMORY[0xC893CC] )
       {
-        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
+        v4 = (sead::CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC893CC] )
         {
@@ -93137,7 +93136,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C894DC = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABF39D;
-    *(_DWORD *)Profile::Profile(13145264, 1593880, MEMORY[0xAF3B40], (int)v1, 0, 0) = 12407184;
+    *(_DWORD *)Profile::Profile(13145264, 1593880, MEMORY[0xAF3B40], (int)v1, nullptr, 0) = 12407184;
     dword_60C894D0 = 0x2000000;
     return 0x2000000;
   }
@@ -95049,7 +95048,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     MEMORY[0xC89624] = 12407884;
     MEMORY[0xC89644] = 12755100;
     v1[1] = &unk_60ABF3D0;
-    result = (_DWORD *)Profile::Profile(13145672, 1602108, MEMORY[0xAF3B60], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13145672, 1602108, MEMORY[0xAF3B60], (int)v1, nullptr, 0);
     *result = 12407636;
     return result;
   }
@@ -95662,7 +95661,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v2 )
       goto LABEL_26;
     v5 = 0;
-    v6 = 0;
+    v6 = nullptr;
     if ( (*(int (__fastcall **)(_DWORD *, int))*v2)(v2, 13145736) == 1 )
     {
       v45 = (char *)&v47;
@@ -95711,7 +95710,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_60199C48(&v44, &v48, 2);
   LABEL_26:
       v5 = 0;
-      v6 = 0;
+      v6 = nullptr;
     }
   LABEL_27:
     v41 = -1;
@@ -95722,7 +95721,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v40 = -1;
     (*(void (__fastcall **)(int *))(v52 + 12))(&v52);
     v16 = MEMORY[0xB3BA34];
-    result = 0;
+    result = nullptr;
     while ( 1 )
     {
       if ( *((unsigned __int8 *)result + (_DWORD)v53) == MEMORY[0xB3BA34] )
@@ -96001,7 +96000,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             result = (_DWORD *)(*(int (__fastcall **)(_DWORD *))(*result + 24))(result);
           v1 = (_DWORD *)v1[1];
           if ( v1 == v2 )
-            v1 = 0;
+            v1 = nullptr;
         }
         while ( v1 );
       }
@@ -96996,10 +96995,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601902FC
  * RVA 0x001902fc   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_601902FC(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_601902FC(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12409052;
-    if ( (struct sead_IDisposer *)MEMORY[0xC89968] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC89968] == a1 )
     {
       MEMORY[0xC89968] = 0;
       MEMORY[0xC8996C] = 0;
@@ -97011,12 +97010,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_60190350
  * RVA 0x00190350   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60190350(struct sead_IDisposer *a1)
+  int __fastcall sub_60190350(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12409052;
-    if ( (struct sead_IDisposer *)MEMORY[0xC89968] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC89968] == a1 )
     {
       MEMORY[0xC89968] = 0;
       MEMORY[0xC8996C] = 0;
@@ -97239,7 +97238,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v3 = -1;
       v4 = 0;
-      v5 = 0;
+      v5 = nullptr;
       do
       {
         if ( a1[v4 + 4] && a1[v4 + 5] > v3 )
@@ -98041,7 +98040,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C89974 = 0;
     dword_60C89978 = 0;
     dword_60C8997C = 0;
-    off_60C89970 = 0;
+    off_60C89970 = nullptr;
     dword_60C89984 = (int)&unk_60C8998C;
     off_60C89980 = (_UNKNOWN *)12322272;
     dword_60C89988 = 8;
@@ -98557,7 +98556,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8999C = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABF88F;
-    result = (_DWORD *)Profile::Profile(13146528, 1646036, MEMORY[0xAF3B18], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13146528, 1646036, MEMORY[0xAF3B18], (int)v1, nullptr, 0);
     *result = 12409092;
     return result;
   }
@@ -98593,7 +98592,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C899E8 = 0;
     v2[0] = 12321336;
     v2[1] = &unk_60ABF8EA;
-    v0 = (_DWORD *)Profile::Profile(13146560, 1649152, MEMORY[0xAF3ABC], (int)v2, 0, 0);
+    v0 = (_DWORD *)Profile::Profile(13146560, 1649152, MEMORY[0xAF3ABC], (int)v2, nullptr, 0);
     dword_60C899EC = 12321336;
     *v0 = 12409204;
     dword_60C899F0 = (int)"cobGhostOpen";
@@ -99290,7 +99289,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C89A24 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABF964;
-    result = (_DWORD *)Profile::Profile(13146664, 1652252, MEMORY[0xAF3A9C], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13146664, 1652252, MEMORY[0xAF3A9C], (int)v1, nullptr, 0);
     *result = 12409332;
     return result;
   }
@@ -99859,7 +99858,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6[0] = 1.0;
       v6[1] = 1.0;
       v6[2] = 1.0;
-      sub_602375C4((int32x4_t *)(v3 + 292), 899, v7, 0, v6);
+      sub_602375C4((int32x4_t *)(v3 + 292), 899, v7, nullptr, v6);
       return sub_601E4C88(MEMORY[0xC8B13C], 209, (_DWORD *)v3);
     }
     return result;
@@ -100160,7 +100159,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C89A58 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABF998;
-    *(_DWORD *)Profile::Profile(13146716, 1654936, MEMORY[0xAF3AA0], (int)v1, 0, 0) = 12409556;
+    *(_DWORD *)Profile::Profile(13146716, 1654936, MEMORY[0xAF3AA0], (int)v1, nullptr, 0) = 12409556;
     MEMORY[0xC89A78] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC89A7C] = 92;
     MEMORY[0xC89A80] = 1;
@@ -100369,7 +100368,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C89B14 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABF9C6;
-    result = (_DWORD *)Profile::Profile(13146904, 1658404, MEMORY[0xAF3AA4], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13146904, 1658404, MEMORY[0xAF3AA4], (int)v1, nullptr, 0);
     *result = 12409828;
     return result;
   }
@@ -100405,7 +100404,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60ABF9FC;
-    *(_DWORD *)Profile::Profile(13146936, 1660708, MEMORY[0xAF3B50], (int)v1, 0, 0) = 12409940;
+    *(_DWORD *)Profile::Profile(13146936, 1660708, MEMORY[0xAF3B50], (int)v1, nullptr, 0) = 12409940;
     MEMORY[0xC89B54] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC89B50] = 12410048;
     MEMORY[0xC89B58] = 1661136;
@@ -103045,9 +103044,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_60199880
  * RVA 0x00199880   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60199880(struct sead_IDisposer *a1)
+  int __fastcall sub_60199880(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     v1 = sub_60441A6C(a1);
     return operator delete((int)v1);
@@ -104635,7 +104634,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60ABFAC5;
-    *(_DWORD *)Profile::Profile(13147452, 1686388, MEMORY[0xAF3B4C], (int)v1, 0, 0) = 12410288;
+    *(_DWORD *)Profile::Profile(13147452, 1686388, MEMORY[0xAF3B4C], (int)v1, nullptr, 0) = 12410288;
     MEMORY[0xC89D58] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC89D54] = 12410396;
     MEMORY[0xC89D5C] = 1686784;
@@ -104756,7 +104755,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v3 )
     {
       v1 = *(_DWORD **)(v3 + 272);
-      v4 = v1 == 0;
+      v4 = v1 == nullptr;
     }
     if ( !v4 )
     {
@@ -105636,7 +105635,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v45 = -1;
         v30 = (float *)sub_60178694(v7, 0);
         v7 = v30;
-        v31 = v30 == 0;
+        v31 = v30 == nullptr;
         if ( v30 )
           v31 = v30 == v2;
         if ( !v31 )
@@ -105649,7 +105648,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v32 = (float *)sub_60178694(v15, 1);
         v7 = v32;
-        v33 = v32 == 0;
+        v33 = v32 == nullptr;
         if ( v32 )
           v33 = v32 == v2;
         if ( !v33 )
@@ -105662,7 +105661,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v34 = (float *)sub_60178694(v15, 2);
         v7 = v34;
-        v35 = v34 == 0;
+        v35 = v34 == nullptr;
         if ( v34 )
           v35 = v34 == v2;
         if ( !v35 )
@@ -105675,7 +105674,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v36 = (float *)sub_60178694(v15, 3);
         v7 = v36;
-        v37 = v36 == 0;
+        v37 = v36 == nullptr;
         if ( v36 )
           v37 = v36 == v2;
         if ( !v37 )
@@ -105688,7 +105687,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v38 = (float *)sub_60178694(v15, 4);
         v7 = v38;
-        v39 = v38 == 0;
+        v39 = v38 == nullptr;
         if ( v38 )
           v39 = v38 == v2;
         if ( v39
@@ -105699,7 +105698,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           v40 = (float *)sub_60178694(v15, 5);
           v7 = v40;
-          v41 = v40 == 0;
+          v41 = v40 == nullptr;
           if ( v40 )
             v41 = v40 == v2;
           if ( v41 )
@@ -106304,10 +106303,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6019E2B0
  * RVA 0x0019e2b0   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_6019E2B0(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_6019E2B0(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12410508;
-    if ( (struct sead_IDisposer *)MEMORY[0xC89DF4] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC89DF4] == a1 )
     {
       MEMORY[0xC89DF4] = 0;
       MEMORY[0xC89DF8] = 0;
@@ -106319,12 +106318,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6019E304
  * RVA 0x0019e304   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6019E304(struct sead_IDisposer *a1)
+  int __fastcall sub_6019E304(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12410508;
-    if ( (struct sead_IDisposer *)MEMORY[0xC89DF4] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC89DF4] == a1 )
     {
       MEMORY[0xC89DF4] = 0;
       MEMORY[0xC89DF8] = 0;
@@ -106692,10 +106691,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6019EC84
  * RVA 0x0019ec84   size 0x60   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_6019EC84(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_6019EC84(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12410524;
-    if ( (struct sead_IDisposer *)MEMORY[0xC89DFC] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC89DFC] == a1 )
     {
       MEMORY[0xC89DFC] = 0;
       sub_601AAD98((_DWORD *)(MEMORY[0xC89E00] + 164));
@@ -106708,12 +106707,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_6019ECF4
  * RVA 0x0019ecf4   size 0x64   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6019ECF4(struct sead_IDisposer *a1)
+  int __fastcall sub_6019ECF4(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v2; // r0
+    sead::IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12410524;
-    if ( (struct sead_IDisposer *)MEMORY[0xC89DFC] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC89DFC] == a1 )
     {
       MEMORY[0xC89DFC] = 0;
       sub_601AAD98((_DWORD *)(MEMORY[0xC89E00] + 164));
@@ -106879,11 +106878,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     for ( i = 0; i != 9; ++i )
     {
       v11 = &a1[4 * i];
-      v12 = 0;
+      v12 = nullptr;
       if ( (int)v11[6] >= 1 )
       {
         v13 = v11[5];
-        v12 = 0;
+        v12 = nullptr;
         if ( v13 )
           v12 = (_DWORD *)(v13 - v11[7]);
       }
@@ -106896,7 +106895,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v17 = *(_DWORD **)((char *)v12 + *v15 + 4);
         v12 = (_DWORD *)((char *)v17 - *v15);
         if ( v17 == v14 )
-          v12 = 0;
+          v12 = nullptr;
       }
       while ( v12 );
     }
@@ -106923,7 +106922,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v24 = *(_DWORD **)((char *)v15 + *v23 + 4);
             v15 = (_DWORD *)((char *)v24 - *v23);
             if ( v24 == v12 )
-              v15 = 0;
+              v15 = nullptr;
           }
           while ( v15 );
         }
@@ -106940,7 +106939,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v27 )
         {
           v26 = (_DWORD *)(v27 - v26[7]);
-          v28 = v26 == 0;
+          v28 = v26 == nullptr;
         }
         if ( !v28 )
           sub_60226A80(v26, *(_DWORD *)(MEMORY[0xCC6D78] + k + 760), 1);
@@ -107233,7 +107232,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v27 = *(_DWORD **)((char *)v22 + *v20 + 4);
         v22 = (float *)((char *)v27 - *v20);
         if ( v27 == v20 - 3 )
-          v22 = 0;
+          v22 = nullptr;
       }
       while ( v22 );
       a1 = v28;
@@ -109037,7 +109036,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v3 )
       {
         result = (_DWORD *)(v3 - result[7]);
-        v4 = result == 0;
+        v4 = result == nullptr;
       }
       if ( !v4 )
         return (_DWORD *)sub_60226A80(result, *(_DWORD *)(MEMORY[0xCC6D78] + 4 * a2 + 760), 0);
@@ -109093,10 +109092,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601A17A4
  * RVA 0x001a17a4   size 0x64   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_601A17A4(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_601A17A4(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12410540;
-    if ( (struct sead_IDisposer *)MEMORY[0xC89E14] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC89E14] == a1 )
     {
       MEMORY[0xC89E14] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC89E18])(MEMORY[0xC89E18]);
@@ -109109,12 +109108,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601A1818
  * RVA 0x001a1818   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_601A1818(struct sead_IDisposer *a1)
+  int __fastcall sub_601A1818(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v2; // r0
+    sead::IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12410540;
-    if ( (struct sead_IDisposer *)MEMORY[0xC89E14] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC89E14] == a1 )
     {
       MEMORY[0xC89E14] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC89E18])(MEMORY[0xC89E18]);
@@ -111868,7 +111867,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8A064 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABFB8C;
-    Profile::Profile(13148264, 1724296, MEMORY[0xAF3B28], (int)v1, 0, 0);
+    Profile::Profile(13148264, 1724296, MEMORY[0xAF3B28], (int)v1, nullptr, 0);
     MEMORY[0xC8A084] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8A080] = 12410776;
     MEMORY[0xC8A088] = 1724484;
@@ -113091,7 +113090,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8A278 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABFBC0;
-    *(_DWORD *)Profile::Profile(13148468, 1727820, MEMORY[0xAF3B1C], (int)v1, 0, 0) = 12410888;
+    *(_DWORD *)Profile::Profile(13148468, 1727820, MEMORY[0xAF3B1C], (int)v1, nullptr, 0) = 12410888;
     MEMORY[0xC8A150] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8A14C] = 12411096;
     MEMORY[0xC8A154] = 1727908;
@@ -113333,7 +113332,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8A370 = 0;
     v2[0] = 12321336;
     v2[1] = &unk_60ABFBDF;
-    v0 = (_DWORD *)Profile::Profile(13148796, 1734392, MEMORY[0xAF3AF8], (int)v2, 0, 0);
+    v0 = (_DWORD *)Profile::Profile(13148796, 1734392, MEMORY[0xAF3AF8], (int)v2, nullptr, 0);
     dword_60C8A374 = 12321336;
     *v0 = 12411236;
     dword_60C8A378 = (int)"W104";
@@ -114235,11 +114234,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   _DWORD *__fastcall sub_601A9114(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12411248;
     a1[78] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 78);
+    v2 = (sead::IDisposer *)(a1 + 78);
     sub_60237560((int)(a1 + 78));
     sead::IDisposer::~IDisposer(v2);
     return Actor::~Actor(a1);
@@ -114251,12 +114250,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601A9164(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12411248;
     a1[78] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 78);
+    v2 = (sead::IDisposer *)(a1 + 78);
     sub_60237560((int)(a1 + 78));
     sead::IDisposer::~IDisposer(v2);
     v3 = Actor::~Actor(a1);
@@ -114418,7 +114417,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60ABFC3D;
-    *(_DWORD *)Profile::Profile(13149140, 1742560, MEMORY[0xAF3B00], (int)v1, 0, 0) = 12411520;
+    *(_DWORD *)Profile::Profile(13149140, 1742560, MEMORY[0xAF3B00], (int)v1, nullptr, 0) = 12411520;
     MEMORY[0xC8A3F0] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8A3EC] = 12411720;
     MEMORY[0xC8A3F4] = 1742684;
@@ -115406,7 +115405,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8A54C = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABFC62;
-    *(_DWORD *)Profile::Profile(13149472, 1746632, MEMORY[0xAF3B38], (int)v1, 0, 0) = 12411740;
+    *(_DWORD *)Profile::Profile(13149472, 1746632, MEMORY[0xAF3B38], (int)v1, nullptr, 0) = 12411740;
     dword_60C8A540 = 0x2000000;
     return 0x2000000;
   }
@@ -115599,7 +115598,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( TlsValue )
         CurrentCoreNumber = TlsValue - 1;
       else
-        CurrentCoreNumber = nn::os::GetCurrentCoreNumber(0);
+        CurrentCoreNumber = nn::os::GetCurrentCoreNumber(nullptr);
       v6 = 0;
       v7 = CurrentCoreNumber != 0;
       if ( v3[4098] > (unsigned int)v7 )
@@ -115805,7 +115804,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60ABFCD9;
-    *(_DWORD *)Profile::Profile(13149532, 1750448, MEMORY[0xAF3B54], (int)v1, 0, 0) = 12411908;
+    *(_DWORD *)Profile::Profile(13149532, 1750448, MEMORY[0xAF3B54], (int)v1, nullptr, 0) = 12411908;
     MEMORY[0xC8A578] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8A57C] = 92;
     MEMORY[0xC8A580] = 1;
@@ -116178,7 +116177,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5[0] = *(float *)(a1 + 80);
       v5[1] = v2;
       v5[2] = v3;
-      EffectData_update((int32x4_t *)(a1 + 364), v5, 0, 0);
+      EffectData_update((int32x4_t *)(a1 + 364), v5, nullptr, nullptr);
     }
     sub_601ABC5C(a1);
     return 1;
@@ -116912,7 +116911,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8A640 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABFD19;
-    result = (_DWORD *)Profile::Profile(13149764, 1754072, MEMORY[0xAF3AA8], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13149764, 1754072, MEMORY[0xAF3AA8], (int)v1, nullptr, 0);
     *result = 12412168;
     return result;
   }
@@ -117318,7 +117317,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8A66C = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABFD7A;
-    result = (_DWORD *)Profile::Profile(13149808, 1756676, MEMORY[0xAF3AAC], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13149808, 1756676, MEMORY[0xAF3AAC], (int)v1, nullptr, 0);
     *result = 12412280;
     return result;
   }
@@ -117347,7 +117346,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60ABFDF1;
-    *(_DWORD *)Profile::Profile(13149876, 1760816, MEMORY[0xAF3B2C], (int)v1, 0, 0) = 12412392;
+    *(_DWORD *)Profile::Profile(13149876, 1760816, MEMORY[0xAF3B2C], (int)v1, nullptr, 0) = 12412392;
     MEMORY[0xC8A6D0] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8A6CC] = 12412592;
     MEMORY[0xC8A6D4] = 1760976;
@@ -118311,7 +118310,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v13 = 0;
           do
           {
-            v14 = 0;
+            v14 = nullptr;
             if ( *(_DWORD *)(v8 + 36) > v13 )
               v14 = *(_DWORD **)(*v11 + 4 * v13);
             if ( v14[24] == *(_DWORD *)(a1 + 248) )
@@ -118671,11 +118670,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   _DWORD *__fastcall sub_601B0910(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12412404;
     a1[96] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 96);
+    v2 = (sead::IDisposer *)(a1 + 96);
     sub_60237560((int)(a1 + 96));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12407388;
@@ -118689,12 +118688,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601B097C(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12412404;
     a1[96] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 96);
+    v2 = (sead::IDisposer *)(a1 + 96);
     sub_60237560((int)(a1 + 96));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12407388;
@@ -118716,10 +118715,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601B0A04
  * RVA 0x001b0a04   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_601B0A04(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_601B0A04(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12412612;
-    if ( (struct sead_IDisposer *)MEMORY[0xC8A8BC] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC8A8BC] == a1 )
     {
       MEMORY[0xC8A8BC] = 0;
       MEMORY[0xC8A8C0] = 0;
@@ -118731,12 +118730,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601B0A58
  * RVA 0x001b0a58   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_601B0A58(struct sead_IDisposer *a1)
+  int __fastcall sub_601B0A58(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12412612;
-    if ( (struct sead_IDisposer *)MEMORY[0xC8A8BC] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC8A8BC] == a1 )
     {
       MEMORY[0xC8A8BC] = 0;
       MEMORY[0xC8A8C0] = 0;
@@ -119446,16 +119445,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12412988;
     a1[195] = 12325992;
     sub_60237560((int)(a1 + 195));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 195));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 195));
     a1[167] = 12325992;
     sub_60237560((int)(a1 + 167));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 167));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 167));
     a1[139] = 12325992;
     sub_60237560((int)(a1 + 139));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 139));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 139));
     a1[111] = 12325992;
     sub_60237560((int)(a1 + 111));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 111));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 111));
     return Actor::~Actor(a1);
   }
 
@@ -119472,16 +119471,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12412988;
     a1[195] = 12325992;
     sub_60237560((int)(a1 + 195));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 195));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 195));
     a1[167] = 12325992;
     sub_60237560((int)(a1 + 167));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 167));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 167));
     a1[139] = 12325992;
     sub_60237560((int)(a1 + 139));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 139));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 139));
     a1[111] = 12325992;
     sub_60237560((int)(a1 + 111));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 111));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 111));
     v2 = Actor::~Actor(a1);
     return operator delete((int)v2);
   }
@@ -120786,7 +120785,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( sub_601DA074(v3) || sub_601D9E28(v3) )
         sub_601D6648((_DWORD *)a1, 0);
       else
-        sub_601D55A4(a1, 0, -1, 0);
+        sub_601D55A4(a1, 0, -1, nullptr);
       *(_DWORD *)(a1 + 1136) = *(_DWORD *)(sub_601C6BF0(a1) + 1016);
       sub_601B402C((_DWORD *)a1);
       switch ( *(_DWORD *)(a1 + 1032) )
@@ -121731,22 +121730,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   _DWORD *__fastcall sub_601B53EC(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12412988;
     a1[195] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 195);
+    v2 = (sead::IDisposer *)(a1 + 195);
     sub_60237560((int)(a1 + 195));
     sead::IDisposer::~IDisposer(v2);
     a1[167] = 12325992;
     sub_60237560((int)(a1 + 167));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 167));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 167));
     a1[139] = 12325992;
     sub_60237560((int)(a1 + 139));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 139));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 139));
     a1[111] = 12325992;
     sub_60237560((int)(a1 + 111));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 111));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 111));
     return Actor::~Actor(a1);
   }
 
@@ -121756,23 +121755,23 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601B5484(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12412988;
     a1[195] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 195);
+    v2 = (sead::IDisposer *)(a1 + 195);
     sub_60237560((int)(a1 + 195));
     sead::IDisposer::~IDisposer(v2);
     a1[167] = 12325992;
     sub_60237560((int)(a1 + 167));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 167));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 167));
     a1[139] = 12325992;
     sub_60237560((int)(a1 + 139));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 139));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 139));
     a1[111] = 12325992;
     sub_60237560((int)(a1 + 111));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 111));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 111));
     v3 = Actor::~Actor(a1);
     return operator delete((int)v3);
   }
@@ -122117,7 +122116,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8AB70 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60ABFE6F;
-    *(_DWORD *)Profile::Profile(13150412, 1775280, MEMORY[0xAF3A84], (int)v1, 0, 0) = 12412628;
+    *(_DWORD *)Profile::Profile(13150412, 1775280, MEMORY[0xAF3A84], (int)v1, nullptr, 0) = 12412628;
     MEMORY[0xC8A8E8] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8A8EC] = 144;
     MEMORY[0xC8A8F0] = 1;
@@ -123166,7 +123165,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v35 = -1;
         v13 = (float *)sub_60178694(v12, 0);
         v7 = v13;
-        v14 = v13 == 0;
+        v14 = v13 == nullptr;
         if ( v13 )
           v14 = v13 == v11;
         if ( !v14 )
@@ -123180,7 +123179,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v15 = (float *)sub_60178694(v12, 1);
         v7 = v15;
-        v16 = v15 == 0;
+        v16 = v15 == nullptr;
         if ( v15 )
           v16 = v15 == v11;
         if ( !v16 )
@@ -123194,7 +123193,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v17 = (float *)sub_60178694(v12, 2);
         v7 = v17;
-        v18 = v17 == 0;
+        v18 = v17 == nullptr;
         if ( v17 )
           v18 = v17 == v11;
         if ( !v18 )
@@ -123208,7 +123207,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v19 = (float *)sub_60178694(v12, 3);
         v7 = v19;
-        v20 = v19 == 0;
+        v20 = v19 == nullptr;
         if ( v19 )
           v20 = v19 == v11;
         if ( !v20 )
@@ -123222,7 +123221,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v21 = (float *)sub_60178694(v12, 4);
         v7 = v21;
-        v22 = v21 == 0;
+        v22 = v21 == nullptr;
         if ( v21 )
           v22 = v21 == v11;
         if ( v22
@@ -123352,7 +123351,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v38 = -1;
         v16 = (float *)sub_60178694(v9, 0);
         v15 = v16;
-        v17 = v16 == 0;
+        v17 = v16 == nullptr;
         if ( v16 )
           v17 = v16 == v11;
         if ( !v17 )
@@ -123366,7 +123365,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v18 = (float *)sub_60178694(v9, 1);
         v15 = v18;
-        v19 = v18 == 0;
+        v19 = v18 == nullptr;
         if ( v18 )
           v19 = v18 == v11;
         if ( !v19 )
@@ -123380,7 +123379,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v20 = (float *)sub_60178694(v9, 2);
         v15 = v20;
-        v21 = v20 == 0;
+        v21 = v20 == nullptr;
         if ( v20 )
           v21 = v20 == v11;
         if ( !v21 )
@@ -123394,7 +123393,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v22 = (float *)sub_60178694(v9, 3);
         v15 = v22;
-        v23 = v22 == 0;
+        v23 = v22 == nullptr;
         if ( v22 )
           v23 = v22 == v11;
         if ( !v23 )
@@ -123408,7 +123407,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v24 = (float *)sub_60178694(v9, 4);
         v15 = v24;
-        v25 = v24 == 0;
+        v25 = v24 == nullptr;
         if ( v24 )
           v25 = v24 == v11;
         if ( v25
@@ -125174,7 +125173,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
     int v6; // r5
     int v7; // r0
-    struct sead_Random *v8; // r6
+    sead::Random *v8; // r6
     int v9; // r0
   
     if ( (*(_DWORD *)(a1 + 264) | 1) == 7 )
@@ -125196,7 +125195,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v7 = *(_DWORD *)(*(_DWORD *)(a1 + 920 + 4 * *(_DWORD *)(a1 + 1472)) + 4);
         (*(void (__fastcall **)(int, int))(*(_DWORD *)v7 + 84))(v7, v6);
-        v8 = (struct sead_Random *)MEMORY[0xCCF4E4];
+        v8 = (sead::Random *)MEMORY[0xCCF4E4];
         sub_60793E10(*(_DWORD *)(*(_DWORD *)(a1 + 920 + 4 * *(_DWORD *)(a1 + 1472)) + 4));
         sead::Random::getU32(v8);
       }
@@ -126524,7 +126523,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r6
     bool v5; // zf
     int v6; // r0
-    struct sead_Random *v7; // r7
+    sead::Random *v7; // r7
     int v8; // r0
   
     if ( (*(_DWORD *)(a1 + 264) | 1) == 7 )
@@ -126543,7 +126542,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v6 = *(_DWORD *)(*(_DWORD *)(a1 + 920 + 4 * *(_DWORD *)(a1 + 1472)) + 4);
       (*(void (__fastcall **)(int, int))(*(_DWORD *)v6 + 84))(v6, v4);
-      v7 = (struct sead_Random *)MEMORY[0xCCF4E4];
+      v7 = (sead::Random *)MEMORY[0xCCF4E4];
       sub_60793E10(*(_DWORD *)(*(_DWORD *)(a1 + 920 + 4 * *(_DWORD *)(a1 + 1472)) + 4));
       sead::Random::getU32(v7);
     }
@@ -127121,22 +127120,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   _DWORD *__fastcall sub_601BD224(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12412988;
     a1[195] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 195);
+    v2 = (sead::IDisposer *)(a1 + 195);
     sub_60237560((int)(a1 + 195));
     sead::IDisposer::~IDisposer(v2);
     a1[167] = 12325992;
     sub_60237560((int)(a1 + 167));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 167));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 167));
     a1[139] = 12325992;
     sub_60237560((int)(a1 + 139));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 139));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 139));
     a1[111] = 12325992;
     sub_60237560((int)(a1 + 111));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 111));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 111));
     return Actor::~Actor(a1);
   }
 
@@ -127146,23 +127145,23 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601BD2BC(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12412988;
     a1[195] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 195);
+    v2 = (sead::IDisposer *)(a1 + 195);
     sub_60237560((int)(a1 + 195));
     sead::IDisposer::~IDisposer(v2);
     a1[167] = 12325992;
     sub_60237560((int)(a1 + 167));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 167));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 167));
     a1[139] = 12325992;
     sub_60237560((int)(a1 + 139));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 139));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 139));
     a1[111] = 12325992;
     sub_60237560((int)(a1 + 111));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 111));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 111));
     v3 = Actor::~Actor(a1);
     return operator delete((int)v3);
   }
@@ -127357,11 +127356,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8AB7C = 0;
     v2 = 12321336;
     v3 = &unk_60ABFEB3;
-    v0 = (_DWORD *)Profile::Profile(13151104, 1793980, MEMORY[0xAF3A88], (int)&v2, 0, 0);
+    v0 = (_DWORD *)Profile::Profile(13151104, 1793980, MEMORY[0xAF3A88], (int)&v2, nullptr, 0);
     v2 = 12321336;
     *v0 = 12413252;
     v3 = &unk_60ABFECE;
-    *(_DWORD *)Profile::Profile(13151128, 1793980, MEMORY[0xAF3A8C], (int)&v2, 0, 0) = 12413264;
+    *(_DWORD *)Profile::Profile(13151128, 1793980, MEMORY[0xAF3A8C], (int)&v2, nullptr, 0) = 12413264;
     MEMORY[0xC8ABB4] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8ABB8] = 144;
     MEMORY[0xC8ABBC] = 1;
@@ -127685,7 +127684,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     v3 = 1;
-    v2 = 0;
+    v2 = nullptr;
   LABEL_7:
     if ( _cxa_guard_acquire_0(13151016) )
     {
@@ -127884,7 +127883,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (*(int (__fastcall **)(_DWORD *))(*v2 + 92))(v2) == 1 )
         goto LABEL_7;
     }
-    v2 = 0;
+    v2 = nullptr;
   LABEL_7:
     if ( _cxa_guard_acquire_0(13151016) )
     {
@@ -131814,7 +131813,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v1; // r4
     int v2; // r5
   
-    v0 = 0;
+    v0 = nullptr;
     if ( sub_60190968(MEMORY[0xC8996C]) == 1 )
     {
       v1 = 0;
@@ -131832,7 +131831,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v0 && (**v0)(v0, 13151896) )
           break;
         if ( ++v1 == 18 )
-          return 0;
+          return nullptr;
       }
     }
     return v0;
@@ -132487,7 +132486,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v3 = (_DWORD *)v3[68];
         if ( v6 )
           ++v4;
-        v7 = v3 == 0;
+        v7 = v3 == nullptr;
         if ( v3 )
           v7 = v3 == a1;
       }
@@ -132540,7 +132539,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       v8 = sub_601D013C(MEMORY[0xC8AEF0]);
-      v9 = v4 == 0;
+      v9 = v4 == nullptr;
       v10 = v8;
       v11 = 0;
       if ( v4 )
@@ -132554,7 +132553,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v4 = (_DWORD *)v4[68];
           if ( !v12 )
             ++v11;
-          v13 = v4 == 0;
+          v13 = v4 == nullptr;
           if ( v4 )
             v13 = v4 == a1;
         }
@@ -132779,7 +132778,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v34 = -1;
         v12 = (float *)sub_60178694(v5, 0);
         v11 = v12;
-        v13 = v12 == 0;
+        v13 = v12 == nullptr;
         if ( v12 )
           v13 = v12 == v7;
         if ( !v13 )
@@ -132793,7 +132792,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v14 = (float *)sub_60178694(v5, 1);
         v11 = v14;
-        v15 = v14 == 0;
+        v15 = v14 == nullptr;
         if ( v14 )
           v15 = v14 == v7;
         if ( !v15 )
@@ -132807,7 +132806,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v16 = (float *)sub_60178694(v5, 2);
         v11 = v16;
-        v17 = v16 == 0;
+        v17 = v16 == nullptr;
         if ( v16 )
           v17 = v16 == v7;
         if ( !v17 )
@@ -132821,7 +132820,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v18 = (float *)sub_60178694(v5, 3);
         v11 = v18;
-        v19 = v18 == 0;
+        v19 = v18 == nullptr;
         if ( v18 )
           v19 = v18 == v7;
         if ( !v19 )
@@ -132835,7 +132834,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v20 = (float *)sub_60178694(v5, 4);
         v11 = v20;
-        v21 = v20 == 0;
+        v21 = v20 == nullptr;
         if ( v20 )
           v21 = v20 == v7;
         if ( v21
@@ -133729,7 +133728,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      v5 = 0;
+      v5 = nullptr;
     }
     v6 = MEMORY[0xB3B980];
     v7 = MEMORY[0xB3B984];
@@ -133798,7 +133797,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( v25 != v28 );
       }
       v42 = *(_DWORD *)(MEMORY[0xC8A8C0] + 44);
-      v43 = 0;
+      v43 = nullptr;
       if ( *(_DWORD *)(MEMORY[0xC8A8C0] + 36) > (unsigned int)v29 )
         v43 = *(float **)(v42 + 4 * v29);
       v44 = v43[18];
@@ -134932,7 +134931,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             sub_60173634((_DWORD *)v3, (unsigned int *)(a1 + 1032));
             v4 = sub_601FEE28(MEMORY[0xC8C188]);
-            sub_6016BB6C(v4, 0, 0, 0, 0, 0);
+            sub_6016BB6C(v4, 0, nullptr, 0, 0, 0);
           }
           *(_DWORD *)(a1 + 1012) = 1;
           v5 = (_DWORD *)sub_601FEE28(MEMORY[0xC8C188]);
@@ -135208,7 +135207,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           if ( !v14 || (*(int (__fastcall **)(_DWORD *, int))*v14)(v14, 13151012) != 1 )
             break;
-          sub_601BC5FC(v14, *(_DWORD *)(a1 + 1228), v17, (_DWORD *)(a1 + 1032), 2, 0, 0, 0, 0, 0);
+          sub_601BC5FC(v14, *(_DWORD *)(a1 + 1228), v17, (_DWORD *)(a1 + 1032), 2, 0, 0, 0, nullptr, nullptr);
         }
         ++*(_DWORD *)(a1 + 1228);
         *(_BYTE *)(a1 + 216) |= 2u;
@@ -135317,8 +135316,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 0,
                 0,
                 0,
-                0,
-                0) )
+                nullptr,
+                nullptr) )
         {
           i = (_DWORD *)i[68];
           if ( _cxa_guard_acquire_0(13151016) )
@@ -135510,7 +135509,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v10 = v8;
           while ( 1 )
           {
-            v11 = v9 == 0;
+            v11 = v9 == nullptr;
             if ( v9 )
               v11 = (v9[66] | 1) == 7;
             if ( v11 )
@@ -135617,7 +135616,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           (*(void (__fastcall **)(_DWORD *, int, int))(*a1 + 336))(a1, 39, -1);
           for ( i = (_DWORD *)a1[68]; ; i = (_DWORD *)i[68] )
           {
-            v18 = i == 0;
+            v18 = i == nullptr;
             if ( i )
               v18 = (i[66] | 1) == 7;
             if ( v18 )
@@ -135687,7 +135686,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v10 = v48;
           while ( 1 )
           {
-            v50 = v49 == 0;
+            v50 = v49 == nullptr;
             if ( v49 )
               v50 = (v49[66] | 1) == 7;
             if ( v50 )
@@ -135833,7 +135832,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     for ( i = *(_DWORD **)(a1 + 272); ; i = (_DWORD *)i[68] )
     {
-      v5 = i == 0;
+      v5 = i == nullptr;
       if ( i )
         v5 = (i[66] | 1) == 7;
       if ( v5 )
@@ -135877,7 +135876,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      v3 = 0;
+      v3 = nullptr;
     }
     v4 = a1[258];
     if ( v4 > 6 )
@@ -136897,7 +136896,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           for ( i = *(_DWORD **)(a1 + 272); ; i = (_DWORD *)i[68] )
           {
-            v10 = i == 0;
+            v10 = i == nullptr;
             if ( i )
               v10 = (i[66] | 1) == 7;
             if ( v10 )
@@ -137182,7 +137181,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(_DWORD *, int, int))(*a1 + 336))(a1, 39, -1);
     for ( i = (_DWORD *)a1[68]; ; i = (_DWORD *)i[68] )
     {
-      v5 = i == 0;
+      v5 = i == nullptr;
       if ( i )
         v5 = (i[66] | 1) == 7;
       if ( v5 )
@@ -137218,7 +137217,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     for ( i = *(_DWORD **)(a1 + 272); ; i = (_DWORD *)i[68] )
     {
-      v5 = i == 0;
+      v5 = i == nullptr;
       if ( i )
         v5 = (i[66] | 1) == 7;
       if ( v5 )
@@ -137431,10 +137430,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601CF10C
  * RVA 0x001cf10c   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_601CF10C(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_601CF10C(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12413780;
-    if ( (struct sead_IDisposer *)MEMORY[0xC8AEEC] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC8AEEC] == a1 )
     {
       MEMORY[0xC8AEEC] = 0;
       MEMORY[0xC8AEF0] = 0;
@@ -137446,12 +137445,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601CF160
  * RVA 0x001cf160   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_601CF160(struct sead_IDisposer *a1)
+  int __fastcall sub_601CF160(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12413780;
-    if ( (struct sead_IDisposer *)MEMORY[0xC8AEEC] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC8AEEC] == a1 )
     {
       MEMORY[0xC8AEEC] = 0;
       MEMORY[0xC8AEF0] = 0;
@@ -137542,7 +137541,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       _cxa_guard_release_0(13142712);
     }
     if ( !(**(int (__fastcall ***)(_BYTE *, int))v1)(v1, 13142708) )
-      v1 = 0;
+      v1 = nullptr;
     a1[5] = *((_DWORD *)v1 + 2);
     *((_DWORD *)v1 + 69) = 0;
     v2 = MEMORY[0xAF3A88];
@@ -138196,7 +138195,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           return v7;
       }
     }
-    return 0;
+    return nullptr;
   }
 
 /* ============================================================================
@@ -139027,7 +139026,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         else
         {
-          v4 = 0;
+          v4 = nullptr;
         }
         v5 = v4[62];
         v9[0] = 6;
@@ -139195,7 +139194,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-        v7 = 0;
+        v7 = nullptr;
       }
       v27 = &v29;
       v26 = 12322272;
@@ -139357,7 +139356,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-        v7 = 0;
+        v7 = nullptr;
       }
       v27 = &v29;
       v26 = 12322272;
@@ -140442,7 +140441,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v4 = sub_601DFFE4(v2);
         v5 = 0;
-        v6 = 0;
+        v6 = nullptr;
         do
         {
           result = sub_60178694(v4, v5);
@@ -141376,7 +141375,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v45 = a1 + 80;
         v46 = a1;
-        v47 = 0;
+        v47 = nullptr;
       }
       v48 = v44;
     }
@@ -141852,7 +141851,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v16 = sub_601C6F34(a1);
             sub_6017113C(v15, v2, v16);
           }
-          sub_601D55A4((int)a1, 0, -1, 0);
+          sub_601D55A4((int)a1, 0, -1, nullptr);
           result = a1[278] - 3;
           switch ( a1[278] )
           {
@@ -141896,7 +141895,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return sub_601B3F54((int)a1);
     }
     a1[280] = v12 & 0xFFFFFFDF;
-    sub_601D55A4((int)a1, 0, -1, 0);
+    sub_601D55A4((int)a1, 0, -1, nullptr);
     result = a1[278] - 3;
     switch ( a1[278] )
     {
@@ -142193,7 +142192,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 1052) = v7[24];
     sub_601D89B8();
     *(_DWORD *)(a1 + 1132) = v1;
-    sub_601D55A4(a1, 0, -1, 0);
+    sub_601D55A4(a1, 0, -1, nullptr);
     sub_601C6F7C(a1);
     sub_601C6C14((_DWORD *)a1, (int)v5, *(_DWORD *)(a1 + 1092));
     v8 = MEMORY[0xC88BC8];
@@ -142498,7 +142497,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v57 = -1;
             v58 = -1;
             v9 = (_DWORD *)sub_60178694(v8, 0);
-            v10 = v9 == 0;
+            v10 = v9 == nullptr;
             if ( v9 )
               v10 = v9 == (_DWORD *)v55;
             if ( !v10 )
@@ -142516,7 +142515,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 goto LABEL_36;
             }
             v17 = (_DWORD *)sub_60178694(v8, 1u);
-            v18 = v17 == 0;
+            v18 = v17 == nullptr;
             if ( v17 )
               v18 = v17 == (_DWORD *)v55;
             if ( !v18 )
@@ -142534,7 +142533,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 goto LABEL_36;
             }
             v21 = (_DWORD *)sub_60178694(v8, 2u);
-            v22 = v21 == 0;
+            v22 = v21 == nullptr;
             if ( v21 )
               v22 = v21 == (_DWORD *)v55;
             if ( !v22 )
@@ -142552,7 +142551,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 goto LABEL_36;
             }
             v25 = (_DWORD *)sub_60178694(v8, 3u);
-            v26 = v25 == 0;
+            v26 = v25 == nullptr;
             if ( v25 )
               v26 = v25 == (_DWORD *)v55;
             if ( !v26 )
@@ -142570,7 +142569,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 goto LABEL_36;
             }
             v29 = (_DWORD *)sub_60178694(v8, 4u);
-            v30 = v29 == 0;
+            v30 = v29 == nullptr;
             if ( v29 )
               v30 = v29 == (_DWORD *)v55;
             if ( !v30 )
@@ -142588,7 +142587,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 goto LABEL_36;
             }
             v33 = (_DWORD *)sub_60178694(v8, 5u);
-            v34 = v33 == 0;
+            v34 = v33 == nullptr;
             if ( v33 )
               v34 = v33 == (_DWORD *)v55;
             if ( !v34 )
@@ -142629,7 +142628,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *v2 = 0;
             *(_DWORD *)(a1 + 200) = 0;
             sub_601DAEF0((_DWORD *)(a1 + 1044));
-            sub_601D55A4(a1, 0, 7, 0);
+            sub_601D55A4(a1, 0, 7, nullptr);
             switch ( *(_DWORD *)(a1 + 1112) )
             {
               case 3:
@@ -143421,7 +143420,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v4; // [sp+Ch] [bp-4h] BYREF
   
     v1 = 0;
-    v4 = 0;
+    v4 = nullptr;
     sub_601E14F8(a1 + 1080, *(_DWORD *)(a1 + 1108), &v4);
     if ( v4 )
     {
@@ -143444,7 +143443,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v4; // [sp+Ch] [bp-4h] BYREF
   
     v1 = 0;
-    v4 = 0;
+    v4 = nullptr;
     sub_601E14F8(a1 + 1080, *(_DWORD *)(a1 + 1108), &v4);
     if ( v4 )
     {
@@ -146187,7 +146186,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8AFAC = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AC0006;
-    *(_DWORD *)Profile::Profile(13152176, 1947844, MEMORY[0xAF3B04], (int)v1, 0, 0) = 12413808;
+    *(_DWORD *)Profile::Profile(13152176, 1947844, MEMORY[0xAF3B04], (int)v1, nullptr, 0) = 12413808;
     MEMORY[0xC8AFCC] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8AFD0] = 92;
     MEMORY[0xC8AFD4] = 1;
@@ -146589,7 +146588,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v10 = a3;
       return sub_601786A8(v5, &v9);
     }
-    v7 = 0;
+    v7 = nullptr;
     v8 = sub_601A4454(MEMORY[0xC89E18], a1, 0);
     if ( v8 )
     {
@@ -146599,7 +146598,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !v7 )
       {
         v5 = sub_601A4454(MEMORY[0xC89E18], a1, 1);
-        v7 = 0;
+        v7 = nullptr;
         if ( v5 )
           goto LABEL_3;
       }
@@ -146631,7 +146630,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      v7 = 0;
+      v7 = nullptr;
     }
     if ( sub_60178694(v5, 1) )
     {
@@ -147325,7 +147324,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           while ( v11 < 6 );
           if ( (v12 & 1) == 0 )
-            return 0;
+            return nullptr;
         }
         return v8;
       }
@@ -147844,7 +147843,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v10; // r1
   
     sub_6018D7F8((int)a1, 1);
-    if ( (int)a1[80] >= 1 && (v3 = (_DWORD *)a1[79]) != 0 )
+    if ( (int)a1[80] >= 1 && (v3 = (_DWORD *)a1[79]) != nullptr )
     {
       while ( 1 )
       {
@@ -147857,7 +147856,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v3 = (_DWORD *)v3[1];
         if ( v3 == a1 + 78 )
-          v3 = 0;
+          v3 = nullptr;
         if ( !v3 )
           goto LABEL_9;
       }
@@ -148139,7 +148138,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       v2 = (_DWORD *)v2[1];
       if ( v2 == v3 )
-        v2 = 0;
+        v2 = nullptr;
     }
     while ( v2 );
     if ( (v4 & 1) != 0 )
@@ -149416,7 +149415,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_60024460(v16, v15);
         v10 = v13;
         if ( (unsigned int)(a2 - 73) >= 7 )
-          v10 = 0;
+          v10 = nullptr;
         return BasicSoundActor2_play(v9, v6, v16, v10);
       }
     }
@@ -149799,10 +149798,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601E5260
  * RVA 0x001e5260   size 0x58   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_601E5260(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_601E5260(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12414536;
-    if ( (struct sead_IDisposer *)MEMORY[0xC8B140] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC8B140] == a1 )
     {
       MEMORY[0xC8B140] = 0;
       *MEMORY[0xC8B144] = 12414552;
@@ -149815,12 +149814,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601E52CC
  * RVA 0x001e52cc   size 0x64   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_601E52CC(struct sead_IDisposer *a1)
+  int __fastcall sub_601E52CC(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12414536;
-    if ( (struct sead_IDisposer *)MEMORY[0xC8B140] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC8B140] == a1 )
     {
       MEMORY[0xC8B140] = 0;
       *MEMORY[0xC8B144] = 12414552;
@@ -150280,7 +150279,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v4 = v2 == -1;
       if ( v2 != -1 )
-        v4 = result + 1 == 0;
+        v4 = result + 1 == nullptr;
       if ( !v4 )
       {
         v5 = (_DWORD *)sub_601E0010(v74);
@@ -153039,7 +153038,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           else
           {
-            v7 = 0;
+            v7 = nullptr;
           }
           v23 = (unsigned __int8 *)&v25;
           v22 = 12322272;
@@ -153868,7 +153867,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8B1F4 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AC1A57;
-    result = (_DWORD *)Profile::Profile(13152760, 2010880, MEMORY[0xAF3B3C], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13152760, 2010880, MEMORY[0xAF3B3C], (int)v1, nullptr, 0);
     *result = 12414696;
     return result;
   }
@@ -153936,7 +153935,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AC1AD6;
-    *(_DWORD *)Profile::Profile(13152804, 2016280, MEMORY[0xAF3B48], (int)v1, 0, 0) = 12414800;
+    *(_DWORD *)Profile::Profile(13152804, 2016280, MEMORY[0xAF3B48], (int)v1, nullptr, 0) = 12414800;
     MEMORY[0xC8B240] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8B244] = 92;
     MEMORY[0xC8B248] = 1;
@@ -154432,7 +154431,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7[0] = a1[5].n128_f32[0];
       v7[1] = v2;
       v7[2] = v3;
-      EffectData_update(a1 + 27, v7, 0, 0);
+      EffectData_update(a1 + 27, v7, nullptr, nullptr);
     }
     sub_601EC704((int)a1);
     v4 = (a1[13].n128_u8[8] & 8) == 0;
@@ -154861,7 +154860,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[0] = 1.0;
     v5[1] = 1.0;
     v5[2] = 1.0;
-    sub_602375C4(a1 + 27, 883, v6, 0, v5);
+    sub_602375C4(a1 + 27, 883, v6, nullptr, v5);
     a1[12].n128_u32[0] = a1[11].n128_u32[1];
     return sub_601ECD14(a1, 2);
   }
@@ -155422,7 +155421,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15[0] = 1.0;
     v15[1] = 1.0;
     v15[2] = 1.0;
-    sub_602375C4(a1 + 27, 883, &v16, 0, v15);
+    sub_602375C4(a1 + 27, 883, &v16, nullptr, v15);
     return sub_601ECD14(a1, 2);
   }
 
@@ -156267,7 +156266,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[0] = 1.0;
     v5[1] = 1.0;
     v5[2] = 1.0;
-    sub_602375C4(a1 + 27, 883, v6, 0, v5);
+    sub_602375C4(a1 + 27, 883, v6, nullptr, v5);
     return sub_601ECD14(a1, 2);
   }
 
@@ -157485,7 +157484,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v28 = (int32x4_t *)(a1 + 78);
           else
             v28 = (int32x4_t *)(a1 + 94);
-          return sub_602375C4(v28, 896, (float *)&v29, 0, a1 + 136);
+          return sub_602375C4(v28, 896, (float *)&v29, nullptr, a1 + 136);
         case 91:
           v11 = 13153912;
           goto LABEL_51;
@@ -158815,7 +158814,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v9[3];
     v7 = v9[7];
     v8 = v9[11];
-    return EffectWrapper_update((int32x4_t *)(a1 + 440), 897, (float *)&v6, 0, (float *)(a1 + 544));
+    return EffectWrapper_update((int32x4_t *)(a1 + 440), 897, (float *)&v6, nullptr, (float *)(a1 + 544));
   }
 
 /* ============================================================================
@@ -158844,7 +158843,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v9[3];
     v7 = v9[7];
     v8 = v9[11];
-    return sub_60237208((int32x4_t *)(a1 + 440), (float *)&v6, 0, (float *)(a1 + 544));
+    return sub_60237208((int32x4_t *)(a1 + 440), (float *)&v6, nullptr, (float *)(a1 + 544));
   }
 
 /* ============================================================================
@@ -158960,11 +158959,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   _DWORD *__fastcall sub_601F2D70(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12415296;
     a1[110] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 110);
+    v2 = (sead::IDisposer *)(a1 + 110);
     sub_60237560((int)(a1 + 110));
     sead::IDisposer::~IDisposer(v2);
     return Actor::~Actor(a1);
@@ -158976,12 +158975,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601F2DC0(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12415296;
     a1[110] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 110);
+    v2 = (sead::IDisposer *)(a1 + 110);
     sub_60237560((int)(a1 + 110));
     sead::IDisposer::~IDisposer(v2);
     v3 = Actor::~Actor(a1);
@@ -159289,7 +159288,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = *v9;
     v12 = *(void (__fastcall **)(int, int *))(*(_DWORD *)*v9 + 68);
     v15 = 0;
-    v16 = 0;
+    v16 = nullptr;
     v17 = 0;
     v12(v11, &v15);
     if ( *(_DWORD *)(a1 + 20) )
@@ -159590,7 +159589,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8B934 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AC1B61;
-    *(_DWORD *)Profile::Profile(13154616, 2043768, MEMORY[0xAF3AE4], (int)v1, 0, 0) = 12415804;
+    *(_DWORD *)Profile::Profile(13154616, 2043768, MEMORY[0xAF3AE4], (int)v1, nullptr, 0) = 12415804;
     MEMORY[0xC8B954] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8B950] = 12415920;
     MEMORY[0xC8B958] = 2043952;
@@ -159661,7 +159660,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AC1BC5;
-    result = (_DWORD *)Profile::Profile(13154776, 2046872, MEMORY[0xAF3AD4], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13154776, 2046872, MEMORY[0xAF3AD4], (int)v1, nullptr, 0);
     *result = 12416032;
     return result;
   }
@@ -159786,12 +159785,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601F3EB0(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12415296;
     a1[110] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 110);
+    v2 = (sead::IDisposer *)(a1 + 110);
     sub_60237560((int)(a1 + 110));
     sead::IDisposer::~IDisposer(v2);
     v3 = Actor::~Actor(a1);
@@ -159827,7 +159826,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AC1BE4;
-    *(_DWORD *)Profile::Profile(13154900, 2049612, MEMORY[0xAF3AE0], (int)v1, 0, 0) = 12416440;
+    *(_DWORD *)Profile::Profile(13154900, 2049612, MEMORY[0xAF3AE0], (int)v1, nullptr, 0) = 12416440;
     MEMORY[0xC8BA70] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8BA74] = 92;
     MEMORY[0xC8BA78] = 1;
@@ -162310,17 +162309,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   _DWORD *__fastcall sub_601F8534(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12416452;
     a1[183] = 12348984;
-    v2 = (struct sead_IDisposer *)(a1 + 183);
+    v2 = (sead::IDisposer *)(a1 + 183);
     sub_60002B6C((int)(a1 + 183));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12415296;
     a1[110] = 12325992;
     sub_60237560((int)(a1 + 110));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 110));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 110));
     return Actor::~Actor(a1);
   }
 
@@ -162330,18 +162329,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601F85C0(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12416452;
     a1[183] = 12348984;
-    v2 = (struct sead_IDisposer *)(a1 + 183);
+    v2 = (sead::IDisposer *)(a1 + 183);
     sub_60002B6C((int)(a1 + 183));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12415296;
     a1[110] = 12325992;
     sub_60237560((int)(a1 + 110));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 110));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 110));
     v3 = Actor::~Actor(a1);
     return operator delete((int)v3);
   }
@@ -162395,7 +162394,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AC1C28;
-    result = (_DWORD *)Profile::Profile(13155636, 2066456, MEMORY[0xAF3ACC], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13155636, 2066456, MEMORY[0xAF3ACC], (int)v1, nullptr, 0);
     *result = 12416888;
     return result;
   }
@@ -162520,12 +162519,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601F8B30(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12415296;
     a1[110] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 110);
+    v2 = (sead::IDisposer *)(a1 + 110);
     sub_60237560((int)(a1 + 110));
     sead::IDisposer::~IDisposer(v2);
     v3 = Actor::~Actor(a1);
@@ -162570,7 +162569,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AC1C64;
-    *(_DWORD *)Profile::Profile(13155764, 2068156, MEMORY[0xAF3AC4], (int)v1, 0, 0) = 12417296;
+    *(_DWORD *)Profile::Profile(13155764, 2068156, MEMORY[0xAF3AC4], (int)v1, nullptr, 0) = 12417296;
     MEMORY[0xC8BDD0] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC8BDD4] = 92;
     MEMORY[0xC8BDD8] = 1;
@@ -162995,12 +162994,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601F9840(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12415296;
     a1[110] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 110);
+    v2 = (sead::IDisposer *)(a1 + 110);
     sub_60237560((int)(a1 + 110));
     sead::IDisposer::~IDisposer(v2);
     v3 = Actor::~Actor(a1);
@@ -163060,7 +163059,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8BF10 = 12321336;
     dword_60C8BF14 = (int)"cobShipLudwigBoro";
     v1[1] = &unk_60AC1C95;
-    result = (_DWORD *)Profile::Profile(13156036, 2071148, MEMORY[0xAF3ADC], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13156036, 2071148, MEMORY[0xAF3ADC], (int)v1, nullptr, 0);
     *result = 12417744;
     return result;
   }
@@ -163179,12 +163178,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601F9D64(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12415296;
     a1[110] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 110);
+    v2 = (sead::IDisposer *)(a1 + 110);
     sub_60237560((int)(a1 + 110));
     sead::IDisposer::~IDisposer(v2);
     v3 = Actor::~Actor(a1);
@@ -163195,10 +163194,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601F9DB8
  * RVA 0x001f9db8   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_601F9DB8(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_601F9DB8(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12418152;
-    if ( (struct sead_IDisposer *)MEMORY[0xC8BF54] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC8BF54] == a1 )
     {
       MEMORY[0xC8BF54] = 0;
       MEMORY[0xC8BF58] = 0;
@@ -163210,12 +163209,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601F9E0C
  * RVA 0x001f9e0c   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_601F9E0C(struct sead_IDisposer *a1)
+  int __fastcall sub_601F9E0C(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12418152;
-    if ( (struct sead_IDisposer *)MEMORY[0xC8BF54] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC8BF54] == a1 )
     {
       MEMORY[0xC8BF54] = 0;
       MEMORY[0xC8BF58] = 0;
@@ -163311,7 +163310,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v15 != -1 )
         {
           result = *(_BYTE **)(MEMORY[0xCC6D78] + 464);
-          v16 = result + 1 == 0;
+          v16 = result + 1 == nullptr;
         }
         if ( v16 )
           return result;
@@ -163528,7 +163527,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
   
     v5 = *(_DWORD *)(a1 + 16);
-    if ( v5 && (v8 = (_DWORD *)ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, v5)) != 0 )
+    if ( v5 && (v8 = (_DWORD *)ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, v5)) != nullptr )
     {
       *a2 = v8[32];
       a2[1] = v8[33];
@@ -163601,7 +163600,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AC1CBD;
-    result = (_DWORD *)Profile::Profile(13156188, 2074248, MEMORY[0xAF3AC8], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13156188, 2074248, MEMORY[0xAF3AC8], (int)v1, nullptr, 0);
     *result = 12418168;
     return result;
   }
@@ -163726,12 +163725,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601FA9A0(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12415296;
     a1[110] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 110);
+    v2 = (sead::IDisposer *)(a1 + 110);
     sub_60237560((int)(a1 + 110));
     sead::IDisposer::~IDisposer(v2);
     v3 = Actor::~Actor(a1);
@@ -163770,7 +163769,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AC1CDF;
-    result = (_DWORD *)Profile::Profile(13156300, 2075512, MEMORY[0xAF3AD8], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13156300, 2075512, MEMORY[0xAF3AD8], (int)v1, nullptr, 0);
     *result = 12418576;
     return result;
   }
@@ -163895,12 +163894,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601FAE84(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12415296;
     a1[110] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 110);
+    v2 = (sead::IDisposer *)(a1 + 110);
     sub_60237560((int)(a1 + 110));
     sead::IDisposer::~IDisposer(v2);
     v3 = Actor::~Actor(a1);
@@ -163937,7 +163936,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AC1CFB;
-    result = (_DWORD *)Profile::Profile(13156412, 2076744, MEMORY[0xAF3AD0], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13156412, 2076744, MEMORY[0xAF3AD0], (int)v1, nullptr, 0);
     *result = 12418984;
     return result;
   }
@@ -164062,12 +164061,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601FB360(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12415296;
     a1[110] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 110);
+    v2 = (sead::IDisposer *)(a1 + 110);
     sub_60237560((int)(a1 + 110));
     sead::IDisposer::~IDisposer(v2);
     v3 = Actor::~Actor(a1);
@@ -164267,7 +164266,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v5[0] = v7;
         v5[1] = v8;
         v5[2] = v9;
-        EffectWrapper_update((int32x4_t *)(a1 + 296), 1215, v5, 0, 0);
+        EffectWrapper_update((int32x4_t *)(a1 + 296), 1215, v5, nullptr, nullptr);
       }
     }
     return 1;
@@ -164385,7 +164384,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8C0AC = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AC1D20;
-    result = (_DWORD *)Profile::Profile(13156528, 2077620, MEMORY[0xAF3B5C], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13156528, 2077620, MEMORY[0xAF3B5C], (int)v1, nullptr, 0);
     *result = 12419392;
     return result;
   }
@@ -164463,11 +164462,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   _DWORD *__fastcall sub_601FC0E8(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12419404;
     a1[74] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 74);
+    v2 = (sead::IDisposer *)(a1 + 74);
     sub_60237560((int)(a1 + 74));
     sead::IDisposer::~IDisposer(v2);
     return Actor::~Actor(a1);
@@ -164479,12 +164478,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601FC138(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12419404;
     a1[74] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 74);
+    v2 = (sead::IDisposer *)(a1 + 74);
     sub_60237560((int)(a1 + 74));
     sead::IDisposer::~IDisposer(v2);
     v3 = Actor::~Actor(a1);
@@ -164813,7 +164812,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8C118 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AC1D3D;
-    *(_DWORD *)Profile::Profile(13156588, 2081176, MEMORY[0xAF3AE8], (int)v1, 0, 0) = 12419504;
+    *(_DWORD *)Profile::Profile(13156588, 2081176, MEMORY[0xAF3AE8], (int)v1, nullptr, 0) = 12419504;
     dword_60C8C11C = 1065353216;
     dword_60C8C120 = 1065353216;
     dword_60C8C124 = 1065353216;
@@ -165080,7 +165079,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8C13C = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AC1D68;
-    result = (_DWORD *)Profile::Profile(13156672, 2083096, MEMORY[0xAF3AEC], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13156672, 2083096, MEMORY[0xAF3AEC], (int)v1, nullptr, 0);
     *result = 12419616;
     return result;
   }
@@ -165342,7 +165341,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C8C160 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AC1D8B;
-    result = (_DWORD *)Profile::Profile(13156708, 2084836, MEMORY[0xAF3AF0], (int)v1, 0, 0);
+    result = (_DWORD *)Profile::Profile(13156708, 2084836, MEMORY[0xAF3AF0], (int)v1, nullptr, 0);
     *result = 12419728;
     return result;
   }
@@ -165474,7 +165473,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601FD9E0
  * RVA 0x001fd9e0   size 0xd8   xrefs 1
  * ============================================================================ */
-  void __fastcall sub_601FD9E0(struct sead_CalculateTask *a1)
+  void __fastcall sub_601FD9E0(sead::CalculateTask *a1)
   {
     *(_DWORD *)a1 = 12419840;
     *(_BYTE *)(MEMORY[0xC9CFB8] + 20) = 0;
@@ -165502,7 +165501,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * sub_601FDAC4
  * RVA 0x001fdac4   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_601FDAC4(struct sead_CalculateTask *a1)
+  int __fastcall sub_601FDAC4(sead::CalculateTask *a1)
   {
     int v1; // r0
   
@@ -165534,7 +165533,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * RVA 0x001fdb5c   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall sub_601FDB5C(struct sead_TaskBase *a1)
+  int __fastcall sub_601FDB5C(sead::TaskBase *a1)
   {
     return sub_60818350(a1);
   }
@@ -165549,7 +165548,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v3; // r7
     _DWORD v5[12]; // [sp+0h] [bp-30h] BYREF
   
-    nn::os::GetSystemTick((struct nn_os *)v5);
+    nn::os::GetSystemTick((nn::os *)v5);
     sub_60023F4C();
     sub_60238B6C(MEMORY[0xC8D9DC]);
     sub_604269A8(MEMORY[0xC9BBD4]);
@@ -166368,7 +166367,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           _cxa_guard_release_0(13156900);
         }
         v4 = (**(int (__fastcall ***)(unsigned __int8 *, int))v3)(v3, 13156896);
-        v5 = v3 == 0;
+        v5 = v3 == nullptr;
         if ( v3 )
           v5 = (v4 ^ 1) == 1;
         if ( !v5 )
@@ -166597,7 +166596,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * RVA 0x001ffbbc   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall sead_TaskBase_onDestroy(struct sead_TaskBase *a1)
+  int __fastcall sead::TaskBase::onDestroy(sead::TaskBase *a1)
   {
     return sead::TaskBase::doneDestroy(a1);
   }

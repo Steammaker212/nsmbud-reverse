@@ -13,59 +13,8 @@
 #include <stddef.h>
 #include <stdbool.h>
 
+#include "nsmbudx_types.h"
 #include "structs.h"
-
-/* ---- IDA scalar aliases, at IDA's exact widths ----
- * The decompiler output uses these; they are not standard C. Defined so this header can be
- * included. An `_UNKNOWN` parameter is genuinely unresolved, not a real type. */
-#ifndef NSMBUDX_IDA_TYPES
-#define NSMBUDX_IDA_TYPES
-typedef unsigned char      _BYTE;
-typedef unsigned char      _BOOL1;
-typedef unsigned int       _BOOL4;
-typedef unsigned short     _WORD;
-typedef unsigned int       _DWORD;
-typedef unsigned long long _QWORD;
-typedef signed char        _SBYTE;
-typedef signed short       _SWORD;
-typedef signed int         _SDWORD;
-typedef signed long long   _SQWORD;
-typedef unsigned char      _UNKNOWN;
-typedef void              *_PVOID;
-typedef const char        *_LPCSTR;
-#endif
-
-/* ---- opaque forward declarations for qualified names in signatures ---- */
-#ifndef NSMBUDX_OPAQUE_QUALIFIED
-#define NSMBUDX_OPAQUE_QUALIFIED
-struct sead_IDisposer;
-struct sead_IDelegateBase;
-struct sead_Heap;
-struct sead_TreeNode;
-struct nw4f_ut_ResFileAccessor;
-struct nn_Result;
-#endif
-
-/* ---- NEON lane types appearing in signatures ---- */
-#ifndef NSMBUDX_NEON_TYPES
-#define NSMBUDX_NEON_TYPES
-typedef struct { float    v[2]; } float32x2_t;
-typedef struct { float    v[4]; } float32x4_t;
-typedef struct { double   v[2]; } float64x2_t;
-typedef struct { int32_t  v[2]; } int32x2_t;
-typedef struct { int32_t  v[4]; } int32x4_t;
-typedef struct { uint32_t v[4]; } uint32x4_t;
-typedef struct { int8_t   v[16]; } int8x16_t;
-typedef struct { uint8_t  v[16]; } uint8x16_t;
-typedef struct { int32x4_t val[2]; } int32x4x2_t;
-typedef struct { float32x2_t val[2]; } float32x2x2_t;
-typedef struct { float32x4_t val[2]; } float32x4x2_t;
-typedef struct { int32x2_t val[2]; } int32x2x2_t;
-typedef struct { uint32x4_t val[2]; } uint32x4x2_t;
-typedef struct { int8x16_t val[2]; } int8x16x2_t;
-typedef struct { uint8x16_t val[2]; } uint8x16x2_t;
-#endif
-
 /* RVAs are image-relative: VA = 0x60000000 + RVA */
 
 /* ---- libs.c ---- */

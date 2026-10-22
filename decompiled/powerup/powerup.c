@@ -1,4 +1,3 @@
-#include "nsmbudx_prelude.h"
 
 
 /* ---- helpers replacing Hex-Rays `__asm` escapes (see scripts/fix_asm_escapes.py) ----
@@ -667,7 +666,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v58; // [sp+84h] [bp-8h]
     int v59; // [sp+88h] [bp-4h]
   
-    v6 = a4 == 0;
+    v6 = a4 == nullptr;
     v7 = *(unsigned __int16 *)(a3 + 78);
     if ( !a4 )
       v6 = v7 == 0;
@@ -742,7 +741,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         while ( v7 != v14 );
       }
-      v16 = a4 == 0;
+      v16 = a4 == nullptr;
       if ( a4 )
       {
         v13 = *a4;
@@ -974,11 +973,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // s0
   
     result = (float *)a1[34];
-    v3 = result == 0;
+    v3 = result == nullptr;
     if ( result )
     {
       result = (float *)a1[35];
-      v3 = result == 0;
+      v3 = result == nullptr;
     }
     if ( !v3 )
     {
@@ -1185,7 +1184,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v80 = v9;
       v82 = v10;
     }
-    v15 = a4 == 0;
+    v15 = a4 == nullptr;
     if ( a4 )
     {
       v12 = *a4;
@@ -1230,7 +1229,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = sub_6086A548(a1 + 32, &v78);
     }
     v23 = *(unsigned __int16 *)(a3 + 82);
-    v24 = a4 == 0;
+    v24 = a4 == nullptr;
     if ( !a4 )
       v24 = v23 == 0;
     if ( !v24 )
@@ -1302,7 +1301,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         while ( v23 != v27 );
       }
-      v34 = a4 == 0;
+      v34 = a4 == nullptr;
       v44 = a1;
       if ( a4 )
       {
@@ -1650,11 +1649,11 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v3 )
     {
       result = *(float **)(a1 + 224);
-      v4 = result == 0;
+      v4 = result == nullptr;
       if ( result )
       {
         result = *(float **)(a1 + 228);
-        v4 = result == 0;
+        v4 = result == nullptr;
       }
       if ( !v4 )
       {
@@ -1696,10 +1695,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60451F00
  * RVA 0x00451f00   size 0x64   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_60451F00(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_60451F00(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12562700;
-    if ( (struct sead_IDisposer *)MEMORY[0xC9CF08] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC9CF08] == a1 )
     {
       MEMORY[0xC9CF08] = 0;
       sub_604AE884(MEMORY[0xC9CF0C] + 1444);
@@ -1712,12 +1711,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60451F74
  * RVA 0x00451f74   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60451F74(struct sead_IDisposer *a1)
+  int __fastcall sub_60451F74(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v2; // r0
+    sead::IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12562700;
-    if ( (struct sead_IDisposer *)MEMORY[0xC9CF08] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC9CF08] == a1 )
     {
       MEMORY[0xC9CF08] = 0;
       sub_604AE884(MEMORY[0xC9CF0C] + 1444);
@@ -1749,7 +1748,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(v2 + 1280) = 0;
       *(_DWORD *)(v2 + 1316) = 3;
       *(_BYTE *)(v2 + 1320) = 0;
-      sead::Random::init((struct sead_Random *)(v2 + 1340));
+      sead::Random::init((sead::Random *)(v2 + 1340));
       *(_BYTE *)(v2 + 1356) = 0;
       *(_WORD *)(v2 + 1358) = 120;
       *(_BYTE *)(v2 + 1360) = 0;
@@ -1924,7 +1923,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v25 = *(_DWORD *)(a1 + 1328);
       v26 = *(_DWORD *)(a1 + 1332);
     }
-    sead::Random::init((struct sead_Random *)(a1 + 1340), v24, v25, v26, v23);
+    sead::Random::init((sead::Random *)(a1 + 1340), v24, v25, v26, v23);
     if ( *(_DWORD *)(a1 + 1316) == 1 )
     {
       sub_604528CC(a1);
@@ -2542,7 +2541,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (*(_BYTE *)(MEMORY[0xC99DD4] + 1052) & 0xF) != 0 )
         {
           v5 = *(_DWORD *)(a1 + 1388);
-          v6 = 0;
+          v6 = nullptr;
         }
         else
         {
@@ -2629,7 +2628,7 @@ static inline unsigned int uxtb16(unsigned int x)
         _cxa_guard_release_0(13156900);
       }
       v9 = (**(int (__fastcall ***)(_BYTE *, int))v8)(v8, 13156896);
-      v10 = v8 == 0;
+      v10 = v8 == nullptr;
       if ( v8 )
         v10 = (v9 ^ 1) == 1;
       if ( !v10 )
@@ -2749,7 +2748,7 @@ static inline unsigned int uxtb16(unsigned int x)
           | (*(_DWORD *)(*v13 + 272) >> 4) & 0x2000;
       *a4 = *(_WORD *)(*(_DWORD *)(v11[316] + 324) + 434);
       v11[325] = 0;
-      return 0;
+      return nullptr;
     }
     return result;
   }
@@ -3217,7 +3216,7 @@ static inline unsigned int uxtb16(unsigned int x)
           _cxa_guard_release_0(13156900);
         }
         v5 = (**v4)(v4, 13156896);
-        v6 = v4 == 0;
+        v6 = v4 == nullptr;
         if ( v4 )
           v6 = (v5 ^ 1) == 1;
         if ( !v6 )
@@ -3262,7 +3261,7 @@ static inline unsigned int uxtb16(unsigned int x)
             ++v11;
           }
           while ( v11 != (_BYTE **)(*(_DWORD *)(v1 + 220) + 4 * *(_DWORD *)(v1 + 212)) );
-          v13 = 0;
+          v13 = nullptr;
   LABEL_28:
           v7 = v19;
           if ( v9 )
@@ -3275,7 +3274,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         else
         {
-          v13 = 0;
+          v13 = nullptr;
           if ( v9 )
             goto LABEL_43;
         }
@@ -5532,27 +5531,27 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60456EF8(_DWORD *a1)
   {
-    struct sead_ListNode *v2; // r5
-    struct sead_ListNode *v3; // r6
-    struct sead_ListNode *v4; // r7
+    sead::ListNode *v2; // r5
+    sead::ListNode *v3; // r6
+    sead::ListNode *v4; // r7
     _DWORD *v5; // r0
-    struct sead_ListNode *v6; // r5
-    struct sead_ListNode *v7; // r7
+    sead::ListNode *v6; // r5
+    sead::ListNode *v7; // r7
     _DWORD *v8; // r0
-    struct sead_ListNode *v9; // r5
-    struct sead_ListNode *v10; // r7
+    sead::ListNode *v9; // r5
+    sead::ListNode *v10; // r7
     _DWORD *v11; // r0
-    struct sead_ListNode *v12; // r5
+    sead::ListNode *v12; // r5
     int result; // r0
-    struct sead_ListNode *v14; // r7
+    sead::ListNode *v14; // r7
   
-    v2 = (struct sead_ListNode *)a1[50];
-    v3 = (struct sead_ListNode *)(a1 + 49);
-    if ( v2 != (struct sead_ListNode *)(a1 + 49) )
+    v2 = (sead::ListNode *)a1[50];
+    v3 = (sead::ListNode *)(a1 + 49);
+    if ( v2 != (sead::ListNode *)(a1 + 49) )
     {
       do
       {
-        v4 = *((struct sead_ListNode **)v2 + 1);
+        v4 = *((sead::ListNode **)v2 + 1);
         sead::ListNode::erase_(v2);
         --a1[51];
         *((_DWORD *)v2 - 7) = a1[52];
@@ -5562,12 +5561,12 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       while ( v4 != v3 );
     }
-    v6 = (struct sead_ListNode *)a1[200];
-    if ( v6 != (struct sead_ListNode *)(a1 + 199) )
+    v6 = (sead::ListNode *)a1[200];
+    if ( v6 != (sead::ListNode *)(a1 + 199) )
     {
       do
       {
-        v7 = *((struct sead_ListNode **)v6 + 1);
+        v7 = *((sead::ListNode **)v6 + 1);
         sead::ListNode::erase_(v6);
         --a1[201];
         *((_DWORD *)v6 - 7) = a1[202];
@@ -5575,14 +5574,14 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = v7;
         a1[202] = v8;
       }
-      while ( v7 != (struct sead_ListNode *)(a1 + 199) );
+      while ( v7 != (sead::ListNode *)(a1 + 199) );
     }
-    v9 = (struct sead_ListNode *)a1[350];
-    if ( v9 != (struct sead_ListNode *)(a1 + 349) )
+    v9 = (sead::ListNode *)a1[350];
+    if ( v9 != (sead::ListNode *)(a1 + 349) )
     {
       do
       {
-        v10 = *((struct sead_ListNode **)v9 + 1);
+        v10 = *((sead::ListNode **)v9 + 1);
         sead::ListNode::erase_(v9);
         --a1[351];
         *((_DWORD *)v9 - 7) = a1[352];
@@ -5590,15 +5589,15 @@ static inline unsigned int uxtb16(unsigned int x)
         v9 = v10;
         a1[352] = v11;
       }
-      while ( v10 != (struct sead_ListNode *)(a1 + 349) );
+      while ( v10 != (sead::ListNode *)(a1 + 349) );
     }
-    v12 = (struct sead_ListNode *)a1[500];
+    v12 = (sead::ListNode *)a1[500];
     result = 1996;
-    if ( v12 != (struct sead_ListNode *)(a1 + 499) )
+    if ( v12 != (sead::ListNode *)(a1 + 499) )
     {
       do
       {
-        v14 = *((struct sead_ListNode **)v12 + 1);
+        v14 = *((sead::ListNode **)v12 + 1);
         sead::ListNode::erase_(v12);
         --a1[501];
         *((_DWORD *)v12 - 7) = a1[502];
@@ -5606,7 +5605,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v12 = v14;
         a1[502] = result;
       }
-      while ( v14 != (struct sead_ListNode *)(a1 + 499) );
+      while ( v14 != (sead::ListNode *)(a1 + 499) );
     }
     return result;
   }
@@ -5780,12 +5779,12 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( a4 != 1 )
             return result;
           if ( v9 < 1 )
-            v13 = 0;
+            v13 = nullptr;
           else
             v13 = *v11;
           if ( v13 )
             v13 -= 7;
-          sead::ListNode::erase_((struct sead_ListNode *)(v13 + 7));
+          sead::ListNode::erase_((sead::ListNode *)(v13 + 7));
           --*v10;
           v15 = a1 + 600 * v6;
           v16 = *(_DWORD *)(v15 + 208);
@@ -5799,7 +5798,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v12 = (_DWORD *)(result + 208);
           v13 = v14;
         }
-        v17 = 0;
+        v17 = nullptr;
         if ( v13 )
         {
           v17 = v13;
@@ -5864,12 +5863,12 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( a5 != 1 )
             return result;
           if ( v11 < 1 )
-            v15 = 0;
+            v15 = nullptr;
           else
             v15 = *v13;
           if ( v15 )
             v15 -= 7;
-          sead::ListNode::erase_((struct sead_ListNode *)(v15 + 7));
+          sead::ListNode::erase_((sead::ListNode *)(v15 + 7));
           --*v12;
           v17 = a1 + 600 * v6;
           v18 = *(_DWORD *)(v17 + 208);
@@ -5883,7 +5882,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v14 = v10 + 52;
           v15 = v16;
         }
-        v19 = 0;
+        v19 = nullptr;
         if ( v15 )
         {
           v19 = v15;
@@ -6798,7 +6797,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v26 = a1;
     if ( v3 == MEMORY[0xCCF448] + 196 )
     {
-      v6 = 0;
+      v6 = nullptr;
     }
     else
     {
@@ -6812,7 +6811,7 @@ static inline unsigned int uxtb16(unsigned int x)
           _cxa_guard_release_0(13225896);
         }
         v7 = (**v6)(v6, 13225892);
-        v8 = v6 == 0;
+        v8 = v6 == nullptr;
         if ( v6 )
           v8 = (v7 ^ 1) == 1;
         if ( !v8 )
@@ -6821,7 +6820,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = (int (__fastcall ***)(_DWORD, int))(v3 - v5);
         if ( v3 - v5 == v4 - v2[52] )
         {
-          v6 = 0;
+          v6 = nullptr;
           break;
         }
       }
@@ -7024,10 +7023,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604590F0
  * RVA 0x004590f0   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_604590F0(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_604590F0(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12562916;
-    if ( (struct sead_IDisposer *)MEMORY[0xC9CFB4] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC9CFB4] == a1 )
     {
       MEMORY[0xC9CFB4] = 0;
       MEMORY[0xC9CFB8] = 0;
@@ -7039,12 +7038,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60459144
  * RVA 0x00459144   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60459144(struct sead_IDisposer *a1)
+  int __fastcall sub_60459144(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12562916;
-    if ( (struct sead_IDisposer *)MEMORY[0xC9CFB4] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC9CFB4] == a1 )
     {
       MEMORY[0xC9CFB4] = 0;
       MEMORY[0xC9CFB8] = 0;
@@ -7297,7 +7296,7 @@ static inline unsigned int uxtb16(unsigned int x)
         ++v4;
       }
       while ( v4 != (unsigned __int8 **)(*(_DWORD *)(v2 + 220) + 4 * *(_DWORD *)(v2 + 212)) );
-      v5 = 0;
+      v5 = nullptr;
   LABEL_11:
       a1 = v14;
       if ( a2 )
@@ -7305,7 +7304,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v5 = 0;
+      v5 = nullptr;
       if ( a2 )
       {
   LABEL_25:
@@ -8367,7 +8366,7 @@ static inline unsigned int uxtb16(unsigned int x)
         ++v4;
       }
       while ( v4 != (unsigned __int8 **)(*(_DWORD *)(v2 + 220) + 4 * *(_DWORD *)(v2 + 212)) );
-      v5 = 0;
+      v5 = nullptr;
   LABEL_11:
       a1 = v14;
       if ( a2 )
@@ -8375,7 +8374,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v5 = 0;
+      v5 = nullptr;
       if ( a2 )
       {
   LABEL_25:
@@ -8481,7 +8480,7 @@ static inline unsigned int uxtb16(unsigned int x)
       && (*(_DWORD *)(v3 + 272) & 0x6000) == 0x6000
       && (*(_BYTE *)(v3 + 5) & 0x60) != 0 )
     {
-      return nn::hid::SwapNpadAssignment(0, 0, v5);
+      return nn::hid::SwapNpadAssignment(nullptr, nullptr, v5);
     }
   LABEL_14:
     v6 = MEMORY[0xCCF448];
@@ -8516,7 +8515,7 @@ static inline unsigned int uxtb16(unsigned int x)
       && (*(_DWORD *)(v9 + 272) & 0x24) == 0x24
       && (*(_BYTE *)(v9 + 4) & 0x24) != 0 )
     {
-      return nn::hid::SwapNpadAssignment(0, 0, v5);
+      return nn::hid::SwapNpadAssignment(nullptr, nullptr, v5);
     }
   LABEL_28:
     v11 = MEMORY[0xCCF448];
@@ -8551,7 +8550,7 @@ static inline unsigned int uxtb16(unsigned int x)
       && (*(_DWORD *)(v14 + 272) & 0x6000) == 0x6000
       && (*(_BYTE *)(v14 + 5) & 0x60) != 0 )
     {
-      return nn::hid::SwapNpadAssignment(0, 0, v5);
+      return nn::hid::SwapNpadAssignment(nullptr, nullptr, v5);
     }
   LABEL_41:
     v16 = MEMORY[0xCCF448];
@@ -8586,7 +8585,7 @@ static inline unsigned int uxtb16(unsigned int x)
       && (*(_DWORD *)(v19 + 272) & 0x24) == 0x24
       && (*(_BYTE *)(v19 + 4) & 0x24) != 0 )
     {
-      return nn::hid::SwapNpadAssignment(0, 0, v5);
+      return nn::hid::SwapNpadAssignment(nullptr, nullptr, v5);
     }
   LABEL_55:
     v21 = MEMORY[0xCCF448];
@@ -8621,7 +8620,7 @@ static inline unsigned int uxtb16(unsigned int x)
       && (*(_DWORD *)(v24 + 272) & 0x6000) == 0x6000
       && (*(_BYTE *)(v24 + 5) & 0x60) != 0 )
     {
-      return nn::hid::SwapNpadAssignment(0, 0, v5);
+      return nn::hid::SwapNpadAssignment(nullptr, nullptr, v5);
     }
   LABEL_64:
     v26 = MEMORY[0xCCF448];
@@ -8663,7 +8662,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         result = *(unsigned __int8 *)(v30 + 4);
         if ( (result & 0x24) != 0 )
-          return nn::hid::SwapNpadAssignment(0, 0, v5);
+          return nn::hid::SwapNpadAssignment(nullptr, nullptr, v5);
       }
     }
     return result;
@@ -8800,13 +8799,13 @@ static inline unsigned int uxtb16(unsigned int x)
         ++v5;
       }
       while ( v5 != (int (__fastcall ****)(_DWORD, int))(*(_DWORD *)(v4 + 220) + 4 * *(_DWORD *)(v4 + 212)) );
-      v6 = 0;
+      v6 = nullptr;
   LABEL_11:
       v2 = a1;
     }
     else
     {
-      v6 = 0;
+      v6 = nullptr;
     }
     sub_6090A030(v2, v6, 1);
     return sub_60909CAC(v2, 19, &unk_60B02544, 0);
@@ -9075,7 +9074,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(MEMORY[0xCC62E4] + 116) = v8;
     *(_DWORD *)(result + 4) = v6;
     *(_DWORD *)(result + 8) = 0;
-    v1[55] = 0;
+    v1[55] = nullptr;
     return result;
   }
 
@@ -9470,13 +9469,13 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_6045D054(int a1)
   {
     *(_DWORD *)a1 = 12562996;
-    PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6328));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 6328));
     *(_DWORD *)(a1 + 6216) = 12325992;
     sub_60237560(a1 + 6216);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6216));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6216));
     *(_DWORD *)(a1 + 6112) = 12325992;
     sub_60237560(a1 + 6112);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6112));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -9491,13 +9490,13 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12562996;
-    PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6328));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 6328));
     *(_DWORD *)(a1 + 6216) = 12325992;
     sub_60237560(a1 + 6216);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6216));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6216));
     *(_DWORD *)(a1 + 6112) = 12325992;
     sub_60237560(a1 + 6112);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6112));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -9711,7 +9710,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AC9856;
-    return Profile::Profile(13226276, 4576572, MEMORY[0xAF3A7C], (int)v1, 0, 0);
+    return Profile::Profile(13226276, 4576572, MEMORY[0xAF3A7C], (int)v1, nullptr, 0);
   }
 
 /* ============================================================================
@@ -10048,12 +10047,12 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_6045DFF4(_DWORD *a1)
   {
     _DWORD *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v3; // r6
   
     *a1 = 12564060;
     v2 = a1 + 1583;
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560(a1 + 1671);
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -10068,14 +10067,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6045E074(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12564060;
-    v2 = (struct sead_IDisposer *)(a1 + 1583);
+    v2 = (sead::IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -10495,12 +10494,12 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6045EB6C(_DWORD *a1)
   {
     _DWORD *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v3; // r6
   
     *a1 = 12564060;
     v2 = a1 + 1583;
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560(a1 + 1671);
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -10643,7 +10642,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8[0] = *(float *)(a1 + 108);
     v8[1] = v2;
     mapPositionToScreen(v7, v8);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_ITEM_APPEAR", v7, 0);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_ITEM_APPEAR", v7, nullptr);
     result = a1 + 6796;
     if ( *(_DWORD *)(a1 + 6796) )
     {
@@ -10706,7 +10705,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8[0] = *(float *)(a1 + 108);
     v8[1] = v2;
     mapPositionToScreen(v7, v8);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_ITEM_APPEAR", v7, 0);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_ITEM_APPEAR", v7, nullptr);
     result = a1 + 6796;
     if ( *(_DWORD *)(a1 + 6796) )
     {
@@ -11457,7 +11456,7 @@ static inline unsigned int uxtb16(unsigned int x)
               _cxa_guard_release_0(13087588);
             }
             if ( !(**v2)(v2, 13087584) )
-              v2 = 0;
+              v2 = nullptr;
             return (_DWORD *)(*(int (__fastcall **)(_DWORD *, _DWORD))(*v1 + 40))(v1, v2);
           }
         }
@@ -11524,7 +11523,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v8 = v6;
       v9 = v5 == 0;
       if ( v5 )
-        v9 = v8 == 0;
+        v9 = v8 == nullptr;
       if ( !v9 )
       {
         result = *(unsigned __int8 *)(v5 + 533);
@@ -11647,7 +11646,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v9; // s4
     float v11; // s6
   
-    CollisionMgr_init((int)(a1 + 162), (int)a1, 0, 0, 0);
+    CollisionMgr_init((int)(a1 + 162), (int)a1, nullptr, nullptr, nullptr);
     (*(void (__fastcall **)(_DWORD *))(*a1 + 228))(a1);
     (*(void (__fastcall **)(_DWORD *))(*a1 + 232))(a1);
     (*(void (__fastcall **)(_DWORD *))(*a1 + 236))(a1);
@@ -12091,7 +12090,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v11 = *(float *)(v9 + 4 * v8);
           goto LABEL_29;
         }
-        v11 = (float)(COERCE_FLOAT((sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000)
+        v11 = (float)(COERCE_FLOAT((sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000)
                     + -1.0)
             * 0.2;
   LABEL_29:
@@ -13073,7 +13072,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = *(float *)(a1 + 108);
     v10 = v4;
     mapPositionToScreen(v12, &v9);
-    BasicSoundActor2_play(v5, (int)"SE_OBJ_CMN_SPLASH_LAVA", v12, 0);
+    BasicSoundActor2_play(v5, (int)"SE_OBJ_CMN_SPLASH_LAVA", v12, nullptr);
     EffectData_create(943, a2, 0, a1 + 144);
     v6 = *(float *)(a2 + 4);
     v9 = *(float *)a2;
@@ -13108,7 +13107,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = *(float *)(a1 + 108);
     v10 = v4;
     mapPositionToScreen(v12, &v9);
-    BasicSoundActor2_play(v5, (int)"SE_OBJ_CMN_SPLASH_LAVA", v12, 0);
+    BasicSoundActor2_play(v5, (int)"SE_OBJ_CMN_SPLASH_LAVA", v12, nullptr);
     EffectData_create(944, a2, 0, a1 + 144);
     v6 = *(float *)(a2 + 4);
     v9 = *(float *)a2;
@@ -13138,7 +13137,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = *(_DWORD *)(a1 + 108);
     v11 = v4;
     mapPositionToScreen(v9, (float *)&v10);
-    BasicSoundActor2_play(v5, (int)"SE_OBJ_CMN_SPLASH_POISON", v9, 0);
+    BasicSoundActor2_play(v5, (int)"SE_OBJ_CMN_SPLASH_POISON", v9, nullptr);
     EffectData_create(942, (int)a2, 0, a1 + 144);
     v6 = a2[1];
     v10 = *a2;
@@ -13163,7 +13162,7 @@ static inline unsigned int uxtb16(unsigned int x)
                  (int32x4_t *)(result + 6684),
                  90,
                  (float *)(result + 6124),
-                 0,
+                 nullptr,
                  (float *)(result + 144));
       v2 = v1 - 1;
       *(_DWORD *)(result + 6228) = v2;
@@ -13172,7 +13171,7 @@ static inline unsigned int uxtb16(unsigned int x)
                  (int32x4_t *)(result + 6684),
                  90,
                  (float *)(result + 6124),
-                 0,
+                 nullptr,
                  (float *)(result + 144));
     }
     return result;
@@ -13600,7 +13599,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v8[0] = *(float *)(a1 + 108);
       v8[1] = v3;
       mapPositionToScreen((float *)v7, v8);
-      BasicSoundActor2_play(v4, (int)"SE_OBJ_ITEM_APPEAR", (float *)v7, 0);
+      BasicSoundActor2_play(v4, (int)"SE_OBJ_ITEM_APPEAR", (float *)v7, nullptr);
     }
     checkLiquidCollisions(v7, v8, (float *)(a1 + 108), *(unsigned __int8 *)(a1 + 86));
     result = v7[0];
@@ -13717,7 +13716,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v18 = *(_DWORD *)(a1 + 6228);
       if ( !v18 || (v19 = v18 - 1, (*(_DWORD *)(a1 + 6228) = v19) == 0) )
-        EffectWrapper_update((int32x4_t *)(a1 + 6684), 90, (float *)(a1 + 6124), 0, (float *)(a1 + 144));
+        EffectWrapper_update((int32x4_t *)(a1 + 6684), 90, (float *)(a1 + 6124), nullptr, (float *)(a1 + 144));
     }
     SE_OBJ_CMN_SPLASH_ref_462370(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
@@ -14007,7 +14006,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v13 = *(_DWORD *)(a1 + 6228);
       if ( !v13 || (v14 = v13 - 1, (*(_DWORD *)(a1 + 6228) = v14) == 0) )
-        EffectWrapper_update((int32x4_t *)(a1 + 6684), 90, (float *)(a1 + 6124), 0, (float *)(a1 + 144));
+        EffectWrapper_update((int32x4_t *)(a1 + 6684), 90, (float *)(a1 + 6124), nullptr, (float *)(a1 + 144));
     }
     SE_OBJ_CMN_SPLASH_ref_462370(a1);
     if ( (CollisionActor::sub_600034C8(a1) & 1) != 0 )
@@ -14320,14 +14319,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60465544(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12564060;
-    v2 = (struct sead_IDisposer *)(a1 + 1583);
+    v2 = (sead::IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -14536,10 +14535,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60465C20
  * RVA 0x00465c20   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_60465C20(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_60465C20(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12564612;
-    if ( (struct sead_IDisposer *)MEMORY[0xC9D3E0] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC9D3E0] == a1 )
     {
       MEMORY[0xC9D3E0] = 0;
       MEMORY[0xC9D3E4] = 0;
@@ -14551,12 +14550,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60465C74
  * RVA 0x00465c74   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60465C74(struct sead_IDisposer *a1)
+  int __fastcall sub_60465C74(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12564612;
-    if ( (struct sead_IDisposer *)MEMORY[0xC9D3E0] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC9D3E0] == a1 )
     {
       MEMORY[0xC9D3E0] = 0;
       MEMORY[0xC9D3E4] = 0;
@@ -15445,14 +15444,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604675F8(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12564060;
-    v2 = (struct sead_IDisposer *)(a1 + 1583);
+    v2 = (sead::IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -15892,12 +15891,12 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6046817C(_DWORD *a1)
   {
     _DWORD *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v3; // r6
   
     *a1 = 12564060;
     v2 = a1 + 1583;
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560(a1 + 1671);
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -16363,14 +16362,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60468DB4(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12564060;
-    v2 = (struct sead_IDisposer *)(a1 + 1583);
+    v2 = (sead::IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -16702,14 +16701,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604697E4(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12564060;
-    v2 = (struct sead_IDisposer *)(a1 + 1583);
+    v2 = (sead::IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -17145,14 +17144,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6046A418(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12564060;
-    v2 = (struct sead_IDisposer *)(a1 + 1583);
+    v2 = (sead::IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -17511,14 +17510,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6046ADD0(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12564060;
-    v2 = (struct sead_IDisposer *)(a1 + 1583);
+    v2 = (sead::IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -17967,14 +17966,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6046B8F0(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12564060;
-    v2 = (struct sead_IDisposer *)(a1 + 1583);
+    v2 = (sead::IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -18543,7 +18542,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_ITEM_PRPL_APPEAR", v5, 0);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_ITEM_PRPL_APPEAR", v5, nullptr);
   }
 
 /* ============================================================================
@@ -18604,7 +18603,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v17 = *(_DWORD *)(a1 + 108);
       v18 = v4;
       mapPositionToScreen(v16, (float *)&v17);
-      return BasicSoundActor2_play(v5, (int)"SE_OBJ_ITEM_PRPL_APPEAR", v16, 0);
+      return BasicSoundActor2_play(v5, (int)"SE_OBJ_ITEM_PRPL_APPEAR", v16, nullptr);
     }
     else
     {
@@ -18637,7 +18636,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v17 = *(_DWORD *)(v13 - 6740);
       v18 = v15;
       mapPositionToScreen(v16, (float *)&v17);
-      BasicSoundActor2_play(v14, (int)"SE_OBJ_ITEM_PRPL_APPEAR", v16, 0);
+      BasicSoundActor2_play(v14, (int)"SE_OBJ_ITEM_PRPL_APPEAR", v16, nullptr);
       *(_DWORD *)v13 = 64;
       return (int *)64;
     }
@@ -18906,14 +18905,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6046D338(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12564060;
-    v2 = (struct sead_IDisposer *)(a1 + 1583);
+    v2 = (sead::IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -19176,7 +19175,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_SYS_KINO_GIVE_ITEM", v5, 0);
+    return BasicSoundActor2_play(v1, (int)"SE_SYS_KINO_GIVE_ITEM", v5, nullptr);
   }
 
 /* ============================================================================
@@ -19418,7 +19417,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_updateAnims(a1[381].n128_i32[1]);
     sub_6046DF74((int)a1);
     if ( a1[383].n128_u32[3] == 1 )
-      EffectWrapper_update(a1 + 384, 89, (float *)&a1[383], 0, (float *)&a1[9]);
+      EffectWrapper_update(a1 + 384, 89, (float *)&a1[383], nullptr, (float *)&a1[9]);
     return 1;
   }
 
@@ -19478,10 +19477,10 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_6046E390(int a1)
   {
     *(_DWORD *)a1 = 12567548;
-    PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6248));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 6248));
     *(_DWORD *)(a1 + 6144) = 12325992;
     sub_60237560(a1 + 6144);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6144));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -19496,10 +19495,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12567548;
-    PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6248));
+    PlayerLookTarget_vf0((sead::IDisposer *)(a1 + 6248));
     *(_DWORD *)(a1 + 6144) = 12325992;
     sub_60237560(a1 + 6144);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6144));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -19610,7 +19609,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v18 = 0;
     v19 = 0;
-    v20 = 0;
+    v20 = nullptr;
     sub_608DEB0C(&v18, 16, &v21);
     v17[0] = (int (__fastcall **)(_DWORD))&unk_60BFC530;
     v17[1] = a1;
@@ -19739,28 +19738,28 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v4 = MEMORY[0xCC436C];
       if ( (*(_BYTE *)(MEMORY[0xCC436C] + 66) & 1) == 0
-        || (v5 = (float *)sub_60788F54(MEMORY[0xCC436C], 0)) == 0
+        || (v5 = (float *)sub_60788F54(MEMORY[0xCC436C], 0)) == nullptr
         || (v6 = v5[27] + v5[143], *(float *)(a1 + 104) > v6)
         || v6 > *(float *)(a1 + 112)
         || (v7 = v5[28] + v5[144], *(float *)(a1 + 108) > v7)
         || (result = 1, v7 > *(float *)(a1 + 116)) )
       {
         if ( (*(_BYTE *)(v4 + 66) & 2) == 0
-          || (v8 = (float *)sub_60788F54(v4, 1u)) == 0
+          || (v8 = (float *)sub_60788F54(v4, 1u)) == nullptr
           || (v9 = v8[27] + v8[143], *(float *)(a1 + 104) > v9)
           || v9 > *(float *)(a1 + 112)
           || (v10 = v8[28] + v8[144], *(float *)(a1 + 108) > v10)
           || (result = 1, v10 > *(float *)(a1 + 116)) )
         {
           if ( (*(_BYTE *)(v4 + 66) & 4) == 0
-            || (v11 = (float *)sub_60788F54(v4, 2u)) == 0
+            || (v11 = (float *)sub_60788F54(v4, 2u)) == nullptr
             || (v12 = v11[27] + v11[143], *(float *)(a1 + 104) > v12)
             || v12 > *(float *)(a1 + 112)
             || (v13 = v11[28] + v11[144], *(float *)(a1 + 108) > v13)
             || (result = 1, v13 > *(float *)(a1 + 116)) )
           {
             if ( (*(_BYTE *)(v4 + 66) & 8) != 0
-              && (v14 = (float *)sub_60788F54(v4, 3u)) != 0
+              && (v14 = (float *)sub_60788F54(v4, 3u)) != nullptr
               && (v15 = v14[27] + v14[143], *(float *)(a1 + 104) <= v15)
               && v15 <= *(float *)(a1 + 112)
               && (v16 = v14[28] + v14[144], *(float *)(a1 + 108) <= v16) )
@@ -20096,7 +20095,7 @@ static inline unsigned int uxtb16(unsigned int x)
     CurrentState = StateMgr::getCurrentState(v2);
     v12 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v12 != (*(int (**)(void))(MEMORY[0xC9D2D8] + 8))() )
-      EffectWrapper_update((int32x4_t *)(a1 + 6868), 89, (float *)(a1 + 6972), 0, (float *)(a1 + 144));
+      EffectWrapper_update((int32x4_t *)(a1 + 6868), 89, (float *)(a1 + 6972), nullptr, (float *)(a1 + 144));
     if ( StageActor::cullCheck(a1, 0) == 1 )
       sub_604096C4(MEMORY[0xC9A1F0]);
     sub_60461904(a1);
@@ -20435,18 +20434,18 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_6046FC4C(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
   
     *a1 = 12567868;
     a1[1717] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 1717);
+    v2 = (sead::IDisposer *)(a1 + 1717);
     sub_60237560((int)(a1 + 1717));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12564060;
     a1[1671] = 12325992;
     sub_60237560((int)(a1 + 1671));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1671));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1583));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1671));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1583));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -20458,19 +20457,19 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6046FCFC(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
+    sead::IDisposer *v2; // r5
     int v3; // r0
   
     *a1 = 12567868;
     a1[1717] = 12325992;
-    v2 = (struct sead_IDisposer *)(a1 + 1717);
+    v2 = (sead::IDisposer *)(a1 + 1717);
     sub_60237560((int)(a1 + 1717));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12564060;
     a1[1671] = 12325992;
     sub_60237560((int)(a1 + 1671));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1671));
-    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1583));
+    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1671));
+    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1583));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -20886,14 +20885,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60470864(_DWORD *a1)
   {
-    struct sead_IDisposer *v2; // r5
-    struct sead_IDisposer *v3; // r6
+    sead::IDisposer *v2; // r5
+    sead::IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12564060;
-    v2 = (struct sead_IDisposer *)(a1 + 1583);
+    v2 = (sead::IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
-    v3 = (struct sead_IDisposer *)(a1 + 1671);
+    v3 = (sead::IDisposer *)(a1 + 1671);
     sub_60237560((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
@@ -21762,7 +21761,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 += 2;
     }
     v10 = 0;
-    sub_6047D934(0, &v54, v5, 2 * v9);
+    sub_6047D934(nullptr, &v54, v5, 2 * v9);
     v11 = v54;
     if ( v54 >= 1 )
     {
@@ -21892,7 +21891,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_50:
         v44 = 0;
         (*(void (__fastcall **)(int *))(v45 + 12))(&v45);
-        sub_6047D934(&v44, 0, v46, 2 * v24);
+        sub_6047D934(&v44, nullptr, v46, 2 * v24);
         v37 = *(_DWORD **)(v42 + 3272);
         if ( *(_DWORD *)(v42 + 3268) > v20 )
           v37 += v20;
@@ -21961,7 +21960,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = 32;
     v21 = 0;
     v20 = 0;
-    v19 = 0;
+    v19 = nullptr;
     v18 = 0;
     v17 = 0;
     v16 = 0;
@@ -22384,7 +22383,7 @@ static inline unsigned int uxtb16(unsigned int x)
               sub_60472644(v2);
           }
           *(_DWORD *)(v2 + 3288) = 0;
-          return 0;
+          return nullptr;
         }
         else
         {
@@ -22599,7 +22598,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v15 = *(_DWORD **)a1;
       if ( *(_DWORD *)a1 )
       {
-        v10 = 0;
+        v10 = nullptr;
         v16 = MEMORY[0xB3BA34];
         while ( 2 )
         {
@@ -22626,7 +22625,7 @@ static inline unsigned int uxtb16(unsigned int x)
               if ( v20 != v16 && ++v19 < 0x80000 )
                 continue;
               if ( !v15 )
-                return 0;
+                return nullptr;
               goto LABEL_24;
             }
             v22 = v15 + 2;
@@ -22641,13 +22640,13 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else
       {
-        return 0;
+        return nullptr;
       }
     }
     else
     {
       v6 = *(_DWORD **)(a1 + 4);
-      v7 = 0;
+      v7 = nullptr;
       if ( v6 )
       {
         v7 = *(_DWORD **)(a1 + 4);
@@ -22790,9 +22789,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_6047321C
  * RVA 0x0047321c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6047321C(struct sead_IDisposer *a1)
+  int __fastcall sub_6047321C(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     v1 = sub_60902104(a1);
     return operator delete((int)v1);
@@ -22882,7 +22881,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6047344C(int a1)
   {
     int v2; // r0
-    struct sead_IDisposer *v3; // r0
+    sead::IDisposer *v3; // r0
   
     *(_DWORD *)a1 = 12569208;
     if ( *(_DWORD *)(a1 + 16) )
@@ -22895,7 +22894,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 16) = 0;
       *(_DWORD *)(a1 + 20) = 0;
     }
-    v3 = sead::IDisposer::~IDisposer((struct sead_IDisposer *)a1);
+    v3 = sead::IDisposer::~IDisposer((sead::IDisposer *)a1);
     return operator delete((int)v3);
   }
 
@@ -23034,7 +23033,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v17 = *(_DWORD **)a1;
       if ( *(_DWORD *)a1 )
       {
-        v12 = 0;
+        v12 = nullptr;
         v18 = MEMORY[0xB3BA34];
         while ( 2 )
         {
@@ -23065,7 +23064,7 @@ static inline unsigned int uxtb16(unsigned int x)
               if ( v22 != v18 && ++v21 < 0x80000 )
                 continue;
               if ( !v17 )
-                return 0;
+                return nullptr;
               goto LABEL_24;
             }
             v24 = v17 + 2;
@@ -23080,13 +23079,13 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else
       {
-        return 0;
+        return nullptr;
       }
     }
     else
     {
       v6 = *(_DWORD **)(a1 + 4);
-      v7 = 0;
+      v7 = nullptr;
       if ( v6 )
       {
         v7 = *(_DWORD **)(a1 + 4);
@@ -23768,7 +23767,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( !*v18 )
         {
   LABEL_18:
-          v19 = 0;
+          v19 = nullptr;
           goto LABEL_19;
         }
       }
@@ -23779,7 +23778,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v19 = 0;
+      v19 = nullptr;
     }
     if ( v19[1] > a4 )
       LoopRandom_ref(a1, a2, a3, a5, *(int **)(v19[2] + 4 * a4));
@@ -23843,7 +23842,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( !*v18 )
         {
   LABEL_18:
-          v19 = 0;
+          v19 = nullptr;
           goto LABEL_19;
         }
       }
@@ -23854,7 +23853,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v19 = 0;
+      v19 = nullptr;
     }
     if ( v19[1] > a4 )
       LoopRandom_ref(a1, a2, a3, a5, *(int **)(v19[2] + 4 * a4));
@@ -24269,15 +24268,15 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(13228540);
     }
     if ( !v4 )
-      return 0;
+      return nullptr;
     v5 = (_DWORD *)(**v4)(v4);
     if ( !v5 )
-      return 0;
+      return nullptr;
     while ( v5 != (_DWORD *)13228536 )
     {
       v5 = (_DWORD *)*v5;
       if ( !v5 )
-        return 0;
+        return nullptr;
     }
     return v4;
   }
@@ -24349,15 +24348,15 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(13228540);
     }
     if ( !v2 )
-      return 0;
+      return nullptr;
     v3 = (_DWORD *)(**v2)(v2);
     if ( !v3 )
-      return 0;
+      return nullptr;
     while ( v3 != (_DWORD *)13228536 )
     {
       v3 = (_DWORD *)*v3;
       if ( !v3 )
-        return 0;
+        return nullptr;
     }
     return v2;
   }
@@ -24889,7 +24888,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v20 = *(_DWORD *)(MEMORY[0xCD0B40] + 36);
       if ( *(_DWORD *)(MEMORY[0xCD0B40] + 32) > a4 )
         v20 += 4 * a4;
-      sub_604739E8((_DWORD *)v7, (__int64 *)(*(_DWORD *)(*(_DWORD *)v20 + 72) + 4), 0);
+      sub_604739E8((_DWORD *)v7, (__int64 *)(*(_DWORD *)(*(_DWORD *)v20 + 72) + 4), nullptr);
       return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(v7 + 3512) + 100))(**(_DWORD **)(v7 + 3512));
     }
     return result;
@@ -24970,7 +24969,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60475AE8
  * RVA 0x00475ae8   size 0xb8   xrefs 233
  * ============================================================================ */
-  void __fastcall sub_60475AE8(struct sead_IDisposer *a1)
+  void __fastcall sub_60475AE8(sead::IDisposer *a1)
   {
     int v2; // r0
     int v3; // r0
@@ -25003,12 +25002,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60475BB8
  * RVA 0x00475bb8   size 0xbc   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60475BB8(struct sead_IDisposer *a1)
+  int __fastcall sub_60475BB8(sead::IDisposer *a1)
   {
     int v2; // r0
     int v3; // r0
     int v4; // r0
-    struct sead_IDisposer *v5; // r0
+    sead::IDisposer *v5; // r0
   
     *(_DWORD *)a1 = 12569236;
     v2 = *((_DWORD *)a1 + 4);
@@ -25187,7 +25186,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3 = (_DWORD *)operator new(0x84u, a2, 4);
     memset(v3, 0, 0x84u);
-    sub_6098B61C((struct sead_IDisposer *)v3);
+    sub_6098B61C((sead::IDisposer *)v3);
     *v3 = 12569336;
     v3[4] = 12569616;
     *(_DWORD *)(a1 + 3524) = v3;
@@ -25335,7 +25334,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_6047643C
  * RVA 0x0047643c   size 0x84   xrefs 110
  * ============================================================================ */
-  void __fastcall sub_6047643C(struct sead_IDisposer *a1)
+  void __fastcall sub_6047643C(sead::IDisposer *a1)
   {
     int v2; // r0
   
@@ -25360,7 +25359,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604764D0(int a1)
   {
     int v2; // r0
-    struct sead_IDisposer *v3; // r0
+    sead::IDisposer *v3; // r0
   
     *(_DWORD *)a1 = 12569208;
     if ( *(_DWORD *)(a1 + 16) )
@@ -25373,7 +25372,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 16) = 0;
       *(_DWORD *)(a1 + 20) = 0;
     }
-    v3 = sead::IDisposer::~IDisposer((struct sead_IDisposer *)a1);
+    v3 = sead::IDisposer::~IDisposer((sead::IDisposer *)a1);
     return operator delete((int)v3);
   }
 
@@ -25463,7 +25462,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60476708(int a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     v1 = sub_6098B728(a1);
     return operator delete((int)v1);
@@ -26174,7 +26173,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[34] = 0;
     v10 = (_BYTE *)sub_60853E04(a2, "Disable");
     v11 = v10;
-    v12 = v10 == 0;
+    v12 = v10 == nullptr;
     if ( v10 )
       v12 = *v10 == 0;
     if ( v12 )
@@ -27546,7 +27545,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       while ( v2 );
     }
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 3));
+    sub_60475AE8((sead::IDisposer *)(a1 + 3));
     return a1;
   }
 
@@ -27555,7 +27554,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00479520   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_60479520(struct sead_IDisposer *a1)
+  void __fastcall sub_60479520(sead::IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -27583,7 +27582,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       while ( v2 );
     }
-    sub_60475AE8((struct sead_IDisposer *)(a1 + 3));
+    sub_60475AE8((sead::IDisposer *)(a1 + 3));
     return operator delete((int)a1);
   }
 
@@ -27810,7 +27809,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v5 = sub_6047482C(v3, 0);
           (*(void (__fastcall **)(int))(*(_DWORD *)v5 + 96))(v5);
         }
-        sub_604739E8(v3, (__int64 *)0xB3B8CC, 0);
+        sub_604739E8(v3, (__int64 *)0xB3B8CC, nullptr);
         sub_6091ABEC(v40);
         v6 = v46;
         v7 = v45;
@@ -27904,7 +27903,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60479C34
  * RVA 0x00479c34   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60479C34(struct sead_IDisposer *a1)
+  int __fastcall sub_60479C34(sead::IDisposer *a1)
   {
     int v1; // r0
   
@@ -28103,7 +28102,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(a1 + 72);
     v2 = (_DWORD *)sub_60855BC8(84);
     if ( !v2 )
-      return 0;
+      return nullptr;
     result = sub_609804BC(v2, v1);
     *result = 12570928;
     return result;
@@ -28177,7 +28176,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v25; // r0
     _DWORD v26[5]; // [sp+4h] [bp-14h] BYREF
   
-    v8 = 0;
+    v8 = nullptr;
     if ( a3 > 829317487 )
     {
       switch ( a3 )
@@ -29042,7 +29041,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 += 4;
     (*(void (__fastcall **)(char *))(v7 + 12))(v6);
     v8 = sub_60911638(*(_DWORD *)(v4 + 4), *((_DWORD *)v6 + 1));
-    v9 = 0;
+    v9 = nullptr;
     if ( *(_DWORD *)(v4 + 8) > v8 )
       v9 = (_WORD *)sub_6091171C(*(_DWORD *)(v4 + 4), v8);
     result = sub_609119F8(v4, v8) >> 1;
@@ -29502,7 +29501,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v19; // [sp+214h] [bp-44h]
     int v20; // [sp+218h] [bp-40h] BYREF
   
-    v5 = 0;
+    v5 = nullptr;
     v6 = StaffCreditTable_init(0);
     v18 = &v20;
     v17 = 12322272;
@@ -29889,7 +29888,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return 0;
     (*(void (__fastcall **)(_DWORD *))(*a2 + 12))(a2);
     v11 = sub_60911638(*(_DWORD *)(v10 + 4), a2[1]);
-    v12 = 0;
+    v12 = nullptr;
     if ( *(_DWORD *)(v10 + 8) > v11 )
       v12 = (unsigned __int16 *)sub_6091171C(*(_DWORD *)(v10 + 4), v11);
     v13 = sub_609119F8(v10, v11);
@@ -29926,7 +29925,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int varg_r3; // [sp+1Ch] [bp+8h] BYREF
   
-    return sub_6047DF58(3, a1, a2, -1, 0, a3, &varg_r3);
+    return sub_6047DF58(3, a1, a2, -1, nullptr, a3, &varg_r3);
   }
 
 /* ============================================================================
@@ -29938,7 +29937,7 @@ static inline unsigned int uxtb16(unsigned int x)
     va_list va; // [sp+18h] [bp+Ch] BYREF
   
     va_start(va, a4);
-    return sub_6047DF58(a1, a2, a3, -1, 0, a4, (int *)va);
+    return sub_6047DF58(a1, a2, a3, -1, nullptr, a4, (int *)va);
   }
 
 /* ============================================================================
@@ -29996,7 +29995,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v11 = a1[1];
           if ( *(_DWORD *)(v11 + 8) <= (unsigned int)v10 )
           {
-            v12 = 0;
+            v12 = nullptr;
           }
           else
           {
@@ -31404,10 +31403,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_6047F5AC
  * RVA 0x0047f5ac   size 0x44   xrefs 0
  * ============================================================================ */
-  struct sead_IDisposer *__fastcall sub_6047F5AC(struct sead_IDisposer *a1)
+  sead::IDisposer *__fastcall sub_6047F5AC(sead::IDisposer *a1)
   {
     *(_DWORD *)a1 = 12571436;
-    if ( (struct sead_IDisposer *)MEMORY[0xC9EBB0] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC9EBB0] == a1 )
     {
       MEMORY[0xC9EBB0] = 0;
       MEMORY[0xC9EBB4] = 0;
@@ -31419,12 +31418,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_6047F600
  * RVA 0x0047f600   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6047F600(struct sead_IDisposer *a1)
+  int __fastcall sub_6047F600(sead::IDisposer *a1)
   {
-    struct sead_IDisposer *v1; // r0
+    sead::IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12571436;
-    if ( (struct sead_IDisposer *)MEMORY[0xC9EBB0] == a1 )
+    if ( (sead::IDisposer *)MEMORY[0xC9EBB0] == a1 )
     {
       MEMORY[0xC9EBB0] = 0;
       MEMORY[0xC9EBB4] = 0;

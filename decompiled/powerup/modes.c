@@ -1,4 +1,3 @@
-#include "nsmbudx_prelude.h"
 /* NSMBU Deluxe v1.0.0 -- modes decompilation
  * Generated from the IDB; RVAs are image-relative (VA - 0x60000000).
  * Pseudocode is machine-produced and lightly readable; treat types and
@@ -67,7 +66,7 @@ int __fastcall sub_6078E608(_DWORD *a1, int a2)
     (*(void (__fastcall **)(_DWORD *))(*a1 + 32))(a1);
   }
   v11 = (int *)a1[73];
-  v12 = v11 == 0;
+  v12 = v11 == nullptr;
   if ( v11 )
   {
     v6 = *v11;
@@ -169,7 +168,7 @@ int __fastcall sub_6078E608(_DWORD *a1, int a2)
     (*(void (__fastcall **)(_DWORD *))(*a1 + 32))(a1);
   }
   v11 = (int *)a1[73];
-  v12 = v11 == 0;
+  v12 = v11 == nullptr;
   if ( v11 )
   {
     v6 = *v11;
