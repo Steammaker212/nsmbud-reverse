@@ -94,10 +94,22 @@ Eep Cheep Spawner when 544 is its *profile* id and 597 is its *sprite* id.
 `validate_yaz0moto_patch.py` caught it, which is the reason that script checks
 every id against the recovered table instead of trusting the author.
 
+## A loader trap this patch had to work around
+
+`patch="true"` does **not** merge a sprite definition, despite what the format
+docs suggest. `LoadSpriteData` builds a fresh `SpriteDefinition` per sprite and
+assigns it over the previous one; `loadFrom` starts with `self.fields = []`. The
+last file to define a sprite wins entirely, so a patch adding one field deletes
+every base field it does not restate.
+
+This patch therefore emits each of the 18 sprites **in full**, deep-copied from the
+base data. The repetition is deliberate.
+
 ## Verification
 
 ```
-python scripts/validate_yaz0moto_patch.py     # 12/12 checks
+python scripts/validate_yaz0moto_patch.py     # 32/32 checks, both patches
+python scripts/smoke_test_patch_load.py       # walks the real load chain
 ```
 
 | Check | What it prevents |

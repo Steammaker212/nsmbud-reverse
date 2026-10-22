@@ -110,17 +110,31 @@ ship no code here.
 
 ## What to do instead
 
-Once the Hammer build (`convertedmain.hammer_b.elf`) is installed, no editor patch
-is needed to place a Hammer:
+Once the Hammer build (`convertedmain.hammer_b.elf`) is installed, the block gives
+you the Hammer today:
 
-> **Set a block's `Contents` to `2` (Fire Flower).** Picking it up now grants mode
-> 10 — the Hammer.
+> **Set a block's Contents to `2` or `3`.** Both now grant mode 10: the Hammer.
 
-The editor already offers value 2, so the flow is: place any block sprite with a
-`Contents` field, set it to Fire Flower, and break the block.
+`Contents` 2 and 3 both resolve to action code 0 in the retail binary, so they are
+the same item; that is why the base data labels both "Fire Flower". Choosing which
+duplicate to use is behaviourally free. This is not a workaround for a missing
+feature, it is the actual design of Approach B: the Fire Flower *is* the Hammer item
+in the patched build.
 
-That is not a workaround for a missing feature; it is the actual design of
-Approach B. The Fire Flower *is* the Hammer item in the patched build.
+To make that discoverable in the editor, use the sibling patch
+[`HammerQuestionBlock/`](./HammerQuestionBlock/), which relabels those two entries
+to "Hammer". It changes no behaviour, it just stops the dropdown lying.
+
+### The loader trap in writing that patch
+
+`patch="true"` does **not** merge a sprite definition. `LoadSpriteData` builds a
+fresh `SpriteDefinition` per sprite and assigns it over the previous one, and
+`loadFrom` starts with `self.fields = []`. The last file to define a sprite wins
+entirely. A patch that redefines the Question Block to relabel one dropdown must
+therefore restate all thirteen of its fields, or the other twelve disappear.
+
+That is why both patches here emit full definitions. See
+`scripts/emit_full_sprite_patch.py`.
 
 ## If a real Hammer entry is ever wanted
 

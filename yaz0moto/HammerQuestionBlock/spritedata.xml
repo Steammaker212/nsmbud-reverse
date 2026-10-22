@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<!--
+Hammer Question Block: relabel the block contents that already dispense it.
+
+READ THIS BEFORE EXPECTING A NEW ITEM
+======================================
+A Yaz0moto patch cannot add a power-up. A block's contents field is ONE
+nybble (nybble 20) and all 16 values are already assigned, so there is no
+free value to put a Hammer in.
+
+What this patch does instead is correct the labels. In the retail binary,
+contents 2 and 3 both resolve to action code 0: they are the same item,
+which is why the base data already labels both 'Fire Flower'. The Hammer
+build changes that one shared grant handler to return mode 10, so both
+values now dispense the Hammer.
+
+So with the Hammer build installed, setting a block to value 2 or 3 has
+always given the Hammer; it just said 'Fire Flower' in the editor. This
+patch makes it say Hammer, so you can find it.
+
+It changes NO behaviour. Without the Hammer build, value 2 is an ordinary
+Fire Flower and these labels are wrong.
+
+Each sprite is emitted IN FULL, restating every base field, because
+Yaz0moto's loader replaces a patched sprite outright rather than merging
+(see scripts/emit_full_sprite_patch.py). Emitting only the relabelled list
+would delete the other fields, e.g. all twelve of the Question Block's
+movement and ID settings.
+-->
+<sprites>
+<sprite id="59" name="Question Block">
+        <value nybble="3-4" title="Target ID [NSLU]*" comment="Activates this event ID if struck, *Only works in NSLU" category="behavior" />
+        <value nybble="5" title="Unknown Value 5" comment="No visible change " />
+        <value nybble="7" title="Unknown Value 7" />
+        <checkbox nybble="9-10" title="Place Behind Other Sprites" mask="17" comment="Unused; when checked, it will be placed behind other sprites. (1100 gives this result, 0x11= 17)" category="behavior" />
+        <value nybble="11" title="Unknown Value 11" />
+        <value nybble="12" title="Unknown Value 12" />
+        <checkbox nybble="13" title="Spawn Acorn Mushroom" comment="When checked, it will spawn an Acorn Mushroom." category="behavior" />
+        <checkbox nybble="15" title="Unknown Flag 15" comment="Does something with physics when checked..." />
+        <value nybble="16" title="Unknown Value 16" />
+        <value nybble="17" title="Unknown Value 17" />
+        <list nybble="19" title="Movement Type" comment="Specifies which movement controller to hook to." category="movement">
+            <entry value="0">None / Path (100)</entry>
+            <entry value="1">Two-Way (70, 642)</entry>
+            <entry value="8">Clapping controller (?)</entry>
+        </list>
+        <list nybble="20" title="Contains" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" comment="Known matched sprites: 70" id_type="movement" category="movement" />
+    </sprite>
+    <sprite id="60" name="Brick Block" notes="Just an ordinary brick block that can also be movement controlled.">
+        <value nybble="12" title="Unknown Value 12" />
+        <checkbox nybble="13" title="Spawn Acorn Mushroom" comment="If checked, it spawns an acorn mushroom." category="behavior" />
+        <list nybble="19" title="Movement Type" comment="Specifies which movement controller to hook to." category="movement">
+            <entry value="0">None / Path (100)</entry>
+            <entry value="1">Two-Way (70, 642)</entry>
+            <entry value="8">Clapping controller (?)</entry>
+        </list>
+        <list nybble="20" title="Contains" category="behavior" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build.">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" comment="Can match to 70 for sure." id_type="movement" category="movement" />
+    </sprite>
+    <sprite id="147" name="Question Block - Uses Lines" notes="A question block that runs on a line. To make it work, place it a block above the line.">
+        <checkbox nybble="8" title="Counter-Clockwise" comment="When checked, makes the ? block go counter clockwise." category="behavior" />
+        <value nybble="11" title="Unknown Value 11" />
+        <checkbox nybble="13" title="Spawn Acorn Mushroom" comment="Nybble 20 needs to be 0 for this to work. Works perfectly." category="behavior" />
+        <checkbox nybble="16" title="Faster Movement" comment="Ticking this would make the ? block move faster." category="behavior" />
+        <list nybble="20" title="Contains" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+    </sprite>
+    <sprite id="148" name="Brick Block - Uses Lines" notes="A brick block that follows a line.">
+        <checkbox nybble="8" title="Counter-Clockwise" comment="When checked, makes the ? block go counter clockwise." category="behavior" />
+        <value nybble="11" title="Unknown Value 11" />
+        <checkbox nybble="16" title="Faster Movement" comment="Ticking this would make the ? block move faster." category="behavior" />
+        <list nybble="20" title="Contents" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+    </sprite>
+    <sprite id="154" name="Flying Question Block" notes="A ? block that can fly!">
+        <value nybble="7" title="Unknown Value 7" />
+        <value nybble="8" title="Unknown Value 8" />
+        <list nybble="11" title="Movement" comment="How the flying question block flies." category="behavior">
+            <entry value="0">Flies Away Right</entry>
+            <entry value="1">Left and Right</entry>
+            <entry value="2">Up and Down</entry>
+        </list>
+        <checkbox nybble="13" title="Spawn Acorn Mushroom" comment="When checked, the ? block will spawn an Acorn Mushroom." category="behavior" />
+        <list nybble="20" title="Contents" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" comment="Use this to hook the sprite to a movement controller." id_type="movement" category="movement" />
+    </sprite>
+    <sprite id="205" name="Floating Question Block [UNUSED]" notes="Makes the water assigned rise all the way to the top of the zone if not placed in water. Must be placed at the top of the water area to function properly.">
+        <checkbox nybble="13" title="Spawns Acorn Mushroom" comment="Spawns an Acorn Mushroom." category="behavior" />
+        <list nybble="20" title="Contains" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+    </sprite>
+    <sprite id="233" name="Grouped Question Block - Uses Lines [UNUSED]">
+        <value nybble="5-6" title="Group ID" comment="The ID used to chain sprites together. Use sprite 196 to create the groups." id_type="group" category="behavior" />
+        <checkbox nybble="8" title="Start Left/Down" comment="When checked, makes the block go left or down on the line it's placed on." category="behavior" />
+        <value nybble="11" title="Unknown Value 11" />
+        <checkbox nybble="13" title="Spawn Acorn Mushroom" comment="Nybble 20 needs to be 0 for this to work. Works perfectly." category="behavior" />
+        <list nybble="16" title="Speed" comment="Determines the speed that the block will travel along the Line." category="behavior">
+            <entry value="4">Very Slow</entry>
+            <entry value="5">Slow</entry>
+            <entry value="6">Slow+</entry>
+            <entry value="0">Medium</entry>
+            <entry value="1">Medium+</entry>
+            <entry value="2">Fast</entry>
+            <entry value="7">Faster</entry>
+            <entry value="3">Very Fast</entry>
+        </list>
+        <list nybble="20" title="Contains" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+    </sprite>
+    <sprite id="234" name="Grouped Brick Block - Uses Lines [UNUSED]">
+        <value nybble="5-6" title="Group ID" comment="The ID used to chain sprites together. Use sprite 196 to create the groups." id_type="group" category="behavior" />
+        <checkbox nybble="8" title="Start Left/Down" comment="When checked, makes the block go left or down on the line it's placed on." category="behavior" />
+        <value nybble="11" title="Unknown Value 11" />
+        <checkbox nybble="13" title="Spawn Acorn Mushroom" comment="Nybble 20 needs to be 0 for this to work. Works perfectly." category="behavior" />
+        <list nybble="16" title="Speed" comment="Determines the speed that the block will travel along the Line." category="behavior">
+            <entry value="4">Very Slow</entry>
+            <entry value="5">Slow</entry>
+            <entry value="6">Slow+</entry>
+            <entry value="0">Medium</entry>
+            <entry value="1">Medium+</entry>
+            <entry value="2">Fast</entry>
+            <entry value="7">Faster</entry>
+            <entry value="3">Very Fast</entry>
+        </list>
+        <list nybble="20" title="Contains" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+    </sprite>
+    <sprite id="422" name="Big Brick Block">
+        <value nybble="14" title="Unknown Value 14" />
+        <list nybble="20" title="Contains" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">One Coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Suit</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini Mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">UNUSED</entry>
+            <entry value="9">Yoshi</entry>
+            <entry value="10">10 coins</entry>
+            <entry value="11">1-up</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Mushroom if small</entry>
+            <entry value="15">Ice Flower</entry>
+        </list>
+    </sprite>
+    <sprite id="475" name="Big Question Block" notes="A question block that is 2 x 2 in size, rather than the original 1 x 1.">
+        <checkbox nybble="13" title="Spawn Acorn Mushroom" category="behavior" />
+        <list nybble="20" title="Contains" category="behavior" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build.">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+    </sprite>
+    <sprite id="525" name="Screen-following Question Block" notes="A ? block that follows its screen placement.">
+        <list nybble="20" title="Contains" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+    </sprite>
+    <sprite id="678" name="Event-activated Invisible Item Block - NSLU" notes="Might have hidden settings (like spawning an acorn mushroom). This is just an invisible block that is only present when a certain event has been activated.">
+        <value nybble="4" title="Triggering Event ID" comment="The block is only there when this event is activated." id_type="event" category="events" />
+        <list nybble="20" title="Contents" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+    </sprite>
+    <sprite id="704" name="Brick Block (2) - NSLU" notes="Maybe a there's a checkbox on a nybble to make this contain an acorn mushroom.">
+        <value nybble="6" title="Unknown Value 6" />
+        <list nybble="20" title="Contents" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+    <sprite id="706" name="Pivotal-rotation-controlled Brick Block - NSLU 9-9">
+        <value nybble="6" title="Unknown Value 6" />
+        <list nybble="20" title="Contents" comment="Values 2 and 3 are the same item: both resolve to action code 0 in the retail binary. In the Hammer build that shared item grants power-up mode 10, so this block dispenses the Hammer. Relabelled from 'Fire Flower' to match the build." category="behavior">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Hammer</entry>
+            <entry value="3">Hammer</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine</entry>
+            <entry value="13">Spring</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" comment="Use this to link the block to a movement controller." id_type="movement" category="movement" />
+    </sprite>
+    
+</sprites>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+    Hammer Question Block, a Yaz0moto patch for NSMBU Deluxe.
+
+    Makes the block contents dropdown say Hammer for the two entries that already
+    dispense it, so the power-up can be found and used in the editor.
+
+    This is a label correction only. It adds no new item value, because the field
+    has no room for one: a block's contents is a single nybble with all sixteen
+    values already assigned.
+
+    Requires the Hammer build. Without it, value 2 and 3 are ordinary Fire Flowers
+    and these labels are wrong.
+-->
+<game name="Hammer Question Block (RE)"
+      version="1.0"
+      description="Relabels the two identical block-contents entries to Hammer, for builds where the Fire Flower grants power-up mode 10. Label only: changes no behaviour."
+      base="New Super Mario Bros. U Deluxe"
+      patchReleaseUrl="https://github.com/Steammaker212/nsmbud-reverse">
+
+    <file name="spritedata" path="spritedata.xml" patch="true" />
+
+</game>

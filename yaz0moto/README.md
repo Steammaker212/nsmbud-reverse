@@ -6,7 +6,8 @@ the [Yaz0moto](https://github.com/Steammaker212/Yaz0moto) patch format.
 | | What it is | Status |
 |---|---|---|
 | [`CheepCheepFamily/`](./CheepCheepFamily/) | Exposes the movement binding on all 18 Cheep Cheep sprites, plus a dedicated view | Works, not tested in-game |
-| [`HAMMER_LIMITATION.md`](./HAMMER_LIMITATION.md) | Why the Hammer power-up **cannot** be a patch | Proof, 16/16 checks |
+| [`HammerQuestionBlock/`](./HammerQuestionBlock/) | Relabels the two block-contents entries that already give the Hammer | Works with the Hammer build |
+| [`HAMMER_LIMITATION.md`](./HAMMER_LIMITATION.md) | Why a Hammer cannot be *added* as a new value | Proof, 16/16 checks |
 
 ## The short version on the Hammer
 
