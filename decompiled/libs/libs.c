@@ -23,6 +23,8 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 struct sead_IDisposer *__fastcall sead_IDisposer_ctor(struct sead_IDisposer *a1);
 struct sead_IDisposer *__fastcall sead__IDisposer__IDisposer(struct sead_IDisposer *a1, struct sead_Heap *a2, unsigned int a3);
 struct nn_atk_SoundActor *__fastcall MovingSoundActor_ctor(struct nn_atk_SoundActor *a1, int a2, int a3);

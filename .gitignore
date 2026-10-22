@@ -56,7 +56,10 @@ sweetdx/nso/main
 # Build artefacts are reproducible from sweetdx/hooks + sweetdx/code + sweetdx/symbols.
 # Committing them bloats the repo, and a stale build is worse than no build because it
 # looks authoritative. Test builds are shared out-of-band, not through git history.
-# The patterns cover output/, output_stepN_*/, and the atmosphère tree they contain.
+# The patterns cover output/, output_stepN_*/, and the atmosphÃ¨re tree they contain.
 sweetdx/output*/
 sweetdx/out*/
 atmosphere/
+
+# ---- SweetDX build logs: local diagnostics, not deliverables ----
+sweetdx/build_test.log

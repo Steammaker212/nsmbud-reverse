@@ -23,6 +23,8 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 struct sead_ListNode *__fastcall sub_602380BC(_DWORD *a1);
 
 /* ---- forward declarations: these are called above where they are defined ---- */

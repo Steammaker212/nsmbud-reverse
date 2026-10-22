@@ -58,6 +58,20 @@ DROP_PATTERNS = [
     re.compile(r"\.cold"),
     re.compile(r"\$"),
     re.compile(r"^_?ida_"),
+    # ---- crt0's OWN labels. These are the documented cause of the DT_INIT fault, see
+    # sweetdx/docs/SUBSDK0_DT_INIT_ROOT_CAUSE.md. `_init` and `_fini` exist in the MAIN executable at
+    # 0x24 and 0x218, but they are ALSO labels crt0.s defines for subsdk0 itself. sweet-dx's
+    # toLinker() subtracts the module load offset from every symbol it is given, so emitting them
+    # produces
+    #       0x24 - 0xCD1000 = 0xff32f024
+    # and the linker writes that as DT_INIT. At load the dynamic linker branches to 0xff32f024, which is
+    # outside the module, so initialisation runs into unmapped memory. The earlier symptom was black
+    # and missing models; the observed symptom now is a crash on boot. Either way the cause is the same
+    # and the fix is to never hand these names to the linker.
+    re.compile(r"^_(init|fini|start|end|edata|etext|bss_start|init_array_start|init_array_end)$"),
+    re.compile(r"^__(init|fini)_array(_start|_end)?$"),
+    re.compile(r"^_DYNAMIC$"),
+    re.compile(r"^_GLOBAL_OFFSET_TABLE_$"),
 ]
 
 VALID_NAME = re.compile(r"^[A-Za-z_.$][A-Za-z0-9_.$]*$")

@@ -5,7 +5,7 @@
 # Addresses are in-image addresses (VA - 0x60000000) and are
 # strictly below NSMBUDX_NSO_MEMORY_SIZE (0x00CD1000).
 #
-# symbols: 21588
+# symbols: 21585
 #
 # Name corrections applied (verified against disassembly):
 #   _ZN10StageActor18directionToPlayerXERK4Vec2
@@ -17,8 +17,6 @@
 #   _ZN5Enemy4vfD0Ev
 #     -> _ZN5Enemy6freezeEv
 
-_init = 0x00000024;
-_fini = 0x00000218;
 __nnDetailNintendoSdkRuntimeObjectFileRefer = 0x00000298;
 __nnDetailNintendoSdkRuntimeObjectFile = 0x0000029C;
 _ZN10StageActorC2EPK14ActorBuildInfo = 0x000002A0;
@@ -21711,7 +21709,6 @@ N2nn3atk14FsSoundArchiveE_vtable = 0x00C60B98;
 _ZTIN2nn3atk14FsSoundArchiveE = 0x00C60BC4;
 N2nn3atk6detail3fnd15FileStreamProxyE_vtable = 0x00C60BD0;
 _ZTIN2nn3atk6detail3fnd15FileStreamProxyE = 0x00C60C30;
-_DYNAMIC = 0x00C611AC;
 got_main_crt0 = 0x00C61A00;
 GOT_SpriteToProfileTable = 0x00C61B18;
 got_spriteToProfileList = 0x00C61B18;
