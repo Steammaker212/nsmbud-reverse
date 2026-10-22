@@ -6348,7 +6348,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60807EF0
+ * SoundPlayer_updateWithLocation
  * RVA 0x00807ef0   size 0xcc   xrefs 176
  * ============================================================================ */
   int __fastcall sub_60807EF0(_DWORD *a1, int a2, int a3)
@@ -22388,7 +22388,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v28 = "%s/%s";
     v29 = a2;
   LABEL_64:
-    sub_608FDDF4(v29, v28, v24, v27, a2);
+    StringUtil_formatInto(v29, v28, v24, v27, a2);
     return 1;
   }
 
@@ -22999,13 +22999,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 280) = -1;
     *(_WORD *)(a1 + 284) = 257;
     *(_BYTE *)(a1 + 286) = 0;
-    sub_6045BF30(a1 + 288);
+    ctor_installTwoVtables(a1 + 288);
     sead::CriticalSection::CriticalSection((struct sead_CriticalSection *)(a1 + 692));
     *(_DWORD *)(a1 + 728) = a1 + 744;
     *(_DWORD *)(a1 + 732) = 64;
     *(_DWORD *)(a1 + 736) = 0;
     *(_DWORD *)(a1 + 740) = 0;
-    sub_6045BF30(a1 + 1256);
+    ctor_installTwoVtables(a1 + 1256);
     *(_DWORD *)(a1 + 1660) = 0;
     return a1;
   }
@@ -23121,10 +23121,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       sub_6090B260(*(_DWORD *)(a2 + 12), *(_DWORD *)(a2 + 40));
       sub_6090E560(*(_DWORD *)(a2 + 32), *(_DWORD *)(a2 + 40), *(float **)(a2 + 12));
-      v5 = (unsigned __int8 *)sub_6090B350((int)v11);
+      v5 = (unsigned __int8 *)RenderParams_defaultInit((int)v11);
       sub_6090B4B0(v5, *(_DWORD *)(a2 + 40));
       v6 = *(_DWORD *)(a1 + 280);
-      v7 = (unsigned __int8 *)sub_6090B350((int)v24);
+      v7 = (unsigned __int8 *)RenderParams_defaultInit((int)v24);
       v24[0] = 0;
       sub_6090B4B0(v7, *(_DWORD *)(a2 + 40));
       v8 = (_QWORD *)MEMORY[0xCCF468];
@@ -23679,7 +23679,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v46 = 12405792;
         v8 = sub_608FD248(12405792, v7);
         v9 = (const char *)sub_6081D400(v8);
-        sub_608FDDF4(&v46, "%s:", v9);
+        StringUtil_formatInto(&v46, "%s:", v9);
         if ( sub_60905330(v54) )
           goto LABEL_118;
         v35 = v2;
@@ -23698,7 +23698,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_BYTE *)v43 = v6;
         v42 = 12405792;
         v11 = Code_Content_Message_ref(i);
-        sub_608FDDF4(&v42, "%s:", v11);
+        StringUtil_formatInto(&v42, "%s:", v11);
         (*(void (__fastcall **)(int *))(v50 + 12))(&v50);
         (*(void (__fastcall **)(int *))(v50 + 12))(&v50);
         v12 = v51;
@@ -26075,7 +26075,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v37 = MEMORY[0xB3BA34];
     v36 = 12424616;
-    sub_608FDDF4(&v36, "Model/MarioOffsetDataW%d.bin", a2 + 1);
+    StringUtil_formatInto(&v36, "Model/MarioOffsetDataW%d.bin", a2 + 1);
     sub_608E6578(*(_DWORD *)(MEMORY[0xCCEBD0] + 28), v40, &v36, 0, 0);
     if ( v40[1] )
     {
@@ -26229,7 +26229,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_BYTE *)v22 = v11;
       v14 = v3 + 1;
       v21 = 12424616;
-      sub_608FDDF4(&v21, "Model/LookOffsetDataW%d.bin", v3 + 1);
+      StringUtil_formatInto(&v21, "Model/LookOffsetDataW%d.bin", v3 + 1);
       sub_608E6578(*(_DWORD *)(MEMORY[0xCCEBD0] + 28), v25, &v21, 0, 0);
       if ( v25[1] )
       {
@@ -33046,7 +33046,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v7);
     *(_BYTE *)v8 = MEMORY[0xB3BA34];
     v7 = 12424616;
-    sub_608FDDF4(&v7, "save://rp_challenge_replay%02d.dat", a1[9]);
+    StringUtil_formatInto(&v7, "save://rp_challenge_replay%02d.dat", a1[9]);
     memset(&v6[1], 0, 44);
     v6[0] = 12557552;
     sub_608E86B8(MEMORY[0xCCEBD0], v6, &v7, 0, 0);
@@ -33100,7 +33100,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v10);
     *(_BYTE *)v11 = MEMORY[0xB3BA34];
     v10 = 12424616;
-    sub_608FDDF4(&v10, "save://rp_challenge_replay%02d.dat", *((_DWORD *)a1 + 9));
+    StringUtil_formatInto(&v10, "save://rp_challenge_replay%02d.dat", *((_DWORD *)a1 + 9));
     memset(&v9[1], 0, 44);
     v9[0] = 12557552;
     sub_608E86B8(MEMORY[0xCCEBD0], v9, &v10, 1, 0);
@@ -36706,7 +36706,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_603FBCA4(MEMORY[0xC99DD4], 0);
     sub_603FBCF0(MEMORY[0xC99DD4]);
     sub_603F4740(MEMORY[0xC99D70], a2);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
   }
 
 /* ============================================================================
@@ -36722,7 +36722,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_603FBCF0(MEMORY[0xC99DD4]);
     sub_603F47D0(MEMORY[0xC99D70], a2);
     sub_6082B748(MEMORY[0xCC6E04]);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
   }
 
 /* ============================================================================
@@ -185115,7 +185115,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 84) + 12))(a1 + 84);
     v6 = *(const char **)(v5 + 4);
     (*((void (__fastcall **)(const char **))*a3 + 3))(a3);
-    sub_608FDDF4((int)a2, "%s:/%s", v6, a3[1]);
+    StringUtil_formatInto((int)a2, "%s:/%s", v6, a3[1]);
     sub_608E9F1C(a2, 47);
     return 1;
   }
@@ -204089,7 +204089,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                             - (float)((float)v4
                                     / (float)(unsigned int)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 56))(a1)))
                     * 10.0);
-    return sub_608FDDF4(a2, "$SEAD_META_HEAP_%03d", v5);
+    return StringUtil_formatInto(a2, "$SEAD_META_HEAP_%03d", v5);
   }
 
 /* ============================================================================
@@ -207274,7 +207274,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_608FDDF4
+ * StringUtil_formatInto
  * RVA 0x008fddf4   size 0x4c   xrefs 155
  * ============================================================================ */
   int sub_608FDDF4(int a1, const char *a2, ...)
@@ -212714,7 +212714,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
       {
         v20 = (*(int (__fastcall **)(_DWORD))(4 * (a1[12] ^ v9) + 0xC5CB0C))(*(_DWORD *)(a1[10] + 16 * v15));
-        sub_608FDDF4(a3 + 272 * v7, "%08x", v20);
+        StringUtil_formatInto(a3 + 272 * v7, "%08x", v20);
       }
       v12 = 17 * v7++;
       *(_BYTE *)(a3 + 16 * v12 + 268) = 0;
@@ -215412,7 +215412,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
-    sub_608FDDF4((int)&v15, "%u", a4);
+    StringUtil_formatInto((int)&v15, "%u", a4);
     (*(void (__fastcall **)(int *))(v15 + 12))(&v15);
     v8 = 0;
     while ( *((unsigned __int8 *)v16 + v8) != v7 )
@@ -215470,7 +215470,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
-    sub_608FDDF4((int)&v15, "%u", a4);
+    StringUtil_formatInto((int)&v15, "%u", a4);
     (*(void (__fastcall **)(int *))(v15 + 12))(&v15);
     v8 = 0;
     while ( *((unsigned __int8 *)v16 + v8) != v7 )
@@ -215528,7 +215528,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
-    sub_608FDDF4((int)&v15, "%u", a4);
+    StringUtil_formatInto((int)&v15, "%u", a4);
     (*(void (__fastcall **)(int *))(v15 + 12))(&v15);
     v8 = 0;
     while ( *((unsigned __int8 *)v16 + v8) != v7 )
@@ -215586,7 +215586,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
-    sub_608FDDF4((int)&v15, "%llu", a5);
+    StringUtil_formatInto((int)&v15, "%llu", a5);
     (*(void (__fastcall **)(int *))(v15 + 12))(&v15);
     v8 = 0;
     while ( *((unsigned __int8 *)v16 + v8) != v7 )
@@ -215644,7 +215644,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
-    sub_608FDDF4((int)&v15, "%d", a4);
+    StringUtil_formatInto((int)&v15, "%d", a4);
     (*(void (__fastcall **)(int *))(v15 + 12))(&v15);
     v8 = 0;
     while ( *((unsigned __int8 *)v16 + v8) != v7 )
@@ -215702,7 +215702,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
-    sub_608FDDF4((int)&v15, "%d", a4);
+    StringUtil_formatInto((int)&v15, "%d", a4);
     (*(void (__fastcall **)(int *))(v15 + 12))(&v15);
     v8 = 0;
     while ( *((unsigned __int8 *)v16 + v8) != v7 )
@@ -215760,7 +215760,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
-    sub_608FDDF4((int)&v15, "%d", a4);
+    StringUtil_formatInto((int)&v15, "%d", a4);
     (*(void (__fastcall **)(int *))(v15 + 12))(&v15);
     v8 = 0;
     while ( *((unsigned __int8 *)v16 + v8) != v7 )
@@ -215818,7 +215818,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
-    sub_608FDDF4((int)&v15, "%lld", a5);
+    StringUtil_formatInto((int)&v15, "%lld", a5);
     (*(void (__fastcall **)(int *))(v15 + 12))(&v15);
     v8 = 0;
     while ( *((unsigned __int8 *)v16 + v8) != v7 )
@@ -215877,7 +215877,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v14 = MEMORY[0xB3BA34];
     v13 = 12405792;
-    sub_608FDDF4((int)&v13, "%.8f", v2);
+    StringUtil_formatInto((int)&v13, "%.8f", v2);
     (*(void (__fastcall **)(int *))(v13 + 12))(&v13);
     v6 = 0;
     while ( *((unsigned __int8 *)v14 + v6) != v5 )
@@ -219305,7 +219305,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6090B350
+ * RenderParams_defaultInit
  * RVA 0x0090b350   size 0x160   xrefs 116
  * ============================================================================ */
   int __fastcall sub_6090B350(int result)
@@ -221664,7 +221664,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
   
-    result = sub_6090B350((int)byte_60CCF474);
+    result = RenderParams_defaultInit((int)byte_60CCF474);
     *(_BYTE *)(result + 89) = 0;
     *(_WORD *)result = 0;
     return result;
@@ -226992,7 +226992,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60913D88
+ * Slot_initFromResource
  * RVA 0x00913d88   size 0x94   xrefs 157
  * ============================================================================ */
   int __fastcall sub_60913D88(int a1, int a2, int CurrentHeap, int a4, int a5)
@@ -228945,7 +228945,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = (_DWORD *)operator new(0x1Cu, a2, 4);
     Slot_construct((int)v4);
     *v4 = 12557340;
-    sub_60913D88((int)v4, 0x400000, a2, 4, 1);
+    Slot_initFromResource((int)v4, 0x400000, a2, 4, 1);
     Slot_initWithOwnerAndOffset(v38, (int)v4, 0);
     v37[0] = v38[0];
     v37[1] = v38[1];
@@ -231619,7 +231619,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = (_DWORD *)operator new(0x1Cu, a2, 4);
       Slot_construct((int)v9);
       *v9 = 12557340;
-      sub_60913D88((int)v9, v8, a2, 4, 1);
+      Slot_initFromResource((int)v9, v8, a2, 4, 1);
       Slot_initWithOwnerAndOffset(&v35, (int)v9, 0);
       if ( v35 )
         v6 = MEMORY[0xCC73E8](v35);
@@ -238593,7 +238593,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     __int16 v17; // [sp+434h] [bp-68h] BYREF
     int v18; // [sp+438h] [bp-64h]
   
-    v4 = (unsigned __int8 *)sub_6090B350((int)&v17);
+    v4 = (unsigned __int8 *)RenderParams_defaultInit((int)&v17);
     v18 &= ~1u;
     v17 = 0;
     sub_6090B4B0(v4, a2);
@@ -239615,7 +239615,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = (_DWORD *)operator new(0x1Cu, a2, 4);
     Slot_construct((int)v11);
     *v11 = 12557340;
-    sub_60913D88((int)v11, ((v7 + v8 - 1) & -v9) + v13 * (a4 * a3 - 1), a2, v10, 2);
+    Slot_initFromResource((int)v11, ((v7 + v8 - 1) & -v9) + v13 * (a4 * a3 - 1), a2, v10, 2);
     Slot_initWithOwnerAndOffset(v16, (int)v11, 0);
     *(_BYTE *)(a1 + 38) |= 2u;
     v15[0] = v16[0];
@@ -240934,7 +240934,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
   
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 88))(a1);
-    v3 = sub_608FDDF4(a1 + 64, "%s%d", *(const char **)(dword_60C79BDC + 24 * v2), *(unsigned __int16 *)(a1 + 108));
+    v3 = StringUtil_formatInto(
+           a1 + 64,
+           "%s%d",
+           *(const char **)(dword_60C79BDC + 24 * v2),
+           *(unsigned __int16 *)(a1 + 108));
     v4 = (_DWORD *)default_ref(v3);
     v5 = *(void **)(a1 + 128);
     (*(void (__fastcall **)(_DWORD *))(*v4 + 12))(v4);
@@ -243055,7 +243059,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v59 = 0;
     if ( !*(_DWORD *)(v9 + 168) )
     {
-      sub_6090B350((int)&v46);
+      RenderParams_defaultInit((int)&v46);
       v46 = 257;
       v49 = 8;
       v47 &= ~1u;
@@ -250244,7 +250248,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = a1 + 744 * v3;
       v6 = v5 + 2112;
       v7 = dword_60AF22D8[v3];
-      sub_60913D88(v5 + 2112, v7 << 6, v2, 4, 0);
+      Slot_initFromResource(v5 + 2112, v7 << 6, v2, 4, 0);
       Slot_initWithOwnerAndOffset(v65, v5 + 2112, 0);
       v9 = v7;
       v10 = v4;
@@ -250414,7 +250418,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = a1 + 744 * v2 + 2140;
       v25 = (_DWORD *)(a1 + 744 * v2);
       v4 = dword_60AF22D8[v2];
-      sub_60913D88(v3, 36 * v4, a2, 4, 0);
+      Slot_initFromResource(v3, 36 * v4, a2, 4, 0);
       Slot_initWithOwnerAndOffset(v35, v3, 0);
       v24 = v2;
       if ( (v2 | 1) == 1 )
@@ -250751,7 +250755,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             sub_6090E438(v55, (int)v45);
             sub_6090B260(v45, a2);
             sub_6090E560((int)v55, a2, v45);
-            v33 = (unsigned __int8 *)sub_6090B350((int)&v52);
+            v33 = (unsigned __int8 *)RenderParams_defaultInit((int)&v52);
             v52 = 0;
             v54 |= 0xFu;
             v53 &= ~1u;
@@ -250880,7 +250884,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v46 = v5;
     v7 = *(_DWORD *)(a3 + 8);
-    v8 = (unsigned __int8 *)sub_6090B350((int)&v53);
+    v8 = (unsigned __int8 *)RenderParams_defaultInit((int)&v53);
     v54 &= ~1u;
     v55 = (unsigned __int8)(8 * *(_BYTE *)(a1 + 204)) | 7 | v55 & 0xFFFFFFF0;
     v53 = 0;
@@ -251105,7 +251109,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     unsigned int v77; // [sp+5Ch] [bp-4Ch]
   
     v5 = *(_DWORD *)(a3 + 8);
-    v6 = (unsigned __int8 *)sub_6090B350((int)&v75);
+    v6 = (unsigned __int8 *)RenderParams_defaultInit((int)&v75);
     v76 &= ~1u;
     v77 = v77 & 0xFFFFFFF0 | 1;
     v75 = 0;
@@ -251395,7 +251399,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = v7[76] == 0;
     }
   LABEL_10:
-    sub_6090B350((int)v62);
+    RenderParams_defaultInit((int)v62);
     if ( v6 )
     {
       LOWORD(v62[0]) = 1;
@@ -251600,7 +251604,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     char v17; // [sp+44h] [bp-3Ch]
     char v18; // [sp+45h] [bp-3Bh]
   
-    sub_6090B350((int)v11);
+    RenderParams_defaultInit((int)v11);
     *(_WORD *)v11 = 0;
     v12 = v12 & 0xFFFFFFF0 | 7;
     v6 = *(_DWORD *)(*(_DWORD *)(a3 + 12) + 464);
@@ -253944,12 +253948,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v20[3]; // [sp+2Ch] [bp-Ch] BYREF
   
     v4 = sub_60971F1C();
-    sub_60913D88(a1 + 2828, v4, a2, 0x2000, 8);
+    Slot_initFromResource(a1 + 2828, v4, a2, 0x2000, 8);
     Slot_initWithOwnerAndOffset(v20, a1 + 2828, 0);
     Slot_initWithOwnerAndOffset(v19, a1 + 2828, 0);
     v5 = sub_60971F84(a1 + 1840, v19, *(_DWORD *)(a1 + 2836), a2);
     v6 = sub_609721D0(v5);
-    sub_60913D88(a1 + 2800, v6, a2, 0x2000, 8);
+    Slot_initFromResource(a1 + 2800, v6, a2, 0x2000, 8);
     Slot_initWithOwnerAndOffset(v18, a1 + 2800, 0);
     Slot_initWithOwnerAndOffset(v17, a1 + 2800, 0);
     sub_60972238(a1 + 1568, v17, *(_DWORD *)(a1 + 2808), a2);
@@ -255607,7 +255611,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     agl_TextureData_ref((int)(a1 + 610));
     Slot_construct((int)(a1 + 678));
     a1[678] = 12557340;
-    sub_6090B350((int)(a1 + 746));
+    RenderParams_defaultInit((int)(a1 + 746));
     agl_TextureData_ref((int)(a1 + 776));
     Slot_construct((int)(a1 + 844));
     a1[844] = 12557340;
@@ -256197,7 +256201,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v13[12]; // [sp+10h] [bp-98h] BYREF
     _BYTE v14[104]; // [sp+40h] [bp-68h] BYREF
   
-    v11 = (unsigned __int8 *)sub_6090B350((int)v14);
+    v11 = (unsigned __int8 *)RenderParams_defaultInit((int)v14);
     sub_6090B4B0(v11, a1);
     sub_601B59CC(v13, a2);
     return sub_60939898(a1, v13, a3, a4, a5, a6, a7);
@@ -256778,7 +256782,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v14[12]; // [sp+10h] [bp-98h] BYREF
     _BYTE v15[104]; // [sp+40h] [bp-68h] BYREF
   
-    v11 = (unsigned __int8 *)sub_6090B350((int)v15);
+    v11 = (unsigned __int8 *)RenderParams_defaultInit((int)v15);
     sub_6090B4B0(v11, a1);
     sub_601B59CC(v14, a2);
     v12 = (float *)sub_6090BDE0(a3);
@@ -257277,7 +257281,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v102 = v21 * v15;
       v103 = v21 * v103;
     }
-    v22 = (unsigned __int8 *)sub_6090B350((int)v96);
+    v22 = (unsigned __int8 *)RenderParams_defaultInit((int)v96);
     v97 = v97 & 0xFFFFFFF0 | 7;
     sub_6090B4B0(v22, a1);
     sub_6093AC5C(a1, (int)a6, (int)a7);
@@ -257615,7 +257619,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       nullsub_120(result, a1);
       v12 = agl_TextureSampler_ref((int)v42);
       sub_60920EC8(v12, *(int **)(a2 + 60));
-      v13 = (unsigned __int8 *)sub_6090B350((int)&v40);
+      v13 = (unsigned __int8 *)RenderParams_defaultInit((int)&v40);
       v40 = 0;
       v41 |= 1u;
       sub_6090B4B0(v13, a1);
@@ -258387,7 +258391,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v54 += 9;
     if ( *v54 != -1 )
       Sound_setTrackVolume(v54, a1, 1, (int)&v81);
-    v55 = (unsigned __int8 *)sub_6090B350((int)&v81);
+    v55 = (unsigned __int8 *)RenderParams_defaultInit((int)&v81);
     v85 = 2;
     LODWORD(v82) &= ~1u;
     BYTE2(v81) = 0;
@@ -259171,7 +259175,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Slot_construct((int)v18);
     *v18 = 12557340;
     v19 = (v17 >> 3) & 0x40;
-    sub_60913D88((int)v18, a3, v6, 4, v19 | 4);
+    Slot_initFromResource((int)v18, a3, v6, 4, v19 | 4);
     Slot_initWithOwnerAndOffset(&v61, (int)v18, 0);
     v20 = a4;
     v56 = v61;
@@ -259191,7 +259195,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v24 = (_DWORD *)operator new(0x1Cu, a6, 4);
       Slot_construct((int)v24);
       *v24 = 12557340;
-      sub_60913D88((int)v24, a4, a6, 4, v19 | 4);
+      Slot_initFromResource((int)v24, a4, a6, 4, v19 | 4);
       Slot_initWithOwnerAndOffset(&v61, (int)v24, 0);
       v20 = a4;
       v22 = v61;
@@ -259316,7 +259320,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v44 = (_DWORD *)operator new(0x1Cu, v33, 4);
       Slot_construct((int)v44);
       *v44 = 12557340;
-      sub_60913D88((int)v44, 4096, v33, 4, 0);
+      Slot_initFromResource((int)v44, 4096, v33, 4, 0);
       Slot_initWithOwnerAndOffset(&v61, (int)v44, 0);
       HIDWORD(v45) = &v57;
       v57 = v61;
@@ -259331,7 +259335,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v48 = a1[615] + 344;
       do
       {
-        result = sub_608FDDF4(v48, "agl::DTA[%d]", v47++);
+        result = StringUtil_formatInto(v48, "agl::DTA[%d]", v47++);
         v48 += 392;
       }
       while ( v46 != v47 );
@@ -260179,7 +260183,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v15 = v14;
             if ( v13 <= 1 )
               v13 = 1;
-            result = sub_608FDDF4(
+            result = StringUtil_formatInto(
                        (int)&v16,
                        "[%s] (%4dx%4d) size:%d [%s]",
                        v12,
@@ -262479,26 +262483,26 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         break;
       case 1:
         v18 = (float *)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 32))(a1);
-        sub_608FDDF4((int)&v35, "%f", *v18);
+        StringUtil_formatInto((int)&v35, "%f", *v18);
         break;
       case 2:
       case 17:
         v19 = *(_DWORD *)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 32))(a1);
-        sub_608FDDF4((int)&v35, "%d", v19);
+        StringUtil_formatInto((int)&v35, "%d", v19);
         break;
       case 3:
         v20 = (float *)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 32))(a1);
-        sub_608FDDF4((int)&v35, "%f %f", *v20, v20[1]);
+        StringUtil_formatInto((int)&v35, "%f %f", *v20, v20[1]);
         break;
       case 4:
         v21 = (float *)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 32))(a1);
-        sub_608FDDF4((int)&v35, "%f %f %f", *v21, v21[1], v21[2]);
+        StringUtil_formatInto((int)&v35, "%f %f %f", *v21, v21[1], v21[2]);
         break;
       case 5:
       case 6:
       case 16:
         v22 = (float *)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 32))(a1);
-        sub_608FDDF4((int)&v35, "%f %f %f %f", *v22, v22[1], v22[2], v22[3]);
+        StringUtil_formatInto((int)&v35, "%f %f %f %f", *v22, v22[1], v22[2], v22[3]);
         break;
       case 7:
       case 8:
@@ -262568,11 +262572,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       case 14:
       case 18:
         v23 = (unsigned int)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 48))(a1) >> 2;
-        sub_608FDDF4((int)&v35, "%d", v23);
+        StringUtil_formatInto((int)&v35, "%d", v23);
         break;
       case 19:
         v24 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 48))(a1);
-        sub_608FDDF4((int)&v35, "%d", v24);
+        StringUtil_formatInto((int)&v35, "%d", v24);
         break;
       default:
         break;
@@ -263924,7 +263928,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)v12);
           }
-          v16 = sub_608FDDF4((int)v12, "\n") + v13;
+          v16 = StringUtil_formatInto((int)v12, "\n") + v13;
           v31 = (const char *)(v11 + v16);
           v30 = 12322272;
           v32 = v29 - v16;
@@ -263940,7 +263944,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v27 = v14;
           v17 = (int)v12;
           v18 = &a1[3 * v14];
-          v19 = sub_608FDDF4((int)v12, "%d %d\n", *((unsigned __int8 *)v18 + 23), *((unsigned __int8 *)v18 + 20));
+          v19 = StringUtil_formatInto((int)v12, "%d %d\n", *((unsigned __int8 *)v18 + 23), *((unsigned __int8 *)v18 + 20));
           v20 = *((unsigned __int8 *)v18 + 23);
           v13 = v19 + v16;
           if ( *((_BYTE *)v18 + 23) )
@@ -263962,7 +263966,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v17);
               }
               v22 += 3;
-              v13 += sub_608FDDF4(v17, "%f %f %f\n", *v21, v21[1], v21[2]);
+              v13 += StringUtil_formatInto(v17, "%f %f %f\n", *v21, v21[1], v21[2]);
               v21 += 3;
             }
             while ( v22 < v20 );
@@ -264700,7 +264704,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)v12);
           }
-          v16 = sub_608FDDF4((int)v12, "\n") + v13;
+          v16 = StringUtil_formatInto((int)v12, "\n") + v13;
           v31 = (const char *)(v11 + v16);
           v30 = 12322272;
           v32 = v29 - v16;
@@ -264716,7 +264720,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v27 = v14;
           v17 = (int)v12;
           v18 = &a1[3 * v14];
-          v19 = sub_608FDDF4((int)v12, "%d %d\n", *((unsigned __int8 *)v18 + 23), *((unsigned __int8 *)v18 + 20));
+          v19 = StringUtil_formatInto((int)v12, "%d %d\n", *((unsigned __int8 *)v18 + 23), *((unsigned __int8 *)v18 + 20));
           v20 = *((unsigned __int8 *)v18 + 23);
           v13 = v19 + v16;
           if ( *((_BYTE *)v18 + 23) )
@@ -264738,7 +264742,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v17);
               }
               v22 += 3;
-              v13 += sub_608FDDF4(v17, "%f %f %f\n", *v21, v21[1], v21[2]);
+              v13 += StringUtil_formatInto(v17, "%f %f %f\n", *v21, v21[1], v21[2]);
               v21 += 3;
             }
             while ( v22 < v20 );
@@ -268026,7 +268030,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v4 = 0;
     v5 = (int)(a1 + 5);
-    sub_60913D88((int)(a1 + 5), 128, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 5), 128, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v37, v5, 0);
     v31 = -1090519040;
     v32 = 1056964608;
@@ -268080,7 +268084,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60922768(a1 + 26, 0, 34, 0, 0);
     sub_60922768(a1 + 26, 1, 34, 12, 0);
     sub_60922768(a1 + 26, 2, 22, 24, 0);
-    sub_60913D88((int)(a1 + 12), 12, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 12), 12, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v29, (int)(a1 + 12), 0);
     v14 = MEMORY[0xCC73E8](a1[15]);
     *(_WORD *)(v14 + Slot_getRelativeOffset(a1 + 12)) = 0;
@@ -268099,7 +268103,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v32 = v27;
     v33 = v28;
     sub_60919D48(a1 + 94, &v31, 1, 6);
-    sub_60913D88((int)(a1 + 19), 8, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 19), 8, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v25, (int)(a1 + 19), 0);
     v20 = MEMORY[0xCC73E8](a1[22]);
     *(_WORD *)(v20 + Slot_getRelativeOffset(a1 + 19)) = 0;
@@ -268156,7 +268160,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v4 = 0;
     v5 = (int)(a1 + 134);
-    sub_60913D88((int)(a1 + 134), 96, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 134), 96, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v32, v5, 0);
     v26 = -1090519040;
     v27 = 1056964608;
@@ -268204,7 +268208,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60922768(a1 + 156, 0, 34, 0, 0);
     sub_60922768(a1 + 156, 1, 34, 12, 0);
     sub_60922768(a1 + 156, 2, 22, 24, 0);
-    sub_60913D88((int)(a1 + 141), 6, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 141), 6, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v24, (int)(a1 + 141), 0);
     v14 = MEMORY[0xCC73E8](a1[144]);
     *(_WORD *)(v14 + Slot_getRelativeOffset(a1 + 141)) = 0;
@@ -268217,7 +268221,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = v23[1];
     v28 = v23[2];
     sub_60919D48(a1 + 224, &v26, 1, 3);
-    sub_60913D88((int)(a1 + 148), 6, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 148), 6, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v22, (int)(a1 + 148), 0);
     v17 = MEMORY[0xCC73E8](a1[151]);
     *(_WORD *)(v17 + Slot_getRelativeOffset(a1 + 148)) = 0;
@@ -268276,7 +268280,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v4 = 0;
     v5 = (int)(a1 + 264);
-    sub_60913D88((int)(a1 + 264), 768, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 264), 768, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v36, v5, 0);
     v30 = -1090519040;
     v31 = 1056964608;
@@ -268484,7 +268488,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60922768(a1 + 286, 0, 34, 0, 0);
     sub_60922768(a1 + 286, 1, 34, 12, 0);
     sub_60922768(a1 + 286, 2, 22, 24, 0);
-    sub_60913D88((int)(a1 + 271), 72, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 271), 72, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v28, (int)(a1 + 271), 0);
     do
     {
@@ -268502,7 +268506,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v31 = v27[1];
     v32 = v27[2];
     sub_60919D48(a1 + 354, &v30, 1, 36);
-    sub_60913D88((int)(a1 + 278), 96, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 278), 96, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v26, (int)(a1 + 278), 0);
     do
     {
@@ -268565,7 +268569,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v4 = 0;
     v5 = (int)(a1 + 394);
-    sub_60913D88((int)(a1 + 394), 512, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 394), 512, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v36, v5, 0);
     v30 = 0;
     v31 = 0x80000000;
@@ -268722,7 +268726,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60922768(a1 + 416, 0, 34, 0, 0);
     sub_60922768(a1 + 416, 1, 34, 12, 0);
     sub_60922768(a1 + 416, 2, 22, 24, 0);
-    sub_60913D88((int)(a1 + 401), 36, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 401), 36, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v28, (int)(a1 + 401), 0);
     do
     {
@@ -268740,7 +268744,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v31 = v27[1];
     v32 = v27[2];
     sub_60919D48(a1 + 484, &v30, 1, 18);
-    sub_60913D88((int)(a1 + 408), 64, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 408), 64, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v26, (int)(a1 + 408), 0);
     do
     {
@@ -268782,7 +268786,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v18[3]; // [sp+40h] [bp-Ch] BYREF
   
     v5 = a1 + 2096;
-    sub_60913D88(a1 + 2096, 32 * a2 + 32, a3, 4, 0);
+    Slot_initFromResource(a1 + 2096, 32 * a2 + 32, a3, 4, 0);
     Slot_initWithOwnerAndOffset(v18, v5, 0);
     Slot_initWithOwnerAndOffset(v17, v5, 0);
     sub_6094CD80(a1 + 2376, v17, a2);
@@ -268795,17 +268799,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( result )
         v9 = i;
       v11 = a1 + 84 * v9 + 2124;
-      sub_60913D88(v11, 6 * (v6 >> i), a3, 4, 0);
+      Slot_initFromResource(v11, 6 * (v6 >> i), a3, 4, 0);
       Slot_initWithOwnerAndOffset(v16, v11, 0);
       Slot_initWithOwnerAndOffset(v15, v11, 0);
       v12 = a1 + 240 * v9;
       sub_6094CF0C(v12 + 2648, v15, v6, 0, i);
       v13 = a1 + 84 * v9;
-      sub_60913D88(v13 + 2152, 8 * v10, a3, 4, 0);
+      Slot_initFromResource(v13 + 2152, 8 * v10, a3, 4, 0);
       Slot_initWithOwnerAndOffset(v16, v13 + 2152, 0);
       Slot_initWithOwnerAndOffset(v15, v13 + 2152, 0);
       sub_6094CF0C(v12 + 2728, v15, v6, 1, i);
-      sub_60913D88(v13 + 2180, 2 * v10, a3, 4, 0);
+      Slot_initFromResource(v13 + 2180, 2 * v10, a3, 4, 0);
       Slot_initWithOwnerAndOffset(v16, v13 + 2180, 0);
       Slot_initWithOwnerAndOffset(v15, v13 + 2180, 0);
       sub_6094CF0C(v12 + 2808, v15, v6, 2, i++);
@@ -268838,7 +268842,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v24[3]; // [sp+40h] [bp-Ch] BYREF
   
     v7 = a1 + 3368;
-    sub_60913D88(a1 + 3368, 32 * a2 * a3 + 64, a4, 4, 0);
+    Slot_initFromResource(a1 + 3368, 32 * a2 * a3 + 64, a4, 4, 0);
     Slot_initWithOwnerAndOffset(v24, v7, 0);
     Slot_initWithOwnerAndOffset(v23, v7, 0);
     v19 = a1;
@@ -268852,19 +268856,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13 = 2 * sub_6094D0B8(v8, v9, 0, i);
       if ( v10 )
         v12 = i;
-      sub_60913D88(v19 + 84 * v12 + 3396, v13, a4, 4, 0);
+      Slot_initFromResource(v19 + 84 * v12 + 3396, v13, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v22, v19 + 84 * v12 + 3396, 0);
       Slot_initWithOwnerAndOffset(v21, v19 + 84 * v12 + 3396, 0);
       v14 = v19 + 240 * v12;
       sub_6094D4CC(v14 + 3920, v21, v8, v9, 0, i);
       v15 = sub_6094D0B8(v8, v9, 1, i);
       v16 = v19 + 84 * v12;
-      sub_60913D88(v16 + 3424, 2 * v15, a4, 4, 0);
+      Slot_initFromResource(v16 + 3424, 2 * v15, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v22, v16 + 3424, 0);
       Slot_initWithOwnerAndOffset(v21, v16 + 3424, 0);
       sub_6094D4CC(v14 + 4000, v21, v8, v9, 1, i);
       v17 = sub_6094D0B8(v8, v9, 2, i);
-      sub_60913D88(v16 + 3452, 2 * v17, a4, 4, 0);
+      Slot_initFromResource(v16 + 3452, 2 * v17, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v22, v16 + 3452, 0);
       Slot_initWithOwnerAndOffset(v21, v16 + 3452, 0);
       result = sub_6094D4CC(v14 + 4080, v21, v8, v9, 2, i++);
@@ -268897,7 +268901,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v24[3]; // [sp+40h] [bp-Ch] BYREF
   
     v7 = a1 + 4640;
-    sub_60913D88(a1 + 4640, 32 * a2 * ((a3 >> 1) + 1) + 32, a4, 4, 0);
+    Slot_initFromResource(a1 + 4640, 32 * a2 * ((a3 >> 1) + 1) + 32, a4, 4, 0);
     Slot_initWithOwnerAndOffset(v24, v7, 0);
     Slot_initWithOwnerAndOffset(v23, v7, 0);
     v19 = a1;
@@ -268911,19 +268915,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13 = 2 * sub_6094D9D8(v8, v9, 0, i);
       if ( v10 )
         v12 = i;
-      sub_60913D88(v19 + 84 * v12 + 4668, v13, a4, 4, 0);
+      Slot_initFromResource(v19 + 84 * v12 + 4668, v13, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v22, v19 + 84 * v12 + 4668, 0);
       Slot_initWithOwnerAndOffset(v21, v19 + 84 * v12 + 4668, 0);
       v14 = v19 + 240 * v12;
       sub_6094DDDC(v14 + 5192, v21, v8, v9, 0, i);
       v15 = sub_6094D9D8(v8, v9, 1, i);
       v16 = v19 + 84 * v12;
-      sub_60913D88(v16 + 4696, 2 * v15, a4, 4, 0);
+      Slot_initFromResource(v16 + 4696, 2 * v15, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v22, v16 + 4696, 0);
       Slot_initWithOwnerAndOffset(v21, v16 + 4696, 0);
       sub_6094DDDC(v14 + 5272, v21, v8, v9, 1, i);
       v17 = sub_6094D9D8(v8, v9, 2, i);
-      sub_60913D88(v16 + 4724, 2 * v17, a4, 4, 0);
+      Slot_initFromResource(v16 + 4724, 2 * v17, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v22, v16 + 4724, 0);
       Slot_initWithOwnerAndOffset(v21, v16 + 4724, 0);
       result = sub_6094DDDC(v14 + 5352, v21, v8, v9, 2, i++);
@@ -268986,7 +268990,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v8 = 0;
     v9 = a1 + 5912;
-    sub_60913D88(a1 + 5912, 32 * a2 * (a3 + 3) + 64, a4, 4, 0);
+    Slot_initFromResource(a1 + 5912, 32 * a2 * (a3 + 3) + 64, a4, 4, 0);
     Slot_initWithOwnerAndOffset(v54, v9, 0);
     Slot_initWithOwnerAndOffset(v53, v9, 0);
     sub_6094E244(a1 + 6112, v53, a2, a3);
@@ -269057,7 +269061,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( v14 < a2 );
       }
       v15 = 0;
-      sub_60913D88(a1 + 5940, 2 * v12, a4, 4, 0);
+      Slot_initFromResource(a1 + 5940, 2 * v12, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v52, a1 + 5940, 0);
       Slot_initWithOwnerAndOffset(v51, a1 + 5940, 0);
       sub_6094E5B0(a1 + 6384, v51, a2, a3, 0, 0);
@@ -269083,7 +269087,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       while ( v18 < a2 );
       v19 = 0;
-      sub_60913D88(a1 + 5968, v15, a4, 4, 0);
+      Slot_initFromResource(a1 + 5968, v15, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v52, a1 + 5968, 0);
       Slot_initWithOwnerAndOffset(v51, a1 + 5968, 0);
       sub_6094E5B0(a1 + 6464, v51, a2, a3, 0, 1);
@@ -269108,22 +269112,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v19 += 6;
       }
       while ( v22 < a2 );
-      sub_60913D88(a1 + 5996, v19, a4, 4, 0);
+      Slot_initFromResource(a1 + 5996, v19, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v52, a1 + 5996, 0);
       Slot_initWithOwnerAndOffset(v51, a1 + 5996, 0);
       sub_6094E5B0(a1 + 6544, v51, a2, a3, 0, 2);
     }
     else
     {
-      sub_60913D88(a1 + 5940, 0, a4, 4, 0);
+      Slot_initFromResource(a1 + 5940, 0, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v52, a1 + 5940, 0);
       Slot_initWithOwnerAndOffset(v51, a1 + 5940, 0);
       sub_6094E5B0(a1 + 6384, v51, 0, a3, 0, 0);
-      sub_60913D88(a1 + 5968, 0, a4, 4, 0);
+      Slot_initFromResource(a1 + 5968, 0, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v52, a1 + 5968, 0);
       Slot_initWithOwnerAndOffset(v51, a1 + 5968, 0);
       sub_6094E5B0(a1 + 6464, v51, 0, a3, 0, 1);
-      sub_60913D88(a1 + 5996, 0, a4, 4, 0);
+      Slot_initFromResource(a1 + 5996, 0, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v52, a1 + 5996, 0);
       Slot_initWithOwnerAndOffset(v51, a1 + 5996, 0);
       sub_6094E5B0(a1 + 6544, v51, 0, a3, 0, 2);
@@ -269146,7 +269150,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           while ( v27 < a2 );
         }
         v29 = 0;
-        sub_60913D88(a1 + 6024, 2 * i, a4, 4, 0);
+        Slot_initFromResource(a1 + 6024, 2 * i, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v50, a1 + 6024, 0);
         Slot_initWithOwnerAndOffset(v49, a1 + 6024, 0);
         sub_6094E5B0(a1 + 6624, v49, a2, -1, 1, 0);
@@ -269161,13 +269165,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
       {
         v29 = 0;
-        sub_60913D88(a1 + 6024, 0, a4, 4, 0);
+        Slot_initFromResource(a1 + 6024, 0, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v50, a1 + 6024, 0);
         Slot_initWithOwnerAndOffset(v49, a1 + 6024, 0);
         sub_6094E5B0(a1 + 6624, v49, 0, -1, 1, 0);
       }
       v47 = 0;
-      sub_60913D88(a1 + 6052, v29, a4, 4, 0);
+      Slot_initFromResource(a1 + 6052, v29, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v50, a1 + 6052, 0);
       Slot_initWithOwnerAndOffset(v49, a1 + 6052, 0);
       sub_6094E5B0(a1 + 6704, v49, a2, -1, 1, 1);
@@ -269182,7 +269186,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v48 < a2 );
       }
-      sub_60913D88(a1 + 6080, v47, a4, 4, 0);
+      Slot_initFromResource(a1 + 6080, v47, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v50, a1 + 6080, 0);
       Slot_initWithOwnerAndOffset(v49, a1 + 6080, 0);
       return sub_6094E5B0(a1 + 6784, v49, a2, -1, 1, 2);
@@ -269225,7 +269229,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v33 < a2 );
         v34 = 0;
-        sub_60913D88(a1 + 6024, v32, a4, 4, 0);
+        Slot_initFromResource(a1 + 6024, v32, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v50, a1 + 6024, 0);
         Slot_initWithOwnerAndOffset(v49, a1 + 6024, 0);
         v35 = 1;
@@ -269250,7 +269254,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v40 < a2 );
         v41 = 0;
-        sub_60913D88(a1 + 6052, v39, a4, 4, 0);
+        Slot_initFromResource(a1 + 6052, v39, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v50, a1 + 6052, 0);
         Slot_initWithOwnerAndOffset(v49, a1 + 6052, 0);
         v42 = 1;
@@ -269270,7 +269274,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-        sub_60913D88(a1 + 6024, 2 * v24, a4, 4, 0);
+        Slot_initFromResource(a1 + 6024, 2 * v24, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v50, a1 + 6024, 0);
         Slot_initWithOwnerAndOffset(v49, a1 + 6024, 0);
         sub_6094E5B0(a1 + 6624, v49, 0, a3, 1, 0);
@@ -269278,7 +269282,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         do
           v38 += 2;
         while ( v38 <= v23 );
-        sub_60913D88(a1 + 6052, 0, a4, 4, 0);
+        Slot_initFromResource(a1 + 6052, 0, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v50, a1 + 6052, 0);
         Slot_initWithOwnerAndOffset(v49, a1 + 6052, 0);
         sub_6094E5B0(a1 + 6704, v49, 0, a3, 1, 1);
@@ -269298,7 +269302,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v45 < a2 );
       }
-      sub_60913D88(a1 + 6080, 2 * v41, a4, 4, 0);
+      Slot_initFromResource(a1 + 6080, 2 * v41, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v50, a1 + 6080, 0);
       Slot_initWithOwnerAndOffset(v49, a1 + 6080, 0);
       return sub_6094E5B0(a1 + 6784, v49, a2, a3, 1, 2);
@@ -269363,7 +269367,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v58[3]; // [sp+48h] [bp-Ch] BYREF
   
     v9 = a1 + 6864;
-    sub_60913D88(a1 + 6864, 32 * a2 * (a3 + 2 * a4 - 1) + 64, a5, 4, 0);
+    Slot_initFromResource(a1 + 6864, 32 * a2 * (a3 + 2 * a4 - 1) + 64, a5, 4, 0);
     Slot_initWithOwnerAndOffset(v58, v9, 0);
     Slot_initWithOwnerAndOffset(v57, v9, 0);
     sub_6094E8A8(a1 + 7064, v57, a2, a3, a4);
@@ -269433,7 +269437,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v20 += 6;
         }
         while ( v21 < a2 );
-        sub_60913D88(a1 + 28 * i + 6892, v20, a5, 4, 0);
+        Slot_initFromResource(a1 + 28 * i + 6892, v20, a5, 4, 0);
         Slot_initWithOwnerAndOffset(v56, a1 + 28 * i + 6892, 0);
         Slot_initWithOwnerAndOffset(v55, a1 + 28 * i + 6892, 0);
         sub_6094EDDC(a1 + 80 * i + 7336, v55, a2, a3, a4, 0, i);
@@ -269488,7 +269492,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
   LABEL_37:
-    sub_60913D88(a1 + 6892, 0, a5, 4, 0);
+    Slot_initFromResource(a1 + 6892, 0, a5, 4, 0);
     Slot_initWithOwnerAndOffset(v56, a1 + 6892, 0);
     Slot_initWithOwnerAndOffset(v55, a1 + 6892, 0);
     sub_6094EDDC(a1 + 7336, v55, 0, a3, a4, 0, 0);
@@ -269507,7 +269511,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       while ( v29 < a4 - 2 );
     }
     v30 = 4;
-    sub_60913D88(a1 + 6920, 0, a5, 4, 0);
+    Slot_initFromResource(a1 + 6920, 0, a5, 4, 0);
     Slot_initWithOwnerAndOffset(v56, a1 + 6920, 0);
     Slot_initWithOwnerAndOffset(v55, a1 + 6920, 0);
     sub_6094EDDC(a1 + 7416, v55, 0, a3, a4, 0, 1);
@@ -269524,7 +269528,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v31 += 4;
       while ( v31 < a4 - 4 );
     }
-    sub_60913D88(a1 + 6948, 0, a5, 4, 0);
+    Slot_initFromResource(a1 + 6948, 0, a5, 4, 0);
     Slot_initWithOwnerAndOffset(v56, a1 + 6948, 0);
     Slot_initWithOwnerAndOffset(v55, a1 + 6948, 0);
     sub_6094EDDC(a1 + 7496, v55, 0, a3, a4, 0, 2);
@@ -269587,7 +269591,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           while ( v40 < a4 );
         }
-        sub_60913D88(a1 + 28 * j + 6976, 2 * v35, a5, 4, 0);
+        Slot_initFromResource(a1 + 28 * j + 6976, 2 * v35, a5, 4, 0);
         Slot_initWithOwnerAndOffset(v54, a1 + 28 * j + 6976, 0);
         Slot_initWithOwnerAndOffset(v53, a1 + 28 * j + 6976, 0);
         result = sub_6094EDDC(a1 + 80 * j + 7576, v53, a2, a3, a4, 1, j);
@@ -269638,7 +269642,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       while ( v48 < a4 );
     }
   LABEL_83:
-    sub_60913D88(a1 + 6976, 0, a5, 4, 0);
+    Slot_initFromResource(a1 + 6976, 0, a5, 4, 0);
     Slot_initWithOwnerAndOffset(v54, a1 + 6976, 0);
     Slot_initWithOwnerAndOffset(v53, a1 + 6976, 0);
     sub_6094EDDC(a1 + 7576, v53, 0, a3, a4, 1, 0);
@@ -269654,7 +269658,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       while ( v50 < a4 );
     }
     v51 = 4;
-    sub_60913D88(a1 + 7004, 0, a5, 4, 0);
+    Slot_initFromResource(a1 + 7004, 0, a5, 4, 0);
     Slot_initWithOwnerAndOffset(v54, a1 + 7004, 0);
     Slot_initWithOwnerAndOffset(v53, a1 + 7004, 0);
     sub_6094EDDC(a1 + 7656, v53, 0, a3, a4, 1, 1);
@@ -269668,7 +269672,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v52 += 4;
       while ( v52 < a4 );
     }
-    sub_60913D88(a1 + 7032, 0, a5, 4, 0);
+    Slot_initFromResource(a1 + 7032, 0, a5, 4, 0);
     Slot_initWithOwnerAndOffset(v54, a1 + 7032, 0);
     Slot_initWithOwnerAndOffset(v53, a1 + 7032, 0);
     return sub_6094EDDC(a1 + 7736, v53, 0, a3, a4, 1, 2);
@@ -269741,7 +269745,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v8 = 0;
     v9 = a1 + 7816;
-    sub_60913D88(a1 + 7816, 32 * a2 * (a3 + 2) + 32, a4, 4, 0);
+    Slot_initFromResource(a1 + 7816, 32 * a2 * (a3 + 2) + 32, a4, 4, 0);
     Slot_initWithOwnerAndOffset(v66, v9, 0);
     Slot_initWithOwnerAndOffset(v65, v9, 0);
     sub_6094F5D4(a1 + 8016, v65, a2, a3);
@@ -269810,7 +269814,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       while ( v19 < a2 );
       v20 = 0;
-      sub_60913D88(a1 + 7844, v18, a4, 4, 0);
+      Slot_initFromResource(a1 + 7844, v18, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v64, a1 + 7844, 0);
       Slot_initWithOwnerAndOffset(v63, a1 + 7844, 0);
       sub_6094F98C(a1 + 8288, v63, a2, a3, 0, 0);
@@ -269846,7 +269850,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       while ( v25 < a2 );
       v26 = 0;
-      sub_60913D88(a1 + 7872, v24, a4, 4, 0);
+      Slot_initFromResource(a1 + 7872, v24, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v64, a1 + 7872, 0);
       Slot_initWithOwnerAndOffset(v63, a1 + 7872, 0);
       sub_6094F98C(a1 + 8368, v63, a2, a3, 0, 1);
@@ -269881,7 +269885,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v30 += 6;
       }
       while ( v31 < a2 );
-      sub_60913D88(a1 + 7900, v30, a4, 4, 0);
+      Slot_initFromResource(a1 + 7900, v30, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v64, a1 + 7900, 0);
       Slot_initWithOwnerAndOffset(v63, a1 + 7900, 0);
       sub_6094F98C(a1 + 8448, v63, a2, a3, 0, 2);
@@ -269906,7 +269910,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v13 < 7 )
         {
   LABEL_46:
-          sub_60913D88(a1 + 7844, 0, a4, 4, 0);
+          Slot_initFromResource(a1 + 7844, 0, a4, 4, 0);
           Slot_initWithOwnerAndOffset(v64, a1 + 7844, 0);
           Slot_initWithOwnerAndOffset(v63, a1 + 7844, 0);
           sub_6094F98C(a1 + 8288, v63, 0, a3, 0, 0);
@@ -269922,12 +269926,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       while ( v15 < a3 );
       goto LABEL_46;
     }
-    sub_60913D88(a1 + 7844, 0, a4, 4, 0);
+    Slot_initFromResource(a1 + 7844, 0, a4, 4, 0);
     Slot_initWithOwnerAndOffset(v64, a1 + 7844, 0);
     Slot_initWithOwnerAndOffset(v63, a1 + 7844, 0);
     sub_6094F98C(a1 + 8288, v63, 0, a3, 0, 0);
   LABEL_48:
-    sub_60913D88(a1 + 7872, 0, a4, 4, 0);
+    Slot_initFromResource(a1 + 7872, 0, a4, 4, 0);
     Slot_initWithOwnerAndOffset(v64, a1 + 7872, 0);
     Slot_initWithOwnerAndOffset(v63, a1 + 7872, 0);
     v33 = 1;
@@ -269938,7 +269942,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v33 += 4;
       while ( v33 < a3 );
     }
-    sub_60913D88(a1 + 7900, 0, a4, 4, 0);
+    Slot_initFromResource(a1 + 7900, 0, a4, 4, 0);
     Slot_initWithOwnerAndOffset(v64, a1 + 7900, 0);
     Slot_initWithOwnerAndOffset(v63, a1 + 7900, 0);
     sub_6094F98C(a1 + 8448, v63, 0, a3, 0, 2);
@@ -269981,7 +269985,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v43 < a2 );
         v44 = 0;
-        sub_60913D88(a1 + 7928, v42, a4, 4, 0);
+        Slot_initFromResource(a1 + 7928, v42, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v62, a1 + 7928, 0);
         Slot_initWithOwnerAndOffset(v61, a1 + 7928, 0);
         v45 = 1;
@@ -270006,7 +270010,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v50 < a2 );
         v51 = 0;
-        sub_60913D88(a1 + 7956, v49, a4, 4, 0);
+        Slot_initFromResource(a1 + 7956, v49, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v62, a1 + 7956, 0);
         Slot_initWithOwnerAndOffset(v61, a1 + 7956, 0);
         v52 = 1;
@@ -270026,7 +270030,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-        sub_60913D88(a1 + 7928, 2 * v34, a4, 4, 0);
+        Slot_initFromResource(a1 + 7928, 2 * v34, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v62, a1 + 7928, 0);
         Slot_initWithOwnerAndOffset(v61, a1 + 7928, 0);
         sub_6094F98C(a1 + 8528, v61, 0, a3, 1, 0);
@@ -270034,7 +270038,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         do
           v48 += 2;
         while ( v48 <= a3 );
-        sub_60913D88(a1 + 7956, 0, a4, 4, 0);
+        Slot_initFromResource(a1 + 7956, 0, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v62, a1 + 7956, 0);
         Slot_initWithOwnerAndOffset(v61, a1 + 7956, 0);
         sub_6094F98C(a1 + 8608, v61, 0, a3, 1, 1);
@@ -270052,7 +270056,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( v55 < a2 );
         v51 += v55;
       }
-      sub_60913D88(a1 + 7984, 2 * v51, a4, 4, 0);
+      Slot_initFromResource(a1 + 7984, 2 * v51, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v62, a1 + 7984, 0);
       Slot_initWithOwnerAndOffset(v61, a1 + 7984, 0);
       v56 = a2;
@@ -270075,7 +270079,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           while ( v37 < a2 );
         }
         v39 = 0;
-        sub_60913D88(a1 + 7928, 2 * i, a4, 4, 0);
+        Slot_initFromResource(a1 + 7928, 2 * i, a4, 4, 0);
         Slot_initWithOwnerAndOffset(v62, a1 + 7928, 0);
         Slot_initWithOwnerAndOffset(v61, a1 + 7928, 0);
 
@@ -270132,19 +270136,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v6 = a3;
     v10 = 0;
-    sub_60913D88((int)(a1 + 2192), 32 * a2 * (a3 + 1), a4, 4, 0);
+    Slot_initFromResource((int)(a1 + 2192), 32 * a2 * (a3 + 1), a4, 4, 0);
     Slot_initWithOwnerAndOffset(v49, (int)(a1 + 2192), 0);
     Slot_initWithOwnerAndOffset(v48, (int)(a1 + 2192), 0);
     sub_6094FD38(a1 + 2242, v48, a2, v6, a5, a6);
-    sub_60913D88((int)(a1 + 2199), 12 * v6 * a2, a4, 4, 0);
+    Slot_initFromResource((int)(a1 + 2199), 12 * v6 * a2, a4, 4, 0);
     Slot_initWithOwnerAndOffset(v47, (int)(a1 + 2199), 0);
     Slot_initWithOwnerAndOffset(v46, (int)(a1 + 2199), 0);
     sub_609503B0(a1 + 2310, v46, a2, v6, 0, 0);
-    sub_60913D88((int)(a1 + 2206), 12 * (v6 >> 1) * (a2 >> 1), a4, 4, 0);
+    Slot_initFromResource((int)(a1 + 2206), 12 * (v6 >> 1) * (a2 >> 1), a4, 4, 0);
     Slot_initWithOwnerAndOffset(v47, (int)(a1 + 2206), 0);
     Slot_initWithOwnerAndOffset(v46, (int)(a1 + 2206), 0);
     sub_609503B0(a1 + 2330, v46, a2, v6, 0, 1);
-    sub_60913D88((int)(a1 + 2213), 12 * (v6 >> 2) * (a2 >> 2), a4, 4, 0);
+    Slot_initFromResource((int)(a1 + 2213), 12 * (v6 >> 2) * (a2 >> 2), a4, 4, 0);
     v11 = a1;
     Slot_initWithOwnerAndOffset(v47, (int)(a1 + 2213), 0);
     Slot_initWithOwnerAndOffset(v46, (int)(a1 + 2213), 0);
@@ -270158,7 +270162,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v12 = v11;
         v13 = 0;
         v14 = (int)&v11[7 * v10 + 2220];
-        sub_60913D88(v14, 8 * (v6 >> v10) * (a2 >> v10), v38, 4, 0);
+        Slot_initFromResource(v14, 8 * (v6 >> v10) * (a2 >> v10), v38, 4, 0);
         Slot_initWithOwnerAndOffset(v45, v14, 0);
         v15 = v14;
         v11 = v12;
@@ -270229,7 +270233,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      sub_60913D88((int)(a1 + 2220), 0, a4, 4, 0);
+      Slot_initFromResource((int)(a1 + 2220), 0, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v45, (int)(a1 + 2220), 0);
       Slot_initWithOwnerAndOffset(&v42, (int)(a1 + 2220), 0);
       v34 = v42;
@@ -270243,7 +270247,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v52 = v44;
       sub_60919D48(a1 + 2370, &v50, 1, 0);
       a1[2372] = 1;
-      sub_60913D88((int)(a1 + 2227), 0, a4, 4, 0);
+      Slot_initFromResource((int)(a1 + 2227), 0, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v45, (int)(a1 + 2227), 0);
       Slot_initWithOwnerAndOffset(&v42, (int)(a1 + 2227), 0);
       v35 = v42;
@@ -270257,7 +270261,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v52 = v44;
       sub_60919D48(a1 + 2390, &v50, 1, 0);
       a1[2392] = 1;
-      sub_60913D88((int)(a1 + 2234), 0, a4, 4, 0);
+      Slot_initFromResource((int)(a1 + 2234), 0, a4, 4, 0);
       Slot_initWithOwnerAndOffset(v45, (int)(a1 + 2234), 0);
       Slot_initWithOwnerAndOffset(&v42, (int)(a1 + 2234), 0);
       v36 = v42;
@@ -274038,7 +274042,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v12 = (_DWORD *)operator new(0x1Cu, a2, 4);
           Slot_construct((int)v12);
           *v12 = 12557340;
-          sub_60913D88((int)v12, v11, a2, v10, 8);
+          Slot_initFromResource((int)v12, v11, a2, v10, 8);
           Slot_initWithOwnerAndOffset(&v52, (int)v12, 0);
           v13 = v53;
           if ( v50 == 25 )
@@ -274301,7 +274305,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = a1;
     v4 = (int)(a1 + 210);
-    sub_60913D88((int)(a1 + 210), 16, a2, 4, 0);
+    Slot_initFromResource((int)(a1 + 210), 16, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v16, v4, 0);
     v5 = MEMORY[0xCC73E8](v2[213]);
     v6 = Slot_getRelativeOffset(v4);
@@ -274313,7 +274317,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Slot_initWithOwnerAndOffset(v15, v4, 0);
     sub_609225B8((int)(v2 + 6), v15, 0, 0x10u);
     sub_60922768(v2 + 6, 0, 46, 0, 0);
-    sub_60913D88((int)(v2 + 217), 16, a2, 4, 0);
+    Slot_initFromResource((int)(v2 + 217), 16, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v16, (int)(v2 + 217), 0);
     v8 = MEMORY[0xCC73E8](v2[220]);
     v9 = Slot_getRelativeOffset(v2 + 217);
@@ -274325,7 +274329,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Slot_initWithOwnerAndOffset(v15, (int)(v2 + 217), 0);
     sub_609225B8((int)(v2 + 74), v15, 0, 0x10u);
     sub_60922768(v2 + 74, 0, 46, 0, 0);
-    sub_60913D88((int)(v2 + 224), 16, a2, 4, 0);
+    Slot_initFromResource((int)(v2 + 224), 16, a2, 4, 0);
     Slot_initWithOwnerAndOffset(v16, (int)(v2 + 224), 0);
     v11 = MEMORY[0xCC73E8](v2[227]);
     v12 = Slot_getRelativeOffset(v2 + 224);
@@ -274636,7 +274640,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
       }
     }
-    sub_608FDDF4((int)&v73, "0x%08x", v7);
+    StringUtil_formatInto((int)&v73, "0x%08x", v7);
   LABEL_9:
     result = *a1;
     v12 = (*a1)[1];
@@ -274724,7 +274728,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
         {
   LABEL_34:
-          sub_608FDDF4((int)&v73, "0x%08x", v24);
+          StringUtil_formatInto((int)&v73, "0x%08x", v24);
         }
         v63 = v19;
         v17 = v64;
@@ -274792,7 +274796,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             else
             {
   LABEL_56:
-              sub_608FDDF4((int)&v73, "0x%08x", v35);
+              StringUtil_formatInto((int)&v73, "0x%08x", v35);
             }
             switch ( v30[7] )
             {
@@ -275461,7 +275465,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v38 = sub_6090E438(v70, a1 + 1216);
       sub_6090E560((int)v38, v62, (float *)(a1 + 1216));
       sub_6090B260(a1 + 1216, v62);
-      v39 = (unsigned __int8 *)sub_6090B350((int)&v68);
+      v39 = (unsigned __int8 *)RenderParams_defaultInit((int)&v68);
       v69 &= ~1u;
       v68 = 0;
       sub_6090B4B0(v39, v62);
@@ -276151,7 +276155,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *v21 = 12557340;
         if ( !a5 )
           v20 = -v20;
-        sub_60913D88((int)v21, v9, v19, v20, 4);
+        Slot_initFromResource((int)v21, v9, v19, v20, 4);
         Slot_initWithOwnerAndOffset(&v37, (int)v21, 0);
         v22 = v37;
         v23 = v38;
@@ -277242,7 +277246,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v52 = v9;
       }
       v53 = v10;
-      result = sub_608FDDF4(
+      result = StringUtil_formatInto(
                  *(_DWORD *)(v11 + 888),
                  "Position  ( %f, %f, %f )\nAttention ( %f, %f, %f )\nUp Vector ( %f, %f, %f )",
                  v5,
@@ -277286,7 +277290,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v18 = *(_DWORD *)(v17 + 888);
         if ( *(_DWORD *)(v17 + 884) > 1u )
           v18 += 524;
-        sub_608FDDF4(v18, "PespectiveProjection");
+        StringUtil_formatInto(v18, "PespectiveProjection");
       }
       else
       {
@@ -277302,7 +277306,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v20 = *(_DWORD *)(v19 + 888);
           if ( *(_DWORD *)(v19 + 884) > 1u )
             v20 += 524;
-          sub_608FDDF4(v20, "FrustumProjection");
+          StringUtil_formatInto(v20, "FrustumProjection");
         }
         else
         {
@@ -277318,7 +277322,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v23 = *(_DWORD *)(v22 + 888);
             if ( *(_DWORD *)(v22 + 884) > 1u )
               v23 += 524;
-            sub_608FDDF4(v23, "OrthoProjection");
+            StringUtil_formatInto(v23, "OrthoProjection");
           }
           else
           {
@@ -277337,9 +277341,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( *(_DWORD *)(v25 + 884) > 1u )
               v26 += 524;
             if ( v24 )
-              sub_608FDDF4(v26, "Unknown\n");
+              StringUtil_formatInto(v26, "Unknown\n");
             else
-              sub_608FDDF4(v26, "DirectProjection");
+              StringUtil_formatInto(v26, "DirectProjection");
           }
         }
       }
@@ -281558,12 +281562,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 += 52;
     }
     while ( v11 + 49 != v6 + 2149 );
-    sub_6090B350((int)(v15 + 2248));
-    sub_6090B350((int)(v15 + 2274));
-    sub_6090B350((int)(v15 + 2300));
-    sub_6090B350((int)(v15 + 2326));
-    sub_6090B350((int)(v15 + 2352));
-    sub_6090B350((int)(v15 + 2378));
+    RenderParams_defaultInit((int)(v15 + 2248));
+    RenderParams_defaultInit((int)(v15 + 2274));
+    RenderParams_defaultInit((int)(v15 + 2300));
+    RenderParams_defaultInit((int)(v15 + 2326));
+    RenderParams_defaultInit((int)(v15 + 2352));
+    RenderParams_defaultInit((int)(v15 + 2378));
     sub_60947BCC(v15 + 2404);
     v12 = dword_60C79C10 + 8;
     v15[2404] = dword_60C79C10 + 8;
@@ -281941,7 +281945,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v23 = (_DWORD *)operator new(0x1Cu, a5, 4);
     Slot_construct((int)v23);
     *v23 = 12557340;
-    sub_60913D88((int)v23, v22, a5, v21, 8);
+    Slot_initFromResource((int)v23, v22, a5, v21, 8);
     Slot_initWithOwnerAndOffset(&v99, (int)v23, 0);
     v24 = 0;
     v25 = v19;
@@ -282129,7 +282133,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v24 = 1;
         *v37 = v17;
       }
-      sub_608FDDF4((int)(v45 + 587), "UserData%d", v87);
+      StringUtil_formatInto((int)(v45 + 587), "UserData%d", v87);
       ++v24;
       ++v87;
     }
@@ -287831,7 +287835,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( result )
     {
       v9 = a5;
-      v10 = (unsigned __int8 *)sub_6090B350((int)&v85);
+      v10 = (unsigned __int8 *)RenderParams_defaultInit((int)&v85);
       v88 = 2;
       v87 &= ~1u;
       v86 = 0;
@@ -291138,7 +291142,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v142 = v18;
     *(_BYTE *)(a1 + 3664) = *v11;
-    v19 = (unsigned __int8 *)sub_6090B350((int)&v155);
+    v19 = (unsigned __int8 *)RenderParams_defaultInit((int)&v155);
     v20 = 3;
     v157 = v157 & 0xFFFFFFF0 | 3;
     LOWORD(v155) = 0;
@@ -291817,7 +291821,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _BYTE v65[104]; // [sp+E8h] [bp-68h] BYREF
     float32x4_t v66; // 0:q9.16
   
-    v10 = (unsigned __int8 *)sub_6090B350((int)v65);
+    v10 = (unsigned __int8 *)RenderParams_defaultInit((int)v65);
     sub_6090B4B0(v10, a1);
     sub_6093AC5C(a1, a4, a5);
     v11.n64_u64[0] = a3[1].n64_u64[0];
@@ -292739,7 +292743,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     agl_TextureData_ref((int)v9);
     sub_6091FDB0((int)v9, 1, 29, 32, 32, 1, 1, 0, 0, 1);
     v4 += 18;
-    sub_60913D88((int)v4, v9[10], a2, 0x2000, 8);
+    Slot_initFromResource((int)v4, v9[10], a2, 0x2000, 8);
     Slot_initWithOwnerAndOffset(v8, (int)v4, 0);
     return Object_releaseHandle((int)&v10);
   }
@@ -295001,7 +295005,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v8[16]; // [sp+8h] [bp-40h] BYREF
   
     v4 = a1 + 20;
-    sub_60913D88(a1 + 20, 0x10000, a3, 256, 2);
+    Slot_initFromResource(a1 + 20, 0x10000, a3, 256, 2);
     Slot_initWithOwnerAndOffset(v8, v4, 0);
     v5 = v8[0];
     v6 = v8[1];
@@ -296966,7 +296970,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v26 = (_DWORD *)operator new(0x1Cu, a10, 4);
     Slot_construct((int)v26);
     *v26 = 12557340;
-    sub_60913D88((int)v26, 16, a10, 4, 1);
+    Slot_initFromResource((int)v26, 16, a10, 4, 1);
     Slot_initWithOwnerAndOffset(&v38, (int)v26, 0);
     HIDWORD(v27) = &v36;
     v36 = v38;
@@ -296978,7 +296982,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v29 = (_DWORD *)operator new(0x1Cu, a10, 4);
     v30 = Slot_construct((int)v29);
     *v29 = 12557340;
-    sub_60913D88(v30, 16, a10, 4, 1);
+    Slot_initFromResource(v30, 16, a10, 4, 1);
     Slot_initWithOwnerAndOffset(&v38, (int)v29, 0);
     HIDWORD(v31) = &v36;
     v36 = v38;
@@ -298298,7 +298302,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v10 )
     {
       nullsub_119(a1 + 568, a2);
-      v11 = (unsigned __int8 *)sub_6090B350((int)&v18);
+      v11 = (unsigned __int8 *)RenderParams_defaultInit((int)&v18);
       v18 = 0;
       v19 &= ~1u;
       sub_6090B4B0(v11, a2);
@@ -298818,7 +298822,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v10 )
     {
       v36 = v9;
-      sub_60913D88(a1 + 4, v10, a6, 4, 1);
+      Slot_initFromResource(a1 + 4, v10, a6, 4, 1);
       v12 = 0;
       Slot_initWithOwnerAndOffset(v40, a1 + 4, 0);
       v13 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 16));
@@ -304742,7 +304746,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 216) = v33;
       *(float *)(a1 + 220) = v32;
       sub_6090B260(a1 + 212);
-      v37 = (unsigned __int8 *)sub_6090B350((int)v79);
+      v37 = (unsigned __int8 *)RenderParams_defaultInit((int)v79);
       v80 &= ~1u;
       v79[0] = 0;
       sub_6090B4B0(v37, *(_DWORD *)(v68 + 16));
@@ -305168,7 +305172,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       do
         v50 = __ldrex(&v135);
       while ( __strex(v50 | 2, &v135) );
-      v51 = (unsigned __int8 *)sub_6090B350((int)&v109);
+      v51 = (unsigned __int8 *)RenderParams_defaultInit((int)&v109);
       v110 &= ~1u;
       LOBYTE(v109) = 0;
       sub_6090B4B0(v51, *(_DWORD *)(v105 + 16));
@@ -305835,7 +305839,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *(float *)(a1 + 224) = v16;
             *(float *)(a1 + 228) = v15;
             sub_6090B260((int)v48);
-            v40 = (unsigned __int8 *)sub_6090B350((int)v53);
+            v40 = (unsigned __int8 *)RenderParams_defaultInit((int)v53);
             v54 &= ~1u;
             v53[0] = 0;
             sub_6090B4B0(v40, *(_DWORD *)(v3 + 16));
@@ -311161,7 +311165,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_BYTE *)v11 = MEMORY[0xB3BA34];
     v10 = 12424380;
     (*((void (__fastcall **)(const char **))*a2 + 3))(a2);
-    sub_608FDDF4((int)&v10, "%s.msbt", a2[1]);
+    StringUtil_formatInto((int)&v10, "%s.msbt", a2[1]);
     v4 = *(_DWORD *)(a1 + 24);
     if ( v4 == a1 + 20 )
       return 0;
@@ -311211,7 +311215,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_BYTE *)v11 = MEMORY[0xB3BA34];
     v10 = 12424380;
     (*((void (__fastcall **)(const char **))*a2 + 3))(a2);
-    sub_608FDDF4((int)&v10, "LayoutMsg/%s.msbt", a2[1]);
+    StringUtil_formatInto((int)&v10, "LayoutMsg/%s.msbt", a2[1]);
     v4 = *(_DWORD *)(a1 + 24);
     if ( v4 == a1 + 20 )
       return 0;
@@ -315159,7 +315163,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_BYTE *)v17 = MEMORY[0xB3BA34];
     v16 = 12575792;
     v11 = (const char *)(*(int (__fastcall **)(int *))(*a1 + 56))(a1);
-    sub_608FDDF4((int)&v16, "%s.bflyt", v11);
+    StringUtil_formatInto((int)&v16, "%s.bflyt", v11);
     (*(void (__fastcall **)(int *, int *, int))(*a1 + 108))(a1, &v16, v10);
     (*(void (__fastcall **)(int, int, _DWORD))(*(_DWORD *)v10 + 12))(v10, 10029528, 0);
     (*(void (__fastcall **)(int *, int))(*a1 + 88))(a1, a3);
@@ -325492,7 +325496,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       do
         v56 = __ldrex(&v87);
       while ( __strex(v56 | 2, &v87) );
-      v57 = (unsigned __int8 *)sub_6090B350((int)v78);
+      v57 = (unsigned __int8 *)RenderParams_defaultInit((int)v78);
       v79 &= ~1u;
       v78[0] = 0;
       sub_6090B4B0(v57, v3[4]);

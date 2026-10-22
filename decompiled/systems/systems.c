@@ -443,7 +443,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall SE_SYS_CS_READ_BALLOON_ON_ref(int a1)
   {
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 2060), 0, (_DWORD *)0xC9ECD8, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CS_READ_BALLOON_ON", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CS_READ_BALLOON_ON", 0);
   }
 
 /* ============================================================================
@@ -567,11 +567,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 20) = 0;
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13233408);
     *(_DWORD *)(a1 + 4) = 12571600;
-    sub_6045BF30(a1 + 40);
-    sub_6045BF30(a1 + 444);
-    sub_6045BF30(a1 + 848);
-    sub_6045BF30(a1 + 1252);
-    sub_6045BF30(a1 + 1656);
+    ctor_installTwoVtables(a1 + 40);
+    ctor_installTwoVtables(a1 + 444);
+    ctor_installTwoVtables(a1 + 848);
+    ctor_installTwoVtables(a1 + 1252);
+    ctor_installTwoVtables(a1 + 1656);
     *(_DWORD *)(a1 + 2060) = 12570900;
     *sub_60475900(a1 + 2060, a1 + 5588, 1) = 12570900;
     *(_DWORD *)(a1 + 5588) = 0;
@@ -648,11 +648,11 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v4 = 1;
     sub_60475334(a1 + 2060, a1 + 12824, &dword_60C9EDE8, &v4);
-    sub_6045BF58(a1 + 40, 0);
-    sub_6045BF58(a1 + 444, 1);
-    sub_6045BF58(a1 + 848, 2);
-    sub_6045BF58(a1 + 1252, 3);
-    return sub_6045BF58(a1 + 1656, 4);
+    Registry_iterateAndRegister(a1 + 40, 0);
+    Registry_iterateAndRegister(a1 + 444, 1);
+    Registry_iterateAndRegister(a1 + 848, 2);
+    Registry_iterateAndRegister(a1 + 1252, 3);
+    return Registry_iterateAndRegister(a1 + 1656, 4);
   }
 
 /* ============================================================================
@@ -668,7 +668,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v6; // [sp+Ch] [bp-4h]
   
     v2 = a1 + 515;
-    sub_604734E4(a1 + 515, 0);
+    Disposer_allocateChildren(a1 + 515, 0);
     sub_60475C8C((int)v2);
     v5 = 12321336;
     v6 = "BaloonGuide.bflyt";
@@ -708,7 +708,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_6050A950(a1 + 5608, *(_DWORD *)(a1 + 12832));
       sub_6050A8A4(a1 + 5608);
-      return sub_60473B58(a1 + 2060, 14, 0);
+      return Table_getEntryById(a1 + 2060, 14, 0);
     }
     return result;
   }
@@ -742,7 +742,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MessageQueue_postType3((_DWORD *)(8 * a3 + 13233384), *(_DWORD *)(a1 + 12824), 0);
     ArrayOf5_lookupByIndex((_DWORD *)(v3 + 2060), 0, (_DWORD *)0xC9ECD8, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(v3 + 5572) + 104))(**(_DWORD **)(v3 + 5572));
-    sub_60473B58(v3 + 2060, 14, 0);
+    Table_getEntryById(v3 + 2060, 14, 0);
     *(_DWORD *)(v3 + 5648) = 1;
     v4 = *(_DWORD *)(v3 + 5644);
     v3 += 5644;
@@ -1180,7 +1180,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"BonusTime.bflyt";
@@ -1274,7 +1274,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -1601,7 +1601,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"BootSceneDL.bflyt";
@@ -1684,7 +1684,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60482614(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 24));
-    return sub_60473B58((_DWORD *)(a1 + 40), 0xEu, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 40), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -2031,7 +2031,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     a1[2620] = 14;
     v2 = a1 + 835;
-    sub_604734E4(a1 + 835, 0);
+    Disposer_allocateChildren(a1 + 835, 0);
     sub_60475C8C((int)v2);
     v31 = (char *)&v33;
     v30 = 12322272;
@@ -2042,7 +2042,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60C9EFEC + 12))(&dword_60C9EFEC);
     v3 = (const char *)dword_60C9EFF0;
     (*((void (__fastcall **)(_UNKNOWN **))off_60C9EFF4 + 3))(&off_60C9EFF4);
-    sub_608FDDF4(&v30, "%s.%s", v3, (const char *)dword_60C9EFF8);
+    StringUtil_formatInto(&v30, "%s.%s", v3, (const char *)dword_60C9EFF8);
     message_ref(v2, &v30, 0, 0, 0);
     result = a1[839];
     if ( result )
@@ -2219,7 +2219,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       while ( v3 );
     }
-    result = sub_60473B58(a1 + 3340, *(_DWORD *)(a1 + 10480), 0);
+    result = Table_getEntryById(a1 + 3340, *(_DWORD *)(a1 + 10480), 0);
     *(_DWORD *)(a1 + 3336) = 0;
     return result;
   }
@@ -2600,7 +2600,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(*(_DWORD *)(a1 + 3640) + 5);
     if ( (result & 0x20) != 0 )
     {
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13234360);
     }
     return result;
@@ -2765,7 +2765,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"ChallengeCompleteWindow.bflyt";
@@ -2834,7 +2834,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6050A8A4(*(_DWORD *)(a1 + 3656));
       sub_6050A8A4(*(_DWORD *)(a1 + 3660));
       sub_6050A8A4(*(_DWORD *)(a1 + 3664));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -2952,19 +2952,19 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3648) = 0;
     sub_60484570(a1);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
-    sub_60473B58(a1 + 40, 14, 0);
+    Table_getEntryById(a1 + 40, 14, 0);
     ++*(_DWORD *)(a1 + 3648);
     sub_60484570(a1);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
-    sub_60473B58(a1 + 40, 14, 0);
+    Table_getEntryById(a1 + 40, 14, 0);
     ++*(_DWORD *)(a1 + 3648);
     sub_60484570(a1);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
-    sub_60473B58(a1 + 40, 14, 0);
+    Table_getEntryById(a1 + 40, 14, 0);
     ++*(_DWORD *)(a1 + 3648);
     sub_60484570(a1);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
-    sub_60473B58(a1 + 40, 14, 0);
+    Table_getEntryById(a1 + 40, 14, 0);
     v26 = 2;
     *(_DWORD *)(a1 + 3648) = v25;
     if ( v25 <= 2 )
@@ -3454,7 +3454,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ChallengeFailure.bflyt";
@@ -3524,7 +3524,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -3840,7 +3840,7 @@ static inline unsigned int uxtb16(unsigned int x)
       default:
         break;
     }
-    sub_6045BF58(a1 + 88, 0);
+    Registry_iterateAndRegister(a1 + 88, 0);
     ArrayOf5_lookupByIndex(*(_DWORD **)(a1 + 4), 0, (_DWORD *)0xC9F2D0, 0);
     *(_BYTE *)(a1 + 12) = 1;
     result = sub_60478680((int)"SE_SYS_DIALOGUE_IN", 9);
@@ -4102,7 +4102,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[895] = 0;
     *((_BYTE *)v3 + 3584) = 0;
     *(_DWORD *)(a1 + 4) = v3;
-    sub_604734E4(v3, 0);
+    Disposer_allocateChildren(v3, 0);
     v4 = *(_DWORD *)(a1 + 4);
     v15 = 12321336;
     v16 = "Game";
@@ -4298,7 +4298,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(a1 + 596) )
       {
         StateMgr::execute((_DWORD *)(a1 + 532));
-        sub_60473B58(*(_DWORD *)(a1 + 4), 14, 0);
+        Table_getEntryById(*(_DWORD *)(a1 + 4), 14, 0);
       }
       return sub_604DE9B0(a1, 1, 0);
     }
@@ -4958,9 +4958,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (unsigned int)*v8 >= 4 )
       v13 = 0;
     sub_604742D0(v4, v11, &v24, *(_DWORD *)(a1 + 4 * v13 + 13784), 0);
-    sub_60502548(a1 + 3768);
+    StateMgr_resetAndMaybeChange(a1 + 3768);
     *(_WORD *)(a1 + 4820) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3808));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3808));
     v14 = a1 + 13800;
     v15 = *v3;
     if ( (unsigned int)*v3 >= 4 )
@@ -4987,7 +4987,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6048EBD4(a1, v22);
     sub_6048F09C(a1, 0, 256);
     sub_6048EE54((_DWORD *)a1, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
   }
 
 /* ============================================================================
@@ -5139,7 +5139,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18 = 12321336;
     v19 = v16;
     ArrayOf5_lookupByIndex(v15, 4u, &v18, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
   }
 
 /* ============================================================================
@@ -5183,9 +5183,9 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !*(_BYTE *)(a1 + 4810) )
       {
         *v3 = *(_DWORD *)(a1 + 14232);
-        sub_60502548(a1 + 3768);
+        StateMgr_resetAndMaybeChange(a1 + 3768);
         *(_WORD *)(a1 + 4820) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3808));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3808));
         v8 = 1;
         v11[0] = 1;
         v11[1] = 1;
@@ -5280,9 +5280,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (unsigned int)*v8 >= 4 )
       v13 = 0;
     sub_604742D0(v4, v11, &v24, *(_DWORD *)(a1 + 4 * v13 + 13784), 0);
-    sub_60502548(a1 + 3768);
+    StateMgr_resetAndMaybeChange(a1 + 3768);
     *(_WORD *)(a1 + 4820) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3808));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3808));
     v14 = a1 + 13800;
     v15 = *v3;
     if ( (unsigned int)*v3 >= 4 )
@@ -5309,7 +5309,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6048EBD4(a1, v22);
     sub_6048F09C(a1, 0, 256);
     sub_6048EE54((_DWORD *)a1, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
   }
 
 /* ============================================================================
@@ -5461,7 +5461,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18 = 12321336;
     v19 = v16;
     ArrayOf5_lookupByIndex(v15, 4u, &v18, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
   }
 
 /* ============================================================================
@@ -5505,9 +5505,9 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !*(_BYTE *)(a1 + 4810) )
       {
         *v3 = *(_DWORD *)(a1 + 14232);
-        sub_60502548(a1 + 3768);
+        StateMgr_resetAndMaybeChange(a1 + 3768);
         *(_WORD *)(a1 + 4820) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3808));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3808));
         v8 = 1;
         v11[0] = 1;
         v11[1] = 1;
@@ -5645,7 +5645,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *v3 < 4 )
         result = *v3;
       if ( a1[1199] == a1[24 * result + 1469 + v9] )
-        sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
       v10 = 1;
       v12[0] = 1;
       v12[1] = 1;
@@ -5721,9 +5721,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_60488444(int a1)
   {
-    sub_60502548(a1 + 3768);
+    StateMgr_resetAndMaybeChange(a1 + 3768);
     *(_WORD *)(a1 + 4820) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3808));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3808));
   }
 
 /* ============================================================================
@@ -5968,9 +5968,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604889B8(int a1)
   {
-    sub_60502548(a1 + 3768);
+    StateMgr_resetAndMaybeChange(a1 + 3768);
     *(_WORD *)(a1 + 4820) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3808));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3808));
   }
 
 /* ============================================================================
@@ -6401,8 +6401,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 0;
     v3 = (_DWORD *)(a1 + 3808);
     *(_WORD *)(a1 + 4820) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3808));
-    sub_60502548(a1 + 3768);
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3808));
+    StateMgr_resetAndMaybeChange(a1 + 3768);
     if ( *(_DWORD *)(a1 + 14228) < 4u )
       v2 = *(_DWORD *)(a1 + 14228);
     return sub_6047F01C(v3, *(_DWORD *)(a1 + 4 * v2 + 6260));
@@ -6490,7 +6490,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 13780) = 0;
     *(_DWORD *)(a1 + 13820) = 0;
     memset((void *)(a1 + 13784), 0, 0x22u);
-    sub_6045BF30(a1 + 13824);
+    ctor_installTwoVtables(a1 + 13824);
     *(_DWORD *)(a1 + 14244) = 0;
     *(_DWORD *)(a1 + 14240) = 0;
     *(_DWORD *)(a1 + 14236) = 0;
@@ -6706,7 +6706,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v25 = 12321336;
     v26 = sub_604912FC(0);
     MEMORY[0xBC0240](&v28, &v25);
-    sub_604734E4((_DWORD *)(a1 + 6704), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 6704), 0);
     v3 = Pa_ArrowBtnL_00_Pa_ArrowBtnR_00_ref(0);
     v25 = 12321336;
     v26 = v3;
@@ -6714,7 +6714,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(void (__fastcall **)(int, int *, int *))(*(_DWORD *)(a1 + 6704) + 8);
     v27 = 1;
     v4(a1 + 6704, &v28, &v27);
-    sub_604734E4((_DWORD *)(a1 + 10244), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 10244), 0);
     v5 = Pa_ArrowBtnL_00_Pa_ArrowBtnR_00_ref(1);
     v25 = 12321336;
     v26 = v5;
@@ -6722,7 +6722,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = *(void (__fastcall **)(int, int *, int *))(*(_DWORD *)(a1 + 10244) + 8);
     v27 = 1;
     v6(a1 + 10244, &v28, &v27);
-    sub_6045BF58(a1 + 13824, 0);
+    Registry_iterateAndRegister(a1 + 13824, 0);
     sub_609094C4(a1 + 13824, 66032, MEMORY[0xB023FC], MEMORY[0xB023FD]);
     v7 = operator new(13188);
     *(_DWORD *)(a1 + 14240) = sub_6049468C(v7);
@@ -6766,7 +6766,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6048CB4C(a1);
     sub_6048CC10(a1);
     v22 = 0;
-    sub_60473B58(a1 + 36, 14, 0);
+    Table_getEntryById(a1 + 36, 14, 0);
     v23 = MEMORY[0xC9A1F0] + 16;
     do
       sub_603FD91C(v23, v22++);
@@ -6805,7 +6805,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = 0;
     v3 = a1 + 9;
-    sub_604734E4(a1 + 9, 0);
+    Disposer_allocateChildren(a1 + 9, 0);
     sub_60475C8C((int)v3);
     v20 = 12321336;
     v21 = "ChallengeSelect.bflyt";
@@ -9027,7 +9027,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60491118(v5);
       sub_6050229C(a1 + 3768);
       sub_60507028(*(_DWORD *)(a1 + 14236));
-      sub_60473B58(a1 + 36, 14, 0);
+      Table_getEntryById(a1 + 36, 14, 0);
       sub_6049560C(*(_DWORD *)(a1 + 14240));
       sub_604EE140(*(_DWORD *)(a1 + 14244));
       sub_605454B8(a1 + 14248);
@@ -9375,7 +9375,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v20[0] = 12321336;
       v20[1] = sub_60492F00(4);
       ArrayOf5_lookupByIndex(v9, 2u, v20, 0);
-      sub_60473B58(a1 + 9, 14, 0);
+      Table_getEntryById(a1 + 9, 14, 0);
       a1[11949] = 2;
       return 47796;
     }
@@ -9476,7 +9476,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v22 = 12321336;
       v23 = sub_60492F00(4);
       ArrayOf5_lookupByIndex(v4, 2u, &v22, 0);
-      sub_60473B58(a1 + 9, 14, 0);
+      Table_getEntryById(a1 + 9, 14, 0);
     }
     a1[11949] = v6;
     return 47796;
@@ -10317,9 +10317,9 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 14232) = v4 - *(_DWORD *)(a1 + 5848);
       if ( *(_DWORD *)(a1 + 14232) == *(_DWORD *)(a1 + 14228) )
       {
-        sub_60502548(v2 - 1043);
+        StateMgr_resetAndMaybeChange(v2 - 1043);
         *(_WORD *)(a1 + 4820) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3808));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3808));
         *v2 = 0;
         *(_BYTE *)(a1 + 4808) = 1;
         *(_BYTE *)(a1 + 4812) = 1;
@@ -10556,7 +10556,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v10 = *v5;
         if ( *(_BYTE *)(a1[v10 + 11950] + 64) )
         {
-          sub_60502548(a1 + 942);
+          StateMgr_resetAndMaybeChange(a1 + 942);
           StateMgr::changeState(a1 + 5, 13235648);
         }
         else
@@ -10655,7 +10655,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v11 = *v5;
         if ( *(_BYTE *)(a1[v11 + 11950] + 64) )
         {
-          sub_60502548(a1 + 942);
+          StateMgr_resetAndMaybeChange(a1 + 942);
           StateMgr::changeState(a1 + 5, 13235648);
         }
         else
@@ -10875,7 +10875,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60C9FD88);
     }
     v6 = 0;
-    sub_604734E4(a1, 0);
+    Disposer_allocateChildren(a1, 0);
     if ( a3 < 4 )
       v6 = a3;
     return sub_60476388(a1, a2, &dword_60C9FEB0[2 * v6 + 8]);
@@ -13518,7 +13518,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[0] = 12321336;
     v3[1] = sub_604962DC(1u);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 1u, v3, 0);
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
     return SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 10);
   }
 
@@ -13762,7 +13762,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_60494124(int a1)
   {
     *(_BYTE *)(a1 + 4910) = 0;
-    sub_60502548(a1 + 3856);
+    StateMgr_resetAndMaybeChange(a1 + 3856);
     *(_BYTE *)(a1 + 5936) = 0;
     *(_BYTE *)(a1 + 5937) = 0;
     *(_DWORD *)(a1 + 5948) = 1;
@@ -13945,7 +13945,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     if ( MEMORY[0xC99DD0] )
       sub_604B63E0(MEMORY[0xC99DD0] + 16, 43, 0);
-    return sub_60502548(a1 + 3856);
+    return StateMgr_resetAndMaybeChange(a1 + 3856);
   }
 
 /* ============================================================================
@@ -14083,9 +14083,9 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_60494628(int a1)
   {
     *(_BYTE *)(a1 + 4910) = 0;
-    sub_60502548(a1 + 3856);
+    StateMgr_resetAndMaybeChange(a1 + 3856);
     *(_WORD *)(a1 + 4908) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3896));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3896));
     *(_BYTE *)(a1 + 5936) = 0;
     *(_BYTE *)(a1 + 5937) = 0;
     *(_DWORD *)(a1 + 5948) = 4;
@@ -14240,7 +14240,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1;
     v2 = a1 + 9;
-    sub_604734E4(a1 + 9, 0);
+    Disposer_allocateChildren(a1 + 9, 0);
     sub_60475C8C((int)v2);
     v7 = 12321336;
     v8 = "ChallengeSelectWindow.bflyt";
@@ -14667,7 +14667,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60507028(*(_DWORD *)(a1 + 5960));
       sub_6050229C(a1 + 3856);
       sub_6050A8A4(a1 + 5972);
-      return sub_60473B58(a1 + 36, 14, 0);
+      return Table_getEntryById(a1 + 36, 14, 0);
     }
     return result;
   }
@@ -16297,7 +16297,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60499FB8((_BYTE *)a1);
     sub_605025FC(a1 + 3648);
     *(_WORD *)(a1 + 4700) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3688));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3688));
   }
 
 /* ============================================================================
@@ -16391,7 +16391,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 146399) = 0;
     sub_605025FC(a1 + 3648);
     *(_WORD *)(a1 + 4700) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3688));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3688));
     sub_60502A24(a1 + 3648, dword_60B02B94, 8, 0);
     sub_60502C04(a1 + 3648, dword_60B02BB4, 1);
     *(_DWORD *)(a1 + 4676) = 8;
@@ -16509,7 +16509,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         sub_605025FC(a1 + 3648);
         *(_WORD *)(a1 + 4700) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3688));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3688));
         result = *v3;
       }
       v11 = 0;
@@ -16599,7 +16599,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       sub_605025FC(a1 + 3648);
       *(_WORD *)(a1 + 4700) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 3688));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3688));
       *(_BYTE *)(a1 + 4691) = 0;
       *(_BYTE *)(a1 + 4688) = 1;
       result = *v3;
@@ -16753,7 +16753,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           sub_605025FC(a1 + 3648);
           *(_WORD *)(a1 + 4700) = 0;
-          result = (int)sub_6047EABC((_DWORD *)(a1 + 3688));
+          result = (int)IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3688));
           *v2 = 0;
         }
       }
@@ -16824,7 +16824,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           sub_605025FC(a1 + 3648);
           *(_WORD *)(a1 + 4700) = 0;
-          result = (int)sub_6047EABC((_DWORD *)(a1 + 3688));
+          result = (int)IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3688));
           *v2 = 0;
         }
       }
@@ -17036,11 +17036,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 146868) = 0;
     *(_BYTE *)(a1 + 146874) = 0;
     *(_WORD *)(a1 + 146872) = 0;
-    sub_6045BF30(a1 + 146880);
-    sub_6045BF30(a1 + 147284);
-    sub_6045BF30(a1 + 147688);
-    sub_6045BF30(a1 + 148092);
-    sub_6045BF30(a1 + 148496);
+    ctor_installTwoVtables(a1 + 146880);
+    ctor_installTwoVtables(a1 + 147284);
+    ctor_installTwoVtables(a1 + 147688);
+    ctor_installTwoVtables(a1 + 148092);
+    ctor_installTwoVtables(a1 + 148496);
     *(_DWORD *)(a1 + 148900) = 0;
     *(_DWORD *)(a1 + 148904) = 0;
     *(_DWORD *)(a1 + 16) = 0;
@@ -17143,7 +17143,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1;
     v2 = a1 + 16;
-    sub_604734E4(a1 + 16, 0);
+    Disposer_allocateChildren(a1 + 16, 0);
     sub_60475C8C((int)v2);
     v7 = &v9;
     v6 = 12322272;
@@ -17154,7 +17154,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CA06E0 + 12))(&dword_60CA06E0);
     v3 = (const char *)dword_60CA06E4;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA06E8 + 3))(&off_60CA06E8);
-    sub_608FDDF4(&v6, "%s.%s", v3, (const char *)dword_60CA06EC);
+    StringUtil_formatInto(&v6, "%s.%s", v3, (const char *)dword_60CA06EC);
     message_ref(v2, &v6, (int)(v1 + 922), 0, 0);
     sub_604A435C(v1 + 1432, 0, v1 + 36719, v1 + 36717);
     sub_604A435C(v1 + 6571, 1, v1 + 36719, v1 + 36717);
@@ -17248,7 +17248,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A8A4(a1 + 87952);
     sub_6050B744(a1 + 95168);
     v3 = 0;
-    sub_60473B58(a1 + 64, *(_DWORD *)(a1 + 146836), 0);
+    Table_getEntryById(a1 + 64, *(_DWORD *)(a1 + 146836), 0);
     sub_60499778(a1, *(_DWORD *)(a1 + 146836), *(_DWORD *)(a1 + 146864));
     v4 = 0;
     v5 = (_DWORD *)(a1 + 146840);
@@ -18454,7 +18454,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     ArrayOf5_lookupByIndex(v3, 0, (_DWORD *)v4, 0);
     *(_BYTE *)(*(_DWORD *)(a1 + 3696) + 64) &= ~1u;
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
   }
 
 /* ============================================================================
@@ -18538,7 +18538,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049B540(int a1)
   {
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C0, 0);
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
     *(_BYTE *)(a1 + 5350) = 1;
     return 5350;
   }
@@ -18574,7 +18574,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049B5E4(int a1)
   {
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C8, 0);
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
     *(_BYTE *)(a1 + 5350) = 1;
     *(_BYTE *)(a1 + 5354) = 1;
     return 5354;
@@ -19215,9 +19215,9 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 22372) = *(_DWORD *)(v15 + 272);
       }
     }
-    sub_60502548(a1 + 3636);
+    StateMgr_resetAndMaybeChange(a1 + 3636);
     *(_WORD *)(a1 + 4688) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3676));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3676));
   }
 
 /* ============================================================================
@@ -20002,9 +20002,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049D788(int a1)
   {
-    sub_60502548(a1 + 3636);
+    StateMgr_resetAndMaybeChange(a1 + 3636);
     *(_WORD *)(a1 + 4688) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3676));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3676));
     *(_BYTE *)(*(_DWORD *)(a1 + 20204) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 20208) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 20212) + 64) &= ~1u;
@@ -20407,9 +20407,9 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 20309) = 1;
     }
     *(_BYTE *)(a1 + 22501) = 1;
-    sub_60502548(a1 + 3636);
+    StateMgr_resetAndMaybeChange(a1 + 3636);
     *(_WORD *)(a1 + 4688) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3676));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3676));
   }
 
 /* ============================================================================
@@ -20478,9 +20478,9 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex(a1 + 11, 0, (_DWORD *)0xCA0B7C, 0);
     *((_BYTE *)v2 + 36) = 1;
     *((_BYTE *)v2 + 2229) = 1;
-    sub_60502548((int)(v2 - 4159));
+    StateMgr_resetAndMaybeChange((int)(v2 - 4159));
     *((_WORD *)v2 - 7792) = 0;
-    return sub_6047EABC(v2 - 4149);
+    return IntrusiveList_clearAndDestroy(v2 - 4149);
   }
 
 /* ============================================================================
@@ -20547,8 +20547,8 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = *(_DWORD *)(a1 + 20316);
         if ( (v5 & 0x4000) != 0 || (v6 = *(_DWORD *)(a1 + 21932), (v6 & 0x4000) != 0) )
         {
-          sub_60502548(v3 - 1028);
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_BACK", 0);
+          StateMgr_resetAndMaybeChange(v3 - 1028);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_BACK", 0);
           v4 = 13241772;
         }
         else
@@ -20648,9 +20648,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049E5D4(int a1)
   {
-    sub_60502548(a1 + 3636);
+    StateMgr_resetAndMaybeChange(a1 + 3636);
     *(_WORD *)(a1 + 4688) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3676));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3676));
     *(_BYTE *)(*(_DWORD *)(a1 + 20204) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 20208) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 20212) + 64) &= ~1u;
@@ -20843,9 +20843,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_6049EAB0(int a1)
   {
-    sub_60502548(a1 + 3636);
+    StateMgr_resetAndMaybeChange(a1 + 3636);
     *(_WORD *)(a1 + 4688) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3676));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3676));
   }
 
 /* ============================================================================
@@ -21242,9 +21242,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_6049F18C(int a1)
   {
-    sub_60502548(a1 + 3636);
+    StateMgr_resetAndMaybeChange(a1 + 3636);
     *(_WORD *)(a1 + 4688) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3676));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3676));
   }
 
 /* ============================================================================
@@ -21711,11 +21711,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050B4E4(a1 + 5716);
     sub_60557FE4(a1 + 9296);
     sub_6050A308(a1 + 12988);
-    sub_6045BF30(a1 + 20312);
-    sub_6045BF30(a1 + 20716);
-    sub_6045BF30(a1 + 21120);
-    sub_6045BF30(a1 + 21524);
-    sub_6045BF30(a1 + 21928);
+    ctor_installTwoVtables(a1 + 20312);
+    ctor_installTwoVtables(a1 + 20716);
+    ctor_installTwoVtables(a1 + 21120);
+    ctor_installTwoVtables(a1 + 21524);
+    ctor_installTwoVtables(a1 + 21928);
     *(_DWORD *)(a1 + 22480) = 3;
     *(_DWORD *)(a1 + 22484) = 0;
     *(_WORD *)(a1 + 22504) = 0;
@@ -21862,7 +21862,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v21; // [sp+48h] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 44);
-    sub_604734E4((_DWORD *)(a1 + 44), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 44), 0);
     sub_60475C8C((int)v2);
     v8 = 12321336;
     v9 = "ChangeTeam.bflyt";
@@ -21979,11 +21979,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(v7, 11545616, "SE_SYS_BACK");
     sub_60558180(a1 + 9296, 0);
     sub_605585A4(a1 + 9296);
-    sub_6045BF58(a1 + 20312, 0);
-    sub_6045BF58(a1 + 20716, 1);
-    sub_6045BF58(a1 + 21120, 2);
-    sub_6045BF58(a1 + 21524, 3);
-    return sub_6045BF58(a1 + 21928, 4);
+    Registry_iterateAndRegister(a1 + 20312, 0);
+    Registry_iterateAndRegister(a1 + 20716, 1);
+    Registry_iterateAndRegister(a1 + 21120, 2);
+    Registry_iterateAndRegister(a1 + 21524, 3);
+    return Registry_iterateAndRegister(a1 + 21928, 4);
   }
 
 /* ============================================================================
@@ -22465,7 +22465,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // t1
   
     v2 = a1 + 44;
-    sub_60473B58(a1 + 44, 5, 0);
+    Table_getEntryById(a1 + 44, 5, 0);
     v4 = a1 + 22501;
     result = (unsigned __int8)a1[22501];
     if ( a1[22501] )
@@ -23438,9 +23438,9 @@ static inline unsigned int uxtb16(unsigned int x)
       *(float *)(a1 + 20520) = v6 + v4;
       *(float *)(a1 + 20524) = v7 + v5;
     }
-    sub_60502548(a1 + 3936);
+    StateMgr_resetAndMaybeChange(a1 + 3936);
     *(_WORD *)(a1 + 4988) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3976));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3976));
     if ( sub_60835008() == 1 && !*(_BYTE *)(a1 + 20541) )
     {
       sub_60502C04(a1 + 3936, (int *)&dword_60B02D20, 2);
@@ -23502,9 +23502,9 @@ static inline unsigned int uxtb16(unsigned int x)
             v5 = 13242672;
             return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
           }
-          sub_60502548(a1 + 3936);
+          StateMgr_resetAndMaybeChange(a1 + 3936);
           *(_WORD *)(a1 + 4988) = 0;
-          sub_6047EABC((_DWORD *)(a1 + 3976));
+          IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3976));
           *(_BYTE *)(a1 + 4979) = 0;
           *(_BYTE *)(a1 + 4976) = 1;
         }
@@ -23560,7 +23560,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
             if ( sub_60835008() != 1 )
             {
-              sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
+              SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
               *(_DWORD *)(a1 + 20492) = 2;
               *(_BYTE *)(a1 + 40) = 1;
               v5 = 13242672;
@@ -23574,7 +23574,7 @@ static inline unsigned int uxtb16(unsigned int x)
               return result;
             if ( sub_60835008() != 1 )
             {
-              sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
+              SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
               *(_DWORD *)(a1 + 20492) = 3;
               *(_BYTE *)(a1 + 40) = 1;
               v5 = 13242672;
@@ -23589,7 +23589,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v13 = *(_DWORD *)(a1 + 20496);
         if ( v13 == 6 )
         {
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
           *(_BYTE *)(a1 + 40) = 1;
           v5 = 13242832;
           return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
@@ -23602,7 +23602,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( v14[2] )
             {
   LABEL_47:
-              sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
+              SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
               *(_BYTE *)(a1 + 40) = 1;
               v5 = 13242736;
               return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
@@ -23614,7 +23614,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( *v14 )
             goto LABEL_47;
         }
-        sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
         *(_BYTE *)(a1 + 40) = 1;
         v5 = 13242704;
         return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
@@ -23800,9 +23800,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     _DWORD v4[2]; // [sp+8h] [bp-8h] BYREF
   
-    sub_60502548(a1 + 3936);
+    StateMgr_resetAndMaybeChange(a1 + 3936);
     *(_WORD *)(a1 + 4988) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3976));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3976));
     v2 = (_DWORD *)(a1 + 48);
     v4[0] = 12321336;
     v4[1] = dword_60CA12C4;
@@ -23846,7 +23846,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = *(_DWORD *)(a1 + 20496);
     if ( v7 == 6 )
     {
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
       *(_BYTE *)(a1 + 40) = 1;
       v4 = 13242832;
       goto LABEL_7;
@@ -23859,7 +23859,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v8[2] )
         {
   LABEL_21:
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
           *(_BYTE *)(a1 + 40) = 1;
           v4 = 13242736;
           goto LABEL_7;
@@ -23871,7 +23871,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *v8 )
         goto LABEL_21;
     }
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
     *(_BYTE *)(a1 + 40) = 1;
     StateMgr::changeState((_DWORD *)(a1 + 24), 13242704);
     v9 = 12321336;
@@ -23922,7 +23922,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_BYTE *)(a1 + 20541) = 0;
     *(_BYTE *)(a1 + 20553) = 0;
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_BACK", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_BACK", 0);
   }
 
 /* ============================================================================
@@ -24414,7 +24414,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v15; // [sp+1Ch] [bp-48h] BYREF
   
     v6 = (_DWORD *)(a1 + 48);
-    sub_604734E4((_DWORD *)(a1 + 48), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 48), 0);
     sub_60475C8C((int)v6);
     v13 = (char *)&v15;
     v12 = 12322272;
@@ -24425,7 +24425,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CA13D4 + 12))(&dword_60CA13D4);
     v7 = (const char *)dword_60CA13D8;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA13DC + 3))(&off_60CA13DC);
-    sub_608FDDF4(&v12, "%s.%s", v7, (const char *)dword_60CA13E0);
+    StringUtil_formatInto(&v12, "%s.%s", v7, (const char *)dword_60CA13E0);
     message_ref(v6, &v12, a1 + 3976, 0, 0);
     v11 = 24;
     sub_60476030((int)v6, &dword_60CA1270, &v11);
@@ -24628,7 +24628,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( v23 )
     {
-      sub_60473B58(a1 + 48, a2, 0);
+      Table_getEntryById(a1 + 48, a2, 0);
     }
     else
     {
@@ -26814,9 +26814,9 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v8 = 0;
     sub_604AD550(a1, *(_DWORD *)(a1 + 279724), 0);
-    sub_60502548(a1 + 85956);
+    StateMgr_resetAndMaybeChange(a1 + 85956);
     *(_WORD *)(a1 + 87008) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 85996));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
     if ( *v6 >= 1 )
     {
       v9 = 0;
@@ -26917,9 +26917,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r5
   
     v2 = a1 + 85956;
-    sub_60502548(a1 + 85956);
+    StateMgr_resetAndMaybeChange(a1 + 85956);
     *(_WORD *)(a1 + 87008) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 85996));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
     sub_60502A24(v2, dword_60B02D7C, 12, 1);
     sub_60502C04(v2, &dword_60B02DAC, 1);
     *(_DWORD *)(a1 + 86984) = 12;
@@ -27004,9 +27004,9 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_36:
           if ( *(_BYTE *)(a1 + 86996) )
           {
-            sub_60502548(a1 + 85956);
+            StateMgr_resetAndMaybeChange(a1 + 85956);
             *(_WORD *)(a1 + 87008) = 0;
-            sub_6047EABC((_DWORD *)(a1 + 85996));
+            IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
             result = *v3;
           }
           v17 = 0;
@@ -27154,9 +27154,9 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(a1 + 56) = 1;
         return StateMgr::changeState((_DWORD *)(a1 + 40), 13243984);
       }
-      sub_60502548(a1 + 85956);
+      StateMgr_resetAndMaybeChange(a1 + 85956);
       *(_WORD *)(a1 + 87008) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 85996));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
       *(_BYTE *)(a1 + 86999) = 0;
       *(_BYTE *)(a1 + 86996) = 1;
       result = *v3;
@@ -27652,9 +27652,9 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *v5 = 1;
   LABEL_11:
-    sub_60502548(a1 + 85956);
+    StateMgr_resetAndMaybeChange(a1 + 85956);
     *(_WORD *)(a1 + 87008) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 85996));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
     v6 = 1;
     sub_60502A24(a1 + 85956, dword_60B02DB0, 13, 1);
     v7 = dword_60CA17A4;
@@ -27832,9 +27832,9 @@ static inline unsigned int uxtb16(unsigned int x)
         while ( (signed int)v28 < *(_DWORD *)(a1 + 279736) );
       }
       sub_60478680((int)"SE_SYS_BACK", 15);
-      sub_60502548(a1 + 85956);
+      StateMgr_resetAndMaybeChange(a1 + 85956);
       *(_WORD *)(a1 + 87008) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 85996));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
       *(_BYTE *)(a1 + 56) = 1;
       v8 = 13243888;
       return StateMgr::changeState((_DWORD *)(a1 + 40), v8);
@@ -28215,9 +28215,9 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *v5 = 1;
   LABEL_11:
-    sub_60502548(a1 + 85956);
+    StateMgr_resetAndMaybeChange(a1 + 85956);
     *(_WORD *)(a1 + 87008) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 85996));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
     sub_60502A24(a1 + 85956, dword_60B02DF4, 13, 1);
     sub_60502C04(a1 + 85956, (int *)&unk_60B02E28, 2);
     *(_DWORD *)(a1 + 86984) = 1;
@@ -28283,9 +28283,9 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !*(_BYTE *)(a1 + 86468) )
       {
         sub_60478680((int)"SE_SYS_BACK", 15);
-        sub_60502548(a1 + 85956);
+        StateMgr_resetAndMaybeChange(a1 + 85956);
         *(_WORD *)(a1 + 87008) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 85996));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
         *(_BYTE *)(a1 + 56) = 1;
         v3 = 13243888;
         return StateMgr::changeState((_DWORD *)(a1 + 40), v3);
@@ -29318,11 +29318,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 277660) = -1;
     *(_DWORD *)(a1 + 277664) = 7;
     *(_DWORD *)(a1 + 277668) = 0;
-    sub_6045BF30(a1 + 277672);
-    sub_6045BF30(a1 + 278076);
-    sub_6045BF30(a1 + 278480);
-    sub_6045BF30(a1 + 278884);
-    sub_6045BF30(a1 + 279288);
+    ctor_installTwoVtables(a1 + 277672);
+    ctor_installTwoVtables(a1 + 278076);
+    ctor_installTwoVtables(a1 + 278480);
+    ctor_installTwoVtables(a1 + 278884);
+    ctor_installTwoVtables(a1 + 279288);
     *(_BYTE *)(a1 + 279706) = 0;
     *(_WORD *)(a1 + 279704) = 0;
     *(_DWORD *)(a1 + 279700) = 0;
@@ -29443,7 +29443,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10[2]; // [sp+68h] [bp-8h] BYREF
   
     v2 = a1 + 16;
-    sub_604734E4(a1 + 16, 0);
+    Disposer_allocateChildren(a1 + 16, 0);
     sub_60475C8C((int)v2);
     v6 = &v8;
     v5 = 12322272;
@@ -29454,7 +29454,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CA16C0 + 12))(&dword_60CA16C0);
     v3 = (const char *)dword_60CA16C4;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA16C8 + 3))(&off_60CA16C8);
-    sub_608FDDF4(&v5, "%s.%s", v3, (const char *)dword_60CA16CC);
+    StringUtil_formatInto(&v5, "%s.%s", v3, (const char *)dword_60CA16CC);
     message_ref(v2, &v5, (int)(a1 + 21499), 0, 0);
     sub_604A435C((int)(a1 + 933), 0, (int)(a1 + 69417), (int)(a1 + 69925));
     sub_604A435C((int)(a1 + 6072), 1, (int)(a1 + 69417), (int)(a1 + 69925));
@@ -29586,7 +29586,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 60) = v2 + 1;
     sub_6050229C(a1 + 85956);
     sub_6050A8A4(a1 + 88036);
-    sub_60473B58(a1 + 64, 5, 0);
+    Table_getEntryById(a1 + 64, 5, 0);
     sub_604ABCA8(a1, 5, *(_DWORD *)(a1 + 279736));
     v3 = 61;
     v4 = a1 + 95256;
@@ -31462,7 +31462,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 36);
-    sub_604734E4((_DWORD *)(a1 + 36), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 36), 0);
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"CoinEditCursor.bflyt";
@@ -31667,7 +31667,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v4 )
     {
       StateMgr::execute((_DWORD *)(a1 + 20));
-      return sub_60473B58(a1 + 36, 9, 0);
+      return Table_getEntryById(a1 + 36, 9, 0);
     }
     return result;
   }
@@ -31923,7 +31923,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(v2 + 3600) = 0;
       *(_BYTE *)(v2 + 3604) = 0;
       SE_SYS_DECIDE_ref_50208C(v2 + 3608);
-      sub_6045BF30(v2 + 5688);
+      ctor_installTwoVtables(v2 + 5688);
       *(_DWORD *)(v2 + 6092) = 12574508;
       *(_DWORD *)(v2 + 6096) = 12574524;
       *(_DWORD *)(v2 + 6100) = 12574560;
@@ -31983,13 +31983,13 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v14[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = 0;
-    sub_6045BF58(a1 + 5688, 0);
+    Registry_iterateAndRegister(a1 + 5688, 0);
     *(_BYTE *)(a1 + 38100) = 0;
     *(_BYTE *)(a1 + 38102) = 1;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 20), 0, (_DWORD *)0xCA1914, 0);
     v3 = ArrayOf20_getEntryPtr(a1 + 20, 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
-    sub_60473B58((_DWORD *)(a1 + 20), 0xEu, 0);
+    Table_getEntryById((_DWORD *)(a1 + 20), 0xEu, 0);
     if ( (*(_BYTE *)(MEMORY[0xC99DD4] + 1376) & 4) != 0 )
     {
       sub_60502B04(a1 + 3608, (unsigned int *)0xB02E68, 1);
@@ -32154,9 +32154,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = a1 + 3608;
-    sub_60502548(a1 + 3608);
+    StateMgr_resetAndMaybeChange(a1 + 3608);
     *(_WORD *)(a1 + 4660) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3648));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3648));
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 20), 0, (_DWORD *)0xCA1914, 0);
     *(_DWORD *)(MEMORY[0xC99DD4] + 1376) |= 1u;
     sub_603F5020(MEMORY[0xC99D70]);
@@ -32165,7 +32165,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502B04(v2, (unsigned int *)0xB02E5C, 1);
     sub_60502B04(v2, (unsigned int *)0xB02E60, 1);
     sub_60502B04(v2, (unsigned int *)0xB02E64, 1);
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CE_MENU_IN", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CE_MENU_IN", 0);
     *(_BYTE *)(*(_DWORD *)(a1 + 6168) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 6172) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 6176) + 64) &= ~1u;
@@ -32216,7 +32216,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     sub_603F5010(MEMORY[0xC99D70]);
     ArrayOf5_lookupByIndex(a1 + 5, 0, (_DWORD *)0xCA191C, 0);
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CE_MENU_OUT", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CE_MENU_OUT", 0);
     *(_BYTE *)(a1[1542] + 64) &= ~1u;
     *(_BYTE *)(a1[1543] + 64) &= ~1u;
     *(_BYTE *)(a1[1544] + 64) &= ~1u;
@@ -32698,12 +32698,12 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(v3 + 3780) |= 1u;
           if ( *(_BYTE *)(v1 + 38099) )
           {
-            sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CE_RESET", 0);
+            SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CE_RESET", 0);
             *(_BYTE *)(v1 + 38099) = 0;
           }
-          sub_60502548(v1 + 3608);
+          StateMgr_resetAndMaybeChange(v1 + 3608);
           *(_WORD *)(v1 + 4660) = 0;
-          sub_6047EABC((_DWORD *)(v1 + 3648));
+          IntrusiveList_clearAndDestroy((_DWORD *)(v1 + 3648));
           return StateMgr::changeState((_DWORD *)(v1 + 6112), 13244756);
         }
       }
@@ -32769,9 +32769,9 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    sub_60502548(a1 + 3608);
+    StateMgr_resetAndMaybeChange(a1 + 3608);
     *(_WORD *)(a1 + 4660) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3648));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3648));
     *(_BYTE *)(*(_DWORD *)(a1 + 6168) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 6172) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 6176) + 64) &= ~1u;
@@ -32803,14 +32803,14 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r1
     int result; // r0
   
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CE_MENU_OUT", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CE_MENU_OUT", 0);
     v2 = *(_DWORD *)(a1 + 4636);
     if ( v2 == 3 )
       v2 = *(_DWORD *)(MEMORY[0xC99DD4] + 912) - 1;
     SE_SYS_CE_MENU_OUT_ref_2_helper(MEMORY[0xC99D70], v2);
-    sub_60502548(a1 + 3608);
+    StateMgr_resetAndMaybeChange(a1 + 3608);
     *(_WORD *)(a1 + 4660) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3648));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3648));
     *(_BYTE *)(*(_DWORD *)(a1 + 6168) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 6172) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 6176) + 64) &= ~1u;
@@ -32977,7 +32977,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 20);
-    sub_604734E4((_DWORD *)(a1 + 20), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 20), 0);
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"CoinEditMenu.bflyt";
@@ -33086,7 +33086,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604755C4((int)(a1 + 5), (int)(a1 + 1549), &dword_60CA1B28, (int)&dword_60CA1A9C, &v16);
     v16 = 1;
     sub_604755C4((int)(a1 + 5), (int)(a1 + 1550), &dword_60CA1B30, (int)&dword_60CA1A9C, &v16);
-    sub_604734E4(a1 + 1551, 0);
+    Disposer_allocateChildren(a1 + 1551, 0);
     sub_60476388(a1 + 1551, (int)(a1 + 5), &dword_60CA1AF0);
     if ( ((unsigned int)&unk_60CA1A90 & ~(1615534076 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1A90) )
     {
@@ -33098,7 +33098,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = *(void (__fastcall **)(_DWORD *, int *, int *))(a1[1551] + 8);
     v16 = 1;
     v7(a1 + 1551, &dword_60CA1AA4, &v16);
-    sub_604734E4(a1 + 2436, 0);
+    Disposer_allocateChildren(a1 + 2436, 0);
     sub_60476388(a1 + 2436, (int)(a1 + 5), &dword_60CA1AF8);
     if ( ((unsigned int)&unk_60CA1A90 & ~(1615534272 << v8) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1A90) )
     {
@@ -33110,7 +33110,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = *(void (__fastcall **)(_DWORD *, int *, int *))(a1[2436] + 8);
     v16 = 1;
     v9(a1 + 2436, &dword_60CA1AA4, &v16);
-    sub_604734E4(a1 + 3321, 0);
+    Disposer_allocateChildren(a1 + 3321, 0);
     sub_60476388(a1 + 3321, (int)(a1 + 5), &dword_60CA1B00);
     if ( ((unsigned int)&unk_60CA1A90 & ~(1615534472 << v10) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1A90) )
     {
@@ -33123,7 +33123,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v16 = 1;
     v11(a1 + 3321, &dword_60CA1AA4, &v16);
     v12 = a1 + 4206;
-    sub_604734E4(v12, 0);
+    Disposer_allocateChildren(v12, 0);
     sub_60476388(v12, v3, &dword_60CA1B08);
     if ( ((unsigned int)&unk_60CA1A90 & ~(1615534668 << v13) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1A90) )
     {
@@ -33144,7 +33144,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604B1BE0(int a1)
   {
     *(_BYTE *)(a1 + 38088) = 1;
-    sub_6045BF58(a1 + 5688, 0);
+    Registry_iterateAndRegister(a1 + 5688, 0);
     sub_605029FC(a1 + 3608, 11546220, "SE_SYS_CE_MENU_OUT");
     *(_DWORD *)(List_getNthNode(a1 + 3660, 8) - *(_DWORD *)(a1 + 3672) + 192) = 0;
     sub_605029FC(a1 + 3608, 11546188, "SE_SYS_CE_AREA_CHANGE");
@@ -33174,7 +33174,7 @@ static inline unsigned int uxtb16(unsigned int x)
         StateMgr::execute((_DWORD *)(a1 + 6112));
         sub_6050229C(a1 + 3608);
         sub_604B1E54(a1);
-        sub_60473B58(a1 + 20, 14, 0);
+        Table_getEntryById(a1 + 20, 14, 0);
       }
       if ( (*(_BYTE *)(MEMORY[0xC99DD4] + 1376) & 4) == 0 && sub_604B5270(*(_DWORD *)(MEMORY[0xC99D70] + 2592)) == 1 )
       {
@@ -33656,7 +33656,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    sub_6047EABC((_DWORD *)(a1 + 24));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 24));
     if ( !*(_BYTE *)(a1 + 14792) )
       sub_6047823C(**(_DWORD ***)(a1 + 16));
     if ( !*(_BYTE *)(a1 + 14793) )
@@ -33986,7 +33986,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 14937) = 0;
     *(_BYTE *)(a1 + 14940) = 0;
     *(_BYTE *)(a1 + 14939) = 0;
-    sub_6045BF30(a1 + 14948);
+    ctor_installTwoVtables(a1 + 14948);
     memset((void *)(a1 + 532), 0, 0x64u);
     *(_BYTE *)(a1 + 14797) = 1;
     *(_BYTE *)(a1 + 14796) = 1;
@@ -34140,7 +34140,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[930] = 0;
     *((_BYTE *)v3 + 3724) = 0;
     *(_DWORD *)(a1 + 4) = v3;
-    sub_604734E4(v3, 0);
+    Disposer_allocateChildren(v3, 0);
     v4 = *(_DWORD *)(a1 + 4);
     v10 = 12321336;
     v11 = "Game";
@@ -34308,7 +34308,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = a1[1];
     v18[0] = 4;
     sub_604756E0(v3, (int)(a1 + 150), &dword_60CA1C2C, v18);
-    sub_604734E4(a1 + 158, 0);
+    Disposer_allocateChildren(a1 + 158, 0);
     sub_60476388(a1 + 158, a1[1], &dword_60CA1C2C);
     if ( ((unsigned int)&unk_60CA1BF8 & ~(1615543096 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1BF8) )
     {
@@ -34320,7 +34320,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = *(void (__fastcall **)(int *, int *, int *))(a1[158] + 8);
     v18[0] = 1;
     v5(a1 + 158, &dword_60CA1C14, v18);
-    sub_604734E4(a1 + 1043, 0);
+    Disposer_allocateChildren(a1 + 1043, 0);
     sub_60476388(a1 + 1043, a1[1], &dword_60CA1C34);
     if ( ((unsigned int)&unk_60CA1BF8 & ~(1615543288 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1BF8) )
     {
@@ -34418,8 +34418,8 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_BYTE *)(a1 + 12) = 1;
     sub_604B4228(a1);
-    sub_6045BF58(a1 + 88, 4);
-    sub_6045BF58(a1 + 14948, 0);
+    Registry_iterateAndRegister(a1 + 88, 4);
+    Registry_iterateAndRegister(a1 + 14948, 0);
     v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 108))(v4);
     *(_BYTE *)(a1 + 14945) = 1;
@@ -34672,7 +34672,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr::execute((_DWORD *)(a1 + 516));
     sub_604B4A78(a1);
     sub_604B4370(a1);
-    sub_60473B58(*(_DWORD *)(a1 + 4), 14, 0);
+    Table_getEntryById(*(_DWORD *)(a1 + 4), 14, 0);
     sub_604B4B80(a1);
     sub_604B4EE4(a1);
     if ( *(_BYTE *)(a1 + 14936) )
@@ -35911,11 +35911,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3788) = 0;
     *(_BYTE *)(a1 + 3789) = 0;
     *(_DWORD *)(a1 + 3792) = 0;
-    sub_6045BF30(a1 + 3796);
-    sub_6045BF30(a1 + 4200);
-    sub_6045BF30(a1 + 4604);
-    sub_6045BF30(a1 + 5008);
-    sub_6045BF30(a1 + 5412);
+    ctor_installTwoVtables(a1 + 3796);
+    ctor_installTwoVtables(a1 + 4200);
+    ctor_installTwoVtables(a1 + 4604);
+    ctor_installTwoVtables(a1 + 5008);
+    ctor_installTwoVtables(a1 + 5412);
     *(_DWORD *)(a1 + 5816) = 0;
     *(_DWORD *)(a1 + 5820) = 0;
     *(_DWORD *)(a1 + 3764) = 0;
@@ -36799,9 +36799,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604B72FC(int a1)
   {
-    sub_60502548(a1);
+    StateMgr_resetAndMaybeChange(a1);
     *(_WORD *)(a1 + 1052) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 40));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 40));
   }
 
 /* ============================================================================
@@ -37267,7 +37267,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v12; // [sp+18h] [bp-48h] BYREF
   
     v2 = (_DWORD *)(a1 + 4);
-    sub_604734E4((_DWORD *)(a1 + 4), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
     sub_60475C8C((int)v2);
     *(_DWORD *)(a1 + 3652) = 0;
     CurrentHeap = sead::HeapMgr::getCurrentHeap(MEMORY[0xCCEE90]);
@@ -37299,7 +37299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CA2444 + 12))(&dword_60CA2444);
     v6 = (const char *)dword_60CA2448;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA244C + 3))(&off_60CA244C);
-    sub_608FDDF4(&v9, "%s.%s", v6, (const char *)dword_60CA2450);
+    StringUtil_formatInto(&v9, "%s.%s", v6, (const char *)dword_60CA2450);
     message_ref(v2, &v9, *(_DWORD *)(a1 + 3652) + 40, 0, 0);
     v8 = 9;
     return sub_60476030((int)v2, &dword_60CA24B0, &v8);
@@ -37359,7 +37359,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604B7F5C(int result)
   {
     if ( *(_BYTE *)(result + 3721) )
-      return sub_60473B58((_DWORD *)(result + 4), *(_DWORD *)(result + 3716), 0);
+      return Table_getEntryById((_DWORD *)(result + 4), *(_DWORD *)(result + 3716), 0);
     return result;
   }
 
@@ -38833,7 +38833,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v9[2]; // [sp+8h] [bp-8h] BYREF
   
     v4 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v4);
     v9[0] = 12321336;
     v9[1] = (int)"Continue.bflyt";
@@ -38994,7 +38994,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -39354,12 +39354,12 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( result != 180 )
           goto LABEL_10;
-        sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_VS_COUNT_LAST", 0);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_VS_COUNT_LAST", 0);
         v3 = 13248192;
         goto LABEL_9;
       }
   LABEL_8:
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_VS_COUNT", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_VS_COUNT", 0);
       v4[0] = 12321336;
       v4[1] = "CountDownStart_Count_00";
       MessageQueue_postType3(v4, *(_DWORD *)(a1 + 16), 1);
@@ -39407,7 +39407,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v3 )
     {
       *(_BYTE *)(a1 + 3640) = 0;
-      sub_604734E4((_DWORD *)(a1 + 84), 0);
+      Disposer_allocateChildren((_DWORD *)(a1 + 84), 0);
       sub_60475C8C(a1 + 84);
       v8[0] = 12321336;
       v8[1] = (int)"CountDownStart.bflyt";
@@ -39513,7 +39513,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(a1 + 3633) )
       {
         *(_BYTE *)(a1 + 3633) = 0;
-        return sub_60473B58(a1 + 84, 14, 0);
+        return Table_getEntryById(a1 + 84, 14, 0);
       }
     }
     return result;
@@ -39903,7 +39903,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     a1[2620] = 14;
     v2 = a1 + 835;
-    sub_604734E4(a1 + 835, 0);
+    Disposer_allocateChildren(a1 + 835, 0);
     sub_60475C8C((int)v2);
     v31 = (char *)&v33;
     v30 = 12322272;
@@ -39914,7 +39914,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CA2774 + 12))(&dword_60CA2774);
     v3 = (const char *)dword_60CA2778;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA277C + 3))(&off_60CA277C);
-    sub_608FDDF4(&v30, "%s.%s", v3, (const char *)dword_60CA2780);
+    StringUtil_formatInto(&v30, "%s.%s", v3, (const char *)dword_60CA2780);
     message_ref(v2, &v30, 0, 0, 0);
     result = a1[839];
     if ( result )
@@ -40054,7 +40054,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       while ( v3 );
     }
-    result = sub_60473B58(a1 + 3340, *(_DWORD *)(a1 + 10480), 0);
+    result = Table_getEntryById(a1 + 3340, *(_DWORD *)(a1 + 10480), 0);
     *(_DWORD *)(a1 + 3336) = 0;
     return result;
   }
@@ -40326,9 +40326,9 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( *(_DWORD *)(*(_DWORD *)(v4 + 40) + 4 * sub_60508FA4(v2) + 19584) )
       sub_605097CC(v2);
-    sub_60502548(a1 + 564);
+    StateMgr_resetAndMaybeChange(a1 + 564);
     *(_WORD *)(a1 + 1616) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 604));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 604));
     *(_DWORD *)(a1 + 1592) = 0;
     *(_BYTE *)(a1 + 1607) = 0;
     *(_BYTE *)(a1 + 1604) = 1;
@@ -40495,7 +40495,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v3 <= 1 )
           {
   LABEL_5:
-            sub_60807EF0(v4, (int)"SE_SYS_DECIDE", 0);
+            SoundPlayer_updateWithLocation(v4, (int)"SE_SYS_DECIDE", 0);
             v5 = *(_DWORD *)(a1 + 2648);
             v6 = *(float *)(a1 + 2668);
             v7 = *(_DWORD *)(v5 + 24);
@@ -40554,7 +40554,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v30 = 13248600;
             return StateMgr::changeState((_DWORD *)(a1 + 520), v30);
           }
-          result = sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
+          result = SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
           *(_BYTE *)(a1 + 35564) = 0;
         }
         else if ( *(_BYTE *)(a1 + 1607) )
@@ -41093,7 +41093,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v3 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 108))(v3);
-      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
+      Table_getEntryById(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248632);
@@ -41112,9 +41112,9 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v5; // [sp+4h] [bp-4h] BYREF
   
     v2 = a1 + 564;
-    sub_60502548(a1 + 564);
+    StateMgr_resetAndMaybeChange(a1 + 564);
     *(_WORD *)(a1 + 1616) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 604));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 604));
     *(_DWORD *)(a1 + 1592) = 4;
     *(_BYTE *)(a1 + 1607) = 0;
     *(_BYTE *)(a1 + 1604) = 1;
@@ -41302,9 +41302,9 @@ static inline unsigned int uxtb16(unsigned int x)
           *(float *)(v27 + 28) = v24 + 10000.0;
           *(_DWORD *)(v27 + 32) = v26;
           *(_BYTE *)(v27 + 64) |= 0x10u;
-          sub_60502548(a1 + 564);
+          StateMgr_resetAndMaybeChange(a1 + 564);
           StateMgr::changeState((_DWORD *)(a1 + 520), 13248824);
-          return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_COURSE_IN", 0);
+          return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_COURSE_IN", 0);
         }
         return result;
       }
@@ -41441,7 +41441,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(v104 + 32) = v103;
           *(_BYTE *)(v104 + 64) |= 0x10u;
           StateMgr::changeState((_DWORD *)(a1 + 520), 13248664);
-          return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_COURSE_IN", 0);
+          return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_COURSE_IN", 0);
         }
         if ( (result & 0x4000) != 0 )
         {
@@ -41521,7 +41521,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 1606);
     if ( !result )
     {
-      sub_60502548(a1 + 564);
+      StateMgr_resetAndMaybeChange(a1 + 564);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248824);
     }
     return result;
@@ -41566,7 +41566,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604C04C8((float *)a1, 1);
       v3 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
-      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
+      Table_getEntryById(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248472);
@@ -41610,7 +41610,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v3 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
-      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
+      Table_getEntryById(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       sub_604BFE2C(a1);
@@ -41654,7 +41654,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604C04C8((float *)a1, 1);
       v3 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 108))(v3);
-      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
+      Table_getEntryById(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248472);
@@ -41835,7 +41835,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60506F20(a1 + 39200, *(_DWORD *)(a1 + 4), &dword_60CA29E8);
     sub_60506F20(a1 + 42820, *(_DWORD *)(a1 + 4), &dword_60CA29F0);
     sub_60506F20(a1 + 46440, *(_DWORD *)(a1 + 4), &dword_60CA29F8);
-    sub_6045BF58(a1 + 88, 0);
+    Registry_iterateAndRegister(a1 + 88, 0);
     sub_609094C4(a1 + 88, 65984, MEMORY[0xB023FC], MEMORY[0xB023FD]);
     sub_6081F2E0(MEMORY[0xCC6D78]);
     sub_604BFE2C(a1);
@@ -41925,7 +41925,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[920] = 0;
     *((_BYTE *)v3 + 3684) = 0;
     a1[1] = v3;
-    sub_604734E4(v3, 0);
+    Disposer_allocateChildren(v3, 0);
     v4 = a1[1];
     v9 = 12321336;
     v10 = "FreeMenu";
@@ -42304,7 +42304,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(v4 + 64) |= 0x10u;
     sub_6050229C(a1 + 141);
     sub_6050A8A4(a1 + 672);
-    sub_60473B58(a1[1], 6, 0);
+    Table_getEntryById(a1[1], 6, 0);
     return sub_604C03FC(a1);
   }
 
@@ -42619,7 +42619,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result > 1 )
         return result;
       v15 = "SE_SYS_BTN_OVER_OFF";
-      return sub_60807EF0(MEMORY[0xCC6AF8], v15, 0, 1);
+      return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], v15, 0, 1);
     }
     sub_60858A78(&v30, *(_DWORD *)(a1 + 2644));
     v3 = v30;
@@ -42660,7 +42660,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result <= 1 )
       {
         v15 = "SE_SYS_BTN_OVER";
-        return sub_60807EF0(MEMORY[0xCC6AF8], v15, 0, 1);
+        return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], v15, 0, 1);
       }
     }
     return result;
@@ -43581,7 +43581,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604C75B8(a1);
     sub_604C6B78(a1);
     *(_BYTE *)(a1 + 14168) = 1;
-    return sub_60502548(a1 + 4056);
+    return StateMgr_resetAndMaybeChange(a1 + 4056);
   }
 
 /* ============================================================================
@@ -43615,7 +43615,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604C2670(int a1)
   {
     *(_WORD *)(a1 + 5108) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 4096));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 4096));
   }
 
 /* ============================================================================
@@ -43929,9 +43929,9 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    sub_60502548(a1 + 4056);
+    StateMgr_resetAndMaybeChange(a1 + 4056);
     *(_WORD *)(a1 + 5108) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 4096));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 4096));
     *(_BYTE *)(*(_DWORD *)(a1 + 13868) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 13872) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 13876) + 64) |= 1u;
@@ -44046,7 +44046,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     sub_604C6B78(a1);
     *(_BYTE *)(a1 + 14173) = 0;
-    sub_60502548(a1 + 4056);
+    StateMgr_resetAndMaybeChange(a1 + 4056);
     return sub_60816AE8(MEMORY[0xCC6B68]);
   }
 
@@ -44128,7 +44128,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *v3 = 0;
     }
     sub_604C6B78(a1);
-    v5 = sub_601FEE28(MEMORY[0xC8C188]);
+    v5 = ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]);
     *(_BYTE *)(v5 + 1377) = 0;
     *(_BYTE *)(v5 + 1378) = 0;
     sub_60502C04(a1 + 4056, &dword_60B02F54, 1);
@@ -44137,7 +44137,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 4560) = 1;
     sub_6047F01C((_DWORD *)(a1 + 4096), 5);
     *(_BYTE *)(a1 + 4561) = 1;
-    result = *(unsigned __int8 *)(sub_601FEE28(MEMORY[0xC8C188]) + 1375);
+    result = *(unsigned __int8 *)(ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]) + 1375);
     *(_BYTE *)(a1 + 14183) = result;
     return result;
   }
@@ -44180,7 +44180,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_BYTE *)a1;
     *(_WORD *)(a1 + 5108) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 4096));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 4096));
     v1[13940] = 0;
     v1 += 13940;
     v1[3] = 0;
@@ -44226,9 +44226,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = a1 + 4056;
     if ( !*(_BYTE *)(a1 + 5096) )
     {
-      sub_60502548(a1 + 4056);
+      StateMgr_resetAndMaybeChange(a1 + 4056);
       *(_WORD *)(a1 + 5108) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 4096));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 4096));
       *(_BYTE *)(a1 + 5099) = 0;
       *v2 = 1;
     }
@@ -44338,7 +44338,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604C6EF0(a1);
     G_Flag_00_ref(a1);
     sub_604C6B78(a1);
-    sub_60502548(a1 + 4056);
+    StateMgr_resetAndMaybeChange(a1 + 4056);
     *(_BYTE *)(a1 + 14182) = 1;
     *(_BYTE *)(a1 + 14172) = 0;
     return sub_60816CB0(MEMORY[0xCC6B68]);
@@ -44390,7 +44390,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 13941) = 0;
     *(_BYTE *)(a1 + 14171) = 0;
     *(_WORD *)(a1 + 5108) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 4096));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 4096));
     v4 = *(unsigned __int8 *)(v1 + 243);
     v3 = (_BYTE *)(v1 + 243);
     result = v4;
@@ -44772,14 +44772,14 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 13880) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 13884) + 64) |= 1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 13888) + 64) |= 1u;
-    sub_60502548(a1 + 4056);
+    StateMgr_resetAndMaybeChange(a1 + 4056);
     *(_WORD *)(a1 + 5108) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 4096));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 4096));
     *(_BYTE *)(a1 + 5099) = 0;
     *(_BYTE *)(a1 + 5096) = 1;
     *(_BYTE *)(a1 + 14174) = 0;
     *(_BYTE *)(a1 + 14189) = 0;
-    result = *(unsigned __int8 *)(sub_601FEE28(MEMORY[0xC8C188]) + 1375);
+    result = *(unsigned __int8 *)(ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]) + 1375);
     *(_BYTE *)(a1 + 14183) = result;
     return result;
   }
@@ -44997,7 +44997,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 4) = 12575608;
     sub_604C4B0C(a1 + 48);
     SE_SYS_DECIDE_ref_50208C(a1 + 4056);
-    sub_6045BF30(a1 + 6136);
+    ctor_installTwoVtables(a1 + 6136);
     sub_6050A308(a1 + 6540);
     *(_DWORD *)(a1 + 14028) = 2139095039;
     *(_DWORD *)(a1 + 14032) = 2139095039;
@@ -45282,7 +45282,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605028F0(a1 + 4056, &unk_60B02EDC, 1);
     sub_605028F0(a1 + 4056, &unk_60B02EE0, 1);
     sub_605028F0(a1 + 4056, &unk_60B02EE4, 1);
-    return sub_6045BF58(a1 + 6136, 0);
+    return Registry_iterateAndRegister(a1 + 6136, 0);
   }
 
 /* ============================================================================
@@ -45298,7 +45298,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v7; // [sp+14h] [bp-4h]
   
     v2 = a1 + 12;
-    sub_604734E4(a1 + 12, 0);
+    Disposer_allocateChildren(a1 + 12, 0);
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "CourseSelectScene.bflyt";
@@ -45528,7 +45528,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050DB10(a1 + 25004);
     sub_6050229C(a1 + 4056);
     sub_6050A8A4(a1 + 6540);
-    sub_60473B58(a1 + 48, 14, 0);
+    Table_getEntryById(a1 + 48, 14, 0);
     SE_SYS_MAP_VIEW_ZOOM_ref(a1);
     v2 = (_DWORD *)(a1 + 14152);
     v3 = *(_DWORD *)(a1 + 14152);
@@ -46574,7 +46574,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE *v3; // r6
     _BYTE *v4; // r6
   
-    v2 = sub_601FEE28(MEMORY[0xC8C188]);
+    v2 = ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]);
     v3 = (_BYTE *)(a1 + 4560);
     if ( *(_BYTE *)(v2 + 1377) )
     {
@@ -46700,7 +46700,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v5 != 4 || !*(_BYTE *)(a1 + 5102) )
           goto LABEL_43;
         v4 = 0;
-        if ( !*(_BYTE *)(sub_601FEE28(MEMORY[0xC8C188]) + 1377)
+        if ( !*(_BYTE *)(ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]) + 1377)
           && !sub_60502DC8(a1 + 4056, 11546316)
           && sub_60502DC8(a1 + 4056, 11546312) == 1 )
         {
@@ -46710,14 +46710,14 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( *(_BYTE *)(a1 + 4561) )
           goto LABEL_43;
         v4 = 1;
-        *(_BYTE *)(sub_601FEE28(MEMORY[0xC8C188]) + 1378) = 0;
+        *(_BYTE *)(ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]) + 1378) = 0;
         break;
       case 5:
       case 7:
         if ( v5 != 5 || !*(_BYTE *)(a1 + 5102) )
           goto LABEL_43;
         v4 = 0;
-        if ( !*(_BYTE *)(sub_601FEE28(MEMORY[0xC8C188]) + 1378)
+        if ( !*(_BYTE *)(ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]) + 1378)
           && !sub_60502DC8(a1 + 4056, 11546312)
           && sub_60502DC8(a1 + 4056, 11546316) == 1 )
         {
@@ -46727,7 +46727,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( *(_BYTE *)(a1 + 4560) )
           goto LABEL_43;
         v4 = 1;
-        *(_BYTE *)(sub_601FEE28(MEMORY[0xC8C188]) + 1377) = 0;
+        *(_BYTE *)(ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]) + 1377) = 0;
         break;
       default:
   LABEL_43:
@@ -46789,7 +46789,7 @@ static inline unsigned int uxtb16(unsigned int x)
             case 6:
               if ( v8 )
                 goto LABEL_88;
-              v15 = sub_601FEE28(MEMORY[0xC8C188]);
+              v15 = ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]);
               v16 = v15;
               if ( *(_BYTE *)(a1 + 5102) )
                 goto LABEL_88;
@@ -46816,7 +46816,7 @@ static inline unsigned int uxtb16(unsigned int x)
             case 7:
               if ( v8 )
                 goto LABEL_88;
-              v18 = sub_601FEE28(MEMORY[0xC8C188]);
+              v18 = ActorMgr_findAndInstantiate2(MEMORY[0xC8C188]);
               v19 = v18;
               if ( *(_BYTE *)(a1 + 5102)
                 || *(_BYTE *)(v18 + 1378)
@@ -47545,9 +47545,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = 3;
     sub_60502B04(v3, &v5, 1);
     *(_DWORD *)(a1 + 4828) = 256;
-    sub_60502548(v3);
+    StateMgr_resetAndMaybeChange(v3);
     *(_WORD *)(a1 + 4852) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3840));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
     if ( *(_DWORD *)(a1 + 615700) < 0xAu )
       v2 = *(_DWORD *)(a1 + 615700);
     return StateMgr::changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254136);
@@ -47615,10 +47615,10 @@ static inline unsigned int uxtb16(unsigned int x)
     switch ( v5 )
     {
       case 2:
-        sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
-        sub_60502548(a1 + 3800);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CURSOR", 0);
+        StateMgr_resetAndMaybeChange(a1 + 3800);
         *(_WORD *)(a1 + 4852) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3840));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
         return sub_604D3074((_DWORD *)a1);
       case 4:
         v4 = 13251448;
@@ -47648,7 +47648,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604C9510(int a1)
   {
-    return sub_60502548(a1 + 3800);
+    return StateMgr_resetAndMaybeChange(a1 + 3800);
   }
 
 /* ============================================================================
@@ -47673,7 +47673,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604C9568(int a1)
   {
     *(_WORD *)(a1 + 4852) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3840));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
     *(_DWORD *)(a1 + 4828) = 256;
     return 4828;
   }
@@ -47687,10 +47687,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r5
     _DWORD v4[2]; // [sp+0h] [bp-8h] BYREF
   
-    sub_60502548(a1 + 3800);
+    StateMgr_resetAndMaybeChange(a1 + 3800);
     v2 = 0;
     *(_WORD *)(a1 + 4852) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3840));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
     if ( *(_BYTE *)(a1 + 615720) )
     {
       if ( *(_DWORD *)(a1 + 615700) < 0xAu )
@@ -47763,9 +47763,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[1] = sub_604DABE0(0xAu);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 6u, v3, 0);
     *(_DWORD *)(a1 + 4828) = 256;
-    sub_60502548(a1 + 3800);
+    StateMgr_resetAndMaybeChange(a1 + 3800);
     *(_WORD *)(a1 + 4852) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3840));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
   }
 
 /* ============================================================================
@@ -48176,7 +48176,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604CA010(int a1)
   {
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 5880), 0, &dword_60CA4D68, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAUSE", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_PAUSE", 0);
   }
 
 /* ============================================================================
@@ -48250,9 +48250,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604CA174(int a1)
   {
-    sub_60502548(a1 + 3800);
+    StateMgr_resetAndMaybeChange(a1 + 3800);
     *(_WORD *)(a1 + 4852) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3840));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
   }
 
 /* ============================================================================
@@ -48300,9 +48300,9 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604CA29C(int a1)
   {
     *(_BYTE *)(MEMORY[0xC99E2C] + 638272) = 1;
-    sub_60502548(a1 + 3800);
+    StateMgr_resetAndMaybeChange(a1 + 3800);
     *(_WORD *)(a1 + 4852) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3840));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
   }
 
 /* ============================================================================
@@ -48738,9 +48738,9 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      sub_60502548(a1 + 3800);
+      StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 3840));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
       return (_BYTE *)StateMgr::changeState((_DWORD *)(a1 + 24), 13251832);
     }
     return result;
@@ -48816,9 +48816,9 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 9420, 0) + 51);
     if ( (result & 1) != 0 )
     {
-      sub_60502548(a1 + 3800);
+      StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 3840));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13251960);
     }
     return result;
@@ -48893,9 +48893,9 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 4842);
     if ( !result )
     {
-      sub_60502548(a1 + 3800);
+      StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 3840));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13251960);
     }
     return result;
@@ -49033,9 +49033,9 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12960, 0) + 51);
     if ( (result & 1) != 0 )
     {
-      sub_60502548(a1 + 3800);
+      StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 3840));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13252056);
     }
     return result;
@@ -49110,9 +49110,9 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 4842);
     if ( !result )
     {
-      sub_60502548(a1 + 3800);
+      StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 3840));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13252056);
     }
     return result;
@@ -49380,10 +49380,10 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 20216) = 0;
     *(_DWORD *)(a1 + 20212) = 4;
     *(_WORD *)(a1 + 20240) = 0;
-    sub_6045BF30(a1 + 20244);
-    sub_6045BF30(a1 + 20648);
-    sub_6045BF30(a1 + 21052);
-    sub_6045BF30(a1 + 21456);
+    ctor_installTwoVtables(a1 + 20244);
+    ctor_installTwoVtables(a1 + 20648);
+    ctor_installTwoVtables(a1 + 21052);
+    ctor_installTwoVtables(a1 + 21456);
     *(_DWORD *)(a1 + 21860) = -1;
     *(_DWORD *)(a1 + 21864) = 0;
     *(_DWORD *)(a1 + 21868) = 12576676;
@@ -49408,7 +49408,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 25468) = 0;
     *(_BYTE *)(a1 + 25472) = 0;
     SE_SYS_DECIDE_ref_50208C(a1 + 25508);
-    sub_6045BF30(a1 + 27588);
+    ctor_installTwoVtables(a1 + 27588);
     *(_DWORD *)(a1 + 28004) = 0;
     *(_WORD *)(a1 + 28000) = 0;
     *(_DWORD *)(a1 + 27996) = 0;
@@ -49620,7 +49620,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v22; // [sp+24h] [bp-4h]
   
     sub_604CC7F4();
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C(a1 + 40);
     v17 = 12321336;
     v18 = (int)"CourseSelectVS.bflyt";
@@ -49669,15 +49669,15 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604D2AE8(a1);
     else
       sub_604D2C94(a1);
-    sub_6045BF58(a1 + 20244, 0);
+    Registry_iterateAndRegister(a1 + 20244, 0);
     v10 = MEMORY[0xB023FC];
     v11 = MEMORY[0xB023FD];
     sub_609094C4(a1 + 20244, 66032, MEMORY[0xB023FC], MEMORY[0xB023FD]);
-    sub_6045BF58(a1 + 20648, 1);
+    Registry_iterateAndRegister(a1 + 20648, 1);
     sub_609094C4(a1 + 20648, 66032, v10, v11);
-    sub_6045BF58(a1 + 21052, 2);
+    Registry_iterateAndRegister(a1 + 21052, 2);
     sub_609094C4(a1 + 21052, 66032, v10, v11);
-    sub_6045BF58(a1 + 21456, 3);
+    Registry_iterateAndRegister(a1 + 21456, 3);
     sub_609094C4(a1 + 21456, 66032, v10, v11);
     sub_604CD374(a1 + 21868);
     sub_604CD654(a1 + 35232);
@@ -49916,7 +49916,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = 2;
     sub_605029FC(a1 + 3800, &v9, "SE_SYS_PAGE");
     *(_WORD *)(a1 + 4852) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3840));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
   }
 
 /* ============================================================================
@@ -49959,7 +49959,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = a1;
     v25 = 0;
     v4 = (_DWORD *)(a1 + 5880);
-    sub_604734E4(v4, 0);
+    Disposer_allocateChildren(v4, 0);
     v5 = v3 + 40;
     v23 = 12321336;
     v24 = sub_604DA9CC(0);
@@ -49971,7 +49971,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v22 = 1;
     v7(&v4[885 * v6], &dword_60CA4D80, &v22);
     v25 = 1;
-    sub_604734E4(v4 + 885, 0);
+    Disposer_allocateChildren(v4 + 885, 0);
     v8 = v25;
     v9 = sub_604DA9CC(v25);
     v23 = 12321336;
@@ -49986,7 +49986,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v22 = 1;
     v11(&v4[885 * v10], &dword_60CA4D80, &v22);
     v25 = 2;
-    sub_604734E4(v4 + 1770, 0);
+    Disposer_allocateChildren(v4 + 1770, 0);
     v12 = v25;
     v13 = sub_604DA9CC(v25);
     v23 = 12321336;
@@ -50001,7 +50001,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v22 = 1;
     v15(&v4[885 * v14], &dword_60CA4D80, &v22);
     v25 = 3;
-    sub_604734E4(v4 + 2655, 0);
+    Disposer_allocateChildren(v4 + 2655, 0);
     v16 = v25;
     v17 = sub_604DA9CC(v25);
     v23 = 12321336;
@@ -50087,9 +50087,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v15; // [sp+20h] [bp-4h]
   
     v2 = a1 + 5720;
-    sub_6045BF58(a1 + 5720, 0);
+    Registry_iterateAndRegister(a1 + 5720, 0);
     sub_609094C4(v2, 240, MEMORY[0xB023FC], MEMORY[0xB023FD]);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C(a1 + 40);
     v12 = 12321336;
     v13 = (int)"CourseSelectVSConfirm.bflyt";
@@ -50140,7 +50140,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = v8;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, &v12, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
-    sub_60473B58(a1 + 40, 14, 0);
+    Table_getEntryById(a1 + 40, 14, 0);
     *(_BYTE *)(a1 + 6144) = *(_DWORD *)(MEMORY[0xC99DEC] + 508) == 3;
     return 6144;
   }
@@ -50177,7 +50177,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v26[2]; // [sp+2Ch] [bp-8h] BYREF
   
     v2 = a1 + 12872;
-    sub_6045BF58(a1 + 12872, 0);
+    Registry_iterateAndRegister(a1 + 12872, 0);
     sub_609094C4(v2, 66032, MEMORY[0xB023FC], MEMORY[0xB023FD]);
     v3 = 0;
     v4 = *(unsigned __int8 *)(MEMORY[0xC99DEC] + 531);
@@ -50186,7 +50186,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v4 == 4 )
       v3 = 1;
     *(_DWORD *)(a1 + 13276) = v3;
-    sub_604734E4((_DWORD *)(a1 + 44), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 44), 0);
     sub_60475C8C(a1 + 44);
     v22 = 12321336;
     v23 = (int)"CourseSelectVSRandom.bflyt";
@@ -50243,7 +50243,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v20 = 12321336;
     v21 = (const char *)v10;
     (*(void (__fastcall **)(int *, int *))(v22 + 8))(&v22, &v20);
-    sub_604734E4((_DWORD *)(a1 + 5792), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 5792), 0);
     v11 = Pa_ArrowL_00_Pa_ArrowR_00_ref(0);
     v20 = 12321336;
     v21 = (const char *)v11;
@@ -50251,7 +50251,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v12 = *(void (__fastcall **)(int, int *, int *))(*(_DWORD *)(a1 + 5792) + 8);
     v19 = 1;
     v12(a1 + 5792, &v22, &v19);
-    sub_604734E4((_DWORD *)(a1 + 9332), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 9332), 0);
     v13 = Pa_ArrowL_00_Pa_ArrowR_00_ref(1);
     v20 = 12321336;
     v21 = (const char *)v13;
@@ -50281,7 +50281,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v23 = v17;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, &v22, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3556) + 104))(**(_DWORD **)(a1 + 3556));
-    return sub_60473B58(a1 + 44, 14, 0);
+    return Table_getEntryById(a1 + 44, 14, 0);
   }
 
 /* ============================================================================
@@ -50956,9 +50956,9 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_BYTE *)(a1 + 44) = 1;
     *(_DWORD *)(a1 + 52608) = a3;
-    sub_6045BF58(a1 + 52204, 0);
+    Registry_iterateAndRegister(a1 + 52204, 0);
     sub_609094C4(a1 + 52204, 240, MEMORY[0xB023FC], MEMORY[0xB023FD]);
-    sub_604734E4((_DWORD *)(a1 + 60), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 60), 0);
     sub_60475C8C(a1 + 60);
     v20 = 12321336;
     v21 = (int)"CourseSelectVSWin.bflyt";
@@ -51326,7 +51326,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 3800);
-      sub_60473B58(a1 + 40, 14, 0);
+      Table_getEntryById(a1 + 40, 14, 0);
       v3 = 10;
       v4 = a1 + 93148;
       v5 = (_DWORD *)(a1 + 141864);
@@ -51340,7 +51340,7 @@ static inline unsigned int uxtb16(unsigned int x)
             StateMgr::execute((_DWORD *)v6);
             sub_6050229C(v4);
           }
-          sub_60473B58(v6 + 40, 14, 0);
+          Table_getEntryById(v6 + 40, 14, 0);
         }
         v4 += 52644;
         v5 += 13161;
@@ -51353,14 +51353,14 @@ static inline unsigned int uxtb16(unsigned int x)
         StateMgr::execute((_DWORD *)(a1 + 21888));
         sub_6050229C(a1 + 25508);
         sub_6050A8A4(a1 + 28016);
-        sub_60473B58(a1 + 21908, 14, 0);
+        Table_getEntryById(a1 + 21908, 14, 0);
       }
       if ( *(_BYTE *)(a1 + 35268) )
       {
         StateMgr::execute((_DWORD *)(a1 + 35252));
         sub_6050229C(a1 + 38924);
         sub_6050A8A4(a1 + 48512);
-        sub_60473B58(a1 + 35276, 14, 0);
+        Table_getEntryById(a1 + 35276, 14, 0);
       }
       sub_605454B8(a1 + 55740);
       v7 = *(_DWORD *)(a1 + 20076);
@@ -52070,10 +52070,10 @@ static inline unsigned int uxtb16(unsigned int x)
         j = 0;
         break;
       case 6:
-        sub_60502548(a1 + 3900);
+        StateMgr_resetAndMaybeChange(a1 + 3900);
         v26 = 0;
         *(_WORD *)(a1 + 4952) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3940));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3940));
         v27 = *(_DWORD *)(a1 + 52620);
         if ( v27 < 0 )
           goto LABEL_120;
@@ -52538,10 +52538,10 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       case 2:
         v2 = 1;
-        sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_CURSOR", 0, 1);
-        sub_60502548(a1 + 3800);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_CURSOR", 0, 1);
+        StateMgr_resetAndMaybeChange(a1 + 3800);
         *(_WORD *)(a1 + 4852) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3840));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
         sub_604D3074(a1);
         return v2;
       case 4:
@@ -52714,19 +52714,19 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( *(_BYTE *)(a1 + 52644 * v16 + 89292) )
             {
               *(_DWORD *)(a1 + 615716) = -1;
-              sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
+              SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
               if ( a2 == 1 )
               {
-                sub_60502548(a1 + 3800);
+                StateMgr_resetAndMaybeChange(a1 + 3800);
                 *(_WORD *)(a1 + 4852) = 0;
-                sub_6047EABC((_DWORD *)(a1 + 3840));
+                IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
                 v17 = *(_DWORD *)(a1 + 615700);
                 if ( v17 >= 0xA )
                   v17 = 0;
                 v18 = a1 + 52644 * v17;
-                sub_60502548(v18 + 93148);
+                StateMgr_resetAndMaybeChange(v18 + 93148);
                 *(_WORD *)(v18 + 94200) = 0;
-                sub_6047EABC((_DWORD *)(v18 + 93188));
+                IntrusiveList_clearAndDestroy((_DWORD *)(v18 + 93188));
               }
               v19 = 13251896;
               goto LABEL_32;
@@ -52777,19 +52777,19 @@ static inline unsigned int uxtb16(unsigned int x)
       return 0;
     }
     *v9 = -1;
-    sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
     if ( a2 == 1 )
     {
-      sub_60502548(a1 + 3800);
+      StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 3840));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
       v20 = *(_DWORD *)(a1 + 615700);
       if ( v20 >= 0xA )
         v20 = 0;
       v21 = a1 + 52644 * v20;
-      sub_60502548(v21 + 93148);
+      StateMgr_resetAndMaybeChange(v21 + 93148);
       *(_WORD *)(v21 + 94200) = 0;
-      sub_6047EABC((_DWORD *)(v21 + 93188));
+      IntrusiveList_clearAndDestroy((_DWORD *)(v21 + 93188));
     }
     v19 = 13251992;
   LABEL_32:
@@ -53269,7 +53269,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v12 >= 0 )
           {
             *v14 = -1;
-            sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
+            SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
             v4 = 13251992;
             goto LABEL_14;
           }
@@ -53306,7 +53306,7 @@ static inline unsigned int uxtb16(unsigned int x)
         return v2;
       }
   LABEL_13:
-      sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_CURSOR", 0, 1);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_CURSOR", 0, 1);
       v4 = 13251160;
       goto LABEL_14;
     }
@@ -53331,7 +53331,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( *(_BYTE *)(a1 + 52644 * v18 + 89292) )
           {
             *(_DWORD *)(a1 + 615716) = -1;
-            sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
+            SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
             v4 = 13251896;
             goto LABEL_14;
           }
@@ -53730,9 +53730,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604D4BC8(int a1)
   {
-    sub_60502548(a1 + 3900);
+    StateMgr_resetAndMaybeChange(a1 + 3900);
     *(_WORD *)(a1 + 4952) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3940));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3940));
   }
 
 /* ============================================================================
@@ -53806,9 +53806,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604D4CEC(int a1)
   {
-    sub_60502548(a1 + 3900);
+    StateMgr_resetAndMaybeChange(a1 + 3900);
     *(_WORD *)(a1 + 4952) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3940));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3940));
   }
 
 /* ============================================================================
@@ -53940,9 +53940,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604D4F28(int a1)
   {
-    sub_60502548(a1 + 3900);
+    StateMgr_resetAndMaybeChange(a1 + 3900);
     *(_WORD *)(a1 + 4952) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3940));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3940));
   }
 
 /* ============================================================================
@@ -54132,7 +54132,7 @@ static inline unsigned int uxtb16(unsigned int x)
     memset((void *)(a1 + 52000), 0, 0xC4u);
     *(_DWORD *)(a1 + 52196) = -1;
     *(_DWORD *)(a1 + 52200) = -1;
-    sub_6045BF30(a1 + 52204);
+    ctor_installTwoVtables(a1 + 52204);
     *(_DWORD *)(a1 + 52608) = 0;
     *(_DWORD *)(a1 + 52612) = 0;
     *(_DWORD *)(a1 + 52616) = 0;
@@ -54442,7 +54442,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = (_DWORD *)(a1 + 5980);
     do
     {
-      sub_604734E4(v5, 0);
+      Disposer_allocateChildren(v5, 0);
       sub_60476388(v5, v3, &dword_60CA4EF0[v4]);
       v6 = *(void (__fastcall **)(_DWORD *, int *, int *))(*v5 + 8);
       v10 = 1;
@@ -55059,9 +55059,9 @@ static inline unsigned int uxtb16(unsigned int x)
       {
   LABEL_18:
         *(_DWORD *)(a1 + 52612) = 2;
-        sub_60502548(v8);
+        StateMgr_resetAndMaybeChange(v8);
         *(_WORD *)(a1 + 4952) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3940));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3940));
         *v3 = 256;
         StateMgr::changeState((_DWORD *)(a1 + 20), 13254072);
         return 1;
@@ -55504,9 +55504,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r0
     int v4; // r1
   
-    sub_60502548(a1 + 3640);
+    StateMgr_resetAndMaybeChange(a1 + 3640);
     *(_WORD *)(a1 + 4692) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3680));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3680));
     v2 = *(_BYTE *)(a1 + 6133) == 0;
     if ( *(_BYTE *)(a1 + 6133) )
       v2 = *(_BYTE *)(a1 + 6132) == 0;
@@ -55606,9 +55606,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604D74C8(int a1)
   {
-    sub_60502548(a1 + 3640);
+    StateMgr_resetAndMaybeChange(a1 + 3640);
     *(_WORD *)(a1 + 4692) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3680));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3680));
   }
 
 /* ============================================================================
@@ -55630,7 +55630,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD v3[2]; // [sp+0h] [bp-8h] BYREF
   
-    sub_60502548(a1 + 3640);
+    StateMgr_resetAndMaybeChange(a1 + 3640);
     v3[0] = 12321336;
     v3[1] = InOut_Pos_ref(0);
     return sub_604741D8((_DWORD *)(a1 + 40), 0, v3, 0);
@@ -55660,7 +55660,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_WORD *)(a1 + 36) = 0;
     *(_WORD *)(a1 + 4692) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3680));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3680));
     result = *(_DWORD *)(a1 + 6128);
     *(_DWORD *)(a1 + 6124) = result;
     return result;
@@ -55678,7 +55678,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !result )
     {
       *(_DWORD *)(a1 + 6124) = *(_DWORD *)(a1 + 6128);
-      sub_60502548(a1 + 3640);
+      StateMgr_resetAndMaybeChange(a1 + 3640);
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13254744);
     }
     return result;
@@ -55767,7 +55767,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v3 == 2 )
     {
       v2 = 1;
-      sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
       *(_DWORD *)(a1 + 6128) = 3;
       StateMgr::changeState((_DWORD *)(a1 + 20), 13254712);
       return v2;
@@ -55776,12 +55776,12 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( *(_BYTE *)(a1 + 6144) )
       {
-        sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_BTN_EDIT_START", 0, 1);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_BTN_EDIT_START", 0, 1);
         v6 = 4;
       }
       else
       {
-        sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
         v6 = 2;
       }
       *(_DWORD *)(a1 + 6128) = v6;
@@ -55876,7 +55876,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = *(_DWORD *)(a1 + 4668);
       if ( v4 == 2 )
       {
-        sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
         v5 = 3;
       }
       else
@@ -55890,12 +55890,12 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         if ( *(_BYTE *)(a1 + 6144) )
         {
-          sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_BTN_EDIT_START", 0, 1);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_BTN_EDIT_START", 0, 1);
           v5 = 4;
         }
         else
         {
-          sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
           v5 = 2;
         }
       }
@@ -56232,9 +56232,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604D8338(int a1)
   {
-    sub_60502548(a1 + 3692);
+    StateMgr_resetAndMaybeChange(a1 + 3692);
     *(_WORD *)(a1 + 4744) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3732));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3732));
   }
 
 /* ============================================================================
@@ -56248,7 +56248,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[0] = 12321336;
     v3[1] = InOut_ScrollToR_ScrollToL_LoopArrow_ref(0);
     sub_604741D8((_DWORD *)(a1 + 44), 0, v3, 0);
-    return sub_60502548(a1 + 3692);
+    return StateMgr_resetAndMaybeChange(a1 + 3692);
   }
 
 /* ============================================================================
@@ -56275,7 +56275,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604D83FC(int a1)
   {
     *(_WORD *)(a1 + 4744) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3732));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3732));
   }
 
 /* ============================================================================
@@ -56325,7 +56325,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604D84E4(int a1)
   {
-    return sub_60502548(a1 + 3692);
+    return StateMgr_resetAndMaybeChange(a1 + 3692);
   }
 
 /* ============================================================================
@@ -56362,7 +56362,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604D8588(int a1)
   {
-    return sub_60502548(a1 + 3692);
+    return StateMgr_resetAndMaybeChange(a1 + 3692);
   }
 
 /* ============================================================================
@@ -56434,9 +56434,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604D8710(int a1)
   {
-    sub_60502548(a1 + 3692);
+    StateMgr_resetAndMaybeChange(a1 + 3692);
     *(_WORD *)(a1 + 4744) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3732));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3732));
   }
 
 /* ============================================================================
@@ -56577,9 +56577,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604D8A38(int a1)
   {
-    sub_60502548(a1 + 3692);
+    StateMgr_resetAndMaybeChange(a1 + 3692);
     *(_WORD *)(a1 + 4744) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3732));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3732));
   }
 
 /* ============================================================================
@@ -56706,7 +56706,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 12860) = 11778612;
     *(_DWORD *)(a1 + 12864) = 0;
     *(_BYTE *)(a1 + 12868) = 0;
-    sub_6045BF30(a1 + 12872);
+    ctor_installTwoVtables(a1 + 12872);
     *(_DWORD *)(a1 + 13276) = 1;
     sub_6050A308(a1 + 13280);
     memset((void *)(a1 + 3652), 0, 0x28u);
@@ -56989,7 +56989,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
   LABEL_12:
           v2 = 1;
-          sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
           v8 = 13255192;
   LABEL_16:
           StateMgr::changeState((_DWORD *)(a1 + 20), v8);
@@ -57001,7 +57001,7 @@ static inline unsigned int uxtb16(unsigned int x)
         return v2;
   LABEL_15:
       v2 = 1;
-      sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
       v8 = 13255096;
       goto LABEL_16;
     }
@@ -57049,14 +57049,14 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( *(int *)(a1 + 13276) > 1 )
             return v2;
           v2 = 1;
-          sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
           v4 = 13255224;
           break;
         case 4:
           if ( *(int *)(a1 + 13276) < 1 )
             return v2;
           v2 = 1;
-          sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
           v4 = 13255128;
           break;
         default:
@@ -60666,7 +60666,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"CourseSelectWorldName.bflyt";
@@ -60756,7 +60756,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -60900,13 +60900,13 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12572424;
     *(_BYTE *)(a1 + 12) = 0;
     SE_SYS_BACK_ref(a1 + 24);
-    v2 = sub_6045BF30(a1 + 88);
+    v2 = ctor_installTwoVtables(a1 + 88);
     *(_BYTE *)(a1 + 492) = 0;
     *(_BYTE *)(a1 + 493) = 0;
     *(_BYTE *)(a1 + 494) = 1;
     *(_DWORD *)(a1 + 20) = 0;
     *(_DWORD *)(a1 + 80) = 2;
-    sub_6045BF58(v2, 4);
+    Registry_iterateAndRegister(v2, 4);
     return a1;
   }
 
@@ -61058,7 +61058,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 4);
-    sub_604734E4((_DWORD *)(a1 + 4), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
     sub_60475C8C((int)v2);
     v4[0] = 12321336;
     v4[1] = "DarknessFrame.bflyt";
@@ -61076,7 +61076,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DEC98(int a1)
   {
     *(_BYTE *)(a1 + 3553) = 1;
-    return sub_60473B58((_DWORD *)(a1 + 4), 0xEu, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 4), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -61094,7 +61094,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return result;
     }
     *(_BYTE *)(result + 3552) = 0;
-    return sub_60473B58(result + 4, 14, 0);
+    return Table_getEntryById(result + 4, 14, 0);
   }
 
 /* ============================================================================
@@ -61312,9 +61312,9 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v3 + 64) = v4 & 0xFE;
     }
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA508C, 0);
-    sub_60502548(a1 + 3592);
+    StateMgr_resetAndMaybeChange(a1 + 3592);
     *(_WORD *)(a1 + 4644) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3632));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3632));
     *(_BYTE *)(a1 + 6297) = 1;
     return 6297;
   }
@@ -62105,7 +62105,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3596) = 11778612;
     *(_DWORD *)(a1 + 3600) = 0;
     *(_BYTE *)(a1 + 3604) = 0;
-    sub_6045BF30(a1 + 3608);
+    ctor_installTwoVtables(a1 + 3608);
     memset((void *)(a1 + 4020), 0, 0x39u);
     return a1;
   }
@@ -62162,7 +62162,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = 2;
     sub_6047518C(a1 + 40, a1 + 4020, &dword_60CA5370, &v4);
     sub_604E0514(a1);
-    return sub_6045BF58(a1 + 3608, 0);
+    return Registry_iterateAndRegister(a1 + 3608, 0);
   }
 
 /* ============================================================================
@@ -62176,7 +62176,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"EventWindow.bflyt";
@@ -62247,7 +62247,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_6050A8A4(*(_DWORD *)(a1 + 4060));
       sub_6050A8A4(*(_DWORD *)(a1 + 4064));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -62969,11 +62969,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3580) = 0;
     *(_BYTE *)(a1 + 3584) = 0;
     memset((void *)(a1 + 3588), 0, 0x4Cu);
-    sub_6045BF30(a1 + 3680);
-    sub_6045BF30(a1 + 4084);
-    sub_6045BF30(a1 + 4488);
-    sub_6045BF30(a1 + 4892);
-    sub_6045BF30(a1 + 5296);
+    ctor_installTwoVtables(a1 + 3680);
+    ctor_installTwoVtables(a1 + 4084);
+    ctor_installTwoVtables(a1 + 4488);
+    ctor_installTwoVtables(a1 + 4892);
+    ctor_installTwoVtables(a1 + 5296);
     *(_DWORD *)(a1 + 5700) = 0;
     *(_DWORD *)(a1 + 5704) = 0;
     *(_DWORD *)(a1 + 5708) = 0;
@@ -63039,7 +63039,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = a1 + 10;
-    sub_604734E4(a1 + 10, 0);
+    Disposer_allocateChildren(a1 + 10, 0);
     sub_60475C8C((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"Command.bflyt";
@@ -63134,11 +63134,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1[913] + 64) |= 1u;
     *(_BYTE *)(a1[914] + 64) |= 1u;
     *(_BYTE *)(a1[915] + 64) |= 1u;
-    sub_6045BF58((int)(a1 + 920), 0);
-    sub_6045BF58((int)(a1 + 1021), 1);
-    sub_6045BF58((int)(a1 + 1122), 2);
-    sub_6045BF58((int)(a1 + 1223), 3);
-    return sub_6045BF58((int)(a1 + 1324), 4);
+    Registry_iterateAndRegister((int)(a1 + 920), 0);
+    Registry_iterateAndRegister((int)(a1 + 1021), 1);
+    Registry_iterateAndRegister((int)(a1 + 1122), 2);
+    Registry_iterateAndRegister((int)(a1 + 1223), 3);
+    return Registry_iterateAndRegister((int)(a1 + 1324), 4);
   }
 
 /* ============================================================================
@@ -63154,7 +63154,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_604E1E4C(a1);
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -64398,11 +64398,11 @@ static inline unsigned int uxtb16(unsigned int x)
     GameOverScene_ctor_helper_helper_4BA62C(a1 + 7308);
     GameOverScene_ctor_helper_helper_4BA62C(a1 + 11008);
     GameOverScene_ctor_helper_helper_4BA62C(a1 + 14708);
-    sub_6045BF30(a1 + 18492);
-    sub_6045BF30(a1 + 18896);
-    sub_6045BF30(a1 + 19300);
-    sub_6045BF30(a1 + 19704);
-    sub_6045BF30(a1 + 20108);
+    ctor_installTwoVtables(a1 + 18492);
+    ctor_installTwoVtables(a1 + 18896);
+    ctor_installTwoVtables(a1 + 19300);
+    ctor_installTwoVtables(a1 + 19704);
+    ctor_installTwoVtables(a1 + 20108);
     *(_BYTE *)(a1 + 20524) = 0;
     *(_DWORD *)(a1 + 20520) = 0;
     return a1;
@@ -64462,7 +64462,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v8[0] = 12321336;
     v8[1] = (int)"GameOver.bflyt";
@@ -64545,11 +64545,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604BA7C0(a1 + 14708, v6 + 252);
     if ( !*(_BYTE *)(v6 + 252) || *(int *)(v6 + 256) >= 1 )
       *(_BYTE *)(a1 + 18405) = 0;
-    sub_6045BF58(a1 + 18492, 0);
-    sub_6045BF58(a1 + 18896, 1);
-    sub_6045BF58(a1 + 19300, 2);
-    sub_6045BF58(a1 + 19704, 3);
-    return sub_6045BF58(a1 + 20108, 4);
+    Registry_iterateAndRegister(a1 + 18492, 0);
+    Registry_iterateAndRegister(a1 + 18896, 1);
+    Registry_iterateAndRegister(a1 + 19300, 2);
+    Registry_iterateAndRegister(a1 + 19704, 3);
+    return Registry_iterateAndRegister(a1 + 20108, 4);
   }
 
 /* ============================================================================
@@ -64715,7 +64715,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      sub_60473B58(a1 + 40, 14, 0);
+      Table_getEntryById(a1 + 40, 14, 0);
       sub_604E4418(a1);
       sub_604BAE44(a1 + 3608);
       sub_604BAE44(a1 + 7308);
@@ -65818,7 +65818,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v12; // [sp+58h] [bp-8h] BYREF
     const char *v13; // [sp+5Ch] [bp-4h]
   
-    sub_604734E4(*(_DWORD **)(a1 + 4), 0);
+    Disposer_allocateChildren(*(_DWORD **)(a1 + 4), 0);
     sub_60475C8C(*(_DWORD *)(a1 + 4));
     v9 = &v11;
     v8 = 12322272;
@@ -65829,7 +65829,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CA5AF0 + 12))(&dword_60CA5AF0);
     v2 = (const char *)dword_60CA5AF4;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA5AF8 + 3))(&off_60CA5AF8);
-    sub_608FDDF4(&v8, "%s.%s", v2, (const char *)dword_60CA5AFC);
+    StringUtil_formatInto(&v8, "%s.%s", v2, (const char *)dword_60CA5AFC);
     message_ref(*(_DWORD **)(a1 + 4), &v8, 0, 0, 0);
     Pa_IconB_ref(a1);
     Pa_IconA_ref(a1);
@@ -66109,7 +66109,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604E8C6C(a1);
       sub_604E9478(a1);
     }
-    sub_60473B58(*(_DWORD **)(a1 + 4), *(_DWORD *)(a1 + 62852), 0);
+    Table_getEntryById(*(_DWORD **)(a1 + 4), *(_DWORD *)(a1 + 62852), 0);
     if ( *(_DWORD *)(a1 + 4552) == 1 )
       sub_604E8B68((_DWORD *)a1);
     *(_DWORD *)(a1 + 4556) = 0;
@@ -68042,7 +68042,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
   LABEL_63:
           *(_BYTE *)(a1 + 565) = 1;
-          return sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_SCORE_COUNT_FINISH", 0, 1);
+          return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_SCORE_COUNT_FINISH", 0, 1);
         }
       }
     }
@@ -69061,7 +69061,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[910] = 0;
     *((_BYTE *)v3 + 3644) = 0;
     *(_DWORD *)(a1 + 4) = v3;
-    sub_604734E4(v3, 0);
+    Disposer_allocateChildren(v3, 0);
     v4 = *(_DWORD *)(a1 + 4);
     v10 = 12321336;
     v11 = "Game";
@@ -69176,7 +69176,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604EA648(int a1)
   {
     sub_604EA67C(a1);
-    sub_60473B58(*(_DWORD **)(a1 + 4), 0xEu, 0);
+    Table_getEntryById(*(_DWORD **)(a1 + 4), 0xEu, 0);
     sub_604E8B68((_DWORD *)a1);
     *(_BYTE *)(a1 + 20) = 1;
     *(_BYTE *)(a1 + 296) = 1;
@@ -69454,7 +69454,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr::execute((_DWORD *)(a1 + 4536));
     sub_604E8C6C(a1);
     sub_604E9478(a1);
-    return sub_60473B58(*(_DWORD **)(a1 + 4), 0xEu, 0);
+    return Table_getEntryById(*(_DWORD **)(a1 + 4), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -69530,7 +69530,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v14 = "SE_SYS_CH_TARGET_MEDAL_UP";
           else
             v14 = "SE_SYS_CH_TARGET_MEDAL_DOWN";
-          result = sub_60807EF0(MEMORY[0xCC6AF8], v14, 0, 1);
+          result = SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], v14, 0, 1);
         }
         *v10 = v5;
       }
@@ -69982,9 +69982,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604EBBE0(int a1)
   {
-    sub_60502548(a1 + 14396);
+    StateMgr_resetAndMaybeChange(a1 + 14396);
     *(_WORD *)(a1 + 15448) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 14436));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 14436));
   }
 
 /* ============================================================================
@@ -70068,7 +70068,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v11; // [sp+18h] [bp-4h]
   
     Model_s_Nin_NX_NVN_szs_ref_834E7C(&dword_60CA60D0, 0);
-    sub_604734E4((_DWORD *)(a1 + 10808), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 10808), 0);
     sub_60475C8C(a1 + 10808);
     v10 = 12321336;
     v11 = "Help.bflyt";
@@ -70592,7 +70592,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(a1 + 23749) )
         sub_6050229C(a1 + 14396);
       sub_6050A8A4(a1 + 16496);
-      sub_60473B58(a1 + 10808, 5, 0);
+      Table_getEntryById(a1 + 10808, 5, 0);
       return sub_604ECEA4(a1);
     }
     return result;
@@ -70943,7 +70943,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v9; // [sp+0h] [bp-8h] BYREF
     int v10; // [sp+4h] [bp-4h] BYREF
   
-    sub_604734E4(a1, 0);
+    Disposer_allocateChildren(a1, 0);
     sub_60476388(a1, a2, a3);
     if ( ((unsigned int)&unk_60CA6160 & ~(1615778912 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA6160) )
     {
@@ -71127,7 +71127,7 @@ static inline unsigned int uxtb16(unsigned int x)
     char v4; // r12
     int v6; // [sp+4h] [bp-4h] BYREF
   
-    sub_604734E4(a1, 0);
+    Disposer_allocateChildren(a1, 0);
     sub_604762F8(a1, a2);
     if ( ((unsigned int)&unk_60CA619C & ~(1615780104 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA619C) )
     {
@@ -71194,7 +71194,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall SE_SYS_NEW_OSHIRASE_ref(int a1)
   {
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA61A8, 0);
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_NEW_OSHIRASE", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_NEW_OSHIRASE", 0);
     sub_604EE4B0(a1);
     SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 10);
     *(_BYTE *)(a1 + 10833) = 1;
@@ -71254,7 +71254,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 10841);
     if ( (result & 0x20) != 0 )
     {
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13263456);
     }
     return result;
@@ -71345,7 +71345,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3604) = 0;
     sub_6050A308(a1 + 3616);
     *(_WORD *)(a1 + 10832) = 0;
-    sub_6045BF30(a1 + 10836);
+    ctor_installTwoVtables(a1 + 10836);
     *(_DWORD *)(a1 + 3608) = 0;
     *(_DWORD *)(a1 + 3612) = 0;
     return a1;
@@ -71406,7 +71406,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v4 = 2;
     sub_60475334(a1 + 40, a1 + 3608, &dword_60CA62AC, &v4);
-    return sub_6045BF58(a1 + 10836, 0);
+    return Registry_iterateAndRegister(a1 + 10836, 0);
   }
 
 /* ============================================================================
@@ -71421,7 +71421,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v6; // [sp+Ch] [bp-4h]
   
     v2 = a1 + 10;
-    sub_604734E4(a1 + 10, 0);
+    Disposer_allocateChildren(a1 + 10, 0);
     sub_60475C8C((int)v2);
     v5 = 12321336;
     v6 = "InfoWindow.bflyt";
@@ -71459,7 +71459,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_6050A8A4(a1 + 3616);
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -72667,9 +72667,9 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604EFF70(int a1)
   {
     *(_DWORD *)(a1 + 74472) = 60;
-    sub_60502548(a1 + 46088);
+    StateMgr_resetAndMaybeChange(a1 + 46088);
     *(_WORD *)(a1 + 47140) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 46128));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 46128));
   }
 
 /* ============================================================================
@@ -72693,9 +72693,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_604EFFE8(int a1)
   {
-    sub_60502548(a1 + 46088);
+    StateMgr_resetAndMaybeChange(a1 + 46088);
     *(_WORD *)(a1 + 47140) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 46128));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 46128));
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 42520), 0, (_DWORD *)0xCA62FC, 0);
     if ( !*(_BYTE *)(a1 + 74479) )
       sub_604741D8((_DWORD *)(a1 + 42520), 1u, (_DWORD *)0xCA6304, 0);
@@ -72915,7 +72915,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 46084) = 0;
     SE_SYS_DECIDE_ref_50208C(a1 + 46088);
     sub_604793CC(a1 + 48168);
-    sub_6045BF30(a1 + 48184);
+    ctor_installTwoVtables(a1 + 48184);
     MovingSoundActor_ctor(a1 + 48588, 0, 1);
     *(_DWORD *)(a1 + 48896) = 16;
     *(_DWORD *)(a1 + 48900) = 10;
@@ -73122,7 +73122,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = 1;
     sub_60475334(a1 + 42520, a1 + 74444, &dword_60CA65A8, &v11);
     v4 = 0;
-    sub_6045BF58(a1 + 48184, 0);
+    Registry_iterateAndRegister(a1 + 48184, 0);
     sub_609094C4(a1 + 48184, 240, MEMORY[0xB023FC], MEMORY[0xB023FD]);
     v5 = 0;
     if ( MEMORY[0xB0D08C] <= 6u )
@@ -73163,7 +73163,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v8; // [sp+14h] [bp-4h]
   
     v2 = a1 + 10630;
-    sub_604734E4(a1 + 10630, 0);
+    Disposer_allocateChildren(a1 + 10630, 0);
     v7 = 12321336;
     v8 = "CourseSelect";
     sub_60475C8C((int)v2);
@@ -73298,7 +73298,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6588);
     }
-    sub_604734E4((_DWORD *)(a1 + 4), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
     sub_60476388((_DWORD *)(a1 + 4), a1 + 42520, (_DWORD *)0xCA630C);
     v3 = *(void (__fastcall **)(int, int *, int *))(*(_DWORD *)(a1 + 4) + 8);
     v9 = 2;
@@ -73307,7 +73307,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = (_DWORD *)(a1 + 3544);
     do
     {
-      sub_604734E4(v5, 0);
+      Disposer_allocateChildren(v5, 0);
       sub_60476388(v5, a1 + 42520, &dword_60CA66C0[v4]);
       v6 = *(int (__fastcall **)(_DWORD *, int *, int *))(*v5 + 8);
       v8 = 10;
@@ -73413,7 +73413,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr::execute((_DWORD *)(a1 + 42504));
       sub_6050229C(a1 + 46088);
       sub_6050A8A4(a1 + 48908);
-      sub_60473B58(a1 + 42520, 14, 0);
+      Table_getEntryById(a1 + 42520, 14, 0);
       sub_604F1C08(a1);
       sub_60402E34(a1 + 56124);
       sub_6074EED0(a1 + 74052);
@@ -74679,7 +74679,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3596), 0, (_DWORD *)0xCA67EC, 0);
     *(_BYTE *)(a1 + 7142) = 0;
     *(_BYTE *)(a1 + 7142) = *(_BYTE *)(MEMORY[0xCC6D78] + 20) ^ 1;
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
     return SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 4);
   }
 
@@ -74775,7 +74775,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604F4148(int a1)
   {
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67B4, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_OUT_AUTO", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_OUT_AUTO", 0);
   }
 
 /* ============================================================================
@@ -74813,7 +74813,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 7142) = 0;
     *(_BYTE *)(a1 + 7142) = *(_BYTE *)(MEMORY[0xCC6D78] + 20) ^ 1;
     SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 4);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
   }
 
 /* ============================================================================
@@ -74953,7 +74953,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       *v6 = 1;
       *(_BYTE *)(*(_DWORD *)(v5 + 3584) + 64) |= 1u;
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CS_NEW_ITEM_WINDOW_ADD_ITEM", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CS_NEW_ITEM_WINDOW_ADD_ITEM", 0);
       *v2 = 15;
       sub_6047EFCC((int)(a1 + 1897), v7);
       *((_BYTE *)a1 + v7 + 8048) = 1;
@@ -75140,7 +75140,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           ArrayOf5_lookupByIndex((_DWORD *)v15, 1u, (_DWORD *)0xCA6ABC, 0);
           *(_BYTE *)(v15 + 3596) = 1;
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
         }
         *(_BYTE *)(v15 + 3598) = 1;
         v8 = a1 + 9632;
@@ -75164,7 +75164,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           ArrayOf5_lookupByIndex(*(_DWORD **)(v9 + 4 * v10), 1u, (_DWORD *)0xCA6ABC, 0);
           *(_BYTE *)(v11 + 3596) = 1;
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
         }
         *(_BYTE *)(v11 + 3598) = 1;
         v13 = a1 + 9628;
@@ -75203,7 +75203,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           ArrayOf5_lookupByIndex(*(_DWORD **)(*(_DWORD *)(a1 + 9628) + 4 * v6), 1u, (_DWORD *)0xCA6AB4, 0);
           *(_BYTE *)(v31 + 3596) = 1;
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
         }
         *(_BYTE *)(v31 + 3598) = 0;
         v24 = a1 + 9632;
@@ -75227,7 +75227,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           ArrayOf5_lookupByIndex(*(_DWORD **)(v25 + 4 * v26), 1u, (_DWORD *)0xCA6AB4, 0);
           *(_BYTE *)(v27 + 3596) = 1;
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_ERASE_ITEM_CHECK", 0);
         }
         *(_BYTE *)(v27 + 3598) = 0;
         v29 = (_DWORD **)(a1 + 9628);
@@ -75301,7 +75301,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *result = v51;
         }
         if ( v6 == v53 )
-          return (int *)sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
+          return (int *)SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
         return result;
       }
       v18 = 10;
@@ -75336,7 +75336,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v46 = v43 + v42;
       }
       if ( v6 == v46 )
-        return (int *)sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
+        return (int *)SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
       return result;
     }
     if ( v6 != 10 )
@@ -75353,7 +75353,7 @@ static inline unsigned int uxtb16(unsigned int x)
       goto LABEL_43;
   LABEL_44:
     if ( v6 == v32 )
-      return (int *)sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
+      return (int *)SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
     return result;
   }
 
@@ -75418,10 +75418,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604F4E20(int a1)
   {
-    sub_60502548(a1 + 7548);
+    StateMgr_resetAndMaybeChange(a1 + 7548);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA67D4, 0);
     sub_604F7AB4(*(_DWORD **)(a1 + 9636), *(_DWORD *)(a1 + 9628), *(_DWORD **)(a1 + 9632));
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
   }
 
 /* ============================================================================
@@ -75435,7 +75435,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, 0);
+    Table_getEntryById(v2, 0xEu, 0);
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13265340);
@@ -75449,7 +75449,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604F4EF4(int a1)
   {
     *(_WORD *)(a1 + 8600) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 7588));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 7588));
   }
 
 /* ============================================================================
@@ -75463,8 +75463,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(a1 + 9636);
     *(_BYTE *)(v1 + 4772) = 0;
     *(_BYTE *)(v1 + 4773) = 0;
-    sub_6047EABC((_DWORD *)(v1 + 3760));
-    sub_60502548(v1 + 3720);
+    IntrusiveList_clearAndDestroy((_DWORD *)(v1 + 3760));
+    StateMgr_resetAndMaybeChange(v1 + 3720);
     *(_DWORD *)(v1 + 4748) = 0;
     *(_BYTE *)(v1 + 4763) = 0;
     *(_BYTE *)(v1 + 4760) = 1;
@@ -75486,7 +75486,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (int *)(a1 + 9636);
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, 0);
+    Table_getEntryById(v2, 0xEu, 0);
     SE_SYS_BACK_ref_4F7D9C(*v3, (int)(v3 - 623));
     result = *(_DWORD *)(*v3 + 5804);
     if ( result )
@@ -75508,11 +75508,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (int *)(a1 + 9636);
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, 0);
+    Table_getEntryById(v2, 0xEu, 0);
     result = *v3;
     if ( !*(_BYTE *)(*v3 + 4762) )
     {
-      sub_60502548(result + 3720);
+      StateMgr_resetAndMaybeChange(result + 3720);
       result = *(_DWORD *)(*v3 + 5804);
       if ( result == 2 )
       {
@@ -75634,7 +75634,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, 0);
+    Table_getEntryById(v2, 0xEu, 0);
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
@@ -75655,8 +75655,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(a1 + 9636);
     *(_BYTE *)(v1 + 4772) = 0;
     *(_BYTE *)(v1 + 4773) = 0;
-    sub_6047EABC((_DWORD *)(v1 + 3760));
-    return sub_60502548(v1 + 3720);
+    IntrusiveList_clearAndDestroy((_DWORD *)(v1 + 3760));
+    return StateMgr_resetAndMaybeChange(v1 + 3720);
   }
 
 /* ============================================================================
@@ -75706,7 +75706,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, 0);
+    Table_getEntryById(v2, 0xEu, 0);
     *(_BYTE *)(a1 + 8591) = 0;
     return StateMgr::changeState((_DWORD *)(a1 + 24), 13265468);
   }
@@ -75722,7 +75722,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, 0);
+    Table_getEntryById(v2, 0xEu, 0);
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13265212);
@@ -75740,8 +75740,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(a1 + 9636);
     *(_BYTE *)(v1 + 4772) = 0;
     *(_BYTE *)(v1 + 4773) = 0;
-    sub_6047EABC((_DWORD *)(v1 + 3760));
-    return sub_60502548(v1 + 3720);
+    IntrusiveList_clearAndDestroy((_DWORD *)(v1 + 3760));
+    return StateMgr_resetAndMaybeChange(v1 + 3720);
   }
 
 /* ============================================================================
@@ -75775,7 +75775,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 7136) = 256;
     *(_WORD *)(a1 + 7140) = 0;
     *(_BYTE *)(a1 + 7142) = 0;
-    sub_6045BF30(a1 + 7144);
+    ctor_installTwoVtables(a1 + 7144);
     SE_SYS_DECIDE_ref_50208C(a1 + 7548);
     *(_DWORD *)(a1 + 3588) = 0;
     *(_DWORD *)(a1 + 3592) = 0;
@@ -75865,7 +75865,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v12; // [sp+4h] [bp-4h] BYREF
   
     sub_604F5A4C();
-    sub_604734E4((_DWORD *)(a1 + 3596), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 3596), 0);
     sub_60476388((_DWORD *)(a1 + 3596), a1 + 40, (_DWORD *)0xCA67E4);
     if ( ((unsigned int)&unk_60CA6C60 & ~(1615812480 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA6C60) )
     {
@@ -75913,7 +75913,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604F6738(a1);
     sub_604F68D8(a1);
     v10 = a1 + 7144;
-    sub_6045BF58(v10, 0);
+    Registry_iterateAndRegister(v10, 0);
     return sub_609094C4(v10, 240, MEMORY[0xB023FC], MEMORY[0xB023FD]);
   }
 
@@ -75938,7 +75938,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA6C68);
     }
     v3 = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     v6[1] = 12321336;
     v6[2] = (int)"CourseSelect";
     sub_60475C8C(a1 + 40);
@@ -76313,7 +76313,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 7548);
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -76831,7 +76831,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_31:
         *v2 = 1;
         *(_BYTE *)(*(_DWORD *)(v1 + 3584) + 64) |= 1u;
-        sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_CS_NEW_ITEM_WINDOW_ADD_ITEM", 0, 1);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_CS_NEW_ITEM_WINDOW_ADD_ITEM", 0, 1);
       }
     }
     return v3;
@@ -76867,7 +76867,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)a1;
     *(_WORD *)(a1 + 7140) = 0;
     *(_WORD *)(a1 + 8600) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 7588));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 7588));
     v1[2144] = 256;
     v2 = (int *)v1[2407];
     v1 += 2407;
@@ -77209,7 +77209,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( (v5 & 0x4000) == 0 )
         return result;
-      sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_BACK", 0, 1);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_BACK", 0, 1);
       result = 5804;
       v6 = 2;
       goto LABEL_14;
@@ -77303,7 +77303,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3592) = 10;
     *(_WORD *)(a1 + 3596) = 0;
     *(_BYTE *)(a1 + 3598) = 0;
-    sub_604734E4((_DWORD *)a1, 0);
+    Disposer_allocateChildren((_DWORD *)a1, 0);
     sub_60476388((_DWORD *)a1, a2, a3);
     v19 = 13;
     sub_60474848(a1, (_DWORD *)0xCA6ACC, &v19);
@@ -77709,7 +77709,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA6C9C);
     }
     v3 = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
-    sub_604734E4((_DWORD *)a1, 0);
+    Disposer_allocateChildren((_DWORD *)a1, 0);
     sub_60475C8C(a1);
     message_ref((_DWORD *)a1, &dword_60CA6CE0[2 * v3 + 16], a1 + 3760, 0, 0);
     (*(void (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3520) + 12))(*(_DWORD *)(a1 + 3520), 10029528, 0);
@@ -78165,7 +78165,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_BYTE *)(a1 + 3690) = 1;
     }
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_KO_DIALOGUE_IN", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_KO_DIALOGUE_IN", 0);
     return SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 13);
   }
 
@@ -78297,7 +78297,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( (*(_BYTE *)(MEMORY[0xC9CF0C] + 21) & 8) != 0 )
           {
   LABEL_21:
-            sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLK", 0);
+            SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLK", 0);
             v5 = (_DWORD *)(a1 + 24);
             if ( *(_DWORD *)(a1 + 4100) >= *(_DWORD *)(a1 + 4104) )
               v4 = 13266804;
@@ -78320,7 +78320,7 @@ static inline unsigned int uxtb16(unsigned int x)
             goto LABEL_29;
           }
   LABEL_28:
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLOSE", 0);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLOSE", 0);
           v4 = 13266836;
           goto LABEL_29;
         }
@@ -78355,7 +78355,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( (result & 0x20) == 0 )
             return result;
         }
-        sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLK", 0);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLK", 0);
         v5 = (_DWORD *)(a1 + 24);
         if ( *(_DWORD *)(a1 + 4100) >= *(_DWORD *)(a1 + 4104) )
           v4 = 13266804;
@@ -78632,7 +78632,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3688) = 0;
     *(_BYTE *)(a1 + 3689) = 0;
     *(_BYTE *)(a1 + 3690) = 0;
-    sub_6045BF30(a1 + 3692);
+    ctor_installTwoVtables(a1 + 3692);
     *(_DWORD *)(a1 + 4096) = 0;
     *(_DWORD *)(a1 + 4100) = -1;
     *(_DWORD *)(a1 + 4104) = -1;
@@ -78706,7 +78706,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v4 = 2;
     sub_60475334(a1 + 40, a1 + 3660, &dword_60CA7030, &v4);
-    sub_6045BF58(a1 + 3692, 0);
+    Registry_iterateAndRegister(a1 + 3692, 0);
     return Pa_KeyAssign_02_ref(a1);
   }
 
@@ -78721,7 +78721,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"TalkWindow.bflyt";
@@ -78950,7 +78950,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6050A8A4(*(_DWORD *)(a1 + 3668));
       sub_6050A8A4(*(_DWORD *)(a1 + 3672));
       sub_6050A8A4(*(_DWORD *)(a1 + 3676));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -78992,7 +78992,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v8 = *(void (**)(void))(v7 + 104);
     v8();
     StateMgr::changeState((_DWORD *)(a1 + 24), 13266676);
-    return sub_60473B58(v5, 14, 0);
+    return Table_getEntryById(v5, 14, 0);
   }
 
 /* ============================================================================
@@ -79121,9 +79121,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 40098) = 0;
     *(_BYTE *)(a1 + 40096) = 0;
     *(_BYTE *)(a1 + 40099) = 0;
-    sub_60502548(a1 + 35508);
+    StateMgr_resetAndMaybeChange(a1 + 35508);
     *(_WORD *)(a1 + 36560) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 35548));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 35548));
     *(_BYTE *)(a1 + 40114) = 0;
     return 40114;
   }
@@ -79513,7 +79513,7 @@ static inline unsigned int uxtb16(unsigned int x)
             {
               sub_60807FC0(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
               *(_WORD *)(a1 + 36560) = 0;
-              sub_6047EABC((_DWORD *)(a1 + 35548));
+              IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 35548));
               *(_BYTE *)(a1 + 36551) = 0;
               result = 36548;
             }
@@ -79712,9 +79712,9 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_BYTE *)(*(_DWORD *)(a1 + 37760) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 37764) + 64) &= ~1u;
-    sub_60502548(a1 + 35508);
+    StateMgr_resetAndMaybeChange(a1 + 35508);
     *(_WORD *)(a1 + 36560) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 35548));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 35548));
     v2 = (_DWORD *)(a1 + 31900);
     if ( *(_BYTE *)(a1 + 40100) )
     {
@@ -80116,9 +80116,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604FC27C(int a1)
   {
-    sub_60502548(a1 + 35508);
+    StateMgr_resetAndMaybeChange(a1 + 35508);
     *(_WORD *)(a1 + 36560) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 35548));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 35548));
   }
 
 /* ============================================================================
@@ -80159,11 +80159,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 35500) = 0;
     *(_BYTE *)(a1 + 35504) = 0;
     SE_SYS_DECIDE_ref_50208C(a1 + 35508);
-    sub_6045BF30(a1 + 37768);
-    sub_6045BF30(a1 + 38172);
-    sub_6045BF30(a1 + 38576);
-    sub_6045BF30(a1 + 38980);
-    sub_6045BF30(a1 + 39384);
+    ctor_installTwoVtables(a1 + 37768);
+    ctor_installTwoVtables(a1 + 38172);
+    ctor_installTwoVtables(a1 + 38576);
+    ctor_installTwoVtables(a1 + 38980);
+    ctor_installTwoVtables(a1 + 39384);
     memset((void *)(a1 + 37592), 0, 0xB0u);
     memset((void *)(a1 + 40014), 0, 0x65u);
     return a1;
@@ -80249,7 +80249,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v37; // [sp+58h] [bp-4h]
   
     v4 = (_DWORD *)(a1 + 31900);
-    sub_604734E4((_DWORD *)(a1 + 31900), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 31900), 0);
     sub_60475C8C((int)v4);
     v20 = 12321336;
     v21 = "MiiSelectWindow.bflyt";
@@ -80322,7 +80322,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v12 = (_DWORD *)(v18 + 40);
     do
     {
-      sub_604734E4(v12, 0);
+      Disposer_allocateChildren(v12, 0);
       sub_60476388(v12, (int)v4, (int *)((char *)&v20 + v10));
       v13 = *(void (__fastcall **)(_DWORD *, int *, int *))(*v12 + 8);
       v19 = 2;
@@ -80332,17 +80332,17 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v10 != 72 );
     (*(void (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(v18 + 35420) + 12))(*(_DWORD *)(v18 + 35420), 10029528, 0);
-    sub_6045BF58(v18 + 37768, 0);
+    Registry_iterateAndRegister(v18 + 37768, 0);
     v14 = MEMORY[0xB023FC];
     v15 = MEMORY[0xB023FD];
     sub_609094C4(v18 + 37768, 240, MEMORY[0xB023FC], MEMORY[0xB023FD]);
-    sub_6045BF58(v18 + 38172, 1);
+    Registry_iterateAndRegister(v18 + 38172, 1);
     sub_609094C4(v18 + 38172, 240, v14, v15);
-    sub_6045BF58(v18 + 38576, 2);
+    Registry_iterateAndRegister(v18 + 38576, 2);
     sub_609094C4(v18 + 38576, 240, v14, v15);
-    sub_6045BF58(v18 + 38980, 3);
+    Registry_iterateAndRegister(v18 + 38980, 3);
     sub_609094C4(v18 + 38980, 240, v14, v15);
-    sub_6045BF58(v18 + 39384, 4);
+    Registry_iterateAndRegister(v18 + 39384, 4);
     sub_609094C4(v18 + 39384, 240, v14, v15);
     *(_DWORD *)(v18 + 40076) = v17;
     result = Heap_allocate(440, 0, 4, 0);
@@ -80765,7 +80765,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      sub_60473B58(a1 + 31900, a2, 0);
+      Table_getEntryById(a1 + 31900, a2, 0);
     }
     *v6 = 0;
     return 0;
@@ -81422,7 +81422,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 4);
-    sub_604734E4((_DWORD *)(a1 + 4), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
     sub_60475C8C((int)v1);
     v3[0] = 12321336;
     v3[1] = (int)"MovieFrame.bflyt";
@@ -81456,7 +81456,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return result;
     }
     *(_BYTE *)(result + 3552) = 0;
-    return sub_60473B58(result + 4, 14, 0);
+    return Table_getEntryById(result + 4, 14, 0);
   }
 
 /* ============================================================================
@@ -81541,7 +81541,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     sub_605025FC(a1 + 56);
     *(_WORD *)(a1 + 1108) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 96));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 96));
     v2 = (_DWORD *)(a1 + 2140);
     v3 = sub_604746E4((int)v2, &off_60CA7418, &dword_60CA7428);
     if ( v3 != -1 )
@@ -81756,11 +81756,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 5680) = 0;
     *(_BYTE *)(a1 + 5684) = 0;
     *(_BYTE *)(a1 + 5688) = 0;
-    sub_6045BF30(a1 + 5692);
-    sub_6045BF30(a1 + 6096);
-    sub_6045BF30(a1 + 6500);
-    sub_6045BF30(a1 + 6904);
-    sub_6045BF30(a1 + 7308);
+    ctor_installTwoVtables(a1 + 5692);
+    ctor_installTwoVtables(a1 + 6096);
+    ctor_installTwoVtables(a1 + 6500);
+    ctor_installTwoVtables(a1 + 6904);
+    ctor_installTwoVtables(a1 + 7308);
     *(_DWORD *)(a1 + 7712) = 0;
     *(_DWORD *)(a1 + 7716) = 0;
     sub_6050A308(a1 + 7720);
@@ -81827,7 +81827,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11[2]; // [sp+68h] [bp-8h] BYREF
   
     v2 = a1 + 535;
-    sub_604734E4(a1 + 535, 0);
+    Disposer_allocateChildren(a1 + 535, 0);
     sub_60475C8C((int)v2);
     v7 = &v9;
     v6 = 12322272;
@@ -81838,7 +81838,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CA7408 + 12))(&dword_60CA7408);
     v3 = (const char *)dword_60CA740C;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA7410 + 3))(&off_60CA7410);
-    sub_608FDDF4(&v6, "%s.%s", v3, (const char *)dword_60CA7414);
+    StringUtil_formatInto(&v6, "%s.%s", v3, (const char *)dword_60CA7414);
     message_ref(v2, &v6, (int)(a1 + 24), 0, 0);
     v11[0] = 12321336;
     v10[0] = 12321336;
@@ -82162,7 +82162,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr::execute((_DWORD *)(a1 + 36));
     sub_6050229C(a1 + 56);
     sub_6050A8A4(a1 + 7720);
-    sub_60473B58(a1 + 2140, 14, 0);
+    Table_getEntryById(a1 + 2140, 14, 0);
     return sub_604FFBF4(a1);
   }
 
@@ -82245,18 +82245,18 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1;
     v2 = a1 + 4;
-    sub_6045BF58(a1 + 4, 0);
+    Registry_iterateAndRegister(a1 + 4, 0);
     v3 = MEMORY[0xB023FC];
     v4 = MEMORY[0xB023FD];
     sub_609094C4(v2, 192, MEMORY[0xB023FC], MEMORY[0xB023FD]);
-    sub_6045BF58(v1 + 408, 1);
+    Registry_iterateAndRegister(v1 + 408, 1);
     sub_609094C4(v1 + 408, 192, v3, v4);
-    sub_6045BF58(v1 + 812, 2);
+    Registry_iterateAndRegister(v1 + 812, 2);
     sub_609094C4(v1 + 812, 192, v3, v4);
-    sub_6045BF58(v1 + 1216, 3);
+    Registry_iterateAndRegister(v1 + 1216, 3);
     sub_609094C4(v1 + 1216, 192, v3, v4);
     v1 += 1620;
-    sub_6045BF58(v1, 4);
+    Registry_iterateAndRegister(v1, 4);
     return sub_609094C4(v1, 192, v3, v4);
   }
 
@@ -82452,9 +82452,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_605001C4(int a1)
   {
-    sub_60502548(a1 + 3588);
+    StateMgr_resetAndMaybeChange(a1 + 3588);
     *(_WORD *)(a1 + 4640) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3628));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3628));
   }
 
 /* ============================================================================
@@ -82693,9 +82693,9 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_WORD *)(a1 + 7748) = 0;
     *(_BYTE *)(a1 + 7750) = 0;
-    sub_60502548(a1 + 3588);
+    StateMgr_resetAndMaybeChange(a1 + 3588);
     *(_WORD *)(a1 + 4640) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3628));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3628));
     *(_DWORD *)(a1 + 7744) = -1;
     return 7744;
   }
@@ -82732,11 +82732,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3580) = 0;
     *(_BYTE *)(a1 + 3584) = 0;
     SE_SYS_DECIDE_ref_50208C(a1 + 3588);
-    sub_6045BF30(a1 + 5700);
-    sub_6045BF30(a1 + 6104);
-    sub_6045BF30(a1 + 6508);
-    sub_6045BF30(a1 + 6912);
-    sub_6045BF30(a1 + 7316);
+    ctor_installTwoVtables(a1 + 5700);
+    ctor_installTwoVtables(a1 + 6104);
+    ctor_installTwoVtables(a1 + 6508);
+    ctor_installTwoVtables(a1 + 6912);
+    ctor_installTwoVtables(a1 + 7316);
     *(_DWORD *)(a1 + 7744) = -1;
     *(_DWORD *)(a1 + 7740) = 0;
     *(_DWORD *)(a1 + 7736) = 0;
@@ -82827,7 +82827,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // [sp+18h] [bp-48h] BYREF
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v8 = &v10;
     v7 = 12322272;
@@ -82838,7 +82838,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CA75B0 + 12))(&dword_60CA75B0);
     v3 = (const char *)dword_60CA75B4;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA75B8 + 3))(&off_60CA75B8);
-    sub_608FDDF4(&v7, "%s.%s", v3, (const char *)dword_60CA75BC);
+    StringUtil_formatInto(&v7, "%s.%s", v3, (const char *)dword_60CA75BC);
     message_ref(v2, &v7, a1 + 3628, 0, 0);
     if ( ((unsigned int)&unk_60CA7598 & ~(1615858424 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA7598) )
     {
@@ -82917,11 +82917,11 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v8 = 1;
     __Player__applyPowerUpTransform(a1 + 40, a1 + 5696, (int)&dword_60CA75D0, &v8);
-    sub_6045BF58(a1 + 5700, 0);
-    sub_6045BF58(a1 + 6104, 1);
-    sub_6045BF58(a1 + 6508, 2);
-    sub_6045BF58(a1 + 6912, 3);
-    return sub_6045BF58(a1 + 7316, 4);
+    Registry_iterateAndRegister(a1 + 5700, 0);
+    Registry_iterateAndRegister(a1 + 6104, 1);
+    Registry_iterateAndRegister(a1 + 6508, 2);
+    Registry_iterateAndRegister(a1 + 6912, 3);
+    return Registry_iterateAndRegister(a1 + 7316, 4);
   }
 
 /* ============================================================================
@@ -82974,7 +82974,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           StateMgr::execute((_DWORD *)(a1 + 24));
           sub_6050229C(a1 + 3588);
-          return sub_60473B58(a1 + 40, 17, 0);
+          return Table_getEntryById(a1 + 40, 17, 0);
         }
       }
     }
@@ -83868,7 +83868,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor(a1 + 6, (int)(a1 + 2), 13268572);
     a1[1] = 12579024;
     SE_SYS_BACK_ref((int)(a1 + 10));
-    sub_6045BF30(a1 + 24);
+    ctor_installTwoVtables(a1 + 24);
     a1[253] = 12321336;
     a1[254] = 11778612;
     a1[257] = 256;
@@ -83927,10 +83927,10 @@ static inline unsigned int uxtb16(unsigned int x)
         v8 = 4;
       else
         v8 = 0;
-      sub_6045BF58(v7, v8);
+      Registry_iterateAndRegister(v7, v8);
       goto LABEL_8;
     }
-    sub_6045BF58(a1 + 96, 4);
+    Registry_iterateAndRegister(a1 + 96, 4);
     if ( a3 != 25 )
     {
   LABEL_8:
@@ -84067,7 +84067,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60502548
+ * StateMgr_resetAndMaybeChange
  * RVA 0x00502548   size 0xac   xrefs 148
  * ============================================================================ */
   int __fastcall sub_60502548(int a1)
@@ -84086,7 +84086,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60402084(MEMORY[0xC99E68], v2);
     if ( *(_BYTE *)(a1 + 1052) )
     {
-      sub_6047EABC((_DWORD *)(a1 + 40));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 40));
       *(_BYTE *)(a1 + 1052) = 0;
     }
     v3 = *(_DWORD *)(a1 + 1028);
@@ -85774,7 +85774,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v14; // [sp+Ch] [bp-4h]
   
     v6 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60476388(v6, a2, a3);
     v13 = 2;
     sub_60474848((int)v6, &off_60CA77E0, &v13);
@@ -85837,7 +85837,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v12; // [sp+Ch] [bp-4h]
   
     v4 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_604762F8(v4, a2);
     v11 = 2;
     sub_60474848((int)v4, &off_60CA77E0, &v11);
@@ -86314,7 +86314,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA78E8);
     }
-    sub_604734E4(a1, 0);
+    Disposer_allocateChildren(a1, 0);
     v5 = a1[901];
     if ( v5 >= 4 )
       v5 = 0;
@@ -87291,7 +87291,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7A10);
     }
-    sub_604734E4(a1, 0);
+    Disposer_allocateChildren(a1, 0);
     v18 = (int)&v20;
     v17 = 12322272;
     v19 = 32;
@@ -87305,7 +87305,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = *((_DWORD *)v9 + 8);
     v9 += 32;
     (*(void (__fastcall **)(char *))(v10 + 12))(v9);
-    sub_608FDDF4(&v17, "%s%d", *((const char **)v9 + 1), a4);
+    StringUtil_formatInto(&v17, "%s%d", *((const char **)v9 + 1), a4);
     sub_60476388(a1, a2, &v17);
     v17 = 12321336;
     v18 = 11778612;
@@ -87802,7 +87802,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // [sp+4h] [bp-4h] BYREF
   
     v6 = a1 + 15;
-    sub_604734E4(a1 + 15, 0);
+    Disposer_allocateChildren(a1 + 15, 0);
     sub_60476388(v6, a2, a3);
     v10 = 1;
     sub_60474848((int)v6, &dword_60CA7A80, &v10);
@@ -88399,7 +88399,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v14; // [sp+Ch] [bp-4h]
   
     v6 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60476388(v6, a2, a3);
     v13 = 3;
     sub_60474848((int)v6, &off_60CA7AE0, &v13);
@@ -88462,7 +88462,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v12; // [sp+Ch] [bp-4h]
   
     v4 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_604762F8(v4, a2);
     v11 = 3;
     sub_60474848((int)v4, &off_60CA7AE0, &v11);
@@ -88910,7 +88910,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[932] = a5;
     a1[936] = a6;
     a1[931] = *(_DWORD *)(a2 + 16);
-    sub_604734E4(a1 + 10, 0);
+    Disposer_allocateChildren(a1 + 10, 0);
     sub_60476388(a1 + 10, a2, a3);
     v11 = 14;
     sub_60474848((int)(a1 + 10), dword_60CA7C40, &v11);
@@ -89727,7 +89727,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // [sp+4h] [bp-4h] BYREF
   
     v8 = (_DWORD *)(a1 + 36);
-    sub_604734E4((_DWORD *)(a1 + 36), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 36), 0);
     sub_60476388(v8, a2, a3);
     v10 = 1;
     result = sub_60474848((int)v8, &dword_60CA7D60, &v10);
@@ -90142,7 +90142,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 7213) = a5;
     v8 = (_BYTE *)(a1 + 7213);
     v9 = (_DWORD *)(a1 + 48);
-    sub_604734E4((_DWORD *)(a1 + 48), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 48), 0);
     sub_60476388(v9, a2, a3);
     v15 = 5;
     sub_60474848((int)v9, &dword_60CA7DB8, &v15);
@@ -90216,9 +90216,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v17; // [sp+Ch] [bp-4h]
   
     v10 = (_DWORD *)(a1 + 3628);
-    sub_604734E4((_DWORD *)(a1 + 3628), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 3628), 0);
     sub_60476388(v10, a2, a3);
-    sub_604734E4((_DWORD *)(a1 + 48), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 48), 0);
     sub_60476388((_DWORD *)(a1 + 48), (int)v10, a4);
     v16 = 5;
     sub_60474848(a1 + 48, &dword_60CA7DB8, &v16);
@@ -90522,7 +90522,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // [sp+4h] [bp-4h] BYREF
   
     v6 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60476388(v6, a2, a3);
     v8 = 1;
     sub_60474848((int)v6, &dword_60CA7E00, &v8);
@@ -90990,7 +90990,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // [sp+4h] [bp-4h] BYREF
   
     v3 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60476388(v3, a2, a3);
     if ( ((unsigned int)&unk_60CA7EC0 & ~(1615902252 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA7EC0) )
     {
@@ -91328,7 +91328,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v16[2]; // [sp+18h] [bp-8h] BYREF
   
     v6 = (_DWORD *)(a1 + 60);
-    sub_604734E4((_DWORD *)(a1 + 60), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 60), 0);
     sub_60476388(v6, a2, a3);
     v14[0] = 12321336;
     v14[1] = 11778612;
@@ -92169,7 +92169,7 @@ static inline unsigned int uxtb16(unsigned int x)
     char v6; // r12
     int v8; // [sp+4h] [bp-4h] BYREF
   
-    sub_604734E4(a1, 0);
+    Disposer_allocateChildren(a1, 0);
     sub_60476388(a1, a2, a3);
     if ( ((unsigned int)&unk_60CA803C & ~(1615908708 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA803C) )
     {
@@ -92581,7 +92581,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v16; // [sp+Ch] [bp-4h]
   
     v6 = (_DWORD *)(a1 + 60);
-    sub_604734E4((_DWORD *)(a1 + 60), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 60), 0);
     sub_60476388(v6, a2, a3);
     v14 = 1;
     sub_60474848((int)v6, &dword_60CA8070, &v14);
@@ -93050,7 +93050,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // [sp+4h] [bp-4h] BYREF
   
     v6 = a1 + 15;
-    sub_604734E4(a1 + 15, 0);
+    Disposer_allocateChildren(a1 + 15, 0);
     sub_60476388(v6, a2, a3);
     v10 = 3;
     sub_60474848((int)v6, &dword_60CA80DC, &v10);
@@ -93682,7 +93682,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // [sp+4h] [bp-4h] BYREF
   
     v6 = a1 + 15;
-    sub_604734E4(a1 + 15, 0);
+    Disposer_allocateChildren(a1 + 15, 0);
     sub_60476388(v6, a2, a3);
     v8 = 4;
     sub_60474848((int)v6, &dword_60CA815C, &v8);
@@ -95021,11 +95021,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 9568) = 0;
     *(_DWORD *)(a1 + 9576) = 5;
     *(_DWORD *)(a1 + 9580) = 0;
-    sub_6045BF30(a1 + 9584);
-    sub_6045BF30(a1 + 9988);
-    sub_6045BF30(a1 + 10392);
-    sub_6045BF30(a1 + 10796);
-    sub_6045BF30(a1 + 11200);
+    ctor_installTwoVtables(a1 + 9584);
+    ctor_installTwoVtables(a1 + 9988);
+    ctor_installTwoVtables(a1 + 10392);
+    ctor_installTwoVtables(a1 + 10796);
+    ctor_installTwoVtables(a1 + 11200);
     *(_DWORD *)(a1 + 52) = 0;
     *(_DWORD *)(a1 + 11616) = 0;
     *(_DWORD *)(a1 + 11612) = 0;
@@ -95094,7 +95094,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v9[2]; // [sp+58h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 56);
-    sub_604734E4((_DWORD *)(a1 + 56), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 56), 0);
     sub_60475C8C((int)v2);
     v6 = &v8;
     v5 = 12322272;
@@ -95105,7 +95105,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CA83F4 + 12))(&dword_60CA83F4);
     v3 = (const char *)dword_60CA83F8;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA83FC + 3))(&off_60CA83FC);
-    sub_608FDDF4(&v5, "%s.%s", v3, (const char *)dword_60CA8400);
+    StringUtil_formatInto(&v5, "%s.%s", v3, (const char *)dword_60CA8400);
     message_ref(v2, &v5, a1 + 3744, 0, 0);
     v9[0] = 12321336;
     v9[1] = (int)"Pa_CharacterIcon_00";
@@ -95200,7 +95200,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       sub_60507028(a1 + 5924);
       sub_6050229C(a1 + 3704);
-      sub_60473B58(a1 + 56, *(_DWORD *)(a1 + 9552), 0);
+      Table_getEntryById(a1 + 56, *(_DWORD *)(a1 + 9552), 0);
       sub_60402144(MEMORY[0xC99E68]);
     }
     *(_DWORD *)(a1 + 52) = 0;
@@ -96678,11 +96678,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v50; // [sp+4h] [bp-8h]
     int v51; // [sp+8h] [bp-4h]
   
-    sub_60502548(a1 + 3704);
+    StateMgr_resetAndMaybeChange(a1 + 3704);
     v2 = 0;
     *(_WORD *)(a1 + 4756) = 0;
     v50 = a1 + 3744;
-    sub_6047EABC((_DWORD *)(a1 + 3744));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3744));
     v3 = sub_605117A0(a1);
     v4 = a1 + 56;
     v51 = a1;
@@ -97256,7 +97256,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( *(_BYTE *)(a1 + 5686) )
     {
-      sub_60502548(a1 + 3588);
+      StateMgr_resetAndMaybeChange(a1 + 3588);
     }
     else
     {
@@ -97307,7 +97307,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 5685) = 0;
     *(_BYTE *)(a1 + 5687) = 0;
     *(_WORD *)(a1 + 4640) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3628));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3628));
   }
 
 /* ============================================================================
@@ -97794,9 +97794,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
     int v3; // r1
   
-    sub_60502548(a1 + 3596);
+    StateMgr_resetAndMaybeChange(a1 + 3596);
     *(_WORD *)(a1 + 4648) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3636));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3636));
     v2 = *(_DWORD *)(a1 + 4624);
     if ( v2 == *(_DWORD *)(a1 + 12892) )
     {
@@ -97858,11 +97858,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A308(a1 + 5676);
     *(_DWORD *)(a1 + 12932) = 21;
     *(_DWORD *)(a1 + 12936) = 0;
-    sub_6045BF30(a1 + 12940);
-    sub_6045BF30(a1 + 13344);
-    sub_6045BF30(a1 + 13748);
-    sub_6045BF30(a1 + 14152);
-    sub_6045BF30(a1 + 14556);
+    ctor_installTwoVtables(a1 + 12940);
+    ctor_installTwoVtables(a1 + 13344);
+    ctor_installTwoVtables(a1 + 13748);
+    ctor_installTwoVtables(a1 + 14152);
+    ctor_installTwoVtables(a1 + 14556);
     *(_DWORD *)(a1 + 14960) = 0;
     *(_DWORD *)(a1 + 14964) = 0;
     *(_DWORD *)(a1 + 14968) = 3;
@@ -97912,7 +97912,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10[2]; // [sp+68h] [bp-8h] BYREF
   
     v2 = a1 + 12;
-    sub_604734E4(a1 + 12, 0);
+    Disposer_allocateChildren(a1 + 12, 0);
     sub_60475C8C((int)v2);
     v6 = &v8;
     v5 = 12322272;
@@ -97922,7 +97922,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = 12572104;
     v3 = (const char *)(*(int (__fastcall **)(_DWORD *))(*a1 + 16))(a1);
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA8684 + 3))(&off_60CA8684);
-    sub_608FDDF4(&v5, "%s.%s", v3, (const char *)dword_60CA8688);
+    StringUtil_formatInto(&v5, "%s.%s", v3, (const char *)dword_60CA8688);
     message_ref(v2, &v5, (int)(a1 + 909), 0, 0);
     v10[0] = 12321336;
     v9[0] = 12321336;
@@ -98041,7 +98041,7 @@ static inline unsigned int uxtb16(unsigned int x)
             do
             {
               StateMgr::execute(v12);
-              sub_60473B58(v13, *v9, 0);
+              Table_getEntryById(v13, *v9, 0);
               result = (unsigned __int8)*v11;
             }
             while ( *v11 );
@@ -98111,7 +98111,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr::execute((_DWORD *)(a1 + 24));
     sub_6050229C(a1 + 3596);
     sub_6050A8A4(a1 + 5676);
-    result = sub_60473B58(a1 + 48, *(_DWORD *)(a1 + 12932), 0);
+    result = Table_getEntryById(a1 + 48, *(_DWORD *)(a1 + 12932), 0);
     *(_DWORD *)(a1 + 44) = 0;
     return result;
   }
@@ -98348,22 +98348,22 @@ static inline unsigned int uxtb16(unsigned int x)
     Pa_ReturnBtn_00_ref((_DWORD *)a1);
     sub_60514E64(a1);
     *(_DWORD *)(a1 + 12936) = 0;
-    sub_6045BF58(a1 + 12940, 0);
-    sub_6045BF58(a1 + 13344, 1);
-    sub_6045BF58(a1 + 13748, 2);
-    sub_6045BF58(a1 + 14152, 3);
-    sub_6045BF58(a1 + 14556, 4);
+    Registry_iterateAndRegister(a1 + 12940, 0);
+    Registry_iterateAndRegister(a1 + 13344, 1);
+    Registry_iterateAndRegister(a1 + 13748, 2);
+    Registry_iterateAndRegister(a1 + 14152, 3);
+    Registry_iterateAndRegister(a1 + 14556, 4);
     v3 = 2;
     sub_604751FC(a1 + 48, a1 + 12924, &dword_60CA86A4, &v3);
     *(_BYTE *)(a1 + 29959) = 0;
     Pa_ReturnBtn_00_ref((_DWORD *)(a1 + 14984));
     sub_60514E64(a1 + 14984);
     *(_DWORD *)(a1 + 27920) = 0;
-    sub_6045BF58(a1 + 27924, 0);
-    sub_6045BF58(a1 + 28328, 1);
-    sub_6045BF58(a1 + 28732, 2);
-    sub_6045BF58(a1 + 29136, 3);
-    sub_6045BF58(a1 + 29540, 4);
+    Registry_iterateAndRegister(a1 + 27924, 0);
+    Registry_iterateAndRegister(a1 + 28328, 1);
+    Registry_iterateAndRegister(a1 + 28732, 2);
+    Registry_iterateAndRegister(a1 + 29136, 3);
+    Registry_iterateAndRegister(a1 + 29540, 4);
     v4 = 2;
     return sub_604751FC(a1 + 15032, a1 + 27908, &dword_60CA86A4, &v4);
   }
@@ -98933,7 +98933,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall SE_SYS_CH_SCORE_PAGE_IN_ref(int a1)
   {
     *(_BYTE *)(a1 + 3672) = 1;
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_IN", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_IN", 0);
   }
 
 /* ============================================================================
@@ -98958,7 +98958,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD v3[2]; // [sp+0h] [bp-8h] BYREF
   
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_OUT", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_OUT", 0);
     v3[0] = 12321336;
     v3[1] = WipeIn_LevelNum_Mode_Loop_Out_ref(4u);
     return ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, v3, 0);
@@ -99041,7 +99041,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v14[2]; // [sp+30h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 36);
-    sub_604734E4((_DWORD *)(a1 + 36), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 36), 0);
     sub_60475C8C((int)v1);
     v9 = 12321336;
     v10 = (int)"PreGameChallenge.bflyt";
@@ -99153,7 +99153,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60516CA4(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 20));
-    return sub_60473B58((_DWORD *)(a1 + 36), 0xEu, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 36), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -99174,7 +99174,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60516CE0(int a1)
   {
     *(_BYTE *)(a1 + 3672) = 0;
-    sub_60473B58(a1 + 36, 14, 0);
+    Table_getEntryById(a1 + 36, 14, 0);
     sub_60516D28(a1);
     sub_60516E80(a1);
     return StateMgr::changeState((_DWORD *)(a1 + 20), 13272860);
@@ -99802,7 +99802,7 @@ static inline unsigned int uxtb16(unsigned int x)
         default:
           return result;
       }
-      result = sub_60807EF0(MEMORY[0xCC6AF8], (int)v18, 0);
+      result = SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)v18, 0);
       *v14 = 1;
       return result;
     }
@@ -99936,7 +99936,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // [sp+18h] [bp-48h] BYREF
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v9 = &v11;
     v8 = 12322272;
@@ -99947,7 +99947,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CA8878 + 12))(&dword_60CA8878);
     v3 = (const char *)dword_60CA887C;
     (*(void (__fastcall **)(int *))(dword_60CA8880 + 12))(&dword_60CA8880);
-    sub_608FDDF4(&v8, "%s.%s", v3, (const char *)dword_60CA8884);
+    StringUtil_formatInto(&v8, "%s.%s", v3, (const char *)dword_60CA8884);
     message_ref(v2, &v8, 0, 0, 0);
     if ( ((unsigned int)&unk_60CA8870 & ~(1615953576 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA8870) )
     {
@@ -99998,7 +99998,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050DB10(a1 + 10860);
     sub_6050DB10(a1 + 14464);
     sub_6050DB10(a1 + 18068);
-    return sub_60473B58(a1 + 40, *(_DWORD *)(a1 + 36), 0);
+    return Table_getEntryById(a1 + 40, *(_DWORD *)(a1 + 36), 0);
   }
 
 /* ============================================================================
@@ -100439,7 +100439,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"PreGameEdit.bflyt";
@@ -100520,7 +100520,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60518E34(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 24));
-    return sub_60473B58((_DWORD *)(a1 + 40), 0xEu, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 40), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -100698,8 +100698,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[0] = 12321336;
     v3[1] = sub_6051A8DC(0);
     ArrayOf5_lookupByIndex(v1, 0, v3, 0);
-    sub_60473B58(v1, 14, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_COURSE_PAGE_IN", 0);
+    Table_getEntryById(v1, 14, 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_COURSE_PAGE_IN", 0);
   }
 
 /* ============================================================================
@@ -100737,7 +100737,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[0] = 12321336;
     v3[1] = sub_6051A8DC(7u);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, v3, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_COURSE_PAGE_OUT", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_COURSE_PAGE_OUT", 0);
   }
 
 /* ============================================================================
@@ -100879,7 +100879,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v28; // [sp+54h] [bp-4h]
   
     v2 = a1 + 9;
-    sub_604734E4(a1 + 9, 0);
+    Disposer_allocateChildren(a1 + 9, 0);
     sub_60475C8C((int)v2);
     v11 = 12321336;
     v12 = (int)"PreGameFree.bflyt";
@@ -100940,7 +100940,7 @@ static inline unsigned int uxtb16(unsigned int x)
     while ( v7 != 9 );
     v9[0] = 9;
     sub_60476030((int)v2, &v11, v9);
-    return sub_60473B58(v2, 14, 0);
+    return Table_getEntryById(v2, 14, 0);
   }
 
 /* ============================================================================
@@ -101042,7 +101042,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60507028(a1 + 7440);
     sub_60507028(a1 + 11060);
     sub_60507028(a1 + 14680);
-    return sub_60473B58(a1 + 36, 14, 0);
+    return Table_getEntryById(a1 + 36, 14, 0);
   }
 
 /* ============================================================================
@@ -101358,7 +101358,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex(v5, 4u, v19, 0);
     v12 = ArrayOf20_getEntryPtr(v5, 4);
     (*(void (__fastcall **)(int))(*(_DWORD *)v12 + 96))(v12);
-    sub_60473B58(v5, 14, 0);
+    Table_getEntryById(v5, 14, 0);
     v19[3] = 0;
     BYTE1(v19[2]) = 0;
     HIWORD(v19[2]) = 0;
@@ -102275,7 +102275,7 @@ static inline unsigned int uxtb16(unsigned int x)
     for ( i = 0; i != 34; i += 2 )
     {
       *(_DWORD *)(a1 + 4) = v3;
-      sub_604734E4(v3, 0);
+      Disposer_allocateChildren(v3, 0);
       v5 = *(_DWORD *)(a1 + 4);
       v10[1] = 12321336;
       v10[2] = "Common";
@@ -102440,7 +102440,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     StateMgr::execute((_DWORD *)(a1 + 62316));
     sub_605180D0(a1 + 62552);
-    return sub_60473B58(*(_DWORD *)(a1 + 4), 14, 0);
+    return Table_getEntryById(*(_DWORD *)(a1 + 4), 14, 0);
   }
 
 /* ============================================================================
@@ -102756,7 +102756,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall SE_SYS_CH_SCORE_PAGE_IN_ref_2(int a1)
   {
     *(_BYTE *)(a1 + 4012) = 1;
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_IN", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_IN", 0);
   }
 
 /* ============================================================================
@@ -102784,7 +102784,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[0] = 12321336;
     v3[1] = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(5u);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, v3, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_OUT", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_OUT", 0);
   }
 
 /* ============================================================================
@@ -102955,7 +102955,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v17[2]; // [sp+38h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 36);
-    sub_604734E4((_DWORD *)(a1 + 36), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 36), 0);
     sub_60475C8C((int)v2);
     v11 = 12321336;
     v12 = (int)"PreGameVS.bflyt";
@@ -103318,7 +103318,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     StateMgr::execute((_DWORD *)(a1 + 20));
     sub_6051D004(a1);
-    return sub_60473B58((_DWORD *)(a1 + 36), 0xEu, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 36), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -103482,7 +103482,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 36);
     *(_BYTE *)(a1 + 4012) = 0;
-    sub_60473B58(a1 + 36, 14, 0);
+    Table_getEntryById(a1 + 36, 14, 0);
     v3 = (_BYTE *)MEMORY[0xC99DEC];
     v4 = MEMORY[0xC99DD4] + 272;
     if ( !MEMORY[0xC99DD4] )
@@ -104581,7 +104581,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = a1 + 40;
     *(_BYTE *)(a1 + 13005) = 1;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8FD4, 0);
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_RECORD_PAGE_IN", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_RECORD_PAGE_IN", 0);
     v2 = sub_60473B4C(v1);
     return sub_6098F1D4(v2);
   }
@@ -104616,9 +104616,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v1 = a1;
-    sub_60502548((int)(a1 + 3708));
+    StateMgr_resetAndMaybeChange((int)(a1 + 3708));
     *((_WORD *)v1 + 2380) = 0;
-    sub_6047EABC((_DWORD *)v1 + 937);
+    IntrusiveList_clearAndDestroy((_DWORD *)v1 + 937);
     v1[4751] = 0;
     v1[4748] = 1;
     v1[4752] = 1;
@@ -104755,7 +104755,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall SE_SYS_RECORD_PAGE_IN_ref_2(int a1)
   {
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8FDC, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_RECORD_PAGE_IN", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_RECORD_PAGE_IN", 0);
   }
 
 /* ============================================================================
@@ -104784,7 +104784,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall SE_SYS_RECORD_PAGE_IN_ref_3(int a1)
   {
     sub_604741D8((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA8FDC, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_RECORD_PAGE_IN", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_RECORD_PAGE_IN", 0);
   }
 
 /* ============================================================================
@@ -104894,11 +104894,11 @@ static inline unsigned int uxtb16(unsigned int x)
     SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 3708));
     sub_6050A308(a1 + 5788);
     *(_WORD *)(a1 + 13004) = 0;
-    sub_6045BF30(a1 + 13008);
-    sub_6045BF30(a1 + 13412);
-    sub_6045BF30(a1 + 13816);
-    sub_6045BF30(a1 + 14220);
-    sub_6045BF30(a1 + 14624);
+    ctor_installTwoVtables(a1 + 13008);
+    ctor_installTwoVtables(a1 + 13412);
+    ctor_installTwoVtables(a1 + 13816);
+    ctor_installTwoVtables(a1 + 14220);
+    ctor_installTwoVtables(a1 + 14624);
     *(_BYTE *)(a1 + 15028) = 1;
     *(_DWORD *)(a1 + 15032) = -1;
     *(_DWORD *)(a1 + 15036) = 0;
@@ -104974,11 +104974,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = 1;
     v6 = "Pa_ArrowR_00";
     sub_604755C4(a1 + 40, a1 + 15040, &v5, (int)&dword_60CA9134, &v4);
-    sub_6045BF58(a1 + 13008, 0);
-    sub_6045BF58(a1 + 13412, 1);
-    sub_6045BF58(a1 + 13816, 2);
-    sub_6045BF58(a1 + 14220, 3);
-    return sub_6045BF58(a1 + 14624, 4);
+    Registry_iterateAndRegister(a1 + 13008, 0);
+    Registry_iterateAndRegister(a1 + 13412, 1);
+    Registry_iterateAndRegister(a1 + 13816, 2);
+    Registry_iterateAndRegister(a1 + 14220, 3);
+    return Registry_iterateAndRegister(a1 + 14624, 4);
   }
 
 /* ============================================================================
@@ -104994,7 +104994,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v7; // [sp+14h] [bp-4h]
   
     v2 = a1 + 10;
-    sub_604734E4(a1 + 10, 0);
+    Disposer_allocateChildren(a1 + 10, 0);
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "RecordList.bflyt";
@@ -105290,7 +105290,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 3708);
       sub_6050A8A4(a1 + 5788);
-      sub_60473B58(a1 + 40, 14, 0);
+      Table_getEntryById(a1 + 40, 14, 0);
       return sub_6051FF3C(a1);
     }
     return result;
@@ -105564,7 +105564,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( result == 60 )
     {
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_RESULT_SCORE", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_RESULT_SCORE", 0);
       v6 = ArrayOf20_getEntryPtr(a1 + 36, 1);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v6 + 84))(v6, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13275692);
@@ -105610,7 +105610,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v4 = ArrayOf20_getEntryPtr(a1 + 36, 2);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 84))(v4, 0);
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_RESULT_SCORE", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_RESULT_SCORE", 0);
       if ( *(_BYTE *)(a1 + 4308) || *(_BYTE *)(a1 + 4312) )
         v5 = 13275724;
       else
@@ -105649,7 +105649,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *v2 = result;
     if ( result == 100 )
     {
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_RESULT_SCORE_BEST", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_RESULT_SCORE_BEST", 0);
       *(_BYTE *)(a1 + 4311) = 1;
       if ( *(_BYTE *)(a1 + 4312) )
       {
@@ -105847,7 +105847,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v5 = "SE_SYS_CH_RESULT_GET_BRONZE";
       }
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)v5, 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)v5, 0);
     }
   LABEL_19:
     v6 = ArrayOf20_getEntryPtr(a1 + 36, 4);
@@ -106085,7 +106085,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v44; // [sp+8Ch] [bp-4h]
   
     v2 = a1 + 9;
-    sub_604734E4(a1 + 9, 0);
+    Disposer_allocateChildren(a1 + 9, 0);
     sub_60475C8C((int)v2);
     v13 = 12321336;
     v14 = (int)"ResultChallenge.bflyt";
@@ -106256,7 +106256,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return result;
     }
     *result = 0;
-    return (_BYTE *)sub_60473B58(a1 + 36, 14, 0);
+    return (_BYTE *)Table_getEntryById(a1 + 36, 14, 0);
   }
 
 /* ============================================================================
@@ -107703,7 +107703,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v11[2]; // [sp+20h] [bp-10h] BYREF
     _DWORD v12[2]; // [sp+28h] [bp-8h] BYREF
   
-    sub_604734E4(a1, 0);
+    Disposer_allocateChildren(a1, 0);
     sub_60475C8C((int)a1);
     v8 = 12321336;
     v9 = (int)"ResultChallengeScreen.bflyt";
@@ -107741,7 +107741,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60523840(_DWORD *a1)
   {
-    return sub_60473B58(a1, 0xEu, 0);
+    return Table_getEntryById(a1, 0xEu, 0);
   }
 
 /* ============================================================================
@@ -107976,7 +107976,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCA996C, 0);
     sub_60528300(a1);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_RESULT", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_RESULT", 0);
   }
 
 /* ============================================================================
@@ -108505,7 +108505,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 9) + 51);
     if ( (result & 1) != 0 )
     {
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_TOTAL_COIN_NUM", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_TOTAL_COIN_NUM", 0);
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13278276);
     }
     return result;
@@ -108738,7 +108738,7 @@ static inline unsigned int uxtb16(unsigned int x)
       ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCA9964, 0);
       *(_DWORD *)(a1 + 4664) = 1;
       sub_60528300(a1);
-      return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_FINAL_RESULT", 0);
+      return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_FINAL_RESULT", 0);
     }
     else
     {
@@ -108977,7 +108977,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (result & 0x20) != 0 )
       {
         *(_DWORD *)(a1 + 4668) = 2;
-        sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
         return StateMgr::changeState((_DWORD *)(a1 + 24), 13278724);
       }
     }
@@ -109025,7 +109025,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex(a1 + 11, 1u, (_DWORD *)0xCA9964, 0);
     a1[1166] = 1;
     sub_60528300((int)a1);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_FINAL_RESULT", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_FINAL_RESULT", 0);
   }
 
 /* ============================================================================
@@ -109056,7 +109056,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 9) + 51);
     if ( (result & 1) != 0 )
     {
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_TOTAL_COIN_NUM", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_TOTAL_COIN_NUM", 0);
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13278564);
     }
     return result;
@@ -109360,7 +109360,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (result & 0x20) != 0 )
       {
         *(_DWORD *)(a1 + 4668) = 2;
-        sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
         return StateMgr::changeState((_DWORD *)(a1 + 24), 13278724);
       }
     }
@@ -109434,7 +109434,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 0x20) != 0 )
     {
       *(_DWORD *)(a1 + 4668) = 2;
-      sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13278724);
     }
     return result;
@@ -109528,7 +109528,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
       {
         *v3 = 2;
-        sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
       }
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13278724);
     }
@@ -109649,7 +109649,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3760) = 11778612;
     *(_DWORD *)(a1 + 3764) = 0;
     *(_BYTE *)(a1 + 3768) = 0;
-    sub_6045BF30(a1 + 4216);
+    ctor_installTwoVtables(a1 + 4216);
     *(_DWORD *)(a1 + 4620) = -1;
     *(_DWORD *)(a1 + 4624) = -1;
     *(_DWORD *)(a1 + 4660) = 0;
@@ -109844,7 +109844,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       sub_60530D3C(MEMORY[0xCAAAC0]);
     }
-    return sub_6045BF58(a1 + 4216, 0);
+    return Registry_iterateAndRegister(a1 + 4216, 0);
   }
 
 /* ============================================================================
@@ -109859,7 +109859,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // [sp+Ch] [bp-4h]
   
     v1 = (_DWORD *)(a1 + 44);
-    sub_604734E4((_DWORD *)(a1 + 44), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 44), 0);
     (*(void (__fastcall **)(int *))(dword_60CAA318 + 12))(&dword_60CAA318);
     v4 = 12321336;
     v5 = dword_60CAA31C;
@@ -110766,7 +110766,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
       v3 = 0;
-      sub_60473B58(a1 + 44, 5, 0);
+      Table_getEntryById(a1 + 44, 5, 0);
       v4 = (int *)(a1 + 4620);
       result = *(_DWORD *)(a1 + 4620);
       if ( result >= 1 )
@@ -111733,7 +111733,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604742D0(v13, a2 + 4, (_DWORD *)0xCA9984, v14, 0);
     sub_6047455C(v13, a2 + 4);
     sub_6047459C(v13, a2 + 4);
-    return sub_60473B58(v13, 5, 0);
+    return Table_getEntryById(v13, 5, 0);
   }
 
 /* ============================================================================
@@ -111793,7 +111793,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604742D0(v15, a2 + 4, (_DWORD *)0xCA9984, v16, 0);
     sub_6047455C(v15, a2 + 4);
     sub_6047459C(v15, a2 + 4);
-    return sub_60473B58(v15, 5, 0);
+    return Table_getEntryById(v15, 5, 0);
   }
 
 /* ============================================================================
@@ -112040,7 +112040,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = sub_60793CA8(*(_DWORD *)(*(_DWORD *)(a1 + 60) + 4));
+    result = Object_getBit5(*(_DWORD *)(*(_DWORD *)(a1 + 60) + 4));
     if ( result == 1 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13279676);
     return result;
@@ -112091,7 +112091,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = sub_60793CA8(*(_DWORD *)(*(_DWORD *)(a1 + 60) + 4));
+    result = Object_getBit5(*(_DWORD *)(*(_DWORD *)(a1 + 60) + 4));
     if ( result == 1 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13279740);
     return result;
@@ -112160,7 +112160,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = sub_60793CA8(*(_DWORD *)(*(_DWORD *)(a1 + 60) + 4));
+    result = Object_getBit5(*(_DWORD *)(*(_DWORD *)(a1 + 60) + 4));
     if ( result == 1 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13279836);
     return result;
@@ -112887,7 +112887,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 4);
-    sub_604734E4((_DWORD *)(a1 + 4), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ResultVSScreen.bflyt";
@@ -112911,7 +112911,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6052AF5C(int result)
   {
     if ( *(_BYTE *)(result + 3552) )
-      return sub_60473B58((_DWORD *)(result + 4), 0xEu, 0);
+      return Table_getEntryById((_DWORD *)(result + 4), 0xEu, 0);
     return result;
   }
 
@@ -113112,7 +113112,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v4 >= 0x3C )
         {
           if ( !*(_BYTE *)(a1 + 3229) )
-            sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_RESULT_COIN_FINISH", 0);
+            SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_RESULT_COIN_FINISH", 0);
           goto LABEL_14;
         }
       }
@@ -113358,14 +113358,14 @@ static inline unsigned int uxtb16(unsigned int x)
     do
     {
       if ( SE_SYS_CB_RESULT_ref_2_helper(v3 + v2) )
-        sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_CB_RESULT_COIN", 0, 1);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_CB_RESULT_COIN", 0, 1);
       v2 += 48;
     }
     while ( v2 != 2880 );
     if ( SE_SYS_CB_RESULT_ref_2_helper(a1 + 2940) )
     {
       v4 = 1;
-      sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_CB_RESULT_STARCOIN", 0, 1);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_CB_RESULT_STARCOIN", 0, 1);
     }
     else
     {
@@ -113375,13 +113375,13 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v4 && v5 )
     {
       v4 = 1;
-      sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_CB_RESULT_STARCOIN", 0, 1);
+      SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_CB_RESULT_STARCOIN", 0, 1);
     }
     result = SE_SYS_CB_RESULT_ref_2_helper(a1 + 3036);
     if ( !v4 )
     {
       if ( result )
-        return sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_CB_RESULT_STARCOIN", 0, 1);
+        return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_CB_RESULT_STARCOIN", 0, 1);
     }
     return result;
   }
@@ -114033,7 +114033,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
   LABEL_51:
             *(_DWORD *)(a1 + 52) = 3;
-            sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_TIME_COUNT_FINISH", 0);
+            SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_TIME_COUNT_FINISH", 0);
             goto LABEL_52;
           }
           v7 = v5 - v6;
@@ -114107,7 +114107,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           ArrayOf5_lookupByIndex((_DWORD *)(a1 + 72), 0, &dword_60CAA6D8, 0);
           *(_DWORD *)(a1 + 52) = 6;
-          return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_TIME_APPEAR", 0);
+          return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_TIME_APPEAR", 0);
         }
         return result;
       case 6:
@@ -114137,7 +114137,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_BYTE *)(a1 + 71) = 1;
           *(_BYTE *)(a1 + 70) = 1;
           sub_6052DC68(a1);
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_MVP_APPEAR", 0);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_BM_MVP_APPEAR", 0);
           result = 8;
   LABEL_67:
           *(_DWORD *)(a1 + 52) = result;
@@ -114354,7 +114354,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 72);
-    sub_604734E4((_DWORD *)(a1 + 72), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 72), 0);
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"ResultFree.bflyt";
@@ -114810,7 +114810,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6052DBEC(_DWORD *a1)
   {
-    sub_60473B58(a1 + 18, 14, 0);
+    Table_getEntryById(a1 + 18, 14, 0);
     StateMgr::execute(a1 + 6);
     sub_60507028(a1[935]);
     sub_60507028(a1[936]);
@@ -115457,7 +115457,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( !v4 )
         {
   LABEL_23:
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLOSE", 0);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLOSE", 0);
           return StateMgr::changeState((_DWORD *)(a1 + 24), 13281408);
         }
   LABEL_20:
@@ -115469,7 +115469,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (*(_BYTE *)(MEMORY[0xC9CF0C] + 21) & 8) != 0 )
         {
   LABEL_17:
-          sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLK", 0);
+          SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLK", 0);
           return StateMgr::changeState((_DWORD *)(a1 + 24), 13281408);
         }
       }
@@ -115584,7 +115584,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A308(a1 + 3760);
     *(_DWORD *)(a1 + 10976) = 0x10000;
     *(_WORD *)(a1 + 10980) = 1;
-    sub_6045BF30(a1 + 10984);
+    ctor_installTwoVtables(a1 + 10984);
     memset((void *)(a1 + 3628), 0, 0x84u);
     *(_DWORD *)(a1 + 11400) = 0;
     *(_DWORD *)(a1 + 11396) = 0;
@@ -115653,7 +115653,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6052F098(a1);
     sub_6052F1C4(a1);
     sub_6052F434(a1);
-    sub_6045BF58(a1 + 10984, 0);
+    Registry_iterateAndRegister(a1 + 10984, 0);
     v4[0] = 12321336;
     v4[1] = "Pa_KeyAssign_00";
     sub_6050A4EC(a1 + 3760, a1 + 40, v4, 1, 1);
@@ -115674,7 +115674,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ResultMiniGame.bflyt";
@@ -115997,7 +115997,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_6050A950(a1 + 3760, 0);
       sub_6050A8A4(a1 + 3760);
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -116131,7 +116131,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 10976) = 257;
     *(_BYTE *)(a1 + 10980) = 0;
     StateMgr::changeState((_DWORD *)(a1 + 24), 13281312);
-    return sub_60473B58(v16, 14, 0);
+    return Table_getEntryById(v16, 14, 0);
   }
 
 /* ============================================================================
@@ -117713,7 +117713,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // [sp+4h] [bp-4h] BYREF
   
     v3 = (_DWORD *)(a1 + 36);
-    sub_604734E4((_DWORD *)(a1 + 36), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 36), 0);
     sub_60476388(v3, a2, a3);
     if ( ((unsigned int)&unk_60CAACA4 & ~(1616059568 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAACA4) )
     {
@@ -118423,7 +118423,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 8068) = 0;
     *(_DWORD *)(a1 + 12080) = 0;
     *(_BYTE *)(a1 + 83630) = 0;
-    return sub_60473B58((_DWORD *)(a1 + 12092), 5u, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 12092), 5u, 0);
   }
 
 /* ============================================================================
@@ -118548,9 +118548,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 52604) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52608) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52612) + 64) |= 1u;
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15740));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
     {
       ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAADCC, 0);
@@ -119059,9 +119059,9 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 0, (_DWORD *)0xCAADFC, 0);
     *(_BYTE *)(a1 + 83625) = 1;
     *(_BYTE *)(a1 + 83637) = 1;
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15740));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
     sub_60478680((int)"SE_SYS_CHANGE_MODE_RDASH", 15);
     return sub_6082B6B8(MEMORY[0xCC6E04]);
   }
@@ -119422,9 +119422,9 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCAADBC, 0);
     *(_BYTE *)(a1 + 83625) = 1;
     sub_60538E88(a1);
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15740));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
     return sub_60478680((int)"SE_SYS_FS_DELETE", 15);
   }
 
@@ -119601,7 +119601,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 83629) = 1;
     *(_DWORD *)(a1 + 52492) = *v2;
     *(_DWORD *)(a1 + 52468) = 1;
-    return sub_60502548(v3);
+    return StateMgr_resetAndMaybeChange(v3);
   }
 
 /* ============================================================================
@@ -119625,7 +119625,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60534A54(int a1)
   {
     *(_WORD *)(a1 + 16752) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15740));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
     *(_BYTE *)(*(_DWORD *)(a1 + 52600) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52604) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52608) + 64) &= ~1u;
@@ -119727,9 +119727,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16732) = v3;
     *(_BYTE *)(a1 + 83625) = 0;
     *(_BYTE *)(a1 + 83629) = 0;
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 15740));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
   }
 
 /* ============================================================================
@@ -119842,9 +119842,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16732) = v3;
     *(_BYTE *)(a1 + 83625) = 0;
     *(_BYTE *)(a1 + 83629) = 0;
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 15740));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
   }
 
 /* ============================================================================
@@ -119864,9 +119864,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_60535128(int a1)
   {
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 15740));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
   }
 
 /* ============================================================================
@@ -119941,9 +119941,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16732) = v3;
     *(_BYTE *)(a1 + 83625) = 0;
     *(_BYTE *)(a1 + 83629) = 0;
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15740));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
     *(_BYTE *)(*(_DWORD *)(a1 + 52600) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52604) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52608) + 64) &= ~1u;
@@ -119969,9 +119969,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 52608) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52612) + 64) |= 1u;
     sub_60538E88(a1);
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15740));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
     return sub_60478680((int)"SE_SYS_FS_COPY", 15);
   }
 
@@ -120127,7 +120127,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 83629) = 1;
     *(_DWORD *)(a1 + 52496) = *v2;
     *(_DWORD *)(a1 + 52468) = 2;
-    sub_60502548(v3);
+    StateMgr_resetAndMaybeChange(v3);
     sub_6047EFCC(a1 + 15740, 0);
     *(_BYTE *)(a1 + 16200) = 1;
     sub_6047EFCC(a1 + 15740, 1);
@@ -120177,7 +120177,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     *(_WORD *)(a1 + 16752) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15740));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
     *(_BYTE *)(a1 + 83625) = 0;
     *(_DWORD *)(a1 + 16728) = 11;
     *(_DWORD *)(a1 + 16732) = 11;
@@ -120384,9 +120384,9 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_BYTE *)(a1 + 83625) = 0;
     *(_BYTE *)(a1 + 83629) = 0;
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 15740));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
   }
 
 /* ============================================================================
@@ -120455,9 +120455,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16732) = v4;
     *(_BYTE *)(a1 + 83625) = 0;
     *(_BYTE *)(a1 + 83629) = 0;
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    return sub_6047EABC(v2);
+    return IntrusiveList_clearAndDestroy(v2);
   }
 
 /* ============================================================================
@@ -120540,9 +120540,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16732) = v3;
     *(_BYTE *)(a1 + 83625) = 0;
     *(_BYTE *)(a1 + 83629) = 0;
-    sub_60502548(a1 + 15700);
+    StateMgr_resetAndMaybeChange(a1 + 15700);
     *(_WORD *)(a1 + 16752) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 15740));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15740));
   }
 
 /* ============================================================================
@@ -120673,11 +120673,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 15696) = 0;
     SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 15700));
     sub_60540B18(a1 + 17780);
-    sub_6045BF30(a1 + 52676);
-    sub_6045BF30(a1 + 53080);
-    sub_6045BF30(a1 + 53484);
-    sub_6045BF30(a1 + 53888);
-    sub_6045BF30(a1 + 54292);
+    ctor_installTwoVtables(a1 + 52676);
+    ctor_installTwoVtables(a1 + 53080);
+    ctor_installTwoVtables(a1 + 53484);
+    ctor_installTwoVtables(a1 + 53888);
+    ctor_installTwoVtables(a1 + 54292);
     sub_6050A308(a1 + 54704);
     sub_6050A308(a1 + 61920);
     sub_6050A308(a1 + 69136);
@@ -120744,7 +120744,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v12; // [sp+8h] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 12092);
-    sub_604734E4((_DWORD *)(a1 + 12092), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 12092), 0);
     sub_60475C8C((int)v2);
     v11 = 12321336;
     v12 = "SaveDataSelect.bflyt";
@@ -120823,11 +120823,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605028F0(v4, &dword_60B03A38, 1);
     *(_DWORD *)(List_getNthNode(v6, 12) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v6, 12) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    sub_6045BF58((int)(v8 + 9228), 0);
-    sub_6045BF58((int)(v8 + 9329), 1);
-    sub_6045BF58((int)(v8 + 9430), 2);
-    sub_6045BF58((int)(v8 + 9531), 3);
-    sub_6045BF58((int)(v8 + 9632), 4);
+    Registry_iterateAndRegister((int)(v8 + 9228), 0);
+    Registry_iterateAndRegister((int)(v8 + 9329), 1);
+    Registry_iterateAndRegister((int)(v8 + 9430), 2);
+    Registry_iterateAndRegister((int)(v8 + 9531), 3);
+    Registry_iterateAndRegister((int)(v8 + 9632), 4);
     return sub_60540E5C(v8 + 504, 0);
   }
 
@@ -121395,7 +121395,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         sub_604745C0(v3, 0);
         sub_6047455C(v3, 0);
-        sub_60473B58(v3, 5, 0);
+        Table_getEntryById(v3, 5, 0);
         StateMgr::execute(v15);
         CurrentState = StateMgr::getCurrentState((int)v15);
         v17 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -121405,7 +121405,7 @@ static inline unsigned int uxtb16(unsigned int x)
           StateMgr::execute(v15);
           sub_604745C0(v3, 1);
           sub_6047455C(v3, 1);
-          return sub_60473B58(v3, 5, 0);
+          return Table_getEntryById(v3, 5, 0);
         }
       }
     }
@@ -121430,7 +121430,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // r1
   
     if ( !*(_BYTE *)(a1 + 83624) )
-      return sub_60473B58(a1 + 12092, 5, 0);
+      return Table_getEntryById(a1 + 12092, 5, 0);
     v2 = *(unsigned __int8 *)(MEMORY[0xC9CFB8] + 81);
     if ( *(_BYTE *)(MEMORY[0xC9CFB8] + 81) )
       v2 = 4;
@@ -121466,7 +121466,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A8A4(a1 + 61920);
     sub_6050A8A4(a1 + 69136);
     sub_6050A8A4(a1 + 76352);
-    sub_60473B58(a1 + 12092, 5, 0);
+    Table_getEntryById(a1 + 12092, 5, 0);
     result = *(unsigned __int8 *)(a1 + 83629);
     if ( *(_BYTE *)(a1 + 83629) )
     {
@@ -122024,9 +122024,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 52568) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52572) + 64) |= 1u;
     *(_BYTE *)(a1 + 83574) = *(_BYTE *)(MEMORY[0xCC6D8C] + 16);
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15720));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
     sub_60474420((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, *(_DWORD *)(a1 + 54636), 0);
     sub_6047455C(a1 + 12092, 2u);
     *(_DWORD *)(a1 + 83520) = 0;
@@ -122494,9 +122494,9 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604741D8(v2 - 17857, 0, (_DWORD *)0xCAB48C, 0);
     *(_BYTE *)(a1 + 83565) = 1;
     *(_BYTE *)(a1 + 83576) = 1;
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15720));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
     return sub_60478680((int)"SE_SYS_CHANGE_MODE_RDASH", 15);
   }
 
@@ -122763,9 +122763,9 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCAB44C, 0);
     *(_BYTE *)(a1 + 83565) = 1;
     sub_6053F0DC(a1);
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15720));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
     return sub_60478680((int)"SE_SYS_FS_DELETE", 15);
   }
 
@@ -122964,7 +122964,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 83569) = 1;
     *(_DWORD *)(a1 + 52472) = *v3;
     *(_DWORD *)(a1 + 52448) = 1;
-    return sub_60502548(v2);
+    return StateMgr_resetAndMaybeChange(v2);
   }
 
 /* ============================================================================
@@ -122988,7 +122988,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053AF04(int a1)
   {
     *(_WORD *)(a1 + 16732) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15720));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
     *(_BYTE *)(*(_DWORD *)(a1 + 52560) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52564) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52568) + 64) &= ~1u;
@@ -123095,9 +123095,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16712) = v3;
     *(_BYTE *)(a1 + 83565) = 0;
     *(_BYTE *)(a1 + 83569) = 0;
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 15720));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
   }
 
 /* ============================================================================
@@ -123215,9 +123215,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16712) = v3;
     *(_BYTE *)(a1 + 83565) = 0;
     *(_BYTE *)(a1 + 83569) = 0;
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 15720));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
   }
 
 /* ============================================================================
@@ -123237,9 +123237,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_6053B5F0(int a1)
   {
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 15720));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
   }
 
 /* ============================================================================
@@ -123313,9 +123313,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16712) = v3;
     *(_BYTE *)(a1 + 83565) = 0;
     *(_BYTE *)(a1 + 83569) = 0;
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15720));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
     *(_BYTE *)(*(_DWORD *)(a1 + 52560) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52564) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52568) + 64) &= ~1u;
@@ -123341,9 +123341,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 52568) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 52572) + 64) |= 1u;
     sub_6053F0DC(a1);
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15720));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
     return sub_60478680((int)"SE_SYS_FS_COPY", 15);
   }
 
@@ -123521,7 +123521,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 83569) = 1;
     *(_DWORD *)(a1 + 52476) = *v3;
     *(_DWORD *)(a1 + 52448) = 2;
-    sub_60502548(v2);
+    StateMgr_resetAndMaybeChange(v2);
     sub_6047EFCC(a1 + 15720, 0);
     *(_BYTE *)(a1 + 16180) = 1;
     sub_6047EFCC(a1 + 15720, 1);
@@ -123569,7 +123569,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     *(_WORD *)(a1 + 16732) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 15720));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
     *(_BYTE *)(a1 + 83565) = 0;
     *(_DWORD *)(a1 + 16708) = 6;
     *(_DWORD *)(a1 + 16712) = 6;
@@ -123779,9 +123779,9 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_BYTE *)(a1 + 83565) = 0;
     *(_BYTE *)(a1 + 83569) = 0;
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 15720));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
   }
 
 /* ============================================================================
@@ -123855,9 +123855,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16712) = v4;
     *(_BYTE *)(a1 + 83565) = 0;
     *(_BYTE *)(a1 + 83569) = 0;
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    return sub_6047EABC(v2);
+    return IntrusiveList_clearAndDestroy(v2);
   }
 
 /* ============================================================================
@@ -123939,9 +123939,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16712) = v3;
     *(_BYTE *)(a1 + 83565) = 0;
     *(_BYTE *)(a1 + 83569) = 0;
-    sub_60502548(a1 + 15680);
+    StateMgr_resetAndMaybeChange(a1 + 15680);
     *(_WORD *)(a1 + 16732) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 15720));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
   }
 
 /* ============================================================================
@@ -124099,11 +124099,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 15676) = 0;
     SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 15680));
     sub_60540B18(a1 + 17760);
-    sub_6045BF30(a1 + 52616);
-    sub_6045BF30(a1 + 53020);
-    sub_6045BF30(a1 + 53424);
-    sub_6045BF30(a1 + 53828);
-    sub_6045BF30(a1 + 54232);
+    ctor_installTwoVtables(a1 + 52616);
+    ctor_installTwoVtables(a1 + 53020);
+    ctor_installTwoVtables(a1 + 53424);
+    ctor_installTwoVtables(a1 + 53828);
+    ctor_installTwoVtables(a1 + 54232);
     sub_6050A308(a1 + 54640);
     sub_6050A308(a1 + 61856);
     sub_6050A308(a1 + 69072);
@@ -124175,7 +124175,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v11; // [sp+Ch] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 12092);
-    sub_604734E4((_DWORD *)(a1 + 12092), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 12092), 0);
     sub_60475C8C((int)v2);
     v10 = 12321336;
     v11 = "SaveDataSelectDL.bflyt";
@@ -124247,11 +124247,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = (_DWORD *)(a1 + 15744);
     *(_DWORD *)(v6 - v8 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v5, 7) - *v7 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    sub_6045BF58((int)(v7 + 9218), 0);
-    sub_6045BF58((int)(v7 + 9319), 1);
-    sub_6045BF58((int)(v7 + 9420), 2);
-    sub_6045BF58((int)(v7 + 9521), 3);
-    sub_6045BF58((int)(v7 + 9622), 4);
+    Registry_iterateAndRegister((int)(v7 + 9218), 0);
+    Registry_iterateAndRegister((int)(v7 + 9319), 1);
+    Registry_iterateAndRegister((int)(v7 + 9420), 2);
+    Registry_iterateAndRegister((int)(v7 + 9521), 3);
+    Registry_iterateAndRegister((int)(v7 + 9622), 4);
     return sub_60540E5C(v7 + 504, 1);
   }
 
@@ -124791,13 +124791,13 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       sub_604745C0(v3, 0);
       sub_6047455C(v3, 0);
-      sub_60473B58(v3, 5, 0);
+      Table_getEntryById(v3, 5, 0);
       StateMgr::execute(v14);
     }
     ArrayOf5_lookupByIndex(v3, 1u, (_DWORD *)0xCAB45C, 0);
     sub_604745C0(v3, 1);
     sub_6047455C(v3, 1);
-    return sub_60473B58(v3, 5, 0);
+    return Table_getEntryById(v3, 5, 0);
   }
 
 /* ============================================================================
@@ -124851,7 +124851,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6050A8A4(a1 + 61856);
       sub_6050A8A4(a1 + 69072);
       sub_6050A8A4(a1 + 76288);
-      sub_60473B58(a1 + 12092, 5, 0);
+      Table_getEntryById(a1 + 12092, 5, 0);
       result = *(unsigned __int8 *)(a1 + 83569);
       if ( *(_BYTE *)(a1 + 83569) )
       {
@@ -125218,9 +125218,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 31720) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 31724) + 64) &= ~1u;
     *(_DWORD *)(a1 + 34692) = 0;
-    sub_60502548(a1 + 31800);
+    StateMgr_resetAndMaybeChange(a1 + 31800);
     *(_WORD *)(a1 + 32852) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 31840));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 31840));
     *(_BYTE *)(*(_DWORD *)(a1 + 31736) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 31740) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 31744) + 64) &= ~1u;
@@ -125259,7 +125259,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60541DF8(a1, *(_DWORD *)(a1 + 34712), 0);
     sub_604741D8((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA7C, 0);
     sub_6047455C(a1 + 28128, 0);
-    sub_60473B58((_DWORD *)(a1 + 28128), 0xEu, 0);
+    Table_getEntryById((_DWORD *)(a1 + 28128), 0xEu, 0);
     sub_605324A4(a1 + 4, *v2);
     sub_605324A4(a1 + 4016, *v2);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA74, 0);
@@ -125382,9 +125382,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6053FA9C(int a1)
   {
-    sub_60502548(a1 + 31800);
+    StateMgr_resetAndMaybeChange(a1 + 31800);
     *(_WORD *)(a1 + 32852) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 31840));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 31840));
     sub_604741D8((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA74, 0);
     *(_BYTE *)(a1 + 34724) = 1;
     sub_60478680((int)"SE_SYS_BACK", 15);
@@ -125727,9 +125727,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_60540368(int a1)
   {
-    sub_60502548(a1 + 31800);
+    StateMgr_resetAndMaybeChange(a1 + 31800);
     *(_WORD *)(a1 + 32852) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 31840));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 31840));
   }
 
 /* ============================================================================
@@ -125810,9 +125810,9 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605324A4(a1 + 16052, *(_DWORD *)(a1 + 34716));
     sub_60541DF8(a1, *(_DWORD *)(a1 + 34720), 5u);
     sub_605324A4(a1 + 20064, *(_DWORD *)(a1 + 34720));
-    sub_60502548(a1 + 31800);
+    StateMgr_resetAndMaybeChange(a1 + 31800);
     *(_WORD *)(a1 + 32852) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 31840));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 31840));
   }
 
 /* ============================================================================
@@ -125931,9 +125931,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_605407D0(int a1)
   {
-    sub_60502548(a1 + 31800);
+    StateMgr_resetAndMaybeChange(a1 + 31800);
     *(_WORD *)(a1 + 32852) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 31840));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 31840));
   }
 
 /* ============================================================================
@@ -126081,8 +126081,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 31688) = 0;
     *(_BYTE *)(a1 + 31692) = 0;
     SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 31800));
-    sub_6045BF30(a1 + 33880);
-    sub_6045BF30(a1 + 34284);
+    ctor_installTwoVtables(a1 + 33880);
+    ctor_installTwoVtables(a1 + 34284);
     *(_BYTE *)(a1 + 34730) = 0;
     *(_BYTE *)(a1 + 34731) = 0;
     *(_BYTE *)(a1 + 34732) = 0;
@@ -126156,7 +126156,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 34730) = a2;
     v3 = (_BYTE *)(a1 + 34730);
     v4 = (_DWORD *)(a1 + 28128);
-    sub_604734E4((_DWORD *)(a1 + 28128), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 28128), 0);
     v9 = 12321336;
     v10 = "Title";
     sub_60475C8C((int)v4);
@@ -126231,8 +126231,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605028F0(a1 + 31800, &dword_60B03AC0, 1);
     sub_605029FC(a1 + 31800, 11549356, "SE_SYS_BACK");
     sub_60502A24(a1 + 31800, dword_60B03AC4, 5, 1);
-    sub_6045BF58(a1 + 33880, 0);
-    return sub_6045BF58(a1 + 34284, 4);
+    Registry_iterateAndRegister(a1 + 33880, 0);
+    return Registry_iterateAndRegister(a1 + 34284, 4);
   }
 
 /* ============================================================================
@@ -126485,7 +126485,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[8677] = a1[8572] & 0x60C0;
     StateMgr::execute(a1 + 7027);
     sub_6050229C((int)(a1 + 7950));
-    return sub_60473B58(a1 + 7032, 14, 0);
+    return Table_getEntryById(a1 + 7032, 14, 0);
   }
 
 /* ============================================================================
@@ -126800,7 +126800,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 60);
-    sub_604734E4((_DWORD *)(a1 + 60), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 60), 0);
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"Screen.bflyt";
@@ -126858,7 +126858,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605425C8(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 44));
-    return sub_60473B58((_DWORD *)(a1 + 60), 0xEu, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 60), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -126942,7 +126942,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v1 = result + 60;
       *(_BYTE *)(*(_DWORD *)(result + 20) + 64) |= 1u;
       ArrayOf5_lookupByIndex((_DWORD *)(result + 60), 0, (_DWORD *)0xCABE08, 0);
-      return sub_60473B58(v1, 14, 0);
+      return Table_getEntryById(v1, 14, 0);
     }
     return result;
   }
@@ -127133,7 +127133,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 4);
-    sub_604734E4((_DWORD *)(a1 + 4), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"SelectBG.bflyt";
@@ -127181,7 +127181,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(MEMORY[0xCAB438] + 83576) = 0;
       sub_604741D8(v4, 0, (_DWORD *)0xC00604, 0);
     }
-    return sub_60473B58(v4, a2, 0);
+    return Table_getEntryById(v4, a2, 0);
   }
 
 /* ============================================================================
@@ -127249,7 +127249,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 4);
-    sub_604734E4((_DWORD *)(a1 + 4), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"SelectCursor.bflyt";
@@ -127360,7 +127360,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v13 = 17;
       else
         v13 = 14;
-      return sub_60473B58(a1 + 4, v13, 0);
+      return Table_getEntryById(a1 + 4, v13, 0);
     }
     return result;
   }
@@ -127516,7 +127516,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 4);
-    sub_604734E4((_DWORD *)(a1 + 4), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"SelectCursorMini.bflyt";
@@ -127629,7 +127629,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(*(_DWORD *)(result + 3556) + 65) = v11;
       }
       if ( *(_BYTE *)(result + 3584) || !*(_BYTE *)(result + 3583) )
-        return sub_60473B58(result + 4, 14, 0);
+        return Table_getEntryById(result + 4, 14, 0);
     }
     return result;
   }
@@ -128034,9 +128034,9 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 33476) = 5;
         *(_DWORD *)(a1 + 33472) = 5;
         *(_WORD *)(a1 + 33496) = 0;
-        sub_60502548(a1 + 3632);
+        StateMgr_resetAndMaybeChange(a1 + 3632);
         *(_WORD *)(a1 + 4684) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3672));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3672));
         if ( *(_BYTE *)(a1 + 33504) )
         {
           sub_608169AC(MEMORY[0xCC6B68]);
@@ -128102,9 +128102,9 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 33476) = 5;
         *(_DWORD *)(a1 + 33472) = 5;
         *(_WORD *)(a1 + 33496) = 0;
-        sub_60502548(a1 + 3632);
+        StateMgr_resetAndMaybeChange(a1 + 3632);
         *(_WORD *)(a1 + 4684) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3672));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3672));
         if ( *(_BYTE *)(a1 + 33504) )
         {
           sub_608169AC(MEMORY[0xCC6B68]);
@@ -128140,9 +128140,9 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 33476) = 5;
       *(_DWORD *)(a1 + 33472) = 5;
       *(_WORD *)(a1 + 33496) = 0;
-      sub_60502548(a1 + 3632);
+      StateMgr_resetAndMaybeChange(a1 + 3632);
       *(_WORD *)(a1 + 4684) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 3672));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3672));
       if ( *(_BYTE *)(a1 + 33504) )
       {
         sub_608169AC(MEMORY[0xCC6B68]);
@@ -128626,7 +128626,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABF0C, 0);
     *(_BYTE *)(a1 + 33497) = 1;
     *(_WORD *)(a1 + 4684) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3672));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3672));
   }
 
 /* ============================================================================
@@ -128715,7 +128715,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABEF4, 0);
     *(_BYTE *)(a1 + 33497) = 1;
-    sub_60502548(a1 + 3632);
+    StateMgr_resetAndMaybeChange(a1 + 3632);
     v4 = *(unsigned __int8 *)(a1 + 33504);
     v3 = (_BYTE *)(a1 + 33504);
     result = v4;
@@ -128751,7 +128751,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 33497) = 0;
     *(_BYTE *)(a1 + 33496) = 0;
     *(_WORD *)(a1 + 4684) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3672));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3672));
   }
 
 /* ============================================================================
@@ -128806,7 +128806,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCABF14, 0);
     *(_BYTE *)(a1 + 33497) = 1;
-    sub_60502548(a1 + 3632);
+    StateMgr_resetAndMaybeChange(a1 + 3632);
     v4 = *(unsigned __int8 *)(a1 + 33504);
     v3 = (_BYTE *)(a1 + 33504);
     result = v4;
@@ -128842,7 +128842,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 33497) = 0;
     *(_BYTE *)(a1 + 33496) = 0;
     *(_WORD *)(a1 + 4684) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3672));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3672));
   }
 
 /* ============================================================================
@@ -128959,11 +128959,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605477B8(a1 + 5712);
     sub_6050A308(a1 + 24204);
     *(_DWORD *)(a1 + 31420) = 0;
-    sub_6045BF30(a1 + 31448);
-    sub_6045BF30(a1 + 31852);
-    sub_6045BF30(a1 + 32256);
-    sub_6045BF30(a1 + 32660);
-    sub_6045BF30(a1 + 33064);
+    ctor_installTwoVtables(a1 + 31448);
+    ctor_installTwoVtables(a1 + 31852);
+    ctor_installTwoVtables(a1 + 32256);
+    ctor_installTwoVtables(a1 + 32660);
+    ctor_installTwoVtables(a1 + 33064);
     *(_DWORD *)(a1 + 33488) = 0;
     *(_DWORD *)(a1 + 33484) = 0;
     *(_DWORD *)(a1 + 33480) = 0;
@@ -129044,11 +129044,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(List_getNthNode(a1 + 3684, 2) - *(_DWORD *)(a1 + 3696) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_60545310(a1);
     v2 = MEMORY[0xCC6D78];
-    sub_6045BF58(a1 + 31448, 0);
-    sub_6045BF58(a1 + 31852, 1);
-    sub_6045BF58(a1 + 32256, 2);
-    sub_6045BF58(a1 + 32660, 3);
-    sub_6045BF58(a1 + 33064, 4);
+    Registry_iterateAndRegister(a1 + 31448, 0);
+    Registry_iterateAndRegister(a1 + 31852, 1);
+    Registry_iterateAndRegister(a1 + 32256, 2);
+    Registry_iterateAndRegister(a1 + 32660, 3);
+    Registry_iterateAndRegister(a1 + 33064, 4);
     if ( (*(_BYTE *)(v2 + 44) & 8) != 0 )
       *(_BYTE *)(a1 + 33496) = 1;
     if ( (*(_BYTE *)(v2 + 521) & 1) != 0 )
@@ -129069,7 +129069,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v7; // [sp+14h] [bp-4h]
   
     v2 = a1 + 11;
-    sub_604734E4(a1 + 11, 0);
+    Disposer_allocateChildren(a1 + 11, 0);
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "SelectMenu.bflyt";
@@ -129154,7 +129154,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6050229C(a1 + 3632);
       sub_60548D68(a1 + 5712);
       sub_6050A8A4(a1 + 24204);
-      return sub_60473B58(a1 + 44, 14, 0);
+      return Table_getEntryById(a1 + 44, 14, 0);
     }
     return result;
   }
@@ -130329,7 +130329,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = *(void (**)(void))(**(_DWORD **)v7 + 104);
     }
     v6();
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
     sub_6045B330(MEMORY[0xC9CFB8], a1[4109]);
     ArrayOf5_lookupByIndex(v2, 2u, (_DWORD *)0xCAC410, 0);
     result = ArrayOf20_getEntryPtr((int)v2, 2u);
@@ -130475,8 +130475,8 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605471D8(int a1)
   {
     *(_WORD *)(a1 + 4752) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3740));
-    return sub_60502548(a1 + 3700);
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3740));
+    return StateMgr_resetAndMaybeChange(a1 + 3700);
   }
 
 /* ============================================================================
@@ -130540,7 +130540,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int sub_605472EC()
   {
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
   }
 
 /* ============================================================================
@@ -130583,7 +130583,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int sub_605473C0()
   {
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
   }
 
 /* ============================================================================
@@ -130873,11 +130873,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 16440) = 0;
     *(_DWORD *)(a1 + 16436) = 0;
     *(_DWORD *)(a1 + 16432) = 0;
-    sub_6045BF30(a1 + 16444);
-    sub_6045BF30(a1 + 16848);
-    sub_6045BF30(a1 + 17252);
-    sub_6045BF30(a1 + 17656);
-    sub_6045BF30(a1 + 18060);
+    ctor_installTwoVtables(a1 + 16444);
+    ctor_installTwoVtables(a1 + 16848);
+    ctor_installTwoVtables(a1 + 17252);
+    ctor_installTwoVtables(a1 + 17656);
+    ctor_installTwoVtables(a1 + 18060);
     *(_DWORD *)(a1 + 18464) = 0;
     sub_6090E38C(a1 + 18468);
     *(_DWORD *)(a1 + 3668) = 0;
@@ -130970,11 +130970,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60548168(a1);
     Pa_Index_00_ref(a1);
     sub_60548530(a1);
-    sub_6045BF58(a1 + 16444, 0);
-    sub_6045BF58(a1 + 16848, 1);
-    sub_6045BF58(a1 + 17252, 2);
-    sub_6045BF58(a1 + 17656, 3);
-    return sub_6045BF58(a1 + 18060, 4);
+    Registry_iterateAndRegister(a1 + 16444, 0);
+    Registry_iterateAndRegister(a1 + 16848, 1);
+    Registry_iterateAndRegister(a1 + 17252, 2);
+    Registry_iterateAndRegister(a1 + 17656, 3);
+    return Registry_iterateAndRegister(a1 + 18060, 4);
   }
 
 /* ============================================================================
@@ -130998,7 +130998,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAC6A0);
     }
     v3 = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     v6[1] = 12321336;
     v6[2] = (int)"Common";
     sub_60475C8C(a1 + 40);
@@ -131133,7 +131133,7 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC6B4);
     }
-    sub_604734E4((_DWORD *)(a1 + 5812), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 5812), 0);
     v5[0] = 12321336;
     v5[1] = "Pa_Index_00";
     sub_60476388((_DWORD *)(a1 + 5812), a1 + 40, v5);
@@ -131177,7 +131177,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xBC0240](v18, &v15);
     v17 = 0;
     v3 = a1 + 9352;
-    sub_604734E4((_DWORD *)(a1 + 9352), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 9352), 0);
     v4 = v17;
     v5 = Pa_ArrowBtnR_00_Pa_ArrowBtnL_00_ref(v17);
     v15 = 12321336;
@@ -131194,7 +131194,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = 1;
     v9(v3 + 3540 * v8, v18, &v14);
     v17 = 1;
-    sub_604734E4((_DWORD *)(a1 + 12892), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 12892), 0);
     v10 = v17;
     v11 = Pa_ArrowBtnR_00_Pa_ArrowBtnL_00_ref(v17);
     v15 = 12321336;
@@ -131396,7 +131396,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 3700);
-      sub_60473B58(a1 + 40, 14, 0);
+      Table_getEntryById(a1 + 40, 14, 0);
       v3 = *(float **)(a1 + 3668);
       v4 = *(_DWORD *)(a1 + 56);
       v5 = v3[15];
@@ -131630,9 +131630,9 @@ static inline unsigned int uxtb16(unsigned int x)
     switch ( result )
     {
       case 0:
-        sub_60502548(a1 + 3700);
+        StateMgr_resetAndMaybeChange(a1 + 3700);
         *(_WORD *)(a1 + 4752) = 0;
-        sub_6047EABC((_DWORD *)(a1 + 3740));
+        IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3740));
         *(_BYTE *)(a1 + 4743) = 0;
         *(_BYTE *)(a1 + 4740) = 1;
         *(_BYTE *)(a1 + 4744) = 1;
@@ -132197,7 +132197,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ShadowClear.bflyt";
@@ -132269,7 +132269,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -132594,7 +132594,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v7; // [sp+Ch] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 44);
-    sub_604734E4((_DWORD *)(a1 + 44), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 44), 0);
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "ShadowDirectArrow.bflyt";
@@ -132681,7 +132681,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054AA2C(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 28));
-    return sub_60473B58((_DWORD *)(a1 + 44), 0xEu, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 44), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -133168,7 +133168,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ShadowFail.bflyt";
@@ -133240,7 +133240,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -133525,7 +133525,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ShadowStartMessage.bflyt";
@@ -133597,7 +133597,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -133784,7 +133784,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     MessageQueue_postType3(&v13, v9, 0);
     SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 10);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
   }
 
 /* ============================================================================
@@ -133939,7 +133939,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall SE_SYS_DIALOGUE_OUT_ref_2(int a1)
   {
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCACA2C, 0);
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_OUT", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_OUT", 0);
   }
 
 /* ============================================================================
@@ -134004,7 +134004,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3644) = 0;
     *(_BYTE *)(a1 + 3688) = 0;
     *(_BYTE *)(a1 + 3689) = 0;
-    sub_6045BF30(a1 + 3692);
+    ctor_installTwoVtables(a1 + 3692);
     *(_WORD *)(a1 + 4104) = 0;
     *(_DWORD *)(a1 + 4100) = 0;
     *(_DWORD *)(a1 + 4096) = 0;
@@ -134069,7 +134069,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v4 = 3;
     sub_60475334(a1 + 40, a1 + 3660, &dword_60CACB70, &v4);
-    sub_6045BF58(a1 + 3692, 0);
+    Registry_iterateAndRegister(a1 + 3692, 0);
     return Pa_KeyAssign_02_ref_2(a1);
   }
 
@@ -134084,7 +134084,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"TalkWindow.bflyt";
@@ -134285,7 +134285,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6050A8A4(*(_DWORD *)(a1 + 3672));
       sub_6050A8A4(*(_DWORD *)(a1 + 3676));
       sub_6050A8A4(*(_DWORD *)(a1 + 3680));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -134512,7 +134512,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 4);
-    sub_604734E4((_DWORD *)(a1 + 4), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
     sub_60475C8C((int)v2);
     v4[0] = 12321336;
     v4[1] = "Skip.bflyt";
@@ -134529,7 +134529,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054D170(int a1)
   {
-    return sub_60473B58((_DWORD *)(a1 + 4), 0xEu, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 4), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -135291,7 +135291,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = a1 + 10;
-    sub_604734E4(a1 + 10, 0);
+    Disposer_allocateChildren(a1 + 10, 0);
     sub_60475C8C((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"PointGet.bflyt";
@@ -135387,7 +135387,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     StateMgr::execute((_DWORD *)(a1 + 24));
     sub_6054E8A8(a1);
-    return sub_60473B58((_DWORD *)(a1 + 40), 0xEu, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 40), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -135611,7 +135611,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_37:
           sub_6047455C(v6, 0);
           sub_6047459C(v6, 0);
-          return sub_60473B58(v6, 14, 0);
+          return Table_getEntryById(v6, 14, 0);
         default:
           goto LABEL_37;
       }
@@ -136312,7 +136312,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"SpeedUp.bflyt";
@@ -136328,7 +136328,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60476030((int)v2, &dword_60CACF6C, v5);
     ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCACF00, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
-    return sub_60473B58(v2, 14, 0);
+    return Table_getEntryById(v2, 14, 0);
   }
 
 /* ============================================================================
@@ -136420,7 +136420,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -136642,7 +136642,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v7; // [sp+Ch] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 84);
-    sub_604734E4((_DWORD *)(a1 + 84), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 84), 0);
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "StaffCreditScene.bflyt";
@@ -136713,7 +136713,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 42) = 0;
     sub_6047DEC8((_DWORD *)(a1 + 84), *(_DWORD *)(a1 + 4), 1);
     sub_6047DEC8(v2, *(_DWORD *)(a1 + 8), 1);
-    sub_60473B58(v2, 14, 0);
+    Table_getEntryById(v2, 14, 0);
     v3 = *(_DWORD *)(a1 + 12);
     v4 = *(unsigned __int8 *)(v3 + 67);
     v5 = *(float *)(v3 + 92);
@@ -136783,7 +136783,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6047DEC8((_DWORD *)(a1 + 84), *(_DWORD *)(a1 + 4), 1);
       *(_WORD *)(a1 + 42) = v4;
     }
-    return sub_60473B58(a1 + 84, 14, 0);
+    return Table_getEntryById(a1 + 84, 14, 0);
   }
 
 /* ============================================================================
@@ -137168,9 +137168,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_6055127C(int a1)
   {
-    sub_60502548(a1 + 17840);
+    StateMgr_resetAndMaybeChange(a1 + 17840);
     *(_WORD *)(a1 + 18892) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 17880));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 17880));
   }
 
 /* ============================================================================
@@ -137288,9 +137288,9 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 18882);
     if ( !result )
     {
-      sub_60502548(a1 + 17840);
+      StateMgr_resetAndMaybeChange(a1 + 17840);
       *(_WORD *)(a1 + 18892) = 0;
-      sub_6047EABC((_DWORD *)(a1 + 17880));
+      IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 17880));
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13291768);
     }
     return result;
@@ -137387,7 +137387,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*v9 )
       v22 = v21 & 0xFE;
     *(_BYTE *)(v20 + 64) = v22;
-    return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
+    return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_PAGE", 0);
   }
 
 /* ============================================================================
@@ -137548,8 +137548,8 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60551A08(int a1)
   {
     *(_WORD *)(a1 + 18892) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 17880));
-    return sub_60502548(a1 + 17840);
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 17880));
+    return StateMgr_resetAndMaybeChange(a1 + 17840);
   }
 
 /* ============================================================================
@@ -137665,7 +137665,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 17808) = 0;
     SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 17840));
     sub_6050A308(a1 + 19932);
-    sub_6045BF30(a1 + 27148);
+    ctor_installTwoVtables(a1 + 27148);
     *(_DWORD *)(a1 + 27552) = 0;
     *(_DWORD *)(a1 + 27556) = 0;
     sub_6055423C(a1 + 27560);
@@ -137914,7 +137914,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = 12321336;
     v6 = "G_ArrowBtnR_00";
     *(_DWORD *)(a1 + 70256) = sub_604746E4(a1 + 44, (_DWORD *)0xCAD020, &v5);
-    return sub_6045BF58(a1 + 27148, 0);
+    return Registry_iterateAndRegister(a1 + 27148, 0);
   }
 
 /* ============================================================================
@@ -137930,7 +137930,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v7; // [sp+14h] [bp-4h]
   
     v2 = a1 + 11;
-    sub_604734E4(a1 + 11, 0);
+    Disposer_allocateChildren(a1 + 11, 0);
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "StarCoinList.bflyt";
@@ -137985,13 +137985,13 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD1A4);
     }
-    sub_604734E4((_DWORD *)(a1 + 3652), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 3652), 0);
     sub_60476388((_DWORD *)(a1 + 3652), a1 + 44, &dword_60CAD258);
-    sub_604734E4((_DWORD *)(a1 + 7192), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 7192), 0);
     sub_60476388((_DWORD *)(a1 + 7192), a1 + 44, &dword_60CAD260);
-    sub_604734E4((_DWORD *)(a1 + 10732), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 10732), 0);
     sub_60476388((_DWORD *)(a1 + 10732), a1 + 44, &dword_60CAD268);
-    sub_604734E4((_DWORD *)(a1 + 14272), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 14272), 0);
     sub_60476388((_DWORD *)(a1 + 14272), a1 + 44, &dword_60CAD270);
     if ( ((unsigned int)&unk_60CAD1A8 & ~(1616194304 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAD1A8) )
     {
@@ -138121,7 +138121,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 17840);
       sub_6050A8A4(a1 + 19932);
-      sub_60473B58(a1 + 44, 14, 0);
+      Table_getEntryById(a1 + 44, 14, 0);
       if ( *(_DWORD *)(a1 + 70220) )
         sub_60555088();
       if ( *(_DWORD *)(a1 + 70224) )
@@ -138420,7 +138420,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3556) + 104))(**(_DWORD **)(a1 + 3556));
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3652), 0, (_DWORD *)0xCAD000, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 7164) + 104))(**(_DWORD **)(a1 + 7164));
-    sub_60473B58(a1 + 44, 14, 0);
+    Table_getEntryById(a1 + 44, 14, 0);
     return StateMgr::changeState((_DWORD *)(a1 + 24), 13291672);
   }
 
@@ -139119,7 +139119,7 @@ static inline unsigned int uxtb16(unsigned int x)
     char v2; // r12
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
-    sub_604734E4(a1, 0);
+    Disposer_allocateChildren(a1, 0);
     sub_60475C8C((int)a1);
     v4[0] = 12321336;
     v4[1] = (int)"StarCoinListWin.bflyt";
@@ -139308,7 +139308,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = *(_DWORD *)(v3 + 12);
       if ( v5 )
         *(_BYTE *)(v3 + 65) = *(_BYTE *)(v5 + 66);
-      sub_60473B58(a1, 14, 0);
+      Table_getEntryById(a1, 14, 0);
       do
       {
         v6 = a1 + 88 * v4;
@@ -140182,7 +140182,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3648) = 1;
     *(_BYTE *)(a1 + 3649) = 1;
     *(_BYTE *)(a1 + 11586) = 1;
-    return sub_60502548(a1 + 5820);
+    return StateMgr_resetAndMaybeChange(a1 + 5820);
   }
 
 /* ============================================================================
@@ -140211,7 +140211,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 18826) = 0;
     *(_BYTE *)(a1 + 18827) = 1;
     *(_WORD *)(a1 + 6872) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 5860));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 5860));
   }
 
 /* ============================================================================
@@ -140230,9 +140230,9 @@ static inline unsigned int uxtb16(unsigned int x)
     bool v9; // zf
     int result; // r0
   
-    sub_60502548(a1 + 5820);
+    StateMgr_resetAndMaybeChange(a1 + 5820);
     *(_WORD *)(a1 + 6872) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 5860));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 5860));
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCAD450, 0);
     sub_604741D8((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCAD460, 0);
     *(_BYTE *)(a1 + 3648) = 1;
@@ -140357,9 +140357,9 @@ static inline unsigned int uxtb16(unsigned int x)
         result = v3 - 1028;
         if ( (v5 & 0x4000) != 0 )
         {
-          sub_60502548(result);
+          StateMgr_resetAndMaybeChange(result);
           *(_WORD *)(a1 + 6872) = 0;
-          sub_6047EABC((_DWORD *)(a1 + 5860));
+          IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 5860));
           *(_DWORD *)(a1 + 40) = 13292936;
           StateMgr::changeState((_DWORD *)(a1 + 24), 13292776);
           return sub_60478680((int)"SE_SYS_BACK", 15);
@@ -140479,9 +140479,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v9 && !*(_DWORD *)(v2 + 2540) )
   LABEL_29:
       *(_BYTE *)(v2 + 2694) = 0;
-    sub_60502548(a1 + 5820);
+    StateMgr_resetAndMaybeChange(a1 + 5820);
     *(_WORD *)(a1 + 6872) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 5860));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 5860));
     *(_BYTE *)(*(_DWORD *)(a1 + 3636) + 64) &= ~1u;
     result = *(_DWORD *)(a1 + 3640);
     *(_BYTE *)(result + 64) &= ~1u;
@@ -140675,11 +140675,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3604) = 0;
     *(_BYTE *)(a1 + 3608) = 0;
     *(_DWORD *)(a1 + 3612) = 0;
-    sub_6045BF30(a1 + 3652);
-    sub_6045BF30(a1 + 4056);
-    sub_6045BF30(a1 + 4460);
-    sub_6045BF30(a1 + 4864);
-    sub_6045BF30(a1 + 5268);
+    ctor_installTwoVtables(a1 + 3652);
+    ctor_installTwoVtables(a1 + 4056);
+    ctor_installTwoVtables(a1 + 4460);
+    ctor_installTwoVtables(a1 + 4864);
+    ctor_installTwoVtables(a1 + 5268);
     SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 5820));
     sub_60557FE4(a1 + 7900);
     *(_DWORD *)(a1 + 11592) = 0;
@@ -140769,7 +140769,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v12; // [sp+14h] [bp-4h]
   
     v2 = a1 + 11;
-    sub_604734E4(a1 + 11, 0);
+    Disposer_allocateChildren(a1 + 11, 0);
     sub_60475C8C((int)v2);
     v11 = 12321336;
     v12 = "TeamSelect.bflyt";
@@ -140818,11 +140818,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(v4, 11550900, "SE_SYS_BACK");
     sub_605029FC(v4, 11550904, "SE_SYS_BTN_GAME_START");
     sub_60558180(v7 + 504, 1);
-    sub_6045BF58((int)(v7 - 558), 0);
-    sub_6045BF58((int)(v7 - 457), 1);
-    sub_6045BF58((int)(v7 - 356), 2);
-    sub_6045BF58((int)(v7 - 255), 3);
-    return sub_6045BF58((int)(v7 - 154), 4);
+    Registry_iterateAndRegister((int)(v7 - 558), 0);
+    Registry_iterateAndRegister((int)(v7 - 457), 1);
+    Registry_iterateAndRegister((int)(v7 - 356), 2);
+    Registry_iterateAndRegister((int)(v7 - 255), 3);
+    return Registry_iterateAndRegister((int)(v7 - 154), 4);
   }
 
 /* ============================================================================
@@ -140897,7 +140897,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr::execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 5820);
       sub_6050A8A4(a1 + 11596);
-      sub_60473B58(a1 + 44, 5, 0);
+      Table_getEntryById(a1 + 44, 5, 0);
       sub_60558700(a1 + 7900);
       if ( *(_BYTE *)(a1 + 3648) && (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51) & 1) != 0 )
         *(_BYTE *)(a1 + 3648) = 0;
@@ -141660,7 +141660,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 40);
     *(_BYTE *)(a1 + 3689) = a2;
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"TeamSelectGround.bflyt";
@@ -141838,7 +141838,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v3 )
       v9 = 400.0;
     v11[11] = v9;
-    sub_60473B58(v4, 6, v11);
+    Table_getEntryById(v4, 6, v11);
     result = (unsigned __int8)a1[3685];
     if ( a1[3685] )
     {
@@ -141868,7 +141868,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _WORD v5[52]; // [sp+0h] [bp-68h] BYREF
   
-    sub_6090B350(v5);
+    RenderParams_defaultInit(v5);
     v5[0] = 1;
     return sub_60473B88((_DWORD *)(a1 + 40), a2, (int)v5);
   }
@@ -142455,7 +142455,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4[2]; // [sp+8h] [bp-8h] BYREF
   
     v1 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"TheEnd.bflyt";
@@ -142534,7 +142534,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -142811,7 +142811,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 64);
-    sub_604734E4((_DWORD *)(a1 + 64), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 64), 0);
     sub_60475C8C((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"TimeLimit.bflyt";
@@ -142891,7 +142891,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60559CF0(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 48));
-    return sub_60473B58((_DWORD *)(a1 + 64), 0xEu, 0);
+    return Table_getEntryById((_DWORD *)(a1 + 64), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -143240,7 +143240,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6[2]; // [sp+8h] [bp-8h] BYREF
   
     v2 = (_DWORD *)(a1 + 40);
-    sub_604734E4((_DWORD *)(a1 + 40), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 40), 0);
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"TimeUp.bflyt";
@@ -143339,7 +143339,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr::execute((_DWORD *)(a1 + 24));
       result = *(unsigned __int8 *)(a1 + 3701);
       if ( *(_BYTE *)(a1 + 3701) )
-        return sub_60473B58(a1 + 40, 14, 0);
+        return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -143708,7 +143708,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3596) = 11778612;
     *(_DWORD *)(a1 + 3600) = 0;
     *(_BYTE *)(a1 + 3604) = 0;
-    sub_6045BF30(a1 + 3608);
+    ctor_installTwoVtables(a1 + 3608);
     *(_BYTE *)(a1 + 4044) = 0;
     *(_DWORD *)(a1 + 4036) = 0;
     *(_DWORD *)(a1 + 4040) = 0;
@@ -143761,7 +143761,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v10; // [sp+Ch] [bp-4h]
   
     v2 = a1 + 10;
-    sub_604734E4(a1 + 10, 0);
+    Disposer_allocateChildren(a1 + 10, 0);
     v9 = 12321336;
     v10 = "Title";
     sub_60475C8C((int)v2);
@@ -143834,7 +143834,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = "Title_Ver_00";
     MessageQueue_postType3(&v9, a1[1005], 3);
     *(_BYTE *)(a1[1005] + 64) &= ~1u;
-    return sub_6045BF58((int)(a1 + 902), 0);
+    return Registry_iterateAndRegister((int)(a1 + 902), 0);
   }
 
 /* ============================================================================
@@ -143942,7 +143942,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       StateMgr::execute((_DWORD *)(a1 + 24));
-      return sub_60473B58(a1 + 40, 14, 0);
+      return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
   }
@@ -144118,9 +144118,9 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    sub_60502548(a1 + 3608);
+    StateMgr_resetAndMaybeChange(a1 + 3608);
     *(_WORD *)(a1 + 4660) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3648));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3648));
     *(_DWORD *)(a1 + 4636) = 2;
     *(_BYTE *)(a1 + 4651) = 0;
     *(_BYTE *)(a1 + 4648) = 1;
@@ -144176,7 +144176,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_DWORD *)(a1 + 13312) == 1 )
       {
         *(_BYTE *)(a1 + 13308) = 0;
-        sub_60502548(a1 + 3608);
+        StateMgr_resetAndMaybeChange(a1 + 3608);
         *(_BYTE *)(MEMORY[0xC99DEC] + 36) = 1;
         v3 = 13294580;
       }
@@ -144200,7 +144200,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r0
     _DWORD v6[2]; // [sp+0h] [bp-8h] BYREF
   
-    sub_60502548(a1 + 3608);
+    StateMgr_resetAndMaybeChange(a1 + 3608);
     v2 = *(_DWORD *)(a1 + 13312);
     v3 = (_DWORD *)(a1 + 36);
     if ( v2 )
@@ -144235,7 +144235,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 13308) = 0;
     *(_BYTE *)(a1 + 13309) = 0;
     *(_WORD *)(a1 + 4660) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3648));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3648));
   }
 
 /* ============================================================================
@@ -144265,7 +144265,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3600) = 0;
     *(_DWORD *)(a1 + 3604) = 0;
     SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 3608));
-    sub_6045BF30(a1 + 5688);
+    ctor_installTwoVtables(a1 + 5688);
     sub_6050A308(a1 + 6092);
     *(_BYTE *)(a1 + 13308) = 0;
     *(_BYTE *)(a1 + 13309) = 0;
@@ -144289,7 +144289,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r5
   
     v2 = a1 + 5688;
-    sub_6045BF58(a1 + 5688, 0);
+    Registry_iterateAndRegister(a1 + 5688, 0);
     sub_609094C4(v2, 192, MEMORY[0xB023FC], MEMORY[0xB023FD]);
     sub_6055BA48(a1);
     return sub_6055BBAC(a1);
@@ -144311,7 +144311,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v10; // [sp+1Ch] [bp-4h]
   
     v2 = a1 + 9;
-    sub_604734E4(a1 + 9, 0);
+    Disposer_allocateChildren(a1 + 9, 0);
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "VSModeSelect.bflyt";
@@ -144418,7 +144418,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr::execute((_DWORD *)(a1 + 20));
       sub_6050229C(a1 + 3608);
       sub_6050A8A4(a1 + 6092);
-      return sub_60473B58(a1 + 36, 14, 0);
+      return Table_getEntryById(a1 + 36, 14, 0);
     }
     return result;
   }
@@ -144453,7 +144453,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5[1] = v3;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, v5, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3548) + 104))(**(_DWORD **)(a1 + 3548));
-    sub_60473B58(a1 + 36, 14, 0);
+    Table_getEntryById(a1 + 36, 14, 0);
     return StateMgr::changeState((_DWORD *)(a1 + 20), 13294612);
   }
 
@@ -144474,14 +144474,14 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       case 2:
         v2 = 1;
-        sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
         *(_DWORD *)(a1 + 13312) = 2;
   LABEL_8:
         StateMgr::changeState((_DWORD *)(a1 + 20), 13294676);
         return v2;
       case 1:
         v2 = 1;
-        sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
         *(_DWORD *)(a1 + 13312) = 1;
         goto LABEL_8;
       case 0:
@@ -144553,7 +144553,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = *(_DWORD *)(a1 + 4636);
       if ( v9 == 2 )
       {
-        sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
         v10 = 2;
       }
       else
@@ -144565,7 +144565,7 @@ static inline unsigned int uxtb16(unsigned int x)
           goto LABEL_16;
         }
         v10 = 1;
-        sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
+        SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
       }
       *(_DWORD *)(a1 + 13312) = v10;
       goto LABEL_15;
@@ -145031,9 +145031,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055CB94(int a1)
   {
-    sub_60502548(a1 + 3692);
+    StateMgr_resetAndMaybeChange(a1 + 3692);
     *(_WORD *)(a1 + 4744) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3732));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3732));
     *(_BYTE *)(a1 + 13748) = 0;
     *(_BYTE *)(a1 + 13751) = 0;
     return 13751;
@@ -145703,9 +145703,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055DA58(int a1)
   {
-    sub_60502548(a1 + 3692);
+    StateMgr_resetAndMaybeChange(a1 + 3692);
     *(_WORD *)(a1 + 4744) = 0;
-    sub_6047EABC((_DWORD *)(a1 + 3732));
+    IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3732));
     *(_DWORD *)(a1 + 13744) = 10;
     return 13744;
   }
@@ -145755,7 +145755,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6055DB30(int a1)
   {
     *(_WORD *)(a1 + 4744) = 0;
-    return sub_6047EABC((_DWORD *)(a1 + 3732));
+    return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3732));
   }
 
 /* ============================================================================
@@ -145850,7 +145850,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3684) = 0;
     *(_BYTE *)(a1 + 3688) = 0;
     SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 3692));
-    sub_6045BF30(a1 + 5772);
+    ctor_installTwoVtables(a1 + 5772);
     sub_6050A308(a1 + 6176);
     sub_6090E38C(a1 + 13712);
     *(_BYTE *)(a1 + 13754) = 0;
@@ -145950,7 +145950,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6055E970(a1);
     sub_6055ECDC(a1);
     v4 = a1 + 5772;
-    sub_6045BF58(v4, 0);
+    Registry_iterateAndRegister(v4, 0);
     return sub_609094C4(v4, 240, MEMORY[0xB023FC], MEMORY[0xB023FD]);
   }
 
@@ -145967,7 +145967,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v7; // [sp+14h] [bp-4h]
   
     v2 = a1 + 11;
-    sub_604734E4(a1 + 11, 0);
+    Disposer_allocateChildren(a1 + 11, 0);
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "WarpSelectWindow.bflyt";
@@ -146228,7 +146228,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = 0;
     v14 = 0;
     v4 = a1 + 13756;
-    sub_604734E4((_DWORD *)(a1 + 13756), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 13756), 0);
     v12 = 12321336;
     v13 = Pa_ArrowBtnR_00_Pa_ArrowBtnL_00_ref_560654(0);
     sub_60476388((_DWORD *)(a1 + 13756), a1 + 44, &v12);
@@ -146239,7 +146239,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = 1;
     v6(v4 + 3540 * v5, &dword_60CAE074, &v11);
     v14 = 1;
-    sub_604734E4((_DWORD *)(a1 + 17296), 0);
+    Disposer_allocateChildren((_DWORD *)(a1 + 17296), 0);
     v7 = v14;
     v8 = Pa_ArrowBtnR_00_Pa_ArrowBtnL_00_ref_560654(v14);
     v12 = 12321336;
@@ -146330,7 +146330,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // t1
   
     v2 = a1 + 44;
-    sub_60473B58(a1 + 44, 14, 0);
+    Table_getEntryById(a1 + 44, 14, 0);
     v4 = a1 + 13749;
     result = (unsigned __int8)a1[13749];
     if ( a1[13749] )
@@ -147631,7 +147631,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = *(_DWORD *)(a1 + 8);
       if ( v6 >= 9 )
         v6 = 0;
-      return sub_60473B58(a1 + 3548 * v6 + 16, 14, 0);
+      return Table_getEntryById(a1 + 3548 * v6 + 16, 14, 0);
     }
     return result;
   }
@@ -147657,7 +147657,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( !v5 )
     {
-      v6 = sub_6090B350(v8);
+      v6 = RenderParams_defaultInit(v8);
       v8[88] = 8;
       sub_6090B4B0(v6, a2[10]);
       v7 = *(_DWORD *)(a1 + 68);
@@ -147695,7 +147695,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( result == 4 )
       {
-        v6 = sub_6090B350(v11);
+        v6 = RenderParams_defaultInit(v11);
         v12 = 8;
         sub_6090B4B0(v6, a2[10]);
         v7 = *(_DWORD *)(a1 + 32024);
@@ -147705,7 +147705,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else
       {
-        v9 = sub_6090B350(v11);
+        v9 = RenderParams_defaultInit(v11);
         v12 = 8;
         sub_6090B4B0(v9, a2[10]);
         v10 = *(_DWORD *)(a1 + 68);
@@ -148043,7 +148043,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = a1 + 4;
     for ( i = 0; i != 12; i += 2 )
     {
-      sub_604734E4(v4, 0);
+      Disposer_allocateChildren(v4, 0);
       sub_60475C8C((int)v4);
       if ( message_ref(v4, &dword_60CAE2A0[i], 0, 0, 0) == 1 )
       {
@@ -148063,7 +148063,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 += 887;
     }
     v8 = a1 + 5326;
-    sub_604734E4(a1 + 5326, 0);
+    Disposer_allocateChildren(a1 + 5326, 0);
     sub_60475C8C((int)(a1 + 5326));
     if ( message_ref(a1 + 5326, &dword_60CAE2D0, 0, 0, 0) )
     {
@@ -148080,7 +148080,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v15 = 2;
       v10(v8, &dword_60CAE230, &v15);
     }
-    sub_604734E4(a1 + 6213, 0);
+    Disposer_allocateChildren(a1 + 6213, 0);
     sub_60475C8C((int)(a1 + 6213));
     result = message_ref(a1 + 6213, &dword_60CAE2D8, 0, 0, 0);
     if ( result == 1 )
@@ -154507,7 +154507,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = a1[5];
     v12 = 12321336;
     v13 = dword_60C02A78[(v9 >> 8) & 1];
-    sub_60446088(v7, v8, &v12);
+    AnimationCtrl_setupFromResource(v7, v8, &v12);
     AnimationCtrl_setRepeat(a1[1848] + 4, 1);
     v10 = a1[1848];
     *(_DWORD *)(v10 + 20) = 0;
@@ -156207,7 +156207,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v3 = 1;
         if ( !*(_DWORD *)(v2 + 7464) )
-          sub_602A3EFC((_DWORD *)(v2 + 7440), MEMORY[0xAFE41C]);
+          Scale_init((_DWORD *)(v2 + 7440), MEMORY[0xAFE41C]);
       }
     }
     return v3;
@@ -156885,7 +156885,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v3 = 1;
         if ( !*(_DWORD *)(v2 + 7456) )
-          sub_602A3EFC((_DWORD *)(v2 + 7432), MEMORY[0xAFE41C]);
+          Scale_init((_DWORD *)(v2 + 7432), MEMORY[0xAFE41C]);
       }
     }
     return v3;
@@ -162688,7 +162688,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         result = *(_DWORD *)(a1 + 7580);
         if ( !result )
-          return sub_602A3EFC(a1 + 7556, 8);
+          return Scale_init(a1 + 7556, 8);
       }
     }
     return result;
@@ -162861,7 +162861,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         result = *(_DWORD *)(a1 + 7580);
         if ( !result )
-          return sub_602A3EFC(a1 + 7556, 8);
+          return Scale_init(a1 + 7556, 8);
       }
     }
     return result;
@@ -163027,7 +163027,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = LoadResource(MEMORY[0xC9CA88], &v19);
     v17 = 12321336;
     v18 = "float";
-    sub_60446088(v8, v9, &v17);
+    AnimationCtrl_setupFromResource(v8, v9, &v17);
     AnimationCtrl_setRepeat(a1[2] + 4, 1);
     *(_DWORD *)(a1[2] + 24) = 1065353216;
     v19 = 12321336;
@@ -175590,7 +175590,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = LoadResource(MEMORY[0xC9CA88], &v13);
     v11 = 12321336;
     v12 = "shell_fish";
-    sub_60446088(v8, v9, &v11);
+    AnimationCtrl_setupFromResource(v8, v9, &v11);
     AnimationCtrl_setRepeat(a1[1] + 4, 1);
     result = a1[1];
     *(_DWORD *)(result + 24) = 1065353216;
@@ -176329,7 +176329,7 @@ static inline unsigned int uxtb16(unsigned int x)
               {
                 *(_BYTE *)result = 1;
                 if ( *(_DWORD *)(v3 + 1320) != 5 && !sub_6075EE0C(v3) )
-                  sub_6075EDF8(v3);
+                  isMode5(v3);
                 return (*(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(_DWORD *)v3 + 748))(v3, 1, 0, 0);
               }
             }
@@ -177588,7 +177588,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
   LABEL_31:
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13301896);
-      return sub_602A3EFC(a1 + 8260, 24);
+      return Scale_init(a1 + 8260, 24);
     }
     v9 = StateMgr::getCurrentState(v2);
     v10 = (*(int (__fastcall **)(int))(*(_DWORD *)v9 + 8))(v9);
@@ -177656,7 +177656,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(float *)(**(_DWORD **)(*(_DWORD *)(a1 + 6104) + 12) + 20) < 50.0 )
         goto LABEL_31;
     }
-    return sub_602A3EFC(a1 + 8260, 24);
+    return Scale_init(a1 + 8260, 24);
   }
 
 /* ============================================================================
@@ -180642,7 +180642,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v27, Resource, 0, 0);
     *((_DWORD *)a1 + 1530) = v26;
     v28 = **(float ***)(v26 + 28);
-    sub_60446088((int)v28, Resource, &dword_60CAFB50);
+    AnimationCtrl_setupFromResource((int)v28, Resource, &dword_60CAFB50);
     v29 = 0.0;
     if ( ((_DWORD)a1[20] & 0xFFFFFFFE) == 2 )
       v29 = 1.0;
@@ -187555,7 +187555,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = LoadResource(MEMORY[0xC9CA88], &v15);
     v13 = 12321336;
     v14 = "obj_envcloud";
-    sub_60446088(v6, v7, &v13);
+    AnimationCtrl_setupFromResource(v6, v7, &v13);
     AnimationCtrl_setRepeat((int)(a1[1] + 1), 1);
     a1[1][6] = 1065353216;
     v8 = (void (__fastcall ***)(_DWORD, _DWORD, int, int *, int))(*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)**a1 + 132))(
@@ -187872,7 +187872,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = LoadResource(MEMORY[0xC9CA88], &v34);
     v32 = 12321336;
     v33 = "obj_magma_under";
-    sub_60446088(v13, v14, &v32);
+    AnimationCtrl_setupFromResource(v13, v14, &v32);
     AnimationCtrl_setRepeat(a1[1527] + 4, 1);
     v6[1][6] = 1065353216;
     v34 = 12321336;
@@ -187898,7 +187898,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v22 = LoadResource(MEMORY[0xC9CA88], &v34);
     v32 = 12321336;
     v33 = "obj_magmaheat";
-    sub_60446088(v21, v22, &v32);
+    AnimationCtrl_setupFromResource(v21, v22, &v32);
     AnimationCtrl_setRepeat((int)(v6[16556] + 1), 1);
     v6[16556][6] = 1065353216;
     if ( (*((_BYTE *)v6 - 6083) & 1) != 0 )
@@ -187921,7 +187921,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v30 = LoadResource(MEMORY[0xC9CA88], &v34);
       v32 = 12321336;
       v33 = "yogan_line";
-      sub_60446088(v29, v30, &v32);
+      AnimationCtrl_setupFromResource(v29, v30, &v32);
       AnimationCtrl_setRepeat(**(_DWORD **)(v31[18083] + 28) + 4, 1);
       *(_DWORD *)(**(_DWORD **)(v31[18083] + 28) + 24) = 1065353216;
       result = *(_DWORD *)v31[18083];
@@ -188518,7 +188518,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = LoadResource(MEMORY[0xC9CA88], &v15);
     v13 = 12321336;
     v14 = "obj_envfog";
-    sub_60446088(v6, v7, &v13);
+    AnimationCtrl_setupFromResource(v6, v7, &v13);
     AnimationCtrl_setRepeat((int)(a1[1] + 1), 1);
     a1[1][6] = 1065353216;
     v8 = (void (__fastcall ***)(_DWORD, _DWORD, int, int *, int))(*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)**a1 + 132))(
@@ -188775,7 +188775,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = LoadResource(MEMORY[0xC9CA88], &v23);
     v21 = 12321336;
     v22 = "obj_poisonwater_under";
-    sub_60446088(v8, v9, &v21);
+    AnimationCtrl_setupFromResource(v8, v9, &v21);
     AnimationCtrl_setRepeat((int)(a1[1] + 1), 1);
     a1[1][6] = 1065353216;
     v10 = (void (__fastcall ***)(_DWORD, _DWORD, int, int *, int))(*(int (__fastcall **)(_DWORD, _DWORD))(*(_DWORD *)**a1 + 132))(
@@ -188808,7 +188808,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v19 = LoadResource(MEMORY[0xC9CA88], &v23);
     v21 = 12321336;
     v22 = "obj_poisonwater_fog";
-    sub_60446088(v18, v19, &v21);
+    AnimationCtrl_setupFromResource(v18, v19, &v21);
     AnimationCtrl_setRepeat((int)(a1[16556] + 1), 1);
     result = a1[16556];
     result[6] = 1065353216;
@@ -189293,7 +189293,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = LoadResource(MEMORY[0xC9CA88], &v19);
     v17 = 12321336;
     v18 = "obj_quicksand_under";
-    sub_60446088(v6, v7, &v17);
+    AnimationCtrl_setupFromResource(v6, v7, &v17);
     AnimationCtrl_setRepeat((int)(a1[1] + 1), 1);
     a1[1][6] = 1065353216;
     v8 = (void (__fastcall ***)(_DWORD, _DWORD, int, int *, int))(*(int (__fastcall **)(_DWORD, _DWORD))(*(_DWORD *)**a1 + 132))(
@@ -189606,7 +189606,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6[1] = (_DWORD *)v7;
       v70 = 12321336;
       v71 = "obj_waterhalf_under";
-      sub_60446088(v7, v2, &v70);
+      AnimationCtrl_setupFromResource(v7, v2, &v70);
       AnimationCtrl_setRepeat((int)(v6[1] + 1), 1);
       v6[1][6] = 1065353216;
       v8 = (void (__fastcall ***)(_DWORD, _DWORD))(*(int (__fastcall **)(_DWORD, _DWORD))(*(_DWORD *)**v6 + 132))(**v6, 0);
@@ -189636,7 +189636,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v17 = **(_DWORD **)(v15 + 28);
       v70 = 12321336;
       v71 = "obj_waterhalf_middle";
-      sub_60446088(v17, v2, &v70);
+      AnimationCtrl_setupFromResource(v17, v2, &v70);
       AnimationCtrl_setRepeat(*(_DWORD *)v6[16557][7] + 4, 1);
       *(_DWORD *)(*(_DWORD *)v6[16557][7] + 24) = 1065353216;
       v18 = (void (__fastcall ***)(_DWORD, _DWORD, int, int *, int))(*(int (__fastcall **)(_DWORD, _DWORD))(*(_DWORD *)*v6[16557] + 132))(
@@ -189668,7 +189668,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v27 = **(_DWORD **)(v25 + 28);
       v70 = 12321336;
       v71 = "obj_waterhalf_behind";
-      sub_60446088(v27, v2, &v70);
+      AnimationCtrl_setupFromResource(v27, v2, &v70);
       AnimationCtrl_setRepeat(v27 + 4, 1);
       *(_DWORD *)(v27 + 24) = 1065353216;
       v28 = (void (__fastcall ***)(_DWORD, int, int, int *, int))(*(int (__fastcall **)(_DWORD, _DWORD))(*(_DWORD *)*v6[16556] + 132))(
@@ -189691,7 +189691,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v34 = **(_DWORD **)(v32 + 28);
       v70 = 12321336;
       v71 = "obj_waterhalf_behind_middle";
-      sub_60446088(v34, v2, &v70);
+      AnimationCtrl_setupFromResource(v34, v2, &v70);
       AnimationCtrl_setRepeat(v34 + 4, 1);
       *(_DWORD *)(v34 + 24) = 1065353216;
       v35 = (void (__fastcall ***)(_DWORD, int, int, int *, int))(*(int (__fastcall **)(_DWORD, _DWORD))(*(_DWORD *)*v6[16558] + 132))(
@@ -189722,7 +189722,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v43[1] = (int *)v44;
       v70 = 12321336;
       v71 = "obj_waterfull_caustics";
-      sub_60446088(v44, v39, &v70);
+      AnimationCtrl_setupFromResource(v44, v39, &v70);
       AnimationCtrl_setRepeat((int)(v43[1] + 1), 1);
       v43[1][6] = 1065353216;
       v45 = (void (__fastcall ***)(_DWORD, _DWORD, int, int *, int))(*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)**v43 + 132))(
@@ -191322,7 +191322,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v14 = *v3;
       v15 = **(_DWORD **)(*v5 + 28);
       (*(void (__fastcall **)(_DWORD *, int *))(*a1 + 204))(v20, a1);
-      sub_60446088(v15, v14, v20);
+      AnimationCtrl_setupFromResource(v15, v14, v20);
       *(_DWORD *)(**(_DWORD **)(*v5 + 28) + 24) = 0;
       AnimationCtrl_setRepeat(**(_DWORD **)(*v5 + 28) + 4, 0);
       v16 = (*(int (__fastcall **)(int *))(*a1 + 212))(a1);
@@ -200628,7 +200628,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v12 = LoadResource(MEMORY[0xC9CA88], &v16);
     v14 = 12321336;
     v15 = "up_anim";
-    sub_60446088(v10, v12, &v14);
+    AnimationCtrl_setupFromResource(v10, v12, &v14);
     AnimationCtrl_setRepeat(*v11 + 4, 1);
     result = *v11;
     *(_DWORD *)(*v11 + 24) = 1065353216;
@@ -200883,7 +200883,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = 0;
     if ( v2 && (**(int (__fastcall ***)(int, int))v2)(v2, 13305804) == 1 )
     {
-      sub_602A3EFC((_DWORD *)(v2 + 7140), MEMORY[0xAFE41C]);
+      Scale_init((_DWORD *)(v2 + 7140), MEMORY[0xAFE41C]);
       return 1;
     }
     return v3;
@@ -201662,7 +201662,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = Profile::getResArchiveById(*v3, 0);
     v8 = 12321336;
     v9 = "green_ring";
-    sub_60446088((int)v5, v6, &v8);
+    AnimationCtrl_setupFromResource((int)v5, v6, &v8);
     v5[5] = 0;
     v5[7] |= 2u;
     v5[6] = 1065353216;
@@ -201705,7 +201705,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // [sp+8Ch] [bp-Ch]
     int v11; // [sp+90h] [bp-8h]
   
-    sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_RED_RING", 0);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_RED_RING", 0);
     v10 = 0;
     v11 = -1;
     EffectData_ctor((int)v9);
@@ -209347,7 +209347,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (*(_BYTE *)(result + 1205) & 0x40) != 0 )
         goto LABEL_10;
       sub_6079D4B0(result, a1 + 108);
-      if ( sub_6075EDF8(v3) )
+      if ( isMode5(v3) )
       {
         v5 = 11579352;
       }
@@ -211159,7 +211159,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return result;
     }
     sub_6079D4B0(v4, a2);
-    if ( sub_6075EDF8(v4) )
+    if ( isMode5(v4) )
     {
       result = 11579352;
     }
@@ -214313,7 +214313,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = **(_DWORD **)(*(_DWORD *)v4 + 28);
     v11 = 12321336;
     v12 = v6;
-    sub_60446088(v7, ResArchiveById, &v11);
+    AnimationCtrl_setupFromResource(v7, ResArchiveById, &v11);
     v8 = *(_DWORD **)(*(_DWORD *)v4 + 12);
     v9 = *(_DWORD *)(*(_DWORD *)v4 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v4 + 8) > v9 )
@@ -214443,7 +214443,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = **(_DWORD **)(*(_DWORD *)v4 + 28);
     v13 = 12321336;
     v14 = "swing";
-    sub_60446088(v5, ResArchiveById, &v13);
+    AnimationCtrl_setupFromResource(v5, ResArchiveById, &v13);
     v6 = *(_DWORD *)(*(_DWORD *)v4 + 12);
     v7 = *(_DWORD *)(*(_DWORD *)v4 + 68);
     if ( *(_DWORD *)(*(_DWORD *)v4 + 8) > v7 )
@@ -214621,7 +214621,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v40 = COERCE_FLOAT("middle_flag");
         Model2 = Resource_getModel2(ResArchiveById, (int)&v39, 2, 1, 1, 0, 0, 0, 0);
         v9 = (_DWORD *)operator new(0x48u, 0, 4);
-        v10 = sub_60421830(v9, Model2, 2, 1, 1, 0, 0);
+        v10 = ModelWrapper_ctorWithChild(v9, Model2, 2, 1, 1, 0, 0);
         j_ModelWrapper_setupModel(v10, ResArchiveById, 0, 0);
         v11 = 0.0;
         *(_DWORD *)(a1 + 6100) = v9;
@@ -214636,7 +214636,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v13 = **(_DWORD **)(*(_DWORD *)(a1 + 6100) + 28);
         v39 = 1.7266e-38;
         v40 = COERCE_FLOAT("wait");
-        sub_60446088(v13, ResArchiveById, &v39);
+        AnimationCtrl_setupFromResource(v13, ResArchiveById, &v39);
         StateMgr::changeState((_DWORD *)(a1 + 6084), 13308352);
         v14 = (_DWORD **)(a1 + 6100);
         v15 = *(unsigned __int8 *)(MEMORY[0xC9A684] + 16);
@@ -214893,7 +214893,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a3 )
       v8 = -1;
     v9 = sub_60002B90(v8);
-    sub_60807EF0(MEMORY[0xCC6AF8], "SE_SYS_MID_POINT", v9, 1);
+    SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_MID_POINT", v9, 1);
     v10 = (unsigned __int8)*v7;
     if ( v10 < 6 )
       v5 = (char)v10;
@@ -217268,7 +217268,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v15[1] = v12;
       if ( TileCheck_check(v11, (int)v16, (float *)a3, v15, 15) )
       {
-        sub_602A3EFC((_DWORD *)(v6 + 888), 24);
+        Scale_init((_DWORD *)(v6 + 888), 24);
         sub_6015BD44(a1, a2, a3);
         return 1;
       }
@@ -222021,7 +222021,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
   LABEL_38:
-    if ( sub_6075EDF8(a2) )
+    if ( isMode5(a2) )
     {
       if ( v16 == 1 )
         v19 = 11579412;
@@ -242224,7 +242224,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v22 = 12321336;
     v23 = (const char *)&unk_60AD3107;
-    sub_60446088(v13, v14, &v22);
+    AnimationCtrl_setupFromResource(v13, v14, &v22);
     v15 = *(_DWORD *)(a1 + 6300);
     v16 = *(_DWORD *)(v15 + 24);
     v17 = *(_DWORD **)(v15 + 28);

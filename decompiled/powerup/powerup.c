@@ -1870,15 +1870,15 @@ static inline unsigned int uxtb16(unsigned int x)
         break;
     }
     v14 = operator new(404, a4, 4);
-    *(_DWORD *)(a1 + 1264) = sub_6045BF30(v14);
+    *(_DWORD *)(a1 + 1264) = ctor_installTwoVtables(v14);
     v15 = operator new(404, a4, 4);
-    *(_DWORD *)(a1 + 1268) = sub_6045BF30(v15);
+    *(_DWORD *)(a1 + 1268) = ctor_installTwoVtables(v15);
     v16 = operator new(404, a4, 4);
-    *(_DWORD *)(a1 + 1272) = sub_6045BF30(v16);
+    *(_DWORD *)(a1 + 1272) = ctor_installTwoVtables(v16);
     v17 = operator new(404, a4, 4);
-    *(_DWORD *)(a1 + 1276) = sub_6045BF30(v17);
+    *(_DWORD *)(a1 + 1276) = ctor_installTwoVtables(v17);
     v18 = operator new(404, a4, 4);
-    *(_DWORD *)(a1 + 1280) = sub_6045BF30(v18);
+    *(_DWORD *)(a1 + 1280) = ctor_installTwoVtables(v18);
     v19 = *(_DWORD *)(a1 + 1316);
     if ( v19 >= 2 )
     {
@@ -2416,11 +2416,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r4
   
-    sub_6045BF58(*(_DWORD *)(a1 + 1264), 0);
-    sub_6045BF58(*(_DWORD *)(a1 + 1268), 1);
-    sub_6045BF58(*(_DWORD *)(a1 + 1272), 2);
-    sub_6045BF58(*(_DWORD *)(a1 + 1276), 3);
-    sub_6045BF58(*(_DWORD *)(a1 + 1280), 4);
+    Registry_iterateAndRegister(*(_DWORD *)(a1 + 1264), 0);
+    Registry_iterateAndRegister(*(_DWORD *)(a1 + 1268), 1);
+    Registry_iterateAndRegister(*(_DWORD *)(a1 + 1272), 2);
+    Registry_iterateAndRegister(*(_DWORD *)(a1 + 1276), 3);
+    Registry_iterateAndRegister(*(_DWORD *)(a1 + 1280), 4);
     *(_BYTE *)(a1 + 1356) = 1;
     result = *(_DWORD *)(MEMORY[0xC99DD4] + 764);
     if ( result == 3 )
@@ -8752,7 +8752,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045BF30
+ * ctor_installTwoVtables
  * RVA 0x0045bf30   size 0x24   xrefs 172
  * ============================================================================ */
   _DWORD *__fastcall sub_6045BF30(_DWORD *a1)
@@ -8766,7 +8766,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045BF58
+ * Registry_iterateAndRegister
  * RVA 0x0045bf58   size 0x128   xrefs 160
  * ============================================================================ */
   int __fastcall sub_6045BF58(int a1, int a2)
@@ -20372,7 +20372,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !*(_BYTE *)(a1 + 6054) )
         v2 = 4.0;
       *(float *)(a1 + 124) = v2;
-      sub_602A3EFC((_DWORD *)(a1 + 6300), MEMORY[0xAFE41C]);
+      Scale_init((_DWORD *)(a1 + 6300), MEMORY[0xAFE41C]);
     }
     return v1;
   }
@@ -22890,7 +22890,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604734E4
+ * Disposer_allocateChildren
  * RVA 0x004734e4   size 0x128   xrefs 142
  * ============================================================================ */
   int __fastcall sub_604734E4(_DWORD *a1, int a2)
@@ -23258,7 +23258,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60473B58
+ * Table_getEntryById
  * RVA 0x00473b58   size 0x2c   xrefs 132
  * ============================================================================ */
   int __fastcall sub_60473B58(_DWORD *a1, unsigned int a2, __int64 *a3)
@@ -23307,7 +23307,7 @@ static inline unsigned int uxtb16(unsigned int x)
     __int64 v33; // [sp+B0h] [bp-28h]
     __int64 v34; // [sp+B8h] [bp-20h]
   
-    v6 = sub_6090B350(v25);
+    v6 = RenderParams_defaultInit(v25);
     if ( !a3 )
     {
       a3 = v6;
@@ -26865,12 +26865,12 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( !a2 )
           return result;
-        return sub_60807EF0(MEMORY[0xCC6AF8], a1, 0, 1);
+        return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], a1, 0, 1);
       }
       if ( (a2 & 4) != 0 )
-        result = sub_60807EF0(MEMORY[0xCC6AF8], a1, 0, 1);
+        result = SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], a1, 0, 1);
       if ( (v3 & 8) != 0 )
-        return sub_60807EF0(MEMORY[0xCC6AF8], a1, 0, 1);
+        return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], a1, 0, 1);
     }
     return result;
   }
@@ -27576,7 +27576,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v6; // r7
   
     v6 = (_DWORD *)(a1 + 12);
-    sub_604734E4((_DWORD *)(a1 + 12), a4);
+    Disposer_allocateChildren((_DWORD *)(a1 + 12), a4);
     sub_60475C8C((int)v6);
     message_ref(v6, a3, 0, 0, 0);
     return (*(int (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3532) + 12))(
@@ -27619,7 +27619,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v12 = (_DWORD *)operator new(28, a6, 4);
     Slot_construct(v12);
     *v12 = 12557340;
-    sub_60913D88(v12, v11, a6, 0x2000, 0);
+    Slot_initFromResource(v12, v11, a6, 0x2000, 0);
     Slot_initWithOwnerAndOffset(&v24, v12, 0);
     v13 = v25;
     v14 = v26;
@@ -27704,7 +27704,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = (_DWORD *)operator new(28, a5, 4);
     Slot_construct(v9);
     *v9 = 12557340;
-    sub_60913D88(v9, v8, a5, 0x2000, 0);
+    Slot_initFromResource(v9, v8, a5, 0x2000, 0);
     Slot_initWithOwnerAndOffset(&v15, v9, 0);
     v10 = v16;
     v11 = v17;
@@ -27857,7 +27857,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v25 = sub_6090E438(v37, v38);
         sub_6090E560(v25, *(_DWORD *)(a2 + 40), v38);
         sub_6090C7F8(v36, v37);
-        v26 = sub_6090B350(v35);
+        v26 = RenderParams_defaultInit(v35);
         sub_6090B4B0(v26, *(_DWORD *)(a2 + 40));
         v34[1] = v35;
         v34[3] = 0;
@@ -29493,19 +29493,19 @@ static inline unsigned int uxtb16(unsigned int x)
     switch ( a3 )
     {
       case 0:
-        sub_608FDDF4(&v17, "Challenge_Title_%03d", a2);
+        StringUtil_formatInto(&v17, "Challenge_Title_%03d", a2);
         break;
       case 1:
-        sub_608FDDF4(&v17, "Challenge_Content_%03d", a2);
+        StringUtil_formatInto(&v17, "Challenge_Content_%03d", a2);
         break;
       case 2:
-        sub_608FDDF4(&v17, "Challenge_Message1_%03d", a2);
+        StringUtil_formatInto(&v17, "Challenge_Message1_%03d", a2);
         break;
       case 3:
-        sub_608FDDF4(&v17, "Challenge_Message2_%03d", a2);
+        StringUtil_formatInto(&v17, "Challenge_Message2_%03d", a2);
         break;
       case 4:
-        sub_608FDDF4(&v17, "Challenge_Message3_%03d", a2);
+        StringUtil_formatInto(&v17, "Challenge_Message3_%03d", a2);
         break;
       default:
         break;
@@ -30442,7 +30442,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047EABC
+ * IntrusiveList_clearAndDestroy
  * RVA 0x0047eabc   size 0x5c   xrefs 150
  * ============================================================================ */
   _DWORD *__fastcall sub_6047EABC(_DWORD *result)
@@ -31297,17 +31297,17 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1;
     *a1 = 0;
     v3 = (int)(a1 + 102);
-    sub_6045BF58((int)(a1 + 1), 0);
+    Registry_iterateAndRegister((int)(a1 + 1), 0);
     v4 = MEMORY[0xB023FC];
     v5 = MEMORY[0xB023FD];
     sub_609094C4(v2, 192, MEMORY[0xB023FC], MEMORY[0xB023FD]);
-    sub_6045BF58(v3, 1);
+    Registry_iterateAndRegister(v3, 1);
     sub_609094C4(v3, 192, v4, v5);
-    sub_6045BF58((int)(a1 + 203), 2);
+    Registry_iterateAndRegister((int)(a1 + 203), 2);
     sub_609094C4(a1 + 203, 192, v4, v5);
-    sub_6045BF58((int)(a1 + 304), 3);
+    Registry_iterateAndRegister((int)(a1 + 304), 3);
     sub_609094C4(a1 + 304, 192, v4, v5);
-    sub_6045BF58((int)(a1 + 405), 4);
+    Registry_iterateAndRegister((int)(a1 + 405), 4);
     return sub_609094C4(a1 + 405, 192, v4, v5);
   }
 
@@ -31667,7 +31667,7 @@ static inline unsigned int uxtb16(unsigned int x)
           case 3:
             v3 = "SE_SYS_CTRL_3_CONNECTED_TV";
   LABEL_28:
-            sub_60807EF0(MEMORY[0xCC6AF8], (int)v3, 0);
+            SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)v3, 0);
             break;
           default:
             break;
