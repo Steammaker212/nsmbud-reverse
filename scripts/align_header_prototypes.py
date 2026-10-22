@@ -69,7 +69,12 @@ def main(argv):
             if name not in defs:
                 return m.group(0)
             ret, conv, dparams = defs[name]
-            if np(dparams) != np(m.group("params")):
+            # A parameter count of ZERO in the header means an old-style `()` declaration, which carries no
+            # prototype at all. Replacing it with the real list is always safe and is exactly what is needed:
+            # `()` and `(int, int, float *, char, float *)` genuinely conflict. Only NON-ZERO disagreements are
+            # a real question about the calling convention, and those are reported instead of rewritten.
+            hdr_n = np(m.group("params"))
+            if hdr_n != 0 and hdr_n != np(dparams):
                 arity.append((fn, name, np(m.group("params")), np(dparams)))
                 return m.group(0)
             new = "%s %s %s(%s);%s" % (ret, conv, name, dparams, m.group("tail"))

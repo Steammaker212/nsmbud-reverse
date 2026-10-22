@@ -2,6 +2,22 @@
 
 #include <math.h>
 
+
+/* ---- helpers replacing Hex-Rays `__asm` escapes (see scripts/fix_asm_escapes.py) ----
+ * Each is the exact C equivalent of one NEON/VFP instruction the decompiler had no
+ * idiom for. Kept small and named so the intent is visible at the call site. */
+static inline unsigned int uxtb16(unsigned int x)
+{
+    /* UXTB16: keep bits [7:0] and [23:16], clear the rest. */
+    return x & 0x00FF00FFu;
+}
+
+/* VMINNM/VMAXNM are IEEE-754 minNum/maxNum: they return the non-NaN operand when one
+ * input is NaN. That is exactly what fminf/fmaxf do, unlike `a<b?a:b`. */
+static inline float vminnm_f32(float a, float b) { return fminf(a, b); }
+static inline float vmaxnm_f32(float a, float b) { return fmaxf(a, b); }
+static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
+
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 float *__fastcall sub_608002B0(int a1);
@@ -10,8 +26,8 @@ int __fastcall sub_608014F8(int a1, int a2, int a3, int a4);
 int __fastcall sub_6080161C(int a1, int a2, int a3);
 bool __fastcall sub_608016C8(int a1);
 int __fastcall sub_608016E8(int result, float *a2, int a3, int a4);
-int __fastcall sub_60801774();
-int __fastcall sub_60801818();
+int __fastcall sub_60801774(float *a1, int a2);
+int __fastcall sub_60801818(int a1, int a2, int a3);
 int __fastcall sub_60801B98(int a1, int *a2, _DWORD *a3);
 void __fastcall sub_60801DB0(float *a1, int a2, float *a3, float *a4, int a5);
 int __fastcall sub_60801EC4(int a1, int a2);
@@ -19,18 +35,18 @@ int __fastcall sub_60801F98(float *a1, int a2);
 int __fastcall sub_60802020(int a1, float **a2, float *a3);
 float *__fastcall sub_608023F0(float *result, float *a2);
 float *__fastcall sub_6080243C(float *result, int a2);
-bool __fastcall sub_60802808();
+bool __fastcall sub_60802808(int a1, int a2);
 int __fastcall sub_60802830(unsigned int a1);
 _DWORD *__fastcall sub_608028AC(_DWORD *a1, _DWORD *a2);
-float * __fastcall sub_60802B50();
+float *__fastcall sub_60802B50(int a1, float *a2, int a3, int a4, float *a5, int a6, int a7, int a8);
 void __fastcall sub_60802E70(_DWORD *a1, int a2, int a3, float *a4, int a5);
 int __fastcall sub_608036C4(int a1, float *a2, float *a3);
 int __fastcall sub_608039B8(int a1);
 bool __fastcall sub_60803A98(int a1);
 _DWORD *__fastcall sub_60803F18(int a1);
-int __fastcall sub_60803F50();
+int __fastcall sub_60803F50(int a1, _DWORD *a2);
 int __fastcall sub_60804324(int result, float *a2);
-_DWORD * __fastcall sub_608043D0();
+_DWORD *__fastcall sub_608043D0(_DWORD *a1, int a2, int a3, int a4);
 int __fastcall sub_60804418(int a1);
 _DWORD *__fastcall sub_60804474(int a1);
 _DWORD *__fastcall sub_608044DC(_DWORD *result);
@@ -48,31 +64,31 @@ _DWORD *__fastcall sub_60805BC0(int a1);
 _DWORD *__fastcall sub_60805E70(_DWORD *a1);
 _DWORD *__fastcall sub_6080613C(_DWORD *a1);
 _DWORD *__fastcall sub_60806928(_DWORD *a1, int a2, int a3);
-_DWORD * __fastcall sub_60806960();
+_DWORD *__fastcall sub_60806960(_DWORD *a1);
 int __fastcall sub_60806AE4(int result, _DWORD *a2, float32x4_t *a3, char a4, int a5, int a6, int a7);
 int __fastcall sub_60807574(_DWORD *a1);
 int __fastcall sub_608075F8(int a1);
 int __fastcall sub_608078E0(int a1);
 int __fastcall sub_60807C58(int a1);
 int __fastcall sub_60807DF0(int a1);
-void __fastcall sub_60808570();
+void __fastcall sub_60808570(int a1, _DWORD *a2, int *a3);
 int __fastcall sub_60808C4C(int a1, int a2);
 int __fastcall sub_60809604(int a1, int a2, int a3, int a4);
 int __fastcall sub_608098AC(int a1, int a2, int a3, int a4);
 int __fastcall sub_6080A9F4(int a1);
 int __fastcall sub_6080AC6C(int a1);
-int __fastcall sub_6080B284();
+int __fastcall sub_6080B284(int a1, int a2);
 int __fastcall sub_6080C13C(int result);
 int __fastcall sub_6080C38C(int a1, int a2);
 int __fastcall sub_6080D47C(int a1);
-int __fastcall sub_6080DE84();
-unsigned int __fastcall sub_6080E034();
+int __fastcall sub_6080DE84(int a1, int a2, int a3);
+unsigned int __fastcall sub_6080E034(int a1, int a2, float *a3, char a4, float *a5);
 int __fastcall sub_6080E520(int a1);
 int __fastcall sub_6080E5F4(int a1);
 int __fastcall sub_6080E680(int a1);
 int __fastcall sub_6080E7D0(int a1, int a2);
 int __fastcall sub_6080EF84(int a1);
-int __fastcall sub_6080EFBC();
+int __fastcall sub_6080EFBC(_DWORD *a1);
 struct nn_atk_SoundActor *__fastcall MovingSoundActor_ctor(struct nn_atk_SoundActor *a1, int a2, int a3);
 int __fastcall sub_60810FDC(int a1, int a2, int a3);
 int __fastcall sub_60811618(int result, int a2, float *a3);
@@ -101,20 +117,20 @@ int __fastcall sub_6081DB68(unsigned int a1);
 _DWORD *__fastcall sub_6081EBD0(_DWORD *a1);
 void __fastcall sub_6081FDB4(_DWORD *a1);
 _DWORD *__fastcall sub_6081FF5C(_DWORD *a1);
-int __fastcall sub_60820F8C();
+int __fastcall sub_60820F8C(int a1, int a2, int a3);
 int __fastcall sub_60826878(int a1);
-int __fastcall sub_608284CC();
-int __fastcall sub_60829624();
+int __fastcall sub_608284CC(int a1, unsigned __int8 *a2);
+int __fastcall sub_60829624(int a1, int a2);
 int __fastcall sub_60829AA8(int a1);
 int __fastcall sub_6082A2A4(_DWORD *a1);
 int __fastcall sub_6082AC1C(int a1);
 int __fastcall sub_6082B000(_DWORD *a1);
 int __fastcall sub_6082B1CC(struct nn_oe *a1);
 int __fastcall sub_6082B394(int a1);
-int __fastcall sub_6082BA24();
-int __fastcall sub_6082BCA8();
-int __fastcall sub_6082BE88();
-int __fastcall sub_6082C084();
+int __fastcall sub_6082BA24(int a1, _BYTE *a2);
+int __fastcall sub_6082BCA8(int a1, _BYTE *a2);
+int __fastcall sub_6082BE88(int a1, _BYTE *a2);
+int __fastcall sub_6082C084(int a1, unsigned __int8 *a2);
 int __fastcall sub_6082C68C(int a1);
 int __fastcall UserInfo_createInstance(int a1);
 int __fastcall UserInfo_init(int a1);
@@ -122,19 +138,19 @@ int __fastcall UserInfo_getUid(int a1, _DWORD *a2);
 int __fastcall sub_6082CB20(int a1, int a2);
 int __fastcall sub_6083007C(int a1);
 float *__fastcall sub_60833074(float *result);
-bool __fastcall sub_6083360C();
-int __fastcall sub_60833664();
-int __fastcall sub_60833BCC();
+bool __fastcall sub_6083360C(int a1, int a2);
+int __fastcall sub_60833664(int a1, int a2);
+int __fastcall sub_60833BCC(int result);
 int __fastcall sub_60834010(int result);
 int __fastcall sub_60835934(int a1, int a2);
-int __fastcall sub_60836094();
+int __fastcall sub_60836094(int a1, int a2, int a3, int *a4);
 int __fastcall sub_6083AB50(int a1);
 int __fastcall sub_6083AC24(int a1);
 int __fastcall sub_6083AC38(unsigned int a1);
 int __fastcall sub_6083AC8C(int a1);
-int __fastcall sub_6083CFA0();
+int __fastcall sub_6083CFA0(int a1, int a2, unsigned __int8 *a3);
 void *__fastcall sub_6083D230(void *a1);
-int __fastcall sub_6083D5FC();
+int __fastcall sub_6083D5FC(int a1, int a2);
 int __fastcall sub_6083D824(int a1, int a2);
 bool __fastcall sub_6083D838(_DWORD *a1);
 bool __fastcall sub_6083D8E4(_DWORD *a1);
@@ -143,13 +159,13 @@ int __fastcall sub_6083E92C(int a1);
 int __fastcall sub_6083E934(int a1);
 int __fastcall sub_6083EBA8(int a1);
 int __fastcall sub_6083EF6C(int a1);
-int __fastcall sub_6083F220();
+int __fastcall sub_6083F220(int a1);
 int __fastcall sub_6083F238(int a1);
 int __fastcall sub_6083F368(_DWORD *a1, int a2);
 int __fastcall sub_6083F3F4(int *a1, int a2);
 bool __fastcall sub_6083F540(int a1);
-int __fastcall sub_608411E4();
-int __fastcall sub_60841320();
+int __fastcall sub_608411E4(_BYTE *a1, int a2);
+int __fastcall sub_60841320(int a1, int a2, int a3);
 int __fastcall sub_60841860(int a1, int a2);
 int __fastcall sub_60841EC4(int result, float *a2);
 int __fastcall sub_60842130(int result, int *a2);
@@ -164,10 +180,10 @@ int __fastcall sub_60842588(int a1, _DWORD *a2, int a3);
 int __fastcall sub_6084259C(int a1, _DWORD *a2, int a3);
 int __fastcall sub_60842774(int a1, int a2);
 int __fastcall sub_608427F0(_DWORD *a1, int a2);
-int __fastcall sub_608429F8();
+int __fastcall sub_608429F8(int a1, int a2, int a3, int a4, int a5, int a6, int a7);
 int __fastcall sub_60842BC0(int a1);
 int __fastcall sub_60842C4C(int a1);
-int __fastcall sub_60842CB8();
+int __fastcall sub_60842CB8(int a1, int a2);
 int __fastcall sub_60842CD4(int a1, int a2);
 int __fastcall sub_60843554(int a1, int a2);
 int __fastcall sub_608435EC(int a1, int a2, int a3);
@@ -194,13 +210,13 @@ int __fastcall sub_60844538(_DWORD *a1);
 int __fastcall sub_608445C8(int a1, _DWORD *a2, int a3);
 int __fastcall sub_6084462C(int a1, int a2);
 int __fastcall sub_608446A4(_QWORD *a1, unsigned int a2, unsigned int a3);
-int __fastcall sub_60844794();
+int __fastcall sub_60844794(int a1, int a2, int a3, int a4, int a5, int a6);
 int __fastcall sub_6084495C(int a1);
 int __fastcall sub_60844C20(int a1);
 int __fastcall sub_60844ED4(int a1, int a2, struct nn_mii *a3);
 int __fastcall sub_60844F38(int a1, int a2, struct nn_mii *a3);
 int __fastcall sub_608470F0(int a1, int a2);
-unsigned __int8 * __fastcall sub_608473FC();
+unsigned __int8 *__fastcall sub_608473FC(int a1, int a2);
 _DWORD *__fastcall sub_6084780C(_DWORD *result, int a2, int a3, int a4);
 int __fastcall sub_60847820(int result, int a2);
 int __fastcall sub_6084783C(int a1);
@@ -209,10 +225,10 @@ int __fastcall sub_6084784C(int result, int a2);
 int __fastcall sub_60847870(int a1);
 int __fastcall sub_60847890(int a1);
 int __fastcall sub_60847898(int a1, int a2);
-bool __fastcall sub_608478AC();
+bool __fastcall sub_608478AC(int a1);
 int __fastcall sub_608478BC(int a1);
-int __fastcall sub_60847920();
-int __fastcall sub_60847954();
+int __fastcall sub_60847920(int a1);
+int __fastcall sub_60847954(int a1);
 int __fastcall sub_60847974(int a1, int a2);
 int __fastcall sub_60847984(int a1, int a2);
 _DWORD *__fastcall sub_60847994(_DWORD *result);
@@ -241,57 +257,57 @@ int __fastcall sub_6084892C(_DWORD *a1);
 int __fastcall sub_60848E1C(int a1, int a2, int a3, _DWORD *a4);
 int __fastcall sub_608492B0(int a1);
 int __fastcall sub_608492D8(int a1);
-int __fastcall sub_608494F8();
+int __fastcall sub_608494F8(_BYTE *a1, int a2);
 int __fastcall sub_60849588(_DWORD *a1);
 int __fastcall sub_608495DC(_DWORD *a1);
 int __fastcall sub_60849630(_DWORD *a1);
-int __fastcall sub_60849D30();
+int __fastcall sub_60849D30(float *a1, int a2);
 int __fastcall sub_6084A430(int a1, float32x4_t *a2, int a3, int a4);
 int __fastcall sub_6084A664(int a1, _DWORD *a2);
-int __fastcall sub_6084A81C();
+int __fastcall sub_6084A81C(int a1, int a2, int a3, int a4, float *a5);
 int __fastcall sub_6084B178(int result);
 int __fastcall sub_6084B2A0(_DWORD *a1);
-int __fastcall sub_6084B8F0();
+int __fastcall sub_6084B8F0(int a1, int a2, int a3, unsigned int a4, _DWORD *a5, unsigned int *a6);
 int __fastcall sub_6084CAA8(int a1);
-int __fastcall sub_6084CCFC();
+int __fastcall sub_6084CCFC(int a1, float *a2, unsigned int *a3, int a4);
 int __fastcall sub_6084D508(int a1, unsigned int a2, signed int a3, int a4, int *a5, int a6);
 int __fastcall sub_6084DD44(int a1, float *a2, float *a3, unsigned int a4, int a5);
 int __fastcall sub_6084E184(int a1);
-int __fastcall sub_6084E450();
+int __fastcall sub_6084E450(int a1, float *a2, unsigned int *a3, int a4);
 int __fastcall sub_6084EC5C(int a1, unsigned int a2, int a3, int a4, int *a5, int a6);
 int __fastcall sub_6084F4A0(int a1, float *a2, float *a3, unsigned int a4, int a5);
 int __fastcall sub_6084FBBC(int a1, int a2, int a3, int a4, int a5);
-int __fastcall sub_6084FEB8();
+int __fastcall sub_6084FEB8(int a1, int a2, int a3, int a4, int a5);
 int __fastcall sub_60850120(_DWORD *a1, int a2);
 int __fastcall sub_60850190(_DWORD *a1, int a2);
 int __fastcall sub_60850658(int a1, int a2, int a3);
 void __fastcall sub_60851EA0(int a1, int a2, _DWORD *a3);
-int __fastcall sub_608521F4();
-_DWORD * __fastcall sub_60853408();
+int __fastcall sub_608521F4(int result, int a2, unsigned int a3);
+_DWORD *__fastcall sub_60853408(_DWORD *result);
 int __fastcall sub_608535AC(_DWORD *a1);
 int __fastcall sub_608535C4(_DWORD *a1);
-int __fastcall sub_608535DC();
+int __fastcall sub_608535DC(_DWORD *a1);
 int __fastcall sub_60853D80(int a1, int a2);
 int __fastcall sub_608548E4(int a1, _DWORD *a2, _DWORD *a3, int a4);
 char *__fastcall sub_60854BB4(_DWORD *a1, _DWORD *a2);
-int __fastcall sub_60854D60();
-int __fastcall sub_60854FCC();
-int __fastcall sub_60855AD8();
+int __fastcall sub_60854D60(int a1, _BYTE *a2, _BYTE *a3, _BYTE *a4);
+int __fastcall sub_60854FCC(int a1, int a2);
+int __fastcall sub_60855AD8(int a1, int a2);
 int __fastcall sub_60855B70(int (__fastcall *a1)(_DWORD, _DWORD, _DWORD), int (__fastcall *a2)(_DWORD, _DWORD), int a3);
 int __fastcall sub_60856AF0(int a1);
-_DWORD * __fastcall sub_60857530();
-int __fastcall sub_60857B80();
-unsigned __int8 * __fastcall sub_608580EC();
-int __fastcall sub_608583BC();
+_DWORD *__fastcall sub_60857530(int a1, _DWORD *a2);
+int __fastcall sub_60857B80(int a1, _BYTE *a2, int a3);
+unsigned __int8 *__fastcall sub_608580EC(_BYTE *a1, unsigned __int8 *a2);
+int __fastcall sub_608583BC(int a1, float *a2, int a3);
 int __fastcall sub_608589FC(int a1, int a2);
 float32x4_t *__fastcall sub_60858FD0(float32x4_t *a1, int a2);
-float32x4_t * __fastcall sub_608596E8();
+float32x4_t *__fastcall sub_608596E8(float32x4_t *a1, int a2, int a3);
 int __fastcall sub_608597C0(int a1);
 int __fastcall sub_608597F0(int a1);
-int * __fastcall sub_6085982C();
-int __fastcall sub_60859A1C();
+int *__fastcall sub_6085982C(int a1, int a2);
+int __fastcall sub_60859A1C(int result, int a2, int a3);
 _DWORD *__fastcall sub_60859AE4(int a1, _BYTE *a2, int a3, int a4);
-int __fastcall sub_60859D08();
+int __fastcall sub_60859D08(int a1, int a2, int a3, int a4, int a5, int a6);
 _WORD *__fastcall sub_60859FA8(int a1, _DWORD *a2, int a3, int a4, int a5, int a6);
 _WORD *__fastcall sub_6085A3B0(int a1, int a2);
 void __fastcall sub_6085B320(int a1, int a2);
@@ -300,72 +316,72 @@ int __fastcall sub_6085BA78(int a1, _DWORD *a2, int a3, int a4, _DWORD *a5, int 
 int __fastcall sub_6085BE54(int a1, int a2);
 int __fastcall sub_6085C0E0(int a1, int a2, int a3);
 int __fastcall sub_6085C2D4(int result, int a2);
-int __fastcall sub_6085C340();
+int __fastcall sub_6085C340(int a1, int a2, int a3, _DWORD *a4, int a5, int a6, int a7);
 __int64 *__fastcall sub_6085D9A0(int a1, __int64 *a2);
 unsigned int __fastcall sub_6085DD1C(int a1, int a2);
 unsigned int __fastcall sub_6085DE84(int a1, int a2);
-int __fastcall sub_6085E94C();
+int __fastcall sub_6085E94C(int result, int a2);
 int __fastcall sub_6085E980(int a1, int a2);
 int __fastcall sub_6085EC24(int a1, int a2);
 int __fastcall sub_6085ED90(int a1, int a2);
-int __fastcall sub_6085F66C();
-float * __fastcall sub_6085F6A0();
+int __fastcall sub_6085F66C(int a1, int a2, int a3);
+float *__fastcall sub_6085F6A0(float *result, int a2);
 int __fastcall sub_6085F830(_DWORD *a1, int a2, int a3);
 int __fastcall sub_6085F88C(int a1, int a2, int a3, int a4);
 int __fastcall sub_6085F970(_DWORD *a1, _DWORD *a2);
 int __fastcall sub_60860584(int a1, int a2);
-int __fastcall sub_60860664();
+int __fastcall sub_60860664(int a1, _DWORD *a2, _DWORD *a3, int a4, int a5, int a6);
 int __fastcall sub_60860C30(int result, _WORD *a2);
 int __fastcall sub_608615C8(int a1, int a2);
 int __fastcall sub_60861BA0(int a1, int a2);
 int __fastcall sub_60862020(int a1, int a2);
-int __fastcall sub_608624D4();
-int __fastcall sub_60862B20();
-int __fastcall sub_608630C8();
-int __fastcall sub_6086365C();
-int __fastcall sub_60863AB0();
-int __fastcall sub_608649EC();
+int __fastcall sub_608624D4(int a1, int a2, float *a3, int a4, float *a5, int a6);
+int __fastcall sub_60862B20(int a1, int a2, float *a3, int a4, float *a5, int a6);
+int __fastcall sub_608630C8(int a1, int a2, float *a3, int a4, float *a5, int a6);
+int __fastcall sub_6086365C(int a1, int a2, float *a3, int a4, float *a5, int a6);
+int __fastcall sub_60863AB0(int a1, int a2, float *a3, int a4, float *a5, int a6);
+int __fastcall sub_608649EC(_DWORD *a1, int a2);
 _DWORD *__fastcall sub_60864E60(int a1, _BYTE *a2, int a3, int a4);
 int __fastcall sub_60864F9C(int result);
 int __fastcall sub_60864FB0(int a1);
 int __fastcall sub_60864FD8(unsigned __int8 *a1, int a2);
-unsigned __int8 * __fastcall sub_60865030();
+unsigned __int8 *__fastcall sub_60865030(unsigned __int8 *result, int a2);
 int __fastcall sub_60865108(int a1, int a2, _DWORD *a3);
 int __fastcall sub_6086516C(int result, int a2, int a3);
-int __fastcall sub_60865204();
+int __fastcall sub_60865204(int a1, int a2);
 int __fastcall sub_60865218(int a1, int a2);
 _QWORD *__fastcall sub_6086522C(_QWORD *a1, int a2, _DWORD *a3, _DWORD *a4);
-_QWORD * __fastcall sub_60865254();
-_QWORD * __fastcall sub_608652A0();
+_QWORD *__fastcall sub_60865254(_QWORD *a1, int a2, _DWORD *a3, _DWORD *a4);
+_QWORD *__fastcall sub_608652A0(int a1, int a2, _DWORD *a3, _DWORD *a4, int a5, int a6);
 int __fastcall sub_60865468(int a1, int a2, int a3);
 int __fastcall sub_608654EC(int a1, int a2, int a3, int a4, int a5, int a6);
-unsigned int __fastcall sub_608665C4();
-int __fastcall sub_608672C4();
+unsigned int __fastcall sub_608665C4( _DWORD *a1, int a2, int a3, int a4, int a5, unsigned int a6, int a7, unsigned int a8, int a9, unsigned int a10, unsigned int a11, unsigned int a12);
+int __fastcall sub_608672C4(_DWORD *a1, int a2);
 int __fastcall sub_6086735C(int a1, int a2, int a3);
-int __fastcall sub_60867638();
+int __fastcall sub_60867638(int a1, int a2);
 void __fastcall sub_608676E0( _DWORD *a1, int a2, char a3, int a4, int a5, int a6, int a7, int a8, int a9, __int16 a10, int a11, int a12);
-unsigned int __fastcall sub_60867E54();
+unsigned int __fastcall sub_60867E54(_DWORD *a1, int a2, int a3, int a4);
 int __fastcall sub_6086827C(int result, int a2);
-_QWORD * __fastcall sub_608686E0();
-int __fastcall sub_60868CA4();
+_QWORD *__fastcall sub_608686E0(_DWORD *a1, int a2, __int64 *a3, float *a4, int a5, int a6);
+int __fastcall sub_60868CA4(int a1, int a2, int a3);
 int __fastcall sub_60868D58(int a1, int a2);
-int __fastcall sub_60868D74();
-_DWORD * __fastcall sub_60869A60();
-int __fastcall sub_60869BB8();
-int __fastcall sub_60869F34();
-int __fastcall sub_60869FE4();
+int __fastcall sub_60868D74(int result, int a2);
+_DWORD *__fastcall sub_60869A60(_DWORD *result, int a2);
+int __fastcall sub_60869BB8(int a1, int a2, int a3);
+int __fastcall sub_60869F34(int a1, int a2, int a3);
+int __fastcall sub_60869FE4(int result, int a2, int a3);
 int __fastcall sub_6086A094(int a1, int a2, int a3);
-int __fastcall sub_6086A144();
-int __fastcall sub_6086A1FC();
-int __fastcall sub_6086B35C();
+int __fastcall sub_6086A144(int a1, int a2);
+int __fastcall sub_6086A1FC(int a1, int a2);
+int __fastcall sub_6086B35C(int a1, int a2, int a3, int a4);
 int __fastcall sub_6086BBD8(int result, int a2, int a3, int a4);
 unsigned int __fastcall sub_6086C75C(unsigned int *a1, int a2, int a3);
-int __fastcall sub_6086E97C();
+int __fastcall sub_6086E97C(int a1);
 void __fastcall sub_6086F110(int a1, char *a2, char *a3);
-int __fastcall sub_60870234();
-int __fastcall sub_60870390();
-int __fastcall sub_608704CC();
-int __fastcall sub_6087055C();
+int __fastcall sub_60870234(int result, int a2, int a3, int a4);
+int __fastcall sub_60870390(int result, int a2, int a3);
+int __fastcall sub_608704CC(int result, int a2, unsigned __int16 *a3);
+int __fastcall sub_6087055C(int result, int a2, unsigned __int16 *a3);
 int __fastcall sub_608705FC(int result, int *a2);
 int __fastcall sub_60870630(int result, int *a2);
 int __fastcall sub_60870678(int a1, void (__fastcall *a2)(int *, int, int), int a3);
@@ -373,27 +389,27 @@ int __fastcall sub_60870758(int result);
 int __fastcall sub_608707F4(int a1);
 int __fastcall sub_60870980(int a1, void (__fastcall *a2)(int *, int, int), int a3);
 int __fastcall sub_608709D8(int result);
-int __fastcall sub_60870A0C();
-int __fastcall sub_60870AA0();
-int __fastcall sub_60870B4C();
+int __fastcall sub_60870A0C(int result, int a2);
+int __fastcall sub_60870AA0(int result, int a2, int a3, int a4);
+int __fastcall sub_60870B4C(int result, int a2);
 int __fastcall sub_60870BE0(int a1);
 int __fastcall sub_60870D80(int result);
-int __fastcall sub_60872014();
-int __fastcall sub_60872068();
-int __fastcall sub_60872218();
-int __fastcall sub_6087226C();
+int __fastcall sub_60872014(int result, int a2);
+int __fastcall sub_60872068(int result, char a2);
+int __fastcall sub_60872218(int result, int a2);
+int __fastcall sub_6087226C(int result, char a2);
 int __fastcall sub_60872574(int a1);
 int __fastcall sub_60872920(int a1);
-int __fastcall sub_608729D4();
+int __fastcall sub_608729D4(int result, char a2);
 float *__fastcall sub_608747A0(float32x4_t *a1, float32x4_t *a2, float32x4_t *a3);
 unsigned __int8 *__fastcall sub_60875064(unsigned __int8 *result);
 int __fastcall sub_60875230(int *a1, int *a2, int a3, unsigned int a4);
-int __fastcall sub_608754DC();
+int __fastcall sub_608754DC(int a1, _DWORD *a2);
 int __fastcall sub_6087552C(int a1, _DWORD *a2);
 int __fastcall sub_60875774(int a1, _DWORD *a2, _DWORD *a3, int a4, unsigned int a5);
-unsigned __int32 __fastcall sub_60875824();
-int __fastcall sub_60875E64();
-int __fastcall sub_60878088();
+unsigned __int32 __fastcall sub_60875824(unsigned __int32 result, int a2, int a3);
+int __fastcall sub_60875E64(int a1, int a2, int32x4_t *a3, int a4);
+int __fastcall sub_60878088(int a1, int a2);
 int __fastcall sub_608782F4(int result, int a2);
 float32x4_t *__fastcall sub_60878E50(int a1, int a2, int a3, int a4);
 float32x4_t *__fastcall sub_60879048(int a1, int a2, int a3, int a4);
@@ -404,119 +420,119 @@ int __fastcall sub_6087D014(int a1, int *a2, int a3, unsigned int a4);
 _DWORD *__fastcall sub_6087D120(_DWORD *result);
 int __fastcall sub_6087D748(int a1, _DWORD *a2);
 int __fastcall sub_6087D7B0(unsigned __int8 *a1, _DWORD *a2);
-int __fastcall sub_6087D994();
-unsigned __int64 * __fastcall sub_6087DA68();
-int __fastcall sub_6087DEC4();
+int __fastcall sub_6087D994(_DWORD *a1, _DWORD *a2, _DWORD *a3, int a4, unsigned int a5);
+unsigned __int64 *__fastcall sub_6087DA68(_DWORD *a1, float32x4_t *a2, int a3, int a4);
+int __fastcall sub_6087DEC4(_DWORD *a1, int a2);
 float32x4_t *__fastcall sub_6087E6E4(int a1, float32x4_t *a2, int a3, int a4, int a5);
-int __fastcall sub_6087EBD8();
+int __fastcall sub_6087EBD8(int result, int a2, int a3, int a4);
 int *__fastcall sub_6087EC1C(int *result);
 int __fastcall sub_6087F534(unsigned __int8 *a1, int a2, int a3);
 int __fastcall sub_608800A0(int a1, int a2);
 float32x4_t *__fastcall sub_60880330(float32x4_t *a1);
 int __fastcall sub_60880F00(int a1);
-int __fastcall sub_60881158();
+int __fastcall sub_60881158(int *a1, _DWORD *a2, int a3, int a4, int a5);
 int __fastcall sub_60881594(int a1, int a2, int a3, int a4);
 int __fastcall sub_60881844(int a1, int a2, int a3, int a4, int (__fastcall *a5)(int *));
-int __fastcall sub_60881A7C();
+int __fastcall sub_60881A7C(__int64 a1, int a2, int a3);
 int __fastcall sub_60881E38(_DWORD *a1, _DWORD *a2);
 void __fastcall debugPrintRelated3(const char *a1);
 int __fastcall sub_60882124(int a1, int a2);
-int __fastcall sub_60885F60();
+int __fastcall sub_60885F60(int result, int a2);
 int __fastcall sub_60886270(int a1, unsigned __int8 *a2);
-int __fastcall sub_60886834();
+int __fastcall sub_60886834(int a1, int a2);
 unsigned int __fastcall sub_60886B90(_DWORD *a1, int a2);
 unsigned __int8 *__fastcall sub_60887040(int a1, _DWORD *a2);
 int __fastcall sub_608871E0(int a1, int a2, int a3);
 int __fastcall sub_608873A4(int a1, _DWORD *a2);
 int __fastcall sub_60887620(_DWORD *a1, _DWORD *a2, __int64 a3);
 int __fastcall sub_608878A4(int a1, int a2);
-int __fastcall sub_60887A00();
-int __fastcall sub_60887EA4();
+int __fastcall sub_60887A00(int a1, unsigned __int8 *a2, int *a3);
+int __fastcall sub_60887EA4(_DWORD *a1, __int64 a2);
 int __fastcall sub_6088836C(int result);
-int __fastcall sub_60888390();
-_DWORD * __fastcall sub_60888558();
+int __fastcall sub_60888390(int a1, _DWORD *a2, int a3, int a4, int a5);
+_DWORD *__fastcall sub_60888558(_DWORD *result, int a2, int a3);
 int __fastcall sub_60888704(int result);
-int __fastcall sub_6088871C();
-int __fastcall sub_60888864();
+int __fastcall sub_6088871C(int a1, _DWORD *a2, int a3, int a4);
+int __fastcall sub_60888864(_DWORD *a1, int a2, int a3);
 _DWORD *__fastcall sub_60889268(_DWORD *a1, int a2);
-_QWORD * __fastcall sub_60889700();
+_QWORD *__fastcall sub_60889700(_QWORD *a1, float32x4_t *a2, float32x4_t *a3, int a4, int a5);
 int __fastcall sub_60889A38(int a1);
 int __fastcall sub_60889A70(int a1, _DWORD *a2, float32x4_t *a3);
 int __fastcall sub_6088A3A8(int a1, int a2);
-int __fastcall sub_6088A6BC();
+int __fastcall sub_6088A6BC(int a1, int a2, _DWORD *a3, int a4, int a5, int a6);
 int __fastcall sub_6088A820(int a1, int a2, int a3, int a4, int a5, int a6, _DWORD *a7, int a8);
-int __fastcall sub_6088AB3C();
+int __fastcall sub_6088AB3C(int a1, int a2);
 int __fastcall sub_6088ACD0(int a1, _DWORD *a2, int a3, int a4, int a5, int a6);
 int __fastcall sub_6088B6D8(_DWORD *a1, int a2);
 int __fastcall sub_6088B8F4(int a1, _DWORD *a2, int a3);
-int __fastcall sub_6088BAA0();
-_DWORD * __fastcall sub_6088D7C8();
-_DWORD * __fastcall sub_6088DBD0();
+int __fastcall sub_6088BAA0(int a1, int a2, int a3, int a4, int a5);
+_DWORD *__fastcall sub_6088D7C8(int a1, int a2, int a3, int a4, int a5);
+_DWORD *__fastcall sub_6088DBD0(int a1, int a2, int a3, int a4, int a5);
 int __fastcall sub_6088E174(int result, float *a2);
-_QWORD * __fastcall sub_6088E3FC();
+_QWORD *__fastcall sub_6088E3FC(_QWORD *a1, float32x4_t *a2, float32x4_t *a3, int a4, int a5);
 int __fastcall sub_6088E6B8(int a1);
-int __fastcall sub_6088E6EC();
+int __fastcall sub_6088E6EC(int a1, int a2, _DWORD *a3, int a4, int a5, int a6);
 int __fastcall sub_6088E850(int a1, int a2, int a3, int a4, int a5, int a6, _DWORD *a7, int a8);
 int __fastcall sub_6088FC7C(int a1, int a2);
-int __fastcall sub_6088FC88();
-int __fastcall sub_60890938();
-int __fastcall sub_60890DC8();
-float __fastcall sub_60890F30();
-int __fastcall sub_60891658();
-int __fastcall sub_60891894();
+int __fastcall sub_6088FC88(int a1, _DWORD *a2);
+int __fastcall sub_60890938(int result, int a2);
+int __fastcall sub_60890DC8(int a1, int a2, int a3, int a4, int a5, _DWORD *a6);
+float __fastcall sub_60890F30(float a1, unsigned int a2, int a3);
+int __fastcall sub_60891658(int a1, int a2, int a3, int a4);
+int __fastcall sub_60891894(float *a1, float *a2, float *a3, float *a4, float *a5);
 int __fastcall sub_608919C8(int result, float *a2);
-int __fastcall sub_60891BB8();
-float __fastcall sub_60891FE4();
-int __fastcall sub_6089270C();
-int __fastcall sub_60892948();
+int __fastcall sub_60891BB8(int a1, float *a2);
+float __fastcall sub_60891FE4(float a1, unsigned int a2, int a3);
+int __fastcall sub_6089270C(int a1, int a2, int a3, int a4);
+int __fastcall sub_60892948(float *a1, float *a2, float *a3, float *a4, float *a5);
 int __fastcall sub_60892A7C(int result, float *a2);
-int __fastcall sub_60892C6C();
+int __fastcall sub_60892C6C(int a1, float *a2);
 unsigned int __fastcall sub_60893098(unsigned int a1, unsigned int a2, int a3);
 int __fastcall sub_6089397C(int a1, int a2, int a3, int a4);
-int __fastcall sub_60893C18();
+int __fastcall sub_60893C18(int a1, int a2, int a3, int a4, int a5);
 int __fastcall sub_60893D8C(int result, int a2);
 int __fastcall sub_60894060(int a1, int a2);
 unsigned int __fastcall sub_608945B8(unsigned int a1, unsigned int a2, int a3);
 int __fastcall sub_60894E9C(int a1, int a2, int a3, int a4);
-int __fastcall sub_60895138();
+int __fastcall sub_60895138(int a1, int a2, int a3, int a4, int a5);
 int __fastcall sub_608952AC(int result, int a2);
 int __fastcall sub_60895580(int a1, int a2);
-int __fastcall sub_60895C24();
+int __fastcall sub_60895C24(int a1, int a2);
 int __fastcall sub_60895C80(__int64 *a1);
-int __fastcall sub_60895D14();
-int __fastcall sub_608961A4();
+int __fastcall sub_60895D14(int a1, _DWORD *a2, int a3);
+int __fastcall sub_608961A4(int a1, int a2);
 int __fastcall sub_60896278(void (__fastcall *a1)(int, int, int), int a2);
 int __fastcall sub_6089632C(int a1, _DWORD *a2, int a3, int a4, int a5);
-int __fastcall sub_60896484();
+int __fastcall sub_60896484(int a1, int a2, int a3);
 int __fastcall sub_608964E8(int a1);
-int __fastcall sub_60896504();
+int __fastcall sub_60896504(int *a1, _DWORD *a2, int a3, int a4);
 _DWORD *__fastcall sub_608966B0(_DWORD *result);
 int __fastcall sub_608966DC(int a1, int a2);
 int __fastcall sub_608966EC(int a1, int a2);
 int __fastcall sub_608966F8(_DWORD *a1);
 int __fastcall sub_60896790(int a1, int a2, int a3, int a4, int a5);
-int __fastcall sub_60897044();
+int __fastcall sub_60897044(_DWORD *a1, _DWORD **a2);
 int __fastcall sub_60897204(int a1, int a2);
-int __fastcall sub_6089725C();
-_DWORD * __fastcall sub_60897440();
+int __fastcall sub_6089725C(_DWORD *a1, int a2, int a3);
+_DWORD *__fastcall sub_60897440(_DWORD *result, int a2, int a3);
 _DWORD *__fastcall sub_6089751C(_DWORD *result);
 float32x4_t *__fastcall sub_60897698(float32x4_t *a1, float32x4_t *a2, int32x4_t *a3, int a4, int a5);
 int __fastcall sub_60897AF0(int *a1, float32x4_t *a2);
-int __fastcall sub_60897E40();
+int __fastcall sub_60897E40(int *a1, int a2);
 int __fastcall sub_60898168(int a1);
 int __fastcall sub_60898270(int a1, int a2);
-void __fastcall sub_60898C50();
-int __fastcall sub_60898D38();
+void __fastcall sub_60898C50(int a1, int a2);
+int __fastcall sub_60898D38(int a1, int a2);
 bool __fastcall sub_608993D8(int a1, unsigned __int8 *a2, int a3, int a4, int a5, unsigned int a6);
-int32x4_t * __fastcall sub_6089AB20();
-int __fastcall sub_6089AEBC();
-int __fastcall sub_6089B110();
-int __fastcall sub_6089B2BC();
+int32x4_t *__fastcall sub_6089AB20(int a1, int a2);
+int __fastcall sub_6089AEBC(int a1, int a2, int a3, _DWORD *a4, int a5);
+int __fastcall sub_6089B110(int a1, int a2, _DWORD *a3, _DWORD *a4, int a5);
+int __fastcall sub_6089B2BC(int a1, int a2, int a3, int *a4, int a5, int a6, int a7, int a8);
 int __fastcall sub_6089B87C(int a1, int (__fastcall *a2)(_DWORD *), int a3, int a4, int a5);
 int __fastcall sub_6089B9C0(int *a1, int a2, int a3, _DWORD *a4, int a5, _DWORD *a6);
 int __fastcall sub_6089C0A4(int *a1, int a2, float32x4_t *a3, int a4, int a5, int *a6);
 int __fastcall sub_6089CAE0( int a1, int a2, int a3, int *a4, _DWORD *a5, _DWORD *a6, int a7, int a8, int a9, float32x4_t *a10);
-int __fastcall sub_6089DB2C();
+int __fastcall sub_6089DB2C(int a1, _BYTE *a2, int a3, int a4, int a5, int a6);
 int __fastcall sub_6089DB50(int a1);
 int __fastcall sub_6089DCA0(int a1, int a2);
 int __fastcall sub_6089DCB4(int a1, int a2);
@@ -525,30 +541,30 @@ int __fastcall sub_6089E2AC(unsigned __int8 *a1);
 int __fastcall sub_6089E410(int a1, int a2);
 int __fastcall sub_6089FC9C(int result, unsigned __int8 *a2);
 int __fastcall sub_608A2C90(int a1, int a2, float *a3, float *a4);
-float * __fastcall sub_608A2EB0();
+float *__fastcall sub_608A2EB0(float *a1, int a2, int a3, int a4, float *a5);
 int __fastcall sub_608A3490(float *a1);
-int __fastcall sub_608A3FAC();
+int __fastcall sub_608A3FAC(int result, _BYTE *a2, int a3);
 int __fastcall sub_608A40DC(int a1);
 int __fastcall sub_608A4180(int a1, int a2, int a3);
 int __fastcall sub_608A41F0( int a1, _DWORD *a2, int a3, int a4, int a5, int a6, _DWORD *a7, _DWORD *a8, _DWORD *a9, _DWORD *a10, _DWORD *a11, const void *a12);
-int __fastcall sub_608A45B4();
+int __fastcall sub_608A45B4(_DWORD *a1, int a2, int a3);
 int __fastcall sub_608A4798(int a1, int a2);
-int __fastcall sub_608A48C8();
+int __fastcall sub_608A48C8(int *a1, int a2, int a3);
 int __fastcall sub_608A4B20(int a1, int a2);
-int __fastcall sub_608A4B50();
+int __fastcall sub_608A4B50(int *a1, int a2);
 void __fastcall sub_608A4CE4(int a1);
 _BYTE *__fastcall sub_608A4CFC(_BYTE *result);
-int __fastcall sub_608A4D08();
+int __fastcall sub_608A4D08(int a1, int a2, int a3);
 int __fastcall sub_608A4D34(int *a1);
 int __fastcall sub_608A5070(int *a1);
-_DWORD * __fastcall sub_608A5588();
+_DWORD *__fastcall sub_608A5588(int a1, _DWORD *a2, int a3);
 int __fastcall sub_608A56A4(int a1);
-int __fastcall sub_608A56E8();
-int __fastcall sub_608A7810();
+int __fastcall sub_608A56E8(int result, float32x4_t *a2);
+int __fastcall sub_608A7810(int a1, int a2, _DWORD *a3, int a4, int a5, int a6);
 int __fastcall sub_608A7D74(_DWORD *a1);
 int __fastcall sub_608A7D8C(int a1);
 int __fastcall sub_608A7DA4(int a1);
-_DWORD * __fastcall sub_608A7DBC();
+_DWORD *__fastcall sub_608A7DBC(_DWORD *result, int a2, int a3);
 int __fastcall sub_608A7E04(int a1);
 int __fastcall sub_608A7E0C(int a1);
 int __fastcall sub_608A7E14(int a1);
@@ -569,42 +585,42 @@ _DWORD *__fastcall sub_608A7EBC(_DWORD *result, int a2, int a3, int a4);
 _DWORD *__fastcall nn_atk_MemorySoundArchive_ctor(_DWORD *a1);
 _DWORD *__fastcall sub_608A8604(_DWORD *a1, int *a2);
 int *__fastcall sub_608A86F0(int *result);
-int __fastcall sub_608A8790();
-int __fastcall sub_608A8848();
-float * __fastcall sub_608A8904();
-float * __fastcall sub_608A8A50();
+int __fastcall sub_608A8790(float *a1, int *a2, int a3, int a4, int a5);
+int __fastcall sub_608A8848(int a1, int a2, int a3, float32x4_t *a4, float32x2_t *a5);
+float *__fastcall sub_608A8904(float *result, int a2, float32x4_t *a3, float32x4_t *a4, unsigned __int64 *a5);
+float *__fastcall sub_608A8A50(float *result, int a2, float *a3);
 int __fastcall sub_608A8A9C(float32x4_t *a1, float *a2, float *a3);
-int __fastcall sub_608A8DF4();
+int __fastcall sub_608A8DF4(int result);
 int __fastcall sub_608A941C(int result, int a2);
 int __fastcall nn__atk__SoundActor__SoundActor(int a1, int a2);
 int __fastcall nn__atk__SoundActor__dtor(int a1);
 int __fastcall nn__atk__SoundActor__GetPlayingSoundCount(int a1, int a2);
 int __fastcall nn__atk__SoundActor__SetPlayableSoundCount(int a1, int a2, int a3);
-int __fastcall nn_atk_SoundArchive_ctor();
+int __fastcall nn_atk_SoundArchive_ctor(int result);
 int __fastcall sub_608A9994(int a1, _WORD *a2);
 int __fastcall sub_608A99B0(int a1);
 int __fastcall sub_608A99EC(int a1);
-int __fastcall nn__atk__SoundArchive__GetItemId();
+int __fastcall nn__atk__SoundArchive__GetItemId(int a1, int a2);
 int __fastcall sub_608A9AA4(int a1, int a2);
 int __fastcall sub_608A9AEC(int a1, int a2, int a3, int a4);
-int __fastcall sub_608A9B50();
-int __fastcall sub_608A9BC0();
+int __fastcall sub_608A9B50(int a1, int a2);
+int __fastcall sub_608A9BC0(int a1, int a2, int a3);
 int __fastcall sub_608A9E10(int a1, int a2);
 int __fastcall sub_608A9E64(int a1, int a2, int a3);
-int __fastcall sub_608A9FE4();
+int __fastcall sub_608A9FE4(int a1, int a2, int a3);
 int __fastcall sub_608AA048(int a1, int a2, int a3);
 int __fastcall sub_608AA198(_BYTE *a1, int a2, int a3, _BYTE *a4, int a5, int a6);
 int __fastcall sub_608AAA10(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
 int __fastcall sub_608AAC68(int a1, int a2, unsigned int *a3, int a4);
 int __fastcall sub_608AB144(int a1, int a2);
 int __fastcall sub_608AB158(int result, int a2);
-int __fastcall sub_608AB194();
+int __fastcall sub_608AB194(int a1, _DWORD *a2, int a3, int a4, int a5, int a6, int a7, int a8);
 int __fastcall sub_608AC20C(_DWORD *a1, int a2);
 int __fastcall sub_608AC2F0(int a1);
 int __fastcall sub_608AC56C(int a1);
-int __fastcall sub_608AC59C();
+int __fastcall sub_608AC59C(int a1, int a2);
 int __fastcall sub_608AC5F8(int a1, int a2);
-int __fastcall sub_608AC690();
+int __fastcall sub_608AC690(int a1, int a2);
 int __fastcall sub_608AC6C8(_DWORD *a1);
 int *__fastcall sub_608AC778(int a1, int a2);
 int __fastcall sub_608AC9B4(int a1, int a2, int a3);
@@ -613,7 +629,7 @@ int __fastcall sub_608ACA10(int result, int a2);
 int __fastcall sub_608ACAFC(int result, int a2);
 int __fastcall sub_608ACC18(int a1, int a2);
 int __fastcall sub_608ACE64(_DWORD *a1, int a2);
-int __fastcall sub_608ACED0();
+int __fastcall sub_608ACED0(int result, int a2);
 int __fastcall sub_608ACED8(int a1, int a2);
 _DWORD *__fastcall sub_608ACF78(int a1, int a2);
 int __fastcall sub_608AD014(int a1, _DWORD *a2, int a3, int a4);
@@ -621,7 +637,7 @@ int __fastcall sub_608AD060(int a1, _DWORD *a2, int a3, int a4);
 int __fastcall sub_608AD1B0(int a1, _DWORD *a2, int a3, int a4);
 int __fastcall sub_608AD1CC(int a1, _DWORD *a2, int a3, int a4);
 int __fastcall sub_608AD22C(int a1, int a2, int a3, int a4);
-int __fastcall sub_608AD258();
+int __fastcall sub_608AD258(int a1, int a2, int a3, int a4);
 int __fastcall sub_608AD2C8(int result);
 int __fastcall sub_608AD5AC(int a1);
 int __fastcall sub_608ADEC0(int *a1, int a2, int *a3);
@@ -634,7 +650,7 @@ int *__fastcall sub_608AE46C(int *result);
 int __fastcall sub_608AE4A4(int result);
 _DWORD *__fastcall sub_608AE570(_DWORD *result);
 bool __fastcall sub_608AE59C(int a1, int a2, _DWORD *a3, int a4);
-int __fastcall sub_608AE660();
+int __fastcall sub_608AE660(_DWORD *a1, int a2, unsigned int a3, int *a4);
 int *__fastcall sub_608AE7C8(int *a1);
 int __fastcall sub_608AE888(int a1, int a2);
 int __fastcall sub_608AE904(int a1, int *a2, int a3);
@@ -648,7 +664,7 @@ bool __fastcall sub_608AF1CC(int a1);
 int *__fastcall sub_608AF1DC(int a1);
 bool __fastcall sub_608AF1E4(int a1);
 int *__fastcall sub_608AF1F4(int a1);
-int __fastcall sub_608AF1FC();
+int __fastcall sub_608AF1FC(int result);
 int __fastcall sub_608AF208(int a1, int a2);
 int __fastcall sub_608AF2F4(int a1, char a2);
 int __fastcall sub_608AF328(int result, int a2, int a3);
@@ -660,35 +676,35 @@ int __fastcall sub_608B0124(int a1);
 int __fastcall sub_608B02DC(int result, int a2);
 int __fastcall sub_608B02E4(int result);
 int __fastcall sub_608B032C(int result, int a2);
-int __fastcall sub_608B0388();
+int __fastcall sub_608B0388(int result);
 int __fastcall sub_608B0390(int result, int a2);
 int __fastcall sub_608B0398(int result);
-int __fastcall sub_608B03A8();
+int __fastcall sub_608B03A8(int result);
 _DWORD *__fastcall sub_608B03B0(int a1, int a2);
 int __fastcall sub_608B0420(int a1, int a2, int a3, int a4);
 int __fastcall sub_608B0444(int a1, int a2);
-int __fastcall sub_608B0454();
+int __fastcall sub_608B0454(int a1, int a2, int a3, int a4, int a5);
 int __fastcall sub_608B0510(int result, int a2, int a3, int a4);
 _DWORD *__fastcall sub_608B0664(_DWORD *a1, int a2);
 int __fastcall sub_608B06B4(int *a1, int a2);
 _DWORD *__fastcall nn__atk__detail__ExternalSoundPlayer__ExternalSoundPlayer(_DWORD *result);
 int __fastcall sub_608B0870(int a1, int a2);
-int __fastcall nn__atk__detail__ExternalSoundPlayer__SetPlayableSoundCount();
+int __fastcall nn__atk__detail__ExternalSoundPlayer__SetPlayableSoundCount(int a1, int a2);
 _DWORD *__fastcall sub_608B0B70(_DWORD *a1, int a2);
-int __fastcall sub_608B0C4C();
+int __fastcall sub_608B0C4C(int a1, _DWORD *a2, unsigned int a3);
 int __fastcall sub_608B0CEC(int a1);
 int __fastcall sub_608B0D44(_DWORD *a1, _DWORD *a2, int a3, int a4);
 int __fastcall sub_608B0E58(int a1);
 int __fastcall sub_608B0EE4(int a1);
-_DWORD * __fastcall sub_608B0EF4();
-bool __fastcall sub_608B0F28();
-_DWORD * __fastcall sub_608B0F38();
+_DWORD *__fastcall sub_608B0EF4(_DWORD *result, int a2);
+bool __fastcall sub_608B0F28(_DWORD *a1);
+_DWORD *__fastcall sub_608B0F38(_DWORD *result, int a2);
 int __fastcall sub_608B0F64(int a1);
 int __fastcall sub_608B0F8C(int a1);
 _DWORD *__fastcall sub_608B0F94(int a1, int a2, int a3);
 int __fastcall sub_608B0FC0(int a1);
 int __fastcall sub_608B0FCC(int a1, char a2);
-int __fastcall sub_608B0FD8();
+int __fastcall sub_608B0FD8(int a1, int a2);
 int __fastcall sub_608B0FE8(int a1, int a2, char a3);
 bool __fastcall sub_608B0FF8(int a1);
 int __fastcall sub_608B1008(int a1);
@@ -701,35 +717,35 @@ int __fastcall sub_608B1590(_WORD *a1);
 int __fastcall sub_608B15C8(_WORD *a1);
 int __fastcall sub_608B1608(_WORD *a1);
 int __fastcall sub_608B2118(int result);
-int * __fastcall sub_608B2128();
+int *__fastcall sub_608B2128(int *result, int *a2);
 int __fastcall sub_608B2188(int result);
 int __fastcall sub_608B2198(int result, int a2);
 int __fastcall sub_608B21A4(int result, int a2);
-int __fastcall nn__atk__detail__SoundArchiveFileReader__GetItemId();
-int __fastcall nn__atk__detail__SoundArchiveFileReader__GetItemLabel();
+int __fastcall nn__atk__detail__SoundArchiveFileReader__GetItemId(int a1, int a2);
+int __fastcall nn__atk__detail__SoundArchiveFileReader__GetItemLabel(int a1, unsigned int a2);
 int __fastcall sub_608B2218(int a1);
 int __fastcall sub_608B222C(int a1);
 int __fastcall sub_608B2240(int a1);
 int __fastcall sub_608B2254(int a1);
 int __fastcall sub_608B2268(int a1);
-int __fastcall sub_608B227C();
-int __fastcall sub_608B231C();
-int __fastcall sub_608B234C();
-int __fastcall sub_608B2384();
-int __fastcall sub_608B23C8();
+int __fastcall sub_608B227C(int a1, int a2, int a3);
+int __fastcall sub_608B231C(int a1, int a2, _DWORD *a3);
+int __fastcall sub_608B234C(int a1, int a2, _DWORD *a3);
+int __fastcall sub_608B2384(int a1, int a2, _DWORD *a3);
+int __fastcall sub_608B23C8(int a1, int a2, _DWORD *a3);
 int __fastcall sub_608B2448(int a1, int a2, _DWORD *a3);
-int __fastcall sub_608B24BC();
-int __fastcall sub_608B2504();
-int __fastcall sub_608B2598();
-int __fastcall sub_608B25EC();
-int __fastcall sub_608B2668();
-int __fastcall sub_608B2950();
-int __fastcall sub_608B29C0();
-int __fastcall sub_608B2A38();
-int __fastcall sub_608B2A84();
-int __fastcall sub_608B2B64();
-int __fastcall sub_608B2B88();
-int __fastcall sub_608B2BAC();
+int __fastcall sub_608B24BC(int a1, int a2, int a3);
+int __fastcall sub_608B2504(int a1, int a2);
+int __fastcall sub_608B2598(int a1, int a2, int a3);
+int __fastcall sub_608B25EC(int a1, int a2, int a3);
+int __fastcall sub_608B2668(int a1, int a2, int a3);
+int __fastcall sub_608B2950(int a1, int a2, int a3);
+int __fastcall sub_608B29C0(int a1, int a2, int a3);
+int __fastcall sub_608B2A38(int a1, int a2, _DWORD *a3);
+int __fastcall sub_608B2A84(int a1, unsigned int a2);
+int __fastcall sub_608B2B64(int a1, int a2);
+int __fastcall sub_608B2B88(int a1, int a2);
+int __fastcall sub_608B2BAC(int a1, _DWORD *a2, int a3, int a4);
 _DWORD *__fastcall sub_608B2BE4(_DWORD *result);
 _DWORD *__fastcall sub_608B2C00(_DWORD *result);
 int __fastcall sub_608B2C20(int result, int a2);
@@ -747,32 +763,32 @@ _DWORD *__fastcall sub_608B3D7C(int *a1, int a2, int a3);
 int __fastcall sub_608B3E5C(int result, int a2, int a3);
 int __fastcall sub_608B3F18(int *a1, int a2, int a3);
 int __fastcall sub_608B4078(int a1);
-int __fastcall sub_608B4094();
+int __fastcall sub_608B4094(_DWORD *a1, unsigned int a2);
 _DWORD *__fastcall sub_608B436C(_DWORD *result);
 int *__fastcall sub_608B4394(int *result, int a2, int a3);
-int __fastcall sub_608B43EC();
+int __fastcall sub_608B43EC(_DWORD *a1, int a2);
 _DWORD *__fastcall sub_608B4458(_DWORD *result);
 int __fastcall sub_608B44A8(_DWORD *a1);
 _DWORD *__fastcall sub_608B4500(_DWORD *result, int a2);
 _DWORD *__fastcall sub_608B4550(_DWORD *result, int *a2);
 unsigned int __fastcall sub_608B467C(int a1);
 int __fastcall sub_608B4688(_DWORD *a1, _BYTE *a2, int a3, int a4);
-int __fastcall sub_608B46CC();
-int __fastcall sub_608B470C();
+int __fastcall sub_608B46CC(int result);
+int __fastcall sub_608B470C(int result, int a2);
 int __fastcall sub_608B47F8(int a1);
 int __fastcall sub_608B4850(int a1);
 _DWORD *__fastcall sub_608B4894(_DWORD *a1, int a2, int a3);
 bool __fastcall sub_608B49F4(int *a1);
 __int64 __fastcall sub_608B4A50(__int64 result);
-int __fastcall sub_608B4A8C();
+int __fastcall sub_608B4A8C(int a1, unsigned int a2);
 int __fastcall sub_608B4AEC(int a1, int a2);
 int __fastcall sub_608B4B10(int a1, int a2);
-int __fastcall sub_608B4B54();
+int __fastcall sub_608B4B54(int a1, unsigned int a2, int a3);
 int __fastcall sub_608B4DE4(unsigned int a1);
 int __fastcall sub_608B4E24(unsigned int a1);
 _DWORD *__fastcall sub_608B4E34(_DWORD *result);
-int __fastcall sub_608B4E40();
-int __fastcall sub_608B4EBC();
+int __fastcall sub_608B4E40(int *a1, int a2);
+int __fastcall sub_608B4EBC(int result, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
 int __fastcall sub_608B5170(int a1, int a2);
 int __fastcall sub_608B5328(int a1, int a2);
 unsigned int __fastcall sub_608B5330(int a1, int a2);
@@ -783,25 +799,25 @@ int __fastcall sub_608B62CC(int a1, int a2, int a3);
 int __fastcall sub_608B68B8(int a1, int a2);
 int __fastcall sub_608B6A64(int result, int a2);
 int __fastcall sub_608B6B10(int a1, int a2);
-int __fastcall sub_608B6BA8();
+int __fastcall sub_608B6BA8(int a1, int a2);
 int __fastcall sub_608B6E78(int a1);
 int __fastcall sub_608B7240(int a1, int a2);
 int __fastcall sub_608B72E8(int a1, int a2, __int16 *a3);
 int __fastcall sub_608B7318(int a1, int a2, int a3);
 int __fastcall sub_608B7364(int a1, int a2);
-int __fastcall sub_608B73A4();
+int __fastcall sub_608B73A4(int a1);
 int __fastcall sub_608B7614(int a1);
 _DWORD *__fastcall sub_608B77D8(_DWORD *a1);
 int __fastcall sub_608B7B18(int a1);
-int __fastcall sub_608B8070();
+int __fastcall sub_608B8070(int a1, int a2);
 int __fastcall sub_608B8CE0(int a1, int a2);
 int __fastcall sub_608B8E7C(int a1);
 int __fastcall sub_608B90A8(int a1);
 _DWORD *__fastcall sub_608B9870(_DWORD *result);
 int __fastcall sub_608B9940(int result);
 int __fastcall sub_608B994C(int a1, int a2, _DWORD *a3, int a4);
-int __fastcall sub_608B9A70();
-signed int __fastcall sub_608B9BD8();
+int __fastcall sub_608B9A70(_DWORD *a1, int a2, unsigned int a3, int *a4);
+signed int __fastcall sub_608B9BD8(int a1, int *a2, unsigned int a3);
 int __fastcall sub_608B9D20(int *a1);
 int __fastcall sub_608B9E94(int a1, int a2, _DWORD *a3, int a4);
 int __fastcall sub_608B9EE8(int a1, int *a2, int a3);
@@ -810,35 +826,35 @@ int __fastcall sub_608B9FB4(int a1, int a2);
 int *__fastcall sub_608B9FD0(int *result);
 _DWORD *__fastcall sub_608BA130(int a1, int a2, int a3, int a4, int a5, int a6);
 int __fastcall sub_608BA190(int *a1, int a2, int a3, int a4, int a5, int *a6);
-int __fastcall sub_608BA460();
+int __fastcall sub_608BA460(int a1, int a2, int a3, int a4, int a5, _DWORD *a6, int *a7);
 int __fastcall sub_608BA5BC(int a1, int a2, int a3, int a4, int *a5, int a6);
 int __fastcall sub_608BA988(int a1, int a2, int a3, int a4);
 int *__fastcall sub_608BAB98(_DWORD *a1, int a2, int a3, int a4);
-int __fastcall sub_608BAD18();
+int __fastcall sub_608BAD18(int result, char a2);
 int __fastcall sub_608BADEC(int a1);
-int __fastcall sub_608BB040();
-int __fastcall sub_608BB124();
+int __fastcall sub_608BB040(int a1);
+int __fastcall sub_608BB124(int result, int a2, int a3);
 int __fastcall sub_608BB134(int result);
-int __fastcall sub_608BB150();
+int __fastcall sub_608BB150(int a1, int a2);
 int __fastcall sub_608BB1CC(int a1);
 int __fastcall sub_608BB200(int a1);
 int __fastcall sub_608BB288(int a1, int a2);
-int __fastcall sub_608BB3C8();
+int __fastcall sub_608BB3C8(int a1);
 int __fastcall sub_608BB8B0(int result, int a2);
 int __fastcall sub_608BB970(int a1, int a2);
 int __fastcall sub_608BBA58(int a1, int a2, int a3);
 int __fastcall sub_608BBAE0(int result, char a2);
-int __fastcall sub_608BBAEC();
+int __fastcall sub_608BBAEC(int result, char a2);
 int __fastcall sub_608BBAF4(int result, char a2);
 int __fastcall sub_608BBAFC(int result, char a2);
 int __fastcall sub_608BBB04(int result, int a2);
 int __fastcall sub_608BBB0C(int a1, int a2, int a3);
 int __fastcall sub_608BBB30(int a1, int a2);
-int __fastcall sub_608BC5E8();
+int __fastcall sub_608BC5E8(int result, int a2, int a3);
 int __fastcall sub_608BC754(int a1, int a2);
-int __fastcall sub_608BC76C();
+int __fastcall sub_608BC76C(int a1);
 int __fastcall sub_608BC794(int a1, int a2);
-bool __fastcall sub_608BC7E0();
+bool __fastcall sub_608BC7E0(int a1);
 unsigned int __fastcall sub_608BCDB8(_DWORD *a1, int a2);
 bool __fastcall sub_608BCE28(int a1);
 int __fastcall sub_608BD0E4(int a1);
@@ -847,8 +863,8 @@ int __fastcall sub_608BDC1C(int a1);
 int __fastcall sub_608BE948(int a1, int a2);
 bool __fastcall sub_608BEA10(int a1, int a2);
 int __fastcall sub_608BEF68(int a1, int a2);
-int __fastcall sub_608BF010();
-int __fastcall sub_608BF5A8();
+int __fastcall sub_608BF010(unsigned __int8 *a1, int a2);
+int __fastcall sub_608BF5A8(int a1, int a2, int *a3, int a4, int a5, int a6, int a7);
 int __fastcall sub_608BFC10(int a1);
 int __fastcall sub_608C00F8(int a1, unsigned __int8 *a2);
 int __fastcall sub_608C0874(int result, int a2);
@@ -866,13 +882,13 @@ int __fastcall sub_608C1208(int a1, _DWORD *a2, int a3);
 _DWORD *__fastcall sub_608C1284(_DWORD *result);
 int __fastcall sub_608C12FC(_DWORD *a1, int a2, _DWORD *a3, int a4, int a5);
 unsigned int __fastcall sub_608C148C(int a1);
-int __fastcall sub_608C1500();
+int __fastcall sub_608C1500(_DWORD *a1, int a2, unsigned int a3, int *a4);
 int __fastcall sub_608C1668(int a1, int a2, int a3, unsigned int a4);
 int __fastcall sub_608C1700(int a1, int a2);
 int __fastcall sub_608C1740(int a1, int a2, int a3, unsigned int a4);
 int __fastcall sub_608C17AC(int *a1);
 unsigned int __fastcall sub_608C1920(int a1, int a2);
-int __fastcall sub_608C19B8();
+int __fastcall sub_608C19B8(int a1, int a2);
 int __fastcall sub_608C19E4(int a1, int *a2, int a3);
 int *__fastcall sub_608C1A1C(int *result);
 _DWORD *__fastcall sub_608C1B7C(int a1, int a2, int a3, int a4, int a5, int a6);
@@ -880,29 +896,29 @@ int __fastcall sub_608C1BDC(int a1, int a2, int a3, int a4, int a5, int *a6, _DW
 int *__fastcall sub_608C2394(_DWORD *a1, int a2, int a3, int a4);
 int __fastcall sub_608C2514(int a1);
 int __fastcall sub_608C25B4(_BYTE *a1);
-int __fastcall sub_608C2A1C();
+int __fastcall sub_608C2A1C(int a1);
 int __fastcall sub_608C2A9C(_DWORD *a1, int a2);
 int __fastcall sub_608C2B80(int a1, int a2);
-int __fastcall sub_608C2C1C();
+int __fastcall sub_608C2C1C(_DWORD *a1, _DWORD *a2);
 int __fastcall sub_608C2C40(_DWORD *a1, int a2);
 int __fastcall sub_608C3F30(int a1);
 int __fastcall sub_608C3F88(_DWORD *a1);
 int __fastcall sub_608C3FDC(int a1);
 int __fastcall sub_608C406C(_DWORD *a1, _DWORD *a2);
-int __fastcall sub_608C40AC();
+int __fastcall sub_608C40AC(int a1, int a2);
 int __fastcall sub_608C40FC(int a1, int a2);
-int __fastcall sub_608C411C();
+int __fastcall sub_608C411C(int a1, int a2);
 int __fastcall sub_608C4158(int a1);
 int __fastcall sub_608C4160(int a1);
 int __fastcall sub_608C4168(int a1, int a2);
-int __fastcall sub_608C4410();
+int __fastcall sub_608C4410(int a1, struct nn_audio_PerformanceInfo *a2, __int64 a3, __int64 a4, int a5);
 _DWORD *__fastcall sub_608C4D44(_DWORD *a1);
 _DWORD *__fastcall sub_608C4D98(_DWORD *a1);
 int __fastcall sub_608C4EF4(int a1);
-int __fastcall sub_608C4F14();
+int __fastcall sub_608C4F14(int a1, _DWORD *a2, int a3);
 int __fastcall sub_608C5358(int a1);
 int __fastcall sub_608C5658(int result, int a2);
-int __fastcall sub_608C5670();
+int __fastcall sub_608C5670(int result, int a2);
 int __fastcall sub_608C5684(int result, int a2);
 int __fastcall sub_608C5700(int result, char a2);
 int __fastcall sub_608C5708(int result, int a2);
@@ -913,17 +929,17 @@ int __fastcall sub_608C5C24(_DWORD *a1);
 int __fastcall sub_608C5C60(int *a1, int a2, int a3);
 int __fastcall sub_608C5D2C(int a1);
 int __fastcall sub_608C5EAC(_DWORD *a1);
-_DWORD * __fastcall sub_608C5F1C();
+_DWORD *__fastcall sub_608C5F1C(_DWORD *a1, int a2, int a3, int a4, int a5, int a6);
 int __fastcall sub_608C5FA0(_DWORD *a1);
 int __fastcall sub_608C6070(int a1, int a2);
 int __fastcall sub_608C61FC(_DWORD *a1, int a2);
 int __fastcall sub_608C64B8(int a1);
-signed int __fastcall sub_608C65AC();
+signed int __fastcall sub_608C65AC(char **a1, char *a2, char *a3, int a4, int a5);
 _DWORD *__fastcall sub_608C666C(_DWORD *result);
-_DWORD * __fastcall sub_608C66F8();
+_DWORD *__fastcall sub_608C66F8(_DWORD *result, _DWORD *a2);
 _DWORD *__fastcall sub_608C6708(_DWORD *result, int a2, int a3);
-int __fastcall sub_608C6D44();
-int __fastcall sub_608C6EFC();
+int __fastcall sub_608C6D44(_DWORD *a1, _BYTE *a2, int a3, int a4, _DWORD *a5);
+int __fastcall sub_608C6EFC(int a1, int a2, int a3);
 int __fastcall sub_608C6FEC(int result);
 int __fastcall sub_608C7018(int result);
 int __fastcall sub_608C77DC(int a1);
@@ -932,50 +948,50 @@ int __fastcall sub_608C78C8(int a1, int a2, int a3, int a4);
 int __fastcall sub_608C7BA4(int a1);
 int __fastcall sub_608C7BEC(int a1);
 int __fastcall sub_608C7C40(int result, int a2, char a3);
-int __fastcall sub_608C7C58();
-int * __fastcall sub_608C7C64();
+int __fastcall sub_608C7C58(int result, char a2);
+int *__fastcall sub_608C7C64(int a1, int a2);
 int __fastcall sub_608C7D68(int result, int a2);
 int __fastcall sub_608C7E44(_DWORD *a1);
 int __fastcall sub_608C7E5C(int result);
-int __fastcall sub_608C8078();
+int __fastcall sub_608C8078(int a1, int a2, int a3);
 int __fastcall sub_608C81C0(int a1);
 int __fastcall sub_608C825C(_DWORD *a1, _DWORD *a2);
 int __fastcall sub_608C8308(_DWORD *a1);
 int __fastcall sub_608C83E4(int result);
 int __fastcall sub_608C8444(int result);
 int __fastcall sub_608C88E0(int a1, int a2);
-int __fastcall sub_608C8BBC();
+int __fastcall sub_608C8BBC(int result);
 int __fastcall sub_608C8CAC(int result, int a2);
 int __fastcall sub_608C8DE8(int a1);
-int __fastcall sub_608C932C();
+int __fastcall sub_608C932C(int a1);
 _WORD *__fastcall sub_608C938C(int a1);
-int __fastcall sub_608C93B0();
-int __fastcall sub_608C9520();
+int __fastcall sub_608C93B0(int a1);
+int __fastcall sub_608C9520(int result, int a2);
 int __fastcall sub_608C97A8(int a1);
-_DWORD * __fastcall sub_608C9AB8();
-_DWORD * __fastcall sub_608C9AF8();
+_DWORD *__fastcall sub_608C9AB8(_DWORD *result, int a2);
+_DWORD *__fastcall sub_608C9AF8(_DWORD *result, int a2);
 int __fastcall sub_608C9B6C(int result);
 int __fastcall sub_608C9BA0(int result);
-int __fastcall sub_608C9BC8();
-int __fastcall sub_608C9BEC();
+int __fastcall sub_608C9BC8(int result, int a2);
+int __fastcall sub_608C9BEC(int result, int a2);
 int __fastcall sub_608C9C10(int result);
-int __fastcall sub_608C9C38();
-int __fastcall sub_608C9C9C();
-int __fastcall sub_608C9CEC();
+int __fastcall sub_608C9C38(int result, int a2);
+int __fastcall sub_608C9C9C(int a1, int a2);
+int __fastcall sub_608C9CEC(int result, int a2);
 int __fastcall sub_608CA260(int a1, int a2, float *a3, int a4);
-_WORD * __fastcall sub_608CA3D4();
-int __fastcall sub_608CA3DC();
+_WORD *__fastcall sub_608CA3D4(int a1, int a2);
+int __fastcall sub_608CA3DC(int a1, int a2);
 int __fastcall sub_608CA46C(int a1, _DWORD *a2, int a3, int a4, int a5);
-_DWORD * __fastcall sub_608CA470();
-int __fastcall sub_608CA4A0();
-int __fastcall sub_608CA9B8();
-int __fastcall sub_608CAD8C();
+_DWORD *__fastcall sub_608CA470(_DWORD *result, int a2);
+int __fastcall sub_608CA4A0(int a1, float *a2, int a3, int a4, int a5, int a6);
+int __fastcall sub_608CA9B8(int a1, int a2, float *a3, float *a4, _DWORD *a5, int a6);
+int __fastcall sub_608CAD8C(int a1);
 int __fastcall sub_608CADA0(int a1);
-int __fastcall sub_608CADA8();
-int __fastcall sub_608CAE20();
-void __fastcall sub_608CAE4C();
-int __fastcall sub_608CAE64();
-int __fastcall sub_608CAF54();
+int __fastcall sub_608CADA8(int result, char a2);
+int __fastcall sub_608CAE20(int a1, int a2, int a3, int a4);
+void __fastcall sub_608CAE4C(int a1, int a2, const void *a3);
+int __fastcall sub_608CAE64(int result, int a2, int a3, int a4);
+int __fastcall sub_608CAF54(int a1, int a2, int a3);
 int __fastcall sub_608CB064(unsigned __int8 *a1);
 int *__fastcall sub_608CB104(_DWORD *a1, int a2, int a3, int a4, int a5);
 int __fastcall sub_608CB260(int a1, int a2);
@@ -1005,7 +1021,7 @@ int __fastcall sub_608CC820(int a1);
 void __fastcall sub_608CC99C(int a1);
 _DWORD *__fastcall sub_608CCC08(_DWORD *result);
 int __fastcall sub_608CCC78(_DWORD *a1, int a2, _DWORD *a3, int a4);
-int __fastcall sub_608CCE8C();
+int __fastcall sub_608CCE8C(_DWORD *a1, int a2, unsigned int a3, int *a4);
 int __fastcall sub_608CCFF0(int *a1);
 int __fastcall sub_608CD158(int a1, int a2);
 int __fastcall sub_608CD1E8(int a1, int *a2, int a3);
@@ -1015,22 +1031,22 @@ int __fastcall sub_608CD3E0(int a1, int a2, int a3, int a4, int a5, _DWORD *a6, 
 int *__fastcall sub_608CD7CC(_DWORD *a1, int a2, int a3, int a4);
 int __fastcall sub_608CD94C(int result);
 int __fastcall sub_608CD9D8(int a1, int a2);
-int __fastcall sub_608CDC24();
-int __fastcall sub_608CDC98();
-_DWORD * __fastcall sub_608CDEC0();
+int __fastcall sub_608CDC24(int a1, int a2);
+int __fastcall sub_608CDC98(int a1, int a2);
+_DWORD *__fastcall sub_608CDEC0(_DWORD *result);
 _DWORD *__fastcall sub_608CDED8(_DWORD *result);
-int __fastcall sub_608CE258();
-int __fastcall sub_608CE33C();
+int __fastcall sub_608CE258(int a1, unsigned int a2);
+int __fastcall sub_608CE33C(int a1, int a2, int a3, int a4);
 int __fastcall sub_608CE364(int a1, __int64 a2);
 int __fastcall sub_608CE3F4(int a1);
 int __fastcall sub_608CE450(int a1);
 int __fastcall sub_608CE4AC(int a1);
 int __fastcall sub_608CE508(int a1);
 int __fastcall sub_608CE564(int a1);
-int __fastcall sub_608CE5C0();
+int __fastcall sub_608CE5C0(int a1, char a2);
 _DWORD *__fastcall sub_608CE744(_DWORD *result);
 _DWORD *__fastcall sub_608CE75C(_DWORD *result);
-int __fastcall sub_608CEB34();
+int __fastcall sub_608CEB34(int a1, unsigned int a2);
 int __fastcall sub_608CEC78(int a1);
 int __fastcall sub_608CECD4(int a1, __int64 a2);
 int __fastcall sub_608CEDC8(int a1);
@@ -1040,22 +1056,22 @@ int __fastcall sub_608CEF24(int a1);
 int __fastcall sub_608CEF80(int a1);
 int __fastcall sub_608CEFDC(int a1);
 int __fastcall sub_608CF038(int a1);
-int __fastcall sub_608CF094();
+int __fastcall sub_608CF094(int a1, char a2);
 _DWORD *__fastcall sub_608CF0DC(int a1, int a2);
 int *__fastcall sub_608CF15C(int *a1);
-unsigned int __fastcall sub_608CF170();
+unsigned int __fastcall sub_608CF170(int a1, int a2, int a3);
 int __fastcall sub_608CF21C(_DWORD *a1, char a2);
 int __fastcall sub_608CF2A8(_DWORD *a1, int a2);
 int __fastcall sub_608CF338(_DWORD *a1, int a2);
-int __fastcall sub_608CF434();
+int __fastcall sub_608CF434(int *a1, int a2, void *a3, int a4, unsigned __int8 a5);
 int __fastcall sub_608CF4BC(int *a1);
 void __fastcall sub_608CF51C(int a1, void *a2, size_t a3);
 void __fastcall sub_608CF550(int a1, void *a2, size_t a3);
 int __fastcall sub_608CF91C(int a1, int a2, int a3, int *a4);
-int __fastcall sub_608CF998();
+int __fastcall sub_608CF998(int a1, int a2, int a3, int *a4);
 int __fastcall sub_608CFA04(_DWORD *a1, int a2, int a3);
 int __fastcall sub_608CFDC0(int result);
-int __fastcall sub_608CFDF8();
+int __fastcall sub_608CFDF8(int result, int a2, int a3, int a4);
 int __fastcall sub_608CFE1C(int result);
 unsigned int __fastcall sub_608CFE44(int a1, char *a2, size_t a3, int *a4, int a5, int a6);
 int __fastcall sub_608D0338(int a1, const void *a2, size_t a3, int *a4);
@@ -1068,14 +1084,14 @@ int __fastcall sub_608D08A8(int result);
 __int64 __fastcall sub_608D08D0(int a1, int a2, int a3, _DWORD *a4);
 int __fastcall sub_608D098C(int a1);
 int __fastcall sub_608D0994(int a1, void *a2);
-int __fastcall sub_608D09AC();
+int __fastcall sub_608D09AC(int a1, int a2, int a3);
 int __fastcall sub_608D09BC(int a1);
 _DWORD *__fastcall sub_608D09C4(_DWORD *result);
 int __fastcall sub_608D09D0(int *a1, int a2);
 int *__fastcall sub_608D09F8(int *result, int a2);
 int __fastcall sub_608D0A1C(int a1);
 int __fastcall sub_608D0B4C(int a1, int a2);
-int __fastcall sub_608D0B5C();
+int __fastcall sub_608D0B5C(int result, int a2, int a3, _DWORD *a4);
 int __fastcall sub_608D0C88(int result);
 bool __fastcall sub_608D0C9C(int a1, int a2);
 int __fastcall sub_608D0E10(_DWORD *a1);
@@ -1093,35 +1109,35 @@ int __fastcall sub_608D1A98(int a1);
 int __fastcall sub_608D1DA8(int a1, int a2);
 int __fastcall sub_608D2040(int a1, int a2);
 int __fastcall sub_608D2228(int a1, int a2, int a3);
-int __fastcall sub_608D23A4();
+int __fastcall sub_608D23A4(int a1, int a2, int a3);
 int __fastcall sub_608D2444(int a1, int a2, char a3);
-int __fastcall sub_608D27C8();
-int __fastcall sub_608D291C();
-int __fastcall sub_608D2AA4();
+int __fastcall sub_608D27C8(int a1, int a2, int a3, int a4, int a5);
+int __fastcall sub_608D291C(_DWORD *a1, const void *a2, size_t a3, int a4, int a5, int a6);
+int __fastcall sub_608D2AA4(int a1, int a2, unsigned int a3);
 int __fastcall sub_608D2AE8(int a1, const void *a2);
 int __fastcall sub_608D2BD8(int a1);
-int __fastcall sub_608D2CA4();
+int __fastcall sub_608D2CA4(int result, char a2);
 int __fastcall sub_608D2CAC(int *a1);
 int __fastcall sub_608D2CF8(int a1, int a2);
 int __fastcall sub_608D2E74(int a1, _DWORD *a2);
 _DWORD *__fastcall sub_608D300C(_DWORD *a1);
 int __fastcall sub_608D3188(int a1);
 int __fastcall sub_608D36D0(int *a1, int a2, int a3);
-int __fastcall sub_608D39CC();
+int __fastcall sub_608D39CC(int a1);
 int __fastcall sub_608D3A9C(int result, int a2);
 int __fastcall sub_608D3B00(int a1);
-unsigned int __fastcall sub_608D3BA0();
+unsigned int __fastcall sub_608D3BA0(int a1);
 int __fastcall sub_608D3BAC(int a1, _BYTE *a2, int a3, int a4);
-int __fastcall sub_608D3C60();
+int __fastcall sub_608D3C60(int result);
 int __fastcall sub_608D3DBC(int result, int a2);
-int __fastcall sub_608D3DDC();
+int __fastcall sub_608D3DDC(int result, int a2);
 int __fastcall sub_608D3E88(int a1);
 int __fastcall sub_608D3ED8(int a1);
 int __fastcall sub_608D3F30(int a1);
 int __fastcall sub_608D3F88(int a1);
 int __fastcall sub_608D3FE4(int a1);
 int __fastcall sub_608D4040(int result);
-int __fastcall sub_608D4178();
+int __fastcall sub_608D4178(int result, int a2);
 int __fastcall sub_608D477C(int a1, int a2, int a3);
 int __fastcall sub_608D4834(int a1, int a2, int a3, _DWORD *a4);
 bool __fastcall sub_608D4BD0(int a1);
@@ -1130,11 +1146,11 @@ int __fastcall sub_608D4C34(int a1);
 int __fastcall sub_608D4C8C(int a1, unsigned int a2);
 int __fastcall sub_608D4CB4(int a1, int a2);
 int __fastcall sub_608D4CC0(int a1);
-int __fastcall sub_608D524C();
+int __fastcall sub_608D524C(int a1, int a2, int a3, int *a4);
 int __fastcall sub_608D5408(int a1);
 int __fastcall sub_608D5458(int a1);
 int __fastcall sub_608D5464(int a1);
-char * __fastcall sub_608D5470();
+char *__fastcall sub_608D5470(int a1, unsigned int a2);
 unsigned __int8 *__fastcall sub_608D54A0(unsigned __int16 *a1, unsigned int a2);
 unsigned __int8 *__fastcall sub_608D556C(unsigned __int16 *a1, unsigned int a2);
 int __fastcall sub_608D5638(int a1);
@@ -1147,8 +1163,8 @@ int __fastcall sub_608D5754(int a1);
 void *__fastcall sub_608D5790(int a1);
 int __fastcall sub_608D5820(int a1);
 int __fastcall sub_608D5E0C(int a1, int *a2, int a3, int a4, int a5);
-int __fastcall sub_608D6D04();
-signed int __fastcall sub_608D6DB8();
+int __fastcall sub_608D6D04(int a1, int a2, int *a3);
+signed int __fastcall sub_608D6DB8(int a1, int a2, int a3);
 _DWORD *__fastcall sub_608D6DC4(int a1);
 _DWORD *__fastcall sub_608D6DDC(_DWORD *a1, int a2);
 int __fastcall sub_608D6E7C(int a1);
@@ -1156,16 +1172,16 @@ int __fastcall sub_608D6E84(int a1, int a2, _DWORD *a3);
 unsigned int __fastcall sub_608D6E8C(unsigned int result, int a2, unsigned int a3, unsigned int a4);
 _DWORD *__fastcall sub_608D6EDC(_DWORD *result);
 int __fastcall sub_608D6EF4(_DWORD *a1);
-_DWORD * __fastcall sub_608D7020();
+_DWORD *__fastcall sub_608D7020(_DWORD *result, int a2);
 int __fastcall sub_608D7058(int a1, unsigned __int8 *a2, char a3);
 int __fastcall sub_608D70DC(int a1);
 _DWORD *__fastcall sub_608D71CC(_DWORD *a1);
-int __fastcall sub_608D72C4();
+int __fastcall sub_608D72C4(int a1);
 int __fastcall sub_608D73A4(int a1);
-int __fastcall sub_608D73E0();
+int __fastcall sub_608D73E0(int a1);
 int __fastcall sub_608D73F8(_DWORD *a1);
-int __fastcall sub_608D741C();
-unsigned int __fastcall sub_608D74FC();
+int __fastcall sub_608D741C(int a1, int a2, int a3, int a4, int a5, int a6);
+unsigned int __fastcall sub_608D74FC(unsigned int result);
 bool __fastcall sub_608D7588(int a1);
 bool __fastcall sub_608D75B8(int a1);
 int __fastcall sub_608D7830(int a1, int a2);
@@ -1173,22 +1189,22 @@ int __fastcall sub_608D7A80(int a1, int a2, int a3, const char *a4);
 int __fastcall sub_608D7D4C(int a1, int a2);
 int __fastcall sub_608D7EF8(int a1, int a2, int a3, int a4);
 int __fastcall sub_608D8114(int a1, int a2, int a3, int a4, __int64 a5, int a6);
-int __fastcall sub_608D891C();
+int __fastcall sub_608D891C(int a1, int a2, const void *a3, int a4, int a5, int a6, int a7);
 int __fastcall sub_608D8F8C(int a1, int a2, _DWORD *a3, int a4, int a5, int a6);
 int __fastcall sub_608D9158(int a1, int a2, int *a3, int a4, int a5, int a6);
 int __fastcall sub_608D95B4(int a1);
 int __fastcall sub_608D9604(int a1);
 bool __fastcall sub_608D965C(int a1);
 int __fastcall sub_608D96C0(int a1);
-int __fastcall sub_608D9708();
+int __fastcall sub_608D9708(int a1);
 int __fastcall sub_608D9718(int a1);
-int __fastcall sub_608D9768();
+int __fastcall sub_608D9768(int a1, unsigned int a2);
 int __fastcall sub_608D9798(int a1);
 int __fastcall sub_608D97A4(int a1);
 int __fastcall sub_608D97B0(int a1, unsigned int a2);
 int __fastcall sub_608D97E4(int a1);
 int __fastcall sub_608D97FC(int a1);
-_DWORD * __fastcall sub_608D9818();
+_DWORD *__fastcall sub_608D9818(_DWORD *result);
 void __fastcall sub_608D9838(_DWORD *a1, _BYTE *a2, _BYTE *a3, size_t a4);
 char *__fastcall sub_608D98F4(unsigned int *a1);
 int __fastcall sub_608D9980(_DWORD *a1);
@@ -1201,26 +1217,26 @@ int __fastcall sub_608D9A70(int a1);
 int __fastcall sub_608D9AA0(int a1);
 void *__fastcall sub_608D9AD0(int a1);
 int __fastcall sub_608D9B60(int a1);
-int __fastcall sub_608D9B94();
+int __fastcall sub_608D9B94(int a1, _DWORD *a2);
 int __fastcall sub_608D9BFC(_DWORD *a1);
 int __fastcall sub_608D9C20(_DWORD *a1);
 int __fastcall sub_608D9C7C(int a1);
-int __fastcall sub_608D9E04();
+int __fastcall sub_608D9E04(int result);
 int __fastcall sub_608D9E88(int a1);
 _DWORD *__fastcall sub_608D9E9C(_DWORD *a1, unsigned __int8 *a2);
 int __fastcall sub_608D9F74(_DWORD *a1, int *a2);
-_DWORD * __fastcall sub_608DA050();
+_DWORD *__fastcall sub_608DA050(int a1);
 int __fastcall sub_608DA090(int a1);
 int __fastcall sub_608DA0E0(int a1);
-int __fastcall sub_608DA138();
+int __fastcall sub_608DA138(int *a1, int a2, _DWORD *a3);
 char *__fastcall sub_608DA1C8(_DWORD *a1);
 char *__fastcall sub_608DA1D4(_DWORD *a1, int a2);
-int __fastcall sub_608DA1FC();
+int __fastcall sub_608DA1FC(int a1);
 int __fastcall sub_608DA208(int a1, int a2);
 int __fastcall sub_608DA230(int a1);
 _DWORD *__fastcall sub_608DA2A8(_DWORD *result);
-int __fastcall sub_608DA314();
-int __fastcall sub_608DA388();
+int __fastcall sub_608DA314(_DWORD *a1, int a2);
+int __fastcall sub_608DA388(int a1, int a2);
 _DWORD *__fastcall sub_608DA42C(_DWORD *a1, int a2);
 int __fastcall sub_608DA4D4(_DWORD *a1);
 int __fastcall sub_608DA5E8(int *a1, int a2, int a3);
@@ -1234,99 +1250,99 @@ _DWORD *__fastcall sub_608DA8A4(_DWORD *a1);
 int __fastcall sub_608DAB60(_DWORD *a1);
 int __fastcall sub_608DADE4(int a1);
 int __fastcall sub_608DAED0(int a1);
-int __fastcall sub_608DBAA4();
-int __fastcall sub_608DBD90();
-_DWORD * __fastcall sub_608DBE04();
+int __fastcall sub_608DBAA4(_DWORD *a1, int a2, int a3, int a4, int a5, int a6);
+int __fastcall sub_608DBD90(int result);
+_DWORD *__fastcall sub_608DBE04(_DWORD *result);
 int __fastcall sub_608DC198(int result, int a2);
 int __fastcall sub_608DC1A0(int result, int a2);
 int __fastcall sub_608DC1A8(int a1, int a2);
 _DWORD *__fastcall sub_608DC5F8(_DWORD *a1);
-int __fastcall sub_608DC84C();
+int __fastcall sub_608DC84C(int a1, int a2);
 int __fastcall sub_608DC930(int a1);
-int __fastcall sub_608DCB08();
+int __fastcall sub_608DCB08(int a1, _DWORD *a2, int a3, char a4, char a5);
 int __fastcall sub_608DCC6C(int a1, int a2);
-int __fastcall sub_608DCD78();
+int __fastcall sub_608DCD78(int a1, int a2, int a3);
 int __fastcall sub_608DCEB0(int a1);
-bool __fastcall sub_608DCFB4();
-bool __fastcall sub_608DD174();
+bool __fastcall sub_608DCFB4(int a1, unsigned int a2, int a3, int a4, int a5);
+bool __fastcall sub_608DD174(int a1, int a2, int a3, int a4, int a5);
 _DWORD *__fastcall sub_608DD7BC(_DWORD *a1, unsigned int a2, int CurrentHeap);
-int __fastcall sub_608DD90C();
-int __fastcall sub_608DD918();
+int __fastcall sub_608DD90C(int result, int a2, int a3);
+int __fastcall sub_608DD918(int a1);
 int __fastcall sub_608DDA94(int a1);
 int __fastcall sub_608DDBBC(int result, int a2);
 int __fastcall sub_608DDBC4(int result, int a2, int a3);
 int __fastcall sub_608DDBD0(int result, int a2, int a3);
 int __fastcall sub_608DDBDC(int result, int a2);
-_DWORD * __fastcall sub_608DDE28();
+_DWORD *__fastcall sub_608DDE28(int a1, int a2, int a3, int a4, int a5, int a6);
 int __fastcall __operator_new(unsigned int a1);
 int __fastcall __operator_new_array_al(unsigned int a1);
 int __fastcall sub_608DE1A4(unsigned int a1, int a2);
 int __fastcall sub_608DE200(unsigned int a1, int a2);
-int __fastcall __operator_new_al();
+int __fastcall __operator_new_al(unsigned int a1, int CurrentHeap, int a3);
 int __fastcall __operator_delete(int a1);
 int __fastcall __operator_delete_array_al(int a1);
-int * __fastcall sead__ListNode__insertFront_();
+int *__fastcall sead__ListNode__insertFront_(int *result, _DWORD *a2);
 _DWORD *__fastcall sead__ListNode__erase_(_DWORD *result);
 int __fastcall sub_608DE684(int a1, int a2);
 _DWORD *__fastcall sub_608DE6BC(_DWORD *result);
 int __fastcall sub_608DF38C(int result);
-int __fastcall sub_608DF3CC();
+int __fastcall sub_608DF3CC(int a1, int a2, int a3);
 int __fastcall sub_608E1248(int result, unsigned int a2);
 int __fastcall sub_608E1254(int a1, int a2);
 int __fastcall sub_608E125C(int a1, int a2);
-int __fastcall sub_608E14B0();
-_DWORD * __fastcall sub_608E3820();
+int __fastcall sub_608E14B0(int a1, int a2, char a3);
+_DWORD *__fastcall sub_608E3820(int a1, int a2);
 bool __fastcall sub_608E3874(int a1);
 void __fastcall sub_608E60A4(struct sead_IDisposer *a1);
 int __fastcall sub_608E6138(_BYTE *a1);
-int __fastcall sub_608E6170();
-int __fastcall sub_608E6578();
-int __fastcall sub_608E65CC();
-int __fastcall sub_608E65F8();
-int __fastcall sub_608E6738();
-int __fastcall sub_608E6964();
+int __fastcall sub_608E6170(_BYTE *a1, int a2);
+int __fastcall sub_608E6578(_BYTE *a1, _DWORD *a2, int a3, int a4, int a5);
+int __fastcall sub_608E65CC(_BYTE *a1, int a2, int a3);
+int __fastcall sub_608E65F8(_BYTE *a1, _DWORD *a2, int a3, int a4, int a5);
+int __fastcall sub_608E6738(_BYTE *a1, int a2);
+int __fastcall sub_608E6964(_BYTE *a1, int a2, int a3, int a4);
 void __fastcall sub_608E69D4(int a1, int a2, int a3);
 void __fastcall sub_608E69DC(int a1, int a2, int a3);
-int __fastcall sub_608E69E4();
-int __fastcall sub_608E6A58();
-int __fastcall sub_608E6AC0();
-int __fastcall sub_608E6B28();
-int __fastcall sub_608E6B4C();
-int __fastcall sub_608E6B98();
-int __fastcall sub_608E6C04();
-int __fastcall sub_608E6C9C();
-int __fastcall sub_608E6CC0();
+int __fastcall sub_608E69E4(_BYTE *a1, int a2);
+int __fastcall sub_608E6A58(_BYTE *a1, int a2, int a3, int a4);
+int __fastcall sub_608E6AC0(_BYTE *a1, int a2, int a3);
+int __fastcall sub_608E6B28(_BYTE *a1, int a2);
+int __fastcall sub_608E6B4C(_BYTE *a1, int a2);
+int __fastcall sub_608E6B98(_BYTE *a1, int a2);
+int __fastcall sub_608E6C04(_BYTE *a1, unsigned int *a2, int a3, int a4, unsigned int a5);
+int __fastcall sub_608E6C9C(_BYTE *a1, int a2);
+int __fastcall sub_608E6CC0(_BYTE *a1, int a2);
 int __fastcall sub_608E6CE4(_BYTE *a1);
 int __fastcall sub_608E6D00(_BYTE *a1, _DWORD *a2, int a3);
 signed int __fastcall sub_608E7618(_DWORD *a1, int a2);
 int __fastcall sub_608E78F8(int a1, int a2);
 int __fastcall sub_608E7A54(int a1);
-int __fastcall sub_608E7C10();
-int __fastcall sub_608E7DD8();
+int __fastcall sub_608E7C10(int a1, _DWORD *a2, int a3, int a4);
+int __fastcall sub_608E7DD8(int a1, int a2, int a3, int a4);
 int __fastcall sead__FileDeviceMgr__FileDeviceMgr(int a1);
 int __fastcall sub_608E83B4(int a1, _DWORD *a2, _DWORD *a3);
 int __fastcall sub_608E8584(int a1, _DWORD *a2);
 _DWORD *__fastcall sub_608E8668(int a1, _DWORD *a2);
-int __fastcall sub_608E86B8();
+int __fastcall sub_608E86B8(int a1, _DWORD *a2, int a3, int a4, int a5);
 int __fastcall sub_608E8770(int a1, int a2, int a3);
 int __fastcall sub_608E8EFC(int a1, _DWORD *a2);
 void __fastcall sub_608E906C(int a1, int a2);
 int __fastcall sub_608E9B50(_DWORD *a1, _DWORD *a2);
 int __fastcall sub_608E9F1C(_DWORD *a1, char a2);
-_DWORD * __fastcall sub_608EA0FC();
+_DWORD *__fastcall sub_608EA0FC(_DWORD *a1);
 int __fastcall sub_608EB168(int a1);
 _DWORD *__fastcall sead__CalculateTask__CalculateTask(_DWORD *a1, int a2, int a3);
 void __fastcall sead__CalculateTask__dtor(int a1);
 int __fastcall sead__FaderTaskBase__FaderTaskBase(int a1, int a2, const char *a3);
 _DWORD *__fastcall sub_608ED418(_DWORD *result);
-_DWORD * __fastcall sub_608EDA7C();
+_DWORD *__fastcall sub_608EDA7C(int a1);
 _DWORD *__fastcall sub_608EDB14(_DWORD *a1);
 int __fastcall sub_608EDCA0(int a1, int a2);
-_DWORD * __fastcall sub_608EDDD0();
+_DWORD *__fastcall sub_608EDDD0(int a1, int a2);
 int __fastcall sead__GameFramework__initialize(_DWORD *a1);
-struct sead_CriticalSection * __fastcall sead__MethodTreeNode__pushBackChild();
+struct sead_CriticalSection *__fastcall sead__MethodTreeNode__pushBackChild(int a1, _DWORD *a2);
 struct sead_CriticalSection *__fastcall sead__MethodTreeNode__lock_(int a1);
-int __fastcall sead__MethodTreeNode__attachMutexRec_();
+int __fastcall sead__MethodTreeNode__attachMutexRec_(_DWORD *a1, int a2);
 struct sead_CriticalSection *__fastcall sead__MethodTreeNode__unlock_(int a1);
 int __fastcall sead__MethodTreeNode__detachAll(_DWORD *a1);
 int __fastcall sub_608EE3EC(int a1);
@@ -1335,10 +1351,10 @@ _DWORD *__fastcall sub_608EE56C(_DWORD *a1);
 struct sead_CriticalSection *__fastcall sub_608EEE24(int a1);
 struct sead_CriticalSection *__fastcall sub_608EEE2C(int a1);
 int __fastcall sub_608EEFA8(int result);
-int __fastcall sub_608EF048();
-int __fastcall sub_608EF0F0();
+int __fastcall sub_608EF048(int result, int *a2);
+int __fastcall sub_608EF0F0(int result, int *a2);
 int *__fastcall sead__TaskBase__TaskBase(int *a1, int **a2, int a3);
-void __fastcall sead__TaskBase__dtor();
+void __fastcall sead__TaskBase__dtor(struct sead_IDisposer *a1, int a2);
 int __fastcall sub_608EF560(int a1);
 int __fastcall sub_608EF6A8(int a1);
 int __fastcall sead__TaskBase__getMethodTreeMgr(int a1);
@@ -1346,26 +1362,26 @@ int __fastcall sead__TaskBase__attachMethodWithCheck(int a1);
 _DWORD *__fastcall sub_608EF790(_DWORD *result, int a2);
 _DWORD *__fastcall sub_608EFA68(_DWORD *a1);
 _DWORD *__fastcall sub_608EFC88(_DWORD *a1);
-int __fastcall sub_608EFCAC();
-int __fastcall sead__TaskMgr__destroyTaskSync();
-int __fastcall sub_608EFF80();
+int __fastcall sub_608EFCAC(_DWORD *a1);
+int __fastcall sead__TaskMgr__destroyTaskSync(int a1, int a2);
+int __fastcall sub_608EFF80(int a1, _DWORD *a2);
 _DWORD *__fastcall sub_608F01B0(int a1, _DWORD *a2);
 _DWORD *__fastcall sub_608F0578(int a1, int *a2, int a3);
 int __fastcall sub_608F0654(int a1, _DWORD *a2, int a3);
-int __fastcall sub_608F0894();
-int __fastcall sub_608F0A9C();
-int __fastcall sub_608F0BE8();
+int __fastcall sub_608F0894(int a1, _DWORD *a2, int a3);
+int __fastcall sub_608F0A9C(int a1, int a2, _DWORD *a3);
+int __fastcall sub_608F0BE8(int a1, _DWORD *a2);
 int __fastcall sub_608F1120(_DWORD *a1);
 int __fastcall sub_608F133C(int a1);
 int __fastcall sub_608F1340(_DWORD *a1);
 int __fastcall sub_608F1478(int result);
 int __fastcall sub_608F14B8(int result);
-int __fastcall sub_608F1654();
+int __fastcall sub_608F1654(int a1, _DWORD *a2, unsigned int a3, unsigned int a4);
 int __fastcall sub_608F1AA4(int result);
 int __fastcall sub_608F1B08(int a1);
-int __fastcall sub_608F1B60();
-int __fastcall sub_608F1B80();
-int __fastcall sub_608F1BA4();
+int __fastcall sub_608F1B60(int a1, int a2, int a3, int a4, int a5);
+int __fastcall sub_608F1B80(int a1, char a2);
+int __fastcall sub_608F1BA4(int result, int a2);
 int __fastcall sub_608F1BFC(int a1);
 int __fastcall sub_608F2530(int a1, int a2);
 unsigned int __fastcall sub_608F28E8(int a1);
@@ -1384,8 +1400,8 @@ int __fastcall sub_608F4CA8(int result, int a2);
 int __fastcall sub_608F4CBC(int a1, int a2);
 int __fastcall sub_608F4CE4(_DWORD *a1);
 int __fastcall sub_608F4D1C(int a1);
-int __fastcall sub_608F4D80();
-int __fastcall sub_608F4DCC();
+int __fastcall sub_608F4D80(int result, int *a2, int *a3, int a4);
+int __fastcall sub_608F4DCC(int result, int *a2, int *a3);
 int __fastcall sub_608F4E18(int a1);
 void __fastcall sub_608F4FB4(int *a1, _BYTE *a2);
 void __fastcall sub_608F5144(int *a1, void *a2);
@@ -1395,49 +1411,49 @@ float __fastcall sub_608F5718(float result, int a2, int a3);
 void __fastcall sub_608F5830(int *a1, int a2);
 int __fastcall sub_608F5918(int result, _WORD *a2, int a3);
 struct sead_IDisposer *__fastcall sead_IDisposer_ctor(struct sead_IDisposer *a1);
-struct sead_IDisposer * __fastcall sead__IDisposer__IDisposer();
+struct sead_IDisposer *__fastcall sead__IDisposer__IDisposer(struct sead_IDisposer *a1, struct sead_Heap *a2, unsigned int a3);
 struct sead_IDisposer *__fastcall sead__IDisposer__dtor(struct sead_IDisposer *a1);
-int __fastcall sead__ExpHeap__create();
-int __fastcall sead__ExpHeap__tryCreate();
+int __fastcall sead__ExpHeap__create(int a1, int a2, _DWORD *a3, int a4, int a5, int a6);
+int __fastcall sead__ExpHeap__tryCreate(int a1, int a2, _DWORD *a3, int a4, int a5, int a6);
 int __fastcall sub_608F61B0(int a1);
 int __fastcall sub_608F62C0(int a1, int a2, int a3);
 int __fastcall sub_608F6664(int a1);
 int __fastcall sub_608F6730(int a1);
 int __fastcall sub_608F69BC(int a1, unsigned int a2);
-int __fastcall sub_608F6BCC();
-_DWORD * __fastcall sub_608F6D68();
-int __fastcall sub_608F6E48();
-int __fastcall sub_608F6F58();
-int __fastcall sub_608F70B4();
-int __fastcall sub_608F7208();
-unsigned int __fastcall sub_608F7394();
+int __fastcall sub_608F6BCC(_DWORD *a1, int a2, int a3);
+_DWORD *__fastcall sub_608F6D68(_DWORD *a1, int a2);
+int __fastcall sub_608F6E48(_DWORD *a1, int a2, int a3);
+int __fastcall sub_608F6F58(int a1, unsigned int a2, int a3, int a4);
+int __fastcall sub_608F70B4(_DWORD *a1, unsigned int a2, int a3);
+int __fastcall sub_608F7208(_DWORD *a1, unsigned int a2, int a3, int a4);
+unsigned int __fastcall sub_608F7394(int a1, unsigned int a2);
 int __fastcall sub_608F8808(int a1, int a2, _DWORD *a3, int a4, int a5, int a6);
 int __fastcall sub_608F882C(int a1, int a2, _DWORD *a3, int a4, int a5, int a6);
-int __fastcall sead__Heap__Heap();
+int __fastcall sead__Heap__Heap(int a1, int a2, struct sead_Heap *a3, int a4, int a5, int a6, int a7);
 struct sead_IDisposer *__fastcall sub_608F96EC(_DWORD *a1);
 int __fastcall sub_608F9760(int a1);
-int __fastcall sub_608F98A4();
+int __fastcall sub_608F98A4(int a1, unsigned int a2, unsigned int a3);
 int __fastcall sead__Heap__appendDisposer_(int a1, int a2);
 int __fastcall sead__Heap__removeDisposer_(int a1, int a2);
 int __fastcall sub_608F9B64(int a1, int a2, signed int a3);
-_DWORD * __fastcall sead__HeapMgr__findContainHeap();
-void * __fastcall sub_608FAAF0();
+_DWORD *__fastcall sead__HeapMgr__findContainHeap(int a1, int a2);
+void *__fastcall sub_608FAAF0(int a1, int a2, int a3, int a4);
 int __fastcall sead__HeapMgr__getCurrentHeap(int a1);
-int __fastcall sead__HeapMgr__setCurrentHeap_();
+int __fastcall sead__HeapMgr__setCurrentHeap_(int a1, int a2);
 int __fastcall sub_608FAC7C(int result);
 struct sead_IDisposer *__fastcall sub_608FC0A4(struct sead_Heap *a1);
-int __fastcall sub_608FC5E0();
-int __fastcall sub_608FCB98();
+int __fastcall sub_608FC5E0(int a1, _DWORD *a2, _DWORD *a3);
+int __fastcall sub_608FCB98(int a1, int *a2);
 int __fastcall sub_608FD64C(char *a1, int *a2, int a3, char *a4, int a5, _DWORD *a6, _DWORD *a7, bool *a8);
-int __fastcall sead__SafeStringBase_char__operator_assign();
+int __fastcall sead__SafeStringBase_char__operator_assign(int result, int a2);
 int __fastcall sead__BufferedSafeStringBase_char__assureTerminationImpl_(int a1);
-int __fastcall sub_608FDE40();
-_DWORD * __fastcall sub_608FDF04();
-signed int __fastcall sub_608FDFB8();
+int __fastcall sub_608FDE40(_DWORD *a1, int a2);
+_DWORD *__fastcall sub_608FDF04(int a1, int CurrentHeap, int a3);
+signed int __fastcall sub_608FDFB8(int a1, _BYTE *a2, signed int a3);
 int __fastcall sub_608FEE88(unsigned int *a1, _DWORD *a2, int a3);
 int __fastcall sub_608FF3E8(int *a1, _DWORD *a2, int a3);
-int __fastcall sub_60900FB8();
-int __fastcall sead__StringUtil__vsnprintf();
+int __fastcall sub_60900FB8(float *a1, _DWORD *a2);
+int __fastcall sead__StringUtil__vsnprintf(int a1, unsigned int a2);
 struct sead_IDisposer *__fastcall sub_60902104(struct sead_IDisposer *a1);
 int __fastcall sead__ResourceMgr__createInstance(struct sead_Heap *a1);
 _DWORD *__fastcall sead__ResourceMgr__ResourceMgr(_DWORD *a1);
@@ -1446,15 +1462,15 @@ int __fastcall sub_60902734(int a1, _DWORD *a2);
 int __fastcall sub_60902770(_DWORD *a1, int a2);
 int __fastcall sead_ResourceMgr_OpenFileRelated(int a1, _DWORD *a2);
 int __fastcall sub_609029CC(int a1, _DWORD *a2);
-int __fastcall sub_60902A08();
+int __fastcall sub_60902A08(_DWORD *a1, _DWORD *a2, int a3, int a4);
 int __fastcall sub_60903F5C(int a1, unsigned int a2, int a3);
 _DWORD *__fastcall sub_609049FC(_DWORD *a1, _DWORD *a2, int a3, int a4);
 _DWORD *__fastcall sub_60904A80(_DWORD *result);
 int __fastcall sub_60904E6C(int a1, int a2, int a3);
 int __fastcall sub_60904F0C(int a1);
-_DWORD * __fastcall sub_609051E4();
+_DWORD *__fastcall sub_609051E4(_DWORD *a1, int a2, int a3, int a4);
 _DWORD *__fastcall sub_60905250(_DWORD *result);
-_DWORD * __fastcall sub_6090529C();
+_DWORD *__fastcall sub_6090529C(_DWORD *result);
 int __fastcall sub_609052D4(int result, int a2);
 int __fastcall sub_609052EC(int result, int a2);
 int __fastcall sub_609052F4(int result, int a2);
@@ -1478,35 +1494,35 @@ struct sead_IDisposer *__fastcall sub_6090805C(struct sead_IDisposer *a1);
 int __fastcall sub_609080F8(int a1);
 int __fastcall sub_60908100(int a1);
 struct sead_IDisposer *__fastcall sead__Thread__Thread( struct sead_IDisposer *a1, _DWORD *a2, int a3, int a4, int a5, int a6, unsigned int a7, int a8);
-int __fastcall sub_60908478();
+int __fastcall sub_60908478(int a1, struct nn_os **a2);
 struct sead_IDisposer *__fastcall sub_609084A8(struct sead_IDisposer *a1);
 int __fastcall sub_609085CC(int a1, int a2);
 int __fastcall sub_609085F8(_DWORD *a1);
-int __fastcall sead__ThreadMgr__createInstance();
-struct sead_IDisposer * __fastcall sub_6090891C();
+int __fastcall sead__ThreadMgr__createInstance(struct sead_Heap *a1);
+struct sead_IDisposer *__fastcall sub_6090891C( struct sead_IDisposer *a1, _DWORD *a2, int a3, int a4, int a5, int a6, int a7, unsigned int a8, int a9);
 int __fastcall sub_60908A98(int a1);
-int __fastcall sead__ThreadMgr__initialize();
-_DWORD * __fastcall sub_60908C2C();
-_DWORD * __fastcall sub_60908F70();
-int __fastcall sub_6090905C();
-unsigned int __fastcall sub_60909158();
-int __fastcall sub_60909348();
+int __fastcall sead__ThreadMgr__initialize(struct nn_os *a1, int a2);
+_DWORD *__fastcall sub_60908C2C(int a1, int a2);
+_DWORD *__fastcall sub_60908F70(_DWORD *result, int a2, int a3, int a4, int a5);
+int __fastcall sub_6090905C(int result, int a2, int a3, float *a4);
+unsigned int __fastcall sub_60909158(int a1, int a2, int a3);
+int __fastcall sub_60909348(int a1, int a2, float *a3, char a4);
 int __fastcall sub_60909504(int result);
 bool __fastcall sub_60909518(int a1);
-_DWORD * __fastcall sub_609095C0();
+_DWORD *__fastcall sub_609095C0(_DWORD *result);
 _DWORD *__fastcall sead__ControllerMgr__ControllerMgr(_DWORD *a1, int a2);
-int __fastcall sub_609097DC();
-int __fastcall sub_60909DF4();
+int __fastcall sub_609097DC(int a1, int a2);
+int __fastcall sub_60909DF4(int a1);
 _DWORD *__fastcall sub_60909E64(_DWORD *a1);
 int __fastcall sub_6090A23C(int result);
-float * __fastcall sub_6090A260();
+float *__fastcall sub_6090A260(float *result, float *a2);
 float *__fastcall sub_6090A384(float *result, float *a2, float *a3);
 int __fastcall sub_6090A7D4(int a1, float *a2);
-struct sead_IDisposer * __fastcall sub_6090B274();
-int __fastcall sub_6090B2B4();
+struct sead_IDisposer *__fastcall sub_6090B274(struct sead_IDisposer *a1);
+int __fastcall sub_6090B2B4(_DWORD *a1, int a2);
 int __fastcall sub_6090B310(int a1);
 int __fastcall sub_6090B32C(int a1);
-int __fastcall sub_6090B348();
+int __fastcall sub_6090B348(int a1);
 char *__fastcall sub_6090BCF8(_QWORD *a1, int a2);
 int __fastcall sub_6090BD34(_QWORD *a1, int a2);
 int __fastcall sub_6090BD8C(_QWORD *a1, __int64 *a2);
@@ -1516,21 +1532,21 @@ int __fastcall sub_6090BDD0(int a1);
 int __fastcall sub_6090BE54(int a1);
 int __fastcall sub_6090C000(int a1, int a2, float *a3, int a4);
 int __fastcall sub_6090C954(int result, float *a2);
-int __fastcall sub_6090CEB0();
-int __fastcall sub_6090DB24();
+int __fastcall sub_6090CEB0(int result, _QWORD *a2, int a3);
+int __fastcall sub_6090DB24(int result, int a2, int a3);
 int __fastcall sub_6090DBC8(int a1);
 int __fastcall sub_6090DBDC(int a1);
-int __fastcall sub_6090DC24();
-int __fastcall sub_6090E1F4();
+int __fastcall sub_6090DC24(int a1, int a2);
+int __fastcall sub_6090E1F4(int *a1, int a2, int a3, int a4, int a5);
 int __fastcall sub_6090E2D8(int *a1, int a2, int a3, int a4, int a5);
-int __fastcall sub_6090E680();
-int __fastcall sub_6090E95C();
+int __fastcall sub_6090E680(int result, float *a2, float *a3);
+int __fastcall sub_6090E95C(int a1, int a2, float *a3);
 float *__fastcall sub_6090EA30(float *result, float *a2, float *a3);
 int __fastcall sead__GlobalRandom__createInstance(struct sead_Heap *a1);
 unsigned int __fastcall sead__Random__init(unsigned int *a1);
 unsigned int __fastcall sead__Random__getU32(int *a1);
 _BYTE *__fastcall sead__Base64__encode(_BYTE *result, unsigned __int8 *a2, unsigned int a3, int a4);
-int __fastcall sead__Base64__decode();
+int __fastcall sead__Base64__decode(int a1, unsigned int a2, unsigned __int8 *a3, unsigned int a4, unsigned int *a5);
 int __fastcall sub_6090FB78(unsigned int *a1, unsigned __int8 *a2, int a3);
 int __fastcall sub_6090FC94(unsigned int *a1, _BYTE *a2);
 int __fastcall sub_6090FD94(unsigned __int8 *a1, int a2);
@@ -1539,7 +1555,7 @@ int __fastcall sub_6090FED8(unsigned int *a1, _BYTE *a2);
 int __fastcall sub_6091000C(int result);
 int __fastcall sub_60910068(int result, unsigned int a2);
 _DWORD *__fastcall sub_609101C0(struct sead_Heap *a1);
-int __fastcall sub_609103D4();
+int __fastcall sub_609103D4(int a1, _DWORD *a2, int a3);
 int __fastcall sub_609105F4(int a1);
 int __fastcall SoundSystem_createInstance_helper_helper_910804(int result, int a2);
 int __fastcall SoundSystem_createInstance_helper_helper_91080C(int result, int a2);
@@ -1550,7 +1566,7 @@ unsigned int __fastcall sub_60910B0C(int a1, int a2);
 bool __fastcall sub_609112F0(unsigned int a1);
 int __fastcall sub_60911344(int *a1, int *a2, int *a3);
 unsigned int __fastcall sub_60911400(_DWORD *a1);
-_DWORD * __fastcall sub_6091209C();
+_DWORD *__fastcall sub_6091209C(_DWORD *a1);
 _DWORD *__fastcall sub_609120C8(_DWORD *a1);
 int __fastcall sub_6091221C(int *a1, int a2);
 _DWORD *__fastcall sub_6091228C(_DWORD *a1);
@@ -1559,13 +1575,13 @@ int __fastcall sub_609122C8(int a1);
 int __fastcall sub_609122D0(int result);
 unsigned int __fastcall decompressYaz0(_BYTE *a1, int a2);
 int __fastcall sub_60912E1C(int result);
-int __fastcall sub_60912E2C();
+int __fastcall sub_60912E2C(int result, signed int a2, int a3);
 int __fastcall sub_60912E7C(int a1);
-int __fastcall sub_60912EA4();
+int __fastcall sub_60912EA4(int a1, int a2, int a3);
 int __fastcall sub_60912EC0(int a1, int a2);
 int __fastcall sub_60912F10(int a1, int a2, int a3);
-_DWORD * __fastcall sub_60912F2C();
-int __fastcall sub_60912F48();
+_DWORD *__fastcall sub_60912F2C(_DWORD *result);
+int __fastcall sub_60912F48(int result, int a2);
 _DWORD *__fastcall sub_60912F50(int a1, int a2);
 int __fastcall sub_60912FB4(int a1);
 int __fastcall sub_6091302C(int a1);
@@ -1573,22 +1589,22 @@ _DWORD *__fastcall sub_609130A4(int a1);
 _DWORD *__fastcall sub_60913100(int a1, int a2);
 int __fastcall sub_60913164(int a1);
 int __fastcall sub_609131DC(int a1);
-int __fastcall sub_60913258();
+int __fastcall sub_60913258(int *a1, int a2);
 int __fastcall sub_60913268(int *a1);
 int __fastcall sub_60913368(int a1, int a2);
 int __fastcall sub_609133D0(unsigned __int8 *a1, unsigned int a2);
 void *__fastcall sub_60913410(void *result, void *a2);
 int __fastcall sub_60913434(int a1);
 int __fastcall sub_60913448(int a1, int a2, int a3);
-int __fastcall sub_60913488();
+int __fastcall sub_60913488(int result, int a2, int a3);
 _DWORD *__fastcall sub_60914574(int a1, int a2);
 int __fastcall sub_60914960(char a1);
-int __fastcall sub_609149E4();
-unsigned int __fastcall sub_609149F0();
+int __fastcall sub_609149E4(int result);
+unsigned int __fastcall sub_609149F0(int a1, int a2, int a3, int *a4, int a5, int a6);
 int __fastcall sub_60914B2C(int a1);
 int __fastcall sub_60914D38(int *a1, int a2);
 int __fastcall sub_60914E10(_DWORD *a1, _DWORD *a2);
-int __fastcall sub_60915628();
+int __fastcall sub_60915628(int a1, int a2, struct sead_Heap *a3, unsigned int a4, int a5, char a6);
 int __fastcall sub_60916550(int a1, unsigned int a2, const void *a3, __int16 a4);
 unsigned int __fastcall sub_60917168(int a1, unsigned int *a2);
 int __fastcall sub_6091718C(int a1, int a2, int a3);
@@ -1597,7 +1613,7 @@ int __fastcall sub_60918DB8(int result);
 __int64 __fastcall sub_60918E08(__int64 result, int a2);
 int __fastcall sub_60918EB8(int a1);
 int __fastcall sub_60918FC4(int a1);
-int __fastcall sub_609194C8();
+int __fastcall sub_609194C8(int a1);
 int __fastcall sub_609195BC(int a1);
 int __fastcall sub_60919748(int a1);
 int __fastcall sub_60919C10(int a1);
@@ -1606,7 +1622,7 @@ _DWORD *__fastcall sub_6091AC40(_DWORD *a1);
 int __fastcall sub_6091AD4C(int a1);
 int __fastcall sub_6091ADA0(int a1);
 int __fastcall sub_6091AE0C(int a1, int a2);
-int __fastcall sub_6091AE30();
+int __fastcall sub_6091AE30(int result, int *a2, unsigned int a3);
 int __fastcall sub_6091B420(int result, int a2, char a3);
 int __fastcall sub_6091BE6C(_DWORD *a1);
 int __fastcall sub_6091D910(int a1, int a2);
@@ -1615,34 +1631,34 @@ _DWORD *__fastcall sub_6091DC90(_DWORD *result);
 bool __fastcall sub_6091E1AC(int a1, int a2);
 _DWORD *__fastcall sub_6091E220(_DWORD *a1);
 int __fastcall sub_6091E758(int a1);
-int __fastcall sub_6091F0FC();
+int __fastcall sub_6091F0FC(_DWORD *a1);
 _DWORD *__fastcall sub_6091F490(_DWORD *result);
 int __fastcall sub_6091F63C(int a1, int a2);
 int __fastcall sub_6091F7B8(int a1);
 int __fastcall sub_6091F8A0(int a1);
-int __fastcall sub_6091FC74();
+int __fastcall sub_6091FC74(signed int *a1, signed int a2, int a3, int a4);
 int __fastcall sub_6091FE5C(int a1);
 int __fastcall sub_609200B8(int a1);
-int __fastcall sub_60920648();
+int __fastcall sub_60920648(int a1, int a2, int *a3, int a4);
 int __fastcall sub_60920CD4(int a1, int a2);
 int __fastcall sub_60920E00(int a1);
-int __fastcall sub_609210C4();
+int __fastcall sub_609210C4(int result, char a2);
 int __fastcall sub_609213B8(int a1);
 int __fastcall sub_609217FC(int a1, int *a2, int a3, int a4);
 int __fastcall sub_60921BD4(int a1);
 int __fastcall sub_60921EB8(_DWORD *a1, int *a2);
 int __fastcall sub_60922478(int a1);
 int __fastcall sub_60923050(int a1);
-int __fastcall sub_60924160();
-int __fastcall sub_60924F70();
-int __fastcall sub_609252C8();
-int __fastcall sub_60925308();
-int __fastcall sub_60925434();
+int __fastcall sub_60924160(int *a1, _DWORD *a2);
+int __fastcall sub_60924F70(_DWORD *a1, int a2, unsigned int a3, int a4, int a5, int a6, int a7, int a8);
+int __fastcall sub_609252C8(int a1, int a2, int a3, int a4, int a5, int a6);
+int __fastcall sub_60925308(int a1, int a2, unsigned int a3);
+int __fastcall sub_60925434(_DWORD *a1, int a2, char a3, unsigned int a4);
 _DWORD *__fastcall sub_609263FC(_DWORD *a1);
 _DWORD *__fastcall sub_60926564(_DWORD *result, int a2);
-int __fastcall sub_60926604();
+int __fastcall sub_60926604(_DWORD *a1, int a2, int a3);
 int __fastcall sub_60926F90(_DWORD *a1, int a2);
-int __fastcall sub_60927968();
+int __fastcall sub_60927968(signed int *a1, signed int a2, int a3, int a4);
 int __fastcall sub_6092B744(int result);
 int __fastcall sub_6092BA74(int a1);
 int __fastcall sub_6092CE60(_DWORD *a1, const char **a2, int a3);
@@ -1651,49 +1667,49 @@ int __fastcall sub_6092D8A4(_DWORD *a1, int a2, int a3, int a4);
 int __fastcall sub_6092DC18(int result);
 int __fastcall sub_6092E254(int a1, int a2);
 int __fastcall sub_6092E6CC(int a1, int a2);
-int __fastcall sub_6092EC24();
+int __fastcall sub_6092EC24(int a1, int a2, unsigned int a3, int a4, int *a5, char a6);
 unsigned int __fastcall sub_6092F064(int a1, int a2, int a3);
 unsigned int __fastcall sub_6092F4F4(int a1, int a2, int a3);
 int __fastcall sub_6092FA78(int a1, int a2, int a3);
 int __fastcall sub_6092FF48(int a1, int a2, int a3);
-int __fastcall sub_60930034();
+int __fastcall sub_60930034(int a1, int a2, int a3, int a4, int a5);
 _DWORD *__fastcall sub_609301A4(int a1, int a2, int a3);
 int __fastcall sub_60930428(int a1, int a2, int a3, _DWORD *a4);
-_DWORD * __fastcall sub_60930AA8();
+_DWORD *__fastcall sub_60930AA8(int a1, int a2, _DWORD *a3, int a4);
 int __fastcall sub_60930DEC(int a1, int a2, int a3, int a4);
-int __fastcall sub_6093426C();
+int __fastcall sub_6093426C(int a1, unsigned int a2, unsigned int a3, __int16 a4, float *a5);
 int __fastcall sub_609343C4(int a1, int a2, unsigned int a3, int *a4);
 int __fastcall sub_60936138(int a1, int a2, unsigned int a3, int *a4);
 _DWORD *__fastcall sub_60938C28(_DWORD *a1);
 _DWORD *__fastcall sub_60938CF8(_DWORD *a1);
-int __fastcall sub_60938DB4();
+int __fastcall sub_60938DB4(int result);
 _DWORD *__fastcall sub_60938DF0(_DWORD *a1);
-unsigned int __fastcall sub_60938E68();
+unsigned int __fastcall sub_60938E68(int a1, signed int a2, int a3, int a4);
 int __fastcall sub_60938F1C(int a1, unsigned int a2);
-int __fastcall sub_609390E8();
+int __fastcall sub_609390E8(struct sead_Heap *a1);
 int __fastcall sub_60939170(int a1);
 int __fastcall sub_609393AC(_DWORD *a1, int a2);
 int __fastcall sub_609394E8(int a1);
 int __fastcall sub_60939660(int a1);
 int __fastcall sub_60939758(int a1);
-int __fastcall sub_6093981C();
+int __fastcall sub_6093981C(int a1, float *a2, int a3, int a4, int a5, int a6, int a7);
 int __fastcall sub_60939898(int a1, int32x2_t *a2, float *a3, int a4, int a5, int a6, int a7);
-int __fastcall sub_6093ABE8();
-int __fastcall sub_6093AC5C();
-_DWORD * __fastcall sub_6093AE84();
+int __fastcall sub_6093ABE8(int a1, float *a2, int a3, int a4, int a5, int a6, int a7);
+int __fastcall sub_6093AC5C(int a1, int a2, int a3);
+_DWORD *__fastcall sub_6093AE84(int a1, int a2, float32x2_t *a3, float32x2_t *a4, int a5, int a6, unsigned __int32 *a7);
 _DWORD *__fastcall sub_6093B22C(int a1, float *a2);
 int __fastcall sub_6093B3C0(int a1, float *a2, int a3, int a4, int a5, float32x2_t *a6, float32x2_t *a7, int a8);
-int __fastcall sub_6093BB54();
+int __fastcall sub_6093BB54(int a1, int a2, int a3, float32x2_t *a4, float32x2_t *a5);
 float *__fastcall sub_6093C080(float *a1, float *a2, float *a3, int a4, int a5);
 void *__fastcall sub_6093D054(int a1, int a2, int a3, float32x2_t *a4);
 _DWORD *__fastcall sub_6093D6A4(_DWORD *result, float *a2, int a3, unsigned int a4);
-int __fastcall sub_6093E338();
-int __fastcall sub_6093EB98();
+int __fastcall sub_6093E338(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+int __fastcall sub_6093EB98(int a1, __int16 a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, char a10);
 int __fastcall sub_6093EE30(_DWORD *a1, int *a2);
 int __fastcall sub_6093EFC8(int a1, int a2, int a3, int a4, __int16 a5);
-int __fastcall sub_6093F214();
-int __fastcall sub_6093F284();
-int __fastcall sub_6093F664();
+int __fastcall sub_6093F214(int a1, int a2, int a3, int a4, int a5);
+int __fastcall sub_6093F284(int a1, int a2, int a3, float *a4, float *a5, float *a6);
+int __fastcall sub_6093F664(int a1, int a2);
 void *__fastcall sub_6093F6B4(int a1, int a2, int a3);
 int __fastcall sub_6093F840(int a1, int a2, float *a3, float *a4, float *a5);
 void *__fastcall sub_6093FF24(int a1, int a2, unsigned int a3, unsigned int a4, int a5);
@@ -1704,7 +1720,7 @@ _DWORD *__fastcall sub_609407C0(_DWORD *a1);
 int __fastcall sub_6094083C(int result, int a2);
 int __fastcall sub_60940BC4(int result);
 _DWORD *__fastcall sub_60940C28(_DWORD *a1);
-void __fastcall sub_60940D4C();
+void __fastcall sub_60940D4C(int a1, int a2, int a3, int a4);
 _DWORD *__fastcall sub_60940E18(_DWORD *result, int a2);
 int __fastcall sub_60940E3C(int a1);
 signed int __fastcall sub_60940EA4(_DWORD *a1);
@@ -1719,28 +1735,28 @@ _DWORD *__fastcall sub_60941B30(_DWORD *result);
 bool __fastcall sub_60942C28(int a1, _DWORD *a2, int a3);
 int __fastcall sub_60943228(_DWORD *a1, int a2, int a3);
 int __fastcall sub_60943C90(float *a1, float *a2, float *a3);
-int __fastcall sub_60944CF4();
-int __fastcall sub_60946C34();
-int __fastcall sub_60946EA0();
-int __fastcall sub_60946F84();
+int __fastcall sub_60944CF4(int a1, _DWORD *a2, int a3, int a4);
+int __fastcall sub_60946C34(int a1, int a2, int a3);
+int __fastcall sub_60946EA0(int a1, int a2, int a3);
+int __fastcall sub_60946F84(_DWORD *a1, int a2, int a3);
 _DWORD *__fastcall sub_609472C0(_DWORD *a1);
 int __fastcall sub_60947310(int a1, _BYTE **a2);
 int __fastcall sub_60947328(int a1, int a2, int a3);
-int __fastcall sub_60947360();
+int __fastcall sub_60947360(int a1, int a2, int a3);
 int __fastcall sub_60947394(_DWORD *a1, int a2);
-int __fastcall sub_609473AC();
-int __fastcall sub_609478D8();
+int __fastcall sub_609473AC(_DWORD *a1, _DWORD *a2, int a3, _DWORD *a4);
+int __fastcall sub_609478D8(_DWORD *a1, int a2, _DWORD *a3);
 unsigned int __fastcall sub_6094793C(unsigned int result, _DWORD *a2, int a3);
-_DWORD * __fastcall sub_60947BCC();
+_DWORD *__fastcall sub_60947BCC(_DWORD *result);
 _DWORD *__fastcall sub_60947BFC(_DWORD *result, int a2);
 int __fastcall sub_60947D30(int a1, int a2, int a3, int a4);
 int __fastcall sub_60947DB0(_DWORD *a1, int a2, int a3, int a4, _DWORD *a5);
-int __fastcall sub_60947FE0();
-int __fastcall sub_60948064();
+int __fastcall sub_60947FE0(int a1, _DWORD *a2, _DWORD *a3, int a4, int a5);
+int __fastcall sub_60948064(_DWORD *a1, int a2);
 int __fastcall sub_609481E8(struct sead_Heap *a1);
 _DWORD *__fastcall sub_60948270(_DWORD *a1);
-int __fastcall sub_6094912C();
-int __fastcall sub_60949218();
+int __fastcall sub_6094912C(int a1, int a2);
+int __fastcall sub_60949218(_DWORD *a1, int a2);
 int __fastcall sub_60949640(_DWORD *a1, int a2);
 int __fastcall sub_609499CC(_DWORD *a1, int a2);
 int __fastcall sub_60949FA8(_DWORD *a1, int a2);
@@ -1769,35 +1785,35 @@ int __fastcall sub_6094FD38(int a1, _DWORD *a2, unsigned int a3, unsigned int a4
 int __fastcall sub_609503B0(_DWORD *a1, _DWORD *a2, unsigned int a3, unsigned int a4, int a5, char a6);
 _DWORD *__fastcall sub_60950748(struct sead_Heap *a1);
 _DWORD *__fastcall sub_60951188(struct sead_Heap *a1);
-int __fastcall sub_60951358();
+int __fastcall sub_60951358(_DWORD *a1, int a2);
 int __fastcall sub_609515BC(int *a1, int a2);
 int __fastcall sub_60951610(int *a1);
-int ** __fastcall sub_60951E50();
+int **__fastcall sub_60951E50(int **a1, int *a2);
 int __fastcall sub_60952160(int result);
 int __fastcall sub_60952F14(int a1, int a2, int a3, int a4, _DWORD *a5, int a6);
 int __fastcall sub_60953264(int a1);
 _DWORD *__fastcall sub_60953304(_DWORD *a1);
-int __fastcall sub_60953384();
+int __fastcall sub_60953384(int result, _DWORD *a2, int a3, int a4, signed int a5, int a6);
 char *__fastcall sub_6095353C(_DWORD *a1, int a2, int a3, int a4);
 int __fastcall sub_60953648(int a1, _DWORD *a2, int *a3, _DWORD *a4, int a5);
 int __fastcall sub_60953920(_DWORD *a1, _DWORD *a2, int a3);
-char * __fastcall sub_60953BBC();
+char *__fastcall sub_60953BBC(char *result, int a2, int a3, char *a4);
 bool __fastcall sub_60953C40(_DWORD *a1, char *a2);
 int __fastcall sub_60953CB8(int *a1, _DWORD *a2, int a3, int a4);
 int __fastcall sub_609540CC(struct sead_Heap *a1);
 _DWORD *__fastcall sub_60954154(_DWORD *a1);
-int __fastcall sub_609542B4();
+int __fastcall sub_609542B4(int a1, int a2);
 int __fastcall sub_60954B6C(int result, char a2);
 int __fastcall sub_6095537C(int a1, unsigned int a2, int a3);
 int __fastcall sub_609553AC(int a1, int a2);
-int __fastcall sub_609566B0();
+int __fastcall sub_609566B0(int a1);
 int __fastcall sub_609580C8(_DWORD *a1, int a2);
-int __fastcall sub_6095811C();
+int __fastcall sub_6095811C(_DWORD *a1, _DWORD *a2);
 int __fastcall sub_60958440(int a1);
 int __fastcall sub_60958448(int a1);
 int __fastcall sub_60958618(int a1);
-int __fastcall sub_6095862C();
-int __fastcall sub_60958690();
+int __fastcall sub_6095862C(_DWORD *a1, int a2);
+int __fastcall sub_60958690(int a1, int a2, int a3, int a4);
 unsigned int *__fastcall sub_6095C17C(_DWORD *a1);
 int __fastcall sub_6095C4A8(int a1);
 int __fastcall sub_6095C8AC(int a1);
@@ -1807,16 +1823,16 @@ _DWORD *__fastcall sub_6095F284(_DWORD *a1);
 int __fastcall sub_6095F338(int a1, int a2);
 int __fastcall sub_6095F340(int a1, int a2, __int64 *a3, _QWORD *a4);
 int __fastcall sub_6095F6B0(int a1, int a2, int a3, int *a4);
-float * __fastcall sub_6095FAFC();
+float *__fastcall sub_6095FAFC(int a1, float *a2, float *a3, float *a4, int a5);
 int __fastcall sub_609600C8(int result);
-void __fastcall sub_609606E0();
+void __fastcall sub_609606E0(int a1, float *a2, float *a3);
 int __fastcall sub_60960724(int a1, float *a2);
 int __fastcall sub_60960770(int a1, unsigned int a2, unsigned int a3);
 int __fastcall sub_60960DA8(int a1, float32x2_t *a2, float32x4_t *a3, float32x4_t *a4, _DWORD *a5);
 int __fastcall sub_60961E98(int a1, float *a2, float *a3, int a4, float *a5);
 int __fastcall sub_60962310(int a1, int a2, int a3, int a4, int a5);
 _DWORD *__fastcall sub_609628A4(_DWORD *a1);
-int __fastcall sub_609628D4();
+int __fastcall sub_609628D4(unsigned int *a1, int a2);
 int __fastcall sub_60962B14(int a1, float *a2);
 int __fastcall sub_60962B84(int a1, _DWORD *a2, float *a3, unsigned __int8 a4);
 int __fastcall sub_60962CEC(int a1, float *a2, float *a3, unsigned __int8 a4);
@@ -1841,70 +1857,70 @@ int __fastcall sub_60966E18(int a1, int a2, float a3, float *a4, int a5, float32
 int __fastcall sub_6096701C(int result, _QWORD *a2, _QWORD *a3, int a4);
 int __fastcall sub_60967204(int result, _QWORD *a2, _QWORD *a3, int a4);
 int __fastcall sub_609673A0(int a1);
-float * __fastcall sub_609673FC();
-float * __fastcall sub_60967488();
+float *__fastcall sub_609673FC( float *result, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, float a10, float a11, float a12);
+float *__fastcall sub_60967488( float *result, float a2, float a3, float a4, float a5, float a6, float a7, float a8, float a9, float a10, float a11, float a12, float a13);
 int __fastcall sub_609674EC(_QWORD *a1, float *a2, float *a3, float *a4);
 _DWORD *__fastcall sub_60967650(int a1, int a2, float32x2_t *a3, int a4, int a5, int a6);
 _BYTE *__fastcall sub_60967CC4(_BYTE *result);
 int __fastcall sub_60967F54(int a1, int a2, int a3, unsigned int a4);
-int __fastcall sub_60968528();
+int __fastcall sub_60968528(_DWORD *a1, _DWORD *a2);
 int __fastcall sub_60968868(_DWORD *a1, unsigned int a2);
 _DWORD *__fastcall sub_609689A8(struct sead_Heap *a1);
-int __fastcall sub_60968C90();
+int __fastcall sub_60968C90(int *a1, int a2);
 _DWORD *__fastcall sub_60968F20(struct sead_Heap *a1);
 _DWORD *__fastcall sub_60969510(int a1, int a2);
 int __fastcall sub_609695A8(_DWORD *a1, _DWORD *a2, _DWORD *a3, float *a4, _DWORD *a5, _DWORD *a6);
 int __fastcall sub_60969C24(struct sead_Heap *a1);
-int __fastcall sub_60969DE4();
+int __fastcall sub_60969DE4(_DWORD *a1, int a2, _DWORD *a3);
 _DWORD *__fastcall sub_6097114C(_DWORD *a1, int a2, _DWORD *a3, int a4);
 int __fastcall sub_6097136C(int a1);
 int __fastcall sub_60971380(int a1);
 int __fastcall sub_60971870(int a1);
 _DWORD *__fastcall sub_6097189C(_DWORD *a1);
 _DWORD *__fastcall sub_60971CC8(struct sead_Heap *a1);
-__int64 __fastcall sub_60971E2C();
+__int64 __fastcall sub_60971E2C(int a1, int a2, int a3);
 int __fastcall sub_60971F84(int a1, _DWORD *a2, int a3);
 int __fastcall sub_60972238(int a1, _DWORD *a2, int a3);
 _BYTE *__fastcall sub_60972320(_BYTE *result);
 int __fastcall sub_60972344(_BYTE *a1, int a2);
 void *__fastcall sub_60972394(void *a1);
-int __fastcall sub_609723AC();
-_WORD * __fastcall sub_60972434();
+int __fastcall sub_609723AC(int a1, __int16 a2, int a3, char a4, char a5, int a6);
+_WORD *__fastcall sub_60972434(_WORD *result, __int16 a2, __int16 a3, __int16 a4);
 int __fastcall sub_60972444(unsigned __int16 *a1);
-int __fastcall sub_60972534();
+int __fastcall sub_60972534(unsigned __int16 *a1, int a2);
 _DWORD *__fastcall sub_60972724(_DWORD *result);
 int __fastcall sub_6097276C(int a1, int a2);
 _DWORD *__fastcall sub_60972840(_DWORD *result);
-int __fastcall sub_609728A4();
+int __fastcall sub_609728A4(int result, int a2, int a3);
 int __fastcall sub_609729A8(int result);
 unsigned int __fastcall sub_60972BA8(int a1, int a2);
 _DWORD *__fastcall sub_60973ACC(_DWORD *result);
 int __fastcall sub_60973AF4(int result, int a2);
 _DWORD *__fastcall sub_60973B54(_DWORD *a1);
-int __fastcall sub_60973C10();
+int __fastcall sub_60973C10(int result, int a2, int a3, int a4);
 int __fastcall sub_60973C8C(int result);
 _DWORD *__fastcall sub_60973C9C(_DWORD *result, int a2, int a3);
-int __fastcall sub_60973CF8();
+int __fastcall sub_60973CF8(int *a1, int *a2, int a3, __int16 a4, int a5, int a6);
 int __fastcall sub_60973D88(int a1, int a2, int a3, int a4, int a5, int a6, int a7);
 int __fastcall sub_609740C0(int a1, int *a2, unsigned int a3, int a4, int a5, int a6, int a7);
 int __fastcall sub_609745B0(int a1, int *a2, unsigned int a3, int a4, int a5, int a6);
 int __fastcall sub_609749E8(_DWORD *a1);
-_DWORD * __fastcall sub_60974AA0();
+_DWORD *__fastcall sub_60974AA0( int a1, char a2, _DWORD *a3, int *a4, int *a5, int a6, int a7, int a8, _DWORD *a9, int a10);
 int __fastcall sub_60974E18(int a1, float *a2);
 unsigned int __fastcall sub_60974F74(int a1);
 _DWORD *__fastcall sub_60974FA4(int a1);
-int __fastcall sub_609750D0();
+int __fastcall sub_609750D0(int a1, int a2, _DWORD *a3, int a4, int a5, int a6, int a7, int a8, char a9);
 unsigned int *__fastcall sub_609757A8(int a1);
 signed int __fastcall sub_609757C8(int a1, int a2);
 int *__fastcall sub_60975830(_DWORD *a1, int a2);
-int __fastcall sub_609758B8();
-int __fastcall sub_6097597C();
-int __fastcall sub_60975F70();
-unsigned int __fastcall sub_60976398();
-int __fastcall sub_609763D0();
-int __fastcall sub_6097642C();
+int __fastcall sub_609758B8(int a1, int a2, int a3, int a4);
+int __fastcall sub_6097597C(int a1, int a2);
+int __fastcall sub_60975F70(int a1, int a2, unsigned __int8 *a3, int a4);
+unsigned int __fastcall sub_60976398(unsigned int result, int a2, int a3, int a4);
+int __fastcall sub_609763D0(int a1, int a2);
+int __fastcall sub_6097642C(int a1, int a2, int a3, int a4);
 int __fastcall sub_609765CC(int a1, int a2);
-_DWORD * __fastcall sub_60976754();
+_DWORD *__fastcall sub_60976754(int a1, _DWORD *a2);
 _DWORD *__fastcall sub_60976810(int a1, _DWORD *a2);
 unsigned int __fastcall sub_60976854(int a1, int a2, int a3);
 int __fastcall sub_60976B50(int a1);
@@ -1914,9 +1930,9 @@ int __fastcall sub_60976CA0(int a1, int a2);
 _DWORD *__fastcall sub_60976CEC(_DWORD *a1);
 _DWORD *__fastcall sub_60976D5C(_DWORD *a1);
 unsigned int __fastcall sub_60976E74(int a1, int a2, int a3, signed int a4, unsigned __int8 a5, int a6);
-int __fastcall sub_60977198();
-int __fastcall sub_60977248();
-_DWORD * __fastcall sub_60977398();
+int __fastcall sub_60977198(int result, int a2);
+int __fastcall sub_60977248(int a1, int a2, _DWORD *a3, int a4);
+_DWORD *__fastcall sub_60977398(int a1, int a2, unsigned int a3);
 _DWORD *__fastcall sub_609777E8(_DWORD *a1);
 _DWORD *__fastcall sub_60979864(_DWORD *result, int a2, int a3);
 int __fastcall sub_60979A00(int a1, int *a2);
@@ -1927,44 +1943,44 @@ unsigned int __fastcall sub_6097A98C(int a1);
 int __fastcall sub_6097AEEC(int a1, unsigned int a2, float *a3);
 unsigned int __fastcall sub_6097B2F8(unsigned int a1, int a2, unsigned int a3, int a4);
 int __fastcall sub_6097BD7C(int result);
-int __fastcall sub_6097C558();
+int __fastcall sub_6097C558(int result, int a2, int a3, int a4);
 int __fastcall sub_6097C594(_DWORD *a1);
 int __fastcall sub_6097CBA8(int a1);
 int __fastcall sub_6097D588(int a1);
 int __fastcall sub_6097D6F4(int a1);
 int __fastcall sub_6097DA70(int a1, int a2);
-int __fastcall sub_6097DC6C();
+int __fastcall sub_6097DC6C(int a1, int a2, int a3, _BYTE *a4);
 int __fastcall sub_6097DDB0(int a1, int a2, char *a3);
 int __fastcall sub_6097F5A8(float **a1);
 int __fastcall sub_6097F690(int a1, int a2);
 int __fastcall sub_6097FDF0(int a1);
-_DWORD * __fastcall sub_60980684();
-int __fastcall sub_60980818();
-int __fastcall sub_609810F8();
+_DWORD *__fastcall sub_60980684(_DWORD *a1, int a2, int a3);
+int __fastcall sub_60980818(int a1, int a2);
+int __fastcall sub_609810F8(int result, int a2);
 int __fastcall sub_60981CF4(int a1, int a2, int a3, int a4);
 int __fastcall sub_609823F8(int a1);
 int __fastcall sub_60982658(_DWORD *a1, int a2, signed int a3);
 int __fastcall sub_60982EB0(int a1, int a2);
-int __fastcall sub_60982EE0();
-unsigned int __fastcall sub_60982F50();
+int __fastcall sub_60982EE0(int a1, int a2, int a3);
+unsigned int __fastcall sub_60982F50(int a1, _BYTE *a2, _BYTE *a3, _DWORD *a4);
 _DWORD *__fastcall sub_60983BE4(_DWORD *a1, unsigned __int8 *a2);
 int __fastcall sub_60983E78(int a1);
 int __fastcall sub_60984234(int a1);
 _DWORD *__fastcall sub_60984604(int a1, _BYTE *a2, int a3, int a4);
-_DWORD * __fastcall sub_60984774();
-_DWORD * __fastcall sub_609847CC();
+_DWORD *__fastcall sub_60984774(int a1, int a2, int a3, int a4);
+_DWORD *__fastcall sub_609847CC(int a1, int a2);
 _DWORD *__fastcall sub_60984930(int a1, _BYTE *a2, int a3);
-_DWORD * __fastcall sub_60984A5C();
-int __fastcall sub_60984B90();
+_DWORD *__fastcall sub_60984A5C(int a1, int a2, int a3, int a4, int a5);
+int __fastcall sub_60984B90(int a1, int a2);
 _DWORD *__fastcall sub_60984EF8(int a1, _BYTE *a2, int a3);
-_WORD * __fastcall sub_609854EC();
+_WORD *__fastcall sub_609854EC(_WORD *a1, const void *a2, int a3);
 int __fastcall sub_60985DE8(int a1);
-_DWORD * __fastcall sub_6098620C();
-_DWORD * __fastcall sub_6098625C();
+_DWORD *__fastcall sub_6098620C(int a1, int a2, int a3, int a4);
+_DWORD *__fastcall sub_6098625C(int a1, int a2);
 int __fastcall sub_60986A5C(_DWORD *a1, int a2);
 _DWORD *__fastcall sub_60987664(_DWORD *result);
 _DWORD *__fastcall sub_60987708(_DWORD *result);
-_DWORD * __fastcall sub_60987718();
+_DWORD *__fastcall sub_60987718(_DWORD *result, int a2, int a3);
 int __fastcall sub_60987738(int a1, _DWORD *a2);
 int __fastcall sub_60987834(int a1, unsigned int a2, unsigned int a3, _WORD *a4);
 int __fastcall sub_60987858(int a1, unsigned int a2, unsigned int a3, _WORD *a4, int a5, int a6);
@@ -1975,73 +1991,73 @@ int __fastcall sub_609899A4(_DWORD *a1, int a2, int a3, int a4, int a5);
 int __fastcall sub_60989CC8(float *a1, int a2);
 _DWORD *__fastcall sub_6098A108(_DWORD *result);
 int __fastcall sub_6098A224(int result, int a2, int a3);
-_DWORD * __fastcall sub_6098A2E0();
+_DWORD *__fastcall sub_6098A2E0(_DWORD *result, unsigned int a2, int a3);
 int __fastcall sub_6098B540(int a1);
-int __fastcall sub_6098BD10();
+int __fastcall sub_6098BD10(int a1, int a2, int a3, int a4);
 bool __fastcall sub_6098BDF0(int a1);
-int __fastcall sub_6098BE3C();
-int __fastcall sub_6098BE5C();
-int __fastcall sub_6098BED8();
-_DWORD * __fastcall sub_6098D8C4();
-_BYTE * __fastcall sub_6098D918();
-int __fastcall sub_6098D964();
+int __fastcall sub_6098BE3C(int a1, int a2);
+int __fastcall sub_6098BE5C(int a1, int a2);
+int __fastcall sub_6098BED8(int a1);
+_DWORD *__fastcall sub_6098D8C4(_DWORD *a1, unsigned int a2);
+_BYTE *__fastcall sub_6098D918(int a1, unsigned int a2);
+int __fastcall sub_6098D964(int result, int a2);
 _DWORD *__fastcall sub_6098D9A0(_DWORD *result);
 _DWORD *__fastcall sub_6098D9AC(_DWORD *a1);
 _DWORD *__fastcall sub_6098D9E4(_DWORD *result);
-struct sead_IDisposer * __fastcall sub_6098DA18();
+struct sead_IDisposer *__fastcall sub_6098DA18(int *a1, int a2, int a3, int a4);
 int __fastcall sub_6098DBCC(_DWORD *a1, int a2);
 void __fastcall sub_6098DC24(int a1);
 int __fastcall sub_6098DC7C(int a1);
 _DWORD *__fastcall sub_6098DCD4(_DWORD *a1);
 int __fastcall sub_6098E0F8(int a1, int a2);
-int __fastcall sub_6098E23C();
-int * __fastcall sub_6098E28C();
+int __fastcall sub_6098E23C(int *a1, _DWORD *a2);
+int *__fastcall sub_6098E28C(int a1, int a2);
 int __fastcall sub_6098E314(int a1, int a2);
 _DWORD *__fastcall sub_6098E754(int a1, int a2, int a3);
-int __fastcall sub_6098EA0C();
+int __fastcall sub_6098EA0C(_BYTE *a1, int a2, int *a3);
 int __fastcall sub_6098F0E0(int a1, int a2, int a3);
 int __fastcall sub_6098F1D4(int a1);
 int __fastcall sub_6098F300(_QWORD *a1);
-int __fastcall sub_6098F408();
+int __fastcall sub_6098F408(_DWORD *a1, int a2, int a3);
 int __fastcall sub_609900F4(int a1);
 int __fastcall sub_60990254(int a1, int a2);
-signed int __fastcall sub_609902D8();
-int __fastcall sub_609903D4();
+signed int __fastcall sub_609902D8(int *a1, _BYTE *a2, int a3);
+int __fastcall sub_609903D4(int *a1, unsigned __int8 *a2, int a3);
 int __fastcall sub_6099088C(int a1, int a2);
 bool __fastcall sub_60990A88(int a1);
 bool __fastcall sub_609912F8(int a1);
 int __fastcall sub_60991BA4(int result);
-int __fastcall sub_60991CD0();
-int __fastcall sub_60991CE8();
-int __fastcall sub_60991D00();
+int __fastcall sub_60991CD0(_DWORD *a1);
+int __fastcall sub_60991CE8(_DWORD *a1);
+int __fastcall sub_60991D00(_DWORD *a1);
 int __fastcall sub_60992444(int a1);
 _DWORD *__fastcall sub_6099256C(_DWORD *result);
 int __fastcall sub_60992D00(int result, int a2);
-_DWORD * __fastcall sub_60992DB8();
+_DWORD *__fastcall sub_60992DB8(_DWORD *result);
 _DWORD *__fastcall sub_60992E58(_DWORD *result, int a2, int a3, int a4);
-int __fastcall sub_60993D34();
+int __fastcall sub_60993D34(int a1);
 int __fastcall sub_60993EB0(int a1);
 unsigned int __fastcall sub_60993F54(int a1, int a2, int a3, int a4);
 int __fastcall sub_60994728(int result);
-int * __fastcall sub_60995090();
+int *__fastcall sub_60995090(_DWORD *a1, int a2, int a3);
 int *__fastcall sub_609954E0(int a1);
 int __fastcall sub_60996528(unsigned int a1);
-int __fastcall sub_609969BC();
+int __fastcall sub_609969BC(_DWORD *a1, int a2, int a3);
 int __fastcall sub_60996CEC(int a1);
 int __fastcall sub_60996D20(int result, int a2);
-int __fastcall sub_60996D8C();
+int __fastcall sub_60996D8C(int a1, unsigned int a2);
 int __fastcall sub_60996E70(int result, int a2);
 int __fastcall sub_60996EE8(int a1, int a2);
 int __fastcall sub_60996F34(int a1);
-int __fastcall sub_60997330();
+int __fastcall sub_60997330(int a1, int a2);
 _DWORD *__fastcall sub_60997710(_DWORD *result);
 _DWORD *__fastcall sub_60997788(_DWORD *result, int a2);
 int __fastcall sub_609978D8(int a1, _DWORD *a2);
 int __fastcall sub_609979EC(int a1);
-int __fastcall sub_60997AF4();
-int __fastcall sub_6099816C();
-_DWORD * __fastcall sub_609981B8();
-int __fastcall sub_60998240();
+int __fastcall sub_60997AF4(int a1, int a2, int a3, int a4);
+int __fastcall sub_6099816C(int a1, int a2, int a3, int a4);
+_DWORD *__fastcall sub_609981B8(int a1, int a2, int a3, int a4);
+int __fastcall sub_60998240(int a1, int a2);
 int __fastcall sub_6099826C(bool *a1, int a2);
 int __fastcall sub_609982F0(unsigned __int16 *a1, int a2, int a3);
 int __fastcall sub_60998564(int a1);
@@ -2049,36 +2065,36 @@ int __fastcall sub_60998680(int a1);
 void *__fastcall sub_60998C70(void *a1);
 int __fastcall sub_60998C88(int a1);
 void *__fastcall sub_60998CAC(void *a1);
-int __fastcall sub_60998CC4();
+int __fastcall sub_60998CC4(int result, int a2, int a3);
 int __fastcall sub_60998CD0(int a1, int a2, int a3);
-int __fastcall sub_60998DB4();
+int __fastcall sub_60998DB4(_BYTE *a1, int a2);
 struct nn_util_BinaryFileHeader *__fastcall sub_60998E80(struct nn_util_BinaryFileHeader *a1);
 int __fastcall sub_60998EA8(int result);
 int __fastcall sub_60998EF4(int result);
 int __fastcall sub_60998F30(int result);
 int __fastcall sub_60998F7C(int result);
 int __fastcall sub_60998FA0(int result);
-int __fastcall sub_609990CC();
-int __fastcall sub_609992C4();
+int __fastcall sub_609990CC(int a1, int a2, int a3);
+int __fastcall sub_609992C4(int a1, int a2, unsigned __int64 a3);
 int __fastcall sub_60999730(int a1);
-int __fastcall sub_60999AFC();
+int __fastcall sub_60999AFC(int a1, int a2);
 int __fastcall sub_60999B6C(int a1);
 _DWORD *__fastcall sub_60999BDC(int a1);
-int __fastcall sub_60999C60();
+int __fastcall sub_60999C60(int a1, int a2, int a3, int a4, int a5, int a6);
 int __fastcall sub_60999F78(int a1);
 int __fastcall sub_6099A074(int a1);
 _DWORD *__fastcall sub_6099A170(_DWORD *result, int a2, int a3, int a4, int a5, int a6, int a7);
 int __fastcall sub_6099A198(_DWORD *a1);
 int __fastcall sub_6099A1C0(int a1, int (__fastcall *a2)(int, _DWORD));
 int __fastcall sub_6099A310(_DWORD *a1, unsigned int a2);
-int __fastcall sub_6099A53C();
+int __fastcall sub_6099A53C(int a1, int a2, unsigned int a3);
 _DWORD *__fastcall sub_6099A820(int a1, int a2);
 unsigned int __fastcall sub_6099A8D4(int a1, int a2);
 int __fastcall sub_6099A9B4(int a1, int a2);
-int __fastcall sub_6099AA58();
-int __fastcall sub_6099AD8C();
-int __fastcall sub_6099B034();
-int __fastcall sub_6099B0F0();
+int __fastcall sub_6099AA58(int a1, int *a2, int a3, int a4);
+int __fastcall sub_6099AD8C(_DWORD *a1, unsigned int a2, unsigned __int16 a3, __int16 a4, int a5);
+int __fastcall sub_6099B034(_DWORD *a1, int a2, int a3);
+int __fastcall sub_6099B0F0(int a1, unsigned int a2, unsigned __int16 a3, int a4);
 int __fastcall sub_6099B590( _DWORD *a1, _WORD *a2, unsigned int a3, unsigned __int16 *a4, int a5, int (__fastcall ***a6)(_DWORD, unsigned __int16 *, unsigned int), int a7);
 int __fastcall nn_atk_FsSoundArchive_ctor(int a1);
 int __fastcall sub_6099BBD4(int a1);
@@ -5774,7 +5790,7 @@ sub_608044F0__LABEL_19:
     _S4 = 0;
     if ( v37 > _S0 )
       _S0 = v37;
-    __asm { VMAXNM.F32      S28, S0, S4 }
+    vmaxnm_f32(float_s0, float_s4)
     if ( !_ZF )
       goto sub_608044F0__LABEL_49;
 sub_608044F0__LABEL_23:
@@ -5808,13 +5824,13 @@ sub_608044F0__LABEL_23:
     _S4 = 0;
     if ( v37 > _S0 )
       _S0 = v37;
-    __asm { VMAXNM.F32      S28, S0, S4 }
+    vmaxnm_f32(float_s0, float_s4)
     goto sub_608044F0__LABEL_23;
   }
   _S4 = 0;
   if ( v37 > _S0 )
     _S0 = (float)(v34 - v33) / 398.22;
-  __asm { VMAXNM.F32      S28, S0, S4 }
+  vmaxnm_f32(float_s0, float_s4)
 sub_608044F0__LABEL_49:
   v51 = v12 & a6;
   v52 = sub_607FF980(a3);
@@ -32838,13 +32854,13 @@ sub_6081CA7C__LABEL_157:
       v25 = 0;
       if ( v19 <= 6 )
       {
-        v25 = arr_dword_60B0DEC0[v19];
-        v24 = arr_dword_60B0DEA0[v19];
-        v23 = arr_dword_60B0DE80[v19];
-        v22 = arr_dword_60B0DE60[v19];
-        v21 = arr_dword_60B0DE40[v19];
-        v20 = arr_dword_60B0DE20[v19];
-        v18 = arr_dword_60B0DE00[v19];
+        v25 = dword_60B0DEC0[v19];
+        v24 = dword_60B0DEA0[v19];
+        v23 = dword_60B0DE80[v19];
+        v22 = dword_60B0DE60[v19];
+        v21 = dword_60B0DE40[v19];
+        v20 = dword_60B0DE20[v19];
+        v18 = dword_60B0DE00[v19];
       }
     }
     else
@@ -54802,412 +54818,475 @@ sub_6082756C__LABEL_84:
  * sub_6084A81C
  * RVA 0x0084a81c   size 0x95c   xrefs 1
  * ============================================================================ */
-  int __fastcall sub_6084A81C(int a1, int a2, int a3, int a4, float *a5)
+  int __fastcall sub_6084A81C(int a1, int a2, int a3, int a4, float a5, float *a6)
+{
+  int v6; // r2
+  int v7; // r7
+  int v8; // r3
+  _DWORD *v9; // r0
+  _DWORD *v10; // r6
+  int v11; // r7
+  int v12; // r5
+  int result; // r0
+  int v14; // r0
+  int v15; // r1
+  int v16; // r4
+  unsigned __int8 *v17; // r10
+  int v18; // r1
+  int v19; // r12
+  int v20; // r0
+  int v21; // r3
+  int v22; // r1
+  float v23; // s14
+  float v24; // s12
+  float v25; // s10
+  float v26; // s6
+  float v27; // s3
+  float v28; // s1
+  int v29; // r11
+  float v30; // s11
+  float v31; // s12
+  unsigned int v32; // r1
+  float v33; // s8
+  unsigned int v34; // lr
+  unsigned int v35; // r8
+  unsigned int v36; // r9
+  float v37; // s7
+  int v38; // r1
+  int v39; // r8
+  int v40; // r0
+  int v41; // r5
+  int v42; // r6
+  int v43; // r2
+  float v44; // s7
+  float v45; // s5
+  float v46; // s18
+  float v47; // s9
+  float v48; // s11
+  float v49; // s20
+  float v50; // s13
+  int v51; // r6
+  float v52; // s26
+  float v53; // s30
+  float v54; // s24
+  float v55; // s16
+  float v56; // s22
+  float v57; // s5
+  float v58; // s9
+  float v59; // s11
+  int v60; // r1
+  int v61; // r8
+  int v62; // r0
+  int v63; // r2
+  int v64; // r5
+  int v65; // r3
+  int v66; // r1
+  int v67; // r12
+  int v68; // lr
+  unsigned __int8 *v69; // r5
+  int v70; // r1
+  int v71; // r0
+  int v72; // r3
+  int v73; // r2
+  int v74; // r0
+  int v75; // r2
+  float v76; // s15
+  float v77; // s6
+  float v78; // s16
+  int v79; // r8
+  float v80; // s20
+  float v81; // s18
+  float v82; // s8
+  float v83; // s12
+  int v84; // r6
+  int v85; // r1
+  int v86; // r3
+  int v87; // r4
+  char v88; // r0
+  _BYTE *v89; // r2
+  char v90; // t1
+  int v91; // r1
+  __int16 v92; // t1
+  float v93; // s14
+  float v94; // s3
+  float v95; // s1
+  float v96; // s9
+  float v97; // s11
+  float v98; // s5
+  float v99; // s13
+  float v100; // s7
+  __int16 v101; // r6
+  __int16 v102; // r2
+  __int16 v103; // r0
+  __int16 v104; // r7
+  __int16 v105; // r3
+  __int16 v106; // r4
+  int v107; // r11
+  int v108; // r10
+  int v109; // r9
+  int v110; // r1
+  int v111; // r0
+  int v118; // r0
+  int v121; // r2
+  int v122; // [sp+8h] [bp-100h]
+  __int16 v124; // [sp+10h] [bp-F8h]
+  __int16 v125; // [sp+14h] [bp-F4h]
+  __int16 v126; // [sp+18h] [bp-F0h]
+  __int16 v127; // [sp+1Ch] [bp-ECh]
+  __int16 v128; // [sp+20h] [bp-E8h]
+  __int16 v129; // [sp+24h] [bp-E4h]
+  __int16 v130; // [sp+28h] [bp-E0h]
+  int v131; // [sp+2Ch] [bp-DCh]
+  __int16 v132; // [sp+30h] [bp-D8h]
+  int v133; // [sp+34h] [bp-D4h]
+  __int16 v134; // [sp+34h] [bp-D4h]
+  int v135; // [sp+38h] [bp-D0h]
+  int v136; // [sp+3Ch] [bp-CCh]
+  int v137; // [sp+3Ch] [bp-CCh]
+  int v138; // [sp+40h] [bp-C8h]
+  int v139; // [sp+44h] [bp-C4h]
+  int v140; // [sp+44h] [bp-C4h]
+  int v141; // [sp+48h] [bp-C0h]
+  int v144; // [sp+54h] [bp-B4h]
+  int v145; // [sp+58h] [bp-B0h]
+  _DWORD v147[8]; // [sp+60h] [bp-A8h] BYREF
+  _DWORD v148[34]; // [sp+80h] [bp-88h] BYREF
+
+  v145 = *(_DWORD *)(*(_DWORD *)(a1 + 128) + 32);
+  memset(v148, 0, 32);
+  v6 = *(_DWORD *)(a1 + 108);
+  if ( v6 >= 1 )
   {
-    float v5; // s0
-    int v6; // r2
-    int v7; // r7
-    int v8; // r3
-    _DWORD *v9; // r0
-    _DWORD *v10; // r6
-    int v11; // r7
-    int v12; // r5
-    int result; // r0
-    int v14; // r0
-    int v15; // r1
-    int v16; // r4
-    unsigned __int8 *v17; // r10
-    int v18; // r1
-    int v19; // r12
-    int v20; // r0
-    int v21; // r3
-    int v22; // r1
-    float v23; // s14
-    float v24; // s12
-    float v25; // s10
-    float v26; // s6
-    float v27; // s3
-    float v28; // s1
-    int v29; // r11
-    float v30; // s11
-    float v31; // s12
-    unsigned int v32; // r1
-    float v33; // s8
-    unsigned int v34; // lr
-    unsigned int v35; // r8
-    unsigned int v36; // r9
-    float v37; // s7
-    int v38; // r1
-    int v39; // r8
-    int v40; // r0
-    int v41; // r5
-    int v42; // r6
-    int v43; // r2
-    float v44; // s7
-    float v45; // s5
-    float v46; // s18
-    float v47; // s9
-    float v48; // s11
-    float v49; // s20
-    float v50; // s13
-    int v51; // r6
-    float v52; // s26
-    float v53; // s30
-    float v54; // s24
-    float v55; // s16
-    float v56; // s22
-    float v57; // s5
-    float v58; // s9
-    float v59; // s11
-    int v60; // r1
-    int v61; // r8
-    int v62; // r0
-    int v63; // r2
-    int v64; // r5
-    int v65; // r3
-    int v66; // r1
-    int v67; // r12
-    int v68; // lr
-    unsigned __int8 *v69; // r5
-    int v70; // r1
-    int v71; // r0
-    int v72; // r3
-    int v73; // r2
-    int v74; // r0
-    int v75; // r2
-    float v76; // s15
-    float v77; // s6
-    float v78; // s16
-    int v79; // r8
-    float v80; // s20
-    float v81; // s18
-    float v82; // s8
-    float v83; // s12
-    int v84; // r6
-    int v85; // r1
-    int v86; // r3
-    int v87; // r4
-    char v88; // r0
-    _BYTE *v89; // r2
-    char v90; // t1
-    int v91; // r1
-    __int16 v92; // t1
-    float v93; // s14
-    float v94; // s3
-    float v95; // s1
-    float v96; // s9
-    float v97; // s11
-    float v98; // s5
-    float v99; // s13
-    float v100; // s7
-    __int16 v101; // r6
-    __int16 v102; // r2
-    __int16 v103; // r0
-    __int16 v104; // r7
-    __int16 v105; // r3
-    __int16 v106; // r4
-    int v107; // r11
-    int v108; // r10
-    int v109; // r9
-    int v110; // r1
-    int v111; // r0
-    int v118; // r0
-    int v121; // r2
-    int v122; // [sp+8h] [bp-98h]
-    __int16 v124; // [sp+10h] [bp-90h]
-    __int16 v125; // [sp+14h] [bp-8Ch]
-    __int16 v126; // [sp+18h] [bp-88h]
-    __int16 v127; // [sp+1Ch] [bp-84h]
-    __int16 v128; // [sp+20h] [bp-80h]
-    __int16 v129; // [sp+24h] [bp-7Ch]
-    __int16 v130; // [sp+28h] [bp-78h]
-    int v131; // [sp+2Ch] [bp-74h]
-    __int16 v132; // [sp+30h] [bp-70h]
-    int v133; // [sp+34h] [bp-6Ch]
-    __int16 v134; // [sp+34h] [bp-6Ch]
-    int v135; // [sp+38h] [bp-68h]
-    int v136; // [sp+3Ch] [bp-64h]
-    int v137; // [sp+3Ch] [bp-64h]
-    int v138; // [sp+40h] [bp-60h]
-    int v139; // [sp+44h] [bp-5Ch]
-    int v140; // [sp+44h] [bp-5Ch]
-    int v141; // [sp+48h] [bp-58h]
-    int v144; // [sp+54h] [bp-4Ch]
-    int v145; // [sp+58h] [bp-48h]
-    _DWORD v147[8]; // [sp+60h] [bp-40h] BYREF
-    _DWORD v148[8]; // [sp+80h] [bp-20h] BYREF
-  
-    v145 = *(_DWORD *)(*(_DWORD *)(a1 + 128) + 32);
-    memset(v148, 0, sizeof(v148));
-    v6 = *(_DWORD *)(a1 + 108);
-    if ( v6 >= 1 )
+    v7 = 0;
+    v8 = 0;
+    if ( (v6 & 1) != 0 )
     {
-      v7 = 0;
-      v8 = 0;
-      if ( (v6 & 1) != 0 )
-      {
-        v8 = 1;
-        v148[0] = 0;
-        v7 = *(_DWORD *)(a1 + 16);
-      }
-      if ( v6 != 1 )
-      {
-        v9 = (_DWORD *)(((unsigned int)v148 | (4 * v8)) + 4);
-        v10 = (_DWORD *)(a1 + 12 * v8 + 16);
-        do
-        {
-          *(v9 - 1) = v7;
-          v8 += 2;
-          v11 = *v10 + v7;
-          *v9 = v11;
-          v9 += 2;
-          v12 = v10[3];
-          v10 += 6;
-          v7 = v12 + v11;
-        }
-        while ( v8 < v6 );
-      }
+      v8 = 1;
+      v148[0] = 0;
+      v7 = *(_DWORD *)(a1 + 16);
     }
-    result = v145;
-    memset(v147, 0, sizeof(v147));
-    if ( v145 )
+    if ( v6 != 1 )
     {
-      v14 = 1;
-      if ( a5 )
-        v14 = 2;
-      v141 = v14;
-      v144 = *(_DWORD *)(a1 + 116);
-      if ( a5 && v144 >= 1 )
+      v9 = (_DWORD *)(((unsigned int)v148 | (4 * v8)) + 4);
+      v10 = (_DWORD *)(a1 + 12 * v8 + 16);
+      do
       {
-        v15 = 64;
-        v16 = 47;
-        v17 = (unsigned __int8 *)(a3 + 51);
+        *(v9 - 1) = v7;
+        v8 += 2;
+        v11 = *v10 + v7;
+        *v9 = v11;
+        v9 += 2;
+        v12 = v10[3];
+        v10 += 6;
+        v7 = v12 + v11;
+      }
+      while ( v8 < v6 );
+    }
+  }
+  result = v145;
+  memset(v147, 0, sizeof(v147));
+  if ( v145 )
+  {
+    v14 = 1;
+    if ( a6 )
+      v14 = 2;
+    v141 = v14;
+    v144 = *(_DWORD *)(a1 + 116);
+    if ( a6 && v144 >= 1 )
+    {
+      v15 = 64;
+      v16 = 47;
+      v17 = (unsigned __int8 *)(a3 + 51);
+      if ( a3 )
+        v15 = 96;
+      v133 = v15;
+      v18 = 0;
+      do
+      {
+        v19 = *(_DWORD *)(a1 + 120);
+        v139 = v18;
+        v20 = *(unsigned __int8 *)(*(_DWORD *)(a1 + 124) + v18);
+        v21 = v147[v20];
+        v22 = v148[v20];
+        v147[v20] = v21 + 1;
+        v23 = a6[4];
+        v24 = *(float *)(v19 + v16 - 43);
+        v25 = v24 * a6[5];
+        v26 = (float)*(__int16 *)(v19 + v16 - 3) + (float)(v23 * a6[6]);
+        v27 = *(float *)(v19 + v16 - 47) * v23;
+        v28 = (float)(v24 - v25) + (float)(*(float *)(v19 + v16 - 35) - a6[3]);
+        v29 = v145 + a2 + (v21 + v22 * v141) * v133;
+        v30 = v24 * v26;
+        v31 = *(float *)(v19 + v16 - 39) + a6[2];
+        v32 = *(unsigned __int8 *)a6
+            | (*((unsigned __int8 *)a6 + 1) << 8)
+            | ((*((unsigned __int8 *)a6 + 2) | (*((unsigned __int8 *)a6 + 3) << 8)) << 16);
+        v33 = v30 / *(float *)(a1 + 136);
+        v34 = *(unsigned __int8 *)(v19 + v16) * HIBYTE(v32) / 0xFFu;
+        v35 = *((unsigned __int8 *)a6 + 4)
+            | (*((unsigned __int8 *)a6 + 5) << 8)
+            | ((*((unsigned __int8 *)a6 + 6) | (*((unsigned __int8 *)a6 + 7) << 8)) << 16);
+        v36 = HIBYTE(v35) * *(unsigned __int8 *)(v19 + v16) / 0xFFu;
         if ( a3 )
-          v15 = 96;
-        v133 = v15;
-        v18 = 0;
-        do
         {
-          v19 = *(_DWORD *)(a1 + 120);
-          v139 = v18;
-          v20 = *(unsigned __int8 *)(*(_DWORD *)(a1 + 124) + v18);
-          v21 = v147[v20];
-          v22 = v148[v20];
-          v147[v20] = v21 + 1;
-          v23 = a5[4];
-          v24 = *(float *)(v19 + v16 - 43);
-          v25 = v24 * a5[5];
-          v26 = (float)*(__int16 *)(v19 + v16 - 3) + (float)(v23 * a5[6]);
-          v27 = *(float *)(v19 + v16 - 47) * v23;
-          v28 = (float)(v24 - v25) + (float)(*(float *)(v19 + v16 - 35) - a5[3]);
-          v29 = v145 + a2 + (v21 + v22 * v141) * v133;
-          v30 = v24 * v26;
-          v31 = *(float *)(v19 + v16 - 39) + a5[2];
-          v32 = *(unsigned __int8 *)a5
-              | (*((unsigned __int8 *)a5 + 1) << 8)
-              | ((*((unsigned __int8 *)a5 + 2) | (*((unsigned __int8 *)a5 + 3) << 8)) << 16);
-          v33 = v30 / *(float *)(a1 + 136);
-          v34 = *(unsigned __int8 *)(v19 + v16) * HIBYTE(v32) / 0xFFu;
-          v35 = *((unsigned __int8 *)a5 + 4)
-              | (*((unsigned __int8 *)a5 + 5) << 8)
-              | ((*((unsigned __int8 *)a5 + 6) | (*((unsigned __int8 *)a5 + 7) << 8)) << 16);
-          v36 = HIBYTE(v35) * *(unsigned __int8 *)(v19 + v16) / 0xFFu;
-          if ( a3 )
+          if ( a4 == 1 )
           {
-            if ( a4 == 1 )
-            {
-              v37 = v25 + v28;
-            }
-            else
-            {
-              v37 = 0.0;
-              if ( !a4 )
-                v37 = (float)(v25 + (float)(v28 + v28)) * 0.5;
-            }
-            v44 = v37 - v5;
-            v45 = *(float *)(v17 - 27);
-            v46 = *(float *)(v17 - 31);
-            v47 = *(float *)(v17 - 43);
-            v48 = *(float *)(v17 - 23);
-            v49 = *(float *)(v17 - 35);
-            v50 = *(float *)(v17 - 39);
-            v51 = *(_DWORD *)(v17 - 19);
-            v52 = *(float *)(v17 - 51);
-            v53 = *(float *)(v17 - 47);
-            v54 = v45 * v47;
-            v136 = *(_DWORD *)(v17 - 15);
-            v135 = *(_DWORD *)(v17 - 11);
-            v55 = (float)(v49 * v47) - (float)(v48 * (float)(v46 * v45));
-            v56 = (float)(v48 * v47) + (float)(v49 * (float)(v46 * v45));
-            v57 = (float)(v48 * v46) - (float)(v49 * (float)(v45 * v47));
-            v58 = (float)(v48 * v54) + (float)(v49 * v46);
-            v59 = -(float)((float)(v50 * v48) * v52);
-            if ( *(_BYTE *)(a1 + 135) )
-            {
-              v36 = *v17 * (unsigned int)(unsigned __int8)v36 / 0xFF;
-              v34 = *(v17 - 4) * (unsigned int)(unsigned __int8)v34 / 0xFF;
-            }
-            v60 = v32 & 0xFFFFFF;
-            v61 = v35 & 0xFFFFFF;
-            v62 = *(unsigned __int8 *)(v19 + v16 - 1);
-            *(float *)v29 = v27;
-            *(float *)(v29 + 4) = v25;
-            *(float *)(v29 + 8) = v31;
-            *(float *)(v29 + 12) = v28;
-            v63 = *(_DWORD *)(v19 + v16 - 19);
-            v64 = *(_DWORD *)(v19 + v16 - 15);
-            v65 = *(_DWORD *)(v19 + v16 - 11);
-            *(_DWORD *)(v29 + 16) = *(_DWORD *)(v19 + v16 - 23);
-            *(_DWORD *)(v29 + 20) = v63;
-            *(_DWORD *)(v29 + 24) = v64;
-            *(_DWORD *)(v29 + 28) = v65;
-            *(_WORD *)(v29 + 32) = v60;
-            *(_BYTE *)(v29 + 35) = v34;
-            *(_BYTE *)(v29 + 34) = BYTE2(v60);
-            *(_BYTE *)(v29 + 36) = v61;
-            *(_BYTE *)(v29 + 39) = v36;
-            *(_BYTE *)(v29 + 38) = BYTE2(v61);
-            *(_BYTE *)(v29 + 37) = BYTE1(v61);
-            *(_DWORD *)(v29 + 40) = ~v62;
-            *(float *)(v29 + 44) = v33;
-            *(float *)(v29 + 64) = (float)(v50 * v49) * v52;
-            *(float *)(v29 + 68) = v56 * v53;
-            *(float *)(v29 + 72) = v57;
-            *(float *)(v29 + 76) = (float)((float)(v27 + (float)(v31 + v31)) + v26) * 0.5;
-            *(float *)(v29 + 80) = v59;
-            *(float *)(v29 + 84) = v55 * v53;
-            *(float *)(v29 + 88) = v58;
-            *(float *)(v29 + 92) = v44;
-            *(_DWORD *)(v29 + 48) = v51;
-            *(_DWORD *)(v29 + 52) = v136;
-            *(_DWORD *)(v29 + 56) = v135;
+            v37 = v25 + v28;
           }
           else
           {
-            v38 = v32 & 0xFFFFFF;
-            v39 = v35 & 0xFFFFFF;
-            v40 = *(unsigned __int8 *)(v19 + v16 - 1);
-            *(float *)v29 = v27;
-            *(float *)(v29 + 4) = v25;
-            *(float *)(v29 + 8) = v31;
-            *(float *)(v29 + 12) = v28;
-            v41 = *(_DWORD *)(v19 + v16 - 19);
-            v42 = *(_DWORD *)(v19 + v16 - 15);
-            v43 = *(_DWORD *)(v19 + v16 - 11);
-            *(_DWORD *)(v29 + 16) = *(_DWORD *)(v19 + v16 - 23);
-            *(_DWORD *)(v29 + 20) = v41;
-            *(_DWORD *)(v29 + 24) = v42;
-            *(_DWORD *)(v29 + 28) = v43;
-            *(_WORD *)(v29 + 32) = v38;
-            *(_BYTE *)(v29 + 35) = v34;
-            *(_BYTE *)(v29 + 34) = BYTE2(v38);
-            *(_BYTE *)(v29 + 36) = v39;
-            *(_BYTE *)(v29 + 39) = v36;
-            *(_BYTE *)(v29 + 38) = BYTE2(v39);
-            *(_BYTE *)(v29 + 37) = BYTE1(v39);
-            *(_DWORD *)(v29 + 40) = ~v40;
-            *(float *)(v29 + 44) = v33;
+            v37 = 0.0;
+            if ( !a4 )
+              v37 = (float)(v25 + (float)(v28 + v28)) * 0.5;
           }
-          *(float *)(v29 + 60) = v26;
-          v18 = v139 + 1;
-          v17 += 52;
-          v16 += 48;
-        }
-        while ( v144 != v139 + 1 );
-      }
-      result = v144;
-      if ( v144 >= 1 )
-      {
-        v66 = 64;
-        v67 = 0;
-        v68 = 23;
-        v69 = (unsigned __int8 *)(a3 + 51);
-        if ( a3 )
-          v66 = 96;
-        v122 = v66;
-        do
-        {
-          v70 = *(_DWORD *)(a1 + 120);
-          v71 = *(unsigned __int8 *)(*(_DWORD *)(a1 + 124) + v67);
-          v72 = v147[v71];
-          v73 = v148[v71];
-          v147[v71] = v72 + 1;
-          v74 = a2 + (v72 + v73 * v141) * v122;
-          v75 = v70 + v68;
-          v76 = *(float *)(v70 + v68 - 19);
-          v77 = (float)*(__int16 *)(v70 + v68 + 21);
-          v78 = *(float *)(v70 + v68 - 11);
-          v79 = v145 + v74;
-          v80 = *(float *)(v70 + v68 - 23);
-          v81 = *(float *)(v70 + v68 - 15);
-          v82 = (float)(v76 * v77) / *(float *)(a1 + 136);
-          if ( a3 )
+          v44 = v37 - a5;
+          v45 = *(float *)(v17 - 27);
+          v46 = *(float *)(v17 - 31);
+          v47 = *(float *)(v17 - 43);
+          v48 = *(float *)(v17 - 23);
+          v49 = *(float *)(v17 - 35);
+          v50 = *(float *)(v17 - 39);
+          v51 = *(_DWORD *)(v17 - 19);
+          v52 = *(float *)(v17 - 51);
+          v53 = *(float *)(v17 - 47);
+          v54 = v45 * v47;
+          v136 = *(_DWORD *)(v17 - 15);
+          v135 = *(_DWORD *)(v17 - 11);
+          v55 = (float)(v49 * v47) - (float)(v48 * (float)(v46 * v45));
+          v56 = (float)(v48 * v47) + (float)(v49 * (float)(v46 * v45));
+          v57 = (float)(v48 * v46) - (float)(v49 * (float)(v45 * v47));
+          v58 = (float)(v48 * v54) + (float)(v49 * v46);
+          v59 = -(float)((float)(v50 * v48) * v52);
+          if ( *(_BYTE *)(a1 + 135) )
           {
-            if ( a4 == 1 )
-            {
-              v83 = v76 + v78;
-            }
-            else
-            {
-              v83 = 0.0;
-              if ( !a4 )
-                v83 = (float)(v76 + (float)(v78 + v78)) * 0.5;
-            }
-            v92 = *(unsigned __int8 *)(v70 + v68);
-            v91 = v70 + v68;
-            v140 = *(_DWORD *)(v69 - 19);
-            v138 = *(_DWORD *)(v69 - 15);
-            v137 = *(_DWORD *)(v69 - 11);
-            v134 = *v69;
-            v132 = *(v69 - 1);
-            v130 = *(v69 - 3);
-            v93 = *(float *)(v69 - 47);
-            v94 = *(float *)(v69 - 51);
-            v95 = *(float *)(v69 - 35);
-            v96 = *(float *)(v69 - 39);
-            v97 = *(float *)(v69 - 43);
-            v98 = *(float *)(v69 - 23);
-            v99 = *(float *)(v69 - 27);
-            v100 = *(float *)(v69 - 31);
-            v128 = *(v69 - 2);
-            v125 = *(v69 - 4);
-            v124 = *(v69 - 5);
-            v101 = *(v69 - 7);
-            v102 = *(v69 - 6);
-            v131 = *(unsigned __int8 *)(v91 + 23);
-            v129 = *(unsigned __int8 *)(v91 - 1);
-            v127 = *(unsigned __int8 *)(v91 - 3);
-            v126 = *(unsigned __int8 *)(v91 - 2);
-            v103 = *(unsigned __int8 *)(v91 - 7);
-            v104 = *(unsigned __int8 *)(v91 - 6);
-            v105 = *(unsigned __int8 *)(v91 - 5);
-            v106 = *(unsigned __int8 *)(v91 - 4);
-            *(float *)v79 = v80;
-            *(float *)(v79 + 4) = v76;
-            *(float *)(v79 + 8) = v81;
-            *(float *)(v79 + 12) = v78;
-            v107 = *(_DWORD *)(v91 + 1);
-            v108 = *(_DWORD *)(v91 + 5);
-            v109 = *(_DWORD *)(v91 + 9);
-            v110 = *(_DWORD *)(v91 + 13);
-            *(_DWORD *)(v79 + 16) = v107;
-            *(_DWORD *)(v79 + 20) = v108;
-            *(_DWORD *)(v79 + 24) = v109;
-            *(_DWORD *)(v79 + 28) = v110;
-            v111 = (unsigned __int8)(v101 * v103 / 0xFFu) | ((unsigned __int8)(v102 * v104 / 0xFFu) << 8);
-            *(_BYTE *)(v79 + 33) = BYTE1(v111);
-            regTmp1 = (2155905153u * (unsigned __int64)(unsigned int)(v124 * v105)) >> 32 << 9;
-            regTmp1 = (unsigned int)uxtb16((unsigned int)regTmp1);
-            v118 = v111 | regTmp1;
-            *(_BYTE *)(v79 + 32) = v118;
-            *(_BYTE *)(v79 + 35) = (v118
-                                  | ((2155905153u * (unsigned __int64)(unsigned int)(v125 * v106)) >> 32 << 17)
+            v36 = *v17 * (unsigned int)(unsigned __int8)v36 / 0xFF;
+            v34 = *(v17 - 4) * (unsigned int)(unsigned __int8)v34 / 0xFF;
+          }
+          v60 = v32 & 0xFFFFFF;
+          v61 = v35 & 0xFFFFFF;
+          v62 = *(unsigned __int8 *)(v19 + v16 - 1);
+          *(float *)v29 = v27;
+          *(float *)(v29 + 4) = v25;
+          *(float *)(v29 + 8) = v31;
+          *(float *)(v29 + 12) = v28;
+          v63 = *(_DWORD *)(v19 + v16 - 19);
+          v64 = *(_DWORD *)(v19 + v16 - 15);
+          v65 = *(_DWORD *)(v19 + v16 - 11);
+          *(_DWORD *)(v29 + 16) = *(_DWORD *)(v19 + v16 - 23);
+          *(_DWORD *)(v29 + 20) = v63;
+          *(_DWORD *)(v29 + 24) = v64;
+          *(_DWORD *)(v29 + 28) = v65;
+          *(_WORD *)(v29 + 32) = v60;
+          *(_BYTE *)(v29 + 35) = v34;
+          *(_BYTE *)(v29 + 34) = BYTE2(v60);
+          *(_BYTE *)(v29 + 36) = v61;
+          *(_BYTE *)(v29 + 39) = v36;
+          *(_BYTE *)(v29 + 38) = BYTE2(v61);
+          *(_BYTE *)(v29 + 37) = BYTE1(v61);
+          *(_DWORD *)(v29 + 40) = ~v62;
+          *(float *)(v29 + 44) = v33;
+          *(float *)(v29 + 64) = (float)(v50 * v49) * v52;
+          *(float *)(v29 + 68) = v56 * v53;
+          *(float *)(v29 + 72) = v57;
+          *(float *)(v29 + 76) = (float)((float)(v27 + (float)(v31 + v31)) + v26) * 0.5;
+          *(float *)(v29 + 80) = v59;
+          *(float *)(v29 + 84) = v55 * v53;
+          *(float *)(v29 + 88) = v58;
+          *(float *)(v29 + 92) = v44;
+          *(_DWORD *)(v29 + 48) = v51;
+          *(_DWORD *)(v29 + 52) = v136;
+          *(_DWORD *)(v29 + 56) = v135;
+        }
+        else
+        {
+          v38 = v32 & 0xFFFFFF;
+          v39 = v35 & 0xFFFFFF;
+          v40 = *(unsigned __int8 *)(v19 + v16 - 1);
+          *(float *)v29 = v27;
+          *(float *)(v29 + 4) = v25;
+          *(float *)(v29 + 8) = v31;
+          *(float *)(v29 + 12) = v28;
+          v41 = *(_DWORD *)(v19 + v16 - 19);
+          v42 = *(_DWORD *)(v19 + v16 - 15);
+          v43 = *(_DWORD *)(v19 + v16 - 11);
+          *(_DWORD *)(v29 + 16) = *(_DWORD *)(v19 + v16 - 23);
+          *(_DWORD *)(v29 + 20) = v41;
+          *(_DWORD *)(v29 + 24) = v42;
+          *(_DWORD *)(v29 + 28) = v43;
+          *(_WORD *)(v29 + 32) = v38;
+          *(_BYTE *)(v29 + 35) = v34;
+          *(_BYTE *)(v29 + 34) = BYTE2(v38);
+          *(_BYTE *)(v29 + 36) = v39;
+          *(_BYTE *)(v29 + 39) = v36;
+          *(_BYTE *)(v29 + 38) = BYTE2(v39);
+          *(_BYTE *)(v29 + 37) = BYTE1(v39);
+          *(_DWORD *)(v29 + 40) = ~v40;
+          *(float *)(v29 + 44) = v33;
+        }
+        *(float *)(v29 + 60) = v26;
+        v18 = v139 + 1;
+        v17 += 52;
+        v16 += 48;
+      }
+      while ( v144 != v139 + 1 );
+    }
+    result = v144;
+    if ( v144 >= 1 )
+    {
+      v66 = 64;
+      v67 = 0;
+      v68 = 23;
+      v69 = (unsigned __int8 *)(a3 + 51);
+      if ( a3 )
+        v66 = 96;
+      v122 = v66;
+      do
+      {
+        v70 = *(_DWORD *)(a1 + 120);
+        v71 = *(unsigned __int8 *)(*(_DWORD *)(a1 + 124) + v67);
+        v72 = v147[v71];
+        v73 = v148[v71];
+        v147[v71] = v72 + 1;
+        v74 = a2 + (v72 + v73 * v141) * v122;
+        v75 = v70 + v68;
+        v76 = *(float *)(v70 + v68 - 19);
+        v77 = (float)*(__int16 *)(v70 + v68 + 21);
+        v78 = *(float *)(v70 + v68 - 11);
+        v79 = v145 + v74;
+        v80 = *(float *)(v70 + v68 - 23);
+        v81 = *(float *)(v70 + v68 - 15);
+        v82 = (float)(v76 * v77) / *(float *)(a1 + 136);
+        if ( a3 )
+        {
+          if ( a4 == 1 )
+          {
+            v83 = v76 + v78;
+          }
+          else
+          {
+            v83 = 0.0;
+            if ( !a4 )
+              v83 = (float)(v76 + (float)(v78 + v78)) * 0.5;
+          }
+          v92 = *(unsigned __int8 *)(v70 + v68);
+          v91 = v70 + v68;
+          v140 = *(_DWORD *)(v69 - 19);
+          v138 = *(_DWORD *)(v69 - 15);
+          v137 = *(_DWORD *)(v69 - 11);
+          v134 = *v69;
+          v132 = *(v69 - 1);
+          v130 = *(v69 - 3);
+          v93 = *(float *)(v69 - 47);
+          v94 = *(float *)(v69 - 51);
+          v95 = *(float *)(v69 - 35);
+          v96 = *(float *)(v69 - 39);
+          v97 = *(float *)(v69 - 43);
+          v98 = *(float *)(v69 - 23);
+          v99 = *(float *)(v69 - 27);
+          v100 = *(float *)(v69 - 31);
+          v128 = *(v69 - 2);
+          v125 = *(v69 - 4);
+          v124 = *(v69 - 5);
+          v101 = *(v69 - 7);
+          v102 = *(v69 - 6);
+          v131 = *(unsigned __int8 *)(v91 + 23);
+          v129 = *(unsigned __int8 *)(v91 - 1);
+          v127 = *(unsigned __int8 *)(v91 - 3);
+          v126 = *(unsigned __int8 *)(v91 - 2);
+          v103 = *(unsigned __int8 *)(v91 - 7);
+          v104 = *(unsigned __int8 *)(v91 - 6);
+          v105 = *(unsigned __int8 *)(v91 - 5);
+          v106 = *(unsigned __int8 *)(v91 - 4);
+          *(float *)v79 = v80;
+          *(float *)(v79 + 4) = v76;
+          *(float *)(v79 + 8) = v81;
+          *(float *)(v79 + 12) = v78;
+          v107 = *(_DWORD *)(v91 + 1);
+          v108 = *(_DWORD *)(v91 + 5);
+          v109 = *(_DWORD *)(v91 + 9);
+          v110 = *(_DWORD *)(v91 + 13);
+          *(_DWORD *)(v79 + 16) = v107;
+          *(_DWORD *)(v79 + 20) = v108;
+          *(_DWORD *)(v79 + 24) = v109;
+          *(_DWORD *)(v79 + 28) = v110;
+          v111 = (unsigned __int8)(v101 * v103 / 0xFFu) | ((unsigned __int8)(v102 * v104 / 0xFFu) << 8);
+          *(_BYTE *)(v79 + 33) = BYTE1(v111);
+          _R1 = (2155905153u * (unsigned __int64)(unsigned int)(v124 * v105)) >> 32 << 9;
+          uxtb16(r1)
+          v118 = v111 | _R1;
+          *(_BYTE *)(v79 + 32) = v118;
+          *(_BYTE *)(v79 + 35) = (v118
+                                | ((2155905153u * (unsigned __int64)(unsigned int)(v125 * v106)) >> 32 << 17)
+                                & 0xFF000000) >> 24;
+          *(_BYTE *)(v79 + 34) = BYTE2(v118);
+          _R0 = (2155905153u * (unsigned __int64)(unsigned int)(v132 * v129)) >> 32 << 9;
+          uxtb16(r0)
+          v121 = (unsigned __int8)(v130 * v127 / 0xFFu) | ((unsigned __int8)(v128 * v126 / 0xFFu) << 8) | _R0;
+          *(_BYTE *)(v79 + 36) = (v130 * v127 / 0xFFu) | _R0;
+          *(_BYTE *)(v79 + 39) = (v121
+                                | ((2155905153u * (unsigned __int64)(unsigned int)(v134 * v92)) >> 32 << 17)
+                                & 0xFF000000) >> 24;
+          *(_BYTE *)(v79 + 38) = BYTE2(v121);
+          *(_BYTE *)(v79 + 37) = v128 * v126 / 0xFFu;
+          *(_DWORD *)(v79 + 40) = v131;
+          *(float *)(v79 + 44) = v82;
+          *(float *)(v79 + 64) = (float)(v96 * v95) * v94;
+          *(float *)(v79 + 68) = (float)((float)(v98 * v97) + (float)(v95 * (float)(v100 * v99))) * v93;
+          *(float *)(v79 + 72) = (float)(v98 * v100) - (float)(v95 * (float)(v99 * v97));
+          *(float *)(v79 + 76) = (float)((float)(v80 + (float)(v81 + v81)) + v77) * 0.5;
+          *(float *)(v79 + 80) = -(float)((float)(v96 * v98) * v94);
+          *(float *)(v79 + 84) = (float)((float)(v95 * v97) - (float)(v98 * (float)(v100 * v99))) * v93;
+          *(float *)(v79 + 88) = (float)(v98 * (float)(v99 * v97)) + (float)(v95 * v100);
+          *(float *)(v79 + 92) = v83 - a5;
+          *(_DWORD *)(v79 + 48) = v140;
+          *(_DWORD *)(v79 + 52) = v138;
+          *(_DWORD *)(v79 + 56) = v137;
+        }
+        else
+        {
+          v84 = *(unsigned __int8 *)(v75 + 23);
+          *(float *)v79 = v80;
+          *(float *)(v79 + 4) = v76;
+          *(float *)(v79 + 8) = v81;
+          *(float *)(v79 + 12) = v78;
+          v85 = *(_DWORD *)(v75 + 1);
+          v86 = *(_DWORD *)(v75 + 5);
+          v87 = *(_DWORD *)(v75 + 9);
+          *(_DWORD *)(v79 + 28) = *(_DWORD *)(v75 + 13);
+          *(_DWORD *)(v79 + 16) = v85;
+          *(_DWORD *)(v79 + 20) = v86;
+          *(_DWORD *)(v79 + 24) = v87;
+          LOBYTE(v85) = *(_BYTE *)(v75 - 7);
+          LOBYTE(v86) = *(_BYTE *)(v75 - 5);
+          v88 = *(_BYTE *)(v75 - 4);
+          *(_BYTE *)(v79 + 33) = *(_BYTE *)(v75 - 6);
+          *(_BYTE *)(v79 + 32) = v85;
+          *(_BYTE *)(v79 + 35) = v88;
+          *(_BYTE *)(v79 + 34) = v86;
+          v90 = *(_BYTE *)(v75 - 3);
+          v89 = (_BYTE *)(v75 - 3);
+          LOBYTE(v85) = v89[1];
+          LOBYTE(v86) = v89[2];
+          LOBYTE(v89) = v89[3];
+          *(_BYTE *)(v79 + 37) = v85;
+          *(_BYTE *)(v79 + 36) = v90;
+          *(_BYTE *)(v79 + 39) = (_BYTE)v89;
+          *(_BYTE *)(v79 + 38) = v86;
+          *(_DWORD *)(v79 + 40) = v84;
+          *(float *)(v79 + 44) = v82;
+        }
+        *(float *)(v79 + 60) = v77;
+        ++v67;
+        v69 += 52;
+        v68 += 48;
+        result = v144;
+      }
+      while ( v144 != v67 );
+    }
+  }
+  return result;
+}
 
-  }
-  }
-  }
-  }
-  }
 /* ============================================================================
  * sub_6084B178
  * RVA 0x0084b178   size 0x8   xrefs 1

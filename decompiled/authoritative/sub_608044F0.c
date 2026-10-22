@@ -1,3 +1,11 @@
+
+#include <math.h>
+
+/* VMINNM/VMAXNM are IEEE-754 minNum/maxNum: they return the non-NaN operand when one
+ * input is NaN. That is exactly what fminf/fmaxf do, unlike `a<b?a:b`. */
+static inline float vminnm_f32(float a, float b) { return fminf(a, b); }
+static inline float vmaxnm_f32(float a, float b) { return fmaxf(a, b); }
+static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
 void __fastcall sub_608044F0(int a1, int a2, float *a3, _BYTE *a4, int a5, int a6)
 {
   int v10; // r1
@@ -143,7 +151,7 @@ LABEL_19:
     _S4 = 0;
     if ( v37 > _S0 )
       _S0 = v37;
-    __asm { VMAXNM.F32      S28, S0, S4 }
+    vmaxnm_f32(float_s0, float_s4)
     if ( !_ZF )
       goto LABEL_49;
 LABEL_23:
@@ -177,13 +185,13 @@ LABEL_23:
     _S4 = 0;
     if ( v37 > _S0 )
       _S0 = v37;
-    __asm { VMAXNM.F32      S28, S0, S4 }
+    vmaxnm_f32(float_s0, float_s4)
     goto LABEL_23;
   }
   _S4 = 0;
   if ( v37 > _S0 )
     _S0 = (float)(v34 - v33) / 398.22;
-  __asm { VMAXNM.F32      S28, S0, S4 }
+  vmaxnm_f32(float_s0, float_s4)
 LABEL_49:
   v51 = v12 & a6;
   v52 = sub_607FF980(a3);

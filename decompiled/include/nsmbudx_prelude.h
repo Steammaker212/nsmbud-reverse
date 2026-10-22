@@ -12,18 +12,10 @@
 #define NSMBUDX_PRELUDE_H
 
 #include "nsmbudx_types.h"
-#include "nsmbudx_neon.h"
-#include "nsmbudx_data_symbols.h"
-#include "structs.h"
-#include "nsmbudx_recovered_types.h"
-#include "nsmbudx_data.h"
-#include "nsmbudx_subfuncs.h"
-#include "nsmbudx_undeclared.h"
-#include "nsmbudx_string_symbols.h"
 
-#include "libs.h"
-
-/* additional opaque qualified names used by the corpus */
+/* Incomplete types for C++-qualified names. These MUST precede the prototype headers below: if a
+   header mentions `struct nn_oe *` before the struct is declared, C creates a NEW type scoped to
+   that prototype, and every later `struct nn_oe *` is a different type. */
 struct nn_audio_PerformanceInfo;
 struct nn_detail;
 struct nn_diag;
@@ -56,5 +48,17 @@ struct sead_Random;
 struct sead_TaskBase;
 struct sead_TaskMgr;
 struct sead_ThreadUtil;
+#include "nsmbudx_neon.h"
+#include "nsmbudx_data_symbols.h"
+#include "structs.h"
+#include "nsmbudx_recovered_types.h"
+#include "nsmbudx_data.h"
+#include "nsmbudx_subfuncs.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_string_symbols.h"
+
+#include "libs.h"
+
+/* additional opaque qualified names used by the corpus */
 
 #endif /* NSMBUDX_PRELUDE_H */

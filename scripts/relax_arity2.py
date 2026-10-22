@@ -26,7 +26,16 @@ for dp, _, fs in os.walk(root):
             if n in defs:
                 k = np(m.group(2))
                 if n not in least or k < least[n]: least[n] = k
-        holes = {n for n, k in least.items() if k < defs[n]}
+        # Only relax when the LOWEST call is genuinely the contract. A function that is also called with the
+        # full parameter count elsewhere (e.g. __operator_new_array_al(size, heap, align)) must keep its
+        # prototype: relaxing it breaks the 3-argument calls. So require that NO call site uses the full arity.
+        most = {}
+        for m in CALL.finditer(t):
+            n = m.group(1)
+            if n in defs:
+                k = np(m.group(2))
+                if n not in most or k > most[n]: most[n] = k
+        holes = {n for n, k in least.items() if k < defs[n] and most.get(n, 0) < defs[n]}
         if not holes: continue
         n_fixed = 0
         def repl(m):

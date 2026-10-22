@@ -136,8 +136,10 @@ def main():
     rc, tail = run([os.path.join(REPO, "scripts", "align_header_prototypes.py"), "--write"])
     print("header prototypes: %s" % tail)
 
-    rc, tail = run([os.path.join(REPO, "scripts", "relax_header_arity.py"), "--write"])
-    print("header arity: %s" % tail)
+    # NOTE: do NOT relax the headers. A header prototype and a full prototype in the .c file genuinely
+    # conflict -- "conflicting types for sub_6080E034" is libs.h:242 `()` against libs.c:69 with five
+    # parameters -- so the header must be ALIGNED to the definition, never loosened. Loosening produced
+    # 6,000+ cascading errors per file because every in-file prototype then disagreed with the header.
     return 0
 
 

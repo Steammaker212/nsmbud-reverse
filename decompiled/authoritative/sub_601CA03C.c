@@ -730,6 +730,6 @@ LABEL_158:
     }
   }
   if ( (unsigned int)(v103 - 5) >> 2 <= 0x4E )
-    __asm { ADD             PC, R1, R2 }
+    /* ARM switch-dispatch idiom; the switch below is the implementation */ (void)0
   return (*(int (__fastcall **)(int *))(*a1 + 72))(a1);
 }

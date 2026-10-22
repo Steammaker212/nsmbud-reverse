@@ -61,7 +61,25 @@ def main(argv):
                     if n not in least or k < least[n]:
                         least[n] = k
 
-    holes = {n for n, k in least.items() if k < defs[n]}
+    # A function that is EVER called with its full parameter list must keep its prototype. Relaxing it because
+    # one call site omitted arguments breaks every full-arity call with "too many arguments" -- that is exactly
+    # what happened to __operator_new_array_al(size, heap, align).
+    most = {}
+    for dirpath, _, names in os.walk(ROOT):
+        if "include" in dirpath or "authoritative" in dirpath:
+            continue
+        for fn in sorted(names):
+            if not fn.endswith(".c"):
+                continue
+            t = open(os.path.join(dirpath, fn), encoding="utf-8", errors="replace").read()
+            for m in CALL.finditer(t):
+                n = m.group(1)
+                if n in defs:
+                    k = np(m.group(2))
+                    if n not in most or k > most[n]:
+                        most[n] = k
+
+    holes = {n for n, k in least.items() if k < defs[n] and most.get(n, 0) < defs[n]}
     print("functions called with fewer arguments than defined: %d" % len(holes))
 
     total = 0

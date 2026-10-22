@@ -36,7 +36,7 @@ import os
 import re
 import sys
 
-SRC = r"C:\Users\Saif Khan\Downloads\main.idb\.rea\decompiled_all"
+SRC = r"C:\Users\Saif Khan\Downloads\nsmbud-reverse\decompiled"
 DRY = "--apply" not in sys.argv
 
 ASM_RE = re.compile(r"__asm\s*\{\s*([^}]*?)\s*\}")
@@ -167,10 +167,23 @@ def convert(op):
 
 changed = 0
 flagsuspects = []
-for fn in sorted(os.listdir(SRC)):
-    if not fn.endswith(".c"):
-        continue
-    path = os.path.join(SRC, fn)
+
+
+def iter_sources():
+    """Every .c file in the corpus, including the subdirectories.
+
+    The first version used a bare os.listdir(SRC), which saw only the top level. Fourteen inline `__asm`
+    escapes survived in actors/ libs/ powerup/ systems/ ... and were never converted, while the report
+    cheerfully printed "TOTAL 0" because it had not looked at them at all.
+    """
+    for dirpath, _, names in os.walk(SRC):
+        for fn in sorted(names):
+            if fn.endswith(".c"):
+                yield os.path.join(dirpath, fn)
+
+
+for path in iter_sources():
+    fn = os.path.relpath(path, SRC)
     text = open(path, encoding="utf-8").read()
     if "__asm" not in text:
         continue

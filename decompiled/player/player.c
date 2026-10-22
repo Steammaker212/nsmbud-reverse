@@ -7,34 +7,34 @@
 int __fastcall sub_607855B8(int a1);
 int __fastcall sub_607857AC(int a1);
 int __fastcall sub_607869D0(int a1);
-int __fastcall sub_60786EA8();
-int __fastcall sub_60787118();
-int __fastcall sub_607872F4();
+int __fastcall sub_60786EA8(int a1);
+int __fastcall sub_60787118(int a1, int a2);
+int __fastcall sub_607872F4(int a1, int a2);
 int *__fastcall sub_60787B8C(int a1, unsigned int a2, int a3);
 int __fastcall sub_6078962C(int a1);
 int __fastcall sub_60789778(int a1);
 int __fastcall sub_6078AD40(int *a1);
-int __fastcall sub_6078D260();
-int __fastcall sub_6078D4AC();
+int __fastcall sub_6078D260(_DWORD *a1);
+int __fastcall sub_6078D4AC(int a1, int a2);
 int __fastcall sub_6078D94C(int a1);
 int __fastcall sub_6078DC64(int result);
 int __fastcall sub_6078DDAC(int a1);
 int __fastcall sub_6078E7F0(int a1);
-int __fastcall sub_6078E940();
+int __fastcall sub_6078E940(int a1, int *a2);
 void __fastcall sub_6078EE88(int a1, _DWORD *a2);
 int __fastcall sub_6079104C(int a1, _DWORD *a2, int a3, int a4, int a5);
-int __fastcall sub_607929C0();
+int __fastcall sub_607929C0(int a1, _DWORD *a2, _DWORD *a3);
 int __fastcall sub_60792ACC(int a1);
 unsigned __int64 __fastcall sub_60792ADC(int a1, unsigned int a2);
 int __fastcall sub_60792B58(_DWORD *a1, int a2);
 int __fastcall sub_60793184(int a1);
 bool __fastcall sub_60793198(int a1);
-bool __fastcall sub_607931A8();
+bool __fastcall sub_607931A8(int a1);
 int __fastcall sub_6079323C(int a1);
 int __fastcall sub_607934C0(int a1);
 int __fastcall sub_607934D4(_DWORD *a1, int a2);
 int __fastcall sub_60793EB4(int result, int a2, int a3);
-int __fastcall sub_6079421C();
+int __fastcall sub_6079421C(int a1, int a2, int a3, int a4, int a5);
 float *__fastcall sub_60794238(float *result);
 int __fastcall sub_60794BDC(int a1, int a2, int a3, unsigned int a4, int a5);
 int __fastcall Player_ctor(int a1, int a2);
@@ -43,8 +43,8 @@ int __fastcall sub_60796828(int a1);
 int __fastcall sub_60796F0C(int a1);
 int __fastcall sub_6079A618(int a1, float *a2, int a3);
 int __fastcall sub_6079A758(int a1);
-int __fastcall sub_6079AE3C();
-int __fastcall sub_6079AFAC();
+int __fastcall sub_6079AE3C(int a1, int a2, int a3, int a4);
+int __fastcall sub_6079AFAC(float *a1, float *a2, int a3);
 char *__fastcall sub_6079B254(_DWORD *a1);
 int __fastcall sub_6079B544(_DWORD *a1);
 int __fastcall sub_6079B8FC(int a1, int a2);
@@ -63,13 +63,13 @@ int __fastcall sub_6079FEC4(int a1, _DWORD *a2);
 bool __fastcall sub_607A01BC(int a1, int a2);
 int __fastcall sub_607A0514(int a1, int a2);
 int __fastcall sub_607A1DE0(int result);
-int __fastcall sub_607A1DF4();
+int __fastcall sub_607A1DF4(int a1, int a2);
 int __fastcall sub_607A1E44(_DWORD *a1);
 int __fastcall sub_607A1E6C(int a1);
-_DWORD * __fastcall sub_607A2894();
-int __fastcall sub_607A2924();
+_DWORD *__fastcall sub_607A2894(_DWORD *a1, _DWORD *a2);
+int __fastcall sub_607A2924(_DWORD *a1, int a2);
 int __fastcall sub_607A2AF8(int a1, int a2, int a3, int a4);
-int __fastcall sub_607A396C();
+int __fastcall sub_607A396C(int a1);
 int __fastcall sub_607A5504(int result);
 int __fastcall sub_607A57FC(int result);
 int __fastcall sub_607A7010(int a1);
@@ -83,7 +83,7 @@ int __fastcall sub_607AA814(int a1);
 int __fastcall sub_607AA954(int a1);
 int __fastcall sub_607AAA00(int a1);
 int __fastcall sub_607AB680(int a1);
-int __fastcall sub_607ABBA4();
+int __fastcall sub_607ABBA4(_DWORD *a1, int a2);
 int __fastcall sub_607ABF7C(int a1);
 int __fastcall sub_607AC0B8(int a1);
 int __fastcall sub_607AC310(int a1, int a2, int a3);
@@ -96,12 +96,12 @@ int __fastcall Player_setPowerupMode_helper(int result);
 int __fastcall sub_607AE904(int a1, int a2);
 int __fastcall sub_607AEA48(_BYTE *a1);
 int __fastcall sub_607AF358(int result);
-int __fastcall sub_607AF368();
+int __fastcall sub_607AF368(int a1);
 bool __fastcall sub_607AF388(int a1);
 int __fastcall sub_607AFBB0(int a1);
 int __fastcall sub_607AFD98(int a1);
 int __fastcall sub_607AFF5C(int a1);
-int __fastcall sub_607B03C0();
+int __fastcall sub_607B03C0(int a1, int a2, int a3, int a4);
 float *__fastcall sub_607B1154(int a1);
 int __fastcall sub_607B17A4(int a1);
 int __fastcall sub_607B184C(int a1);
@@ -115,11 +115,11 @@ int __fastcall sub_607B5380(_DWORD *a1);
 unsigned int __fastcall sub_607B58B0(int a1);
 int __fastcall sub_607B5A18(int a1, int a2, int a3, int a4);
 int __fastcall sub_607B6AE0(int result);
-int __fastcall sub_607B6B04();
+int __fastcall sub_607B6B04(int a1, int a2, int a3, int a4);
 int __fastcall sub_607B6CB0(_BYTE *a1);
 int __fastcall sub_607B7008(int a1);
 char *__fastcall sub_607B70FC(_DWORD *a1);
-int __fastcall sub_607B73BC();
+int __fastcall sub_607B73BC(int a1);
 int __fastcall sub_607B74E0(_DWORD *a1);
 int __fastcall sub_607B7C9C(float *a1);
 int __fastcall sub_607B7FC0(int a1);
@@ -141,9 +141,9 @@ int __fastcall sub_607BA4F4(int result);
 int __fastcall sub_607BA534(int a1);
 int __fastcall sub_607BA5CC(int a1);
 int __fastcall sub_607BA7C0(int32x4_t *a1);
-int __fastcall sub_607BA828();
+int __fastcall sub_607BA828(_DWORD *a1, int a2);
 int __fastcall sub_607BA8E0(int *a1);
-int __fastcall sub_607BAA4C();
+int __fastcall sub_607BAA4C(int a1);
 int __fastcall sub_607BAFF4(_DWORD *a1);
 int __fastcall sub_607BB53C(int a1);
 int __fastcall sub_607BB578(int a1);
@@ -3435,7 +3435,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v20 = 1;
         if ( (v17 | 1) == 3 || (v20 = 0, v17 != 6) )
         {
-          v19 = arr_dword_60B0C20C[v17];
+          v19 = dword_60B0C20C[v17];
           if ( (unsigned int)(v19 - 29) <= 3 )
           {
             v97 = v19;
@@ -3479,7 +3479,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v23 = 0;
         goto sub_60787B8C__LABEL_91;
       }
-      v23 = arr_dword_60B0C20C[v22];
+      v23 = dword_60B0C20C[v22];
       v46 = v23 - 29;
       v47 = (v16 & (1 << (v23 - 29))) == 0;
       if ( (v16 & (1 << (v23 - 29))) != 0 )
@@ -3506,7 +3506,7 @@ sub_60787B8C__LABEL_91:
             goto sub_60787B8C__LABEL_104;
           }
 sub_60787B8C__LABEL_99:
-          v50 = arr_dword_60B0C20C[v49];
+          v50 = dword_60B0C20C[v49];
           v51 = v50 - 29;
           v52 = (v16 & (1 << (v50 - 29))) == 0;
           if ( (v16 & (1 << (v50 - 29))) != 0 )
@@ -3656,7 +3656,7 @@ sub_60787B8C__LABEL_157:
       }
       if ( v35 || (v34 = 0, (unsigned int)(v33 - 5) >= 2) )
       {
-        v19 = arr_dword_60B0C1F4[v33];
+        v19 = dword_60B0C1F4[v33];
         if ( (unsigned int)(v19 - 29) <= 3 )
         {
           v97 = v19;
@@ -3703,7 +3703,7 @@ sub_60787B8C__LABEL_157:
         goto sub_60787B8C__LABEL_134;
       }
     }
-    v23 = arr_dword_60B0C1F4[v57];
+    v23 = dword_60B0C1F4[v57];
     v61 = v23 - 29;
     v62 = (v16 & (1 << (v23 - 29))) == 0;
     if ( (v16 & (1 << (v23 - 29))) != 0 )
@@ -3757,7 +3757,7 @@ sub_60787B8C__LABEL_147:
           goto sub_60787B8C__LABEL_147;
         }
       }
-      v50 = arr_dword_60B0C1F4[v64];
+      v50 = dword_60B0C1F4[v64];
       v65 = v50 - 29;
       v66 = (v16 & (1 << (v50 - 29))) == 0;
       if ( (v16 & (1 << (v50 - 29))) != 0 )

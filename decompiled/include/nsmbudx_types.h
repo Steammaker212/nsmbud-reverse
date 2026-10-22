@@ -114,7 +114,7 @@ void  _ZdaPv(void *p);
  * nothing contradicts the database prototypes. */
 /* The aligned/placement overload, which the decompiler prints as `operator new(size, heap, align)`.
  * Distinct from the one-argument symbol above, and declared only here. */
-int __fastcall __operator_new_al();
+int __fastcall __operator_new_al(unsigned int a1, int CurrentHeap, int a3);
 int __fastcall __operator_delete_al(int p, int heap, int align);
 int __fastcall __operator_new_array_al(unsigned int size, int heap, int align);
 int __fastcall __operator_delete_array_al(int p, int heap, int align);

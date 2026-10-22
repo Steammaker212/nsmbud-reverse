@@ -34,7 +34,7 @@ int __fastcall sub_601BE7AC(_DWORD *a1)
   v25 = sub_6019112C(v2);
   sub_601916EC(v2);
   if ( *(_BYTE *)(v2 + 1384) && (unsigned int)(v25 - 5) >> 1 <= 0xA2 )
-    __asm { ADD             PC, R0, R1 }
+    /* ARM switch-dispatch idiom; the switch below is the implementation */ (void)0
   v5 = v25 - 5;
   switch ( v25 )
   {
