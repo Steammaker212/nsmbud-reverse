@@ -1696,7 +1696,8 @@ static inline unsigned int uxtb16(unsigned int x)
         v40 = *((_DWORD *)result + 10);
   sub_6045195C__LABEL_54:
         sub_6086A6E0(v37, v40);
-        return (unsigned __int16 *)sub_6086A944(v37);
+        sub_6086A944(v37);
+        return 0;
       }
       if ( *(_DWORD *)(v17 + 224) )
       {
@@ -1727,7 +1728,8 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v3 = result + 8;
       sub_6086A6E0(result + 8, *(_DWORD *)(a2 + 40));
-      return (_DWORD *)sub_6086A944(v3);
+      sub_6086A944(v3);
+      return 0;
     }
     else if ( result[56] )
     {
@@ -1797,7 +1799,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC9CEF4] = 12320932;
       _cxa_guard_release_0(13225720);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC9CEF4])(13225716, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC9CEF4])(13225716, a2);
   }
 
 /* ============================================================================
@@ -7105,7 +7107,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC9CFAC] = 12320932;
       _cxa_guard_release_0(13225904);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC9CFAC])(13225900, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC9CFAC])(13225900, a2);
   }
 
 /* ============================================================================
@@ -9091,7 +9093,7 @@ sub_60459990__LABEL_136:
       MEMORY[0xC9CFC4] = 12420276;
       _cxa_guard_release_0(13225928);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC9CFC4])(13225924, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC9CFC4])(13225924, a2);
   }
 
 /* ============================================================================
@@ -10269,7 +10271,7 @@ sub_60459990__LABEL_136:
       MEMORY[0xC9D164] = 12563696;
       _cxa_guard_release_0(13226344);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC9D164])(13226340, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC9D164])(13226340, a2);
   }
 
 /* ============================================================================
@@ -10285,7 +10287,7 @@ sub_60459990__LABEL_136:
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC7B414])(13087764, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC7B414])(13087764, a2);
   }
 
 /* ============================================================================
@@ -14517,7 +14519,7 @@ sub_60459990__LABEL_136:
       MEMORY[0xC7B370] = 12320944;
       _cxa_guard_release_0(13087604);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC7B370])(13087600, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC7B370])(13087600, a2);
   }
 
 /* ============================================================================

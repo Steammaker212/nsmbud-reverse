@@ -465,7 +465,7 @@ int _nnDetailNintendoSdkRuntimeObjectFileRefer()
     float v21; // s2
     float v22; // s4
   
-    Actor__Actor();
+    Actor__Actor(a1, a2);
     *(_DWORD *)a1 = 12320780;
     *(_DWORD *)(a1 + 80) = 0;
     *(_WORD *)(a1 + 84) = -1;

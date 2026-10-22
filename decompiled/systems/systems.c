@@ -778,7 +778,9 @@ int __fastcall sub_6057A4C4(int a1);
 int __fastcall sub_6057D09C(int a1);
 int __fastcall sub_6057D990(_DWORD *a1);
 int __fastcall sub_6057E594(_DWORD *a1);
-void __fastcall sub_605839E8();
+/* Full prototype: this file also DEFINES sub_605839E8 with six parameters, so an old-style ()
+ * declaration here would be the thing that conflicts. */
+void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);
 int __fastcall sub_60584408(int a1, unsigned int a2, int a3);
 int __fastcall sub_60584678(int a1, float *a2, int a3);
 int __fastcall sub_60584FEC(int a1, float *a2);
@@ -1706,7 +1708,8 @@ static inline unsigned int uxtb16(unsigned int x)
     ctor_installTwoVtables(a1 + 1252);
     ctor_installTwoVtables(a1 + 1656);
     *(_DWORD *)(a1 + 2060) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 2060, a1 + 5588, 1) = 12570900;
+    Disposer_ctorWithRingOfChildren(a1 + 2060, a1 + 5588, 1);
+    *(_DWORD *)(a1 + 2060) = 12570900;
     *(_DWORD *)(a1 + 5588) = 0;
     *(_DWORD *)(a1 + 5592) = 12321336;
     *(_DWORD *)(a1 + 5596) = 11778612;
@@ -2253,7 +2256,8 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13233672);
     *(_DWORD *)(a1 + 4) = 12571728;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1);
+    *(_DWORD *)(a1 + 40) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;

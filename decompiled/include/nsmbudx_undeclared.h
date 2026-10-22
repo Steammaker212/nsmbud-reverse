@@ -791,7 +791,10 @@ int __fastcall sub_6054F8EC(int a1, _DWORD *a2, int a3, _DWORD *a4, int a5, int 
 int __fastcall sub_6058262C(int a1, float *a2, int a3, int a4, int a5);  /* 1 cast site(s) */
 _BYTE * __fastcall sub_60582B14(int a1, _DWORD *a2, int a3, int a4);  /* 1 cast site(s), signature from its definition */
 _BYTE * __fastcall sub_60583410(int a1, int a2, int a3);  /* 2 cast site(s) */
-void __fastcall sub_605839E8();  /* 2 cast site(s), signature from its definition */
+/* Full prototype from the definition in ItemMgr_spawn_B_605839E8.c. An old-style `()` declaration here
+ * cannot be used: the defining .c file includes this header, so `()` would conflict with the real
+ * parameter list. Every call site passes all six arguments. */
+void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);
 int __fastcall sub_60584938(int a1, int a2, int a3, unsigned int a4, int a5, int a6, int a7);  /* 1 cast site(s) */
 float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);  /* 1 cast site(s), signature from its definition */
 _BYTE * __fastcall sub_605B624C(float *a1, _DWORD *a2, int a3, int a4, int a5);  /* 2 cast site(s), signature from its definition */

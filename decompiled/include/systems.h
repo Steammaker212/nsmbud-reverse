@@ -4094,7 +4094,8 @@ int __fastcall sub_60583208(int a1, int a2, int a3);  /* 0x00583208 */
 int __fastcall sub_60583490(int a1, int a2, int a3);  /* 0x00583490 */
 int __fastcall sub_6058368C(int a1, int a2);  /* 0x0058368c */
 int __fastcall sub_60583754();  /* 0x00583754 */
-void __fastcall sub_605839E8();  /* 0x005839e8 */
+/* declared as () only where the caller passes fewer arguments; the definition in
+ * ItemMgr_spawn_B_605839E8.c carries the real parameter list. */
 int __fastcall sub_60583B70(int a1, int *a2, char a3, int a4, int a5, int a6);  /* 0x00583b70 */
 int __fastcall sub_60583E78(int a1, int a2);  /* 0x00583e78 */
 int __fastcall sub_605843DC(int a1);  /* 0x005843dc */
