@@ -683,4 +683,22 @@ extern const char aWipeinLevelnum[];  /* 2 reference(s) */
 extern const char aWipeinModeTeam[];  /* 2 reference(s) */
 extern const char aWipeinPlayernu[];  /* 2 reference(s) */
 
+/* ---- static arrays reached through a class scope ----
+ * `Kanjibo::AnimNamesWait[i]` is a static array, not a member of an object. C has no
+ * scopes, so the flattened name is the honest equivalent and the index still works. */
+extern const uint16_t agl__DTA[];  /* 1 reference(s) */
+
+/* ---- tables the code indexes ----
+ * Declared as arrays of uint32_t, which is the width every observed access uses. They are
+ * `extern` rather than address-pinned because the address is the linker's business once
+ * the name exists; nothing in the corpus takes the address itself. */
+extern uint32_t DryBones_rotations[];  /* 4 reference(s) */
+extern uint32_t RollingHill_typeInfos[];  /* 5 reference(s) */
+
+/* ---- sub_* used as a cast target ----
+ * The corpus writes `((void (__fastcall *)(int))sub_60106C90)(args)`. That needs the
+ * function's ADDRESS, so an unprototyped declaration is exactly right here: it makes the
+ * identifier a function designator, which decays to a pointer, and the cast in the source
+ * then supplies the signature the call uses. No arity is claimed. */
+
 #endif /* NSMBUDX_UNDECLARED_H */

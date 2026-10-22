@@ -6485,7 +6485,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN4sead14SafeStringBaseIcED2Ev
  * RVA 0x00007bec   size 0x4   xrefs 0
  * ============================================================================ */
-  void sead::SafeStringBase<char>::~SafeStringBase()
+  void sead__SafeStringBase_char__~SafeStringBase()
   {
     ;
   }
@@ -7217,7 +7217,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * RVA 0x00008a74   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall sead::SafeStringBase<char>::~SafeStringBase(int a1)
+  int __fastcall sead__SafeStringBase_char__~SafeStringBase(int a1)
   {
     return __operator_delete(a1);
   }
@@ -7226,7 +7226,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZNK4sead14SafeStringBaseIcE22assureTerminationImpl_Ev
  * RVA 0x00008a78   size 0x4   xrefs 14
  * ============================================================================ */
-  void sead::SafeStringBase<char>::assureTerminationImpl_()
+  void sead__SafeStringBase_char__assureTerminationImpl_()
   {
     ;
   }
@@ -15814,10 +15814,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[1] = a1 + 3;
     *a1 = 12322272;
     a1[2] = 260;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1);
     *(_BYTE *)a1[1] = MEMORY[0xB3BA34];
     *a1 = 12322248;
-    sead::BufferedSafeStringBase<char>::formatV(a1, a2);
+    sead__BufferedSafeStringBase_char__formatV(a1, a2);
     return a1;
   }
 

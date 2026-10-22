@@ -36,6 +36,15 @@ SIMDREG = re.compile(r"\b(_S\d{1,2})\b")
 FLOATSLOT = re.compile(r"\b(float_s\d+)\b")
 # IDA names a rodata string `a<Text>`; these are arrays of char.
 STRINGARRAY = re.compile(r"\b(a[A-Z][A-Za-z0-9_]{4,})\b")
+# `Kanjibo::AnimNamesWait[...]` -- a static array reached through a class scope. In C a scope is only
+# part of a name, so this flattens to Kanjibo__AnimNamesWait and becomes an ordinary array.
+SCOPED_ARRAY = re.compile(r"\b([A-Za-z_]\w*)::([A-Za-z_]\w*)\s*\[")
+# Bare table names the decompiler references that no header declares.
+TABLE = re.compile(r"\b([A-Za-z_]\w*_(?:typeInfos|rotations|Table|table))\b")
+# `sub_X` used as a CAST TARGET rather than called: ((void (*)(...))sub_60106C90)(...).
+# A prototype does not give that expression an address; an address-pinned array does not either, so
+# these are declared as function designators -- see the note emitted in the header.
+FN_PTR = re.compile(r"\)\s*\(\s*(sub_[0-9A-Fa-f]{6,8})\s*\)")
 
 
 def declared_names(headers_dir, self_name):
@@ -71,7 +80,8 @@ def main(argv):
 
     have = declared_names(inc, os.path.basename(out))
 
-    used = {"nullsub": {}, "algn": {}, "simd": {}, "floats": {}, "str": {}}
+    used = {"nullsub": {}, "algn": {}, "simd": {}, "floats": {}, "str": {},
+            "scoped": {}, "table": {}, "fnptr": {}}
     for dp, _, fs in os.walk(root):
         for f in fs:
             if not f.endswith(".c"):
@@ -88,6 +98,13 @@ def main(argv):
                 used["floats"][m.group(1)] = used["floats"].get(m.group(1), 0) + 1
             for m in STRINGARRAY.finditer(text):
                 used["str"][m.group(1)] = used["str"].get(m.group(1), 0) + 1
+            for m in SCOPED_ARRAY.finditer(text):
+                flat = "%s__%s" % (m.group(1), m.group(2))
+                used["scoped"][flat] = used["scoped"].get(flat, 0) + 1
+            for m in TABLE.finditer(text):
+                used["table"][m.group(1)] = used["table"].get(m.group(1), 0) + 1
+            for m in FN_PTR.finditer(text):
+                used["fnptr"][m.group(1)] = used["fnptr"].get(m.group(1), 0) + 1
 
     lines = [
         "/* NSMBU Deluxe (Switch) v1.0.0 -- callables and data the corpus uses that no header declared",
@@ -163,10 +180,45 @@ def main(argv):
         lines.append("extern const char %s[];  /* %d reference(s) */" % (name, used["str"][name]))
         n_str += 1
 
+    lines += ["", "/* ---- static arrays reached through a class scope ----",
+              " * `Kanjibo::AnimNamesWait[i]` is a static array, not a member of an object. C has no",
+              " * scopes, so the flattened name is the honest equivalent and the index still works. */"]
+    n_scoped = 0
+    for name in sorted(used["scoped"]):
+        if name in have:
+            continue
+        lines.append("extern const uint16_t %s[];  /* %d reference(s) */"
+                     % (name, used["scoped"][name]))
+        n_scoped += 1
+
+    lines += ["", "/* ---- tables the code indexes ----",
+              " * Declared as arrays of uint32_t, which is the width every observed access uses. They are",
+              " * `extern` rather than address-pinned because the address is the linker's business once",
+              " * the name exists; nothing in the corpus takes the address itself. */"]
+    n_table = 0
+    for name in sorted(used["table"]):
+        if name in have:
+            continue
+        lines.append("extern uint32_t %s[];  /* %d reference(s) */" % (name, used["table"][name]))
+        n_table += 1
+
+    lines += ["", "/* ---- sub_* used as a cast target ----",
+              " * The corpus writes `((void (__fastcall *)(int))sub_60106C90)(args)`. That needs the",
+              " * function's ADDRESS, so an unprototyped declaration is exactly right here: it makes the",
+              " * identifier a function designator, which decays to a pointer, and the cast in the source",
+              " * then supplies the signature the call uses. No arity is claimed. */"]
+    n_fnptr = 0
+    for name in sorted(used["fnptr"]):
+        if name in have:
+            continue
+        lines.append("int __fastcall %s();  /* %d cast site(s) */"
+                     % (name, used["fnptr"][name]))
+        n_fnptr += 1
+
     lines += ["", "#endif /* NSMBUDX_UNDECLARED_H */", ""]
 
-    print("declared: nullsub %d, algn %d, simd %d, float %d, str %d"
-          % (n_null, n_algn, n_simd, n_float, n_str))
+    print("declared: nullsub %d, algn %d, simd %d, float %d, str %d, scoped %d, table %d, fnptr %d"
+          % (n_null, n_algn, n_simd, n_float, n_str, n_scoped, n_table, n_fnptr))
     if write:
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, "w", encoding="utf-8", newline="\n") as fh:

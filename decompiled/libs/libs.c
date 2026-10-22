@@ -22165,7 +22165,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[24] = a1 + 26;
     a1[23] = 12322272;
     a1[25] = 260;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 23);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 23);
     *(_BYTE *)a1[24] = MEMORY[0xB3BA34];
     a1[23] = 12555912;
     sub_608E3620(a1, a1 + 23, a2);
@@ -23480,14 +23480,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(v2 + 24) = v2 + 32;
       *(_DWORD *)(v2 + 20) = 12322272;
       *(_DWORD *)(v2 + 28) = 16;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v2 + 20);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v2 + 20);
       v3 = MEMORY[0xB3BA34];
       **(_BYTE **)(v2 + 24) = MEMORY[0xB3BA34];
       *(_DWORD *)(v2 + 20) = 12408020;
       *(_DWORD *)(v2 + 52) = v2 + 60;
       *(_DWORD *)(v2 + 48) = 12322272;
       *(_DWORD *)(v2 + 56) = 16;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v2 + 48);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v2 + 48);
       **(_BYTE **)(v2 + 52) = v3;
       *(_DWORD *)(v2 + 48) = 12408020;
       *(_BYTE *)(v2 + 76) = 0;
@@ -23657,14 +23657,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v51 = &v53;
         v50 = 12322272;
         v52 = 256;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v50);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v50);
         v6 = MEMORY[0xB3BA34];
         *(_BYTE *)v51 = MEMORY[0xB3BA34];
         v50 = 12424380;
         v47 = &v49;
         v46 = 12322272;
         v48 = 32;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v46);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v46);
         *(_BYTE *)v47 = v6;
         v46 = 12405792;
         v8 = sub_608FD248(12405792, v7);
@@ -23684,7 +23684,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v43 = &v45;
         v42 = 12322272;
         v44 = 32;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v42);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v42);
         *(_BYTE *)v43 = v6;
         v42 = 12405792;
         v11 = Code_Content_Message_ref(i);
@@ -23700,7 +23700,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v39 = v41;
           v38 = 12322272;
           v40 = 64;
-          sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v38);
+          sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v38);
           *v39 = v6;
           v38 = 12405744;
           (*(void (__fastcall **)(int *))(v50 + 12))(&v50);
@@ -23829,7 +23829,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v39 = v41;
         v38 = 12322272;
         v40 = 64;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v38);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v38);
         *v39 = v6;
         v38 = 12405744;
         (*(void (__fastcall **)(int *))(v50 + 12))(&v50);
@@ -24346,7 +24346,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             MEMORY[0xCC6C48] = 13397072;
             MEMORY[0xCC6C44] = 12322272;
             MEMORY[0xCC6C4C] = 95;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13397060);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13397060);
             MEMORY[0xCC6C44] = 12756228;
             v5 = MEMORY[0xCC6C48];
             if ( (char *)MEMORY[0xCC6C48] != "JPja, USen, USes, USfr, USpt, EUen, EUes, EUfr, EUde, EUit, EUpt, EUnl, EUru,"
@@ -24523,7 +24523,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             MEMORY[0xCC6CFC] = 13397252;
             MEMORY[0xCC6CF8] = 12322272;
             MEMORY[0xCC6D00] = 25;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13397240);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13397240);
             MEMORY[0xCC6CF8] = 12756276;
             v5 = MEMORY[0xCC6CFC];
             if ( (char *)MEMORY[0xCC6CFC] != "Code , Content , Message" )
@@ -24696,7 +24696,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             MEMORY[0xCC6D38] = 13397312;
             MEMORY[0xCC6D34] = 12322272;
             MEMORY[0xCC6D3C] = 23;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13397300);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13397300);
             MEMORY[0xCC6D34] = 12756324;
             v5 = MEMORY[0xCC6D38];
             if ( (char *)MEMORY[0xCC6D38] != "JP, US, EU, KR, CN, TW" )
@@ -24994,7 +24994,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(v1 + 140) = v1 + 148;
     *(_DWORD *)(v1 + 136) = 12322272;
     *(_DWORD *)(v1 + 144) = 260;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v1 + 136);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(v1 + 136);
     v3 = MEMORY[0xB3BA34];
     **(_BYTE **)(v1 + 140) = MEMORY[0xB3BA34];
     *(_DWORD *)(v1 + 136) = 12555912;
@@ -25054,7 +25054,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(v4 + v2) = v41 + v2 + 15552;
         *(_DWORD *)(v8 - 4) = 12322272;
         *(_DWORD *)(v8 + 4) = 5;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v4 + v2 - 4);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(v4 + v2 - 4);
         v9 = *(_BYTE **)(v4 + v2);
         v2 += 36;
         v7 -= 36;
@@ -25071,7 +25071,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(v12 - 8) = 12322272;
         *(_DWORD *)(v12 - 4) = v11 + v10 + 4;
         *(_DWORD *)(v11 + v10) = 5;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v11 + v10 - 8);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(v11 + v10 - 8);
         v10 += 36;
         **(_BYTE **)(v12 - 4) = v6;
         *(_DWORD *)(v12 - 8) = 12406584;
@@ -26061,7 +26061,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v37 = &v39;
     v36 = 12322272;
     v38 = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v36);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v36);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v37 = MEMORY[0xB3BA34];
     v36 = 12424616;
@@ -26215,7 +26215,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v22 = &v24;
       v21 = 12322272;
       v23 = 128;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v21);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v21);
       *(_BYTE *)v22 = v11;
       v14 = v3 + 1;
       v21 = 12424616;
@@ -26914,7 +26914,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4[1] = v4 + 3;
     *v4 = 12322272;
     v4[2] = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v4);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(v4);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v4[1] = MEMORY[0xB3BA34];
     *v4 = 12424616;
@@ -27183,7 +27183,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = &v30;
     v27 = 12322272;
     v29 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v27);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v27);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v28 = MEMORY[0xB3BA34];
     v27 = 12405792;
@@ -27191,7 +27191,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v23 = &v25;
     v22 = 12322272;
     v24 = 260;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v22);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v22);
     *(_BYTE *)v23 = v5;
     v22 = 12555912;
     v6 = sub_608E8770(MEMORY[0xCCEBD0], a1, &v22);
@@ -27286,7 +27286,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v36 = &v38;
     v35 = 12322272;
     v37 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v35);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v35);
     v6 = MEMORY[0xB3BA34];
     *(_BYTE *)v36 = MEMORY[0xB3BA34];
     v35 = 12405792;
@@ -27294,7 +27294,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v31 = &v33;
     v30 = 12322272;
     v32 = 260;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v30);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v30);
     *(_BYTE *)v31 = v6;
     v30 = 12555912;
     v7 = sub_608E8770(MEMORY[0xCCEBD0], a1, &v30);
@@ -27532,7 +27532,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v26 = v7 + 8;
       v25 = 12322272;
       v27 = 33;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v25);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v25);
       v8 = v26;
       (*(void (__fastcall **)(_DWORD *))(*a2 + 12))(a2);
       v9 = (const void *)a2[1];
@@ -27653,7 +27653,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v58 = (_BYTE *)(v5 + 44);
     v57 = 12322272;
     v59 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v5 + 32);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(v5 + 32);
     v6 = MEMORY[0xB3BA34];
     *v58 = MEMORY[0xB3BA34];
     v57 = 12405792;
@@ -27663,7 +27663,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v52 = v54;
     v51 = 12322272;
     v53 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v51);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v51);
     *v52 = v6;
     v51 = 12424380;
     v54[256] = 0;
@@ -27761,7 +27761,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v12[5] = v12 + 7;
         v12[4] = 12322272;
         v12[6] = 32;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v12 + 4);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(v12 + 4);
         *(_BYTE *)v12[5] = v6;
         v12[4] = 12405792;
         v12[15] = v9;
@@ -27906,7 +27906,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = &v8;
     v5 = 12322272;
     v7 = 260;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v5);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v5);
     *(_BYTE *)v6 = MEMORY[0xB3BA34];
     v5 = 12555912;
     v3 = sub_608E8770(MEMORY[0xCCEBD0], a2, &v5);
@@ -27967,7 +27967,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v18[5] = v18 + 7;
       v18[4] = 12322272;
       v18[6] = 32;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v18 + 4);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v18 + 4);
       v19 = MEMORY[0xB3BA34];
       *(_BYTE *)v18[5] = MEMORY[0xB3BA34];
       v18[4] = 12405792;
@@ -28615,7 +28615,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)&v126[4] = &v126[12];
     *(_DWORD *)v126 = 12322272;
     *(_DWORD *)&v126[8] = 260;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v126);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(v126);
     *(_DWORD *)v126 = 12756624;
     v8 = *(char **)&v126[4];
     MEMORY[0xBC0244](&v115);
@@ -28697,7 +28697,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *((_DWORD *)v19 + 9) = (char *)v19 + 44;
     *((_DWORD *)v19 + 8) = 12322272;
     *((_DWORD *)v19 + 10) = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((char *)v19 + 32);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((char *)v19 + 32);
     v20 = MEMORY[0xB3BA34];
     **((_BYTE **)v19 + 9) = MEMORY[0xB3BA34];
     *(_DWORD *)v126 = 12321336;
@@ -28925,7 +28925,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v76 = &v78;
     v75 = 12322272;
     v77 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v75);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v75);
     v4 = MEMORY[0xB3BA34];
     *v76 = MEMORY[0xB3BA34];
     v75 = 12405792;
@@ -28933,7 +28933,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v80 = v82;
     v79 = 12322272;
     v81 = 260;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v79);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v79);
     *v80 = v4;
     v56 = 12321336;
     v79 = 12555912;
@@ -28984,7 +28984,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v72 = (_BYTE *)(v7 + 44);
     v71 = 12322272;
     v73 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v7 + 32);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(v7 + 32);
     v8 = MEMORY[0xB3BA34];
     *v72 = MEMORY[0xB3BA34];
     v9 = a2;
@@ -28998,7 +28998,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v80 = v82;
     v79 = 12322272;
     v81 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v79);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v79);
     *v80 = v8;
     v79 = 12424380;
     v82[256] = 0;
@@ -29092,7 +29092,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v33 = (char *)&v35;
       v32 = 12322272;
       v34 = 68;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v11);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v11);
       *v33 = v8;
       v18 = 12756648;
       v19 = v38;
@@ -33033,7 +33033,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = &v10;
     v7 = 12322272;
     v9 = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v7);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v7);
     *(_BYTE *)v8 = MEMORY[0xB3BA34];
     v7 = 12424616;
     StringUtil_formatInto(&v7, "save://rp_challenge_replay%02d.dat", a1[9]);
@@ -33087,7 +33087,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = &v13;
     v10 = 12322272;
     v12 = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v10);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v10);
     *(_BYTE *)v11 = MEMORY[0xB3BA34];
     v10 = 12424616;
     StringUtil_formatInto(&v10, "save://rp_challenge_replay%02d.dat", *((_DWORD *)a1 + 9));
@@ -184437,7 +184437,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 36) = a1 + 44;
     *(_DWORD *)(a1 + 32) = 12322272;
     *(_DWORD *)(a1 + 40) = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 32);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 32);
     v7 = MEMORY[0xB3BA34];
     **(_BYTE **)(a1 + 36) = MEMORY[0xB3BA34];
     *(_DWORD *)(a1 + 32) = 12405792;
@@ -184510,7 +184510,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = (struct nn_fs *)&v23;
     v20 = 12322272;
     v22 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v20);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v20);
     *(_BYTE *)v21 = MEMORY[0xB3BA34];
     v20 = 12424380;
     if ( !(*(int (__fastcall **)(_DWORD *, int *, int))(*a1 + 124))(a1, &v20, a3) )
@@ -184647,7 +184647,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = (struct nn_fs *)&v10;
     v7 = 12322272;
     v9 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v7);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v7);
     *(_BYTE *)v8 = MEMORY[0xB3BA34];
     v7 = 12424380;
     if ( (*(int (__fastcall **)(_DWORD *, int *, int))(*a1 + 124))(a1, &v7, a2) == 1 )
@@ -184853,7 +184853,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = &v12;
     v9 = 12322272;
     v11 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v9);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v9);
     *v10 = MEMORY[0xB3BA34];
     v9 = 12424380;
     if ( !(*(int (__fastcall **)(_DWORD *, int *, int))(*a1 + 124))(a1, &v9, a3) )
@@ -184898,7 +184898,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = &v12;
     v9 = 12322272;
     v11 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v9);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v9);
     *v10 = MEMORY[0xB3BA34];
     v9 = 12424380;
     if ( !(*(int (__fastcall **)(_DWORD *, int *, int))(*a1 + 124))(a1, &v9, a3) )
@@ -184942,7 +184942,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = &v12;
     v9 = 12322272;
     v11 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v9);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v9);
     *(_BYTE *)v10 = MEMORY[0xB3BA34];
     v9 = 12424380;
     if ( (*(int (__fastcall **)(_DWORD *, int *, int))(*a1 + 124))(a1, &v9, a3) == 1 )
@@ -185079,7 +185079,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = (struct nn_fs *)&v10;
     v7 = 12322272;
     v9 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v7);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v7);
     *(_BYTE *)v8 = MEMORY[0xB3BA34];
     v7 = 12424380;
     if ( (*(int (__fastcall **)(_DWORD *, int *, int))(*a1 + 124))(a1, &v7, a2) == 1 )
@@ -185403,7 +185403,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 36) = a1 + 44;
     *(_DWORD *)(a1 + 32) = 12322272;
     *(_DWORD *)(a1 + 40) = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 32);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 32);
     v8 = MEMORY[0xB3BA34];
     **(_BYTE **)(a1 + 36) = MEMORY[0xB3BA34];
     *(_DWORD *)(a1 + 32) = 12405792;
@@ -185446,7 +185446,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 88) = a1 + 96;
     *(_DWORD *)(a1 + 84) = 12322272;
     *(_DWORD *)(a1 + 92) = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 84);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 84);
     **(_BYTE **)(a1 + 88) = v8;
     *(_DWORD *)(a1 + 84) = 12424380;
     if ( a3 )
@@ -185546,7 +185546,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = &v23;
     v20 = 12322272;
     v22 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v20);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v20);
     v6 = MEMORY[0xB3BA34];
     *(_BYTE *)v21 = MEMORY[0xB3BA34];
     v20 = 12558168;
@@ -185738,7 +185738,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = &v21;
     v18 = 12322272;
     v20 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v18);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v18);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v19 = MEMORY[0xB3BA34];
     v18 = 12558168;
@@ -185870,7 +185870,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = &v21;
     v18 = 12322272;
     v20 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v18);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v18);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v19 = MEMORY[0xB3BA34];
     v18 = 12558168;
@@ -185993,7 +185993,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = &v21;
     v18 = 12322272;
     v20 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v18);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v18);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v19 = MEMORY[0xB3BA34];
     v18 = 12558168;
@@ -186116,7 +186116,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = &v21;
     v18 = 12322272;
     v20 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v18);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v18);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v19 = MEMORY[0xB3BA34];
     v18 = 12558168;
@@ -186257,7 +186257,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = &v21;
     v18 = 12322272;
     v20 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v18);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v18);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v19 = MEMORY[0xB3BA34];
     v18 = 12558168;
@@ -186398,7 +186398,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v17 = &v19;
     v16 = 12322272;
     v18 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v16);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v16);
     v4 = MEMORY[0xB3BA34];
     *(_BYTE *)v17 = MEMORY[0xB3BA34];
     v16 = 12558168;
@@ -186521,7 +186521,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v17 = &v19;
     v16 = 12322272;
     v18 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v16);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v16);
     v4 = MEMORY[0xB3BA34];
     *(_BYTE *)v17 = MEMORY[0xB3BA34];
     v16 = 12558168;
@@ -186644,7 +186644,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = &v21;
     v18 = 12322272;
     v20 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v18);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v18);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v19 = MEMORY[0xB3BA34];
     v18 = 12558168;
@@ -186767,7 +186767,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = &v21;
     v18 = 12322272;
     v20 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v18);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v18);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v19 = MEMORY[0xB3BA34];
     v18 = 12558168;
@@ -188309,7 +188309,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v71 = (char *)&v73;
           v70 = 12322272;
           v72 = 512;
-          sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v70);
+          sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v70);
           v8 = MEMORY[0xB3BA34];
           *v71 = MEMORY[0xB3BA34];
           v70 = 12558168;
@@ -188469,7 +188469,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                   v59 = (unsigned __int8 *)&v61;
                   v58 = 12322272;
                   v60 = 128;
-                  sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v58);
+                  sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v58);
                   *v59 = v8;
                   v58 = 12424616;
                   sub_608E7618(&v62, &v58);
@@ -188830,7 +188830,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = &v8;
     v5 = 12322272;
     v7 = 512;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v5);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v5);
     *(_BYTE *)v6 = MEMORY[0xB3BA34];
     v5 = 12558168;
     return (*(int (__fastcall **)(int, int *, int))(*(_DWORD *)a1 + 120))(a1, &v5, a2);
@@ -189573,7 +189573,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = &v14;
     v11 = 12322272;
     v13 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v11);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v11);
     *(_BYTE *)v12 = MEMORY[0xB3BA34];
     v11 = 12424380;
     v9 = (_BYTE *)sub_608E8770(a1, a3, &v11);
@@ -189610,7 +189610,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = &v23;
     v20 = 12322272;
     v22 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v20);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v20);
     v6 = MEMORY[0xB3BA34];
     *v21 = MEMORY[0xB3BA34];
     v20 = 12405792;
@@ -189699,7 +189699,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = &v21;
     v18 = 12322272;
     v20 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v18);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v18);
     *(_BYTE *)v19 = MEMORY[0xB3BA34];
     v18 = 12424380;
     v4 = sub_608E8770(a1, a2, (int)&v18);
@@ -189777,7 +189777,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(argc + 36) = argc + 44;
     *(_DWORD *)(argc + 32) = 12322272;
     *(_DWORD *)(argc + 40) = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(argc + 32);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(argc + 32);
     v6 = MEMORY[0xB3BA34];
     **(_BYTE **)(argc + 36) = MEMORY[0xB3BA34];
     *(_DWORD *)(argc + 32) = 12405792;
@@ -202013,7 +202013,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v39 = (unsigned __int8 *)&v41;
     v38 = 12322272;
     v40 = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v38);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v38);
     v38 = dword_60C79910 + 8;
     v7 = v39;
     MEMORY[0xBC0244](&v36);
@@ -202058,7 +202058,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       v12 = v6;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v38);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v38);
       v13 = v39;
       v14 = 0;
       v15 = MEMORY[0xB3BA34];
@@ -203078,7 +203078,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = (unsigned __int8 *)&v27;
     v24 = 12322272;
     v26 = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v24);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v24);
     v24 = dword_60C79910 + 8;
     v7 = v25;
     if ( v25 != (unsigned __int8 *)&unk_60ABC94D )
@@ -203096,7 +203096,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v24);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v24);
       v9 = v25;
       v10 = 0;
       v11 = MEMORY[0xB3BA34];
@@ -203741,7 +203741,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v51 = (unsigned __int8 *)&v53;
     v50 = 12322272;
     v52 = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v50);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v50);
     v50 = dword_60C79910 + 8;
     v7 = v51;
     MEMORY[0xBC0244](&v48);
@@ -203788,7 +203788,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       v12 = v6;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v50);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v50);
       v13 = v51;
       v14 = 0;
       v15 = MEMORY[0xB3BA34];
@@ -205019,7 +205019,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v33 = (unsigned __int8 *)&v35;
     v32 = 12322272;
     v34 = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v32);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v32);
     v32 = dword_60C79910 + 8;
     v7 = v33;
     MEMORY[0xBC0244](&v30);
@@ -205064,7 +205064,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       v12 = v6;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v32);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v32);
       v13 = v33;
       v14 = 0;
       v15 = MEMORY[0xB3BA34];
@@ -205875,7 +205875,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v45 = v37;
               v44 = 12322272;
               v46 = v30 + 1;
-              sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v44);
+              sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v44);
               v38 = v45;
               if ( v45 != v49 )
               {
@@ -205948,7 +205948,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v40 = &v42;
     v39 = 12322272;
     v41 = 16;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v39);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v39);
     v6 = MEMORY[0xB3BA34];
     *(_BYTE *)v40 = MEMORY[0xB3BA34];
     v39 = 12408020;
@@ -207239,7 +207239,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZNK4sead22BufferedSafeStringBaseIcE22assureTerminationImpl_Ev
  * RVA 0x008fdd9c   size 0x18   xrefs 583
  * ============================================================================ */
-  int __fastcall sead::BufferedSafeStringBase<char>::assureTerminationImpl_(int a1)
+  int __fastcall sead__BufferedSafeStringBase_char__assureTerminationImpl_(int a1)
   {
     int result; // r0
   
@@ -207265,7 +207265,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZN4sead22BufferedSafeStringBaseIcE7formatVEPKcSt9__va_list
  * RVA 0x008fddcc   size 0x28   xrefs 10
  * ============================================================================ */
-  int __fastcall sead::BufferedSafeStringBase<char>::formatV(int a1)
+  int __fastcall sead__BufferedSafeStringBase_char__formatV(int a1)
   {
     unsigned int v1; // r4
     int result; // r0
@@ -211724,7 +211724,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(v5 + 36) = v5 + 44;
       *(_DWORD *)(v5 + 32) = 12322272;
       *(_DWORD *)(v5 + 40) = 32;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v5 + 32);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v5 + 32);
       v7 = MEMORY[0xB3BA34];
       **(_BYTE **)(v5 + 36) = MEMORY[0xB3BA34];
       *(_DWORD *)(v5 + 32) = 12405792;
@@ -211911,7 +211911,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v18 = &v20;
       v17 = 12322272;
       v19 = 32;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v17);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v17);
       v5 = MEMORY[0xB3BA34];
       *(_BYTE *)v18 = MEMORY[0xB3BA34];
       v17 = 12405792;
@@ -212049,7 +212049,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v41 = 11778612;
     v36 = 12322272;
     v38 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v36);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v36);
     v8 = MEMORY[0xB3BA34];
     *(_BYTE *)v37 = MEMORY[0xB3BA34];
     v36 = 12405792;
@@ -213056,7 +213056,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 36) = a1 + 44;
     *(_DWORD *)(a1 + 32) = 12322272;
     *(_DWORD *)(a1 + 40) = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 32);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 32);
     *(_DWORD *)(a1 + 32) = 12405816;
     v7 = *(char **)(a1 + 36);
     if ( v7 != "szs" )
@@ -214533,7 +214533,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 4) = 12322272;
     v2 = (_DWORD *)(a1 + 4);
     *(_DWORD *)(a1 + 12) = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 4);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 4);
     *v2 = dword_60C79910 + 8;
     v3 = *(char **)(a1 + 8);
     if ( v3 != " \t\r\n" )
@@ -215412,7 +215412,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = &v18;
     v15 = 12322272;
     v17 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v15);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v15);
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
@@ -215470,7 +215470,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = &v18;
     v15 = 12322272;
     v17 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v15);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v15);
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
@@ -215528,7 +215528,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = &v18;
     v15 = 12322272;
     v17 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v15);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v15);
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
@@ -215586,7 +215586,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = &v18;
     v15 = 12322272;
     v17 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v15);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v15);
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
@@ -215644,7 +215644,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = &v18;
     v15 = 12322272;
     v17 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v15);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v15);
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
@@ -215702,7 +215702,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = &v18;
     v15 = 12322272;
     v17 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v15);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v15);
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
@@ -215760,7 +215760,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = &v18;
     v15 = 12322272;
     v17 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v15);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v15);
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
@@ -215818,7 +215818,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = &v18;
     v15 = 12322272;
     v17 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v15);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v15);
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12405792;
@@ -215877,7 +215877,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = &v16;
     v13 = 12322272;
     v15 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v13);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v13);
     v5 = MEMORY[0xB3BA34];
     *(_BYTE *)v14 = MEMORY[0xB3BA34];
     v13 = 12405792;
@@ -216328,7 +216328,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60CCF014 = (int)&unk_60CCF01C;
     dword_60CCF010 = 12322272;
     dword_60CCF018 = 1024;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&dword_60CCF010);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&dword_60CCF010);
     *(_BYTE *)dword_60CCF014 = MEMORY[0xB3BA34];
     dword_60CCF010 = 12560860;
     sub_6090805C((struct sead_IDisposer *)&unk_60CCF41C);
@@ -221381,9 +221381,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v7);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v7);
     }
-    sead::BufferedSafeStringBase<char>::formatV(&v7, a2);
+    sead__BufferedSafeStringBase_char__formatV(&v7, a2);
     (*(void (__fastcall **)(int *))(v7 + 12))(&v7);
     sub_60901A08(v4, v5, (int)v8, v5 - 1);
     return sub_6090E1F4(a1, v4, -1, 1, 0);
@@ -228782,7 +228782,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 868) = a1 + 876;
     *(_DWORD *)(a1 + 864) = 12322272;
     *(_DWORD *)(a1 + 872) = 64;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 864);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 864);
     v4 = MEMORY[0xB3BA34];
     **(_BYTE **)(a1 + 868) = MEMORY[0xB3BA34];
     *(_DWORD *)(a1 + 864) = 12405744;
@@ -231797,7 +231797,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 44) = 12322272;
     v3 = (_DWORD *)(a1 + 44);
     *(_DWORD *)(a1 + 52) = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 44);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 44);
     *v3 = 12424404;
     v4 = *(void **)(a1 + 48);
     (*(void (__fastcall **)(int))(MEMORY[0xC5CB30] + 12))(12962608);
@@ -240628,7 +240628,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = v27;
     v24 = 12322272;
     v26 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v24);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v24);
     v24 = 12405816;
     v5 = v25;
     v6 = MEMORY[0xB3BA34];
@@ -240665,7 +240665,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 68) = a1 + 76;
     *(_DWORD *)(a1 + 64) = 12322272;
     *(_DWORD *)(a1 + 72) = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 64);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 64);
     **(_BYTE **)(a1 + 68) = v6;
     *(_DWORD *)(a1 + 64) = 12405792;
     Slot_resetAndAttach(a1 + 52, &v30, &v28, &v22, a1);
@@ -240709,7 +240709,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = v27;
     v24 = 12322272;
     v26 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v24);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v24);
     v24 = 12405816;
     v14 = v25;
     (*(void (__fastcall **)(_DWORD *))(*v13 + 12))(v13);
@@ -240755,7 +240755,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 128) = a1 + 136;
     *(_DWORD *)(a1 + 124) = 12322272;
     *(_DWORD *)(a1 + 132) = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 124);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 124);
     **(_BYTE **)(a1 + 128) = v6;
     *(_DWORD *)(a1 + 124) = 12405792;
     Slot_resetAndAttach(a1 + 112, &v30, &v28, &v22, a1);
@@ -241395,7 +241395,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[4] = v5 + 6;
     v5[3] = 12322272;
     v5[5] = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)(v5 + 3));
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)(v5 + 3));
     v6 = MEMORY[0xB3BA34];
     *(_BYTE *)v5[4] = MEMORY[0xB3BA34];
     v5[3] = 12405792;
@@ -244012,7 +244012,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[22] = a1 + 24;
     a1[21] = 12322272;
     a1[23] = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 21);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 21);
     *(_BYTE *)a1[22] = MEMORY[0xB3BA34];
     a1[21] = 12405792;
     sub_609472C0(a1 + 32);
@@ -244306,7 +244306,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v55 = v57;
     v54 = 12322272;
     v56 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v54);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v54);
     v54 = 12405816;
     v17 = (char *)v55;
     (*(void (__fastcall **)(int *))(v62 + 12))(&v62);
@@ -244401,7 +244401,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v63 = v32;
         v54 = 12322272;
         v56 = 32;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v54);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v54);
         v54 = 12405816;
         v33 = (char *)v55;
         (*(void (__fastcall **)(int *))(v62 + 12))(&v62);
@@ -244482,7 +244482,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v55 = v36;
         v54 = 12322272;
         v56 = 32;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v54);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v54);
         v54 = 12405816;
         v42 = (char *)v55;
         (*(void (__fastcall **)(int))(MEMORY[0xC5CB30] + 12))(12962608);
@@ -245284,7 +245284,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v9[3] = 12322272;
           v14 = v9 + 3;
           v9[5] = 32;
-          sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v9 + 3);
+          sead__BufferedSafeStringBase_char__assureTerminationImpl_(v9 + 3);
           v15 = (_BYTE *)v9[4];
           v9 += 41;
           *v15 = v10;
@@ -255869,7 +255869,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(v5 + 128) = 12322272;
       v6 = (_DWORD *)(a1 + v2 + 128);
       v6[2] = 128;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v6);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v6);
       v2 += 140;
       **(_BYTE **)(v5 + 132) = v4;
       *v6 = 12424616;
@@ -256065,7 +256065,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 40) = a1 + 48;
     *(_DWORD *)(a1 + 36) = 12322272;
     *(_DWORD *)(a1 + 44) = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 36);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 36);
     *(_DWORD *)(a1 + 36) = dword_60C79910 + 8;
     v2 = *(_BYTE **)(a1 + 40);
     v3 = MEMORY[0xB3BA34];
@@ -256082,13 +256082,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 180) = a1 + 188;
     *(_DWORD *)(a1 + 176) = 12322272;
     *(_DWORD *)(a1 + 184) = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 176);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 176);
     **(_BYTE **)(a1 + 180) = v3;
     *(_DWORD *)(a1 + 176) = 12424616;
     *(_DWORD *)(a1 + 320) = a1 + 328;
     *(_DWORD *)(a1 + 316) = 12322272;
     *(_DWORD *)(a1 + 324) = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 316);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 316);
     **(_BYTE **)(a1 + 320) = v3;
     *(_DWORD *)(a1 + 316) = 12424616;
     *(_BYTE *)(a1 + 456) = 0;
@@ -256124,7 +256124,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 20) = 12322272;
     v2 = (_DWORD *)(a1 + 20);
     *(_DWORD *)(a1 + 28) = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 20);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 20);
     *v2 = 12405816;
     v3 = *(_BYTE **)(a1 + 24);
     if ( v3 != (_BYTE *)&unk_60ABC94D )
@@ -259113,7 +259113,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v12[89] = v12 + 91;
           v12[88] = 12322272;
           v12[90] = 32;
-          sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v55[v11 + 88]);
+          sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v55[v11 + 88]);
           *(_BYTE *)v12[89] = v53;
           v55[v11 + 88] = 12405792;
           sub_60920600(&v55[v11 + 2], &v55[v11 + 88]);
@@ -260147,7 +260147,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v17 = &v19;
     v16 = 12322272;
     v18 = 1024;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v16);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v16);
     *(_BYTE *)v17 = MEMORY[0xB3BA34];
     v16 = 12560860;
     result = 608;
@@ -261161,7 +261161,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[4] = a1 + 6;
     a1[3] = 12322272;
     a1[5] = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 3);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 3);
     v2 = MEMORY[0xB3BA34];
     *(_BYTE *)a1[4] = MEMORY[0xB3BA34];
     a1[3] = 12405792;
@@ -262204,7 +262204,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v12[5] = 12322272;
           v14 = &v9[v10 / 4 + 5];
           v12[7] = 32;
-          sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v14);
+          sead__BufferedSafeStringBase_char__assureTerminationImpl_(v14);
           *v14 = 12405816;
           v15 = (_BYTE *)v12[6];
           if ( v15 != (_BYTE *)&unk_60ABC94D )
@@ -262220,7 +262220,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v12[17] = v12 + 19;
           v12[16] = 12322272;
           v12[18] = 256;
-          sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v12 + 16);
+          sead__BufferedSafeStringBase_char__assureTerminationImpl_(v12 + 16);
           v10 += 324;
           v9 = v13;
           *(_BYTE *)v12[17] = v11;
@@ -262386,7 +262386,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v36 = (char *)&v38;
     v35 = 12322272;
     v37 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v35);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v35);
     v7 = MEMORY[0xB3BA34];
     *v36 = MEMORY[0xB3BA34];
     v35 = 12424380;
@@ -263163,7 +263163,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v42);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v42);
         v28 = v43;
       }
       v35 = v41;
@@ -263213,7 +263213,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v43 = (unsigned __int8 *)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 36))(a1);
       v42 = 12322272;
       v44 = v29;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v42);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v42);
       v30 = v43;
       v31 = v29 - 1;
       if ( v25 < v29 - 1 )
@@ -263339,7 +263339,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v29 = &v31;
         v28 = 12322272;
         v30 = 256;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v28);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v28);
         *(_BYTE *)v29 = v5;
         v10 = v32;
         v11 = v33;
@@ -263930,7 +263930,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           else
           {
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)v12);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)v12);
           }
           v16 = StringUtil_formatInto((int)v12, "\n") + v13;
           v31 = (const char *)(v11 + v16);
@@ -263943,7 +263943,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           else
           {
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)v12);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)v12);
           }
           v27 = v14;
           v17 = (int)v12;
@@ -263967,7 +263967,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               }
               else
               {
-                sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v17);
+                sead__BufferedSafeStringBase_char__assureTerminationImpl_(v17);
               }
               v22 += 3;
               v13 += StringUtil_formatInto(v17, "%f %f %f\n", *v21, v21[1], v21[2]);
@@ -264195,7 +264195,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v72 = &v74;
     v71 = 12322272;
     v73 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v71);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v71);
     v20 = v17 + 1;
     *(_BYTE *)v72 = v7;
     v21 = (_DWORD *)v75;
@@ -264706,7 +264706,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           else
           {
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)v12);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)v12);
           }
           v16 = StringUtil_formatInto((int)v12, "\n") + v13;
           v31 = (const char *)(v11 + v16);
@@ -264719,7 +264719,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           else
           {
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)v12);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)v12);
           }
           v27 = v14;
           v17 = (int)v12;
@@ -264743,7 +264743,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               }
               else
               {
-                sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v17);
+                sead__BufferedSafeStringBase_char__assureTerminationImpl_(v17);
               }
               v22 += 3;
               v13 += StringUtil_formatInto(v17, "%f %f %f\n", *v21, v21[1], v21[2]);
@@ -264976,7 +264976,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v77 = &v79;
     v76 = 12322272;
     v78 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v76);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v76);
     *(_BYTE *)v77 = v7;
     v76 = 12424380;
     v20 = v18 + 1;
@@ -266241,7 +266241,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[10] = a1 + 12;
     a1[9] = 12322272;
     a1[11] = 64;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 9);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 9);
     v6 = 0;
     v7 = MEMORY[0xB3BA34];
     *(_BYTE *)a1[10] = MEMORY[0xB3BA34];
@@ -266250,7 +266250,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[31] = a1 + 33;
     a1[30] = 12322272;
     a1[32] = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 30);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 30);
     a1[30] = 12424404;
     v8 = (void *)a1[31];
     (*(void (__fastcall **)(int))(MEMORY[0xC5CB30] + 12))(12962608);
@@ -274585,7 +274585,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v74 = (unsigned __int8 *)&v76;
     v73 = 12322272;
     v75 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v73);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v73);
     v6 = (char *)MEMORY[0xB3BA34];
     *v74 = MEMORY[0xB3BA34];
     v73 = 12405792;
@@ -275165,7 +275165,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = (char *)&v27;
     v24 = 12322272;
     v26 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v24);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v24);
     v12 = v11;
     if ( v5 >= v7 )
       v12 = (char *)(v8 + v7);
@@ -275200,7 +275200,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13[v14] = v9;
     }
     v24 = 12424380;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v24);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v24);
     v15 = 0;
     while ( (unsigned __int8)v25[v15] != v9 )
     {
@@ -275482,7 +275482,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v65 = (char *)&v67;
       v64 = 12322272;
       v66 = 256;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v64);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v64);
       v64 = 12424404;
       v40 = v65;
       (*(void (__fastcall **)(int))(MEMORY[0xC5CB30] + 12))(12962608);
@@ -275564,7 +275564,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v72 = (const char *)&v74;
         v71 = 12322272;
         v73 = 256;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v71);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v71);
         v71 = 12424404;
         v50 = (char *)v72;
         (*(void (__fastcall **)(int *))(v64 + 12))(&v64);
@@ -276951,7 +276951,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 148) = a1 + 156;
     *(_DWORD *)(a1 + 144) = 12322272;
     *(_DWORD *)(a1 + 152) = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 144);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 144);
     **(_BYTE **)(a1 + 148) = MEMORY[0xB3BA34];
     *(_DWORD *)(a1 + 144) = 12424380;
     *(_DWORD *)(a1 + 412) = 0;
@@ -277098,14 +277098,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v16[2] = 12322272;
         v18 = v16 + 2;
         v16[4] = 512;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v16 + 2);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(v16 + 2);
         v19 = MEMORY[0xB3BA34];
         *(_BYTE *)v17[3] = MEMORY[0xB3BA34];
         *v18 = 12558168;
         v17[134] = v17 + 136;
         v17[133] = 12322272;
         v17[135] = 512;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v17 + 133);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(v17 + 133);
         *(_BYTE *)v17[134] = v19;
         v17[133] = 12558168;
         *(_DWORD *)(v15 + 884) = 2;
@@ -278338,7 +278338,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 920) = a1 + 928;
     *(_DWORD *)(a1 + 916) = 12322272;
     *(_DWORD *)(a1 + 924) = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 916);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 916);
     **(_BYTE **)(a1 + 920) = MEMORY[0xB3BA34];
     *(_DWORD *)(a1 + 916) = 12424380;
     *(_BYTE *)(a1 + 905) = 0;
@@ -281528,7 +281528,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7[3] = 12322272;
       v11 = v7 + 3;
       v7[5] = 32;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v7 + 3);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v7 + 3);
       *(_BYTE *)v7[4] = v17;
       v7[3] = 12405792;
       default_ref_9419C8(v7 + 14);
@@ -281580,7 +281580,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15[2415] = v15 + 2417;
     v15[2414] = 12322272;
     v15[2416] = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v15 + 2414);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(v15 + 2414);
     *(_BYTE *)v15[2415] = v17;
     v15[2414] = 12405792;
     sub_60947BCC(v15 + 2425);
@@ -281851,7 +281851,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v100 = (char *)&v102;
     v99 = 12322272;
     v101 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v99);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v99);
     v99 = 12405816;
     v10 = v100;
     v88 = a1;
@@ -281970,7 +281970,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v95 = v97;
             v94 = 12322272;
             v96 = 32;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v94);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v94);
             v94 = 12405816;
             v42 = v95;
             (*(void (__fastcall **)(int))(MEMORY[0xC5CB30] + 12))(12962608);
@@ -291999,7 +291999,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(v2 + 76) = v2 + 84;
       *(_DWORD *)(v2 + 72) = 12322272;
       *(_DWORD *)(v2 + 80) = 256;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v2 + 72);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v2 + 72);
       *(_DWORD *)(v2 + 72) = 12424404;
       v5 = *(char **)(v2 + 76);
       if ( v5 != "%AGL_ROOT%/tools/bat/perforce_save.bat" )
@@ -292868,7 +292868,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2[6] = v2 + 8;
       v2[5] = 12322272;
       v2[7] = 256;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v2 + 5);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v2 + 5);
       v2[5] = 12424404;
       v4 = (void *)v2[6];
       (*(void (__fastcall **)(int))(MEMORY[0xC5CB30] + 12))(12962608);
@@ -294029,7 +294029,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v84 = v18;
               v30 = (char *)v25;
               v95 = 1024;
-              sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v93);
+              sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v93);
               v31 = v30;
               *v94 = v13;
               v93 = 12560860;
@@ -294156,7 +294156,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               }
               else
               {
-                sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v46);
+                sead__BufferedSafeStringBase_char__assureTerminationImpl_(v46);
                 v49 = (_BYTE *)v46[1];
               }
               *v46 = 12560836;
@@ -294314,7 +294314,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1);
       v16 = (void *)a1[1];
     }
     *a1 = 12560836;
@@ -299270,7 +299270,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 1976) = a1 + 1984;
     *(_DWORD *)(a1 + 1972) = 12322272;
     *(_DWORD *)(a1 + 1980) = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 1972);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 1972);
     v28 = MEMORY[0xB3BA34];
     **(_BYTE **)(a1 + 1976) = MEMORY[0xB3BA34];
     *(_DWORD *)(a1 + 1972) = 12405792;
@@ -299279,7 +299279,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 2032) = a1 + 2040;
     *(_DWORD *)(a1 + 2028) = 12322272;
     *(_DWORD *)(a1 + 2036) = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 2028);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 2028);
     **(_BYTE **)(a1 + 2032) = v28;
     *(_DWORD *)(a1 + 2028) = 12405792;
     default_ref_9419C8((_DWORD *)(a1 + 2072));
@@ -299738,7 +299738,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v112 = v114;
     v111 = 12322272;
     v113 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v111);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v111);
     v111 = 12405816;
     v24 = (char *)v112;
     (*(void (__fastcall **)(int))(MEMORY[0xC5CB30] + 12))(12962608);
@@ -299858,7 +299858,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v112 = v114;
     v111 = 12322272;
     v113 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v111);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v111);
     v111 = 12405816;
     v34 = (char *)v112;
     (*(void (__fastcall **)(int))(MEMORY[0xC5CB30] + 12))(12962608);
@@ -302919,7 +302919,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v12 == MEMORY[0xB3BA34] )
           goto LABEL_19;
       }
-      sead::SafeStringBase<char>::assureTerminationImpl_(&v18);
+      sead__SafeStringBase_char__assureTerminationImpl_(&v18);
       (*(void (__fastcall **)(int *))(v18 + 12))(&v18);
       v5 = 2;
       if ( v19 == "Right" )
@@ -304092,7 +304092,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13 = a3;
       v72 = 12321336;
       v73 = "BC3";
-      sead::SafeStringBase<char>::assureTerminationImpl_(&v74);
+      sead__SafeStringBase_char__assureTerminationImpl_(&v74);
       v14 = v75;
       MEMORY[0xBC0244](&v72);
       if ( v14 == v73 )
@@ -309100,7 +309100,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v12);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v12);
       v7 = v15;
       v8 = v13;
     }
@@ -310783,7 +310783,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v52 = v54;
       v51 = 12322272;
       v53 = 256;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v51);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v51);
       v41 = MEMORY[0xB3BA34];
       *v52 = MEMORY[0xB3BA34];
       v51 = 12424380;
@@ -311165,7 +311165,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = &v13;
     v10 = 12322272;
     v12 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v10);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v10);
     *(_BYTE *)v11 = MEMORY[0xB3BA34];
     v10 = 12424380;
     (*((void (__fastcall **)(const char **))*a2 + 3))(a2);
@@ -311215,7 +311215,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = &v13;
     v10 = 12322272;
     v12 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v10);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v10);
     *(_BYTE *)v11 = MEMORY[0xB3BA34];
     v10 = 12424380;
     (*((void (__fastcall **)(const char **))*a2 + 3))(a2);
@@ -311349,7 +311349,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v24 = v26;
     v23 = 12322272;
     v25 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v23);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v23);
     *v24 = MEMORY[0xB3BA34];
     v23 = 12424380;
     v26[256] = 0;
@@ -314116,7 +314116,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = (char *)&v21;
     v18 = 12322272;
     v20 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v18);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v18);
     v6 = MEMORY[0xB3BA34];
     *v19 = MEMORY[0xB3BA34];
     v18 = 12424380;
@@ -314128,7 +314128,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13 = (char *)&v15;
       v12 = 12322272;
       v14 = 256;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v12);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v12);
       *v13 = v6;
       v12 = 12424380;
       v16 = 0;
@@ -314209,7 +314209,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v17 = v19;
     v16 = 12322272;
     v18 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v16);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v16);
     *v17 = MEMORY[0xB3BA34];
     v14 = 0;
     v16 = 12405792;
@@ -314235,7 +314235,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v11 = &v13;
       v10 = 12322272;
       v12 = 64;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v10);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v10);
       *(_BYTE *)v11 = MEMORY[0xB3BA34];
       v10 = 12405744;
       sub_608E978C((int)&v10, a3);
@@ -314520,7 +314520,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *((_DWORD *)a1 + 6) = a2;
     *((_DWORD *)a1 + 7) = 12322272;
     *((_DWORD *)a1 + 9) = 64;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((char *)a1 + 28);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((char *)a1 + 28);
     *((_DWORD *)a1 + 7) = 12405768;
     v9 = *((void **)a1 + 8);
     (*(void (__fastcall **)(_DWORD *))(*a3 + 12))(a3);
@@ -315165,7 +315165,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v17 = &v19;
     v16 = 12322272;
     v18 = 72;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v16);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v16);
     *(_BYTE *)v17 = MEMORY[0xB3BA34];
     v16 = 12575792;
     v11 = (const char *)(*(int (__fastcall **)(int *))(*a1 + 56))(a1);
@@ -316890,7 +316890,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13 = &v15;
     v12 = 12322272;
     v14 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v12);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v12);
     *(_BYTE *)v13 = MEMORY[0xB3BA34];
     v16[0] = a3;
     v16[1] = a4;
@@ -317675,7 +317675,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v33 = &v35;
     v32 = 12322272;
     v34 = 64;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v32);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v32);
     v5 = 0;
     v6 = MEMORY[0xB3BA34];
     *(_BYTE *)v33 = MEMORY[0xB3BA34];
@@ -318680,7 +318680,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v35 = &v37;
         v34 = 12322272;
         v36 = 64;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v34);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v34);
         v6 = 0;
         *(_BYTE *)v35 = v4;
         v34 = 12405744;
@@ -324082,7 +324082,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *((_DWORD *)off_60C7A0A0 + 1) = (char *)off_60C7A0A0 + 12;
             *v6 = 12322272;
             v6[2] = 85;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v6);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(v6);
             *v6 = 12572784;
             v7 = (char *)v6[1];
             if ( v7 != "CheckButton, CheckKeepButton, DecisionButton, DragButton, NormalButton, SelectButton" )
@@ -330414,7 +330414,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = (unsigned __int8 *)&v23;
     v20 = 12322272;
     v22 = 128;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v20);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v20);
     v20 = dword_60C79910 + 8;
     v7 = v21;
     if ( v21 != (unsigned __int8 *)&unk_60ABC94D )
@@ -330433,7 +330433,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       v19 = a2;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v20);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v20);
       v9 = v21;
       v10 = 0;
       v11 = MEMORY[0xB3BA34];
@@ -332358,13 +332358,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *(_DWORD *)v22 = 12322272;
           *(_DWORD *)(v22 + 4) = v22 + 12;
           *(_DWORD *)(v22 + 8) = 8;
-          sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v22);
+          sead__BufferedSafeStringBase_char__assureTerminationImpl_(v22);
           **(_BYTE **)(v22 + 4) = v21;
           *(_DWORD *)v22 = 12405644;
           *(_DWORD *)(v22 + 24) = v22 + 32;
           *(_DWORD *)(v22 + 20) = 12322272;
           *(_DWORD *)(v22 + 28) = 128;
-          sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v22 + 20);
+          sead__BufferedSafeStringBase_char__assureTerminationImpl_(v22 + 20);
           **(_BYTE **)(v22 + 24) = v21;
           *(_DWORD *)(v22 + 20) = 12424616;
           *(_DWORD *)(v22 + 160) = 0;
@@ -332500,14 +332500,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10[1] = v10 + 3;
         *v10 = 12322272;
         v10[2] = 8;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v10);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(v10);
         v19 = MEMORY[0xB3BA34];
         *(_BYTE *)v10[1] = MEMORY[0xB3BA34];
         *v10 = 12405644;
         v10[6] = v10 + 8;
         v10[5] = 12322272;
         v10[7] = 128;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v10 + 5);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(v10 + 5);
         *(_BYTE *)v10[6] = v19;
         v10[5] = 12424616;
         v10[40] = 0;
@@ -332824,13 +332824,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               *v18 = v74;
               v18[1] = (int)(v18 + 3);
               v18[2] = 8;
-              sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v18);
+              sead__BufferedSafeStringBase_char__assureTerminationImpl_(v18);
               *(_BYTE *)v18[1] = v17;
               *v18 = v73;
               v18[6] = (int)(v18 + 8);
               v18[5] = v19;
               v18[7] = 128;
-              sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v18 + 5);
+              sead__BufferedSafeStringBase_char__assureTerminationImpl_(v18 + 5);
               *(_BYTE *)v18[6] = v17;
               v18[5] = v72;
               v18[40] = 0;
@@ -332996,13 +332996,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *v47 = v74;
             v47[1] = (int)(v47 + 3);
             v47[2] = 8;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v47);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(v47);
             *(_BYTE *)v47[1] = v45;
             *v47 = v73;
             v47[6] = (int)(v47 + 8);
             v47[5] = v48;
             v47[7] = 128;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v47 + 5);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(v47 + 5);
             *(_BYTE *)v47[6] = v45;
             v47[5] = v72;
             v47[40] = 0;

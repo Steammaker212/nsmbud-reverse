@@ -36,6 +36,38 @@ QUALIFIED = re.compile(r"\b([A-Za-z_]\w*(?:::[A-Za-z_~]\w*)+)\b")
 # 475 files with "unknown type name", because no header declares the rewritten spelling.
 CALL = re.compile(r"\b([A-Za-z_]\w*(?:::[A-Za-z_~]\w*)+)\b(?=\s*\()")
 
+# Template-instantiated qualified names, e.g. sead::BufferedSafeStringBase<char>::assureTerminationImpl_
+#
+# The plain CALL pattern above cannot match these: `<char>` sits between two `::` runs, so the final
+# `::name(` never follows a bare identifier. 740 such call sites existed and every one of them kept its
+# C++ spelling and kept its file failing. A template argument may itself be a qualified or qualified-
+# template name (`sead::SafeStringBase<char>`), so the argument is matched as a balanced-ish run of
+# identifier characters, `:`, `.`, `*`, and spaces -- enough for the shapes IDA actually emits.
+TEMPLATE_CALL = re.compile(
+    r"\b([A-Za-z_]\w*(?:::[A-Za-z_~]\w*)+)"      # first qualified run: sead::BufferedSafeStringBase
+    r"(<[A-Za-z_0-9:_,\.\* ]*>)"                  # template arguments: <char>
+    r"((?:::[A-Za-z_~]\w*)+)"                     # remaining qualified run(s)
+    r"\b(?=\s*\()"
+)
+
+
+def rewrite_template_call(match):
+    """sead::BufferedSafeStringBase<char>::f  ->  sead__BufferedSafeStringBase_char__f"""
+    head, args, tail = match.group(1), match.group(2), match.group(3)
+    # Flatten the angle brackets to underscores so the whole thing is one C identifier. `<` and `>`
+    # cannot appear in an identifier, and dropping them entirely would merge unrelated names.
+    flat = args[1:-1].strip().replace("::", "_").replace("*", "ptr").replace(",", "_").replace(" ", "")
+    return head.replace("::", "__") + "_" + flat + tail.replace("::", "__")
+
+
+# A qualified name used as an ARRAY, not called: `Kanjibo::AnimNamesWait[i]`.
+#
+# The call-site patterns require a trailing `(`, so these kept their C++ spelling. There is no call
+# here -- the scope is only part of the array's name -- so the flattening is the same `::` -> `__`.
+# Restricted to a trailing `[` so nothing else is caught.
+QUALIFIED_ARRAY = re.compile(r"\b([A-Za-z_]\w*(?:::[A-Za-z_~]\w*)+)\b(?=\s*\[)")
+
+
 # Destructor spelling, applied to the captured run before the :: replacement.
 DTOR = re.compile(r"^(.*?)::~(\w+)$")
 
@@ -67,7 +99,8 @@ def rewrite_operator(match):
     return "__operator_" + kind.replace("[]", "_array")
 
 
-def split_code_mask(text):    """Yield (is_code, chunk) so rewrites never touch strings or comments."""
+def split_code_mask(text):
+    """Yield (is_code, chunk) so rewrites never touch strings or comments."""
     i = 0
     n = len(text)
     start = 0
@@ -113,9 +146,11 @@ def transform(text):
     changed = 0
     for is_code, chunk in split_code_mask(text):
         if is_code:
-            new, k = CALL.subn(rewrite_qualified, chunk)
+            new, k0 = TEMPLATE_CALL.subn(rewrite_template_call, chunk)
+            new, k1 = QUALIFIED_ARRAY.subn(rewrite_qualified, new)
+            new, k = CALL.subn(rewrite_qualified, new)
             new, k2 = OPERATOR.subn(rewrite_operator, new)
-            changed += k + k2
+            changed += k0 + k1 + k + k2
             out.append(new)
         else:
             out.append(chunk)

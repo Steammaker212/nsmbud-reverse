@@ -3596,7 +3596,9 @@ int __fastcall sub_608FDB54(int result, int a2);  /* 0x008fdb54 */
 int __fastcall sub_608FDB60(int a1, _DWORD *a2);  /* 0x008fdb60 */
 int __fastcall sub_608FDC20(int a1, _DWORD *a2);  /* 0x008fdc20 */
 int __fastcall sub_608FDCDC(int a1, _DWORD *a2);  /* 0x008fdcdc */
+int __fastcall sead__BufferedSafeStringBase_char__assureTerminationImpl_(int a1);  /* 0x008fdd9c */
 int __fastcall sub_608FDDB4(int a1);  /* 0x008fddb4 */
+int __fastcall sead__BufferedSafeStringBase_char__formatV(int a1);  /* 0x008fddcc */
 int __fastcall sub_608FDE40(_DWORD *a1, int a2);  /* 0x008fde40 */
 signed int __fastcall sub_608FDFB8(int a1, _BYTE *a2, signed int a3);  /* 0x008fdfb8 */
 signed int __fastcall sub_608FE058(int *a1, _BYTE *a2, signed int a3);  /* 0x008fe058 */

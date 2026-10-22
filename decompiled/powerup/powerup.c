@@ -21920,7 +21920,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v26 = &v28;
     v25 = 12322272;
     v27 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v25);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v25);
     *v26 = MEMORY[0xB3BA34];
     v25 = 12405792;
     v24[0] = 12569140;
@@ -22634,7 +22634,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v26 = v7 + 8;
       v25 = 12322272;
       v27 = 65;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v25);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v25);
       v8 = v26;
       (*(void (__fastcall **)(_DWORD *))(*a2 + 12))(a2);
       v9 = (const void *)a2[1];
@@ -23077,7 +23077,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v30 = v7 + 10;
       v29 = 12322272;
       v31 = 65;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v29);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v29);
       v10 = v30;
       (*(void (__fastcall **)(_DWORD *))(*a2 + 12))(a2);
       v11 = (const void *)a2[1];
@@ -25061,7 +25061,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v31 = &v33;
     v30 = 12322272;
     v32 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v30);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v30);
     *(_BYTE *)v31 = MEMORY[0xB3BA34];
     v30 = 12424380;
     sub_608E978C(&v30, a2);
@@ -25514,7 +25514,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 4) = a1 + 12;
     *(_DWORD *)a1 = 12322272;
     *(_DWORD *)(a1 + 8) = 64;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(a1);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1);
     v2 = MEMORY[0xB3BA34];
     **(_BYTE **)(a1 + 4) = MEMORY[0xB3BA34];
     *(_DWORD *)a1 = 12405744;
@@ -25676,7 +25676,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v54 = 12321336;
       v55 = "DecisionButton";
-      sead::SafeStringBase<char>::assureTerminationImpl_(&v54);
+      sead__SafeStringBase_char__assureTerminationImpl_(&v54);
       result = (int)v55;
       if ( v7 != v55 )
       {
@@ -29467,7 +29467,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18 = &v20;
     v17 = 12322272;
     v19 = 64;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v17);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v17);
     *(_BYTE *)v18 = MEMORY[0xB3BA34];
     v17 = 12405744;
     switch ( a3 )

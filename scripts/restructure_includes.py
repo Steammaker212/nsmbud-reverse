@@ -75,12 +75,18 @@ typedef void              *_PVOID;
 typedef const char        *_LPCSTR;
 
 /* ---- ARM NEON lane types ---- */
-typedef struct { float    v[2]; } float32x2_t;
-typedef struct { float    v[4]; } float32x4_t;
+/* The 64/128-bit vector types are UNIONS, not structs, because two different member names are used
+ * on the same value. The NEON helpers in the corpus index `.v[i]`, and IDA also emits
+ * `.n64_u32[i]` -- its name for "the i-th 32-bit word of this quadword" -- 916 times, 556 of those as
+ * ASSIGNMENT TARGETS (`v2.n64_u32[0] = 0;`). A struct cannot offer both names, and a macro cannot be an
+ * assignment target, so the union is the only shape that makes both spellings legal and writable. */
+typedef union { float v[2]; float n64_f32[2]; uint32_t n64_u32[2]; uint64_t n64_u64[1]; } float32x2_t;
+typedef union { float v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; } float32x4_t;
 typedef struct { double   v[2]; } float64x2_t;
-typedef struct { int32_t  v[2]; } int32x2_t;
-typedef struct { int32_t  v[4]; } int32x4_t;
-typedef struct { uint32_t v[4]; } uint32x4_t;
+typedef union { int32_t  v[2]; float n64_f32[2]; uint32_t n64_u32[2]; uint64_t n64_u64[1]; } int32x2_t;
+
+typedef union { int32_t v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; } int32x4_t;
+typedef union { uint32_t v[4]; float n64_f32[4]; uint32_t n64_u32[4]; uint64_t n64_u64[2]; float n128_f32[4]; uint32_t n128_u32[4]; int32_t n128_i32[4]; uint64_t n128_u64[2]; int64_t n128_i64[2]; uint16_t n128_u16[8]; int16_t n128_i16[8]; uint8_t n128_u8[16]; int8_t n128_i8[16]; double n128_f64[2]; } uint32x4_t;
 typedef struct { int8_t   v[16]; } int8x16_t;
 typedef struct { uint8_t  v[16]; } uint8x16_t;
 typedef struct { int32x4_t val[2]; }   int32x4x2_t;

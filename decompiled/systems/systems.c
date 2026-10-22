@@ -2036,7 +2036,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v31 = (char *)&v33;
     v30 = 12322272;
     v32 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v30);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v30);
     *v31 = MEMORY[0xB3BA34];
     v30 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60C9EFEC + 12))(&dword_60C9EFEC);
@@ -11617,7 +11617,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xC9F828] = 13236272;
             MEMORY[0xC9F824] = 12322272;
             MEMORY[0xC9F82C] = 5;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13236260);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13236260);
             MEMORY[0xC9F824] = 12407860;
             v5 = MEMORY[0xC9F828];
             if ( (char *)MEMORY[0xC9F828] != "Down" )
@@ -11686,7 +11686,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xC9F848] = 13236304;
             MEMORY[0xC9F844] = 12322272;
             MEMORY[0xC9F84C] = 33;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13236292);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13236292);
             MEMORY[0xC9F844] = 12572640;
             v5 = MEMORY[0xC9F848];
             if ( (char *)MEMORY[0xC9F848] != "Pa_ArrowBtnL_00, Pa_ArrowBtnR_00" )
@@ -11859,7 +11859,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xC9F888] = 13236368;
             MEMORY[0xC9F884] = 12322272;
             MEMORY[0xC9F88C] = 110;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13236356);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13236356);
             MEMORY[0xC9F884] = 12572688;
             v5 = MEMORY[0xC9F888];
             if ( (char *)MEMORY[0xC9F888] != "Pa_TimeBtn_00, Pa_CoinBtn_00, Pa_1UPBtn_00, Pa_SpecialBtn_00, Pa_MenuBtn_00, "
@@ -12036,7 +12036,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xC9F928] = 13236528;
             MEMORY[0xC9F924] = 12322272;
             MEMORY[0xC9F92C] = 371;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13236516);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13236516);
             MEMORY[0xC9F924] = 12572736;
             v5 = MEMORY[0xC9F928];
             if ( (char *)MEMORY[0xC9F928] != "Pa_BtnTime_00, Pa_BtnCoin_00, Pa_Btn1UP_00, Pa_BtnSpecial_00, Pa_BtnTime_01, "
@@ -12219,7 +12219,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xC9FB10] = 13237016;
             MEMORY[0xC9FB0C] = 12322272;
             MEMORY[0xC9FB14] = 85;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13237004);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13237004);
             MEMORY[0xC9FB0C] = 12572784;
             v5 = MEMORY[0xC9FB10];
             if ( (char *)MEMORY[0xC9FB10] != "Pa_ScrollBtnTime_00, Pa_ScrollBtnCoin_00, Pa_ScrollBtn1UP_00, Pa_ScrollBtnSpecial_00" )
@@ -12395,7 +12395,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xC9FB8C] = 13237140;
             MEMORY[0xC9FB88] = 12322272;
             MEMORY[0xC9FB90] = 46;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13237128);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13237128);
             MEMORY[0xC9FB88] = 12572832;
             v5 = MEMORY[0xC9FB8C];
             if ( (char *)MEMORY[0xC9FB8C] != "InOutR, InOutL, InOutMenuBtn, Loop, LoopArrow" )
@@ -12568,7 +12568,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xC9FBE4] = 13237228;
             MEMORY[0xC9FBE0] = 12322272;
             MEMORY[0xC9FBE8] = 104;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13237216);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13237216);
             MEMORY[0xC9FBE0] = 12572880;
             v5 = MEMORY[0xC9FBE4];
             if ( (char *)MEMORY[0xC9FBE4] != "G_TimeBG_00, G_CoinBG_00, G_1UPBG_00, G_SpecialBG_00, G_MenuBtn_00, G_Loop_00"
@@ -12745,7 +12745,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xC9FC80] = 13237384;
             MEMORY[0xC9FC7C] = 12322272;
             MEMORY[0xC9FC84] = 51;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13237372);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13237372);
             MEMORY[0xC9FC7C] = 12572928;
             v5 = MEMORY[0xC9FC80];
             if ( (char *)MEMORY[0xC9FC80] != "N_GoldMedal_00, N_SilverMedal_00, N_BronzeMedal_00" )
@@ -12918,7 +12918,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xC9FCD4] = 13237468;
             MEMORY[0xC9FCD0] = 12322272;
             MEMORY[0xC9FCD8] = 71;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13237456);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13237456);
             MEMORY[0xC9FCD0] = 12572976;
             v5 = MEMORY[0xC9FCD4];
             if ( (char *)MEMORY[0xC9FCD4] != "TouchDecide, Unselect, InOutNew, LoopNew, InMedal, LoopMedal, OutMedal" )
@@ -15096,7 +15096,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA01D8] = 13238752;
             MEMORY[0xCA01D4] = 12322272;
             MEMORY[0xCA01DC] = 135;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13238740);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13238740);
             MEMORY[0xCA01D4] = 12573304;
             v5 = MEMORY[0xCA01D8];
             if ( (char *)MEMORY[0xCA01D8] != "LevelNum, InOut, ColorTime, ColorCoin, Color1UP, ColorSpecial, Gold, Silver, "
@@ -15274,7 +15274,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA02B0] = 13238968;
             MEMORY[0xCA02AC] = 12322272;
             MEMORY[0xCA02B4] = 11;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13238956);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13238956);
             MEMORY[0xCA02AC] = 12573328;
             v5 = MEMORY[0xCA02B0];
             if ( (char *)MEMORY[0xCA02B0] != "P_Image_00" )
@@ -15395,7 +15395,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA02D4] = 13239004;
             MEMORY[0xCA02D0] = 12322272;
             MEMORY[0xCA02D8] = 152;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13238992);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13238992);
             MEMORY[0xCA02D0] = 12573376;
             v5 = MEMORY[0xCA02D4];
             if ( (char *)MEMORY[0xCA02D4] != "T_CourseName_01, T_CourseName_00, T_Text_01, T_Text_00, T_Best_00, T_GoldCond"
@@ -15573,7 +15573,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA03A4] = 13239212;
             MEMORY[0xCA03A0] = 12322272;
             MEMORY[0xCA03A8] = 153;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13239200);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13239200);
             MEMORY[0xCA03A0] = 12573424;
             v5 = MEMORY[0xCA03A4];
             if ( (char *)MEMORY[0xCA03A4] != "Pa_StartTime_00, Pa_StartCoin_00, Pa_Start1UP_00, Pa_StartSpecial_00, Pa_Movi"
@@ -17128,7 +17128,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = &v9;
     v6 = 12322272;
     v8 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v6);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v6);
     *(_BYTE *)v7 = MEMORY[0xB3BA34];
     v6 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60CA06E0 + 12))(&dword_60CA06E0);
@@ -24399,7 +24399,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = (char *)&v15;
     v12 = 12322272;
     v14 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v12);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v12);
     *v13 = MEMORY[0xB3BA34];
     v12 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60CA13D4 + 12))(&dword_60CA13D4);
@@ -25038,7 +25038,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v12 = *(_DWORD *)(v10 + 56);
         v25 = 12321336;
         v26 = v12;
-        sead::SafeStringBase<char>::assureTerminationImpl_(&v27);
+        sead__SafeStringBase_char__assureTerminationImpl_(&v27);
         v13 = v28;
         MEMORY[0xBC0244](&v25);
         if ( v13 == v26 )
@@ -25264,7 +25264,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v12 = *(_DWORD *)(v10 + 56);
         v25 = 12321336;
         v26 = v12;
-        sead::SafeStringBase<char>::assureTerminationImpl_(&v27);
+        sead__SafeStringBase_char__assureTerminationImpl_(&v27);
         v13 = v28;
         MEMORY[0xBC0244](&v25);
         if ( v13 == v26 )
@@ -29428,7 +29428,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = &v8;
     v5 = 12322272;
     v7 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v5);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v5);
     *(_BYTE *)v6 = MEMORY[0xB3BA34];
     v5 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60CA16C0 + 12))(&dword_60CA16C0);
@@ -37263,7 +37263,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = &v12;
     v9 = 12322272;
     v11 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v9);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v9);
     *(_BYTE *)v10 = MEMORY[0xB3BA34];
     v9 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60CA2444 + 12))(&dword_60CA2444);
@@ -39878,7 +39878,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v31 = (char *)&v33;
     v30 = 12322272;
     v32 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v30);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v30);
     *v31 = MEMORY[0xB3BA34];
     v30 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60CA2774 + 12))(&dword_60CA2774);
@@ -57235,7 +57235,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4280] = 13255304;
             MEMORY[0xCA427C] = 12322272;
             MEMORY[0xCA4284] = 41;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13255292);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13255292);
             MEMORY[0xCA427C] = 12575768;
             v5 = MEMORY[0xCA4280];
             if ( (char *)MEMORY[0xCA4280] != "N_WinPosL_00, N_WinPosC_00, N_WinPosR_00" )
@@ -57408,7 +57408,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA42CC] = 13255380;
             MEMORY[0xCA42C8] = 12322272;
             MEMORY[0xCA42D0] = 72;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13255368);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13255368);
             MEMORY[0xCA42C8] = 12575816;
             v5 = MEMORY[0xCA42CC];
             if ( (char *)MEMORY[0xCA42CC] != "T_TeamAScore_00, T_TeamBScore_00, T_IndexL_00, T_IndexC_00, T_IndexR_00" )
@@ -57581,7 +57581,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA433C] = 13255492;
             MEMORY[0xCA4338] = 12322272;
             MEMORY[0xCA4340] = 58;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13255480);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13255480);
             MEMORY[0xCA4338] = 12575864;
             v5 = MEMORY[0xCA433C];
             if ( (char *)MEMORY[0xCA433C] != "Pa_Menu_00, Pa_Index_00, Pa_ArrowBtnR_00, Pa_ArrowBtnL_00" )
@@ -57754,7 +57754,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA439C] = 13255588;
             MEMORY[0xCA4398] = 12322272;
             MEMORY[0xCA43A0] = 58;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13255576);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13255576);
             MEMORY[0xCA4398] = 12575864;
             v5 = MEMORY[0xCA439C];
             if ( (char *)MEMORY[0xCA439C] != "Pa_Menu_00, Pa_ArrowBtnL_00, Pa_ArrowBtnR_00, Pa_Index_00" )
@@ -57823,7 +57823,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA43FC] = 13255684;
             MEMORY[0xCA43F8] = 12322272;
             MEMORY[0xCA4400] = 112;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13255672);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13255672);
             MEMORY[0xCA43F8] = 12575912;
             v5 = MEMORY[0xCA43FC];
             if ( (char *)MEMORY[0xCA43FC] != "Mode, ScrollToR, ScrollToL, InOutMenuBtn, PlayerNum, c1vs2, c1vs3, c2vs1, c2v"
@@ -58000,7 +58000,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA44B4] = 13255868;
             MEMORY[0xCA44B0] = 12322272;
             MEMORY[0xCA44B8] = 111;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13255856);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13255856);
             MEMORY[0xCA44B0] = 12575960;
             v5 = MEMORY[0xCA44B4];
             if ( (char *)MEMORY[0xCA44B4] != "G_Mode_00, G_Scroll_00, G_Team_00, G_Loop_00, G_Menu_00, G_PlayerNum_00, G_Se"
@@ -58177,7 +58177,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA455C] = 13256036;
             MEMORY[0xCA4558] = 12322272;
             MEMORY[0xCA4560] = 777;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13256024);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13256024);
             MEMORY[0xCA4558] = 12576008;
             v5 = MEMORY[0xCA455C];
             if ( (char *)MEMORY[0xCA455C] != "N_Win_00, N_GSelectPos_00, N_GSelectPos_01, N_GSelectPos_02, N_GSelectPos_03,"
@@ -58369,7 +58369,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4940] = 13257032;
             MEMORY[0xCA493C] = 12322272;
             MEMORY[0xCA4944] = 181;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257020);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257020);
             MEMORY[0xCA493C] = 12576056;
             v5 = MEMORY[0xCA4940];
             if ( (char *)MEMORY[0xCA4940] != "Pa_Course_00, Pa_Course_01, Pa_Course_02, Pa_Course_03, Pa_Course_04, Pa_Cour"
@@ -58548,7 +58548,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4A40] = 13257288;
             MEMORY[0xCA4A3C] = 12322272;
             MEMORY[0xCA4A44] = 18;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257276);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257276);
             MEMORY[0xCA4A3C] = 12576104;
             v5 = MEMORY[0xCA4A40];
             if ( (char *)MEMORY[0xCA4A40] != "Out, Select, Mode" )
@@ -58721,7 +58721,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4A74] = 13257340;
             MEMORY[0xCA4A70] = 12322272;
             MEMORY[0xCA4A78] = 11;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257328);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257328);
             MEMORY[0xCA4A70] = 12573328;
             v5 = MEMORY[0xCA4A74];
             if ( (char *)MEMORY[0xCA4A74] != "InOut, Pos" )
@@ -58790,7 +58790,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4A9C] = 13257380;
             MEMORY[0xCA4A98] = 12322272;
             MEMORY[0xCA4AA0] = 22;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257368);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257368);
             MEMORY[0xCA4A98] = 12576152;
             v5 = MEMORY[0xCA4A9C];
             if ( (char *)MEMORY[0xCA4A9C] != "T_Text_00, T_World_00" )
@@ -58963,7 +58963,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4AD0] = 13257432;
             MEMORY[0xCA4ACC] = 12322272;
             MEMORY[0xCA4AD4] = 39;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257420);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257420);
             MEMORY[0xCA4ACC] = 12576200;
             v5 = MEMORY[0xCA4AD0];
             if ( (char *)MEMORY[0xCA4AD0] != "Pa_Return_00, Pa_BtnLB_00, Pa_BtnRB_00" )
@@ -59136,7 +59136,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4B18] = 13257504;
             MEMORY[0xCA4B14] = 12322272;
             MEMORY[0xCA4B1C] = 5;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257492);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257492);
             MEMORY[0xCA4B14] = 12407860;
             v5 = MEMORY[0xCA4B18];
             if ( (char *)MEMORY[0xCA4B18] != "Down" )
@@ -59205,7 +59205,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4B38] = 13257536;
             MEMORY[0xCA4B34] = 12322272;
             MEMORY[0xCA4B3C] = 27;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257524);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257524);
             MEMORY[0xCA4B34] = 12576248;
             v5 = MEMORY[0xCA4B38];
             if ( (char *)MEMORY[0xCA4B38] != "Pa_ArrowL_00, Pa_ArrowR_00" )
@@ -59378,7 +59378,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4B70] = 13257592;
             MEMORY[0xCA4B6C] = 12322272;
             MEMORY[0xCA4B74] = 39;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257580);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257580);
             MEMORY[0xCA4B6C] = 12576200;
             v5 = MEMORY[0xCA4B70];
             if ( (char *)MEMORY[0xCA4B70] != "InOut, ScrollToR, ScrollToL, LoopArrow" )
@@ -59447,7 +59447,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4BBC] = 13257668;
             MEMORY[0xCA4BB8] = 12322272;
             MEMORY[0xCA4BC0] = 12;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257656);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257656);
             MEMORY[0xCA4BB8] = 12576296;
             v5 = MEMORY[0xCA4BBC];
             if ( (char *)MEMORY[0xCA4BBC] != "N_Select_00" )
@@ -59620,7 +59620,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4BE0] = 13257704;
             MEMORY[0xCA4BDC] = 12322272;
             MEMORY[0xCA4BE4] = 53;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257692);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257692);
             MEMORY[0xCA4BDC] = 12576344;
             v5 = MEMORY[0xCA4BE0];
             if ( (char *)MEMORY[0xCA4BE0] != "T_SelectL_00, T_SelectC_00, T_SelectR_00, T_World_00" )
@@ -59793,7 +59793,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4C3C] = 13257796;
             MEMORY[0xCA4C38] = 12322272;
             MEMORY[0xCA4C40] = 71;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257784);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257784);
             MEMORY[0xCA4C38] = 12572976;
             v5 = MEMORY[0xCA4C3C];
             if ( (char *)MEMORY[0xCA4C3C] != "Pa_Return_00, Pa_OK_00, Pa_SelectCursor_00, Pa_ArrowR_00, Pa_ArrowL_00" )
@@ -59862,7 +59862,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA4CAC] = 13257908;
             MEMORY[0xCA4CA8] = 12322272;
             MEMORY[0xCA4CB0] = 50;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13257896);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13257896);
             MEMORY[0xCA4CA8] = 12576392;
             v5 = MEMORY[0xCA4CAC];
             if ( (char *)MEMORY[0xCA4CAC] != "G_InOut_00, G_Scroll_00, G_ArrowR_00, G_ArrowL_00" )
@@ -65793,7 +65793,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = &v11;
     v8 = 12322272;
     v10 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v8);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v8);
     *(_BYTE *)v9 = MEMORY[0xB3BA34];
     v8 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60CA5AF0 + 12))(&dword_60CA5AF0);
@@ -70227,7 +70227,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v14 = &v16;
       v13 = 12322272;
       v15 = 256;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v13);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v13);
       *(_BYTE *)v14 = v2;
       v13 = 12424380;
       sub_60911A10(v12, &v13, v1);
@@ -81772,7 +81772,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = &v9;
     v6 = 12322272;
     v8 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v6);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v6);
     *(_BYTE *)v7 = MEMORY[0xB3BA34];
     v6 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60CA7408 + 12))(&dword_60CA7408);
@@ -81986,7 +81986,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v42 = &v44;
         v41 = 12322272;
         v43 = 256;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v41);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v41);
         *(_BYTE *)v42 = v37;
         v41 = 12424380;
         sub_60911A10(v1, &v41, v5);
@@ -82772,7 +82772,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = &v10;
     v7 = 12322272;
     v9 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v7);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v7);
     *(_BYTE *)v8 = MEMORY[0xB3BA34];
     v7 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60CA75B0 + 12))(&dword_60CA75B0);
@@ -86764,7 +86764,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA77F8] = 13268992;
             MEMORY[0xCA77F4] = 12322272;
             MEMORY[0xCA77FC] = 82;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13268980);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13268980);
             MEMORY[0xCA77F4] = 12579272;
             v5 = MEMORY[0xCA77F8];
             if ( (char *)MEMORY[0xCA77F8] != "ScrollUp, ScrollDown, ColorTime, ColorCoin, Color1UP, ColorSpecial, ScrollDisable" )
@@ -86940,7 +86940,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA787C] = 13269124;
             MEMORY[0xCA7878] = 12322272;
             MEMORY[0xCA7880] = 59;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13269112);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13269112);
             MEMORY[0xCA7878] = 12579320;
             v5 = MEMORY[0xCA787C];
             if ( (char *)MEMORY[0xCA787C] != "N_Btn_00, N_Btn_01, N_Btn_02, N_Btn_03, N_Btn_04, N_Btn_05" )
@@ -87235,7 +87235,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18 = (int)&v20;
     v17 = 12322272;
     v19 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v17);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v17);
     *(_BYTE *)v18 = MEMORY[0xB3BA34];
     v17 = 12405792;
     v8 = v23;
@@ -87416,7 +87416,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA793C] = 13269316;
             MEMORY[0xCA7938] = 12322272;
             MEMORY[0xCA7940] = 45;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13269304);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13269304);
             MEMORY[0xCA7938] = 12579368;
             v5 = MEMORY[0xCA793C];
             if ( (char *)MEMORY[0xCA793C] != "LevelPattern, MedalPattern, NewPattern, Loop" )
@@ -87589,7 +87589,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA7990] = 13269400;
             MEMORY[0xCA798C] = 12322272;
             MEMORY[0xCA7994] = 85;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13269388);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13269388);
             MEMORY[0xCA798C] = 12572784;
             v5 = MEMORY[0xCA7990];
             if ( (char *)MEMORY[0xCA7990] != "T_CourseNameTime_00, T_CourseNameCoin_00, T_CourseName1Up_00, T_CourseNameSpecial_00" )
@@ -91487,7 +91487,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA7F14] = 13270812;
             MEMORY[0xCA7F10] = 12322272;
             MEMORY[0xCA7F18] = 21;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13270800);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13270800);
             MEMORY[0xCA7F10] = 12580344;
             v5 = MEMORY[0xCA7F14];
             if ( (char *)MEMORY[0xCA7F14] != "CharaSet, Team, Loop" )
@@ -91660,7 +91660,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA7F4C] = 13270868;
             MEMORY[0xCA7F48] = 12322272;
             MEMORY[0xCA7F50] = 13;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13270856);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13270856);
             MEMORY[0xCA7F48] = 12580392;
             v5 = MEMORY[0xCA7F4C];
             if ( (char *)MEMORY[0xCA7F4C] != "P_MiiIcon_00" )
@@ -91833,7 +91833,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA7F74] = 13270908;
             MEMORY[0xCA7F70] = 12322272;
             MEMORY[0xCA7F78] = 32;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13270896);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13270896);
             MEMORY[0xCA7F70] = 12405816;
             v5 = MEMORY[0xCA7F74];
             if ( (char *)MEMORY[0xCA7F74] != "G_Icon_00, G_Team_00, G_Loop_00" )
@@ -92233,7 +92233,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA7FF8] = 13271040;
             MEMORY[0xCA7FF4] = 12322272;
             MEMORY[0xCA7FFC] = 13;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13271028);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13271028);
             MEMORY[0xCA7FF4] = 12580392;
             v5 = MEMORY[0xCA7FF8];
             if ( (char *)MEMORY[0xCA7FF8] != "P_MiiIcon_00" )
@@ -92302,7 +92302,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA8020] = 13271080;
             MEMORY[0xCA801C] = 12322272;
             MEMORY[0xCA8024] = 10;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13271068);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13271068);
             MEMORY[0xCA801C] = 12406776;
             v5 = MEMORY[0xCA8020];
             if ( (char *)MEMORY[0xCA8020] != "G_Icon_00" )
@@ -95009,7 +95009,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = &v8;
     v5 = 12322272;
     v7 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v5);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v5);
     *(_BYTE *)v6 = MEMORY[0xB3BA34];
     v5 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60CA83F4 + 12))(&dword_60CA83F4);
@@ -97827,7 +97827,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = &v8;
     v5 = 12322272;
     v7 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v5);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v5);
     *(_BYTE *)v6 = MEMORY[0xB3BA34];
     v5 = 12572104;
     v3 = (const char *)(*(int (__fastcall **)(_DWORD *))(*a1 + 16))(a1);
@@ -99217,7 +99217,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA8784] = 13272972;
             MEMORY[0xCA8780] = 12322272;
             MEMORY[0xCA8788] = 34;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13272960);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13272960);
             MEMORY[0xCA8780] = 12581392;
             v5 = MEMORY[0xCA8784];
             if ( (char *)MEMORY[0xCA8784] != "WipeIn, LevelNum, Mode, Loop, Out" )
@@ -99390,7 +99390,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA87D0] = 13273048;
             MEMORY[0xCA87CC] = 12322272;
             MEMORY[0xCA87D4] = 82;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13273036);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13273036);
             MEMORY[0xCA87CC] = 12579272;
             v5 = MEMORY[0xCA87D0];
             if ( (char *)MEMORY[0xCA87D0] != "T_Gold_00, T_Silver_00, T_Bronze_00, T_Title_01, T_Title_00, T_Text_01, T_Text_00" )
@@ -99851,7 +99851,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = &v11;
     v8 = 12322272;
     v10 = 70;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v8);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v8);
     *(_BYTE *)v9 = MEMORY[0xB3BA34];
     v8 = 12572104;
     (*(void (__fastcall **)(int *))(dword_60CA8878 + 12))(&dword_60CA8878);
@@ -101276,7 +101276,7 @@ static inline unsigned int uxtb16(unsigned int x)
     strcpy((char *)v19, "G_Place_");
     v18[0] = 12322272;
     v18[2] = 16;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v18);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(v18);
     sub_608FDE40(v18);
     v16 = 12321336;
     v17 = sub_6051A8DC(4);
@@ -101333,7 +101333,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA8A7C] = 13273732;
             MEMORY[0xCA8A78] = 12322272;
             MEMORY[0xCA8A80] = 59;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13273720);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13273720);
             MEMORY[0xCA8A78] = 12579320;
             v5 = MEMORY[0xCA8A7C];
             if ( (char *)MEMORY[0xCA8A7C] != "N_ZankiPos_00, N_ZankiPos_01, N_ZankiPos_02, N_ZankiPos_03" )
@@ -101402,7 +101402,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA8ADC] = 13273828;
             MEMORY[0xCA8AD8] = 12322272;
             MEMORY[0xCA8AE0] = 55;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13273816);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13273816);
             MEMORY[0xCA8AD8] = 12581808;
             v5 = MEMORY[0xCA8ADC];
             if ( (char *)MEMORY[0xCA8ADC] != "T_BestTime_00, T_KinoBZanki_00, T_Timer_01, T_Timer_00" )
@@ -101575,7 +101575,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA8B38] = 13273920;
             MEMORY[0xCA8B34] = 12322272;
             MEMORY[0xCA8B3C] = 83;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13273908);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13273908);
             MEMORY[0xCA8B34] = 12581856;
             v5 = MEMORY[0xCA8B38];
             if ( (char *)MEMORY[0xCA8B38] != "WipeIn, PlayerNum, CourseNum, PackPattern, Place, ResetPlace, Loop, Out, FreeDigit" )
@@ -103973,7 +103973,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA8E44] = 13274700;
             MEMORY[0xCA8E40] = 12322272;
             MEMORY[0xCA8E48] = 41;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13274688);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13274688);
             MEMORY[0xCA8E40] = 12575768;
             v5 = MEMORY[0xCA8E44];
             if ( (char *)MEMORY[0xCA8E44] != "WipeIn, Mode, Team, PlayerNum, Loop, Out" )
@@ -104042,7 +104042,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA8E9C] = 13274788;
             MEMORY[0xCA8E98] = 12322272;
             MEMORY[0xCA8EA0] = 36;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13274776);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13274776);
             MEMORY[0xCA8E98] = 12582144;
             v5 = MEMORY[0xCA8E9C];
             if ( (char *)MEMORY[0xCA8E9C] != "T_Random_00, T_World_00, T_Round_00" )
@@ -106866,7 +106866,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA93A4] = 13276076;
             MEMORY[0xCA93A0] = 12322272;
             MEMORY[0xCA93A8] = 164;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13276064);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13276064);
             MEMORY[0xCA93A0] = 12582452;
             v5 = MEMORY[0xCA93A4];
             if ( (char *)MEMORY[0xCA93A4] != "LevelNum, InPlayScore, InBestScore, NewRecord, MedalGet, TieRecord, ColorTime"
@@ -107044,7 +107044,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA949C] = 13276324;
             MEMORY[0xCA9498] = 12322272;
             MEMORY[0xCA94A0] = 27;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13276312);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13276312);
             MEMORY[0xCA9498] = 12576248;
             v5 = MEMORY[0xCA949C];
             if ( (char *)MEMORY[0xCA949C] != "N_PlayerPos_00, N_Score_00" )
@@ -107113,7 +107113,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA94D4] = 13276380;
             MEMORY[0xCA94D0] = 12322272;
             MEMORY[0xCA94D8] = 344;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13276368);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13276368);
             MEMORY[0xCA94D0] = 12582500;
             v5 = MEMORY[0xCA94D4];
             if ( (char *)MEMORY[0xCA94D4] != "T_PlayScoreText_00, T_PlayScore_00, T_PlayScore_01, T_PlayScoreTime_00, T_Bes"
@@ -107296,7 +107296,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA968C] = 13276820;
             MEMORY[0xCA9688] = 12322272;
             MEMORY[0xCA9690] = 171;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13276808);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13276808);
             MEMORY[0xCA9688] = 12582548;
             v5 = MEMORY[0xCA968C];
             if ( (char *)MEMORY[0xCA968C] != "G_LevelNum_00, G_PlayScore_00, G_BestScore_00, G_NewRecord_00, G_MedalGet_00,"
@@ -107731,7 +107731,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCA9910] = 13277464;
             MEMORY[0xCA990C] = 12322272;
             MEMORY[0xCA9914] = 45;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13277452);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13277452);
             MEMORY[0xCA990C] = 12579368;
             v5 = MEMORY[0xCA9910];
             if ( (char *)MEMORY[0xCA9910] != "ColorTime, ColorCoin, Color1UP, ColorSpecial" )
@@ -114956,7 +114956,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCAA548] = 13280592;
             MEMORY[0xCAA544] = 12322272;
             MEMORY[0xCAA54C] = 257;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13280580);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13280580);
             MEMORY[0xCAA544] = 12583272;
             v5 = MEMORY[0xCAA548];
             if ( (char *)MEMORY[0xCAA548] != "T_PackName_00, T_1PCoinNum_00, T_2PCoinNum_00, T_3PCoinNum_00, T_4PCoinNum_00"
@@ -131720,7 +131720,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCAC648] = 13289040;
             MEMORY[0xCAC644] = 12322272;
             MEMORY[0xCAC64C] = 5;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13289028);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13289028);
             MEMORY[0xCAC644] = 12407860;
             v5 = MEMORY[0xCAC648];
             if ( (char *)MEMORY[0xCAC648] != "Down" )
@@ -131789,7 +131789,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCAC668] = 13289072;
             MEMORY[0xCAC664] = 12322272;
             MEMORY[0xCAC66C] = 33;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13289060);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13289060);
             MEMORY[0xCAC664] = 12572640;
             v5 = MEMORY[0xCAC668];
             if ( (char *)MEMORY[0xCAC668] != "Pa_ArrowBtnR_00, Pa_ArrowBtnL_00" )
@@ -135458,7 +135458,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v14 = (char *)&v16;
           v13 = 12322272;
           v15 = 8;
-          sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v13);
+          sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v13);
           v9 = MEMORY[0xB3BA34];
           *v14 = MEMORY[0xB3BA34];
           v13 = 12405644;
@@ -144501,7 +144501,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCADC9C] = 13294756;
             MEMORY[0xCADC98] = 12322272;
             MEMORY[0xCADCA0] = 15;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13294744);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13294744);
             MEMORY[0xCADC98] = 12586908;
             v5 = MEMORY[0xCADC9C];
             if ( (char *)MEMORY[0xCADC9C] != "InOutR, InOutL" )
@@ -144674,7 +144674,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCADCC8] = 13294800;
             MEMORY[0xCADCC4] = 12322272;
             MEMORY[0xCADCCC] = 50;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13294788);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13294788);
             MEMORY[0xCADCC4] = 12576392;
             v5 = MEMORY[0xCADCC8];
             if ( (char *)MEMORY[0xCADCC8] != "Pa_ReturnBtn_00, Pa_CoinEdit_00, Pa_CoinBattle_00" )
@@ -147112,7 +147112,7 @@ static inline unsigned int uxtb16(unsigned int x)
             MEMORY[0xCADFFC] = 13295620;
             MEMORY[0xCADFF8] = 12322272;
             MEMORY[0xCAE000] = 33;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(13295608);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_(13295608);
             MEMORY[0xCADFF8] = 12572640;
             v5 = MEMORY[0xCADFFC];
             if ( (char *)MEMORY[0xCADFFC] != "Pa_ArrowBtnR_00, Pa_ArrowBtnL_00" )
@@ -148506,7 +148506,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v37 = (char *)v39;
     v36 = 12322272;
     v38 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v36);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v36);
     v2 = MEMORY[0xB3BA34];
     *v37 = MEMORY[0xB3BA34];
     v36 = 12424380;
@@ -148516,7 +148516,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v36 = 12322272;
     v37 = (char *)v39;
     v38 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v36);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v36);
     *v37 = v2;
     v13 = 12321336;
     v36 = 12424380;
@@ -148525,7 +148525,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v36 = 12322272;
     v37 = (char *)v39;
     v38 = 256;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v36);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v36);
     *v37 = v2;
     v13 = 12321336;
     v36 = 12424380;
@@ -198841,7 +198841,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v10 == MEMORY[0xB3BA34] )
             return EffectData_create(v6, a2, 0, 0);
         }
-        sead::SafeStringBase<char>::assureTerminationImpl_(&v14);
+        sead__SafeStringBase_char__assureTerminationImpl_(&v14);
         (*(void (__fastcall **)(int *))(v14 + 12))(&v14);
         if ( v15 == "Pa0_jyotyu_yougan2" )
         {
