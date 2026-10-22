@@ -1,0 +1,6178 @@
+[
+ {
+  "init": "0x2830c",
+  "ctor": "0x28fbc",
+  "ctor_name": "_ZN12SumoBrosBoss5buildEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf383c",
+  "a6": "4"
+ },
+ {
+  "init": "0x3290c",
+  "ctor": "0x325d8",
+  "ctor_name": "Actor_BossKK_Demo_manage_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37ec",
+  "a6": "0"
+ },
+ {
+  "init": "0x32dec",
+  "ctor": "0x32a00",
+  "ctor_name": "Actor_Demo_for_Kamek_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3874",
+  "a6": "0"
+ },
+ {
+  "init": "0x338bc",
+  "ctor": "0x32e78",
+  "ctor_name": "Actor_Demo_for_K_K_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3878",
+  "a6": "0"
+ },
+ {
+  "init": "0x348ec",
+  "ctor": "0x33a78",
+  "ctor_name": "Actor_BossKK_thunder_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3840",
+  "a6": "0"
+ },
+ {
+  "init": "0x3a12c",
+  "ctor": "0x34b54",
+  "ctor_name": "Actor_afterbattle_Demo_Boxing_BowserJr_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a08",
+  "a6": "0"
+ },
+ {
+  "init": "0x4c9e4",
+  "ctor": "0x3a78c",
+  "ctor_name": "Actor_afterbattle_Demo_Boxing_BowserJr_Crown_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32f4",
+  "a6": "0"
+ },
+ {
+  "init": "0x4fb70",
+  "ctor": "0x4d2e0",
+  "ctor_name": "_ZN10BoomBoomW1C1EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf37c4",
+  "a6": "0"
+ },
+ {
+  "init": "0x54524",
+  "ctor": "0x53fb4",
+  "ctor_name": "Actor_BoomBoom_Demo_manage_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37dc",
+  "a6": "0"
+ },
+ {
+  "init": "0x55410",
+  "ctor": "0x54630",
+  "ctor_name": "Actor_Demo_for_Kamek_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf386c",
+  "a6": "0"
+ },
+ {
+  "init": "0x57304",
+  "ctor": "0x55608",
+  "ctor_name": "Actor_BoomBoom_W2fort_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37c8",
+  "a6": "0"
+ },
+ {
+  "init": "0x58c58",
+  "ctor": "0x575d8",
+  "ctor_name": "Actor_BoomBoom_W3fort_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37cc",
+  "a6": "0"
+ },
+ {
+  "init": "0x599a4",
+  "ctor": "0x58f5c",
+  "ctor_name": "Actor_BoomBoom_W4fort_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37d0",
+  "a6": "0"
+ },
+ {
+  "init": "0x5b698",
+  "ctor": "0x59b60",
+  "ctor_name": "Actor_BoomBoom_W5fort_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37d4",
+  "a6": "0"
+ },
+ {
+  "init": "0x60834",
+  "ctor": "0x5b974",
+  "ctor_name": "Actor_BoomBoom_W6fort_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37d8",
+  "a6": "0"
+ },
+ {
+  "init": "0x61a0c",
+  "ctor": "0x60ea8",
+  "ctor_name": "Actor_first_Bowser_Demo_for_BowserJr_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3868",
+  "a6": "0"
+ },
+ {
+  "init": "0x634b0",
+  "ctor": "0x61bc8",
+  "ctor_name": "Actor_first_Bowser_Demo_for_BowserJr_Crown_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3864",
+  "a6": "0"
+ },
+ {
+  "init": "0x64598",
+  "ctor": "0x636f0",
+  "ctor_name": "Actor_final_bomu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3888",
+  "a6": "0"
+ },
+ {
+  "init": "0x65f8c",
+  "ctor": "0x646f0",
+  "ctor_name": "Actor_background_for_Peach_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38b0",
+  "a6": "0"
+ },
+ {
+  "init": "0x66c84",
+  "ctor": "0x66238",
+  "ctor_name": "Actor_background_for_shata_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38b4",
+  "a6": "0"
+ },
+ {
+  "init": "0x799b4",
+  "ctor": "0x66e74",
+  "ctor_name": "_ZN11FinalBowser5buildEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3300",
+  "a6": "0"
+ },
+ {
+  "init": "0x7dbf8",
+  "ctor": "0x7a734",
+  "ctor_name": "Actor_final_Bowser_Demo_manage_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37f8",
+  "a6": "0"
+ },
+ {
+  "init": "0x80750",
+  "ctor": "0x7e9f4",
+  "ctor_name": "Actor_final_Bowser_fire_build",
+  "id": 4294967295,
+  "id_addr": "0xaf387c",
+  "a6": "18"
+ },
+ {
+  "init": "0x80a98",
+  "ctor": "0x81b20",
+  "ctor_name": "Actor_final_BowserJr_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3880",
+  "a6": "0"
+ },
+ {
+  "init": "0x95f2c",
+  "ctor": "0x8ce8c",
+  "ctor_name": "Actor_final_BowserJr_Crown_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32fc",
+  "a6": "4"
+ },
+ {
+  "init": "0x97984",
+  "ctor": "0x96a34",
+  "ctor_name": "Actor_final_BowserJr_fire_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3884",
+  "a6": "18"
+ },
+ {
+  "init": "0xa19bc",
+  "ctor": "0x97a5c",
+  "ctor_name": "_ZN4Iggy5buildEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3828",
+  "a6": "0"
+ },
+ {
+  "init": "0xa379c",
+  "ctor": "0xa28d0",
+  "ctor_name": "Actor_Iggy_magic_build",
+  "id": 4294967295,
+  "id_addr": "0xaf382c",
+  "a6": "18"
+ },
+ {
+  "init": "0xa4824",
+  "ctor": "0xa38c8",
+  "ctor_name": "Actor_Iggy_room_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3170",
+  "a6": "0"
+ },
+ {
+  "init": "0xabbc0",
+  "ctor": "0xa48ac",
+  "ctor_name": "Actor_Kamek_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3848",
+  "a6": "0"
+ },
+ {
+  "init": "0xacc38",
+  "ctor": "0xac864",
+  "ctor_name": "Actor_Kamek_Demo_manage_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37e8",
+  "a6": "0"
+ },
+ {
+  "init": "0xb01ec",
+  "ctor": "0xaccd0",
+  "ctor_name": "Actor_Kamek_tsurara_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32e8",
+  "a6": "32"
+ },
+ {
+  "init": "0xb10f8",
+  "ctor": "0xb047c",
+  "ctor_name": "Actor_Kamek_magic_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3850",
+  "a6": "18"
+ },
+ {
+  "init": "0xb8f54",
+  "ctor": "0xb8610",
+  "ctor_name": "Actor_koBowser_Demo_manage_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37e0",
+  "a6": "0"
+ },
+ {
+  "init": "0xbb108",
+  "ctor": "0xb90a8",
+  "ctor_name": "Actor_koBowser_fire_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3804",
+  "a6": "18"
+ },
+ {
+  "init": "0xbc748",
+  "ctor": "0xbc1f0",
+  "ctor_name": "Actor_Iggy_airship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf389c",
+  "a6": "0"
+ },
+ {
+  "init": "0xbcd08",
+  "ctor": "0xbc848",
+  "ctor_name": "Actor_Larry_airship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3894",
+  "a6": "0"
+ },
+ {
+  "init": "0xbd2bc",
+  "ctor": "0xbce08",
+  "ctor_name": "Actor_Lemmy_airship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf388c",
+  "a6": "0"
+ },
+ {
+  "init": "0xbd87c",
+  "ctor": "0xbd3bc",
+  "ctor_name": "Actor_Ludwig_airship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38a4",
+  "a6": "0"
+ },
+ {
+  "init": "0xbde3c",
+  "ctor": "0xbd97c",
+  "ctor_name": "Actor_Morton_airship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3890",
+  "a6": "0"
+ },
+ {
+  "init": "0xbe3fc",
+  "ctor": "0xbdf3c",
+  "ctor_name": "Actor_Roy_airship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38a0",
+  "a6": "0"
+ },
+ {
+  "init": "0xc0698",
+  "ctor": "0xbe4fc",
+  "ctor_name": "Actor_bosubig_koBowser_airship_boarding_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3140",
+  "a6": "2"
+ },
+ {
+  "init": "0xc0f1c",
+  "ctor": "0xc0a5c",
+  "ctor_name": "Actor_Wendy_airship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3898",
+  "a6": "0"
+ },
+ {
+  "init": "0xc3580",
+  "ctor": "0xc101c",
+  "ctor_name": "_ZN6Bowser5buildEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3858",
+  "a6": "0"
+ },
+ {
+  "init": "0xcadfc",
+  "ctor": "0xc78dc",
+  "ctor_name": "Actor_castle_Bowser_Demo_manage_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37f4",
+  "a6": "0"
+ },
+ {
+  "init": "0xcbc0c",
+  "ctor": "0xcb344",
+  "ctor_name": "Actor_first_Bowser_Demo_for_Kamek_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3870",
+  "a6": "0"
+ },
+ {
+  "init": "0xccbf4",
+  "ctor": "0xcbf94",
+  "ctor_name": "Actor_Bowser_fire_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3860",
+  "a6": "162"
+ },
+ {
+  "init": "0xce0fc",
+  "ctor": "0xccd64",
+  "ctor_name": "Actor_BowserJr_ball_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39f8",
+  "a6": "2"
+ },
+ {
+  "init": "0xd4f88",
+  "ctor": "0xd250c",
+  "ctor_name": "Actor_juniaDemo_manage_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37e4",
+  "a6": "0"
+ },
+ {
+  "init": "0xd5fdc",
+  "ctor": "0xd513c",
+  "ctor_name": "Actor_BowserJr_fire_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39f4",
+  "a6": "2"
+ },
+ {
+  "init": "0xd6cec",
+  "ctor": "0xd6158",
+  "ctor_name": "_ZN13BowserShutterC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf314c",
+  "a6": "2"
+ },
+ {
+  "init": "0xdb244",
+  "ctor": "0xd77c4",
+  "ctor_name": "Actor_Larry_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3800",
+  "a6": "0"
+ },
+ {
+  "init": "0xe0d2c",
+  "ctor": "0xdbddc",
+  "ctor_name": "Actor_Lemmy_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3808",
+  "a6": "0"
+ },
+ {
+  "init": "0xe2784",
+  "ctor": "0xe1740",
+  "ctor_name": "Actor_Lemmy_boru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32a4",
+  "a6": "2"
+ },
+ {
+  "init": "0xe5eb8",
+  "ctor": "0xe3bdc",
+  "ctor_name": "Actor_Lemmy_bomb_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32a8",
+  "a6": "2"
+ },
+ {
+  "init": "0xee334",
+  "ctor": "0xe7508",
+  "ctor_name": "Actor_Ludwig_clone_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3820",
+  "a6": "0"
+ },
+ {
+  "init": "0xf1d34",
+  "ctor": "0xeeecc",
+  "ctor_name": "Actor_Morton_build",
+  "id": 4294967295,
+  "id_addr": "0xaf380c",
+  "a6": "0"
+ },
+ {
+  "init": "0xf779c",
+  "ctor": "0xf478c",
+  "ctor_name": "Actor_giant_SumoBro_patsu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3810",
+  "a6": "18"
+ },
+ {
+  "init": "0xf8eac",
+  "ctor": "0xf7da8",
+  "ctor_name": "Actor_Peach_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38a8",
+  "a6": "0"
+ },
+ {
+  "init": "0xfb350",
+  "ctor": "0xf90a0",
+  "ctor_name": "Actor_Peach_Demo_manage_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37fc",
+  "a6": "0"
+ },
+ {
+  "init": "0xfb460",
+  "ctor": "0xfb67c",
+  "ctor_name": "Actor_W8course_BowserJr_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3854",
+  "a6": "0"
+ },
+ {
+  "init": "0x102fb0",
+  "ctor": "0xfc708",
+  "ctor_name": "Actor_W8course_BowserJr_Crown_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32f0",
+  "a6": "4"
+ },
+ {
+  "init": "0x103bd8",
+  "ctor": "0x10387c",
+  "ctor_name": "Actor_W8course_BowserJr_manage_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37f0",
+  "a6": "0"
+ },
+ {
+  "init": "0x1054ac",
+  "ctor": "0x103ce8",
+  "ctor_name": "Actor_W8course_BowserJr_for_tarihorizontal_move_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3160",
+  "a6": "2"
+ },
+ {
+  "init": "0x107014",
+  "ctor": "0x105e60",
+  "ctor_name": "Actor_W8course_BowserJr_for_atarimove_Lift_parentchild_obuje_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3164",
+  "a6": "2"
+ },
+ {
+  "init": "0x1089b4",
+  "ctor": "0x10728c",
+  "ctor_name": "Actor_W8course_BowserJr_for_tarivertical_move_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf315c",
+  "a6": "2"
+ },
+ {
+  "init": "0x10f010",
+  "ctor": "0x108c84",
+  "ctor_name": "Actor_Roy_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3834",
+  "a6": "0"
+ },
+ {
+  "init": "0x110780",
+  "ctor": "0x10fcc4",
+  "ctor_name": "Actor_Roy_for_kishiLift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3838",
+  "a6": "2"
+ },
+ {
+  "init": "0x111ae0",
+  "ctor": "0x110804",
+  "ctor_name": "Actor_Roy_for_kishiLift_sutepu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3168",
+  "a6": "2"
+ },
+ {
+  "init": "0x1124b0",
+  "ctor": "0x111c20",
+  "ctor_name": "Actor_Bowser_fire_kishi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf385c",
+  "a6": "0"
+ },
+ {
+  "init": "0x116ea4",
+  "ctor": "0x112544",
+  "ctor_name": "Actor_underwater_BowserJr_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39fc",
+  "a6": "0"
+ },
+ {
+  "init": "0x123f74",
+  "ctor": "0x117360",
+  "ctor_name": "Actor_underwater_BowserJr_Crown_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a00",
+  "a6": "0"
+ },
+ {
+  "init": "0x124824",
+  "ctor": "0x1245c0",
+  "ctor_name": "Actor_underwater_BowserJr_retreat_pos_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a04",
+  "a6": "0"
+ },
+ {
+  "init": "0x12a6d8",
+  "ctor": "0x1248d0",
+  "ctor_name": "Actor_Wendy_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3818",
+  "a6": "0"
+ },
+ {
+  "init": "0x12bc34",
+  "ctor": "0x12b26c",
+  "ctor_name": "_ZN10WendyFloorC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf316c",
+  "a6": "0"
+ },
+ {
+  "init": "0x12d644",
+  "ctor": "0x12bcbc",
+  "ctor_name": "Actor_Wendy_tsurara_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32ec",
+  "a6": "16"
+ },
+ {
+  "init": "0x12f06c",
+  "ctor": "0x12d8b0",
+  "ctor_name": "Actor_Wendy_ringu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf381c",
+  "a6": "2"
+ },
+ {
+  "init": "0x131b50",
+  "ctor": "0x12f1e8",
+  "ctor_name": "Actor_Unga_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3830",
+  "a6": "0"
+ },
+ {
+  "init": "0x1341b8",
+  "ctor": "0x131ee4",
+  "ctor_name": "Actor_Boomerang_build",
+  "id": 4294967295,
+  "id_addr": "0xaf390c",
+  "a6": "34"
+ },
+ {
+  "init": "0x137d78",
+  "ctor": "0x13734c",
+  "ctor_name": "BroFileball_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3914",
+  "a6": "34"
+ },
+ {
+  "init": "0x13907c",
+  "ctor": "0x137ecc",
+  "ctor_name": "Actor_keronpa_fire_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35e0",
+  "a6": "2"
+ },
+ {
+  "init": "0x139754",
+  "ctor": "0x139268",
+  "ctor_name": "Actor_keronpa_fire_RDashfor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35e4",
+  "a6": "34"
+ },
+ {
+  "init": "0x13a5a8",
+  "ctor": "0x139918",
+  "ctor_name": "PlantFireball_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf349c",
+  "a6": "162"
+ },
+ {
+  "init": "0x13b948",
+  "ctor": "0x13a7a4",
+  "ctor_name": "PlayerFireball_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3498",
+  "a6": "130"
+ },
+ {
+  "init": "0x13ca14",
+  "ctor": "0x13ba54",
+  "ctor_name": "Actor_gabon_ironball_build",
+  "id": 4294967295,
+  "id_addr": "0xaf372c",
+  "a6": "160"
+ },
+ {
+  "init": "0x14083c",
+  "ctor": "0x13f02c",
+  "ctor_name": "Actor_Hammer_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3904",
+  "a6": "18"
+ },
+ {
+  "init": "0x141f1c",
+  "ctor": "0x140a14",
+  "ctor_name": "Actor_IceBall_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3490",
+  "a6": "130"
+ },
+ {
+  "init": "0x1437f4",
+  "ctor": "0x142f74",
+  "ctor_name": "Actor_burosufor_IceBall_build",
+  "id": 4294967295,
+  "id_addr": "0xaf391c",
+  "a6": "34"
+ },
+ {
+  "init": "0x1445a4",
+  "ctor": "0x143930",
+  "ctor_name": "PlantIceball_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3494",
+  "a6": "162"
+ },
+ {
+  "init": "0x145b84",
+  "ctor": "0x144b24",
+  "ctor_name": "_ZN10MegaHammerC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3924",
+  "a6": "162"
+ },
+ {
+  "init": "0x1466ec",
+  "ctor": "0x145d3c",
+  "ctor_name": "Actor_rokugabon_rock_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3738",
+  "a6": "160"
+ },
+ {
+  "init": "0x148da0",
+  "ctor": "0x1468d0",
+  "ctor_name": "Actor_seichin_snow_ball_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3740",
+  "a6": "160"
+ },
+ {
+  "init": "0x14a098",
+  "ctor": "0x148fac",
+  "ctor_name": "Actor_Wrench_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36d0",
+  "a6": "34"
+ },
+ {
+  "init": "0x1707d4",
+  "ctor": "0x16b654",
+  "ctor_name": "Actor_CourseSelect_kamera_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a90",
+  "a6": "0"
+ },
+ {
+  "init": "0x174ad0",
+  "ctor": "0x1737e0",
+  "ctor_name": "Actor_CourseSelectocastle_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a94",
+  "a6": "0"
+ },
+ {
+  "init": "0x176a6c",
+  "ctor": "0x174b70",
+  "ctor_name": "Actor_CourseSelect_chorobon_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b0c",
+  "a6": "0"
+ },
+ {
+  "init": "0x178b90",
+  "ctor": "0x178a84",
+  "ctor_name": "Actor_CourseSelectkosupointo_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ab0",
+  "a6": "0"
+ },
+ {
+  "init": "0x185bc8",
+  "ctor": "0x185218",
+  "ctor_name": "Actor_CourseSelectkaunira_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b40",
+  "a6": "0"
+ },
+ {
+  "init": "0x18cd98",
+  "ctor": "0x18723c",
+  "ctor_name": "Actor_ibentoashisutanto_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b60",
+  "a6": "0"
+ },
+ {
+  "init": "0x192960",
+  "ctor": "0x191dd4",
+  "ctor_name": "Actor_PeachCastle_flag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b18",
+  "a6": "0"
+ },
+ {
+  "init": "0x192a48",
+  "ctor": "0x192a00",
+  "ctor_name": "Actor_CourseSelectoke_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3abc",
+  "a6": "0"
+ },
+ {
+  "init": "0x193a7c",
+  "ctor": "0x19361c",
+  "ctor_name": "Actor_CourseSelect1Upkinokohausu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a9c",
+  "a6": "0"
+ },
+ {
+  "init": "0x194c64",
+  "ctor": "0x194098",
+  "ctor_name": "Actor_CourseSelectshafurukinokohausu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3aa0",
+  "a6": "0"
+ },
+ {
+  "init": "0x1951ec",
+  "ctor": "0x194e24",
+  "ctor_name": "Actor_CourseSelectsurotokinokohausu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3aa4",
+  "a6": "0"
+ },
+ {
+  "init": "0x195294",
+  "ctor": "0x195724",
+  "ctor_name": "Actor_CourseSelectBowserJr_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b50",
+  "a6": "0"
+ },
+ {
+  "init": "0x19b904",
+  "ctor": "0x19bb74",
+  "ctor_name": "Actor_CSbone_kosuta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b4c",
+  "a6": "0"
+ },
+ {
+  "init": "0x1a5738",
+  "ctor": "0x1a4f88",
+  "ctor_name": "Actor_CourseSelect_Miibarun_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b28",
+  "a6": "0"
+ },
+ {
+  "init": "0x1a7278",
+  "ctor": "0x1a5d4c",
+  "ctor_name": "Actor_CSmusasabi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b1c",
+  "a6": "0"
+ },
+ {
+  "init": "0x1a7854",
+  "ctor": "0x1a76f8",
+  "ctor_name": "Actor_CourseSelectopuninguKamek_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3af8",
+  "a6": "0"
+ },
+ {
+  "init": "0x1a92ec",
+  "ctor": "0x1a96e0",
+  "ctor_name": "Actor_CSPiranha_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b00",
+  "a6": "0"
+ },
+ {
+  "init": "0x1aac8c",
+  "ctor": "0x1aa6c8",
+  "ctor_name": "Actor_CourseSelectkaPiranha_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b38",
+  "a6": "0"
+ },
+ {
+  "init": "0x1ab3a8",
+  "ctor": "0x1ab5b0",
+  "ctor_name": "Actor_CourseSelectPeach_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b54",
+  "a6": "0"
+ },
+ {
+  "init": "0x1acd64",
+  "ctor": "0x1ac3d8",
+  "ctor_name": "Actor_PeachCastle_1door_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3aa8",
+  "a6": "0"
+ },
+ {
+  "init": "0x1ad7dc",
+  "ctor": "0x1ace04",
+  "ctor_name": "Actor_PeachCastle_2door_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3aac",
+  "a6": "0"
+ },
+ {
+  "init": "0x1ad880",
+  "ctor": "0x1ade30",
+  "ctor_name": "Actor_CSpentaro_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b2c",
+  "a6": "0"
+ },
+ {
+  "init": "0x1b5b0c",
+  "ctor": "0x1b16b0",
+  "ctor_name": "Actor_CourseSelect_Player_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a84",
+  "a6": "0"
+ },
+ {
+  "init": "0x1bd4fc",
+  "ctor": "0x1b5fbc",
+  "ctor_name": "Actor_CourseSelect_chiyoshi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a88",
+  "a6": "0"
+ },
+ {
+  "init": "0x1dfc88",
+  "ctor": "0x1db8c4",
+  "ctor_name": "Actor_Toad_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b04",
+  "a6": "0"
+ },
+ {
+  "init": "0x1ebc18",
+  "ctor": "0x1eaf00",
+  "ctor_name": "Actor_CSshadouaikon_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b3c",
+  "a6": "0"
+ },
+ {
+  "init": "0x1ebcc0",
+  "ctor": "0x1ec418",
+  "ctor_name": "Actor_shadoukun_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b48",
+  "a6": "0"
+ },
+ {
+  "init": "0x1f37f4",
+  "ctor": "0x1f2f78",
+  "ctor_name": "Actor_CourseSelectretaairship_BowserJr_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ae4",
+  "a6": "0"
+ },
+ {
+  "init": "0x1f3a08",
+  "ctor": "0x1f3b98",
+  "ctor_name": "Actor_CourseSelectairship_Iggy_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ad4",
+  "a6": "0"
+ },
+ {
+  "init": "0x1f3f0c",
+  "ctor": "0x1f464c",
+  "ctor_name": "Actor_CourseSelectairship_BowserJr_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ae0",
+  "a6": "0"
+ },
+ {
+  "init": "0x1f8688",
+  "ctor": "0x1f8818",
+  "ctor_name": "Actor_CourseSelectairship_Larry_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3acc",
+  "a6": "0"
+ },
+ {
+  "init": "0x1f8b90",
+  "ctor": "0x1f8ebc",
+  "ctor_name": "Actor_CourseSelectairship_Lemmy_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ac4",
+  "a6": "0"
+ },
+ {
+  "init": "0x1f98cc",
+  "ctor": "0x1f9a6c",
+  "ctor_name": "Actor_CourseSelectairship_Ludwig_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3adc",
+  "a6": "0"
+ },
+ {
+  "init": "0x1fa50c",
+  "ctor": "0x1fa688",
+  "ctor_name": "Actor_CourseSelectairship_Morton_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ac8",
+  "a6": "0"
+ },
+ {
+  "init": "0x1fa9fc",
+  "ctor": "0x1fab78",
+  "ctor_name": "Actor_CourseSelectairship_Roy_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ad8",
+  "a6": "0"
+ },
+ {
+  "init": "0x1faee0",
+  "ctor": "0x1fb048",
+  "ctor_name": "Actor_CourseSelectairship_Wendy_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ad0",
+  "a6": "0"
+ },
+ {
+  "init": "0x1fbd94",
+  "ctor": "0x1fb3b4",
+  "ctor_name": "Actor_CSW9sutageto_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b5c",
+  "a6": "0"
+ },
+ {
+  "init": "0x1fc85c",
+  "ctor": "0x1fc198",
+  "ctor_name": "Actor_flag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ae8",
+  "a6": "0"
+ },
+ {
+  "init": "0x1fcf44",
+  "ctor": "0x1fc918",
+  "ctor_name": "Actor_CourseSelectsuichiA_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3aec",
+  "a6": "0"
+ },
+ {
+  "init": "0x1fd610",
+  "ctor": "0x1fcfe4",
+  "ctor_name": "Actor_CourseSelectsuichiB_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3af0",
+  "a6": "0"
+ },
+ {
+  "init": "0x20069c",
+  "ctor": "0x200210",
+  "ctor_name": "Actor_CourseSelectBoo_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3af4",
+  "a6": "0"
+ },
+ {
+  "init": "0x2038ec",
+  "ctor": "0x201cb4",
+  "ctor_name": "Actor_CSpuku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b08",
+  "a6": "0"
+ },
+ {
+  "init": "0x204d18",
+  "ctor": "0x2046f8",
+  "ctor_name": "Actor_CSo_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b44",
+  "a6": "0"
+ },
+ {
+  "init": "0x205d88",
+  "ctor": "0x204eec",
+  "ctor_name": "Actor_CourseSelectfort_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a98",
+  "a6": "0"
+ },
+ {
+  "init": "0x205f3c",
+  "ctor": "0x205e28",
+  "ctor_name": "Actor_CourseSelectfort_bosu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3afc",
+  "a6": "0"
+ },
+ {
+  "init": "0x208fc8",
+  "ctor": "0x20836c",
+  "ctor_name": "Actor_CSW1_Item_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b58",
+  "a6": "0"
+ },
+ {
+  "init": "0x20a894",
+  "ctor": "0x2092a8",
+  "ctor_name": "Actor_W2Hammer_burosu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ac0",
+  "a6": "0"
+ },
+ {
+  "init": "0x20c5a0",
+  "ctor": "0x20b0a8",
+  "ctor_name": "Actor_CSW2Goomba_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b34",
+  "a6": "0"
+ },
+ {
+  "init": "0x20c9b0",
+  "ctor": "0x20ce10",
+  "ctor_name": "Actor_CSW4_Item_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b30",
+  "a6": "0"
+ },
+ {
+  "init": "0x20e928",
+  "ctor": "0x20e36c",
+  "ctor_name": "Actor_CSW5Boo_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b14",
+  "a6": "0"
+ },
+ {
+  "init": "0x211850",
+  "ctor": "0x211138",
+  "ctor_name": "Actor_CSW7_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b24",
+  "a6": "0"
+ },
+ {
+  "init": "0x215598",
+  "ctor": "0x213628",
+  "ctor_name": "Actor_CourseSelect_W7_Item_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b10",
+  "a6": "0"
+ },
+ {
+  "init": "0x21694c",
+  "ctor": "0x215b4c",
+  "ctor_name": "Actor_CourseSelect_W8_cloud_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ab8",
+  "a6": "0"
+ },
+ {
+  "init": "0x217074",
+  "ctor": "0x216b00",
+  "ctor_name": "Actor_CSwarudomove_pipe_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3ab4",
+  "a6": "0"
+ },
+ {
+  "init": "0x218834",
+  "ctor": "0x217fd4",
+  "ctor_name": "Actor_CSgeyser_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3b20",
+  "a6": "0"
+ },
+ {
+  "init": "0x2403ec",
+  "ctor": "0x23b11c",
+  "ctor_name": "Actor_bakubaku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37b0",
+  "a6": "18"
+ },
+ {
+  "init": "0x2455a8",
+  "ctor": "0x242a4c",
+  "ctor_name": "Actor_barun_build",
+  "id": 4294967295,
+  "id_addr": "0xaf340c",
+  "a6": "1028"
+ },
+ {
+  "init": "0x24a470",
+  "ctor": "0x248ec0",
+  "ctor_name": "Actor_ship_ruakuta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3470",
+  "a6": "18"
+ },
+ {
+  "init": "0x24cf58",
+  "ctor": "0x24a638",
+  "ctor_name": "Actor_Blooper_raki_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39c0",
+  "a6": "22"
+ },
+ {
+  "init": "0x25107c",
+  "ctor": "0x24d068",
+  "ctor_name": "Actor_basabasa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36bc",
+  "a6": "18"
+ },
+ {
+  "init": "0x253a94",
+  "ctor": "0x25142c",
+  "ctor_name": "Actor_mameGoomba_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3484",
+  "a6": "16"
+ },
+ {
+  "init": "0x254ef0",
+  "ctor": "0x25410c",
+  "ctor_name": "GiantWiggler_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3520",
+  "a6": "2"
+ },
+ {
+  "init": "0x259d74",
+  "ctor": "0x258228",
+  "ctor_name": "_ZN3AmpC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3928",
+  "a6": "0"
+ },
+ {
+  "init": "0x25c830",
+  "ctor": "0x25a014",
+  "ctor_name": "BobOmb_create",
+  "id": 4294967295,
+  "id_addr": "0xaf354c",
+  "a6": "18"
+ },
+ {
+  "init": "0x262310",
+  "ctor": "0x261428",
+  "ctor_name": "Actor_parabomu_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3550",
+  "a6": "18"
+ },
+ {
+  "init": "0x263214",
+  "ctor": "0x262520",
+  "ctor_name": "BoomerangBro_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3908",
+  "a6": "18"
+ },
+ {
+  "init": "0x26a364",
+  "ctor": "0x2678f8",
+  "ctor_name": "Actor_baburu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3764",
+  "a6": "18"
+ },
+ {
+  "init": "0x26a95c",
+  "ctor": "0x26a5c4",
+  "ctor_name": "Actor_baburu_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf376c",
+  "a6": "18"
+ },
+ {
+  "init": "0x26c13c",
+  "ctor": "0x26ad60",
+  "ctor_name": "sub_6026AD60",
+  "id": 4294967295,
+  "id_addr": "0xaf36f8",
+  "a6": "16"
+ },
+ {
+  "init": "0x26d5c8",
+  "ctor": "0x26c370",
+  "ctor_name": "sub_6026C370",
+  "id": 4294967295,
+  "id_addr": "0xaf2efc",
+  "a6": "0"
+ },
+ {
+  "init": "0x26f110",
+  "ctor": "0x26d9d8",
+  "ctor_name": "Actor_rotate_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ef4",
+  "a6": "0"
+ },
+ {
+  "init": "0x2706b0",
+  "ctor": "0x26f37c",
+  "ctor_name": "Actor_rotate_big_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ef8",
+  "a6": "18"
+ },
+ {
+  "init": "0x271b44",
+  "ctor": "0x270b04",
+  "ctor_name": "Actor_naname_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ef0",
+  "a6": "0"
+ },
+ {
+  "init": "0x2750a0",
+  "ctor": "0x273990",
+  "ctor_name": "Actor_chochin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35d0",
+  "a6": "16"
+ },
+ {
+  "init": "0x278b74",
+  "ctor": "0x275378",
+  "ctor_name": "Fuzzy_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf375c",
+  "a6": "18"
+ },
+ {
+  "init": "0x2792b0",
+  "ctor": "0x278fac",
+  "ctor_name": "Actor_choropu_hole_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36b8",
+  "a6": "0"
+ },
+ {
+  "init": "0x27d9a0",
+  "ctor": "0x27b310",
+  "ctor_name": "Actor_choropu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36b4",
+  "a6": "18"
+ },
+ {
+  "init": "0x283730",
+  "ctor": "0x27df6c",
+  "ctor_name": "Actor_poison_mist_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3978",
+  "a6": "0"
+ },
+ {
+  "init": "0x285380",
+  "ctor": "0x2838b4",
+  "ctor_name": "Actor_mist_range_raito_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3980",
+  "a6": "0"
+ },
+ {
+  "init": "0x286290",
+  "ctor": "0x2857d0",
+  "ctor_name": "Actor_kuki_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3188",
+  "a6": "18"
+ },
+ {
+  "init": "0x2863fc",
+  "ctor": "0x28695c",
+  "ctor_name": "Actor_kurasha_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3774",
+  "a6": "18"
+ },
+ {
+  "init": "0x28dc84",
+  "ctor": "0x28b7d8",
+  "ctor_name": "Actor_kurosuke_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37b8",
+  "a6": "18"
+ },
+ {
+  "init": "0x28e3c8",
+  "ctor": "0x28dfe0",
+  "ctor_name": "Actor_kaunira_build",
+  "id": 4294967295,
+  "id_addr": "0xaf332c",
+  "a6": "274"
+ },
+ {
+  "init": "0x293e94",
+  "ctor": "0x293968",
+  "ctor_name": "Actor_kipipe_faiyaPiranha_furawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34b8",
+  "a6": "18"
+ },
+ {
+  "init": "0x2943c8",
+  "ctor": "0x293f30",
+  "ctor_name": "Actor_kipipe_faiyaPiranha_furawa_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34bc",
+  "a6": "18"
+ },
+ {
+  "init": "0x2948fc",
+  "ctor": "0x294464",
+  "ctor_name": "Actor_kipipe_faiyaPiranha_furawa_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34c0",
+  "a6": "18"
+ },
+ {
+  "init": "0x294e34",
+  "ctor": "0x294998",
+  "ctor_name": "Actor_kipipe_faiyaPiranha_furawa_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34b4",
+  "a6": "18"
+ },
+ {
+  "init": "0x295194",
+  "ctor": "0x294ed0",
+  "ctor_name": "Actor_kipipe_aisuPiranha_furawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34c8",
+  "a6": "18"
+ },
+ {
+  "init": "0x2954f4",
+  "ctor": "0x295230",
+  "ctor_name": "Actor_kipipe_aisuPiranha_furawa_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34cc",
+  "a6": "18"
+ },
+ {
+  "init": "0x295854",
+  "ctor": "0x295590",
+  "ctor_name": "Actor_kipipe_aisuPiranha_furawa_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34d0",
+  "a6": "18"
+ },
+ {
+  "init": "0x295bb4",
+  "ctor": "0x2958f0",
+  "ctor_name": "Actor_kipipe_aisuPiranha_furawa_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34c4",
+  "a6": "18"
+ },
+ {
+  "init": "0x29bc58",
+  "ctor": "0x29adc0",
+  "ctor_name": "Actor_kapipe_Piranha_furawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34d4",
+  "a6": "18"
+ },
+ {
+  "init": "0x29c198",
+  "ctor": "0x29bd68",
+  "ctor_name": "Actor_kipipe_Piranha_furawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34a8",
+  "a6": "18"
+ },
+ {
+  "init": "0x29c67c",
+  "ctor": "0x29c234",
+  "ctor_name": "Actor_kipipe_Piranha_furawa_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34ac",
+  "a6": "18"
+ },
+ {
+  "init": "0x29cb60",
+  "ctor": "0x29c718",
+  "ctor_name": "Actor_kipipe_Piranha_furawa_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34b0",
+  "a6": "18"
+ },
+ {
+  "init": "0x29d064",
+  "ctor": "0x29cbfc",
+  "ctor_name": "Actor_kipipe_Piranha_furawa_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34a4",
+  "a6": "18"
+ },
+ {
+  "init": "0x29e63c",
+  "ctor": "0x29d114",
+  "ctor_name": "Thwomp_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3718",
+  "a6": "278"
+ },
+ {
+  "init": "0x2a04e8",
+  "ctor": "0x29f104",
+  "ctor_name": "Actor_Bowser_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf392c",
+  "a6": "2"
+ },
+ {
+  "init": "0x2a0c48",
+  "ctor": "0x2a06a8",
+  "ctor_name": "Actor_Bowser_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d74",
+  "a6": "2"
+ },
+ {
+  "init": "0x2a1924",
+  "ctor": "0x2a0de8",
+  "ctor_name": "sub_602A0DE8",
+  "id": 4294967295,
+  "id_addr": "0xaf3934",
+  "a6": "2"
+ },
+ {
+  "init": "0x2a4484",
+  "ctor": "0x2a4a68",
+  "ctor_name": "Actor_kosuDemo_for_shadou_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3468",
+  "a6": "0"
+ },
+ {
+  "init": "0x2aa1bc",
+  "ctor": "0x2a9a68",
+  "ctor_name": "FireBros_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3910",
+  "a6": "18"
+ },
+ {
+  "init": "0x2aea54",
+  "ctor": "0x2aa284",
+  "ctor_name": "FireSnake_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35ec",
+  "a6": "18"
+ },
+ {
+  "init": "0x2b0078",
+  "ctor": "0x2af438",
+  "ctor_name": "Actor_fishubon_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35b8",
+  "a6": "18"
+ },
+ {
+  "init": "0x2b5184",
+  "ctor": "0x2b26d4",
+  "ctor_name": "Actor_fufuboru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3524",
+  "a6": "34"
+ },
+ {
+  "init": "0x2b600c",
+  "ctor": "0x2b546c",
+  "ctor_name": "Actor_tree_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38f8",
+  "a6": "2"
+ },
+ {
+  "init": "0x2b71d0",
+  "ctor": "0x2b62c0",
+  "ctor_name": "Actor_kafugumannen_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35bc",
+  "a6": "530"
+ },
+ {
+  "init": "0x2b9650",
+  "ctor": "0x2b8d28",
+  "ctor_name": "Actor_gabon_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3720",
+  "a6": "18"
+ },
+ {
+  "init": "0x2bc190",
+  "ctor": "0x2bbd60",
+  "ctor_name": "Actor_gabon_resident_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3728",
+  "a6": "18"
+ },
+ {
+  "init": "0x2bd200",
+  "ctor": "0x2bc510",
+  "ctor_name": "Actor_gatan_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3314",
+  "a6": "2"
+ },
+ {
+  "init": "0x2bd4cc",
+  "ctor": "0x2bd368",
+  "ctor_name": "Actor_Blooper_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39b8",
+  "a6": "22"
+ },
+ {
+  "init": "0x2c5334",
+  "ctor": "0x2c3954",
+  "ctor_name": "Actor_koBlooper_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39bc",
+  "a6": "2"
+ },
+ {
+  "init": "0x2c7bec",
+  "ctor": "0x2c5624",
+  "ctor_name": "Actor_gorogoro_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35f0",
+  "a6": "2"
+ },
+ {
+  "init": "0x2c9880",
+  "ctor": "0x2c7e2c",
+  "ctor_name": "Actor_gorogoro_giant_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35f4",
+  "a6": "2"
+ },
+ {
+  "init": "0x2ca6b4",
+  "ctor": "0x2c9cd0",
+  "ctor_name": "Actor_guragurarock_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30cc",
+  "a6": "2"
+ },
+ {
+  "init": "0x2cafa8",
+  "ctor": "0x2ca88c",
+  "ctor_name": "Actor_guruguru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39b4",
+  "a6": "2"
+ },
+ {
+  "init": "0x2cd088",
+  "ctor": "0x2cbb20",
+  "ctor_name": "HammerBro_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3900",
+  "a6": "18"
+ },
+ {
+  "init": "0x2ce32c",
+  "ctor": "0x2cd20c",
+  "ctor_name": "Actor_Wiggler_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3518",
+  "a6": "18"
+ },
+ {
+  "init": "0x2d2dcc",
+  "ctor": "0x2d26c0",
+  "ctor_name": "Actor_Wiggler_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf351c",
+  "a6": "18"
+ },
+ {
+  "init": "0x2d79d0",
+  "ctor": "0x2d2e68",
+  "ctor_name": "SledgeBro_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3920",
+  "a6": "18"
+ },
+ {
+  "init": "0x2d9e58",
+  "ctor": "0x2d7f54",
+  "ctor_name": "Actor_honeBuzzy_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3568",
+  "a6": "18"
+ },
+ {
+  "init": "0x2dfe78",
+  "ctor": "0x2ddc04",
+  "ctor_name": "Actor_honeBuzzy_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf356c",
+  "a6": "34"
+ },
+ {
+  "init": "0x2e0144",
+  "ctor": "0x2e1198",
+  "ctor_name": "Actor_ibaramushi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37b4",
+  "a6": "18"
+ },
+ {
+  "init": "0x2f10c0",
+  "ctor": "0x2e70a0",
+  "ctor_name": "Actor_ice_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3348",
+  "a6": "2048"
+ },
+ {
+  "init": "0x2f2678",
+  "ctor": "0x2f19f4",
+  "ctor_name": "IceBro_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3918",
+  "a6": "18"
+ },
+ {
+  "init": "0x2f79dc",
+  "ctor": "0x2f4824",
+  "ctor_name": "Actor_igaGoomba_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3480",
+  "a6": "530"
+ },
+ {
+  "init": "0x2f8a64",
+  "ctor": "0x2f7d40",
+  "ctor_name": "Actor_raitokurage_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35cc",
+  "a6": "2"
+ },
+ {
+  "init": "0x2fc290",
+  "ctor": "0x2fb1a4",
+  "ctor_name": "Actor_level_faiyabig_Piranha_furawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34f0",
+  "a6": "18"
+ },
+ {
+  "init": "0x2fcc04",
+  "ctor": "0x2fc32c",
+  "ctor_name": "Actor_level_big_Piranha_furawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34ec",
+  "a6": "18"
+ },
+ {
+  "init": "0x2fdb60",
+  "ctor": "0x2fcca0",
+  "ctor_name": "Actor_level_faiyaPiranha_furawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34e4",
+  "a6": "18"
+ },
+ {
+  "init": "0x2fe0d0",
+  "ctor": "0x2fdd30",
+  "ctor_name": "Actor_level_aisuPiranha_furawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34e8",
+  "a6": "18"
+ },
+ {
+  "init": "0x2fea14",
+  "ctor": "0x2fe16c",
+  "ctor_name": "Actor_level_Piranha_furawa_R33_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34d8",
+  "a6": "18"
+ },
+ {
+  "init": "0x306498",
+  "ctor": "0x3026b4",
+  "ctor_name": "Actor_jugemu_maruchipureifor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36e8",
+  "a6": "2"
+ },
+ {
+  "init": "0x309d34",
+  "ctor": "0x3066e4",
+  "ctor_name": "Actor_jugemucloud_maruchipureifor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36dc",
+  "a6": "18"
+ },
+ {
+  "init": "0x30b718",
+  "ctor": "0x30a078",
+  "ctor_name": "Actor_jugemuakuta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36d8",
+  "a6": "18"
+ },
+ {
+  "init": "0x30e08c",
+  "ctor": "0x30b8e0",
+  "ctor_name": "Actor_kira_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ee8",
+  "a6": "2"
+ },
+ {
+  "init": "0x30ee18",
+  "ctor": "0x30e308",
+  "ctor_name": "_ZN6KaniboC1Ev",
+  "id": 4294967295,
+  "id_addr": "0xaf3544",
+  "a6": "18"
+ },
+ {
+  "init": "0x311c68",
+  "ctor": "0x310638",
+  "ctor_name": "_ZN10KaniboTamaC1Ev",
+  "id": 4294967295,
+  "id_addr": "0xaf3548",
+  "a6": "550"
+ },
+ {
+  "init": "0x318108",
+  "ctor": "0x311e10",
+  "ctor_name": "DryBones_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf374c",
+  "a6": "18"
+ },
+ {
+  "init": "0x31a87c",
+  "ctor": "0x3184f4",
+  "ctor_name": "Actor_karon_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3748",
+  "a6": "18"
+ },
+ {
+  "init": "0x31e25c",
+  "ctor": "0x31ab80",
+  "ctor_name": "Actor_keronpa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35d8",
+  "a6": "18"
+ },
+ {
+  "init": "0x31fb00",
+  "ctor": "0x31e520",
+  "ctor_name": "Actor_RDashfor_keronpa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35dc",
+  "a6": "18"
+ },
+ {
+  "init": "0x320d9c",
+  "ctor": "0x31fd44",
+  "ctor_name": "Actor_kira_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36fc",
+  "a6": "18"
+ },
+ {
+  "init": "0x32389c",
+  "ctor": "0x324218",
+  "ctor_name": "BillBlaster_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2ebc",
+  "a6": "2"
+ },
+ {
+  "init": "0x32a21c",
+  "ctor": "0x327860",
+  "ctor_name": "Actor_kingukira_build",
+  "id": 4294967295,
+  "id_addr": "0xaf370c",
+  "a6": "18"
+ },
+ {
+  "init": "0x32a6a4",
+  "ctor": "0x32a384",
+  "ctor_name": "Actor_kingukira_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3710",
+  "a6": "18"
+ },
+ {
+  "init": "0x32aef8",
+  "ctor": "0x32a740",
+  "ctor_name": "BanzaiBill_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3700",
+  "a6": "18"
+ },
+ {
+  "init": "0x32ced0",
+  "ctor": "0x32b020",
+  "ctor_name": "Actor_sachikira_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3704",
+  "a6": "18"
+ },
+ {
+  "init": "0x32db78",
+  "ctor": "0x32d088",
+  "ctor_name": "Actor_magunamusachikira_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3708",
+  "a6": "18"
+ },
+ {
+  "init": "0x330fd0",
+  "ctor": "0x32dc8c",
+  "ctor_name": "Actor_kirifuki_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3970",
+  "a6": "18"
+ },
+ {
+  "init": "0x3313c8",
+  "ctor": "0x3318b8",
+  "ctor_name": "Actor_K_K_resident_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3790",
+  "a6": "18"
+ },
+ {
+  "init": "0x335a84",
+  "ctor": "0x334ba4",
+  "ctor_name": "SumoBroLightning_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf379c",
+  "a6": "0"
+ },
+ {
+  "init": "0x337a48",
+  "ctor": "0x335cec",
+  "ctor_name": "Actor_gurupukoton_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3938",
+  "a6": "258"
+ },
+ {
+  "init": "0x339d44",
+  "ctor": "0x337d2c",
+  "ctor_name": "_ZN6Goomba5buildEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3474",
+  "a6": "18"
+ },
+ {
+  "init": "0x33fbc4",
+  "ctor": "0x33e624",
+  "ctor_name": "LargeGoomba_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf348c",
+  "a6": "18"
+ },
+ {
+  "init": "0x342ea0",
+  "ctor": "0x34291c",
+  "ctor_name": "Actor_manhoru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36d4",
+  "a6": "34"
+ },
+ {
+  "init": "0x34562c",
+  "ctor": "0x342ff0",
+  "ctor_name": "Actor_manhorupu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36cc",
+  "a6": "18"
+ },
+ {
+  "init": "0x347cd4",
+  "ctor": "0x347340",
+  "ctor_name": "Mechakoopa_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3558",
+  "a6": "18"
+ },
+ {
+  "init": "0x34c42c",
+  "ctor": "0x349bf8",
+  "ctor_name": "Actor_kokaBuzzy_build",
+  "id": 4294967295,
+  "id_addr": "0xaf331c",
+  "a6": "18"
+ },
+ {
+  "init": "0x350178",
+  "ctor": "0x34ea44",
+  "ctor_name": "Actor_mid_Goomba_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3488",
+  "a6": "18"
+ },
+ {
+  "init": "0x3503c8",
+  "ctor": "0x3516dc",
+  "ctor_name": "Actor_nezumi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3758",
+  "a6": "2"
+ },
+ {
+  "init": "0x353b1c",
+  "ctor": "0x355968",
+  "ctor_name": "Actor_nisemusa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3508",
+  "a6": "18"
+ },
+ {
+  "init": "0x359364",
+  "ctor": "0x35851c",
+  "ctor_name": "KoopaTroopa_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3528",
+  "a6": "18"
+ },
+ {
+  "init": "0x3605b0",
+  "ctor": "0x35dd34",
+  "ctor_name": "Actor_guruputopido_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39e8",
+  "a6": "18"
+ },
+ {
+  "init": "0x360f24",
+  "ctor": "0x360888",
+  "ctor_name": "Actor_tariporigon_airship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e10",
+  "a6": "2"
+ },
+ {
+  "init": "0x362818",
+  "ctor": "0x361988",
+  "ctor_name": "Actor_burakuPiranha_OBJ_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3500",
+  "a6": "0"
+ },
+ {
+  "init": "0x3635e0",
+  "ctor": "0x362b14",
+  "ctor_name": "_ZN10ParaGoomba5buildEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf347c",
+  "a6": "18"
+ },
+ {
+  "init": "0x365f94",
+  "ctor": "0x3642ac",
+  "ctor_name": "Actor_gurupupatapata_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3534",
+  "a6": "18"
+ },
+ {
+  "init": "0x36622c",
+  "ctor": "0x366794",
+  "ctor_name": "Actor_Peach_Demo_for_shadou_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38ac",
+  "a6": "0"
+ },
+ {
+  "init": "0x36a33c",
+  "ctor": "0x367654",
+  "ctor_name": "Actor_pentaro_build",
+  "id": 4294967295,
+  "id_addr": "0xaf355c",
+  "a6": "18"
+ },
+ {
+  "init": "0x36bf70",
+  "ctor": "0x36b7e0",
+  "ctor_name": "_ZN18CooliganSunglassesC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3560",
+  "a6": "34"
+ },
+ {
+  "init": "0x36d958",
+  "ctor": "0x36bffc",
+  "ctor_name": "Actor_pentaro_ice_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32d0",
+  "a6": "34"
+ },
+ {
+  "init": "0x3707f0",
+  "ctor": "0x36e8f8",
+  "ctor_name": "Actor_porutagaisuto_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37a4",
+  "a6": "16"
+ },
+ {
+  "init": "0x370b74",
+  "ctor": "0x370b50",
+  "ctor_name": "Actor_gurupupukupuku_mid_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3570",
+  "a6": "18"
+ },
+ {
+  "init": "0x374aa0",
+  "ctor": "0x374458",
+  "ctor_name": "Actor_gurupupukupukumanage_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2dc0",
+  "a6": "0"
+ },
+ {
+  "init": "0x375710",
+  "ctor": "0x374b38",
+  "ctor_name": "Actor_pukupuku_fomeshon_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35b4",
+  "a6": "2"
+ },
+ {
+  "init": "0x376c74",
+  "ctor": "0x375824",
+  "ctor_name": "Actor_togepuku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3594",
+  "a6": "18"
+ },
+ {
+  "init": "0x3787b8",
+  "ctor": "0x377ff0",
+  "ctor_name": "Actor_Quest_for_Toad_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3460",
+  "a6": "2"
+ },
+ {
+  "init": "0x37aa1c",
+  "ctor": "0x379bdc",
+  "ctor_name": "_ZN15SpinyUpsideDownC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3540",
+  "a6": "530"
+ },
+ {
+  "init": "0x37b0b4",
+  "ctor": "0x37abfc",
+  "ctor_name": "Actor_rokugabon_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3730",
+  "a6": "18"
+ },
+ {
+  "init": "0x37b58c",
+  "ctor": "0x37b15c",
+  "ctor_name": "Actor_rokugabon_resident_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3734",
+  "a6": "18"
+ },
+ {
+  "init": "0x37cb18",
+  "ctor": "0x37b628",
+  "ctor_name": "Actor_mid_pipe_faiyaPiranha_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3940",
+  "a6": "18"
+ },
+ {
+  "init": "0x37e724",
+  "ctor": "0x37e658",
+  "ctor_name": "Actor_mid_pipe_Piranha_furawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3948",
+  "a6": "18"
+ },
+ {
+  "init": "0x37e88c",
+  "ctor": "0x37e7c0",
+  "ctor_name": "Actor_mid_pipe_Piranha_furawa_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf394c",
+  "a6": "18"
+ },
+ {
+  "init": "0x37e9f4",
+  "ctor": "0x37e928",
+  "ctor_name": "Actor_mid_pipe_Piranha_furawa_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3950",
+  "a6": "18"
+ },
+ {
+  "init": "0x37eb5c",
+  "ctor": "0x37ea90",
+  "ctor_name": "Actor_mid_pipe_Piranha_furawa_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3944",
+  "a6": "18"
+ },
+ {
+  "init": "0x37f4c4",
+  "ctor": "0x37ebf8",
+  "ctor_name": "Actor_mid_guruguru_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2dd4",
+  "a6": "2"
+ },
+ {
+  "init": "0x384c98",
+  "ctor": "0x37f5a8",
+  "ctor_name": "_ZN5PokeyC1EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf350c",
+  "a6": "22"
+ },
+ {
+  "init": "0x385d88",
+  "ctor": "0x384fb0",
+  "ctor_name": "Actor_SumoBro_patsu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3510",
+  "a6": "34"
+ },
+ {
+  "init": "0x38df8c",
+  "ctor": "0x387f18",
+  "ctor_name": "Actor_sachitopido_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39f0",
+  "a6": "18"
+ },
+ {
+  "init": "0x39100c",
+  "ctor": "0x38e2e8",
+  "ctor_name": "Actor_seichin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf373c",
+  "a6": "18"
+ },
+ {
+  "init": "0x391384",
+  "ctor": "0x3924fc",
+  "ctor_name": "Actor_shadou_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3454",
+  "a6": "0"
+ },
+ {
+  "init": "0x3aa38c",
+  "ctor": "0x3a5600",
+  "ctor_name": "Actor_sunekuburoku_R76for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3030",
+  "a6": "0"
+ },
+ {
+  "init": "0x3aab2c",
+  "ctor": "0x3aa7dc",
+  "ctor_name": "Actor_sunekuburoku_RDashfor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3038",
+  "a6": "0"
+ },
+ {
+  "init": "0x3aabc8",
+  "ctor": "0x3aae2c",
+  "ctor_name": "Actor_ShortPlay_result_level_Peach_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38b8",
+  "a6": "2"
+ },
+ {
+  "init": "0x3af714",
+  "ctor": "0x3ac538",
+  "ctor_name": "BigBoo_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf395c",
+  "a6": "18"
+ },
+ {
+  "init": "0x3af9cc",
+  "ctor": "0x3b07b8",
+  "ctor_name": "Actor_rotate_Boo_child_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3964",
+  "a6": "18"
+ },
+ {
+  "init": "0x3b2bd0",
+  "ctor": "0x3b2268",
+  "ctor_name": "BooCircle_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3968",
+  "a6": "0"
+ },
+ {
+  "init": "0x3b30ec",
+  "ctor": "0x3b2dc4",
+  "ctor_name": "Actor_rotate_Boo_RDash_parent_build",
+  "id": 4294967295,
+  "id_addr": "0xaf396c",
+  "a6": "0"
+ },
+ {
+  "init": "0x3b3170",
+  "ctor": "0x3b3574",
+  "ctor_name": "Actor_taitoruDemo_for_shadou_build",
+  "id": 4294967295,
+  "id_addr": "0xaf346c",
+  "a6": "0"
+ },
+ {
+  "init": "0x3b4944",
+  "ctor": "0x3b3fbc",
+  "ctor_name": "Actor_mekapuku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3598",
+  "a6": "18"
+ },
+ {
+  "init": "0x3bb37c",
+  "ctor": "0x3b630c",
+  "ctor_name": "_ZN8SpikeTopC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf37bc",
+  "a6": "18"
+ },
+ {
+  "init": "0x3bbbb8",
+  "ctor": "0x3bb740",
+  "ctor_name": "_ZN5SpinyC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf353c",
+  "a6": "530"
+ },
+ {
+  "init": "0x3c1404",
+  "ctor": "0x3c0388",
+  "ctor_name": "Actor_sachitopido_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39dc",
+  "a6": "2"
+ },
+ {
+  "init": "0x3c1a28",
+  "ctor": "0x3c162c",
+  "ctor_name": "Actor_underwater_BowserJr_for_topidospawn_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39e4",
+  "a6": "0"
+ },
+ {
+  "init": "0x3c1b98",
+  "ctor": "0x3c2480",
+  "ctor_name": "Actor_pipe_unabon_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3778",
+  "a6": "16"
+ },
+ {
+  "init": "0x3c7094",
+  "ctor": "0x3c6cdc",
+  "ctor_name": "Actor_unabon_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf378c",
+  "a6": "16"
+ },
+ {
+  "init": "0x3c757c",
+  "ctor": "0x3c72a0",
+  "ctor_name": "Actor_unira_RDASH_BGchekunarrow_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3324",
+  "a6": "18"
+ },
+ {
+  "init": "0x3cdb58",
+  "ctor": "0x3cd700",
+  "ctor_name": "Actor_kishibakubaku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37ac",
+  "a6": "2"
+ },
+ {
+  "init": "0x3ce32c",
+  "ctor": "0x3cdca8",
+  "ctor_name": "Actor_Quest_for_Toad_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3514",
+  "a6": "2"
+ },
+ {
+  "init": "0x3ceb78",
+  "ctor": "0x3ce488",
+  "ctor_name": "Actor_kafugumannen_kishi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35c4",
+  "a6": "0"
+ },
+ {
+  "init": "0x3cf394",
+  "ctor": "0x3cec5c",
+  "ctor_name": "Actor_kishijugemu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36f0",
+  "a6": "2"
+ },
+ {
+  "init": "0x3d018c",
+  "ctor": "0x3cf4a8",
+  "ctor_name": "Actor_kishijugemu_maruchipureifor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36f4",
+  "a6": "2"
+ },
+ {
+  "init": "0x3d08ec",
+  "ctor": "0x3d0228",
+  "ctor_name": "Actor_kishikeronpa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35e8",
+  "a6": "2"
+ },
+ {
+  "init": "0x3d1200",
+  "ctor": "0x3d0988",
+  "ctor_name": "Actor_pentaro_kipipe_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3564",
+  "a6": "2"
+ },
+ {
+  "init": "0x3d2074",
+  "ctor": "0x3d129c",
+  "ctor_name": "Actor_nipukupuku_kishi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35a0",
+  "a6": "0"
+ },
+ {
+  "init": "0x3d252c",
+  "ctor": "0x3d226c",
+  "ctor_name": "Actor_kishisachimagunamukira_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3714",
+  "a6": "0"
+ },
+ {
+  "init": "0x3d2d8c",
+  "ctor": "0x3d263c",
+  "ctor_name": "Actor_mekapuku_kishi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35ac",
+  "a6": "32"
+ },
+ {
+  "init": "0x3d3428",
+  "ctor": "0x3d2e70",
+  "ctor_name": "Actor_unabon_RDash_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3784",
+  "a6": "0"
+ },
+ {
+  "init": "0x3d51a0",
+  "ctor": "0x3d3e54",
+  "ctor_name": "Actor_kuPiranha_build",
+  "id": 4294967295,
+  "id_addr": "0xaf34f4",
+  "a6": "18"
+ },
+ {
+  "init": "0x3d8ccc",
+  "ctor": "0x3d621c",
+  "ctor_name": "Actor_wanwan_build",
+  "id": 4294967295,
+  "id_addr": "0xaf37a0",
+  "a6": "530"
+ },
+ {
+  "init": "0x3dcc50",
+  "ctor": "0x3db8ac",
+  "ctor_name": "Actor_wanwan_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32e0",
+  "a6": "2"
+ },
+ {
+  "init": "0x3dd140",
+  "ctor": "0x3dce38",
+  "ctor_name": "Actor_wanwan_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32e4",
+  "a6": "2"
+ },
+ {
+  "init": "0x3df82c",
+  "ctor": "0x3dd1c4",
+  "ctor_name": "RiverPiranha_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf34f8",
+  "a6": "18"
+ },
+ {
+  "init": "0x3e1bd8",
+  "ctor": "0x3e028c",
+  "ctor_name": "Actor_uchan_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3754",
+  "a6": "2"
+ },
+ {
+  "init": "0x45cc68",
+  "ctor": "0x45c3c0",
+  "ctor_name": "Actor_Battle_for_Item_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39d0",
+  "a6": "36"
+ },
+ {
+  "init": "0x45d6f8",
+  "ctor": "0x45d53c",
+  "ctor_name": "Actor_fibafor_suta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a7c",
+  "a6": "0"
+ },
+ {
+  "init": "0x45e25c",
+  "ctor": "0x45d76c",
+  "ctor_name": "Actor_faiyafurawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3668",
+  "a6": "16406"
+ },
+ {
+  "init": "0x45ec08",
+  "ctor": "0x45e2e0",
+  "ctor_name": "Actor_aisufurawa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3670",
+  "a6": "16406"
+ },
+ {
+  "init": "0x468200",
+  "ctor": "0x467808",
+  "ctor_name": "Actor_kinoko_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3664",
+  "a6": "16406"
+ },
+ {
+  "init": "0x468e38",
+  "ctor": "0x468284",
+  "ctor_name": "Actor_mamekinoko_build",
+  "id": 4294967295,
+  "id_addr": "0xaf366c",
+  "a6": "16406"
+ },
+ {
+  "init": "0x469868",
+  "ctor": "0x468ebc",
+  "ctor_name": "Actor_musasabi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3680",
+  "a6": "16406"
+ },
+ {
+  "init": "0x46a49c",
+  "ctor": "0x4698ec",
+  "ctor_name": "Actor_1UPkinoko_build",
+  "id": 4294967295,
+  "id_addr": "0xaf367c",
+  "a6": "16406"
+ },
+ {
+  "init": "0x46ae6c",
+  "ctor": "0x46a538",
+  "ctor_name": "Actor_Peach_Crown_build",
+  "id": 4294967295,
+  "id_addr": "0xaf368c",
+  "a6": "16406"
+ },
+ {
+  "init": "0x46b98c",
+  "ctor": "0x46aef0",
+  "ctor_name": "Actor_pengin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3678",
+  "a6": "16406"
+ },
+ {
+  "init": "0x46d3ec",
+  "ctor": "0x46ba10",
+  "ctor_name": "Actor_puropera_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3674",
+  "a6": "16406"
+ },
+ {
+  "init": "0x46d6e4",
+  "ctor": "0x46da44",
+  "ctor_name": "Actor_Quest_Item_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3464",
+  "a6": "2"
+ },
+ {
+  "init": "0x46ecec",
+  "ctor": "0x46e490",
+  "ctor_name": "Actor_resuta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2dac",
+  "a6": "0"
+ },
+ {
+  "init": "0x46fdb4",
+  "ctor": "0x46eda0",
+  "ctor_name": "Actor_suta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a80",
+  "a6": "16406"
+ },
+ {
+  "init": "0x4708e8",
+  "ctor": "0x46fec8",
+  "ctor_name": "Actor_3UPmun_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3684",
+  "a6": "16406"
+ },
+ {
+  "init": "0x4710f0",
+  "ctor": "0x470984",
+  "ctor_name": "Actor_taitoruDemo_mid_Item_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3688",
+  "a6": "2"
+ },
+ {
+  "init": "0x4718b4",
+  "ctor": "0x471228",
+  "ctor_name": "Actor_Battle_for_Item_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39d8",
+  "a6": "36"
+ },
+ {
+  "init": "0x565a44",
+  "ctor": "0x565198",
+  "ctor_name": "Actor_akutagiant_hatenaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3220",
+  "a6": "4098"
+ },
+ {
+  "init": "0x566978",
+  "ctor": "0x565ac8",
+  "ctor_name": "_ZN14BrickBlockHuge6createEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf321c",
+  "a6": "4098"
+ },
+ {
+  "init": "0x567408",
+  "ctor": "0x566b18",
+  "ctor_name": "Actor_akutaburokuRDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31c0",
+  "a6": "4098"
+ },
+ {
+  "init": "0x5680c0",
+  "ctor": "0x567544",
+  "ctor_name": "Actor_akutaburokucloud_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3208",
+  "a6": "4"
+ },
+ {
+  "init": "0x5687cc",
+  "ctor": "0x568250",
+  "ctor_name": "Actor_akutarenaiburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3100",
+  "a6": "4098"
+ },
+ {
+  "init": "0x568ffc",
+  "ctor": "0x568888",
+  "ctor_name": "_ZN11FlyingBlock6createEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf31ac",
+  "a6": "4098"
+ },
+ {
+  "init": "0x5693ac",
+  "ctor": "0x5690c4",
+  "ctor_name": "Actor_akutarotate_control_hatenaburoku_R99_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31d8",
+  "a6": "6"
+ },
+ {
+  "init": "0x569ae4",
+  "ctor": "0x569474",
+  "ctor_name": "_ZN20FlyingBlockForAmbush6createEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3224",
+  "a6": "4098"
+ },
+ {
+  "init": "0x56a14c",
+  "ctor": "0x569bdc",
+  "ctor_name": "Actor_level_hatenaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31f4",
+  "a6": "4098"
+ },
+ {
+  "init": "0x56a6b8",
+  "ctor": "0x56a1d0",
+  "ctor_name": "Actor_akutagurupuhatenaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31c8",
+  "a6": "4098"
+ },
+ {
+  "init": "0x56abf4",
+  "ctor": "0x56a794",
+  "ctor_name": "Actor_akutarotate_control_for_hatenaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31ec",
+  "a6": "6"
+ },
+ {
+  "init": "0x56bfb8",
+  "ctor": "0x56ac78",
+  "ctor_name": "Actor_oburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3108",
+  "a6": "4098"
+ },
+ {
+  "init": "0x56e868",
+  "ctor": "0x56c108",
+  "ctor_name": "Actor_janpuburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30b8",
+  "a6": "2"
+ },
+ {
+  "init": "0x56ee1c",
+  "ctor": "0x45d53c",
+  "ctor_name": "Actor_fibafor_suta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31fc",
+  "a6": "0"
+ },
+ {
+  "init": "0x5702b0",
+  "ctor": "0x56ee90",
+  "ctor_name": "Actor_akutapataburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3200",
+  "a6": "4098"
+ },
+ {
+  "init": "0x571af4",
+  "ctor": "0x570550",
+  "ctor_name": "Actor_kosufor_akutapataburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3228",
+  "a6": "4098"
+ },
+ {
+  "init": "0x572368",
+  "ctor": "0x571ce0",
+  "ctor_name": "Actor_akutarengaburoku_reru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31b4",
+  "a6": "4098"
+ },
+ {
+  "init": "0x572788",
+  "ctor": "0x572480",
+  "ctor_name": "Actor_rotate_control_rengaburoku_R99_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31e0",
+  "a6": "6"
+ },
+ {
+  "init": "0x572f10",
+  "ctor": "0x5728a0",
+  "ctor_name": "Actor_level_rengaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31f8",
+  "a6": "4098"
+ },
+ {
+  "init": "0x5732a0",
+  "ctor": "0x572f94",
+  "ctor_name": "Actor_akutagurupurengaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31cc",
+  "a6": "4098"
+ },
+ {
+  "init": "0x573620",
+  "ctor": "0x57337c",
+  "ctor_name": "Actor_akutarotate_control_for_rengaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31f0",
+  "a6": "6"
+ },
+ {
+  "init": "0x574610",
+  "ctor": "0x573efc",
+  "ctor_name": "Actor_hebikoinfor_buroku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf320c",
+  "a6": "4098"
+ },
+ {
+  "init": "0x575440",
+  "ctor": "0x5746a8",
+  "ctor_name": "Actor_akutatree_buroku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30fc",
+  "a6": "4098"
+ },
+ {
+  "init": "0x575ee0",
+  "ctor": "0x575584",
+  "ctor_name": "Actor_akutaburokuPSwitch_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3210",
+  "a6": "4098"
+ },
+ {
+  "init": "0x576758",
+  "ctor": "0x57601c",
+  "ctor_name": "Actor_akutawater_level_hatenaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3204",
+  "a6": "4098"
+ },
+ {
+  "init": "0x576e50",
+  "ctor": "0x5767dc",
+  "ctor_name": "_ZN14BabyYoshiBlock6createEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3218",
+  "a6": "4098"
+ },
+ {
+  "init": "0x5776c0",
+  "ctor": "0x576eec",
+  "ctor_name": "ActorCoin_create",
+  "id": 4294967295,
+  "id_addr": "0xaf3354",
+  "a6": "8194"
+ },
+ {
+  "init": "0x577dcc",
+  "ctor": "0x57779c",
+  "ctor_name": "Actor_akutaakoyafor_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3398",
+  "a6": "8194"
+ },
+ {
+  "init": "0x578804",
+  "ctor": "0x577e50",
+  "ctor_name": "Actor_akutarotate_control_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf337c",
+  "a6": "8196"
+ },
+ {
+  "init": "0x578dd8",
+  "ctor": "0x578900",
+  "ctor_name": "Actor_akutarotate_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3380",
+  "a6": "0x2000"
+ },
+ {
+  "init": "0x579748",
+  "ctor": "0x578e5c",
+  "ctor_name": "Actor_akutaship_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33b8",
+  "a6": "8198"
+ },
+ {
+  "init": "0x57d7dc",
+  "ctor": "0x57bd84",
+  "ctor_name": "Actor_akutakoin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf338c",
+  "a6": "8194"
+ },
+ {
+  "init": "0x57e224",
+  "ctor": "0x57dd48",
+  "ctor_name": "Actor_akutakoinjanpuDemo_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3364",
+  "a6": "2"
+ },
+ {
+  "init": "0x57e758",
+  "ctor": "0x57e320",
+  "ctor_name": "Actor_akutarareexclusive_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33c8",
+  "a6": "2"
+ },
+ {
+  "init": "0x57ef20",
+  "ctor": "0x57ea50",
+  "ctor_name": "Actor_akutalevel_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3388",
+  "a6": "8194"
+ },
+ {
+  "init": "0x57f748",
+  "ctor": "0x57efa4",
+  "ctor_name": "Actor_akutafreeze_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf335c",
+  "a6": "8198"
+ },
+ {
+  "init": "0x57fe0c",
+  "ctor": "0x57f844",
+  "ctor_name": "Actor_akutakoin_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33bc",
+  "a6": "8194"
+ },
+ {
+  "init": "0x5801f8",
+  "ctor": "0x57fe90",
+  "ctor_name": "Actor_akutakoinHOPjanpu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3368",
+  "a6": "2"
+ },
+ {
+  "init": "0x580aec",
+  "ctor": "0x5802f4",
+  "ctor_name": "Actor_akutakoinjugemu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3390",
+  "a6": "8198"
+ },
+ {
+  "init": "0x581c68",
+  "ctor": "0x580c54",
+  "ctor_name": "Actor_akutakoinjanputatsunonfor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf336c",
+  "a6": "8198"
+ },
+ {
+  "init": "0x582290",
+  "ctor": "0x581e94",
+  "ctor_name": "Actor_akutakinokoLift_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33b4",
+  "a6": "8196"
+ },
+ {
+  "init": "0x585bb4",
+  "ctor": "0x585708",
+  "ctor_name": "Actor_akutaporigonkoin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3360",
+  "a6": "8198"
+ },
+ {
+  "init": "0x586238",
+  "ctor": "0x585c38",
+  "ctor_name": "Actor_akutaDRCkoin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33c4",
+  "a6": "8194"
+ },
+ {
+  "init": "0x586ec8",
+  "ctor": "0x5862bc",
+  "ctor_name": "Actor_akutakoinparashuto_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33ac",
+  "a6": "8198"
+ },
+ {
+  "init": "0x588908",
+  "ctor": "0x587030",
+  "ctor_name": "Actor_parashutokoinparent_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2df0",
+  "a6": "2"
+ },
+ {
+  "init": "0x58a6ec",
+  "ctor": "0x588ad4",
+  "ctor_name": "Actor_rotate_control_for_through_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3394",
+  "a6": "8194"
+ },
+ {
+  "init": "0x58b0c4",
+  "ctor": "0x58a8e4",
+  "ctor_name": "Actor_akutarotate_control_for_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf339c",
+  "a6": "8198"
+ },
+ {
+  "init": "0x58b968",
+  "ctor": "0x58b1c0",
+  "ctor_name": "Actor_rotate_floor_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33a8",
+  "a6": "8198"
+ },
+ {
+  "init": "0x58c378",
+  "ctor": "0x58ba00",
+  "ctor_name": "Actor_akutakoinshawajanpu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3378",
+  "a6": "8198"
+ },
+ {
+  "init": "0x58cc30",
+  "ctor": "0x58c4c8",
+  "ctor_name": "Actor_akutahebikoin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33b0",
+  "a6": "8198"
+ },
+ {
+  "init": "0x58d2c0",
+  "ctor": "0x58ccc8",
+  "ctor_name": "Actor_akutakoinPOWburokuyunitofor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33c0",
+  "a6": "8194"
+ },
+ {
+  "init": "0x58d850",
+  "ctor": "0x58d3bc",
+  "ctor_name": "Actor_neshiexclusive_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33a4",
+  "a6": "8198"
+ },
+ {
+  "init": "0x58dd9c",
+  "ctor": "0x58d8d4",
+  "ctor_name": "Actor_akutakoinkishi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf334c",
+  "a6": "0"
+ },
+ {
+  "init": "0x58e5a0",
+  "ctor": "0x58dee8",
+  "ctor_name": "Actor_akutakoinwater_kishiTag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3350",
+  "a6": "0"
+ },
+ {
+  "init": "0x58ec38",
+  "ctor": "0x58e6ec",
+  "ctor_name": "Actor_akutawater_level_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3384",
+  "a6": "8198"
+ },
+ {
+  "init": "0x58f490",
+  "ctor": "0x58ecbc",
+  "ctor_name": "Actor_akutaDRCtachi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d50",
+  "a6": "4"
+ },
+ {
+  "init": "0x590a40",
+  "ctor": "0x58f688",
+  "ctor_name": "Actor_airship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3150",
+  "a6": "2"
+ },
+ {
+  "init": "0x5911f4",
+  "ctor": "0x590ac4",
+  "ctor_name": "Actor_airship_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3158",
+  "a6": "2"
+ },
+ {
+  "init": "0x591a08",
+  "ctor": "0x5914e8",
+  "ctor_name": "Actor_airship_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3154",
+  "a6": "2"
+ },
+ {
+  "init": "0x594ba0",
+  "ctor": "0x591b58",
+  "ctor_name": "Actor_akoya_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32ac",
+  "a6": "2"
+ },
+ {
+  "init": "0x59b3e8",
+  "ctor": "0x598524",
+  "ctor_name": "Actor_chibiyoshi_ship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3428",
+  "a6": "6"
+ },
+ {
+  "init": "0x59d084",
+  "ctor": "0x59be6c",
+  "ctor_name": "Actor_bana_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30a8",
+  "a6": "2"
+ },
+ {
+  "init": "0x59da28",
+  "ctor": "0x59d260",
+  "ctor_name": "Actor_bana_big_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30ac",
+  "a6": "2"
+ },
+ {
+  "init": "0x59ecec",
+  "ctor": "0x59db64",
+  "ctor_name": "Actor_rotate_bana_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30b4",
+  "a6": "2"
+ },
+ {
+  "init": "0x59f82c",
+  "ctor": "0x59ee3c",
+  "ctor_name": "Actor_bana_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30b0",
+  "a6": "2"
+ },
+ {
+  "init": "0x59fca0",
+  "ctor": "0x59f9c8",
+  "ctor_name": "Actor_banamanage_OBJ_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d78",
+  "a6": "0"
+ },
+ {
+  "init": "0x5a1c78",
+  "ctor": "0x59fd20",
+  "ctor_name": "Actor_ki_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30a4",
+  "a6": "2"
+ },
+ {
+  "init": "0x5a2e00",
+  "ctor": "0x5a20b0",
+  "ctor_name": "Actor_tsufloor_akuta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e94",
+  "a6": "0"
+ },
+ {
+  "init": "0x5a7710",
+  "ctor": "0x5a5d10",
+  "ctor_name": "Actor_mariofloor_akuta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e90",
+  "a6": "0"
+ },
+ {
+  "init": "0x5a7cb0",
+  "ctor": "0x5a77a8",
+  "ctor_name": "CloudTerrainActor_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2e88",
+  "a6": "0"
+ },
+ {
+  "init": "0x5a9344",
+  "ctor": "0x5a7d30",
+  "ctor_name": "Lava_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2e7c",
+  "a6": "1024"
+ },
+ {
+  "init": "0x5a996c",
+  "ctor": "0x5a9488",
+  "ctor_name": "MistEffect_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2e8c",
+  "a6": "0"
+ },
+ {
+  "init": "0x5aa67c",
+  "ctor": "0x5a99ec",
+  "ctor_name": "Poison_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2e80",
+  "a6": "0"
+ },
+ {
+  "init": "0x5ab160",
+  "ctor": "0x5aa770",
+  "ctor_name": "Quicksand_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2e84",
+  "a6": "0"
+ },
+ {
+  "init": "0x5acc60",
+  "ctor": "0x5ab254",
+  "ctor_name": "Water_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2e78",
+  "a6": "0"
+ },
+ {
+  "init": "0x5af3d8",
+  "ctor": "0x5aee50",
+  "ctor_name": "Actor_kibig_build",
+  "id": 4294967295,
+  "id_addr": "0xaf360c",
+  "a6": "2"
+ },
+ {
+  "init": "0x5af95c",
+  "ctor": "0x5af45c",
+  "ctor_name": "Actor_kibig_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3608",
+  "a6": "2"
+ },
+ {
+  "init": "0x5affa8",
+  "ctor": "0x5af9e0",
+  "ctor_name": "Actor_kibig_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3600",
+  "a6": "2"
+ },
+ {
+  "init": "0x5b0604",
+  "ctor": "0x5b002c",
+  "ctor_name": "Actor_kibig_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3604",
+  "a6": "2"
+ },
+ {
+  "init": "0x5b0cf0",
+  "ctor": "0x5b0688",
+  "ctor_name": "Actor_big_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39a8",
+  "a6": "2"
+ },
+ {
+  "init": "0x5b1ca0",
+  "ctor": "0x5b0dec",
+  "ctor_name": "Actor_buroku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31a4",
+  "a6": "4098"
+ },
+ {
+  "init": "0x5b2784",
+  "ctor": "0x5b1e2c",
+  "ctor_name": "Actor_light_reruburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3018",
+  "a6": "2"
+ },
+ {
+  "init": "0x5b75e4",
+  "ctor": "0x5b700c",
+  "ctor_name": "Actor_charenjimodoexclusive_buroku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ffc",
+  "a6": "2"
+ },
+ {
+  "init": "0x5b8b08",
+  "ctor": "0x5b7c7c",
+  "ctor_name": "Actor_light_ruburokuLift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3048",
+  "a6": "2"
+ },
+ {
+  "init": "0x5ba3f0",
+  "ctor": "0x5ba6e0",
+  "ctor_name": "Actor_omodo_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3000",
+  "a6": "2"
+ },
+ {
+  "init": "0x5bcc2c",
+  "ctor": "0x5bba30",
+  "ctor_name": "Actor_burokutsuta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf301c",
+  "a6": "0"
+ },
+ {
+  "init": "0x5bdb54",
+  "ctor": "0x5bce00",
+  "ctor_name": "Actor_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33cc",
+  "a6": "8196"
+ },
+ {
+  "init": "0x5be440",
+  "ctor": "0x5bdd44",
+  "ctor_name": "Actor_ringu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38f0",
+  "a6": "2"
+ },
+ {
+  "init": "0x5c0718",
+  "ctor": "0x5bfcb8",
+  "ctor_name": "Actor_Bowser_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3148",
+  "a6": "2"
+ },
+ {
+  "init": "0x5c1000",
+  "ctor": "0x5c0b34",
+  "ctor_name": "Actor_retaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf31a8",
+  "a6": "2"
+ },
+ {
+  "init": "0x5c59c4",
+  "ctor": "0x5c30d0",
+  "ctor_name": "Actor_spawn_manage_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3984",
+  "a6": "0"
+ },
+ {
+  "init": "0x5c68f4",
+  "ctor": "0x5c5aac",
+  "ctor_name": "Actor_chibiyoshi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3424",
+  "a6": "6"
+ },
+ {
+  "init": "0x5c8e54",
+  "ctor": "0x5c7114",
+  "ctor_name": "Actor_pipe_big_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f6c",
+  "a6": "2"
+ },
+ {
+  "init": "0x5cbe44",
+  "ctor": "0x5ca65c",
+  "ctor_name": "Actor_buroku_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3344",
+  "a6": "2070"
+ },
+ {
+  "init": "0x5cd384",
+  "ctor": "0x5cce08",
+  "ctor_name": "Actor_mid_rotate_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2dc8",
+  "a6": "0"
+ },
+ {
+  "init": "0x5ce38c",
+  "ctor": "0x5cded0",
+  "ctor_name": "Actor_mid_rotate_reru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2dd0",
+  "a6": "0"
+ },
+ {
+  "init": "0x5ce700",
+  "ctor": "0x5ce40c",
+  "ctor_name": "Actor_mid_pendulum_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2dc4",
+  "a6": "0"
+ },
+ {
+  "init": "0x5cee98",
+  "ctor": "0x5cea14",
+  "ctor_name": "Actor_mid_pendulum_reru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2dcc",
+  "a6": "0"
+ },
+ {
+  "init": "0x5cf93c",
+  "ctor": "0x5cef18",
+  "ctor_name": "TileGod_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf38dc",
+  "a6": "4"
+ },
+ {
+  "init": "0x5d2664",
+  "ctor": "0x5d0e54",
+  "ctor_name": "Actor_mid_pointo_flag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35fc",
+  "a6": "2"
+ },
+ {
+  "init": "0x5d35f8",
+  "ctor": "0x5d27d8",
+  "ctor_name": "Actor_chibiyoshi_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3434",
+  "a6": "34"
+ },
+ {
+  "init": "0x5e7718",
+  "ctor": "0x5e67d0",
+  "ctor_name": "Actor_chibiyoshi_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3420",
+  "a6": "2"
+ },
+ {
+  "init": "0x5ebf64",
+  "ctor": "0x5eb99c",
+  "ctor_name": "Actor_chikuwaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3230",
+  "a6": "2"
+ },
+ {
+  "init": "0x5ed990",
+  "ctor": "0x5ecd54",
+  "ctor_name": "Actor_choropukoinManager_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d84",
+  "a6": "0"
+ },
+ {
+  "init": "0x5eddb0",
+  "ctor": "0x5eda10",
+  "ctor_name": "Actor_raito_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39a4",
+  "a6": "2"
+ },
+ {
+  "init": "0x5ee390",
+  "ctor": "0x5ede34",
+  "ctor_name": "Actor_chibiyoshi_cloud_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3430",
+  "a6": "2070"
+ },
+ {
+  "init": "0x5ef104",
+  "ctor": "0x5ee490",
+  "ctor_name": "Actor_koinBattle_for_pipe_kiNEXTGOTO_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f48",
+  "a6": "2"
+ },
+ {
+  "init": "0x5efd58",
+  "ctor": "0x5ef2f4",
+  "ctor_name": "Actor_koinBattle_for_pipe_kiNEXTGOTO_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f4c",
+  "a6": "1026"
+ },
+ {
+  "init": "0x5f099c",
+  "ctor": "0x5eff48",
+  "ctor_name": "Actor_koinBattle_for_pipe_kiNEXTGOTO_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f50",
+  "a6": "1026"
+ },
+ {
+  "init": "0x5f16dc",
+  "ctor": "0x5f0b8c",
+  "ctor_name": "Actor_koinBattle_for_pipe_kiNEXTGOTO_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f44",
+  "a6": "2"
+ },
+ {
+  "init": "0x5f1f18",
+  "ctor": "0x5f18cc",
+  "ctor_name": "Actor_parent_mid_through_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ddc",
+  "a6": "0"
+ },
+ {
+  "init": "0x5f268c",
+  "ctor": "0x5f1ff0",
+  "ctor_name": "Actor_ball_surekoin_child_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33fc",
+  "a6": "2"
+ },
+ {
+  "init": "0x5f3430",
+  "ctor": "0x5f2788",
+  "ctor_name": "Actor_ball_surekoin_parent_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33f8",
+  "a6": "0"
+ },
+ {
+  "init": "0x5f3a90",
+  "ctor": "0x5f357c",
+  "ctor_name": "StarCoin_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf33d0",
+  "a6": "8194"
+ },
+ {
+  "init": "0x5f5c8c",
+  "ctor": "0x5f5860",
+  "ctor_name": "Actor_gurupukorekushonkoin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33d4",
+  "a6": "8194"
+ },
+ {
+  "init": "0x5f66c4",
+  "ctor": "0x5f5d68",
+  "ctor_name": "Actor_korekushonparent_control_R6castle_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33e0",
+  "a6": "8194"
+ },
+ {
+  "init": "0x5f6d88",
+  "ctor": "0x5f686c",
+  "ctor_name": "Actor_rotate_control_for_korekushonkoin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33f4",
+  "a6": "8194"
+ },
+ {
+  "init": "0x5f728c",
+  "ctor": "0x5f6e84",
+  "ctor_name": "Actor_korekushonkoinhebi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf33f0",
+  "a6": "8194"
+ },
+ {
+  "init": "0x5f78d8",
+  "ctor": "0x5f7324",
+  "ctor_name": "Actor_pipe_jointo_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a2c",
+  "a6": "2"
+ },
+ {
+  "init": "0x5f7f20",
+  "ctor": "0x5f795c",
+  "ctor_name": "Actor_pipe_jointomame_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a30",
+  "a6": "2"
+ },
+ {
+  "init": "0x5f94cc",
+  "ctor": "0x5f8f44",
+  "ctor_name": "Actor_castle_doa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36a4",
+  "a6": "2"
+ },
+ {
+  "init": "0x5f9690",
+  "ctor": "0x5f9568",
+  "ctor_name": "Actor_castle_doa_RDashfor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36a8",
+  "a6": "2"
+ },
+ {
+  "init": "0x5fa2a0",
+  "ctor": "0x5f9738",
+  "ctor_name": "Actor_Bowser_doa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36ac",
+  "a6": "2"
+ },
+ {
+  "init": "0x5fa440",
+  "ctor": "0x5fa368",
+  "ctor_name": "Actor_Bowser_doa_RDashfor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36b0",
+  "a6": "2"
+ },
+ {
+  "init": "0x5fa950",
+  "ctor": "0x5fa4e8",
+  "ctor_name": "Actor_through_doa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3694",
+  "a6": "2"
+ },
+ {
+  "init": "0x5fb044",
+  "ctor": "0x5fa9ec",
+  "ctor_name": "Actor_oke_doa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3698",
+  "a6": "2"
+ },
+ {
+  "init": "0x5fb668",
+  "ctor": "0x5fb0e0",
+  "ctor_name": "Actor_fort_doa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf369c",
+  "a6": "2"
+ },
+ {
+  "init": "0x5fb82c",
+  "ctor": "0x5fb704",
+  "ctor_name": "Actor_fort_doa_RDashfor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36a0",
+  "a6": "2"
+ },
+ {
+  "init": "0x5fb8d4",
+  "ctor": "0x45d53c",
+  "ctor_name": "Actor_fibafor_suta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3254",
+  "a6": "0"
+ },
+ {
+  "init": "0x5fbe84",
+  "ctor": "0x5fb948",
+  "ctor_name": "Actor_DVgrass_flower_spawn_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38d4",
+  "a6": "0"
+ },
+ {
+  "init": "0x5fc0ac",
+  "ctor": "0x5fbf1c",
+  "ctor_name": "Actor_editokoinakutarange_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a74",
+  "a6": "0"
+ },
+ {
+  "init": "0x5fdd50",
+  "ctor": "0x5fc880",
+  "ctor_name": "Actor_buroku_child_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3054",
+  "a6": "2"
+ },
+ {
+  "init": "0x5fe3dc",
+  "ctor": "0x5fe08c",
+  "ctor_name": "Actor_buroku_parent_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2df8",
+  "a6": "0"
+ },
+ {
+  "init": "0x600174",
+  "ctor": "0x5febb4",
+  "ctor_name": "Actor_buroku_child_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3058",
+  "a6": "2"
+ },
+ {
+  "init": "0x600334",
+  "ctor": "0x45d53c",
+  "ctor_name": "Actor_fibafor_suta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a78",
+  "a6": "0"
+ },
+ {
+  "init": "0x600458",
+  "ctor": "0x6003ac",
+  "ctor_name": "Actor_faiaba_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3304",
+  "a6": "2"
+ },
+ {
+  "init": "0x6027f4",
+  "ctor": "0x601850",
+  "ctor_name": "Actor_faiaba2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf330c",
+  "a6": "2"
+ },
+ {
+  "init": "0x603b14",
+  "ctor": "0x603820",
+  "ctor_name": "Actor_Flag_Switch_4Switch_AND_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d2c",
+  "a6": "0"
+ },
+ {
+  "init": "0x60495c",
+  "ctor": "0x6044c4",
+  "ctor_name": "Actor_Flag_Switch_Switch_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d38",
+  "a6": "0"
+ },
+ {
+  "init": "0x604ef4",
+  "ctor": "0x604a54",
+  "ctor_name": "Actor_Flag_Switch_ONFlag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d48",
+  "a6": "0"
+ },
+ {
+  "init": "0x605328",
+  "ctor": "0x604fec",
+  "ctor_name": "Actor_Flag_Switch_ON_OFFFlag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d4c",
+  "a6": "0"
+ },
+ {
+  "init": "0x605a70",
+  "ctor": "0x605420",
+  "ctor_name": "Actor_Flag_Switch_condition_Flag_R63for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d3c",
+  "a6": "0"
+ },
+ {
+  "init": "0x605e20",
+  "ctor": "0x605b90",
+  "ctor_name": "Actor_Flag_Switch_4Switch_OR_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d30",
+  "a6": "0"
+ },
+ {
+  "init": "0x606390",
+  "ctor": "0x605f18",
+  "ctor_name": "_ZN16FlagSwitchRandom5buildEPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf2d34",
+  "a6": "0"
+ },
+ {
+  "init": "0x60671c",
+  "ctor": "0x606488",
+  "ctor_name": "Actor_Flag_Switch_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d28",
+  "a6": "0"
+ },
+ {
+  "init": "0x6094b4",
+  "ctor": "0x606b60",
+  "ctor_name": "Actor_water_nikuice_buroku_big_build",
+  "id": 4294967295,
+  "id_addr": "0xaf319c",
+  "a6": "2"
+ },
+ {
+  "init": "0x60985c",
+  "ctor": "0x6097c8",
+  "ctor_name": "RollingHill_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2dfc",
+  "a6": "2"
+ },
+ {
+  "init": "0x60a7ac",
+  "ctor": "0x60a6c0",
+  "ctor_name": "Actor_floor_rotate_hole_akipipe_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3070",
+  "a6": "2"
+ },
+ {
+  "init": "0x60cd18",
+  "ctor": "0x60bb94",
+  "ctor_name": "Actor_furaingukinoko_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e6c",
+  "a6": "2"
+ },
+ {
+  "init": "0x60d544",
+  "ctor": "0x60d1b8",
+  "ctor_name": "Actor_furaingukinoko_kishi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36c8",
+  "a6": "2"
+ },
+ {
+  "init": "0x60d9e4",
+  "ctor": "0x60d5c8",
+  "ctor_name": "Actor_musasabiPlayer_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a44",
+  "a6": "0"
+ },
+ {
+  "init": "0x60e948",
+  "ctor": "0x60dcf4",
+  "ctor_name": "Actor_FreezeBlock_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3194",
+  "a6": "2"
+ },
+ {
+  "init": "0x60f290",
+  "ctor": "0x60eaf4",
+  "ctor_name": "Actor_furutsukuki_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3438",
+  "a6": "2"
+ },
+ {
+  "init": "0x60fa20",
+  "ctor": "0x60f46c",
+  "ctor_name": "Actor_furutsu_tree_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38fc",
+  "a6": "0"
+ },
+ {
+  "init": "0x610030",
+  "ctor": "0x610008",
+  "ctor_name": "Actor_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3068",
+  "a6": "2"
+ },
+ {
+  "init": "0x611aa0",
+  "ctor": "0x6117c0",
+  "ctor_name": "Actor_gorukinokohausu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a34",
+  "a6": "2"
+ },
+ {
+  "init": "0x611b28",
+  "ctor": "0x611e88",
+  "ctor_name": "Actor_sutejifor_goruporu_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3174",
+  "a6": "2"
+ },
+ {
+  "init": "0x6167d0",
+  "ctor": "0x615e9c",
+  "ctor_name": "Actor_goruringu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38f4",
+  "a6": "2"
+ },
+ {
+  "init": "0x617804",
+  "ctor": "0x616988",
+  "ctor_name": "Actor_koin_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f04",
+  "a6": "2"
+ },
+ {
+  "init": "0x61829c",
+  "ctor": "0x6179bc",
+  "ctor_name": "Actor_koinchild_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f08",
+  "a6": "2"
+ },
+ {
+  "init": "0x618884",
+  "ctor": "0x618384",
+  "ctor_name": "Actor_ringu_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38e8",
+  "a6": "2"
+ },
+ {
+  "init": "0x618b38",
+  "ctor": "0x618908",
+  "ctor_name": "Actor_gurupuID_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d6c",
+  "a6": "2"
+ },
+ {
+  "init": "0x61951c",
+  "ctor": "0x619224",
+  "ctor_name": "Actor_gurupuIDtogeBuzzy_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d70",
+  "a6": "2"
+ },
+ {
+  "init": "0x6198a8",
+  "ctor": "0x6195a0",
+  "ctor_name": "Actor_gurupukinokoburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ea0",
+  "a6": "2"
+ },
+ {
+  "init": "0x61a440",
+  "ctor": "0x61992c",
+  "ctor_name": "Actor_mid_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3014",
+  "a6": "2"
+ },
+ {
+  "init": "0x61b3c4",
+  "ctor": "0x61a54c",
+  "ctor_name": "Actor_iice_buroku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32dc",
+  "a6": "2"
+ },
+ {
+  "init": "0x61baa8",
+  "ctor": "0x61b4c0",
+  "ctor_name": "Actor_ice_Lift_kishi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32b4",
+  "a6": "2"
+ },
+ {
+  "init": "0x61c808",
+  "ctor": "0x61c324",
+  "ctor_name": "Actor_ice_Lift_reru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32bc",
+  "a6": "2"
+ },
+ {
+  "init": "0x61d110",
+  "ctor": "0x61c88c",
+  "ctor_name": "Actor_ice_Lift_kishi_ku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32b8",
+  "a6": "2"
+ },
+ {
+  "init": "0x61df44",
+  "ctor": "0x61d4f0",
+  "ctor_name": "Actor_ice_buroku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32b0",
+  "a6": "0"
+ },
+ {
+  "init": "0x61f118",
+  "ctor": "0x61e0d0",
+  "ctor_name": "Actor_ice_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30d4",
+  "a6": "2"
+ },
+ {
+  "init": "0x61f2b0",
+  "ctor": "0x61f728",
+  "ctor_name": "Actor_tsurara_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3954",
+  "a6": "16"
+ },
+ {
+  "init": "0x6235cc",
+  "ctor": "0x621c1c",
+  "ctor_name": "Actor_tsurara_big_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32a0",
+  "a6": "2"
+ },
+ {
+  "init": "0x6239f8",
+  "ctor": "0x623b7c",
+  "ctor_name": "FixedIcicle_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3958",
+  "a6": "0"
+ },
+ {
+  "init": "0x627f20",
+  "ctor": "0x6250ac",
+  "ctor_name": "Actor_geyser_sand_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f0c",
+  "a6": "0"
+ },
+ {
+  "init": "0x6285f0",
+  "ctor": "0x6281ac",
+  "ctor_name": "Actor_resident_geyser_sand_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f10",
+  "a6": "2"
+ },
+ {
+  "init": "0x628d6c",
+  "ctor": "0x6286ec",
+  "ctor_name": "Actor_SpikeBall_through_rihole_RDashfor_2fort_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3024",
+  "a6": "0"
+ },
+ {
+  "init": "0x62a46c",
+  "ctor": "0x628e38",
+  "ctor_name": "Actor_JumpStand_build",
+  "id": 4294967295,
+  "id_addr": "0xaf35d4",
+  "a6": "2070"
+ },
+ {
+  "init": "0x62b540",
+  "ctor": "0x62a7cc",
+  "ctor_name": "Actor_KamekBlock_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3234",
+  "a6": "2"
+ },
+ {
+  "init": "0x62d254",
+  "ctor": "0x62b6c8",
+  "ctor_name": "Actor_sign_arrow_spawn_range_narrow_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38bc",
+  "a6": "2"
+ },
+ {
+  "init": "0x62f258",
+  "ctor": "0x62d4f8",
+  "ctor_name": "Actor_fire_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3620",
+  "a6": "18"
+ },
+ {
+  "init": "0x630034",
+  "ctor": "0x62f494",
+  "ctor_name": "Actor_fire_manage_obuje_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3618",
+  "a6": "0"
+ },
+ {
+  "init": "0x6317e4",
+  "ctor": "0x6313f4",
+  "ctor_name": "Actor_kinokoLift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e5c",
+  "a6": "2"
+ },
+ {
+  "init": "0x632d0c",
+  "ctor": "0x6324b4",
+  "ctor_name": "Actor_karakinokoLift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e60",
+  "a6": "2"
+ },
+ {
+  "init": "0x6335ec",
+  "ctor": "0x633124",
+  "ctor_name": "Actor_kinokoLift_parent_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2dec",
+  "a6": "0"
+ },
+ {
+  "init": "0x634b88",
+  "ctor": "0x633788",
+  "ctor_name": "Actor_Boxing_BowserJr_exclusive_floor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32f8",
+  "a6": "0"
+ },
+ {
+  "init": "0x63560c",
+  "ctor": "0x635264",
+  "ctor_name": "Actor_Boxing_BowserJr_exclusive_floor_Manager_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2dbc",
+  "a6": "0"
+ },
+ {
+  "init": "0x636174",
+  "ctor": "0x63568c",
+  "ctor_name": "RopeLadder_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf30e8",
+  "a6": "2"
+ },
+ {
+  "init": "0x63a47c",
+  "ctor": "0x6393a0",
+  "ctor_name": "Actor_switch_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32d8",
+  "a6": "2"
+ },
+ {
+  "init": "0x63af28",
+  "ctor": "0x63a6a8",
+  "ctor_name": "Actor_raitowith_tarirotate_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2eac",
+  "a6": "2"
+ },
+ {
+  "init": "0x63cd38",
+  "ctor": "0x63cd00",
+  "ctor_name": "Actor_lava_pendulum_Lift_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2eb0",
+  "a6": "2"
+ },
+ {
+  "init": "0x63d95c",
+  "ctor": "0x63d4f0",
+  "ctor_name": "Actor_lava_pendulum_Lift_center_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39b0",
+  "a6": "0"
+ },
+ {
+  "init": "0x63d9f4",
+  "ctor": "0x63de38",
+  "ctor_name": "Actor_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3138",
+  "a6": "2"
+ },
+ {
+  "init": "0x642774",
+  "ctor": "0x6410e4",
+  "ctor_name": "Actor_Lift_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf308c",
+  "a6": "2"
+ },
+ {
+  "init": "0x642bb8",
+  "ctor": "0x642b74",
+  "ctor_name": "Actor_rutokuLift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ff0",
+  "a6": "2"
+ },
+ {
+  "init": "0x6443f8",
+  "ctor": "0x643af8",
+  "ctor_name": "Actor_rutokutariLift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32d4",
+  "a6": "2"
+ },
+ {
+  "init": "0x645e94",
+  "ctor": "0x6457bc",
+  "ctor_name": "Actor_oke_ruroom_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fac",
+  "a6": "2"
+ },
+ {
+  "init": "0x6471e0",
+  "ctor": "0x6462e8",
+  "ctor_name": "Actor_tarihorizontal_move_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3110",
+  "a6": "2"
+ },
+ {
+  "init": "0x6482fc",
+  "ctor": "0x6473e8",
+  "ctor_name": "Actor_tarivertical_move_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3114",
+  "a6": "2"
+ },
+ {
+  "init": "0x64c4c8",
+  "ctor": "0x64c478",
+  "ctor_name": "Actor_rimokonLift_kurinchi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32c4",
+  "a6": "2"
+ },
+ {
+  "init": "0x64c5e4",
+  "ctor": "0x64c54c",
+  "ctor_name": "Actor_rimokonLift_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32c8",
+  "a6": "2"
+ },
+ {
+  "init": "0x64eeb0",
+  "ctor": "0x64dcdc",
+  "ctor_name": "Actor_rimokonshisoLift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30f4",
+  "a6": "2"
+ },
+ {
+  "init": "0x650b48",
+  "ctor": "0x64efc0",
+  "ctor_name": "Actor_rimokonmove_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30f8",
+  "a6": "2"
+ },
+ {
+  "init": "0x651f34",
+  "ctor": "0x650d00",
+  "ctor_name": "Actor_tarihorizontal_move_Lift_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3078",
+  "a6": "2"
+ },
+ {
+  "init": "0x6527ec",
+  "ctor": "0x6521e4",
+  "ctor_name": "Actor_rutokuLift_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3128",
+  "a6": "2"
+ },
+ {
+  "init": "0x653800",
+  "ctor": "0x653968",
+  "ctor_name": "Actor_rutokuLift_sky_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf312c",
+  "a6": "2"
+ },
+ {
+  "init": "0x656d88",
+  "ctor": "0x656c7c",
+  "ctor_name": "Actor_rutomarulava_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ff8",
+  "a6": "2"
+ },
+ {
+  "init": "0x658214",
+  "ctor": "0x657080",
+  "ctor_name": "Actor_tarivertical_move_Lift_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3074",
+  "a6": "2"
+ },
+ {
+  "init": "0x658d14",
+  "ctor": "0x6584c4",
+  "ctor_name": "Actor_rotate_buroku_atari_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f88",
+  "a6": "2"
+ },
+ {
+  "init": "0x658dcc",
+  "ctor": "0x658dac",
+  "ctor_name": "Actor_pendulum_Lift_RDashtarienai_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ea4",
+  "a6": "2"
+ },
+ {
+  "init": "0x65cce0",
+  "ctor": "0x65b4c0",
+  "ctor_name": "Actor_Lift_ri_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30c4",
+  "a6": "2"
+ },
+ {
+  "init": "0x65e45c",
+  "ctor": "0x65d308",
+  "ctor_name": "Actor_Lift_sutepu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30c0",
+  "a6": "0"
+ },
+ {
+  "init": "0x65f840",
+  "ctor": "0x65e6a4",
+  "ctor_name": "Actor_shisoLift_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3098",
+  "a6": "2"
+ },
+ {
+  "init": "0x661390",
+  "ctor": "0x65f984",
+  "ctor_name": "Actor_kinokoLift_resident_build",
+  "id": 4294967295,
+  "id_addr": "0xaf304c",
+  "a6": "2"
+ },
+ {
+  "init": "0x662ec4",
+  "ctor": "0x661718",
+  "ctor_name": "Actor_tree_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3144",
+  "a6": "2"
+ },
+ {
+  "init": "0x664c7c",
+  "ctor": "0x66320c",
+  "ctor_name": "Actor_supinrotate_kinoko_build",
+  "id": 4294967295,
+  "id_addr": "0xaf303c",
+  "a6": "2"
+ },
+ {
+  "init": "0x665ecc",
+  "ctor": "0x6656b0",
+  "ctor_name": "Actor_supinrotate_kinoko_child_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3040",
+  "a6": "2"
+ },
+ {
+  "init": "0x6665a8",
+  "ctor": "0x665fc8",
+  "ctor_name": "Actor_kishiLift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3084",
+  "a6": "2"
+ },
+ {
+  "init": "0x666d84",
+  "ctor": "0x66662c",
+  "ctor_name": "Actor_kishiLift_sutepu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3088",
+  "a6": "2"
+ },
+ {
+  "init": "0x668ad0",
+  "ctor": "0x666e08",
+  "ctor_name": "Actor_water_Lift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf32c0",
+  "a6": "2"
+ },
+ {
+  "init": "0x66a2d4",
+  "ctor": "0x668c2c",
+  "ctor_name": "Actor_Lift_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3134",
+  "a6": "2"
+ },
+ {
+  "init": "0x66b0f4",
+  "ctor": "0x66a40c",
+  "ctor_name": "Actor_Hammer_pendulum_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fc4",
+  "a6": "2"
+ },
+ {
+  "init": "0x66b1f4",
+  "ctor": "0x66b314",
+  "ctor_name": "Actor_ne_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f74",
+  "a6": "2"
+ },
+ {
+  "init": "0x66c078",
+  "ctor": "0x66c21c",
+  "ctor_name": "Actor_ne_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f78",
+  "a6": "2"
+ },
+ {
+  "init": "0x66d040",
+  "ctor": "0x66c8f4",
+  "ctor_name": "Actor_ne_me_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f7c",
+  "a6": "2"
+ },
+ {
+  "init": "0x66dbd0",
+  "ctor": "0x66d190",
+  "ctor_name": "Actor_tariporigon_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e14",
+  "a6": "2"
+ },
+ {
+  "init": "0x66de64",
+  "ctor": "0x66dd20",
+  "ctor_name": "Actor_rotate_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f2c",
+  "a6": "2"
+ },
+ {
+  "init": "0x67105c",
+  "ctor": "0x671028",
+  "ctor_name": "Actor_parentchild_obuje_child_miwase_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e30",
+  "a6": "2"
+ },
+ {
+  "init": "0x6719d0",
+  "ctor": "0x6717f0",
+  "ctor_name": "Actor_parentchild_obuje_child_castle_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e4c",
+  "a6": "2"
+ },
+ {
+  "init": "0x671b54",
+  "ctor": "0x671b20",
+  "ctor_name": "Actor_parentchild_obuje_child_lava_castle_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e3c",
+  "a6": "2"
+ },
+ {
+  "init": "0x673ad4",
+  "ctor": "0x6720b0",
+  "ctor_name": "SpinningStar_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2e64",
+  "a6": "2"
+ },
+ {
+  "init": "0x6745bc",
+  "ctor": "0x674588",
+  "ctor_name": "Actor_parentchild_obuje_child_ii_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e34",
+  "a6": "2"
+ },
+ {
+  "init": "0x6755a8",
+  "ctor": "0x674b3c",
+  "ctor_name": "Actor_parentchild_obuje_child_ii_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e38",
+  "a6": "2"
+ },
+ {
+  "init": "0x67619c",
+  "ctor": "0x675ba8",
+  "ctor_name": "Actor_rotate_fort_buroku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f80",
+  "a6": "2"
+ },
+ {
+  "init": "0x676540",
+  "ctor": "0x676220",
+  "ctor_name": "Actor_rotate_fort_burokume_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39ac",
+  "a6": "2"
+ },
+ {
+  "init": "0x677c74",
+  "ctor": "0x677380",
+  "ctor_name": "Actor_light_ruburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3338",
+  "a6": "6166"
+ },
+ {
+  "init": "0x678250",
+  "ctor": "0x677d9c",
+  "ctor_name": "Actor_sea_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39a0",
+  "a6": "36"
+ },
+ {
+  "init": "0x678478",
+  "ctor": "0x67834c",
+  "ctor_name": "Actor_chibiyoshi_light_ru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf342c",
+  "a6": "4"
+ },
+ {
+  "init": "0x67a448",
+  "ctor": "0x679b78",
+  "ctor_name": "Actor_kinokoburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e9c",
+  "a6": "2"
+ },
+ {
+  "init": "0x67b4d0",
+  "ctor": "0x67a5e8",
+  "ctor_name": "Actor_supinLift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e98",
+  "a6": "2"
+ },
+ {
+  "init": "0x67cfbc",
+  "ctor": "0x67b6d0",
+  "ctor_name": "Actor_Lift_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3008",
+  "a6": "2"
+ },
+ {
+  "init": "0x67fa18",
+  "ctor": "0x67f528",
+  "ctor_name": "Actor_Lift_child_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3010",
+  "a6": "2"
+ },
+ {
+  "init": "0x67fe30",
+  "ctor": "0x67fb74",
+  "ctor_name": "Actor_Lift_parent_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf300c",
+  "a6": "2"
+ },
+ {
+  "init": "0x6803a4",
+  "ctor": "0x67ff2c",
+  "ctor_name": "Actor_ruijisign_99_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38c8",
+  "a6": "2"
+ },
+ {
+  "init": "0x6844dc",
+  "ctor": "0x682c60",
+  "ctor_name": "Actor_majikuhandogu_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf324c",
+  "a6": "2"
+ },
+ {
+  "init": "0x685fd4",
+  "ctor": "0x6845fc",
+  "ctor_name": "Actor_majikuhandopa_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3248",
+  "a6": "2"
+ },
+ {
+  "init": "0x686348",
+  "ctor": "0x6860e8",
+  "ctor_name": "Actor_majikuhandoTag_gu_i_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d9c",
+  "a6": "2"
+ },
+ {
+  "init": "0x688ca4",
+  "ctor": "0x686450",
+  "ctor_name": "Actor_majikuhando_Boxing_BowserJr_Demo_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf318c",
+  "a6": "0"
+ },
+ {
+  "init": "0x68a57c",
+  "ctor": "0x688f6c",
+  "ctor_name": "sub_60688F6C",
+  "id": 4294967295,
+  "id_addr": "0xaf30a0",
+  "a6": "2"
+ },
+ {
+  "init": "0x68ebd4",
+  "ctor": "0x68cf54",
+  "ctor_name": "StoneEye_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2fc8",
+  "a6": "2"
+ },
+ {
+  "init": "0x6906f0",
+  "ctor": "0x690380",
+  "ctor_name": "Actor_moai_ki_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fd0",
+  "a6": "2"
+ },
+ {
+  "init": "0x690b28",
+  "ctor": "0x690774",
+  "ctor_name": "Actor_RDash24exclusive_moai_ki_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fd4",
+  "a6": "2"
+ },
+ {
+  "init": "0x691040",
+  "ctor": "0x690da0",
+  "ctor_name": "Actor_RDash24exclusive_moai_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fcc",
+  "a6": "2"
+ },
+ {
+  "init": "0x692124",
+  "ctor": "0x6910c4",
+  "ctor_name": "Actor_RDash55exclusive_moai_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fd8",
+  "a6": "2"
+ },
+ {
+  "init": "0x692ff4",
+  "ctor": "0x69237c",
+  "ctor_name": "Actor_monoreruburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3120",
+  "a6": "2"
+ },
+ {
+  "init": "0x693e98",
+  "ctor": "0x693578",
+  "ctor_name": "Actor_monoreruburoku_reru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3124",
+  "a6": "2"
+ },
+ {
+  "init": "0x697904",
+  "ctor": "0x695218",
+  "ctor_name": "Actor_grass_flower_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38d0",
+  "a6": "2"
+ },
+ {
+  "init": "0x69898c",
+  "ctor": "0x697ad8",
+  "ctor_name": "Actor_NEXTGOTOburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38d8",
+  "a6": "0"
+ },
+ {
+  "init": "0x698d34",
+  "ctor": "0x698b40",
+  "ctor_name": "Actor_range_koin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d68",
+  "a6": "2"
+ },
+ {
+  "init": "0x699400",
+  "ctor": "0x698db8",
+  "ctor_name": "Actor_OBJkoinresident_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d60",
+  "a6": "0"
+ },
+ {
+  "init": "0x699b30",
+  "ctor": "0x6995a4",
+  "ctor_name": "Actor_ri_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30bc",
+  "a6": "2"
+ },
+ {
+  "init": "0x69ae18",
+  "ctor": "0x699bec",
+  "ctor_name": "Actor_nato_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39c4",
+  "a6": "0"
+ },
+ {
+  "init": "0x69b60c",
+  "ctor": "0x69b198",
+  "ctor_name": "Actor_obujekinoko_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e68",
+  "a6": "0"
+ },
+ {
+  "init": "0x69c340",
+  "ctor": "0x69c220",
+  "ctor_name": "Actor_mamemariofor_OBJpipe_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f3c",
+  "a6": "2"
+ },
+ {
+  "init": "0x69c4e4",
+  "ctor": "0x69c3c4",
+  "ctor_name": "Actor_mamemariofor_OBJpipe_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f34",
+  "a6": "2"
+ },
+ {
+  "init": "0x69c690",
+  "ctor": "0x69c568",
+  "ctor_name": "Actor_mamemariofor_OBJpipe_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f30",
+  "a6": "2"
+ },
+ {
+  "init": "0x69c834",
+  "ctor": "0x69c714",
+  "ctor_name": "Actor_mamemariofor_OBJpipe_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f38",
+  "a6": "2"
+ },
+ {
+  "init": "0x69d24c",
+  "ctor": "0x69cc68",
+  "ctor_name": "Actor_rutokuokeobujeBG_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2ff4",
+  "a6": "2"
+ },
+ {
+  "init": "0x69ee78",
+  "ctor": "0x69ea7c",
+  "ctor_name": "Actor_OBJpipe_gurupu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3268",
+  "a6": "2"
+ },
+ {
+  "init": "0x69f5bc",
+  "ctor": "0x69ef6c",
+  "ctor_name": "Actor_OBJpipe_kiNEXTGOTO_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f40",
+  "a6": "2"
+ },
+ {
+  "init": "0x69fa64",
+  "ctor": "0x69f640",
+  "ctor_name": "Actor_OBJpipe_gurupu_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3260",
+  "a6": "1026"
+ },
+ {
+  "init": "0x6a0284",
+  "ctor": "0x69fb58",
+  "ctor_name": "Actor_OBJpipe_kiNEXTGOTO_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3280",
+  "a6": "1026"
+ },
+ {
+  "init": "0x6a0748",
+  "ctor": "0x6a0320",
+  "ctor_name": "Actor_OBJpipe_gurupu_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf325c",
+  "a6": "1026"
+ },
+ {
+  "init": "0x6a0f58",
+  "ctor": "0x6a083c",
+  "ctor_name": "Actor_OBJpipe_kiNEXTGOTO_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf327c",
+  "a6": "1026"
+ },
+ {
+  "init": "0x6a13c8",
+  "ctor": "0x6a0ff4",
+  "ctor_name": "Actor_OBJpipe_gurupu_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3264",
+  "a6": "2"
+ },
+ {
+  "init": "0x6a1be0",
+  "ctor": "0x6a14bc",
+  "ctor_name": "Actor_OBJpipe_kiNEXTGOTO_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3284",
+  "a6": "2"
+ },
+ {
+  "init": "0x6a2864",
+  "ctor": "0x6a1c7c",
+  "ctor_name": "Actor_tariporigon_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e00",
+  "a6": "0"
+ },
+ {
+  "init": "0x6a2cf0",
+  "ctor": "0x6a29d4",
+  "ctor_name": "Actor_tariporigon_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e0c",
+  "a6": "0"
+ },
+ {
+  "init": "0x6a2ff4",
+  "ctor": "0x6a2d70",
+  "ctor_name": "Actor_tariporigon_for_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e08",
+  "a6": "0"
+ },
+ {
+  "init": "0x6a32f8",
+  "ctor": "0x6a3074",
+  "ctor_name": "Actor_tariporigon_fort_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e04",
+  "a6": "0"
+ },
+ {
+  "init": "0x6a35d8",
+  "ctor": "0x6a3378",
+  "ctor_name": "Actor_exclusive_oke_tariporigon_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fa8",
+  "a6": "0"
+ },
+ {
+  "init": "0x6a4404",
+  "ctor": "0x6a36dc",
+  "ctor_name": "Actor_snow_spawn_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3988",
+  "a6": "0"
+ },
+ {
+  "init": "0x6a5098",
+  "ctor": "0x6a44c0",
+  "ctor_name": "Actor_fire_spawn_build",
+  "id": 4294967295,
+  "id_addr": "0xaf398c",
+  "a6": "0"
+ },
+ {
+  "init": "0x6a5398",
+  "ctor": "0x6a5144",
+  "ctor_name": "Actor_neshiku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fe8",
+  "a6": "2"
+ },
+ {
+  "init": "0x6a6050",
+  "ctor": "0x6a582c",
+  "ctor_name": "Actor_neshikutariOBJ_child_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fdc",
+  "a6": "2"
+ },
+ {
+  "init": "0x6a6d08",
+  "ctor": "0x6a656c",
+  "ctor_name": "Actor_neshikutariOBJ_child_piramido_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fe0",
+  "a6": "2"
+ },
+ {
+  "init": "0x6a736c",
+  "ctor": "0x6a6fe0",
+  "ctor_name": "Actor_neshikutariOBJ_child_piramido_resident_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fe4",
+  "a6": "2"
+ },
+ {
+  "init": "0x6a7c60",
+  "ctor": "0x6a73f0",
+  "ctor_name": "Actor_neshikutariOBJ_parent_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2df4",
+  "a6": "2"
+ },
+ {
+  "init": "0x6a8ca0",
+  "ctor": "0x6a7f60",
+  "ctor_name": "Actor_parentchild_obuje_child_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e18",
+  "a6": "0"
+ },
+ {
+  "init": "0x6a9f8c",
+  "ctor": "0x6a9b80",
+  "ctor_name": "Actor_parentchild_obuje_child_iron_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e24",
+  "a6": "0"
+ },
+ {
+  "init": "0x6aa380",
+  "ctor": "0x6aa00c",
+  "ctor_name": "Actor_parentchild_obuje_child_rock_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e20",
+  "a6": "0"
+ },
+ {
+  "init": "0x6aaa90",
+  "ctor": "0x6aa400",
+  "ctor_name": "Actor_kinoko_horizontal_move_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e58",
+  "a6": "0"
+ },
+ {
+  "init": "0x6aaeec",
+  "ctor": "0x6aab78",
+  "ctor_name": "Actor_parentchild_obuje_child_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e2c",
+  "a6": "0"
+ },
+ {
+  "init": "0x6ab7f0",
+  "ctor": "0x6ab47c",
+  "ctor_name": "Actor_parentchild_obuje_child_for_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e28",
+  "a6": "0"
+ },
+ {
+  "init": "0x6ac218",
+  "ctor": "0x6ab870",
+  "ctor_name": "Actor_parentchild_obuje_child_for_tari_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e54",
+  "a6": "0"
+ },
+ {
+  "init": "0x6ac354",
+  "ctor": "0x6ac320",
+  "ctor_name": "Actor_parentchild_obuje_child_sand_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e40",
+  "a6": "2"
+ },
+ {
+  "init": "0x6acac4",
+  "ctor": "0x6ac750",
+  "ctor_name": "Actor_parentchild_obuje_child_fort_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e1c",
+  "a6": "0"
+ },
+ {
+  "init": "0x6acb78",
+  "ctor": "0x6acb44",
+  "ctor_name": "Actor_parentchild_obuje_child_fort_rock_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e44",
+  "a6": "2"
+ },
+ {
+  "init": "0x6ad218",
+  "ctor": "0x6acfdc",
+  "ctor_name": "Actor_parentchild_obuje_child_fort_rock_RDashfor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e48",
+  "a6": "2"
+ },
+ {
+  "init": "0x6ad650",
+  "ctor": "0x6ad29c",
+  "ctor_name": "Actor_parentchild_obuje_child_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e50",
+  "a6": "2"
+ },
+ {
+  "init": "0x6ae400",
+  "ctor": "0x6adb64",
+  "ctor_name": "Actor_parentchild_obuje_parent_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d54",
+  "a6": "0"
+ },
+ {
+  "init": "0x6ae5ac",
+  "ctor": "0x6ae7d8",
+  "ctor_name": "Actor_child_tree_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3020",
+  "a6": "2"
+ },
+ {
+  "init": "0x6b5f70",
+  "ctor": "0x6b5010",
+  "ctor_name": "Actor_Parabeetle_build",
+  "id": 4294967295,
+  "id_addr": "0xaf305c",
+  "a6": "514"
+ },
+ {
+  "init": "0x6b88c8",
+  "ctor": "0x6b79bc",
+  "ctor_name": "Actor_Parabeetle_big_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3060",
+  "a6": "514"
+ },
+ {
+  "init": "0x6b8fc8",
+  "ctor": "0x6b894c",
+  "ctor_name": "Actor_Parabeetle_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3064",
+  "a6": "514"
+ },
+ {
+  "init": "0x6b9050",
+  "ctor": "0x6b9208",
+  "ctor_name": "Actor_tree_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a28",
+  "a6": "0"
+ },
+ {
+  "init": "0x6baf74",
+  "ctor": "0x6bab74",
+  "ctor_name": "Actor_Player_level_miTag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a48",
+  "a6": "0"
+ },
+ {
+  "init": "0x6bb6f0",
+  "ctor": "0x6baff4",
+  "ctor_name": "Actor_Pmusasabiburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3198",
+  "a6": "0"
+ },
+ {
+  "init": "0x6bc77c",
+  "ctor": "0x6bc194",
+  "ctor_name": "PowBlock_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf3334",
+  "a6": "2064"
+ },
+ {
+  "init": "0x6bf200",
+  "ctor": "0x6be7ac",
+  "ctor_name": "Actor_puroperaburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf333c",
+  "a6": "6166"
+ },
+ {
+  "init": "0x6bf914",
+  "ctor": "0x6bf328",
+  "ctor_name": "Actor_ringu_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38ec",
+  "a6": "2"
+ },
+ {
+  "init": "0x6bff0c",
+  "ctor": "0x6bf998",
+  "ctor_name": "Actor_Quest_exclusive_buroku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3004",
+  "a6": "2"
+ },
+ {
+  "init": "0x6c01d4",
+  "ctor": "0x6c0048",
+  "ctor_name": "Actor_Quest_kagi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf345c",
+  "a6": "2"
+ },
+ {
+  "init": "0x6c06dc",
+  "ctor": "0x6c0260",
+  "ctor_name": "Actor_reruefekutospawn_buroku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3258",
+  "a6": "4098"
+ },
+ {
+  "init": "0x6c0eb8",
+  "ctor": "0x6c0760",
+  "ctor_name": "Actor_reru_atariporigon_child_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f84",
+  "a6": "2"
+ },
+ {
+  "init": "0x6c1d68",
+  "ctor": "0x6c1530",
+  "ctor_name": "Actor_reru_atariporigon_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2eb8",
+  "a6": "2"
+ },
+ {
+  "init": "0x6c2674",
+  "ctor": "0x6c1dec",
+  "ctor_name": "Actor_reru_atariporigon_parent_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d5c",
+  "a6": "2"
+ },
+ {
+  "init": "0x6c3558",
+  "ctor": "0x6c27dc",
+  "ctor_name": "Actor_RDashruijiburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf310c",
+  "a6": "4098"
+ },
+ {
+  "init": "0x6c41e8",
+  "ctor": "0x6c3754",
+  "ctor_name": "Actor_parentchild_obuje_parent_RDashexclusive_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d58",
+  "a6": "0"
+ },
+ {
+  "init": "0x6c53b8",
+  "ctor": "0x6c4ea8",
+  "ctor_name": "RedCoin_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2f00",
+  "a6": "2"
+ },
+ {
+  "init": "0x6c5938",
+  "ctor": "0x6c543c",
+  "ctor_name": "Actor_ringu_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf38e4",
+  "a6": "2"
+ },
+ {
+  "init": "0x6c9f34",
+  "ctor": "0x6c9a5c",
+  "ctor_name": "Actor_condition_Flag_with_rotate_control_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2de4",
+  "a6": "0"
+ },
+ {
+  "init": "0x6cbba4",
+  "ctor": "0x6cb1c4",
+  "ctor_name": "Actor_rotate_buroku_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f8c",
+  "a6": "2"
+ },
+ {
+  "init": "0x6cc95c",
+  "ctor": "0x6cc3b8",
+  "ctor_name": "Actor_rotate_buroku_kara_sky_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fb0",
+  "a6": "2"
+ },
+ {
+  "init": "0x6ccf40",
+  "ctor": "0x6cc9e0",
+  "ctor_name": "Actor_rotate_buroku_oke_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fa0",
+  "a6": "2"
+ },
+ {
+  "init": "0x6cd46c",
+  "ctor": "0x6ccfc4",
+  "ctor_name": "Actor_rotate_buroku_oke_RD4keexclusive_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fa4",
+  "a6": "2"
+ },
+ {
+  "init": "0x6cd714",
+  "ctor": "0x6cd4f0",
+  "ctor_name": "Actor_rotate_buroku_oke_ship_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fc0",
+  "a6": "2"
+ },
+ {
+  "init": "0x6cda00",
+  "ctor": "0x6cd798",
+  "ctor_name": "Actor_rotate_buroku_iron_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fb4",
+  "a6": "2"
+ },
+ {
+  "init": "0x6cdcd4",
+  "ctor": "0x6cda84",
+  "ctor_name": "Actor_rotate_buroku_iron_RDASHfor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fb8",
+  "a6": "2"
+ },
+ {
+  "init": "0x6ce100",
+  "ctor": "0x6cdd58",
+  "ctor_name": "Actor_rotate_buroku_iron_RDASHfor_so_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fbc",
+  "a6": "2"
+ },
+ {
+  "init": "0x6ce1c8",
+  "ctor": "0x6ce184",
+  "ctor_name": "Actor_rotate_buroku_kinoko_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f90",
+  "a6": "2"
+ },
+ {
+  "init": "0x6ce824",
+  "ctor": "0x6ce7d8",
+  "ctor_name": "Actor_rotate_buroku_stone_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f9c",
+  "a6": "2"
+ },
+ {
+  "init": "0x6cfa08",
+  "ctor": "0x6cef04",
+  "ctor_name": "Actor_rotate_buroku_tree_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f94",
+  "a6": "2"
+ },
+ {
+  "init": "0x6d00e4",
+  "ctor": "0x6d0028",
+  "ctor_name": "Actor_rotate_buroku_tree_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f98",
+  "a6": "2"
+ },
+ {
+  "init": "0x6d020c",
+  "ctor": "0x6d0168",
+  "ctor_name": "Actor_mid_faiaba_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3310",
+  "a6": "2"
+ },
+ {
+  "init": "0x6d164c",
+  "ctor": "0x6d0e80",
+  "ctor_name": "Actor_rotate_tarifloor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3130",
+  "a6": "2"
+ },
+ {
+  "init": "0x6d2260",
+  "ctor": "0x6d1810",
+  "ctor_name": "Actor_rotate_oke_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3044",
+  "a6": "2"
+ },
+ {
+  "init": "0x6d31cc",
+  "ctor": "0x6d2994",
+  "ctor_name": "Actor_rotate_pipe_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f64",
+  "a6": "2"
+ },
+ {
+  "init": "0x6d4080",
+  "ctor": "0x6d32c0",
+  "ctor_name": "Actor_ruretoburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf322c",
+  "a6": "4098"
+ },
+ {
+  "init": "0x6d5550",
+  "ctor": "0x6d4c60",
+  "ctor_name": "_ZN7SeaweedC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3690",
+  "a6": "0"
+ },
+ {
+  "init": "0x6d5ab8",
+  "ctor": "0x6d55e4",
+  "ctor_name": "Actor_shadou_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3458",
+  "a6": "2"
+ },
+ {
+  "init": "0x6d7adc",
+  "ctor": "0x6d5be8",
+  "ctor_name": "Actor_ice_buroku_teru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3340",
+  "a6": "2066"
+ },
+ {
+  "init": "0x6d8524",
+  "ctor": "0x6d7d24",
+  "ctor_name": "Actor_koinhebiparent_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d80",
+  "a6": "2"
+ },
+ {
+  "init": "0x6d8c78",
+  "ctor": "0x6d85a8",
+  "ctor_name": "Actor_snow_ball_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3744",
+  "a6": "144"
+ },
+ {
+  "init": "0x6d95f0",
+  "ctor": "0x6d9324",
+  "ctor_name": "Actor_neshikuwaiya_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2fec",
+  "a6": "2"
+ },
+ {
+  "init": "0x6d9bd0",
+  "ctor": "0x6d9680",
+  "ctor_name": "sub_606D9680",
+  "id": 4294967295,
+  "id_addr": "0xaf37a8",
+  "a6": "0"
+ },
+ {
+  "init": "0x6dbb54",
+  "ctor": "0x6d9d10",
+  "ctor_name": "_ZN13TreasureChestC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf39c8",
+  "a6": "2"
+ },
+ {
+  "init": "0x6dd6a4",
+  "ctor": "0x6dd2a0",
+  "ctor_name": "Actor_kagi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39cc",
+  "a6": "2"
+ },
+ {
+  "init": "0x6def40",
+  "ctor": "0x6dea9c",
+  "ctor_name": "Actor_kirongubig_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3614",
+  "a6": "2"
+ },
+ {
+  "init": "0x6df3d4",
+  "ctor": "0x6defc4",
+  "ctor_name": "Actor_kirongubig_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3610",
+  "a6": "2"
+ },
+ {
+  "init": "0x6df8c8",
+  "ctor": "0x6df618",
+  "ctor_name": "Actor_bosuBowser_Switch_botan_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3298",
+  "a6": "4100"
+ },
+ {
+  "init": "0x6e04a8",
+  "ctor": "0x6df94c",
+  "ctor_name": "Actor_bosuBowser_Switch_botan_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf329c",
+  "a6": "2"
+ },
+ {
+  "init": "0x6e3b98",
+  "ctor": "0x6e3580",
+  "ctor_name": "Actor_Switch_hatenabotan_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3288",
+  "a6": "4100"
+ },
+ {
+  "init": "0x6e4300",
+  "ctor": "0x6e3c1c",
+  "ctor_name": "Actor_Switch_Pbotan_kiku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf328c",
+  "a6": "4100"
+ },
+ {
+  "init": "0x6e4458",
+  "ctor": "0x6e4408",
+  "ctor_name": "Actor_furemuTag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3994",
+  "a6": "0"
+ },
+ {
+  "init": "0x6e48b4",
+  "ctor": "0x6e44d8",
+  "ctor_name": "Actor_spawn_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3990",
+  "a6": "0"
+ },
+ {
+  "init": "0x6e4b64",
+  "ctor": "0x6e4934",
+  "ctor_name": "Actor_ball_riLift_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3318",
+  "a6": "2"
+ },
+ {
+  "init": "0x6e4d34",
+  "ctor": "0x6e4be8",
+  "ctor_name": "Chain_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf30e4",
+  "a6": "2"
+ },
+ {
+  "init": "0x6e6840",
+  "ctor": "0x6e4db8",
+  "ctor_name": "SwingingVine_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf30e0",
+  "a6": "2"
+ },
+ {
+  "init": "0x6e89cc",
+  "ctor": "0x6e813c",
+  "ctor_name": "_ZN10TorchFlameC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf36c0",
+  "a6": "0"
+ },
+ {
+  "init": "0x6eb734",
+  "ctor": "0x45d53c",
+  "ctor_name": "Actor_fibafor_suta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a6c",
+  "a6": "0"
+ },
+ {
+  "init": "0x6eb938",
+  "ctor": "0x6eb7a8",
+  "ctor_name": "Actor_tachiakuta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a70",
+  "a6": "0"
+ },
+ {
+  "init": "0x6ecda8",
+  "ctor": "0x6eb9b8",
+  "ctor_name": "Actor_toranporincloud_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2e70",
+  "a6": "2"
+ },
+ {
+  "init": "0x6ee6f0",
+  "ctor": "0x6edb24",
+  "ctor_name": "TrampolineCloud_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2e74",
+  "a6": "2"
+ },
+ {
+  "init": "0x6ef160",
+  "ctor": "0x6ee858",
+  "ctor_name": "Actor_parashutokoin_kishi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d7c",
+  "a6": "0"
+ },
+ {
+  "init": "0x6f01bc",
+  "ctor": "0x6ef2fc",
+  "ctor_name": "Actor_pipe_kishi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf36c4",
+  "a6": "2"
+ },
+ {
+  "init": "0x6f10f0",
+  "ctor": "0x6f0258",
+  "ctor_name": "Actor_SpikeBall_kipipe_build",
+  "id": 4294967295,
+  "id_addr": "0xaf302c",
+  "a6": "0"
+ },
+ {
+  "init": "0x6f1670",
+  "ctor": "0x6f1210",
+  "ctor_name": "Actor_hipuatakukishiakuta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3440",
+  "a6": "2"
+ },
+ {
+  "init": "0x6f1b90",
+  "ctor": "0x6f176c",
+  "ctor_name": "Actor_wakishifire_build",
+  "id": 4294967295,
+  "id_addr": "0xaf361c",
+  "a6": "0"
+ },
+ {
+  "init": "0x6f207c",
+  "ctor": "0x6f1ce8",
+  "ctor_name": "sub_606F1CE8",
+  "id": 4294967295,
+  "id_addr": "0xaf3a40",
+  "a6": "2"
+ },
+ {
+  "init": "0x6f2d54",
+  "ctor": "0x6f2100",
+  "ctor_name": "Actor_imiwater_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2da8",
+  "a6": "2"
+ },
+ {
+  "init": "0x6f333c",
+  "ctor": "0x6f2dd8",
+  "ctor_name": "Actor_underwater_efekutofiruta_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a38",
+  "a6": "0"
+ },
+ {
+  "init": "0x6f87e4",
+  "ctor": "0x6f4028",
+  "ctor_name": "Actor_geyser_water_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f14",
+  "a6": "0"
+ },
+ {
+  "init": "0x6fc76c",
+  "ctor": "0x6f89f4",
+  "ctor_name": "Actor_geyser_water_bosufor_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f20",
+  "a6": "0"
+ },
+ {
+  "init": "0x70072c",
+  "ctor": "0x6fcb64",
+  "ctor_name": "Actor_geyser_water_bosufor_child_akuta_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f24",
+  "a6": "0"
+ },
+ {
+  "init": "0x700ff4",
+  "ctor": "0x700944",
+  "ctor_name": "Actor_resident_geyser_water_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f18",
+  "a6": "2"
+ },
+ {
+  "init": "0x702918",
+  "ctor": "0x7010f0",
+  "ctor_name": "Actor_RD33exclusive_resident_geyser_water_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f1c",
+  "a6": "2"
+ },
+ {
+  "init": "0x703c5c",
+  "ctor": "0x702b30",
+  "ctor_name": "FloatingBubble_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf30d8",
+  "a6": "2"
+ },
+ {
+  "init": "0x7053c8",
+  "ctor": "0x7041f4",
+  "ctor_name": "Actor_pipe_water_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3184",
+  "a6": "6"
+ },
+ {
+  "init": "0x708530",
+  "ctor": "0x707d60",
+  "ctor_name": "Actor_move_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30d0",
+  "a6": "0"
+ },
+ {
+  "init": "0x70b0b0",
+  "ctor": "0x70876c",
+  "ctor_name": "Actor_iron_RDashspawn_range_narrow_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3238",
+  "a6": "2"
+ },
+ {
+  "init": "0x70b6d0",
+  "ctor": "0x70b2f0",
+  "ctor_name": "Actor_iron_kishi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30ec",
+  "a6": "2"
+ },
+ {
+  "init": "0x70d3fc",
+  "ctor": "0x70ba1c",
+  "ctor_name": "LavaGeyser_ctor",
+  "id": 4294967295,
+  "id_addr": "0xaf2f28",
+  "a6": "2"
+ },
+ {
+  "init": "0x70dfec",
+  "ctor": "0x70d674",
+  "ctor_name": "Actor_lava_level_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3118",
+  "a6": "2"
+ },
+ {
+  "init": "0x70ff4c",
+  "ctor": "0x70e938",
+  "ctor_name": "Actor_yoshitama_build",
+  "id": 4294967295,
+  "id_addr": "0xaf39d4",
+  "a6": "2"
+ },
+ {
+  "init": "0x7102c0",
+  "ctor": "0x7101dc",
+  "ctor_name": "Actor_pipe_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f5c",
+  "a6": "0"
+ },
+ {
+  "init": "0x710924",
+  "ctor": "0x710890",
+  "ctor_name": "Actor_pipe_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f60",
+  "a6": "0"
+ },
+ {
+  "init": "0x710a38",
+  "ctor": "0x7109a4",
+  "ctor_name": "Actor_pipe_3_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f58",
+  "a6": "0"
+ },
+ {
+  "init": "0x710b4c",
+  "ctor": "0x710ab8",
+  "ctor_name": "Actor_pipe_4_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2f54",
+  "a6": "0"
+ },
+ {
+  "init": "0x72c558",
+  "ctor": "0x72ac0c",
+  "ctor_name": "Actor_koinmaki_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a1c",
+  "a6": "0"
+ },
+ {
+  "init": "0x72cc9c",
+  "ctor": "0x72c7f4",
+  "ctor_name": "Actor_koinmakikoin_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3400",
+  "a6": "0"
+ },
+ {
+  "init": "0x72ddec",
+  "ctor": "0x72d418",
+  "ctor_name": "Actor_koinmakiItem_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a20",
+  "a6": "0"
+ },
+ {
+  "init": "0x72f324",
+  "ctor": "0x72ebb4",
+  "ctor_name": "Actor_koinmakiManager_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d98",
+  "a6": "0"
+ },
+ {
+  "init": "0x730dbc",
+  "ctor": "0x72f9cc",
+  "ctor_name": "Actor_minigemuToad_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a24",
+  "a6": "0"
+ },
+ {
+  "init": "0x733934",
+  "ctor": "0x731344",
+  "ctor_name": "Actor_minigemuManager_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d88",
+  "a6": "0"
+ },
+ {
+  "init": "0x733e10",
+  "ctor": "0x733b50",
+  "ctor_name": "Actor_minigemuManager_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d8c",
+  "a6": "0"
+ },
+ {
+  "init": "0x735c78",
+  "ctor": "0x734e24",
+  "ctor_name": "Actor_minigemupaneruItem_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a14",
+  "a6": "0"
+ },
+ {
+  "init": "0x739824",
+  "ctor": "0x737340",
+  "ctor_name": "Actor_shafuruburoku_build",
+  "id": 4294967295,
+  "id_addr": "0xaf313c",
+  "a6": "0"
+ },
+ {
+  "init": "0x73bc1c",
+  "ctor": "0x73ad58",
+  "ctor_name": "Actor_shafuruburokuManager_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d90",
+  "a6": "0"
+ },
+ {
+  "init": "0x73f1f8",
+  "ctor": "0x73d024",
+  "ctor_name": "Actor_surotochibiyoshi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf343c",
+  "a6": "0"
+ },
+ {
+  "init": "0x740a20",
+  "ctor": "0x73fdcc",
+  "ctor_name": "Actor_surotoItem_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a18",
+  "a6": "0"
+ },
+ {
+  "init": "0x7444d8",
+  "ctor": "0x7424f0",
+  "ctor_name": "Actor_surotoManager_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2d94",
+  "a6": "0"
+ },
+ {
+  "init": "0x744698",
+  "ctor": "0x744900",
+  "ctor_name": "Actor_koinshin_StaffRoll_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a64",
+  "a6": "2"
+ },
+ {
+  "init": "0x7474e0",
+  "ctor": "0x7462b0",
+  "ctor_name": "Actor_arufabetoshin_StaffRoll_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a60",
+  "a6": "2"
+ },
+ {
+  "init": "0x748848",
+  "ctor": "0x747794",
+  "ctor_name": "Actor_chibiyoshi_ship_StaffRoll_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a50",
+  "a6": "0"
+ },
+ {
+  "init": "0x749e7c",
+  "ctor": "0x7496a4",
+  "ctor_name": "Actor_chibiyoshi_StaffRoll_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a4c",
+  "a6": "0"
+ },
+ {
+  "init": "0x74a690",
+  "ctor": "0x749fc8",
+  "ctor_name": "Actor_chibiyoshi_light_StaffRoll_for_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a58",
+  "a6": "0"
+ },
+ {
+  "init": "0x74cd98",
+  "ctor": "0x74a900",
+  "ctor_name": "Actor_StaffRoll_Manager_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2db0",
+  "a6": "2"
+ },
+ {
+  "init": "0x74d43c",
+  "ctor": "0x74cf88",
+  "ctor_name": "Actor_StaffRoll_Manager_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2db4",
+  "a6": "2"
+ },
+ {
+  "init": "0x74e3bc",
+  "ctor": "0x74d4c0",
+  "ctor_name": "Actor_toten_StaffRoll_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3a68",
+  "a6": "0"
+ },
+ {
+  "init": "0x74ffbc",
+  "ctor": "0x74f198",
+  "ctor_name": "Actor_goruDemo_Toad_build",
+  "id": 4294967295,
+  "id_addr": "0xaf341c",
+  "a6": "0"
+ },
+ {
+  "init": "0x785f7c",
+  "ctor": "0x784fa4",
+  "ctor_name": "Actor_Player_ice_build",
+  "id": 4294967295,
+  "id_addr": "0xaf30dc",
+  "a6": "0"
+ },
+ {
+  "init": "0x797fc4",
+  "ctor": "0x794ea4",
+  "ctor_name": "Player_create",
+  "id": 4294967295,
+  "id_addr": "0xaf3418",
+  "a6": "0"
+ },
+ {
+  "init": "0x7c8dbc",
+  "ctor": "0x7c807c",
+  "ctor_name": "Actor_totenPlayer_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3414",
+  "a6": "0"
+ },
+ {
+  "init": "0x7cc958",
+  "ctor": "0x7cb7b4",
+  "ctor_name": "Actor_yoshi_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3410",
+  "a6": "0"
+ },
+ {
+  "init": "0x7d2e14",
+  "ctor": "0x7d2640",
+  "ctor_name": "_ZN10YoshiFlameC3EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf34a0",
+  "a6": "34"
+ },
+ {
+  "init": "0x82cd70",
+  "ctor": "0x82cb04",
+  "ctor_name": "Actor_otosukuroru_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3648",
+  "a6": "0"
+ },
+ {
+  "init": "0x82d0d4",
+  "ctor": "0x82cdf0",
+  "ctor_name": "Actor_shabonTag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3408",
+  "a6": "0"
+ },
+ {
+  "init": "0x82d318",
+  "ctor": "0x82d154",
+  "ctor_name": "_ZN8BgCenterC1EPK14ActorBuildInfo",
+  "id": 4294967295,
+  "id_addr": "0xaf3654",
+  "a6": "0"
+ },
+ {
+  "init": "0x82d8c8",
+  "ctor": "0x82d398",
+  "ctor_name": "Actor_pipe_NextGototaimaTag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3444",
+  "a6": "0"
+ },
+ {
+  "init": "0x82ddec",
+  "ctor": "0x82da70",
+  "ctor_name": "Actor_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3660",
+  "a6": "0"
+ },
+ {
+  "init": "0x82e044",
+  "ctor": "0x82de6c",
+  "ctor_name": "Actor_kun_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3658",
+  "a6": "0"
+ },
+ {
+  "init": "0x82e52c",
+  "ctor": "0x82e0c4",
+  "ctor_name": "Actor_shadou_read_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3404",
+  "a6": "0"
+ },
+ {
+  "init": "0x82e798",
+  "ctor": "0x82e5ac",
+  "ctor_name": "Actor_grass_flower_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf365c",
+  "a6": "0"
+ },
+ {
+  "init": "0x82ea90",
+  "ctor": "0x82e818",
+  "ctor_name": "Actor_Bowser_exclusive_eriaOBJ_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3650",
+  "a6": "0"
+ },
+ {
+  "init": "0x82ecf0",
+  "ctor": "0x82eb10",
+  "ctor_name": "sub_6082EB10",
+  "id": 4294967295,
+  "id_addr": "0xaf362c",
+  "a6": "0"
+ },
+ {
+  "init": "0x82f178",
+  "ctor": "0x82f15c",
+  "ctor_name": "Actor_haipamakusu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3630",
+  "a6": "0"
+ },
+ {
+  "init": "0x82f53c",
+  "ctor": "0x82f2d4",
+  "ctor_name": "Actor_Quest_akutaTag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3448",
+  "a6": "0"
+ },
+ {
+  "init": "0x82f828",
+  "ctor": "0x82f5bc",
+  "ctor_name": "Actor_Quest_for_Demo_rokeshonTag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf344c",
+  "a6": "0"
+ },
+ {
+  "init": "0x82fb68",
+  "ctor": "0x82f8c0",
+  "ctor_name": "Actor_shadouretreat_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3450",
+  "a6": "0"
+ },
+ {
+  "init": "0x82fc6c",
+  "ctor": "0x82f15c",
+  "ctor_name": "Actor_haipamakusu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3638",
+  "a6": "0"
+ },
+ {
+  "init": "0x82ff68",
+  "ctor": "0x82fd38",
+  "ctor_name": "Actor_special_sukuroruTag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf364c",
+  "a6": "0"
+ },
+ {
+  "init": "0x8306b4",
+  "ctor": "0x82ffe8",
+  "ctor_name": "Actor_shadou_read_Tag_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3998",
+  "a6": "0"
+ },
+ {
+  "init": "0x830a28",
+  "ctor": "0x83074c",
+  "ctor_name": "Actor_ShortPlay_result_Demo_Tag_build",
+  "id": 4294967295,
+  "id_addr": "0xaf2db8",
+  "a6": "0"
+ },
+ {
+  "init": "0x831a64",
+  "ctor": "0x830b74",
+  "ctor_name": "Actor_ShortPlay_result_Demo_Tag_2_build",
+  "id": 4294967295,
+  "id_addr": "0xaf399c",
+  "a6": "0"
+ },
+ {
+  "init": "0x831f00",
+  "ctor": "0x831cc0",
+  "ctor_name": "Actor_zumu_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3624",
+  "a6": "0"
+ },
+ {
+  "init": "0x8321cc",
+  "ctor": "0x831f80",
+  "ctor_name": "Actor_zumu_RDash_build",
+  "id": 4294967295,
+  "id_addr": "0xaf3628",
+  "a6": "0"
+ }
+]

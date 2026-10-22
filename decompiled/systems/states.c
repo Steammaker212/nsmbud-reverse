@@ -5,6 +5,60 @@
  */
 
 /* ============================================================================
+ * registerProfile_buroku_child_2_600174
+ * RVA 0x00600174   size 0x16c   xrefs 0
+ * ============================================================================ */
+  int sub_60600174()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB2710 = 1065353216;
+    dword_60CB2714 = 1065353216;
+    dword_60CB2718 = 1065353216;
+    MEMORY[0xCB2720] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB271C] = 12642748;
+    MEMORY[0xCB2724] = 6284584;
+    MEMORY[0xCB2728] = 0;
+    MEMORY[0xCB272C] = 6285296;
+    MEMORY[0xCB2730] = 0;
+    MEMORY[0xCB2734] = 6285976;
+    MEMORY[0xCB2738] = 0;
+    MEMORY[0xCB2740] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB273C] = 12642748;
+    MEMORY[0xCB2744] = 6285980;
+    MEMORY[0xCB2748] = 0;
+    MEMORY[0xCB274C] = 6286020;
+    MEMORY[0xCB2750] = 0;
+    MEMORY[0xCB2754] = 6286244;
+    MEMORY[0xCB2758] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB2760] = MEMORY[0xC7B788];
+    MEMORY[0xCB275C] = 12642748;
+    MEMORY[0xCB2764] = 6286248;
+    MEMORY[0xCB2768] = 0;
+    MEMORY[0xCB276C] = 6286252;
+    MEMORY[0xCB2770] = 0;
+    MEMORY[0xCB2774] = 6286256;
+    MEMORY[0xCB2778] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD32C0;
+    return Profile::Profile(13313916, 6286260, MEMORY[0xAF3058], (int)v1, &unk_60B06130, 2);
+  }
+
+/* ============================================================================
+ * registerProfile_fibafor_suta_600334
+ * RVA 0x00600334   size 0x60   xrefs 0
+ * ============================================================================ */
+  int sub_60600334()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD32DF;
+    return Profile::Profile(13313948, 4576572, MEMORY[0xAF3A78], (int)v1, nullptr, 0);
+  }
+
+/* ============================================================================
  * Actor_faiaba_build
  * RVA 0x006003ac   size 0xa0   xrefs 0
  * ============================================================================ */
@@ -676,6 +730,37 @@
   }
 
 /* ============================================================================
+ * registerProfile_faiaba2_6027F4
+ * RVA 0x006027f4   size 0x110   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_606027F4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3345;
+    Profile::Profile(13314120, 6297680, MEMORY[0xAF330C], (int)v1, &unk_60B061D4, 2);
+    MEMORY[0xCB2864] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB2868] = 196;
+    MEMORY[0xCB286C] = 1;
+    MEMORY[0xCB2870] = 200;
+    MEMORY[0xCB2874] = 1;
+    MEMORY[0xCB2878] = 204;
+    MEMORY[0xCB287C] = 1;
+    MEMORY[0xCB2860] = 12643232;
+    MEMORY[0xCB2880] = 13314220;
+    dword_60CB2884[0] = -1056964608;
+    dword_60CB2884[1] = 1090519040;
+    dword_60CB288C = 1090519040;
+    dword_60CB2890 = -1056964608;
+    dword_60CB2894 = -1048576000;
+    dword_60CB2898 = 1098907648;
+    dword_60CB289C = 1098907648;
+    dword_60CB28A0 = -1048576000;
+    return dword_60CB2884;
+  }
+
+/* ============================================================================
  * sub_60602934
  * RVA 0x00602934   size 0x13c   xrefs 3
  * ============================================================================ */
@@ -1186,6 +1271,28 @@
   }
 
 /* ============================================================================
+ * registerProfile_Flag_Switch_4Switch_AND_603B14
+ * RVA 0x00603b14   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_60603B14()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD336B;
+    Profile::Profile(13314256, 6305824, MEMORY[0xAF2D2C], (int)v1, &unk_60B0621C, 0);
+    MEMORY[0xCB28EC] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB28E8] = 12643796;
+    MEMORY[0xCB28F0] = 6305872;
+    MEMORY[0xCB28F4] = 0;
+    MEMORY[0xCB28F8] = 6305876;
+    MEMORY[0xCB28FC] = 0;
+    MEMORY[0xCB2900] = 6305944;
+    MEMORY[0xCB2904] = 0;
+    return 13314280;
+  }
+
+/* ============================================================================
  * _ZN14FlagSwitchBaseC2EPK14ActorBuildInfo
  * RVA 0x00603c0c   size 0x5c   xrefs 10
  * ============================================================================ */
@@ -1538,6 +1645,28 @@
   }
 
 /* ============================================================================
+ * registerProfile_Flag_Switch_Switch_60495C
+ * RVA 0x0060495c   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_6060495C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD339F;
+    Profile::Profile(13314328, 6309060, MEMORY[0xAF2D38], (int)v1, &unk_60B06240, 0);
+    MEMORY[0xCB2934] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB2930] = 12644224;
+    MEMORY[0xCB2938] = 6309108;
+    MEMORY[0xCB293C] = 0;
+    MEMORY[0xCB2940] = 6309112;
+    MEMORY[0xCB2944] = 0;
+    MEMORY[0xCB2948] = 6309556;
+    MEMORY[0xCB294C] = 0;
+    return 13314352;
+  }
+
+/* ============================================================================
  * Actor_Flag_Switch_ONFlag_build
  * RVA 0x00604a54   size 0x4c   xrefs 0
  * ============================================================================ */
@@ -1556,6 +1685,28 @@
   }
 
 /* ============================================================================
+ * registerProfile_Flag_Switch_ONFlag_604EF4
+ * RVA 0x00604ef4   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_60604EF4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD33C7;
+    Profile::Profile(13314392, 6310484, MEMORY[0xAF2D48], (int)v1, &unk_60B06264, 0);
+    MEMORY[0xCB2974] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB2970] = 12644448;
+    MEMORY[0xCB2978] = 6310564;
+    MEMORY[0xCB297C] = 0;
+    MEMORY[0xCB2980] = 6310568;
+    MEMORY[0xCB2984] = 0;
+    MEMORY[0xCB2988] = 6311116;
+    MEMORY[0xCB298C] = 0;
+    return 13314416;
+  }
+
+/* ============================================================================
  * Actor_Flag_Switch_ON_OFFFlag_build
  * RVA 0x00604fec   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -1568,6 +1719,28 @@
     result = FlagSwitchBase::FlagSwitchBase(v0);
     *result = 12644468;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_Flag_Switch_ON_OFFFlag_605328
+ * RVA 0x00605328   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_60605328()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD33F2;
+    Profile::Profile(13314456, 6311916, MEMORY[0xAF2D4C], (int)v1, &unk_60B06288, 0);
+    MEMORY[0xCB29B4] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB29B0] = 12644672;
+    MEMORY[0xCB29B8] = 6311964;
+    MEMORY[0xCB29BC] = 0;
+    MEMORY[0xCB29C0] = 6311996;
+    MEMORY[0xCB29C4] = 0;
+    MEMORY[0xCB29C8] = 6312196;
+    MEMORY[0xCB29CC] = 0;
+    return 13314480;
   }
 
 /* ============================================================================
@@ -1619,6 +1792,26 @@
   }
 
 /* ============================================================================
+ * registerProfile_Flag_Switch_condition_Flag_R63for_605A70
+ * RVA 0x00605a70   size 0xe8   xrefs 0
+ * ============================================================================ */
+  int sub_60605A70()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD342F;
+    Profile::Profile(13314520, 6312992, MEMORY[0xAF2D3C], (int)&v1, &unk_60B062AC, 0);
+    v1 = 12321336;
+    v2 = &unk_60AD3454;
+    Profile::Profile(13314544, 6313104, MEMORY[0xAF2D40], (int)&v1, &unk_60B062AC, 0);
+    v1 = 12321336;
+    v2 = &unk_60AD348B;
+    return Profile::Profile(13314568, 6313212, MEMORY[0xAF2D44], (int)&v1, &unk_60B062AC, 0);
+  }
+
+/* ============================================================================
  * Actor_Flag_Switch_4Switch_OR_build
  * RVA 0x00605b90   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -1631,6 +1824,28 @@
     result = FlagSwitchBase::FlagSwitchBase(v0);
     *result = 12645304;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_Flag_Switch_4Switch_OR_605E20
+ * RVA 0x00605e20   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_60605E20()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD34BC;
+    Profile::Profile(13314616, 6314896, MEMORY[0xAF2D30], (int)v1, &unk_60B062D0, 0);
+    MEMORY[0xCB2A54] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB2A50] = 12645508;
+    MEMORY[0xCB2A58] = 6314944;
+    MEMORY[0xCB2A5C] = 0;
+    MEMORY[0xCB2A60] = 6314948;
+    MEMORY[0xCB2A64] = 0;
+    MEMORY[0xCB2A68] = 6315068;
+    MEMORY[0xCB2A6C] = 0;
+    return 13314640;
   }
 
 /* ============================================================================
@@ -1744,6 +1959,28 @@
   }
 
 /* ============================================================================
+ * registerProfile_ZN16FlagSwitchRandom5bui_606390
+ * RVA 0x00606390   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_60606390()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD34ED;
+    Profile::Profile(13314680, 6315800, MEMORY[0xAF2D34], (int)v1, &unk_60B062F4, 0);
+    MEMORY[0xCB2A94] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB2A90] = 12645732;
+    MEMORY[0xCB2A98] = 6315884;
+    MEMORY[0xCB2A9C] = 0;
+    MEMORY[0xCB2AA0] = 6315888;
+    MEMORY[0xCB2AA4] = 0;
+    MEMORY[0xCB2AA8] = 6316252;
+    MEMORY[0xCB2AAC] = 0;
+    return 13314704;
+  }
+
+/* ============================================================================
  * Actor_Flag_Switch_Tag_build
  * RVA 0x00606488   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -1756,6 +1993,19 @@
     result = FlagSwitchBase::FlagSwitchBase(v0);
     *result = 12645752;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_Flag_Switch_Tag_60671C
+ * RVA 0x0060671c   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_6060671C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD350F;
+    return Profile::Profile(13314744, 6317192, MEMORY[0xAF2D28], (int)v1, &unk_60B06318, 0);
   }
 
 /* ============================================================================
@@ -2762,6 +3012,78 @@
   }
 
 /* ============================================================================
+ * registerProfile_water_nikuice_buroku_big_6094B4
+ * RVA 0x006094b4   size 0x27c   xrefs 0
+ * ============================================================================ */
+  int sub_606094B4()
+  {
+    _DWORD *v0; // r0
+    int v2; // [sp+10h] [bp-8h] BYREF
+    void *v3; // [sp+14h] [bp-4h]
+  
+    dword_60CB2AD8 = 0;
+    dword_60CB2ADC = 0;
+    dword_60CB2AE0 = 0;
+    v2 = 12321336;
+    v3 = &unk_60AD353C;
+    v0 = (_DWORD *)Profile::Profile(13314788, 6318944, MEMORY[0xAF319C], (int)&v2, &unk_60B0633C, 2);
+    v2 = 12321336;
+    *v0 = 12645956;
+    v3 = &unk_60AD3558;
+    Profile::Profile(13314812, 6318944, MEMORY[0xAF31A0], (int)&v2, &unk_60B06360, 2);
+    MEMORY[0xCB2B18] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB2B14] = 12646260;
+    MEMORY[0xCB2B1C] = 6318972;
+    MEMORY[0xCB2B20] = 0;
+    MEMORY[0xCB2B24] = 6319028;
+    MEMORY[0xCB2B28] = 0;
+    MEMORY[0xCB2B2C] = 6319276;
+    MEMORY[0xCB2B30] = 0;
+    MEMORY[0xCB2B34] = 12646260;
+    MEMORY[0xCB2B38] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB2B3C] = 6319280;
+    MEMORY[0xCB2B40] = 0;
+    MEMORY[0xCB2B44] = 6319460;
+    MEMORY[0xCB2B48] = 0;
+    MEMORY[0xCB2B4C] = 6319620;
+    MEMORY[0xCB2B50] = 0;
+    MEMORY[0xCB2B54] = 12646260;
+    MEMORY[0xCB2B58] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB2B5C] = 6319624;
+    MEMORY[0xCB2B60] = 0;
+    MEMORY[0xCB2B64] = 6319704;
+    MEMORY[0xCB2B68] = 0;
+    MEMORY[0xCB2B6C] = 6320132;
+    MEMORY[0xCB2B70] = 0;
+    MEMORY[0xCB2B74] = 12646260;
+    MEMORY[0xCB2B78] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB2B7C] = 6320136;
+    MEMORY[0xCB2B80] = 0;
+    MEMORY[0xCB2B84] = 6320140;
+    MEMORY[0xCB2B88] = 0;
+    MEMORY[0xCB2B8C] = 6320348;
+    MEMORY[0xCB2B90] = 0;
+    MEMORY[0xCB2B94] = 12646260;
+    MEMORY[0xCB2B98] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xCB2BB8] = MEMORY[0xC7B788];
+    MEMORY[0xCB2B9C] = 6320352;
+    MEMORY[0xCB2BB4] = 12646260;
+    MEMORY[0xCB2BA0] = 0;
+    MEMORY[0xCB2BBC] = 6320616;
+    MEMORY[0xCB2BA4] = 6320396;
+    MEMORY[0xCB2BC0] = 0;
+    MEMORY[0xCB2BA8] = 0;
+    MEMORY[0xCB2BC4] = 6320916;
+    MEMORY[0xCB2BAC] = 6320612;
+    MEMORY[0xCB2BB0] = 0;
+    MEMORY[0xCB2BC8] = 0;
+    MEMORY[0xCB2BCC] = 6321368;
+    MEMORY[0xCB2BD0] = 0;
+    return 13314996;
+  }
+
+/* ============================================================================
  * RollingHill_ctor
  * RVA 0x006097c8   size 0x88   xrefs 0
  * ============================================================================ */
@@ -3311,6 +3633,44 @@
   }
 
 /* ============================================================================
+ * registerProfile_floor_rotate_hole_akipipe_60A7AC
+ * RVA 0x0060a7ac   size 0x160   xrefs 0
+ * ============================================================================ */
+  int sub_6060A7AC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3751;
+    Profile::Profile(13315356, 6334144, MEMORY[0xAF3070], (int)v1, &unk_60B063E0, 2);
+    dword_60CB2D78 = 12321336;
+    dword_60CB2D7C = (int)"circle_ground_holeD";
+    dword_60CB2D80 = 12321336;
+    dword_60CB2D84 = (int)"circle_ground_holeD_chika";
+    sub_60000288();
+    dword_60CB2D88 = 12321336;
+    dword_60CB2D8C = (int)"circle_ground_holeD";
+    dword_60CB2D90 = 12321336;
+    dword_60CB2D94 = (int)"circle_ground_holeD_chika";
+    sub_60000288();
+    dword_60CB2D60 = 12321336;
+    *(_DWORD *)algn_60CB2D64 = "obj_dokan";
+    unk_60CB2D68 = 12321336;
+    dword_60CB2D6C = (int)"obj_dokan_A";
+    dword_60CB2D70 = 12321336;
+    dword_60CB2D74 = (int)"obj_dokan_B";
+    MEMORY[0xCB2D38] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB2D34] = 12646668;
+    MEMORY[0xCB2D3C] = 6334816;
+    MEMORY[0xCB2D40] = 0;
+    MEMORY[0xCB2D44] = 6334820;
+    MEMORY[0xCB2D48] = 0;
+    MEMORY[0xCB2D4C] = 6335452;
+    MEMORY[0xCB2D50] = 0;
+    return 13315380;
+  }
+
+/* ============================================================================
  * sub_6060B2F8
  * RVA 0x0060b2f8   size 0x218   xrefs 2
  * ============================================================================ */
@@ -3807,6 +4167,53 @@
   }
 
 /* ============================================================================
+ * registerProfile_furaingukinoko_60CD18
+ * RVA 0x0060cd18   size 0x184   xrefs 0
+ * ============================================================================ */
+  int sub_6060CD18()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB2D98 = 0;
+    dword_60CB2D9C = 0;
+    dword_60CB2DA0 = 16;
+    dword_60CB2DA4 = 0x8000;
+    dword_60CB2DA8 = 167772160;
+    dword_60CB2DAC = 0x100000;
+    dword_60CB2DB0 = 0x100000;
+    dword_60CB2DB4 = 0x800000;
+    dword_60CB2DB8 = 0;
+    dword_60CB2DBC = 0;
+    unk_60CB2DC0 = 16;
+    unk_60CB2DC4 = 12288;
+    unk_60CB2DC8 = 0x8000000;
+    unk_60CB2DCC = 0x40000;
+    dword_60CB2DD0 = 0x100000;
+    dword_60CB2DD4 = 0x400000;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3798;
+    *(_DWORD *)Profile::Profile(13315544, 6339476, MEMORY[0xAF2E6C], (int)v1, &unk_60B06404, 2) = 12646688;
+    MEMORY[0xCB2DF4] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB2DF0] = 12646900;
+    MEMORY[0xCB2DF8] = 6339796;
+    MEMORY[0xCB2DFC] = 0;
+    MEMORY[0xCB2E00] = 6340064;
+    MEMORY[0xCB2E04] = 0;
+    MEMORY[0xCB2E08] = 6340320;
+    MEMORY[0xCB2E0C] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB2E14] = MEMORY[0xC7B788];
+    MEMORY[0xCB2E10] = 12646900;
+    MEMORY[0xCB2E18] = 6340324;
+    MEMORY[0xCB2E1C] = 0;
+    MEMORY[0xCB2E20] = 6340532;
+    MEMORY[0xCB2E24] = 0;
+    MEMORY[0xCB2E28] = 6341104;
+    MEMORY[0xCB2E2C] = 0;
+    return 6341104;
+  }
+
+/* ============================================================================
  * sub_6060CF08
  * RVA 0x0060cf08   size 0xfc   xrefs 2
  * ============================================================================ */
@@ -3874,6 +4281,19 @@
     result[167] = 0;
     result[168] = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_furaingukinoko_kishi_60D544
+ * RVA 0x0060d544   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6060D544()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3813;
+    return Profile::Profile(13315716, 6345144, MEMORY[0xAF36C8], (int)v1, &unk_60B06434, 2);
   }
 
 /* ============================================================================
@@ -3974,6 +4394,28 @@
       return 1;
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_musasabiPlayer_Tag_60D9E4
+ * RVA 0x0060d9e4   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_6060D9E4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD383A;
+    Profile::Profile(13315748, 6346184, MEMORY[0xAF3A44], (int)v1, &unk_60B06458, 0);
+    MEMORY[0xCB2EC0] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB2EBC] = 12647264;
+    MEMORY[0xCB2EC4] = 6346276;
+    MEMORY[0xCB2EC8] = 0;
+    MEMORY[0xCB2ECC] = 6346280;
+    MEMORY[0xCB2ED0] = 0;
+    MEMORY[0xCB2ED4] = 6346452;
+    MEMORY[0xCB2ED8] = 0;
+    return 13315772;
   }
 
 /* ============================================================================
@@ -4256,6 +4698,54 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_FreezeBlock_60E948
+ * RVA 0x0060e948   size 0x16c   xrefs 0
+ * ============================================================================ */
+  int sub_6060E948()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB2F4C = 0;
+    dword_60CB2F48 = 0;
+    dword_60CB2F44 = 0;
+    dword_60CB2F40 = 0;
+    dword_60CB2F50 = -1056964608;
+    dword_60CB2F54 = 1098907648;
+    dword_60CB2F58 = 1090519040;
+    dword_60CB2F5C = 0;
+    dword_60CB2F60 = 0;
+    dword_60CB2F70 = 0;
+    dword_60CB2F6C = 0;
+    dword_60CB2F68 = 0;
+    dword_60CB2F64 = 0;
+    dword_60CB2F74 = -1048576000;
+    dword_60CB2F78 = 1098907648;
+    dword_60CB2F7C = 1098907648;
+    dword_60CB2F80 = 0;
+    dword_60CB2F84 = 0;
+    MEMORY[0xCB2EE8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB2EE4] = 12647484;
+    MEMORY[0xCB2EEC] = 6347484;
+    MEMORY[0xCB2EF0] = 0;
+    MEMORY[0xCB2EF4] = 6347488;
+    MEMORY[0xCB2EF8] = 0;
+    MEMORY[0xCB2EFC] = 6347516;
+    MEMORY[0xCB2F00] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB2F08] = MEMORY[0xC7B788];
+    MEMORY[0xCB2F04] = 12647484;
+    MEMORY[0xCB2F0C] = 6347520;
+    MEMORY[0xCB2F10] = 0;
+    MEMORY[0xCB2F14] = 6347788;
+    MEMORY[0xCB2F18] = 0;
+    MEMORY[0xCB2F1C] = 6348016;
+    MEMORY[0xCB2F20] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3862;
+    return Profile::Profile(13315876, 6348020, MEMORY[0xAF3194], (int)v1, nullptr, 2);
   }
 
 /* ============================================================================
@@ -4567,6 +5057,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_furutsu_tree_60FA20
+ * RVA 0x0060fa20   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_6060FA20()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD38B1;
+    return Profile::Profile(13316144, 6354028, MEMORY[0xAF38FC], (int)v1, &unk_60B0647C, 0);
+  }
+
+/* ============================================================================
  * sub_6060FAA0
  * RVA 0x0060faa0   size 0x4c4   xrefs 3
  * ============================================================================ */
@@ -4744,6 +5247,40 @@
   
     v2 = operator new(0x1918u);
     return sub_606101D4(v2, a1);
+  }
+
+/* ============================================================================
+ * registerProfile_RDash_610030
+ * RVA 0x00610030   size 0x154   xrefs 0
+ * ============================================================================ */
+  int sub_60610030()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD394A;
+    Profile::Profile(13316168, 6357000, MEMORY[0xAF3068], (int)&v1, &unk_60B064A0, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD3951;
+    Profile::Profile(13316192, 6357000, MEMORY[0xAF306C], (int)&v1, &unk_60B064A0, 2);
+    dword_60CB3084 = 12321336;
+    dword_60CB3088 = (int)"obj_gear";
+    dword_60CB308C = 12321336;
+    dword_60CB3090 = (int)"obj_gear_shiro";
+    sub_60000288();
+    dword_60CB3094 = 12321336;
+    unk_60CB3098 = "R_obj_gear";
+    unk_60CB309C = 12321336;
+    unk_60CB30A0 = "obj_gear_shiro";
+    sub_60000288();
+    dword_60CB30A4 = 12321336;
+    dword_60CB30A8 = (int)"obj_gear_M";
+    dword_60CB30AC = 12321336;
+    dword_60CB30B0 = (int)"obj_gear_L";
+    dword_60CB30B4 = 12321336;
+    dword_60CB30B8 = (int)"obj_gear_S";
+    return sub_60000288();
   }
 
 /* ============================================================================
@@ -5072,6 +5609,19 @@
     result = (_DWORD *)CollisionActor::CollisionActor(v0);
     *result = 12648084;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_gorukinokohausu_611AA0
+ * RVA 0x00611aa0   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60611AA0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3980;
+    return Profile::Profile(13316316, 6363072, MEMORY[0xAF3A34], (int)v1, &unk_60B064FC, 2);
   }
 
 /* ============================================================================
@@ -6903,6 +7453,48 @@
   }
 
 /* ============================================================================
+ * registerProfile_goruringu_6167D0
+ * RVA 0x006167d0   size 0x164   xrefs 0
+ * ============================================================================ */
+  int sub_606167D0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB3230 = 0;
+    dword_60CB3234 = 0;
+    dword_60CB3238 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3AA0;
+    Profile::Profile(13316668, 6381212, MEMORY[0xAF38F4], (int)v1, &unk_60B065B0, 2);
+    MEMORY[0xCB3258] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB3254] = 12648844;
+    MEMORY[0xCB325C] = 6381284;
+    MEMORY[0xCB3260] = 0;
+    MEMORY[0xCB3264] = 6381288;
+    MEMORY[0xCB3268] = 0;
+    MEMORY[0xCB326C] = 6381428;
+    MEMORY[0xCB3270] = 0;
+    MEMORY[0xCB3274] = 12648844;
+    MEMORY[0xCB3278] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB327C] = 6381432;
+    MEMORY[0xCB3280] = 0;
+    MEMORY[0xCB3284] = 6381436;
+    MEMORY[0xCB3288] = 0;
+    MEMORY[0xCB328C] = 6381868;
+    MEMORY[0xCB3290] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB3298] = MEMORY[0xC7B788];
+    MEMORY[0xCB3294] = 12648844;
+    MEMORY[0xCB329C] = 6381872;
+    MEMORY[0xCB32A0] = 0;
+    MEMORY[0xCB32A4] = 6381876;
+    MEMORY[0xCB32A8] = 0;
+    MEMORY[0xCB32AC] = 6381880;
+    MEMORY[0xCB32B0] = 0;
+    return 6381880;
+  }
+
+/* ============================================================================
  * Actor_koin_2_build
  * RVA 0x00616988   size 0x4c   xrefs 0
  * ============================================================================ */
@@ -7060,6 +7652,50 @@
   }
 
 /* ============================================================================
+ * registerProfile_koin_2_617804
+ * RVA 0x00617804   size 0x170   xrefs 0
+ * ============================================================================ */
+  int sub_60617804()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB32C8 = 0;
+    dword_60CB32CC = 0;
+    dword_60CB32D0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3AC4;
+    Profile::Profile(13316820, 6384008, MEMORY[0xAF2F04], (int)v1, &unk_60B065D4, 2);
+    MEMORY[0xCB32F0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB32F4] = 204;
+    MEMORY[0xCB32F8] = 1;
+    MEMORY[0xCB32FC] = 208;
+    MEMORY[0xCB3300] = 1;
+    MEMORY[0xCB3304] = 212;
+    MEMORY[0xCB3308] = 1;
+    MEMORY[0xCB32EC] = 12649112;
+    MEMORY[0xCB330C] = 13347896;
+    MEMORY[0xCB331C] = 1;
+    MEMORY[0xCB3320] = 220;
+    MEMORY[0xCB3324] = 1;
+    MEMORY[0xCB3328] = 224;
+    MEMORY[0xCB332C] = 1;
+    MEMORY[0xCB3310] = 12649112;
+    MEMORY[0xCB3314] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB3318] = 216;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB3338] = MEMORY[0xC7B788];
+    MEMORY[0xCB3330] = 13347932;
+    MEMORY[0xCB3334] = 12649132;
+    MEMORY[0xCB333C] = 6384088;
+    MEMORY[0xCB3340] = 0;
+    MEMORY[0xCB3344] = 6384276;
+    MEMORY[0xCB3348] = 0;
+    MEMORY[0xCB334C] = 6384400;
+    MEMORY[0xCB3350] = 0;
+    return 13316916;
+  }
+
+/* ============================================================================
  * Actor_koinchild_build
  * RVA 0x006179bc   size 0x44   xrefs 0
  * ============================================================================ */
@@ -7134,6 +7770,28 @@
   }
 
 /* ============================================================================
+ * registerProfile_koinchild_61829C
+ * RVA 0x0061829c   size 0xc4   xrefs 0
+ * ============================================================================ */
+  int sub_6061829C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3AE7;
+    Profile::Profile(13316980, 6388156, MEMORY[0xAF2F08], (int)v1, &unk_60B065F8, 2);
+    MEMORY[0xCB3390] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB338C] = 12649388;
+    MEMORY[0xCB3394] = 216;
+    MEMORY[0xCB3398] = 1;
+    MEMORY[0xCB339C] = 220;
+    MEMORY[0xCB33A0] = 1;
+    MEMORY[0xCB33A4] = 224;
+    MEMORY[0xCB33A8] = 1;
+    return 13317004;
+  }
+
+/* ============================================================================
  * Actor_ringu_2_build
  * RVA 0x00618384   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -7146,6 +7804,19 @@
     result = (_DWORD *)sub_606C6638(v0);
     *result = 12649408;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ringu_2_618884
+ * RVA 0x00618884   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60618884()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3B06;
+    return Profile::Profile(13317036, 6390660, MEMORY[0xAF38E8], (int)v1, &unk_60B0661C, 2);
   }
 
 /* ============================================================================
@@ -7174,6 +7845,19 @@
     result = sub_60618BBC(a1);
     *result = 12649648;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_gurupuID_618B38
+ * RVA 0x00618b38   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60618B38()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3B13;
+    return Profile::Profile(13317068, 6392072, MEMORY[0xAF2D6C], (int)v1, &unk_60B06640, 2);
   }
 
 /* ============================================================================
@@ -7418,6 +8102,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_gurupuIDtogeBuzzy_for_61951C
+ * RVA 0x0061951c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6061951C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3B26;
+    return Profile::Profile(13317100, 6394404, MEMORY[0xAF2D70], (int)v1, &unk_60B06664, 2);
+  }
+
+/* ============================================================================
  * Actor_gurupukinokoburoku_build
  * RVA 0x006195a0   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -7430,6 +8127,19 @@
     result = Actor_gurupukinokoburoku_build_helper(v0);
     *result = 12650272;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_gurupukinokoburoku_6198A8
+ * RVA 0x006198a8   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606198A8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3B4B;
+    return Profile::Profile(13317132, 6395296, MEMORY[0xAF2EA0], (int)v1, &unk_60B06688, 2);
   }
 
 /* ============================================================================
@@ -7596,6 +8306,29 @@
     (*(void (__fastcall **)(_DWORD, int, _DWORD *))(*(_DWORD *)**v12 + 108))(**v12, v18, v21);
     Mtx34_rotateZ(v21, &v20);
     return (*(int (__fastcall **)(_DWORD, int, _DWORD *))(*(_DWORD *)**v12 + 104))(**v12, v18, v21);
+  }
+
+/* ============================================================================
+ * registerProfile_mid_61A440
+ * RVA 0x0061a440   size 0xe0   xrefs 0
+ * ============================================================================ */
+  int sub_6061A440()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3B70;
+    *(_DWORD *)Profile::Profile(13317172, 6396204, MEMORY[0xAF3014], (int)v1, &unk_60B066AC, 2) = 12650496;
+    MEMORY[0xCB3450] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB3454] = 192;
+    MEMORY[0xCB3458] = 1;
+    MEMORY[0xCB345C] = 196;
+    MEMORY[0xCB3460] = 1;
+    MEMORY[0xCB3464] = 200;
+    MEMORY[0xCB3468] = 1;
+    MEMORY[0xCB344C] = 12650748;
+    MEMORY[0xCB346C] = 13335664;
+    return 13317196;
   }
 
 /* ============================================================================
@@ -7827,6 +8560,28 @@
   }
 
 /* ============================================================================
+ * registerProfile_iice_buroku_61B3C4
+ * RVA 0x0061b3c4   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int sub_6061B3C4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3BE2;
+    Profile::Profile(13317240, 6399308, MEMORY[0xAF32DC], (int)v1, &unk_60B066D0, 2);
+    MEMORY[0xCB3494] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB3490] = 12651020;
+    MEMORY[0xCB3498] = 6399476;
+    MEMORY[0xCB349C] = 0;
+    MEMORY[0xCB34A0] = 6399612;
+    MEMORY[0xCB34A4] = 0;
+    MEMORY[0xCB34A8] = 6400232;
+    MEMORY[0xCB34AC] = 0;
+    return 13317264;
+  }
+
+/* ============================================================================
  * Actor_ice_Lift_kishi_build
  * RVA 0x0061b4c0   size 0x84   xrefs 0
  * ============================================================================ */
@@ -7848,6 +8603,41 @@
     result[1715] = 0;
     result[1716] = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ice_Lift_kishi_61BAA8
+ * RVA 0x0061baa8   size 0x140   xrefs 0
+ * ============================================================================ */
+  int sub_6061BAA8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB34B8 = 0;
+    dword_60CB34BC = 0;
+    dword_60CB34C0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3C37;
+    Profile::Profile(13317316, 6403264, MEMORY[0xAF32B4], (int)v1, &unk_60B0670C, 2);
+    MEMORY[0xCB34DC] = MEMORY[0xAFE3D0];
+    MEMORY[0xCB34E0] = MEMORY[0xAFE3D8];
+    MEMORY[0xCB34E4] = -1082130432;
+    MEMORY[0xCB34E8] = 0;
+    MEMORY[0xCB34EC] = 0;
+    MEMORY[0xCB34F0] = 1;
+    MEMORY[0xCB34F4] = 1065353216;
+    MEMORY[0xCB34F8] = 0;
+    MEMORY[0xCB34FC] = 0;
+    MEMORY[0xCB3500] = 0;
+    MEMORY[0xCB3508] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB3504] = 12651252;
+    MEMORY[0xCB350C] = 6403400;
+    MEMORY[0xCB3510] = 0;
+    MEMORY[0xCB3514] = 6403404;
+    MEMORY[0xCB3518] = 0;
+    MEMORY[0xCB351C] = 6403644;
+    MEMORY[0xCB3520] = 0;
+    return 13317380;
   }
 
 /* ============================================================================
@@ -8032,6 +8822,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_ice_Lift_reru_61C808
+ * RVA 0x0061c808   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6061C808()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3D6E;
+    return Profile::Profile(13317420, 6406948, MEMORY[0xAF32BC], (int)v1, &unk_60B06738, 2);
+  }
+
+/* ============================================================================
  * Actor_ice_Lift_kishi_ku_build
  * RVA 0x0061c88c   size 0xac   xrefs 0
  * ============================================================================ */
@@ -8057,6 +8860,61 @@
     *(_DWORD *)(result + 6864) = 0x2000000;
     *(_BYTE *)(result + 6868) = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ice_Lift_kishi_ku_61D110
+ * RVA 0x0061d110   size 0x1d0   xrefs 0
+ * ============================================================================ */
+  int sub_6061D110()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3D8C;
+    Profile::Profile(13317444, 6408332, MEMORY[0xAF32B8], (int)v1, &unk_60B0675C, 2);
+    MEMORY[0xCB3560] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB355C] = 12652180;
+    MEMORY[0xCB3564] = 6408508;
+    MEMORY[0xCB3568] = 0;
+    MEMORY[0xCB356C] = 6408524;
+    MEMORY[0xCB3570] = 0;
+    MEMORY[0xCB3574] = 6408712;
+    MEMORY[0xCB3578] = 0;
+    MEMORY[0xCB357C] = 12652180;
+    MEMORY[0xCB3580] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB3584] = 6408728;
+    MEMORY[0xCB3588] = 0;
+    MEMORY[0xCB358C] = 6408732;
+    MEMORY[0xCB3590] = 0;
+    MEMORY[0xCB3594] = 6409028;
+    MEMORY[0xCB3598] = 0;
+    MEMORY[0xCB359C] = 12652180;
+    MEMORY[0xCB35A0] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB35A4] = 6409032;
+    MEMORY[0xCB35A8] = 0;
+    MEMORY[0xCB35AC] = 6409036;
+    MEMORY[0xCB35B0] = 0;
+    MEMORY[0xCB35B4] = 6409332;
+    MEMORY[0xCB35B8] = 0;
+    MEMORY[0xCB35BC] = 12652180;
+    MEMORY[0xCB35C0] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB35C4] = 6409336;
+    MEMORY[0xCB35C8] = 0;
+    MEMORY[0xCB35CC] = 6409352;
+    MEMORY[0xCB35D0] = 0;
+    MEMORY[0xCB35D4] = 6409584;
+    MEMORY[0xCB35D8] = 0;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCB35E0] = MEMORY[0xC7B788];
+    MEMORY[0xCB35DC] = 12652180;
+    MEMORY[0xCB35E4] = 6409588;
+    MEMORY[0xCB35E8] = 0;
+    MEMORY[0xCB35EC] = 6409592;
+    MEMORY[0xCB35F0] = 0;
+    MEMORY[0xCB35F4] = 6409616;
+    MEMORY[0xCB35F8] = 0;
+    return 6409616;
   }
 
 /* ============================================================================
@@ -8231,6 +9089,45 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ice_buroku_61DF44
+ * RVA 0x0061df44   size 0x148   xrefs 0
+ * ============================================================================ */
+  int sub_6061DF44()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB360C = 0;
+    dword_60CB3608 = 0;
+    dword_60CB3604 = 0;
+    dword_60CB3600 = 0;
+    dword_60CB3610 = -1056964608;
+    dword_60CB3614 = 1098907648;
+    dword_60CB3618 = 1090519040;
+    dword_60CB361C = 0;
+    dword_60CB3620 = 0;
+    MEMORY[0xCB3628] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB3624] = 12652400;
+    MEMORY[0xCB362C] = 6411088;
+    MEMORY[0xCB3630] = 0;
+    MEMORY[0xCB3634] = 6411116;
+    MEMORY[0xCB3638] = 0;
+    MEMORY[0xCB363C] = 6411136;
+    MEMORY[0xCB3640] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB3648] = MEMORY[0xC7B788];
+    MEMORY[0xCB3644] = 12652400;
+    MEMORY[0xCB364C] = 6411140;
+    MEMORY[0xCB3650] = 0;
+    MEMORY[0xCB3654] = 6411292;
+    MEMORY[0xCB3658] = 0;
+    MEMORY[0xCB365C] = 6411500;
+    MEMORY[0xCB3660] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3DB0;
+    return Profile::Profile(13317732, 6411504, MEMORY[0xAF32B0], (int)v1, &unk_60B06780, 0);
   }
 
 /* ============================================================================
@@ -8609,6 +9506,152 @@
       while ( v3 != result );
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ice_2_61F118
+ * RVA 0x0061f118   size 0x13c   xrefs 0
+ * ============================================================================ */
+  int *sub_6061F118()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB3684 = 0;
+    dword_60CB3688 = 0;
+    dword_60CB368C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3DCC;
+    Profile::Profile(13317776, 6414544, MEMORY[0xAF30D4], (int)v1, &unk_60B067A4, 2);
+    MEMORY[0xCB36AC] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB36A8] = 12652560;
+    MEMORY[0xCB36B0] = 6414800;
+    MEMORY[0xCB36B4] = 0;
+    MEMORY[0xCB36B8] = 6414804;
+    MEMORY[0xCB36BC] = 0;
+    MEMORY[0xCB36C0] = 6414812;
+    MEMORY[0xCB36C4] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB36CC] = MEMORY[0xC7B788];
+    MEMORY[0xCB36C8] = 12652560;
+    MEMORY[0xCB36D0] = 6414816;
+    MEMORY[0xCB36D4] = 0;
+    MEMORY[0xCB36D8] = 6414828;
+    MEMORY[0xCB36DC] = 0;
+    MEMORY[0xCB36E0] = 6414852;
+    MEMORY[0xCB36E4] = 0;
+    dword_60CB36E8 = 1115684864;
+    dword_60CB36EC = 1115684864;
+    return &dword_60CB36E8;
+  }
+
+/* ============================================================================
+ * registerProfile_tsurara_61F2B0
+ * RVA 0x0061f2b0   size 0x3b0   xrefs 0
+ * ============================================================================ */
+  int sub_6061F2B0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB3830 = 0;
+    dword_60CB3834 = 0;
+    dword_60CB3838 = 0;
+    dword_60CB383C = 12321336;
+    dword_60CB3840 = (int)"obj_turara_rakka_S";
+    dword_60CB3844 = 12321336;
+    dword_60CB3848 = (int)"obj_turara_rakka_L";
+    sub_60000288();
+    dword_60CB384C = 12321336;
+    dword_60CB3850 = (int)"gura_wait_S";
+    dword_60CB3854 = 12321336;
+    dword_60CB3858 = (int)"gura_wait_L";
+    sub_60000288();
+    dword_60CB385C = 12321336;
+    dword_60CB3860 = (int)"gura_anim_S";
+    dword_60CB3864 = 12321336;
+    dword_60CB3868 = (int)"gura_anim_L";
+    sub_60000288();
+    dword_60CB386C = 12321336;
+    dword_60CB3870 = (int)"rakka_anim_S";
+    dword_60CB3874 = 12321336;
+    dword_60CB3878 = (int)"rakka_anim_L";
+    sub_60000288();
+    dword_60CB387C = 12321336;
+    dword_60CB3880 = (int)"obj_turara_rakka_S";
+    dword_60CB3884 = 12321336;
+    dword_60CB3888 = (int)"obj_turara_rakka_L";
+    sub_60000288();
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3E29;
+    Profile::Profile(13317880, 6420264, MEMORY[0xAF3954], (int)v1, &unk_60B067C8, 16);
+    MEMORY[0xCB3714] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB3718] = 632;
+    MEMORY[0xCB371C] = 1;
+    MEMORY[0xCB3720] = 636;
+    MEMORY[0xCB3724] = 1;
+    MEMORY[0xCB3728] = 640;
+    MEMORY[0xCB372C] = 1;
+    MEMORY[0xCB3710] = 12653464;
+    MEMORY[0xCB3730] = 13318296;
+    MEMORY[0xCB3738] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB3734] = 12653484;
+    MEMORY[0xCB373C] = 6420336;
+    MEMORY[0xCB3740] = 0;
+    MEMORY[0xCB3744] = 6420396;
+    MEMORY[0xCB3748] = 0;
+    MEMORY[0xCB374C] = 6420504;
+    MEMORY[0xCB3750] = 0;
+    MEMORY[0xCB3754] = 12653484;
+    MEMORY[0xCB3758] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB375C] = 6420508;
+    MEMORY[0xCB3760] = 0;
+    MEMORY[0xCB3764] = 6420552;
+    MEMORY[0xCB3768] = 0;
+    MEMORY[0xCB376C] = 6420836;
+    MEMORY[0xCB3770] = 0;
+    MEMORY[0xCB3774] = 12653484;
+    MEMORY[0xCB3778] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB377C] = 6420840;
+    MEMORY[0xCB3780] = 0;
+    MEMORY[0xCB3784] = 6420844;
+    MEMORY[0xCB3788] = 0;
+    MEMORY[0xCB378C] = 6420848;
+    MEMORY[0xCB3790] = 0;
+    MEMORY[0xCB379C] = 644;
+    MEMORY[0xCB37A0] = 1;
+    MEMORY[0xCB37A4] = 648;
+    MEMORY[0xCB37A8] = 1;
+    MEMORY[0xCB37AC] = 652;
+    MEMORY[0xCB37B0] = 1;
+    MEMORY[0xCB3794] = 12653464;
+    MEMORY[0xCB3798] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCB37B4] = 13318332;
+    MEMORY[0xCB37C0] = 656;
+    MEMORY[0xCB37C4] = 1;
+    MEMORY[0xCB37C8] = 660;
+    MEMORY[0xCB37CC] = 1;
+    MEMORY[0xCB37D0] = 664;
+    MEMORY[0xCB37D4] = 1;
+    MEMORY[0xCB37B8] = 12653464;
+    MEMORY[0xCB37BC] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCB37D8] = 13318368;
+    MEMORY[0xCB37DC] = 12653484;
+    MEMORY[0xCB37E0] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xCB37E4] = 6420852;
+    MEMORY[0xCB37E8] = 0;
+    MEMORY[0xCB37EC] = 6420932;
+    MEMORY[0xCB37F0] = 0;
+    MEMORY[0xCB37F4] = 6421316;
+    MEMORY[0xCB37F8] = 0;
+    MEMORY[0xC7B788] += 8;
+    MEMORY[0xCB3800] = MEMORY[0xC7B788];
+    MEMORY[0xCB37FC] = 12653484;
+    MEMORY[0xCB3804] = 6421320;
+    MEMORY[0xCB3808] = 0;
+    MEMORY[0xCB380C] = 6421448;
+    MEMORY[0xCB3810] = 0;
+    MEMORY[0xCB3814] = 6421776;
+    MEMORY[0xCB3818] = 0;
+    return 6421776;
   }
 
 /* ============================================================================
@@ -9069,6 +10112,105 @@
     v4[0] = 12321336;
     v4[1] = "rakka_anim";
     return sub_60621520(a1, v4, 1);
+  }
+
+/* ============================================================================
+ * registerProfile_tsurara_big_6235CC
+ * RVA 0x006235cc   size 0x374   xrefs 0
+ * ============================================================================ */
+  int sub_606235CC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB3A78 = 0;
+    dword_60CB3A7C = 0;
+    dword_60CB3A80 = 0;
+    dword_60CB3A60 = (int)(float)((float)(MEMORY[0xB0E1E0] * 2.8125) / MEMORY[0xB0E1D8]);
+    dword_60CB3A64 = (int)(float)((float)(MEMORY[0xB0E1E0] * 30.0) / MEMORY[0xB0E1D8]);
+    LODWORD(flt_60CB3A68) = (int)(float)((float)(MEMORY[0xB0E1E0] * 0.70312) / MEMORY[0xB0E1D8]);
+    LODWORD(flt_60CB3A6C) = (int)(float)((float)(MEMORY[0xB0E1E0] * 1.4062) / MEMORY[0xB0E1D8]);
+    LODWORD(flt_60CB3A70) = (int)(float)((float)(MEMORY[0xB0E1E0] * 1.4062) / MEMORY[0xB0E1D8]);
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3E4F;
+    *(_DWORD *)Profile::Profile(13318404, 6429724, MEMORY[0xAF32A0], (int)v1, &unk_60B0685C, 2) = 12654264;
+    MEMORY[0xCB3920] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB3924] = 632;
+    MEMORY[0xCB3928] = 1;
+    MEMORY[0xCB392C] = 636;
+    MEMORY[0xCB3930] = 1;
+    MEMORY[0xCB3934] = 640;
+    MEMORY[0xCB3938] = 1;
+    MEMORY[0xCB391C] = 12655012;
+    MEMORY[0xCB393C] = 13318296;
+    MEMORY[0xCB3944] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB3940] = 12655032;
+    MEMORY[0xCB3948] = 6429992;
+    MEMORY[0xCB394C] = 0;
+    MEMORY[0xCB3950] = 6430224;
+    MEMORY[0xCB3954] = 0;
+    MEMORY[0xCB3958] = 6430528;
+    MEMORY[0xCB395C] = 0;
+    MEMORY[0xCB3960] = 12655032;
+    MEMORY[0xCB3964] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB3968] = 6430532;
+    MEMORY[0xCB396C] = 0;
+    MEMORY[0xCB3970] = 6430536;
+    MEMORY[0xCB3974] = 0;
+    MEMORY[0xCB3978] = 6430540;
+    MEMORY[0xCB397C] = 0;
+    MEMORY[0xCB3984] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB3988] = 644;
+    MEMORY[0xCB398C] = 1;
+    MEMORY[0xCB3990] = 648;
+    MEMORY[0xCB3994] = 1;
+    MEMORY[0xCB3998] = 652;
+    MEMORY[0xCB399C] = 1;
+    MEMORY[0xCB3980] = 12655012;
+    MEMORY[0xCB39A0] = 13318332;
+    MEMORY[0xCB39A8] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCB39AC] = 656;
+    MEMORY[0xCB39B0] = 1;
+    MEMORY[0xCB39B4] = 660;
+    MEMORY[0xCB39B8] = 1;
+    MEMORY[0xCB39BC] = 664;
+    MEMORY[0xCB39C0] = 1;
+    MEMORY[0xCB39A4] = 12655012;
+    MEMORY[0xCB39C4] = 13318368;
+    MEMORY[0xCB39C8] = 12655032;
+    MEMORY[0xCB39CC] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCB39D0] = 6430544;
+    MEMORY[0xCB39D4] = 0;
+    MEMORY[0xCB39D8] = 6430676;
+    MEMORY[0xCB39DC] = 0;
+    MEMORY[0xCB39E0] = 6430872;
+    MEMORY[0xCB39E4] = 0;
+    MEMORY[0xCB39E8] = 12655032;
+    MEMORY[0xCB39EC] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xCB39F0] = 6430876;
+    MEMORY[0xCB39F4] = 0;
+    MEMORY[0xCB39F8] = 6431104;
+    MEMORY[0xCB39FC] = 0;
+    MEMORY[0xCB3A00] = 6432188;
+    MEMORY[0xCB3A04] = 0;
+    MEMORY[0xCB3A08] = 12655032;
+    MEMORY[0xCB3A0C] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xCB3A10] = 6432192;
+    MEMORY[0xCB3A14] = 0;
+    MEMORY[0xCB3A18] = 6432304;
+    MEMORY[0xCB3A1C] = 0;
+    MEMORY[0xCB3A20] = 6432452;
+    MEMORY[0xCB3A24] = 0;
+    MEMORY[0xC7B788] += 9;
+    MEMORY[0xCB3A2C] = MEMORY[0xC7B788];
+    MEMORY[0xCB3A30] = 456;
+    MEMORY[0xCB3A34] = 1;
+    MEMORY[0xCB3A38] = 460;
+    MEMORY[0xCB3A3C] = 1;
+    MEMORY[0xCB3A40] = 464;
+    MEMORY[0xCB3A44] = 1;
+    MEMORY[0xCB3A28] = 12655012;
+    MEMORY[0xCB3A48] = 13174544;
+    return 13174544;
   }
 
 /* ============================================================================
@@ -10779,6 +11921,69 @@
   }
 
 /* ============================================================================
+ * registerProfile_geyser_sand_627F20
+ * RVA 0x00627f20   size 0x20c   xrefs 0
+ * ============================================================================ */
+  int sub_60627F20()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3EEB;
+    Profile::Profile(13318940, 6443180, MEMORY[0xAF2F0C], (int)v1, &unk_60B06934, 0);
+    MEMORY[0xCB3B38] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB3B34] = 12656140;
+    MEMORY[0xCB3B3C] = 6443208;
+    MEMORY[0xCB3B40] = 0;
+    MEMORY[0xCB3B44] = 6443220;
+    MEMORY[0xCB3B48] = 0;
+    MEMORY[0xCB3B4C] = 6443292;
+    MEMORY[0xCB3B50] = 0;
+    MEMORY[0xCB3B54] = 12656140;
+    MEMORY[0xCB3B58] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB3B5C] = 6443296;
+    MEMORY[0xCB3B60] = 0;
+    MEMORY[0xCB3B64] = 6443668;
+    MEMORY[0xCB3B68] = 0;
+    MEMORY[0xCB3B6C] = 6443672;
+    MEMORY[0xCB3B70] = 0;
+    MEMORY[0xCB3B74] = 12656140;
+    MEMORY[0xCB3B78] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB3B7C] = 6443676;
+    MEMORY[0xCB3B80] = 0;
+    MEMORY[0xCB3B84] = 6443752;
+    MEMORY[0xCB3B88] = 0;
+    MEMORY[0xCB3B8C] = 6444124;
+    MEMORY[0xCB3B90] = 0;
+    MEMORY[0xCB3B94] = 12656140;
+    MEMORY[0xCB3B98] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB3B9C] = 6444360;
+    MEMORY[0xCB3BA0] = 0;
+    MEMORY[0xCB3BA4] = 6444620;
+    MEMORY[0xCB3BA8] = 0;
+    MEMORY[0xCB3BAC] = 6445196;
+    MEMORY[0xCB3BB0] = 0;
+    MEMORY[0xCB3BB4] = 12656140;
+    MEMORY[0xCB3BB8] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCB3BBC] = 6445200;
+    MEMORY[0xCB3BC0] = 0;
+    MEMORY[0xCB3BC4] = 6445256;
+    MEMORY[0xCB3BC8] = 0;
+    MEMORY[0xCB3BCC] = 6445964;
+    MEMORY[0xCB3BD0] = 0;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xCB3BD8] = MEMORY[0xC7B788];
+    MEMORY[0xCB3BD4] = 12656140;
+    MEMORY[0xCB3BDC] = 6445968;
+    MEMORY[0xCB3BE0] = 0;
+    MEMORY[0xCB3BE4] = 6446104;
+    MEMORY[0xCB3BE8] = 0;
+    MEMORY[0xCB3BEC] = 6446616;
+    MEMORY[0xCB3BF0] = 0;
+    return 6446616;
+  }
+
+/* ============================================================================
  * Actor_resident_geyser_sand_build
  * RVA 0x006281ac   size 0x3c   xrefs 0
  * ============================================================================ */
@@ -10873,6 +12078,28 @@
       }
     }
     return v10;
+  }
+
+/* ============================================================================
+ * registerProfile_resident_geyser_sand_6285F0
+ * RVA 0x006285f0   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int sub_606285F0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3F2F;
+    Profile::Profile(13319164, 6455724, MEMORY[0xAF2F10], (int)v1, &unk_60B06958, 2);
+    MEMORY[0xCB3C18] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB3C14] = 12656364;
+    MEMORY[0xCB3C1C] = 6455788;
+    MEMORY[0xCB3C20] = 0;
+    MEMORY[0xCB3C24] = 6455820;
+    MEMORY[0xCB3C28] = 0;
+    MEMORY[0xCB3C2C] = 6455888;
+    MEMORY[0xCB3C30] = 0;
+    return 13319188;
   }
 
 /* ============================================================================
@@ -11007,6 +12234,23 @@
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 644) + 60))(**(_DWORD **)(a1 + 644), v16);
     (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 644) + 68))(**(_DWORD **)(a1 + 644), a1 + 144);
     return ModelWrapper_updateModel(*(_DWORD *)(a1 + 644));
+  }
+
+/* ============================================================================
+ * registerProfile_SpikeBall_through_rihole_RDashfor_2fort_628D6C
+ * RVA 0x00628d6c   size 0xa8   xrefs 0
+ * ============================================================================ */
+  int sub_60628D6C()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD3F44;
+    Profile::Profile(13319220, 6457068, MEMORY[0xAF3024], (int)&v1, &unk_60B0697C, 0);
+    v1 = 12321336;
+    v2 = &unk_60AD3F5A;
+    return Profile::Profile(13319244, 6457068, MEMORY[0xAF3028], (int)&v1, &unk_60B0697C, 0);
   }
 
 /* ============================================================================
@@ -11314,6 +12558,95 @@
   }
 
 /* ============================================================================
+ * registerProfile_JumpStand_62A46C
+ * RVA 0x0062a46c   size 0x2d8   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6062A46C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3FA0;
+    Profile::Profile(13319276, 6458936, MEMORY[0xAF35D4], (int)v1, &unk_60B069A0, 2070);
+    MEMORY[0xCB3C88] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB3C8C] = 196;
+    MEMORY[0xCB3C90] = 1;
+    MEMORY[0xCB3C94] = 200;
+    MEMORY[0xCB3C98] = 1;
+    MEMORY[0xCB3C9C] = 204;
+    MEMORY[0xCB3CA0] = 1;
+    MEMORY[0xCB3C84] = 12656876;
+    MEMORY[0xCB3CA4] = 13307596;
+    MEMORY[0xCB3CB4] = 1;
+    MEMORY[0xCB3CB8] = 224;
+    MEMORY[0xCB3CBC] = 1;
+    MEMORY[0xCB3CC0] = 228;
+    MEMORY[0xCB3CC4] = 1;
+    MEMORY[0xCB3CA8] = 12656876;
+    MEMORY[0xCB3CAC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB3CB0] = 220;
+    MEMORY[0xCB3CC8] = 13307668;
+    MEMORY[0xCB3CD4] = 208;
+    MEMORY[0xCB3CD8] = 1;
+    MEMORY[0xCB3CDC] = 212;
+    MEMORY[0xCB3CE0] = 1;
+    MEMORY[0xCB3CE4] = 216;
+    MEMORY[0xCB3CE8] = 1;
+    MEMORY[0xCB3CCC] = 12656876;
+    MEMORY[0xCB3CD0] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB3CEC] = 13307632;
+    MEMORY[0xCB3CF8] = 232;
+    MEMORY[0xCB3CFC] = 1;
+    MEMORY[0xCB3D00] = 236;
+    MEMORY[0xCB3D04] = 1;
+    MEMORY[0xCB3D08] = 240;
+    MEMORY[0xCB3D0C] = 1;
+    MEMORY[0xCB3CF0] = 12656876;
+    MEMORY[0xCB3CF4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB3D10] = 13307704;
+    MEMORY[0xCB3D18] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCB3D14] = 12656896;
+    MEMORY[0xCB3D1C] = 6459304;
+    MEMORY[0xCB3D20] = 0;
+    MEMORY[0xCB3D24] = 6459348;
+    MEMORY[0xCB3D28] = 0;
+    MEMORY[0xCB3D2C] = 6459408;
+    MEMORY[0xCB3D30] = 0;
+    MEMORY[0xCB3D34] = 12656896;
+    MEMORY[0xCB3D38] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCB3D3C] = 6459412;
+    MEMORY[0xCB3D40] = 0;
+    MEMORY[0xCB3D44] = 6459448;
+    MEMORY[0xCB3D48] = 0;
+    MEMORY[0xCB3D4C] = 6459852;
+    MEMORY[0xCB3D50] = 0;
+    MEMORY[0xC7B788] += 7;
+    MEMORY[0xCB3D58] = MEMORY[0xC7B788];
+    MEMORY[0xCB3D54] = 12656896;
+    MEMORY[0xCB3D5C] = 6459856;
+    MEMORY[0xCB3D60] = 0;
+    MEMORY[0xCB3D64] = 6459872;
+    MEMORY[0xCB3D68] = 0;
+    MEMORY[0xCB3D6C] = 6460104;
+    MEMORY[0xCB3D70] = 0;
+    dword_60CB3D90[0] = 12321336;
+    *(_DWORD *)algn_60CB3D94 = "jump_step";
+    unk_60CB3D98 = 12321336;
+    dword_60CB3D9C = (int)"jump_step";
+    dword_60CB3DA0 = 1086324736;
+    dword_60CB3DA4 = 2;
+    dword_60CB3DA8 = (int)"SE_PLY_JUMPDAI";
+    dword_60CB3DAC = 1083032207;
+    dword_60CB3DB0 = 1;
+    dword_60CB3DB4 = (int)"SE_PLY_JUMPDAI_HIGH";
+    dword_60CB3D74[0] = 18;
+    dword_60CB3D74[1] = 1091567616;
+    dword_60CB3D74[2] = 0x40000000;
+    byte_60CB3D80 = 0;
+    return dword_60CB3D74;
+  }
+
+/* ============================================================================
  * Actor_KamekBlock_build
  * RVA 0x0062a7cc   size 0x68   xrefs 0
  * ============================================================================ */
@@ -11535,6 +12868,46 @@
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v2 + 60))(**v2, &v27);
     (*(void (__fastcall **)(_DWORD, _DWORD **))(*(_DWORD *)**v2 + 68))(**v2, v2 - 1615);
     return ModelWrapper_updateModel(*v2);
+  }
+
+/* ============================================================================
+ * registerProfile_KamekBlock_62B540
+ * RVA 0x0062b540   size 0x144   xrefs 0
+ * ============================================================================ */
+  int sub_6062B540()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB3DC4 = 0;
+    dword_60CB3DC0 = 0;
+    dword_60CB3DBC = 0;
+    dword_60CB3DB8 = 0;
+    dword_60CB3DC8 = -1056964608;
+    dword_60CB3DCC = 1090519040;
+    dword_60CB3DD0 = 1090519040;
+    dword_60CB3DD4 = -1056964608;
+    dword_60CB3DD8 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD3FDC;
+    Profile::Profile(13319644, 6465484, MEMORY[0xAF3234], (int)v1, &unk_60B06A18, 2);
+    MEMORY[0xCB3DF8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB3DF4] = 12657268;
+    MEMORY[0xCB3DFC] = 6465596;
+    MEMORY[0xCB3E00] = 0;
+    MEMORY[0xCB3E04] = 6465600;
+    MEMORY[0xCB3E08] = 0;
+    MEMORY[0xCB3E0C] = 6465796;
+    MEMORY[0xCB3E10] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB3E18] = MEMORY[0xC7B788];
+    MEMORY[0xCB3E14] = 12657268;
+    MEMORY[0xCB3E1C] = 6465800;
+    MEMORY[0xCB3E20] = 0;
+    MEMORY[0xCB3E24] = 6465856;
+    MEMORY[0xCB3E28] = 0;
+    MEMORY[0xCB3E2C] = 6466148;
+    MEMORY[0xCB3E30] = 0;
+    return 6466148;
   }
 
 /* ============================================================================
@@ -12293,6 +13666,81 @@
   }
 
 /* ============================================================================
+ * registerProfile_sign_arrow_spawn_range_narrow_62D254
+ * RVA 0x0062d254   size 0x250   xrefs 0
+ * ============================================================================ */
+  int sub_6062D254()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CB3F00 = 0;
+    dword_60CB3F04 = 0;
+    dword_60CB3F08 = 0;
+    dword_60CB3F0C = 0;
+    dword_60CB3F10 = 0;
+    dword_60CB3F14 = 8;
+    dword_60CB3F18 = 0x200000;
+    dword_60CB3F1C = 0x8000000;
+    dword_60CB3F20 = 6553600;
+    dword_60CB3F24 = 3276800;
+    dword_60CB3F28 = 0;
+    dword_60CB3F2C = 0;
+    dword_60CB3F30 = 0;
+    dword_60CB3F34 = 4;
+    dword_60CB3F38 = 2228224;
+    unk_60CB3F3C = 0x8000000;
+    unk_60CB3F40 = 6553600;
+    unk_60CB3F44 = 3276800;
+    dword_60CB3F48 = 0;
+    dword_60CB3F4C = 0;
+    dword_60CB3F50 = 0;
+    dword_60CB3F54 = 8;
+    dword_60CB3F58 = 6553600;
+    unk_60CB3F5C = 0x8000000;
+    unk_60CB3F60 = 6553600;
+    unk_60CB3F64 = 3276800;
+    dword_60CB3F68 = 0;
+    MEMORY[0xCB3E40] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB3E44] = 192;
+    MEMORY[0xCB3E48] = 1;
+    MEMORY[0xCB3E4C] = 196;
+    MEMORY[0xCB3E50] = 1;
+    MEMORY[0xCB3E54] = 200;
+    MEMORY[0xCB3E58] = 1;
+    MEMORY[0xCB3E3C] = 12657524;
+    MEMORY[0xCB3E5C] = 12755100;
+    MEMORY[0xCB3E6C] = 1;
+    MEMORY[0xCB3E70] = 220;
+    MEMORY[0xCB3E74] = 1;
+    MEMORY[0xCB3E78] = 224;
+    MEMORY[0xCB3E7C] = 1;
+    MEMORY[0xCB3E60] = 12657524;
+    MEMORY[0xCB3E64] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB3E68] = 216;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB3E80] = 12755100;
+    MEMORY[0xCB3E88] = MEMORY[0xC7B788];
+    MEMORY[0xCB3E8C] = 204;
+    MEMORY[0xCB3E90] = 1;
+    MEMORY[0xCB3E94] = 208;
+    MEMORY[0xCB3E98] = 1;
+    MEMORY[0xCB3E9C] = 212;
+    MEMORY[0xCB3EA0] = 1;
+    MEMORY[0xCB3E84] = 12657524;
+    MEMORY[0xCB3EA4] = 12755100;
+    v1 = 12321336;
+    v2 = &unk_60AD3FF5;
+    Profile::Profile(13319848, 6469320, MEMORY[0xAF38BC], (int)&v1, &unk_60B06A48, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD4002;
+    Profile::Profile(13319872, 6469320, MEMORY[0xAF38C0], (int)&v1, &unk_60B06A6C, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD4016;
+    return Profile::Profile(13319896, 6469320, MEMORY[0xAF38C4], (int)&v1, &unk_60B06A90, 2);
+  }
+
+/* ============================================================================
  * Actor_fire_build
  * RVA 0x0062d4f8   size 0x100   xrefs 0
  * ============================================================================ */
@@ -12660,6 +14108,74 @@
   }
 
 /* ============================================================================
+ * registerProfile_fire_62F258
+ * RVA 0x0062f258   size 0x1ec   xrefs 0
+ * ============================================================================ */
+  int sub_6062F258()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB3FFC = 0;
+    dword_60CB4000 = 0;
+    dword_60CB4004 = 0;
+    dword_60CB3FD4 = 12321336;
+    dword_60CB3FD8 = (int)"kazan_rock";
+    dword_60CB3FDC = 12321336;
+    dword_60CB3FE0 = (int)"kazan_rock";
+    dword_60CB3FE4 = 12321336;
+    dword_60CB3FE8 = (int)"kazan_rockBig";
+    dword_60CB3FEC = 12321336;
+    dword_60CB3FF0 = (int)"kazan_rock";
+    dword_60CB3FF4 = 12321336;
+    dword_60CB3FF8 = (int)"kazan_rockBig";
+    dword_60CB4008 = 0x2000000;
+    dword_60CB400C = 11141120;
+    dword_60CB4010 = 0x400000;
+    dword_60CB4034 = -4194304;
+    dword_60CB4014 = 0x2000000;
+    dword_60CB4018 = -11141120;
+    dword_60CB401C = -4194304;
+    dword_60CB4020 = 50331648;
+    dword_60CB4024 = 16711680;
+    unk_60CB4028 = 0x400000;
+    unk_60CB402C = 50331648;
+    unk_60CB4030 = -16711680;
+    unk_60CB4040 = 0x2000000;
+    unk_60CB4044 = 11141120;
+    v1[0] = 12321336;
+    dword_60CB4048 = 0x400000;
+    dword_60CB404C = 0x2000000;
+    dword_60CB4050 = -11141120;
+    dword_60CB4054 = -4194304;
+    dword_60CB4058 = 41943040;
+    dword_60CB405C = 13369344;
+    dword_60CB4060 = 0x400000;
+    dword_60CB4064 = 41943040;
+    dword_60CB4068 = -13369344;
+    dword_60CB406C = -4194304;
+    v1[1] = &unk_60AC759D;
+    Profile::Profile(13320044, 6477048, MEMORY[0xAF3620], (int)v1, nullptr, 18);
+    MEMORY[0xCB3F88] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB3F84] = 12657928;
+    MEMORY[0xCB3F8C] = 6477320;
+    MEMORY[0xCB3F90] = 0;
+    MEMORY[0xCB3F94] = 6477628;
+    MEMORY[0xCB3F98] = 0;
+    MEMORY[0xCB3F9C] = 6477632;
+    MEMORY[0xCB3FA0] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB3FA8] = MEMORY[0xC7B788];
+    MEMORY[0xCB3FA4] = 12657928;
+    MEMORY[0xCB3FAC] = 6477636;
+    MEMORY[0xCB3FB0] = 0;
+    MEMORY[0xCB3FB4] = 6477872;
+    MEMORY[0xCB3FB8] = 0;
+    MEMORY[0xCB3FBC] = 6477876;
+    MEMORY[0xCB3FC0] = 0;
+    return 6477876;
+  }
+
+/* ============================================================================
  * Actor_fire_manage_obuje_build
  * RVA 0x0062f494   size 0x6c   xrefs 0
  * ============================================================================ */
@@ -12839,6 +14355,77 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_fire_manage_obuje_630034
+ * RVA 0x00630034   size 0x254   xrefs 0
+ * ============================================================================ */
+  int sub_60630034()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD410C;
+    Profile::Profile(13320304, 6485140, MEMORY[0xAF3618], (int)v1, &unk_60B06AD8, 0);
+    MEMORY[0xCB408C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB4088] = 12658196;
+    MEMORY[0xCB4090] = 6485256;
+    MEMORY[0xCB4094] = 0;
+    MEMORY[0xCB4098] = 6485260;
+    MEMORY[0xCB409C] = 0;
+    MEMORY[0xCB40A0] = 6485308;
+    MEMORY[0xCB40A4] = 0;
+    MEMORY[0xCB40A8] = 12658196;
+    MEMORY[0xCB40AC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB40B0] = 6485312;
+    MEMORY[0xCB40B4] = 0;
+    MEMORY[0xCB40B8] = 6485328;
+    MEMORY[0xCB40BC] = 0;
+    MEMORY[0xCB40C0] = 6485436;
+    MEMORY[0xCB40C4] = 0;
+    MEMORY[0xCB40C8] = 12658196;
+    MEMORY[0xCB40CC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB40D0] = 6485440;
+    MEMORY[0xCB40D4] = 0;
+    MEMORY[0xCB40D8] = 6485444;
+    MEMORY[0xCB40DC] = 0;
+    MEMORY[0xCB40E0] = 6485468;
+    MEMORY[0xCB40E4] = 0;
+    MEMORY[0xCB40E8] = 12658196;
+    MEMORY[0xCB40EC] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB40F0] = 6485472;
+    MEMORY[0xCB40F4] = 0;
+    MEMORY[0xCB40F8] = 6485504;
+    MEMORY[0xCB40FC] = 0;
+    MEMORY[0xCB4100] = 6485560;
+    MEMORY[0xCB4104] = 0;
+    MEMORY[0xCB4108] = 12658196;
+    MEMORY[0xCB410C] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCB4110] = 6485564;
+    MEMORY[0xCB4114] = 0;
+    MEMORY[0xCB4118] = 6485684;
+    MEMORY[0xCB411C] = 0;
+    MEMORY[0xCB4120] = 6485920;
+    MEMORY[0xCB4124] = 0;
+    MEMORY[0xCB4128] = 12658196;
+    MEMORY[0xCB412C] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCB4130] = 6485924;
+    MEMORY[0xCB4134] = 0;
+    MEMORY[0xCB4138] = 6485940;
+    MEMORY[0xCB413C] = 0;
+    MEMORY[0xCB4140] = 6486016;
+    MEMORY[0xCB4144] = 0;
+    MEMORY[0xC7B788] += 7;
+    MEMORY[0xCB414C] = MEMORY[0xC7B788];
+    MEMORY[0xCB4148] = 12658196;
+    MEMORY[0xCB4150] = 6486020;
+    MEMORY[0xCB4154] = 0;
+    MEMORY[0xCB4158] = 6486116;
+    MEMORY[0xCB415C] = 0;
+    MEMORY[0xCB4160] = 6486408;
+    MEMORY[0xCB4164] = 0;
+    return 6486408;
   }
 
 /* ============================================================================
@@ -13519,6 +15106,19 @@
     result = (_DWORD *)Actor_kinokoLift_build_helper(v0);
     *result = 12658216;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_kinokoLift_6317E4
+ * RVA 0x006317e4   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606317E4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD41AF;
+    return Profile::Profile(13320728, 6493172, MEMORY[0xAF2E5C], (int)v1, (void *)0xB071B4, 2);
   }
 
 /* ============================================================================
@@ -14472,6 +16072,19 @@
     *(_DWORD *)(a1 + 7272) = v110;
 
 /* ============================================================================
+ * registerProfile_karakinokoLift_632D0C
+ * RVA 0x00632d0c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60632D0C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD41C2;
+    return Profile::Profile(13320912, 6497460, MEMORY[0xAF2E60], (int)v1, (void *)0xB071B4, 2);
+  }
+
+/* ============================================================================
  * sub_60632D90
  * RVA 0x00632d90   size 0x194   xrefs 1
  * ============================================================================ */
@@ -14594,6 +16207,45 @@
     result[1525] = 0;
     result[1526] = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_kinokoLift_parent_6335EC
+ * RVA 0x006335ec   size 0x14c   xrefs 0
+ * ============================================================================ */
+  int sub_606335EC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD4246;
+    Profile::Profile(13321012, 6500644, MEMORY[0xAF2DEC], (int)v1, &unk_60B071D8, 0);
+    MEMORY[0xCB4350] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB434C] = 12659084;
+    MEMORY[0xCB4354] = 6500732;
+    MEMORY[0xCB4358] = 0;
+    MEMORY[0xCB435C] = 6500736;
+    MEMORY[0xCB4360] = 0;
+    MEMORY[0xCB4364] = 6500760;
+    MEMORY[0xCB4368] = 0;
+    MEMORY[0xCB436C] = 12659084;
+    MEMORY[0xCB4370] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB4374] = 6500764;
+    MEMORY[0xCB4378] = 0;
+    MEMORY[0xCB437C] = 6500768;
+    MEMORY[0xCB4380] = 0;
+    MEMORY[0xCB4384] = 6500988;
+    MEMORY[0xCB4388] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB4390] = MEMORY[0xC7B788];
+    MEMORY[0xCB438C] = 12659084;
+    MEMORY[0xCB4394] = 6500992;
+    MEMORY[0xCB4398] = 0;
+    MEMORY[0xCB439C] = 6500996;
+    MEMORY[0xCB43A0] = 0;
+    MEMORY[0xCB43A4] = 6501000;
+    MEMORY[0xCB43A8] = 0;
+    return 6501000;
   }
 
 /* ============================================================================
@@ -15119,6 +16771,68 @@
   }
 
 /* ============================================================================
+ * registerProfile_Boxing_BowserJr_exclusive_floor_634B88
+ * RVA 0x00634b88   size 0x228   xrefs 0
+ * ============================================================================ */
+  int sub_60634B88()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB4470 = 0;
+    dword_60CB4474 = 0;
+    dword_60CB4478 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD425F;
+    *(_DWORD *)Profile::Profile(13321132, 6502280, MEMORY[0xAF32F8], (int)v1, &unk_60B071FC, 0) = 12659104;
+    MEMORY[0xCB43C8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB43C4] = 12659360;
+    MEMORY[0xCB43CC] = 6502480;
+    MEMORY[0xCB43D0] = 0;
+    MEMORY[0xCB43D4] = 6502508;
+    MEMORY[0xCB43D8] = 0;
+    MEMORY[0xCB43DC] = 6502604;
+    MEMORY[0xCB43E0] = 0;
+    MEMORY[0xCB43E4] = 12659360;
+    MEMORY[0xCB43E8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB43EC] = 6502608;
+    MEMORY[0xCB43F0] = 0;
+    MEMORY[0xCB43F4] = 6502820;
+    MEMORY[0xCB43F8] = 0;
+    MEMORY[0xCB43FC] = 6503620;
+    MEMORY[0xCB4400] = 0;
+    MEMORY[0xCB4404] = 12659360;
+    MEMORY[0xCB4408] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB440C] = 6503624;
+    MEMORY[0xCB4410] = 0;
+    MEMORY[0xCB4414] = 6503748;
+    MEMORY[0xCB4418] = 0;
+    MEMORY[0xCB441C] = 6503752;
+    MEMORY[0xCB4420] = 0;
+    MEMORY[0xCB4424] = 12659360;
+    MEMORY[0xCB4428] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC7B788] += 5;
+    off_60CB447C = (_UNKNOWN *)12321336;
+    MEMORY[0xCB4448] = MEMORY[0xC7B788];
+    MEMORY[0xCB4444] = 12659360;
+    MEMORY[0xCB442C] = 6503756;
+    MEMORY[0xCB4430] = 0;
+    MEMORY[0xCB444C] = 6504132;
+    MEMORY[0xCB4450] = 0;
+    MEMORY[0xCB4434] = 6503872;
+    MEMORY[0xCB4438] = 0;
+    MEMORY[0xCB4454] = 6504184;
+    MEMORY[0xCB4458] = 0;
+    MEMORY[0xCB443C] = 6504128;
+    MEMORY[0xCB4440] = 0;
+    MEMORY[0xCB445C] = 6504292;
+    MEMORY[0xCB4460] = 0;
+    dword_60CB4480 = (int)"point_sign";
+    off_60CB4484 = (_UNKNOWN *)12321336;
+    dword_60CB4488 = (int)"point_appear";
+    return sub_60000288();
+  }
+
+/* ============================================================================
  * sub_60634E38
  * RVA 0x00634e38   size 0xec   xrefs 3
  * ============================================================================ */
@@ -15260,6 +16974,19 @@
         StateMgr::changeState(v4, 13321284);
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_Boxing_BowserJr_exclusive_floor_Manager_63560C
+ * RVA 0x0063560c   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_6063560C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD4325;
+    return Profile::Profile(13321356, 6509156, MEMORY[0xAF2DBC], (int)v1, &unk_60B07254, 0);
   }
 
 /* ============================================================================
@@ -15711,6 +17438,19 @@
     SwingingCollider_dtor((sead::IDisposer *)(a1 + 648));
     StageActor::~StageActor((Actor *)a1);
     return operator delete(v2);
+  }
+
+/* ============================================================================
+ * registerProfile_RopeLadder_ctor_636174
+ * RVA 0x00636174   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60636174()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD4359;
+    return Profile::Profile(13321388, 6510220, MEMORY[0xAF30E8], (int)v1, &unk_60B07278, 2);
   }
 
 /* ============================================================================
@@ -17126,6 +18866,79 @@
   }
 
 /* ============================================================================
+ * registerProfile_switch_Lift_63A47C
+ * RVA 0x0063a47c   size 0x1e4   xrefs 0
+ * ============================================================================ */
+  int sub_6063A47C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB53C0 = 0;
+    dword_60CB53C4 = 0;
+    dword_60CB53C8 = 0;
+    dword_60CB53CC = 0;
+    dword_60CB53D0 = 0;
+    dword_60CB53D4 = 0;
+    MEMORY[0xCB53D8] = 0;
+    MEMORY[0xCB53DC] = 0x40000000;
+    MEMORY[0xCB53E0] = 1065353216;
+    MEMORY[0xCB53E4] = -1073741824;
+    MEMORY[0xCB53E8] = -1082130432;
+    MEMORY[0xCB53EC] = 0;
+    MEMORY[0xCB53F0] = -1090519040;
+    MEMORY[0xCB53F4] = 0;
+    MEMORY[0xCB53F8] = 3;
+    MEMORY[0xCB53FC] = 0;
+    MEMORY[0xCB5400] = 0;
+    MEMORY[0xCB5404] = 1065353216;
+    MEMORY[0xCB5408] = 0x80000000;
+    MEMORY[0xCB540C] = 0;
+    MEMORY[0xCB5410] = 1065353216;
+    MEMORY[0xCB5414] = 0;
+    MEMORY[0xCB5418] = 1056964608;
+    MEMORY[0xCB541C] = 2;
+    MEMORY[0xCB5420] = 0;
+    MEMORY[0xCB5424] = 0x80000000;
+    MEMORY[0xCB5428] = 1065353216;
+    MEMORY[0xCB542C] = 0;
+    MEMORY[0xCB5430] = 0;
+    MEMORY[0xCB5434] = -1082130432;
+    MEMORY[0xCB5438] = 0;
+    MEMORY[0xCB543C] = -1090519040;
+    MEMORY[0xCB5440] = 1;
+    MEMORY[0xCB5444] = 0;
+    MEMORY[0xCB5448] = -1073741824;
+    MEMORY[0xCB544C] = 1065353216;
+    MEMORY[0xCB5450] = 0x40000000;
+    MEMORY[0xCB5454] = 1065353216;
+    MEMORY[0xCB5458] = 0;
+    MEMORY[0xCB545C] = 1056964608;
+    MEMORY[0xCB5460] = 0;
+    MEMORY[0xCB5464] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD4DB2;
+    Profile::Profile(13325416, 6525856, MEMORY[0xAF32D8], (int)v1, &unk_60B072A0, 2);
+    MEMORY[0xCB5484] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB5480] = 12659936;
+    MEMORY[0xCB5488] = 6525884;
+    MEMORY[0xCB548C] = 0;
+    MEMORY[0xCB5490] = 6525888;
+    MEMORY[0xCB5494] = 0;
+    MEMORY[0xCB5498] = 6526148;
+    MEMORY[0xCB549C] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB54A4] = MEMORY[0xC7B788];
+    MEMORY[0xCB54A0] = 12659936;
+    MEMORY[0xCB54A8] = 6526152;
+    MEMORY[0xCB54AC] = 0;
+    MEMORY[0xCB54B0] = 6526252;
+    MEMORY[0xCB54B4] = 0;
+    MEMORY[0xCB54B8] = 6526720;
+    MEMORY[0xCB54BC] = 0;
+    return 6526720;
+  }
+
+/* ============================================================================
  * Actor_raitowith_tarirotate_Lift_build
  * RVA 0x0063a6a8   size 0x148   xrefs 0
  * ============================================================================ */
@@ -17165,6 +18978,19 @@
     v0[1716] = v3;
     SolidOnTopCollider_setPointMetaRelated(v0 + 1606, 1, (int)(v0 + 1698), (int)(v0 + 1702), v1);
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_raitowith_tarirotate_Lift_63AF28
+ * RVA 0x0063af28   size 0x70   xrefs 0
+ * ============================================================================ */
+  int sub_6063AF28()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC74D7;
+    return Profile::Profile(13325512, 6530728, MEMORY[0xAF2EAC], (int)v1, &unk_60B072C4, 2);
   }
 
 /* ============================================================================
@@ -18349,6 +20175,124 @@
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)*v18 + 60))(*v18, v20);
     (*(void (__fastcall **)(_DWORD, _DWORD **))(*(_DWORD *)**v1 + 68))(**v1, v1 - 1490);
     return ModelWrapper_updateModel(*v1);
+  }
+
+/* ============================================================================
+ * registerProfile_lava_pendulum_Lift_center_63D95C
+ * RVA 0x0063d95c   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_6063D95C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD4FD3;
+    return Profile::Profile(13326072, 6542576, MEMORY[0xAF39B0], (int)v1, &unk_60B07344, 0);
+  }
+
+/* ============================================================================
+ * registerProfile_Lift_63D9F4
+ * RVA 0x0063d9f4   size 0x36c   xrefs 0
+ * ============================================================================ */
+  int sub_6063D9F4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB5898 = 0;
+    dword_60CB589C = 0;
+    dword_60CB58A0 = 0;
+    dword_60CB58A4 = 12321336;
+    dword_60CB58A8 = (int)"leaf1";
+    dword_60CB58AC = 12321336;
+    dword_60CB58B0 = (int)"leaf2";
+    dword_60CB58B4 = 12321336;
+    dword_60CB58B8 = (int)"leaf3";
+    sub_60000288();
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD501E;
+    Profile::Profile(13326104, 6544952, MEMORY[0xAF3138], (int)v1, &unk_60B07368, 2);
+    MEMORY[0xCB5734] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB5730] = 12661204;
+    MEMORY[0xCB5738] = 6545592;
+    MEMORY[0xCB573C] = 0;
+    MEMORY[0xCB5740] = 6545972;
+    MEMORY[0xCB5744] = 0;
+    MEMORY[0xCB5748] = 6546368;
+    MEMORY[0xCB574C] = 0;
+    MEMORY[0xCB5750] = 12661204;
+    MEMORY[0xCB5754] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB5758] = 6546372;
+    MEMORY[0xCB575C] = 0;
+    MEMORY[0xCB5760] = 6546420;
+    MEMORY[0xCB5764] = 0;
+    MEMORY[0xCB5768] = 6546624;
+    MEMORY[0xCB576C] = 0;
+    MEMORY[0xCB5770] = 12661204;
+    MEMORY[0xCB5774] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB5778] = 6546628;
+    MEMORY[0xCB577C] = 0;
+    MEMORY[0xCB5780] = 6546668;
+    MEMORY[0xCB5784] = 0;
+    MEMORY[0xCB5788] = 6546720;
+    MEMORY[0xCB578C] = 0;
+    MEMORY[0xCB5790] = 12661204;
+    MEMORY[0xCB5794] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB5798] = 6546724;
+    MEMORY[0xCB579C] = 0;
+    MEMORY[0xCB57A0] = 6546820;
+    MEMORY[0xCB57A4] = 0;
+    MEMORY[0xCB57A8] = 6546928;
+    MEMORY[0xCB57AC] = 0;
+    MEMORY[0xCB57B0] = 12661204;
+    MEMORY[0xCB57B4] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCB57B8] = 6546932;
+    MEMORY[0xCB57BC] = 0;
+    MEMORY[0xCB57C0] = 6546936;
+    MEMORY[0xCB57C4] = 0;
+    MEMORY[0xCB57C8] = 6547036;
+    MEMORY[0xCB57CC] = 0;
+    MEMORY[0xCB57D0] = 12661204;
+    MEMORY[0xCB57D4] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCB57D8] = 6547040;
+    MEMORY[0xCB57DC] = 0;
+    MEMORY[0xCB57E0] = 6547108;
+    MEMORY[0xCB57E4] = 0;
+    MEMORY[0xCB57E8] = 6547148;
+    MEMORY[0xCB57EC] = 0;
+    MEMORY[0xCB57F0] = 12661204;
+    MEMORY[0xCB57F4] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xCB57F8] = 6547152;
+    MEMORY[0xCB57FC] = 0;
+    MEMORY[0xCB5800] = 6547168;
+    MEMORY[0xCB5804] = 0;
+    MEMORY[0xCB5808] = 6547224;
+    MEMORY[0xCB580C] = 0;
+    MEMORY[0xCB5810] = 12661204;
+    MEMORY[0xCB5814] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xCB5818] = 6547228;
+    MEMORY[0xCB581C] = 0;
+    MEMORY[0xCB5820] = 6547292;
+    MEMORY[0xCB5824] = 0;
+    MEMORY[0xCB5828] = 6547876;
+    MEMORY[0xCB582C] = 0;
+    MEMORY[0xCB5830] = 12661204;
+    MEMORY[0xCB5834] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC7B788] += 10;
+    MEMORY[0xCB5854] = MEMORY[0xC7B788];
+    MEMORY[0xCB5838] = 6547880;
+    MEMORY[0xCB5850] = 12661204;
+    MEMORY[0xCB583C] = 0;
+    MEMORY[0xCB5858] = 6548108;
+    MEMORY[0xCB5840] = 6548020;
+    MEMORY[0xCB585C] = 0;
+    MEMORY[0xCB5844] = 0;
+    MEMORY[0xCB5860] = 6548112;
+    MEMORY[0xCB5848] = 6548104;
+    MEMORY[0xCB584C] = 0;
+    MEMORY[0xCB5864] = 0;
+    MEMORY[0xCB5868] = 6548116;
+    MEMORY[0xCB586C] = 0;
+    return 13326416;
   }
 
 /* ============================================================================
@@ -19807,6 +21751,52 @@
   }
 
 /* ============================================================================
+ * registerProfile_Lift_RDash_642774
+ * RVA 0x00642774   size 0x1dc   xrefs 0
+ * ============================================================================ */
+  int sub_60642774()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD50F2;
+    Profile::Profile(13326696, 6557924, MEMORY[0xAF308C], (int)&v1, &unk_60B0738C, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD50FF;
+    Profile::Profile(13326720, 6557924, MEMORY[0xAF3090], (int)&v1, &unk_60B073B0, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD5112;
+    Profile::Profile(13326744, 6557924, MEMORY[0xAF3094], (int)&v1, &unk_60B073D4, 2);
+    MEMORY[0xCB59B4] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB59B0] = 12661428;
+    MEMORY[0xCB59B8] = 6558444;
+    MEMORY[0xCB59BC] = 0;
+    MEMORY[0xCB59C0] = 6558496;
+    MEMORY[0xCB59C4] = 0;
+    MEMORY[0xCB59C8] = 6558616;
+    MEMORY[0xCB59CC] = 0;
+    MEMORY[0xCB59D0] = 12661428;
+    MEMORY[0xCB59D4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB59F4] = MEMORY[0xC7B788];
+    MEMORY[0xCB59D8] = 6558704;
+    MEMORY[0xCB59F0] = 12661428;
+    MEMORY[0xCB59DC] = 0;
+    MEMORY[0xCB59F8] = 6558920;
+    MEMORY[0xCB59E0] = 6558708;
+    MEMORY[0xCB59FC] = 0;
+    MEMORY[0xCB59E4] = 0;
+    MEMORY[0xCB5A00] = 6559136;
+    MEMORY[0xCB59E8] = 6558916;
+    MEMORY[0xCB59EC] = 0;
+    MEMORY[0xCB5A04] = 0;
+    MEMORY[0xCB5A08] = 6559288;
+    MEMORY[0xCB5A0C] = 0;
+    return 13326832;
+  }
+
+/* ============================================================================
  * Actor_rutokuLift_build
  * RVA 0x00642b74   size 0x3c   xrefs 0
  * ============================================================================ */
@@ -19987,6 +21977,26 @@
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
     return BasicSoundActor2_play(v1, (int)"SE_OBJ_BACK_FORCE_LIFT_TURN_BLUE", v5, nullptr);
+  }
+
+/* ============================================================================
+ * registerProfile_rutokutariLift_6443F8
+ * RVA 0x006443f8   size 0x94   xrefs 0
+ * ============================================================================ */
+  int sub_606443F8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB5B50 = 0;
+    dword_60CB5B54 = 0;
+    unk_60CB5B58 = 0;
+    unk_60CB5B5C = 0x40000000;
+    unk_60CB5B60 = -1073741824;
+    unk_60CB5B64 = 0x80000000;
+    dword_60CB5B68 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5188;
+    return Profile::Profile(13327148, 6568696, MEMORY[0xAF32D4], (int)v1, &unk_60B07450, 2);
   }
 
 /* ============================================================================
@@ -20849,6 +22859,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_oke_ruroom_645E94
+ * RVA 0x00645e94   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60645E94()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5477;
+    return Profile::Profile(13327284, 6576060, MEMORY[0xAF2FAC], (int)v1, &unk_60B07474, 2);
+  }
+
+/* ============================================================================
  * lift_obake_chikei_ref
  * RVA 0x00645f1c   size 0x3a0   xrefs 0
  * ============================================================================ */
@@ -21041,6 +23064,56 @@
   }
 
 /* ============================================================================
+ * registerProfile_tarihorizontal_move_Lift_6471E0
+ * RVA 0x006471e0   size 0x1a4   xrefs 0
+ * ============================================================================ */
+  int sub_606471E0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB5E48 = 0;
+    dword_60CB5E4C = 0;
+    dword_60CB5E50 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD54DE;
+    Profile::Profile(13327956, 6578920, MEMORY[0xAF3110], (int)v1, &unk_60B07498, 2);
+    MEMORY[0xCB5E70] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB5E6C] = 12663096;
+    MEMORY[0xCB5E74] = 6579180;
+    MEMORY[0xCB5E78] = 0;
+    MEMORY[0xCB5E7C] = 6579252;
+    MEMORY[0xCB5E80] = 0;
+    MEMORY[0xCB5E84] = 6579340;
+    MEMORY[0xCB5E88] = 0;
+    MEMORY[0xCB5E8C] = 12663096;
+    MEMORY[0xCB5E90] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB5E94] = 6579344;
+    MEMORY[0xCB5E98] = 0;
+    MEMORY[0xCB5E9C] = 6579384;
+    MEMORY[0xCB5EA0] = 0;
+    MEMORY[0xCB5EA4] = 6579732;
+    MEMORY[0xCB5EA8] = 0;
+    MEMORY[0xCB5EAC] = 12663096;
+    MEMORY[0xCB5EB0] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB5EB4] = 6579736;
+    MEMORY[0xCB5EB8] = 0;
+    MEMORY[0xCB5EBC] = 6579844;
+    MEMORY[0xCB5EC0] = 0;
+    MEMORY[0xCB5EC4] = 6580396;
+    MEMORY[0xCB5EC8] = 0;
+    MEMORY[0xC7B788] += 4;
+    MEMORY[0xCB5ED0] = MEMORY[0xC7B788];
+    MEMORY[0xCB5ECC] = 12663096;
+    MEMORY[0xCB5ED4] = 6580400;
+    MEMORY[0xCB5ED8] = 0;
+    MEMORY[0xCB5EDC] = 6580412;
+    MEMORY[0xCB5EE0] = 0;
+    MEMORY[0xCB5EE4] = 6580636;
+    MEMORY[0xCB5EE8] = 0;
+    return 6580636;
+  }
+
+/* ============================================================================
  * Actor_tarivertical_move_Lift_build
  * RVA 0x006473e8   size 0x118   xrefs 0
  * ============================================================================ */
@@ -21073,6 +23146,56 @@
     *(_DWORD *)(v2 + 7104) = 0;
     *(_DWORD *)(v2 + 7108) = 0;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_tarivertical_move_Lift_6482FC
+ * RVA 0x006482fc   size 0x1a4   xrefs 0
+ * ============================================================================ */
+  int sub_606482FC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB5EF4 = 0;
+    dword_60CB5EF8 = 0;
+    dword_60CB5EFC = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5500;
+    Profile::Profile(13328128, 6583272, MEMORY[0xAF3114], (int)v1, &unk_60B074D4, 2);
+    MEMORY[0xCB5F1C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB5F18] = 12663320;
+    MEMORY[0xCB5F20] = 6583564;
+    MEMORY[0xCB5F24] = 0;
+    MEMORY[0xCB5F28] = 6583656;
+    MEMORY[0xCB5F2C] = 0;
+    MEMORY[0xCB5F30] = 6583744;
+    MEMORY[0xCB5F34] = 0;
+    MEMORY[0xCB5F38] = 12663320;
+    MEMORY[0xCB5F3C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB5F40] = 6583748;
+    MEMORY[0xCB5F44] = 0;
+    MEMORY[0xCB5F48] = 6583812;
+    MEMORY[0xCB5F4C] = 0;
+    MEMORY[0xCB5F50] = 6584184;
+    MEMORY[0xCB5F54] = 0;
+    MEMORY[0xCB5F58] = 12663320;
+    MEMORY[0xCB5F5C] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB5F60] = 6584204;
+    MEMORY[0xCB5F64] = 0;
+    MEMORY[0xCB5F68] = 6584312;
+    MEMORY[0xCB5F6C] = 0;
+    MEMORY[0xCB5F70] = 6584948;
+    MEMORY[0xCB5F74] = 0;
+    MEMORY[0xC7B788] += 4;
+    MEMORY[0xCB5F7C] = MEMORY[0xC7B788];
+    MEMORY[0xCB5F78] = 12663320;
+    MEMORY[0xCB5F80] = 6584952;
+    MEMORY[0xCB5F84] = 0;
+    MEMORY[0xCB5F88] = 6584964;
+    MEMORY[0xCB5F8C] = 0;
+    MEMORY[0xCB5F90] = 6585224;
+    MEMORY[0xCB5F94] = 0;
+    return 6585224;
   }
 
 /* ============================================================================
@@ -22525,6 +24648,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_rimokonLift_kurinchi_64C4C8
+ * RVA 0x0064c4c8   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6064C4C8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5594;
+    return Profile::Profile(13328500, 6603896, MEMORY[0xAF32C4], (int)v1, &unk_60B07528, 2);
+  }
+
+/* ============================================================================
  * Actor_rimokonLift_RDash_build
  * RVA 0x0064c54c   size 0x90   xrefs 0
  * ============================================================================ */
@@ -23779,6 +25915,29 @@
   }
 
 /* ============================================================================
+ * registerProfile_rimokonshisoLift_64EEB0
+ * RVA 0x0064eeb0   size 0xdc   xrefs 0
+ * ============================================================================ */
+  int sub_6064EEB0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5674;
+    Profile::Profile(13328624, 6610140, MEMORY[0xAF30F4], (int)v1, &unk_60B07580, 2);
+    MEMORY[0xCB6108] = 0x8000000;
+    MEMORY[0xCB6110] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB610C] = 12664524;
+    MEMORY[0xCB6114] = 6610688;
+    MEMORY[0xCB6118] = 0;
+    MEMORY[0xCB611C] = 6610756;
+    MEMORY[0xCB6120] = 0;
+    MEMORY[0xCB6124] = 6611348;
+    MEMORY[0xCB6128] = 0;
+    return 13328652;
+  }
+
+/* ============================================================================
  * Actor_rimokonmove_Lift_build
  * RVA 0x0064efc0   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -24361,6 +26520,48 @@
   }
 
 /* ============================================================================
+ * registerProfile_rimokonmove_Lift_650B48
+ * RVA 0x00650b48   size 0x164   xrefs 0
+ * ============================================================================ */
+  int sub_60650B48()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB612C = 0;
+    dword_60CB6130 = 0;
+    dword_60CB6134 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD56B8;
+    Profile::Profile(13328696, 6614976, MEMORY[0xAF30F8], (int)v1, &unk_60B075A4, 2);
+    MEMORY[0xCB6154] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB6150] = 12664748;
+    MEMORY[0xCB6158] = 6615004;
+    MEMORY[0xCB615C] = 0;
+    MEMORY[0xCB6160] = 6615008;
+    MEMORY[0xCB6164] = 0;
+    MEMORY[0xCB6168] = 6615632;
+    MEMORY[0xCB616C] = 0;
+    MEMORY[0xCB6170] = 12664748;
+    MEMORY[0xCB6174] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB6178] = 6615636;
+    MEMORY[0xCB617C] = 0;
+    MEMORY[0xCB6180] = 6615640;
+    MEMORY[0xCB6184] = 0;
+    MEMORY[0xCB6188] = 6617312;
+    MEMORY[0xCB618C] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB6194] = MEMORY[0xC7B788];
+    MEMORY[0xCB6190] = 12664748;
+    MEMORY[0xCB6198] = 6617316;
+    MEMORY[0xCB619C] = 0;
+    MEMORY[0xCB61A0] = 6617320;
+    MEMORY[0xCB61A4] = 0;
+    MEMORY[0xCB61A8] = 6617392;
+    MEMORY[0xCB61AC] = 0;
+    return 6617392;
+  }
+
+/* ============================================================================
  * Actor_tarihorizontal_move_Lift_2_build
  * RVA 0x00650d00   size 0x1e0   xrefs 0
  * ============================================================================ */
@@ -24417,6 +26618,68 @@
   }
 
 /* ============================================================================
+ * registerProfile_tarihorizontal_move_Lift_2_651F34
+ * RVA 0x00651f34   size 0x22c   xrefs 0
+ * ============================================================================ */
+  int sub_60651F34()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CB61B0 = 0;
+    dword_60CB61B4 = 0;
+    dword_60CB61B8 = 0;
+    v1 = 12321336;
+    v2 = &unk_60AD56F2;
+    Profile::Profile(13328828, 6622464, MEMORY[0xAF3078], (int)&v1, &unk_60B075C8, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD5714;
+    Profile::Profile(13328852, 6622464, MEMORY[0xAF307C], (int)&v1, &unk_60B075EC, 2);
+    MEMORY[0xCB61F0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB61EC] = 12664972;
+    MEMORY[0xCB61F4] = 6622956;
+    MEMORY[0xCB61F8] = 0;
+    MEMORY[0xCB61FC] = 6623008;
+    MEMORY[0xCB6200] = 0;
+    MEMORY[0xCB6204] = 6623144;
+    MEMORY[0xCB6208] = 0;
+    MEMORY[0xCB620C] = 12664972;
+    MEMORY[0xCB6210] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB6214] = 6623180;
+    MEMORY[0xCB6218] = 0;
+    MEMORY[0xCB621C] = 6623208;
+    MEMORY[0xCB6220] = 0;
+    MEMORY[0xCB6224] = 6623556;
+    MEMORY[0xCB6228] = 0;
+    MEMORY[0xCB622C] = 12664972;
+    MEMORY[0xCB6230] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB6234] = 6623560;
+    MEMORY[0xCB6238] = 0;
+    MEMORY[0xCB623C] = 6623668;
+    MEMORY[0xCB6240] = 0;
+    MEMORY[0xCB6244] = 6624220;
+    MEMORY[0xCB6248] = 0;
+    MEMORY[0xCB624C] = 12664972;
+    MEMORY[0xCB6250] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCB6270] = MEMORY[0xC7B788];
+    MEMORY[0xCB6254] = 6624224;
+    MEMORY[0xCB626C] = 12664972;
+    MEMORY[0xCB6258] = 0;
+    MEMORY[0xCB6274] = 6624464;
+    MEMORY[0xCB625C] = 6624236;
+    MEMORY[0xCB6278] = 0;
+    MEMORY[0xCB6260] = 0;
+    MEMORY[0xCB627C] = 6624500;
+    MEMORY[0xCB6264] = 6624460;
+    MEMORY[0xCB6268] = 0;
+    MEMORY[0xCB6280] = 0;
+    MEMORY[0xCB6284] = 6624596;
+    MEMORY[0xCB6288] = 0;
+    return 13329004;
+  }
+
+/* ============================================================================
  * Actor_rutokuLift_2_build
  * RVA 0x006521e4   size 0xac   xrefs 0
  * ============================================================================ */
@@ -24438,6 +26701,19 @@
     *(_DWORD *)(v0 + 6832) = 0;
     *(_DWORD *)(v0 + 6836) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_rutokuLift_2_6527EC
+ * RVA 0x006527ec   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606527EC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD573C;
+    return Profile::Profile(13329044, 6627812, MEMORY[0xAF3128], (int)v1, &unk_60B07624, 2);
   }
 
 /* ============================================================================
@@ -24653,6 +26929,38 @@
     if ( v3 < 1 )
       return 0;
     return (*(_BYTE *)(a1 + 23) & 0x10) != 0;
+  }
+
+/* ============================================================================
+ * registerProfile_rutokuLift_sky_for_653800
+ * RVA 0x00653800   size 0x11c   xrefs 0
+ * ============================================================================ */
+  int sub_60653800()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB631C = 12321336;
+    unk_60CB6320 = "joint9";
+    unk_60CB6324 = 12321336;
+    dword_60CB6328 = (int)"joint8";
+    dword_60CB632C = 12321336;
+    dword_60CB6330 = (int)"joint7";
+    dword_60CB6334 = 12321336;
+    dword_60CB6338 = (int)"joint6";
+    dword_60CB633C = 12321336;
+    dword_60CB6340 = (int)"joint5";
+    dword_60CB6344 = 12321336;
+    dword_60CB6348 = (int)"joint4";
+    dword_60CB634C = 12321336;
+    dword_60CB6350 = (int)"joint3";
+    dword_60CB6354 = 12321336;
+    dword_60CB6358 = (int)"joint2";
+    dword_60CB635C = 12321336;
+    dword_60CB6360 = (int)"joint1";
+    sub_60000288();
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5794;
+    return Profile::Profile(13329252, 6633832, MEMORY[0xAF312C], (int)v1, &unk_60B076C0, 2);
   }
 
 /* ============================================================================
@@ -26125,6 +28433,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_rutomarulava_Lift_656D88
+ * RVA 0x00656d88   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60656D88()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD585A;
+    return Profile::Profile(13329540, 6646908, MEMORY[0xAF2FF8], (int)v1, (void *)0xB07710, 2);
+  }
+
+/* ============================================================================
  * Actor_tarivertical_move_Lift_2_build
  * RVA 0x00657080   size 0x210   xrefs 0
  * ============================================================================ */
@@ -26185,6 +28506,68 @@
     *(_DWORD *)(v2 + 6900) = 0;
     *(_DWORD *)(v2 + 6896) = 0;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_tarivertical_move_Lift_2_658214
+ * RVA 0x00658214   size 0x22c   xrefs 0
+ * ============================================================================ */
+  int sub_60658214()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CB64C4 = 0;
+    dword_60CB64C8 = 0;
+    dword_60CB64CC = 0;
+    v1 = 12321336;
+    v2 = &unk_60AD5885;
+    Profile::Profile(13329616, 6647936, MEMORY[0xAF3074], (int)&v1, &unk_60B07738, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD58A7;
+    Profile::Profile(13329640, 6647936, MEMORY[0xAF3080], (int)&v1, &unk_60B0775C, 2);
+    MEMORY[0xCB6504] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB6500] = 12666420;
+    MEMORY[0xCB6508] = 6648476;
+    MEMORY[0xCB650C] = 0;
+    MEMORY[0xCB6510] = 6648528;
+    MEMORY[0xCB6514] = 0;
+    MEMORY[0xCB6518] = 6648552;
+    MEMORY[0xCB651C] = 0;
+    MEMORY[0xCB6520] = 12666420;
+    MEMORY[0xCB6524] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB6528] = 6648616;
+    MEMORY[0xCB652C] = 0;
+    MEMORY[0xCB6530] = 6648672;
+    MEMORY[0xCB6534] = 0;
+    MEMORY[0xCB6538] = 6649032;
+    MEMORY[0xCB653C] = 0;
+    MEMORY[0xCB6540] = 12666420;
+    MEMORY[0xCB6544] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB6548] = 6649036;
+    MEMORY[0xCB654C] = 0;
+    MEMORY[0xCB6550] = 6649144;
+    MEMORY[0xCB6554] = 0;
+    MEMORY[0xCB6558] = 6649780;
+    MEMORY[0xCB655C] = 0;
+    MEMORY[0xCB6560] = 12666420;
+    MEMORY[0xCB6564] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCB6584] = MEMORY[0xC7B788];
+    MEMORY[0xCB6568] = 6649784;
+    MEMORY[0xCB6580] = 12666420;
+    MEMORY[0xCB656C] = 0;
+    MEMORY[0xCB6588] = 6650060;
+    MEMORY[0xCB6570] = 6649796;
+    MEMORY[0xCB658C] = 0;
+    MEMORY[0xCB6574] = 0;
+    MEMORY[0xCB6590] = 6650096;
+    MEMORY[0xCB6578] = 6650056;
+    MEMORY[0xCB657C] = 0;
+    MEMORY[0xCB6594] = 0;
+    MEMORY[0xCB6598] = 6650196;
+    MEMORY[0xCB659C] = 0;
+    return 13329792;
   }
 
 /* ============================================================================
@@ -26272,6 +28655,20 @@
   }
 
 /* ============================================================================
+ * registerProfile_rotate_buroku_atari_658D14
+ * RVA 0x00658d14   size 0x7c   xrefs 0
+ * ============================================================================ */
+  int sub_60658D14()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    memset(&unk_60CB65A8, 0, 0x24u);
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD58CF;
+    return Profile::Profile(13329868, 6653124, MEMORY[0xAF2F88], (int)v1, &unk_60B07794, 2);
+  }
+
+/* ============================================================================
  * Actor_pendulum_Lift_RDashtarienai_build
  * RVA 0x00658dac   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -26281,6 +28678,32 @@
   
     v0 = operator new(0x1A78u);
     return sub_60658F20(v0);
+  }
+
+/* ============================================================================
+ * registerProfile_pendulum_Lift_RDashtarienai_658DCC
+ * RVA 0x00658dcc   size 0x114   xrefs 0
+ * ============================================================================ */
+  int sub_60658DCC()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CB65EC = 12321336;
+    v1 = 12321336;
+    dword_60CB65F0 = (int)"ziku";
+    v2 = &unk_60AD58F9;
+    Profile::Profile(13329908, 6655404, MEMORY[0xAF2EA4], (int)&v1, &unk_60B077B8, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD590F;
+    Profile::Profile(13329932, 6655404, MEMORY[0xAF2EA8], (int)&v1, &unk_60B077B8, 2);
+    MEMORY[0xCB6624] = 12321336;
+    MEMORY[0xCB6628] = "huriko_ue_M";
+    MEMORY[0xCB662C] = 1126694912;
+    MEMORY[0xCB6630] = 12321336;
+    MEMORY[0xCB6634] = "huriko_ue_L";
+    MEMORY[0xCB6638] = 1130889216;
+    return sub_60000288();
   }
 
 /* ============================================================================
@@ -26962,6 +29385,80 @@
   }
 
 /* ============================================================================
+ * registerProfile_Lift_ri_65CCE0
+ * RVA 0x0065cce0   size 0x294   xrefs 0
+ * ============================================================================ */
+  int sub_6065CCE0()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    MEMORY[0xCB6654] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB6650] = 12667136;
+    MEMORY[0xCB6658] = 6659040;
+    MEMORY[0xCB665C] = 0;
+    MEMORY[0xCB6660] = 6659076;
+    MEMORY[0xCB6664] = 0;
+    MEMORY[0xCB6668] = 6659508;
+    MEMORY[0xCB666C] = 0;
+    MEMORY[0xCB6670] = 12667136;
+    MEMORY[0xCB6674] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB6678] = 6659512;
+    MEMORY[0xCB667C] = 0;
+    MEMORY[0xCB6680] = 6659636;
+    MEMORY[0xCB6684] = 0;
+    MEMORY[0xCB6688] = 6661256;
+    MEMORY[0xCB668C] = 0;
+    MEMORY[0xCB6690] = 12667136;
+    MEMORY[0xCB6694] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB6698] = 6661260;
+    MEMORY[0xCB669C] = 0;
+    MEMORY[0xCB66A0] = 6661276;
+    MEMORY[0xCB66A4] = 0;
+    MEMORY[0xCB66A8] = 6662072;
+    MEMORY[0xCB66AC] = 0;
+    MEMORY[0xCB66B0] = 12667136;
+    MEMORY[0xCB66B4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB66B8] = 6662076;
+    MEMORY[0xCB66BC] = 0;
+    MEMORY[0xCB66C0] = 6662080;
+    MEMORY[0xCB66C4] = 0;
+    MEMORY[0xCB66C8] = 6663388;
+    MEMORY[0xCB66CC] = 0;
+    MEMORY[0xCB66D0] = 12667136;
+    MEMORY[0xCB66D4] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCB66D8] = 6663392;
+    MEMORY[0xCB66DC] = 0;
+    MEMORY[0xCB66E0] = 6663652;
+    MEMORY[0xCB66E4] = 0;
+    MEMORY[0xCB66E8] = 6664032;
+    MEMORY[0xCB66EC] = 0;
+    MEMORY[0xCB66F0] = 12667136;
+    MEMORY[0xCB66F4] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCB66F8] = 6664140;
+    MEMORY[0xCB66FC] = 0;
+    MEMORY[0xCB6700] = 6664412;
+    MEMORY[0xCB6704] = 0;
+    MEMORY[0xCB6708] = 6664784;
+    MEMORY[0xCB670C] = 0;
+    MEMORY[0xC7B788] += 7;
+    MEMORY[0xCB6714] = MEMORY[0xC7B788];
+    MEMORY[0xCB6710] = 12667136;
+    MEMORY[0xCB6718] = 6664788;
+    MEMORY[0xCB671C] = 0;
+    MEMORY[0xCB6720] = 6665060;
+    MEMORY[0xCB6724] = 0;
+    MEMORY[0xCB6728] = 6665404;
+    MEMORY[0xCB672C] = 0;
+    v1 = 12321336;
+    v2 = &unk_60AD595C;
+    Profile::Profile(13330224, 6665408, MEMORY[0xAF30C4], (int)&v1, &unk_60B077DC, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD596C;
+    return Profile::Profile(13330248, 6665408, MEMORY[0xAF30C8], (int)&v1, &unk_60B077DC, 2);
+  }
+
+/* ============================================================================
  * Actor_Lift_sutepu_build
  * RVA 0x0065d308   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -27347,6 +29844,60 @@
   }
 
 /* ============================================================================
+ * registerProfile_Lift_sutepu_65E45C
+ * RVA 0x0065e45c   size 0x1d8   xrefs 0
+ * ============================================================================ */
+  int sub_6065E45C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    MEMORY[0xCB6774] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB6770] = 12667360;
+    MEMORY[0xCB6778] = 6672404;
+    MEMORY[0xCB677C] = 0;
+    MEMORY[0xCB6780] = 6672408;
+    MEMORY[0xCB6784] = 0;
+    MEMORY[0xCB6788] = 6672412;
+    MEMORY[0xCB678C] = 0;
+    MEMORY[0xCB6794] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB6790] = 12667360;
+    MEMORY[0xCB6798] = 6672416;
+    MEMORY[0xCB679C] = 0;
+    MEMORY[0xCB67A0] = 6672508;
+    MEMORY[0xCB67A4] = 0;
+    MEMORY[0xCB67A8] = 6672624;
+    MEMORY[0xCB67AC] = 0;
+    MEMORY[0xCB67B4] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB67B0] = 12667360;
+    MEMORY[0xCB67B8] = 6672628;
+    MEMORY[0xCB67BC] = 0;
+    MEMORY[0xCB67C0] = 6672704;
+    MEMORY[0xCB67C4] = 0;
+    MEMORY[0xCB67C8] = 6672708;
+    MEMORY[0xCB67CC] = 0;
+    MEMORY[0xCB67D4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB67D0] = 12667360;
+    MEMORY[0xCB67D8] = 6672712;
+    MEMORY[0xCB67DC] = 0;
+    MEMORY[0xCB67E0] = 6672776;
+    MEMORY[0xCB67E4] = 0;
+    MEMORY[0xCB67E8] = 6672808;
+    MEMORY[0xCB67EC] = 0;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCB67F4] = MEMORY[0xC7B788];
+    MEMORY[0xCB67F0] = 12667360;
+    MEMORY[0xCB67F8] = 6672812;
+    MEMORY[0xCB67FC] = 0;
+    MEMORY[0xCB6800] = 6672928;
+    MEMORY[0xCB6804] = 0;
+    MEMORY[0xCB6808] = 6673156;
+    MEMORY[0xCB680C] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD59D1;
+    return Profile::Profile(13330448, 6673160, MEMORY[0xAF30C0], (int)v1, &unk_60B07800, 0);
+  }
+
+/* ============================================================================
  * Actor_shisoLift_RDash_build
  * RVA 0x0065e6a4   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -27616,6 +30167,32 @@
       v13 = -v13;
     *a3 += v13;
     return 1;
+  }
+
+/* ============================================================================
+ * registerProfile_shisoLift_RDash_65F840
+ * RVA 0x0065f840   size 0x108   xrefs 0
+ * ============================================================================ */
+  int sub_6065F840()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD59ED;
+    Profile::Profile(13330472, 6678180, MEMORY[0xAF3098], (int)&v1, &unk_60B07824, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD5A03;
+    Profile::Profile(13330496, 6678180, MEMORY[0xAF309C], (int)&v1, &unk_60B07824, 2);
+    MEMORY[0xCB685C] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB6858] = 12667672;
+    MEMORY[0xCB6860] = 6678208;
+    MEMORY[0xCB6864] = 0;
+    MEMORY[0xCB6868] = 6678232;
+    MEMORY[0xCB686C] = 0;
+    MEMORY[0xCB6870] = 6678736;
+    MEMORY[0xCB6874] = 0;
+    return 13330520;
   }
 
 /* ============================================================================
@@ -28108,6 +30685,89 @@
   }
 
 /* ============================================================================
+ * registerProfile_kinokoLift_resident_661390
+ * RVA 0x00661390   size 0x2d8   xrefs 0
+ * ============================================================================ */
+  int sub_60661390()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD5A34;
+    Profile::Profile(13330552, 6683012, MEMORY[0xAF304C], (int)&v1, &unk_60B07864, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD5A50;
+    Profile::Profile(13330576, 6683012, MEMORY[0xAF3050], (int)&v1, &unk_60B07888, 2);
+    MEMORY[0xCB68AC] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB68A8] = 12667896;
+    MEMORY[0xCB68B0] = 6683684;
+    MEMORY[0xCB68B4] = 0;
+    MEMORY[0xCB68B8] = 6683792;
+    MEMORY[0xCB68BC] = 0;
+    MEMORY[0xCB68C0] = 6684176;
+    MEMORY[0xCB68C4] = 0;
+    MEMORY[0xCB68C8] = 12667896;
+    MEMORY[0xCB68CC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB68D0] = 6684204;
+    MEMORY[0xCB68D4] = 0;
+    MEMORY[0xCB68D8] = 6684208;
+    MEMORY[0xCB68DC] = 0;
+    MEMORY[0xCB68E0] = 6684260;
+    MEMORY[0xCB68E4] = 0;
+    MEMORY[0xCB68E8] = 12667896;
+    MEMORY[0xCB68EC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB68F0] = 6684288;
+    MEMORY[0xCB68F4] = 0;
+    MEMORY[0xCB68F8] = 6684292;
+    MEMORY[0xCB68FC] = 0;
+    MEMORY[0xCB6900] = 6684364;
+    MEMORY[0xCB6904] = 0;
+    MEMORY[0xCB6908] = 12667896;
+    MEMORY[0xCB690C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB6910] = 6684392;
+    MEMORY[0xCB6914] = 0;
+    MEMORY[0xCB6918] = 6684396;
+    MEMORY[0xCB691C] = 0;
+    MEMORY[0xCB6920] = 6684448;
+    MEMORY[0xCB6924] = 0;
+    MEMORY[0xCB6928] = 12667896;
+    MEMORY[0xCB692C] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCB6930] = 6684464;
+    MEMORY[0xCB6934] = 0;
+    MEMORY[0xCB6938] = 6684572;
+    MEMORY[0xCB693C] = 0;
+    MEMORY[0xCB6940] = 6684952;
+    MEMORY[0xCB6944] = 0;
+    MEMORY[0xCB6948] = 12667896;
+    MEMORY[0xCB694C] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCB6950] = 6684980;
+    MEMORY[0xCB6954] = 0;
+    MEMORY[0xCB6958] = 6684984;
+    MEMORY[0xCB695C] = 0;
+    MEMORY[0xCB6960] = 6685036;
+    MEMORY[0xCB6964] = 0;
+    MEMORY[0xCB6968] = 12667896;
+    MEMORY[0xCB696C] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC7B788] += 8;
+    MEMORY[0xCB698C] = MEMORY[0xC7B788];
+    MEMORY[0xCB6970] = 6685064;
+    MEMORY[0xCB6988] = 12667896;
+    MEMORY[0xCB6974] = 0;
+    MEMORY[0xCB6990] = 6685168;
+    MEMORY[0xCB6978] = 6685068;
+    MEMORY[0xCB6994] = 0;
+    MEMORY[0xCB697C] = 0;
+    MEMORY[0xCB6998] = 6685172;
+    MEMORY[0xCB6980] = 6685140;
+    MEMORY[0xCB6984] = 0;
+    MEMORY[0xCB699C] = 0;
+    MEMORY[0xCB69A0] = 6685224;
+    MEMORY[0xCB69A4] = 0;
+    return 13330824;
+  }
+
+/* ============================================================================
  * Actor_tree_Lift_build
  * RVA 0x00661718   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -28559,6 +31219,88 @@
     }
     *v14 = result;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_tree_Lift_662EC4
+ * RVA 0x00662ec4   size 0x2a4   xrefs 0
+ * ============================================================================ */
+  int sub_60662EC4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB69B0 = 0;
+    dword_60CB69B4 = 0;
+    dword_60CB69B8 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5ADD;
+    Profile::Profile(13330876, 6690584, MEMORY[0xAF3144], (int)v1, &unk_60B078AC, 2);
+    MEMORY[0xCB69D8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB69D4] = 12668120;
+    MEMORY[0xCB69DC] = 6691348;
+    MEMORY[0xCB69E0] = 0;
+    MEMORY[0xCB69E4] = 6691392;
+    MEMORY[0xCB69E8] = 0;
+    MEMORY[0xCB69EC] = 6691620;
+    MEMORY[0xCB69F0] = 0;
+    MEMORY[0xCB69F4] = 12668120;
+    MEMORY[0xCB69F8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB69FC] = 6691636;
+    MEMORY[0xCB6A00] = 0;
+    MEMORY[0xCB6A04] = 6691640;
+    MEMORY[0xCB6A08] = 0;
+    MEMORY[0xCB6A0C] = 6691692;
+    MEMORY[0xCB6A10] = 0;
+    MEMORY[0xCB6A14] = 12668120;
+    MEMORY[0xCB6A18] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB6A1C] = 6691724;
+    MEMORY[0xCB6A20] = 0;
+    MEMORY[0xCB6A24] = 6691728;
+    MEMORY[0xCB6A28] = 0;
+    MEMORY[0xCB6A2C] = 6691952;
+    MEMORY[0xCB6A30] = 0;
+    MEMORY[0xCB6A34] = 12668120;
+    MEMORY[0xCB6A38] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB6A3C] = 6691968;
+    MEMORY[0xCB6A40] = 0;
+    MEMORY[0xCB6A44] = 6691972;
+    MEMORY[0xCB6A48] = 0;
+    MEMORY[0xCB6A4C] = 6692024;
+    MEMORY[0xCB6A50] = 0;
+    MEMORY[0xCB6A54] = 12668120;
+    MEMORY[0xCB6A58] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCB6A5C] = 6692028;
+    MEMORY[0xCB6A60] = 0;
+    MEMORY[0xCB6A64] = 6692076;
+    MEMORY[0xCB6A68] = 0;
+    MEMORY[0xCB6A6C] = 6692292;
+    MEMORY[0xCB6A70] = 0;
+    MEMORY[0xCB6A74] = 12668120;
+    MEMORY[0xCB6A78] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCB6A7C] = 6692308;
+    MEMORY[0xCB6A80] = 0;
+    MEMORY[0xCB6A84] = 6692312;
+    MEMORY[0xCB6A88] = 0;
+    MEMORY[0xCB6A8C] = 6692364;
+    MEMORY[0xCB6A90] = 0;
+    MEMORY[0xCB6A94] = 12668120;
+    MEMORY[0xCB6A98] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xCB6A9C] = 6692388;
+    MEMORY[0xCB6AA0] = 0;
+    MEMORY[0xCB6AA4] = 6692392;
+    MEMORY[0xCB6AA8] = 0;
+    MEMORY[0xCB6AAC] = 6692620;
+    MEMORY[0xCB6AB0] = 0;
+    MEMORY[0xC7B788] += 8;
+    MEMORY[0xCB6AB8] = MEMORY[0xC7B788];
+    MEMORY[0xCB6AB4] = 12668120;
+    MEMORY[0xCB6ABC] = 6692636;
+    MEMORY[0xCB6AC0] = 0;
+    MEMORY[0xCB6AC4] = 6692640;
+    MEMORY[0xCB6AC8] = 0;
+    MEMORY[0xCB6ACC] = 6692692;
+    MEMORY[0xCB6AD0] = 0;
+    return 6692692;
   }
 
 /* ============================================================================
@@ -29049,6 +31791,54 @@
   }
 
 /* ============================================================================
+ * registerProfile_supinrotate_kinoko_664C7C
+ * RVA 0x00664c7c   size 0x1a4   xrefs 0
+ * ============================================================================ */
+  int sub_60664C7C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5B23;
+    Profile::Profile(13331164, 6697484, MEMORY[0xAF303C], (int)v1, &unk_60B078D0, 2);
+    MEMORY[0xCB6AF4] = -53673984;
+    MEMORY[0xCB6AFC] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB6AF8] = 12668396;
+    MEMORY[0xCB6B00] = 6698312;
+    MEMORY[0xCB6B04] = 0;
+    MEMORY[0xCB6B08] = 6698316;
+    MEMORY[0xCB6B0C] = 0;
+    MEMORY[0xCB6B10] = 6698512;
+    MEMORY[0xCB6B14] = 0;
+    MEMORY[0xCB6B18] = 12668396;
+    MEMORY[0xCB6B1C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB6B20] = 6698516;
+    MEMORY[0xCB6B24] = 0;
+    MEMORY[0xCB6B28] = 6698584;
+    MEMORY[0xCB6B2C] = 0;
+    MEMORY[0xCB6B30] = 6699216;
+    MEMORY[0xCB6B34] = 0;
+    MEMORY[0xCB6B38] = 12668396;
+    MEMORY[0xCB6B3C] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB6B40] = 6699220;
+    MEMORY[0xCB6B44] = 0;
+    MEMORY[0xCB6B48] = 6699236;
+    MEMORY[0xCB6B4C] = 0;
+    MEMORY[0xCB6B50] = 6699528;
+    MEMORY[0xCB6B54] = 0;
+    MEMORY[0xC7B788] += 4;
+    MEMORY[0xCB6B5C] = MEMORY[0xC7B788];
+    MEMORY[0xCB6B58] = 12668396;
+    MEMORY[0xCB6B60] = 6699532;
+    MEMORY[0xCB6B64] = 0;
+    MEMORY[0xCB6B68] = 6699596;
+    MEMORY[0xCB6B6C] = 0;
+    MEMORY[0xCB6B70] = 6700320;
+    MEMORY[0xCB6B74] = 0;
+    return 6700320;
+  }
+
+/* ============================================================================
  * sub_60664E84
  * RVA 0x00664e84   size 0x190   xrefs 1
  * ============================================================================ */
@@ -29092,6 +31882,28 @@
   }
 
 /* ============================================================================
+ * registerProfile_supinrotate_kinoko_child_665ECC
+ * RVA 0x00665ecc   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int sub_60665ECC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5BC4;
+    Profile::Profile(13331348, 6706864, MEMORY[0xAF3040], (int)v1, &unk_60B0792C, 2);
+    MEMORY[0xCB6BB0] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB6BAC] = 12668636;
+    MEMORY[0xCB6BB4] = 6706936;
+    MEMORY[0xCB6BB8] = 0;
+    MEMORY[0xCB6BBC] = 6706940;
+    MEMORY[0xCB6BC0] = 0;
+    MEMORY[0xCB6BC4] = 6707136;
+    MEMORY[0xCB6BC8] = 0;
+    return 13331372;
+  }
+
+/* ============================================================================
  * Actor_kishiLift_build
  * RVA 0x00665fc8   size 0x5c   xrefs 0
  * ============================================================================ */
@@ -29110,6 +31922,19 @@
     *(_DWORD *)(v2 + 656) = 0;
     *(_DWORD *)(v2 + 660) = 0;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_kishiLift_6665A8
+ * RVA 0x006665a8   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606665A8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5BE6;
+    return Profile::Profile(13331412, 6709192, MEMORY[0xAF3084], (int)v1, &unk_60B07950, 2);
   }
 
 /* ============================================================================
@@ -29164,6 +31989,19 @@
     *(_DWORD *)(v2 + 6812) = 0;
     *(_DWORD *)(v2 + 6808) = 0;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_kishiLift_sutepu_666D84
+ * RVA 0x00666d84   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60666D84()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5BFC;
+    return Profile::Profile(13331492, 6710828, MEMORY[0xAF3088], (int)v1, &unk_60B079B8, 2);
   }
 
 /* ============================================================================
@@ -30175,6 +33013,37 @@
   }
 
 /* ============================================================================
+ * registerProfile_water_Lift_668AD0
+ * RVA 0x00668ad0   size 0x118   xrefs 0
+ * ============================================================================ */
+  int sub_60668AD0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5C21;
+    Profile::Profile(13331516, 6712840, MEMORY[0xAF32C0], (int)v1, &unk_60B079DC, 2);
+    MEMORY[0xCB6C58] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB6C54] = 12669200;
+    MEMORY[0xCB6C5C] = 6712872;
+    MEMORY[0xCB6C60] = 0;
+    MEMORY[0xCB6C64] = 6712952;
+    MEMORY[0xCB6C68] = 0;
+    MEMORY[0xCB6C6C] = 6713004;
+    MEMORY[0xCB6C70] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB6C78] = MEMORY[0xC7B788];
+    MEMORY[0xCB6C74] = 12669200;
+    MEMORY[0xCB6C7C] = 6713008;
+    MEMORY[0xCB6C80] = 0;
+    MEMORY[0xCB6C84] = 6713244;
+    MEMORY[0xCB6C88] = 0;
+    MEMORY[0xCB6C8C] = 6715312;
+    MEMORY[0xCB6C90] = 0;
+    return 6715312;
+  }
+
+/* ============================================================================
  * Actor_Lift_2_build
  * RVA 0x00668c2c   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -30659,6 +33528,31 @@
   }
 
 /* ============================================================================
+ * registerProfile_Lift_2_66A2D4
+ * RVA 0x0066a2d4   size 0xfc   xrefs 0
+ * ============================================================================ */
+  int sub_6066A2D4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5C7C;
+    Profile::Profile(13331620, 6720556, MEMORY[0xAF3134], (int)v1, &unk_60B07A00, 2);
+    MEMORY[0xCB6CC0] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB6CBC] = 12669424;
+    MEMORY[0xCB6CC4] = 6721412;
+    MEMORY[0xCB6CC8] = 0;
+    MEMORY[0xCB6CCC] = 6721416;
+    MEMORY[0xCB6CD0] = 0;
+    MEMORY[0xCB6CD4] = 6721620;
+    MEMORY[0xCB6CD8] = 0;
+    MEMORY[0xCB6CDC] = 0x800000;
+    MEMORY[0xCB6CE0] = 3145728;
+    MEMORY[0xCB6CE4] = 11534336;
+    return 13331684;
+  }
+
+/* ============================================================================
  * Actor_Hammer_pendulum_build
  * RVA 0x0066a40c   size 0x84   xrefs 0
  * ============================================================================ */
@@ -30871,6 +33765,35 @@
     v24[11] = v20;
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)*v4 + 60))(*v4, v24);
     return ModelWrapper_updateModel(v4);
+  }
+
+/* ============================================================================
+ * registerProfile_Hammer_pendulum_66B0F4
+ * RVA 0x0066b0f4   size 0xe0   xrefs 0
+ * ============================================================================ */
+  int sub_6066B0F4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB6D58 = 1098907648;
+    dword_60CB6D5C = 1098907648;
+    dword_60CB6D60 = 1098907648;
+    dword_60CB6D64 = -1031798784;
+    dword_60CB6D68 = 1107296256;
+    dword_60CB6D6C = -1031798784;
+    dword_60CB6D70 = 1107296256;
+    dword_60CB6D74 = -1021313024;
+    dword_60CB6D78 = -1040187392;
+    dword_60CB6D7C = -1021313024;
+    dword_60CB6D80 = -1040187392;
+    dword_60CB6D84 = -1031798784;
+    dword_60CB6D88 = -1048576000;
+    dword_60CB6D8C = -1031798784;
+    dword_60CB6D90 = -1048576000;
+    dword_60CB6D94 = 1098907648;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5CB9;
+    return Profile::Profile(13331716, 6726668, MEMORY[0xAF2FC4], (int)v1, &unk_60B07A24, 2);
   }
 
 /* ============================================================================
@@ -31450,6 +34373,37 @@
   }
 
 /* ============================================================================
+ * registerProfile_ne_me_66D040
+ * RVA 0x0066d040   size 0x110   xrefs 0
+ * ============================================================================ */
+  int sub_6066D040()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5D45;
+    Profile::Profile(13332168, 6736116, MEMORY[0xAF2F7C], (int)v1, &unk_60B07A90, 2);
+    MEMORY[0xCB6EE4] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB6EE0] = 12670440;
+    MEMORY[0xCB6EE8] = 6736212;
+    MEMORY[0xCB6EEC] = 0;
+    MEMORY[0xCB6EF0] = 6736216;
+    MEMORY[0xCB6EF4] = 0;
+    MEMORY[0xCB6EF8] = 6736368;
+    MEMORY[0xCB6EFC] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB6F04] = MEMORY[0xC7B788];
+    MEMORY[0xCB6F00] = 12670440;
+    MEMORY[0xCB6F08] = 6736372;
+    MEMORY[0xCB6F0C] = 0;
+    MEMORY[0xCB6F10] = 6736376;
+    MEMORY[0xCB6F14] = 0;
+    MEMORY[0xCB6F18] = 6736484;
+    MEMORY[0xCB6F1C] = 0;
+    return 6736484;
+  }
+
+/* ============================================================================
  * Actor_tariporigon_build
  * RVA 0x0066d190   size 0x7c   xrefs 0
  * ============================================================================ */
@@ -31706,6 +34660,37 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_tariporigon_66DBD0
+ * RVA 0x0066dbd0   size 0x110   xrefs 0
+ * ============================================================================ */
+  int sub_6066DBD0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5D85;
+    Profile::Profile(13332256, 6738320, MEMORY[0xAF2E14], (int)v1, &unk_60B07AB4, 2);
+    MEMORY[0xCB6F3C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB6F38] = 12670660;
+    MEMORY[0xCB6F40] = 6738452;
+    MEMORY[0xCB6F44] = 0;
+    MEMORY[0xCB6F48] = 6738456;
+    MEMORY[0xCB6F4C] = 0;
+    MEMORY[0xCB6F50] = 6738460;
+    MEMORY[0xCB6F54] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB6F5C] = MEMORY[0xC7B788];
+    MEMORY[0xCB6F58] = 12670660;
+    MEMORY[0xCB6F60] = 6738464;
+    MEMORY[0xCB6F64] = 0;
+    MEMORY[0xCB6F68] = 6738468;
+    MEMORY[0xCB6F6C] = 0;
+    MEMORY[0xCB6F70] = 6738568;
+    MEMORY[0xCB6F74] = 0;
+    return 6738568;
   }
 
 /* ============================================================================
@@ -32690,6 +35675,37 @@
     result[1525] = 0;
     result[1526] = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_parentchild_obuje_child_castle_6719D0
+ * RVA 0x006719d0   size 0x110   xrefs 0
+ * ============================================================================ */
+  int sub_606719D0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD5F6D;
+    Profile::Profile(13333492, 6756336, MEMORY[0xAF2E4C], (int)v1, &unk_60B07B28, 2);
+    MEMORY[0xCB7410] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB740C] = 12671428;
+    MEMORY[0xCB7414] = 6756432;
+    MEMORY[0xCB7418] = 0;
+    MEMORY[0xCB741C] = 6756436;
+    MEMORY[0xCB7420] = 0;
+    MEMORY[0xCB7424] = 6756448;
+    MEMORY[0xCB7428] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB7430] = MEMORY[0xC7B788];
+    MEMORY[0xCB742C] = 12671428;
+    MEMORY[0xCB7434] = 6756452;
+    MEMORY[0xCB7438] = 0;
+    MEMORY[0xCB743C] = 6756456;
+    MEMORY[0xCB7440] = 0;
+    MEMORY[0xCB7444] = 6756460;
+    MEMORY[0xCB7448] = 0;
+    return 6756460;
   }
 
 /* ============================================================================
@@ -33707,6 +36723,39 @@
   }
 
 /* ============================================================================
+ * registerProfile_SpinningStar_ctor_673AD4
+ * RVA 0x00673ad4   size 0x12c   xrefs 0
+ * ============================================================================ */
+  int sub_60673AD4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB761C = 0x3FFFFFFF;
+    dword_60CB7620 = 0x800000;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD603F;
+    Profile::Profile(13333940, 6758576, MEMORY[0xAF2E64], (int)v1, &unk_60B07B70, 2);
+    MEMORY[0xCB75D0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB75CC] = 12671892;
+    MEMORY[0xCB75D4] = 6759484;
+    MEMORY[0xCB75D8] = 0;
+    MEMORY[0xCB75DC] = 6759488;
+    MEMORY[0xCB75E0] = 0;
+    MEMORY[0xCB75E4] = 6760400;
+    MEMORY[0xCB75E8] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB75F0] = MEMORY[0xC7B788];
+    MEMORY[0xCB75EC] = 12671892;
+    MEMORY[0xCB75F4] = 6760404;
+    MEMORY[0xCB75F8] = 0;
+    MEMORY[0xCB75FC] = 6760408;
+    MEMORY[0xCB7600] = 0;
+    MEMORY[0xCB7604] = 6761128;
+    MEMORY[0xCB7608] = 0;
+    return 6761128;
+  }
+
+/* ============================================================================
  * lift_zen_star_ref
  * RVA 0x00673c4c   size 0x7f0   xrefs 0
  * ============================================================================ */
@@ -34377,6 +37426,68 @@
   }
 
 /* ============================================================================
+ * registerProfile_parentchild_obuje_child_ii_2_6755A8
+ * RVA 0x006755a8   size 0x17c   xrefs 0
+ * ============================================================================ */
+  int sub_606755A8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB7B04 = 0;
+    dword_60CB7B00 = 0;
+    dword_60CB7AFC = 0;
+    dword_60CB7AF8 = 0;
+    dword_60CB7B08 = -1039925248;
+    dword_60CB7B0C = 1120010240;
+    dword_60CB7B10 = 1107558400;
+    dword_60CB7B14 = 1107296256;
+    dword_60CB7B28 = 0;
+    dword_60CB7B24 = 0;
+    dword_60CB7B20 = 0;
+    dword_60CB7B1C = 0;
+    dword_60CB7B18 = 0;
+    dword_60CB7B2C = -1039925248;
+    dword_60CB7B30 = -1040187392;
+    dword_60CB7B34 = 1107558400;
+    dword_60CB7B38 = -1021247488;
+    dword_60CB7B3C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6173;
+    Profile::Profile(13335360, 6769468, MEMORY[0xAF2E38], (int)v1, &unk_60B07BD4, 2);
+    MEMORY[0xCB7B64] = 0;
+    MEMORY[0xCB7B60] = 0;
+    MEMORY[0xCB7B5C] = 0;
+    MEMORY[0xCB7B58] = 0;
+    MEMORY[0xCB7B68] = -1040187392;
+    MEMORY[0xCB7B6C] = 1107296256;
+    MEMORY[0xCB7B70] = 1107296256;
+    MEMORY[0xCB7B74] = -1040187392;
+    MEMORY[0xCB7B78] = 0;
+    MEMORY[0xCB7B7C] = 0;
+    MEMORY[0xCB7B8C] = 0;
+    MEMORY[0xCB7B88] = 0;
+    MEMORY[0xCB7B84] = 0;
+    MEMORY[0xCB7B80] = 0;
+    MEMORY[0xCB7B90] = -1040187392;
+    MEMORY[0xCB7B94] = 1107296256;
+    MEMORY[0xCB7B98] = 1107296256;
+    MEMORY[0xCB7B9C] = -1021313024;
+    MEMORY[0xCB7BA0] = 0;
+    MEMORY[0xCB7BA4] = 256;
+    MEMORY[0xCB7BB4] = 0;
+    MEMORY[0xCB7BB0] = 0;
+    MEMORY[0xCB7BAC] = 0;
+    MEMORY[0xCB7BA8] = 0;
+    MEMORY[0xCB7BB8] = -1040187392;
+    MEMORY[0xCB7BBC] = 1119879168;
+    MEMORY[0xCB7BC0] = 1107296256;
+    MEMORY[0xCB7BC4] = -1021313024;
+    MEMORY[0xCB7BC8] = 0;
+    MEMORY[0xCB7BCC] = 257;
+    return 13335384;
+  }
+
+/* ============================================================================
  * sub_60675744
  * RVA 0x00675744   size 0x218   xrefs 2
  * ============================================================================ */
@@ -34663,6 +37774,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_rotate_fort_buroku_67619C
+ * RVA 0x0067619c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6067619C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD61ED;
+    return Profile::Profile(13335576, 6773672, MEMORY[0xAF2F80], (int)v1, &unk_60B07BF8, 2);
+  }
+
+/* ============================================================================
  * Actor_rotate_fort_burokume_build
  * RVA 0x00676220   size 0x34   xrefs 0
  * ============================================================================ */
@@ -34769,6 +37893,19 @@
       (_DWORD *)a1 + 36);
     ModelWrapper_updateAnims(*((_DWORD *)a1 + 161));
     return ModelWrapper_updateModel(*((_DWORD *)a1 + 161));
+  }
+
+/* ============================================================================
+ * registerProfile_rotate_fort_burokume_676540
+ * RVA 0x00676540   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60676540()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6206;
+    return Profile::Profile(13335608, 6775328, MEMORY[0xAF39AC], (int)v1, &unk_60B07C1C, 2);
   }
 
 /* ============================================================================
@@ -35306,6 +38443,38 @@
   }
 
 /* ============================================================================
+ * registerProfile_light_ruburoku_677C74
+ * RVA 0x00677c74   size 0xfc   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_60677C74()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD623D;
+    Profile::Profile(13335700, 6779776, MEMORY[0xAF3338], (int)v1, &unk_60B07C40, 6166);
+    MEMORY[0xCB7CB0] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB7CB4] = 208;
+    MEMORY[0xCB7CB8] = 1;
+    MEMORY[0xCB7CBC] = 212;
+    MEMORY[0xCB7CC0] = 1;
+    MEMORY[0xCB7CC4] = 216;
+    MEMORY[0xCB7CC8] = 1;
+    MEMORY[0xCB7CAC] = 12673596;
+    MEMORY[0xCB7CCC] = 13307044;
+    dword_60CB7CD0 = 0;
+    unk_60CB7CD4 = 1090519040;
+    unk_60CB7CD8 = 0;
+    dword_60CB7CDC = 0;
+    dword_60CB7CE0 = -1056964608;
+    dword_60CB7CE4 = 1090519040;
+    dword_60CB7CE8[0] = 1090519040;
+    dword_60CB7CE8[1] = -1056964608;
+    dword_60CB7CE8[2] = 0;
+    return dword_60CB7CE8;
+  }
+
+/* ============================================================================
  * Actor_sea_for_build
  * RVA 0x00677d9c   size 0x40   xrefs 0
  * ============================================================================ */
@@ -35374,6 +38543,28 @@
   }
 
 /* ============================================================================
+ * registerProfile_sea_for_678250
+ * RVA 0x00678250   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int sub_60678250()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6250;
+    Profile::Profile(13335804, 6782364, MEMORY[0xAF39A0], (int)v1, &unk_60B07C88, 36);
+    MEMORY[0xCB7D18] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB7D14] = 12673816;
+    MEMORY[0xCB7D1C] = 6782432;
+    MEMORY[0xCB7D20] = 0;
+    MEMORY[0xCB7D24] = 6782436;
+    MEMORY[0xCB7D28] = 0;
+    MEMORY[0xCB7D2C] = 6782496;
+    MEMORY[0xCB7D30] = 0;
+    return 13335828;
+  }
+
+/* ============================================================================
  * Actor_chibiyoshi_light_ru_build
  * RVA 0x0067834c   size 0x11c   xrefs 0
  * ============================================================================ */
@@ -35414,6 +38605,28 @@
     *(_DWORD *)(v2 + 8532) = 1065353216;
     *(_DWORD *)(v2 + 8536) = 0;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_chibiyoshi_light_ru_678478
+ * RVA 0x00678478   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_60678478()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6260;
+    Profile::Profile(13335860, 6783820, MEMORY[0xAF342C], (int)v1, &unk_60B07CAC, 4);
+    dword_60CB7D54 = 12321336;
+    dword_60CB7D58 = (int)"light";
+    dword_60CB7D68 = 12321336;
+    dword_60CB7D6C = (int)"light_wait";
+    dword_60CB7D70 = 1;
+    dword_60CB7D74 = 12321336;
+    dword_60CB7D78 = (int)"light_flash";
+    dword_60CB7D7C = 0;
+    return sub_60000288();
   }
 
 /* ============================================================================
@@ -35716,6 +38929,45 @@
   }
 
 /* ============================================================================
+ * registerProfile_kinokoburoku_67A448
+ * RVA 0x0067a448   size 0x150   xrefs 0
+ * ============================================================================ */
+  int sub_6067A448()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD62A8;
+    Profile::Profile(13335936, 6790008, MEMORY[0xAF2E9C], (int)v1, &unk_60B07CD0, 2);
+    MEMORY[0xCB7D9C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB7D98] = 12674584;
+    MEMORY[0xCB7DA0] = 6790132;
+    MEMORY[0xCB7DA4] = 0;
+    MEMORY[0xCB7DA8] = 6790148;
+    MEMORY[0xCB7DAC] = 0;
+    MEMORY[0xCB7DB0] = 6790312;
+    MEMORY[0xCB7DB4] = 0;
+    MEMORY[0xCB7DB8] = 12674584;
+    MEMORY[0xCB7DBC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB7DC0] = 6790316;
+    MEMORY[0xCB7DC4] = 0;
+    MEMORY[0xCB7DC8] = 6790320;
+    MEMORY[0xCB7DCC] = 0;
+    MEMORY[0xCB7DD0] = 6790456;
+    MEMORY[0xCB7DD4] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB7DDC] = MEMORY[0xC7B788];
+    MEMORY[0xCB7DD8] = 12674584;
+    MEMORY[0xCB7DE0] = 6790460;
+    MEMORY[0xCB7DE4] = 0;
+    MEMORY[0xCB7DE8] = 6790604;
+    MEMORY[0xCB7DEC] = 0;
+    MEMORY[0xCB7DF0] = 6790652;
+    MEMORY[0xCB7DF4] = 0;
+    return 6790652;
+  }
+
+/* ============================================================================
  * Actor_supinLift_build
  * RVA 0x0067a5e8   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -35858,6 +39110,55 @@
     sub_605BF660((int)(a1 + 1526), (int)a1, ResArchiveById, 0, 1);
     a1[1724] = (int)(a1 + 2030);
     return a1 + 2030;
+  }
+
+/* ============================================================================
+ * registerProfile_supinLift_67B4D0
+ * RVA 0x0067b4d0   size 0x1a4   xrefs 0
+ * ============================================================================ */
+  int sub_6067B4D0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD62CF;
+    Profile::Profile(13336056, 6792680, MEMORY[0xAF2E98], (int)v1, &unk_60B07CF4, 2);
+    MEMORY[0xCB7E10] = -1033895936;
+    MEMORY[0xCB7E14] = MEMORY[0xB07428];
+    MEMORY[0xCB7E18] = 1113587712;
+    MEMORY[0xCB7E1C] = MEMORY[0xB07428];
+    MEMORY[0xCB7E20] = 0;
+    MEMORY[0xCB7E24] = 0;
+    MEMORY[0xCB7E28] = 0;
+    MEMORY[0xCB7E2C] = 0;
+    MEMORY[0xCB7E30] = 13336080;
+    MEMORY[0xCB7E34] = 0;
+    MEMORY[0xCB7E3C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB7E38] = 12674856;
+    MEMORY[0xCB7E40] = 6792708;
+    MEMORY[0xCB7E44] = 0;
+    MEMORY[0xCB7E48] = 6792724;
+    MEMORY[0xCB7E4C] = 0;
+    MEMORY[0xCB7E50] = 6792856;
+    MEMORY[0xCB7E54] = 0;
+    MEMORY[0xCB7E58] = 12674856;
+    MEMORY[0xCB7E5C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB7E60] = 6792860;
+    MEMORY[0xCB7E64] = 0;
+    MEMORY[0xCB7E68] = 6792864;
+    MEMORY[0xCB7E6C] = 0;
+    MEMORY[0xCB7E70] = 6792984;
+    MEMORY[0xCB7E74] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB7E7C] = MEMORY[0xC7B788];
+    MEMORY[0xCB7E78] = 12674856;
+    MEMORY[0xCB7E80] = 6792988;
+    MEMORY[0xCB7E84] = 0;
+    MEMORY[0xCB7E88] = 6793024;
+    MEMORY[0xCB7E8C] = 0;
+    MEMORY[0xCB7E90] = 6793912;
+    MEMORY[0xCB7E94] = 0;
+    return 6793912;
   }
 
 /* ============================================================================
@@ -36389,6 +39690,79 @@
     sub_60237560((int)(a1 + 20));
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 20));
     return a1;
+  }
+
+/* ============================================================================
+ * registerProfile_Lift_4_67CFBC
+ * RVA 0x0067cfbc   size 0x26c   xrefs 0
+ * ============================================================================ */
+  int sub_6067CFBC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB7EBC = 0;
+    dword_60CB7EB8 = 0;
+    dword_60CB7EB4 = 0;
+    dword_60CB7EB0 = 0;
+    dword_60CB7EC0 = -1048576000;
+    dword_60CB7EC4 = 1098907648;
+    dword_60CB7EC8 = 1098907648;
+    dword_60CB7ECC = -1048576000;
+    dword_60CB7ED0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6313;
+    Profile::Profile(13336276, 6797008, MEMORY[0xAF3008], (int)v1, (void *)0xB07D18, 2);
+    MEMORY[0xCB7EF0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB7EEC] = 12675144;
+    MEMORY[0xCB7EF4] = 6797220;
+    MEMORY[0xCB7EF8] = 0;
+    MEMORY[0xCB7EFC] = 6797224;
+    MEMORY[0xCB7F00] = 0;
+    MEMORY[0xCB7F04] = 6797492;
+    MEMORY[0xCB7F08] = 0;
+    MEMORY[0xCB7F10] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB7F0C] = 12675144;
+    MEMORY[0xCB7F14] = 6797496;
+    MEMORY[0xCB7F18] = 0;
+    MEMORY[0xCB7F1C] = 6797500;
+    MEMORY[0xCB7F20] = 0;
+    MEMORY[0xCB7F24] = 6797728;
+    MEMORY[0xCB7F28] = 0;
+    MEMORY[0xCB7F30] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB7F34] = 192;
+    MEMORY[0xCB7F38] = 1;
+    MEMORY[0xCB7F3C] = 196;
+    MEMORY[0xCB7F40] = 1;
+    MEMORY[0xCB7F44] = 200;
+    MEMORY[0xCB7F48] = 1;
+    MEMORY[0xCB7F2C] = 12675164;
+    MEMORY[0xCB7F4C] = 12755100;
+    MEMORY[0xCB7F54] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB7F50] = 12675144;
+    MEMORY[0xCB7F58] = 6797732;
+    MEMORY[0xCB7F5C] = 0;
+    MEMORY[0xCB7F60] = 6797888;
+    MEMORY[0xCB7F64] = 0;
+    MEMORY[0xCB7F68] = 6798044;
+    MEMORY[0xCB7F6C] = 0;
+    MEMORY[0xCB7F74] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCB7F70] = 12675144;
+    MEMORY[0xCB7F78] = 6798048;
+    MEMORY[0xCB7F7C] = 0;
+    MEMORY[0xCB7F80] = 6798204;
+    MEMORY[0xCB7F84] = 0;
+    MEMORY[0xCB7F88] = 6798508;
+    MEMORY[0xCB7F8C] = 0;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xCB7F94] = MEMORY[0xC7B788];
+    MEMORY[0xCB7F90] = 12675144;
+    MEMORY[0xCB7F98] = 6798512;
+    MEMORY[0xCB7F9C] = 0;
+    MEMORY[0xCB7FA0] = 6798572;
+    MEMORY[0xCB7FA4] = 0;
+    MEMORY[0xCB7FA8] = 6798772;
+    MEMORY[0xCB7FAC] = 0;
+    return 6798772;
   }
 
 /* ============================================================================
@@ -37666,6 +41040,38 @@
   }
 
 /* ============================================================================
+ * registerProfile_Lift_child_RDash_67FA18
+ * RVA 0x0067fa18   size 0x120   xrefs 0
+ * ============================================================================ */
+  int sub_6067FA18()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD63BF;
+    Profile::Profile(13336596, 6812968, MEMORY[0xAF3010], (int)v1, (void *)0xB07D18, 2);
+    MEMORY[0xCB8030] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB802C] = 12675560;
+    MEMORY[0xCB8034] = 6813016;
+    MEMORY[0xCB8038] = 0;
+    MEMORY[0xCB803C] = 6813020;
+    MEMORY[0xCB8040] = 0;
+    MEMORY[0xCB8044] = 6813056;
+    MEMORY[0xCB8048] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB8050] = MEMORY[0xC7B788];
+    MEMORY[0xCB8054] = 192;
+    MEMORY[0xCB8058] = 1;
+    MEMORY[0xCB805C] = 196;
+    MEMORY[0xCB8060] = 1;
+    MEMORY[0xCB8064] = 200;
+    MEMORY[0xCB8068] = 1;
+    MEMORY[0xCB804C] = 12675580;
+    MEMORY[0xCB806C] = 13336364;
+    return 13336364;
+  }
+
+/* ============================================================================
  * Actor_Lift_parent_RDash_build
  * RVA 0x0067fb74   size 0x3c   xrefs 0
  * ============================================================================ */
@@ -37679,6 +41085,28 @@
     *(_DWORD *)result = 12675600;
     *(_WORD *)(result + 10196) = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_Lift_parent_RDash_67FE30
+ * RVA 0x0067fe30   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int sub_6067FE30()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD63DC;
+    Profile::Profile(13336704, 6814580, MEMORY[0xAF300C], (int)v1, (void *)0xB07D18, 2);
+    MEMORY[0xCB809C] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB8098] = 12675820;
+    MEMORY[0xCB80A0] = 6814644;
+    MEMORY[0xCB80A4] = 0;
+    MEMORY[0xCB80A8] = 6814648;
+    MEMORY[0xCB80AC] = 0;
+    MEMORY[0xCB80B0] = 6814764;
+    MEMORY[0xCB80B4] = 0;
+    return 13336728;
   }
 
 /* ============================================================================
@@ -37804,6 +41232,23 @@
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 644) + 60))(**(_DWORD **)(a1 + 644), v24);
     (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 644) + 68))(**(_DWORD **)(a1 + 644), a1 + 144);
     return ModelWrapper_updateModel(*(_DWORD *)(a1 + 644));
+  }
+
+/* ============================================================================
+ * registerProfile_ruijisign_99_6803A4
+ * RVA 0x006803a4   size 0xa4   xrefs 0
+ * ============================================================================ */
+  int sub_606803A4()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD63F9;
+    Profile::Profile(13336760, 6815532, MEMORY[0xAF38C8], (int)&v1, &unk_60B07D44, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD641B;
+    return Profile::Profile(13336784, 6815532, MEMORY[0xAF38CC], (int)&v1, &unk_60B07D44, 2);
   }
 
 /* ============================================================================
@@ -39120,6 +42565,32 @@
   }
 
 /* ============================================================================
+ * registerProfile_majikuhandogu_RDash_6844DC
+ * RVA 0x006844dc   size 0xf4   xrefs 0
+ * ============================================================================ */
+  int sub_606844DC()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CB8298 = 0;
+    dword_60CB8278[0] = 0;
+    dword_60CB8278[1] = 1139802112;
+    dword_60CB8280 = 0;
+    unk_60CB8284 = 0;
+    unk_60CB8288 = -1044381696;
+    unk_60CB828C = 1138753536;
+    unk_60CB8290 = 1106247680;
+    unk_60CB8294 = -1008730112;
+    v1 = 12321336;
+    v2 = &unk_60AD64BA;
+    Profile::Profile(13337244, 6827104, MEMORY[0xAF324C], (int)&v1, &unk_60B07D68, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD64D6;
+    return Profile::Profile(13337268, 6827104, MEMORY[0xAF3250], (int)&v1, &unk_60B07D68, 2);
+  }
+
+/* ============================================================================
  * Actor_majikuhandopa_build
  * RVA 0x006845fc   size 0x68   xrefs 0
  * ============================================================================ */
@@ -39433,6 +42904,37 @@
   }
 
 /* ============================================================================
+ * registerProfile_majikuhandopa_685FD4
+ * RVA 0x00685fd4   size 0xf4   xrefs 0
+ * ============================================================================ */
+  int sub_60685FD4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB830C = 0;
+    dword_60CB8308 = 0;
+    dword_60CB8304 = 0;
+    dword_60CB8300 = 0;
+    dword_60CB8310 = -1023410176;
+    dword_60CB8314 = 1090519040;
+    dword_60CB8318 = 1124073472;
+    dword_60CB831C = -1040187392;
+    dword_60CB8320 = 0;
+    dword_60CB8324 = 0;
+    dword_60CB8328 = 1126170624;
+    dword_60CB832C = 0;
+    dword_60CB8330 = 0;
+    dword_60CB8334 = -1044381696;
+    dword_60CB8338 = 1124073472;
+    dword_60CB833C = 1106247680;
+    dword_60CB8340 = -1021313024;
+    dword_60CB8344 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6547;
+    return Profile::Profile(13337308, 6833660, MEMORY[0xAF3248], (int)v1, &unk_60B07D98, 2);
+  }
+
+/* ============================================================================
  * Actor_majikuhandoTag_gu_i_build
  * RVA 0x006860e8   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -39445,6 +42947,26 @@
     result = MultiStateActor::MultiStateActor(v0);
     *result = 12676896;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_majikuhandoTag_gu_i_686348
+ * RVA 0x00686348   size 0xd8   xrefs 0
+ * ============================================================================ */
+  int sub_60686348()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD661F;
+    Profile::Profile(13337416, 6840552, MEMORY[0xAF2D9C], (int)&v1, &unk_60B07DBC, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD6641;
+    Profile::Profile(13337440, 6840552, MEMORY[0xAF2DA0], (int)&v1, &unk_60B07DBC, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD6663;
+    return Profile::Profile(13337464, 6840552, MEMORY[0xAF2DA4], (int)&v1, &unk_60B07DBC, 2);
   }
 
 /* ============================================================================
@@ -40664,6 +44186,70 @@
   }
 
 /* ============================================================================
+ * registerProfile_majikuhando_Boxing_BowserJr_Demo_for_688CA4
+ * RVA 0x00688ca4   size 0x240   xrefs 0
+ * ============================================================================ */
+  int sub_60688CA4()
+  {
+    _DWORD *v0; // r0
+    int v2; // [sp+10h] [bp-8h] BYREF
+    void *v3; // [sp+14h] [bp-4h]
+  
+    dword_60CB8398 = 0;
+    dword_60CB839C = 0;
+    dword_60CB83A0 = 0;
+    v2 = 12321336;
+    v3 = &unk_60AD668E;
+    v0 = (_DWORD *)Profile::Profile(13337508, 6841424, MEMORY[0xAF318C], (int)&v2, &unk_60B07DE0, 0);
+    v2 = 12321336;
+    *v0 = 12677100;
+    v3 = &unk_60AD66C2;
+    *(_DWORD *)Profile::Profile(13337532, 6841424, MEMORY[0xAF3190], (int)&v2, &unk_60B07DE0, 0) = 12677112;
+    MEMORY[0xCB83D8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB83D4] = 12677376;
+    MEMORY[0xCB83DC] = 6841584;
+    MEMORY[0xCB83E0] = 0;
+    MEMORY[0xCB83E4] = 6841736;
+    MEMORY[0xCB83E8] = 0;
+    MEMORY[0xCB83EC] = 6841740;
+    MEMORY[0xCB83F0] = 0;
+    MEMORY[0xCB83F4] = 12677376;
+    MEMORY[0xCB83F8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB83FC] = 6841744;
+    MEMORY[0xCB8400] = 0;
+    MEMORY[0xCB8404] = 6841884;
+    MEMORY[0xCB8408] = 0;
+    MEMORY[0xCB840C] = 6842188;
+    MEMORY[0xCB8410] = 0;
+    MEMORY[0xCB8414] = 12677376;
+    MEMORY[0xCB8418] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB841C] = 6842192;
+    MEMORY[0xCB8420] = 0;
+    MEMORY[0xCB8424] = 6842468;
+    MEMORY[0xCB8428] = 0;
+    MEMORY[0xCB842C] = 6842724;
+    MEMORY[0xCB8430] = 0;
+    MEMORY[0xCB8434] = 12677376;
+    MEMORY[0xCB8438] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCB8458] = MEMORY[0xC7B788];
+    MEMORY[0xCB843C] = 6842728;
+    MEMORY[0xCB8454] = 12677376;
+    MEMORY[0xCB8440] = 0;
+    MEMORY[0xCB845C] = 6843112;
+    MEMORY[0xCB8444] = 6842912;
+    MEMORY[0xCB8460] = 0;
+    MEMORY[0xCB8448] = 0;
+    MEMORY[0xCB8464] = 6843580;
+    MEMORY[0xCB844C] = 6843108;
+    MEMORY[0xCB8450] = 0;
+    MEMORY[0xCB8468] = 0;
+    MEMORY[0xCB846C] = 6844084;
+    MEMORY[0xCB8470] = 0;
+    return 13337684;
+  }
+
+/* ============================================================================
  * sub_60688F88
  * RVA 0x00688f88   size 0x170   xrefs 1
  * ============================================================================ */
@@ -41211,6 +44797,22 @@
       goto LABEL_20;
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_sub_60688F6C_68A57C
+ * RVA 0x0068a57c   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_6068A57C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB8474 = 0;
+    dword_60CB8478 = 0;
+    dword_60CB847C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6815;
+    return Profile::Profile(13337728, 6852460, MEMORY[0xAF30A0], (int)v1, &unk_60B07E04, 2);
   }
 
 /* ============================================================================
@@ -43497,6 +47099,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_StoneEye_ctor_68EBD4
+ * RVA 0x0068ebd4   size 0x70   xrefs 0
+ * ============================================================================ */
+  int sub_6068EBD4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD687D;
+    return Profile::Profile(13337772, 6868820, MEMORY[0xAF2FC8], (int)v1, (void *)0xB07E70, 2);
+  }
+
+/* ============================================================================
  * lift_moaidon_ref
  * RVA 0x0068ec90   size 0x16f0   xrefs 0
  * ============================================================================ */
@@ -43930,6 +47545,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_moai_ki_6906F0
+ * RVA 0x006906f0   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606906F0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD68E4;
+    return Profile::Profile(13340592, 6882176, MEMORY[0xAF2FD0], (int)v1, (void *)0xB07E94, 2);
+  }
+
+/* ============================================================================
  * Actor_RDash24exclusive_moai_ki_build
  * RVA 0x00690774   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -43942,6 +47570,19 @@
     result = (_DWORD *)Actor_RDash24exclusive_moai_ki_build_helper(v2, a1);
     *result = 12679048;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_RDash24exclusive_moai_ki_690B28
+ * RVA 0x00690b28   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60690B28()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD68FD;
+    return Profile::Profile(13340624, 6883188, MEMORY[0xAF2FD4], (int)v1, (void *)0xB07E94, 2);
   }
 
 /* ============================================================================
@@ -44036,6 +47677,19 @@
     result = (_DWORD *)sub_6068D194(v0);
     *result = 12679312;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_RDash24exclusive_moai_691040
+ * RVA 0x00691040   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60691040()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6938;
+    return Profile::Profile(13340656, 6884768, MEMORY[0xAF2FCC], (int)v1, (void *)0xB07E70, 2);
   }
 
 /* ============================================================================
@@ -44338,6 +47992,61 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_RDash55exclusive_moai_692124
+ * RVA 0x00692124   size 0x1e4   xrefs 0
+ * ============================================================================ */
+  int sub_60692124()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6950;
+    Profile::Profile(13340688, 6885572, MEMORY[0xAF2FD8], (int)v1, &unk_60B07EC0, 2);
+    MEMORY[0xCB902C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB9028] = 12679812;
+    MEMORY[0xCB9030] = 6885872;
+    MEMORY[0xCB9034] = 0;
+    MEMORY[0xCB9038] = 6885876;
+    MEMORY[0xCB903C] = 0;
+    MEMORY[0xCB9040] = 6885880;
+    MEMORY[0xCB9044] = 0;
+    MEMORY[0xCB904C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB9048] = 12679812;
+    MEMORY[0xCB9050] = 6885884;
+    MEMORY[0xCB9054] = 0;
+    MEMORY[0xCB9058] = 6885900;
+    MEMORY[0xCB905C] = 0;
+    MEMORY[0xCB9060] = 6885956;
+    MEMORY[0xCB9064] = 0;
+    MEMORY[0xCB906C] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCB9068] = 12679812;
+    MEMORY[0xCB9070] = 6885960;
+    MEMORY[0xCB9074] = 0;
+    MEMORY[0xCB9078] = 6886020;
+    MEMORY[0xCB907C] = 0;
+    MEMORY[0xCB9080] = 6886368;
+    MEMORY[0xCB9084] = 0;
+    MEMORY[0xCB908C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCB9088] = 12679812;
+    MEMORY[0xCB9090] = 6886396;
+    MEMORY[0xCB9094] = 0;
+    MEMORY[0xCB9098] = 6886484;
+    MEMORY[0xCB909C] = 0;
+    MEMORY[0xCB90A0] = 6886788;
+    MEMORY[0xCB90A4] = 0;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCB90AC] = MEMORY[0xC7B788];
+    MEMORY[0xCB90A8] = 12679812;
+    MEMORY[0xCB90B0] = 6886792;
+    MEMORY[0xCB90B4] = 0;
+    MEMORY[0xCB90B8] = 6886924;
+    MEMORY[0xCB90BC] = 0;
+    MEMORY[0xCB90C0] = 6886928;
+    MEMORY[0xCB90C4] = 0;
+    return 0;
   }
 
 /* ============================================================================
@@ -44744,6 +48453,19 @@
     *(_DWORD *)(v0 + 6780) = v103;
     *(_DWORD *)(v0 + 6784) = v104;
     *(_DWORD *)(v0 + 6788) = v105;
+
+/* ============================================================================
+ * registerProfile_monoreruburoku_692FF4
+ * RVA 0x00692ff4   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60692FF4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6968;
+    return Profile::Profile(13340880, 6890364, MEMORY[0xAF3120], (int)v1, &unk_60B07EE4, 2);
+  }
 
 /* ============================================================================
  * sub_6069339C
@@ -45338,6 +49060,19 @@
     v16[7] = *(float *)(a1 + 112);
     v16[11] = *(float *)(a1 + 116);
     return sub_60694258(a1 + 644, v16);
+  }
+
+/* ============================================================================
+ * registerProfile_monoreruburoku_reru_693E98
+ * RVA 0x00693e98   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60693E98()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6A34;
+    return Profile::Profile(13341264, 6894968, MEMORY[0xAF3124], (int)v1, &unk_60B07F08, 2);
   }
 
 /* ============================================================================
@@ -46477,6 +50212,66 @@
   }
 
 /* ============================================================================
+ * registerProfile_grass_flower_697904
+ * RVA 0x00697904   size 0x1a0   xrefs 0
+ * ============================================================================ */
+  int sub_60697904()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB9360 = 0;
+    dword_60CB9364 = 0;
+    dword_60CB9368 = 0;
+    dword_60CB936C = 0;
+    dword_60CB9370 = 0;
+    dword_60CB9374 = 8;
+    dword_60CB9378 = 0x200000;
+    dword_60CB937C = 0x8000000;
+    dword_60CB9380 = 6553600;
+    dword_60CB9384 = 3276800;
+    dword_60CB9388 = 0;
+    dword_60CB938C = 0;
+    dword_60CB9390 = 0;
+    dword_60CB9394 = 8;
+    dword_60CB9398 = 6553600;
+    dword_60CB939C = 0x8000000;
+    dword_60CB93A0 = 6553600;
+    dword_60CB93A4 = 3276800;
+    dword_60CB93A8 = 0;
+    MEMORY[0xCB92D0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB92D4] = 192;
+    MEMORY[0xCB92D8] = 1;
+    MEMORY[0xCB92DC] = 196;
+    MEMORY[0xCB92E0] = 1;
+    MEMORY[0xCB92E4] = 200;
+    MEMORY[0xCB92E8] = 1;
+    MEMORY[0xCB92CC] = 12680616;
+    MEMORY[0xCB92EC] = 12755100;
+    MEMORY[0xCB92FC] = 1;
+    MEMORY[0xCB9300] = 220;
+    MEMORY[0xCB9304] = 1;
+    MEMORY[0xCB9308] = 224;
+    MEMORY[0xCB930C] = 1;
+    MEMORY[0xCB92F0] = 12680616;
+    MEMORY[0xCB92F4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB92F8] = 216;
+    MEMORY[0xCB9310] = 12755100;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB9320] = 1;
+    MEMORY[0xCB9324] = 208;
+    MEMORY[0xCB9328] = 1;
+    MEMORY[0xCB932C] = 212;
+    MEMORY[0xCB9330] = 1;
+    MEMORY[0xCB9314] = 12680616;
+    MEMORY[0xCB9318] = MEMORY[0xC7B788];
+    MEMORY[0xCB931C] = 204;
+    MEMORY[0xCB9334] = 12755100;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6AF6;
+    return Profile::Profile(13341496, 6902296, MEMORY[0xAF38D0], (int)v1, &unk_60B07F38, 2);
+  }
+
+/* ============================================================================
  * Actor_NEXTGOTOburoku_build
  * RVA 0x00697ad8   size 0x108   xrefs 0
  * ============================================================================ */
@@ -46580,6 +50375,48 @@
   }
 
 /* ============================================================================
+ * registerProfile_NEXTGOTOburoku_69898C
+ * RVA 0x0069898c   size 0x160   xrefs 0
+ * ============================================================================ */
+  int sub_6069898C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB93AC = 0;
+    dword_60CB93B0 = 0;
+    dword_60CB93B4 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6B03;
+    Profile::Profile(13341624, 6912728, MEMORY[0xAF38D8], (int)v1, &unk_60B07F80, 0);
+    MEMORY[0xCB93D4] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB93D0] = 12680976;
+    MEMORY[0xCB93D8] = 6912996;
+    MEMORY[0xCB93DC] = 0;
+    MEMORY[0xCB93E0] = 6913000;
+    MEMORY[0xCB93E4] = 0;
+    MEMORY[0xCB93E8] = 6913928;
+    MEMORY[0xCB93EC] = 0;
+    MEMORY[0xCB93F0] = 12680976;
+    MEMORY[0xCB93F4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCB93F8] = 6913932;
+    MEMORY[0xCB93FC] = 0;
+    MEMORY[0xCB9400] = 6913984;
+    MEMORY[0xCB9404] = 0;
+    MEMORY[0xCB9408] = 6914188;
+    MEMORY[0xCB940C] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCB9414] = MEMORY[0xC7B788];
+    MEMORY[0xCB9410] = 12680976;
+    MEMORY[0xCB9418] = 6914192;
+    MEMORY[0xCB941C] = 0;
+    MEMORY[0xCB9420] = 6914244;
+    MEMORY[0xCB9424] = 0;
+    MEMORY[0xCB9428] = 6914656;
+    MEMORY[0xCB942C] = 0;
+    return 6914656;
+  }
+
+/* ============================================================================
  * Actor_range_koin_build
  * RVA 0x00698b40   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -46592,6 +50429,19 @@
     result = MultiStateActor::MultiStateActor(v0);
     *result = 12680996;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_range_koin_698D34
+ * RVA 0x00698d34   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60698D34()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6B28;
+    return Profile::Profile(13341752, 6916928, MEMORY[0xAF2D68], (int)v1, &unk_60B07FA4, 2);
   }
 
 /* ============================================================================
@@ -46654,6 +50504,41 @@
   }
 
 /* ============================================================================
+ * registerProfile_OBJkoinresident_699400
+ * RVA 0x00699400   size 0x154   xrefs 0
+ * ============================================================================ */
+  int sub_60699400()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD6B4D;
+    Profile::Profile(13341784, 6917560, MEMORY[0xAF2D60], (int)&v1, &unk_60B07FC8, 0);
+    v1 = 12321336;
+    v2 = &unk_60AD6B6F;
+    Profile::Profile(13341808, 6917560, MEMORY[0xAF2D64], (int)&v1, &unk_60B07FEC, 0);
+    MEMORY[0xCB948C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB9488] = 12681404;
+    MEMORY[0xCB9490] = 6917632;
+    MEMORY[0xCB9494] = 0;
+    MEMORY[0xCB9498] = 6917636;
+    MEMORY[0xCB949C] = 0;
+    MEMORY[0xCB94A0] = 6918116;
+    MEMORY[0xCB94A4] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB94AC] = MEMORY[0xC7B788];
+    MEMORY[0xCB94A8] = 12681404;
+    MEMORY[0xCB94B0] = 6918120;
+    MEMORY[0xCB94B4] = 0;
+    MEMORY[0xCB94B8] = 6918124;
+    MEMORY[0xCB94BC] = 0;
+    MEMORY[0xCB94C0] = 6918128;
+    MEMORY[0xCB94C4] = 0;
+    return 6918128;
+  }
+
+/* ============================================================================
  * Actor_ri_build
  * RVA 0x006995a4   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -46711,6 +50596,19 @@
     result = ModelWrapper_setup(v11, ResArchiveById, 0, 0);
     a1[163] = (int)v10;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ri_699B30
+ * RVA 0x00699b30   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_60699B30()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6B97;
+    return Profile::Profile(13341904, 6919588, MEMORY[0xAF30BC], (int)v1, &unk_60B08010, 2);
   }
 
 /* ============================================================================
@@ -47277,6 +51175,40 @@
   }
 
 /* ============================================================================
+ * registerProfile_nato_69AE18
+ * RVA 0x0069ae18   size 0x13c   xrefs 0
+ * ============================================================================ */
+  int sub_6069AE18()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6BE2;
+    Profile::Profile(13341928, 6921196, MEMORY[0xAF39C4], (int)v1, &unk_60B08034, 0);
+    MEMORY[0xCB9500] = 3145728;
+    MEMORY[0xCB9504] = 100663296;
+    MEMORY[0xCB9508] = -33554432;
+    MEMORY[0xCB9510] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB950C] = 12681808;
+    MEMORY[0xCB9514] = 6922020;
+    MEMORY[0xCB9518] = 0;
+    MEMORY[0xCB951C] = 6922076;
+    MEMORY[0xCB9520] = 0;
+    MEMORY[0xCB9524] = 6922452;
+    MEMORY[0xCB9528] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB9530] = MEMORY[0xC7B788];
+    MEMORY[0xCB952C] = 12681808;
+    MEMORY[0xCB9534] = 6922456;
+    MEMORY[0xCB9538] = 0;
+    MEMORY[0xCB953C] = 6922472;
+    MEMORY[0xCB9540] = 0;
+    MEMORY[0xCB9544] = 6922804;
+    MEMORY[0xCB9548] = 0;
+    return 6922804;
+  }
+
+/* ============================================================================
  * sub_6069AFA0
  * RVA 0x0069afa0   size 0xc0   xrefs 33
  * ============================================================================ */
@@ -47401,6 +51333,35 @@
     *(_DWORD *)(v2 + 1176) = 0;
     *(_DWORD *)(v2 + 1180) = 0;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_obujekinoko_69B60C
+ * RVA 0x0069b60c   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int sub_6069B60C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB9554 = 0;
+    dword_60CB9558 = 0;
+    dword_60CB955C = 16;
+    dword_60CB9560 = 0x10000;
+    dword_60CB9564 = 0x8000000;
+    dword_60CB9568 = 0x200000;
+    dword_60CB956C = 0x100000;
+    dword_60CB9570 = 0x800000;
+    dword_60CB9574 = 0;
+    unk_60CB9578 = 0;
+    unk_60CB957C = 16;
+    unk_60CB9580 = 0x10000;
+    dword_60CB9584 = 0x8000000;
+    dword_60CB9588 = 0x80000;
+    dword_60CB958C = 0x100000;
+    dword_60CB9590 = 0x400000;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6C0E;
+    return Profile::Profile(13342100, 6926744, MEMORY[0xAF2E68], (int)v1, &unk_60B08058, 0);
   }
 
 /* ============================================================================
@@ -47855,6 +51816,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_mamemariofor_OBJpipe_69C340
+ * RVA 0x0069c340   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6069C340()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6C63;
+    return Profile::Profile(13342280, 6930976, MEMORY[0xAF2F3C], (int)v1, &unk_60B0807C, 2);
+  }
+
+/* ============================================================================
  * Actor_mamemariofor_OBJpipe_2_build
  * RVA 0x0069c3c4   size 0xa8   xrefs 0
  * ============================================================================ */
@@ -47886,6 +51860,19 @@
     *(_DWORD *)(v2 + 1344) = 0;
     *(_DWORD *)v2 = 12682248;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_mamemariofor_OBJpipe_2_69C4E4
+ * RVA 0x0069c4e4   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6069C4E4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6C84;
+    return Profile::Profile(13342304, 6931396, MEMORY[0xAF2F34], (int)v1, &unk_60B080A0, 2);
   }
 
 /* ============================================================================
@@ -47923,6 +51910,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_mamemariofor_OBJpipe_3_69C690
+ * RVA 0x0069c690   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6069C690()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6CA5;
+    return Profile::Profile(13342328, 6931816, MEMORY[0xAF2F30], (int)v1, &unk_60B080C4, 2);
+  }
+
+/* ============================================================================
  * Actor_mamemariofor_OBJpipe_4_build
  * RVA 0x0069c714   size 0xa8   xrefs 0
  * ============================================================================ */
@@ -47954,6 +51954,19 @@
     *(_DWORD *)(v2 + 1344) = 0;
     *(_DWORD *)v2 = 12682528;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_mamemariofor_OBJpipe_4_69C834
+ * RVA 0x0069c834   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6069C834()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6CC6;
+    return Profile::Profile(13342352, 6932244, MEMORY[0xAF2F38], (int)v1, &unk_60B080E8, 2);
   }
 
 /* ============================================================================
@@ -47994,6 +52007,19 @@
     memset((void *)(v0 + 6992), 0, 0x366u);
     *(_BYTE *)(v0 + 7864) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_rutokuokeobujeBG_69D24C
+ * RVA 0x0069d24c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6069D24C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6CE7;
+    return Profile::Profile(13342376, 6933608, MEMORY[0xAF2FF4], (int)v1, &unk_60B0810C, 2);
   }
 
 /* ============================================================================
@@ -48839,6 +52865,26 @@
   }
 
 /* ============================================================================
+ * registerProfile_OBJpipe_gurupu_69EE78
+ * RVA 0x0069ee78   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_6069EE78()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CB97B8 = 0;
+    dword_60CB97BC = 0;
+    dword_60CB97C0 = 0;
+    v1 = 12321336;
+    v2 = &unk_60AD6E0A;
+    Profile::Profile(13342660, 6941308, MEMORY[0xAF3268], (int)&v1, &unk_60B08130, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD6E19;
+    return Profile::Profile(13342684, 6941308, MEMORY[0xAF3278], (int)&v1, &unk_60B08154, 2);
+  }
+
+/* ============================================================================
  * Actor_OBJpipe_kiNEXTGOTO_build
  * RVA 0x0069ef6c   size 0x10c   xrefs 0
  * ============================================================================ */
@@ -48876,6 +52922,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_OBJpipe_kiNEXTGOTO_69F5BC
+ * RVA 0x0069f5bc   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6069F5BC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6E37;
+    return Profile::Profile(13342708, 6942572, MEMORY[0xAF2F40], (int)v1, &unk_60B081A4, 2);
+  }
+
+/* ============================================================================
  * Actor_OBJpipe_gurupu_2_build
  * RVA 0x0069f640   size 0x10c   xrefs 0
  * ============================================================================ */
@@ -48910,6 +52969,26 @@
     *(_DWORD *)v0 = 12683760;
     *(_DWORD *)(v0 + 6856) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_OBJpipe_gurupu_2_69FA64
+ * RVA 0x0069fa64   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_6069FA64()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CB9814 = 0;
+    dword_60CB9818 = 0;
+    dword_60CB981C = 0;
+    v1 = 12321336;
+    v2 = &unk_60AD6E55;
+    Profile::Profile(13342752, 6944320, MEMORY[0xAF3260], (int)&v1, &unk_60B081C8, 1026);
+    v1 = 12321336;
+    v2 = &unk_60AD6E64;
+    return Profile::Profile(13342776, 6944320, MEMORY[0xAF3270], (int)&v1, &unk_60B081EC, 1026);
   }
 
 /* ============================================================================
@@ -48952,6 +53031,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_OBJpipe_kiNEXTGOTO_2_6A0284
+ * RVA 0x006a0284   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_606A0284()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB9850 = 0;
+    dword_60CB9854 = 0;
+    dword_60CB9858 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6E82;
+    return Profile::Profile(13342812, 6945624, MEMORY[0xAF3280], (int)v1, &unk_60B0823C, 1026);
+  }
+
+/* ============================================================================
  * Actor_OBJpipe_gurupu_3_build
  * RVA 0x006a0320   size 0x10c   xrefs 0
  * ============================================================================ */
@@ -48986,6 +53081,26 @@
     *(_DWORD *)v0 = 12684168;
     *(_DWORD *)(v0 + 6856) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_OBJpipe_gurupu_3_6A0748
+ * RVA 0x006a0748   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_606A0748()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CB987C = 0;
+    dword_60CB9880 = 0;
+    dword_60CB9884 = 0;
+    v1 = 12321336;
+    v2 = &unk_60AD6EA0;
+    Profile::Profile(13342856, 6947616, MEMORY[0xAF325C], (int)&v1, &unk_60B0826C, 1026);
+    v1 = 12321336;
+    v2 = &unk_60AD6EAF;
+    return Profile::Profile(13342880, 6947616, MEMORY[0xAF326C], (int)&v1, &unk_60B08290, 1026);
   }
 
 /* ============================================================================
@@ -49026,6 +53141,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_OBJpipe_kiNEXTGOTO_3_6A0F58
+ * RVA 0x006a0f58   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_606A0F58()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB98B8 = 0;
+    dword_60CB98BC = 0;
+    dword_60CB98C0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6ECD;
+    return Profile::Profile(13342916, 6948924, MEMORY[0xAF327C], (int)v1, &unk_60B082EC, 1026);
+  }
+
+/* ============================================================================
  * Actor_OBJpipe_gurupu_4_build
  * RVA 0x006a0ff4   size 0x10c   xrefs 0
  * ============================================================================ */
@@ -49060,6 +53191,26 @@
     *(_DWORD *)v0 = 12684576;
     *(_DWORD *)(v0 + 6844) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_OBJpipe_gurupu_4_6A13C8
+ * RVA 0x006a13c8   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_606A13C8()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CB98E4 = 0;
+    dword_60CB98E8 = 0;
+    dword_60CB98EC = 0;
+    v1 = 12321336;
+    v2 = &unk_60AD6EEB;
+    Profile::Profile(13342960, 6950900, MEMORY[0xAF3264], (int)&v1, &unk_60B0831C, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD6EFA;
+    return Profile::Profile(13342984, 6950900, MEMORY[0xAF3274], (int)&v1, &unk_60B08340, 2);
   }
 
 /* ============================================================================
@@ -49099,6 +53250,22 @@
     *(_BYTE *)(v0 + 6845) = 0;
     *(_DWORD *)(v0 + 6848) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_OBJpipe_kiNEXTGOTO_4_6A1BE0
+ * RVA 0x006a1be0   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_606A1BE0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB9920 = 0;
+    dword_60CB9924 = 0;
+    dword_60CB9928 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6F18;
+    return Profile::Profile(13343020, 6952124, MEMORY[0xAF3284], (int)v1, &unk_60B0839C, 2);
   }
 
 /* ============================================================================
@@ -49237,6 +53404,41 @@
   }
 
 /* ============================================================================
+ * registerProfile_tariporigon_2_6A2864
+ * RVA 0x006a2864   size 0x12c   xrefs 0
+ * ============================================================================ */
+  int sub_606A2864()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB99B0 = 0;
+    dword_60CB99B4 = 0;
+    dword_60CB99B8 = 0;
+    memset(&unk_60CB99BC, 0, 0x24u);
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6F36;
+    Profile::Profile(13343052, 6954108, MEMORY[0xAF2E00], (int)v1, (void *)0xB083CC, 0);
+    MEMORY[0xCB9968] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCB9964] = 12685192;
+    MEMORY[0xCB996C] = 6954408;
+    MEMORY[0xCB9970] = 0;
+    MEMORY[0xCB9974] = 6954516;
+    MEMORY[0xCB9978] = 0;
+    MEMORY[0xCB997C] = 6954588;
+    MEMORY[0xCB9980] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCB9988] = MEMORY[0xC7B788];
+    MEMORY[0xCB9984] = 12685192;
+    MEMORY[0xCB998C] = 6954592;
+    MEMORY[0xCB9990] = 0;
+    MEMORY[0xCB9994] = 6954700;
+    MEMORY[0xCB9998] = 0;
+    MEMORY[0xCB999C] = 6954784;
+    MEMORY[0xCB99A0] = 0;
+    return 6954784;
+  }
+
+/* ============================================================================
  * Actor_tariporigon_for_build
  * RVA 0x006a29d4   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -49249,6 +53451,19 @@
     result = (_DWORD *)sub_606A1F24(v0);
     *result = 12685212;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_tariporigon_for_6A2CF0
+ * RVA 0x006a2cf0   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606A2CF0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6F4F;
+    return Profile::Profile(13343200, 6957524, MEMORY[0xAF2E0C], (int)v1, (void *)0xB083CC, 0);
   }
 
 /* ============================================================================
@@ -49267,6 +53482,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_tariporigon_for_2_6A2FF4
+ * RVA 0x006a2ff4   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606A2FF4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6F74;
+    return Profile::Profile(13343232, 6958448, MEMORY[0xAF2E08], (int)v1, (void *)0xB083CC, 0);
+  }
+
+/* ============================================================================
  * Actor_tariporigon_fort_for_build
  * RVA 0x006a3074   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -49279,6 +53507,19 @@
     result = (_DWORD *)sub_606A1F24(v0);
     *result = 12685640;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_tariporigon_fort_for_6A32F8
+ * RVA 0x006a32f8   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606A32F8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6F99;
+    return Profile::Profile(13343264, 6959220, MEMORY[0xAF2E04], (int)v1, (void *)0xB083CC, 0);
   }
 
 /* ============================================================================
@@ -49297,6 +53538,28 @@
     v0[1527] = 0;
     sub_608DEB0C(v0 + 1525, 52, v0 + 1528);
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_exclusive_oke_tariporigon_6A35D8
+ * RVA 0x006a35d8   size 0xd0   xrefs 0
+ * ============================================================================ */
+  int sub_606A35D8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6FBB;
+    Profile::Profile(13343296, 6959992, MEMORY[0xAF2FA8], (int)v1, &unk_60B083F0, 0);
+    MEMORY[0xCB9A5C] = ++MEMORY[0xC7B788];
+    MEMORY[0xCB9A58] = 12686048;
+    MEMORY[0xCB9A60] = 6960100;
+    MEMORY[0xCB9A64] = 0;
+    MEMORY[0xCB9A68] = 6960104;
+    MEMORY[0xCB9A6C] = 0;
+    MEMORY[0xCB9A70] = 6960108;
+    MEMORY[0xCB9A74] = 0;
+    return 13343320;
   }
 
 /* ============================================================================
@@ -49376,6 +53639,27 @@
   }
 
 /* ============================================================================
+ * registerProfile_snow_spawn_Tag_6A4404
+ * RVA 0x006a4404   size 0x9c   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_606A4404()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    unk_60CB9AA0 = -196;
+    unk_60CB9AA4 = -2014904321;
+    dword_60CB9AA8 = 0;
+    dword_60CB9AAC = 0;
+    dword_60CB9AB0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD6FEC;
+    result = (_DWORD *)Profile::Profile(13343360, 6960860, MEMORY[0xAF3988], (int)v1, &unk_60B08414, 0);
+    *result = 12686068;
+    return result;
+  }
+
+/* ============================================================================
  * Actor_fire_spawn_build
  * RVA 0x006a44c0   size 0xa8   xrefs 0
  * ============================================================================ */
@@ -49395,6 +53679,25 @@
     *(_DWORD *)(v0 + 6464) = MEMORY[0xB45CC4];
     *(_BYTE *)(v0 + 533) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_fire_spawn_6A5098
+ * RVA 0x006a5098   size 0x8c   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_606A5098()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB9AB4 = 0;
+    dword_60CB9AB8 = 0;
+    dword_60CB9ABC = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7023;
+    result = (_DWORD *)Profile::Profile(13343424, 6964416, MEMORY[0xAF398C], (int)v1, &unk_60B08438, 0);
+    *result = 12686740;
+    return result;
   }
 
 /* ============================================================================
@@ -49458,6 +53761,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_neshiku_6A5398
+ * RVA 0x006a5398   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606A5398()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7044;
+    return Profile::Profile(13343448, 6967620, MEMORY[0xAF2FE8], (int)v1, &unk_60B08468, 2);
+  }
+
+/* ============================================================================
  * Actor_neshikutariOBJ_child_build
  * RVA 0x006a582c   size 0xd0   xrefs 0
  * ============================================================================ */
@@ -49484,6 +53800,19 @@
     *(_BYTE *)(v0 + 7884) = 0;
     *(_DWORD *)(v0 + 7888) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_neshikutariOBJ_child_6A6050
+ * RVA 0x006a6050   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606A6050()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD70AF;
+    return Profile::Profile(13343540, 6969388, MEMORY[0xAF2FDC], (int)v1, &unk_60B0848C, 2);
   }
 
 /* ============================================================================
@@ -49588,6 +53917,19 @@
     result[1697] = 0;
     result[1698] = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_neshikutariOBJ_child_piramido_6A6D08
+ * RVA 0x006a6d08   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606A6D08()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD70DB;
+    return Profile::Profile(13343572, 6972780, MEMORY[0xAF2FE0], (int)v1, &unk_60B084B0, 2);
   }
 
 /* ============================================================================
@@ -49703,6 +54045,19 @@
     result = Actor_neshikutariOBJ_child_piramido_resident_build_helper(v0);
     *result = 12688388;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_neshikutariOBJ_child_piramido_resident_6A736C
+ * RVA 0x006a736c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606A736C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD71D1;
+    return Profile::Profile(13343968, 6975456, MEMORY[0xAF2FE4], (int)v1, &unk_60B084D4, 2);
   }
 
 /* ============================================================================
@@ -49867,6 +54222,23 @@
   }
 
 /* ============================================================================
+ * registerProfile_neshikutariOBJ_parent_6A7C60
+ * RVA 0x006a7c60   size 0x98   xrefs 0
+ * ============================================================================ */
+  int sub_606A7C60()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    unk_60CB9D18 = -1102263091;
+    unk_60CB9D1C = -1110651699;
+    unk_60CB9D20 = -1106737015;
+    unk_60CB9D24 = -1115125623;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7218;
+    return Profile::Profile(13344000, 6976496, MEMORY[0xAF2DF4], (int)v1, &unk_60B084FC, 2);
+  }
+
+/* ============================================================================
  * sub_606A7D28
  * RVA 0x006a7d28   size 0x12c   xrefs 4
  * ============================================================================ */
@@ -50023,6 +54395,23 @@
   }
 
 /* ============================================================================
+ * registerProfile_parentchild_obuje_child_6A8CA0
+ * RVA 0x006a8ca0   size 0x88   xrefs 0
+ * ============================================================================ */
+  int sub_606A8CA0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB9D50 = 0;
+    dword_60CB9D54 = 0;
+    dword_60CB9D58 = 0;
+    memset(&unk_60CB9D5C, 0, 0x24u);
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD726F;
+    return Profile::Profile(13344040, 6979424, MEMORY[0xAF2E18], (int)v1, (void *)0xB08520, 0);
+  }
+
+/* ============================================================================
  * sub_606A8EC4
  * RVA 0x006a8ec4   size 0x44   xrefs 2
  * ============================================================================ */
@@ -50171,6 +54560,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_parentchild_obuje_child_iron_6A9F8C
+ * RVA 0x006a9f8c   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606A9F8C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7288;
+    return Profile::Profile(13344192, 6986624, MEMORY[0xAF2E24], (int)v1, (void *)0xB08520, 0);
+  }
+
+/* ============================================================================
  * Actor_parentchild_obuje_child_rock_build
  * RVA 0x006aa00c   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -50183,6 +54585,19 @@
     result = (_DWORD *)sub_606A8084(v0);
     *result = 12689828;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_parentchild_obuje_child_rock_6AA380
+ * RVA 0x006aa380   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606AA380()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD72A7;
+    return Profile::Profile(13344224, 6987788, MEMORY[0xAF2E20], (int)v1, (void *)0xB08520, 0);
   }
 
 /* ============================================================================
@@ -50297,6 +54712,35 @@
   }
 
 /* ============================================================================
+ * registerProfile_kinoko_horizontal_move_6AAA90
+ * RVA 0x006aaa90   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int sub_606AAA90()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB9E00 = 0;
+    dword_60CB9E04 = 0;
+    dword_60CB9E08 = 16;
+    dword_60CB9E0C = 0x10000;
+    dword_60CB9E10 = 0x8000000;
+    dword_60CB9E14 = 0x200000;
+    dword_60CB9E18 = 0x100000;
+    dword_60CB9E1C = 0x800000;
+    dword_60CB9E20 = 0;
+    unk_60CB9E24 = 0;
+    unk_60CB9E28 = 16;
+    unk_60CB9E2C = 0x10000;
+    dword_60CB9E30 = 0x8000000;
+    dword_60CB9E34 = 0x80000;
+    dword_60CB9E38 = 0x100000;
+    dword_60CB9E3C = 0x400000;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD72C6;
+    return Profile::Profile(13344320, 6988800, MEMORY[0xAF2E58], (int)v1, &unk_60B08544, 0);
+  }
+
+/* ============================================================================
  * Actor_parentchild_obuje_child_for_build
  * RVA 0x006aab78   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -50309,6 +54753,19 @@
     result = (_DWORD *)sub_606A8084(v0);
     *result = 12690288;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_parentchild_obuje_child_for_6AAEEC
+ * RVA 0x006aaeec   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606AAEEC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD72E5;
+    return Profile::Profile(13344352, 6990712, MEMORY[0xAF2E2C], (int)v1, (void *)0xB08520, 0);
   }
 
 /* ============================================================================
@@ -50347,6 +54804,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_parentchild_obuje_child_for_2_6AB7F0
+ * RVA 0x006ab7f0   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606AB7F0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD730A;
+    return Profile::Profile(13344384, 6993020, MEMORY[0xAF2E28], (int)v1, (void *)0xB08520, 0);
+  }
+
+/* ============================================================================
  * Actor_parentchild_obuje_child_for_tari_build
  * RVA 0x006ab870   size 0x88   xrefs 0
  * ============================================================================ */
@@ -50367,6 +54837,38 @@
     SolidOnTopCollider_ctor();
     *(_BYTE *)(v0 + 6600) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_parentchild_obuje_child_for_tari_6AC218
+ * RVA 0x006ac218   size 0xec   xrefs 0
+ * ============================================================================ */
+  int sub_606AC218()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CB9FC4 = 0;
+    dword_60CB9FC8 = 0;
+    dword_60CB9FCC = 0;
+    dword_60CB9FD0 = 0;
+    dword_60CB9FD4 = 167026505;
+    dword_60CB9FD8 = 0x10000000;
+    dword_60CB9FDC = 405635800;
+    dword_60CB9FE0 = 0x20000000;
+    dword_60CB9FE4 = -167026506;
+    dword_60CB9FE8 = -268435456;
+    dword_60CB9FEC = -405635801;
+    dword_60CB9FF0 = -536870912;
+    dword_60CBA004 = 0;
+    dword_60CBA008 = 0;
+    dword_60CBA00C = 0;
+    dword_60CBA000 = 0;
+    dword_60CB9FFC = 0;
+    dword_60CB9FF8 = 0;
+    dword_60CB9FF4 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD732F;
+    return Profile::Profile(13344416, 6994032, MEMORY[0xAF2E54], (int)v1, &unk_60B0856C, 0);
   }
 
 /* ============================================================================
@@ -50424,6 +54926,19 @@
     result = (_DWORD *)sub_606A8084(v0);
     *result = 12691452;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_parentchild_obuje_child_fort_for_6ACAC4
+ * RVA 0x006acac4   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606ACAC4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD73A8;
+    return Profile::Profile(13344868, 6997840, MEMORY[0xAF2E1C], (int)v1, (void *)0xB08520, 0);
   }
 
 /* ============================================================================
@@ -50546,6 +55061,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_parentchild_obuje_child_fort_rock_RDashfor_6AD218
+ * RVA 0x006ad218   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606AD218()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD741E;
+    return Profile::Profile(13345036, 7000028, MEMORY[0xAF2E48], (int)v1, &unk_60B085D8, 2);
+  }
+
+/* ============================================================================
  * Actor_parentchild_obuje_child_2_build
  * RVA 0x006ad29c   size 0x54   xrefs 0
  * ============================================================================ */
@@ -50601,6 +55129,22 @@
     }
     while ( result != 1 );
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_parentchild_obuje_child_2_6AD650
+ * RVA 0x006ad650   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_606AD650()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBA12C = 0;
+    dword_60CBA130 = 0;
+    dword_60CBA134 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD744A;
+    return Profile::Profile(13345080, 7000732, MEMORY[0xAF2E50], (int)v1, &unk_60B085FC, 2);
   }
 
 /* ============================================================================
@@ -50849,6 +55393,96 @@
       a2[1] = *(_DWORD *)(a1 + 6328);
       return 1;
     }
+    return result;
+  }
+
+/* ============================================================================
+ * registerProfile_parentchild_obuje_parent_6AE400
+ * RVA 0x006ae400   size 0x14c   xrefs 0
+ * ============================================================================ */
+  int sub_606AE400()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD74BF;
+    Profile::Profile(13345164, 7002980, MEMORY[0xAF2D54], (int)v1, &unk_60B08620, 0);
+    MEMORY[0xCBA1A8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBA1A4] = 12692612;
+    MEMORY[0xCBA1AC] = 7003484;
+    MEMORY[0xCBA1B0] = 0;
+    MEMORY[0xCBA1B4] = 7003488;
+    MEMORY[0xCBA1B8] = 0;
+    MEMORY[0xCBA1BC] = 7003492;
+    MEMORY[0xCBA1C0] = 0;
+    MEMORY[0xCBA1C4] = 12692612;
+    MEMORY[0xCBA1C8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBA1CC] = 7003496;
+    MEMORY[0xCBA1D0] = 0;
+    MEMORY[0xCBA1D4] = 7003500;
+    MEMORY[0xCBA1D8] = 0;
+    MEMORY[0xCBA1DC] = 7003504;
+    MEMORY[0xCBA1E0] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBA1E8] = MEMORY[0xC7B788];
+    MEMORY[0xCBA1E4] = 12692612;
+    MEMORY[0xCBA1EC] = 7003508;
+    MEMORY[0xCBA1F0] = 0;
+    MEMORY[0xCBA1F4] = 7003512;
+    MEMORY[0xCBA1F8] = 0;
+    MEMORY[0xCBA1FC] = 7003568;
+    MEMORY[0xCBA200] = 0;
+    return 7003568;
+  }
+
+/* ============================================================================
+ * registerProfile_child_tree_6AE5AC
+ * RVA 0x006ae5ac   size 0x1c4   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_606AE5AC()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBA234 = 12321336;
+    dword_60CBA238 = (int)"obj_yashi";
+    dword_60CBA23C = 12321336;
+    dword_60CBA240 = (int)"obj_yashi_sabaku";
+    sub_60000288();
+    dword_60CBA244 = 12321336;
+    dword_60CBA248 = (int)"obj_yashi";
+    dword_60CBA24C = 12321336;
+    dword_60CBA250 = (int)"obj_yashi_sabaku";
+    sub_60000288();
+    dword_60CBA27C = 12321336;
+    dword_60CBA280 = (int)"obj_yashi_wait";
+    dword_60CBA284 = 12321336;
+    dword_60CBA288 = (int)"obj_yashi_normal";
+    dword_60CBA28C = 12321336;
+    dword_60CBA290 = (int)"obj_yashi_hipD";
+    dword_60CBA294 = 12321336;
+    dword_60CBA298 = (int)"obj_yashi_sabaku_wait";
+    dword_60CBA29C = 12321336;
+    dword_60CBA2A0 = (int)"obj_yashi_sabaku_normal";
+    dword_60CBA2A4 = 12321336;
+    dword_60CBA2A8 = (int)"obj_yashi_sabaku_hipD";
+    sub_60000288();
+    dword_60CBA254 = 12321336;
+    dword_60CBA258 = (int)"joint0";
+    dword_60CBA25C = 12321336;
+    dword_60CBA260 = (int)"joint1";
+    dword_60CBA264 = 12321336;
+    dword_60CBA268 = (int)"joint2";
+    dword_60CBA26C = 12321336;
+    dword_60CBA270 = (int)"joint3";
+    dword_60CBA274 = 12321336;
+    dword_60CBA278 = (int)"joint4";
+    sub_60000288();
+    v1[0] = 12321336;
+    dword_60CBA230 = 0x20000000;
+    v1[1] = &unk_60AD7552;
+    result = (_DWORD *)Profile::Profile(13345284, 7006168, MEMORY[0xAF3020], (int)v1, &unk_60B08644, 2);
+    *result = 12692632;
     return result;
   }
 
@@ -54651,6 +59285,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_Parabeetle_6B5F70
+ * RVA 0x006b5f70   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606B5F70()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD75AF;
+    return Profile::Profile(13345856, 7032848, MEMORY[0xAF305C], (int)v1, &unk_60B08700, 514);
+  }
+
+/* ============================================================================
  * sub_606B5FF4
  * RVA 0x006b5ff4   size 0x10c   xrefs 3
  * ============================================================================ */
@@ -55401,6 +60048,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_Parabeetle_big_6B88C8
+ * RVA 0x006b88c8   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606B88C8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD768A;
+    return Profile::Profile(13345992, 7043516, MEMORY[0xAF3060], (int)v1, &unk_60B08760, 514);
+  }
+
+/* ============================================================================
  * Actor_Parabeetle_2_build
  * RVA 0x006b894c   size 0x54   xrefs 0
  * ============================================================================ */
@@ -55417,6 +60077,59 @@
     result[1808] = 0;
     result[1809] = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_Parabeetle_2_6B8FC8
+ * RVA 0x006b8fc8   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606B8FC8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD75AF;
+    return Profile::Profile(13346024, 7047500, MEMORY[0xAF3064], (int)v1, &unk_60B087B0, 514);
+  }
+
+/* ============================================================================
+ * registerProfile_tree_2_6B9050
+ * RVA 0x006b9050   size 0x15c   xrefs 0
+ * ============================================================================ */
+  int sub_606B9050()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBA508 = 12321336;
+    *(_DWORD *)algn_60CBA50C = "tsuru01";
+    unk_60CBA510 = 12321336;
+    dword_60CBA514 = (int)"tsuru02";
+    dword_60CBA518 = 12321336;
+    dword_60CBA51C = (int)"tsuru03";
+    dword_60CBA520 = 12321336;
+    dword_60CBA524 = (int)"tsuru04";
+    dword_60CBA528 = 12321336;
+    dword_60CBA52C = (int)"tsuru05";
+    dword_60CBA530 = 12321336;
+    dword_60CBA534 = (int)"tsuru06";
+    dword_60CBA538 = 12321336;
+    dword_60CBA53C = (int)"tsuru07";
+    dword_60CBA540 = 12321336;
+    dword_60CBA544 = (int)"tsuru08";
+    dword_60CBA548 = 12321336;
+    dword_60CBA54C = (int)"tsuru09";
+    dword_60CBA550 = 12321336;
+    dword_60CBA554 = (int)"tsuru10";
+    dword_60CBA558 = 12321336;
+    dword_60CBA55C = (int)"tsuru11";
+    dword_60CBA560 = 12321336;
+    dword_60CBA564 = (int)"tsuru12";
+    dword_60CBA568 = 12321336;
+    dword_60CBA56C = (int)"tsuru13";
+    sub_60000288();
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7707;
+    return Profile::Profile(13346160, 7049736, MEMORY[0xAF3A28], (int)v1, &unk_60B087D4, 0);
   }
 
 /* ============================================================================
@@ -56120,6 +60833,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_Player_level_miTag_6BAF74
+ * RVA 0x006baf74   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606BAF74()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7727;
+    return Profile::Profile(13346184, 7056244, MEMORY[0xAF3A48], (int)v1, &unk_60B087F8, 0);
+  }
+
+/* ============================================================================
  * Actor_Pmusasabiburoku_build
  * RVA 0x006baff4   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -56195,6 +60921,19 @@
     a1[1748] = v7;
     SolidOnTopCollider_setPointMetaRelated(a1 + 1638, 1, (int)(a1 + 1730), (int)(a1 + 1734), v5);
     return a1;
+  }
+
+/* ============================================================================
+ * registerProfile_Pmusasabiburoku_6BB6F0
+ * RVA 0x006bb6f0   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606BB6F0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7752;
+    return Profile::Profile(13346216, 7057396, MEMORY[0xAF3198], (int)v1, &unk_60B0881C, 0);
   }
 
 /* ============================================================================
@@ -56616,6 +61355,105 @@
   }
 
 /* ============================================================================
+ * registerProfile_PowBlock_ctor_6BC77C
+ * RVA 0x006bc77c   size 0x320   xrefs 0
+ * ============================================================================ */
+  int sub_606BC77C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD776E;
+    *(_DWORD *)Profile::Profile(13346376, 7061908, MEMORY[0xAF3334], (int)v1, &unk_60B08850, 2064) = 12695048;
+    MEMORY[0xCBA664] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBA668] = 196;
+    MEMORY[0xCBA66C] = 1;
+    MEMORY[0xCBA670] = 200;
+    MEMORY[0xCBA674] = 1;
+    MEMORY[0xCBA678] = 204;
+    MEMORY[0xCBA67C] = 1;
+    MEMORY[0xCBA660] = 12695476;
+    MEMORY[0xCBA680] = 13307596;
+    MEMORY[0xCBA68C] = 208;
+    MEMORY[0xCBA690] = 1;
+    MEMORY[0xCBA694] = 212;
+    MEMORY[0xCBA698] = 1;
+    MEMORY[0xCBA69C] = 216;
+    MEMORY[0xCBA6A0] = 1;
+    MEMORY[0xCBA684] = 12695476;
+    MEMORY[0xCBA688] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBA6A4] = 13307044;
+    MEMORY[0xCBA6B0] = 220;
+    MEMORY[0xCBA6B4] = 1;
+    MEMORY[0xCBA6B8] = 224;
+    MEMORY[0xCBA6BC] = 1;
+    MEMORY[0xCBA6C0] = 228;
+    MEMORY[0xCBA6C4] = 1;
+    MEMORY[0xCBA6A8] = 12695476;
+    MEMORY[0xCBA6AC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBA6C8] = 13307008;
+    MEMORY[0xCBA6D0] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBA6CC] = 12695496;
+    MEMORY[0xCBA6D4] = 7062228;
+    MEMORY[0xCBA6D8] = 0;
+    MEMORY[0xCBA6DC] = 7062692;
+    MEMORY[0xCBA6E0] = 0;
+    MEMORY[0xCBA6E4] = 7062756;
+    MEMORY[0xCBA6E8] = 0;
+    MEMORY[0xCBA6EC] = 12695496;
+    MEMORY[0xCBA6F0] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBA6F4] = 7062760;
+    MEMORY[0xCBA6F8] = 0;
+    MEMORY[0xCBA6FC] = 7062936;
+    MEMORY[0xCBA700] = 0;
+    MEMORY[0xCBA704] = 7063292;
+    MEMORY[0xCBA708] = 0;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xCBA710] = MEMORY[0xC7B788];
+    MEMORY[0xCBA70C] = 12695496;
+    MEMORY[0xCBA714] = 7063308;
+    MEMORY[0xCBA718] = 0;
+    MEMORY[0xCBA71C] = 7063400;
+    MEMORY[0xCBA720] = 0;
+    MEMORY[0xCBA724] = 7063404;
+    MEMORY[0xCBA728] = 0;
+    dword_60CBA760[0] = 12321336;
+    *(_DWORD *)algn_60CBA764 = "block_pow";
+    unk_60CBA768 = 12321336;
+    dword_60CBA76C = (int)"block_pow";
+    dword_60CBA770 = 12321336;
+    dword_60CBA774 = (int)"down";
+    dword_60CBA778 = 12321336;
+    dword_60CBA77C = (int)"EF_POW";
+    dword_60CBA79C = 12321336;
+    dword_60CBA7A0 = (int)"EF_PowFB";
+    dword_60CBA7A4 = 12321336;
+    dword_60CBA7A8 = (int)"EF_PowFB";
+    dword_60CBA7AC = 12321336;
+    dword_60CBA7B0 = (int)"EF_PowRainbow";
+    dword_60CBA7B4 = 12321336;
+    dword_60CBA7B8 = (int)"EF_PowRainbow";
+    sub_60000288();
+    dword_60CBA780 = 1098907648;
+    dword_60CBA784 = 1098907648;
+    dword_60CBA788 = 1090519040;
+    dword_60CBA78C = 1090519040;
+    dword_60CBA730 = MEMORY[0xB3B944];
+    dword_60CBA73C = MEMORY[0xB3B948];
+    unk_60CBA734 = MEMORY[0xB3B948];
+    unk_60CBA738 = MEMORY[0xB3B944];
+    dword_60CBA740 = -1056964608;
+    unk_60CBA744 = 1098907648;
+    unk_60CBA748 = 1090519040;
+    unk_60CBA74C = 0;
+    dword_60CBA750 = 0;
+    dword_60CBA790 = 1061997773;
+    dword_60CBA794 = 1061997773;
+    dword_60CBA798 = 1061997773;
+    return 1061997773;
+  }
+
+/* ============================================================================
  * PowBlock_onCreate
  * RVA 0x006bcb34   size 0x234   xrefs 0
  * ============================================================================ */
@@ -56829,6 +61667,38 @@
   }
 
 /* ============================================================================
+ * registerProfile_puroperaburoku_6BF200
+ * RVA 0x006bf200   size 0xfc   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_606BF200()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD77B5;
+    Profile::Profile(13346748, 7071660, MEMORY[0xAF333C], (int)v1, &unk_60B088A4, 6166);
+    MEMORY[0xCBA7D8] = ++MEMORY[0xC7B788];
+    MEMORY[0xCBA7DC] = 208;
+    MEMORY[0xCBA7E0] = 1;
+    MEMORY[0xCBA7E4] = 212;
+    MEMORY[0xCBA7E8] = 1;
+    MEMORY[0xCBA7EC] = 216;
+    MEMORY[0xCBA7F0] = 1;
+    MEMORY[0xCBA7D4] = 12695884;
+    MEMORY[0xCBA7F4] = 13307044;
+    dword_60CBA7F8 = 0;
+    unk_60CBA7FC = 1090519040;
+    unk_60CBA800 = 0;
+    dword_60CBA804 = 0;
+    dword_60CBA808 = -1056964608;
+    dword_60CBA80C = 1090519040;
+    dword_60CBA810[0] = 1090519040;
+    dword_60CBA810[1] = -1056964608;
+    dword_60CBA810[2] = 0;
+    return dword_60CBA810;
+  }
+
+/* ============================================================================
  * Actor_ringu_3_build
  * RVA 0x006bf328   size 0x3c   xrefs 0
  * ============================================================================ */
@@ -56842,6 +61712,19 @@
     *(_DWORD *)result = 12695904;
     *(_BYTE *)(result + 6372) = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ringu_3_6BF914
+ * RVA 0x006bf914   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606BF914()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD77D2;
+    return Profile::Profile(13346852, 7074600, MEMORY[0xAF38EC], (int)v1, &unk_60B088EC, 2);
   }
 
 /* ============================================================================
@@ -56885,6 +61768,35 @@
   }
 
 /* ============================================================================
+ * registerProfile_Quest_exclusive_buroku_6BFF0C
+ * RVA 0x006bff0c   size 0x100   xrefs 0
+ * ============================================================================ */
+  int sub_606BFF0C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBA8A0 = 0;
+    dword_60CBA8A4 = 0;
+    dword_60CBA8A8 = 0;
+    dword_60CBA890 = 12321336;
+    dword_60CBA894 = (int)"block_challenge";
+    dword_60CBA898 = 12321336;
+    dword_60CBA89C = (int)"block_challenge";
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD77DF;
+    Profile::Profile(13346884, 7076248, MEMORY[0xAF3004], (int)v1, &unk_60B08910, 2);
+    MEMORY[0xCBA860] = ++MEMORY[0xC7B788];
+    MEMORY[0xCBA85C] = 12696344;
+    MEMORY[0xCBA864] = 7076360;
+    MEMORY[0xCBA868] = 0;
+    MEMORY[0xCBA86C] = 7076364;
+    MEMORY[0xCBA870] = 0;
+    MEMORY[0xCBA874] = 7076368;
+    MEMORY[0xCBA878] = 0;
+    return 13346908;
+  }
+
+/* ============================================================================
  * Actor_Quest_kagi_build
  * RVA 0x006c0048   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -56897,6 +61809,19 @@
     result = StateActor_ctor(v0);
     *result = 12696364;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_Quest_kagi_6C01D4
+ * RVA 0x006c01d4   size 0x70   xrefs 0
+ * ============================================================================ */
+  int sub_606C01D4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD77FE;
+    return Profile::Profile(13346988, 7077960, MEMORY[0xAF345C], (int)v1, &unk_60B08934, 2);
   }
 
 /* ============================================================================
@@ -56915,6 +61840,19 @@
     *(_DWORD *)(v0 + 6348) = 0;
     *(_DWORD *)(v0 + 6352) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_reruefekutospawn_buroku_6C06DC
+ * RVA 0x006c06dc   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606C06DC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7814;
+    return Profile::Profile(13347020, 7078496, MEMORY[0xAF3258], (int)v1, &unk_60B08958, 4098);
   }
 
 /* ============================================================================
@@ -57000,6 +61938,19 @@
     v22[11] = v7 + v6;
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)*v8 + 60))(*v8, v22);
     return ModelWrapper_updateModel(v8);
+  }
+
+/* ============================================================================
+ * registerProfile_reru_atariporigon_child_6C0EB8
+ * RVA 0x006c0eb8   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606C0EB8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD783F;
+    return Profile::Profile(13347052, 7079776, MEMORY[0xAF2F84], (int)v1, &unk_60B0897C, 2);
   }
 
 /* ============================================================================
@@ -57129,6 +62080,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_reru_atariporigon_6C1D68
+ * RVA 0x006c1d68   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606C1D68()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7870;
+    return Profile::Profile(13347148, 7083312, MEMORY[0xAF2EB8], (int)v1, &unk_60B089A0, 2);
+  }
+
+/* ============================================================================
  * Actor_reru_atariporigon_parent_build
  * RVA 0x006c1dec   size 0x11c   xrefs 0
  * ============================================================================ */
@@ -57159,6 +62123,39 @@
     *(_DWORD *)(v0 + 6232) = 0;
     *(_DWORD *)(v0 + 6236) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_reru_atariporigon_parent_6C2674
+ * RVA 0x006c2674   size 0x124   xrefs 0
+ * ============================================================================ */
+  int sub_606C2674()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBA9C4 = 0x400000;
+    dword_60CBA9C8 = 0x10000000;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD789B;
+    Profile::Profile(13347180, 7085548, MEMORY[0xAF2D5C], (int)v1, &unk_60B089C4, 2);
+    MEMORY[0xCBA988] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBA984] = 12697624;
+    MEMORY[0xCBA98C] = 7085856;
+    MEMORY[0xCBA990] = 0;
+    MEMORY[0xCBA994] = 7085860;
+    MEMORY[0xCBA998] = 0;
+    MEMORY[0xCBA99C] = 7085948;
+    MEMORY[0xCBA9A0] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCBA9A8] = MEMORY[0xC7B788];
+    MEMORY[0xCBA9A4] = 12697624;
+    MEMORY[0xCBA9AC] = 7085952;
+    MEMORY[0xCBA9B0] = 0;
+    MEMORY[0xCBA9B4] = 7085956;
+    MEMORY[0xCBA9B8] = 0;
+    MEMORY[0xCBA9BC] = 7085968;
+    MEMORY[0xCBA9C0] = 0;
+    return 7085968;
   }
 
 /* ============================================================================
@@ -57276,6 +62273,58 @@
     ModelWrapper_updateAnims(*v16);
     (*(void (__fastcall **)(_DWORD))(**(_DWORD **)*v16 + 52))(*(_DWORD *)*v16);
     return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)*v16 + 56))(*(_DWORD *)*v16);
+  }
+
+/* ============================================================================
+ * registerProfile_RDashruijiburoku_6C3558
+ * RVA 0x006c3558   size 0x1ac   xrefs 0
+ * ============================================================================ */
+  int sub_606C3558()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBAA50 = 0;
+    dword_60CBAA54 = 0;
+    dword_60CBAA58 = 0;
+    dword_60CBAA68 = 0;
+    dword_60CBAA64 = 0;
+    dword_60CBAA60 = 0;
+    dword_60CBAA5C = 0;
+    dword_60CBAA6C = -1052770304;
+    dword_60CBAA70 = 1094713344;
+    dword_60CBAA74 = 1094713344;
+    dword_60CBAA78 = -1052770304;
+    dword_60CBAA7C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD78CC;
+    Profile::Profile(13347276, 7088092, MEMORY[0xAF310C], (int)v1, &unk_60B089E8, 4098);
+    MEMORY[0xCBA9E8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBA9EC] = 404;
+    MEMORY[0xCBA9F0] = 1;
+    MEMORY[0xCBA9F4] = 408;
+    MEMORY[0xCBA9F8] = 1;
+    MEMORY[0xCBA9FC] = 412;
+    MEMORY[0xCBAA00] = 1;
+    MEMORY[0xCBA9E4] = 12698080;
+    MEMORY[0xCBAA04] = 13296376;
+    MEMORY[0xCBAA0C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBAA08] = 12698100;
+    MEMORY[0xCBAA10] = 7088192;
+    MEMORY[0xCBAA14] = 0;
+    MEMORY[0xCBAA18] = 7088284;
+    MEMORY[0xCBAA1C] = 0;
+    MEMORY[0xCBAA20] = 7088360;
+    MEMORY[0xCBAA24] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBAA2C] = MEMORY[0xC7B788];
+    MEMORY[0xCBAA28] = 12698100;
+    MEMORY[0xCBAA30] = 7088364;
+    MEMORY[0xCBAA34] = 0;
+    MEMORY[0xCBAA38] = 7088368;
+    MEMORY[0xCBAA3C] = 0;
+    MEMORY[0xCBAA40] = 7088372;
+    MEMORY[0xCBAA44] = 0;
+    return 7088372;
   }
 
 /* ============================================================================
@@ -57414,6 +62463,53 @@
       return 1;
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_parentchild_obuje_parent_RDashexclusive_6C41E8
+ * RVA 0x006c41e8   size 0x18c   xrefs 0
+ * ============================================================================ */
+  int sub_606C41E8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD78FE;
+    Profile::Profile(13347456, 7092052, MEMORY[0xAF2D58], (int)v1, &unk_60B08A0C, 0);
+    MEMORY[0xCBAA9C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBAA98] = 12698320;
+    MEMORY[0xCBAAA0] = 7092556;
+    MEMORY[0xCBAAA4] = 0;
+    MEMORY[0xCBAAA8] = 7092560;
+    MEMORY[0xCBAAAC] = 0;
+    MEMORY[0xCBAAB0] = 7092564;
+    MEMORY[0xCBAAB4] = 0;
+    MEMORY[0xCBAAB8] = 12698320;
+    MEMORY[0xCBAABC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBAAC0] = 7092568;
+    MEMORY[0xCBAAC4] = 0;
+    MEMORY[0xCBAAC8] = 7092572;
+    MEMORY[0xCBAACC] = 0;
+    MEMORY[0xCBAAD0] = 7092576;
+    MEMORY[0xCBAAD4] = 0;
+    MEMORY[0xCBAAD8] = 12698320;
+    MEMORY[0xCBAADC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBAAE0] = 7092580;
+    MEMORY[0xCBAAE4] = 0;
+    MEMORY[0xCBAAE8] = 7092584;
+    MEMORY[0xCBAAEC] = 0;
+    MEMORY[0xCBAAF0] = 7092640;
+    MEMORY[0xCBAAF4] = 0;
+    MEMORY[0xC7B788] += 4;
+    MEMORY[0xCBAAFC] = MEMORY[0xC7B788];
+    MEMORY[0xCBAAF8] = 12698320;
+    MEMORY[0xCBAB00] = 7092644;
+    MEMORY[0xCBAB04] = 0;
+    MEMORY[0xCBAB08] = 7092648;
+    MEMORY[0xCBAB0C] = 0;
+    MEMORY[0xCBAB10] = 7093020;
+    MEMORY[0xCBAB14] = 0;
+    return 7093020;
   }
 
 /* ============================================================================
@@ -57953,6 +63049,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_RedCoin_ctor_6C53B8
+ * RVA 0x006c53b8   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606C53B8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7928;
+    return Profile::Profile(13347744, 7098024, MEMORY[0xAF2F00], (int)v1, &unk_60B08A40, 2);
+  }
+
+/* ============================================================================
  * Actor_ringu_4_build
  * RVA 0x006c543c   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -57965,6 +63074,19 @@
     result = (_DWORD *)sub_606C6638(v0);
     *result = 12698704;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ringu_4_6C5938
+ * RVA 0x006c5938   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606C5938()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7942;
+    return Profile::Profile(13347776, 7099452, MEMORY[0xAF38E4], (int)v1, &unk_60B08A64, 2);
   }
 
 /* ============================================================================
@@ -59800,6 +64922,23 @@
   }
 
 /* ============================================================================
+ * registerProfile_condition_Flag_with_rotate_control_6C9F34
+ * RVA 0x006c9f34   size 0xa8   xrefs 0
+ * ============================================================================ */
+  int sub_606C9F34()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD7A04;
+    Profile::Profile(13348220, 7117404, MEMORY[0xAF2DE4], (int)&v1, &unk_60B08AC4, 0);
+    v1 = 12321336;
+    v2 = &unk_60AD7A14;
+    return Profile::Profile(13348244, 7117544, MEMORY[0xAF2DE8], (int)&v1, &unk_60B08AC4, 0);
+  }
+
+/* ============================================================================
  * sub_606CA0DC
  * RVA 0x006ca0dc   size 0x44   xrefs 7
  * ============================================================================ */
@@ -60215,6 +65354,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_rotate_buroku_for_6CBBA4
+ * RVA 0x006cbba4   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606CBBA4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7A39;
+    return Profile::Profile(13348348, 7123396, MEMORY[0xAF2F8C], (int)v1, &unk_60B08AE8, 2);
+  }
+
+/* ============================================================================
  * Actor_rotate_buroku_kara_sky_for_build
  * RVA 0x006cc3b8   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -60262,6 +65414,19 @@
       _cxa_guard_release_0(13325556);
     }
     return a1 == 13325552 || sub_60027FB0(a1);
+  }
+
+/* ============================================================================
+ * registerProfile_rotate_buroku_kara_sky_for_6CC95C
+ * RVA 0x006cc95c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606CC95C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7A7A;
+    return Profile::Profile(13349484, 7127992, MEMORY[0xAF2FB0], (int)v1, &unk_60B08B0C, 2);
   }
 
 /* ============================================================================
@@ -60322,6 +65487,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_rotate_buroku_oke_6CCF40
+ * RVA 0x006ccf40   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606CCF40()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7AA5;
+    return Profile::Profile(13349524, 7129568, MEMORY[0xAF2FA0], (int)v1, &unk_60B08B30, 2);
+  }
+
+/* ============================================================================
  * Actor_rotate_buroku_oke_RD4keexclusive_build
  * RVA 0x006ccfc4   size 0x3c   xrefs 0
  * ============================================================================ */
@@ -60338,6 +65516,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_rotate_buroku_oke_RD4keexclusive_6CD46C
+ * RVA 0x006cd46c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606CD46C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7AC4;
+    return Profile::Profile(13349548, 7131076, MEMORY[0xAF2FA4], (int)v1, &unk_60B08B54, 2);
+  }
+
+/* ============================================================================
  * Actor_rotate_buroku_oke_ship_build
  * RVA 0x006cd4f0   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -60350,6 +65541,19 @@
     result = (_DWORD *)sub_606CCAC0(v0);
     *result = 12701488;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_rotate_buroku_oke_ship_6CD714
+ * RVA 0x006cd714   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606CD714()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7AF5;
+    return Profile::Profile(13349580, 7132400, MEMORY[0xAF2FC0], (int)v1, &unk_60B08B78, 2);
   }
 
 /* ============================================================================
@@ -60381,6 +65585,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_rotate_buroku_iron_6CDA00
+ * RVA 0x006cda00   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606CDA00()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7B26;
+    return Profile::Profile(13349612, 7133080, MEMORY[0xAF2FB4], (int)v1, (void *)0xB08B9C, 2);
+  }
+
+/* ============================================================================
  * Actor_rotate_buroku_iron_RDASHfor_build
  * RVA 0x006cda84   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -60393,6 +65610,19 @@
     result = (_DWORD *)sub_606CCAC0(v0);
     *result = 12702056;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_rotate_buroku_iron_RDASHfor_6CDCD4
+ * RVA 0x006cdcd4   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606CDCD4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7B3F;
+    return Profile::Profile(13349644, 7133828, MEMORY[0xAF2FB8], (int)v1, &unk_60B08BC0, 2);
   }
 
 /* ============================================================================
@@ -60431,6 +65661,19 @@
       sub_60813BDC(v3, "SE_OBJ_METAL_BOX_LAND", v5, 3, 0);
     }
     return sub_606CCCC0(a1);
+  }
+
+/* ============================================================================
+ * registerProfile_rotate_buroku_iron_RDASHfor_so_2_6CE100
+ * RVA 0x006ce100   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606CE100()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7B62;
+    return Profile::Profile(13349676, 7134552, MEMORY[0xAF2FBC], (int)v1, (void *)0xB08B9C, 2);
   }
 
 /* ============================================================================
@@ -60626,6 +65869,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_rotate_buroku_tree_6CFA08
+ * RVA 0x006cfa08   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606CFA08()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7C78;
+    return Profile::Profile(13349884, 7139076, MEMORY[0xAF2F94], (int)v1, &unk_60B08C2C, 2);
+  }
+
+/* ============================================================================
  * sub_606CFAA4
  * RVA 0x006cfaa4   size 0x294   xrefs 1
  * ============================================================================ */
@@ -60785,6 +66041,19 @@
     result = Actor_rotate_buroku_tree_RDash_build_helper(v0);
     *result = 12703444;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_rotate_buroku_tree_RDash_6D00E4
+ * RVA 0x006d00e4   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606D00E4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7D42;
+    return Profile::Profile(13349928, 7143464, MEMORY[0xAF2F98], (int)v1, &unk_60B08C50, 2);
   }
 
 /* ============================================================================
@@ -61152,6 +66421,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_rotate_tarifloor_6D164C
+ * RVA 0x006d164c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606D164C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7D87;
+    return Profile::Profile(13350044, 7147136, MEMORY[0xAF3130], (int)v1, &unk_60B08CA8, 2);
+  }
+
+/* ============================================================================
  * Actor_rotate_oke_build
  * RVA 0x006d1810   size 0x2ac   xrefs 0
  * ============================================================================ */
@@ -61254,6 +66536,64 @@
     sub_60002B6C(a1 + 37);
     sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 37));
     return a1;
+  }
+
+/* ============================================================================
+ * registerProfile_rotate_oke_6D2260
+ * RVA 0x006d2260   size 0x154   xrefs 0
+ * ============================================================================ */
+  int sub_606D2260()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7D9D;
+    Profile::Profile(13350076, 7149584, MEMORY[0xAF3044], (int)v1, &unk_60B08CCC, 2);
+    MEMORY[0xCBB4D4] = 1120927744;
+    MEMORY[0xCBB4D8] = 1125646336;
+    MEMORY[0xCBB4DC] = 3;
+    MEMORY[0xCBB4DD] = 16;
+    MEMORY[0xCBB4E0] = -1021837312;
+    MEMORY[0xCBB4E4] = 1125646336;
+    MEMORY[0xCBB4E8] = 16;
+    MEMORY[0xCBB4E9] = 3;
+    MEMORY[0xCBB4EC] = -1021837312;
+    MEMORY[0xCBB4F0] = 1120927744;
+    MEMORY[0xCBB4F4] = 3;
+    MEMORY[0xCBB4F5] = 16;
+    MEMORY[0xCBB4F8] = -1026555904;
+    MEMORY[0xCBB4FC] = -1026555904;
+    MEMORY[0xCBB500] = 16;
+    MEMORY[0xCBB501] = 3;
+    MEMORY[0xCBB504] = 1120927744;
+    MEMORY[0xCBB508] = 1125646336;
+    MEMORY[0xCBB50C] = 1125646336;
+    MEMORY[0xCBB510] = -1021837312;
+    MEMORY[0xCBB514] = 0;
+    MEMORY[0xCBB518] = 0;
+    MEMORY[0xCBB51C] = 7150280;
+    MEMORY[0xCBB520] = -1021837312;
+    MEMORY[0xCBB524] = 1125646336;
+    MEMORY[0xCBB528] = 1125646336;
+    MEMORY[0xCBB52C] = 1120927744;
+    MEMORY[0xCBB530] = 0;
+    MEMORY[0xCBB534] = 0;
+    MEMORY[0xCBB538] = 7150280;
+    MEMORY[0xCBB53C] = -1021837312;
+    MEMORY[0xCBB540] = 1125646336;
+    MEMORY[0xCBB544] = -1026555904;
+    MEMORY[0xCBB548] = -1021837312;
+    MEMORY[0xCBB54C] = 0;
+    MEMORY[0xCBB550] = 0;
+    MEMORY[0xCBB554] = 7150280;
+    MEMORY[0xCBB558] = -1021837312;
+    MEMORY[0xCBB55C] = -1026555904;
+    MEMORY[0xCBB560] = 1125646336;
+    MEMORY[0xCBB564] = -1021837312;
+    MEMORY[0xCBB568] = 0;
+    MEMORY[0xCBB56C] = 0;
+    MEMORY[0xCBB570] = 7150280;
+    return 1125646336;
   }
 
 /* ============================================================================
@@ -61471,6 +66811,26 @@
     result = *(_DWORD *)(a1 + 164) + *(_DWORD *)(a1 + 6880);
     *(_DWORD *)(a1 + 164) = result;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_rotate_pipe_RDash_6D31CC
+ * RVA 0x006d31cc   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_606D31CC()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CBB574 = 0;
+    dword_60CBB578 = 0;
+    dword_60CBB57C = 0;
+    v1 = 12321336;
+    v2 = &unk_60AD7DB3;
+    Profile::Profile(13350272, 7154068, MEMORY[0xAF2F64], (int)&v1, &unk_60B08CF0, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD7DC0;
+    return Profile::Profile(13350296, 7154068, MEMORY[0xAF2F68], (int)&v1, &unk_60B08D14, 2);
   }
 
 /* ============================================================================
@@ -61724,6 +67084,31 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ruretoburoku_6D4080
+ * RVA 0x006d4080   size 0xb4   xrefs 0
+ * ============================================================================ */
+  int sub_606D4080()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBB610 = 0;
+    dword_60CBB614 = 0;
+    dword_60CBB618 = 0;
+    dword_60CBB628 = 0;
+    dword_60CBB624 = 0;
+    dword_60CBB620 = 0;
+    dword_60CBB61C = 0;
+    dword_60CBB62C = -1052770304;
+    dword_60CBB630 = 1094713344;
+    dword_60CBB634 = 1094713344;
+    dword_60CBB638 = -1052770304;
+    dword_60CBB63C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7DD4;
+    return Profile::Profile(13350372, 7156416, MEMORY[0xAF322C], (int)v1, &unk_60B08D38, 4098);
   }
 
 /* ============================================================================
@@ -62583,6 +67968,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_ZN7SeaweedC3EPK14ActorBu_6D5550
+ * RVA 0x006d5550   size 0x78   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_606D5550()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7E35;
+    result = (_DWORD *)Profile::Profile(13350464, 7162976, MEMORY[0xAF3690], (int)v1, &unk_60B08DAC, 0);
+    *result = 12705844;
+    return result;
+  }
+
+/* ============================================================================
  * Actor_shadou_2_build
  * RVA 0x006d55e4   size 0x44   xrefs 0
  * ============================================================================ */
@@ -62620,6 +68021,32 @@
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6104) = v4;
     return v4 != nullptr;
+  }
+
+/* ============================================================================
+ * registerProfile_shadou_2_6D5AB8
+ * RVA 0x006d5ab8   size 0xf4   xrefs 0
+ * ============================================================================ */
+  int sub_606D5AB8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBB698 = 12321336;
+    dword_60CBB69C = (int)"shadowkun";
+    dword_60CBB6A0 = 12321336;
+    v1[0] = 12321336;
+    dword_60CBB6A4 = (int)"fukuro";
+    v1[1] = &unk_60AD7E46;
+    Profile::Profile(13350496, 7165412, MEMORY[0xAF3458], (int)v1, nullptr, 2);
+    MEMORY[0xCBB67C] = ++MEMORY[0xC7B788];
+    MEMORY[0xCBB678] = 12706196;
+    MEMORY[0xCBB680] = 7165488;
+    MEMORY[0xCBB684] = 0;
+    MEMORY[0xCBB688] = 7165492;
+    MEMORY[0xCBB68C] = 0;
+    MEMORY[0xCBB690] = 7165496;
+    MEMORY[0xCBB694] = 0;
+    return 13350520;
   }
 
 /* ============================================================================
@@ -62845,6 +68272,68 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ice_buroku_teru_6D7ADC
+ * RVA 0x006d7adc   size 0x1f0   xrefs 0
+ * ============================================================================ */
+  int sub_606D7ADC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBB6A8 = 0;
+    dword_60CBB6AC = 0;
+    dword_60CBB6B0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7E5C;
+    Profile::Profile(13350580, 7166952, MEMORY[0xAF3340], (int)v1, &unk_60B08E34, 2066);
+    MEMORY[0xCBB6D0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBB6D4] = 196;
+    MEMORY[0xCBB6D8] = 1;
+    MEMORY[0xCBB6DC] = 200;
+    MEMORY[0xCBB6E0] = 1;
+    MEMORY[0xCBB6E4] = 204;
+    MEMORY[0xCBB6E8] = 1;
+    MEMORY[0xCBB6CC] = 12706584;
+    MEMORY[0xCBB6EC] = 13307596;
+    MEMORY[0xCBB6FC] = 1;
+    MEMORY[0xCBB700] = 224;
+    MEMORY[0xCBB704] = 1;
+    MEMORY[0xCBB708] = 228;
+    MEMORY[0xCBB70C] = 1;
+    MEMORY[0xCBB6F0] = 12706584;
+    MEMORY[0xCBB6F4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBB6F8] = 220;
+    MEMORY[0xCBB710] = 13307008;
+    MEMORY[0xCBB71C] = 208;
+    MEMORY[0xCBB720] = 1;
+    MEMORY[0xCBB724] = 212;
+    MEMORY[0xCBB728] = 1;
+    MEMORY[0xCBB72C] = 216;
+    MEMORY[0xCBB730] = 1;
+    MEMORY[0xCBB714] = 12706584;
+    MEMORY[0xCBB718] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBB734] = 13307044;
+    MEMORY[0xCBB740] = 232;
+    MEMORY[0xCBB744] = 1;
+    MEMORY[0xCBB748] = 236;
+    MEMORY[0xCBB74C] = 1;
+    MEMORY[0xCBB750] = 240;
+    MEMORY[0xCBB754] = 1;
+    MEMORY[0xCBB738] = 12706584;
+    MEMORY[0xCBB73C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBB758] = 13307080;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCBB760] = MEMORY[0xC7B788];
+    MEMORY[0xCBB75C] = 12706604;
+    MEMORY[0xCBB764] = 7167108;
+    MEMORY[0xCBB768] = 0;
+    MEMORY[0xCBB76C] = 7167400;
+    MEMORY[0xCBB770] = 0;
+    MEMORY[0xCBB774] = 7167508;
+    MEMORY[0xCBB778] = 0;
+    return 7167508;
   }
 
 /* ============================================================================
@@ -63102,6 +68591,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_koinhebiparent_6D8524
+ * RVA 0x006d8524   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606D8524()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7E77;
+    return Profile::Profile(13350788, 7175460, MEMORY[0xAF2D80], (int)v1, &unk_60B08E58, 2);
+  }
+
+/* ============================================================================
  * Actor_snow_ball_build
  * RVA 0x006d85a8   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -63137,6 +68639,22 @@
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6304) = v4;
     return 6304;
+  }
+
+/* ============================================================================
+ * registerProfile_snow_ball_6D8C78
+ * RVA 0x006d8c78   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_606D8C78()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBB79C = 0;
+    dword_60CBB7A0 = 0;
+    dword_60CBB7A4 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7E8A;
+    return Profile::Profile(13350824, 7177640, MEMORY[0xAF3744], (int)v1, &unk_60B08E7C, 144);
   }
 
 /* ============================================================================
@@ -63268,6 +68786,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_neshikuwaiya_6D95F0
+ * RVA 0x006d95f0   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606D95F0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7E91;
+    return Profile::Profile(13350920, 7181092, MEMORY[0xAF2FEC], (int)v1, &unk_60B08EA0, 2);
+  }
+
+/* ============================================================================
  * pol_shokudai_ref
  * RVA 0x006d96d8   size 0x12c   xrefs 0
  * ============================================================================ */
@@ -63354,6 +68885,36 @@
     (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 6100) + 68))(**(_DWORD **)(a1 + 6100), a1 + 144);
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v16 + 60))(**v16, v18);
     return ModelWrapper_updateModel(*v16);
+  }
+
+/* ============================================================================
+ * registerProfile_sub_606D9680_6D9BD0
+ * RVA 0x006d9bd0   size 0x10c   xrefs 0
+ * ============================================================================ */
+  int sub_606D9BD0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBB82C = 0;
+    dword_60CBB828 = 0;
+    dword_60CBB824 = 0;
+    dword_60CBB820 = 0;
+    dword_60CBB830 = -1056964608;
+    dword_60CBB834 = 1098907648;
+    dword_60CBB838 = 1090519040;
+    dword_60CBB83C = -1048576000;
+    dword_60CBB840 = 0;
+    MEMORY[0xCBB848] = ++MEMORY[0xC7B788];
+    MEMORY[0xCBB844] = 12708156;
+    MEMORY[0xCBB84C] = 7181940;
+    MEMORY[0xCBB850] = 0;
+    MEMORY[0xCBB854] = 7181944;
+    MEMORY[0xCBB858] = 0;
+    MEMORY[0xCBB85C] = 7181948;
+    MEMORY[0xCBB860] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7EB3;
+    return Profile::Profile(13351012, 7181952, MEMORY[0xAF37A8], (int)v1, &unk_60B08EC4, 0);
   }
 
 /* ============================================================================
@@ -63810,6 +69371,145 @@
   }
 
 /* ============================================================================
+ * registerProfile_ZN13TreasureChestC3EPK14_6DBB54
+ * RVA 0x006dbb54   size 0x43c   xrefs 0
+ * ============================================================================ */
+  int sub_606DBB54()
+  {
+    _DWORD v1[2]; // [sp+14h] [bp-8h] BYREF
+  
+    dword_60CBB9C8 = 0;
+    dword_60CBB9CC = 0;
+    dword_60CBB9D0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7EBA;
+    *(_DWORD *)Profile::Profile(13351044, 7183632, MEMORY[0xAF39C8], (int)v1, &unk_60B08EE8, 2) = 12708176;
+    MEMORY[0xCBB8A0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBB89C] = 12708436;
+    MEMORY[0xCBB8A4] = 7184012;
+    MEMORY[0xCBB8A8] = 0;
+    MEMORY[0xCBB8AC] = 7184028;
+    MEMORY[0xCBB8B0] = 0;
+    MEMORY[0xCBB8B4] = 7184144;
+    MEMORY[0xCBB8B8] = 0;
+    MEMORY[0xCBB8BC] = 12708436;
+    MEMORY[0xCBB8C0] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBB8C4] = 7184148;
+    MEMORY[0xCBB8C8] = 0;
+    MEMORY[0xCBB8CC] = 7184176;
+    MEMORY[0xCBB8D0] = 0;
+    MEMORY[0xCBB8D4] = 7184512;
+    MEMORY[0xCBB8D8] = 0;
+    MEMORY[0xCBB8DC] = 12708436;
+    MEMORY[0xCBB8E0] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBB8E4] = 7184516;
+    MEMORY[0xCBB8E8] = 0;
+    MEMORY[0xCBB8EC] = 7184636;
+    MEMORY[0xCBB8F0] = 0;
+    MEMORY[0xCBB8F4] = 7184984;
+    MEMORY[0xCBB8F8] = 0;
+    MEMORY[0xCBB8FC] = 12708436;
+    MEMORY[0xCBB900] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBB904] = 7184988;
+    MEMORY[0xCBB908] = 0;
+    MEMORY[0xCBB90C] = 7184992;
+    MEMORY[0xCBB910] = 0;
+    MEMORY[0xCBB914] = 7185064;
+    MEMORY[0xCBB918] = 0;
+    MEMORY[0xCBB91C] = 12708436;
+    MEMORY[0xCBB920] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBB924] = 7185068;
+    MEMORY[0xCBB928] = 0;
+    MEMORY[0xCBB92C] = 7185084;
+    MEMORY[0xCBB930] = 0;
+    MEMORY[0xCBB934] = 7185132;
+    MEMORY[0xCBB938] = 0;
+    MEMORY[0xCBB93C] = 12708436;
+    MEMORY[0xCBB940] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCBB944] = 7185136;
+    MEMORY[0xCBB948] = 0;
+    MEMORY[0xCBB94C] = 7186024;
+    MEMORY[0xCBB950] = 0;
+    MEMORY[0xCBB954] = 7186132;
+    MEMORY[0xCBB958] = 0;
+    MEMORY[0xCBB95C] = 12708436;
+    MEMORY[0xCBB960] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xCBB964] = 7186136;
+    MEMORY[0xCBB968] = 0;
+    MEMORY[0xCBB96C] = 7186152;
+    MEMORY[0xCBB970] = 0;
+    MEMORY[0xCBB974] = 7186348;
+    MEMORY[0xCBB978] = 0;
+    MEMORY[0xCBB97C] = 12708436;
+    MEMORY[0xCBB980] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC7B788] += 9;
+    dword_60CBB9D4 = 12321336;
+    MEMORY[0xCBB9A0] = MEMORY[0xC7B788];
+    MEMORY[0xCBB99C] = 12708436;
+    MEMORY[0xCBB984] = 7186352;
+    MEMORY[0xCBB988] = 0;
+    MEMORY[0xCBB9A4] = 7186676;
+    MEMORY[0xCBB9A8] = 0;
+    MEMORY[0xCBB98C] = 7186528;
+    MEMORY[0xCBB990] = 0;
+    MEMORY[0xCBB9AC] = 7186716;
+    MEMORY[0xCBB9B0] = 0;
+    MEMORY[0xCBB994] = 7186672;
+    MEMORY[0xCBB998] = 0;
+    MEMORY[0xCBB9B4] = 7187368;
+    MEMORY[0xCBB9B8] = 0;
+    dword_60CBB9D8 = (int)"I_kinoko";
+    dword_60CBB9DC = 12321336;
+    dword_60CBB9E0 = (int)"I_fireflower";
+    dword_60CBB9E4 = 12321336;
+    dword_60CBB9E8 = (int)"I_propeller";
+    dword_60CBB9EC = 12321336;
+    dword_60CBB9F0 = (int)"I_penguin";
+    dword_60CBB9F4 = 12321336;
+    dword_60CBB9F8 = (int)"I_kinoko";
+    dword_60CBB9FC = 12321336;
+    dword_60CBBA00 = (int)"I_star";
+    dword_60CBBA04 = 12321336;
+    dword_60CBBA08 = (int)"I_iceflower";
+    dword_60CBBA0C = 12321336;
+    dword_60CBBA10 = (int)"I_yoshichibi_egg";
+    dword_60CBBA14 = 12321336;
+    dword_60CBBA18 = (int)"I_yoshichibi_egg";
+    dword_60CBBA1C = 12321336;
+    unk_60CBBA20 = "I_musasabi";
+    unk_60CBBA24 = 12321336;
+    unk_60CBBA28 = "I_kinoko";
+    dword_60CBBA2C = 12321336;
+    dword_60CBBA30 = (int)"I_crown";
+    sub_60000288();
+    unk_60CBBA40 = 12321336;
+    unk_60CBBA44 = "I_kinoko";
+    dword_60CBBA48 = 12321336;
+    dword_60CBBA4C = (int)"I_fireflower";
+    dword_60CBBA50 = 12321336;
+    unk_60CBBA54 = "I_propeller_model";
+    unk_60CBBA58 = 12321336;
+    unk_60CBBA5C = "I_penguin";
+    dword_60CBBA60 = 12321336;
+    dword_60CBBA64 = (int)"I_kinoko";
+    dword_60CBBA68 = 12321336;
+    dword_60CBBA6C = (int)"I_star";
+    dword_60CBBA70 = 12321336;
+    dword_60CBBA74 = (int)"I_iceflower";
+    dword_60CBBA78 = 12321336;
+    dword_60CBBA7C = (int)"I_yoshichibi_egg";
+    dword_60CBBA80 = 12321336;
+    dword_60CBBA84 = (int)"I_yoshichibi_egg";
+    dword_60CBBA88 = 12321336;
+    unk_60CBBA8C = "I_musasabi";
+    unk_60CBBA90 = 12321336;
+    unk_60CBBA94 = "I_kinoko";
+    dword_60CBBA98 = 12321336;
+    dword_60CBBA9C = (int)"I_crown";
+    return sub_60000288();
+  }
+
+/* ============================================================================
  * SE_SYS_KINO_GIVE_ITEM_ref_2
  * RVA 0x006dc080   size 0x158   xrefs 1
  * ============================================================================ */
@@ -64240,6 +69940,48 @@
   }
 
 /* ============================================================================
+ * registerProfile_kagi_6DD6A4
+ * RVA 0x006dd6a4   size 0x164   xrefs 0
+ * ============================================================================ */
+  int sub_606DD6A4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBBAA0 = 0;
+    dword_60CBBAA4 = 0;
+    dword_60CBBAA8 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7EF8;
+    Profile::Profile(13351596, 7197344, MEMORY[0xAF39CC], (int)v1, &unk_60B09008, 2);
+    MEMORY[0xCBBAC8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBBAC4] = 12708656;
+    MEMORY[0xCBBACC] = 7197392;
+    MEMORY[0xCBBAD0] = 0;
+    MEMORY[0xCBBAD4] = 7197404;
+    MEMORY[0xCBBAD8] = 0;
+    MEMORY[0xCBBADC] = 7197408;
+    MEMORY[0xCBBAE0] = 0;
+    MEMORY[0xCBBAE4] = 12708656;
+    MEMORY[0xCBBAE8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBBAEC] = 7197412;
+    MEMORY[0xCBBAF0] = 0;
+    MEMORY[0xCBBAF4] = 7197556;
+    MEMORY[0xCBBAF8] = 0;
+    MEMORY[0xCBBAFC] = 7197580;
+    MEMORY[0xCBBB00] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBBB08] = MEMORY[0xC7B788];
+    MEMORY[0xCBBB04] = 12708656;
+    MEMORY[0xCBBB0C] = 7197584;
+    MEMORY[0xCBBB10] = 0;
+    MEMORY[0xCBBB14] = 7197656;
+    MEMORY[0xCBBB18] = 0;
+    MEMORY[0xCBBB1C] = 7198020;
+    MEMORY[0xCBBB20] = 0;
+    return 7198020;
+  }
+
+/* ============================================================================
  * SE_OBJ_DAIKONBOU_L_SIGN_ref_2
  * RVA 0x006dd8f4   size 0x60   xrefs 0
  * ============================================================================ */
@@ -64532,6 +70274,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_kirongubig_6DEF40
+ * RVA 0x006def40   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606DEF40()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7F88;
+    return Profile::Profile(13352052, 7203484, MEMORY[0xAF3614], (int)v1, &unk_60B0902C, 2);
+  }
+
+/* ============================================================================
  * Actor_kirongubig_2_build
  * RVA 0x006defc4   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -64544,6 +70299,19 @@
     result = sub_606DE140(v0);
     *result = 12709244;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_kirongubig_2_6DF3D4
+ * RVA 0x006df3d4   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606DF3D4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7FA4;
+    return Profile::Profile(13352084, 7204804, MEMORY[0xAF3610], (int)v1, &unk_60B09050, 2);
   }
 
 /* ============================================================================
@@ -64677,6 +70445,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_bosuBowser_Switch_botan_6DF8C8
+ * RVA 0x006df8c8   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606DF8C8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD7FC0;
+    return Profile::Profile(13352116, 7206424, MEMORY[0xAF3298], (int)v1, &unk_60B09074, 4100);
+  }
+
+/* ============================================================================
  * Actor_bosuBowser_Switch_botan_2_build
  * RVA 0x006df94c   size 0x80   xrefs 0
  * ============================================================================ */
@@ -64793,6 +70574,46 @@
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
     return BasicSoundActor2_play(v1, (int)"SE_OBJ_STEP_ON_KSWITCH", v5, nullptr);
+  }
+
+/* ============================================================================
+ * registerProfile_bosuBowser_Switch_botan_2_6E04A8
+ * RVA 0x006e04a8   size 0x15c   xrefs 0
+ * ============================================================================ */
+  int sub_606E04A8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBBCE4 = 0;
+    dword_60CBBCE0 = 0;
+    dword_60CBBCDC = 0;
+    dword_60CBBCD8 = 0;
+    dword_60CBBCE8 = -1049624576;
+    dword_60CBBCEC = 1107820544;
+    dword_60CBBCF0 = 1097859072;
+    dword_60CBBCF4 = 0;
+    dword_60CBBCF8 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC7789;
+    Profile::Profile(13352188, 7207244, MEMORY[0xAF329C], (int)v1, &unk_60B09098, 2);
+    MEMORY[0xCBBD18] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBBD14] = 12710132;
+    MEMORY[0xCBBD1C] = 7207380;
+    MEMORY[0xCBBD20] = 0;
+    MEMORY[0xCBBD24] = 7207416;
+    MEMORY[0xCBBD28] = 0;
+    MEMORY[0xCBBD2C] = 7207788;
+    MEMORY[0xCBBD30] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCBBD38] = MEMORY[0xC7B788];
+    MEMORY[0xCBBD34] = 12710132;
+    MEMORY[0xCBBD3C] = 7207792;
+    MEMORY[0xCBBD40] = 0;
+    MEMORY[0xCBBD44] = 7207796;
+    MEMORY[0xCBBD48] = 0;
+    MEMORY[0xCBBD4C] = 7207904;
+    MEMORY[0xCBBD50] = 0;
+    return 7207904;
   }
 
 /* ============================================================================
@@ -65343,6 +71164,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_Switch_hatenabotan_6E3B98
+ * RVA 0x006e3b98   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606E3B98()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8084;
+    return Profile::Profile(13352624, 7222656, MEMORY[0xAF3288], (int)v1, &unk_60B090DC, 4100);
+  }
+
+/* ============================================================================
  * Actor_Switch_Pbotan_kiku_build
  * RVA 0x006e3c1c   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -65491,6 +71325,26 @@
   }
 
 /* ============================================================================
+ * registerProfile_Switch_Pbotan_kiku_6E4300
+ * RVA 0x006e4300   size 0xd8   xrefs 0
+ * ============================================================================ */
+  int sub_606E4300()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD80EC;
+    Profile::Profile(13352656, 7224348, MEMORY[0xAF328C], (int)&v1, &unk_60B09100, 4100);
+    v1 = 12321336;
+    v2 = &unk_60AD8105;
+    Profile::Profile(13352680, 7224348, MEMORY[0xAF3290], (int)&v1, &unk_60B09100, 4100);
+    v1 = 12321336;
+    v2 = &unk_60AD8125;
+    return Profile::Profile(13352704, 7224348, MEMORY[0xAF3294], (int)&v1, &unk_60B09100, 4100);
+  }
+
+/* ============================================================================
  * Actor_furemuTag_build
  * RVA 0x006e4408   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -65503,6 +71357,19 @@
     result = (_DWORD *)StageActor::StageActor(v2, a1);
     *result = 12711080;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_furemuTag_6E4458
+ * RVA 0x006e4458   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606E4458()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD818A;
+    return Profile::Profile(13352736, 7226376, MEMORY[0xAF3994], (int)v1, &unk_60B09124, 0);
   }
 
 /* ============================================================================
@@ -65521,6 +71388,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_spawn_Tag_6E48B4
+ * RVA 0x006e48b4   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606E48B4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD81A3;
+    return Profile::Profile(13352760, 7226584, MEMORY[0xAF3990], (int)v1, &unk_60B09148, 0);
+  }
+
+/* ============================================================================
  * Actor_ball_riLift_build
  * RVA 0x006e4934   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -65533,6 +71413,19 @@
     result = (_DWORD *)StageActor::StageActor(v2, a1);
     *result = 12711392;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_ball_riLift_6E4B64
+ * RVA 0x006e4b64   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606E4B64()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD81B3;
+    return Profile::Profile(13352784, 7227700, MEMORY[0xAF3318], (int)v1, &unk_60B0916C, 2);
   }
 
 /* ============================================================================
@@ -65576,6 +71469,19 @@
     *(_DWORD *)v2 = 12711532;
     *(_DWORD *)(v2 + 716) = 0;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_Chain_ctor_6E4D34
+ * RVA 0x006e4d34   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606E4D34()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD81C6;
+    return Profile::Profile(13352816, 7228392, MEMORY[0xAF30E4], (int)v1, &unk_60B09190, 2);
   }
 
 /* ============================================================================
@@ -66422,6 +72328,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_SwingingVine_ctor_6E6840
+ * RVA 0x006e6840   size 0x70   xrefs 0
+ * ============================================================================ */
+  int sub_606E6840()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD81D6;
+    return Profile::Profile(13352840, 7228856, MEMORY[0xAF30E0], (int)v1, &unk_60B091B4, 2);
+  }
+
+/* ============================================================================
  * sub_606E69A0
  * RVA 0x006e69a0   size 0x6c   xrefs 1
  * ============================================================================ */
@@ -67184,6 +73103,22 @@
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 644) + 60))(**(_DWORD **)(a1 + 644), v19);
     (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 644) + 68))(**(_DWORD **)(a1 + 644), a1 + 144);
     return ModelWrapper_updateModel(*(_DWORD *)(a1 + 644));
+  }
+
+/* ============================================================================
+ * registerProfile_ZN10TorchFlameC3EPK14Act_6E89CC
+ * RVA 0x006e89cc   size 0x78   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_606E89CC()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8220;
+    result = (_DWORD *)Profile::Profile(13352924, 7242044, MEMORY[0xAF36C0], (int)v1, &unk_60B091FC, 0);
+    *result = 12712808;
+    return result;
   }
 
 /* ============================================================================
@@ -69112,6 +75047,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_fibafor_suta_6EB734
+ * RVA 0x006eb734   size 0x60   xrefs 0
+ * ============================================================================ */
+  int sub_606EB734()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD82CF;
+    return Profile::Profile(13352964, 4576572, MEMORY[0xAF3A6C], (int)v1, nullptr, 0);
+  }
+
+/* ============================================================================
  * Actor_tachiakuta_build
  * RVA 0x006eb7a8   size 0x50   xrefs 0
  * ============================================================================ */
@@ -69125,6 +75073,19 @@
     Actor_tachiakuta_build_helper(MEMORY[0xCBC000], *(unsigned __int8 *)(v0 + 20));
     *(_BYTE *)(v0 + 19) = 1;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_tachiakuta_6EB938
+ * RVA 0x006eb938   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_606EB938()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD82F4;
+    return Profile::Profile(13352988, 7255976, MEMORY[0xAF3A70], (int)v1, &unk_60B09220, 0);
   }
 
 /* ============================================================================
@@ -69301,6 +75262,40 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_toranporincloud_6ECDA8
+ * RVA 0x006ecda8   size 0x124   xrefs 0
+ * ============================================================================ */
+  int sub_606ECDA8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBC03C = 0;
+    dword_60CBC040 = 0;
+    dword_60CBC044 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8310;
+    Profile::Profile(13353032, 7256504, MEMORY[0xAF2E70], (int)v1, &unk_60B09244, 2);
+    MEMORY[0xCBC064] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBC060] = 12713424;
+    MEMORY[0xCBC068] = 7257144;
+    MEMORY[0xCBC06C] = 0;
+    MEMORY[0xCBC070] = 7257148;
+    MEMORY[0xCBC074] = 0;
+    MEMORY[0xCBC078] = 7257188;
+    MEMORY[0xCBC07C] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCBC084] = MEMORY[0xC7B788];
+    MEMORY[0xCBC080] = 12713424;
+    MEMORY[0xCBC088] = 7257192;
+    MEMORY[0xCBC08C] = 0;
+    MEMORY[0xCBC090] = 7257196;
+    MEMORY[0xCBC094] = 0;
+    MEMORY[0xCBC098] = 7257312;
+    MEMORY[0xCBC09C] = 0;
+    return 7257312;
   }
 
 /* ============================================================================
@@ -69886,6 +75881,40 @@
   }
 
 /* ============================================================================
+ * registerProfile_TrampolineCloud_ctor_6EE6F0
+ * RVA 0x006ee6f0   size 0x124   xrefs 0
+ * ============================================================================ */
+  int sub_606EE6F0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBC0B8 = 0;
+    dword_60CBC0BC = 0;
+    dword_60CBC0C0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8374;
+    Profile::Profile(13353156, 7265060, MEMORY[0xAF2E74], (int)v1, &unk_60B0929C, 2);
+    MEMORY[0xCBC0E0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBC0DC] = 12713724;
+    MEMORY[0xCBC0E4] = 7265620;
+    MEMORY[0xCBC0E8] = 0;
+    MEMORY[0xCBC0EC] = 7265624;
+    MEMORY[0xCBC0F0] = 0;
+    MEMORY[0xCBC0F4] = 7265756;
+    MEMORY[0xCBC0F8] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCBC100] = MEMORY[0xC7B788];
+    MEMORY[0xCBC0FC] = 12713724;
+    MEMORY[0xCBC104] = 7265760;
+    MEMORY[0xCBC108] = 0;
+    MEMORY[0xCBC10C] = 7265792;
+    MEMORY[0xCBC110] = 0;
+    MEMORY[0xCBC114] = 7265904;
+    MEMORY[0xCBC118] = 0;
+    return 7265904;
+  }
+
+/* ============================================================================
  * Actor_parashutokoin_kishi_build
  * RVA 0x006ee858   size 0x94   xrefs 0
  * ============================================================================ */
@@ -70040,6 +76069,45 @@
     }
     while ( v7 < 50 );
     return v9;
+  }
+
+/* ============================================================================
+ * registerProfile_parashutokoin_kishi_6EF160
+ * RVA 0x006ef160   size 0x14c   xrefs 0
+ * ============================================================================ */
+  int sub_606EF160()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD839B;
+    Profile::Profile(13353252, 7268440, MEMORY[0xAF2D7C], (int)v1, &unk_60B092EC, 0);
+    MEMORY[0xCBC140] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBC13C] = 12713948;
+    MEMORY[0xCBC144] = 7268592;
+    MEMORY[0xCBC148] = 0;
+    MEMORY[0xCBC14C] = 7268596;
+    MEMORY[0xCBC150] = 0;
+    MEMORY[0xCBC154] = 7268600;
+    MEMORY[0xCBC158] = 0;
+    MEMORY[0xCBC15C] = 12713948;
+    MEMORY[0xCBC160] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBC164] = 7268604;
+    MEMORY[0xCBC168] = 0;
+    MEMORY[0xCBC16C] = 7268704;
+    MEMORY[0xCBC170] = 0;
+    MEMORY[0xCBC174] = 7269184;
+    MEMORY[0xCBC178] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBC180] = MEMORY[0xC7B788];
+    MEMORY[0xCBC17C] = 12713948;
+    MEMORY[0xCBC184] = 7269188;
+    MEMORY[0xCBC188] = 0;
+    MEMORY[0xCBC18C] = 7269204;
+    MEMORY[0xCBC190] = 0;
+    MEMORY[0xCBC194] = 7269252;
+    MEMORY[0xCBC198] = 0;
+    return 7269252;
   }
 
 /* ============================================================================
@@ -70328,6 +76396,22 @@
       }
     }
     return 0;
+  }
+
+/* ============================================================================
+ * registerProfile_pipe_kishi_6F01BC
+ * RVA 0x006f01bc   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_606F01BC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBC1A4 = 0;
+    dword_60CBC1A8 = 0;
+    dword_60CBC1AC = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD83C5;
+    return Profile::Profile(13353392, 7271164, MEMORY[0xAF36C4], (int)v1, &unk_60B09310, 2);
   }
 
 /* ============================================================================
@@ -70628,6 +76712,32 @@
   }
 
 /* ============================================================================
+ * registerProfile_SpikeBall_kipipe_6F10F0
+ * RVA 0x006f10f0   size 0xf0   xrefs 0
+ * ============================================================================ */
+  int sub_606F10F0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBC1F4 = 0;
+    dword_60CBC1F8 = 0;
+    dword_60CBC1FC = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD83DB;
+    *(_DWORD *)Profile::Profile(13353472, 7275096, MEMORY[0xAF302C], (int)v1, &unk_60B0936C, 0) = 12714140;
+    MEMORY[0xCBC21C] = ++MEMORY[0xC7B788];
+    MEMORY[0xCBC220] = 192;
+    MEMORY[0xCBC224] = 1;
+    MEMORY[0xCBC228] = 196;
+    MEMORY[0xCBC22C] = 1;
+    MEMORY[0xCBC230] = 200;
+    MEMORY[0xCBC234] = 1;
+    MEMORY[0xCBC218] = 12714364;
+    MEMORY[0xCBC238] = 12755100;
+    return 13353496;
+  }
+
+/* ============================================================================
  * Actor_hipuatakukishiakuta_build
  * RVA 0x006f1210   size 0x3c   xrefs 0
  * ============================================================================ */
@@ -70684,6 +76794,28 @@
     if ( v3 )
       return (**(int (__fastcall ***)(_BYTE *, int))v3)(v3, 13087584);
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_hipuatakukishiakuta_6F1670
+ * RVA 0x006f1670   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int sub_606F1670()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD842B;
+    Profile::Profile(13353540, 7279120, MEMORY[0xAF3440], (int)v1, &unk_60B093D0, 2);
+    MEMORY[0xCBC260] = ++MEMORY[0xC7B788];
+    MEMORY[0xCBC25C] = 12714588;
+    MEMORY[0xCBC264] = 7279184;
+    MEMORY[0xCBC268] = 0;
+    MEMORY[0xCBC26C] = 7279188;
+    MEMORY[0xCBC270] = 0;
+    MEMORY[0xCBC274] = 7279564;
+    MEMORY[0xCBC278] = 0;
+    return 13353564;
   }
 
 /* ============================================================================
@@ -70748,6 +76880,50 @@
     v8[6] = 1153138688;
     sub_600080BC(MEMORY[0xC7B400], v8);
     return 1;
+  }
+
+/* ============================================================================
+ * registerProfile_wakishifire_6F1B90
+ * RVA 0x006f1b90   size 0x114   xrefs 0
+ * ============================================================================ */
+  int sub_606F1B90()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8459;
+    Profile::Profile(13353604, 7280492, MEMORY[0xAF361C], (int)v1, &unk_60B0942C, 0);
+    MEMORY[0xCBC2A0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBC29C] = 12714808;
+    MEMORY[0xCBC2A4] = 7280576;
+    MEMORY[0xCBC2A8] = 0;
+    MEMORY[0xCBC2AC] = 7280580;
+    MEMORY[0xCBC2B0] = 0;
+    MEMORY[0xCBC2B4] = 7280660;
+    MEMORY[0xCBC2B8] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCBC2C0] = MEMORY[0xC7B788];
+    MEMORY[0xCBC2BC] = 12714808;
+    MEMORY[0xCBC2C4] = 7280664;
+    MEMORY[0xCBC2C8] = 0;
+    MEMORY[0xCBC2CC] = 7280668;
+    MEMORY[0xCBC2D0] = 0;
+    MEMORY[0xCBC2D4] = 7280768;
+    MEMORY[0xCBC2D8] = 0;
+    return 7280768;
+  }
+
+/* ============================================================================
+ * registerProfile_sub_606F1CE8_6F207C
+ * RVA 0x006f207c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606F207C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD846F;
+    return Profile::Profile(13353700, 7281896, MEMORY[0xAF3A40], (int)v1, &unk_60B09480, 2);
   }
 
 /* ============================================================================
@@ -71042,6 +77218,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_imiwater_Tag_6F2D54
+ * RVA 0x006f2d54   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_606F2D54()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8473;
+    return Profile::Profile(13353732, 7282944, MEMORY[0xAF2DA8], (int)v1, &unk_60B094A4, 2);
+  }
+
+/* ============================================================================
  * Actor_underwater_efekutofiruta_RDash_build
  * RVA 0x006f2dd8   size 0x60   xrefs 0
  * ============================================================================ */
@@ -71056,6 +77245,23 @@
     v0[1516] = 12325968;
     v0[1542] = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_underwater_efekutofiruta_RDash_6F333C
+ * RVA 0x006f333c   size 0xa8   xrefs 0
+ * ============================================================================ */
+  int sub_606F333C()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD849A;
+    Profile::Profile(13353764, 7286232, MEMORY[0xAF3A38], (int)&v1, &unk_60B094C8, 0);
+    v1 = 12321336;
+    v2 = &unk_60AD84C2;
+    return Profile::Profile(13353788, 7286232, MEMORY[0xAF3A3C], (int)&v1, &unk_60B094C8, 0);
   }
 
 /* ============================================================================
@@ -72631,6 +78837,75 @@
   }
 
 /* ============================================================================
+ * registerProfile_geyser_water_6F87E4
+ * RVA 0x006f87e4   size 0x1d4   xrefs 0
+ * ============================================================================ */
+  int sub_606F87E4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD84F1;
+    Profile::Profile(13353820, 7290920, MEMORY[0xAF2F14], (int)v1, &unk_60B094EC, 0);
+    MEMORY[0xCBC378] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBC37C] = 200;
+    MEMORY[0xCBC380] = 1;
+    MEMORY[0xCBC384] = 204;
+    MEMORY[0xCBC388] = 1;
+    MEMORY[0xCBC38C] = 208;
+    MEMORY[0xCBC390] = 1;
+    MEMORY[0xCBC374] = 12715800;
+    MEMORY[0xCBC394] = 12755100;
+    MEMORY[0xCBC3A4] = 1;
+    MEMORY[0xCBC3A8] = 216;
+    MEMORY[0xCBC3AC] = 1;
+    MEMORY[0xCBC3B0] = 220;
+    MEMORY[0xCBC3B4] = 1;
+    MEMORY[0xCBC398] = 12715800;
+    MEMORY[0xCBC39C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBC3A0] = 212;
+    MEMORY[0xCBC3B8] = 12755100;
+    MEMORY[0xCBC3C8] = 1;
+    MEMORY[0xCBC3CC] = 228;
+    MEMORY[0xCBC3D0] = 1;
+    MEMORY[0xCBC3D4] = 232;
+    MEMORY[0xCBC3D8] = 1;
+    MEMORY[0xCBC3BC] = 12715800;
+    MEMORY[0xCBC3C0] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBC3C4] = 224;
+    MEMORY[0xCBC3DC] = 12755100;
+    MEMORY[0xCBC3EC] = 1;
+    MEMORY[0xCBC3F0] = 240;
+    MEMORY[0xCBC3F4] = 1;
+    MEMORY[0xCBC3F8] = 244;
+    MEMORY[0xCBC3FC] = 1;
+    MEMORY[0xCBC3E0] = 12715800;
+    MEMORY[0xCBC3E4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBC3E8] = 236;
+    MEMORY[0xCBC400] = 12755100;
+    MEMORY[0xCBC410] = 1;
+    MEMORY[0xCBC414] = 252;
+    MEMORY[0xCBC418] = 1;
+    MEMORY[0xCBC41C] = 256;
+    MEMORY[0xCBC420] = 1;
+    MEMORY[0xCBC404] = 12715800;
+    MEMORY[0xCBC408] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBC40C] = 248;
+    MEMORY[0xCBC424] = 12755100;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xCBC42C] = MEMORY[0xC7B788];
+    MEMORY[0xCBC430] = 260;
+    MEMORY[0xCBC434] = 1;
+    MEMORY[0xCBC438] = 264;
+    MEMORY[0xCBC43C] = 1;
+    MEMORY[0xCBC440] = 268;
+    MEMORY[0xCBC444] = 1;
+    MEMORY[0xCBC428] = 12715800;
+    MEMORY[0xCBC448] = 12755100;
+    return 1;
+  }
+
+/* ============================================================================
  * Actor_geyser_water_bosufor_build
  * RVA 0x006f89f4   size 0x5c   xrefs 0
  * ============================================================================ */
@@ -72648,6 +78923,104 @@
     result[1532] = 0;
     result[1533] = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_geyser_water_bosufor_6FC76C
+ * RVA 0x006fc76c   size 0x330   xrefs 0
+ * ============================================================================ */
+  int sub_606FC76C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBC44C = 0;
+    dword_60CBC450 = 0;
+    dword_60CBC454 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD859E;
+    *(_DWORD *)Profile::Profile(13354072, 7309812, MEMORY[0xAF2F20], (int)v1, &unk_60B09510, 0) = 12715820;
+    MEMORY[0xCBC474] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBC470] = 12716032;
+    MEMORY[0xCBC478] = 7309908;
+    MEMORY[0xCBC47C] = 0;
+    MEMORY[0xCBC480] = 7310248;
+    MEMORY[0xCBC484] = 0;
+    MEMORY[0xCBC488] = 7310308;
+    MEMORY[0xCBC48C] = 0;
+    MEMORY[0xCBC490] = 12716032;
+    MEMORY[0xCBC494] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBC498] = 7310312;
+    MEMORY[0xCBC49C] = 0;
+    MEMORY[0xCBC4A0] = 7310820;
+    MEMORY[0xCBC4A4] = 0;
+    MEMORY[0xCBC4A8] = 7311224;
+    MEMORY[0xCBC4AC] = 0;
+    MEMORY[0xCBC4B0] = 12716032;
+    MEMORY[0xCBC4B4] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBC4B8] = 7311228;
+    MEMORY[0xCBC4BC] = 0;
+    MEMORY[0xCBC4C0] = 7311736;
+    MEMORY[0xCBC4C4] = 0;
+    MEMORY[0xCBC4C8] = 7312936;
+    MEMORY[0xCBC4CC] = 0;
+    MEMORY[0xCBC4D0] = 12716032;
+    MEMORY[0xCBC4D4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBC4D8] = 7312940;
+    MEMORY[0xCBC4DC] = 0;
+    MEMORY[0xCBC4E0] = 7313448;
+    MEMORY[0xCBC4E4] = 0;
+    MEMORY[0xCBC4E8] = 7314640;
+    MEMORY[0xCBC4EC] = 0;
+    MEMORY[0xCBC4F0] = 12716032;
+    MEMORY[0xCBC4F4] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBC4F8] = 7314644;
+    MEMORY[0xCBC4FC] = 0;
+    MEMORY[0xCBC500] = 7315152;
+    MEMORY[0xCBC504] = 0;
+    MEMORY[0xCBC508] = 7316324;
+    MEMORY[0xCBC50C] = 0;
+    MEMORY[0xCBC510] = 12716032;
+    MEMORY[0xCBC514] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCBC518] = 7316328;
+    MEMORY[0xCBC51C] = 0;
+    MEMORY[0xCBC520] = 7316836;
+    MEMORY[0xCBC524] = 0;
+    MEMORY[0xCBC528] = 7318004;
+    MEMORY[0xCBC52C] = 0;
+    MEMORY[0xCBC530] = 12716032;
+    MEMORY[0xCBC534] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xCBC538] = 7318008;
+    MEMORY[0xCBC53C] = 0;
+    MEMORY[0xCBC540] = 7318516;
+    MEMORY[0xCBC544] = 0;
+    MEMORY[0xCBC548] = 7319708;
+    MEMORY[0xCBC54C] = 0;
+    MEMORY[0xCBC550] = 12716032;
+    MEMORY[0xCBC554] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xCBC558] = 7319712;
+    MEMORY[0xCBC55C] = 0;
+    MEMORY[0xCBC560] = 7320220;
+    MEMORY[0xCBC564] = 0;
+    MEMORY[0xCBC568] = 7321352;
+    MEMORY[0xCBC56C] = 0;
+    MEMORY[0xCBC570] = 12716032;
+    MEMORY[0xCBC574] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xCBC578] = 7321356;
+    MEMORY[0xCBC57C] = 0;
+    MEMORY[0xCBC580] = 7321864;
+    MEMORY[0xCBC584] = 0;
+    MEMORY[0xCBC588] = 7323028;
+    MEMORY[0xCBC58C] = 0;
+    MEMORY[0xC7B788] += 10;
+    MEMORY[0xCBC594] = MEMORY[0xC7B788];
+    MEMORY[0xCBC590] = 12716032;
+    MEMORY[0xCBC598] = 7323032;
+    MEMORY[0xCBC59C] = 0;
+    MEMORY[0xCBC5A0] = 7323540;
+    MEMORY[0xCBC5A4] = 0;
+    MEMORY[0xCBC5A8] = 7324716;
+    MEMORY[0xCBC5AC] = 0;
+    return 7324716;
   }
 
 /* ============================================================================
@@ -73934,6 +80307,56 @@
   }
 
 /* ============================================================================
+ * registerProfile_geyser_water_bosufor_child_akuta_70072C
+ * RVA 0x0070072c   size 0x1b0   xrefs 0
+ * ============================================================================ */
+  int sub_6070072C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBC5B0 = 0;
+    dword_60CBC5B4 = 0;
+    dword_60CBC5B8 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD85B9;
+    *(_DWORD *)Profile::Profile(13354428, 7326564, MEMORY[0xAF2F24], (int)v1, &unk_60B09630, 0) = 12716052;
+    MEMORY[0xCBC5D8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBC5D4] = 12716308;
+    MEMORY[0xCBC5DC] = 7328332;
+    MEMORY[0xCBC5E0] = 0;
+    MEMORY[0xCBC5E4] = 7328408;
+    MEMORY[0xCBC5E8] = 0;
+    MEMORY[0xCBC5EC] = 7328412;
+    MEMORY[0xCBC5F0] = 0;
+    MEMORY[0xCBC5F4] = 12716308;
+    MEMORY[0xCBC5F8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBC5FC] = 7328416;
+    MEMORY[0xCBC600] = 0;
+    MEMORY[0xCBC604] = 7328548;
+    MEMORY[0xCBC608] = 0;
+    MEMORY[0xCBC60C] = 7328812;
+    MEMORY[0xCBC610] = 0;
+    MEMORY[0xCBC614] = 12716308;
+    MEMORY[0xCBC618] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBC61C] = 7328816;
+    MEMORY[0xCBC620] = 0;
+    MEMORY[0xCBC624] = 7329644;
+    MEMORY[0xCBC628] = 0;
+    MEMORY[0xCBC62C] = 7330220;
+    MEMORY[0xCBC630] = 0;
+    MEMORY[0xC7B788] += 4;
+    MEMORY[0xCBC638] = MEMORY[0xC7B788];
+    MEMORY[0xCBC634] = 12716308;
+    MEMORY[0xCBC63C] = 7330224;
+    MEMORY[0xCBC640] = 0;
+    MEMORY[0xCBC644] = 7330644;
+    MEMORY[0xCBC648] = 0;
+    MEMORY[0xCBC64C] = 7331316;
+    MEMORY[0xCBC650] = 0;
+    return 7331316;
+  }
+
+/* ============================================================================
  * Actor_resident_geyser_water_build
  * RVA 0x00700944   size 0x44   xrefs 0
  * ============================================================================ */
@@ -74061,6 +80484,28 @@
       }
     }
     return v10;
+  }
+
+/* ============================================================================
+ * registerProfile_resident_geyser_water_700FF4
+ * RVA 0x00700ff4   size 0xcc   xrefs 0
+ * ============================================================================ */
+  int sub_60700FF4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD85E6;
+    Profile::Profile(13354580, 7342404, MEMORY[0xAF2F18], (int)v1, &unk_60B09654, 2);
+    MEMORY[0xCBC670] = ++MEMORY[0xC7B788];
+    MEMORY[0xCBC66C] = 12716620;
+    MEMORY[0xCBC674] = 7342532;
+    MEMORY[0xCBC678] = 0;
+    MEMORY[0xCBC67C] = 7342564;
+    MEMORY[0xCBC680] = 0;
+    MEMORY[0xCBC684] = 7342632;
+    MEMORY[0xCBC688] = 0;
+    return 13354604;
   }
 
 /* ============================================================================
@@ -74218,6 +80663,66 @@
       return 6508;
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_RD33exclusive_resident_geyser_water_702918
+ * RVA 0x00702918   size 0x1d0   xrefs 0
+ * ============================================================================ */
+  int sub_60702918()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD85FB;
+    Profile::Profile(13354644, 7344368, MEMORY[0xAF2F1C], (int)v1, &unk_60B09678, 2);
+    MEMORY[0xCBC6B0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBC6B4] = 212;
+    MEMORY[0xCBC6B8] = 1;
+    MEMORY[0xCBC6BC] = 216;
+    MEMORY[0xCBC6C0] = 1;
+    MEMORY[0xCBC6C4] = 220;
+    MEMORY[0xCBC6C8] = 1;
+    MEMORY[0xCBC6AC] = 12716932;
+    MEMORY[0xCBC6CC] = 13353880;
+    MEMORY[0xCBC6D4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBC6D8] = 224;
+    MEMORY[0xCBC6DC] = 1;
+    MEMORY[0xCBC6E0] = 228;
+    MEMORY[0xCBC6E4] = 1;
+    MEMORY[0xCBC6E8] = 232;
+    MEMORY[0xCBC6EC] = 1;
+    MEMORY[0xCBC6D0] = 12716932;
+    MEMORY[0xCBC6F0] = 13353916;
+    MEMORY[0xCBC6F8] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBC6FC] = 236;
+    MEMORY[0xCBC700] = 1;
+    MEMORY[0xCBC704] = 240;
+    MEMORY[0xCBC708] = 1;
+    MEMORY[0xCBC70C] = 244;
+    MEMORY[0xCBC710] = 1;
+    MEMORY[0xCBC6F4] = 12716932;
+    MEMORY[0xCBC714] = 13353952;
+    MEMORY[0xCBC71C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBC720] = 248;
+    MEMORY[0xCBC724] = 1;
+    MEMORY[0xCBC728] = 252;
+    MEMORY[0xCBC72C] = 1;
+    MEMORY[0xCBC730] = 256;
+    MEMORY[0xCBC734] = 1;
+    MEMORY[0xCBC718] = 12716932;
+    MEMORY[0xCBC738] = 13353988;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCBC740] = MEMORY[0xC7B788];
+    MEMORY[0xCBC744] = 260;
+    MEMORY[0xCBC748] = 1;
+    MEMORY[0xCBC74C] = 264;
+    MEMORY[0xCBC750] = 1;
+    MEMORY[0xCBC754] = 268;
+    MEMORY[0xCBC758] = 1;
+    MEMORY[0xCBC73C] = 12716932;
+    MEMORY[0xCBC75C] = 13354024;
+    return 13354024;
   }
 
 /* ============================================================================
@@ -74626,6 +81131,61 @@
   }
 
 /* ============================================================================
+ * registerProfile_FloatingBubble_ctor_703C5C
+ * RVA 0x00703c5c   size 0x1d0   xrefs 0
+ * ============================================================================ */
+  int sub_60703C5C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD861B;
+    Profile::Profile(13354856, 7351088, MEMORY[0xAF30D8], (int)v1, &unk_60B0969C, 2);
+    MEMORY[0xCBC784] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBC780] = 12717152;
+    MEMORY[0xCBC788] = 7351268;
+    MEMORY[0xCBC78C] = 0;
+    MEMORY[0xCBC790] = 7351288;
+    MEMORY[0xCBC794] = 0;
+    MEMORY[0xCBC798] = 7351292;
+    MEMORY[0xCBC79C] = 0;
+    MEMORY[0xCBC7A0] = 12717152;
+    MEMORY[0xCBC7A4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBC7A8] = 7351296;
+    MEMORY[0xCBC7AC] = 0;
+    MEMORY[0xCBC7B0] = 7351316;
+    MEMORY[0xCBC7B4] = 0;
+    MEMORY[0xCBC7B8] = 7351568;
+    MEMORY[0xCBC7BC] = 0;
+    MEMORY[0xCBC7C0] = 12717152;
+    MEMORY[0xCBC7C4] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBC7C8] = 7351572;
+    MEMORY[0xCBC7CC] = 0;
+    MEMORY[0xCBC7D0] = 7351592;
+    MEMORY[0xCBC7D4] = 0;
+    MEMORY[0xCBC7D8] = 7351844;
+    MEMORY[0xCBC7DC] = 0;
+    MEMORY[0xCBC7E0] = 12717152;
+    MEMORY[0xCBC7E4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBC7E8] = 7351848;
+    MEMORY[0xCBC7EC] = 0;
+    MEMORY[0xCBC7F0] = 7351852;
+    MEMORY[0xCBC7F4] = 0;
+    MEMORY[0xCBC7F8] = 7352104;
+    MEMORY[0xCBC7FC] = 0;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCBC804] = MEMORY[0xC7B788];
+    MEMORY[0xCBC800] = 12717152;
+    MEMORY[0xCBC808] = 7352108;
+    MEMORY[0xCBC80C] = 0;
+    MEMORY[0xCBC810] = 7352112;
+    MEMORY[0xCBC814] = 0;
+    MEMORY[0xCBC818] = 7352668;
+    MEMORY[0xCBC81C] = 0;
+    return 7352668;
+  }
+
+/* ============================================================================
  * sub_60703E9C
  * RVA 0x00703e9c   size 0x168   xrefs 1
  * ============================================================================ */
@@ -74887,6 +81447,22 @@
       return sub_6071689C(v4, v2, v5, v3);
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_pipe_water_7053C8
+ * RVA 0x007053c8   size 0x88   xrefs 0
+ * ============================================================================ */
+  int sub_607053C8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBC868 = 0;
+    dword_60CBC86C = 0;
+    dword_60CBC870 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8658;
+    return Profile::Profile(13355124, 7356916, MEMORY[0xAF3184], (int)v1, &unk_60B096C0, 6);
   }
 
 /* ============================================================================
@@ -76573,6 +83149,44 @@
   }
 
 /* ============================================================================
+ * registerProfile_move_708530
+ * RVA 0x00708530   size 0x150   xrefs 0
+ * ============================================================================ */
+  int sub_60708530()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    MEMORY[0xCBC8CC] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBC8C8] = 12718244;
+    MEMORY[0xCBC8D0] = 7371292;
+    MEMORY[0xCBC8D4] = 0;
+    MEMORY[0xCBC8D8] = 7371312;
+    MEMORY[0xCBC8DC] = 0;
+    MEMORY[0xCBC8E0] = 7371316;
+    MEMORY[0xCBC8E4] = 0;
+    MEMORY[0xCBC8EC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBC8E8] = 12718244;
+    MEMORY[0xCBC8F0] = 7371320;
+    MEMORY[0xCBC8F4] = 0;
+    MEMORY[0xCBC8F8] = 7371356;
+    MEMORY[0xCBC8FC] = 0;
+    MEMORY[0xCBC900] = 7371724;
+    MEMORY[0xCBC904] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBC90C] = MEMORY[0xC7B788];
+    MEMORY[0xCBC908] = 12718244;
+    MEMORY[0xCBC910] = 7371728;
+    MEMORY[0xCBC914] = 0;
+    MEMORY[0xCBC918] = 7371756;
+    MEMORY[0xCBC91C] = 0;
+    MEMORY[0xCBC920] = 7372124;
+    MEMORY[0xCBC924] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD87D4;
+    return Profile::Profile(13355304, 7372128, MEMORY[0xAF30D0], (int)v1, &unk_60B09B44, 0);
+  }
+
+/* ============================================================================
  * Actor_iron_RDashspawn_range_narrow_build
  * RVA 0x0070876c   size 0x1a4   xrefs 0
  * ============================================================================ */
@@ -77533,6 +84147,40 @@
   }
 
 /* ============================================================================
+ * registerProfile_iron_RDashspawn_range_narrow_70B0B0
+ * RVA 0x0070b0b0   size 0x198   xrefs 0
+ * ============================================================================ */
+  int sub_6070B0B0()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CBC948 = 0;
+    dword_60CBC94C = 0;
+    dword_60CBC950 = 0;
+    MEMORY[0xCBC958] = ++MEMORY[0xC7B788];
+    MEMORY[0xCBC954] = 12718688;
+    MEMORY[0xCBC95C] = 7374544;
+    MEMORY[0xCBC960] = 0;
+    MEMORY[0xCBC964] = 7374692;
+    MEMORY[0xCBC968] = 0;
+    MEMORY[0xCBC96C] = 7374696;
+    MEMORY[0xCBC970] = 0;
+    v1 = 12321336;
+    v2 = &unk_60AD87E1;
+    Profile::Profile(13355380, 7374700, MEMORY[0xAF3238], (int)&v1, &unk_60B09B68, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD87E8;
+    Profile::Profile(13355404, 7374700, MEMORY[0xAF323C], (int)&v1, &unk_60B09B68, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD87EF;
+    Profile::Profile(13355428, 7374700, MEMORY[0xAF3240], (int)&v1, &unk_60B09B68, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD87FD;
+    return Profile::Profile(13355452, 7374700, MEMORY[0xAF3244], (int)&v1, &unk_60B09B8C, 2);
+  }
+
+/* ============================================================================
  * Actor_iron_kishi_build
  * RVA 0x0070b2f0   size 0x5c   xrefs 0
  * ============================================================================ */
@@ -77608,6 +84256,40 @@
       v8 = 16.0;
     v11 = v11 + v8;
     return sub_6070AD7C(a1, &v10, v6, *(unsigned __int8 *)(a1 + 6112));
+  }
+
+/* ============================================================================
+ * registerProfile_iron_kishi_70B6D0
+ * RVA 0x0070b6d0   size 0x13c   xrefs 0
+ * ============================================================================ */
+  int sub_6070B6D0()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60CBC9F8 = 0;
+    dword_60CBC9F4 = 0;
+    dword_60CBC9F0 = 0;
+    dword_60CBC9EC = 0;
+    dword_60CBC9E8 = 0;
+    dword_60CBC9FC = 1115684864;
+    dword_60CBCA00 = 1115684864;
+    dword_60CBCA04 = 0;
+    dword_60CBCA08 = 0;
+    MEMORY[0xCBCA10] = ++MEMORY[0xC7B788];
+    MEMORY[0xCBCA0C] = 12718908;
+    MEMORY[0xCBCA14] = 7385764;
+    MEMORY[0xCBCA18] = 0;
+    MEMORY[0xCBCA1C] = 7385780;
+    MEMORY[0xCBCA20] = 0;
+    MEMORY[0xCBCA24] = 7385836;
+    MEMORY[0xCBCA28] = 0;
+    v1 = 12321336;
+    v2 = &unk_60AD88B4;
+    Profile::Profile(13355564, 7385840, MEMORY[0xAF30EC], (int)&v1, &unk_60B09C38, 2);
+    v1 = 12321336;
+    v2 = &unk_60AD88C9;
+    return Profile::Profile(13355588, 7385840, MEMORY[0xAF30F0], (int)&v1, &unk_60B09C38, 2);
   }
 
 /* ============================================================================
@@ -77878,6 +84560,87 @@
       (*(void (__fastcall **)(float *, int))(*(_DWORD *)a1 + 192))(a1, 13355684);
     }
     return (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 636))(a1);
+  }
+
+/* ============================================================================
+ * registerProfile_LavaGeyser_ctor_70D3FC
+ * RVA 0x0070d3fc   size 0x230   xrefs 0
+ * ============================================================================ */
+  int sub_6070D3FC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBCA5C = 0;
+    dword_60CBCA60 = 0;
+    dword_60CBCA64 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD88DE;
+    *(_DWORD *)Profile::Profile(13355624, 7387676, MEMORY[0xAF2F28], (int)v1, &unk_60B09C5C, 2) = 12718972;
+    MEMORY[0xCBCA84] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBCA88] = 676;
+    MEMORY[0xCBCA8C] = 1;
+    MEMORY[0xCBCA90] = 680;
+    MEMORY[0xCBCA94] = 1;
+    MEMORY[0xCBCA98] = 684;
+    MEMORY[0xCBCA9C] = 1;
+    MEMORY[0xCBCA80] = 12719752;
+    MEMORY[0xCBCAA0] = 12755100;
+    MEMORY[0xCBCAB0] = 1;
+    MEMORY[0xCBCAB4] = 692;
+    MEMORY[0xCBCAB8] = 1;
+    MEMORY[0xCBCABC] = 696;
+    MEMORY[0xCBCAC0] = 1;
+    MEMORY[0xCBCAA4] = 12719752;
+    MEMORY[0xCBCAA8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBCAAC] = 688;
+    MEMORY[0xCBCAC4] = 12755100;
+    MEMORY[0xCBCAD4] = 1;
+    MEMORY[0xCBCAD8] = 704;
+    MEMORY[0xCBCADC] = 1;
+    MEMORY[0xCBCAE0] = 708;
+    MEMORY[0xCBCAE4] = 1;
+    MEMORY[0xCBCAC8] = 12719752;
+    MEMORY[0xCBCACC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBCAD0] = 700;
+    MEMORY[0xCBCAE8] = 12755100;
+    MEMORY[0xCBCAF8] = 1;
+    MEMORY[0xCBCAFC] = 716;
+    MEMORY[0xCBCB00] = 1;
+    MEMORY[0xCBCB04] = 720;
+    MEMORY[0xCBCB08] = 1;
+    MEMORY[0xCBCAEC] = 12719752;
+    MEMORY[0xCBCAF0] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBCAF4] = 712;
+    MEMORY[0xCBCB0C] = 12755100;
+    MEMORY[0xCBCB1C] = 1;
+    MEMORY[0xCBCB20] = 728;
+    MEMORY[0xCBCB24] = 1;
+    MEMORY[0xCBCB28] = 732;
+    MEMORY[0xCBCB2C] = 1;
+    MEMORY[0xCBCB10] = 12719752;
+    MEMORY[0xCBCB14] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBCB18] = 724;
+    MEMORY[0xCBCB30] = 12755100;
+    MEMORY[0xCBCB40] = 1;
+    MEMORY[0xCBCB44] = 740;
+    MEMORY[0xCBCB48] = 1;
+    MEMORY[0xCBCB4C] = 744;
+    MEMORY[0xCBCB50] = 1;
+    MEMORY[0xCBCB34] = 12719752;
+    MEMORY[0xCBCB38] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCBCB3C] = 736;
+    MEMORY[0xCBCB54] = 12755100;
+    MEMORY[0xC7B788] += 7;
+    MEMORY[0xCBCB5C] = MEMORY[0xC7B788];
+    MEMORY[0xCBCB60] = 748;
+    MEMORY[0xCBCB64] = 1;
+    MEMORY[0xCBCB68] = 752;
+    MEMORY[0xCBCB6C] = 1;
+    MEMORY[0xCBCB70] = 756;
+    MEMORY[0xCBCB74] = 1;
+    MEMORY[0xCBCB58] = 12719752;
+    MEMORY[0xCBCB78] = 12755100;
+    return 1;
   }
 
 /* ============================================================================
@@ -78524,6 +85287,69 @@
   }
 
 /* ============================================================================
+ * registerProfile_yoshitama_70FF4C
+ * RVA 0x0070ff4c   size 0x210   xrefs 0
+ * ============================================================================ */
+  int sub_6070FF4C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8ABF;
+    Profile::Profile(13357264, 7399736, MEMORY[0xAF39D4], (int)v1, &unk_60B09CBC, 2);
+    MEMORY[0xCBD0EC] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBD0E8] = 12720196;
+    MEMORY[0xCBD0F0] = 7399904;
+    MEMORY[0xCBD0F4] = 0;
+    MEMORY[0xCBD0F8] = 7400108;
+    MEMORY[0xCBD0FC] = 0;
+    MEMORY[0xCBD100] = 7400400;
+    MEMORY[0xCBD104] = 0;
+    MEMORY[0xCBD108] = 12720196;
+    MEMORY[0xCBD10C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBD110] = 7400404;
+    MEMORY[0xCBD114] = 0;
+    MEMORY[0xCBD118] = 7400620;
+    MEMORY[0xCBD11C] = 0;
+    MEMORY[0xCBD120] = 7401032;
+    MEMORY[0xCBD124] = 0;
+    MEMORY[0xCBD128] = 12720196;
+    MEMORY[0xCBD12C] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBD130] = 7401036;
+    MEMORY[0xCBD134] = 0;
+    MEMORY[0xCBD138] = 7401464;
+    MEMORY[0xCBD13C] = 0;
+    MEMORY[0xCBD140] = 7401468;
+    MEMORY[0xCBD144] = 0;
+    MEMORY[0xCBD148] = 12720196;
+    MEMORY[0xCBD14C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBD150] = 7401472;
+    MEMORY[0xCBD154] = 0;
+    MEMORY[0xCBD158] = 7401848;
+    MEMORY[0xCBD15C] = 0;
+    MEMORY[0xCBD160] = 7401852;
+    MEMORY[0xCBD164] = 0;
+    MEMORY[0xCBD168] = 12720196;
+    MEMORY[0xCBD16C] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBD170] = 7401856;
+    MEMORY[0xCBD174] = 0;
+    MEMORY[0xCBD178] = 7402112;
+    MEMORY[0xCBD17C] = 0;
+    MEMORY[0xCBD180] = 7402484;
+    MEMORY[0xCBD184] = 0;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xCBD18C] = MEMORY[0xC7B788];
+    MEMORY[0xCBD188] = 12720196;
+    MEMORY[0xCBD190] = 7402488;
+    MEMORY[0xCBD194] = 0;
+    MEMORY[0xCBD198] = 7402580;
+    MEMORY[0xCBD19C] = 0;
+    MEMORY[0xCBD1A0] = 7403152;
+    MEMORY[0xCBD1A4] = 0;
+    return 7403152;
+  }
+
+/* ============================================================================
  * Actor_pipe_build
  * RVA 0x007101dc   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -78536,6 +85362,19 @@
     result = (_DWORD *)sub_6071046C(v0);
     *result = 12720216;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_pipe_7102C0
+ * RVA 0x007102c0   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_607102C0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8AEC;
+    return Profile::Profile(13357488, 7406044, MEMORY[0xAF2F5C], (int)v1, &unk_60B09D54, 0);
   }
 
 /* ============================================================================
@@ -78589,6 +85428,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_pipe_2_710924
+ * RVA 0x00710924   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_60710924()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8AFE;
+    return Profile::Profile(13357576, 7407760, MEMORY[0xAF2F60], (int)v1, &unk_60B09D8C, 0);
+  }
+
+/* ============================================================================
  * Actor_pipe_3_build
  * RVA 0x007109a4   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -78604,6 +85456,19 @@
   }
 
 /* ============================================================================
+ * registerProfile_pipe_3_710A38
+ * RVA 0x00710a38   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_60710A38()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8B10;
+    return Profile::Profile(13357600, 7408036, MEMORY[0xAF2F58], (int)v1, &unk_60B09DC4, 0);
+  }
+
+/* ============================================================================
  * Actor_pipe_4_build
  * RVA 0x00710ab8   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -78616,6 +85481,19 @@
     result = (_DWORD *)sub_6071046C(v0);
     *result = 12721052;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_pipe_4_710B4C
+ * RVA 0x00710b4c   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_60710B4C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD8B22;
+    return Profile::Profile(13357624, 7408312, MEMORY[0xAF2F54], (int)v1, &unk_60B09DFC, 0);
   }
 
 /* ============================================================================
@@ -94136,6 +101014,47 @@
   }
 
 /* ============================================================================
+ * registerProfile_koinmaki_72C558
+ * RVA 0x0072c558   size 0x164   xrefs 0
+ * ============================================================================ */
+  int sub_6072C558()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBD8B0 = 0;
+    dword_60CBD8B4 = 0;
+    dword_60CBD8B8 = 0;
+    MEMORY[0xCBD8C0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBD8BC] = 12722348;
+    MEMORY[0xCBD8C4] = 7514196;
+    MEMORY[0xCBD8C8] = 0;
+    MEMORY[0xCBD8CC] = 7514200;
+    MEMORY[0xCBD8D0] = 0;
+    MEMORY[0xCBD8D4] = 7514204;
+    MEMORY[0xCBD8D8] = 0;
+    MEMORY[0xCBD8E0] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBD8DC] = 12722348;
+    MEMORY[0xCBD8E4] = 7514208;
+    MEMORY[0xCBD8E8] = 0;
+    MEMORY[0xCBD8EC] = 7514360;
+    MEMORY[0xCBD8F0] = 0;
+    MEMORY[0xCBD8F4] = 7514448;
+    MEMORY[0xCBD8F8] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBD900] = MEMORY[0xC7B788];
+    MEMORY[0xCBD8FC] = 12722348;
+    MEMORY[0xCBD904] = 7514452;
+    MEMORY[0xCBD908] = 0;
+    MEMORY[0xCBD90C] = 7514484;
+    MEMORY[0xCBD910] = 0;
+    MEMORY[0xCBD914] = 7515144;
+    MEMORY[0xCBD918] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD9491;
+    return Profile::Profile(13359388, 7515148, MEMORY[0xAF3A1C], (int)v1, &unk_60B0A1CC, 0);
+  }
+
+/* ============================================================================
  * Actor_koinmakikoin_build
  * RVA 0x0072c7f4   size 0x68   xrefs 0
  * ============================================================================ */
@@ -94151,6 +101070,30 @@
     *(_DWORD *)(v0 + 7484) = 12325968;
     *(_DWORD *)(v0 + 7588) = 0;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_koinmakikoin_72CC9C
+ * RVA 0x0072cc9c   size 0xdc   xrefs 0
+ * ============================================================================ */
+  int sub_6072CC9C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBD954 = 0;
+    dword_60CBD958 = 0;
+    dword_60CBD95C = 0;
+    MEMORY[0xCBD964] = ++MEMORY[0xC7B788];
+    MEMORY[0xCBD960] = 12722764;
+    MEMORY[0xCBD968] = 7522064;
+    MEMORY[0xCBD96C] = 0;
+    MEMORY[0xCBD970] = 7522152;
+    MEMORY[0xCBD974] = 0;
+    MEMORY[0xCBD978] = 7522288;
+    MEMORY[0xCBD97C] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD951A;
+    return Profile::Profile(13359488, 7522292, MEMORY[0xAF3400], (int)v1, &unk_60B0A220, 0);
   }
 
 /* ============================================================================
@@ -94438,6 +101381,71 @@
     if ( result )
       return (int)v4;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_koinmakiItem_72DDEC
+ * RVA 0x0072ddec   size 0x230   xrefs 0
+ * ============================================================================ */
+  int sub_6072DDEC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBD998 = 0;
+    dword_60CBD99C = 0;
+    dword_60CBD9A0 = 0;
+    MEMORY[0xCBD9A8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBD9A4] = 12723028;
+    MEMORY[0xCBD9AC] = 7523756;
+    MEMORY[0xCBD9B0] = 0;
+    MEMORY[0xCBD9B4] = 7523760;
+    MEMORY[0xCBD9B8] = 0;
+    MEMORY[0xCBD9BC] = 7523764;
+    MEMORY[0xCBD9C0] = 0;
+    MEMORY[0xCBD9C8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBD9C4] = 12723028;
+    MEMORY[0xCBD9CC] = 7523768;
+    MEMORY[0xCBD9D0] = 0;
+    MEMORY[0xCBD9D4] = 7523984;
+    MEMORY[0xCBD9D8] = 0;
+    MEMORY[0xCBD9DC] = 7524520;
+    MEMORY[0xCBD9E0] = 0;
+    MEMORY[0xCBD9E8] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBD9E4] = 12723028;
+    MEMORY[0xCBD9EC] = 7524524;
+    MEMORY[0xCBD9F0] = 0;
+    MEMORY[0xCBD9F4] = 7524540;
+    MEMORY[0xCBD9F8] = 0;
+    MEMORY[0xCBD9FC] = 7524544;
+    MEMORY[0xCBDA00] = 0;
+    MEMORY[0xCBDA08] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBDA04] = 12723028;
+    MEMORY[0xCBDA0C] = 7524548;
+    MEMORY[0xCBDA10] = 0;
+    MEMORY[0xCBDA14] = 7524648;
+    MEMORY[0xCBDA18] = 0;
+    MEMORY[0xCBDA1C] = 7524852;
+    MEMORY[0xCBDA20] = 0;
+    MEMORY[0xCBDA28] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBDA24] = 12723028;
+    MEMORY[0xCBDA2C] = 7524856;
+    MEMORY[0xCBDA30] = 0;
+    MEMORY[0xCBDA34] = 7524960;
+    MEMORY[0xCBDA38] = 0;
+    MEMORY[0xCBDA3C] = 7524964;
+    MEMORY[0xCBDA40] = 0;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xCBDA48] = MEMORY[0xC7B788];
+    MEMORY[0xCBDA44] = 12723028;
+    MEMORY[0xCBDA4C] = 7524968;
+    MEMORY[0xCBDA50] = 0;
+    MEMORY[0xCBDA54] = 7525216;
+    MEMORY[0xCBDA58] = 0;
+    MEMORY[0xCBDA5C] = 7525396;
+    MEMORY[0xCBDA60] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD9533;
+    return Profile::Profile(13359716, 7525400, MEMORY[0xAF3A20], (int)v1, &unk_60B0A244, 0);
   }
 
 /* ============================================================================
@@ -94829,6 +101837,50 @@
     result = (**v7)(v7, 13359412);
     if ( result )
       return (int)v7;
+    return result;
+  }
+
+/* ============================================================================
+ * registerProfile_koinmakiManager_72F324
+ * RVA 0x0072f324   size 0x174   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6072F324()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBDA7C = 0;
+    dword_60CBDA80 = 0;
+    dword_60CBDA84 = 0;
+    MEMORY[0xCBDA8C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBDA88] = 12723260;
+    MEMORY[0xCBDA90] = 7528608;
+    MEMORY[0xCBDA94] = 0;
+    MEMORY[0xCBDA98] = 7528612;
+    MEMORY[0xCBDA9C] = 0;
+    MEMORY[0xCBDAA0] = 7529132;
+    MEMORY[0xCBDAA4] = 0;
+    MEMORY[0xCBDAAC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBDAA8] = 12723260;
+    MEMORY[0xCBDAB0] = 7529196;
+    MEMORY[0xCBDAB4] = 0;
+    MEMORY[0xCBDAB8] = 7529200;
+    MEMORY[0xCBDABC] = 0;
+    MEMORY[0xCBDAC0] = 7529204;
+    MEMORY[0xCBDAC4] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBDACC] = MEMORY[0xC7B788];
+    MEMORY[0xCBDAC8] = 12723260;
+    MEMORY[0xCBDAD0] = 7529208;
+    MEMORY[0xCBDAD4] = 0;
+    MEMORY[0xCBDAD8] = 7529920;
+    MEMORY[0xCBDADC] = 0;
+    MEMORY[0xCBDAE0] = 7531440;
+    MEMORY[0xCBDAE4] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD95FF;
+    result = (_DWORD *)Profile::Profile(13359848, 7531444, MEMORY[0xAF2D98], (int)v1, &unk_60B0A274, 0);
+    *result = 12723048;
     return result;
   }
 
@@ -95376,6 +102428,73 @@
       }
     }
     return v6;
+  }
+
+/* ============================================================================
+ * registerProfile_minigemuToad_730DBC
+ * RVA 0x00730dbc   size 0x23c   xrefs 0
+ * ============================================================================ */
+  int sub_60730DBC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    unk_60CBDBE0 = 0x4000000;
+    unk_60CBDBE4 = 0x400000;
+    dword_60CBDBE8 = 0;
+    dword_60CBDBEC = 0;
+    dword_60CBDBF0 = 0;
+    MEMORY[0xCBDB04] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBDB00] = 12724028;
+    MEMORY[0xCBDB08] = 7533808;
+    MEMORY[0xCBDB0C] = 0;
+    MEMORY[0xCBDB10] = 7533848;
+    MEMORY[0xCBDB14] = 0;
+    MEMORY[0xCBDB18] = 7533920;
+    MEMORY[0xCBDB1C] = 0;
+    MEMORY[0xCBDB24] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBDB20] = 12724028;
+    MEMORY[0xCBDB28] = 7533924;
+    MEMORY[0xCBDB2C] = 0;
+    MEMORY[0xCBDB30] = 7534004;
+    MEMORY[0xCBDB34] = 0;
+    MEMORY[0xCBDB38] = 7534008;
+    MEMORY[0xCBDB3C] = 0;
+    MEMORY[0xCBDB44] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBDB40] = 12724028;
+    MEMORY[0xCBDB48] = 7534012;
+    MEMORY[0xCBDB4C] = 0;
+    MEMORY[0xCBDB50] = 7534056;
+    MEMORY[0xCBDB54] = 0;
+    MEMORY[0xCBDB58] = 7534120;
+    MEMORY[0xCBDB5C] = 0;
+    MEMORY[0xCBDB64] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBDB60] = 12724028;
+    MEMORY[0xCBDB68] = 7534124;
+    MEMORY[0xCBDB6C] = 0;
+    MEMORY[0xCBDB70] = 7534204;
+    MEMORY[0xCBDB74] = 0;
+    MEMORY[0xCBDB78] = 7534268;
+    MEMORY[0xCBDB7C] = 0;
+    MEMORY[0xCBDB84] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBDB80] = 12724028;
+    MEMORY[0xCBDB88] = 7534272;
+    MEMORY[0xCBDB8C] = 0;
+    MEMORY[0xCBDB90] = 7534412;
+    MEMORY[0xCBDB94] = 0;
+    MEMORY[0xCBDB98] = 7534476;
+    MEMORY[0xCBDB9C] = 0;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xCBDBA4] = MEMORY[0xC7B788];
+    MEMORY[0xCBDBA0] = 12724028;
+    MEMORY[0xCBDBA8] = 7534480;
+    MEMORY[0xCBDBAC] = 0;
+    MEMORY[0xCBDBB0] = 7534680;
+    MEMORY[0xCBDBB4] = 0;
+    MEMORY[0xCBDBB8] = 7534968;
+    MEMORY[0xCBDBBC] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD962F;
+    return Profile::Profile(13360064, 7535052, MEMORY[0xAF3A24], (int)v1, &unk_60B0A298, 0);
   }
 
 /* ============================================================================
@@ -96918,6 +104037,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_minigemuManager_733934
+ * RVA 0x00733934   size 0x7c   xrefs 0
+ * ============================================================================ */
+  int sub_60733934()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBDBFC = 0;
+    dword_60CBDC00 = 0;
+    dword_60CBDC04 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD969B;
+    return Profile::Profile(13360136, 7541572, MEMORY[0xAF2D88], (int)v1, &unk_60B0A2C8, 0);
+  }
+
+/* ============================================================================
  * Actor_minigemuManager_RDash_build
  * RVA 0x00733b50   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -96930,6 +104065,19 @@
     result = (_DWORD *)Actor_minigemuManager_RDash_build_helper(v2, a1);
     *result = 12724156;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_minigemuManager_RDash_733E10
+ * RVA 0x00733e10   size 0x68   xrefs 0
+ * ============================================================================ */
+  int sub_60733E10()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD97B7;
+    return Profile::Profile(13360448, 7551824, MEMORY[0xAF2D8C], (int)v1, &unk_60B0A368, 0);
   }
 
 /* ============================================================================
@@ -97395,6 +104543,76 @@
     (*(void (__fastcall **)(_DWORD, _DWORD **))(***(_DWORD ***)v1 + 68))(**(_DWORD **)v1, (_DWORD **)v1 - 1489);
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)v1 + 60))(**(_DWORD **)v1, v21);
     return sub_60421880(*(_DWORD **)v1);
+  }
+
+/* ============================================================================
+ * registerProfile_minigemupaneruItem_735C78
+ * RVA 0x00735c78   size 0x260   xrefs 0
+ * ============================================================================ */
+  int sub_60735C78()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    MEMORY[0xCBDD64] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBDD60] = 12724556;
+    MEMORY[0xCBDD68] = 7552656;
+    MEMORY[0xCBDD6C] = 0;
+    MEMORY[0xCBDD70] = 7552660;
+    MEMORY[0xCBDD74] = 0;
+    MEMORY[0xCBDD78] = 7552664;
+    MEMORY[0xCBDD7C] = 0;
+    MEMORY[0xCBDD84] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBDD80] = 12724556;
+    MEMORY[0xCBDD88] = 7552668;
+    MEMORY[0xCBDD8C] = 0;
+    MEMORY[0xCBDD90] = 7552756;
+    MEMORY[0xCBDD94] = 0;
+    MEMORY[0xCBDD98] = 7552760;
+    MEMORY[0xCBDD9C] = 0;
+    MEMORY[0xCBDDA4] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBDDA0] = 12724556;
+    MEMORY[0xCBDDA8] = 7552764;
+    MEMORY[0xCBDDAC] = 0;
+    MEMORY[0xCBDDB0] = 7553124;
+    MEMORY[0xCBDDB4] = 0;
+    MEMORY[0xCBDDB8] = 7553572;
+    MEMORY[0xCBDDBC] = 0;
+    MEMORY[0xCBDDC4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBDDC0] = 12724556;
+    MEMORY[0xCBDDC8] = 7553576;
+    MEMORY[0xCBDDCC] = 0;
+    MEMORY[0xCBDDD0] = 7554040;
+    MEMORY[0xCBDDD4] = 0;
+    MEMORY[0xCBDDD8] = 7554592;
+    MEMORY[0xCBDDDC] = 0;
+    MEMORY[0xCBDDE4] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBDDE0] = 12724556;
+    MEMORY[0xCBDDE8] = 7554596;
+    MEMORY[0xCBDDEC] = 0;
+    MEMORY[0xCBDDF0] = 7554888;
+    MEMORY[0xCBDDF4] = 0;
+    MEMORY[0xCBDDF8] = 7555380;
+    MEMORY[0xCBDDFC] = 0;
+    MEMORY[0xCBDE04] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCBDE00] = 12724556;
+    MEMORY[0xCBDE08] = 7555384;
+    MEMORY[0xCBDE0C] = 0;
+    MEMORY[0xCBDE10] = 7555512;
+    MEMORY[0xCBDE14] = 0;
+    MEMORY[0xCBDE18] = 7555796;
+    MEMORY[0xCBDE1C] = 0;
+    MEMORY[0xC7B788] += 7;
+    MEMORY[0xCBDE24] = MEMORY[0xC7B788];
+    MEMORY[0xCBDE20] = 12724556;
+    MEMORY[0xCBDE28] = 7555800;
+    MEMORY[0xCBDE2C] = 0;
+    MEMORY[0xCBDE30] = 7556264;
+    MEMORY[0xCBDE34] = 0;
+    MEMORY[0xCBDE38] = 7556640;
+    MEMORY[0xCBDE3C] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD97DD;
+    return Profile::Profile(13360704, 7556644, MEMORY[0xAF3A14], (int)v1, &unk_60B0A38C, 0);
   }
 
 /* ============================================================================
@@ -97866,6 +105084,61 @@
     if ( _cxa_guard_acquire_0(13360424) )
 
 /* ============================================================================
+ * registerProfile_shafuruburoku_739824
+ * RVA 0x00739824   size 0x1e8   xrefs 0
+ * ============================================================================ */
+  int sub_60739824()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    MEMORY[0xCBDE64] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBDE60] = 12725028;
+    MEMORY[0xCBDE68] = 7561064;
+    MEMORY[0xCBDE6C] = 0;
+    MEMORY[0xCBDE70] = 7561364;
+    MEMORY[0xCBDE74] = 0;
+    MEMORY[0xCBDE78] = 7562508;
+    MEMORY[0xCBDE7C] = 0;
+    MEMORY[0xCBDE84] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBDE80] = 12725028;
+    MEMORY[0xCBDE88] = 7562512;
+    MEMORY[0xCBDE8C] = 0;
+    MEMORY[0xCBDE90] = 7563892;
+    MEMORY[0xCBDE94] = 0;
+    MEMORY[0xCBDE98] = 7565864;
+    MEMORY[0xCBDE9C] = 0;
+    MEMORY[0xCBDEA4] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBDEA0] = 12725028;
+    MEMORY[0xCBDEA8] = 7565868;
+    MEMORY[0xCBDEAC] = 0;
+    MEMORY[0xCBDEB0] = 7565884;
+    MEMORY[0xCBDEB4] = 0;
+    MEMORY[0xCBDEB8] = 7565888;
+    MEMORY[0xCBDEBC] = 0;
+    MEMORY[0xCBDEC4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBDEC0] = 12725028;
+    MEMORY[0xCBDEC8] = 7565892;
+    MEMORY[0xCBDECC] = 0;
+    MEMORY[0xCBDED0] = 7566004;
+    MEMORY[0xCBDED4] = 0;
+    MEMORY[0xCBDED8] = 7566140;
+    MEMORY[0xCBDEDC] = 0;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCBDEE4] = MEMORY[0xC7B788];
+    MEMORY[0xCBDEE8] = 404;
+    MEMORY[0xCBDEEC] = 1;
+    MEMORY[0xCBDEF0] = 408;
+    MEMORY[0xCBDEF4] = 1;
+    MEMORY[0xCBDEF8] = 412;
+    MEMORY[0xCBDEFC] = 1;
+    MEMORY[0xCBDEE0] = 12725048;
+    MEMORY[0xCBDF00] = 13296376;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD998A;
+    return Profile::Profile(13360900, 7566144, MEMORY[0xAF313C], (int)v1, &unk_60B0A41C, 0);
+  }
+
+/* ============================================================================
  * Actor_shafuruburokuManager_build
  * RVA 0x0073ad58   size 0x1d8   xrefs 0
  * ============================================================================ */
@@ -98237,6 +105510,95 @@
       }
       while ( v4 < result );
     }
+    return result;
+  }
+
+/* ============================================================================
+ * registerProfile_shafuruburokuManager_73BC1C
+ * RVA 0x0073bc1c   size 0x2f8   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6073BC1C()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    MEMORY[0xCBDF28] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBDF24] = 12725280;
+    MEMORY[0xCBDF2C] = 7576184;
+    MEMORY[0xCBDF30] = 0;
+    MEMORY[0xCBDF34] = 7576312;
+    MEMORY[0xCBDF38] = 0;
+    MEMORY[0xCBDF3C] = 7576588;
+    MEMORY[0xCBDF40] = 0;
+    MEMORY[0xCBDF48] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBDF44] = 12725280;
+    MEMORY[0xCBDF4C] = 7576592;
+    MEMORY[0xCBDF50] = 0;
+    MEMORY[0xCBDF54] = 7576596;
+    MEMORY[0xCBDF58] = 0;
+    MEMORY[0xCBDF5C] = 7576600;
+    MEMORY[0xCBDF60] = 0;
+    MEMORY[0xCBDF68] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBDF64] = 12725280;
+    MEMORY[0xCBDF6C] = 7576604;
+    MEMORY[0xCBDF70] = 0;
+    MEMORY[0xCBDF74] = 7576732;
+    MEMORY[0xCBDF78] = 0;
+    MEMORY[0xCBDF7C] = 7577400;
+    MEMORY[0xCBDF80] = 0;
+    MEMORY[0xCBDF88] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBDF84] = 12725280;
+    MEMORY[0xCBDF8C] = 7577404;
+    MEMORY[0xCBDF90] = 0;
+    MEMORY[0xCBDF94] = 7577440;
+    MEMORY[0xCBDF98] = 0;
+    MEMORY[0xCBDF9C] = 7578064;
+    MEMORY[0xCBDFA0] = 0;
+    MEMORY[0xCBDFA8] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBDFA4] = 12725280;
+    MEMORY[0xCBDFAC] = 7578068;
+    MEMORY[0xCBDFB0] = 0;
+    MEMORY[0xCBDFB4] = 7578104;
+    MEMORY[0xCBDFB8] = 0;
+    MEMORY[0xCBDFBC] = 7579168;
+    MEMORY[0xCBDFC0] = 0;
+    MEMORY[0xCBDFC8] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCBDFC4] = 12725280;
+    MEMORY[0xCBDFCC] = 7579172;
+    MEMORY[0xCBDFD0] = 0;
+    MEMORY[0xCBDFD4] = 7579192;
+    MEMORY[0xCBDFD8] = 0;
+    MEMORY[0xCBDFDC] = 7579368;
+    MEMORY[0xCBDFE0] = 0;
+    MEMORY[0xCBDFE8] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xCBDFE4] = 12725280;
+    MEMORY[0xCBDFEC] = 7579372;
+    MEMORY[0xCBDFF0] = 0;
+    MEMORY[0xCBDFF4] = 7579500;
+    MEMORY[0xCBDFF8] = 0;
+    MEMORY[0xCBDFFC] = 7579660;
+    MEMORY[0xCBE000] = 0;
+    MEMORY[0xCBE008] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xCBE004] = 12725280;
+    MEMORY[0xCBE00C] = 7579664;
+    MEMORY[0xCBE010] = 0;
+    MEMORY[0xCBE014] = 7579772;
+    MEMORY[0xCBE018] = 0;
+    MEMORY[0xCBE01C] = 7580564;
+    MEMORY[0xCBE020] = 0;
+    MEMORY[0xC7B788] += 9;
+    MEMORY[0xCBE028] = MEMORY[0xC7B788];
+    MEMORY[0xCBE024] = 12725280;
+    MEMORY[0xCBE02C] = 7580568;
+    MEMORY[0xCBE030] = 0;
+    MEMORY[0xCBE034] = 7580616;
+    MEMORY[0xCBE038] = 0;
+    MEMORY[0xCBE03C] = 7581012;
+    MEMORY[0xCBE040] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD99A6;
+    result = (_DWORD *)Profile::Profile(13361220, 7581016, MEMORY[0xAF2D90], (int)v1, &unk_60B0A440, 0);
+    *result = 12725068;
     return result;
   }
 
@@ -98635,6 +105997,145 @@
   }
 
 /* ============================================================================
+ * registerProfile_surotochibiyoshi_73F1F8
+ * RVA 0x0073f1f8   size 0x484   xrefs 0
+ * ============================================================================ */
+  int sub_6073F1F8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBE05C = 0;
+    dword_60CBE060 = 0;
+    dword_60CBE064 = 0;
+    MEMORY[0xCBE06C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBE068] = 12725836;
+    MEMORY[0xCBE070] = 7585736;
+    MEMORY[0xCBE074] = 0;
+    MEMORY[0xCBE078] = 7585864;
+    MEMORY[0xCBE07C] = 0;
+    MEMORY[0xCBE080] = 7585944;
+    MEMORY[0xCBE084] = 0;
+    MEMORY[0xCBE08C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBE090] = 280;
+    MEMORY[0xCBE094] = 1;
+    MEMORY[0xCBE098] = 284;
+    MEMORY[0xCBE09C] = 1;
+    MEMORY[0xCBE0A0] = 288;
+    MEMORY[0xCBE0A4] = 1;
+    MEMORY[0xCBE088] = 12725856;
+    MEMORY[0xCBE0A8] = 13309620;
+    MEMORY[0xCBE0BC] = 272;
+    MEMORY[0xCBE0C0] = 1;
+    MEMORY[0xCBE0C4] = 276;
+    MEMORY[0xCBE0C8] = 1;
+    MEMORY[0xCBE0AC] = 12725856;
+    MEMORY[0xCBE0B0] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBE0B4] = 268;
+    MEMORY[0xCBE0B8] = 1;
+    MEMORY[0xCBE0CC] = 13309584;
+    MEMORY[0xCBE0D4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBE0D0] = 12725836;
+    MEMORY[0xCBE0D8] = 7585948;
+    MEMORY[0xCBE0DC] = 0;
+    MEMORY[0xCBE0E0] = 7585972;
+    MEMORY[0xCBE0E4] = 0;
+    MEMORY[0xCBE0E8] = 7586092;
+    MEMORY[0xCBE0EC] = 0;
+    MEMORY[0xCBE0F4] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBE0F0] = 12725836;
+    MEMORY[0xCBE0F8] = 7586096;
+    MEMORY[0xCBE0FC] = 0;
+    MEMORY[0xCBE100] = 7586192;
+    MEMORY[0xCBE104] = 0;
+    MEMORY[0xCBE108] = 7586364;
+    MEMORY[0xCBE10C] = 0;
+    MEMORY[0xCBE114] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCBE110] = 12725836;
+    MEMORY[0xCBE118] = 7586368;
+    MEMORY[0xCBE11C] = 0;
+    MEMORY[0xCBE120] = 7586372;
+    MEMORY[0xCBE124] = 0;
+    MEMORY[0xCBE128] = 7586792;
+    MEMORY[0xCBE12C] = 0;
+    MEMORY[0xCBE134] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xCBE130] = 12725836;
+    MEMORY[0xCBE138] = 7586796;
+    MEMORY[0xCBE13C] = 0;
+    MEMORY[0xCBE140] = 7586972;
+    MEMORY[0xCBE144] = 0;
+    MEMORY[0xCBE148] = 7587068;
+    MEMORY[0xCBE14C] = 0;
+    MEMORY[0xCBE154] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xCBE150] = 12725836;
+    MEMORY[0xCBE158] = 7587072;
+    MEMORY[0xCBE15C] = 0;
+    MEMORY[0xCBE160] = 7587164;
+    MEMORY[0xCBE164] = 0;
+    MEMORY[0xCBE168] = 7587748;
+    MEMORY[0xCBE16C] = 0;
+    MEMORY[0xCBE174] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xCBE170] = 12725836;
+    MEMORY[0xCBE178] = 7587752;
+    MEMORY[0xCBE17C] = 0;
+    MEMORY[0xCBE180] = 7587852;
+    MEMORY[0xCBE184] = 0;
+    MEMORY[0xCBE188] = 7588004;
+    MEMORY[0xCBE18C] = 0;
+    MEMORY[0xCBE194] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xCBE190] = 12725836;
+    MEMORY[0xCBE198] = 7588008;
+    MEMORY[0xCBE19C] = 0;
+    MEMORY[0xCBE1A0] = 7588116;
+    MEMORY[0xCBE1A4] = 0;
+    MEMORY[0xCBE1A8] = 7588740;
+    MEMORY[0xCBE1AC] = 0;
+    MEMORY[0xCBE1B4] = MEMORY[0xC7B788] + 11;
+    MEMORY[0xCBE1B0] = 12725836;
+    MEMORY[0xCBE1B8] = 7588744;
+    MEMORY[0xCBE1BC] = 0;
+    MEMORY[0xCBE1C0] = 7588872;
+    MEMORY[0xCBE1C4] = 0;
+    MEMORY[0xCBE1C8] = 7588908;
+    MEMORY[0xCBE1CC] = 0;
+    MEMORY[0xCBE1D4] = MEMORY[0xC7B788] + 12;
+    MEMORY[0xCBE1D0] = 12725836;
+    MEMORY[0xCBE1D8] = 7588912;
+    MEMORY[0xCBE1DC] = 0;
+    MEMORY[0xCBE1E0] = 7589168;
+    MEMORY[0xCBE1E4] = 0;
+    MEMORY[0xCBE1E8] = 7589704;
+    MEMORY[0xCBE1EC] = 0;
+    MEMORY[0xCBE1F0] = 12725836;
+    MEMORY[0xCBE1F4] = MEMORY[0xC7B788] + 13;
+    MEMORY[0xCBE1F8] = 328;
+    MEMORY[0xCBE1FC] = 1;
+    MEMORY[0xCBE200] = 332;
+    MEMORY[0xCBE204] = 1;
+    MEMORY[0xCBE208] = 336;
+    MEMORY[0xCBE20C] = 1;
+    MEMORY[0xCBE214] = MEMORY[0xC7B788] + 14;
+    MEMORY[0xCBE210] = 12725836;
+    MEMORY[0xCBE218] = 7589708;
+    MEMORY[0xCBE21C] = 0;
+    MEMORY[0xCBE220] = 7589724;
+    MEMORY[0xCBE224] = 0;
+    MEMORY[0xCBE228] = 7589812;
+    MEMORY[0xCBE22C] = 0;
+    MEMORY[0xC7B788] += 15;
+    MEMORY[0xCBE234] = MEMORY[0xC7B788];
+    MEMORY[0xCBE230] = 12725836;
+    MEMORY[0xCBE238] = 7589816;
+    MEMORY[0xCBE23C] = 0;
+    MEMORY[0xCBE240] = 7589832;
+    MEMORY[0xCBE244] = 0;
+    MEMORY[0xCBE248] = 7589920;
+    MEMORY[0xCBE24C] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD99D1;
+    return Profile::Profile(13361744, 7589924, MEMORY[0xAF343C], (int)v1, &unk_60B0A464, 0);
+  }
+
+/* ============================================================================
  * slotPanel_wait_ref
  * RVA 0x0073f784   size 0x5c   xrefs 0
  * ============================================================================ */
@@ -98909,6 +106410,89 @@
     if ( result )
       return (int)v4;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_surotoItem_740A20
+ * RVA 0x00740a20   size 0x2c4   xrefs 0
+ * ============================================================================ */
+  int sub_60740A20()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBE278 = 0;
+    dword_60CBE27C = 0;
+    dword_60CBE280 = 0;
+    MEMORY[0xCBE288] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBE284] = 12726604;
+    MEMORY[0xCBE28C] = 7599992;
+    MEMORY[0xCBE290] = 0;
+    MEMORY[0xCBE294] = 7599996;
+    MEMORY[0xCBE298] = 0;
+    MEMORY[0xCBE29C] = 7600000;
+    MEMORY[0xCBE2A0] = 0;
+    MEMORY[0xCBE2A8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBE2A4] = 12726604;
+    MEMORY[0xCBE2AC] = 7600004;
+    MEMORY[0xCBE2B0] = 0;
+    MEMORY[0xCBE2B4] = 7600108;
+    MEMORY[0xCBE2B8] = 0;
+    MEMORY[0xCBE2BC] = 7600112;
+    MEMORY[0xCBE2C0] = 0;
+    MEMORY[0xCBE2C8] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBE2C4] = 12726604;
+    MEMORY[0xCBE2CC] = 7600116;
+    MEMORY[0xCBE2D0] = 0;
+    MEMORY[0xCBE2D4] = 7600316;
+    MEMORY[0xCBE2D8] = 0;
+    MEMORY[0xCBE2DC] = 7600664;
+    MEMORY[0xCBE2E0] = 0;
+    MEMORY[0xCBE2E8] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBE2E4] = 12726604;
+    MEMORY[0xCBE2EC] = 7600668;
+    MEMORY[0xCBE2F0] = 0;
+    MEMORY[0xCBE2F4] = 7600768;
+    MEMORY[0xCBE2F8] = 0;
+    MEMORY[0xCBE2FC] = 7601008;
+    MEMORY[0xCBE300] = 0;
+    MEMORY[0xCBE308] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xCBE304] = 12726604;
+    MEMORY[0xCBE30C] = 7601012;
+    MEMORY[0xCBE310] = 0;
+    MEMORY[0xCBE314] = 7601284;
+    MEMORY[0xCBE318] = 0;
+    MEMORY[0xCBE31C] = 7601420;
+    MEMORY[0xCBE320] = 0;
+    MEMORY[0xCBE328] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xCBE324] = 12726604;
+    MEMORY[0xCBE32C] = 7601424;
+    MEMORY[0xCBE330] = 0;
+    MEMORY[0xCBE334] = 7601604;
+    MEMORY[0xCBE338] = 0;
+    MEMORY[0xCBE33C] = 7601608;
+    MEMORY[0xCBE340] = 0;
+    MEMORY[0xCBE348] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xCBE34C] = 564;
+    MEMORY[0xCBE350] = 1;
+    MEMORY[0xCBE354] = 568;
+    MEMORY[0xCBE358] = 1;
+    MEMORY[0xCBE35C] = 572;
+    MEMORY[0xCBE360] = 1;
+    MEMORY[0xCBE344] = 12726624;
+    MEMORY[0xCBE364] = 13175120;
+    MEMORY[0xC7B788] += 8;
+    MEMORY[0xCBE36C] = MEMORY[0xC7B788];
+    MEMORY[0xCBE370] = 588;
+    MEMORY[0xCBE374] = 1;
+    MEMORY[0xCBE378] = 592;
+    MEMORY[0xCBE37C] = 1;
+    MEMORY[0xCBE380] = 596;
+    MEMORY[0xCBE384] = 1;
+    MEMORY[0xCBE368] = 12726624;
+    MEMORY[0xCBE388] = 13175192;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD9A15;
+    return Profile::Profile(13362060, 7601612, MEMORY[0xAF3A18], (int)v1, &unk_60B0A498, 0);
   }
 
 /* ============================================================================
@@ -99880,6 +107464,102 @@
     *a1 = 12348984;
     sub_60002B6C(a1);
     sead::IDisposer::~IDisposer((sead::IDisposer *)a1);
+  }
+
+/* ============================================================================
+ * registerProfile_surotoManager_7444D8
+ * RVA 0x007444d8   size 0x164   xrefs 0
+ * ============================================================================ */
+  int sub_607444D8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBE3A4 = 0;
+    dword_60CBE3A8 = 0;
+    dword_60CBE3AC = 0;
+    MEMORY[0xCBE3B4] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBE3B0] = 12726860;
+    MEMORY[0xCBE3B8] = 7605628;
+    MEMORY[0xCBE3BC] = 0;
+    MEMORY[0xCBE3C0] = 7605632;
+    MEMORY[0xCBE3C4] = 0;
+    MEMORY[0xCBE3C8] = 7605636;
+    MEMORY[0xCBE3CC] = 0;
+    MEMORY[0xCBE3D4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBE3D0] = 12726860;
+    MEMORY[0xCBE3D8] = 7605640;
+    MEMORY[0xCBE3DC] = 0;
+    MEMORY[0xCBE3E0] = 7605656;
+    MEMORY[0xCBE3E4] = 0;
+    MEMORY[0xCBE3E8] = 7607648;
+    MEMORY[0xCBE3EC] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBE3F4] = MEMORY[0xC7B788];
+    MEMORY[0xCBE3F0] = 12726860;
+    MEMORY[0xCBE3F8] = 7607652;
+    MEMORY[0xCBE3FC] = 0;
+    MEMORY[0xCBE400] = 7607696;
+    MEMORY[0xCBE404] = 0;
+    MEMORY[0xCBE408] = 7611628;
+    MEMORY[0xCBE40C] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD9ADC;
+    return Profile::Profile(13362192, 7611632, MEMORY[0xAF2D94], (int)v1, &unk_60B0A4E8, 0);
+  }
+
+/* ============================================================================
+ * registerProfile_koinshin_StaffRoll_744698
+ * RVA 0x00744698   size 0x1f0   xrefs 0
+ * ============================================================================ */
+  int sub_60744698()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBE4B0 = 12321336;
+    *(_DWORD *)algn_60CBE4B4 = "balloon";
+    unk_60CBE4B8 = 12321336;
+    dword_60CBE4BC = (int)"balloon";
+    dword_60CBE4C0 = 12321336;
+    dword_60CBE4C4 = (int)"balloon_back";
+    dword_60CBE4C8 = 12321336;
+    dword_60CBE4CC = (int)"float";
+    dword_60CBE4D0 = 12321336;
+    dword_60CBE4D4 = (int)"vibrate";
+    sub_60000288();
+    dword_60CBE4D8 = 12321336;
+    dword_60CBE4DC = (int)"float_back";
+    dword_60CBE4E0 = 12321336;
+    dword_60CBE4E4 = (int)"vibrate_back";
+    sub_60000288();
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD9AF8;
+    *(_DWORD *)Profile::Profile(13362216, 7620864, MEMORY[0xAF3A64], (int)v1, nullptr, 2) = 12726880;
+    MEMORY[0xCBE444] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBE440] = 12727124;
+    MEMORY[0xCBE448] = 7621340;
+    MEMORY[0xCBE44C] = 0;
+    MEMORY[0xCBE450] = 7621364;
+    MEMORY[0xCBE454] = 0;
+    MEMORY[0xCBE458] = 7621368;
+    MEMORY[0xCBE45C] = 0;
+    MEMORY[0xCBE460] = 12727124;
+    MEMORY[0xCBE464] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBE484] = MEMORY[0xC7B788];
+    MEMORY[0xCBE468] = 7621372;
+    MEMORY[0xCBE480] = 12727124;
+    MEMORY[0xCBE46C] = 0;
+    MEMORY[0xCBE488] = 7622076;
+    MEMORY[0xCBE470] = 7621652;
+    MEMORY[0xCBE48C] = 0;
+    MEMORY[0xCBE474] = 0;
+    MEMORY[0xCBE490] = 7622280;
+    MEMORY[0xCBE478] = 7622072;
+    MEMORY[0xCBE47C] = 0;
+    MEMORY[0xCBE494] = 0;
+    MEMORY[0xCBE498] = 7622928;
+    MEMORY[0xCBE49C] = 0;
+    return 13362304;
   }
 
 /* ============================================================================
@@ -100894,6 +108574,87 @@
   }
 
 /* ============================================================================
+ * registerProfile_arufabetoshin_StaffRoll_7474E0
+ * RVA 0x007474e0   size 0x24c   xrefs 0
+ * ============================================================================ */
+  int sub_607474E0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBE570[0] = 12321336;
+    dword_60CBE574 = (int)"baloon_ABC";
+    dword_60CBE578 = 12321336;
+    dword_60CBE57C = (int)"baloon_ABC";
+    dword_60CBE580 = 12321336;
+    v1[0] = 12321336;
+    dword_60CBE584 = (int)"mat_ABC";
+    dword_60CBE588 = 12321336;
+    dword_60CBE58C = (int)"mat_back";
+    dword_60CBE590 = 12321336;
+    dword_60CBE594 = (int)"mat_balloon";
+    v1[1] = &unk_60AD9B59;
+    dword_60CBE598 = 1065353216;
+    dword_60CBE59C = 1065353216;
+    dword_60CBE5A0 = 1065353216;
+    dword_60CBE5A4 = 0;
+    dword_60CBE5A8 = 1065353216;
+    dword_60CBE5AC = 1065353216;
+    dword_60CBE5B0 = 1050253722;
+    dword_60CBE5B4 = 0;
+    dword_60CBE5D0 = 0;
+    dword_60CBE5D4 = 0;
+    dword_60CBE5CC = 0;
+    dword_60CBE5C8 = 0;
+    dword_60CBE5C4 = 0;
+    dword_60CBE5C0 = 0;
+    dword_60CBE5BC = 0;
+    dword_60CBE5B8 = 0;
+    dword_60CBE5E0[0] = 1053609165;
+    dword_60CBE5E4 = 1060320051;
+    dword_60CBE5E8 = 1065353216;
+    dword_60CBE5EC = 1056964608;
+    dword_60CBE5F0 = 1053609165;
+    dword_60CBE5F4 = 1060320051;
+    dword_60CBE5F8 = 1065353216;
+    dword_60CBE5FC = 1056964608;
+    dword_60CBE600 = 1065353216;
+    dword_60CBE604 = 1065353216;
+    dword_60CBE608 = 1065353216;
+    dword_60CBE60C = 0;
+    dword_60CBE610 = 1065353216;
+    dword_60CBE614 = 1065353216;
+    dword_60CBE618 = 1065353216;
+    dword_60CBE61C = 0;
+    *(_DWORD *)Profile::Profile(13362408, 7627440, MEMORY[0xAF3A60], (int)v1, nullptr, 2) = 12727236;
+    MEMORY[0xCBE504] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBE500] = 12727388;
+    MEMORY[0xCBE508] = 7627756;
+    MEMORY[0xCBE50C] = 0;
+    MEMORY[0xCBE510] = 7627772;
+    MEMORY[0xCBE514] = 0;
+    MEMORY[0xCBE518] = 7627776;
+    MEMORY[0xCBE51C] = 0;
+    MEMORY[0xCBE520] = 12727388;
+    MEMORY[0xCBE524] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBE528] = 7627792;
+    MEMORY[0xCBE52C] = 0;
+    MEMORY[0xCBE530] = 7628080;
+    MEMORY[0xCBE534] = 0;
+    MEMORY[0xCBE538] = 7628448;
+    MEMORY[0xCBE53C] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBE544] = MEMORY[0xC7B788];
+    MEMORY[0xCBE540] = 12727388;
+    MEMORY[0xCBE548] = 7628468;
+    MEMORY[0xCBE54C] = 0;
+    MEMORY[0xCBE550] = 7628664;
+    MEMORY[0xCBE554] = 0;
+    MEMORY[0xCBE558] = 7628724;
+    MEMORY[0xCBE55C] = 0;
+    return 7628724;
+  }
+
+/* ============================================================================
  * Actor_chibiyoshi_ship_StaffRoll_for_build
  * RVA 0x00747794   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -101071,6 +108832,44 @@
     (*(void (__fastcall **)(int, float *))(*(_DWORD *)v17 + 68))(v17, v19);
     (*(void (__fastcall **)(int))(*(_DWORD *)v17 + 52))(v17);
     return (*(int (__fastcall **)(int))(*(_DWORD *)v17 + 56))(v17);
+  }
+
+/* ============================================================================
+ * registerProfile_chibiyoshi_ship_StaffRoll_for_748848
+ * RVA 0x00748848   size 0x170   xrefs 0
+ * ============================================================================ */
+  int *sub_60748848()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD9BA5;
+    Profile::Profile(13362720, 7632788, MEMORY[0xAF3A50], (int)&v1, nullptr, 0);
+    v1 = 12321336;
+    v2 = &unk_60AD9BDF;
+    Profile::Profile(13362744, 7632788, MEMORY[0xAF3A54], (int)&v1, nullptr, 0);
+    MEMORY[0xCBE654] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBE650] = 12727716;
+    MEMORY[0xCBE658] = 7632816;
+    MEMORY[0xCBE65C] = 0;
+    MEMORY[0xCBE660] = 7632908;
+    MEMORY[0xCBE664] = 0;
+    MEMORY[0xCBE668] = 7633368;
+    MEMORY[0xCBE66C] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCBE674] = MEMORY[0xC7B788];
+    MEMORY[0xCBE678] = 136;
+    MEMORY[0xCBE67C] = 1;
+    MEMORY[0xCBE680] = 140;
+    MEMORY[0xCBE684] = 1;
+    MEMORY[0xCBE688] = 144;
+    MEMORY[0xCBE68C] = 1;
+    MEMORY[0xCBE670] = 12727736;
+    MEMORY[0xCBE690] = 13362860;
+    dword_60CBE6A4 = 23860929;
+    dword_60CBE6A8 = 143165576;
+    return &dword_60CBE6A4;
   }
 
 /* ============================================================================
@@ -101422,6 +109221,38 @@
   }
 
 /* ============================================================================
+ * registerProfile_chibiyoshi_StaffRoll_749E7C
+ * RVA 0x00749e7c   size 0x114   xrefs 0
+ * ============================================================================ */
+  int sub_60749E7C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD9C22;
+    Profile::Profile(13363080, 7640740, MEMORY[0xAF3A4C], (int)v1, nullptr, 0);
+    MEMORY[0xCBE7A4] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBE7A0] = 12728296;
+    MEMORY[0xCBE7A8] = 7640800;
+    MEMORY[0xCBE7AC] = 0;
+    MEMORY[0xCBE7B0] = 7640848;
+    MEMORY[0xCBE7B4] = 0;
+    MEMORY[0xCBE7B8] = 7640896;
+    MEMORY[0xCBE7BC] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xCBE7C4] = MEMORY[0xC7B788];
+    MEMORY[0xCBE7C8] = 184;
+    MEMORY[0xCBE7CC] = 1;
+    MEMORY[0xCBE7D0] = 188;
+    MEMORY[0xCBE7D4] = 1;
+    MEMORY[0xCBE7D8] = 192;
+    MEMORY[0xCBE7DC] = 1;
+    MEMORY[0xCBE7C0] = 12728316;
+    MEMORY[0xCBE7E0] = 13363004;
+    return 13363004;
+  }
+
+/* ============================================================================
  * Actor_chibiyoshi_light_StaffRoll_for_build
  * RVA 0x00749fc8   size 0x38   xrefs 0
  * ============================================================================ */
@@ -101435,6 +109266,69 @@
     *result = 12728336;
     result[182] = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_chibiyoshi_light_StaffRoll_for_74A690
+ * RVA 0x0074a690   size 0x214   xrefs 0
+ * ============================================================================ */
+  int sub_6074A690()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    v1 = 12321336;
+    v2 = &unk_60AD9C59;
+    Profile::Profile(13363180, 7643080, MEMORY[0xAF3A58], (int)&v1, nullptr, 0);
+    v1 = 12321336;
+    v2 = &unk_60AD9C90;
+    Profile::Profile(13363204, 7643080, MEMORY[0xAF3A5C], (int)&v1, nullptr, 0);
+    MEMORY[0xCBE820] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBE824] = 136;
+    MEMORY[0xCBE828] = 1;
+    MEMORY[0xCBE82C] = 140;
+    MEMORY[0xCBE830] = 1;
+    MEMORY[0xCBE834] = 144;
+    MEMORY[0xCBE838] = 1;
+    MEMORY[0xCBE81C] = 12728540;
+    MEMORY[0xCBE83C] = 13362860;
+    MEMORY[0xCBE848] = 148;
+    MEMORY[0xCBE84C] = 1;
+    MEMORY[0xCBE850] = 152;
+    MEMORY[0xCBE854] = 1;
+    MEMORY[0xCBE858] = 156;
+    MEMORY[0xCBE85C] = 1;
+    MEMORY[0xCBE840] = 12728540;
+    MEMORY[0xCBE844] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBE860] = 13362896;
+    MEMORY[0xCBE86C] = 160;
+    MEMORY[0xCBE870] = 1;
+    MEMORY[0xCBE874] = 164;
+    MEMORY[0xCBE878] = 1;
+    MEMORY[0xCBE87C] = 168;
+    MEMORY[0xCBE880] = 1;
+    MEMORY[0xCBE864] = 12728540;
+    MEMORY[0xCBE868] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xCBE884] = 13362932;
+    MEMORY[0xCBE890] = 172;
+    MEMORY[0xCBE894] = 1;
+    MEMORY[0xCBE898] = 176;
+    MEMORY[0xCBE89C] = 1;
+    MEMORY[0xCBE8A0] = 180;
+    MEMORY[0xCBE8A4] = 1;
+    MEMORY[0xCBE888] = 12728540;
+    MEMORY[0xCBE88C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xCBE8A8] = 13362968;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xCBE8B0] = MEMORY[0xC7B788];
+    MEMORY[0xCBE8AC] = 12728560;
+    MEMORY[0xCBE8B4] = 7643140;
+    MEMORY[0xCBE8B8] = 0;
+    MEMORY[0xCBE8BC] = 7643180;
+    MEMORY[0xCBE8C0] = 0;
+    MEMORY[0xCBE8C4] = 7643280;
+    MEMORY[0xCBE8C8] = 0;
+    return 7643280;
   }
 
 /* ============================================================================
@@ -102691,6 +110585,50 @@
   }
 
 /* ============================================================================
+ * registerProfile_StaffRoll_Manager_74CD98
+ * RVA 0x0074cd98   size 0x190   xrefs 0
+ * ============================================================================ */
+  int sub_6074CD98()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60CBE968 = 0;
+    dword_60CBE96C = 0;
+    dword_60CBE970 = 0;
+    dword_60CBE960 = 12569068;
+    dword_60CBE964 = (int)&unk_60B0A5B2;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD9CD0;
+    *(_DWORD *)Profile::Profile(13363412, 7645440, MEMORY[0xAF2DB0], (int)v1, &unk_60B0A5B8, 2) = 12728580;
+    MEMORY[0xCBE8F0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xCBE8EC] = 12728740;
+    MEMORY[0xCBE8F4] = 7645912;
+    MEMORY[0xCBE8F8] = 0;
+    MEMORY[0xCBE8FC] = 7645924;
+    MEMORY[0xCBE900] = 0;
+    MEMORY[0xCBE904] = 7645976;
+    MEMORY[0xCBE908] = 0;
+    MEMORY[0xCBE90C] = 12728740;
+    MEMORY[0xCBE910] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xCBE914] = 7645980;
+    MEMORY[0xCBE918] = 0;
+    MEMORY[0xCBE91C] = 7646068;
+    MEMORY[0xCBE920] = 0;
+    MEMORY[0xCBE924] = 7646412;
+    MEMORY[0xCBE928] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xCBE930] = MEMORY[0xC7B788];
+    MEMORY[0xCBE92C] = 12728740;
+    MEMORY[0xCBE934] = 7646416;
+    MEMORY[0xCBE938] = 0;
+    MEMORY[0xCBE93C] = 7646500;
+    MEMORY[0xCBE940] = 0;
+    MEMORY[0xCBE944] = 7647436;
+    MEMORY[0xCBE948] = 0;
+    return 7647436;
+  }
+
+/* ============================================================================
  * Actor_StaffRoll_Manager_2_build
  * RVA 0x0074cf88   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -102703,6 +110641,19 @@
     result = (_DWORD *)Actor_StaffRoll_Manager_2_build_helper(v2, a1);
     *result = 12728852;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_StaffRoll_Manager_2_74D43C
+ * RVA 0x0074d43c   size 0x6c   xrefs 0
+ * ============================================================================ */
+  int sub_6074D43C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AD9CD0;
+    return Profile::Profile(13363572, 7655304, MEMORY[0xAF2DB4], (int)v1, &unk_60B0A5DC, 2);
   }
 
 /* ============================================================================

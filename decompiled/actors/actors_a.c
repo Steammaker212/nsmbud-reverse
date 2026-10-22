@@ -44,6 +44,90 @@
   }
 
 /* ============================================================================
+ * registerProfile_CourseSelectBoo_20069C
+ * RVA 0x0020069c   size 0x238   xrefs 0
+ * ============================================================================ */
+  int sub_6020069C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8C378 = 0;
+    dword_60C8C37C = 0;
+    dword_60C8C380 = 0;
+    dword_60C8C384 = 1120403456;
+    dword_60C8C388 = 1120403456;
+    dword_60C8C38C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1DBF;
+    *(_DWORD *)Profile::Profile(13156936, 2097680, MEMORY[0xAF3AF4], (int)v1, nullptr, 0) = 12420288;
+    MEMORY[0xC8C264] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8C268] = 92;
+    MEMORY[0xC8C26C] = 1;
+    MEMORY[0xC8C270] = 96;
+    MEMORY[0xC8C274] = 1;
+    MEMORY[0xC8C278] = 100;
+    MEMORY[0xC8C27C] = 1;
+    MEMORY[0xC8C260] = 12420484;
+    MEMORY[0xC8C280] = 12755100;
+    MEMORY[0xC8C290] = 1;
+    MEMORY[0xC8C294] = 108;
+    MEMORY[0xC8C298] = 1;
+    MEMORY[0xC8C29C] = 112;
+    MEMORY[0xC8C2A0] = 1;
+    MEMORY[0xC8C284] = 12420484;
+    MEMORY[0xC8C288] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8C28C] = 104;
+    MEMORY[0xC8C2A4] = 12755100;
+    MEMORY[0xC8C2B4] = 1;
+    MEMORY[0xC8C2B8] = 120;
+    MEMORY[0xC8C2BC] = 1;
+    MEMORY[0xC8C2C0] = 124;
+    MEMORY[0xC8C2C4] = 1;
+    MEMORY[0xC8C2A8] = 12420484;
+    MEMORY[0xC8C2AC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8C2B0] = 116;
+    MEMORY[0xC8C2C8] = 12755100;
+    MEMORY[0xC8C2D8] = 1;
+    MEMORY[0xC8C2DC] = 132;
+    MEMORY[0xC8C2E0] = 1;
+    MEMORY[0xC8C2E4] = 136;
+    MEMORY[0xC8C2E8] = 1;
+    MEMORY[0xC8C2CC] = 12420484;
+    MEMORY[0xC8C2D0] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8C2D4] = 128;
+    MEMORY[0xC8C2EC] = 12755100;
+    MEMORY[0xC8C2FC] = 1;
+    MEMORY[0xC8C300] = 144;
+    MEMORY[0xC8C304] = 1;
+    MEMORY[0xC8C308] = 148;
+    MEMORY[0xC8C30C] = 1;
+    MEMORY[0xC8C2F0] = 12420484;
+    MEMORY[0xC8C2F4] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8C2F8] = 140;
+    MEMORY[0xC8C310] = 12755100;
+    MEMORY[0xC8C320] = 1;
+    MEMORY[0xC8C324] = 156;
+    MEMORY[0xC8C328] = 1;
+    MEMORY[0xC8C32C] = 160;
+    MEMORY[0xC8C330] = 1;
+    MEMORY[0xC8C314] = 12420484;
+    MEMORY[0xC8C318] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8C31C] = 152;
+    MEMORY[0xC8C334] = 12755100;
+    MEMORY[0xC7B788] += 7;
+    MEMORY[0xC8C33C] = MEMORY[0xC7B788];
+    MEMORY[0xC8C340] = 164;
+    MEMORY[0xC8C344] = 1;
+    MEMORY[0xC8C348] = 168;
+    MEMORY[0xC8C34C] = 1;
+    MEMORY[0xC8C350] = 172;
+    MEMORY[0xC8C354] = 1;
+    MEMORY[0xC8C338] = 12420484;
+    MEMORY[0xC8C358] = 12755100;
+    return 1;
+  }
+
+/* ============================================================================
  * sub_60200954
  * RVA 0x00200954   size 0x1d0   xrefs 1
  * ============================================================================ */
@@ -255,6 +339,149 @@
       *(float *)(a1 + 536) = v10 + *v11;
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_CSpuku_2038EC
+ * RVA 0x002038ec   size 0x48c   xrefs 0
+ * ============================================================================ */
+  int sub_602038EC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    unk_60C8C5C0 = 83886080;
+    unk_60C8C5C4 = 0;
+    dword_60C8C5C8 = 0;
+    dword_60C8C5CC = 0;
+    dword_60C8C5D0 = 1101004800;
+    dword_60C8C5D4 = 0;
+    dword_60C8C5D8 = 1088421888;
+    dword_60C8C5DC = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1E0D;
+    *(_DWORD *)Profile::Profile(13157312, 2104500, MEMORY[0xAF3B08], (int)v1, nullptr, 0) = 12420596;
+    MEMORY[0xC8C3DC] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8C3D8] = 12420800;
+    MEMORY[0xC8C3E0] = 2104712;
+    MEMORY[0xC8C3E4] = 0;
+    MEMORY[0xC8C3E8] = 2104716;
+    MEMORY[0xC8C3EC] = 0;
+    MEMORY[0xC8C3F0] = 2104756;
+    MEMORY[0xC8C3F4] = 0;
+    MEMORY[0xC8C3F8] = 12420800;
+    MEMORY[0xC8C3FC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8C400] = 2104760;
+    MEMORY[0xC8C404] = 0;
+    MEMORY[0xC8C408] = 2104924;
+    MEMORY[0xC8C40C] = 0;
+    MEMORY[0xC8C410] = 2105228;
+    MEMORY[0xC8C414] = 0;
+    MEMORY[0xC8C418] = 12420800;
+    MEMORY[0xC8C41C] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8C420] = 2105232;
+    MEMORY[0xC8C424] = 0;
+    MEMORY[0xC8C428] = 2105372;
+    MEMORY[0xC8C42C] = 0;
+    MEMORY[0xC8C430] = 2105592;
+    MEMORY[0xC8C434] = 0;
+    MEMORY[0xC8C438] = 12420800;
+    MEMORY[0xC8C43C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8C440] = 2105596;
+    MEMORY[0xC8C444] = 0;
+    MEMORY[0xC8C448] = 2105836;
+    MEMORY[0xC8C44C] = 0;
+    MEMORY[0xC8C450] = 2106764;
+    MEMORY[0xC8C454] = 0;
+    MEMORY[0xC8C458] = 12420800;
+    MEMORY[0xC8C45C] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8C460] = 2106768;
+    MEMORY[0xC8C464] = 0;
+    MEMORY[0xC8C468] = 2106792;
+    MEMORY[0xC8C46C] = 0;
+    MEMORY[0xC8C470] = 2106888;
+    MEMORY[0xC8C474] = 0;
+    MEMORY[0xC8C478] = 12420800;
+    MEMORY[0xC8C47C] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8C480] = 2106892;
+    MEMORY[0xC8C484] = 0;
+    MEMORY[0xC8C488] = 2107060;
+    MEMORY[0xC8C48C] = 0;
+    MEMORY[0xC8C490] = 2107316;
+    MEMORY[0xC8C494] = 0;
+    MEMORY[0xC8C498] = 12420800;
+    MEMORY[0xC8C49C] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8C4A0] = 2107320;
+    MEMORY[0xC8C4A4] = 0;
+    MEMORY[0xC8C4A8] = 2107324;
+    MEMORY[0xC8C4AC] = 0;
+    MEMORY[0xC8C4B0] = 2107328;
+    MEMORY[0xC8C4B4] = 0;
+    MEMORY[0xC8C4B8] = 12420800;
+    MEMORY[0xC8C4BC] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8C4C0] = 2107332;
+    MEMORY[0xC8C4C4] = 0;
+    MEMORY[0xC8C4C8] = 2107336;
+    MEMORY[0xC8C4CC] = 0;
+    MEMORY[0xC8C4D0] = 2107700;
+    MEMORY[0xC8C4D4] = 0;
+    MEMORY[0xC8C4D8] = 12420800;
+    MEMORY[0xC8C4DC] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC8C4E0] = 2107704;
+    MEMORY[0xC8C4E4] = 0;
+    MEMORY[0xC8C4E8] = 2107748;
+    MEMORY[0xC8C4EC] = 0;
+    MEMORY[0xC8C4F0] = 2108156;
+    MEMORY[0xC8C4F4] = 0;
+    MEMORY[0xC8C4F8] = 12420800;
+    MEMORY[0xC8C4FC] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xC8C500] = 2108160;
+    MEMORY[0xC8C504] = 0;
+    MEMORY[0xC8C508] = 2108348;
+    MEMORY[0xC8C50C] = 0;
+    MEMORY[0xC8C510] = 2108792;
+    MEMORY[0xC8C514] = 0;
+    MEMORY[0xC8C518] = 12420800;
+    MEMORY[0xC8C51C] = MEMORY[0xC7B788] + 11;
+    MEMORY[0xC8C520] = 2108796;
+    MEMORY[0xC8C524] = 0;
+    MEMORY[0xC8C528] = 2108800;
+    MEMORY[0xC8C52C] = 0;
+    MEMORY[0xC8C530] = 2108804;
+    MEMORY[0xC8C534] = 0;
+    MEMORY[0xC8C538] = 12420800;
+    MEMORY[0xC8C53C] = MEMORY[0xC7B788] + 12;
+    MEMORY[0xC8C540] = 2108808;
+    MEMORY[0xC8C544] = 0;
+    MEMORY[0xC8C548] = 2108888;
+    MEMORY[0xC8C54C] = 0;
+    MEMORY[0xC8C550] = 2108900;
+    MEMORY[0xC8C554] = 0;
+    MEMORY[0xC8C558] = 12420800;
+    MEMORY[0xC8C55C] = MEMORY[0xC7B788] + 13;
+    MEMORY[0xC8C560] = 2108904;
+    MEMORY[0xC8C564] = 0;
+    MEMORY[0xC8C568] = 2108984;
+    MEMORY[0xC8C56C] = 0;
+    MEMORY[0xC8C570] = 2109072;
+    MEMORY[0xC8C574] = 0;
+    MEMORY[0xC8C578] = 12420800;
+    MEMORY[0xC8C57C] = MEMORY[0xC7B788] + 14;
+    MEMORY[0xC8C580] = 2109076;
+    MEMORY[0xC8C584] = 0;
+    MEMORY[0xC8C588] = 2109080;
+    MEMORY[0xC8C58C] = 0;
+    MEMORY[0xC8C590] = 2109124;
+    MEMORY[0xC8C594] = 0;
+    MEMORY[0xC7B788] += 15;
+    MEMORY[0xC8C59C] = MEMORY[0xC7B788];
+    MEMORY[0xC8C598] = 12420800;
+    MEMORY[0xC8C5A0] = 2109128;
+    MEMORY[0xC8C5A4] = 0;
+    MEMORY[0xC8C5A8] = 2109188;
+    MEMORY[0xC8C5AC] = 0;
+    MEMORY[0xC8C5B0] = 2109312;
+    MEMORY[0xC8C5B4] = 0;
+    return 2109312;
   }
 
 /* ============================================================================
@@ -708,6 +935,25 @@
   }
 
 /* ============================================================================
+ * registerProfile_CSo_204D18
+ * RVA 0x00204d18   size 0x84   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_60204D18()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8C5E8 = 0;
+    dword_60C8C5EC = 0;
+    dword_60C8C5F0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1E1C;
+    result = (_DWORD *)Profile::Profile(13157876, 2115320, MEMORY[0xAF3B44], (int)v1, nullptr, 0);
+    *result = 12420836;
+    return result;
+  }
+
+/* ============================================================================
  * Actor_CourseSelectfort_build
  * RVA 0x00204eec   size 0x44   xrefs 0
  * ============================================================================ */
@@ -785,6 +1031,25 @@
   }
 
 /* ============================================================================
+ * registerProfile_CourseSelectfort_205D88
+ * RVA 0x00205d88   size 0x84   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_60205D88()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8C63C = 0;
+    dword_60C8C640 = 0;
+    dword_60C8C644 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1E4F;
+    result = (_DWORD *)Profile::Profile(13157960, 2117356, MEMORY[0xAF3A98], (int)v1, nullptr, 0);
+    *result = 12420948;
+    return result;
+  }
+
+/* ============================================================================
  * Actor_CourseSelectfort_bosu_build
  * RVA 0x00205e28   size 0xf4   xrefs 0
  * ============================================================================ */
@@ -829,6 +1094,112 @@
     *(_BYTE *)(v2 + 365) = 0;
     *(_DWORD *)(v2 + 264) = *(_DWORD *)(a1 + 4);
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_CourseSelectfort_bosu_205F3C
+ * RVA 0x00205f3c   size 0x2dc   xrefs 0
+ * ============================================================================ */
+  int sub_60205F3C()
+  {
+    _DWORD *v0; // r0
+    _DWORD v2[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8C7C0 = 0;
+    dword_60C8C7C4 = 0;
+    dword_60C8C7C8 = 0;
+    v2[0] = 12321336;
+    v2[1] = &unk_60AC1E89;
+    v0 = (_DWORD *)Profile::Profile(13157984, 2121256, MEMORY[0xAF3AFC], (int)v2, nullptr, 0);
+    dword_60C8C7CC = 12321336;
+    *v0 = 12421060;
+    dword_60C8C7D0 = (int)"F008";
+    dword_60C8C7D4 = 12321336;
+    dword_60C8C7D8 = (int)"W103";
+    sub_60000288();
+    MEMORY[0xC8C67C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8C680] = 92;
+    MEMORY[0xC8C684] = 1;
+    MEMORY[0xC8C688] = 96;
+    MEMORY[0xC8C68C] = 1;
+    MEMORY[0xC8C690] = 100;
+    MEMORY[0xC8C694] = 1;
+    MEMORY[0xC8C678] = 12421280;
+    MEMORY[0xC8C698] = 12755100;
+    MEMORY[0xC8C6A8] = 1;
+    MEMORY[0xC8C6AC] = 108;
+    MEMORY[0xC8C6B0] = 1;
+    MEMORY[0xC8C6B4] = 112;
+    MEMORY[0xC8C6B8] = 1;
+    MEMORY[0xC8C69C] = 12421280;
+    MEMORY[0xC8C6A0] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8C6A4] = 104;
+    MEMORY[0xC8C6BC] = 12755100;
+    MEMORY[0xC8C6C8] = 116;
+    MEMORY[0xC8C6CC] = 1;
+    MEMORY[0xC8C6D0] = 120;
+    MEMORY[0xC8C6D4] = 1;
+    MEMORY[0xC8C6D8] = 124;
+    MEMORY[0xC8C6DC] = 1;
+    MEMORY[0xC8C6C0] = 12421280;
+    MEMORY[0xC8C6C4] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8C6E0] = 12755100;
+    MEMORY[0xC8C6EC] = 128;
+    MEMORY[0xC8C6F0] = 1;
+    MEMORY[0xC8C6F4] = 132;
+    MEMORY[0xC8C6F8] = 1;
+    MEMORY[0xC8C6FC] = 136;
+    MEMORY[0xC8C700] = 1;
+    MEMORY[0xC8C6E4] = 12421280;
+    MEMORY[0xC8C6E8] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8C704] = 12755100;
+    MEMORY[0xC8C710] = 140;
+    MEMORY[0xC8C714] = 1;
+    MEMORY[0xC8C718] = 144;
+    MEMORY[0xC8C71C] = 1;
+    MEMORY[0xC8C720] = 148;
+    MEMORY[0xC8C724] = 1;
+    MEMORY[0xC8C708] = 12421280;
+    MEMORY[0xC8C70C] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8C728] = 12755100;
+    MEMORY[0xC8C734] = 152;
+    MEMORY[0xC8C738] = 1;
+    MEMORY[0xC8C73C] = 156;
+    MEMORY[0xC8C740] = 1;
+    MEMORY[0xC8C744] = 160;
+    MEMORY[0xC8C748] = 1;
+    MEMORY[0xC8C72C] = 12421280;
+    MEMORY[0xC8C730] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8C74C] = 12755100;
+    MEMORY[0xC8C758] = 164;
+    MEMORY[0xC8C75C] = 1;
+    MEMORY[0xC8C760] = 168;
+    MEMORY[0xC8C764] = 1;
+    MEMORY[0xC8C768] = 172;
+    MEMORY[0xC8C76C] = 1;
+    MEMORY[0xC8C750] = 12421280;
+    MEMORY[0xC8C754] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8C770] = 12755100;
+    MEMORY[0xC8C77C] = 176;
+    MEMORY[0xC8C780] = 1;
+    MEMORY[0xC8C784] = 180;
+    MEMORY[0xC8C788] = 1;
+    MEMORY[0xC8C78C] = 184;
+    MEMORY[0xC8C790] = 1;
+    MEMORY[0xC8C774] = 12421280;
+    MEMORY[0xC8C778] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8C794] = 12755100;
+    MEMORY[0xC7B788] += 9;
+    MEMORY[0xC8C79C] = MEMORY[0xC7B788];
+    MEMORY[0xC8C7A0] = 188;
+    MEMORY[0xC8C7A4] = 1;
+    MEMORY[0xC8C7A8] = 192;
+    MEMORY[0xC8C7AC] = 1;
+    MEMORY[0xC8C7B0] = 196;
+    MEMORY[0xC8C7B4] = 1;
+    MEMORY[0xC8C798] = 12421280;
+    MEMORY[0xC8C7B8] = 12755100;
+    return 1;
   }
 
 /* ============================================================================
@@ -1176,6 +1547,78 @@
   }
 
 /* ============================================================================
+ * registerProfile_CSW1_Item_208FC8
+ * RVA 0x00208fc8   size 0x258   xrefs 0
+ * ============================================================================ */
+  int sub_60208FC8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8C8C8 = 0;
+    dword_60C8C8CC = 0;
+    dword_60C8C8D0 = 0;
+    dword_60C8C8D4 = 1103626240;
+    dword_60C8C8D8 = 0;
+    dword_60C8C8DC = 1101004800;
+    dword_60C8C8E0 = 0;
+    dword_60C8C8C0 = 12321336;
+    dword_60C8C8C4 = (int)"wait2";
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1EA9;
+    *(_DWORD *)Profile::Profile(13158364, 2130796, MEMORY[0xAF3B58], (int)v1, nullptr, 0) = 12421392;
+    MEMORY[0xC8C7F8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8C7F4] = 12421564;
+    MEMORY[0xC8C7FC] = 2130864;
+    MEMORY[0xC8C800] = 0;
+    MEMORY[0xC8C804] = 2130868;
+    MEMORY[0xC8C808] = 0;
+    MEMORY[0xC8C80C] = 2130872;
+    MEMORY[0xC8C810] = 0;
+    MEMORY[0xC8C814] = 12421564;
+    MEMORY[0xC8C818] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8C81C] = 2130876;
+    MEMORY[0xC8C820] = 0;
+    MEMORY[0xC8C824] = 2130880;
+    MEMORY[0xC8C828] = 0;
+    MEMORY[0xC8C82C] = 2131024;
+    MEMORY[0xC8C830] = 0;
+    MEMORY[0xC8C834] = 12421564;
+    MEMORY[0xC8C838] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8C83C] = 2131028;
+    MEMORY[0xC8C840] = 0;
+    MEMORY[0xC8C844] = 2131040;
+    MEMORY[0xC8C848] = 0;
+    MEMORY[0xC8C84C] = 2131096;
+    MEMORY[0xC8C850] = 0;
+    MEMORY[0xC8C854] = 12421564;
+    MEMORY[0xC8C858] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8C85C] = 2131100;
+    MEMORY[0xC8C860] = 0;
+    MEMORY[0xC8C864] = 2131180;
+    MEMORY[0xC8C868] = 0;
+    MEMORY[0xC8C86C] = 2131184;
+    MEMORY[0xC8C870] = 0;
+    MEMORY[0xC8C874] = 12421564;
+    MEMORY[0xC8C878] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8C87C] = 2131188;
+    MEMORY[0xC8C880] = 0;
+    MEMORY[0xC8C884] = 2131360;
+    MEMORY[0xC8C888] = 0;
+    MEMORY[0xC8C88C] = 2131728;
+    MEMORY[0xC8C890] = 0;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xC8C898] = MEMORY[0xC7B788];
+    MEMORY[0xC8C894] = 12421564;
+    MEMORY[0xC8C89C] = 2131732;
+    MEMORY[0xC8C8A0] = 0;
+    MEMORY[0xC8C8A4] = 2131748;
+    MEMORY[0xC8C8A8] = 0;
+    MEMORY[0xC8C8AC] = 2131752;
+    MEMORY[0xC8C8B0] = 0;
+    return 2131752;
+  }
+
+/* ============================================================================
  * Actor_W2Hammer_burosu_build
  * RVA 0x002092a8   size 0x7c   xrefs 0
  * ============================================================================ */
@@ -1255,6 +1698,111 @@
         return StateMgr::changeState(a1 + 71, 13158916);
       }
     }
+    return result;
+  }
+
+/* ============================================================================
+ * registerProfile_W2Hammer_burosu_20A894
+ * RVA 0x0020a894   size 0x2a8   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6020A894()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8CA50 = 0;
+    dword_60C8CA54 = 0;
+    dword_60C8CA58 = 0;
+    dword_60C8CA5C = 1103626240;
+    dword_60C8CA60 = 0;
+    dword_60C8CA64 = 1106247680;
+    dword_60C8CA68 = 0;
+    MEMORY[0xC8C8E8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8C8EC] = 160;
+    MEMORY[0xC8C8F0] = 1;
+    MEMORY[0xC8C8F4] = 164;
+    MEMORY[0xC8C8F8] = 1;
+    MEMORY[0xC8C8FC] = 168;
+    MEMORY[0xC8C900] = 1;
+    MEMORY[0xC8C8E4] = 12421872;
+    MEMORY[0xC8C904] = 12755100;
+    MEMORY[0xC8C914] = 1;
+    MEMORY[0xC8C918] = 176;
+    MEMORY[0xC8C91C] = 1;
+    MEMORY[0xC8C920] = 180;
+    MEMORY[0xC8C924] = 1;
+    MEMORY[0xC8C908] = 12421872;
+    MEMORY[0xC8C90C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8C910] = 172;
+    MEMORY[0xC8C928] = 12755100;
+    MEMORY[0xC8C938] = 1;
+    MEMORY[0xC8C93C] = 188;
+    MEMORY[0xC8C940] = 1;
+    MEMORY[0xC8C944] = 192;
+    MEMORY[0xC8C948] = 1;
+    MEMORY[0xC8C92C] = 12421872;
+    MEMORY[0xC8C930] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8C934] = 184;
+    MEMORY[0xC8C94C] = 12755100;
+    MEMORY[0xC8C95C] = 1;
+    MEMORY[0xC8C960] = 200;
+    MEMORY[0xC8C964] = 1;
+    MEMORY[0xC8C968] = 204;
+    MEMORY[0xC8C96C] = 1;
+    MEMORY[0xC8C950] = 12421872;
+    MEMORY[0xC8C954] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8C958] = 196;
+    MEMORY[0xC8C970] = 12755100;
+    MEMORY[0xC8C980] = 1;
+    MEMORY[0xC8C984] = 212;
+    MEMORY[0xC8C988] = 1;
+    MEMORY[0xC8C98C] = 216;
+    MEMORY[0xC8C990] = 1;
+    MEMORY[0xC8C974] = 12421872;
+    MEMORY[0xC8C978] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8C97C] = 208;
+    MEMORY[0xC8C994] = 12755100;
+    MEMORY[0xC8C9A4] = 1;
+    MEMORY[0xC8C9A8] = 152;
+    MEMORY[0xC8C9AC] = 1;
+    MEMORY[0xC8C9B0] = 156;
+    MEMORY[0xC8C9B4] = 1;
+    MEMORY[0xC8C998] = 12421872;
+    MEMORY[0xC8C99C] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8C9A0] = 148;
+    MEMORY[0xC8C9B8] = 12755100;
+    MEMORY[0xC8C9C8] = 1;
+    MEMORY[0xC8C9CC] = 224;
+    MEMORY[0xC8C9D0] = 1;
+    MEMORY[0xC8C9D4] = 228;
+    MEMORY[0xC8C9D8] = 1;
+    MEMORY[0xC8C9BC] = 12421872;
+    MEMORY[0xC8C9C0] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8C9C4] = 220;
+    MEMORY[0xC8C9DC] = 12755100;
+    MEMORY[0xC8C9EC] = 1;
+    MEMORY[0xC8C9F0] = 236;
+    MEMORY[0xC8C9F4] = 1;
+    MEMORY[0xC8C9F8] = 240;
+    MEMORY[0xC8C9FC] = 1;
+    MEMORY[0xC8C9E0] = 12421872;
+    MEMORY[0xC8C9E4] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8C9E8] = 232;
+    MEMORY[0xC8CA00] = 12755100;
+    MEMORY[0xC7B788] += 9;
+    MEMORY[0xC8CA10] = 1;
+    MEMORY[0xC8CA14] = 248;
+    MEMORY[0xC8CA18] = 1;
+    MEMORY[0xC8CA1C] = 252;
+    MEMORY[0xC8CA20] = 1;
+    MEMORY[0xC8CA04] = 12421872;
+    MEMORY[0xC8CA08] = MEMORY[0xC7B788];
+    MEMORY[0xC8CA0C] = 244;
+    MEMORY[0xC8CA24] = 12755100;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1EBD;
+    result = (_DWORD *)Profile::Profile(13158952, 2134696, MEMORY[0xAF3AC0], (int)v1, nullptr, 0);
+    *result = 12421584;
     return result;
   }
 
@@ -1463,6 +2011,217 @@
   }
 
 /* ============================================================================
+ * registerProfile_CSW2Goomba_20C5A0
+ * RVA 0x0020c5a0   size 0x358   xrefs 0
+ * ============================================================================ */
+  int sub_6020C5A0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8CC10 = 0;
+    dword_60C8CC14 = 0;
+    dword_60C8CC18 = 0;
+    dword_60C8CC1C = 1103626240;
+    dword_60C8CC20 = 0;
+    dword_60C8CC24 = 1106247680;
+    dword_60C8CC28 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1ED5;
+    *(_DWORD *)Profile::Profile(13159068, 2142376, MEMORY[0xAF3B34], (int)v1, nullptr, 0) = 12422080;
+    MEMORY[0xC8CAB8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8CAB4] = 12422324;
+    MEMORY[0xC8CABC] = 2142516;
+    MEMORY[0xC8CAC0] = 0;
+    MEMORY[0xC8CAC4] = 2142520;
+    MEMORY[0xC8CAC8] = 0;
+    MEMORY[0xC8CACC] = 2142716;
+    MEMORY[0xC8CAD0] = 0;
+    MEMORY[0xC8CAD4] = 12422324;
+    MEMORY[0xC8CAD8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8CADC] = 2142720;
+    MEMORY[0xC8CAE0] = 0;
+    MEMORY[0xC8CAE4] = 2142780;
+    MEMORY[0xC8CAE8] = 0;
+    MEMORY[0xC8CAEC] = 2143824;
+    MEMORY[0xC8CAF0] = 0;
+    MEMORY[0xC8CAF4] = 12422324;
+    MEMORY[0xC8CAF8] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8CAFC] = 2143948;
+    MEMORY[0xC8CB00] = 0;
+    MEMORY[0xC8CB04] = 2143960;
+    MEMORY[0xC8CB08] = 0;
+    MEMORY[0xC8CB0C] = 2144004;
+    MEMORY[0xC8CB10] = 0;
+    MEMORY[0xC8CB14] = 12422324;
+    MEMORY[0xC8CB18] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8CB1C] = 2144008;
+    MEMORY[0xC8CB20] = 0;
+    MEMORY[0xC8CB24] = 2144012;
+    MEMORY[0xC8CB28] = 0;
+    MEMORY[0xC8CB2C] = 2144456;
+    MEMORY[0xC8CB30] = 0;
+    MEMORY[0xC8CB34] = 12422324;
+    MEMORY[0xC8CB38] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8CB3C] = 2144460;
+    MEMORY[0xC8CB40] = 0;
+    MEMORY[0xC8CB44] = 2144536;
+    MEMORY[0xC8CB48] = 0;
+    MEMORY[0xC8CB4C] = 2144820;
+    MEMORY[0xC8CB50] = 0;
+    MEMORY[0xC8CB58] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8CB5C] = 148;
+    MEMORY[0xC8CB60] = 1;
+    MEMORY[0xC8CB64] = 152;
+    MEMORY[0xC8CB68] = 1;
+    MEMORY[0xC8CB6C] = 156;
+    MEMORY[0xC8CB70] = 1;
+    MEMORY[0xC8CB54] = 12422344;
+    MEMORY[0xC8CB74] = 12755100;
+    MEMORY[0xC8CB7C] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8CB78] = 12422324;
+    MEMORY[0xC8CB80] = 2144824;
+    MEMORY[0xC8CB84] = 0;
+    MEMORY[0xC8CB88] = 2144828;
+    MEMORY[0xC8CB8C] = 0;
+    MEMORY[0xC8CB90] = 2144832;
+    MEMORY[0xC8CB94] = 0;
+    MEMORY[0xC8CB9C] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8CB98] = 12422324;
+    MEMORY[0xC8CBA0] = 2144836;
+    MEMORY[0xC8CBA4] = 0;
+    MEMORY[0xC8CBA8] = 2144916;
+    MEMORY[0xC8CBAC] = 0;
+    MEMORY[0xC8CBB0] = 2144928;
+    MEMORY[0xC8CBB4] = 0;
+    MEMORY[0xC8CBB8] = 12422324;
+    MEMORY[0xC8CBBC] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC7B788] += 10;
+    MEMORY[0xC8CBC0] = 2144932;
+    MEMORY[0xC8CBC4] = 0;
+    MEMORY[0xC8CBC8] = 2144972;
+    MEMORY[0xC8CBCC] = 0;
+    MEMORY[0xC8CBD0] = 2145096;
+    MEMORY[0xC8CBD4] = 0;
+    MEMORY[0xC8CBDC] = MEMORY[0xC7B788];
+    MEMORY[0xC8CBE0] = 160;
+    MEMORY[0xC8CBE4] = 1;
+    MEMORY[0xC8CBE8] = 164;
+    MEMORY[0xC8CBEC] = 1;
+    MEMORY[0xC8CBF0] = 168;
+    MEMORY[0xC8CBF4] = 1;
+    MEMORY[0xC8CBD8] = 12422344;
+    MEMORY[0xC8CBF8] = 12755100;
+    return 12755100;
+  }
+
+/* ============================================================================
+ * registerProfile_CSW4_Item_20C9B0
+ * RVA 0x0020c9b0   size 0x388   xrefs 0
+ * ============================================================================ */
+  int sub_6020C9B0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8CD98 = 0;
+    dword_60C8CD9C = 0;
+    dword_60C8CDA0 = 0;
+    dword_60C8CDA4 = 1103626240;
+    dword_60C8CDA8 = 0;
+    dword_60C8CDAC = 1101004800;
+    dword_60C8CDB0 = 0;
+    dword_60C8CD90 = 12321336;
+    dword_60C8CD94 = (int)"wait2";
+    MEMORY[0xC8CC2C] = 12321336;
+    MEMORY[0xC8CC30] = "wait";
+    sub_60000288();
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1EE6;
+    *(_DWORD *)Profile::Profile(13159476, 2149904, MEMORY[0xAF3B30], (int)v1, nullptr, 0) = 12422364;
+    MEMORY[0xC8CC50] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8CC4C] = 12422536;
+    MEMORY[0xC8CC54] = 2150012;
+    MEMORY[0xC8CC58] = 0;
+    MEMORY[0xC8CC5C] = 2150016;
+    MEMORY[0xC8CC60] = 0;
+    MEMORY[0xC8CC64] = 2150056;
+    MEMORY[0xC8CC68] = 0;
+    MEMORY[0xC8CC6C] = 12422536;
+    MEMORY[0xC8CC70] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8CC74] = 2150060;
+    MEMORY[0xC8CC78] = 0;
+    MEMORY[0xC8CC7C] = 2150180;
+    MEMORY[0xC8CC80] = 0;
+    MEMORY[0xC8CC84] = 2150236;
+    MEMORY[0xC8CC88] = 0;
+    MEMORY[0xC8CC8C] = 12422536;
+    MEMORY[0xC8CC90] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8CC94] = 2150240;
+    MEMORY[0xC8CC98] = 0;
+    MEMORY[0xC8CC9C] = 2150400;
+    MEMORY[0xC8CCA0] = 0;
+    MEMORY[0xC8CCA4] = 2150728;
+    MEMORY[0xC8CCA8] = 0;
+    MEMORY[0xC8CCAC] = 12422536;
+    MEMORY[0xC8CCB0] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8CCB4] = 2150732;
+    MEMORY[0xC8CCB8] = 0;
+    MEMORY[0xC8CCBC] = 2150736;
+    MEMORY[0xC8CCC0] = 0;
+    MEMORY[0xC8CCC4] = 2150740;
+    MEMORY[0xC8CCC8] = 0;
+    MEMORY[0xC8CCCC] = 12422536;
+    MEMORY[0xC8CCD0] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8CCD4] = 2150744;
+    MEMORY[0xC8CCD8] = 0;
+    MEMORY[0xC8CCDC] = 2150748;
+    MEMORY[0xC8CCE0] = 0;
+    MEMORY[0xC8CCE4] = 2150808;
+    MEMORY[0xC8CCE8] = 0;
+    MEMORY[0xC8CCEC] = 12422536;
+    MEMORY[0xC8CCF0] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8CCF4] = 2150812;
+    MEMORY[0xC8CCF8] = 0;
+    MEMORY[0xC8CCFC] = 2150816;
+    MEMORY[0xC8CD00] = 0;
+    MEMORY[0xC8CD04] = 2151040;
+    MEMORY[0xC8CD08] = 0;
+    MEMORY[0xC8CD0C] = 12422536;
+    MEMORY[0xC8CD10] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8CD14] = 2151044;
+    MEMORY[0xC8CD18] = 0;
+    MEMORY[0xC8CD1C] = 2151080;
+    MEMORY[0xC8CD20] = 0;
+    MEMORY[0xC8CD24] = 2151632;
+    MEMORY[0xC8CD28] = 0;
+    MEMORY[0xC8CD2C] = 12422536;
+    MEMORY[0xC8CD30] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8CD34] = 2151660;
+    MEMORY[0xC8CD38] = 0;
+    MEMORY[0xC8CD3C] = 2151868;
+    MEMORY[0xC8CD40] = 0;
+    MEMORY[0xC8CD44] = 2151932;
+    MEMORY[0xC8CD48] = 0;
+    MEMORY[0xC8CD4C] = 12422536;
+    MEMORY[0xC8CD50] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC7B788] += 10;
+    MEMORY[0xC8CD70] = MEMORY[0xC7B788];
+    MEMORY[0xC8CD54] = 2151936;
+    MEMORY[0xC8CD6C] = 12422536;
+    MEMORY[0xC8CD58] = 0;
+    MEMORY[0xC8CD74] = 2152024;
+    MEMORY[0xC8CD5C] = 2152016;
+    MEMORY[0xC8CD78] = 0;
+    MEMORY[0xC8CD60] = 0;
+    MEMORY[0xC8CD7C] = 2152196;
+    MEMORY[0xC8CD64] = 2152020;
+    MEMORY[0xC8CD68] = 0;
+    MEMORY[0xC8CD80] = 0;
+    MEMORY[0xC8CD84] = 2152564;
+    MEMORY[0xC8CD88] = 0;
+    return 13159788;
+  }
+
+/* ============================================================================
  * Actor_CSW4_Item_build
  * RVA 0x0020ce10   size 0x68   xrefs 0
  * ============================================================================ */
@@ -1607,6 +2366,124 @@
     *(_DWORD *)(v2 + 204) = 0;
     *(_DWORD *)(v2 + 208) = 0;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_CSW5Boo_20E928
+ * RVA 0x0020e928   size 0x2f8   xrefs 0
+ * ============================================================================ */
+  int sub_6020E928()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8CF70 = 0;
+    dword_60C8CF74 = 0;
+    dword_60C8CF78 = 0;
+    dword_60C8CF60 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1EFA;
+    *(_DWORD *)Profile::Profile(13159860, 2155372, MEMORY[0xAF3B14], (int)v1, nullptr, 0) = 12422556;
+    MEMORY[0xC8CDD0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8CDD4] = 148;
+    MEMORY[0xC8CDD8] = 1;
+    MEMORY[0xC8CDDC] = 152;
+    MEMORY[0xC8CDE0] = 1;
+    MEMORY[0xC8CDE4] = 156;
+    MEMORY[0xC8CDE8] = 1;
+    MEMORY[0xC8CDCC] = 12422876;
+    MEMORY[0xC8CDEC] = 12755100;
+    MEMORY[0xC8CDFC] = 1;
+    MEMORY[0xC8CE00] = 164;
+    MEMORY[0xC8CE04] = 1;
+    MEMORY[0xC8CE08] = 168;
+    MEMORY[0xC8CE0C] = 1;
+    MEMORY[0xC8CDF0] = 12422876;
+    MEMORY[0xC8CDF4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8CDF8] = 160;
+    MEMORY[0xC8CE10] = 12755100;
+    MEMORY[0xC8CE20] = 1;
+    MEMORY[0xC8CE24] = 176;
+    MEMORY[0xC8CE28] = 1;
+    MEMORY[0xC8CE2C] = 180;
+    MEMORY[0xC8CE30] = 1;
+    MEMORY[0xC8CE14] = 12422876;
+    MEMORY[0xC8CE18] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8CE1C] = 172;
+    MEMORY[0xC8CE34] = 12755100;
+    MEMORY[0xC8CE44] = 1;
+    MEMORY[0xC8CE48] = 188;
+    MEMORY[0xC8CE4C] = 1;
+    MEMORY[0xC8CE50] = 192;
+    MEMORY[0xC8CE54] = 1;
+    MEMORY[0xC8CE38] = 12422876;
+    MEMORY[0xC8CE3C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8CE40] = 184;
+    MEMORY[0xC8CE58] = 12755100;
+    MEMORY[0xC8CE68] = 1;
+    MEMORY[0xC8CE6C] = 200;
+    MEMORY[0xC8CE70] = 1;
+    MEMORY[0xC8CE74] = 204;
+    MEMORY[0xC8CE78] = 1;
+    MEMORY[0xC8CE5C] = 12422876;
+    MEMORY[0xC8CE60] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8CE64] = 196;
+    MEMORY[0xC8CE7C] = 12755100;
+    MEMORY[0xC8CE8C] = 1;
+    MEMORY[0xC8CE90] = 212;
+    MEMORY[0xC8CE94] = 1;
+    MEMORY[0xC8CE98] = 216;
+    MEMORY[0xC8CE9C] = 1;
+    MEMORY[0xC8CE80] = 12422876;
+    MEMORY[0xC8CE84] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8CE88] = 208;
+    MEMORY[0xC8CEA0] = 12755100;
+    MEMORY[0xC8CEB0] = 1;
+    MEMORY[0xC8CEB4] = 224;
+    MEMORY[0xC8CEB8] = 1;
+    MEMORY[0xC8CEBC] = 228;
+    MEMORY[0xC8CEC0] = 1;
+    MEMORY[0xC8CEA4] = 12422876;
+    MEMORY[0xC8CEA8] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8CEAC] = 220;
+    MEMORY[0xC8CEC4] = 12755100;
+    MEMORY[0xC8CED4] = 1;
+    MEMORY[0xC8CED8] = 236;
+    MEMORY[0xC8CEDC] = 1;
+    MEMORY[0xC8CEE0] = 240;
+    MEMORY[0xC8CEE4] = 1;
+    MEMORY[0xC8CEC8] = 12422876;
+    MEMORY[0xC8CECC] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8CED0] = 232;
+    MEMORY[0xC8CEE8] = 12755100;
+    MEMORY[0xC8CEF8] = 1;
+    MEMORY[0xC8CEFC] = 248;
+    MEMORY[0xC8CF00] = 1;
+    MEMORY[0xC8CF04] = 252;
+    MEMORY[0xC8CF08] = 1;
+    MEMORY[0xC8CEEC] = 12422876;
+    MEMORY[0xC8CEF0] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC8CEF4] = 244;
+    MEMORY[0xC8CF0C] = 12755100;
+    MEMORY[0xC8CF1C] = 1;
+    MEMORY[0xC8CF20] = 260;
+    MEMORY[0xC8CF24] = 1;
+    MEMORY[0xC8CF28] = 264;
+    MEMORY[0xC8CF2C] = 1;
+    MEMORY[0xC8CF10] = 12422876;
+    MEMORY[0xC8CF14] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xC8CF18] = 256;
+    MEMORY[0xC8CF30] = 12755100;
+    MEMORY[0xC7B788] += 11;
+    MEMORY[0xC8CF38] = MEMORY[0xC7B788];
+    MEMORY[0xC8CF3C] = 268;
+    MEMORY[0xC8CF40] = 1;
+    MEMORY[0xC8CF44] = 272;
+    MEMORY[0xC8CF48] = 1;
+    MEMORY[0xC8CF4C] = 276;
+    MEMORY[0xC8CF50] = 1;
+    MEMORY[0xC8CF34] = 12422876;
+    MEMORY[0xC8CF54] = 12755100;
+    return 1;
   }
 
 /* ============================================================================
@@ -2413,6 +3290,25 @@
       }
     }
     return v3;
+  }
+
+/* ============================================================================
+ * registerProfile_CSW7_211850
+ * RVA 0x00211850   size 0x84   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_60211850()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8CFAC = 0;
+    dword_60C8CFB0 = 0;
+    dword_60C8CFB4 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1F28;
+    result = (_DWORD *)Profile::Profile(13160376, 2167096, MEMORY[0xAF3B24], (int)v1, nullptr, 0);
+    *result = 12422908;
+    return result;
   }
 
 /* ============================================================================
@@ -3658,6 +4554,152 @@
   }
 
 /* ============================================================================
+ * registerProfile_CourseSelect_W7_Item_215598
+ * RVA 0x00215598   size 0x4a0   xrefs 0
+ * ============================================================================ */
+  int sub_60215598()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8D210 = 0;
+    dword_60C8D214 = 0;
+    dword_60C8D218 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1FB8;
+    *(_DWORD *)Profile::Profile(13160460, 2176552, MEMORY[0xAF3B10], (int)v1, nullptr, 0) = 12423020;
+    dword_60C8D21C = 1106247680;
+    dword_60C8D220 = 0;
+    dword_60C8D224 = -1035468800;
+    dword_60C8D228 = 0;
+    dword_60C8D22C = 1120403456;
+    dword_60C8D230 = 0;
+    dword_60C8D234 = -1035468800;
+    dword_60C8D238 = 0;
+    MEMORY[0xC8D028] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8D024] = 12423188;
+    MEMORY[0xC8D02C] = 2176648;
+    MEMORY[0xC8D030] = 0;
+    MEMORY[0xC8D034] = 2176672;
+    MEMORY[0xC8D038] = 0;
+    MEMORY[0xC8D03C] = 2176844;
+    MEMORY[0xC8D040] = 0;
+    MEMORY[0xC8D044] = 12423188;
+    MEMORY[0xC8D048] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8D04C] = 2176848;
+    MEMORY[0xC8D050] = 0;
+    MEMORY[0xC8D054] = 2177164;
+    MEMORY[0xC8D058] = 0;
+    MEMORY[0xC8D05C] = 2177216;
+    MEMORY[0xC8D060] = 0;
+    MEMORY[0xC8D064] = 12423188;
+    MEMORY[0xC8D068] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8D06C] = 2177220;
+    MEMORY[0xC8D070] = 0;
+    MEMORY[0xC8D074] = 2177584;
+    MEMORY[0xC8D078] = 0;
+    MEMORY[0xC8D07C] = 2177732;
+    MEMORY[0xC8D080] = 0;
+    MEMORY[0xC8D084] = 12423188;
+    MEMORY[0xC8D088] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8D08C] = 2177736;
+    MEMORY[0xC8D090] = 0;
+    MEMORY[0xC8D094] = 2177812;
+    MEMORY[0xC8D098] = 0;
+    MEMORY[0xC8D09C] = 2177944;
+    MEMORY[0xC8D0A0] = 0;
+    MEMORY[0xC8D0A4] = 12423188;
+    MEMORY[0xC8D0A8] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8D0AC] = 2177948;
+    MEMORY[0xC8D0B0] = 0;
+    MEMORY[0xC8D0B4] = 2178204;
+    MEMORY[0xC8D0B8] = 0;
+    MEMORY[0xC8D0BC] = 2178244;
+    MEMORY[0xC8D0C0] = 0;
+    MEMORY[0xC8D0C4] = 12423188;
+    MEMORY[0xC8D0C8] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8D0CC] = 2178248;
+    MEMORY[0xC8D0D0] = 0;
+    MEMORY[0xC8D0D4] = 2178272;
+    MEMORY[0xC8D0D8] = 0;
+    MEMORY[0xC8D0DC] = 2178296;
+    MEMORY[0xC8D0E0] = 0;
+    MEMORY[0xC8D0E4] = 12423188;
+    MEMORY[0xC8D0E8] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8D0EC] = 2178300;
+    MEMORY[0xC8D0F0] = 0;
+    MEMORY[0xC8D0F4] = 2178312;
+    MEMORY[0xC8D0F8] = 0;
+    MEMORY[0xC8D0FC] = 2178324;
+    MEMORY[0xC8D100] = 0;
+    MEMORY[0xC8D104] = 12423188;
+    MEMORY[0xC8D108] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8D10C] = 2178328;
+    MEMORY[0xC8D110] = 0;
+    MEMORY[0xC8D114] = 2178416;
+    MEMORY[0xC8D118] = 0;
+    MEMORY[0xC8D11C] = 2178516;
+    MEMORY[0xC8D120] = 0;
+    MEMORY[0xC8D124] = 12423188;
+    MEMORY[0xC8D128] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC8D12C] = 2178520;
+    MEMORY[0xC8D130] = 0;
+    MEMORY[0xC8D134] = 2178524;
+    MEMORY[0xC8D138] = 0;
+    MEMORY[0xC8D13C] = 2178828;
+    MEMORY[0xC8D140] = 0;
+    MEMORY[0xC8D144] = 12423188;
+    MEMORY[0xC8D148] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xC8D14C] = 2178832;
+    MEMORY[0xC8D150] = 0;
+    MEMORY[0xC8D154] = 2178940;
+    MEMORY[0xC8D158] = 0;
+    MEMORY[0xC8D15C] = 2179008;
+    MEMORY[0xC8D160] = 0;
+    MEMORY[0xC8D164] = 12423188;
+    MEMORY[0xC8D168] = MEMORY[0xC7B788] + 11;
+    MEMORY[0xC8D16C] = 2179012;
+    MEMORY[0xC8D170] = 0;
+    MEMORY[0xC8D174] = 2179076;
+    MEMORY[0xC8D178] = 0;
+    MEMORY[0xC8D17C] = 2179160;
+    MEMORY[0xC8D180] = 0;
+    MEMORY[0xC8D184] = 12423188;
+    MEMORY[0xC8D188] = MEMORY[0xC7B788] + 12;
+    MEMORY[0xC8D18C] = 2179164;
+    MEMORY[0xC8D190] = 0;
+    MEMORY[0xC8D194] = 2179272;
+    MEMORY[0xC8D198] = 0;
+    MEMORY[0xC8D19C] = 2179276;
+    MEMORY[0xC8D1A0] = 0;
+    MEMORY[0xC8D1A4] = 12423188;
+    MEMORY[0xC8D1A8] = MEMORY[0xC7B788] + 13;
+    MEMORY[0xC8D1AC] = 2179280;
+    MEMORY[0xC8D1B0] = 0;
+    MEMORY[0xC8D1B4] = 2179432;
+    MEMORY[0xC8D1B8] = 0;
+    MEMORY[0xC8D1BC] = 2179824;
+    MEMORY[0xC8D1C0] = 0;
+    MEMORY[0xC8D1C4] = 12423188;
+    MEMORY[0xC8D1C8] = MEMORY[0xC7B788] + 14;
+    MEMORY[0xC7B788] += 15;
+    MEMORY[0xC8D1E8] = MEMORY[0xC7B788];
+    MEMORY[0xC8D1CC] = 2179828;
+    MEMORY[0xC8D1E4] = 12423188;
+    MEMORY[0xC8D1D0] = 0;
+    MEMORY[0xC8D1EC] = 2179900;
+    MEMORY[0xC8D1D4] = 2179860;
+    MEMORY[0xC8D1F0] = 0;
+    MEMORY[0xC8D1D8] = 0;
+    MEMORY[0xC8D1F4] = 2180124;
+    MEMORY[0xC8D1DC] = 2179896;
+    MEMORY[0xC8D1E0] = 0;
+    MEMORY[0xC8D1F8] = 0;
+    MEMORY[0xC8D1FC] = 2180144;
+    MEMORY[0xC8D200] = 0;
+    return 13160932;
+  }
+
+/* ============================================================================
  * Actor_CourseSelect_W8_cloud_build
  * RVA 0x00215b4c   size 0x4c   xrefs 0
  * ============================================================================ */
@@ -3981,6 +5023,25 @@
   }
 
 /* ============================================================================
+ * registerProfile_CourseSelect_W8_cloud_21694C
+ * RVA 0x0021694c   size 0x84   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6021694C()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8D23C = 0;
+    dword_60C8D240 = 0;
+    dword_60C8D244 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC1FEF;
+    result = (_DWORD *)Profile::Profile(13161032, 2186060, MEMORY[0xAF3AB8], (int)v1, nullptr, 0);
+    *result = 12423208;
+    return result;
+  }
+
+/* ============================================================================
  * Actor_CSwarudomove_pipe_build
  * RVA 0x00216b00   size 0x6c   xrefs 0
  * ============================================================================ */
@@ -4003,6 +5064,25 @@
     result[70] = 0;
     result[71] = 0;
     result[72] = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * registerProfile_CSwarudomove_pipe_217074
+ * RVA 0x00217074   size 0x84   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_60217074()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8D2A8 = 0;
+    dword_60C8D2AC = 0;
+    dword_60C8D2B0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC206B;
+    result = (_DWORD *)Profile::Profile(13161140, 2190080, MEMORY[0xAF3AB4], (int)v1, nullptr, 0);
+    *result = 12423320;
     return result;
   }
 
@@ -4184,6 +5264,62 @@
     StateMgr::changeState((_DWORD *)(a1 + 288), 13161320);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 304) + 52))(**(_DWORD **)(a1 + 304));
     return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 304) + 56))(**(_DWORD **)(a1 + 304));
+  }
+
+/* ============================================================================
+ * registerProfile_CSgeyser_218834
+ * RVA 0x00218834   size 0x184   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_60218834()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8D314 = 0;
+    dword_60C8D318 = 0;
+    dword_60C8D31C = 0;
+    MEMORY[0xC8D324] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8D328] = 92;
+    MEMORY[0xC8D32C] = 1;
+    MEMORY[0xC8D330] = 96;
+    MEMORY[0xC8D334] = 1;
+    MEMORY[0xC8D338] = 100;
+    MEMORY[0xC8D33C] = 1;
+    MEMORY[0xC8D320] = 12423612;
+    MEMORY[0xC8D340] = 12755100;
+    MEMORY[0xC8D350] = 1;
+    MEMORY[0xC8D354] = 108;
+    MEMORY[0xC8D358] = 1;
+    MEMORY[0xC8D35C] = 112;
+    MEMORY[0xC8D360] = 1;
+    MEMORY[0xC8D344] = 12423612;
+    MEMORY[0xC8D348] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8D34C] = 104;
+    MEMORY[0xC8D364] = 12755100;
+    MEMORY[0xC8D374] = 1;
+    MEMORY[0xC8D378] = 120;
+    MEMORY[0xC8D37C] = 1;
+    MEMORY[0xC8D380] = 124;
+    MEMORY[0xC8D384] = 1;
+    MEMORY[0xC8D368] = 12423612;
+    MEMORY[0xC8D36C] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8D370] = 116;
+    MEMORY[0xC8D388] = 12755100;
+    MEMORY[0xC7B788] += 4;
+    MEMORY[0xC8D398] = 1;
+    MEMORY[0xC8D39C] = 132;
+    MEMORY[0xC8D3A0] = 1;
+    MEMORY[0xC8D3A4] = 136;
+    MEMORY[0xC8D3A8] = 1;
+    MEMORY[0xC8D38C] = 12423612;
+    MEMORY[0xC8D390] = MEMORY[0xC7B788];
+    MEMORY[0xC8D394] = 128;
+    MEMORY[0xC8D3AC] = 12755100;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC20C3;
+    result = (_DWORD *)Profile::Profile(13161392, 2195412, MEMORY[0xAF3B20], (int)v1, nullptr, 0);
+    *result = 12423452;
+    return result;
   }
 
 /* ============================================================================
@@ -26623,6 +27759,85 @@
   }
 
 /* ============================================================================
+ * registerProfile_bakubaku_2403EC
+ * RVA 0x002403ec   size 0x29c   xrefs 0
+ * ============================================================================ */
+  int sub_602403EC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8DB2C = 0;
+    dword_60C8DB30 = 0;
+    dword_60C8DB34 = 0;
+    dword_60C8DB14 = 0x40000000;
+    dword_60C8DB18 = -1073741824;
+    dword_60C8DB1C = 0x2000000;
+    dword_60C8DB20 = -33554432;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2609;
+    Profile::Profile(13163008, 2339100, MEMORY[0xAF37B0], (int)v1, &unk_60AFD668, 18);
+    MEMORY[0xC8DA1C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8DA18] = 12425552;
+    MEMORY[0xC8DA20] = 2339436;
+    MEMORY[0xC8DA24] = 0;
+    MEMORY[0xC8DA28] = 2339552;
+    MEMORY[0xC8DA2C] = 0;
+    MEMORY[0xC8DA30] = 2340420;
+    MEMORY[0xC8DA34] = 0;
+    MEMORY[0xC8DA38] = 12425552;
+    MEMORY[0xC8DA3C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8DA40] = 2340424;
+    MEMORY[0xC8DA44] = 0;
+    MEMORY[0xC8DA48] = 2340504;
+    MEMORY[0xC8DA4C] = 0;
+    MEMORY[0xC8DA50] = 2340976;
+    MEMORY[0xC8DA54] = 0;
+    MEMORY[0xC8DA58] = 12425552;
+    MEMORY[0xC8DA5C] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8DA60] = 2340980;
+    MEMORY[0xC8DA64] = 0;
+    MEMORY[0xC8DA68] = 2341056;
+    MEMORY[0xC8DA6C] = 0;
+    MEMORY[0xC8DA70] = 2341696;
+    MEMORY[0xC8DA74] = 0;
+    MEMORY[0xC8DA78] = 12425552;
+    MEMORY[0xC8DA7C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8DA80] = 2341700;
+    MEMORY[0xC8DA84] = 0;
+    MEMORY[0xC8DA88] = 2341844;
+    MEMORY[0xC8DA8C] = 0;
+    MEMORY[0xC8DA90] = 2343328;
+    MEMORY[0xC8DA94] = 0;
+    MEMORY[0xC8DA98] = 12425552;
+    MEMORY[0xC8DA9C] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8DAA0] = 2343344;
+    MEMORY[0xC8DAA4] = 0;
+    MEMORY[0xC8DAA8] = 2343404;
+    MEMORY[0xC8DAAC] = 0;
+    MEMORY[0xC8DAB0] = 2343984;
+    MEMORY[0xC8DAB4] = 0;
+    MEMORY[0xC8DAB8] = 12425552;
+    MEMORY[0xC8DABC] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8DAC0] = 2343988;
+    MEMORY[0xC8DAC4] = 0;
+    MEMORY[0xC8DAC8] = 2343992;
+    MEMORY[0xC8DACC] = 0;
+    MEMORY[0xC8DAD0] = 2344444;
+    MEMORY[0xC8DAD4] = 0;
+    MEMORY[0xC7B788] += 7;
+    MEMORY[0xC8DADC] = MEMORY[0xC7B788];
+    MEMORY[0xC8DAE0] = 456;
+    MEMORY[0xC8DAE4] = 1;
+    MEMORY[0xC8DAE8] = 460;
+    MEMORY[0xC8DAEC] = 1;
+    MEMORY[0xC8DAF0] = 464;
+    MEMORY[0xC8DAF4] = 1;
+    MEMORY[0xC8DAD8] = 12425572;
+    MEMORY[0xC8DAF8] = 13174544;
+    return 13174544;
+  }
+
+/* ============================================================================
  * Actor_barun_build
  * RVA 0x00242a4c   size 0x21c   xrefs 0
  * ============================================================================ */
@@ -27286,6 +28501,71 @@
     result = **(_DWORD **)(*v7 + 12);
     *(_DWORD *)(result + 24) = 1065353216;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_barun_2455A8
+ * RVA 0x002455a8   size 0x230   xrefs 0
+ * ============================================================================ */
+  int sub_602455A8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8DB38 = 0;
+    dword_60C8DB3C = 0;
+    dword_60C8DB40 = 0;
+    MEMORY[0xC8DB48] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8DB44] = 12426320;
+    MEMORY[0xC8DB4C] = 2361116;
+    MEMORY[0xC8DB50] = 0;
+    MEMORY[0xC8DB54] = 2361852;
+    MEMORY[0xC8DB58] = 0;
+    MEMORY[0xC8DB5C] = 2363332;
+    MEMORY[0xC8DB60] = 0;
+    MEMORY[0xC8DB68] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8DB64] = 12426320;
+    MEMORY[0xC8DB6C] = 2363336;
+    MEMORY[0xC8DB70] = 0;
+    MEMORY[0xC8DB74] = 2363340;
+    MEMORY[0xC8DB78] = 0;
+    MEMORY[0xC8DB7C] = 2364916;
+    MEMORY[0xC8DB80] = 0;
+    MEMORY[0xC8DB88] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8DB84] = 12426320;
+    MEMORY[0xC8DB8C] = 2364920;
+    MEMORY[0xC8DB90] = 0;
+    MEMORY[0xC8DB94] = 2365004;
+    MEMORY[0xC8DB98] = 0;
+    MEMORY[0xC8DB9C] = 2366072;
+    MEMORY[0xC8DBA0] = 0;
+    MEMORY[0xC8DBA8] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8DBA4] = 12426320;
+    MEMORY[0xC8DBAC] = 2366076;
+    MEMORY[0xC8DBB0] = 0;
+    MEMORY[0xC8DBB4] = 2366680;
+    MEMORY[0xC8DBB8] = 0;
+    MEMORY[0xC8DBBC] = 2367804;
+    MEMORY[0xC8DBC0] = 0;
+    MEMORY[0xC8DBC8] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8DBC4] = 12426320;
+    MEMORY[0xC8DBCC] = 2367808;
+    MEMORY[0xC8DBD0] = 0;
+    MEMORY[0xC8DBD4] = 2367824;
+    MEMORY[0xC8DBD8] = 0;
+    MEMORY[0xC8DBDC] = 2368756;
+    MEMORY[0xC8DBE0] = 0;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xC8DBE8] = MEMORY[0xC7B788];
+    MEMORY[0xC8DBE4] = 12426320;
+    MEMORY[0xC8DBEC] = 2368760;
+    MEMORY[0xC8DBF0] = 0;
+    MEMORY[0xC8DBF4] = 2368812;
+    MEMORY[0xC8DBF8] = 0;
+    MEMORY[0xC8DBFC] = 2370092;
+    MEMORY[0xC8DC00] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2643;
+    return Profile::Profile(13163524, 2370124, MEMORY[0xAF340C], (int)v1, nullptr, 1028);
   }
 
 /* ============================================================================
@@ -29126,6 +30406,49 @@
   }
 
 /* ============================================================================
+ * registerProfile_ship_ruakuta_24A470
+ * RVA 0x0024a470   size 0x178   xrefs 0
+ * ============================================================================ */
+  int sub_6024A470()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8DC68 = 0;
+    dword_60C8DC6C = 0;
+    dword_60C8DC70 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC26B1;
+    Profile::Profile(13163636, 2395840, MEMORY[0xAF3470], (int)v1, &unk_60AFD700, 18);
+    MEMORY[0xC8DC90] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8DC8C] = 12427064;
+    MEMORY[0xC8DC94] = 2395952;
+    MEMORY[0xC8DC98] = 0;
+    MEMORY[0xC8DC9C] = 2396068;
+    MEMORY[0xC8DCA0] = 0;
+    MEMORY[0xC8DCA4] = 2396568;
+    MEMORY[0xC8DCA8] = 0;
+    MEMORY[0xC8DCB0] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8DCAC] = 12427064;
+    MEMORY[0xC8DCB4] = 2396572;
+    MEMORY[0xC8DCB8] = 0;
+    MEMORY[0xC8DCBC] = 2396808;
+    MEMORY[0xC8DCC0] = 0;
+    MEMORY[0xC8DCC4] = 2396820;
+    MEMORY[0xC8DCC8] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xC8DCD0] = MEMORY[0xC7B788];
+    MEMORY[0xC8DCD4] = 456;
+    MEMORY[0xC8DCD8] = 1;
+    MEMORY[0xC8DCDC] = 460;
+    MEMORY[0xC8DCE0] = 1;
+    MEMORY[0xC8DCE4] = 464;
+    MEMORY[0xC8DCE8] = 1;
+    MEMORY[0xC8DCCC] = 12427084;
+    MEMORY[0xC8DCEC] = 13174544;
+    return 13174544;
+  }
+
+/* ============================================================================
  * Actor_Blooper_raki_build
  * RVA 0x0024a638   size 0xd0   xrefs 0
  * ============================================================================ */
@@ -29849,6 +31172,32 @@
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
     return BasicSoundActor1_playSound(v1, (int)"SE_EMY_GESSO_JUMPOUT_MANY", v5, nullptr);
+  }
+
+/* ============================================================================
+ * registerProfile_Blooper_raki_24CF58
+ * RVA 0x0024cf58   size 0xe4   xrefs 0
+ * ============================================================================ */
+  int sub_6024CF58()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8DCF8 = 0;
+    dword_60C8DCFC = 0;
+    dword_60C8DD00 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2701;
+    Profile::Profile(13163780, 2401848, MEMORY[0xAF39C0], (int)v1, &unk_60AFD730, 22);
+    MEMORY[0xC8DD20] = ++MEMORY[0xC7B788];
+    MEMORY[0xC8DD24] = 668;
+    MEMORY[0xC8DD28] = 1;
+    MEMORY[0xC8DD2C] = 672;
+    MEMORY[0xC8DD30] = 1;
+    MEMORY[0xC8DD34] = 676;
+    MEMORY[0xC8DD38] = 1;
+    MEMORY[0xC8DD1C] = 12427804;
+    MEMORY[0xC8DD3C] = 13178044;
+    return 13163804;
   }
 
 /* ============================================================================
@@ -30784,6 +32133,98 @@
   }
 
 /* ============================================================================
+ * registerProfile_basabasa_25107C
+ * RVA 0x0025107c   size 0x304   xrefs 0
+ * ============================================================================ */
+  int sub_6025107C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8DD74 = 0;
+    dword_60C8DD78 = 0;
+    dword_60C8DD7C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2736;
+    *(_DWORD *)Profile::Profile(13163904, 2412648, MEMORY[0xAF36BC], (int)v1, &unk_60AFD754, 18) = 12427824;
+    MEMORY[0xC8DD9C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8DD98] = 12428564;
+    MEMORY[0xC8DDA0] = 2413036;
+    MEMORY[0xC8DDA4] = 0;
+    MEMORY[0xC8DDA8] = 2413040;
+    MEMORY[0xC8DDAC] = 0;
+    MEMORY[0xC8DDB0] = 2413500;
+    MEMORY[0xC8DDB4] = 0;
+    MEMORY[0xC8DDB8] = 12428564;
+    MEMORY[0xC8DDBC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8DDC0] = 2413504;
+    MEMORY[0xC8DDC4] = 0;
+    MEMORY[0xC8DDC8] = 2413508;
+    MEMORY[0xC8DDCC] = 0;
+    MEMORY[0xC8DDD0] = 2414360;
+    MEMORY[0xC8DDD4] = 0;
+    MEMORY[0xC8DDD8] = 12428564;
+    MEMORY[0xC8DDDC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8DDE0] = 2414364;
+    MEMORY[0xC8DDE4] = 0;
+    MEMORY[0xC8DDE8] = 2415048;
+    MEMORY[0xC8DDEC] = 0;
+    MEMORY[0xC8DDF0] = 2415568;
+    MEMORY[0xC8DDF4] = 0;
+    MEMORY[0xC8DDF8] = 12428564;
+    MEMORY[0xC8DDFC] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8DE00] = 2415572;
+    MEMORY[0xC8DE04] = 0;
+    MEMORY[0xC8DE08] = 2416228;
+    MEMORY[0xC8DE0C] = 0;
+    MEMORY[0xC8DE10] = 2416984;
+    MEMORY[0xC8DE14] = 0;
+    MEMORY[0xC8DE18] = 12428564;
+    MEMORY[0xC8DE1C] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8DE20] = 2416988;
+    MEMORY[0xC8DE24] = 0;
+    MEMORY[0xC8DE28] = 2417932;
+    MEMORY[0xC8DE2C] = 0;
+    MEMORY[0xC8DE30] = 2418360;
+    MEMORY[0xC8DE34] = 0;
+    MEMORY[0xC8DE38] = 12428564;
+    MEMORY[0xC8DE3C] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8DE40] = 2418364;
+    MEMORY[0xC8DE44] = 0;
+    MEMORY[0xC8DE48] = 2418384;
+    MEMORY[0xC8DE4C] = 0;
+    MEMORY[0xC8DE50] = 2418488;
+    MEMORY[0xC8DE54] = 0;
+    MEMORY[0xC8DE58] = 12428564;
+    MEMORY[0xC8DE5C] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8DE60] = 2418492;
+    MEMORY[0xC8DE64] = 0;
+    MEMORY[0xC8DE68] = 2418952;
+    MEMORY[0xC8DE6C] = 0;
+    MEMORY[0xC8DE70] = 2419484;
+    MEMORY[0xC8DE74] = 0;
+    MEMORY[0xC8DE7C] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8DE80] = 444;
+    MEMORY[0xC8DE84] = 1;
+    MEMORY[0xC8DE88] = 448;
+    MEMORY[0xC8DE8C] = 1;
+    MEMORY[0xC8DE90] = 452;
+    MEMORY[0xC8DE94] = 1;
+    MEMORY[0xC8DE78] = 12428584;
+    MEMORY[0xC8DE98] = 13174508;
+    MEMORY[0xC7B788] += 9;
+    MEMORY[0xC8DEA0] = MEMORY[0xC7B788];
+    MEMORY[0xC8DEA4] = 456;
+    MEMORY[0xC8DEA8] = 1;
+    MEMORY[0xC8DEAC] = 460;
+    MEMORY[0xC8DEB0] = 1;
+    MEMORY[0xC8DEB4] = 464;
+    MEMORY[0xC8DEB8] = 1;
+    MEMORY[0xC8DE9C] = 12428584;
+    MEMORY[0xC8DEBC] = 13174544;
+    return 13174544;
+  }
+
+/* ============================================================================
  * Actor_mameGoomba_build
  * RVA 0x0025142c   size 0x168   xrefs 0
  * ============================================================================ */
@@ -31310,6 +32751,73 @@
         return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13164372);
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_mameGoomba_253A94
+ * RVA 0x00253a94   size 0x244   xrefs 0
+ * ============================================================================ */
+  int sub_60253A94()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8DED0 = 0;
+    dword_60C8DED4 = 0;
+    dword_60C8DED8 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC27AC;
+    Profile::Profile(13164252, 2429996, MEMORY[0xAF3484], (int)v1, &unk_60AFD7BC, 16);
+    MEMORY[0xC8DEF8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8DEF4] = 12429328;
+    MEMORY[0xC8DEFC] = 2430368;
+    MEMORY[0xC8DF00] = 0;
+    MEMORY[0xC8DF04] = 2430644;
+    MEMORY[0xC8DF08] = 0;
+    MEMORY[0xC8DF0C] = 2430996;
+    MEMORY[0xC8DF10] = 0;
+    MEMORY[0xC8DF18] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8DF14] = 12429328;
+    MEMORY[0xC8DF1C] = 2431000;
+    MEMORY[0xC8DF20] = 0;
+    MEMORY[0xC8DF24] = 2431032;
+    MEMORY[0xC8DF28] = 0;
+    MEMORY[0xC8DF2C] = 2431164;
+    MEMORY[0xC8DF30] = 0;
+    MEMORY[0xC8DF38] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8DF34] = 12429328;
+    MEMORY[0xC8DF3C] = 2431168;
+    MEMORY[0xC8DF40] = 0;
+    MEMORY[0xC8DF44] = 2431664;
+    MEMORY[0xC8DF48] = 0;
+    MEMORY[0xC8DF4C] = 2432712;
+    MEMORY[0xC8DF50] = 0;
+    MEMORY[0xC8DF58] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8DF54] = 12429328;
+    MEMORY[0xC8DF5C] = 2432716;
+    MEMORY[0xC8DF60] = 0;
+    MEMORY[0xC8DF64] = 2432800;
+    MEMORY[0xC8DF68] = 0;
+    MEMORY[0xC8DF6C] = 2433264;
+    MEMORY[0xC8DF70] = 0;
+    MEMORY[0xC8DF78] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8DF7C] = 456;
+    MEMORY[0xC8DF80] = 1;
+    MEMORY[0xC8DF84] = 460;
+    MEMORY[0xC8DF88] = 1;
+    MEMORY[0xC8DF8C] = 464;
+    MEMORY[0xC8DF90] = 1;
+    MEMORY[0xC8DF74] = 12429348;
+    MEMORY[0xC8DF94] = 13174544;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xC8DF9C] = MEMORY[0xC7B788];
+    MEMORY[0xC8DF98] = 12429328;
+    MEMORY[0xC8DFA0] = 2433300;
+    MEMORY[0xC8DFA4] = 0;
+    MEMORY[0xC8DFA8] = 2433408;
+    MEMORY[0xC8DFAC] = 0;
+    MEMORY[0xC8DFB0] = 2433412;
+    MEMORY[0xC8DFB4] = 0;
+    return 2433412;
   }
 
 /* ============================================================================
@@ -31924,6 +33432,40 @@
     a1[1] = v8;
     (*(void (__fastcall **)(_BYTE *, _DWORD *))(*a1 + 28))(v11, a1);
     return sub_60421938(v8, ResArchiveById, v11);
+  }
+
+/* ============================================================================
+ * registerProfile_GiantWiggler_254EF0
+ * RVA 0x00254ef0   size 0x12c   xrefs 0
+ * ============================================================================ */
+  int sub_60254EF0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8DFC4 = 0;
+    dword_60C8DFC8 = 0;
+    dword_60C8DFCC = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2826;
+    Profile::Profile(13164496, 2441484, MEMORY[0xAF3520], (int)v1, &unk_60AFD830, 2);
+    MEMORY[0xC8DFEC] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8DFE8] = 12430212;
+    MEMORY[0xC8DFF0] = 2441516;
+    MEMORY[0xC8DFF4] = 0;
+    MEMORY[0xC8DFF8] = 2441528;
+    MEMORY[0xC8DFFC] = 0;
+    MEMORY[0xC8E000] = 2441616;
+    MEMORY[0xC8E004] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xC8E00C] = MEMORY[0xC7B788];
+    MEMORY[0xC8E008] = 12430212;
+    MEMORY[0xC8E010] = 2441620;
+    MEMORY[0xC8E014] = 0;
+    MEMORY[0xC8E018] = 2441624;
+    MEMORY[0xC8E01C] = 0;
+    MEMORY[0xC8E020] = 2442932;
+    MEMORY[0xC8E024] = 0;
+    return 2442932;
   }
 
 /* ============================================================================
@@ -33783,6 +35325,57 @@
   int Amp::collisionPipeCannon()
   {
     return 0;
+  }
+
+/* ============================================================================
+ * registerProfile_ZN3AmpC3EPK14ActorBuildI_259D74
+ * RVA 0x00259d74   size 0x1b8   xrefs 0
+ * ============================================================================ */
+  int sub_60259D74()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8E05C = 0;
+    dword_60C8E060 = 0;
+    dword_60C8E064 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2915;
+    Profile::Profile(13164648, 2458152, MEMORY[0xAF3928], (int)v1, &unk_60AFD86C, 0);
+    MEMORY[0xC8E084] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8E080] = 12431016;
+    MEMORY[0xC8E088] = 2458444;
+    MEMORY[0xC8E08C] = 0;
+    MEMORY[0xC8E090] = 2458664;
+    MEMORY[0xC8E094] = 0;
+    MEMORY[0xC8E098] = 2458732;
+    MEMORY[0xC8E09C] = 0;
+    MEMORY[0xC8E0A0] = 12431016;
+    MEMORY[0xC8E0A4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8E0A8] = 2458736;
+    MEMORY[0xC8E0AC] = 0;
+    MEMORY[0xC8E0B0] = 2458904;
+    MEMORY[0xC8E0B4] = 0;
+    MEMORY[0xC8E0B8] = 2459068;
+    MEMORY[0xC8E0BC] = 0;
+    MEMORY[0xC8E0C0] = 12431016;
+    MEMORY[0xC8E0C4] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8E0C8] = 2459072;
+    MEMORY[0xC8E0CC] = 0;
+    MEMORY[0xC8E0D0] = 2459352;
+    MEMORY[0xC8E0D4] = 0;
+    MEMORY[0xC8E0D8] = 2459440;
+    MEMORY[0xC8E0DC] = 0;
+    MEMORY[0xC7B788] += 4;
+    MEMORY[0xC8E0E4] = MEMORY[0xC7B788];
+    MEMORY[0xC8E0E8] = 456;
+    MEMORY[0xC8E0EC] = 1;
+    MEMORY[0xC8E0F0] = 460;
+    MEMORY[0xC8E0F4] = 1;
+    MEMORY[0xC8E0F8] = 464;
+    MEMORY[0xC8E0FC] = 1;
+    MEMORY[0xC8E0E0] = 12431036;
+    MEMORY[0xC8E100] = 13174544;
+    return 13174544;
   }
 
 /* ============================================================================
@@ -36007,6 +37600,52 @@
   }
 
 /* ============================================================================
+ * registerProfile_parabomu_RDash_262310
+ * RVA 0x00262310   size 0x1ac   xrefs 0
+ * ============================================================================ */
+  int sub_60262310()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60C8E410 = 0;
+    dword_60C8E414 = 0;
+    dword_60C8E418 = 0;
+    v1 = 12321336;
+    v2 = &unk_60AC29D3;
+    Profile::Profile(13165596, 2495528, MEMORY[0xAF3550], (int)&v1, &unk_60AFD930, 18);
+    v1 = 12321336;
+    v2 = &unk_60AC29E3;
+    Profile::Profile(13165620, 2495528, MEMORY[0xAF3554], (int)&v1, &unk_60AFD954, 18);
+    MEMORY[0xC8E450] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8E44C] = 12432708;
+    MEMORY[0xC8E454] = 2495736;
+    MEMORY[0xC8E458] = 0;
+    MEMORY[0xC8E45C] = 2495924;
+    MEMORY[0xC8E460] = 0;
+    MEMORY[0xC8E464] = 2496100;
+    MEMORY[0xC8E468] = 0;
+    MEMORY[0xC8E46C] = 12432708;
+    MEMORY[0xC8E470] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xC8E490] = MEMORY[0xC7B788];
+    MEMORY[0xC8E474] = 2496124;
+    MEMORY[0xC8E48C] = 12432708;
+    MEMORY[0xC8E478] = 0;
+    MEMORY[0xC8E494] = 2496428;
+    MEMORY[0xC8E47C] = 2496288;
+    MEMORY[0xC8E498] = 0;
+    MEMORY[0xC8E480] = 0;
+    MEMORY[0xC8E49C] = 2496492;
+    MEMORY[0xC8E484] = 2496412;
+    MEMORY[0xC8E488] = 0;
+    MEMORY[0xC8E4A0] = 0;
+    MEMORY[0xC8E4A4] = 2496496;
+    MEMORY[0xC8E4A8] = 0;
+    return 13165708;
+  }
+
+/* ============================================================================
  * BoomerangBro_ctor
  * RVA 0x00262520   size 0x48   xrefs 0
  * ============================================================================ */
@@ -36197,6 +37836,29 @@
   void BrosBase::vf334()
   {
     ;
+  }
+
+/* ============================================================================
+ * registerProfile_BoomerangBro_ctor_263214
+ * RVA 0x00263214   size 0xbc   xrefs 0
+ * ============================================================================ */
+  int *sub_60263214()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8E4D0 = 0;
+    dword_60C8E4D4 = 0;
+    dword_60C8E4D8 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2A2A;
+    Profile::Profile(13165748, 2499872, MEMORY[0xAF3908], (int)v1, &unk_60AFD978, 18);
+    dword_60C8E4DC = 1092616192;
+    dword_60C8E4E0 = 0;
+    dword_60C8E4E4 = -1061158912;
+    dword_60C8E4E8 = -1054867456;
+    dword_60C8E4EC = 0;
+    dword_60C8E4F0 = 1086324736;
+    return &dword_60C8E4E4;
   }
 
 /* ============================================================================
@@ -39440,6 +41102,63 @@
   }
 
 /* ============================================================================
+ * registerProfile_baburu_26A364
+ * RVA 0x0026a364   size 0x200   xrefs 0
+ * ============================================================================ */
+  int sub_6026A364()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60C8E718 = 0;
+    dword_60C8E71C = 0;
+    dword_60C8E720 = 0;
+    flt_60C8E6F0 = 0.0;
+    flt_60C8E6F4 = 20.0;
+    unk_60C8E6F8 = 0;
+    flt_60C8E6FC = 10.0;
+    flt_60C8E700 = 0.0;
+    flt_60C8E704 = -5.0;
+    flt_60C8E708 = 10.0;
+    flt_60C8E70C = 0.0;
+    flt_60C8E710 = -10.0;
+    flt_60C8E714 = 0.0;
+    v1 = 12321336;
+    v2 = &unk_60AC2A7F;
+    Profile::Profile(13166156, 2521336, MEMORY[0xAF3764], (int)&v1, &unk_60AFD9FC, 18);
+    v1 = 12321336;
+    v2 = &unk_60AC2A89;
+    Profile::Profile(13166180, 2521336, MEMORY[0xAF3768], (int)&v1, &unk_60AFDA20, 18);
+    MEMORY[0xC8E680] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8E67C] = 12435336;
+    MEMORY[0xC8E684] = 2521692;
+    MEMORY[0xC8E688] = 0;
+    MEMORY[0xC8E68C] = 2521696;
+    MEMORY[0xC8E690] = 0;
+    MEMORY[0xC8E694] = 2521748;
+    MEMORY[0xC8E698] = 0;
+    MEMORY[0xC8E69C] = 12435336;
+    MEMORY[0xC8E6A0] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xC8E6A4] = 2521752;
+    MEMORY[0xC8E6A8] = 0;
+    MEMORY[0xC8E6C0] = MEMORY[0xC7B788];
+    MEMORY[0xC8E6C4] = 456;
+    MEMORY[0xC8E6C8] = 1;
+    MEMORY[0xC8E6AC] = 2521824;
+    MEMORY[0xC8E6B0] = 0;
+    MEMORY[0xC8E6B4] = 2523544;
+    MEMORY[0xC8E6B8] = 0;
+    MEMORY[0xC8E6CC] = 460;
+    MEMORY[0xC8E6D0] = 1;
+    MEMORY[0xC8E6D4] = 464;
+    MEMORY[0xC8E6D8] = 1;
+    MEMORY[0xC8E6BC] = 12435356;
+    MEMORY[0xC8E6DC] = 13174544;
+    return 13166268;
+  }
+
+/* ============================================================================
  * Actor_baburu_RDash_build
  * RVA 0x0026a5c4   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -39452,6 +41171,26 @@
     result = (_DWORD *)Actor_baburu_RDash_build_helper(v0);
     *result = 12435376;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_baburu_RDash_26A95C
+ * RVA 0x0026a95c   size 0xc8   xrefs 0
+ * ============================================================================ */
+  int sub_6026A95C()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60C8E724 = 0;
+    dword_60C8E728 = 0;
+    dword_60C8E72C = 0;
+    v1 = 12321336;
+    v2 = &unk_60AC2AEC;
+    Profile::Profile(13166384, 2532804, MEMORY[0xAF376C], (int)&v1, &unk_60AFDAD4, 18);
+    v1 = 12321336;
+    v2 = &unk_60AC2AFD;
+    return Profile::Profile(13166408, 2532804, MEMORY[0xAF3770], (int)&v1, &unk_60AFDAF8, 18);
   }
 
 /* ============================================================================
@@ -39734,6 +41473,30 @@
       a1[38] = 0x40000000;
     }
     return Enemy_killWithState(a1, *(_DWORD *)(a3 + 64), &v12, 13174508, a1[30], a1[31]);
+  }
+
+/* ============================================================================
+ * registerProfile_sub_6026AD60_26C13C
+ * RVA 0x0026c13c   size 0xe0   xrefs 0
+ * ============================================================================ */
+  int sub_6026C13C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8E768 = 0;
+    dword_60C8E76C = 0;
+    dword_60C8E770 = 0;
+    MEMORY[0xC8E778] = ++MEMORY[0xC7B788];
+    MEMORY[0xC8E774] = 12436800;
+    MEMORY[0xC8E77C] = 2533968;
+    MEMORY[0xC8E780] = 0;
+    MEMORY[0xC8E784] = 2534120;
+    MEMORY[0xC8E788] = 0;
+    MEMORY[0xC8E78C] = 2534748;
+    MEMORY[0xC8E790] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2B14;
+    return Profile::Profile(13166484, 2534752, MEMORY[0xAF36F8], (int)v1, &unk_60AFDB1C, 16);
   }
 
 /* ============================================================================
@@ -40219,6 +41982,30 @@
   }
 
 /* ============================================================================
+ * registerProfile_sub_6026C370_26D5C8
+ * RVA 0x0026d5c8   size 0xdc   xrefs 0
+ * ============================================================================ */
+  int sub_6026D5C8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8E7B4 = 0;
+    dword_60C8E7B8 = 0;
+    dword_60C8E7BC = 0;
+    MEMORY[0xC8E7C4] = ++MEMORY[0xC7B788];
+    MEMORY[0xC8E7C0] = 12437024;
+    MEMORY[0xC8E7C8] = 2540112;
+    MEMORY[0xC8E7CC] = 0;
+    MEMORY[0xC8E7D0] = 2540128;
+    MEMORY[0xC8E7D4] = 0;
+    MEMORY[0xC8E7D8] = 2540396;
+    MEMORY[0xC8E7DC] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2B21;
+    return Profile::Profile(13166560, 2540400, MEMORY[0xAF2EFC], (int)v1, &unk_60AFDB88, 0);
+  }
+
+/* ============================================================================
  * Actor_rotate_build
  * RVA 0x0026d9d8   size 0xa4   xrefs 0
  * ============================================================================ */
@@ -40531,6 +42318,74 @@
   }
 
 /* ============================================================================
+ * registerProfile_rotate_26F110
+ * RVA 0x0026f110   size 0x218   xrefs 0
+ * ============================================================================ */
+  int sub_6026F110()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8E880 = 0;
+    dword_60C8E884 = 0;
+    dword_60C8E888 = 0;
+    dword_60C8E898 = 0;
+    dword_60C8E894 = 0;
+    dword_60C8E890 = 0;
+    dword_60C8E88C = 0;
+    dword_60C8E89C = -1048051712;
+    dword_60C8E8A0 = 1103101952;
+    dword_60C8E8A4 = 1099431936;
+    dword_60C8E8A8 = 1082130432;
+    dword_60C8E8AC = 0;
+    dword_60C8E8BC = 0;
+    dword_60C8E8B8 = 0;
+    dword_60C8E8B4 = 0;
+    dword_60C8E8B0 = 0;
+    dword_60C8E8C0 = -1048051712;
+    dword_60C8E8C4 = -1065353216;
+    dword_60C8E8C8 = 1099431936;
+    dword_60C8E8CC = -1044381696;
+    dword_60C8E8D0 = 0;
+    dword_60C8E8E0 = 0;
+    dword_60C8E8DC = 0;
+    dword_60C8E8D8 = 0;
+    dword_60C8E8D4 = 0;
+    dword_60C8E8E4 = -1054867456;
+    dword_60C8E8E8 = 1101004800;
+    dword_60C8E8EC = 1092616192;
+    dword_60C8E8F0 = 1082130432;
+    dword_60C8E8F4 = 0;
+    MEMORY[0xC8E804] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8E800] = 12437276;
+    MEMORY[0xC8E808] = 2545368;
+    MEMORY[0xC8E80C] = 0;
+    MEMORY[0xC8E810] = 2545384;
+    MEMORY[0xC8E814] = 0;
+    MEMORY[0xC8E818] = 2545736;
+    MEMORY[0xC8E81C] = 0;
+    MEMORY[0xC8E824] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8E820] = 12437276;
+    MEMORY[0xC8E828] = 2545740;
+    MEMORY[0xC8E82C] = 0;
+    MEMORY[0xC8E830] = 2545784;
+    MEMORY[0xC8E834] = 0;
+    MEMORY[0xC8E838] = 2545968;
+    MEMORY[0xC8E83C] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xC8E844] = MEMORY[0xC7B788];
+    MEMORY[0xC8E840] = 12437276;
+    MEMORY[0xC8E848] = 2545972;
+    MEMORY[0xC8E84C] = 0;
+    MEMORY[0xC8E850] = 2545976;
+    MEMORY[0xC8E854] = 0;
+    MEMORY[0xC8E858] = 2546132;
+    MEMORY[0xC8E85C] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2B98;
+    return Profile::Profile(13166688, 2546136, MEMORY[0xAF2EF4], (int)v1, &unk_60AFDBAC, 0);
+  }
+
+/* ============================================================================
  * Actor_rotate_big_build
  * RVA 0x0026f37c   size 0x44   xrefs 0
  * ============================================================================ */
@@ -40597,6 +42452,49 @@
     v7 = MEMORY[0xC7F534];
     mapPositionToScreen(v10, &v11);
     return BasicSoundActor2_play(v7, (int)"SE_OBJ_ROT_HOUDAI_S_SHOT", v10, nullptr);
+  }
+
+/* ============================================================================
+ * registerProfile_rotate_big_2706B0
+ * RVA 0x002706b0   size 0x12c   xrefs 0
+ * ============================================================================ */
+  int sub_602706B0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8E920 = 0;
+    dword_60C8E924 = 0;
+    dword_60C8E928 = 0;
+    dword_60C8E938 = 0;
+    dword_60C8E934 = 0;
+    dword_60C8E930 = 0;
+    dword_60C8E92C = 0;
+    dword_60C8E93C = -1042284544;
+    dword_60C8E940 = 1111490560;
+    dword_60C8E944 = 1105199104;
+    dword_60C8E948 = 1090519040;
+    dword_60C8E94C = 0;
+    dword_60C8E95C = 0;
+    dword_60C8E958 = 0;
+    dword_60C8E954 = 0;
+    dword_60C8E950 = 0;
+    dword_60C8E960 = -1042284544;
+    dword_60C8E964 = -1056964608;
+    dword_60C8E968 = 1105199104;
+    dword_60C8E96C = -1035993088;
+    dword_60C8E970 = 0;
+    dword_60C8E980 = 0;
+    dword_60C8E97C = 0;
+    dword_60C8E978 = 0;
+    dword_60C8E974 = 0;
+    dword_60C8E984 = -1048576000;
+    dword_60C8E988 = 1109393408;
+    dword_60C8E98C = 1098907648;
+    dword_60C8E990 = 1090519040;
+    dword_60C8E994 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2C17;
+    return Profile::Profile(13166840, 2552700, MEMORY[0xAF2EF8], (int)v1, &unk_60AFDBD0, 18);
   }
 
 /* ============================================================================
@@ -40897,6 +42795,64 @@
     v15 = v14(v13, &v17);
     (*(void (__fastcall **)(_DWORD, int, float *))(***(_DWORD ***)(a1 + 6104) + 108))(**(_DWORD **)(a1 + 6104), v15, &v17);
     return sub_60236DF4(562, (int)&v17, 0);
+  }
+
+/* ============================================================================
+ * registerProfile_naname_271B44
+ * RVA 0x00271b44   size 0x1dc   xrefs 0
+ * ============================================================================ */
+  int sub_60271B44()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8EA40 = 0;
+    dword_60C8EA44 = 0;
+    dword_60C8EA48 = 0;
+    dword_60C8EA58 = 0;
+    dword_60C8EA54 = 0;
+    dword_60C8EA50 = 0;
+    dword_60C8EA4C = 0;
+    dword_60C8EA5C = -1040187392;
+    dword_60C8EA60 = 1117519872;
+    dword_60C8EA64 = 1107296256;
+    dword_60C8EA68 = 0;
+    dword_60C8EA6C = 0;
+    MEMORY[0xC8E99C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8E998] = 12437744;
+    MEMORY[0xC8E9A0] = 2557944;
+    MEMORY[0xC8E9A4] = 0;
+    MEMORY[0xC8E9A8] = 2557960;
+    MEMORY[0xC8E9AC] = 0;
+    MEMORY[0xC8E9B0] = 2558180;
+    MEMORY[0xC8E9B4] = 0;
+    MEMORY[0xC8E9BC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8E9B8] = 12437744;
+    MEMORY[0xC8E9C0] = 2558184;
+    MEMORY[0xC8E9C4] = 0;
+    MEMORY[0xC8E9C8] = 2558200;
+    MEMORY[0xC8E9CC] = 0;
+    MEMORY[0xC8E9D0] = 2558416;
+    MEMORY[0xC8E9D4] = 0;
+    MEMORY[0xC8E9DC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8E9D8] = 12437744;
+    MEMORY[0xC8E9E0] = 2558420;
+    MEMORY[0xC8E9E4] = 0;
+    MEMORY[0xC8E9E8] = 2558448;
+    MEMORY[0xC8E9EC] = 0;
+    MEMORY[0xC8E9F0] = 2558640;
+    MEMORY[0xC8E9F4] = 0;
+    MEMORY[0xC7B788] += 4;
+    MEMORY[0xC8E9FC] = MEMORY[0xC7B788];
+    MEMORY[0xC8E9F8] = 12437744;
+    MEMORY[0xC8EA00] = 2558644;
+    MEMORY[0xC8EA04] = 0;
+    MEMORY[0xC8EA08] = 2558648;
+    MEMORY[0xC8EA0C] = 0;
+    MEMORY[0xC8EA10] = 2558720;
+    MEMORY[0xC8EA14] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2C4D;
+    return Profile::Profile(13167128, 2558724, MEMORY[0xAF2EF0], (int)v1, &unk_60AFDBF4, 0);
   }
 
 /* ============================================================================
@@ -42370,6 +44326,79 @@
     v9 = StateMgr::getCurrentState(v1);
     v10 = (*(int (__fastcall **)(int))(*(_DWORD *)v9 + 8))(v9);
     return v10 == (*(int (**)(void))(MEMORY[0xC8EBA8] + 8))();
+  }
+
+/* ============================================================================
+ * registerProfile_chochin_2750A0
+ * RVA 0x002750a0   size 0x258   xrefs 0
+ * ============================================================================ */
+  const char *sub_602750A0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8EC38 = 0;
+    dword_60C8EC3C = 0;
+    dword_60C8EC40 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2C95;
+    Profile::Profile(13167408, 2570640, MEMORY[0xAF35D0], (int)v1, &unk_60AFDC30, 16);
+    MEMORY[0xC8EB4C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8EB48] = 12439212;
+    MEMORY[0xC8EB50] = 2571056;
+    MEMORY[0xC8EB54] = 0;
+    MEMORY[0xC8EB58] = 2571120;
+    MEMORY[0xC8EB5C] = 0;
+    MEMORY[0xC8EB60] = 2571276;
+    MEMORY[0xC8EB64] = 0;
+    MEMORY[0xC8EB68] = 12439212;
+    MEMORY[0xC8EB6C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8EB70] = 2571280;
+    MEMORY[0xC8EB74] = 0;
+    MEMORY[0xC8EB78] = 2571356;
+    MEMORY[0xC8EB7C] = 0;
+    MEMORY[0xC8EB80] = 2571664;
+    MEMORY[0xC8EB84] = 0;
+    MEMORY[0xC8EB88] = 12439212;
+    MEMORY[0xC8EB8C] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8EB90] = 2571668;
+    MEMORY[0xC8EB94] = 0;
+    MEMORY[0xC8EB98] = 2571684;
+    MEMORY[0xC8EB9C] = 0;
+    MEMORY[0xC8EBA0] = 2571928;
+    MEMORY[0xC8EBA4] = 0;
+    MEMORY[0xC8EBA8] = 12439212;
+    MEMORY[0xC8EBAC] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8EBB0] = 2571932;
+    MEMORY[0xC8EBB4] = 0;
+    MEMORY[0xC8EBB8] = 2571936;
+    MEMORY[0xC8EBBC] = 0;
+    MEMORY[0xC8EBC0] = 2571940;
+    MEMORY[0xC8EBC4] = 0;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xC8EBCC] = MEMORY[0xC7B788];
+    MEMORY[0xC8EBD0] = 456;
+    MEMORY[0xC8EBD4] = 1;
+    MEMORY[0xC8EBD8] = 460;
+    MEMORY[0xC8EBDC] = 1;
+    MEMORY[0xC8EBE0] = 464;
+    MEMORY[0xC8EBE4] = 1;
+    MEMORY[0xC8EBC8] = 12439232;
+    MEMORY[0xC8EBE8] = 13174544;
+    dword_60C8EC00 = 655360000;
+    *(_DWORD *)algn_60C8EC04 = -655360000;
+    dword_60C8EC08 = 12321336;
+    dword_60C8EC0C = (int)"ankou";
+    dword_60C8EC10 = 12321336;
+    dword_60C8EC14 = (int)"ankou";
+    dword_60C8EC18 = 12321336;
+    dword_60C8EC1C = (int)"ankou_fog";
+    dword_60C8EC20 = 12321336;
+    dword_60C8EC24 = (int)"swim";
+    dword_60C8EC28 = 12321336;
+    dword_60C8EC2C = (int)"BGM_anim";
+    dword_60C8EC30 = 12321336;
+    dword_60C8EC34 = (int)"ankou_fog";
+    return "ankou_fog";
   }
 
 /* ============================================================================
@@ -44131,6 +46160,112 @@
   }
 
 /* ============================================================================
+ * registerProfile_Fuzzy_ctor_278B74
+ * RVA 0x00278b74   size 0x380   xrefs 0
+ * ============================================================================ */
+  int sub_60278B74()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60C8EC44 = 0;
+    dword_60C8EC48 = 0;
+    dword_60C8EC4C = 0;
+    v1 = 12321336;
+    v2 = &unk_60AC2CB8;
+    Profile::Profile(13167696, 2577272, MEMORY[0xAF375C], (int)&v1, &unk_60AFDC60, 18);
+    v1 = 12321336;
+    v2 = &unk_60AC2CC8;
+    Profile::Profile(13167720, 2577272, MEMORY[0xAF3760], (int)&v1, &unk_60AFDC84, 18);
+    MEMORY[0xC8EC84] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8EC80] = 12440024;
+    MEMORY[0xC8EC88] = 2577824;
+    MEMORY[0xC8EC8C] = 0;
+    MEMORY[0xC8EC90] = 2577840;
+    MEMORY[0xC8EC94] = 0;
+    MEMORY[0xC8EC98] = 2578452;
+    MEMORY[0xC8EC9C] = 0;
+    MEMORY[0xC8ECA0] = 12440024;
+    MEMORY[0xC8ECA4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8ECA8] = 2578456;
+    MEMORY[0xC8ECAC] = 0;
+    MEMORY[0xC8ECB0] = 2579016;
+    MEMORY[0xC8ECB4] = 0;
+    MEMORY[0xC8ECB8] = 2579636;
+    MEMORY[0xC8ECBC] = 0;
+    MEMORY[0xC8ECC0] = 12440024;
+    MEMORY[0xC8ECC4] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8ECC8] = 2579640;
+    MEMORY[0xC8ECCC] = 0;
+    MEMORY[0xC8ECD0] = 2579644;
+    MEMORY[0xC8ECD4] = 0;
+    MEMORY[0xC8ECD8] = 2579656;
+    MEMORY[0xC8ECDC] = 0;
+    MEMORY[0xC8ECE4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8ECE8] = 456;
+    MEMORY[0xC8ECEC] = 1;
+    MEMORY[0xC8ECF0] = 460;
+    MEMORY[0xC8ECF4] = 1;
+    MEMORY[0xC8ECF8] = 464;
+    MEMORY[0xC8ECFC] = 1;
+    MEMORY[0xC8ECE0] = 12440044;
+    MEMORY[0xC8ED00] = 13174544;
+    MEMORY[0xC8ED0C] = 528;
+    MEMORY[0xC8ED10] = 1;
+    MEMORY[0xC8ED14] = 532;
+    MEMORY[0xC8ED18] = 1;
+    MEMORY[0xC8ED1C] = 536;
+    MEMORY[0xC8ED20] = 1;
+    MEMORY[0xC8ED04] = 12440044;
+    MEMORY[0xC8ED08] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8ED24] = 13175012;
+    MEMORY[0xC8ED30] = 564;
+    MEMORY[0xC8ED34] = 1;
+    MEMORY[0xC8ED38] = 568;
+    MEMORY[0xC8ED3C] = 1;
+    MEMORY[0xC8ED40] = 572;
+    MEMORY[0xC8ED44] = 1;
+    MEMORY[0xC8ED28] = 12440044;
+    MEMORY[0xC8ED2C] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8ED48] = 13175120;
+    MEMORY[0xC8ED54] = 612;
+    MEMORY[0xC8ED58] = 1;
+    MEMORY[0xC8ED5C] = 616;
+    MEMORY[0xC8ED60] = 1;
+    MEMORY[0xC8ED64] = 620;
+    MEMORY[0xC8ED68] = 1;
+    MEMORY[0xC8ED4C] = 12440044;
+    MEMORY[0xC8ED50] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8ED6C] = 13174976;
+    MEMORY[0xC8ED70] = 12440024;
+    MEMORY[0xC8ED74] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8ED78] = 2579660;
+    MEMORY[0xC8ED7C] = 0;
+    MEMORY[0xC8ED80] = 2579884;
+    MEMORY[0xC8ED84] = 0;
+    MEMORY[0xC8ED88] = 2580292;
+    MEMORY[0xC8ED8C] = 0;
+    MEMORY[0xC8ED90] = 12440024;
+    MEMORY[0xC8ED94] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC8ED98] = 2580296;
+    MEMORY[0xC8ED9C] = 0;
+    MEMORY[0xC8EDA0] = 2580584;
+    MEMORY[0xC8EDA4] = 0;
+    MEMORY[0xC8EDA8] = 2581028;
+    MEMORY[0xC8EDAC] = 0;
+    MEMORY[0xC7B788] += 10;
+    MEMORY[0xC8EDB4] = MEMORY[0xC7B788];
+    MEMORY[0xC8EDB0] = 12440024;
+    MEMORY[0xC8EDB8] = 2581032;
+    MEMORY[0xC8EDBC] = 0;
+    MEMORY[0xC8EDC0] = 2581112;
+    MEMORY[0xC8EDC4] = 0;
+    MEMORY[0xC8EDC8] = 2581768;
+    MEMORY[0xC8EDCC] = 0;
+    return 2581768;
+  }
+
+/* ============================================================================
  * Actor_choropu_hole_build
  * RVA 0x00278fac   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -44230,6 +46365,31 @@
     v19[11] = *(float *)(a1 + 116);
     (*(void (__fastcall **)(_DWORD, float *))(**(_DWORD **)(a1 + 6100) + 60))(*(_DWORD *)(a1 + 6100), v19);
     return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 6100) + 56))(*(_DWORD *)(a1 + 6100));
+  }
+
+/* ============================================================================
+ * registerProfile_choropu_hole_2792B0
+ * RVA 0x002792b0   size 0xdc   xrefs 0
+ * ============================================================================ */
+  int sub_602792B0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8EDE8 = 0;
+    dword_60C8EDEC = 0;
+    dword_60C8EDF0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2D10;
+    Profile::Profile(13168116, 2592684, MEMORY[0xAF36B8], (int)v1, &unk_60AFDD5C, 0);
+    MEMORY[0xC8EE10] = ++MEMORY[0xC7B788];
+    MEMORY[0xC8EE0C] = 12440264;
+    MEMORY[0xC8EE14] = 2592732;
+    MEMORY[0xC8EE18] = 0;
+    MEMORY[0xC8EE1C] = 2592736;
+    MEMORY[0xC8EE20] = 0;
+    MEMORY[0xC8EE24] = 2592740;
+    MEMORY[0xC8EE28] = 0;
+    return 13168140;
   }
 
 /* ============================================================================
@@ -45087,6 +47247,157 @@
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13168344);
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_choropu_27D9A0
+ * RVA 0x0027d9a0   size 0x4d0   xrefs 0
+ * ============================================================================ */
+  int sub_6027D9A0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8EE2C = 0;
+    dword_60C8EE30 = 0;
+    dword_60C8EE34 = 0;
+    MEMORY[0xC8EE3C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8EE38] = 12441020;
+    MEMORY[0xC8EE40] = 2593728;
+    MEMORY[0xC8EE44] = 0;
+    MEMORY[0xC8EE48] = 2593896;
+    MEMORY[0xC8EE4C] = 0;
+    MEMORY[0xC8EE50] = 2594736;
+    MEMORY[0xC8EE54] = 0;
+    MEMORY[0xC8EE5C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8EE58] = 12441020;
+    MEMORY[0xC8EE60] = 2594740;
+    MEMORY[0xC8EE64] = 0;
+    MEMORY[0xC8EE68] = 2594948;
+    MEMORY[0xC8EE6C] = 0;
+    MEMORY[0xC8EE70] = 2596056;
+    MEMORY[0xC8EE74] = 0;
+    MEMORY[0xC8EE7C] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8EE78] = 12441020;
+    MEMORY[0xC8EE80] = 2596060;
+    MEMORY[0xC8EE84] = 0;
+    MEMORY[0xC8EE88] = 2596552;
+    MEMORY[0xC8EE8C] = 0;
+    MEMORY[0xC8EE90] = 2596644;
+    MEMORY[0xC8EE94] = 0;
+    MEMORY[0xC8EE9C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8EE98] = 12441020;
+    MEMORY[0xC8EEA0] = 2596648;
+    MEMORY[0xC8EEA4] = 0;
+    MEMORY[0xC8EEA8] = 2596852;
+    MEMORY[0xC8EEAC] = 0;
+    MEMORY[0xC8EEB0] = 2597312;
+    MEMORY[0xC8EEB4] = 0;
+    MEMORY[0xC8EEBC] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8EEB8] = 12441020;
+    MEMORY[0xC8EEC0] = 2597316;
+    MEMORY[0xC8EEC4] = 0;
+    MEMORY[0xC8EEC8] = 2597496;
+    MEMORY[0xC8EECC] = 0;
+    MEMORY[0xC8EED0] = 2598084;
+    MEMORY[0xC8EED4] = 0;
+    MEMORY[0xC8EEDC] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8EED8] = 12441020;
+    MEMORY[0xC8EEE0] = 2598088;
+    MEMORY[0xC8EEE4] = 0;
+    MEMORY[0xC8EEE8] = 2598640;
+    MEMORY[0xC8EEEC] = 0;
+    MEMORY[0xC8EEF0] = 2598920;
+    MEMORY[0xC8EEF4] = 0;
+    MEMORY[0xC8EEFC] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8EEF8] = 12441020;
+    MEMORY[0xC8EF00] = 2598936;
+    MEMORY[0xC8EF04] = 0;
+    MEMORY[0xC8EF08] = 2598996;
+    MEMORY[0xC8EF0C] = 0;
+    MEMORY[0xC8EF10] = 2599308;
+    MEMORY[0xC8EF14] = 0;
+    MEMORY[0xC8EF1C] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8EF18] = 12441020;
+    MEMORY[0xC8EF20] = 2599312;
+    MEMORY[0xC8EF24] = 0;
+    MEMORY[0xC8EF28] = 2599336;
+    MEMORY[0xC8EF2C] = 0;
+    MEMORY[0xC8EF30] = 2601072;
+    MEMORY[0xC8EF34] = 0;
+    MEMORY[0xC8EF3C] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC8EF40] = 456;
+    MEMORY[0xC8EF44] = 1;
+    MEMORY[0xC8EF48] = 460;
+    MEMORY[0xC8EF4C] = 1;
+    MEMORY[0xC8EF50] = 464;
+    MEMORY[0xC8EF54] = 1;
+    MEMORY[0xC8EF38] = 12441040;
+    MEMORY[0xC8EF58] = 13174544;
+    MEMORY[0xC8EF68] = 1;
+    MEMORY[0xC8EF6C] = 448;
+    MEMORY[0xC8EF70] = 1;
+    MEMORY[0xC8EF74] = 452;
+    MEMORY[0xC8EF78] = 1;
+    MEMORY[0xC8EF5C] = 12441040;
+    MEMORY[0xC8EF60] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xC8EF64] = 444;
+    MEMORY[0xC8EF7C] = 13174508;
+    MEMORY[0xC8EF8C] = 1;
+    MEMORY[0xC8EF90] = 472;
+    MEMORY[0xC8EF94] = 1;
+    MEMORY[0xC8EF98] = 476;
+    MEMORY[0xC8EF9C] = 1;
+    MEMORY[0xC8EF80] = 12441040;
+    MEMORY[0xC8EF84] = MEMORY[0xC7B788] + 11;
+    MEMORY[0xC8EF88] = 468;
+    MEMORY[0xC8EFA0] = 13174580;
+    MEMORY[0xC8EFB0] = 1;
+    MEMORY[0xC8EFB4] = 532;
+    MEMORY[0xC8EFB8] = 1;
+    MEMORY[0xC8EFBC] = 536;
+    MEMORY[0xC8EFC0] = 1;
+    MEMORY[0xC8EFA4] = 12441040;
+    MEMORY[0xC8EFA8] = MEMORY[0xC7B788] + 12;
+    MEMORY[0xC8EFAC] = 528;
+    MEMORY[0xC8EFC4] = 13175012;
+    MEMORY[0xC8EFD4] = 1;
+    MEMORY[0xC8EFD8] = 568;
+    MEMORY[0xC8EFDC] = 1;
+    MEMORY[0xC8EFE0] = 572;
+    MEMORY[0xC8EFE4] = 1;
+    MEMORY[0xC8EFC8] = 12441040;
+    MEMORY[0xC8EFCC] = MEMORY[0xC7B788] + 13;
+    MEMORY[0xC8EFD0] = 564;
+    MEMORY[0xC8EFE8] = 13175120;
+    MEMORY[0xC8EFF0] = MEMORY[0xC7B788] + 14;
+    MEMORY[0xC8EFEC] = 12441020;
+    MEMORY[0xC8EFF4] = 2601092;
+    MEMORY[0xC8EFF8] = 0;
+    MEMORY[0xC8EFFC] = 2601340;
+    MEMORY[0xC8F000] = 0;
+    MEMORY[0xC8F004] = 2601344;
+    MEMORY[0xC8F008] = 0;
+    MEMORY[0xC8F010] = MEMORY[0xC7B788] + 15;
+    MEMORY[0xC8F00C] = 12441020;
+    MEMORY[0xC8F014] = 2601508;
+    MEMORY[0xC8F018] = 0;
+    MEMORY[0xC8F01C] = 2601680;
+    MEMORY[0xC8F020] = 0;
+    MEMORY[0xC8F024] = 2601740;
+    MEMORY[0xC8F028] = 0;
+    MEMORY[0xC7B788] += 16;
+    MEMORY[0xC8F030] = MEMORY[0xC7B788];
+    MEMORY[0xC8F034] = 612;
+    MEMORY[0xC8F038] = 1;
+    MEMORY[0xC8F03C] = 616;
+    MEMORY[0xC8F040] = 1;
+    MEMORY[0xC8F044] = 620;
+    MEMORY[0xC8F048] = 1;
+    MEMORY[0xC8F02C] = 12441040;
+    MEMORY[0xC8F04C] = 13174976;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2D34;
+    return Profile::Profile(13168720, 2601744, MEMORY[0xAF36B4], (int)v1, &unk_60AFDD80, 18);
   }
 
 /* ============================================================================
@@ -47270,6 +49581,54 @@
   }
 
 /* ============================================================================
+ * registerProfile_poison_mist_283730
+ * RVA 0x00283730   size 0x154   xrefs 0
+ * ============================================================================ */
+  unsigned __int64 sub_60283730()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60C8F0D8 = 0;
+    dword_60C8F0DC = 0;
+    dword_60C8F0E0 = 0;
+    v1 = 12321336;
+    v2 = &unk_60AC2DB3;
+    Profile::Profile(13168752, 2613100, MEMORY[0xAF3978], (int)&v1, &unk_60AFDDF4, 0);
+    v1 = 12321336;
+    v2 = &unk_60AC2DC6;
+    Profile::Profile(13168776, 2613320, MEMORY[0xAF397C], (int)&v1, &unk_60AFDDF4, 0);
+    dword_60C8F0B0 = -1;
+    byte_60C8F0B4 = -1;
+    byte_60C8F0B5 = 0;
+    byte_60C8F0B6 = 0;
+    byte_60C8F0B7 = 0;
+    byte_60C8F0B8 = -1;
+    byte_60C8F0B9 = -1;
+    byte_60C8F0BA = -6;
+    byte_60C8F0BB = -6;
+    byte_60C8F0BC = -1;
+    byte_60C8F0BD = -1;
+    byte_60C8F0BE = 50;
+    byte_60C8F0BF = 0;
+    byte_60C8F0C0 = -1;
+    byte_60C8F0C1 = 0;
+    byte_60C8F0C2 = 0;
+    byte_60C8F0C3 = 5;
+    byte_60C8F0C4 = -1;
+    byte_60C8F0C5 = 55;
+    byte_60C8F0C6 = 0;
+    byte_60C8F0C7 = -111;
+    dword_60C8F0C8 = -1;
+    byte_60C8F0CC = -1;
+    byte_60C8F0CD = -1;
+    byte_60C8F0CE = -26;
+    byte_60C8F0CF = -76;
+    *(_QWORD *)&dword_60C8F0D0 = 0xC7CFFFFFFFFFFFFFLL;
+    return 0xC7CFFFFFFFFFFFFFLL;
+  }
+
+/* ============================================================================
  * Actor_mist_range_raito_build
  * RVA 0x002838b4   size 0x120   xrefs 0
  * ============================================================================ */
@@ -47926,6 +50285,24 @@
   }
 
 /* ============================================================================
+ * registerProfile_mist_range_raito_285380
+ * RVA 0x00285380   size 0x94   xrefs 0
+ * ============================================================================ */
+  int sub_60285380()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8F108 = 0;
+    dword_60C8F10C = 0;
+    dword_60C8F110 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2E66;
+    Profile::Profile(13168868, 2635956, MEMORY[0xAF3980], (int)v1, &unk_60AFDE18, 0);
+    unk_60C8F100 = 0x64FFFFFAFAFFFFLL;
+    return -84213761;
+  }
+
+/* ============================================================================
  * sub_60285440
  * RVA 0x00285440   size 0xb4   xrefs 2
  * ============================================================================ */
@@ -48180,6 +50557,176 @@
     LODWORD(v15[11]) = *(v1 - 1546);
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v1 + 60))(**v1, v15);
     return sub_60421880(*v1);
+  }
+
+/* ============================================================================
+ * registerProfile_kuki_286290
+ * RVA 0x00286290   size 0x124   xrefs 0
+ * ============================================================================ */
+  int sub_60286290()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8F114 = 0;
+    dword_60C8F118 = 0;
+    dword_60C8F11C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2E94;
+    Profile::Profile(13168928, 2643920, MEMORY[0xAF3188], (int)v1, &unk_60AFDE90, 18);
+    MEMORY[0xC8F13C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8F138] = 12443716;
+    MEMORY[0xC8F140] = 2643992;
+    MEMORY[0xC8F144] = 0;
+    MEMORY[0xC8F148] = 2644004;
+    MEMORY[0xC8F14C] = 0;
+    MEMORY[0xC8F150] = 2644388;
+    MEMORY[0xC8F154] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xC8F15C] = MEMORY[0xC7B788];
+    MEMORY[0xC8F158] = 12443716;
+    MEMORY[0xC8F160] = 2644392;
+    MEMORY[0xC8F164] = 0;
+    MEMORY[0xC8F168] = 2644404;
+    MEMORY[0xC8F16C] = 0;
+    MEMORY[0xC8F170] = 2644408;
+    MEMORY[0xC8F174] = 0;
+    return 2644408;
+  }
+
+/* ============================================================================
+ * registerProfile_kurasha_2863FC
+ * RVA 0x002863fc   size 0x460   xrefs 0
+ * ============================================================================ */
+  int sub_602863FC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8F180 = 0;
+    dword_60C8F184 = 0;
+    dword_60C8F188 = 0;
+    MEMORY[0xC8F18C] = 12321336;
+    MEMORY[0xC8F190] = "walk";
+    MEMORY[0xC8F194] = 12321336;
+    MEMORY[0xC8F198] = "wait";
+    MEMORY[0xC8F19C] = 12321336;
+    MEMORY[0xC8F1A0] = "run";
+    MEMORY[0xC8F1A4] = 12321336;
+    MEMORY[0xC8F1A8] = "damage";
+    MEMORY[0xC8F1AC] = 12321336;
+    MEMORY[0xC8F1B0] = "dead";
+    sub_60000288();
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2EB1;
+    Profile::Profile(13169076, 2648412, MEMORY[0xAF3774], (int)v1, &unk_60AFDEB4, 18);
+    MEMORY[0xC8F1D0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8F1CC] = 12444472;
+    MEMORY[0xC8F1D4] = 2648744;
+    MEMORY[0xC8F1D8] = 0;
+    MEMORY[0xC8F1DC] = 2648996;
+    MEMORY[0xC8F1E0] = 0;
+    MEMORY[0xC8F1E4] = 2649760;
+    MEMORY[0xC8F1E8] = 0;
+    MEMORY[0xC8F1EC] = 12444472;
+    MEMORY[0xC8F1F0] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8F1F4] = 2649764;
+    MEMORY[0xC8F1F8] = 0;
+    MEMORY[0xC8F1FC] = 2649768;
+    MEMORY[0xC8F200] = 0;
+    MEMORY[0xC8F204] = 2649772;
+    MEMORY[0xC8F208] = 0;
+    MEMORY[0xC8F20C] = 12444472;
+    MEMORY[0xC8F210] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8F214] = 2649776;
+    MEMORY[0xC8F218] = 0;
+    MEMORY[0xC8F21C] = 2649944;
+    MEMORY[0xC8F220] = 0;
+    MEMORY[0xC8F224] = 2650292;
+    MEMORY[0xC8F228] = 0;
+    MEMORY[0xC8F22C] = 12444472;
+    MEMORY[0xC8F230] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8F234] = 2650296;
+    MEMORY[0xC8F238] = 0;
+    MEMORY[0xC8F23C] = 2650588;
+    MEMORY[0xC8F240] = 0;
+    MEMORY[0xC8F244] = 2651068;
+    MEMORY[0xC8F248] = 0;
+    MEMORY[0xC8F24C] = 12444472;
+    MEMORY[0xC8F250] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8F254] = 2651120;
+    MEMORY[0xC8F258] = 0;
+    MEMORY[0xC8F25C] = 2651440;
+    MEMORY[0xC8F260] = 0;
+    MEMORY[0xC8F264] = 2652976;
+    MEMORY[0xC8F268] = 0;
+    MEMORY[0xC8F26C] = 12444472;
+    MEMORY[0xC8F270] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8F274] = 2653064;
+    MEMORY[0xC8F278] = 0;
+    MEMORY[0xC8F27C] = 2653068;
+    MEMORY[0xC8F280] = 0;
+    MEMORY[0xC8F284] = 2653072;
+    MEMORY[0xC8F288] = 0;
+    MEMORY[0xC8F28C] = 12444472;
+    MEMORY[0xC8F290] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8F294] = 2653076;
+    MEMORY[0xC8F298] = 0;
+    MEMORY[0xC8F29C] = 2653328;
+    MEMORY[0xC8F2A0] = 0;
+    MEMORY[0xC8F2A4] = 2653560;
+    MEMORY[0xC8F2A8] = 0;
+    MEMORY[0xC8F2AC] = 12444472;
+    MEMORY[0xC8F2B0] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC8F2B4] = 2653564;
+    MEMORY[0xC8F2B8] = 0;
+    MEMORY[0xC8F2BC] = 2653812;
+    MEMORY[0xC8F2C0] = 0;
+    MEMORY[0xC8F2C4] = 2654800;
+    MEMORY[0xC8F2C8] = 0;
+    MEMORY[0xC8F2CC] = 12444472;
+    MEMORY[0xC8F2D0] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC8F2D4] = 2654816;
+    MEMORY[0xC8F2D8] = 0;
+    MEMORY[0xC8F2DC] = 2655144;
+    MEMORY[0xC8F2E0] = 0;
+    MEMORY[0xC8F2E4] = 2655848;
+    MEMORY[0xC8F2E8] = 0;
+    MEMORY[0xC8F2EC] = 12444472;
+    MEMORY[0xC8F2F0] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xC8F2F4] = 2656024;
+    MEMORY[0xC8F2F8] = 0;
+    MEMORY[0xC8F2FC] = 2656300;
+    MEMORY[0xC8F300] = 0;
+    MEMORY[0xC8F304] = 2656604;
+    MEMORY[0xC8F308] = 0;
+    MEMORY[0xC8F310] = MEMORY[0xC7B788] + 11;
+    MEMORY[0xC8F314] = 624;
+    MEMORY[0xC8F318] = 1;
+    MEMORY[0xC8F31C] = 628;
+    MEMORY[0xC8F320] = 1;
+    MEMORY[0xC8F324] = 632;
+    MEMORY[0xC8F328] = 1;
+    MEMORY[0xC8F30C] = 12444492;
+    MEMORY[0xC8F32C] = 12755100;
+    MEMORY[0xC8F338] = 456;
+    MEMORY[0xC8F33C] = 1;
+    MEMORY[0xC8F340] = 460;
+    MEMORY[0xC8F344] = 1;
+    MEMORY[0xC8F348] = 464;
+    MEMORY[0xC8F34C] = 1;
+    MEMORY[0xC8F330] = 12444492;
+    MEMORY[0xC8F334] = MEMORY[0xC7B788] + 12;
+    MEMORY[0xC8F350] = 13174544;
+    MEMORY[0xC7B788] += 13;
+    MEMORY[0xC8F358] = MEMORY[0xC7B788];
+    MEMORY[0xC8F35C] = 444;
+    MEMORY[0xC8F360] = 1;
+    MEMORY[0xC8F364] = 448;
+    MEMORY[0xC8F368] = 1;
+    MEMORY[0xC8F36C] = 452;
+    MEMORY[0xC8F370] = 1;
+    MEMORY[0xC8F354] = 12444492;
+    MEMORY[0xC8F374] = 13174508;
+    return 13174508;
   }
 
 /* ============================================================================
@@ -49432,6 +51979,92 @@
   }
 
 /* ============================================================================
+ * registerProfile_kurosuke_28DC84
+ * RVA 0x0028dc84   size 0x2c4   xrefs 0
+ * ============================================================================ */
+  int sub_6028DC84()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8F4F8 = 0;
+    dword_60C8F4FC = 0;
+    dword_60C8F500 = 0;
+    dword_60C8F4D8 = 805306368;
+    dword_60C8F4DC = -805306368;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2F81;
+    Profile::Profile(13169560, 2668504, MEMORY[0xAF37B8], (int)v1, &unk_60AFDF3C, 18);
+    MEMORY[0xC8F3B4] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC8F3B0] = 12445212;
+    MEMORY[0xC8F3B8] = 2668628;
+    MEMORY[0xC8F3BC] = 0;
+    MEMORY[0xC8F3C0] = 2668908;
+    MEMORY[0xC8F3C4] = 0;
+    MEMORY[0xC8F3C8] = 2669176;
+    MEMORY[0xC8F3CC] = 0;
+    MEMORY[0xC8F3D0] = 12445212;
+    MEMORY[0xC8F3D4] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC8F3D8] = 2669180;
+    MEMORY[0xC8F3DC] = 0;
+    MEMORY[0xC8F3E0] = 2669440;
+    MEMORY[0xC8F3E4] = 0;
+    MEMORY[0xC8F3E8] = 2670156;
+    MEMORY[0xC8F3EC] = 0;
+    MEMORY[0xC8F3F0] = 12445212;
+    MEMORY[0xC8F3F4] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC8F3F8] = 2670160;
+    MEMORY[0xC8F3FC] = 0;
+    MEMORY[0xC8F400] = 2670556;
+    MEMORY[0xC8F404] = 0;
+    MEMORY[0xC8F408] = 2671912;
+    MEMORY[0xC8F40C] = 0;
+    MEMORY[0xC8F410] = 12445212;
+    MEMORY[0xC8F414] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC8F418] = 2671916;
+    MEMORY[0xC8F41C] = 0;
+    MEMORY[0xC8F420] = 2672228;
+    MEMORY[0xC8F424] = 0;
+    MEMORY[0xC8F428] = 2672580;
+    MEMORY[0xC8F42C] = 0;
+    MEMORY[0xC8F430] = 12445212;
+    MEMORY[0xC8F434] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC8F438] = 2672584;
+    MEMORY[0xC8F43C] = 0;
+    MEMORY[0xC8F440] = 2672836;
+    MEMORY[0xC8F444] = 0;
+    MEMORY[0xC8F448] = 2673180;
+    MEMORY[0xC8F44C] = 0;
+    MEMORY[0xC8F450] = 12445212;
+    MEMORY[0xC8F454] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC8F458] = 2673184;
+    MEMORY[0xC8F45C] = 0;
+    MEMORY[0xC8F460] = 2673436;
+    MEMORY[0xC8F464] = 0;
+    MEMORY[0xC8F468] = 2673640;
+    MEMORY[0xC8F46C] = 0;
+    MEMORY[0xC8F474] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC8F478] = 444;
+    MEMORY[0xC8F47C] = 1;
+    MEMORY[0xC8F480] = 448;
+    MEMORY[0xC8F484] = 1;
+    MEMORY[0xC8F488] = 452;
+    MEMORY[0xC8F48C] = 1;
+    MEMORY[0xC8F470] = 12445232;
+    MEMORY[0xC8F490] = 13174508;
+    MEMORY[0xC7B788] += 8;
+    MEMORY[0xC8F498] = MEMORY[0xC7B788];
+    MEMORY[0xC8F49C] = 456;
+    MEMORY[0xC8F4A0] = 1;
+    MEMORY[0xC8F4A4] = 460;
+    MEMORY[0xC8F4A8] = 1;
+    MEMORY[0xC8F4AC] = 464;
+    MEMORY[0xC8F4B0] = 1;
+    MEMORY[0xC8F494] = 12445232;
+    MEMORY[0xC8F4B4] = 13174544;
+    return 13174544;
+  }
+
+/* ============================================================================
  * Actor_kaunira_build
  * RVA 0x0028dfe0   size 0x30   xrefs 0
  * ============================================================================ */
@@ -49444,6 +52077,22 @@
     result = (_DWORD *)sub_603C967C(v2, a1, 1);
     *result = 12445252;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_kaunira_28E3C8
+ * RVA 0x0028e3c8   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_6028E3C8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8F570 = 0;
+    dword_60C8F574 = 0;
+    dword_60C8F578 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC2FB1;
+    return Profile::Profile(13170044, 2678752, MEMORY[0xAF332C], (int)v1, &unk_60AFDF60, 274);
   }
 
 /* ============================================================================
@@ -50538,6 +53187,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_kipipe_faiyaPiranha_furawa_293E94
+ * RVA 0x00293e94   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_60293E94()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FA84 = 0;
+    dword_60C8FA88 = 0;
+    dword_60C8FA8C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC30FF;
+    return Profile::Profile(13171344, 2701672, MEMORY[0xAF34B8], (int)v1, &unk_60AFDFC8, 18);
+  }
+
+/* ============================================================================
  * Actor_kipipe_faiyaPiranha_furawa_2_build
  * RVA 0x00293f30   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -50598,6 +53263,22 @@
       _cxa_guard_release_0(13087792);
     }
     return a1 == 13087788 || sub_60026DC8(a1);
+  }
+
+/* ============================================================================
+ * registerProfile_kipipe_faiyaPiranha_furawa_2_2943C8
+ * RVA 0x002943c8   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_602943C8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FAB0 = 0;
+    dword_60C8FAB4 = 0;
+    dword_60C8FAB8 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3133;
+    return Profile::Profile(13171388, 2703152, MEMORY[0xAF34BC], (int)v1, &unk_60AFDFEC, 18);
   }
 
 /* ============================================================================
@@ -50664,6 +53345,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_kipipe_faiyaPiranha_furawa_3_2948FC
+ * RVA 0x002948fc   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_602948FC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FADC = 0;
+    dword_60C8FAE0 = 0;
+    dword_60C8FAE4 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3167;
+    return Profile::Profile(13171432, 2704484, MEMORY[0xAF34C0], (int)v1, &unk_60AFE010, 18);
+  }
+
+/* ============================================================================
  * Actor_kipipe_faiyaPiranha_furawa_4_build
  * RVA 0x00294998   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -50692,6 +53389,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_kipipe_faiyaPiranha_furawa_4_294E34
+ * RVA 0x00294e34   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_60294E34()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FB08 = 0;
+    dword_60C8FB0C = 0;
+    dword_60C8FB10 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC319B;
+    return Profile::Profile(13171476, 2705816, MEMORY[0xAF34B4], (int)v1, &unk_60AFE034, 18);
+  }
+
+/* ============================================================================
  * Actor_kipipe_aisuPiranha_furawa_build
  * RVA 0x00294ed0   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -50704,6 +53417,22 @@
     result = (_DWORD *)Actor_kipipe_aisuPiranha_furawa_build_helper(v2, a1);
     *result = 12450152;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_kipipe_aisuPiranha_furawa_295194
+ * RVA 0x00295194   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_60295194()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FB34 = 0;
+    dword_60C8FB38 = 0;
+    dword_60C8FB3C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC31CF;
+    return Profile::Profile(13171520, 2707152, MEMORY[0xAF34C8], (int)v1, &unk_60AFE058, 18);
   }
 
 /* ============================================================================
@@ -50722,6 +53451,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_kipipe_aisuPiranha_furawa_2_2954F4
+ * RVA 0x002954f4   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_602954F4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FB60 = 0;
+    dword_60C8FB64 = 0;
+    dword_60C8FB68 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3200;
+    return Profile::Profile(13171564, 2708016, MEMORY[0xAF34CC], (int)v1, &unk_60AFE07C, 18);
+  }
+
+/* ============================================================================
  * Actor_kipipe_aisuPiranha_furawa_3_build
  * RVA 0x00295590   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -50737,6 +53482,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_kipipe_aisuPiranha_furawa_3_295854
+ * RVA 0x00295854   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_60295854()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FB8C = 0;
+    dword_60C8FB90 = 0;
+    dword_60C8FB94 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3231;
+    return Profile::Profile(13171608, 2708880, MEMORY[0xAF34D0], (int)v1, &unk_60AFE0A0, 18);
+  }
+
+/* ============================================================================
  * Actor_kipipe_aisuPiranha_furawa_4_build
  * RVA 0x002958f0   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -50749,6 +53510,22 @@
     result = (_DWORD *)Actor_kipipe_aisuPiranha_furawa_4_build_helper(v2, a1);
     *result = 12452648;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_kipipe_aisuPiranha_furawa_4_295BB4
+ * RVA 0x00295bb4   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_60295BB4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FBB8 = 0;
+    dword_60C8FBBC = 0;
+    dword_60C8FBC0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3262;
+    return Profile::Profile(13171652, 2709744, MEMORY[0xAF34C4], (int)v1, &unk_60AFE0C4, 18);
   }
 
 /* ============================================================================
@@ -51731,6 +54508,32 @@
   }
 
 /* ============================================================================
+ * registerProfile_kapipe_Piranha_furawa_29BC58
+ * RVA 0x0029bc58   size 0xe4   xrefs 0
+ * ============================================================================ */
+  int sub_6029BC58()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FF50 = 0;
+    dword_60C8FF54 = 0;
+    dword_60C8FF58 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC32E1;
+    Profile::Profile(13172572, 2731456, MEMORY[0xAF34D4], (int)v1, &unk_60AFE15C, 18);
+    MEMORY[0xC8FF78] = ++MEMORY[0xC7B788];
+    MEMORY[0xC8FF7C] = 676;
+    MEMORY[0xC8FF80] = 1;
+    MEMORY[0xC8FF84] = 680;
+    MEMORY[0xC8FF88] = 1;
+    MEMORY[0xC8FF8C] = 684;
+    MEMORY[0xC8FF90] = 1;
+    MEMORY[0xC8FF74] = 12456144;
+    MEMORY[0xC8FF94] = 13172056;
+    return 13172596;
+  }
+
+/* ============================================================================
  * Actor_kipipe_Piranha_furawa_build
  * RVA 0x0029bd68   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -51743,6 +54546,22 @@
     result = (_DWORD *)sub_60295C50(v2, a1);
     *result = 12456164;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_kipipe_Piranha_furawa_29C198
+ * RVA 0x0029c198   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_6029C198()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FFA8 = 0;
+    dword_60C8FFAC = 0;
+    dword_60C8FFB0 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC333A;
+    return Profile::Profile(13172660, 2735464, MEMORY[0xAF34A8], (int)v1, &unk_60AFE1AC, 18);
   }
 
 /* ============================================================================
@@ -51761,6 +54580,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_kipipe_Piranha_furawa_2_29C67C
+ * RVA 0x0029c67c   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_6029C67C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C8FFD4 = 0;
+    dword_60C8FFD8 = 0;
+    dword_60C8FFDC = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3362;
+    return Profile::Profile(13172704, 2736692, MEMORY[0xAF34AC], (int)v1, &unk_60AFE1D0, 18);
+  }
+
+/* ============================================================================
  * Actor_kipipe_Piranha_furawa_3_build
  * RVA 0x0029c718   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -51776,6 +54611,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_kipipe_Piranha_furawa_3_29CB60
+ * RVA 0x0029cb60   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_6029CB60()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C90000 = 0;
+    dword_60C90004 = 0;
+    dword_60C90008 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC338A;
+    return Profile::Profile(13172748, 2737944, MEMORY[0xAF34B0], (int)v1, &unk_60AFE1F4, 18);
+  }
+
+/* ============================================================================
  * Actor_kipipe_Piranha_furawa_4_build
  * RVA 0x0029cbfc   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -51787,6 +54638,25 @@
     v2 = operator new(0x1D50u);
     result = (_DWORD *)sub_60295C50(v2, a1);
     *result = 12458660;
+    return result;
+  }
+
+/* ============================================================================
+ * registerProfile_kipipe_Piranha_furawa_4_29D064
+ * RVA 0x0029d064   size 0x90   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6029D064()
+  {
+    _DWORD *result; // r0
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C9002C = 0;
+    dword_60C90030 = 0;
+    dword_60C90034 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC33B2;
+    result = (_DWORD *)Profile::Profile(13172792, 2739196, MEMORY[0xAF34A4], (int)v1, &unk_60AFE218, 18);
+    *result = 12458648;
     return result;
   }
 
@@ -52378,6 +55248,107 @@
   }
 
 /* ============================================================================
+ * registerProfile_Thwomp_ctor_29E63C
+ * RVA 0x0029e63c   size 0x394   xrefs 0
+ * ============================================================================ */
+  int sub_6029E63C()
+  {
+    _DWORD *v0; // r0
+    int v1; // r7
+    int v3; // [sp+10h] [bp-8h] BYREF
+    void *v4; // [sp+14h] [bp-4h]
+  
+    dword_60C901D0 = 0;
+    dword_60C901D4 = 0;
+    dword_60C901D8 = 0;
+    LODWORD(flt_60C901C0[0]) = (int)(float)((float)(MEMORY[0xB0E1E0] * 0.70312) / MEMORY[0xB0E1D8]);
+    LODWORD(flt_60C901C4) = (int)(float)((float)(MEMORY[0xB0E1E0] * 0.70312) / MEMORY[0xB0E1D8]);
+    v3 = 12321336;
+    v4 = &unk_60AC33DA;
+    v0 = (_DWORD *)Profile::Profile(13172824, 2740500, MEMORY[0xAF3718], (int)&v3, &unk_60AFE23C, 278);
+    v3 = 12321336;
+    *v0 = 12459488;
+    v4 = &unk_60AC33ED;
+    *(_DWORD *)Profile::Profile(13172848, 2740500, MEMORY[0xAF371C], (int)&v3, &unk_60AFE260, 278) = 12459500;
+    MEMORY[0xC9008C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC90088] = 12460280;
+    MEMORY[0xC90090] = 2740740;
+    MEMORY[0xC90094] = 0;
+    MEMORY[0xC90098] = 2740804;
+    MEMORY[0xC9009C] = 0;
+    MEMORY[0xC900A0] = 2741028;
+    MEMORY[0xC900A4] = 0;
+    MEMORY[0xC900A8] = 12460280;
+    MEMORY[0xC900AC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC900B0] = 2741032;
+    MEMORY[0xC900B4] = 0;
+    MEMORY[0xC900B8] = 2741076;
+    MEMORY[0xC900BC] = 0;
+    MEMORY[0xC900C0] = 2741152;
+    MEMORY[0xC900C4] = 0;
+    MEMORY[0xC900C8] = 12460280;
+    MEMORY[0xC900CC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC900D0] = 2741156;
+    MEMORY[0xC900D4] = 0;
+    MEMORY[0xC900D8] = 2741184;
+    MEMORY[0xC900DC] = 0;
+    MEMORY[0xC900E0] = 2741304;
+    MEMORY[0xC900E4] = 0;
+    MEMORY[0xC900E8] = 12460280;
+    MEMORY[0xC900EC] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC900F0] = 2741308;
+    MEMORY[0xC900F4] = 0;
+    MEMORY[0xC900F8] = 2741352;
+    MEMORY[0xC900FC] = 0;
+    MEMORY[0xC90100] = 2741428;
+    MEMORY[0xC90104] = 0;
+    MEMORY[0xC90108] = 12460280;
+    MEMORY[0xC9010C] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC90110] = 2741432;
+    MEMORY[0xC90114] = 0;
+    MEMORY[0xC90118] = 2741444;
+    MEMORY[0xC9011C] = 0;
+    MEMORY[0xC90120] = 2742268;
+    MEMORY[0xC90124] = 0;
+    MEMORY[0xC90128] = 12460280;
+    MEMORY[0xC9012C] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC90130] = 2742272;
+    MEMORY[0xC90134] = 0;
+    MEMORY[0xC90138] = 2742276;
+    MEMORY[0xC9013C] = 0;
+    MEMORY[0xC90140] = 2742416;
+    MEMORY[0xC90144] = 0;
+    MEMORY[0xC90148] = 12460280;
+    MEMORY[0xC9014C] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC90150] = 2742420;
+    MEMORY[0xC90154] = 0;
+    MEMORY[0xC90158] = 2742472;
+    MEMORY[0xC9015C] = 0;
+    MEMORY[0xC90160] = 2742600;
+    v1 = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC90164] = 0;
+    MEMORY[0xC7B788] += 9;
+    MEMORY[0xC9016C] = v1;
+    MEMORY[0xC90190] = MEMORY[0xC7B788];
+    MEMORY[0xC90170] = 456;
+    MEMORY[0xC9018C] = 12460280;
+    MEMORY[0xC90174] = 1;
+    MEMORY[0xC90178] = 460;
+    MEMORY[0xC9017C] = 1;
+    MEMORY[0xC90180] = 464;
+    MEMORY[0xC90184] = 1;
+    MEMORY[0xC90194] = 2742604;
+    MEMORY[0xC90198] = 0;
+    MEMORY[0xC90168] = 12460300;
+    MEMORY[0xC9019C] = 2742692;
+    MEMORY[0xC901A0] = 0;
+    MEMORY[0xC90188] = 13174544;
+    MEMORY[0xC901A4] = 2742816;
+    MEMORY[0xC901A8] = 0;
+    return 13173132;
+  }
+
+/* ============================================================================
  * _ZN6Thwomp18beginState_DieFallEv
  * RVA 0x0029eaa4   size 0x13c   xrefs 0
  * ============================================================================ */
@@ -52954,6 +55925,44 @@
   }
 
 /* ============================================================================
+ * registerProfile_Bowser_2_2A04E8
+ * RVA 0x002a04e8   size 0x16c   xrefs 0
+ * ============================================================================ */
+  int sub_602A04E8()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60C901FC = 0;
+    dword_60C90200 = 0;
+    dword_60C90204 = 0;
+    v1 = 12321336;
+    v2 = &unk_60AC3460;
+    Profile::Profile(13173256, 2748676, MEMORY[0xAF392C], (int)&v1, &unk_60AFE33C, 2);
+    v1 = 12321336;
+    v2 = &unk_60AC3470;
+    Profile::Profile(13173280, 2748676, MEMORY[0xAF3930], (int)&v1, &unk_60AFE360, 2);
+    MEMORY[0xC9023C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC90238] = 12461044;
+    MEMORY[0xC90240] = 2748920;
+    MEMORY[0xC90244] = 0;
+    MEMORY[0xC90248] = 2748924;
+    MEMORY[0xC9024C] = 0;
+    MEMORY[0xC90250] = 2748928;
+    MEMORY[0xC90254] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xC9025C] = MEMORY[0xC7B788];
+    MEMORY[0xC90258] = 12461044;
+    MEMORY[0xC90260] = 2748932;
+    MEMORY[0xC90264] = 0;
+    MEMORY[0xC90268] = 2748948;
+    MEMORY[0xC9026C] = 0;
+    MEMORY[0xC90270] = 2748996;
+    MEMORY[0xC90274] = 0;
+    return 2748996;
+  }
+
+/* ============================================================================
  * Actor_Bowser_Tag_build
  * RVA 0x002a06a8   size 0x54   xrefs 0
  * ============================================================================ */
@@ -52970,6 +55979,45 @@
     result[1529] = 0;
     result[1530] = 0;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_Bowser_Tag_2A0C48
+ * RVA 0x002a0c48   size 0x150   xrefs 0
+ * ============================================================================ */
+  int sub_602A0C48()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC34BE;
+    Profile::Profile(13173376, 2754216, MEMORY[0xAF2D74], (int)v1, &unk_60AFE384, 2);
+    MEMORY[0xC9029C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC90298] = 12461280;
+    MEMORY[0xC902A0] = 2754304;
+    MEMORY[0xC902A4] = 0;
+    MEMORY[0xC902A8] = 2754372;
+    MEMORY[0xC902AC] = 0;
+    MEMORY[0xC902B0] = 2754600;
+    MEMORY[0xC902B4] = 0;
+    MEMORY[0xC902B8] = 12461280;
+    MEMORY[0xC902BC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC902C0] = 2754604;
+    MEMORY[0xC902C4] = 0;
+    MEMORY[0xC902C8] = 2754608;
+    MEMORY[0xC902CC] = 0;
+    MEMORY[0xC902D0] = 2754840;
+    MEMORY[0xC902D4] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xC902DC] = MEMORY[0xC7B788];
+    MEMORY[0xC902D8] = 12461280;
+    MEMORY[0xC902E0] = 2754844;
+    MEMORY[0xC902E4] = 0;
+    MEMORY[0xC902E8] = 2754864;
+    MEMORY[0xC902EC] = 0;
+    MEMORY[0xC902F0] = 2754920;
+    MEMORY[0xC902F4] = 0;
+    return 2754920;
   }
 
 /* ============================================================================
@@ -53034,6 +56082,40 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_sub_602A0DE8_2A1924
+ * RVA 0x002a1924   size 0x124   xrefs 0
+ * ============================================================================ */
+  int sub_602A1924()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C90308 = 0;
+    dword_60C9030C = 0;
+    dword_60C90310 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC34D4;
+    Profile::Profile(13173524, 2756072, MEMORY[0xAF3934], (int)v1, &unk_60AFE3A8, 2);
+    MEMORY[0xC90330] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC9032C] = 12462068;
+    MEMORY[0xC90334] = 2756336;
+    MEMORY[0xC90338] = 0;
+    MEMORY[0xC9033C] = 2756340;
+    MEMORY[0xC90340] = 0;
+    MEMORY[0xC90344] = 2756344;
+    MEMORY[0xC90348] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xC90350] = MEMORY[0xC7B788];
+    MEMORY[0xC9034C] = 12462068;
+    MEMORY[0xC90354] = 2756348;
+    MEMORY[0xC90358] = 0;
+    MEMORY[0xC9035C] = 2756352;
+    MEMORY[0xC90360] = 0;
+    MEMORY[0xC90364] = 2756356;
+    MEMORY[0xC90368] = 0;
+    return 2756356;
   }
 
 /* ============================================================================
@@ -54690,6 +57772,190 @@
     if ( result[3] )
       --result[3];
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_kosuDemo_for_shadou_2A4484
+ * RVA 0x002a4484   size 0x4e0   xrefs 0
+ * ============================================================================ */
+  int sub_602A4484()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C906CC = 12321336;
+    unk_60C906D0 = "shadowkun";
+    unk_60C906D4 = 12321336;
+    dword_60C906D8 = (int)"shadowkun";
+    dword_60C90414[0] = 12321336;
+    dword_60C90418 = (int)"wait00";
+    dword_60C9041C = 1065353216;
+    dword_60C90420 = 1;
+    dword_60C90424 = 12321336;
+    dword_60C90428 = (int)"run00";
+    dword_60C9042C = 1061158912;
+    dword_60C90430 = 1;
+    dword_60C90434 = 12321336;
+    dword_60C90438 = (int)"run00";
+    dword_60C9043C = 1065353216;
+    dword_60C90440 = 1;
+    dword_60C90444 = 12321336;
+    dword_60C90448 = (int)"jump00";
+    dword_60C9044C = 1082130432;
+    dword_60C90450 = 0;
+    dword_60C90454 = 12321336;
+    dword_60C90458 = (int)"jump01";
+    dword_60C9045C = 1065353216;
+    dword_60C90460 = 1;
+    dword_60C90464 = 12321336;
+    dword_60C90468 = (int)"jump02";
+    unk_60C9046C = 1082130432;
+    unk_60C90470 = 0;
+    unk_60C90474 = 12321336;
+    dword_60C90478 = (int)"wait00";
+    unk_60C9047C = 1065353216;
+    unk_60C90480 = 0;
+    unk_60C90484 = 12321336;
+    dword_60C90488 = (int)"wait00";
+    dword_60C9048C = 1065353216;
+    dword_60C90490 = 1;
+    dword_60C90494 = 12321336;
+    dword_60C90498 = (int)"wait00";
+    unk_60C9049C = 1065353216;
+    unk_60C904A0 = 0;
+    unk_60C904A4 = 12321336;
+    dword_60C904A8 = (int)"down00";
+    unk_60C904AC = 1065353216;
+    unk_60C904B0 = 0;
+    unk_60C904B4 = 12321336;
+    dword_60C904B8 = (int)"down01";
+    dword_60C904BC = 1065353216;
+    dword_60C904C0 = 1;
+    dword_60C904C4 = 12321336;
+    dword_60C904C8 = (int)"down02";
+    unk_60C904CC = 1065353216;
+    unk_60C904D0 = 0;
+    unk_60C904D4 = 12321336;
+    dword_60C904D8 = (int)"bikkuri00";
+    unk_60C904DC = 0x40000000;
+    unk_60C904E0 = 0;
+    unk_60C904E4 = 12321336;
+    dword_60C904E8 = (int)"bikkuri01";
+    dword_60C904EC = 0x40000000;
+    dword_60C904F0 = 1;
+    dword_60C904F4 = 12321336;
+    dword_60C904F8 = (int)"damage00";
+    dword_60C904FC = 1065353216;
+    dword_60C90500 = 0;
+    dword_60C90504 = 12321336;
+    dword_60C90508 = (int)"damage01";
+    dword_60C9050C = 1065353216;
+    dword_60C90510 = 1;
+    dword_60C90514 = 12321336;
+    dword_60C90518 = (int)"chohatsu00";
+    unk_60C9051C = 0x40000000;
+    unk_60C90520 = 0;
+    unk_60C90524 = 12321336;
+    unk_60C90528 = "damage01";
+    dword_60C9052C = 1065353216;
+    dword_60C90530 = 1;
+    dword_60C90534 = 12321336;
+    dword_60C90538 = (int)"jump00";
+    unk_60C9053C = 1065353216;
+    unk_60C90540 = 0;
+    unk_60C90544 = 12321336;
+    dword_60C90548 = (int)"op_bikkuri00";
+    unk_60C9054C = 1065353216;
+    unk_60C90550 = 0;
+    unk_60C90554 = 12321336;
+    dword_60C90558 = (int)"op_bikkuri01";
+    dword_60C9055C = 1065353216;
+    dword_60C90560 = 1;
+    dword_60C90564 = 12321336;
+    dword_60C90568 = (int)"op_chohatsu00";
+    unk_60C9056C = 1065353216;
+    unk_60C90570 = 0;
+    unk_60C90574 = 12321336;
+    dword_60C90578 = (int)"op_chohatsu01";
+    dword_60C9057C = 1065353216;
+    dword_60C90580 = 1;
+    dword_60C90584 = 12321336;
+    dword_60C90588 = (int)"op_chohatsu02";
+    unk_60C9058C = 1065353216;
+    unk_60C90590 = 0;
+    unk_60C90594 = 12321336;
+    dword_60C90598 = (int)"demo_get_itembox00";
+    dword_60C9059C = 1065353216;
+    dword_60C905A0 = 0;
+    sub_60000288();
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC361E;
+    Profile::Profile(13174180, 2771560, MEMORY[0xAF3468], (int)v1, &unk_60AFE424, 0);
+    MEMORY[0xC905C0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC905BC] = 12462992;
+    MEMORY[0xC905C4] = 2771712;
+    MEMORY[0xC905C8] = 0;
+    MEMORY[0xC905CC] = 2771904;
+    MEMORY[0xC905D0] = 0;
+    MEMORY[0xC905D4] = 2771916;
+    MEMORY[0xC905D8] = 0;
+    MEMORY[0xC905DC] = 12462992;
+    MEMORY[0xC905E0] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC905E4] = 2771920;
+    MEMORY[0xC905E8] = 0;
+    MEMORY[0xC905EC] = 2772104;
+    MEMORY[0xC905F0] = 0;
+    MEMORY[0xC905F4] = 2772232;
+    MEMORY[0xC905F8] = 0;
+    MEMORY[0xC905FC] = 12462992;
+    MEMORY[0xC90600] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC90604] = 2772236;
+    MEMORY[0xC90608] = 0;
+    MEMORY[0xC9060C] = 2772240;
+    MEMORY[0xC90610] = 0;
+    MEMORY[0xC90614] = 2772316;
+    MEMORY[0xC90618] = 0;
+    MEMORY[0xC9061C] = 12462992;
+    MEMORY[0xC90620] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC90624] = 2772320;
+    MEMORY[0xC90628] = 0;
+    MEMORY[0xC9062C] = 2772348;
+    MEMORY[0xC90630] = 0;
+    MEMORY[0xC90634] = 2772448;
+    MEMORY[0xC90638] = 0;
+    MEMORY[0xC9063C] = 12462992;
+    MEMORY[0xC90640] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC90644] = 2772452;
+    MEMORY[0xC90648] = 0;
+    MEMORY[0xC9064C] = 2772456;
+    MEMORY[0xC90650] = 0;
+    MEMORY[0xC90654] = 2772468;
+    MEMORY[0xC90658] = 0;
+    MEMORY[0xC9065C] = 12462992;
+    MEMORY[0xC90660] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC90664] = 2772472;
+    MEMORY[0xC90668] = 0;
+    MEMORY[0xC9066C] = 2772688;
+    MEMORY[0xC90670] = 0;
+    MEMORY[0xC90674] = 2773292;
+    MEMORY[0xC90678] = 0;
+    MEMORY[0xC9067C] = 12462992;
+    MEMORY[0xC90680] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC7B788] += 8;
+    MEMORY[0xC906A0] = MEMORY[0xC7B788];
+    MEMORY[0xC90684] = 2773296;
+    MEMORY[0xC9069C] = 12462992;
+    MEMORY[0xC90688] = 0;
+    MEMORY[0xC906A4] = 2773328;
+    MEMORY[0xC9068C] = 2773312;
+    MEMORY[0xC906A8] = 0;
+    MEMORY[0xC90690] = 0;
+    MEMORY[0xC906AC] = 2773332;
+    MEMORY[0xC90694] = 2773324;
+    MEMORY[0xC90698] = 0;
+    MEMORY[0xC906B0] = 0;
+    MEMORY[0xC906B4] = 2773444;
+    MEMORY[0xC906B8] = 0;
+    return 13174428;
   }
 
 /* ============================================================================
@@ -57748,6 +61014,26 @@
   }
 
 /* ============================================================================
+ * registerProfile_FireBros_ctor_2AA1BC
+ * RVA 0x002aa1bc   size 0xa8   xrefs 0
+ * ============================================================================ */
+  int sub_602AA1BC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C90A00 = 0;
+    dword_60C90A04 = 0;
+    dword_60C90A08 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC372D;
+    Profile::Profile(13175264, 2792040, MEMORY[0xAF3910], (int)v1, &unk_60AFE4E0, 18);
+    dword_60C90A0C = 1088421888;
+    dword_60C90A10 = -1082130432;
+    dword_60C90A14 = 1093664768;
+    return 1088421888;
+  }
+
+/* ============================================================================
  * FireSnake_build
  * RVA 0x002aa284   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -59182,6 +62468,117 @@
   }
 
 /* ============================================================================
+ * registerProfile_FireSnake_2AEA54
+ * RVA 0x002aea54   size 0x3e4   xrefs 0
+ * ============================================================================ */
+  int sub_602AEA54()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C90BA4 = 0;
+    dword_60C90BA8 = 0;
+    dword_60C90BAC = 0;
+    flt_60C90BB0 = 1.0;
+    dword_60C90BB4 = 1065353216;
+    dword_60C90BB8 = 1065353216;
+    LODWORD(flt_60C90BA0) = (int)(float)((float)(MEMORY[0xB0E1E0] * 5.625) / MEMORY[0xB0E1D8]);
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3743;
+    *(_DWORD *)Profile::Profile(13175320, 2794116, MEMORY[0xAF35EC], (int)v1, &unk_60AFE504, 18) = 12464636;
+    MEMORY[0xC90A34] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC90A30] = 12465460;
+    MEMORY[0xC90A38] = 2794144;
+    MEMORY[0xC90A3C] = 0;
+    MEMORY[0xC90A40] = 2794172;
+    MEMORY[0xC90A44] = 0;
+    MEMORY[0xC90A48] = 2794680;
+    MEMORY[0xC90A4C] = 0;
+    MEMORY[0xC90A54] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC90A50] = 12465460;
+    MEMORY[0xC90A58] = 2794684;
+    MEMORY[0xC90A5C] = 0;
+    MEMORY[0xC90A60] = 2794704;
+    MEMORY[0xC90A64] = 0;
+    MEMORY[0xC90A68] = 2795052;
+    MEMORY[0xC90A6C] = 0;
+    MEMORY[0xC90A74] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC90A70] = 12465460;
+    MEMORY[0xC90A78] = 2795056;
+    MEMORY[0xC90A7C] = 0;
+    MEMORY[0xC90A80] = 2795552;
+    MEMORY[0xC90A84] = 0;
+    MEMORY[0xC90A88] = 2796204;
+    MEMORY[0xC90A8C] = 0;
+    MEMORY[0xC90A94] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC90A90] = 12465460;
+    MEMORY[0xC90A98] = 2796208;
+    MEMORY[0xC90A9C] = 0;
+    MEMORY[0xC90AA0] = 2796492;
+    MEMORY[0xC90AA4] = 0;
+    MEMORY[0xC90AA8] = 2796816;
+    MEMORY[0xC90AAC] = 0;
+    MEMORY[0xC90AB4] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC90AB0] = 12465460;
+    MEMORY[0xC90AB8] = 2796820;
+    MEMORY[0xC90ABC] = 0;
+    MEMORY[0xC90AC0] = 2797112;
+    MEMORY[0xC90AC4] = 0;
+    MEMORY[0xC90AC8] = 2797432;
+    MEMORY[0xC90ACC] = 0;
+    MEMORY[0xC90AD4] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC90AD0] = 12465460;
+    MEMORY[0xC90AD8] = 2797436;
+    MEMORY[0xC90ADC] = 0;
+    MEMORY[0xC90AE0] = 2797924;
+    MEMORY[0xC90AE4] = 0;
+    MEMORY[0xC90AE8] = 2798568;
+    MEMORY[0xC90AEC] = 0;
+    MEMORY[0xC90AF4] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC90AF0] = 12465460;
+    MEMORY[0xC90AF8] = 2798572;
+    MEMORY[0xC90AFC] = 0;
+    MEMORY[0xC90B00] = 2798824;
+    MEMORY[0xC90B04] = 0;
+    MEMORY[0xC90B08] = 2799264;
+    MEMORY[0xC90B0C] = 0;
+    MEMORY[0xC90B14] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC90B10] = 12465460;
+    MEMORY[0xC90B18] = 2799304;
+    MEMORY[0xC90B1C] = 0;
+    MEMORY[0xC90B20] = 2799488;
+    MEMORY[0xC90B24] = 0;
+    MEMORY[0xC90B28] = 2800236;
+    MEMORY[0xC90B2C] = 0;
+    MEMORY[0xC90B34] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC90B30] = 12465460;
+    MEMORY[0xC90B38] = 2800240;
+    MEMORY[0xC90B3C] = 0;
+    MEMORY[0xC90B40] = 2800492;
+    MEMORY[0xC90B44] = 0;
+    MEMORY[0xC90B48] = 2800524;
+    MEMORY[0xC90B4C] = 0;
+    MEMORY[0xC90B54] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xC90B58] = 456;
+    MEMORY[0xC90B5C] = 1;
+    MEMORY[0xC90B60] = 460;
+    MEMORY[0xC90B64] = 1;
+    MEMORY[0xC90B68] = 464;
+    MEMORY[0xC90B6C] = 1;
+    MEMORY[0xC90B50] = 12465480;
+    MEMORY[0xC90B70] = 13174544;
+    MEMORY[0xC7B788] += 11;
+    MEMORY[0xC90B78] = MEMORY[0xC7B788];
+    MEMORY[0xC90B74] = 12465460;
+    MEMORY[0xC90B7C] = 2800528;
+    MEMORY[0xC90B80] = 0;
+    MEMORY[0xC90B84] = 2800560;
+    MEMORY[0xC90B88] = 0;
+    MEMORY[0xC90B8C] = 2800860;
+    MEMORY[0xC90B90] = 0;
+    return 2800860;
+  }
+
+/* ============================================================================
  * _ZN9FireSnake8onCreateEv_helper_2AEF18
  * RVA 0x002aef18   size 0xa8   xrefs 4
  * ============================================================================ */
@@ -59409,6 +62806,115 @@
     *(_DWORD *)(v2 + 80) = (v6 >> 4) & 1;
     *(float *)(v2 + 116) = 1532.0 - (float)((float)((v6 >> 8) & 0xF) * 16.0);
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_fishubon_2B0078
+ * RVA 0x002b0078   size 0x384   xrefs 0
+ * ============================================================================ */
+  int sub_602B0078()
+  {
+    _DWORD v1[2]; // [sp+Ch] [bp-8h] BYREF
+  
+    dword_60C90C8C = 0;
+    dword_60C90C90 = 0;
+    dword_60C90C94 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3813;
+    Profile::Profile(13175740, 2815032, MEMORY[0xAF35B8], (int)v1, &unk_60AFE584, 18);
+    MEMORY[0xC90BD8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC90BD4] = 12466268;
+    MEMORY[0xC90BDC] = 2815468;
+    MEMORY[0xC90BE0] = 0;
+    MEMORY[0xC90BE4] = 2815668;
+    MEMORY[0xC90BE8] = 0;
+    MEMORY[0xC90BEC] = 2816196;
+    MEMORY[0xC90BF0] = 0;
+    MEMORY[0xC90BF4] = 12466268;
+    MEMORY[0xC90BF8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC90BFC] = 2816200;
+    MEMORY[0xC90C00] = 0;
+    MEMORY[0xC90C04] = 2816424;
+    MEMORY[0xC90C08] = 0;
+    MEMORY[0xC90C0C] = 2816816;
+    MEMORY[0xC90C10] = 0;
+    MEMORY[0xC90C14] = 12466268;
+    MEMORY[0xC90C18] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC90C1C] = 2816820;
+    MEMORY[0xC90C20] = 0;
+    MEMORY[0xC90C24] = 2817052;
+    MEMORY[0xC90C28] = 0;
+    MEMORY[0xC90C2C] = 2817760;
+    MEMORY[0xC90C30] = 0;
+    MEMORY[0xC90C34] = 12466268;
+    MEMORY[0xC90C38] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC7B788] += 5;
+    dword_60C90C84 = 12321336;
+    MEMORY[0xC90C58] = MEMORY[0xC7B788];
+    MEMORY[0xC90C3C] = 2817776;
+    MEMORY[0xC90C40] = 0;
+    MEMORY[0xC90C5C] = 456;
+    MEMORY[0xC90C60] = 1;
+    MEMORY[0xC90C64] = 460;
+    MEMORY[0xC90C68] = 1;
+    MEMORY[0xC90C6C] = 464;
+    MEMORY[0xC90C70] = 1;
+    MEMORY[0xC90C44] = 2817992;
+    MEMORY[0xC90C48] = 0;
+    MEMORY[0xC90C54] = 12466288;
+    MEMORY[0xC90C4C] = 2818148;
+    MEMORY[0xC90C50] = 0;
+    MEMORY[0xC90C74] = 13174544;
+    dword_60C90C88 = (int)"fishbone";
+    dword_60C90C98 = 12321336;
+    dword_60C90C9C = (int)"fishbone";
+    dword_60C90CA0 = 12321336;
+    dword_60C90CA4 = (int)"fish_bone_eye";
+    sub_60000288();
+    dword_60C90CB8 = 12321336;
+    dword_60C90CBC = (int)"fishbone_breakA";
+    dword_60C90CC0 = 12321336;
+    dword_60C90CC4 = (int)"fishbone_breakB";
+    dword_60C90CC8 = 12321336;
+    dword_60C90CCC = (int)"fishbone_breakC";
+    dword_60C90CD0 = 12321336;
+    dword_60C90CD4 = (int)"fishbone_breakD";
+    sub_60000288();
+    dword_60C90D10 = 12321336;
+    dword_60C90D14 = (int)"swim";
+    dword_60C90D18 = 12321336;
+    dword_60C90D1C = (int)"eye_swim";
+    dword_60C90D20 = 1;
+    dword_60C90D24 = 12321336;
+    unk_60C90D28 = "attack_st";
+    unk_60C90D2C = 12321336;
+    unk_60C90D30 = "eye_attack_st";
+    dword_60C90D34 = 1;
+    dword_60C90D38 = 12321336;
+    dword_60C90D3C = (int)"attack";
+    dword_60C90D40 = 12321336;
+    dword_60C90D44 = (int)"eye_attack";
+    dword_60C90D48 = 1;
+    sub_60000288();
+    dword_60C90CA8 = 12321336;
+    unk_60C90CAC = "attack_st";
+    unk_60C90CB0 = 12321336;
+    unk_60C90CB4 = "eye_attack_st";
+    sub_60000288();
+    dword_60C90C80 = 0x800000;
+    dword_60C90CE0 = -1098907648;
+    unk_60C90CE4 = 1065353216;
+    unk_60C90CE8 = 0;
+    dword_60C90CEC = 1036831949;
+    dword_60C90CF0 = 1069547520;
+    dword_60C90CF4 = 0;
+    dword_60C90CF8 = 1056964608;
+    dword_60C90CFC = 1065353216;
+    dword_60C90D00 = 0;
+    unk_60C90D04 = -1097229926;
+    unk_60C90D08 = 1069547520;
+    unk_60C90D0C = 0;
+    return -1097229926;
   }
 
 /* ============================================================================
@@ -60275,6 +63781,80 @@
   }
 
 /* ============================================================================
+ * registerProfile_fufuboru_2B5184
+ * RVA 0x002b5184   size 0x258   xrefs 0
+ * ============================================================================ */
+  int sub_602B5184()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C90D4C = 0;
+    dword_60C90D50 = 0;
+    dword_60C90D54 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC390F;
+    Profile::Profile(13176152, 2827988, MEMORY[0xAF3524], (int)v1, nullptr, 34);
+    MEMORY[0xC90D74] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC90D70] = 12467036;
+    MEMORY[0xC90D78] = 2828400;
+    MEMORY[0xC90D7C] = 0;
+    MEMORY[0xC90D80] = 2828404;
+    MEMORY[0xC90D84] = 0;
+    MEMORY[0xC90D88] = 2828444;
+    MEMORY[0xC90D8C] = 0;
+    MEMORY[0xC90D90] = 12467036;
+    MEMORY[0xC90D94] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC90D98] = 2828448;
+    MEMORY[0xC90D9C] = 0;
+    MEMORY[0xC90DA0] = 2828536;
+    MEMORY[0xC90DA4] = 0;
+    MEMORY[0xC90DA8] = 2830076;
+    MEMORY[0xC90DAC] = 0;
+    MEMORY[0xC90DB0] = 12467036;
+    MEMORY[0xC90DB4] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC90DB8] = 2830080;
+    MEMORY[0xC90DBC] = 0;
+    MEMORY[0xC90DC0] = 2830140;
+    MEMORY[0xC90DC4] = 0;
+    MEMORY[0xC90DC8] = 2831424;
+    MEMORY[0xC90DCC] = 0;
+    MEMORY[0xC90DD0] = 12467036;
+    MEMORY[0xC90DD4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC90DD8] = 2831440;
+    MEMORY[0xC90DDC] = 0;
+    MEMORY[0xC90DE0] = 2831600;
+    MEMORY[0xC90DE4] = 0;
+    MEMORY[0xC90DE8] = 2832212;
+    MEMORY[0xC90DEC] = 0;
+    MEMORY[0xC90DF0] = 12467036;
+    MEMORY[0xC90DF4] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC90DF8] = 2832216;
+    MEMORY[0xC90DFC] = 0;
+    MEMORY[0xC90E00] = 2832268;
+    MEMORY[0xC90E04] = 0;
+    MEMORY[0xC90E08] = 2833620;
+    MEMORY[0xC90E0C] = 0;
+    MEMORY[0xC90E10] = 12467036;
+    MEMORY[0xC90E14] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC90E18] = 2833624;
+    MEMORY[0xC90E1C] = 0;
+    MEMORY[0xC90E20] = 2833700;
+    MEMORY[0xC90E24] = 0;
+    MEMORY[0xC90E28] = 2833904;
+    MEMORY[0xC90E2C] = 0;
+    MEMORY[0xC7B788] += 7;
+    MEMORY[0xC90E34] = MEMORY[0xC7B788];
+    MEMORY[0xC90E30] = 12467036;
+    MEMORY[0xC90E38] = 2833908;
+    MEMORY[0xC90E3C] = 0;
+    MEMORY[0xC90E40] = 2833920;
+    MEMORY[0xC90E44] = 0;
+    MEMORY[0xC90E48] = 2833924;
+    MEMORY[0xC90E4C] = 0;
+    return 2833924;
+  }
+
+/* ============================================================================
  * Actor_tree_build
  * RVA 0x002b546c   size 0x9c   xrefs 0
  * ============================================================================ */
@@ -60419,6 +63999,31 @@
   }
 
 /* ============================================================================
+ * registerProfile_tree_2B600C
+ * RVA 0x002b600c   size 0xe8   xrefs 0
+ * ============================================================================ */
+  int sub_602B600C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C90E60 = 0;
+    dword_60C90E64 = 0;
+    dword_60C90E68 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3937;
+    Profile::Profile(13176428, 2839660, MEMORY[0xAF38F8], (int)v1, &unk_60AFE610, 2);
+    MEMORY[0xC90E88] = ++MEMORY[0xC7B788];
+    MEMORY[0xC90E84] = 12467784;
+    MEMORY[0xC90E8C] = 2839832;
+    MEMORY[0xC90E90] = 0;
+    MEMORY[0xC90E94] = 2839836;
+    MEMORY[0xC90E98] = 0;
+    MEMORY[0xC90E9C] = 2840436;
+    MEMORY[0xC90EA0] = 0;
+    return 13176452;
+  }
+
+/* ============================================================================
  * Actor_kafugumannen_build
  * RVA 0x002b62c0   size 0x18c   xrefs 0
  * ============================================================================ */
@@ -60458,6 +64063,102 @@
     *(_DWORD *)(v2 + 11748) = 0;
     *(_DWORD *)(v2 + 11744) = 0;
     return v2;
+  }
+
+/* ============================================================================
+ * registerProfile_kafugumannen_2B71D0
+ * RVA 0x002b71d0   size 0x360   xrefs 0
+ * ============================================================================ */
+  const char *sub_602B71D0()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60C90FB0[0] = 0;
+    dword_60C90FB4 = 0;
+    dword_60C90FB8 = 0;
+    v1 = 12321336;
+    v2 = &unk_60AC3941;
+    Profile::Profile(13176492, 2843328, MEMORY[0xAF35BC], (int)&v1, &unk_60AFE634, 530);
+    v1 = 12321336;
+    v2 = &unk_60AC3954;
+    Profile::Profile(13176516, 2843328, MEMORY[0xAF35C0], (int)&v1, &unk_60AFE634, 530);
+    MEMORY[0xC90EE0] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC90EDC] = 12468528;
+    MEMORY[0xC90EE4] = 2843744;
+    MEMORY[0xC90EE8] = 0;
+    MEMORY[0xC90EEC] = 2843916;
+    MEMORY[0xC90EF0] = 0;
+    MEMORY[0xC90EF4] = 2844872;
+    MEMORY[0xC90EF8] = 0;
+    MEMORY[0xC90EFC] = 12468528;
+    MEMORY[0xC90F00] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC90F04] = 2844892;
+    MEMORY[0xC90F08] = 0;
+    MEMORY[0xC90F0C] = 2844944;
+    MEMORY[0xC90F10] = 0;
+    MEMORY[0xC90F14] = 2845396;
+    MEMORY[0xC90F18] = 0;
+    MEMORY[0xC90F1C] = 12468528;
+    MEMORY[0xC90F20] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC90F24] = 2845416;
+    MEMORY[0xC90F28] = 0;
+    MEMORY[0xC90F2C] = 2845568;
+    MEMORY[0xC90F30] = 0;
+    MEMORY[0xC90F34] = 2845824;
+    MEMORY[0xC90F38] = 0;
+    MEMORY[0xC90F3C] = 12468528;
+    MEMORY[0xC90F40] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC90F44] = 2845844;
+    MEMORY[0xC90F48] = 0;
+    MEMORY[0xC90F4C] = 2845972;
+    MEMORY[0xC90F50] = 0;
+    MEMORY[0xC90F54] = 2846460;
+    MEMORY[0xC90F58] = 0;
+    MEMORY[0xC90F5C] = 12468528;
+    MEMORY[0xC90F60] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC7B788] += 6;
+    dword_60C90FD4 = 12321336;
+    MEMORY[0xC90F64] = 2846492;
+    MEMORY[0xC90F68] = 0;
+    MEMORY[0xC90F80] = MEMORY[0xC7B788];
+    MEMORY[0xC90F84] = 456;
+    MEMORY[0xC90F88] = 1;
+    MEMORY[0xC90F6C] = 2846576;
+    MEMORY[0xC90F70] = 0;
+    MEMORY[0xC90F74] = 2847152;
+    MEMORY[0xC90F78] = 0;
+    MEMORY[0xC90F8C] = 460;
+    MEMORY[0xC90F90] = 1;
+    MEMORY[0xC90F94] = 464;
+    MEMORY[0xC90F98] = 1;
+    MEMORY[0xC90F7C] = 12468548;
+    MEMORY[0xC90F9C] = 13174544;
+    dword_60C90FD8 = (int)"fugu";
+    dword_60C90FDC = 12321336;
+    dword_60C90FE0 = (int)"fuguBig";
+    sub_60000288();
+    dword_60C90FE4 = 12321336;
+    dword_60C90FE8 = (int)"fugu";
+    dword_60C90FEC = 12321336;
+    dword_60C90FF0 = (int)"fuguBig";
+    sub_60000288();
+    dword_60C90FF4 = 12321336;
+    dword_60C90FF8 = (int)"swim";
+    dword_60C90FFC = 12321336;
+    dword_60C91000 = (int)"jump";
+    sub_60000288();
+    dword_60C90FBC = 0;
+    dword_60C90FC0 = -1042284544;
+    dword_60C90FC4 = 0;
+    qmemcpy(&dword_60C90FC8, "fff?fff?fff?", 12);
+    dword_60C91004 = 856;
+    dword_60C91008 = 6;
+    dword_60C9100C = (int)"SE_EMY_FUGUMANNEN_SPLASH";
+    dword_60C91010 = 857;
+    dword_60C91014 = 7;
+    dword_60C91018 = (int)"SE_EMY_FUGUMANNEN_JUMP";
+    return "SE_EMY_FUGUMANNEN_JUMP";
   }
 
 /* ============================================================================
@@ -60788,6 +64489,28 @@
     result = (_DWORD *)sub_602BA5F0(v0);
     *result = 12468568;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_gabon_RDash_2B9650
+ * RVA 0x002b9650   size 0xf0   xrefs 0
+ * ============================================================================ */
+  int sub_602B9650()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60C91068 = 0;
+    dword_60C9106C = 0;
+    dword_60C91070 = 0;
+    dword_60C91060 = 0x20000000;
+    LODWORD(flt_60C91064) = (int)(float)((float)(MEMORY[0xB0E1E0] * 17.85) / MEMORY[0xB0E1D8]);
+    v1 = 12321336;
+    v2 = &unk_60AC39B9;
+    Profile::Profile(13176860, 2854184, MEMORY[0xAF3720], (int)&v1, &unk_60AFE6B0, 18);
+    v1 = 12321336;
+    v2 = &unk_60AC39C3;
+    return Profile::Profile(13176884, 2854184, MEMORY[0xAF3724], (int)&v1, &unk_60AFE6B0, 18);
   }
 
 /* ============================================================================
@@ -61279,6 +65002,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_gabon_resident_2BC190
+ * RVA 0x002bc190   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_602BC190()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C9112C = 0;
+    dword_60C91130 = 0;
+    dword_60C91134 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3A08;
+    return Profile::Profile(13177144, 2866528, MEMORY[0xAF3728], (int)v1, &unk_60AFE724, 18);
+  }
+
+/* ============================================================================
  * Actor_gatan_build
  * RVA 0x002bc510   size 0xa8   xrefs 0
  * ============================================================================ */
@@ -61407,6 +65146,39 @@
   }
 
 /* ============================================================================
+ * registerProfile_gatan_2BD200
+ * RVA 0x002bd200   size 0x124   xrefs 0
+ * ============================================================================ */
+  int sub_602BD200()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C91158 = 0;
+    dword_60C9115C = 0;
+    dword_60C91160 = 0;
+    MEMORY[0xC91168] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC91164] = 12471336;
+    MEMORY[0xC9116C] = 2867756;
+    MEMORY[0xC91170] = 0;
+    MEMORY[0xC91174] = 2867760;
+    MEMORY[0xC91178] = 0;
+    MEMORY[0xC9117C] = 2867816;
+    MEMORY[0xC91180] = 0;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xC91188] = MEMORY[0xC7B788];
+    MEMORY[0xC91184] = 12471336;
+    MEMORY[0xC9118C] = 2867820;
+    MEMORY[0xC91190] = 0;
+    MEMORY[0xC91194] = 2867960;
+    MEMORY[0xC91198] = 0;
+    MEMORY[0xC9119C] = 2868492;
+    MEMORY[0xC911A0] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3A1E;
+    return Profile::Profile(13177252, 2868496, MEMORY[0xAF3314], (int)v1, &unk_60AFE748, 2);
+  }
+
+/* ============================================================================
  * Actor_Blooper_build
  * RVA 0x002bd368   size 0x150   xrefs 0
  * ============================================================================ */
@@ -61445,6 +65217,234 @@
     ActiveCollider_ctor((int)(v0 + 3009));
     v0[3085] = 12472088;
     return v0;
+  }
+
+/* ============================================================================
+ * registerProfile_Blooper_2BD4CC
+ * RVA 0x002bd4cc   size 0x73c   xrefs 0
+ * ============================================================================ */
+  int sub_602BD4CC()
+  {
+    int v0; // r3
+    _DWORD v2[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C91534 = 0;
+    dword_60C91538 = 0;
+    dword_60C9153C = 0;
+    v2[0] = 12321336;
+    v2[1] = &unk_60AC3A2B;
+    Profile::Profile(13177284, 2872168, MEMORY[0xAF39B8], (int)v2, &unk_60AFE774, 22);
+    MEMORY[0xC911DC] = 1040187392;
+    MEMORY[0xC911E0] = 1040187392;
+    MEMORY[0xC911E4] = 0x8000000;
+    MEMORY[0xC911E8] = 0;
+    MEMORY[0xC911EC] = -268435456;
+    MEMORY[0xC911F0] = 0x10000000;
+    MEMORY[0xC911F4] = 12321336;
+    MEMORY[0xC911F8] = "break";
+    MEMORY[0xC911FC] = 12321336;
+    MEMORY[0xC91200] = "dead";
+    MEMORY[0xC91204] = 12321336;
+    MEMORY[0xC91208] = "swim_up";
+    MEMORY[0xC9120C] = 12321336;
+    MEMORY[0xC91210] = "swim1";
+    MEMORY[0xC91214] = 12321336;
+    MEMORY[0xC91218] = "swim2";
+    MEMORY[0xC9121C] = 12321336;
+    MEMORY[0xC91220] = "swim3";
+    MEMORY[0xC91224] = 12321336;
+    MEMORY[0xC91228] = "swim4";
+    MEMORY[0xC9122C] = 12321336;
+    MEMORY[0xC91230] = "wait";
+    MEMORY[0xC91234] = 12321336;
+    MEMORY[0xC91238] = "touch";
+    sub_60000288();
+    dword_60C91518 = 131072000;
+    dword_60C9151C = 2147418112;
+    unk_60C91520 = 0x2000000;
+    unk_60C91524 = 0x80000;
+    dword_60C91528 = 0x80000;
+    MEMORY[0xC91240] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC9123C] = 12472136;
+    MEMORY[0xC91244] = 2874816;
+    MEMORY[0xC91248] = 0;
+    MEMORY[0xC9124C] = 2875088;
+    MEMORY[0xC91250] = 0;
+    MEMORY[0xC91254] = 2875512;
+    MEMORY[0xC91258] = 0;
+    MEMORY[0xC9125C] = 12472136;
+    MEMORY[0xC91260] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC91264] = 2875516;
+    MEMORY[0xC91268] = 0;
+    MEMORY[0xC9126C] = 2876224;
+    MEMORY[0xC91270] = 0;
+    MEMORY[0xC91274] = 2876864;
+    MEMORY[0xC91278] = 0;
+    MEMORY[0xC9127C] = 12472136;
+    MEMORY[0xC91280] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC91284] = 2876880;
+    MEMORY[0xC91288] = 0;
+    MEMORY[0xC9128C] = 2877168;
+    MEMORY[0xC91290] = 0;
+    MEMORY[0xC91294] = 2877748;
+    MEMORY[0xC91298] = 0;
+    MEMORY[0xC9129C] = 12472136;
+    MEMORY[0xC912A0] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC912A4] = 2877752;
+    MEMORY[0xC912A8] = 0;
+    MEMORY[0xC912AC] = 2878088;
+    MEMORY[0xC912B0] = 0;
+    MEMORY[0xC912B4] = 2878652;
+    MEMORY[0xC912B8] = 0;
+    MEMORY[0xC912BC] = 12472136;
+    MEMORY[0xC912C0] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC912C4] = 2878656;
+    MEMORY[0xC912C8] = 0;
+    MEMORY[0xC912CC] = 2878784;
+    MEMORY[0xC912D0] = 0;
+    MEMORY[0xC912D4] = 2879220;
+    MEMORY[0xC912D8] = 0;
+    MEMORY[0xC912DC] = 12472136;
+    MEMORY[0xC912E0] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC912E4] = 2879224;
+    MEMORY[0xC912E8] = 0;
+    MEMORY[0xC912EC] = 2879368;
+    MEMORY[0xC912F0] = 0;
+    MEMORY[0xC912F4] = 2879864;
+    MEMORY[0xC912F8] = 0;
+    MEMORY[0xC912FC] = 12472136;
+    MEMORY[0xC91300] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC91304] = 2879868;
+    MEMORY[0xC91308] = 0;
+    MEMORY[0xC9130C] = 2880156;
+    MEMORY[0xC91310] = 0;
+    MEMORY[0xC91314] = 2880676;
+    MEMORY[0xC91318] = 0;
+    MEMORY[0xC9131C] = 12472136;
+    MEMORY[0xC91320] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC91324] = 2880680;
+    MEMORY[0xC91328] = 0;
+    MEMORY[0xC9132C] = 2880944;
+    MEMORY[0xC91330] = 0;
+    MEMORY[0xC91334] = 2881220;
+    MEMORY[0xC91338] = 0;
+    MEMORY[0xC9133C] = 12472136;
+    MEMORY[0xC91340] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC91344] = 2881412;
+    MEMORY[0xC91348] = 0;
+    MEMORY[0xC9134C] = 2881588;
+    MEMORY[0xC91350] = 0;
+    MEMORY[0xC91354] = 2882092;
+    MEMORY[0xC91358] = 0;
+    MEMORY[0xC9135C] = 12472136;
+    MEMORY[0xC91360] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xC91364] = 2882104;
+    MEMORY[0xC91368] = 0;
+    MEMORY[0xC9136C] = 2882200;
+    MEMORY[0xC91370] = 0;
+    MEMORY[0xC91374] = 2882600;
+    MEMORY[0xC91378] = 0;
+    MEMORY[0xC9137C] = 12472136;
+    MEMORY[0xC91380] = MEMORY[0xC7B788] + 11;
+    MEMORY[0xC91384] = 2882604;
+    MEMORY[0xC91388] = 0;
+    MEMORY[0xC9138C] = 2882700;
+    MEMORY[0xC91390] = 0;
+    MEMORY[0xC91394] = 2883100;
+    MEMORY[0xC91398] = 0;
+    MEMORY[0xC9139C] = 12472136;
+    MEMORY[0xC913A0] = MEMORY[0xC7B788] + 12;
+    MEMORY[0xC913A4] = 2883104;
+    MEMORY[0xC913A8] = 0;
+    MEMORY[0xC913AC] = 2883200;
+    MEMORY[0xC913B0] = 0;
+    MEMORY[0xC913B4] = 2883600;
+    MEMORY[0xC913B8] = 0;
+    MEMORY[0xC913BC] = 12472136;
+    MEMORY[0xC913C0] = MEMORY[0xC7B788] + 13;
+    MEMORY[0xC913C4] = 2883604;
+    MEMORY[0xC913C8] = 0;
+    MEMORY[0xC913CC] = 2883696;
+    MEMORY[0xC913D0] = 0;
+    MEMORY[0xC913D4] = 2884028;
+    MEMORY[0xC913D8] = 0;
+    MEMORY[0xC913DC] = 12472136;
+    MEMORY[0xC913E0] = MEMORY[0xC7B788] + 14;
+    MEMORY[0xC913E4] = 2884032;
+    MEMORY[0xC913E8] = 0;
+    MEMORY[0xC913EC] = 2884124;
+    MEMORY[0xC913F0] = 0;
+    MEMORY[0xC913F4] = 2884456;
+    MEMORY[0xC913F8] = 0;
+    MEMORY[0xC913FC] = 12472136;
+    MEMORY[0xC91400] = MEMORY[0xC7B788] + 15;
+    MEMORY[0xC91404] = 2884460;
+    MEMORY[0xC91408] = 0;
+    MEMORY[0xC9140C] = 2884552;
+    MEMORY[0xC91410] = 0;
+    MEMORY[0xC91414] = 2884884;
+    MEMORY[0xC91418] = 0;
+    MEMORY[0xC9141C] = 12472136;
+    MEMORY[0xC91420] = MEMORY[0xC7B788] + 16;
+    MEMORY[0xC91424] = 2884888;
+    MEMORY[0xC91428] = 0;
+    MEMORY[0xC9142C] = 2885008;
+    MEMORY[0xC91430] = 0;
+    MEMORY[0xC91434] = 2885128;
+    MEMORY[0xC91438] = 0;
+    MEMORY[0xC9143C] = 12472136;
+    MEMORY[0xC91440] = MEMORY[0xC7B788] + 17;
+    MEMORY[0xC91444] = 2885132;
+    MEMORY[0xC91448] = 0;
+    MEMORY[0xC9144C] = 2885216;
+    MEMORY[0xC91450] = 0;
+    MEMORY[0xC91454] = 2885360;
+    MEMORY[0xC91458] = 0;
+    MEMORY[0xC9145C] = 12472136;
+    MEMORY[0xC91460] = MEMORY[0xC7B788] + 18;
+    MEMORY[0xC91464] = 2885364;
+    MEMORY[0xC91468] = 0;
+    MEMORY[0xC9146C] = 2885960;
+    MEMORY[0xC91470] = 0;
+    MEMORY[0xC91474] = 2886796;
+    MEMORY[0xC91478] = 0;
+    MEMORY[0xC9147C] = 12472136;
+    MEMORY[0xC91480] = MEMORY[0xC7B788] + 19;
+    MEMORY[0xC91484] = 2886848;
+    MEMORY[0xC91488] = 0;
+    MEMORY[0xC9148C] = 2887172;
+    MEMORY[0xC91490] = 0;
+    MEMORY[0xC91494] = 2887772;
+    MEMORY[0xC91498] = 0;
+    MEMORY[0xC9149C] = 12472136;
+    MEMORY[0xC914A0] = MEMORY[0xC7B788] + 20;
+    MEMORY[0xC914A4] = 2887776;
+    MEMORY[0xC914A8] = 0;
+    MEMORY[0xC914AC] = 2887972;
+    MEMORY[0xC914B0] = 0;
+    MEMORY[0xC914B4] = 2888476;
+    MEMORY[0xC914B8] = 0;
+    v0 = MEMORY[0xC7B788] + 21;
+    MEMORY[0xC7B788] += 22;
+    MEMORY[0xC914C0] = v0;
+    MEMORY[0xC914C4] = 668;
+    MEMORY[0xC914C8] = 1;
+    MEMORY[0xC914CC] = 672;
+    MEMORY[0xC914D0] = 1;
+    MEMORY[0xC914D4] = 676;
+    MEMORY[0xC914D8] = 1;
+    MEMORY[0xC914BC] = 12472156;
+    MEMORY[0xC914DC] = 12755100;
+    MEMORY[0xC914E4] = MEMORY[0xC7B788];
+    MEMORY[0xC914E8] = 456;
+    MEMORY[0xC914EC] = 1;
+    MEMORY[0xC914F0] = 460;
+    MEMORY[0xC914F4] = 1;
+    MEMORY[0xC914F8] = 464;
+    MEMORY[0xC914FC] = 1;
+    MEMORY[0xC914E0] = 12472156;
+    MEMORY[0xC91500] = 13174544;
+    return 13178080;
   }
 
 /* ============================================================================
@@ -62387,6 +66387,74 @@
   }
 
 /* ============================================================================
+ * registerProfile_koBlooper_2C5334
+ * RVA 0x002c5334   size 0x26c   xrefs 0
+ * ============================================================================ */
+  int sub_602C5334()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C91540 = 0;
+    dword_60C91544 = 0;
+    dword_60C91548 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3A8E;
+    Profile::Profile(13178188, 2898260, MEMORY[0xAF39BC], (int)v1, &unk_60AFE840, 2);
+    MEMORY[0xC91564] = 0x8000000;
+    MEMORY[0xC91568] = 1031798784;
+    MEMORY[0xC9156C] = -1127743488;
+    MEMORY[0xC91570] = 131072000;
+    MEMORY[0xC91574] = 2147418112;
+    MEMORY[0xC91578] = 0x2000000;
+    MEMORY[0xC9157C] = 0x80000;
+    MEMORY[0xC91580] = 0x80000;
+    MEMORY[0xC91588] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC91584] = 12472900;
+    MEMORY[0xC9158C] = 2898696;
+    MEMORY[0xC91590] = 0;
+    MEMORY[0xC91594] = 2898908;
+    MEMORY[0xC91598] = 0;
+    MEMORY[0xC9159C] = 2898912;
+    MEMORY[0xC915A0] = 0;
+    MEMORY[0xC915A4] = 12472900;
+    MEMORY[0xC915A8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC915AC] = 2898916;
+    MEMORY[0xC915B0] = 0;
+    MEMORY[0xC915B4] = 2898932;
+    MEMORY[0xC915B8] = 0;
+    MEMORY[0xC915BC] = 2898936;
+    MEMORY[0xC915C0] = 0;
+    MEMORY[0xC915C4] = 12472900;
+    MEMORY[0xC915C8] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC915CC] = 2898952;
+    MEMORY[0xC915D0] = 0;
+    MEMORY[0xC915D4] = 2899072;
+    MEMORY[0xC915D8] = 0;
+    MEMORY[0xC915DC] = 2899456;
+    MEMORY[0xC915E0] = 0;
+    MEMORY[0xC915E8] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC915EC] = 456;
+    MEMORY[0xC915F0] = 1;
+    MEMORY[0xC915F4] = 460;
+    MEMORY[0xC915F8] = 1;
+    MEMORY[0xC915FC] = 464;
+    MEMORY[0xC91600] = 1;
+    MEMORY[0xC915E4] = 12472920;
+    MEMORY[0xC91604] = 13174544;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xC9160C] = MEMORY[0xC7B788];
+    MEMORY[0xC91610] = 480;
+    MEMORY[0xC91614] = 1;
+    MEMORY[0xC91618] = 484;
+    MEMORY[0xC9161C] = 1;
+    MEMORY[0xC91620] = 488;
+    MEMORY[0xC91624] = 1;
+    MEMORY[0xC91608] = 12472920;
+    MEMORY[0xC91628] = 13174616;
+    return 13174616;
+  }
+
+/* ============================================================================
  * Actor_gorogoro_build
  * RVA 0x002c5624   size 0x8c   xrefs 0
  * ============================================================================ */
@@ -62663,6 +66731,70 @@
   }
 
 /* ============================================================================
+ * registerProfile_gorogoro_2C7BEC
+ * RVA 0x002c7bec   size 0x1f4   xrefs 0
+ * ============================================================================ */
+  int sub_602C7BEC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C9170C = 0;
+    dword_60C91710 = 0;
+    dword_60C91714 = 0;
+    LODWORD(flt_60C91708) = (int)(float)((float)(MEMORY[0xB0E1E0] * 40.0) / MEMORY[0xB0E1D8]);
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3A9E;
+    *(_DWORD *)Profile::Profile(13178412, 2905636, MEMORY[0xAF35F0], (int)v1, &unk_60AFE898, 2) = 12472940;
+    MEMORY[0xC91648] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC9164C] = 676;
+    MEMORY[0xC91650] = 1;
+    MEMORY[0xC91654] = 680;
+    MEMORY[0xC91658] = 1;
+    MEMORY[0xC9165C] = 684;
+    MEMORY[0xC91660] = 1;
+    MEMORY[0xC91644] = 12473744;
+    MEMORY[0xC91664] = 12755100;
+    MEMORY[0xC91674] = 1;
+    MEMORY[0xC91678] = 628;
+    MEMORY[0xC9167C] = 1;
+    MEMORY[0xC91680] = 632;
+    MEMORY[0xC91684] = 1;
+    MEMORY[0xC91668] = 12473744;
+    MEMORY[0xC9166C] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC91670] = 624;
+    MEMORY[0xC91688] = 12755100;
+    MEMORY[0xC91698] = 1;
+    MEMORY[0xC9169C] = 692;
+    MEMORY[0xC916A0] = 1;
+    MEMORY[0xC916A4] = 696;
+    MEMORY[0xC916A8] = 1;
+    MEMORY[0xC9168C] = 12473744;
+    MEMORY[0xC91690] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC91694] = 688;
+    MEMORY[0xC916AC] = 12755100;
+    MEMORY[0xC916BC] = 1;
+    MEMORY[0xC916C0] = 704;
+    MEMORY[0xC916C4] = 1;
+    MEMORY[0xC916C8] = 708;
+    MEMORY[0xC916CC] = 1;
+    MEMORY[0xC916B0] = 12473744;
+    MEMORY[0xC916B4] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC916B8] = 700;
+    MEMORY[0xC916D0] = 12755100;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xC916D8] = MEMORY[0xC7B788];
+    MEMORY[0xC916DC] = 712;
+    MEMORY[0xC916E0] = 1;
+    MEMORY[0xC916E4] = 716;
+    MEMORY[0xC916E8] = 1;
+    MEMORY[0xC916EC] = 720;
+    MEMORY[0xC916F0] = 1;
+    MEMORY[0xC916D4] = 12473744;
+    MEMORY[0xC916F4] = 12755100;
+    return 1;
+  }
+
+/* ============================================================================
  * Actor_gorogoro_giant_RDash_build
  * RVA 0x002c7e2c   size 0x70   xrefs 0
  * ============================================================================ */
@@ -62775,6 +66907,49 @@
     v8[1] = v4;
     mapPositionToScreen(v7, v8);
     return sub_60813CA0(v5, "SE_OBJ_TEKKYU_L_ROLL", v2, v7, v3, 0);
+  }
+
+/* ============================================================================
+ * registerProfile_gorogoro_giant_RDash_2C9880
+ * RVA 0x002c9880   size 0x1a4   xrefs 0
+ * ============================================================================ */
+  int sub_602C9880()
+  {
+    _DWORD *v0; // r0
+    int v2; // [sp+10h] [bp-8h] BYREF
+    void *v3; // [sp+14h] [bp-4h]
+  
+    dword_60C9179C = 0;
+    dword_60C917A0 = 0;
+    dword_60C917A4 = 0;
+    LODWORD(flt_60C91798) = (int)(float)((float)(MEMORY[0xB0E1E0] * 40.0) / MEMORY[0xB0E1D8]);
+    v2 = 12321336;
+    v3 = &unk_60AC3AD2;
+    v0 = (_DWORD *)Profile::Profile(13178648, 2915884, MEMORY[0xAF35F4], (int)&v2, &unk_60AFE93C, 2);
+    v2 = 12321336;
+    *v0 = 12473764;
+    v3 = &unk_60AC3AEB;
+    *(_DWORD *)Profile::Profile(13178672, 2915884, MEMORY[0xAF35F8], (int)&v2, &unk_60AFE93C, 2) = 12473776;
+    MEMORY[0xC9174C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC91750] = 624;
+    MEMORY[0xC91754] = 1;
+    MEMORY[0xC91758] = 628;
+    MEMORY[0xC9175C] = 1;
+    MEMORY[0xC91760] = 632;
+    MEMORY[0xC91764] = 1;
+    MEMORY[0xC91748] = 12474564;
+    MEMORY[0xC91768] = 13352888;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xC91770] = MEMORY[0xC7B788];
+    MEMORY[0xC91774] = 456;
+    MEMORY[0xC91778] = 1;
+    MEMORY[0xC9177C] = 460;
+    MEMORY[0xC91780] = 1;
+    MEMORY[0xC91784] = 464;
+    MEMORY[0xC91788] = 1;
+    MEMORY[0xC9176C] = 12474564;
+    MEMORY[0xC9178C] = 13174544;
+    return 13174544;
   }
 
 /* ============================================================================
@@ -62931,6 +67106,52 @@
   }
 
 /* ============================================================================
+ * registerProfile_guragurarock_2CA6B4
+ * RVA 0x002ca6b4   size 0x184   xrefs 0
+ * ============================================================================ */
+  int sub_602CA6B4()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C917A8 = 0;
+    *(_DWORD *)algn_60C917AC = 0;
+    *(_DWORD *)&algn_60C917AC[4] = 22;
+    *(_DWORD *)&algn_60C917AC[8] = 0x10000;
+    *(_DWORD *)&algn_60C917AC[12] = 0x8000000;
+    *(_DWORD *)&algn_60C917AC[16] = 3276800;
+    dword_60C917C0 = 1441792;
+    dword_60C917C4 = 39190528;
+    MEMORY[0xC917CC] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC917C8] = 12474788;
+    MEMORY[0xC917D0] = 2923128;
+    MEMORY[0xC917D4] = 0;
+    MEMORY[0xC917D8] = 2923144;
+    MEMORY[0xC917DC] = 0;
+    MEMORY[0xC917E0] = 2923580;
+    MEMORY[0xC917E4] = 0;
+    MEMORY[0xC917E8] = 12474788;
+    MEMORY[0xC917EC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xC9180C] = MEMORY[0xC7B788];
+    MEMORY[0xC91808] = 12474788;
+    MEMORY[0xC917F0] = 2923584;
+    MEMORY[0xC917F4] = 0;
+    MEMORY[0xC91810] = 2923680;
+    MEMORY[0xC91814] = 0;
+    MEMORY[0xC917F8] = 2923596;
+    MEMORY[0xC917FC] = 0;
+    MEMORY[0xC91818] = 2923720;
+    MEMORY[0xC9181C] = 0;
+    MEMORY[0xC91800] = 2923676;
+    MEMORY[0xC91804] = 0;
+    MEMORY[0xC91820] = 2923724;
+    MEMORY[0xC91824] = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3B3E;
+    return Profile::Profile(13178920, 2923728, MEMORY[0xAF30CC], (int)v1, &unk_60AFE9E0, 2);
+  }
+
+/* ============================================================================
  * Actor_guruguru_build
  * RVA 0x002ca88c   size 0xec   xrefs 0
  * ============================================================================ */
@@ -63017,6 +67238,37 @@
     ActiveCollider_dtor((sead::IDisposer *)(a1 + 608));
     ActiveCollider_dtor((sead::IDisposer *)(a1 + 304));
     ActiveCollider_dtor((sead::IDisposer *)a1);
+  }
+
+/* ============================================================================
+ * registerProfile_guruguru_2CAFA8
+ * RVA 0x002cafa8   size 0x110   xrefs 0
+ * ============================================================================ */
+  int sub_602CAFA8()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C91898 = 0;
+    dword_60C9189C = 0;
+    dword_60C918A0 = 0;
+    dword_60C918A4 = 0;
+    dword_60C918A8 = 0x40000000;
+    dword_60C918AC = 0x80000000;
+    dword_60C918B0 = -1073741824;
+    dword_60C91890 = 0x800000;
+    dword_60C91894 = -8388608;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3B60;
+    Profile::Profile(13178952, 2926732, MEMORY[0xAF39B4], (int)v1, (void *)0xAFEA04, 2);
+    MEMORY[0xC91864] = ++MEMORY[0xC7B788];
+    MEMORY[0xC91860] = 12475488;
+    MEMORY[0xC91868] = 2926980;
+    MEMORY[0xC9186C] = 0;
+    MEMORY[0xC91870] = 2926984;
+    MEMORY[0xC91874] = 0;
+    MEMORY[0xC91878] = 2927008;
+    MEMORY[0xC9187C] = 0;
+    return 13178976;
   }
 
 /* ============================================================================
@@ -64310,6 +68562,48 @@
   }
 
 /* ============================================================================
+ * registerProfile_HammerBro_ctor_2CD088
+ * RVA 0x002cd088   size 0x14c   xrefs 0
+ * ============================================================================ */
+  int sub_602CD088()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C91950 = 0;
+    dword_60C91954 = 0;
+    dword_60C91958 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3B8A;
+    Profile::Profile(13179108, 2931488, MEMORY[0xAF3900], (int)v1, &unk_60AFEA2C, 18);
+    dword_60C9195C = 1077936128;
+    dword_60C91960 = -1063256064;
+    dword_60C91964 = 0;
+    dword_60C91968 = -1073741824;
+    dword_60C9196C = -1063256064;
+    dword_60C91970 = 0;
+    MEMORY[0xC91900] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC91904] = 648;
+    MEMORY[0xC91908] = 1;
+    MEMORY[0xC9190C] = 652;
+    MEMORY[0xC91910] = 1;
+    MEMORY[0xC91914] = 656;
+    MEMORY[0xC91918] = 1;
+    MEMORY[0xC918FC] = 12476448;
+    MEMORY[0xC9191C] = 13165896;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xC91924] = MEMORY[0xC7B788];
+    MEMORY[0xC91928] = 684;
+    MEMORY[0xC9192C] = 1;
+    MEMORY[0xC91930] = 688;
+    MEMORY[0xC91934] = 1;
+    MEMORY[0xC91938] = 692;
+    MEMORY[0xC9193C] = 1;
+    MEMORY[0xC91920] = 12476448;
+    MEMORY[0xC91940] = 13166004;
+    return 13166004;
+  }
+
+/* ============================================================================
  * Actor_Wiggler_build
  * RVA 0x002cd20c   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -64387,6 +68681,73 @@
     *(_DWORD *)(result + 20) = 0;
     *(_DWORD *)(result + 28) |= 2u;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_Wiggler_2CE32C
+ * RVA 0x002ce32c   size 0x23c   xrefs 0
+ * ============================================================================ */
+  int sub_602CE32C()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C91974 = 0;
+    dword_60C91978 = 0;
+    dword_60C9197C = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3BA0;
+    Profile::Profile(13179264, 2937356, MEMORY[0xAF3518], (int)v1, &unk_60AFEA50, 18);
+    MEMORY[0xC9199C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC91998] = 12477324;
+    MEMORY[0xC919A0] = 2937388;
+    MEMORY[0xC919A4] = 0;
+    MEMORY[0xC919A8] = 2937412;
+    MEMORY[0xC919AC] = 0;
+    MEMORY[0xC919B0] = 2938224;
+    MEMORY[0xC919B4] = 0;
+    MEMORY[0xC919B8] = 12477324;
+    MEMORY[0xC919BC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC919C0] = 2938228;
+    MEMORY[0xC919C4] = 0;
+    MEMORY[0xC919C8] = 2938432;
+    MEMORY[0xC919CC] = 0;
+    MEMORY[0xC919D0] = 2938760;
+    MEMORY[0xC919D4] = 0;
+    MEMORY[0xC919D8] = 12477324;
+    MEMORY[0xC919DC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC919E0] = 2938764;
+    MEMORY[0xC919E4] = 0;
+    MEMORY[0xC919E8] = 2938780;
+    MEMORY[0xC919EC] = 0;
+    MEMORY[0xC919F0] = 2939008;
+    MEMORY[0xC919F4] = 0;
+    MEMORY[0xC919F8] = 12477324;
+    MEMORY[0xC919FC] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC91A00] = 2939012;
+    MEMORY[0xC91A04] = 0;
+    MEMORY[0xC91A08] = 2939036;
+    MEMORY[0xC91A0C] = 0;
+    MEMORY[0xC91A10] = 2939892;
+    MEMORY[0xC91A14] = 0;
+    MEMORY[0xC91A18] = 12477324;
+    MEMORY[0xC91A1C] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC91A20] = 2939896;
+    MEMORY[0xC91A24] = 0;
+    MEMORY[0xC91A28] = 2939956;
+    MEMORY[0xC91A2C] = 0;
+    MEMORY[0xC91A30] = 2940776;
+    MEMORY[0xC91A34] = 0;
+    MEMORY[0xC7B788] += 6;
+    MEMORY[0xC91A3C] = MEMORY[0xC7B788];
+    MEMORY[0xC91A40] = 456;
+    MEMORY[0xC91A44] = 1;
+    MEMORY[0xC91A48] = 460;
+    MEMORY[0xC91A4C] = 1;
+    MEMORY[0xC91A50] = 464;
+    MEMORY[0xC91A54] = 1;
+    MEMORY[0xC91A38] = 12477344;
+    MEMORY[0xC91A58] = 13174544;
+    return 13174544;
   }
 
 /* ============================================================================
@@ -65649,6 +70010,22 @@
     result = (_DWORD *)Actor_Wiggler_2_build_helper(v0);
     *result = 12477428;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_Wiggler_2_2D2DCC
+ * RVA 0x002d2dcc   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_602D2DCC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C91A90 = 0;
+    dword_60C91A94 = 0;
+    dword_60C91A98 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3BA0;
+    return Profile::Profile(13179548, 2959040, MEMORY[0xAF351C], (int)v1, &unk_60AFEAB4, 18);
   }
 
 /* ============================================================================
@@ -67047,6 +71424,122 @@
   }
 
 /* ============================================================================
+ * registerProfile_SledgeBro_2D79D0
+ * RVA 0x002d79d0   size 0x3bc   xrefs 0
+ * ============================================================================ */
+  int sub_602D79D0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C91ABC = 0;
+    dword_60C91AC0 = 0;
+    dword_60C91AC4 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3C63;
+    Profile::Profile(13179592, 2961000, MEMORY[0xAF3920], (int)v1, &unk_60AFEAD8, 18);
+    MEMORY[0xC91AE4] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC91AE0] = 12478864;
+    MEMORY[0xC91AE8] = 2961032;
+    MEMORY[0xC91AEC] = 0;
+    MEMORY[0xC91AF0] = 2961276;
+    MEMORY[0xC91AF4] = 0;
+    MEMORY[0xC91AF8] = 2962520;
+    MEMORY[0xC91AFC] = 0;
+    MEMORY[0xC91B00] = 12478864;
+    MEMORY[0xC91B04] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC91B08] = 2962524;
+    MEMORY[0xC91B0C] = 0;
+    MEMORY[0xC91B10] = 2962528;
+    MEMORY[0xC91B14] = 0;
+    MEMORY[0xC91B18] = 2962784;
+    MEMORY[0xC91B1C] = 0;
+    MEMORY[0xC91B20] = 12478864;
+    MEMORY[0xC91B24] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC91B28] = 2962788;
+    MEMORY[0xC91B2C] = 0;
+    MEMORY[0xC91B30] = 2963008;
+    MEMORY[0xC91B34] = 0;
+    MEMORY[0xC91B38] = 2963616;
+    MEMORY[0xC91B3C] = 0;
+    MEMORY[0xC91B40] = 12478864;
+    MEMORY[0xC91B44] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC91B48] = 2963620;
+    MEMORY[0xC91B4C] = 0;
+    MEMORY[0xC91B50] = 2963876;
+    MEMORY[0xC91B54] = 0;
+    MEMORY[0xC91B58] = 2964548;
+    MEMORY[0xC91B5C] = 0;
+    MEMORY[0xC91B60] = 12478864;
+    MEMORY[0xC91B64] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC91B68] = 2964552;
+    MEMORY[0xC91B6C] = 0;
+    MEMORY[0xC91B70] = 2964776;
+    MEMORY[0xC91B74] = 0;
+    MEMORY[0xC91B78] = 2964912;
+    MEMORY[0xC91B7C] = 0;
+    MEMORY[0xC91B80] = 12478864;
+    MEMORY[0xC91B84] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC91B88] = 2964916;
+    MEMORY[0xC91B8C] = 0;
+    MEMORY[0xC91B90] = 2965156;
+    MEMORY[0xC91B94] = 0;
+    MEMORY[0xC91B98] = 2965892;
+    MEMORY[0xC91B9C] = 0;
+    MEMORY[0xC91BA0] = 12478864;
+    MEMORY[0xC91BA4] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC91BA8] = 2965896;
+    MEMORY[0xC91BAC] = 0;
+    MEMORY[0xC91BB0] = 2966120;
+    MEMORY[0xC91BB4] = 0;
+    MEMORY[0xC91BB8] = 2966256;
+    MEMORY[0xC91BBC] = 0;
+    MEMORY[0xC91BC0] = 12478864;
+    MEMORY[0xC91BC4] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC91BC8] = 2966260;
+    MEMORY[0xC91BCC] = 0;
+    MEMORY[0xC91BD0] = 2966576;
+    MEMORY[0xC91BD4] = 0;
+    MEMORY[0xC91BD8] = 2967420;
+    MEMORY[0xC91BDC] = 0;
+    MEMORY[0xC91BE0] = 12478864;
+    MEMORY[0xC91BE4] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC91BE8] = 2967452;
+    MEMORY[0xC91BEC] = 0;
+    MEMORY[0xC91BF0] = 2967488;
+    MEMORY[0xC91BF4] = 0;
+    MEMORY[0xC91BF8] = 2967888;
+    MEMORY[0xC91BFC] = 0;
+    MEMORY[0xC91C00] = 12478864;
+    MEMORY[0xC91C04] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xC91C08] = 2967892;
+    MEMORY[0xC91C0C] = 0;
+    MEMORY[0xC91C10] = 2968088;
+    MEMORY[0xC91C14] = 0;
+    MEMORY[0xC91C18] = 2970112;
+    MEMORY[0xC91C1C] = 0;
+    MEMORY[0xC91C24] = MEMORY[0xC7B788] + 11;
+    MEMORY[0xC91C28] = 444;
+    MEMORY[0xC91C2C] = 1;
+    MEMORY[0xC91C30] = 448;
+    MEMORY[0xC91C34] = 1;
+    MEMORY[0xC91C38] = 452;
+    MEMORY[0xC91C3C] = 1;
+    MEMORY[0xC91C20] = 12478884;
+    MEMORY[0xC91C40] = 13174508;
+    MEMORY[0xC7B788] += 12;
+    MEMORY[0xC91C48] = MEMORY[0xC7B788];
+    MEMORY[0xC91C4C] = 456;
+    MEMORY[0xC91C50] = 1;
+    MEMORY[0xC91C54] = 460;
+    MEMORY[0xC91C58] = 1;
+    MEMORY[0xC91C5C] = 464;
+    MEMORY[0xC91C60] = 1;
+    MEMORY[0xC91C44] = 12478884;
+    MEMORY[0xC91C64] = 13174544;
+    return 13174544;
+  }
+
+/* ============================================================================
  * sub_602D7E88
  * RVA 0x002d7e88   size 0xbc   xrefs 1
  * ============================================================================ */
@@ -67289,6 +71782,122 @@
         break;
     }
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_honeBuzzy_2D9E58
+ * RVA 0x002d9e58   size 0x3b0   xrefs 0
+ * ============================================================================ */
+  int sub_602D9E58()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C91D7C = 0;
+    dword_60C91D80 = 0;
+    dword_60C91D84 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC3CE5;
+    Profile::Profile(13180016, 2981716, MEMORY[0xAF3568], (int)v1, &unk_60AFEB50, 18);
+    MEMORY[0xC91C8C] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC91C88] = 12479628;
+    MEMORY[0xC91C90] = 2981744;
+    MEMORY[0xC91C94] = 0;
+    MEMORY[0xC91C98] = 2981876;
+    MEMORY[0xC91C9C] = 0;
+    MEMORY[0xC91CA0] = 2982436;
+    MEMORY[0xC91CA4] = 0;
+    MEMORY[0xC91CA8] = 12479628;
+    MEMORY[0xC91CAC] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC91CB0] = 2982440;
+    MEMORY[0xC91CB4] = 0;
+    MEMORY[0xC91CB8] = 2982604;
+    MEMORY[0xC91CBC] = 0;
+    MEMORY[0xC91CC0] = 2982972;
+    MEMORY[0xC91CC4] = 0;
+    MEMORY[0xC91CC8] = 12479628;
+    MEMORY[0xC91CCC] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC91CD0] = 2982976;
+    MEMORY[0xC91CD4] = 0;
+    MEMORY[0xC91CD8] = 2983232;
+    MEMORY[0xC91CDC] = 0;
+    MEMORY[0xC91CE0] = 2984444;
+    MEMORY[0xC91CE4] = 0;
+    MEMORY[0xC91CE8] = 12479628;
+    MEMORY[0xC91CEC] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC91CF0] = 2984460;
+    MEMORY[0xC91CF4] = 0;
+    MEMORY[0xC91CF8] = 2984952;
+    MEMORY[0xC91CFC] = 0;
+    MEMORY[0xC91D00] = 2986260;
+    MEMORY[0xC91D04] = 0;
+    MEMORY[0xC91D08] = 12479628;
+    MEMORY[0xC91D0C] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC7B788] += 6;
+    dword_60C91D6C = 12321336;
+    MEMORY[0xC91D2C] = MEMORY[0xC7B788];
+    MEMORY[0xC91D10] = 2986324;
+    MEMORY[0xC91D14] = 0;
+    MEMORY[0xC91D30] = 456;
+    MEMORY[0xC91D34] = 1;
+    MEMORY[0xC91D38] = 460;
+    MEMORY[0xC91D3C] = 1;
+    MEMORY[0xC91D40] = 464;
+    MEMORY[0xC91D44] = 1;
+    MEMORY[0xC91D18] = 2986840;
+    MEMORY[0xC91D1C] = 0;
+    MEMORY[0xC91D28] = 12479648;
+    MEMORY[0xC91D20] = 2989520;
+    MEMORY[0xC91D24] = 0;
+    MEMORY[0xC91D48] = 13174544;
+    dword_60C91D70 = (int)"met_hone";
+    dword_60C91D74 = 12321336;
+    dword_60C91D78 = (int)"met_hone";
+    dword_60C91DB0 = 12321336;
+    *(_DWORD *)algn_60C91DB4 = "met_hone_parts0";
+    unk_60C91DB8 = 12321336;
+    dword_60C91DBC = (int)"met_hone_parts1";
+    dword_60C91DC0 = 12321336;
+    dword_60C91DC4 = (int)"met_hone_parts2";
+    dword_60C91DC8 = 12321336;
+    dword_60C91DCC = (int)"met_hone_parts3";
+    dword_60C91DD0 = 12321336;
+    dword_60C91DD4 = (int)"met_hone_parts4";
+    dword_60C91DD8 = 12321336;
+    dword_60C91DDC = (int)"met_hone_parts5";
+    dword_60C91DE0 = 12321336;
+    dword_60C91DE4 = (int)"met_hone_parts6";
+    sub_60000288();
+    dword_60C91E50 = 12321336;
+    *(_DWORD *)algn_60C91E54 = "walk";
+    dword_60C91E58 = 1;
+    dword_60C91E5C = 1082130432;
+    dword_60C91E60 = 12321336;
+    dword_60C91E64 = (int)"down";
+    dword_60C91E68 = 0;
+    dword_60C91E6C = 1082130432;
+    dword_60C91E70 = 12321336;
+    dword_60C91E74 = (int)"down_knock";
+    dword_60C91E78 = 0;
+    dword_60C91E7C = 1082130432;
+    dword_60C91E80 = 12321336;
+    dword_60C91E84 = (int)"revive";
+    dword_60C91E88 = 0;
+    dword_60C91E8C = 1082130432;
+    dword_60C91E90 = 12321336;
+    dword_60C91E94 = (int)"toge_in";
+    dword_60C91E98 = 0;
+    dword_60C91E9C = 0;
+    dword_60C91EA0 = 12321336;
+    dword_60C91EA4 = (int)"toge_out";
+    dword_60C91EA8 = 0;
+    dword_60C91EAC = 1082130432;
+    dword_60C91EB0 = 12321336;
+    dword_60C91EB4 = (int)"toge_wait";
+    dword_60C91EB8 = 1;
+    dword_60C91EBC = 0;
+    sub_60000288();
+    dword_60C91D60 = 656175559;
+    return 656175559;
   }
 
 /* ============================================================================
@@ -69047,6 +73656,231 @@
     dword_60C91FB0 = 12321336;
     dword_60C91FB4 = (int)"met_hone_head";
     return "met_hone_head";
+  }
+
+/* ============================================================================
+ * registerProfile_ibaramushi_2E0144
+ * RVA 0x002e0144   size 0x5c0   xrefs 0
+ * ============================================================================ */
+  int sub_602E0144()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C922E0 = 0;
+    dword_60C922E4 = 0;
+    dword_60C922E8 = 0;
+    dword_60C91FC4[0] = 12321336;
+    *(_DWORD *)algn_60C91FC8 = "walk_st_AR_m";
+    *(_DWORD *)&algn_60C91FC8[4] = 12321336;
+    dword_60C91FD0 = (int)"walk_ed_BR_m";
+    dword_60C91FD4 = 12321336;
+    dword_60C91FD8 = (int)"walk_st_AR_m";
+    dword_60C91FDC = 12321336;
+    dword_60C91FE0 = (int)"walk_ed_BR_u";
+    dword_60C91FE4 = 12321336;
+    dword_60C91FE8 = (int)"walk_st_AR_m";
+    dword_60C91FEC = 12321336;
+    dword_60C91FF0 = (int)"walk_ed_BR_d";
+    dword_60C91FF4 = 12321336;
+    dword_60C91FF8 = (int)"walk_st_AR_u";
+    dword_60C91FFC = 12321336;
+    dword_60C92000 = (int)"walk_ed_BR_m";
+    dword_60C92004 = 12321336;
+    dword_60C92008 = (int)"walk_st_AR_u";
+    dword_60C9200C = 12321336;
+    dword_60C92010 = (int)"walk_ed_BR_u";
+    dword_60C92014 = 12321336;
+    dword_60C92018 = (int)"walk_st_AR_u";
+    dword_60C9201C = 12321336;
+    dword_60C92020 = (int)"walk_ed_BR_d";
+    dword_60C92024 = 12321336;
+    dword_60C92028 = (int)"walk_st_AR_d";
+    dword_60C9202C = 12321336;
+    dword_60C92030 = (int)"walk_ed_BR_m";
+    dword_60C92034 = 12321336;
+    dword_60C92038 = (int)"walk_st_AR_d";
+    dword_60C9203C = 12321336;
+    dword_60C92040 = (int)"walk_ed_BR_u";
+    dword_60C92044 = 12321336;
+    dword_60C92048 = (int)"walk_st_AR_d";
+    dword_60C9204C = 12321336;
+    dword_60C92050 = (int)"walk_ed_BR_d";
+    dword_60C92054 = 12321336;
+    dword_60C92058 = (int)"walk_st_BR_m";
+    dword_60C9205C = 12321336;
+    dword_60C92060 = (int)"walk_ed_AR_m";
+    dword_60C92064 = 12321336;
+    dword_60C92068 = (int)"walk_st_BR_m";
+    dword_60C9206C = 12321336;
+    dword_60C92070 = (int)"walk_ed_AR_u";
+    dword_60C92074 = 12321336;
+    dword_60C92078 = (int)"walk_st_BR_m";
+    dword_60C9207C = 12321336;
+    dword_60C92080 = (int)"walk_ed_AR_d";
+    dword_60C92084 = 12321336;
+    dword_60C92088 = (int)"walk_st_BR_u";
+    dword_60C9208C = 12321336;
+    dword_60C92090 = (int)"walk_ed_AR_m";
+    dword_60C92094 = 12321336;
+    dword_60C92098 = (int)"walk_st_BR_u";
+    dword_60C9209C = 12321336;
+    dword_60C920A0 = (int)"walk_ed_AR_u";
+    dword_60C920A4 = 12321336;
+    dword_60C920A8 = (int)"walk_st_BR_u";
+    dword_60C920AC = 12321336;
+    dword_60C920B0 = (int)"walk_ed_AR_d";
+    dword_60C920B4 = 12321336;
+    dword_60C920B8 = (int)"walk_st_BR_d";
+    dword_60C920BC = 12321336;
+    dword_60C920C0 = (int)"walk_ed_AR_m";
+    dword_60C920C4 = 12321336;
+    dword_60C920C8 = (int)"walk_st_BR_d";
+    dword_60C920CC = 12321336;
+    dword_60C920D0 = (int)"walk_ed_AR_u";
+    dword_60C920D4 = 12321336;
+    dword_60C920D8 = (int)"walk_st_BR_d";
+    dword_60C920DC = 12321336;
+    dword_60C920E0 = (int)"walk_ed_AR_d";
+    dword_60C920E4 = 12321336;
+    dword_60C920E8 = (int)"walk_st_AL_m";
+    dword_60C920EC = 12321336;
+    dword_60C920F0 = (int)"walk_ed_BL_m";
+    dword_60C920F4 = 12321336;
+    dword_60C920F8 = (int)"walk_st_AL_m";
+    dword_60C920FC = 12321336;
+    dword_60C92100 = (int)"walk_ed_BL_u";
+    dword_60C92104 = 12321336;
+    dword_60C92108 = (int)"walk_st_AL_m";
+    dword_60C9210C = 12321336;
+    dword_60C92110 = (int)"walk_ed_BL_d";
+    dword_60C92114 = 12321336;
+    dword_60C92118 = (int)"walk_st_AL_u";
+    dword_60C9211C = 12321336;
+    dword_60C92120 = (int)"walk_ed_BL_m";
+    dword_60C92124 = 12321336;
+    dword_60C92128 = (int)"walk_st_AL_u";
+    dword_60C9212C = 12321336;
+    dword_60C92130 = (int)"walk_ed_BL_u";
+    dword_60C92134 = 12321336;
+    dword_60C92138 = (int)"walk_st_AL_u";
+    dword_60C9213C = 12321336;
+    dword_60C92140 = (int)"walk_ed_BL_d";
+    dword_60C92144 = 12321336;
+    dword_60C92148 = (int)"walk_st_AL_d";
+    dword_60C9214C = 12321336;
+    dword_60C92150 = (int)"walk_ed_BL_m";
+    dword_60C92154 = 12321336;
+    dword_60C92158 = (int)"walk_st_AL_d";
+    dword_60C9215C = 12321336;
+    dword_60C92160 = (int)"walk_ed_BL_u";
+    dword_60C92164 = 12321336;
+    dword_60C92168 = (int)"walk_st_AL_d";
+    dword_60C9216C = 12321336;
+    dword_60C92170 = (int)"walk_ed_BL_d";
+    dword_60C92174 = 12321336;
+    dword_60C92178 = (int)"walk_st_BL_m";
+    dword_60C9217C = 12321336;
+    dword_60C92180 = (int)"walk_ed_AL_m";
+    dword_60C92184 = 12321336;
+    dword_60C92188 = (int)"walk_st_BL_m";
+    dword_60C9218C = 12321336;
+    dword_60C92190 = (int)"walk_ed_AL_u";
+    dword_60C92194 = 12321336;
+    dword_60C92198 = (int)"walk_st_BL_m";
+    dword_60C9219C = 12321336;
+    dword_60C921A0 = (int)"walk_ed_AL_d";
+    dword_60C921A4 = 12321336;
+    dword_60C921A8 = (int)"walk_st_BL_u";
+    dword_60C921AC = 12321336;
+    dword_60C921B0 = (int)"walk_ed_AL_m";
+    dword_60C921B4 = 12321336;
+    dword_60C921B8 = (int)"walk_st_BL_u";
+    dword_60C921BC = 12321336;
+    dword_60C921C0 = (int)"walk_ed_AL_u";
+    dword_60C921C4 = 12321336;
+    dword_60C921C8 = (int)"walk_st_BL_u";
+    dword_60C921CC = 12321336;
+    dword_60C921D0 = (int)"walk_ed_AL_d";
+    dword_60C921D4 = 12321336;
+    dword_60C921D8 = (int)"walk_st_BL_d";
+    dword_60C921DC = 12321336;
+    dword_60C921E0 = (int)"walk_ed_AL_m";
+    dword_60C921E4 = 12321336;
+    dword_60C921E8 = (int)"walk_st_BL_d";
+    dword_60C921EC = 12321336;
+    dword_60C921F0 = (int)"walk_ed_AL_u";
+    dword_60C921F4 = 12321336;
+    dword_60C921F8 = (int)"walk_st_BL_d";
+    dword_60C921FC = 12321336;
+    dword_60C92200 = (int)"walk_ed_AL_d";
+    sub_60000288();
+    dword_60C922EC = 12321336;
+    dword_60C922F0 = (int)"wait_A_LmRm";
+    dword_60C922F4 = 12321336;
+    dword_60C922F8 = (int)"wait_A_LmRu";
+    dword_60C922FC = 12321336;
+    dword_60C92300 = (int)"wait_A_LmRd";
+    dword_60C92304 = 12321336;
+    dword_60C92308 = (int)"wait_A_LuRm";
+    dword_60C9230C = 12321336;
+    dword_60C92310 = (int)"wait_A_LdRm";
+    dword_60C92314 = 12321336;
+    dword_60C92318 = (int)"wait_B_LmRm";
+    dword_60C9231C = 12321336;
+    dword_60C92320 = (int)"wait_B_LuRm";
+    dword_60C92324 = 12321336;
+    dword_60C92328 = (int)"wait_B_LdRm";
+    dword_60C9232C = 12321336;
+    dword_60C92330 = (int)"wait_B_LmRu";
+    dword_60C92334 = 12321336;
+    dword_60C92338 = (int)"wait_B_LmRd";
+    sub_60000288();
+    MEMORY[0xC92208] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC92204] = 12480756;
+    MEMORY[0xC9220C] = 3016708;
+    MEMORY[0xC92210] = 0;
+    MEMORY[0xC92214] = 3016884;
+    MEMORY[0xC92218] = 0;
+    MEMORY[0xC9221C] = 3017480;
+    MEMORY[0xC92220] = 0;
+    MEMORY[0xC92224] = 12480756;
+    MEMORY[0xC92228] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC9222C] = 3017484;
+    MEMORY[0xC92230] = 0;
+    MEMORY[0xC92234] = 3017532;
+    MEMORY[0xC92238] = 0;
+    MEMORY[0xC9223C] = 3018928;
+    MEMORY[0xC92240] = 0;
+    MEMORY[0xC92248] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC9224C] = 444;
+    MEMORY[0xC92250] = 1;
+    MEMORY[0xC92254] = 448;
+    MEMORY[0xC92258] = 1;
+    MEMORY[0xC9225C] = 452;
+    MEMORY[0xC92260] = 1;
+    MEMORY[0xC92244] = 12480776;
+    MEMORY[0xC92264] = 13174508;
+    MEMORY[0xC92268] = 12480756;
+    MEMORY[0xC9226C] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xC92270] = 3018948;
+    MEMORY[0xC92274] = 0;
+    MEMORY[0xC92278] = 3018984;
+    MEMORY[0xC9227C] = 0;
+    MEMORY[0xC92280] = 3019156;
+    MEMORY[0xC92284] = 0;
+    MEMORY[0xC9228C] = MEMORY[0xC7B788];
+    MEMORY[0xC92290] = 456;
+    MEMORY[0xC92294] = 1;
+    MEMORY[0xC92298] = 460;
+    MEMORY[0xC9229C] = 1;
+    MEMORY[0xC922A0] = 464;
+    MEMORY[0xC922A4] = 1;
+    MEMORY[0xC92288] = 12480776;
+    v1[0] = 12321336;
+    MEMORY[0xC922A8] = 13174544;
+    v1[1] = &unk_60AC3FF0;
+    return Profile::Profile(13181612, 3019160, MEMORY[0xAF37B4], (int)v1, &unk_60AFEBF4, 18);
   }
 
 /* ============================================================================
@@ -72816,6 +77650,241 @@
   }
 
 /* ============================================================================
+ * registerProfile_ice_2F10C0
+ * RVA 0x002f10c0   size 0x764   xrefs 0
+ * ============================================================================ */
+  int sub_602F10C0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C92710 = 0;
+    dword_60C92714 = 0;
+    dword_60C92718 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60ABF30C;
+    Profile::Profile(13181836, 3043488, MEMORY[0xAF3348], (int)v1, nullptr, 2048);
+    memset(dword_60C9271C, 0, 0x24u);
+    MEMORY[0xC923C8] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC923C4] = 12481064;
+    MEMORY[0xC923CC] = 3044148;
+    MEMORY[0xC923D0] = 0;
+    MEMORY[0xC923D4] = 3044232;
+    MEMORY[0xC923D8] = 0;
+    MEMORY[0xC923DC] = 3044564;
+    MEMORY[0xC923E0] = 0;
+    MEMORY[0xC923E4] = 12481064;
+    MEMORY[0xC923E8] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC923EC] = 3044568;
+    MEMORY[0xC923F0] = 0;
+    MEMORY[0xC923F4] = 3044572;
+    MEMORY[0xC923F8] = 0;
+    MEMORY[0xC923FC] = 3044652;
+    MEMORY[0xC92400] = 0;
+    MEMORY[0xC92404] = 12481064;
+    MEMORY[0xC92408] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC9240C] = 3044656;
+    MEMORY[0xC92410] = 0;
+    MEMORY[0xC92414] = 3044672;
+    MEMORY[0xC92418] = 0;
+    MEMORY[0xC9241C] = 3044720;
+    MEMORY[0xC92420] = 0;
+    MEMORY[0xC92424] = 12481064;
+    MEMORY[0xC92428] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC9242C] = 3044724;
+    MEMORY[0xC92430] = 0;
+    MEMORY[0xC92434] = 3044980;
+    MEMORY[0xC92438] = 0;
+    MEMORY[0xC9243C] = 3045136;
+    MEMORY[0xC92440] = 0;
+    MEMORY[0xC92444] = 12481064;
+    MEMORY[0xC92448] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC9244C] = 3045268;
+    MEMORY[0xC92450] = 0;
+    MEMORY[0xC92454] = 3045376;
+    MEMORY[0xC92458] = 0;
+    MEMORY[0xC9245C] = 3045532;
+    MEMORY[0xC92460] = 0;
+    MEMORY[0xC92464] = 12481064;
+    MEMORY[0xC92468] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC9246C] = 3045664;
+    MEMORY[0xC92470] = 0;
+    MEMORY[0xC92474] = 3045956;
+    MEMORY[0xC92478] = 0;
+    MEMORY[0xC9247C] = 3046168;
+    MEMORY[0xC92480] = 0;
+    MEMORY[0xC92484] = 12481064;
+    MEMORY[0xC92488] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC9248C] = 3046232;
+    MEMORY[0xC92490] = 0;
+    MEMORY[0xC92494] = 3046504;
+    MEMORY[0xC92498] = 0;
+    MEMORY[0xC9249C] = 3047440;
+    MEMORY[0xC924A0] = 0;
+    MEMORY[0xC924A4] = 12481064;
+    MEMORY[0xC924A8] = MEMORY[0xC7B788] + 8;
+    MEMORY[0xC924AC] = 3047528;
+    MEMORY[0xC924B0] = 0;
+    MEMORY[0xC924B4] = 3047660;
+    MEMORY[0xC924B8] = 0;
+    MEMORY[0xC924BC] = 3048508;
+    MEMORY[0xC924C0] = 0;
+    MEMORY[0xC923A4] = 12481064;
+    MEMORY[0xC923A8] = MEMORY[0xC7B788] + 9;
+    MEMORY[0xC923AC] = 3048596;
+    MEMORY[0xC923B0] = 0;
+    MEMORY[0xC923B4] = 3048852;
+    MEMORY[0xC923B8] = 0;
+    MEMORY[0xC923BC] = 3049848;
+    MEMORY[0xC923C0] = 0;
+    MEMORY[0xC924C4] = 12481064;
+    MEMORY[0xC924C8] = MEMORY[0xC7B788] + 10;
+    MEMORY[0xC924CC] = 3049936;
+    MEMORY[0xC924D0] = 0;
+    MEMORY[0xC924D4] = 3050080;
+    MEMORY[0xC924D8] = 0;
+    MEMORY[0xC924DC] = 3051124;
+    MEMORY[0xC924E0] = 0;
+    MEMORY[0xC924E4] = 12481064;
+    MEMORY[0xC924E8] = MEMORY[0xC7B788] + 11;
+    MEMORY[0xC924EC] = 3051212;
+    MEMORY[0xC924F0] = 0;
+    MEMORY[0xC924F4] = 3051456;
+    MEMORY[0xC924F8] = 0;
+    MEMORY[0xC924FC] = 3052556;
+    MEMORY[0xC92500] = 0;
+    MEMORY[0xC92504] = 12481064;
+    MEMORY[0xC92508] = MEMORY[0xC7B788] + 12;
+    MEMORY[0xC9250C] = 3052644;
+    MEMORY[0xC92510] = 0;
+    MEMORY[0xC92514] = 3052896;
+    MEMORY[0xC92518] = 0;
+    MEMORY[0xC9251C] = 3053980;
+    MEMORY[0xC92520] = 0;
+    MEMORY[0xC92524] = 12481064;
+    MEMORY[0xC92528] = MEMORY[0xC7B788] + 13;
+    MEMORY[0xC9252C] = 3054068;
+    MEMORY[0xC92530] = 0;
+    MEMORY[0xC92534] = 3054168;
+    MEMORY[0xC92538] = 0;
+    MEMORY[0xC9253C] = 3055220;
+    MEMORY[0xC92540] = 0;
+    MEMORY[0xC92544] = 12481064;
+    MEMORY[0xC92548] = MEMORY[0xC7B788] + 14;
+    MEMORY[0xC9254C] = 3055308;
+    MEMORY[0xC92550] = 0;
+    MEMORY[0xC92554] = 3055480;
+    MEMORY[0xC92558] = 0;
+    MEMORY[0xC9255C] = 3055852;
+    MEMORY[0xC92560] = 0;
+    MEMORY[0xC92564] = 12481064;
+    MEMORY[0xC92568] = MEMORY[0xC7B788] + 15;
+    MEMORY[0xC9256C] = 3055916;
+    MEMORY[0xC92570] = 0;
+    MEMORY[0xC92574] = 3056040;
+    MEMORY[0xC92578] = 0;
+    MEMORY[0xC9257C] = 3056044;
+    MEMORY[0xC92580] = 0;
+    MEMORY[0xC92584] = 12481064;
+    MEMORY[0xC92588] = MEMORY[0xC7B788] + 16;
+    MEMORY[0xC9258C] = 3056060;
+    MEMORY[0xC92590] = 0;
+    MEMORY[0xC92594] = 3056440;
+    MEMORY[0xC92598] = 0;
+    MEMORY[0xC9259C] = 3057996;
+    MEMORY[0xC925A0] = 0;
+    MEMORY[0xC925A4] = 12481064;
+    MEMORY[0xC925A8] = MEMORY[0xC7B788] + 17;
+    MEMORY[0xC925AC] = 3058060;
+    MEMORY[0xC925B0] = 0;
+    MEMORY[0xC925B4] = 3058284;
+    MEMORY[0xC925B8] = 0;
+    MEMORY[0xC925BC] = 3058952;
+    MEMORY[0xC925C0] = 0;
+    MEMORY[0xC925C4] = 12481064;
+    MEMORY[0xC925C8] = MEMORY[0xC7B788] + 18;
+    MEMORY[0xC925CC] = 3059016;
+    MEMORY[0xC925D0] = 0;
+    MEMORY[0xC925D4] = 3059112;
+    MEMORY[0xC925D8] = 0;
+    MEMORY[0xC925DC] = 3059760;
+    MEMORY[0xC925E0] = 0;
+    MEMORY[0xC925E4] = 12481064;
+    MEMORY[0xC925E8] = MEMORY[0xC7B788] + 19;
+    MEMORY[0xC925EC] = 3059764;
+    MEMORY[0xC925F0] = 0;
+    MEMORY[0xC925F4] = 3060016;
+    MEMORY[0xC925F8] = 0;
+    MEMORY[0xC925FC] = 3060196;
+    MEMORY[0xC92600] = 0;
+    MEMORY[0xC92604] = 12481064;
+    MEMORY[0xC92608] = MEMORY[0xC7B788] + 20;
+    MEMORY[0xC9260C] = 3060200;
+    MEMORY[0xC92610] = 0;
+    MEMORY[0xC92614] = 3060564;
+    MEMORY[0xC92618] = 0;
+    MEMORY[0xC9261C] = 3060568;
+    MEMORY[0xC92620] = 0;
+    MEMORY[0xC92624] = 12481064;
+    MEMORY[0xC92628] = MEMORY[0xC7B788] + 21;
+    MEMORY[0xC9262C] = 3060572;
+    MEMORY[0xC92630] = 0;
+    MEMORY[0xC92634] = 3060896;
+    MEMORY[0xC92638] = 0;
+    MEMORY[0xC9263C] = 3061292;
+    MEMORY[0xC92640] = 0;
+    MEMORY[0xC92644] = 12481064;
+    MEMORY[0xC92648] = MEMORY[0xC7B788] + 22;
+    MEMORY[0xC9264C] = 3061296;
+    MEMORY[0xC92650] = 0;
+    MEMORY[0xC92654] = 3061360;
+    MEMORY[0xC92658] = 0;
+    MEMORY[0xC9265C] = 3062868;
+    MEMORY[0xC92660] = 0;
+    MEMORY[0xC92664] = 12481064;
+    MEMORY[0xC92668] = MEMORY[0xC7B788] + 23;
+    MEMORY[0xC9266C] = 3062872;
+    MEMORY[0xC92670] = 0;
+    MEMORY[0xC92674] = 3063104;
+    MEMORY[0xC92678] = 0;
+    MEMORY[0xC9267C] = 3063160;
+    MEMORY[0xC92680] = 0;
+    MEMORY[0xC92684] = 12481064;
+    MEMORY[0xC92688] = MEMORY[0xC7B788] + 24;
+    MEMORY[0xC9268C] = 3063356;
+    MEMORY[0xC92690] = 0;
+    MEMORY[0xC92694] = 3063676;
+    MEMORY[0xC92698] = 0;
+    MEMORY[0xC9269C] = 3065384;
+    MEMORY[0xC926A0] = 0;
+    MEMORY[0xC926A4] = 12481064;
+    MEMORY[0xC926A8] = MEMORY[0xC7B788] + 25;
+    MEMORY[0xC926AC] = 3065456;
+    MEMORY[0xC926B0] = 0;
+    MEMORY[0xC926B4] = 3065660;
+    MEMORY[0xC926B8] = 0;
+    MEMORY[0xC926BC] = 3067016;
+    MEMORY[0xC926C0] = 0;
+    MEMORY[0xC926C4] = 12481064;
+    MEMORY[0xC926C8] = MEMORY[0xC7B788] + 26;
+    MEMORY[0xC7B788] += 27;
+    MEMORY[0xC926E8] = MEMORY[0xC7B788];
+    MEMORY[0xC926CC] = 3067020;
+    MEMORY[0xC926E4] = 12481064;
+    MEMORY[0xC926D0] = 0;
+    MEMORY[0xC926EC] = 3067100;
+    MEMORY[0xC926D4] = 3067092;
+    MEMORY[0xC926F0] = 0;
+    MEMORY[0xC926D8] = 0;
+    MEMORY[0xC926F4] = 3067176;
+    MEMORY[0xC926DC] = 3067096;
+    MEMORY[0xC926E0] = 0;
+    MEMORY[0xC926F8] = 0;
+    MEMORY[0xC926FC] = 3067180;
+    MEMORY[0xC92700] = 0;
+    return 13182692;
+  }
+
+/* ============================================================================
  * IceBro_ctor
  * RVA 0x002f19f4   size 0x3c   xrefs 0
  * ============================================================================ */
@@ -72874,6 +77943,34 @@
       *((_DWORD *)v8 + 1684) = *(_DWORD *)(a1 + 8);
     }
     return v5;
+  }
+
+/* ============================================================================
+ * registerProfile_IceBro_ctor_2F2678
+ * RVA 0x002f2678   size 0xfc   xrefs 0
+ * ============================================================================ */
+  int sub_602F2678()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C92780 = 0;
+    dword_60C92784 = 0;
+    dword_60C92788 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC40A9;
+    Profile::Profile(13182784, 3086836, MEMORY[0xAF3918], (int)v1, &unk_60AFECD0, 18);
+    dword_60C9278C = 1090519040;
+    dword_60C92790 = 1082130432;
+    dword_60C92794 = 0;
+    MEMORY[0xC9275C] = ++MEMORY[0xC7B788];
+    MEMORY[0xC92758] = 12481916;
+    MEMORY[0xC92760] = 3086904;
+    MEMORY[0xC92764] = 0;
+    MEMORY[0xC92768] = 3087024;
+    MEMORY[0xC9276C] = 0;
+    MEMORY[0xC92770] = 3087488;
+    MEMORY[0xC92774] = 0;
+    return 13182808;
   }
 
 /* ============================================================================
@@ -74689,6 +79786,89 @@
   }
 
 /* ============================================================================
+ * registerProfile_igaGoomba_2F79DC
+ * RVA 0x002f79dc   size 0x2b4   xrefs 0
+ * ============================================================================ */
+  int sub_602F79DC()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C927EC = 0;
+    dword_60C927F0 = 0;
+    dword_60C927F4 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC40E6;
+    Profile::Profile(13182968, 3098660, MEMORY[0xAF3480], (int)v1, &unk_60AFEE74, 530);
+    MEMORY[0xC92814] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC92810] = 12482960;
+    MEMORY[0xC92818] = 3099132;
+    MEMORY[0xC9281C] = 0;
+    MEMORY[0xC92820] = 3099592;
+    MEMORY[0xC92824] = 0;
+    MEMORY[0xC92828] = 3099740;
+    MEMORY[0xC9282C] = 0;
+    MEMORY[0xC92830] = 12482960;
+    MEMORY[0xC92834] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC92838] = 3099744;
+    MEMORY[0xC9283C] = 0;
+    MEMORY[0xC92840] = 3100276;
+    MEMORY[0xC92844] = 0;
+    MEMORY[0xC92848] = 3100504;
+    MEMORY[0xC9284C] = 0;
+    MEMORY[0xC92850] = 12482960;
+    MEMORY[0xC92854] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC92858] = 3100508;
+    MEMORY[0xC9285C] = 0;
+    MEMORY[0xC92860] = 3101192;
+    MEMORY[0xC92864] = 0;
+    MEMORY[0xC92868] = 3101508;
+    MEMORY[0xC9286C] = 0;
+    MEMORY[0xC92870] = 12482960;
+    MEMORY[0xC92874] = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC92878] = 3101512;
+    MEMORY[0xC9287C] = 0;
+    MEMORY[0xC92880] = 3102380;
+    MEMORY[0xC92884] = 0;
+    MEMORY[0xC92888] = 3102772;
+    MEMORY[0xC9288C] = 0;
+    MEMORY[0xC92890] = 12482960;
+    MEMORY[0xC92894] = MEMORY[0xC7B788] + 5;
+    MEMORY[0xC92898] = 3102784;
+    MEMORY[0xC9289C] = 0;
+    MEMORY[0xC928A0] = 3102836;
+    MEMORY[0xC928A4] = 0;
+    MEMORY[0xC928A8] = 3103280;
+    MEMORY[0xC928AC] = 0;
+    MEMORY[0xC928B0] = 12482960;
+    MEMORY[0xC928B4] = MEMORY[0xC7B788] + 6;
+    MEMORY[0xC928B8] = 3103296;
+    MEMORY[0xC928BC] = 0;
+    MEMORY[0xC928C0] = 3103432;
+    MEMORY[0xC928C4] = 0;
+    MEMORY[0xC928C8] = 3103540;
+    MEMORY[0xC928CC] = 0;
+    MEMORY[0xC928D0] = 12482960;
+    MEMORY[0xC928D4] = MEMORY[0xC7B788] + 7;
+    MEMORY[0xC928D8] = 3103544;
+    MEMORY[0xC928DC] = 0;
+    MEMORY[0xC928E0] = 3103620;
+    MEMORY[0xC928E4] = 0;
+    MEMORY[0xC928E8] = 3103776;
+    MEMORY[0xC928EC] = 0;
+    MEMORY[0xC7B788] += 8;
+    MEMORY[0xC928F4] = MEMORY[0xC7B788];
+    MEMORY[0xC928F8] = 444;
+    MEMORY[0xC928FC] = 1;
+    MEMORY[0xC92900] = 448;
+    MEMORY[0xC92904] = 1;
+    MEMORY[0xC92908] = 452;
+    MEMORY[0xC9290C] = 1;
+    MEMORY[0xC928F0] = 12482980;
+    MEMORY[0xC92910] = 13174508;
+    return 13174508;
+  }
+
+/* ============================================================================
  * Actor_raitokurage_build
  * RVA 0x002f7d40   size 0x1c   xrefs 0
  * ============================================================================ */
@@ -74698,6 +79878,98 @@
   
     v2 = operator new(0x2EA0u);
     return sub_602F8DB0(v2, a1);
+  }
+
+/* ============================================================================
+ * registerProfile_raitokurage_2F8A64
+ * RVA 0x002f8a64   size 0x2c0   xrefs 0
+ * ============================================================================ */
+  __int64 sub_602F8A64()
+  {
+    int v0; // r2
+    _DWORD v2[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C92A1C = 0;
+    dword_60C92A20 = 0;
+    dword_60C92A24 = 0;
+    v2[0] = 12321336;
+    v2[1] = &unk_60AC4143;
+    Profile::Profile(13183260, 3112256, MEMORY[0xAF35CC], (int)v2, &unk_60AFEF0C, 2);
+    MEMORY[0xC92938] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC92934] = 12483728;
+    MEMORY[0xC9293C] = 3112284;
+    MEMORY[0xC92940] = 0;
+    MEMORY[0xC92944] = 3112472;
+    MEMORY[0xC92948] = 0;
+    MEMORY[0xC9294C] = 3112800;
+    MEMORY[0xC92950] = 0;
+    MEMORY[0xC92954] = 12483728;
+    MEMORY[0xC92958] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC9295C] = 3112816;
+    MEMORY[0xC92960] = 0;
+    MEMORY[0xC92964] = 3112968;
+    MEMORY[0xC92968] = 0;
+    MEMORY[0xC9296C] = 3113964;
+    MEMORY[0xC92970] = 0;
+    MEMORY[0xC92974] = 12483728;
+    MEMORY[0xC92978] = MEMORY[0xC7B788] + 3;
+    MEMORY[0xC9297C] = 3113968;
+    MEMORY[0xC92980] = 0;
+    MEMORY[0xC92984] = 3114088;
+    MEMORY[0xC92988] = 0;
+    MEMORY[0xC9298C] = 3115564;
+    MEMORY[0xC92990] = 0;
+    v0 = MEMORY[0xC7B788] + 4;
+    MEMORY[0xC7B788] += 5;
+    MEMORY[0xC92998] = v0;
+    MEMORY[0xC9299C] = 612;
+    MEMORY[0xC929A0] = 1;
+    MEMORY[0xC929A4] = 616;
+    MEMORY[0xC929A8] = 1;
+    MEMORY[0xC929AC] = 620;
+    MEMORY[0xC929B0] = 1;
+    MEMORY[0xC92994] = 12483748;
+    MEMORY[0xC929B4] = 13174976;
+    MEMORY[0xC929BC] = MEMORY[0xC7B788];
+    MEMORY[0xC929C0] = 456;
+    MEMORY[0xC929C4] = 1;
+    MEMORY[0xC929C8] = 460;
+    MEMORY[0xC929CC] = 1;
+    MEMORY[0xC929D0] = 464;
+    MEMORY[0xC929D4] = 1;
+    MEMORY[0xC929B8] = 12483748;
+    MEMORY[0xC929D8] = 13174544;
+    dword_60C92A30 = 12321336;
+    *(_DWORD *)algn_60C92A34 = "wait";
+    dword_60C92A38 = 1;
+    dword_60C92A3C = 1065353216;
+    dword_60C92A40 = 12321336;
+    dword_60C92A44 = (int)"swim_up_st";
+    dword_60C92A48 = 0;
+    dword_60C92A4C = 1065353216;
+    dword_60C92A50 = 12321336;
+    dword_60C92A54 = (int)"swim_up";
+    dword_60C92A58 = 1;
+    dword_60C92A5C = 1065353216;
+    dword_60C92A60 = 12321336;
+    dword_60C92A64 = (int)"swim_up_ed";
+    dword_60C92A68 = 0;
+    dword_60C92A6C = 1065353216;
+    dword_60C92A70 = 12321336;
+    dword_60C92A74 = (int)"swim_down_st";
+    dword_60C92A78 = 0;
+    dword_60C92A7C = 1065353216;
+    dword_60C92A80 = 12321336;
+    dword_60C92A84 = (int)"swim_down";
+    dword_60C92A88 = 1;
+    dword_60C92A8C = 1065353216;
+    dword_60C92A90 = 12321336;
+    dword_60C92A94 = (int)"swim_up_st";
+    dword_60C92A98 = 0;
+    dword_60C92A9C = 0;
+    sub_60000288();
+    *(_QWORD *)&dword_60C929F0 = 0x2000000080000000LL;
+    return 0x2000000080000000LL;
   }
 
 /* ============================================================================
@@ -75724,6 +80996,22 @@
   }
 
 /* ============================================================================
+ * registerProfile_level_faiyabig_Piranha_furawa_2FC290
+ * RVA 0x002fc290   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_602FC290()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C92AA0 = 0;
+    dword_60C92AA4 = 0;
+    dword_60C92AA8 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC41CE;
+    return Profile::Profile(13183660, 3125668, MEMORY[0xAF34F0], (int)v1, &unk_60AFEF48, 18);
+  }
+
+/* ============================================================================
  * Actor_level_big_Piranha_furawa_build
  * RVA 0x002fc32c   size 0x3c   xrefs 0
  * ============================================================================ */
@@ -75736,6 +81024,22 @@
     *result = 12484520;
     *((_WORD *)result + 6996) = 3;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_level_big_Piranha_furawa_2FCC04
+ * RVA 0x002fcc04   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_602FCC04()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C92AD4 = 0;
+    dword_60C92AD8 = 0;
+    dword_60C92ADC = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC4213;
+    return Profile::Profile(13183712, 3130156, MEMORY[0xAF34EC], (int)v1, &unk_60AFEF6C, 18);
   }
 
 /* ============================================================================
@@ -75992,6 +81296,52 @@
   }
 
 /* ============================================================================
+ * registerProfile_level_faiyaPiranha_furawa_2FDB60
+ * RVA 0x002fdb60   size 0x180   xrefs 0
+ * ============================================================================ */
+  int sub_602FDB60()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C92B08 = 0;
+    dword_60C92B0C = 0;
+    dword_60C92B10 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC424D;
+    Profile::Profile(13183764, 3132576, MEMORY[0xAF34E4], (int)v1, &unk_60AFEF90, 18);
+    MEMORY[0xC92B2C] = 656146432;
+    MEMORY[0xC92B30] = -656146432;
+    MEMORY[0xC92B34] = 41943040;
+    MEMORY[0xC92B38] = -41943040;
+    MEMORY[0xC92B40] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC92B3C] = 12485972;
+    MEMORY[0xC92B44] = 3132652;
+    MEMORY[0xC92B48] = 0;
+    MEMORY[0xC92B4C] = 3132656;
+    MEMORY[0xC92B50] = 0;
+    MEMORY[0xC92B54] = 3132852;
+    MEMORY[0xC92B58] = 0;
+    MEMORY[0xC92B5C] = 12485972;
+    MEMORY[0xC92B60] = MEMORY[0xC7B788] + 2;
+    MEMORY[0xC92B64] = 3132856;
+    MEMORY[0xC92B68] = 0;
+    MEMORY[0xC92B6C] = 3132860;
+    MEMORY[0xC92B70] = 0;
+    MEMORY[0xC92B74] = 3133216;
+    MEMORY[0xC92B78] = 0;
+    MEMORY[0xC7B788] += 3;
+    MEMORY[0xC92B7C] = 12485972;
+    MEMORY[0xC92B80] = MEMORY[0xC7B788];
+    MEMORY[0xC92B84] = 676;
+    MEMORY[0xC92B88] = 1;
+    MEMORY[0xC92B8C] = 680;
+    MEMORY[0xC92B90] = 1;
+    MEMORY[0xC92B94] = 684;
+    MEMORY[0xC92B98] = 1;
+    return 12485972;
+  }
+
+/* ============================================================================
  * Actor_level_aisuPiranha_furawa_build
  * RVA 0x002fdd30   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -76003,6 +81353,22 @@
     result = (_DWORD *)sub_602FCF24();
     *result = 12485992;
     return result;
+  }
+
+/* ============================================================================
+ * registerProfile_level_aisuPiranha_furawa_2FE0D0
+ * RVA 0x002fe0d0   size 0x80   xrefs 0
+ * ============================================================================ */
+  int sub_602FE0D0()
+  {
+    _DWORD v1[2]; // [sp+10h] [bp-8h] BYREF
+  
+    dword_60C92B9C = 0;
+    dword_60C92BA0 = 0;
+    dword_60C92BA4 = 0;
+    v1[0] = 12321336;
+    v1[1] = &unk_60AC427B;
+    return Profile::Profile(13183912, 3136816, MEMORY[0xAF34E8], (int)v1, &unk_60AFEFB4, 18);
   }
 
 /* ============================================================================
@@ -76077,6 +81443,48 @@
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
     return BasicSoundActor1_playSound(v1, (int)"SE_EMY_PAKKUN_MOUTH", v5, nullptr);
+  }
+
+/* ============================================================================
+ * registerProfile_level_Piranha_furawa_R33_2FEA14
+ * RVA 0x002fea14   size 0x1a8   xrefs 0
+ * ============================================================================ */
+  int sub_602FEA14()
+  {
+    int v1; // [sp+10h] [bp-8h] BYREF
+    void *v2; // [sp+14h] [bp-4h]
+  
+    dword_60C92BC8 = 0;
+    dword_60C92BCC = 0;
+    dword_60C92BD0 = 0;
+    v1 = 12321336;
+    v2 = &unk_60AC42A3;
+    Profile::Profile(13183956, 3137900, MEMORY[0xAF34D8], (int)&v1, &unk_60AFEFD8, 18);
+    v1 = 12321336;
+    v2 = &unk_60AC42C2;
+    Profile::Profile(13183980, 3137900, MEMORY[0xAF34DC], (int)&v1, &unk_60AFEFD8, 18);
+    v1 = 12321336;
+    v2 = &unk_60AC42E8;
+    Profile::Profile(13184004, 3137900, MEMORY[0xAF34E0], (int)&v1, &unk_60AFEFD8, 18);
+    MEMORY[0xC92C20] = MEMORY[0xC7B788] + 1;
+    MEMORY[0xC92C24] = 676;
+    MEMORY[0xC92C28] = 1;
+    MEMORY[0xC92C2C] = 680;
+    MEMORY[0xC92C30] = 1;
+    MEMORY[0xC92C34] = 684;
+    MEMORY[0xC92C38] = 1;
+    MEMORY[0xC92C1C] = 12487432;
+    MEMORY[0xC92C3C] = 13184204;
+    MEMORY[0xC7B788] += 2;
+    MEMORY[0xC92C44] = MEMORY[0xC7B788];
+    MEMORY[0xC92C40] = 12487452;
+    MEMORY[0xC92C48] = 3138044;
+    MEMORY[0xC92C4C] = 0;
+    MEMORY[0xC92C50] = 3138284;
+    MEMORY[0xC92C54] = 0;
+    MEMORY[0xC92C58] = 3138388;
+    MEMORY[0xC92C5C] = 0;
+    return 3138388;
   }
 
 /* ============================================================================
