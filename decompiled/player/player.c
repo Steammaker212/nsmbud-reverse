@@ -21261,7 +21261,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607A1FFC
+ * StateMgr_changeStateFromCurrent
  * RVA 0x007a1ffc   size 0x58   xrefs 52
  * ============================================================================ */
   int __fastcall sub_607A1FFC(int a1)
@@ -29485,7 +29485,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *v6 )
         v13 = !v10;
       if ( v13 )
-        return sub_603F01A0(MEMORY[0xC99D6C], v12, 1, 0);
+        return PlayerSlot_storeValueByType(MEMORY[0xC99D6C], v12, 1, 0);
       else
         return sub_603EFEAC(MEMORY[0xC99D6C], v12, 1);
     }

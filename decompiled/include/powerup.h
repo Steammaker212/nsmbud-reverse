@@ -98,9 +98,7 @@ int __fastcall sub_60455BC4(int a1, int a2);  /* 0x00455bc4 */
 int __fastcall sub_60455C08(int a1, unsigned __int8 *a2);  /* 0x00455c08 */
 int __fastcall sub_60455C50(int a1, int a2);  /* 0x00455c50 */
 int __fastcall sub_60455C70(int a1, unsigned __int8 *a2);  /* 0x00455c70 */
-int __fastcall sub_60455C94(int a1, int a2);  /* 0x00455c94 */
 int __fastcall sub_60455C98(int a1, unsigned __int8 *a2);  /* 0x00455c98 */
-int __fastcall sub_60455CA0(int a1, int a2);  /* 0x00455ca0 */
 int __fastcall sub_60455CA4(int a1, unsigned __int8 *a2);  /* 0x00455ca4 */
 int __fastcall sub_60455CB8(int a1);  /* 0x00455cb8 */
 int __fastcall sub_60455D54(_DWORD *a1, int a2, int a3);  /* 0x00455d54 */

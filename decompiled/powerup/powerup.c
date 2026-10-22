@@ -4172,20 +4172,20 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604554A8(int a1, int a2)
   {
-    ((void (*)(void))sub_609053CC)();
-    sub_609053CC(a1, a2 + 1);
-    sub_609053CC(a1, a2 + 2);
-    sub_609053CC(a1, a2 + 3);
-    sub_609053CC(a1, a2 + 4);
-    sub_609053CC(a1, a2 + 5);
-    sub_609053CC(a1, a2 + 6);
-    sub_609053CC(a1, a2 + 7);
+    ((void (*)(void))Object_queryByteViaThreeArgSlot)();
+    Object_queryByteViaThreeArgSlot(a1, a2 + 1);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 2);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 3);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 4);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 5);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 6);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 7);
     sub_609053F8(a1, a2 + 8);
     sub_609053F8(a1, a2 + 10);
-    sub_609053CC(a1, a2 + 12);
-    sub_609053CC(a1, a2 + 13);
-    sub_609053CC(a1, a2 + 14);
-    return sub_609053CC(a1, a2 + 15);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 12);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 13);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 14);
+    return Object_queryByteViaThreeArgSlot(a1, a2 + 15);
   }
 
 /* ============================================================================
@@ -4216,19 +4216,19 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6045560C(int a1, int a2)
   {
-    sub_609053CC(a1, a2);
-    sub_609053CC(a1, a2 + 1);
-    sub_609053CC(a1, a2 + 2);
-    sub_609053CC(a1, a2 + 3);
-    sub_609053CC(a1, a2 + 4);
-    sub_609053CC(a1, a2 + 5);
-    sub_609053CC(a1, a2 + 6);
-    sub_609053CC(a1, a2 + 7);
+    Object_queryByteViaThreeArgSlot(a1, a2);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 1);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 2);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 3);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 4);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 5);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 6);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 7);
     sub_609054A8(a1, a2 + 8);
-    sub_609053CC(a1, a2 + 12);
-    sub_609053CC(a1, a2 + 13);
-    sub_609053CC(a1, a2 + 14);
-    return sub_609053CC(a1, a2 + 15);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 12);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 13);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 14);
+    return Object_queryByteViaThreeArgSlot(a1, a2 + 15);
   }
 
 /* ============================================================================
@@ -4267,22 +4267,22 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60905450(a1, a2 + 66);
     sub_60905450(a1, a2 + 67);
     sub_60905450(a1, a2 + 68);
-    sub_609053CC(a1, a2 + 69);
-    sub_609053CC(a1, a2 + 70);
-    sub_609053CC(a1, a2 + 71);
-    sub_609053CC(a1, a2 + 72);
-    sub_609053CC(a1, a2 + 73);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 69);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 70);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 71);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 72);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 73);
     sub_609053F8(a1, a2 + 74);
     sub_609054A8(a1, a2 + 76);
-    sub_609053CC(a1, a2 + 80);
-    sub_609053CC(a1, a2 + 81);
-    sub_609053CC(a1, a2 + 82);
-    sub_609053CC(a1, a2 + 83);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 80);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 81);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 82);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 83);
     sub_609054D4(a1, a2 + 84);
-    sub_609053CC(a1, a2 + 88);
-    sub_609053CC(a1, a2 + 89);
-    sub_609053CC(a1, a2 + 90);
-    return sub_609053CC(a1, a2 + 91);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 88);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 89);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 90);
+    return Object_queryByteViaThreeArgSlot(a1, a2 + 91);
   }
 
 /* ============================================================================
@@ -4325,10 +4325,10 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604559C0(int a1, int a2)
   {
     ((void (*)(void))sub_60905424)();
-    sub_609053CC(a1, a2 + 4);
-    sub_609053CC(a1, a2 + 5);
-    sub_609053CC(a1, a2 + 6);
-    sub_609053CC(a1, a2 + 7);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 4);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 5);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 6);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 7);
     sub_60905424(a1, a2 + 8);
     sub_60905424(a1, a2 + 12);
     sub_60905424(a1, a2 + 16);
@@ -4364,8 +4364,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60455AF4(int a1, int a2)
   {
-    sub_609053CC(a1, a2);
-    sub_609053CC(a1, a2 + 1);
+    Object_queryByteViaThreeArgSlot(a1, a2);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 1);
     return sub_609053F8(a1, a2 + 2);
   }
 
@@ -4410,10 +4410,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60455BC4(int a1, int a2)
   {
-    sub_609053CC(a1, a2);
-    sub_609053CC(a1, a2 + 1);
-    sub_609053CC(a1, a2 + 2);
-    sub_609053CC(a1, a2 + 3);
+    Object_queryByteViaThreeArgSlot(a1, a2);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 1);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 2);
+    Object_queryByteViaThreeArgSlot(a1, a2 + 3);
     return sub_60905424(a1, a2 + 4);
   }
 
@@ -4436,8 +4436,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60455C50(int a1, int a2)
   {
-    sub_609053CC(a1, a2);
-    return sub_609053CC(a1, a2 + 1);
+    Object_queryByteViaThreeArgSlot(a1, a2);
+    return Object_queryByteViaThreeArgSlot(a1, a2 + 1);
   }
 
 /* ============================================================================
@@ -4451,32 +4451,12 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60455C94
- * RVA 0x00455c94   size 0x4   xrefs 1
- * ============================================================================ */
-  // attributes: thunk
-  int __fastcall sub_60455C94(int a1, int a2)
-  {
-    return sub_609053CC(a1, a2);
-  }
-
-/* ============================================================================
  * sub_60455C98
  * RVA 0x00455c98   size 0x8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60455C98(int a1, unsigned __int8 *a2)
   {
     return Object_callSlot12(a1, *a2);
-  }
-
-/* ============================================================================
- * sub_60455CA0
- * RVA 0x00455ca0   size 0x4   xrefs 1
- * ============================================================================ */
-  // attributes: thunk
-  int __fastcall sub_60455CA0(int a1, int a2)
-  {
-    return sub_609053CC(a1, a2);
   }
 
 /* ============================================================================
@@ -4878,11 +4858,11 @@ static inline unsigned int uxtb16(unsigned int x)
             {
   LABEL_33:
               if ( (v5 & 0x400) != 0 )
-                return sub_60455CA0(*(_DWORD *)(a1 + 12), a1 + 227);
+                return j_Object_queryByteViaThreeArgSlot_0(*(_DWORD *)(a1 + 12), a1 + 227);
               return result;
             }
           }
-          result = sub_60455C94(*(_DWORD *)(a1 + 12), a1 + 225);
+          result = j_Object_queryByteViaThreeArgSlot(*(_DWORD *)(a1 + 12), a1 + 225);
           goto LABEL_33;
         }
         v3 = v4 & 0x7FFF;
@@ -23888,7 +23868,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047459C
+ * ArrayOf5_callSlot25
  * RVA 0x0047459c   size 0x24   xrefs 55
  * ============================================================================ */
   int __fastcall sub_6047459C(int a1, unsigned int a2)
@@ -23916,7 +23896,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = *(_DWORD **)(a1 + 3512);
     if ( v2 > a2 )
       v3 += 5 * a2;
-    return sub_608502E4(*v3);
+    return Object_getHalfwordAtChildPlus8(*v3);
   }
 
 /* ============================================================================
@@ -25187,7 +25167,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047611C
+ * Disposer_ctorWithRingOfChildren2
  * RVA 0x0047611c   size 0x1d4   xrefs 54
  * ============================================================================ */
   _DWORD *__fastcall sub_6047611C(int a1, int a2, int a3)
@@ -25557,7 +25537,7 @@ static inline unsigned int uxtb16(unsigned int x)
     char v8; // [sp+6h] [bp-2h] BYREF
     char v9; // [sp+7h] [bp-1h] BYREF
   
-    sub_609053CC(a1, &v8);
+    Object_queryByteViaThreeArgSlot(a1, &v8);
     v4 = v8;
     if ( v8 )
       v4 = 1;
@@ -25568,7 +25548,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_609054D4(a1, a2 + 16);
     sub_609054A8(a1, &v7);
     *(_DWORD *)(a2 + 20) = v7;
-    sub_609053CC(a1, &v9);
+    Object_queryByteViaThreeArgSlot(a1, &v9);
     v5 = v9;
     if ( v9 )
       v5 = 1;
@@ -25595,12 +25575,12 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_609054A8(a1, a2 + 76);
     sub_609054A8(a1, &v6);
     *(_DWORD *)(a2 + 80) = v6;
-    sub_609053CC(a1, &v7);
+    Object_queryByteViaThreeArgSlot(a1, &v7);
     v4 = v7;
     if ( v7 )
       v4 = 1;
     *(_BYTE *)(a2 + 84) = v4;
-    sub_609053CC(a1, &v8);
+    Object_queryByteViaThreeArgSlot(a1, &v8);
     result = v8;
     if ( v8 )
       result = 1;
@@ -26154,15 +26134,15 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     Disable_ref(a1, *(_DWORD *)(MEMORY[0xCCF464] + 36), a3, a2);
-    v6 = sub_60853E04(a2, "OnOff");
+    v6 = StringTable_lookupOffsetByName(a2, "OnOff");
     v7 = sub_60980A38(a3, v6, 1);
     a1[32] = v7;
     (*(void (__fastcall **)(int))(*(_DWORD *)v7 + 104))(v7);
-    v8 = sub_60853E04(a2, "Down");
+    v8 = StringTable_lookupOffsetByName(a2, "Down");
     v9 = 0;
     a1[33] = sub_60980A38(a3, v8, 0);
     a1[34] = 0;
-    v10 = (_BYTE *)sub_60853E04(a2, "Disable");
+    v10 = (_BYTE *)StringTable_lookupOffsetByName(a2, "Disable");
     v11 = v10;
     v12 = v10 == 0;
     if ( v10 )
@@ -26397,7 +26377,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = *(_DWORD *)(a1 + 112);
       v3 = *(float *)(v2 + 16);
       v4 = 1;
-      if ( v3 == (float)(unsigned int)sub_608502E4(v2) )
+      if ( v3 == (float)(unsigned int)Object_getHalfwordAtChildPlus8(v2) )
         return v4;
       v5 = *(_DWORD *)(a1 + 128);
     }
@@ -26406,7 +26386,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = *(_DWORD *)(a1 + 128);
       v7 = *(float *)(v6 + 16);
       v4 = 1;
-      if ( v7 == (float)(unsigned int)sub_608502E4(v6) )
+      if ( v7 == (float)(unsigned int)Object_getHalfwordAtChildPlus8(v6) )
         return v4;
       v5 = *(_DWORD *)(a1 + 112);
     }
@@ -26534,7 +26514,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v2 )
       {
         v3 = *(float *)(v2 + 16);
-        if ( v3 == (float)(unsigned int)sub_608502E4()
+        if ( v3 == (float)(unsigned int)Object_getHalfwordAtChildPlus8()
           || *(_BYTE *)(*(_DWORD *)(a1 + 132) + 20)
           || *(_BYTE *)(*(_DWORD *)(a1 + 116) + 20) )
         {
@@ -27791,7 +27771,7 @@ static inline unsigned int uxtb16(unsigned int x)
           (*(void (__fastcall **)(int))(*(_DWORD *)v5 + 96))(v5);
         }
         sub_604739E8(v3, (__int64 *)0xB3B8CC, 0);
-        sub_6091ABEC(v40);
+        Texture_ctorWithDefaults(v40);
         v6 = v46;
         v7 = v45;
         v8 = *(_DWORD *)(v4 + 4);
@@ -27843,7 +27823,7 @@ static inline unsigned int uxtb16(unsigned int x)
           while ( __strex(v23 | 1, &v44) );
           v46 = v6;
         }
-        sub_6091AC94(v40);
+        Object_clearLowFlagIfType5(v40);
         Object_getCountOrDefault(v4);
         sub_60919ED8(v38, v4 + 744);
         v39 = v40;

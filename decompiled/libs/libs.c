@@ -17163,16 +17163,6 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60813810
- * RVA 0x00813810   size 0x4   xrefs 53
- * ============================================================================ */
-  // attributes: thunk
-  int __fastcall sub_60813810(int a1, int a2, float *a3, int a4, int *a5)
-  {
-    return sub_608111C0(a1, a2, a3, a4, a5);
-  }
-
-/* ============================================================================
  * SE_EMY_LIFT_LINE_MOVE_ref_2
  * RVA 0x00813818   size 0xf8   xrefs 19
  * ============================================================================ */
@@ -25329,7 +25319,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     sead_IDisposer_ctor(a1);
     *a1 = 12556196;
-    sub_6091ABEC(a1 + 4);
+    Texture_ctorWithDefaults(a1 + 4);
     agl_TextureData_ref(a1 + 90);
     sub_6083D230(a1 + 158);
     a1[212] = 0;
@@ -25344,7 +25334,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60919E88(a1 + 427);
     sead_IDisposer_ctor(a1 + 446);
     a1[446] = 12556196;
-    sub_6091ABEC(a1 + 450);
+    Texture_ctorWithDefaults(a1 + 450);
     agl_TextureData_ref(a1 + 536);
     sub_6083D230(a1 + 604);
     a1[658] = 0;
@@ -25359,7 +25349,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60919E88(a1 + 873);
     sead_IDisposer_ctor(a1 + 892);
     a1[892] = 12556196;
-    sub_6091ABEC(a1 + 896);
+    Texture_ctorWithDefaults(a1 + 896);
     agl_TextureData_ref(a1 + 982);
     sub_6083D230(a1 + 1050);
     a1[1104] = 0;
@@ -25374,7 +25364,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60919E88(a1 + 1319);
     sead_IDisposer_ctor(a1 + 1338);
     a1[1338] = 12556196;
-    sub_6091ABEC(a1 + 1342);
+    Texture_ctorWithDefaults(a1 + 1342);
     agl_TextureData_ref(a1 + 1428);
     sub_6083D230(a1 + 1496);
     a1[1550] = 0;
@@ -43142,7 +43132,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6083BDB8
+ * StringTable_findByPrefix
  * RVA 0x0083bdb8   size 0x520   xrefs 52
  * ============================================================================ */
   int __fastcall sub_6083BDB8(int a1, int a2, int a3, int a4)
@@ -43877,7 +43867,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v17 = *(_DWORD *)(v16 + 16);
           if ( v17 )
           {
-            v18 = sub_6083BDB8(a4, 0, 0, v17);
+            v18 = StringTable_findByPrefix(a4, 0, 0, v17);
             if ( v18 >= 0 )
               goto LABEL_12;
           }
@@ -50963,8 +50953,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       &v11,
       &FirstBlock);
     v9 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(FirstBlock + 32) + *(_DWORD *)(4 * v14 + 0xBF9D80)) + 104);
-    *(_DWORD *)(a1 + 36) = sub_6083BDB8(v9, 4, 3, (int)"u_Modulate");
-    *(_DWORD *)(a1 + 32) = sub_6083BDB8(v9, 4, 2, (int)"s_Tex");
+    *(_DWORD *)(a1 + 36) = StringTable_findByPrefix(v9, 4, 3, (int)"u_Modulate");
+    *(_DWORD *)(a1 + 32) = StringTable_findByPrefix(v9, 4, 2, (int)"s_Tex");
     *(_BYTE *)(a1 + 40) = sub_6083E93C(a6);
     return 0;
   }
@@ -53261,11 +53251,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                                     + 16 * i)
                         + 104);
         v26 = (_DWORD *)(a1 + i);
-        *(_DWORD *)(a1 + i + 12) = sub_6083BDB8(v24, 0, 3, (int)"ShaderParam");
-        v26[9] = sub_6083BDB8(v24, 0, 4, (int)"PerCharacterParamBlock");
-        v26[15] = sub_6083BDB8(v25, 4, 3, (int)"ShaderParam");
-        v26[21] = sub_6083BDB8(v25, 4, 3, (int)"ShaderParamBlackWhiteInterpolation");
-        v26[27] = sub_6083BDB8(v25, 4, 2, (int)"uTextureSrc");
+        *(_DWORD *)(a1 + i + 12) = StringTable_findByPrefix(v24, 0, 3, (int)"ShaderParam");
+        v26[9] = StringTable_findByPrefix(v24, 0, 4, (int)"PerCharacterParamBlock");
+        v26[15] = StringTable_findByPrefix(v25, 4, 3, (int)"ShaderParam");
+        v26[21] = StringTable_findByPrefix(v25, 4, 3, (int)"ShaderParamBlackWhiteInterpolation");
+        v26[27] = StringTable_findByPrefix(v25, 4, 2, (int)"uTextureSrc");
       }
       memset(v58, 0, 0x30u);
       sub_6083D7A8((int)v58);
@@ -56661,7 +56651,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_608502E4
+ * Object_getHalfwordAtChildPlus8
  * RVA 0x008502e4   size 0xc   xrefs 53
  * ============================================================================ */
   int __fastcall sub_608502E4(int a1)
@@ -58831,7 +58821,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     bool v6; // zf
     int result; // r0
   
-    if ( (float)-(float)(unsigned int)sub_608502E4(a1) > v2 || (float)(unsigned int)sub_608502E4(a1) < v2 )
+    if ( (float)-(float)(unsigned int)Object_getHalfwordAtChildPlus8(a1) > v2
+      || (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1) < v2 )
     {
       v5 = sub_60850310(a1);
       v6 = a2 == 0;
@@ -58850,7 +58841,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      result = sub_608502E4(a1);
+      result = Object_getHalfwordAtChildPlus8(a1);
       *(float *)(a1 + 16) = (float)(unsigned int)result;
     }
     return result;
@@ -58881,7 +58872,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     bool v6; // zf
     unsigned int result; // r0
   
-    if ( (float)-(float)(unsigned int)sub_608502E4(a1) > v2 || (float)(unsigned int)sub_608502E4(a1) < v2 )
+    if ( (float)-(float)(unsigned int)Object_getHalfwordAtChildPlus8(a1) > v2
+      || (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1) < v2 )
     {
       v5 = sub_60850310(a1);
       v6 = a2 == 0;
@@ -58943,7 +58935,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     unsigned int result; // r0
   
     *(_DWORD *)(a1 + 36) = 0;
-    *(float *)(a1 + 16) = (float)(unsigned int)sub_608502E4(a1);
+    *(float *)(a1 + 16) = (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1);
     result = *(_DWORD *)(a1 + 44) & 0xFFFFFFF8;
     *(_DWORD *)(a1 + 44) = result;
     return result;
@@ -58986,7 +58978,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               *(float *)(a1 + 36) = -v4;
               goto LABEL_17;
             case 1:
-              v12 = (float)(unsigned int)sub_608502E4(a1);
+              v12 = (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1);
               result = *(_DWORD *)(a1 + 44) | 4;
               v5 = v5 + v12;
               goto LABEL_17;
@@ -59000,27 +58992,27 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-        result = sub_608502E4(a1);
+        result = Object_getHalfwordAtChildPlus8(a1);
         if ( v5 >= (float)result )
         {
           result = *(_DWORD *)(a1 + 40);
           switch ( result )
           {
             case 2u:
-              v8 = sub_608502E4(a1);
-              v9 = sub_608502E4(a1);
+              v8 = Object_getHalfwordAtChildPlus8(a1);
+              v9 = Object_getHalfwordAtChildPlus8(a1);
               *(float *)(a1 + 36) = -*(float *)(a1 + 36);
               v10 = v9;
               result = *(_DWORD *)(a1 + 44) | 2;
               v5 = (float)(unsigned int)v8 - (float)(v5 - (float)v10);
               goto LABEL_17;
             case 1u:
-              v11 = (float)(unsigned int)sub_608502E4(a1);
+              v11 = (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1);
               result = *(_DWORD *)(a1 + 44) | 2;
               v5 = v5 - v11;
               goto LABEL_17;
             case 0u:
-              v6 = sub_608502E4(a1);
+              v6 = Object_getHalfwordAtChildPlus8(a1);
               *(_DWORD *)(a1 + 36) = 0;
               v5 = (float)(unsigned int)v6;
               result = *(_DWORD *)(a1 + 44) | 1;
@@ -59280,13 +59272,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v16; // r0
     int result; // r0
   
-    v8 = sub_60853E04(a4, "OnOff");
+    v8 = StringTable_lookupOffsetByName(a4, "OnOff");
     v9 = s__s_bflan_ref_856C28(a3, a2, v8, 1);
     a1[12] = v9;
     (*(void (__fastcall **)(int))(*(_DWORD *)v9 + 104))(v9);
-    v10 = sub_60853E04(a4, "Down");
+    v10 = StringTable_lookupOffsetByName(a4, "Down");
     a1[13] = s__s_bflan_ref_856C28(a3, a2, v10, 0);
-    v11 = (_BYTE *)sub_60853E04(a4, "Disable");
+    v11 = (_BYTE *)StringTable_lookupOffsetByName(a4, "Disable");
     v12 = v11 == 0;
     if ( v11 )
       v12 = *v11 == 0;
@@ -60446,7 +60438,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60853E04
+ * StringTable_lookupOffsetByName
  * RVA 0x00853e04   size 0x5c   xrefs 52
  * ============================================================================ */
   int __fastcall sub_60853E04(int a1, int a2)
@@ -67551,15 +67543,27 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                                     + *(_DWORD *)(4 * *(_DWORD *)(a1 + 4) + 0xBF9D80)
                                     + 16 * v30)
                         + 104);
-        *(_DWORD *)(*(_DWORD *)(a1 + 12) + v30) = sub_6083BDB8(v31, 0, 3, (int)"uConstantBufferForVertexShader");
-        *(_DWORD *)(*(_DWORD *)(a1 + 16) + v30) = sub_6083BDB8(v32, 3, 3, (int)"uConstantBufferForGeometryShader");
-        *(_DWORD *)(*(_DWORD *)(a1 + 20) + v30) = sub_6083BDB8(v33, 4, 3, (int)"uConstantBufferForPixelShader");
+        *(_DWORD *)(*(_DWORD *)(a1 + 12) + v30) = StringTable_findByPrefix(
+                                                    v31,
+                                                    0,
+                                                    3,
+                                                    (int)"uConstantBufferForVertexShader");
+        *(_DWORD *)(*(_DWORD *)(a1 + 16) + v30) = StringTable_findByPrefix(
+                                                    v32,
+                                                    3,
+                                                    3,
+                                                    (int)"uConstantBufferForGeometryShader");
+        *(_DWORD *)(*(_DWORD *)(a1 + 20) + v30) = StringTable_findByPrefix(
+                                                    v33,
+                                                    4,
+                                                    3,
+                                                    (int)"uConstantBufferForPixelShader");
         v34 = 3 * v30;
-        *(_DWORD *)(*(_DWORD *)(a1 + 24) + 3 * v30) = sub_6083BDB8(v33, 4, 2, (int)"uTexture0");
-        *(_DWORD *)(*(_DWORD *)(a1 + 24) + v34 + 4) = sub_6083BDB8(v33, 4, 2, (int)"uTexture1");
+        *(_DWORD *)(*(_DWORD *)(a1 + 24) + 3 * v30) = StringTable_findByPrefix(v33, 4, 2, (int)"uTexture0");
+        *(_DWORD *)(*(_DWORD *)(a1 + 24) + v34 + 4) = StringTable_findByPrefix(v33, 4, 2, (int)"uTexture1");
         --v29;
         v30 += 4;
-        *(_DWORD *)(*(_DWORD *)(a1 + 24) + v34 + 8) = sub_6083BDB8(v33, 4, 2, (int)"uTexture2");
+        *(_DWORD *)(*(_DWORD *)(a1 + 24) + v34 + 8) = StringTable_findByPrefix(v33, 4, 2, (int)"uTexture2");
       }
       while ( v29 );
     }
@@ -67617,7 +67621,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v7 = 0;
         v8 = 0;
         v9 = v4;
-        if ( sub_6083BDB8(v6, 0, 0, (int)"aVertexIndex") >= 0 )
+        if ( StringTable_findByPrefix(v6, 0, 0, (int)"aVertexIndex") >= 0 )
         {
           sub_6083D774(v4);
           v8 = 8;
@@ -67628,7 +67632,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v23 = 0;
         }
         v15 = v3;
-        if ( sub_6083BDB8(v6, 0, 0, (int)"aPosition") >= 0 )
+        if ( StringTable_findByPrefix(v6, 0, 0, (int)"aPosition") >= 0 )
         {
           v10 = &v4[8 * (v7 | (4 * v7))];
           sub_6083D774(&v9[8 * (v7 | (4 * v7))]);
@@ -67639,7 +67643,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *((_DWORD *)v10 + 2) = v8;
           v8 += 12;
         }
-        if ( sub_6083BDB8(v6, 0, 0, (int)"aTexCoord") >= 0 )
+        if ( StringTable_findByPrefix(v6, 0, 0, (int)"aTexCoord") >= 0 )
         {
           v11 = &v9[40 * v7];
           sub_6083D774(v11);
@@ -85483,22 +85487,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v11 = -1;
         v12 = -1;
         if ( *v9 )
-          v12 = sub_6083BDB8(v8, 0, 2, *v9 + 2);
+          v12 = StringTable_findByPrefix(v8, 0, 2, *v9 + 2);
         *(v10 - 2) = v12;
         v13 = v9[2];
         if ( v13 )
-          v11 = sub_6083BDB8(v8, 3, 2, v13 + 2);
+          v11 = StringTable_findByPrefix(v8, 3, 2, v13 + 2);
         *(v10 - 1) = v11;
         v14 = -1;
         v15 = -1;
         v16 = v9[4];
         if ( v16 )
-          v15 = sub_6083BDB8(v8, 4, 2, v16 + 2);
+          v15 = StringTable_findByPrefix(v8, 4, 2, v16 + 2);
         *v10 = v15;
         result = v9[6];
         if ( result )
         {
-          result = sub_6083BDB8(v8, 5, 2, result + 2);
+          result = StringTable_findByPrefix(v8, 5, 2, result + 2);
           v14 = result;
         }
         v10[1] = v14;
@@ -85518,22 +85522,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v20 = -1;
         v21 = -1;
         if ( *v18 )
-          v21 = sub_6083BDB8(v8, 0, 3, *v18 + 2);
+          v21 = StringTable_findByPrefix(v8, 0, 3, *v18 + 2);
         *(v19 - 2) = v21;
         v22 = v18[2];
         if ( v22 )
-          v20 = sub_6083BDB8(v8, 3, 3, v22 + 2);
+          v20 = StringTable_findByPrefix(v8, 3, 3, v22 + 2);
         *(v19 - 1) = v20;
         v23 = -1;
         v24 = -1;
         v25 = v18[4];
         if ( v25 )
-          v24 = sub_6083BDB8(v8, 4, 3, v25 + 2);
+          v24 = StringTable_findByPrefix(v8, 4, 3, v25 + 2);
         *v19 = v24;
         result = v18[6];
         if ( result )
         {
-          result = sub_6083BDB8(v8, 5, 3, result + 2);
+          result = StringTable_findByPrefix(v8, 5, 3, result + 2);
           v23 = result;
         }
         v19[1] = v23;
@@ -85553,22 +85557,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v29 = -1;
         v30 = -1;
         if ( *v27 )
-          v30 = sub_6083BDB8(v8, 0, 4, *v27 + 2);
+          v30 = StringTable_findByPrefix(v8, 0, 4, *v27 + 2);
         *(v28 - 2) = v30;
         v31 = v27[2];
         if ( v31 )
-          v29 = sub_6083BDB8(v8, 3, 4, v31 + 2);
+          v29 = StringTable_findByPrefix(v8, 3, 4, v31 + 2);
         *(v28 - 1) = v29;
         v32 = -1;
         v33 = -1;
         v34 = v27[4];
         if ( v34 )
-          v33 = sub_6083BDB8(v8, 4, 4, v34 + 2);
+          v33 = StringTable_findByPrefix(v8, 4, 4, v34 + 2);
         *v28 = v33;
         result = v27[6];
         if ( result )
         {
-          result = sub_6083BDB8(v8, 5, 4, result + 2);
+          result = StringTable_findByPrefix(v8, 5, 4, result + 2);
           v32 = result;
         }
         v28[1] = v32;
@@ -119009,8 +119013,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60895E48(int *a1, int a2, int a3)
   {
-    a1[1] = sub_6083BDB8(a2, 0, 2, a3);
-    *a1 = sub_6083BDB8(a2, 4, 2, a3);
+    a1[1] = StringTable_findByPrefix(a2, 0, 2, a3);
+    *a1 = StringTable_findByPrefix(a2, 4, 2, a3);
     return 1;
   }
 
@@ -119233,8 +119237,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
   
-    *a1 = sub_6083BDB8(a2, 0, 3, a3);
-    result = sub_6083BDB8(a2, 4, 3, a3);
+    *a1 = StringTable_findByPrefix(a2, 0, 3, a3);
+    result = StringTable_findByPrefix(a2, 4, 3, a3);
     a1[1] = result;
     return result;
   }
@@ -124746,7 +124750,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       do
       {
         v7 = dword_60C5AAF0[v6];
-        if ( sub_6083BDB8(v32, 0, 0, v7) != -1 )
+        if ( StringTable_findByPrefix(v32, 0, 0, v7) != -1 )
         {
           v8 = &v35[5 * v4];
           sub_6083D774(v8);
@@ -124776,7 +124780,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     do
     {
       i = dword_60C5AB04[v10];
-      if ( sub_6083BDB8(v32, 0, 0, i) == -1 )
+      if ( StringTable_findByPrefix(v32, 0, 0, i) == -1 )
       {
         v15 = -1;
       }
@@ -124798,7 +124802,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !(v12 | v4) )
     {
       v16 = 0;
-      v17 = sub_6083BDB8(v32, 0, 0, (int)"sysEmitterPluginAttr0");
+      v17 = StringTable_findByPrefix(v32, 0, 0, (int)"sysEmitterPluginAttr0");
       v18 = &v35[5 * v11];
       sub_6083D774(v18);
       if ( v17 != -1 )
@@ -124810,7 +124814,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *((_DWORD *)v18 + 3) = 6405;
         *((_DWORD *)v18 + 2) = 0;
       }
-      v19 = sub_6083BDB8(v32, 0, 0, (int)"sysEmitterPluginAttr1");
+      v19 = StringTable_findByPrefix(v32, 0, 0, (int)"sysEmitterPluginAttr1");
       v20 = &v35[5 * v11];
       sub_6083D774(v20);
       if ( v19 != -1 )
@@ -124822,7 +124826,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *((_DWORD *)v20 + 3) = 6405;
         *((_DWORD *)v20 + 2) = 16;
       }
-      v21 = sub_6083BDB8(v32, 0, 0, (int)"sysEmitterPluginAttr2");
+      v21 = StringTable_findByPrefix(v32, 0, 0, (int)"sysEmitterPluginAttr2");
       v22 = &v35[5 * v11];
       sub_6083D774(v22);
       if ( v21 != -1 )
@@ -124834,7 +124838,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *((_DWORD *)v22 + 3) = 6405;
         *((_DWORD *)v22 + 2) = 32;
       }
-      v23 = sub_6083BDB8(v32, 0, 0, (int)"sysEmitterPluginAttr3");
+      v23 = StringTable_findByPrefix(v32, 0, 0, (int)"sysEmitterPluginAttr3");
       v24 = &v35[5 * v11];
       sub_6083D774(v24);
       if ( v23 != -1 )
@@ -124846,7 +124850,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *((_DWORD *)v24 + 3) = 6405;
         *((_DWORD *)v24 + 2) = 48;
       }
-      v25 = sub_6083BDB8(v32, 0, 0, (int)"sysEmitterPluginAttr4");
+      v25 = StringTable_findByPrefix(v32, 0, 0, (int)"sysEmitterPluginAttr4");
       i = (int)&v35[5 * v11];
       sub_6083D774(i);
       if ( v25 != -1 )
@@ -129084,18 +129088,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_608A4B50(int *a1, int a2)
   {
     *a1 = a2;
-    a1[2] = sub_6083BDB8(a2, 5, 3, (int)"sysEmitterDynamicUniformBlock");
-    a1[3] = sub_6083BDB8(*a1, 5, 3, (int)"sysEmitterStaticUniformBlock");
-    a1[4] = sub_6083BDB8(*a1, 5, 3, (int)"sysEmitterFieldUniformBlock");
-    a1[5] = sub_6083BDB8(*a1, 5, 2, (int)"sysCurlNoiseTextureArray");
-    a1[6] = sub_6083BDB8(*a1, 5, 4, (int)"sysPosBuff");
-    a1[7] = sub_6083BDB8(*a1, 5, 4, (int)"sysVecBuff");
-    a1[8] = sub_6083BDB8(*a1, 5, 4, (int)"sysPosDeltaBuff");
-    a1[9] = sub_6083BDB8(*a1, 5, 4, (int)"sysScaleBuff");
-    a1[10] = sub_6083BDB8(*a1, 5, 4, (int)"sysRandomBuff");
-    a1[11] = sub_6083BDB8(*a1, 5, 4, (int)"sysEmtMat0Buff");
-    a1[12] = sub_6083BDB8(*a1, 5, 4, (int)"sysEmtMat1Buff");
-    a1[13] = sub_6083BDB8(*a1, 5, 4, (int)"sysEmtMat2Buff");
+    a1[2] = StringTable_findByPrefix(a2, 5, 3, (int)"sysEmitterDynamicUniformBlock");
+    a1[3] = StringTable_findByPrefix(*a1, 5, 3, (int)"sysEmitterStaticUniformBlock");
+    a1[4] = StringTable_findByPrefix(*a1, 5, 3, (int)"sysEmitterFieldUniformBlock");
+    a1[5] = StringTable_findByPrefix(*a1, 5, 2, (int)"sysCurlNoiseTextureArray");
+    a1[6] = StringTable_findByPrefix(*a1, 5, 4, (int)"sysPosBuff");
+    a1[7] = StringTable_findByPrefix(*a1, 5, 4, (int)"sysVecBuff");
+    a1[8] = StringTable_findByPrefix(*a1, 5, 4, (int)"sysPosDeltaBuff");
+    a1[9] = StringTable_findByPrefix(*a1, 5, 4, (int)"sysScaleBuff");
+    a1[10] = StringTable_findByPrefix(*a1, 5, 4, (int)"sysRandomBuff");
+    a1[11] = StringTable_findByPrefix(*a1, 5, 4, (int)"sysEmtMat0Buff");
+    a1[12] = StringTable_findByPrefix(*a1, 5, 4, (int)"sysEmtMat1Buff");
+    a1[13] = StringTable_findByPrefix(*a1, 5, 4, (int)"sysEmtMat2Buff");
     return 1;
   }
 
@@ -214226,7 +214230,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_609053CC
+ * Object_queryByteViaThreeArgSlot
  * RVA 0x009053cc   size 0x2c   xrefs 55
  * ============================================================================ */
   int __fastcall sub_609053CC(int a1, _BYTE *a2)
@@ -232666,7 +232670,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6091ABEC
+ * Texture_ctorWithDefaults
  * RVA 0x0091abec   size 0x50   xrefs 54
  * ============================================================================ */
   _DWORD *__fastcall sub_6091ABEC(_DWORD *a1)
@@ -232702,7 +232706,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6091AC94
+ * Object_clearLowFlagIfType5
  * RVA 0x0091ac94   size 0x1c   xrefs 53
  * ============================================================================ */
   int __fastcall sub_6091AC94(int result)
@@ -238602,7 +238606,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 1;
     sub_609175B8(v9);
     v9[50] = "agl::TextureData";
-    sub_6091ABEC(v10);
+    Texture_ctorWithDefaults(v10);
     agl_TextureSampler_ref(v12);
     sub_60919E88(v16);
     v9[52] = v16;
@@ -249649,7 +249653,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           agl_TextureSampler_ref((int)&v8[v9 + 1]);
           agl_TextureSampler_ref((int)&v8[v9 + 44]);
           sub_60919E88(&v8[v9 + 87]);
-          sub_6091ABEC(&v8[v9 + 95]);
+          Texture_ctorWithDefaults(&v8[v9 + 95]);
           agl_TextureSampler_ref((int)&v10[v9 - 44]);
           agl_TextureSampler_ref((int)&v10[v9]);
           agl_TextureSampler_ref((int)&v8[v9 + 226]);
@@ -250945,7 +250949,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_BYTE *)(v7 + 1030) = 0;
     }
     v47 = (int *)(v7 + 1104);
-    sub_6091AC94(v7 + 752);
+    Object_clearLowFlagIfType5(v7 + 752);
     v26 = *(_DWORD **)(*(_DWORD *)(a3 + 12) + 684);
     Object_lockedReleaseIfFlag2((int)v26, a2);
     *(_WORD *)(v7 + 1420) = 257;
@@ -251170,7 +251174,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_BYTE *)(v5 + 1030) = 0;
     }
     v64 = (int *)(v5 + 1456);
-    sub_6091AC94(v5 + 752);
+    Object_clearLowFlagIfType5(v5 + 752);
     *(_WORD *)(v5 + 1772) = 257;
     *(_BYTE *)(v5 + 1774) = 1;
     v24 = (unsigned int *)(v5 + 1784);
@@ -251471,7 +251475,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( __strex(v27 | 1, v24) );
         *(_BYTE *)(v10 + 1030) = 0;
       }
-      sub_6091AC94(v10 + 752);
+      Object_clearLowFlagIfType5(v10 + 752);
       v28 = 0;
       v29 = *(unsigned __int16 *)(v9 + 1144);
       if ( v29 <= 1 )
@@ -254158,7 +254162,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( __strex(v39 | 1, v35) );
         *(_BYTE *)(v7 + 350) = v21;
       }
-      sub_6091AC94(v50);
+      Object_clearLowFlagIfType5(v50);
       sub_60919F70(v7 + 4);
       v40 = 0.0;
       *(_DWORD *)(v7 + 64) = 0;
@@ -254641,7 +254645,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         && (*(_DWORD *)(a1 + 1364) == 7 || !*((_DWORD *)v208 + 15)) )
       {
         v22 = (unsigned int)v226 & 0xFFFFFFE0 | 8;
-        sub_6091ABEC((_DWORD *)v22);
+        Texture_ctorWithDefaults((_DWORD *)v22);
         v208 = (float *)(((unsigned int)v226 & 0xFFFFFFE0) + 352);
         sub_60919E88(v208);
         v206 = (_DWORD *)(((unsigned int)v226 & 0xFFFFFFE0) + 416);
@@ -254714,7 +254718,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           while ( __strex(v40 | 1, v37) );
           *(_BYTE *)(((unsigned int)v226 & 0xFFFFFFE0) + 0x11E) = 0;
         }
-        sub_6091AC94((unsigned int)v226 & 0xFFFFFFE0 | 8);
+        Object_clearLowFlagIfType5((unsigned int)v226 & 0xFFFFFFE0 | 8);
         sub_60919F70(v208);
         v41 = 0;
         _D2.n64_u32[0] = 0;
@@ -255001,7 +255005,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_BYTE *)(v7 + 350) = v50;
     }
     v51 = v7 + 72;
-    sub_6091AC94(v7 + 72);
+    Object_clearLowFlagIfType5(v7 + 72);
     v28 = v58 * 0.5;
     v29 = v59 * 0.5;
     v30 = v58 * 0.5;
@@ -255599,7 +255603,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   _DWORD *__fastcall sub_60938CF8(_DWORD *a1)
   {
     sub_60919E88(a1 + 1);
-    sub_6091ABEC(a1 + 18);
+    Texture_ctorWithDefaults(a1 + 18);
     sub_6091AC40(a1 + 104);
     agl_TextureSampler_ref((int)(a1 + 190));
     agl_TextureSampler_ref((int)(a1 + 276));
@@ -275449,7 +275453,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( __strex(v35 | 1, v32) );
         *(_BYTE *)(a1 + 1558) = v56;
       }
-      sub_6091AC94(v58);
+      Object_clearLowFlagIfType5(v58);
       v36 = (float)v16;
       v37 = (float)v16;
       if ( v16 > 0 )
@@ -290152,7 +290156,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     agl_TextureSampler_ref(a1 + 1392);
     sub_6091AC40((_DWORD *)(a1 + 1736));
     sub_60919E88((_DWORD *)(a1 + 2080));
-    sub_6091ABEC((_DWORD *)(a1 + 2144));
+    Texture_ctorWithDefaults((_DWORD *)(a1 + 2144));
     sub_6091AC40((_DWORD *)(a1 + 2488));
     agl_TextureSampler_ref(a1 + 2832);
     sub_609394E8(a1 + 3176);
@@ -291283,7 +291287,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           while ( __strex(v57 | 1, v34) );
           *(_BYTE *)(a1 + 2422) = 0;
         }
-        sub_6091AC94(v32);
+        Object_clearLowFlagIfType5(v32);
         *(_DWORD *)(a1 + 2108) = v32;
         *(_DWORD *)(a1 + 2140) = 0;
         Object_callSlot7(v145, a2);
@@ -296599,13 +296603,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 16) = 0;
     agl_TextureData_ref(a1 + 24);
     agl_TextureData_ref(a1 + 296);
-    sub_6091ABEC((_DWORD *)(a1 + 568));
+    Texture_ctorWithDefaults((_DWORD *)(a1 + 568));
     sub_6091AC40((_DWORD *)(a1 + 912));
-    sub_6091ABEC((_DWORD *)(a1 + 1256));
+    Texture_ctorWithDefaults((_DWORD *)(a1 + 1256));
     sub_60919E88((_DWORD *)(a1 + 1600));
     *(_DWORD *)(a1 + 1664) = 0;
     agl_TextureData_ref(a1 + 1672);
-    sub_6091ABEC((_DWORD *)(a1 + 1944));
+    Texture_ctorWithDefaults((_DWORD *)(a1 + 1944));
     *(_DWORD *)(a1 + 2288) = 0;
     *(_DWORD *)(a1 + 2292) = 0;
     *(_DWORD *)(a1 + 2296) = 0;
@@ -297197,7 +297201,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( __strex(v23 | 1, v20) );
         *(_BYTE *)(a1 + 1534) = v24;
       }
-      sub_6091AC94(a1 + 1256);
+      Object_clearLowFlagIfType5(a1 + 1256);
       result = (_DWORD *)(*(_DWORD *)(a1 + 2352) | 0x400);
       *(_DWORD *)(a1 + 2352) = result;
     }
@@ -297556,7 +297560,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( __strex(v71 | 1, v68) );
         *(_BYTE *)(a1 + 846) = v116;
       }
-      sub_6091AC94(a1 + 568);
+      Object_clearLowFlagIfType5(a1 + 568);
     }
     else
     {
@@ -299602,12 +299606,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         do
         {
           sub_60919E88(&v12[v13 + 2]);
-          sub_6091ABEC(&v12[v13 + 18]);
-          sub_6091ABEC(&v12[v13 + 104]);
-          sub_6091ABEC(&v12[v13 + 190]);
-          sub_6091ABEC(&v12[v13 + 276]);
-          sub_6091ABEC(&v14[v13]);
-          sub_6091ABEC(&v12[v13 + 448]);
+          Texture_ctorWithDefaults(&v12[v13 + 18]);
+          Texture_ctorWithDefaults(&v12[v13 + 104]);
+          Texture_ctorWithDefaults(&v12[v13 + 190]);
+          Texture_ctorWithDefaults(&v12[v13 + 276]);
+          Texture_ctorWithDefaults(&v14[v13]);
+          Texture_ctorWithDefaults(&v12[v13 + 448]);
           sub_60921340((int)&v14[v13 + 172]);
           v13 += 556;
         }
@@ -300372,7 +300376,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             while ( __strex(v55 | 1, v51) );
             *v33 = v75;
           }
-          sub_6091AC94(v76);
+          Object_clearLowFlagIfType5(v76);
           if ( *v31 != v52 )
           {
             do
@@ -303801,7 +303805,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_WORD *)(a1 + 202) = 0;
     *(_DWORD *)(a1 + 208) = 0;
     sub_60919E88((_DWORD *)(a1 + 212));
-    sub_6091ABEC((_DWORD *)(a1 + 280));
+    Texture_ctorWithDefaults((_DWORD *)(a1 + 280));
     *(_DWORD *)(a1 + 624) = 0;
     *(_DWORD *)(a1 + 628) = 0;
     *(_DWORD *)(a1 + 632) = 0;
@@ -303914,7 +303918,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_WORD *)(a1 + 202) = 0;
     *(_DWORD *)(a1 + 208) = 0;
     sub_60919E88((_DWORD *)(a1 + 212));
-    sub_6091ABEC((_DWORD *)(a1 + 280));
+    Texture_ctorWithDefaults((_DWORD *)(a1 + 280));
     *(_DWORD *)(a1 + 624) = 0;
     *(_DWORD *)(a1 + 628) = 0;
     *(_DWORD *)(a1 + 632) = 0;
@@ -304738,7 +304742,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( __strex(v36 | 1, v30) );
         *(_BYTE *)(a1 + 558) = v65;
       }
-      sub_6091AC94(a1 + 280);
+      Object_clearLowFlagIfType5(a1 + 280);
       *(_DWORD *)(a1 + 224) = 0;
       *(_DWORD *)(a1 + 228) = 0;
       *(float *)(a1 + 232) = v33;
@@ -305119,7 +305123,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       while ( __strex(v40 | 1, v37) );
       *(_BYTE *)(a6 + 278) = v23;
     }
-    sub_6091AC94(a6);
+    Object_clearLowFlagIfType5(a6);
     *(_DWORD *)(a5 + 12) = 0;
     *(_DWORD *)(a5 + 16) = 0;
     *(float *)(a5 + 20) = (float)v102;
@@ -305387,7 +305391,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_WORD *)(a1 + 210) = 0;
     *(_DWORD *)(a1 + 216) = 0;
     sub_60919E88((_DWORD *)(a1 + 220));
-    sub_6091ABEC((_DWORD *)(a1 + 288));
+    Texture_ctorWithDefaults((_DWORD *)(a1 + 288));
     sub_6097F690(a1, *(_DWORD *)(a3 + 24));
     return a1;
   }
@@ -305494,7 +305498,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_WORD *)(a1 + 210) = 0;
     *(_DWORD *)(a1 + 216) = 0;
     sub_60919E88((_DWORD *)(a1 + 220));
-    sub_6091ABEC((_DWORD *)(a1 + 288));
+    Texture_ctorWithDefaults((_DWORD *)(a1 + 288));
     sub_6097F690(a1, a3);
     return a1;
   }
@@ -305819,7 +305823,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               while ( __strex(v35 | 1, v32) );
               *(_BYTE *)(a1 + 566) = v47;
             }
-            sub_6091AC94(v49);
+            Object_clearLowFlagIfType5(v49);
             v36 = v16;
             v37 = v15;
             v38 = v16;
@@ -306839,7 +306843,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v4 )
     {
       v5 = *(float *)(v4 + 16);
-      v6 = sub_608502E4(v4);
+      v6 = Object_getHalfwordAtChildPlus8(v4);
       result = 0;
       if ( v5 != (float)v6 )
         return result;
@@ -306884,7 +306888,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v4 )
     {
       v5 = *(float *)(v4 + 16);
-      if ( v5 == (float)(unsigned int)sub_608502E4(v4) )
+      if ( v5 == (float)(unsigned int)Object_getHalfwordAtChildPlus8(v4) )
       {
         v6 = a1[15];
         goto LABEL_6;
@@ -306939,7 +306943,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_DWORD *)(a1 + 60) == a2 )
     {
       v6 = *(float *)(a2 + 16);
-      if ( v6 == (float)(unsigned int)sub_608502E4(a2) )
+      if ( v6 == (float)(unsigned int)Object_getHalfwordAtChildPlus8(a2) )
         goto LABEL_9;
     }
     result = *(_DWORD *)(a1 + 56);
@@ -306960,7 +306964,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       v5 = *(float *)(a2 + 16);
-      result = sub_608502E4(a2);
+      result = Object_getHalfwordAtChildPlus8(a2);
       if ( v5 == (float)result )
       {
         result = *(unsigned __int8 *)(a1 + 81);
@@ -313470,7 +313474,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v11; // s0
   
     v3 = v2;
-    if ( (float)-(float)(unsigned int)sub_608502E4(a1) > v2 || (float)(unsigned int)sub_608502E4(a1) < v2 )
+    if ( (float)-(float)(unsigned int)Object_getHalfwordAtChildPlus8(a1) > v2
+      || (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1) < v2 )
     {
       v6 = sub_60850310(a1);
       v7 = a2 == 0;
@@ -313490,7 +313495,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v10 )
       {
         v11 = 0.0;
-        if ( sub_608502E4(a1) )
+        if ( Object_getHalfwordAtChildPlus8(a1) )
           v11 = v3;
       }
       else
@@ -313498,13 +313503,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v11 = 0.0;
       }
     }
-    else if ( v10 && sub_608502E4(a1) )
+    else if ( v10 && Object_getHalfwordAtChildPlus8(a1) )
     {
-      v11 = (float)(unsigned int)sub_608502E4(a1) + v2;
+      v11 = (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1) + v2;
     }
     else
     {
-      v11 = (float)(unsigned int)sub_608502E4(a1);
+      v11 = (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1);
     }
     *(float *)(a1 + 16) = v11;
     if ( !a2 && (*(_BYTE *)(a1 + 51) & 0x20) != 0 )
@@ -313541,7 +313546,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     char v7; // r0
     float v8; // s0
   
-    if ( (float)-(float)(unsigned int)sub_608502E4(a1) > v2 || (float)(unsigned int)sub_608502E4(a1) < v2 )
+    if ( (float)-(float)(unsigned int)Object_getHalfwordAtChildPlus8(a1) > v2
+      || (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1) < v2 )
     {
       v5 = sub_60850310(a1);
       v6 = a2 == 0;
@@ -313554,7 +313560,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 44) = v2;
     v7 = *(_BYTE *)(a1 + 51);
     *(_BYTE *)(a1 + 51) = v7 & 0xF0;
-    if ( (v7 & 0x10) != 0 && sub_608502E4(a1) )
+    if ( (v7 & 0x10) != 0 && Object_getHalfwordAtChildPlus8(a1) )
     {
       if ( v2 >= 0.0 )
       {
@@ -313563,7 +313569,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-        v8 = (float)(unsigned int)sub_608502E4(a1) + v2;
+        v8 = (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1) + v2;
         if ( *(float *)(a1 + 16) > v8 )
           *(float *)(a1 + 16) = v8;
       }
@@ -313579,7 +313585,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v4; // r6
   
-    v4 = sub_608502E4(a1) + 1;
+    v4 = Object_getHalfwordAtChildPlus8(a1) + 1;
     a1[4] = (float)((sead::Random::getU32(MEMORY[0xCCF4E4]) * (unsigned __int64)(unsigned int)v4) >> 32);
     return (*(int (__fastcall **)(float *, int))(*(_DWORD *)a1 + 92))(a1, a2);
   }
@@ -313628,7 +313634,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_60989DA0(int a1)
   {
     *(_DWORD *)(a1 + 44) = 0;
-    *(float *)(a1 + 16) = (float)(unsigned int)sub_608502E4(a1);
+    *(float *)(a1 + 16) = (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1);
     *(_BYTE *)(a1 + 51) &= 0xF0u;
     return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 16))(a1, 1);
   }
@@ -313710,7 +313716,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           if ( v7 == 1 )
           {
-            v12 = (float)(unsigned int)sub_608502E4(a1);
+            v12 = (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1);
             result = *(unsigned __int8 *)(a1 + 51) | 8;
             v5 = v5 + v12;
             goto LABEL_17;
@@ -313726,14 +313732,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-        result = sub_608502E4(a1);
+        result = Object_getHalfwordAtChildPlus8(a1);
         if ( v5 >= (float)(unsigned int)result )
         {
           result = *(unsigned __int8 *)(a1 + 50);
           if ( result == 2 )
           {
-            v8 = sub_608502E4(a1);
-            v9 = sub_608502E4(a1);
+            v8 = Object_getHalfwordAtChildPlus8(a1);
+            v9 = Object_getHalfwordAtChildPlus8(a1);
             *(float *)(a1 + 44) = -*(float *)(a1 + 44);
             v10 = v9;
             result = *(unsigned __int8 *)(a1 + 51) | 4;
@@ -313742,14 +313748,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           if ( result == 1 )
           {
-            v11 = (float)(unsigned int)sub_608502E4(a1);
+            v11 = (float)(unsigned int)Object_getHalfwordAtChildPlus8(a1);
             result = *(unsigned __int8 *)(a1 + 51) | 4;
             v5 = v5 - v11;
             goto LABEL_17;
           }
           if ( !*(_BYTE *)(a1 + 50) )
           {
-            v6 = sub_608502E4(a1);
+            v6 = Object_getHalfwordAtChildPlus8(a1);
             *(_DWORD *)(a1 + 44) = 0;
             v5 = (float)(unsigned int)v6;
             result = *(unsigned __int8 *)(a1 + 51) | 1;
@@ -319074,14 +319080,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(int, int, int *))(*(_DWORD *)a1 + 160))(a1, a2, a3);
     sub_6098A344(*(int **)(a1 + 44), 1);
     sub_6098A3A4(*(int **)(a1 + 44), 0);
-    v11 = (_BYTE *)sub_60853E04(a2, (int)"Disable");
+    v11 = (_BYTE *)StringTable_lookupOffsetByName(a2, (int)"Disable");
     v12 = v11;
     v13 = v11 == 0;
     if ( v11 )
       v13 = *v11 == 0;
     if ( !v13 )
       goto LABEL_13;
-    v14 = (_BYTE *)sub_60853E04(a2, (int)"Invalid");
+    v14 = (_BYTE *)StringTable_lookupOffsetByName(a2, (int)"Invalid");
     v12 = v14;
     v15 = v14 == 0;
     if ( v14 )
@@ -319175,12 +319181,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
     _DWORD v7[6]; // [sp+0h] [bp-18h] BYREF
   
-    v7[0] = sub_60853E04(a2, (int)"On");
-    v7[1] = sub_60853E04(a2, (int)"TouchOn");
-    v7[2] = sub_60853E04(a2, (int)"Off");
-    v7[3] = sub_60853E04(a2, (int)"TouchOff");
-    v7[4] = sub_60853E04(a2, (int)"Decide");
-    v7[5] = sub_60853E04(a2, (int)"TouchDecide");
+    v7[0] = StringTable_lookupOffsetByName(a2, (int)"On");
+    v7[1] = StringTable_lookupOffsetByName(a2, (int)"TouchOn");
+    v7[2] = StringTable_lookupOffsetByName(a2, (int)"Off");
+    v7[3] = StringTable_lookupOffsetByName(a2, (int)"TouchOff");
+    v7[4] = StringTable_lookupOffsetByName(a2, (int)"Decide");
+    v7[5] = StringTable_lookupOffsetByName(a2, (int)"TouchDecide");
     result = sub_60980770(a3, (int)v7, 6, 1u);
     *(_DWORD *)(a1 + 44) = result;
     return result;
@@ -319340,7 +319346,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(float *)(v1 + 44) <= 0.0 )
     {
       v3 = *(float *)(v1 + 16);
-      return v3 == (float)(unsigned int)sub_608502E4(v1);
+      return v3 == (float)(unsigned int)Object_getHalfwordAtChildPlus8(v1);
     }
     return result;
   }
@@ -321611,14 +321617,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
     _DWORD v7[8]; // [sp+0h] [bp-20h] BYREF
   
-    v7[0] = sub_60853E04(a2, (int)"On");
-    v7[1] = sub_60853E04(a2, (int)"TouchOn");
-    v7[2] = sub_60853E04(a2, (int)"Off");
-    v7[3] = sub_60853E04(a2, (int)"TouchOff");
-    v7[4] = sub_60853E04(a2, (int)"Decide");
-    v7[5] = sub_60853E04(a2, (int)"TouchDecide");
-    v7[6] = sub_60853E04(a2, (int)"Cancel");
-    v7[7] = sub_60853E04(a2, (int)"TouchCancel");
+    v7[0] = StringTable_lookupOffsetByName(a2, (int)"On");
+    v7[1] = StringTable_lookupOffsetByName(a2, (int)"TouchOn");
+    v7[2] = StringTable_lookupOffsetByName(a2, (int)"Off");
+    v7[3] = StringTable_lookupOffsetByName(a2, (int)"TouchOff");
+    v7[4] = StringTable_lookupOffsetByName(a2, (int)"Decide");
+    v7[5] = StringTable_lookupOffsetByName(a2, (int)"TouchDecide");
+    v7[6] = StringTable_lookupOffsetByName(a2, (int)"Cancel");
+    v7[7] = StringTable_lookupOffsetByName(a2, (int)"TouchCancel");
     result = sub_60980770(a3, (int)v7, 8, 1u);
     *(_DWORD *)(a1 + 44) = result;
     return result;
@@ -322494,13 +322500,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
     _DWORD v7[7]; // [sp+4h] [bp-1Ch] BYREF
   
-    v7[0] = sub_60853E04(a2, (int)"On");
-    v7[1] = sub_60853E04(a2, (int)"TouchOn");
-    v7[2] = sub_60853E04(a2, (int)"Off");
-    v7[3] = sub_60853E04(a2, (int)"TouchOff");
-    v7[4] = sub_60853E04(a2, (int)"Decide");
-    v7[5] = sub_60853E04(a2, (int)"TouchDecide");
-    v7[6] = sub_60853E04(a2, (int)"Cancel");
+    v7[0] = StringTable_lookupOffsetByName(a2, (int)"On");
+    v7[1] = StringTable_lookupOffsetByName(a2, (int)"TouchOn");
+    v7[2] = StringTable_lookupOffsetByName(a2, (int)"Off");
+    v7[3] = StringTable_lookupOffsetByName(a2, (int)"TouchOff");
+    v7[4] = StringTable_lookupOffsetByName(a2, (int)"Decide");
+    v7[5] = StringTable_lookupOffsetByName(a2, (int)"TouchDecide");
+    v7[6] = StringTable_lookupOffsetByName(a2, (int)"Cancel");
     result = sub_60980770(a3, (int)v7, 7, 1u);
     *(_DWORD *)(a1 + 44) = result;
     return result;
@@ -322884,13 +322890,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
       v7 = *(_DWORD *)(a3 + 28);
     a1[3] = v7;
-    v8 = sub_60853E04(a2, (int)"GaugeRatio");
+    v8 = StringTable_lookupOffsetByName(a2, (int)"GaugeRatio");
     a1[5] = sub_60980680(a3, v8, 1);
-    v9 = sub_60853E04(a2, (int)"TraceRatio");
+    v9 = StringTable_lookupOffsetByName(a2, (int)"TraceRatio");
     a1[6] = sub_60980680(a3, v9, 1);
     *(_BYTE *)(a1[5] + 51) &= ~0x20u;
     *(_BYTE *)(a1[6] + 51) &= ~0x20u;
-    v10 = (_BYTE *)sub_60853E04(a2, (int)"TraceColor");
+    v10 = (_BYTE *)StringTable_lookupOffsetByName(a2, (int)"TraceColor");
     v11 = v10 == 0;
     if ( v10 )
       v11 = *v10 == 0;
@@ -322901,7 +322907,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v12 )
         *(_BYTE *)(v12 + 51) &= ~0x20u;
     }
-    v13 = (_BYTE *)sub_60853E04(a2, (int)"Shortage");
+    v13 = (_BYTE *)StringTable_lookupOffsetByName(a2, (int)"Shortage");
     v14 = v13 == 0;
     if ( v13 )
       v14 = *v13 == 0;
@@ -323092,13 +323098,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v8 = *(_DWORD *)(a1 + 20);
       v9 = *(void (__fastcall **)(int))(*(_DWORD *)v8 + 96);
-      sub_608502E4(v8);
+      Object_getHalfwordAtChildPlus8(v8);
       if ( v3 < v2 )
       {
         v9(v8);
         v10 = *(_DWORD *)(a1 + 24);
         v11 = *(void (__fastcall **)(int))(*(_DWORD *)v10 + 96);
-        sub_608502E4(v10);
+        Object_getHalfwordAtChildPlus8(v10);
         v11(v10);
         result = *(int **)(a1 + 28);
         if ( !result )
@@ -323113,11 +323119,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v4 = *(_DWORD *)(a1 + 20);
       v5 = *(void (__fastcall **)(int))(*(_DWORD *)v4 + 96);
-      sub_608502E4(v4);
+      Object_getHalfwordAtChildPlus8(v4);
       v5(v4);
       v6 = *(_DWORD *)(a1 + 24);
       v7 = *(void (__fastcall **)(int))(*(_DWORD *)v6 + 96);
-      sub_608502E4(v6);
+      Object_getHalfwordAtChildPlus8(v6);
       v7(v6);
     }
     result = *(int **)(a1 + 28);
@@ -323250,14 +323256,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v9[8]; // [sp+0h] [bp-20h] BYREF
   
     sub_60991198(a1, a2, a3);
-    v9[0] = sub_60853E04(a2, (int)"TouchOn2");
-    v9[1] = sub_60853E04(a2, (int)&unk_60ABC94D);
-    v9[2] = sub_60853E04(a2, (int)"TouchOff2");
-    v9[3] = sub_60853E04(a2, (int)&unk_60ABC94D);
-    v9[4] = sub_60853E04(a2, (int)"TouchDecide2");
-    v9[5] = sub_60853E04(a2, (int)&unk_60ABC94D);
-    v9[6] = sub_60853E04(a2, (int)"TouchCancel");
-    v9[7] = sub_60853E04(a2, (int)&unk_60ABC94D);
+    v9[0] = StringTable_lookupOffsetByName(a2, (int)"TouchOn2");
+    v9[1] = StringTable_lookupOffsetByName(a2, (int)&unk_60ABC94D);
+    v9[2] = StringTable_lookupOffsetByName(a2, (int)"TouchOff2");
+    v9[3] = StringTable_lookupOffsetByName(a2, (int)&unk_60ABC94D);
+    v9[4] = StringTable_lookupOffsetByName(a2, (int)"TouchDecide2");
+    v9[5] = StringTable_lookupOffsetByName(a2, (int)&unk_60ABC94D);
+    v9[6] = StringTable_lookupOffsetByName(a2, (int)"TouchCancel");
+    v9[7] = StringTable_lookupOffsetByName(a2, (int)&unk_60ABC94D);
     v6 = (int *)sub_60980770(a3, (int)v9, 8, 1u);
     *(_DWORD *)(a1 + 72) = v6;
     sub_6098A344(v6, 1);
@@ -323570,7 +323576,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   LABEL_22:
       v4 = v26;
     }
-    v20 = (_BYTE *)sub_60853E04(v4, (int)"Check");
+    v20 = (_BYTE *)StringTable_lookupOffsetByName(v4, (int)"Check");
     v21 = v20 == 0;
     if ( v20 )
       v21 = *v20 == 0;
@@ -323584,7 +323590,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_BYTE *)(*(_DWORD *)(a1 + 60) + 51) &= ~0x20u;
       }
     }
-    result = sub_60853E04(v4, (int)"DragOnOff");
+    result = StringTable_lookupOffsetByName(v4, (int)"DragOnOff");
     v24 = result;
     v25 = result == 0;
     if ( result )
@@ -323733,14 +323739,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
     _DWORD v7[8]; // [sp+0h] [bp-20h] BYREF
   
-    v7[0] = sub_60853E04(a2, (int)"Select");
-    v7[1] = sub_60853E04(a2, (int)"TouchSelect");
-    v7[2] = sub_60853E04(a2, (int)"UnSelect");
-    v7[3] = sub_60853E04(a2, (int)"TouchUnSelect");
-    v7[4] = sub_60853E04(a2, (int)"Decide");
-    v7[5] = sub_60853E04(a2, (int)"TouchDecide");
-    v7[6] = sub_60853E04(a2, (int)"Cancel");
-    v7[7] = sub_60853E04(a2, (int)"TouchCancel");
+    v7[0] = StringTable_lookupOffsetByName(a2, (int)"Select");
+    v7[1] = StringTable_lookupOffsetByName(a2, (int)"TouchSelect");
+    v7[2] = StringTable_lookupOffsetByName(a2, (int)"UnSelect");
+    v7[3] = StringTable_lookupOffsetByName(a2, (int)"TouchUnSelect");
+    v7[4] = StringTable_lookupOffsetByName(a2, (int)"Decide");
+    v7[5] = StringTable_lookupOffsetByName(a2, (int)"TouchDecide");
+    v7[6] = StringTable_lookupOffsetByName(a2, (int)"Cancel");
+    v7[7] = StringTable_lookupOffsetByName(a2, (int)"TouchCancel");
     result = sub_60980770(a3, (int)v7, 8, 1u);
     *(_DWORD *)(a1 + 44) = result;
     return result;
@@ -323818,7 +323824,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           return result;
         v4 = *(_DWORD *)(a1 + 60);
         v5 = *(float *)(v4 + 16);
-        v6 = sub_608502E4(v4);
+        v6 = Object_getHalfwordAtChildPlus8(v4);
         result = 0;
         v7 = v5 == (float)(unsigned int)v6;
       }
@@ -325142,7 +325148,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = dword_60C7A0C0 + 8;
     *(_DWORD *)(a1 + 4) = 0;
     sub_60919E88((_DWORD *)(a1 + 8));
-    sub_6091ABEC((_DWORD *)(a1 + 72));
+    Texture_ctorWithDefaults((_DWORD *)(a1 + 72));
     *(_WORD *)(a1 + 416) = 0;
     *(_WORD *)(a1 + 418) = 0;
     *(_WORD *)(a1 + 420) = 5;
@@ -325456,7 +325462,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( __strex(v48 | 1, v45) );
         *(_BYTE *)(a1 + 350) = v69;
       }
-      sub_6091AC94(v70);
+      Object_clearLowFlagIfType5(v70);
       v49 = v27;
       v50 = 0.0;
       v51 = v27;
@@ -325755,7 +325761,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
   
     sub_60990E4C(a1, a2, a3);
-    v6 = sub_60853E04(a2, (int)"Check");
+    v6 = StringTable_lookupOffsetByName(a2, (int)"Check");
     v7 = sub_60980A38(a3, v6, 1);
     *(_DWORD *)(a1 + 64) = v7;
     *((_BYTE *)v7 + 51) |= 0x10u;
@@ -325820,7 +325826,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v5 = *(_DWORD *)(a1 + 64);
         v6 = *(float *)(v5 + 16);
         v3 = 0;
-        v7 = v6 == (float)(unsigned int)sub_608502E4(v5);
+        v7 = v6 == (float)(unsigned int)Object_getHalfwordAtChildPlus8(v5);
       }
       else
       {

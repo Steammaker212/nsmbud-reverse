@@ -630,7 +630,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10[0] = *(_DWORD *)(a1 + 328);
         v10[1] = v7;
         v10[2] = v8;
-        sub_60185F9C(a1, (int)v10, 2, 30, 30, 11778420);
+        Player_initMotionRamp(a1, (int)v10, 2, 30, 30, 11778420);
         result = 6;
         break;
       case 6:
@@ -709,7 +709,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v16 = LODWORD(v5);
         v17 = v7;
         v18 = v6;
-        sub_60185F9C(a1, (int)&v16, 2, 30, 30, 11778420);
+        Player_initMotionRamp(a1, (int)&v16, 2, 30, 30, 11778420);
         *(_DWORD *)(a1 + 344) = 1;
         *(_DWORD *)(a1 + 352) = 30;
         return 1;
@@ -1685,7 +1685,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _BOOL4 result; // r0
     int v3; // r1
   
-    sub_60185F9C(a1, a1 + 80, 0, 24, 16, 11778420);
+    Player_initMotionRamp(a1, a1 + 80, 0, 24, 16, 11778420);
     ActorMgr_findAndInstantiate(MEMORY[0xC8AEF0]);
     sub_601862E0(a1);
     *(_DWORD *)(a1 + 484) = 1;
@@ -1719,7 +1719,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           (*(void (__fastcall **)(_DWORD *))(*a1 + 144))(a1);
           a1[91] = 0;
         }
-        sub_60185F9C((int)a1, (int)(a1 + 20), 0, 24, 16, 11778420);
+        Player_initMotionRamp((int)a1, (int)(a1 + 20), 0, 24, 16, 11778420);
         ActorMgr_findAndInstantiate(MEMORY[0xC8AEF0]);
         sub_601862E0((int)a1);
         result = 2;
@@ -2535,13 +2535,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = a1 + 11;
       do
       {
-        v9 = sub_60183054(v3, v2, 64) == 0;
+        v9 = Player_getMaskedFieldByIndex(v3, v2, 64) == 0;
         v10 = v5;
         if ( v9
-          && (v9 = sub_60183054(v3, v2, 128) == 0, v10 = v6, v9)
-          && (v9 = sub_60183054(v3, v2, 256) == 0, v10 = v7, v9) )
+          && (v9 = Player_getMaskedFieldByIndex(v3, v2, 128) == 0, v10 = v6, v9)
+          && (v9 = Player_getMaskedFieldByIndex(v3, v2, 256) == 0, v10 = v7, v9) )
         {
-          if ( sub_60183054(v3, v2, 512) )
+          if ( Player_getMaskedFieldByIndex(v3, v2, 512) )
             *v8 = v2;
         }
         else
@@ -4273,7 +4273,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v5 = (_DWORD *)(a1 + 80);
           v24 = *(_DWORD *)(a1 + 80);
           v25 = v4 + -100.0;
-          sub_60185F9C(a1, (int)&v24, 6, 15, 15, 11778420);
+          Player_initMotionRamp(a1, (int)&v24, 6, 15, 15, 11778420);
           if ( *(_DWORD *)(a1 + 240) == 6 )
           {
             v6 = 161;
@@ -4298,7 +4298,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v5 = (_DWORD *)(a1 + 80);
           v24 = *(_DWORD *)(a1 + 80);
           v25 = v7 + 100.0;
-          sub_60185F9C(a1, (int)&v24, 0, 15, 15, 11778420);
+          Player_initMotionRamp(a1, (int)&v24, 0, 15, 15, 11778420);
           if ( *(_DWORD *)(a1 + 240) == 6 )
           {
             v8 = 162;
@@ -4393,7 +4393,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[2] = v3;
     v5[0] = v5[0] + 120.0;
     v5[1] = v2 + 100.0;
-    sub_60185F9C(
+    Player_initMotionRamp(
       a1,
       (int)v5,
       0,
@@ -4526,7 +4526,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v19[2]; // [sp+Ch] [bp-8h] BYREF
   
     v2 = MEMORY[0xAF3A98];
-    v3 = (int *)sub_601693A0(MEMORY[0xAF3A98]);
+    v3 = (int *)ActorMgr_findByTypeGlobal(MEMORY[0xAF3A98]);
     v4 = *(int **)(MEMORY[0xC7B400] + 27180);
     while ( 1 )
     {
@@ -4668,7 +4668,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v5[2]; // [sp+8h] [bp-8h] BYREF
   
     a1[59] = 0;
-    sub_60185F9C((int)a1, (int)(a1 + 82), 0, 15, 15, 11778420);
+    Player_initMotionRamp((int)a1, (int)(a1 + 82), 0, 15, 15, 11778420);
     v2 = a1[67];
     v3 = a1[68];
     v5[0] = 12321336;
@@ -4805,7 +4805,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v4 > 1 )
         {
           v17 = MEMORY[0xAF3A98];
-          v18 = (int *)sub_601693A0(MEMORY[0xAF3A98]);
+          v18 = (int *)ActorMgr_findByTypeGlobal(MEMORY[0xAF3A98]);
           v19 = *(int **)(MEMORY[0xC7B400] + 27180);
           while ( 1 )
           {
@@ -4902,7 +4902,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v30 > v31 )
           v29 += v31;
         AnimationCtrl_setRepeat(*v29 + 4, 0);
-        return sub_60185F9C((int)a1, v23, 0, 40, 40, 11778420);
+        return Player_initMotionRamp((int)a1, v23, 0, 40, 40, 11778420);
       }
     }
     else
@@ -5811,7 +5811,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       Mtx34_rotateZ(&v18, &v17);
       (*(void (__fastcall **)(_DWORD, float32x2_t *))(***(_DWORD ***)(a1 + 372) + 60))(**(_DWORD **)(a1 + 372), &v18);
       (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 372) + 68))(**(_DWORD **)(a1 + 372), a1 + 128);
-      sub_60421880(*(_DWORD **)(a1 + 372));
+      AnimationCtrl_switchBothHalvesThenUpdateModel(*(_DWORD **)(a1 + 372));
       result = *(unsigned __int8 *)(a1 + 404);
       if ( !*(_BYTE *)(a1 + 404) )
       {
@@ -6248,7 +6248,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v23 = v23 + (float)((float)((float)(v20 * 0.0) - (float)(v21 * 40.0)) + (float)(v22 * 0.0));
       (*(void (__fastcall **)(_DWORD, float32x2_t *))(*(_DWORD *)*v3 + 60))(*v3, &v13);
       (*(void (__fastcall **)(_DWORD, int))(*(_DWORD *)*v3 + 68))(*v3, a1 + 128);
-      sub_60421880(v3);
+      AnimationCtrl_switchBothHalvesThenUpdateModel(v3);
       result = hasIndexTable(MEMORY[0xC8996C]);
       if ( !result )
       {
@@ -7189,7 +7189,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           (*(void (__fastcall **)(_DWORD *))(*a1 + 144))(a1);
           a1[91] = 0;
         }
-        sub_60185F9C((int)a1, (int)(a1 + 20), 0, *((__int16 *)a1 + 194), *((__int16 *)a1 + 195), 11778420);
+        Player_initMotionRamp((int)a1, (int)(a1 + 20), 0, *((__int16 *)a1 + 194), *((__int16 *)a1 + 195), 11778420);
         ActorMgr_findAndInstantiate(MEMORY[0xC8AEF0]);
         sub_601862E0((int)a1);
         result = 2;
@@ -7237,7 +7237,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r4
     int v8; // r5
   
-    sub_60185F9C(a1, a1 + 80, 0, *(__int16 *)(a2 + 8), *(__int16 *)(a2 + 10), 11778420);
+    Player_initMotionRamp(a1, a1 + 80, 0, *(__int16 *)(a2 + 8), *(__int16 *)(a2 + 10), 11778420);
     result = (_DWORD *)(a1 + 380);
     v5 = *(_DWORD *)(a2 + 4);
     v6 = *(_DWORD *)(a2 + 8);
@@ -8176,7 +8176,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v20 = v20 + (float)((float)((float)(v17 * 0.0) - (float)(v18 * 40.0)) + (float)(v19 * 0.0));
       (*(void (__fastcall **)(_DWORD, float32x2_t *))(***(_DWORD ***)(a1 + 408) + 60))(**(_DWORD **)(a1 + 408), &v10);
       (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 408) + 68))(**(_DWORD **)(a1 + 408), a1 + 128);
-      sub_60421880(*(_DWORD **)(a1 + 408));
+      AnimationCtrl_switchBothHalvesThenUpdateModel(*(_DWORD **)(a1 + 408));
       result = hasIndexTable(MEMORY[0xC8996C]);
       if ( !result )
       {
@@ -8813,7 +8813,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = (float)((float)(v7 * v5[1]) + (float)(v6 * v5[0])) + (float)(v8 * v5[2]);
     v7 = (float)((float)(v7 * v5[5]) + (float)(v3 * v5[4])) + (float)(v8 * v5[6]);
     v8 = (float)((float)(v2 * v5[9]) + (float)(v3 * v5[8])) + (float)(v8 * v5[10]);
-    return sub_60185F9C(a1, a1 + 416, 0, 20, 20, (int)&v6);
+    return Player_initMotionRamp(a1, a1 + 416, 0, 20, 20, (int)&v6);
   }
 
 /* ============================================================================
@@ -9252,7 +9252,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       Mtx34_rotateZ(&v20, &v19);
       (*(void (__fastcall **)(_DWORD, float32x2_t *))(***(_DWORD ***)(a1 + 372) + 60))(**(_DWORD **)(a1 + 372), &v20);
       (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 372) + 68))(**(_DWORD **)(a1 + 372), a1 + 128);
-      sub_60421880(*(_DWORD **)(a1 + 372));
+      AnimationCtrl_switchBothHalvesThenUpdateModel(*(_DWORD **)(a1 + 372));
       result = hasIndexTable(MEMORY[0xC8996C]);
       if ( !result )
       {
@@ -21415,7 +21415,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = v2;
       if ( v2 != -1 )
       {
-        v4 = (_DWORD **)sub_601693A0(v2);
+        v4 = (_DWORD **)ActorMgr_findByTypeGlobal(v2);
         for ( j = MEMORY[0xC7B400]; v4 != *(_DWORD ***)(j + 27180); j = MEMORY[0xC7B400] )
         {
           v6 = *v4;
@@ -27939,7 +27939,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                     v48 = *(_DWORD *)(v52[0] + 84);
                     v49 = *(char **)(v52[0] + 88);
                     v50 = *(_DWORD *)(v52[0] + 96);
-                    if ( !sub_60183054(v25, v50, 16) )
+                    if ( !Player_getMaskedFieldByIndex(v25, v50, 16) )
                       break;
                     v27 = 3;
                     v28 = 0;
@@ -27952,7 +27952,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                     if ( (v27 & 3) != 0 )
                       goto LABEL_70;
                   }
-                  if ( !sub_60183054(v25, v50, 32) )
+                  if ( !Player_getMaskedFieldByIndex(v25, v50, 32) )
                     break;
                   v27 = 1;
                   v30 = *(unsigned __int8 *)(MEMORY[0xCC6D78] + 120);
@@ -28128,7 +28128,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                   v44 = *(_DWORD *)(v41 + 16);
                   if ( *(_BYTE *)(v41 + 28) )
                   {
-                    if ( sub_6019AE00(v44, v43) )
+                    if ( Object_classifyTwoBytes(v44, v43) )
                       goto LABEL_105;
                   }
                   else if ( sub_6019AE80(v44, v43) )
@@ -29061,7 +29061,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v59 = v65;
               goto LABEL_108;
             }
-            v59 = sub_6019AE00(v61, v62);
+            v59 = Object_classifyTwoBytes(v61, v62);
 
 /* ============================================================================
  * sub_6022CBE8
@@ -29100,7 +29100,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
     if ( v5 == 3 )
     {
-      if ( sub_6019AE00(a2, a3) )
+      if ( Object_classifyTwoBytes(a2, a3) )
         return 0;
     }
     else if ( v5 != 2 || sub_6019AE80(a2, a3) )
@@ -29952,7 +29952,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v4 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v4 == 3 )
         {
-          if ( sub_6019AE00(1u, 0) )
+          if ( Object_classifyTwoBytes(1u, 0) )
             goto LABEL_42;
         }
         else if ( v4 != 2 || sub_6019AE80(1u, 0) )
@@ -29966,14 +29966,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v13 )
         {
           v3 = 1;
-          if ( sub_6019AE00(0, 0xCu) != 1 )
+          if ( Object_classifyTwoBytes(0, 0xCu) != 1 )
             return v3;
         }
   LABEL_42:
         v14 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v14 == 3 )
         {
-          if ( sub_6019AE00(0, 0xCu) )
+          if ( Object_classifyTwoBytes(0, 0xCu) )
             goto LABEL_113;
         }
         else if ( v14 != 2 || sub_6019AE80(0, 0xCu) )
@@ -29983,14 +29983,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( !*(_DWORD *)(MEMORY[0xCC6D78] + 428) && *(_DWORD *)(MEMORY[0xCC6D78] + 440) == 12 )
         {
           v3 = 1;
-          if ( sub_6019AE00(1u, 0) != 1 )
+          if ( Object_classifyTwoBytes(1u, 0) != 1 )
             return v3;
         }
   LABEL_113:
         v3 = 3;
-        if ( sub_6019AE00(1u, 0) )
+        if ( Object_classifyTwoBytes(1u, 0) )
           return v3;
-        result = sub_6019AE00(0, 0xCu);
+        result = Object_classifyTwoBytes(0, 0xCu);
         if ( result )
           return 3;
         return result;
@@ -29998,7 +29998,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v5 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v5 == 3 )
         {
-          if ( sub_6019AE00(1u, 0) )
+          if ( Object_classifyTwoBytes(1u, 0) )
           {
   LABEL_50:
             v10 = 1;
@@ -30022,7 +30022,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v2 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v2 == 3 )
         {
-          if ( sub_6019AE00(1u, 0x16u) )
+          if ( Object_classifyTwoBytes(1u, 0x16u) )
           {
   LABEL_37:
             v10 = 1;
@@ -30044,7 +30044,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v6 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v6 == 3 )
         {
-          if ( sub_6019AE00(4u, 0x24u) )
+          if ( Object_classifyTwoBytes(4u, 0x24u) )
             goto LABEL_58;
         }
         else if ( v6 != 2 || sub_6019AE80(4u, 0x24u) )
@@ -30055,17 +30055,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v18 = v17 == 4;
         if ( v17 == 4 )
           v18 = *(_DWORD *)(MEMORY[0xCC6D78] + 440) == 36;
-        if ( v18 && !sub_6019AE00(0, 0xCu) )
+        if ( v18 && !Object_classifyTwoBytes(0, 0xCu) )
         {
           v3 = 1;
-          if ( sub_6019AE00(1u, 0xDu) != 1 )
+          if ( Object_classifyTwoBytes(1u, 0xDu) != 1 )
             return v3;
         }
   LABEL_58:
         v19 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v19 == 3 )
         {
-          if ( sub_6019AE00(1u, 0xDu) )
+          if ( Object_classifyTwoBytes(1u, 0xDu) )
             goto LABEL_94;
         }
         else if ( v19 != 2 || sub_6019AE80(1u, 0xDu) )
@@ -30076,17 +30076,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v27 = v26 == 1;
         if ( v26 == 1 )
           v27 = *(_DWORD *)(MEMORY[0xCC6D78] + 440) == 13;
-        if ( v27 && !sub_6019AE00(0, 0xCu) )
+        if ( v27 && !Object_classifyTwoBytes(0, 0xCu) )
         {
           v3 = 1;
-          if ( sub_6019AE00(4u, 0x24u) != 1 )
+          if ( Object_classifyTwoBytes(4u, 0x24u) != 1 )
             return v3;
         }
   LABEL_94:
         v28 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v28 == 3 )
         {
-          if ( sub_6019AE00(0, 0xCu) )
+          if ( Object_classifyTwoBytes(0, 0xCu) )
             goto LABEL_130;
         }
         else if ( v28 != 2 || sub_6019AE80(0, 0xCu) )
@@ -30096,12 +30096,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( !*(_DWORD *)(MEMORY[0xCC6D78] + 428) && *(_DWORD *)(MEMORY[0xCC6D78] + 440) == 12 )
         {
           v3 = 1;
-          if ( !sub_6019AE00(1u, 0xDu) && sub_6019AE00(4u, 0x24u) != 1 )
+          if ( !Object_classifyTwoBytes(1u, 0xDu) && Object_classifyTwoBytes(4u, 0x24u) != 1 )
             return v3;
         }
   LABEL_130:
         v3 = 3;
-        if ( !sub_6019AE00(4u, 0x24u) && !sub_6019AE00(0, 0xCu) )
+        if ( !Object_classifyTwoBytes(4u, 0x24u) && !Object_classifyTwoBytes(0, 0xCu) )
         {
           v10 = 1;
           v11 = 13;
@@ -30112,7 +30112,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v7 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v7 == 3 )
         {
-          if ( sub_6019AE00(4u, 0x16u) )
+          if ( Object_classifyTwoBytes(4u, 0x16u) )
             goto LABEL_69;
         }
         else if ( v7 != 2 || sub_6019AE80(4u, 0x16u) )
@@ -30123,17 +30123,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v21 = v20 == 4;
         if ( v20 == 4 )
           v21 = *(_DWORD *)(MEMORY[0xCC6D78] + 440) == 22;
-        if ( v21 && !sub_6019AE00(2u, 0xEu) )
+        if ( v21 && !Object_classifyTwoBytes(2u, 0xEu) )
         {
           v3 = 1;
-          if ( sub_6019AE00(3u, 0xFu) != 1 )
+          if ( Object_classifyTwoBytes(3u, 0xFu) != 1 )
             return v3;
         }
   LABEL_69:
         v22 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v22 == 3 )
         {
-          if ( sub_6019AE00(2u, 0xEu) )
+          if ( Object_classifyTwoBytes(2u, 0xEu) )
             goto LABEL_105;
         }
         else if ( v22 != 2 || sub_6019AE80(2u, 0xEu) )
@@ -30144,17 +30144,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v30 = v29 == 2;
         if ( v29 == 2 )
           v30 = *(_DWORD *)(MEMORY[0xCC6D78] + 440) == 14;
-        if ( v30 && !sub_6019AE00(3u, 0xFu) )
+        if ( v30 && !Object_classifyTwoBytes(3u, 0xFu) )
         {
           v3 = 1;
-          if ( sub_6019AE00(4u, 0x16u) != 1 )
+          if ( Object_classifyTwoBytes(4u, 0x16u) != 1 )
             return v3;
         }
   LABEL_105:
         v31 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v31 == 3 )
         {
-          if ( sub_6019AE00(3u, 0xFu) )
+          if ( Object_classifyTwoBytes(3u, 0xFu) )
             goto LABEL_140;
         }
         else if ( v31 != 2 || sub_6019AE80(3u, 0xFu) )
@@ -30165,15 +30165,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v36 = v35 == 3;
         if ( v35 == 3 )
           v36 = *(_DWORD *)(MEMORY[0xCC6D78] + 440) == 15;
-        if ( v36 && !sub_6019AE00(2u, 0xEu) )
+        if ( v36 && !Object_classifyTwoBytes(2u, 0xEu) )
         {
           v3 = 1;
-          if ( sub_6019AE00(4u, 0x16u) != 1 )
+          if ( Object_classifyTwoBytes(4u, 0x16u) != 1 )
             return v3;
         }
   LABEL_140:
         v3 = 3;
-        if ( !sub_6019AE00(4u, 0x16u) && !sub_6019AE00(2u, 0xEu) )
+        if ( !Object_classifyTwoBytes(4u, 0x16u) && !Object_classifyTwoBytes(2u, 0xEu) )
         {
           v10 = 3;
           v11 = 15;
@@ -30184,7 +30184,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v8 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v8 == 3 )
         {
-          if ( sub_6019AE00(5u, 0x16u) )
+          if ( Object_classifyTwoBytes(5u, 0x16u) )
             goto LABEL_79;
         }
         else if ( v8 != 2 || sub_6019AE80(5u, 0x16u) )
@@ -30198,14 +30198,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v24 )
         {
           v3 = 1;
-          if ( sub_6019AE00(4u, 0x10u) != 1 )
+          if ( Object_classifyTwoBytes(4u, 0x10u) != 1 )
             return v3;
         }
   LABEL_79:
         v25 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v25 == 3 )
         {
-          if ( sub_6019AE00(4u, 0x10u) )
+          if ( Object_classifyTwoBytes(4u, 0x10u) )
             goto LABEL_123;
         }
         else if ( v25 != 2 || sub_6019AE80(4u, 0x10u) )
@@ -30219,12 +30219,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v34 )
         {
           v3 = 1;
-          if ( sub_6019AE00(4u, 0x16u) != 1 )
+          if ( Object_classifyTwoBytes(4u, 0x16u) != 1 )
             return v3;
         }
   LABEL_123:
         v3 = 3;
-        if ( sub_6019AE00(5u, 0x16u) )
+        if ( Object_classifyTwoBytes(5u, 0x16u) )
           return v3;
         v10 = 4;
         v11 = 16;
@@ -30233,7 +30233,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v9 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
         if ( v9 == 3 )
         {
-          if ( sub_6019AE00(6u, 0x24u) )
+          if ( Object_classifyTwoBytes(6u, 0x24u) )
             goto LABEL_86;
         }
         else if ( v9 != 2 || sub_6019AE80(6u, 0x24u) )
@@ -30250,7 +30250,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10 = 6;
         v11 = 36;
   LABEL_143:
-        v3 = sub_6019AE00(v10, v11);
+        v3 = Object_classifyTwoBytes(v10, v11);
         if ( v3 )
           return 3;
         return v3;
@@ -34692,7 +34692,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)(a1 + 4));
       sub_6042FCB0(MEMORY[0xC9C2D0], *(_DWORD *)(a1 + 12));
     }
-    sub_60421880(*(_DWORD *)(a1 + 4));
+    AnimationCtrl_switchBothHalvesThenUpdateModel(*(_DWORD *)(a1 + 4));
     (*(void (__fastcall **)(_DWORD, _DWORD, _BYTE *))(***(_DWORD ***)(a1 + 4) + 108))(
       **(_DWORD **)(a1 + 4),
       *(_DWORD *)(a1 + 16),
@@ -41552,7 +41552,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v19 = v11;
         mapPositionToScreen(v17, &v18);
         v4 = 1;
-        sub_60813810(v10, "SE_EMY_DOWN", v17, 1, 0);
+        thunk_sub_608111C0(v10, "SE_EMY_DOWN", v17, 1, 0);
         v13 = *a2;
         v18 = *(float *)(a1 + 108);
         v12 = v18;
@@ -44071,10 +44071,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !v17 )
         v18 = v16;
       v19 = *(_DWORD *)(MEMORY[0xCC436C] + 4 * v18 + 32);
-      sub_603F01A0(MEMORY[0xC99D6C], v16, 20, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], *v15, 26, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], *v15, 25, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], *v15, 30, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], v16, 20, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *v15, 26, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *v15, 25, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *v15, 30, 0);
       *(_BYTE *)(v19 + 19) = 1;
       *(_BYTE *)(a1 + 19) = 1;
     }
@@ -45115,10 +45115,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v2 < 4 )
         v4 = v3;
       v5 = *(_DWORD *)(MEMORY[0xCC436C] + 4 * v4 + 32);
-      sub_603F01A0(MEMORY[0xC99D6C], v3, 20, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], (char)*v1, 26, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], (char)*v1, 25, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], (char)*v1, 30, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], v3, 20, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], (char)*v1, 26, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], (char)*v1, 25, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], (char)*v1, 30, 0);
       *(_BYTE *)(v5 + 19) = 1;
       *(v1 - 6295) = 1;
       v6 = 0;
@@ -45580,10 +45580,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v10 = *(char *)(a1 + 6314);
       v9 = (char *)(a1 + 6314);
-      sub_603F01A0(MEMORY[0xC99D6C], v10, 20, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], *v9, 26, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], *v9, 25, 0);
-      result = sub_603F01A0(MEMORY[0xC99D6C], *v9, 30, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], v10, 20, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *v9, 26, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *v9, 25, 0);
+      result = PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *v9, 30, 0);
       *(_DWORD *)(v9 + 214) = 0;
       return result;
     }
@@ -45673,7 +45673,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v14 = *(char *)(a1 + 6314);
           if ( (*(unsigned __int8 *)(MEMORY[0xC9CF0C] + 1404) & (1 << v14)) == 0 )
           {
-            sub_603F01A0(MEMORY[0xC99D6C], v14, 26, 0);
+            PlayerSlot_storeValueByType(MEMORY[0xC99D6C], v14, 26, 0);
             *v7 = 1;
           }
         }
@@ -45681,7 +45681,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( !result )
         {
           *v7 = 4;
-          return sub_603F01A0(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 26, 0);
+          return PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 26, 0);
         }
         return result;
       case 3:
@@ -45707,7 +45707,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 case 2:
                   if ( sub_60245C6C(a1) != 1 )
                     goto LABEL_49;
-                  sub_603F01A0(v17, *(char *)(a1 + 6314), 20, 0);
+                  PlayerSlot_storeValueByType(v17, *(char *)(a1 + 6314), 20, 0);
                   v18 = 3;
                   break;
                 case 3:
@@ -45720,7 +45720,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 case 4:
                   if ( sub_60245C6C(a1) )
                     goto LABEL_49;
-                  sub_603F01A0(v17, *(char *)(a1 + 6314), 30, 0);
+                  PlayerSlot_storeValueByType(v17, *(char *)(a1 + 6314), 30, 0);
                   v18 = 1;
                   break;
                 default:
@@ -45732,8 +45732,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         else
         {
-          sub_603F01A0(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 30, 0);
-          sub_603F01A0(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 20, 0);
+          PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 30, 0);
+          PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 20, 0);
         }
   LABEL_49:
         result = *(_DWORD *)(a1 + 6320);
@@ -45745,8 +45745,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = *(unsigned __int8 *)(MEMORY[0xC9CF0C] + 1404);
           if ( (result & (1 << v21)) == 0 )
           {
-            sub_603F01A0(MEMORY[0xC99D6C], v19, 30, 0);
-            result = sub_603F01A0(MEMORY[0xC99D6C], *v20, 20, 0);
+            PlayerSlot_storeValueByType(MEMORY[0xC99D6C], v19, 30, 0);
+            result = PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *v20, 20, 0);
             *v7 = 1;
           }
         }
@@ -46106,10 +46106,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     if ( !*(_DWORD *)(a1 + 6320) )
     {
-      sub_603F01A0(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 20, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 26, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 25, 0);
-      sub_603F01A0(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 30, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 20, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 26, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 25, 0);
+      PlayerSlot_storeValueByType(MEMORY[0xC99D6C], *(char *)(a1 + 6314), 30, 0);
     }
     EffectData_create(440, a1 + 6328, 0, a1 + 144);
     return StageActor::delete((StageActor *)a1, 1u);
@@ -51793,7 +51793,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v11 != (*(int (**)(void))(MEMORY[0xC8DDF8] + 8))() )
       j_ModelWrapper_updateAnims(*v9);
     AnimationCtrl_switchBothHalvesIfEnabled(*v9);
-    sub_60421880(*v9);
+    AnimationCtrl_switchBothHalvesThenUpdateModel(*v9);
     result = *(_DWORD *)(a1 + 6336);
     if ( result )
     {
@@ -51914,7 +51914,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(int, int))(*(_DWORD *)**v8 + 68))(**v8, a1 + 12144);
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6304));
     AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD *)(a1 + 6304));
-    sub_60421880(*(_DWORD *)(a1 + 6304));
+    AnimationCtrl_switchBothHalvesThenUpdateModel(*(_DWORD *)(a1 + 6304));
     result = *(_DWORD *)(a1 + 6336);
     if ( result )
     {
@@ -52954,7 +52954,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v12[0] = *(float *)(a1 + 108);
       v12[1] = v9;
       mapPositionToScreen(v11, v12);
-      sub_60813810(v10, "SE_EMY_BASABASA_SING", v11, 0, 0);
+      thunk_sub_608111C0(v10, "SE_EMY_BASABASA_SING", v11, 0, 0);
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13164024);
       return sub_6024EE5C(a1);
     }
@@ -53855,7 +53855,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v20();
       j_ModelWrapper_updateAnims(*v16);
     }
-    return sub_60421880(*v16);
+    return AnimationCtrl_switchBothHalvesThenUpdateModel(*v16);
   }
 
 /* ============================================================================
@@ -54508,7 +54508,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v11[0] = *(float *)(a1 + 108);
         v11[1] = v5;
         mapPositionToScreen(v10, v11);
-        return sub_60813810(v6, "SE_EMY_MAMEKURIBO_DEAD", v10, 0, 0);
+        return thunk_sub_608111C0(v6, "SE_EMY_MAMEKURIBO_DEAD", v10, 0, 0);
       }
     }
     else
@@ -58574,7 +58574,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v7[0] = *(float *)(v2 + 108);
         v7[1] = v4;
         mapPositionToScreen(v6, v7);
-        return sub_60813810(v5, "SE_EMY_CMN_TOUCH_HARD", v6, 1, 0);
+        return thunk_sub_608111C0(v5, "SE_EMY_CMN_TOUCH_HARD", v6, 1, 0);
       }
     }
     return result;
@@ -66697,14 +66697,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v7 = *(_DWORD *)(v2 + 108);
           v8 = v5;
           mapPositionToScreen(v6, (float *)&v7);
-          return sub_60813810(v4, "SE_EMY_CMN_TOUCH_POCON", v6, 1, 0);
+          return thunk_sub_608111C0(v4, "SE_EMY_CMN_TOUCH_POCON", v6, 1, 0);
         }
         else
         {
           v7 = *(_DWORD *)(v2 + 108);
           v8 = v5;
           mapPositionToScreen(v6, (float *)&v7);
-          return sub_60813810(v4, "SE_SYS_CMN_TOUCH", v6, 1, 0);
+          return thunk_sub_608111C0(v4, "SE_SYS_CMN_TOUCH", v6, 1, 0);
         }
       }
     }
@@ -67912,7 +67912,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = *(_DWORD *)(a1 + 108);
     v10 = v4;
     mapPositionToScreen(v8, (float *)&v9);
-    sub_60813810(v5, "SE_EMY_BUBBLE_EXTINCT", v8, 1, 0);
+    thunk_sub_608111C0(v5, "SE_EMY_BUBBLE_EXTINCT", v8, 1, 0);
     v6 = *(_DWORD *)(a1 + 108);
     v10 = *(_DWORD *)(a1 + 112);
     v9 = v6;
@@ -68413,7 +68413,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7[0] = v4;
       v7[1] = v5;
       mapPositionToScreen(v6, v7);
-      return sub_60813810(v3, "SE_EMY_CMN_TOUCH_HARD", v6, 1, 0);
+      return thunk_sub_608111C0(v3, "SE_EMY_CMN_TOUCH_HARD", v6, 1, 0);
     }
     return result;
   }
@@ -82924,7 +82924,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     LODWORD(v15[7]) = *(v1 - 1547);
     LODWORD(v15[11]) = *(v1 - 1546);
     (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v1 + 60))(**v1, v15);
-    return sub_60421880(*v1);
+    return AnimationCtrl_switchBothHalvesThenUpdateModel(*v1);
   }
 
 /* ============================================================================
@@ -84572,7 +84572,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14[1] = v9;
     v14[2] = v12;
     v11(v10, v14);
-    return sub_60421880(*v8);
+    return AnimationCtrl_switchBothHalvesThenUpdateModel(*v8);
   }
 
 /* ============================================================================
@@ -103169,7 +103169,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v18 = v8;
         mapPositionToScreen(v27, &v17);
         v4 = 1;
-        sub_60813810(v7, "SE_EMY_DOWN", v27, 1, 0);
+        thunk_sub_608111C0(v7, "SE_EMY_DOWN", v27, 1, 0);
         v9 = *(float *)(a1 + 108);
         v10 = v9 < *a2;
         v17 = v9 + *(float *)(a1 + 572);
@@ -108165,7 +108165,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v11[0] = *(float *)(a1 + 108);
           v11[1] = v7;
           mapPositionToScreen(v10, v11);
-          sub_60813810(v8, "SE_EMY_FISHBONE_BREAK", v10, 1, 0);
+          thunk_sub_608111C0(v8, "SE_EMY_FISHBONE_BREAK", v10, 1, 0);
           sub_602A6024(a1, *(_DWORD *)(a1 + 80), -1, -1);
           return 2;
         }
@@ -112825,7 +112825,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Mtx34_rotateZ(&v11, &v24);
     (*(void (__fastcall **)(_DWORD, float32x2_t *))(*(_DWORD *)**v6 + 60))(**v6, &v11);
     (*(void (__fastcall **)(_DWORD, int))(*(_DWORD *)**v6 + 68))(**v6, a1 + 6632);
-    return sub_60421880(*v6);
+    return AnimationCtrl_switchBothHalvesThenUpdateModel(*v6);
   }
 
 /* ============================================================================
@@ -113547,7 +113547,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v11[0] = *(float *)(v4 + 108);
             v11[1] = v7;
             mapPositionToScreen(v10, v11);
-            sub_60813810(v8, "SE_OBJ_TEKKYU_G_CRASH", v10, 1, 0);
+            thunk_sub_608111C0(v8, "SE_OBJ_TEKKYU_G_CRASH", v10, 1, 0);
             (*(void (__fastcall **)(_DWORD *, int))(*a1 + 192))(a1, 13176980);
           }
         }
@@ -113996,7 +113996,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 += 1575;
     (*(void (__fastcall **)(_DWORD, float32x2_t *))(*(_DWORD *)*v2 + 60))(*v2, &v4);
     (*(void (__fastcall **)(_DWORD, unsigned int *))(**(_DWORD **)*v1 + 68))(*(_DWORD *)*v1, v1 + 83);
-    return sub_60421880((_DWORD *)*v1);
+    return AnimationCtrl_switchBothHalvesThenUpdateModel((_DWORD *)*v1);
   }
 
 /* ============================================================================
@@ -118691,7 +118691,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = v5;
     v12 = v6;
     mapPositionToScreen(v19, &v11);
-    sub_60813810(v4, "SE_EMY_DOWN", v19, 1, 0);
+    thunk_sub_608111C0(v4, "SE_EMY_DOWN", v19, 1, 0);
     v7 = *a2 > a1[27];
     sub_602A6C70(a1, *(float *)&v7, v8, v9);
     v11 = *(float *)(4 * v7 + 0xAFE798);
@@ -119274,7 +119274,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v15 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       if ( v15 != (*(int (**)(void))(MEMORY[0xC908C0] + 8))() )
         j_ModelWrapper_updateAnims(*(_DWORD *)v8);
-      return sub_60421880(*(_DWORD *)v8);
+      return AnimationCtrl_switchBothHalvesThenUpdateModel(*(_DWORD *)v8);
     }
     return result;
   }
@@ -119843,7 +119843,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v11[0] = *(float *)(v3 + 108);
       v11[1] = v7;
       mapPositionToScreen(v10, v11);
-      sub_60813810(v8, "SE_EMY_DOWN", v10, 1, 0);
+      thunk_sub_608111C0(v8, "SE_EMY_DOWN", v10, 1, 0);
       *(_DWORD *)(v3 + 6336) = *a3 >= *(float *)(v3 + 108);
       *(_BYTE *)(v3 + 6328) = 1;
       (*(void (__fastcall **)(int, int))(*(_DWORD *)v3 + 192))(v3, 13178340);
@@ -119941,7 +119941,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v10[0] = *(float *)(a1 + 108);
       v10[1] = v6;
       mapPositionToScreen(v9, v10);
-      sub_60813810(v7, "SE_EMY_DOWN", v9, 1, 0);
+      thunk_sub_608111C0(v7, "SE_EMY_DOWN", v9, 1, 0);
       *(_DWORD *)(a1 + 6336) = *a2 >= *(float *)(a1 + 108);
       *(_BYTE *)(a1 + 6328) = 1;
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13178340);
@@ -130287,7 +130287,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v7 = *(_BYTE *)(a1 + 6680) == 0;
         if ( !v7 )
         {
-          sub_607A1FFC(v6);
+          StateMgr_changeStateFromCurrent(v6);
           v5 = (_DWORD *)MEMORY[0xCC436C];
         }
         v8 = v5[9];
@@ -130296,7 +130296,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v9 = *(_BYTE *)(a1 + 6681) == 0;
         if ( !v9 )
         {
-          sub_607A1FFC(v8);
+          StateMgr_changeStateFromCurrent(v8);
           v5 = (_DWORD *)MEMORY[0xCC436C];
         }
         v10 = v5[10];
@@ -130305,7 +130305,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v11 = *(_BYTE *)(a1 + 6682) == 0;
         if ( !v11 )
         {
-          sub_607A1FFC(v10);
+          StateMgr_changeStateFromCurrent(v10);
           v5 = (_DWORD *)MEMORY[0xCC436C];
         }
         v12 = v5[11];
@@ -130313,7 +130313,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v12 )
           v13 = *(_BYTE *)(a1 + 6683) == 0;
         if ( !v13 )
-          sub_607A1FFC(v12);
+          StateMgr_changeStateFromCurrent(v12);
       }
     }
     sub_602A33AC(a1);
@@ -130504,7 +130504,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 += 1714;
     (*(void (__fastcall **)(_DWORD, float32x2_t *))(*(_DWORD *)*v10 + 60))(*v10, &v12);
     (*(void (__fastcall **)(_DWORD, _DWORD **))(***(_DWORD ***)v1 + 68))(**(_DWORD **)v1, (_DWORD **)v1 + 133);
-    return sub_60421880(*(_DWORD **)v1);
+    return AnimationCtrl_switchBothHalvesThenUpdateModel(*(_DWORD **)v1);
   }
 
 /* ============================================================================
@@ -130553,7 +130553,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v4 = *(_BYTE *)(a1 + 6680) == 0;
       if ( !v4 )
       {
-        sub_607A1FFC(v3);
+        StateMgr_changeStateFromCurrent(v3);
         v2 = (_DWORD *)MEMORY[0xCC436C];
       }
       v5 = v2[9];
@@ -130562,7 +130562,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v6 = *(_BYTE *)(a1 + 6681) == 0;
       if ( !v6 )
       {
-        sub_607A1FFC(v5);
+        StateMgr_changeStateFromCurrent(v5);
         v2 = (_DWORD *)MEMORY[0xCC436C];
       }
       v7 = v2[10];
@@ -130571,7 +130571,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v8 = *(_BYTE *)(a1 + 6682) == 0;
       if ( !v8 )
       {
-        sub_607A1FFC(v7);
+        StateMgr_changeStateFromCurrent(v7);
         v2 = (_DWORD *)MEMORY[0xCC436C];
       }
       v9 = v2[11];
@@ -130579,7 +130579,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v9 )
         v10 = *(_BYTE *)(a1 + 6683) == 0;
       if ( !v10 )
-        sub_607A1FFC(v9);
+        StateMgr_changeStateFromCurrent(v9);
     }
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
     return 1;
@@ -131297,14 +131297,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v7 = *(_DWORD *)(v2 + 108);
           v8 = v5;
           mapPositionToScreen(v6, (float *)&v7);
-          return sub_60813810(v4, "SE_EMY_CMN_TOUCH_POCON", v6, 1, 0);
+          return thunk_sub_608111C0(v4, "SE_EMY_CMN_TOUCH_POCON", v6, 1, 0);
         }
         else
         {
           v7 = *(_DWORD *)(v2 + 108);
           v8 = v5;
           mapPositionToScreen(v6, (float *)&v7);
-          return sub_60813810(v4, "SE_SYS_CMN_TOUCH", v6, 1, 0);
+          return thunk_sub_608111C0(v4, "SE_SYS_CMN_TOUCH", v6, 1, 0);
         }
       }
     }
@@ -133679,7 +133679,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v26 = *(_DWORD *)(a1 + 108);
         v27 = v13;
         mapPositionToScreen(v29, (float *)&v26);
-        sub_60813810(v14, "SE_EMY_KALON", v29, 1, 0);
+        thunk_sub_608111C0(v14, "SE_EMY_KALON", v29, 1, 0);
       }
       else
       {
@@ -137086,7 +137086,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v23[0] = *(float *)(a1 + 108);
               v23[1] = v13;
               mapPositionToScreen(&v24, v23);
-              sub_60813810(v14, "SE_EMY_IBARAMUSHI_KNOCK_UP", &v24, 1, 0);
+              thunk_sub_608111C0(v14, "SE_EMY_IBARAMUSHI_KNOCK_UP", &v24, 1, 0);
               sub_602E4BC8(a1);
             }
             *v3 = 1;
@@ -138355,7 +138355,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v11 = *(_DWORD *)(v4 + 108);
             v12 = v9;
             mapPositionToScreen(v10, (float *)&v11);
-            sub_60813810(v8, "SE_EMY_IBARAMUSHI_KNOCK_UP", v10, 1, 0);
+            thunk_sub_608111C0(v8, "SE_EMY_IBARAMUSHI_KNOCK_UP", v10, 1, 0);
             return sub_602E4BC8(v4);
           }
           else
@@ -138363,7 +138363,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v11 = *(_DWORD *)(v4 + 108);
             v12 = v9;
             mapPositionToScreen(v10, (float *)&v11);
-            return sub_60813810(v8, "SE_EMY_IBARAMUSHI_KNOCK_UP", v10, 0, 0);
+            return thunk_sub_608111C0(v8, "SE_EMY_IBARAMUSHI_KNOCK_UP", v10, 0, 0);
           }
         }
       }
@@ -154800,7 +154800,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Mtx34_rotateX(&v9, a1 + 156);
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 6300) + 60))(**(_DWORD **)(a1 + 6300), &v9);
     (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 6300) + 68))(**(_DWORD **)(a1 + 6300), a1 + 8520);
-    sub_60421880(*(_DWORD *)(a1 + 6300));
+    AnimationCtrl_switchBothHalvesThenUpdateModel(*(_DWORD *)(a1 + 6300));
     return sub_60300044(a1);
   }
 

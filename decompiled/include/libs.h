@@ -271,7 +271,6 @@ bool __fastcall sub_60812FD8(int a1, int a2, int *a3, char a4, int a5);  /* 0x00
 int __fastcall sub_60813048(int a1);  /* 0x00813048 */
 int __fastcall sub_60813404(int a1);  /* 0x00813404 */
 int __fastcall sub_60813578(_DWORD *a1);  /* 0x00813578 */
-int __fastcall sub_60813810(int a1, int a2, float *a3, int a4, int *a5);  /* 0x00813810 */
 int __fastcall sub_60813818(int a1, int a2, int a3, float *a4, int a5, int *a6);  /* 0x00813818 */
 int __fastcall BasicSoundActor2_vf0(_DWORD *a1);  /* 0x00813bd4 */
 int __fastcall sub_60813BDC(int a1, int a2, float *a3, int a4, int *a5);  /* 0x00813bdc */
