@@ -14,8 +14,11 @@ import re
 import sys
 
 FUNC_HDR = re.compile(r"/\* =+\s*\n \* (\S+)\s*\n \* RVA 0x([0-9A-Fa-f]+)")
-GOTO = re.compile(r"\bgoto\s+(LABEL_\w+|loc_\w+|[A-Za-z_]\w*)\s*;")
-LABEL_DEF = re.compile(r"^(\s*)(LABEL_\w+|loc_\w+)\s*:", re.M)
+# Labels are now qualified as <owner>__LABEL_N by scripts/qualify_labels.py, and a `\b` before LABEL_ does
+# NOT match inside `sub_6078F32C__LABEL_12` (underscore is a word character), so an unanchored pattern
+# reported "0 truncated functions" the moment qualification ran. Match the qualified form explicitly.
+GOTO = re.compile(r"\bgoto\s+((?:\w+__)?LABEL_\d+|(?:\w+__)?loc_\w+)\s*;")
+LABEL_DEF = re.compile(r"^[ \t]*((?:\w+__)?LABEL_\d+|(?:\w+__)?loc_\w+)[ \t]*:", re.M)
 
 
 def functions(text):
@@ -42,10 +45,14 @@ def main(argv):
             with open(path, encoding="utf-8", errors="replace") as fh:
                 text = fh.read()
             for name, rva, body in functions(text):
-                used = {g for g in GOTO.findall(body) if g.startswith(("LABEL_", "loc_"))}
-                defined = {d for d in LABEL_DEF.findall(body)}
-                defined = {d[1] for d in defined} if defined and isinstance(next(iter(defined)), tuple) else {
-                    m.group(2) for m in LABEL_DEF.finditer(body)}
+                # GOTO has alternate branches and LABEL_DEF now has a single capture group, so take the
+                # name from whichever branch matched instead of assuming a fixed group index.
+                used = set()
+                for m in GOTO.finditer(body):
+                    lbl = m.group(1)
+                    if lbl.startswith(("LABEL_", "loc_")) or "__LABEL_" in lbl or "__loc_" in lbl:
+                        used.add(lbl)
+                defined = {m.group(1) for m in LABEL_DEF.finditer(body)}
                 missing = sorted(used - defined)
                 if missing:
                     total += 1

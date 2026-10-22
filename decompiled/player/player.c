@@ -173,15 +173,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
         {
           if ( MEMORY[0xCC2C58] )
-            goto LABEL_12;
+            goto sub_607825D4__LABEL_12;
           v2 = (_DWORD *)(result + 24);
         }
         *v2 = -1;
-  LABEL_12:
+  sub_607825D4__LABEL_12:
         *(_BYTE *)(result + 512) = 1;
         if ( v1 == 15 )
-          goto LABEL_25;
-        goto LABEL_21;
+          goto sub_607825D4__LABEL_25;
+        goto sub_607825D4__LABEL_21;
       }
       if ( !MEMORY[0xCC2C52] )
       {
@@ -194,17 +194,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *(_DWORD *)(result + 48) = 1;
             *(_BYTE *)(result + 512) = 1;
             *(_DWORD *)(result + 544) = 1;
-            goto LABEL_26;
+            goto sub_607825D4__LABEL_26;
           }
           if ( !MEMORY[0xCC2C58] )
           {
             *(_DWORD *)(result + 24) = -1;
             *(_BYTE *)(result + 512) = 1;
-  LABEL_22:
+  sub_607825D4__LABEL_22:
             *(_DWORD *)(result + 520) = -1;
-  LABEL_23:
+  sub_607825D4__LABEL_23:
             v1 = 0;
-            goto LABEL_27;
+            goto sub_607825D4__LABEL_27;
           }
         }
         else
@@ -214,20 +214,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( !MEMORY[0xCC2C55] )
             {
               v1 = MEMORY[0xCC2C58];
-              goto LABEL_27;
+              goto sub_607825D4__LABEL_27;
             }
             *(_BYTE *)(MEMORY[0xC9CF04] + 16) = 1;
             v1 = MEMORY[0xCC2C58];
             if ( MEMORY[0xCC2C58] )
             {
               *(_BYTE *)(result + 512) = 1;
-              goto LABEL_27;
+              goto sub_607825D4__LABEL_27;
             }
             v4 = (int)MEMORY[0xC249CC];
             *(_DWORD *)(result + 24) = (int)MEMORY[0xC249CC];
             *(_BYTE *)(result + 512) = 1;
             *(_DWORD *)(result + 520) = v4;
-            goto LABEL_23;
+            goto sub_607825D4__LABEL_23;
           }
           *(_BYTE *)(MEMORY[0xC9CF04] + 16) = 1;
           v1 = MEMORY[0xCC2C58];
@@ -238,24 +238,24 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               *(_BYTE *)(result + 512) = 1;
               *(_DWORD *)(result + 544) = 1;
               v1 = 75;
-              goto LABEL_27;
+              goto sub_607825D4__LABEL_27;
             case 0x2D:
               *(_DWORD *)(result + 24) = -1;
               *(_BYTE *)(result + 512) = 1;
               *(_DWORD *)(result + 520) = -1;
               v1 = 45;
-              goto LABEL_27;
+              goto sub_607825D4__LABEL_27;
             case 0:
               *(_DWORD *)(result + 32) = -1;
               *(_DWORD *)(result + 68) = -1;
               *(_BYTE *)(result + 512) = 1;
               *(_DWORD *)(result + 528) = -1;
               *(_DWORD *)(result + 564) = -1;
-              goto LABEL_23;
+              goto sub_607825D4__LABEL_23;
           }
         }
         *(_BYTE *)(result + 512) = 1;
-        goto LABEL_27;
+        goto sub_607825D4__LABEL_27;
       }
       *(_BYTE *)(MEMORY[0xC9CF04] + 16) = 1;
       v1 = MEMORY[0xCC2C58];
@@ -267,29 +267,29 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
       {
         if ( MEMORY[0xCC2C58] )
-          goto LABEL_20;
+          goto sub_607825D4__LABEL_20;
         v3 = (_DWORD *)(result + 24);
       }
       *v3 = -1;
-  LABEL_20:
+  sub_607825D4__LABEL_20:
       *(_BYTE *)(result + 512) = 1;
       if ( v1 == 15 )
       {
         *(_DWORD *)(result + 528) = -1;
-  LABEL_25:
+  sub_607825D4__LABEL_25:
         *(_DWORD *)(result + 568) = -1;
-  LABEL_26:
+  sub_607825D4__LABEL_26:
         v1 = 15;
-        goto LABEL_27;
+        goto sub_607825D4__LABEL_27;
       }
-  LABEL_21:
+  sub_607825D4__LABEL_21:
       if ( v1 )
       {
-  LABEL_27:
+  sub_607825D4__LABEL_27:
         MEMORY[0xCC2C58] = v1 + 1;
         return 13380696;
       }
-      goto LABEL_22;
+      goto sub_607825D4__LABEL_22;
     }
     return result;
   }
@@ -1189,19 +1189,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (*(_BYTE *)(a2 + 2529) & 2) != 0 )
         v2 = (*(_BYTE *)(a2 + 2537) & 2) == 0;
       if ( !v2 )
-        goto LABEL_13;
+        goto sub_607854D4__LABEL_13;
       v3 = *(_DWORD *)(a2 + 2532);
       v4 = (v3 & 0x10000) == 0;
       if ( (v3 & 0x10000) != 0 )
         v4 = (*(_BYTE *)(a2 + 2542) & 1) == 0;
       if ( !v4 )
-        goto LABEL_13;
+        goto sub_607854D4__LABEL_13;
       v5 = (*(_DWORD *)(a2 + 2532) & 0x8000) == 0;
       if ( (v3 & 0x8000) != 0 )
         v5 = (*(_BYTE *)(a2 + 2541) & 0x80) == 0;
       if ( !v5 )
       {
-  LABEL_13:
+  sub_607854D4__LABEL_13:
         v6 = *(int (__fastcall ****)(_DWORD, int))(result + 144);
         result = _cxa_guard_acquire_0(13386488);
         if ( result )
@@ -1335,7 +1335,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( !v6 )
         return SE_OBJ_PNGN_ICE_BREAK_ref_785B04(a1);
-  LABEL_27:
+  sub_607857AC__LABEL_27:
       if ( (**v6)(v6, 13087600) == 1 )
         sub_607A1E44(v6);
       return SE_OBJ_PNGN_ICE_BREAK_ref_785B04(a1);
@@ -1360,7 +1360,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         if ( !v6 )
           return SE_OBJ_PNGN_ICE_BREAK_ref_785B04(a1);
-        goto LABEL_27;
+        goto sub_607857AC__LABEL_27;
       }
     }
     if ( (*(_BYTE *)(v2 + 6903) & 3) != 0 )
@@ -1591,7 +1591,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[3] = v6;
     a1[4] = v5[6];
     if ( (v6 & 0x10) != 0 )
-      goto LABEL_7;
+      goto SE_GAKKI_ref__LABEL_7;
     v3 = 1;
     v7 = (v6 & 0x20) == 0;
     if ( (v6 & 0x20) == 0 )
@@ -1606,7 +1606,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-  LABEL_7:
+  SE_GAKKI_ref__LABEL_7:
       *a1 = v3;
     }
     if ( ((unsigned int)&unk_60CC4340 & ~(1618501820 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CC4340) )
@@ -1725,25 +1725,25 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = 0;
       v3 = 0;
       result[2] = 0;
-      goto LABEL_8;
+      goto sub_6078632C__LABEL_8;
     }
     if ( (v1 & 0x400) != 0 )
     {
       v3 = result[33] | result[32];
       v2 = v3 & ~result[2];
       result[2] = v3;
-  LABEL_8:
+  sub_6078632C__LABEL_8:
       result[3] = v2;
       if ( (v1 & 0x100) == 0 )
-        goto LABEL_22;
-  LABEL_21:
+        goto sub_6078632C__LABEL_22;
+  sub_6078632C__LABEL_21:
       v1 &= ~0x100u;
       v3 &= ~1u;
       v2 &= ~1u;
       result[1] = v1;
       result[2] = v3;
       result[3] = v2;
-      goto LABEL_22;
+      goto sub_6078632C__LABEL_22;
     }
     if ( *(_BYTE *)(MEMORY[0xC9CF0C] + 1392) )
     {
@@ -1754,13 +1754,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result[3] = 0;
       v5 = result + 3;
       if ( (v1 & 4) == 0 )
-        goto LABEL_18;
-  LABEL_17:
+        goto sub_6078632C__LABEL_18;
+  sub_6078632C__LABEL_17:
       v3 &= 0xFFFFFF3F;
       v2 &= 0xFFFFFF3F;
       *v4 = v3;
       *v5 = v2;
-      goto LABEL_18;
+      goto sub_6078632C__LABEL_18;
     }
     v5 = result + 3;
     v6 = *result;
@@ -1787,8 +1787,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *v5 = v2;
     }
     if ( (v1 & 4) != 0 )
-      goto LABEL_17;
-  LABEL_18:
+      goto sub_6078632C__LABEL_17;
+  sub_6078632C__LABEL_18:
     if ( (v1 & 8) != 0 )
     {
       v3 &= ~8u;
@@ -1797,19 +1797,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *v5 = v2;
     }
     if ( (v1 & 0x100) != 0 )
-      goto LABEL_21;
-  LABEL_22:
+      goto sub_6078632C__LABEL_21;
+  sub_6078632C__LABEL_22:
     if ( (v1 & 0x200) != 0 )
     {
       result[1] = v1 & 0xFFFFFDFF;
       result[37] = 9;
       if ( (v2 & 0x1000) != 0 )
-        goto LABEL_29;
-  LABEL_28:
+        goto sub_6078632C__LABEL_29;
+  sub_6078632C__LABEL_28:
       v2 &= ~8u;
       result[2] = v3 & 0xFFFFFFF7;
       result[3] = v2;
-      goto LABEL_29;
+      goto sub_6078632C__LABEL_29;
     }
     v8 = result[37];
     if ( v8 )
@@ -1819,10 +1819,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v9 )
       {
         if ( (v2 & 0x1000) == 0 )
-          goto LABEL_28;
+          goto sub_6078632C__LABEL_28;
       }
     }
-  LABEL_29:
+  sub_6078632C__LABEL_29:
     if ( !*((_BYTE *)result + 136) && *((_BYTE *)result + 137) )
     {
       *((_BYTE *)result + 137) = 0;
@@ -1960,19 +1960,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       case 2:
         result[2] &= 0xFFFFFF3F;
         v2 = result[3] & 0xFFFFFF3F;
-        goto LABEL_5;
+        goto sub_6078667C__LABEL_5;
       case 3:
         result[2] &= ~8u;
         v2 = result[3] & 0xFFFFFFF7;
-  LABEL_5:
+  sub_6078667C__LABEL_5:
         result[3] = v2;
         break;
       case 5:
         v3 = result[1] & 0xFFFFFFBF;
-        goto LABEL_8;
+        goto sub_6078667C__LABEL_8;
       case 6:
         v3 = result[1] & 0xFFFFFFDF;
-  LABEL_8:
+  sub_6078667C__LABEL_8:
         result[1] = v3;
         break;
       default:
@@ -2428,7 +2428,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return 0;
     }
     if ( (*(_DWORD *)(a1 + 8) & v4) == 0 )
-      goto LABEL_24;
+      goto sub_60786B38__LABEL_24;
     v5 = sub_60454C78(MEMORY[0xC9CF0C]);
     v6 = 0;
     if ( (*(_BYTE *)(a1 + 8) & 0xD0) == 0 )
@@ -2466,7 +2466,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( v14 < 6 )
         return 0;
-  LABEL_24:
+  sub_60786B38__LABEL_24:
       *(_BYTE *)(a1 + 137) = 0;
       return 0;
     }
@@ -2923,7 +2923,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v15 == 3 )
         v16 = -5;
       if ( v6 > 2 )
-        goto LABEL_68;
+        goto sub_607872F4__LABEL_68;
       v5 &= v16;
       ++v6;
     }
@@ -2934,7 +2934,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = 0;
     v22 = v6;
     if ( (v5 & (1 << v7)) != 0 )
-      goto LABEL_25;
+      goto sub_607872F4__LABEL_25;
     while ( 1 )
     {
       v24 = v17 <= 5;
@@ -2945,7 +2945,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 = v44[++v17];
       if ( (v5 & (1 << v7)) != 0 )
       {
-  LABEL_25:
+  sub_607872F4__LABEL_25:
         v23 = 0;
         if ( (unsigned int)v22 < 4 )
           v23 = v22;
@@ -2994,63 +2994,63 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     if ( (v20 & v19 & 1) == 0 )
-      goto LABEL_68;
+      goto sub_607872F4__LABEL_68;
     v30 = 1;
     if ( v40 == 4 )
     {
-  LABEL_56:
+  sub_607872F4__LABEL_56:
       if ( v30 <= 3 )
       {
-  LABEL_57:
+  sub_607872F4__LABEL_57:
         if ( *(&v40 + v30) != 2 )
         {
           v32 = v30 + 1;
           if ( v30 + 1 > 3 )
-            goto LABEL_68;
+            goto sub_607872F4__LABEL_68;
           if ( *(&v40 + v32) == 2 )
           {
             v31 = &v40 + v32;
-            goto LABEL_59;
+            goto sub_607872F4__LABEL_59;
           }
           v33 = v30 + 2;
           if ( v30 + 2 > 3 )
-            goto LABEL_68;
+            goto sub_607872F4__LABEL_68;
           if ( *(&v40 + v33) == 2 )
           {
             v31 = &v40 + v33;
-            goto LABEL_59;
+            goto sub_607872F4__LABEL_59;
           }
           v30 += 3;
           if ( v30 > 3 || *(&v40 + v30) != 2 )
-            goto LABEL_68;
+            goto sub_607872F4__LABEL_68;
         }
         v31 = &v40 + v30;
-  LABEL_59:
+  sub_607872F4__LABEL_59:
         *v18 = 2;
         *v31 = 4;
-        goto LABEL_68;
+        goto sub_607872F4__LABEL_68;
       }
-      goto LABEL_68;
+      goto sub_607872F4__LABEL_68;
     }
     if ( v41 == 4 )
     {
       v18 = &v41;
       v30 = 2;
-      goto LABEL_57;
+      goto sub_607872F4__LABEL_57;
     }
     if ( v42 == 4 )
     {
       v18 = &v42;
       v30 = 3;
-      goto LABEL_57;
+      goto sub_607872F4__LABEL_57;
     }
     if ( v43 == 4 )
     {
       v18 = &v43;
       v30 = 4;
-      goto LABEL_56;
+      goto sub_607872F4__LABEL_56;
     }
-  LABEL_68:
+  sub_607872F4__LABEL_68:
     v34 = v40;
     memset(v44, 0, sizeof(v44));
     v35 = MEMORY[0xAF3418];
@@ -3365,13 +3365,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( !v21 )
         {
           v23 = 0;
-          goto LABEL_91;
+          goto sub_60787B8C__LABEL_91;
         }
         v22 = *(_DWORD *)(v21 + 1316);
         if ( !v22 )
         {
           v23 = 0;
-          goto LABEL_91;
+          goto sub_60787B8C__LABEL_91;
         }
         if ( (v22 | 1) == 3 )
         {
@@ -3381,13 +3381,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             v23 = 0;
             v20 = 1;
-            goto LABEL_91;
+            goto sub_60787B8C__LABEL_91;
           }
         }
         else if ( v22 == 6 )
         {
           v23 = 0;
-          goto LABEL_91;
+          goto sub_60787B8C__LABEL_91;
         }
         v23 = arr_dword_60B0C20C[v22];
         v46 = v23 - 29;
@@ -3401,7 +3401,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v96 = v23;
           v16 &= ~v46;
         }
-  LABEL_91:
+  sub_60787B8C__LABEL_91:
         v48 = v14[10];
         if ( v48 && (v49 = *(_DWORD *)(v48 + 1316)) != 0 )
         {
@@ -3413,9 +3413,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             {
               v50 = 0;
               v20 = 1;
-              goto LABEL_104;
+              goto sub_60787B8C__LABEL_104;
             }
-  LABEL_99:
+  sub_60787B8C__LABEL_99:
             v50 = arr_dword_60B0C20C[v49];
             v51 = v50 - 29;
             v52 = (v16 & (1 << (v50 - 29))) == 0;
@@ -3428,42 +3428,42 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v97 = v50;
               v16 &= ~v51;
             }
-            goto LABEL_104;
+            goto sub_60787B8C__LABEL_104;
           }
           if ( v49 != 6 )
-            goto LABEL_99;
+            goto sub_60787B8C__LABEL_99;
           v50 = 0;
         }
         else
         {
           v50 = 0;
         }
-  LABEL_104:
+  sub_60787B8C__LABEL_104:
         v53 = v14[11];
         if ( !v53 )
-          goto LABEL_157;
+          goto sub_60787B8C__LABEL_157;
         v54 = *(_DWORD *)(v53 + 1316);
         if ( !v54 )
-          goto LABEL_157;
+          goto sub_60787B8C__LABEL_157;
         if ( (v54 | 1) == 3 )
         {
           if ( v20 )
-            goto LABEL_157;
+            goto sub_60787B8C__LABEL_157;
         }
         else if ( v54 == 6 )
         {
-          goto LABEL_157;
+          goto sub_60787B8C__LABEL_157;
         }
         v55 = dword_60B0C20C;
-  LABEL_154:
+  sub_60787B8C__LABEL_154:
         v68 = v55[v54];
         if ( (v16 & (1 << (v68 - 29))) != 0 )
         {
           v98[0] = v55[v54];
           v16 &= ~(1 << (v68 - 29));
           if ( v19 )
-            goto LABEL_163;
-  LABEL_158:
+            goto sub_60787B8C__LABEL_163;
+  sub_60787B8C__LABEL_158:
           if ( v15 )
           {
             v69 = BitCount32((v16 & -v16) - 1);
@@ -3475,7 +3475,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             }
             v14 = v88;
           }
-  LABEL_163:
+  sub_60787B8C__LABEL_163:
           if ( !v23 && v14[9] )
           {
             v70 = BitCount32((v16 & -v16) - 1);
@@ -3527,7 +3527,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                   ++v80;
                   v81 += 12;
                   if ( v80 >= v79 )
-                    goto LABEL_184;
+                    goto sub_60787B8C__LABEL_184;
                 }
                 v73 = (float *)((char *)&unk_60B0C0DC + 8 * v77);
                 v74 = v73[1] + (float)-(unsigned __int16)*(v81 - 7);
@@ -3538,7 +3538,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               }
               else
               {
-  LABEL_184:
+  sub_60787B8C__LABEL_184:
                 v13 = v76;
               }
               result = (int *)(*(int (__fastcall **)(int, float *, _DWORD, int))(*(_DWORD *)v75 + 256))(v75, &v99, 0, v13);
@@ -3547,11 +3547,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           return result;
         }
-  LABEL_157:
+  sub_60787B8C__LABEL_157:
         v68 = 0;
         if ( v19 )
-          goto LABEL_163;
-        goto LABEL_158;
+          goto sub_60787B8C__LABEL_163;
+        goto sub_60787B8C__LABEL_158;
       }
       if ( v15 )
       {
@@ -3590,7 +3590,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !v56 )
       {
         v23 = 0;
-        goto LABEL_134;
+        goto sub_60787B8C__LABEL_134;
       }
       v57 = *(_DWORD *)(v56 + 1316);
       if ( v57 )
@@ -4089,13 +4089,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             break;
           ++v7;
           if ( !--v5 )
-            goto LABEL_11;
+            goto sub_60789018__LABEL_11;
         }
       }
       else
       {
         v6 = a1[18];
-  LABEL_11:
+  sub_60789018__LABEL_11:
         result = 1;
         if ( v4 < v6 )
         {
@@ -4491,7 +4491,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_DWORD *)(MEMORY[0xC99DD4] + 764) == 4 )
       {
         result = 1;
-  LABEL_16:
+  sub_6078962C__LABEL_16:
         *(_DWORD *)(a1 + 168) = result;
         return result;
       }
@@ -4508,7 +4508,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !result )
     {
       result = 0;
-      goto LABEL_16;
+      goto sub_6078962C__LABEL_16;
     }
     return result;
   }
@@ -4532,54 +4532,54 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return result;
     }
     if ( *(_BYTE *)(a1 + 177) )
-      goto LABEL_36;
+      goto sub_60789778__LABEL_36;
     v3 = *(_DWORD *)(a1 + 32);
     if ( v3 )
     {
       if ( (result & 0x20) != 0 )
       {
         result = *(_DWORD *)(v3 + 1220) | 0x4000000;
-        goto LABEL_11;
+        goto sub_60789778__LABEL_11;
       }
       if ( (result & 8) != 0 || (result & 0x10) != 0 && (result = sub_607AF388(*(_DWORD *)(a1 + 32)), result == 1) )
       {
         result = *(_DWORD *)(v3 + 1220) | 0x8000000;
-  LABEL_11:
+  sub_60789778__LABEL_11:
         *(_DWORD *)(v3 + 1220) = result;
       }
     }
     v4 = *(_DWORD *)(a1 + 36);
     if ( !v4 )
-      goto LABEL_20;
+      goto sub_60789778__LABEL_20;
     result = *(_DWORD *)(MEMORY[0xC99E3C] + 56);
     if ( (result & 0x20) != 0 )
     {
       result = *(_DWORD *)(v4 + 1220) | 0x4000000;
-      goto LABEL_19;
+      goto sub_60789778__LABEL_19;
     }
     if ( (result & 8) != 0 || (result & 0x10) != 0 && (result = sub_607AF388(*(_DWORD *)(a1 + 36)), result == 1) )
     {
       result = *(_DWORD *)(v4 + 1220) | 0x8000000;
-  LABEL_19:
+  sub_60789778__LABEL_19:
       *(_DWORD *)(v4 + 1220) = result;
     }
-  LABEL_20:
+  sub_60789778__LABEL_20:
     v5 = *(_DWORD *)(a1 + 40);
     if ( !v5 )
-      goto LABEL_28;
+      goto sub_60789778__LABEL_28;
     result = *(_DWORD *)(MEMORY[0xC99E3C] + 56);
     if ( (result & 0x20) != 0 )
     {
       result = *(_DWORD *)(v5 + 1220) | 0x4000000;
-      goto LABEL_27;
+      goto sub_60789778__LABEL_27;
     }
     if ( (result & 8) != 0 || (result & 0x10) != 0 && (result = sub_607AF388(*(_DWORD *)(a1 + 40)), result == 1) )
     {
       result = *(_DWORD *)(v5 + 1220) | 0x8000000;
-  LABEL_27:
+  sub_60789778__LABEL_27:
       *(_DWORD *)(v5 + 1220) = result;
     }
-  LABEL_28:
+  sub_60789778__LABEL_28:
     v6 = *(_DWORD *)(a1 + 44);
     if ( v6 )
     {
@@ -4593,16 +4593,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( (result & 8) == 0 )
         {
           if ( (result & 0x10) == 0 )
-            goto LABEL_36;
+            goto sub_60789778__LABEL_36;
           result = sub_607AF388(*(_DWORD *)(a1 + 44));
           if ( result != 1 )
-            goto LABEL_36;
+            goto sub_60789778__LABEL_36;
         }
         result = *(_DWORD *)(v6 + 1220) | 0x8000000;
       }
       *(_DWORD *)(v6 + 1220) = result;
     }
-  LABEL_36:
+  sub_60789778__LABEL_36:
     *(_BYTE *)(a1 + 177) = 1;
     return result;
   }
@@ -4640,7 +4640,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v5 )
     {
       if ( v5 == 4 )
-        goto LABEL_59;
+        goto SE_PLY_HPDP_SPECIAL_ref__LABEL_59;
       v6 = (*(_BYTE *)(a1 + 66) & 1) == 0;
       if ( (*(_BYTE *)(a1 + 66) & 1) != 0 )
       {
@@ -4648,13 +4648,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v6 = v1 == 0;
       }
       if ( v6 )
-        goto LABEL_60;
+        goto SE_PLY_HPDP_SPECIAL_ref__LABEL_60;
       v13 = (*(int (__fastcall **)(int))(*(_DWORD *)v1 + 636))(v1);
       if ( v13 == 1
         && ((*(int (__fastcall **)(int, int))(*(_DWORD *)v1 + 640))(v1, 3)
          || (*(int (__fastcall **)(int, int))(*(_DWORD *)v1 + 640))(v1, 5)) )
       {
-        goto LABEL_60;
+        goto SE_PLY_HPDP_SPECIAL_ref__LABEL_60;
       }
       v14 = *(_DWORD *)(a1 + 32);
       v15 = v14 == 0;
@@ -4662,7 +4662,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v15 = *(_DWORD *)(v14 + 13056) == 0;
       if ( v15 )
       {
-  LABEL_60:
+  SE_PLY_HPDP_SPECIAL_ref__LABEL_60:
         v7 = (*(_BYTE *)(a1 + 66) & 2) == 0;
         if ( (*(_BYTE *)(a1 + 66) & 2) != 0 )
         {
@@ -4670,13 +4670,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v7 = v1 == 0;
         }
         if ( v7 )
-          goto LABEL_61;
+          goto SE_PLY_HPDP_SPECIAL_ref__LABEL_61;
         v16 = (*(int (__fastcall **)(int))(*(_DWORD *)v1 + 636))(v1);
         if ( v16 == 1
           && ((*(int (__fastcall **)(int, int))(*(_DWORD *)v1 + 640))(v1, 3)
            || (*(int (__fastcall **)(int, int))(*(_DWORD *)v1 + 640))(v1, 5)) )
         {
-          goto LABEL_61;
+          goto SE_PLY_HPDP_SPECIAL_ref__LABEL_61;
         }
         v17 = *(_DWORD *)(a1 + 36);
         v18 = v17 == 0;
@@ -4684,7 +4684,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v18 = *(_DWORD *)(v17 + 13056) == 0;
         if ( v18 )
         {
-  LABEL_61:
+  SE_PLY_HPDP_SPECIAL_ref__LABEL_61:
           v8 = (*(_BYTE *)(a1 + 66) & 4) == 0;
           if ( (*(_BYTE *)(a1 + 66) & 4) != 0 )
           {
@@ -4692,13 +4692,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v8 = v1 == 0;
           }
           if ( v8 )
-            goto LABEL_62;
+            goto SE_PLY_HPDP_SPECIAL_ref__LABEL_62;
           v19 = (*(int (__fastcall **)(int))(*(_DWORD *)v1 + 636))(v1);
           if ( v19 == 1
             && ((*(int (__fastcall **)(int, int))(*(_DWORD *)v1 + 640))(v1, 3)
              || (*(int (__fastcall **)(int, int))(*(_DWORD *)v1 + 640))(v1, 5)) )
           {
-            goto LABEL_62;
+            goto SE_PLY_HPDP_SPECIAL_ref__LABEL_62;
           }
           v20 = *(_DWORD *)(a1 + 40);
           v21 = v20 == 0;
@@ -4706,7 +4706,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v21 = *(_DWORD *)(v20 + 13056) == 0;
           if ( v21 )
           {
-  LABEL_62:
+  SE_PLY_HPDP_SPECIAL_ref__LABEL_62:
             v9 = (*(_BYTE *)(a1 + 66) & 8) == 0;
             if ( (*(_BYTE *)(a1 + 66) & 8) != 0 )
             {
@@ -4721,7 +4721,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               || (v23 = *(_DWORD *)(a1 + 44)) == 0
               || !*(_DWORD *)(v23 + 13056) )
             {
-  LABEL_59:
+  SE_PLY_HPDP_SPECIAL_ref__LABEL_59:
               if ( !*(_BYTE *)(MEMORY[0xC9A230] + 2084) )
               {
                 if ( ((unsigned int)&unk_60CC4370 & ~(1618516420 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CC4370) )
@@ -4999,49 +4999,49 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_BYTE *)(v2 + 20) && *(int *)(v2 + 24) >= 1 )
     {
       if ( (*(_BYTE *)(MEMORY[0xC9CF0C] + 1404) & 1) != 0 )
-        goto LABEL_10;
+        goto sub_6078A030__LABEL_10;
       v4 = a1[8];
       v5 = v4 == 0;
       if ( v4 )
         v5 = (*(_BYTE *)(v4 + 1219) & 8) == 0;
       if ( v5 )
-  LABEL_10:
+  sub_6078A030__LABEL_10:
         result = 1;
     }
     if ( *(_BYTE *)(v2 + 92) && *(int *)(v2 + 96) >= 1 )
     {
       if ( (*(_BYTE *)(MEMORY[0xC9CF0C] + 1404) & 2) != 0 )
-        goto LABEL_18;
+        goto sub_6078A030__LABEL_18;
       v6 = a1[9];
       v7 = v6 == 0;
       if ( v6 )
         v7 = (*(_BYTE *)(v6 + 1219) & 8) == 0;
       if ( v7 )
-  LABEL_18:
+  sub_6078A030__LABEL_18:
         ++result;
     }
     if ( *(_BYTE *)(v2 + 164) && *(int *)(v2 + 168) >= 1 )
     {
       if ( (*(_BYTE *)(MEMORY[0xC9CF0C] + 1404) & 4) != 0 )
-        goto LABEL_26;
+        goto sub_6078A030__LABEL_26;
       v8 = a1[10];
       v9 = v8 == 0;
       if ( v8 )
         v9 = (*(_BYTE *)(v8 + 1219) & 8) == 0;
       if ( v9 )
-  LABEL_26:
+  sub_6078A030__LABEL_26:
         ++result;
     }
     if ( *(_BYTE *)(v2 + 236) && *(int *)(v2 + 240) >= 1 )
     {
       if ( (*(_BYTE *)(MEMORY[0xC9CF0C] + 1404) & 8) != 0 )
-        goto LABEL_34;
+        goto sub_6078A030__LABEL_34;
       v10 = a1[11];
       v11 = v10 == 0;
       if ( v10 )
         v11 = (*(_BYTE *)(v10 + 1219) & 8) == 0;
       if ( v11 )
-  LABEL_34:
+  sub_6078A030__LABEL_34:
         ++result;
     }
     return result;
@@ -5075,18 +5075,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (*(_BYTE *)(MEMORY[0xC9CF0C] + 1404) & 1) != 0 )
       {
         if ( !v3 )
-          goto LABEL_11;
+          goto sub_6078A168__LABEL_11;
       }
       else if ( !v3 || (*(_BYTE *)(v3 + 1219) & 8) != 0 )
       {
-        goto LABEL_11;
+        goto sub_6078A168__LABEL_11;
       }
       v4 = isMode4(v3);
       result = 1;
       if ( v4 )
         return result;
     }
-  LABEL_11:
+  sub_6078A168__LABEL_11:
     v6 = MEMORY[0xC99DD4] + 272;
     if ( !MEMORY[0xC99DD4] )
       v6 = MEMORY[0xC99DEC] + 16;
@@ -5096,18 +5096,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (*(_BYTE *)(MEMORY[0xC9CF0C] + 1404) & 2) != 0 )
       {
         if ( !v7 )
-          goto LABEL_21;
+          goto sub_6078A168__LABEL_21;
       }
       else if ( !v7 || (*(_BYTE *)(v7 + 1219) & 8) != 0 )
       {
-        goto LABEL_21;
+        goto sub_6078A168__LABEL_21;
       }
       v8 = isMode4(v7);
       result = 1;
       if ( v8 )
         return result;
     }
-  LABEL_21:
+  sub_6078A168__LABEL_21:
     v9 = MEMORY[0xC99DD4] + 272;
     if ( !MEMORY[0xC99DD4] )
       v9 = MEMORY[0xC99DEC] + 16;
@@ -5117,18 +5117,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (*(_BYTE *)(MEMORY[0xC9CF0C] + 1404) & 4) != 0 )
       {
         if ( !v10 )
-          goto LABEL_31;
+          goto sub_6078A168__LABEL_31;
       }
       else if ( !v10 || (*(_BYTE *)(v10 + 1219) & 8) != 0 )
       {
-        goto LABEL_31;
+        goto sub_6078A168__LABEL_31;
       }
       v11 = isMode4(v10);
       result = 1;
       if ( v11 )
         return result;
     }
-  LABEL_31:
+  sub_6078A168__LABEL_31:
     v12 = MEMORY[0xC99DD4] + 272;
     if ( !MEMORY[0xC99DD4] )
       v12 = MEMORY[0xC99DEC] + 16;
@@ -5598,7 +5598,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
       {
         if ( a4 != 1 )
-          goto LABEL_28;
+          goto sub_6078AB40__LABEL_28;
         v7 = 0;
         if ( a3 < 4 )
           v7 = a3;
@@ -5655,7 +5655,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         else
         {
-  LABEL_28:
+  sub_6078AB40__LABEL_28:
           if ( a2 == 1 )
             return sub_604005D0(MEMORY[0xC99E3C], a3, 3, 3, 0, 0);
           else
@@ -5897,7 +5897,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( *(_DWORD *)(v9 + 4 * v7) == a2 )
           break;
         if ( v2 == ++v7 )
-          goto LABEL_24;
+          goto sub_6078B160__LABEL_24;
       }
       if ( v2 > v7 )
       {
@@ -5936,7 +5936,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = result + 26;
       v2 = 0;
     }
-  LABEL_24:
+  sub_6078B160__LABEL_24:
     v16 = *v4;
     if ( v2 < *v4 )
     {
@@ -6092,7 +6092,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = a1[8];
     if ( !v2 )
-      goto LABEL_5;
+      goto sub_6078B41C__LABEL_5;
     v3 = sub_607C70B0(a1[8]);
     if ( !v3 )
       v3 = v2;
@@ -6100,10 +6100,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = 1;
     if ( !v4 )
     {
-  LABEL_5:
+  sub_6078B41C__LABEL_5:
       v6 = a1[9];
       if ( !v6 )
-        goto LABEL_9;
+        goto sub_6078B41C__LABEL_9;
       v7 = sub_607C70B0(a1[9]);
       if ( !v7 )
         v7 = v6;
@@ -6111,10 +6111,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = 1;
       if ( !v8 )
       {
-  LABEL_9:
+  sub_6078B41C__LABEL_9:
         v9 = a1[10];
         if ( !v9 )
-          goto LABEL_13;
+          goto sub_6078B41C__LABEL_13;
         v10 = sub_607C70B0(a1[10]);
         if ( !v10 )
           v10 = v9;
@@ -6122,7 +6122,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = 1;
         if ( !v11 )
         {
-  LABEL_13:
+  sub_6078B41C__LABEL_13:
           v12 = a1[11];
           if ( v12 )
           {
@@ -6171,7 +6171,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( result >= 1 )
         {
           if ( (*(unsigned __int8 *)(MEMORY[0xC9CF0C] + 1404) & (1 << i)) != 0 )
-            goto LABEL_13;
+            goto SE_SYS_COMPLETE_MESSAGE_YELLOW_ref__LABEL_13;
           result = v3[i];
           v8 = result == 0;
           if ( result )
@@ -6181,7 +6181,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           if ( v8 )
           {
-  LABEL_13:
+  SE_SYS_COMPLETE_MESSAGE_YELLOW_ref__LABEL_13:
             result = *(_DWORD *)(MEMORY[0xCC436C] + 4 * i + 32);
             if ( result )
               result = (*(int (__fastcall **)(int))(*(_DWORD *)result + 1460))(result);
@@ -6216,7 +6216,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !MEMORY[0xC99DD4] )
       v2 = MEMORY[0xC99DEC] + 16;
     if ( !*(_BYTE *)(v2 + 20) )
-      goto LABEL_8;
+      goto sub_6078B6A0__LABEL_8;
     v3 = (int (__fastcall ***)(_DWORD, int))a1[8];
     if ( _cxa_guard_acquire_0(13226964) )
     {
@@ -6225,12 +6225,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( !v3 || (v4 = (**v3)(v3, 13226960), result = 1, !v4) )
     {
-  LABEL_8:
+  sub_6078B6A0__LABEL_8:
       v6 = MEMORY[0xC99DD4] + 272;
       if ( !MEMORY[0xC99DD4] )
         v6 = MEMORY[0xC99DEC] + 16;
       if ( !*(_BYTE *)(v6 + 92) )
-        goto LABEL_15;
+        goto sub_6078B6A0__LABEL_15;
       v7 = (int (__fastcall ***)(_DWORD, int))a1[9];
       if ( _cxa_guard_acquire_0(13226964) )
       {
@@ -6239,12 +6239,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( !v7 || (v8 = (**v7)(v7, 13226960), result = 1, !v8) )
       {
-  LABEL_15:
+  sub_6078B6A0__LABEL_15:
         v9 = MEMORY[0xC99DD4] + 272;
         if ( !MEMORY[0xC99DD4] )
           v9 = MEMORY[0xC99DEC] + 16;
         if ( !*(_BYTE *)(v9 + 164) )
-          goto LABEL_22;
+          goto sub_6078B6A0__LABEL_22;
         v10 = (int (__fastcall ***)(_DWORD, int))a1[10];
         if ( _cxa_guard_acquire_0(13226964) )
         {
@@ -6253,7 +6253,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         if ( !v10 || (v11 = (**v10)(v10, 13226960), result = 1, !v11) )
         {
-  LABEL_22:
+  sub_6078B6A0__LABEL_22:
           v12 = MEMORY[0xC99DD4] + 272;
           if ( !MEMORY[0xC99DD4] )
             v12 = MEMORY[0xC99DEC] + 16;
@@ -6750,7 +6750,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = (unsigned __int16)*v34 & (1 << v5);
       if ( (*v34 & (unsigned __int16)(1 << v5)) != 0 )
         break;
-  LABEL_25:
+  sub_6078C590__LABEL_25:
       ++v5;
       v4 += 8;
       if ( v5 == 6 )
@@ -6789,7 +6789,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = (int)ModelWrapper_setup(v25, v20, a2, 0);
         v18[66] = (int)v24;
       }
-      goto LABEL_25;
+      goto sub_6078C590__LABEL_25;
     }
     v7 = (*(int (__fastcall **)(int *))(*a1 + 20))(a1);
     if ( v7 )
@@ -6829,7 +6829,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = (int)ModelWrapper_setup(v31, v7, (int)&v35, 0);
       a1[65] = (int)v30;
       v3 = a2;
-      goto LABEL_25;
+      goto sub_6078C590__LABEL_25;
     }
     result = a1[60];
     a1[65] = result;
@@ -7036,14 +7036,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v12 != *(unsigned __int8 *)(v9 + i - 1) )
           break;
         if ( v12 == v7 )
-          goto LABEL_13;
+          goto sub_6078CD2C__LABEL_13;
         if ( i > 0x80000 )
           break;
         v13 = *(unsigned __int8 *)(v10 + i);
         if ( v13 != *(unsigned __int8 *)(v9 + i) )
           break;
         if ( v13 == v7 )
-          goto LABEL_13;
+          goto sub_6078CD2C__LABEL_13;
       }
       if ( (int)++v6 >= 24 )
       {
@@ -7051,7 +7051,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         break;
       }
     }
-  LABEL_13:
+  sub_6078CD2C__LABEL_13:
     if ( v6 >= 0x18 )
       v6 = 0;
     return sub_60793EB4(a1, a2, *(_DWORD *)(a1 + 4 * v6 + 308));
@@ -7470,17 +7470,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v5 )
       *(_DWORD *)(a1 + 492) = v5 - 1;
     if ( *(_DWORD *)(a1 + 232) )
-      goto LABEL_6;
+      goto sub_6078D4AC__LABEL_6;
     v12 = *(_DWORD *)(a1 + 208);
     if ( (v12 & 0x8000) != 0 )
     {
       if ( (v12 & 0x2000) != 0 )
       {
         v9 = MEMORY[0xB0AF80];
-        goto LABEL_57;
+        goto sub_6078D4AC__LABEL_57;
       }
       if ( (v12 & 0x4000) == 0 )
-        goto LABEL_6;
+        goto sub_6078D4AC__LABEL_6;
       v25 = 11579264;
     }
     else
@@ -7488,30 +7488,30 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (v12 & 0x2000) != 0 )
       {
         v9 = MEMORY[0xB0AF7C];
-        goto LABEL_57;
+        goto sub_6078D4AC__LABEL_57;
       }
       if ( (v12 & 0x4000) == 0 )
-        goto LABEL_6;
+        goto sub_6078D4AC__LABEL_6;
       v25 = 11579260;
     }
     v9 = -*(_DWORD *)v25;
-  LABEL_57:
+  sub_6078D4AC__LABEL_57:
     v10 = 0;
     if ( !v9 )
     {
-  LABEL_6:
+  sub_6078D4AC__LABEL_6:
       *(_DWORD *)(a1 + 496) = 0;
       *(_DWORD *)(a1 + 492) = MEMORY[0xB0AF98];
       if ( MEMORY[0xC99DD4] && sub_603FD530(MEMORY[0xC99DD4] + 764) == 1 )
         *(_DWORD *)(a1 + 492) = MEMORY[0xB0AF94];
       if ( !MEMORY[0xC9A684] )
-        goto LABEL_13;
+        goto sub_6078D4AC__LABEL_13;
       v6 = *(unsigned __int8 *)(MEMORY[0xC9A684] + 16);
       v7 = v6 == 6;
       if ( v6 == 6 )
         v7 = *(_BYTE *)(MEMORY[0xC9A684] + 17) == 20;
       if ( !v7 || !MEMORY[0xC7B400] )
-        goto LABEL_13;
+        goto sub_6078D4AC__LABEL_13;
       v23 = *(int (__fastcall ****)(_DWORD, int))ActorMgr_findByType(MEMORY[0xC7B400], MEMORY[0xAF3844]);
       if ( _cxa_guard_acquire_0(13087588) )
       {
@@ -7519,7 +7519,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         _cxa_guard_release_0(13087588);
       }
       if ( !v23 || (v24 = (**v23)(v23, 13087584), v8 = 60, !v24) )
-  LABEL_13:
+  sub_6078D4AC__LABEL_13:
         v8 = sub_60792ADC(a1, 30) - 30;
       v9 = 0;
       v10 = 1;
@@ -7728,16 +7728,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( !v20 )
           v21 = 1;
         if ( v11 < v19 || v20 )
-          goto LABEL_22;
-        goto LABEL_20;
+          goto sub_6078D94C__LABEL_22;
+        goto sub_6078D94C__LABEL_20;
       }
       if ( v11 >= v19 )
       {
-  LABEL_20:
+  sub_6078D94C__LABEL_20:
         v21 = 0;
         if ( v19 < v11 )
           v21 = -1;
-  LABEL_22:
+  sub_6078D94C__LABEL_22:
         if ( !v21 )
           v9 = ((int)v14 - v8 - 24) >> 4;
       }
@@ -7991,7 +7991,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v67 = v67 * v6;
         v71 = v71 * v6;
         v75 = v75 * v6;
-  LABEL_42:
+  sub_6078DDAC__LABEL_42:
         result = (*(int (__fastcall **)(int, int, float *, _DWORD *))(*(_DWORD *)v2 + 96))(v2, v5++, v66, v65);
         if ( v5 == v4 )
           return result;
@@ -8001,13 +8001,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v5 != v7 )
         v8 = v5 == *(_DWORD *)(a1 + 364);
       if ( !v8 )
-        goto LABEL_42;
+        goto sub_6078DDAC__LABEL_42;
       v9 = *(_DWORD *)(a1 + 300);
       v10 = v9 == 3;
       if ( v9 == 3 )
         v10 = (*(_BYTE *)(a1 + 202) & 0x80) == 0;
       if ( !v10 )
-        goto LABEL_42;
+        goto sub_6078DDAC__LABEL_42;
       v11 = *(_DWORD *)(a1 + 288);
       v12 = v67;
       v13 = v75;
@@ -8058,33 +8058,33 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v20 < v28 )
           {
             v18 = -1;
-            goto LABEL_36;
+            goto sub_6078DDAC__LABEL_36;
           }
           v18 = -1;
           if ( v30 )
           {
-  LABEL_36:
+  sub_6078DDAC__LABEL_36:
             v21 = v62;
             if ( !v31 )
               v18 = ((int)v24 - v17 - 24) >> 4;
-            goto LABEL_38;
+            goto sub_6078DDAC__LABEL_38;
           }
-  LABEL_32:
+  sub_6078DDAC__LABEL_32:
           v31 = 0;
           if ( v28 < v20 )
             v31 = -1;
-          goto LABEL_36;
+          goto sub_6078DDAC__LABEL_36;
         }
         v18 = -1;
         if ( v20 >= v28 )
-          goto LABEL_32;
+          goto sub_6078DDAC__LABEL_32;
         v21 = v62;
       }
       else
       {
         v21 = v62;
       }
-  LABEL_38:
+  sub_6078DDAC__LABEL_38:
       v32 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(a1 + 16) + 20) + 40) + 120 * v18 + 32) + 24)
           + 96 * v5;
       v33 = *(unsigned __int8 *)(v32 + 53);
@@ -8138,7 +8138,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v65[0] = 1065353216;
       v65[1] = 1065353216;
       v65[2] = 1065353216;
-      goto LABEL_42;
+      goto sub_6078DDAC__LABEL_42;
     }
     return result;
   }
@@ -8604,20 +8604,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                       if ( v20 != *(unsigned __int8 *)(v31 + v18 - 1) )
                         break;
                       if ( v20 == v10 )
-                        goto LABEL_24;
+                        goto sub_6078E940__LABEL_24;
                       if ( v18 > 0x80000 )
                         break;
                       v21 = *(unsigned __int8 *)(v19 + v18);
                       if ( v21 != *(unsigned __int8 *)(v31 + v18) )
                         break;
                       if ( v21 == v10 )
-                        goto LABEL_24;
+                        goto sub_6078E940__LABEL_24;
                       v18 += 2;
                     }
                     if ( ++v15 >= v14 )
-                      goto LABEL_27;
+                      goto sub_6078E940__LABEL_27;
                   }
-  LABEL_24:
+  sub_6078E940__LABEL_24:
                   v22 = sub_609184C4(v13, v15);
                   v23 = *(unsigned __int16 *)(v3 + 66);
                   v24 = v22;
@@ -8636,7 +8636,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                   }
                 }
               }
-  LABEL_27:
+  sub_6078E940__LABEL_27:
               ++v7;
             }
             while ( v7 != v28 );
@@ -9146,14 +9146,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           case 19:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_hip_to_stoop" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             break;
           case 20:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_stoop" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9180,11 +9180,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v18 >= v24 )
               v18 = v24 - 1;
             v23 = "M_stoop";
-            goto LABEL_484;
+            goto Player_animSetCarry_load__LABEL_484;
           case 21:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_stoop_start" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9211,11 +9211,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v18 >= v25 )
               v18 = v25 - 1;
             v23 = "M_stoop_start";
-            goto LABEL_484;
+            goto Player_animSetCarry_load__LABEL_484;
           case 22:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_slip" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9242,11 +9242,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v18 >= v26 )
               v18 = v26 - 1;
             v23 = "M_slip";
-            goto LABEL_484;
+            goto Player_animSetCarry_load__LABEL_484;
           case 23:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_sliped" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9273,11 +9273,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v18 >= v27 )
               v18 = v27 - 1;
             v23 = "M_sliped";
-            goto LABEL_484;
+            goto Player_animSetCarry_load__LABEL_484;
           case 24:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_slip_to_stoop" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9304,11 +9304,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v18 >= v28 )
               v18 = v28 - 1;
             v23 = "M_slip_to_stoop";
-            goto LABEL_484;
+            goto Player_animSetCarry_load__LABEL_484;
           case 25:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_carry_walk" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9335,11 +9335,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v18 >= v29 )
               v18 = v29 - 1;
             v23 = "M_carry_walk";
-            goto LABEL_484;
+            goto Player_animSetCarry_load__LABEL_484;
           case 26:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_carry_throw" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9366,11 +9366,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v18 >= v30 )
               v18 = v30 - 1;
             v23 = "M_carry_throw";
-            goto LABEL_484;
+            goto Player_animSetCarry_load__LABEL_484;
           case 27:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_carry_wait" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9397,11 +9397,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v18 >= v31 )
               v18 = v31 - 1;
             v23 = "M_carry_wait";
-            goto LABEL_484;
+            goto Player_animSetCarry_load__LABEL_484;
           case 38:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_swim_wait" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9428,11 +9428,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v18 >= v32 )
               v18 = v32 - 1;
             v23 = "M_swim_wait";
-            goto LABEL_484;
+            goto Player_animSetCarry_load__LABEL_484;
           case 40:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_swim_walk" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9459,11 +9459,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v18 >= v33 )
               v18 = v33 - 1;
             v23 = "M_swim_walk";
-            goto LABEL_484;
+            goto Player_animSetCarry_load__LABEL_484;
           case 41:
             v17 = *(char **)(a4 + 4);
             if ( v17 == "M_swim_standing" )
-              goto LABEL_485;
+              goto Player_animSetCarry_load__LABEL_485;
             v18 = 0;
             v19 = MEMORY[0xB3BA34];
             while ( 2 )
@@ -9549,22 +9549,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v12 = sub_60793198(a1);
         *a2 = 1084227584;
-        goto LABEL_9;
+        goto sub_6079104C__LABEL_9;
       }
     }
     v12 = sub_60793198(a1);
     if ( a4 == 137 )
     {
-  LABEL_9:
+  sub_6079104C__LABEL_9:
       v13 = 1;
       if ( v12 )
         v13 = 3;
-      goto LABEL_15;
+      goto sub_6079104C__LABEL_15;
     }
     if ( v12 )
       v12 = 2;
     v13 = v12;
-  LABEL_15:
+  sub_6079104C__LABEL_15:
     v14 = *(_DWORD *)(a1 + 300);
     v15 = a5;
     if ( v14 == 2 )
@@ -9586,13 +9586,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           if ( *(unsigned __int8 *)(v29 + v23 + 1) == MEMORY[0xB3BA34] )
           {
-  LABEL_58:
+  sub_6079104C__LABEL_58:
             ++v23;
             break;
           }
           if ( *(unsigned __int8 *)(v29 + v23 + 2) == MEMORY[0xB3BA34] )
           {
-  LABEL_59:
+  sub_6079104C__LABEL_59:
             v23 += 2;
             break;
           }
@@ -9604,7 +9604,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             break;
           }
         }
-  LABEL_60:
+  sub_6079104C__LABEL_60:
         v52 = *(_DWORD *)(v56 + 8);
         if ( v23 >= v52 )
           v23 = v52 - 1;
@@ -9612,8 +9612,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *((_BYTE *)v16 + v23) = v24;
         v15 = a5;
         if ( a5 )
-          goto LABEL_71;
-        goto LABEL_70;
+          goto sub_6079104C__LABEL_71;
+        goto sub_6079104C__LABEL_70;
       }
     }
     else if ( v14 == 4 )
@@ -9630,8 +9630,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v15 = a5;
         v22 = 0x400000;
         if ( a5 )
-          goto LABEL_71;
-        goto LABEL_70;
+          goto sub_6079104C__LABEL_71;
+        goto sub_6079104C__LABEL_70;
       }
       (*(void (__fastcall **)(int *))(*v32 + 12))(v32);
       v36 = 0;
@@ -9683,7 +9683,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v41 = v40 + 1;
           v42 = (const void *)v40[1];
           if ( v39 == v42 )
-            goto LABEL_72;
+            goto sub_6079104C__LABEL_72;
           v43 = a5;
           (*(void (__fastcall **)(int *))(*v40 + 12))(v40);
           v44 = 0;
@@ -9692,9 +9692,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           while ( *(unsigned __int8 *)(v46 + v44) != MEMORY[0xB3BA34] )
           {
             if ( *(unsigned __int8 *)(v46 + v44 + 1) == MEMORY[0xB3BA34] )
-              goto LABEL_77;
+              goto sub_6079104C__LABEL_77;
             if ( *(unsigned __int8 *)(v46 + v44 + 2) == MEMORY[0xB3BA34] )
-              goto LABEL_78;
+              goto sub_6079104C__LABEL_78;
             v26 = v44 + 2 <= 0x7FFFF;
             v44 += 3;
             if ( !v26 )
@@ -9714,7 +9714,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v49 = v47 + 20;
           v42 = v50;
           if ( v39 == v50 )
-            goto LABEL_72;
+            goto sub_6079104C__LABEL_72;
           v43 = a5;
           (*(void (__fastcall **)(int *))(*v48 + 12))(v48);
           v44 = 0;
@@ -9724,13 +9724,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             if ( *(unsigned __int8 *)(v51 + v44 + 1) == MEMORY[0xB3BA34] )
             {
-  LABEL_77:
+  sub_6079104C__LABEL_77:
               ++v44;
               break;
             }
             if ( *(unsigned __int8 *)(v51 + v44 + 2) == MEMORY[0xB3BA34] )
             {
-  LABEL_78:
+  sub_6079104C__LABEL_78:
               v44 += 2;
               break;
             }
@@ -9749,7 +9749,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         qmemcpy(v39, v42, v44);
         *((_BYTE *)v39 + v44) = v45;
         v15 = v43;
-        goto LABEL_72;
+        goto sub_6079104C__LABEL_72;
       }
       v16 = *(void **)(a3 + 4);
       v17 = &arr_dword_60CC4840[2 * v13];
@@ -9768,26 +9768,26 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( *(unsigned __int8 *)(v25 + v23) != MEMORY[0xB3BA34] )
         {
           if ( *(unsigned __int8 *)(v25 + v23 + 1) == MEMORY[0xB3BA34] )
-            goto LABEL_58;
+            goto sub_6079104C__LABEL_58;
           if ( *(unsigned __int8 *)(v25 + v23 + 2) == MEMORY[0xB3BA34] )
-            goto LABEL_59;
+            goto sub_6079104C__LABEL_59;
           v26 = v23 + 2 <= 0x7FFFF;
           v23 += 3;
           if ( !v26 )
           {
             v23 = 0;
-            goto LABEL_60;
+            goto sub_6079104C__LABEL_60;
           }
         }
-        goto LABEL_60;
+        goto sub_6079104C__LABEL_60;
       }
     }
     if ( !v15 )
-  LABEL_70:
+  sub_6079104C__LABEL_70:
       *(_DWORD *)(a1 + 196) |= v22;
-  LABEL_71:
+  sub_6079104C__LABEL_71:
     *(_DWORD *)(a1 + 200) |= v22;
-  LABEL_72:
+  sub_6079104C__LABEL_72:
     v54 = sub_60793198(a1);
     result = 1;
     if ( v54 == 1 )
@@ -9831,14 +9831,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         case 19:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_Rhip_to_stoop" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           break;
         case 20:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_Rstoop" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -9865,11 +9865,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v11 )
             v7 = v11 - 1;
           v10 = "P_Rstoop";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         case 21:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_Rstoop_start" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -9896,11 +9896,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v12 )
             v7 = v12 - 1;
           v10 = "P_Rstoop_start";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         case 24:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_Rslip_to_stoop" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -9927,11 +9927,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v13 )
             v7 = v13 - 1;
           v10 = "P_Rslip_to_stoop";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         case 108:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_RSeat" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -9958,11 +9958,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v14 )
             v7 = v14 - 1;
           v10 = "P_RSeat";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         case 109:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_RSeat_out" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -9989,11 +9989,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v15 )
             v7 = v15 - 1;
           v10 = "P_RSeat_out";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         case 110:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_RSeat_success" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -10020,11 +10020,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v16 )
             v7 = v16 - 1;
           v10 = "P_RSeat_success";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         case 111:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_RSeat_fail" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -10051,11 +10051,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v17 )
             v7 = v17 - 1;
           v10 = "P_RSeat_fail";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         case 112:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_RSeat_successB" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -10082,11 +10082,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v18 )
             v7 = v18 - 1;
           v10 = "P_RSeat_successB";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         case 123:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_Rsjump" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -10113,11 +10113,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v19 )
             v7 = v19 - 1;
           v10 = "P_Rsjump";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         case 124:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_RSjump2" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -10144,11 +10144,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v20 )
             v7 = v20 - 1;
           v10 = "P_RSjump2";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         case 125:
           v6 = *(char **)(a3 + 4);
           if ( v6 == "P_RSjumped" )
-            goto LABEL_136;
+            goto Player_registerRideAnimations__LABEL_136;
           v7 = 0;
           v8 = MEMORY[0xB3BA34];
           while ( 2 )
@@ -10175,10 +10175,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= v21 )
             v7 = v21 - 1;
           v10 = "P_RSjumped";
-  LABEL_135:
+  Player_registerRideAnimations__LABEL_135:
           qmemcpy(v6, v10, v7);
           v6[v7] = v8;
-  LABEL_136:
+  Player_registerRideAnimations__LABEL_136:
           a1[49] |= 0x800000u;
           a1[50] |= 0x800000u;
           return 1;
@@ -10188,18 +10188,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       while ( 1 )
       {
         if ( (unsigned __int8)aPRhipToStoop[v7] == MEMORY[0xB3BA34] )
-          goto LABEL_88;
+          goto Player_registerRideAnimations__LABEL_88;
         if ( v7 > 0x7FFFF )
           break;
         if ( (unsigned __int8)aPRhipToStoop[v7 + 1] == MEMORY[0xB3BA34] )
         {
           ++v7;
-  LABEL_88:
+  Player_registerRideAnimations__LABEL_88:
           v9 = *(_DWORD *)(a3 + 8);
           if ( v7 >= v9 )
             v7 = v9 - 1;
           v10 = "P_Rhip_to_stoop";
-          goto LABEL_135;
+          goto Player_registerRideAnimations__LABEL_135;
         }
         v7 += 2;
       }
@@ -10461,11 +10461,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 120))(a1);
         break;
       case 1:
-        goto LABEL_7;
+        goto sub_60792394__LABEL_7;
       case 0:
         if ( (*(_BYTE *)(52 * *((_DWORD *)a1 + 7) + 0xCBFBF4) & 2) != 0 )
           return (*(int (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 92))(a1);
-  LABEL_7:
+  sub_60792394__LABEL_7:
         if ( (a1[197] & 0xC0) != 0 )
           sub_60793184(a1);
         break;
@@ -10541,41 +10541,41 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
         {
           if ( v2 == *(_DWORD *)(a1 + 308) )
-            goto LABEL_33;
+            goto sub_607924BC__LABEL_33;
           v17 = *(_DWORD *)(a1 + 316);
           v18 = v2 == v17;
           if ( v2 != v17 )
             v18 = v2 == *(_DWORD *)(a1 + 320);
           if ( v18 )
-            goto LABEL_33;
+            goto sub_607924BC__LABEL_33;
           v19 = *(_DWORD *)(a1 + 324);
           v20 = v2 == v19;
           if ( v2 != v19 )
             v20 = v2 == *(_DWORD *)(a1 + 376);
           if ( v20 )
-            goto LABEL_33;
+            goto sub_607924BC__LABEL_33;
           v21 = *(_DWORD *)(a1 + 328);
           v22 = v2 == v21;
           if ( v2 != v21 )
             v22 = v2 == *(_DWORD *)(a1 + 332);
           if ( v22 )
-            goto LABEL_33;
+            goto sub_607924BC__LABEL_33;
           v23 = *(_DWORD *)(a1 + 336);
           v24 = v2 == v23;
           if ( v2 != v23 )
             v24 = v2 == *(_DWORD *)(a1 + 380);
           if ( v24 || v2 == *(_DWORD *)(a1 + 312) )
-            goto LABEL_33;
+            goto sub_607924BC__LABEL_33;
           if ( v2 != *(_DWORD *)(a1 + 340) )
-            goto LABEL_13;
+            goto sub_607924BC__LABEL_13;
           v12 = (*(_BYTE *)(a1 + 208) & 0x10) == 0;
           if ( (*(_BYTE *)(a1 + 208) & 0x10) != 0 )
             v12 = (*(_BYTE *)(a1 + 198) & 1) == 0;
           if ( !v12 )
-  LABEL_33:
+  sub_607924BC__LABEL_33:
             v13 = v10;
           else
-  LABEL_13:
+  sub_607924BC__LABEL_13:
             v13 = v9;
           CollisionMask_markPair(v13, v2);
           v16 = v11;
@@ -10938,7 +10938,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (a2 & 0xFFFFFFFE) != 0xE8 )
         v24 = (a1[52] & 7) == 0;
       if ( v24 )
-        goto LABEL_36;
+        goto sub_60792B58__LABEL_36;
       v25 = (a1[52] & 6) == 0;
       if ( (v23 & 6) != 0 )
       {
@@ -10959,7 +10959,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( (a1[49] & 2) != 0 && (v23 = a1[52], (v23 & 0x10) == 0) )
       {
-  LABEL_36:
+  sub_60792B58__LABEL_36:
         v26 = (v23 & 0xC0) == 0;
         if ( (v23 & 0xC0) != 0 )
           v26 = a1[8] == -1;
@@ -11451,22 +11451,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           if ( *(unsigned __int8 *)(v19 + v11 + 1) == MEMORY[0xB3BA34] )
           {
-  LABEL_27:
+  sub_607938B8__LABEL_27:
             ++v11;
-            goto LABEL_29;
+            goto sub_607938B8__LABEL_29;
           }
           if ( *(unsigned __int8 *)(v19 + v11 + 2) == MEMORY[0xB3BA34] )
           {
-  LABEL_28:
+  sub_607938B8__LABEL_28:
             v11 += 2;
-            goto LABEL_29;
+            goto sub_607938B8__LABEL_29;
           }
           v14 = v11 + 2 <= 0x7FFFF;
           v11 += 3;
           if ( !v14 )
           {
             v11 = 0;
-            goto LABEL_29;
+            goto sub_607938B8__LABEL_29;
           }
         }
         break;
@@ -11487,15 +11487,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( *(unsigned __int8 *)(v24 + v11) != MEMORY[0xB3BA34] )
         {
           if ( *(unsigned __int8 *)(v24 + v11 + 1) == MEMORY[0xB3BA34] )
-            goto LABEL_27;
+            goto sub_607938B8__LABEL_27;
           if ( *(unsigned __int8 *)(v24 + v11 + 2) == MEMORY[0xB3BA34] )
-            goto LABEL_28;
+            goto sub_607938B8__LABEL_28;
           v14 = v11 + 2 <= 0x7FFFF;
           v11 += 3;
           if ( !v14 )
           {
             v11 = 0;
-            goto LABEL_29;
+            goto sub_607938B8__LABEL_29;
           }
         }
         break;
@@ -11514,22 +11514,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         while ( *(unsigned __int8 *)(v13 + v11) != MEMORY[0xB3BA34] )
         {
           if ( *(unsigned __int8 *)(v13 + v11 + 1) == MEMORY[0xB3BA34] )
-            goto LABEL_27;
+            goto sub_607938B8__LABEL_27;
           if ( *(unsigned __int8 *)(v13 + v11 + 2) == MEMORY[0xB3BA34] )
-            goto LABEL_28;
+            goto sub_607938B8__LABEL_28;
           v14 = v11 + 2 <= 0x7FFFF;
           v11 += 3;
           if ( !v14 )
           {
             v11 = 0;
-            goto LABEL_29;
+            goto sub_607938B8__LABEL_29;
           }
         }
         break;
       default:
         return v6;
     }
-  LABEL_29:
+  sub_607938B8__LABEL_29:
     v25 = *(_DWORD *)(a2 + 8);
     if ( v11 >= v25 )
       v11 = v25 - 1;
@@ -11567,7 +11567,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       LODWORD(v5) = *(_DWORD *)(a1 + 212);
       if ( (unsigned int)v5 < 3 )
         return v5;
-  LABEL_13:
+  sub_60793B2C__LABEL_13:
       *(_DWORD *)(a1 + 212) = 0;
       LODWORD(v5) = 0;
       return v5;
@@ -11579,7 +11579,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 10LL * (unsigned int)sead__Random__getU32(v7);
     LODWORD(v5) = HIDWORD(v8);
     if ( HIDWORD(v8) <= 5 )
-      goto LABEL_13;
+      goto sub_60793B2C__LABEL_13;
     v9 = 2;
     if ( HIDWORD(v8) < 9 )
       v9 = 1;
@@ -11997,7 +11997,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v7 >= v5 )
     {
       if ( v7 <= v5 )
-        goto LABEL_19;
+        goto sub_60793FF0__LABEL_19;
       v8 = v7 + -1.0;
       v9 = v7 < (float)(v7 + -1.0);
       v10 = (float)(v7 + -1.0) <= v5;
@@ -12015,7 +12015,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v9 )
       v7 = v5;
     *(float *)(a1 + 180) = v7;
-  LABEL_19:
+  sub_60793FF0__LABEL_19:
     v11 = a2 + 4;
     v13 = *a2;
     v14 = a2[1];
@@ -12097,7 +12097,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v1 >= 0.0 )
     {
       if ( v1 <= 0.0 )
-        goto LABEL_10;
+        goto sub_60794238__LABEL_10;
       v2 = v1 + -1.0;
       v3 = v1 < (float)(v1 + -1.0);
       v4 = (float)(v1 + -1.0) <= 0.0;
@@ -12114,7 +12114,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v3 )
       v1 = v2;
     result[48] = v1;
-  LABEL_10:
+  sub_60794238__LABEL_10:
     if ( v1 == 0.0 )
     {
       result[46] = result[47];
@@ -12175,7 +12175,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       case 0x73u:
       case 0xACu:
       case 0xADu:
-        goto LABEL_6;
+        goto sub_6079437C__LABEL_6;
       case 0x74u:
       case 0x75u:
       case 0x76u:
@@ -12235,13 +12235,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( Float2_equalTest(**(_DWORD **)(*(_DWORD *)(a1 + 24) + 12) + 4) )
           return v3;
         v4 = *(_DWORD *)(a1 + 24);
-        goto LABEL_8;
+        goto sub_6079437C__LABEL_8;
       case 0x8Bu:
         v3 = 1;
         if ( Float2_equalTest(**(_DWORD **)(*(_DWORD *)(a1 + 24) + 12) + 4) )
           return v3;
         v4 = *(_DWORD *)(a1 + 24);
-        goto LABEL_8;
+        goto sub_6079437C__LABEL_8;
       case 0x94u:
         v3 = 1;
         if ( Float2_equalTest(**(_DWORD **)(*(_DWORD *)(a1 + 24) + 12) + 4)
@@ -12251,16 +12251,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           return v3;
         }
         v4 = *(_DWORD *)(a1 + 24);
-        goto LABEL_8;
+        goto sub_6079437C__LABEL_8;
       default:
         if ( v2 > 0x19 || ((1 << v2) & 0x200001E) == 0 )
           return 0;
-  LABEL_6:
+  sub_6079437C__LABEL_6:
         v3 = 1;
         if ( !Float2_equalTest(**(_DWORD **)(*(_DWORD *)(a1 + 24) + 12) + 4) )
         {
           v4 = *(_DWORD *)(a1 + 24);
-  LABEL_8:
+  sub_6079437C__LABEL_8:
           if ( !Float2_equalTest(**(_DWORD **)(v4 + 12) + 4) )
             return 0;
         }
@@ -12505,12 +12505,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 4) = a2;
     v3 = a2[42];
     if ( (unsigned int)(v3 - 2) < 2 )
-      goto LABEL_6;
+      goto sub_60794848__LABEL_6;
     v4 = v3 == 1;
     if ( v3 != 1 )
       v4 = v3 == 0;
     if ( v4 )
-  LABEL_6:
+  sub_60794848__LABEL_6:
       (*(void (__fastcall **)(_DWORD *, int, int))(*a2 + 64))(a2, -2, -2);
     (*(void (__fastcall **)(_DWORD, _DWORD))(**(_DWORD **)(a1 + 4) + 76))(*(_DWORD *)(a1 + 4), 0);
     (*(void (__fastcall **)(_DWORD, _DWORD))(**(_DWORD **)(a1 + 4) + 80))(*(_DWORD *)(a1 + 4), 0);
@@ -13169,7 +13169,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       Float_clampWithSign(a1 + 11468);
       Float_clampWithSign(a1 + 11472);
-      goto LABEL_29;
+      goto sub_6079592C__LABEL_29;
     }
     v11 = *(float *)(a1 + 11468);
     if ( v11 < v2 )
@@ -13177,23 +13177,23 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v12 = v11 + 3.0;
       v13 = (float)(v11 + 3.0) < v11;
       v14 = (float)(v11 + 3.0) >= v2;
-  LABEL_14:
+  sub_6079592C__LABEL_14:
       v15 = v14 || v13;
       if ( !v15 )
         v10 = v12;
       *(float *)(a1 + 11468) = v10;
       v16 = v15 == 0;
-      goto LABEL_18;
+      goto sub_6079592C__LABEL_18;
     }
     if ( v11 > v2 )
     {
       v12 = v11 + -3.0;
       v13 = v11 < (float)(v11 + -3.0);
       v14 = (float)(v11 + -3.0) <= v2;
-      goto LABEL_14;
+      goto sub_6079592C__LABEL_14;
     }
     v16 = 0;
-  LABEL_18:
+  sub_6079592C__LABEL_18:
     v17 = v3;
     v18 = *(float *)(a1 + 11472);
     if ( v18 < v3 )
@@ -13201,26 +13201,26 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v19 = v18 + 3.0;
       v20 = (float)(v18 + 3.0) < v18;
       v21 = (float)(v18 + 3.0) >= v3;
-      goto LABEL_22;
+      goto sub_6079592C__LABEL_22;
     }
     if ( v18 > v3 )
     {
       v19 = v18 + -3.0;
       v20 = v18 < (float)(v18 + -3.0);
       v21 = (float)(v18 + -3.0) <= v3;
-  LABEL_22:
+  sub_6079592C__LABEL_22:
       v22 = v21 || v20;
       if ( !v22 )
         v17 = v19;
       *(float *)(a1 + 11472) = v17;
       if ( v16 || !v22 )
-        goto LABEL_29;
-      goto LABEL_28;
+        goto sub_6079592C__LABEL_29;
+      goto sub_6079592C__LABEL_28;
     }
     if ( !v16 )
-  LABEL_28:
+  sub_6079592C__LABEL_28:
       *(_DWORD *)(a1 + 11480) = 0;
-  LABEL_29:
+  sub_6079592C__LABEL_29:
     if ( (*(_BYTE *)(a1 + 1220) & 8) != 0 )
     {
       result = 5;
@@ -13409,7 +13409,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v13 >= v12 )
     {
       if ( v13 <= v12 )
-        goto LABEL_19;
+        goto Player_setPowerupMode__LABEL_19;
       v14 = v13 + -0.1;
       v15 = v13 < (float)(v13 + -0.1);
       v11 = (float)(v13 + -0.1) <= v12;
@@ -13426,7 +13426,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v15 )
       v12 = v14;
     *(float *)(a1 + 7068) = v12;
-  LABEL_19:
+  Player_setPowerupMode__LABEL_19:
     v16 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 152))(a1);
     v17 = *(_DWORD *)(a1 + 1320);
     v18 = v16;
@@ -13481,15 +13481,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (unsigned int)(v25 - 7) < 3 )
     {
       *(_BYTE *)(a1 + 12917) = 1;
-  LABEL_46:
+  Player_setPowerupMode__LABEL_46:
       v26 = (_WORD *)(a1 + 6690);
       v27 = *(_WORD *)(a1 + 6690) & 0xFFF7;
-      goto LABEL_47;
+      goto Player_setPowerupMode__LABEL_47;
     }
     if ( v25 == 5 )
     {
       *(_DWORD *)(a1 + 1228) = v24 | 0x80000;
-      goto LABEL_46;
+      goto Player_setPowerupMode__LABEL_46;
     }
     if ( v25 == 4 )
     {
@@ -13501,7 +13501,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = *(_WORD *)(a1 + 6690) & 0xFFF7;
     if ( v25 == 3 )
       v27 = *(_WORD *)(a1 + 6690) | 8;
-  LABEL_47:
+  Player_setPowerupMode__LABEL_47:
     *v26 = v27;
     result = sub_600243A0();
     *(_DWORD *)(a1 + 1152) = result;
@@ -13648,7 +13648,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               a1[22] = v6;
               if ( v5 <= 0.0 && (int)a1[308] < 0 && (a1[1728] & 1) != 0 )
               {
-  LABEL_26:
+  sub_60796150__LABEL_26:
                 if ( !a2 )
                 {
                   sub_6078667C(a1 + 172, 2);
@@ -13662,12 +13662,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 else
                 {
                   if ( a3 != 1 )
-                    goto LABEL_33;
+                    goto sub_60796150__LABEL_33;
                   v19 = a1 + 172;
                   v20 = 5;
                 }
                 sub_6078667C(v19, v20);
-  LABEL_33:
+  sub_60796150__LABEL_33:
                 if ( a5 == 1 )
                 {
                   a1[3031] = 15;
@@ -13711,13 +13711,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               else
               {
                 if ( v15 != 1 )
-                  goto LABEL_26;
+                  goto sub_60796150__LABEL_26;
                 v17 = 1;
                 v18 = 13388912;
               }
             }
             Player_changeState((int)a1, v18, v17);
-            goto LABEL_26;
+            goto sub_60796150__LABEL_26;
           }
         }
       }
@@ -13766,7 +13766,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             (*(void (__fastcall **)(int, int))(*(_DWORD *)v6 + 412))(v6, a1);
             v7 = 0;
             v8 = 13389740;
-            goto LABEL_15;
+            goto SE_OBJ_BOUND_BLOCK_JUMP_HIGH_ref_2_helper__LABEL_15;
           }
           break;
         case 2:
@@ -13780,14 +13780,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *(_DWORD *)(a1 + 124) = MEMORY[0xB0AEE4];
           v7 = sub_607B9CC8(a1, 2, 1);
           v8 = 13389324;
-          goto LABEL_15;
+          goto SE_OBJ_BOUND_BLOCK_JUMP_HIGH_ref_2_helper__LABEL_15;
         default:
           *(_DWORD *)(a1 + 124) = v1;
           *(_DWORD *)(a1 + 88) = v2;
           v4 = 1;
           v7 = sub_607B9CC8(a1, 2, 1);
           v8 = 13389324;
-  LABEL_15:
+  SE_OBJ_BOUND_BLOCK_JUMP_HIGH_ref_2_helper__LABEL_15:
           Player_changeState(a1, v8, v7);
           break;
       }
@@ -13985,12 +13985,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !v13 )
       {
         sub_60782500(*(_DWORD *)(v12 + 1316), *(_DWORD *)(v12 + 1320));
-        goto LABEL_6;
+        goto sub_60796828__LABEL_6;
       }
       if ( v13 == 3 )
       {
         sub_607824B8(*(_DWORD *)(v12 + 1316), *(_DWORD *)(v12 + 1320));
-  LABEL_6:
+  sub_60796828__LABEL_6:
         v11 = v5 + v1;
       }
     }
@@ -14226,10 +14226,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
         {
           if ( v30 == 131 )
-            goto LABEL_19;
+            goto sub_60796AB0__LABEL_19;
           v31 = 8.0;
         }
-  LABEL_20:
+  sub_60796AB0__LABEL_20:
         v32 = v11 + v14;
         v33 = v24 + v16;
         v34 = v23 + v13;
@@ -14297,10 +14297,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v77 = v35 * v63;
         return sub_60793FF0(*v5, &v68);
       }
-  LABEL_19:
+  sub_60796AB0__LABEL_19:
       sub_6079B254((_DWORD *)a1);
       v31 = v1;
-      goto LABEL_20;
+      goto sub_60796AB0__LABEL_20;
     }
     return result;
   }
@@ -14349,15 +14349,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               case 0x73:
                 v8 = *(_DWORD *)(v5 + 208);
                 if ( *(_DWORD *)(v4 + 80) )
-                  goto LABEL_14;
+                  goto sub_60796F0C__LABEL_14;
                 v9 = v8 | 0x2000;
-                goto LABEL_15;
+                goto sub_60796F0C__LABEL_15;
               case 0x8D:
               case 0x9E:
-                goto LABEL_12;
+                goto sub_60796F0C__LABEL_12;
               case 0x8E:
               case 0x9F:
-                goto LABEL_13;
+                goto sub_60796F0C__LABEL_13;
               default:
                 break;
             }
@@ -14372,16 +14372,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           case 141:
           case 158:
-  LABEL_12:
+  sub_60796F0C__LABEL_12:
             v9 = *(_DWORD *)(v5 + 208) | 0x2000;
-            goto LABEL_15;
+            goto sub_60796F0C__LABEL_15;
           case 142:
           case 159:
-  LABEL_13:
+  sub_60796F0C__LABEL_13:
             v8 = *(_DWORD *)(v5 + 208);
-  LABEL_14:
+  sub_60796F0C__LABEL_14:
             v9 = v8 | 0x4000;
-            goto LABEL_15;
+            goto sub_60796F0C__LABEL_15;
           case 143:
           case 144:
           case 145:
@@ -14404,7 +14404,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *(_DWORD *)(v5 + 208) |= ((*(_DWORD *)(a1 + 160) >> 18) & 0x2000) + 0x2000;
             v5 = *(_DWORD *)v2;
             v9 = *(_DWORD *)(*(_DWORD *)v2 + 208) | 0x8000;
-  LABEL_15:
+  sub_60796F0C__LABEL_15:
             *(_DWORD *)(v5 + 208) = v9;
             break;
         }
@@ -14628,51 +14628,51 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v7 == 2 )
       {
         if ( *(float *)(a1 + 124) <= 0.0 )
-          goto LABEL_9;
+          goto sub_60797430__LABEL_9;
       }
       else if ( v7 != 1 )
       {
-  LABEL_7:
+  sub_60797430__LABEL_7:
         v8 = v3 - 1;
         *v2 = v8;
         if ( v8 )
-          goto LABEL_11;
-        goto LABEL_10;
+          goto sub_60797430__LABEL_11;
+        goto sub_60797430__LABEL_10;
       }
       if ( (*v5 & 1) == 0 )
-        goto LABEL_7;
-  LABEL_9:
+        goto sub_60797430__LABEL_7;
+  sub_60797430__LABEL_9:
       *v2 = 0;
-  LABEL_10:
+  sub_60797430__LABEL_10:
       Object_clearBitInField4(v2 - 2685, 1);
     }
-  LABEL_11:
+  sub_60797430__LABEL_11:
     v9 = (_DWORD *)(a1 + 11432);
     v10 = *(_DWORD *)(a1 + 11432);
     if ( !v10 )
-      goto LABEL_21;
+      goto sub_60797430__LABEL_21;
     v11 = *(_DWORD *)(a1 + 11444);
     if ( v11 == 2 )
     {
       if ( *(float *)(a1 + 124) <= 0.0 )
-        goto LABEL_19;
+        goto sub_60797430__LABEL_19;
     }
     else if ( v11 != 1 )
     {
-  LABEL_17:
+  sub_60797430__LABEL_17:
       v12 = v10 - 1;
       *v9 = v12;
       if ( v12 )
-        goto LABEL_21;
-      goto LABEL_20;
+        goto sub_60797430__LABEL_21;
+      goto sub_60797430__LABEL_20;
     }
     if ( (*v5 & 1) == 0 )
-      goto LABEL_17;
-  LABEL_19:
+      goto sub_60797430__LABEL_17;
+  sub_60797430__LABEL_19:
     *v9 = 0;
-  LABEL_20:
+  sub_60797430__LABEL_20:
     Object_clearBitInField4(v6, 2);
-  LABEL_21:
+  sub_60797430__LABEL_21:
     result = (_DWORD *)(a1 + 11436);
     v14 = *(_DWORD *)(a1 + 11436);
     if ( !v14 )
@@ -14681,19 +14681,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v15 == 2 )
     {
       if ( *(float *)(a1 + 124) <= 0.0 )
-        goto LABEL_29;
-      goto LABEL_26;
+        goto sub_60797430__LABEL_29;
+      goto sub_60797430__LABEL_26;
     }
     if ( v15 == 1 )
     {
-  LABEL_26:
+  sub_60797430__LABEL_26:
       if ( (*v5 & 1) == 0 )
-        goto LABEL_27;
-  LABEL_29:
+        goto sub_60797430__LABEL_27;
+  sub_60797430__LABEL_29:
       *result = 0;
       return (_DWORD *)Object_clearBitInField4(v6, 3);
     }
-  LABEL_27:
+  sub_60797430__LABEL_27:
     v16 = v14 - 1;
     *result = v16;
     if ( !v16 )
@@ -14869,7 +14869,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (*(_BYTE *)(a1 + 1234) & 0x10) == 0 )
     {
       if ( !sub_60766714(a1) )
-        goto LABEL_8;
+        goto sub_60797890__LABEL_8;
       if ( (*(_DWORD *)(a1 + 1204) & 0x14000) == 0 )
       {
         v3 = (*(_BYTE *)(a1 + 1231) & 1) == 0;
@@ -14877,7 +14877,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v3 = (*(_BYTE *)(a1 + 1220) & 4) == 0;
         if ( v3 )
         {
-  LABEL_8:
+  sub_60797890__LABEL_8:
           v4 = isMode4(a1);
           v5 = v4;
           if ( v4 )
@@ -14889,12 +14889,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v8 = sub_607C7184(a1);
               if ( !v8 )
                 return v2;
-  LABEL_20:
+  sub_60797890__LABEL_20:
               if ( ((_BYTE)v8[1726] & 4) != 0 )
                 return v2;
               v2 = 0;
               v9 = (*((_BYTE *)v8 + 1211) & 4) == 0;
-              goto LABEL_22;
+              goto sub_60797890__LABEL_22;
             }
             v2 = 0;
             v11 = 0;
@@ -14907,7 +14907,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v8 = *(int (__fastcall ****)(_DWORD, int))(MEMORY[0xCC436C] + 4 * v7 + 32);
               if ( !v8 )
                 return v2;
-              goto LABEL_20;
+              goto sub_60797890__LABEL_20;
             }
             if ( (*(_BYTE *)(a1 + 1214) & 0x20) == 0 )
             {
@@ -14918,7 +14918,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               {
                 v2 = 0;
                 v9 = (*(_BYTE *)(a1 + 1239) & 0x40) == 0;
-  LABEL_22:
+  sub_60797890__LABEL_22:
                 if ( v9 )
                   return 1;
               }
@@ -15400,7 +15400,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       case 0:
       case 1:
       case 6:
-        goto LABEL_5;
+        goto SE_PLY_ref_4__LABEL_5;
       case 3:
         v10 = sub_60789CF0(MEMORY[0xCC436C]);
         v11 = a1[84];
@@ -15411,18 +15411,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           *v6 = 1;
           *((_DWORD *)a1 + 301) |= 0x4000u;
-  LABEL_9:
+  SE_PLY_ref_4__LABEL_9:
           *((_DWORD *)a1 + 2486) = 0;
-          goto LABEL_19;
+          goto SE_PLY_ref_4__LABEL_19;
         }
         v5 = *v6;
-  LABEL_5:
+  SE_PLY_ref_4__LABEL_5:
         v7 = v5 == 6;
         if ( v5 != 6 )
           v7 = v5 == 1;
         *((_DWORD *)a1 + 301) |= 0x4000u;
         if ( v7 )
-          goto LABEL_9;
+          goto SE_PLY_ref_4__LABEL_9;
         v8 = a1 + 9944;
         v9 = MEMORY[0xC99DD4];
         if ( *(_DWORD *)(MEMORY[0xC99DD4] + 764) == 2
@@ -15430,7 +15430,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           *v8 = 30;
         }
-  LABEL_19:
+  SE_PLY_ref_4__LABEL_19:
         v14 = a1[84];
         v15 = 0;
         if ( v14 < 6 )
@@ -15438,7 +15438,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v16 = MEMORY[0xC99DD4] + 72 * v15;
         if ( *(_BYTE *)(v16 + 292) && *(int *)(v16 + 296) <= 0 )
           *v6 = 5;
-  LABEL_24:
+  SE_PLY_ref_4__LABEL_24:
         *(_WORD *)(MEMORY[0xCC436C] + 66) &= ~(1 << a1[84]);
         if ( !sub_603FD530(MEMORY[0xC99DD4] + 764) && !BitCount32(*(unsigned __int16 *)(MEMORY[0xCC436C] + 66)) )
         {
@@ -15465,9 +15465,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       case 4:
         v13 = Global_setBitmaskAndReturnC7B3A8((char)a1[84]);
         Player_checkTwoFlagsAndDispatch(a1, (int)"SE_PLY_BALLOON_SELF", 0, v13);
-        goto LABEL_24;
+        goto SE_PLY_ref_4__LABEL_24;
       default:
-        goto LABEL_24;
+        goto SE_PLY_ref_4__LABEL_24;
     }
   }
 
@@ -15539,7 +15539,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         *v2 = 0;
         v5 = 156;
-  LABEL_6:
+  sub_607988F4__LABEL_6:
         PlayerBase_dispatchVirtual3(a1 + 11356, v5);
       }
     }
@@ -15547,7 +15547,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       *v2 = 1;
       v5 = 155;
-      goto LABEL_6;
+      goto sub_607988F4__LABEL_6;
     }
     v6 = *(_DWORD *)(a1 + 1236);
     *(_DWORD *)(a1 + 1236) = v6 & 0xFFFFFFFB;
@@ -15849,14 +15849,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_60766AA0((int)a1) )
     {
       if ( (a2 | 1) != 1 )
-        goto LABEL_18;
+        goto sub_60799248__LABEL_18;
       v5 = sub_60766708(a1);
       v6 = v5 == 1;
       if ( v5 == 1 )
         v6 = (a1[1220] & 4) == 0;
       if ( !v6 )
       {
-  LABEL_18:
+  sub_60799248__LABEL_18:
         if ( ActorMgr_findAndInstantiate3() )
         {
           v7 = ActorMgr_findAndInstantiate3();
@@ -15937,41 +15937,41 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 644))(a1);
     if ( *(float *)(a1 + 124) > 0.0 )
-      goto LABEL_5;
+      goto sub_607993A8__LABEL_5;
     v3 = 2;
     if ( v2 )
       v3 = 0;
     if ( (*(_BYTE *)(a1 + 1236) & 0x20) != 0 )
     {
-  LABEL_5:
+  sub_607993A8__LABEL_5:
       v4 = *(_DWORD *)(a1 + 1216);
       v5 = 1024;
       v6 = 608;
       if ( (v4 & 0x90) == 0x10 )
-        goto LABEL_27;
+        goto sub_607993A8__LABEL_27;
       if ( !isMode5(a1) )
       {
         if ( !isMode4(a1) )
-          goto LABEL_11;
+          goto sub_607993A8__LABEL_11;
         v7 = *(_DWORD *)(a1 + 1320);
         v8 = v7 == 0;
         if ( v7 )
           v8 = v7 == 3;
         if ( !v8 )
         {
-  LABEL_11:
+  sub_607993A8__LABEL_11:
           if ( (v4 & 8) != 0 )
-            goto LABEL_27;
+            goto sub_607993A8__LABEL_27;
         }
       }
       if ( (*(_BYTE *)(a1 + 1221) & 0x80) != 0 )
-        goto LABEL_25;
+        goto sub_607993A8__LABEL_25;
       v9 = *(_DWORD *)(a1 + 1320);
       v10 = v9 == 3;
       if ( v9 != 3 )
         v10 = v9 == 0;
       if ( !v10 )
-        goto LABEL_27;
+        goto sub_607993A8__LABEL_27;
       v11 = (_DWORD *)ActorMgr_findAndInstantiate3();
       v3 = 1;
       if ( v11 )
@@ -15983,16 +15983,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v5 = 1024;
       v6 = 608;
-      goto LABEL_27;
+      goto sub_607993A8__LABEL_27;
     }
     if ( v3 != 1 )
-      goto LABEL_28;
-  LABEL_25:
+      goto sub_607993A8__LABEL_28;
+  sub_607993A8__LABEL_25:
     v5 = 256;
     v6 = 32;
-  LABEL_27:
+  sub_607993A8__LABEL_27:
     *(_DWORD *)(a1 + 3872) |= v5 | v6;
-  LABEL_28:
+  sub_607993A8__LABEL_28:
     if ( (*(_DWORD *)(a1 + 1216) & 0x90) == 0x10 )
     {
       v12 = *(_DWORD *)(a1 + 3864);
@@ -16012,11 +16012,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(a1 + 3864) = v13 | 0xD000660;
       *(_DWORD *)(a1 + 3872) |= 0xD000660u;
       *(_DWORD *)(a1 + 12136) = 5;
-      goto LABEL_36;
+      goto sub_607993A8__LABEL_36;
     }
     if ( *(_DWORD *)(a1 + 12136) )
     {
-  LABEL_36:
+  sub_607993A8__LABEL_36:
       *(_DWORD *)(a1 + 3884) |= 0x400000u;
       *(_DWORD *)(a1 + 3860) |= 0x400000u;
       *(_DWORD *)(a1 + 3868) |= 0x400000u;
@@ -16117,7 +16117,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       if ( v6 != 8 )
-        goto LABEL_21;
+        goto sub_607995FC__LABEL_21;
       v7 = 1;
       *(_DWORD *)(a1 + 3884) |= 0x4000u;
       *(_DWORD *)(a1 + 3876) |= 0x4000u;
@@ -16125,7 +16125,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = 0x4000;
     }
     *(_DWORD *)(a1 + 8 * v7 + 3860) |= v8;
-  LABEL_21:
+  sub_607995FC__LABEL_21:
     if ( (v4 & 0x1A000) != 0 )
     {
       *(_DWORD *)(a1 + 3872) |= 0x10008000u;
@@ -16256,14 +16256,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !isMode5((int)a1) )
     {
       if ( !isMode4((int)a1) )
-        goto LABEL_8;
+        goto sub_60799A38__LABEL_8;
       v4 = a1[330];
       v5 = v4 == 0;
       if ( v4 )
         v5 = v4 == 3;
       if ( !v5 )
       {
-  LABEL_8:
+  sub_60799A38__LABEL_8:
         if ( (v2 & 8) != 0 )
           return &unk_60B0C3C8;
       }
@@ -16485,13 +16485,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 11372) = v20;
       *(float *)(a1 + 11376) = v21;
       *(float *)(a1 + 11380) = v22;
-      goto LABEL_134;
+      goto sub_60799BA0__LABEL_134;
     }
     v28 = *(float *)(a1 + 6876);
     if ( v28 >= v9 )
     {
       if ( v28 <= v9 )
-        goto LABEL_29;
+        goto sub_60799BA0__LABEL_29;
       v29 = v28 + -2.0;
       v30 = v28 < (float)(v28 + -2.0);
       v31 = (float)(v28 + -2.0) <= v9;
@@ -16507,12 +16507,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v30 )
       v29 = v9;
     *(float *)(a1 + 6876) = v29;
-  LABEL_29:
+  sub_60799BA0__LABEL_29:
     v32 = *(float *)(a1 + 6880);
     if ( v32 >= v7 )
     {
       if ( v32 <= v7 )
-        goto LABEL_38;
+        goto sub_60799BA0__LABEL_38;
       v33 = v32 + -2.0;
       v34 = v32 < (float)(v32 + -2.0);
       v35 = (float)(v32 + -2.0) <= v7;
@@ -16528,12 +16528,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v34 )
       v33 = v7;
     *(float *)(a1 + 6880) = v33;
-  LABEL_38:
+  sub_60799BA0__LABEL_38:
     v36 = *(float *)(a1 + 6884);
     if ( v36 >= v8 )
     {
       if ( v36 <= v8 )
-        goto LABEL_47;
+        goto sub_60799BA0__LABEL_47;
       v37 = v36 + -2.0;
       v38 = v36 < (float)(v36 + -2.0);
       v39 = (float)(v36 + -2.0) <= v8;
@@ -16549,13 +16549,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v38 )
       v37 = v8;
     *(float *)(a1 + 6884) = v37;
-  LABEL_47:
+  sub_60799BA0__LABEL_47:
     v40 = v98;
     v41 = *(float *)(a1 + 6864);
     if ( v41 >= v98 )
     {
       if ( v41 <= v98 )
-        goto LABEL_56;
+        goto sub_60799BA0__LABEL_56;
       v42 = v41 + -2.0;
       v43 = v41 < (float)(v41 + -2.0);
       v44 = (float)(v41 + -2.0) <= v98;
@@ -16571,13 +16571,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v43 )
       v40 = v42;
     *(float *)(a1 + 6864) = v40;
-  LABEL_56:
+  sub_60799BA0__LABEL_56:
     v45 = v99;
     v46 = *(float *)(a1 + 6868);
     if ( v46 >= v99 )
     {
       if ( v46 <= v99 )
-        goto LABEL_65;
+        goto sub_60799BA0__LABEL_65;
       v47 = v46 + -2.0;
       v48 = v46 < (float)(v46 + -2.0);
       v49 = (float)(v46 + -2.0) <= v99;
@@ -16593,13 +16593,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v48 )
       v45 = v47;
     *(float *)(a1 + 6868) = v45;
-  LABEL_65:
+  sub_60799BA0__LABEL_65:
     v50 = v95;
     v51 = *(float *)(a1 + 6888);
     if ( v51 >= v95 )
     {
       if ( v51 <= v95 )
-        goto LABEL_74;
+        goto sub_60799BA0__LABEL_74;
       v52 = v51 + -2.0;
       v53 = v51 < (float)(v51 + -2.0);
       v54 = (float)(v51 + -2.0) <= v95;
@@ -16615,13 +16615,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v53 )
       v50 = v52;
     *(float *)(a1 + 6888) = v50;
-  LABEL_74:
+  sub_60799BA0__LABEL_74:
     v55 = v96;
     v56 = *(float *)(a1 + 6892);
     if ( v56 >= v96 )
     {
       if ( v56 <= v96 )
-        goto LABEL_83;
+        goto sub_60799BA0__LABEL_83;
       v57 = v56 + -2.0;
       v58 = v56 < (float)(v56 + -2.0);
       v59 = (float)(v56 + -2.0) <= v96;
@@ -16637,14 +16637,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v58 )
       v55 = v57;
     *(float *)(a1 + 6892) = v55;
-  LABEL_83:
+  sub_60799BA0__LABEL_83:
     v60 = v97;
     v25 = (float *)(a1 + 6896);
     v61 = *(float *)(a1 + 6896);
     if ( v61 >= v97 )
     {
       if ( v61 <= v97 )
-        goto LABEL_92;
+        goto sub_60799BA0__LABEL_92;
       v62 = v61 + -2.0;
       v63 = v61 < (float)(v61 + -2.0);
       v64 = (float)(v61 + -2.0) <= v97;
@@ -16660,12 +16660,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v63 )
       v60 = v62;
     *v25 = v60;
-  LABEL_92:
+  sub_60799BA0__LABEL_92:
     v65 = *(float *)(a1 + 11372);
     if ( v65 >= v20 )
     {
       if ( v65 <= v20 )
-        goto LABEL_101;
+        goto sub_60799BA0__LABEL_101;
       v66 = v65 + -2.0;
       v67 = v65 < (float)(v65 + -2.0);
       v68 = (float)(v65 + -2.0) <= v20;
@@ -16681,12 +16681,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v67 )
       v20 = v66;
     *(float *)(a1 + 11372) = v20;
-  LABEL_101:
+  sub_60799BA0__LABEL_101:
     v69 = *(float *)(a1 + 11376);
     if ( v69 >= v21 )
     {
       if ( v69 <= v21 )
-        goto LABEL_110;
+        goto sub_60799BA0__LABEL_110;
       v70 = v69 + -2.0;
       v71 = v69 < (float)(v69 + -2.0);
       v72 = (float)(v69 + -2.0) <= v21;
@@ -16702,7 +16702,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v71 )
       v21 = v70;
     *(float *)(a1 + 11376) = v21;
-  LABEL_110:
+  sub_60799BA0__LABEL_110:
     v73 = *(float *)(a1 + 11380);
     if ( v73 >= v22 )
     {
@@ -16846,7 +16846,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v8 = *(_DWORD *)(a1 + 6908);
         v7 = (int *)(a1 + 6908);
         result = v8 | 2;
-  LABEL_14:
+  sub_6079A7D4__LABEL_14:
         *v7 = result;
         return result;
       }
@@ -16861,7 +16861,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v9 = *(_DWORD *)(a1 + 6908);
         v7 = (int *)(a1 + 6908);
         result = v9 | 3;
-        goto LABEL_14;
+        goto sub_6079A7D4__LABEL_14;
       }
     }
     return result;
@@ -16890,12 +16890,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       if ( !isMode5((int)a1) )
-        goto LABEL_6;
+        goto sub_6079A890__LABEL_6;
       v6 = 0x40000000;
       v3 = 1101004800;
     }
     v7 = v3;
-  LABEL_6:
+  sub_6079A890__LABEL_6:
     v4 = sub_601557EC((int)(a1 + 332), (float *)&v6);
     result = 0;
     if ( v4 == 1 )
@@ -16957,18 +16957,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *v3 = v2;
         *(_DWORD *)(a1 + 7024) = 0;
         if ( (v2 & 1) == 0 )
-          goto LABEL_15;
-        goto LABEL_12;
+          goto sub_6079A974__LABEL_15;
+        goto sub_6079A974__LABEL_12;
       }
     }
     if ( (v2 & 1) == 0 )
-      goto LABEL_15;
-  LABEL_12:
+      goto sub_6079A974__LABEL_15;
+  sub_6079A974__LABEL_12:
     v4 = *(_DWORD *)(a1 + 1224) & 0xFBFFFFFF;
     if ( (v2 & 0x200000) != 0 )
       v4 = *(_DWORD *)(a1 + 1224) | 0x4000000;
     *(_DWORD *)(a1 + 1224) = v4;
-  LABEL_15:
+  sub_6079A974__LABEL_15:
     v5 = *(_DWORD *)(a1 + 6904);
     v6 = (v5 & 8) == 0;
     if ( (v5 & 8) != 0 )
@@ -16984,7 +16984,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (v5 & 8) == 0 )
     {
       sub_60762584(a1);
-      goto LABEL_38;
+      goto sub_6079A974__LABEL_38;
     }
     v7 = (float *)(a1 + 7064);
     if ( (v2 & 0x40000) != 0 )
@@ -16994,38 +16994,38 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *v7 < -0.3 )
       {
         v10 = 0.02;
-        goto LABEL_27;
+        goto sub_6079A974__LABEL_27;
       }
       if ( *v7 <= -0.3 )
-        goto LABEL_38;
+        goto sub_6079A974__LABEL_38;
       v14 = -0.02;
-  LABEL_32:
+  sub_6079A974__LABEL_32:
       v11 = v8 + v14;
       v12 = v8 < v11;
       v13 = v11 <= v9;
-      goto LABEL_33;
+      goto sub_6079A974__LABEL_33;
     }
     v8 = *v7;
     v9 = MEMORY[0xB0AFB4];
     if ( *v7 >= MEMORY[0xB0AFB4] )
     {
       if ( *v7 <= MEMORY[0xB0AFB4] )
-        goto LABEL_38;
+        goto sub_6079A974__LABEL_38;
       v14 = -0.08;
-      goto LABEL_32;
+      goto sub_6079A974__LABEL_32;
     }
     v10 = 0.08;
-  LABEL_27:
+  sub_6079A974__LABEL_27:
     v11 = v8 + v10;
     v12 = v11 < v8;
     v13 = v11 >= v9;
-  LABEL_33:
+  sub_6079A974__LABEL_33:
     if ( v13 )
       v11 = v9;
     if ( !v12 )
       v9 = v11;
     *v7 = v9;
-  LABEL_38:
+  sub_6079A974__LABEL_38:
     sub_60762598(a1);
     v15 = (*(_BYTE *)(a1 + 6909) & 4) == 0;
     if ( (*(_BYTE *)(a1 + 6909) & 4) == 0 )
@@ -17396,11 +17396,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         Player_changeState(a1, 13389740, 1);
         return 1;
       }
-      goto LABEL_12;
+      goto sub_6079B3CC__LABEL_12;
     }
     if ( (*(int (__fastcall **)(int, int))(*(_DWORD *)v2 + 412))(v2, a1) == 1 )
     {
-  LABEL_12:
+  sub_6079B3CC__LABEL_12:
       Player_changeState(a1, 13389740, 0);
       return 1;
     }
@@ -17683,9 +17683,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             PlayerBase_dispatchVirtual3((int)(a1 + 2839), 0);
             *v3 = 1;
           }
-          goto LABEL_6;
+          goto sub_6079C110__LABEL_6;
         case 1:
-  LABEL_6:
+  sub_6079C110__LABEL_6:
           result = sub_607B74E0(a1);
           if ( result )
             return result;
@@ -17715,7 +17715,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             PlayerBase_dispatchVirtual3((int)(a1 + 2839), 21);
             result = 2;
           }
-  LABEL_26:
+  sub_6079C110__LABEL_26:
           *v3 = result;
           return result;
         case 2:
@@ -17728,7 +17728,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           a1[2486] = 10;
           a1[304] &= ~0x4000000u;
           result = 3;
-          goto LABEL_26;
+          goto sub_6079C110__LABEL_26;
         case 3:
           if ( sub_607AA954(a1) == 1 )
           {
@@ -17743,14 +17743,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             return result;
           PlayerBase_dispatchVirtual3((int)(a1 + 2839), 0);
           result = 1;
-          goto LABEL_26;
+          goto sub_6079C110__LABEL_26;
         case 4:
           result = Object_isFloat2EqualViaChain(a1[2840]);
           if ( result != 1 )
             return result;
           SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
           result = 5;
-          goto LABEL_26;
+          goto sub_6079C110__LABEL_26;
         case 7:
           result = Object_isFloat2EqualViaChain(a1[2840]);
           if ( result == 1 )
@@ -17838,7 +17838,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             break;
           }
         }
-        goto LABEL_22;
+        goto sub_6079C470__LABEL_22;
       case 1:
         if ( sub_607604BC(a1) == 1 )
           *(_BYTE *)(a1 + 12192) = 1;
@@ -17850,18 +17850,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           (*(void (__fastcall **)(_DWORD, int))(**(_DWORD **)(a1 + 11360) + 104))(*(_DWORD *)(a1 + 11360), 1);
           *(_BYTE *)(a1 + 12192) = 0;
           v6 = 2;
-          goto LABEL_23;
+          goto sub_6079C470__LABEL_23;
         }
-  LABEL_22:
+  sub_6079C470__LABEL_22:
         v6 = 0;
-        goto LABEL_23;
+        goto sub_6079C470__LABEL_23;
       case 0:
         v5 = *(_BYTE **)(a1 + 11360);
         if ( (v5[208] & 0x10) != 0 && (*(int (__fastcall **)(_BYTE *))(*(_DWORD *)v5 + 132))(v5) == 1 )
         {
           *v3 = 12;
           v6 = 1;
-  LABEL_23:
+  sub_6079C470__LABEL_23:
           *(_DWORD *)(a1 + 12200) = v6;
         }
         break;
@@ -19040,7 +19040,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             if ( v7 < v6 )
               return result;
-  LABEL_10:
+  sub_6079E3C8__LABEL_10:
             v4[3037] = v5[2];
             *result = v7;
             return result;
@@ -19049,7 +19049,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v7 >= 0.0 )
             v8 = v6 <= v7;
           if ( !v8 )
-            goto LABEL_10;
+            goto sub_6079E3C8__LABEL_10;
         }
       }
     }
@@ -19390,13 +19390,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v2 )
       *(_DWORD *)(*((_DWORD *)a1 + 2840) + 40) = *(_DWORD *)(*(_DWORD *)(v2 + 648) + 4);
     if ( isMode5((int)a1) )
-      goto LABEL_16;
+      goto SE_PLY_OTHER_ON_ref__LABEL_16;
     v6 = isMode4((int)a1);
     v7 = v6;
     if ( v6 )
       v7 = *((_DWORD *)a1 + 330) == 9;
     if ( v7 )
-  LABEL_16:
+  SE_PLY_OTHER_ON_ref__LABEL_16:
       v8 = a1 + 11356;
     else
       v8 = a1 + 11356;
@@ -19419,11 +19419,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v13 )
           v13 = (int)v12;
         if ( v11 == v13 )
-          goto LABEL_26;
+          goto SE_PLY_OTHER_ON_ref__LABEL_26;
       }
       else if ( !v11 )
       {
-  LABEL_26:
+  SE_PLY_OTHER_ON_ref__LABEL_26:
         sub_6016024C(v10, (int)(a1 + 1328));
       }
     }
@@ -19511,7 +19511,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       a1[23] = 0.0;
       sub_607711C8((int)a1, v10, v11);
-      goto LABEL_6;
+      goto sub_6079EE98__LABEL_6;
     }
     sub_60771D8C((int)a1);
     sub_607711C8((int)a1, v13, v14);
@@ -19530,7 +19530,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( !sub_6075FC38((int)a1) )
       {
-  LABEL_6:
+  sub_6079EE98__LABEL_6:
         result = Object_getBit5(*((_DWORD *)a1 + 2840));
         if ( result == 1 )
           return Player_changeState((int)a1, 13388732, 1);
@@ -19929,8 +19929,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v5 = *(_DWORD *)(a1 + 1320);
       if ( !v5 || v5 == 3 || !v4 )
-        goto LABEL_17;
-  LABEL_12:
+        goto Player_setupModelNodes_79F548__LABEL_17;
+  Player_setupModelNodes_79F548__LABEL_12:
       *(_DWORD *)(a1 + 1236) |= 0x4000u;
       v52 = 12321336;
       v53 = COERCE_FLOAT("skl_root");
@@ -19974,14 +19974,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           v41 = -4.0;
           v42 = 0.0;
-          goto LABEL_41;
+          goto Player_setupModelNodes_79F548__LABEL_41;
         }
         v13 = 11579588;
       }
       v6 = *(float *)v13;
       v41 = *(float *)(v13 + 4);
       v42 = *(float *)(v13 + 8);
-  LABEL_41:
+  Player_setupModelNodes_79F548__LABEL_41:
       v57 = v57 + (float)((float)((float)(v41 * v55) + (float)(v6 * v54)) + (float)(v42 * v56));
       v43 = v57;
       v44 = v59;
@@ -19994,13 +19994,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 7252) = v43 - *(float *)(a1 + 108);
       result = a1 + 7256;
       v39 = (float)(v47 + (float)((float)((float)(v41 * v44) + (float)(v6 * v45)) + (float)(v42 * v46))) - v48;
-  LABEL_42:
+  Player_setupModelNodes_79F548__LABEL_42:
       *(float *)result = v39;
       return result;
     }
     if ( v4 )
-      goto LABEL_12;
-  LABEL_17:
+      goto Player_setupModelNodes_79F548__LABEL_12;
+  Player_setupModelNodes_79F548__LABEL_17:
     v14 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1368))(a1);
     if ( v14 == 12 )
     {
@@ -20077,29 +20077,29 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 308) = v40;
       *(float *)(a1 + 316) = v39;
       *v30 = v40;
-      goto LABEL_42;
+      goto Player_setupModelNodes_79F548__LABEL_42;
     }
     v32 = sub_607B7028(a1);
     if ( !v32 || *(_DWORD *)(v32 + 1320) )
-      goto LABEL_31;
+      goto Player_setupModelNodes_79F548__LABEL_31;
     if ( v14 == 1 )
     {
       v49 = 1091567616;
       v50 = 1084227584;
-      goto LABEL_48;
+      goto Player_setupModelNodes_79F548__LABEL_48;
     }
     if ( v14 == 2 )
     {
       v49 = 1098907648;
       v50 = 1090519040;
-  LABEL_48:
+  Player_setupModelNodes_79F548__LABEL_48:
       *(_DWORD *)(a1 + 308) = v49;
       *(_DWORD *)(a1 + 316) = v50;
       *(_DWORD *)v30 = v49;
       *(_DWORD *)(a1 + 7568) = v50;
       return 7568;
     }
-  LABEL_31:
+  Player_setupModelNodes_79F548__LABEL_31:
     result = *(_DWORD *)(a1 + 1236) & 0x30000;
     if ( result == 196608 )
       return sub_60158FA8(a1 + 188, 32);
@@ -20132,7 +20132,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v6 = a2[16];
         if ( a2[34] > 2u )
-          goto LABEL_40;
+          goto sub_6079FB3C__LABEL_40;
         if ( _cxa_guard_acquire_0(13087612) )
         {
           MEMORY[0xC7B378] = 12320956;
@@ -20154,7 +20154,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = sub_60765884((int)v4);
           if ( v7 != result )
           {
-  LABEL_40:
+  sub_6079FB3C__LABEL_40:
             if ( *(_DWORD *)(a1 + 136) == 15 || (result = sub_6079FEC4(a1, a2)) == 0 )
             {
               result = a2[34];
@@ -20289,10 +20289,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             case 13:
             case 17:
               (*(void (__fastcall **)(int, int, int))(*(_DWORD *)v2 + 1372))(v2, v5, v8);
-              goto LABEL_29;
+              goto sub_6079FEC4__LABEL_29;
             case 8:
               (*(void (__fastcall **)(int, _DWORD, int))(*(_DWORD *)v2 + 1172))(v2, a2[16], 6);
-              goto LABEL_29;
+              goto sub_6079FEC4__LABEL_29;
             case 11:
               v4 = 1;
               if ( *(_BYTE *)(v5 + 533) != 1 || sub_6079D270(v5, v2) )
@@ -20303,7 +20303,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             case 20:
             case 21:
               if ( *(unsigned __int8 *)(v2 + 84) == *(unsigned __int8 *)(v5 + 84) || (*(_BYTE *)(v2 + 1223) & 1) != 0 )
-                goto LABEL_29;
+                goto sub_6079FEC4__LABEL_29;
               if ( (*(_BYTE *)(v2 + 1219) & 4) != 0 )
               {
                 *(_DWORD *)(v2 + 88) = *(_DWORD *)(4 * *(_DWORD *)(a2[16] + 80) + 0xB0A898);
@@ -20316,7 +20316,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                   return v4;
               }
               (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v2 + 1364))(v2, a2[35]);
-  LABEL_29:
+  sub_6079FEC4__LABEL_29:
               v4 = 1;
               break;
             default:
@@ -20623,7 +20623,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       && !(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1156))(a1) )
     {
       if ( (*(_BYTE *)(a1 + 1221) & 0x80) != 0 )
-        goto LABEL_13;
+        goto sub_607A0A48__LABEL_13;
       v7 = (int (__fastcall ***)(_DWORD, int))sub_6079DFCC(a1);
       if ( _cxa_guard_acquire_0(13087760) )
       {
@@ -20641,7 +20641,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-  LABEL_13:
+  sub_607A0A48__LABEL_13:
         v6 = 0;
         if ( (*(int (__fastcall **)(int, _DWORD, _DWORD))(*(_DWORD *)a1 + 1180))(a1, *(_DWORD *)(a2 + 64), 0) == 1 )
         {
@@ -20766,13 +20766,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       case 0:
         if ( !a2 )
-          goto LABEL_17;
+          goto Player_poisonDownUpdate__LABEL_17;
         v9 = v5 & 0x10;
         v8 = v9 == 0;
         if ( v9 )
           v8 = (*(_BYTE *)(a2 + 569) & 2) == 0;
         if ( v8 )
-          goto LABEL_17;
+          goto Player_poisonDownUpdate__LABEL_17;
         v4 = 0;
         if ( (*(int (__fastcall **)(int, int, bool, _DWORD, _DWORD))(*(_DWORD *)a1 + 1420))(
                a1,
@@ -20788,17 +20788,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return v4;
       case 1:
       case 3:
-  LABEL_17:
+  Player_poisonDownUpdate__LABEL_17:
         v10 = *(_DWORD *)(a1 + 1320);
         switch ( v10 )
         {
           case 3:
-            goto LABEL_20;
+            goto Player_poisonDownUpdate__LABEL_20;
           case 1:
             sub_607A2894((_DWORD *)a1, 0);
             break;
           case 0:
-            goto LABEL_20;
+            goto Player_poisonDownUpdate__LABEL_20;
           default:
             v4 = 1;
             sub_607A2894((_DWORD *)a1, (_DWORD *)1);
@@ -20822,27 +20822,27 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( a3 != 11 )
         {
           if ( v7 != 1 )
-            goto LABEL_31;
-  LABEL_30:
+            goto Player_poisonDownUpdate__LABEL_31;
+  Player_poisonDownUpdate__LABEL_30:
           v14 = (_DWORD *)a1;
           v15 = 0;
-          goto LABEL_32;
+          goto Player_poisonDownUpdate__LABEL_32;
         }
         switch ( v7 )
         {
           case 3:
-  LABEL_20:
+  Player_poisonDownUpdate__LABEL_20:
             sub_60777FB4(MEMORY[0xCBFA90], (_DWORD *)a1, 0);
             return 1;
           case 1:
-            goto LABEL_30;
+            goto Player_poisonDownUpdate__LABEL_30;
           case 0:
-            goto LABEL_20;
+            goto Player_poisonDownUpdate__LABEL_20;
         }
-  LABEL_31:
+  Player_poisonDownUpdate__LABEL_31:
         v14 = (_DWORD *)a1;
         v15 = 1;
-  LABEL_32:
+  Player_poisonDownUpdate__LABEL_32:
         sub_607A2894(v14, (_DWORD *)v15);
         Player_changeState(a1, 13389452, 0);
         return 1;
@@ -20861,15 +20861,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v11);
         v12 = (_DWORD *)a1;
         v13 = 3;
-        goto LABEL_27;
+        goto Player_poisonDownUpdate__LABEL_27;
       case 15:
         v12 = (_DWORD *)a1;
         v13 = 0;
-        goto LABEL_27;
+        goto Player_poisonDownUpdate__LABEL_27;
       case 16:
         v12 = (_DWORD *)a1;
         v13 = 4;
-  LABEL_27:
+  Player_poisonDownUpdate__LABEL_27:
         sub_60777FB4(MEMORY[0xCBFA90], v12, v13);
         return v4;
       case 17:
@@ -20909,14 +20909,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
         {
           if ( !v4 )
-            goto LABEL_9;
+            goto LavaDown_type_d_mode_d_IsPassingDown_s_ref__LABEL_9;
           v5 = (_DWORD *)a1;
           v6 = 1;
         }
         sub_607A2894(v5, (_DWORD *)v6);
         return 1;
       }
-  LABEL_9:
+  LavaDown_type_d_mode_d_IsPassingDown_s_ref__LABEL_9:
       sub_60777FB4(MEMORY[0xCBFA90], (_DWORD *)a1, 2);
       return 1;
     }
@@ -20994,7 +20994,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (unsigned int)(a2 - 4) < 2 )
     {
       v11 = 4;
-  LABEL_9:
+  sub_607A1388__LABEL_9:
       if ( a2 == 7 )
       {
         v11 |= 0x300u;
@@ -21004,7 +21004,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(float *)(a1 + 112) = *(float *)(a1 + 112) + 12.0;
         *(float *)(a1 + 108) = *(float *)(a1 + 108) + (float)(*(float *)(4 * *(_DWORD *)(a1 + 80) + 0xB0A898) * -4.0);
       }
-      goto LABEL_14;
+      goto sub_607A1388__LABEL_14;
     }
     if ( a2 != 2 )
     {
@@ -21015,12 +21015,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v11 = 6;
         if ( (*(_BYTE *)(a1 + 6900) & 1) == 0 )
           return v10;
-        goto LABEL_14;
+        goto sub_607A1388__LABEL_14;
       }
-      goto LABEL_9;
+      goto sub_607A1388__LABEL_9;
     }
     v11 = 2;
-  LABEL_14:
+  sub_607A1388__LABEL_14:
     if ( a5 )
       v11 |= 0x100u;
     Player_changeState(a1, 13389420, v11 + a3);
@@ -21061,7 +21061,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v3 > 7 )
     {
       v7 = (_DWORD *)(a1 + 80);
-      goto LABEL_29;
+      goto SE_PLY_CRASH_ref__LABEL_29;
     }
     v4 = v2 & 0x200;
     v5 = (int *)(a1 + 12784);
@@ -21105,12 +21105,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
       {
         if ( (unsigned int)(v10 - 2) > 1 )
-          goto LABEL_29;
+          goto SE_PLY_CRASH_ref__LABEL_29;
         v12 = 4.5;
         *(float *)(a1 + 88) = v11 * 0.5;
       }
       *(float *)(a1 + 124) = v12;
-      goto LABEL_29;
+      goto SE_PLY_CRASH_ref__LABEL_29;
     }
     if ( !v4 )
       Player_checkTwoFlagsAndDispatch2(a1, 52, 0);
@@ -21127,7 +21127,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = 6;
     }
     *(_DWORD *)(a1 + 9940) = v9;
-  LABEL_29:
+  SE_PLY_CRASH_ref__LABEL_29:
     *(_DWORD *)(a1 + 92) = *(_DWORD *)(a1 + 88);
     *(_DWORD *)(a1 + 100) = *(_DWORD *)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1100))(a1);
     *(_DWORD *)(a1 + 96) = MEMORY[0xB0A8A8];
@@ -21475,7 +21475,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v6 )
     {
       if ( a3 == 1 )
-        goto LABEL_16;
+        goto sub_607A2258__LABEL_16;
       v7 = *(_DWORD *)(a1 + 1320);
       v8 = v7 == 3;
       if ( v7 != 3 )
@@ -21525,13 +21525,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *(_DWORD *)(v6 + 616) = v20;
           }
         }
-        goto LABEL_16;
+        goto sub_607A2258__LABEL_16;
       }
       sub_60764270((char *)v6, a2);
     }
     if ( !sub_6079E090(a1) && (*(_BYTE *)(a1 + 1221) & 0x80) == 0 )
       return sub_60764270((char *)a1, a2);
-  LABEL_16:
+  sub_607A2258__LABEL_16:
     sub_6079E724(a1);
     return 0;
   }
@@ -22658,7 +22658,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 = v6 + v5;
       v8 = v7 < v5;
       result = v7 >= v4;
-  LABEL_17:
+  sub_607A3D4C__LABEL_17:
       if ( result )
         v7 = *(float *)(a1 + 92);
       if ( v8 )
@@ -22666,16 +22666,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
         v5 = v7;
       *(float *)(a1 + 88) = v5;
-      goto LABEL_23;
+      goto sub_607A3D4C__LABEL_23;
     }
     if ( v5 > v4 )
     {
       v7 = v5 - v6;
       v8 = v5 < v7;
       result = v7 <= v4;
-      goto LABEL_17;
+      goto sub_607A3D4C__LABEL_17;
     }
-  LABEL_23:
+  sub_607A3D4C__LABEL_23:
     *(float *)(a1 + 120) = v5;
     *(float *)(a1 + 108) = *(float *)(a1 + 108) + v5;
     v9 = *(float *)(a1 + 124);
@@ -22903,7 +22903,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             Object_callSlots19And21(a1 + 11356, 79);
             sub_60793088(*(_DWORD **)(a1 + 11360));
             result = 2;
-            goto LABEL_23;
+            goto sub_607A42E8__LABEL_23;
           }
           *(_DWORD *)(a1 + 160) = FixedPoint_selectSign(a1, *(_DWORD *)(a1 + 80));
           result = Object_callSlots19And21(a1 + 11356, 6);
@@ -22915,7 +22915,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           *(_DWORD *)(a1 + 124) = 1075838976;
           result = 3;
-          goto LABEL_23;
+          goto sub_607A42E8__LABEL_23;
         }
         return result;
       case 3:
@@ -22924,7 +22924,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           sub_60793088(*(_DWORD **)(a1 + 11360));
           result = 4;
-          goto LABEL_23;
+          goto sub_607A42E8__LABEL_23;
         }
         return result;
       case 4:
@@ -22932,7 +22932,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( result == 1 )
         {
           result = 5;
-  LABEL_23:
+  sub_607A42E8__LABEL_23:
           *v8 = result;
         }
         return result;
@@ -22946,7 +22946,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           if ( v11 <= *v9 )
           {
-  LABEL_35:
+  sub_607A42E8__LABEL_35:
             *v8 = 2;
             *(_DWORD *)(a1 + 88) = 0;
             (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 976))(a1, 1);
@@ -22968,7 +22968,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v12 = v14;
         *(float *)(a1 + 108) = v12;
         if ( result )
-          goto LABEL_35;
+          goto sub_607A42E8__LABEL_35;
         return result;
       case 6:
         if ( result == 1 )
@@ -23099,7 +23099,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( v5 <= v7 )
         {
-  LABEL_21:
+  sub_607A4810__LABEL_21:
           *(_DWORD *)(a1 + 9704) = 2;
           *(_DWORD *)(a1 + 88) = 0;
           return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 976))(a1, 1);
@@ -23119,7 +23119,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v7 = v8;
       *(float *)(a1 + 108) = v7;
       if ( result )
-        goto LABEL_21;
+        goto sub_607A4810__LABEL_21;
     }
     return result;
   }
@@ -23193,7 +23193,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v4 != BitCount32(*(unsigned __int16 *)(MEMORY[0xCC436C] + 66)) )
               *(_DWORD *)(a1 + 9712) = 25;
             result = 1;
-            goto LABEL_9;
+            goto sub_607A4AA8__LABEL_9;
           }
         }
         break;
@@ -23202,7 +23202,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( !result )
         {
           result = 2;
-  LABEL_9:
+  sub_607A4AA8__LABEL_9:
           *v3 = result;
         }
         break;
@@ -23210,7 +23210,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 1236) |= 0x8000u;
         result = *(unsigned __int8 *)(a1 + 1211);
         if ( (result & 4) != 0 )
-          goto LABEL_16;
+          goto sub_607A4AA8__LABEL_16;
         break;
       case 3:
         sub_607612CC(a1, 0);
@@ -23223,7 +23223,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             result = *(_DWORD *)(a1 + 9712);
             if ( !result )
             {
-  LABEL_16:
+  sub_607A4AA8__LABEL_16:
               sub_60778334(MEMORY[0xCBFA90]);
               result = Player_beginExitSequence(a1, 13366140, 0);
             }
@@ -23366,7 +23366,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v7 >= v6 )
         {
           if ( v7 <= v6 )
-            goto LABEL_24;
+            goto sub_607A4DCC__LABEL_24;
           v9 = v7 - v8;
           v10 = v7 < v9;
           result = v9 <= v6;
@@ -23384,7 +23384,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
           v7 = v9;
         *(float *)(a1 + 88) = v7;
-  LABEL_24:
+  sub_607A4DCC__LABEL_24:
         *(float *)(a1 + 120) = v7;
         *(float *)(a1 + 108) = *(float *)(a1 + 108) + v7;
         v19 = *(float *)(a1 + 124);
@@ -23395,7 +23395,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1080))(a1);
           Object_callSlots19And21(*(_DWORD *)(a1 + 648), 6);
           result = 3;
-          goto LABEL_37;
+          goto sub_607A4DCC__LABEL_37;
         }
         return result;
       case 3:
@@ -23410,7 +23410,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v14 >= v13 )
         {
           if ( v14 <= v13 )
-            goto LABEL_34;
+            goto sub_607A4DCC__LABEL_34;
           v16 = v14 - v15;
           v17 = v14 < v16;
           v18 = v16 <= v13;
@@ -23428,7 +23428,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
           v14 = v16;
         *(float *)(a1 + 88) = v14;
-  LABEL_34:
+  sub_607A4DCC__LABEL_34:
         *(float *)(a1 + 120) = v14;
         *(float *)(a1 + 108) = *(float *)(a1 + 108) + v14;
         *(float *)(a1 + 112) = *(float *)(a1 + 112) + *(float *)(a1 + 124);
@@ -23448,7 +23448,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *(float *)(a1 + 112) = v20;
             PlayerBase_dispatchVirtual3(a1 + 11356, 7);
             result = 4;
-  LABEL_37:
+  sub_607A4DCC__LABEL_37:
             *v3 = result;
           }
         }
@@ -24055,7 +24055,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v2 >= 2.0 )
     {
       if ( v2 <= 2.0 )
-        goto LABEL_10;
+        goto sub_607A61F0__LABEL_10;
       v4 = v2 + -0.2;
       v5 = v2 < (float)(v2 + -0.2);
       v6 = (float)(v2 + -0.2) <= 2.0;
@@ -24071,13 +24071,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v5 )
       v3 = v4;
     *(float *)(a1 + 656) = v3;
-  LABEL_10:
+  sub_607A61F0__LABEL_10:
     v7 = 1.0;
     v8 = *(float *)(a1 + 9884);
     if ( v8 >= 1.0 )
     {
       if ( v8 <= 1.0 )
-        goto LABEL_19;
+        goto sub_607A61F0__LABEL_19;
       v9 = v8 + -0.06;
       v10 = v8 < (float)(v8 + -0.06);
       v11 = (float)(v8 + -0.06) <= 1.0;
@@ -24093,15 +24093,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v10 )
       v7 = v9;
     *(float *)(a1 + 9884) = v7;
-  LABEL_19:
+  sub_607A61F0__LABEL_19:
     if ( *(_DWORD *)(a1 + 9888) )
-      goto LABEL_29;
+      goto sub_607A61F0__LABEL_29;
     v12 = *(float *)(a1 + 108);
     v13 = *(float *)(a1 + 9824);
     if ( v12 >= v13 )
     {
       if ( v12 <= v13 )
-        goto LABEL_29;
+        goto sub_607A61F0__LABEL_29;
       v14 = v12 + -0.4;
       v15 = v12 < (float)(v12 + -0.4);
       v16 = (float)(v12 + -0.4) <= v13;
@@ -24117,13 +24117,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v15 )
       v13 = v14;
     *(float *)(a1 + 108) = v13;
-  LABEL_29:
+  sub_607A61F0__LABEL_29:
     v17 = *(float *)(a1 + 112);
     v18 = *(float *)(a1 + 9828);
     if ( v17 >= v18 )
     {
       if ( v17 <= v18 )
-        goto LABEL_38;
+        goto sub_607A61F0__LABEL_38;
       v19 = v17 + -0.5;
       v20 = v17 < (float)(v17 + -0.5);
       v21 = (float)(v17 + -0.5) <= v18;
@@ -24139,7 +24139,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v20 )
       v18 = v19;
     *(float *)(a1 + 112) = v18;
-  LABEL_38:
+  sub_607A61F0__LABEL_38:
     result = *(_DWORD *)(a1 + 9712);
     if ( !result )
     {
@@ -24251,16 +24251,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( v5 )
         {
-  LABEL_7:
+  sub_607A65C8__LABEL_7:
           sub_60766B08(a1, (int)&v8);
-          goto LABEL_8;
+          goto sub_607A65C8__LABEL_8;
         }
         v6 = 16.0;
       }
       v9 = v6 + v9;
-      goto LABEL_7;
+      goto sub_607A65C8__LABEL_7;
     }
-  LABEL_8:
+  sub_607A65C8__LABEL_8:
     ++*(_DWORD *)(MEMORY[0xCBFA90] + 444);
     return (*(int (__fastcall **)(_DWORD *))(*a1 + 1084))(a1);
   }
@@ -24407,13 +24407,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else if ( !BitCount32(*(unsigned __int16 *)(v2 + 66)) )
     {
       *v3 = 1;
-  LABEL_10:
+  sub_607A68CC__LABEL_10:
       sub_60816F60(MEMORY[0xCC6B68], 1);
-      goto LABEL_11;
+      goto sub_607A68CC__LABEL_11;
     }
     if ( *v3 )
-      goto LABEL_10;
-  LABEL_11:
+      goto sub_607A68CC__LABEL_10;
+  sub_607A68CC__LABEL_11:
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 624))(a1, 1);
     Player_changeState(a1, 13367288, 0);
     sub_6079EA38(a1);
@@ -24442,19 +24442,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = MEMORY[0xC99DD4];
       v4 = *(_DWORD *)(MEMORY[0xC99DD4] + 764);
       if ( v4 == 2 || (*(_BYTE *)(a1 + 1228) & 4) != 0 )
-        goto LABEL_8;
+        goto sub_607A6A48__LABEL_8;
       if ( v4 == 1 )
       {
         if ( sub_60766858() )
         {
-  LABEL_8:
+  sub_607A6A48__LABEL_8:
           *(_DWORD *)(a1 + 9712) = 30;
           return 9712;
         }
         v3 = MEMORY[0xC99DD4];
       }
       sub_603FB9A0(v3, *(char *)(a1 + 84));
-      goto LABEL_8;
+      goto sub_607A6A48__LABEL_8;
     }
     return result;
   }
@@ -24519,21 +24519,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = MEMORY[0xC99DD4];
       v6 = *(_DWORD *)(MEMORY[0xC99DD4] + 764);
       if ( v6 == 2 || (*(_BYTE *)(a1 + 1228) & 4) != 0 )
-        goto LABEL_12;
+        goto Player_playDownSound_7A6B18__LABEL_12;
       if ( v6 == 1 )
       {
         if ( sub_60766858() )
         {
-  LABEL_12:
+  Player_playDownSound_7A6B18__LABEL_12:
           *(_DWORD *)(a1 + 9712) = 30;
-          goto LABEL_13;
+          goto Player_playDownSound_7A6B18__LABEL_13;
         }
         v5 = MEMORY[0xC99DD4];
       }
       sub_603FB9A0(v5, *(char *)(a1 + 84));
-      goto LABEL_12;
+      goto Player_playDownSound_7A6B18__LABEL_12;
     }
-  LABEL_13:
+  Player_playDownSound_7A6B18__LABEL_13:
     if ( (*(_BYTE *)(*(_DWORD *)(a1 + 11360) + 196) & 4) != 0 )
     {
       sub_6075FEE4(a1, (int)v10);
@@ -24612,7 +24612,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           sub_607A7010(a1);
           PlayerBase_dispatchVirtual3(a1 + 11356, 83);
         }
-        goto LABEL_33;
+        goto sub_607A6D30__LABEL_33;
       case 1:
         v4 = *(float *)(a1 + 124);
         if ( v4 <= 2.5 )
@@ -24641,7 +24641,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( !*(_DWORD *)(a1 + 9712) )
           {
             *v3 = 2;
-            goto LABEL_35;
+            goto sub_607A6D30__LABEL_35;
           }
         }
         else
@@ -24659,19 +24659,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             || sub_607FCAA8(v12) == 3
             && (float)(*(float *)(a1 + 112) + *(float *)(a1 + 496)) > (float)(*(float *)(v12 + 124) + 64.0) )
           {
-  LABEL_28:
+  sub_607A6D30__LABEL_28:
             *v3 = v17;
-  LABEL_35:
+  sub_607A6D30__LABEL_35:
             if ( Object_getBit5(*(_DWORD *)(a1 + 11360)) == 1 )
               PlayerBase_dispatchVirtual3(a1 + 11356, 85);
             return sub_60761440((_BYTE *)a1);
           }
         }
-  LABEL_33:
+  sub_607A6D30__LABEL_33:
         v2 = *v3;
-  LABEL_34:
+  sub_607A6D30__LABEL_34:
         if ( v2 > 0 )
-          goto LABEL_35;
+          goto sub_607A6D30__LABEL_35;
         return sub_60761440((_BYTE *)a1);
       case 2:
         v6 = *(float *)(a1 + 124);
@@ -24698,7 +24698,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_60001018(a1);
         sub_607A6720(a1);
         v17 = 3;
-        goto LABEL_28;
+        goto sub_607A6D30__LABEL_28;
       case 3:
         v8 = *(float *)(a1 + 124);
         if ( v8 <= 2.5 )
@@ -24722,9 +24722,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(float *)(a1 + 100) = v9;
         *(float *)(a1 + 112) = v8 + *(float *)(a1 + 112);
         sub_60001018(a1);
-        goto LABEL_33;
+        goto sub_607A6D30__LABEL_33;
       default:
-        goto LABEL_34;
+        goto sub_607A6D30__LABEL_34;
     }
   }
 
@@ -24744,14 +24744,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 9704) = 1;
     v2 = (int *)(a1 + 9696);
     if ( *(_DWORD *)(a1 + 9696) == 5 )
-      goto LABEL_4;
+      goto sub_607A7010__LABEL_4;
     STRM_BGM_COURSE_OUT_ALL_BUBBLE_ref_78A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
     v3 = *v2;
     if ( (unsigned int)*v2 > 5 )
-      goto LABEL_6;
+      goto sub_607A7010__LABEL_6;
     if ( ((1 << v3) & 0x31) != 0 )
     {
-  LABEL_4:
+  sub_607A7010__LABEL_4:
       v4 = a1;
       v5 = 40;
     }
@@ -24769,7 +24769,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v5 = 41;
     }
     Player_checkTwoFlagsAndDispatch2(v4, v5, 0);
-  LABEL_6:
+  sub_607A7010__LABEL_6:
     v6 = 0;
     *(_DWORD *)(a1 + 120) = 0;
     *(_DWORD *)(a1 + 124) = 1078984704;
@@ -24873,21 +24873,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = MEMORY[0xC99DD4];
       v5 = *(_DWORD *)(MEMORY[0xC99DD4] + 764);
       if ( v5 == 2 || (*(_BYTE *)(a1 + 1228) & 4) != 0 )
-        goto LABEL_10;
+        goto Player_playDownSound_7A72DC__LABEL_10;
       if ( v5 == 1 )
       {
         if ( sub_60766858() )
         {
-  LABEL_10:
+  Player_playDownSound_7A72DC__LABEL_10:
           *(_DWORD *)(a1 + 9712) = 30;
-          goto LABEL_11;
+          goto Player_playDownSound_7A72DC__LABEL_11;
         }
         v4 = MEMORY[0xC99DD4];
       }
       sub_603FB9A0(v4, *(char *)(a1 + 84));
-      goto LABEL_10;
+      goto Player_playDownSound_7A72DC__LABEL_10;
     }
-  LABEL_11:
+  Player_playDownSound_7A72DC__LABEL_11:
     (*(void (__fastcall **)(_DWORD, int))(**(_DWORD **)(a1 + 11360) + 84))(*(_DWORD *)(a1 + 11360), 6);
     *(_DWORD *)(a1 + 100) = 0;
     *(_DWORD *)(a1 + 88) = 0;
@@ -24989,21 +24989,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = MEMORY[0xC99DD4];
       v4 = *(_DWORD *)(MEMORY[0xC99DD4] + 764);
       if ( v4 == 2 || (*(_BYTE *)(a1 + 1228) & 4) != 0 )
-        goto LABEL_10;
+        goto Player_playDownSound_7A75EC__LABEL_10;
       if ( v4 == 1 )
       {
         if ( sub_60766858() )
         {
-  LABEL_10:
+  Player_playDownSound_7A75EC__LABEL_10:
           *(_DWORD *)(a1 + 9712) = 30;
-          goto LABEL_11;
+          goto Player_playDownSound_7A75EC__LABEL_11;
         }
         v3 = MEMORY[0xC99DD4];
       }
       sub_603FB9A0(v3, *(char *)(a1 + 84));
-      goto LABEL_10;
+      goto Player_playDownSound_7A75EC__LABEL_10;
     }
-  LABEL_11:
+  Player_playDownSound_7A75EC__LABEL_11:
     if ( (*(_BYTE *)(*(_DWORD *)(a1 + 11360) + 196) & 4) != 0 )
     {
       sub_6075FEE4(a1, (int)v8);
@@ -25080,13 +25080,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( *(_BYTE *)(a1 + 12012) )
         {
           if ( *(_DWORD *)(a1 + 9712) )
-            goto LABEL_26;
+            goto SE_PLY_BURN_DOWN_ref__LABEL_26;
         }
         else if ( (float)(*(float *)(a1 + 112) + *(float *)(a1 + 496)) >= (float)((float)(*(float *)(MEMORY[0xCC6484] + 124)
                                                                                         - *(float *)(MEMORY[0xCC6484] + 108))
                                                                                 + -24.0) )
         {
-          goto LABEL_26;
+          goto SE_PLY_BURN_DOWN_ref__LABEL_26;
         }
         sub_607A6720(a1);
         *v3 = 2;
@@ -25111,9 +25111,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           sub_603E4AD8(*(_DWORD *)(a1 + 12008));
           sub_607602AC(a1, 1, 0);
         }
-        goto LABEL_26;
+        goto SE_PLY_BURN_DOWN_ref__LABEL_26;
       }
-  LABEL_27:
+  SE_PLY_BURN_DOWN_ref__LABEL_27:
       v10 = *(char *)(a1 + 84);
       v11 = (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 156))(a1, *(_DWORD *)(a1 + 1320));
       sub_60236EC4(v10, a1 + 10040, arr_dword_60B0C8C4[v11], a1 + 108, 0, 0);
@@ -25141,9 +25141,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 100) = v7;
     *(float *)(a1 + 112) = v6 + *(float *)(a1 + 112);
     sub_60001018(a1);
-  LABEL_26:
+  SE_PLY_BURN_DOWN_ref__LABEL_26:
     if ( *v3 )
-      goto LABEL_27;
+      goto SE_PLY_BURN_DOWN_ref__LABEL_27;
     return sub_60761440((_BYTE *)a1);
   }
 
@@ -25158,7 +25158,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *(_BYTE *)(a1 + 12013) = 0;
     if ( a3 == 17 )
-      goto LABEL_7;
+      goto sub_607A7AA4__LABEL_7;
     if ( !(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1204))(a1) )
     {
       v6 = *(_DWORD *)(a1 + 1320);
@@ -25166,7 +25166,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v6 != 3 )
         v7 = v6 == 0;
       if ( v7 )
-  LABEL_7:
+  sub_607A7AA4__LABEL_7:
         *(_BYTE *)(a1 + 12013) = 1;
     }
     *(_DWORD *)(a1 + 9720) = *(_DWORD *)(a2 + 8);
@@ -25271,9 +25271,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1204))(a1) )
           {
-  LABEL_44:
+  SE_PLY_CHANGE_SMALL_ref__LABEL_44:
             result = 3;
-            goto LABEL_45;
+            goto SE_PLY_CHANGE_SMALL_ref__LABEL_45;
           }
           if ( !isMode5(a1) )
             sub_607A2894((_DWORD *)a1, (_DWORD *)(*(_DWORD *)(a1 + 1320) != 1));
@@ -25282,30 +25282,30 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v12 = a1;
           v13 = 0;
           v11 = 0;
-  LABEL_43:
+  SE_PLY_CHANGE_SMALL_ref__LABEL_43:
           sub_607602AC(v12, v13, v11);
-          goto LABEL_44;
+          goto SE_PLY_CHANGE_SMALL_ref__LABEL_44;
         }
         (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1384))(a1);
         v6 = *(_DWORD *)(a1 + 1204);
         if ( (v6 & 0x8000) != 0 )
-          goto LABEL_19;
+          goto SE_PLY_CHANGE_SMALL_ref__LABEL_19;
         *(_DWORD *)(a1 + 1204) = v6 | 0x4000;
         v7 = MEMORY[0xC99DD4];
         v8 = *(_DWORD *)(MEMORY[0xC99DD4] + 764);
         if ( v8 == 2 || (*(_BYTE *)(a1 + 1228) & 4) != 0 )
-          goto LABEL_18;
+          goto SE_PLY_CHANGE_SMALL_ref__LABEL_18;
         if ( v8 != 1 )
-          goto LABEL_17;
+          goto SE_PLY_CHANGE_SMALL_ref__LABEL_17;
         if ( !sub_60766858() )
         {
           v7 = MEMORY[0xC99DD4];
-  LABEL_17:
+  SE_PLY_CHANGE_SMALL_ref__LABEL_17:
           sub_603FB9A0(v7, *(char *)(a1 + 84));
         }
-  LABEL_18:
+  SE_PLY_CHANGE_SMALL_ref__LABEL_18:
         *(_DWORD *)(a1 + 9712) = 30;
-  LABEL_19:
+  SE_PLY_CHANGE_SMALL_ref__LABEL_19:
         if ( (*(_BYTE *)(a1 + 1227) & 0x20) == 0 )
         {
           v9 = Global_setBitmaskAndReturnC7B3A8(*(char *)(a1 + 84));
@@ -25329,7 +25329,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v12 = a1;
         v13 = 1;
-        goto LABEL_43;
+        goto SE_PLY_CHANGE_SMALL_ref__LABEL_43;
       case 4:
         result = *(_DWORD *)(a1 + 9712);
         if ( !result )
@@ -25339,7 +25339,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( *(_BYTE *)(a1 + 12012) )
             sub_60777FB4(MEMORY[0xCBFA90], (_DWORD *)a1, 5);
           result = 5;
-  LABEL_45:
+  SE_PLY_CHANGE_SMALL_ref__LABEL_45:
           *v3 = result;
         }
         return result;
@@ -25717,12 +25717,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       case 0:
         v5 = *(_DWORD *)(a1 + 9780);
         if ( v5 < 3 )
-          goto LABEL_34;
+          goto sub_607A878C__LABEL_34;
         if ( (float)(COERCE_FLOAT((sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000)
                    + -1.0) >= 0.5 )
         {
           v5 = *(_DWORD *)(a1 + 9780);
-  LABEL_34:
+  sub_607A878C__LABEL_34:
           v6 = 5 * v5 + 10;
           result = 2;
         }
@@ -25732,11 +25732,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v6 = 60;
         }
         *(_DWORD *)(a1 + 9712) = v6;
-        goto LABEL_36;
+        goto sub_607A878C__LABEL_36;
       case 1:
         *(_DWORD *)(a1 + 9712) = 5 * *(_DWORD *)(a1 + 9780);
         result = 2;
-        goto LABEL_36;
+        goto sub_607A878C__LABEL_36;
       case 2:
       case 3:
         result = *(_DWORD *)(a1 + 9712);
@@ -25753,7 +25753,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(float *)(a1 + 88) = v4;
         (*(void (__fastcall **)(_DWORD, int))(**(_DWORD **)(a1 + 11360) + 84))(*(_DWORD *)(a1 + 11360), 2);
         result = 4;
-  LABEL_36:
+  sub_607A878C__LABEL_36:
         *v3 = result;
         return result;
       case 4:
@@ -25772,7 +25772,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v8 >= (float)(v7 + 32.0) )
         {
           if ( v8 <= (float)(v7 + 32.0) )
-            goto LABEL_24;
+            goto sub_607A878C__LABEL_24;
           v11 = v8 - v9;
           v12 = v8 < v11;
           v13 = v11 <= v10;
@@ -25788,7 +25788,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v12 )
           v11 = v7 + 32.0;
         *(float *)(a1 + 108) = v11;
-  LABEL_24:
+  sub_607A878C__LABEL_24:
         result = sub_60773F4C(a1);
         v14 = *(float *)(a1 + 108);
         if ( v14 <= v7 )
@@ -25919,7 +25919,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v8 >= v10 )
         {
           if ( v8 <= v10 )
-            goto LABEL_21;
+            goto sub_607A8B20__LABEL_21;
           v11 = v8 - v7;
           v9 = v8 < v11;
           v12 = v11 <= v10;
@@ -25935,7 +25935,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v9 )
           v11 = *(float *)(MEMORY[0xCBFA90] + 268) + (float)((float)*(int *)(a1 + 9780) * -24.0);
         *(float *)(a1 + 108) = v11;
-  LABEL_21:
+  sub_607A8B20__LABEL_21:
         sub_60773F4C(a1, v9, a3, a4);
         *(_DWORD *)(a1 + 1220) |= 0x200u;
         result = sub_6076EF58(a1);
@@ -26002,14 +26002,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v13 = (int)(a1 + 2839);
             *v5 = v15;
             v10 = 91;
-            goto LABEL_28;
+            goto sub_607A8DB4__LABEL_28;
           }
           v9 = 4;
           v10 = 92;
         }
         *v5 = v9;
         v13 = (int)(a1 + 2839);
-  LABEL_28:
+  sub_607A8DB4__LABEL_28:
         PlayerBase_dispatchVirtual3(v13, v10);
         sub_6076DC6C((int)a1, a2);
         return 0;
@@ -26022,15 +26022,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
         {
           if ( Object_isFloat2EqualViaChain(*v11) != 1 )
-            goto LABEL_20;
+            goto sub_607A8DB4__LABEL_20;
           v12 = *(void (**)(void))(*(_DWORD *)a1[2842] + 184);
         }
         v12();
-        goto LABEL_20;
+        goto sub_607A8DB4__LABEL_20;
       case 2:
       case 3:
         v7 = a1[2840];
-        goto LABEL_21;
+        goto sub_607A8DB4__LABEL_21;
       case 4:
         v11 = a1 + 2840;
         if ( Object_isFloat2EqualViaChain(a1[2840]) == 1 )
@@ -26043,11 +26043,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         else
         {
-  LABEL_20:
+  sub_607A8DB4__LABEL_20:
           v7 = *v11;
-  LABEL_21:
+  sub_607A8DB4__LABEL_21:
           if ( Object_getBit5(v7) == 1 )
-  LABEL_22:
+  sub_607A8DB4__LABEL_22:
             (*(void (__fastcall **)(int *))(*a1 + 704))(a1);
         }
         return 0;
@@ -26068,7 +26068,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           return 0;
         (*(void (__fastcall **)(int *, int, _DWORD))(*a1 + 144))(a1, 7, 0);
         sub_6078F2B0(a1[2842]);
-        goto LABEL_22;
+        goto sub_607A8DB4__LABEL_22;
       case 9:
         return result;
       default:
@@ -26153,7 +26153,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_6078F2B0(a1[2842]);
         *v4 = 0;
         result = a1[308];
-        goto LABEL_13;
+        goto sub_607A90F8__LABEL_13;
       }
       if ( v3 != 2 )
       {
@@ -26165,13 +26165,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *v4 = 2;
           return 2;
         }
-        goto LABEL_12;
+        goto sub_607A90F8__LABEL_12;
       }
       if ( a1[330] != 8 || *(_DWORD *)(a1[2840] + 164) == 8 )
       {
-  LABEL_12:
+  sub_607A90F8__LABEL_12:
         *v4 = 0;
-  LABEL_13:
+  sub_607A90F8__LABEL_13:
         result &= ~0x4000u;
         a1[308] = result;
         return result;
@@ -27372,7 +27372,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v5 >= 4 )
         v6 = 0;
       if ( *(int *)(MEMORY[0xC7B420] + 8 * v6 + 100) < 6 )
-        goto LABEL_17;
+        goto SE_PLY_THROW_ICEBALL_ref__LABEL_17;
       sub_6000A2E8(MEMORY[0xC7B420], (char)v5);
       v4 = *(_DWORD *)(a1 + 1320);
     }
@@ -27386,16 +27386,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(int *)(MEMORY[0xC7B420] + 8 * v9 + 132) <= 5 && v7 < 2 )
       {
         if ( a2 )
-          goto LABEL_15;
+          goto SE_PLY_THROW_ICEBALL_ref__LABEL_15;
         if ( (unsigned __int8)v8 >= 4u )
           v8 = 0;
         if ( *(int *)(MEMORY[0xC7B420] + 8 * v8 + 136) < 2 )
         {
-  LABEL_15:
+  SE_PLY_THROW_ICEBALL_ref__LABEL_15:
           memset(v32, 0, 0x2Cu);
           Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_THROW_ICEBALL", 0, 0);
           v10 = 11482256;
-  LABEL_25:
+  SE_PLY_THROW_ICEBALL_ref__LABEL_25:
           v32[3] = Profile__get(*(_DWORD *)v10);
           v32[7] = sub_608336A8(*(_DWORD *)(a1 + 12048));
           v32[0] = ((*(_BYTE *)(a1 + 87) & 0xF) << 12)
@@ -27440,7 +27440,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v4 != 2 )
       return;
-  LABEL_17:
+  SE_PLY_THROW_ICEBALL_ref__LABEL_17:
     v11 = *(char *)(a1 + 84);
     v12 = v11;
     if ( (unsigned __int8)v11 >= 4u )
@@ -27448,16 +27448,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(int *)(MEMORY[0xC7B420] + 8 * v12 + 100) < 6 )
     {
       if ( a2 )
-        goto LABEL_24;
+        goto SE_PLY_THROW_ICEBALL_ref__LABEL_24;
       if ( (unsigned __int8)v11 >= 4u )
         v11 = 0;
       if ( *(int *)(MEMORY[0xC7B420] + 8 * v11 + 104) < 2 )
       {
-  LABEL_24:
+  SE_PLY_THROW_ICEBALL_ref__LABEL_24:
         memset(v32, 0, 0x2Cu);
         Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_THROW_FIRE", 0, 0);
         v10 = 11482264;
-        goto LABEL_25;
+        goto SE_PLY_THROW_ICEBALL_ref__LABEL_25;
       }
     }
   }
@@ -27532,7 +27532,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return Player_changeState(v11, v10, v9);
       }
       v10 = 13388732;
-  LABEL_35:
+  sub_607AAF80__LABEL_35:
       v11 = a1;
       v9 = 1;
       return Player_changeState(v11, v10, v9);
@@ -27542,19 +27542,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v7 == 1 )
     {
       if ( sub_60786670(a1 + 688) != 1 )
-        goto LABEL_25;
+        goto sub_607AAF80__LABEL_25;
       v12 = *(_DWORD *)(a1 + 1320);
       if ( (unsigned int)(v12 - 5) >= 2 )
       {
         if ( v12 != 2 )
-          goto LABEL_25;
+          goto sub_607AAF80__LABEL_25;
         v15 = *(unsigned __int8 *)(a1 + 84);
         v16 = 0;
         if ( v15 < 4 )
           v16 = (char)v15;
         if ( *(int *)(MEMORY[0xC7B420] + 8 * v16 + 104) >= 2 )
         {
-  LABEL_25:
+  sub_607AAF80__LABEL_25:
           if ( (*(_BYTE *)(a1 + 6900) & 1) != 0 )
           {
             result = sub_6075FC38(a1);
@@ -27580,7 +27580,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             }
             v10 = 13388804;
           }
-          goto LABEL_35;
+          goto sub_607AAF80__LABEL_35;
         }
       }
       else
@@ -27590,7 +27590,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v13 < 4 )
           v14 = (char)v13;
         if ( *(int *)(MEMORY[0xC7B420] + 8 * v14 + 136) > 1 )
-          goto LABEL_25;
+          goto sub_607AAF80__LABEL_25;
       }
       v17 = *(_DWORD *)(a1 + 80);
       *(_DWORD *)(a1 + 12048) = v17;
@@ -27648,13 +27648,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v2[3012] = v1[3012];
         v1 = v2;
         if ( !(*(int (__fastcall **)(_DWORD *))(*v2 + 1064))(v2) )
-          goto LABEL_6;
+          goto sub_607AB2C8__LABEL_6;
       }
     }
     else
     {
       v3 = (int)v1;
-  LABEL_6:
+  sub_607AB2C8__LABEL_6:
       SE_PLY_THROW_ICEBALL_ref(v3, 1);
     }
   }
@@ -27752,7 +27752,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = a1;
       if ( *(_DWORD *)(a1 + 1320) == 9 )
         v5 = 11579184;
-  LABEL_6:
+  sub_607AB4A8__LABEL_6:
       *(_DWORD *)(a1 + 124) = *(_DWORD *)v5;
       v7 = sub_607B9CC8(v6, 2, 1);
       Player_changeState(a1, 13389324, v7);
@@ -27778,7 +27778,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = a1;
       if ( *(_DWORD *)(a1 + 1320) == 9 )
         v5 = 11579184;
-      goto LABEL_6;
+      goto sub_607AB4A8__LABEL_6;
     }
     v10 = *(_DWORD *)(a1 + 156);
     Player_changeState(a1, 13390028, 0);
@@ -28136,11 +28136,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v4 = *(_DWORD *)(a1 + 12908);
               v5 = v4 - 805306368;
               if ( v4 - 805306368 >= 0 )
-                goto LABEL_11;
+                goto sub_607ABDB0__LABEL_11;
               if ( v4 != -1342177280 )
               {
                 v5 = 805306368 - v4;
-  LABEL_11:
+  sub_607ABDB0__LABEL_11:
                 if ( v5 <= 0x4000000 )
                   *(_DWORD *)(a1 + 12896) = 1;
               }
@@ -28254,7 +28254,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v10 >= v5 )
       {
         if ( v10 <= v5 )
-          goto LABEL_26;
+          goto sub_607AC0B8__LABEL_26;
         v11 = v10 + -0.05;
         v8 = v10 < (float)(v10 + -0.05);
         v12 = (float)(v10 + -0.05) <= v5;
@@ -28267,24 +28267,24 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( v12 )
         v11 = *(float *)(4 * *(_DWORD *)(a1 + 80) + 0xB0A898) * 1.5;
-      goto LABEL_23;
+      goto sub_607AC0B8__LABEL_23;
     }
     if ( Object_queryTwoFlagStates(a1 + 688, &v18) == 1 )
     {
       v4 = *(float *)(a1 + 88);
       v5 = *(float *)(4 * v18 + 0xB0A898);
       if ( (float)(v4 * v5) < 0.0 )
-        goto LABEL_9;
+        goto sub_607AC0B8__LABEL_9;
       v6 = -v4;
       if ( v4 > 0.0 )
         v6 = *(float *)(a1 + 88);
       if ( v6 <= 1.0 )
       {
-  LABEL_9:
+  sub_607AC0B8__LABEL_9:
         if ( v4 >= v5 )
         {
           if ( v4 <= v5 )
-            goto LABEL_26;
+            goto sub_607AC0B8__LABEL_26;
           v7 = v4 + -0.05;
           v8 = v4 < (float)(v4 + -0.05);
           v9 = (float)(v4 + -0.05) <= v5;
@@ -28299,13 +28299,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v11 = *(float *)(4 * v18 + 0xB0A898);
         else
           v11 = v7;
-  LABEL_23:
+  sub_607AC0B8__LABEL_23:
         if ( !v8 )
           v5 = v11;
         *(float *)(a1 + 88) = v5;
       }
     }
-  LABEL_26:
+  sub_607AC0B8__LABEL_26:
     if ( *(float *)(a1 + 124) <= 0.0 || (result = *(unsigned __int8 *)(a1 + 6900), (result & 1) != 0) )
     {
       v14 = *(_DWORD *)(a1 + 156);
@@ -28375,7 +28375,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v7 >= v9 )
     {
       if ( v7 <= v9 )
-        goto LABEL_13;
+        goto sub_607AC310__LABEL_13;
       v10 = v7 - v8;
       v11 = v7 < v10;
       v12 = v10 <= v9;
@@ -28391,7 +28391,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v11 )
       v9 = v10;
     *v6 = v9;
-  LABEL_13:
+  sub_607AC310__LABEL_13:
     moveValueTo(a1 + 12908, &v17, &v16, 12900);
     if ( *(_DWORD *)(a1 + 1320) == 9 )
       sub_607AC67C(a1);
@@ -28457,7 +28457,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v7 >= v9 )
     {
       if ( v7 <= v9 )
-        goto LABEL_13;
+        goto sub_607AC4B4__LABEL_13;
       v10 = v7 - v1;
       v11 = v7 < (float)(v7 - v1);
       v12 = (float)(v7 - v1) <= v9;
@@ -28473,7 +28473,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v11 )
       v9 = v10;
     *(float *)(result + 88) = v9;
-  LABEL_13:
+  sub_607AC4B4__LABEL_13:
     v13 = v4 * v8;
     v14 = *(float *)(result + 124);
     if ( v14 < 0.0 && (*(_BYTE *)(result + 6900) & 1) != 0 )
@@ -28543,23 +28543,23 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = 4 * v21 + 11577496;
       v8 = *(float *)(4 * v21 + 0xB0A898);
       if ( (float)(v7 * v8) < 0.0 )
-        goto LABEL_11;
+        goto sub_607AC67C__LABEL_11;
       v9 = -v7;
       if ( v7 > 0.0 )
         v9 = *(float *)(a1 + 88);
       if ( v9 <= 1.0 )
       {
-  LABEL_11:
+  sub_607AC67C__LABEL_11:
         v13 = v3 * 0.5;
         if ( v7 < v8 )
         {
           v12 = v13 + v7;
           result = 0;
-  LABEL_13:
+  sub_607AC67C__LABEL_13:
           v14 = v12 < v7;
           if ( v12 >= v8 )
             result = 1;
-  LABEL_22:
+  sub_607AC67C__LABEL_22:
           if ( result )
             v15 = v8;
           else
@@ -28567,17 +28567,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( v14 )
             v15 = v8;
           *(float *)(a1 + 88) = v15;
-          goto LABEL_28;
+          goto sub_607AC67C__LABEL_28;
         }
         if ( v7 <= v8 )
-          goto LABEL_28;
+          goto sub_607AC67C__LABEL_28;
         result = 0;
         v12 = v7 - v13;
-  LABEL_20:
+  sub_607AC67C__LABEL_20:
         v14 = v7 < v12;
         if ( v12 <= v8 )
           result = 1;
-        goto LABEL_22;
+        goto sub_607AC67C__LABEL_22;
       }
     }
     v10 = -v7;
@@ -28592,15 +28592,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         result = 0;
         v12 = v7 + v3;
-        goto LABEL_13;
+        goto sub_607AC67C__LABEL_13;
       }
       if ( v7 <= v8 )
-        goto LABEL_28;
+        goto sub_607AC67C__LABEL_28;
       v12 = v7 - v3;
       result = 0;
-      goto LABEL_20;
+      goto sub_607AC67C__LABEL_20;
     }
-  LABEL_28:
+  sub_607AC67C__LABEL_28:
     v16 = *(float *)(a1 + 124);
     v17 = v4 * v5;
     if ( v16 < 0.0 )
@@ -28696,7 +28696,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v12 = 3;
         else
           v12 = 2;
-        goto LABEL_34;
+        goto sub_607AC8CC__LABEL_34;
       }
       return v2;
     }
@@ -28708,7 +28708,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( sub_60786934(a1 + 688) == 1 )
       {
         v12 = 0;
-  LABEL_34:
+  sub_607AC8CC__LABEL_34:
         Player_changeState(a1, 13390060, v12);
         return 1;
       }
@@ -28857,7 +28857,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v41 = 0;
               v40 = 0x4000000;
               moveValueTo((int *)(a1 + 156), &v41, &v40, v17);
-              goto LABEL_64;
+              goto SE_PLY_ref_6__LABEL_64;
             }
             v41 = FixedPoint_selectSign(a1, *(_DWORD *)(a1 + 80));
             v40 = 0x4000000;
@@ -28867,13 +28867,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             else
               v19 = (int *)&unk_60B0CDDC;
             v20 = (int *)(a1 + 156);
-            goto LABEL_63;
+            goto SE_PLY_ref_6__LABEL_63;
           case 1:
             if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1064))(a1) != 1 )
-              goto LABEL_20;
+              goto SE_PLY_ref_6__LABEL_20;
             return Player_changeState(a1, 13388804, 0);
           case 3:
-  LABEL_20:
+  SE_PLY_ref_6__LABEL_20:
             v12 = (_DWORD *)ActorMgr_findAndInstantiate3();
             if ( v12 )
             {
@@ -28899,15 +28899,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               {
                 Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_MSSB_FALL", 0, 0);
               }
-              goto LABEL_64;
+              goto SE_PLY_ref_6__LABEL_64;
             }
             v21 = ActorMgr_findAndInstantiate3();
             v22 = v21;
             if ( !v21 )
             {
               if ( Object_isFloat2EqualViaChain(*(_DWORD *)(a1 + 11360)) != 1 )
-                goto LABEL_53;
-              goto LABEL_47;
+                goto SE_PLY_ref_6__LABEL_53;
+              goto SE_PLY_ref_6__LABEL_47;
             }
             v23 = isMode4(v21);
             v24 = v23;
@@ -28916,10 +28916,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( !v24 )
             {
               if ( (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(v22 + 11360) + 132))(*(_DWORD *)(v22 + 11360)) != 1 )
-                goto LABEL_53;
-  LABEL_47:
+                goto SE_PLY_ref_6__LABEL_53;
+  SE_PLY_ref_6__LABEL_47:
               Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_MSSB_FALL", 0, 0);
-              goto LABEL_53;
+              goto SE_PLY_ref_6__LABEL_53;
             }
             v26 = sqrtf(
                     (float)(*(float *)(a1 + 124) * *(float *)(a1 + 124))
@@ -28934,22 +28934,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( v28 < 0 )
               v29 = 0;
             sub_607735B8((unsigned __int8 *)a1, (int)"SE_PLY_KINOPEACH_FLYING", v29, 0, v39);
-  LABEL_53:
+  SE_PLY_ref_6__LABEL_53:
             if ( !isMode5(a1) )
-              goto LABEL_59;
+              goto SE_PLY_ref_6__LABEL_59;
             v30 = *(_DWORD *)(a1 + 80);
             v31 = *(_DWORD *)(a1 + 11360);
             if ( (*(_BYTE *)(v31 + 210) & 2) != 0 )
             {
               if ( !v30 )
-                goto LABEL_59;
+                goto SE_PLY_ref_6__LABEL_59;
             }
             else if ( v30 )
             {
-              goto LABEL_59;
+              goto SE_PLY_ref_6__LABEL_59;
             }
             *(_BYTE *)(v31 + 236) = 1;
-  LABEL_59:
+  SE_PLY_ref_6__LABEL_59:
             if ( *(_DWORD *)(a1 + 80) )
               v32 = 178;
             else
@@ -28961,9 +28961,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v41 = 0;
             v20 = (int *)(a1 + 156);
             v19 = &v41;
-  LABEL_63:
+  SE_PLY_ref_6__LABEL_63:
             sub_6083224C(v20, v19, &dword_60B0CDE4);
-  LABEL_64:
+  SE_PLY_ref_6__LABEL_64:
             if ( sub_60454C78(MEMORY[0xC9CF0C]) == 1 )
             {
               if ( *v4 == 1 || sub_60786934(a1 + 688) )
@@ -29005,7 +29005,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             result = Player_changeState(a1, v34, 1);
             break;
           default:
-            goto LABEL_64;
+            goto SE_PLY_ref_6__LABEL_64;
         }
       }
     }
@@ -29069,14 +29069,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
       {
         if ( v3 != 3 )
-          goto LABEL_8;
+          goto SE_PLY_ref_6_helper__LABEL_8;
         v4 = ActorMgr_findAndInstantiate3();
         v5 = v4 == 0;
         if ( v4 )
           v5 = *(_BYTE *)(v4 + 12918) == 1;
         if ( v5 )
         {
-  LABEL_8:
+  SE_PLY_ref_6_helper__LABEL_8:
           v6 = sub_607868A0(v2);
           v12 = 11579084;
           if ( v6 )
@@ -29107,9 +29107,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( result == 9 )
           v9 = 11579176;
       }
-  LABEL_35:
+  SE_PLY_ref_6_helper__LABEL_35:
       v11 = *(_DWORD *)v9;
-      goto LABEL_36;
+      goto SE_PLY_ref_6_helper__LABEL_36;
     }
     *(_DWORD *)(a1 + 92) = 0;
     v7 = *(float *)(a1 + 88);
@@ -29119,7 +29119,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = 11579104;
       if ( result == 9 )
         v9 = 11579180;
-      goto LABEL_35;
+      goto SE_PLY_ref_6_helper__LABEL_35;
     }
     result = *(_DWORD *)(a1 + 1320);
     v10 = 11579084;
@@ -29132,10 +29132,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = 11579104;
       if ( result == 9 )
         v9 = 11579180;
-      goto LABEL_35;
+      goto SE_PLY_ref_6_helper__LABEL_35;
     }
     v11 = 0;
-  LABEL_36:
+  SE_PLY_ref_6_helper__LABEL_36:
     *(_DWORD *)(a1 + 104) = v11;
     return result;
   }
@@ -29259,7 +29259,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         EffectData_release((int)&a1[916]);
         *v3 = 0;
       }
-  LABEL_11:
+  sub_607ADA14__LABEL_11:
       result = sub_607BB53C(a1);
       v7 = result == 1;
       if ( result == 1 )
@@ -29270,7 +29270,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !v7 )
         return result;
       result = 1;
-  LABEL_16:
+  sub_607ADA14__LABEL_16:
       *v3 = result;
       return result;
     }
@@ -29278,7 +29278,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( result )
         return result;
-      goto LABEL_11;
+      goto sub_607ADA14__LABEL_11;
     }
     v4 = a1[7].n128_u32[0];
     v11 = a1[6].n128_u32[3];
@@ -29299,7 +29299,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       sub_60236074((int)&a1[917]);
       result = 2;
-      goto LABEL_16;
+      goto sub_607ADA14__LABEL_16;
     }
     return result;
   }
@@ -29340,13 +29340,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         EffectData_release(a1 + 14764);
         *v3 = 0;
       }
-      goto LABEL_7;
+      goto sub_607ADB50__LABEL_7;
     }
     if ( result != 1 )
     {
       if ( result )
         return result;
-  LABEL_7:
+  sub_607ADB50__LABEL_7:
       result = sub_607BB53C(a1);
       v5 = result == 1;
       if ( result == 1 )
@@ -29360,7 +29360,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( result < 0 )
         {
           result = 1;
-  LABEL_19:
+  sub_607ADB50__LABEL_19:
           *v3 = result;
           return result;
         }
@@ -29383,7 +29383,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       sub_60236074(a1 + 14780);
       result = 2;
-      goto LABEL_19;
+      goto sub_607ADB50__LABEL_19;
     }
     return result;
   }
@@ -29852,7 +29852,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_60786744(a1 + 688) == 1 )
     {
       v4 = 13388804;
-  LABEL_17:
+  sub_607AE678__LABEL_17:
       v5 = a1;
       v3 = 1;
       return Player_changeState(v5, v4, v3);
@@ -29868,7 +29868,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       || !(*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 1444))(a1, v6) )
     {
       v4 = 13388804;
-      goto LABEL_17;
+      goto sub_607AE678__LABEL_17;
     }
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1088))(a1);
     if ( *(_DWORD *)(a1 + 1320) == 9 )
@@ -29884,12 +29884,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !isMode5(a1) )
       {
         v8 = 0.0;
-        goto LABEL_23;
+        goto sub_607AE678__LABEL_23;
       }
       v7 = 11579428;
     }
     v8 = *(float *)v7;
-  LABEL_23:
+  sub_607AE678__LABEL_23:
     v9 = *(float *)(v6 + 112);
     v10 = *(_DWORD *)(v6 + 108);
     v11 = *(float *)(a1 + 6872);
@@ -29953,12 +29953,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (a1[1212] & 4) != 0 )
       {
         v3 = 13389676;
-        goto LABEL_9;
+        goto sub_607AEA48__LABEL_9;
       }
       if ( !(*(int (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 1064))(a1) )
       {
         v3 = 13389020;
-  LABEL_9:
+  sub_607AEA48__LABEL_9:
         Player_changeState((int)a1, v3, 0);
         return 1;
       }
@@ -30219,7 +30219,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v2 >= MEMORY[0xB0B4B0] )
       {
         if ( v2 <= MEMORY[0xB0B4B0] )
-          goto LABEL_12;
+          goto SE_PLY_PRPL_LETDOWN_FAST_ref__LABEL_12;
         v4 = v2 + -0.1;
         v5 = v2 < (float)(v2 + -0.1);
         v6 = (float)(v2 + -0.1) <= MEMORY[0xB0B4B0];
@@ -30236,7 +30236,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v3 = v4;
     }
     *(float *)(a1 + 96) = v3;
-  LABEL_12:
+  SE_PLY_PRPL_LETDOWN_FAST_ref__LABEL_12:
     v7 = (_DWORD *)(a1 + 6900);
     *(_DWORD *)(a1 + 100) = *(_DWORD *)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1100))(a1);
     if ( (*(_BYTE *)(a1 + 6909) & 8) != 0 )
@@ -30246,11 +30246,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *v7 &= ~1u;
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 1056))(a1, 8);
       Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_LETDOWN_FAST_LAND", 0, 0);
-      goto LABEL_18;
+      goto SE_PLY_PRPL_LETDOWN_FAST_ref__LABEL_18;
     }
     if ( (*(_BYTE *)v7 & 1) == 0 )
     {
-  LABEL_18:
+  SE_PLY_PRPL_LETDOWN_FAST_ref__LABEL_18:
       if ( sub_60786744(a1 + 688) || *(_DWORD *)(a1 + 9944) )
       {
         if ( (*(_BYTE *)(a1 + 6902) & 8) != 0 )
@@ -30380,7 +30380,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v4 < 0 )
     {
       v7 = 126;
-  LABEL_15:
+  sub_607AF508__LABEL_15:
       v8 = a1 + 11356;
       return Object_callSlots19And21(v8, v7);
     }
@@ -30393,7 +30393,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (v4 & 0x10000000) != 0 )
     {
       v7 = 69;
-      goto LABEL_15;
+      goto sub_607AF508__LABEL_15;
     }
     if ( (v4 & 0x8000000) != 0 )
     {
@@ -30585,13 +30585,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (*(_BYTE *)(a1 + 1240) & 4) != 0 )
       v11 = 0;
     if ( (*v9 & 0x18) != 0 || !*(_DWORD *)(a1 + 12076) || (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1064))(a1) )
-      goto LABEL_16;
+      goto sub_607AF910__LABEL_16;
     v2 = *(float *)(a1 + 88);
     if ( v2 <= 0.0 )
       v2 = -v2;
     if ( !v11 || v2 < 3.0 )
     {
-  LABEL_16:
+  sub_607AF910__LABEL_16:
       *(_DWORD *)(a1 + 12072) = 0;
       v12 = (_DWORD *)(a1 + 12072);
     }
@@ -30861,19 +30861,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = *(_DWORD *)(a1 + 1204);
     if ( (v2 & 0x8000000) != 0 )
-      goto LABEL_28;
+      goto sub_607AFF5C__LABEL_28;
     if ( v2 < 0 )
     {
       if ( Object_getBit5(*(_DWORD *)(a1 + 11360)) != 1 )
         return sub_607B03C0(a1);
       Object_callSlots19And21(a1 + 11356, 6);
       *(_DWORD *)(a1 + 15064) = 6;
-  LABEL_28:
+  sub_607AFF5C__LABEL_28:
       *(_DWORD *)(a1 + 9940) = 1;
       return sub_607B03C0(a1);
     }
     if ( *(float *)(a1 + 124) >= 0.0 )
-      goto LABEL_11;
+      goto sub_607AFF5C__LABEL_11;
     v3 = 70;
     v4 = (v2 & 0x10000000) == 0;
     if ( (v2 & 0x10000000) == 0 )
@@ -30885,13 +30885,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v5 = *(_DWORD *)(a1 + 12072);
       if ( v5 == 2 )
-        goto LABEL_11;
+        goto sub_607AFF5C__LABEL_11;
       v3 = arr_dword_60B0CDF8[v5];
     }
     PlayerBase_dispatchVirtual3(a1 + 11356, v3);
     *(_DWORD *)(a1 + 15064) = v3;
     *(_DWORD *)(a1 + 9940) = 1;
-  LABEL_11:
+  sub_607AFF5C__LABEL_11:
     if ( !sub_607B6CB0(a1) )
     {
       v6 = (_DWORD *)(a1 + 11360);
@@ -30926,7 +30926,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v11 = arr_dword_60B0CDF8[v13];
           }
           *(_DWORD *)(a1 + 15064) = v11;
-          goto LABEL_28;
+          goto sub_607AFF5C__LABEL_28;
         }
       }
     }
@@ -30980,11 +30980,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v10 = *(_DWORD *)(a1 + 15064);
       if ( v10 != -1 )
         Object_callSlots19And21(a1 + 11356, v10);
-      goto LABEL_18;
+      goto SE_PLY_PRPL_FLY_ref__LABEL_18;
     }
     if ( v5 )
     {
-  LABEL_18:
+  SE_PLY_PRPL_FLY_ref__LABEL_18:
       *(_DWORD *)(a1 + 15056) = 1056964608;
       return sub_607B03C0(a1);
     }
@@ -31006,9 +31006,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( v11 <= 1.5 )
         {
-  LABEL_29:
+  SE_PLY_PRPL_FLY_ref__LABEL_29:
           (*(void (__fastcall **)(_DWORD, int))(*(_DWORD *)*v9 + 84))(*v9, v7);
-          goto LABEL_30;
+          goto SE_PLY_PRPL_FLY_ref__LABEL_30;
         }
         v12 = v11 + -0.02;
         v13 = v11 < (float)(v11 + -0.02);
@@ -31027,10 +31027,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
         v15 = v12;
       *(float *)(a1 + 15056) = v15;
-      goto LABEL_29;
+      goto SE_PLY_PRPL_FLY_ref__LABEL_29;
     }
     v9 = (_DWORD *)(a1 + 11360);
-  LABEL_30:
+  SE_PLY_PRPL_FLY_ref__LABEL_30:
     if ( Object_isFloat2EqualViaChain(*v9) || Object_isFloat2EqualViaChain(*v9) == 1 )
       Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_FLY", 0, 0);
     return sub_607B03C0(a1);
@@ -31061,16 +31061,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_DWORD *)(a1 + 12072) == 2 )
     {
       if ( *(_DWORD *)(a1 + 9940) != 1 )
-        goto LABEL_13;
-      goto LABEL_12;
+        goto sub_607B03C0__LABEL_13;
+      goto sub_607B03C0__LABEL_12;
     }
     v6 = (*(_BYTE *)(a1 + 1207) & 0x10) == 0;
     if ( (*(_BYTE *)(a1 + 1207) & 0x10) == 0 )
       v6 = (*(_BYTE *)(a1 + 1211) & 0x20) == 0;
     if ( v6 )
-  LABEL_12:
+  sub_607B03C0__LABEL_12:
       sub_60773F4C(a1, a2, a3, a4);
-  LABEL_13:
+  sub_607B03C0__LABEL_13:
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1144))(a1);
     sub_60771320(a1);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1148))(a1);
@@ -31253,10 +31253,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     switch ( result )
     {
       case 2:
-        goto LABEL_7;
+        goto sub_607B0940__LABEL_7;
       case 1:
         sub_6075F54C((int)a1);
-  LABEL_7:
+  sub_607B0940__LABEL_7:
         PlayerBase_dispatchVirtual3((int)(a1 + 2839), 124);
         result = FixedPoint_selectSign((int)a1, a1[20]);
         a1[40] = result;
@@ -31554,11 +31554,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v3 = *(float *)(a1 + 124);
       if ( v3 >= MEMORY[0xB0AF08] )
-        goto LABEL_17;
+        goto sub_607B0E2C__LABEL_17;
       v3 = MEMORY[0xB0AF08];
     }
     *(float *)(a1 + 124) = v3;
-  LABEL_17:
+  sub_607B0E2C__LABEL_17:
     v4 = *(_DWORD *)(a1 + 15080);
     v5 = v4 < 0;
     v6 = MEMORY[0xB0AF4C];
@@ -31574,12 +31574,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_DWORD *)(a1 + 1288) || (*(_BYTE *)(a1 + 1205) & 4) != 0 )
     {
       v10 = 0;
-      goto LABEL_33;
+      goto sub_607B0E2C__LABEL_33;
     }
     if ( (*(_BYTE *)(a1 + 1208) & 8) != 0 )
     {
       sub_607716F8(a1);
-      goto LABEL_34;
+      goto sub_607B0E2C__LABEL_34;
     }
     if ( v3 <= 1.5 )
     {
@@ -31595,10 +31595,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       || (v9 = 4, v3 > MEMORY[0xB0B2A0]) )
     {
       v10 = *(_DWORD *)(4 * v9 + 0xB0B2BC);
-  LABEL_33:
+  sub_607B0E2C__LABEL_33:
       *(_DWORD *)(a1 + 100) = v10;
     }
-  LABEL_34:
+  sub_607B0E2C__LABEL_34:
     sub_607B1154(a1);
     sub_60771910(a1);
     return sub_607711C8(a1, v11, v12);
@@ -31642,7 +31642,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v11 = v9 + v8;
         v12 = 0;
-        goto LABEL_9;
+        goto sub_607B1154__LABEL_9;
       }
     }
     else
@@ -31656,11 +31656,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v12 = 0;
         v11 = MEMORY[0xB0AF68] + v9;
-  LABEL_9:
+  sub_607B1154__LABEL_9:
         v13 = v11 < v9;
         if ( v11 >= v7 )
           v12 = 1;
-        goto LABEL_14;
+        goto sub_607B1154__LABEL_14;
       }
     }
     if ( !v10 )
@@ -31668,7 +31668,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v11 = v9 - v8;
       v13 = v9 < v11;
       v12 = v11 <= v7;
-  LABEL_14:
+  sub_607B1154__LABEL_14:
       if ( v12 )
         v9 = v7;
       else
@@ -31724,12 +31724,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (v3 & 0x4000) != 0 )
       {
         v4 = 2;
-        goto LABEL_9;
+        goto sub_607B17A4__LABEL_9;
       }
       if ( (v3 & 0x8000) != 0 )
       {
         v4 = 0;
-  LABEL_9:
+  sub_607B17A4__LABEL_9:
         Player_changeState(a1, 13389964, v4);
         return 1;
       }
@@ -31849,7 +31849,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       switch ( *v4 )
       {
         case 0:
-          goto LABEL_8;
+          goto sub_607B1D54__LABEL_8;
         case 1:
           sub_607B21D4(a1);
           break;
@@ -31860,7 +31860,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( 3.0 <= 9.0 )
             break;
           v5 = 3;
-  LABEL_16:
+  sub_607B1D54__LABEL_16:
           *v4 = v5;
           break;
         case 3:
@@ -31878,14 +31878,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           PlayerBase_dispatchVirtual3((int)(a1 + 2839), 65);
           Player_checkTwoFlagsAndDispatch2((int)a1, 33, 0);
           v5 = 5;
-          goto LABEL_16;
+          goto sub_607B1D54__LABEL_16;
         default:
           break;
       }
     }
     else
     {
-  LABEL_8:
+  sub_607B1D54__LABEL_8:
       SE_PLY_SHUFFLE_ref(a1);
     }
     result = a1[28];
@@ -32074,7 +32074,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           PlayerBase_dispatchVirtual3(a1 + 11356, 66);
           result = 9940;
           v4 = 4;
-  LABEL_35:
+  SE_PLY_HANG_MOVE_ref__LABEL_35:
           *(_DWORD *)(a1 + 9940) = v4;
           return result;
         }
@@ -32087,7 +32087,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           Player_checkTwoFlagsAndDispatch2(a1, 32, 0);
           result = 9940;
           v4 = 2;
-          goto LABEL_35;
+          goto SE_PLY_HANG_MOVE_ref__LABEL_35;
         }
         if ( Object_queryTwoFlagStates(a1 + 688, v17) == 1 )
         {
@@ -32150,7 +32150,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             Player_checkTwoFlagsAndDispatch2(a1, 33, 0);
             result = 9940;
             v4 = 5;
-            goto LABEL_35;
+            goto SE_PLY_HANG_MOVE_ref__LABEL_35;
           }
         }
       }
@@ -32420,14 +32420,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v4[28] = (float)(v7 + v8) - v4[1718];
         *((_DWORD *)v4 + 1726) |= 0x1000u;
         v6 = (int)v4;
-        goto LABEL_11;
+        goto sub_607B2C38__LABEL_11;
       }
       if ( (*(_BYTE *)(a1 + 1224) & 0x80) != 0
         && !(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1064))(a1)
         && *(float *)(a1 + 124) >= 0.0 )
       {
         v6 = a1;
-  LABEL_11:
+  sub_607B2C38__LABEL_11:
         Player_changeState(v6, 13390124, 0);
         return 1;
       }
@@ -32599,7 +32599,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_6075F914((_DWORD *)a1) )
     {
       result = -1071644672;
-  LABEL_3:
+  sub_607B3198__LABEL_3:
       *(_DWORD *)(a1 + 96) = result;
       return result;
     }
@@ -32663,7 +32663,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !*(_BYTE *)(a1 + 15074) )
       {
         result = MEMORY[0xB0A8A8];
-        goto LABEL_3;
+        goto sub_607B3198__LABEL_3;
       }
     }
     return result;
@@ -33444,7 +33444,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v3 <= 0.0 )
         v3 = -v3;
       *(float *)(a1 + 92) = v3;
-      goto LABEL_21;
+      goto sub_607B5010__LABEL_21;
     }
     v4 = (v2 & 0x80200000) != 0 || sub_60771D48(a1, 1);
     if ( sub_60762E40(a1) )
@@ -33454,14 +33454,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v5 = MEMORY[0xB0B430];
         *(float *)(a1 + 104) = *(float *)(a1 + 104) * 1.2;
         *(_DWORD *)(a1 + 12812) = v5;
-        goto LABEL_21;
+        goto sub_607B5010__LABEL_21;
       }
       v6 = 12808;
       v8 = v4;
       *(_BYTE *)(a1 + 12808) = 0;
       if ( v4 )
         v6 = 1008981770;
-      goto LABEL_19;
+      goto sub_607B5010__LABEL_19;
     }
     if ( v4 )
       *(_DWORD *)(a1 + 104) = 1000593162;
@@ -33472,16 +33472,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = v7 == 0.0;
       if ( v7 == 0.0 )
         v6 = 0;
-  LABEL_19:
+  sub_607B5010__LABEL_19:
       if ( v8 )
         *(_DWORD *)(a1 + 104) = v6;
     }
-  LABEL_21:
+  sub_607B5010__LABEL_21:
     result = a1 + 12808;
     if ( *(_BYTE *)(a1 + 12808) )
     {
       if ( (*(_BYTE *)(a1 + 1226) & 8) != 0 )
-        goto LABEL_31;
+        goto sub_607B5010__LABEL_31;
       v10 = *(float *)(a1 + 88);
       v11 = *(float *)(a1 + 12804);
       if ( v10 <= 0.0 )
@@ -33489,7 +33489,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v12 = v11 <= 0.0 ? -v11 : *(float *)(a1 + 12804);
       if ( v10 >= v12 )
       {
-  LABEL_31:
+  sub_607B5010__LABEL_31:
         *(_BYTE *)result = 0;
       }
       else if ( (*(_BYTE *)(a1 + 1216) & 0x40) != 0 )
@@ -33677,13 +33677,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return Player_changeState(a1, v6, 1);
     }
     if ( (v2 & 0x3000000) != 0 )
-      goto LABEL_9;
+      goto sub_607B55B8__LABEL_9;
     v3 = (v2 & 0x220) == 32;
     if ( (v2 & 0x220) != 0x20 )
       v3 = (v2 & 0x440) == 64;
     if ( v3 )
     {
-  LABEL_9:
+  sub_607B55B8__LABEL_9:
       *(_DWORD *)(a1 + 12380) = 30;
       *(_DWORD *)(a1 + 80) ^= 1u;
       v6 = 13388804;
@@ -34148,41 +34148,41 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v7 = MEMORY[0xB0B4A8] + v5;
         v8 = 0;
-        goto LABEL_14;
+        goto sub_607B6590__LABEL_14;
       }
       if ( v5 <= MEMORY[0xB0B4A4] )
-        goto LABEL_28;
+        goto sub_607B6590__LABEL_28;
       v7 = v5 - MEMORY[0xB0B4A8];
       v8 = 0;
-  LABEL_21:
+  sub_607B6590__LABEL_21:
       v9 = v5 < v7;
       if ( v7 <= v6 )
         v8 = 1;
-      goto LABEL_23;
+      goto sub_607B6590__LABEL_23;
     }
     v5 = *((float *)a1 + 31);
     v6 = 3.0;
     if ( v5 >= 3.0 )
     {
       if ( v5 <= 3.0 )
-        goto LABEL_28;
+        goto sub_607B6590__LABEL_28;
       v8 = 0;
       v7 = v5 + -0.7;
-      goto LABEL_21;
+      goto sub_607B6590__LABEL_21;
     }
     v8 = 0;
     v7 = v5 + 0.7;
-  LABEL_14:
+  sub_607B6590__LABEL_14:
     v9 = v7 < v5;
     if ( v7 >= v6 )
       v8 = 1;
-  LABEL_23:
+  sub_607B6590__LABEL_23:
     if ( v8 )
       v7 = v6;
     if ( !v9 )
       v6 = v7;
     *((float *)a1 + 31) = v6;
-  LABEL_28:
+  sub_607B6590__LABEL_28:
     v10 = a1[3111];
     if ( v10 )
     {
@@ -34312,17 +34312,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       case 1:
         if ( (*(_BYTE *)(a1 + 1212) & 0x10) == 0 )
-          goto LABEL_9;
+          goto SE_PLY_PRPL_FLY_ref_2_helper__LABEL_9;
         return 0;
       case 2:
         if ( ActorMgr_findAndInstantiate3() )
-          goto LABEL_8;
+          goto SE_PLY_PRPL_FLY_ref_2_helper__LABEL_8;
         sub_602360C0(a1 + 12484);
         *v4 = 0;
         *v6 = 0;
         return 0;
       case 3:
-  LABEL_8:
+  SE_PLY_PRPL_FLY_ref_2_helper__LABEL_8:
         if ( (*(_BYTE *)(a1 + 1212) & 0x10) != 0 )
         {
           v10 = ActorMgr_findAndInstantiate3();
@@ -34343,9 +34343,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         else
         {
-  LABEL_9:
+  SE_PLY_PRPL_FLY_ref_2_helper__LABEL_9:
           v8 = 4;
-  LABEL_13:
+  SE_PLY_PRPL_FLY_ref_2_helper__LABEL_13:
           *v6 = v8;
           return 0;
         }
@@ -34357,7 +34357,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v5 )
           return 0;
         v8 = 0;
-        goto LABEL_13;
+        goto SE_PLY_PRPL_FLY_ref_2_helper__LABEL_13;
       default:
         return 0;
     }
@@ -34586,17 +34586,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         EffectData_release(a1 + 14876);
         *v7 = 0;
       }
-  LABEL_7:
+  Player_setupRingNode_7B6D90__LABEL_7:
       if ( sub_607BB53C(a1) != 1 || !*(_DWORD *)(a1 + 14868) )
-        goto LABEL_17;
+        goto Player_setupRingNode_7B6D90__LABEL_17;
       v8 = 1;
-      goto LABEL_16;
+      goto Player_setupRingNode_7B6D90__LABEL_16;
     }
     if ( v6 != 1 )
     {
       if ( v6 )
-        goto LABEL_17;
-      goto LABEL_7;
+        goto Player_setupRingNode_7B6D90__LABEL_17;
+      goto Player_setupRingNode_7B6D90__LABEL_7;
     }
     v9 = a1 + 14876;
     v10 = *(char *)(a1 + 84);
@@ -34625,10 +34625,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       sub_60236074(a1 + 14892);
       v8 = 2;
-  LABEL_16:
+  Player_setupRingNode_7B6D90__LABEL_16:
       *v7 = v8;
     }
-  LABEL_17:
+  Player_setupRingNode_7B6D90__LABEL_17:
     result = sub_607BB5C0(a1);
     if ( !result )
       return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 11360) + 160))(*(_DWORD *)(a1 + 11360));
@@ -34747,11 +34747,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       if ( *(_DWORD *)(a1 + 1320) != 9 )
-        goto LABEL_7;
+        goto Player_setupWristNodes_7B7140__LABEL_7;
       v13 = 11579508;
     }
     v3.n64_f32[0] = v3.n64_f32[0] + *(float *)v13;
-  LABEL_7:
+  Player_setupWristNodes_7B7140__LABEL_7:
     if ( (*(_BYTE *)(a1 + 1211) & 4) != 0 && !*(_DWORD *)(a1 + 9976) )
     {
       v14 = *(_DWORD *)(a1 + 1320);
@@ -35027,7 +35027,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         switch ( result )
         {
           case 0u:
-            goto LABEL_19;
+            goto sub_607B792C__LABEL_19;
           case 1u:
             if ( Object_getBit5(*(_DWORD *)(a1 + 11360)) == 1 )
               PlayerBase_dispatchVirtual3(a1 + 11356, 20);
@@ -35043,7 +35043,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           case 4u:
             if ( Object_getBit5(*(_DWORD *)(a1 + 11360)) == 1 )
               sub_607B7FC0(a1);
-  LABEL_19:
+  sub_607B792C__LABEL_19:
             if ( sub_607AA954(a1) == 1 )
             {
               *(_DWORD *)(*(_DWORD *)(a1 + 11360) + 208) |= 0x400u;
@@ -35052,7 +35052,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               *(_DWORD *)(a1 + 160) = FixedPoint_selectSign(a1, *(_DWORD *)(a1 + 80));
               *(_DWORD *)(a1 + 12048) = *(_DWORD *)(a1 + 80);
               result = 3;
-  LABEL_25:
+  sub_607B792C__LABEL_25:
               *v5 = result;
             }
             else
@@ -35076,7 +35076,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               return result;
             SE_PLY_THROW_ICEBALL_ref(a1, 0);
             result = 4;
-            goto LABEL_25;
+            goto sub_607B792C__LABEL_25;
           default:
             return result;
         }
@@ -35278,13 +35278,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( (float)(v12 + v11) == v7 )
         {
           v14 = dword_60AF1E80;
-          goto LABEL_46;
+          goto sub_607B80F0__LABEL_46;
         }
         v14 = dword_60AF1E80;
         while ( 1 )
         {
           if ( sub_60155B0C(a1 + 1328, (float *)&v30, 0, 1) )
-            goto LABEL_24;
+            goto sub_607B80F0__LABEL_24;
           v15 = v31;
           if ( v31 < v7 )
             break;
@@ -35293,16 +35293,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v16 = v31 + -8.0;
             v17 = v31 < (float)(v31 + -8.0);
             v18 = (float)(v31 + -8.0) <= v7;
-            goto LABEL_16;
+            goto sub_607B80F0__LABEL_16;
           }
-  LABEL_22:
+  sub_607B80F0__LABEL_22:
           if ( v15 == v7 )
-            goto LABEL_46;
+            goto sub_607B80F0__LABEL_46;
         }
         v16 = v31 + 8.0;
         v17 = (float)(v31 + 8.0) < v31;
         v18 = (float)(v31 + 8.0) >= v7;
-  LABEL_16:
+  sub_607B80F0__LABEL_16:
         if ( v18 )
           v16 = v7;
         if ( v17 )
@@ -35310,10 +35310,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
           v15 = v16;
         v31 = v15;
-        goto LABEL_22;
+        goto sub_607B80F0__LABEL_22;
       }
     }
-  LABEL_24:
+  sub_607B80F0__LABEL_24:
     v19 = 0;
     if ( (*(_BYTE *)(a1 + 6900) & 0x20) != 0 )
     {
@@ -35344,16 +35344,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v26 = v31 + -8.0;
               v27 = v31 < (float)(v31 + -8.0);
               v28 = (float)(v31 + -8.0) <= v7;
-              goto LABEL_36;
+              goto sub_607B80F0__LABEL_36;
             }
-  LABEL_42:
+  sub_607B80F0__LABEL_42:
             if ( v25 == v7 )
-              goto LABEL_46;
+              goto sub_607B80F0__LABEL_46;
           }
           v26 = v31 + 8.0;
           v27 = (float)(v31 + 8.0) < v31;
           v28 = (float)(v31 + 8.0) >= v7;
-  LABEL_36:
+  sub_607B80F0__LABEL_36:
           if ( v28 )
             v26 = v7;
           if ( v27 )
@@ -35361,10 +35361,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           else
             v25 = v26;
           v31 = v25;
-          goto LABEL_42;
+          goto sub_607B80F0__LABEL_42;
         }
         v14 = &dword_60AF1E84;
-  LABEL_46:
+  sub_607B80F0__LABEL_46:
         v19 = 1;
         *a2 = *v14;
       }
@@ -35513,9 +35513,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             PlayerBase_dispatchVirtual3((int)(a1 + 2839), v10);
             *v3 = 1;
           }
-          goto LABEL_29;
+          goto sub_607B85EC__LABEL_29;
         case 1:
-  LABEL_29:
+  sub_607B85EC__LABEL_29:
           if ( sub_607AA954(a1) == 1 )
           {
             PlayerBase_dispatchVirtual3((int)(a1 + 2839), 33);
@@ -35559,7 +35559,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             PlayerBase_dispatchVirtual3((int)(a1 + 2839), v23);
             result = 2;
           }
-  LABEL_50:
+  sub_607B85EC__LABEL_50:
           *v3 = result;
           return result;
         case 2:
@@ -35584,7 +35584,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           a1[2486] = 10;
           a1[304] &= ~0x4000000u;
           result = 3;
-          goto LABEL_50;
+          goto sub_607B85EC__LABEL_50;
         case 3:
           if ( sub_607AA954(a1) == 1 )
           {
@@ -35607,14 +35607,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v16 = 0;
           PlayerBase_dispatchVirtual3((int)(a1 + 2839), v16);
           result = 1;
-          goto LABEL_50;
+          goto sub_607B85EC__LABEL_50;
         case 4:
           result = Object_isFloat2EqualViaChain(a1[2840]);
           if ( result != 1 )
             return result;
           SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
           result = 5;
-          goto LABEL_50;
+          goto sub_607B85EC__LABEL_50;
         case 7:
           result = Object_isFloat2EqualViaChain(a1[2840]);
           if ( result == 1 )
@@ -36331,7 +36331,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         else if ( v14 <= 9 && ((1 << v14) & 0x390) != 0 && (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1068))(a1) )
         {
-          goto LABEL_33;
+          goto sub_607B9614__LABEL_33;
         }
         v16 = v14 - 4;
         if ( (v14 | 1) == 9 )
@@ -36339,7 +36339,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v16 <= 5 && v16 - 1 > 1 )
           return v2;
       }
-  LABEL_33:
+  sub_607B9614__LABEL_33:
       *v4 = 30;
       return 1;
     }
@@ -36362,26 +36362,26 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_6079C784(a1);
       if ( sub_6079DD80(a1) )
       {
-  LABEL_35:
+  sub_607B9614__LABEL_35:
         v12 = sub_6079B3CC(a1);
-        goto LABEL_36;
+        goto sub_607B9614__LABEL_36;
       }
       if ( sub_6079DE44(a1) )
       {
-  LABEL_51:
+  sub_607B9614__LABEL_51:
         *v4 = 0;
         sub_6079C40C(a1);
         return 1;
       }
       if ( sub_6079DB30(a1) )
       {
-  LABEL_55:
+  sub_607B9614__LABEL_55:
         v12 = SE_PLY_PRPL_LETDOWN_SPIN_ref(a1);
-  LABEL_36:
+  sub_607B9614__LABEL_36:
         v2 = 1;
         if ( v12 )
           return v2;
-        goto LABEL_37;
+        goto sub_607B9614__LABEL_37;
       }
       v20 = *(_DWORD *)(a1 + 1320);
       v21 = ActorMgr_findAndInstantiate3();
@@ -36391,7 +36391,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else if ( v20 <= 9 && ((1 << v20) & 0x390) != 0 && (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1068))(a1) )
       {
-        goto LABEL_74;
+        goto sub_607B9614__LABEL_74;
       }
       v22 = v20 - 4;
       if ( (v20 | 1) == 9 )
@@ -36401,16 +36401,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         switch ( arr_dword_60B0CED0[v22] )
         {
           case 0:
-            goto LABEL_74;
+            goto sub_607B9614__LABEL_74;
           case 1:
-            goto LABEL_55;
+            goto sub_607B9614__LABEL_55;
           case 2:
-            goto LABEL_35;
+            goto sub_607B9614__LABEL_35;
           case 3:
-            goto LABEL_51;
+            goto sub_607B9614__LABEL_51;
           case 5:
             if ( sub_607AB4A8(a1) != 1 )
-              goto LABEL_37;
+              goto sub_607B9614__LABEL_37;
             v2 = 1;
             if ( !MEMORY[0xCBEA44] )
               return v2;
@@ -36422,11 +36422,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               sub_6074E5C4(v24);
             break;
           default:
-            goto LABEL_37;
+            goto sub_607B9614__LABEL_37;
         }
         return 1;
       }
-  LABEL_74:
+  sub_607B9614__LABEL_74:
       if ( (*(_BYTE *)(a1 + 1219) & 1) != 0 )
       {
         v2 = 1;
@@ -36436,9 +36436,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (*v8 & 1) != 0 )
       {
         v17 = 256;
-        goto LABEL_53;
+        goto sub_607B9614__LABEL_53;
       }
-  LABEL_37:
+  sub_607B9614__LABEL_37:
       if ( (*(_BYTE *)(a1 + 1208) & 0x10) == 0 )
       {
         if ( *(_DWORD *)(a1 + 12088) )
@@ -36462,7 +36462,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return v2;
       }
       v17 = 257;
-  LABEL_53:
+  sub_607B9614__LABEL_53:
       Player_changeState(a1, 13389324, v17);
       return 1;
     }
@@ -36643,7 +36643,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v3 >= v4 )
     {
       if ( v3 <= v4 )
-        goto LABEL_13;
+        goto sub_607BA11C__LABEL_13;
       v5 = v3 + -1.0;
       v6 = v3 < (float)(v3 + -1.0);
       v7 = (float)(v3 + -1.0) <= v4;
@@ -36659,7 +36659,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v6 )
       v4 = v5;
     a1[27] = v4;
-  LABEL_13:
+  sub_607BA11C__LABEL_13:
     v8 = 1;
     if ( !sub_6075FC38((int)a1) )
     {
@@ -36702,7 +36702,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *((_DWORD *)a1 + 301) |= 0x2000000u;
     *((_DWORD *)a1 + 306) &= ~0x400u;
     if ( sub_6079DD80((int)a1) || sub_6079DE44((int)a1) || sub_6079DB30((int)a1) )
-      goto LABEL_4;
+      goto sub_607BA308__LABEL_4;
     v6 = *((_DWORD *)a1 + 330);
     v7 = ActorMgr_findAndInstantiate3();
     if ( v7 )
@@ -36711,7 +36711,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else if ( v6 <= 9 && ((1 << v6) & 0x390) != 0 && (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 1068))(a1) )
     {
-  LABEL_4:
+  sub_607BA308__LABEL_4:
       if ( !*((_DWORD *)a1 + 3028) )
       {
         v5 = *((_DWORD *)a1 + 3027);
@@ -36746,14 +36746,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v8 <= 5 )
       v9 = v8 - 3 > 2;
     if ( v9 )
-      goto LABEL_4;
+      goto sub_607BA308__LABEL_4;
     if ( a1[31] >= 0.0 )
-      goto LABEL_4;
+      goto sub_607BA308__LABEL_4;
     Object_clearBitInField4(a1 + 172, 5);
     *((_DWORD *)a1 + 306) |= 0x400u;
     v2 = 1;
     if ( !sub_607AC8CC((int)a1) )
-      goto LABEL_4;
+      goto sub_607BA308__LABEL_4;
     return v2;
   }
 
@@ -37002,13 +37002,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       || (*((_BYTE *)a1 + 1221) & 4) == 0 )
     {
       v4 = a1 + 3756;
-  LABEL_6:
+  sub_607BA8E0__LABEL_6:
       *v4 = 0;
       return 0;
     }
     v4 = a1 + 3756;
     if ( (*(int (__fastcall **)(int *))(*a1 + 636))(a1) )
-      goto LABEL_6;
+      goto sub_607BA8E0__LABEL_6;
     result = *v4;
     if ( (*v4)++ >= 149 )
     {
@@ -37094,20 +37094,20 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *v11 = v13;
       v14 = v13 == 0;
       if ( (v7 & 2) == 0 )
-        goto LABEL_17;
+        goto sub_607BAA4C__LABEL_17;
     }
     else
     {
       v14 = 1;
       if ( (v7 & 2) == 0 )
       {
-  LABEL_17:
+  sub_607BAA4C__LABEL_17:
         v15 = v10;
-        goto LABEL_18;
+        goto sub_607BAA4C__LABEL_18;
       }
     }
     if ( !v14 )
-      goto LABEL_17;
+      goto sub_607BAA4C__LABEL_17;
     *v11 = 5;
     v15 = v10 | 2;
     *v2 = v10 | 2;
@@ -37116,7 +37116,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v15 = v10 | 6;
       *v2 = v10 | 6;
     }
-  LABEL_18:
+  sub_607BAA4C__LABEL_18:
     v18 = *(_DWORD *)(a1 + 15016);
     v16 = (_DWORD *)(a1 + 15016);
     v17 = v18;
@@ -37126,13 +37126,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *v16 = v19;
       v20 = v19 == 0;
       if ( (v7 & 4) == 0 )
-        goto LABEL_24;
+        goto sub_607BAA4C__LABEL_24;
     }
     else
     {
       v20 = 1;
       if ( (v7 & 4) == 0 )
-        goto LABEL_24;
+        goto sub_607BAA4C__LABEL_24;
     }
     if ( v20 )
     {
@@ -37141,7 +37141,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *v2 = v15;
       *v4 = 30;
     }
-  LABEL_24:
+  sub_607BAA4C__LABEL_24:
     result = v15 & 6;
     if ( result == 6 )
     {
@@ -37241,7 +37241,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         switch ( *v5 )
         {
           case 0:
-            goto LABEL_26;
+            goto sub_607BABF8__LABEL_26;
           case 2:
             *v5 = 3;
             return 0;
@@ -37264,7 +37264,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               sub_60793184(*v21);
               *v5 = 1;
               v26 = *v21;
-  LABEL_47:
+  sub_607BABF8__LABEL_47:
               (*(void (__fastcall **)(int, int))(*(_DWORD *)v26 + 84))(v26, 214);
             }
             break;
@@ -37277,14 +37277,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             sub_60793184(*v24);
             *v5 = 1;
             v26 = *v24;
-            goto LABEL_47;
+            goto sub_607BABF8__LABEL_47;
           default:
             return 0;
         }
       }
       else
       {
-  LABEL_26:
+  sub_607BABF8__LABEL_26:
         v11 = *v6;
         if ( (*v6 & 1) != 0 )
         {
@@ -37478,14 +37478,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 11400) = MEMORY[0xB0AF78];
         if ( result < 60 )
           return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 11360) + 156))(*(_DWORD *)(a1 + 11360));
-        goto LABEL_21;
+        goto sub_607BB22C__LABEL_21;
       case 1:
         if ( !a3 )
           return result;
         *(_DWORD *)(a1 + 11400) = a3;
         if ( a3 < 60 )
           return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 11360) + 156))(*(_DWORD *)(a1 + 11360));
-  LABEL_21:
+  sub_607BB22C__LABEL_21:
         sub_6078A894(MEMORY[0xCC436C]);
         return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 11360) + 156))(*(_DWORD *)(a1 + 11360));
       case 0:
@@ -37633,8 +37633,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       *((_DWORD *)a1 + 305) = v2 | 0x20;
       if ( result != 120 )
-        goto LABEL_12;
-  LABEL_10:
+        goto SE_SYS_STAR_FINISH_ref__LABEL_12;
+  SE_SYS_STAR_FINISH_ref__LABEL_10:
       *v4 = 119;
       result = *(unsigned __int8 *)(MEMORY[0xCBFA90] + 460);
       if ( *(_BYTE *)(MEMORY[0xCBFA90] + 460) )
@@ -37642,7 +37642,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       Player_checkTwoFlagsAndDispatch(a1, (int)"SE_SYS_STAR_FINISH", 0, 0);
       Player_checkTwoFlagsAndDispatch(a1, (int)"SE_SYS_STAR_FINISH_RC", 0, 0);
       result = *v4;
-  LABEL_12:
+  SE_SYS_STAR_FINISH_ref__LABEL_12:
       if ( result > 59 )
         return result;
       return sub_6078A8C0(MEMORY[0xCC436C]);
@@ -37653,8 +37653,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         (*(void (__fastcall **)(_DWORD))(**((_DWORD **)a1 + 2840) + 160))(*((_DWORD *)a1 + 2840));
       result = *v4;
       if ( *v4 != 120 )
-        goto LABEL_12;
-      goto LABEL_10;
+        goto SE_SYS_STAR_FINISH_ref__LABEL_12;
+      goto SE_SYS_STAR_FINISH_ref__LABEL_10;
     }
     return sub_6078A8C0(MEMORY[0xCC436C]);
   }
@@ -37669,12 +37669,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = (_DWORD *)(a1 + 11400);
     if ( *(int *)(a1 + 11400) > 9 )
-      goto LABEL_5;
+      goto sub_607BB6F0__LABEL_5;
     if ( !sub_607B6D60(a1) )
       (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 11360) + 160))(*(_DWORD *)(a1 + 11360));
     if ( *v2 )
     {
-  LABEL_5:
+  sub_607BB6F0__LABEL_5:
       *v2 = 0;
       *(_DWORD *)(a1 + 1220) &= ~0x20u;
       sub_6078A8C0(MEMORY[0xCC436C]);
@@ -37757,13 +37757,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         EffectData_release(a1 + 14548);
         *v3 = 0;
       }
-      goto LABEL_7;
+      goto sub_607BB7D8__LABEL_7;
     }
     if ( result != 1 )
     {
       if ( result )
         return result;
-  LABEL_7:
+  sub_607BB7D8__LABEL_7:
       result = *(unsigned __int8 *)(a1 + 1226);
       v5 = (result & 0x10) == 0;
       if ( (result & 0x10) == 0 )
@@ -37786,7 +37786,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( (result & 0x20) != 0 )
           {
             result = 1;
-  LABEL_21:
+  sub_607BB7D8__LABEL_21:
             *v3 = result;
             return result;
           }
@@ -37808,17 +37808,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (*(_BYTE *)(a1 + 1226) & 0x10) == 0 )
       v10 = (*(_BYTE *)(a1 + 1220) & 0x40) == 0;
     if ( !v10 )
-      goto LABEL_20;
+      goto sub_607BB7D8__LABEL_20;
     v11 = sub_607C70B0(a1);
     v12 = v11 == 0;
     if ( v11 )
       v12 = (*(_BYTE *)(v11 + 1220) & 0x40) == 0;
     if ( !v12 || (result = *(unsigned __int8 *)(a1 + 1220), (result & 0x20) == 0) )
     {
-  LABEL_20:
+  sub_607BB7D8__LABEL_20:
       sub_60236074(a1 + 14564);
       result = 2;
-      goto LABEL_21;
+      goto sub_607BB7D8__LABEL_21;
     }
     return result;
   }
@@ -37962,8 +37962,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *(_DWORD *)(a1 + 12408) = 0;
           v5 = a1 + 11356;
           if ( a3 != 1 )
-            goto LABEL_8;
-          goto LABEL_4;
+            goto sub_607BBBF8__LABEL_8;
+          goto sub_607BBBF8__LABEL_4;
         }
         *(_DWORD *)(a1 + 156) = 0;
         *(_DWORD *)(a1 + 12396) = 0;
@@ -37989,10 +37989,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 12408) = 0;
         v5 = a1 + 11356;
         if ( a3 == 1 )
-  LABEL_4:
+  sub_607BBBF8__LABEL_4:
           PlayerBase_dispatchVirtual3(v5, 38);
         else
-  LABEL_8:
+  sub_607BBBF8__LABEL_8:
           Object_callSlots19And21(v5, 38);
         result = 0;
         *(_DWORD *)(a1 + 156) = 0;
@@ -38377,7 +38377,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v2 = 2;
         if ( sub_6079B7A4(a1) )
           v2 = 3;
-  LABEL_9:
+  SE_PLY_SWIM_ref__LABEL_9:
         sub_607BBBF8((int)a1, v2, 1);
         return;
       }
@@ -38386,7 +38386,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = 1;
       if ( a1[330] == 5 || isMode4((int)a1) || isMode5((int)a1) )
-        goto LABEL_9;
+        goto SE_PLY_SWIM_ref__LABEL_9;
     }
     sub_607BE9F8(a1);
     sub_60773F4C((int)a1, v3, v4, v5);
@@ -38484,7 +38484,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v4 = 0;
       }
-  LABEL_21:
+  SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_21:
       sub_607BBBF8((int)a1, v4, 1);
       return;
     }
@@ -38493,7 +38493,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = isMode5((int)a1);
       v4 = 0;
       if ( !v5 )
-        goto LABEL_21;
+        goto SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_21;
     }
     if ( sub_6078663C((int)(a1 + 172)) == 1 && (a1[2485] != 2 || sub_60786738(a1 + 172) == 1) )
       a1[3102] = 20;
@@ -38510,9 +38510,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       case 0:
         if ( a1[2486] )
-          goto LABEL_48;
+          goto SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_48;
         a1[3104] = 1065353216;
-        goto LABEL_43;
+        goto SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_43;
       case 1:
         v15 = isMode5((int)a1);
         v17 = a1 + 2840;
@@ -38522,21 +38522,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( Object_isFloat2EqualViaChain(v16) || Object_isFloat2EqualViaChain(*v17) == 1 )
           {
             v18 = "SE_PLY_SWIM_KICK_TOTTEN";
-  LABEL_40:
+  SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_40:
             Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)v18, 0, 0);
           }
         }
         else if ( Object_isFloat2EqualViaChain(v16) || Object_isFloat2EqualViaChain(*v17) == 1 )
         {
           v18 = "SE_PLY_SWIM_KICK_PENGUIN";
-          goto LABEL_40;
+          goto SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_40;
         }
         sub_607934C0(*v17);
         isMode5((int)a1);
         sub_60793088((_DWORD *)*v17);
         if ( !SE_PLY_ref_7(a1) )
         {
-  LABEL_48:
+  SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_48:
           sub_607BF0EC(a1, v6);
           v26[0] = FixedPoint_selectSign((int)a1, a1[20]);
           v24 = 0x4000000;
@@ -38571,14 +38571,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           sub_607934C0(*v8);
           v21 = (_DWORD *)*v8;
           v6 = v1 < 9.0 || v14;
-          goto LABEL_47;
+          goto SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_47;
         }
         if ( Object_getBit5(*v8) != 1 )
-          goto LABEL_48;
+          goto SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_48;
         *v7 = 3;
         v19 = (int)(a1 + 2839);
         v20 = 168;
-        goto LABEL_44;
+        goto SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_44;
       case 3:
         if ( SE_PLY_ref_7(a1) )
           return;
@@ -38591,21 +38591,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           sub_607934C0(a1[2840]);
           v21 = (_DWORD *)a1[2840];
-  LABEL_47:
+  SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_47:
           sub_60793088(v21);
         }
         else if ( Object_getBit5(a1[2840]) == 1 )
         {
-  LABEL_43:
+  SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_43:
           v20 = 36;
           *v7 = 1;
           v19 = (int)(a1 + 2839);
-  LABEL_44:
+  SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_44:
           PlayerBase_dispatchVirtual3(v19, v20);
         }
-        goto LABEL_48;
+        goto SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_48;
       default:
-        goto LABEL_48;
+        goto SE_PLY_SWIM_KICK_PENGUIN_ref__LABEL_48;
     }
   }
 
@@ -38672,7 +38672,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( Object_getBit5(a1[2840]) != 1 )
         return;
-      goto LABEL_27;
+      goto sub_607BD438__LABEL_27;
     }
     if ( v5 )
       return;
@@ -38687,7 +38687,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = a1[330];
       if ( v8 > 6 || ((1 << v8) & 0x64) == 0 )
       {
-  LABEL_27:
+  sub_607BD438__LABEL_27:
         if ( (*(int (__fastcall **)(int *))(*a1 + 1064))(a1) == 1 )
         {
           if ( sub_6079DF08((int)a1) )
@@ -38738,17 +38738,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = 1;
       if ( *(_DWORD *)(a1 + 1320) != 5 && !isMode4(a1) )
         v2 = isMode5(a1);
-      goto LABEL_10;
+      goto SE_PLY_SWIM_WITH_CHIBI_ref__LABEL_10;
     }
     if ( !sub_6079DF08(a1) )
     {
       v2 = 0;
-      goto LABEL_10;
+      goto SE_PLY_SWIM_WITH_CHIBI_ref__LABEL_10;
     }
     v2 = 3;
     if ( sub_6079B7A4(a1) )
     {
-  LABEL_10:
+  SE_PLY_SWIM_WITH_CHIBI_ref__LABEL_10:
       sub_607BBBF8(a1, v2, 1);
       return;
     }
@@ -38823,12 +38823,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v7 <= 0.0 )
           v7 = -v7;
         if ( v7 >= 1.0 )
-          goto LABEL_48;
+          goto SE_PLY_SWIM_WITH_CHIBI_ref__LABEL_48;
         v8 = *(float *)(a1 + 88);
         if ( v8 <= 0.0 )
           v8 = -v8;
         if ( v8 >= 1.0 )
-  LABEL_48:
+  SE_PLY_SWIM_WITH_CHIBI_ref__LABEL_48:
           *(_DWORD *)(a1 + 1212) |= 0x1000000u;
         v15 = FixedPoint_selectSign(a1, *(_DWORD *)(a1 + 80));
         v14 = 0x4000000;
@@ -38865,17 +38865,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = 1;
       if ( a1[330] != 5 && !isMode4((int)a1) )
         v2 = isMode5((int)a1);
-      goto LABEL_10;
+      goto sub_607BDB58__LABEL_10;
     }
     if ( !sub_6079DF08((int)a1) )
     {
       v2 = 0;
-      goto LABEL_10;
+      goto sub_607BDB58__LABEL_10;
     }
     v2 = 2;
     if ( !sub_6079B7A4(a1) )
     {
-  LABEL_10:
+  sub_607BDB58__LABEL_10:
       sub_607BBBF8((int)a1, v2, 1);
       return;
     }
@@ -38974,7 +38974,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v72; // [sp+6Ch] [bp-4h]
   
     if ( (*(_BYTE *)(a1 + 1216) & 8) == 0 )
-      goto LABEL_2;
+      goto sub_607BDCAC__LABEL_2;
     v3 = *(_DWORD *)(a1 + 1320);
     if ( isMode4(a1) )
     {
@@ -38983,7 +38983,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v4 = *(_DWORD *)(a1 + 1320) == 5;
       if ( !v4 )
       {
-  LABEL_2:
+  sub_607BDCAC__LABEL_2:
         *(_DWORD *)(a1 + 11392) = 0;
         *(_DWORD *)(a1 + 11396) = 0;
         return (float *)11396;
@@ -39113,7 +39113,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v34 = 0.0;
       }
       v43 = 1.0;
-      goto LABEL_72;
+      goto sub_607BDCAC__LABEL_72;
     }
     v33 = 0;
     v64 = 0.0;
@@ -39133,7 +39133,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v33 = *(_DWORD *)(a1 + 1320) == 9;
     if ( (float)(*(float *)(((*v6 >> 20) & 0xFF0) + 0xB3A484)
                + (float)((float)((float)(*v6 & 0xFFFFFF) * *(float *)(((*v6 >> 20) & 0xFF0) + 0xB3A488)) * 0.000000059605)) >= 0.0 )
-      goto LABEL_69;
+      goto sub_607BDCAC__LABEL_69;
     v35 = isMode4(a1);
     v36 = v35;
     if ( v35 )
@@ -39157,19 +39157,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( sub_601559B8(a1 + 1328, (int)&v58, (int)&v52) == 1 && v54 > (float)(v16 + -28.0) )
           v34 = (float)(v54 - v16) + 28.0;
       }
-      goto LABEL_69;
+      goto sub_607BDCAC__LABEL_69;
     }
     if ( v57 >= (float)(*(float *)(a1 + 7012) + 6.0) )
-      goto LABEL_69;
+      goto sub_607BDCAC__LABEL_69;
     v38 = v57 - v16;
     v39 = -(float)(v57 - v16);
     if ( (float)(v57 - v16) > 0.0 )
       v39 = v57 - v16;
     if ( v39 >= 22.0 )
     {
-  LABEL_69:
+  sub_607BDCAC__LABEL_69:
       v43 = 0.6;
-      goto LABEL_72;
+      goto sub_607BDCAC__LABEL_72;
     }
     v40 = *(float *)(((*v6 >> 20) & 0xFF0) + 0xB3A484)
         + (float)((float)((float)(*v6 & 0xFFFFFF) * *(float *)(((*v6 >> 20) & 0xFF0) + 0xB3A488)) * 0.000000059605);
@@ -39192,12 +39192,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v34 = v38 * (float)(v42 + (float)(v41 * v40));
       v43 = 0.6;
     }
-  LABEL_72:
+  sub_607BDCAC__LABEL_72:
     v44 = *(float *)(a1 + 11392);
     if ( v44 >= v5 )
     {
       if ( v44 <= v5 )
-        goto LABEL_81;
+        goto sub_607BDCAC__LABEL_81;
       v45 = v44 + -1.0;
       v46 = v44 < (float)(v44 + -1.0);
       v47 = (float)(v44 + -1.0) <= v5;
@@ -39213,7 +39213,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v46 )
       v45 = v5;
     *(float *)(a1 + 11392) = v45;
-  LABEL_81:
+  sub_607BDCAC__LABEL_81:
     result = (float *)(a1 + 11396);
     v48 = *(float *)(a1 + 11396);
     if ( v48 >= v34 )
@@ -39312,7 +39312,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               return;
             }
             v16 = 41;
-            goto LABEL_49;
+            goto SE_PLY_SWIM_ref_2__LABEL_49;
           }
         }
       }
@@ -39343,14 +39343,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v12 )
     {
       if ( sub_60786A8C(a1 + 688, v7) == 1 )
-        goto LABEL_44;
+        goto SE_PLY_SWIM_ref_2__LABEL_44;
       if ( sub_607869C4(a1 + 688) != 1 )
         return;
       v15 = 3;
       v16 = 37;
-  LABEL_47:
+  SE_PLY_SWIM_ref_2__LABEL_47:
       *v13 = v15;
-  LABEL_49:
+  SE_PLY_SWIM_ref_2__LABEL_49:
       PlayerBase_dispatchVirtual3(a1 + 11356, v16);
       return;
     }
@@ -39378,7 +39378,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( sub_60786A8C(a1 + 688, v14) == 1 )
       {
-  LABEL_44:
+  SE_PLY_SWIM_ref_2__LABEL_44:
         *v13 = 1;
         PlayerBase_dispatchVirtual3(a1 + 11356, 42);
         *(_DWORD *)(a1 + 1212) |= 0x400000u;
@@ -39388,7 +39388,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return;
       v15 = 0;
       v16 = 38;
-      goto LABEL_47;
+      goto SE_PLY_SWIM_ref_2__LABEL_47;
     }
     v26 = 12321336;
     v27 = "wrist_l1";
@@ -39550,13 +39550,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (float)(v5 - v6) <= 0.0 )
         v7 = -(float)(v5 - v6);
       if ( v7 >= 0.2 )
-        goto LABEL_11;
+        goto sub_607BE9F8__LABEL_11;
       v8 = *(float *)(a1 + 124);
       if ( v8 <= 0.0 )
         v8 = -v8;
       if ( v8 >= 0.1 )
       {
-  LABEL_11:
+  sub_607BE9F8__LABEL_11:
         v9 = 1.8;
         if ( v5 <= v6 )
         {
@@ -39594,7 +39594,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v19 >= v10 )
     {
       if ( v19 <= v10 )
-        goto LABEL_48;
+        goto sub_607BE9F8__LABEL_48;
       v21 = v19 - v20;
       v22 = v19 < v21;
       v23 = v21 <= v10;
@@ -39610,7 +39610,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v22 )
       v10 = v21;
     *(float *)(a1 + 124) = v10;
-  LABEL_48:
+  sub_607BE9F8__LABEL_48:
     *(_DWORD *)(a1 + 96) = MEMORY[0xB0A8A8];
     *(_DWORD *)(a1 + 100) = 0;
     if ( *(_DWORD *)(a1 + 12400) && (*(_BYTE *)(a1 + 6900) & 1) == 0 )
@@ -39625,7 +39625,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v24 >= 1.125 )
         {
           if ( v24 <= 1.125 )
-            goto LABEL_62;
+            goto sub_607BE9F8__LABEL_62;
           v27 = v24 + -0.5;
           v28 = v24 < (float)(v24 + -0.5);
           v29 = (float)(v24 + -0.5) <= 1.125;
@@ -39643,9 +39643,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(float *)(a1 + 88) = v25;
       }
     }
-  LABEL_62:
+  sub_607BE9F8__LABEL_62:
     if ( *(int *)(a1 + 1212) >= 0 )
-      goto LABEL_74;
+      goto sub_607BE9F8__LABEL_74;
     v30 = *(float *)(a1 + 88);
     v31 = MEMORY[0xB0BE28];
     if ( *(float *)(a1 + 108) >= *(float *)(a1 + 12436) )
@@ -39653,7 +39653,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v30 >= v31 )
     {
       if ( v30 <= v31 )
-        goto LABEL_74;
+        goto sub_607BE9F8__LABEL_74;
       v32 = v30 - MEMORY[0xB0BE2C];
       v33 = v30 < (float)(v30 - MEMORY[0xB0BE2C]);
       v34 = (float)(v30 - MEMORY[0xB0BE2C]) <= v31;
@@ -39669,7 +39669,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v33 )
       v31 = v32;
     *(float *)(a1 + 88) = v31;
-  LABEL_74:
+  sub_607BE9F8__LABEL_74:
     if ( Object_queryTwoFlagStates(a1 + 688, 0) == 1 )
     {
       v35 = 0.5625;
@@ -39826,13 +39826,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v9 <= 0.0 )
       v9 = -v9;
     if ( v9 >= 1.0 )
-      goto LABEL_26;
+      goto sub_607BF0EC__LABEL_26;
     v10 = *(float *)(a1 + 88);
     if ( v10 <= 0.0 )
       v10 = -v10;
     if ( v10 >= 1.0 )
     {
-  LABEL_26:
+  sub_607BF0EC__LABEL_26:
       result = *(_DWORD *)(a1 + 1212) | 0x1000000;
       *(_DWORD *)(a1 + 1212) = result;
     }
@@ -39916,10 +39916,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( (v4 & 4) != 0 )
       {
-  LABEL_7:
+  sub_607BF328__LABEL_7:
         v7 = 0x20000000;
         v5 = 1;
-        goto LABEL_9;
+        goto sub_607BF328__LABEL_9;
       }
     }
     else
@@ -39929,40 +39929,40 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v6 = 0;
         v7 = 0;
-        goto LABEL_11;
+        goto sub_607BF328__LABEL_11;
       }
       if ( (v4 & 4) != 0 )
-        goto LABEL_7;
+        goto sub_607BF328__LABEL_7;
     }
     v7 = 1040187392;
     v5 = 0;
-  LABEL_9:
+  sub_607BF328__LABEL_9:
     v6 = 1;
     if ( (v4 & 2) != 0 )
       v7 = -v7;
-  LABEL_11:
+  sub_607BF328__LABEL_11:
     if ( *(float *)(a1 + 7012) <= (float)(*(float *)(a1 + 112) + (float)(*(float *)(a1 + 1244) * 0.5)) )
     {
       v8 = 0;
       if ( v6 != 1 )
       {
-  LABEL_17:
+  sub_607BF328__LABEL_17:
         v10 = 0.0;
-        goto LABEL_20;
+        goto sub_607BF328__LABEL_20;
       }
     }
     else
     {
       v8 = (*(_BYTE *)(a1 + 6902) & 4) != 0;
       if ( v6 != 1 )
-        goto LABEL_17;
+        goto sub_607BF328__LABEL_17;
     }
     if ( a2 == 1 )
       v9 = 11580484;
     else
       v9 = 11580480;
     v10 = *(float *)v9;
-  LABEL_20:
+  sub_607BF328__LABEL_20:
     v11 = HIBYTE(v7);
     v12 = (float)(v7 & 0xFFFFFF);
     *(float *)(a1 + 12424) = v10
@@ -40003,7 +40003,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v17 >= v19 )
       {
         if ( v17 <= v19 )
-          goto LABEL_53;
+          goto sub_607BF328__LABEL_53;
         v20 = v17 - v18;
         v21 = v17 < v20;
         v22 = v20 <= v19;
@@ -40020,7 +40020,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v19 = v20;
       *(float *)(a1 + 88) = v19;
     }
-  LABEL_53:
+  sub_607BF328__LABEL_53:
     v23 = (v16 & 0x4000000) == 0;
     v24 = 0.0;
     if ( (v16 & 0x4000000) == 0 )
@@ -40046,17 +40046,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a2 == 1 )
     {
       v28 = 11580508;
-  LABEL_83:
+  sub_607BF328__LABEL_83:
       v31 = *(_DWORD *)v28;
-      goto LABEL_84;
+      goto sub_607BF328__LABEL_84;
     }
     if ( v5 == 1 )
     {
       v29 = *(float *)(a1 + 88);
       v30 = 11580504;
-  LABEL_65:
+  sub_607BF328__LABEL_65:
       v31 = *(_DWORD *)v30;
-      goto LABEL_70;
+      goto sub_607BF328__LABEL_70;
     }
     v29 = *(float *)(a1 + 88);
     v32 = -v29;
@@ -40068,10 +40068,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v30 = 11580516;
       else
         v30 = 11580500;
-      goto LABEL_65;
+      goto sub_607BF328__LABEL_65;
     }
     v31 = 1000593162;
-  LABEL_70:
+  sub_607BF328__LABEL_70:
     if ( v29 <= 0.0 )
       v29 = -v29;
     if ( v29 >= MEMORY[0xB0B448] )
@@ -40081,7 +40081,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( sub_6079DF08(a1) && !sub_6079B7A4(a1) )
         {
           v31 = 1036831949;
-          goto LABEL_84;
+          goto sub_607BF328__LABEL_84;
         }
       }
       else if ( *(_DWORD *)(a1 + 1320) != 5 && !isMode4(a1) )
@@ -40089,9 +40089,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         isMode5(a1);
       }
       v28 = 11580512;
-      goto LABEL_83;
+      goto sub_607BF328__LABEL_83;
     }
-  LABEL_84:
+  sub_607BF328__LABEL_84:
     result = *(_DWORD *)(a1 + 6904);
     v34 = *v27 * 0.4;
     if ( (result & 0x10) == 0 )
@@ -40133,9 +40133,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
       {
         if ( (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 1064))(a1) )
-          goto LABEL_14;
+          goto sub_607BF96C__LABEL_14;
         if ( *((_DWORD *)a1 + 2485) == 2 )
-          goto LABEL_14;
+          goto sub_607BF96C__LABEL_14;
         if ( ((_DWORD)a1[1728] & 0x180000) == 0x100000 )
         {
           v4 = a1[22];
@@ -40149,7 +40149,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           checkLiquidCollisions(&v12, 0, &v13, *((unsigned __int8 *)a1 + 86));
           if ( v12 != 2 )
           {
-  LABEL_14:
+  sub_607BF96C__LABEL_14:
             (*(void (__fastcall **)(float *))(*(_DWORD *)a1 + 1108))(a1);
             return 1;
           }
@@ -40210,16 +40210,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v1;
     v4 = *(float *)(result + 124);
     if ( (float)(v4 * v1) < 0.0 )
-      goto LABEL_5;
+      goto sub_607BFB10__LABEL_5;
     v5 = -v4;
     if ( v4 > 0.0 )
       v5 = *(float *)(result + 124);
     if ( v5 <= 2.0 )
     {
-  LABEL_5:
+  sub_607BFB10__LABEL_5:
       if ( v3 <= 0.0 )
       {
-  LABEL_11:
+  sub_607BFB10__LABEL_11:
         v6 = *(float *)(v2 + 12424);
         if ( (*(_BYTE *)(v2 + 1216) & 8) != 0 || isMode4(v2) || (result = isMode5(v2), result == 1) )
         {
@@ -40229,7 +40229,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( fabsf(v4) > MEMORY[0xB0B478] )
             {
               v3 = 0.0;
-  LABEL_28:
+  sub_607BFB10__LABEL_28:
               if ( (float)(v3 * *(float *)(v2 + 12424)) < 0.0 )
               {
                 result = *(_DWORD *)(v2 + 1216) | 0x800;
@@ -40261,7 +40261,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = 12408;
           *(_DWORD *)(v2 + 12408) = 20;
         }
-        goto LABEL_28;
+        goto sub_607BFB10__LABEL_28;
       }
       result = *(_DWORD *)(result + 6912);
       if ( (result & 0x40001) == 0x40001 )
@@ -40274,7 +40274,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (result & 2) == 0 )
       {
         v4 = *(float *)(v2 + 124);
-        goto LABEL_11;
+        goto sub_607BFB10__LABEL_11;
       }
     }
     return result;
@@ -40298,13 +40298,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v1;
     v4 = *(float *)(result + 88);
     if ( (float)(v4 * v1) < 0.0 )
-      goto LABEL_5;
+      goto sub_607BFCD0__LABEL_5;
     v5 = -v4;
     if ( v4 > 0.0 )
       v5 = *(float *)(result + 88);
     if ( v5 <= 2.0 )
     {
-  LABEL_5:
+  sub_607BFCD0__LABEL_5:
       v6 = *(float *)(result + 12420);
       if ( (*(_BYTE *)(result + 1216) & 8) != 0 || isMode4(result) || (result = isMode5(v2), result == 1) )
       {
@@ -40324,19 +40324,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             else
               result = 11580528;
           }
-          goto LABEL_19;
+          goto sub_607BFCD0__LABEL_19;
         }
         result = 11580536;
         if ( fabsf(v4) <= MEMORY[0xB0B478] )
         {
           result = 11580520;
-  LABEL_19:
+  sub_607BFCD0__LABEL_19:
           v3 = *(float *)result * v3;
-          goto LABEL_20;
+          goto sub_607BFCD0__LABEL_20;
         }
         v3 = 0.0;
       }
-  LABEL_20:
+  sub_607BFCD0__LABEL_20:
       if ( (float)(v3 * *(float *)(v2 + 12420)) < 0.0 )
       {
         result = *(_DWORD *)(v2 + 1216) | 0x400;
@@ -40364,7 +40364,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *((_DWORD *)a1 + 306);
     if ( (v4 & 0x80) == 0 )
     {
-  LABEL_9:
+  sub_607BFE30__LABEL_9:
       if ( (v4 & 0x1000) == 0 )
         return 0;
       if ( sub_60786744(a1 + 172) != 1 )
@@ -40377,12 +40377,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v6 != 1 || ((_DWORD)a1[1696] & 0xFF0000) != 0x20000 )
         return 0;
       v7 = 2;
-      goto LABEL_15;
+      goto sub_607BFE30__LABEL_15;
     }
     if ( !sub_60154550((int)(a1 + 332)) )
     {
       v4 = *((_DWORD *)a1 + 306);
-      goto LABEL_9;
+      goto sub_607BFE30__LABEL_9;
     }
     if ( ((_DWORD)a1[1696] & 0xFF0000) == 0x20000 )
     {
@@ -40390,7 +40390,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return 1;
     }
     v7 = 0;
-  LABEL_15:
+  sub_607BFE30__LABEL_15:
     Player_changeState((int)a1, 13389868, v7);
     return 1;
   }
@@ -40427,7 +40427,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = 0.0;
     v5 = 3.0;
     if ( (a1[1725] & 2) != 0 )
-      goto LABEL_31;
+      goto sub_607BFF54__LABEL_31;
     v6 = (int (__fastcall ***)(_DWORD, int))ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, a1[1715]);
     if ( _cxa_guard_acquire_0(13087588) )
     {
@@ -40435,7 +40435,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       _cxa_guard_release_0(13087588);
     }
     if ( !v6 || (**v6)(v6, 13087584) != 1 )
-      goto LABEL_31;
+      goto sub_607BFF54__LABEL_31;
     v4 = 2.0;
     v5 = 0.5;
     v7 = -4.0;
@@ -40460,11 +40460,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       if ( sub_6078675C(v2) != 1 )
-        goto LABEL_19;
+        goto sub_607BFF54__LABEL_19;
       v10 = 1.5;
     }
     v7 = v7 + v10;
-  LABEL_19:
+  sub_607BFF54__LABEL_19:
     if ( v7 >= 0.0 )
     {
       if ( v7 <= 0.0 )
@@ -40474,12 +40474,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v11 )
           v12 = (float **)(a1 + 320);
         v5 = **v12 * *(float *)(4 * a1[20] + 0xB0A898);
-        goto LABEL_31;
+        goto sub_607BFF54__LABEL_31;
       }
       if ( v7 >= 0.5 )
       {
         v5 = 4.0;
-  LABEL_25:
+  sub_607BFF54__LABEL_25:
         if ( v7 <= v5 )
           v5 = v7;
       }
@@ -40490,10 +40490,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v7 >= -4.0 )
       {
         v5 = -0.5;
-        goto LABEL_25;
+        goto sub_607BFF54__LABEL_25;
       }
     }
-  LABEL_31:
+  sub_607BFF54__LABEL_31:
     if ( sub_607B74E0(a1) == 1 )
     {
       Player_checkTwoFlagsAndDispatch2((int)a1, 29, 0);

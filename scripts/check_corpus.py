@@ -17,7 +17,9 @@ CLANG = r"C:\Program Files\LLVM\bin\clang.exe"
 
 def sources(root):
     for dirpath, _, names in os.walk(root):
-        if "include" in dirpath:
+        # authoritative/ holds standalone re-decompilations of single functions; they are reference
+        # material, not translation units, so they are excluded from the parse count.
+        if "include" in dirpath or "authoritative" in dirpath:
             continue
         for fn in sorted(names):
             if fn.endswith(".c"):
