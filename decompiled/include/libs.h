@@ -320,11 +320,20 @@ int __fastcall sub_6082C68C(int a1);  /* 0x0082c68c */
 int __fastcall UserInfo_createInstance(int a1);  /* 0x0082c9f0 */
 int __fastcall UserInfo_init(int a1);  /* 0x0082ca70 */
 int __fastcall UserInfo_getUid(int a1, _DWORD *a2);  /* 0x0082cad4 */
+int __fastcall Actor_otosukuroru_build(int a1);  /* 0x0082cb04 */
 int __fastcall sub_6082CB20(int a1, int a2);  /* 0x0082cb20 */
+int __fastcall Actor_kun_build(int a1);  /* 0x0082de6c */
+int __fastcall Actor_grass_flower_Tag_build(int a1);  /* 0x0082e5ac */
+int __fastcall Actor_Bowser_exclusive_eriaOBJ_build(int a1);  /* 0x0082e818 */
 int __fastcall sub_6082ED70(int a1, int a2);  /* 0x0082ed70 */
+int __fastcall Actor_haipamakusu_build(int a1);  /* 0x0082f15c */
+int __fastcall Actor_special_sukuroruTag_build(int a1);  /* 0x0082fd38 */
+int __fastcall Actor_shadou_read_Tag_2_build(int a1);  /* 0x0082ffe8 */
 int __fastcall sub_6083007C(int a1);  /* 0x0083007c */
 int __fastcall sub_6083038C(int a1, int a2);  /* 0x0083038c */
 int __fastcall sub_60830400(int a1, int a2);  /* 0x00830400 */
+int __fastcall Actor_zumu_build(int a1);  /* 0x00831cc0 */
+int __fastcall Actor_zumu_RDash_build(int a1);  /* 0x00831f80 */
 int __fastcall moveValueTo(int *a1, int *a2, int *a3, int a4);  /* 0x00832424 */
 int __fastcall sub_6083246C(_DWORD *a1, int *a2, int *a3);  /* 0x0083246c */
 int __fastcall sub_60832684(int result, unsigned int *a2);  /* 0x00832684 */

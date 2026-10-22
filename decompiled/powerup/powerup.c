@@ -7455,6 +7455,33 @@
   }
 
 /* ============================================================================
+ * Actor_Battle_for_Item_build
+ * RVA 0x0045c3c0   size 0xb4   xrefs 0
+ * ============================================================================ */
+  int Actor_Battle_for_Item_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x18E8u);
+    StateActor_ctor((_DWORD *)v0);
+    *(_DWORD *)v0 = 12562996;
+    *(_DWORD *)(v0 + 6100) = 0;
+    *(_DWORD *)(v0 + 6104) = 0;
+    *(_DWORD *)(v0 + 6108) = 0;
+    EffectWrapper_ctor(v0 + 6112);
+    *(_DWORD *)(v0 + 6112) = 12325968;
+    EffectWrapper_ctor(v0 + 6216);
+    *(_DWORD *)(v0 + 6216) = 12325968;
+    *(_BYTE *)(v0 + 6320) = 0;
+    *(_BYTE *)(v0 + 6321) = 0;
+    *(_BYTE *)(v0 + 6323) = 0;
+    *(_DWORD *)(v0 + 6324) = 0;
+    PlayerLookTarget_ctor(v0 + 6328, *(_DWORD *)(v0 + 8));
+    *(_DWORD *)(v0 + 6356) = 0;
+    return v0;
+  }
+
+/* ============================================================================
  * sub_6045C720
  * RVA 0x0045c720   size 0x254   xrefs 1
  * ============================================================================ */
@@ -7815,6 +7842,51 @@
       result = AnimationCtrl_setRepeat(v10 + 4, a3);
       *(_DWORD *)(v10 + 24) = v4;
     }
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_fibafor_suta_build
+ * RVA 0x0045d53c   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_fibafor_suta_build(int a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+  
+    v2 = operator new(0x50u);
+    result = (_DWORD *)Actor::Actor(v2, a1);
+    *result = 12563256;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_faiyafurawa_build
+ * RVA 0x0045d76c   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall sub_6045D76C(int a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+  
+    v2 = operator new(6832);
+    result = (_DWORD *)sub_60466BC4(v2, a1);
+    *result = 12563332;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_aisufurawa_build
+ * RVA 0x0045e2e0   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall sub_6045E2E0(int a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+  
+    v2 = operator new(6832);
+    result = (_DWORD *)sub_60466BC4(v2, a1);
+    *result = 12563708;
     return result;
   }
 
@@ -9943,6 +10015,20 @@
   }
 
 /* ============================================================================
+ * Actor_kinoko_build
+ * RVA 0x00467808   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_60467808()
+  {
+    _DWORD *result; // r0
+  
+    operator new(6832);
+    result = (_DWORD *)sub_60466BC4();
+    *result = 12565000;
+    return result;
+  }
+
+/* ============================================================================
  * sub_60467880
  * RVA 0x00467880   size 0x134   xrefs 1
  * ============================================================================ */
@@ -9987,6 +10073,20 @@
     *(_DWORD *)(v9 + 28) |= 2u;
     result = *(_DWORD *)(a1 + 6164);
     *(_DWORD *)(result + 24) = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_mamekinoko_build
+ * RVA 0x00468284   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_60468284()
+  {
+    _DWORD *result; // r0
+  
+    operator new(6832);
+    result = (_DWORD *)sub_60466BC4();
+    *result = 12565352;
     return result;
   }
 
@@ -10037,6 +10137,34 @@
   }
 
 /* ============================================================================
+ * Actor_musasabi_build
+ * RVA 0x00468ebc   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_60468EBC()
+  {
+    _DWORD *result; // r0
+  
+    operator new(6832);
+    result = (_DWORD *)sub_60466BC4();
+    *result = 12565748;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_1UPkinoko_build
+ * RVA 0x004698ec   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_604698EC()
+  {
+    _DWORD *result; // r0
+  
+    operator new(6832);
+    result = (_DWORD *)sub_60466BC4();
+    *result = 12566100;
+    return result;
+  }
+
+/* ============================================================================
  * sub_6046999C
  * RVA 0x0046999c   size 0x138   xrefs 1
  * ============================================================================ */
@@ -10079,6 +10207,49 @@
     *(_DWORD *)(v8 + 28) |= 2u;
     result = *(_DWORD *)(a1 + 6164);
     *(_DWORD *)(result + 24) = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Peach_Crown_build
+ * RVA 0x0046a538   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6046A538()
+  {
+    _DWORD *result; // r0
+  
+    operator new(6832);
+    result = (_DWORD *)sub_60466BC4();
+    *result = 12566452;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_pengin_build
+ * RVA 0x0046aef0   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6046AEF0()
+  {
+    _DWORD *result; // r0
+  
+    operator new(6832);
+    result = (_DWORD *)sub_60466BC4();
+    *result = 12566804;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_puropera_build
+ * RVA 0x0046ba10   size 0x3c   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6046BA10()
+  {
+    _DWORD *result; // r0
+  
+    operator new(6872);
+    result = (_DWORD *)sub_60466BC4();
+    *result = 12567156;
+    result[1713] = 0;
     return result;
   }
 
@@ -10392,6 +10563,24 @@
   }
 
 /* ============================================================================
+ * Actor_Quest_Item_build
+ * RVA 0x0046da44   size 0x6c   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_Quest_Item_build()
+  {
+    _DWORD *v0; // r5
+  
+    v0 = (_DWORD *)operator new(0x18A0u);
+    StateActor_ctor(v0);
+    *v0 = 12567548;
+    v0[1531] = 0;
+    EffectWrapper_ctor((int)(v0 + 1536));
+    v0[1536] = 12325968;
+    PlayerLookTarget_ctor((int)(v0 + 1562), v0[2]);
+    return v0;
+  }
+
+/* ============================================================================
  * sub_6046DD80
  * RVA 0x0046dd80   size 0x1d8   xrefs 1
  * ============================================================================ */
@@ -10512,6 +10701,37 @@
       result = v8;
       *(_DWORD *)(a1 + 6136) = v8;
     }
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_resuta_build
+ * RVA 0x0046e490   size 0x80   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_resuta_build(int a1)
+  {
+    int v2; // r0
+    int result; // r0
+    int v4; // r2
+    int v5; // r3
+  
+    v2 = operator new(0x7Cu);
+    result = Actor::Actor(v2, a1);
+    *(_DWORD *)result = 12567780;
+    v4 = *(_DWORD *)(a1 + 20);
+    v5 = *(_DWORD *)(a1 + 24);
+    *(_DWORD *)(result + 80) = *(_DWORD *)(a1 + 16);
+    *(_DWORD *)(result + 84) = v4;
+    *(_DWORD *)(result + 88) = v5;
+    *(_BYTE *)(result + 92) = *(_BYTE *)(a1 + 32);
+    *(_DWORD *)(result + 96) = *(_DWORD *)(result + 20) >> 28;
+    *(_BYTE *)(result + 100) = 0;
+    *(_BYTE *)(result + 101) = 1;
+    *(_DWORD *)(result + 104) = 2139095039;
+    *(_DWORD *)(result + 108) = 2139095039;
+    *(_DWORD *)(result + 112) = -8388609;
+    *(_DWORD *)(result + 116) = -8388609;
+    *(_DWORD *)(result + 120) = 0;
     return result;
   }
 
@@ -10686,6 +10906,28 @@
   }
 
 /* ============================================================================
+ * Actor_suta_build
+ * RVA 0x0046eda0   size 0x8c   xrefs 0
+ * ============================================================================ */
+  int sub_6046EDA0()
+  {
+    int v0; // r4
+  
+    v0 = operator new(6992);
+    sub_60466BC4();
+    *(_DWORD *)v0 = 12567868;
+    LightMask::LightMask((LightMask *)(v0 + 6828));
+    EffectWrapper_ctor(v0 + 6868);
+    *(_DWORD *)(v0 + 6868) = 12325968;
+    *(_WORD *)(v0 + 6988) = 0;
+    *(_DWORD *)(v0 + 6984) = 0;
+    *(_DWORD *)(v0 + 6980) = 0;
+    *(_DWORD *)(v0 + 6972) = 0;
+    *(_DWORD *)(v0 + 6976) = 0;
+    return v0;
+  }
+
+/* ============================================================================
  * sub_6046EFC4
  * RVA 0x0046efc4   size 0x230   xrefs 2
  * ============================================================================ */
@@ -10771,6 +11013,38 @@
   }
 
 /* ============================================================================
+ * Actor_3UPmun_build
+ * RVA 0x0046fec8   size 0x3c   xrefs 0
+ * ============================================================================ */
+  _DWORD *sub_6046FEC8()
+  {
+    _DWORD *result; // r0
+  
+    operator new(6832);
+    result = (_DWORD *)sub_60466BC4();
+    *result = 12568240;
+    result[1707] = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_taitoruDemo_mid_Item_build
+ * RVA 0x00470984   size 0x44   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_taitoruDemo_mid_Item_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x17E0u);
+    result = MultiStateActor::MultiStateActor(v0);
+    *result = 12568592;
+    result[1526] = 0;
+    result[1527] = 0;
+    return result;
+  }
+
+/* ============================================================================
  * sub_60470DD4
  * RVA 0x00470dd4   size 0x18c   xrefs 2
  * ============================================================================ */
@@ -10831,6 +11105,27 @@
     ModelWrapper_updateAnims((int)*v1);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v1 + 52))(**v1);
     return (*(int (__fastcall **)(_DWORD))(*(_DWORD *)**v1 + 56))(**v1);
+  }
+
+/* ============================================================================
+ * Actor_Battle_for_Item_2_build
+ * RVA 0x00471228   size 0x64   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_Battle_for_Item_2_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x17F0u);
+    result = StateActor_ctor(v0);
+    *result = 12568816;
+    result[1530] = 0;
+    result[1529] = 0;
+    result[1528] = 0;
+    result[1527] = 0;
+    result[1525] = 0;
+    result[1526] = 0;
+    return result;
   }
 
 /* ============================================================================

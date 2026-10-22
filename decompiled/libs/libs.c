@@ -27294,6 +27294,18 @@
   }
 
 /* ============================================================================
+ * Actor_otosukuroru_build
+ * RVA 0x0082cb04   size 0x1c   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_otosukuroru_build(int a1)
+  {
+    int v2; // r0
+  
+    v2 = operator new(0x50u);
+    return sub_6082CB20(v2, a1);
+  }
+
+/* ============================================================================
  * sub_6082CB20
  * RVA 0x0082cb20   size 0xc0   xrefs 1
  * ============================================================================ */
@@ -27324,6 +27336,25 @@
     }
     *(_BYTE *)(a1 + 19) = 1;
     return a1;
+  }
+
+/* ============================================================================
+ * Actor_shabonTag_build
+ * RVA 0x0082cdf0   size 0x48   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_shabonTag_build(int a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+  
+    v2 = operator new(0x294u);
+    result = (_DWORD *)StageActor::StageActor(v2, a1);
+    *result = 12756944;
+    result[161] = 2139095039;
+    result[162] = 2139095039;
+    result[163] = -8388609;
+    result[164] = -8388609;
+    return result;
   }
 
 /* ============================================================================
@@ -27393,6 +27424,142 @@
   
     v1 = Actor::~Actor(a1);
     return operator delete((int)v1);
+  }
+
+/* ============================================================================
+ * Actor_pipe_NextGototaimaTag_build
+ * RVA 0x0082d398   size 0x70   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_pipe_NextGototaimaTag_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x17F0u);
+    result = StateActor_ctor(v0);
+    *result = 12757160;
+    result[1531] = 0;
+    result[1525] = 0;
+    result[1530] = -1;
+    result[1529] = -1;
+    result[1528] = -1;
+    result[1526] = -1;
+    result[1527] = -1;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Tag_build
+ * RVA 0x0082da70   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_Tag_build(int a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+  
+    v2 = operator new(0x50u);
+    result = (_DWORD *)Actor::Actor(v2, a1);
+    *result = 12757424;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_kun_build
+ * RVA 0x0082de6c   size 0x50   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_kun_build(int a1)
+  {
+    int v2; // r0
+    int result; // r0
+  
+    v2 = operator new(0x5Cu);
+    result = Actor::Actor(v2, a1);
+    *(_DWORD *)result = 12757500;
+    *(_DWORD *)(result + 80) = 1142095872;
+    *(_DWORD *)(result + 84) = 1135083520;
+    *(_DWORD *)(result + 88) = 0;
+    *(_BYTE *)(result + 19) = 1;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_shadou_read_Tag_build
+ * RVA 0x0082e0c4   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_shadou_read_Tag_build(int a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+  
+    v2 = operator new(0x284u);
+    result = (_DWORD *)StageActor::StageActor(v2, a1);
+    *result = 12757576;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_grass_flower_Tag_build
+ * RVA 0x0082e5ac   size 0x60   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_grass_flower_Tag_build(int a1)
+  {
+    int v2; // r0
+    int result; // r0
+  
+    v2 = operator new(0x50u);
+    result = Actor::Actor(v2, a1);
+    *(_DWORD *)result = 12757716;
+    *(_DWORD *)(result + 76) |= 2u;
+    *(_BYTE *)(MEMORY[0xCBD254] + 16272) = (*(_BYTE *)(result + 20) & 0xF) + 1;
+    *(_BYTE *)(result + 19) = 1;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Bowser_exclusive_eriaOBJ_build
+ * RVA 0x0082e818   size 0xe4   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_Bowser_exclusive_eriaOBJ_build(int a1)
+  {
+    int v2; // r4
+    int v3; // r1
+    int Area; // r0
+    int v5; // r1
+    unsigned int v6; // r2
+    char v7; // r1
+    _DWORD v9[2]; // [sp+4h] [bp-24h] BYREF
+    char v10; // [sp+Ch] [bp-1Ch]
+    int v11; // [sp+10h] [bp-18h]
+    char v12; // [sp+14h] [bp-14h]
+    char v13; // [sp+15h] [bp-13h]
+    float v14[4]; // [sp+18h] [bp-10h] BYREF
+  
+    v2 = operator new(0x50u);
+    Actor::Actor(v2, a1);
+    v3 = MEMORY[0xC9A684];
+    *(_DWORD *)v2 = 12757792;
+    Area = Level_getArea(MEMORY[0xCBD89C], *(unsigned __int8 *)(v3 + 18));
+    v5 = *(_DWORD *)(v2 + 20);
+    v14[0] = 3.4028e38;
+    v14[1] = 3.4028e38;
+    v14[2] = -3.4028e38;
+    v14[3] = -3.4028e38;
+    LevelArea_getLocation(Area, v14, v5 & 0xF);
+    v6 = *(_DWORD *)(v2 + 24);
+    v7 = *(_BYTE *)(a1 + 33);
+    v9[0] = v14;
+    v9[1] = v6 >> 28;
+    v10 = HIBYTE(v6) & 0xF;
+    v11 = (v6 >> 20) & 0xF;
+    v12 = BYTE2(v6) & 0xF;
+    v13 = v7;
+    sub_607FF2C8(
+      MEMORY[0xCC6484] + 204,
+      (int)v9,
+      *(_DWORD *)(MEMORY[0xCC6484] + 192),
+      *(_DWORD *)(MEMORY[0xCC6484] + 196));
+    *(_BYTE *)(v2 + 19) = 1;
+    return v2;
   }
 
 /* ============================================================================
@@ -27501,6 +27668,102 @@
     sub_607FC22C(MEMORY[0xCC6484], v21);
     *(_BYTE *)(a1 + 19) = 1;
     return a1;
+  }
+
+/* ============================================================================
+ * Actor_haipamakusu_build
+ * RVA 0x0082f15c   size 0x1c   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_haipamakusu_build(int a1)
+  {
+    int v2; // r0
+  
+    v2 = operator new(0x50u);
+    return sub_6082ED70(v2, a1);
+  }
+
+/* ============================================================================
+ * Actor_Quest_akutaTag_build
+ * RVA 0x0082f2d4   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_Quest_akutaTag_build(int a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+  
+    v2 = operator new(0x284u);
+    result = (_DWORD *)StageActor::StageActor(v2, a1);
+    *result = 12758020;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Quest_for_Demo_rokeshonTag_build
+ * RVA 0x0082f5bc   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_Quest_for_Demo_rokeshonTag_build(int a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+  
+    v2 = operator new(0x284u);
+    result = (_DWORD *)StageActor::StageActor(v2, a1);
+    *result = 12758160;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_shadouretreat_Tag_build
+ * RVA 0x0082f8c0   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_shadouretreat_Tag_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x17E0u);
+    result = StateActor_ctor(v0);
+    *result = 12758300;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_special_sukuroruTag_build
+ * RVA 0x0082fd38   size 0x98   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_special_sukuroruTag_build(int a1)
+  {
+    int v2; // r4
+    unsigned int v3; // r6
+    int v5; // [sp+4h] [bp-4h] BYREF
+  
+    v2 = operator new(0x50u);
+    Actor::Actor(v2, a1);
+    *(_DWORD *)v2 = 12758520;
+    v3 = *(_DWORD *)(v2 + 20);
+    v5 = (__int64)(float)((float)((float)((float)(v3 >> 28) * -22.5) + 90.0) * 11930000.0);
+    sub_607FE85C(MEMORY[0xCC6484] + 248, (v3 >> 8) & 3, &v5, v3 & 1);
+    *(_BYTE *)(v2 + 19) = 1;
+    return v2;
+  }
+
+/* ============================================================================
+ * Actor_shadou_read_Tag_2_build
+ * RVA 0x0082ffe8   size 0x40   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_shadou_read_Tag_2_build(int a1)
+  {
+    int v2; // r0
+    int result; // r0
+  
+    v2 = operator new(0x298u);
+    result = StageActor::StageActor(v2, a1);
+    *(_DWORD *)result = 12758596;
+    *(_BYTE *)(result + 648) = 0;
+    *(_DWORD *)(result + 652) = 0;
+    *(_BYTE *)(result + 656) = 0;
+    *(_DWORD *)(result + 660) = 0;
+    return result;
   }
 
 /* ============================================================================
@@ -27682,6 +27945,95 @@
     sub_603F47D0(MEMORY[0xC99D70], a2);
     sub_6082B748(MEMORY[0xCC6E04]);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
+  }
+
+/* ============================================================================
+ * Actor_ShortPlay_result_Demo_Tag_build
+ * RVA 0x0083074c   size 0x44   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_ShortPlay_result_Demo_Tag_build()
+  {
+    _DWORD *v0; // r5
+  
+    v0 = (_DWORD *)operator new(0x1850u);
+    StateActor_ctor(v0);
+    *v0 = 12758736;
+    sub_603E9E40((int)(v0 + 1525), (int)v0);
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_ShortPlay_result_Demo_Tag_2_build
+ * RVA 0x00830b74   size 0x90   xrefs 0
+ * ============================================================================ */
+  int Actor_ShortPlay_result_Demo_Tag_2_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x1828u);
+    StateActor_ctor((_DWORD *)v0);
+    *(_DWORD *)v0 = 12758956;
+    *(_DWORD *)(v0 + 6112) = 0;
+    *(_DWORD *)(v0 + 6108) = 0;
+    *(_DWORD *)(v0 + 6104) = 0;
+    *(_DWORD *)(v0 + 6100) = 0;
+    PlayerLookTarget_ctor(v0 + 6116, *(_DWORD *)(v0 + 8));
+    *(_BYTE *)(v0 + 6160) = 0;
+    *(_DWORD *)(v0 + 6176) = 0;
+    *(_DWORD *)(v0 + 6172) = 0;
+    *(_DWORD *)(v0 + 6168) = 0;
+    *(_DWORD *)(v0 + 6164) = 0;
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_zumu_build
+ * RVA 0x00831cc0   size 0xb4   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_zumu_build(int a1)
+  {
+    int v2; // r4
+    int v3; // r0
+    int v4; // r2
+    _BYTE v6[20]; // [sp+4h] [bp-14h] BYREF
+  
+    v2 = operator new(0x50u);
+    Actor::Actor(v2, a1);
+    *(_DWORD *)v2 = 12759176;
+    v3 = *(_DWORD *)(v2 + 20);
+    v4 = ((unsigned int)v3 >> 28) & 7;
+    if ( v4 == 4 )
+      LOBYTE(v4) = 15;
+    sub_60803B24((int)v6, HIBYTE(v3) & 3, v4, v3 < 0, 1);
+    sub_607FC24C(MEMORY[0xCC6484], v6);
+    *(_BYTE *)(v2 + 19) = 1;
+    return v2;
+  }
+
+/* ============================================================================
+ * Actor_zumu_RDash_build
+ * RVA 0x00831f80   size 0xc0   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_zumu_RDash_build(int a1)
+  {
+    int v2; // r4
+    unsigned int v3; // r0
+    int v4; // r2
+    _BYTE v6[20]; // [sp+4h] [bp-14h] BYREF
+  
+    v2 = operator new(0x50u);
+    Actor::Actor(v2, a1);
+    *(_DWORD *)v2 = 12759252;
+    v3 = *(_DWORD *)(v2 + 20);
+    v4 = (v3 >> 28) & 7;
+    if ( v4 == 4 )
+      v4 = 15;
+    if ( v4 == 5 )
+      LOBYTE(v4) = 8;
+    sub_60803B24((int)v6, HIBYTE(v3) & 3, v4, BYTE2(v3) & 1, 0);
+    sub_607FC24C(MEMORY[0xCC6484], v6);
+    *(_BYTE *)(v2 + 19) = 1;
+    return v2;
   }
 
 /* ============================================================================

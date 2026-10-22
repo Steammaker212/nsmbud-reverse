@@ -1206,6 +1206,7 @@ int __fastcall sub_60597414(int result);  /* 0x00597414 */
 int __fastcall sub_60597558(int a1);  /* 0x00597558 */
 int __fastcall sub_605977BC(int a1);  /* 0x005977bc */
 int __fastcall sub_60597A20(int a1);  /* 0x00597a20 */
+int __fastcall Actor_chibiyoshi_ship_build(int a1);  /* 0x00598524 */
 int __fastcall sub_605986B0(int a1, int a2);  /* 0x005986b0 */
 int __fastcall sub_60598BD4(int a1);  /* 0x00598bd4 */
 int __fastcall sub_605992C4(int a1);  /* 0x005992c4 */
@@ -1228,6 +1229,7 @@ int __fastcall sub_6059DD28(int a1);  /* 0x0059dd28 */
 int __fastcall sub_6059E220(int a1);  /* 0x0059e220 */
 int __fastcall sub_6059E5AC(int result);  /* 0x0059e5ac */
 void __fastcall sub_6059EBB0(int a1);  /* 0x0059ebb0 */
+int __fastcall Actor_bana_2_build(int a1);  /* 0x0059ee3c */
 int __fastcall sub_6059FA44(_DWORD *a1, unsigned int *a2, _DWORD *a3, int a4);  /* 0x0059fa44 */
 int __fastcall sub_605A1410(_DWORD *a1);  /* 0x005a1410 */
 int __fastcall sub_605A1818(int result);  /* 0x005a1818 */
@@ -1302,6 +1304,7 @@ int __fastcall sub_605B5A3C(int a1, int a2, int a3, int a4, int a5);  /* 0x005b5
 int __fastcall sub_605B5BDC(_DWORD *a1, _DWORD *a2);  /* 0x005b5bdc */
 int __fastcall sub_605B5FA8(int a1, _DWORD *a2, int a3, int a4, int a5);  /* 0x005b5fa8 */
 int __fastcall sub_605B6364(int result, int *a2, int a3);  /* 0x005b6364 */
+int __fastcall Actor_charenjimodoexclusive_buroku_build(int a1);  /* 0x005b700c */
 void __fastcall sub_605B750C(_DWORD *a1);  /* 0x005b750c */
 int __fastcall sub_605B774C(_DWORD *a1, int a2, unsigned __int8 a3, unsigned __int8 a4);  /* 0x005b774c */
 int __fastcall sub_605B77BC(_DWORD *a1);  /* 0x005b77bc */
@@ -1367,6 +1370,7 @@ int __fastcall sub_605C69F0(int a1);  /* 0x005c69f0 */
 int __fastcall sub_605C6B58(_DWORD *a1);  /* 0x005c6b58 */
 int __fastcall sub_605C6EB4(int a1, int a2, int a3);  /* 0x005c6eb4 */
 int __fastcall sub_605C6F0C(int *a1, float *a2, float *a3);  /* 0x005c6f0c */
+int __fastcall Actor_pipe_big_RDash_build(int a1);  /* 0x005c7114 */
 bool __fastcall sub_605C7768(int a1, int a2);  /* 0x005c7768 */
 int __fastcall sub_605C7C70(int a1);  /* 0x005c7c70 */
 unsigned int __fastcall sub_605C7E54(int a1);  /* 0x005c7e54 */
@@ -1399,6 +1403,7 @@ int __fastcall sub_605CCFC4(int a1, int a2);  /* 0x005ccfc4 */
 int __fastcall sub_605CDAD4(int a1, _QWORD *a2);  /* 0x005cdad4 */
 int __fastcall sub_605CDB34(int a1);  /* 0x005cdb34 */
 int __fastcall sub_605CDB68(int a1);  /* 0x005cdb68 */
+int __fastcall Actor_mid_pendulum_build(int a1);  /* 0x005ce40c */
 int __fastcall sub_605CE780(int result, _DWORD *a2, int a3, int a4, char a5, int a6, int a7, char a8, int a9, int a10);  /* 0x005ce780 */
 int __fastcall sub_605CE840(int result, _DWORD *a2, _QWORD *a3, int a4);  /* 0x005ce840 */
 int __fastcall sub_605CE9B4(int a1, int a2);  /* 0x005ce9b4 */
@@ -1421,6 +1426,7 @@ int __fastcall sub_605D0580(int a1);  /* 0x005d0580 */
 int __fastcall sub_605D05CC(int a1);  /* 0x005d05cc */
 int __fastcall sub_605D0678(int a1);  /* 0x005d0678 */
 int __fastcall sub_605D1F54(int a1, unsigned int a2, int a3);  /* 0x005d1f54 */
+int __fastcall Actor_chibiyoshi_2_build(int a1);  /* 0x005d27d8 */
 int __fastcall sub_605D3BA0(_DWORD *a1);  /* 0x005d3ba0 */
 int __fastcall sub_605D3D9C(int a1);  /* 0x005d3d9c */
 float __fastcall sub_605D40F0(int a1);  /* 0x005d40f0 */
@@ -1615,6 +1621,7 @@ int __fastcall sub_605ED490(int result, int a2);  /* 0x005ed490 */
 int __fastcall sub_605ED5C0(int result);  /* 0x005ed5c0 */
 int __fastcall sub_605ED718(int a1);  /* 0x005ed718 */
 int __fastcall sub_605EDA64(_DWORD *a1);  /* 0x005eda64 */
+int __fastcall Actor_chibiyoshi_cloud_build(int a1);  /* 0x005ede34 */
 unsigned int __fastcall sub_605F1AA8(int a1);  /* 0x005f1aa8 */
 int __fastcall StarCoin_onCreate(float *a1);  /* 0x005f35cc */
 int __fastcall StarCoin_onExecute(int a1);  /* 0x005f3714 */
@@ -1698,6 +1705,7 @@ int __fastcall sub_6060E48C(int a1, unsigned __int8 *a2);  /* 0x0060e48c */
 int __fastcall sub_6060EDB0(int a1);  /* 0x0060edb0 */
 int __fastcall sub_6060F858(int a1);  /* 0x0060f858 */
 int __fastcall sub_6060FAA0(int a1);  /* 0x0060faa0 */
+int __fastcall Actor_RDash_build(int a1);  /* 0x00610008 */
 int __fastcall sub_606101D4(int a1, int a2);  /* 0x006101d4 */
 int __fastcall sub_6061055C(int a1, int a2, __int64 a3, int a4);  /* 0x0061055c */
 int __fastcall sub_606106B0(int a1);  /* 0x006106b0 */
@@ -1730,6 +1738,7 @@ int __fastcall sub_6061C4A0(int result);  /* 0x0061c4a0 */
 int __fastcall sub_6061D6B8(int a1);  /* 0x0061d6b8 */
 int __fastcall sub_6061D8C0(int a1);  /* 0x0061d8c0 */
 int __fastcall sub_6061DA90(int (__fastcall ***a1)(_DWORD, int), unsigned __int8 *a2);  /* 0x0061da90 */
+int __fastcall Actor_ice_2_build(int a1);  /* 0x0061e0d0 */
 int __fastcall sub_6061E338(int *a1);  /* 0x0061e338 */
 int __fastcall sub_6061E5A8(int a1);  /* 0x0061e5a8 */
 int __fastcall sub_6061E7F4(int a1);  /* 0x0061e7f4 */
@@ -1757,6 +1766,7 @@ int __fastcall sub_6062795C(int a1, int a2);  /* 0x0062795c */
 int __fastcall sub_60627B64(float *a1, int a2);  /* 0x00627b64 */
 bool __fastcall sub_606282C4(int a1);  /* 0x006282c4 */
 int __fastcall sub_60628928(int a1);  /* 0x00628928 */
+int __fastcall Actor_JumpStand_build(int a1);  /* 0x00628e38 */
 int __fastcall sub_6062943C(int a1);  /* 0x0062943c */
 int __fastcall sub_60629500(_DWORD *a1);  /* 0x00629500 */
 int __fastcall sub_60629730(int a1);  /* 0x00629730 */
@@ -1846,6 +1856,7 @@ int __fastcall sub_606402E8(int a1);  /* 0x006402e8 */
 int __fastcall sub_60640480(int a1);  /* 0x00640480 */
 int __fastcall sub_606405DC(int a1);  /* 0x006405dc */
 int __fastcall sub_60640C3C(int a1);  /* 0x00640c3c */
+int __fastcall Actor_Lift_RDash_build(int a1);  /* 0x006410e4 */
 int __fastcall sub_60641D6C(int a1, int a2, _BYTE *a3);  /* 0x00641d6c */
 int __fastcall sub_60641F0C(int a1);  /* 0x00641f0c */
 int __fastcall sub_60642004(int a1);  /* 0x00642004 */
@@ -1859,6 +1870,8 @@ unsigned int __fastcall sub_60644DD8(int a1);  /* 0x00644dd8 */
 unsigned int __fastcall sub_60645374(int a1);  /* 0x00645374 */
 unsigned int __fastcall sub_60645448(int a1, int a2);  /* 0x00645448 */
 unsigned int __fastcall sub_606456E4(int a1, int a2, int a3, int a4, int a5);  /* 0x006456e4 */
+int __fastcall Actor_tarihorizontal_move_Lift_build(int a1);  /* 0x006462e8 */
+int __fastcall Actor_tarivertical_move_Lift_build(int a1);  /* 0x006473e8 */
 int __fastcall sub_6064862C(int a1);  /* 0x0064862c */
 int __fastcall sub_60649C20(int a1);  /* 0x00649c20 */
 int __fastcall sub_6064A59C(_DWORD *a1);  /* 0x0064a59c */
@@ -1884,6 +1897,7 @@ int __fastcall sub_6064F934(int a1);  /* 0x0064f934 */
 int __fastcall sub_6064FEF8(int *a1);  /* 0x0064fef8 */
 int __fastcall sub_60650090(int a1);  /* 0x00650090 */
 int __fastcall sub_60650908(int a1, int a2);  /* 0x00650908 */
+int __fastcall Actor_tarihorizontal_move_Lift_2_build(int a1);  /* 0x00650d00 */
 int __fastcall sub_60652870(int a1);  /* 0x00652870 */
 int __fastcall sub_60652F0C(int a1, int a2);  /* 0x00652f0c */
 int __fastcall sub_606530C4(int a1, int *a2, float *a3);  /* 0x006530c4 */
@@ -1901,6 +1915,7 @@ int __fastcall sub_60656814(int a1, _DWORD *a2, unsigned int a3);  /* 0x00656814
 int __fastcall sub_60656868(int a1, unsigned int a2, _DWORD *a3);  /* 0x00656868 */
 int __fastcall sub_60656A8C(int a1);  /* 0x00656a8c */
 int __fastcall sub_60656AF4(int a1, int a2);  /* 0x00656af4 */
+int __fastcall Actor_tarivertical_move_Lift_2_build(int a1);  /* 0x00657080 */
 int __fastcall sub_60658908(int a1);  /* 0x00658908 */
 int __fastcall sub_60658F20(int a1);  /* 0x00658f20 */
 int __fastcall sub_606591E8(int a1);  /* 0x006591e8 */
@@ -1928,6 +1943,8 @@ int __fastcall sub_60664220(int a1);  /* 0x00664220 */
 int __fastcall sub_606643DC(int a1);  /* 0x006643dc */
 int __fastcall sub_60664A54(_DWORD *a1);  /* 0x00664a54 */
 int __fastcall sub_60664E84(_BYTE *a1);  /* 0x00664e84 */
+int __fastcall Actor_kishiLift_build(int a1);  /* 0x00665fc8 */
+int __fastcall Actor_kishiLift_sutepu_build(int a1);  /* 0x0066662c */
 unsigned int __fastcall sub_60667DB0(int a1);  /* 0x00667db0 */
 int __fastcall sub_60667E9C(int a1);  /* 0x00667e9c */
 int __fastcall sub_60667FC4(int a1, _DWORD *a2);  /* 0x00667fc4 */
@@ -1975,8 +1992,10 @@ int __fastcall sub_60676B28(int a1);  /* 0x00676b28 */
 int __fastcall sub_60676F28(int a1, _BYTE *a2);  /* 0x00676f28 */
 int __fastcall sub_60676FFC(int result, int a2, int a3);  /* 0x00676ffc */
 int __fastcall sub_60677174(_BYTE *a1);  /* 0x00677174 */
+int __fastcall Actor_light_ruburoku_build(int a1);  /* 0x00677380 */
 int __fastcall sub_6067757C(int a1);  /* 0x0067757c */
 int __fastcall sub_60677EC4(int a1);  /* 0x00677ec4 */
+int __fastcall Actor_chibiyoshi_light_ru_build(int a1);  /* 0x0067834c */
 int __fastcall sub_606789F4(int a1, int a2);  /* 0x006789f4 */
 bool __fastcall sub_60678E1C(int a1);  /* 0x00678e1c */
 int __fastcall sub_6067A0EC(int a1);  /* 0x0067a0ec */
@@ -2068,6 +2087,7 @@ int __fastcall sub_606917EC(int a1);  /* 0x006917ec */
 int __fastcall sub_60691B4C(int a1);  /* 0x00691b4c */
 unsigned int __fastcall sub_60691D3C(int a1);  /* 0x00691d3c */
 int __fastcall sub_60693478(int **a1, int a2, int a3);  /* 0x00693478 */
+int __fastcall Actor_monoreruburoku_reru_build(int a1);  /* 0x00693578 */
 int __fastcall sub_60693594(int a1, int a2);  /* 0x00693594 */
 int __fastcall sub_60693A00(int a1);  /* 0x00693a00 */
 int __fastcall sub_60693F1C(int a1, int a2, int a3);  /* 0x00693f1c */
@@ -2090,6 +2110,7 @@ int __fastcall sub_6069A5B0(_DWORD *a1);  /* 0x0069a5b0 */
 unsigned int __fastcall sub_6069A76C(unsigned int *a1);  /* 0x0069a76c */
 int __fastcall sub_6069AFA0(int a1, int a2, _DWORD *a3, _DWORD *a4, _DWORD *a5);  /* 0x0069afa0 */
 int __fastcall sub_6069B070(float *a1, float *a2);  /* 0x0069b070 */
+int __fastcall Actor_obujekinoko_build(int a1);  /* 0x0069b198 */
 int __fastcall sub_6069B6F4(float *a1, int a2);  /* 0x0069b6f4 */
 int __fastcall sub_6069B8C4(int a1, int a2, _DWORD *a3, unsigned int a4, int a5, int a6);  /* 0x0069b8c4 */
 int __fastcall sub_6069BB38(_DWORD *a1, int a2, int a3);  /* 0x0069bb38 */
@@ -2097,6 +2118,10 @@ int __fastcall sub_6069BE24(int a1, _DWORD *a2, float *a3);  /* 0x0069be24 */
 int __fastcall sub_6069BF80(int result, _DWORD *a2, float *a3);  /* 0x0069bf80 */
 int __fastcall sub_6069C058(int a1, int a2);  /* 0x0069c058 */
 int __fastcall sub_6069C0C0(int a1, int a2);  /* 0x0069c0c0 */
+int __fastcall Actor_mamemariofor_OBJpipe_build(int a1);  /* 0x0069c220 */
+int __fastcall Actor_mamemariofor_OBJpipe_2_build(int a1);  /* 0x0069c3c4 */
+int __fastcall Actor_mamemariofor_OBJpipe_3_build(int a1);  /* 0x0069c568 */
+int __fastcall Actor_mamemariofor_OBJpipe_4_build(int a1);  /* 0x0069c714 */
 int __fastcall sub_6069D2D0(_DWORD *a1, int a2, int a3, int a4);  /* 0x0069d2d0 */
 int __fastcall sub_6069D354(int a1);  /* 0x0069d354 */
 int __fastcall sub_6069D760(int a1, int a2, _DWORD *a3);  /* 0x0069d760 */
@@ -2114,6 +2139,7 @@ int __fastcall sub_606A5188(int a1);  /* 0x006a5188 */
 int __fastcall sub_606A6130(int a1);  /* 0x006a6130 */
 int __fastcall sub_606A6418(_DWORD *a1);  /* 0x006a6418 */
 int __fastcall sub_606A6464(int a1, int a2, int a3, int a4);  /* 0x006a6464 */
+int __fastcall Actor_neshikutariOBJ_parent_build(int a1);  /* 0x006a73f0 */
 int __fastcall sub_606A7794(int a1, int a2);  /* 0x006a7794 */
 void __fastcall sub_606A7D28(int a1, unsigned int a2, int a3, int a4);  /* 0x006a7d28 */
 int __fastcall sub_606A7E80(int a1, int a2);  /* 0x006a7e80 */
@@ -2124,11 +2150,13 @@ int __fastcall sub_606A8FA4(int a1, int a2);  /* 0x006a8fa4 */
 int __fastcall sub_606A97A0(int a1);  /* 0x006a97a0 */
 int __fastcall sub_606AA628(int a1);  /* 0x006aa628 */
 bool __fastcall sub_606ACDF0(int a1);  /* 0x006acdf0 */
+int __fastcall Actor_parentchild_obuje_child_fort_rock_RDashfor_build(int a1);  /* 0x006acfdc */
 int __fastcall sub_606AD38C(int a1);  /* 0x006ad38c */
 int __fastcall sub_606AD6EC(int a1);  /* 0x006ad6ec */
 int __fastcall sub_606ADA80(int result);  /* 0x006ada80 */
 int __fastcall sub_606AE084(int a1);  /* 0x006ae084 */
 int __fastcall sub_606AE248(int a1, _DWORD *a2, unsigned int a3);  /* 0x006ae248 */
+int __fastcall Actor_child_tree_build(int a1);  /* 0x006ae7d8 */
 int __fastcall sub_606AE7F4(int a1, int a2);  /* 0x006ae7f4 */
 int __fastcall sub_606AEC9C(int a1);  /* 0x006aec9c */
 int __fastcall sub_606AF2F8(int a1);  /* 0x006af2f8 */
@@ -2189,6 +2217,7 @@ int __fastcall sub_606BA1C0(int a1);  /* 0x006ba1c0 */
 int __fastcall sub_606BA3D4(_DWORD *a1);  /* 0x006ba3d4 */
 int __fastcall sub_606BA968(int *a1, int *a2, int a3);  /* 0x006ba968 */
 int __fastcall sub_606BAB1C(int *a1, int *a2, int a3);  /* 0x006bab1c */
+int __fastcall Actor_Player_level_miTag_build(int a1);  /* 0x006bab74 */
 int __fastcall sub_606BAB90(int a1, int a2);  /* 0x006bab90 */
 int __fastcall sub_606BB7B8(int a1);  /* 0x006bb7b8 */
 int __fastcall sub_606BB874(int a1, unsigned int a2, int a3, int a4, int a5, int a6, int a7, int a8);  /* 0x006bb874 */
@@ -2231,6 +2260,8 @@ int __fastcall sub_606C8B5C(int a1);  /* 0x006c8b5c */
 int __fastcall sub_606C8BA0(int a1);  /* 0x006c8ba0 */
 int __fastcall sub_606C8C0C(int a1);  /* 0x006c8c0c */
 int __fastcall sub_606C8E88(int a1);  /* 0x006c8e88 */
+int __fastcall Actor_condition_Flag_with_rotate_control_build(int a1);  /* 0x006c9a5c */
+int __fastcall Actor_condition_Flag_with_rotate_control_2_build(int a1);  /* 0x006c9ae8 */
 int __fastcall sub_606C9B04(int a1, int a2);  /* 0x006c9b04 */
 int __fastcall sub_606CA124(_DWORD *a1, int a2, int a3);  /* 0x006ca124 */
 int __fastcall StoneEye_onCreate(_DWORD *a1);  /* 0x006ca1ec */
@@ -2244,6 +2275,7 @@ int __fastcall sub_606CCAC0(int a1);  /* 0x006ccac0 */
 unsigned int __fastcall sub_606CF204(int *a1, int a2);  /* 0x006cf204 */
 int __fastcall sub_606CFAA4(int a1, int a2);  /* 0x006cfaa4 */
 int __fastcall sub_606CFD50(int a1, float *a2);  /* 0x006cfd50 */
+int __fastcall Actor_mid_faiaba_build(int a1);  /* 0x006d0168 */
 int __fastcall sub_606D0514(int a1);  /* 0x006d0514 */
 int __fastcall sub_606D0708(int a1);  /* 0x006d0708 */
 int __fastcall sub_606D114C(int a1);  /* 0x006d114c */
@@ -2272,6 +2304,7 @@ int __fastcall Seaweed_onDraw(int a1, int a2, int a3, int a4);  /* 0x006d4f58 */
 signed int __fastcall Seaweed_setupModels(int a1);  /* 0x006d4fb8 */
 int __fastcall Seaweed_dtorFree(Actor *a1);  /* 0x006d5540 */
 bool __fastcall sub_606D5768(int a1);  /* 0x006d5768 */
+int __fastcall Actor_ice_buroku_teru_build(int a1);  /* 0x006d5be8 */
 int __fastcall sub_606D7EA4(int a1);  /* 0x006d7ea4 */
 int __fastcall sub_606D8338(_DWORD *a1, _DWORD *a2, int a3);  /* 0x006d8338 */
 int __fastcall sub_606D9058(int result, int a2);  /* 0x006d9058 */
@@ -2341,6 +2374,7 @@ int __fastcall sub_606EDE74(int a1, _BYTE *a2);  /* 0x006ede74 */
 int __fastcall sub_606EDFE4(int a1, _BYTE *a2);  /* 0x006edfe4 */
 bool __fastcall sub_606EEC50(int a1);  /* 0x006eec50 */
 int __fastcall sub_606EEEC4(int a1);  /* 0x006eeec4 */
+int __fastcall Actor_pipe_kishi_build(int a1);  /* 0x006ef2fc */
 int __fastcall sub_606EF7A8(int a1);  /* 0x006ef7a8 */
 int __fastcall sub_606EFFF0(float *a1);  /* 0x006efff0 */
 int __fastcall sub_606F0630(int *a1);  /* 0x006f0630 */
@@ -2579,6 +2613,7 @@ int __fastcall sub_6072FFD0(unsigned __int8 *a1);  /* 0x0072ffd0 */
 int __fastcall sub_607305D0(_DWORD *a1);  /* 0x007305d0 */
 int __fastcall sub_60730680(int a1);  /* 0x00730680 */
 int __fastcall sub_60731290(int a1);  /* 0x00731290 */
+int __fastcall Actor_minigemuManager_build(int a1);  /* 0x00731344 */
 int __fastcall sub_607313A8(int a1, int a2);  /* 0x007313a8 */
 int __fastcall sub_607317FC(int a1);  /* 0x007317fc */
 int __fastcall sub_60732038(int a1);  /* 0x00732038 */
@@ -2596,6 +2631,7 @@ int __fastcall sub_6073AFA4(int a1, int a2);  /* 0x0073afa4 */
 int __fastcall sub_6073B6B0(unsigned __int8 *a1);  /* 0x0073b6b0 */
 signed int __fastcall sub_6073B8E8(int a1);  /* 0x0073b8e8 */
 unsigned int __fastcall sub_6073BA88(int a1);  /* 0x0073ba88 */
+int __fastcall Actor_surotochibiyoshi_build(_DWORD *a1);  /* 0x0073d024 */
 int __fastcall sub_6073D8A8(int a1);  /* 0x0073d8a8 */
 int __fastcall sub_6073DA34(int a1);  /* 0x0073da34 */
 int __fastcall sub_6073DBC0(int a1);  /* 0x0073dbc0 */
@@ -2610,11 +2646,13 @@ int __fastcall sub_60743894(unsigned __int8 *a1);  /* 0x00743894 */
 int __fastcall sub_60743BCC(unsigned __int8 *a1);  /* 0x00743bcc */
 int __fastcall sub_607440CC(_DWORD *a1);  /* 0x007440cc */
 void __fastcall sub_607442CC(_DWORD *a1);  /* 0x007442cc */
+int __fastcall Actor_koinshin_StaffRoll_build(_DWORD *a1);  /* 0x00744900 */
 int __fastcall sub_60745174(int a1);  /* 0x00745174 */
 int __fastcall sub_60745580(float *a1);  /* 0x00745580 */
 int __fastcall sub_60745A24(_DWORD *a1);  /* 0x00745a24 */
 int __fastcall sub_60745C88(int a1, int a2, int a3);  /* 0x00745c88 */
 int __fastcall sub_60745DF4(int a1, int a2, int a3, int a4);  /* 0x00745df4 */
+int __fastcall Actor_arufabetoshin_StaffRoll_build(int *a1);  /* 0x007462b0 */
 int __fastcall sub_607467E0(int a1);  /* 0x007467e0 */
 int __fastcall sub_60746ADC(int a1);  /* 0x00746adc */
 int __fastcall sub_60746E38(int a1, int a2, int a3, int a4, int a5);  /* 0x00746e38 */
@@ -2628,9 +2666,11 @@ int __fastcall sub_60748CB8(int result);  /* 0x00748cb8 */
 int __fastcall sub_60748D78(int a1);  /* 0x00748d78 */
 int __fastcall sub_60748EF4(int a1);  /* 0x00748ef4 */
 int __fastcall sub_6074908C(int a1, float *a2);  /* 0x0074908c */
+int __fastcall Actor_chibiyoshi_StaffRoll_build(_DWORD *a1);  /* 0x007496a4 */
 int __fastcall sub_607498A0(int a1, char a2);  /* 0x007498a0 */
 int __fastcall sub_60749958(int a1);  /* 0x00749958 */
 int __fastcall sub_607499B0(int a1, float *a2);  /* 0x007499b0 */
+int __fastcall Actor_StaffRoll_Manager_build(int a1);  /* 0x0074a900 */
 int __fastcall sub_6074B0D0(int a1, int a2);  /* 0x0074b0d0 */
 int __fastcall sub_6074B2F0(int a1);  /* 0x0074b2f0 */
 int __fastcall sub_6074B6DC(int a1, int a2, float *a3);  /* 0x0074b6dc */
@@ -2641,6 +2681,7 @@ int __fastcall sub_6074C1C8(int a1, int a2, int a3, int a4);  /* 0x0074c1c8 */
 int __fastcall sub_6074C3EC(unsigned int a1);  /* 0x0074c3ec */
 int __fastcall sub_6074C538(int a1, int a2, int *a3, int a4);  /* 0x0074c538 */
 int __fastcall sub_6074C694(_DWORD *a1, _DWORD *a2);  /* 0x0074c694 */
+int __fastcall Actor_toten_StaffRoll_build(int a1);  /* 0x0074d4c0 */
 int __fastcall sub_6074DF4C(int a1, float *a2);  /* 0x0074df4c */
 int __fastcall sub_6074E7F8(int a1);  /* 0x0074e7f8 */
 int __fastcall sub_6074E888(int a1, int a2, int a3);  /* 0x0074e888 */
@@ -3273,12 +3314,14 @@ int __fastcall sub_6009EC78(int a1);  /* 0x0009ec78 */
 int __fastcall sub_6009EF28(int a1);  /* 0x0009ef28 */
 int __fastcall sub_6009F0BC(int result);  /* 0x0009f0bc */
 bool __fastcall sub_600A1528(int a1);  /* 0x000a1528 */
+int __fastcall Actor_Iggy_room_build(int a1);  /* 0x000a38c8 */
 int __fastcall sub_600A3C08(int a1);  /* 0x000a3c08 */
 int __fastcall sub_600A3D1C(int a1);  /* 0x000a3d1c */
 int __fastcall sub_600A3FD4(int a1);  /* 0x000a3fd4 */
 int __fastcall sub_600A4024(int a1);  /* 0x000a4024 */
 int __fastcall SolidOnTopColliderWrapper_dtorFree(sead::IDisposer *a1);  /* 0x000a462c */
 bool __fastcall SolidOnTopColliderWrapper_checkRTTI(int a1, int a2);  /* 0x000a463c */
+int __fastcall Actor_Kamek_2_build(int a1);  /* 0x000a48ec */
 int __fastcall sub_600A6A90(int a1);  /* 0x000a6a90 */
 int __fastcall sub_600A724C(int a1);  /* 0x000a724c */
 int __fastcall sub_600A7890(int a1);  /* 0x000a7890 */

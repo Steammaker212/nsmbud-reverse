@@ -7,6 +7,12 @@ low coverage is understandable rather than mysterious.
 
 ## What works
 
+### Developer debug tags -- 694 actor constructors
+
+The single biggest win. Every actor registration passes a {0x00BC0000, char* name} record
+whose name is the developers' own Japanese debug tag. Decoding them and transliterating to
+ASCII named 694 constructors. See [ACTOR_NAMES.md](ACTOR_NAMES.md).
+
 ### Symbols from the existing symbol file — 3,170 names
 
 `sweetdx/symbols/nsmbudx.sym` already had human-curated names from earlier work. These are
@@ -62,7 +68,7 @@ constructor → profile id, not constructor → name.
 
 ### Naming constructors after their registration function's strings — reverted
 
-Tried and undone. Registration functions contain long lists of *animation state* names:
+Tried and undone, then done correctly by a different route (see ACTOR_NAMES.md). Registration functions do contain long lists of *animation state* names:
 
 ```
 fly_throw_ed_wait, walk_ed_AL_d, swim_down_st, demo_battleA_wait

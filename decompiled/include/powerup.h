@@ -153,6 +153,7 @@ int __fastcall sub_6046BB70(Actor *a1);  /* 0x0046bb70 */
 int __fastcall sub_6046C3AC(int a1);  /* 0x0046c3ac */
 int __fastcall sub_6046DD80(int a1);  /* 0x0046dd80 */
 int __fastcall sub_6046DF74(int a1);  /* 0x0046df74 */
+int __fastcall Actor_resuta_build(int a1);  /* 0x0046e490 */
 int __fastcall sub_6046E5D4(int (__fastcall **a1)(_DWORD));  /* 0x0046e5d4 */
 bool __fastcall sub_6046E898(int a1);  /* 0x0046e898 */
 int __fastcall sub_6046EFC4(int a1);  /* 0x0046efc4 */

@@ -1,0 +1,5427 @@
+[
+ {
+  "ctor_rva": 167868,
+  "reg_fn": 164620,
+  "profile_id": "MEMORY[0xAF383C]",
+  "actor_id": "4",
+  "internal_name": "ボスK.K."
+ },
+ {
+  "ctor_rva": 206296,
+  "reg_fn": 207116,
+  "profile_id": "MEMORY[0xAF37EC]",
+  "actor_id": "0",
+  "internal_name": "ボスK.K.デモ管理タグ"
+ },
+ {
+  "ctor_rva": 207360,
+  "reg_fn": 208364,
+  "profile_id": "MEMORY[0xAF3874]",
+  "actor_id": "0",
+  "internal_name": "デモ用カメック"
+ },
+ {
+  "ctor_rva": 208504,
+  "reg_fn": 211132,
+  "profile_id": "MEMORY[0xAF3878]",
+  "actor_id": "0",
+  "internal_name": "デモ用K.K."
+ },
+ {
+  "ctor_rva": 211576,
+  "reg_fn": 215276,
+  "profile_id": "MEMORY[0xAF3840]",
+  "actor_id": "0",
+  "internal_name": "ボスK.K.の雷"
+ },
+ {
+  "ctor_rva": 215892,
+  "reg_fn": 237868,
+  "profile_id": "MEMORY[0xAF3A08]",
+  "actor_id": "0",
+  "internal_name": "戦闘後デモボクシングクッパJr."
+ },
+ {
+  "ctor_rva": 239500,
+  "reg_fn": 313828,
+  "profile_id": "MEMORY[0xAF32F4]",
+  "actor_id": "0",
+  "internal_name": "戦闘後デモボクシングクッパJr.のクラウン"
+ },
+ {
+  "ctor_rva": 316128,
+  "reg_fn": 326512,
+  "profile_id": "MEMORY[0xAF37C4]",
+  "actor_id": "0",
+  "internal_name": "ブンブン（Ｗ１砦）"
+ },
+ {
+  "ctor_rva": 343988,
+  "reg_fn": 345380,
+  "profile_id": "MEMORY[0xAF37DC]",
+  "actor_id": "0",
+  "internal_name": "ブンブンデモ管理タグ"
+ },
+ {
+  "ctor_rva": 345648,
+  "reg_fn": 349200,
+  "profile_id": "MEMORY[0xAF386C]",
+  "actor_id": "0",
+  "internal_name": "デモ用カメック"
+ },
+ {
+  "ctor_rva": 349704,
+  "reg_fn": 357124,
+  "profile_id": "MEMORY[0xAF37C8]",
+  "actor_id": "0",
+  "internal_name": "ブンブン（Ｗ２砦）"
+ },
+ {
+  "ctor_rva": 357848,
+  "reg_fn": 363608,
+  "profile_id": "MEMORY[0xAF37CC]",
+  "actor_id": "0",
+  "internal_name": "ブンブン（Ｗ３砦）"
+ },
+ {
+  "ctor_rva": 364380,
+  "reg_fn": 367012,
+  "profile_id": "MEMORY[0xAF37D0]",
+  "actor_id": "0",
+  "internal_name": "ブンブン（Ｗ４砦）"
+ },
+ {
+  "ctor_rva": 367456,
+  "reg_fn": 374424,
+  "profile_id": "MEMORY[0xAF37D4]",
+  "actor_id": "0",
+  "internal_name": "ブンブン（Ｗ５砦）"
+ },
+ {
+  "ctor_rva": 375156,
+  "reg_fn": 395316,
+  "profile_id": "MEMORY[0xAF37D8]",
+  "actor_id": "0",
+  "internal_name": "ブンブン（Ｗ６砦）"
+ },
+ {
+  "ctor_rva": 396968,
+  "reg_fn": 399884,
+  "profile_id": "MEMORY[0xAF3868]",
+  "actor_id": "0",
+  "internal_name": "初回クッパデモ用クッパJr"
+ },
+ {
+  "ctor_rva": 400328,
+  "reg_fn": 406704,
+  "profile_id": "MEMORY[0xAF3864]",
+  "actor_id": "0",
+  "internal_name": "初回クッパデモ用クッパJr.クラウン"
+ },
+ {
+  "ctor_rva": 407280,
+  "reg_fn": 411032,
+  "profile_id": "MEMORY[0xAF3888]",
+  "actor_id": "0",
+  "internal_name": "最終ボム兵"
+ },
+ {
+  "ctor_rva": 411376,
+  "reg_fn": 417676,
+  "profile_id": "MEMORY[0xAF38B0]",
+  "actor_id": "0",
+  "internal_name": "遠景配置用ピーチ"
+ },
+ {
+  "ctor_rva": 418360,
+  "reg_fn": 420996,
+  "profile_id": "MEMORY[0xAF38B4]",
+  "actor_id": "0",
+  "internal_name": "遠景配置用シャッター"
+ },
+ {
+  "ctor_rva": 421492,
+  "reg_fn": 498100,
+  "profile_id": "MEMORY[0xAF3300]",
+  "actor_id": "0",
+  "internal_name": "最終クッパ"
+ },
+ {
+  "ctor_rva": 501556,
+  "reg_fn": 515064,
+  "profile_id": "MEMORY[0xAF37F8]",
+  "actor_id": "0",
+  "internal_name": "最終クッパデモ管理タグ"
+ },
+ {
+  "ctor_rva": 518644,
+  "reg_fn": 526160,
+  "profile_id": "MEMORY[0xAF387C]",
+  "actor_id": "18",
+  "internal_name": "最終クッパの炎"
+ },
+ {
+  "ctor_rva": 531232,
+  "reg_fn": 527000,
+  "profile_id": "MEMORY[0xAF3880]",
+  "actor_id": "0",
+  "internal_name": "最終クッパJr"
+ },
+ {
+  "ctor_rva": 577164,
+  "reg_fn": 614188,
+  "profile_id": "MEMORY[0xAF32FC]",
+  "actor_id": "4",
+  "internal_name": "最終クッパJr.クラウン"
+ },
+ {
+  "ctor_rva": 617012,
+  "reg_fn": 620932,
+  "profile_id": "MEMORY[0xAF3884]",
+  "actor_id": "18",
+  "internal_name": "最終クッパJr.の炎"
+ },
+ {
+  "ctor_rva": 621148,
+  "reg_fn": 661948,
+  "profile_id": "MEMORY[0xAF3828]",
+  "actor_id": "0",
+  "internal_name": "イギー"
+ },
+ {
+  "ctor_rva": 665808,
+  "reg_fn": 669596,
+  "profile_id": "MEMORY[0xAF382C]",
+  "actor_id": "18",
+  "internal_name": "イギーの魔法"
+ },
+ {
+  "ctor_rva": 669896,
+  "reg_fn": 673828,
+  "profile_id": "MEMORY[0xAF3170]",
+  "actor_id": "0",
+  "internal_name": "イギー部屋"
+ },
+ {
+  "ctor_rva": 673964,
+  "reg_fn": 703424,
+  "profile_id": "MEMORY[0xAF3848]",
+  "actor_id": "0",
+  "internal_name": "カメック"
+ },
+ {
+  "ctor_rva": 674028,
+  "reg_fn": 703424,
+  "profile_id": "MEMORY[0xAF384C]",
+  "actor_id": "0",
+  "internal_name": "カメック"
+ },
+ {
+  "ctor_rva": 674116,
+  "reg_fn": 703424,
+  "profile_id": "MEMORY[0xAF3844]",
+  "actor_id": "0",
+  "internal_name": "カメック"
+ },
+ {
+  "ctor_rva": 706660,
+  "reg_fn": 707640,
+  "profile_id": "MEMORY[0xAF37E8]",
+  "actor_id": "0",
+  "internal_name": "カメックデモ管理タグ"
+ },
+ {
+  "ctor_rva": 707792,
+  "reg_fn": 721388,
+  "profile_id": "MEMORY[0xAF32E8]",
+  "actor_id": "32",
+  "internal_name": "カメックのツララ"
+ },
+ {
+  "ctor_rva": 722044,
+  "reg_fn": 725240,
+  "profile_id": "MEMORY[0xAF3850]",
+  "actor_id": "18",
+  "internal_name": "カメックの魔法"
+ },
+ {
+  "ctor_rva": 755216,
+  "reg_fn": 757588,
+  "profile_id": "MEMORY[0xAF37E0]",
+  "actor_id": "0",
+  "internal_name": "コクッパデモ管理タグ"
+ },
+ {
+  "ctor_rva": 757928,
+  "reg_fn": 766216,
+  "profile_id": "MEMORY[0xAF3804]",
+  "actor_id": "18",
+  "internal_name": "コクッパの炎"
+ },
+ {
+  "ctor_rva": 770544,
+  "reg_fn": 771912,
+  "profile_id": "MEMORY[0xAF389C]",
+  "actor_id": "0",
+  "internal_name": "イギー飛行船"
+ },
+ {
+  "ctor_rva": 772168,
+  "reg_fn": 773384,
+  "profile_id": "MEMORY[0xAF3894]",
+  "actor_id": "0",
+  "internal_name": "ラリー飛行船"
+ },
+ {
+  "ctor_rva": 773640,
+  "reg_fn": 774844,
+  "profile_id": "MEMORY[0xAF388C]",
+  "actor_id": "0",
+  "internal_name": "レミー飛行船"
+ },
+ {
+  "ctor_rva": 775100,
+  "reg_fn": 776316,
+  "profile_id": "MEMORY[0xAF38A4]",
+  "actor_id": "0",
+  "internal_name": "ルドウィッグ飛行船"
+ },
+ {
+  "ctor_rva": 776572,
+  "reg_fn": 777788,
+  "profile_id": "MEMORY[0xAF3890]",
+  "actor_id": "0",
+  "internal_name": "モートン飛行船"
+ },
+ {
+  "ctor_rva": 778044,
+  "reg_fn": 779260,
+  "profile_id": "MEMORY[0xAF38A0]",
+  "actor_id": "0",
+  "internal_name": "ロイ飛行船"
+ },
+ {
+  "ctor_rva": 779516,
+  "reg_fn": 788120,
+  "profile_id": "MEMORY[0xAF3140]",
+  "actor_id": "2",
+  "internal_name": "ボス大砲（コクッパ飛行船乗り込み用）"
+ },
+ {
+  "ctor_rva": 789084,
+  "reg_fn": 790300,
+  "profile_id": "MEMORY[0xAF3898]",
+  "actor_id": "0",
+  "internal_name": "ウェンディ飛行船"
+ },
+ {
+  "ctor_rva": 790556,
+  "reg_fn": 800128,
+  "profile_id": "MEMORY[0xAF3858]",
+  "actor_id": "0",
+  "internal_name": "クッパ"
+ },
+ {
+  "ctor_rva": 817372,
+  "reg_fn": 830972,
+  "profile_id": "MEMORY[0xAF37F4]",
+  "actor_id": "0",
+  "internal_name": "城クッパデモ管理タグ"
+ },
+ {
+  "ctor_rva": 832324,
+  "reg_fn": 834572,
+  "profile_id": "MEMORY[0xAF3870]",
+  "actor_id": "0",
+  "internal_name": "初回クッパデモ用カメック"
+ },
+ {
+  "ctor_rva": 835476,
+  "reg_fn": 838644,
+  "profile_id": "MEMORY[0xAF3860]",
+  "actor_id": "162",
+  "internal_name": "クッパ炎"
+ },
+ {
+  "ctor_rva": 839012,
+  "reg_fn": 844028,
+  "profile_id": "MEMORY[0xAF39F8]",
+  "actor_id": "2",
+  "internal_name": "クッパJr.の玉"
+ },
+ {
+  "ctor_rva": 861452,
+  "reg_fn": 872328,
+  "profile_id": "MEMORY[0xAF37E4]",
+  "actor_id": "0",
+  "internal_name": "ジュニアデモ管理タグ"
+ },
+ {
+  "ctor_rva": 872764,
+  "reg_fn": 876508,
+  "profile_id": "MEMORY[0xAF39F4]",
+  "actor_id": "2",
+  "internal_name": "クッパJr.の炎"
+ },
+ {
+  "ctor_rva": 876888,
+  "reg_fn": 879852,
+  "profile_id": "MEMORY[0xAF314C]",
+  "actor_id": "2",
+  "internal_name": "クッパシャッター"
+ },
+ {
+  "ctor_rva": 882628,
+  "reg_fn": 897604,
+  "profile_id": "MEMORY[0xAF3800]",
+  "actor_id": "0",
+  "internal_name": "ラリー"
+ },
+ {
+  "ctor_rva": 900572,
+  "reg_fn": 920876,
+  "profile_id": "MEMORY[0xAF3808]",
+  "actor_id": "0",
+  "internal_name": "レミー"
+ },
+ {
+  "ctor_rva": 923456,
+  "reg_fn": 927620,
+  "profile_id": "MEMORY[0xAF32A4]",
+  "actor_id": "2",
+  "internal_name": "レミーのボール"
+ },
+ {
+  "ctor_rva": 932828,
+  "reg_fn": 941752,
+  "profile_id": "MEMORY[0xAF32A8]",
+  "actor_id": "2",
+  "internal_name": "レミーの爆弾"
+ },
+ {
+  "ctor_rva": 947464,
+  "reg_fn": 975668,
+  "profile_id": "MEMORY[0xAF3820]",
+  "actor_id": "0",
+  "internal_name": "ルドウィッグ分身"
+ },
+ {
+  "ctor_rva": 947940,
+  "reg_fn": 975668,
+  "profile_id": "v1",
+  "actor_id": "0",
+  "internal_name": "ルドウィッグ分身"
+ },
+ {
+  "ctor_rva": 978636,
+  "reg_fn": 990516,
+  "profile_id": "MEMORY[0xAF380C]",
+  "actor_id": "0",
+  "internal_name": "モートン"
+ },
+ {
+  "ctor_rva": 1001356,
+  "reg_fn": 1013660,
+  "profile_id": "MEMORY[0xAF3810]",
+  "actor_id": "18",
+  "internal_name": "巨大サンボのパーツ"
+ },
+ {
+  "ctor_rva": 1001508,
+  "reg_fn": 1013660,
+  "profile_id": "v1",
+  "actor_id": "18",
+  "internal_name": "巨大サンボのパーツ"
+ },
+ {
+  "ctor_rva": 1015208,
+  "reg_fn": 1019564,
+  "profile_id": "MEMORY[0xAF38A8]",
+  "actor_id": "0",
+  "internal_name": "ピーチ"
+ },
+ {
+  "ctor_rva": 1020064,
+  "reg_fn": 1028944,
+  "profile_id": "MEMORY[0xAF37FC]",
+  "actor_id": "0",
+  "internal_name": "ピーチデモ管理タグ"
+ },
+ {
+  "ctor_rva": 1029756,
+  "reg_fn": 1029216,
+  "profile_id": "MEMORY[0xAF3854]",
+  "actor_id": "0",
+  "internal_name": "W8道中クッパJr"
+ },
+ {
+  "ctor_rva": 1033992,
+  "reg_fn": 1060784,
+  "profile_id": "MEMORY[0xAF32F0]",
+  "actor_id": "4",
+  "internal_name": "W8道中クッパJr.クラウン"
+ },
+ {
+  "ctor_rva": 1063036,
+  "reg_fn": 1063896,
+  "profile_id": "MEMORY[0xAF37F0]",
+  "actor_id": "0",
+  "internal_name": "W8道中クッパJr.管理タグ"
+ },
+ {
+  "ctor_rva": 1064168,
+  "reg_fn": 1070252,
+  "profile_id": "MEMORY[0xAF3160]",
+  "actor_id": "2",
+  "internal_name": "W8道中クッパJr.用半当たり左右移動リフト"
+ },
+ {
+  "ctor_rva": 1072736,
+  "reg_fn": 1077268,
+  "profile_id": "MEMORY[0xAF3164]",
+  "actor_id": "2",
+  "internal_name": "W8道中クッパJr.用半アタリ移動リフト（親子オブジェ対応）"
+ },
+ {
+  "ctor_rva": 1077900,
+  "reg_fn": 1083828,
+  "profile_id": "MEMORY[0xAF315C]",
+  "actor_id": "2",
+  "internal_name": "W8道中クッパJr.用半当たり上下移動リフト"
+ },
+ {
+  "ctor_rva": 1084548,
+  "reg_fn": 1110032,
+  "profile_id": "MEMORY[0xAF3834]",
+  "actor_id": "0",
+  "internal_name": "ロイ"
+ },
+ {
+  "ctor_rva": 1113284,
+  "reg_fn": 1116032,
+  "profile_id": "MEMORY[0xAF3838]",
+  "actor_id": "2",
+  "internal_name": "ロイ用湧き出しリフト"
+ },
+ {
+  "ctor_rva": 1116164,
+  "reg_fn": 1120992,
+  "profile_id": "MEMORY[0xAF3168]",
+  "actor_id": "2",
+  "internal_name": "ロイ用湧き出しリフト・ステップ"
+ },
+ {
+  "ctor_rva": 1121312,
+  "reg_fn": 1123504,
+  "profile_id": "MEMORY[0xAF385C]",
+  "actor_id": "0",
+  "internal_name": "クッパ炎（湧き出し）"
+ },
+ {
+  "ctor_rva": 1123652,
+  "reg_fn": 1142436,
+  "profile_id": "MEMORY[0xAF39FC]",
+  "actor_id": "0",
+  "internal_name": "水中クッパJr"
+ },
+ {
+  "ctor_rva": 1143648,
+  "reg_fn": 1195892,
+  "profile_id": "MEMORY[0xAF3A00]",
+  "actor_id": "0",
+  "internal_name": "水中クッパJrのクラウン"
+ },
+ {
+  "ctor_rva": 1197504,
+  "reg_fn": 1198116,
+  "profile_id": "MEMORY[0xAF3A04]",
+  "actor_id": "0",
+  "internal_name": "水中クッパJr.退避位置"
+ },
+ {
+  "ctor_rva": 1198288,
+  "reg_fn": 1222360,
+  "profile_id": "MEMORY[0xAF3818]",
+  "actor_id": "0",
+  "internal_name": "ウェンディ"
+ },
+ {
+  "ctor_rva": 1225324,
+  "reg_fn": 1227828,
+  "profile_id": "MEMORY[0xAF316C]",
+  "actor_id": "0",
+  "internal_name": "ウェンディの床"
+ },
+ {
+  "ctor_rva": 1227964,
+  "reg_fn": 1234500,
+  "profile_id": "MEMORY[0xAF32EC]",
+  "actor_id": "16",
+  "internal_name": "ウェンディのツララ"
+ },
+ {
+  "ctor_rva": 1235120,
+  "reg_fn": 1241196,
+  "profile_id": "MEMORY[0xAF381C]",
+  "actor_id": "2",
+  "internal_name": "ウェンディのリング"
+ },
+ {
+  "ctor_rva": 1241576,
+  "reg_fn": 1252176,
+  "profile_id": "MEMORY[0xAF3830]",
+  "actor_id": "0",
+  "internal_name": "ウーガン"
+ },
+ {
+  "ctor_rva": 1253092,
+  "reg_fn": 1262008,
+  "profile_id": "MEMORY[0xAF390C]",
+  "actor_id": "34",
+  "internal_name": "ブーメラン"
+ },
+ {
+  "ctor_rva": 1274700,
+  "reg_fn": 1277304,
+  "profile_id": "MEMORY[0xAF3914]",
+  "actor_id": "34",
+  "internal_name": "ブロス用ファイヤーボール"
+ },
+ {
+  "ctor_rva": 1277644,
+  "reg_fn": 1282172,
+  "profile_id": "MEMORY[0xAF35E0]",
+  "actor_id": "2",
+  "internal_name": "ケロンパの炎"
+ },
+ {
+  "ctor_rva": 1282664,
+  "reg_fn": 1283924,
+  "profile_id": "MEMORY[0xAF35E4]",
+  "actor_id": "34",
+  "internal_name": "ケロンパの炎(RDash用)"
+ },
+ {
+  "ctor_rva": 1284376,
+  "reg_fn": 1287592,
+  "profile_id": "MEMORY[0xAF349C]",
+  "actor_id": "162",
+  "internal_name": "ファイヤーボールパックン"
+ },
+ {
+  "ctor_rva": 1288100,
+  "reg_fn": 1292616,
+  "profile_id": "MEMORY[0xAF3498]",
+  "actor_id": "130",
+  "internal_name": "プレイヤー用ファイヤーボール"
+ },
+ {
+  "ctor_rva": 1292884,
+  "reg_fn": 1296916,
+  "profile_id": "MEMORY[0xAF372C]",
+  "actor_id": "160",
+  "internal_name": "ガボンの鉄球"
+ },
+ {
+  "ctor_rva": 1306668,
+  "reg_fn": 1312828,
+  "profile_id": "MEMORY[0xAF3904]",
+  "actor_id": "18",
+  "internal_name": "ハンマー"
+ },
+ {
+  "ctor_rva": 1313300,
+  "reg_fn": 1318684,
+  "profile_id": "MEMORY[0xAF3490]",
+  "actor_id": "130",
+  "internal_name": "アイスボール"
+ },
+ {
+  "ctor_rva": 1322868,
+  "reg_fn": 1325044,
+  "profile_id": "MEMORY[0xAF391C]",
+  "actor_id": "34",
+  "internal_name": "ブロス用アイスボール"
+ },
+ {
+  "ctor_rva": 1325360,
+  "reg_fn": 1328548,
+  "profile_id": "MEMORY[0xAF3494]",
+  "actor_id": "162",
+  "internal_name": "パックン用アイスボール"
+ },
+ {
+  "ctor_rva": 1329956,
+  "reg_fn": 1334148,
+  "profile_id": "MEMORY[0xAF3924]",
+  "actor_id": "162",
+  "internal_name": "メガハンマー"
+ },
+ {
+  "ctor_rva": 1334588,
+  "reg_fn": 1337068,
+  "profile_id": "MEMORY[0xAF3738]",
+  "actor_id": "160",
+  "internal_name": "ロックガボンの岩"
+ },
+ {
+  "ctor_rva": 1337552,
+  "reg_fn": 1346976,
+  "profile_id": "MEMORY[0xAF3740]",
+  "actor_id": "160",
+  "internal_name": "セイちゃんの雪玉"
+ },
+ {
+  "ctor_rva": 1347500,
+  "reg_fn": 1351832,
+  "profile_id": "MEMORY[0xAF36D0]",
+  "actor_id": "34",
+  "internal_name": "スパナ"
+ },
+ {
+  "ctor_rva": 1488468,
+  "reg_fn": 1509332,
+  "profile_id": "MEMORY[0xAF3A90]",
+  "actor_id": "0",
+  "internal_name": "コースセレクトカメラ"
+ },
+ {
+  "ctor_rva": 1521632,
+  "reg_fn": 1526480,
+  "profile_id": "MEMORY[0xAF3A94]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectお城"
+ },
+ {
+  "ctor_rva": 1526640,
+  "reg_fn": 1534572,
+  "profile_id": "MEMORY[0xAF3B0C]",
+  "actor_id": "0",
+  "internal_name": "コースセレクトのチョロボン"
+ },
+ {
+  "ctor_rva": 1542788,
+  "reg_fn": 1543056,
+  "profile_id": "MEMORY[0xAF3AB0]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectコースポイント"
+ },
+ {
+  "ctor_rva": 1593880,
+  "reg_fn": 1596360,
+  "profile_id": "MEMORY[0xAF3B40]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectでかウニラ"
+ },
+ {
+  "ctor_rva": 1602108,
+  "reg_fn": 1625496,
+  "profile_id": "MEMORY[0xAF3B60]",
+  "actor_id": "0",
+  "internal_name": "イベントアシスタント"
+ },
+ {
+  "ctor_rva": 1646036,
+  "reg_fn": 1648992,
+  "profile_id": "MEMORY[0xAF3B18]",
+  "actor_id": "0",
+  "internal_name": "ピーチ城の旗"
+ },
+ {
+  "ctor_rva": 1649152,
+  "reg_fn": 1649224,
+  "profile_id": "MEMORY[0xAF3ABC]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectお化け屋敷"
+ },
+ {
+  "ctor_rva": 1652252,
+  "reg_fn": 1653372,
+  "profile_id": "MEMORY[0xAF3A9C]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect１Upキノコハウス"
+ },
+ {
+  "ctor_rva": 1654936,
+  "reg_fn": 1657956,
+  "profile_id": "MEMORY[0xAF3AA0]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectシャッフルキノコハウス"
+ },
+ {
+  "ctor_rva": 1658404,
+  "reg_fn": 1659372,
+  "profile_id": "MEMORY[0xAF3AA4]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectスロットキノコハウス"
+ },
+ {
+  "ctor_rva": 1660708,
+  "reg_fn": 1659540,
+  "profile_id": "MEMORY[0xAF3B50]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectクッパJr"
+ },
+ {
+  "ctor_rva": 1686388,
+  "reg_fn": 1685764,
+  "profile_id": "MEMORY[0xAF3B4C]",
+  "actor_id": "0",
+  "internal_name": "CS骨コースター"
+ },
+ {
+  "ctor_rva": 1724296,
+  "reg_fn": 1726264,
+  "profile_id": "MEMORY[0xAF3B28]",
+  "actor_id": "0",
+  "internal_name": "コースセレクトMiiバルーン"
+ },
+ {
+  "ctor_rva": 1727820,
+  "reg_fn": 1733240,
+  "profile_id": "MEMORY[0xAF3B1C]",
+  "actor_id": "0",
+  "internal_name": "CSムササビ"
+ },
+ {
+  "ctor_rva": 1734392,
+  "reg_fn": 1734740,
+  "profile_id": "MEMORY[0xAF3AF8]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectオープニングカメック"
+ },
+ {
+  "ctor_rva": 1742560,
+  "reg_fn": 1741548,
+  "profile_id": "MEMORY[0xAF3B00]",
+  "actor_id": "0",
+  "internal_name": "CSパックン"
+ },
+ {
+  "ctor_rva": 1746632,
+  "reg_fn": 1748108,
+  "profile_id": "MEMORY[0xAF3B38]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectでかパックン"
+ },
+ {
+  "ctor_rva": 1750448,
+  "reg_fn": 1749928,
+  "profile_id": "MEMORY[0xAF3B54]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectピーチ姫"
+ },
+ {
+  "ctor_rva": 1754072,
+  "reg_fn": 1756516,
+  "profile_id": "MEMORY[0xAF3AA8]",
+  "actor_id": "0",
+  "internal_name": "ピーチ城（１階扉）"
+ },
+ {
+  "ctor_rva": 1756676,
+  "reg_fn": 1759196,
+  "profile_id": "MEMORY[0xAF3AAC]",
+  "actor_id": "0",
+  "internal_name": "ピーチ城（２階扉）"
+ },
+ {
+  "ctor_rva": 1760816,
+  "reg_fn": 1759360,
+  "profile_id": "MEMORY[0xAF3B2C]",
+  "actor_id": "0",
+  "internal_name": "CSペンタロー"
+ },
+ {
+  "ctor_rva": 1775280,
+  "reg_fn": 1792780,
+  "profile_id": "MEMORY[0xAF3A84]",
+  "actor_id": "0",
+  "internal_name": "コースセレクトプレイヤー"
+ },
+ {
+  "ctor_rva": 1793980,
+  "reg_fn": 1823996,
+  "profile_id": "MEMORY[0xAF3A88]",
+  "actor_id": "0",
+  "internal_name": "コースセレクトのちびヨッシー"
+ },
+ {
+  "ctor_rva": 1947844,
+  "reg_fn": 1965192,
+  "profile_id": "MEMORY[0xAF3B04]",
+  "actor_id": "0",
+  "internal_name": "説明キノピオ"
+ },
+ {
+  "ctor_rva": 2010880,
+  "reg_fn": 2014232,
+  "profile_id": "MEMORY[0xAF3B3C]",
+  "actor_id": "0",
+  "internal_name": "CSシャドウ君アイコン"
+ },
+ {
+  "ctor_rva": 2016280,
+  "reg_fn": 2014400,
+  "profile_id": "MEMORY[0xAF3B48]",
+  "actor_id": "0",
+  "internal_name": "説明シャドウくん"
+ },
+ {
+  "ctor_rva": 2043768,
+  "reg_fn": 2045940,
+  "profile_id": "MEMORY[0xAF3AE4]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect壊れた飛行船クッパJr"
+ },
+ {
+  "ctor_rva": 2046872,
+  "reg_fn": 2046472,
+  "profile_id": "MEMORY[0xAF3AD4]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect飛行船イギー"
+ },
+ {
+  "ctor_rva": 2049612,
+  "reg_fn": 2047756,
+  "profile_id": "MEMORY[0xAF3AE0]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect飛行船クッパJr"
+ },
+ {
+  "ctor_rva": 2066456,
+  "reg_fn": 2066056,
+  "profile_id": "MEMORY[0xAF3ACC]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect飛行船ラリー"
+ },
+ {
+  "ctor_rva": 2068156,
+  "reg_fn": 2067344,
+  "profile_id": "MEMORY[0xAF3AC4]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect飛行船レミー"
+ },
+ {
+  "ctor_rva": 2071148,
+  "reg_fn": 2070732,
+  "profile_id": "MEMORY[0xAF3ADC]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect飛行船ルドウィッグ"
+ },
+ {
+  "ctor_rva": 2074248,
+  "reg_fn": 2073868,
+  "profile_id": "MEMORY[0xAF3AC8]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect飛行船モートン"
+ },
+ {
+  "ctor_rva": 2075512,
+  "reg_fn": 2075132,
+  "profile_id": "MEMORY[0xAF3AD8]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect飛行船ロイ"
+ },
+ {
+  "ctor_rva": 2076744,
+  "reg_fn": 2076384,
+  "profile_id": "MEMORY[0xAF3AD0]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect飛行船ウェンディ"
+ },
+ {
+  "ctor_rva": 2077620,
+  "reg_fn": 2080148,
+  "profile_id": "MEMORY[0xAF3B5C]",
+  "actor_id": "0",
+  "internal_name": "CSW9スターゲート"
+ },
+ {
+  "ctor_rva": 2081176,
+  "reg_fn": 2082908,
+  "profile_id": "MEMORY[0xAF3AE8]",
+  "actor_id": "0",
+  "internal_name": "白旗"
+ },
+ {
+  "ctor_rva": 2083096,
+  "reg_fn": 2084676,
+  "profile_id": "MEMORY[0xAF3AEC]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectスィッチA（青）"
+ },
+ {
+  "ctor_rva": 2084836,
+  "reg_fn": 2086416,
+  "profile_id": "MEMORY[0xAF3AF0]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectスィッチB（赤）"
+ },
+ {
+  "ctor_rva": 2097680,
+  "reg_fn": 2098844,
+  "profile_id": "MEMORY[0xAF3AF4]",
+  "actor_id": "0",
+  "internal_name": "CourseSelectテレサ"
+ },
+ {
+  "ctor_rva": 2104500,
+  "reg_fn": 2111724,
+  "profile_id": "MEMORY[0xAF3B08]",
+  "actor_id": "0",
+  "internal_name": "CS飛びプク"
+ },
+ {
+  "ctor_rva": 2115320,
+  "reg_fn": 2116888,
+  "profile_id": "MEMORY[0xAF3B44]",
+  "actor_id": "0",
+  "internal_name": "CSお墓"
+ },
+ {
+  "ctor_rva": 2117356,
+  "reg_fn": 2121096,
+  "profile_id": "MEMORY[0xAF3A98]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect砦"
+ },
+ {
+  "ctor_rva": 2121256,
+  "reg_fn": 2121532,
+  "profile_id": "MEMORY[0xAF3AFC]",
+  "actor_id": "0",
+  "internal_name": "CourseSelect砦ボス"
+ },
+ {
+  "ctor_rva": 2130796,
+  "reg_fn": 2133960,
+  "profile_id": "MEMORY[0xAF3B58]",
+  "actor_id": "0",
+  "internal_name": "CSW1のアイテム"
+ },
+ {
+  "ctor_rva": 2134696,
+  "reg_fn": 2140308,
+  "profile_id": "MEMORY[0xAF3AC0]",
+  "actor_id": "0",
+  "internal_name": "W2ハンマーブロス"
+ },
+ {
+  "ctor_rva": 2142376,
+  "reg_fn": 2147744,
+  "profile_id": "MEMORY[0xAF3B34]",
+  "actor_id": "0",
+  "internal_name": "CSW2クリボー"
+ },
+ {
+  "ctor_rva": 2149904,
+  "reg_fn": 2148784,
+  "profile_id": "MEMORY[0xAF3B30]",
+  "actor_id": "0",
+  "internal_name": "CSW4のアイテム"
+ },
+ {
+  "ctor_rva": 2155372,
+  "reg_fn": 2156840,
+  "profile_id": "MEMORY[0xAF3B14]",
+  "actor_id": "0",
+  "internal_name": "CSW5テレサ"
+ },
+ {
+  "ctor_rva": 2167096,
+  "reg_fn": 2168912,
+  "profile_id": "MEMORY[0xAF3B24]",
+  "actor_id": "0",
+  "internal_name": "CSW7の虹の橋"
+ },
+ {
+  "ctor_rva": 2176552,
+  "reg_fn": 2184600,
+  "profile_id": "MEMORY[0xAF3B10]",
+  "actor_id": "0",
+  "internal_name": "コースセレクトW7のアイテム"
+ },
+ {
+  "ctor_rva": 2186060,
+  "reg_fn": 2189644,
+  "profile_id": "MEMORY[0xAF3AB8]",
+  "actor_id": "0",
+  "internal_name": "コースセレクトのW8の雲"
+ },
+ {
+  "ctor_rva": 2190080,
+  "reg_fn": 2191476,
+  "profile_id": "MEMORY[0xAF3AB4]",
+  "actor_id": "0",
+  "internal_name": "CSワールド移動土管"
+ },
+ {
+  "ctor_rva": 2195412,
+  "reg_fn": 2197556,
+  "profile_id": "MEMORY[0xAF3B20]",
+  "actor_id": "0",
+  "internal_name": "CS間欠泉"
+ },
+ {
+  "ctor_rva": 2339100,
+  "reg_fn": 2360300,
+  "profile_id": "MEMORY[0xAF37B0]",
+  "actor_id": "18",
+  "internal_name": "バクバク"
+ },
+ {
+  "ctor_rva": 2370124,
+  "reg_fn": 2381224,
+  "profile_id": "MEMORY[0xAF340C]",
+  "actor_id": "1028",
+  "internal_name": "バルーン"
+ },
+ {
+  "ctor_rva": 2395840,
+  "reg_fn": 2401392,
+  "profile_id": "MEMORY[0xAF3470]",
+  "actor_id": "18",
+  "internal_name": "風船吊るアクター"
+ },
+ {
+  "ctor_rva": 2401848,
+  "reg_fn": 2412376,
+  "profile_id": "MEMORY[0xAF39C0]",
+  "actor_id": "22",
+  "internal_name": "ゲッソー(ばら撒き)"
+ },
+ {
+  "ctor_rva": 2412648,
+  "reg_fn": 2429052,
+  "profile_id": "MEMORY[0xAF36BC]",
+  "actor_id": "18",
+  "internal_name": "バサバサ"
+ },
+ {
+  "ctor_rva": 2429996,
+  "reg_fn": 2439828,
+  "profile_id": "MEMORY[0xAF3484]",
+  "actor_id": "16",
+  "internal_name": "マメクリボー"
+ },
+ {
+  "ctor_rva": 2441484,
+  "reg_fn": 2445040,
+  "profile_id": "MEMORY[0xAF3520]",
+  "actor_id": "2",
+  "internal_name": "大ハナチャン"
+ },
+ {
+  "ctor_rva": 2458152,
+  "reg_fn": 2465140,
+  "profile_id": "MEMORY[0xAF3928]",
+  "actor_id": "0",
+  "internal_name": "ビリキュー"
+ },
+ {
+  "ctor_rva": 2465812,
+  "reg_fn": 2476080,
+  "profile_id": "MEMORY[0xAF354C]",
+  "actor_id": "18",
+  "internal_name": "ボム兵"
+ },
+ {
+  "ctor_rva": 2495528,
+  "reg_fn": 2499344,
+  "profile_id": "MEMORY[0xAF3550]",
+  "actor_id": "18",
+  "internal_name": "パラボム兵(RDash)"
+ },
+ {
+  "ctor_rva": 2499872,
+  "reg_fn": 2503188,
+  "profile_id": "MEMORY[0xAF3908]",
+  "actor_id": "18",
+  "internal_name": "ブーメランブロス"
+ },
+ {
+  "ctor_rva": 2521336,
+  "reg_fn": 2532196,
+  "profile_id": "MEMORY[0xAF3764]",
+  "actor_id": "18",
+  "internal_name": "同期バブル"
+ },
+ {
+  "ctor_rva": 2532804,
+  "reg_fn": 2533724,
+  "profile_id": "MEMORY[0xAF376C]",
+  "actor_id": "18",
+  "internal_name": "同期バブル(RDash)"
+ },
+ {
+  "ctor_rva": 2534752,
+  "reg_fn": 2539836,
+  "profile_id": "MEMORY[0xAF36F8]",
+  "actor_id": "16",
+  "internal_name": "敵砲台弾"
+ },
+ {
+  "ctor_rva": 2540400,
+  "reg_fn": 2545096,
+  "profile_id": "MEMORY[0xAF2EFC]",
+  "actor_id": "0",
+  "internal_name": "砲門"
+ },
+ {
+  "ctor_rva": 2546136,
+  "reg_fn": 2552080,
+  "profile_id": "MEMORY[0xAF2EF4]",
+  "actor_id": "0",
+  "internal_name": "回転砲台"
+ },
+ {
+  "ctor_rva": 2552700,
+  "reg_fn": 2557616,
+  "profile_id": "MEMORY[0xAF2EF8]",
+  "actor_id": "18",
+  "internal_name": "回転砲台大"
+ },
+ {
+  "ctor_rva": 2558724,
+  "reg_fn": 2562884,
+  "profile_id": "MEMORY[0xAF2EF0]",
+  "actor_id": "0",
+  "internal_name": "ナナメ砲台"
+ },
+ {
+  "ctor_rva": 2570640,
+  "reg_fn": 2576544,
+  "profile_id": "MEMORY[0xAF35D0]",
+  "actor_id": "16",
+  "internal_name": "チョーチン"
+ },
+ {
+  "ctor_rva": 2577272,
+  "reg_fn": 2591604,
+  "profile_id": "MEMORY[0xAF375C]",
+  "actor_id": "18",
+  "internal_name": "グループチョロボン"
+ },
+ {
+  "ctor_rva": 2592684,
+  "reg_fn": 2593456,
+  "profile_id": "MEMORY[0xAF36B8]",
+  "actor_id": "0",
+  "internal_name": "チョロプーの穴"
+ },
+ {
+  "ctor_rva": 2601744,
+  "reg_fn": 2611616,
+  "profile_id": "MEMORY[0xAF36B4]",
+  "actor_id": "18",
+  "internal_name": "チョロプー"
+ },
+ {
+  "ctor_rva": 2613100,
+  "reg_fn": 2635568,
+  "profile_id": "MEMORY[0xAF3978]",
+  "actor_id": "0",
+  "internal_name": "毒霧"
+ },
+ {
+  "ctor_rva": 2613320,
+  "reg_fn": 2635568,
+  "profile_id": "MEMORY[0xAF397C]",
+  "actor_id": "0",
+  "internal_name": "毒霧"
+ },
+ {
+  "ctor_rva": 2635956,
+  "reg_fn": 2642816,
+  "profile_id": "MEMORY[0xAF3980]",
+  "actor_id": "0",
+  "internal_name": "霧範囲指定君(ライト版)"
+ },
+ {
+  "ctor_rva": 2643920,
+  "reg_fn": 2646672,
+  "profile_id": "MEMORY[0xAF3188]",
+  "actor_id": "18",
+  "internal_name": "クッキー"
+ },
+ {
+  "ctor_rva": 2648412,
+  "reg_fn": 2647036,
+  "profile_id": "MEMORY[0xAF3774]",
+  "actor_id": "18",
+  "internal_name": "クラッシャー"
+ },
+ {
+  "ctor_rva": 2668504,
+  "reg_fn": 2677892,
+  "profile_id": "MEMORY[0xAF37B8]",
+  "actor_id": "18",
+  "internal_name": "クロスケー"
+ },
+ {
+  "ctor_rva": 2678752,
+  "reg_fn": 2679752,
+  "profile_id": "MEMORY[0xAF332C]",
+  "actor_id": "274",
+  "internal_name": "でかウニラ"
+ },
+ {
+  "ctor_rva": 2701672,
+  "reg_fn": 2702996,
+  "profile_id": "MEMORY[0xAF34B8]",
+  "actor_id": "18",
+  "internal_name": "下向き土管ファイヤパックンフラワー"
+ },
+ {
+  "ctor_rva": 2703152,
+  "reg_fn": 2704328,
+  "profile_id": "MEMORY[0xAF34BC]",
+  "actor_id": "18",
+  "internal_name": "左向き土管ファイヤパックンフラワー"
+ },
+ {
+  "ctor_rva": 2704484,
+  "reg_fn": 2705660,
+  "profile_id": "MEMORY[0xAF34C0]",
+  "actor_id": "18",
+  "internal_name": "右向き土管ファイヤパックンフラワー"
+ },
+ {
+  "ctor_rva": 2705816,
+  "reg_fn": 2706996,
+  "profile_id": "MEMORY[0xAF34B4]",
+  "actor_id": "18",
+  "internal_name": "上向き土管ファイヤパックンフラワー"
+ },
+ {
+  "ctor_rva": 2707152,
+  "reg_fn": 2707860,
+  "profile_id": "MEMORY[0xAF34C8]",
+  "actor_id": "18",
+  "internal_name": "下向き土管アイスパックンフラワー"
+ },
+ {
+  "ctor_rva": 2708016,
+  "reg_fn": 2708724,
+  "profile_id": "MEMORY[0xAF34CC]",
+  "actor_id": "18",
+  "internal_name": "左向き土管アイスパックンフラワー"
+ },
+ {
+  "ctor_rva": 2708880,
+  "reg_fn": 2709588,
+  "profile_id": "MEMORY[0xAF34D0]",
+  "actor_id": "18",
+  "internal_name": "右向き土管アイスパックンフラワー"
+ },
+ {
+  "ctor_rva": 2709744,
+  "reg_fn": 2710452,
+  "profile_id": "MEMORY[0xAF34C4]",
+  "actor_id": "18",
+  "internal_name": "上向き土管アイスパックンフラワー"
+ },
+ {
+  "ctor_rva": 2731456,
+  "reg_fn": 2735192,
+  "profile_id": "MEMORY[0xAF34D4]",
+  "actor_id": "18",
+  "internal_name": "でか土管パックンフラワー"
+ },
+ {
+  "ctor_rva": 2735464,
+  "reg_fn": 2736536,
+  "profile_id": "MEMORY[0xAF34A8]",
+  "actor_id": "18",
+  "internal_name": "下向き土管パックンフラワー"
+ },
+ {
+  "ctor_rva": 2736692,
+  "reg_fn": 2737788,
+  "profile_id": "MEMORY[0xAF34AC]",
+  "actor_id": "18",
+  "internal_name": "左向き土管パックンフラワー"
+ },
+ {
+  "ctor_rva": 2737944,
+  "reg_fn": 2739040,
+  "profile_id": "MEMORY[0xAF34B0]",
+  "actor_id": "18",
+  "internal_name": "右向き土管パックンフラワー"
+ },
+ {
+  "ctor_rva": 2739196,
+  "reg_fn": 2740324,
+  "profile_id": "MEMORY[0xAF34A4]",
+  "actor_id": "18",
+  "internal_name": "上向き土管パックンフラワー"
+ },
+ {
+  "ctor_rva": 2740500,
+  "reg_fn": 2745916,
+  "profile_id": "MEMORY[0xAF3718]",
+  "actor_id": "278",
+  "internal_name": "�h�b�X���i��j"
+ },
+ {
+  "ctor_rva": 2748676,
+  "reg_fn": 2753768,
+  "profile_id": "MEMORY[0xAF392C]",
+  "actor_id": "2",
+  "internal_name": "クッパ電線単体"
+ },
+ {
+  "ctor_rva": 2754216,
+  "reg_fn": 2755656,
+  "profile_id": "MEMORY[0xAF2D74]",
+  "actor_id": "2",
+  "internal_name": "クッパ電線タグ"
+ },
+ {
+  "ctor_rva": 2756072,
+  "reg_fn": 2758948,
+  "profile_id": "MEMORY[0xAF3934]",
+  "actor_id": "2",
+  "internal_name": "電線電撃"
+ },
+ {
+  "ctor_rva": 2771560,
+  "reg_fn": 2770052,
+  "profile_id": "MEMORY[0xAF3468]",
+  "actor_id": "0",
+  "internal_name": "敵コースデモ用シャドウ君"
+ },
+ {
+  "ctor_rva": 2792040,
+  "reg_fn": 2793916,
+  "profile_id": "MEMORY[0xAF3910]",
+  "actor_id": "18",
+  "internal_name": "ファイアブロス"
+ },
+ {
+  "ctor_rva": 2794116,
+  "reg_fn": 2812500,
+  "profile_id": "MEMORY[0xAF35EC]",
+  "actor_id": "18",
+  "internal_name": "ファイアスネーク"
+ },
+ {
+  "ctor_rva": 2815032,
+  "reg_fn": 2818168,
+  "profile_id": "MEMORY[0xAF35B8]",
+  "actor_id": "18",
+  "internal_name": "フィッシュボーン"
+ },
+ {
+  "ctor_rva": 2827988,
+  "reg_fn": 2838916,
+  "profile_id": "MEMORY[0xAF3524]",
+  "actor_id": "34",
+  "internal_name": "フーフーボール"
+ },
+ {
+  "ctor_rva": 2839660,
+  "reg_fn": 2842636,
+  "profile_id": "MEMORY[0xAF38F8]",
+  "actor_id": "2",
+  "internal_name": "木の実"
+ },
+ {
+  "ctor_rva": 2843328,
+  "reg_fn": 2847184,
+  "profile_id": "MEMORY[0xAF35BC]",
+  "actor_id": "530",
+  "internal_name": "でかフグマンネン"
+ },
+ {
+  "ctor_rva": 2854184,
+  "reg_fn": 2856528,
+  "profile_id": "MEMORY[0xAF3720]",
+  "actor_id": "18",
+  "internal_name": "ガボン(RDash)"
+ },
+ {
+  "ctor_rva": 2866528,
+  "reg_fn": 2867600,
+  "profile_id": "MEMORY[0xAF3728]",
+  "actor_id": "18",
+  "internal_name": "ガボン（常駐）"
+ },
+ {
+  "ctor_rva": 2868496,
+  "reg_fn": 2871808,
+  "profile_id": "MEMORY[0xAF3314]",
+  "actor_id": "2",
+  "internal_name": "ガッタン"
+ },
+ {
+  "ctor_rva": 2872168,
+  "reg_fn": 2872524,
+  "profile_id": "MEMORY[0xAF39B8]",
+  "actor_id": "22",
+  "internal_name": "ゲッソー"
+ },
+ {
+  "ctor_rva": 2898260,
+  "reg_fn": 2904884,
+  "profile_id": "MEMORY[0xAF39BC]",
+  "actor_id": "2",
+  "internal_name": "コゲッソー"
+ },
+ {
+  "ctor_rva": 2905636,
+  "reg_fn": 2915308,
+  "profile_id": "MEMORY[0xAF35F0]",
+  "actor_id": "2",
+  "internal_name": "ゴロゴロ"
+ },
+ {
+  "ctor_rva": 2915884,
+  "reg_fn": 2922624,
+  "profile_id": "MEMORY[0xAF35F4]",
+  "actor_id": "2",
+  "internal_name": "ゴロゴロ（巨大RDash）"
+ },
+ {
+  "ctor_rva": 2923728,
+  "reg_fn": 2926260,
+  "profile_id": "MEMORY[0xAF30CC]",
+  "actor_id": "2",
+  "internal_name": "グラグラ岩"
+ },
+ {
+  "ctor_rva": 2926732,
+  "reg_fn": 2928552,
+  "profile_id": "MEMORY[0xAF39B4]",
+  "actor_id": "2",
+  "internal_name": "グルグル"
+ },
+ {
+  "ctor_rva": 2931488,
+  "reg_fn": 2936968,
+  "profile_id": "MEMORY[0xAF3900]",
+  "actor_id": "18",
+  "internal_name": "ハンマーブロス"
+ },
+ {
+  "ctor_rva": 2937356,
+  "reg_fn": 2941740,
+  "profile_id": "MEMORY[0xAF3518]",
+  "actor_id": "18",
+  "internal_name": "ハナチャン"
+ },
+ {
+  "ctor_rva": 2959040,
+  "reg_fn": 2960844,
+  "profile_id": "MEMORY[0xAF351C]",
+  "actor_id": "18",
+  "internal_name": "ハナチャン"
+ },
+ {
+  "ctor_rva": 2961000,
+  "reg_fn": 2980304,
+  "profile_id": "MEMORY[0xAF3920]",
+  "actor_id": "18",
+  "internal_name": "メガブロス"
+ },
+ {
+  "ctor_rva": 2981716,
+  "reg_fn": 2989656,
+  "profile_id": "MEMORY[0xAF3568]",
+  "actor_id": "18",
+  "internal_name": "ホネメット"
+ },
+ {
+  "ctor_rva": 3005444,
+  "reg_fn": 3014264,
+  "profile_id": "MEMORY[0xAF356C]",
+  "actor_id": "34",
+  "internal_name": "ホネメット(頭)"
+ },
+ {
+  "ctor_rva": 3019160,
+  "reg_fn": 3014980,
+  "profile_id": "MEMORY[0xAF37B4]",
+  "actor_id": "18",
+  "internal_name": "イバラムシ"
+ },
+ {
+  "ctor_rva": 3043488,
+  "reg_fn": 3084480,
+  "profile_id": "MEMORY[0xAF3348]",
+  "actor_id": "2048",
+  "internal_name": "氷"
+ },
+ {
+  "ctor_rva": 3086836,
+  "reg_fn": 3090040,
+  "profile_id": "MEMORY[0xAF3918]",
+  "actor_id": "18",
+  "internal_name": "アイスブロス"
+ },
+ {
+  "ctor_rva": 3098660,
+  "reg_fn": 3111388,
+  "profile_id": "MEMORY[0xAF3480]",
+  "actor_id": "530",
+  "internal_name": "イガクリボー"
+ },
+ {
+  "ctor_rva": 3112256,
+  "reg_fn": 3115620,
+  "profile_id": "MEMORY[0xAF35CC]",
+  "actor_id": "2",
+  "internal_name": "ライトクラゲ"
+ },
+ {
+  "ctor_rva": 3125668,
+  "reg_fn": 3130000,
+  "profile_id": "MEMORY[0xAF34F0]",
+  "actor_id": "18",
+  "internal_name": "地面ファイヤ大パックンフラワー"
+ },
+ {
+  "ctor_rva": 3130156,
+  "reg_fn": 3132420,
+  "profile_id": "MEMORY[0xAF34EC]",
+  "actor_id": "18",
+  "internal_name": "地面大パックンフラワー"
+ },
+ {
+  "ctor_rva": 3132576,
+  "reg_fn": 3136352,
+  "profile_id": "MEMORY[0xAF34E4]",
+  "actor_id": "18",
+  "internal_name": "地面ファイヤーパックンフラワー"
+ },
+ {
+  "ctor_rva": 3136816,
+  "reg_fn": 3137744,
+  "profile_id": "MEMORY[0xAF34E8]",
+  "actor_id": "18",
+  "internal_name": "地面アイスパックンフラワー"
+ },
+ {
+  "ctor_rva": 3137900,
+  "reg_fn": 3140116,
+  "profile_id": "MEMORY[0xAF34D8]",
+  "actor_id": "18",
+  "internal_name": "地面パックンフラワー(R33)"
+ },
+ {
+  "ctor_rva": 3155636,
+  "reg_fn": 3171480,
+  "profile_id": "MEMORY[0xAF36E8]",
+  "actor_id": "2",
+  "internal_name": "ジュゲム胴体(マルチプレイ用)"
+ },
+ {
+  "ctor_rva": 3172068,
+  "reg_fn": 3185972,
+  "profile_id": "MEMORY[0xAF36DC]",
+  "actor_id": "18",
+  "internal_name": "ジュゲム雲(マルチプレイ用)"
+ },
+ {
+  "ctor_rva": 3186808,
+  "reg_fn": 3192600,
+  "profile_id": "MEMORY[0xAF36D8]",
+  "actor_id": "18",
+  "internal_name": "ジュゲム投げアクター"
+ },
+ {
+  "ctor_rva": 3193056,
+  "reg_fn": 3203212,
+  "profile_id": "MEMORY[0xAF2EE8]",
+  "actor_id": "2",
+  "internal_name": "多砲身キラー砲台"
+ },
+ {
+  "ctor_rva": 3203848,
+  "reg_fn": 3206680,
+  "profile_id": "MEMORY[0xAF3544]",
+  "actor_id": "18",
+  "internal_name": "カニボー"
+ },
+ {
+  "ctor_rva": 3212856,
+  "reg_fn": 3218536,
+  "profile_id": "MEMORY[0xAF3548]",
+  "actor_id": "550",
+  "internal_name": "カニボー玉"
+ },
+ {
+  "ctor_rva": 3218960,
+  "reg_fn": 3244296,
+  "profile_id": "MEMORY[0xAF374C]",
+  "actor_id": "18",
+  "internal_name": "カロン(大)"
+ },
+ {
+  "ctor_rva": 3245300,
+  "reg_fn": 3254396,
+  "profile_id": "MEMORY[0xAF3748]",
+  "actor_id": "18",
+  "internal_name": "カロン(頭)"
+ },
+ {
+  "ctor_rva": 3255168,
+  "reg_fn": 3269212,
+  "profile_id": "MEMORY[0xAF35D8]",
+  "actor_id": "18",
+  "internal_name": "ケロンパ"
+ },
+ {
+  "ctor_rva": 3269920,
+  "reg_fn": 3275520,
+  "profile_id": "MEMORY[0xAF35DC]",
+  "actor_id": "18",
+  "internal_name": "RDash用ケロンパ"
+ },
+ {
+  "ctor_rva": 3276100,
+  "reg_fn": 3280284,
+  "profile_id": "MEMORY[0xAF36FC]",
+  "actor_id": "18",
+  "internal_name": "キラー"
+ },
+ {
+  "ctor_rva": 3293720,
+  "reg_fn": 3291292,
+  "profile_id": "MEMORY[0xAF2EBC]",
+  "actor_id": "2",
+  "internal_name": "サーチマグナムキラー砲台（下向き）(RDash)"
+ },
+ {
+  "ctor_rva": 3307616,
+  "reg_fn": 3318300,
+  "profile_id": "MEMORY[0xAF370C]",
+  "actor_id": "18",
+  "internal_name": "キングキラー"
+ },
+ {
+  "ctor_rva": 3318660,
+  "reg_fn": 3319460,
+  "profile_id": "MEMORY[0xAF3710]",
+  "actor_id": "18",
+  "internal_name": "キングキラー(RDash)"
+ },
+ {
+  "ctor_rva": 3319616,
+  "reg_fn": 3321592,
+  "profile_id": "MEMORY[0xAF3700]",
+  "actor_id": "18",
+  "internal_name": "マグナムキラー"
+ },
+ {
+  "ctor_rva": 3321888,
+  "reg_fn": 3329744,
+  "profile_id": "MEMORY[0xAF3704]",
+  "actor_id": "18",
+  "internal_name": "サーチキラー"
+ },
+ {
+  "ctor_rva": 3330184,
+  "reg_fn": 3332984,
+  "profile_id": "MEMORY[0xAF3708]",
+  "actor_id": "18",
+  "internal_name": "マグナムサーチキラー"
+ },
+ {
+  "ctor_rva": 3333260,
+  "reg_fn": 3346384,
+  "profile_id": "MEMORY[0xAF3970]",
+  "actor_id": "18",
+  "internal_name": "キリフキー(RDash)"
+ },
+ {
+  "ctor_rva": 3348664,
+  "reg_fn": 3347400,
+  "profile_id": "MEMORY[0xAF3790]",
+  "actor_id": "18",
+  "internal_name": "K.K.(常駐)"
+ },
+ {
+  "ctor_rva": 3361700,
+  "reg_fn": 3365508,
+  "profile_id": "MEMORY[0xAF379C]",
+  "actor_id": "0",
+  "internal_name": "K.K.の雷"
+ },
+ {
+  "ctor_rva": 3366124,
+  "reg_fn": 3373640,
+  "profile_id": "MEMORY[0xAF3938]",
+  "actor_id": "258",
+  "internal_name": "グループコトン"
+ },
+ {
+  "ctor_rva": 3374380,
+  "reg_fn": 3382596,
+  "profile_id": "MEMORY[0xAF3474]",
+  "actor_id": "18",
+  "internal_name": "カキボー"
+ },
+ {
+  "ctor_rva": 3401252,
+  "reg_fn": 3406788,
+  "profile_id": "MEMORY[0xAF348C]",
+  "actor_id": "18",
+  "internal_name": "大クリボー"
+ },
+ {
+  "ctor_rva": 3418396,
+  "reg_fn": 3419808,
+  "profile_id": "MEMORY[0xAF36D4]",
+  "actor_id": "34",
+  "internal_name": "マンホール"
+ },
+ {
+  "ctor_rva": 3420144,
+  "reg_fn": 3429932,
+  "profile_id": "MEMORY[0xAF36CC]",
+  "actor_id": "18",
+  "internal_name": "マンホールプー"
+ },
+ {
+  "ctor_rva": 3437376,
+  "reg_fn": 3439828,
+  "profile_id": "MEMORY[0xAF3558]",
+  "actor_id": "18",
+  "internal_name": "メカクッパ"
+ },
+ {
+  "ctor_rva": 3447800,
+  "reg_fn": 3458092,
+  "profile_id": "MEMORY[0xAF331C]",
+  "actor_id": "18",
+  "internal_name": "こでかメット"
+ },
+ {
+  "ctor_rva": 3467844,
+  "reg_fn": 3473784,
+  "profile_id": "MEMORY[0xAF3488]",
+  "actor_id": "18",
+  "internal_name": "中クリボー"
+ },
+ {
+  "ctor_rva": 3479260,
+  "reg_fn": 3474376,
+  "profile_id": "MEMORY[0xAF3758]",
+  "actor_id": "2",
+  "internal_name": "連結ネズミ"
+ },
+ {
+  "ctor_rva": 3496296,
+  "reg_fn": 3488540,
+  "profile_id": "MEMORY[0xAF3508]",
+  "actor_id": "18",
+  "internal_name": "ニセムサ"
+ },
+ {
+  "ctor_rva": 3507484,
+  "reg_fn": 3511140,
+  "profile_id": "MEMORY[0xAF3528]",
+  "actor_id": "18",
+  "internal_name": "でかノコノコ"
+ },
+ {
+  "ctor_rva": 3530036,
+  "reg_fn": 3540400,
+  "profile_id": "MEMORY[0xAF39E8]",
+  "actor_id": "18",
+  "internal_name": "グループトーピード"
+ },
+ {
+  "ctor_rva": 3541128,
+  "reg_fn": 3542820,
+  "profile_id": "MEMORY[0xAF2E10]",
+  "actor_id": "2",
+  "internal_name": "全当たりポリゴン・飛行船"
+ },
+ {
+  "ctor_rva": 3545480,
+  "reg_fn": 3549208,
+  "profile_id": "MEMORY[0xAF3500]",
+  "actor_id": "0",
+  "internal_name": "ブラックパックンOBJ"
+ },
+ {
+  "ctor_rva": 3549972,
+  "reg_fn": 3552736,
+  "profile_id": "MEMORY[0xAF347C]",
+  "actor_id": "18",
+  "internal_name": "パタクリボー"
+ },
+ {
+  "ctor_rva": 3556012,
+  "reg_fn": 3563412,
+  "profile_id": "MEMORY[0xAF3534]",
+  "actor_id": "18",
+  "internal_name": "グループパタパタ"
+ },
+ {
+  "ctor_rva": 3565460,
+  "reg_fn": 3564076,
+  "profile_id": "MEMORY[0xAF38AC]",
+  "actor_id": "0",
+  "internal_name": "ピーチデモ用シャドウ君"
+ },
+ {
+  "ctor_rva": 3569236,
+  "reg_fn": 3580732,
+  "profile_id": "MEMORY[0xAF355C]",
+  "actor_id": "18",
+  "internal_name": "ペンタロー"
+ },
+ {
+  "ctor_rva": 3586016,
+  "reg_fn": 3587952,
+  "profile_id": "MEMORY[0xAF3560]",
+  "actor_id": "34",
+  "internal_name": "ペンタローのサングラス"
+ },
+ {
+  "ctor_rva": 3588092,
+  "reg_fn": 3594584,
+  "profile_id": "MEMORY[0xAF32D0]",
+  "actor_id": "34",
+  "internal_name": "ペンタローの氷"
+ },
+ {
+  "ctor_rva": 3598584,
+  "reg_fn": 3606512,
+  "profile_id": "MEMORY[0xAF37A4]",
+  "actor_id": "16",
+  "internal_name": "ポルターガイスト"
+ },
+ {
+  "ctor_rva": 3607376,
+  "reg_fn": 3607412,
+  "profile_id": "MEMORY[0xAF3570]",
+  "actor_id": "18",
+  "internal_name": "グループプクプク（中）"
+ },
+ {
+  "ctor_rva": 3621976,
+  "reg_fn": 3623584,
+  "profile_id": "MEMORY[0xAF2DC0]",
+  "actor_id": "0",
+  "internal_name": "グループプクプク管理タグ"
+ },
+ {
+  "ctor_rva": 3623736,
+  "reg_fn": 3626768,
+  "profile_id": "MEMORY[0xAF35B4]",
+  "actor_id": "2",
+  "internal_name": "プクプク(フォーメーション)"
+ },
+ {
+  "ctor_rva": 3627044,
+  "reg_fn": 3632244,
+  "profile_id": "MEMORY[0xAF3594]",
+  "actor_id": "18",
+  "internal_name": "トゲプク"
+ },
+ {
+  "ctor_rva": 3637232,
+  "reg_fn": 3639224,
+  "profile_id": "MEMORY[0xAF3460]",
+  "actor_id": "2",
+  "internal_name": "クエスト用キノピオ"
+ },
+ {
+  "ctor_rva": 3644380,
+  "reg_fn": 3648028,
+  "profile_id": "MEMORY[0xAF3540]",
+  "actor_id": "530",
+  "internal_name": "逆さトゲゾー"
+ },
+ {
+  "ctor_rva": 3648508,
+  "reg_fn": 3649716,
+  "profile_id": "MEMORY[0xAF3730]",
+  "actor_id": "18",
+  "internal_name": "ロックガボン"
+ },
+ {
+  "ctor_rva": 3649884,
+  "reg_fn": 3650956,
+  "profile_id": "MEMORY[0xAF3734]",
+  "actor_id": "18",
+  "internal_name": "ロックガボン（常駐）"
+ },
+ {
+  "ctor_rva": 3651112,
+  "reg_fn": 3656472,
+  "profile_id": "MEMORY[0xAF3940]",
+  "actor_id": "18",
+  "internal_name": "中心君対応土管ファイヤーパックン"
+ },
+ {
+  "ctor_rva": 3663448,
+  "reg_fn": 3663652,
+  "profile_id": "MEMORY[0xAF3948]",
+  "actor_id": "18",
+  "internal_name": "中心君対応土管パックンフラワー（下）"
+ },
+ {
+  "ctor_rva": 3663808,
+  "reg_fn": 3664012,
+  "profile_id": "MEMORY[0xAF394C]",
+  "actor_id": "18",
+  "internal_name": "中心君対応土管パックンフラワー（左）"
+ },
+ {
+  "ctor_rva": 3664168,
+  "reg_fn": 3664372,
+  "profile_id": "MEMORY[0xAF3950]",
+  "actor_id": "18",
+  "internal_name": "中心君対応土管パックンフラワー（右）"
+ },
+ {
+  "ctor_rva": 3664528,
+  "reg_fn": 3664732,
+  "profile_id": "MEMORY[0xAF3944]",
+  "actor_id": "18",
+  "internal_name": "中心君対応土管パックンフラワー（上）"
+ },
+ {
+  "ctor_rva": 3664888,
+  "reg_fn": 3667140,
+  "profile_id": "MEMORY[0xAF2DD4]",
+  "actor_id": "2",
+  "internal_name": "中心君対応グルグル(RDash)"
+ },
+ {
+  "ctor_rva": 3667368,
+  "reg_fn": 3689624,
+  "profile_id": "MEMORY[0xAF350C]",
+  "actor_id": "22",
+  "internal_name": "サンボ"
+ },
+ {
+  "ctor_rva": 3690416,
+  "reg_fn": 3693960,
+  "profile_id": "MEMORY[0xAF3510]",
+  "actor_id": "34",
+  "internal_name": "サンボの死亡パーツ"
+ },
+ {
+  "ctor_rva": 3702552,
+  "reg_fn": 3727244,
+  "profile_id": "MEMORY[0xAF39F0]",
+  "actor_id": "18",
+  "internal_name": "サーチトーピード"
+ },
+ {
+  "ctor_rva": 3728104,
+  "reg_fn": 3739660,
+  "profile_id": "MEMORY[0xAF373C]",
+  "actor_id": "18",
+  "internal_name": "セイちゃん"
+ },
+ {
+  "ctor_rva": 3745020,
+  "reg_fn": 3740548,
+  "profile_id": "MEMORY[0xAF3454]",
+  "actor_id": "0",
+  "internal_name": "シャドウ君"
+ },
+ {
+  "ctor_rva": 3823104,
+  "reg_fn": 3842956,
+  "profile_id": "MEMORY[0xAF3030]",
+  "actor_id": "0",
+  "internal_name": "スネークブロック(R76用)"
+ },
+ {
+  "ctor_rva": 3844060,
+  "reg_fn": 3844908,
+  "profile_id": "MEMORY[0xAF3038]",
+  "actor_id": "0",
+  "internal_name": "スネークブロック(RDash用)"
+ },
+ {
+  "ctor_rva": 3845676,
+  "reg_fn": 3845064,
+  "profile_id": "MEMORY[0xAF38B8]",
+  "actor_id": "2",
+  "internal_name": "ショートプレイ結果画面のピーチ姫"
+ },
+ {
+  "ctor_rva": 3851576,
+  "reg_fn": 3864340,
+  "profile_id": "MEMORY[0xAF395C]",
+  "actor_id": "18",
+  "internal_name": "ビッグテレサ"
+ },
+ {
+  "ctor_rva": 3868600,
+  "reg_fn": 3865036,
+  "profile_id": "MEMORY[0xAF3964]",
+  "actor_id": "18",
+  "internal_name": "回転拡縮テレサ（子）"
+ },
+ {
+  "ctor_rva": 3875432,
+  "reg_fn": 3877840,
+  "profile_id": "MEMORY[0xAF3968]",
+  "actor_id": "0",
+  "internal_name": "回転拡縮テレサ（親）"
+ },
+ {
+  "ctor_rva": 3878340,
+  "reg_fn": 3879148,
+  "profile_id": "MEMORY[0xAF396C]",
+  "actor_id": "0",
+  "internal_name": "回転拡縮テレサRDash（親）"
+ },
+ {
+  "ctor_rva": 3880308,
+  "reg_fn": 3879280,
+  "profile_id": "MEMORY[0xAF346C]",
+  "actor_id": "0",
+  "internal_name": "タイトルデモ用シャドウ君"
+ },
+ {
+  "ctor_rva": 3882940,
+  "reg_fn": 3885380,
+  "profile_id": "MEMORY[0xAF3598]",
+  "actor_id": "18",
+  "internal_name": "飛びメカプク"
+ },
+ {
+  "ctor_rva": 3891980,
+  "reg_fn": 3912572,
+  "profile_id": "MEMORY[0xAF37BC]",
+  "actor_id": "18",
+  "internal_name": "グループトゲメット"
+ },
+ {
+  "ctor_rva": 3913536,
+  "reg_fn": 3914680,
+  "profile_id": "MEMORY[0xAF353C]",
+  "actor_id": "530",
+  "internal_name": "トゲゾー"
+ },
+ {
+  "ctor_rva": 3933064,
+  "reg_fn": 3937284,
+  "profile_id": "MEMORY[0xAF39DC]",
+  "actor_id": "2",
+  "internal_name": "サーチトーピード基地"
+ },
+ {
+  "ctor_rva": 3937836,
+  "reg_fn": 3938856,
+  "profile_id": "MEMORY[0xAF39E4]",
+  "actor_id": "0",
+  "internal_name": "水中クッパJr.用トーピード生成タグ"
+ },
+ {
+  "ctor_rva": 3941504,
+  "reg_fn": 3939224,
+  "profile_id": "MEMORY[0xAF3778]",
+  "actor_id": "16",
+  "internal_name": "土管ウナボン"
+ },
+ {
+  "ctor_rva": 3960028,
+  "reg_fn": 3960980,
+  "profile_id": "MEMORY[0xAF378C]",
+  "actor_id": "16",
+  "internal_name": "ウナボン(RDash)"
+ },
+ {
+  "ctor_rva": 3961504,
+  "reg_fn": 3962236,
+  "profile_id": "MEMORY[0xAF3324]",
+  "actor_id": "18",
+  "internal_name": "ウニラ・RDASH・BGチェック狭い版"
+ },
+ {
+  "ctor_rva": 3987200,
+  "reg_fn": 3988312,
+  "profile_id": "MEMORY[0xAF37AC]",
+  "actor_id": "2",
+  "internal_name": "湧き出しバクバク"
+ },
+ {
+  "ctor_rva": 3988648,
+  "reg_fn": 3990316,
+  "profile_id": "MEMORY[0xAF3514]",
+  "actor_id": "2",
+  "internal_name": "クエスト用キノピオ"
+ },
+ {
+  "ctor_rva": 3990664,
+  "reg_fn": 3992440,
+  "profile_id": "MEMORY[0xAF35C4]",
+  "actor_id": "0",
+  "internal_name": "でかフグマンネン(湧き出し)"
+ },
+ {
+  "ctor_rva": 3992668,
+  "reg_fn": 3994516,
+  "profile_id": "MEMORY[0xAF36F0]",
+  "actor_id": "2",
+  "internal_name": "湧き出しジュゲム"
+ },
+ {
+  "ctor_rva": 3994792,
+  "reg_fn": 3998092,
+  "profile_id": "MEMORY[0xAF36F4]",
+  "actor_id": "2",
+  "internal_name": "湧き出しジュゲム(マルチプレイ用)"
+ },
+ {
+  "ctor_rva": 3998248,
+  "reg_fn": 3999980,
+  "profile_id": "MEMORY[0xAF35E8]",
+  "actor_id": "2",
+  "internal_name": "湧き出しケロンパ"
+ },
+ {
+  "ctor_rva": 4000136,
+  "reg_fn": 4002304,
+  "profile_id": "MEMORY[0xAF3564]",
+  "actor_id": "2",
+  "internal_name": "ペンタロー(湧き土管)"
+ },
+ {
+  "ctor_rva": 4002460,
+  "reg_fn": 4006004,
+  "profile_id": "MEMORY[0xAF35A0]",
+  "actor_id": "0",
+  "internal_name": "にげプクプク(湧き出し)"
+ },
+ {
+  "ctor_rva": 4006508,
+  "reg_fn": 4007212,
+  "profile_id": "MEMORY[0xAF3714]",
+  "actor_id": "0",
+  "internal_name": "湧き出しサーチマグナムキラー"
+ },
+ {
+  "ctor_rva": 4007484,
+  "reg_fn": 4009356,
+  "profile_id": "MEMORY[0xAF35AC]",
+  "actor_id": "32",
+  "internal_name": "飛びメカプク(湧き出し)"
+ },
+ {
+  "ctor_rva": 4009584,
+  "reg_fn": 4011048,
+  "profile_id": "MEMORY[0xAF3784]",
+  "actor_id": "0",
+  "internal_name": "ウナボン(復活RDash)"
+ },
+ {
+  "ctor_rva": 4013652,
+  "reg_fn": 4018592,
+  "profile_id": "MEMORY[0xAF34F4]",
+  "actor_id": "18",
+  "internal_name": "歩くパックン"
+ },
+ {
+  "ctor_rva": 4022812,
+  "reg_fn": 4033740,
+  "profile_id": "MEMORY[0xAF37A0]",
+  "actor_id": "530",
+  "internal_name": "ワンワン"
+ },
+ {
+  "ctor_rva": 4044972,
+  "reg_fn": 4050000,
+  "profile_id": "MEMORY[0xAF32E0]",
+  "actor_id": "2",
+  "internal_name": "ワンワン杭"
+ },
+ {
+  "ctor_rva": 4050488,
+  "reg_fn": 4051264,
+  "profile_id": "MEMORY[0xAF32E4]",
+  "actor_id": "2",
+  "internal_name": "ワンワン杭(RDash)"
+ },
+ {
+  "ctor_rva": 4051396,
+  "reg_fn": 4061228,
+  "profile_id": "MEMORY[0xAF34F8]",
+  "actor_id": "18",
+  "internal_name": "水面パックン(RDash)"
+ },
+ {
+  "ctor_rva": 4063884,
+  "reg_fn": 4070360,
+  "profile_id": "MEMORY[0xAF3754]",
+  "actor_id": "2",
+  "internal_name": "ウーチャン"
+ },
+ {
+  "ctor_rva": 4572096,
+  "reg_fn": 4574312,
+  "profile_id": "MEMORY[0xAF39D0]",
+  "actor_id": "36",
+  "internal_name": "バトル用アイテム"
+ },
+ {
+  "ctor_rva": 4576572,
+  "reg_fn": 4577016,
+  "profile_id": "MEMORY[0xAF3A7C]",
+  "actor_id": "0",
+  "internal_name": "フィーバー用スタ－"
+ },
+ {
+  "ctor_rva": 4577132,
+  "reg_fn": 4579932,
+  "profile_id": "MEMORY[0xAF3668]",
+  "actor_id": "16406",
+  "internal_name": "ファイヤーフラワー"
+ },
+ {
+  "ctor_rva": 4580064,
+  "reg_fn": 4582408,
+  "profile_id": "MEMORY[0xAF3670]",
+  "actor_id": "16406",
+  "internal_name": "アイスフラワー"
+ },
+ {
+  "ctor_rva": 4618248,
+  "reg_fn": 4620800,
+  "profile_id": "MEMORY[0xAF3664]",
+  "actor_id": "16406",
+  "internal_name": "キノコ"
+ },
+ {
+  "ctor_rva": 4620932,
+  "reg_fn": 4623928,
+  "profile_id": "MEMORY[0xAF366C]",
+  "actor_id": "16406",
+  "internal_name": "マメキノコ"
+ },
+ {
+  "ctor_rva": 4624060,
+  "reg_fn": 4626536,
+  "profile_id": "MEMORY[0xAF3680]",
+  "actor_id": "16406",
+  "internal_name": "ムササビ"
+ },
+ {
+  "ctor_rva": 4626668,
+  "reg_fn": 4629660,
+  "profile_id": "MEMORY[0xAF367C]",
+  "actor_id": "16406",
+  "internal_name": "１ＵＰキノコ"
+ },
+ {
+  "ctor_rva": 4629816,
+  "reg_fn": 4632172,
+  "profile_id": "MEMORY[0xAF368C]",
+  "actor_id": "16406",
+  "internal_name": "ピーチクラウン"
+ },
+ {
+  "ctor_rva": 4632304,
+  "reg_fn": 4635020,
+  "profile_id": "MEMORY[0xAF3678]",
+  "actor_id": "16406",
+  "internal_name": "ペンギン"
+ },
+ {
+  "ctor_rva": 4635152,
+  "reg_fn": 4641772,
+  "profile_id": "MEMORY[0xAF3674]",
+  "actor_id": "16406",
+  "internal_name": "プロペラ"
+ },
+ {
+  "ctor_rva": 4643396,
+  "reg_fn": 4642532,
+  "profile_id": "MEMORY[0xAF3464]",
+  "actor_id": "2",
+  "internal_name": "クエストの景品アイテム"
+ },
+ {
+  "ctor_rva": 4646032,
+  "reg_fn": 4648172,
+  "profile_id": "MEMORY[0xAF2DAC]",
+  "actor_id": "0",
+  "internal_name": "流れ星スター"
+ },
+ {
+  "ctor_rva": 4648352,
+  "reg_fn": 4652468,
+  "profile_id": "MEMORY[0xAF3A80]",
+  "actor_id": "16406",
+  "internal_name": "スタ－"
+ },
+ {
+  "ctor_rva": 4652744,
+  "reg_fn": 4655336,
+  "profile_id": "MEMORY[0xAF3684]",
+  "actor_id": "16406",
+  "internal_name": "３ＵＰムーン"
+ },
+ {
+  "ctor_rva": 4655492,
+  "reg_fn": 4657392,
+  "profile_id": "MEMORY[0xAF3688]",
+  "actor_id": "2",
+  "internal_name": "タイトルデモ中のアイテム"
+ },
+ {
+  "ctor_rva": 4657704,
+  "reg_fn": 4659380,
+  "profile_id": "MEMORY[0xAF39D8]",
+  "actor_id": "36",
+  "internal_name": "バトル用アイテム"
+ },
+ {
+  "ctor_rva": 5656984,
+  "reg_fn": 5659204,
+  "profile_id": "MEMORY[0xAF3220]",
+  "actor_id": "4098",
+  "internal_name": "アクター巨大ハテナブロック"
+ },
+ {
+  "ctor_rva": 5659336,
+  "reg_fn": 5663096,
+  "profile_id": "MEMORY[0xAF321C]",
+  "actor_id": "4098",
+  "internal_name": "アクター巨大レンガブロック"
+ },
+ {
+  "ctor_rva": 5663512,
+  "reg_fn": 5665800,
+  "profile_id": "MEMORY[0xAF31C0]",
+  "actor_id": "4098",
+  "internal_name": "アクター透明ブロックRDash"
+ },
+ {
+  "ctor_rva": 5666116,
+  "reg_fn": 5669056,
+  "profile_id": "MEMORY[0xAF3208]",
+  "actor_id": "4",
+  "internal_name": "アクターブロック雲"
+ },
+ {
+  "ctor_rva": 5669456,
+  "reg_fn": 5670860,
+  "profile_id": "MEMORY[0xAF3100]",
+  "actor_id": "4098",
+  "internal_name": "アクター壊れないブロック"
+ },
+ {
+  "ctor_rva": 5671048,
+  "reg_fn": 5672956,
+  "profile_id": "MEMORY[0xAF31AC]",
+  "actor_id": "4098",
+  "internal_name": "アクターハテナブロック(RDash)"
+ },
+ {
+  "ctor_rva": 5673156,
+  "reg_fn": 5673900,
+  "profile_id": "MEMORY[0xAF31D8]",
+  "actor_id": "6",
+  "internal_name": "アクター回転制御ハテナブロック(R99)"
+ },
+ {
+  "ctor_rva": 5674100,
+  "reg_fn": 5675748,
+  "profile_id": "MEMORY[0xAF3224]",
+  "actor_id": "4098",
+  "internal_name": "敵コース用ハテナブロック"
+ },
+ {
+  "ctor_rva": 5675996,
+  "reg_fn": 5677388,
+  "profile_id": "MEMORY[0xAF31F4]",
+  "actor_id": "4098",
+  "internal_name": "画面追従ハテナブロック"
+ },
+ {
+  "ctor_rva": 5677520,
+  "reg_fn": 5678776,
+  "profile_id": "MEMORY[0xAF31C8]",
+  "actor_id": "4098",
+  "internal_name": "アクターグループ線対応ハテナブロック"
+ },
+ {
+  "ctor_rva": 5678996,
+  "reg_fn": 5680116,
+  "profile_id": "MEMORY[0xAF31EC]",
+  "actor_id": "6",
+  "internal_name": "アクター回転制御君用ハテナブロック"
+ },
+ {
+  "ctor_rva": 5680248,
+  "reg_fn": 5685176,
+  "profile_id": "MEMORY[0xAF3108]",
+  "actor_id": "4098",
+  "internal_name": "お手本ブロック"
+ },
+ {
+  "ctor_rva": 5685512,
+  "reg_fn": 5695592,
+  "profile_id": "MEMORY[0xAF30B8]",
+  "actor_id": "2",
+  "internal_name": "ジャンプブロック"
+ },
+ {
+  "ctor_rva": 5697168,
+  "reg_fn": 5702320,
+  "profile_id": "MEMORY[0xAF3200]",
+  "actor_id": "4098",
+  "internal_name": "アクターパタブロック"
+ },
+ {
+  "ctor_rva": 5702992,
+  "reg_fn": 5708532,
+  "profile_id": "MEMORY[0xAF3228]",
+  "actor_id": "4098",
+  "internal_name": "敵コース用アクターパタブロック"
+ },
+ {
+  "ctor_rva": 5709024,
+  "reg_fn": 5710696,
+  "profile_id": "MEMORY[0xAF31B4]",
+  "actor_id": "4098",
+  "internal_name": "アクターレンガブロック（レール縦方向）"
+ },
+ {
+  "ctor_rva": 5710976,
+  "reg_fn": 5711752,
+  "profile_id": "MEMORY[0xAF31E0]",
+  "actor_id": "6",
+  "internal_name": "回転制御レンガブロック(R99)"
+ },
+ {
+  "ctor_rva": 5712032,
+  "reg_fn": 5713680,
+  "profile_id": "MEMORY[0xAF31F8]",
+  "actor_id": "4098",
+  "internal_name": "画面追従レンガブロック"
+ },
+ {
+  "ctor_rva": 5713812,
+  "reg_fn": 5714592,
+  "profile_id": "MEMORY[0xAF31CC]",
+  "actor_id": "4098",
+  "internal_name": "アクターグループ線対応レンガブロック"
+ },
+ {
+  "ctor_rva": 5714812,
+  "reg_fn": 5715488,
+  "profile_id": "MEMORY[0xAF31F0]",
+  "actor_id": "6",
+  "internal_name": "アクター回転制御君用レンガブロック"
+ },
+ {
+  "ctor_rva": 5717756,
+  "reg_fn": 5719568,
+  "profile_id": "MEMORY[0xAF320C]",
+  "actor_id": "4098",
+  "internal_name": "ヘビコイン用ブロック"
+ },
+ {
+  "ctor_rva": 5719720,
+  "reg_fn": 5723200,
+  "profile_id": "MEMORY[0xAF30FC]",
+  "actor_id": "4098",
+  "internal_name": "アクター木ブロック"
+ },
+ {
+  "ctor_rva": 5723524,
+  "reg_fn": 5725920,
+  "profile_id": "MEMORY[0xAF3210]",
+  "actor_id": "4098",
+  "internal_name": "アクターブロックＰスイッチ"
+ },
+ {
+  "ctor_rva": 5726236,
+  "reg_fn": 5728088,
+  "profile_id": "MEMORY[0xAF3204]",
+  "actor_id": "4098",
+  "internal_name": "アクター水面ハテナブロック"
+ },
+ {
+  "ctor_rva": 5728220,
+  "reg_fn": 5729872,
+  "profile_id": "MEMORY[0xAF3218]",
+  "actor_id": "4098",
+  "internal_name": "子ヨッシー用ブロック"
+ },
+ {
+  "ctor_rva": 5730028,
+  "reg_fn": 5732032,
+  "profile_id": "MEMORY[0xAF3354]",
+  "actor_id": "8194",
+  "internal_name": "アクターコインＲＤＡＳＨ用"
+ },
+ {
+  "ctor_rva": 5732252,
+  "reg_fn": 5733836,
+  "profile_id": "MEMORY[0xAF3398]",
+  "actor_id": "8194",
+  "internal_name": "アクターアコヤ貝用コイン"
+ },
+ {
+  "ctor_rva": 5733968,
+  "reg_fn": 5736452,
+  "profile_id": "MEMORY[0xAF337C]",
+  "actor_id": "8196",
+  "internal_name": "アクター回転制御コイン"
+ },
+ {
+  "ctor_rva": 5736704,
+  "reg_fn": 5737944,
+  "profile_id": "MEMORY[0xAF3380]",
+  "actor_id": "0x2000",
+  "internal_name": "アクター回転板追従コイン"
+ },
+ {
+  "ctor_rva": 5738076,
+  "reg_fn": 5740360,
+  "profile_id": "MEMORY[0xAF33B8]",
+  "actor_id": "8198",
+  "internal_name": "アクター風船コイン"
+ },
+ {
+  "ctor_rva": 5750148,
+  "reg_fn": 5756892,
+  "profile_id": "MEMORY[0xAF338C]",
+  "actor_id": "8194",
+  "internal_name": "アクター泡コイン"
+ },
+ {
+  "ctor_rva": 5758280,
+  "reg_fn": 5759524,
+  "profile_id": "MEMORY[0xAF3364]",
+  "actor_id": "2",
+  "internal_name": "アクターコインジャンプデモ"
+ },
+ {
+  "ctor_rva": 5759776,
+  "reg_fn": 5760856,
+  "profile_id": "MEMORY[0xAF33C8]",
+  "actor_id": "2",
+  "internal_name": "アクター食べられ専用コイン"
+ },
+ {
+  "ctor_rva": 5761616,
+  "reg_fn": 5762848,
+  "profile_id": "MEMORY[0xAF3388]",
+  "actor_id": "8194",
+  "internal_name": "アクター画面追従コイン"
+ },
+ {
+  "ctor_rva": 5762980,
+  "reg_fn": 5764936,
+  "profile_id": "MEMORY[0xAF335C]",
+  "actor_id": "8198",
+  "internal_name": "アクター冷凍コイン"
+ },
+ {
+  "ctor_rva": 5765188,
+  "reg_fn": 5766668,
+  "profile_id": "MEMORY[0xAF33BC]",
+  "actor_id": "8194",
+  "internal_name": "アクター重力付コイン"
+ },
+ {
+  "ctor_rva": 5766800,
+  "reg_fn": 5767672,
+  "profile_id": "MEMORY[0xAF3368]",
+  "actor_id": "2",
+  "internal_name": "アクターコインＨＯＰジャンプ"
+ },
+ {
+  "ctor_rva": 5767924,
+  "reg_fn": 5769964,
+  "profile_id": "MEMORY[0xAF3390]",
+  "actor_id": "8198",
+  "internal_name": "アクターコインジュゲム"
+ },
+ {
+  "ctor_rva": 5770324,
+  "reg_fn": 5774440,
+  "profile_id": "MEMORY[0xAF336C]",
+  "actor_id": "8198",
+  "internal_name": "アクターコインジャンプタツノン用"
+ },
+ {
+  "ctor_rva": 5774996,
+  "reg_fn": 5776016,
+  "profile_id": "MEMORY[0xAF33B4]",
+  "actor_id": "8196",
+  "internal_name": "アクターキノコリフト追従コイン"
+ },
+ {
+  "ctor_rva": 5789448,
+  "reg_fn": 5790644,
+  "profile_id": "MEMORY[0xAF3360]",
+  "actor_id": "8198",
+  "internal_name": "アクターポリゴン追従コイン"
+ },
+ {
+  "ctor_rva": 5790776,
+  "reg_fn": 5792312,
+  "profile_id": "MEMORY[0xAF33C4]",
+  "actor_id": "8194",
+  "internal_name": "アクターＤＲＣ出現コイン"
+ },
+ {
+  "ctor_rva": 5792444,
+  "reg_fn": 5795528,
+  "profile_id": "MEMORY[0xAF33AC]",
+  "actor_id": "8198",
+  "internal_name": "アクターコインパラシュート"
+ },
+ {
+  "ctor_rva": 5795888,
+  "reg_fn": 5802248,
+  "profile_id": "MEMORY[0xAF2DF0]",
+  "actor_id": "2",
+  "internal_name": "パラシュートコイン親"
+ },
+ {
+  "ctor_rva": 5802708,
+  "reg_fn": 5809900,
+  "profile_id": "MEMORY[0xAF3394]",
+  "actor_id": "8194",
+  "internal_name": "回転制御君用通過コイン"
+ },
+ {
+  "ctor_rva": 5810404,
+  "reg_fn": 5812420,
+  "profile_id": "MEMORY[0xAF339C]",
+  "actor_id": "8198",
+  "internal_name": "アクター回転制御用コイン"
+ },
+ {
+  "ctor_rva": 5812672,
+  "reg_fn": 5814632,
+  "profile_id": "MEMORY[0xAF33A8]",
+  "actor_id": "8198",
+  "internal_name": "回転床同期コイン"
+ },
+ {
+  "ctor_rva": 5814784,
+  "reg_fn": 5817208,
+  "profile_id": "MEMORY[0xAF3378]",
+  "actor_id": "8198",
+  "internal_name": "アクターコインシャワージャンプ"
+ },
+ {
+  "ctor_rva": 5817544,
+  "reg_fn": 5819440,
+  "profile_id": "MEMORY[0xAF33B0]",
+  "actor_id": "8198",
+  "internal_name": "アクターヘビコイン"
+ },
+ {
+  "ctor_rva": 5819592,
+  "reg_fn": 5821120,
+  "profile_id": "MEMORY[0xAF33C0]",
+  "actor_id": "8194",
+  "internal_name": "アクターコインＰＯＷブロックユニット変換用"
+ },
+ {
+  "ctor_rva": 5821372,
+  "reg_fn": 5822544,
+  "profile_id": "MEMORY[0xAF33A4]",
+  "actor_id": "8198",
+  "internal_name": "ねじ回し専用コイン"
+ },
+ {
+  "ctor_rva": 5822676,
+  "reg_fn": 5823900,
+  "profile_id": "MEMORY[0xAF334C]",
+  "actor_id": "0",
+  "internal_name": "アクターコイン湧き出し"
+ },
+ {
+  "ctor_rva": 5824232,
+  "reg_fn": 5825952,
+  "profile_id": "MEMORY[0xAF3350]",
+  "actor_id": "0",
+  "internal_name": "アクターコイン噴水湧き出しタグ"
+ },
+ {
+  "ctor_rva": 5826284,
+  "reg_fn": 5827640,
+  "profile_id": "MEMORY[0xAF3384]",
+  "actor_id": "8198",
+  "internal_name": "アクター水面コイン"
+ },
+ {
+  "ctor_rva": 5827772,
+  "reg_fn": 5829776,
+  "profile_id": "MEMORY[0xAF2D50]",
+  "actor_id": "4",
+  "internal_name": "アクターＤＲＣタッチ"
+ },
+ {
+  "ctor_rva": 5830280,
+  "reg_fn": 5835328,
+  "profile_id": "MEMORY[0xAF3150]",
+  "actor_id": "2",
+  "internal_name": "飛行船の底"
+ },
+ {
+  "ctor_rva": 5835460,
+  "reg_fn": 5837300,
+  "profile_id": "MEMORY[0xAF3158]",
+  "actor_id": "2",
+  "internal_name": "飛行船の底(RDash)"
+ },
+ {
+  "ctor_rva": 5838056,
+  "reg_fn": 5839368,
+  "profile_id": "MEMORY[0xAF3154]",
+  "actor_id": "2",
+  "internal_name": "飛行船の底の枠"
+ },
+ {
+  "ctor_rva": 5839704,
+  "reg_fn": 5852064,
+  "profile_id": "MEMORY[0xAF32AC]",
+  "actor_id": "2",
+  "internal_name": "アコヤ貝"
+ },
+ {
+  "ctor_rva": 5866788,
+  "reg_fn": 5878760,
+  "profile_id": "MEMORY[0xAF3428]",
+  "actor_id": "6",
+  "internal_name": "チビヨッシー(風船)"
+ },
+ {
+  "ctor_rva": 5881452,
+  "reg_fn": 5886084,
+  "profile_id": "MEMORY[0xAF30A8]",
+  "actor_id": "2",
+  "internal_name": "バーナー"
+ },
+ {
+  "ctor_rva": 5886560,
+  "reg_fn": 5888552,
+  "profile_id": "MEMORY[0xAF30AC]",
+  "actor_id": "2",
+  "internal_name": "バーナー(大)"
+ },
+ {
+  "ctor_rva": 5888868,
+  "reg_fn": 5893356,
+  "profile_id": "MEMORY[0xAF30B4]",
+  "actor_id": "2",
+  "internal_name": "回転バーナー"
+ },
+ {
+  "ctor_rva": 5893692,
+  "reg_fn": 5896236,
+  "profile_id": "MEMORY[0xAF30B0]",
+  "actor_id": "2",
+  "internal_name": "同期バーナー"
+ },
+ {
+  "ctor_rva": 5896648,
+  "reg_fn": 5897376,
+  "profile_id": "MEMORY[0xAF2D78]",
+  "actor_id": "0",
+  "internal_name": "同期バーナー管理OBJ"
+ },
+ {
+  "ctor_rva": 5897504,
+  "reg_fn": 5905528,
+  "profile_id": "MEMORY[0xAF30A4]",
+  "actor_id": "2",
+  "internal_name": "浮き樽"
+ },
+ {
+  "ctor_rva": 5906608,
+  "reg_fn": 5910016,
+  "profile_id": "MEMORY[0xAF2E94]",
+  "actor_id": "0",
+  "internal_name": "波打つ床地形アクター"
+ },
+ {
+  "ctor_rva": 5922064,
+  "reg_fn": 5928720,
+  "profile_id": "MEMORY[0xAF2E90]",
+  "actor_id": "0",
+  "internal_name": "マリオ床地形アクター"
+ },
+ {
+  "ctor_rva": 5928872,
+  "reg_fn": 5930160,
+  "profile_id": "MEMORY[0xAF2E88]",
+  "actor_id": "0",
+  "internal_name": "雲地形アクター"
+ },
+ {
+  "ctor_rva": 5930288,
+  "reg_fn": 5935940,
+  "profile_id": "MEMORY[0xAF2E7C]",
+  "actor_id": "1024",
+  "internal_name": "溶岩地形アクター"
+ },
+ {
+  "ctor_rva": 5936264,
+  "reg_fn": 5937516,
+  "profile_id": "MEMORY[0xAF2E8C]",
+  "actor_id": "0",
+  "internal_name": "靄地形アクター"
+ },
+ {
+  "ctor_rva": 5937644,
+  "reg_fn": 5940860,
+  "profile_id": "MEMORY[0xAF2E80]",
+  "actor_id": "0",
+  "internal_name": "毒沼地形アクター"
+ },
+ {
+  "ctor_rva": 5941104,
+  "reg_fn": 5943648,
+  "profile_id": "MEMORY[0xAF2E84]",
+  "actor_id": "0",
+  "internal_name": "砂漠地形アクター"
+ },
+ {
+  "ctor_rva": 5943892,
+  "reg_fn": 5950560,
+  "profile_id": "MEMORY[0xAF2E78]",
+  "actor_id": "0",
+  "internal_name": "水地形アクター"
+ },
+ {
+  "ctor_rva": 5959248,
+  "reg_fn": 5960664,
+  "profile_id": "MEMORY[0xAF360C]",
+  "actor_id": "2",
+  "internal_name": "左向き大棍棒"
+ },
+ {
+  "ctor_rva": 5960796,
+  "reg_fn": 5962076,
+  "profile_id": "MEMORY[0xAF3608]",
+  "actor_id": "2",
+  "internal_name": "右向き大棍棒"
+ },
+ {
+  "ctor_rva": 5962208,
+  "reg_fn": 5963688,
+  "profile_id": "MEMORY[0xAF3600]",
+  "actor_id": "2",
+  "internal_name": "下向き大棍棒"
+ },
+ {
+  "ctor_rva": 5963820,
+  "reg_fn": 5965316,
+  "profile_id": "MEMORY[0xAF3604]",
+  "actor_id": "2",
+  "internal_name": "上向き大棍棒"
+ },
+ {
+  "ctor_rva": 5965448,
+  "reg_fn": 5967088,
+  "profile_id": "MEMORY[0xAF39A8]",
+  "actor_id": "2",
+  "internal_name": "大甲羅"
+ },
+ {
+  "ctor_rva": 5967340,
+  "reg_fn": 5971104,
+  "profile_id": "MEMORY[0xAF31A4]",
+  "actor_id": "4098",
+  "internal_name": "ブロック"
+ },
+ {
+  "ctor_rva": 5971500,
+  "reg_fn": 5973892,
+  "profile_id": "MEMORY[0xAF3018]",
+  "actor_id": "2",
+  "internal_name": "光で現れるブロック"
+ },
+ {
+  "ctor_rva": 5992460,
+  "reg_fn": 5993956,
+  "profile_id": "MEMORY[0xAF2FFC]",
+  "actor_id": "2",
+  "internal_name": "チャレンジモード専用ブロック"
+ },
+ {
+  "ctor_rva": 5995644,
+  "reg_fn": 5999368,
+  "profile_id": "MEMORY[0xAF3048]",
+  "actor_id": "2",
+  "internal_name": "光るブロックリフト"
+ },
+ {
+  "ctor_rva": 6006496,
+  "reg_fn": 6005744,
+  "profile_id": "MEMORY[0xAF3000]",
+  "actor_id": "2",
+  "internal_name": "お題モード足場"
+ },
+ {
+  "ctor_rva": 6011440,
+  "reg_fn": 6016044,
+  "profile_id": "MEMORY[0xAF301C]",
+  "actor_id": "0",
+  "internal_name": "ブロック出現つた"
+ },
+ {
+  "ctor_rva": 6016512,
+  "reg_fn": 6019924,
+  "profile_id": "MEMORY[0xAF33CC]",
+  "actor_id": "8196",
+  "internal_name": "青コイン"
+ },
+ {
+  "ctor_rva": 6020420,
+  "reg_fn": 6022208,
+  "profile_id": "MEMORY[0xAF38F0]",
+  "actor_id": "2",
+  "internal_name": "青リング"
+ },
+ {
+  "ctor_rva": 6028472,
+  "reg_fn": 6031128,
+  "profile_id": "MEMORY[0xAF3148]",
+  "actor_id": "2",
+  "internal_name": "クッパ用足場"
+ },
+ {
+  "ctor_rva": 6032180,
+  "reg_fn": 6033408,
+  "profile_id": "MEMORY[0xAF31A8]",
+  "actor_id": "2",
+  "internal_name": "壊れたブロック"
+ },
+ {
+  "ctor_rva": 6041808,
+  "reg_fn": 6052292,
+  "profile_id": "MEMORY[0xAF3984]",
+  "actor_id": "0",
+  "internal_name": "泡発生管理君"
+ },
+ {
+  "ctor_rva": 6052524,
+  "reg_fn": 6056180,
+  "profile_id": "MEMORY[0xAF3424]",
+  "actor_id": "6",
+  "internal_name": "チビヨッシー(泡)"
+ },
+ {
+  "ctor_rva": 6058260,
+  "reg_fn": 6065748,
+  "profile_id": "MEMORY[0xAF2F6C]",
+  "actor_id": "2",
+  "internal_name": "土管大砲(RDash)"
+ },
+ {
+  "ctor_rva": 6071900,
+  "reg_fn": 6078020,
+  "profile_id": "MEMORY[0xAF3344]",
+  "actor_id": "2070",
+  "internal_name": "樽ブロック"
+ },
+ {
+  "ctor_rva": 6082056,
+  "reg_fn": 6083460,
+  "profile_id": "MEMORY[0xAF2DC8]",
+  "actor_id": "0",
+  "internal_name": "中心君・回転"
+ },
+ {
+  "ctor_rva": 6086352,
+  "reg_fn": 6087564,
+  "profile_id": "MEMORY[0xAF2DD0]",
+  "actor_id": "0",
+  "internal_name": "中心君・回転・レール対応版"
+ },
+ {
+  "ctor_rva": 6087692,
+  "reg_fn": 6088448,
+  "profile_id": "MEMORY[0xAF2DC4]",
+  "actor_id": "0",
+  "internal_name": "中心君・振り子"
+ },
+ {
+  "ctor_rva": 6089236,
+  "reg_fn": 6090392,
+  "profile_id": "MEMORY[0xAF2DCC]",
+  "actor_id": "0",
+  "internal_name": "中心君・振り子・レール対応版"
+ },
+ {
+  "ctor_rva": 6090520,
+  "reg_fn": 6093116,
+  "profile_id": "MEMORY[0xAF38DC]",
+  "actor_id": "4",
+  "internal_name": "書き換えブロック(RDash用)"
+ },
+ {
+  "ctor_rva": 6098516,
+  "reg_fn": 6104676,
+  "profile_id": "MEMORY[0xAF35FC]",
+  "actor_id": "2",
+  "internal_name": "中間ポイントの旗"
+ },
+ {
+  "ctor_rva": 6105048,
+  "reg_fn": 6108664,
+  "profile_id": "MEMORY[0xAF3434]",
+  "actor_id": "34",
+  "internal_name": "チビヨッシー(泡)の泡"
+ },
+ {
+  "ctor_rva": 6186960,
+  "reg_fn": 6190872,
+  "profile_id": "MEMORY[0xAF3420]",
+  "actor_id": "2",
+  "internal_name": "チビヨッシーの卵"
+ },
+ {
+  "ctor_rva": 6207900,
+  "reg_fn": 6209380,
+  "profile_id": "MEMORY[0xAF3230]",
+  "actor_id": "2",
+  "internal_name": "ちくわブロック"
+ },
+ {
+  "ctor_rva": 6212948,
+  "reg_fn": 6216080,
+  "profile_id": "MEMORY[0xAF2D84]",
+  "actor_id": "0",
+  "internal_name": "チョロプーコインマネージャ"
+ },
+ {
+  "ctor_rva": 6216208,
+  "reg_fn": 6217136,
+  "profile_id": "MEMORY[0xAF39A4]",
+  "actor_id": "2",
+  "internal_name": "円ライト"
+ },
+ {
+  "ctor_rva": 6217268,
+  "reg_fn": 6218640,
+  "profile_id": "MEMORY[0xAF3430]",
+  "actor_id": "2070",
+  "internal_name": "チビヨッシー(雲)"
+ },
+ {
+  "ctor_rva": 6218896,
+  "reg_fn": 6222084,
+  "profile_id": "MEMORY[0xAF2F48]",
+  "actor_id": "2",
+  "internal_name": "コインバトル用土管・下向きNEXTGOTO"
+ },
+ {
+  "ctor_rva": 6222580,
+  "reg_fn": 6225240,
+  "profile_id": "MEMORY[0xAF2F4C]",
+  "actor_id": "1026",
+  "internal_name": "コインバトル用土管・左向きNEXTGOTO"
+ },
+ {
+  "ctor_rva": 6225736,
+  "reg_fn": 6228380,
+  "profile_id": "MEMORY[0xAF2F50]",
+  "actor_id": "1026",
+  "internal_name": "コインバトル用土管・右向きNEXTGOTO"
+ },
+ {
+  "ctor_rva": 6228876,
+  "reg_fn": 6231772,
+  "profile_id": "MEMORY[0xAF2F44]",
+  "actor_id": "2",
+  "internal_name": "コインバトル用土管・上向きNEXTGOTO"
+ },
+ {
+  "ctor_rva": 6232268,
+  "reg_fn": 6233880,
+  "profile_id": "MEMORY[0xAF2DDC]",
+  "actor_id": "0",
+  "internal_name": "親中心君通過コイン"
+ },
+ {
+  "ctor_rva": 6234096,
+  "reg_fn": 6235788,
+  "profile_id": "MEMORY[0xAF33FC]",
+  "actor_id": "2",
+  "internal_name": "南京玉すだれコイン・子"
+ },
+ {
+  "ctor_rva": 6236040,
+  "reg_fn": 6239280,
+  "profile_id": "MEMORY[0xAF33F8]",
+  "actor_id": "0",
+  "internal_name": "南京玉すだれコイン・親"
+ },
+ {
+  "ctor_rva": 6239612,
+  "reg_fn": 6240912,
+  "profile_id": "MEMORY[0xAF33D0]",
+  "actor_id": "8194",
+  "internal_name": "コレクションコイン"
+ },
+ {
+  "ctor_rva": 6248544,
+  "reg_fn": 6249612,
+  "profile_id": "MEMORY[0xAF33D4]",
+  "actor_id": "8194",
+  "internal_name": "グループコレクションコイン線対応"
+ },
+ {
+  "ctor_rva": 6249832,
+  "reg_fn": 6252228,
+  "profile_id": "MEMORY[0xAF33E0]",
+  "actor_id": "8194",
+  "internal_name": "コレクション親制御(R６城)"
+ },
+ {
+  "ctor_rva": 6252652,
+  "reg_fn": 6253960,
+  "profile_id": "MEMORY[0xAF33F4]",
+  "actor_id": "8194",
+  "internal_name": "回転制御用コレクションコイン"
+ },
+ {
+  "ctor_rva": 6254212,
+  "reg_fn": 6255244,
+  "profile_id": "MEMORY[0xAF33F0]",
+  "actor_id": "8194",
+  "internal_name": "コレクションコインヘビ"
+ },
+ {
+  "ctor_rva": 6255396,
+  "reg_fn": 6256856,
+  "profile_id": "MEMORY[0xAF3A2C]",
+  "actor_id": "2",
+  "internal_name": "土管ジョイント描画"
+ },
+ {
+  "ctor_rva": 6256988,
+  "reg_fn": 6258464,
+  "profile_id": "MEMORY[0xAF3A30]",
+  "actor_id": "2",
+  "internal_name": "土管ジョイントマメ描画"
+ },
+ {
+  "ctor_rva": 6262596,
+  "reg_fn": 6264012,
+  "profile_id": "MEMORY[0xAF36A4]",
+  "actor_id": "2",
+  "internal_name": "城のドア"
+ },
+ {
+  "ctor_rva": 6264168,
+  "reg_fn": 6264464,
+  "profile_id": "MEMORY[0xAF36A8]",
+  "actor_id": "2",
+  "internal_name": "城のドア(RDash用)"
+ },
+ {
+  "ctor_rva": 6264632,
+  "reg_fn": 6267552,
+  "profile_id": "MEMORY[0xAF36AC]",
+  "actor_id": "2",
+  "internal_name": "クッパドア"
+ },
+ {
+  "ctor_rva": 6267752,
+  "reg_fn": 6267968,
+  "profile_id": "MEMORY[0xAF36B0]",
+  "actor_id": "2",
+  "internal_name": "クッパドア(RDash用)"
+ },
+ {
+  "ctor_rva": 6268136,
+  "reg_fn": 6269264,
+  "profile_id": "MEMORY[0xAF3694]",
+  "actor_id": "2",
+  "internal_name": "普通のドア"
+ },
+ {
+  "ctor_rva": 6269420,
+  "reg_fn": 6271044,
+  "profile_id": "MEMORY[0xAF3698]",
+  "actor_id": "2",
+  "internal_name": "お化け屋敷のドア"
+ },
+ {
+  "ctor_rva": 6271200,
+  "reg_fn": 6272616,
+  "profile_id": "MEMORY[0xAF369C]",
+  "actor_id": "2",
+  "internal_name": "砦のドア"
+ },
+ {
+  "ctor_rva": 6272772,
+  "reg_fn": 6273068,
+  "profile_id": "MEMORY[0xAF36A0]",
+  "actor_id": "2",
+  "internal_name": "砦のドア(RDash用)"
+ },
+ {
+  "ctor_rva": 6273352,
+  "reg_fn": 6274692,
+  "profile_id": "MEMORY[0xAF38D4]",
+  "actor_id": "0",
+  "internal_name": "ＤＶ草花発生"
+ },
+ {
+  "ctor_rva": 6274844,
+  "reg_fn": 6275244,
+  "profile_id": "MEMORY[0xAF3A74]",
+  "actor_id": "0",
+  "internal_name": "エディットコインアクター設置範囲タグ"
+ },
+ {
+  "ctor_rva": 6277248,
+  "reg_fn": 6282576,
+  "profile_id": "MEMORY[0xAF3054]",
+  "actor_id": "2",
+  "internal_name": "伸縮ブロック・子(横)"
+ },
+ {
+  "ctor_rva": 6283404,
+  "reg_fn": 6284252,
+  "profile_id": "MEMORY[0xAF2DF8]",
+  "actor_id": "0",
+  "internal_name": "伸縮ブロック・親"
+ },
+ {
+  "ctor_rva": 6286260,
+  "reg_fn": 6291828,
+  "profile_id": "MEMORY[0xAF3058]",
+  "actor_id": "2",
+  "internal_name": "伸縮ブロック・子(縦) "
+ },
+ {
+  "ctor_rva": 6292396,
+  "reg_fn": 6292568,
+  "profile_id": "MEMORY[0xAF3304]",
+  "actor_id": "2",
+  "internal_name": "同期ファイアーバー"
+ },
+ {
+  "ctor_rva": 6297680,
+  "reg_fn": 6301684,
+  "profile_id": "MEMORY[0xAF330C]",
+  "actor_id": "2",
+  "internal_name": "ファイアーバー2"
+ },
+ {
+  "ctor_rva": 6305824,
+  "reg_fn": 6306580,
+  "profile_id": "MEMORY[0xAF2D2C]",
+  "actor_id": "0",
+  "internal_name": "フラグスイッチ４スイッチ監視ＡＮＤ"
+ },
+ {
+  "ctor_rva": 6309060,
+  "reg_fn": 6310236,
+  "profile_id": "MEMORY[0xAF2D38]",
+  "actor_id": "0",
+  "internal_name": "フラグスイッチ変化スイッチ"
+ },
+ {
+  "ctor_rva": 6310484,
+  "reg_fn": 6311668,
+  "profile_id": "MEMORY[0xAF2D48]",
+  "actor_id": "0",
+  "internal_name": "フラグスイッチ連続ＯＮフラグ"
+ },
+ {
+  "ctor_rva": 6311916,
+  "reg_fn": 6312744,
+  "profile_id": "MEMORY[0xAF2D4C]",
+  "actor_id": "0",
+  "internal_name": "フラグスイッチ一定周期ＯＮ、ＯＦＦフラグ"
+ },
+ {
+  "ctor_rva": 6312992,
+  "reg_fn": 6314608,
+  "profile_id": "MEMORY[0xAF2D3C]",
+  "actor_id": "0",
+  "internal_name": "フラグスイッチ条件フラグＲ６３用"
+ },
+ {
+  "ctor_rva": 6313104,
+  "reg_fn": 6314608,
+  "profile_id": "MEMORY[0xAF2D40]",
+  "actor_id": "0",
+  "internal_name": "フラグスイッチ条件フラグＲ６３用"
+ },
+ {
+  "ctor_rva": 6313212,
+  "reg_fn": 6314608,
+  "profile_id": "MEMORY[0xAF2D44]",
+  "actor_id": "0",
+  "internal_name": "フラグスイッチ条件フラグＲ６３用"
+ },
+ {
+  "ctor_rva": 6314896,
+  "reg_fn": 6315552,
+  "profile_id": "MEMORY[0xAF2D30]",
+  "actor_id": "0",
+  "internal_name": "フラグスイッチ４スイッチ監視ＯＲ"
+ },
+ {
+  "ctor_rva": 6315800,
+  "reg_fn": 6316944,
+  "profile_id": "MEMORY[0xAF2D34]",
+  "actor_id": "0",
+  "internal_name": "フラグスイッチランダム"
+ },
+ {
+  "ctor_rva": 6317192,
+  "reg_fn": 6317852,
+  "profile_id": "MEMORY[0xAF2D28]",
+  "actor_id": "0",
+  "internal_name": "フラグスイッチタグ"
+ },
+ {
+  "ctor_rva": 6318944,
+  "reg_fn": 6329524,
+  "profile_id": "MEMORY[0xAF319C]",
+  "actor_id": "2",
+  "internal_name": "水に浮く氷ブロック（大）"
+ },
+ {
+  "ctor_rva": 6330312,
+  "reg_fn": 6330460,
+  "profile_id": "MEMORY[0xAF2DFC]",
+  "actor_id": "2",
+  "internal_name": "床回転"
+ },
+ {
+  "ctor_rva": 6334144,
+  "reg_fn": 6334380,
+  "profile_id": "MEMORY[0xAF3070]",
+  "actor_id": "2",
+  "internal_name": "床回転(穴あき土管)"
+ },
+ {
+  "ctor_rva": 6339476,
+  "reg_fn": 6343960,
+  "profile_id": "MEMORY[0xAF2E6C]",
+  "actor_id": "2",
+  "internal_name": "フライングキノコ"
+ },
+ {
+  "ctor_rva": 6345144,
+  "reg_fn": 6346052,
+  "profile_id": "MEMORY[0xAF36C8]",
+  "actor_id": "2",
+  "internal_name": "フライングキノコ(湧き出し)"
+ },
+ {
+  "ctor_rva": 6346184,
+  "reg_fn": 6347236,
+  "profile_id": "MEMORY[0xAF3A44]",
+  "actor_id": "0",
+  "internal_name": "ムササビプレイヤー参照タグ"
+ },
+ {
+  "ctor_rva": 6348020,
+  "reg_fn": 6351176,
+  "profile_id": "MEMORY[0xAF3194]",
+  "actor_id": "2",
+  "internal_name": "冷凍ブロック"
+ },
+ {
+  "ctor_rva": 6351604,
+  "reg_fn": 6353552,
+  "profile_id": "MEMORY[0xAF3438]",
+  "actor_id": "2",
+  "internal_name": "フルーツクッキー"
+ },
+ {
+  "ctor_rva": 6354028,
+  "reg_fn": 6355488,
+  "profile_id": "MEMORY[0xAF38FC]",
+  "actor_id": "0",
+  "internal_name": "フルーツの木"
+ },
+ {
+  "ctor_rva": 6357000,
+  "reg_fn": 6357040,
+  "profile_id": "MEMORY[0xAF3068]",
+  "actor_id": "2",
+  "internal_name": "歯車(RDash)"
+ },
+ {
+  "ctor_rva": 6363072,
+  "reg_fn": 6363808,
+  "profile_id": "MEMORY[0xAF3A34]",
+  "actor_id": "2",
+  "internal_name": "ゴールキノコハウス描画"
+ },
+ {
+  "ctor_rva": 6364808,
+  "reg_fn": 6363944,
+  "profile_id": "MEMORY[0xAF3174]",
+  "actor_id": "2",
+  "internal_name": "絵画ステージ用ゴールポール(RDash)"
+ },
+ {
+  "ctor_rva": 6381212,
+  "reg_fn": 6383568,
+  "profile_id": "MEMORY[0xAF38F4]",
+  "actor_id": "2",
+  "internal_name": "ゴールリング"
+ },
+ {
+  "ctor_rva": 6384008,
+  "reg_fn": 6387716,
+  "profile_id": "MEMORY[0xAF2F04]",
+  "actor_id": "2",
+  "internal_name": "緑コイン"
+ },
+ {
+  "ctor_rva": 6388156,
+  "reg_fn": 6390428,
+  "profile_id": "MEMORY[0xAF2F08]",
+  "actor_id": "2",
+  "internal_name": "緑コイン子"
+ },
+ {
+  "ctor_rva": 6390660,
+  "reg_fn": 6391940,
+  "profile_id": "MEMORY[0xAF38E8]",
+  "actor_id": "2",
+  "internal_name": "緑リング"
+ },
+ {
+  "ctor_rva": 6392072,
+  "reg_fn": 6392632,
+  "profile_id": "MEMORY[0xAF2D6C]",
+  "actor_id": "2",
+  "internal_name": "グループＩＤ"
+ },
+ {
+  "ctor_rva": 6394404,
+  "reg_fn": 6395164,
+  "profile_id": "MEMORY[0xAF2D70]",
+  "actor_id": "2",
+  "internal_name": "グループＩＤトゲメット用"
+ },
+ {
+  "ctor_rva": 6395296,
+  "reg_fn": 6396072,
+  "profile_id": "MEMORY[0xAF2EA0]",
+  "actor_id": "2",
+  "internal_name": "グループ線キノコブロック"
+ },
+ {
+  "ctor_rva": 6396204,
+  "reg_fn": 6399040,
+  "profile_id": "MEMORY[0xAF3014]",
+  "actor_id": "2",
+  "internal_name": "懐中電灯"
+ },
+ {
+  "ctor_rva": 6399308,
+  "reg_fn": 6403012,
+  "profile_id": "MEMORY[0xAF32DC]",
+  "actor_id": "2",
+  "internal_name": "硬い氷ブロック"
+ },
+ {
+  "ctor_rva": 6403264,
+  "reg_fn": 6404776,
+  "profile_id": "MEMORY[0xAF32B4]",
+  "actor_id": "2",
+  "internal_name": "氷リフト(湧き出し)"
+ },
+ {
+  "ctor_rva": 6406948,
+  "reg_fn": 6408200,
+  "profile_id": "MEMORY[0xAF32BC]",
+  "actor_id": "2",
+  "internal_name": "氷リフト(レール動作)"
+ },
+ {
+  "ctor_rva": 6408332,
+  "reg_fn": 6410512,
+  "profile_id": "MEMORY[0xAF32B8]",
+  "actor_id": "2",
+  "internal_name": "氷リフト(湧き出し・浮く)"
+ },
+ {
+  "ctor_rva": 6411504,
+  "reg_fn": 6414148,
+  "profile_id": "MEMORY[0xAF32B0]",
+  "actor_id": "0",
+  "internal_name": "氷ブロック"
+ },
+ {
+  "ctor_rva": 6414544,
+  "reg_fn": 6418712,
+  "profile_id": "MEMORY[0xAF30D4]",
+  "actor_id": "2",
+  "internal_name": "氷塊"
+ },
+ {
+  "ctor_rva": 6420264,
+  "reg_fn": 6419120,
+  "profile_id": "MEMORY[0xAF3954]",
+  "actor_id": "16",
+  "internal_name": "ツララ"
+ },
+ {
+  "ctor_rva": 6429724,
+  "reg_fn": 6436300,
+  "profile_id": "MEMORY[0xAF32A0]",
+  "actor_id": "2",
+  "internal_name": "ツララ（大）"
+ },
+ {
+  "ctor_rva": 6437756,
+  "reg_fn": 6437368,
+  "profile_id": "MEMORY[0xAF3958]",
+  "actor_id": "0",
+  "internal_name": "ツララ（固定）"
+ },
+ {
+  "ctor_rva": 6443180,
+  "reg_fn": 6455072,
+  "profile_id": "MEMORY[0xAF2F0C]",
+  "actor_id": "0",
+  "internal_name": "間欠泉(砂)"
+ },
+ {
+  "ctor_rva": 6455724,
+  "reg_fn": 6456816,
+  "profile_id": "MEMORY[0xAF2F10]",
+  "actor_id": "2",
+  "internal_name": "常駐間欠泉(砂)"
+ },
+ {
+  "ctor_rva": 6457068,
+  "reg_fn": 6458732,
+  "profile_id": "MEMORY[0xAF3024]",
+  "actor_id": "0",
+  "internal_name": "トゲ鉄球通り穴(RDash用2砦)"
+ },
+ {
+  "ctor_rva": 6458936,
+  "reg_fn": 6464620,
+  "profile_id": "MEMORY[0xAF35D4]",
+  "actor_id": "2070",
+  "internal_name": "ジャンプ台"
+ },
+ {
+  "ctor_rva": 6465484,
+  "reg_fn": 6468928,
+  "profile_id": "MEMORY[0xAF3234]",
+  "actor_id": "2",
+  "internal_name": "カメックブロック"
+ },
+ {
+  "ctor_rva": 6469320,
+  "reg_fn": 6476372,
+  "profile_id": "MEMORY[0xAF38BC]",
+  "actor_id": "2",
+  "internal_name": "看板矢印(生成範囲狭い版)"
+ },
+ {
+  "ctor_rva": 6477048,
+  "reg_fn": 6484568,
+  "profile_id": "MEMORY[0xAF3620]",
+  "actor_id": "18",
+  "internal_name": "火山弾"
+ },
+ {
+  "ctor_rva": 6485140,
+  "reg_fn": 6488116,
+  "profile_id": "MEMORY[0xAF3618]",
+  "actor_id": "0",
+  "internal_name": "火山弾管理オブジェ"
+ },
+ {
+  "ctor_rva": 6493172,
+  "reg_fn": 6494180,
+  "profile_id": "MEMORY[0xAF2E5C]",
+  "actor_id": "2",
+  "internal_name": "キノコリフト"
+ },
+ {
+  "ctor_rva": 6497460,
+  "reg_fn": 6499596,
+  "profile_id": "MEMORY[0xAF2E60]",
+  "actor_id": "2",
+  "internal_name": "カラーキノコリフト"
+ },
+ {
+  "ctor_rva": 6500644,
+  "reg_fn": 6501868,
+  "profile_id": "MEMORY[0xAF2DEC]",
+  "actor_id": "0",
+  "internal_name": "キノコリフト・親"
+ },
+ {
+  "ctor_rva": 6502280,
+  "reg_fn": 6507400,
+  "profile_id": "MEMORY[0xAF32F8]",
+  "actor_id": "0",
+  "internal_name": "ボクシングクッパJr.専用床"
+ },
+ {
+  "ctor_rva": 6509156,
+  "reg_fn": 6510092,
+  "profile_id": "MEMORY[0xAF2DBC]",
+  "actor_id": "0",
+  "internal_name": "ボクシングクッパJr.専用床マネージャ"
+ },
+ {
+  "ctor_rva": 6510220,
+  "reg_fn": 6513012,
+  "profile_id": "MEMORY[0xAF30E8]",
+  "actor_id": "2",
+  "internal_name": "縄梯子"
+ },
+ {
+  "ctor_rva": 6525856,
+  "reg_fn": 6530172,
+  "profile_id": "MEMORY[0xAF32D8]",
+  "actor_id": "2",
+  "internal_name": "進行方向切換リフト"
+ },
+ {
+  "ctor_rva": 6530728,
+  "reg_fn": 6532904,
+  "profile_id": "MEMORY[0xAF2EAC]",
+  "actor_id": "2",
+  "internal_name": "ライト付き半当たり回転リフト"
+ },
+ {
+  "ctor_rva": 6540544,
+  "reg_fn": 6540600,
+  "profile_id": "MEMORY[0xAF2EB0]",
+  "actor_id": "2",
+  "internal_name": "溶岩振り子リフト(RDash)"
+ },
+ {
+  "ctor_rva": 6542576,
+  "reg_fn": 6543708,
+  "profile_id": "MEMORY[0xAF39B0]",
+  "actor_id": "0",
+  "internal_name": "溶岩振り子リフト中央"
+ },
+ {
+  "ctor_rva": 6544952,
+  "reg_fn": 6543860,
+  "profile_id": "MEMORY[0xAF3138]",
+  "actor_id": "2",
+  "internal_name": "葉っぱリフト"
+ },
+ {
+  "ctor_rva": 6557924,
+  "reg_fn": 6563700,
+  "profile_id": "MEMORY[0xAF308C]",
+  "actor_id": "2",
+  "internal_name": "線リフトRDash"
+ },
+ {
+  "ctor_rva": 6564724,
+  "reg_fn": 6564792,
+  "profile_id": "MEMORY[0xAF2FF0]",
+  "actor_id": "2",
+  "internal_name": "一定数乗ると動くリフト"
+ },
+ {
+  "ctor_rva": 6568696,
+  "reg_fn": 6571000,
+  "profile_id": "MEMORY[0xAF32D4]",
+  "actor_id": "2",
+  "internal_name": "一定数乗ると動く半当たりリフト"
+ },
+ {
+  "ctor_rva": 6576060,
+  "reg_fn": 6577812,
+  "profile_id": "MEMORY[0xAF2FAC]",
+  "actor_id": "2",
+  "internal_name": "お化け屋敷の回る部屋"
+ },
+ {
+  "ctor_rva": 6578920,
+  "reg_fn": 6582752,
+  "profile_id": "MEMORY[0xAF3110]",
+  "actor_id": "2",
+  "internal_name": "全当たり左右移動リフト"
+ },
+ {
+  "ctor_rva": 6583272,
+  "reg_fn": 6587132,
+  "profile_id": "MEMORY[0xAF3114]",
+  "actor_id": "2",
+  "internal_name": "全当たり上下移動リフト"
+ },
+ {
+  "ctor_rva": 6603896,
+  "reg_fn": 6603976,
+  "profile_id": "MEMORY[0xAF32C4]",
+  "actor_id": "2",
+  "internal_name": "リモコン上昇リフトのクリンチ"
+ },
+ {
+  "ctor_rva": 6604108,
+  "reg_fn": 6604260,
+  "profile_id": "MEMORY[0xAF32C8]",
+  "actor_id": "2",
+  "internal_name": "リモコン上昇定員リフト(RDash)"
+ },
+ {
+  "ctor_rva": 6610140,
+  "reg_fn": 6614704,
+  "profile_id": "MEMORY[0xAF30F4]",
+  "actor_id": "2",
+  "internal_name": "リモコンシーソーリフト"
+ },
+ {
+  "ctor_rva": 6614976,
+  "reg_fn": 6622024,
+  "profile_id": "MEMORY[0xAF30F8]",
+  "actor_id": "2",
+  "internal_name": "リモコン横移動線リフト"
+ },
+ {
+  "ctor_rva": 6622464,
+  "reg_fn": 6627124,
+  "profile_id": "MEMORY[0xAF3078]",
+  "actor_id": "2",
+  "internal_name": "同期半当たり左右移動リフト"
+ },
+ {
+  "ctor_rva": 6627812,
+  "reg_fn": 6629356,
+  "profile_id": "MEMORY[0xAF3128]",
+  "actor_id": "2",
+  "internal_name": "乗ると動くリフト"
+ },
+ {
+  "ctor_rva": 6633832,
+  "reg_fn": 6633472,
+  "profile_id": "MEMORY[0xAF312C]",
+  "actor_id": "2",
+  "internal_name": "乗ると動くリフト空用"
+ },
+ {
+  "ctor_rva": 6646908,
+  "reg_fn": 6647176,
+  "profile_id": "MEMORY[0xAF2FF8]",
+  "actor_id": "2",
+  "internal_name": "一定数乗ると止まる溶岩リフト"
+ },
+ {
+  "ctor_rva": 6647936,
+  "reg_fn": 6652436,
+  "profile_id": "MEMORY[0xAF3074]",
+  "actor_id": "2",
+  "internal_name": "同期半当たり上下移動リフト"
+ },
+ {
+  "ctor_rva": 6653124,
+  "reg_fn": 6655252,
+  "profile_id": "MEMORY[0xAF2F88]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック（全アタリ）"
+ },
+ {
+  "ctor_rva": 6655404,
+  "reg_fn": 6655436,
+  "profile_id": "MEMORY[0xAF2EA4]",
+  "actor_id": "2",
+  "internal_name": "逆振り子リフト(RDash当たり消えない版)"
+ },
+ {
+  "ctor_rva": 6665408,
+  "reg_fn": 6671584,
+  "profile_id": "MEMORY[0xAF30C4]",
+  "actor_id": "2",
+  "internal_name": "天秤リフト戻り"
+ },
+ {
+  "ctor_rva": 6673160,
+  "reg_fn": 6677596,
+  "profile_id": "MEMORY[0xAF30C0]",
+  "actor_id": "0",
+  "internal_name": "天秤リフトステップ"
+ },
+ {
+  "ctor_rva": 6678180,
+  "reg_fn": 6682688,
+  "profile_id": "MEMORY[0xAF3098]",
+  "actor_id": "2",
+  "internal_name": "シーソーリフト(RDash)"
+ },
+ {
+  "ctor_rva": 6683012,
+  "reg_fn": 6689680,
+  "profile_id": "MEMORY[0xAF304C]",
+  "actor_id": "2",
+  "internal_name": "横伸縮キノコリフト（常駐）"
+ },
+ {
+  "ctor_rva": 6690584,
+  "reg_fn": 6696644,
+  "profile_id": "MEMORY[0xAF3144]",
+  "actor_id": "2",
+  "internal_name": "木の枝伸縮リフト"
+ },
+ {
+  "ctor_rva": 6697484,
+  "reg_fn": 6704252,
+  "profile_id": "MEMORY[0xAF303C]",
+  "actor_id": "2",
+  "internal_name": "スピン回転キノコ台"
+ },
+ {
+  "ctor_rva": 6706864,
+  "reg_fn": 6708940,
+  "profile_id": "MEMORY[0xAF3040]",
+  "actor_id": "2",
+  "internal_name": "スピン回転キノコ台・子"
+ },
+ {
+  "ctor_rva": 6709192,
+  "reg_fn": 6710696,
+  "profile_id": "MEMORY[0xAF3084]",
+  "actor_id": "2",
+  "internal_name": "湧き出しリフト"
+ },
+ {
+  "ctor_rva": 6710828,
+  "reg_fn": 6712708,
+  "profile_id": "MEMORY[0xAF3088]",
+  "actor_id": "2",
+  "internal_name": "湧き出しリフト・ステップ"
+ },
+ {
+  "ctor_rva": 6712840,
+  "reg_fn": 6720208,
+  "profile_id": "MEMORY[0xAF32C0]",
+  "actor_id": "2",
+  "internal_name": "水車リフト"
+ },
+ {
+  "ctor_rva": 6720556,
+  "reg_fn": 6726356,
+  "profile_id": "MEMORY[0xAF3134]",
+  "actor_id": "2",
+  "internal_name": "観覧車リフト"
+ },
+ {
+  "ctor_rva": 6726668,
+  "reg_fn": 6729972,
+  "profile_id": "MEMORY[0xAF2FC4]",
+  "actor_id": "2",
+  "internal_name": "ハンマー振り子"
+ },
+ {
+  "ctor_rva": 6730516,
+  "reg_fn": 6730228,
+  "profile_id": "MEMORY[0xAF2F74]",
+  "actor_id": "2",
+  "internal_name": "跳ね橋の腕"
+ },
+ {
+  "ctor_rva": 6734364,
+  "reg_fn": 6733944,
+  "profile_id": "MEMORY[0xAF2F78]",
+  "actor_id": "2",
+  "internal_name": "跳ね橋の支柱"
+ },
+ {
+  "ctor_rva": 6736116,
+  "reg_fn": 6737984,
+  "profile_id": "MEMORY[0xAF2F7C]",
+  "actor_id": "2",
+  "internal_name": "跳ね橋の留め具"
+ },
+ {
+  "ctor_rva": 6738320,
+  "reg_fn": 6740944,
+  "profile_id": "MEMORY[0xAF2E14]",
+  "actor_id": "2",
+  "internal_name": "全当たりポリゴン・開閉"
+ },
+ {
+  "ctor_rva": 6741280,
+  "reg_fn": 6741604,
+  "profile_id": "MEMORY[0xAF2F2C]",
+  "actor_id": "2",
+  "internal_name": "回転板"
+ },
+ {
+  "ctor_rva": 6754344,
+  "reg_fn": 6754396,
+  "profile_id": "MEMORY[0xAF2E30]",
+  "actor_id": "2",
+  "internal_name": "親子オブジェ・子・組み合わせ"
+ },
+ {
+  "ctor_rva": 6756336,
+  "reg_fn": 6756816,
+  "profile_id": "MEMORY[0xAF2E4C]",
+  "actor_id": "2",
+  "internal_name": "親子オブジェ・子・城"
+ },
+ {
+  "ctor_rva": 6757152,
+  "reg_fn": 6757204,
+  "profile_id": "MEMORY[0xAF2E3C]",
+  "actor_id": "2",
+  "internal_name": "親子オブジェ・子・溶岩城"
+ },
+ {
+  "ctor_rva": 6758576,
+  "reg_fn": 6765268,
+  "profile_id": "MEMORY[0xAF2E64]",
+  "actor_id": "2",
+  "internal_name": "星リフト"
+ },
+ {
+  "ctor_rva": 6768008,
+  "reg_fn": 6768060,
+  "profile_id": "MEMORY[0xAF2E34]",
+  "actor_id": "2",
+  "internal_name": "親子オブジェ・子・互い違い"
+ },
+ {
+  "ctor_rva": 6769468,
+  "reg_fn": 6772136,
+  "profile_id": "MEMORY[0xAF2E38]",
+  "actor_id": "2",
+  "internal_name": "親子オブジェ・子・互い違い歯車"
+ },
+ {
+  "ctor_rva": 6773672,
+  "reg_fn": 6775196,
+  "profile_id": "MEMORY[0xAF2F80]",
+  "actor_id": "2",
+  "internal_name": "回転砦横ブロック"
+ },
+ {
+  "ctor_rva": 6775328,
+  "reg_fn": 6776128,
+  "profile_id": "MEMORY[0xAF39AC]",
+  "actor_id": "2",
+  "internal_name": "回転砦横ブロック留め具"
+ },
+ {
+  "ctor_rva": 6779776,
+  "reg_fn": 6782068,
+  "profile_id": "MEMORY[0xAF3338]",
+  "actor_id": "6166",
+  "internal_name": "光るブロック"
+ },
+ {
+  "ctor_rva": 6782364,
+  "reg_fn": 6783568,
+  "profile_id": "MEMORY[0xAF39A0]",
+  "actor_id": "36",
+  "internal_name": "深海用照明"
+ },
+ {
+  "ctor_rva": 6783820,
+  "reg_fn": 6784120,
+  "profile_id": "MEMORY[0xAF342C]",
+  "actor_id": "4",
+  "internal_name": "チビヨッシー(光る)"
+ },
+ {
+  "ctor_rva": 6790008,
+  "reg_fn": 6792264,
+  "profile_id": "MEMORY[0xAF2E9C]",
+  "actor_id": "2",
+  "internal_name": "線キノコブロック"
+ },
+ {
+  "ctor_rva": 6792680,
+  "reg_fn": 6796496,
+  "profile_id": "MEMORY[0xAF2E98]",
+  "actor_id": "2",
+  "internal_name": "スピン線リフト"
+ },
+ {
+  "ctor_rva": 6797008,
+  "reg_fn": 6803388,
+  "profile_id": "MEMORY[0xAF3008]",
+  "actor_id": "2",
+  "internal_name": "慣性線リフト"
+ },
+ {
+  "ctor_rva": 6812968,
+  "reg_fn": 6814232,
+  "profile_id": "MEMORY[0xAF3010]",
+  "actor_id": "2",
+  "internal_name": "慣性線リフト子(RDash)"
+ },
+ {
+  "ctor_rva": 6814580,
+  "reg_fn": 6815280,
+  "profile_id": "MEMORY[0xAF300C]",
+  "actor_id": "2",
+  "internal_name": "慣性線リフト親(RDash)"
+ },
+ {
+  "ctor_rva": 6815532,
+  "reg_fn": 6816676,
+  "profile_id": "MEMORY[0xAF38C8]",
+  "actor_id": "2",
+  "internal_name": "ルイージ看板（９－９）"
+ },
+ {
+  "ctor_rva": 6827104,
+  "reg_fn": 6833372,
+  "profile_id": "MEMORY[0xAF324C]",
+  "actor_id": "2",
+  "internal_name": "マジックハンドグー(RDash)"
+ },
+ {
+  "ctor_rva": 6833660,
+  "reg_fn": 6840276,
+  "profile_id": "MEMORY[0xAF3248]",
+  "actor_id": "2",
+  "internal_name": "マジックハンドパー"
+ },
+ {
+  "ctor_rva": 6840552,
+  "reg_fn": 6841160,
+  "profile_id": "MEMORY[0xAF2D9C]",
+  "actor_id": "2",
+  "internal_name": "マジックハンドタググー・速い"
+ },
+ {
+  "ctor_rva": 6841424,
+  "reg_fn": 6851748,
+  "profile_id": "MEMORY[0xAF318C]",
+  "actor_id": "0",
+  "internal_name": "マジックハンド・ボクシングクッパJr.デモ用"
+ },
+ {
+  "ctor_rva": 6852460,
+  "reg_fn": 6858108,
+  "profile_id": "MEMORY[0xAF30A0]",
+  "actor_id": "2",
+  "internal_name": "丸太"
+ },
+ {
+  "ctor_rva": 6868820,
+  "reg_fn": 6876116,
+  "profile_id": "MEMORY[0xAF2FC8]",
+  "actor_id": "2",
+  "internal_name": "モアイ"
+ },
+ {
+  "ctor_rva": 6882176,
+  "reg_fn": 6883056,
+  "profile_id": "MEMORY[0xAF2FD0]",
+  "actor_id": "2",
+  "internal_name": "モアイ（下向き）"
+ },
+ {
+  "ctor_rva": 6883188,
+  "reg_fn": 6884136,
+  "profile_id": "MEMORY[0xAF2FD4]",
+  "actor_id": "2",
+  "internal_name": "RDash2-4専用モアイ（下向き）"
+ },
+ {
+  "ctor_rva": 6884768,
+  "reg_fn": 6885440,
+  "profile_id": "MEMORY[0xAF2FCC]",
+  "actor_id": "2",
+  "internal_name": "RDash2-4専用モアイ"
+ },
+ {
+  "ctor_rva": 6885572,
+  "reg_fn": 6889764,
+  "profile_id": "MEMORY[0xAF2FD8]",
+  "actor_id": "2",
+  "internal_name": "RDash5-5専用モアイ"
+ },
+ {
+  "ctor_rva": 6890364,
+  "reg_fn": 6893556,
+  "profile_id": "MEMORY[0xAF3120]",
+  "actor_id": "2",
+  "internal_name": "モノレールブロック"
+ },
+ {
+  "ctor_rva": 6894968,
+  "reg_fn": 6897304,
+  "profile_id": "MEMORY[0xAF3124]",
+  "actor_id": "2",
+  "internal_name": "モノレールブロックのレール"
+ },
+ {
+  "ctor_rva": 6902296,
+  "reg_fn": 6912260,
+  "profile_id": "MEMORY[0xAF38D0]",
+  "actor_id": "2",
+  "internal_name": "追従草花"
+ },
+ {
+  "ctor_rva": 6912728,
+  "reg_fn": 6916492,
+  "profile_id": "MEMORY[0xAF38D8]",
+  "actor_id": "0",
+  "internal_name": "ＮＥＸＴＧＯＴＯブロック"
+ },
+ {
+  "ctor_rva": 6916928,
+  "reg_fn": 6917428,
+  "profile_id": "MEMORY[0xAF2D68]",
+  "actor_id": "2",
+  "internal_name": "範囲指定コイン監視拍手君"
+ },
+ {
+  "ctor_rva": 6917560,
+  "reg_fn": 6919168,
+  "profile_id": "MEMORY[0xAF2D60]",
+  "actor_id": "0",
+  "internal_name": "ＯＢＪコイン常駐監視拍手君"
+ },
+ {
+  "ctor_rva": 6919588,
+  "reg_fn": 6921008,
+  "profile_id": "MEMORY[0xAF30BC]",
+  "actor_id": "2",
+  "internal_name": "のぼり棒"
+ },
+ {
+  "ctor_rva": 6921196,
+  "reg_fn": 6925848,
+  "profile_id": "MEMORY[0xAF39C4]",
+  "actor_id": "0",
+  "internal_name": "ナット"
+ },
+ {
+  "ctor_rva": 6926744,
+  "reg_fn": 6927884,
+  "profile_id": "MEMORY[0xAF2E68]",
+  "actor_id": "0",
+  "internal_name": "オブジェキノコ"
+ },
+ {
+  "ctor_rva": 6930976,
+  "reg_fn": 6931264,
+  "profile_id": "MEMORY[0xAF2F3C]",
+  "actor_id": "2",
+  "internal_name": "マメマリオ用OBJ土管(下)"
+ },
+ {
+  "ctor_rva": 6931396,
+  "reg_fn": 6931684,
+  "profile_id": "MEMORY[0xAF2F34]",
+  "actor_id": "2",
+  "internal_name": "マメマリオ用OBJ土管(左)"
+ },
+ {
+  "ctor_rva": 6931816,
+  "reg_fn": 6932112,
+  "profile_id": "MEMORY[0xAF2F30]",
+  "actor_id": "2",
+  "internal_name": "マメマリオ用OBJ土管(右)"
+ },
+ {
+  "ctor_rva": 6932244,
+  "reg_fn": 6932532,
+  "profile_id": "MEMORY[0xAF2F38]",
+  "actor_id": "2",
+  "internal_name": "マメマリオ用OBJ土管(上)"
+ },
+ {
+  "ctor_rva": 6933608,
+  "reg_fn": 6935116,
+  "profile_id": "MEMORY[0xAF2FF4]",
+  "actor_id": "2",
+  "internal_name": "一定数乗ると動くお化けオブジェBG"
+ },
+ {
+  "ctor_rva": 6941308,
+  "reg_fn": 6942328,
+  "profile_id": "MEMORY[0xAF3268]",
+  "actor_id": "2",
+  "internal_name": "OBJ土管(下・グループ)"
+ },
+ {
+  "ctor_rva": 6942572,
+  "reg_fn": 6944188,
+  "profile_id": "MEMORY[0xAF2F40]",
+  "actor_id": "2",
+  "internal_name": "OBJ土管・下向きNEXTGOTO"
+ },
+ {
+  "ctor_rva": 6944320,
+  "reg_fn": 6945380,
+  "profile_id": "MEMORY[0xAF3260]",
+  "actor_id": "1026",
+  "internal_name": "OBJ土管(左・グループ)"
+ },
+ {
+  "ctor_rva": 6945624,
+  "reg_fn": 6947460,
+  "profile_id": "MEMORY[0xAF3280]",
+  "actor_id": "1026",
+  "internal_name": "OBJ土管・左向きNEXTGOTO"
+ },
+ {
+  "ctor_rva": 6947616,
+  "reg_fn": 6948680,
+  "profile_id": "MEMORY[0xAF325C]",
+  "actor_id": "1026",
+  "internal_name": "OBJ土管(右・グループ)"
+ },
+ {
+  "ctor_rva": 6948924,
+  "reg_fn": 6950744,
+  "profile_id": "MEMORY[0xAF327C]",
+  "actor_id": "1026",
+  "internal_name": "OBJ土管・右向きNEXTGOTO"
+ },
+ {
+  "ctor_rva": 6950900,
+  "reg_fn": 6951880,
+  "profile_id": "MEMORY[0xAF3264]",
+  "actor_id": "2",
+  "internal_name": "OBJ土管(上・グループ)"
+ },
+ {
+  "ctor_rva": 6952124,
+  "reg_fn": 6953952,
+  "profile_id": "MEMORY[0xAF3284]",
+  "actor_id": "2",
+  "internal_name": "OBJ土管・上向きNEXTGOTO"
+ },
+ {
+  "ctor_rva": 6954108,
+  "reg_fn": 6957156,
+  "profile_id": "MEMORY[0xAF2E00]",
+  "actor_id": "0",
+  "internal_name": "全当たりポリゴン"
+ },
+ {
+  "ctor_rva": 6957524,
+  "reg_fn": 6958320,
+  "profile_id": "MEMORY[0xAF2E0C]",
+  "actor_id": "0",
+  "internal_name": "全当たりポリゴン・高原用"
+ },
+ {
+  "ctor_rva": 6958448,
+  "reg_fn": 6959092,
+  "profile_id": "MEMORY[0xAF2E08]",
+  "actor_id": "0",
+  "internal_name": "全当たりポリゴン・野原用"
+ },
+ {
+  "ctor_rva": 6959220,
+  "reg_fn": 6959864,
+  "profile_id": "MEMORY[0xAF2E04]",
+  "actor_id": "0",
+  "internal_name": "全当たりポリゴン・砦用"
+ },
+ {
+  "ctor_rva": 6959992,
+  "reg_fn": 6960600,
+  "profile_id": "MEMORY[0xAF2FA8]",
+  "actor_id": "0",
+  "internal_name": "専用お化け屋敷の全当たりポリゴン"
+ },
+ {
+  "ctor_rva": 6960860,
+  "reg_fn": 6964228,
+  "profile_id": "MEMORY[0xAF3988]",
+  "actor_id": "0",
+  "internal_name": "雪発生タグ"
+ },
+ {
+  "ctor_rva": 6964416,
+  "reg_fn": 6967448,
+  "profile_id": "MEMORY[0xAF398C]",
+  "actor_id": "0",
+  "internal_name": "火の粉発生君"
+ },
+ {
+  "ctor_rva": 6967620,
+  "reg_fn": 6968216,
+  "profile_id": "MEMORY[0xAF2FE8]",
+  "actor_id": "2",
+  "internal_name": "ねじ回しで動く足場"
+ },
+ {
+  "ctor_rva": 6969388,
+  "reg_fn": 6971472,
+  "profile_id": "MEMORY[0xAF2FDC]",
+  "actor_id": "2",
+  "internal_name": "ねじ回しで動く全当たり OBJ・子"
+ },
+ {
+  "ctor_rva": 6972780,
+  "reg_fn": 6974728,
+  "profile_id": "MEMORY[0xAF2FE0]",
+  "actor_id": "2",
+  "internal_name": "ねじ回しで動く全当たり OBJ・子・ピラミッド"
+ },
+ {
+  "ctor_rva": 6975456,
+  "reg_fn": 6976364,
+  "profile_id": "MEMORY[0xAF2FE4]",
+  "actor_id": "2",
+  "internal_name": "ねじ回しで動く全当たり OBJ・子・ピラミッド・常駐"
+ },
+ {
+  "ctor_rva": 6976496,
+  "reg_fn": 6978656,
+  "profile_id": "MEMORY[0xAF2DF4]",
+  "actor_id": "2",
+  "internal_name": "ねじ回しで動く全当たり OBJ・親"
+ },
+ {
+  "ctor_rva": 6979424,
+  "reg_fn": 6982816,
+  "profile_id": "MEMORY[0xAF2E18]",
+  "actor_id": "0",
+  "internal_name": "親子オブジェ・子"
+ },
+ {
+  "ctor_rva": 6986624,
+  "reg_fn": 6987660,
+  "profile_id": "MEMORY[0xAF2E24]",
+  "actor_id": "0",
+  "internal_name": "親子オブジェ・子・鉄"
+ },
+ {
+  "ctor_rva": 6987788,
+  "reg_fn": 6988672,
+  "profile_id": "MEMORY[0xAF2E20]",
+  "actor_id": "0",
+  "internal_name": "親子オブジェ・子・岩"
+ },
+ {
+  "ctor_rva": 6988800,
+  "reg_fn": 6990480,
+  "profile_id": "MEMORY[0xAF2E58]",
+  "actor_id": "0",
+  "internal_name": "キノコ足場・左右移動"
+ },
+ {
+  "ctor_rva": 6990712,
+  "reg_fn": 6991596,
+  "profile_id": "MEMORY[0xAF2E2C]",
+  "actor_id": "0",
+  "internal_name": "親子オブジェ・子・高原用"
+ },
+ {
+  "ctor_rva": 6993020,
+  "reg_fn": 6993904,
+  "profile_id": "MEMORY[0xAF2E28]",
+  "actor_id": "0",
+  "internal_name": "親子オブジェ・子・野原用"
+ },
+ {
+  "ctor_rva": 6994032,
+  "reg_fn": 6996504,
+  "profile_id": "MEMORY[0xAF2E54]",
+  "actor_id": "0",
+  "internal_name": "親子オブジェ・子・野原用・半当たり"
+ },
+ {
+  "ctor_rva": 6996768,
+  "reg_fn": 6996820,
+  "profile_id": "MEMORY[0xAF2E40]",
+  "actor_id": "2",
+  "internal_name": "親子オブジェ・子・砂漠の遺跡"
+ },
+ {
+  "ctor_rva": 6997840,
+  "reg_fn": 6998724,
+  "profile_id": "MEMORY[0xAF2E1C]",
+  "actor_id": "0",
+  "internal_name": "親子オブジェ・子・砦用"
+ },
+ {
+  "ctor_rva": 6998852,
+  "reg_fn": 6998904,
+  "profile_id": "MEMORY[0xAF2E44]",
+  "actor_id": "2",
+  "internal_name": "親子オブジェ・子・砦岩"
+ },
+ {
+  "ctor_rva": 7000028,
+  "reg_fn": 7000600,
+  "profile_id": "MEMORY[0xAF2E48]",
+  "actor_id": "2",
+  "internal_name": "親子オブジェ・子・砦岩(RDash用)"
+ },
+ {
+  "ctor_rva": 7000732,
+  "reg_fn": 7001680,
+  "profile_id": "MEMORY[0xAF2E50]",
+  "actor_id": "2",
+  "internal_name": "親子オブジェ・子・警告"
+ },
+ {
+  "ctor_rva": 7002980,
+  "reg_fn": 7005184,
+  "profile_id": "MEMORY[0xAF2D54]",
+  "actor_id": "0",
+  "internal_name": "親子オブジェ・親"
+ },
+ {
+  "ctor_rva": 7006168,
+  "reg_fn": 7005612,
+  "profile_id": "MEMORY[0xAF3020]",
+  "actor_id": "2",
+  "internal_name": "椰子の木"
+ },
+ {
+  "ctor_rva": 7032848,
+  "reg_fn": 7036784,
+  "profile_id": "MEMORY[0xAF305C]",
+  "actor_id": "514",
+  "internal_name": "パタメット"
+ },
+ {
+  "ctor_rva": 7043516,
+  "reg_fn": 7047368,
+  "profile_id": "MEMORY[0xAF3060]",
+  "actor_id": "514",
+  "internal_name": "パタメット(大)"
+ },
+ {
+  "ctor_rva": 7047500,
+  "reg_fn": 7049160,
+  "profile_id": "MEMORY[0xAF3064]",
+  "actor_id": "514",
+  "internal_name": "パタメット"
+ },
+ {
+  "ctor_rva": 7049736,
+  "reg_fn": 7049296,
+  "profile_id": "MEMORY[0xAF3A28]",
+  "actor_id": "0",
+  "internal_name": "豆の木"
+ },
+ {
+  "ctor_rva": 7056244,
+  "reg_fn": 7057268,
+  "profile_id": "MEMORY[0xAF3A48]",
+  "actor_id": "0",
+  "internal_name": "プレイヤー画面横挟み要求タグ"
+ },
+ {
+  "ctor_rva": 7057396,
+  "reg_fn": 7059184,
+  "profile_id": "MEMORY[0xAF3198]",
+  "actor_id": "0",
+  "internal_name": "Ｐムササビブロック"
+ },
+ {
+  "ctor_rva": 7061908,
+  "reg_fn": 7063420,
+  "profile_id": "MEMORY[0xAF3334]",
+  "actor_id": "2064",
+  "internal_name": "POWブロック"
+ },
+ {
+  "ctor_rva": 7071660,
+  "reg_fn": 7074304,
+  "profile_id": "MEMORY[0xAF333C]",
+  "actor_id": "6166",
+  "internal_name": "プロペラブロック"
+ },
+ {
+  "ctor_rva": 7074600,
+  "reg_fn": 7076116,
+  "profile_id": "MEMORY[0xAF38EC]",
+  "actor_id": "2",
+  "internal_name": "紫リング"
+ },
+ {
+  "ctor_rva": 7076248,
+  "reg_fn": 7077644,
+  "profile_id": "MEMORY[0xAF3004]",
+  "actor_id": "2",
+  "internal_name": "クエスト専用ブロック"
+ },
+ {
+  "ctor_rva": 7077960,
+  "reg_fn": 7078356,
+  "profile_id": "MEMORY[0xAF345C]",
+  "actor_id": "2",
+  "internal_name": "クエストのカギ"
+ },
+ {
+  "ctor_rva": 7078496,
+  "reg_fn": 7079644,
+  "profile_id": "MEMORY[0xAF3258]",
+  "actor_id": "4098",
+  "internal_name": "レールエフェクト発生ブロック"
+ },
+ {
+  "ctor_rva": 7079776,
+  "reg_fn": 7081656,
+  "profile_id": "MEMORY[0xAF2F84]",
+  "actor_id": "2",
+  "internal_name": "レール動作の全あたりポリゴン・子"
+ },
+ {
+  "ctor_rva": 7083312,
+  "reg_fn": 7085416,
+  "profile_id": "MEMORY[0xAF2EB8]",
+  "actor_id": "2",
+  "internal_name": "レール動作の全あたりポリゴン"
+ },
+ {
+  "ctor_rva": 7085548,
+  "reg_fn": 7087732,
+  "profile_id": "MEMORY[0xAF2D5C]",
+  "actor_id": "2",
+  "internal_name": "レール動作の全あたりポリゴン・親"
+ },
+ {
+  "ctor_rva": 7088092,
+  "reg_fn": 7091544,
+  "profile_id": "MEMORY[0xAF310C]",
+  "actor_id": "4098",
+  "internal_name": "RDashルイージブロック"
+ },
+ {
+  "ctor_rva": 7092052,
+  "reg_fn": 7094760,
+  "profile_id": "MEMORY[0xAF2D58]",
+  "actor_id": "0",
+  "internal_name": "親子オブジェ・親(R-Dash専用版)"
+ },
+ {
+  "ctor_rva": 7098024,
+  "reg_fn": 7099320,
+  "profile_id": "MEMORY[0xAF2F00]",
+  "actor_id": "2",
+  "internal_name": "赤コイン"
+ },
+ {
+  "ctor_rva": 7099452,
+  "reg_fn": 7100728,
+  "profile_id": "MEMORY[0xAF38E4]",
+  "actor_id": "2",
+  "internal_name": "赤リング"
+ },
+ {
+  "ctor_rva": 7117404,
+  "reg_fn": 7118644,
+  "profile_id": "MEMORY[0xAF2DE4]",
+  "actor_id": "0",
+  "internal_name": "条件フラグ付き回転制御君"
+ },
+ {
+  "ctor_rva": 7117544,
+  "reg_fn": 7118644,
+  "profile_id": "MEMORY[0xAF2DE8]",
+  "actor_id": "0",
+  "internal_name": "条件フラグ付き回転制御君"
+ },
+ {
+  "ctor_rva": 7123396,
+  "reg_fn": 7125924,
+  "profile_id": "MEMORY[0xAF2F8C]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・地下用"
+ },
+ {
+  "ctor_rva": 7127992,
+  "reg_fn": 7129436,
+  "profile_id": "MEMORY[0xAF2FB0]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・カラー（空用）"
+ },
+ {
+  "ctor_rva": 7129568,
+  "reg_fn": 7130944,
+  "profile_id": "MEMORY[0xAF2FA0]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・お化け"
+ },
+ {
+  "ctor_rva": 7131076,
+  "reg_fn": 7132268,
+  "profile_id": "MEMORY[0xAF2FA4]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・お化け(RD4-化け専用)"
+ },
+ {
+  "ctor_rva": 7132400,
+  "reg_fn": 7132948,
+  "profile_id": "MEMORY[0xAF2FC0]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・お化け屋敷の沈没船"
+ },
+ {
+  "ctor_rva": 7133080,
+  "reg_fn": 7133696,
+  "profile_id": "MEMORY[0xAF2FB4]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・鉄"
+ },
+ {
+  "ctor_rva": 7133828,
+  "reg_fn": 7134420,
+  "profile_id": "MEMORY[0xAF2FB8]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・鉄(RDASH用)"
+ },
+ {
+  "ctor_rva": 7134552,
+  "reg_fn": 7135488,
+  "profile_id": "MEMORY[0xAF2FBC]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・鉄(RDASH用その2)"
+ },
+ {
+  "ctor_rva": 7135620,
+  "reg_fn": 7135688,
+  "profile_id": "MEMORY[0xAF2F90]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・キノコ"
+ },
+ {
+  "ctor_rva": 7137240,
+  "reg_fn": 7137316,
+  "profile_id": "MEMORY[0xAF2F9C]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・石"
+ },
+ {
+  "ctor_rva": 7139076,
+  "reg_fn": 7141896,
+  "profile_id": "MEMORY[0xAF2F94]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・木"
+ },
+ {
+  "ctor_rva": 7143464,
+  "reg_fn": 7143652,
+  "profile_id": "MEMORY[0xAF2F98]",
+  "actor_id": "2",
+  "internal_name": "回転ブロック・木(RDash)"
+ },
+ {
+  "ctor_rva": 7143784,
+  "reg_fn": 7143948,
+  "profile_id": "MEMORY[0xAF3310]",
+  "actor_id": "2",
+  "internal_name": "中心君対応ファイアーバー"
+ },
+ {
+  "ctor_rva": 7147136,
+  "reg_fn": 7149132,
+  "profile_id": "MEMORY[0xAF3130]",
+  "actor_id": "2",
+  "internal_name": "回転半当たり床"
+ },
+ {
+  "ctor_rva": 7149584,
+  "reg_fn": 7152224,
+  "profile_id": "MEMORY[0xAF3044]",
+  "actor_id": "2",
+  "internal_name": "回転枠・おばけ"
+ },
+ {
+  "ctor_rva": 7154068,
+  "reg_fn": 7156172,
+  "profile_id": "MEMORY[0xAF2F64]",
+  "actor_id": "2",
+  "internal_name": "回転土管(RDash)"
+ },
+ {
+  "ctor_rva": 7156416,
+  "reg_fn": 7159936,
+  "profile_id": "MEMORY[0xAF322C]",
+  "actor_id": "4098",
+  "internal_name": "ルーレットブロック"
+ },
+ {
+  "ctor_rva": 7162976,
+  "reg_fn": 7165264,
+  "profile_id": "MEMORY[0xAF3690]",
+  "actor_id": "0",
+  "internal_name": "ワカメ"
+ },
+ {
+  "ctor_rva": 7165412,
+  "reg_fn": 7166648,
+  "profile_id": "MEMORY[0xAF3458]",
+  "actor_id": "2",
+  "internal_name": "シャドウ君の袋"
+ },
+ {
+  "ctor_rva": 7166952,
+  "reg_fn": 7174876,
+  "profile_id": "MEMORY[0xAF3340]",
+  "actor_id": "2066",
+  "internal_name": "氷ブロック(持てる)"
+ },
+ {
+  "ctor_rva": 7175460,
+  "reg_fn": 7177508,
+  "profile_id": "MEMORY[0xAF2D80]",
+  "actor_id": "2",
+  "internal_name": "コインヘビ親"
+ },
+ {
+  "ctor_rva": 7177640,
+  "reg_fn": 7179384,
+  "profile_id": "MEMORY[0xAF3744]",
+  "actor_id": "144",
+  "internal_name": "雪玉"
+ },
+ {
+  "ctor_rva": 7181092,
+  "reg_fn": 7181808,
+  "profile_id": "MEMORY[0xAF2FEC]",
+  "actor_id": "2",
+  "internal_name": "ねじ回しで動くワイヤー"
+ },
+ {
+  "ctor_rva": 7181952,
+  "reg_fn": 7183312,
+  "profile_id": "MEMORY[0xAF37A8]",
+  "actor_id": "0",
+  "internal_name": "燭台"
+ },
+ {
+  "ctor_rva": 7183632,
+  "reg_fn": 7191380,
+  "profile_id": "MEMORY[0xAF39C8]",
+  "actor_id": "2",
+  "internal_name": "宝箱"
+ },
+ {
+  "ctor_rva": 7197344,
+  "reg_fn": 7198372,
+  "profile_id": "MEMORY[0xAF39CC]",
+  "actor_id": "2",
+  "internal_name": "宝箱のカギ"
+ },
+ {
+  "ctor_rva": 7203484,
+  "reg_fn": 7204672,
+  "profile_id": "MEMORY[0xAF3614]",
+  "actor_id": "2",
+  "internal_name": "左向きロング大棍棒"
+ },
+ {
+  "ctor_rva": 7204804,
+  "reg_fn": 7205844,
+  "profile_id": "MEMORY[0xAF3610]",
+  "actor_id": "2",
+  "internal_name": "右向きロング大棍棒"
+ },
+ {
+  "ctor_rva": 7206424,
+  "reg_fn": 7207112,
+  "profile_id": "MEMORY[0xAF3298]",
+  "actor_id": "4100",
+  "internal_name": "ボスクッパスイッチボタン"
+ },
+ {
+  "ctor_rva": 7207244,
+  "reg_fn": 7210152,
+  "profile_id": "MEMORY[0xAF329C]",
+  "actor_id": "2",
+  "internal_name": "ボスクッパ斧付スイッチボタン"
+ },
+ {
+  "ctor_rva": 7222656,
+  "reg_fn": 7224216,
+  "profile_id": "MEMORY[0xAF3288]",
+  "actor_id": "4100",
+  "internal_name": "スイッチはてなボタン"
+ },
+ {
+  "ctor_rva": 7224348,
+  "reg_fn": 7226112,
+  "profile_id": "MEMORY[0xAF328C]",
+  "actor_id": "4100",
+  "internal_name": "スイッチＰボタン(壁キック無効版)"
+ },
+ {
+  "ctor_rva": 7226376,
+  "reg_fn": 7226456,
+  "profile_id": "MEMORY[0xAF3994]",
+  "actor_id": "0",
+  "internal_name": "フレーム設定タグ"
+ },
+ {
+  "ctor_rva": 7226584,
+  "reg_fn": 7227572,
+  "profile_id": "MEMORY[0xAF3990]",
+  "actor_id": "0",
+  "internal_name": "風発生タグ"
+ },
+ {
+  "ctor_rva": 7227700,
+  "reg_fn": 7228260,
+  "profile_id": "MEMORY[0xAF3318]",
+  "actor_id": "2",
+  "internal_name": "玉乗りリフト"
+ },
+ {
+  "ctor_rva": 7228392,
+  "reg_fn": 7228724,
+  "profile_id": "MEMORY[0xAF30E4]",
+  "actor_id": "2",
+  "internal_name": "つかまり鎖"
+ },
+ {
+  "ctor_rva": 7228856,
+  "reg_fn": 7235648,
+  "profile_id": "MEMORY[0xAF30E0]",
+  "actor_id": "2",
+  "internal_name": "ぶらさがりツタ"
+ },
+ {
+  "ctor_rva": 7242044,
+  "reg_fn": 7244236,
+  "profile_id": "MEMORY[0xAF36C0]",
+  "actor_id": "0",
+  "internal_name": "松明の炎"
+ },
+ {
+  "ctor_rva": 7255976,
+  "reg_fn": 7256376,
+  "profile_id": "MEMORY[0xAF3A70]",
+  "actor_id": "0",
+  "internal_name": "タッチ無効アクター"
+ },
+ {
+  "ctor_rva": 7256504,
+  "reg_fn": 7261608,
+  "profile_id": "MEMORY[0xAF2E70]",
+  "actor_id": "2",
+  "internal_name": "トランポリン雲"
+ },
+ {
+  "ctor_rva": 7265060,
+  "reg_fn": 7268080,
+  "profile_id": "MEMORY[0xAF2E74]",
+  "actor_id": "2",
+  "internal_name": "トランポリン雲(乗ると動く)"
+ },
+ {
+  "ctor_rva": 7268440,
+  "reg_fn": 7270752,
+  "profile_id": "MEMORY[0xAF2D7C]",
+  "actor_id": "0",
+  "internal_name": "パラシュートコイン(湧き出し)"
+ },
+ {
+  "ctor_rva": 7271164,
+  "reg_fn": 7274940,
+  "profile_id": "MEMORY[0xAF36C4]",
+  "actor_id": "2",
+  "internal_name": "土管湧き出し敵"
+ },
+ {
+  "ctor_rva": 7275096,
+  "reg_fn": 7278832,
+  "profile_id": "MEMORY[0xAF302C]",
+  "actor_id": "0",
+  "internal_name": "トゲ鉄球湧き土管"
+ },
+ {
+  "ctor_rva": 7279120,
+  "reg_fn": 7280240,
+  "profile_id": "MEMORY[0xAF3440]",
+  "actor_id": "2",
+  "internal_name": "ヒップアタック湧き出しアクター"
+ },
+ {
+  "ctor_rva": 7280492,
+  "reg_fn": 7281552,
+  "profile_id": "MEMORY[0xAF361C]",
+  "actor_id": "0",
+  "internal_name": "わきだし火山弾"
+ },
+ {
+  "ctor_rva": 7281896,
+  "reg_fn": 7282812,
+  "profile_id": "MEMORY[0xAF3A40]",
+  "actor_id": "2",
+  "internal_name": "泡"
+ },
+ {
+  "ctor_rva": 7282944,
+  "reg_fn": 7286100,
+  "profile_id": "MEMORY[0xAF2DA8]",
+  "actor_id": "2",
+  "internal_name": "吸い込み水タグ"
+ },
+ {
+  "ctor_rva": 7286232,
+  "reg_fn": 7287612,
+  "profile_id": "MEMORY[0xAF3A38]",
+  "actor_id": "0",
+  "internal_name": "全水中エフェクトフィルター(RDash)"
+ },
+ {
+  "ctor_rva": 7290920,
+  "reg_fn": 7309284,
+  "profile_id": "MEMORY[0xAF2F14]",
+  "actor_id": "0",
+  "internal_name": "間欠泉(水)"
+ },
+ {
+  "ctor_rva": 7309812,
+  "reg_fn": 7325548,
+  "profile_id": "MEMORY[0xAF2F20]",
+  "actor_id": "0",
+  "internal_name": "間欠泉(水・ボス用)"
+ },
+ {
+  "ctor_rva": 7326564,
+  "reg_fn": 7341868,
+  "profile_id": "MEMORY[0xAF2F24]",
+  "actor_id": "0",
+  "internal_name": "間欠泉(水・ボス用の子アクター)"
+ },
+ {
+  "ctor_rva": 7342404,
+  "reg_fn": 7344116,
+  "profile_id": "MEMORY[0xAF2F18]",
+  "actor_id": "2",
+  "internal_name": "常駐間欠泉(水)"
+ },
+ {
+  "ctor_rva": 7344368,
+  "reg_fn": 7350552,
+  "profile_id": "MEMORY[0xAF2F1C]",
+  "actor_id": "2",
+  "internal_name": "RD3-3専用常駐間欠泉(水)"
+ },
+ {
+  "ctor_rva": 7351088,
+  "reg_fn": 7355484,
+  "profile_id": "MEMORY[0xAF30D8]",
+  "actor_id": "2",
+  "internal_name": "空中水"
+ },
+ {
+  "ctor_rva": 7356916,
+  "reg_fn": 7361480,
+  "profile_id": "MEMORY[0xAF3184]",
+  "actor_id": "6",
+  "internal_name": "土管水流"
+ },
+ {
+  "ctor_rva": 7372128,
+  "reg_fn": 7374128,
+  "profile_id": "MEMORY[0xAF30D0]",
+  "actor_id": "0",
+  "internal_name": "移動金網"
+ },
+ {
+  "ctor_rva": 7374700,
+  "reg_fn": 7385264,
+  "profile_id": "MEMORY[0xAF3238]",
+  "actor_id": "2",
+  "internal_name": "鉄箱(RDash-生成範囲狭い版)"
+ },
+ {
+  "ctor_rva": 7385840,
+  "reg_fn": 7386832,
+  "profile_id": "MEMORY[0xAF30EC]",
+  "actor_id": "2",
+  "internal_name": "鉄箱(湧き出し)"
+ },
+ {
+  "ctor_rva": 7387676,
+  "reg_fn": 7394300,
+  "profile_id": "MEMORY[0xAF2F28]",
+  "actor_id": "2",
+  "internal_name": "間欠泉(溶岩)"
+ },
+ {
+  "ctor_rva": 7394932,
+  "reg_fn": 7397356,
+  "profile_id": "MEMORY[0xAF3118]",
+  "actor_id": "2",
+  "internal_name": "溶岩地面(RDash)"
+ },
+ {
+  "ctor_rva": 7399736,
+  "reg_fn": 7405388,
+  "profile_id": "MEMORY[0xAF39D4]",
+  "actor_id": "2",
+  "internal_name": "ヨッシーたまご"
+ },
+ {
+  "ctor_rva": 7406044,
+  "reg_fn": 7406272,
+  "profile_id": "MEMORY[0xAF2F5C]",
+  "actor_id": "0",
+  "internal_name": "伸縮土管(上)"
+ },
+ {
+  "ctor_rva": 7407760,
+  "reg_fn": 7407908,
+  "profile_id": "MEMORY[0xAF2F60]",
+  "actor_id": "0",
+  "internal_name": "伸縮土管(下)"
+ },
+ {
+  "ctor_rva": 7408036,
+  "reg_fn": 7408184,
+  "profile_id": "MEMORY[0xAF2F58]",
+  "actor_id": "0",
+  "internal_name": "伸縮土管(左)"
+ },
+ {
+  "ctor_rva": 7408312,
+  "reg_fn": 7408460,
+  "profile_id": "MEMORY[0xAF2F54]",
+  "actor_id": "0",
+  "internal_name": "伸縮土管(右)"
+ },
+ {
+  "ctor_rva": 7515148,
+  "reg_fn": 7521624,
+  "profile_id": "MEMORY[0xAF3A1C]",
+  "actor_id": "0",
+  "internal_name": "コインまき砲台"
+ },
+ {
+  "ctor_rva": 7522292,
+  "reg_fn": 7523484,
+  "profile_id": "MEMORY[0xAF3400]",
+  "actor_id": "0",
+  "internal_name": "コインまきコイン"
+ },
+ {
+  "ctor_rva": 7525400,
+  "reg_fn": 7527916,
+  "profile_id": "MEMORY[0xAF3A20]",
+  "actor_id": "0",
+  "internal_name": "コインまきアイテム"
+ },
+ {
+  "ctor_rva": 7531444,
+  "reg_fn": 7533348,
+  "profile_id": "MEMORY[0xAF2D98]",
+  "actor_id": "0",
+  "internal_name": "コインまきマネージャ"
+ },
+ {
+  "ctor_rva": 7535052,
+  "reg_fn": 7540156,
+  "profile_id": "MEMORY[0xAF3A24]",
+  "actor_id": "0",
+  "internal_name": "ミニゲームキノピオ"
+ },
+ {
+  "ctor_rva": 7541572,
+  "reg_fn": 7551284,
+  "profile_id": "MEMORY[0xAF2D88]",
+  "actor_id": "0",
+  "internal_name": "ミニゲームマネージャ"
+ },
+ {
+  "ctor_rva": 7551824,
+  "reg_fn": 7552528,
+  "profile_id": "MEMORY[0xAF2D8C]",
+  "actor_id": "0",
+  "internal_name": "ミニゲームマネージャ(RDash)"
+ },
+ {
+  "ctor_rva": 7556644,
+  "reg_fn": 7560312,
+  "profile_id": "MEMORY[0xAF3A14]",
+  "actor_id": "0",
+  "internal_name": "ミニゲームパネルアイテム"
+ },
+ {
+  "ctor_rva": 7566144,
+  "reg_fn": 7575588,
+  "profile_id": "MEMORY[0xAF313C]",
+  "actor_id": "0",
+  "internal_name": "シャッフルブロック"
+ },
+ {
+  "ctor_rva": 7581016,
+  "reg_fn": 7584796,
+  "profile_id": "MEMORY[0xAF2D90]",
+  "actor_id": "0",
+  "internal_name": "シャッフルブロックマネージャ"
+ },
+ {
+  "ctor_rva": 7589924,
+  "reg_fn": 7598584,
+  "profile_id": "MEMORY[0xAF343C]",
+  "actor_id": "0",
+  "internal_name": "スロットチビヨッシー"
+ },
+ {
+  "ctor_rva": 7601612,
+  "reg_fn": 7604768,
+  "profile_id": "MEMORY[0xAF3A18]",
+  "actor_id": "0",
+  "internal_name": "スロットアイテム"
+ },
+ {
+  "ctor_rva": 7611632,
+  "reg_fn": 7619800,
+  "profile_id": "MEMORY[0xAF2D94]",
+  "actor_id": "0",
+  "internal_name": "スロットマネージャ"
+ },
+ {
+  "ctor_rva": 7620864,
+  "reg_fn": 7620248,
+  "profile_id": "MEMORY[0xAF3A64]",
+  "actor_id": "2",
+  "internal_name": "コインしゃぼん（スタッフロール）"
+ },
+ {
+  "ctor_rva": 7627440,
+  "reg_fn": 7632096,
+  "profile_id": "MEMORY[0xAF3A60]",
+  "actor_id": "2",
+  "internal_name": "アルファベットしゃぼん（スタッフロール）"
+ },
+ {
+  "ctor_rva": 7632788,
+  "reg_fn": 7637064,
+  "profile_id": "MEMORY[0xAF3A50]",
+  "actor_id": "0",
+  "internal_name": "チビヨッシー（風船）（スタッフロール喜び用）"
+ },
+ {
+  "ctor_rva": 7640740,
+  "reg_fn": 7642748,
+  "profile_id": "MEMORY[0xAF3A4C]",
+  "actor_id": "0",
+  "internal_name": "チビヨッシー（泡）（スタッフロール）"
+ },
+ {
+  "ctor_rva": 7643080,
+  "reg_fn": 7644816,
+  "profile_id": "MEMORY[0xAF3A58]",
+  "actor_id": "0",
+  "internal_name": "チビヨッシー（光）（スタッフロール喜び用）"
+ },
+ {
+  "ctor_rva": 7645440,
+  "reg_fn": 7654808,
+  "profile_id": "MEMORY[0xAF2DB0]",
+  "actor_id": "2",
+  "internal_name": "スタッフロールマネージャ"
+ },
+ {
+  "ctor_rva": 7655304,
+  "reg_fn": 7656508,
+  "profile_id": "MEMORY[0xAF2DB4]",
+  "actor_id": "2",
+  "internal_name": "スタッフロールマネージャ"
+ },
+ {
+  "ctor_rva": 7656640,
+  "reg_fn": 7660476,
+  "profile_id": "MEMORY[0xAF3A68]",
+  "actor_id": "0",
+  "internal_name": "トッテン君（スタッフロール）"
+ },
+ {
+  "ctor_rva": 7664024,
+  "reg_fn": 7667644,
+  "profile_id": "MEMORY[0xAF341C]",
+  "actor_id": "0",
+  "internal_name": "ゴールデモキノピオ"
+ },
+ {
+  "ctor_rva": 7884708,
+  "reg_fn": 7888764,
+  "profile_id": "MEMORY[0xAF30DC]",
+  "actor_id": "0",
+  "internal_name": "プレイヤー氷"
+ },
+ {
+  "ctor_rva": 7949988,
+  "reg_fn": 7962564,
+  "profile_id": "MEMORY[0xAF3418]",
+  "actor_id": "0",
+  "internal_name": "プレイヤーオブジェクト"
+ },
+ {
+  "ctor_rva": 8159356,
+  "reg_fn": 8162748,
+  "profile_id": "MEMORY[0xAF3414]",
+  "actor_id": "0",
+  "internal_name": "トッテンプレイヤー"
+ },
+ {
+  "ctor_rva": 8173492,
+  "reg_fn": 8178008,
+  "profile_id": "MEMORY[0xAF3410]",
+  "actor_id": "0",
+  "internal_name": "ヨッシー"
+ },
+ {
+  "ctor_rva": 8201792,
+  "reg_fn": 8203796,
+  "profile_id": "MEMORY[0xAF34A0]",
+  "actor_id": "34",
+  "internal_name": "ヨッシーの炎"
+ },
+ {
+  "ctor_rva": 8571652,
+  "reg_fn": 8572272,
+  "profile_id": "MEMORY[0xAF3648]",
+  "actor_id": "0",
+  "internal_name": "オートスクロール"
+ },
+ {
+  "ctor_rva": 8572400,
+  "reg_fn": 8573140,
+  "profile_id": "MEMORY[0xAF3408]",
+  "actor_id": "0",
+  "internal_name": "シャボン保護地帯タグ"
+ },
+ {
+  "ctor_rva": 8573268,
+  "reg_fn": 8573720,
+  "profile_id": "MEMORY[0xAF3654]",
+  "actor_id": "0",
+  "internal_name": "ＢＧ中心くん"
+ },
+ {
+  "ctor_rva": 8573848,
+  "reg_fn": 8575176,
+  "profile_id": "MEMORY[0xAF3444]",
+  "actor_id": "0",
+  "internal_name": "土管NextGotoタイマー加算タグ"
+ },
+ {
+  "ctor_rva": 8575600,
+  "reg_fn": 8576492,
+  "profile_id": "MEMORY[0xAF3660]",
+  "actor_id": "0",
+  "internal_name": "環境音タグ"
+ },
+ {
+  "ctor_rva": 8576620,
+  "reg_fn": 8577092,
+  "profile_id": "MEMORY[0xAF3658]",
+  "actor_id": "0",
+  "internal_name": "環境現象くん"
+ },
+ {
+  "ctor_rva": 8577220,
+  "reg_fn": 8578348,
+  "profile_id": "MEMORY[0xAF3404]",
+  "actor_id": "0",
+  "internal_name": "シャドウ君の家の読むタグ"
+ },
+ {
+  "ctor_rva": 8578476,
+  "reg_fn": 8578968,
+  "profile_id": "MEMORY[0xAF365C]",
+  "actor_id": "0",
+  "internal_name": "草花種類指定タグ"
+ },
+ {
+  "ctor_rva": 8579096,
+  "reg_fn": 8579728,
+  "profile_id": "MEMORY[0xAF3650]",
+  "actor_id": "0",
+  "internal_name": "クッパ専用エリアＯＢＪ"
+ },
+ {
+  "ctor_rva": 8579856,
+  "reg_fn": 8580336,
+  "profile_id": "MEMORY[0xAF362C]",
+  "actor_id": "0",
+  "internal_name": "境界速度調整君"
+ },
+ {
+  "ctor_rva": 8581468,
+  "reg_fn": 8581496,
+  "profile_id": "MEMORY[0xAF3630]",
+  "actor_id": "0",
+  "internal_name": "ハイパーマックス上君（右）"
+ },
+ {
+  "ctor_rva": 8581844,
+  "reg_fn": 8582460,
+  "profile_id": "MEMORY[0xAF3448]",
+  "actor_id": "0",
+  "internal_name": "クエストアクター配置タグ"
+ },
+ {
+  "ctor_rva": 8582588,
+  "reg_fn": 8583208,
+  "profile_id": "MEMORY[0xAF344C]",
+  "actor_id": "0",
+  "internal_name": "クエスト用デモロケーションタグ"
+ },
+ {
+  "ctor_rva": 8583360,
+  "reg_fn": 8584040,
+  "profile_id": "MEMORY[0xAF3450]",
+  "actor_id": "0",
+  "internal_name": "シャドウ君退避タグ"
+ },
+ {
+  "ctor_rva": 8584504,
+  "reg_fn": 8585064,
+  "profile_id": "MEMORY[0xAF364C]",
+  "actor_id": "0",
+  "internal_name": "特殊スクロールタグ"
+ },
+ {
+  "ctor_rva": 8585192,
+  "reg_fn": 8586932,
+  "profile_id": "MEMORY[0xAF3998]",
+  "actor_id": "0",
+  "internal_name": "シャドウ君の家の読むタグ"
+ },
+ {
+  "ctor_rva": 8587084,
+  "reg_fn": 8587816,
+  "profile_id": "MEMORY[0xAF2DB8]",
+  "actor_id": "0",
+  "internal_name": "ショートプレイ結果デモタグ"
+ },
+ {
+  "ctor_rva": 8588148,
+  "reg_fn": 8591972,
+  "profile_id": "MEMORY[0xAF399C]",
+  "actor_id": "0",
+  "internal_name": "ショートプレイ結果デモタグ"
+ },
+ {
+  "ctor_rva": 8592576,
+  "reg_fn": 8593152,
+  "profile_id": "MEMORY[0xAF3624]",
+  "actor_id": "0",
+  "internal_name": "ズーム君"
+ },
+ {
+  "ctor_rva": 8593280,
+  "reg_fn": 8593868,
+  "profile_id": "MEMORY[0xAF3628]",
+  "actor_id": "0",
+  "internal_name": "ズーム君(RDash)"
+ }
+]

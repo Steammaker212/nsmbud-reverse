@@ -19184,6 +19184,60 @@
   }
 
 /* ============================================================================
+ * Actor_BossKK_Demo_manage_Tag_build
+ * RVA 0x000325d8   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_BossKK_Demo_manage_Tag_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x17F0u);
+    result = sub_600271A0(v0);
+    *result = 12328948;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Demo_for_Kamek_build
+ * RVA 0x00032a00   size 0x54   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_Demo_for_Kamek_build(_DWORD *a1)
+  {
+    _DWORD *v2; // r0
+    _DWORD *result; // r0
+    int v4; // r12
+    int v5; // r2
+  
+    v2 = (_DWORD *)operator new(0x1950u);
+    result = sub_60054D3C(v2);
+    *result = 12329260;
+    v4 = a1[4];
+    v5 = a1[5];
+    result[1619] = a1[6];
+    result[1617] = v4;
+    result[1618] = v5;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Demo_for_K_K_build
+ * RVA 0x00032e78   size 0x44   xrefs 0
+ * ============================================================================ */
+  int Actor_Demo_for_K_K_build()
+  {
+    int v0; // r0
+    int result; // r0
+  
+    v0 = operator new(0x18A8u);
+    result = Enemy::Enemy(v0);
+    *(_DWORD *)result = 12329904;
+    *(_DWORD *)(result + 6300) = 0;
+    *(_WORD *)(result + 6304) = 0;
+    return result;
+  }
+
+/* ============================================================================
  * sub_60033374
  * RVA 0x00033374   size 0x114   xrefs 1
  * ============================================================================ */
@@ -19276,6 +19330,49 @@
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
+  }
+
+/* ============================================================================
+ * Actor_BossKK_thunder_build
+ * RVA 0x00033a78   size 0xbc   xrefs 0
+ * ============================================================================ */
+  int Actor_BossKK_thunder_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x1B00u);
+    MultiStateActor::MultiStateActor((_DWORD *)v0);
+    *(_DWORD *)v0 = 12330568;
+    *(_DWORD *)(v0 + 6104) = 12330892;
+    MovingSoundActor_ctor((nn::atk::SoundActor *)(v0 + 6108), 0, 1);
+    *(_DWORD *)(v0 + 6108) = 12327348;
+    LightSource::LightSource(v0 + 6416);
+    EffectWrapper_ctor(v0 + 6488);
+    *(_DWORD *)(v0 + 6488) = 12325968;
+    ActiveCollider_ctor(v0 + 6592);
+    *(_WORD *)(v0 + 6904) = 0;
+    *(_DWORD *)(v0 + 6896) = 0;
+    *(_DWORD *)(v0 + 6900) = 0;
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_afterbattle_Demo_Boxing_BowserJr_build
+ * RVA 0x00034b54   size 0x84   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_afterbattle_Demo_Boxing_BowserJr_build()
+  {
+    _DWORD *v0; // r4
+  
+    v0 = (_DWORD *)operator new(0x1EF0u);
+    BowserJrBase::BowserJrBase((int)v0);
+    *v0 = 12330984;
+    v0[1901] = 12332192;
+    v0[1902] = v0;
+    memset(v0 + 1903, 0, 0x34u);
+    memset(v0 + 1928, 0, 0x4Du);
+    memset(v0 + 1948, 0, 0x80u);
+    return v0;
   }
 
 /* ============================================================================
@@ -20228,6 +20325,18 @@
       _cxa_guard_release_0(13087792);
     }
     return a1 == 13087788 || sub_60026DC8(a1);
+  }
+
+/* ============================================================================
+ * Actor_afterbattle_Demo_Boxing_BowserJr_Crown_build
+ * RVA 0x0003a78c   size 0x1c   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_afterbattle_Demo_Boxing_BowserJr_Crown_build()
+  {
+    _DWORD *v0; // r0
+  
+    v0 = (_DWORD *)operator new(0x2E50u);
+    return sub_60040174(v0);
   }
 
 /* ============================================================================
@@ -26694,6 +26803,45 @@
   }
 
 /* ============================================================================
+ * Actor_BoomBoom_Demo_manage_Tag_build
+ * RVA 0x00053fb4   size 0x44   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_BoomBoom_Demo_manage_Tag_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x17F8u);
+    result = sub_600271A0(v0);
+    *result = 12336316;
+    result[1531] = 0;
+    result[1532] = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Demo_for_Kamek_2_build
+ * RVA 0x00054630   size 0x8c   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_Demo_for_Kamek_2_build()
+  {
+    _DWORD *v0; // r4
+  
+    v0 = (_DWORD *)operator new(0x1948u);
+    Enemy::Enemy((int)v0);
+    *v0 = 12336616;
+    v0[1579] = 0;
+    v0[1578] = 0;
+    v0[1577] = 0;
+    v0[1576] = 0;
+    v0[1575] = 0;
+    EffectWrapper_ctor((int)(v0 + 1580));
+    v0[1580] = 12325968;
+    PlayerLookTarget_ctor((int)(v0 + 1606), v0[2]);
+    return v0;
+  }
+
+/* ============================================================================
  * sub_600549F8
  * RVA 0x000549f8   size 0x154   xrefs 1
  * ============================================================================ */
@@ -26872,6 +27020,64 @@
     result = v24;
     v1[3] = v24;
     return result;
+  }
+
+/* ============================================================================
+ * Actor_BoomBoom_W2fort_build
+ * RVA 0x00055608   size 0x230   xrefs 0
+ * ============================================================================ */
+  int Actor_BoomBoom_W2fort_build()
+  {
+    int v0; // r4
+    float v1; // r1
+  
+    v0 = operator new(0x2200u);
+    sub_6004D884(v0);
+    *(_DWORD *)v0 = 12337280;
+    *(_DWORD *)(v0 + 8392) = 150;
+    *(_DWORD *)(v0 + 8396) = 60;
+    *(_DWORD *)(v0 + 8400) = 10;
+    *(_DWORD *)(v0 + 8404) = 0;
+    *(_DWORD *)(v0 + 8408) = 0;
+    *(_DWORD *)(v0 + 8412) = 1028443341;
+    *(_DWORD *)(v0 + 8416) = 1031127695;
+    *(_DWORD *)(v0 + 8420) = 0;
+    *(_DWORD *)(v0 + 8424) = 1115684864;
+    *(_DWORD *)(v0 + 8428) = 1125122048;
+    *(_DWORD *)(v0 + 8432) = 1114636288;
+    *(_DWORD *)(v0 + 8436) = 1075419546;
+    *(_DWORD *)(v0 + 8440) = dword_60C80A20;
+    *(_DWORD *)(v0 + 8444) = dword_60C80A2C;
+    *(_DWORD *)(v0 + 8448) = 1110704128;
+    v1 = flt_60C80A28;
+    *(_DWORD *)(v0 + 8452) = dword_60C80A24;
+    *(float *)(v0 + 8456) = v1;
+    *(_DWORD *)(v0 + 8460) = 1112276992;
+    *(_DWORD *)(v0 + 8464) = 1109917696;
+    *(_DWORD *)(v0 + 8468) = 1065353216;
+    *(_DWORD *)(v0 + 8472) = 51;
+    *(_DWORD *)(v0 + 8476) = 1065353216;
+    *(_DWORD *)(v0 + 8480) = 1103101952;
+    *(_DWORD *)(v0 + 8484) = 1065353216;
+    *(_DWORD *)(v0 + 8488) = 24;
+    *(_DWORD *)(v0 + 8492) = 1065353216;
+    *(_DWORD *)(v0 + 8520) = 0;
+    *(_DWORD *)(v0 + 8516) = 0;
+    *(_DWORD *)(v0 + 8512) = 0;
+    *(_DWORD *)(v0 + 8508) = 0;
+    *(_DWORD *)(v0 + 8504) = 0;
+    *(_DWORD *)(v0 + 8496) = 0;
+    *(_DWORD *)(v0 + 8500) = 0;
+    EffectWrapper_ctor(v0 + 8524);
+    *(_DWORD *)(v0 + 8524) = 12325968;
+    *(_BYTE *)(v0 + 8628) = 0;
+    *(_DWORD *)(v0 + 8632) = 0;
+    *(_DWORD *)(v0 + 8688) = 0;
+    *(_DWORD *)(v0 + 8692) = -1;
+    EffectData_ctor(v0 + 8636);
+    (*(void (__fastcall **)(int))(*(_DWORD *)v0 + 1012))(v0);
+    (*(void (__fastcall **)(int))(*(_DWORD *)v0 + 1284))(v0);
+    return v0;
   }
 
 /* ============================================================================
@@ -27443,6 +27649,100 @@
   }
 
 /* ============================================================================
+ * Actor_BoomBoom_W3fort_build
+ * RVA 0x000575d8   size 0x280   xrefs 0
+ * ============================================================================ */
+  int Actor_BoomBoom_W3fort_build()
+  {
+    int v0; // r4
+    int v1; // r0
+    int v2; // s0
+    int v3; // s2
+    float v4; // s0
+    int *v5; // r3
+    int *v6; // r6
+    int v7; // r6
+    int *v8; // r2
+    int *v9; // r2
+    int *v10; // r2
+    float *v11; // r2
+  
+    v0 = operator new(0x2228u);
+    sub_60055844(v0);
+    *(_DWORD *)v0 = 12338660;
+    *(_BYTE *)(v0 + 8736) = 1;
+    *(_DWORD *)(v0 + 8740) = 2;
+    *(_DWORD *)(v0 + 6300) = 18;
+    sub_60055A70(v0);
+    *(_DWORD *)(v0 + 8700) = 0;
+    *(_DWORD *)(v0 + 7916) = 30;
+    *(_DWORD *)(v0 + 8392) = 90;
+    *(_DWORD *)(v0 + 8396) = 60;
+    *(_DWORD *)(v0 + 8400) = 10;
+    *(_DWORD *)(v0 + 8404) = 0;
+    *(_DWORD *)(v0 + 8412) = 1028443341;
+    *(_DWORD *)(v0 + 8408) = 0;
+    *(_DWORD *)(v0 + 8416) = 1031127695;
+    *(_DWORD *)(v0 + 8420) = 0;
+    v1 = (*(int (__fastcall **)(int))(*(_DWORD *)v0 + 724))(v0);
+    v2 = 1110704128;
+    *(_DWORD *)(v0 + 8704) = 1123024896;
+    *(_DWORD *)(v0 + 8708) = 1115684864;
+    if ( v1 )
+    {
+      v3 = 1068895073;
+    }
+    else
+    {
+      v2 = 1113325568;
+      v3 = 1066725897;
+    }
+    *(_DWORD *)(v0 + 8712) = v2;
+    v4 = 1.25;
+    *(_DWORD *)(v0 + 8716) = v3;
+    v5 = &dword_60C80B40;
+    if ( v1 )
+      v5 = &dword_60C80B44;
+    *(_DWORD *)(v0 + 8720) = *v5;
+    v6 = &dword_60C80B60;
+    if ( v1 )
+      v6 = &dword_60C80B68;
+    v7 = *v6;
+    if ( !v1 )
+      v4 = 1.0;
+    *(_DWORD *)(v0 + 8724) = v7;
+    *(float *)(v0 + 8728) = v4;
+    *(float *)(v0 + 8732) = v4;
+    *(_DWORD *)(v0 + 8424) = 1115684864;
+    *(_DWORD *)(v0 + 8428) = 1125122048;
+    *(_DWORD *)(v0 + 8432) = 1114636288;
+    *(_DWORD *)(v0 + 8436) = 1075419546;
+    v8 = &dword_60C80B48;
+    if ( v1 )
+      v8 = &dword_60C80B54;
+    *(_DWORD *)(v0 + 8440) = *v8;
+    v9 = &dword_60C80B64;
+    if ( v1 )
+      v9 = &dword_60C80B6C;
+    *(_DWORD *)(v0 + 8444) = *v9;
+    *(_DWORD *)(v0 + 8448) = 1110704128;
+    v10 = &dword_60C80B4C;
+    if ( v1 )
+      v10 = &dword_60C80B58;
+    *(_DWORD *)(v0 + 8452) = *v10;
+    v11 = &flt_60C80B50;
+    if ( v1 )
+      v11 = &flt_60C80B5C;
+    *(float *)(v0 + 8456) = *v11;
+    *(_DWORD *)(v0 + 8476) = 1065353216;
+    *(_DWORD *)(v0 + 8492) = 1065353216;
+    *(_DWORD *)(v0 + 8496) = 0;
+    *(_DWORD *)(v0 + 8500) = 1034147594;
+    *(_DWORD *)(v0 + 8504) = 0;
+    return v0;
+  }
+
+/* ============================================================================
  * sub_60057870
  * RVA 0x00057870   size 0x270   xrefs 2
  * ============================================================================ */
@@ -27812,6 +28112,118 @@
   }
 
 /* ============================================================================
+ * Actor_BoomBoom_W4fort_build
+ * RVA 0x00058f5c   size 0x254   xrefs 0
+ * ============================================================================ */
+  float *Actor_BoomBoom_W4fort_build()
+  {
+    int v0; // r0
+    float *result; // r0
+    int v2; // r2
+    int v3; // r4
+    float *v4; // r3
+    float *v5; // r5
+    int v6; // s2
+    float v7; // s0
+    int *v8; // r5
+    int *v9; // r6
+    int v10; // r6
+    int *v11; // r2
+    int *v12; // r2
+    int *v13; // r2
+    float *v14; // r2
+  
+    v0 = operator new(0x2228u);
+    result = (float *)sub_60057870(v0);
+    *result = 1.7292e-38;
+    *((_DWORD *)result + 1575) = 18;
+    result[2175] = 0.0;
+    *((_DWORD *)result + 1979) = 30;
+    *((_DWORD *)result + 2098) = 90;
+    *((_DWORD *)result + 2099) = 60;
+    *((_DWORD *)result + 2100) = 10;
+    result[2101] = 0.0;
+    result[2103] = 0.05;
+    result[2102] = 0.0;
+    result[2104] = 0.06;
+    result[2105] = 0.0;
+    v2 = *((_DWORD *)result + 1576);
+    result[2176] = 120.0;
+    v3 = 17 / v2;
+    v4 = &flt_600591B4;
+    result[2177] = 64.0;
+    v5 = &flt_600591BC;
+    if ( 17 / v2 > 0 )
+    {
+      v4 = &flt_600591B8;
+      v5 = &flt_600591C0;
+    }
+    v6 = *(_DWORD *)v5;
+    result[2178] = *v4;
+    v7 = 1.25;
+    *((_DWORD *)result + 2179) = v6;
+    v8 = &dword_60C80BC0;
+    if ( v3 <= 0 )
+      v8 = &dword_60C80BC4;
+    *((_DWORD *)result + 2180) = *v8;
+    v9 = &dword_60C80BE8;
+    if ( v3 > 0 )
+      v9 = &dword_60C80BE0;
+    v10 = *v9;
+    if ( v3 > 0 )
+      v7 = 1.0;
+    *((_DWORD *)result + 2181) = v10;
+    result[2182] = v7;
+    result[2183] = v7;
+    result[2106] = 64.0;
+    result[2107] = 144.0;
+    result[2108] = 60.0;
+    result[2109] = 2.4;
+    v11 = &dword_60C80BD4;
+    if ( v3 > 0 )
+      v11 = &dword_60C80BC8;
+    *((_DWORD *)result + 2110) = *v11;
+    v12 = &dword_60C80BEC;
+    if ( v3 > 0 )
+      v12 = &dword_60C80BE4;
+    *((_DWORD *)result + 2111) = *v12;
+    result[2112] = 45.0;
+    v13 = &dword_60C80BD8;
+    if ( v3 > 0 )
+      v13 = &dword_60C80BCC;
+    *((_DWORD *)result + 2113) = *v13;
+    v14 = &flt_60C80BDC;
+    if ( v3 > 0 )
+      v14 = &flt_60C80BD0;
+    result[2114] = *v14;
+    result[2119] = 1.0;
+    result[2123] = 1.0;
+    result[2124] = 0.0;
+    result[2125] = 0.03;
+    *((_DWORD *)result + 2126) = 10;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_BoomBoom_W5fort_build
+ * RVA 0x00059b60   size 0x78   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_BoomBoom_W5fort_build()
+  {
+    _DWORD *v0; // r4
+  
+    v0 = (_DWORD *)operator new(0x2398u);
+    sub_60057870((int)v0);
+    *v0 = 12341496;
+    ActiveCollider_ctor((int)(v0 + 2186));
+    v0[2275] = 0;
+    v0[2276] = -1;
+    EffectData_ctor((int)(v0 + 2262));
+    (*(void (__fastcall **)(_DWORD *))(*v0 + 1284))(v0);
+    return v0;
+  }
+
+/* ============================================================================
  * sub_6005B3E8
  * RVA 0x0005b3e8   size 0x18c   xrefs 1
  * ============================================================================ */
@@ -27844,6 +28256,45 @@
       _cxa_guard_release_0(13108604);
     }
     return a1 == 13108600 || sub_6004F7C8(a1);
+  }
+
+/* ============================================================================
+ * Actor_BoomBoom_W6fort_build
+ * RVA 0x0005b974   size 0xf8   xrefs 0
+ * ============================================================================ */
+  int Actor_BoomBoom_W6fort_build()
+  {
+    int v0; // r0
+    int result; // r0
+  
+    v0 = operator new(0x1F08u);
+    result = BoomBoomBase::BoomBoomBase(v0);
+    *(_DWORD *)result = 12342964;
+    *(_DWORD *)(result + 7836) = 0;
+    *(_BYTE *)(result + 7840) = 0;
+    *(_DWORD *)(result + 7856) = 0;
+    *(_DWORD *)(result + 7852) = 0;
+    *(_DWORD *)(result + 7844) = 0;
+    *(_DWORD *)(result + 7848) = 0;
+    *(_DWORD *)(result + 7860) = 1;
+    *(_DWORD *)(result + 7892) = 0;
+    *(_BYTE *)(result + 7896) = 0;
+    *(_DWORD *)(result + 7884) = 0;
+    *(_DWORD *)(result + 7880) = 0;
+    *(_DWORD *)(result + 7876) = 0;
+    *(_DWORD *)(result + 7872) = 0;
+    *(_DWORD *)(result + 7868) = 0;
+    *(_DWORD *)(result + 7864) = 0;
+    *(_DWORD *)(result + 7912) = 0;
+    *(_DWORD *)(result + 7908) = 0;
+    *(_DWORD *)(result + 7904) = 0;
+    *(_DWORD *)(result + 7900) = 0;
+    *(_DWORD *)(result + 7932) = 0;
+    *(_DWORD *)(result + 7928) = 0;
+    *(_DWORD *)(result + 7924) = 0;
+    *(_DWORD *)(result + 7920) = 0;
+    *(_BYTE *)(result + 7936) = 1;
+    return result;
   }
 
 /* ============================================================================
@@ -28056,6 +28507,21 @@
   }
 
 /* ============================================================================
+ * Actor_first_Bowser_Demo_for_BowserJr_build
+ * RVA 0x00060ea8   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_first_Bowser_Demo_for_BowserJr_build()
+  {
+    int v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = operator new(0x1DB8u);
+    result = (_DWORD *)BowserJrBase::BowserJrBase(v0);
+    *result = 12344244;
+    return result;
+  }
+
+/* ============================================================================
  * _ZN12BowserJrBaseD2Ev
  * RVA 0x0006160c   size 0xd4   xrefs 0
  * ============================================================================ */
@@ -28136,6 +28602,41 @@
   int BowserJrBase::vf480()
   {
     return 0;
+  }
+
+/* ============================================================================
+ * Actor_first_Bowser_Demo_for_BowserJr_Crown_build
+ * RVA 0x00061bc8   size 0x58   xrefs 0
+ * ============================================================================ */
+  int Actor_first_Bowser_Demo_for_BowserJr_Crown_build()
+  {
+    int v0; // r5
+  
+    v0 = operator new(0x1E58u);
+    sub_600D0154(v0);
+    *(_DWORD *)v0 = 12345452;
+    *(_DWORD *)(v0 + 7656) = 0;
+    *(_BYTE *)(v0 + 7708) = 0;
+    memset((void *)(v0 + 7712), 0, 0x38u);
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_final_bomu_build
+ * RVA 0x000636f0   size 0x4c   xrefs 0
+ * ============================================================================ */
+  int Actor_final_bomu_build()
+  {
+    int v0; // r0
+    int result; // r0
+  
+    v0 = operator new(0x1BA8u);
+    result = BobOmb_ctor(v0);
+    *(_DWORD *)result = 12346372;
+    *(_BYTE *)(result + 7068) = 0;
+    *(_DWORD *)(result + 7072) = 0;
+    *(_DWORD *)(result + 7076) = 0;
+    return result;
   }
 
 /* ============================================================================
@@ -28285,6 +28786,30 @@
     CurrentState = StateMgr::getCurrentState(a1 + 6084);
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     return v2 == (*(int (**)(void))(MEMORY[0xC8EA94] + 8))();
+  }
+
+/* ============================================================================
+ * Actor_background_for_Peach_build
+ * RVA 0x000646f0   size 0x84   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_background_for_Peach_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x17F8u);
+    result = StateActor_ctor(v0);
+    *result = 12347136;
+    *((_BYTE *)result + 6124) = 0;
+    result[1530] = 0;
+    result[1529] = 0;
+    result[1528] = 0;
+    result[1527] = 0;
+    result[1525] = 0;
+    result[1526] = 0;
+    result[1532] = "SE_VOC_PCH_WAVE_TO_M";
+    *((_BYTE *)result + 6132) = 0;
+    return result;
   }
 
 /* ============================================================================
@@ -28476,6 +29001,27 @@
     sub_604218E0(*v1);
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v1 + 52))(**v1);
     return (*(int (__fastcall **)(_DWORD))(*(_DWORD *)**v1 + 56))(**v1);
+  }
+
+/* ============================================================================
+ * Actor_background_for_shata_build
+ * RVA 0x00066238   size 0x64   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_background_for_shata_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x17F0u);
+    result = StateActor_ctor(v0);
+    *result = 12347368;
+    result[1530] = 0;
+    result[1529] = 0;
+    result[1528] = 0;
+    result[1527] = 0;
+    result[1525] = 0;
+    result[1526] = 0;
+    return result;
   }
 
 /* ============================================================================
@@ -34377,6 +34923,26 @@
   }
 
 /* ============================================================================
+ * Actor_final_Bowser_Demo_manage_Tag_build
+ * RVA 0x0007a734   size 0x84   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_final_Bowser_Demo_manage_Tag_build()
+  {
+    _DWORD *v0; // r4
+  
+    v0 = (_DWORD *)operator new(0x1850u);
+    sub_600271A0(v0);
+    *v0 = 12349088;
+    memset(v0 + 1531, 0, 0x2Cu);
+    v0[1542] = 0x40000000;
+    v0[1543] = 1056964608;
+    v0[1544] = 1065353216;
+    v0[1545] = 1065353216;
+    memset(v0 + 1546, 0, 0x28u);
+    return v0;
+  }
+
+/* ============================================================================
  * sub_6007A978
  * RVA 0x0007a978   size 0x254   xrefs 2
  * ============================================================================ */
@@ -34549,6 +35115,36 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * Actor_final_Bowser_fire_build
+ * RVA 0x0007e9f4   size 0x100   xrefs 0
+ * ============================================================================ */
+  int Actor_final_Bowser_fire_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x1B40u);
+    StateActor_ctor((_DWORD *)v0);
+    *(_DWORD *)v0 = 12349400;
+    *(_DWORD *)(v0 + 6100) = 0;
+    *(_BYTE *)(v0 + 6104) = 1;
+    *(_DWORD *)(v0 + 6108) = 0;
+    *(_DWORD *)(v0 + 6112) = 0;
+    LightSource::LightSource(v0 + 6116);
+    EffectWrapper_ctor(v0 + 6188);
+    *(_DWORD *)(v0 + 6188) = 12325968;
+    memset((void *)(v0 + 6292), 0, 0x34u);
+    *(_DWORD *)(v0 + 6344) = -1;
+    *(_DWORD *)(v0 + 6348) = 0;
+    *(_DWORD *)(v0 + 6352) = 0;
+    *(_DWORD *)(v0 + 6356) = 0;
+    ActiveCollider_ctor(v0 + 6360);
+    *(_DWORD *)(v0 + 6664) = 12349644;
+    MovingSoundActor_ctor((nn::atk::SoundActor *)(v0 + 6668), 0, 1);
+    *(_DWORD *)(v0 + 6668) = 12327348;
+    return v0;
   }
 
 /* ============================================================================
@@ -34852,6 +35448,43 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * Actor_final_BowserJr_build
+ * RVA 0x00081b20   size 0x118   xrefs 0
+ * ============================================================================ */
+  int Actor_final_BowserJr_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x1EF0u);
+    sub_600FB6C8(v0);
+    *(_DWORD *)v0 = 12349724;
+    *(_DWORD *)(v0 + 7612) = 0;
+    *(_DWORD *)(v0 + 7616) = 1;
+    *(_DWORD *)(v0 + 7648) = 0;
+    *(_DWORD *)(v0 + 7652) = 0;
+    *(_BYTE *)(v0 + 7656) = 0;
+    *(_BYTE *)(v0 + 7644) = 0;
+    *(_DWORD *)(v0 + 7640) = 0;
+    *(_DWORD *)(v0 + 7636) = 0;
+    *(_DWORD *)(v0 + 7632) = 0;
+    *(_DWORD *)(v0 + 7628) = 0;
+    *(_DWORD *)(v0 + 7620) = 0;
+    *(_DWORD *)(v0 + 7624) = 0;
+    memset((void *)(v0 + 7660), 0, 0x29u);
+    *(_DWORD *)(v0 + 7704) = 12350948;
+    EffectWrapper_ctor(v0 + 7708);
+    *(_DWORD *)(v0 + 7708) = 12325968;
+    EffectWrapper_ctor(v0 + 7812);
+    *(_DWORD *)(v0 + 7812) = 12325968;
+    *(_DWORD *)(v0 + 7688) = 0;
+    *(_DWORD *)(v0 + 7684) = 0;
+    *(_DWORD *)(v0 + 7680) = 0;
+    *(_DWORD *)(v0 + 7676) = 0;
+    *(_DWORD *)(v0 + 7672) = 0;
+    return v0;
   }
 
 /* ============================================================================
@@ -35819,6 +36452,18 @@
   }
 
 /* ============================================================================
+ * Actor_final_BowserJr_Crown_build
+ * RVA 0x0008ce8c   size 0x1c   xrefs 0
+ * ============================================================================ */
+  int Actor_final_BowserJr_Crown_build()
+  {
+    int v0; // r0
+  
+    v0 = operator new(0x3E28u);
+    return sub_60090694(v0);
+  }
+
+/* ============================================================================
  * sub_60090694
  * RVA 0x00090694   size 0x260   xrefs 1
  * ============================================================================ */
@@ -36428,6 +37073,21 @@
       }
     }
     return v4;
+  }
+
+/* ============================================================================
+ * Actor_final_BowserJr_fire_build
+ * RVA 0x00096a34   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_final_BowserJr_fire_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x1A68u);
+    result = sub_600B91C0(v0);
+    *result = 12352132;
+    return result;
   }
 
 /* ============================================================================
@@ -39687,6 +40347,76 @@
   }
 
 /* ============================================================================
+ * Actor_Iggy_magic_build
+ * RVA 0x000a28d0   size 0x80   xrefs 0
+ * ============================================================================ */
+  int Actor_Iggy_magic_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x1AD8u);
+    sub_600B91C0((_DWORD *)v0);
+    *(_DWORD *)v0 = 12354400;
+    *(_BYTE *)(v0 + 6760) = 0;
+    *(_BYTE *)(v0 + 6761) = 0;
+    *(_DWORD *)(v0 + 6764) = 0;
+    EffectWrapper_ctor(v0 + 6768);
+    *(_DWORD *)(v0 + 6768) = 12325968;
+    if ( (*(_BYTE *)(v0 + 22) & 0x10) != 0 )
+      *(_BYTE *)(v0 + 6761) = 1;
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_Iggy_room_build
+ * RVA 0x000a38c8   size 0x11c   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_Iggy_room_build(int a1)
+  {
+    int v2; // r4
+    int v3; // r0
+    int v4; // r1
+    int v5; // r2
+  
+    v2 = operator new(0xC08u);
+    StageActor::StageActor(v2, a1);
+    *(_DWORD *)v2 = 12354784;
+    *(_DWORD *)(v2 + 644) = 0;
+    SolidOnTopCollider_ctor();
+    *(_DWORD *)(v2 + 648) = 12355000;
+    memset((void *)(v2 + 1016), 0, 0x30u);
+    ColliderNode_ctor(v2 + 1032);
+    *(_DWORD *)(v2 + 1068) = 0;
+    *(_DWORD *)(v2 + 1072) = 0;
+    *(_DWORD *)(v2 + 1076) = 0;
+    *(_DWORD *)(v2 + 1080) = 0;
+    *(_DWORD *)(v2 + 1084) = 0;
+    *(_DWORD *)(v2 + 1088) = 0;
+    *(_DWORD *)(v2 + 1092) = 0;
+    *(_DWORD *)(v2 + 1064) = 0;
+    v3 = ColliderNode_ctor(v2 + 1064);
+    *(_DWORD *)(v2 + 1028) = 0;
+    *(_DWORD *)(v2 + 1024) = 0;
+    *(_DWORD *)(v2 + 1020) = 0;
+    *(_DWORD *)(v2 + 1016) = 0;
+    v4 = *(_DWORD *)(v2 + 952);
+    v5 = *(_DWORD *)(v2 + 956);
+    *(_DWORD *)(v2 + 1060) = v5;
+    *(_DWORD *)(v2 + 1056) = v4;
+    *(_DWORD *)(v2 + 1088) = v4;
+    *(_DWORD *)(v2 + 1092) = v5;
+    SolidOnTopCollider_setPointMetaRelated((_DWORD *)(v2 + 648), 1, v2 + 1016, v2 + 1032, v3);
+    sub_600A4300((_DWORD *)(v2 + 1096));
+    sub_600A4300((_DWORD *)(v2 + 1752));
+    sub_600A4300((_DWORD *)(v2 + 2408));
+    *(_BYTE *)(v2 + 3076) = 0;
+    *(_DWORD *)(v2 + 3064) = 0;
+    *(_DWORD *)(v2 + 3068) = 0;
+    *(_DWORD *)(v2 + 3072) = 0;
+    return v2;
+  }
+
+/* ============================================================================
  * sub_600A3C08
  * RVA 0x000a3c08   size 0x108   xrefs 1
  * ============================================================================ */
@@ -39919,6 +40649,59 @@
       _cxa_guard_release_0(13118064);
     }
     return 13118060;
+  }
+
+/* ============================================================================
+ * Actor_Kamek_build
+ * RVA 0x000a48ac   size 0x3c   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_Kamek_build(int a1)
+  {
+    int v2; // r0
+    _DWORD *result; // r0
+    int v4; // r2
+  
+    v2 = operator new(0x58u);
+    result = (_DWORD *)Actor::Actor(v2, a1);
+    *result = 12356812;
+    v4 = *(_DWORD *)(a1 + 20);
+    result[20] = *(_DWORD *)(a1 + 16);
+    result[21] = v4;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Kamek_2_build
+ * RVA 0x000a48ec   size 0x54   xrefs 0
+ * ============================================================================ */
+  int __fastcall Actor_Kamek_2_build(int a1)
+  {
+    int v2; // r0
+    int result; // r0
+    int v4; // r2
+  
+    v2 = operator new(0x5Cu);
+    result = Actor::Actor(v2, a1);
+    *(_DWORD *)result = 12356888;
+    *(_BYTE *)(result + 88) = 0;
+    v4 = *(_DWORD *)(a1 + 20);
+    *(_DWORD *)(result + 80) = *(_DWORD *)(a1 + 16);
+    *(_DWORD *)(result + 84) = v4;
+    if ( (*(_BYTE *)(result + 22) & 0x10) != 0 )
+      *(_BYTE *)(result + 88) = 1;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Kamek_3_build
+ * RVA 0x000a4944   size 0x1c   xrefs 0
+ * ============================================================================ */
+  int Actor_Kamek_3_build()
+  {
+    int v0; // r0
+  
+    v0 = operator new(0x4D80u);
+    return sub_600A724C(v0);
   }
 
 /* ============================================================================
@@ -41128,6 +41911,47 @@
   }
 
 /* ============================================================================
+ * Actor_Kamek_Demo_manage_Tag_build
+ * RVA 0x000ac864   size 0x2c   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_Kamek_Demo_manage_Tag_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x1800u);
+    result = sub_600B8668(v0);
+    *result = 12357004;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Kamek_tsurara_build
+ * RVA 0x000accd0   size 0xc0   xrefs 0
+ * ============================================================================ */
+  int Actor_Kamek_tsurara_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x1D90u);
+    MultiStateActor::MultiStateActor((_DWORD *)v0);
+    *(_DWORD *)v0 = 12357308;
+    *(_DWORD *)(v0 + 6104) = 0;
+    *(_BYTE *)(v0 + 6108) = 0;
+    sub_600A4300((_DWORD *)(v0 + 6112));
+    ActiveCollider_ctor(v0 + 6768);
+    memset((void *)(v0 + 7080), 0, 0x21u);
+    ActiveCollider_ctor(v0 + 7116);
+    *(_DWORD *)(v0 + 7420) = 12357604;
+    *(_DWORD *)(v0 + 7476) = 0;
+    *(_DWORD *)(v0 + 7480) = -1;
+    EffectData_ctor(v0 + 7424);
+    LightSource::LightSource(v0 + 7488);
+    *(_DWORD *)(v0 + 7560) = 0;
+    return v0;
+  }
+
+/* ============================================================================
  * sub_600ADB30
  * RVA 0x000adb30   size 0xe0   xrefs 1
  * ============================================================================ */
@@ -41607,6 +42431,25 @@
     *(float *)(a1 + 124) = v4;
     result = v6 <= 0.0;
     *(_DWORD *)(a1 + 80) = result;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_Kamek_magic_build
+ * RVA 0x000b047c   size 0x54   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_Kamek_magic_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x1A78u);
+    result = sub_600B91C0(v0);
+    *result = 12357720;
+    result[1690] = 0;
+    *((_BYTE *)result + 6764) = 0;
+    result[1692] = 0;
+    result[1693] = 0;
     return result;
   }
 
@@ -46798,6 +47641,25 @@
   }
 
 /* ============================================================================
+ * Actor_koBowser_Demo_manage_Tag_build
+ * RVA 0x000b8610   size 0x54   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_koBowser_Demo_manage_Tag_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x1800u);
+    result = sub_600271A0(v0);
+    *result = 12359832;
+    *((_BYTE *)result + 6136) = 0;
+    result[1533] = 0;
+    result[1531] = 0;
+    result[1532] = 0;
+    return result;
+  }
+
+/* ============================================================================
  * sub_600B8668
  * RVA 0x000b8668   size 0x44   xrefs 1
  * ============================================================================ */
@@ -46812,6 +47674,34 @@
     result[1531] = 0;
     result[1532] = 0;
     return result;
+  }
+
+/* ============================================================================
+ * Actor_koBowser_fire_build
+ * RVA 0x000b90a8   size 0xd8   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_koBowser_fire_build()
+  {
+    _DWORD *v0; // r4
+  
+    v0 = (_DWORD *)operator new(0x1A68u);
+    MultiStateActor::MultiStateActor(v0);
+    *v0 = 12360144;
+    v0[1526] = 12360560;
+    LightSource::LightSource((int)(v0 + 1528));
+    memset(v0 + 1546, 0, 0x28u);
+    EffectWrapper_ctor((int)(v0 + 1556));
+    v0[1556] = 12325968;
+    EffectWrapper_ctor((int)(v0 + 1582));
+    v0[1582] = 12325968;
+    v0[1611] = 0;
+    v0[1610] = 0;
+    v0[1608] = 0;
+    v0[1609] = 0;
+    v0[1612] = -1;
+    v0[1613] = -1;
+    ActiveCollider_ctor((int)(v0 + 1614));
+    return v0;
   }
 
 /* ============================================================================
@@ -47329,6 +48219,228 @@
   }
 
 /* ============================================================================
+ * Actor_Iggy_airship_build
+ * RVA 0x000bc1f0   size 0x118   xrefs 0
+ * ============================================================================ */
+  int Actor_Iggy_airship_build()
+  {
+    int v0; // r4
+    float v1; // r1
+  
+    v0 = operator new(0x18B8u);
+    sub_600BB738(v0);
+    *(_DWORD *)v0 = 12360884;
+    *(_DWORD *)(v0 + 6100) = 1077936128;
+    *(float *)(v0 + 6104) = flt_60C83744;
+    v1 = flt_60C8374C;
+    *(float *)(v0 + 6108) = flt_60C83748;
+    *(_DWORD *)(v0 + 6112) = 1142292480;
+    *(_DWORD *)(v0 + 6116) = 1153138688;
+    *(_DWORD *)(v0 + 6120) = 1161527296;
+    *(_DWORD *)(v0 + 6124) = -1032847360;
+    *(_DWORD *)(v0 + 6128) = 1114636288;
+    *(_DWORD *)(v0 + 6132) = 0;
+    *(_DWORD *)(v0 + 6136) = 1;
+    *(_DWORD *)(v0 + 6140) = 500;
+    *(_DWORD *)(v0 + 6152) = -1157426577;
+    *(_DWORD *)(v0 + 6156) = 990057071;
+    *(_DWORD *)(v0 + 6180) = 1142292480;
+    *(float *)(v0 + 6184) = v1;
+    sub_600BB804(v0);
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_Larry_airship_build
+ * RVA 0x000bc848   size 0x118   xrefs 0
+ * ============================================================================ */
+  int Actor_Larry_airship_build()
+  {
+    int v0; // r4
+    float v1; // r1
+  
+    v0 = operator new(0x18B8u);
+    sub_600BB738(v0);
+    *(_DWORD *)v0 = 12361124;
+    *(_DWORD *)(v0 + 6100) = 1077936128;
+    *(float *)(v0 + 6104) = flt_60C83770;
+    v1 = flt_60C83778;
+    *(float *)(v0 + 6108) = flt_60C83774;
+    *(_DWORD *)(v0 + 6112) = 1142292480;
+    *(_DWORD *)(v0 + 6116) = 1153138688;
+    *(_DWORD *)(v0 + 6120) = 1161527296;
+    *(_DWORD *)(v0 + 6124) = -1032847360;
+    *(_DWORD *)(v0 + 6128) = 1114636288;
+    *(_DWORD *)(v0 + 6132) = 0;
+    *(_DWORD *)(v0 + 6136) = 1;
+    *(_DWORD *)(v0 + 6140) = 500;
+    *(_DWORD *)(v0 + 6152) = -1157426577;
+    *(_DWORD *)(v0 + 6156) = 990057071;
+    *(_DWORD *)(v0 + 6180) = 1142292480;
+    *(float *)(v0 + 6184) = v1;
+    sub_600BB804(v0);
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_Lemmy_airship_build
+ * RVA 0x000bce08   size 0x110   xrefs 0
+ * ============================================================================ */
+  int Actor_Lemmy_airship_build()
+  {
+    int v0; // r4
+    float v1; // r1
+  
+    v0 = operator new(0x18B8u);
+    sub_600BB738(v0);
+    *(_DWORD *)v0 = 12361352;
+    *(_DWORD *)(v0 + 6100) = 1077936128;
+    *(float *)(v0 + 6104) = flt_60C8379C;
+    v1 = flt_60C837A4;
+    *(float *)(v0 + 6108) = flt_60C837A0;
+    *(_DWORD *)(v0 + 6112) = 1142292480;
+    *(_DWORD *)(v0 + 6116) = 1153138688;
+    *(_DWORD *)(v0 + 6120) = 1161527296;
+    *(_DWORD *)(v0 + 6124) = 0;
+    *(_DWORD *)(v0 + 6128) = 1114636288;
+    *(_DWORD *)(v0 + 6132) = 0;
+    *(_DWORD *)(v0 + 6136) = 1;
+    *(_DWORD *)(v0 + 6140) = 500;
+    *(_DWORD *)(v0 + 6152) = -1157426577;
+    *(_DWORD *)(v0 + 6156) = 990057071;
+    *(_DWORD *)(v0 + 6180) = 1142292480;
+    *(float *)(v0 + 6184) = v1;
+    sub_600BB804(v0);
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_Ludwig_airship_build
+ * RVA 0x000bd3bc   size 0x118   xrefs 0
+ * ============================================================================ */
+  int Actor_Ludwig_airship_build()
+  {
+    int v0; // r4
+    float v1; // r1
+  
+    v0 = operator new(0x18B8u);
+    sub_600BB738(v0);
+    *(_DWORD *)v0 = 12361580;
+    *(_DWORD *)(v0 + 6100) = 1077936128;
+    *(float *)(v0 + 6104) = flt_60C837C8;
+    v1 = flt_60C837D0;
+    *(float *)(v0 + 6108) = flt_60C837CC;
+    *(_DWORD *)(v0 + 6112) = 1142292480;
+    *(_DWORD *)(v0 + 6116) = 1153138688;
+    *(_DWORD *)(v0 + 6120) = 1161527296;
+    *(_DWORD *)(v0 + 6124) = -1031012352;
+    *(_DWORD *)(v0 + 6128) = 1114636288;
+    *(_DWORD *)(v0 + 6132) = 0;
+    *(_DWORD *)(v0 + 6136) = 1;
+    *(_DWORD *)(v0 + 6140) = 500;
+    *(_DWORD *)(v0 + 6152) = -1157426577;
+    *(_DWORD *)(v0 + 6156) = 990057071;
+    *(_DWORD *)(v0 + 6180) = 1142292480;
+    *(float *)(v0 + 6184) = v1;
+    sub_600BB804(v0);
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_Morton_airship_build
+ * RVA 0x000bd97c   size 0x118   xrefs 0
+ * ============================================================================ */
+  int Actor_Morton_airship_build()
+  {
+    int v0; // r4
+    float v1; // r1
+  
+    v0 = operator new(0x18B8u);
+    sub_600BB738(v0);
+    *(_DWORD *)v0 = 12361808;
+    *(_DWORD *)(v0 + 6100) = 1077936128;
+    *(float *)(v0 + 6104) = flt_60C837F4;
+    v1 = flt_60C837FC;
+    *(float *)(v0 + 6108) = flt_60C837F8;
+    *(_DWORD *)(v0 + 6112) = 1142292480;
+    *(_DWORD *)(v0 + 6116) = 1153138688;
+    *(_DWORD *)(v0 + 6120) = 1161527296;
+    *(_DWORD *)(v0 + 6124) = -1024458752;
+    *(_DWORD *)(v0 + 6128) = 1114636288;
+    *(_DWORD *)(v0 + 6132) = 0;
+    *(_DWORD *)(v0 + 6136) = 1;
+    *(_DWORD *)(v0 + 6140) = 500;
+    *(_DWORD *)(v0 + 6152) = -1157426577;
+    *(_DWORD *)(v0 + 6156) = 990057071;
+    *(_DWORD *)(v0 + 6180) = 1142292480;
+    *(float *)(v0 + 6184) = v1;
+    sub_600BB804(v0);
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_Roy_airship_build
+ * RVA 0x000bdf3c   size 0x118   xrefs 0
+ * ============================================================================ */
+  int Actor_Roy_airship_build()
+  {
+    int v0; // r4
+    float v1; // r1
+  
+    v0 = operator new(0x18B8u);
+    sub_600BB738(v0);
+    *(_DWORD *)v0 = 12362036;
+    *(_DWORD *)(v0 + 6100) = 1077936128;
+    *(float *)(v0 + 6104) = flt_60C83820;
+    v1 = flt_60C83828;
+    *(float *)(v0 + 6108) = flt_60C83824;
+    *(_DWORD *)(v0 + 6112) = 1142292480;
+    *(_DWORD *)(v0 + 6116) = 1153138688;
+    *(_DWORD *)(v0 + 6120) = 1161527296;
+    *(_DWORD *)(v0 + 6124) = -1028390912;
+    *(_DWORD *)(v0 + 6128) = 1114636288;
+    *(_DWORD *)(v0 + 6132) = 0;
+    *(_DWORD *)(v0 + 6136) = 1;
+    *(_DWORD *)(v0 + 6140) = 500;
+    *(_DWORD *)(v0 + 6152) = -1157426577;
+    *(_DWORD *)(v0 + 6156) = 990057071;
+    *(_DWORD *)(v0 + 6180) = 1142292480;
+    *(float *)(v0 + 6184) = v1;
+    sub_600BB804(v0);
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_bosubig_koBowser_airship_boarding_for_build
+ * RVA 0x000be4fc   size 0xd8   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_bosubig_koBowser_airship_boarding_for_build()
+  {
+    _DWORD *v0; // r4
+  
+    v0 = (_DWORD *)operator new(0x1D50u);
+    StateActor_ctor(v0);
+    *v0 = 12362264;
+    sub_600A4300(v0 + 1526);
+    RectCollider_ctor(v0 + 1690);
+    v0[1690] = 12333272;
+    v0[1861] = 0;
+    v0[1860] = 0;
+    v0[1859] = 0;
+    v0[1858] = 0;
+    v0[1857] = 0;
+    v0[1856] = 0;
+    v0[1854] = 0;
+    v0[1855] = 0;
+    memset(v0 + 1866, 0, 0x25u);
+    v0[1865] = -1;
+    v0[1864] = -1;
+    v0[1863] = -1;
+    v0[1862] = -1;
+    return v0;
+  }
+
+/* ============================================================================
  * sub_600BF77C
  * RVA 0x000bf77c   size 0xf4   xrefs 1
  * ============================================================================ */
@@ -47687,6 +48799,38 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * Actor_Wendy_airship_build
+ * RVA 0x000c0a5c   size 0x118   xrefs 0
+ * ============================================================================ */
+  int Actor_Wendy_airship_build()
+  {
+    int v0; // r4
+    float v1; // r1
+  
+    v0 = operator new(0x18B8u);
+    sub_600BB738(v0);
+    *(_DWORD *)v0 = 12362496;
+    *(_DWORD *)(v0 + 6100) = 1077936128;
+    *(float *)(v0 + 6104) = flt_60C83970;
+    v1 = flt_60C83978;
+    *(float *)(v0 + 6108) = flt_60C83974;
+    *(_DWORD *)(v0 + 6112) = 1142292480;
+    *(_DWORD *)(v0 + 6116) = 1153138688;
+    *(_DWORD *)(v0 + 6120) = 1161527296;
+    *(_DWORD *)(v0 + 6124) = -1032847360;
+    *(_DWORD *)(v0 + 6128) = 1114636288;
+    *(_DWORD *)(v0 + 6132) = 0;
+    *(_DWORD *)(v0 + 6136) = 1;
+    *(_DWORD *)(v0 + 6140) = 500;
+    *(_DWORD *)(v0 + 6152) = -1157426577;
+    *(_DWORD *)(v0 + 6156) = 990057071;
+    *(_DWORD *)(v0 + 6180) = 1142292480;
+    *(float *)(v0 + 6184) = v1;
+    sub_600BB804(v0);
+    return v0;
   }
 
 /* ============================================================================
@@ -50217,6 +51361,48 @@
   }
 
 /* ============================================================================
+ * Actor_castle_Bowser_Demo_manage_Tag_build
+ * RVA 0x000c78dc   size 0x178   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_castle_Bowser_Demo_manage_Tag_build()
+  {
+    _DWORD *v0; // r4
+  
+    v0 = (_DWORD *)operator new(0x1878u);
+    sub_600271A0(v0);
+    *v0 = 12363856;
+    v0[1531] = 0;
+    v0[1532] = 0;
+    v0[1533] = 2139095039;
+    v0[1534] = 2139095039;
+    v0[1535] = -8388609;
+    v0[1536] = -8388609;
+    v0[1543] = 0;
+    v0[1542] = 0;
+    v0[1541] = 0;
+    v0[1540] = 0;
+    v0[1539] = 0;
+    v0[1537] = 0;
+    v0[1538] = 0;
+    v0[1544] = -1;
+    v0[1545] = 0;
+    v0[1546] = v0 + 1550;
+    v0[1549] = 0;
+    v0[1548] = 0;
+    v0[1547] = 4;
+    v0[1554] = 0;
+    v0[1555] = 0;
+    v0[1556] = 12364192;
+    v0[1557] = 12364208;
+    v0[1558] = 12364244;
+    v0[1559] = v0;
+    v0[1560] = 0;
+    StateMgr_ctor(v0 + 1561, (int)(v0 + 1557), 13123232);
+    v0[1556] = 12364176;
+    return v0;
+  }
+
+/* ============================================================================
  * sub_600C86F0
  * RVA 0x000c86f0   size 0x174   xrefs 1
  * ============================================================================ */
@@ -50264,6 +51450,23 @@
       while ( v1 != result );
     }
     return result;
+  }
+
+/* ============================================================================
+ * Actor_first_Bowser_Demo_for_Kamek_build
+ * RVA 0x000cb344   size 0x64   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_first_Bowser_Demo_for_Kamek_build()
+  {
+    _DWORD *v0; // r5
+  
+    v0 = (_DWORD *)operator new(0x1910u);
+    Enemy::Enemy((int)v0);
+    *v0 = 12364280;
+    v0[1575] = 0;
+    v0[1576] = 0;
+    *(_DWORD *)EffectWrapper_ctor((int)(v0 + 1577)) = 12325968;
+    return v0;
   }
 
 /* ============================================================================
@@ -50334,6 +51537,33 @@
       return StateMgr::changeState(v8, 13123644);
     }
     return result;
+  }
+
+/* ============================================================================
+ * Actor_Bowser_fire_build
+ * RVA 0x000cbf94   size 0x98   xrefs 0
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_Bowser_fire_build(int a1)
+  {
+    _DWORD *v2; // r5
+    bool v3; // zf
+    int v4; // r0
+  
+    v2 = (_DWORD *)operator new(0x1890u);
+    StateActor_ctor(v2);
+    *v2 = 12364944;
+    EffectWrapper_ctor((int)(v2 + 1525));
+    v2[1525] = 12325968;
+    LightSource::LightSource((int)(v2 + 1551));
+    v3 = (v2[5] & 1) == 0;
+    v2[1569] = v2[5] & 1;
+    v4 = 0;
+    if ( v3 )
+      v4 = 30;
+    v2[1570] = v4;
+    v2[1571] = 12365188;
+    v2[41] = *(_DWORD *)(a1 + 28);
+    return v2;
   }
 
 /* ============================================================================
@@ -50499,6 +51729,26 @@
     if ( a2 == 1 )
       return AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 8, 1, 0, 0);
     return result;
+  }
+
+/* ============================================================================
+ * Actor_BowserJr_ball_build
+ * RVA 0x000ccd64   size 0x80   xrefs 0
+ * ============================================================================ */
+  int Actor_BowserJr_ball_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x1A80u);
+    Enemy::Enemy(v0);
+    *(_DWORD *)v0 = 12365268;
+    *(_DWORD *)(v0 + 6312) = 0;
+    CircularCollider_ctor((_DWORD *)(v0 + 6320));
+    *(_DWORD *)(v0 + 6732) = v0;
+    *(_DWORD *)(v0 + 6736) = 12463076;
+    *(_BYTE *)(v0 + 6740) = 0;
+    memset((void *)(v0 + 6744), 0, 0x24u);
+    return v0;
   }
 
 /* ============================================================================
@@ -52747,6 +53997,56 @@
   }
 
 /* ============================================================================
+ * Actor_juniaDemo_manage_Tag_build
+ * RVA 0x000d250c   size 0x190   xrefs 0
+ * ============================================================================ */
+  int Actor_juniaDemo_manage_Tag_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x18E0u);
+    sub_600271A0((_DWORD *)v0);
+    *(_DWORD *)v0 = 12368116;
+    *(_BYTE *)(v0 + 6122) = 0;
+    *(_WORD *)(v0 + 6142) = 0;
+    *(_BYTE *)(v0 + 6140) = 0;
+    *(_DWORD *)(v0 + 6136) = 0;
+    *(_DWORD *)(v0 + 6132) = 0;
+    *(_DWORD *)(v0 + 6124) = 0;
+    *(_DWORD *)(v0 + 6128) = 0;
+    *(_BYTE *)(v0 + 6144) = -1;
+    *(_DWORD *)(v0 + 6148) = 0;
+    *(_DWORD *)(v0 + 6152) = 0;
+    *(_DWORD *)(v0 + 6256) = 0;
+    *(_DWORD *)(v0 + 6252) = v0 + 6248;
+    *(_DWORD *)(v0 + 6248) = v0 + 6248;
+    *(_DWORD *)(v0 + 6260) = v0 + 6272;
+    *(_DWORD *)(v0 + 6272) = v0 + 6284;
+    *(_DWORD *)(v0 + 6284) = v0 + 6296;
+    *(_DWORD *)(v0 + 6296) = v0 + 6308;
+    *(_DWORD *)(v0 + 6308) = 0;
+    *(_DWORD *)(v0 + 6264) = v0 + 6272;
+    *(_DWORD *)(v0 + 6268) = 4;
+    memset((void *)(v0 + 6156), 0, 0x24u);
+    memset((void *)(v0 + 6320), 0, 0x2Cu);
+    *(_DWORD *)(v0 + 6204) = -1;
+    *(_DWORD *)(v0 + 6200) = -1;
+    *(_DWORD *)(v0 + 6196) = -1;
+    *(_DWORD *)(v0 + 6192) = -1;
+    *(_DWORD *)(v0 + 6228) = 0;
+    *(_DWORD *)(v0 + 6224) = 0;
+    *(_DWORD *)(v0 + 6220) = 0;
+    *(_DWORD *)(v0 + 6216) = 0;
+    *(_DWORD *)(v0 + 6212) = 0;
+    *(_DWORD *)(v0 + 6208) = 0;
+    *(_DWORD *)(v0 + 6232) = 2;
+    *(_DWORD *)(v0 + 6236) = 2;
+    *(_DWORD *)(v0 + 6240) = 2;
+    *(_DWORD *)(v0 + 6244) = 2;
+    return v0;
+  }
+
+/* ============================================================================
  * sub_600D2AD8
  * RVA 0x000d2ad8   size 0x1d0   xrefs 1
  * ============================================================================ */
@@ -53706,6 +55006,29 @@
   }
 
 /* ============================================================================
+ * Actor_BowserJr_fire_build
+ * RVA 0x000d513c   size 0x74   xrefs 0
+ * ============================================================================ */
+  _DWORD *Actor_BowserJr_fire_build()
+  {
+    _DWORD *v0; // r0
+    _DWORD *result; // r0
+  
+    v0 = (_DWORD *)operator new(0x1800u);
+    result = StateActor_ctor(v0);
+    *result = 12368448;
+    *((_BYTE *)result + 6140) = 0;
+    result[1534] = 0;
+    result[1533] = 0;
+    result[1532] = 0;
+    result[1531] = 0;
+    result[1530] = 0;
+    result[1528] = 0;
+    result[1529] = 0;
+    return result;
+  }
+
+/* ============================================================================
  * sub_600D552C
  * RVA 0x000d552c   size 0x128   xrefs 1
  * ============================================================================ */
@@ -54094,6 +55417,48 @@
   }
 
 /* ============================================================================
+ * Actor_Larry_build
+ * RVA 0x000d77c4   size 0x12c   xrefs 0
+ * ============================================================================ */
+  int Actor_Larry_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x2078u);
+    KoopalingBase::KoopalingBase(v0);
+    *(_DWORD *)v0 = 12368976;
+    *(_BYTE *)(v0 + 8144) = 0;
+    *(_BYTE *)(v0 + 8145) = 0;
+    *(_DWORD *)(v0 + 8148) = 0;
+    *(_BYTE *)(v0 + 8152) = 0;
+    *(_BYTE *)(v0 + 8153) = 0;
+    *(_DWORD *)(v0 + 8156) = 0;
+    *(_BYTE *)(v0 + 8160) = 0;
+    *(_DWORD *)(v0 + 8164) = 0;
+    *(_BYTE *)(v0 + 8168) = 1;
+    *(_BYTE *)(v0 + 8169) = 0;
+    *(_DWORD *)(v0 + 8188) = 0;
+    *(_DWORD *)(v0 + 0x2000) = 0;
+    *(_WORD *)(v0 + 8184) = 0;
+    *(_DWORD *)(v0 + 8180) = 0;
+    *(_DWORD *)(v0 + 8172) = 0;
+    *(_DWORD *)(v0 + 8176) = 0;
+    EffectWrapper_ctor(v0 + 8196);
+    *(_DWORD *)(v0 + 8196) = 12325968;
+    *(_DWORD *)(v0 + 8300) = 0;
+    *(_DWORD *)(v0 + 8304) = 0;
+    *(_BYTE *)(v0 + 8308) = 0;
+    *(_DWORD *)(v0 + 8156) = 0;
+    *(_DWORD *)(v0 + 8140) = 0;
+    *(_DWORD *)(v0 + 8136) = 0;
+    *(_DWORD *)(v0 + 8132) = 0;
+    *(_DWORD *)(v0 + 8128) = 0;
+    *(_DWORD *)(v0 + 8124) = 0;
+    *(_DWORD *)(v0 + 8120) = 0;
+    return v0;
+  }
+
+/* ============================================================================
  * sub_600D8F9C
  * RVA 0x000d8f9c   size 0x150   xrefs 4
  * ============================================================================ */
@@ -54227,6 +55592,28 @@
   }
 
 /* ============================================================================
+ * Actor_Lemmy_build
+ * RVA 0x000dbddc   size 0x70   xrefs 0
+ * ============================================================================ */
+  int Actor_Lemmy_build()
+  {
+    int v0; // r0
+    int result; // r0
+  
+    v0 = operator new(0x1FD0u);
+    result = KoopalingBase::KoopalingBase(v0);
+    *(_DWORD *)result = 12370800;
+    *(_DWORD *)(result + 8120) = 0;
+    *(_DWORD *)(result + 8124) = 0;
+    *(_DWORD *)(result + 8128) = 1065353216;
+    *(_BYTE *)(result + 8132) = 0;
+    *(_BYTE *)(result + 8133) = 0;
+    *(_DWORD *)(result + 8136) = 0;
+    *(_DWORD *)(result + 8140) = 0;
+    return result;
+  }
+
+/* ============================================================================
  * MtxTranslateGetItFromHere
  * RVA 0x000ddef0   size 0x244   xrefs 0
  * ============================================================================ */
@@ -54324,6 +55711,30 @@
     sub_600E4E3C(v3);
     *(_DWORD *)(a1 + 8128) = v1;
     return *((_DWORD *)v4 + 2);
+  }
+
+/* ============================================================================
+ * Actor_Lemmy_boru_build
+ * RVA 0x000e1740   size 0xb0   xrefs 0
+ * ============================================================================ */
+  int Actor_Lemmy_boru_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x1BE0u);
+    sub_600E2950(v0);
+    *(_DWORD *)v0 = 12372600;
+    *(_BYTE *)(v0 + 6552) = 0;
+    ActiveCollider_ctor(v0 + 6556);
+    *(_DWORD *)(v0 + 6860) = 12372896;
+    EffectWrapper_ctor(v0 + 6864);
+    *(_DWORD *)(v0 + 6864) = 12325968;
+    EffectWrapper_ctor(v0 + 6968);
+    *(_DWORD *)(v0 + 6968) = 12325968;
+    *(_DWORD *)(v0 + 7124) = 0;
+    *(_DWORD *)(v0 + 7128) = -1;
+    EffectData_ctor(v0 + 7072);
+    return v0;
   }
 
 /* ============================================================================
@@ -54804,6 +56215,35 @@
   }
 
 /* ============================================================================
+ * Actor_Lemmy_bomb_build
+ * RVA 0x000e3bdc   size 0xdc   xrefs 0
+ * ============================================================================ */
+  int Actor_Lemmy_bomb_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x1BE8u);
+    sub_600E2950(v0);
+    *(_DWORD *)v0 = 12373228;
+    *(_BYTE *)(v0 + 6552) = 0;
+    *(_DWORD *)(v0 + 6556) = 0;
+    *(_DWORD *)(v0 + 6560) = 0;
+    *(_BYTE *)(v0 + 6564) = 1;
+    *(_DWORD *)(v0 + 6568) = 0;
+    *(_BYTE *)(v0 + 6572) = 0;
+    *(_DWORD *)(v0 + 6576) = 0;
+    ActiveCollider_ctor(v0 + 6592);
+    *(_DWORD *)(v0 + 6896) = 12373524;
+    EffectWrapper_ctor(v0 + 6900);
+    *(_DWORD *)(v0 + 6900) = 12325968;
+    *(_DWORD *)(v0 + 7056) = 0;
+    *(_DWORD *)(v0 + 7060) = -1;
+    EffectData_ctor(v0 + 7004);
+    LightSource::LightSource(v0 + 7068);
+    return v0;
+  }
+
+/* ============================================================================
  * sub_600E4E3C
  * RVA 0x000e4e3c   size 0xc0   xrefs 1
  * ============================================================================ */
@@ -54851,6 +56291,128 @@
     EffectData_create(v2, v4, 0, 0);
     *(_BYTE *)(a1 + 19) = 1;
     return 1;
+  }
+
+/* ============================================================================
+ * Actor_Ludwig_clone_build
+ * RVA 0x000e7508   size 0x1d4   xrefs 0
+ * ============================================================================ */
+  int Actor_Ludwig_clone_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x20A8u);
+    KoopalingBase::KoopalingBase(v0);
+    *(_DWORD *)v0 = 12373604;
+    *(_BYTE *)(v0 + 8120) = 0;
+    *(_BYTE *)(v0 + 8121) = 0;
+    *(_DWORD *)(v0 + 8124) = 0;
+    *(_DWORD *)(v0 + 8128) = 0;
+    *(_BYTE *)(v0 + 8132) = 0;
+    *(_DWORD *)(v0 + 8168) = 0;
+    *(_BYTE *)(v0 + 8184) = 0;
+    *(_BYTE *)(v0 + 8185) = 0;
+    *(_DWORD *)(v0 + 8188) = 0;
+    *(_DWORD *)(v0 + 0x2000) = 0;
+    *(_DWORD *)(v0 + 8196) = 0;
+    *(_DWORD *)(v0 + 8236) = 0;
+    *(_DWORD *)(v0 + 8160) = 0;
+    *(_DWORD *)(v0 + 8156) = 0;
+    *(_DWORD *)(v0 + 8152) = 0;
+    *(_DWORD *)(v0 + 8148) = 0;
+    *(_DWORD *)(v0 + 8144) = 0;
+    *(_DWORD *)(v0 + 8140) = 0;
+    *(_DWORD *)(v0 + 8136) = 0;
+    *(_BYTE *)(v0 + 8232) = 0;
+    *(_DWORD *)(v0 + 8228) = 0;
+    *(_DWORD *)(v0 + 8224) = 0;
+    *(_DWORD *)(v0 + 8220) = 0;
+    *(_DWORD *)(v0 + 8216) = 0;
+    *(_DWORD *)(v0 + 8212) = 0;
+    *(_DWORD *)(v0 + 8208) = 0;
+    *(_DWORD *)(v0 + 8204) = 0;
+    LightSource::LightSource(v0 + 8264);
+    *(_DWORD *)(v0 + 8172) = 0;
+    *(_DWORD *)(v0 + 8176) = 0;
+    *(_DWORD *)(v0 + 8180) = 0;
+    *(_BYTE *)(v0 + 8201) = 0;
+    *(_BYTE *)(v0 + 8200) = 0;
+    *(_BYTE *)(v0 + 8203) = 0;
+    *(_BYTE *)(v0 + 8202) = 0;
+    *(_DWORD *)(v0 + 8260) = 0;
+    *(_DWORD *)(v0 + 8256) = 0;
+    *(_DWORD *)(v0 + 8252) = 0;
+    *(_DWORD *)(v0 + 8248) = 0;
+    *(_DWORD *)(v0 + 8244) = 0;
+    *(_DWORD *)(v0 + 8240) = 0;
+    *(_DWORD *)v0 = 12377044;
+    *(_DWORD *)(v0 + 8344) = 0;
+    *(_BYTE *)(v0 + 8348) = 0;
+    *(_BYTE *)(v0 + 8349) = 1;
+    *(_DWORD *)(v0 + 8352) = 0;
+    *(_BYTE *)(v0 + 8356) = 0;
+    *(_DWORD *)(v0 + 8336) = 0;
+    *(_DWORD *)(v0 + 8340) = 0;
+    return v0;
+  }
+
+/* ============================================================================
+ * Actor_Ludwig_clone_2_build
+ * RVA 0x000e76e4   size 0x1b4   xrefs 0
+ * ============================================================================ */
+  int Actor_Ludwig_clone_2_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x20A0u);
+    KoopalingBase::KoopalingBase(v0);
+    *(_DWORD *)v0 = 12373604;
+    *(_BYTE *)(v0 + 8120) = 0;
+    *(_BYTE *)(v0 + 8121) = 0;
+    *(_DWORD *)(v0 + 8124) = 0;
+    *(_DWORD *)(v0 + 8128) = 0;
+    *(_BYTE *)(v0 + 8132) = 0;
+    *(_DWORD *)(v0 + 8168) = 0;
+    *(_BYTE *)(v0 + 8184) = 0;
+    *(_BYTE *)(v0 + 8185) = 0;
+    *(_DWORD *)(v0 + 8188) = 0;
+    *(_DWORD *)(v0 + 0x2000) = 0;
+    *(_DWORD *)(v0 + 8196) = 0;
+    *(_DWORD *)(v0 + 8236) = 0;
+    *(_DWORD *)(v0 + 8160) = 0;
+    *(_DWORD *)(v0 + 8156) = 0;
+    *(_DWORD *)(v0 + 8152) = 0;
+    *(_DWORD *)(v0 + 8148) = 0;
+    *(_DWORD *)(v0 + 8144) = 0;
+    *(_DWORD *)(v0 + 8140) = 0;
+    *(_DWORD *)(v0 + 8136) = 0;
+    *(_BYTE *)(v0 + 8232) = 0;
+    *(_DWORD *)(v0 + 8228) = 0;
+    *(_DWORD *)(v0 + 8224) = 0;
+    *(_DWORD *)(v0 + 8220) = 0;
+    *(_DWORD *)(v0 + 8216) = 0;
+    *(_DWORD *)(v0 + 8212) = 0;
+    *(_DWORD *)(v0 + 8208) = 0;
+    *(_DWORD *)(v0 + 8204) = 0;
+    LightSource::LightSource(v0 + 8264);
+    *(_DWORD *)(v0 + 8172) = 0;
+    *(_DWORD *)(v0 + 8176) = 0;
+    *(_DWORD *)(v0 + 8180) = 0;
+    *(_BYTE *)(v0 + 8201) = 0;
+    *(_BYTE *)(v0 + 8200) = 0;
+    *(_BYTE *)(v0 + 8203) = 0;
+    *(_BYTE *)(v0 + 8202) = 0;
+    *(_DWORD *)(v0 + 8260) = 0;
+    *(_DWORD *)(v0 + 8256) = 0;
+    *(_DWORD *)(v0 + 8252) = 0;
+    *(_DWORD *)(v0 + 8248) = 0;
+    *(_DWORD *)(v0 + 8244) = 0;
+    *(_DWORD *)(v0 + 8240) = 0;
+    *(_DWORD *)v0 = 12375324;
+    *(_BYTE *)(v0 + 8336) = 0;
+    *(_DWORD *)(v0 + 8340) = -1;
+    *(_BYTE *)(v0 + 8344) = 0;
+    return v0;
   }
 
 /* ============================================================================
@@ -55338,6 +56900,35 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * Actor_Morton_build
+ * RVA 0x000eeecc   size 0xc0   xrefs 0
+ * ============================================================================ */
+  int Actor_Morton_build()
+  {
+    int v0; // r4
+  
+    v0 = operator new(0x21D8u);
+    KoopalingBase::KoopalingBase(v0);
+    *(_DWORD *)v0 = 12379044;
+    ActiveCollider_ctor(v0 + 8120);
+    *(_DWORD *)(v0 + 8424) = 0;
+    *(_DWORD *)(v0 + 8432) = 0;
+    *(_DWORD *)(v0 + 8436) = 0;
+    *(_DWORD *)(v0 + 8440) = 0;
+    EffectWrapper_ctor(v0 + 8444);
+    *(_DWORD *)(v0 + 8444) = 12325968;
+    EffectWrapper_ctor(v0 + 8548);
+    *(_DWORD *)(v0 + 8548) = 12325968;
+    *(_DWORD *)(v0 + 8652) = 0;
+    *(_BYTE *)(v0 + 8656) = 0;
+    *(_BYTE *)(v0 + 8429) = 0;
+    *(_BYTE *)(v0 + 8428) = 0;
+    *(_BYTE *)(v0 + 8431) = 0;
+    *(_BYTE *)(v0 + 8430) = 0;
+    return v0;
   }
 
 /* ============================================================================
