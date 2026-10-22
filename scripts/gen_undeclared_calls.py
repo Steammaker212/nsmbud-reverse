@@ -87,17 +87,45 @@ C_TYPENAMES = {
 NEON_BINOP = re.compile(r"\b(v(?:min|max|add|sub|mul)(?:q)?_f32)\s*\(")
 
 
+def prelude_headers(headers_dir):
+    """The headers actually reachable from a .c file, i.e. included by the prelude.
+
+    THIS IS THE POINT. Scanning every *.h in the directory asks "does any header declare this name?",
+    but a translation unit only sees the ones the prelude includes:
+
+        nsmbudx_types.h, structs.h, nsmbudx_data.h, nsmbudx_subfuncs.h,
+        nsmbudx_undeclared.h, libs.h
+
+    actors.h, player.h, powerup.h and systems.h are generated but NOT included (they were measured to
+    conflict with structs.h -- adding actors.h took the corpus 447 -> 432). So names declared only there
+    are invisible, yet the old scan counted them as satisfied and emitted no declaration. That is why
+    `CollisionMgr_dtor` was "undeclared" while actors.h plainly declared it, and it accounted for most
+    of the remaining `use of undeclared` failures.
+    """
+    prelude = os.path.join(headers_dir, "nsmbudx_prelude.h")
+    if not os.path.exists(prelude):
+        return None  # fall back to scanning everything
+    with open(prelude, encoding="utf-8", errors="replace") as fh:
+        text = fh.read()
+    return set(re.findall(r'#include\s+"([^"]+)"', text))
+
+
 def declared_names(headers_dir, self_name):
-    """Every identifier a generated header declares, by any of the usual spellings.
+    """Every identifier VISIBLE to a .c file, by any of the usual spellings.
 
     `self_name` is skipped on purpose. This script writes into the same directory it reads, so on the
     second run it would find its own previous output, count every name as already declared, and emit
     an EMPTY header -- which is exactly what happened: 292 nullsub declarations became 1 comment and
     the parse count did not move at all.
+
+    Only headers the prelude includes are consulted; see prelude_headers().
     """
     names = set()
+    reachable = prelude_headers(headers_dir)
     for f in os.listdir(headers_dir):
         if not f.endswith(".h") or f == self_name:
+            continue
+        if reachable is not None and f not in reachable:
             continue
         with open(os.path.join(headers_dir, f), encoding="utf-8", errors="replace") as fh:
             text = fh.read()
@@ -122,6 +150,45 @@ def main(argv):
 
     used = {"nullsub": {}, "algn": {}, "simd": {}, "floats": {}, "str": {},
             "scoped": {}, "table": {}, "fnptr": {}, "flags": {}, "neon": {}}
+    # Every function the corpus DEFINES, with its REAL signature.
+    #
+    # Omission is not the answer. A name defined in one file may be used as a cast target in a
+    # different file, where it still needs a declaration -- dropping it entirely took the corpus
+    # 452 -> 447 and re-broke the four `use of undeclared` files.
+    #
+    # Emitting the definition's OWN signature is correct in both places: identical to what the defining
+    # file says (no conflict), and a real prototype elsewhere (no implicit `int f()`).
+    defined_in_corpus = {}
+    for dp, _, fs in os.walk(root):
+        for f in fs:
+            if not f.endswith(".c"):
+                continue
+            with open(os.path.join(dp, f), encoding="utf-8", errors="replace") as fh:
+                text = fh.read()
+            # The argument list `[^;]*` can run past the closing paren and swallow the BODY when a
+            # parameter list is multi-line, which emitted real definitions into the header
+            # ("function definition is not allowed here") and took the corpus to 0/475. Scan line by
+            # line instead, and take the parens as balanced text on that single line.
+            for line_no, line in enumerate(text.splitlines()):
+                body = re.sub(r"^\s*/\*[^*]*\*/\s*", "", line)
+                m = re.match(r"([A-Za-z_][\w \t\*]*?)\b(\w+)\s*\((.*)\)\s*$", body)
+                if not m:
+                    continue
+                # the next non-blank line must be the opening brace for this to be a definition
+                nxt = ""
+                for k in range(line_no + 1, min(line_no + 3, len(text.splitlines()))):
+                    cand = re.sub(r"^\s*/\*[^*]*\*/\s*", "", text.splitlines()[k]).strip()
+                    if cand:
+                        nxt = cand
+                        break
+                if nxt != "{":
+                    continue
+                args = m.group(3)
+                # A stray brace or unbalanced paren means the capture is not a clean signature.
+                if "{" in args or "}" in args or args.count("(") != args.count(")"):
+                    continue
+                defined_in_corpus[m.group(2)] = (m.group(1).strip(), args)
+
     for dp, _, fs in os.walk(root):
         for f in fs:
             if not f.endswith(".c"):
@@ -264,6 +331,15 @@ def main(argv):
     n_fnptr = 0
     for name in sorted(used["fnptr"]):
         if name in have:
+            continue
+        # Prefer the definition's own signature. An unprototyped `int f()` would conflict with a
+        # definition of a different type (`void nullsub_2135()`, `_DWORD *sub_604B7F9C(int)`), which is
+        # the "conflicting types" error in T_5E758.c, T_60810.c, libs.c and systems.c.
+        if name in defined_in_corpus:
+            ret, args = defined_in_corpus[name]
+            lines.append("%s %s(%s);  /* %d cast site(s), signature from its definition */"
+                         % (ret, name, args, used["fnptr"][name]))
+            n_fnptr += 1
             continue
         lines.append("int __fastcall %s();  /* %d cast site(s) */"
                      % (name, used["fnptr"][name]))

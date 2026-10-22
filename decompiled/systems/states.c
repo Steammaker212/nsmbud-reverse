@@ -29,6 +29,16 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _DWORD *__fastcall sub_60603510(int a1);
 _DWORD *__fastcall FlagSwitchBase__FlagSwitchBase(_DWORD *a1);
 _DWORD *__fastcall sub_6068B390(_DWORD *result);
