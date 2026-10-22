@@ -89733,8 +89733,8 @@ sub_60283D2C__LABEL_14:
                   * (float)((float)(v3[28] + v3[144]) - *(float *)(a1 + 112)))
           + (float)(v6 * v6);
       v8 = _S0 < 1000000000.0;
-      vminnm_f32(float_s0, float_s4)
-      if ( !v8 )
+      _S0 = vminnm_f32(float_s0, float_s4)
+      if ( !v8 );
         v3 = 0;
       v2 = v3;
     }

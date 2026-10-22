@@ -33,7 +33,18 @@ typedef struct ColliderListNode { uint8_t _opaque[0xC]; } ColliderListNode;   /*
 typedef struct ColliderMgr { uint8_t _opaque[0x64]; } ColliderMgr;   /* sizeof 0x64 */
 typedef struct ColliderOwnerInfo { uint8_t _opaque[0x14]; } ColliderOwnerInfo;   /* sizeof 0x14 */
 typedef struct CollisionMgr { uint8_t _opaque[0x14E8]; } CollisionMgr;   /* sizeof 0x14E8 */
-typedef struct CollisionMgr_Sensor { uint8_t _opaque[0xC]; } CollisionMgr_Sensor;   /* sizeof 0xC */
+/* CollisionMgr_Sensor -- 3 floats, recovered from how the corpus uses it.
+
+   The corpus accesses .a, .b and .c on this type and only ever assigns or reads them as floats:
+
+       sensor.a = *(float *)(a1 + 108);
+       sensor.b = (float)(v78 + v77) + 1.0;
+       sensor.c = -*v23;
+       v13 = sensor.b - *(float *)(a1 + 112);
+
+   Three floats are 0xC bytes, which matches the size this file already recorded for it, so the layout is
+   confirmed by the size rather than assumed. */
+typedef struct CollisionMgr_Sensor { float a; float b; float c; } CollisionMgr_Sensor;   /* sizeof 0xC */
 typedef struct CooliganSunglasses { uint8_t _opaque[0x2EC]; } CooliganSunglasses;   /* sizeof 0x2EC */
 typedef struct EnemyFreezeMgr_Flags { uint8_t _opaque[0x3]; } EnemyFreezeMgr_Flags;   /* sizeof 0x3 */
 typedef struct EnemyFreezeMgr_Info { uint8_t _opaque[0x20]; } EnemyFreezeMgr_Info;   /* sizeof 0x20 */

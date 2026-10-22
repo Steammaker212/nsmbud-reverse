@@ -93903,7 +93903,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       _S0 = *(float *)(a4 + 108) - *(float *)(a1 + 108);
       if ( _S0 <= 0.0 )
         _S0 = -_S0;
-      vminnm_f32(float_s0, float_s4)
+      _S0 = vminnm_f32(float_s0, float_s4);
     }
     v13 = (v6 & 2) == 0;
     if ( (v6 & 2) != 0 )

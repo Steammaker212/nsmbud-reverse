@@ -1615,8 +1615,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         _S4 = (float)((float)((float)(v10[28] + v10[144]) - v4) * (float)((float)(v10[28] + v10[144]) - v4))
             + (float)(v12 * v12);
         v14 = _S4 < 3.4028e38;
-        vminnm_f32(float_s4, float_s8)
-        if ( !v14 )
+        _S0 = vminnm_f32(float_s4, float_s8)
+        if ( !v14 );
           v10 = 0;
         result = v10;
       }
@@ -81818,8 +81818,8 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
             _S2 = -(float)(v6 - v3);
           v9 = _S2 == 0.0;
           v10 = _S2 < 0.0;
-          vmaxnm_f32(float_s2, float_s4)
-          if ( v10 || v9 )
+          _S0 = vmaxnm_f32(float_s2, float_s4)
+          if ( v10 || v9 );
             v6 = v3;
         }
         else
@@ -81918,8 +81918,8 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
           _S4 = -(float)(v6 - v4);
         v9 = _S4 == 0.0;
         v10 = _S4 < 0.0;
-        vmaxnm_f32(float_s4, float_s6)
-        if ( v10 || v9 )
+        _S0 = vmaxnm_f32(float_s4, float_s6)
+        if ( v10 || v9 );
           v6 = a1[27];
       }
       else
@@ -104648,8 +104648,8 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
   sub_600BABB8__LABEL_33:
     _S0 = 1140850688;
     *(_DWORD *)(a1 + 6448) = result;
-    vminnm_f32(float_s24, float_s0)
-    if ( _S0 > v13 )
+    _S0 = vminnm_f32(float_s24, float_s0)
+    if ( _S0 > v13 );
       _S0 = v13;
     if ( _S0 > v12 )
       _S0 = v12;

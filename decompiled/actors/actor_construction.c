@@ -61548,8 +61548,8 @@ CollisionMgr_process_helper_14DEE4__LABEL_132:
           _S2 = 2139095039;
           v38 = v37;
           v39 = v34;
-          vminnm_f32(float_s18, float_s2)
-          if ( _S2 > v20 )
+          _S0 = vminnm_f32(float_s18, float_s2)
+          if ( _S2 > v20 );
             _S2 = v20;
           v29 = _S2 <= v20 ? _S2 : v20;
           sub_6090ECAC(a2, &v38, 0);

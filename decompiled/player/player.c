@@ -11723,7 +11723,7 @@ Player_animSetCarry_load__LABEL_488:
       SkeletalAnim_play(*v17, *((_DWORD *)a1 + 5), &dword_60CC47DC);
       AnimationCtrl_setRepeat(v18 + 4, 1);
       _S0 = 1.0;
-      vmaxnm_f32(float_s18, float_s0)
+      _S0 = vmaxnm_f32(float_s18, float_s0);
       *(_DWORD *)(v18 + 24) = _S0;
     }
     *(float *)(v18 + 20) = v14;

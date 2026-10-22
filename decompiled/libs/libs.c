@@ -163781,8 +163781,8 @@ sub_60899E38__LABEL_88:
   
     _S2 = 1.0;
     result = 80;
-    vminnm_f32(float_s0, float_s2)
-    if ( _S0 < 0.0 )
+    _S0 = vminnm_f32(float_s0, float_s2)
+    if ( _S0 < 0.0 );
       v8 = 0.0;
     else
       v8 = _S2;
@@ -163802,7 +163802,7 @@ sub_60899E38__LABEL_88:
   int __fastcall sub_608C6A70(int a1)
   {
     _S2 = 1.0;
-    vminnm_f32(float_s0, float_s2)
+    _S0 = vminnm_f32(float_s0, float_s2);
     return *(unsigned __int8 *)(a1 + 5);
   }
 
@@ -163816,7 +163816,7 @@ sub_60899E38__LABEL_88:
     int v9; // r1
   
     _S4 = 2.0;
-    vminnm_f32(float_s0, float_s4)
+    _S0 = vminnm_f32(float_s0, float_s4);
     v8 = arr_dword_60C5B3A4[*a1];
     v9 = (int)(float)((float)((float)(_S8 * 0.5) * 256.0) + 0.5);
     if ( _S0 < 0.0 )
@@ -165426,7 +165426,7 @@ sub_60899E38__LABEL_88:
     }
     _S2 = *(_DWORD *)(a1 + 40);
     _S0 = 1124073472;
-    vminnm_f32(float_s2, float_s0)
+    _S0 = vminnm_f32(float_s2, float_s0);
     nn__audio__SetVoiceVolume(a1 + 32);
     nn__audio__SetVoicePitch(a1 + 32);
     v21 = *(_WORD *)(a1 + 152);
@@ -165459,7 +165459,7 @@ sub_60899E38__LABEL_88:
     {
       _S2 = *(_DWORD *)(result + 40);
       _S0 = 1124073472;
-      vminnm_f32(float_s2, float_s0)
+      _S0 = vminnm_f32(float_s2, float_s0);
       nn__audio__SetVoiceVolume(result + 32);
       nn__audio__SetVoicePitch(v4 + 32);
       v16 = *(_WORD *)(v4 + 152);
@@ -227077,9 +227077,9 @@ sub_608DF448__LABEL_158:
       if ( ((1 << v5) & 0x39) != 0 )
       {
         v7 = vmin_f32(_D2, _D1).n64_u32[0];
-        vmaxnm_f32(float_s4, float_s2)
+        _S0 = vmaxnm_f32(float_s4, float_s2);
         v13 = vmin_f32(_D3, _D1).n64_u32[0];
-        vmaxnm_f32(float_s6, float_s2)
+        _S0 = vmaxnm_f32(float_s6, float_s2);
         result[1] = v7;
         result[3] = _S4;
       }
@@ -227117,9 +227117,9 @@ sub_608DF448__LABEL_158:
       if ( ((1 << v5) & 0x39) != 0 )
       {
         v6 = vmin_f32(_D2, _D1).n64_u32[0];
-        vmaxnm_f32(float_s4, float_s2)
+        _S0 = vmaxnm_f32(float_s4, float_s2);
         v12 = vmin_f32(_D3, _D1).n64_u32[0];
-        vmaxnm_f32(float_s6, float_s2)
+        _S0 = vmaxnm_f32(float_s6, float_s2);
         result[1] = v6;
         result[3] = _S4;
       }
@@ -276803,7 +276803,7 @@ sub_60945324__LABEL_155:
       do
       {
         _S2 = 1.5708 - (float)(v10 * (float)(unsigned int)++v14);
-        vmaxnm_f32(float_s2, float_s24)
+        _S0 = vmaxnm_f32(float_s2, float_s24);
         v21 = sinf_0(v9);
         v22 = _S16 * 0.5;
         v9 = cosf_0(v21, v23, v24);
@@ -276838,7 +276838,7 @@ sub_60945324__LABEL_155:
       do
       {
         _S2 = 1.5708 - (float)(v10 * (float)(unsigned int)(v33 + 2));
-        vmaxnm_f32(float_s2, float_s22)
+        _S0 = vmaxnm_f32(float_s2, float_s22);
         v36 = sinf_0(v33 + 2);
         cosf_0(v36, v37, v38);
         ++v33;

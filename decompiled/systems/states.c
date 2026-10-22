@@ -216680,8 +216680,8 @@ sub_60758544__LABEL_197:
         v7 = *(float *)(sub_6075F960(v5) + 4) - a2[1];
         _S4 = 1199570944;
         _S2 = (float)(v7 * v7) + (float)((float)(v6 - *a2) * (float)(v6 - *a2));
-        vminnm_f32(float_s2, float_s4)
-        if ( _S2 >= 65536.0 )
+        _S0 = vminnm_f32(float_s2, float_s4)
+        if ( _S2 >= 65536.0 );
           v5 = 0;
         v3 = v5;
       }
