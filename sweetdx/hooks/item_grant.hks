@@ -1,13 +1,13 @@
 @Power-up mode 10 through the item-grant gate (? blocks, item pickups).
 @
-@ Generated from the verified byte diff between the stock NSMBU Deluxe v1.0.0
-@ main NSO and the Hammer power-up build. Every hook below corresponds to a
-@ word that actually differs; the full diff is 115 bytes across 59 regions with
-@ nothing unaccounted for.
+@ Generated from the byte diff between the stock NSMBU Deluxe v1.0.0 main NSO and the
+@ Hammer reference build. NOTE: "came from the diff" is not a correctness claim. Six
+@ hooks in mode_tables.hks also came from the diff, reproduced it byte-perfectly, and
+@ still broke the game. See docs/INCIDENT_2026-10-22.md.
 @
-@ SweetDX format: an unindented 'name:' header, indented 'key: value' fields,
-@ and '@' comments. 'instr' hooks are reassembled by clang and were round-trip
-@ verified against the patched bytes; 'data' hooks are written verbatim.
+@ SweetDX format: an unindented 'name:' header, indented 'key: value' fields, and '@'
+@ comments. 'instr' hooks are reassembled by clang and were round-trip verified against
+@ the reference bytes; 'data' hooks are written verbatim.
 
 item_gate_max_mode:
     @ Item gate: widen the accepted mode range to 9 (index 9 = mode 10).

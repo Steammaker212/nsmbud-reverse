@@ -27,6 +27,21 @@ Hammer byte-sites exactly. See [BUILD_FIXES.md](BUILD_FIXES.md) for the five fau
 that had to be fixed to get there, and the verification that the Hammer bytes really
 landed.
 
+**It also broke the game when it was actually run.** The first in-console test showed
+severe rendering corruption in the level and a crash on touching the Hammer. Two
+independent causes were found and fixed: six "table redirect" hooks that pointed live
+per-actor lookups at executable code, and a compiled `Profile` object that overwrote the
+game's own profiles 530/539 at load. Read
+[INCIDENT_2026-10-22.md](docs/INCIDENT_2026-10-22.md) before trusting anything here. The
+fixes have **not** been tested in-game yet, so treat this as unverified.
+
+That article is worth reading for a second reason: a clean build and a byte-exact patch
+proved nothing about correctness. Both defects passed every check in this repo at the
+time, including a validator that compared hook bytes to a reference image — because the
+hooks *did* reproduce the reference image faithfully. They were simply hooked to the
+wrong things. See [docs/IDA_VERIFICATION.md](docs/IDA_VERIFICATION.md).
+
+
 ## What is in here
 
 | Finding | Where |
@@ -46,21 +61,27 @@ landed.
 
 ## The hook files reproduce the entire patch
 
-`hooks/` was not written by hand. It was generated from the verified byte diff
-between the retail NSO and our patched build, then validated:
+`hooks/` was not written by hand. It was generated from the byte diff between the retail
+NSO and our patched build, then validated:
 
 ```
 59 hooks  ==  59 differing word regions
 0 missing, 0 extra, 0 byte mismatches
 ```
 
-That means the `.hks` set is provably complete with respect to that build — if a
-byte differs, a hook covers it.
+That means the `.hks` set is provably complete with respect to that build — if a byte
+differs, a hook covers it. **It does not mean the hooks are correct.** This is exactly
+the trap the first in-game test exposed: 59/59 coverage, 0 byte mismatches, and the patch
+still broke rendering and crashed. Fidelity to a reference image only proves you copied
+it accurately; it says nothing about whether the words you copied are instructions, or
+whether the pointers point at tables.
 
-27 of the 59 are `instr` hooks. Each was reassembled with clang and compared
-against the patched bytes, so they cannot silently produce something different
-from what we tested. The other 32 are `data` hooks (raw words), which are
-byte-exact by construction.
+Two of the six removed redirects were originally tagged `instr` and described as table
+redirects. They reproduced the reference build *perfectly* and were still wrong. Coverage
+was never the right question.
+
+The current set is 21 `instr` + 4 `data`, with 34 addresses excluded deliberately and
+listed by name in `scripts/validate_sweetdx_project.py`.
 
 ## Addresses are in-image addresses
 
