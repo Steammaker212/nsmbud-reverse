@@ -161,18 +161,23 @@ def main():
                 fh.write(new)
             patched += 1
 
-    # Pass 2: write the prelude, including any qualified type that was used but not pre-declared.
+    # Pass 2: DO NOT write the prelude here.
+    #
+    # This script used to own nsmbudx_prelude.h and rewrite it from PRELUDE_TEXT. After the include
+    # graph was split, `restructure_includes.py` became the owner (it is the only thing that knows
+    # about nsmbudx_types.h, structs.h and nsmbudx_data.h). Writing the old text here silently threw
+    # all three away, which cost 31 files (250 -> 219) with no error message: the prelude still
+    # compiled, it just no longer supplied the data labels.
+    #
+    # Any qualified name this pass discovers is reported so restructure_includes can declare it.
     declared = set(re.findall(r"^struct (\w+);$", PRELUDE_TEXT, re.M))
     extra = sorted(used_qualified - declared)
-    text = PRELUDE_TEXT
     if extra:
-        block = "".join("struct %s;\n" % n for n in extra)
-        text = text.replace("#endif /* NSMBUDX_PRELUDE_H */",
-                            block + "\n#endif /* NSMBUDX_PRELUDE_H */")
-    with open(PRELUDE, "w", encoding="utf-8", newline="\n") as fh:
-        fh.write(text)
+        print("  qualified names needing a declaration (add to nsmbudx_types.h):")
+        for n in extra:
+            print("      struct %s;" % n)
 
-    print("wrote %s" % PRELUDE)
+    print("prelude left to scripts/restructure_includes.py")
     print("  .c files patched            : %d" % patched)
     print("  qualified names flattened   : %d" % len(used_qualified))
     print("  extra opaque decls appended : %d" % len(extra))

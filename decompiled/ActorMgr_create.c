@@ -1,4 +1,22 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+_BYTE * __fastcall ActorMgr_create(_DWORD *a1, int a2, int a3);
+
+/* ---- forward declarations for functions defined below ---- */
+_BYTE * __fastcall ActorMgr_create(_DWORD *a1, int a2, int a3);
+
+/* ---- forward declarations for functions defined below ---- */
+_BYTE * __fastcall ActorMgr_create(_DWORD *a1, int a2, int a3);
+
+/* ---- forward declarations for functions defined below ---- */
+_BYTE * __fastcall ActorMgr_create(_DWORD *a1, int a2, int a3);
+
+/* ---- forward declarations for functions defined below ---- */
+_BYTE * __fastcall ActorMgr_create(_DWORD *a1, int a2, int a3);
+
+/* ---- forward declarations for functions defined below ---- */
+_BYTE * __fastcall ActorMgr_create(_DWORD *a1, int a2, int a3);
 /* line: 0, address: 0x60008138 */ _BYTE *__fastcall ActorMgr_create(_DWORD *a1, int a2, int a3)
 /* line: 1 */ {
 /* line: 2 */   _BYTE *v5; // r0

@@ -62,18 +62,30 @@ static inline int vcgt_zero(float v) { return (v >  0.0f) ? -1 : 0; }
 static inline int vclt_zero(float v) { return (v <  0.0f) ? -1 : 0; }
 static inline int vcle_zero(float v) { return (v <= 0.0f) ? -1 : 0; }
 
-/* Q-register forms produce a 4-lane mask; kept as four lanes rather than collapsed. */
-typedef struct { int lane[4]; } int32x4_t;
-static inline int32x4_t vceq_zero_q(const float v[4])
-{ int32x4_t r; for (int i = 0; i < 4; i++) r.lane[i] = (v[i] == 0.0f) ? -1 : 0; return r; }
-static inline int32x4_t vcge_zero_q(const float v[4])
-{ int32x4_t r; for (int i = 0; i < 4; i++) r.lane[i] = (v[i] >= 0.0f) ? -1 : 0; return r; }
-static inline int32x4_t vcgt_zero_q(const float v[4])
-{ int32x4_t r; for (int i = 0; i < 4; i++) r.lane[i] = (v[i] > 0.0f) ? -1 : 0; return r; }
-static inline int32x4_t vclt_zero_q(const float v[4])
-{ int32x4_t r; for (int i = 0; i < 4; i++) r.lane[i] = (v[i] < 0.0f) ? -1 : 0; return r; }
-static inline int32x4_t vcle_zero_q(const float v[4])
-{ int32x4_t r; for (int i = 0; i < 4; i++) r.lane[i] = (v[i] <= 0.0f) ? -1 : 0; return r; }
+/* Q-register forms produce a 4-lane mask; kept as four lanes rather than collapsed.
+ *
+ * Two corrections over the first version:
+ *   * int32x4_t comes from nsmbudx_types.h. Defining it here collided with that header and made
+ *     every file including both fail with "typedef redefinition with different types".
+ *   * the helpers take FOUR float arguments, because the call sites pass
+ *     vceq_zero_q(_Q9.n128_f32[0], ..., [3]). The earlier `const float v[4]` parameter decays to a
+ *     pointer, so those call sites were passing 4 floats to a pointer parameter.
+ * The lane array on the shared type is `.v`, not `.lane`. */
+static inline int32x4_t vceq_zero_q(float a, float b, float c, float d)
+{ int32x4_t r; r.v[0]=(a==0.0f)?-1:0; r.v[1]=(b==0.0f)?-1:0;
+  r.v[2]=(c==0.0f)?-1:0; r.v[3]=(d==0.0f)?-1:0; return r; }
+static inline int32x4_t vcge_zero_q(float a, float b, float c, float d)
+{ int32x4_t r; r.v[0]=(a>=0.0f)?-1:0; r.v[1]=(b>=0.0f)?-1:0;
+  r.v[2]=(c>=0.0f)?-1:0; r.v[3]=(d>=0.0f)?-1:0; return r; }
+static inline int32x4_t vcgt_zero_q(float a, float b, float c, float d)
+{ int32x4_t r; r.v[0]=(a>0.0f)?-1:0; r.v[1]=(b>0.0f)?-1:0;
+  r.v[2]=(c>0.0f)?-1:0; r.v[3]=(d>0.0f)?-1:0; return r; }
+static inline int32x4_t vclt_zero_q(float a, float b, float c, float d)
+{ int32x4_t r; r.v[0]=(a<0.0f)?-1:0; r.v[1]=(b<0.0f)?-1:0;
+  r.v[2]=(c<0.0f)?-1:0; r.v[3]=(d<0.0f)?-1:0; return r; }
+static inline int32x4_t vcle_zero_q(float a, float b, float c, float d)
+{ int32x4_t r; r.v[0]=(a<=0.0f)?-1:0; r.v[1]=(b<=0.0f)?-1:0;
+  r.v[2]=(c<=0.0f)?-1:0; r.v[3]=(d<=0.0f)?-1:0; return r; }
 """
 
 FLOAT_HELPERS = """

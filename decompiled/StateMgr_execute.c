@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall StateMgr_execute(_DWORD *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall StateMgr_execute(_DWORD *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall StateMgr_execute(_DWORD *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall StateMgr_execute(_DWORD *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall StateMgr_execute(_DWORD *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall StateMgr_execute(_DWORD *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall StateMgr_execute(_DWORD *a1);
 /* line: 0, address: 0x608181d4 */ int __fastcall StateMgr_execute(_DWORD *a1)
 /* line: 1 */ {
 /* line: 2 */   int result; // r0

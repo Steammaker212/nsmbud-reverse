@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall PlayerBase_ctor(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall PlayerBase_ctor(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall PlayerBase_ctor(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall PlayerBase_ctor(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall PlayerBase_ctor(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall PlayerBase_ctor(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall PlayerBase_ctor(int a1, int a2);
 /* line: 0, address: 0x6075defc */ int __fastcall PlayerBase_ctor(int a1, int a2)
 /* line: 1 */ {
 /* line: 2 */   int v3; // r1

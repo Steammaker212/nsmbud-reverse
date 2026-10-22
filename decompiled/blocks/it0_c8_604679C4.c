@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_604679C4(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_604679C4(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_604679C4(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_604679C4(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_604679C4(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_604679C4(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_604679C4(StageActor *a1);
 /* line: 0, address: 0x604679c4 */ int __fastcall sub_604679C4(StageActor *a1)
 /* line: 1 */ {
 /* line: 2, address: 0x604679d4 */   StateMgr::execute((_DWORD *)a1 + 1521);

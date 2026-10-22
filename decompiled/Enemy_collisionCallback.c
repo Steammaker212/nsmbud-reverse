@@ -1,4 +1,22 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+unsigned int __fastcall Enemy_collisionCallback(int a1, _DWORD *a2);
+
+/* ---- forward declarations for functions defined below ---- */
+unsigned int __fastcall Enemy_collisionCallback(int a1, _DWORD *a2);
+
+/* ---- forward declarations for functions defined below ---- */
+unsigned int __fastcall Enemy_collisionCallback(int a1, _DWORD *a2);
+
+/* ---- forward declarations for functions defined below ---- */
+unsigned int __fastcall Enemy_collisionCallback(int a1, _DWORD *a2);
+
+/* ---- forward declarations for functions defined below ---- */
+unsigned int __fastcall Enemy_collisionCallback(int a1, _DWORD *a2);
+
+/* ---- forward declarations for functions defined below ---- */
+unsigned int __fastcall Enemy_collisionCallback(int a1, _DWORD *a2);
 /* line: 0, address: 0x602a21b0 */ unsigned int __fastcall Enemy_collisionCallback(int a1, _DWORD *a2)
 /* line: 1 */ {
 /* line: 2 */   int (__fastcall ***v4)(_DWORD, int); // r7

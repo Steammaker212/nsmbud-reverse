@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_607A1388(int a1, int a2, int a3, int a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_607A1388(int a1, int a2, int a3, int a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_607A1388(int a1, int a2, int a3, int a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_607A1388(int a1, int a2, int a3, int a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_607A1388(int a1, int a2, int a3, int a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_607A1388(int a1, int a2, int a3, int a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_607A1388(int a1, int a2, int a3, int a4, int a5);
 /* line: 0, address: 0x607a1388 */ int __fastcall sub_607A1388(int a1, int a2, int a3, int a4, int a5)
 /* line: 1 */ {
 /* line: 2 */   int CurrentState; // r0

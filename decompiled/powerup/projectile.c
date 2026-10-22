@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 /* NSMBU Deluxe v1.0.0 -- projectile decompilation
  * Generated from the IDB; RVAs are image-relative (VA - 0x60000000).
  * Pseudocode is machine-produced and lightly readable; treat types and

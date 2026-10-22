@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6046CD7C(Actor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6046CD7C(Actor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6046CD7C(Actor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6046CD7C(Actor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6046CD7C(Actor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6046CD7C(Actor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6046CD7C(Actor *a1);
 /* line: 0, address: 0x6046cd7c */ int __fastcall sub_6046CD7C(Actor *a1)
 /* line: 1 */ {
 /* line: 2 */   int v3; // [sp+4h] [bp-4h] BYREF

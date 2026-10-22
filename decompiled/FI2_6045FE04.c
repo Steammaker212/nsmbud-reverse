@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6045FE04(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6045FE04(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6045FE04(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6045FE04(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6045FE04(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6045FE04(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6045FE04(int a1);
 /* line: 0, address: 0x6045fe04 */ int __fastcall sub_6045FE04(int a1)
 /* line: 1 */ {
 /* line: 2 */   _DWORD *v2; // r0

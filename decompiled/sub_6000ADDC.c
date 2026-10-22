@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+bool __fastcall sub_6000ADDC(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+bool __fastcall sub_6000ADDC(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+bool __fastcall sub_6000ADDC(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+bool __fastcall sub_6000ADDC(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+bool __fastcall sub_6000ADDC(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+bool __fastcall sub_6000ADDC(int a1, int a2);
+
+/* ---- forward declarations for functions defined below ---- */
+bool __fastcall sub_6000ADDC(int a1, int a2);
 /* line: 0, address: 0x6000addc */ bool __fastcall sub_6000ADDC(int a1, int a2)
 /* line: 1 */ {
 /* line: 2 */   float v2; // s16

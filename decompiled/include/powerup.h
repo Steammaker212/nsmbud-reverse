@@ -15,6 +15,13 @@
 
 #include "nsmbudx_types.h"
 #include "structs.h"
+
+
+
+
+
+
+
 /* RVAs are image-relative: VA = 0x60000000 + RVA */
 
 /* ---- powerup.c ---- */

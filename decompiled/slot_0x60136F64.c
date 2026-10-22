@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall FireballBase_dtor(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall FireballBase_dtor(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall FireballBase_dtor(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall FireballBase_dtor(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall FireballBase_dtor(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall FireballBase_dtor(int a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall FireballBase_dtor(int a1);
 /* line: 0, address: 0x60136f64 */ void __fastcall FireballBase_dtor(int a1)
 /* line: 1 */ {
 /* line: 2 */   LightSource *v2; // r5

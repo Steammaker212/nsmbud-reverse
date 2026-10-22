@@ -1,3 +1,4 @@
+#include "nsmbudx_prelude.h"
 
 
 /* ---- helpers replacing Hex-Rays `__asm` escapes (see scripts/fix_asm_escapes.py) ----
@@ -598,7 +599,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1656;
     *(_WORD *)(a1 + 12836) = 0;
     sub_6050A4C4(a1 + 5608);
-    sub_60475AE8((sead::IDisposer *)(a1 + 2060));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 2060));
     sub_6045C0A0(v2);
     sub_6045C0A0(a1 + 1252);
     sub_6045C0A0(a1 + 848);
@@ -619,7 +620,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 1656);
     *(_WORD *)(a1 + 12836) = 0;
     sub_6050A4C4(a1 + 5608);
-    sub_60475AE8((sead::IDisposer *)(a1 + 2060));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 2060));
     sub_6045C0A0(v2);
     sub_6045C0A0((_DWORD *)(a1 + 1252));
     sub_6045C0A0((_DWORD *)(a1 + 848));
@@ -1151,7 +1152,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60481980(_DWORD *a1)
   {
     *a1 = 12571692;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -1162,7 +1163,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604819AC(_DWORD *a1)
   {
     *a1 = 12571692;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -1574,7 +1575,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60482208(_DWORD *a1)
   {
     *a1 = 12571820;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -1585,7 +1586,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60482238(_DWORD *a1)
   {
     *a1 = 12571820;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -1683,7 +1684,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60482614(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 24));
-    return sub_60473B58((_DWORD *)(a1 + 40), 0xEu, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 40), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -1963,10 +1964,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_60482A34(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12571948;
-    v2 = (sead::IDisposer *)(a1 + 835);
+    v2 = (struct sead_IDisposer *)(a1 + 835);
     sub_60504098(a1 + 1724);
     sub_60475AE8(v2);
     return sub_60471D18(a1);
@@ -1978,11 +1979,11 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60482A74(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12571948;
-    v2 = (sead::IDisposer *)(a1 + 835);
+    v2 = (struct sead_IDisposer *)(a1 + 835);
     sub_60504098(a1 + 1724);
     sub_60475AE8(v2);
     v3 = sub_60471D18(a1);
@@ -2709,7 +2710,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60483978(_DWORD *a1)
   {
     *a1 = 12572128;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -2720,7 +2721,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604839A4(_DWORD *a1)
   {
     *a1 = 12572128;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -3427,7 +3428,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60484D24(_DWORD *a1)
   {
     *a1 = 12572256;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -3438,7 +3439,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60484D50(_DWORD *a1)
   {
     *a1 = 12572256;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -3660,10 +3661,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60485188
  * RVA 0x00485188   size 0x64   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_60485188(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_60485188(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12572384;
-    if ( (sead::IDisposer *)MEMORY[0xC9F2C8] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xC9F2C8] == a1 )
     {
       MEMORY[0xC9F2C8] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC9F2CC])(MEMORY[0xC9F2CC]);
@@ -3676,12 +3677,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604851FC
  * RVA 0x004851fc   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604851FC(sead::IDisposer *a1)
+  int __fastcall sub_604851FC(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12572384;
-    if ( (sead::IDisposer *)MEMORY[0xC9F2C8] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xC9F2C8] == a1 )
     {
       MEMORY[0xC9F2C8] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC9F2CC])(MEMORY[0xC9F2CC]);
@@ -4551,7 +4552,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004867d8   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604867D8(sead::IDisposer *a1)
+  void __fastcall sub_604867D8(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -4560,7 +4561,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604867DC
  * RVA 0x004867dc   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604867DC(sead::IDisposer *a1)
+  int __fastcall sub_604867DC(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -6645,10 +6646,10 @@ static inline unsigned int uxtb16(unsigned int x)
     while ( v2 );
     sub_60544E84(a1 + 7124);
     sub_6045C0A0(a1 + 6912);
-    sub_6047643C((sead::IDisposer *)(a1 + 5122));
-    sub_6047643C((sead::IDisposer *)(a1 + 3352));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 5122));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3352));
     sub_605021B0(a1 + 1884);
-    sub_60475AE8((sead::IDisposer *)(a1 + 18));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 18));
     return a1;
   }
 
@@ -6657,7 +6658,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004898e8   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604898E8(sead::IDisposer *a1)
+  void __fastcall sub_604898E8(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -8742,7 +8743,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( sub_60436B70(*(_DWORD **)(v19 + 50456), v27, 5u, v5, *v23) == 1 )
           {
             *(_DWORD *)(v19 + 47836) = 1;
-            sub_604106A4(v22, v19 + 47864, *(_DWORD *)(v19 + 50456), v19 + 49632, (int)v30, (int)v29, nullptr);
+            sub_604106A4(v22, v19 + 47864, *(_DWORD *)(v19 + 50456), v19 + 49632, (int)v30, (int)v29, 0);
           }
           result = 0;
           if ( v5 < 0x22 )
@@ -9164,7 +9165,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     char v6; // r11
     _DWORD *v7; // r5
-    sead::Random *v8; // r6
+    struct sead_Random *v8; // r6
     int v9; // r0
     int v10; // r0
     int v11; // [sp+4h] [bp-Ch]
@@ -9182,7 +9183,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result == 1 )
       {
         v7 = *(_DWORD **)(v11 + 4 * v2);
-        v8 = (sead::Random *)MEMORY[0xCCF4E4];
+        v8 = (struct sead_Random *)MEMORY[0xCCF4E4];
         v9 = sub_60492F00(2);
         v12 = 12321336;
         v13 = v9;
@@ -11601,7 +11602,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004912e8   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604912E8(sead::IDisposer *a1)
+  void __fastcall sub_604912E8(struct sead_IDisposer *a1)
   {
     sub_6047643C(a1);
   }
@@ -11610,7 +11611,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604912EC
  * RVA 0x004912ec   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604912EC(sead::IDisposer *a1)
+  int __fastcall sub_604912EC(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -11626,7 +11627,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r4
+    struct sead_CriticalSection *v4; // r4
     int v5; // r5
     signed int v6; // r6
     char v7; // r7
@@ -11637,7 +11638,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9F820];
       if ( !MEMORY[0xC9F820] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9F820] )
         {
@@ -11695,7 +11696,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -11706,7 +11707,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9F840];
       if ( !MEMORY[0xC9F840] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9F840] )
         {
@@ -11868,7 +11869,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -11879,7 +11880,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9F880];
       if ( !MEMORY[0xC9F880] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9F880] )
         {
@@ -12045,7 +12046,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -12056,7 +12057,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9F920];
       if ( !MEMORY[0xC9F920] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9F920] )
         {
@@ -12228,7 +12229,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -12239,7 +12240,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9FB08];
       if ( !MEMORY[0xC9FB08] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9FB08] )
         {
@@ -12404,7 +12405,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -12415,7 +12416,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9FB84];
       if ( !MEMORY[0xC9FB84] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9FB84] )
         {
@@ -12577,7 +12578,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -12588,7 +12589,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9FBDC];
       if ( !MEMORY[0xC9FBDC] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9FBDC] )
         {
@@ -12754,7 +12755,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -12765,7 +12766,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9FC78];
       if ( !MEMORY[0xC9FC78] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9FC78] )
         {
@@ -12927,7 +12928,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -12938,7 +12939,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xC9FCCC];
       if ( !MEMORY[0xC9FCCC] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xC9FCCC] )
         {
@@ -13213,7 +13214,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604933B8
  * RVA 0x004933b8   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604933B8(sead::IDisposer *a1)
+  int __fastcall sub_604933B8(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -13226,7 +13227,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004933c8   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604933C8(sead::IDisposer *a1)
+  void __fastcall sub_604933C8(struct sead_IDisposer *a1)
   {
     sub_6047643C(a1);
   }
@@ -13235,7 +13236,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604933CC
  * RVA 0x004933cc   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604933CC(sead::IDisposer *a1)
+  int __fastcall sub_604933CC(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -14192,7 +14193,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x0049487c   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_6049487C(sead::IDisposer *a1)
+  void __fastcall sub_6049487C(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -15125,7 +15126,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -15136,7 +15137,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA01D0];
       if ( !MEMORY[0xCA01D0] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA01D0] )
         {
@@ -15303,7 +15304,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r4
+    struct sead_CriticalSection *v4; // r4
     int v5; // r5
     signed int v6; // r6
     char v7; // r7
@@ -15314,7 +15315,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA02A8];
       if ( !MEMORY[0xCA02A8] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA02A8] )
         {
@@ -15424,7 +15425,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -15435,7 +15436,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA02CC];
       if ( !MEMORY[0xCA02CC] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA02CC] )
         {
@@ -15602,7 +15603,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -15613,7 +15614,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA039C];
       if ( !MEMORY[0xCA039C] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA039C] )
         {
@@ -15893,7 +15894,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604971E4
  * RVA 0x004971e4   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604971E4(sead::IDisposer *a1)
+  int __fastcall sub_604971E4(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -15971,10 +15972,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60497308
  * RVA 0x00497308   size 0x5c   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_60497308(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_60497308(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12573632;
-    if ( (sead::IDisposer *)MEMORY[0xCA0598] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA0598] == a1 )
     {
       MEMORY[0xCA0598] = 0;
       sub_60498EB0(MEMORY[0xCA059C]);
@@ -15987,12 +15988,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60497374
  * RVA 0x00497374   size 0x60   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60497374(sead::IDisposer *a1)
+  int __fastcall sub_60497374(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12573632;
-    if ( (sead::IDisposer *)MEMORY[0xCA0598] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA0598] == a1 )
     {
       MEMORY[0xCA0598] = 0;
       sub_60498EB0(MEMORY[0xCA059C]);
@@ -17116,7 +17117,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604A4320(a1 + 6571);
     sub_604A4320(a1 + 1432);
     sub_605021B0(a1 + 912);
-    sub_60475AE8((sead::IDisposer *)(a1 + 16));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 16));
     return a1;
   }
 
@@ -17125,7 +17126,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00498fa8   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_60498FA8(sead::IDisposer *a1)
+  void __fastcall sub_60498FA8(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -17969,7 +17970,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_6049A37C
  * RVA 0x0049a37c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6049A37C(sead::IDisposer *a1)
+  int __fastcall sub_6049A37C(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -21792,8 +21793,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r3
     int v4; // r7
     int v5; // r1
-    sead::IDisposer *v6; // r6
-    sead::IDisposer *v7; // r5
+    struct sead_IDisposer *v6; // r6
+    struct sead_IDisposer *v7; // r5
     int v10; // [sp+Ch] [bp-28h]
     int v11; // [sp+10h] [bp-24h]
     int v12; // [sp+14h] [bp-20h]
@@ -21821,15 +21822,15 @@ static inline unsigned int uxtb16(unsigned int x)
       v10 = v3;
       v11 = v2;
       v13 = v5;
-      v6 = (sead::IDisposer *)((char *)a1 + v5);
+      v6 = (struct sead_IDisposer *)((char *)a1 + v5);
       *(_DWORD *)((char *)a1 + v2) = 12556340;
-      v7 = (sead::IDisposer *)((char *)a1 + v2);
+      v7 = (struct sead_IDisposer *)((char *)a1 + v2);
       *(_DWORD *)((char *)a1 + v2 + 2884) = 12325992;
       sub_60237560((int)a1 + v5);
       sead::IDisposer::~IDisposer(v6);
       *((_DWORD *)v7 + 695) = 12325992;
       sub_60237560((int)&a1[v18]);
-      sead::IDisposer::~IDisposer((sead::IDisposer *)&a1[v18]);
+      sead::IDisposer::~IDisposer((struct sead_IDisposer *)&a1[v18]);
       sub_6045C0A0(&a1[v17]);
       sub_6045C0A0(&a1[v16]);
       sub_6045C0A0((char *)a1 + v12);
@@ -21858,7 +21859,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60558120(a1 + 2324);
     sub_6050B5C8(a1 + 1429);
     sub_605021B0(a1 + 909);
-    sub_60475AE8((sead::IDisposer *)(a1 + 11));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return a1;
   }
 
@@ -24433,7 +24434,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 13232);
     sub_6050A4C4(a1 + 6016);
     sub_605021B0(a1 + 3936);
-    sub_60475AE8((sead::IDisposer *)(a1 + 48));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 48));
     return a1;
   }
 
@@ -24442,7 +24443,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004a4354   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604A4354(sead::IDisposer *a1)
+  void __fastcall sub_604A4354(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -26493,7 +26494,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604A744C
  * RVA 0x004a744c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604A744C(sead::IDisposer *a1)
+  int __fastcall sub_604A744C(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -26731,10 +26732,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604A7D74
  * RVA 0x004a7d74   size 0x5c   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_604A7D74(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_604A7D74(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12574144;
-    if ( (sead::IDisposer *)MEMORY[0xCA1468] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA1468] == a1 )
     {
       MEMORY[0xCA1468] = 0;
       sub_604AB390(MEMORY[0xCA146C]);
@@ -26747,12 +26748,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604A7DE0
  * RVA 0x004a7de0   size 0x60   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604A7DE0(sead::IDisposer *a1)
+  int __fastcall sub_604A7DE0(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12574144;
-    if ( (sead::IDisposer *)MEMORY[0xCA1468] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA1468] == a1 )
     {
       MEMORY[0xCA1468] = 0;
       sub_604AB390(MEMORY[0xCA146C]);
@@ -29431,17 +29432,17 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(v2 + v5) = 12556340;
       *(_DWORD *)(v2 + v5 + 2884) = 12325992;
       sub_60237560(v14 + v5);
-      sead::IDisposer::~IDisposer((sead::IDisposer *)(v14 + v5));
+      sead::IDisposer::~IDisposer((struct sead_IDisposer *)(v14 + v5));
       *(_DWORD *)(v2 + v5 + 2780) = 12325992;
       sub_60237560(v13 + v5);
-      sead::IDisposer::~IDisposer((sead::IDisposer *)(v13 + v5));
+      sead::IDisposer::~IDisposer((struct sead_IDisposer *)(v13 + v5));
       sub_6045C0A0(v12 + v5);
       sub_6045C0A0(v11 + v5);
       sub_6045C0A0(v10 + v5);
       sub_6045C0A0(v9 + v5 + 93184);
       sub_6045C0A0(v3 + v5);
       sub_60026BFC((_DWORD *)(v6 + v5));
-      sead::IDisposer::~IDisposer((sead::IDisposer *)(v2 + v5));
+      sead::IDisposer::~IDisposer((struct sead_IDisposer *)(v2 + v5));
       v5 -= 2988;
     }
     while ( v5 != -182268 );
@@ -29451,7 +29452,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604A4320(v8 + 44844);
     sub_604A4320(v8 + 24288);
     sub_604A4320(v8 + 3732);
-    sub_60475AE8((sead::IDisposer *)(v8 + 64));
+    sub_60475AE8((struct sead_IDisposer *)(v8 + 64));
     return v8;
   }
 
@@ -29460,7 +29461,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004ab57c   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604AB57C(sead::IDisposer *a1)
+  void __fastcall sub_604AB57C(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -31127,7 +31128,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604ADD6C
  * RVA 0x004add6c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604ADD6C(sead::IDisposer *a1)
+  int __fastcall sub_604ADD6C(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -31506,7 +31507,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604AE884(int a1)
   {
-    sub_60475AE8((sead::IDisposer *)(a1 + 36));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 36));
     return a1;
   }
 
@@ -31515,7 +31516,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004ae89c   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604AE89C(sead::IDisposer *a1)
+  void __fastcall sub_604AE89C(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -31914,7 +31915,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604AF188
  * RVA 0x004af188   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604AF188(sead::IDisposer *a1)
+  int __fastcall sub_604AF188(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -31926,10 +31927,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604AF198
  * RVA 0x004af198   size 0x64   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_604AF198(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_604AF198(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12574440;
-    if ( (sead::IDisposer *)MEMORY[0xCA190C] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA190C] == a1 )
     {
       MEMORY[0xCA190C] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA1910])(MEMORY[0xCA1910]);
@@ -31942,12 +31943,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604AF20C
  * RVA 0x004af20c   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604AF20C(sead::IDisposer *a1)
+  int __fastcall sub_604AF20C(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12574440;
-    if ( (sead::IDisposer *)MEMORY[0xCA190C] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA190C] == a1 )
     {
       MEMORY[0xCA190C] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA1910])(MEMORY[0xCA1910]);
@@ -32058,7 +32059,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60473DE4((_DWORD *)(a1 + 20), 0, (_DWORD *)0xCA1914, 0);
     v3 = sub_6047482C(a1 + 20, 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
-    sub_60473B58((_DWORD *)(a1 + 20), 0xEu, nullptr);
+    sub_60473B58((_DWORD *)(a1 + 20), 0xEu, 0);
     if ( (*(_BYTE *)(MEMORY[0xC99DD4] + 1376) & 4) != 0 )
     {
       sub_60502B04(a1 + 3608, (unsigned int *)0xB02E68, 1);
@@ -32973,18 +32974,18 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604B10F0(_DWORD *a1)
   {
     *a1 = 12574456;
-    sub_6047643C((sead::IDisposer *)(a1 + 8631));
-    sub_6047643C((sead::IDisposer *)(a1 + 7746));
-    sub_6047643C((sead::IDisposer *)(a1 + 6861));
-    sub_6047643C((sead::IDisposer *)(a1 + 5976));
-    sub_6047643C((sead::IDisposer *)(a1 + 5091));
-    sub_6047643C((sead::IDisposer *)(a1 + 4206));
-    sub_6047643C((sead::IDisposer *)(a1 + 3321));
-    sub_6047643C((sead::IDisposer *)(a1 + 2436));
-    sub_6047643C((sead::IDisposer *)(a1 + 1551));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 8631));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 7746));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 6861));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 5976));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 5091));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 4206));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3321));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 2436));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 1551));
     sub_6045C0A0(a1 + 1422);
     sub_605021B0(a1 + 902);
-    sub_60475AE8((sead::IDisposer *)(a1 + 5));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 5));
     return a1;
   }
 
@@ -34078,15 +34079,15 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604B318C(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12574584;
-    v2 = (sead::IDisposer *)(a1 + 2813);
+    v2 = (struct sead_IDisposer *)(a1 + 2813);
     sub_6045C0A0(a1 + 3737);
     sub_6047643C(v2);
-    sub_6047643C((sead::IDisposer *)(a1 + 1928));
-    sub_6047643C((sead::IDisposer *)(a1 + 1043));
-    sub_6047643C((sead::IDisposer *)(a1 + 158));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 1928));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 1043));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 158));
     *a1 = 12572424;
     sub_6045C0A0(a1 + 22);
     return a1;
@@ -34098,15 +34099,15 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604B3208(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12574584;
-    v2 = (sead::IDisposer *)(a1 + 2813);
+    v2 = (struct sead_IDisposer *)(a1 + 2813);
     sub_6045C0A0(a1 + 3737);
     sub_6047643C(v2);
-    sub_6047643C((sead::IDisposer *)(a1 + 1928));
-    sub_6047643C((sead::IDisposer *)(a1 + 1043));
-    sub_6047643C((sead::IDisposer *)(a1 + 158));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 1928));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 1043));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 158));
     *a1 = 12572424;
     sub_6045C0A0(a1 + 22);
     return operator delete((int)a1);
@@ -35651,7 +35652,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004b5ba4   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604B5BA4(sead::IDisposer *a1)
+  void __fastcall sub_604B5BA4(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -35660,7 +35661,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604B5BA8
  * RVA 0x004b5ba8   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604B5BA8(sead::IDisposer *a1)
+  int __fastcall sub_604B5BA8(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -37263,7 +37264,7 @@ static inline unsigned int uxtb16(unsigned int x)
       operator delete(v3);
       a1[913] = 0;
     }
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -37272,7 +37273,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004b7a3c   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604B7A3C(sead::IDisposer *a1)
+  void __fastcall sub_604B7A3C(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -37294,7 +37295,7 @@ static inline unsigned int uxtb16(unsigned int x)
       operator delete(v3);
       a1[913] = 0;
     }
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -37448,7 +37449,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604B7F5C(int result)
   {
     if ( *(_BYTE *)(result + 3721) )
-      return sub_60473B58((_DWORD *)(result + 4), *(_DWORD *)(result + 3716), nullptr);
+      return sub_60473B58((_DWORD *)(result + 4), *(_DWORD *)(result + 3716), 0);
     return result;
   }
 
@@ -37478,7 +37479,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v1 = *(_DWORD *)(a1 + 3724);
-    result = nullptr;
+    result = 0;
     if ( v1 != 44 )
     {
       if ( v1 >= 0x2C )
@@ -38196,7 +38197,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604B8F5C
  * RVA 0x004b8f5c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604B8F5C(sead::IDisposer *a1)
+  int __fastcall sub_604B8F5C(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -38894,7 +38895,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604BA75C(_DWORD *a1)
   {
     *a1 = 12574964;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -38903,7 +38904,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004ba788   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604BA788(sead::IDisposer *a1)
+  void __fastcall sub_604BA788(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -38915,7 +38916,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604BA790(_DWORD *a1)
   {
     *a1 = 12574964;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -39282,7 +39283,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604BB07C
  * RVA 0x004bb07c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604BB07C(sead::IDisposer *a1)
+  int __fastcall sub_604BB07C(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -39294,13 +39295,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604BB08C
  * RVA 0x004bb08c   size 0x60   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_604BB08C(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_604BB08C(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12575120;
-    if ( (sead::IDisposer *)MEMORY[0xCA2670] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA2670] == a1 )
     {
       MEMORY[0xCA2670] = 0;
-      sub_60475AE8((sead::IDisposer *)(MEMORY[0xCA2674] + 84));
+      sub_60475AE8((struct sead_IDisposer *)(MEMORY[0xCA2674] + 84));
       MEMORY[0xCA2674] = 0;
     }
     return sead::IDisposer::~IDisposer(a1);
@@ -39310,15 +39311,15 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604BB0FC
  * RVA 0x004bb0fc   size 0x64   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604BB0FC(sead::IDisposer *a1)
+  int __fastcall sub_604BB0FC(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12575120;
-    if ( (sead::IDisposer *)MEMORY[0xCA2670] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA2670] == a1 )
     {
       MEMORY[0xCA2670] = 0;
-      sub_60475AE8((sead::IDisposer *)(MEMORY[0xCA2674] + 84));
+      sub_60475AE8((struct sead_IDisposer *)(MEMORY[0xCA2674] + 84));
       MEMORY[0xCA2674] = 0;
     }
     v2 = sead::IDisposer::~IDisposer(a1);
@@ -39935,10 +39936,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604BC064(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12575248;
-    v2 = (sead::IDisposer *)(a1 + 835);
+    v2 = (struct sead_IDisposer *)(a1 + 835);
     sub_60507C90(a1 + 1724);
     sub_60475AE8(v2);
     return sub_60471D18(a1);
@@ -39950,11 +39951,11 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604BC0A8(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     _DWORD *v3; // r0
   
     *a1 = 12575248;
-    v2 = (sead::IDisposer *)(a1 + 835);
+    v2 = (struct sead_IDisposer *)(a1 + 835);
     sub_60507C90(a1 + 1724);
     sub_60475AE8(v2);
     v3 = sub_60471D18(a1);
@@ -41192,7 +41193,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v3 = sub_6047482C(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 108))(v3);
-      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, nullptr);
+      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = sub_6047482C(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248632);
@@ -41665,7 +41666,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604C04C8((float *)a1, 1);
       v3 = sub_6047482C(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
-      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, nullptr);
+      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = sub_6047482C(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248472);
@@ -41709,7 +41710,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v3 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
-      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, nullptr);
+      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       sub_604BFE2C(a1);
@@ -41753,7 +41754,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604C04C8((float *)a1, 1);
       v3 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 108))(v3);
-      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, nullptr);
+      sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248472);
@@ -45328,7 +45329,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 1635);
     sub_6045C0A0(a1 + 1534);
     sub_605021B0(a1 + 1014);
-    sub_60475AE8((sead::IDisposer *)(a1 + 12));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
     return a1;
   }
 
@@ -45337,7 +45338,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004c4da4   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604C4DA4(sead::IDisposer *a1)
+  void __fastcall sub_604C4DA4(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -45356,7 +45357,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 1635);
     sub_6045C0A0(a1 + 1534);
     sub_605021B0(a1 + 1014);
-    sub_60475AE8((sead::IDisposer *)(a1 + 12));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
     return operator delete((int)a1);
   }
 
@@ -45756,7 +45757,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v8 = result + 1602;
     result[3533] = (unsigned __int8 *)((unsigned int)result[1602] & 0x10D00);
-    result[3534] = nullptr;
+    result[3534] = 0;
     v7 = result + 3534;
     v1 = MEMORY[0xCCF448];
     if ( *(_DWORD *)(MEMORY[0xCCF448] + 212) )
@@ -45772,7 +45773,7 @@ static inline unsigned int uxtb16(unsigned int x)
           _cxa_guard_release_0(13156900);
         }
         v4 = (**(int (__fastcall ***)(unsigned __int8 *, int))v3)(v3, 13156896);
-        v5 = v3 == nullptr;
+        v5 = v3 == 0;
         if ( v3 )
           v5 = (v4 ^ 1) == 1;
         if ( !v5 )
@@ -45790,7 +45791,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           *v6 = *v8 & 0x10100;
           *v7 = 0;
-          return nullptr;
+          return 0;
         }
       }
     }
@@ -46288,47 +46289,47 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v3 = a1 + 4096;
     v4 = (_DWORD *)sub_6047EBE0(v3, &dword_60CA2FF0);
-    v5 = v4 == nullptr;
+    v5 = v4 == 0;
     if ( v4 )
     {
       v4 = (_DWORD *)v4[35];
-      v5 = v4 == nullptr;
+      v5 = v4 == 0;
     }
     if ( !v5 )
       (*(void (__fastcall **)(_DWORD *))(*v4 + 96))(v4);
     v6 = (_DWORD *)sub_6047EBE0(v3, &dword_60CA2FF8);
-    v7 = v6 == nullptr;
+    v7 = v6 == 0;
     if ( v6 )
     {
       v6 = (_DWORD *)v6[35];
-      v7 = v6 == nullptr;
+      v7 = v6 == 0;
     }
     if ( !v7 )
       (*(void (__fastcall **)(_DWORD *))(*v6 + 96))(v6);
     v8 = (_DWORD *)sub_6047EBE0(v3, &dword_60CA3000);
-    v9 = v8 == nullptr;
+    v9 = v8 == 0;
     if ( v8 )
     {
       v8 = (_DWORD *)v8[35];
-      v9 = v8 == nullptr;
+      v9 = v8 == 0;
     }
     if ( !v9 )
       (*(void (__fastcall **)(_DWORD *))(*v8 + 96))(v8);
     v10 = (_DWORD *)sub_6047EBE0(v3, &dword_60CA3008);
-    v11 = v10 == nullptr;
+    v11 = v10 == 0;
     if ( v10 )
     {
       v10 = (_DWORD *)v10[35];
-      v11 = v10 == nullptr;
+      v11 = v10 == 0;
     }
     if ( !v11 )
       (*(void (__fastcall **)(_DWORD *))(*v10 + 96))(v10);
     result = (_DWORD *)sub_6047EBE0(v3, &dword_60CA3010);
-    v13 = result == nullptr;
+    v13 = result == 0;
     if ( result )
     {
       result = (_DWORD *)result[35];
-      v13 = result == nullptr;
+      v13 = result == 0;
     }
     if ( !v13 )
       return (_DWORD *)(*(int (__fastcall **)(_DWORD *))(*result + 96))(result);
@@ -47275,7 +47276,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604C89C4
  * RVA 0x004c89c4   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604C89C4(sead::IDisposer *a1)
+  int __fastcall sub_604C89C4(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -49619,24 +49620,24 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60544E84(a1 + 13935);
     sub_6050A4C4(v2);
     sub_6045C0A0(a1 + 12026);
-    sub_6047643C((sead::IDisposer *)(a1 + 11141));
-    sub_6047643C((sead::IDisposer *)(a1 + 10256));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 11141));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 10256));
     sub_605021B0(a1 + 9731);
-    sub_60475AE8((sead::IDisposer *)(a1 + 8819));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 8819));
     sub_6050A4C4(a1 + 7004);
     sub_6045C0A0(a1 + 6897);
     sub_605021B0(a1 + 6377);
-    sub_60475AE8((sead::IDisposer *)(a1 + 5477));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 5477));
     sub_6045C0A0(a1 + 5364);
     sub_6045C0A0(a1 + 5263);
     sub_6045C0A0(a1 + 5162);
     sub_6045C0A0(a1 + 5061);
-    sub_6047643C((sead::IDisposer *)(a1 + 4125));
-    sub_6047643C((sead::IDisposer *)(a1 + 3240));
-    sub_6047643C((sead::IDisposer *)(a1 + 2355));
-    sub_6047643C((sead::IDisposer *)(a1 + 1470));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 4125));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3240));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 2355));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 1470));
     sub_605021B0(a1 + 950);
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -49649,43 +49650,43 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 526000);
     sub_604D9DF8(a1 + 479776);
     sub_605021B0(a1 + 477696);
-    sub_60475AE8((sead::IDisposer *)(a1 + 473856));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 473856));
     sub_6045C0A0(a1 + 473356);
     sub_604D9DF8(a1 + 427132);
     sub_605021B0(a1 + 425052);
-    sub_60475AE8((sead::IDisposer *)(a1 + 421212));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 421212));
     sub_6045C0A0(a1 + 420712);
     sub_604D9DF8(a1 + 374488);
     sub_605021B0(a1 + 372408);
-    sub_60475AE8((sead::IDisposer *)(a1 + 368568));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 368568));
     sub_6045C0A0(a1 + 368068);
     sub_604D9DF8(a1 + 321844);
     sub_605021B0(a1 + 319764);
-    sub_60475AE8((sead::IDisposer *)(a1 + 315924));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 315924));
     sub_6045C0A0(a1 + 315424);
     sub_604D9DF8(a1 + 269200);
     sub_605021B0(a1 + 267120);
-    sub_60475AE8((sead::IDisposer *)(a1 + 263280));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 263280));
     sub_6045C0A0(a1 + 262780);
     sub_604D9DF8(a1 + 216556);
     sub_605021B0(a1 + 214476);
-    sub_60475AE8((sead::IDisposer *)(a1 + 210636));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 210636));
     sub_6045C0A0(a1 + 210136);
     sub_604D9DF8(a1 + 163912);
     sub_605021B0(a1 + 161832);
-    sub_60475AE8((sead::IDisposer *)(a1 + 157992));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 157992));
     sub_6045C0A0(a1 + 157492);
     sub_604D9DF8(a1 + 111268);
     sub_605021B0(a1 + 109188);
-    sub_60475AE8((sead::IDisposer *)(a1 + 105348));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 105348));
     sub_6045C0A0(a1 + 104848);
     sub_604D9DF8(a1 + 58624);
     sub_605021B0(a1 + 56544);
-    sub_60475AE8((sead::IDisposer *)(a1 + 52704));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 52704));
     sub_6045C0A0(a1 + 52204);
     sub_604D9DF8(a1 + 5980);
     sub_605021B0(a1 + 3900);
-    sub_60475AE8((sead::IDisposer *)(a1 + 60));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 60));
     return a1;
   }
 
@@ -57331,19 +57332,19 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_604D9DF8(int a1)
   {
-    sub_6047643C((sead::IDisposer *)(a1 + 42480));
-    sub_6047643C((sead::IDisposer *)(a1 + 38940));
-    sub_6047643C((sead::IDisposer *)(a1 + 35400));
-    sub_6047643C((sead::IDisposer *)(a1 + 31860));
-    sub_6047643C((sead::IDisposer *)(a1 + 28320));
-    sub_6047643C((sead::IDisposer *)(a1 + 24780));
-    sub_6047643C((sead::IDisposer *)(a1 + 21240));
-    sub_6047643C((sead::IDisposer *)(a1 + 17700));
-    sub_6047643C((sead::IDisposer *)(a1 + 14160));
-    sub_6047643C((sead::IDisposer *)(a1 + 10620));
-    sub_6047643C((sead::IDisposer *)(a1 + 7080));
-    sub_6047643C((sead::IDisposer *)(a1 + 3540));
-    sub_6047643C((sead::IDisposer *)a1);
+    sub_6047643C((struct sead_IDisposer *)(a1 + 42480));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 38940));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 35400));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 31860));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 28320));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 24780));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 21240));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 17700));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 14160));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 10620));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 7080));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3540));
+    sub_6047643C((struct sead_IDisposer *)a1);
   }
 
 /* ============================================================================
@@ -57354,7 +57355,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -57365,7 +57366,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4278];
       if ( !MEMORY[0xCA4278] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4278] )
         {
@@ -57527,7 +57528,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -57538,7 +57539,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA42C4];
       if ( !MEMORY[0xCA42C4] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA42C4] )
         {
@@ -57700,7 +57701,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -57711,7 +57712,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4334];
       if ( !MEMORY[0xCA4334] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4334] )
         {
@@ -57873,7 +57874,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -57884,7 +57885,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4394];
       if ( !MEMORY[0xCA4394] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4394] )
         {
@@ -57942,7 +57943,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -57953,7 +57954,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA43F4];
       if ( !MEMORY[0xCA43F4] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA43F4] )
         {
@@ -58119,7 +58120,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -58130,7 +58131,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA44AC];
       if ( !MEMORY[0xCA44AC] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA44AC] )
         {
@@ -58296,7 +58297,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -58307,7 +58308,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4554];
       if ( !MEMORY[0xCA4554] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4554] )
         {
@@ -58488,7 +58489,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -58499,7 +58500,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4938];
       if ( !MEMORY[0xCA4938] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4938] )
         {
@@ -58667,7 +58668,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -58678,7 +58679,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4A38];
       if ( !MEMORY[0xCA4A38] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4A38] )
         {
@@ -58840,7 +58841,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -58851,7 +58852,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4A6C];
       if ( !MEMORY[0xCA4A6C] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4A6C] )
         {
@@ -58909,7 +58910,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -58920,7 +58921,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4A94];
       if ( !MEMORY[0xCA4A94] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4A94] )
         {
@@ -59082,7 +59083,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -59093,7 +59094,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4AC8];
       if ( !MEMORY[0xCA4AC8] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4AC8] )
         {
@@ -59255,7 +59256,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r4
+    struct sead_CriticalSection *v4; // r4
     int v5; // r5
     signed int v6; // r6
     char v7; // r7
@@ -59266,7 +59267,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4B10];
       if ( !MEMORY[0xCA4B10] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4B10] )
         {
@@ -59324,7 +59325,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -59335,7 +59336,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4B30];
       if ( !MEMORY[0xCA4B30] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4B30] )
         {
@@ -59497,7 +59498,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -59508,7 +59509,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4B68];
       if ( !MEMORY[0xCA4B68] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4B68] )
         {
@@ -59566,7 +59567,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r4
+    struct sead_CriticalSection *v4; // r4
     int v5; // r5
     signed int v6; // r6
     char v7; // r7
@@ -59577,7 +59578,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4BB4];
       if ( !MEMORY[0xCA4BB4] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4BB4] )
         {
@@ -59739,7 +59740,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -59750,7 +59751,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4BD8];
       if ( !MEMORY[0xCA4BD8] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4BD8] )
         {
@@ -59912,7 +59913,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -59923,7 +59924,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4C34];
       if ( !MEMORY[0xCA4C34] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4C34] )
         {
@@ -59981,7 +59982,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -59992,7 +59993,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA4CA4];
       if ( !MEMORY[0xCA4CA4] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA4CA4] )
         {
@@ -60748,7 +60749,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604DE33C(_DWORD *a1)
   {
     *a1 = 12576864;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -60759,7 +60760,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DE36C(_DWORD *a1)
   {
     *a1 = 12576864;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -61142,7 +61143,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604DEB94(_DWORD *a1)
   {
     *a1 = 12576992;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -61153,7 +61154,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DEBC0(_DWORD *a1)
   {
     *a1 = 12576992;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -61185,7 +61186,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DEC98(int a1)
   {
     *(_BYTE *)(a1 + 3553) = 1;
-    return sub_60473B58((_DWORD *)(a1 + 4), 0xEu, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 4), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -62225,10 +62226,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_604E020C(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12577048;
-    v2 = (sead::IDisposer *)(a1 + 10);
+    v2 = (struct sead_IDisposer *)(a1 + 10);
     sub_6045C0A0(a1 + 902);
     sub_60475AE8(v2);
     return a1;
@@ -62240,10 +62241,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604E024C(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12577048;
-    v2 = (sead::IDisposer *)(a1 + 10);
+    v2 = (struct sead_IDisposer *)(a1 + 10);
     sub_6045C0A0(a1 + 902);
     sub_60475AE8(v2);
     return operator delete((int)a1);
@@ -63115,7 +63116,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 1122);
     sub_6045C0A0(a1 + 1021);
     sub_6045C0A0(a1 + 920);
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -63131,7 +63132,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 1122);
     sub_6045C0A0(a1 + 1021);
     sub_6045C0A0(a1 + 920);
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -64533,7 +64534,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604BA75C(a1 + 2752);
     sub_604BA75C(a1 + 1827);
     sub_604BA75C(a1 + 902);
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -64553,7 +64554,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604BA75C(a1 + 2752);
     sub_604BA75C(a1 + 1827);
     sub_604BA75C(a1 + 902);
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -66217,7 +66218,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604E8C6C(a1);
       sub_604E9478(a1);
     }
-    sub_60473B58(*(_DWORD **)(a1 + 4), *(_DWORD *)(a1 + 62852), nullptr);
+    sub_60473B58(*(_DWORD **)(a1 + 4), *(_DWORD *)(a1 + 62852), 0);
     if ( *(_DWORD *)(a1 + 4552) == 1 )
       sub_604E8B68((_DWORD *)a1);
     *(_DWORD *)(a1 + 4556) = 0;
@@ -67173,7 +67174,7 @@ static inline unsigned int uxtb16(unsigned int x)
       goto LABEL_62;
     }
     v29 = (_BYTE *)sub_6047482C(*(_DWORD *)(a1 + 4), 9);
-    v30 = v29 == nullptr;
+    v30 = v29 == 0;
     if ( v29 )
       v30 = (v29[51] & 4) == 0;
     if ( !v30 )
@@ -67751,7 +67752,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004e8054   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604E8054(sead::IDisposer *a1)
+  void __fastcall sub_604E8054(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -67760,7 +67761,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604E8058
  * RVA 0x004e8058   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604E8058(sead::IDisposer *a1)
+  int __fastcall sub_604E8058(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -69294,7 +69295,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604EA648(int a1)
   {
     sub_604EA67C(a1);
-    sub_60473B58(*(_DWORD **)(a1 + 4), 0xEu, nullptr);
+    sub_60473B58(*(_DWORD **)(a1 + 4), 0xEu, 0);
     sub_604E8B68((_DWORD *)a1);
     *(_BYTE *)(a1 + 20) = 1;
     *(_BYTE *)(a1 + 296) = 1;
@@ -69572,7 +69573,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr::execute((_DWORD *)(a1 + 4536));
     sub_604E8C6C(a1);
     sub_604E9478(a1);
-    return sub_60473B58(*(_DWORD **)(a1 + 4), 0xEu, nullptr);
+    return sub_60473B58(*(_DWORD **)(a1 + 4), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -70162,10 +70163,10 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     sub_6050A4C4(a1 + 16496);
     sub_605021B0(a1 + 14396);
-    sub_60475AE8((sead::IDisposer *)(a1 + 10808));
-    sub_604ED418((sead::IDisposer *)(a1 + 7212));
-    sub_604ED418((sead::IDisposer *)(a1 + 3624));
-    sub_604ED418((sead::IDisposer *)(a1 + 36));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10808));
+    sub_604ED418((struct sead_IDisposer *)(a1 + 7212));
+    sub_604ED418((struct sead_IDisposer *)(a1 + 3624));
+    sub_604ED418((struct sead_IDisposer *)(a1 + 36));
     return a1;
   }
 
@@ -71035,7 +71036,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004ed418   size 0x4   xrefs 3
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604ED418(sead::IDisposer *a1)
+  void __fastcall sub_604ED418(struct sead_IDisposer *a1)
   {
     sub_6047643C(a1);
   }
@@ -71045,7 +71046,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004ed41c   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604ED41C(sead::IDisposer *a1)
+  void __fastcall sub_604ED41C(struct sead_IDisposer *a1)
   {
     sub_6047643C(a1);
   }
@@ -71209,7 +71210,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604ED860
  * RVA 0x004ed860   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604ED860(sead::IDisposer *a1)
+  int __fastcall sub_604ED860(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -71475,10 +71476,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604EDDFC(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12578032;
-    v2 = (sead::IDisposer *)(a1 + 40);
+    v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 10832) = 0;
     sub_6045C0A0((_DWORD *)(a1 + 10836));
     sub_6050A4C4(a1 + 3616);
@@ -71492,10 +71493,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604EDE4C(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12578032;
-    v2 = (sead::IDisposer *)(a1 + 40);
+    v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 10832) = 0;
     sub_6045C0A0((_DWORD *)(a1 + 10836));
     sub_6050A4C4(a1 + 3616);
@@ -73075,20 +73076,20 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604F0720(_DWORD *a1)
   {
     _DWORD *v2; // r6
-    sead::IDisposer *v3; // r5
-    sead::IDisposer *v4; // r7
+    struct sead_IDisposer *v3; // r5
+    struct sead_IDisposer *v4; // r7
   
     *a1 = 12578160;
     v2 = a1 + 17894;
     a1[17766] = 12556340;
-    v3 = (sead::IDisposer *)(a1 + 17766);
+    v3 = (struct sead_IDisposer *)(a1 + 17766);
     a1[18487] = 12325992;
-    v4 = (sead::IDisposer *)(a1 + 18487);
+    v4 = (struct sead_IDisposer *)(a1 + 18487);
     sub_60237560((int)(a1 + 18487));
     sead::IDisposer::~IDisposer(v4);
     a1[18461] = 12325992;
     sub_60237560((int)(a1 + 18461));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 18461));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18461));
     sub_6045C0A0(a1 + 18298);
     sub_6045C0A0(a1 + 18197);
     sub_6045C0A0(a1 + 18096);
@@ -73099,90 +73100,90 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[17019] = 12556340;
     a1[17740] = 12325992;
     sub_60237560((int)(a1 + 17740));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 17740));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 17740));
     a1[17714] = 12325992;
     sub_60237560((int)(a1 + 17714));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 17714));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 17714));
     sub_6045C0A0(a1 + 17551);
     sub_6045C0A0(a1 + 17450);
     sub_6045C0A0(a1 + 17349);
     sub_6045C0A0(a1 + 17248);
     sub_6045C0A0(a1 + 17147);
     sub_60026BFC(a1 + 17033);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 17019));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 17019));
     a1[16272] = 12556340;
     a1[16993] = 12325992;
     sub_60237560((int)(a1 + 16993));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 16993));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16993));
     a1[16967] = 12325992;
     sub_60237560((int)(a1 + 16967));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 16967));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16967));
     sub_6045C0A0(a1 + 16804);
     sub_6045C0A0(a1 + 16703);
     sub_6045C0A0(a1 + 16602);
     sub_6045C0A0(a1 + 16501);
     sub_6045C0A0(a1 + 16400);
     sub_60026BFC(a1 + 16286);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 16272));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16272));
     a1[15525] = 12556340;
     a1[16246] = 12325992;
     sub_60237560((int)(a1 + 16246));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 16246));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16246));
     a1[16220] = 12325992;
     sub_60237560((int)(a1 + 16220));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 16220));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16220));
     sub_6045C0A0(a1 + 16057);
     sub_6045C0A0(a1 + 15956);
     sub_6045C0A0(a1 + 15855);
     sub_6045C0A0(a1 + 15754);
     sub_6045C0A0(a1 + 15653);
     sub_60026BFC(a1 + 15539);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 15525));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15525));
     a1[14778] = 12556340;
     a1[15499] = 12325992;
     sub_60237560((int)(a1 + 15499));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 15499));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15499));
     a1[15473] = 12325992;
     sub_60237560((int)(a1 + 15473));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 15473));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15473));
     sub_6045C0A0(a1 + 15310);
     sub_6045C0A0(a1 + 15209);
     sub_6045C0A0(a1 + 15108);
     sub_6045C0A0(a1 + 15007);
     sub_6045C0A0(a1 + 14906);
     sub_60026BFC(a1 + 14792);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 14778));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14778));
     a1[14031] = 12556340;
     a1[14752] = 12325992;
     sub_60237560((int)(a1 + 14752));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 14752));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14752));
     a1[14726] = 12325992;
     sub_60237560((int)(a1 + 14726));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 14726));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14726));
     sub_6045C0A0(a1 + 14563);
     sub_6045C0A0(a1 + 14462);
     sub_6045C0A0(a1 + 14361);
     sub_6045C0A0(a1 + 14260);
     sub_6045C0A0(a1 + 14159);
     sub_60026BFC(a1 + 14045);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 14031));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14031));
     sub_6050A4C4(a1 + 12227);
     sub_60026BFC(a1 + 12147);
     sub_6045C0A0(a1 + 12046);
     sub_605021B0(a1 + 11522);
-    sub_60475AE8((sead::IDisposer *)(a1 + 10630));
-    sub_6047643C((sead::IDisposer *)(a1 + 9736));
-    sub_6047643C((sead::IDisposer *)(a1 + 8851));
-    sub_6047643C((sead::IDisposer *)(a1 + 7966));
-    sub_6047643C((sead::IDisposer *)(a1 + 7081));
-    sub_6047643C((sead::IDisposer *)(a1 + 6196));
-    sub_6047643C((sead::IDisposer *)(a1 + 5311));
-    sub_6047643C((sead::IDisposer *)(a1 + 4426));
-    sub_6047643C((sead::IDisposer *)(a1 + 3541));
-    sub_6047643C((sead::IDisposer *)(a1 + 2656));
-    sub_6047643C((sead::IDisposer *)(a1 + 1771));
-    sub_6047643C((sead::IDisposer *)(a1 + 886));
-    sub_6047643C((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10630));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 9736));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 8851));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 7966));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 7081));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 6196));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 5311));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 4426));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3541));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 2656));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 1771));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 886));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -75553,7 +75554,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, nullptr);
+    sub_60473B58(v2, 0xEu, 0);
     result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13265340);
@@ -75604,7 +75605,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (int *)(a1 + 9636);
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, nullptr);
+    sub_60473B58(v2, 0xEu, 0);
     SE_SYS_BACK_ref_4F7D9C(*v3, (int)(v3 - 623));
     result = *(_DWORD *)(*v3 + 5804);
     if ( result )
@@ -75626,7 +75627,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (int *)(a1 + 9636);
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, nullptr);
+    sub_60473B58(v2, 0xEu, 0);
     result = *v3;
     if ( !*(_BYTE *)(*v3 + 4762) )
     {
@@ -75752,7 +75753,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, nullptr);
+    sub_60473B58(v2, 0xEu, 0);
     result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
@@ -75824,7 +75825,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, nullptr);
+    sub_60473B58(v2, 0xEu, 0);
     *(_BYTE *)(a1 + 8591) = 0;
     return StateMgr::changeState((_DWORD *)(a1 + 24), 13265468);
   }
@@ -75840,7 +75841,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
-    sub_60473B58(v2, 0xEu, nullptr);
+    sub_60473B58(v2, 0xEu, 0);
     result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13265212);
@@ -75930,8 +75931,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 7140) = 0;
     sub_605021B0(a1 + 7548);
     sub_6045C0A0(a1 + 7144);
-    sub_6047643C((sead::IDisposer *)(a1 + 3596));
-    sub_60475AE8((sead::IDisposer *)(a1 + 40));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3596));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -75960,8 +75961,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 7140) = 0;
     sub_605021B0(a1 + 7548);
     sub_6045C0A0((_DWORD *)(a1 + 7144));
-    sub_6047643C((sead::IDisposer *)(a1 + 3596));
-    sub_60475AE8((sead::IDisposer *)(a1 + 40));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3596));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return operator delete(a1);
   }
 
@@ -77384,7 +77385,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604F7F5C(int a1, int a2, _DWORD *a3)
   {
     int v6; // r5
-    sead::Random *v7; // r6
+    struct sead_Random *v7; // r6
     int v8; // r7
     int v9; // r5
     char v10; // r12
@@ -77427,7 +77428,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60474848(a1, (_DWORD *)0xCA6ACC, &v19);
     sub_60473DE4((_DWORD *)a1, 2u, (_DWORD *)0xCA6AC4, 1);
     v6 = sub_6047482C(a1, 2);
-    v7 = (sead::Random *)MEMORY[0xCCF4E4];
+    v7 = (struct sead_Random *)MEMORY[0xCCF4E4];
     v8 = sub_608502E4(v6);
     *(float *)(v6 + 16) = (float)(int)(((unsigned int)sead::Random::getU32(v7) * (unsigned __int64)(unsigned int)v8) >> 32);
     v9 = sub_60473B4C(a1);
@@ -77487,7 +77488,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x004f8328   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_604F8328(sead::IDisposer *a1)
+  void __fastcall sub_604F8328(struct sead_IDisposer *a1)
   {
     sub_6047643C(a1);
   }
@@ -78192,7 +78193,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604F9660
  * RVA 0x004f9660   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604F9660(sead::IDisposer *a1)
+  int __fastcall sub_604F9660(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -78776,10 +78777,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604FA1A8(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12578444;
-    v2 = (sead::IDisposer *)(a1 + 40);
+    v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3684) = 0;
     sub_6045C0A0(a1 + 3692);
     sub_60475AE8(v2);
@@ -78792,10 +78793,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604FA1F0(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12578444;
-    v2 = (sead::IDisposer *)(a1 + 40);
+    v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3684) = 0;
     sub_6045C0A0((_DWORD *)(a1 + 3692));
     sub_60475AE8(v2);
@@ -80300,16 +80301,16 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 9543);
     sub_6045C0A0(a1 + 9442);
     sub_605021B0(a1 + 8877);
-    sub_60475AE8((sead::IDisposer *)(a1 + 7975));
-    sub_6047643C((sead::IDisposer *)(a1 + 7090));
-    sub_6047643C((sead::IDisposer *)(a1 + 6205));
-    sub_6047643C((sead::IDisposer *)(a1 + 5320));
-    sub_6047643C((sead::IDisposer *)(a1 + 4435));
-    sub_6047643C((sead::IDisposer *)(a1 + 3550));
-    sub_6047643C((sead::IDisposer *)(a1 + 2665));
-    sub_6047643C((sead::IDisposer *)(a1 + 1780));
-    sub_6047643C((sead::IDisposer *)(a1 + 895));
-    sub_6047643C((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 7975));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 7090));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 6205));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 5320));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 4435));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3550));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 2665));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 1780));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 895));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -81436,10 +81437,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604FE42C
  * RVA 0x004fe42c   size 0x64   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_604FE42C(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_604FE42C(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12578700;
-    if ( (sead::IDisposer *)MEMORY[0xCA7340] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA7340] == a1 )
     {
       MEMORY[0xCA7340] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA7344])(MEMORY[0xCA7344]);
@@ -81452,12 +81453,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_604FE4A0
  * RVA 0x004fe4a0   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_604FE4A0(sead::IDisposer *a1)
+  int __fastcall sub_604FE4A0(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12578700;
-    if ( (sead::IDisposer *)MEMORY[0xCA7340] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA7340] == a1 )
     {
       MEMORY[0xCA7340] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA7344])(MEMORY[0xCA7344]);
@@ -81515,7 +81516,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604FE64C(_DWORD *a1)
   {
     *a1 = 12578732;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -81526,7 +81527,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604FE678(_DWORD *a1)
   {
     *a1 = 12578732;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -81546,7 +81547,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[1] = (int)"MovieFrame.bflyt";
     message_ref(v1, v3, 0, 0, 0);
     v3[0] = 0;
-    return sub_60476030((int)v1, nullptr, v3);
+    return sub_60476030((int)v1, 0, v3);
   }
 
 /* ============================================================================
@@ -82158,7 +82159,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v39 = 0;
       while ( 1 )
       {
-        v7 = nullptr;
+        v7 = 0;
         if ( result > v5 )
           v7 = (_WORD *)sub_6091171C(*(_DWORD *)(v1 + 4), v5);
         v42 = &v44;
@@ -82887,7 +82888,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 1526);
     sub_6045C0A0(a1 + 1425);
     sub_605021B0(a1 + 897);
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -82904,7 +82905,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 1526);
     sub_6045C0A0(a1 + 1425);
     sub_605021B0(a1 + 897);
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -85871,7 +85872,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60504098(int a1)
   {
-    sub_6047643C((sead::IDisposer *)(a1 + 40));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -86922,7 +86923,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -86933,7 +86934,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA77F0];
       if ( !MEMORY[0xCA77F0] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA77F0] )
         {
@@ -87098,7 +87099,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -87109,7 +87110,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7874];
       if ( !MEMORY[0xCA7874] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7874] )
         {
@@ -87574,7 +87575,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -87585,7 +87586,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7934];
       if ( !MEMORY[0xCA7934] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7934] )
         {
@@ -87747,7 +87748,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -87758,7 +87759,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7988];
       if ( !MEMORY[0xCA7988] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7988] )
         {
@@ -87816,7 +87817,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00506d68   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_60506D68(sead::IDisposer *a1)
+  void __fastcall sub_60506D68(struct sead_IDisposer *a1)
   {
     sub_6047643C(a1);
   }
@@ -87825,7 +87826,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60506D6C
  * RVA 0x00506d6c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60506D6C(sead::IDisposer *a1)
+  int __fastcall sub_60506D6C(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -87888,7 +87889,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60506EB8(_DWORD *a1)
   {
     *a1 = 12579420;
-    sub_6047643C((sead::IDisposer *)(a1 + 15));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 15));
     return nullsub_746(a1);
   }
 
@@ -87901,7 +87902,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *a1 = 12579420;
-    sub_6047643C((sead::IDisposer *)(a1 + 15));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 15));
     v2 = nullsub_746(a1);
     return operator delete(v2);
   }
@@ -88496,7 +88497,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60507C90(int a1)
   {
-    sub_6047643C((sead::IDisposer *)(a1 + 40));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -89000,7 +89001,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60508660(int a1)
   {
-    sub_6047643C((sead::IDisposer *)(a1 + 40));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -89009,7 +89010,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00508678   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_60508678(sead::IDisposer *a1)
+  void __fastcall sub_60508678(struct sead_IDisposer *a1)
   {
     sub_6047643C(a1);
   }
@@ -89775,7 +89776,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60509A84
  * RVA 0x00509a84   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60509A84(sead::IDisposer *a1)
+  int __fastcall sub_60509A84(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -89830,7 +89831,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60509C38(int a1)
   {
-    sub_6047643C((sead::IDisposer *)(a1 + 36));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 36));
     return a1;
   }
 
@@ -90236,8 +90237,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050A4C4(int a1)
   {
-    sub_6047643C((sead::IDisposer *)(a1 + 3628));
-    sub_6047643C((sead::IDisposer *)(a1 + 48));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3628));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 48));
     return a1;
   }
 
@@ -91090,7 +91091,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050B5C8(int a1)
   {
-    sub_6047643C((sead::IDisposer *)(a1 + 40));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -91374,7 +91375,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6050BB7C(_DWORD *a1)
   {
     *a1 = 12580292;
-    sub_6047643C((sead::IDisposer *)(a1 + 15));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 15));
     return nullsub_746(a1);
   }
 
@@ -91387,7 +91388,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *a1 = 12580292;
-    sub_6047643C((sead::IDisposer *)(a1 + 15));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 15));
     v2 = nullsub_746(a1);
     return operator delete(v2);
   }
@@ -91665,7 +91666,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -91676,7 +91677,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7F0C];
       if ( !MEMORY[0xCA7F0C] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7F0C] )
         {
@@ -91838,7 +91839,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r4
+    struct sead_CriticalSection *v4; // r4
     int v5; // r5
     signed int v6; // r6
     char v7; // r7
@@ -91849,7 +91850,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7F44];
       if ( !MEMORY[0xCA7F44] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7F44] )
         {
@@ -92011,7 +92012,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -92022,7 +92023,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7F6C];
       if ( !MEMORY[0xCA7F6C] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7F6C] )
         {
@@ -92411,7 +92412,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r4
+    struct sead_CriticalSection *v4; // r4
     int v5; // r5
     signed int v6; // r6
     char v7; // r7
@@ -92422,7 +92423,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA7FF0];
       if ( !MEMORY[0xCA7FF0] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA7FF0] )
         {
@@ -92480,7 +92481,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r4
+    struct sead_CriticalSection *v4; // r4
     int v5; // r5
     signed int v6; // r6
     char v7; // r7
@@ -92491,7 +92492,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8018];
       if ( !MEMORY[0xCA8018] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8018] )
         {
@@ -92649,7 +92650,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6050D8F4(_DWORD *a1)
   {
     *a1 = 12580536;
-    sub_6047643C((sead::IDisposer *)(a1 + 15));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 15));
     return nullsub_746(a1);
   }
 
@@ -92662,7 +92663,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *a1 = 12580536;
-    sub_6047643C((sead::IDisposer *)(a1 + 15));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 15));
     v2 = nullsub_746(a1);
     return operator delete(v2);
   }
@@ -93137,7 +93138,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6050E324(_DWORD *a1)
   {
     *a1 = 12580704;
-    sub_6047643C((sead::IDisposer *)(a1 + 15));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 15));
     return nullsub_746(a1);
   }
 
@@ -93150,7 +93151,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *a1 = 12580704;
-    sub_6047643C((sead::IDisposer *)(a1 + 15));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 15));
     v2 = nullsub_746(a1);
     return operator delete(v2);
   }
@@ -93259,11 +93260,11 @@ static inline unsigned int uxtb16(unsigned int x)
     float32x4_t v44; // 0:q15.16
   
     v3 = *(_DWORD **)(result + 3640);
-    v4 = v3 == nullptr;
+    v4 = v3 == 0;
     if ( v3 )
     {
       a3 = (unsigned __int64 *)v3[3];
-      v4 = a3 == nullptr;
+      v4 = a3 == 0;
     }
     if ( !v4 )
     {
@@ -93761,7 +93762,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6050F048(_DWORD *a1)
   {
     *a1 = 12580844;
-    sub_6047643C((sead::IDisposer *)(a1 + 15));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 15));
     return nullsub_746(a1);
   }
 
@@ -93770,7 +93771,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x0050f078   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_6050F078(sead::IDisposer *a1)
+  void __fastcall sub_6050F078(struct sead_IDisposer *a1)
   {
     sub_6047643C(a1);
   }
@@ -93784,7 +93785,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *a1 = 12580844;
-    sub_6047643C((sead::IDisposer *)(a1 + 15));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 15));
     v2 = nullsub_746(a1);
     return operator delete(v2);
   }
@@ -93955,7 +93956,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       a2 = *(unsigned __int64 **)(result + 12);
-      v4 = a2 == nullptr;
+      v4 = a2 == 0;
     }
     if ( !v4 )
     {
@@ -94475,7 +94476,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_6050FD28
  * RVA 0x0050fd28   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6050FD28(sead::IDisposer *a1)
+  int __fastcall sub_6050FD28(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -95024,12 +95025,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60510B20
  * RVA 0x00510b20   size 0xb0   xrefs 1
  * ============================================================================ */
-  void __fastcall sub_60510B20(sead::IDisposer *a1)
+  void __fastcall sub_60510B20(struct sead_IDisposer *a1)
   {
     int v2; // r7
   
     *(_DWORD *)a1 = 12581012;
-    if ( (sead::IDisposer *)MEMORY[0xCA83D8] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCA83D8] == a1 )
     {
       MEMORY[0xCA83D8] = 0;
       v2 = MEMORY[0xCA83DC];
@@ -95040,7 +95041,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6045C0A0(v2 + 9584);
       sub_60506EB8(v2 + 5924);
       sub_605021B0(v2 + 3704);
-      sub_60475AE8((sead::IDisposer *)(v2 + 56));
+      sub_60475AE8((struct sead_IDisposer *)(v2 + 56));
       MEMORY[0xCA83DC] = 0;
     }
     sead::IDisposer::~IDisposer(a1);
@@ -95050,7 +95051,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60510BE0
  * RVA 0x00510be0   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60510BE0(sead::IDisposer *a1)
+  int __fastcall sub_60510BE0(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -98009,7 +98010,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
-    sub_60475AE8((sead::IDisposer *)(a1 + 12));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
     return operator delete((int)a1);
   }
 
@@ -98418,7 +98419,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 6981);
     sub_6050A4C4(a1 + 5165);
     sub_605021B0(a1 + 4645);
-    sub_60475AE8((sead::IDisposer *)(a1 + 3758));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 3758));
     *a1 = 12581160;
     sub_6045C0A0(a1 + 3639);
     sub_6045C0A0(a1 + 3538);
@@ -98427,7 +98428,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 3235);
     sub_6050A4C4(a1 + 1419);
     sub_605021B0(a1 + 899);
-    sub_60475AE8((sead::IDisposer *)(a1 + 12));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
     return a1;
   }
 
@@ -98448,7 +98449,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
-    sub_60475AE8((sead::IDisposer *)(a1 + 12));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
     return a1;
   }
 
@@ -98729,7 +98730,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
-    sub_60475AE8((sead::IDisposer *)(a1 + 12));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
     return operator delete((int)a1);
   }
 
@@ -98811,7 +98812,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
-    sub_60475AE8((sead::IDisposer *)(a1 + 12));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
     return operator delete((int)a1);
   }
 
@@ -99270,7 +99271,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60516CA4(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 20));
-    return sub_60473B58((_DWORD *)(a1 + 36), 0xEu, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 36), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -99404,7 +99405,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -99415,7 +99416,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA877C];
       if ( !MEMORY[0xCA877C] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA877C] )
         {
@@ -99577,7 +99578,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -99588,7 +99589,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA87C8];
       if ( !MEMORY[0xCA87C8] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA87C8] )
         {
@@ -100001,7 +100002,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050D8F4(a1 + 10860);
     sub_6050D8F4(a1 + 7256);
     sub_6050D8F4(a1 + 3652);
-    sub_60475AE8((sead::IDisposer *)(a1 + 40));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -100529,7 +100530,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605189C8(_DWORD *a1)
   {
     *a1 = 12581640;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -100540,7 +100541,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605189F8(_DWORD *a1)
   {
     *a1 = 12581640;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -100637,7 +100638,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60518E34(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 24));
-    return sub_60473B58((_DWORD *)(a1 + 40), 0xEu, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 40), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -100943,7 +100944,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60506EB8(a1 + 2765);
     sub_60506EB8(a1 + 1860);
     sub_60506EB8(a1 + 955);
-    sub_60475AE8((sead::IDisposer *)(a1 + 9));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 9));
     return a1;
   }
 
@@ -100958,7 +100959,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60506EB8(a1 + 2765);
     sub_60506EB8(a1 + 1860);
     sub_60506EB8(a1 + 955);
-    sub_60475AE8((sead::IDisposer *)(a1 + 9));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 9));
     return operator delete((int)a1);
   }
 
@@ -101520,7 +101521,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -101531,7 +101532,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8A74];
       if ( !MEMORY[0xCA8A74] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8A74] )
         {
@@ -101589,7 +101590,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -101600,7 +101601,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8AD4];
       if ( !MEMORY[0xCA8AD4] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8AD4] )
         {
@@ -101762,7 +101763,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -101773,7 +101774,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8B30];
       if ( !MEMORY[0xCA8B30] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8B30] )
         {
@@ -102289,23 +102290,23 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_6051B3D4(int a1)
   {
-    sub_60475AE8((sead::IDisposer *)(a1 + 58368));
-    sub_60475AE8((sead::IDisposer *)(a1 + 54720));
-    sub_60475AE8((sead::IDisposer *)(a1 + 51072));
-    sub_60475AE8((sead::IDisposer *)(a1 + 47424));
-    sub_60475AE8((sead::IDisposer *)(a1 + 43776));
-    sub_60475AE8((sead::IDisposer *)(a1 + 40128));
-    sub_60475AE8((sead::IDisposer *)(a1 + 36480));
-    sub_60475AE8((sead::IDisposer *)(a1 + 32832));
-    sub_60475AE8((sead::IDisposer *)(a1 + 29184));
-    sub_60475AE8((sead::IDisposer *)(a1 + 25536));
-    sub_60475AE8((sead::IDisposer *)(a1 + 21888));
-    sub_60475AE8((sead::IDisposer *)(a1 + 18240));
-    sub_60475AE8((sead::IDisposer *)(a1 + 14592));
-    sub_60475AE8((sead::IDisposer *)(a1 + 10944));
-    sub_60475AE8((sead::IDisposer *)(a1 + 7296));
-    sub_60475AE8((sead::IDisposer *)(a1 + 3648));
-    sub_60475AE8((sead::IDisposer *)a1);
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 58368));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 54720));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 51072));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 47424));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 43776));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 40128));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 36480));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 32832));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 29184));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 25536));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 21888));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 18240));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 14592));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10944));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 7296));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 3648));
+    sub_60475AE8((struct sead_IDisposer *)a1);
   }
 
 /* ============================================================================
@@ -103009,7 +103010,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051C650(int a1)
   {
-    sub_60475AE8((sead::IDisposer *)(a1 + 36));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 36));
     return a1;
   }
 
@@ -103435,7 +103436,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     StateMgr::execute((_DWORD *)(a1 + 20));
     sub_6051D004(a1);
-    return sub_60473B58((_DWORD *)(a1 + 36), 0xEu, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 36), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -104160,7 +104161,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -104171,7 +104172,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8E3C];
       if ( !MEMORY[0xCA8E3C] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8E3C] )
         {
@@ -104229,7 +104230,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -104240,7 +104241,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA8E94];
       if ( !MEMORY[0xCA8E94] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA8E94] )
         {
@@ -105040,7 +105041,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0((_DWORD *)(a1 + 13008));
     sub_6050A4C4(a1 + 5788);
     sub_605021B0((_DWORD *)(a1 + 3708));
-    sub_60475AE8((sead::IDisposer *)(a1 + 40));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -105059,7 +105060,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0((_DWORD *)(a1 + 13008));
     sub_6050A4C4(a1 + 5788);
     sub_605021B0((_DWORD *)(a1 + 3708));
-    sub_60475AE8((sead::IDisposer *)(a1 + 40));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return operator delete(a1);
   }
 
@@ -106110,7 +106111,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_608169AC(MEMORY[0xCC6B68]);
     a1[967] = 12556016;
     sub_60026BFC(a1 + 991);
-    sub_60475AE8((sead::IDisposer *)(a1 + 9));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 9));
     return a1;
   }
 
@@ -106119,7 +106120,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00520e10   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_60520E10(sead::IDisposer *a1)
+  void __fastcall sub_60520E10(struct sead_IDisposer *a1)
   {
     sub_60475AE8(a1);
   }
@@ -107063,7 +107064,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -107074,7 +107075,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA939C];
       if ( !MEMORY[0xCA939C] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA939C] )
         {
@@ -107241,7 +107242,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -107252,7 +107253,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA9494];
       if ( !MEMORY[0xCA9494] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA9494] )
         {
@@ -107310,7 +107311,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -107321,7 +107322,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA94CC];
       if ( !MEMORY[0xCA94CC] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA94CC] )
         {
@@ -107493,7 +107494,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -107504,7 +107505,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA9684];
       if ( !MEMORY[0xCA9684] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA9684] )
         {
@@ -107785,7 +107786,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60523670
  * RVA 0x00523670   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60523670(sead::IDisposer *a1)
+  int __fastcall sub_60523670(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -107868,7 +107869,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60523840(_DWORD *a1)
   {
-    return sub_60473B58(a1, 0xEu, nullptr);
+    return sub_60473B58(a1, 0xEu, 0);
   }
 
 /* ============================================================================
@@ -107928,7 +107929,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -107939,7 +107940,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCA9908];
       if ( !MEMORY[0xCA9908] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCA9908] )
         {
@@ -109805,10 +109806,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_6052586C(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12582712;
-    v2 = (sead::IDisposer *)(a1 + 11);
+    v2 = (struct sead_IDisposer *)(a1 + 11);
     sub_6045C0A0(a1 + 1054);
     sub_60475AE8(v2);
     return a1;
@@ -109820,10 +109821,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605258AC(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12582712;
-    v2 = (sead::IDisposer *)(a1 + 11);
+    v2 = (struct sead_IDisposer *)(a1 + 11);
     sub_6045C0A0(a1 + 1054);
     sub_60475AE8(v2);
     return operator delete((int)a1);
@@ -112987,7 +112988,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12583072;
     *(_BYTE *)(a1 + 3552) = 0;
-    sub_60475AE8((sead::IDisposer *)(a1 + 4));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 4));
     return a1;
   }
 
@@ -112999,7 +113000,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12583072;
     *(_BYTE *)(a1 + 3552) = 0;
-    sub_60475AE8((sead::IDisposer *)(a1 + 4));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 4));
     return operator delete(a1);
   }
 
@@ -113038,7 +113039,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6052AF5C(int result)
   {
     if ( *(_BYTE *)(result + 3552) )
-      return sub_60473B58((_DWORD *)(result + 4), 0xEu, nullptr);
+      return sub_60473B58((_DWORD *)(result + 4), 0xEu, 0);
     return result;
   }
 
@@ -113046,10 +113047,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_6052AF90
  * RVA 0x0052af90   size 0x64   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_6052AF90(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_6052AF90(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12583088;
-    if ( (sead::IDisposer *)MEMORY[0xCAA44C] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAA44C] == a1 )
     {
       MEMORY[0xCAA44C] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAA450])(MEMORY[0xCAA450]);
@@ -113062,12 +113063,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_6052B004
  * RVA 0x0052b004   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6052B004(sead::IDisposer *a1)
+  int __fastcall sub_6052B004(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12583088;
-    if ( (sead::IDisposer *)MEMORY[0xCAA44C] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAA44C] == a1 )
     {
       MEMORY[0xCAA44C] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAA450])(MEMORY[0xCAA450]);
@@ -113701,7 +113702,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6052BEBC(int a1, unsigned int a2)
   {
-    sead::Random *v4; // r11
+    struct sead_Random *v4; // r11
     _BYTE *v5; // r1
     int v6; // r2
     int v7; // r9
@@ -113724,7 +113725,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v25; // r4
     float *v26; // r1
   
-    v4 = (sead::Random *)MEMORY[0xCCF4E4];
+    v4 = (struct sead_Random *)MEMORY[0xCCF4E4];
     if ( *(_DWORD *)(a1 + 3084) )
     {
       v5 = (_BYTE *)(a1 + 2940);
@@ -114443,7 +114444,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6052CEE8(_DWORD *a1)
   {
     *a1 = 12583232;
-    sub_60475AE8((sead::IDisposer *)(a1 + 18));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 18));
     return a1;
   }
 
@@ -114454,7 +114455,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6052CF18(_DWORD *a1)
   {
     *a1 = 12583232;
-    sub_60475AE8((sead::IDisposer *)(a1 + 18));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 18));
     return operator delete((int)a1);
   }
 
@@ -115153,7 +115154,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -115164,7 +115165,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCAA540];
       if ( !MEMORY[0xCAA540] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCAA540] )
         {
@@ -115726,10 +115727,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6052ED0C(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12583408;
-    v2 = (sead::IDisposer *)(a1 + 40);
+    v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 10976) = 0;
     sub_6045C0A0(a1 + 10984);
     sub_6050A4C4(a1 + 3760);
@@ -115743,10 +115744,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6052ED60(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12583408;
-    v2 = (sead::IDisposer *)(a1 + 40);
+    v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 10976) = 0;
     sub_6045C0A0((_DWORD *)(a1 + 10984));
     sub_6050A4C4(a1 + 3760);
@@ -116600,10 +116601,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_605302A0
  * RVA 0x005302a0   size 0x64   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_605302A0(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_605302A0(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12583536;
-    if ( (sead::IDisposer *)MEMORY[0xCAAABC] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAAABC] == a1 )
     {
       MEMORY[0xCAAABC] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAAAC0])(MEMORY[0xCAAAC0]);
@@ -116616,12 +116617,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60530314
  * RVA 0x00530314   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60530314(sead::IDisposer *a1)
+  int __fastcall sub_60530314(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12583536;
-    if ( (sead::IDisposer *)MEMORY[0xCAAABC] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAAABC] == a1 )
     {
       MEMORY[0xCAAABC] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAAAC0])(MEMORY[0xCAAAC0]);
@@ -117792,7 +117793,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60531B7C(int a1)
   {
-    sub_6047643C((sead::IDisposer *)(a1 + 36));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 36));
     return a1;
   }
 
@@ -117801,7 +117802,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00531b94   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  void __fastcall sub_60531B94(sead::IDisposer *a1)
+  void __fastcall sub_60531B94(struct sead_IDisposer *a1)
   {
     sub_6047643C(a1);
   }
@@ -118384,7 +118385,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60532A20
  * RVA 0x00532a20   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60532A20(sead::IDisposer *a1)
+  int __fastcall sub_60532A20(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -118481,10 +118482,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60532D98
  * RVA 0x00532d98   size 0x5c   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_60532D98(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_60532D98(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12583932;
-    if ( (sead::IDisposer *)MEMORY[0xCAADA4] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAADA4] == a1 )
     {
       MEMORY[0xCAADA4] = 0;
       sub_605369BC(MEMORY[0xCAADA8]);
@@ -118497,12 +118498,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60532E04
  * RVA 0x00532e04   size 0x60   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60532E04(sead::IDisposer *a1)
+  int __fastcall sub_60532E04(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12583932;
-    if ( (sead::IDisposer *)MEMORY[0xCAADA4] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAADA4] == a1 )
     {
       MEMORY[0xCAADA4] = 0;
       sub_605369BC(MEMORY[0xCAADA8]);
@@ -118550,7 +118551,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 8068) = 0;
     *(_DWORD *)(a1 + 12080) = 0;
     *(_BYTE *)(a1 + 83630) = 0;
-    return sub_60473B58((_DWORD *)(a1 + 12092), 5u, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 12092), 5u, 0);
   }
 
 /* ============================================================================
@@ -120846,7 +120847,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 52676);
     sub_60540D10(a1 + 17780);
     sub_605021B0(a1 + 15700);
-    sub_60475AE8((sead::IDisposer *)(a1 + 12092));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 12092));
     sub_60531B7C(a1 + 8080);
     sub_60531B7C(a1 + 4068);
     sub_60531B7C(a1 + 56);
@@ -121968,10 +121969,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60539474
  * RVA 0x00539474   size 0x5c   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_60539474(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_60539474(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12584060;
-    if ( (sead::IDisposer *)MEMORY[0xCAB434] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAB434] == a1 )
     {
       MEMORY[0xCAB434] = 0;
       sub_6053CF68(MEMORY[0xCAB438]);
@@ -121984,12 +121985,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_605394E0
  * RVA 0x005394e0   size 0x60   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_605394E0(sead::IDisposer *a1)
+  int __fastcall sub_605394E0(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12584060;
-    if ( (sead::IDisposer *)MEMORY[0xCAB434] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAB434] == a1 )
     {
       MEMORY[0xCAB434] = 0;
       sub_6053CF68(MEMORY[0xCAB438]);
@@ -124278,7 +124279,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 52616);
     sub_60540D10(a1 + 17760);
     sub_605021B0(a1 + 15680);
-    sub_60475AE8((sead::IDisposer *)(a1 + 12092));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 12092));
     sub_60531B7C(a1 + 8080);
     sub_60531B7C(a1 + 4068);
     sub_60531B7C(a1 + 56);
@@ -125386,7 +125387,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60541DF8(a1, *(_DWORD *)(a1 + 34712), 0);
     sub_604741D8((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA7C, 0);
     sub_6047455C(a1 + 28128, 0);
-    sub_60473B58((_DWORD *)(a1 + 28128), 0xEu, nullptr);
+    sub_60473B58((_DWORD *)(a1 + 28128), 0xEu, 0);
     sub_605324A4(a1 + 4, *v2);
     sub_605324A4(a1 + 4016, *v2);
     sub_60473DE4((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA74, 0);
@@ -126231,7 +126232,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 8571);
     sub_6045C0A0(a1 + 8470);
     sub_605021B0(a1 + 7950);
-    sub_60475AE8((sead::IDisposer *)(a1 + 7032));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 7032));
     sub_60531B7C(v2);
     sub_60531B7C(a1 + 5016);
     sub_60531B7C(a1 + 4013);
@@ -126255,7 +126256,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 8571);
     sub_6045C0A0(a1 + 8470);
     sub_605021B0(a1 + 7950);
-    sub_60475AE8((sead::IDisposer *)(a1 + 7032));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 7032));
     sub_60531B7C(v2);
     sub_60531B7C((int)(a1 + 5016));
     sub_60531B7C((int)(a1 + 4013));
@@ -126823,10 +126824,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60542024
  * RVA 0x00542024   size 0x64   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_60542024(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_60542024(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12584316;
-    if ( (sead::IDisposer *)MEMORY[0xCABDE0] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCABDE0] == a1 )
     {
       MEMORY[0xCABDE0] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCABDE4])(MEMORY[0xCABDE4]);
@@ -126839,12 +126840,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60542098
  * RVA 0x00542098   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60542098(sead::IDisposer *a1)
+  int __fastcall sub_60542098(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12584316;
-    if ( (sead::IDisposer *)MEMORY[0xCABDE0] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCABDE0] == a1 )
     {
       MEMORY[0xCABDE0] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCABDE4])(MEMORY[0xCABDE4]);
@@ -126899,7 +126900,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60542284(_DWORD *a1)
   {
     *a1 = 12584332;
-    sub_60475AE8((sead::IDisposer *)(a1 + 15));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 15));
     return a1;
   }
 
@@ -126910,7 +126911,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605422B4(_DWORD *a1)
   {
     *a1 = 12584332;
-    sub_60475AE8((sead::IDisposer *)(a1 + 15));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 15));
     return operator delete((int)a1);
   }
 
@@ -126985,7 +126986,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605425C8(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 44));
-    return sub_60473B58((_DWORD *)(a1 + 60), 0xEu, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 60), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -127234,7 +127235,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60542914(_DWORD *a1)
   {
     *a1 = 12584476;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -127245,7 +127246,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60542940(_DWORD *a1)
   {
     *a1 = 12584476;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -127349,7 +127350,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60542CBC(_DWORD *a1)
   {
     *a1 = 12584500;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -127360,7 +127361,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60542CE8(_DWORD *a1)
   {
     *a1 = 12584500;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -127616,7 +127617,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054322C(_DWORD *a1)
   {
     *a1 = 12584524;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -127627,7 +127628,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60543258(_DWORD *a1)
   {
     *a1 = 12584524;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -129132,7 +129133,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 24204);
     sub_60547AA4(a1 + 5712);
     sub_605021B0(a1 + 3632);
-    sub_60475AE8((sead::IDisposer *)(a1 + 44));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 44));
     return a1;
   }
 
@@ -131039,11 +131040,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 17252);
     sub_6045C0A0(a1 + 16848);
     sub_6045C0A0(a1 + 16444);
-    sub_6047643C((sead::IDisposer *)(a1 + 12892));
-    sub_6047643C((sead::IDisposer *)(a1 + 9352));
-    sub_6047643C((sead::IDisposer *)(a1 + 5812));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 12892));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 9352));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 5812));
     sub_605021B0(a1 + 3700);
-    sub_60475AE8((sead::IDisposer *)(a1 + 40));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -131060,11 +131061,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0((_DWORD *)(a1 + 17252));
     sub_6045C0A0((_DWORD *)(a1 + 16848));
     sub_6045C0A0((_DWORD *)(a1 + 16444));
-    sub_6047643C((sead::IDisposer *)(a1 + 12892));
-    sub_6047643C((sead::IDisposer *)(a1 + 9352));
-    sub_6047643C((sead::IDisposer *)(a1 + 5812));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 12892));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 9352));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 5812));
     sub_605021B0((_DWORD *)(a1 + 3700));
-    sub_60475AE8((sead::IDisposer *)(a1 + 40));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return operator delete(a1);
   }
 
@@ -131927,7 +131928,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r4
+    struct sead_CriticalSection *v4; // r4
     int v5; // r5
     signed int v6; // r6
     char v7; // r7
@@ -131938,7 +131939,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCAC640];
       if ( !MEMORY[0xCAC640] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCAC640] )
         {
@@ -131996,7 +131997,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -132007,7 +132008,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCAC660];
       if ( !MEMORY[0xCAC660] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCAC660] )
         {
@@ -132298,7 +132299,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60549DD8(_DWORD *a1)
   {
     *a1 = 12584912;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -132309,7 +132310,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60549E08(_DWORD *a1)
   {
     *a1 = 12584912;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -132693,7 +132694,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054A5D8(_DWORD *a1)
   {
     *a1 = 12585040;
-    sub_60475AE8((sead::IDisposer *)(a1 + 11));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return a1;
   }
 
@@ -132704,7 +132705,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054A608(_DWORD *a1)
   {
     *a1 = 12585040;
-    sub_60475AE8((sead::IDisposer *)(a1 + 11));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return operator delete((int)a1);
   }
 
@@ -132808,7 +132809,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054AA2C(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 28));
-    return sub_60473B58((_DWORD *)(a1 + 44), 0xEu, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 44), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -133269,7 +133270,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054B378(_DWORD *a1)
   {
     *a1 = 12585168;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -133280,7 +133281,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054B3A8(_DWORD *a1)
   {
     *a1 = 12585168;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -133626,7 +133627,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054BA64(_DWORD *a1)
   {
     *a1 = 12585296;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -133637,7 +133638,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054BA90(_DWORD *a1)
   {
     *a1 = 12585296;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -134146,10 +134147,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054C40C(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12585424;
-    v2 = (sead::IDisposer *)(a1 + 40);
+    v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3688) = 0;
     sub_6045C0A0(a1 + 3692);
     sub_60475AE8(v2);
@@ -134162,10 +134163,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054C458(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12585424;
-    v2 = (sead::IDisposer *)(a1 + 40);
+    v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3688) = 0;
     sub_6045C0A0((_DWORD *)(a1 + 3692));
     sub_60475AE8(v2);
@@ -134614,7 +134615,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054D06C(_DWORD *a1)
   {
     *a1 = 12585552;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return a1;
   }
 
@@ -134625,7 +134626,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054D098(_DWORD *a1)
   {
     *a1 = 12585552;
-    sub_60475AE8((sead::IDisposer *)(a1 + 1));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1));
     return operator delete((int)a1);
   }
 
@@ -134656,7 +134657,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054D170(int a1)
   {
-    return sub_60473B58((_DWORD *)(a1 + 4), 0xEu, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 4), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -135389,7 +135390,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6054E2FC(_DWORD *a1)
   {
     *a1 = 12585568;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -135400,7 +135401,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054E32C(_DWORD *a1)
   {
     *a1 = 12585568;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -135514,7 +135515,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     StateMgr::execute((_DWORD *)(a1 + 24));
     sub_6054E8A8(a1);
-    return sub_60473B58((_DWORD *)(a1 + 40), 0xEu, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 40), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -135890,7 +135891,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_20:
       StateMgr::changeState((_DWORD *)(a1 + 24), 13290892);
       *(_DWORD *)(a1 + 3800) = 0;
-      return nullptr;
+      return 0;
     }
     if ( (*(_BYTE *)(v4 + 1231) & 4) != 0 || PlayerMgr_hasPlayer(MEMORY[0xCC436C], v2) != 1 )
       goto LABEL_12;
@@ -135933,7 +135934,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = *(_DWORD *)(v4 + 1216);
     v10 = v8;
     v11 = (float *)sub_607C7184(v4);
-    v12 = v11 == nullptr;
+    v12 = v11 == 0;
     if ( v11 )
       v12 = (v9 & 0x80000) == 0;
     if ( v12 )
@@ -136402,7 +136403,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12585696;
     *(_WORD *)(a1 + 3608) = 0;
-    sub_60475AE8((sead::IDisposer *)(a1 + 40));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return a1;
   }
 
@@ -136414,7 +136415,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12585696;
     *(_WORD *)(a1 + 3608) = 0;
-    sub_60475AE8((sead::IDisposer *)(a1 + 40));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return operator delete(a1);
   }
 
@@ -136741,7 +136742,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60550564(_DWORD *a1)
   {
     *a1 = 12585824;
-    sub_60475AE8((sead::IDisposer *)(a1 + 21));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 21));
     return a1;
   }
 
@@ -136752,7 +136753,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60550590(_DWORD *a1)
   {
     *a1 = 12585824;
-    sub_60475AE8((sead::IDisposer *)(a1 + 21));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 21));
     return operator delete((int)a1);
   }
 
@@ -136947,7 +136948,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (*(_WORD *)(v2 + 66) & (unsigned __int16)(1 << i)) != 0 )
         {
           v4 = *(float **)(v2 + 48 + 4 * i);
-          v5 = v4 == nullptr;
+          v5 = v4 == 0;
         }
         if ( !v5 )
         {
@@ -137872,7 +137873,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 69336);
     sub_60555668(a1 + 69248);
     sub_60555668(a1 + 69160);
-    sub_60475AE8((sead::IDisposer *)(a1 + 65480));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 65480));
     sub_60555668(a1 + 65388);
     sub_60555668(a1 + 65300);
     sub_60555668(a1 + 65212);
@@ -137885,7 +137886,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 64596);
     sub_60555668(a1 + 64508);
     sub_60555668(a1 + 64420);
-    sub_60475AE8((sead::IDisposer *)(a1 + 60740));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 60740));
     sub_60555668(a1 + 60648);
     sub_60555668(a1 + 60560);
     sub_60555668(a1 + 60472);
@@ -137898,7 +137899,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 59856);
     sub_60555668(a1 + 59768);
     sub_60555668(a1 + 59680);
-    sub_60475AE8((sead::IDisposer *)(a1 + 56000));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 56000));
     sub_60555668(a1 + 55908);
     sub_60555668(a1 + 55820);
     sub_60555668(a1 + 55732);
@@ -137911,7 +137912,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 55116);
     sub_60555668(a1 + 55028);
     sub_60555668(a1 + 54940);
-    sub_60475AE8((sead::IDisposer *)(a1 + 51260));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 51260));
     sub_60555668(a1 + 51168);
     sub_60555668(a1 + 51080);
     sub_60555668(a1 + 50992);
@@ -137924,7 +137925,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 50376);
     sub_60555668(a1 + 50288);
     sub_60555668(a1 + 50200);
-    sub_60475AE8((sead::IDisposer *)(a1 + 46520));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 46520));
     sub_60555668(a1 + 46428);
     sub_60555668(a1 + 46340);
     sub_60555668(a1 + 46252);
@@ -137937,7 +137938,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 45636);
     sub_60555668(a1 + 45548);
     sub_60555668(a1 + 45460);
-    sub_60475AE8((sead::IDisposer *)(a1 + 41780));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 41780));
     sub_60555668(a1 + 41688);
     sub_60555668(a1 + 41600);
     sub_60555668(a1 + 41512);
@@ -137950,7 +137951,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 40896);
     sub_60555668(a1 + 40808);
     sub_60555668(a1 + 40720);
-    sub_60475AE8((sead::IDisposer *)(a1 + 37040));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 37040));
     sub_60555668(a1 + 36948);
     sub_60555668(a1 + 36860);
     sub_60555668(a1 + 36772);
@@ -137963,7 +137964,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 36156);
     sub_60555668(a1 + 36068);
     sub_60555668(a1 + 35980);
-    sub_60475AE8((sead::IDisposer *)(a1 + 32300));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 32300));
     sub_60555668(a1 + 32208);
     sub_60555668(a1 + 32120);
     sub_60555668(a1 + 32032);
@@ -137976,15 +137977,15 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 31416);
     sub_60555668(a1 + 31328);
     sub_60555668(a1 + 31240);
-    sub_60475AE8((sead::IDisposer *)(a1 + 27560));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 27560));
     sub_6045C0A0(a1 + 27148);
     sub_6050A4C4(a1 + 19932);
     sub_605021B0(a1 + 17840);
-    sub_6047643C((sead::IDisposer *)(a1 + 14272));
-    sub_6047643C((sead::IDisposer *)(a1 + 10732));
-    sub_6047643C((sead::IDisposer *)(a1 + 7192));
-    sub_6047643C((sead::IDisposer *)(a1 + 3652));
-    sub_60475AE8((sead::IDisposer *)(a1 + 44));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 14272));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 10732));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 7192));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3652));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 44));
     return a1;
   }
 
@@ -138480,7 +138481,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v16 = 0;
       sub_6047EEC4(a1 + 17880, 0);
     }
-    v19 = nullptr;
+    v19 = 0;
     *(_BYTE *)(a1 + 18340) = v16;
     v20 = sub_608DE61C(a1 + 17892, 0);
     if ( v20 )
@@ -140237,43 +140238,43 @@ static inline unsigned int uxtb16(unsigned int x)
     int v17; // r1
   
     v1 = *(_BYTE **)(result + 5672);
-    v2 = v1 == nullptr;
+    v2 = v1 == 0;
     if ( v1 )
       v2 = v1[2689] == 0;
     if ( v2 || !v1[2691] && !v1[2690] )
     {
       v3 = *(_BYTE **)(result + 5676);
-      v4 = v3 == nullptr;
+      v4 = v3 == 0;
       if ( v3 )
         v4 = v3[2689] == 0;
       if ( v4 || !v3[2691] && !v3[2690] )
       {
         v5 = *(_BYTE **)(result + 5680);
-        v6 = v5 == nullptr;
+        v6 = v5 == 0;
         if ( v5 )
           v6 = v5[2689] == 0;
         if ( v6 || !v5[2691] && !v5[2690] )
         {
           v7 = *(_BYTE **)(result + 5684);
-          v8 = v7 == nullptr;
+          v8 = v7 == 0;
           if ( v7 )
             v8 = v7[2689] == 0;
           if ( v8 || !v7[2691] && !v7[2690] )
           {
             v9 = *(_BYTE **)(result + 5688);
-            v10 = v9 == nullptr;
+            v10 = v9 == 0;
             if ( v9 )
               v10 = v9[2689] == 0;
             if ( v10 || !v9[2691] && !v9[2690] )
             {
               v11 = *(_BYTE **)(result + 5692);
-              v12 = v11 == nullptr;
+              v12 = v11 == 0;
               if ( v11 )
                 v12 = v11[2689] == 0;
               if ( v12 || !v11[2691] && !v11[2690] )
               {
                 v13 = *(_BYTE **)(result + 5696);
-                v14 = v13 == nullptr;
+                v14 = v13 == 0;
                 if ( v13 )
                   v14 = v13[2689] == 0;
                 if ( v14 || !v13[2691] && !v13[2690] )
@@ -140852,7 +140853,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 1115);
     sub_6045C0A0(a1 + 1014);
     sub_6045C0A0(a1 + 913);
-    sub_60475AE8((sead::IDisposer *)(a1 + 11));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return a1;
   }
 
@@ -140874,7 +140875,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045C0A0(a1 + 1115);
     sub_6045C0A0(a1 + 1014);
     sub_6045C0A0(a1 + 913);
-    sub_60475AE8((sead::IDisposer *)(a1 + 11));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return operator delete((int)a1);
   }
 
@@ -141760,7 +141761,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60558120(_DWORD *a1)
   {
     *a1 = 12586208;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -141771,7 +141772,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60558150(_DWORD *a1)
   {
     *a1 = 12586208;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -142556,7 +142557,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605590B4(_DWORD *a1)
   {
     *a1 = 12586356;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
 
@@ -142567,7 +142568,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605590E0(_DWORD *a1)
   {
     *a1 = 12586356;
-    sub_60475AE8((sead::IDisposer *)(a1 + 10));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
 
@@ -142798,10 +142799,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60559598
  * RVA 0x00559598   size 0x64   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_60559598(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_60559598(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12586484;
-    if ( (sead::IDisposer *)MEMORY[0xCAD904] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAD904] == a1 )
     {
       MEMORY[0xCAD904] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAD908])(MEMORY[0xCAD908]);
@@ -142814,12 +142815,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_6055960C
  * RVA 0x0055960c   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_6055960C(sead::IDisposer *a1)
+  int __fastcall sub_6055960C(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v2; // r0
+    struct sead_IDisposer *v2; // r0
   
     *(_DWORD *)a1 = 12586484;
-    if ( (sead::IDisposer *)MEMORY[0xCAD904] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAD904] == a1 )
     {
       MEMORY[0xCAD904] = 0;
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAD908])(MEMORY[0xCAD908]);
@@ -142909,7 +142910,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605598C0(_DWORD *a1)
   {
     *a1 = 12586500;
-    sub_60475AE8((sead::IDisposer *)(a1 + 16));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 16));
     return a1;
   }
 
@@ -142920,7 +142921,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605598EC(_DWORD *a1)
   {
     *a1 = 12586500;
-    sub_60475AE8((sead::IDisposer *)(a1 + 16));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 16));
     return operator delete((int)a1);
   }
 
@@ -143018,7 +143019,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60559CF0(int a1)
   {
     StateMgr::execute((_DWORD *)(a1 + 48));
-    return sub_60473B58((_DWORD *)(a1 + 64), 0xEu, nullptr);
+    return sub_60473B58((_DWORD *)(a1 + 64), 0xEu, 0);
   }
 
 /* ============================================================================
@@ -143323,13 +143324,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_6055A11C(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v2; // r5
+    struct sead_IDisposer *v3; // r6
   
     *a1 = 12586628;
-    v2 = (sead::IDisposer *)(a1 + 10);
+    v2 = (struct sead_IDisposer *)(a1 + 10);
     a1[897] = 12325992;
-    v3 = (sead::IDisposer *)(a1 + 897);
+    v3 = (struct sead_IDisposer *)(a1 + 897);
     sub_60237560((int)(a1 + 897));
     sead::IDisposer::~IDisposer(v3);
     sub_60475AE8(v2);
@@ -143342,13 +143343,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055A178(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v2; // r5
+    struct sead_IDisposer *v3; // r6
   
     *a1 = 12586628;
-    v2 = (sead::IDisposer *)(a1 + 10);
+    v2 = (struct sead_IDisposer *)(a1 + 10);
     a1[897] = 12325992;
-    v3 = (sead::IDisposer *)(a1 + 897);
+    v3 = (struct sead_IDisposer *)(a1 + 897);
     sub_60237560((int)(a1 + 897));
     sead::IDisposer::~IDisposer(v3);
     sub_60475AE8(v2);
@@ -143848,10 +143849,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_6055AB64(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12586756;
-    v2 = (sead::IDisposer *)(a1 + 10);
+    v2 = (struct sead_IDisposer *)(a1 + 10);
     sub_6045C0A0(a1 + 902);
     sub_60475AE8(v2);
     return a1;
@@ -143863,10 +143864,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055ABA4(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12586756;
-    v2 = (sead::IDisposer *)(a1 + 10);
+    v2 = (struct sead_IDisposer *)(a1 + 10);
     sub_6045C0A0(a1 + 902);
     sub_60475AE8(v2);
     return operator delete((int)a1);
@@ -144708,7 +144709,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -144719,7 +144720,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCADC94];
       if ( !MEMORY[0xCADC94] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCADC94] )
         {
@@ -144881,7 +144882,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -144892,7 +144893,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCADCC0];
       if ( !MEMORY[0xCADCC0] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCADCC0] )
         {
@@ -146011,12 +146012,12 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6055DE60(_DWORD *a1)
   {
     *a1 = 12587044;
-    sub_6047643C((sead::IDisposer *)(a1 + 4324));
-    sub_6047643C((sead::IDisposer *)(a1 + 3439));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 4324));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3439));
     sub_6050A4C4(a1 + 1544);
     sub_6045C0A0(a1 + 1443);
     sub_605021B0(a1 + 923);
-    sub_60475AE8((sead::IDisposer *)(a1 + 11));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return a1;
   }
 
@@ -146027,12 +146028,12 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055DECC(_DWORD *a1)
   {
     *a1 = 12587044;
-    sub_6047643C((sead::IDisposer *)(a1 + 4324));
-    sub_6047643C((sead::IDisposer *)(a1 + 3439));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 4324));
+    sub_6047643C((struct sead_IDisposer *)(a1 + 3439));
     sub_6050A4C4((int)(a1 + 1544));
     sub_6045C0A0(a1 + 1443);
     sub_605021B0(a1 + 923);
-    sub_60475AE8((sead::IDisposer *)(a1 + 11));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return operator delete((int)a1);
   }
 
@@ -147319,7 +147320,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
     int v3; // r0
-    sead::CriticalSection *v4; // r5
+    struct sead_CriticalSection *v4; // r5
     int v5; // r8
     signed int v6; // r7
     char v7; // r6
@@ -147330,7 +147331,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = MEMORY[0xCADFF4];
       if ( !MEMORY[0xCADFF4] )
       {
-        v4 = (sead::CriticalSection *)sub_608FBC5C();
+        v4 = (struct sead_CriticalSection *)sub_608FBC5C();
         sead::CriticalSection::lock(v4);
         if ( !MEMORY[0xCADFF4] )
         {
@@ -147656,25 +147657,25 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60560CD8(_DWORD *a1)
   {
     a1[7989] = 12587188;
-    sub_60475AE8((sead::IDisposer *)(a1 + 15089));
-    sub_60475AE8((sead::IDisposer *)(a1 + 14202));
-    sub_60475AE8((sead::IDisposer *)(a1 + 13315));
-    sub_60475AE8((sead::IDisposer *)(a1 + 12428));
-    sub_60475AE8((sead::IDisposer *)(a1 + 11541));
-    sub_60475AE8((sead::IDisposer *)(a1 + 10654));
-    sub_60475AE8((sead::IDisposer *)(a1 + 9767));
-    sub_60475AE8((sead::IDisposer *)(a1 + 8880));
-    sub_60475AE8((sead::IDisposer *)(a1 + 7993));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 15089));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 14202));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 13315));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 12428));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 11541));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 10654));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 9767));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 8880));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 7993));
     *a1 = 12587188;
-    sub_60475AE8((sead::IDisposer *)(a1 + 7100));
-    sub_60475AE8((sead::IDisposer *)(a1 + 6213));
-    sub_60475AE8((sead::IDisposer *)(a1 + 5326));
-    sub_60475AE8((sead::IDisposer *)(a1 + 4439));
-    sub_60475AE8((sead::IDisposer *)(a1 + 3552));
-    sub_60475AE8((sead::IDisposer *)(a1 + 2665));
-    sub_60475AE8((sead::IDisposer *)(a1 + 1778));
-    sub_60475AE8((sead::IDisposer *)(a1 + 891));
-    sub_60475AE8((sead::IDisposer *)(a1 + 4));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 7100));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 6213));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 5326));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 4439));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 3552));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 2665));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1778));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 891));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 4));
     return a1;
   }
 
@@ -148084,15 +148085,15 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605616C8(_DWORD *a1)
   {
     *a1 = 12587188;
-    sub_60475AE8((sead::IDisposer *)(a1 + 7100));
-    sub_60475AE8((sead::IDisposer *)(a1 + 6213));
-    sub_60475AE8((sead::IDisposer *)(a1 + 5326));
-    sub_60475AE8((sead::IDisposer *)(a1 + 4439));
-    sub_60475AE8((sead::IDisposer *)(a1 + 3552));
-    sub_60475AE8((sead::IDisposer *)(a1 + 2665));
-    sub_60475AE8((sead::IDisposer *)(a1 + 1778));
-    sub_60475AE8((sead::IDisposer *)(a1 + 891));
-    sub_60475AE8((sead::IDisposer *)(a1 + 4));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 7100));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 6213));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 5326));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 4439));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 3552));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 2665));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1778));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 891));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 4));
     return a1;
   }
 
@@ -148103,15 +148104,15 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60561750(_DWORD *a1)
   {
     *a1 = 12587188;
-    sub_60475AE8((sead::IDisposer *)(a1 + 7100));
-    sub_60475AE8((sead::IDisposer *)(a1 + 6213));
-    sub_60475AE8((sead::IDisposer *)(a1 + 5326));
-    sub_60475AE8((sead::IDisposer *)(a1 + 4439));
-    sub_60475AE8((sead::IDisposer *)(a1 + 3552));
-    sub_60475AE8((sead::IDisposer *)(a1 + 2665));
-    sub_60475AE8((sead::IDisposer *)(a1 + 1778));
-    sub_60475AE8((sead::IDisposer *)(a1 + 891));
-    sub_60475AE8((sead::IDisposer *)(a1 + 4));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 7100));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 6213));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 5326));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 4439));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 3552));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 2665));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 1778));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 891));
+    sub_60475AE8((struct sead_IDisposer *)(a1 + 4));
     return operator delete((int)a1);
   }
 
@@ -148677,8 +148678,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     nninitStartup_helper();
     nn::os::QueryMemoryInfo(&v3);
-    nn::os::SetMemoryHeapSize((nn::os *)((v3 - v4) & 0xFFE00000), v4);
-    nn::os::AllocateMemoryBlock((nn::os *)&v2, (unsigned int *)0x2000000, v0);
+    nn::os::SetMemoryHeapSize((struct nn_os *)((v3 - v4) & 0xFFE00000), v4);
+    nn::os::AllocateMemoryBlock((struct nn_os *)&v2, (unsigned int *)0x2000000, v0);
     return nn::init::InitializeAllocator(v2, 0x2000000u);
   }
 
@@ -148686,15 +148687,15 @@ static inline unsigned int uxtb16(unsigned int x)
  * nnMain
  * RVA 0x00562698   size 0x370   xrefs 0
  * ============================================================================ */
-  int __fastcall nnMain(nn::os *a1)
+  int __fastcall nnMain(struct nn_os *a1)
   {
-    nn::os *HostArgc; // r0
+    struct nn_os *HostArgc; // r0
     char v2; // r6
     int v3; // r4
     int v4; // r2
     int v5; // r6
     int v6; // r5
-    nn::oe *v7; // r0
+    struct nn_oe *v7; // r0
     int v8; // r6
     int v9; // r4
     _DWORD v11[2]; // [sp+Ch] [bp-170h] BYREF
@@ -148727,7 +148728,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v38; // [sp+78h] [bp-104h]
     _DWORD v39[64]; // [sp+7Ch] [bp-100h] BYREF
   
-    HostArgc = (nn::os *)nn::os::GetHostArgc(a1);
+    HostArgc = (struct nn_os *)nn::os::GetHostArgc(a1);
     nn::os::GetHostArgv(HostArgc);
     nn::os::QueryMemoryInfo(&v36);
     v37 = (char *)v39;
@@ -148795,7 +148796,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = sead::ExpHeap::create(0, &v36, v4, 4, 1, 0);
     v6 = operator new(368, v5, 4);
     nnMain_helper(v6, &v13);
-    v7 = (nn::oe *)(*(int (__fastcall **)(int))(*(_DWORD *)v5 + 20))(v5);
+    v7 = (struct nn_oe *)(*(int (__fastcall **)(int))(*(_DWORD *)v5 + 20))(v5);
     nn::oe::Initialize(v7);
     nn::oe::SetPerformanceConfiguration(1, 65537);
     nn::oe::SetPerformanceConfiguration(0, 131075);
@@ -149161,7 +149162,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -149262,7 +149263,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase11getContentsEv
  * RVA 0x00563294   size 0x18   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::getContents(int a1)
+  int __fastcall BlockBase_getContents(int a1)
   {
     return HIBYTE(*(_DWORD *)(a1 + 24)) & 0x10 | *(_DWORD *)(a1 + 24) & 0xF;
   }
@@ -149358,7 +149359,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBaseC2EPK14ActorBuildInfo
  * RVA 0x00563544   size 0x64   xrefs 23
  * ============================================================================ */
-  int __fastcall BlockBase::BlockBase(int a1)
+  int __fastcall BlockBase_BlockBase(int a1)
   {
     MovementBlockCoinBase::MovementBlockCoinBase();
     *(_DWORD *)a1 = 12587764;
@@ -149485,7 +149486,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase9onExecuteEv
  * RVA 0x005638c8   size 0xbc   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::onExecute(_BYTE *a1)
+  int __fastcall BlockBase_onExecute(_BYTE *a1)
   {
     _BYTE *v2; // r5
   
@@ -149514,7 +149515,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase6onDrawEv
  * RVA 0x00563984   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::onDraw(int a1)
+  int __fastcall BlockBase_onDraw(int a1)
   {
     float v1; // r2
     int v2; // r3
@@ -149598,7 +149599,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[0] = v3;
     v9[1] = v11;
     v9[2] = 4500.0;
-    physics_21893E8(&v8, nullptr, nullptr, v9, *(unsigned __int8 *)(a1 + 86));
+    physics_21893E8(&v8, 0, 0, v9, *(unsigned __int8 *)(a1 + 86));
     v4 = v8;
     result = 7385;
     v6 = (char *)(a1 + 7385);
@@ -149718,7 +149719,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf174Ev
  * RVA 0x00563cc4   size 0x17c   xrefs 3
  * ============================================================================ */
-  int __fastcall BlockBase::vf174(int a1)
+  int __fastcall BlockBase_vf174(int a1)
   {
     int CurrentState; // r0
     int v3; // r5
@@ -149775,7 +149776,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf160Ev
  * RVA 0x00563e44   size 0x8c   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::vf160(int a1)
+  int __fastcall BlockBase_vf160(int a1)
   {
     int v2; // r0
     int v3; // r0
@@ -149812,7 +149813,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf178Ev
  * RVA 0x00563ed8   size 0xd8   xrefs 1
  * ============================================================================ */
-  int __fastcall BlockBase::vf178(int a1)
+  int __fastcall BlockBase_vf178(int a1)
   {
     int v2; // r0
     float v4[2]; // [sp+0h] [bp-10h] BYREF
@@ -149843,7 +149844,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf17CEv
  * RVA 0x00563fc0   size 0xc8   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::vf17C(int a1)
+  int __fastcall BlockBase_vf17C(int a1)
   {
     _DWORD v3[2]; // [sp+4h] [bp-Ch] BYREF
     char v4; // [sp+Ch] [bp-4h]
@@ -149876,7 +149877,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf16CEv
  * RVA 0x005640bc   size 0xec   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::vf16C(int a1)
+  int __fastcall BlockBase_vf16C(int a1)
   {
     int v2; // r1
     int *v3; // r5
@@ -150407,7 +150408,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase4vfCCEv
  * RVA 0x00564bac   size 0x14   xrefs 0
  * ============================================================================ */
-  _DWORD *__fastcall BlockBase::vfCC(int a1)
+  _DWORD *__fastcall BlockBase_vfCC(int a1)
   {
     return CollisionMgr_setSensor(a1 + 648, (int *)(a1 + 6968), 3);
   }
@@ -150416,7 +150417,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase13spawnItemDownEv
  * RVA 0x00564bc0   size 0x24   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::spawnItemDown(int a1)
+  int __fastcall BlockBase_spawnItemDown(int a1)
   {
     CollisionMgr_setSensor(a1 + 648, 0, 3);
     return BlockBase_onEmptied(a1);
@@ -150426,7 +150427,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase4vfE4Ev
  * RVA 0x00564be4   size 0x14   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::vfE4(int a1)
+  int __fastcall BlockBase_vfE4(int a1)
   {
     return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13296376);
   }
@@ -150545,7 +150546,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf198Ev
  * RVA 0x00564d64   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::vf198(int a1)
+  int __fastcall BlockBase_vf198(int a1)
   {
     *(_DWORD *)(a1 + 6880) = 0;
     return sub_605643B8(a1);
@@ -150573,7 +150574,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf1A4Ev
  * RVA 0x00564d7c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::vf1A4(int a1)
+  int __fastcall BlockBase_vf1A4(int a1)
   {
     *(_DWORD *)(a1 + 6880) = 0;
     return sub_60564BFC();
@@ -150583,7 +150584,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf180Ev
  * RVA 0x00564d8c   size 0x88   xrefs 0
  * ============================================================================ */
-  bool __fastcall BlockBase::vf180(int a1)
+  bool __fastcall BlockBase_vf180(int a1)
   {
     int v1; // r4
     int CurrentState; // r0
@@ -150605,7 +150606,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK9BlockBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
  * RVA 0x00564e1c   size 0x130   xrefs 0
  * ============================================================================ */
-  bool __fastcall BlockBase::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  bool __fastcall BlockBase_checkDerivedRuntimeTypeInfo(int a1, int a2)
   {
     if ( _cxa_guard_acquire_0(13296372) )
     {
@@ -150652,7 +150653,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -150663,7 +150664,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf170Ev
  * RVA 0x0056505c   size 0xc   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::vf170(int a1)
+  int __fastcall BlockBase_vf170(int a1)
   {
     return a1 + 108;
   }
@@ -150963,7 +150964,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -151098,7 +151099,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHuge8onCreateEv
  * RVA 0x00565ca8   size 0x22c   xrefs 0
  * ============================================================================ */
-  int __fastcall BrickBlockHuge::onCreate(int a1)
+  int __fastcall BrickBlockHuge_onCreate(int a1)
   {
     _DWORD *v2; // r7
     int v3; // r1
@@ -151175,7 +151176,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHuge9onExecuteEv
  * RVA 0x00565ee8   size 0xbc   xrefs 0
  * ============================================================================ */
-  int __fastcall BrickBlockHuge::onExecute(int a1)
+  int __fastcall BrickBlockHuge_onExecute(int a1)
   {
     _DWORD *v2; // r5
     int CurrentState; // r0
@@ -151205,7 +151206,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHuge6onDrawEv
  * RVA 0x00565fa8   size 0x154   xrefs 0
  * ============================================================================ */
-  int __fastcall BrickBlockHuge::onDraw(int a1)
+  int __fastcall BrickBlockHuge_onDraw(int a1)
   {
     int v2; // r7
     int v3; // r6
@@ -151263,7 +151264,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00566100   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BrickBlockHuge::vf178(int a1)
+  int __fastcall BrickBlockHuge_vf178(int a1)
   {
     return SE_OBJ_BLOCK_BREAK_ref(a1);
   }
@@ -151311,7 +151312,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00566228   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BrickBlockHuge::vf17C(int a1)
+  int __fastcall BrickBlockHuge_vf17C(int a1)
   {
     return SE_OBJ_BLOCK_BREAK_ref(a1);
   }
@@ -151320,7 +151321,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHuge15spawnCoinShowerEv
  * RVA 0x0056622c   size 0xd8   xrefs 0
  * ============================================================================ */
-  void __fastcall BrickBlockHuge::spawnCoinShower(int a1)
+  void __fastcall BrickBlockHuge_spawnCoinShower(int a1)
   {
     float v2; // r1
     int v3; // r2
@@ -151415,7 +151416,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00566488   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BrickBlockHuge::spawnItemUp(int a1)
+  int __fastcall BrickBlockHuge_spawnItemUp(int a1)
   {
     return sub_60566310(a1);
   }
@@ -151425,7 +151426,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x0056648c   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BrickBlockHuge::spawnItemDown(int a1)
+  int __fastcall BrickBlockHuge_spawnItemDown(int a1)
   {
     return sub_60566310(a1);
   }
@@ -151489,7 +151490,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHuge5vf180Ev
  * RVA 0x00566628   size 0x88   xrefs 0
  * ============================================================================ */
-  bool __fastcall BrickBlockHuge::vf180(int a1)
+  bool __fastcall BrickBlockHuge_vf180(int a1)
   {
     int v1; // r4
     int CurrentState; // r0
@@ -151530,7 +151531,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -151838,7 +151839,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -152480,7 +152481,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_60568728(int a1)
   {
     *(_DWORD *)a1 = 12590024;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6112));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -152495,7 +152496,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12590024;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6112));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -152543,7 +152544,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlock8onCreateEv
  * RVA 0x005688b8   size 0x230   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlock::onCreate(int a1)
+  int __fastcall FlyingBlock_onCreate(int a1)
   {
     _DWORD *v2; // r9
     unsigned int v3; // r0
@@ -152633,7 +152634,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlock5vf184Ev
  * RVA 0x00568b14   size 0x2c   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlock::vf184(int a1)
+  int __fastcall FlyingBlock_vf184(int a1)
   {
     int result; // r0
   
@@ -152647,7 +152648,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlock5vf188Ev
  * RVA 0x00568b44   size 0x88   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlock::vf188(int result)
+  int __fastcall FlyingBlock_vf188(int result)
   {
     bool v1; // zf
   
@@ -152666,7 +152667,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlock5vf18CEv
  * RVA 0x00568bd4   size 0x98   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlock::vf18C(int a1)
+  int __fastcall FlyingBlock_vf18C(int a1)
   {
     int result; // r0
     int v3; // r0
@@ -152703,7 +152704,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlock5vf190Ev
  * RVA 0x00568c78   size 0x6c   xrefs 0
  * ============================================================================ */
-  bool __fastcall FlyingBlock::vf190(int a1)
+  bool __fastcall FlyingBlock_vf190(int a1)
   {
     return *(_BYTE *)(MEMORY[0xCC6D8C] + 17)
         && Actor::getProfileId(a1) == MEMORY[0xAF31B0]
@@ -152734,7 +152735,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -152840,7 +152841,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -152900,7 +152901,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN20FlyingBlockForAmbush8onCreateEv
  * RVA 0x005694b4   size 0x1a8   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlockForAmbush::onCreate(int a1)
+  int __fastcall FlyingBlockForAmbush_onCreate(int a1)
   {
     unsigned int v2; // r0
     int v3; // r1
@@ -152961,7 +152962,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN20FlyingBlockForAmbush9onExecuteEv
  * RVA 0x00569668   size 0xcc   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlockForAmbush::onExecute(int a1)
+  int __fastcall FlyingBlockForAmbush_onExecute(int a1)
   {
     _DWORD *v2; // r5
     int v3; // r2
@@ -152996,7 +152997,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00569738   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  unsigned int __fastcall FlyingBlockForAmbush::vf16C(int a1)
+  unsigned int __fastcall FlyingBlockForAmbush_vf16C(int a1)
   {
     return sub_605641B4(a1);
   }
@@ -153005,7 +153006,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN20FlyingBlockForAmbush5vf1A0Ev
  * RVA 0x0056973c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlockForAmbush::vf1A0(int result)
+  int __fastcall FlyingBlockForAmbush_vf1A0(int result)
   {
     *(_DWORD *)(result + 7388) = 420;
     return result;
@@ -153024,7 +153025,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN20FlyingBlockForAmbush5vf1A4Ev
  * RVA 0x00569750   size 0x9c   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlockForAmbush::vf1A4(_DWORD *a1)
+  int __fastcall FlyingBlockForAmbush_vf1A4(_DWORD *a1)
   {
     int v2; // r2
     int v3; // r2
@@ -153066,7 +153067,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -153237,7 +153238,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -153336,7 +153337,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_6056A390(int a1)
   {
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -153351,7 +153352,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -153500,7 +153501,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -153843,7 +153844,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v15[0] = *(float *)(a1 + 108);
           v15[1] = v7;
           mapPositionToScreen(v14, v15);
-          SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v9, (int)"SE_OBJ_BLOCK_HELP_APPEAL", v8, v14, nullptr);
+          SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v9, (int)"SE_OBJ_BLOCK_HELP_APPEAL", v8, v14, 0);
         }
       }
       else
@@ -154201,7 +154202,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_6056BCFC(int a1)
   {
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -154216,7 +154217,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -155036,11 +155037,11 @@ static inline unsigned int uxtb16(unsigned int x)
                 _cxa_guard_release_0(13087612);
               }
               v10 = 1;
-              v11 = nullptr;
+              v11 = 0;
               if ( v9 )
               {
                 v12 = (**(int (__fastcall ***)(char *, int))v9)(v9, 13087608);
-                v11 = nullptr;
+                v11 = 0;
                 if ( v12 == 1 )
                 {
                   v13 = sub_6075F914(v9);
@@ -155053,7 +155054,7 @@ static inline unsigned int uxtb16(unsigned int x)
             }
             else
             {
-              v11 = nullptr;
+              v11 = 0;
               v10 = 0;
             }
             result = *v5;
@@ -155154,7 +155155,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v8 = 0;
   LABEL_11:
-        v10 = nullptr;
+        v10 = 0;
         goto LABEL_12;
       }
       v7 = *(char **)(MEMORY[0xCC436C] + 4 * v3 + 48);
@@ -155167,7 +155168,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v7 )
         goto LABEL_11;
       v9 = (**(int (__fastcall ***)(char *, int))v7)(v7, 13087608);
-      v10 = nullptr;
+      v10 = 0;
       if ( v9 == 1 )
       {
         v11 = sub_6075F914(v7);
@@ -155402,7 +155403,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = *(float *)(a1 + 108);
     v6[1] = v2;
     mapPositionToScreen(v5, v6);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_BOUND_BLOCK_BOUND", v5, nullptr);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_BOUND_BLOCK_BOUND", v5, 0);
     *(_DWORD *)(a1 + 6880) = 1;
     return 6880;
   }
@@ -155594,7 +155595,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v8[0] = *(float *)(v2 + 108);
           v8[1] = v4;
           mapPositionToScreen(v7, v8);
-          BasicSoundActor2_play(v5, (int)"SE_OBJ_BOUND_BLOCK_JUMP", v7, nullptr);
+          BasicSoundActor2_play(v5, (int)"SE_OBJ_BOUND_BLOCK_JUMP", v7, 0);
           v3 = 1;
           *(_DWORD *)(v2 + 7464) = 0;
           *(_BYTE *)(v2 + 7416) = 1;
@@ -155627,7 +155628,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -155832,7 +155833,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -155849,7 +155850,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1723;
-    return Profile::Profile(13297592, 4576572, MEMORY[0xAF31FC], (int)v1, nullptr, 0);
+    return Profile::Profile(13297592, 4576572, MEMORY[0xAF31FC], (int)v1, 0, 0);
   }
 
 /* ============================================================================
@@ -156361,7 +156362,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_60570010(int a1)
   {
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -156376,7 +156377,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -157039,7 +157040,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_60571858(int a1)
   {
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -157054,7 +157055,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -157305,7 +157306,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -157446,7 +157447,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -157638,7 +157639,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -157769,7 +157770,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -157899,7 +157900,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -158248,7 +158249,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -158458,7 +158459,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -158947,7 +158948,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_6057539C(int a1)
   {
     *(_DWORD *)a1 = 12598412;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6112));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -158962,7 +158963,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12598412;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6112));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -159508,7 +159509,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605764C8(int a1)
   {
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -159523,7 +159524,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -159562,7 +159563,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BabyYoshiBlock8onCreateEv
  * RVA 0x0057680c   size 0x120   xrefs 0
  * ============================================================================ */
-  int __fastcall BabyYoshiBlock::onCreate(int a1)
+  int __fastcall BabyYoshiBlock_onCreate(int a1)
   {
     _DWORD *v2; // r5
     int v3; // r1
@@ -159667,7 +159668,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00576b8c   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BabyYoshiBlock::spawnItemUp(int a1)
+  int __fastcall BabyYoshiBlock_spawnItemUp(int a1)
   {
     return SE_OBJ_ITEM_APPEAR_ref_576A00(a1);
   }
@@ -159677,7 +159678,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00576b90   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BabyYoshiBlock::spawnItemDown(int a1)
+  int __fastcall BabyYoshiBlock_spawnItemDown(int a1)
   {
     return SE_OBJ_ITEM_APPEAR_ref_576A00(a1);
   }
@@ -159705,7 +159706,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -159934,7 +159935,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -159945,7 +159946,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase4vf94Ev
  * RVA 0x00577458   size 0xc   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::vf94(int a1)
+  int __fastcall CoinBase_vf94(int a1)
   {
     return *(unsigned __int8 *)(a1 + 7466);
   }
@@ -160202,7 +160203,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -160558,7 +160559,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -160980,7 +160981,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -161025,7 +161026,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBaseC2EPK14ActorBuildInfo
  * RVA 0x00579890   size 0x134   xrefs 26
  * ============================================================================ */
-  int __fastcall CoinBase::CoinBase(int a1)
+  int __fastcall CoinBase_CoinBase(int a1)
   {
     MovementBlockCoinBase::MovementBlockCoinBase();
     *(_DWORD *)a1 = 12601964;
@@ -161092,7 +161093,7 @@ static inline unsigned int uxtb16(unsigned int x)
             _cxa_guard_release_0(13087588);
           }
           if ( !(**v2)(v2, 13087584) )
-            v2 = nullptr;
+            v2 = 0;
           return (_DWORD *)(*(int (__fastcall **)(unsigned int *, _DWORD))(*v1 + 40))(v1, v2);
         }
       }
@@ -161138,7 +161139,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase9onExecuteEv
  * RVA 0x00579ba0   size 0x1a4   xrefs 1
  * ============================================================================ */
-  int __fastcall CoinBase::onExecute(int a1)
+  int __fastcall CoinBase_onExecute(int a1)
   {
     int CurrentState; // r0
     int v3; // r6
@@ -161281,7 +161282,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase6onDrawEv
  * RVA 0x00579ee0   size 0xb4   xrefs 3
  * ============================================================================ */
-  int __fastcall CoinBase::onDraw(int a1, int a2, int a3, int a4)
+  int __fastcall CoinBase_onDraw(int a1, int a2, int a3, int a4)
   {
     float v4; // r2
     int v5; // r3
@@ -161314,7 +161315,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf154Ev
  * RVA 0x00579f9c   size 0x14   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::vf154(int a1)
+  int __fastcall CoinBase_vf154(int a1)
   {
     int result; // r0
   
@@ -161328,7 +161329,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf164Ev
  * RVA 0x00579fb0   size 0x18   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::vf164(int result)
+  int __fastcall CoinBase_vf164(int result)
   {
     *(_DWORD *)(result + 7440) = 3;
     *(_DWORD *)(result + 620) = result + 7424;
@@ -161402,7 +161403,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase4vfA0Ev
  * RVA 0x0057a134   size 0x94   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::vfA0(int result, int a2)
+  int __fastcall CoinBase_vfA0(int result, int a2)
   {
     int v2; // r4
     int CurrentState; // r0
@@ -161646,7 +161647,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v3 = nullptr;
+      v3 = 0;
       v8 = (float *)&unk_60B047D0;
     }
     CollisionMgr_init(v7, a1, v2, v3, v8);
@@ -161660,7 +161661,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase4vf8CEv
  * RVA 0x0057a650   size 0x18   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::vf8C(int result)
+  int __fastcall CoinBase_vf8C(int result)
   {
     *(_BYTE *)(result + 7466) = 1;
     *(_DWORD *)(result + 120) = 0;
@@ -161671,7 +161672,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase4vf90Ev
  * RVA 0x0057a668   size 0x14   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::vf90(int result)
+  int __fastcall CoinBase_vf90(int result)
   {
     int v1; // s0
   
@@ -161905,7 +161906,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase11splashWaterEP4Vec3
  * RVA 0x0057ab10   size 0x44   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::splashWater(int a1, _DWORD *a2)
+  int __fastcall CoinBase_splashWater(int a1, _DWORD *a2)
   {
     int v3; // r2
     int v4; // r3
@@ -161922,7 +161923,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase10splashLavaEP4Vec3
  * RVA 0x0057ab58   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::splashLava(int a1, _DWORD *a2)
+  int __fastcall CoinBase_splashLava(int a1, _DWORD *a2)
   {
     int v3; // r2
     int v4; // r3
@@ -161940,7 +161941,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase14splashLavaWaveEP4Vec3
  * RVA 0x0057abac   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::splashLavaWave(int a1, _DWORD *a2)
+  int __fastcall CoinBase_splashLavaWave(int a1, _DWORD *a2)
   {
     int v3; // r2
     int v4; // r3
@@ -161958,7 +161959,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase12splashPoisonEP4Vec3
  * RVA 0x0057ac00   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::splashPoison(int a1, _DWORD *a2)
+  int __fastcall CoinBase_splashPoison(int a1, _DWORD *a2)
   {
     int v3; // r2
     int v4; // r3
@@ -162180,7 +162181,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf16CEv
  * RVA 0x0057af9c   size 0x164   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::vf16C(int a1)
+  int __fastcall CoinBase_vf16C(int a1)
   {
     int v3[4]; // [sp+0h] [bp-10h] BYREF
   
@@ -162229,7 +162230,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf178Ev
  * RVA 0x0057b2d4   size 0xec   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::vf178(int a1)
+  int __fastcall CoinBase_vf178(int a1)
   {
     unsigned int U32; // r0
     int v3; // r1
@@ -162269,7 +162270,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf17CEv
  * RVA 0x0057b3dc   size 0x2d8   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::vf17C(int a1)
+  int __fastcall CoinBase_vf17C(int a1)
   {
     int result; // r0
     int v3; // r1
@@ -162464,7 +162465,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf168Ev
  * RVA 0x0057b8ac   size 0x48   xrefs 0
  * ============================================================================ */
-  bool __fastcall CoinBase::vf168(int a1)
+  bool __fastcall CoinBase_vf168(int a1)
   {
     int CurrentState; // r0
     int v2; // r4
@@ -162478,7 +162479,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK8CoinBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
  * RVA 0x0057b8f8   size 0x130   xrefs 0
  * ============================================================================ */
-  bool __fastcall CoinBase::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  bool __fastcall CoinBase_checkDerivedRuntimeTypeInfo(int a1, int a2)
   {
     if ( _cxa_guard_acquire_0(13142624) )
     {
@@ -162525,7 +162526,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -163552,7 +163553,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -164334,7 +164335,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -164538,7 +164539,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -164736,7 +164737,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -164986,7 +164987,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9[0] = *(float *)(a1 + 108);
       v9[2] = v3;
       v9[1] = v2 + 8.0;
-      EffectWrapper_update((int32x4_t *)(a1 + 7484), 357, v9, nullptr, (float *)(a1 + 144));
+      EffectWrapper_update((int32x4_t *)(a1 + 7484), 357, v9, 0, (float *)(a1 + 144));
     }
     sub_6057A200(a1);
     if ( sub_605D01D4(a1) == 1 )
@@ -165080,15 +165081,15 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605807D4(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12605044;
     a1[1871] = 12325992;
-    v2 = (sead::IDisposer *)(a1 + 1871);
+    v2 = (struct sead_IDisposer *)(a1 + 1871);
     sub_60237560((int)(a1 + 1871));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1530));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1530));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -165100,16 +165101,16 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60580864(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *a1 = 12605044;
     a1[1871] = 12325992;
-    v2 = (sead::IDisposer *)(a1 + 1871);
+    v2 = (struct sead_IDisposer *)(a1 + 1871);
     sub_60237560((int)(a1 + 1871));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1530));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1530));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -165413,7 +165414,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -165544,7 +165545,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -165568,10 +165569,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60582314
  * RVA 0x00582314   size 0x44   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_60582314(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_60582314(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12606272;
-    if ( (sead::IDisposer *)MEMORY[0xCAF158] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAF158] == a1 )
     {
       MEMORY[0xCAF158] = 0;
       MEMORY[0xCAF15C] = 0;
@@ -165583,12 +165584,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_60582368
  * RVA 0x00582368   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_60582368(sead::IDisposer *a1)
+  int __fastcall sub_60582368(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v1; // r0
+    struct sead_IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12606272;
-    if ( (sead::IDisposer *)MEMORY[0xCAF158] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCAF158] == a1 )
     {
       MEMORY[0xCAF158] = 0;
       MEMORY[0xCAF15C] = 0;
@@ -168165,7 +168166,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -168347,7 +168348,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -168727,7 +168728,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -168857,9 +168858,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 160) = 0;
     v2 = a1 + 648;
     if ( *(_DWORD *)(a1 + 6324) == 2 )
-      CollisionMgr_init(v2, a1, dword_60B04AA4, nullptr, nullptr);
+      CollisionMgr_init(v2, a1, dword_60B04AA4, 0, 0);
     else
-      CollisionMgr_init(v2, a1, dword_60B04AB0, nullptr, nullptr);
+      CollisionMgr_init(v2, a1, dword_60B04AB0, 0, 0);
     result = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
     v4 = result == 0;
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
@@ -169932,7 +169933,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v10[0] = *(float *)(a1 + 108);
         v10[1] = v8;
         mapPositionToScreen(v9, v10);
-        BasicSoundActor2_play(v7, (int)"SE_OBJ_COIN_APP", v9, nullptr);
+        BasicSoundActor2_play(v7, (int)"SE_OBJ_COIN_APP", v9, 0);
         *(_BYTE *)(a1 + 7517) = 1;
         return 7517;
       }
@@ -170787,7 +170788,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -171056,7 +171057,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -171299,7 +171300,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -171518,7 +171519,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v10[0] = *(float *)(a1 + 108);
           v10[1] = v6;
           mapPositionToScreen(v9, v10);
-          BasicSoundActor2_play(v7, (int)"SE_OBJ_GET_COIN_SHOWER", v9, nullptr);
+          BasicSoundActor2_play(v7, (int)"SE_OBJ_GET_COIN_SHOWER", v9, 0);
         }
       }
     }
@@ -171587,7 +171588,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -171831,7 +171832,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -172019,7 +172020,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -172142,7 +172143,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -172231,7 +172232,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v15 = *(int *)(a1 + 108);
         v16 = v7;
         mapPositionToScreen(v26, (float *)&v15);
-        BasicSoundActor2_play(v8, (int)"SE_OBJ_COIN_POP_UP", v26, nullptr);
+        BasicSoundActor2_play(v8, (int)"SE_OBJ_COIN_POP_UP", v26, 0);
         *(_BYTE *)(a1 + 6113) = 0;
       }
       *(float *)&v15 = *(float *)(a1 + 108) + *(float *)(a1 + 572);
@@ -172716,7 +172717,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_6058E9A8(int a1)
   {
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -172731,7 +172732,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -172948,7 +172949,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = *(_BYTE *)(a1 + 86);
     v12 = *(_BYTE *)(a1 + 87);
     v13 = 0;
-    v14 = nullptr;
+    v14 = 0;
     v4 = TileCheck_ctor((int)v8, (int)&v10);
     if ( sub_6015DF58(v4, (int)v9, a2) )
       return 1;
@@ -173078,7 +173079,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAF58C = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD1F90;
-    Profile::Profile(13301136, 5827772, MEMORY[0xAF2D50], (int)v1, nullptr, 4);
+    Profile::Profile(13301136, 5827772, MEMORY[0xAF2D50], (int)v1, 0, 4);
     MEMORY[0xCAF5AC] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF5A8] = 12612156;
     MEMORY[0xCAF5B0] = 5827844;
@@ -173734,11 +173735,11 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605909B0(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12612176;
-    v2 = (sead::IDisposer *)(a1 + 712);
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1512));
+    v2 = (struct sead_IDisposer *)(a1 + 712);
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1512));
     ShapedCollider_dtor(v2);
     StageActor::~StageActor((Actor *)a1);
   }
@@ -173749,12 +173750,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605909F0(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12612176;
-    v2 = (sead::IDisposer *)(a1 + 712);
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1512));
+    v2 = (struct sead_IDisposer *)(a1 + 712);
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1512));
     ShapedCollider_dtor(v2);
     StageActor::~StageActor((Actor *)a1);
     return operator delete(v3);
@@ -173951,12 +173952,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60590F30(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12612176;
-    v2 = (sead::IDisposer *)(a1 + 712);
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1512));
+    v2 = (struct sead_IDisposer *)(a1 + 712);
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1512));
     ShapedCollider_dtor(v2);
     StageActor::~StageActor((Actor *)a1);
     return operator delete(v3);
@@ -174704,7 +174705,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = *(float *)(a1 + 108);
     v6[1] = v2;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor1_playSound(v3, (int)"SE_EMY_SHELL_CLOSE", v5, nullptr);
+    return BasicSoundActor1_playSound(v3, (int)"SE_EMY_SHELL_CLOSE", v5, 0);
   }
 
 /* ============================================================================
@@ -175079,7 +175080,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v14[0] = *(float *)(a1 + 108);
       v14[1] = v9;
       mapPositionToScreen(v13, v14);
-      BasicSoundActor1_playSound(v10, (int)"SE_EMY_SHELL_OPEN", v13, nullptr);
+      BasicSoundActor1_playSound(v10, (int)"SE_EMY_SHELL_OPEN", v13, 0);
     }
     sub_6059614C(a1);
     if ( v3 >= 74.0 && !*(_BYTE *)(a1 + 8210) )
@@ -175192,7 +175193,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[0] = *(float *)(a1 + 108);
     v9[1] = v5;
     mapPositionToScreen(v8, v9);
-    BasicSoundActor1_playSound(v6, (int)"SE_EMY_SHELL_OPEN", v8, nullptr);
+    BasicSoundActor1_playSound(v6, (int)"SE_EMY_SHELL_OPEN", v8, 0);
     sub_605977BC(a1);
     *(_BYTE *)(a1 + 8214) = 1;
     return 8214;
@@ -175347,8 +175348,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = &flt_60593A14;
     *(float *)(a1 + 120) = *v6;
     *(_BYTE *)(a1 + 8212) = 0;
-    CollisionMgr_setSensor(a1 + 648, nullptr, 3);
-    CollisionMgr_setSensor(a1 + 648, nullptr, 2);
+    CollisionMgr_setSensor(a1 + 648, 0, 3);
+    CollisionMgr_setSensor(a1 + 648, 0, 2);
     CollisionMgr_setSensor(a1 + 648, dword_60B04D30, 0);
     v8[1] = 0;
     v8[0] = 0;
@@ -175547,7 +175548,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 6276) = 0;
     *(_DWORD *)(a1 + 6272) = 0;
     *(_DWORD *)(a1 + 6268) = 0;
-    CollisionMgr_init(a1 + 648, a1, dword_60B04CE8, nullptr, flt_60B04CF4);
+    CollisionMgr_init(a1 + 648, a1, dword_60B04CE8, 0, flt_60B04CF4);
     if ( *(_BYTE *)(a1 + 30) )
     {
       *(_DWORD *)(a1 + 8176) = 0;
@@ -176207,7 +176208,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v7 = v5;
       v8 = v4 == 0;
       if ( v4 )
-        v8 = v7 == nullptr;
+        v8 = v7 == 0;
       if ( !v8 )
       {
         result = *(unsigned __int8 *)(v4 + 533);
@@ -177844,12 +177845,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605983AC(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12612716;
-    v2 = (sead::IDisposer *)(a1 + 6288);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7840));
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 7088));
+    v2 = (struct sead_IDisposer *)(a1 + 6288);
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7840));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 7088));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -177862,13 +177863,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60598418(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12612716;
-    v2 = (sead::IDisposer *)(a1 + 6288);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7840));
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 7088));
+    v2 = (struct sead_IDisposer *)(a1 + 6288);
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7840));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 7088));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -178001,7 +178002,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 13944) = 0;
     *(_DWORD *)(a1 + 13948) = -1;
     EffectData_ctor(a1 + 13892);
-    CollisionMgr_init(a1 + 8080, a1, nullptr, nullptr, nullptr);
+    CollisionMgr_init(a1 + 8080, a1, 0, 0, 0);
     *(_DWORD *)(a1 + 10632) |= 0x18u;
     *(_DWORD *)(a1 + 10624) |= 0x18u;
     v3 = *(_DWORD *)(a1 + 10616) | 0x18;
@@ -178189,13 +178190,13 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (v3 & 0x80000) != 0 && !sub_60235E50(a1 + 13892) )
         {
           sub_6059BDF8(a1 + 8036, v6, 0);
-          sub_602375C4((int32x4_t *)(a1 + 13892), 1121, v6, nullptr, nullptr);
+          sub_602375C4((int32x4_t *)(a1 + 13892), 1121, v6, 0, 0);
         }
       }
       else if ( (v3 & 0x80000) != 0 && sub_60235E50(a1 + 13892) == 1 )
       {
         sub_6059BDF8(a1 + 8036, v6, 0);
-        EffectData_update((int32x4_t *)(a1 + 13892), v6, nullptr, nullptr);
+        EffectData_update((int32x4_t *)(a1 + 13892), v6, 0, 0);
       }
     }
     return nullsub_37(a1);
@@ -179679,7 +179680,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = a1[1565];
     if ( (v4 & 0x80000) != 0 )
     {
-      if ( sub_6015C6B0((int)(a1 + 3372), nullptr, a3) != 1 )
+      if ( sub_6015C6B0((int)(a1 + 3372), 0, a3) != 1 )
         return 1;
       v4 = *v5;
     }
@@ -179774,20 +179775,20 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_6059AD90(int a1)
   {
-    sead::IDisposer *v2; // r8
+    struct sead_IDisposer *v2; // r8
   
     *(_DWORD *)a1 = 12613088;
-    v2 = (sead::IDisposer *)(a1 + 7148);
-    ColliderBase_dtor((sead::IDisposer *)(a1 + 13488));
+    v2 = (struct sead_IDisposer *)(a1 + 7148);
+    ColliderBase_dtor((struct sead_IDisposer *)(a1 + 13488));
     CollisionMgr_dtor(a1 + 8080);
     *(_DWORD *)a1 = 12628472;
     *(_DWORD *)(a1 + 7896) = 12325992;
     sub_60237560(a1 + 7896);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7896));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7896));
     *(_DWORD *)(a1 + 7792) = 12325992;
     sub_60237560(a1 + 7792);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7792));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7452));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7792));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7452));
     ActiveCollider_dtor(v2);
     nullsub_407(a1 + 6080);
     *(_DWORD *)a1 = 12321080;
@@ -179801,21 +179802,21 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6059AE74(int a1)
   {
-    sead::IDisposer *v2; // r8
+    struct sead_IDisposer *v2; // r8
     int v3; // r0
   
     *(_DWORD *)a1 = 12613088;
-    v2 = (sead::IDisposer *)(a1 + 7148);
-    ColliderBase_dtor((sead::IDisposer *)(a1 + 13488));
+    v2 = (struct sead_IDisposer *)(a1 + 7148);
+    ColliderBase_dtor((struct sead_IDisposer *)(a1 + 13488));
     CollisionMgr_dtor(a1 + 8080);
     *(_DWORD *)a1 = 12628472;
     *(_DWORD *)(a1 + 7896) = 12325992;
     sub_60237560(a1 + 7896);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7896));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7896));
     *(_DWORD *)(a1 + 7792) = 12325992;
     sub_60237560(a1 + 7792);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 7792));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7452));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7792));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7452));
     ActiveCollider_dtor(v2);
     nullsub_407(a1 + 6080);
     *(_DWORD *)a1 = 12321080;
@@ -180202,7 +180203,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 28) = 0;
     *(_DWORD *)(a1 + 32) = 0;
     *(_DWORD *)(a1 + 36) = 0;
-    SkeletalAnim_init((int)v4, *(_DWORD *)(a1 + 8), *(_DWORD *)(a1 + 4), nullptr, 0);
+    SkeletalAnim_init((int)v4, *(_DWORD *)(a1 + 8), *(_DWORD *)(a1 + 4), 0, 0);
     SkeletalAnim_play(*(_DWORD *)(a1 + 12), *(_DWORD *)(a1 + 4), dword_60C07860);
     v5 = *(_DWORD *)(a1 + 12);
     AnimationCtrl_setRepeat(v5 + 4, 0);
@@ -180752,7 +180753,7 @@ static inline unsigned int uxtb16(unsigned int x)
       ActiveColliderMgr_addToCreateList(v22, (int)(a1 + 47));
     }
     if ( *v13 )
-      CollisionMgr_init((int)(a1 + 162), (int)a1, dword_60B04DAC, nullptr, nullptr);
+      CollisionMgr_init((int)(a1 + 162), (int)a1, dword_60B04DAC, 0, 0);
     ShapedCollider_init((int)(a1 + 1618), (int)a1, &dword_60CAFB58);
     *((_DWORD *)a1 + 1702) = a1 + 1526;
     ColliderMgr_add(MEMORY[0xC8820C], (_DWORD *)a1 + 1618);
@@ -180760,7 +180761,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1610] = a1[27] + *v5;
     a1[1611] = v23;
     a1[1612] = 2200.0;
-    checkLiquidCollisions(&v38, nullptr, a1 + 1610, *((unsigned __int8 *)a1 + 86));
+    checkLiquidCollisions(&v38, 0, a1 + 1610, *((unsigned __int8 *)a1 + 86));
     *((_DWORD *)a1 + 1783) = v38;
     Resource = LoadResource(MEMORY[0xC9CA88], &dword_60CAFB40);
     Model2 = Resource_getModel2(Resource, (int)&unk_60CAFB48, 1, 0, 1, 0, 0, 0, 0);
@@ -180829,7 +180830,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_BYTE *)(a1 + 7128);
     if ( Actor::getProfileId((Actor *)a1) == MEMORY[0xAF30A8] && *v2 )
     {
-      checkLiquidCollisions(&v24, nullptr, (float *)(a1 + 6440), *(unsigned __int8 *)(a1 + 86));
+      checkLiquidCollisions(&v24, 0, (float *)(a1 + 6440), *(unsigned __int8 *)(a1 + 86));
       v3 = v24;
       v4 = v24 == 1;
       *(_DWORD *)(a1 + 7132) = v24;
@@ -181207,18 +181208,18 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_6059CE6C(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12613744;
-    v2 = (sead::IDisposer *)(a1 + 6340);
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6472));
+    v2 = (struct sead_IDisposer *)(a1 + 6340);
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
     sub_60237560(a1 + 6236);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6236));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
     sub_60237560(a1 + 6132);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6132));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -181230,19 +181231,19 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6059CF14(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12613744;
-    v2 = (sead::IDisposer *)(a1 + 6340);
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6472));
+    v2 = (struct sead_IDisposer *)(a1 + 6340);
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
     sub_60237560(a1 + 6236);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6236));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
     sub_60237560(a1 + 6132);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6132));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -181665,19 +181666,19 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6059D8B8(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12613744;
-    v2 = (sead::IDisposer *)(a1 + 6340);
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6472));
+    v2 = (struct sead_IDisposer *)(a1 + 6340);
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
     sub_60237560(a1 + 6236);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6236));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
     sub_60237560(a1 + 6132);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6132));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -181934,7 +181935,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_DWORD *)(a1 + 100) = -1103101952;
       *(_DWORD *)(a1 + 136) = -1061158912;
-      CollisionMgr_init(a1 + 648, a1, dword_60B04E00, nullptr, nullptr);
+      CollisionMgr_init(a1 + 648, a1, dword_60B04E00, 0, 0);
     }
     v32[1] = MEMORY[0xB3B948];
     v32[0] = MEMORY[0xB3B944];
@@ -182435,25 +182436,25 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_6059EBB0(int a1)
   {
     *(_DWORD *)a1 = 12614348;
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 10516));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 10212));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 9908));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 9604));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 9300));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 8996));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 8692));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 8388));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 8084));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 7780));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 10516));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 10212));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 9908));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 9604));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 9300));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 8996));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 8692));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 8388));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 8084));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7780));
     ShapedCollider_dtor(a1 + 7080);
     ShapedCollider_dtor(a1 + 6424);
     LightSource::~LightSource((LightSource *)(a1 + 6340));
     *(_DWORD *)(a1 + 6236) = 12325992;
     sub_60237560(a1 + 6236);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6236));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
     sub_60237560(a1 + 6132);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6132));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -182864,19 +182865,19 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6059F700(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12613744;
-    v2 = (sead::IDisposer *)(a1 + 6340);
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6472));
+    v2 = (struct sead_IDisposer *)(a1 + 6340);
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
     sub_60237560(a1 + 6236);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6236));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
     sub_60237560(a1 + 6132);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 6132));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -184331,7 +184332,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[0] = v5;
     v9[1] = v6;
     mapPositionToScreen(v8, v9);
-    return BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_SPLASH", v8, nullptr);
+    return BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_SPLASH", v8, 0);
   }
 
 /* ============================================================================
@@ -184341,7 +184342,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605A1B90(_BYTE *a1)
   {
     *(_DWORD *)a1 = 12615080;
-    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6360));
+    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6360));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -184358,7 +184359,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12615080;
-    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6360));
+    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6360));
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
@@ -184488,7 +184489,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = RectCollider_ctor(v0 + 18082);
     *v1 = 12333272;
     sub_605C10B4((int)(v1 + 170));
-    sead_IDisposer_ctor((sead::IDisposer *)(v0 + 22416));
+    sead_IDisposer_ctor((struct sead_IDisposer *)(v0 + 22416));
     v0[22416] = 12348984;
     v0[22420] = 0;
     return v0;
@@ -184814,12 +184815,12 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605A2A98(_DWORD *a1)
   {
     _DWORD *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v3; // r6
   
     *a1 = 12615732;
     v2 = a1 + 22364;
     a1[22416] = 12348984;
-    v3 = (sead::IDisposer *)(a1 + 22416);
+    v3 = (struct sead_IDisposer *)(a1 + 22416);
     sub_60002B6C(a1 + 22416);
     sead::IDisposer::~IDisposer(v3);
     a1[18252] = 12615976;
@@ -184834,7 +184835,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12616008;
     a1[18064] = 12348984;
     sub_60002B6C(a1 + 18064);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 18064));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18064));
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor(a1 + 1534);
@@ -186532,13 +186533,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall TerrainActor_dtor(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v2; // r5
+    struct sead_IDisposer *v3; // r6
   
     *a1 = 12616008;
-    v2 = (sead::IDisposer *)(a1 + 1534);
+    v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
-    v3 = (sead::IDisposer *)(a1 + 18064);
+    v3 = (struct sead_IDisposer *)(a1 + 18064);
     sub_60002B6C(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
@@ -186555,14 +186556,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall TerrainActor_dtorFree(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v2; // r5
+    struct sead_IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12616008;
-    v2 = (sead::IDisposer *)(a1 + 1534);
+    v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
-    v3 = (sead::IDisposer *)(a1 + 18064);
+    v3 = (struct sead_IDisposer *)(a1 + 18064);
     sub_60002B6C(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
@@ -187067,7 +187068,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3 = result == 0;
     if ( result )
-      v3 = a2 == nullptr;
+      v3 = a2 == 0;
     if ( !v3 )
     {
       v4 = *(_DWORD *)(result + 144);
@@ -187162,7 +187163,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v19 = v4 + 89780;
               *(_DWORD *)(v19 + 4) = 1084227584;
               *(float *)(v19 + 8) = v17 + 16.0;
-              CollisionMgr_init(v19 - 89132, v6, nullptr, nullptr, nullptr);
+              CollisionMgr_init(v19 - 89132, v6, 0, 0, 0);
               *(_DWORD *)(v19 - 86588) |= 0x40000004u;
               CollisionMgr_setSensor(v19 - 89132, (int *)v19, 2);
               return CollisionMgr_process((unsigned __int8 *)(v19 - 89132));
@@ -187521,14 +187522,14 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_609175E4((int)(a1 + 22156));
     sub_609175E4((int)(a1 + 22088));
     sub_609175E4((int)(a1 + 22020));
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 18082));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 18082));
     *a1 = 12616008;
     a1[18064] = 12348984;
     sub_60002B6C((int)(a1 + 18064));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 18064));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18064));
     a1[1725] = 12615992;
     nullsub_1721();
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1534));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1534));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -187553,14 +187554,14 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_609175E4((int)(a1 + 22156));
     sub_609175E4((int)(a1 + 22088));
     sub_609175E4((int)(a1 + 22020));
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 18082));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 18082));
     *a1 = 12616008;
     a1[18064] = 12348984;
     sub_60002B6C((int)(a1 + 18064));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 18064));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18064));
     a1[1725] = 12615992;
     nullsub_1721();
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1534));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1534));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -187764,14 +187765,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall CloudTerrainActor_vf3(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v2; // r5
+    struct sead_IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12616008;
-    v2 = (sead::IDisposer *)(a1 + 1534);
+    v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
-    v3 = (sead::IDisposer *)(a1 + 18064);
+    v3 = (struct sead_IDisposer *)(a1 + 18064);
     sub_60002B6C(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
@@ -188489,14 +188490,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall Lava_vf3(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v2; // r5
+    struct sead_IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12616008;
-    v2 = (sead::IDisposer *)(a1 + 1534);
+    v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
-    v3 = (sead::IDisposer *)(a1 + 18064);
+    v3 = (struct sead_IDisposer *)(a1 + 18064);
     sub_60002B6C(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
@@ -188727,14 +188728,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall MistEffect_vf3(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v2; // r5
+    struct sead_IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12616008;
-    v2 = (sead::IDisposer *)(a1 + 1534);
+    v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
-    v3 = (sead::IDisposer *)(a1 + 18064);
+    v3 = (struct sead_IDisposer *)(a1 + 18064);
     sub_60002B6C(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
@@ -189153,14 +189154,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall Poison_dtorFree(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v2; // r5
+    struct sead_IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12616008;
-    v2 = (sead::IDisposer *)(a1 + 1534);
+    v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
-    v3 = (sead::IDisposer *)(a1 + 18064);
+    v3 = (struct sead_IDisposer *)(a1 + 18064);
     sub_60002B6C(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
@@ -189562,14 +189563,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall Quicksand_vf3(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v2; // r5
+    struct sead_IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12616008;
-    v2 = (sead::IDisposer *)(a1 + 1534);
+    v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
-    v3 = (sead::IDisposer *)(a1 + 18064);
+    v3 = (struct sead_IDisposer *)(a1 + 18064);
     sub_60002B6C(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
@@ -190466,14 +190467,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall Water_dtorFree(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v2; // r5
+    struct sead_IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12616008;
-    v2 = (sead::IDisposer *)(a1 + 1534);
+    v2 = (struct sead_IDisposer *)(a1 + 1534);
     a1[18064] = 12348984;
-    v3 = (sead::IDisposer *)(a1 + 18064);
+    v3 = (struct sead_IDisposer *)(a1 + 18064);
     sub_60002B6C(a1 + 18064);
     sead::IDisposer::~IDisposer(v3);
     a1[1725] = 12615992;
@@ -191186,12 +191187,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605ADCFC(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12618460;
-    v2 = (sead::IDisposer *)(a1 + 6120);
+    v2 = (struct sead_IDisposer *)(a1 + 6120);
     sub_605AE3D4(a1);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6424));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6424));
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -191204,13 +191205,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605ADD64(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12618460;
-    v2 = (sead::IDisposer *)(a1 + 6120);
+    v2 = (struct sead_IDisposer *)(a1 + 6120);
     sub_605AE3D4(a1);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6424));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6424));
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -191633,7 +191634,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v12 = v8;
             v10 = MEMORY[0xC7F534];
             mapPositionToScreen(v14, (float *)&v11);
-            BasicSoundActor2_play(v10, (int)"SE_OBJ_PNGN_ICEBALL_DISAPP", v14, nullptr);
+            BasicSoundActor2_play(v10, (int)"SE_OBJ_PNGN_ICEBALL_DISAPP", v14, 0);
             v11 = v7;
             v12 = v8;
             v13 = 1166843904;
@@ -191645,7 +191646,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v12 = v8;
             v9 = MEMORY[0xC7F534];
             mapPositionToScreen(v14, (float *)&v11);
-            return (int)BasicSoundActor2_play(v9, (int)"SE_OBJ_FIREBALL_DISAPP", v14, nullptr);
+            return (int)BasicSoundActor2_play(v9, (int)"SE_OBJ_FIREBALL_DISAPP", v14, 0);
           }
           else
           {
@@ -191919,8 +191920,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605AED80(Actor *a1)
   {
-    sead::IDisposer *v2; // r6
-    sead::IDisposer *v3; // r5
+    struct sead_IDisposer *v2; // r6
+    struct sead_IDisposer *v3; // r5
     int v4; // r7
     int v5; // r7
     int v6; // r0
@@ -192062,13 +192063,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605AF24C(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12618460;
-    v2 = (sead::IDisposer *)(a1 + 6120);
+    v2 = (struct sead_IDisposer *)(a1 + 6120);
     sub_605AE3D4(a1);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6424));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6424));
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -192286,13 +192287,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605AF868(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12618460;
-    v2 = (sead::IDisposer *)(a1 + 6120);
+    v2 = (struct sead_IDisposer *)(a1 + 6120);
     sub_605AE3D4(a1);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6424));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6424));
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -192497,13 +192498,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605AFDE0(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12618460;
-    v2 = (sead::IDisposer *)(a1 + 6120);
+    v2 = (struct sead_IDisposer *)(a1 + 6120);
     sub_605AE3D4(a1);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6424));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6424));
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -192736,13 +192737,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605B042C(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12618460;
-    v2 = (sead::IDisposer *)(a1 + 6120);
+    v2 = (struct sead_IDisposer *)(a1 + 6120);
     sub_605AE3D4(a1);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6424));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6424));
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -193476,7 +193477,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall BlockCoinBase::~BlockCoinBase(int a1)
   {
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -193491,7 +193492,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -193547,7 +193548,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB03BC = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD2450;
-    return Profile::Profile(13304688, 5967340, MEMORY[0xAF31A4], (int)v1, nullptr, 4098);
+    return Profile::Profile(13304688, 5967340, MEMORY[0xAF31A4], (int)v1, 0, 4098);
   }
 
 /* ============================================================================
@@ -193796,7 +193797,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = *v12;
     (*(void (__fastcall **)(_DWORD, int))(*(_DWORD *)*v12 + 68))(*v12, a1 + 144);
     v15 = 1065353216;
-    v16 = nullptr;
+    v16 = 0;
     v17 = 0;
     v19 = 0;
     v20 = 1065353216;
@@ -193954,7 +193955,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605B26DC(int a1)
   {
     *(_DWORD *)a1 = 12620576;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6104));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -193969,7 +193970,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620576;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6104));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -194029,7 +194030,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBaseC2EPK14ActorBuildInfo
  * RVA 0x005b2988   size 0x280   xrefs 4
  * ============================================================================ */
-  int __fastcall BlockCoinBase::BlockCoinBase(int a1)
+  int __fastcall BlockCoinBase_BlockCoinBase(int a1)
   {
     MultiStateActor::MultiStateActor((_DWORD *)a1);
     *(_DWORD *)a1 = 12620796;
@@ -195610,7 +195611,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1526] = -1059061760;
     a1[1527] = 1088421888;
     a1[1528] = 1098907648;
-    CollisionMgr_init((int)(a1 + 162), (int)a1, nullptr, nullptr, nullptr);
+    CollisionMgr_init((int)(a1 + 162), (int)a1, 0, 0, 0);
     result = a1[798] | 0x40000004;
     a1[798] = result;
     return result;
@@ -195631,7 +195632,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_605B52F4(int a1)
   {
-    return CollisionMgr_setSensor(a1 + 648, nullptr, 2);
+    return CollisionMgr_setSensor(a1 + 648, 0, 2);
   }
 
 /* ============================================================================
@@ -195779,11 +195780,11 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( a2 == 2 )
         v9 = v9 + 16.0;
       v10 = (float *)&v23;
-      v11 = nullptr;
+      v11 = 0;
       v21 = *(_DWORD *)(a1 + 116);
       v22 = 16 * a2;
       v20 = MEMORY[0xAF39D4];
-      result = nullptr;
+      result = 0;
       do
       {
         v12 = result;
@@ -195875,7 +195876,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase15spawnCoinShowerEv
  * RVA 0x005b5958   size 0xd8   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::spawnCoinShower(int a1)
+  int __fastcall BlockCoinBase_spawnCoinShower(int a1)
   {
     float v2; // r1
     int v3; // r2
@@ -196427,7 +196428,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfE8Ev
  * RVA 0x005b65a8   size 0xa0   xrefs 0
  * ============================================================================ */
-  float *__fastcall BlockCoinBase::vfE8(float *result, int a2)
+  float *__fastcall BlockCoinBase_vfE8(float *result, int a2)
   {
     float v2; // s0
     float *v3; // r1
@@ -196470,7 +196471,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase17beginState_BumpUpEv
  * RVA 0x005b6648   size 0x40   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::beginState_BumpUp(int a1)
+  int __fastcall BlockCoinBase_beginState_BumpUp(int a1)
   {
     *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
     *(_DWORD *)(a1 + 124) = 0x40000000;
@@ -196492,7 +196493,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase19executeState_BumpUpEv
  * RVA 0x005b668c   size 0x94   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::executeState_BumpUp(int a1)
+  int __fastcall BlockCoinBase_executeState_BumpUp(int a1)
   {
     float v2; // s0
   
@@ -196512,7 +196513,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase28beginState_BlockCoinBaseUnk1Ev
  * RVA 0x005b6720   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::beginState_BlockCoinBaseUnk1(int result)
+  int __fastcall BlockCoinBase_beginState_BlockCoinBaseUnk1(int result)
   {
     *(_BYTE *)(result + 6868) = 0;
     return result;
@@ -196531,7 +196532,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase30executeState_BlockCoinBaseUnk1Ev
  * RVA 0x005b6734   size 0x14   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::executeState_BlockCoinBaseUnk1(int a1)
+  int __fastcall BlockCoinBase_executeState_BlockCoinBaseUnk1(int a1)
   {
     return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13305068);
   }
@@ -196540,7 +196541,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase19beginState_BumpDownEv
  * RVA 0x005b674c   size 0x40   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::beginState_BumpDown(int a1)
+  int __fastcall BlockCoinBase_beginState_BumpDown(int a1)
   {
     *(_DWORD *)(a1 + 6880) = 2;
     *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
@@ -196562,7 +196563,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase21executeState_BumpDownEv
  * RVA 0x005b6790   size 0x88   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::executeState_BumpDown(int a1)
+  int __fastcall BlockCoinBase_executeState_BumpDown(int a1)
   {
     float32x2_t v1; // d0
     float32x2_t v2; // d2
@@ -196582,7 +196583,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase28beginState_BlockCoinBaseUnk2Ev
  * RVA 0x005b6818   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::beginState_BlockCoinBaseUnk2(int result)
+  int __fastcall BlockCoinBase_beginState_BlockCoinBaseUnk2(int result)
   {
     *(_DWORD *)(result + 6816) = 6;
     return result;
@@ -196601,7 +196602,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase30executeState_BlockCoinBaseUnk2Ev
  * RVA 0x005b682c   size 0x2c   xrefs 0
  * ============================================================================ */
-  _DWORD *__fastcall BlockCoinBase::executeState_BlockCoinBaseUnk2(_DWORD *result)
+  _DWORD *__fastcall BlockCoinBase_executeState_BlockCoinBaseUnk2(_DWORD *result)
   {
     int v1; // r2
     int v2; // r2
@@ -196620,7 +196621,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase18beginState_BumpUp2Ev
  * RVA 0x005b6858   size 0x84   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::beginState_BumpUp2(int a1)
+  int __fastcall BlockCoinBase_beginState_BumpUp2(int a1)
   {
     int *v1; // r4
     int v2; // t1
@@ -196654,7 +196655,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase20executeState_BumpUp2Ev
  * RVA 0x005b68e0   size 0x240   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::executeState_BumpUp2(_BYTE *a1)
+  int __fastcall BlockCoinBase_executeState_BumpUp2(_BYTE *a1)
   {
     int v2; // r0
     _DWORD *v3; // r5
@@ -196744,7 +196745,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase20beginState_BumpDown2Ev
  * RVA 0x005b6b38   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::beginState_BumpDown2(int a1)
+  int __fastcall BlockCoinBase_beginState_BumpDown2(int a1)
   {
     *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
     *(_DWORD *)(a1 + 6796) = 0;
@@ -196767,7 +196768,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase22executeState_BumpDown2Ev
  * RVA 0x005b6b88   size 0xb4   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::executeState_BumpDown2(int a1)
+  int __fastcall BlockCoinBase_executeState_BumpDown2(int a1)
   {
     float32x2_t v1; // d0
     float32x2_t v2; // d2
@@ -196795,7 +196796,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase24beginState_BlockCoinUnk3Ev
  * RVA 0x005b6c40   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::beginState_BlockCoinUnk3(int result)
+  int __fastcall BlockCoinBase_beginState_BlockCoinUnk3(int result)
   {
     *(_DWORD *)(result + 6816) = 6;
     return result;
@@ -196814,7 +196815,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase26executeState_BlockCoinUnk3Ev
  * RVA 0x005b6c54   size 0x48   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::executeState_BlockCoinUnk3(_DWORD *a1)
+  int __fastcall BlockCoinBase_executeState_BlockCoinUnk3(_DWORD *a1)
   {
     _DWORD *v2; // r0
     int v3; // r1
@@ -196833,7 +196834,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK13BlockCoinBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
  * RVA 0x005b6c9c   size 0x78   xrefs 0
  * ============================================================================ */
-  bool __fastcall BlockCoinBase::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  bool __fastcall BlockCoinBase_checkDerivedRuntimeTypeInfo(int a1, int a2)
   {
     if ( _cxa_guard_acquire_0(13087620) )
     {
@@ -196866,7 +196867,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -197157,7 +197158,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12621156;
     v2 = a1 + 161;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 336));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 336));
     sub_605B750C(v2);
     StageActor::~StageActor((Actor *)a1);
   }
@@ -197173,7 +197174,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12621156;
     v2 = a1 + 161;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 336));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 336));
     sub_605B750C(v2);
     StageActor::~StageActor((Actor *)a1);
     return operator delete(v3);
@@ -197185,33 +197186,33 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605B750C(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     a1[35] = 12348984;
-    v2 = (sead::IDisposer *)(a1 + 35);
+    v2 = (struct sead_IDisposer *)(a1 + 35);
     sub_60002B6C(a1 + 35);
     sead::IDisposer::~IDisposer(v2);
     a1[30] = 12348984;
     sub_60002B6C(a1 + 30);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 30));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 30));
     a1[25] = 12348984;
     sub_60002B6C(a1 + 25);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 25));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 25));
     a1[20] = 12348984;
     sub_60002B6C(a1 + 20);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 20));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 20));
     a1[15] = 12348984;
     sub_60002B6C(a1 + 15);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 15));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15));
     a1[10] = 12348984;
     sub_60002B6C(a1 + 10);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 10));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 10));
     a1[5] = 12348984;
     sub_60002B6C(a1 + 5);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 5));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 5));
     *a1 = 12348984;
     sub_60002B6C(a1);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)a1);
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)a1);
   }
 
 /* ============================================================================
@@ -197320,7 +197321,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a1[174] < a1[170] )
     {
       v3 = a1[171];
-      v4 = nullptr;
+      v4 = 0;
       if ( v3 >= 0 )
       {
         if ( (unsigned int)v3 >= 8 )
@@ -197937,12 +197938,12 @@ static inline unsigned int uxtb16(unsigned int x)
         a1 + 6848,
         3,
         (_DWORD *)(a1 + 108),
-        nullptr,
+        0,
         (_DWORD *)(a1 + 6840),
-        nullptr,
-        nullptr,
-        nullptr,
-        nullptr);
+        0,
+        0,
+        0,
+        0);
     return 1;
   }
 
@@ -198097,12 +198098,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605B8950(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12621344;
-    v2 = (sead::IDisposer *)(a1 + 6184);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6920));
-    LightSource::~LightSource((sead::IDisposer *)(a1 + 6848));
+    v2 = (struct sead_IDisposer *)(a1 + 6184);
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6920));
+    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6848));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -198115,13 +198116,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605B89B8(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12621344;
-    v2 = (sead::IDisposer *)(a1 + 6184);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6920));
-    LightSource::~LightSource((sead::IDisposer *)(a1 + 6848));
+    v2 = (struct sead_IDisposer *)(a1 + 6184);
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6920));
+    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6848));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -198196,10 +198197,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_605B8C08
  * RVA 0x005b8c08   size 0x44   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_605B8C08(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_605B8C08(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12621612;
-    if ( (sead::IDisposer *)MEMORY[0xCB0618] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCB0618] == a1 )
     {
       MEMORY[0xCB0618] = 0;
       MEMORY[0xCB061C] = 0;
@@ -198211,12 +198212,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_605B8C5C
  * RVA 0x005b8c5c   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_605B8C5C(sead::IDisposer *a1)
+  int __fastcall sub_605B8C5C(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v1; // r0
+    struct sead_IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12621612;
-    if ( (sead::IDisposer *)MEMORY[0xCB0618] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCB0618] == a1 )
     {
       MEMORY[0xCB0618] = 0;
       MEMORY[0xCB061C] = 0;
@@ -199858,7 +199859,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12621628;
     v2 = a1 + 1525;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1864));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1864));
     sub_605BB1D4(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
@@ -199876,7 +199877,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12621628;
     v2 = a1 + 1525;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1864));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1864));
     sub_605BB1D4(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
@@ -199890,57 +199891,57 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605BB1D4(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     a1[75] = 12348984;
-    v2 = (sead::IDisposer *)(a1 + 75);
+    v2 = (struct sead_IDisposer *)(a1 + 75);
     sub_60002B6C(a1 + 75);
     sead::IDisposer::~IDisposer(v2);
     a1[70] = 12348984;
     sub_60002B6C(a1 + 70);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 70));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 70));
     a1[65] = 12348984;
     sub_60002B6C(a1 + 65);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 65));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 65));
     a1[60] = 12348984;
     sub_60002B6C(a1 + 60);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 60));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 60));
     a1[55] = 12348984;
     sub_60002B6C(a1 + 55);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 55));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 55));
     a1[50] = 12348984;
     sub_60002B6C(a1 + 50);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 50));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 50));
     a1[45] = 12348984;
     sub_60002B6C(a1 + 45);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 45));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 45));
     a1[40] = 12348984;
     sub_60002B6C(a1 + 40);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 40));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 40));
     a1[35] = 12348984;
     sub_60002B6C(a1 + 35);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 35));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 35));
     a1[30] = 12348984;
     sub_60002B6C(a1 + 30);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 30));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 30));
     a1[25] = 12348984;
     sub_60002B6C(a1 + 25);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 25));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 25));
     a1[20] = 12348984;
     sub_60002B6C(a1 + 20);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 20));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 20));
     a1[15] = 12348984;
     sub_60002B6C(a1 + 15);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 15));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15));
     a1[10] = 12348984;
     sub_60002B6C(a1 + 10);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 10));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 10));
     a1[5] = 12348984;
     sub_60002B6C(a1 + 5);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 5));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 5));
     *a1 = 12348984;
     sub_60002B6C(a1);
-    sead::IDisposer::~IDisposer((sead::IDisposer *)a1);
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)a1);
   }
 
 /* ============================================================================
@@ -200434,7 +200435,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = *(float *)(a1 + 108);
     v6[1] = v2;
     mapPositionToScreen(v5, v6);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_TSUTA_APPEAR", v5, nullptr);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_TSUTA_APPEAR", v5, 0);
     *(_BYTE *)(a1 + 6824) = 1;
     *(_BYTE *)(a1 + 6832) = 0;
     *(_DWORD *)(a1 + 6828) = 16;
@@ -201050,11 +201051,11 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605BCB58(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12621848;
-    v2 = (sead::IDisposer *)(a1 + 6104);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6836));
+    v2 = (struct sead_IDisposer *)(a1 + 6104);
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6836));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -201067,12 +201068,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605BCBB8(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12621848;
-    v2 = (sead::IDisposer *)(a1 + 6104);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6836));
+    v2 = (struct sead_IDisposer *)(a1 + 6104);
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6836));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -201837,11 +201838,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = -1;
     EffectData_ctor((int)v9);
     a1 += 1527;
-    sub_602375C4(v9, 84, a1, nullptr, nullptr);
+    sub_602375C4(v9, 84, a1, 0, 0);
     v7 = 0;
     v8 = -1;
     EffectData_ctor((int)v6);
-    sub_602375C4(v6, 88, a1, nullptr, nullptr);
+    sub_602375C4(v6, 88, a1, 0, 0);
     v3 = 0x3F80000000000000LL;
     v4 = 1086324736;
     v5 = 1065353216;
@@ -201889,16 +201890,16 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605BE288(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12698944;
     a1[1556] = 12325992;
-    v2 = (sead::IDisposer *)(a1 + 1556);
+    v2 = (struct sead_IDisposer *)(a1 + 1556);
     sub_60237560((int)(a1 + 1556));
     sead::IDisposer::~IDisposer(v2);
     a1[1530] = 12325992;
     sub_60237560((int)(a1 + 1530));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1530));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1530));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -201910,17 +201911,17 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605BE314(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *a1 = 12698944;
     a1[1556] = 12325992;
-    v2 = (sead::IDisposer *)(a1 + 1556);
+    v2 = (struct sead_IDisposer *)(a1 + 1556);
     sub_60237560((int)(a1 + 1556));
     sead::IDisposer::~IDisposer(v2);
     a1[1530] = 12325992;
     sub_60237560((int)(a1 + 1530));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1530));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1530));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor::~StageActor((Actor *)a1);
@@ -202271,8 +202272,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[6] = 0x800000;
     v3[7] = 0x400000;
     sub_608337BC(a1 + 24, v3);
-    *(_DWORD *)(a1 + 60) = sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340)) & 0xFFFFFFFE;
-    *(_DWORD *)(a1 + 64) = sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340)) & 0xFFFFFFFE;
+    *(_DWORD *)(a1 + 60) = sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 0xFFFFFFFE;
+    *(_DWORD *)(a1 + 64) = sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 0xFFFFFFFE;
     *(_BYTE *)(a1 + 82) = 0;
     *(_WORD *)(a1 + 80) = 0;
     *(_DWORD *)(a1 + 76) = 0;
@@ -203157,7 +203158,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v12[0] = *(float *)(a1 + 108);
           v12[1] = v4;
           mapPositionToScreen(v11, v12);
-          BasicSoundActor2_play(v5, (int)"SE_BOSS_KOOPA_FLOOR_BREAK", v11, nullptr);
+          BasicSoundActor2_play(v5, (int)"SE_BOSS_KOOPA_FLOOR_BREAK", v11, 0);
         }
         *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 6104) + 12) + 24) = 1065353216;
         EffectData_create(1144, a1 + 6768, 0, 0);
@@ -203537,7 +203538,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605C09F4(int a1)
   {
     *(_DWORD *)a1 = 12622848;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6112));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -203552,7 +203553,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12622848;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6112));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -203620,12 +203621,12 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)(a1 + 112) = *(float *)(a1 + 112) + -16.0;
     if ( v4 == 2 )
     {
-      CollisionMgr_init(v5, a1, nullptr, dword_60B055D0, nullptr);
+      CollisionMgr_init(v5, a1, 0, dword_60B055D0, 0);
       v6 = 1073741828;
     }
     else
     {
-      CollisionMgr_init(v5, a1, nullptr, dword_60B055DC, nullptr);
+      CollisionMgr_init(v5, a1, 0, dword_60B055DC, 0);
       v6 = 0x40000000;
     }
     *(_DWORD *)(a1 + 3192) |= v6;
@@ -203754,7 +203755,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -203780,7 +203781,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB09E0 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD2689;
-    return Profile::Profile(13306340, 6032180, MEMORY[0xAF31A8], (int)v1, nullptr, 2);
+    return Profile::Profile(13306340, 6032180, MEMORY[0xAF31A8], (int)v1, 0, 2);
   }
 
 /* ============================================================================
@@ -204407,7 +204408,7 @@ static inline unsigned int uxtb16(unsigned int x)
               if ( v10 > (float)(v9 + -8.0) && v10 < (float)(v9 + 8.0) )
               {
                 v11 = *(_DWORD **)(a1 + 176);
-                v12 = nullptr;
+                v12 = 0;
                 v13 = 0;
                 if ( v11 )
                 {
@@ -204464,10 +204465,10 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605C2198(_DWORD *a1)
   {
     _DWORD *result; // r0
-    sead::ListNode *v2; // r2
+    struct sead_ListNode *v2; // r2
     float *v3; // r5
     float *v4; // r4
-    sead::ListNode *v5; // r6
+    struct sead_ListNode *v5; // r6
     float v6; // s24
     int v7; // r1
     int v8; // r0
@@ -204484,14 +204485,14 @@ static inline unsigned int uxtb16(unsigned int x)
     int v19; // r1
     _DWORD *v20; // r7
     int v21; // r4
-    sead::ListNode *v23; // [sp+10h] [bp-8h]
+    struct sead_ListNode *v23; // [sp+10h] [bp-8h]
   
     result = (_DWORD *)a1[43];
     if ( result )
     {
-      v2 = (sead::ListNode *)a1[42];
+      v2 = (struct sead_ListNode *)a1[42];
       result = a1 + 41;
-      if ( v2 != (sead::ListNode *)(a1 + 41) )
+      if ( v2 != (struct sead_ListNode *)(a1 + 41) )
       {
         v3 = (float *)((char *)v2 - 3692);
         do
@@ -204499,7 +204500,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v4 = v3 + 916;
           v5 = v2;
           v6 = v3[916];
-          v23 = *((sead::ListNode **)v2 + 1);
+          v23 = *((struct sead_ListNode **)v2 + 1);
           if ( *((_BYTE *)v3 + 3656) )
           {
             sub_60832560(v3);
@@ -204524,7 +204525,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *v3 = 1.0;
               v20 = *((_DWORD **)v3 + 915);
               v21 = MEMORY[0xCBD254];
-              sead::ListNode::erase_((sead::ListNode *)(v20 + 5));
+              sead::ListNode::erase_((struct sead_ListNode *)(v20 + 5));
               --*(_DWORD *)(v21 + 13024);
               *v20 = *(_DWORD *)(v21 + 13028);
               *(_DWORD *)(v21 + 13028) = v20;
@@ -204774,11 +204775,11 @@ static inline unsigned int uxtb16(unsigned int x)
       *v3 = 1.0;
       v26 = *((_DWORD **)v3 + 915);
       v27 = MEMORY[0xCBD254];
-      sead::ListNode::erase_((sead::ListNode *)(v26 + 5));
+      sead::ListNode::erase_((struct sead_ListNode *)(v26 + 5));
       --*(_DWORD *)(v27 + 13024);
       *v26 = *(_DWORD *)(v27 + 13028);
       *(_DWORD *)(v27 + 13028) = v26;
-      sead::ListNode::erase_((sead::ListNode *)(v3 + 923));
+      sead::ListNode::erase_((struct sead_ListNode *)(v3 + 923));
       --*((_DWORD *)a1 + 43);
       *v3 = a1[44];
       *((_DWORD *)a1 + 44) = v3;
@@ -205329,11 +205330,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v57; // r1
     float v58; // s29
     bool v59; // zf
-    sead::Random *v60; // r0
+    struct sead_Random *v60; // r0
     int v61; // s0
     int v62; // r1
     bool v63; // zf
-    sead::Random *v64; // r0
+    struct sead_Random *v64; // r0
     unsigned int U32; // r0
     int v66; // r3
     int v67; // r2
@@ -205508,7 +205509,7 @@ static inline unsigned int uxtb16(unsigned int x)
               if ( *(_BYTE *)(MEMORY[0xC9A684] + 17) != 20 )
               {
   LABEL_49:
-                v60 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+                v60 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_50:
                 v61 = (int)(float)((float)(1.0 - v58) * (float)(unsigned int)((sead::Random::getU32(v60) >> 29) + 2));
                 v62 = *(unsigned __int8 *)(MEMORY[0xC9A684] + 16);
@@ -205517,7 +205518,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   if ( *(_BYTE *)(MEMORY[0xC9A684] + 17) != 20 )
                   {
   LABEL_58:
-                    v64 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+                    v64 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_59:
                     U32 = sead::Random::getU32(v64);
                     v66 = v5;
@@ -205566,7 +205567,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   if ( !v63 )
                     goto LABEL_58;
                 }
-                v64 = (sead::Random *)MEMORY[0xCCF4E4];
+                v64 = (struct sead_Random *)MEMORY[0xCCF4E4];
                 goto LABEL_59;
               }
             }
@@ -205578,7 +205579,7 @@ static inline unsigned int uxtb16(unsigned int x)
               if ( !v59 )
                 goto LABEL_49;
             }
-            v60 = (sead::Random *)MEMORY[0xCCF4E4];
+            v60 = (struct sead_Random *)MEMORY[0xCCF4E4];
             goto LABEL_50;
           }
   LABEL_12:
@@ -205651,24 +205652,24 @@ static inline unsigned int uxtb16(unsigned int x)
     float v42; // s2
     float v43; // s0
     _DWORD **v44; // r2
-    sead::Random *v45; // r0
+    struct sead_Random *v45; // r0
     unsigned int U32; // r0
     float *v47; // r1
     float v48; // s0
     _DWORD *v49; // r0
     bool v50; // cc
     int v51; // r1
-    sead::Random *v52; // r0
+    struct sead_Random *v52; // r0
     unsigned int v53; // r0
     float *v54; // r1
     float v55; // s0
-    sead::Random *v56; // r0
+    struct sead_Random *v56; // r0
     unsigned int v57; // r0
     float *v58; // r1
-    sead::Random *v59; // r0
+    struct sead_Random *v59; // r0
     unsigned int v60; // r0
     float *v61; // r1
-    sead::Random *v62; // r0
+    struct sead_Random *v62; // r0
     unsigned int v63; // r0
     int v64; // r10
     float v65; // s2
@@ -205765,7 +205766,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   if ( *(_BYTE *)(MEMORY[0xC9A684] + 17) != 20 )
                   {
   LABEL_56:
-                    v45 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+                    v45 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
                     goto LABEL_57;
                   }
                 }
@@ -205777,7 +205778,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   if ( !v18 )
                     goto LABEL_56;
                 }
-                v45 = (sead::Random *)MEMORY[0xCCF4E4];
+                v45 = (struct sead_Random *)MEMORY[0xCCF4E4];
   LABEL_57:
                 U32 = sead::Random::getU32(v45);
                 v6 = v80;
@@ -205809,11 +205810,11 @@ static inline unsigned int uxtb16(unsigned int x)
                   if ( v21 )
                   {
   LABEL_61:
-                    v52 = (sead::Random *)MEMORY[0xCCF4E4];
+                    v52 = (struct sead_Random *)MEMORY[0xCCF4E4];
                     goto LABEL_63;
                   }
                 }
-                v52 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+                v52 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_63:
                 v53 = sead::Random::getU32(v52);
                 v6 = v80;
@@ -205847,11 +205848,11 @@ static inline unsigned int uxtb16(unsigned int x)
                   if ( v26 )
                   {
   LABEL_67:
-                    v56 = (sead::Random *)MEMORY[0xCCF4E4];
+                    v56 = (struct sead_Random *)MEMORY[0xCCF4E4];
                     goto LABEL_69;
                   }
                 }
-                v56 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+                v56 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_69:
                 v57 = sead::Random::getU32(v56);
                 v6 = v80;
@@ -205884,11 +205885,11 @@ static inline unsigned int uxtb16(unsigned int x)
                   if ( v31 )
                   {
   LABEL_73:
-                    v59 = (sead::Random *)MEMORY[0xCCF4E4];
+                    v59 = (struct sead_Random *)MEMORY[0xCCF4E4];
                     goto LABEL_75;
                   }
                 }
-                v59 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+                v59 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_75:
                 v60 = sead::Random::getU32(v59);
                 v6 = v80;
@@ -205929,11 +205930,11 @@ static inline unsigned int uxtb16(unsigned int x)
                     if ( !v38 )
                     {
   LABEL_80:
-                      v62 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+                      v62 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
                       goto LABEL_81;
                     }
                   }
-                  v62 = (sead::Random *)MEMORY[0xCCF4E4];
+                  v62 = (struct sead_Random *)MEMORY[0xCCF4E4];
   LABEL_81:
                   v77 = (float *)((v36 >> 20) & 0xFF0);
                   v63 = sead::Random::getU32(v62);
@@ -206026,17 +206027,17 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int *v12; // r4
     int *v13; // r0
     unsigned int v14; // r2
-    sead::Random *v15; // r0
+    struct sead_Random *v15; // r0
     unsigned int U32; // r0
     float *v17; // r1
     int v18; // r1
     bool v19; // zf
-    sead::Random *v20; // r0
+    struct sead_Random *v20; // r0
     unsigned int v21; // r0
     float *v22; // r1
     int v23; // r1
     bool v24; // zf
-    sead::Random *v25; // r0
+    struct sead_Random *v25; // r0
     int v26; // r0
     int *v27; // r1
     unsigned int *v28; // r0
@@ -206087,12 +206088,12 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v73; // r0
     int v74; // r1
     bool v75; // zf
-    sead::Random *v76; // r0
+    struct sead_Random *v76; // r0
     unsigned int v77; // r0
     float *v78; // r1
     int v79; // r1
     bool v80; // zf
-    sead::Random *v81; // r0
+    struct sead_Random *v81; // r0
     int v82; // r0
     int *v83; // r1
     int *v84; // r0
@@ -206123,7 +206124,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v109; // s17
     int v110; // r1
     bool v111; // zf
-    sead::Random *v112; // r0
+    struct sead_Random *v112; // r0
     unsigned int v113; // r0
     float *v114; // r0
     float v115; // s23
@@ -206254,7 +206255,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( *(_BYTE *)(MEMORY[0xC9A684] + 17) != 20 )
             {
   LABEL_10:
-              v15 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+              v15 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_11:
               U32 = sead::Random::getU32(v15);
               v17 = *v181;
@@ -206267,7 +206268,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 if ( *(_BYTE *)(MEMORY[0xC9A684] + 17) != 20 )
                 {
   LABEL_21:
-                  v20 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+                  v20 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_22:
                   v21 = sead::Random::getU32(v20);
                   v22 = *v161;
@@ -206280,7 +206281,7 @@ static inline unsigned int uxtb16(unsigned int x)
                     if ( *(_BYTE *)(MEMORY[0xC9A684] + 17) != 20 )
                     {
   LABEL_32:
-                      v25 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+                      v25 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
                       goto LABEL_33;
                     }
                   }
@@ -206292,7 +206293,7 @@ static inline unsigned int uxtb16(unsigned int x)
                     if ( !v24 )
                       goto LABEL_32;
                   }
-                  v25 = (sead::Random *)MEMORY[0xCCF4E4];
+                  v25 = (struct sead_Random *)MEMORY[0xCCF4E4];
   LABEL_33:
                   v26 = sead::Random::getU32(v25);
                   v27 = *v180;
@@ -206331,7 +206332,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 if ( !v19 )
                   goto LABEL_21;
               }
-              v20 = (sead::Random *)MEMORY[0xCCF4E4];
+              v20 = (struct sead_Random *)MEMORY[0xCCF4E4];
               goto LABEL_22;
             }
           }
@@ -206343,7 +206344,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( !v142 )
               goto LABEL_10;
           }
-          v15 = (sead::Random *)MEMORY[0xCCF4E4];
+          v15 = (struct sead_Random *)MEMORY[0xCCF4E4];
           goto LABEL_11;
         case 1:
   LABEL_46:
@@ -207083,19 +207084,19 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605C6788(_DWORD *a1)
   {
     _DWORD *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v3; // r6
   
     *a1 = 12628472;
     v2 = a1 + 1520;
     a1[1974] = 12325992;
-    v3 = (sead::IDisposer *)(a1 + 1974);
+    v3 = (struct sead_IDisposer *)(a1 + 1974);
     sub_60237560((int)(a1 + 1974));
     sead::IDisposer::~IDisposer(v3);
     a1[1948] = 12325992;
     sub_60237560((int)(a1 + 1948));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1948));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1863));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1787));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
     nullsub_407(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
@@ -207109,20 +207110,20 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605C683C(_DWORD *a1)
   {
     _DWORD *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12628472;
     v2 = a1 + 1520;
     a1[1974] = 12325992;
-    v3 = (sead::IDisposer *)(a1 + 1974);
+    v3 = (struct sead_IDisposer *)(a1 + 1974);
     sub_60237560((int)(a1 + 1974));
     sead::IDisposer::~IDisposer(v3);
     a1[1948] = 12325992;
     sub_60237560((int)(a1 + 1948));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1948));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1863));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1787));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
     nullsub_407(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
@@ -207474,7 +207475,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v14 = v23 + (float)((float)((float)(v21 * 8.0) + (float)(v20 * 0.0)) + (float)(v22 * 0.0));
       v15 = v27 + (float)((float)((float)(v25 * 8.0) + (float)(v24 * 0.0)) + (float)(v26 * 0.0));
       a1[73] = a1[72] - 0x40000000;
-      LightSource_update1((int)(a1 + 54), 23, &v13, a1 + 73, &dword_60B056FC[a1[1]], nullptr, nullptr, nullptr, nullptr);
+      LightSource_update1((int)(a1 + 54), 23, &v13, a1 + 73, &dword_60B056FC[a1[1]], 0, 0, 0, 0);
       result = *((unsigned __int8 *)a1 + 296);
     }
     if ( (result & 2) != 0 )
@@ -207629,7 +207630,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v11[0] = *(_DWORD *)(a1 + 108);
       v11[1] = v7;
       mapPositionToScreen(v10, (float *)v11);
-      result = SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v9, (int)"SE_PLY_CANNON_READY", v8, v10, nullptr);
+      result = SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v9, (int)"SE_PLY_CANNON_READY", v8, v10, 0);
     }
     if ( v5 == 1 )
       return StateMgr::changeState((_DWORD *)(a1 + 1024), 13306756);
@@ -208611,11 +208612,11 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605C8A40(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12624988;
-    v2 = (sead::IDisposer *)(a1 + 1040);
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1696));
+    v2 = (struct sead_IDisposer *)(a1 + 1040);
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1696));
     ShapedCollider_dtor(v2);
     StageActor::~StageActor((Actor *)a1);
   }
@@ -208626,12 +208627,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605C8A7C(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12624988;
-    v2 = (sead::IDisposer *)(a1 + 1040);
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 1696));
+    v2 = (struct sead_IDisposer *)(a1 + 1040);
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1696));
     ShapedCollider_dtor(v2);
     StageActor::~StageActor((Actor *)a1);
     return operator delete(v3);
@@ -208774,7 +208775,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_605C8C5C
  * RVA 0x005c8c5c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_605C8C5C(sead::IDisposer *a1)
+  int __fastcall sub_605C8C5C(struct sead_IDisposer *a1)
   {
     int v1; // r0
   
@@ -209249,7 +209250,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     a1[1529] = 1;
-    result = *(_DWORD *)(4 * (sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340)) & 1) + 0xB057D4);
+    result = *(_DWORD *)(4 * (sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 1) + 0xB057D4);
     a1[30] = result;
     a1[31] = 1080033280;
     a1[32] = 0;
@@ -209343,7 +209344,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v3 )
     {
       v2 = *(_DWORD **)(v3 + 256);
-      v5 = v2 == nullptr;
+      v5 = v2 == 0;
     }
     if ( !v5 )
     {
@@ -209560,7 +209561,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v6 )
       {
         *(_DWORD *)(a1 + 6116) = 1;
-        *(_DWORD *)(a1 + 120) = *(_DWORD *)(4 * (sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340)) & 1)
+        *(_DWORD *)(a1 + 120) = *(_DWORD *)(4 * (sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 1)
                                           + 0xB057D4);
         *(_DWORD *)(a1 + 124) = 1080033280;
         *(_DWORD *)(a1 + 128) = 0;
@@ -210116,7 +210117,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v6 )
       {
         v2 = *(int (__fastcall ****)(_DWORD, int))(a2 + 64);
-        v7 = v2 == nullptr;
+        v7 = v2 == 0;
       }
       if ( !v7 )
       {
@@ -210654,7 +210655,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v12 = *(_DWORD *)(a1 + 108);
         v13 = v3;
         mapPositionToScreen(v11, (float *)&v12);
-        BasicSoundActor2_play(v4, (int)"SE_OBJ_TARU_LAND", v11, nullptr);
+        BasicSoundActor2_play(v4, (int)"SE_OBJ_TARU_LAND", v11, 0);
       }
       v5 = *(_DWORD *)(a1 + 112);
       v6 = *(_DWORD *)(a1 + 8);
@@ -210662,7 +210663,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v12 = *(_DWORD *)(a1 + 108);
       v13 = v5;
       mapPositionToScreen(v11, (float *)&v12);
-      SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v7, (int)"SE_OBJ_TARU_ROLL", v6, v11, nullptr);
+      SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v7, (int)"SE_OBJ_TARU_ROLL", v6, v11, 0);
     }
     v8 = a1 + 648;
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 248))(a1);
@@ -210769,11 +210770,11 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605CBD50(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12625672;
-    v2 = (sead::IDisposer *)(a1 + 6160);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6820));
+    v2 = (struct sead_IDisposer *)(a1 + 6160);
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6820));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -210786,12 +210787,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605CBDB0(int a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12625672;
-    v2 = (sead::IDisposer *)(a1 + 6160);
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 6820));
+    v2 = (struct sead_IDisposer *)(a1 + 6160);
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6820));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -213673,7 +213674,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBaseC2EPK14ActorBuildInfo
  * RVA 0x005cfa04   size 0x118   xrefs 2
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase::MovementBlockCoinBase(int a1)
+  int __fastcall MovementBlockCoinBase_MovementBlockCoinBase(int a1)
   {
     BlockCoinBase::BlockCoinBase(a1);
     *(_DWORD *)a1 = 12627412;
@@ -213918,7 +213919,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase4vfECEv
  * RVA 0x005d009c   size 0x18   xrefs 0
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase::vfEC(int a1)
+  int __fastcall MovementBlockCoinBase_vfEC(int a1)
   {
     return BlockBase::vf16C(MEMORY[0xCB061C], a1 + 6980);
   }
@@ -213940,7 +213941,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase5vf150Ev
  * RVA 0x005d00fc   size 0x40   xrefs 7
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase::vf150(int a1)
+  int __fastcall MovementBlockCoinBase_vf150(int a1)
   {
     return sub_60716778(
              MEMORY[0xCBD254],
@@ -214198,7 +214199,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           *(_DWORD *)(a1 + 7296) = 48;
           if ( *(_DWORD *)(a1 + 7324) == 1 )
-            CollisionMgr_setSensor(a1 + 648, nullptr, 3);
+            CollisionMgr_setSensor(a1 + 648, 0, 3);
           return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13308188);
         }
         result = (*(int (**)(void))(MEMORY[0xCB111C] + 8))();
@@ -214241,7 +214242,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 7296) = 48;
           sub_605B52E0(a1);
           if ( *(_DWORD *)(a1 + 7324) == 1 )
-            CollisionMgr_setSensor(a1 + 648, nullptr, 3);
+            CollisionMgr_setSensor(a1 + 648, 0, 3);
           return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13308188);
         }
         result = (*(int (**)(void))(MEMORY[0xCB111C] + 8))();
@@ -214266,7 +214267,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase11spawnItemUpEv
  * RVA 0x005d0a80   size 0x20   xrefs 0
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase::spawnItemUp(_DWORD *a1)
+  int __fastcall MovementBlockCoinBase_spawnItemUp(_DWORD *a1)
   {
     a1[1699] = 0;
     return (*(int (__fastcall **)(_DWORD *, int))(*a1 + 192))(a1, 13308188);
@@ -214276,7 +214277,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase13spawnItemDownEv
  * RVA 0x005d0aa4   size 0xc   xrefs 0
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase::spawnItemDown(int a1)
+  int __fastcall MovementBlockCoinBase_spawnItemDown(int a1)
   {
     return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 212))(a1);
   }
@@ -214285,7 +214286,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK21MovementBlockCoinBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
  * RVA 0x005d0ab0   size 0xd4   xrefs 0
  * ============================================================================ */
-  bool __fastcall MovementBlockCoinBase::checkDerivedRuntimeTypeInfo(int a1, int a2)
+  bool __fastcall MovementBlockCoinBase_checkDerivedRuntimeTypeInfo(int a1, int a2)
   {
     if ( _cxa_guard_acquire_0(13142632) )
     {
@@ -214325,7 +214326,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12620796;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6120));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -214713,7 +214714,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(a1 + 6517) = (v3 & 0x20) != 0;
         if ( (v3 & 0x20) != 0 )
         {
-          CollisionMgr_init(a1 + 648, a1, dword_60B058D8, nullptr, nullptr);
+          CollisionMgr_init(a1 + 648, a1, dword_60B058D8, 0, 0);
           if ( *v4 )
           {
             *(_DWORD *)(a1 + 3200) |= 0x20000u;
@@ -214775,7 +214776,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v11 = 0.0;
           if ( !*v17 && !*v4 )
-            EffectWrapper_update((int32x4_t *)(a1 + 6412), 102, (float *)(a1 + 108), nullptr, nullptr);
+            EffectWrapper_update((int32x4_t *)(a1 + 6412), 102, (float *)(a1 + 108), 0, 0);
         }
         else
         {
@@ -214913,7 +214914,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v14 + 56))(**v14);
     v15 = (_BYTE *)(a1 + 6518);
     if ( !*(_BYTE *)(a1 + 6516) && !*v15 )
-      sub_60237208((int32x4_t *)(a1 + 6412), (float *)(a1 + 108), nullptr, nullptr);
+      sub_60237208((int32x4_t *)(a1 + 6412), (float *)(a1 + 108), 0, 0);
     if ( *v15 )
       v16 = 8;
     else
@@ -215191,14 +215192,14 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605D2544(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *a1 = 12627840;
-    v2 = (sead::IDisposer *)(a1 + 1526);
+    v2 = (struct sead_IDisposer *)(a1 + 1526);
     sub_60959BAC(a1 + 1630);
     a1[1603] = 12325992;
     sub_60237560((int)(a1 + 1603));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1603));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1603));
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
@@ -215211,15 +215212,15 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605D25D0(_DWORD *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *a1 = 12627840;
-    v2 = (sead::IDisposer *)(a1 + 1526);
+    v2 = (struct sead_IDisposer *)(a1 + 1526);
     sub_60959BAC(a1 + 1630);
     a1[1603] = 12325992;
     sub_60237560((int)(a1 + 1603));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1603));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1603));
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
@@ -215563,7 +215564,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = *(float *)(a1 + 108);
     v6[1] = v2;
     mapPositionToScreen(v5, v6);
-    BasicSoundActor2_play(v3, (int)"SE_PLY_CH_YOSHI_BBL_CATCH", v5, nullptr);
+    BasicSoundActor2_play(v3, (int)"SE_PLY_CH_YOSHI_BBL_CATCH", v5, 0);
     *(_DWORD *)(a1 + 328) = 0;
     *(float *)(a1 + 820) = sqrtf(
                              (float)((float)(*(float *)(a1 + 124) * *(float *)(a1 + 124))
@@ -215901,7 +215902,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB1388 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD2AC1;
-    Profile::Profile(13308432, 6105048, MEMORY[0xAF3434], (int)v1, nullptr, 34);
+    Profile::Profile(13308432, 6105048, MEMORY[0xAF3434], (int)v1, 0, 34);
     MEMORY[0xCB122C] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB1228] = 12628336;
     MEMORY[0xCB1230] = 6105592;
@@ -216718,7 +216719,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = *(float *)(a1 + 108);
     v6[1] = v2;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_BALLOON_BREAK", v5, nullptr);
+    return BasicSoundActor2_play(v3, (int)"SE_OBJ_CMN_BALLOON_BREAK", v5, 0);
   }
 
 /* ============================================================================
@@ -216755,7 +216756,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v29; // s10
     float v30; // s8
     float v31; // s6
-    sead::Random *v32; // r5
+    struct sead_Random *v32; // r5
     int result; // r0
   
     v6 = sub_605DBDAC(a2);
@@ -216788,7 +216789,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(float *)(a1 + 840) = v12;
     }
     v16 = *(_DWORD *)(a1 + 828);
-    v17 = ((238609294 * (unsigned __int64)(unsigned int)sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+    v17 = ((238609294 * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
         - 119304647;
     v18 = *(float *)((((unsigned int)(v17 + v16) >> 20) & 0xFF0) + 0xB3A484);
     v19 = *(float *)((((unsigned int)(v17 + v16) >> 20) & 0xFF0) + 0xB3A488);
@@ -216825,9 +216826,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)(a1 + 120) = v26 * (float)(v25 * v31);
     *(float *)(a1 + 124) = v24 * v31;
     *(float *)(a1 + 88) = v31;
-    v32 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+    v32 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
     *(float *)(a1 + 848) = MEMORY[0xB05AE0]
-                         * (float)(COERCE_FLOAT((sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000)
+                         * (float)(COERCE_FLOAT((sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000)
                                  + -1.0);
     *(float *)(a1 + 852) = MEMORY[0xB05AE4] * (float)(COERCE_FLOAT((sead::Random::getU32(v32) >> 9) | 0x3F800000) + -1.0);
     *(float *)(a1 + 856) = MEMORY[0xB05AE8] * (float)(COERCE_FLOAT((sead::Random::getU32(v32) >> 9) | 0x3F800000) + -1.0);
@@ -217648,14 +217649,14 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (int (__fastcall ***)(_DWORD, int))ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, *(_DWORD *)(a1 + 4));
     if ( !v1 )
-      return nullptr;
+      return 0;
     if ( _cxa_guard_acquire_0(13087588) )
     {
       MEMORY[0xC7B360] = 12320920;
       _cxa_guard_release_0(13087588);
     }
     if ( !(**v1)(v1, 13087584) )
-      return nullptr;
+      return 0;
     return v1;
   }
 
@@ -217921,7 +217922,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v16[0] = *(float *)(a1 + 108);
     v16[1] = v12;
     mapPositionToScreen(v15, v16);
-    return BasicSoundActor2_play(v13, (int)"SE_VOC_CH_YS_YOSHI", v15, nullptr);
+    return BasicSoundActor2_play(v13, (int)"SE_VOC_CH_YS_YOSHI", v15, 0);
   }
 
 /* ============================================================================
@@ -218187,7 +218188,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v7[0] = *(float *)(a1 + 108);
       v7[1] = v2;
       mapPositionToScreen(v6, v7);
-      BasicSoundActor2_play(v3, (int)"SE_PLY_CH_YOSHI_HIT_ENEMY", v6, nullptr);
+      BasicSoundActor2_play(v3, (int)"SE_PLY_CH_YOSHI_HIT_ENEMY", v6, 0);
     }
     result = *(_DWORD *)(a1 + 80);
     v5 = 0x40000000;
@@ -218984,7 +218985,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = *(_DWORD *)(result + 6352);
       if ( v3 )
       {
-        v5 = nullptr;
+        v5 = 0;
         v6 = 0;
         v7 = 0;
         if ( v3 > 0 )
@@ -218996,7 +218997,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v6 > v3 - 1 )
           v5 += v8;
         v9 = v3 <= 0;
-        v10 = nullptr;
+        v10 = 0;
         if ( !v9 )
           v10 = (float *)&unk_60B05960;
         result += 6356;
@@ -219024,7 +219025,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = *(_DWORD *)(result + 6352);
     if ( !v14 )
       goto LABEL_28;
-    v15 = nullptr;
+    v15 = 0;
     v16 = 0;
     v7 = 0;
     if ( v14 > 0 )
@@ -219036,7 +219037,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v16 > v14 - 1 )
       v15 += v8;
     v9 = v14 <= 0;
-    v17 = nullptr;
+    v17 = 0;
     if ( !v9 )
       v17 = (float *)&unk_60B05980;
     result += 6356;
@@ -220166,7 +220167,7 @@ static inline unsigned int uxtb16(unsigned int x)
       mapPositionToScreen(v11, (float *)&v12);
       v8 = "SE_PLY_CH_YOSHI_KERU";
   LABEL_7:
-      BasicSoundActor2_play(v7, (int)v8, v11, nullptr);
+      BasicSoundActor2_play(v7, (int)v8, v11, 0);
       goto LABEL_8;
     }
     if ( v5 == 2 )
@@ -220373,20 +220374,20 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605DA1B4(_DWORD *a1)
   {
     _DWORD *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12628472;
     v2 = a1 + 1520;
     a1[1974] = 12325992;
-    v3 = (sead::IDisposer *)(a1 + 1974);
+    v3 = (struct sead_IDisposer *)(a1 + 1974);
     sub_60237560((int)(a1 + 1974));
     sead::IDisposer::~IDisposer(v3);
     a1[1948] = 12325992;
     sub_60237560((int)(a1 + 1948));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1948));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1863));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1787));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
     nullsub_407(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
@@ -225793,7 +225794,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v0 = *(Actor ***)(MEMORY[0xC7B400] + 27172);
     v1 = *(Actor ***)(MEMORY[0xC7B400] + 27180);
     if ( v0 == v1 )
-      return nullptr;
+      return 0;
     v2 = MEMORY[0xAF3180];
     v3 = MEMORY[0xAF317C];
     v4 = MEMORY[0xAF3178];
@@ -225816,7 +225817,7 @@ static inline unsigned int uxtb16(unsigned int x)
           break;
       }
       if ( v1 == ++v0 )
-        return nullptr;
+        return 0;
     }
     return v6;
   }
@@ -226997,12 +226998,12 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v4 )
       (*(void (__fastcall **)(int, int))(*(_DWORD *)v4 + 24))(v4, a1);
     v5 = 0;
-    v6 = nullptr;
+    v6 = 0;
     v7 = *(_DWORD *)(a1 + 6668);
     if ( v7 )
     {
       v8 = (float *)ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, v7);
-      v6 = nullptr;
+      v6 = 0;
       if ( v8 )
       {
         if ( _cxa_guard_acquire_0(13087588) )
@@ -227011,7 +227012,7 @@ static inline unsigned int uxtb16(unsigned int x)
           _cxa_guard_release_0(13087588);
         }
         if ( !(**(int (__fastcall ***)(float *, int))v8)(v8, 13087584) )
-          v8 = nullptr;
+          v8 = 0;
         v6 = v8;
       }
     }
@@ -227812,7 +227813,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *((float *)&v11 + 1) = *(float *)&v11;
       sub_602362F4(a1 + 7912, &v11);
       (*(void (__fastcall **)(int, unsigned __int64 *))(*(_DWORD *)a1 + 476))(a1, &v11);
-      result = sub_60237208((int32x4_t *)(a1 + 7896), (float *)&v11, nullptr, nullptr);
+      result = sub_60237208((int32x4_t *)(a1 + 7896), (float *)&v11, 0, 0);
       if ( !result )
       {
         result = sub_60237560(a1 + 7896);
@@ -227854,7 +227855,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = (int32x4_t *)(a1 + 7896);
     (*(void (__fastcall **)(int, unsigned __int64 *))(*(_DWORD *)a1 + 476))(a1, &v11);
     v10 = 0;
-    result = EffectWrapper_update(v9, 1120, (float *)&v11, nullptr, nullptr);
+    result = EffectWrapper_update(v9, 1120, (float *)&v11, 0, 0);
     if ( result == 1 )
     {
       if ( v3 )
@@ -228195,7 +228196,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (v11 & (unsigned __int16)(1 << v3)) != 0 )
         {
           v1 = *(float **)(v10 + 4 * v3);
-          v12 = v1 == nullptr;
+          v12 = v1 == 0;
         }
         if ( !v12 && (*(int (__fastcall **)(float *))(*(_DWORD *)v1 + 1452))(v1) == 1 )
         {
@@ -228648,7 +228649,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_605EB980(**(_DWORD **)(*(_DWORD *)(a1 + 6076) + 12));
       sub_605EAB48(a1 + 6064);
       *(_DWORD *)(a1 + 6920) = ((120
-                               * (unsigned __int64)(unsigned int)sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+                               * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
                              + 180;
       *(_DWORD *)(a1 + 8008) = 2;
       return 8008;
@@ -228753,7 +228754,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_605EAB48(a1 + 6064);
       }
       *(_DWORD *)(a1 + 6920) = ((120
-                               * (unsigned __int64)(unsigned int)sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+                               * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
                              + 120;
       *(_DWORD *)(a1 + 8008) = 3;
       return 8008;
@@ -228781,7 +228782,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 6920);
     if ( !*(_DWORD *)(a1 + 6920) || sub_605DA7CC(a1, *(_DWORD *)(a1 + 80)) == 1 )
     {
-      *v2 = ((120 * (unsigned __int64)(unsigned int)sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+      *v2 = ((120 * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
           + 120;
       *(_DWORD *)(a1 + 80) ^= 1u;
     }
@@ -228915,7 +228916,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_605EB980(**(_DWORD **)(*(_DWORD *)(a1 + 6076) + 12));
     sub_605EAB48(a1 + 6064);
     *(_DWORD *)(a1 + 6920) = ((120
-                             * (unsigned __int64)(unsigned int)sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C]
+                             * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C]
                                                                                                    + 1340))) >> 32)
                            + 180;
     *(_DWORD *)(a1 + 8008) = 2;
@@ -229010,7 +229011,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_605EB980(**(_DWORD **)(*(_DWORD *)(result + 6076) + 12));
       sub_605EAB48(v5 + 6064);
       *(_DWORD *)(v5 + 6920) = ((120
-                               * (unsigned __int64)(unsigned int)sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+                               * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
                              + 180;
       *(_DWORD *)(v5 + 8008) = 2;
       return sub_605D79D0(v5, 13310756, 1);
@@ -229189,7 +229190,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v17[0] = *(float *)(a1 + 108);
       v17[1] = v3;
       mapPositionToScreen(&v12, v17);
-      BasicSoundActor2_play(v4, (int)"SE_PLY_CH_YOSHI_EGG_BREAK", &v12, nullptr);
+      BasicSoundActor2_play(v4, (int)"SE_PLY_CH_YOSHI_EGG_BREAK", &v12, 0);
       ++*v2;
     }
     if ( *(_BYTE *)(a1 + 6272) )
@@ -229266,7 +229267,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[0] = *(float *)(a1 + 108);
     v9[1] = v5;
     mapPositionToScreen(v8, v9);
-    return BasicSoundActor2_play(v6, (int)"SE_OBJ_ITEM_APPEAR", v8, nullptr);
+    return BasicSoundActor2_play(v6, (int)"SE_OBJ_ITEM_APPEAR", v8, 0);
   }
 
 /* ============================================================================
@@ -229480,7 +229481,7 @@ static inline unsigned int uxtb16(unsigned int x)
       LightMask::update(a1 + 6132);
       *(_DWORD *)(a1 + 6268) = MEMORY[0xB05B5C];
     }
-    CollisionMgr_init(a1 + 648, a1, dword_60B05AA4, nullptr, nullptr);
+    CollisionMgr_init(a1 + 648, a1, dword_60B05AA4, 0, 0);
     if ( (unsigned __int8)v2 >> 4 )
     {
       v15 = 3;
@@ -229584,7 +229585,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v12[0] = *(float *)(a1 + 108) + *(float *)(a1 + 572);
       v12[1] = *(float *)(a1 + 112) + *(float *)(a1 + 576);
       v12[2] = *(float *)(a1 + 116) + *(float *)(a1 + 580);
-      LightSource_update1(a1 + 6172, 9, v12, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
+      LightSource_update1(a1 + 6172, 9, v12, 0, 0, 0, 0, 0, 0);
       LightSource_unkUpdate3(a1 + 6172);
     }
     if ( *(_BYTE *)(a1 + 6244) )
@@ -229774,7 +229775,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605E7670(int a1)
   {
     *(_DWORD *)a1 = 12629316;
-    LightSource::~LightSource((sead::IDisposer *)(a1 + 6172));
+    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6172));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -229789,7 +229790,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12629316;
-    LightSource::~LightSource((sead::IDisposer *)(a1 + 6172));
+    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6172));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -229806,7 +229807,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2C10;
-    Profile::Profile(13310792, 6186960, MEMORY[0xAF3420], (int)v1, nullptr, 2);
+    Profile::Profile(13310792, 6186960, MEMORY[0xAF3420], (int)v1, 0, 2);
     unk_60CB1B60 = 1065353216;
     unk_60CB1B64 = -1056964608;
     dword_60CB1B68 = 0;
@@ -229842,10 +229843,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_605E78D4
  * RVA 0x005e78d4   size 0x44   xrefs 0
  * ============================================================================ */
-  sead::IDisposer *__fastcall sub_605E78D4(sead::IDisposer *a1)
+  struct sead_IDisposer *__fastcall sub_605E78D4(struct sead_IDisposer *a1)
   {
     *(_DWORD *)a1 = 12629536;
-    if ( (sead::IDisposer *)MEMORY[0xCB1BE0] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCB1BE0] == a1 )
     {
       MEMORY[0xCB1BE0] = 0;
       MEMORY[0xCB1BE4] = 0;
@@ -229857,12 +229858,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * sub_605E7928
  * RVA 0x005e7928   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall sub_605E7928(sead::IDisposer *a1)
+  int __fastcall sub_605E7928(struct sead_IDisposer *a1)
   {
-    sead::IDisposer *v1; // r0
+    struct sead_IDisposer *v1; // r0
   
     *(_DWORD *)a1 = 12629536;
-    if ( (sead::IDisposer *)MEMORY[0xCB1BE0] == a1 )
+    if ( (struct sead_IDisposer *)MEMORY[0xCB1BE0] == a1 )
     {
       MEMORY[0xCB1BE0] = 0;
       MEMORY[0xCB1BE4] = 0;
@@ -230536,15 +230537,15 @@ static inline unsigned int uxtb16(unsigned int x)
       v48 = *(unsigned __int8 *)(MEMORY[0xC9A684] + 20);
       v58 = 0;
       v59 = 0;
-      v60 = nullptr;
+      v60 = 0;
       sub_608DEB0C(&v58, 12, &v61);
       v54 = 0;
       v55 = 0;
-      v56 = nullptr;
+      v56 = 0;
       sub_608DEB0C(&v54, 12, &v57);
       v50 = 0;
       v51 = 0;
-      v52 = nullptr;
+      v52 = 0;
       sub_608DEB0C(&v50, 12, &v53);
       v17 = *(_DWORD *)(a1 + 36);
       if ( v17 )
@@ -231624,7 +231625,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[73] = 2;
       v20 = 0;
       v21 = 0;
-      v22 = nullptr;
+      v22 = 0;
       sub_608DEB0C(&v20, 12, &v23);
       v20 = 0;
       v6 = a1[41];
@@ -232595,7 +232596,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v7; // r1
     int v8; // r0
-    sead::Random *v9; // r0
+    struct sead_Random *v9; // r0
   
     ModelWrapper_updateAnims(*(_DWORD *)(a1 + 12));
     v2 = *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 12) + 12) + 28);
@@ -232635,9 +232636,9 @@ static inline unsigned int uxtb16(unsigned int x)
         result = *(unsigned __int8 *)(v8 + 28);
         if ( (result & 0x24) != 0 )
         {
-          v9 = (sead::Random *)MEMORY[0xCCF4E4];
+          v9 = (struct sead_Random *)MEMORY[0xCCF4E4];
           if ( !*(_DWORD *)(a1 + 8) )
-            v9 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+            v9 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
           result = ((60 * (unsigned __int64)(unsigned int)sead::Random::getU32(v9)) >> 32) + 10;
           *(_DWORD *)(a1 + 96) = result;
         }
@@ -232823,13 +232824,13 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605EAB74(int a1, int a2)
   {
     int v4; // r3
-    sead::Random *v5; // r0
+    struct sead_Random *v5; // r0
     int result; // r0
   
     v4 = *(_DWORD *)(a1 + 8);
-    v5 = (sead::Random *)MEMORY[0xCCF4E4];
+    v5 = (struct sead_Random *)MEMORY[0xCCF4E4];
     if ( !v4 )
-      v5 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+      v5 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
     result = sead::Random::getU32(v5);
     if ( a2 != -1 )
       return sub_605EA46C(a1, a2);
@@ -232854,13 +232855,13 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605EAC4C(int a1, int a2)
   {
     int v4; // r3
-    sead::Random *v5; // r0
+    struct sead_Random *v5; // r0
     int result; // r0
   
     v4 = *(_DWORD *)(a1 + 8);
-    v5 = (sead::Random *)MEMORY[0xCCF4E4];
+    v5 = (struct sead_Random *)MEMORY[0xCCF4E4];
     if ( !v4 )
-      v5 = (sead::Random *)(MEMORY[0xC9CF0C] + 1340);
+      v5 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
     result = sead::Random::getU32(v5);
     if ( a2 != -1 )
       return sub_605EA46C(a1, a2);
@@ -233322,7 +233323,7 @@ static inline unsigned int uxtb16(unsigned int x)
                     if ( v25 != v20 )
                     {
                       v25 = (void (__fastcall *)(_DWORD *, int))v23[17];
-                      v27 = v25 == nullptr;
+                      v27 = v25 == 0;
                     }
                     if ( !v27 )
                       v25(v23, 2);
@@ -233782,7 +233783,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605EBE24(int a1)
   {
     *(_DWORD *)a1 = 12629936;
-    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6104));
+    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -233797,7 +233798,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12629936;
-    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6104));
+    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -234373,7 +234374,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12629936;
-    SolidOnTopCollider_dtor((sead::IDisposer *)(a1 + 6104));
+    SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -235431,20 +235432,20 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605EE2AC(_DWORD *a1)
   {
     _DWORD *v2; // r5
-    sead::IDisposer *v3; // r6
+    struct sead_IDisposer *v3; // r6
     int v4; // r0
   
     *a1 = 12628472;
     v2 = a1 + 1520;
     a1[1974] = 12325992;
-    v3 = (sead::IDisposer *)(a1 + 1974);
+    v3 = (struct sead_IDisposer *)(a1 + 1974);
     sub_60237560((int)(a1 + 1974));
     sead::IDisposer::~IDisposer(v3);
     a1[1948] = 12325992;
     sub_60237560((int)(a1 + 1948));
-    sead::IDisposer::~IDisposer((sead::IDisposer *)(a1 + 1948));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1863));
-    ActiveCollider_dtor((sead::IDisposer *)(a1 + 1787));
+    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
+    ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
     nullsub_407(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
@@ -235640,7 +235641,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5[0] = *(float *)(a1 + 108);
     v5[1] = v2 + -16.0;
     mapPositionToScreen(v4, v5);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOKAN_APPEAR", v4, nullptr);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOKAN_APPEAR", v4, 0);
   }
 
 /* ============================================================================
@@ -235936,7 +235937,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605EEF84(int a1)
   {
     *(_DWORD *)a1 = 12683148;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6144));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -235951,7 +235952,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12683148;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6144));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -236210,7 +236211,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5[0] = (float)(*(float *)(MEMORY[0xCC6484] + 112) + *(float *)(MEMORY[0xCC6484] + 104)) + -16.0;
     v5[1] = v1;
     mapPositionToScreen(v4, v5);
-    return BasicSoundActor2_play(v2, (int)"SE_OBJ_DOKAN_APPEAR", v4, nullptr);
+    return BasicSoundActor2_play(v2, (int)"SE_OBJ_DOKAN_APPEAR", v4, 0);
   }
 
 /* ============================================================================
@@ -236480,7 +236481,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12683148;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6144));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -236684,7 +236685,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5[0] = *(float *)(MEMORY[0xCC6484] + 112) + 16.0;
     v5[1] = v1;
     mapPositionToScreen(v4, v5);
-    return BasicSoundActor2_play(v2, (int)"SE_OBJ_DOKAN_APPEAR", v4, nullptr);
+    return BasicSoundActor2_play(v2, (int)"SE_OBJ_DOKAN_APPEAR", v4, 0);
   }
 
 /* ============================================================================
@@ -236954,7 +236955,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12683148;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6144));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -237160,7 +237161,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = *(float *)(a1 + 108);
     v6[1] = (float)(v3 - v2) + 16.0;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOKAN_APPEAR", v5, nullptr);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOKAN_APPEAR", v5, 0);
   }
 
 /* ============================================================================
@@ -237457,7 +237458,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12683148;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6144));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -237821,10 +237822,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r5
   
     v2 = a1 + 648;
-    CollisionMgr_setSensor(a1 + 648, nullptr, 3);
-    CollisionMgr_setSensor(v2, nullptr, 2);
-    CollisionMgr_setSensor(v2, nullptr, 0);
-    CollisionMgr_setSensor(v2, nullptr, 1);
+    CollisionMgr_setSensor(a1 + 648, 0, 3);
+    CollisionMgr_setSensor(v2, 0, 2);
+    CollisionMgr_setSensor(v2, 0, 0);
+    CollisionMgr_setSensor(v2, 0, 1);
     *(_BYTE *)(a1 + 7481) = 0;
     return 7481;
   }
@@ -238957,7 +238958,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r0
     int result; // r0
   
-    CollisionMgr_init(a1 + 648, a1, dword_60B05DEC, nullptr, flt_60B05DF8);
+    CollisionMgr_init(a1 + 648, a1, dword_60B05DEC, 0, flt_60B05DF8);
     v2 = *(_DWORD *)(a1 + 3200);
     v3 = v2 | 0x20000;
     *(_DWORD *)(a1 + 3200) = v2 | 0x20000;
@@ -239050,7 +239051,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    CollisionMgr_init((int)(a1 + 162), (int)a1, dword_60B05DEC, nullptr, flt_60B05DF8);
+    CollisionMgr_init((int)(a1 + 162), (int)a1, dword_60B05DEC, 0, flt_60B05DF8);
     a1[800] |= 0x40000000u;
     a1[794] |= 0x40000000u;
     a1[796] |= 0x40000000u;
@@ -239717,7 +239718,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v10 = v6;
       if ( v5 )
       {
-        v11 = v10 == nullptr;
+        v11 = v10 == 0;
         if ( v10 )
         {
           v8 = *(char *)(v5 + 84);
@@ -241562,7 +241563,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = *(int *)(a1 + 108);
     v7 = v2;
     mapPositionToScreen(v17, (float *)&v6);
-    BasicSoundActor2_play(v3, (int)"SE_OBJ_DDOOR_OPEN", v17, nullptr);
+    BasicSoundActor2_play(v3, (int)"SE_OBJ_DDOOR_OPEN", v17, 0);
     *(float *)&v6 = *(float *)(a1 + 108) + *(float *)(a1 + 572);
     v7 = *(float *)(a1 + 112) + *(float *)(a1 + 576);
     v8 = *(float *)(a1 + 116) + *(float *)(a1 + 580);
@@ -241765,7 +241766,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_OPEN", v5, nullptr);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_OPEN", v5, 0);
   }
 
 /* ============================================================================
@@ -241786,7 +241787,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_CLOSE", v5, nullptr);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_CLOSE", v5, 0);
   }
 
 /* ============================================================================
@@ -242073,7 +242074,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_BDOOR_OPEN", v5, nullptr);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_BDOOR_OPEN", v5, 0);
   }
 
 /* ============================================================================
@@ -242096,7 +242097,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7[0] = v3;
     v7[1] = v4;
     mapPositionToScreen(v6, v7);
-    return SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v2, (int)"SE_OBJ_BDOOR_MOVE", v1, v6, nullptr);
+    return SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v2, (int)"SE_OBJ_BDOOR_MOVE", v1, v6, 0);
   }
 
 /* ============================================================================
@@ -242263,30 +242264,30 @@ static inline unsigned int uxtb16(unsigned int x)
     LightSource_update2(
       (_DWORD *)a1 + 1594,
       (_DWORD *)a1 + 1585,
-      nullptr,
+      0,
       (_DWORD *)a1 + 36,
-      nullptr,
-      nullptr,
-      nullptr,
-      nullptr);
+      0,
+      0,
+      0,
+      0);
     LightSource_update2(
       (_DWORD *)a1 + 1612,
       (_DWORD *)a1 + 1588,
-      nullptr,
+      0,
       (_DWORD *)a1 + 36,
-      nullptr,
-      nullptr,
-      nullptr,
-      nullptr);
+      0,
+      0,
+      0,
+      0);
     LightSource_update2(
       (_DWORD *)a1 + 1630,
       (_DWORD *)a1 + 1591,
-      nullptr,
+      0,
       (_DWORD *)a1 + 36,
-      nullptr,
-      nullptr,
-      nullptr,
-      nullptr);
+      0,
+      0,
+      0,
+      0);
     return sub_605F82F4((int)a1);
   }
 
@@ -242412,15 +242413,15 @@ static inline unsigned int uxtb16(unsigned int x)
     *((float *)a1 + 1591) = flt_60CB24E8 + *((float *)a1 + 1591);
     v7 = a1 + 1594;
     *((float *)a1 + 1592) = flt_60CB24EC + *((float *)a1 + 1592);
-    LightSource_update1((int)(a1 + 1594), 55, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
+    LightSource_update1((int)(a1 + 1594), 55, 0, 0, 0, 0, 0, 0, 0);
     v8 = v1 + 1612;
-    LightSource_update1((int)(v1 + 1612), 55, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
+    LightSource_update1((int)(v1 + 1612), 55, 0, 0, 0, 0, 0, 0, 0);
     v9 = v1 + 1630;
-    LightSource_update1((int)(v1 + 1630), 56, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
+    LightSource_update1((int)(v1 + 1630), 56, 0, 0, 0, 0, 0, 0, 0);
     v1 += 36;
-    LightSource_update2(v7, v3, nullptr, v1, nullptr, nullptr, nullptr, nullptr);
-    LightSource_update2(v8, v2, nullptr, v1, nullptr, nullptr, nullptr, nullptr);
-    return LightSource_update2(v9, v4, nullptr, v1, nullptr, nullptr, nullptr, nullptr);
+    LightSource_update2(v7, v3, 0, v1, 0, 0, 0, 0);
+    LightSource_update2(v8, v2, 0, v1, 0, 0, 0, 0);
+    return LightSource_update2(v9, v4, 0, v1, 0, 0, 0, 0);
   }
 
 /* ============================================================================
@@ -242553,12 +242554,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_605FA0D0(_BYTE *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
   
     *(_DWORD *)a1 = 12637028;
-    v2 = (sead::IDisposer *)(a1 + 6376);
-    LightSource::~LightSource((sead::IDisposer *)(a1 + 6520));
-    LightSource::~LightSource((sead::IDisposer *)(a1 + 6448));
+    v2 = (struct sead_IDisposer *)(a1 + 6376);
+    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6520));
+    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6448));
     LightSource::~LightSource(v2);
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
@@ -242573,13 +242574,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605FA15C(_BYTE *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12637028;
-    v2 = (sead::IDisposer *)(a1 + 6376);
-    LightSource::~LightSource((sead::IDisposer *)(a1 + 6520));
-    LightSource::~LightSource((sead::IDisposer *)(a1 + 6448));
+    v2 = (struct sead_IDisposer *)(a1 + 6376);
+    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6520));
+    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6448));
     LightSource::~LightSource(v2);
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
@@ -242623,7 +242624,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7[0] = v3;
     v7[1] = v4;
     mapPositionToScreen(v6, v7);
-    return SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v2, (int)"SE_OBJ_KDOOR_MOVE", v1, v6, nullptr);
+    return SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v2, (int)"SE_OBJ_KDOOR_MOVE", v1, v6, 0);
   }
 
 /* ============================================================================
@@ -242677,13 +242678,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605FA3B0(_BYTE *a1)
   {
-    sead::IDisposer *v2; // r5
+    struct sead_IDisposer *v2; // r5
     int v3; // r0
   
     *(_DWORD *)a1 = 12637028;
-    v2 = (sead::IDisposer *)(a1 + 6376);
-    LightSource::~LightSource((sead::IDisposer *)(a1 + 6520));
-    LightSource::~LightSource((sead::IDisposer *)(a1 + 6448));
+    v2 = (struct sead_IDisposer *)(a1 + 6376);
+    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6520));
+    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6448));
     LightSource::~LightSource(v2);
     *(_DWORD *)a1 = 12462088;
     sub_602F36E0(a1 + 6152);
@@ -242884,7 +242885,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_OPEN", v5, nullptr);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_OPEN", v5, 0);
   }
 
 /* ============================================================================
@@ -242905,7 +242906,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_CLOSE", v5, nullptr);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_CLOSE", v5, 0);
   }
 
 /* ============================================================================
@@ -243174,7 +243175,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_OPEN", v5, nullptr);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_OPEN", v5, 0);
   }
 
 /* ============================================================================
@@ -243195,7 +243196,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_CLOSE", v5, nullptr);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_DOOR_CLOSE", v5, 0);
   }
 
 /* ============================================================================
@@ -243425,7 +243426,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[0] = v2;
     v6[1] = v3;
     mapPositionToScreen(v5, v6);
-    return BasicSoundActor2_play(v1, (int)"SE_OBJ_BDOOR_OPEN", v5, nullptr);
+    return BasicSoundActor2_play(v1, (int)"SE_OBJ_BDOOR_OPEN", v5, 0);
   }
 
 /* ============================================================================
@@ -243448,7 +243449,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7[0] = v3;
     v7[1] = v4;
     mapPositionToScreen(v6, v7);
-    return SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v2, (int)"SE_OBJ_BDOOR_MOVE", v1, v6, nullptr);
+    return SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v2, (int)"SE_OBJ_BDOOR_MOVE", v1, v6, 0);
   }
 
 /* ============================================================================
@@ -243553,7 +243554,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD3207;
-    return Profile::Profile(13313456, 4576572, MEMORY[0xAF3254], (int)v1, nullptr, 0);
+    return Profile::Profile(13313456, 4576572, MEMORY[0xAF3254], (int)v1, 0, 0);
   }
 
 /* ============================================================================
@@ -244766,7 +244767,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(13108176);
     }
     if ( !(*(int (__fastcall **)(_DWORD *, int))(*v1 + 8))(v1, 13108172) )
-      v1 = nullptr;
+      v1 = 0;
     ColliderMgr_removeRelated1(v2, v1);
     return 1;
   }
@@ -244795,7 +244796,7 @@ static inline unsigned int uxtb16(unsigned int x)
         _cxa_guard_release_0(13313688);
       }
       if ( !(**v1)(v1, 13313684) )
-        return nullptr;
+        return 0;
       return v1;
     }
     return (int (__fastcall ***)(_DWORD, int))v2;
@@ -244836,7 +244837,7 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605FDCA8(int a1)
   {
     *(_DWORD *)a1 = 12642096;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6168));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6168));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -244851,7 +244852,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12642096;
-    ShapedCollider_dtor((sead::IDisposer *)(a1 + 6168));
+    ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6168));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor::~StageActor((Actor *)a1);
@@ -245031,7 +245032,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v4 == v2 )
     {
   LABEL_4:
-      v5 = nullptr;
+      v5 = 0;
     }
     else
     {
@@ -246000,7 +246001,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     if ( !(*(int (__fastcall **)(_DWORD *, int))(*v1 + 8))(v1, 13108172) )
-      v1 = nullptr;
+      v1 = 0;
     ColliderMgr_removeRelated1(v2, v1);
     return 1;
   }
@@ -246106,7 +246107,7 @@ static inline unsigned int uxtb16(unsigned int x)
         _cxa_guard_release_0(13313688);
       }
       if ( !(**v1)(v1, 13313684) )
-        return nullptr;
+        return 0;
       return v1;
     }
     return (int (__fastcall ***)(_DWORD, int))v2;

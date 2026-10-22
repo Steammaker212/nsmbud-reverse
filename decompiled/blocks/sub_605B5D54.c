@@ -1,4 +1,22 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);
+
+/* ---- forward declarations for functions defined below ---- */
+float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);
 /* line: 0, address: 0x605b5d54 */ float *__fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5)
 /* line: 1 */ {
 /* line: 2 */   float v6; // r6

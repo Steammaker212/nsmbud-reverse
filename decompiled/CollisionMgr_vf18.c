@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall CollisionMgr_vf18(_BYTE *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall CollisionMgr_vf18(_BYTE *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall CollisionMgr_vf18(_BYTE *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall CollisionMgr_vf18(_BYTE *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall CollisionMgr_vf18(_BYTE *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall CollisionMgr_vf18(_BYTE *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall CollisionMgr_vf18(_BYTE *a1);
 /* line: 0, address: 0x6014bbc8 */ int __fastcall CollisionMgr_vf18(_BYTE *a1)
 /* line: 1 */ {
 /* line: 2 */   _BYTE *v1; // r4

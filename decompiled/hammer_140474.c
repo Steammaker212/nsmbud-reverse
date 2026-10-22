@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall sub_60140474(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall sub_60140474(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall sub_60140474(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall sub_60140474(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall sub_60140474(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall sub_60140474(StageActor *a1);
+
+/* ---- forward declarations for functions defined below ---- */
+void __fastcall sub_60140474(StageActor *a1);
 /* line: 0, address: 0x60140474 */ void __fastcall sub_60140474(StageActor *a1)
 /* line: 1 */ {
 /* line: 2, address: 0x60140490 */   *(_DWORD *)a1 = 12399284;

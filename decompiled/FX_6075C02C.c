@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6075C02C(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6075C02C(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6075C02C(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6075C02C(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6075C02C(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6075C02C(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_6075C02C(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);
 /* line: 0, address: 0x6075c02c */ int __fastcall sub_6075C02C(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10)
 /* line: 1 */ {
 /* line: 2 */   bool v14; // zf

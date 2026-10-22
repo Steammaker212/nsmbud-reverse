@@ -13,6 +13,7 @@
 
 #include "nsmbudx_types.h"
 #include "structs.h"
+#include "nsmbudx_data.h"
 
 #include "libs.h"
 

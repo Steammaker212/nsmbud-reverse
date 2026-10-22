@@ -132,6 +132,7 @@ def rewrite_prelude(extra_qualified):
         "",
         '#include "nsmbudx_types.h"',
         '#include "structs.h"',
+        '#include "nsmbudx_data.h"',
         "",
     ]
     # Only structs.h and libs.h are pulled in, and that is a measured choice, not a guess.

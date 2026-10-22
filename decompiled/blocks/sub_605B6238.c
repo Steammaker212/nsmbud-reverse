@@ -1,4 +1,25 @@
 #include "nsmbudx_prelude.h"
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_605B6238(int result);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_605B6238(int result);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_605B6238(int result);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_605B6238(int result);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_605B6238(int result);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_605B6238(int result);
+
+/* ---- forward declarations for functions defined below ---- */
+int __fastcall sub_605B6238(int result);
 /* line: 0, address: 0x605b6238 */ int __fastcall sub_605B6238(int result)
 /* line: 1 */ {
 /* line: 2, address: 0x605b6244 */   if ( *(_DWORD *)(result + 6856) == 7 )
