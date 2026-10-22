@@ -6685,7 +6685,7 @@ sub_608044F0__LABEL_87:
       MEMORY[0xCC6490] = 12746620;
       _cxa_guard_release_0(13395092);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC6490])(13395088, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC6490])(13395088, a2);
   }
 
 /* ============================================================================
@@ -6701,7 +6701,7 @@ sub_608044F0__LABEL_87:
       MEMORY[0xCC6498] = 12320932;
       _cxa_guard_release_0(13395100);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC6498])(13395096, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC6498])(13395096, a2);
   }
 
 /* ============================================================================
@@ -7079,7 +7079,7 @@ sub_608044F0__LABEL_87:
       MEMORY[0xCC64A8] = 12320932;
       _cxa_guard_release_0(13395116);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC64A8])(13395112, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC64A8])(13395112, a2);
   }
 
 /* ============================================================================
@@ -7179,7 +7179,7 @@ sub_608044F0__LABEL_87:
       MEMORY[0xCC64B8] = 12320932;
       _cxa_guard_release_0(13395132);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC64B8])(13395128, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC64B8])(13395128, a2);
   }
 
 /* ============================================================================
@@ -7385,7 +7385,7 @@ sub_608044F0__LABEL_87:
       MEMORY[0xCC6AEC] = 12320932;
       _cxa_guard_release_0(13396720);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC6AEC])(13396716, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC6AEC])(13396716, a2);
   }
 
 /* ============================================================================
@@ -23744,7 +23744,7 @@ sub_6080C744__LABEL_131:
       MEMORY[0xCC6BB4] = 12320932;
       _cxa_guard_release_0(13396920);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC6BB4])(13396916, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC6BB4])(13396916, a2);
   }
 
 /* ============================================================================
@@ -23760,7 +23760,7 @@ sub_6080C744__LABEL_131:
       MEMORY[0xCC6BCC] = 12755440;
       _cxa_guard_release_0(13396944);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC6BCC])(13396940, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC6BCC])(13396940, a2);
   }
 
 /* ============================================================================
@@ -23776,7 +23776,7 @@ sub_6080C744__LABEL_131:
       MEMORY[0xCC6BD4] = 12755452;
       _cxa_guard_release_0(13396952);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC6BD4])(13396948, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC6BD4])(13396948, a2);
   }
 
 /* ============================================================================
@@ -23792,7 +23792,7 @@ sub_6080C744__LABEL_131:
       MEMORY[0xCC6BDC] = 12320932;
       _cxa_guard_release_0(13396960);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC6BDC])(13396956, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC6BDC])(13396956, a2);
   }
 
 /* ============================================================================
@@ -24818,7 +24818,7 @@ sub_6080C744__LABEL_131:
       MEMORY[0xCC6C08] = 12755852;
       _cxa_guard_release_0(13397004);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC6C08])(13397000, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC6C08])(13397000, a2);
   }
 
 /* ============================================================================
@@ -24834,7 +24834,7 @@ sub_6080C744__LABEL_131:
       MEMORY[0xCC6C10] = 12755864;
       _cxa_guard_release_0(13397012);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC6C10])(13397008, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC6C10])(13397008, a2);
   }
 
 /* ============================================================================
@@ -24850,7 +24850,7 @@ sub_6080C744__LABEL_131:
       MEMORY[0xCC6C18] = 12320932;
       _cxa_guard_release_0(13397020);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xCC6C18])(13397016, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xCC6C18])(13397016, a2);
   }
 
 /* ============================================================================
@@ -196505,7 +196505,7 @@ sub_608DF448__LABEL_158:
       MEMORY[0xC9BB44] = 12320932;
       _cxa_guard_release_0(13220680);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC9BB44])(13220676, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC9BB44])(13220676, a2);
   }
 
 /* ============================================================================
@@ -223530,7 +223530,7 @@ sub_608DF448__LABEL_158:
       MEMORY[0xC9CD08] = 12561792;
       _cxa_guard_release_0(13225228);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC9CD08])(13225224, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC9CD08])(13225224, a2);
   }
 
 /* ============================================================================

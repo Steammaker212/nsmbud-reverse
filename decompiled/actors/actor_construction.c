@@ -12031,7 +12031,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC7B3A0] = 12320980;
       _cxa_guard_release_0(13087652);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC7B3A0])(13087648, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC7B3A0])(13087648, a2);
   }
 
 /* ============================================================================
@@ -17440,7 +17440,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC866E4] = 12321964;
       _cxa_guard_release_0(13133544);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC866E4])(13133540, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC866E4])(13133540, a2);
   }
 
 /* ============================================================================
@@ -22066,7 +22066,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC86B3C] = 12321964;
       _cxa_guard_release_0(13134656);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC86B3C])(13134652, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC86B3C])(13134652, a2);
   }
 
 /* ============================================================================
@@ -37042,7 +37042,7 @@ sub_6011CB70__LABEL_46:
       MEMORY[0xC8766C] = 12320992;
       _cxa_guard_release_0(13137520);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC8766C])(13137516, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC8766C])(13137516, a2);
   }
 
 /* ============================================================================
@@ -37127,7 +37127,7 @@ sub_6011CB70__LABEL_46:
       MEMORY[0xC8767C] = 12321964;
       _cxa_guard_release_0(13137536);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC8767C])(13137532, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC8767C])(13137532, a2);
   }
 
 /* ============================================================================
@@ -40570,7 +40570,7 @@ sub_6011CB70__LABEL_46:
       MEMORY[0xC87960] = 12320992;
       _cxa_guard_release_0(13138276);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC87960])(13138272, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC87960])(13138272, a2);
   }
 
 /* ============================================================================
@@ -42424,7 +42424,7 @@ sub_6011CB70__LABEL_46:
       MEMORY[0xC87BCC] = 12321964;
       _cxa_guard_release_0(13138896);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC87BCC])(13138892, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC87BCC])(13138892, a2);
   }
 
 /* ============================================================================
@@ -56882,7 +56882,7 @@ CollisionMgr_process_helper_14DEE4__LABEL_132:
       MEMORY[0xC881F8] = 12320932;
       _cxa_guard_release_0(13140476);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC881F8])(13140472, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC881F8])(13140472, a2);
   }
 
 /* ============================================================================
@@ -64488,7 +64488,7 @@ CollisionMgr_process_helper_14DEE4__LABEL_132:
       MEMORY[0xC88A5C] = 12404984;
       _cxa_guard_release_0(13142624);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC88A5C])(13142620, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC88A5C])(13142620, a2);
   }
 
 /* ============================================================================
@@ -64504,7 +64504,7 @@ CollisionMgr_process_helper_14DEE4__LABEL_132:
       MEMORY[0xC88A64] = 12404996;
       _cxa_guard_release_0(13142632);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC88A64])(13142628, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC88A64])(13142628, a2);
   }
 
 /* ============================================================================
@@ -64520,7 +64520,7 @@ CollisionMgr_process_helper_14DEE4__LABEL_132:
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC7B380])(13087616, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC7B380])(13087616, a2);
   }
 
 /* ============================================================================
@@ -74172,7 +74172,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
       MEMORY[0xC88A7C] = 12333424;
       _cxa_guard_release_0(13142656);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC88A7C])(13142652, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC88A7C])(13142652, a2);
   }
 
 /* ============================================================================
@@ -75302,7 +75302,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
       MEMORY[0xC88A9C] = 12405680;
       _cxa_guard_release_0(13142688);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC88A9C])(13142684, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC88A9C])(13142684, a2);
   }
 
 /* ============================================================================
@@ -75318,7 +75318,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
       MEMORY[0xC88A8C] = 12320920;
       _cxa_guard_release_0(13142672);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC88A8C])(13142668, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC88A8C])(13142668, a2);
   }
 
 /* ============================================================================
@@ -75334,7 +75334,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
       MEMORY[0xC88AB4] = 12405668;
       _cxa_guard_release_0(13142712);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC88AB4])(13142708, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC88AB4])(13142708, a2);
   }
 
 /* ============================================================================
@@ -83851,7 +83851,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
       MEMORY[0xC88A94] = 12405668;
       _cxa_guard_release_0(13142680);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC88A94])(13142676, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC88A94])(13142676, a2);
   }
 
 /* ============================================================================
@@ -85350,7 +85350,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
       MEMORY[0xC88AA4] = 12405668;
       _cxa_guard_release_0(13142696);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC88AA4])(13142692, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC88AA4])(13142692, a2);
   }
 
 /* ============================================================================
@@ -99714,7 +99714,7 @@ sub_60181FC0__LABEL_147:
       MEMORY[0xC89678] = 12408080;
       _cxa_guard_release_0(13145724);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC89678])(13145720, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC89678])(13145720, a2);
   }
 
 /* ============================================================================
@@ -99730,7 +99730,7 @@ sub_60181FC0__LABEL_147:
       MEMORY[0xC89680] = 12320932;
       _cxa_guard_release_0(13145732);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC89680])(13145728, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC89680])(13145728, a2);
   }
 
 /* ============================================================================
@@ -102014,7 +102014,7 @@ sub_60181FC0__LABEL_147:
       MEMORY[0xC89A48] = 12406280;
       _cxa_guard_release_0(13146700);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC89A48])(13146696, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC89A48])(13146696, a2);
   }
 
 /* ============================================================================
@@ -115834,7 +115834,7 @@ sub_6019F708__LABEL_138:
       MEMORY[0xC8A258] = 12406472;
       _cxa_guard_release_0(13148764);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC8A258])(13148760, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC8A258])(13148760, a2);
   }
 
 /* ============================================================================
@@ -142819,7 +142819,7 @@ sub_601CA03C__LABEL_158:
       MEMORY[0xC8AE98] = 12406280;
       _cxa_guard_release_0(13151900);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC8AE98])(13151896, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC8AE98])(13151896, a2);
   }
 
 /* ============================================================================
@@ -170328,7 +170328,7 @@ sub_601D2928__LABEL_216:
       MEMORY[0xC8C200] = 12420040;
       _cxa_guard_release_0(13156868);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC8C200])(13156864, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC8C200])(13156864, a2);
   }
 
 /* ============================================================================
@@ -170344,7 +170344,7 @@ sub_601D2928__LABEL_216:
       MEMORY[0xC8C208] = 12320932;
       _cxa_guard_release_0(13156876);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC8C208])(13156872, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC8C208])(13156872, a2);
   }
 
 /* ============================================================================
@@ -170590,6 +170590,6 @@ sub_601D2928__LABEL_216:
       MEMORY[0xC8C228] = 12420276;
       _cxa_guard_release_0(13156908);
     }
-    return ((int (__fastcall *)(int, int))*MEMORY[0xC8C228])(13156904, a2);
+    return ((int (__fastcall *)(int, int))MEMORY[0xC8C228])(13156904, a2);
   }
 
