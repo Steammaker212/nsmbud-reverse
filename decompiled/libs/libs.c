@@ -5,6 +5,27 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+struct sead_IDisposer *__fastcall sead_IDisposer_ctor(struct sead_IDisposer *a1);
+struct sead_IDisposer *__fastcall sead__IDisposer__IDisposer(struct sead_IDisposer *a1, struct sead_Heap *a2, unsigned int a3);
+struct nn_atk_SoundActor *__fastcall MovingSoundActor_ctor(struct nn_atk_SoundActor *a1, int a2, int a3);
+struct sead_IDisposer *__fastcall sead__CriticalSection__CriticalSection(struct sead_IDisposer *a1);
+struct sead_CriticalSection *__fastcall sead__MethodTreeNode__lock_(int a1);
+struct sead_CriticalSection *__fastcall sead__MethodTreeNode__unlock_(int a1);
+struct sead_IDisposer *__fastcall sub_60902104(struct sead_IDisposer *a1);
+struct sead_IDisposer *__fastcall sub_608FC0A4(struct sead_Heap *a1);
+struct nn_util_BinaryFileHeader *__fastcall sub_60998E80(struct nn_util_BinaryFileHeader *a1);
+struct sead_IDisposer *__fastcall sub_609084A8(struct sead_IDisposer *a1);
+struct sead_CriticalSection *__fastcall sub_608EEE2C(int a1);
+struct sead_CriticalSection *__fastcall sub_608EEE24(int a1);
+struct sead_CriticalSection *__fastcall sead__MethodTreeNode__pushBackChild(int a1, _DWORD *a2);
+struct sead_IDisposer *__fastcall sub_6090B274(struct sead_IDisposer *a1);
+struct sead_IDisposer *__fastcall sub_608F96EC(_DWORD *a1);
+struct sead_IDisposer *__fastcall sub_6090805C(struct sead_IDisposer *a1);
+struct sead_IDisposer *__fastcall sub_6098DA18(int *a1, int a2, int a3, int a4);
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
 

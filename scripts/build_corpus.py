@@ -149,6 +149,17 @@ def main():
     for tag, target in (("1q/9", CLEAN), ("1r/9", PERFN), ("1s/9", os.path.join(REPO, "decompiled"))):
         run("%s NEON width" % tag,
             [sys.executable, "scripts/fix_neon_width.py", target, "--write"])
+    # A handful of functions whose declared arity disagrees with most call sites. Padding the CALL is
+    # narrower than redefining the function, and only names verified by hand are listed.
+    # DISABLED. fix_known_arity.py padded call sites to the declared arity, but the reconstruction
+    # returned a fragment whose extent was computed against the ORIGINAL text while being applied as a
+    # sub() result -- so `)` landed at the end of the file instead of at the call. It corrupted
+    # ActorMgr_create.c into `...(MEMORY[0xCCEE90], 0)MEMORY[0xCCEE90]);` and padded 1,542 sites in
+    # five source files. The parse count never moved, so nothing was gained and real damage was done.
+    # The one-argument-vs-two-argument split for sead__HeapMgr__setCurrentHeap_ (89 against 15) is
+    # recorded in scripts/fix_known_arity.py for whoever resumes; it needs a call-site reconstruction
+    # that measures offsets in the SUBSTITUTED text, not the original.
+    print("== 1t-1v/9 known arity: SKIPPED (script corrupts call sites; see comment)")
 
     # 2. assemble corpus
     run("2/7 build corpus", [sys.executable, "scripts/make_decompiled_corpus.py"])

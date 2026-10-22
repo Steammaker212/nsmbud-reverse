@@ -20,7 +20,37 @@
 #include "libs.h"
 
 /* additional opaque qualified names used by the corpus */
+struct nn_audio_PerformanceInfo;
+struct nn_detail;
+struct nn_diag;
+struct nn_fontll_ScalableFontEngine;
+struct nn_fs;
+struct nn_g3d_ShapeAnimObj;
+struct nn_hid;
+struct nn_hid_VibrationNode;
+struct nn_hid_VibrationNodeConnection;
+struct nn_lmem;
+struct nn_mem_StandardAllocator;
+struct nn_mii;
+struct nn_mii_Database;
+struct nn_mii_detail_BufferAllocator;
+struct nn_mii_detail_CalculateSizeAndAlignment;
+struct nn_oe;
+struct nn_os;
+struct nn_prepo_PlayReport;
+struct nn_time;
+struct nn_util;
+struct nn_util_BinaryFileHeader;
+struct nn_util_RelocationTable;
+struct nn_vi;
+struct sead_CalculateTask;
 struct sead_CriticalSection;
+struct sead_FileDeviceMgr;
+struct sead_ListNode;
+struct sead_MethodTreeNode;
 struct sead_Random;
+struct sead_TaskBase;
+struct sead_TaskMgr;
+struct sead_ThreadUtil;
 
 #endif /* NSMBUDX_PRELUDE_H */

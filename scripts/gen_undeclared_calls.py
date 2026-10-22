@@ -50,11 +50,35 @@ TABLE = re.compile(r"\b([A-Za-z_]\w*_(?:typeInfos|rotations|Table|table))\b")
 # `sub_X` used as a CAST TARGET rather than called: ((void (*)(...))sub_60106C90)(...).
 # A prototype does not give that expression an address; an address-pinned array does not either, so
 # these are declared as function designators -- see the note emitted in the header.
-FN_PTR = re.compile(r"\)\s*\(\s*(sub_[0-9A-Fa-f]{6,8})\s*\)")
+# A function used as a CAST TARGET rather than called directly:
+#     ((void (*)(void))CollisionMgr_dtor)();
+#     ((void (__fastcall *)(int, int *, _DWORD, _DWORD *))EffectData_create)(476, &v7, 0, a1 + 1613);
+# The cast supplies the signature, so the declaration only needs to provide the ADDRESS -- an
+# unprototyped declaration does that and claims no arity.
+#
+# The pattern must allow the CLOSING PAREN OF THE CAST EXPRESSION between the two: the text is
+# `... )  )  NAME )  (`, so `\)\s*\(\s*NAME\)` cannot match it. Anchoring on `))NAME)(` and
+# `))NAME)` covers the two observed shapes directly.
+FN_PTR = re.compile(r"\)\)\s*([A-Za-z_]\w{2,})\s*\)")
 # IDA leaks ARM condition-flag pseudo-registers into the C text: `_ZF = v3 == 0;` then `if (!_ZF)`.
 # These are not variables of the program, they are artefacts of how the condition codes were read, so a
 # local declaration is the honest fix -- the value is genuinely used as a boolean at that point.
 FLAGREG = re.compile(r"\b(_[ZNCFV]{1,2})\s*=(?!=)")
+# Names that must NEVER be declared as functions. Broadening FN_PTR to any identifier swept in C
+# keywords and typedef names, producing `int __fastcall float();` and similar -- which invalidated the
+# entire corpus, 447 files -> 0. A function declaration may only be emitted for an identifier that is
+# not already a type keyword and not one of the typedefs this header set provides.
+C_KEYWORDS = {
+    "float", "double", "int", "char", "short", "long", "void", "unsigned", "signed", "const",
+    "volatile", "static", "extern", "struct", "union", "enum", "return", "if", "else", "for",
+    "while", "do", "switch", "case", "default", "break", "continue", "goto", "sizeof", "typedef",
+}
+C_TYPENAMES = {
+    "uintptr_t", "intptr_t", "uint8_t", "uint16_t", "uint32_t", "uint64_t",
+    "int8_t", "int16_t", "int32_t", "int64_t", "size_t", "ssize_t", "ptrdiff_t",
+    "bool", "_DWORD", "_WORD", "_BYTE", "_QWORD", "float32x2_t", "float32x4_t",
+    "int32x2_t", "int32x4_t", "uint32x4_t", "uint8x16_t", "int8x16_t",
+}
 # NEON float min/max helpers. IDA emits `vmin_f32(a, b)` and then reads a member off the RESULT:
 #     v1.n64_u64[0] = vmax_f32(v1, v2).n64_u64[0];
 #     v9 = vmin_f32(v4, v5).n64_u32[0];
@@ -122,7 +146,15 @@ def main(argv):
             for m in TABLE.finditer(text):
                 used["table"][m.group(1)] = used["table"].get(m.group(1), 0) + 1
             for m in FN_PTR.finditer(text):
-                used["fnptr"][m.group(1)] = used["fnptr"].get(m.group(1), 0) + 1
+                nm = m.group(1)
+                # The broadened pattern also catches TYPE NAMES in casts such as `(float)x`, producing
+                # `int __fastcall float();` -- which invalidated every file in the corpus (447 -> 0).
+                # A declared function name is an identifier that is NOT a type keyword, and the
+                # `sub_`/`_` prefixed forms are IDA-generated; those are the only shapes that are safe
+                # to declare without inspecting what they really are.
+                if nm in C_KEYWORDS or nm in C_TYPENAMES:
+                    continue
+                used["fnptr"][nm] = used["fnptr"].get(nm, 0) + 1
             for m in FLAGREG.finditer(text):
                 used["flags"][m.group(1)] = used["flags"].get(m.group(1), 0) + 1
             for m in NEON_BINOP.finditer(text):

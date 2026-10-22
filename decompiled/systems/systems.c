@@ -23,6 +23,10 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _BYTE *__fastcall sub_60502210(int a1, _DWORD *a2, int a3);
 _DWORD *__fastcall sub_604B63E0(_DWORD *result, int a2, unsigned int a3);
 _DWORD *__fastcall sub_60498EB0(_DWORD *a1);

@@ -5,6 +5,15 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+struct sead_IDisposer *__fastcall sub_603E4258(struct sead_IDisposer *a1);
+struct sead_IDisposer *__fastcall sub_60441A6C(struct sead_IDisposer *a1);
+struct sead_ListNode *__fastcall sub_60413E70(_DWORD *a1);
+struct nn_util_BinaryFileHeader *__fastcall sub_6041A338(int *a1, int a2);
+struct sead_IDisposer *__fastcall sub_60443614(struct sead_IDisposer *a1);
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
 
