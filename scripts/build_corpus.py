@@ -115,6 +115,12 @@ def main():
     run("1g/9 dedupe function blocks (extra tree)",
         [sys.executable, "scripts/dedupe_function_blocks.py",
          os.path.join(PERFN, "decompiled"), "--write"])
+    # forward declarations belong to the SOURCE as well: the region files are recopied from
+    # decompiled_clean on every build, so applying them only to the repo copy means re-inserting ~980
+    # prototypes every single run and never converging.
+    run("1g2/9 forward declarations (clean tree)",
+        [sys.executable, "scripts/add_forward_decls.py", CLEAN,
+         "--headers", os.path.join(REPO, "decompiled", "include"), "--write"])
     # Multi-argument allocation calls (`__operator_new(48, 0, 4)`) collide with the database prototype
     # for the one-argument symbol. They are the aligned/placement overload, so they get their own
     # name and their own declaration. Must run after fix_qualified_names has produced the base name.
@@ -151,6 +157,17 @@ def main():
     run("2b3/9 dedupe function blocks",
         [sys.executable, "scripts/dedupe_function_blocks.py",
          os.path.join(REPO, "decompiled"), "--write"])
+    # 2b4. in an aggregated region file the functions appear in address order, but the call graph does
+    #      not respect that order: libs.c calls sub_608002B0 at line 74 and defines it at line 82, so
+    #      C99 makes the call an implicit `int f()` that the later definition contradicts
+    #      ("conflicting types"). This inserts a prototype ONLY for names actually called above their
+    #      definition -- 6,541 across 9 files -- unlike hoist_prototypes.py's 33,474 blanket insert,
+    #      which was measured neutral and which also produces prototypes for functions that a
+    #      single-function file is right then defining.
+    run("2b4/9 forward declarations",
+        [sys.executable, "scripts/add_forward_decls.py",
+         os.path.join(REPO, "decompiled"),
+         "--headers", os.path.join(REPO, "decompiled", "include"), "--write"])
     # 2c. the data-label JSON that gen_data_header.py consumes listed only 233 labels, but the
     #     corpus references 23,704 distinct dword_/unk_/byte_ names. The 23,471 that were never
     #     exported are simply undefined when the header is included -- that is the whole

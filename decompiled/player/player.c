@@ -2,6 +2,36 @@
 
 #include <math.h>
 
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+int sub_607878A0();
+int *__fastcall sub_60787B8C(int a1, int a2, int a3);
+int sub_6078AFBC();
+float *__fastcall sub_60794238(float *result);
+char *__fastcall sub_6079B254(_DWORD *a1);
+char *__fastcall sub_607B70FC(_DWORD *a1);
+_DWORD *__fastcall Player_ReleaseCarryableEnemy(_DWORD *a1, int a2);
+_DWORD *__fastcall sub_607B5350(_DWORD *result, int a2, int a3);
+_DWORD *__fastcall sub_607A2894(_DWORD *a1, _DWORD *a2);
+float *__fastcall sub_607B1154(int a1);
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+int sub_607878A0();
+int *__fastcall sub_60787B8C(int a1, int a2, int a3);
+int sub_6078AFBC();
+float *__fastcall sub_60794238(float *result);
+char *__fastcall sub_6079B254(_DWORD *a1);
+char *__fastcall sub_607B70FC(_DWORD *a1);
+_DWORD *__fastcall Player_ReleaseCarryableEnemy(_DWORD *a1, int a2);
+_DWORD *__fastcall sub_607B5350(_DWORD *result, int a2, int a3);
+_DWORD *__fastcall sub_607A2894(_DWORD *a1, _DWORD *a2);
+float *__fastcall sub_607B1154(int a1);
+
 /* ---- helpers replacing Hex-Rays `__asm` escapes (see scripts/fix_asm_escapes.py) ----
  * Each is the exact C equivalent of one NEON/VFP instruction the decompiler had no
  * idiom for. Kept small and named so the intent is visible at the call site. */

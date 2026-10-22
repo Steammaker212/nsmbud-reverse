@@ -2,6 +2,136 @@
 
 #include <math.h>
 
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+_DWORD *__fastcall sub_6021F408(int a1, int a2, int a3);
+_DWORD *__fastcall sub_6020AB88(int a1, int a2);
+int sub_6020AE98();
+_DWORD *__fastcall sub_6020ADB8(int a1, int a2);
+char *__fastcall sub_60212CFC(int a1, int a2);
+_BYTE *__fastcall sub_6021F00C(int a1, int a2, int a3);
+_BYTE *__fastcall sub_6021FDA8(int a1, int a2);
+bool sub_6021FC98();
+unsigned __int16 *__fastcall sub_60225C88(int a1, unsigned __int8 **a2);
+_DWORD *__fastcall sub_6022EB7C(int a1, int a2, _DWORD *a3, int a4);
+_DWORD *__fastcall sub_6022EC58(int a1, int a2, _DWORD *a3, int a4);
+_DWORD *__fastcall sub_6022F5D4(int a1, int a2, _DWORD *a3, int a4, int a5);
+_DWORD *__fastcall sub_60225BD0(_DWORD *a1, int a2);
+int **__fastcall sub_602276B8(_DWORD *a1, _DWORD *a2);
+char *__fastcall sub_6022ECC0(int a1);
+_DWORD *__fastcall sub_6023B02C(_DWORD *result);
+_DWORD *__fastcall sub_6023A5CC(_DWORD *a1);
+float *__fastcall sub_6023EF4C(int a1);
+_DWORD *__fastcall sub_60243B98(int a1);
+_DWORD *__fastcall sub_60249794(int **a1);
+int Enemy__vf14C();
+_DWORD *__fastcall sub_602A8564(_DWORD *a1, int a2);
+_DWORD *__fastcall sub_602A40A0(_DWORD *a1, int a2);
+_BYTE *__fastcall sub_602A33AC(_BYTE *result);
+_DWORD *__fastcall GiantWiggler_ctor(_DWORD *a1);
+void Enemy__collisionEnemy();
+_DWORD *__fastcall sub_60261C7C(int a1, int a2, int a3, int a4);
+int *__fastcall sub_60261E6C(int a1);
+_BYTE *__fastcall sub_602628B4(_DWORD *a1);
+void Enemy__endState_DieFall();
+_DWORD *__fastcall Enemy__executeState_DieFall(int a1);
+void Enemy__vf218();
+_DWORD *__fastcall Enemy__vf214(_DWORD *result);
+void Enemy__vf23C();
+_DWORD *__fastcall Enemy__vf238(_DWORD *result);
+_DWORD *__fastcall Enemy__executeState_DieFumi(int a1);
+void Enemy__vfD4();
+void Enemy__vfD8();
+float *__fastcall sub_6028D5D4(int a1);
+bool sub_60299268();
+_DWORD *__fastcall sub_602A99C0(_DWORD *result);
+unsigned __int8 *__fastcall sub_602F428C(unsigned __int8 *result);
+int *__fastcall sub_602B0A24(int a1);
+_DWORD *__fastcall sub_602B83E8(int a1, int a2);
+_DWORD *__fastcall sub_602BB188(int a1);
+_DWORD *__fastcall sub_602BCB10(int a1);
+_DWORD *__fastcall sub_602CB994(_DWORD *result, int a2);
+float *__fastcall sub_602CB320(int *a1);
+float *__fastcall sub_602CB558(float *a1);
+_BYTE *__fastcall HammerBros_createHammer(_DWORD *a1);
+_DWORD *__fastcall sub_602CED1C(int a1);
+char *__fastcall sub_602D7200(int a1);
+int *__fastcall sub_602DBA9C(int a1);
+_BYTE *__fastcall sub_602E1558(int a1);
+float *__fastcall sub_602E3CEC(float *result);
+_BYTE *__fastcall sub_602F43A0(_BYTE *result);
+_DWORD *__fastcall sub_602F4580(_DWORD *result);
+_DWORD *__fastcall sub_602EF4E4(int a1);
+_DWORD **__fastcall sub_602F2A24(_DWORD **result, int a2, int a3, int a4, int a5);
+int sub_602FCF24();
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+_DWORD *__fastcall sub_6021F408(int a1, int a2, int a3);
+_DWORD *__fastcall sub_6020AB88(int a1, int a2);
+int sub_6020AE98();
+_DWORD *__fastcall sub_6020ADB8(int a1, int a2);
+char *__fastcall sub_60212CFC(int a1, int a2);
+_BYTE *__fastcall sub_6021F00C(int a1, int a2, int a3);
+_BYTE *__fastcall sub_6021FDA8(int a1, int a2);
+bool sub_6021FC98();
+unsigned __int16 *__fastcall sub_60225C88(int a1, unsigned __int8 **a2);
+_DWORD *__fastcall sub_6022EB7C(int a1, int a2, _DWORD *a3, int a4);
+_DWORD *__fastcall sub_6022EC58(int a1, int a2, _DWORD *a3, int a4);
+_DWORD *__fastcall sub_6022F5D4(int a1, int a2, _DWORD *a3, int a4, int a5);
+_DWORD *__fastcall sub_60225BD0(_DWORD *a1, int a2);
+int **__fastcall sub_602276B8(_DWORD *a1, _DWORD *a2);
+char *__fastcall sub_6022ECC0(int a1);
+_DWORD *__fastcall sub_6023B02C(_DWORD *result);
+_DWORD *__fastcall sub_6023A5CC(_DWORD *a1);
+float *__fastcall sub_6023EF4C(int a1);
+_DWORD *__fastcall sub_60243B98(int a1);
+_DWORD *__fastcall sub_60249794(int **a1);
+int Enemy__vf14C();
+_DWORD *__fastcall sub_602A8564(_DWORD *a1, int a2);
+_DWORD *__fastcall sub_602A40A0(_DWORD *a1, int a2);
+_BYTE *__fastcall sub_602A33AC(_BYTE *result);
+_DWORD *__fastcall GiantWiggler_ctor(_DWORD *a1);
+void Enemy__collisionEnemy();
+_DWORD *__fastcall sub_60261C7C(int a1, int a2, int a3, int a4);
+int *__fastcall sub_60261E6C(int a1);
+_BYTE *__fastcall sub_602628B4(_DWORD *a1);
+void Enemy__endState_DieFall();
+_DWORD *__fastcall Enemy__executeState_DieFall(int a1);
+void Enemy__vf218();
+_DWORD *__fastcall Enemy__vf214(_DWORD *result);
+void Enemy__vf23C();
+_DWORD *__fastcall Enemy__vf238(_DWORD *result);
+_DWORD *__fastcall Enemy__executeState_DieFumi(int a1);
+void Enemy__vfD4();
+void Enemy__vfD8();
+float *__fastcall sub_6028D5D4(int a1);
+bool sub_60299268();
+_DWORD *__fastcall sub_602A99C0(_DWORD *result);
+unsigned __int8 *__fastcall sub_602F428C(unsigned __int8 *result);
+int *__fastcall sub_602B0A24(int a1);
+_DWORD *__fastcall sub_602B83E8(int a1, int a2);
+_DWORD *__fastcall sub_602BB188(int a1);
+_DWORD *__fastcall sub_602BCB10(int a1);
+_DWORD *__fastcall sub_602CB994(_DWORD *result, int a2);
+float *__fastcall sub_602CB320(int *a1);
+float *__fastcall sub_602CB558(float *a1);
+_BYTE *__fastcall HammerBros_createHammer(_DWORD *a1);
+_DWORD *__fastcall sub_602CED1C(int a1);
+char *__fastcall sub_602D7200(int a1);
+int *__fastcall sub_602DBA9C(int a1);
+_BYTE *__fastcall sub_602E1558(int a1);
+float *__fastcall sub_602E3CEC(float *result);
+_BYTE *__fastcall sub_602F43A0(_BYTE *result);
+_DWORD *__fastcall sub_602F4580(_DWORD *result);
+_DWORD *__fastcall sub_602EF4E4(int a1);
+_DWORD **__fastcall sub_602F2A24(_DWORD **result, int a2, int a3, int a4, int a5);
+int sub_602FCF24();
+
 /* ---- helpers replacing Hex-Rays `__asm` escapes (see scripts/fix_asm_escapes.py) ----
  * Each is the exact C equivalent of one NEON/VFP instruction the decompiler had no
  * idiom for. Kept small and named so the intent is visible at the call site. */

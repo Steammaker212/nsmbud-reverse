@@ -1,5 +1,47 @@
 #include "nsmbudx_prelude.h"
 
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+_DWORD *__fastcall sub_604551B4(int a1);
+_DWORD *__fastcall sub_60459270(_DWORD *result);
+_BYTE *__fastcall sub_60455400(int a1);
+_DWORD *__fastcall sub_604564D4(_DWORD *result);
+_DWORD *__fastcall sub_604534DC(_DWORD *result, int *a2, int *a3, _WORD *a4, unsigned int a5);
+_WORD *__fastcall sub_6045648C(_WORD *result, __int16 a2, __int16 a3, int a4, __int16 a5, __int16 a6);
+int sub_60466BC4();
+_DWORD *__fastcall sub_6046135C(_DWORD *a1);
+_DWORD *sub_6046EAFC();
+_DWORD *__fastcall sub_6047D934(_DWORD *result, int *a2, _WORD *a3, int a4);
+_DWORD *__fastcall sub_60472DBC(int a1, _DWORD *a2, _DWORD *a3);
+_DWORD *__fastcall sub_60479C44(_DWORD *a1, int a2);
+_DWORD *__fastcall sub_60473758(int a1, _DWORD *a2, _DWORD *a3);
+_DWORD *__fastcall sub_60476A60(_DWORD *result, int a2, int a3, int a4);
+_DWORD *MenuLayoutTable_init_helper();
+int sub_60477558();
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+_DWORD *__fastcall sub_604551B4(int a1);
+_DWORD *__fastcall sub_60459270(_DWORD *result);
+_BYTE *__fastcall sub_60455400(int a1);
+_DWORD *__fastcall sub_604564D4(_DWORD *result);
+_DWORD *__fastcall sub_604534DC(_DWORD *result, int *a2, int *a3, _WORD *a4, unsigned int a5);
+_WORD *__fastcall sub_6045648C(_WORD *result, __int16 a2, __int16 a3, int a4, __int16 a5, __int16 a6);
+int sub_60466BC4();
+_DWORD *__fastcall sub_6046135C(_DWORD *a1);
+_DWORD *sub_6046EAFC();
+_DWORD *__fastcall sub_6047D934(_DWORD *result, int *a2, _WORD *a3, int a4);
+_DWORD *__fastcall sub_60472DBC(int a1, _DWORD *a2, _DWORD *a3);
+_DWORD *__fastcall sub_60479C44(_DWORD *a1, int a2);
+_DWORD *__fastcall sub_60473758(int a1, _DWORD *a2, _DWORD *a3);
+_DWORD *__fastcall sub_60476A60(_DWORD *result, int a2, int a3, int a4);
+_DWORD *MenuLayoutTable_init_helper();
+int sub_60477558();
+
 
 /* ---- helpers replacing Hex-Rays `__asm` escapes (see scripts/fix_asm_escapes.py) ----
  * Each is the exact C equivalent of one NEON/VFP instruction the decompiler had no
