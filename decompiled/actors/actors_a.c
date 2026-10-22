@@ -4887,7 +4887,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           v23 = (int)(a1 + 82);
           v32 = 12405644;
-          sub_601A02B0(MEMORY[0xC89E00], a1 + 82, 0, 0, (int)&v32);
+          Object_copyPositionFromQuery(MEMORY[0xC89E00], a1 + 82, 0, 0, (int)&v32);
         }
   LABEL_31:
         v26 = a1[67];
@@ -8991,7 +8991,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 436) = 3;
     v28 = 12321336;
     v29 = "PEN008";
-    sub_601A02B0(MEMORY[0xC89E00], v31, 3, 0, (int)&v28);
+    Object_copyPositionFromQuery(MEMORY[0xC89E00], v31, 3, 0, (int)&v28);
     v32 = v32 + -20.0;
     v2 = sub_608336A8(*(_DWORD *)(a1 + 436));
     *(_DWORD *)(a1 + 180) = v2;
@@ -12579,7 +12579,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v5[0] = 12321336;
         v5[1] = "K276";
-        sub_601A02B0(MEMORY[0xC89E00], v6, 6, 0, (int)v5);
+        Object_copyPositionFromQuery(MEMORY[0xC89E00], v6, 6, 0, (int)v5);
         SoundActor_playByIdWithPosition(MEMORY[0xC8B13C], 199, v6);
       }
       *(_DWORD *)(a1 + 452) = 25;
@@ -12648,7 +12648,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v6[0] = 12321336;
         v6[1] = "K276";
-        sub_601A02B0(MEMORY[0xC89E00], v7, 6, 0, (int)v6);
+        Object_copyPositionFromQuery(MEMORY[0xC89E00], v7, 6, 0, (int)v6);
         SoundActor_playByIdWithPosition(MEMORY[0xC8B13C], 199, v7);
       }
       *(_DWORD *)(a1 + 452) = 40;
@@ -13214,7 +13214,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v4[0] = 12321336;
         v4[1] = "K276";
-        sub_601A02B0(MEMORY[0xC89E00], v5, 6, 0, (int)v4);
+        Object_copyPositionFromQuery(MEMORY[0xC89E00], v5, 6, 0, (int)v4);
         return SoundActor_playByIdWithPosition(MEMORY[0xC8B13C], 145, v5);
       }
     }
@@ -18383,7 +18383,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       v14 = v6;
   LABEL_33:
-      sub_601A02B0(v13, v12, v11, v14, (int)v32);
+      Object_copyPositionFromQuery(v13, v12, v11, v14, (int)v32);
       goto LABEL_34;
     }
     if ( v7 == 4 )
@@ -18423,7 +18423,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       _cxa_guard_release_0(&unk_60C8D420);
     }
     v7 = 6;
-    sub_601A02B0(MEMORY[0xC89E00], (_DWORD *)(a1 + 628), 6, 0, (int)&dword_60C8D444);
+    Object_copyPositionFromQuery(MEMORY[0xC89E00], (_DWORD *)(a1 + 628), 6, 0, (int)&dword_60C8D444);
   LABEL_34:
     v15 = (float *)(a1 + 1264);
     v16 = 0;
@@ -18738,7 +18738,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       dword_60C8D468 = (int)"W1M0";
       _cxa_guard_release_0(&unk_60C8D430);
     }
-    sub_601A02B0(MEMORY[0xC89E00], (_DWORD *)(a1 + 988), 0, 0, (int)&off_60C8D464);
+    Object_copyPositionFromQuery(MEMORY[0xC89E00], (_DWORD *)(a1 + 988), 0, 0, (int)&off_60C8D464);
     *(_DWORD *)(a1 + 628) = *(_DWORD *)(a1 + 988);
     *(_DWORD *)(a1 + 632) = *(_DWORD *)(a1 + 992);
     *(_DWORD *)(a1 + 636) = *(_DWORD *)(a1 + 996);
@@ -33333,7 +33333,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = result + 456;
       if ( *(_BYTE *)(result + 4072) )
       {
-        sub_6091ADF4(*(_DWORD *)(v4 + 28), *(_DWORD *)(a2 + 40));
+        Object_resolveSlotFromGlobal(*(_DWORD *)(v4 + 28), *(_DWORD *)(a2 + 40));
         sub_6091AE0C(*(_DWORD *)(v4 + 60), *(_DWORD *)(a2 + 40));
         nullsub_119(*(_DWORD *)(v4 + 28), *(_DWORD *)(a2 + 40));
         nullsub_120(*(_DWORD *)(v4 + 60), *(_DWORD *)(a2 + 40));
@@ -39832,7 +39832,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v3 )
       v4 = 0x4000000;
     v23 = v4;
-    if ( sub_6083246C((_DWORD *)(a1 + 160), (int *)&unk_60C8DB10 + v3 + 1, &v23) == 1 )
+    if ( FixedPoint_compareWithSlack((_DWORD *)(a1 + 160), (int *)&unk_60C8DB10 + v3 + 1, &v23) == 1 )
     {
       *v2 = 0;
     }
@@ -39990,7 +39990,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v9 )
       v10 = 0x4000000;
     v19 = v10;
-    if ( sub_6083246C((_DWORD *)(a1 + 160), (int *)&unk_60C8DB10 + v9 + 1, &v19) == 1 )
+    if ( FixedPoint_compareWithSlack((_DWORD *)(a1 + 160), (int *)&unk_60C8DB10 + v9 + 1, &v19) == 1 )
     {
       *v8 = 0;
     }
@@ -40068,7 +40068,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !v3 )
         v4 = 0x4000000;
       v18 = v4;
-      if ( sub_6083246C((_DWORD *)(a1 + 160), (int *)&unk_60C8DB10 + v3 + 1, &v18) == 1 )
+      if ( FixedPoint_compareWithSlack((_DWORD *)(a1 + 160), (int *)&unk_60C8DB10 + v3 + 1, &v18) == 1 )
       {
         *v2 = 0;
       }
@@ -40309,7 +40309,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !v34 )
         v35 = 0x4000000;
       v43 = v35;
-      if ( sub_6083246C((_DWORD *)(a1 + 160), (int *)&unk_60C8DB10 + v34 + 1, &v43) == 1 )
+      if ( FixedPoint_compareWithSlack((_DWORD *)(a1 + 160), (int *)&unk_60C8DB10 + v34 + 1, &v43) == 1 )
       {
         *v33 = 0;
   LABEL_35:
@@ -40454,7 +40454,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !v11 )
         v12 = 0x4000000;
       v22 = v12;
-      if ( sub_6083246C((_DWORD *)(a1 + 160), (int *)&unk_60C8DB10 + v11 + 1, &v22) == 1 )
+      if ( FixedPoint_compareWithSlack((_DWORD *)(a1 + 160), (int *)&unk_60C8DB10 + v11 + 1, &v22) == 1 )
         *(_BYTE *)(a1 + 12105) = 0;
     }
     if ( !*(_WORD *)(a1 + 6276) )
@@ -41528,7 +41528,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     char v26; // [sp+26h] [bp-2h]
   
     v4 = 0;
-    if ( !sub_602A588C(a1) )
+    if ( !Object_isActive(a1) )
     {
       CurrentState = StateMgr::getCurrentState(a1 + 6084);
       v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -42236,7 +42236,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !v15 )
         v16 = 0x4000000;
       v19 = v16;
-      return (v13 & 0xFFFFFFFD | (2 * (sub_6083246C(a1 + 160, (char *)&unk_60C8DB10 + 4 * v15 + 4, &v19) & 1))) == 3;
+      return (v13 & 0xFFFFFFFD
+            | (2 * (FixedPoint_compareWithSlack(a1 + 160, (char *)&unk_60C8DB10 + 4 * v15 + 4, &v19) & 1))) == 3;
     }
   }
 
@@ -44139,7 +44140,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     if ( *(_BYTE *)(a1 + 6518) )
     {
-      if ( !*(_BYTE *)(a1 + 6313) && sub_608FBB8C(*(unsigned __int16 *)(MEMORY[0xCC436C] + 66)) <= 0 )
+      if ( !*(_BYTE *)(a1 + 6313) && BitCount32(*(unsigned __int16 *)(MEMORY[0xCC436C] + 66)) <= 0 )
         goto LABEL_12;
       v4 = *(char *)(a1 + 6324);
       if ( (unsigned __int8)v4 != 255 )
@@ -44452,7 +44453,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v36 != -8000.0 )
         v35 = (float)(*(float *)(a1 + 108) + 8.0) < v36;
       v37 = *(unsigned __int8 *)(MEMORY[0xCC436C] + 156);
-      v38 = sub_608FBB8C(*(unsigned __int16 *)(MEMORY[0xCC436C] + 66));
+      v38 = BitCount32(*(unsigned __int16 *)(MEMORY[0xCC436C] + 66));
       v39 = 0;
       v40 = v35 && v37 == 0 && v38 > 0;
       v41 = *(_BYTE *)(a1 + 6324);
@@ -46985,7 +46986,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     bool v8; // zf
   
     v2 = 0;
-    if ( sub_608FBB8C(*(unsigned __int16 *)(MEMORY[0xCC436C] + 66)) >= 1 )
+    if ( BitCount32(*(unsigned __int16 *)(MEMORY[0xCC436C] + 66)) >= 1 )
     {
       v3 = *(char *)(a1 + 6324);
       if ( (unsigned __int8)v3 == 255 )
@@ -48640,7 +48641,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10[2] = 0;
     Effect_spawnType21(a1, v10);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     sub_602A6024(a1, v8, *(_BYTE *)(v7 + 84), -1);
     return 1;
   }
@@ -48664,7 +48665,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10[2] = 0;
     Effect_spawnType21(a1, v10);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     sub_602A6024(a1, v8, *(_BYTE *)(v7 + 84), -1);
     return 1;
   }
@@ -48693,7 +48694,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     mapPositionToScreen(v14, &v11);
     sub_60813BDC(v6, "SE_OBJ_BALLOON_BREAK", v14, 1, 0);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     v9 = *(_DWORD *)(v7 + 112);
     v11 = *(float *)(v7 + 108);
     v12 = v9;
@@ -48758,7 +48759,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12[2] = 0;
     Effect_spawnType21(a1, v12);
     v8 = *(_DWORD *)(a3 + 64);
-    v9 = sub_6000ADDC(a1, v8);
+    v9 = Object_isBehindWrapped(a1, v8);
     v10 = *(char *)(v8 + 84);
     if ( _cxa_guard_acquire_0(13087612) )
     {
@@ -48789,7 +48790,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v9[3]; // [sp+4h] [bp-Ch] BYREF
   
     v3 = *(_DWORD *)(a3 + 64);
-    v5 = sub_6000ADDC(a1, v3);
+    v5 = Object_isBehindWrapped(a1, v3);
     v6 = *(_BYTE *)(v3 + 84);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 368))(a1);
     v7 = *(_DWORD *)(v3 + 112);
@@ -48830,7 +48831,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10[2] = 0;
     Effect_spawnType21(a1, v10);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     sub_602A6024(a1, v8, *(_BYTE *)(v7 + 84), -1);
     return 1;
   }
@@ -48870,7 +48871,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15 = 0;
     Effect_spawnType21(a1, &v13);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     v9 = *(_DWORD *)(a1 + 112);
     v10 = *(_BYTE *)(v7 + 84);
     v11 = MEMORY[0xC7F530];
@@ -48896,7 +48897,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v9; // r3
   
     v4 = 0;
-    if ( !sub_602A588C(a1) )
+    if ( !Object_isActive(a1) )
     {
       CurrentState = StateMgr::getCurrentState((int)(a1 + 1521));
       v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -50180,7 +50181,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     char v10; // zf
   
     v6 = *(_DWORD **)(a2 + 64);
-    v7 = sub_6000ADDC(a1, *(_DWORD *)(a3 + 64));
+    v7 = Object_isBehindWrapped(a1, *(_DWORD *)(a3 + 64));
     if ( _cxa_guard_acquire_0(13163844) )
     {
       MEMORY[0xC8DD40] = 12427792;
@@ -50209,7 +50210,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     char v7; // zf
   
     v3 = *(_DWORD **)(a2 + 64);
-    v4 = sub_6000ADDC(a1, *(_DWORD *)(a3 + 64));
+    v4 = Object_isBehindWrapped(a1, *(_DWORD *)(a3 + 64));
     if ( _cxa_guard_acquire_0(13163844) )
     {
       MEMORY[0xC8DD40] = 12427792;
@@ -54059,7 +54060,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v6 != (*(int (**)(void))(MEMORY[0xC8DF34] + 8))() )
     {
       v7 = *(_DWORD *)(a3 + 64);
-      v8 = sub_6000ADDC((int)a1, v7);
+      v8 = Object_isBehindWrapped((int)a1, v7);
       v9 = *(char *)(v7 + 84);
       (*(void (__fastcall **)(int *))(*a1 + 368))(a1);
       if ( (unsigned __int8)v9 != 255 )
@@ -56032,9 +56033,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v11[3] = v12;
       v11[4] = v13;
       v11[5] = v8;
-      v11[7] = sub_6014C4A4(a1 + 648);
+      v11[7] = Player_getActiveSubObject(a1 + 648);
       v14 = v11 + 2;
-      v15 = sub_6014C4A4(a1 + 648);
+      v15 = Player_getActiveSubObject(a1 + 648);
       if ( sub_6014C57C(a1 + 648, v15) )
       {
         v16 = *(_DWORD *)(a1 + 80);
@@ -56560,8 +56561,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                               (float)((float)((float)(v10 - v12) * (float)(v10 - v12))
                                     + (float)((float)(v9 - v13) * (float)(v9 - v13)))
                             + (float)((float)(v11 - v11) * (float)(v11 - v11)));
-    *(_DWORD *)(a1 + 6592) = sub_6014C4A4(a1 + 648);
-    v16 = sub_6014C4A4(a1 + 648);
+    *(_DWORD *)(a1 + 6592) = Player_getActiveSubObject(a1 + 648);
+    v16 = Player_getActiveSubObject(a1 + 648);
     if ( sub_6014C57C(a1 + 648, v16) )
     {
       v17 = *(_DWORD *)(a1 + 80);
@@ -60317,7 +60318,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (int)(a1 + 1521);
     StateMgr::execute(a1 + 1521);
     v3 = a1 + 1591;
-    if ( (a1[1591] & 0xA) == 0 && !sub_602A588C(a1) && !sub_600025B8((int)a1) )
+    if ( (a1[1591] & 0xA) == 0 && !Object_isActive(a1) && !sub_600025B8((int)a1) )
     {
       if ( sub_60003AE0((int)a1) == 1 )
       {
@@ -60377,7 +60378,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( Child_getU8IfOwnerMatches((int)(a1 + 1655)) == 1 )
         sub_602360C0((int)(a1 + 1655));
     }
-    else if ( (*(_WORD *)v3 & 0xC) == 4 && !sub_602A588C(a1) )
+    else if ( (*(_WORD *)v3 & 0xC) == 4 && !Object_isActive(a1) )
     {
       v11 = *(_DWORD *)a1[1588];
       v12 = *(int (__fastcall **)(int, float *))(*(_DWORD *)v11 + 84);
@@ -60734,7 +60735,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v22 = *(_DWORD *)(a3 + 64);
             if ( v22 )
             {
-              if ( a1[20] != sub_6000ADDC((int)a1, v22) )
+              if ( a1[20] != Object_isBehindWrapped((int)a1, v22) )
               {
                 v12 = *(int (__fastcall **)(_DWORD *, int))(*a1 + 192);
                 v13 = 13164876;
@@ -61369,7 +61370,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v15; // [sp+Ch] [bp-Ch]
     float v16[2]; // [sp+10h] [bp-8h] BYREF
   
-    result = sub_602A588C(a1);
+    result = Object_isActive(a1);
     if ( !result )
     {
       CurrentState = StateMgr::getCurrentState(a1 + 6084);
@@ -62542,7 +62543,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v19; // r5
   
     v5 = 0;
-    if ( !sub_602A588C(a1) )
+    if ( !Object_isActive(a1) )
     {
       CurrentState = StateMgr::getCurrentState(a1 + 6084);
       v7 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -62626,7 +62627,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v6; // r6
   
     v2 = 0;
-    if ( !sub_602A588C(a1) )
+    if ( !Object_isActive(a1) )
     {
       CurrentState = StateMgr::getCurrentState(a1 + 6084);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -64729,7 +64730,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v7 = 0;
     }
-    v8 = sub_6000ADDC((int)a1, v7);
+    v8 = Object_isBehindWrapped((int)a1, v7);
     result = Enemy::processCollision(a1, a2, a3, 0);
     switch ( result )
     {
@@ -64959,7 +64960,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = (**(int (__fastcall ***)(int, int))v4)(v4, 13087608) ^ 1;
     else
       v5 = 1;
-    v6 = sub_6000ADDC((int)a1, v4);
+    v6 = Object_isBehindWrapped((int)a1, v4);
     (*(void (__fastcall **)(int *, int))(*a1 + 416))(a1, v4 + 108);
     (*(void (__fastcall **)(int *))(*a1 + 368))(a1);
     if ( !v5 )
@@ -65060,7 +65061,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v13[3]; // [sp+4h] [bp-Ch] BYREF
   
     v3 = *(_DWORD *)(a3 + 64);
-    v6 = sub_6000ADDC(a1, v3);
+    v6 = Object_isBehindWrapped(a1, v3);
     v7 = *(_DWORD *)(a2 + 88);
     v8 = *(char *)(v3 + 84);
     v13[0] = *(_DWORD *)(a2 + 84);
@@ -72703,7 +72704,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(unsigned __int8 *)(a1 + 84) != v4 )
       sub_600009FC(a1);
     *(_BYTE *)(a1 + 84) = v4;
-    result = sub_6000ADDC(a1, a2);
+    result = Object_isBehindWrapped(a1, a2);
     *(_DWORD *)(a1 + 80) = result;
     return result;
   }
@@ -72963,7 +72964,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = (*(_BYTE *)(a3 + 153) & 1) == 0;
     if ( !v8 || !*(_BYTE *)(v6 + 533) && (*(_BYTE *)(v6 + 568) & 0x80) == 0 )
       return Enemy::collisionThrowableObject(a1, a2, a3);
-    v10 = sub_6000ADDC(a1, *(_DWORD *)(a3 + 64));
+    v10 = Object_isBehindWrapped(a1, *(_DWORD *)(a3 + 64));
     v24 = -1;
     v11 = sub_600005D4(a1, (int *)&v24);
     if ( v11 )
@@ -73334,7 +73335,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (*(_BYTE *)(a3 + 1235) & 0x20) == 0
         && (*(_BYTE *)(a3 + 6900) & 1) != 0
         && (v8 = (*(int (__fastcall **)(int))(*(_DWORD *)a3 + 80))(a3), (v9 = v8) != 0)
-        && (v10 = sub_6014C4A4(v8), sub_6014C57C(v9, v10))
+        && (v10 = Player_getActiveSubObject(v8), sub_6014C57C(v9, v10))
         && (v11 = sub_6014C508(v9, *(_DWORD *)(a3 + 80)), v11 < 0) )
       {
         v15 = *(float *)((((unsigned int)v11 >> 20) & 0xFF0) + 0xB3A484)
@@ -73468,7 +73469,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _BYTE *v6; // r0
   
     v2 = 0;
-    if ( !sub_602A588C(a1) )
+    if ( !Object_isActive(a1) )
     {
       CurrentState = StateMgr::getCurrentState(a1 + 6084);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -73990,7 +73991,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 6320) = v14;
     v8 = (float *)(a1 + 6324);
     *(float *)(a1 + 6324) = v15 + 16.0;
-    if ( !sub_602A588C(a1) )
+    if ( !Object_isActive(a1) )
     {
       EffectSlot_startEffectInstance(a1 + 6420, 625, (int)v12, 1);
       LightSource_update1(a1 + 6348, 25, a1 + 6316, 0, 0, 0, 0, 0, 0);
@@ -74047,7 +74048,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = sub_60274A5C(a1);
     v3 = 1;
     if ( !v2 )
-      v3 = sub_602A588C(a1);
+      v3 = Object_isActive(a1);
     if ( *(_BYTE *)(a1 + 6568) )
     {
       if ( *(_DWORD *)(a1 + 6556) && v2 )
@@ -100561,7 +100562,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v5; // r6
     int result; // r0
   
-    if ( sub_602A588C(a1) )
+    if ( Object_isActive(a1) )
       return sub_605D477C(a2, 0);
     CurrentState = StateMgr::getCurrentState(a1 + 6084);
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -100583,7 +100584,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v5; // r6
     int result; // r0
   
-    if ( sub_602A588C(a1) )
+    if ( Object_isActive(a1) )
       return sub_605D477C(a2, 0);
     CurrentState = StateMgr::getCurrentState(a1 + 6084);
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -100604,7 +100605,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int CurrentState; // r0
     int v5; // r6
   
-    if ( sub_602A588C(a1) )
+    if ( Object_isActive(a1) )
       return sub_605D477C(a2, 0);
     CurrentState = StateMgr::getCurrentState(a1 + 6084);
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -100842,7 +100843,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v5 = (*(int (__fastcall **)(int))(*(_DWORD *)v4 + 8))(v4),
           v5 != (*(int (**)(void))(MEMORY[0xC908C0] + 8))()) )
     {
-      return sub_602A588C(v1) != 1;
+      return Object_isActive(v1) != 1;
     }
     else
     {
@@ -101762,7 +101763,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_602A588C
+ * Object_isActive
  * RVA 0x002a588c   size 0x28   xrefs 64
  * ============================================================================ */
   int __fastcall sub_602A588C(int a1)
@@ -101820,7 +101821,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           || (result = *(unsigned __int8 *)(a1 + 6226), !*(_BYTE *)(a1 + 6226)) )
         {
           (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
-          v7 = sub_6000ADDC(a1, a2);
+          v7 = Object_isBehindWrapped(a1, a2);
           v8 = *(_BYTE *)(a2 + 84);
           if ( ((unsigned int)&unk_60C907F4 & ~(1613388128 << v9) & 1) == 0 )
           {
@@ -101877,7 +101878,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _BOOL4 v12; // [sp+18h] [bp-8h]
     char v13; // [sp+1Ch] [bp-4h]
   
-    v4 = sub_6000ADDC(a1, a2);
+    v4 = Object_isBehindWrapped(a1, a2);
     v5 = *(_BYTE *)(a2 + 84);
     if ( ((unsigned int)&unk_60C907F4 & ~(1613388568 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C907F4) )
     {
@@ -101947,7 +101948,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v23 = 0;
     Effect_spawnType21(a1, &v21);
     v8 = *(_DWORD *)(a3 + 64);
-    v9 = sub_6000ADDC(a1, v8);
+    v9 = Object_isBehindWrapped(a1, v8);
     v10 = *(_BYTE *)(v8 + 84);
     if ( _cxa_guard_acquire_0(13087612) )
     {
@@ -102091,7 +102092,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     char v22; // [sp+1Ch] [bp-4h]
   
     v3 = *(_DWORD *)(a3 + 64);
-    v5 = sub_6000ADDC((int)a1, v3);
+    v5 = Object_isBehindWrapped((int)a1, v3);
     v6 = *(_BYTE *)(v3 + 84);
     (*(void (__fastcall **)(int *))(*a1 + 368))(a1);
     v7 = *(_DWORD *)(v3 + 112);
@@ -102149,7 +102150,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v21[2]; // [sp+20h] [bp-8h] BYREF
   
     v3 = *(_DWORD *)(a3 + 64);
-    v5 = sub_6000ADDC(a1, v3);
+    v5 = Object_isBehindWrapped(a1, v3);
     v6 = *(_BYTE *)(v3 + 84);
     v7 = *(_DWORD *)(a1 + 112);
     v8 = MEMORY[0xC7F530];
@@ -102233,7 +102234,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     char v22; // [sp+1Ch] [bp-4h]
   
     v3 = *(_DWORD *)(a3 + 64);
-    v5 = sub_6000ADDC((int)a1, v3);
+    v5 = Object_isBehindWrapped((int)a1, v3);
     v6 = *(_DWORD *)(v3 + 112);
     v7 = *(_BYTE *)(v3 + 84);
     v8 = *(void (__fastcall **)(int *, int *))(*a1 + 416);
@@ -102302,7 +102303,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = v8;
     mapPositionToScreen(v21, (float *)&v13);
     BasicSoundActor1_playSound(v9, "SE_EMY_YOSHI_HPDP", v21, 0);
-    v10 = sub_6000ADDC((int)a1, v3);
+    v10 = Object_isBehindWrapped((int)a1, v3);
     v11 = *(_BYTE *)(v3 + 84);
     v16 = 0;
     v15 = 0;
@@ -102329,7 +102330,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _BOOL4 v9; // [sp+18h] [bp-8h]
     char v10; // [sp+1Ch] [bp-4h]
   
-    v4 = sub_6000ADDC(a1, a2);
+    v4 = Object_isBehindWrapped(a1, a2);
     v5 = *(_BYTE *)(a2 + 84);
     memset(v7, 0, 16);
     v7[4] = 13174580;
@@ -102380,7 +102381,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = 0;
     Effect_spawnType21(a1, &v16);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     v9 = *(_BYTE *)(v7 + 84);
     SE_EMY_KAME_HIT_ref(v7, *(char *)(v7 + 1314), *(_DWORD *)(a1 + 6292) == 2);
     v10 = sub_602855F4(v7);
@@ -102451,7 +102452,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v20 = 0;
     Effect_spawnType21((int)a1, &v18);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC((int)a1, v7);
+    v8 = Object_isBehindWrapped((int)a1, v7);
     v9 = *(unsigned __int8 *)(v7 + 84);
     v10 = v8;
     if ( v9 > 3 )
@@ -102648,7 +102649,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = 0;
     Effect_spawnType21(a1, &v23);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     v9 = *(_BYTE *)(v7 + 84);
     (*(void (__fastcall **)(float *))(*(_DWORD *)a1 + 364))(a1);
     v15[0] = a1[27] + a1[143];
@@ -102717,7 +102718,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v17 = 0;
     Effect_spawnType21(a1, &v15);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     v9 = *(_BYTE *)(v7 + 84);
     SE_EMY_KAME_HIT_ref(v7, *(_DWORD *)(v7 + 564), *(_DWORD *)(a1 + 6292) == 2);
     sub_60000A18(v7);
@@ -102795,7 +102796,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _BOOL4 v14; // [sp+18h] [bp-8h]
     char v15; // [sp+1Ch] [bp-4h]
   
-    v8 = sub_6000ADDC(a1, a2);
+    v8 = Object_isBehindWrapped(a1, a2);
     v9 = *(_BYTE *)(a2 + 84);
     v10 = a3[1];
     v12[0] = *a3;
@@ -103087,7 +103088,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = 0;
     Effect_spawnType21(a1, &v19);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     v10 = *(char *)(v7 + 84);
     v11 = -1;
     v12 = v10;
@@ -103808,7 +103809,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( (**(int (__fastcall ***)(int, int))v2)(v2, 13087788) != 1 )
       return 0;
-    if ( sub_602A588C(v2) )
+    if ( Object_isActive(v2) )
       return 0;
     CurrentState = StateMgr::getCurrentState(v2 + 6084);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -103929,7 +103930,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v14 != sub_6014B69C(v9) )
           goto LABEL_11;
       }
-      v12 = sub_6014C4A4(v9);
+      v12 = Player_getActiveSubObject(v9);
       v13 = sub_6014C57C(v9, v12);
       result = 0;
       if ( !v13 )
@@ -107469,7 +107470,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( v3 )
         v3 = (int)v1;
     }
-    if ( !sub_602A588C(v3) )
+    if ( !Object_isActive(v3) )
     {
       CurrentState = StateMgr::getCurrentState(v3 + 6084);
       v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -108147,7 +108148,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v11[2]; // [sp+10h] [bp-8h] BYREF
   
     v2 = 0;
-    if ( !sub_602A588C(a1) )
+    if ( !Object_isActive(a1) )
     {
       CurrentState = StateMgr::getCurrentState(a1 + 6084);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -110634,7 +110635,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14[2] = 0;
     Effect_spawnType21(a1, v14);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     v9 = *(char *)(v7 + 84);
     v10 = v8;
     if ( v9 <= 3 )
@@ -111466,7 +111467,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return 0;
     v4 = *(_DWORD *)(a2 + 64);
     v5 = 0;
-    if ( !sub_602A588C(v2) )
+    if ( !Object_isActive(v2) )
     {
       CurrentState = StateMgr::getCurrentState(v4 + 6084);
       v7 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -113849,7 +113850,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v8[2]; // [sp+0h] [bp-8h] BYREF
   
     v6 = *(_DWORD *)(a3 + 64);
-    sub_6000ADDC(v6, v6);
+    Object_isBehindWrapped(v6, v6);
     result = Enemy::processCollision((float *)a1, a2, a3, 0);
     switch ( result )
     {
@@ -114607,7 +114608,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     LODWORD(v8) = -1073741824 * dword_60AF1FF8[*(_DWORD *)(a1 + 80)];
     v10 = *(_DWORD *)(a1 + 6340);
-    sub_6083246C((_DWORD *)(a1 + 6336), (int *)&v8, &v10);
+    FixedPoint_compareWithSlack((_DWORD *)(a1 + 6336), (int *)&v8, &v10);
     v5 = *(_DWORD *)(a1 + 6336);
     *(_DWORD *)(a1 + 6596) = v5;
     if ( v5 >= 0 )
@@ -114626,7 +114627,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_BYTE *)(a1 + 7008) = 1;
   LABEL_8:
     v8 = *(float *)(a1 + 6340);
-    result = sub_6083246C((_DWORD *)(a1 + 164), (int *)(a1 + 6316), (int *)&v8);
+    result = FixedPoint_compareWithSlack((_DWORD *)(a1 + 164), (int *)(a1 + 6316), (int *)&v8);
     if ( result == 1 )
     {
       if ( *(unsigned __int8 *)(a1 + 6306) <= (unsigned int)*(unsigned __int8 *)(a1 + 6307) )
@@ -118234,7 +118235,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v17[3]; // [sp+24h] [bp-Ch] BYREF
   
     v3 = *(_BYTE **)(a3 + 64);
-    v6 = sub_6000ADDC(a1, (int)v3);
+    v6 = Object_isBehindWrapped(a1, (int)v3);
     v7 = *(_DWORD *)(a2 + 88);
     v8 = v3[84];
     v17[0] = *(_DWORD *)(a2 + 84);
@@ -119443,7 +119444,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_602C4680(int a1, int a2, int a3)
   {
     Enemy::vf16C(a1);
-    *(_DWORD *)(a1 + 6336) = sub_6000ADDC(a1, *(_DWORD *)(a3 + 64));
+    *(_DWORD *)(a1 + 6336) = Object_isBehindWrapped(a1, *(_DWORD *)(a3 + 64));
     *(_BYTE *)(a1 + 6328) = 1;
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13178340);
     return 1;
@@ -122037,7 +122038,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v12[2] = 0;
       Effect_spawnType21(a1, v12);
       v8 = *(_DWORD *)(a3 + 64);
-      v9 = sub_6000ADDC(a1, v8);
+      v9 = Object_isBehindWrapped(a1, v8);
       v10 = *(char *)(v8 + 84);
       SE_EMY_KAME_HIT_ref(v8, *(char *)(v8 + 1314), *(_DWORD *)(a1 + 6292) == 2);
       sub_60022760(MEMORY[0xC7F52C], a1, 4u, v10);
@@ -126926,7 +126927,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12[2] = 0;
     Effect_spawnType21(a1, v12);
     v7 = *(_DWORD *)(a3 + 64);
-    v8 = sub_6000ADDC(a1, v7);
+    v8 = Object_isBehindWrapped(a1, v7);
     v9 = *(_BYTE *)(v7 + 84);
     SE_EMY_KAME_HIT_ref(v7, *(_DWORD *)(v7 + 564), *(_DWORD *)(a1 + 6292) == 2);
     sub_60000A18(v7);
@@ -130626,7 +130627,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v13[3]; // [sp+4h] [bp-Ch] BYREF
   
     v3 = *(_DWORD *)(a3 + 64);
-    v6 = sub_6000ADDC(a1, v3);
+    v6 = Object_isBehindWrapped(a1, v3);
     v7 = *(_DWORD *)(a2 + 88);
     v8 = *(char *)(v3 + 84);
     v13[0] = *(_DWORD *)(a2 + 84);
@@ -131597,7 +131598,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r7
   
     v5 = 0;
-    if ( !sub_602A588C(a1) )
+    if ( !Object_isActive(a1) )
     {
       CurrentState = StateMgr::getCurrentState(a1 + 6084);
       v7 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -133074,7 +133075,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v13[2]; // [sp+0h] [bp-38h] BYREF
     __int64 v14[6]; // [sp+8h] [bp-30h] BYREF
   
-    if ( sub_602A588C(a1)
+    if ( Object_isActive(a1)
       || (CurrentState = StateMgr::getCurrentState(a1 + 6084),
           v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState),
           v3 == (*(int (**)(void))(MEMORY[0xC908C0] + 8))())
@@ -136978,7 +136979,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 15156) = v18;
       *(float *)(a1 + 15160) = v19;
       *(_BYTE *)(a1 + 15364) = 0;
-      if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) && !sub_602A588C(a1) )
+      if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) && !Object_isActive(a1) )
         SE_PLY_SPLASH_LAVA_ref(a1);
     }
     ActiveCollider_reset((_DWORD *)(a1 + 6528));
@@ -151297,12 +151298,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_BYTE *)(a1 + 6500) = 0;
       *(_DWORD *)(a1 + 6484) = -1;
     }
-    if ( !sub_602A588C(a1)
+    if ( !Object_isActive(a1)
       && (v10 = StateMgr::getCurrentState((int)v5),
           v11 = (*(int (__fastcall **)(int))(*(_DWORD *)v10 + 8))(v10),
           v12 = 1,
           v11 != (*(int (**)(void))(MEMORY[0xC908C0] + 8))())
-      || (v12 = 0, sub_602A588C(a1) == 1) )
+      || (v12 = 0, Object_isActive(a1) == 1) )
     {
       j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 6304));
       AnimationCtrl_switchBothHalvesIfEnabled(*(_DWORD **)(a1 + 6304));
@@ -152048,7 +152049,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v6; // r6
   
     v2 = 0;
-    if ( !sub_602A588C(a1) )
+    if ( !Object_isActive(a1) )
     {
       CurrentState = StateMgr::getCurrentState(a1 + 6084);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);

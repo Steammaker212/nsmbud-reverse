@@ -121544,7 +121544,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v14 = *v11;
       v12 = sub_60826C60(MEMORY[0xCC6E04], (unsigned __int8)a2, v16);
-      result = sub_608FBB8C(*(unsigned __int8 *)(*(_DWORD *)(v5 + 40) + 8 * v7 + 50));
+      result = BitCount32(*(unsigned __int8 *)(*(_DWORD *)(v5 + 40) + 8 * v7 + 50));
       v4 = v16[0];
     }
     else
@@ -124932,7 +124932,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v14 = *v12;
       v15 = sub_60826C60(MEMORY[0xCC6E04], v6, v17);
-      result = sub_608FBB8C(*(unsigned __int8 *)(*(_DWORD *)(v5 + 40) + 8 * v8 + 50));
+      result = BitCount32(*(unsigned __int8 *)(*(_DWORD *)(v5 + 40) + 8 * v8 + 50));
       v4 = v17[0];
     }
     else
@@ -126449,7 +126449,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v18 = *v15;
       v16 = sub_60826C60(MEMORY[0xCC6E04], v8, v21);
-      v17 = sub_608FBB8C(*(unsigned __int8 *)(*(_DWORD *)(v7 + 40) + 8 * v10 + 50));
+      v17 = BitCount32(*(unsigned __int8 *)(*(_DWORD *)(v7 + 40) + 8 * v10 + 50));
       v4 = v21[0];
     }
     else
@@ -162079,7 +162079,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         else
         {
-          v8 = sub_6014C4A4(a1 + 648);
+          v8 = Player_getActiveSubObject(a1 + 648);
           switch ( sub_6014C57C(a1 + 648, v8) )
           {
             case 0:
@@ -178224,7 +178224,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           else
           {
-            result = sub_6000ADDC(a1, a3);
+            result = Object_isBehindWrapped(a1, a3);
             *(_DWORD *)(a1 + 80) = result;
           }
           v10 = *(float *)(a3 + 120);
@@ -178312,7 +178312,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return sub_605D9FAC(a1, a2);
     if ( a2 )
     {
-      result = sub_6000ADDC(a1, a2);
+      result = Object_isBehindWrapped(a1, a2);
       v7 = *(float *)(a2 + 120);
       v8 = (float)*(char *)(result + 11557196);
       if ( (float)(v7 * v8) <= 0.0 )
@@ -178536,7 +178536,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = *(char *)(*(_DWORD *)(a1 + 80) + 11557196);
       v7 = v5 << 27;
       v8 = 357913941 * v5;
-      sub_6083246C((_DWORD *)(a1 + 160), &v8, &v7);
+      FixedPoint_compareWithSlack((_DWORD *)(a1 + 160), &v8, &v7);
       sub_6059BB74(a1 + 8036);
       v6 = 1.0 - v1;
       if ( v6 >= 0.0 )
@@ -206602,7 +206602,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 _cxa_guard_release_0(13087792);
               }
               if ( (**(int (__fastcall ***)(int, int))v8)(v8, 13087788) != 1
-                || !sub_602A588C(v8)
+                || !Object_isActive(v8)
                 && (CurrentState = StateMgr::getCurrentState(v8 + 6084),
                     v27 = a3,
                     v14 = a2,
@@ -211744,7 +211744,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(_DWORD *)(a1 + 36);
       if ( *(_DWORD *)result != *(_DWORD *)(a1 + 88) )
       {
-        sub_6083246C((_DWORD *)result, (int *)(a1 + 88), (int *)(a1 + 64));
+        FixedPoint_compareWithSlack((_DWORD *)result, (int *)(a1 + 88), (int *)(a1 + 64));
         result = *(_DWORD *)(a1 + 36);
         if ( *(_DWORD *)result == *(_DWORD *)(a1 + 88) )
         {
@@ -211816,7 +211816,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(_DWORD *)(a1 + 36);
       if ( *(_DWORD *)result != *(_DWORD *)(a1 + 88) )
       {
-        sub_6083246C((_DWORD *)result, (int *)(a1 + 88), (int *)(a1 + 64));
+        FixedPoint_compareWithSlack((_DWORD *)result, (int *)(a1 + 88), (int *)(a1 + 64));
         result = *(_DWORD *)(a1 + 36);
         if ( *(_DWORD *)result == *(_DWORD *)(a1 + 88) )
         {
@@ -218729,7 +218729,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v15 & 0x200) != 0 )
       v20 = sub_6014C5E8(v18);
     else
-      v20 = sub_6014C4A4(v18);
+      v20 = Player_getActiveSubObject(v18);
     v21 = (float *)((v20 >> 20) & 0xFF0);
     v22 = (float)(v20 & 0xFFFFFF);
     v23 = *(float *)(a1 + 124);
@@ -219043,7 +219043,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = -1073741824;
     v7 = v3;
     v6 = *(char *)(v2 + 11557196) * a2;
-    return sub_6083246C(v4, &v7, &v6);
+    return FixedPoint_compareWithSlack(v4, &v7, &v6);
   }
 
 /* ============================================================================
@@ -219344,7 +219344,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = v3;
     if ( !v3 || sub_60766708(v3) )
       return 0;
-    sub_6000ADDC(v4, a2);
+    Object_isBehindWrapped(v4, a2);
     return (*(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(_DWORD *)v4 + 748))(v4, 1, 0, 0);
   }
 
@@ -219589,7 +219589,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = -1073741824;
     v6 = v2;
     v5 = *(unsigned __int8 *)(v3 + 11557196) << 27;
-    sub_6083246C((_DWORD *)(a1 + 160), &v6, &v5);
+    FixedPoint_compareWithSlack((_DWORD *)(a1 + 160), &v6, &v5);
     result = *(unsigned __int8 *)(a1 + 6804);
     if ( (result & 1) != 0 )
     {
@@ -219738,7 +219738,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = -1073741824;
     v7 = v2;
     v6 = *(unsigned __int8 *)(v3 + 11557196) << 28;
-    sub_6083246C((_DWORD *)(a1 + 160), &v7, &v6);
+    FixedPoint_compareWithSlack((_DWORD *)(a1 + 160), &v7, &v6);
     v5 = (_DWORD *)(a1 + 8008);
     result = *(_DWORD *)(a1 + 8008);
     if ( result == 1 )
@@ -219887,7 +219887,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v8 = a2 - 3;
       if ( (unsigned int)(a2 - 3) >= 2 )
-        *(_DWORD *)(a1 + 80) = sub_6000ADDC(a1, a3);
+        *(_DWORD *)(a1 + 80) = Object_isBehindWrapped(a1, a3);
       v9 = *(float *)(a3 + 120);
       if ( (a2 | 1) == 1 )
       {
@@ -220721,9 +220721,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (*(_DWORD *)(a1 + 6260) & 0x40000000) != 0 )
       v14 = 0;
     *(_DWORD *)(a1 + 6844) = v14;
-    v15 = sub_6014C4A4(a1 + 648);
+    v15 = Player_getActiveSubObject(a1 + 648);
     *(_DWORD *)(a1 + 6820) = sub_6014C57C(a1 + 648, v15);
-    *(_DWORD *)(a1 + 6824) = sub_6014C4A4(a1 + 648);
+    *(_DWORD *)(a1 + 6824) = Player_getActiveSubObject(a1 + 648);
     result = sub_6014C508(a1 + 648, (float)(*(float *)(a1 + 108) - *(float *)(a1 + 584)) <= 0.0);
     *(_DWORD *)(a1 + 6828) = result;
     return result;
@@ -221716,7 +221716,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v12 = v11;
               if ( v11 )
               {
-                v13 = sub_6014C4A4(v11);
+                v13 = Player_getActiveSubObject(v11);
                 if ( sub_6014C57C(v12, v13) )
                 {
                   v14 = sub_6014C508(v12, *(_DWORD *)(v5 + 80));
@@ -222162,7 +222162,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else if ( a3 == 4 )
     {
       if ( a2 )
-        v9 = sub_6000ADDC(a1, a2);
+        v9 = Object_isBehindWrapped(a1, a2);
       else
         v9 = *(_DWORD *)(a1 + 80);
     }
@@ -238811,7 +238811,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v4 = 1024;
         v5 = 0;
-        if ( sub_6083246C((_DWORD *)(a1 + 164), &v5, &v4) == 1 )
+        if ( FixedPoint_compareWithSlack((_DWORD *)(a1 + 164), &v5, &v4) == 1 )
           *(_DWORD *)(a1 + 164) = 0;
       }
     }
@@ -241318,7 +241318,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = v4;
         if ( v4 )
         {
-          if ( sub_608FBB8C(*(unsigned __int16 *)(MEMORY[0xCC436C] + 66)) >= 1 )
+          if ( BitCount32(*(unsigned __int16 *)(MEMORY[0xCC436C] + 66)) >= 1 )
           {
             *(_WORD *)(MEMORY[0xC99DE4] + 30) = v5;
             sub_603FBE70(MEMORY[0xC99DD4]);

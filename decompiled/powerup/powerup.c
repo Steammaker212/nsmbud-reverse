@@ -330,11 +330,11 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         *v3 = 12562572;
         Object_releaseHandle(v3 + 506);
-        sub_60917AE4(v3 + 486);
+        Object_releaseHalfwordHandle(v3 + 486);
         Object_releaseHandle(v3 + 420);
-        sub_60917AE4(v3 + 400);
+        Object_releaseHalfwordHandle(v3 + 400);
         Object_releaseHandle(v3 + 334);
-        sub_60917AE4(v3 + 314);
+        Object_releaseHalfwordHandle(v3 + 314);
         v3[228] = 12562648;
         Slot_destroy(v3 + 228);
         v3[221] = 12556228;
@@ -10970,7 +10970,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     CollisionActor::handleGravity((CollisionActor *)a1);
-    v6 = sub_6014C4A4(a1 + 648);
+    v6 = Player_getActiveSubObject(a1 + 648);
     v7 = (float)(v6 & 0xFFFFFF);
     v8 = (float *)(((v6 >> 20) & 0xFF0) + 11773060);
     v9 = *(float *)(a1 + 120);
@@ -11249,7 +11249,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     CollisionActor::handleGravity((CollisionActor *)a1);
-    v13 = sub_6014C4A4(a1 + 648);
+    v13 = Player_getActiveSubObject(a1 + 648);
     v14 = (float)(v13 & 0xFFFFFF);
     v15 = (float *)(((v13 >> 20) & 0xFF0) + 11773060);
     v16 = *(float *)(a1 + 120);
@@ -11726,7 +11726,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v8; // s26
     float v9; // s24
   
-    v2 = sub_6014C4A4(a1 + 648);
+    v2 = Player_getActiveSubObject(a1 + 648);
     v3 = *(float *)(a1 + 120);
     v4 = (float)(v2 & 0xFFFFFF) * 0.000000059605;
     v5 = *(float *)(((v2 >> 20) & 0xFF0) + 0xB3A48C) + (float)(v4 * *(float *)(((v2 >> 20) & 0xFF0) + 0xB3A490));
@@ -13523,7 +13523,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 224))(a1);
       CollisionActor::handleGravity(a1);
-      v4 = sub_6014C4A4(a1 + 648);
+      v4 = Player_getActiveSubObject(a1 + 648);
       v5 = *(float *)(a1 + 120);
       v6 = (float)(v4 & 0xFFFFFF) * 0.000000059605;
       v7 = *(float *)(((v4 >> 20) & 0xFF0) + 0xB3A48C) + (float)(v6 * *(float *)(((v4 >> 20) & 0xFF0) + 0xB3A490));
@@ -13690,7 +13690,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 224))(a1);
     CollisionActor::handleGravity(a1);
-    v10 = sub_6014C4A4(a1 + 648);
+    v10 = Player_getActiveSubObject(a1 + 648);
     v11 = *(float *)(a1 + 120);
     v12 = (float)(v10 & 0xFFFFFF) * 0.000000059605;
     v13 = *(float *)(((v10 >> 20) & 0xFF0) + 0xB3A48C) + (float)(v12 * *(float *)(((v10 >> 20) & 0xFF0) + 0xB3A490));
@@ -13973,7 +13973,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float *v17; // r1
   
     CollisionActor::handleGravity(a1);
-    v2 = sub_6014C4A4(a1 + 648);
+    v2 = Player_getActiveSubObject(a1 + 648);
     v3 = *(float *)(a1 + 120);
     v4 = (float)(v2 & 0xFFFFFF) * 0.000000059605;
     v5 = *(float *)(((v2 >> 20) & 0xFF0) + 0xB3A48C) + (float)(v4 * *(float *)(((v2 >> 20) & 0xFF0) + 0xB3A490));
@@ -14150,7 +14150,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 224))(a1);
     CollisionActor::handleGravity((CollisionActor *)a1);
-    v6 = sub_6014C4A4(a1 + 648);
+    v6 = Player_getActiveSubObject(a1 + 648);
     v7 = *(float *)(a1 + 120);
     v8 = (float)(v6 & 0xFFFFFF) * 0.000000059605;
     v9 = *(float *)(((v6 >> 20) & 0xFF0) + 0xB3A48C) + (float)(v8 * *(float *)(((v6 >> 20) & 0xFF0) + 0xB3A490));
@@ -27867,7 +27867,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v27 = (__int64 *)sub_6090BE54(v36);
         v3 = (_DWORD *)(a1 + 12);
         sub_60473CC0((_DWORD *)(a1 + 12), (int)v34, v27);
-        sub_6091ADF4(v40, *(_DWORD *)(a2 + 40));
+        Object_resolveSlotFromGlobal(v40, *(_DWORD *)(a2 + 40));
         sub_60959C28(v4 + 288, v4, 0);
         nullsub_113(v36);
         j_nullsub_280(v38);
