@@ -246306,416 +246306,404 @@ sub_608DF448__LABEL_158:
  * sub_60925854
  * RVA 0x00925854   size 0x8d4   xrefs 5
  * ============================================================================ */
-  int __fastcall sub_60925854(int a1, int a2, int a3, unsigned int a4)
-  {
-    float v4; // s0
-    int v6; // r5
-    char v7; // r12
-    int *v8; // r0
-    int v9; // r1
-    unsigned int v10; // r0
-    int v11; // r1
-    int v12; // r2
-    _DWORD *v13; // r0
-    int v14; // r1
-    int v15; // r0
-    int v16; // r11
-    unsigned int v17; // r8
-    unsigned int v18; // r0
-    int v19; // r9
-    char *v20; // r10
-    int v21; // r0
-    int v22; // r5
-    int v23; // r0
-    bool v24; // zf
-    int v25; // r6
-    _DWORD *v26; // r2
-    int v27; // r0
-    int v28; // r7
-    const char *v29; // r5
-    int v30; // r1
-    int i; // r2
-    int v32; // r3
-    int v33; // r3
-    int v34; // r0
-    _DWORD *v35; // r3
-    unsigned int v36; // r0
-    unsigned __int16 *v37; // r1
-    unsigned int v38; // r2
-    int v39; // r5
-    unsigned int v40; // r1
-    int v41; // r2
-    _BYTE *v42; // r12
-    _BYTE *v43; // r0
-    int v44; // r1
-    _DWORD *v45; // r6
-    _DWORD *v46; // r4
-    int v47; // r7
-    int v48; // r4
-    int v49; // r1
-    int j; // r2
-    int v51; // r3
-    int v52; // r3
-    _BYTE *v53; // r9
-    _DWORD *v54; // r6
-    const char *v55; // r7
-    int v56; // r1
-    int k; // r2
-    int v58; // r3
-    int v59; // r3
-    int v60; // r0
-    unsigned int v61; // r2
-    unsigned int v62; // r1
-    _DWORD *v63; // r0
-    unsigned int v64; // r1
-    int v65; // r6
-    char *v66; // r5
-    int v67; // r0
-    int v68; // r1
-    int v69; // r0
-    const char *v70; // r7
-    int m; // r1
-    int v72; // r3
-    int v73; // r3
-    struct sead_CriticalSection *v75; // [sp+8h] [bp-68h]
-    int v76; // [sp+10h] [bp-60h]
-    unsigned int v77; // [sp+14h] [bp-5Ch]
-    int v78; // [sp+20h] [bp-50h]
-    unsigned int v79; // [sp+24h] [bp-4Ch]
-    unsigned int v80; // [sp+24h] [bp-4Ch]
-    int v81; // [sp+28h] [bp-48h]
-    int v82; // [sp+2Ch] [bp-44h]
-    _BYTE *v83; // [sp+30h] [bp-40h]
-    _BYTE *v84; // [sp+30h] [bp-40h]
-    int v85; // [sp+34h] [bp-3Ch]
-    _DWORD *v87; // [sp+3Ch] [bp-34h]
-    int v89; // [sp+44h] [bp-2Ch]
-    unsigned int v90; // [sp+4Ch] [bp-24h]
-    int v91; // [sp+50h] [bp-20h] BYREF
-    int v92; // [sp+54h] [bp-1Ch]
-    char *v93; // [sp+58h] [bp-18h] BYREF
-    char *v94; // [sp+5Ch] [bp-14h] BYREF
-    int v95; // [sp+60h] [bp-10h] BYREF
-    const char *v96; // [sp+64h] [bp-Ch]
-    int v97; // [sp+68h] [bp-8h] BYREF
-    int v98; // [sp+6Ch] [bp-4h] BYREF
-  
-    v6 = a2;
-    v98 = a2;
-    v97 = a3;
-    v75 = (struct sead_CriticalSection *)(a1 + 512);
-    sead__CriticalSection__lock((struct sead_CriticalSection *)(a1 + 512));
-    if ( v4 <= 0.0 )
-    {
-      v8 = &v97;
-      goto sub_60925854__LABEL_5;
-    }
-    if ( v4 >= 1.0 )
-    {
-      v8 = &v98;
-      v6 = a3;
-  sub_60925854__LABEL_5:
-      *v8 = v6;
-    }
-    if ( ((unsigned int)&unk_60CD09B0 & ~(1620203728 << v7) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CD09B0) )
-    {
-      v95 = 12321336;
-      v96 = "name";
-      dword_60CD09AC = sub_60941AB4(&v95);
-      _cxa_guard_release_0(&unk_60CD09B0);
-    }
-    if ( ((unsigned int)&unk_60CD09B8 & ~(1620203832 << v7) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CD09B8) )
-    {
-      v95 = 12321336;
-      v96 = "group";
-      dword_60CD09B4 = sub_60941AB4(&v95);
-      _cxa_guard_release_0(&unk_60CD09B8);
-    }
-    v76 = v98;
-    v9 = v98 + *(_DWORD *)(v98 + 20);
-    v10 = *(_DWORD *)(v9 + 52);
-    if ( HIWORD(v10) )
-    {
-      v11 = v9 + 48;
-      v24 = HIWORD(v10) == 0;
-      v77 = HIWORD(v10);
-      v12 = (4 * v10) & 0x3FFFC;
-      v13 = (_DWORD *)HIWORD(v10);
-      if ( !v24 )
-        v13 = (_DWORD *)(v11 + v12);
-      v14 = 0;
-      v87 = v13;
-      v85 = MEMORY[0xB3BA34];
-      while ( 1 )
-      {
-        v81 = v14;
-        v15 = *(_DWORD *)(a1 + 100);
-        if ( v15 )
-        {
-          v16 = 0;
-          v17 = 0;
-          while ( *v87 != *(_DWORD *)(v15 + 20) )
-          {
-            v15 = *(_DWORD *)(v15 + 24);
-            v16 += 4;
-            ++v17;
-            if ( !v15 )
-              goto sub_60925854__LABEL_104;
-          }
-          v18 = v87[2];
-          if ( HIWORD(v18) )
-            break;
-        }
-  sub_60925854__LABEL_104:
-        v14 = v81 + 1;
-        v87 += 3;
-        if ( v81 + 1 == v77 )
-          goto sub_60925854__LABEL_105;
-      }
-      v19 = 0;
-      v90 = HIWORD(v18);
-      v20 = (char *)v87 + ((4 * v18) & 0x3FFFC);
-      v89 = -1;
-      while ( 1 )
-      {
-        v94 = v20;
-        v21 = sub_609515BC(&v94, dword_60CD09B4);
-        v22 = 0;
-        if ( v21 != -1 )
-          v22 = (int)&v94[8 * v21 + ((4 * *((_DWORD *)v94 + 1)) & 0x3FFFC)];
-        v23 = sub_609515BC(&v94, dword_60CD09AC);
-        v24 = v23 == -1;
-        if ( v23 != -1 )
-          v24 = v22 == 0;
-        if ( !v24 )
-        {
-          v25 = (int)&v94[8 * v23 + ((4 * *((_DWORD *)v94 + 1)) & 0x3FFFC)];
-          if ( v25 )
-          {
-            v26 = (_DWORD *)a1;
-            if ( a4 != -1 )
-            {
-              v27 = *(_DWORD *)(v22 + 4);
-              v95 = 12321336;
-              v96 = (const char *)(v22 + ((4 * v27) & 0x3FFFFFC));
-              v28 = *(_DWORD *)(a1 + 48);
-              if ( *(_DWORD *)(a1 + 44) > a4 )
-                v28 += 324 * a4;
-              (*(void (__fastcall **)(int))(*(_DWORD *)(v28 + 12) + 12))(v28 + 12);
-              (*(void (__fastcall **)(int))(*(_DWORD *)(v28 + 12) + 12))(v28 + 12);
-              v29 = *(const char **)(v28 + 16);
-              (*(void (__fastcall **)(int *))(v95 + 12))(&v95);
-              if ( v29 != v96 )
-              {
-                v30 = *(_DWORD *)(v28 + 16);
-                for ( i = 1; ; i += 2 )
-                {
-                  v32 = *(unsigned __int8 *)(v30 + i - 1);
-                  if ( v32 != (unsigned __int8)v96[i - 1] )
-                    break;
-                  if ( v32 == v85 )
-                    goto sub_60925854__LABEL_40;
-                  if ( i >= 524289 )
-                    break;
-                  v33 = *(unsigned __int8 *)(v30 + i);
-                  if ( v33 != (unsigned __int8)v96[i] )
-                    break;
-                  if ( v33 == v85 )
-                    goto sub_60925854__LABEL_40;
-                }
-                goto sub_60925854__LABEL_103;
-              }
-  sub_60925854__LABEL_40:
-              v26 = (_DWORD *)a1;
-            }
-            v34 = *(_DWORD *)(v25 + 4);
-            v35 = v26;
-            v95 = 12321336;
-            v96 = (const char *)(v25 + ((4 * v34) & 0x3FFFFFC));
-            v36 = v26[3];
-            v37 = (unsigned __int16 *)v26[4];
-            v38 = v26[5];
-            if ( v36 > v17 )
-              v37 = (unsigned __int16 *)((char *)v37 + v16);
-            v39 = *v37;
-            v40 = v37[1] + v39;
-            if ( v38 < v40 )
-              v40 = v38;
-            if ( v38 < v39 )
-              v39 = v38;
-            if ( v39 != v40 )
-            {
-              v41 = v35[6];
-              v42 = 0;
-              v82 = v19;
-              v79 = v40;
-              v78 = v41;
-              while ( 1 )
-              {
-                v43 = *(_BYTE **)(v41 + 4 * v39);
-                if ( (v43[110] & 1) != 0 )
-                  break;
-  sub_60925854__LABEL_74:
-                if ( ++v39 == v40 )
-                  goto sub_60925854__LABEL_77;
-              }
-              v83 = *(_BYTE **)(v41 + 4 * v39);
-              if ( v42 )
-              {
-                v44 = v89;
-              }
-              else if ( v89 >= v39 )
-              {
-                v42 = 0;
-                v44 = v89;
-              }
-              else
-              {
-                v45 = (_DWORD *)(*(int (__fastcall **)(_BYTE *))(*(_DWORD *)v43 + 68))(v43);
-                v46 = (_DWORD *)default_ref(v45);
-                (*(void (__fastcall **)(_DWORD *))(*v45 + 12))(v45);
-                (*(void (__fastcall **)(_DWORD *))(*v45 + 12))(v45);
-                v47 = v45[1];
-                (*(void (__fastcall **)(_DWORD *))(*v46 + 12))(v46);
-                v43 = v83;
-                v48 = v46[1];
-                v44 = v39;
-                v42 = v83;
-                if ( v47 != v48 )
-                {
-                  v49 = v45[1];
-                  for ( j = 1; ; j += 2 )
-                  {
-                    v51 = *(unsigned __int8 *)(v49 + j - 1);
-                    if ( v51 != *(unsigned __int8 *)(v48 + j - 1) )
-                      break;
-                    if ( v51 == v85 )
-                      goto sub_60925854__LABEL_61;
-                    if ( j >= 524289 )
-                      break;
-                    v52 = *(unsigned __int8 *)(v49 + j);
-                    if ( v52 != *(unsigned __int8 *)(v48 + j) )
-                      break;
-                    if ( v52 == v85 )
-                    {
-  sub_60925854__LABEL_61:
-                      v43 = v83;
-                      v44 = v39;
-                      v42 = v83;
-                      goto sub_60925854__LABEL_64;
-                    }
-                  }
-                  v44 = v89;
-                  v43 = v83;
-                  v42 = 0;
-                }
-              }
-  sub_60925854__LABEL_64:
-              v89 = v44;
-              v53 = v42;
-              v54 = (_DWORD *)(*(int (__fastcall **)(_BYTE *))(*(_DWORD *)v43 + 64))(v43);
-              (*(void (__fastcall **)(_DWORD *))(*v54 + 12))(v54);
-              (*(void (__fastcall **)(_DWORD *))(*v54 + 12))(v54);
-              v55 = (const char *)v54[1];
-              (*(void (__fastcall **)(int *))(v95 + 12))(&v95);
-              if ( v55 == v96 )
-              {
-                v42 = v83;
-                v19 = v82;
-                goto sub_60925854__LABEL_78;
-              }
-              v56 = v54[1];
-              v42 = v53;
-              v19 = v82;
-              for ( k = 1; ; k += 2 )
-              {
-                v58 = *(unsigned __int8 *)(v56 + k - 1);
-                if ( v58 != (unsigned __int8)v96[k - 1] )
-                  goto sub_60925854__LABEL_73;
-                if ( v58 == v85 )
-                  break;
-                if ( k >= 524289 || (v59 = *(unsigned __int8 *)(v56 + k), v59 != (unsigned __int8)v96[k]) )
-                {
-  sub_60925854__LABEL_73:
-                  v40 = v79;
-                  v41 = v78;
-                  goto sub_60925854__LABEL_74;
-                }
-                if ( v59 == v85 )
-                  break;
-              }
-              v42 = v83;
-  sub_60925854__LABEL_77:
-              if ( !v42 )
-                goto sub_60925854__LABEL_103;
-  sub_60925854__LABEL_78:
-              if ( v76 == v97 )
-                goto sub_60925854__LABEL_100;
-              v60 = v97 + *(_DWORD *)(v97 + 20);
-              v61 = *(_DWORD *)(v60 + 52);
-              if ( !HIWORD(v61) )
-                goto sub_60925854__LABEL_100;
-              v62 = HIWORD(v61);
-              v63 = (_DWORD *)(v60 + 48 + ((4 * v61) & 0x3FFFC));
-              while ( *v87 != *v63 )
-              {
-                --v62;
-                v63 += 3;
-                if ( !v62 )
-                  goto sub_60925854__LABEL_100;
-              }
-              if ( v63 )
-              {
-                v64 = v63[2];
-                if ( HIWORD(v64) )
-                {
-                  v65 = 0;
-                  v84 = v42;
-                  v80 = HIWORD(v64);
-                  v66 = (char *)v63 + ((4 * v64) & 0x3FFFC);
-                  while ( 1 )
-                  {
-                    v93 = v66;
-                    v67 = sub_609515BC(&v93, dword_60CD09AC);
-                    v68 = 0;
-                    if ( v67 != -1 )
-                      v68 = (int)&v93[8 * v67 + ((4 * *((_DWORD *)v93 + 1)) & 0x3FFFC)];
-                    v69 = *(_DWORD *)(v68 + 4);
-                    v91 = 12321336;
-                    v92 = v68 + ((4 * v69) & 0x3FFFFFC);
-                    (*(void (__fastcall **)(int *))(v95 + 12))(&v95);
-                    (*(void (__fastcall **)(int *))(v95 + 12))(&v95);
-                    v70 = v96;
-                    (*(void (__fastcall **)(int *))(v91 + 12))(&v91);
-                    if ( v70 == (const char *)v92 )
-                      break;
-                    for ( m = 1; ; m += 2 )
-                    {
-                      v72 = (unsigned __int8)v96[m - 1];
-                      if ( v72 != *(unsigned __int8 *)(v92 + m - 1) )
-                        break;
-                      if ( v72 == v85 )
-                        goto sub_60925854__LABEL_102;
-                      if ( m >= 524289 )
-                        break;
-                      v73 = (unsigned __int8)v96[m];
-                      if ( v73 != *(unsigned __int8 *)(v92 + m) )
-                        break;
-                      if ( v73 == v85 )
-                        goto sub_60925854__LABEL_102;
-                    }
-                    ++v65;
-                    v66 += 8;
+  int __fastcall sub_60925854(int a1, int a2, int a3, unsigned int a4, float a5)
+{
+  int v6; // r5
+  char v8; // r12
+  int *v9; // r0
+  int v10; // r1
+  unsigned int v11; // r0
+  int v12; // r1
+  int v13; // r2
+  _DWORD *v14; // r0
+  int v15; // r1
+  int v16; // r0
+  int v17; // r11
+  unsigned int v18; // r8
+  unsigned int v19; // r0
+  int v20; // r9
+  char *v21; // r10
+  int v22; // r0
+  int v23; // r5
+  int v24; // r0
+  bool v25; // zf
+  int v26; // r6
+  _DWORD *v27; // r2
+  int v28; // r0
+  int v29; // r7
+  const char *v30; // r5
+  int v31; // r1
+  int i; // r2
+  int v33; // r0
+  _DWORD *v34; // r3
+  unsigned int v35; // r0
+  unsigned __int16 *v36; // r1
+  unsigned int v37; // r2
+  int v38; // r5
+  unsigned int v39; // r1
+  int v40; // r2
+  _BYTE *v41; // r12
+  _BYTE *v42; // r0
+  int v43; // r1
+  _DWORD *v44; // r6
+  _DWORD *v45; // r4
+  int v46; // r7
+  int v47; // r4
+  int v48; // r1
+  int j; // r2
+  _BYTE *v50; // r9
+  _DWORD *v51; // r6
+  const char *v52; // r7
+  int v53; // r1
+  int k; // r2
+  int v55; // r0
+  unsigned int v56; // r2
+  unsigned int v57; // r1
+  _DWORD *v58; // r0
+  unsigned int v59; // r1
+  int v60; // r6
+  char *v61; // r5
+  int v62; // r0
+  int v63; // r1
+  int v64; // r0
+  const char *v65; // r7
+  int m; // r1
+  int v68; // [sp+8h] [bp-A0h]
+  int v69; // [sp+10h] [bp-98h]
+  unsigned int v70; // [sp+14h] [bp-94h]
+  int v71; // [sp+20h] [bp-88h]
+  unsigned int v72; // [sp+24h] [bp-84h]
+  unsigned int v73; // [sp+24h] [bp-84h]
+  int v74; // [sp+28h] [bp-80h]
+  int v75; // [sp+2Ch] [bp-7Ch]
+  _BYTE *v76; // [sp+30h] [bp-78h]
+  _BYTE *v77; // [sp+30h] [bp-78h]
+  _DWORD *v79; // [sp+3Ch] [bp-6Ch]
+  int v81; // [sp+44h] [bp-64h]
+  unsigned int v82; // [sp+4Ch] [bp-5Ch]
+  int (**v83)(); // [sp+50h] [bp-58h] BYREF
+  int v84; // [sp+54h] [bp-54h]
+  char *v85; // [sp+58h] [bp-50h] BYREF
+  char *v86; // [sp+5Ch] [bp-4Ch] BYREF
+  int (**v87)(); // [sp+60h] [bp-48h] BYREF
+  const char *v88; // [sp+64h] [bp-44h]
+  int v89; // [sp+68h] [bp-40h] BYREF
+  int v90; // [sp+6Ch] [bp-3Ch] BYREF
 
+  v6 = a2;
+  v90 = a2;
+  v89 = a3;
+  v68 = a1 + 512;
+  sead::CriticalSection::lock(a1 + 512);
+  if ( a5 <= 0.0 )
+  {
+    v9 = &v89;
+    goto sub_60925854__LABEL_5;
   }
+  if ( a5 >= 1.0 )
+  {
+    v9 = &v90;
+    v6 = a3;
+sub_60925854__LABEL_5:
+    *v9 = v6;
   }
+  if ( ((unsigned int)&dword_60CD09B0 & ~(1620203728 << v8) & 1) == 0 && _cxa_guard_acquire(&dword_60CD09B0) )
+  {
+    v87 = &`vtable for'sead::SafeStringBase<char>;
+    v88 = "name";
+    dword_60CD09AC = sub_60941AB4(&v87);
+    _cxa_guard_release(&dword_60CD09B0);
   }
+  if ( ((unsigned int)&dword_60CD09B8 & ~(1620203832 << v8) & 1) == 0 && _cxa_guard_acquire(&dword_60CD09B8) )
+  {
+    v87 = &`vtable for'sead::SafeStringBase<char>;
+    v88 = "group";
+    dword_60CD09B4 = sub_60941AB4(&v87);
+    _cxa_guard_release(&dword_60CD09B8);
   }
+  v69 = v90;
+  v10 = v90 + *(_DWORD *)(v90 + 20);
+  v11 = *(_DWORD *)(v10 + 52);
+  if ( HIWORD(v11) )
+  {
+    v12 = v10 + 48;
+    v25 = HIWORD(v11) == 0;
+    v70 = HIWORD(v11);
+    v13 = (4 * v11) & 0x3FFFC;
+    v14 = (_DWORD *)HIWORD(v11);
+    if ( !v25 )
+      v14 = (_DWORD *)(v12 + v13);
+    v15 = 0;
+    v79 = v14;
+    while ( 1 )
+    {
+      v74 = v15;
+      v16 = *(_DWORD *)(a1 + 100);
+      if ( v16 )
+      {
+        v17 = 0;
+        v18 = 0;
+        while ( *v79 != *(_DWORD *)(v16 + 20) )
+        {
+          v16 = *(_DWORD *)(v16 + 24);
+          v17 += 4;
+          ++v18;
+          if ( !v16 )
+            goto sub_60925854__LABEL_104;
+        }
+        v19 = v79[2];
+        if ( HIWORD(v19) )
+          break;
+      }
+sub_60925854__LABEL_104:
+      v15 = v74 + 1;
+      v79 += 3;
+      if ( v74 + 1 == v70 )
+        goto sub_60925854__LABEL_105;
+    }
+    v20 = 0;
+    v82 = HIWORD(v19);
+    v21 = (char *)v79 + ((4 * v19) & 0x3FFFC);
+    v81 = -1;
+    while ( 1 )
+    {
+      v86 = v21;
+      v22 = sub_609515BC(&v86, dword_60CD09B4);
+      v23 = 0;
+      if ( v22 != -1 )
+        v23 = (int)&v86[8 * v22 + ((4 * *((_DWORD *)v86 + 1)) & 0x3FFFC)];
+      v24 = sub_609515BC(&v86, dword_60CD09AC);
+      v25 = v24 == -1;
+      if ( v24 != -1 )
+        v25 = v23 == 0;
+      if ( !v25 )
+      {
+        v26 = (int)&v86[8 * v24 + ((4 * *((_DWORD *)v86 + 1)) & 0x3FFFC)];
+        if ( v26 )
+        {
+          v27 = (_DWORD *)a1;
+          if ( a4 != -1 )
+          {
+            v28 = *(_DWORD *)(v23 + 4);
+            v87 = &`vtable for'sead::SafeStringBase<char>;
+            v88 = (const char *)(v23 + ((4 * v28) & 0x3FFFFFC));
+            v29 = *(_DWORD *)(a1 + 48);
+            if ( *(_DWORD *)(a1 + 44) > a4 )
+              v29 += 324 * a4;
+            (*(void (__fastcall **)(int))(*(_DWORD *)(v29 + 12) + 12))(v29 + 12);
+            (*(void (__fastcall **)(int))(*(_DWORD *)(v29 + 12) + 12))(v29 + 12);
+            v30 = *(const char **)(v29 + 16);
+            ((void (__fastcall *)(int (***)()))v87[3])(&v87);
+            if ( v30 != v88 )
+            {
+              v31 = *(_DWORD *)(v29 + 16);
+              for ( i = 1; *(unsigned __int8 *)(v31 + i - 1) == (unsigned __int8)v88[i - 1]; i += 2 )
+              {
+                if ( !*(_BYTE *)(v31 + i - 1) )
+                  goto sub_60925854__LABEL_40;
+                if ( i >= 524289 || *(unsigned __int8 *)(v31 + i) != (unsigned __int8)v88[i] )
+                  break;
+                if ( !*(_BYTE *)(v31 + i) )
+                  goto sub_60925854__LABEL_40;
+              }
+              goto sub_60925854__LABEL_103;
+            }
+sub_60925854__LABEL_40:
+            v27 = (_DWORD *)a1;
+          }
+          v33 = *(_DWORD *)(v26 + 4);
+          v34 = v27;
+          v87 = &`vtable for'sead::SafeStringBase<char>;
+          v88 = (const char *)(v26 + ((4 * v33) & 0x3FFFFFC));
+          v35 = v27[3];
+          v36 = (unsigned __int16 *)v27[4];
+          v37 = v27[5];
+          if ( v35 > v18 )
+            v36 = (unsigned __int16 *)((char *)v36 + v17);
+          v38 = *v36;
+          v39 = v36[1] + v38;
+          if ( v37 < v39 )
+            v39 = v37;
+          if ( v37 < v38 )
+            v38 = v37;
+          if ( v38 != v39 )
+          {
+            v40 = v34[6];
+            v41 = 0;
+            v75 = v20;
+            v72 = v39;
+            v71 = v40;
+            while ( 1 )
+            {
+              v42 = *(_BYTE **)(v40 + 4 * v38);
+              if ( (v42[110] & 1) != 0 )
+                break;
+sub_60925854__LABEL_74:
+              if ( ++v38 == v39 )
+                goto sub_60925854__LABEL_77;
+            }
+            v76 = *(_BYTE **)(v40 + 4 * v38);
+            if ( v41 )
+            {
+              v43 = v81;
+            }
+            else if ( v81 >= v38 )
+            {
+              v41 = 0;
+              v43 = v81;
+            }
+            else
+            {
+              v44 = (_DWORD *)(*(int (__fastcall **)(_BYTE *))(*(_DWORD *)v42 + 68))(v42);
+              v45 = (_DWORD *)sub_609405A4();
+              (*(void (__fastcall **)(_DWORD *))(*v44 + 12))(v44);
+              (*(void (__fastcall **)(_DWORD *))(*v44 + 12))(v44);
+              v46 = v44[1];
+              (*(void (__fastcall **)(_DWORD *))(*v45 + 12))(v45);
+              v42 = v76;
+              v47 = v45[1];
+              v43 = v38;
+              v41 = v76;
+              if ( v46 != v47 )
+              {
+                v48 = v44[1];
+                for ( j = 1; *(unsigned __int8 *)(v48 + j - 1) == *(unsigned __int8 *)(v47 + j - 1); j += 2 )
+                {
+                  if ( !*(_BYTE *)(v48 + j - 1) )
+                    goto sub_60925854__LABEL_61;
+                  if ( j >= 524289 || *(unsigned __int8 *)(v48 + j) != *(unsigned __int8 *)(v47 + j) )
+                    break;
+                  if ( !*(_BYTE *)(v48 + j) )
+                  {
+sub_60925854__LABEL_61:
+                    v42 = v76;
+                    v43 = v38;
+                    v41 = v76;
+                    goto sub_60925854__LABEL_64;
+                  }
+                }
+                v43 = v81;
+                v42 = v76;
+                v41 = 0;
+              }
+            }
+sub_60925854__LABEL_64:
+            v81 = v43;
+            v50 = v41;
+            v51 = (_DWORD *)(*(int (__fastcall **)(_BYTE *))(*(_DWORD *)v42 + 64))(v42);
+            (*(void (__fastcall **)(_DWORD *))(*v51 + 12))(v51);
+            (*(void (__fastcall **)(_DWORD *))(*v51 + 12))(v51);
+            v52 = (const char *)v51[1];
+            ((void (__fastcall *)(int (***)()))v87[3])(&v87);
+            if ( v52 == v88 )
+            {
+              v41 = v76;
+              v20 = v75;
+              goto sub_60925854__LABEL_78;
+            }
+            v53 = v51[1];
+            v41 = v50;
+            v20 = v75;
+            for ( k = 1; ; k += 2 )
+            {
+              if ( *(unsigned __int8 *)(v53 + k - 1) != (unsigned __int8)v88[k - 1] )
+                goto sub_60925854__LABEL_73;
+              if ( !*(_BYTE *)(v53 + k - 1) )
+                break;
+              if ( k >= 524289 || *(unsigned __int8 *)(v53 + k) != (unsigned __int8)v88[k] )
+              {
+sub_60925854__LABEL_73:
+                v39 = v72;
+                v40 = v71;
+                goto sub_60925854__LABEL_74;
+              }
+              if ( !*(_BYTE *)(v53 + k) )
+                break;
+            }
+            v41 = v76;
+sub_60925854__LABEL_77:
+            if ( !v41 )
+              goto sub_60925854__LABEL_103;
+sub_60925854__LABEL_78:
+            if ( v69 == v89 )
+              goto sub_60925854__LABEL_100;
+            v55 = v89 + *(_DWORD *)(v89 + 20);
+            v56 = *(_DWORD *)(v55 + 52);
+            if ( !HIWORD(v56) )
+              goto sub_60925854__LABEL_100;
+            v57 = HIWORD(v56);
+            v58 = (_DWORD *)(v55 + 48 + ((4 * v56) & 0x3FFFC));
+            while ( *v79 != *v58 )
+            {
+              --v57;
+              v58 += 3;
+              if ( !v57 )
+                goto sub_60925854__LABEL_100;
+            }
+            if ( v58 )
+            {
+              v59 = v58[2];
+              if ( HIWORD(v59) )
+              {
+                v60 = 0;
+                v77 = v41;
+                v73 = HIWORD(v59);
+                v61 = (char *)v58 + ((4 * v59) & 0x3FFFC);
+                while ( 1 )
+                {
+                  v85 = v61;
+                  v62 = sub_609515BC(&v85, dword_60CD09AC);
+                  v63 = 0;
+                  if ( v62 != -1 )
+                    v63 = (int)&v85[8 * v62 + ((4 * *((_DWORD *)v85 + 1)) & 0x3FFFC)];
+                  v64 = *(_DWORD *)(v63 + 4);
+                  v83 = &`vtable for'sead::SafeStringBase<char>;
+                  v84 = v63 + ((4 * v64) & 0x3FFFFFC);
+                  ((void (__fastcall *)(int (***)()))v87[3])(&v87);
+                  ((void (__fastcall *)(int (***)()))v87[3])(&v87);
+                  v65 = v88;
+                  ((void (__fastcall *)(int (***)()))v83[3])(&v83);
+                  if ( v65 == (const char *)v84 )
+                    break;
+                  for ( m = 1; (unsigned __int8)v88[m - 1] == *(unsigned __int8 *)(v84 + m - 1); m += 2 )
+                  {
+                    if ( !v88[m - 1] )
+                      goto sub_60925854__LABEL_102;
+                    if ( m >= 524289 || (unsigned __int8)v88[m] != *(unsigned __int8 *)(v84 + m) )
+                      break;
+                    if ( !v88[m] )
+                      goto sub_60925854__LABEL_102;
+                  }
+                  ++v60;
+                  v61 += 8;
+                  if ( v60 == v73 )
+                    goto sub_60925854__LABEL_103;
+                }
+sub_60925854__LABEL_102:
+                sub_60947D30(v77, v86, v85, 0, a5);
+              }
+            }
+            else
+            {
+sub_60925854__LABEL_100:
+              sub_60947DB0(v41, 0, v86, 0, 0.0, 0);
+            }
+          }
+        }
+      }
+sub_60925854__LABEL_103:
+      ++v20;
+      v21 += 8;
+      if ( v20 == v82 )
+        goto sub_60925854__LABEL_104;
+    }
   }
-  }
-  }
-  }
-  }
+sub_60925854__LABEL_105:
+  *(_DWORD *)(a1 + 484) |= 1u;
+  *(_WORD *)(a1 + 84) |= 1u;
+  return sead::CriticalSection::unlock(v68);
+}
+
 /* ============================================================================
  * sub_6092616C
  * RVA 0x0092616c   size 0xc   xrefs 0
@@ -266894,410 +266882,484 @@ sub_608DF448__LABEL_158:
  * RVA 0x0094428c   size 0x910   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6094428C(int result, int a2)
+{
+  int v2; // r7
+  int v3; // r1
+  int v4; // r4
+  bool v5; // zf
+  char *v6; // r5
+  int i; // r1
+  int v8; // r0
+  char *v9; // r5
+  int j; // r1
+  int v11; // r4
+  char *v12; // r0
+  bool v13; // cc
+  char *v14; // r7
+  int (***v15)(); // r5
+  int v16; // r6
+  int (**v17)(); // r1
+  int v18; // r0
+  int v19; // r5
+  char *v20; // r9
+  int v21; // r7
+  int (**v22)(); // r4
+  int v23; // r0
+  int k; // r1
+  bool v25; // zf
+  unsigned int v26; // r0
+  int (***v27)(); // r5
+  int v28; // r6
+  int (**v29)(); // r1
+  int v30; // r0
+  int v31; // r5
+  char *v32; // r9
+  int v33; // r7
+  int (**v34)(); // r4
+  int v35; // r0
+  int m; // r1
+  bool v37; // zf
+  int v38; // r5
+  int (***v39)(); // r4
+  int v40; // r6
+  int (**v41)(); // r1
+  int v42; // r0
+  int v43; // r4
+  char *v44; // r7
+  int v45; // r9
+  int (**v46)(); // r5
+  int v47; // r0
+  int n; // r1
+  bool v49; // zf
+  int v50; // s0
+  int v51; // r1
+  int v52; // [sp+4h] [bp-1ECh]
+  unsigned int v53; // [sp+8h] [bp-1E8h]
+  unsigned int v54; // [sp+Ch] [bp-1E4h]
+  int v55; // [sp+10h] [bp-1E0h]
+  int v56; // [sp+14h] [bp-1DCh]
+  char *v57; // [sp+1Ch] [bp-1D4h]
+  _DWORD v58[30]; // [sp+20h] [bp-1D0h] BYREF
+  int (**v59)(); // [sp+98h] [bp-158h] BYREF
+  char *v60; // [sp+9Ch] [bp-154h]
+  int v61; // [sp+A0h] [bp-150h]
+  int v62; // [sp+A4h] [bp-14Ch] BYREF
+  int (***v63)(); // [sp+1A4h] [bp-4Ch] BYREF
+  char *v64; // [sp+1A8h] [bp-48h]
+  int (**v65)(); // [sp+1ACh] [bp-44h] BYREF
+  const char *v66; // [sp+1B0h] [bp-40h]
+  int (**v67)(); // [sp+1B4h] [bp-3Ch] BYREF
+  char *v68; // [sp+1B8h] [bp-38h]
+  _DWORD v69[2]; // [sp+1BCh] [bp-34h] BYREF
+  int (**v70)(); // [sp+1C4h] [bp-2Ch] BYREF
+  char *v71; // [sp+1C8h] [bp-28h]
+
+  v3 = *(_DWORD *)(a2 + 8);
+  v4 = 2;
+  v5 = v3 == 0;
+  if ( v3 )
   {
-    int v2; // r7
-    int v3; // s0
-    int v4; // r1
-    int v5; // r4
-    bool v6; // zf
-    int v7; // r8
-    int *v8; // r5
-    int i; // r1
-    int v10; // r3
-    int v11; // r3
-    int v12; // r0
-    int v13; // r5
-    int j; // r1
-    int v15; // r3
-    int v16; // r3
-    int v17; // r4
-    int v18; // r0
-    bool v19; // cc
-    int v20; // r7
-    _DWORD *v21; // r5
-    int v22; // r6
-    int v23; // r1
-    int v24; // r0
-    int v25; // r5
-    int *v26; // r9
-    int v27; // r7
-    int v28; // r4
-    int v29; // r0
-    int k; // r1
-    int v31; // r3
-    int v32; // r3
-    bool v33; // zf
-    unsigned int v34; // r0
-    _DWORD *v35; // r5
-    int v36; // r6
-    int v37; // r1
-    int v38; // r0
-    int v39; // r5
-    int *v40; // r9
-    int v41; // r7
-    int v42; // r4
-    int v43; // r0
-    int m; // r1
-    int v45; // r3
-    int v46; // r3
-    bool v47; // zf
-    int v48; // r5
-    _DWORD *v49; // r4
-    int v50; // r6
-    int v51; // r1
-    int v52; // r0
-    int v53; // r4
-    int *v54; // r7
-    int v55; // r9
-    int v56; // r5
-    int v57; // r0
-    int n; // r1
-    int v59; // r3
-    int v60; // r3
-    bool v61; // zf
-    int v62; // r1
-    unsigned int v63; // [sp+4h] [bp-1C8h]
-    unsigned int v64; // [sp+8h] [bp-1C4h]
-    unsigned int v65; // [sp+Ch] [bp-1C0h]
-    int v66; // [sp+10h] [bp-1BCh]
-    int v67; // [sp+10h] [bp-1BCh]
-    int v68; // [sp+14h] [bp-1B8h]
-    int v69; // [sp+1Ch] [bp-1B0h]
-    _DWORD v70[30]; // [sp+20h] [bp-1ACh] BYREF
-    int v71; // [sp+98h] [bp-134h] BYREF
-    int *v72; // [sp+9Ch] [bp-130h]
-    int v73; // [sp+A0h] [bp-12Ch]
-    int v74; // [sp+A4h] [bp-128h] BYREF
-    int v75; // [sp+1A4h] [bp-28h] BYREF
-    int v76; // [sp+1A8h] [bp-24h]
-    int v77; // [sp+1ACh] [bp-20h] BYREF
-    const char *v78; // [sp+1B0h] [bp-1Ch]
-    int v79; // [sp+1B4h] [bp-18h] BYREF
-    int v80; // [sp+1B8h] [bp-14h]
-    _DWORD v81[2]; // [sp+1BCh] [bp-10h] BYREF
-    int v82; // [sp+1C4h] [bp-8h] BYREF
-    int v83; // [sp+1C8h] [bp-4h]
-  
-    v4 = *(_DWORD *)(a2 + 8);
-    v5 = 2;
-    v6 = v4 == 0;
-    if ( v4 )
+    v2 = v3 - 4;
+    v5 = v3 == 4;
+  }
+  if ( v5 )
+    goto sub_6094428C__LABEL_153;
+  v56 = result;
+  while ( 1 )
+  {
+    v58[0] = &`vtable for'sead::SafeStringBase<char>;
+    v58[1] = "name";
+    sub_609A5C60(&v59, v2, v58);
+    v63 = (int (***)())&`vtable for'sead::SafeStringBase<char>;
+    v64 = off_60C5CB34;
+    ((void (__fastcall *)(int (***)()))v59[3])(&v59);
+    ((void (__fastcall *)(int (***)()))v59[3])(&v59);
+    v6 = v60;
+    ((void (__fastcall *)(int (****)()))v63[3])(&v63);
+    result = (int)v64;
+    if ( v6 != v64 )
     {
-      v2 = v4 - 4;
-      v6 = v4 == 4;
+      for ( i = 1; v60[i - 1] == v64[i - 1]; i += 2 )
+      {
+        if ( !v60[i - 1] )
+          goto sub_6094428C__LABEL_13;
+        if ( i >= 524289 || v60[i] != v64[i] )
+          break;
+        if ( !v60[i] )
+          goto sub_6094428C__LABEL_13;
+      }
+      goto sub_6094428C__LABEL_22;
     }
-    if ( v6 )
+sub_6094428C__LABEL_13:
+    v69[0] = &`vtable for'sead::SafeStringBase<char>;
+    v69[1] = "type";
+    sub_609A5C60(&v70, v2, v69);
+    v8 = (*(int (__fastcall **)(int))(*(_DWORD *)v56 + 28))(v56);
+    v67 = &`vtable for'sead::SafeStringBase<char>;
+    v68 = off_60C5E518[v8 - 9];
+    ((void (__fastcall *)(int (***)()))v70[3])(&v70);
+    ((void (__fastcall *)(int (***)()))v70[3])(&v70);
+    v9 = v71;
+    ((void (__fastcall *)(int (***)()))v67[3])(&v67);
+    result = (int)v68;
+    if ( v9 == v68 )
+      break;
+    for ( j = 1; v71[j - 1] == v68[j - 1]; j += 2 )
+    {
+      if ( !v71[j - 1] )
+        goto sub_6094428C__LABEL_26;
+      if ( j >= 524289 || v71[j] != v68[j] )
+        break;
+      if ( !v71[j] )
+        goto sub_6094428C__LABEL_26;
+    }
+sub_6094428C__LABEL_22:
+    v2 = *(_DWORD *)(v2 + 12);
+    if ( v2 )
+      v2 -= 4;
+    if ( !v2 )
       goto sub_6094428C__LABEL_153;
-    v68 = result;
-    v7 = MEMORY[0xB3BA34];
-    v66 = dword_60C79CE8;
-    while ( 1 )
+  }
+sub_6094428C__LABEL_26:
+  if ( (unsigned int)((*(int (__fastcall **)(int))(*(_DWORD *)v56 + 28))(v56) - 9) > 3 )
+    goto sub_6094428C__LABEL_152;
+  v11 = 0;
+  v12 = *(char **)(v2 + 96);
+  v63 = &v70;
+  v64 = 0;
+  v70 = &`vtable for'sead::SafeStringBase<char>;
+  v65 = &`vtable for'sead::SafeStringBase<char>;
+  v71 = v12;
+  v66 = " \r\n\t";
+  while ( v12[v11] )
+  {
+    if ( !v12[v11 + 1] )
     {
-      v70[0] = 12321336;
-      v70[1] = "name";
-      sub_609A5C60(&v71, v2, v70);
-      v75 = 12321336;
-      v76 = MEMORY[0xC5CB34];
-      (*(void (__fastcall **)(int *))(v71 + 12))(&v71);
-      (*(void (__fastcall **)(int *))(v71 + 12))(&v71);
-      v8 = v72;
-      (*(void (__fastcall **)(int *))(v75 + 12))(&v75);
-      result = v76;
-      if ( v8 != (int *)v76 )
+      ++v11;
+      break;
+    }
+    if ( !v12[v11 + 2] )
+    {
+      v11 += 2;
+      break;
+    }
+    v13 = v11 + 2 <= 0x7FFFF;
+    v11 += 3;
+    if ( !v13 )
+    {
+      v11 = 0;
+      break;
+    }
+  }
+  v60 = (char *)&v62;
+  v59 = &BufferedSafeStringBase_char_vtable_probably;
+  v61 = 256;
+  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v59);
+  v14 = (char *)(v11 + 1);
+  *v60 = 0;
+  v15 = v63;
+  v16 = (int)v64;
+  v59 = &off_60BD94BC;
+  if ( v63 == &v70 && v64 == v14 )
+    goto sub_6094428C__LABEL_150;
+  v57 = (char *)(v11 + 1);
+  if ( v64 != v14 || v63 != &v70 )
+  {
+    do
+    {
+      ((void (__fastcall *)(int (***)()))(*v15)[3])(v15);
+      v17 = v15[1];
+      v18 = 0;
+      while ( *((_BYTE *)v17 + v18) )
       {
-        for ( i = 1; ; i += 2 )
+        if ( !*((_BYTE *)v17 + v18 + 1) )
         {
-          v10 = *((unsigned __int8 *)v72 + i - 1);
-          if ( v10 != *(unsigned __int8 *)(v76 + i - 1) )
-            break;
-          if ( v10 == v7 )
-            goto sub_6094428C__LABEL_13;
-          if ( i >= 524289 )
-            break;
-          v11 = *((unsigned __int8 *)v72 + i);
-          if ( v11 != *(unsigned __int8 *)(v76 + i) )
-            break;
-          if ( v11 == v7 )
-            goto sub_6094428C__LABEL_13;
+          ++v18;
+          if ( v16 < 0 )
+            goto sub_6094428C__LABEL_65;
+          goto sub_6094428C__LABEL_50;
         }
-        goto sub_6094428C__LABEL_22;
+        if ( !*((_BYTE *)v17 + v18 + 2) )
+        {
+          v18 += 2;
+          break;
+        }
+        v13 = v18 + 2 <= 0x7FFFF;
+        v18 += 3;
+        if ( !v13 )
+        {
+          v18 = 0;
+          if ( v16 < 0 )
+            goto sub_6094428C__LABEL_65;
+          goto sub_6094428C__LABEL_50;
+        }
       }
-  sub_6094428C__LABEL_13:
-      v81[0] = 12321336;
-      v81[1] = "type";
-      sub_609A5C60(&v82, v2, v81);
-      v12 = (*(int (__fastcall **)(int))(*(_DWORD *)v68 + 28))(v68);
-      v79 = 12321336;
-      v80 = *(_DWORD *)(v66 + 4 * v12 - 36);
-      (*(void (__fastcall **)(int *))(v82 + 12))(&v82);
-      (*(void (__fastcall **)(int *))(v82 + 12))(&v82);
-      v13 = v83;
-      (*(void (__fastcall **)(int *))(v79 + 12))(&v79);
-      result = v80;
-      if ( v13 == v80 )
-        break;
-      for ( j = 1; ; j += 2 )
+      if ( v16 < 0 )
+        goto sub_6094428C__LABEL_65;
+sub_6094428C__LABEL_50:
+      if ( v16 <= v18 )
       {
-        v15 = *(unsigned __int8 *)(v83 + j - 1);
-        if ( v15 != *(unsigned __int8 *)(v80 + j - 1) )
-          break;
-        if ( v15 == v7 )
-          goto sub_6094428C__LABEL_26;
-        if ( j >= 524289 )
-          break;
-        v16 = *(unsigned __int8 *)(v83 + j);
-        if ( v16 != *(unsigned __int8 *)(v80 + j) )
-          break;
-        if ( v16 == v7 )
-          goto sub_6094428C__LABEL_26;
+        ((void (__fastcall *)(int (***)()))v59[3])(&v59);
+        v19 = v61;
+        if ( v61 >= 1 )
+        {
+          v20 = v60;
+          v21 = 0;
+          while ( 1 )
+          {
+            v22 = v63[1];
+            if ( !*((_BYTE *)v22 + v16) )
+              break;
+            ((void (__fastcall *)(int (***)()))v65[3])(&v65);
+            v23 = *((unsigned __int8 *)v22 + v16);
+            for ( k = 1; v66[k - 1]; k += 2 )
+            {
+              if ( (unsigned __int8)v66[k - 1] == v23 )
+                goto sub_6094428C__LABEL_64;
+              if ( k >= 524289 || !v66[k] )
+                break;
+              if ( (unsigned __int8)v66[k] == v23 )
+                goto sub_6094428C__LABEL_64;
+            }
+            v20[v21++] = v23;
+            ++v16;
+            if ( v19 <= v21 )
+              goto sub_6094428C__LABEL_65;
+          }
+sub_6094428C__LABEL_64:
+          v20[v21] = 0;
+          v64 = (char *)(v16 + 1);
+        }
       }
-  sub_6094428C__LABEL_22:
-      v2 = *(_DWORD *)(v2 + 12);
-      if ( v2 )
-        v2 -= 4;
-      if ( !v2 )
-        goto sub_6094428C__LABEL_153;
+sub_6094428C__LABEL_65:
+      v14 = v57;
+      if ( *v60 )
+        break;
+      v15 = v63;
+      v16 = (int)v64;
+      v25 = v64 == v57;
+      if ( v64 == v57 )
+        v25 = v63 == &v70;
     }
-  sub_6094428C__LABEL_26:
-    if ( (unsigned int)((*(int (__fastcall **)(int))(*(_DWORD *)v68 + 28))(v68) - 9) > 3 )
-      goto sub_6094428C__LABEL_152;
-    v17 = 0;
-    v18 = *(_DWORD *)(v2 + 96);
-    v75 = (int)&v82;
-    v76 = 0;
-    v82 = 12321336;
-    v77 = 12321336;
-    v83 = v18;
-    v78 = " \r\n\t";
-    while ( *(unsigned __int8 *)(v18 + v17) != v7 )
-    {
-      if ( *(unsigned __int8 *)(v18 + v17 + 1) == v7 )
-      {
-        ++v17;
-        break;
-      }
-      if ( *(unsigned __int8 *)(v18 + v17 + 2) == v7 )
-      {
-        v17 += 2;
-        break;
-      }
-      v19 = v17 + 2 <= 0x7FFFF;
-      v17 += 3;
-      if ( !v19 )
-      {
-        v17 = 0;
-        break;
-      }
-    }
-    v72 = &v74;
-    v71 = 12322272;
-    v73 = 256;
-    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v71);
-    v20 = v17 + 1;
-    *(_BYTE *)v72 = v7;
-    v21 = (_DWORD *)v75;
-    v22 = v76;
-    v71 = 12424380;
-    if ( (int *)v75 == &v82 && v76 == v20 )
-      goto sub_6094428C__LABEL_150;
-    v69 = v17 + 1;
-    if ( v76 != v20 || v75 != (_DWORD)&v82 )
+    while ( !v25 );
+  }
+  v26 = sub_60901464(&v59, -1);
+  v27 = v63;
+  v28 = (int)v64;
+  v53 = v26;
+  if ( v26 >= 0x1E )
+    v26 = 30;
+  v54 = v26;
+  if ( v63 == &v70 && v64 == v14 )
+  {
+sub_6094428C__LABEL_150:
+    v4 = 1;
+  }
+  else
+  {
+    if ( v64 != v14 || v63 != &v70 )
     {
       do
       {
-        (*(void (__fastcall **)(_DWORD *))(*v21 + 12))(v21);
-        v23 = v21[1];
-        v24 = 0;
-        while ( *(unsigned __int8 *)(v23 + v24) != v7 )
+        ((void (__fastcall *)(int (***)()))(*v27)[3])(v27);
+        v29 = v27[1];
+        v30 = 0;
+        while ( *((_BYTE *)v29 + v30) )
         {
-          if ( *(unsigned __int8 *)(v23 + v24 + 1) == v7 )
+          if ( !*((_BYTE *)v29 + v30 + 1) )
           {
-            ++v24;
-            if ( v22 < 0 )
-              goto sub_6094428C__LABEL_65;
-            goto sub_6094428C__LABEL_50;
+            ++v30;
+            if ( v28 < 0 )
+              goto sub_6094428C__LABEL_102;
+            goto sub_6094428C__LABEL_87;
           }
-          if ( *(unsigned __int8 *)(v23 + v24 + 2) == v7 )
+          if ( !*((_BYTE *)v29 + v30 + 2) )
           {
-            v24 += 2;
+            v30 += 2;
             break;
           }
-          v19 = v24 + 2 <= 0x7FFFF;
-          v24 += 3;
-          if ( !v19 )
+          v13 = v30 + 2 <= 0x7FFFF;
+          v30 += 3;
+          if ( !v13 )
           {
-            v24 = 0;
-            if ( v22 < 0 )
-              goto sub_6094428C__LABEL_65;
-            goto sub_6094428C__LABEL_50;
+            v30 = 0;
+            if ( v28 < 0 )
+              goto sub_6094428C__LABEL_102;
+            goto sub_6094428C__LABEL_87;
           }
         }
-        if ( v22 < 0 )
-          goto sub_6094428C__LABEL_65;
-  sub_6094428C__LABEL_50:
-        if ( v22 <= v24 )
+        if ( v28 < 0 )
+          goto sub_6094428C__LABEL_102;
+sub_6094428C__LABEL_87:
+        if ( v28 <= v30 )
         {
-          (*(void (__fastcall **)(int *))(v71 + 12))(&v71);
-          v25 = v73;
-          if ( v73 >= 1 )
+          ((void (__fastcall *)(int (***)()))v59[3])(&v59);
+          v31 = v61;
+          if ( v61 >= 1 )
           {
-            v26 = v72;
-            v27 = 0;
+            v32 = v60;
+            v33 = 0;
             while ( 1 )
             {
-              v28 = *(_DWORD *)(v75 + 4);
-              if ( *(unsigned __int8 *)(v28 + v22) == v7 )
+              v34 = v63[1];
+              if ( !*((_BYTE *)v34 + v28) )
                 break;
-              (*(void (__fastcall **)(int *))(v77 + 12))(&v77);
-              v29 = *(unsigned __int8 *)(v28 + v22);
-              for ( k = 1; ; k += 2 )
+              ((void (__fastcall *)(int (***)()))v65[3])(&v65);
+              v35 = *((unsigned __int8 *)v34 + v28);
+              for ( m = 1; v66[m - 1]; m += 2 )
               {
-                v31 = (unsigned __int8)v78[k - 1];
-                if ( v31 == v7 )
+                if ( (unsigned __int8)v66[m - 1] == v35 )
+                  goto sub_6094428C__LABEL_101;
+                if ( m >= 524289 || !v66[m] )
                   break;
-                if ( v31 == v29 )
-                  goto sub_6094428C__LABEL_64;
-                if ( k >= 524289 )
-                  break;
-                v32 = (unsigned __int8)v78[k];
-                if ( v32 == v7 )
-                  break;
-                if ( v32 == v29 )
-                  goto sub_6094428C__LABEL_64;
+                if ( (unsigned __int8)v66[m] == v35 )
+                  goto sub_6094428C__LABEL_101;
               }
-              *((_BYTE *)v26 + v27++) = v29;
-              ++v22;
-              if ( v25 <= v27 )
-                goto sub_6094428C__LABEL_65;
+              v32[v33++] = v35;
+              ++v28;
+              if ( v31 <= v33 )
+                goto sub_6094428C__LABEL_102;
             }
-  sub_6094428C__LABEL_64:
-            *((_BYTE *)v26 + v27) = v7;
-            v76 = v22 + 1;
+sub_6094428C__LABEL_101:
+            v32[v33] = 0;
+            v64 = (char *)(v28 + 1);
           }
         }
-  sub_6094428C__LABEL_65:
-        v20 = v69;
-        if ( *(unsigned __int8 *)v72 != v7 )
+sub_6094428C__LABEL_102:
+        v14 = v57;
+        if ( *v60 )
           break;
-        v21 = (_DWORD *)v75;
-        v22 = v76;
-        v33 = v76 == v69;
-        if ( v76 == v69 )
-          v33 = v75 == (_DWORD)&v82;
+        v27 = v63;
+        v28 = (int)v64;
+        v37 = v64 == v57;
+        if ( v64 == v57 )
+          v37 = v63 == &v70;
       }
-      while ( !v33 );
+      while ( !v37 );
     }
-    v34 = sub_60901464(&v71, -1);
-    v35 = (_DWORD *)v75;
-    v36 = v76;
-    v64 = v34;
-    if ( v34 >= 0x1E )
-      v34 = 30;
-    v65 = v34;
-    if ( (int *)v75 == &v82 && v76 == v20 )
+    v52 = sub_60901464(&v59, -1);
+    if ( v54 )
     {
-  sub_6094428C__LABEL_150:
-      v5 = 1;
-    }
-    else
-    {
-      if ( v76 != v20 || v75 != (_DWORD)&v82 )
+      v38 = 0;
+      do
       {
-        do
+        v39 = v63;
+        v40 = (int)v64;
+        v55 = v38;
+        if ( v63 == &v70 && v64 == v14 )
+          goto sub_6094428C__LABEL_150;
+        if ( v64 != v14 || v63 != &v70 )
         {
-          (*(void (__fastcall **)(_DWORD *))(*v35 + 12))(v35);
-          v37 = v35[1];
-          v38 = 0;
-          while ( *(unsigned __int8 *)(v37 + v38) != v7 )
+          do
           {
-            if ( *(unsigned __int8 *)(v37 + v38 + 1) == v7 )
+            ((void (__fastcall *)(int (***)()))(*v39)[3])(v39);
+            v41 = v39[1];
+            v42 = 0;
+            while ( *((_BYTE *)v41 + v42) )
             {
-              ++v38;
-              if ( v36 < 0 )
-                goto sub_6094428C__LABEL_102;
-              goto sub_6094428C__LABEL_87;
-            }
-            if ( *(unsigned __int8 *)(v37 + v38 + 2) == v7 )
-            {
-              v38 += 2;
-              break;
-            }
-            v19 = v38 + 2 <= 0x7FFFF;
-            v38 += 3;
-            if ( !v19 )
-            {
-              v38 = 0;
-              if ( v36 < 0 )
-                goto sub_6094428C__LABEL_102;
-              goto sub_6094428C__LABEL_87;
-            }
-          }
-          if ( v36 < 0 )
-            goto sub_6094428C__LABEL_102;
-  sub_6094428C__LABEL_87:
-          if ( v36 <= v38 )
-          {
-            (*(void (__fastcall **)(int *))(v71 + 12))(&v71);
-            v39 = v73;
-            if ( v73 >= 1 )
-            {
-              v40 = v72;
-              v41 = 0;
-              while ( 1 )
+              if ( !*((_BYTE *)v41 + v42 + 1) )
               {
-                v42 = *(_DWORD *)(v75 + 4);
-                if ( *(unsigned __int8 *)(v42 + v36) == v7 )
-                  break;
-                (*(void (__fastcall **)(int *))(v77 + 12))(&v77);
-                v43 = *(unsigned __int8 *)(v42 + v36);
-                for ( m = 1; ; m += 2 )
-                {
-                  v45 = (unsigned __int8)v78[m - 1];
-                  if ( v45 == v7 )
-                    break;
-                  if ( v45 == v43 )
-                    goto sub_6094428C__LABEL_101;
-                  if ( m >= 524289 )
-                    break;
-                  v46 = (unsigned __int8)v78[m];
-                  if ( v46 == v7 )
-                    break;
-                  if ( v46 == v43 )
-                    goto sub_6094428C__LABEL_101;
-                }
-                *((_BYTE *)v40 + v41++) = v43;
-                ++v36;
-                if ( v39 <= v41 )
-                  goto sub_6094428C__LABEL_102;
+                ++v42;
+                if ( v40 < 0 )
+                  goto sub_6094428C__LABEL_139;
+                goto sub_6094428C__LABEL_124;
               }
-  sub_6094428C__LABEL_101:
-              *((_BYTE *)v40 + v41) = v7;
-              v76 = v36 + 1;
+              if ( !*((_BYTE *)v41 + v42 + 2) )
+              {
+                v42 += 2;
+                break;
+              }
+              v13 = v42 + 2 <= 0x7FFFF;
+              v42 += 3;
+              if ( !v13 )
+              {
+                v42 = 0;
+                if ( v40 < 0 )
+                  goto sub_6094428C__LABEL_139;
+                goto sub_6094428C__LABEL_124;
+              }
             }
+            if ( v40 < 0 )
+              goto sub_6094428C__LABEL_139;
+sub_6094428C__LABEL_124:
+            if ( v40 <= v42 )
+            {
+              ((void (__fastcall *)(int (***)()))v59[3])(&v59);
+              v43 = v61;
+              if ( v61 >= 1 )
+              {
+                v44 = v60;
+                v45 = 0;
+                while ( 1 )
+                {
+                  v46 = v63[1];
+                  if ( !*((_BYTE *)v46 + v40) )
+                    break;
+                  ((void (__fastcall *)(int (***)()))v65[3])(&v65);
+                  v47 = *((unsigned __int8 *)v46 + v40);
+                  for ( n = 1; v66[n - 1]; n += 2 )
+                  {
+                    if ( (unsigned __int8)v66[n - 1] == v47 )
+                      goto sub_6094428C__LABEL_138;
+                    if ( n >= 524289 || !v66[n] )
+                      break;
+                    if ( (unsigned __int8)v66[n] == v47 )
+                      goto sub_6094428C__LABEL_138;
+                  }
+                  v44[v45++] = v47;
+                  ++v40;
+                  if ( v43 <= v45 )
+                    goto sub_6094428C__LABEL_139;
+                }
+sub_6094428C__LABEL_138:
+                v44[v45] = 0;
+                v64 = (char *)(v40 + 1);
+              }
+            }
+sub_6094428C__LABEL_139:
+            v14 = v57;
+            if ( *v60 )
+              break;
+            v39 = v63;
+            v40 = (int)v64;
+            v49 = v64 == v57;
+            if ( v64 == v57 )
+              v49 = v63 == &v70;
           }
-  sub_6094428C__LABEL_102:
-          v20 = v69;
-          if ( *(unsigned __int8 *)v72 != v7 )
-            break;
-          v35 = (_DWORD *)v75;
-          v36 = v76;
-          v47 = v76 == v69;
-          if ( v76 == v69 )
-            v47 = v75 == (_DWORD)&v82;
+          while ( !v49 );
         }
-        while ( !v47 );
+        sub_60901490((int)&v59);
+        v38 = v55 + 1;
+        v58[v55] = v50;
       }
-      v63 = sub_60901464(&v71, -1);
-      if ( v65 )
-      {
-        v48 = 0;
-        do
-        {
+      while ( v55 + 1 < v54 );
+    }
+    *(_BYTE *)(v56 + 20) = v52;
+    *(_BYTE *)(v56 + 23) = v54;
+    *(_DWORD *)(v56 + 24) = v54;
+    *(_DWORD *)(v56 + 28) = v52;
+    if ( v54 )
+    {
+      v51 = ~v53;
+      if ( v53 == 30 || ~v53 < 0xFFFFFFE1 )
+        v51 = -31;
+      qmemcpy((void *)(v56 + 32), v58, -4 - 4 * v51);
+    }
+    v4 = 6;
+  }
+  result = 1;
+  if ( v4 == 6 )
+  {
+sub_6094428C__LABEL_152:
+    v4 = 1;
+    result = 0;
+  }
+sub_6094428C__LABEL_153:
+  if ( v4 == 2 )
+    return 2;
+  return result;
+}
 
-  }
-  }
-  }
-  }
 /* ============================================================================
  * sub_60944BC8
  * RVA 0x00944bc8   size 0x8   xrefs 0
@@ -267674,409 +267736,496 @@ sub_608DF448__LABEL_158:
  * RVA 0x00945324   size 0x988   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60945324(int result, int a2)
-  {
-    int v2; // r4
-    int v3; // s0
-    int v4; // r1
-    int v5; // r9
-    bool v6; // zf
-    int v7; // r8
-    int *v8; // r7
-    int i; // r1
-    int v10; // r3
-    int v11; // r3
-    int v12; // r0
-    int v13; // r7
-    int j; // r1
-    int v15; // r3
-    int v16; // r3
-    int v17; // r0
-    int v18; // r4
-    bool v19; // cc
-    int v20; // r0
-    int v21; // r4
-    _DWORD *v22; // r4
-    int v23; // r5
-    int v24; // r1
-    int v25; // r0
-    int v26; // r9
-    int *v27; // r11
-    int v28; // r6
-    int v29; // r7
-    int v30; // r0
-    int k; // r1
-    int v32; // r3
-    int v33; // r3
-    bool v34; // zf
-    unsigned int v35; // r0
-    _DWORD *v36; // r4
-    int v37; // r5
-    int v38; // r1
-    int v39; // r0
-    int v40; // r9
-    int *v41; // r11
-    int v42; // r6
-    int v43; // r7
-    int v44; // r0
-    int m; // r1
-    int v46; // r3
-    int v47; // r3
-    bool v48; // zf
-    int v49; // r5
-    _DWORD *v50; // r4
-    int v51; // r7
-    int v52; // r1
-    int v53; // r0
-    int v54; // r4
-    int *v55; // r6
-    int v56; // r11
-    int v57; // r9
-    int v58; // r0
-    int n; // r1
-    int v60; // r3
-    int v61; // r3
-    bool v62; // zf
-    int v63; // r0
-    int v64; // r2
-    int v65; // r1
-    int v66; // r1
-    unsigned int v67; // [sp+8h] [bp-1CCh]
-    unsigned int v68; // [sp+Ch] [bp-1C8h]
-    int v69; // [sp+10h] [bp-1C4h]
-    int v70; // [sp+14h] [bp-1C0h]
-    unsigned int v71; // [sp+18h] [bp-1BCh]
-    int v72; // [sp+1Ch] [bp-1B8h]
-    int v73; // [sp+1Ch] [bp-1B8h]
-    int v74; // [sp+24h] [bp-1B0h]
-    _DWORD v75[30]; // [sp+28h] [bp-1ACh] BYREF
-    int v76; // [sp+A0h] [bp-134h] BYREF
-    int *v77; // [sp+A4h] [bp-130h]
-    int v78; // [sp+A8h] [bp-12Ch]
-    int v79; // [sp+ACh] [bp-128h] BYREF
-    int v80; // [sp+1ACh] [bp-28h] BYREF
-    int v81; // [sp+1B0h] [bp-24h]
-    int v82; // [sp+1B4h] [bp-20h] BYREF
-    const char *v83; // [sp+1B8h] [bp-1Ch]
-    int v84; // [sp+1BCh] [bp-18h] BYREF
-    int v85; // [sp+1C0h] [bp-14h]
-    _DWORD v86[2]; // [sp+1C4h] [bp-10h] BYREF
-    int v87; // [sp+1CCh] [bp-8h] BYREF
-    int v88; // [sp+1D0h] [bp-4h]
-  
-    v4 = *(_DWORD *)(a2 + 8);
-    v5 = 2;
-    v6 = v4 == 0;
-    if ( v4 )
-    {
-      v2 = v4 - 4;
-      v6 = v4 == 4;
-    }
-    if ( v6 )
-      goto sub_60945324__LABEL_155;
-    v70 = result;
-    v7 = MEMORY[0xB3BA34];
-    v72 = dword_60C79D04;
-    while ( 1 )
-    {
-      v75[0] = 12321336;
-      v75[1] = "name";
-      sub_609A5C60(&v76, v2, v75);
-      v80 = 12321336;
-      v81 = MEMORY[0xC5CB34];
-      (*(void (__fastcall **)(int *))(v76 + 12))(&v76);
-      (*(void (__fastcall **)(int *))(v76 + 12))(&v76);
-      v8 = v77;
-      (*(void (__fastcall **)(int *))(v80 + 12))(&v80);
-      result = v81;
-      if ( v8 != (int *)v81 )
-      {
-        for ( i = 1; ; i += 2 )
-        {
-          v10 = *((unsigned __int8 *)v77 + i - 1);
-          if ( v10 != *(unsigned __int8 *)(v81 + i - 1) )
-            break;
-          if ( v10 == v7 )
-            goto sub_60945324__LABEL_13;
-          if ( i >= 524289 )
-            break;
-          v11 = *((unsigned __int8 *)v77 + i);
-          if ( v11 != *(unsigned __int8 *)(v81 + i) )
-            break;
-          if ( v11 == v7 )
-            goto sub_60945324__LABEL_13;
-        }
-        goto sub_60945324__LABEL_22;
-      }
-  sub_60945324__LABEL_13:
-      v86[0] = 12321336;
-      v86[1] = "type";
-      sub_609A5C60(&v87, v2, v86);
-      v12 = (*(int (__fastcall **)(int))(*(_DWORD *)v70 + 28))(v70);
-      v84 = 12321336;
-      v85 = *(_DWORD *)(v72 + 4 * v12 - 36);
-      (*(void (__fastcall **)(int *))(v87 + 12))(&v87);
-      (*(void (__fastcall **)(int *))(v87 + 12))(&v87);
-      v13 = v88;
-      (*(void (__fastcall **)(int *))(v84 + 12))(&v84);
-      result = v85;
-      if ( v13 == v85 )
-        break;
-      for ( j = 1; ; j += 2 )
-      {
-        v15 = *(unsigned __int8 *)(v88 + j - 1);
-        if ( v15 != *(unsigned __int8 *)(v85 + j - 1) )
-          break;
-        if ( v15 == v7 )
-          goto sub_60945324__LABEL_26;
-        if ( j >= 524289 )
-          break;
-        v16 = *(unsigned __int8 *)(v88 + j);
-        if ( v16 != *(unsigned __int8 *)(v85 + j) )
-          break;
-        if ( v16 == v7 )
-          goto sub_60945324__LABEL_26;
-      }
-  sub_60945324__LABEL_22:
-      v2 = *(_DWORD *)(v2 + 12);
-      if ( v2 )
-        v2 -= 4;
-      if ( !v2 )
-        goto sub_60945324__LABEL_155;
-    }
-  sub_60945324__LABEL_26:
-    if ( (unsigned int)((*(int (__fastcall **)(int))(*(_DWORD *)v70 + 28))(v70) - 9) > 3 )
-      goto sub_60945324__LABEL_154;
-    v17 = *(_DWORD *)(v2 + 96);
-    v18 = 0;
-    v80 = (int)&v87;
-    v81 = 0;
-    v87 = 12321336;
-    v82 = 12321336;
-    v88 = v17;
-    v83 = " \r\n\t";
-    while ( *(unsigned __int8 *)(v17 + v18) != v7 )
-    {
-      if ( *(unsigned __int8 *)(v17 + v18 + 1) == v7 )
-      {
-        ++v18;
-        break;
-      }
-      if ( *(unsigned __int8 *)(v17 + v18 + 2) == v7 )
-      {
-        v18 += 2;
-        break;
-      }
-      v19 = v18 + 2 <= 0x7FFFF;
-      v18 += 3;
-      if ( !v19 )
-      {
-        v18 = 0;
-        break;
-      }
-    }
-    v77 = &v79;
-    v76 = 12322272;
-    v78 = 256;
-    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v76);
-    *(_BYTE *)v77 = v7;
-    v76 = 12424380;
-    v20 = v18 + 1;
-    v21 = 0;
-    v74 = v20;
-    while ( 1 )
-    {
-      v69 = v21;
-      v22 = (_DWORD *)v80;
-      v23 = v81;
-      if ( (int *)v80 == &v87 && v81 == v74 )
-        break;
-      if ( v81 != v74 || v80 != (_DWORD)&v87 )
-      {
-        do
-        {
-          (*(void (__fastcall **)(_DWORD *))(*v22 + 12))(v22);
-          v24 = v22[1];
-          v25 = 0;
-          while ( *(unsigned __int8 *)(v24 + v25) != v7 )
-          {
-            if ( *(unsigned __int8 *)(v24 + v25 + 1) == v7 )
-            {
-              ++v25;
-              if ( v23 < 0 )
-                goto sub_60945324__LABEL_66;
-              goto sub_60945324__LABEL_51;
-            }
-            if ( *(unsigned __int8 *)(v24 + v25 + 2) == v7 )
-            {
-              v25 += 2;
-              break;
-            }
-            v19 = v25 + 2 <= 0x7FFFF;
-            v25 += 3;
-            if ( !v19 )
-            {
-              v25 = 0;
-              if ( v23 < 0 )
-                goto sub_60945324__LABEL_66;
-              goto sub_60945324__LABEL_51;
-            }
-          }
-          if ( v23 < 0 )
-            goto sub_60945324__LABEL_66;
-  sub_60945324__LABEL_51:
-          if ( v23 <= v25 )
-          {
-            (*(void (__fastcall **)(int *))(v76 + 12))(&v76);
-            v26 = v78;
-            if ( v78 >= 1 )
-            {
-              v27 = v77;
-              v28 = 0;
-              while ( 1 )
-              {
-                v29 = *(_DWORD *)(v80 + 4);
-                if ( *(unsigned __int8 *)(v29 + v23) == v7 )
-                  break;
-                (*(void (__fastcall **)(int *))(v82 + 12))(&v82);
-                v30 = *(unsigned __int8 *)(v29 + v23);
-                for ( k = 1; ; k += 2 )
-                {
-                  v32 = (unsigned __int8)v83[k - 1];
-                  if ( v32 == v7 )
-                    break;
-                  if ( v32 == v30 )
-                    goto sub_60945324__LABEL_65;
-                  if ( k >= 524289 )
-                    break;
-                  v33 = (unsigned __int8)v83[k];
-                  if ( v33 == v7 )
-                    break;
-                  if ( v33 == v30 )
-                    goto sub_60945324__LABEL_65;
-                }
-                *((_BYTE *)v27 + v28++) = v30;
-                ++v23;
-                if ( v26 <= v28 )
-                  goto sub_60945324__LABEL_66;
-              }
-  sub_60945324__LABEL_65:
-              *((_BYTE *)v27 + v28) = v7;
-              v81 = v23 + 1;
-            }
-          }
-  sub_60945324__LABEL_66:
-          if ( *(unsigned __int8 *)v77 != v7 )
-            break;
-          v22 = (_DWORD *)v80;
-          v23 = v81;
-          v34 = v81 == v74;
-          if ( v81 == v74 )
-            v34 = v80 == (_DWORD)&v87;
-        }
-        while ( !v34 );
-      }
-      v35 = sub_60901464(&v76, -1);
-      v36 = (_DWORD *)v80;
-      v67 = v35;
-      v37 = v81;
-      if ( v35 >= 0x1E )
-        v35 = 30;
-      v71 = v35;
-      if ( (int *)v80 == &v87 && v81 == v74 )
-        break;
-      if ( v81 != v74 || v80 != (_DWORD)&v87 )
-      {
-        do
-        {
-          (*(void (__fastcall **)(_DWORD *))(*v36 + 12))(v36);
-          v38 = v36[1];
-          v39 = 0;
-          while ( *(unsigned __int8 *)(v38 + v39) != v7 )
-          {
-            if ( *(unsigned __int8 *)(v38 + v39 + 1) == v7 )
-            {
-              ++v39;
-              if ( v37 < 0 )
-                goto sub_60945324__LABEL_103;
-              goto sub_60945324__LABEL_88;
-            }
-            if ( *(unsigned __int8 *)(v38 + v39 + 2) == v7 )
-            {
-              v39 += 2;
-              break;
-            }
-            v19 = v39 + 2 <= 0x7FFFF;
-            v39 += 3;
-            if ( !v19 )
-            {
-              v39 = 0;
-              if ( v37 < 0 )
-                goto sub_60945324__LABEL_103;
-              goto sub_60945324__LABEL_88;
-            }
-          }
-          if ( v37 < 0 )
-            goto sub_60945324__LABEL_103;
-  sub_60945324__LABEL_88:
-          if ( v37 <= v39 )
-          {
-            (*(void (__fastcall **)(int *))(v76 + 12))(&v76);
-            v40 = v78;
-            if ( v78 >= 1 )
-            {
-              v41 = v77;
-              v42 = 0;
-              while ( 1 )
-              {
-                v43 = *(_DWORD *)(v80 + 4);
-                if ( *(unsigned __int8 *)(v43 + v37) == v7 )
-                  break;
-                (*(void (__fastcall **)(int *))(v82 + 12))(&v82);
-                v44 = *(unsigned __int8 *)(v43 + v37);
-                for ( m = 1; ; m += 2 )
-                {
-                  v46 = (unsigned __int8)v83[m - 1];
-                  if ( v46 == v7 )
-                    break;
-                  if ( v46 == v44 )
-                    goto sub_60945324__LABEL_102;
-                  if ( m >= 524289 )
-                    break;
-                  v47 = (unsigned __int8)v83[m];
-                  if ( v47 == v7 )
-                    break;
-                  if ( v47 == v44 )
-                    goto sub_60945324__LABEL_102;
-                }
-                *((_BYTE *)v41 + v42++) = v44;
-                ++v37;
-                if ( v40 <= v42 )
-                  goto sub_60945324__LABEL_103;
-              }
-  sub_60945324__LABEL_102:
-              *((_BYTE *)v41 + v42) = v7;
-              v81 = v37 + 1;
-            }
-          }
-  sub_60945324__LABEL_103:
-          if ( *(unsigned __int8 *)v77 != v7 )
-            break;
-          v36 = (_DWORD *)v80;
-          v37 = v81;
-          v48 = v81 == v74;
-          if ( v81 == v74 )
-            v48 = v80 == (_DWORD)&v87;
-        }
-        while ( !v48 );
-      }
-      v68 = sub_60901464(&v76, -1);
-      if ( v71 )
-      {
-        v49 = 0;
+{
+  int v2; // r4
+  int v3; // r1
+  int v4; // r9
+  bool v5; // zf
+  char *v6; // r7
+  int i; // r1
+  int v8; // r0
+  char *v9; // r7
+  int j; // r1
+  char *v11; // r0
+  int v12; // r4
+  bool v13; // cc
+  char *v14; // r0
+  int v15; // r4
+  int (***v16)(); // r4
+  int v17; // r5
+  int (**v18)(); // r1
+  int v19; // r0
+  int v20; // r9
+  char *v21; // r11
+  int v22; // r6
+  int (**v23)(); // r7
+  int v24; // r0
+  int k; // r1
+  bool v26; // zf
+  unsigned int v27; // r0
+  int (***v28)(); // r4
+  int v29; // r5
+  int (**v30)(); // r1
+  int v31; // r0
+  int v32; // r9
+  char *v33; // r11
+  int v34; // r6
+  int (**v35)(); // r7
+  int v36; // r0
+  int m; // r1
+  bool v38; // zf
+  int v39; // r5
+  int (***v40)(); // r4
+  int v41; // r7
+  int (**v42)(); // r1
+  int v43; // r0
+  int v44; // r4
+  char *v45; // r6
+  int v46; // r11
+  int (**v47)(); // r9
+  int v48; // r0
+  int n; // r1
+  bool v50; // zf
+  int v51; // s0
+  int v52; // r0
+  int v53; // r2
+  int v54; // r1
+  int v55; // r1
+  unsigned int v56; // [sp+8h] [bp-1F0h]
+  int v57; // [sp+Ch] [bp-1ECh]
+  int v58; // [sp+10h] [bp-1E8h]
+  int v59; // [sp+14h] [bp-1E4h]
+  unsigned int v60; // [sp+18h] [bp-1E0h]
+  int v61; // [sp+1Ch] [bp-1DCh]
+  char *v62; // [sp+24h] [bp-1D4h]
+  _DWORD v63[30]; // [sp+28h] [bp-1D0h] BYREF
+  int (**v64)(); // [sp+A0h] [bp-158h] BYREF
+  char *v65; // [sp+A4h] [bp-154h]
+  int v66; // [sp+A8h] [bp-150h]
+  int v67; // [sp+ACh] [bp-14Ch] BYREF
+  int (***v68)(); // [sp+1ACh] [bp-4Ch] BYREF
+  char *v69; // [sp+1B0h] [bp-48h]
+  int (**v70)(); // [sp+1B4h] [bp-44h] BYREF
+  const char *v71; // [sp+1B8h] [bp-40h]
+  int (**v72)(); // [sp+1BCh] [bp-3Ch] BYREF
+  char *v73; // [sp+1C0h] [bp-38h]
+  _DWORD v74[2]; // [sp+1C4h] [bp-34h] BYREF
+  int (**v75)(); // [sp+1CCh] [bp-2Ch] BYREF
+  char *v76; // [sp+1D0h] [bp-28h]
 
+  v3 = *(_DWORD *)(a2 + 8);
+  v4 = 2;
+  v5 = v3 == 0;
+  if ( v3 )
+  {
+    v2 = v3 - 4;
+    v5 = v3 == 4;
   }
+  if ( v5 )
+    goto sub_60945324__LABEL_155;
+  v59 = result;
+  while ( 1 )
+  {
+    v63[0] = &`vtable for'sead::SafeStringBase<char>;
+    v63[1] = "name";
+    sub_609A5C60(&v64, v2, v63);
+    v68 = (int (***)())&`vtable for'sead::SafeStringBase<char>;
+    v69 = off_60C5CB34;
+    ((void (__fastcall *)(int (***)()))v64[3])(&v64);
+    ((void (__fastcall *)(int (***)()))v64[3])(&v64);
+    v6 = v65;
+    ((void (__fastcall *)(int (****)()))v68[3])(&v68);
+    result = (int)v69;
+    if ( v6 != v69 )
+    {
+      for ( i = 1; v65[i - 1] == v69[i - 1]; i += 2 )
+      {
+        if ( !v65[i - 1] )
+          goto sub_60945324__LABEL_13;
+        if ( i >= 524289 || v65[i] != v69[i] )
+          break;
+        if ( !v65[i] )
+          goto sub_60945324__LABEL_13;
+      }
+      goto sub_60945324__LABEL_22;
+    }
+sub_60945324__LABEL_13:
+    v74[0] = &`vtable for'sead::SafeStringBase<char>;
+    v74[1] = "type";
+    sub_609A5C60(&v75, v2, v74);
+    v8 = (*(int (__fastcall **)(int))(*(_DWORD *)v59 + 28))(v59);
+    v72 = &`vtable for'sead::SafeStringBase<char>;
+    v73 = off_60C5E588[v8 - 9];
+    ((void (__fastcall *)(int (***)()))v75[3])(&v75);
+    ((void (__fastcall *)(int (***)()))v75[3])(&v75);
+    v9 = v76;
+    ((void (__fastcall *)(int (***)()))v72[3])(&v72);
+    result = (int)v73;
+    if ( v9 == v73 )
+      break;
+    for ( j = 1; v76[j - 1] == v73[j - 1]; j += 2 )
+    {
+      if ( !v76[j - 1] )
+        goto sub_60945324__LABEL_26;
+      if ( j >= 524289 || v76[j] != v73[j] )
+        break;
+      if ( !v76[j] )
+        goto sub_60945324__LABEL_26;
+    }
+sub_60945324__LABEL_22:
+    v2 = *(_DWORD *)(v2 + 12);
+    if ( v2 )
+      v2 -= 4;
+    if ( !v2 )
+      goto sub_60945324__LABEL_155;
   }
+sub_60945324__LABEL_26:
+  if ( (unsigned int)((*(int (__fastcall **)(int))(*(_DWORD *)v59 + 28))(v59) - 9) > 3 )
+    goto sub_60945324__LABEL_154;
+  v11 = *(char **)(v2 + 96);
+  v12 = 0;
+  v68 = &v75;
+  v69 = 0;
+  v75 = &`vtable for'sead::SafeStringBase<char>;
+  v70 = &`vtable for'sead::SafeStringBase<char>;
+  v76 = v11;
+  v71 = " \r\n\t";
+  while ( v11[v12] )
+  {
+    if ( !v11[v12 + 1] )
+    {
+      ++v12;
+      break;
+    }
+    if ( !v11[v12 + 2] )
+    {
+      v12 += 2;
+      break;
+    }
+    v13 = v12 + 2 <= 0x7FFFF;
+    v12 += 3;
+    if ( !v13 )
+    {
+      v12 = 0;
+      break;
+    }
   }
+  v65 = (char *)&v67;
+  v64 = &BufferedSafeStringBase_char_vtable_probably;
+  v66 = 256;
+  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v64);
+  *v65 = 0;
+  v64 = &off_60BD94BC;
+  v14 = (char *)(v12 + 1);
+  v15 = 0;
+  v62 = v14;
+  while ( 1 )
+  {
+    v58 = v15;
+    v16 = v68;
+    v17 = (int)v69;
+    if ( v68 == &v75 && v69 == v62 )
+      break;
+    if ( v69 != v62 || v68 != &v75 )
+    {
+      do
+      {
+        ((void (__fastcall *)(int (***)()))(*v16)[3])(v16);
+        v18 = v16[1];
+        v19 = 0;
+        while ( *((_BYTE *)v18 + v19) )
+        {
+          if ( !*((_BYTE *)v18 + v19 + 1) )
+          {
+            ++v19;
+            if ( v17 < 0 )
+              goto sub_60945324__LABEL_66;
+            goto sub_60945324__LABEL_51;
+          }
+          if ( !*((_BYTE *)v18 + v19 + 2) )
+          {
+            v19 += 2;
+            break;
+          }
+          v13 = v19 + 2 <= 0x7FFFF;
+          v19 += 3;
+          if ( !v13 )
+          {
+            v19 = 0;
+            if ( v17 < 0 )
+              goto sub_60945324__LABEL_66;
+            goto sub_60945324__LABEL_51;
+          }
+        }
+        if ( v17 < 0 )
+          goto sub_60945324__LABEL_66;
+sub_60945324__LABEL_51:
+        if ( v17 <= v19 )
+        {
+          ((void (__fastcall *)(int (***)()))v64[3])(&v64);
+          v20 = v66;
+          if ( v66 >= 1 )
+          {
+            v21 = v65;
+            v22 = 0;
+            while ( 1 )
+            {
+              v23 = v68[1];
+              if ( !*((_BYTE *)v23 + v17) )
+                break;
+              ((void (__fastcall *)(int (***)()))v70[3])(&v70);
+              v24 = *((unsigned __int8 *)v23 + v17);
+              for ( k = 1; v71[k - 1]; k += 2 )
+              {
+                if ( (unsigned __int8)v71[k - 1] == v24 )
+                  goto sub_60945324__LABEL_65;
+                if ( k >= 524289 || !v71[k] )
+                  break;
+                if ( (unsigned __int8)v71[k] == v24 )
+                  goto sub_60945324__LABEL_65;
+              }
+              v21[v22++] = v24;
+              ++v17;
+              if ( v20 <= v22 )
+                goto sub_60945324__LABEL_66;
+            }
+sub_60945324__LABEL_65:
+            v21[v22] = 0;
+            v69 = (char *)(v17 + 1);
+          }
+        }
+sub_60945324__LABEL_66:
+        if ( *v65 )
+          break;
+        v16 = v68;
+        v17 = (int)v69;
+        v26 = v69 == v62;
+        if ( v69 == v62 )
+          v26 = v68 == &v75;
+      }
+      while ( !v26 );
+    }
+    v27 = sub_60901464(&v64, -1);
+    v28 = v68;
+    v56 = v27;
+    v29 = (int)v69;
+    if ( v27 >= 0x1E )
+      v27 = 30;
+    v60 = v27;
+    if ( v68 == &v75 && v69 == v62 )
+      break;
+    if ( v69 != v62 || v68 != &v75 )
+    {
+      do
+      {
+        ((void (__fastcall *)(int (***)()))(*v28)[3])(v28);
+        v30 = v28[1];
+        v31 = 0;
+        while ( *((_BYTE *)v30 + v31) )
+        {
+          if ( !*((_BYTE *)v30 + v31 + 1) )
+          {
+            ++v31;
+            if ( v29 < 0 )
+              goto sub_60945324__LABEL_103;
+            goto sub_60945324__LABEL_88;
+          }
+          if ( !*((_BYTE *)v30 + v31 + 2) )
+          {
+            v31 += 2;
+            break;
+          }
+          v13 = v31 + 2 <= 0x7FFFF;
+          v31 += 3;
+          if ( !v13 )
+          {
+            v31 = 0;
+            if ( v29 < 0 )
+              goto sub_60945324__LABEL_103;
+            goto sub_60945324__LABEL_88;
+          }
+        }
+        if ( v29 < 0 )
+          goto sub_60945324__LABEL_103;
+sub_60945324__LABEL_88:
+        if ( v29 <= v31 )
+        {
+          ((void (__fastcall *)(int (***)()))v64[3])(&v64);
+          v32 = v66;
+          if ( v66 >= 1 )
+          {
+            v33 = v65;
+            v34 = 0;
+            while ( 1 )
+            {
+              v35 = v68[1];
+              if ( !*((_BYTE *)v35 + v29) )
+                break;
+              ((void (__fastcall *)(int (***)()))v70[3])(&v70);
+              v36 = *((unsigned __int8 *)v35 + v29);
+              for ( m = 1; v71[m - 1]; m += 2 )
+              {
+                if ( (unsigned __int8)v71[m - 1] == v36 )
+                  goto sub_60945324__LABEL_102;
+                if ( m >= 524289 || !v71[m] )
+                  break;
+                if ( (unsigned __int8)v71[m] == v36 )
+                  goto sub_60945324__LABEL_102;
+              }
+              v33[v34++] = v36;
+              ++v29;
+              if ( v32 <= v34 )
+                goto sub_60945324__LABEL_103;
+            }
+sub_60945324__LABEL_102:
+            v33[v34] = 0;
+            v69 = (char *)(v29 + 1);
+          }
+        }
+sub_60945324__LABEL_103:
+        if ( *v65 )
+          break;
+        v28 = v68;
+        v29 = (int)v69;
+        v38 = v69 == v62;
+        if ( v69 == v62 )
+          v38 = v68 == &v75;
+      }
+      while ( !v38 );
+    }
+    v57 = sub_60901464(&v64, -1);
+    if ( v60 )
+    {
+      v39 = 0;
+      do
+      {
+        v40 = v68;
+        v41 = (int)v69;
+        v61 = v39;
+        if ( v68 == &v75 && v69 == v62 )
+          goto sub_60945324__LABEL_152;
+        if ( v69 != v62 || v68 != &v75 )
+        {
+          do
+          {
+            ((void (__fastcall *)(int (***)()))(*v40)[3])(v40);
+            v42 = v40[1];
+            v43 = 0;
+            while ( *((_BYTE *)v42 + v43) )
+            {
+              if ( !*((_BYTE *)v42 + v43 + 1) )
+              {
+                ++v43;
+                if ( v41 < 0 )
+                  goto sub_60945324__LABEL_140;
+                goto sub_60945324__LABEL_125;
+              }
+              if ( !*((_BYTE *)v42 + v43 + 2) )
+              {
+                v43 += 2;
+                break;
+              }
+              v13 = v43 + 2 <= 0x7FFFF;
+              v43 += 3;
+              if ( !v13 )
+              {
+                v43 = 0;
+                if ( v41 < 0 )
+                  goto sub_60945324__LABEL_140;
+                goto sub_60945324__LABEL_125;
+              }
+            }
+            if ( v41 < 0 )
+              goto sub_60945324__LABEL_140;
+sub_60945324__LABEL_125:
+            if ( v41 <= v43 )
+            {
+              ((void (__fastcall *)(int (***)()))v64[3])(&v64);
+              v44 = v66;
+              if ( v66 >= 1 )
+              {
+                v45 = v65;
+                v46 = 0;
+                while ( 1 )
+                {
+                  v47 = v68[1];
+                  if ( !*((_BYTE *)v47 + v41) )
+                    break;
+                  ((void (__fastcall *)(int (***)()))v70[3])(&v70);
+                  v48 = *((unsigned __int8 *)v47 + v41);
+                  for ( n = 1; v71[n - 1]; n += 2 )
+                  {
+                    if ( (unsigned __int8)v71[n - 1] == v48 )
+                      goto sub_60945324__LABEL_139;
+                    if ( n >= 524289 || !v71[n] )
+                      break;
+                    if ( (unsigned __int8)v71[n] == v48 )
+                      goto sub_60945324__LABEL_139;
+                  }
+                  v45[v46++] = v48;
+                  ++v41;
+                  if ( v44 <= v46 )
+                    goto sub_60945324__LABEL_140;
+                }
+sub_60945324__LABEL_139:
+                v45[v46] = 0;
+                v69 = (char *)(v41 + 1);
+              }
+            }
+sub_60945324__LABEL_140:
+            if ( *v65 )
+              break;
+            v40 = v68;
+            v41 = (int)v69;
+            v50 = v69 == v62;
+            if ( v69 == v62 )
+              v50 = v68 == &v75;
+          }
+          while ( !v50 );
+        }
+        sub_60901490((int)&v64);
+        ++v39;
+        v63[v61] = v51;
+      }
+      while ( v61 + 1 < v60 );
+    }
+    v52 = 32 * v58;
+    v53 = v59 + 60;
+    v54 = v59 + 12 * v58;
+    *(_BYTE *)(v54 + 20) = v57;
+    *(_BYTE *)(v54 + 23) = v60;
+    *(_DWORD *)(v53 + 4 * (v52 | 1)) = v57;
+    *(_DWORD *)(v53 + 4 * v52) = v60;
+    if ( v60 )
+    {
+      v55 = ~v56;
+      if ( v56 == 30 || ~v56 < 0xFFFFFFE1 )
+        v55 = -31;
+      qmemcpy((void *)(v59 + ((v58 << 7) | 8) + 60), v63, -4 - 4 * v55);
+    }
+    v15 = v58 + 1;
+    if ( (unsigned int)(v58 + 1) >= 4 )
+    {
+      v4 = 6;
+      goto sub_60945324__LABEL_153;
+    }
+  }
+sub_60945324__LABEL_152:
+  v4 = 1;
+sub_60945324__LABEL_153:
+  result = 1;
+  if ( v4 == 6 )
+  {
+sub_60945324__LABEL_154:
+    v4 = 1;
+    result = 0;
+  }
+sub_60945324__LABEL_155:
+  if ( v4 == 2 )
+    return 2;
+  return result;
+}
+
 /* ============================================================================
  * sub_60945CD8
  * RVA 0x00945cd8   size 0x8   xrefs 0
@@ -296356,822 +296505,2856 @@ sub_608DF448__LABEL_158:
  * sub_60969DE4
  * RVA 0x00969de4   size 0x69a4   xrefs 1
  * ============================================================================ */
-  int __fastcall sub_60969DE4(int a1, int a2, int a3)
-  {
-    int v6; // r0
-    int v7; // r9
-    int v8; // r5
-    int v9; // r0
-    int v10; // r7
-    int v11; // r1
-    _DWORD *v12; // r6
-    int i; // r8
-    _DWORD *v14; // r4
-    unsigned int v15; // r0
-    _DWORD *v16; // r7
-    int v17; // r0
-    const char *v18; // r0
-    _DWORD *v19; // r0
-    unsigned int v20; // r1
-    int v21; // r0
-    const char *v22; // r0
-    const char *v23; // r0
-    const char *v24; // r0
-    const char *v25; // r0
-    const char *v26; // r0
-    const char *v27; // r0
-    const char *v28; // r0
-    unsigned int v29; // r1
-    const char *v30; // r0
-    const char *v31; // r0
-    const char *v32; // r0
-    const char *v33; // r0
-    const char *v34; // r0
-    _DWORD *v35; // r0
-    const char *v36; // r0
-    const char *v37; // r0
-    const char *v38; // r0
-    unsigned int v39; // r1
-    const char *v40; // r0
-    _DWORD *v41; // r0
-    unsigned int v42; // r1
-    const char *v43; // r0
-    const char *v44; // r0
-    _DWORD *v45; // r0
-    _DWORD *v47; // [sp+Ch] [bp-418h]
-    char v48; // [sp+10h] [bp-414h]
-    int v49; // [sp+14h] [bp-410h]
-    int v50; // [sp+18h] [bp-40Ch] BYREF
-    const char *v51; // [sp+1Ch] [bp-408h]
-  
-    v6 = (*(int (__fastcall **)(int, int))(*(_DWORD *)a3 + 64))(a3, 4);
-    v7 = 0;
-    v50 = 12321336;
-    v51 = "agl::detail::ShaderHolder";
-    v49 = sead__ExpHeap__create(v6, &v50, a3, 4, 1, 0);
-    v47 = (_DWORD *)a1;
-    v8 = a1 + 852;
-    v48 = *(_BYTE *)(a1 + 1428) ^ 5;
-    v9 = 0x15F6F2u;
-    do
-    {
-      sub_6091AE90(v9);
-      sub_604209A4(&v50, (int)"%s.%s");
-      v10 = (*(int (__fastcall **)(int, int *, _DWORD))(*(_DWORD *)a2 + 24))(a2, &v50, 0);
-      sharcb_ref();
-      sub_604209A4(&v50, (int)"%s.%s");
-      v11 = (*(int (__fastcall **)(int, int *, _DWORD))(*(_DWORD *)a2 + 24))(a2, &v50, 0);
-      v9 = v10 | v11;
-      if ( v10 | v11 )
-        v9 = sub_6091E838(v8, v11, v10, v48, v49);
-      ++v7;
-      v8 += 96;
-    }
-    while ( v7 != 6 );
-    v12 = v47;
-    for ( i = 0; i != 205; ++i )
-    {
-  sub_60969DE4__LABEL_7:
-      v14 = &v12[24 * arr_dword_60C5EC44[2 * i]];
-      if ( v14[218] || v14[219] )
-      {
-        v50 = 12321336;
-        v51 = (const char *)arr_dword_60C5EC44[2 * i + 1];
-        v15 = sub_6091F9A0((int)(v14 + 213), &v50);
-        v16 = 0;
-        if ( v14[220] > v15 )
-          v16 = (_DWORD *)(v14[221] + 936 * v15);
-        v17 = v12[5];
-        if ( v17 < v12[6] )
-        {
-          *(_DWORD *)(v12[7] + 4 * v17) = v16;
-          ++v12[5];
-        }
-        switch ( i )
-        {
-          case 0:
-            Undefined_ref_91CC00(v16, 6, v49);
-            v50 = 12321336;
-            v51 = "cWorldViewMatrix[0]";
-            NameTable_setEntryString(v16, 1u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cWorldViewProjectionMatrix[0]";
-            NameTable_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v51 = "cDiffuseColor0";
-            NameTable_setEntryString(v16, 2u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cDiffuseColor1";
-            NameTable_setEntryString(v16, 3u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cSpecularColor";
-            NameTable_setEntryString(v16, 4u, (int)&v50);
-            v50 = 12321336;
-            v29 = 5;
-            v30 = "cViewLightDir";
-            goto sub_60969DE4__LABEL_55;
-          case 1:
-            Undefined_ref_91CC00(v16, 5, v49);
-            v50 = 12321336;
-            v51 = "cNear";
-            NameTable_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v51 = "cFar";
-            NameTable_setEntryString(v16, 1u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cDepth[0]";
-            NameTable_setEntryString(v16, 2u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cColor[0]";
-            NameTable_setEntryString(v16, 3u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cLineNum";
-            NameTable_setEntryString(v16, 4u, (int)&v50);
-            Undefined_ref_91CE08(v16, 1, v49);
-            v50 = 12321336;
-            v31 = "cTexDepth";
-            goto sub_60969DE4__LABEL_131;
-          case 2:
-          case 3:
-          case 4:
-          case 5:
-          case 6:
-          case 10:
-          case 11:
-          case 12:
-          case 13:
-          case 14:
-          case 15:
-          case 16:
-          case 17:
-          case 18:
-          case 19:
-          case 20:
-          case 21:
-          case 22:
-          case 23:
-          case 24:
-          case 25:
-          case 26:
-          case 27:
-          case 28:
-          case 29:
-          case 30:
-          case 31:
-          case 32:
-          case 33:
-          case 34:
-          case 35:
-          case 36:
-          case 37:
-          case 38:
-          case 39:
-          case 40:
-          case 41:
-          case 42:
-          case 43:
-          case 44:
-          case 45:
-          case 46:
-          case 47:
-          case 48:
-          case 49:
-          case 50:
-          case 51:
-          case 52:
-          case 53:
-          case 101:
-            Undefined_ref(v16, 1, v49);
-            v50 = 12321336;
-            v51 = "aPosition";
-            sub_6091CB20(v16, 0, (int)&v50);
-            Undefined_ref_91CC00(v16, 26, v49);
-            v50 = 12321336;
-            v51 = "uProjViewWorld[0]";
-            NameTable_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v51 = "cTexSize";
-            NameTable_setEntryString(v16, 1u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uMipLevel";
-            NameTable_setEntryString(v16, 2u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uSlice";
-            NameTable_setEntryString(v16, 3u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uTexScale";
-            NameTable_setEntryString(v16, 4u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uTexRotate";
-            NameTable_setEntryString(v16, 5u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uTexTrans";
-            NameTable_setEntryString(v16, 6u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uMultiSampleNum";
-            NameTable_setEntryString(v16, 7u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uColor";
-            NameTable_setEntryString(v16, 8u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uColorMatrix[0]";
-            NameTable_setEntryString(v16, 9u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uTexFlipY";
-            NameTable_setEntryString(v16, 0xAu, (int)&v50);
-            v50 = 12321336;
-            v51 = "uTexFetchAdjust";
-            NameTable_setEntryString(v16, 0xBu, (int)&v50);
-            v50 = 12321336;
-            v51 = "cColorDriftR";
-            NameTable_setEntryString(v16, 0xCu, (int)&v50);
-            v50 = 12321336;
-            v51 = "cColorDriftG";
-            NameTable_setEntryString(v16, 0xDu, (int)&v50);
-            v50 = 12321336;
-            v51 = "cColorDriftB";
-            NameTable_setEntryString(v16, 0xEu, (int)&v50);
-            v50 = 12321336;
-            v51 = "uColorT";
-            NameTable_setEntryString(v16, 0xFu, (int)&v50);
-            v50 = 12321336;
-            v51 = "uColorB";
-            NameTable_setEntryString(v16, 0x10u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uCubeMapFace";
-            NameTable_setEntryString(v16, 0x11u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uBlurOffset";
-            NameTable_setEntryString(v16, 0x12u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uDepthNear";
-            NameTable_setEntryString(v16, 0x13u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uInvDepthRange";
-            NameTable_setEntryString(v16, 0x15u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uOneMinusNearDivFar";
-            NameTable_setEntryString(v16, 0x14u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cNV12DecodeParam";
-            NameTable_setEntryString(v16, 0x16u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uGamma";
-            NameTable_setEntryString(v16, 0x17u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uQuadTriangleZ";
-            NameTable_setEntryString(v16, 0x18u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uNormalizeValue";
-            NameTable_setEntryString(v16, 0x19u, (int)&v50);
-            Undefined_ref_91CE08(v16, 2, v49);
-            v50 = 12321336;
-            v51 = "uTexture";
-            NameTable2_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v18 = "uTexture_1";
-            goto sub_60969DE4__LABEL_15;
-          case 7:
-          case 8:
-            Undefined_ref_91CC00(v16, 13, v49);
-            v50 = 12321336;
-            v51 = "c3DTexCoordOffset";
-            NameTable_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v51 = "cHSBG";
-            NameTable_setEntryString(v16, 1u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cCurveA[0]";
-            NameTable_setEntryString(v16, 2u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cCurveB[0]";
-            NameTable_setEntryString(v16, 3u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cToyCam_Offset1";
-            NameTable_setEntryString(v16, 4u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cToyCam_Offset2";
-            NameTable_setEntryString(v16, 5u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cToyCam_Level1";
-            NameTable_setEntryString(v16, 6u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cToyCam_Level2";
-            NameTable_setEntryString(v16, 7u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cToyCam_Saturation1";
-            NameTable_setEntryString(v16, 8u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cToyCam_Saturation2";
-            NameTable_setEntryString(v16, 9u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cToyCam_Brightness";
-            NameTable_setEntryString(v16, 0xAu, (int)&v50);
-            v50 = 12321336;
-            v51 = "cToyCam_Contrast";
-            NameTable_setEntryString(v16, 0xBu, (int)&v50);
-            v50 = 12321336;
-            v51 = "cToyCam_MulColor";
-            NameTable_setEntryString(v16, 0xCu, (int)&v50);
-            Undefined_ref_91CE08(v16, 2, v49);
-            v50 = 12321336;
-            v51 = "cTexColor";
-            NameTable2_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v18 = "cTexCorrectionMap";
-            goto sub_60969DE4__LABEL_15;
-          case 9:
-            Undefined_ref_91CC00(v16, 27, v49);
-            v50 = 12321336;
-            v51 = "uProjViewWorld[0]";
-            NameTable_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v51 = "cTexSize";
-            NameTable_setEntryString(v16, 1u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uTexCoordScale";
-            NameTable_setEntryString(v16, 4u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uMipLevel";
-            NameTable_setEntryString(v16, 2u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uAlpha";
-            NameTable_setEntryString(v16, 0x1Au, (int)&v50);
-            Undefined_ref_91CE08(v16, 6, v49);
-            v50 = 12321336;
-            v51 = "uTexture";
-            NameTable2_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v51 = "uSnapColor";
-            NameTable2_setEntryString(v16, 2u, (int)&v50);
-            v50 = 12321336;
-            v51 = "uSnapDepth";
-            NameTable2_setEntryString(v16, 3u, (int)&v50);
-            v50 = 12321336;
-            v32 = "uTargetDepth";
-            goto sub_60969DE4__LABEL_120;
-          case 54:
-            Undefined_ref_91CC00(v16, 2, v49);
-            v50 = 12321336;
-            v51 = "cPositions[0]";
-            NameTable_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v29 = 1;
-            v30 = "cClearColor";
-            goto sub_60969DE4__LABEL_55;
-          case 55:
-            Undefined_ref_91CC00(v16, 5, v49);
-            v50 = 12321336;
-            v51 = "cWorld[0]";
-            NameTable_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v51 = "cView[0]";
-            NameTable_setEntryString(v16, 1u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cProj[0]";
-            NameTable_setEntryString(v16, 2u, (int)&v50);
-            v50 = 12321336;
-            v51 = "cColor";
-            NameTable_setEntryString(v16, 3u, (int)&v50);
-            v50 = 12321336;
-            v33 = "cPosition[0]";
-            goto sub_60969DE4__LABEL_115;
-          case 56:
-            Undefined_ref_91CC00(v16, 3, v49);
-            v50 = 12321336;
-            v51 = "cProjViewWorld[0]";
-            NameTable_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v51 = "cArcInfo";
-            NameTable_setEntryString(v16, 1u, (int)&v50);
-            v50 = 12321336;
-            v34 = "cColor";
-            goto sub_60969DE4__LABEL_109;
-          case 57:
-            Undefined_ref_91CC00(v16, 4, v49);
-            v50 = 12321336;
-            v51 = "cPVW_Cylinder";
-            NameTable_setEntryString(v16, 0, (int)&v50);
-            v50 = 12321336;
-            v51 = "cPVW_Hemisphere";
-            NameTable_setEntryString(v16, 1u, (int)&v50);
-            v50 = 12321336;
+  int __fastcall sub_60969DE4(_DWORD *a1, int a2, _DWORD *a3)
+{
+  int v6; // r0
+  int v7; // r9
+  _DWORD *v8; // r5
+  int v9; // r0
+  const char *v10; // r8
+  const char *v11; // r0
+  int v12; // r7
+  const char *v13; // r0
+  _DWORD *v14; // r6
+  int i; // r8
+  _DWORD *v16; // r4
+  unsigned int v17; // r0
+  int v18; // r7
+  int v19; // r0
+  const char *v20; // r0
+  int v21; // r0
+  unsigned int v22; // r1
+  int v23; // r0
+  const char *v24; // r0
+  const char *v25; // r0
+  const char *v26; // r0
+  const char *v27; // r0
+  const char *v28; // r0
+  const char *v29; // r0
+  const char *v30; // r0
+  int v31; // r1
+  const char *v32; // r0
+  const char *v33; // r0
+  const char *v34; // r0
+  const char *v35; // r0
+  const char *v36; // r0
+  int v37; // r0
+  const char *v38; // r0
+  const char *v39; // r0
+  const char *v40; // r0
+  int v41; // r1
+  const char *v42; // r0
+  int v43; // r0
+  unsigned int v44; // r1
+  const char *v45; // r0
+  const char *v46; // r0
+  int v47; // r0
+  _DWORD *v49; // [sp+Ch] [bp-43Ch]
+  int v50; // [sp+14h] [bp-434h]
+  int (**v51)(); // [sp+18h] [bp-430h] BYREF
+  const char *v52; // [sp+1Ch] [bp-42Ch]
 
+  v6 = (*(int (__fastcall **)(_DWORD *, int))(*a3 + 64))(a3, 4);
+  v7 = 0;
+  v51 = &`vtable for'sead::SafeStringBase<char>;
+  v52 = "agl::detail::ShaderHolder";
+  v50 = sead::ExpHeap::create(v6, (int)&v51, a3, 4, 1, 0);
+  v49 = a1;
+  v8 = a1 + 213;
+  v9 = 0x15F6F2u;
+  do
+  {
+    v10 = off_60C5EC2C[v7];
+    v11 = (const char *)sub_6091AE90(v9);
+    sub_604209A4(&v51, "%s.%s", v10, v11);
+    v12 = (*(int (__fastcall **)(int, int (***)(), _DWORD))(*(_DWORD *)a2 + 24))(a2, &v51, 0);
+    v13 = (const char *)sub_60913FD4(v12);
+    sub_604209A4(&v51, "%s.%s", v10, v13);
+    v9 = v12 | (*(int (__fastcall **)(int, int (***)(), _DWORD))(*(_DWORD *)a2 + 24))(a2, &v51, 0);
+    if ( v9 )
+      v9 = sub_6091E838(v8);
+    ++v7;
+    v8 += 24;
   }
+  while ( v7 != 6 );
+  v14 = v49;
+  for ( i = 0; i != 205; ++i )
+  {
+sub_60969DE4__LABEL_7:
+    v16 = &v14[24 * *((_DWORD *)&unk_60C5EC44 + 2 * i)];
+    if ( v16[218] || v16[219] )
+    {
+      v51 = &`vtable for'sead::SafeStringBase<char>;
+      v52 = *((const char **)&unk_60C5EC44 + 2 * i + 1);
+      v17 = sub_6091F9A0(v16 + 213, &v51);
+      v18 = 0;
+      if ( v16[220] > v17 )
+        v18 = v16[221] + 936 * v17;
+      v19 = v14[5];
+      if ( v19 < v14[6] )
+      {
+        *(_DWORD *)(v14[7] + 4 * v19) = v18;
+        ++v14[5];
+      }
+      switch ( i )
+      {
+        case 0:
+          sub_6091CC00(v18, 6, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cWorldViewMatrix[0]";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cWorldViewProjectionMatrix[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDiffuseColor0";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDiffuseColor1";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSpecularColor";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v31 = 5;
+          v32 = "cViewLightDir";
+          goto sub_60969DE4__LABEL_55;
+        case 1:
+          sub_6091CC00(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNear";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cFar";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepth[0]";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor[0]";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLineNum";
+          sub_6091CD98(v18, 4, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cTexDepth";
+          goto sub_60969DE4__LABEL_131;
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 10:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
+        case 20:
+        case 21:
+        case 22:
+        case 23:
+        case 24:
+        case 25:
+        case 26:
+        case 27:
+        case 28:
+        case 29:
+        case 30:
+        case 31:
+        case 32:
+        case 33:
+        case 34:
+        case 35:
+        case 36:
+        case 37:
+        case 38:
+        case 39:
+        case 40:
+        case 41:
+        case 42:
+        case 43:
+        case 44:
+        case 45:
+        case 46:
+        case 47:
+        case 48:
+        case 49:
+        case 50:
+        case 51:
+        case 52:
+        case 53:
+        case 101:
+          sub_6091C988(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "aPosition";
+          sub_6091CB20(v18, 0, &v51);
+          sub_6091CC00(v18, 26, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uProjViewWorld[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexSize";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uMipLevel";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uSlice";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTexScale";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTexRotate";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTexTrans";
+          sub_6091CD98(v18, 6, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uMultiSampleNum";
+          sub_6091CD98(v18, 7, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uColor";
+          sub_6091CD98(v18, 8, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uColorMatrix[0]";
+          sub_6091CD98(v18, 9, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTexFlipY";
+          sub_6091CD98(v18, 10, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTexFetchAdjust";
+          sub_6091CD98(v18, 11, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColorDriftR";
+          sub_6091CD98(v18, 12, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColorDriftG";
+          sub_6091CD98(v18, 13, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColorDriftB";
+          sub_6091CD98(v18, 14, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uColorT";
+          sub_6091CD98(v18, 15, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uColorB";
+          sub_6091CD98(v18, 16, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uCubeMapFace";
+          sub_6091CD98(v18, 17, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uBlurOffset";
+          sub_6091CD98(v18, 18, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uDepthNear";
+          sub_6091CD98(v18, 19, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uInvDepthRange";
+          sub_6091CD98(v18, 21, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uOneMinusNearDivFar";
+          sub_6091CD98(v18, 20, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNV12DecodeParam";
+          sub_6091CD98(v18, 22, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uGamma";
+          sub_6091CD98(v18, 23, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uQuadTriangleZ";
+          sub_6091CD98(v18, 24, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uNormalizeValue";
+          sub_6091CD98(v18, 25, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v20 = "uTexture_1";
+          goto sub_60969DE4__LABEL_15;
+        case 7:
+        case 8:
+          sub_6091CC00(v18, 13, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "c3DTexCoordOffset";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cHSBG";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCurveA[0]";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCurveB[0]";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cToyCam_Offset1";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cToyCam_Offset2";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cToyCam_Level1";
+          sub_6091CD98(v18, 6, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cToyCam_Level2";
+          sub_6091CD98(v18, 7, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cToyCam_Saturation1";
+          sub_6091CD98(v18, 8, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cToyCam_Saturation2";
+          sub_6091CD98(v18, 9, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cToyCam_Brightness";
+          sub_6091CD98(v18, 10, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cToyCam_Contrast";
+          sub_6091CD98(v18, 11, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cToyCam_MulColor";
+          sub_6091CD98(v18, 12, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexColor";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v20 = "cTexCorrectionMap";
+          goto sub_60969DE4__LABEL_15;
+        case 9:
+          sub_6091CC00(v18, 27, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uProjViewWorld[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexSize";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTexCoordScale";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uMipLevel";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uAlpha";
+          sub_6091CD98(v18, 26, &v51);
+          sub_6091CE08(v18, 6, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uSnapColor";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uSnapDepth";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v34 = "uTargetDepth";
+          goto sub_60969DE4__LABEL_120;
+        case 54:
+          sub_6091CC00(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cPositions[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v31 = 1;
+          v32 = "cClearColor";
+          goto sub_60969DE4__LABEL_55;
+        case 55:
+          sub_6091CC00(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cWorld[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cView[0]";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cProj[0]";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v35 = "cPosition[0]";
+          goto sub_60969DE4__LABEL_115;
+        case 56:
+          sub_6091CC00(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cProjViewWorld[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cArcInfo";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v36 = "cColor";
+          goto sub_60969DE4__LABEL_109;
+        case 57:
+          sub_6091CC00(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cPVW_Cylinder";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cPVW_Hemisphere";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v31 = 3;
+          v32 = "cHemisphereOffsetLocal";
+sub_60969DE4__LABEL_55:
+          v52 = v32;
+          v37 = v18;
+          goto sub_60969DE4__LABEL_116;
+        case 58:
+        case 59:
+          sub_6091C988(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "aPosition";
+          sub_6091CB20(v18, 0, &v51);
+          sub_6091CC00(v18, 26, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uProjViewWorld[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uMipLevel";
+          sub_6091CD98(v18, 2, &v51);
+          sub_6091CE08(v18, 9, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTextureColor_0";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTextureColor_1";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTextureColor_2";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTextureColor_3";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTextureColor_4";
+          sub_6091CFA0(v18, 4u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTextureColor_5";
+          sub_6091CFA0(v18, 5u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTextureColor_6";
+          sub_6091CFA0(v18, 6u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uTextureColor_7";
+          sub_6091CFA0(v18, 7u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v22 = 8;
+          v29 = "uTextureDepth";
+          goto sub_60969DE4__LABEL_45;
+        case 60:
+        case 61:
+        case 62:
+        case 63:
+          sub_6091CC00(v18, 10, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLuminanceWeight";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cThresholdParam";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cComposeColor";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthParam0";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthParam1";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNearFarTexSize";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cGaussianParam";
+          sub_6091CD98(v18, 6, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLuminanceParam";
+          sub_6091CD98(v18, 7, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cParam6";
+          sub_6091CD98(v18, 8, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cParam7";
+          sub_6091CD98(v18, 9, &v51);
+          sub_6091CE08(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureColor";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureDepth";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v27 = "cTextureLuminanceOffset";
+          goto sub_60969DE4__LABEL_41;
+        case 64:
+          sub_6091CC00(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cParam";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexCoordCoeff0";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexCoordCoeff1";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColorCorrectionCoeff";
+          sub_6091CD98(v18, 4, &v51);
+          sub_6091CE08(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cExposureTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cHDRImage";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cBloom";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColorCorrectionTable";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v38 = "cNormalizedLinearDepth";
+          goto sub_60969DE4__LABEL_135;
+        case 65:
+        case 66:
+        case 67:
+        case 68:
+        case 69:
+        case 70:
+        case 71:
+          sub_6091CC00(v18, 13, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cParam0";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cIndirectTexParam";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cIndirectTexMtx0";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cIndirectTexMtx1";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cMulParam";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAddParam";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNearFarParam";
+          sub_6091CD98(v18, 6, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexParam";
+          sub_6091CD98(v18, 7, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cVignettingRadius";
+          sub_6091CD98(v18, 8, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cVignettingParam";
+          sub_6091CD98(v18, 9, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cVignettingTrans";
+          sub_6091CD98(v18, 10, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cVignettingColor";
+          sub_6091CD98(v18, 11, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cFarMulColor";
+          sub_6091CD98(v18, 12, &v51);
+          sub_6091CE08(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexColor";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexDepth";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexMipMap";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexMipMapDepth";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v24 = "cTexIndirect";
+          goto sub_60969DE4__LABEL_24;
+        case 72:
+        case 73:
+        case 74:
+        case 75:
+        case 76:
+          sub_6091CC00(v18, 12, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cFrameSize";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cFrameRCP1H";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cFrameRCPOffset";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLumaCoeff";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cEdgeThreshold";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cQualityParam";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAlphaOut";
+          sub_6091CD98(v18, 6, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cFinalPowerGL";
+          sub_6091CD98(v18, 7, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cPrevScreenCoordTrx[0]";
+          sub_6091CD98(v18, 8, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNearFar";
+          sub_6091CD98(v18, 9, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNearFarCache";
+          sub_6091CD98(v18, 10, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDrawDepth";
+          sub_6091CD98(v18, 11, &v51);
+          sub_6091CE08(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexBase";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexLuma";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexReduce";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexDepth";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v24 = "cTexPrev";
+sub_60969DE4__LABEL_24:
+          v52 = v24;
+          v21 = v18;
+          v22 = 4;
+          goto sub_60969DE4__LABEL_16;
+        case 77:
+          sub_6091CC00(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cFrameRCP";
+          sub_6091CD98(v18, 0, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexNormal";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cTexReduce";
+          goto sub_60969DE4__LABEL_129;
+        case 78:
+        case 79:
+        case 80:
+        case 81:
+        case 82:
+        case 83:
+        case 84:
+          sub_6091D080(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "imOutputColor";
+          sub_6091D218(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "imEdgeCounter";
+          sub_6091D218(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "imEdgePosStorage";
+          sub_6091D218(v18, 2, &v51);
+          sub_6091D500(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "outputSSBO";
+          sub_6091D698(v18, 0, &v51);
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Common";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CC00(v18, 6, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cScreenParam";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSMAAEdgeParam";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSMAAWeightCalcParam";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSMAASubsampleIndices";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cVelocityMapParam";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSMAAComposeParam";
+          sub_6091CD98(v18, 5, &v51);
+          sub_6091CE08(v18, 8, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureCurColor";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexturePrevColor";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureVelocityMap";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureLuminanceMap";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureLuminanceMap";
+          v14 = v49;
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureEdgeMap";
+          sub_6091CFA0(v18, 4u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureBlendWeightMap";
+          sub_6091CFA0(v18, 5u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureSMAAArea";
+          sub_6091CFA0(v18, 6u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v25 = "cTextureSMAASearch";
+          goto sub_60969DE4__LABEL_31;
+        case 85:
+        case 86:
+          sub_6091D288(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Light";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "LightView";
+          sub_6091D420(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "LightMip";
+          sub_6091D420(v18, 2, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLUT";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v20 = "cNormal";
+sub_60969DE4__LABEL_15:
+          v52 = v20;
+          v21 = v18;
+          v22 = 1;
+          goto sub_60969DE4__LABEL_16;
+        case 87:
+          sub_6091D288(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "BlendInfo";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "ProbeSH";
+          sub_6091D420(v18, 1, &v51);
+          sub_6091CE08(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNormal";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightMap0";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v40 = "cLightMap1";
+          goto sub_60969DE4__LABEL_133;
+        case 88:
+        case 89:
+        case 90:
+          sub_6091D288(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Context";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "PointLightView";
+          sub_6091D420(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "SpotLightView";
+          sub_6091D420(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "ProjLightView";
+          sub_6091D420(v18, 3, &v51);
+          sub_6091CE08(v18, 6, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepth";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNormal";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSpecPowTable";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cProjTex";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthShadow";
+          sub_6091CFA0(v18, 4u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v28 = "cAlbedo";
+          goto sub_60969DE4__LABEL_43;
+        case 91:
+          sub_6091CC00(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cWVP[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v36 = "cSpotCone_CenterScale";
+          goto sub_60969DE4__LABEL_109;
+        case 92:
+        case 93:
+          sub_6091C988(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "aPosition";
+          sub_6091CB20(v18, 0, &v51);
+          sub_6091CC00(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexOffsetScale";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexWidthInv";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexOffsetAdjust";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "c3DTexCoordOffset";
+          sub_6091CD98(v18, 3, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v30 = "cTexture";
+          goto sub_60969DE4__LABEL_47;
+        case 94:
+          sub_6091CC00(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "uParam0";
+          sub_6091CD98(v18, 0, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "uTexture";
+          goto sub_60969DE4__LABEL_131;
+        case 95:
+          sub_6091CC00(v18, 7, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexFlipY";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCubeMapFace";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCubeMapArrayIndex";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cMipLevel";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureWidth";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAngleScale";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cOffsetScale";
+          sub_6091CD98(v18, 6, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "sTexCube";
+          goto sub_60969DE4__LABEL_131;
+        case 96:
+          sub_6091CC00(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexFlipY";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCubeMapFace";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCubeMapArrayIndex";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cMipLevel";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureWidth";
+          sub_6091CD98(v18, 4, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "sTexCube";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "sTexCorrectValue";
+          goto sub_60969DE4__LABEL_129;
+        case 97:
+          sub_6091CC00(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexFlipY";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureWidth";
+          sub_6091CD98(v18, 1, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "sTexHeadArray";
+          goto sub_60969DE4__LABEL_131;
+        case 98:
+          sub_6091CC00(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexFlipY";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureWidth";
+          sub_6091CD98(v18, 1, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "sTexHead";
+          goto sub_60969DE4__LABEL_131;
+        case 99:
+          sub_6091CC00(v18, 7, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexFlipY";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cMipLevel";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCubeMapFace";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCubeMapArrayIndex";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureWidth";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDynamicRange";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cHDRDecodePower";
+          sub_6091CD98(v18, 6, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "sTexCube";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "sTexCorrectValue";
+          goto sub_60969DE4__LABEL_129;
+        case 100:
+          sub_6091CC00(v18, 8, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cProjMtx[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cViewMtx[0]";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCenterPos";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAspect";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cScale";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cIntensity";
+          sub_6091CD98(v18, 6, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexFlipY";
+          sub_6091CD98(v18, 7, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "sTexture";
+          goto sub_60969DE4__LABEL_131;
+        case 102:
+          sub_6091C988(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "aPosition";
+          sub_6091CB20(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "aBlendWeight";
+          sub_6091CB20(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "aBlendIndex";
+          sub_6091CB20(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "aTexCoord0";
+          sub_6091CB20(v18, 3, &v51);
+          sub_6091D288(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "View";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Skeleton";
+          sub_6091D420(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Material";
+          sub_6091D420(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Shape";
+          sub_6091D420(v18, 3, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cAlbedo";
+          goto sub_60969DE4__LABEL_131;
+        case 103:
+          sub_6091CC00(v18, 10, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cProjViewMtx[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cWorldMtx[0]";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCamWorld";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cUseReflection";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cUseMipLevel";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDynamicRange";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cHDRDecodePower";
+          sub_6091CD98(v18, 6, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAlphaAdd";
+          sub_6091CD98(v18, 7, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cMipLevel";
+          sub_6091CD98(v18, 8, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCubeMapArrayIndex";
+          sub_6091CD98(v18, 9, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "sTexCube";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "sTexCorrectValue";
+          goto sub_60969DE4__LABEL_129;
+        case 104:
+          sub_6091CC00(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cPVW[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNearFarParam";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cInvTextureSize";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureIndex";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureIndexY";
+          sub_6091CD98(v18, 4, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cTexture";
+          goto sub_60969DE4__LABEL_131;
+        case 105:
+          sub_6091CC00(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cInvTexSize";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSlice";
+          sub_6091CD98(v18, 1, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cTexture";
+          goto sub_60969DE4__LABEL_131;
+        case 106:
+        case 107:
+        case 108:
+        case 109:
+          sub_6091CC00(v18, 7, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAOParam0";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAOParam1";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAOParam2";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNearFar";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cInvTexSize";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSamplePoint[0]";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRotate[0]";
+          sub_6091CD98(v18, 6, &v51);
+          sub_6091CE08(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureRotate";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureDepth";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureMask";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAO_UB";
+          sub_6091D420(v18, 0, &v51);
+          continue;
+        case 110:
+          sub_6091D288(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "View";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "AABB";
+          sub_6091D420(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Sphere";
+          sub_6091D420(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v41 = 3;
+          v42 = "Cylinder";
+          goto sub_60969DE4__LABEL_111;
+        case 112:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Context";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cDepth";
+          goto sub_60969DE4__LABEL_131;
+        case 113:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Element";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cOcclusion";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexture";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v40 = "cTexture2";
+          goto sub_60969DE4__LABEL_133;
+        case 114:
+        case 115:
+          sub_6091CC00(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexSizeRCP";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cReferLevel";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cReferSlice";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cReferFace";
+          sub_6091CD98(v18, 3, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v30 = "cTexture";
+          goto sub_60969DE4__LABEL_47;
+        case 116:
+          sub_6091D288(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Common";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "SphereBlock";
+          sub_6091D420(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "CylinderBlock";
+          sub_6091D420(v18, 2, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLinearDepth";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cTexColor";
+          goto sub_60969DE4__LABEL_129;
+        case 117:
+        case 118:
+          sub_6091CC00(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRadius";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cBlurPosition";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cVtxColor[0]";
+          sub_6091CD98(v18, 2, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v30 = "cTexture";
+          goto sub_60969DE4__LABEL_47;
+        case 119:
+          sub_6091CC00(v18, 8, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTanFovyHalf";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cProjOffset";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcStep";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDstStep";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cIntensity";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRange";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSteep";
+          sub_6091CD98(v18, 7, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNear";
+          sub_6091CD98(v18, 6, &v51);
+          sub_6091CE08(v18, 8, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcLight";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcAlbedo";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcDepth";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcNormal";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcPos";
+          sub_6091CFA0(v18, 4u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDstAlbedo";
+          sub_6091CFA0(v18, 5u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDstDepth";
+          sub_6091CFA0(v18, 6u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          goto sub_60969DE4__LABEL_77;
+        case 120:
+          sub_6091CC00(v18, 10, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTanFovyHalf";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cProjOffset";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcStep";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDstStep";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cIntensity";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRange";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSteep";
+          sub_6091CD98(v18, 7, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNear";
+          sub_6091CD98(v18, 6, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cPow";
+          sub_6091CD98(v18, 8, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cInflate";
+          sub_6091CD98(v18, 9, &v51);
+          sub_6091CE08(v18, 8, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcLight";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcAlbedo";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcDepth";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcNormal";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcPos";
+          sub_6091CFA0(v18, 4u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDstAlbedo";
+          sub_6091CFA0(v18, 5u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDstDepth";
+          sub_6091CFA0(v18, 6u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+sub_60969DE4__LABEL_77:
+          v52 = "cDstNormal";
+          v43 = v18;
+          v44 = 7;
+          goto sub_60969DE4__LABEL_6;
+        case 121:
+        case 122:
+          sub_6091CC00(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cStep";
+          sub_6091CD98(v18, 0, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cSrc";
+          goto sub_60969DE4__LABEL_131;
+        case 123:
+          sub_6091CC00(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTanFovyHalf";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cProjOffset";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRange";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNear";
+          sub_6091CD98(v18, 3, &v51);
+          sub_6091CE08(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLight";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAlbedo";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v40 = "cDepth";
+          goto sub_60969DE4__LABEL_133;
+        case 124:
+          sub_6091CC00(v18, 6, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTanFovyHalf";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cProjOffset";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcStep";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDstStep";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRange";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNear";
+          sub_6091CD98(v18, 5, &v51);
+          sub_6091CE08(v18, 7, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcLight0";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcLight1";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcNormal";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcDepth";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDstAlbedo";
+          sub_6091CFA0(v18, 4u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDstNormal";
+          sub_6091CFA0(v18, 5u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v44 = 6;
+          v45 = "cDstDepth";
+          goto sub_60969DE4__LABEL_127;
+        case 125:
+          sub_6091CC00(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cThreshold";
+          sub_6091CD98(v18, 0, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrc0";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cSrc1";
+          goto sub_60969DE4__LABEL_129;
+        case 126:
+          sub_6091CC00(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cParam0";
+          sub_6091CD98(v18, 0, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cHeightTexture";
+          goto sub_60969DE4__LABEL_131;
+        case 127:
+          sub_6091CC00(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cParam0";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cParam1";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cParam2";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cParam3";
+          sub_6091CD98(v18, 3, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cPrevTexture";
+          goto sub_60969DE4__LABEL_129;
+        case 128:
+          sub_6091CC00(v18, 6, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTanFovyHalf";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cProjOffset";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cBias";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cStep";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthCorrection";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAlpha";
+          sub_6091CD98(v18, 5, &v51);
+          sub_6091CE08(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcLight";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcDepth";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v40 = "cBiasTex";
+          goto sub_60969DE4__LABEL_133;
+        case 129:
+          sub_6091CC00(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cWeight";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAlpha";
+          sub_6091CD98(v18, 1, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cSrc";
+          goto sub_60969DE4__LABEL_131;
+        case 130:
+          sub_6091CC00(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcStep";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAlpha";
+          sub_6091CD98(v18, 1, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrc0";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cSrc1";
+          goto sub_60969DE4__LABEL_129;
+        case 131:
+          sub_6091CC00(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cBaseDepth";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNear";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRange";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cOneMinusNearDivFar";
+          sub_6091CD98(v18, 3, &v51);
+          sub_6091CE08(v18, 6, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSss0";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSss1";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSss2";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNoSss";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepth";
+          sub_6091CFA0(v18, 4u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v34 = "cTrans";
+          goto sub_60969DE4__LABEL_120;
+        case 132:
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrc";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cWeight";
+          goto sub_60969DE4__LABEL_129;
+        case 133:
+          sub_6091D288(v18, 1, v50);
+          v41 = 0;
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v42 = "Seed";
+          goto sub_60969DE4__LABEL_111;
+        case 134:
+          sub_6091CC00(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcStep";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAlpha";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor";
+          sub_6091CD98(v18, 2, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cSrc";
+          goto sub_60969DE4__LABEL_131;
+        case 135:
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cSrc";
+          goto sub_60969DE4__LABEL_131;
+        case 136:
+          sub_6091CC00(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v46 = "cColor";
+          goto sub_60969DE4__LABEL_96;
+        case 137:
+          sub_6091CC00(v18, 6, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cGhostDispersal";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cGhostColor[0]";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cHaloWidth";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cHaloColor";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cChromaDistortion";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor";
+          sub_6091CD98(v18, 5, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cSrc";
+          goto sub_60969DE4__LABEL_131;
+        case 138:
+          sub_6091CC00(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcStep";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAlpha";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cThreshold";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor";
+          sub_6091CD98(v18, 3, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cSrc";
+          goto sub_60969DE4__LABEL_131;
+        case 139:
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          sub_6091CC00(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v46 = "cParam0";
+sub_60969DE4__LABEL_96:
+          v52 = v46;
+          v37 = v18;
+          v31 = 0;
+          goto sub_60969DE4__LABEL_116;
+        case 140:
+        case 141:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Common";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLinearDepth";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAoBuffer";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "texDynamicShadowCascade";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "texDynamicShadow";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v38 = "texStaticDepthShadow";
+          goto sub_60969DE4__LABEL_135;
+        case 142:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Common";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cDepthTexture";
+          goto sub_60969DE4__LABEL_129;
+        case 143:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Common";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcShadowBuffer";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cAoBuffer";
+          goto sub_60969DE4__LABEL_129;
+        case 144:
+        case 145:
+          sub_6091CC00(v18, 7, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cW[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cBP[0]";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cInvP[0]";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRayArray[0]";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRayParamS";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRayParamF";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cParamCamera";
+          sub_6091CD98(v18, 6, &v51);
+          sub_6091CE08(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSamplerDepth";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSamplerLinearDepth";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v27 = "cSamplerMask";
+sub_60969DE4__LABEL_41:
+          v52 = v27;
+          v21 = v18;
+          v22 = 2;
+          goto sub_60969DE4__LABEL_16;
+        case 146:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Common";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cTexture";
+          goto sub_60969DE4__LABEL_129;
+        case 147:
+          sub_6091D288(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Common";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Trail";
+          sub_6091D420(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Counter";
+          sub_6091D420(v18, 2, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cTexture";
+          goto sub_60969DE4__LABEL_129;
+        case 148:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Common";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cTexture";
+          goto sub_60969DE4__LABEL_131;
+        case 149:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Common";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cLinearDepthTexture";
+          goto sub_60969DE4__LABEL_129;
+        case 150:
+          sub_6091D288(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Context";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "EyeParam";
+          sub_6091D420(v18, 1, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cSunColorTable";
+          goto sub_60969DE4__LABEL_131;
+        case 151:
+          sub_6091D288(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Context";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "EyeParam";
+          sub_6091D420(v18, 1, &v51);
+          sub_6091CE08(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepth";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSunColorTable";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cGndColorTable";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v38 = "cGndAttnTable";
+          goto sub_60969DE4__LABEL_135;
+        case 152:
+          sub_6091CE08(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor1";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor2";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cGndColorTable";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cGndAttnTable";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          sub_6091D288(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Context";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v41 = 1;
+          v42 = "Cloud";
+          goto sub_60969DE4__LABEL_111;
+        case 153:
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureBase";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          sub_6091CC00(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRatio";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cViewport";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v36 = "cWeightMtx[0]";
+          goto sub_60969DE4__LABEL_109;
+        case 154:
+          sub_6091CC00(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cPVW[0]";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cWorld[0]";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v36 = "cColor";
+sub_60969DE4__LABEL_109:
+          v52 = v36;
+          v37 = v18;
+          v31 = 2;
+          goto sub_60969DE4__LABEL_116;
+        case 155:
+          sub_6091D288(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "View";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "ShapeMask";
+          sub_6091D420(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v41 = 2;
+          v42 = "ShapeInfo";
+sub_60969DE4__LABEL_111:
+          v52 = v42;
+          v47 = v18;
+          goto sub_60969DE4__LABEL_113;
+        case 156:
+        case 157:
+        case 158:
+          sub_6091D288(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "View";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "PointMask";
+          sub_6091D420(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "PointInfo";
+          v47 = v18;
+          v41 = 4;
+sub_60969DE4__LABEL_113:
+          sub_6091D420(v47, v41, &v51);
+          ++i;
+          goto sub_60969DE4__LABEL_7;
+        case 159:
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "sTexCube";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          sub_6091CC00(v18, 6, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTexFlipY";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCubeMapFace";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCubeMapArrayIndex";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAngleParam";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v35 = "cMipLevel";
+sub_60969DE4__LABEL_115:
+          v52 = v35;
+          v37 = v18;
+          v31 = 4;
+sub_60969DE4__LABEL_116:
+          sub_6091CD98(v37, v31, &v51);
+          ++i;
+          goto sub_60969DE4__LABEL_7;
+        case 160:
+        case 161:
+        case 162:
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColorCube";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLinearDepthCube";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          sub_6091CC00(v18, 7, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cAngleParam";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cMipLevel";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCalcSHParam";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDistanceParam";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cPointSampleWorldNormal";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNearFarParam";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cOcclusionParam";
+          sub_6091CD98(v18, 6, &v51);
+          continue;
+        case 163:
+          sub_6091D288(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "ViewContext";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "FilterContext";
+          sub_6091D420(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "ReflectionContext";
+          sub_6091D420(v18, 1, &v51);
+          sub_6091CE08(v18, 9, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cViewNormalTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLinearDepthTexture";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v40 = "cRoughnessTexture";
+          goto sub_60969DE4__LABEL_133;
+        case 164:
+        case 165:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "FilterContext";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 9, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cViewNormalTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLinearDepthTexture";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v28 = "cFilterInputTexture";
+sub_60969DE4__LABEL_43:
+          v52 = v28;
+          v21 = v18;
+          v22 = 5;
+          goto sub_60969DE4__LABEL_16;
+        case 166:
+          sub_6091D288(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "ViewContext";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "FilterContext";
+          sub_6091D420(v18, 1, &v51);
+          sub_6091CE08(v18, 9, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cViewNormalTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLinearDepthTexture";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v34 = "cFilterInputTexture";
+          goto sub_60969DE4__LABEL_120;
+        case 167:
+        case 168:
+        case 170:
+          sub_6091D288(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "ViewContext";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "ReflectionContext";
+          sub_6091D420(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "FilterContext";
+          sub_6091D420(v18, 2, &v51);
+          sub_6091CE08(v18, 9, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cViewNormalTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLinearDepthTexture";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColorTexture";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cReflectionCacheTexture";
+          sub_6091CFA0(v18, 4u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cJitteredTexture";
+          sub_6091CFA0(v18, 6u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRoughnessTexture";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v25 = "cReflectionHistoryTexture";
+sub_60969DE4__LABEL_31:
+          v52 = v25;
+          v21 = v18;
+          v22 = 7;
+          goto sub_60969DE4__LABEL_16;
+        case 169:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "FilterContext";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 9, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v34 = "cFilterInputTexture";
+sub_60969DE4__LABEL_120:
+          v52 = v34;
+          v43 = v18;
+          v44 = 5;
+          goto sub_60969DE4__LABEL_6;
+        case 171:
+        case 172:
+        case 173:
+          sub_6091D288(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "DebugContext";
+          sub_6091D420(v18, 0, &v51);
+          sub_6091CE08(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightTexture0";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightTexture1";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightTexture2";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v26 = "cLightTexture3";
+          goto sub_60969DE4__LABEL_33;
+        case 174:
+        case 175:
+          sub_6091D288(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "VoxelContext";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "ProbeContext";
+          sub_6091D420(v18, 1, &v51);
+          sub_6091CE08(v18, 7, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cViewNormalTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLinearDepthTexture";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightTexture0";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightTexture1";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightTexture2";
+          sub_6091CFA0(v18, 4u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightTexture3";
+          sub_6091CFA0(v18, 5u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v22 = 6;
+          v29 = "cNormalCubeMapTexture";
+sub_60969DE4__LABEL_45:
+          v52 = v29;
+          v21 = v18;
+          goto sub_60969DE4__LABEL_16;
+        case 176:
+        case 177:
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v30 = "cSHTexture";
+sub_60969DE4__LABEL_47:
+          v52 = v30;
+          v21 = v18;
+          v22 = 0;
+          goto sub_60969DE4__LABEL_16;
+        case 178:
+          sub_6091CC00(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cPointInfoArray";
+          sub_6091CD98(v18, 0, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cSHTexture";
+          goto sub_60969DE4__LABEL_131;
+        case 179:
+          sub_6091CC00(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSHParam3";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cPointInfoArray";
+          sub_6091CD98(v18, 1, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cSHTexture";
+          goto sub_60969DE4__LABEL_131;
+        case 180:
+          sub_6091CC00(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSrcSHParam3";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSliceParam";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cRectInfoArray";
+          sub_6091CD98(v18, 2, &v51);
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSHTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cLightTexture3";
+          goto sub_60969DE4__LABEL_129;
+        case 181:
+          sub_6091CC00(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCopyRectInfoArray";
+          sub_6091CD98(v18, 0, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cTexture3d_0";
+          goto sub_60969DE4__LABEL_131;
+        case 182:
+          sub_6091CC00(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCopyRectInfoArray";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCopyParam";
+          sub_6091CD98(v18, 1, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cTexture3d_0";
+          goto sub_60969DE4__LABEL_131;
+        case 183:
+          sub_6091CC00(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cCopyRectInfoArray";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cUpdateParam";
+          sub_6091CD98(v18, 1, &v51);
+          sub_6091CE08(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightTexture0";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightTexture1";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLightTexture2";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v44 = 3;
+          v45 = "cLightTexture3";
+sub_60969DE4__LABEL_127:
+          v52 = v45;
+          v43 = v18;
+          goto sub_60969DE4__LABEL_6;
+        case 184:
+          sub_6091CE08(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNormal";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = "cSrcSamplerCube";
+sub_60969DE4__LABEL_129:
+          v52 = v39;
+          v43 = v18;
+          v44 = 1;
+          goto sub_60969DE4__LABEL_6;
+        case 185:
+          sub_6091CC00(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNearFarParam";
+          sub_6091CD98(v18, 0, &v51);
+          sub_6091CE08(v18, 1, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v33 = "cNonLinearDepthTexture";
+sub_60969DE4__LABEL_131:
+          v52 = v33;
+          v43 = v18;
+          v44 = 0;
+          goto sub_60969DE4__LABEL_6;
+        case 186:
+          sub_6091CC00(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cInvTexSize";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cVarianceMax";
+          sub_6091CD98(v18, 1, &v51);
+          sub_6091CE08(v18, 3, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureColor";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cTextureDepth";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v40 = "cTextureLinearDepth";
+sub_60969DE4__LABEL_133:
+          v52 = v40;
+          v43 = v18;
+          v44 = 2;
+          goto sub_60969DE4__LABEL_6;
+        case 187:
+          sub_6091D288(v18, 2, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "View";
+          sub_6091D420(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "Common";
+          sub_6091D420(v18, 1, &v51);
+          sub_6091CE08(v18, 5, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cBaseTexture";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNoiseTexture";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cBaseTexture_Blend";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cNoiseTexture_Blend";
+          sub_6091CFA0(v18, 3u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v38 = "cScatterTexture";
+sub_60969DE4__LABEL_135:
+          v52 = v38;
+          v43 = v18;
+          v44 = 4;
+sub_60969DE4__LABEL_6:
+          sub_6091CFA0(v43, v44, (int)&v51);
+          ++i;
+          goto sub_60969DE4__LABEL_7;
+        case 188:
+        case 189:
+        case 190:
+        case 191:
+        case 192:
+          sub_6091CC00(v18, 12, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cArrayIndex";
+          sub_6091CD98(v18, 0, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cSizeRCP";
+          sub_6091CD98(v18, 9, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cViewInvMtx[0]";
+          sub_6091CD98(v18, 1, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLayerTrans";
+          sub_6091CD98(v18, 2, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLayerRenderInfo";
+          sub_6091CD98(v18, 3, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cLayerNum";
+          sub_6091CD98(v18, 4, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cHeightAttenuation";
+          sub_6091CD98(v18, 5, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthShadowProj[0]";
+          sub_6091CD98(v18, 6, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthShadowLength[0]";
+          sub_6091CD98(v18, 7, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthShadowAmplifier";
+          sub_6091CD98(v18, 8, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cViewProjMtx[0]";
+          sub_6091CD98(v18, 10, &v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cColor";
+          sub_6091CD98(v18, 11, &v51);
+          sub_6091CE08(v18, 4, v50);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthTex";
+          sub_6091CFA0(v18, 0, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cDepthShadowTex";
+          sub_6091CFA0(v18, 1u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v52 = "cMaskTex";
+          sub_6091CFA0(v18, 2u, (int)&v51);
+          v51 = &`vtable for'sead::SafeStringBase<char>;
+          v26 = "cVolumeTex";
+sub_60969DE4__LABEL_33:
+          v52 = v26;
+          v21 = v18;
+          v22 = 3;
+sub_60969DE4__LABEL_16:
+          sub_6091CFA0(v21, v22, (int)&v51);
+          continue;
+        default:
+          continue;
+      }
+    }
+    v23 = v14[5];
+    if ( v23 < v14[6] )
+    {
+      *(_DWORD *)(v14[7] + 4 * v23) = 0;
+      ++v14[5];
+    }
   }
-  }
-  }
+  if ( v14[266] || v14[267] )
+    sub_60972BA8(v14 + 261, v50);
+  if ( v14[242] || v14[243] )
+    sub_6097276C(v14 + 237, v50);
+  if ( v14[218] || v14[219] )
+    sub_6091F558(v14 + 213);
+  if ( v14[242] || v14[243] )
+    sub_6091F558(v14 + 237);
+  if ( v14[266] || v14[267] )
+    sub_6091F558(v14 + 261);
+  if ( v14[290] || v14[291] )
+    sub_6091F558(v14 + 285);
+  if ( v14[314] || v14[315] )
+    sub_6091F558(v14 + 309);
+  if ( v14[338] || v14[339] )
+    sub_6091F558(v14 + 333);
+  return (*(int (__fastcall **)(int))(*(_DWORD *)v50 + 20))(v50);
+}
+
 /* ============================================================================
  * sub_60970920
  * RVA 0x00970920   size 0x814   xrefs 1
  * ============================================================================ */
-  _DWORD *__fastcall sub_60970920(int a1, int a2, int a3, signed int a4, void *a5, int a6)
+  _DWORD *__fastcall sub_60970920(int a1, int a2, int a3, signed int a4, void *a5, void *heap)
+{
+  _DWORD *v10; // r8
+  int v11; // r0
+  int v12; // r7
+  bool v13; // cc
+  _BYTE *v14; // r4
+  char v15; // r1
+  char *v16; // r12
+  int (**v17)(); // lr
+  int v18; // r1
+  bool v19; // zf
+  int v20; // r1
+  bool v21; // zf
+  unsigned __int8 v22; // r1
+  _BYTE *v23; // r6
+  char *v24; // r2
+  int v25; // t1
+  char v26; // r0
+  unsigned __int8 *v27; // r1
+  int v28; // t1
+  char *v29; // r4
+  const void *v30; // r1
+  signed int v31; // r3
+  char *v32; // r4
+  signed int v33; // r6
+  int v34; // r6
+  char *v35; // r0
+  char *v36; // r4
+  int i; // r1
+  unsigned __int8 *v38; // r3
+  int v39; // r0
+  bool v40; // zf
+  int v41; // r4
+  int v42; // r1
+  _DWORD *v43; // r6
+  int v44; // r0
+  unsigned int v45; // r4
+  _BYTE *v46; // r0
+  void *v47; // r6
+  int v48; // r0
+  signed int v49; // r2
+  signed int v50; // r0
+  signed int v51; // r4
+  int v52; // r4
+  unsigned __int8 *v53; // r6
+  _BYTE *v54; // r12
+  unsigned __int8 *v55; // r3
+  unsigned __int8 *v56; // r4
+  int v57; // r1
+  unsigned __int8 v58; // r2
+  unsigned __int8 *v59; // r4
+  int v60; // t1
+  unsigned __int8 *v61; // r3
+  unsigned __int8 v62; // r1
+  void *v63; // r4
+  unsigned __int8 *v64; // r2
+  int v65; // t1
+  unsigned __int8 v66; // r1
+  unsigned __int8 *v67; // r2
+  int v68; // t1
+  int v69; // r0
+  int v70; // r2
+  unsigned __int8 *v71; // r0
+  _BYTE *v72; // r11
+  int v73; // t1
+  int v74; // r1
+  int v75; // r1
+  bool v76; // zf
+  int v78; // [sp+4h] [bp-46Ch]
+  const void *v79; // [sp+4h] [bp-46Ch]
+  unsigned __int8 *v80; // [sp+8h] [bp-468h]
+  int (**v81)(); // [sp+Ch] [bp-464h]
+  char *v82; // [sp+10h] [bp-460h]
+  unsigned __int8 *v83; // [sp+14h] [bp-45Ch]
+  unsigned __int8 *v84; // [sp+18h] [bp-458h]
+  void *v85; // [sp+18h] [bp-458h]
+  _DWORD *v86; // [sp+18h] [bp-458h]
+  int v87; // [sp+34h] [bp-43Ch]
+  int (**v88)(); // [sp+38h] [bp-438h] BYREF
+  char *v89; // [sp+3Ch] [bp-434h]
+  int (**v90)(); // [sp+40h] [bp-430h] BYREF
+  char *v91; // [sp+44h] [bp-42Ch]
+  int v92; // [sp+48h] [bp-428h]
+  int v93; // [sp+4Ch] [bp-424h] BYREF
+
+  if ( a4 >= 1 && a5 )
+    memset(a5, 0, a4);
+  v10 = (_DWORD *)operator new(0xCu, heap, 4);
+  sub_6097114C(v10, heap, a1, 4);
+  (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
+  v11 = v10[1];
+  v12 = 0;
+  while ( *(_BYTE *)(v11 + v12) )
   {
-    _DWORD *v10; // r8
-    int v11; // r0
-    int v12; // r7
-    int v13; // r5
-    bool v14; // cc
-    _BYTE *v15; // r4
-    char v16; // r1
-    char *v17; // r12
-    int v18; // lr
-    int v19; // r1
-    bool v20; // zf
-    int v21; // r1
-    bool v22; // zf
-    unsigned __int8 v23; // r1
-    unsigned __int8 *v24; // r6
-    unsigned __int8 *v25; // r2
-    int v26; // t1
-    unsigned __int8 v27; // r0
-    unsigned __int8 *v28; // r1
-    int v29; // t1
-    char *v30; // r4
-    char *v31; // r1
-    signed int v32; // r3
-    char *v33; // r4
-    signed int v34; // r6
-    int v35; // r6
-    char *v36; // r0
-    char *v37; // r4
-    int i; // r1
-    int v39; // r3
-    int v40; // r3
-    unsigned __int8 *v41; // r3
-    int v42; // r0
-    bool v43; // zf
-    int v44; // r4
-    int v45; // r1
-    _DWORD *v46; // r6
-    int v47; // r0
-    unsigned int v48; // r4
-    _BYTE *v49; // r0
-    void *v50; // r6
-    int v51; // r0
-    signed int v52; // r2
-    signed int v53; // r0
-    signed int v54; // r4
-    int v55; // r4
-    unsigned __int8 *v56; // r6
-    _BYTE *v57; // r12
-    unsigned __int8 *v58; // r3
-    unsigned __int8 *v59; // r4
-    int v60; // r1
-    unsigned __int8 v61; // r2
-    unsigned __int8 *v62; // r4
-    int v63; // t1
-    unsigned __int8 *v64; // r3
-    unsigned __int8 v65; // r1
-    int v66; // r4
-    unsigned __int8 *v67; // r2
-    int v68; // t1
-    unsigned __int8 v69; // r1
-    unsigned __int8 *v70; // r2
-    int v71; // t1
-    int v72; // r0
-    int v73; // r2
-    unsigned __int8 *v74; // r0
-    _BYTE *v75; // r11
-    int v76; // t1
-    int v77; // r1
-    int v78; // r1
-    bool v79; // zf
-    int v81; // [sp+4h] [bp-448h]
-    const void *v82; // [sp+4h] [bp-448h]
-    unsigned __int8 *v83; // [sp+8h] [bp-444h]
-    int v84; // [sp+Ch] [bp-440h]
-    char *v85; // [sp+10h] [bp-43Ch]
-    unsigned __int8 *v86; // [sp+14h] [bp-438h]
-    unsigned __int8 *v87; // [sp+18h] [bp-434h]
-    void *v88; // [sp+18h] [bp-434h]
-    _DWORD *v89; // [sp+18h] [bp-434h]
-    int v90; // [sp+34h] [bp-418h]
-    int v91; // [sp+38h] [bp-414h] BYREF
-    char *v92; // [sp+3Ch] [bp-410h]
-    int v93; // [sp+40h] [bp-40Ch] BYREF
-    char *v94; // [sp+44h] [bp-408h]
-    int v95; // [sp+48h] [bp-404h]
-    int v96; // [sp+4Ch] [bp-400h] BYREF
-  
-    if ( a4 >= 1 && a5 )
-      memset(a5, 0, a4);
-    v10 = (_DWORD *)__operator_new_al(0xCu, a6, 4);
-    sub_6097114C(v10, a6, a1, 4);
-    (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
-    v11 = v10[1];
-    v12 = 0;
-    v13 = MEMORY[0xB3BA34];
-    while ( *(unsigned __int8 *)(v11 + v12) != MEMORY[0xB3BA34] )
+    if ( !*(_BYTE *)(v11 + v12 + 1) )
     {
-      if ( *(unsigned __int8 *)(v11 + v12 + 1) == MEMORY[0xB3BA34] )
-      {
-        ++v12;
-        break;
-      }
-      if ( *(unsigned __int8 *)(v11 + v12 + 2) == MEMORY[0xB3BA34] )
-      {
-        v12 += 2;
-        break;
-      }
-      v14 = v12 + 2 <= 0x7FFFF;
-      v12 += 3;
-      if ( !v14 )
-      {
-        v12 = 0;
-        break;
-      }
+      ++v12;
+      break;
     }
-    (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
-    v15 = (_BYTE *)v10[1];
-    v16 = *v15;
-    if ( *v15 )
+    if ( !*(_BYTE *)(v11 + v12 + 2) )
     {
-      v90 = a4;
-      v17 = (char *)&v96;
-      v18 = 12322272;
-      do
+      v12 += 2;
+      break;
+    }
+    v13 = v12 + 2 <= 0x7FFFF;
+    v12 += 3;
+    if ( !v13 )
+    {
+      v12 = 0;
+      break;
+    }
+  }
+  (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
+  v14 = (_BYTE *)v10[1];
+  v15 = *v14;
+  if ( *v14 )
+  {
+    v87 = a4;
+    v16 = (char *)&v93;
+    v17 = &BufferedSafeStringBase_char_vtable_probably;
+    do
+    {
+      v71 = v14 + 1;
+      v72 = v14;
+      while ( v15 != 35 )
       {
-        v74 = v15 + 1;
-        v75 = v15;
-        while ( v16 != 35 )
-        {
-          v76 = (unsigned __int8)*++v75;
-          v16 = v76;
-          ++v74;
-          if ( !v76 )
-            return v10;
-        }
-        while ( 1 )
-        {
-          v77 = *v74;
-          if ( (unsigned int)(v77 - 9) > 0x17 || ((1 << (v77 - 9)) & 0x800013) == 0 )
-            break;
-          ++v74;
-        }
-        if ( !*v74 )
-          v74 = 0;
-        v78 = *v74;
-        v79 = v78 == 105;
-        if ( v78 == 105 )
-          v79 = v74[1] == 110;
-        if ( !v79 || v74[2] != 99 )
-          goto sub_60970920__LABEL_128;
-        v19 = v74[3];
-        v20 = v19 == 108;
-        if ( v19 == 108 )
-          v20 = v74[4] == 117;
-        if ( !v20 )
-          goto sub_60970920__LABEL_128;
-        v21 = v74[5];
-        v22 = v21 == 100;
-        if ( v21 == 100 )
-          v22 = v74[6] == 101;
+        v73 = (unsigned __int8)*++v72;
+        v15 = v73;
+        ++v71;
+        if ( !v73 )
+          return v10;
+      }
+      while ( 1 )
+      {
+        v74 = *v71;
+        if ( (unsigned int)(v74 - 9) > 0x17 || ((1 << (v74 - 9)) & 0x800013) == 0 )
+          break;
+        ++v71;
+      }
+      if ( !*v71 )
+        v71 = 0;
+      v75 = *v71;
+      v76 = v75 == 105;
+      if ( v75 == 105 )
+        v76 = v71[1] == 110;
+      if ( !v76 || v71[2] != 99 )
+        goto sub_60970920__LABEL_128;
+      v18 = v71[3];
+      v19 = v18 == 108;
+      if ( v18 == 108 )
+        v19 = v71[4] == 117;
+      if ( !v19 )
+        goto sub_60970920__LABEL_128;
+      v20 = v71[5];
+      v21 = v20 == 100;
+      if ( v20 == 100 )
+        v21 = v71[6] == 101;
+      if ( v21 )
+      {
+        v22 = v71[7];
         if ( v22 )
         {
-          v23 = v74[7];
-          if ( v23 )
+          v23 = v71 + 10;
+          v84 = v71 + 9;
+          v24 = (char *)(v71 + 8);
+          while ( v22 != 34 )
           {
-            v24 = v74 + 10;
-            v87 = v74 + 9;
-            v25 = v74 + 8;
-            while ( v23 != 34 )
+            ++v23;
+            ++v84;
+            v25 = (unsigned __int8)*v24++;
+            v22 = v25;
+            if ( !v25 )
+              goto sub_60970920__LABEL_129;
+          }
+          v26 = *v24;
+          v27 = v84;
+          if ( *v24 )
+          {
+            while ( v26 != 34 )
             {
-              ++v24;
-              ++v87;
-              v26 = *v25++;
-              v23 = v26;
-              if ( !v26 )
+              v28 = *v27++;
+              v26 = v28;
+              if ( !v28 )
                 goto sub_60970920__LABEL_129;
             }
-            v27 = *v25;
-            v28 = v87;
-            if ( *v25 )
+            v91 = v16;
+            v90 = v17;
+            v83 = v27;
+            v82 = v16;
+            v81 = v17;
+            v29 = v24;
+            v92 = 1024;
+            sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v90);
+            v30 = v29;
+            *v91 = 0;
+            v90 = &off_60BFA9DC;
+            if ( v91 != v29 )
             {
-              while ( v27 != 34 )
+              if ( v83 - (unsigned __int8 *)v29 <= 0 )
               {
-                v29 = *v28++;
-                v27 = v29;
-                if ( !v29 )
-                  goto sub_60970920__LABEL_129;
-              }
-              v94 = v17;
-              v93 = v18;
-              v86 = v28;
-              v85 = v17;
-              v84 = v18;
-              v30 = (char *)v25;
-              v95 = 1024;
-              sead__BufferedSafeStringBase_char__assureTerminationImpl_(&v93);
-              v31 = v30;
-              *v94 = v13;
-              v93 = 12560860;
-              if ( v94 != v30 )
-              {
-                if ( v86 - (unsigned __int8 *)v30 <= 0 )
+                v31 = 0;
+                while ( v29[v31] )
                 {
-                  v32 = 0;
-                  while ( (unsigned __int8)v30[v32] != v13 )
+                  if ( !v84[v31] )
                   {
-                    if ( v87[v32] == v13 )
-                    {
-                      ++v32;
-                      break;
-                    }
-                    if ( *v24 == v13 )
-                    {
-                      v32 += 2;
-                      break;
-                    }
-                    v24 += 3;
-                    v14 = v32 + 2 <= 0x7FFFF;
-                    v32 += 3;
-                    if ( !v14 )
-                    {
-                      v32 = 0;
-                      break;
-                    }
+                    ++v31;
+                    break;
                   }
-                  v31 = v30;
-                }
-                else
-                {
-                  v32 = v86 - (unsigned __int8 *)v30 - 1;
-                }
-                v33 = v94;
-                if ( v32 >= v95 )
-                  v32 = v95 - 1;
-                v34 = v32;
-                qmemcpy(v94, v31, v32);
-                v33[v34] = v13;
-              }
-              if ( v90 < 1 )
-                return v10;
-              v35 = 0;
-              while ( 1 )
-              {
-                v36 = *(char **)(a2 + 4 * v35);
-                v91 = 12321336;
-                v92 = v36;
-                (*(void (__fastcall **)(int *))(v93 + 12))(&v93);
-                (*(void (__fastcall **)(int *))(v93 + 12))(&v93);
-                v37 = v94;
-                (*(void (__fastcall **)(int *))(v91 + 12))(&v91);
-                if ( v37 == v92 )
-                  break;
-                for ( i = 1; ; i += 2 )
-                {
-                  v39 = (unsigned __int8)v94[i - 1];
-                  if ( v39 != (unsigned __int8)v92[i - 1] )
+                  if ( !*v23 )
+                  {
+                    v31 += 2;
                     break;
-                  if ( v39 == v13 )
-                    goto sub_60970920__LABEL_60;
-                  if ( i >= 524289 )
+                  }
+                  v23 += 3;
+                  v13 = v31 + 2 <= 0x7FFFF;
+                  v31 += 3;
+                  if ( !v13 )
+                  {
+                    v31 = 0;
                     break;
-                  v40 = (unsigned __int8)v94[i];
-                  if ( v40 != (unsigned __int8)v92[i] )
-                    break;
-                  if ( v40 == v13 )
-                    goto sub_60970920__LABEL_60;
+                  }
                 }
-                if ( ++v35 >= v90 )
-                  return v10;
-              }
-  sub_60970920__LABEL_60:
-              v41 = *(unsigned __int8 **)(a3 + 4 * v35);
-              if ( a5 )
-                *((_BYTE *)a5 + v35) = 1;
-              if ( !v41 )
-                return v10;
-              v42 = *v41;
-              v43 = v42 == 239;
-              if ( v42 == 239 )
-                v43 = v41[1] == 187;
-              if ( v43 && v41[2] == 191 )
-                v41 += 3;
-              v44 = 0;
-              v83 = v41;
-              while ( v41[v44] != v13 )
-              {
-                if ( v41[v44 + 1] == v13 )
-                {
-                  ++v44;
-                  break;
-                }
-                if ( v41[v44 + 2] == v13 )
-                {
-                  v44 += 2;
-                  break;
-                }
-                v45 = v44 + 2;
-                v44 += 3;
-                if ( v45 > 0x7FFFF )
-                {
-                  v44 = 0;
-                  break;
-                }
-              }
-              v46 = (_DWORD *)__operator_new_al(0xCu, a6, 4);
-              v47 = v44 + v12;
-              v48 = v44 + v12 + 1;
-              v81 = v47;
-              v88 = (void *)__operator_new_array_al(v48, a6, 4);
-              memset(v88, 0, v48);
-              *v46 = 12322272;
-              v46[1] = v88;
-              v89 = v46;
-              v46[2] = v48;
-              if ( v81 < 0 )
-              {
-                v49 = 0;
-                v46[1] = 0;
-                v46[2] = 0;
+                v30 = v29;
               }
               else
               {
-                sead__BufferedSafeStringBase_char__assureTerminationImpl_(v46);
-                v49 = (_BYTE *)v46[1];
+                v31 = v83 - (unsigned __int8 *)v29 - 1;
               }
-              *v46 = 12560836;
-              *v49 = v13;
-              v50 = (void *)v46[1];
+              v32 = v91;
+              if ( v31 >= v92 )
+                v31 = v92 - 1;
+              v33 = v31;
+              qmemcpy(v91, v30, v31);
+              v32[v33] = 0;
+            }
+            if ( v87 < 1 )
+              return v10;
+            v34 = 0;
+            while ( 1 )
+            {
+              v35 = *(char **)(a2 + 4 * v34);
+              v88 = &`vtable for'sead::SafeStringBase<char>;
+              v89 = v35;
+              ((void (__fastcall *)(int (***)()))v90[3])(&v90);
+              ((void (__fastcall *)(int (***)()))v90[3])(&v90);
+              v36 = v91;
+              ((void (__fastcall *)(int (***)()))v88[3])(&v88);
+              if ( v36 == v89 )
+                break;
+              for ( i = 1; v91[i - 1] == v89[i - 1]; i += 2 )
+              {
+                if ( !v91[i - 1] )
+                  goto sub_60970920__LABEL_60;
+                if ( i >= 524289 || v91[i] != v89[i] )
+                  break;
+                if ( !v91[i] )
+                  goto sub_60970920__LABEL_60;
+              }
+              if ( ++v34 >= v87 )
+                return v10;
+            }
+sub_60970920__LABEL_60:
+            v38 = *(unsigned __int8 **)(a3 + 4 * v34);
+            if ( a5 )
+              *((_BYTE *)a5 + v34) = 1;
+            if ( !v38 )
+              return v10;
+            v39 = *v38;
+            v40 = v39 == 239;
+            if ( v39 == 239 )
+              v40 = v38[1] == 187;
+            if ( v40 && v38[2] == 191 )
+              v38 += 3;
+            v41 = 0;
+            v80 = v38;
+            while ( v38[v41] )
+            {
+              if ( !v38[v41 + 1] )
+              {
+                ++v41;
+                break;
+              }
+              if ( !v38[v41 + 2] )
+              {
+                v41 += 2;
+                break;
+              }
+              v42 = v41 + 2;
+              v41 += 3;
+              if ( v42 > 0x7FFFF )
+              {
+                v41 = 0;
+                break;
+              }
+            }
+            v43 = (_DWORD *)operator new(0xCu, heap, 4);
+            v44 = v41 + v12;
+            v45 = v41 + v12 + 1;
+            v78 = v44;
+            v85 = (void *)operator new[](v45, (int)heap, 4);
+            memset(v85, 0, v45);
+            *v43 = &BufferedSafeStringBase_char_vtable_probably;
+            v43[1] = v85;
+            v86 = v43;
+            v43[2] = v45;
+            if ( v78 < 0 )
+            {
+              v46 = 0;
+              v43[1] = 0;
+              v43[2] = 0;
+            }
+            else
+            {
+              sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)v43);
+              v46 = (_BYTE *)v43[1];
+            }
+            *v43 = &off_60BFA9C4;
+            *v46 = 0;
+            v47 = (void *)v43[1];
+            (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
+            if ( v47 != (void *)v10[1] )
+            {
+              v79 = (const void *)v10[1];
               (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
-              if ( v50 != (void *)v10[1] )
+              v48 = v10[1];
+              v49 = 0;
+              while ( *(_BYTE *)(v48 + v49) )
               {
-                v82 = (const void *)v10[1];
-                (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
-                v51 = v10[1];
-                v52 = 0;
-                while ( *(unsigned __int8 *)(v51 + v52) != v13 )
+                if ( !*(_BYTE *)(v48 + v49 + 1) )
                 {
-                  if ( *(unsigned __int8 *)(v51 + v52 + 1) == v13 )
-                  {
-                    ++v52;
-                    break;
-                  }
-                  if ( *(unsigned __int8 *)(v51 + v52 + 2) == v13 )
-                  {
-                    v52 += 2;
-                    break;
-                  }
-                  v14 = v52 + 2 <= 0x7FFFF;
-                  v52 += 3;
-                  if ( !v14 )
-                  {
-                    v52 = 0;
-                    break;
-                  }
+                  ++v49;
+                  break;
                 }
-                v53 = v89[2];
-                if ( v52 >= v53 )
-                  v52 = v53 - 1;
-                v54 = v52;
-                qmemcpy(v50, v82, v52);
-                *((_BYTE *)v50 + v54) = v13;
+                if ( !*(_BYTE *)(v48 + v49 + 2) )
+                {
+                  v49 += 2;
+                  break;
+                }
+                v13 = v49 + 2 <= 0x7FFFF;
+                v49 += 3;
+                if ( !v13 )
+                {
+                  v49 = 0;
+                  break;
+                }
               }
-              (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
-              v55 = v10[1];
-              v56 = (unsigned __int8 *)__operator_new_array_al(v12 + 1, a6, 4);
-              (*(void (__fastcall **)(_DWORD *))(*v89 + 12))(v89);
-              v57 = &v75[-v55];
-              v58 = v56;
-              v59 = &v86[-v55];
-              v60 = v89[1];
-              v61 = v59[v60];
-              if ( v61 )
+              v50 = v86[2];
+              if ( v49 >= v50 )
+                v49 = v50 - 1;
+              v51 = v49;
+              qmemcpy(v47, v79, v49);
+              *((_BYTE *)v47 + v51) = 0;
+            }
+            (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
+            v52 = v10[1];
+            v53 = (unsigned __int8 *)operator new[](v12 + 1, (int)heap, 4);
+            (*(void (__fastcall **)(_DWORD *))(*v86 + 12))(v86);
+            v54 = &v72[-v52];
+            v55 = v53;
+            v56 = &v83[-v52];
+            v57 = v86[1];
+            v58 = v56[v57];
+            if ( v58 )
+            {
+              v59 = &v56[v57 + 1];
+              v55 = v53;
+              do
               {
-                v62 = &v59[v60 + 1];
-                v58 = v56;
-                do
-                {
-                  *v58++ = v61;
-                  v63 = *v62++;
-                  v61 = v63;
-                }
-                while ( v63 );
+                *v55++ = v58;
+                v60 = *v59++;
+                v58 = v60;
               }
-              *v58 = 0;
-              v64 = &v57[v60];
-              v65 = *v83;
-              if ( *v83 )
+              while ( v60 );
+            }
+            *v55 = 0;
+            v61 = &v54[v57];
+            v62 = *v80;
+            if ( *v80 )
+            {
+              v63 = heap;
+              v64 = v80 + 1;
+              do
               {
-                v66 = a6;
-                v67 = v83 + 1;
-                do
-                {
-                  *v64++ = v65;
-                  v68 = *v67++;
-                  v65 = v68;
-                }
-                while ( v68 );
+                *v61++ = v62;
+                v65 = *v64++;
+                v62 = v65;
               }
+              while ( v65 );
+            }
+            else
+            {
+              v63 = heap;
+            }
+            v66 = *v53;
+            if ( *v53 )
+            {
+              v67 = v53 + 1;
+              do
+              {
+                *v61++ = v66;
+                v68 = *v67++;
+                v66 = v68;
+              }
+              while ( v68 );
+            }
+            *v61 = 0;
+            operator delete[](v53);
+            if ( v10 )
+              (*(void (__fastcall **)(_DWORD *))(*v10 + 4))(v10);
+            v10 = (_DWORD *)operator new(0xCu, v63, 4);
+            sub_6097114C(v10, v63, v86, 4);
+            if ( v86 )
+              (*(void (__fastcall **)(_DWORD *))(*v86 + 4))(v86);
+            (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
+            v14 = (_BYTE *)v10[1];
+            (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
+            v69 = v10[1];
+            v12 = 0;
+            while ( *(_BYTE *)(v69 + v12) )
+            {
+              if ( !*(_BYTE *)(v69 + v12 + 1) )
+              {
+                ++v12;
+                break;
+              }
+              if ( !*(_BYTE *)(v69 + v12 + 2) )
+              {
+                v12 += 2;
+                break;
+              }
+              v70 = v12 + 2;
+              v12 += 3;
+              if ( v70 > 0x7FFFF )
+              {
+                v12 = 0;
+                break;
+              }
+            }
+            v16 = v82;
+            v17 = v81;
+          }
+        }
+      }
+      else
+      {
+sub_60970920__LABEL_128:
+        v14 = v71;
+      }
+sub_60970920__LABEL_129:
+      v15 = *v14;
+    }
+    while ( *v14 );
+  }
+  return v10;
+}
 
-  }
-  }
-  }
-  }
-  }
-  }
 /* ============================================================================
  * sub_6097114C
  * RVA 0x0097114c   size 0x214   xrefs 8
