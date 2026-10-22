@@ -1,5 +1,25 @@
 # Hammer Question Block — a Yaz0moto patch
 
+> ## STATUS: UNRELEASED — DO NOT RELY ON THE LABELS
+>
+> IDA Pro verification (`docs/IDA_VERIFICATION.md`) overturned the reasoning this
+> patch was built on. My claim that `Contents` 2 and 3 "resolve to the same action
+> code, therefore the same item" was invalid: `dword_60B04164` is indexed by the
+> result of a **virtual call**, not by the raw contents byte.
+>
+> I then tried to reconcile the binary with the editor's 16 labels — full chain,
+> direct table, index bases -2..+2 — and the **best fit was 3/16**. The contents→item
+> mapping is unresolved.
+>
+> What *is* verified: the Hammer build changes the mode bitset `0x1FB` → `0x3FB`,
+> which adds bit 9 = mode 10, and the grant handler passes `mov r2,#10`. So the
+> Hammer genuinely works **in-game**. What is not verified is *which dropdown value*
+> selects it.
+>
+> Practical guidance until this is resolved: set a block's contents to each of the
+> low values in turn and see which one gives you a Hammer. Do not trust this patch's
+> labels, and do not trust the previous revision's claim that it is 2 or 3.
+
 Makes a `?` block's contents dropdown say **Hammer** for the two entries that
 already dispense it, so the power-up can be found and placed in the editor.
 

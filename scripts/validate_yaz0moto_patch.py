@@ -255,12 +255,21 @@ def hammer_rules(sprites):
 
 validate(CHEEP, "Cheep Cheep Family",
          {"rules": cheep_rules, "allowed_retitles": set()})
-validate(HAMMER, "Hammer Question Block",
-         {"rules": hammer_rules,
-          # label change on the contents list is the point of the patch, and it is
-          # checked entry by entry in hammer_rules
-          "allowed_retitles": {(s, "20") for s in HAMMER_WANT}})
+
+# The Hammer patch is UNRELEASED. Its structural checks are still worth running
+# (full restatement, no dropped fields, valid XML), but its central claim is
+# unverified: IDA showed dword_60B04164 is indexed by a virtual-call result, not by
+# the raw contents byte, and no index base reproduces the editor's 16 labels
+# (best fit 3/16). See docs/IDA_VERIFICATION.md.
+print(f"\n{'=' * 68}\n  Hammer Question Block  [UNRELEASED]"
+      f"\n{'=' * 68}")
+print("  NOTE: the contents -> item mapping is UNRESOLVED. The checks below verify")
+print("        structure only. They do NOT establish that values 2/3 give a Hammer,")
+print("        so a green result here must not be read as approval to ship.")
 
 n = sum(1 for _, ok in results if ok)
-print(f"\n{'=' * 68}\n  {n}/{len(results)} checks passed\n{'=' * 68}")
+print(f"\n{'=' * 68}\n  {n}/{len(results)} structural checks passed\n{'=' * 68}")
+print("\n  CheepCheepFamily     : releasable (claim rests on the editor's own")
+print("                         convention across 143 sprites)")
+print("  HammerQuestionBlock  : NOT releasable; contents->item mapping unresolved")
 sys.exit(0 if n == len(results) else 1)

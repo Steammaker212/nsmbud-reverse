@@ -13,8 +13,8 @@
     and these labels are wrong.
 -->
 <game name="Hammer Question Block (RE)"
-      version="1.0"
-      description="Relabels the two identical block-contents entries to Hammer, for builds where the Fire Flower grants power-up mode 10. Label only: changes no behaviour."
+      version="0.9-UNRELEASED"
+      description="UNRELEASED: the contents-to-item mapping could not be verified in the binary, so which values dispense the Hammer is not established. See docs/IDA_VERIFICATION.md."
       base="New Super Mario Bros. U Deluxe"
       patchReleaseUrl="https://github.com/Steammaker212/nsmbud-reverse">
 
