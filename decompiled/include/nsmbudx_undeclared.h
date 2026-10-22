@@ -779,7 +779,7 @@ int __fastcall sub_60439F70();  /* 1 cast site(s) */
 int __fastcall sub_60448388();  /* 1 cast site(s) */
 int __fastcall sub_60457304();  /* 1 cast site(s) */
 int __fastcall sub_6047E13C();  /* 3 cast site(s) */
-_DWORD *__fastcall sub_604B7F9C(int a1);  /* 1 cast site(s), signature from its definition */
+_DWORD * __fastcall sub_604B7F9C(int a1);  /* 1 cast site(s), signature from its definition */
 int sub_604ED25C();  /* 1 cast site(s), signature from its definition */
 int __fastcall sub_60506EB8();  /* 1 cast site(s) */
 int __fastcall sub_60509920();  /* 2 cast site(s) */
@@ -789,12 +789,12 @@ int __fastcall sub_60542C1C();  /* 1 cast site(s) */
 int __fastcall sub_60543190();  /* 1 cast site(s) */
 int __fastcall sub_6054F8EC();  /* 2 cast site(s) */
 int __fastcall sub_6058262C();  /* 1 cast site(s) */
-_BYTE *__fastcall sub_60582B14(int a1, _DWORD *a2, int a3, int a4);  /* 1 cast site(s), signature from its definition */
+_BYTE * __fastcall sub_60582B14(int a1, _DWORD *a2, int a3, int a4);  /* 1 cast site(s), signature from its definition */
 int __fastcall sub_60583410();  /* 2 cast site(s) */
-void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);  /* 2 cast site(s), signature from its definition */
+void __fastcall sub_605839E8();  /* 2 cast site(s), signature from its definition */
 int __fastcall sub_60584938();  /* 1 cast site(s) */
-float *__fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);  /* 1 cast site(s), signature from its definition */
-_BYTE *__fastcall sub_605B624C(float *a1, _DWORD *a2, int a3, int a4, int a5);  /* 2 cast site(s), signature from its definition */
+float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);  /* 1 cast site(s), signature from its definition */
+_BYTE * __fastcall sub_605B624C(float *a1, _DWORD *a2, int a3, int a4, int a5);  /* 2 cast site(s), signature from its definition */
 int __fastcall sub_605B8E44();  /* 1 cast site(s) */
 int __fastcall sub_605BE5EC();  /* 1 cast site(s) */
 int __fastcall sub_605BE6BC();  /* 1 cast site(s) */
@@ -817,7 +817,7 @@ int __fastcall sub_608C66DC();  /* 2 cast site(s) */
 int __fastcall sub_608FAFA4();  /* 3 cast site(s) */
 int __fastcall sub_609313BC();  /* 2 cast site(s) */
 int __fastcall sub_60939804();  /* 1 cast site(s) */
-void *__fastcall sub_6093D054(int a1, int a2, int a3, float32x2_t *a4);  /* 2 cast site(s), signature from its definition */
+void * __fastcall sub_6093D054(int a1, int a2, int a3, float32x2_t *a4);  /* 2 cast site(s), signature from its definition */
 int __fastcall sub_6093E3D8();  /* 1 cast site(s) */
 int __fastcall sub_60970920();  /* 1 cast site(s) */
 int __fastcall sub_6097580C();  /* 1 cast site(s) */

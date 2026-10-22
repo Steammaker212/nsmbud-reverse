@@ -27,13 +27,13 @@
 
 /* ---- TIER 1: signature taken from the decompiled body ---- */
 int __fastcall sub_60152FF4(int a1, int a2);  /* RVA 0x152FF4, size 0x48 */
-int __fastcall sub_6015DF58(int a1, int a2, int a3);  /* RVA 0x15DF58, size 0x38 */
-int __fastcall sub_60236E40(unsigned int a1, int a2, int a3, int a4, int a5);  /* RVA 0x236E40, size 0x7C */
-int __fastcall sub_6050A4EC(int a1, int a2, _DWORD *a3, char a4, char a5);  /* RVA 0x50A4EC, size 0x160 */
-int __fastcall sub_60583000(int a1, int a2, int a3, int a4, int a5);  /* RVA 0x583000, size 0x1FC */
-float *__fastcall sub_6058385C(int a1, int a2, int a3);  /* RVA 0x58385C, size 0x170 */
+int __fastcall sub_6015DF58();  /* RVA 0x15DF58, size 0x38 */
+int __fastcall sub_60236E40();  /* RVA 0x236E40, size 0x7C */
+int __fastcall sub_6050A4EC();  /* RVA 0x50A4EC, size 0x160 */
+int __fastcall sub_60583000();  /* RVA 0x583000, size 0x1FC */
+float * __fastcall sub_6058385C(int a1, int a2, int a3);  /* RVA 0x58385C, size 0x170 */
 int __fastcall sub_605B6238(int result);  /* RVA 0x5B6238, size 0x14 */
-int __fastcall sub_6079AE3C(int a1, int a2, int a3, int a4);  /* RVA 0x79AE3C, size 0x168 */
-_DWORD *__fastcall sub_60959BAC(_DWORD *a1);  /* RVA 0x959BAC, size 0x38 */
+int __fastcall sub_6079AE3C();  /* RVA 0x79AE3C, size 0x168 */
+_DWORD * __fastcall sub_60959BAC(_DWORD *a1);  /* RVA 0x959BAC, size 0x38 */
 
 #endif /* NSMBUDX_SUBFUNCS_H */

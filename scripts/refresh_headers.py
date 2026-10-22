@@ -130,6 +130,14 @@ def main():
 
     rc, tail = run([os.path.join(REPO, "scripts", "fix_bare_neon.py")])
     print("bare NEON: %s" % tail)
+
+    # Header prototypes are aligned to the definitions BEFORE they are relaxed: alignment needs the real
+    # parameter list to compare against, and relaxing first would discard it.
+    rc, tail = run([os.path.join(REPO, "scripts", "align_header_prototypes.py"), "--write"])
+    print("header prototypes: %s" % tail)
+
+    rc, tail = run([os.path.join(REPO, "scripts", "relax_header_arity.py"), "--write"])
+    print("header arity: %s" % tail)
     return 0
 
 
