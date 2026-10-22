@@ -437,7 +437,7 @@
     v12[2] = v5;
     v12[1] = v10;
     v12[3] = v6;
-    return sub_600072A0(v12);
+    return StageActor::isOffScreen(v12);
   }
 
 /* ============================================================================
@@ -4877,6 +4877,24 @@
   }
 
 /* ============================================================================
+ * Actor_editokoinakutarange_Tag_build_helper
+ * RVA 0x00006070   size 0x28   xrefs 1
+ * ============================================================================ */
+  int __fastcall Actor_editokoinakutarange_Tag_build_helper(int result, char a2)
+  {
+    unsigned int v2; // r2
+    int v3; // r3
+  
+    v2 = *(_DWORD *)(result + 44);
+    v3 = result;
+    if ( v2 < 0x100 )
+      v3 = result + v2;
+    *(_BYTE *)(v3 + 4960) = a2;
+    ++*(_DWORD *)(result + 44);
+    return result;
+  }
+
+/* ============================================================================
  * sub_60006098
  * RVA 0x00006098   size 0xb0   xrefs 2
  * ============================================================================ */
@@ -5715,7 +5733,7 @@
   }
 
 /* ============================================================================
- * sub_600072A0
+ * _ZN10StageActor11isOffScreenEv_helper
  * RVA 0x000072a0   size 0x74   xrefs 2
  * ============================================================================ */
   bool __fastcall sub_600072A0(float *a1)
@@ -7241,7 +7259,7 @@
           }
         }
         if ( !a1 )
-          sub_603EE6EC(v7);
+          LoadProfileArchives_helper(v7);
       }
       (*(void (__fastcall **)(int))(*(_DWORD *)v7 + 20))(v7);
       result = nn::os::GetSystemTick((nn::os *)v30);
@@ -7854,6 +7872,23 @@
   }
 
 /* ============================================================================
+ * BigBoo_onCreate_helper
+ * RVA 0x0000a3f8   size 0x2c   xrefs 1
+ * ============================================================================ */
+  int __fastcall BigBoo_onCreate_helper(int result)
+  {
+    int v1; // r1
+    int v2; // r2
+  
+    v1 = *(_DWORD *)(result + 232);
+    v2 = v1 + 1;
+    if ( v1 > 2 )
+      v2 = 0;
+    *(_DWORD *)(result + 232) = v2;
+    return result;
+  }
+
+/* ============================================================================
  * sub_6000A454
  * RVA 0x0000a454   size 0x34   xrefs 5
  * ============================================================================ */
@@ -7877,7 +7912,7 @@
   }
 
 /* ============================================================================
- * sub_6000A488
+ * _ZN5Fuzzy8onCreateEv_helper
  * RVA 0x0000a488   size 0xb4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6000A488(_BYTE *a1)
@@ -14300,7 +14335,7 @@
   }
 
 /* ============================================================================
- * sub_600240C8
+ * STRM_BGM_MENU_ref_2_helper
  * RVA 0x000240c8   size 0xbc   xrefs 1
  * ============================================================================ */
   bool sub_600240C8()
@@ -19819,7 +19854,7 @@
     int v5; // r2
   
     v2 = (_DWORD *)operator new(0x1950u);
-    result = sub_60054D3C(v2);
+    result = Actor_Demo_for_Kamek_build_helper(v2);
     *result = 12329260;
     v4 = a1[4];
     v5 = a1[5];
@@ -25464,7 +25499,7 @@
   }
 
 /* ============================================================================
- * sub_60048550
+ * SE_BOSS_JR_ref_2_helper
  * RVA 0x00048550   size 0x44   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60048550(int a1)
@@ -27459,7 +27494,7 @@
         }
         break;
       case 2:
-        sub_600525A4(a1);
+        BoomBoomW1::vf4E0(a1);
         v10 = *(_DWORD *)(*v2 + 12);
         v11 = *(_DWORD *)(*v2 + 68);
         if ( *(_DWORD *)(*v2 + 8) > v11 )
@@ -29071,7 +29106,7 @@
   }
 
 /* ============================================================================
- * sub_600525A4
+ * _ZN10BoomBoomW15vf4E0Ev_helper
  * RVA 0x000525a4   size 0x48   xrefs 1
  * ============================================================================ */
   float *__fastcall sub_600525A4(int a1)
@@ -30146,7 +30181,7 @@
   }
 
 /* ============================================================================
- * sub_60054D3C
+ * Actor_Demo_for_Kamek_build_helper
  * RVA 0x00054d3c   size 0x7c   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_60054D3C(_DWORD *a1)
@@ -32520,7 +32555,7 @@
       v29 = a1[27];
       v30 = v13;
       mapPositionToScreen(v28, (float *)&v29);
-      sub_60813814(v15, "SE_BOSS_JR_AND_KAMC_GO", v14, v28, 0);
+      j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v15, "SE_BOSS_JR_AND_KAMC_GO", v14, v28, 0);
       v9 = *(_DWORD **)(*v3 + 12);
       v10 = *(_DWORD *)(*v3 + 8);
       v11 = *(_DWORD *)(*v3 + 68);
@@ -32537,7 +32572,7 @@
       v29 = a1[27];
       v30 = v18;
       mapPositionToScreen(v28, (float *)&v29);
-      sub_60813814(v20, "SE_BOSS_JR_CLOWN_MOVE", v19, v28, 0);
+      j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v20, "SE_BOSS_JR_CLOWN_MOVE", v19, v28, 0);
       v9 = *(_DWORD **)(*v3 + 12);
       v10 = *(_DWORD *)(*v3 + 8);
       v11 = *(_DWORD *)(*v3 + 68);
@@ -32622,7 +32657,7 @@
     v12 = *(_DWORD *)(a1 + 108);
     v13 = v2;
     mapPositionToScreen(v11, (float *)&v12);
-    sub_60813814(v4, "SE_BOSS_JR_CLOWN_MOVE", v3, v11, 0);
+    j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v4, "SE_BOSS_JR_CLOWN_MOVE", v3, v11, 0);
     v5 = (_DWORD *)(a1 + 7764);
     if ( *(_DWORD *)(a1 + 7764) == 2 )
     {
@@ -34624,7 +34659,7 @@
     ActiveCollider_ctor(a1 + 10660);
     ActiveCollider_ctor(a1 + 10964);
     ActiveCollider_ctor(a1 + 11268);
-    sub_6006EA78(a1 + 11572);
+    FinalBowser::FinalBowser(a1 + 11572);
     CircularCollider_ctor(a1 + 23896);
     CircularCollider_ctor(a1 + 24296);
     RectCollider_ctor((_DWORD *)(a1 + 24696));
@@ -34730,7 +34765,7 @@
   }
 
 /* ============================================================================
- * sub_6006EA78
+ * _ZN11FinalBowserC1EPK14ActorBuildInfo_helper
  * RVA 0x0006ea78   size 0x1c8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6006EA78(int a1)
@@ -34849,8 +34884,8 @@
       Mtx34_rotateZ(&v11, (unsigned int *)(a1 + 25592));
       sub_60237454(a1 + 25488, (__int64 *)&v11, 1);
       sub_6023636C(a1 + 25504, &v10);
-      sub_6006F4A4(a1);
-      sub_6006F594(a1);
+      FinalBowser::onExecute(a1);
+      FinalBowser::onExecute(a1);
       if ( sub_60235E50(a1 + 25724) == 1 )
       {
         (*(void (__fastcall **)(_DWORD, _DWORD, float32x2_t *, _DWORD, _DWORD, _DWORD))(*(_DWORD *)**v5 + 108))(
@@ -34871,7 +34906,7 @@
       CircularCollider_execute(a1 + 24296);
       ShapedCollider_execute((_DWORD *)(a1 + 24696), v6, v7, v8);
     }
-    sub_6006F6F8(a1);
+    FinalBowser::onExecute(a1);
     return 1;
   }
 
@@ -35026,7 +35061,7 @@
   }
 
 /* ============================================================================
- * sub_6006F4A4
+ * _ZN11FinalBowser9onExecuteEv_helper
  * RVA 0x0006f4a4   size 0xe4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6006F4A4(int a1)
@@ -35076,7 +35111,7 @@
   }
 
 /* ============================================================================
- * sub_6006F594
+ * _ZN11FinalBowser9onExecuteEv_helper_06F594
  * RVA 0x0006f594   size 0x164   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6006F594(int a1)
@@ -35130,7 +35165,7 @@
   }
 
 /* ============================================================================
- * sub_6006F6F8
+ * _ZN11FinalBowser9onExecuteEv_helper_06F6F8
  * RVA 0x0006f6f8   size 0x774   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6006F6F8(int result)
@@ -35544,12 +35579,12 @@
     int v5; // r6
     int v6; // r1
   
-    sub_607FC9EC(MEMORY[0xCC6484]);
+    FinalBowser::afterExecute(MEMORY[0xCC6484]);
     CurrentState = StateMgr::getCurrentState((int)(a1 + 1521));
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v5 == (*(int (**)(void))(MEMORY[0xC814EC] + 8))() )
-      sub_607FC9F4(MEMORY[0xCC6484]);
-    sub_6006FF54(a1);
+      FinalBowser::afterExecute(MEMORY[0xCC6484]);
+    FinalBowser::afterExecute(a1);
     v6 = a1[6345];
     if ( v6 >= 1 )
       a1[6345] = v6 - 1;
@@ -35557,7 +35592,7 @@
   }
 
 /* ============================================================================
- * sub_6006FF54
+ * _ZN11FinalBowser12afterExecuteEj_helper
  * RVA 0x0006ff54   size 0x34c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6006FF54(_DWORD *a1)
@@ -39941,7 +39976,7 @@
     ShapedCollider_dtor(a1 + 6174);
     ColliderBase_dtor(a1 + 6074);
     ColliderBase_dtor(a1 + 5974);
-    sub_6007955C(a1 + 2893);
+    FinalBowser::~FinalBowser(a1 + 2893);
     ActiveCollider_dtor(a1 + 2817);
     ActiveCollider_dtor(a1 + 2741);
     ActiveCollider_dtor(a1 + 2665);
@@ -40307,7 +40342,7 @@
   }
 
 /* ============================================================================
- * sub_6007955C
+ * _ZN11FinalBowserD2Ev_helper
  * RVA 0x0007955c   size 0x1c8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6007955C(int a1)
@@ -41162,7 +41197,7 @@
     int v0; // r4
   
     v0 = operator new(0x1EF0u);
-    sub_600FB6C8(v0);
+    Actor_final_BowserJr_build_helper(v0);
     *(_DWORD *)v0 = 12349724;
     *(_DWORD *)(v0 + 7612) = 0;
     *(_DWORD *)(v0 + 7616) = 1;
@@ -45059,7 +45094,7 @@
         sub_60930F9C(v8 + 488, v23);
       }
     }
-    if ( sub_6009C7F8(a1) == 1 )
+    if ( Iggy::onExecute(a1) == 1 )
       *(_BYTE *)(a1 + 8136) = 1;
     StateMgr::execute(v5);
     v9 = StateMgr::getCurrentState((int)v5);
@@ -45132,7 +45167,7 @@
   }
 
 /* ============================================================================
- * sub_6009C7F8
+ * _ZN4Iggy9onExecuteEv_helper
  * RVA 0x0009c7f8   size 0x490   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6009C7F8(int a1)
@@ -46712,7 +46747,7 @@
         _cxa_guard_release_0(13117528);
       }
       if ( v6 && (**v6)(v6, 13117524) == 1 )
-        sub_600A3FD4((int)v6);
+        Iggy::vf670((int)v6);
     }
     v7 = *(_DWORD **)(*(_DWORD *)v2 + 12);
     v8 = *(_DWORD *)(*(_DWORD *)v2 + 68);
@@ -47117,7 +47152,7 @@
     (*(void (__fastcall **)(int *))(v2 + 1180))(a1);
     if ( sub_60418548(v8) == 1 && a1[1794] != 2 )
     {
-      sub_600B330C(a1);
+      Iggy::vf61C(a1);
       a1[1794] = 2;
     }
     return KoopalingBase::vf61C(a1);
@@ -48822,7 +48857,7 @@
   }
 
 /* ============================================================================
- * sub_600A3FD4
+ * _ZN4Iggy5vf670Ev_helper
  * RVA 0x000a3fd4   size 0x50   xrefs 1
  * ============================================================================ */
   int __fastcall sub_600A3FD4(int a1)
@@ -49072,7 +49107,7 @@
     if ( *(_DWORD *)(v3 - 7016) == 1 )
       *(_DWORD *)(a1 + 120) = -1061158912;
     *(_DWORD *)(a1 + 100) = 1026952033;
-    sub_600A9C90((_DWORD *)a1);
+    fly_magic_ref_2_helper((_DWORD *)a1);
     v10 = *(int **)(a1 + 19456);
     if ( v10 )
     {
@@ -50366,7 +50401,7 @@
   }
 
 /* ============================================================================
- * sub_600A9C90
+ * fly_magic_ref_2_helper
  * RVA 0x000a9c90   size 0x26c   xrefs 1
  * ============================================================================ */
   unsigned int __fastcall sub_600A9C90(_DWORD *a1)
@@ -50925,7 +50960,7 @@
     _DWORD *result; // r0
   
     v0 = (_DWORD *)operator new(0x1800u);
-    result = sub_600B8668(v0);
+    result = Actor_Kamek_Demo_manage_Tag_build_helper(v0);
     *result = 12357004;
     return result;
   }
@@ -52951,7 +52986,7 @@
   }
 
 /* ============================================================================
- * sub_600B330C
+ * _ZN4Iggy5vf61CEv_helper
  * RVA 0x000b330c   size 0x34   xrefs 1
  * ============================================================================ */
   int __fastcall sub_600B330C(_DWORD *a1)
@@ -56811,7 +56846,7 @@
   }
 
 /* ============================================================================
- * sub_600B8668
+ * Actor_Kamek_Demo_manage_Tag_build_helper
  * RVA 0x000b8668   size 0x44   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_600B8668(_DWORD *a1)
@@ -58663,23 +58698,23 @@
             (*(void (__fastcall **)(int, int, int *))(*(_DWORD *)v21 + 108))(v21, v22, v23);
             sub_602372C0(a1 + 7816, v20, (int)v23, 1);
           }
-          sub_600C4A80((_DWORD *)a1);
+          Bowser::onExecute((_DWORD *)a1);
           ActorScaler_execute(a1 + 7764);
           (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1008))(a1);
           return 1;
         }
       }
-      sub_600C73C8((_DWORD *)a1);
+      Bowser::onExecute((_DWORD *)a1);
       v2 = *v3;
     }
     *(_DWORD *)(a1 + 7812) = -1;
     if ( (v2 & 8) == 0 )
     {
       j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 7100));
-      sub_600C593C((_DWORD *)a1);
+      Bowser::onExecute((_DWORD *)a1);
       sub_604218E0(*(_DWORD **)(a1 + 7100));
     }
-    sub_600C4A80((_DWORD *)a1);
+    Bowser::onExecute((_DWORD *)a1);
     StateMgr::execute((_DWORD *)(a1 + 6084));
     ActorScaler_execute(a1 + 7764);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1008))(a1);
@@ -58697,7 +58732,7 @@
       }
       else
       {
-        sub_600C569C(a1, v8);
+        Bowser::onExecute(a1, v8);
       }
     }
     v10 = *(float *)(a1 + 144);
@@ -58724,7 +58759,7 @@
   }
 
 /* ============================================================================
- * sub_600C4A80
+ * _ZN6Bowser9onExecuteEv_helper
  * RVA 0x000c4a80   size 0x34c   xrefs 2
  * ============================================================================ */
   int __fastcall sub_600C4A80(_DWORD *a1)
@@ -59216,7 +59251,7 @@
   }
 
 /* ============================================================================
- * sub_600C569C
+ * _ZN6Bowser9onExecuteEv_helper_0C569C
  * RVA 0x000c569c   size 0x288   xrefs 1
  * ============================================================================ */
   int __fastcall sub_600C569C(int result, unsigned int a2)
@@ -59300,7 +59335,7 @@
   }
 
 /* ============================================================================
- * sub_600C593C
+ * _ZN6Bowser9onExecuteEv_helper_0C593C
  * RVA 0x000c593c   size 0x11c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_600C593C(_DWORD *a1)
@@ -59791,12 +59826,12 @@
   {
     sub_602A2DA0(a3);
     if ( (*(_BYTE *)(a1 + 7108) & 4) == 0 )
-      sub_600C6474((_DWORD *)a1, (_DWORD *)(a3 + 84));
+      Bowser::collisionIceball((_DWORD *)a1, (_DWORD *)(a3 + 84));
     return 1;
   }
 
 /* ============================================================================
- * sub_600C6474
+ * _ZN6Bowser16collisionIceballEP14ActiveColliderS1__helper
  * RVA 0x000c6474   size 0xd8   xrefs 1
  * ============================================================================ */
   int *__fastcall sub_600C6474(_DWORD *a1, _DWORD *a2)
@@ -60445,7 +60480,7 @@
   }
 
 /* ============================================================================
- * sub_600C73C8
+ * _ZN6Bowser9onExecuteEv_helper_0C73C8
  * RVA 0x000c73c8   size 0x114   xrefs 1
  * ============================================================================ */
   unsigned int *__fastcall sub_600C73C8(_DWORD *a1)
@@ -67947,7 +67982,7 @@
       v40[0] = *(float *)(a1 + 108);
       v40[1] = v9;
       mapPositionToScreen(v39, v40);
-      sub_60813814(v11, "SE_BOSS_LEMMY_BOMB_FIRE", v10, v39, 0);
+      j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v11, "SE_BOSS_LEMMY_BOMB_FIRE", v10, v39, 0);
       v12 = *v5;
       if ( *v5 == 36 )
       {

@@ -1920,7 +1920,7 @@
   }
 
 /* ============================================================================
- * sub_600FB6C8
+ * Actor_final_BowserJr_build_helper
  * RVA 0x000fb6c8   size 0x38   xrefs 1
  * ============================================================================ */
   int __fastcall sub_600FB6C8(int a1)
@@ -7128,7 +7128,7 @@
       sub_60448AF4(*v15, v5++);
     }
     while ( v5 != 10 );
-    sub_6011E190(a1);
+    jcm_demo_battleA_ref_2_helper(a1);
     *(_BYTE *)(a1 + 9242) = 0;
     return 9242;
   }
@@ -8398,7 +8398,7 @@
   }
 
 /* ============================================================================
- * sub_6011E190
+ * jcm_demo_battleA_ref_2_helper
  * RVA 0x0011e190   size 0x330   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6011E190(int a1)
@@ -13882,7 +13882,7 @@
   }
 
 /* ============================================================================
- * sub_60138350
+ * Actor_keronpa_fire_RDashfor_build_helper
  * RVA 0x00138350   size 0xe0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60138350(int a1)
@@ -13919,7 +13919,7 @@
     _DWORD *result; // r0
   
     v0 = operator new(0x1A08u);
-    result = (_DWORD *)sub_60138350(v0);
+    result = (_DWORD *)Actor_keronpa_fire_RDashfor_build_helper(v0);
     *result = 12396420;
     result[1664] = 0;
     result[1665] = 0;
@@ -14321,7 +14321,7 @@
   }
 
 /* ============================================================================
- * sub_6013E7E0
+ * SE_OBJ_ROCK_LAND_ref_2_helper
  * RVA 0x0013e7e0   size 0xd0   xrefs 4
  * ============================================================================ */
   int __fastcall sub_6013E7E0(int a1)
@@ -14370,7 +14370,7 @@
   }
 
 /* ============================================================================
- * sub_6013E8B4
+ * SE_OBJ_ROCK_LAND_ref_2_helper_13E8B4
  * RVA 0x0013e8b4   size 0xbc   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6013E8B4(int a1, int a2)
@@ -14669,7 +14669,7 @@
     v7[0] = v3;
     v7[1] = v4;
     mapPositionToScreen(v6, v7);
-    return sub_60813814(v2, "SE_EMY_HAMMER_BROS_HAMMER", v1, v6, 0);
+    return j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v2, "SE_EMY_HAMMER_BROS_HAMMER", v1, v6, 0);
   }
 
 /* ============================================================================
@@ -15510,7 +15510,7 @@
       v3 = 1;
       if ( !*v2 && !*(_BYTE *)(a1 + 7041) && !*(_WORD *)(a1 + 6278) )
       {
-        sub_6013E7E0(a1);
+        SE_OBJ_ROCK_LAND_ref_2_helper(a1);
         v4 = *(float *)(a1 + 112);
         v5 = MEMORY[0xC7F534];
         v9[0] = *(float *)(a1 + 108);
@@ -15526,7 +15526,7 @@
     result = checkLiquidCollisions(&v7, v9, (float *)(a1 + 108), *(unsigned __int8 *)(a1 + 86));
     if ( v7 )
     {
-      sub_6013E8B4(a1, v7);
+      SE_OBJ_ROCK_LAND_ref_2_helper_13E8B4(a1, v7);
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13140076);
     }
     return result;
@@ -15716,7 +15716,7 @@
   }
 
 /* ============================================================================
- * sub_60147570
+ * Actor_snow_ball_build_helper
  * RVA 0x00147570   size 0xd8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60147570(int a1)
@@ -16131,7 +16131,7 @@
     v18 = v2;
     v19 = v3;
     mapPositionToScreen(v21, &v18);
-    sub_60813814(v4, "SE_EMY_CHOROPU_M_SPANNER", v5, v21, 0);
+    j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v4, "SE_EMY_CHOROPU_M_SPANNER", v5, v21, 0);
     v6 = (_BYTE *)(a1 + 11865);
     if ( *(_BYTE *)(a1 + 11865) )
       goto LABEL_2;
@@ -17310,7 +17310,7 @@
   }
 
 /* ============================================================================
- * sub_6014BD38
+ * CollisionMgr_process_helper_helper_14BD38
  * RVA 0x0014bd38   size 0x22c   xrefs 1
  * ============================================================================ */
   float *__fastcall sub_6014BD38(float *result)
@@ -17469,7 +17469,7 @@
   }
 
 /* ============================================================================
- * sub_6014BF68
+ * CollisionMgr_process_helper
  * RVA 0x0014bf68   size 0x420   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6014BF68(int a1)
@@ -17551,7 +17551,7 @@
     if ( *(_BYTE *)(a1 + 2339) )
     {
       *(_BYTE *)(a1 + 2339) = 0;
-      sub_6014BD38((float *)a1);
+      CollisionMgr_process_helper_helper_14BD38((float *)a1);
       if ( *v2 > *(float *)(a1 + 2264) || *(float *)(a1 + 2260) > *(float *)(a1 + 2268) )
       {
         *((_BYTE *)v2 + 13) = v3[13];
@@ -17979,15 +17979,15 @@
     result = a1[2337];
     if ( !result )
       return result;
-    sub_6014D020(a1);
+    CollisionMgr_process_helper_14D020(a1);
     if ( !a1[2352] && !a1[2351] && !a1[2349] && !a1[2350] )
       return (*(int (__fastcall **)(unsigned __int8 *))(*(_DWORD *)a1 + 20))(a1);
     (*(void (__fastcall **)(unsigned __int8 *))(*(_DWORD *)a1 + 20))(a1);
-    sub_6014BF68(a1);
+    CollisionMgr_process_helper(a1);
     (*(void (__fastcall **)(unsigned __int8 *))(*(_DWORD *)a1 + 40))(a1);
-    sub_6014D680(a1);
+    CollisionMgr_process_helper_14D680(a1);
     (*(void (__fastcall **)(unsigned __int8 *))(*(_DWORD *)a1 + 44))(a1);
-    sub_6014D97C(a1);
+    CollisionMgr_process_helper_14D97C(a1);
     v3 = *((_DWORD *)a1 + 556);
     if ( (v3 & 1) != 0 )
     {
@@ -18022,7 +18022,7 @@
       }
     }
     (*(void (__fastcall **)(unsigned __int8 *))(*(_DWORD *)a1 + 48))(a1);
-    sub_6014DDD0(a1);
+    CollisionMgr_process_helper_14DDD0(a1);
     v12 = *((_DWORD *)a1 + 556);
     if ( (v12 & 0x10400) == 0x400 )
     {
@@ -18059,7 +18059,7 @@
     if ( (v12 & 0x10401) == 0x400 )
     {
       (*(void (__fastcall **)(unsigned __int8 *))(*(_DWORD *)a1 + 44))(a1);
-      sub_6014D97C(a1);
+      CollisionMgr_process_helper_14D97C(a1);
       v12 = *((_DWORD *)a1 + 556);
       if ( (v12 & 1) != 0 )
       {
@@ -18161,14 +18161,14 @@
     v91[0] = v46;
     v91[1] = v47;
     *((_DWORD *)a1 + 583) = v34;
-    sub_6014DEE4(a1, v33);
+    CollisionMgr_process_helper_14DEE4(a1, v33);
     (*(void (__fastcall **)(unsigned __int8 *, _BOOL4))(*(_DWORD *)a1 + 52))(a1, v33);
-    sub_6014E8B8(a1, v33);
-    sub_6014EB4C(a1, v33, !v33);
-    sub_6014DEE4(a1, !v33);
+    CollisionMgr_process_helper_14E8B8(a1, v33);
+    CollisionMgr_process_helper_14EB4C(a1, v33, !v33);
+    CollisionMgr_process_helper_14DEE4(a1, !v33);
     (*(void (__fastcall **)(unsigned __int8 *, bool))(*(_DWORD *)a1 + 52))(a1, !v33);
-    sub_6014E8B8(a1, !v33);
-    sub_6014EB4C(a1, !v33, v33);
+    CollisionMgr_process_helper_14E8B8(a1, !v33);
+    CollisionMgr_process_helper_14EB4C(a1, !v33, v33);
     v48 = *((_DWORD *)a1 + 556);
     v49 = 0x40000;
     if ( v32 < v31 )
@@ -18192,10 +18192,10 @@
         v52 = (v48 & (1 << (v34 | 0x16))) == 0;
       if ( !v52 && (v48 & (1 << (v34 | 0x1C))) == 0 )
       {
-        sub_6014DEE4(a1, v33);
+        CollisionMgr_process_helper_14DEE4(a1, v33);
         (*(void (__fastcall **)(unsigned __int8 *, _BOOL4))(*(_DWORD *)a1 + 52))(a1, v33);
-        sub_6014E8B8(a1, v33);
-        sub_6014EB4C(a1, v33, !v33);
+        CollisionMgr_process_helper_14E8B8(a1, v33);
+        CollisionMgr_process_helper_14EB4C(a1, v33, !v33);
         v48 = *((_DWORD *)a1 + 556);
       }
     }
@@ -18236,7 +18236,7 @@
         }
       }
     }
-    result = sub_6014F130(a1, v91);
+    result = CollisionMgr_process_helper_14F130(a1, v91);
     if ( v29 == 1 )
     {
       result = v30[3];
@@ -18285,7 +18285,7 @@
                 if ( (result & 0x880000) != 0 )
 
 /* ============================================================================
- * sub_6014D020
+ * CollisionMgr_process_helper_14D020
  * RVA 0x0014d020   size 0x660   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6014D020(int a1)
@@ -18635,7 +18635,7 @@
   }
 
 /* ============================================================================
- * sub_6014D680
+ * CollisionMgr_process_helper_14D680
  * RVA 0x0014d680   size 0x2f0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6014D680(int a1)
@@ -18800,7 +18800,7 @@
   }
 
 /* ============================================================================
- * sub_6014D97C
+ * CollisionMgr_process_helper_14D97C
  * RVA 0x0014d97c   size 0x440   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6014D97C(int a1)
@@ -19027,7 +19027,7 @@
   }
 
 /* ============================================================================
- * sub_6014DDD0
+ * CollisionMgr_process_helper_14DDD0
  * RVA 0x0014ddd0   size 0x110   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6014DDD0(int a1)
@@ -19097,7 +19097,7 @@
   }
 
 /* ============================================================================
- * sub_6014DEE4
+ * CollisionMgr_process_helper_14DEE4
  * RVA 0x0014dee4   size 0x9ac   xrefs 3
  * ============================================================================ */
   int __fastcall sub_6014DEE4(int a1, int a2)
@@ -19502,7 +19502,7 @@
   LABEL_96:
 
 /* ============================================================================
- * sub_6014E8B8
+ * CollisionMgr_process_helper_14E8B8
  * RVA 0x0014e8b8   size 0x28c   xrefs 3
  * ============================================================================ */
   int __fastcall sub_6014E8B8(_DWORD *a1, int a2)
@@ -19637,7 +19637,7 @@
   }
 
 /* ============================================================================
- * sub_6014EB4C
+ * CollisionMgr_process_helper_14EB4C
  * RVA 0x0014eb4c   size 0x5c0   xrefs 3
  * ============================================================================ */
   int __fastcall sub_6014EB4C(int a1, int a2, int a3)
@@ -19931,7 +19931,7 @@
   }
 
 /* ============================================================================
- * sub_6014F130
+ * CollisionMgr_process_helper_14F130
  * RVA 0x0014f130   size 0x4cc   xrefs 1
  * ============================================================================ */
   float *__fastcall sub_6014F130(int a1, float *a2)
@@ -23306,7 +23306,7 @@
   }
 
 /* ============================================================================
- * sub_601542DC
+ * PlayerBase_ctor_helper
  * RVA 0x001542dc   size 0xa0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_601542DC(int a1)
@@ -25000,10 +25000,10 @@
     *(_DWORD *)(a1 + 380) = *(_DWORD *)(a1 + 372) + v4;
     *(_DWORD *)(a1 + 384) = *(_DWORD *)(a1 + 376) + v4;
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 52))(a1);
-    sub_601582D8(a1, a1 + 252, 3);
-    sub_601582D8(a1, a1 + 264, 2);
-    sub_601582D8(a1, a1 + 276, 0);
-    sub_601582D8(a1, a1 + 288, 1);
+    CircularCollider_execute_helper(a1, a1 + 252, 3);
+    CircularCollider_execute_helper(a1, a1 + 264, 2);
+    CircularCollider_execute_helper(a1, a1 + 276, 0);
+    CircularCollider_execute_helper(a1, a1 + 288, 1);
     return sub_601601B8(a1);
   }
 
@@ -25180,14 +25180,14 @@
     sub_6014FBD0((int)a6, a5);
     if ( (a1[77] & 0xF) != 2 )
     {
-      v14 = sub_60157D3C((int)a1, (int)a2, v10, a4, a5, (int)a6);
+      v14 = CircularCollider_vf24_helper_157D3C((int)a1, (int)a2, v10, a4, a5, (int)a6);
       result = 0;
       if ( !v14 )
         return result;
     }
     else
     {
-      v11 = sub_60157A48((int)a1, (int)a2, a3, a4, a5, (int)a6);
+      v11 = CircularCollider_vf24_helper((int)a1, (int)a2, a3, a4, a5, (int)a6);
       result = 0;
       if ( v11 != 1 )
         return result;
@@ -25203,7 +25203,7 @@
   }
 
 /* ============================================================================
- * sub_60157A48
+ * CircularCollider_vf24_helper
  * RVA 0x00157a48   size 0x2ec   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60157A48(int a1, int a2, float *a3, float *a4, int a5, int a6)
@@ -25353,7 +25353,7 @@
   }
 
 /* ============================================================================
- * sub_60157D3C
+ * CircularCollider_vf24_helper_157D3C
  * RVA 0x00157d3c   size 0x214   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60157D3C(int a1, int a2, int a3, float *a4, int a5, int a6)
@@ -25665,7 +25665,7 @@
   }
 
 /* ============================================================================
- * sub_601582D8
+ * CircularCollider_execute_helper
  * RVA 0x001582d8   size 0x2f4   xrefs 4
  * ============================================================================ */
   int __fastcall sub_601582D8(int result, int a2, unsigned int a3)
@@ -28651,7 +28651,7 @@
   }
 
 /* ============================================================================
- * sub_6015BDB8
+ * FloatingBubble_onCreate_helper
  * RVA 0x0015bdb8   size 0x50   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6015BDB8(int a1, int a2)
@@ -30533,10 +30533,10 @@
     sub_601603E8();
     sub_6015E4F0(a1);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 52))(a1);
-    sub_6015FBE4(a1, a1 + 252, 3);
-    sub_6015FBE4(a1, a1 + 264, 2);
-    sub_6015FBE4(a1, a1 + 276, 0);
-    sub_6015FBE4(a1, a1 + 288, 1);
+    SolidOnTopCollider_execute_helper(a1, a1 + 252, 3);
+    SolidOnTopCollider_execute_helper(a1, a1 + 264, 2);
+    SolidOnTopCollider_execute_helper(a1, a1 + 276, 0);
+    SolidOnTopCollider_execute_helper(a1, a1 + 288, 1);
     return sub_601601B8(a1);
   }
 
@@ -30691,7 +30691,7 @@
   }
 
 /* ============================================================================
- * sub_6015EE3C
+ * SolidOnTopCollider_vf24_helper
  * RVA 0x0015ee3c   size 0x24c   xrefs 1
  * ============================================================================ */
   bool __fastcall sub_6015EE3C(int a1, float *a2, float *a3, int a4, int a5)
@@ -30727,7 +30727,7 @@
     float v38; // [sp+28h] [bp-8h]
     float v39; // [sp+2Ch] [bp-4h]
   
-    v9 = sub_6015F088(a1, a3, a5);
+    v9 = SolidOnTopCollider_vf24_helper_helper_15F088(a1, a3, a5);
     v10 = *(float **)(a1 + 152);
     v11 = *(float **)(a1 + 352);
     if ( *(_DWORD *)(a1 + 348) > v9 )
@@ -30743,7 +30743,7 @@
     sub_60166970(&v36, &v30, &v34);
     if ( (float)((float)((float)(a3[1] - v37) * (float)(v38 - v36)) - (float)((float)(*a3 - v36) * (float)(v39 - v37))) > 0.0 )
       return 0;
-    v16 = sub_6015F1FC(a1, a2, a5);
+    v16 = SolidOnTopCollider_vf24_helper_helper_15F1FC(a1, a2, a5);
     if ( (int)abs32(v9 - v16) > 1 )
       return 0;
     v17 = *(float **)(a1 + 156);
@@ -30788,7 +30788,7 @@
   }
 
 /* ============================================================================
- * sub_6015F088
+ * SolidOnTopCollider_vf24_helper_helper_15F088
  * RVA 0x0015f088   size 0x174   xrefs 1
  * ============================================================================ */
   unsigned int __fastcall sub_6015F088(int a1, float *a2, int a3)
@@ -30898,7 +30898,7 @@
   }
 
 /* ============================================================================
- * sub_6015F1FC
+ * SolidOnTopCollider_vf24_helper_helper_15F1FC
  * RVA 0x0015f1fc   size 0x174   xrefs 1
  * ============================================================================ */
   unsigned int __fastcall sub_6015F1FC(int a1, float *a2, int a3)
@@ -31008,7 +31008,7 @@
   }
 
 /* ============================================================================
- * sub_6015F370
+ * SolidOnTopCollider_vf24_helper_15F370
  * RVA 0x0015f370   size 0x57c   xrefs 1
  * ============================================================================ */
   float *__fastcall sub_6015F370(int a1, unsigned int a2, int a3, int a4)
@@ -31290,7 +31290,7 @@
     float v45; // [sp+44h] [bp-4h]
   
     v10 = (_DWORD *)a6;
-    v15 = sub_6015EE3C((int)a1, a3, a4, a6, a5);
+    v15 = SolidOnTopCollider_vf24_helper((int)a1, a3, a4, a6, a5);
     result = 0;
     if ( v15 )
     {
@@ -31315,7 +31315,7 @@
             v42[1] = a4[1];
             v42[0] = v24;
             v43 = *(_QWORD *)(8 * a5 + 0xAF7728);
-            sub_6015F370((int)a1, v20, a5, (int)v10);
+            SolidOnTopCollider_vf24_helper_15F370((int)a1, v20, a5, (int)v10);
             v41[0] = v6;
             v41[1] = v7;
             v41[2] = v8;
@@ -31407,7 +31407,7 @@
   }
 
 /* ============================================================================
- * sub_6015FBE4
+ * SolidOnTopCollider_execute_helper
  * RVA 0x0015fbe4   size 0x270   xrefs 4
  * ============================================================================ */
   int __fastcall sub_6015FBE4(int result, int a2, unsigned int a3)
@@ -33600,10 +33600,10 @@
     sub_601603E8(a1, a2, a3, a4);
     (*(void (__fastcall **)(_DWORD *))(*a1 + 64))(a1);
     (*(void (__fastcall **)(_DWORD *))(*a1 + 52))(a1);
-    sub_60164DF0(a1, a1 + 63, 3);
-    sub_60164DF0(a1, a1 + 66, 2);
-    sub_60164DF0(a1, a1 + 69, 0);
-    sub_60164DF0(a1, a1 + 72, 1);
+    ShapedCollider_execute_helper(a1, a1 + 63, 3);
+    ShapedCollider_execute_helper(a1, a1 + 66, 2);
+    ShapedCollider_execute_helper(a1, a1 + 69, 0);
+    ShapedCollider_execute_helper(a1, a1 + 72, 1);
     return sub_601601B8(a1);
   }
 
@@ -33832,12 +33832,12 @@
     }
     else
     {
-      v13 = sub_60163440(a1, a2, (int)a3, (_DWORD *)a4, a5, (int)a6);
+      v13 = ShapedCollider_vf24_helper(a1, a2, (int)a3, (_DWORD *)a4, a5, (int)a6);
       result = 0;
       if ( v13 != 1 )
         return result;
     }
-    if ( sub_6016377C(a1, (int)a6, a2, a5) == 1 )
+    if ( ShapedCollider_vf24_helper_16377C(a1, (int)a6, a2, a5) == 1 )
     {
       *(_DWORD *)(a2 + 8) = *(_DWORD *)(4 * a5 + 0xAF76E8);
       *(_DWORD *)(a2 + 12) = *(_DWORD *)a4;
@@ -34247,7 +34247,7 @@
   }
 
 /* ============================================================================
- * sub_60163440
+ * ShapedCollider_vf24_helper
  * RVA 0x00163440   size 0x334   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60163440(int a1, int a2, int a3, _DWORD *a4, int a5, int a6)
@@ -34399,11 +34399,11 @@
     if ( a5 != 3 || v11 )
       return sub_601644C4(a1, a2);
     else
-      return sub_601638EC(a1, a2, a3, a4, 3, a6);
+      return ShapedCollider_vf24_helper_helper_1638EC(a1, a2, a3, a4, 3, a6);
   }
 
 /* ============================================================================
- * sub_6016377C
+ * ShapedCollider_vf24_helper_16377C
  * RVA 0x0016377c   size 0x168   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6016377C(int a1, int a2, int a3, int a4)
@@ -34447,7 +34447,7 @@
   }
 
 /* ============================================================================
- * sub_601638EC
+ * ShapedCollider_vf24_helper_helper_1638EC
  * RVA 0x001638ec   size 0xbb4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_601638EC(int a1, int a2, float *a3, float *a4, int a5, float *a6)
@@ -35383,7 +35383,7 @@
   }
 
 /* ============================================================================
- * sub_60164DF0
+ * ShapedCollider_execute_helper
  * RVA 0x00164df0   size 0x2c4   xrefs 4
  * ============================================================================ */
   int __fastcall sub_60164DF0(int result, int a2, unsigned int a3)
@@ -36252,7 +36252,7 @@
     sub_601603E8(a1, a2, a3, a4);
     sub_601656B0((int)a1);
     (*(void (__fastcall **)(_DWORD *))(*a1 + 52))(a1);
-    sub_60165D48(a1);
+    SwingingCollider_execute_helper(a1);
     (*(void (__fastcall **)(_DWORD *))(a1[85] + 16))(a1 + 85);
     v5 = a1[88];
     if ( v5 >= 1 )
@@ -36270,7 +36270,7 @@
   }
 
 /* ============================================================================
- * sub_60165D48
+ * SwingingCollider_execute_helper
  * RVA 0x00165d48   size 0x230   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60165D48(int result)
@@ -36691,7 +36691,7 @@
         {
           v29[0] = v25 + (float)((float)(v27 - v25) * v24[0]);
           v29[1] = v26 + (float)((float)(v28 - v26) * v24[0]);
-          v18 = sub_6016717C(&v25, v29);
+          v18 = SwingingCollider_vf28_helper(&v25, v29);
           v4 |= v18;
           if ( v18 )
             break;
@@ -37278,7 +37278,7 @@
   }
 
 /* ============================================================================
- * sub_6016717C
+ * SwingingCollider_vf28_helper
  * RVA 0x0016717c   size 0x9c   xrefs 1
  * ============================================================================ */
   bool __fastcall sub_6016717C(float *a1, float *a2)
@@ -84149,6 +84149,411 @@
   }
 
 /* ============================================================================
+ * Player_createEffectsAndState
+ * RVA 0x001dbb64   size 0x3bb4   xrefs 0
+ * ============================================================================ */
+  int __fastcall sub_601DBB64(int32x4_t *a1)
+  {
+    int v2; // r5
+    int v3; // r6
+    int v4; // r3
+    char v5; // r12
+    int v6; // r4
+    _BOOL4 i; // r10
+    float v8; // r11
+    const void *v9; // r9
+    char v10; // r5
+    signed int v11; // r6
+    bool v12; // cc
+    unsigned __int32 *v13; // r0
+    unsigned __int32 v14; // r1
+    unsigned __int32 v15; // r2
+    unsigned __int32 v16; // r0
+    char v17; // r12
+    unsigned __int32 *v18; // r0
+    unsigned __int32 v19; // r1
+    unsigned __int32 v20; // r2
+    unsigned __int32 v21; // r0
+    float v22; // r11
+    const void *v23; // r9
+    char v24; // r5
+    signed int v25; // r6
+    int v26; // r0
+    _DWORD *v27; // r0
+    unsigned __int32 *v28; // r0
+    int v29; // r0
+    float v30; // r1
+    int v31; // r2
+    unsigned __int32 *v32; // r0
+    unsigned __int32 v33; // r1
+    unsigned __int32 v34; // r2
+    unsigned __int32 v35; // r0
+    unsigned __int32 *v36; // r0
+    unsigned __int32 v37; // r1
+    unsigned __int32 v38; // r2
+    unsigned __int32 v39; // r0
+    int32x4_t *v40; // r5
+    unsigned __int32 v41; // r0
+    float v42; // r1
+    unsigned __int32 v43; // r2
+    unsigned __int32 *v44; // r0
+    unsigned __int32 v45; // r1
+    unsigned __int32 v46; // r2
+    unsigned __int32 v47; // r0
+    char v48; // r12
+    unsigned __int32 *v49; // r0
+    unsigned __int32 v50; // r1
+    unsigned __int32 v51; // r2
+    unsigned __int32 v52; // r0
+    float v53; // r11
+    const void *v54; // r9
+    char v55; // r5
+    signed int v56; // r6
+    unsigned __int32 v57; // r1
+    float v58; // s2
+    unsigned __int32 v59; // r2
+    __int8 *v60; // r0
+    __int8 *v61; // r1
+    int v62; // r0
+    int v63; // r6
+    int v64; // r1
+    _DWORD *v65; // r0
+    unsigned __int32 *v66; // r0
+    unsigned int v67; // r0
+    int v68; // r0
+    float v69; // r1
+    int v70; // r0
+    int v71; // r6
+    int v72; // r1
+    _DWORD *v73; // r0
+    unsigned __int32 *v74; // r0
+    unsigned int v75; // r0
+    int v76; // r0
+    float v77; // r1
+    int v78; // r2
+    int v79; // r0
+    int v80; // r5
+    _DWORD *v81; // r0
+    int v82; // r0
+    _DWORD *v83; // r7
+    int v84; // r11
+    int v85; // r1
+    int v86; // r2
+    int v87; // r3
+    int v88; // r3
+    int v89; // r0
+    _DWORD *v90; // r0
+    int v91; // r0
+    _DWORD *v92; // r0
+    unsigned __int32 *v93; // r0
+    int v94; // r3
+    int v95; // r0
+    int v96; // r1
+    int v97; // r0
+    _DWORD *v98; // r0
+    unsigned __int32 *v99; // r0
+    _DWORD *v100; // r0
+    unsigned __int32 *v101; // r0
+    __int8 *v102; // r1
+    unsigned __int32 v103; // r0
+    int v104; // r1
+    float v105; // s2
+    float v106; // r11
+    const void *v107; // r9
+    char v108; // r5
+    signed int v109; // r6
+    float v110; // r11
+    const void *v111; // r9
+    char v112; // r5
+    signed int v113; // r6
+    unsigned __int32 v114; // r0
+    unsigned __int32 v115; // r1
+    float v116; // r2
+    float *v117; // r0
+    float v118; // s2
+    float v119; // s8
+    float v120; // s10
+    float v121; // s4
+    float v122; // s0
+    float v123; // s2
+    float v124; // s4
+    float v125; // s10
+    int v126; // r0
+    int v127; // r0
+    float v128; // s0
+    int v129; // s2
+    int v130; // r7
+    int v131; // r0
+    int v132; // r6
+    int v133; // r0
+    float v134; // r0
+    int v135; // r0
+    float v136; // s2
+    float v137; // s8
+    float v138; // s4
+    float v139; // s10
+    int v140; // r0
+    float v141; // s0
+    int result; // r0
+    unsigned __int32 v143; // r0
+    int v144; // r1
+    int32x4_t *v145; // r2
+    unsigned __int32 v146; // r0
+    float v147; // s18
+    float v148; // s20
+    float v149; // s16
+    float v150; // s0
+    float v151; // s2
+    unsigned __int32 v152; // r3
+    unsigned __int32 v153; // r0
+    unsigned __int32 v154; // r0
+    int *v155; // r1
+    unsigned __int32 v156; // r0
+    unsigned __int32 v157; // r0
+    unsigned __int32 v158; // r0
+    unsigned __int32 v159; // r0
+    float v160; // r1
+    int v161; // r2
+    float v162; // r1
+    int v163; // r2
+    unsigned __int32 v164; // r0
+    _DWORD *v165; // r6
+    char *v166; // r0
+    int v167; // r7
+    int v168; // r1
+    int v169; // r3
+    char *v170; // r0
+    int k; // r1
+    int v172; // r3
+    char *v173; // r0
+    int m; // r1
+    int v175; // r3
+    unsigned __int32 v176; // r0
+    __int8 *v177; // r5
+    int v178; // r0
+    _DWORD *v179; // r0
+    unsigned __int32 *v180; // r0
+    int v181; // r0
+    float v182; // r1
+    float v183; // s0
+    unsigned __int32 v184; // r0
+    void (*v185)(void); // r2
+    unsigned __int32 v186; // r0
+    _DWORD *v187; // r6
+    int v188; // r5
+    int v189; // r1
+    int v190; // r5
+    int v191; // r2
+    int v192; // r3
+    int v193; // r3
+    unsigned __int32 v194; // r0
+    _DWORD *v195; // r7
+    int v196; // r5
+    int v197; // r1
+    int v198; // r3
+    int v199; // r7
+    int v200; // r7
+    _DWORD *v201; // r5
+    int v202; // r2
+    int v203; // r7
+    unsigned __int32 v204; // r3
+    unsigned __int32 v205; // r0
+    unsigned __int32 v206; // r0
+    float v207; // s0
+    int v208; // r7
+    _DWORD *v209; // r0
+    unsigned __int32 *v210; // r0
+    unsigned int v211; // r0
+    int32x4_t *v212; // r0
+    __int8 *v213; // r1
+    int v214; // r7
+    int v215; // r1
+    int j; // r2
+    int v217; // r3
+    int v218; // r3
+    int v219; // r10
+    int v220; // r6
+    int v221; // r0
+    bool v222; // zf
+    int v223; // r7
+    int v224; // r0
+    int v225; // r4
+    int v226; // r5
+    int v227; // r0
+    int *v228; // r1
+    unsigned int v229; // r0
+    int v230; // r1
+    int v231; // r10
+    int v232; // r7
+    int v233; // r0
+    int v234; // r6
+    int v235; // r0
+    int v236; // r5
+    int v237; // r11
+    int v238; // r0
+    int *v239; // r1
+    unsigned int v240; // r0
+    int v241; // r1
+    int v242; // r2
+    _DWORD *v243; // r0
+    unsigned __int32 *v244; // r0
+    unsigned int v245; // r0
+    unsigned __int32 v246; // r0
+    float *v247; // r0
+    float v248; // s2
+    float v249; // s8
+    float v250; // s10
+    float v251; // s4
+    int v252; // r2
+    _DWORD *v253; // r0
+    int v254; // r0
+    _DWORD *v255; // r0
+    unsigned __int32 *v256; // r0
+    _DWORD *v257; // r0
+    unsigned __int32 *v258; // r0
+    unsigned int v259; // r0
+    unsigned __int32 v260; // r0
+    float *v261; // r0
+    float v262; // s2
+    float v263; // s8
+    float v264; // s10
+    float v265; // s4
+    _BOOL4 v266; // [sp+Ch] [bp-4Ch]
+    int v267; // [sp+10h] [bp-48h]
+    int v268; // [sp+10h] [bp-48h]
+    int v269; // [sp+14h] [bp-44h]
+    int v270; // [sp+14h] [bp-44h]
+    int v271; // [sp+18h] [bp-40h] BYREF
+    float v272; // [sp+1Ch] [bp-3Ch]
+    int v273; // [sp+20h] [bp-38h]
+    _BYTE v274[36]; // [sp+24h] [bp-34h] BYREF
+    int v275; // [sp+48h] [bp-10h]
+    int v276; // [sp+4Ch] [bp-Ch] BYREF
+    int v277; // [sp+50h] [bp-8h]
+    int v278; // [sp+54h] [bp-4h]
+  
+    v2 = *(_DWORD *)(MEMORY[0xCC6D78] + 412);
+    v3 = MEMORY[0xC8996C];
+    v275 = sub_6019112C(MEMORY[0xC8996C]);
+    v6 = -894784854;
+    i = v2 == 4;
+    if ( *(_BYTE *)(v3 + 1384) )
+    {
+      switch ( v275 )
+      {
+        case 111:
+          a1[7].n128_u32[1] = 0;
+          a1[7].n128_u32[2] = 0;
+          a1[7].n128_u32[3] = 0;
+          if ( *(_DWORD *)(MEMORY[0xCC6D78] + 412) == 1 )
+          {
+            if ( ((unsigned int)&unk_60C8B050 & ~(1612562200 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C8B050) )
+            {
+              off_60C8B094 = (_UNKNOWN *)12321336;
+              dword_60C8B098 = (int)"W1M0";
+              _cxa_guard_release_0(&unk_60C8B050);
+            }
+            v272 = COERCE_FLOAT(v274);
+            *(float *)&v271 = 1.7267e-38;
+            v273 = 32;
+            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v271);
+            *(float *)&v271 = 1.7384e-38;
+            v8 = v272;
+            (*((void (__fastcall **)(_UNKNOWN **))off_60C8B094 + 3))(&off_60C8B094);
+            v9 = (const void *)dword_60C8B098;
+            if ( LODWORD(v8) != dword_60C8B098 )
+            {
+              (*((void (__fastcall **)(_UNKNOWN **))off_60C8B094 + 3))(&off_60C8B094);
+              v10 = MEMORY[0xB3BA34];
+              v11 = 0;
+              while ( 1 )
+              {
+                if ( *(unsigned __int8 *)(dword_60C8B098 + v11) == MEMORY[0xB3BA34] )
+                  goto LABEL_158;
+                if ( *(unsigned __int8 *)(dword_60C8B098 + v11 + 1) == MEMORY[0xB3BA34] )
+                {
+                  ++v11;
+                  goto LABEL_158;
+                }
+                if ( *(unsigned __int8 *)(dword_60C8B098 + v11 + 2) == MEMORY[0xB3BA34] )
+                  break;
+                v12 = v11 + 2 <= 0x7FFFF;
+                v11 += 3;
+                if ( !v12 )
+                {
+                  v11 = 0;
+                  goto LABEL_158;
+                }
+              }
+              v11 += 2;
+  LABEL_158:
+              if ( v11 >= v273 )
+                v11 = v273 - 1;
+              qmemcpy((void *)LODWORD(v8), v9, v11);
+              *(_BYTE *)(LODWORD(v8) + v11) = v10;
+            }
+            v130 = (int)&a1[19].n128_i32[2];
+            *(float *)&v271 = 1.7384e-38;
+            sub_601A02B0(MEMORY[0xC89E00], &a1[19].n128_u32[2], 0, 0, (int)&v271);
+            v276 = 0;
+            v277 = 0;
+            v131 = sub_601A443C(MEMORY[0xC89E18], 0, 0);
+            v278 = sub_60181AB4(v131, &v271);
+            sub_6019EC34(&a1[25].n128_u8[4], &v276);
+            v132 = 120;
+          }
+          else
+          {
+            if ( ((unsigned int)&unk_60C8B054 & ~(1612566256 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C8B054) )
+            {
+              off_60C8B09C = (_UNKNOWN *)12321336;
+              dword_60C8B0A0 = (int)"W303";
+              _cxa_guard_release_0(&unk_60C8B054);
+            }
+            v272 = COERCE_FLOAT(v274);
+            *(float *)&v271 = 1.7267e-38;
+            v273 = 32;
+            sead::BufferedSafeStringBase<char>::assureTerminationImpl_(&v271);
+            *(float *)&v271 = 1.7384e-38;
+            v106 = v272;
+            (*((void (__fastcall **)(_UNKNOWN **))off_60C8B09C + 3))(&off_60C8B09C);
+            v107 = (const void *)dword_60C8B0A0;
+            if ( LODWORD(v106) != dword_60C8B0A0 )
+            {
+              (*((void (__fastcall **)(_UNKNOWN **))off_60C8B09C + 3))(&off_60C8B09C);
+              v108 = MEMORY[0xB3BA34];
+              v109 = 0;
+              while ( 1 )
+              {
+                if ( *(unsigned __int8 *)(dword_60C8B0A0 + v109) == MEMORY[0xB3BA34] )
+                  goto LABEL_168;
+                if ( *(unsigned __int8 *)(dword_60C8B0A0 + v109 + 1) == MEMORY[0xB3BA34] )
+                {
+                  ++v109;
+                  goto LABEL_168;
+                }
+                if ( *(unsigned __int8 *)(dword_60C8B0A0 + v109 + 2) == MEMORY[0xB3BA34] )
+                  break;
+                v12 = v109 + 2 <= 0x7FFFF;
+                v109 += 3;
+                if ( !v12 )
+                {
+                  v109 = 0;
+                  goto LABEL_168;
+                }
+              }
+              v109 += 2;
+  LABEL_168:
+              if ( v109 >= v273 )
+                v109 = v273 - 1;
+              qmemcpy((void *)LODWORD(v106), v107, v109);
+              *(_BYTE *)(LODWORD(v106) + v109) = v108;
+            }
+            v130 = (int)&a1[19].n128_i32[2];
+            *(float *)&v271 = 1.7384e-38;
+            sub_601A02B0(MEMORY[0xC89E00], &a1[19].n128_u32[2], 2, 0, (int)&v271);
+
+/* ============================================================================
  * sub_601DFE2C
  * RVA 0x001dfe2c   size 0xe8   xrefs 5
  * ============================================================================ */
@@ -86058,6 +86463,18 @@
   }
 
 /* ============================================================================
+ * SE_PLY_ref_2_helper_helper_1E2F00
+ * RVA 0x001e2f00   size 0x1c   xrefs 1
+ * ============================================================================ */
+  int __fastcall SE_PLY_ref_2_helper_helper_1E2F00(int a1, unsigned int a2)
+  {
+    if ( a2 <= 7 )
+      return dword_60AF7A80[a2];
+    else
+      return 16;
+  }
+
+/* ============================================================================
  * sub_601E2F20
  * RVA 0x001e2f20   size 0x2c8   xrefs 2
  * ============================================================================ */
@@ -86320,7 +86737,7 @@
             else
             {
               sub_60024460(v36, &v33);
-              return sub_60813814(v31, v17, v26, v36, 0);
+              return j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v31, v17, v26, v36, 0);
             }
           }
         }

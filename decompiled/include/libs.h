@@ -60,6 +60,10 @@ unsigned int __fastcall sub_60805088(unsigned int result, int a2);  /* 0x0080508
 int __fastcall sub_60805268(_DWORD *a1, _BYTE *a2);  /* 0x00805268 */
 int __fastcall sub_60805300(int a1, int a2);  /* 0x00805300 */
 int __fastcall sub_60805474(_DWORD *a1);  /* 0x00805474 */
+int __fastcall SoundSystem_createInstance_helper_helper_805A04(int a1);  /* 0x00805a04 */
+int __fastcall SoundSystem_createInstance_helper_helper_805A0C(int a1);  /* 0x00805a0c */
+int __fastcall SoundSystem_createInstance_helper_helper_805A14(int a1);  /* 0x00805a14 */
+int __fastcall SoundSystem_createInstance_helper_helper_805A1C(int a1);  /* 0x00805a1c */
 int __fastcall sub_60805EB8(int a1, int a2);  /* 0x00805eb8 */
 int __fastcall sub_60805EEC(int a1, int a2);  /* 0x00805eec */
 int __fastcall sub_60806174(int a1, char a2, int a3);  /* 0x00806174 */
@@ -829,6 +833,7 @@ int __fastcall sub_6088152C(int result, int a2);  /* 0x0088152c */
 int __fastcall sub_60881594(int a1, int a2, int a3, int a4);  /* 0x00881594 */
 int __fastcall sub_60881844(int a1, int a2, int a3, int a4, int (__fastcall *a5)(int *));  /* 0x00881844 */
 int __fastcall sub_60881A7C(__int64 a1, int a2, int a3);  /* 0x00881a7c */
+int __fastcall EffectData_init_helper(int result);  /* 0x00881ba4 */
 int __fastcall sub_60881D78(int a1, int a2);  /* 0x00881d78 */
 int __fastcall sub_60881DA8(int result, int a2, char a3);  /* 0x00881da8 */
 int __fastcall sub_60881E38(_DWORD *a1, _DWORD *a2);  /* 0x00881e38 */
@@ -1831,6 +1836,10 @@ int __fastcall sub_60910068(int result, unsigned int a2);  /* 0x00910068 */
 int __fastcall sub_60910288(int a1);  /* 0x00910288 */
 int __fastcall sub_609103D4(int a1, _DWORD *a2, int a3);  /* 0x009103d4 */
 int __fastcall sub_609105F4(int a1);  /* 0x009105f4 */
+int __fastcall SoundSystem_createInstance_helper_helper_910804(int result, int a2);  /* 0x00910804 */
+int __fastcall SoundSystem_createInstance_helper_helper_91080C(int result, int a2);  /* 0x0091080c */
+int __fastcall SoundSystem_createInstance_helper_helper_910814(int result, int a2);  /* 0x00910814 */
+int __fastcall SoundSystem_createInstance_helper_helper_91081C(int *a1, int a2);  /* 0x0091081c */
 int __fastcall sub_609109C0(int a1, unsigned int a2, int a3);  /* 0x009109c0 */
 unsigned int __fastcall sub_60910B0C(int a1, int a2);  /* 0x00910b0c */
 int __fastcall sub_60910CEC(_DWORD *a1, int *a2);  /* 0x00910cec */

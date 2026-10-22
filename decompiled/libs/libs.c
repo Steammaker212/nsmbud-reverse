@@ -3892,7 +3892,7 @@
   }
 
 /* ============================================================================
- * sub_608058AC
+ * SoundSystem_createInstance_helper_helper_8058AC
  * RVA 0x008058ac   size 0xac   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_608058AC(_DWORD *a1, int a2)
@@ -3967,7 +3967,43 @@
   }
 
 /* ============================================================================
- * sub_60805A24
+ * SoundSystem_createInstance_helper_helper_805A04
+ * RVA 0x00805a04   size 0x8   xrefs 2
+ * ============================================================================ */
+  int __fastcall SoundSystem_createInstance_helper_helper_805A04(int a1)
+  {
+    return *(_DWORD *)a1;
+  }
+
+/* ============================================================================
+ * SoundSystem_createInstance_helper_helper_805A0C
+ * RVA 0x00805a0c   size 0x8   xrefs 3
+ * ============================================================================ */
+  int __fastcall SoundSystem_createInstance_helper_helper_805A0C(int a1)
+  {
+    return *(_DWORD *)(a1 + 4);
+  }
+
+/* ============================================================================
+ * SoundSystem_createInstance_helper_helper_805A14
+ * RVA 0x00805a14   size 0x8   xrefs 2
+ * ============================================================================ */
+  int __fastcall SoundSystem_createInstance_helper_helper_805A14(int a1)
+  {
+    return *(_DWORD *)(a1 + 8);
+  }
+
+/* ============================================================================
+ * SoundSystem_createInstance_helper_helper_805A1C
+ * RVA 0x00805a1c   size 0x8   xrefs 1
+ * ============================================================================ */
+  int __fastcall SoundSystem_createInstance_helper_helper_805A1C(int a1)
+  {
+    return *(_DWORD *)(a1 + 12);
+  }
+
+/* ============================================================================
+ * SoundSystem_createInstance_helper
  * RVA 0x00805a24   size 0xc4   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_60805A24(_DWORD *a1)
@@ -3987,22 +4023,22 @@
     a1[5] = 0;
     a1[6] = 0;
     v2 = (_DWORD *)operator new(20);
-    a1[5] = sub_608058AC(v2, 0);
+    a1[5] = SoundSystem_createInstance_helper_helper_8058AC(v2, 0);
     v3 = operator new(36);
-    sub_609107C4();
+    SoundSystem_createInstance_helper_helper_9107C4();
     a1[6] = v3;
-    v4 = sub_60805A04(a1[5]);
-    sub_60910804(v3, v4);
+    v4 = SoundSystem_createInstance_helper_helper_805A04(a1[5]);
+    SoundSystem_createInstance_helper_helper_910804(v3, v4);
     v5 = a1[6];
-    v6 = sub_60805A0C(a1[5]);
-    sub_6091080C(v5, v6);
+    v6 = SoundSystem_createInstance_helper_helper_805A0C(a1[5]);
+    SoundSystem_createInstance_helper_helper_91080C(v5, v6);
     v7 = a1[6];
-    v8 = sub_60805A14(a1[5]);
-    sub_60910814(v7, v8);
+    v8 = SoundSystem_createInstance_helper_helper_805A14(a1[5]);
+    SoundSystem_createInstance_helper_helper_910814(v7, v8);
     v9 = a1[6];
-    v10 = sub_60805A1C(a1[5]);
-    sub_6091081C(v9, v10);
-    v11 = sub_60805A0C(a1[5]);
+    v10 = SoundSystem_createInstance_helper_helper_805A1C(a1[5]);
+    SoundSystem_createInstance_helper_helper_91081C(v9, v10);
+    v11 = SoundSystem_createInstance_helper_helper_805A0C(a1[5]);
     (*(void (__fastcall **)(int))(*(_DWORD *)v11 + 16))(v11);
     return a1;
   }
@@ -4418,7 +4454,7 @@
       v3 = sead::IDisposer::IDisposer(v2 + 28, a1, 3);
       *(_DWORD *)(v2 + 28) = 12746956;
       MEMORY[0xCC6AF4] = v3;
-      sub_60805A24((_DWORD *)v2);
+      SoundSystem_createInstance_helper((_DWORD *)v2);
       *(_DWORD *)v2 = 12746972;
       memset((void *)(v2 + 48), 0, 0x2Cu);
       nn::os::GetSystemTick((nn::os *)&v5);
@@ -5102,7 +5138,7 @@
         {
           sub_608B7318(v16, 0, v14);
           if ( v16 )
-            sub_608B7294(v16, 0xFFFF);
+            SE_SYS_ref_2_helper(v16, 0xFFFF);
         }
         dword_60C28178 = *(_DWORD *)a2;
         flt_60C2817C = *(float *)(a2 + 4);
@@ -5874,7 +5910,7 @@
   }
 
 /* ============================================================================
- * sub_608090B8
+ * STRM_BGM_ref_3_helper
  * RVA 0x008090b8   size 0x84   xrefs 2
  * ============================================================================ */
   int __fastcall sub_608090B8(int a1, int a2)
@@ -7057,7 +7093,7 @@
   }
 
 /* ============================================================================
- * sub_6080A170
+ * STRM_BGM_ref_3_helper_80A170
  * RVA 0x0080a170   size 0x30   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6080A170(int a1, int a2)
@@ -7618,21 +7654,21 @@
     sub_608A8604(&v12, MEMORY[0xCC6AF8] + 68);
     if ( v12 )
     {
-      sub_608B7134();
+      STRM_BGM_ref_2_helper();
       if ( v12 )
         sub_608B0388();
     }
     sub_608A8604(&v11, MEMORY[0xCC6AF8] + 72);
     if ( v11 )
     {
-      sub_608B7134();
+      STRM_BGM_ref_2_helper();
       if ( v11 )
         sub_608B0388();
     }
     sub_608A8604(&v10, MEMORY[0xCC6AF8] + 64);
     if ( v10 )
     {
-      sub_608B7134();
+      STRM_BGM_ref_2_helper();
       if ( v10 )
         sub_608B0388();
     }
@@ -7782,6 +7818,16 @@
       sub_608AE348(&v13);
     }
     return v3;
+  }
+
+/* ============================================================================
+ * STRM_BGM_MENU_ref_2_helper_80B540
+ * RVA 0x0080b540   size 0x14   xrefs 1
+ * ============================================================================ */
+  char *STRM_BGM_MENU_ref_2_helper_80B540()
+  {
+    byte_60CC6B22 = 0;
+    return &byte_60CC6B20;
   }
 
 /* ============================================================================
@@ -7970,7 +8016,7 @@
         if ( v8 || *(_BYTE *)(MEMORY[0xCC6D78] + 109032) || sub_603FC6A0(MEMORY[0xC99DE4]) != 100 )
         {
   LABEL_17:
-          sub_6080A170((int)v4, 15);
+          STRM_BGM_ref_3_helper_80A170((int)v4, 15);
           sub_608AC1C0(v4 + 17);
           sub_6080B284((int)a1, 0);
           STRM_BGM_ref_4(a1);
@@ -7991,7 +8037,7 @@
         {
           v9 = "STRM_BGM_STAR";
   LABEL_24:
-          sub_608090B8((int)v4, (int)v9);
+          STRM_BGM_ref_3_helper((int)v4, (int)v9);
           goto LABEL_25;
         }
         if ( !*(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
@@ -8025,7 +8071,7 @@
         return result;
       case 8:
         sub_6080A1A0(MEMORY[0xCC6AF8], 15);
-        sub_608090B8((int)v4, (int)"STRM_BGM_SWITCH");
+        STRM_BGM_ref_3_helper((int)v4, (int)"STRM_BGM_SWITCH");
         a1[22] = "STRM_BGM_SWITCH";
         a1[14] = "STRM_BGM_SWITCH";
         a1[15] = "SE_DUMMY";
@@ -8105,7 +8151,7 @@
       {
         LOBYTE(v9) = v6;
       }
-      sub_6080BF20(a1, v4);
+      STRM_BGM_ref_4_helper(a1, v4);
       *(_BYTE *)(a1 + 72) = v9;
       sub_608A86F0(&v10);
       sub_608A86F0(&v11);
@@ -8116,7 +8162,7 @@
   }
 
 /* ============================================================================
- * sub_6080BF20
+ * STRM_BGM_ref_4_helper
  * RVA 0x0080bf20   size 0x188   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6080BF20(int a1, int a2)
@@ -8322,7 +8368,7 @@
       if ( v24 )
         sub_608BC754(v24, v19);
       if ( v20 )
-        sub_608CBA60(v20, v18);
+        STRM_BGM_ref_5_helper(v20, v18);
       if ( v23 )
       {
         v4 = sub_608B73A4();
@@ -8368,7 +8414,7 @@
           }
           goto LABEL_9;
         }
-        v8 = sub_608CBB38(v20, 1);
+        v8 = STRM_BGM_ref_5_helper_8CBB38(v20, 1);
       }
       v4 = v8;
       v5 = *(_QWORD *)(a1 + 32);
@@ -13029,7 +13075,7 @@
   }
 
 /* ============================================================================
- * sub_60811770
+ * SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper
  * RVA 0x00811770   size 0x450   xrefs 2
  * ============================================================================ */
   int *__fastcall sub_60811770(_DWORD *a1, int a2, int a3, float *a4, int *a5)
@@ -14404,13 +14450,13 @@
       v12 = v16;
       if ( (v16 & 1) != 0 )
       {
-        v13 = sub_608131CC(*(_DWORD *)(MEMORY[0xCC6AF8] + 160), a2);
+        v13 = SE_OBJ_SNAKE_BLOCK_ref_2_helper_8131CC(*(_DWORD *)(MEMORY[0xCC6AF8] + 160), a2);
         v14 = v13;
         if ( v13 )
         {
           if ( !*(_DWORD *)(v13 + 468) )
-            sub_60812FD8(v13, a2, a4, 0, (v12 >> 1) & 0x3E);
-          sub_608131A8(v14);
+            SE_OBJ_SNAKE_BLOCK_ref_2_helper(v13, a2, a4, 0, (v12 >> 1) & 0x3E);
+          SE_OBJ_SNAKE_BLOCK_ref_2_helper_8131A8(v14);
           return 1;
         }
       }
@@ -14419,7 +14465,7 @@
   }
 
 /* ============================================================================
- * sub_60812FD8
+ * SE_OBJ_SNAKE_BLOCK_ref_2_helper
  * RVA 0x00812fd8   size 0x6c   xrefs 1
  * ============================================================================ */
   bool __fastcall sub_60812FD8(int a1, int a2, int *a3, char a4, int a5)
@@ -14538,7 +14584,28 @@
   }
 
 /* ============================================================================
- * sub_608131CC
+ * SE_OBJ_SNAKE_BLOCK_ref_2_helper_8131A8
+ * RVA 0x008131a8   size 0x24   xrefs 1
+ * ============================================================================ */
+  _DWORD *__fastcall SE_OBJ_SNAKE_BLOCK_ref_2_helper_8131A8(_DWORD *result)
+  {
+    int v1; // s0
+    int v2; // s1
+    int v3; // r1
+  
+    v3 = result[117];
+    if ( v3 <= 18 )
+    {
+      result[117] = v3 + 1;
+      result += 2 * v3;
+      result[77] = v1;
+      result[78] = v2;
+    }
+    return result;
+  }
+
+/* ============================================================================
+ * SE_OBJ_SNAKE_BLOCK_ref_2_helper_8131CC
  * RVA 0x008131cc   size 0x238   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_608131CC(_DWORD *a1, int a2)
@@ -15014,7 +15081,7 @@
     int result; // r0
     int v8; // [sp+4h] [bp-4h] BYREF
   
-    v6 = sub_60811770(a1, a2, a3, a4, a5);
+    v6 = SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(a1, a2, a3, a4, a5);
     result = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
     {
@@ -16305,7 +16372,7 @@
             sub_6080C0EC(MEMORY[0xCC6B0C], 1, v14, 0);
           }
         }
-        sub_6080B540(MEMORY[0xCC6B0C]);
+        STRM_BGM_MENU_ref_2_helper_80B540(MEMORY[0xCC6B0C]);
         goto LABEL_48;
       case 8u:
         sub_6080A550(MEMORY[0xCC6AF8], 8, *(_DWORD *)(a1 + 32));
@@ -16326,7 +16393,7 @@
       case 0x12u:
         sub_6080A1A0(MEMORY[0xCC6AF8], 60);
         STRM_BGM_MENU_ref(MEMORY[0xCC6B0C], 0x12u, 0x1000225u);
-        result = sub_600240C8();
+        result = STRM_BGM_MENU_ref_2_helper();
         if ( result != 1 )
           return result;
         v16 = MEMORY[0xCC6B0C];
@@ -18352,14 +18419,14 @@
   }
 
 /* ============================================================================
- * sub_608183C8
+ * nnMain_helper
  * RVA 0x008183c8   size 0x5c   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_608183C8(_DWORD *a1)
   {
     bool v2; // r1
   
-    sub_608EA014();
+    nnMain_helper_helper_8EA014();
     *a1 = 12755244;
     a1[88] = 12755400;
     a1[89] = 0;
@@ -21987,7 +22054,7 @@
   }
 
 /* ============================================================================
- * sub_60821458
+ * ArchiveManager_loadSzs_helper
  * RVA 0x00821458   size 0x314   xrefs 1
  * ============================================================================ */
   int (__fastcall ***__fastcall sub_60821458(_DWORD *a1, int a2, int a3))(_DWORD, int)
@@ -22705,7 +22772,7 @@
     {
   LABEL_17:
       if ( a5 == 1 )
-        v16 = sub_60821458(a3, a4, *(_DWORD *)(a1 + 17448));
+        v16 = ArchiveManager_loadSzs_helper(a3, a4, *(_DWORD *)(a1 + 17448));
       else
         v16 = sub_608211F8((int)a3, a4);
       v17 = v16;
@@ -23081,6 +23148,19 @@
     }
   LABEL_16:
     sead::IDisposer::~IDisposer((sead::IDisposer *)a1);
+  }
+
+/* ============================================================================
+ * nninitStartup_helper
+ * RVA 0x00822bf8   size 0x28   xrefs 1
+ * ============================================================================ */
+  void *nninitStartup_helper()
+  {
+    __int64 v1; // [sp+0h] [bp-8h] BYREF
+  
+    nn::os::GetSystemTick((nn::os *)&v1);
+    qword_60CC6DD8 = v1;
+    return &unk_60CC6DD0;
   }
 
 /* ============================================================================
@@ -28014,7 +28094,7 @@
     v11 = (v6 >> 20) & 0xF;
     v12 = BYTE2(v6) & 0xF;
     v13 = v7;
-    sub_607FF2C8(
+    Actor_Bowser_exclusive_eriaOBJ_build_helper(
       MEMORY[0xCC6484] + 204,
       (int)v9,
       *(_DWORD *)(MEMORY[0xCC6484] + 192),
@@ -28203,7 +28283,7 @@
     *(_DWORD *)v2 = 12758520;
     v3 = *(_DWORD *)(v2 + 20);
     v5 = (__int64)(float)((float)((float)((float)(v3 >> 28) * -22.5) + 90.0) * 11930000.0);
-    sub_607FE85C(MEMORY[0xCC6484] + 248, (v3 >> 8) & 3, &v5, v3 & 1);
+    Actor_special_sukuroruTag_build_helper(MEMORY[0xCC6484] + 248, (v3 >> 8) & 3, &v5, v3 & 1);
     *(_BYTE *)(v2 + 19) = 1;
     return v2;
   }
@@ -28419,7 +28499,7 @@
     v0 = (_DWORD *)operator new(0x1850u);
     StateActor_ctor(v0);
     *v0 = 12758736;
-    sub_603E9E40((int)(v0 + 1525), (int)v0);
+    Actor_ShortPlay_result_Demo_Tag_build_helper((int)(v0 + 1525), (int)v0);
     return v0;
   }
 
@@ -29801,7 +29881,7 @@
   }
 
 /* ============================================================================
- * sub_608338B8
+ * Actor_shafuruburoku_build_helper
  * RVA 0x008338b8   size 0x94   xrefs 2
  * ============================================================================ */
   int __fastcall sub_608338B8(int a1, unsigned __int16 a2, char a3)
@@ -29825,12 +29905,12 @@
     }
     *(_DWORD *)(a1 + 8) = v3;
     *(_BYTE *)(a1 + 12) = a3;
-    sub_60833954(a1);
+    Actor_shafuruburoku_build_helper_helper_833954(a1);
     return a1;
   }
 
 /* ============================================================================
- * sub_60833954
+ * Actor_shafuruburoku_build_helper_helper_833954
  * RVA 0x00833954   size 0x188   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60833954(int a1)
@@ -32135,7 +32215,7 @@
   }
 
 /* ============================================================================
- * sub_60836678
+ * Nvn_resolveDeviceFunctions
  * RVA 0x00836678   size 0x3f18   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60836678(int a1, int (__fastcall *a2)(int, const char *))
@@ -65073,7 +65153,7 @@
   }
 
 /* ============================================================================
- * sub_608723FC
+ * _ZN2nn3g3d12ShapeAnimObj9CalculateEv_helper
  * RVA 0x008723fc   size 0x90   xrefs 1
  * ============================================================================ */
   int __fastcall sub_608723FC(int result, _DWORD *a2, unsigned __int8 *a3)
@@ -65114,7 +65194,7 @@
   }
 
 /* ============================================================================
- * sub_6087248C
+ * _ZN2nn3g3d12ShapeAnimObj9CalculateEv_helper_87248C
  * RVA 0x0087248c   size 0x7c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6087248C(int result, _DWORD *a2, unsigned __int8 *a3)
@@ -65610,7 +65690,7 @@
   }
 
 /* ============================================================================
- * sub_60872A2C
+ * PlayerStates_loadModelResources_helper_872A2C
  * RVA 0x00872a2c   size 0x98   xrefs 2
  * ============================================================================ */
   int *__fastcall sub_60872A2C(int *result)
@@ -65648,7 +65728,7 @@
   }
 
 /* ============================================================================
- * sub_60872AC4
+ * PlayerStates_loadModelResources_helper_872AC4
  * RVA 0x00872ac4   size 0x90   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60872AC4(_DWORD *a1, int *a2, int a3, unsigned int a4)
@@ -67004,7 +67084,7 @@
                 if ( v21 >= -15 )
                 {
                   v22 = v21 >> 4;
-                  v6 = sub_608741C8(v2, v31, *(_DWORD *)(a2 + 48) + 112 * (v21 >> 4));
+                  v6 = nn::g3d::ShapeAnimObj::Bind(v2, v31, *(_DWORD *)(a2 + 48) + 112 * (v21 >> 4));
                   if ( (v6 & 1) != 0 )
                   {
                     *(_DWORD *)(*v29 + 4 * v3) &= 0x3FFF8000u;
@@ -67057,7 +67137,7 @@
   }
 
 /* ============================================================================
- * sub_608741C8
+ * _ZN2nn3g3d12ShapeAnimObj4BindEPKNS0_8ResModelE_helper
  * RVA 0x008741c8   size 0x190   xrefs 1
  * ============================================================================ */
   int __fastcall sub_608741C8(int a1, int a2, int a3)
@@ -67327,7 +67407,7 @@
           do
           {
             if ( (*(_BYTE *)(*(_DWORD *)(a1 + 56) + 4 * v9 + 3) & 0x40) == 0 )
-              sub_6087248C(
+              nn::g3d::ShapeAnimObj::Calculate(
                 *(_DWORD *)(a1 + 72) + v8,
                 (_DWORD *)(v4 + 4 * *(_DWORD *)(*(_DWORD *)(a1 + 72) + v8 + 40)),
                 (unsigned __int8 *)(*(_DWORD *)(a1 + 84) + *(_DWORD *)(*(_DWORD *)(a1 + 72) + v8 + 40)));
@@ -67344,7 +67424,7 @@
         do
         {
           if ( (*(_BYTE *)(*(_DWORD *)(a1 + 56) + 4 * v7 + 3) & 0x40) == 0 )
-            sub_608723FC(
+            nn::g3d::ShapeAnimObj::Calculate(
               *(_DWORD *)(a1 + 72) + v6,
               (_DWORD *)(v4 + 4 * *(_DWORD *)(*(_DWORD *)(a1 + 72) + v6 + 40)),
               (unsigned __int8 *)(*(_DWORD *)(a1 + 84) + *(_DWORD *)(*(_DWORD *)(a1 + 72) + v6 + 40)));
@@ -69204,7 +69284,7 @@
   }
 
 /* ============================================================================
- * sub_60877D6C
+ * SkeletalAnim_init_helper
  * RVA 0x00877d6c   size 0x144   xrefs 1
  * ============================================================================ */
   int *__fastcall sub_60877D6C(int *result)
@@ -69300,7 +69380,7 @@
   }
 
 /* ============================================================================
- * sub_60877EB0
+ * SkeletalAnim_init_helper_877EB0
  * RVA 0x00877eb0   size 0x104   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60877EB0(_DWORD *a1, int *a2, int a3, unsigned int a4)
@@ -69363,7 +69443,7 @@
   }
 
 /* ============================================================================
- * sub_60877FB4
+ * SkeletalAnim_play_helper
  * RVA 0x00877fb4   size 0x98   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60877FB4(int a1, int a2)
@@ -74581,6 +74661,16 @@
       }
     }
     return a1;
+  }
+
+/* ============================================================================
+ * EffectData_init_helper
+ * RVA 0x00881ba4   size 0xc   xrefs 2
+ * ============================================================================ */
+  int __fastcall EffectData_init_helper(int result)
+  {
+    *(_BYTE *)(result + 5) = 1;
+    return result;
   }
 
 /* ============================================================================
@@ -99736,13 +99826,13 @@
     *(_DWORD *)a1 = dword_60C794C4 + 8;
     if ( !*(_BYTE *)(a1 + 117) )
     {
-      sub_608B07EC(*(_DWORD *)(a1 + 72), a1);
+      nn::atk::SoundActor::~SoundActor(*(_DWORD *)(a1 + 72), a1);
       *(_DWORD *)(a1 + 72) = 0;
-      sub_608B07EC(*(_DWORD *)(a1 + 76), a1);
+      nn::atk::SoundActor::~SoundActor(*(_DWORD *)(a1 + 76), a1);
       *(_DWORD *)(a1 + 76) = 0;
-      sub_608B07EC(*(_DWORD *)(a1 + 80), a1);
+      nn::atk::SoundActor::~SoundActor(*(_DWORD *)(a1 + 80), a1);
       *(_DWORD *)(a1 + 80) = 0;
-      sub_608B07EC(*(_DWORD *)(a1 + 84), a1);
+      nn::atk::SoundActor::~SoundActor(*(_DWORD *)(a1 + 84), a1);
       *(_DWORD *)(a1 + 84) = 0;
       *(_BYTE *)(a1 + 117) = 1;
       *(_BYTE *)(a1 + 116) = 0;
@@ -99755,10 +99845,10 @@
       *(_DWORD *)(a1 + 108) = -1;
       *(_DWORD *)(a1 + 112) = 0;
     }
-    sub_608B0748(a1 + 56);
-    sub_608B0748(a1 + 40);
-    sub_608B0748(a1 + 24);
-    sub_608B0748(a1 + 8);
+    nn::atk::SoundActor::~SoundActor(a1 + 56);
+    nn::atk::SoundActor::~SoundActor(a1 + 40);
+    nn::atk::SoundActor::~SoundActor(a1 + 24);
+    nn::atk::SoundActor::~SoundActor(a1 + 8);
     return a1;
   }
 
@@ -105133,7 +105223,7 @@
   }
 
 /* ============================================================================
- * sub_608B0748
+ * _ZN2nn3atk10SoundActorD2Ev_helper
  * RVA 0x008b0748   size 0x4c   xrefs 4
  * ============================================================================ */
   _DWORD *__fastcall sub_608B0748(_DWORD *a1)
@@ -105159,7 +105249,7 @@
   }
 
 /* ============================================================================
- * sub_608B07EC
+ * _ZN2nn3atk10SoundActorD2Ev_helper_8B07EC
  * RVA 0x008b07ec   size 0x84   xrefs 4
  * ============================================================================ */
   int __fastcall sub_608B07EC(int a1, int a2)
@@ -110089,7 +110179,7 @@
   }
 
 /* ============================================================================
- * sub_608B7134
+ * STRM_BGM_ref_2_helper
  * RVA 0x008b7134   size 0x4c   xrefs 3
  * ============================================================================ */
   int __fastcall sub_608B7134(int a1)
@@ -110126,7 +110216,7 @@
   }
 
 /* ============================================================================
- * sub_608B7294
+ * SE_SYS_ref_2_helper
  * RVA 0x008b7294   size 0x54   xrefs 1
  * ============================================================================ */
   int __fastcall sub_608B7294(int a1, int a2)
@@ -126240,7 +126330,7 @@
   }
 
 /* ============================================================================
- * sub_608CBA60
+ * STRM_BGM_ref_5_helper
  * RVA 0x008cba60   size 0xd8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_608CBA60(int a1, int a2)
@@ -126299,7 +126389,7 @@
   }
 
 /* ============================================================================
- * sub_608CBB38
+ * STRM_BGM_ref_5_helper_8CBB38
  * RVA 0x008cbb38   size 0x48   xrefs 1
  * ============================================================================ */
   int __fastcall sub_608CBB38(int a1, int a2)
@@ -140951,7 +141041,7 @@
       *(_DWORD *)(a1 + 36) = v5;
       nn::fs::MountRom((nn::fs *)"content", v5, v9, v6);
       v7 = operator new(0x54u, ContainHeap, 4);
-      sub_608E8A4C(v7, ContainHeap);
+      sead::FileDeviceMgr::FileDeviceMgr(v7, ContainHeap);
       *(_DWORD *)(a1 + 32) = v7;
       sub_608E83B4(a1, v7, 12962608);
       *(_DWORD *)(a1 + 28) = *(_DWORD *)(a1 + 32);
@@ -141319,7 +141409,7 @@
   }
 
 /* ============================================================================
- * sub_608E8A4C
+ * _ZN4sead13FileDeviceMgrC2Ev_helper
  * RVA 0x008e8a4c   size 0x194   xrefs 1
  * ============================================================================ */
   int __fastcall sub_608E8A4C(int argc, const char **argv, const char **envp)
@@ -141387,7 +141477,7 @@
     *(_DWORD *)argc = dword_60C797D4 + 8;
     *(_DWORD *)(argc + 80) = 0;
     v11 = operator new(0x5Cu, (int)argv, 4);
-    *(_DWORD *)(argc + 80) = sub_60911E4C(v11);
+    *(_DWORD *)(argc + 80) = sead::FileDeviceMgr::FileDeviceMgr(v11);
     return argc;
   }
 
@@ -142384,7 +142474,7 @@
   }
 
 /* ============================================================================
- * sub_608EA014
+ * nnMain_helper_helper_8EA014
  * RVA 0x008ea014   size 0xd8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_608EA014(int a1, const void *a2)
@@ -142424,7 +142514,7 @@
   }
 
 /* ============================================================================
- * sub_608EA13C
+ * nnMain_helper_8EA13C
  * RVA 0x008ea13c   size 0x9e4   xrefs 1
  * ============================================================================ */
   int (__fastcall *__fastcall sub_608EA13C(int a1, int a2, _DWORD *a3))(int, const char *)
@@ -142517,7 +142607,7 @@
     if ( !v17 )
     {
       v18 = 0;
-      sub_60836678(0, result);
+      Nvn_resolveDeviceFunctions(0, result);
       MEMORY[0xCC72A4](&v46);
       if ( *(_BYTE *)(a1 + 110) )
         v18 = sub_608F29EC(*(_DWORD *)(a1 + 144));
@@ -142526,7 +142616,7 @@
       result = (int (__fastcall *)(int, const char *))v14(v19, &v46);
       if ( result )
       {
-        sub_60836678(v19, v16);
+        Nvn_resolveDeviceFunctions(v19, v16);
         MEMORY[0xCC72BC](v19, 0, &v46);
         MEMORY[0xCC72BC](v19, 1, &v45);
         result = (int (__fastcall *)(int, const char *))v46;
@@ -143345,6 +143435,28 @@
   }
 
 /* ============================================================================
+ * nnMain_helper_8ED664
+ * RVA 0x008ed664   size 0x10   xrefs 1
+ * ============================================================================ */
+  _DWORD *__fastcall nnMain_helper_8ED664(_DWORD *result)
+  {
+    *result = 50331648;
+    result[1] = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * nnMain_helper_8ED674
+ * RVA 0x008ed674   size 0x10   xrefs 1
+ * ============================================================================ */
+  _DWORD *__fastcall nnMain_helper_8ED674(_DWORD *result)
+  {
+    *result = 0;
+    result[1] = -1;
+    return result;
+  }
+
+/* ============================================================================
  * _ZN4sead9Framework10initializeERKNS0_13InitializeArgE
  * RVA 0x008ed684   size 0xcc   xrefs 1
  * ============================================================================ */
@@ -143355,9 +143467,9 @@
     _DWORD v4[2]; // [sp+8h] [bp-8h] BYREF
   
     if ( a1[1] )
-      sub_608FA7D4();
+      sead::Framework::initialize();
     else
-      sub_608FA6AC(*a1);
+      sead::Framework::initialize(*a1);
     v1 = 0;
     if ( MEMORY[0xCCEEA4] )
       v1 = *MEMORY[0xCCEEAC];
@@ -148850,7 +148962,7 @@
     *(_DWORD *)(a1 + 64) = a1 + 64;
     *(_DWORD *)(a1 + 76) = -1;
     *(_DWORD *)(a1 + 80) = a6;
-    sub_60907EEC(a1 + 84, a3);
+    sead::Heap::Heap(a1 + 84, a3);
     *(_WORD *)(a1 + 120) = 4;
     v12 = (unsigned int *)off_60C7992C;
     do
@@ -149079,7 +149191,7 @@
   }
 
 /* ============================================================================
- * sub_608F9A44
+ * _ZNK4sead7HeapMgr15findContainHeapEPKv_helper
  * RVA 0x008f9a44   size 0xa8   xrefs 4
  * ============================================================================ */
   int __fastcall sub_608F9A44(int a1, int a2)
@@ -149523,7 +149635,7 @@
           break;
 
 /* ============================================================================
- * sub_608FA6AC
+ * _ZN4sead9Framework10initializeERKNS0_13InitializeArgE_helper
  * RVA 0x008fa6ac   size 0xf4   xrefs 1
  * ============================================================================ */
   int sub_608FA6AC()
@@ -149537,7 +149649,7 @@
     sead::CriticalSection::lock((sead::CriticalSection *)dword_60C79930);
     v0 = (int **)off_60C79934;
     *(_DWORD *)off_60C79934 = dword_60C79938;
-    sub_609122E8();
+    sead::Framework::initialize();
     *((_DWORD *)off_60C7993C + 2) = 0;
     *(_QWORD *)off_60C79940 = MEMORY[0xCCFB50] / 100000LL;
     v1 = **v0;
@@ -149552,7 +149664,7 @@
   }
 
 /* ============================================================================
- * sub_608FA7D4
+ * _ZN4sead9Framework10initializeERKNS0_13InitializeArgE_helper_8FA7D4
  * RVA 0x008fa7d4   size 0xc8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_608FA7D4(int *a1)
@@ -149652,7 +149764,7 @@
         v13 = v6 == (_DWORD)v7;
       if ( !v13 )
       {
-        v14 = sub_608F9A44(*v5, a2);
+        v14 = sead::HeapMgr::findContainHeap(*v5, a2);
         if ( v14 )
         {
           if ( v14 != v6 )
@@ -149669,7 +149781,7 @@
         v22 = v12 == (_DWORD)v7;
       if ( !v22 )
       {
-        v23 = sub_608F9A44(v12, a2);
+        v23 = sead::HeapMgr::findContainHeap(v12, a2);
         v6 = v23;
         if ( v23 )
         {
@@ -149690,7 +149802,7 @@
       do
       {
         v17 = *v15++;
-        v6 = sub_608F9A44(v17, a2);
+        v6 = sead::HeapMgr::findContainHeap(v17, a2);
         if ( v6 )
           goto LABEL_33;
         v16 -= 4;
@@ -149704,7 +149816,7 @@
       while ( 1 )
       {
         v20 = *v18++;
-        v6 = sub_608F9A44(v20, a2);
+        v6 = sead::HeapMgr::findContainHeap(v20, a2);
         if ( v6 )
           break;
         v19 -= 4;
@@ -151350,6 +151462,15 @@
       }
     }
     return result;
+  }
+
+/* ============================================================================
+ * nnMain_helper_8FD644
+ * RVA 0x008fd644   size 0x8   xrefs 3
+ * ============================================================================ */
+  int nnMain_helper_8FD644()
+  {
+    return -1;
   }
 
 /* ============================================================================
@@ -156273,7 +156394,7 @@
   }
 
 /* ============================================================================
- * sub_60903B44
+ * ReadAndDecompSZS_helper
  * RVA 0x00903b44   size 0x418   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60903B44(int a1, unsigned __int8 *a2, unsigned int a3)
@@ -156762,7 +156883,7 @@
         {
           for ( ; v47; v28 = v47 )
           {
-            v32 = sub_60903B44((int)v41, v14, v28);
+            v32 = ReadAndDecompSZS_helper((int)v41, v14, v28);
             if ( v32 )
             {
               if ( v32 < 0 || (v33 = 0, !sub_608E7C10((int)v48, &v47, (int)v14, *(_DWORD *)(a1 + 76))) )
@@ -156787,7 +156908,7 @@
           goto LABEL_64;
         while ( 1 )
         {
-          v35 = sub_60903B44((int)v41, v14, v28);
+          v35 = ReadAndDecompSZS_helper((int)v41, v14, v28);
           if ( v35 )
           {
             if ( v35 < 0 || (v33 = 0, !sub_608E7C10((int)v48, &v47, (int)v14, *(_DWORD *)(a1 + 76))) )
@@ -157485,7 +157606,7 @@
   }
 
 /* ============================================================================
- * sub_60907EEC
+ * _ZN4sead4HeapC2ERKNS_14SafeStringBaseIcEEPS0_PvmNS0_13HeapDirectionEb_helper
  * RVA 0x00907eec   size 0x38   xrefs 1
  * ============================================================================ */
   sead::IDisposer *__fastcall sub_60907EEC(sead::IDisposer *a1, sead::Heap *a2)
@@ -157796,7 +157917,7 @@
       v3 = sead::IDisposer::IDisposer((sead::IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C799D8 + 8;
       *(_DWORD *)off_60C799DC = v3;
-      sub_60908AC4(v2);
+      sead::ThreadMgr::createInstance(v2);
       *(_DWORD *)off_60C79854 = v2;
     }
     return v2;
@@ -157859,7 +157980,7 @@
   }
 
 /* ============================================================================
- * sub_60908AC4
+ * _ZN4sead9ThreadMgr14createInstanceEPNS_4HeapE_helper
  * RVA 0x00908ac4   size 0x4c   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_60908AC4(_DWORD *a1)
@@ -162501,7 +162622,7 @@
   }
 
 /* ============================================================================
- * sub_609107C4
+ * SoundSystem_createInstance_helper_helper_9107C4
  * RVA 0x009107c4   size 0x3c   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_609107C4(_DWORD *result)
@@ -162515,6 +162636,50 @@
     result[6] = result + 5;
     result[7] = 0;
     result[8] = 4;
+    return result;
+  }
+
+/* ============================================================================
+ * SoundSystem_createInstance_helper_helper_910804
+ * RVA 0x00910804   size 0x8   xrefs 1
+ * ============================================================================ */
+  int __fastcall SoundSystem_createInstance_helper_helper_910804(int result, int a2)
+  {
+    *(_DWORD *)(result + 4) = a2;
+    return result;
+  }
+
+/* ============================================================================
+ * SoundSystem_createInstance_helper_helper_91080C
+ * RVA 0x0091080c   size 0x8   xrefs 1
+ * ============================================================================ */
+  int __fastcall SoundSystem_createInstance_helper_helper_91080C(int result, int a2)
+  {
+    *(_DWORD *)(result + 12) = a2;
+    return result;
+  }
+
+/* ============================================================================
+ * SoundSystem_createInstance_helper_helper_910814
+ * RVA 0x00910814   size 0x8   xrefs 1
+ * ============================================================================ */
+  int __fastcall SoundSystem_createInstance_helper_helper_910814(int result, int a2)
+  {
+    *(_DWORD *)(result + 16) = a2;
+    return result;
+  }
+
+/* ============================================================================
+ * SoundSystem_createInstance_helper_helper_91081C
+ * RVA 0x0091081c   size 0x28   xrefs 1
+ * ============================================================================ */
+  int __fastcall SoundSystem_createInstance_helper_helper_91081C(int *a1, int a2)
+  {
+    int result; // r0
+  
+    sead::ListNode::insertFront_(a1 + 5, (_DWORD *)(a1[8] + a2));
+    result = a1[7] + 1;
+    a1[7] = result;
     return result;
   }
 
@@ -163105,7 +163270,7 @@
   }
 
 /* ============================================================================
- * sub_60911E4C
+ * _ZN4sead13FileDeviceMgrC2Ev_helper_helper_911E4C
  * RVA 0x00911e4c   size 0x4c   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_60911E4C(int a1)
@@ -163145,6 +163310,19 @@
       return 0;
     }
     return ((int (__fastcall *)(int))a1[1])(a2);
+  }
+
+/* ============================================================================
+ * _ZN4sead9Framework10initializeERKNS0_13InitializeArgE_helper_helper_9122E8
+ * RVA 0x009122e8   size 0x2c   xrefs 1
+ * ============================================================================ */
+  int __fastcall sead::Framework::initialize(nn::os *a1, int a2, unsigned int a3)
+  {
+    int result; // r0
+  
+    result = nn::os::AllocateMemoryBlock(a1, (unsigned int *)((a2 + 0x1FFFFF) & 0xFFE00000), a3);
+    *((_DWORD *)a1 + 1) = a2;
+    return result;
   }
 
 /* ============================================================================
@@ -174193,7 +174371,7 @@
   }
 
 /* ============================================================================
- * sub_609201D4
+ * screen_shot_ref_2_helper
  * RVA 0x009201d4   size 0x148   xrefs 1
  * ============================================================================ */
   int __fastcall sub_609201D4(unsigned __int16 *a1, int a2, unsigned __int16 *a3, int a4, int a5)
@@ -202762,7 +202940,7 @@
     v15 = (unsigned __int16 *)sub_6093E948(MEMORY[0xCD09F8], a2, (int)v18, v9, v10, v14, 1, 0, 3, 1, 0);
     if ( v15 )
     {
-      sub_609201D4(a3, a2, v15, 0, 0);
+      screen_shot_ref_2_helper(a3, a2, v15, 0, 0);
       v16 = a1[420];
       if ( v16 == 3 )
       {

@@ -21521,9 +21521,9 @@
       *(_DWORD *)(a1 + 60) = 0;
       if ( MEMORY[0xC8D9DC] )
       {
-        if ( sub_60239BF4(MEMORY[0xC8D9DC], v5, 11778252, a2) == 1 )
+        if ( EffectData_setEffectId_helper_239BF4(MEMORY[0xC8D9DC], v5, 11778252, a2) == 1 )
         {
-          v8 = (float *)sub_60239BDC(MEMORY[0xC8D9DC], a2);
+          v8 = (float *)EffectData_setEffectId_helper(MEMORY[0xC8D9DC], a2);
           v7 = 1;
           *(_DWORD *)(a1 + 60) = v8;
           if ( v8 )
@@ -21559,7 +21559,7 @@
         if ( *(int *)(v5 + 352) >= 1 )
         {
           if ( *(_BYTE *)(v5 + 8) )
-            sub_60881BA4();
+            EffectData_init_helper();
         }
       }
     }
@@ -21589,7 +21589,7 @@
         if ( *(int *)(result + 352) >= 1 )
         {
           if ( *(_BYTE *)(result + 8) )
-            return sub_60881BA4();
+            return EffectData_init_helper();
         }
       }
     }
@@ -24582,7 +24582,19 @@
   }
 
 /* ============================================================================
- * sub_60239BF4
+ * EffectData_setEffectId_helper
+ * RVA 0x00239bdc   size 0x18   xrefs 1
+ * ============================================================================ */
+  int __fastcall EffectData_setEffectId_helper(int a1, unsigned int a2)
+  {
+    if ( a2 <= 0x4D6 )
+      return sub_6023B10C(*(_DWORD *)(a1 + 220), a2);
+    else
+      return 0;
+  }
+
+/* ============================================================================
+ * EffectData_setEffectId_helper_239BF4
  * RVA 0x00239bf4   size 0x214   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60239BF4(_DWORD *a1, _DWORD *a2, int a3, unsigned int a4)
@@ -29126,7 +29138,7 @@
     _DWORD *v4; // r4
   
     v0 = (_DWORD *)operator new(0x3C68u);
-    result = sub_602C1320(v0);
+    result = Actor_Blooper_raki_build_helper(v0);
     *result = 12427104;
     v2 = result + 3095;
     for ( i = 0; i != 768; i += 12 )
@@ -30900,7 +30912,7 @@
     v25[0] = *(float *)(a1 + 108);
     v25[1] = v16;
     mapPositionToScreen(v24, v25);
-    sub_60813814(v18, "SE_EMY_MAMEKURIBO_CLING", v17, v24, 0);
+    j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v18, "SE_EMY_MAMEKURIBO_CLING", v17, v24, 0);
     v19 = 1;
     *(_BYTE *)(a1 + 6364) = 0;
     v20 = (_BYTE *)(a1 + 6364);
@@ -32016,7 +32028,7 @@
     *(_DWORD *)(a1 + 80) = v3;
     *(float *)(a1 + 100) = MEMORY[0xAFE3D0] * 0.7;
     *(_DWORD *)(a1 + 136) = -1065353216;
-    sub_60255810((_DWORD *)a1);
+    GiantWiggler_onCreate_helper((_DWORD *)a1);
     (*(void (__fastcall **)(int, int))(*(_DWORD *)(a1 + 6316) + 8))(a1 + 6316, a1);
     v5 = (_DWORD ****)(a1 + 6500);
     v4 = *(_DWORD **)(a1 + 6500);
@@ -32039,13 +32051,13 @@
     *(_DWORD *)(a1 + 6556) = v9;
     *(_DWORD *)(a1 + 88) = dword_60AF1F78[v9];
     *(_DWORD *)(a1 + 160) = 715827882 * *(char *)(*(_DWORD *)(a1 + 80) + 11527156);
-    sub_602559BC(a1);
-    sub_60255B24(a1);
+    GiantWiggler_onCreate_helper_2559BC(a1);
+    GiantWiggler_onCreate_helper_255B24(a1);
     *(_DWORD *)(a1 + 6244) = 0;
     v10 = *(_DWORD *)(a1 + 20);
     if ( (v10 & 0x100) != 0 )
     {
-      sub_60255C94(a1);
+      GiantWiggler_onCreate_helper_255C94(a1);
       *(_BYTE *)(a1 + 6496) = 1;
       v10 = *(_DWORD *)(a1 + 20);
     }
@@ -32087,7 +32099,7 @@
   }
 
 /* ============================================================================
- * sub_60255810
+ * GiantWiggler_onCreate_helper
  * RVA 0x00255810   size 0x1a0   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_60255810(_DWORD *a1)
@@ -32126,7 +32138,7 @@
   }
 
 /* ============================================================================
- * sub_602559BC
+ * GiantWiggler_onCreate_helper_2559BC
  * RVA 0x002559bc   size 0x160   xrefs 1
  * ============================================================================ */
   int __fastcall sub_602559BC(int a1)
@@ -32233,7 +32245,7 @@
   }
 
 /* ============================================================================
- * sub_60255B24
+ * GiantWiggler_onCreate_helper_255B24
  * RVA 0x00255b24   size 0x160   xrefs 1
  * ============================================================================ */
   void __fastcall sub_60255B24(int a1)
@@ -32280,7 +32292,7 @@
   }
 
 /* ============================================================================
- * sub_60255C94
+ * GiantWiggler_onCreate_helper_255C94
  * RVA 0x00255c94   size 0x24c   xrefs 1
  * ============================================================================ */
   int *__fastcall sub_60255C94(int a1)
@@ -33304,7 +33316,7 @@
       v32[0] = *(float *)(a1 + 108);
       v32[1] = v17;
       mapPositionToScreen((float *)&v18, v32);
-      sub_60813814(v16, "SE_EMY_BIRIKYU_SPARK", v15, &v18, 0);
+      j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v16, "SE_EMY_BIRIKYU_SPARK", v15, &v18, 0);
       Animation_update(*(_DWORD *)(*v8)[7]);
       EffectWrapper_update((int32x4_t *)(a1 + 6316), 34, (float *)(a1 + 6304), nullptr, (float *)(a1 + 144));
       LightSource_update1(a1 + 6504, 12, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
@@ -34230,7 +34242,7 @@
     *(_DWORD *)(a1 + 6712) = v1;
     *(_DWORD *)(a1 + 6716) = v2;
     *(_DWORD *)(a1 + 6720) = v3;
-    sub_6025D704(a1);
+    BobOmb_onCreate_helper(a1);
     return 1;
   }
 
@@ -34342,7 +34354,7 @@
   }
 
 /* ============================================================================
- * sub_6025D704
+ * BobOmb_onCreate_helper
  * RVA 0x0025d704   size 0x40c   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6025D704(int a1)
@@ -34636,7 +34648,7 @@
           v11[0] = *(float *)(a1 + 108);
           v11[1] = v5;
           mapPositionToScreen(v10, v11);
-          result = sub_60813814(v7, "SE_EMY_BH_HIBANA", v6, v10, 0);
+          result = j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v7, "SE_EMY_BH_HIBANA", v6, v10, 0);
           if ( !v4 )
           {
             *v3 = -1;
@@ -34688,7 +34700,7 @@
         v1 = 0;
       *(_DWORD *)(MEMORY[0xC7B420] + 224) = v1;
     }
-    sub_60271E38(a1);
+    BobOmb_onDelete_helper(a1);
     return 1;
   }
 
@@ -36254,7 +36266,7 @@
     int v11; // [sp+8h] [bp-8h] BYREF
     const char *v12; // [sp+Ch] [bp-4h]
   
-    sub_60263858((int)a1);
+    BrosBase::onCreate((int)a1);
     v4 = StageActor::directionToPlayerX((int)a1, a1 + 27);
     a1[20] = v4;
     *((_BYTE *)a1 + 6604) = v4;
@@ -36325,7 +36337,7 @@
   }
 
 /* ============================================================================
- * sub_60263858
+ * _ZN8BrosBase8onCreateEv_helper
  * RVA 0x00263858   size 0x100   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60263858(int a1)
@@ -36360,7 +36372,7 @@
     v11 = 12321336;
     v12 = "walk";
     SkeletalAnim_play(v9, v3, &v11);
-    return sub_60263B68(a1);
+    return BrosBase::onCreate(a1);
   }
 
 /* ============================================================================
@@ -36436,7 +36448,7 @@
   }
 
 /* ============================================================================
- * sub_60263B68
+ * _ZN8BrosBase8onCreateEv_helper_helper_263B68
  * RVA 0x00263b68   size 0x1a0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60263B68(_DWORD *a1)
@@ -36512,7 +36524,7 @@
     StateMgr::execute(v2);
     sub_602A33AC(a1);
     sub_602A3F7C((int)(a1 + 12432), 4);
-    sub_60263E44((int)a1);
+    BrosBase::onExecute((int)a1);
     v3 = (_DWORD **)(a1 + 6300);
     (*(void (__fastcall **)(_DWORD, int, _BYTE *))(***((_DWORD ***)a1 + 1575) + 108))(
       **((_DWORD **)a1 + 1575),
@@ -36527,13 +36539,13 @@
       (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 744))(a1);
       a1[6612] = 0;
     }
-    sub_60263FA4((int)a1);
+    BrosBase::onExecute((int)a1);
     StageActor::cullCheck((int)a1, 0);
     return 1;
   }
 
 /* ============================================================================
- * sub_60263E44
+ * _ZN8BrosBase9onExecuteEv_helper
  * RVA 0x00263e44   size 0x15c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60263E44(int a1)
@@ -36597,7 +36609,7 @@
   }
 
 /* ============================================================================
- * sub_60263FA4
+ * _ZN8BrosBase9onExecuteEv_helper_263FA4
  * RVA 0x00263fa4   size 0xc4   xrefs 1
  * ============================================================================ */
   bool __fastcall sub_60263FA4(int a1)
@@ -39013,7 +39025,7 @@
   }
 
 /* ============================================================================
- * sub_6026819C
+ * Actor_baburu_RDash_build_helper
  * RVA 0x0026819c   size 0x13c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6026819C(int a1)
@@ -39437,7 +39449,7 @@
     _DWORD *result; // r0
   
     v0 = operator new(0x1B40u);
-    result = (_DWORD *)sub_6026819C(v0);
+    result = (_DWORD *)Actor_baburu_RDash_build_helper(v0);
     *result = 12435376;
     return result;
   }
@@ -40232,7 +40244,7 @@
   }
 
 /* ============================================================================
- * sub_6026DA84
+ * Actor_rotate_big_build_helper
  * RVA 0x0026da84   size 0x94   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_6026DA84(_DWORD *a1)
@@ -40527,7 +40539,7 @@
     _DWORD *v0; // r5
   
     v0 = (_DWORD *)operator new(0x2570u);
-    sub_6026DA84(v0);
+    Actor_rotate_big_build_helper(v0);
     *v0 = 12437296;
     memset(v0 + 2382, 0, 0x34u);
     return v0;
@@ -40935,7 +40947,7 @@
   }
 
 /* ============================================================================
- * sub_60271E38
+ * BobOmb_onDelete_helper
  * RVA 0x00271e38   size 0x58   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60271E38(int a1)
@@ -41245,6 +41257,15 @@
     result = sub_6000ADDC(a1, a2);
     *(_DWORD *)(a1 + 80) = result;
     return result;
+  }
+
+/* ============================================================================
+ * _ZN10ShellEnemy5vf110EP14ActiveColliderS1__helper
+ * RVA 0x002725ac   size 0x20   xrefs 1
+ * ============================================================================ */
+  bool __fastcall ShellEnemy::vf110(int a1, int a2, int a3)
+  {
+    return *(float *)(a2 + 4 * *(_DWORD *)(a3 + 136) + 176) <= 0.0;
   }
 
 /* ============================================================================
@@ -41690,7 +41711,7 @@
     {
       v5 = *(_DWORD *)(v3 + 160);
       *(_DWORD *)(a1 + 160) = sub_607BA5CC(*(_DWORD *)(MEMORY[0xCC436C] + 4 * v2 + 32)) + v5;
-      sub_60273034(a1, &v14, v3);
+      CarryableEnemy::vf298(a1, &v14, v3);
       v6 = v14;
       *(_DWORD *)(a1 + 108) = v14;
       v7 = v15;
@@ -41703,7 +41724,7 @@
       *(_DWORD *)(a1 + 608) = v6;
       *(_DWORD *)(a1 + 612) = v7;
       *(_DWORD *)(a1 + 616) = v8;
-      return sub_6027326C(a1, a1 + 188, v3);
+      return CarryableEnemy::vf298(a1, a1 + 188, v3);
     }
     v12 = *(_DWORD *)(a1 + 556);
     *(_DWORD *)(a1 + 80) = v12;
@@ -41723,7 +41744,7 @@
   }
 
 /* ============================================================================
- * sub_60273034
+ * _ZN14CarryableEnemy5vf298Ev_helper
  * RVA 0x00273034   size 0x21c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60273034(int result, float *a2, _DWORD *a3)
@@ -41831,7 +41852,7 @@
   }
 
 /* ============================================================================
- * sub_6027326C
+ * _ZN14CarryableEnemy5vf298Ev_helper_27326C
  * RVA 0x0027326c   size 0x1a4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6027326C(int result, float *a2, int a3)
@@ -42547,7 +42568,7 @@
     unsigned int v49; // [sp+40h] [bp-8h] BYREF
   
     v5 = *(_DWORD *)(a1 + 20);
-    v6 = sub_6000A488(MEMORY[0xC7B420]);
+    v6 = Fuzzy::onCreate(MEMORY[0xC7B420]);
     *(_DWORD *)(a1 + 6504) = v6;
     v7 = (v5 >> 20) & 3;
     if ( v6 < 0 )
@@ -42711,7 +42732,7 @@
       else
       {
         if ( (*(_BYTE *)(a1 + 27) & 0x10) != 0 )
-          sub_60276FBC(*(float *)&a1);
+          Fuzzy::onCreate(*(float *)&a1);
         v23 = *(_DWORD *)(a1 + 112);
         v36.n64_u32[0] = *(_DWORD *)(a1 + 108);
         v36.n64_u32[1] = v23;
@@ -42885,7 +42906,7 @@
   }
 
 /* ============================================================================
- * sub_60276FBC
+ * _ZN5Fuzzy8onCreateEv_helper_276FBC
  * RVA 0x00276fbc   size 0x320   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60276FBC(float a1)
@@ -43108,7 +43129,7 @@
     sub_602A33AC(a1);
     if ( !StageActor::isOffScreen((float *)a1) )
     {
-      sub_60277540(a1);
+      Fuzzy::onExecute(a1);
       if ( sub_60276E10(a1) )
       {
         v9 = *(_DWORD *)(a1 + 6544);
@@ -43122,7 +43143,7 @@
   }
 
 /* ============================================================================
- * sub_60277540
+ * _ZN5Fuzzy9onExecuteEv_helper
  * RVA 0x00277540   size 0x128   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60277540(int a1)
@@ -47350,7 +47371,7 @@
       v4 = MEMORY[0xCBD254];
       *(_BYTE *)(MEMORY[0xCBD254] + 34624) = 1;
     }
-    sub_60449810(a1 + 6304, v4 + 34632, v4 + 34904, v4 + 35176, -1, 22);
+    env_mist_ref_2_helper(a1 + 6304, v4 + 34632, v4 + 34904, v4 + 35176, -1, 22);
     Area = Level_getArea(MEMORY[0xCBD89C]);
     LevelArea_getLocation(Area, (float *)(a1 + 6468), *(unsigned __int8 *)(a1 + 6508));
     *(float *)(a1 + 108) = *(float *)(a1 + 6468) + (float)(*(float *)(a1 + 6476) - *(float *)(a1 + 6468));
@@ -47971,6 +47992,17 @@
       sub_6040A298(MEMORY[0xC9A1F0]);
     }
     return v2;
+  }
+
+/* ============================================================================
+ * _ZN5Pokey5vf15CEv_helper
+ * RVA 0x002856dc   size 0x10   xrefs 1
+ * ============================================================================ */
+  int __fastcall Pokey::vf15C(int a1, int a2)
+  {
+    if ( a2 >= 8 )
+      return 8;
+    return a2;
   }
 
 /* ============================================================================
@@ -49102,7 +49134,7 @@
         v19 = v18 == 12;
         if ( v18 != 12 )
           v19 = v18 == 0;
-        if ( v19 && v7 && sub_605CB2F4(v7, v8) == 1 )
+        if ( v19 && v7 && SE_OBJ_TARU_HIT_ref_2_helper(v7, v8) == 1 )
         {
           v20 = *(float *)(v27 + 112);
           v21 = MEMORY[0xC7F534];
@@ -49415,7 +49447,7 @@
   }
 
 /* ============================================================================
- * sub_6028FDA0
+ * PlayerStates_loadModelResources_helper
  * RVA 0x0028fda0   size 0xdc   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6028FDA0(int a1, char a2)
@@ -49450,7 +49482,7 @@
   }
 
 /* ============================================================================
- * sub_6028FE94
+ * PlayerStates_loadModelResources_helper_28FE94
  * RVA 0x0028fe94   size 0xc0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6028FE94(int a1)
@@ -49601,6 +49633,17 @@
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 40) + 52))(**(_DWORD **)(a1 + 40));
     sub_60290260(a1);
     return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 40) + 56))(**(_DWORD **)(a1 + 40));
+  }
+
+/* ============================================================================
+ * PlayerStates_updateModelAndAnims_helper
+ * RVA 0x00290228   size 0x20   xrefs 1
+ * ============================================================================ */
+  int __fastcall PlayerStates_updateModelAndAnims_helper(int a1, int a2)
+  {
+    *(_DWORD *)(a1 + 108) = a2;
+    StateMgr::execute((_DWORD *)(a1 + 20));
+    return sub_60290130(a1);
   }
 
 /* ============================================================================
@@ -50482,6 +50525,19 @@
   }
 
 /* ============================================================================
+ * Actor_kipipe_aisuPiranha_furawa_build_helper
+ * RVA 0x00293998   size 0x1c   xrefs 1
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_kipipe_aisuPiranha_furawa_build_helper(int a1)
+  {
+    _DWORD *result; // r0
+  
+    result = (_DWORD *)sub_602904E8(a1);
+    *result = 12446860;
+    return result;
+  }
+
+/* ============================================================================
  * Actor_kipipe_faiyaPiranha_furawa_2_build
  * RVA 0x00293f30   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -50492,6 +50548,19 @@
   
     v0 = operator new(0x1DB8u);
     result = (_DWORD *)sub_602904E8(v0);
+    *result = 12447692;
+    return result;
+  }
+
+/* ============================================================================
+ * Actor_kipipe_aisuPiranha_furawa_2_build_helper
+ * RVA 0x00293f60   size 0x1c   xrefs 1
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_kipipe_aisuPiranha_furawa_2_build_helper(int a1)
+  {
+    _DWORD *result; // r0
+  
+    result = (_DWORD *)sub_602904E8(a1);
     *result = 12447692;
     return result;
   }
@@ -50547,6 +50616,19 @@
   }
 
 /* ============================================================================
+ * Actor_kipipe_aisuPiranha_furawa_3_build_helper
+ * RVA 0x00294494   size 0x1c   xrefs 1
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_kipipe_aisuPiranha_furawa_3_build_helper(int a1)
+  {
+    _DWORD *result; // r0
+  
+    result = (_DWORD *)sub_602904E8(a1);
+    *result = 12448512;
+    return result;
+  }
+
+/* ============================================================================
  * sub_60294710
  * RVA 0x00294710   size 0x18c   xrefs 2
  * ============================================================================ */
@@ -50597,6 +50679,19 @@
   }
 
 /* ============================================================================
+ * Actor_kipipe_aisuPiranha_furawa_4_build_helper
+ * RVA 0x002949c8   size 0x1c   xrefs 1
+ * ============================================================================ */
+  _DWORD *__fastcall Actor_kipipe_aisuPiranha_furawa_4_build_helper(int a1)
+  {
+    _DWORD *result; // r0
+  
+    result = (_DWORD *)sub_602904E8(a1);
+    *result = 12449332;
+    return result;
+  }
+
+/* ============================================================================
  * Actor_kipipe_aisuPiranha_furawa_build
  * RVA 0x00294ed0   size 0x2c   xrefs 0
  * ============================================================================ */
@@ -50606,7 +50701,7 @@
     _DWORD *result; // r0
   
     v2 = operator new(0x1DB8u);
-    result = (_DWORD *)sub_60293998(v2, a1);
+    result = (_DWORD *)Actor_kipipe_aisuPiranha_furawa_build_helper(v2, a1);
     *result = 12450152;
     return result;
   }
@@ -50621,7 +50716,7 @@
     _DWORD *result; // r0
   
     v2 = operator new(0x1DB8u);
-    result = (_DWORD *)sub_60293F60(v2, a1);
+    result = (_DWORD *)Actor_kipipe_aisuPiranha_furawa_2_build_helper(v2, a1);
     *result = 12450984;
     return result;
   }
@@ -50636,7 +50731,7 @@
     _DWORD *result; // r0
   
     v2 = operator new(0x1DB8u);
-    result = (_DWORD *)sub_60294494(v2, a1);
+    result = (_DWORD *)Actor_kipipe_aisuPiranha_furawa_3_build_helper(v2, a1);
     *result = 12451816;
     return result;
   }
@@ -50651,7 +50746,7 @@
     _DWORD *result; // r0
   
     v2 = operator new(0x1DB8u);
-    result = (_DWORD *)sub_602949C8(v2, a1);
+    result = (_DWORD *)Actor_kipipe_aisuPiranha_furawa_4_build_helper(v2, a1);
     *result = 12452648;
     return result;
   }
@@ -51887,7 +51982,7 @@
     int v16; // r1
   
     *((_DWORD *)a1 + 1576) = Actor::getProfileId((int)a1) != MEMORY[0xAF3718];
-    sub_6029DDD8((int)a1);
+    Thwomp::onCreate((int)a1);
     *((_DWORD *)a1 + 1577) = (_DWORD)a1[5] & 0xF;
     a1[155] = 0.0;
     a1[156] = 0.0;
@@ -51981,7 +52076,7 @@
   }
 
 /* ============================================================================
- * sub_6029DDD8
+ * _ZN6Thwomp8onCreateEv_helper
  * RVA 0x0029ddd8   size 0x210   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6029DDD8(int a1)
@@ -52977,7 +53072,7 @@
     *(_WORD *)(a1 + 6140) = 0;
     *(_DWORD *)(a1 + 6148) = 0;
     EnemyFreezeMgr_ctor(a1 + 6152, a1);
-    sub_602A3FFC(a1 + 6232, a1);
+    Enemy::Enemy(a1 + 6232, a1);
     *(_DWORD *)(a1 + 6264) = a1;
     *(_DWORD *)(a1 + 6268) = 12463076;
     *(_BYTE *)(a1 + 6272) = 0;
@@ -53058,7 +53153,7 @@
     if ( a1[6296] )
     {
       if ( *v9 )
-        sub_6040A800(MEMORY[0xC9A1F0]);
+        Enemy::beforeExecute(MEMORY[0xC9A1F0]);
       sub_6040A81C(MEMORY[0xC9A1F0]);
     }
     a1[6296] = 0;
@@ -53073,7 +53168,7 @@
           ++*(_DWORD *)(MEMORY[0xC99DD4] + 72 * v10 + 348);
         (*(void (__fastcall **)(_BYTE *, _DWORD))(*(_DWORD *)a1 + 192))(a1, *((_DWORD *)a1 + 1530));
       }
-      sub_6040A960(MEMORY[0xC9A1F0], (char)a1[6298]);
+      Enemy::beforeExecute(MEMORY[0xC9A1F0], (char)a1[6298]);
       a1[6136] = 0;
       return 1;
     }
@@ -53083,7 +53178,7 @@
         --*((_WORD *)a1 + 3138);
       if ( *((_WORD *)a1 + 3139) )
         --*((_WORD *)a1 + 3139);
-      sub_602A442C(a1 + 6140);
+      Enemy::beforeExecute(a1 + 6140);
       return 1;
     }
   }
@@ -53828,7 +53923,7 @@
     v8 = v7;
     if ( v7 == 3 )
     {
-      if ( !sub_6076E35C(v4) )
+      if ( !Enemy::processCollision(v4) )
       {
         if ( a4 == 1 )
         {
@@ -53855,14 +53950,14 @@
     }
     else if ( v7 == 2 )
     {
-      if ( !sub_6076E35C(v4) )
+      if ( !Enemy::processCollision(v4) )
       {
         (*(void (__fastcall **)(float *, int))(*(_DWORD *)a1 + 388))(a1, v4);
         (*(void (__fastcall **)(float *))(*(_DWORD *)a1 + 404))(a1);
         (*(void (__fastcall **)(float *, int))(*(_DWORD *)a1 + 408))(a1, v4);
       }
     }
-    else if ( v7 == 1 && !sub_6076E35C(v4) )
+    else if ( v7 == 1 && !Enemy::processCollision(v4) )
     {
       if ( *(_BYTE *)(v4 + 533) == 1 )
       {
@@ -54568,7 +54663,20 @@
   }
 
 /* ============================================================================
- * sub_602A442C
+ * _ZN5EnemyC2EPK14ActorBuildInfo_helper
+ * RVA 0x002a3ffc   size 0x20   xrefs 1
+ * ============================================================================ */
+  _DWORD *__fastcall Enemy::Enemy(_DWORD *a1, int a2)
+  {
+    _DWORD *result; // r0
+  
+    result = sub_605D5CA0(a1, *(_DWORD *)(a2 + 8));
+    *result = 12462732;
+    return result;
+  }
+
+/* ============================================================================
+ * _ZN5Enemy13beforeExecuteEv_helper
  * RVA 0x002a442c   size 0x54   xrefs 1
  * ============================================================================ */
   _WORD *__fastcall sub_602A442C(_WORD *result)
@@ -54602,7 +54710,7 @@
     *(_DWORD *)(v0 + 6116) = 0;
     *(_BYTE *)(v0 + 6120) = 1;
     PlayerLookTarget_ctor(v0 + 6124, *(_DWORD *)(v0 + 8));
-    sub_603EB260((_DWORD *)(v0 + 6176), v0);
+    Actor_kosuDemo_for_shadou_build_helper((_DWORD *)(v0 + 6176), v0);
     return v0;
   }
 
@@ -56577,7 +56685,7 @@
  * ============================================================================ */
   int __fastcall Enemy::vf204(_BYTE *a1)
   {
-    sub_60409388(MEMORY[0xC9A1F0]);
+    Enemy::vf204(MEMORY[0xC9A1F0]);
     (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 72))(a1);
     a1[19] = 1;
     return 1;
@@ -57917,7 +58025,7 @@
     EffectWrapper_ctor((int)(v18 + 85));
     v18[85] = 12325968;
     *(_DWORD *)(a1 + 6800) = v18;
-    sub_602AEF18((int)v18, a1, 0);
+    FireSnake::onCreate((int)v18, a1, 0);
     v19 = (_DWORD *)operator new(0x1BCu);
     *v19 = 0;
     v19[1] = 0;
@@ -57932,7 +58040,7 @@
     EffectWrapper_ctor((int)(v19 + 85));
     v19[85] = 12325968;
     *(_DWORD *)(a1 + 6804) = v19;
-    sub_602AEF18((int)v19, a1, 1);
+    FireSnake::onCreate((int)v19, a1, 1);
     v20 = (_DWORD *)operator new(0x1BCu);
     *v20 = 0;
     v20[1] = 0;
@@ -57947,7 +58055,7 @@
     EffectWrapper_ctor((int)(v20 + 85));
     v20[85] = 12325968;
     *(_DWORD *)(a1 + 6808) = v20;
-    sub_602AEF18((int)v20, a1, 2);
+    FireSnake::onCreate((int)v20, a1, 2);
     v21 = (_DWORD *)operator new(0x1BCu);
     *v21 = 0;
     v21[1] = 0;
@@ -57962,8 +58070,8 @@
     EffectWrapper_ctor((int)(v21 + 85));
     v21[85] = 12325968;
     *(_DWORD *)(a1 + 6812) = v21;
-    sub_602AEF18((int)v21, a1, 3);
-    sub_602AC53C((int *)a1);
+    FireSnake::onCreate((int)v21, a1, 3);
+    FireSnake::onCreate((int *)a1);
     *(_DWORD *)(a1 + 7288) = (sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31) + 3;
     LightMask::init((_DWORD *)(a1 + 6816), 0, 2);
     LightSource_update1(a1 + 6856, 13, v5, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
@@ -57985,7 +58093,7 @@
   }
 
 /* ============================================================================
- * sub_602AC53C
+ * _ZN9FireSnake8onCreateEv_helper
  * RVA 0x002ac53c   size 0x19c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_602AC53C(int *a1)
@@ -58275,12 +58383,12 @@
         v26 = (*(int (__fastcall **)(int))(*(_DWORD *)v25 + 8))(v25);
         if ( v26 != (*(int (**)(void))(MEMORY[0xC90974] + 8))() )
         {
-          sub_602ACF44((int)a1);
-          sub_602AD0EC((int)a1);
+          FireSnake::onExecute((int)a1);
+          FireSnake::onExecute((int)a1);
         }
       }
     }
-    sub_602AD28C((int)a1);
+    FireSnake::onExecute((int)a1);
     StageActor::cullCheck((int)a1, 0);
     sub_602AC6EC((int)a1);
     sub_602372C0((int)(a1 + 1744), 663, (int)(a1 + 1732), 0);
@@ -58303,7 +58411,7 @@
   }
 
 /* ============================================================================
- * sub_602ACF44
+ * _ZN9FireSnake9onExecuteEv_helper
  * RVA 0x002acf44   size 0x1a8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_602ACF44(int a1)
@@ -58398,7 +58506,7 @@
   }
 
 /* ============================================================================
- * sub_602AD0EC
+ * _ZN9FireSnake9onExecuteEv_helper_2AD0EC
  * RVA 0x002ad0ec   size 0x1a0   xrefs 1
  * ============================================================================ */
   float *__fastcall sub_602AD0EC(int a1)
@@ -58489,7 +58597,7 @@
   }
 
 /* ============================================================================
- * sub_602AD28C
+ * _ZN9FireSnake9onExecuteEv_helper_2AD28C
  * RVA 0x002ad28c   size 0x138   xrefs 1
  * ============================================================================ */
   int __fastcall sub_602AD28C(int a1)
@@ -58579,22 +58687,22 @@
         v6[4] = *(_DWORD *)(a1 + 7272);
         v6[5] = *(_DWORD *)(a1 + 7276);
         v6[6] = *(_DWORD *)(a1 + 7280);
-        sub_602AEFC8(*(_DWORD *)(a1 + 6800));
+        FireSnake::onDraw(*(_DWORD *)(a1 + 6800));
         v7 = *(_DWORD **)(a1 + 6804);
         v7[4] = *(_DWORD *)(a1 + 7272);
         v7[5] = *(_DWORD *)(a1 + 7276);
         v7[6] = *(_DWORD *)(a1 + 7280);
-        sub_602AEFC8(*(_DWORD *)(a1 + 6804));
+        FireSnake::onDraw(*(_DWORD *)(a1 + 6804));
         v8 = *(_DWORD **)(a1 + 6808);
         v8[4] = *(_DWORD *)(a1 + 7272);
         v8[5] = *(_DWORD *)(a1 + 7276);
         v8[6] = *(_DWORD *)(a1 + 7280);
-        sub_602AEFC8(*(_DWORD *)(a1 + 6808));
+        FireSnake::onDraw(*(_DWORD *)(a1 + 6808));
         v9 = *(_DWORD **)(a1 + 6812);
         v9[4] = *(_DWORD *)(a1 + 7272);
         v9[5] = *(_DWORD *)(a1 + 7276);
         v9[6] = *(_DWORD *)(a1 + 7280);
-        sub_602AEFC8(*(_DWORD *)(a1 + 6812));
+        FireSnake::onDraw(*(_DWORD *)(a1 + 6812));
       }
     }
     return 1;
@@ -59074,7 +59182,7 @@
   }
 
 /* ============================================================================
- * sub_602AEF18
+ * _ZN9FireSnake8onCreateEv_helper_2AEF18
  * RVA 0x002aef18   size 0xa8   xrefs 4
  * ============================================================================ */
   void __fastcall sub_602AEF18(int a1, int a2, int a3)
@@ -59095,6 +59203,15 @@
     v4 = MEMORY[0xC88234];
     if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], v3) && !ActiveColliderMgr_isInCreateList(v4, v3) )
       ActiveColliderMgr_addToCreateList(v4, v3);
+  }
+
+/* ============================================================================
+ * _ZN9FireSnake6onDrawEv_helper
+ * RVA 0x002aefc8   size 0x14   xrefs 4
+ * ============================================================================ */
+  int __fastcall FireSnake::onDraw(_DWORD **a1, int a2, int a3, int a4, int a5)
+  {
+    return DrawMgr_drawModel2(MEMORY[0xC9CD1C], *a1, a3, a4, a5);
   }
 
 /* ============================================================================
@@ -61331,7 +61448,7 @@
   }
 
 /* ============================================================================
- * sub_602C1320
+ * Actor_Blooper_raki_build_helper
  * RVA 0x002c1320   size 0x140   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_602C1320(_DWORD *a1)
@@ -64201,7 +64318,7 @@
     int v0; // r0
   
     v0 = operator new(0x25B0u);
-    return sub_602CE894(v0);
+    return Actor_Wiggler_2_build_helper(v0);
   }
 
 /* ============================================================================
@@ -64273,7 +64390,7 @@
   }
 
 /* ============================================================================
- * sub_602CE894
+ * Actor_Wiggler_2_build_helper
  * RVA 0x002ce894   size 0x190   xrefs 2
  * ============================================================================ */
   int __fastcall sub_602CE894(int a1)
@@ -65529,7 +65646,7 @@
     _DWORD *result; // r0
   
     v0 = operator new(0x25B0u);
-    result = (_DWORD *)sub_602CE894(v0);
+    result = (_DWORD *)Actor_Wiggler_2_build_helper(v0);
     *result = 12477428;
     return result;
   }
@@ -65760,7 +65877,7 @@
     a1[1667] = 2;
     (*(void (__fastcall **)(_DWORD *, int))(*a1 + 192))(a1, 13179840);
     a1[1561] = 1;
-    sub_602D59A8(a1);
+    SledgeBro::onCreate(a1);
     v10 = (_DWORD *)a1[1714];
     v9 = (_DWORD **)(a1 + 1714);
     (*(void (__fastcall **)(_DWORD, _DWORD, _BYTE *))(*(_DWORD *)*v10 + 108))(*v10, 0, v12);
@@ -65825,7 +65942,7 @@
   }
 
 /* ============================================================================
- * sub_602D59A8
+ * _ZN9SledgeBro8onCreateEv_helper
  * RVA 0x002d59a8   size 0x1a0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_602D59A8(_DWORD *a1)
@@ -65979,14 +66096,14 @@
     *(_DWORD *)(a1 + 6704) = v19;
     (*(void (__fastcall **)(_DWORD, int, int))(*(_DWORD *)**v14 + 108))(**v14, 4, a1 + 6756);
     (*(void (__fastcall **)(_DWORD, int, int))(*(_DWORD *)**v14 + 108))(**v14, 8, a1 + 6804);
-    sub_602D5DF0(a1);
-    sub_602D5EF8(a1);
+    SledgeBro::onExecute(a1);
+    SledgeBro::onExecute(a1);
     StageActor::cullCheck(a1, 0);
     return 1;
   }
 
 /* ============================================================================
- * sub_602D5DF0
+ * _ZN9SledgeBro9onExecuteEv_helper
  * RVA 0x002d5df0   size 0xec   xrefs 1
  * ============================================================================ */
   int __fastcall sub_602D5DF0(int a1)
@@ -66025,7 +66142,7 @@
   }
 
 /* ============================================================================
- * sub_602D5EF8
+ * _ZN9SledgeBro9onExecuteEv_helper_2D5EF8
  * RVA 0x002d5ef8   size 0x108   xrefs 1
  * ============================================================================ */
   int __fastcall sub_602D5EF8(int a1)
@@ -68641,7 +68758,7 @@
       v14 = a1[27];
       v15 = v10;
       mapPositionToScreen(v13, (float *)&v14);
-      return sub_60813814(v12, "SE_EMY_KALON_REVIVAL_HEAD", v11, v13, 0);
+      return j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v12, "SE_EMY_KALON_REVIVAL_HEAD", v11, v13, 0);
     }
     else if ( result == 2 )
     {
@@ -68654,7 +68771,7 @@
       v14 = *(v4 - 1498);
       v15 = v8;
       mapPositionToScreen(v13, (float *)&v14);
-      sub_60813814(v7, "SE_EMY_KALON_REVIVAL_HEAD", v6, v13, 0);
+      j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v7, "SE_EMY_KALON_REVIVAL_HEAD", v6, v13, 0);
       result = **(_DWORD **)(*v4 + 12);
       v9 = *(_DWORD *)(result + 28);
       if ( (v9 & 0x30) != 0 )
@@ -71780,7 +71897,7 @@
     int v28; // [sp+10h] [bp-8h]
     int v29; // [sp+14h] [bp-4h] BYREF
   
-    sub_602F2A44(a1 + 7348);
+    IceActor_setScale_helper_2F2A44(a1 + 7348);
     v4 = (float *)(a1 + 7404);
     v5 = 12 * *(unsigned __int8 *)(a1 + 7533) + 11529724;
     v6 = *a2 * *(float *)(12 * *(unsigned __int8 *)(a1 + 7533) + 0xAFEDFC);
@@ -71797,9 +71914,9 @@
       *(float *)(a1 + 576) = v8;
       *(_DWORD *)(a1 + 580) = 0;
     }
-    sub_602EE480(a1);
-    sub_602F47C0(a1 + 7444);
-    sub_602EE580(a1);
+    IceActor_setScale_helper(a1);
+    IceActor_setScale_helper_2F47C0(a1 + 7444);
+    IceActor_setScale_helper_2EE580(a1);
     sub_602F2F3C(a1 + 6784, *(unsigned __int8 *)(a1 + 7533), a2);
     v9 = *(float *)(a1 + 112);
     v10 = *v4;
@@ -71843,7 +71960,7 @@
   }
 
 /* ============================================================================
- * sub_602EE480
+ * IceActor_setScale_helper
  * RVA 0x002ee480   size 0xf8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_602EE480(int a1)
@@ -71865,7 +71982,7 @@
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xC925A4] + 8))() )
     {
-      if ( sub_602EF61C(a1, &v12) == 1 )
+      if ( IceActor_setScale_helper_helper_2EF61C(a1, &v12) == 1 )
       {
         v5 = v12;
   LABEL_7:
@@ -71879,7 +71996,7 @@
       result = (*(int (**)(void))(MEMORY[0xC92584] + 8))();
       if ( v7 != result )
         return result;
-      if ( sub_602EF61C(a1, &v11) == 1 )
+      if ( IceActor_setScale_helper_helper_2EF61C(a1, &v11) == 1 )
       {
         v5 = v11;
         goto LABEL_7;
@@ -71900,7 +72017,7 @@
   }
 
 /* ============================================================================
- * sub_602EE580
+ * IceActor_setScale_helper_2EE580
  * RVA 0x002ee580   size 0x214   xrefs 1
  * ============================================================================ */
   int __fastcall sub_602EE580(int a1)
@@ -72252,7 +72369,7 @@
   }
 
 /* ============================================================================
- * sub_602EF61C
+ * IceActor_setScale_helper_helper_2EF61C
  * RVA 0x002ef61c   size 0x270   xrefs 2
  * ============================================================================ */
   int __fastcall sub_602EF61C(int a1, float *a2)
@@ -72847,7 +72964,7 @@
   }
 
 /* ============================================================================
- * sub_602F2A44
+ * IceActor_setScale_helper_2F2A44
  * RVA 0x002f2a44   size 0x34   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_602F2A44(int a1, _DWORD *a2)
@@ -74097,7 +74214,7 @@
   }
 
 /* ============================================================================
- * sub_602F47C0
+ * IceActor_setScale_helper_2F47C0
  * RVA 0x002f47c0   size 0x54   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_602F47C0(_DWORD *result)
@@ -75615,7 +75732,7 @@
     _DWORD *result; // r0
   
     operator new(0x36B0u);
-    result = sub_602FE1BC();
+    result = Actor_level_big_Piranha_furawa_build_helper();
     *result = 12484520;
     *((_WORD *)result + 6996) = 3;
     return result;
@@ -75907,7 +76024,7 @@
   }
 
 /* ============================================================================
- * sub_602FE1BC
+ * Actor_level_big_Piranha_furawa_build_helper
  * RVA 0x002fe1bc   size 0x3c   xrefs 1
  * ============================================================================ */
   _DWORD *sub_602FE1BC()

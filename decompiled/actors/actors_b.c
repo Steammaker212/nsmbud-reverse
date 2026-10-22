@@ -414,7 +414,7 @@
     int v0; // r4
   
     v0 = operator new(0x1BC8u);
-    sub_60306810(v0);
+    Actor_jugemu_maruchipureifor_build_helper(v0);
     *(_DWORD *)v0 = 12488380;
     *(_DWORD *)(v0 + 6956) = 0;
     *(_DWORD *)(v0 + 6960) = 0;
@@ -1523,7 +1523,7 @@
   }
 
 /* ============================================================================
- * sub_60306810
+ * Actor_jugemu_maruchipureifor_build_helper
  * RVA 0x00306810   size 0x10c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60306810(int a1)
@@ -3693,7 +3693,7 @@
     StateMgr::execute((_DWORD *)(a1 + 6084));
     ActorScaler_execute(a1 + 6436);
     sub_602A33AC(a1);
-    sub_6030F9FC(a1);
+    Kanibo::onExecute(a1);
     v3 = 0.0;
     v4 = 1090519040;
     if ( *(_DWORD *)(a1 + 6344) != 1 )
@@ -3737,14 +3737,14 @@
             v17 == (*(int (**)(void))(MEMORY[0xC908C0] + 8))()) )
       {
         if ( *(float *)(a1 + 108) <= *(float *)(MEMORY[0xCC6484] + 112) )
-          sub_60409994(MEMORY[0xC9A1F0], *(char *)(a1 + 6298));
+          Kanibo::onExecute(MEMORY[0xC9A1F0], *(char *)(a1 + 6298));
       }
     }
     return 1;
   }
 
 /* ============================================================================
- * sub_6030F9FC
+ * _ZN6Kanibo9onExecuteEv_helper
  * RVA 0x0030f9fc   size 0x20c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6030F9FC(int a1)
@@ -6178,7 +6178,7 @@
   }
 
 /* ============================================================================
- * sub_60315974
+ * _ZN8DryBones15collisionPlayerEP14ActiveColliderS1__helper
  * RVA 0x00315974   size 0x1c4   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60315974(int a1, int a2, int a3)
@@ -6367,7 +6367,7 @@
       *(_BYTE *)(v10 + 6272) = 0;
     }
     if ( v9 )
-      return sub_60315974((int)a1, a2, a3);
+      return DryBones::collisionPlayer((int)a1, a2, a3);
     return result;
   }
 
@@ -6424,7 +6424,7 @@
         }
         return result;
       }
-      return sub_60315974(a1, a2, a3);
+      return DryBones::collisionPlayer(a1, a2, a3);
     }
     v12 = *(_DWORD *)(a2 + 64);
     if ( (float)(*(float *)(*(_DWORD *)(a3 + 64) + 112) - *(float *)(*(_DWORD *)(a3 + 64) + 588)) >= 0.0 )
@@ -6438,7 +6438,7 @@
     if ( !v14 )
     {
       *(_BYTE *)(v12 + 6272) = 0;
-      return sub_60315974(a1, a2, a3);
+      return DryBones::collisionPlayer(a1, a2, a3);
     }
     if ( v14 != 2 )
     {
@@ -7026,7 +7026,7 @@
   }
 
 /* ============================================================================
- * sub_60316F50
+ * _ZN8DryBones20executeState_DieFallEv_helper
  * RVA 0x00316f50   size 0x14c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60316F50(int a1)
@@ -7708,7 +7708,7 @@
       *(v6 - 16) = *(v6 - 16) + v6[2];
     }
     while ( v5 * 4 );
-    sub_60316F50((int)a1);
+    DryBones::executeState_DieFall((int)a1);
     return sub_603170A8((int)a1);
   }
 
@@ -8050,14 +8050,14 @@
       v8 = *(_DWORD *)(a1 + 108);
       v9 = v5;
       mapPositionToScreen(v7, (float *)&v8);
-      return sub_60813814(v4, "SE_EMY_BIG_KALON_REVIVAL_HEAD", v3, v7, 0);
+      return j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v4, "SE_EMY_BIG_KALON_REVIVAL_HEAD", v3, v7, 0);
     }
     else
     {
       v8 = *(_DWORD *)(a1 + 108);
       v9 = v5;
       mapPositionToScreen(v7, (float *)&v8);
-      return sub_60813814(v4, "SE_EMY_KALON_REVIVAL_HEAD", v3, v7, 0);
+      return j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v4, "SE_EMY_KALON_REVIVAL_HEAD", v3, v7, 0);
     }
   }
 
@@ -8144,14 +8144,14 @@
         v31 = *(float *)(a1 + 108);
         v32 = v27;
         mapPositionToScreen((float *)v34, &v31);
-        sub_60813814(v26, "SE_EMY_BIG_KALON_REVIVAL_HEAD", v25, v34, 0);
+        j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v26, "SE_EMY_BIG_KALON_REVIVAL_HEAD", v25, v34, 0);
       }
       else
       {
         v31 = *(float *)(a1 + 108);
         v32 = v27;
         mapPositionToScreen((float *)v34, &v31);
-        sub_60813814(v26, "SE_EMY_KALON_REVIVAL_HEAD", v25, v34, 0);
+        j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v26, "SE_EMY_KALON_REVIVAL_HEAD", v25, v34, 0);
       }
       v28 = *(_DWORD *)(a1 + 156);
       v11 = (float *)(a1 + 108);
@@ -8580,7 +8580,7 @@
     int v0; // r0
   
     v0 = operator new(0x32C0u);
-    return sub_6031B374(v0);
+    return Actor_RDashfor_keronpa_build_helper(v0);
   }
 
 /* ============================================================================
@@ -8691,7 +8691,7 @@
   }
 
 /* ============================================================================
- * sub_6031B2DC
+ * SE_EMY_KERONPA_ALARM_ref_2_helper
  * RVA 0x0031b2dc   size 0x90   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6031B2DC(int a1, int a2)
@@ -8719,7 +8719,7 @@
   }
 
 /* ============================================================================
- * sub_6031B374
+ * Actor_RDashfor_keronpa_build_helper
  * RVA 0x0031b374   size 0x154   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6031B374(int a1)
@@ -8971,7 +8971,7 @@
       v8[0] = a1[6].n128_f32[3];
       v8[1] = v4;
       mapPositionToScreen(v7, v8);
-      sub_60813814(v3, "SE_EMY_KERONPA_ALARM", v2, v7, 0);
+      j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v3, "SE_EMY_KERONPA_ALARM", v2, v7, 0);
       EffectWrapper_update(a1 + 780, 19, &a1[6].n128_f32[3], nullptr, nullptr);
     }
     v5 = a1[787].n128_u32[1] - 1;
@@ -9422,7 +9422,7 @@
   }
 
 /* ============================================================================
- * sub_6031D334
+ * SE_EMY_KERONPA_FIRE_ref_2_helper_helper_31D334
  * RVA 0x0031d334   size 0x70   xrefs 1
  * ============================================================================ */
   void sub_6031D334()
@@ -9473,7 +9473,7 @@
         v11 = a1[6].n128_u32[3];
         v12 = v4;
         mapPositionToScreen(v10, (float *)&v11);
-        sub_60813814(v6, "SE_EMY_KERONPA_ALARM", v5, v10, 0);
+        j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v6, "SE_EMY_KERONPA_ALARM", v5, v10, 0);
       }
       else
       {
@@ -9556,7 +9556,7 @@
     _DWORD *result; // r0
   
     v0 = operator new(0x32C8u);
-    result = (_DWORD *)sub_6031B374(v0);
+    result = (_DWORD *)Actor_RDashfor_keronpa_build_helper(v0);
     *result = 12495396;
     result[3248] = 0;
     result[3249] = 0;
@@ -9564,7 +9564,7 @@
   }
 
 /* ============================================================================
- * sub_6031E63C
+ * attack_md_ref_2_helper
  * RVA 0x0031e63c   size 0x1ac   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6031E63C(_DWORD *a1)
@@ -9643,7 +9643,7 @@
   }
 
 /* ============================================================================
- * sub_6031EA54
+ * SE_EMY_KERONPA_FIRE_ref_2_helper
  * RVA 0x0031ea54   size 0x16c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6031EA54(int a1)
@@ -9658,7 +9658,7 @@
   
     memset(&v9[1], 0, 0x28u);
     v9[3] = Profile::get(MEMORY[0xAF35E4]);
-    sub_6031D334();
+    SE_EMY_KERONPA_FIRE_ref_2_helper_helper_31D334();
     v5 = 0;
     v9[4] = v1;
     v9[5] = v2;
@@ -9717,7 +9717,7 @@
     if ( *(_DWORD *)(*v3 + 8) > v8 )
       v7 += v8;
     sub_6041838C(*v7 + 4);
-    sub_6031E63C(a1);
+    attack_md_ref_2_helper(a1);
     a1[3249] = 30;
     return 12996;
   }
@@ -9781,7 +9781,7 @@
       return (int *)(*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13187128);
     if ( *((float *)result + 5) == 12.0 )
     {
-      sub_6031EA54(a1);
+      SE_EMY_KERONPA_FIRE_ref_2_helper(a1);
       v6 = *(float *)(a1 + 112);
       v7 = MEMORY[0xC7F530];
       v9[0] = *(float *)(a1 + 108);
@@ -9813,14 +9813,14 @@
     v9[0] = *(float *)(a1 + 108);
     v9[1] = v2;
     mapPositionToScreen(v8, v9);
-    sub_60813814(v4, "SE_EMY_KERONPA_ALARM", v3, v8, 0);
+    j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v4, "SE_EMY_KERONPA_ALARM", v3, v8, 0);
     j_ModelWrapper_updateAnims(*(_DWORD *)(a1 + 7124));
     result = (_DWORD *)(a1 + 12996);
     v6 = *(_DWORD *)(a1 + 12996);
     if ( !v6 || (v7 = v6 - 1, (*result = v7) == 0) )
     {
       *(_DWORD *)(a1 + 340) |= 0x1000u;
-      return (_DWORD *)sub_6031B2DC(a1, 0);
+      return (_DWORD *)SE_EMY_KERONPA_ALARM_ref_2_helper(a1, 0);
     }
     return result;
   }
@@ -10171,7 +10171,7 @@
       *(_DWORD *)(a1 + 7104) = 1105723392;
       *(_DWORD *)(a1 + 7108) = 1106771968;
     }
-    sub_6032166C(a1);
+    BanzaiBill_initColliders_helper(a1);
     *(_DWORD *)(a1 + 7656) = 30;
   LABEL_9:
     if ( *v5 == 1 )
@@ -10232,7 +10232,7 @@
   }
 
 /* ============================================================================
- * sub_6032166C
+ * BanzaiBill_initColliders_helper
  * RVA 0x0032166c   size 0xac   xrefs 1
  * ============================================================================ */
   void __fastcall sub_6032166C(int a1)
@@ -10794,7 +10794,7 @@
   }
 
 /* ============================================================================
- * sub_6032304C
+ * SE_EMY_ref_2_helper
  * RVA 0x0032304c   size 0x78   xrefs 2
  * ============================================================================ */
   _BYTE *__fastcall sub_6032304C(_DWORD *a1, int a2, int a3)
@@ -10812,7 +10812,7 @@
   }
 
 /* ============================================================================
- * sub_603230CC
+ * SE_EMY_ref_2_helper_3230CC
  * RVA 0x003230cc   size 0x78   xrefs 2
  * ============================================================================ */
   _BYTE *__fastcall sub_603230CC(_DWORD *a1, int a2, int a3)
@@ -10905,7 +10905,7 @@
     {
       *(float *)(a1 + 112) = v7 + 8.0;
       if ( *(_DWORD *)(a1 + 7648) )
-        return sub_603230CC(v8, v6 | (*(_DWORD *)(a1 + 7652) << 12), v9);
+        return SE_EMY_ref_2_helper_3230CC(v8, v6 | (*(_DWORD *)(a1 + 7652) << 12), v9);
       else
         return sub_60322FA4(v8, v6, v9, *(unsigned __int16 *)(a1 + 7672));
     }
@@ -10915,7 +10915,7 @@
       if ( *(_DWORD *)(a1 + 7648) )
         return sub_6032314C(v8, v4 | 0xA, v9);
       else
-        return sub_6032304C(v8, v6, v9);
+        return SE_EMY_ref_2_helper(v8, v6, v9);
     }
   }
 
@@ -11819,7 +11819,7 @@
                 v30 = (_DWORD *)(a1 + 7648);
                 if ( *(_DWORD *)(a1 + 7648) )
                 {
-                  v31 = sub_603230CC(&v43, v29 | (*(_DWORD *)(a1 + 7652) << 12), v28);
+                  v31 = SE_EMY_ref_2_helper_3230CC(&v43, v29 | (*(_DWORD *)(a1 + 7652) << 12), v28);
                   if ( !v31 )
                     return 0;
                 }
@@ -11875,7 +11875,7 @@
               }
               else
               {
-                v33 = sub_6032304C(&v43, v29, v28);
+                v33 = SE_EMY_ref_2_helper(&v43, v29, v28);
                 if ( !v33 )
                   return 0;
               }
@@ -12201,7 +12201,7 @@
     v19[0] = a1[5431].n128_f32[2];
     v19[1] = v14;
     mapPositionToScreen(v18, v19);
-    sub_60813814(v13, "SE_EMY_KG_KILLER_FLY", v12, v18, 0);
+    j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v13, "SE_EMY_KG_KILLER_FLY", v12, v18, 0);
     EffectWrapper_update(a1 + 394, 560, &a1[5432].n128_f32[1], &a1[9].n128_u32[3], &a1[5499].n128_f32[3]);
     v19[0] = 0.0;
     v15 = -2.0;
@@ -12256,7 +12256,7 @@
   }
 
 /* ============================================================================
- * sub_60327A14
+ * Actor_kingukira_RDash_build_helper
  * RVA 0x00327a14   size 0x140   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_60327A14(_DWORD *a1)
@@ -12991,7 +12991,7 @@
     _DWORD *result; // r0
   
     v0 = (_DWORD *)operator new(0x157E0u);
-    result = sub_60327A14(v0);
+    result = Actor_kingukira_RDash_build_helper(v0);
     *result = 12498820;
     return result;
   }
@@ -13062,7 +13062,7 @@
     v12[0] = a1[6].n128_f32[3];
     v12[1] = v9;
     mapPositionToScreen(v11, v12);
-    return sub_60813814(v8, "SE_EMY_MG_KILLER_FLY", v7, v11, 0);
+    return j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v8, "SE_EMY_MG_KILLER_FLY", v7, v11, 0);
   }
 
 /* ============================================================================
@@ -13358,7 +13358,7 @@
         v32 = a1[6].n128_u32[3];
         v33 = v22;
         mapPositionToScreen((float *)v31, (float *)&v32);
-        sub_60813814(&a1[847].n128_i8[8], "SE_BOSS_ROY_SR_KILLER_COUNTDOWN", v23, v31, 0);
+        j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(&a1[847].n128_i8[8], "SE_BOSS_ROY_SR_KILLER_COUNTDOWN", v23, v31, 0);
       }
       v24 = a1[816].n128_u32[3] - 1;
       a1[816].n128_u32[3] = v24;
@@ -13369,7 +13369,7 @@
         v32 = a1[6].n128_u32[3];
         v33 = v25;
         mapPositionToScreen((float *)v31, (float *)&v32);
-        sub_60813814(&a1[847].n128_i8[8], "SE_BOSS_ROY_SR_KILLER_COUNTDOWN", v26, v31, 0);
+        j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(&a1[847].n128_i8[8], "SE_BOSS_ROY_SR_KILLER_COUNTDOWN", v26, v31, 0);
         if ( !a1[816].n128_u32[3] )
         {
           a1[817].n128_u32[0] = 16;
@@ -13426,12 +13426,12 @@
     v18 = v6;
     v19 = v3;
     mapPositionToScreen(&v21, &v18);
-    sub_60813814(a1 + 13560, "SE_BOSS_ROY_SR_KILLER_COUNTDOWN", v4, &v21, 0);
+    j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(a1 + 13560, "SE_BOSS_ROY_SR_KILLER_COUNTDOWN", v4, &v21, 0);
     result = (_DWORD *)(a1 + 13072);
     v8 = *(_DWORD *)(a1 + 13072);
     if ( !v8 || (*result = v8 - 1, v8 <= 1) )
     {
-      sub_6032C0DC(a1);
+      SE_BOSS_ROY_SR_KILLER_COUNTDOWN_ref_2_helper(a1);
       CollisionMgr_init(a1 + 648, a1, dword_60AFF864, dword_60AFF870, flt_60AFF87C);
       *(_DWORD *)(a1 + 3200) |= 0x10000800u;
       *(_DWORD *)(a1 + 3192) |= 0x10000800u;
@@ -13473,7 +13473,7 @@
   }
 
 /* ============================================================================
- * sub_6032C0DC
+ * SE_BOSS_ROY_SR_KILLER_COUNTDOWN_ref_2_helper
  * RVA 0x0032c0dc   size 0x170   xrefs 1
  * ============================================================================ */
   unsigned int __fastcall sub_6032C0DC(int a1)
@@ -13673,7 +13673,7 @@
     v32[0] = a1[6].n128_f32[3];
     v32[1] = v29;
     mapPositionToScreen(v31, v32);
-    return sub_60813814(v28, "SE_EMY_MG_KILLER_FLY", v27, v31, 0);
+    return j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v28, "SE_EMY_MG_KILLER_FLY", v27, v31, 0);
   }
 
 /* ============================================================================
@@ -13956,7 +13956,7 @@
     v30 = *(_DWORD *)(a1 + 108);
     v31 = v21;
     mapPositionToScreen((float *)&v27, (float *)&v30);
-    sub_60813814(v23, "SE_EMY_HUHU_BREATH_OUT", v22, &v27, 0);
+    j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v23, "SE_EMY_HUHU_BREATH_OUT", v22, &v27, 0);
     v24 = *(_DWORD *)(a1 + 6312);
     v25 = v24 <= 1;
     result = v24 - 1;
@@ -17078,7 +17078,7 @@
     StateMgr::execute((_DWORD *)(a1 + 6084));
     if ( !*(_BYTE *)(a1 + 536) )
     {
-      sub_6033C38C(a1);
+      GoombaBase::onExecute(a1);
       if ( !(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 736))(a1) )
       {
         CurrentState = StateMgr::getCurrentState(v3);
@@ -17122,7 +17122,7 @@
             v12 = StateMgr::getCurrentState(v3);
             v13 = (*(int (__fastcall **)(int))(*(_DWORD *)v12 + 8))(v12);
             if ( v13 != (*(int (**)(void))(MEMORY[0xC944DC] + 8))() )
-              sub_6033C4A8(a1);
+              GoombaBase::onExecute(a1);
           }
           if ( sub_60003AE0(a1) == 1 )
             goto LABEL_17;
@@ -17178,7 +17178,7 @@
   }
 
 /* ============================================================================
- * sub_6033C38C
+ * _ZN10GoombaBase9onExecuteEv_helper
  * RVA 0x0033c38c   size 0x118   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6033C38C(int a1)
@@ -17220,7 +17220,7 @@
   }
 
 /* ============================================================================
- * sub_6033C4A8
+ * _ZN10GoombaBase9onExecuteEv_helper_33C4A8
  * RVA 0x0033c4a8   size 0x2dc   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6033C4A8(int a1)
@@ -18586,7 +18586,7 @@
   int __fastcall GoombaBase::executeState_DieFall(int a1)
   {
     Enemy::executeState_DieFall(a1);
-    return sub_6033C4A8(a1);
+    return GoombaBase::onExecute(a1);
   }
 
 /* ============================================================================
@@ -20788,7 +20788,7 @@
         v14[0] = *(float *)(a1 + 108);
         v14[1] = v9;
         mapPositionToScreen(v13, v14);
-        sub_60813814(v11, "SE_EMY_MECHAKOOPA_RESTART", v10, v13, 0);
+        j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v11, "SE_EMY_MECHAKOOPA_RESTART", v10, v13, 0);
       }
       return v3 == 0;
     }
@@ -23332,7 +23332,7 @@
   }
 
 /* ============================================================================
- * sub_60359C04
+ * Actor_gurupupatapata_build_helper
  * RVA 0x00359c04   size 0x184   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60359C04(int a1, _DWORD *a2, int a3)
@@ -23406,7 +23406,7 @@
     int v22; // r0
     _DWORD *v23; // r0
   
-    sub_6035A168((_DWORD *)a1);
+    KoopaTroopa_onCreate_helper((_DWORD *)a1);
     v3 = 1.0;
     v4 = (_DWORD *)(a1 + 7476);
     if ( *(_DWORD *)(a1 + 7476) == 1 )
@@ -23499,7 +23499,7 @@
     }
     *(float *)(a1 + 116) = v18;
   LABEL_27:
-    sub_6035A5CC(a1);
+    KoopaTroopa_onCreate_helper_35A5CC(a1);
     v22 = *(_DWORD *)(a1 + 6848);
     if ( v22 == 1 )
     {
@@ -23516,7 +23516,7 @@
   }
 
 /* ============================================================================
- * sub_6035A168
+ * KoopaTroopa_onCreate_helper
  * RVA 0x0035a168   size 0x424   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6035A168(_DWORD *a1)
@@ -23639,7 +23639,7 @@
   }
 
 /* ============================================================================
- * sub_6035A5CC
+ * KoopaTroopa_onCreate_helper_35A5CC
  * RVA 0x0035a5cc   size 0x164   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6035A5CC(int a1)
@@ -23731,7 +23731,7 @@
     v2 = 1;
     if ( a1[1869] == 1 )
     {
-      sub_6035A898(a1);
+      KoopaTroopa_beforeExecute_helper(a1);
       v5 = a1 + 1706;
       Animation_update(**(_DWORD **)(a1[1706] + 28));
       if ( a1[1869] == 1 )
@@ -23764,7 +23764,7 @@
   }
 
 /* ============================================================================
- * sub_6035A898
+ * KoopaTroopa_beforeExecute_helper
  * RVA 0x0035a898   size 0xdc   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6035A898(_DWORD *a1)
@@ -23887,16 +23887,16 @@
   LABEL_20:
     sub_602A33AC(a1);
     if ( *(_DWORD *)(a1 + 7476) == 1 )
-      sub_6035ABA0(a1);
+      KoopaTroopa_onExecute_helper(a1);
   LABEL_7:
-    sub_6035ADF0(a1);
+    KoopaTroopa_onExecute_helper_35ADF0(a1);
     sub_603A2194(a1);
-    sub_604094BC(MEMORY[0xC9A1F0]);
+    KoopaTroopa_onExecute_helper_4094BC(MEMORY[0xC9A1F0]);
     return 1;
   }
 
 /* ============================================================================
- * sub_6035ABA0
+ * KoopaTroopa_onExecute_helper
  * RVA 0x0035aba0   size 0x220   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6035ABA0(int a1)
@@ -23981,7 +23981,7 @@
   }
 
 /* ============================================================================
- * sub_6035ADF0
+ * KoopaTroopa_onExecute_helper_35ADF0
  * RVA 0x0035adf0   size 0x2c0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6035ADF0(int a1)
@@ -24164,7 +24164,7 @@
   LABEL_5:
       --*v3;
     }
-    sub_604093B8(MEMORY[0xC9A1F0]);
+    KoopaTroopa_onDelete_helper(MEMORY[0xC9A1F0]);
     return CarryableEnemy::onDelete(a1);
   }
 
@@ -26691,7 +26691,7 @@
     int result; // r0
   
     v2 = operator new(0x1D68u);
-    result = sub_60359C04(v2, a1, 2);
+    result = Actor_gurupupatapata_build_helper(v2, a1, 2);
     *(_DWORD *)result = 12516520;
     *(_WORD *)(result + 7512) = 0;
     *(_DWORD *)(result + 7504) = 0;
@@ -27091,7 +27091,7 @@
       v13[0] = *(_DWORD *)(a1 + 108);
       v13[1] = v6;
       mapPositionToScreen((float *)v12, (float *)v13);
-      sub_60813814(v8, "SE_EMY_PENGUIN_PIYO", v7, v12, 0);
+      j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v8, "SE_EMY_PENGUIN_PIYO", v7, v12, 0);
       *(_DWORD *)(a1 + 124) = 0;
       if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
       {
@@ -31111,7 +31111,7 @@
   }
 
 /* ============================================================================
- * sub_60377CA8
+ * SE_EMY_SHADOW_JITABATA_ref_2_helper
  * RVA 0x00377ca8   size 0x48   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60377CA8(int a1, int a2)
@@ -31149,7 +31149,7 @@
   }
 
 /* ============================================================================
- * sub_60377D44
+ * SE_EMY_SHADOW_JITABATA_ref_2_helper_377D44
  * RVA 0x00377d44   size 0x4c   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60377D44(int a1, int a2)
@@ -33076,7 +33076,7 @@
       do
       {
         if ( sub_60387A1C(*v3) )
-          sub_60387714(*v3);
+          Pokey::removeActiveColliders(*v3);
         --v2;
         ++v3;
       }
@@ -33107,7 +33107,7 @@
       do
       {
         if ( !sub_60387A1C(*v3) )
-          sub_60387988(*v3);
+          Pokey::addActiveColliders(*v3);
         --v2;
         ++v3;
       }
@@ -33136,7 +33136,7 @@
       {
         result = *v2;
         if ( *(_BYTE *)(*v2 + 128) )
-          result = sub_60387A60(result);
+          result = Pokey::killAtGoal(result);
         --v1;
         ++v2;
       }
@@ -33732,7 +33732,7 @@
   }
 
 /* ============================================================================
- * sub_603823D4
+ * _ZN5Pokey16collisionIceballEP14ActiveColliderS1__helper
  * RVA 0x003823d4   size 0x28c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603823D4(int a1, int a2)
@@ -34521,7 +34521,7 @@
     int *v13; // r1
     int v14; // r2
   
-    sub_603823D4(a1, *(_DWORD *)(a3 + 64));
+    Pokey::collisionIceball(a1, *(_DWORD *)(a3 + 64));
     v6 = *(_DWORD *)(a1 + 6304);
     v4 = (int *)(a1 + 6304);
     v5 = v6;
@@ -34580,7 +34580,7 @@
   
     SE_EMY_DOWN_SYNC_ref(*(_DWORD *)(MEMORY[0xC7B420] + 240), (float *)(a1 + 108));
     sub_6000A454(MEMORY[0xC7B420]);
-    v2 = sub_602856DC(a1 + 6292, *(_DWORD *)(MEMORY[0xC7B420] + 240));
+    v2 = Pokey::vf15C(a1 + 6292, *(_DWORD *)(MEMORY[0xC7B420] + 240));
     v4[0] = MEMORY[0xB3B944];
     v4[1] = MEMORY[0xB3B948];
     v4[2] = 0;
@@ -36110,7 +36110,7 @@
   }
 
 /* ============================================================================
- * sub_60387714
+ * _ZN5Pokey21removeActiveCollidersEv_helper
  * RVA 0x00387714   size 0x3c   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60387714(int a1)
@@ -36234,7 +36234,7 @@
   }
 
 /* ============================================================================
- * sub_60387988
+ * _ZN5Pokey18addActiveCollidersEv_helper
  * RVA 0x00387988   size 0x8c   xrefs 1
  * ============================================================================ */
   void __fastcall sub_60387988(int a1)
@@ -36271,7 +36271,7 @@
   }
 
 /* ============================================================================
- * sub_60387A60
+ * _ZN5Pokey10killAtGoalEv_helper
  * RVA 0x00387a60   size 0x40   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60387A60(int a1)
@@ -38564,7 +38564,7 @@
       if ( !v31 )
       {
         if ( !*(_BYTE *)(a1 + 6522) )
-          sub_60377D44(MEMORY[0xC96478], v25);
+          SE_EMY_SHADOW_JITABATA_ref_2_helper_377D44(MEMORY[0xC96478], v25);
   LABEL_37:
         *(_DWORD *)(a1 + 6328) = 2;
         return 2;
@@ -38572,7 +38572,7 @@
       if ( (v30 & 1) != 0 )
       {
         if ( !*(_BYTE *)(a1 + 6522) )
-          sub_60377CA8(MEMORY[0xC96478], v25);
+          SE_EMY_SHADOW_JITABATA_ref_2_helper(MEMORY[0xC96478], v25);
         goto LABEL_37;
       }
       result = *(unsigned __int8 *)(a1 + 538);
@@ -41939,14 +41939,14 @@
       a1[6610] = 0;
       return CollisionActor::afterExecute(a1, a2);
     }
-    if ( !sub_60003AE0((int)a1) && !sub_6039F5FC((int)a1) )
+    if ( !sub_60003AE0((int)a1) && !ShellEnemy::afterExecute((int)a1) )
     {
       if ( a1[6409] )
       {
         if ( (a1[2872] & 1) != 0 )
           a1[6409] = 0;
       }
-      sub_6039F6E0((int)a1);
+      ShellEnemy::afterExecute((int)a1);
       sub_60003840((int)a1);
       goto LABEL_7;
     }
@@ -41955,7 +41955,7 @@
   }
 
 /* ============================================================================
- * sub_6039F5FC
+ * _ZN10ShellEnemy12afterExecuteEj_helper
  * RVA 0x0039f5fc   size 0xe4   xrefs 1
  * ============================================================================ */
   bool __fastcall sub_6039F5FC(int a1)
@@ -42000,7 +42000,7 @@
   }
 
 /* ============================================================================
- * sub_6039F6E0
+ * _ZN10ShellEnemy12afterExecuteEj_helper_39F6E0
  * RVA 0x0039f6e0   size 0x438   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6039F6E0(int a1)
@@ -42347,7 +42347,7 @@
       result = *(_DWORD *)(a1 + 6344);
       if ( *(_DWORD *)(v7 + 8) != result && (*(_BYTE *)(a1 + 6392) || (result = sub_60271EF4(a1, v7)) == 0) )
       {
-        result = sub_603A009C(a1, a2, a3);
+        result = ShellEnemy::collisionPlayer(a1, a2, a3);
         if ( !result )
         {
           CurrentState = StateMgr::getCurrentState(a1 + 6084);
@@ -42384,7 +42384,7 @@
   }
 
 /* ============================================================================
- * sub_603A009C
+ * _ZN10ShellEnemy15collisionPlayerEP14ActiveColliderS1__helper
  * RVA 0x003a009c   size 0x2ac   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603A009C(float *a1, int a2, int a3)
@@ -42467,7 +42467,7 @@
     v10 = 1;
     if ( !(*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 736))(a1) )
     {
-      if ( sub_603A047C(a1, v16, a3) == 1 )
+      if ( ShellEnemy::collisionPlayer(a1, v16, a3) == 1 )
       {
         *(_BYTE *)(a2 + 110) |= 2u;
         return 1;
@@ -42513,7 +42513,7 @@
   }
 
 /* ============================================================================
- * sub_603A047C
+ * _ZN10ShellEnemy15collisionPlayerEP14ActiveColliderS1__helper_helper_3A047C
  * RVA 0x003a047c   size 0xd8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603A047C(int a1, int a2, int a3)
@@ -42848,7 +42848,7 @@
       {
         goto LABEL_16;
       }
-      if ( sub_603A0E5C(a2, a3) == 1 )
+      if ( ShellEnemy::collisionEnemy(a2, a3) == 1 )
       {
         *(_BYTE *)(a2 + 110) |= 2u;
         result = *(unsigned __int8 *)(a3 + 110) | 2;
@@ -42883,7 +42883,7 @@
   }
 
 /* ============================================================================
- * sub_603A0E5C
+ * _ZN10ShellEnemy14collisionEnemyEP14ActiveColliderS1__helper
  * RVA 0x003a0e5c   size 0x3b4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603A0E5C(int a1, int a2)
@@ -43164,7 +43164,7 @@
     int v2; // r7
   
     v2 = a1[20];
-    if ( v2 == sub_602725AC() )
+    if ( v2 == ShellEnemy::vf110() )
       Enemy::vf110();
     else
       (*(void (__fastcall **)(_DWORD *))(*a1 + 712))(a1);
@@ -45931,7 +45931,7 @@
     int v0; // r0
   
     v0 = operator new(0x5D80u);
-    return sub_603A9F54(v0);
+    return Actor_sunekuburoku_RDashfor_build_helper(v0);
   }
 
 /* ============================================================================
@@ -46857,7 +46857,7 @@
   }
 
 /* ============================================================================
- * sub_603A9F54
+ * Actor_sunekuburoku_RDashfor_build_helper
  * RVA 0x003a9f54   size 0x1e4   xrefs 2
  * ============================================================================ */
   int __fastcall sub_603A9F54(int a1)
@@ -46935,7 +46935,7 @@
     _DWORD *result; // r0
   
     v0 = operator new(0x5D80u);
-    result = (_DWORD *)sub_603A9F54(v0);
+    result = (_DWORD *)Actor_sunekuburoku_RDashfor_build_helper(v0);
     *result = 12536520;
     return result;
   }
@@ -47248,13 +47248,13 @@
       else
       {
         *v9 = 1;
-        sub_6000A3F8(MEMORY[0xC7B420]);
+        BigBoo_onCreate_helper(MEMORY[0xC7B420]);
         *(float *)(a1 + 116) = v8;
         *(_DWORD *)(a1 + 6244) = 0;
       }
       if ( *v7 )
         *(_DWORD *)(a1 + 116) = 1164394496;
-      sub_603ACE60((int *)a1);
+      BigBoo_onCreate_helper_3ACE60((int *)a1);
       if ( *v9 == 1 )
       {
         v10 = 1111490560;
@@ -47318,7 +47318,7 @@
         v18 = 18;
       LightSource_update1(a1 + 7008, v18, (_DWORD *)(a1 + 6616), nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
       if ( *v7 )
-        sub_60423EBC(a1 + 7008, 0);
+        BigBoo_onCreate_helper_423EBC(a1 + 7008, 0);
       else
         LightSource_unkUpdate3(a1 + 7008);
       ActiveCollider::init(a1 + 188, a1, dword_60BF50A4, a1 + 7128);
@@ -47371,7 +47371,7 @@
   }
 
 /* ============================================================================
- * sub_603ACE60
+ * BigBoo_onCreate_helper_3ACE60
  * RVA 0x003ace60   size 0x3c0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603ACE60(int *a1)
@@ -48880,7 +48880,7 @@
   }
 
 /* ============================================================================
- * sub_603B22D0
+ * Actor_rotate_Boo_RDash_parent_build_helper
  * RVA 0x003b22d0   size 0x54   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_603B22D0(_DWORD *a1)
@@ -49205,7 +49205,7 @@
     _DWORD *result; // r0
   
     v0 = (_DWORD *)operator new(0x19A8u);
-    result = sub_603B22D0(v0);
+    result = Actor_rotate_Boo_RDash_parent_build_helper(v0);
     *result = 12539176;
     return result;
   }
@@ -52779,11 +52779,11 @@
     int v2; // r0
   
     v2 = operator new(0x69A0u);
-    return sub_603C249C(v2, a1);
+    return Actor_unabon_RDash_build_helper(v2, a1);
   }
 
 /* ============================================================================
- * sub_603C249C
+ * Actor_unabon_RDash_build_helper
  * RVA 0x003c249c   size 0x968   xrefs 2
  * ============================================================================ */
   int __fastcall sub_603C249C(int a1, _DWORD *a2)
@@ -53043,7 +53043,7 @@
     *(_DWORD *)(a1 + 15864) = 0;
     *(_DWORD *)(a1 + 15860) = 0;
     *(_WORD *)(a1 + 15884) = -1;
-    sub_603C2E20(a1 + 15888);
+    Actor_unabon_RDash_build_helper_helper_3C2E20(a1 + 15888);
     ActiveCollider_ctor(a1 + 25616);
     ActiveCollider_ctor(a1 + 25920);
     ActiveCollider_ctor(a1 + 26224);
@@ -53069,7 +53069,7 @@
   }
 
 /* ============================================================================
- * sub_603C2E20
+ * Actor_unabon_RDash_build_helper_helper_3C2E20
  * RVA 0x003c2e20   size 0x144   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603C2E20(int a1)
@@ -54242,7 +54242,7 @@
     _DWORD *result; // r0
   
     v2 = operator new(0x69A0u);
-    result = (_DWORD *)sub_603C249C(v2, a1);
+    result = (_DWORD *)Actor_unabon_RDash_build_helper(v2, a1);
     *result = 12545576;
     return result;
   }
@@ -57903,7 +57903,7 @@
     *(_WORD *)(v0 + 11818) = 0;
     *(_WORD *)(v0 + 11816) = 0;
     memset((void *)(v0 + 11824), 0, 0x30u);
-    sub_603DA36C((_DWORD *)(v0 + 11872), v0);
+    Actor_wanwan_build_helper((_DWORD *)(v0 + 11872), v0);
     ActorCollisionMgr_ctor(v0 + 12960);
     ActiveCollider_ctor(v0 + 18312);
     *(_DWORD *)(v0 + 18616) = 12462720;
@@ -58708,7 +58708,7 @@
   }
 
 /* ============================================================================
- * sub_603DA36C
+ * Actor_wanwan_build_helper
  * RVA 0x003da36c   size 0xe4   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_603DA36C(_DWORD *a1, int a2)
@@ -59229,7 +59229,7 @@
   }
 
 /* ============================================================================
- * sub_603DBD48
+ * Actor_wanwan_RDash_build_helper
  * RVA 0x003dbd48   size 0x68   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_603DBD48(_DWORD *a1)
@@ -59535,7 +59535,7 @@
     _DWORD *result; // r0
   
     v0 = (_DWORD *)operator new(0x1AA8u);
-    result = sub_603DBD48(v0);
+    result = Actor_wanwan_RDash_build_helper(v0);
     *result = 12551604;
     return result;
   }
@@ -59689,7 +59689,7 @@
     *(_DWORD *)(a1 + 144) = 1065353216;
     *(_DWORD *)(a1 + 148) = 1065353216;
     *(_DWORD *)(a1 + 152) = 1065353216;
-    sub_603DE84C(a1);
+    RiverPiranha::onCreate(a1);
     *(_DWORD *)(a1 + 572) = 0;
     *(_DWORD *)(a1 + 576) = 1094713344;
     *(_DWORD *)(a1 + 580) = 0;
@@ -59728,7 +59728,7 @@
     *(float *)(a1 + 6984) = v14;
     *(_DWORD *)(a1 + 6988) = v1;
     *(float *)(a1 + 6992) = -3.0;
-    sub_603DE95C((int **)a1);
+    RiverPiranha::onCreate((int **)a1);
     *(_BYTE *)(a1 + 6332) = 0;
     if ( ((unsigned int)&unk_60C99424 & ~(1614669548 << v15) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C99424) )
     {
@@ -59762,7 +59762,7 @@
   }
 
 /* ============================================================================
- * sub_603DE84C
+ * _ZN12RiverPiranha8onCreateEv_helper
  * RVA 0x003de84c   size 0x104   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603DE84C(int a1)
@@ -59797,7 +59797,7 @@
   }
 
 /* ============================================================================
- * sub_603DE95C
+ * _ZN12RiverPiranha8onCreateEv_helper_3DE95C
  * RVA 0x003de95c   size 0x218   xrefs 2
  * ============================================================================ */
   int *__fastcall sub_603DE95C(int **a1)
@@ -60549,7 +60549,7 @@
   // attributes: thunk
   int *__fastcall RiverPiranha::vfE0(int **a1)
   {
-    return sub_603DE95C(a1);
+    return RiverPiranha::onCreate(a1);
   }
 
 /* ============================================================================
@@ -60597,7 +60597,7 @@
     _DWORD *v0; // r4
   
     v0 = (_DWORD *)operator new(0x2458u);
-    sub_6070BBE0((int)v0);
+    Actor_uchan_build_helper((int)v0);
     *v0 = 12552604;
     v0[1889] = 0;
     v0[1890] = 0;
@@ -60938,7 +60938,21 @@
   }
 
 /* ============================================================================
- * sub_603E49B0
+ * Yoshi_ctor_helper
+ * RVA 0x003e45e4   size 0x2c   xrefs 1
+ * ============================================================================ */
+  _DWORD *__fastcall Yoshi_ctor_helper(int a1)
+  {
+    _DWORD *result; // r0
+  
+    result = (_DWORD *)sub_603E4258(a1, 12962608);
+    *result = 12553660;
+    result[6] = 0;
+    return result;
+  }
+
+/* ============================================================================
+ * Player_ctor_helper
  * RVA 0x003e49b0   size 0x40   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603E49B0(int a1, int a2)
@@ -61206,6 +61220,20 @@
         return nullptr;
       }
     }
+    return result;
+  }
+
+/* ============================================================================
+ * Player_ctor_helper_3E568C
+ * RVA 0x003e568c   size 0x2c   xrefs 1
+ * ============================================================================ */
+  _DWORD *__fastcall Player_ctor_helper_3E568C(int a1, int a2)
+  {
+    _DWORD *result; // r0
+  
+    result = (_DWORD *)sub_603E4258(a1, 12962608);
+    *result = 12553820;
+    result[6] = a2;
     return result;
   }
 
@@ -61781,7 +61809,7 @@
   }
 
 /* ============================================================================
- * sub_603E9E40
+ * Actor_ShortPlay_result_Demo_Tag_build_helper
  * RVA 0x003e9e40   size 0xd4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603E9E40(int a1, int a2)
@@ -62060,7 +62088,7 @@
   }
 
 /* ============================================================================
- * sub_603EB260
+ * Actor_kosuDemo_for_shadou_build_helper
  * RVA 0x003eb260   size 0x9c   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_603EB260(_DWORD *a1, int a2)
@@ -62800,7 +62828,7 @@
       {
         v11 = sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
         v12 = (void (__fastcall ***)(_DWORD))operator new(104);
-        sub_603EF6E4(v12, v10, a2, a3, a4, v13, v14, v15);
+        createWaterSplash_helper(v12, v10, a2, a3, a4, v13, v14, v15);
         (**v12)(v12);
         sead::ListNode::insertFront_(a1 + 6, (char *)v12 + a1[9]);
         result = (const char *)(a1[8] + 1);
@@ -62924,7 +62952,7 @@
   }
 
 /* ============================================================================
- * sub_603EE6EC
+ * LoadProfileArchives_helper
  * RVA 0x003ee6ec   size 0x480   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603EE6EC(int a1)
@@ -63250,7 +63278,7 @@
   }
 
 /* ============================================================================
- * sub_603EF6E4
+ * createWaterSplash_helper
  * RVA 0x003ef6e4   size 0xa0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603EF6E4(int a1, int a2, _DWORD *a3, int a4, int a5)
@@ -65304,7 +65332,7 @@
   }
 
 /* ============================================================================
- * sub_603F4A10
+ * SE_SYS_CE_MENU_OUT_ref_2_helper_helper_3F4A10
  * RVA 0x003f4a10   size 0x15c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603F4A10(int a1, int a2, char *a3)
@@ -65412,7 +65440,7 @@
   }
 
 /* ============================================================================
- * sub_603F4B70
+ * SE_SYS_CE_MENU_OUT_ref_2_helper
  * RVA 0x003f4b70   size 0x80   xrefs 1
  * ============================================================================ */
   int __fastcall sub_603F4B70(int a1, int a2)
@@ -65424,7 +65452,7 @@
   
     v3 = MEMORY[0xC9A684];
     v6 = 0;
-    v4 = sub_603F4A10((2 * a2) | 1, (unsigned __int8)(2 * a2) | 1, (char *)&v6);
+    v4 = SE_SYS_CE_MENU_OUT_ref_2_helper_helper_3F4A10((2 * a2) | 1, (unsigned __int8)(2 * a2) | 1, (char *)&v6);
     sub_6040D3A4(v3, *(unsigned __int8 *)(v3 + 16));
     sub_6040D3B8(v3, *(unsigned __int8 *)(v3 + 17));
     sub_6040D3CC(v3, v6);
@@ -65536,6 +65564,20 @@
     result = *(_DWORD *)(a1 + 2596);
     if ( result )
       return sub_6054AA50(result, a2);
+    return result;
+  }
+
+/* ============================================================================
+ * SE_SYS_CE_ref_3_helper
+ * RVA 0x003f5030   size 0x10   xrefs 2
+ * ============================================================================ */
+  int __fastcall SE_SYS_CE_ref_3_helper(int a1)
+  {
+    int result; // r0
+  
+    result = *(_DWORD *)(a1 + 2592);
+    if ( result )
+      return CoinEditScene_Attention_ref(result);
     return result;
   }
 
@@ -66060,6 +66102,21 @@
     *v6 = 12558308;
     v6[4] = 12558396;
     return sub_60958220(v3, v6, 7, &v8, 0, a1);
+  }
+
+/* ============================================================================
+ * ChallengeResultScene_ctor_helper_helper_3F625C
+ * RVA 0x003f625c   size 0x28   xrefs 1
+ * ============================================================================ */
+  int __fastcall ChallengeResultScene_ctor_helper_helper_3F625C(int a1)
+  {
+    int result; // r0
+  
+    result = sub_603FDA80(a1);
+    *(_DWORD *)result = 12555436;
+    *(_DWORD *)(result + 420) = 0;
+    *(_BYTE *)(result + 424) = 0;
+    return result;
   }
 
 /* ============================================================================
@@ -68075,7 +68132,7 @@
     int v49; // [sp+Ch] [bp-4h]
   
     if ( *(_BYTE *)(MEMORY[0xC9A230] + 2084) )
-      return sub_6040C134(MEMORY[0xC9A230], a1);
+      return PlayerStates_updateModelAndAnims_helper_40C134(MEMORY[0xC9A230], a1);
     v5 = MEMORY[0xC99DEC];
     v6 = MEMORY[0xCC62E4];
     v7 = *(_DWORD *)(MEMORY[0xCC62E4] + 108);
@@ -71316,8 +71373,8 @@
         v13 = 1134559232;
         v11[0] = *(float *)v9 / 30.0;
         v12 = v11[0];
-        sub_607DBA1C(v10, MEMORY[0xCC5754], v11, a2, 2, 0);
-        sub_607DAD70(v10);
+        AreaRumbleMgr_rumbleForPlayer_helper_7DBA1C(v10, MEMORY[0xCC5754], v11, a2, 2, 0);
+        AreaRumbleMgr_rumbleForPlayer_helper(v10);
       }
       *(_BYTE *)(a1 + 65) = a2;
       *(_DWORD *)(a1 + 56) |= a4;
@@ -73787,7 +73844,7 @@
   }
 
 /* ============================================================================
- * sub_60405B2C
+ * SE_PLY_ref_2_helper_helper_405B2C
  * RVA 0x00405b2c   size 0x64   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60405B2C(int a1)
@@ -75747,6 +75804,21 @@
   }
 
 /* ============================================================================
+ * PointGet_1UP_00_ref_2_helper
+ * RVA 0x0040891c   size 0x18   xrefs 1
+ * ============================================================================ */
+  int __fastcall PointGet_1UP_00_ref_2_helper(int a1)
+  {
+    int v1; // r0
+  
+    v1 = *(_DWORD *)(a1 + 6472);
+    if ( v1 )
+      return *(_DWORD *)(v1 + 28);
+    else
+      return 0;
+  }
+
+/* ============================================================================
  * sub_6040894C
  * RVA 0x0040894c   size 0x38   xrefs 1
  * ============================================================================ */
@@ -76321,7 +76393,7 @@
   }
 
 /* ============================================================================
- * sub_60409388
+ * _ZN5Enemy5vf204Ev_helper
  * RVA 0x00409388   size 0x30   xrefs 1
  * ============================================================================ */
   unsigned __int8 *__fastcall sub_60409388(unsigned __int8 *result)
@@ -76340,7 +76412,7 @@
   }
 
 /* ============================================================================
- * sub_604093B8
+ * KoopaTroopa_onDelete_helper
  * RVA 0x004093b8   size 0x100   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604093B8(int result)
@@ -76405,7 +76477,7 @@
   }
 
 /* ============================================================================
- * sub_604094BC
+ * KoopaTroopa_onExecute_helper_4094BC
  * RVA 0x004094bc   size 0x1c8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604094BC(int a1)
@@ -76658,7 +76730,7 @@
   }
 
 /* ============================================================================
- * sub_60409994
+ * _ZN6Kanibo9onExecuteEv_helper_409994
  * RVA 0x00409994   size 0x4c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60409994(int result, int a2)
@@ -77284,7 +77356,7 @@
   }
 
 /* ============================================================================
- * sub_6040A52C
+ * SE_OBJ_GET_COIN_ref_2_helper
  * RVA 0x0040a52c   size 0xc0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6040A52C(int a1, int a2)
@@ -77439,6 +77511,17 @@
   }
 
 /* ============================================================================
+ * _ZN5Enemy13beforeExecuteEv_helper_40A800
+ * RVA 0x0040a800   size 0x1c   xrefs 1
+ * ============================================================================ */
+  int __fastcall Enemy::beforeExecute(int result)
+  {
+    if ( *(_BYTE *)(result + 6559) == 1 )
+      *(_BYTE *)(result + 6555) = 1;
+    return result;
+  }
+
+/* ============================================================================
  * sub_6040A81C
  * RVA 0x0040a81c   size 0x144   xrefs 2
  * ============================================================================ */
@@ -77511,7 +77594,7 @@
   }
 
 /* ============================================================================
- * sub_6040A960
+ * _ZN5Enemy13beforeExecuteEv_helper_40A960
  * RVA 0x0040a960   size 0x138   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6040A960(int a1, int a2)
@@ -78179,6 +78262,23 @@
       return (v1 & 1) == 0;
     else
       return 0;
+  }
+
+/* ============================================================================
+ * PlayerStates_updateModelAndAnims_helper_40C134
+ * RVA 0x0040c134   size 0x18   xrefs 3
+ * ============================================================================ */
+  unsigned int __fastcall PlayerStates_updateModelAndAnims_helper_40C134(_DWORD *a1, int a2)
+  {
+    int v2; // r2
+    int v3; // r3
+  
+    v2 = a1[518];
+    v3 = v2 + 1;
+    if ( v2 > 6 )
+      v3 = 0;
+    a1[518] = v3;
+    return sub_6040C14C(a1, a2);
   }
 
 /* ============================================================================
@@ -79448,7 +79548,7 @@
   }
 
 /* ============================================================================
- * sub_6040E87C
+ * PlayerStates_updateModelAndAnims_helper_40E87C
  * RVA 0x0040e87c   size 0x5c   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6040E87C(int result)
@@ -80065,8 +80165,8 @@
       do
       {
         v17 = operator new(148, a4, 4);
-        v18 = sub_60450DB4();
-        sub_60450E5C(v18, *v6, a2, a3, a4);
+        v18 = ModelWrapper_setup_helper_450DB4();
+        ModelWrapper_setup_helper_450E5C(v18, *v6, a2, a3, a4);
         result = (_DWORD *)(*(int (__fastcall **)(_DWORD, int, int))(*(_DWORD *)*v6 + 176))(*v6, v16, v17);
         *(_DWORD *)(v14 + 4 * v16++) = v17;
       }
@@ -80085,8 +80185,8 @@
       do
       {
         v22 = operator new(152, a4, 4);
-        v23 = sub_60445C24();
-        sub_60445CD0(v23, *v6, a2, a3, a4);
+        v23 = ModelWrapper_setup_helper();
+        ModelWrapper_setup_helper_445CD0(v23, *v6, a2, a3, a4);
         result = (_DWORD *)(*(int (__fastcall **)(_DWORD, int, int))(*(_DWORD *)*v6 + 180))(*v6, v21, v22);
         *(_DWORD *)(v19 + 4 * v21++) = v22;
       }
@@ -80105,8 +80205,8 @@
       do
       {
         v27 = operator new(240, a4, 4);
-        v28 = sub_60451438();
-        sub_6045154C(v28, *v6, a2, a3, a4);
+        v28 = ModelWrapper_setup_helper_451438();
+        ModelWrapper_setup_helper_45154C(v28, *v6, a2, a3, a4);
         result = (_DWORD *)(*(int (__fastcall **)(_DWORD, int, int))(*(_DWORD *)*v6 + 184))(*v6, v26, v27);
         *(_DWORD *)(v24 + 4 * v26++) = v27;
       }
@@ -80125,8 +80225,8 @@
       do
       {
         v32 = operator new(136, a4, 4);
-        v33 = sub_60446E58();
-        sub_60446F0C(v33, *v6, a2, a3, a4);
+        v33 = ModelWrapper_setup_helper_446E58();
+        ModelWrapper_setup_helper_446F0C(v33, *v6, a2, a3, a4);
         result = (_DWORD *)(*(int (__fastcall **)(_DWORD, int, int))(*(_DWORD *)*v6 + 188))(*v6, v31, v32);
         *(_DWORD *)(v29 + 4 * v31++) = v32;
       }
@@ -82573,7 +82673,7 @@
   }
 
 /* ============================================================================
- * sub_604148F4
+ * LightSource_update1_helper
  * RVA 0x004148f4   size 0x84   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604148F4(_DWORD *a1)
@@ -82593,7 +82693,7 @@
         v2 = a1[43063];
         a1[43063] = *v4;
       }
-      sub_60424120(v2);
+      LightSource_update1_helper_helper_424120(v2);
       *(_DWORD *)(v2 + 216) = 0;
       *(_DWORD *)(v2 + 220) = 0;
       sead::ListNode::insertFront_(a1 + 43060, v2 + 216);
@@ -90068,7 +90168,7 @@
   }
 
 /* ============================================================================
- * sub_604210B8
+ * PlayerStates_loadModelResources_helper_4210B8
  * RVA 0x004210b8   size 0x58   xrefs 6
  * ============================================================================ */
   int __fastcall sub_604210B8(int a1, int a2)
@@ -90767,12 +90867,12 @@
     *(_BYTE *)(a1 + 16) = 1;
     if ( !*(_DWORD *)(a1 + 20) )
     {
-      v13 = (_DWORD *)sub_604148F4(MEMORY[0xC9A698]);
+      v13 = (_DWORD *)LightSource_update1_helper(MEMORY[0xC9A698]);
       *(_DWORD *)(a1 + 20) = v13;
       if ( v13 )
       {
         *v13 = a1;
-        sub_604242A8(*(_DWORD *)(a1 + 20), a2);
+        LightSource_update1_helper_4242A8(*(_DWORD *)(a1 + 20), a2);
       }
     }
     if ( a3 )
@@ -90860,6 +90960,20 @@
   }
 
 /* ============================================================================
+ * BigBoo_onCreate_helper_423EBC
+ * RVA 0x00423ebc   size 0x10   xrefs 1
+ * ============================================================================ */
+  int __fastcall BigBoo_onCreate_helper_423EBC(int a1, int a2)
+  {
+    int result; // r0
+  
+    result = *(_DWORD *)(a1 + 20);
+    if ( result )
+      *(_DWORD *)(result + 68) = a2;
+    return result;
+  }
+
+/* ============================================================================
  * LightSource_unkUpdate3
  * RVA 0x00423ecc   size 0x40   xrefs 24
  * ============================================================================ */
@@ -90887,7 +91001,7 @@
   }
 
 /* ============================================================================
- * sub_60424120
+ * LightSource_update1_helper_helper_424120
  * RVA 0x00424120   size 0x158   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60424120(int a1)
@@ -90953,7 +91067,7 @@
   }
 
 /* ============================================================================
- * sub_604242A8
+ * LightSource_update1_helper_4242A8
  * RVA 0x004242a8   size 0x54   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604242A8(_DWORD *a1, int a2)
@@ -102474,7 +102588,7 @@
   }
 
 /* ============================================================================
- * sub_6043B8B0
+ * PlayerStates_loadModelResources_helper_43B8B0
  * RVA 0x0043b8b0   size 0x9fc   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, int a6)
@@ -108632,7 +108746,7 @@
   }
 
 /* ============================================================================
- * sub_60445C24
+ * ModelWrapper_setup_helper
  * RVA 0x00445c24   size 0xa0   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_60445C24(_DWORD *a1)
@@ -108663,7 +108777,7 @@
   }
 
 /* ============================================================================
- * sub_60445CD0
+ * ModelWrapper_setup_helper_445CD0
  * RVA 0x00445cd0   size 0x160   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60445CD0(int a1, int a2, int a3, int *a4, int a5)
@@ -109008,7 +109122,7 @@
   }
 
 /* ============================================================================
- * sub_60446E58
+ * ModelWrapper_setup_helper_446E58
  * RVA 0x00446e58   size 0xa8   xrefs 1
  * ============================================================================ */
   _DWORD *sub_60446E58()
@@ -109047,7 +109161,7 @@
   }
 
 /* ============================================================================
- * sub_60446F0C
+ * ModelWrapper_setup_helper_446F0C
  * RVA 0x00446f0c   size 0x1d0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60446F0C(int result, int a2, int a3, int *a4, int a5)
@@ -110539,9 +110653,9 @@
       }
       while ( v15 != v16 );
     }
-    sub_60877D6C(&v23);
+    SkeletalAnim_init_helper(&v23);
     *(_DWORD *)(a1 + 124) = operator new[]((v31 + 15) & 0xFFFFFFF0, a5, 16);
-    return sub_60877EB0(a1 + 32, &v23);
+    return SkeletalAnim_init_helper_877EB0(a1 + 32, &v23);
   }
 
 /* ============================================================================
@@ -110623,7 +110737,7 @@
       if ( result >= 0 )
       {
         v20 = *(_DWORD *)(*(_DWORD *)(a2 + 20) + 56) + 96 * ((unsigned int)result >> 4);
-        sub_60877FB4(a1 + 32, v20);
+        SkeletalAnim_play_helper(a1 + 32, v20);
         *(_DWORD *)(a1 + 136) = v20;
         *(_DWORD *)(a1 + 4) = 0;
         *(float *)(a1 + 8) = (float)*(int *)(v20 + 76);
@@ -111164,7 +111278,7 @@
   }
 
 /* ============================================================================
- * sub_60449810
+ * env_mist_ref_2_helper
  * RVA 0x00449810   size 0xd4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60449810(int a1, int a2, int a3, int a4, int a5, int a6)
@@ -112725,7 +112839,7 @@
   }
 
 /* ============================================================================
- * sub_6044C1FC
+ * TerrainEffects_init_helper_helper_44C1FC
  * RVA 0x0044c1fc   size 0x29c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6044C1FC(int a1, int a2, int a3, int a4, int a5, int a6)
@@ -112815,7 +112929,7 @@
   }
 
 /* ============================================================================
- * sub_6044C4AC
+ * TerrainEffects_draw_helper
  * RVA 0x0044c4ac   size 0x74   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6044C4AC(int a1)
@@ -114360,7 +114474,7 @@
   }
 
 /* ============================================================================
- * sub_6044E288
+ * TerrainEffects_init_helper_helper_44E288
  * RVA 0x0044e288   size 0xd4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6044E288(_DWORD *a1, int a2, int a3, int a4)

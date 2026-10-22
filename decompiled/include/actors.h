@@ -1035,6 +1035,7 @@ bool __fastcall sub_601DAE4C(_DWORD *a1, int a2);  /* 0x001dae4c */
 int __fastcall sub_601DAE88(_DWORD *a1);  /* 0x001dae88 */
 int __fastcall sub_601DAEF0(_DWORD *a1);  /* 0x001daef0 */
 int __fastcall sub_601DAF58(int *a1, unsigned int a2);  /* 0x001daf58 */
+int __fastcall sub_601DBB64(int32x4_t *a1);  /* 0x001dbb64 */
 int __fastcall sub_601DFE2C(int a1);  /* 0x001dfe2c */
 int __fastcall sub_601DFF20(int result, int a2, int a3, int a4);  /* 0x001dff20 */
 int __fastcall sub_601E0070(_DWORD *a1, _DWORD *a2);  /* 0x001e0070 */
@@ -1066,6 +1067,7 @@ bool __fastcall sub_601E1B80(int a1);  /* 0x001e1b80 */
 int __fastcall sub_601E1CF4(int a1);  /* 0x001e1cf4 */
 int __fastcall sub_601E27B4(int a1);  /* 0x001e27b4 */
 int __fastcall sub_601E2910(int a1);  /* 0x001e2910 */
+int __fastcall SE_PLY_ref_2_helper_helper_1E2F00(int a1, unsigned int a2);  /* 0x001e2f00 */
 int __fastcall sub_601E2F20(int a1);  /* 0x001e2f20 */
 int __fastcall sub_601E322C(_DWORD *a1, unsigned int a2);  /* 0x001e322c */
 int __fastcall sub_601E4A74(int result, unsigned int a2, unsigned int a3, int a4);  /* 0x001e4a74 */
@@ -1369,6 +1371,7 @@ int __fastcall sub_60239158(int a1, _DWORD *a2, int a3, int a4);  /* 0x00239158 
 int __fastcall sub_60239458(int a1, int a2, int a3, int a4, __int64 *a5);  /* 0x00239458 */
 int __fastcall sub_602396F8(int a1, int a2, int a3, int *a4);  /* 0x002396f8 */
 int __fastcall sub_60239B9C(int result, _DWORD *a2, int a3, int a4);  /* 0x00239b9c */
+int __fastcall EffectData_setEffectId_helper(int a1, unsigned int a2);  /* 0x00239bdc */
 int __fastcall sub_60239BF4(_DWORD *a1, _DWORD *a2, int a3, unsigned int a4);  /* 0x00239bf4 */
 int __fastcall sub_60239E08(int a1, int a2);  /* 0x00239e08 */
 int __fastcall sub_60239EB0(int a1);  /* 0x00239eb0 */
@@ -1583,6 +1586,7 @@ int __fastcall sub_6028FDA0(int a1, char a2);  /* 0x0028fda0 */
 int __fastcall sub_6028FE94(int a1);  /* 0x0028fe94 */
 int __fastcall sub_6028FF68(_DWORD *a1);  /* 0x0028ff68 */
 int __fastcall sub_60290130(int a1);  /* 0x00290130 */
+int __fastcall PlayerStates_updateModelAndAnims_helper(int a1, int a2);  /* 0x00290228 */
 int __fastcall sub_60290260(int a1);  /* 0x00290260 */
 int __fastcall sub_602904E8(int a1);  /* 0x002904e8 */
 bool __fastcall sub_602905AC(int a1, int a2, int a3);  /* 0x002905ac */
@@ -2571,12 +2575,14 @@ int __fastcall sub_603F4B70(int a1, int a2);  /* 0x003f4b70 */
 int __fastcall sub_603F4BF4(int a1, float *a2, int *a3);  /* 0x003f4bf4 */
 int __fastcall sub_603F4EAC(int a1);  /* 0x003f4eac */
 int __fastcall sub_603F4FD8(int a1, int a2);  /* 0x003f4fd8 */
+int __fastcall SE_SYS_CE_ref_3_helper(int a1);  /* 0x003f5030 */
 int __fastcall sub_603F5508(int a1);  /* 0x003f5508 */
 int __fastcall sub_603F55B8(int result);  /* 0x003f55b8 */
 int __fastcall sub_603F564C(int a1);  /* 0x003f564c */
 int __fastcall sub_603F5A08(int a1);  /* 0x003f5a08 */
 int __fastcall sub_603F5BC4(int a1, float *a2, float *a3, float *a4, float *a5);  /* 0x003f5bc4 */
 int __fastcall sub_603F6084(int a1);  /* 0x003f6084 */
+int __fastcall ChallengeResultScene_ctor_helper_helper_3F625C(int a1);  /* 0x003f625c */
 int __fastcall sub_603F6288(int a1);  /* 0x003f6288 */
 int __fastcall sub_603F62C0(int a1);  /* 0x003f62c0 */
 int __fastcall sub_603F63BC(int a1);  /* 0x003f63bc */
@@ -2734,6 +2740,7 @@ int __fastcall sub_60408350(int a1, int a2);  /* 0x00408350 */
 int __fastcall sub_60408488(_DWORD *a1, const void *a2);  /* 0x00408488 */
 int __fastcall sub_604085B4(int a1);  /* 0x004085b4 */
 bool __fastcall sub_604086EC(int a1, unsigned int a2);  /* 0x004086ec */
+int __fastcall PointGet_1UP_00_ref_2_helper(int a1);  /* 0x0040891c */
 int __fastcall sub_6040894C(int a1);  /* 0x0040894c */
 int __fastcall sub_60408984(_BYTE *a1);  /* 0x00408984 */
 int __fastcall sub_604089BC(_BYTE *a1);  /* 0x004089bc */
@@ -2772,6 +2779,7 @@ bool __fastcall sub_6040B414(int a1);  /* 0x0040b414 */
 int __fastcall sub_6040B798(int a1);  /* 0x0040b798 */
 int __fastcall sub_6040BE8C(int a1);  /* 0x0040be8c */
 bool __fastcall sub_6040C0DC(int a1);  /* 0x0040c0dc */
+unsigned int __fastcall PlayerStates_updateModelAndAnims_helper_40C134(_DWORD *a1, int a2);  /* 0x0040c134 */
 unsigned int __fastcall sub_6040C14C(_DWORD *a1, int a2);  /* 0x0040c14c */
 int __fastcall sub_6040C398(int result);  /* 0x0040c398 */
 int __fastcall sub_6040C424(int a1);  /* 0x0040c424 */
@@ -2920,6 +2928,7 @@ int __fastcall sub_60422C24(int a1);  /* 0x00422c24 */
 int __fastcall sub_60422C94(int a1);  /* 0x00422c94 */
 int __fastcall sub_60422EFC(_DWORD *a1, int a2);  /* 0x00422efc */
 int __fastcall sub_60422F3C(_DWORD *a1, int a2);  /* 0x00422f3c */
+int __fastcall BigBoo_onCreate_helper_423EBC(int a1, int a2);  /* 0x00423ebc */
 bool __fastcall LightSource_unkUpdate3(int a1);  /* 0x00423ecc */
 int __fastcall sub_60424120(int a1);  /* 0x00424120 */
 int __fastcall sub_604242A8(_DWORD *a1, int a2);  /* 0x004242a8 */

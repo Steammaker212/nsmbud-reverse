@@ -46,6 +46,7 @@ int __fastcall sub_60454858(int a1, int a2);  /* 0x00454858 */
 int __fastcall sub_60454B60(int result, unsigned __int8 *a2, unsigned __int8 *a3);  /* 0x00454b60 */
 int __fastcall sub_60454CDC(int a1, float *a2);  /* 0x00454cdc */
 int __fastcall sub_60454E80(int a1, int a2);  /* 0x00454e80 */
+int __fastcall SE_SYS_CE_ref_3_helper_45516C(int a1, int a2);  /* 0x0045516c */
 int __fastcall sub_604551F0(int a1, int a2);  /* 0x004551f0 */
 bool __fastcall sub_60455378(int *a1, int a2);  /* 0x00455378 */
 bool __fastcall sub_604553BC(int *a1, int a2);  /* 0x004553bc */

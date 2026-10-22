@@ -131,6 +131,7 @@ int __fastcall sub_60793F98(int result, int *a2, int a3);  /* 0x00793f98 */
 int __fastcall sub_60793FF0(int a1, __int64 *a2);  /* 0x00793ff0 */
 int __fastcall sub_6079437C(int a1);  /* 0x0079437c */
 int __fastcall sub_607945E0(int result);  /* 0x007945e0 */
+int __fastcall Player_ReleaseCarryableEnemy_helper_794678(int result);  /* 0x00794678 */
 int __fastcall sub_60794848(int a1, _DWORD *a2);  /* 0x00794848 */
 int __fastcall sub_607948E8(int a1, int a2);  /* 0x007948e8 */
 int __fastcall sub_60794954(int a1, int a2);  /* 0x00794954 */
@@ -293,6 +294,7 @@ int __fastcall sub_607ADCAC(int a1);  /* 0x007adcac */
 int __fastcall sub_607ADF60(int a1);  /* 0x007adf60 */
 int __fastcall sub_607AE088(int a1);  /* 0x007ae088 */
 void __fastcall sub_607AE0D4(int a1);  /* 0x007ae0d4 */
+int __fastcall Player_setPowerupMode_helper(int result);  /* 0x007ae108 */
 bool __fastcall sub_607AE118(int a1);  /* 0x007ae118 */
 bool __fastcall sub_607AE184(int a1);  /* 0x007ae184 */
 bool __fastcall sub_607AE234(_BYTE *a1);  /* 0x007ae234 */
