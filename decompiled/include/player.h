@@ -27,7 +27,6 @@ int __fastcall sub_607855B8(int a1);  /* 0x007855b8 */
 int __fastcall sub_60785724(int a1);  /* 0x00785724 */
 int __fastcall sub_607857AC(int a1);  /* 0x007857ac */
 int __fastcall sub_60785B04(int a1);  /* 0x00785b04 */
-int __fastcall sub_60785C54(int a1);  /* 0x00785c54 */
 int __fastcall sub_60785C58(int a1, int a2, int a3, int a4);  /* 0x00785c58 */
 bool __fastcall sub_60785C80(int a1, int a2);  /* 0x00785c80 */
 void __fastcall sub_60785E68(_DWORD *a1);  /* 0x00785e68 */

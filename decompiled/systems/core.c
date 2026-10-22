@@ -1669,12 +1669,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( Actor::getProfileId((Actor *)v2) == MEMORY[0xAF32D0] )
       {
-        sub_6036D544(v2, a1);
+        j_SE_OBJ_PNGN_ICE_BREAK_ref_36CFB4(v2, a1);
         return 1;
       }
       if ( Actor::getProfileId((Actor *)v2) == MEMORY[0xAF30DC] )
       {
-        sub_60785C54(v2);
+        j_SE_OBJ_PNGN_ICE_BREAK_ref_785B04(v2);
         return 1;
       }
       if ( _cxa_guard_acquire_0(13087644) )
@@ -2160,7 +2160,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60002B50(int a1)
   {
-    return sub_60007BF0(MEMORY[0xC7B400], (int *)(a1 + 16));
+    return ActorAdditionalHeap_ref(MEMORY[0xC7B400], (int *)(a1 + 16));
   }
 
 /* ============================================================================
@@ -2194,7 +2194,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60002BC0
+ * SE_OBJ_GET_COIN_ref
  * RVA 0x00002bc0   size 0x84   xrefs 7
  * ============================================================================ */
   int __fastcall sub_60002BC0(unsigned int a1, int *a2)
@@ -6490,7 +6490,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60007BF0
+ * ActorAdditionalHeap_ref
  * RVA 0x00007bf0   size 0x64   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60007BF0(int result, int *a2)
@@ -17955,7 +17955,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60023650
+ * SoundHeap_ref
  * RVA 0x00023650   size 0x7c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60023650(int a1)
@@ -18913,7 +18913,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     v2 = operator new(0x578u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
-    return sub_603F80C8(v2, a1);
+    return CourseTask_ref(v2, a1);
   }
 
 /* ============================================================================
@@ -19033,7 +19033,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     v2 = operator new(0x6720u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
-    return sub_607EF3BC(v2, a1);
+    return HelpMenuScene_ref(v2, a1);
   }
 
 /* ============================================================================
@@ -23500,7 +23500,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6002BA10
+ * SE_BOSS_KK_LAND_ref
  * RVA 0x0002ba10   size 0x3cc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6002BA10(int a1)
@@ -29086,7 +29086,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60033F90
+ * SE_OBJ_BOSS_KK_THUNDER_ref_33F90
  * RVA 0x00033f90   size 0x224   xrefs 0
  * ============================================================================ */
   int __fastcall SE_OBJ_BOSS_KK_THUNDER_ref_2(int a1)
@@ -29333,7 +29333,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60034488
+ * SE_EMY_DOWN_ref
  * RVA 0x00034488   size 0x94   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60034488(float *a1)
@@ -29798,7 +29798,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60035038
+ * jcb_attack_st_ref
  * RVA 0x00035038   size 0xf0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60035038(int a1)
@@ -29876,7 +29876,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60035178
+ * jcb_attack_st_wait_ref
  * RVA 0x00035178   size 0xd8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60035178(int a1)
@@ -30839,7 +30839,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600367E8
+ * jc_demo_W7_shock2_ref
  * RVA 0x000367e8   size 0x12c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600367E8(_DWORD *a1)
@@ -32052,7 +32052,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60038CA8
+ * jcb_damage_s_ref
  * RVA 0x00038ca8   size 0xe8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60038CA8(_DWORD *a1)
@@ -32308,7 +32308,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60039114
+ * jcb_damage_s_ref_39114
  * RVA 0x00039114   size 0xd8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60039114(int a1)
@@ -34605,7 +34605,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6003CCD4
+ * jcb_attack_st_wait_ref_3CCD4
  * RVA 0x0003ccd4   size 0x168   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6003CCD4(int a1)
@@ -34888,7 +34888,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6003E1EC
+ * jcb_attack_st_wait_ref_3E1EC
  * RVA 0x0003e1ec   size 0x1ac   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6003E1EC(int a1)
@@ -35910,7 +35910,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6003FFBC
+ * jc_demo_W7_shock2_ref_3FFBC
  * RVA 0x0003ffbc   size 0x90   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6003FFBC(_DWORD *a1)
@@ -36833,7 +36833,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             result = *(unsigned __int8 *)(a1 + 6997);
             if ( !*(_BYTE *)(a1 + 6997) )
-              return sub_600D1AC8(a1);
+              return SE_BOSS_JR_CLOWN_MOVE_ref_D1AC8(a1);
           }
         }
       }
@@ -37100,7 +37100,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else if ( ProfileId == MEMORY[0xAF3490] )
     {
-      return sub_600424E0(v4);
+      return SE_OBJ_PNGN_ICEBALL_DISAPP_ref(v4);
     }
     else if ( ProfileId == MEMORY[0xAF3348] )
     {
@@ -37151,7 +37151,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600424E0
+ * SE_OBJ_PNGN_ICEBALL_DISAPP_ref
  * RVA 0x000424e0   size 0xbc   xrefs 35
  * ============================================================================ */
   int __fastcall sub_600424E0(int a1)
@@ -37567,7 +37567,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else if ( ProfileId == MEMORY[0xAF3490] )
     {
-      sub_600424E0(v6);
+      SE_OBJ_PNGN_ICEBALL_DISAPP_ref(v6);
     }
     return Enemy::vf100(a1, a2, a3);
   }
@@ -39503,7 +39503,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
       *(_DWORD *)(v9 + 20) = 0;
     *(_DWORD *)(v9 + 28) |= 2u;
-    return sub_600D0E78(a1, a2);
+    return koopaJr_clown_expression_ref(a1, a2);
   }
 
 /* ============================================================================
@@ -40182,7 +40182,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60048AF0
+ * jcb_damage_s_ref_48AF0
  * RVA 0x00048af0   size 0x2e8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60048AF0(int a1)
@@ -44485,7 +44485,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6004FEB0
+ * demo_battleA_st_wait_ref
  * RVA 0x0004feb0   size 0xac   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6004FEB0(int a1)
@@ -45516,7 +45516,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600518E4
+ * face_1_ref
  * RVA 0x000518e4   size 0x84   xrefs 5
  * ============================================================================ */
   int __fastcall sub_600518E4(int a1, _DWORD *a2)
@@ -48399,7 +48399,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v15 += v16;
     if ( sub_60418548(*v15 + 4) == 1 )
     {
-      sub_600518E4((int)a1, v20);
+      face_1_ref((int)a1, v20);
       sub_602375C4((int32x4_t *)(a1 + 1865), 1205, v20, nullptr, nullptr);
     }
     v17 = (*v2)[3];
@@ -48541,7 +48541,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * spin_jump_ref
+ * spin_jump_st_ref
  * RVA 0x00056578   size 0x62c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60056578(int a1)
@@ -49474,7 +49474,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60057EFC
+ * ankle_r1_ref
  * RVA 0x00057efc   size 0x124   xrefs 1
  * ============================================================================ */
   float *__fastcall sub_60057EFC(int a1)
@@ -49496,7 +49496,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 != (*(int (**)(void))(MEMORY[0xC80AC0] + 8))() )
       return BoomBoomBase::vf4B8(a1);
-    sub_600518E4(a1, v14);
+    face_1_ref(a1, v14);
     v5 = *(int **)(a1 + 7204);
     v4 = (float *)(a1 + 7204);
     v6 = *v5;
@@ -49617,7 +49617,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13 += v14;
     if ( sub_60418548(*v13 + 4) == 1 )
     {
-      sub_600518E4((int)a1, v18);
+      face_1_ref((int)a1, v18);
       sub_602375C4((int32x4_t *)(a1 + 1865), 1205, v18, nullptr, nullptr);
     }
     v15 = *(_DWORD *)(*v2 + 12);
@@ -49674,7 +49674,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600583F0
+ * jump_st_ref
  * RVA 0x000583f0   size 0x64   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600583F0(_DWORD *a1)
@@ -49805,7 +49805,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60058704
+ * jump_ed_ref
  * RVA 0x00058704   size 0x88   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60058704(_DWORD *a1)
@@ -50756,7 +50756,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xC80AC0] + 8))() )
     {
-      sub_60057EFC((int)a1);
+      ankle_r1_ref((int)a1);
   LABEL_8:
       v7 = 36.0;
       goto LABEL_9;
@@ -51006,7 +51006,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     float v3[3]; // [sp+4h] [bp-Ch] BYREF
   
-    sub_600518E4(a1, v3);
+    face_1_ref(a1, v3);
     v3[2] = 4500.0;
     return EffectWrapper_update((int32x4_t *)(a1 + 7356), 1197, v3, nullptr, nullptr);
   }
@@ -51195,7 +51195,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 += v8;
     if ( sub_60418548(*v7 + 4) == 1 )
     {
-      sub_600518E4((int)a1, v16);
+      face_1_ref((int)a1, v16);
       sub_602375C4((int32x4_t *)(a1 + 1865), 1206, v16, nullptr, nullptr);
     }
     v9 = *(_DWORD **)(*v2 + 12);
@@ -51247,7 +51247,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6005AB84
+ * arm_r1_ref
  * RVA 0x0005ab84   size 0x160   xrefs 0
  * ============================================================================ */
   float *__fastcall sub_6005AB84(_DWORD *a1)
@@ -51305,7 +51305,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6005ACF8
+ * SE_BOSS_CMN_FAT_LAND_QUAKE_ref
  * RVA 0x0005acf8   size 0x8c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6005ACF8(int a1)
@@ -51353,12 +51353,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6005ADE0
+ * SE_BOSS_CMN_FAT_LAND_QUAKE_ref_5ADE0
  * RVA 0x0005ade0   size 0x54   xrefs 0
  * ============================================================================ */
   int *__fastcall sub_6005ADE0(_DWORD *a1)
   {
-    sub_60058704(a1);
+    jump_ed_ref(a1);
     AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 6, 1, 0, 0);
     return sub_60813430(a1 + 1583, (int)"SE_BOSS_CMN_FAT_LAND_QUAKE", nullptr);
   }
@@ -54545,7 +54545,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60060ED8
+ * jc_demo_W8_appear_ref
  * RVA 0x00060ed8   size 0x48   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60060ED8(int a1)
@@ -54610,7 +54610,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60061084
+ * jc_demo_W8_magic_ref
  * RVA 0x00061084   size 0x48   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60061084(int a1)
@@ -55053,7 +55053,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60061C24
+ * jc_demo_W8_appear_ref_61C24
  * RVA 0x00061c24   size 0x1b0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60061C24(int a1)
@@ -55246,7 +55246,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60062270
+ * jc_demo_W8_magic_ref_62270
  * RVA 0x00062270   size 0xac   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60062270(int a1)
@@ -56971,7 +56971,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600656E8
+ * lkp_wait_ref
  * RVA 0x000656e8   size 0xcc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600656E8(int a1)
@@ -58245,7 +58245,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60067A40
+ * lkp_wait_ref_67A40
  * RVA 0x00067a40   size 0xb8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60067A40(int a1)
@@ -58671,7 +58671,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60069DC8
+ * lkp_wait_ref_69DC8
  * RVA 0x00069dc8   size 0x104   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60069DC8(_DWORD *a1)
@@ -58767,7 +58767,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6006A4A4
+ * lkp_wait_ref_6A4A4
  * RVA 0x0006a4a4   size 0x110   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6006A4A4(int a1)
@@ -59030,7 +59030,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6006AFA0
+ * lkp_wait_ref_6AFA0
  * RVA 0x0006afa0   size 0xf0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6006AFA0(_WORD *a1)
@@ -59628,7 +59628,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * SE_VOC_KP_L_ref
+ * SE_VOC_KP_L_STAMPSIGN_ref
  * RVA 0x0006c634   size 0x378   xrefs 0
  * ============================================================================ */
   int __fastcall SE_VOC_KP_L_ref(int a1)
@@ -62650,7 +62650,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               }
             }
           }
-          sub_602A58B4(v8, *(_DWORD *)(a2 + 64));
+          SE_EMY_DOWN_ref_2A58B4(v8, *(_DWORD *)(a2 + 64));
           goto LABEL_21;
         }
         if ( Actor::getProfileId(v8) != MEMORY[0xAF32FC] )
@@ -62954,7 +62954,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v17 = sub_602856EC((int *)(a1 + 6292), *(_DWORD *)(v5 + 564));
               sub_60022540(MEMORY[0xC7F52C], v5 + 108, v17, v16, 1);
             }
-            sub_602A58B4(v5, v5);
+            SE_EMY_DOWN_ref_2A58B4(v5, v5);
           }
           else
           {
@@ -64868,7 +64868,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           _cxa_guard_release_0(13087588);
         }
         if ( v4 && (**v4)(v4, 13087584) == 1 && Actor::getProfileId((int)v4) == v11 )
-          sub_6007F57C((int)v4);
+          SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_7F57C((int)v4);
         ++v2;
       }
       while ( v3 != v2 );
@@ -64980,7 +64980,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           _cxa_guard_release_0(13087588);
         }
         if ( v4 && (**v4)(v4, 13087584) == 1 && Actor::getProfileId((int)v4) == v12 )
-          sub_6007F57C((int)v4);
+          SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_7F57C((int)v4);
         ++v2;
       }
       while ( v3 != v2 );
@@ -65174,7 +65174,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           _cxa_guard_release_0(13087588);
         }
         if ( v4 && (**v4)(v4, 13087584) == 1 && Actor::getProfileId((int)v4) == v10 )
-          sub_6007F57C((int)v4);
+          SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_7F57C((int)v4);
         ++v2;
       }
       while ( v3 != v2 );
@@ -65241,7 +65241,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             _cxa_guard_release_0(13087588);
           }
           if ( v4 && (**v4)(v4, 13087584) == 1 && Actor::getProfileId((int)v4) == v8 )
-            sub_6007F57C((int)v4);
+            SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_7F57C((int)v4);
           ++v2;
         }
         while ( v3 != v2 );
@@ -66424,8 +66424,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[2] = 0.8;
     U32 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
     v4 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
-    sub_603EE1B0(MEMORY[0xC99CDC], (int)&v7, (U32 >> 31) | 0x10, (int)v6);
-    sub_603EE1B0(MEMORY[0xC99CDC], (int)&v7, v4 >> 31, (int)v6);
+    IceFragmentHeap_ref_3EE1B0(MEMORY[0xC99CDC], (int)&v7, (U32 >> 31) | 0x10, (int)v6);
+    IceFragmentHeap_ref_3EE1B0(MEMORY[0xC99CDC], (int)&v7, v4 >> 31, (int)v6);
     v7 = *v1;
     mapPositionToScreen(v6, (float *)&v7);
     sub_60813570((char *)v1 - 1172, "SE_OBJ_PNGN_ICE_BREAK", v6, 0);
@@ -67965,7 +67965,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     SE_EMY_LIFT_LINE_MOVE_ref_2(v8, (int)"SE_BOSS_KOOPA_L_FIRE_CONTINUE", v10, v12, 0, nullptr);
     *(_DWORD *)(a1 + 164) = sub_6000F7B8() - 0x40000000;
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-    sub_600802A0((_DWORD *)a1);
+    SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_802A0((_DWORD *)a1);
     return StageActor::cullCheck(a1, 4);
   }
 
@@ -68018,7 +68018,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     mapPositionToScreen(v6, v7);
     SE_EMY_LIFT_LINE_MOVE_ref_2(v4, (int)"SE_BOSS_KOOPA_L_FIRE_CONTINUE", v3, v6, 0, nullptr);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-    sub_600802A0((_DWORD *)a1);
+    SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_802A0((_DWORD *)a1);
     return StageActor::cullCheck(a1, 4);
   }
 
@@ -68063,7 +68063,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     CollisionActor::handleSpeed(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-    sub_600802A0((_DWORD *)a1);
+    SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_802A0((_DWORD *)a1);
     result = StageActor::cullCheck(a1, 6);
     if ( result == 1 )
       return StateMgr::changeState((_DWORD *)(a1 + 6084), 13113512);
@@ -68119,7 +68119,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     mapPositionToScreen(v6, v7);
     SE_EMY_LIFT_LINE_MOVE_ref_2(v4, (int)"SE_BOSS_KOOPA_L_FIRE_CONTINUE", v3, v6, 1, nullptr);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-    sub_600802A0((_DWORD *)a1);
+    SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_802A0((_DWORD *)a1);
     return StageActor::cullCheck(a1, 4);
   }
 
@@ -68204,7 +68204,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6007EB04
+ * SE_BOSS_KOOPA_L_FIRE_DISAPP_ref
  * RVA 0x0007eb04   size 0x11c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6007EB04(int a1, int a2)
@@ -68509,7 +68509,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6007F57C
+ * SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_7F57C
  * RVA 0x0007f57c   size 0x9c   xrefs 4
  * ============================================================================ */
   int __fastcall sub_6007F57C(int a1)
@@ -68539,7 +68539,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6007F624
+ * SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_7F624
  * RVA 0x0007f624   size 0x9a4   xrefs 0
  * ============================================================================ */
   void __fastcall sub_6007F624(int a1, int a2)
@@ -68903,7 +68903,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600802A0
+ * SE_BOSS_KOOPA_L_FIRE_DISAPP_ref_802A0
  * RVA 0x000802a0   size 0x250   xrefs 4
  * ============================================================================ */
   unsigned int __fastcall sub_600802A0(_DWORD *a1)
@@ -69581,7 +69581,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60081C44
+ * lkpjc_wait_ref
  * RVA 0x00081c44   size 0x54   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60081C44(int a1)
@@ -69686,7 +69686,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60081E74
+ * lkpjc_wait_ref_81E74
  * RVA 0x00081e74   size 0x58   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60081E74(int a1)
@@ -69720,7 +69720,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60081F28
+ * lkpjc_wait_ref_81F28
  * RVA 0x00081f28   size 0x1b8   xrefs 0
  * ============================================================================ */
   sead::ListNode *__fastcall sub_60081F28(int a1)
@@ -69972,7 +69972,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * SE_BOSS_JR_DOWN_ref
+ * SE_BOSS_JR_DOWN_LAND_ref
  * RVA 0x000828e4   size 0x138   xrefs 0
  * ============================================================================ */
   int __fastcall SE_BOSS_JR_DOWN_ref(int a1)
@@ -70720,7 +70720,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60083E20
+ * lkpjc_wait_ref_83E20
  * RVA 0x00083e20   size 0x58   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60083E20(int a1)
@@ -71735,7 +71735,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60085F88
+ * SE_BOSS_JR_SHELL_LAND_ref
  * RVA 0x00085f88   size 0x264   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60085F88(int a1)
@@ -71913,7 +71913,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008658C
+ * lkp_shell_model_sign_ref
  * RVA 0x0008658c   size 0x74   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008658C(int a1)
@@ -71931,7 +71931,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60086614
+ * SE_BOSS_JR_SHELL_LAND_ref_86614
  * RVA 0x00086614   size 0x168   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60086614(int a1)
@@ -71977,7 +71977,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008678C
+ * lkp_shell_model_sign_ref_8678C
  * RVA 0x0008678c   size 0x54   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008678C(int a1)
@@ -74146,7 +74146,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             if ( (*(_BYTE *)(v5 + 7616) & 2) != 0 )
             {
-              sub_602A58B4(v6, *(_DWORD *)(a2 + 64));
+              SE_EMY_DOWN_ref_2A58B4(v6, *(_DWORD *)(a2 + 64));
               result = *(unsigned __int8 *)(a3 + 110) | 2;
               *(_BYTE *)(a3 + 110) = result;
             }
@@ -74275,7 +74275,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v8 = 1;
         sub_60022540(MEMORY[0xC7F52C], v3 + 108, 1u, *(char *)(v3 + 84), 1);
-        sub_602A58B4(v3, v3);
+        SE_EMY_DOWN_ref_2A58B4(v3, v3);
         return v8;
       }
     }
@@ -75642,7 +75642,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008D0C0
+ * SE_BOSS_JR_CLOWN_MOVE_ref
  * RVA 0x0008d0c0   size 0x160   xrefs 0
  * ============================================================================ */
   unsigned int __fastcall sub_6008D0C0(int a1)
@@ -75711,7 +75711,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008D2F8
+ * SE_BOSS_JR_CLOWN_MOVE_ref_8D2F8
  * RVA 0x0008d2f8   size 0x64   xrefs 0
  * ============================================================================ */
   unsigned int __fastcall sub_6008D2F8(int a1)
@@ -75730,7 +75730,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008D364
+ * jc_wait_ref
  * RVA 0x0008d364   size 0x90   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008D364(int a1)
@@ -75800,7 +75800,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008D580
+ * SE_BOSS_JR_CLOWN_MOVE_ref_8D580
  * RVA 0x0008d580   size 0x84   xrefs 0
  * ============================================================================ */
   unsigned int __fastcall sub_6008D580(int a1)
@@ -75831,7 +75831,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008D620
+ * SE_BOSS_JR_CLOWN_MOVE_ref_8D620
  * RVA 0x0008d620   size 0x64   xrefs 0
  * ============================================================================ */
   unsigned int __fastcall sub_6008D620(int a1)
@@ -75850,7 +75850,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008D68C
+ * jc_wait_ref_8D68C
  * RVA 0x0008d68c   size 0x8c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008D68C(_DWORD *a1)
@@ -75892,7 +75892,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008D738
+ * jc_wait_ref_8D738
  * RVA 0x0008d738   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008D738(int a1)
@@ -75921,7 +75921,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008D808
+ * SE_BOSS_JR_CROWN_SINGLE_LAND_ref
  * RVA 0x0008d808   size 0xb0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008D808(int a1)
@@ -76030,7 +76030,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008DB1C
+ * jc_wait_ref_8DB1C
  * RVA 0x0008db1c   size 0xac   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008DB1C(int a1)
@@ -76379,7 +76379,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008E554
+ * jc_wait_ref_8E554
  * RVA 0x0008e554   size 0x8c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008E554(int a1)
@@ -76399,7 +76399,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008E5F0
+ * jc_wait_ref_8E5F0
  * RVA 0x0008e5f0   size 0x84   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008E5F0(_DWORD *a1)
@@ -76554,7 +76554,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008E964
+ * jc_quake_ed_ref
  * RVA 0x0008e964   size 0xa8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008E964(int a1)
@@ -76671,7 +76671,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008ECD0
+ * SE_BOSS_JR_CROWN_SINGLE_LAND_ref_8ECD0
  * RVA 0x0008ecd0   size 0xa0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008ECD0(int a1)
@@ -76705,7 +76705,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008ED88
+ * jc_quake_ed_ref_8ED88
  * RVA 0x0008ed88   size 0xa4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008ED88(int a1)
@@ -76816,7 +76816,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008F100
+ * SE_BOSS_JR_CROWN_SINGLE_LAND_ref_8F100
  * RVA 0x0008f100   size 0x80   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008F100(int a1)
@@ -76915,7 +76915,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008F3D0
+ * SE_BOSS_JR_CROWN_SINGLE_LAND_ref_8F3D0
  * RVA 0x0008f3d0   size 0x80   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008F3D0(int a1)
@@ -76977,7 +76977,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008F7C0
+ * jc_wait_ref_8F7C0
  * RVA 0x0008f7c0   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008F7C0(int a1)
@@ -77005,7 +77005,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008F890
+ * SE_BOSS_JR_CROWN_SINGLE_LAND_ref_8F890
  * RVA 0x0008f890   size 0x60   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6008F890(int a1)
@@ -77177,7 +77177,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008FCB8
+ * SE_BOSS_JR_CLOWN_MOVE_ref_8FCB8
  * RVA 0x0008fcb8   size 0x154   xrefs 0
  * ============================================================================ */
   int *__fastcall sub_6008FCB8(int a1)
@@ -77255,7 +77255,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6008FEDC
+ * SE_BOSS_JR_CLOWN_MOVE_ref_8FEDC
  * RVA 0x0008fedc   size 0x154   xrefs 0
  * ============================================================================ */
   int *__fastcall sub_6008FEDC(int a1)
@@ -77371,7 +77371,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600901E4
+ * SE_BOSS_JR_CLOWN_MOVE_ref_901E4
  * RVA 0x000901e4   size 0x198   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600901E4(int a1)
@@ -77449,7 +77449,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600903B4
+ * SE_BOSS_JR_CLOWN_MOVE_ref_903B4
  * RVA 0x000903b4   size 0xcc   xrefs 0
  * ============================================================================ */
   unsigned int __fastcall sub_600903B4(int a1)
@@ -77679,7 +77679,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60090AA0
+ * SE_OBJ_NO_DAMAGE_BOUND_ref
  * RVA 0x00090aa0   size 0x4bc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60090AA0(int a1, int a2)
@@ -77889,7 +77889,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60091144
+ * SE_OBJ_NO_DAMAGE_BOUND_ref_91144
  * RVA 0x00091144   size 0xf1c   xrefs 0
  * ============================================================================ */
   unsigned int __fastcall sub_60091144(int a1, int a2)
@@ -78427,7 +78427,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v21 = (*(int (__fastcall **)(int))(*(_DWORD *)v20 + 8))(v20);
               if ( v21 == (*(int (**)(void))(MEMORY[0xC8EA70] + 8))() )
               {
-                sub_602A58B4(v4, *(_DWORD *)(a1 + 64));
+                SE_EMY_DOWN_ref_2A58B4(v4, *(_DWORD *)(a1 + 64));
               }
               else
               {
@@ -80467,7 +80467,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60095D18(int a1, int a2, int a3)
   {
-    sub_602A2DA0(a3);
+    SE_OBJ_PNGN_ICEBALL_DISAPP_ref_2A2DA0(a3);
     return 1;
   }
 
@@ -80912,7 +80912,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           result = (*(int (__fastcall **)(_DWORD *, int))*v5)(v5, 13116360);
           if ( result == 1 )
-            return sub_600424E0((int)v5);
+            return SE_OBJ_PNGN_ICEBALL_DISAPP_ref((int)v5);
         }
         else if ( v14 == 1 )
         {
@@ -81924,7 +81924,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60098CA8
+ * throw_st_ref
  * RVA 0x00098ca8   size 0x78   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60098CA8(_DWORD *a1)
@@ -82001,7 +82001,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60098E6C
+ * throw_st_wait_ref
  * RVA 0x00098e6c   size 0xe8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60098E6C(int a1)
@@ -82256,7 +82256,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60099504
+ * throw_st_ref_99504
  * RVA 0x00099504   size 0x74   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60099504(int a1)
@@ -82334,7 +82334,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60099714
+ * throw_st_wait_ref_99714
  * RVA 0x00099714   size 0xe8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60099714(int a1)
@@ -82375,7 +82375,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60099F84
+ * throw_ed_ref
  * RVA 0x00099f84   size 0x64   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60099F84(int a1)
@@ -82425,7 +82425,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6009A2B4
+ * throw_ed_wait_ref
  * RVA 0x0009a2b4   size 0x88   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6009A2B4(int a1)
@@ -86653,7 +86653,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * SE_VOC_IGG_ref
+ * SE_VOC_IGG_DAMAGE_L_LAST_ref
  * RVA 0x000a19bc   size 0xc90   xrefs 0
  * ============================================================================ */
   int sub_600A19BC()
@@ -87179,7 +87179,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               _cxa_guard_release_0(13116364);
             }
             if ( (**(int (__fastcall ***)(unsigned __int8 *, int))v5)(v5, 13116360) == 1 )
-              sub_600424E0((int)v5);
+              SE_OBJ_PNGN_ICEBALL_DISAPP_ref((int)v5);
             result = *(_DWORD *)(a2 + 140);
           }
           if ( result == 1 )
@@ -88749,7 +88749,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600A567C
+ * fly_wait_ref
  * RVA 0x000a567c   size 0x5c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600A567C(int a1)
@@ -88950,7 +88950,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600A5BD4
+ * fly_wait_ref_A5BD4
  * RVA 0x000a5bd4   size 0xdc   xrefs 0
  * ============================================================================ */
   sead::ListNode *__fastcall sub_600A5BD4(int a1)
@@ -90749,7 +90749,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600A887C
+ * damage_s_ref
  * RVA 0x000a887c   size 0x90   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600A887C(int a1)
@@ -91162,7 +91162,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 v16 = sub_602856EC((int *)(a1 + 6292), *(_DWORD *)(v5 + 564));
                 sub_60022540(MEMORY[0xC7F52C], v5 + 108, v16, v15, 1);
               }
-              sub_602A58B4(v7, v7);
+              SE_EMY_DOWN_ref_2A58B4(v7, v7);
               *(_BYTE *)(a3 + 110) |= 2u;
             }
           }
@@ -91775,7 +91775,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600AA678
+ * demo_battleA_ref
  * RVA 0x000aa678   size 0x74   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600AA678(_DWORD *a1)
@@ -93556,7 +93556,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600AD5C4
+ * SE_OBJ_ICICLE_BREAK_ref
  * RVA 0x000ad5c4   size 0xdc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600AD5C4(int a1)
@@ -93601,7 +93601,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600AD6AC
+ * SE_OBJ_ICICLE_BREAK_ref_AD6AC
  * RVA 0x000ad6ac   size 0x1d8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600AD6AC(int a1, int a2)
@@ -93763,7 +93763,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600ADC18
+ * SE_OBJ_ICICLE_BREAK_ref_ADC18
  * RVA 0x000adc18   size 0x424   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600ADC18(int a1, int a2, int a3)
@@ -93918,7 +93918,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600AE0B4
+ * SE_OBJ_ICICLE_BREAK_ref_AE0B4
  * RVA 0x000ae0b4   size 0x3ec   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600AE0B4(int a1, int a2)
@@ -94281,7 +94281,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             _cxa_guard_release_0(13087792);
           }
           if ( (**(int (__fastcall ***)(int, int))v6)(v6, 13087788) == 1 )
-            sub_602A58B4(v6, a2);
+            SE_EMY_DOWN_ref_2A58B4(v6, a2);
         }
         else
         {
@@ -94600,7 +94600,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600AF528
+ * SE_OBJ_ICICLE_BREAK_ref_AF528
  * RVA 0x000af528   size 0x65c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600AF528(int a1, int a2)
@@ -94826,7 +94826,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( !v20 )
           {
             if ( !*((_BYTE *)v2 + 19) && !sub_602A588C(v2) && !*((_BYTE *)v2 + 6136) )
-              sub_602A58B4((int)v2, (int)v5);
+              SE_EMY_DOWN_ref_2A58B4((int)v2, (int)v5);
             result = *(unsigned __int8 *)(a2 + 110) | 2;
             *(_BYTE *)(a2 + 110) = result;
           }
@@ -94838,7 +94838,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600AFC3C
+ * SE_OBJ_ICICLE_BREAK_ref_AFC3C
  * RVA 0x000afc3c   size 0x1b4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600AFC3C(int a1, int a2)
@@ -95200,7 +95200,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               _cxa_guard_release_0(13116364);
             }
             if ( (**(int (__fastcall ***)(unsigned __int8 *, int))v5)(v5, 13116360) == 1 )
-              sub_600424E0((int)v5);
+              SE_OBJ_PNGN_ICEBALL_DISAPP_ref((int)v5);
             result = *(_DWORD *)(a2 + 140);
           }
           if ( result == 1 )
@@ -101848,7 +101848,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             }
             result = (**(int (__fastcall ***)(unsigned __int8 *, int))v5)(v5, 13116360);
             if ( result == 1 )
-              return sub_600424E0((int)v5);
+              return SE_OBJ_PNGN_ICEBALL_DISAPP_ref((int)v5);
           }
           else if ( result == 1 )
           {
@@ -103168,7 +103168,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600BC3F4
+ * ShipIggy_ref
  * RVA 0x000bc3f4   size 0xcc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600BC3F4(int a1)
@@ -103365,7 +103365,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600BCA4C
+ * ShipLarry_ref
  * RVA 0x000bca4c   size 0xcc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600BCA4C(int a1)
@@ -103546,7 +103546,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600BD000
+ * ShipLemmy_ref
  * RVA 0x000bd000   size 0xcc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600BD000(int a1)
@@ -103727,7 +103727,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600BD5C0
+ * ShipLudwig_ref
  * RVA 0x000bd5c0   size 0xcc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600BD5C0(int a1)
@@ -103908,7 +103908,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600BDB80
+ * ShipMorton_ref
  * RVA 0x000bdb80   size 0xcc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600BDB80(int a1)
@@ -104089,7 +104089,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600BE140
+ * ShipRoy_ref
  * RVA 0x000be140   size 0xcc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600BE140(int a1)
@@ -104447,7 +104447,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v10[3]; // [sp+3Ch] [bp-Ch] BYREF
   
     v1 = (float *)a1;
-    sub_600C0040(a1);
+    boss_cannon_gun_ref_C0040(a1);
     *((_DWORD *)v1 + 1856) = 5;
     v1[1861] = 0.0;
     *((_DWORD *)v1 + 1854) = 120;
@@ -104964,7 +104964,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600BF87C
+ * boss_cannon_gun_ref
  * RVA 0x000bf87c   size 0x31c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600BF87C(int a1, int a2)
@@ -105277,7 +105277,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600C0040
+ * boss_cannon_gun_ref_C0040
  * RVA 0x000c0040   size 0x1a8   xrefs 1
  * ============================================================================ */
   int *__fastcall sub_600C0040(int a1)
@@ -105649,7 +105649,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600C0C60
+ * ShipWendy_ref
  * RVA 0x000c0c60   size 0xcc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600C0C60(int a1)
@@ -108695,7 +108695,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall Bowser::collisionIceball(int a1, int a2, int a3)
   {
-    sub_602A2DA0(a3);
+    SE_OBJ_PNGN_ICEBALL_DISAPP_ref_2A2DA0(a3);
     if ( (*(_BYTE *)(a1 + 7108) & 4) == 0 )
       Bowser::collisionIceball((_DWORD *)a1, (_DWORD *)(a3 + 84));
     return 1;
@@ -109384,13 +109384,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9[0] = 0.6;
       v9[1] = 0.6;
       v9[2] = 0.6;
-      ((void (__fastcall *)(_DWORD, unsigned __int64 *, unsigned int, float *))sub_603EE1B0)(
+      ((void (__fastcall *)(_DWORD, unsigned __int64 *, unsigned int, float *))IceFragmentHeap_ref_3EE1B0)(
         MEMORY[0xC99CDC],
         &v10,
         (U32 >> 31) | 0x10,
         v9);
       v8 = sead::Random::getU32((sead::Random *)(MEMORY[0xC9CF0C] + 1340));
-      ((void (__fastcall *)(_DWORD, unsigned __int64 *, unsigned int, float *))sub_603EE1B0)(
+      ((void (__fastcall *)(_DWORD, unsigned __int64 *, unsigned int, float *))IceFragmentHeap_ref_3EE1B0)(
         MEMORY[0xC99CDC],
         &v10,
         v8 >> 31,
@@ -110319,7 +110319,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v7 = (result & 1) == 0;
         }
         if ( !v7 )
-          return sub_600424E0((int)a1);
+          return SE_OBJ_PNGN_ICEBALL_DISAPP_ref((int)a1);
       }
     }
     return result;
@@ -111475,7 +111475,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600CB3B0
+ * jc_demo_W8_appear_ref_CB3B0
  * RVA 0x000cb3b0   size 0x6c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600CB3B0(int a1)
@@ -111531,7 +111531,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600CB4D0
+ * jc_demo_W8_magic_ref_CB4D0
  * RVA 0x000cb4d0   size 0x70   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600CB4D0(int a1)
@@ -111553,7 +111553,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600CB54C
+ * ef_wand_ref
  * RVA 0x000cb54c   size 0x88   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600CB54C(int a1)
@@ -111810,7 +111810,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600CBDC8
+ * SE_BOSS_KOOPA_FIRE_DISAPP_ref
  * RVA 0x000cbdc8   size 0x12c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600CBDC8(int a1, int a2)
@@ -111880,7 +111880,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = (*(int (**)(void))(MEMORY[0xC8403C] + 8))();
     if ( v10 != result )
     {
-      sub_600CC8AC(a1, a2, a3, a4);
+      SE_BOSS_KOOPA_FIRE_DISAPP_ref_CC8AC(a1, a2, a3, a4);
       return StateMgr::changeState(v8, 13123644);
     }
     return result;
@@ -112194,7 +112194,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600CC680
+ * SE_BOSS_KOOPA_FIRE_DISAPP_ref_CC680
  * RVA 0x000cc680   size 0x1fc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600CC680(int result, _DWORD *a2)
@@ -112285,7 +112285,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600CC8AC
+ * SE_BOSS_KOOPA_FIRE_DISAPP_ref_CC8AC
  * RVA 0x000cc8ac   size 0x130   xrefs 1
  * ============================================================================ */
   int __fastcall sub_600CC8AC(int a1, int a2, int a3, int a4)
@@ -114712,7 +114712,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600D0798
+ * skl_root_ref
  * RVA 0x000d0798   size 0x368   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600D0798(int a1)
@@ -115052,7 +115052,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600D0E78
+ * koopaJr_clown_expression_ref
  * RVA 0x000d0e78   size 0x7f0   xrefs 3
  * ============================================================================ */
   int __fastcall sub_600D0E78(int a1, int a2)
@@ -115636,7 +115636,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600D1AC8
+ * SE_BOSS_JR_CLOWN_MOVE_ref_D1AC8
  * RVA 0x000d1ac8   size 0x9c   xrefs 2
  * ============================================================================ */
   int __fastcall sub_600D1AC8(int a1)
@@ -115831,7 +115831,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600D1EBC
+ * jc_damage_s_ref
  * RVA 0x000d1ebc   size 0x208   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600D1EBC(float *a1)
@@ -118280,7 +118280,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v5 = 0;
     }
-    sub_600424E0(v5);
+    SE_OBJ_PNGN_ICEBALL_DISAPP_ref(v5);
     return 1;
   }
 
@@ -120231,7 +120231,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600D8F00
+ * damage_s_ref_D8F00
  * RVA 0x000d8f00   size 0x7c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600D8F00(int a1)
@@ -121171,7 +121171,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600DA45C
+ * damage_ref
  * RVA 0x000da45c   size 0x1ac   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600DA45C(int a1)
@@ -121574,7 +121574,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600DAE30
+ * SE_OBJ_CMN_SPLASH_ref
  * RVA 0x000dae30   size 0x28   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600DAE30(int a1, int *a2)
@@ -121855,7 +121855,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * SE_VOC_LAR_ref
+ * SE_VOC_LAR_MAGIC_SHOT_ref
  * RVA 0x000db244   size 0x888   xrefs 0
  * ============================================================================ */
   _DWORD *sub_600DB244()
@@ -122917,7 +122917,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600DD90C
+ * damage_s_ref_DD90C
  * RVA 0x000dd90c   size 0x90   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600DD90C(int a1)
@@ -123007,7 +123007,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600DDBD0
+ * face_1_ref_DDBD0
  * RVA 0x000ddbd0   size 0x30c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600DDBD0(int a1)
@@ -123168,7 +123168,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600DE170
+ * face_1_ref_DE170
  * RVA 0x000de170   size 0x74   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600DE170(int a1)
@@ -124652,7 +124652,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600E07C4
+ * damage_ref_E07C4
  * RVA 0x000e07c4   size 0x174   xrefs 0
  * ============================================================================ */
   _DWORD *__fastcall sub_600E07C4(int a1)
@@ -124825,7 +124825,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600E0BE8
+ * wrist_r1_ref
  * RVA 0x000e0be8   size 0x48   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600E0BE8(int a1)
@@ -124918,7 +124918,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * SE_VOC_LEM_ref
+ * SE_VOC_LEM_MAGIC_SHOT_ref
  * RVA 0x000e0d2c   size 0x898   xrefs 0
  * ============================================================================ */
   int sub_600E0D2C()
@@ -127222,7 +127222,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600E4F14
+ * lemmy_bomb_ref
  * RVA 0x000e4f14   size 0x214   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600E4F14(int a1, int a2)
@@ -127298,14 +127298,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           v5 = nullptr;
         }
-        return sub_600424E0((int)v5);
+        return SE_OBJ_PNGN_ICEBALL_DISAPP_ref((int)v5);
       }
     }
     return result;
   }
 
 /* ============================================================================
- * sub_600E5168
+ * lemmy_bomb_ref_E5168
  * RVA 0x000e5168   size 0x214   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600E5168(int a1, int a2)
@@ -127381,14 +127381,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           v5 = nullptr;
         }
-        return sub_600424E0((int)v5);
+        return SE_OBJ_PNGN_ICEBALL_DISAPP_ref((int)v5);
       }
     }
     return result;
   }
 
 /* ============================================================================
- * sub_600E53BC
+ * lemmy_bomb_ref_E53BC
  * RVA 0x000e53bc   size 0x218   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600E53BC(int a1, int a2, int a3)
@@ -127464,7 +127464,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           v7 = nullptr;
         }
-        return sub_600424E0((int)v7);
+        return SE_OBJ_PNGN_ICEBALL_DISAPP_ref((int)v7);
       }
     }
     return result;
@@ -127566,7 +127566,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600E5760
+ * lemmy_bomb_ref_E5760
  * RVA 0x000e5760   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600E5760(int a1)
@@ -128405,7 +128405,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600E6FD4
+ * fly_wait_ref_E6FD4
  * RVA 0x000e6fd4   size 0xb0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600E6FD4(int a1)
@@ -128990,7 +128990,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600E7EF4
+ * face_1_ref_E7EF4
  * RVA 0x000e7ef4   size 0x32c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600E7EF4(int a1)
@@ -129214,7 +129214,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600E8574
+ * face_1_ref_E8574
  * RVA 0x000e8574   size 0x74   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600E8574(int a1)
@@ -129652,7 +129652,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600E8FA4
+ * damage_s_ref_E8FA4
  * RVA 0x000e8fa4   size 0x7c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600E8FA4(int a1)
@@ -130221,7 +130221,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600EA7E8
+ * ef_magic_ref
  * RVA 0x000ea7e8   size 0x1c0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600EA7E8(int a1)
@@ -130282,7 +130282,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600EA9B8
+ * ef_magic_ref_EA9B8
  * RVA 0x000ea9b8   size 0x240   xrefs 0
  * ============================================================================ */
   bool __fastcall sub_600EA9B8(int a1)
@@ -130355,7 +130355,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600EAC10
+ * ef_magic_ref_EAC10
  * RVA 0x000eac10   size 0x188   xrefs 0
  * ============================================================================ */
   _DWORD *__fastcall sub_600EAC10(int *a1)
@@ -130405,7 +130405,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600EADA4
+ * SE_VOC_LUD_MAGIC_SHOT_ref
  * RVA 0x000eada4   size 0x11c   xrefs 0
  * ============================================================================ */
   int *__fastcall SE_VOC_LUD_MAGIC_SHOT_ref(int a1)
@@ -130471,7 +130471,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600EAF3C
+ * ef_magic_ref_EAF3C
  * RVA 0x000eaf3c   size 0x1fc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600EAF3C(int **a1)
@@ -131444,7 +131444,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600EC8D8
+ * damage_ref_EC8D8
  * RVA 0x000ec8d8   size 0x1bc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600EC8D8(int a1)
@@ -131930,7 +131930,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600ED650
+ * SE_OBJ_FIREBALL_DISAPP_ref
  * RVA 0x000ed650   size 0x154   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600ED650(_DWORD *a1, int a2, int a3)
@@ -132022,7 +132022,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600ED8C0
+ * demo_battleA_st_ref
  * RVA 0x000ed8c0   size 0x6c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600ED8C0(int *a1)
@@ -132064,7 +132064,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600ED97C
+ * demo_battleA_st_wait_ref_ED97C
  * RVA 0x000ed97c   size 0x60   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600ED97C(int a1)
@@ -132082,7 +132082,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600ED9EC
+ * demo_battleA_ref_ED9EC
  * RVA 0x000ed9ec   size 0x60   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600ED9EC(int *a1)
@@ -132100,7 +132100,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600EDA5C
+ * demo_battleA_wait_ref
  * RVA 0x000eda5c   size 0x60   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600EDA5C(int a1)
@@ -132203,7 +132203,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600EDC80
+ * ef_magic_ref_EDC80
  * RVA 0x000edc80   size 0x48   xrefs 0
  * ============================================================================ */
   int __fastcall sub_600EDC80(int a1)
@@ -133298,7 +133298,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v34(v33, v48);
           (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 8652) + 60))(**(_DWORD **)(a1 + 8652), v49);
           ModelWrapper_updateModel(*(_DWORD **)(a1 + 8652));
-          sub_600EFAD8(a1);
+          morton_hummer_ref(a1);
           if ( (*(_BYTE *)(**(_DWORD **)(*(_DWORD *)(a1 + 8652) + 12) + 28) & 0x20) != 0 )
           {
             v35 = MEMORY[0xC88234];
@@ -133362,7 +133362,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600EFAD8
+ * morton_hummer_ref
  * RVA 0x000efad8   size 0x1c4   xrefs 1
  * ============================================================================ */
   float *__fastcall sub_600EFAD8(int a1)

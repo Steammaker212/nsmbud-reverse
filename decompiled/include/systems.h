@@ -6123,7 +6123,6 @@ int __fastcall sub_60623CB0(int a1, __int16 a2);  /* 0x00623cb0 */
 int __fastcall sub_60624754(int a1, int a2);  /* 0x00624754 */
 int __fastcall sub_606250C8(int result);  /* 0x006250c8 */
 int __fastcall sub_606250D4(int result);  /* 0x006250d4 */
-int __fastcall sub_60625294(int a1);  /* 0x00625294 */
 int __fastcall sub_60625298(int a1);  /* 0x00625298 */
 int __fastcall sub_606252E8(int a1);  /* 0x006252e8 */
 int __fastcall sub_6062545C(int a1);  /* 0x0062545c */

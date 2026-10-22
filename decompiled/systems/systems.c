@@ -629,7 +629,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60480EAC
+ * T_Text_00_ref
  * RVA 0x00480eac   size 0xfc   xrefs 3
  * ============================================================================ */
   int __fastcall sub_60480EAC(int a1)
@@ -671,7 +671,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v5 = 12321336;
     v6 = "BaloonGuide.bflyt";
-    sub_60475CDC(v2, &v5, 0, 0, 0);
+    message_ref(v2, &v5, 0, 0, 0);
     v5 = 12321336;
     v6 = "Pa_KeyAssign_00";
     ((void (__fastcall *)(_DWORD *, _DWORD *, int *, _DWORD, _DWORD))sub_6050A4EC)(a1 + 1402, v2, &v5, 0, 0);
@@ -1183,7 +1183,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"BonusTime.bflyt";
-    sub_60475CDC(v2, v7, 0, 0, 0);
+    message_ref(v2, v7, 0, 0, 0);
     if ( ((unsigned int)&unk_60C9EE90 & ~(1615338080 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9EE90) )
     {
       dword_60C9EE9C = 12321336;
@@ -1218,7 +1218,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60481CA4
+ * InBonus_ref
  * RVA 0x00481ca4   size 0x15c   xrefs 0
  * ============================================================================ */
   int sub_60481CA4()
@@ -1590,7 +1590,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60482268
+ * BootSceneDL_bflyt_ref
  * RVA 0x00482268   size 0x130   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60482268(int a1)
@@ -1604,7 +1604,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"BootSceneDL.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60C9EF80 & ~(1615340264 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9EF80) )
     {
       dword_60C9EF84 = 12321336;
@@ -2042,7 +2042,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (const char *)dword_60C9EFF0;
     (*((void (__fastcall **)(_UNKNOWN **))off_60C9EFF4 + 3))(&off_60C9EFF4);
     sub_608FDDF4(&v30, "%s.%s", v3, (const char *)dword_60C9EFF8);
-    sub_60475CDC(v2, &v30, 0, 0, 0);
+    message_ref(v2, &v30, 0, 0, 0);
     result = a1[839];
     if ( result )
     {
@@ -2477,7 +2477,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604834D8
+ * ChallengeClear_ref
  * RVA 0x004834d8   size 0xe4   xrefs 0
  * ============================================================================ */
   int *sub_604834D8()
@@ -2589,7 +2589,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6048371C
+ * SE_SYS_DECIDE_ref_48371C
  * RVA 0x0048371c   size 0x4c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6048371C(int a1)
@@ -2768,7 +2768,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"ChallengeCompleteWindow.bflyt";
-    sub_60475CDC(v2, v5, 0, 0, 0);
+    message_ref(v2, v5, 0, 0, 0);
     Pa_KeyAssign_ref(a1);
     if ( ((unsigned int)&unk_60C9F114 & ~(1615346568 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9F114) )
     {
@@ -3443,7 +3443,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60484D80
+ * ChallengeFailure_bflyt_ref
  * RVA 0x00484d80   size 0x104   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60484D80(int a1)
@@ -3457,7 +3457,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ChallengeFailure.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60C9F2B0 & ~(1615351296 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9F2B0) )
     {
       dword_60C9F2B4 = 12321336;
@@ -3736,7 +3736,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604853A8
+ * SE_SYS_DIALOGUE_IN_ref
  * RVA 0x004853a8   size 0x348   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604853A8(int a1)
@@ -4109,7 +4109,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = *(_DWORD **)(a1 + 4);
     v15 = 12321336;
     v16 = "ChallengeRetryWindow.bflyt";
-    sub_60475CDC(v5, &v15, a1 + 24, 0, 0);
+    message_ref(v5, &v15, a1 + 24, 0, 0);
     if ( ((unsigned int)&unk_60C9F380 & ~(1615354992 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9F380) )
     {
       dword_60C9F3B0 = 12321336;
@@ -4896,7 +4896,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60486F0C
+ * SE_SYS_PAGE_ref
  * RVA 0x00486f0c   size 0x2dc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60486F0C(int a1)
@@ -5075,7 +5075,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604873C4
+ * SE_SYS_PAGE_ref_4873C4
  * RVA 0x004873c4   size 0x224   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604873C4(_DWORD *a1)
@@ -5218,7 +5218,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604877B4
+ * SE_SYS_PAGE_ref_4877B4
  * RVA 0x004877b4   size 0x2dc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604877B4(int a1)
@@ -5397,7 +5397,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60487C6C
+ * SE_SYS_PAGE_ref_487C6C
  * RVA 0x00487c6c   size 0x224   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60487C6C(_DWORD *a1)
@@ -5610,7 +5610,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604881DC
+ * SE_SYS_CURSOR_ref
  * RVA 0x004881dc   size 0x174   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604881DC(_DWORD *a1)
@@ -6481,7 +6481,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3716) = 0;
     *(_BYTE *)(a1 + 3720) = 0;
     memset((void *)(a1 + 3724), 0, 0x2Cu);
-    sub_6050208C(a1 + 3768);
+    SE_SYS_DECIDE_ref_50208C(a1 + 3768);
     memset((void *)(a1 + 5848), 0, 0x1F00u);
     *(_DWORD *)(a1 + 6704) = 12572588;
     *sub_6047611C(a1 + 6704, a1 + 10224, 1) = 12572588;
@@ -6663,7 +6663,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604898F0
+ * ChallengeSelectTmpHeap2_ref
  * RVA 0x004898f0   size 0x3f0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604898F0(int a1)
@@ -6726,7 +6726,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v26 = sub_604912FC(0);
     MEMORY[0xBC0240](&v28, &v25);
     sub_604734E4((_DWORD *)(a1 + 6704), 0);
-    v3 = sub_60491514(0);
+    v3 = Pa_ArrowBtnL_00_Pa_ArrowBtnR_00_ref(0);
     v25 = 12321336;
     v26 = v3;
     sub_60476388((_DWORD *)(a1 + 6704), a1 + 36, &v25);
@@ -6734,7 +6734,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v27 = 1;
     v4(a1 + 6704, &v28, &v27);
     sub_604734E4((_DWORD *)(a1 + 10244), 0);
-    v5 = sub_60491514(1);
+    v5 = Pa_ArrowBtnL_00_Pa_ArrowBtnR_00_ref(1);
     v25 = 12321336;
     v26 = v5;
     sub_60476388((_DWORD *)(a1 + 10244), a1 + 36, &v25);
@@ -6745,7 +6745,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_609094C4(a1 + 13824, 66032, MEMORY[0xB023FC], MEMORY[0xB023FD]);
     v7 = operator new(13188);
     *(_DWORD *)(a1 + 14240) = sub_6049468C(v7);
-    sub_60494884();
+    B_Btn_00_ref();
     v8 = operator new(11240);
     *(_DWORD *)(a1 + 14244) = sub_604EDCD8(v8);
     T_Text_01_ref();
@@ -6828,7 +6828,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v3);
     v20 = 12321336;
     v21 = "ChallengeSelect.bflyt";
-    sub_60475CDC(v3, &v20, (int)(a1 + 952), 0, 0);
+    message_ref(v3, &v20, (int)(a1 + 952), 0, 0);
     v20 = 0;
     v4 = operator new(112);
     *(_DWORD *)v4 = 12573204;
@@ -11688,7 +11688,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60491514
+ * Pa_ArrowBtnL_00_Pa_ArrowBtnR_00_ref
  * RVA 0x00491514   size 0x1c4   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60491514(unsigned int a1)
@@ -13527,7 +13527,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60493B4C
+ * SE_SYS_DIALOGUE_IN_ref_493B4C
  * RVA 0x00493b4c   size 0x78   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60493B4C(int a1)
@@ -13538,7 +13538,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[1] = sub_604962DC(1u);
     sub_60473DE4((_DWORD *)(a1 + 36), 1u, v3, 0);
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
-    return sub_608164F8(MEMORY[0xCC6B68], 10);
+    return SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 10);
   }
 
 /* ============================================================================
@@ -13855,7 +13855,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6049420C
+ * G_Return_00_ref
  * RVA 0x0049420c   size 0x84   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6049420C(int a1)
@@ -14019,7 +14019,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604944B0
+ * G_Return_00_ref_4944B0
  * RVA 0x004944b0   size 0x88   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604944B0(int a1)
@@ -14172,7 +14172,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3736) = 0;
     *(_BYTE *)(a1 + 3740) = 0;
     memset((void *)(a1 + 3744), 0, 0x70u);
-    sub_6050208C(a1 + 3856);
+    SE_SYS_DECIDE_ref_50208C(a1 + 3856);
     *(_BYTE *)(a1 + 5936) = 0;
     *(_BYTE *)(a1 + 5937) = 0;
     *(_DWORD *)(a1 + 5940) = 0;
@@ -14198,7 +14198,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60494884
+ * B_Btn_00_ref
  * RVA 0x00494884   size 0x158   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60494884(_DWORD *a1, int a2)
@@ -14273,7 +14273,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v7 = 12321336;
     v8 = "ChallengeSelectWindow.bflyt";
-    sub_60475CDC(v2, &v7, (int)(v1 + 974), 0, 0);
+    message_ref(v2, &v7, (int)(v1 + 974), 0, 0);
     v7 = 12321336;
     v6[0] = 12321336;
     v8 = "Pa_Return_00";
@@ -14622,7 +14622,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA04B0 = (int)"Lyt_Challenge";
       _cxa_guard_release_0(&unk_60CA0488);
     }
-    sub_60834E7C(&dword_60CA04AC, 0);
+    Model_s_Nin_NX_NVN_szs_ref_834E7C(&dword_60CA04AC, 0);
     v3 = (_QWORD *)sub_608DE334(7208, 0, 4, 0);
     v6 = 5964;
     v7 = (int *)(a1 + 5964);
@@ -14671,7 +14671,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v16 <= 0 )
           v16 = 0;
         v17 = sub_609184C4(*(_DWORD *)(v12 + 20), v16);
-        v18 = sub_6091FD58(v19);
+        v18 = agl_TextureData_ref(v19);
         sub_60959954(v18, v17);
         sub_6098E0F8(v13, v19, 0);
         result = sub_609175E4(&v20);
@@ -16993,7 +16993,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3620) = 11778612;
     *(_DWORD *)(a1 + 3624) = 0;
     *(_BYTE *)(a1 + 3628) = 0;
-    sub_6050208C(a1 + 3648);
+    SE_SYS_DECIDE_ref_50208C(a1 + 3648);
     sub_604A3FE4(a1 + 5728);
     sub_604A3FE4(a1 + 26284);
     sub_604A3FE4(a1 + 46840);
@@ -17194,7 +17194,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (const char *)dword_60CA06E4;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA06E8 + 3))(&off_60CA06E8);
     sub_608FDDF4(&v6, "%s.%s", v3, (const char *)dword_60CA06EC);
-    sub_60475CDC(v2, &v6, (int)(v1 + 922), 0, 0);
+    message_ref(v2, &v6, (int)(v1 + 922), 0, 0);
     sub_604A435C(v1 + 1432, 0, v1 + 36719, v1 + 36717);
     sub_604A435C(v1 + 6571, 1, v1 + 36719, v1 + 36717);
     sub_604A435C(v1 + 11710, 2, v1 + 36719, v1 + 36717);
@@ -18416,7 +18416,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6049AFF4
+ * SE_SYS_CURSOR_ref_49AFF4
  * RVA 0x0049aff4   size 0x328   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6049AFF4(int a1)
@@ -18571,7 +18571,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6049B540
+ * SE_SYS_INVALID_ref
  * RVA 0x0049b540   size 0x50   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6049B540(int a1)
@@ -18607,7 +18607,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6049B5E4
+ * SE_SYS_DECIDE_ref_49B5E4
  * RVA 0x0049b5e4   size 0x58   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6049B5E4(int a1)
@@ -20548,7 +20548,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6049E394
+ * SE_SYS_BACK_ref_49E394
  * RVA 0x0049e394   size 0x158   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6049E394(int a1)
@@ -21746,7 +21746,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3624) = 0;
     *(_BYTE *)(a1 + 3628) = 0;
     *(_DWORD *)(a1 + 3632) = 0;
-    sub_6050208C(a1 + 3636);
+    SE_SYS_DECIDE_ref_50208C(a1 + 3636);
     sub_6050B4E4(a1 + 5716);
     sub_60557FE4(a1 + 9296);
     sub_6050A308(a1 + 12988);
@@ -21905,7 +21905,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v8 = 12321336;
     v9 = "ChangeTeam.bflyt";
-    sub_60475CDC(v2, &v8, a1 + 3676, 0, 0);
+    message_ref(v2, &v8, a1 + 3676, 0, 0);
     v8 = 12321336;
     v20 = 12321336;
     v9 = "Pa_Return_00";
@@ -22010,7 +22010,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3564) + 12))(*(_DWORD *)(a1 + 3564), 10029528, 0);
     *(_DWORD *)(a1 + 22496) = sub_603FD0B4((_BYTE *)(MEMORY[0xC99DEC] + 16));
     sub_604A1404(a1);
-    sub_604A1514(a1);
+    CharacterSelectPosTmpHeap_ref(a1);
     sub_6050292C(v7, 9);
     sub_605029C8(v7, 9);
     sub_605029FC(v7, &unk_60B02C14, "SE_SYS_BACK");
@@ -22353,7 +22353,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604A1514
+ * CharacterSelectPosTmpHeap_ref
  * RVA 0x004a1514   size 0xf4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604A1514(int a1)
@@ -23482,13 +23482,13 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047EABC((_DWORD *)(a1 + 3976));
     if ( sub_60835008() == 1 && !*(_BYTE *)(a1 + 20541) )
     {
-      sub_60502C04(a1 + 3936, (int *)&unk_60B02D20, 2);
+      sub_60502C04(a1 + 3936, (int *)&dword_60B02D20, 2);
       *(_BYTE *)(a1 + 4979) = 0;
       *(_BYTE *)(a1 + 4976) = 1;
     }
     else
     {
-      sub_60502A24(a1 + 3936, &unk_60B02D20, 2, 1);
+      sub_60502A24(a1 + 3936, &dword_60B02D20, 2, 1);
     }
     *(_BYTE *)(a1 + 20540) = 1;
     *(_BYTE *)(a1 + 20547) = 0;
@@ -23517,7 +23517,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_BYTE *)(a1 + 20541);
     if ( !*(_BYTE *)(a1 + 20541) )
-      SE_SYS_CHANGE_COLOR_ref(a1);
+      SE_SYS_CHANGE_COLOR_O_ref(a1);
     result = *(unsigned __int8 *)(a1 + 4978);
     if ( !*(_BYTE *)(a1 + 4978) )
     {
@@ -23927,7 +23927,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604A39D0
+ * SE_SYS_BACK_ref_4A39D0
  * RVA 0x004a39d0   size 0x128   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604A39D0(int a1)
@@ -24287,7 +24287,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 40) = 0;
     *(_DWORD *)(a1 + 44) = 0;
     sub_604A4178(a1 + 48);
-    sub_6050208C(a1 + 3936);
+    SE_SYS_DECIDE_ref_50208C(a1 + 3936);
     sub_6050A308(a1 + 6016);
     sub_6050A308(a1 + 13232);
     *(_DWORD *)(a1 + 20480) = 0;
@@ -24475,7 +24475,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = (const char *)dword_60CA13D8;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA13DC + 3))(&off_60CA13DC);
     sub_608FDDF4(&v12, "%s.%s", v7, (const char *)dword_60CA13E0);
-    sub_60475CDC(v6, &v12, a1 + 3976, 0, 0);
+    message_ref(v6, &v12, a1 + 3976, 0, 0);
     v11 = 24;
     sub_60476030((int)v6, &dword_60CA1270, &v11);
     v12 = 1;
@@ -25937,7 +25937,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * SE_SYS_CHANGE_COLOR_ref
+ * SE_SYS_CHANGE_COLOR_O_ref
  * RVA 0x004a662c   size 0xf0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604A662C(int a1)
@@ -27663,7 +27663,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604A9008
+ * SE_SYS_BACK_ref_4A9008
  * RVA 0x004a9008   size 0x1f0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604A9008(int a1)
@@ -27749,7 +27749,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604A9218
+ * SE_SYS_BACK_ref_4A9218
  * RVA 0x004a9218   size 0x41c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604A9218(int a1)
@@ -27783,7 +27783,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v28; // r2
     unsigned int v29; // r7
   
-    SE_SYS_MII_CAP_ref(a1);
+    SE_SYS_MII_CAP_O_ref(a1);
     result = *(unsigned __int8 *)(a1 + 86998);
     if ( *(_BYTE *)(a1 + 86998) )
       return result;
@@ -28233,7 +28233,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604A9B74
+ * SE_SYS_DECIDE_ref_4A9B74
  * RVA 0x004a9b74   size 0x134   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604A9B74(int a1)
@@ -28278,7 +28278,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604A9CBC
+ * SE_SYS_BACK_ref_4A9CBC
  * RVA 0x004a9cbc   size 0x1d8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604A9CBC(int a1)
@@ -28286,7 +28286,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    SE_SYS_MII_CAP_ref(a1);
+    SE_SYS_MII_CAP_O_ref(a1);
     result = *(unsigned __int8 *)(a1 + 86998);
     if ( *(_BYTE *)(a1 + 86998) )
       return result;
@@ -29313,7 +29313,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604A3FE4(a1 + 24288);
     sub_604A3FE4(a1 + 44844);
     sub_604A3FE4(a1 + 65400);
-    sub_6050208C(a1 + 85956);
+    SE_SYS_DECIDE_ref_50208C(a1 + 85956);
     sub_6050A308(a1 + 88036);
     *(_DWORD *)(a1 + 95252) = 0;
     v2 = 182268;
@@ -29483,7 +29483,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SE_SYS_BTN_GAME_START_ref(a1);
     sub_6047F3B4(a1 + 69417);
     sub_604AB9BC(a1);
-    return sub_604ABACC(a1);
+    return CharacterSelectPosTmpHeap_ref_4ABACC(a1);
   }
 
 /* ============================================================================
@@ -29514,7 +29514,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (const char *)dword_60CA16C4;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA16C8 + 3))(&off_60CA16C8);
     sub_608FDDF4(&v5, "%s.%s", v3, (const char *)dword_60CA16CC);
-    sub_60475CDC(v2, &v5, (int)(a1 + 21499), 0, 0);
+    message_ref(v2, &v5, (int)(a1 + 21499), 0, 0);
     sub_604A435C((int)(a1 + 933), 0, (int)(a1 + 69417), (int)(a1 + 69925));
     sub_604A435C((int)(a1 + 6072), 1, (int)(a1 + 69417), (int)(a1 + 69925));
     sub_604A435C((int)(a1 + 11211), 2, (int)(a1 + 69417), (int)(a1 + 69925));
@@ -29581,7 +29581,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604ABACC
+ * CharacterSelectPosTmpHeap_ref_4ABACC
  * RVA 0x004abacc   size 0xf4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604ABACC(int a1)
@@ -30301,7 +30301,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * SE_SYS_MII_CAP_ref
+ * SE_SYS_MII_CAP_O_ref
  * RVA 0x004ac8bc   size 0x104   xrefs 2
  * ============================================================================ */
   int __fastcall sub_604AC8BC(int a1)
@@ -31535,7 +31535,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"CoinEditCursor.bflyt";
-    sub_60475CDC(v2, v5, 0, 0, 0);
+    message_ref(v2, v5, 0, 0, 0);
     if ( ((unsigned int)&unk_60CA1850 & ~(1615522084 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1850) )
     {
       dword_60CA18B0 = 12321336;
@@ -31991,7 +31991,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(v2 + 3596) = 11778612;
       *(_DWORD *)(v2 + 3600) = 0;
       *(_BYTE *)(v2 + 3604) = 0;
-      sub_6050208C(v2 + 3608);
+      SE_SYS_DECIDE_ref_50208C(v2 + 3608);
       sub_6045BF30(v2 + 5688);
       *(_DWORD *)(v2 + 6092) = 12574508;
       *(_DWORD *)(v2 + 6096) = 12574524;
@@ -33001,7 +33001,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604B11B4
+ * CoinEditMenu_ref
  * RVA 0x004b11b4   size 0xe8   xrefs 1
  * ============================================================================ */
   _BYTE *__fastcall sub_604B11B4(int a1)
@@ -33014,7 +33014,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_DWORD *)(MEMORY[0xC99DD4] + 764) == 3 )
     {
       *result = 0;
-      sub_604B12B0(a1);
+      CoinEditMenu_bflyt_ref(a1);
       v4 = 0;
       sub_60502210(a1 + 3608, &v4, 8);
       v3[0] = 12321336;
@@ -33036,7 +33036,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604B12B0
+ * CoinEditMenu_bflyt_ref
  * RVA 0x004b12b0   size 0x184   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604B12B0(int a1)
@@ -33050,7 +33050,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"CoinEditMenu.bflyt";
-    sub_60475CDC(v2, v5, a1 + 3648, 0, 0);
+    message_ref(v2, v5, a1 + 3648, 0, 0);
     if ( ((unsigned int)&unk_60CA1A80 & ~(1615532852 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1A80) )
     {
       dword_60CA1AAC = 12321336;
@@ -33441,7 +33441,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604B20DC
+ * TopBottom_ref
  * RVA 0x004b20dc   size 0x36c   xrefs 0
  * ============================================================================ */
   int sub_604B20DC()
@@ -34122,7 +34122,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r0
     int v5; // [sp+4h] [bp-4h] BYREF
   
-    sub_604B3370();
+    CoinEditScene_bflyt_ref();
     sub_604B3678(a1);
     sub_604B37F8(a1);
     if ( ((unsigned int)&unk_60CA1BEC & ~(1615540924 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1BEC) )
@@ -34139,7 +34139,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604B3370
+ * CoinEditScene_bflyt_ref
  * RVA 0x004b3370   size 0x2b0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604B3370(int a1)
@@ -34217,7 +34217,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = *(_DWORD **)(a1 + 4);
     v10 = 12321336;
     v11 = "CoinEditScene.bflyt";
-    sub_60475CDC(v5, &v10, a1 + 24, 0, 0);
+    message_ref(v5, &v10, a1 + 24, 0, 0);
     if ( ((unsigned int)&unk_60CA1BE0 & ~(1615541484 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1BE0) )
     {
       dword_60CA1C80 = 12321336;
@@ -35788,7 +35788,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604B5D90
+ * SE_SYS_BACK_ref_4B5D90
  * RVA 0x004b5d90   size 0x170   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604B5D90(int a1)
@@ -37326,7 +37326,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         v5 = 1;
         sub_604751FC(a1 + 4, a1 + 3656, &dword_60CA2454, &v5);
-        result = sub_604B7D04(a1);
+        result = T_Btn_00_ref(a1);
         *(_BYTE *)(a1 + 3720) = 0;
       }
     }
@@ -37363,7 +37363,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( CurrentHeap )
     {
       v4 = operator new(2132, CurrentHeap, 4);
-      v5 = (_DWORD *)sub_6050208C(v4);
+      v5 = (_DWORD *)SE_SYS_DECIDE_ref_50208C(v4);
       v5[532] = a1;
       v5[520] = 256;
       v5[521] = 256;
@@ -37389,13 +37389,13 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = (const char *)dword_60CA2448;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA244C + 3))(&off_60CA244C);
     sub_608FDDF4(&v9, "%s.%s", v6, (const char *)dword_60CA2450);
-    sub_60475CDC(v2, &v9, *(_DWORD *)(a1 + 3652) + 40, 0, 0);
+    message_ref(v2, &v9, *(_DWORD *)(a1 + 3652) + 40, 0, 0);
     v8 = 9;
     return sub_60476030((int)v2, &dword_60CA24B0, &v8);
   }
 
 /* ============================================================================
- * sub_604B7D04
+ * T_Btn_00_ref
  * RVA 0x004b7d04   size 0x234   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604B7D04(int a1)
@@ -38936,7 +38936,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v4);
     v9[0] = 12321336;
     v9[1] = (int)"Continue.bflyt";
-    sub_60475CDC(v4, v9, 0, 0, 0);
+    message_ref(v4, v9, 0, 0, 0);
     if ( ((unsigned int)&unk_60CA2620 & ~(1615571016 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA2620) )
     {
       dword_60CA2644 = 12321336;
@@ -39510,7 +39510,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60475C8C(a1 + 84);
       v8[0] = 12321336;
       v8[1] = (int)"CountDownStart.bflyt";
-      sub_60475CDC((_DWORD *)(a1 + 84), v8, 0, 0, 0);
+      message_ref((_DWORD *)(a1 + 84), v8, 0, 0, 0);
       if ( ((unsigned int)&unk_60CA26D0 & ~(1615574876 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA26D0) )
       {
         dword_60CA26DC = 12321336;
@@ -40014,7 +40014,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (const char *)dword_60CA2778;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA277C + 3))(&off_60CA277C);
     sub_608FDDF4(&v30, "%s.%s", v3, (const char *)dword_60CA2780);
-    sub_60475CDC(v2, &v30, 0, 0, 0);
+    message_ref(v2, &v30, 0, 0, 0);
     result = a1[839];
     if ( result )
     {
@@ -40344,7 +40344,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604BC840
+ * CourseClear_ref
  * RVA 0x004bc840   size 0xe4   xrefs 0
  * ============================================================================ */
   int *sub_604BC840()
@@ -41226,7 +41226,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604BE218
+ * SE_SYS_COURSE_IN_ref
  * RVA 0x004be218   size 0x984   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604BE218(int a1)
@@ -41777,7 +41777,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 516) = 0;
     StateMgr_ctor((_DWORD *)(a1 + 520), a1 + 504, 13248440);
     *(_DWORD *)(a1 + 500) = 12575480;
-    sub_6050208C(a1 + 564);
+    SE_SYS_DECIDE_ref_50208C(a1 + 564);
     sub_6050A308(a1 + 2688);
     *(_DWORD *)(a1 + 9904) = 12575444;
     *(_DWORD *)(a1 + 9908) = 0;
@@ -42032,7 +42032,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = (_DWORD *)a1[1];
     v9 = 12321336;
     v10 = "CourseSelectFree.bflyt";
-    sub_60475CDC(v5, &v9, (int)(a1 + 151), 0, 0);
+    message_ref(v5, &v9, (int)(a1 + 151), 0, 0);
     v6 = a1[1];
     v9 = 12321336;
     v8[0] = 12321336;
@@ -43673,7 +43673,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 14023) = v3;
     *(_BYTE *)(a1 + 14024) = 0;
     *(_BYTE *)(a1 + 14025) = 0;
-    sub_604C77D4(a1);
+    G_PlayerNum_00_ref(a1);
     sub_604C6EF0(a1);
     G_Flag_00_ref(a1);
     sub_604C7134(a1);
@@ -45095,7 +45095,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13249484);
     *(_DWORD *)(a1 + 4) = 12575608;
     sub_604C4B0C(a1 + 48);
-    sub_6050208C(a1 + 4056);
+    SE_SYS_DECIDE_ref_50208C(a1 + 4056);
     sub_6045BF30(a1 + 6136);
     sub_6050A308(a1 + 6540);
     *(_DWORD *)(a1 + 14028) = 2139095039;
@@ -45411,7 +45411,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "CourseSelectScene.bflyt";
-    sub_60475CDC(v2, &v6, (int)(a1 + 1024), 0, 0);
+    message_ref(v2, &v6, (int)(a1 + 1024), 0, 0);
     v6 = 12321336;
     v5[0] = 12321336;
     v7 = "Pa_Return_00";
@@ -46532,7 +46532,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604C77D4
+ * G_PlayerNum_00_ref
  * RVA 0x004c77d4   size 0x17c   xrefs 3
  * ============================================================================ */
   unsigned int __fastcall sub_604C77D4(int a1)
@@ -46628,7 +46628,7 @@ static inline unsigned int uxtb16(unsigned int x)
         G_Flag_00_ref((int)a1);
         sub_604C7134((int)a1);
         sub_604C75B8((int)a1);
-        sub_604C77D4((int)a1);
+        G_PlayerNum_00_ref((int)a1);
         v4 = 1;
         a1[14015] = 1;
         a1[14016] = 1;
@@ -46645,7 +46645,7 @@ static inline unsigned int uxtb16(unsigned int x)
       G_Flag_00_ref((int)a1);
       sub_604C7134((int)a1);
       sub_604C75B8((int)a1);
-      sub_604C77D4((int)a1);
+      G_PlayerNum_00_ref((int)a1);
       a1[14015] = 0;
       v6 = a1 + 14015;
       v6[3] = 0;
@@ -46729,7 +46729,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604C7C2C
+ * SE_SYS_PAUSE_ref
  * RVA 0x004c7c2c   size 0x6b0   xrefs 12
  * ============================================================================ */
   int __fastcall sub_604C7C2C(int a1, int a2)
@@ -47341,7 +47341,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047455C(a1 + 40, 0);
     sub_6047459C(a1 + 40, 0);
     if ( *(_DWORD *)(a1 + 21860) == -1 )
-      sub_604D1C04(a1);
+      G_PlayerNum_00_ref_4D1C04(a1);
     else
       CourseSelectVS_Score_00_ref(a1);
     v7 = *(_DWORD *)(a1 + 615700);
@@ -47469,7 +47469,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = v8 == 5;
     if ( !v5 )
     {
-      result = sub_604D2F44(a1);
+      result = SE_SYS_CURSOR_ref_4D2F44(a1);
       if ( !result )
       {
         if ( sub_60502D80(a1 + 3800) || *(_BYTE *)(a1 + 4846) )
@@ -47483,7 +47483,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v7 = 0;
           if ( !*(_BYTE *)(a1 + 52644 * v7 + 94194) )
           {
-            if ( sub_604D3270(a1, 1) == 1 )
+            if ( SE_SYS_PAGE_ref_4D3270(a1, 1) == 1 )
               return sub_604D1A84(a1);
             else
               return sub_604D3C50(a1);
@@ -47705,7 +47705,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604C93C4
+ * SE_SYS_CURSOR_ref_4C93C4
  * RVA 0x004c93c4   size 0x130   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604C93C4(int a1)
@@ -48279,7 +48279,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604CA010
+ * SE_SYS_PAUSE_ref_4CA010
  * RVA 0x004ca010   size 0x48   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604CA010(int a1)
@@ -48447,7 +48447,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
         sub_604D2C94((int)a1);
       if ( a1[5465] == -1 )
-        sub_604D1C04((int)a1);
+        G_PlayerNum_00_ref_4D1C04((int)a1);
       else
         CourseSelectVS_Score_00_ref((int)a1);
       v5 = 13251192;
@@ -48705,7 +48705,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = v8 == 5;
     if ( !v5 )
     {
-      result = sub_604D2F44(a1);
+      result = SE_SYS_CURSOR_ref_4D2F44(a1);
       if ( !result )
       {
         if ( sub_60502D80(a1 + 3800) || *(_BYTE *)(a1 + 4846) )
@@ -49363,7 +49363,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 0;
     v4[73] = v3;
     if ( a1[5465] == -1 )
-      return sub_604D1C04((int)a1);
+      return G_PlayerNum_00_ref_4D1C04((int)a1);
     else
       return CourseSelectVS_Score_00_ref((int)a1);
   }
@@ -49430,7 +49430,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3740) = 0;
     *(_BYTE *)(a1 + 3744) = 0;
     *(_DWORD *)(a1 + 3748) = 0;
-    sub_6050208C(a1 + 3800);
+    SE_SYS_DECIDE_ref_50208C(a1 + 3800);
     memset((void *)(a1 + 5884), 0, 0x374Cu);
     *(_DWORD *)(a1 + 5880) = 12572588;
     *sub_6047611C(a1 + 5880, a1 + 9400, 1) = 12572588;
@@ -49516,7 +49516,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 25464) = 11778612;
     *(_DWORD *)(a1 + 25468) = 0;
     *(_BYTE *)(a1 + 25472) = 0;
-    sub_6050208C(a1 + 25508);
+    SE_SYS_DECIDE_ref_50208C(a1 + 25508);
     sub_6045BF30(a1 + 27588);
     *(_DWORD *)(a1 + 28004) = 0;
     *(_WORD *)(a1 + 28000) = 0;
@@ -49733,7 +49733,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C(a1 + 40);
     v17 = 12321336;
     v18 = (int)"CourseSelectVS.bflyt";
-    sub_60475CDC((_DWORD *)(a1 + 40), &v17, a1 + 3840, 0, 0);
+    message_ref((_DWORD *)(a1 + 40), &v17, a1 + 3840, 0, 0);
     Pa_VSPoint_ref(a1);
     sub_604CDF1C(a1);
     *(_DWORD *)(a1 + 3748) = sub_60473B4C(a1 + 40);
@@ -49745,15 +49745,15 @@ static inline unsigned int uxtb16(unsigned int x)
     v21 = 12321336;
     v22 = 11778612;
     v14 = 12321336;
-    v15 = sub_604D9EB0(0);
+    v15 = N_WinPosL_00_N_WinPosC_00_N_WinPosR_00_ref(0);
     (*(void (__fastcall **)(int *, int *))(v17 + 8))(&v17, &v14);
     v16 = 1;
-    v2 = sub_604D9EB0(1);
+    v2 = N_WinPosL_00_N_WinPosC_00_N_WinPosR_00_ref(1);
     v14 = 12321336;
     v15 = v2;
     (*(void (__fastcall **)(int *, int *))(*(&v17 + 2 * v16) + 8))(&v17 + 2 * v16, &v14);
     v16 = 2;
-    v3 = sub_604D9EB0(2);
+    v3 = N_WinPosL_00_N_WinPosC_00_N_WinPosR_00_ref(2);
     v14 = 12321336;
     v15 = v3;
     (*(void (__fastcall **)(int *, int *))(*(&v17 + 2 * v16) + 8))(&v17 + 2 * v16, &v14);
@@ -49770,7 +49770,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = (*(int (__fastcall **)(_DWORD, int, int))(**(_DWORD **)(v4 + 12) + 48))(*(_DWORD *)(v4 + 12), v7, 1);
     *(_DWORD *)(a1 + 20044) = (*(int (__fastcall **)(int, const char *, int))(*(_DWORD *)v8 + 48))(v8, "B_Arrow_00", 1);
     sub_604CD1B8(a1);
-    sub_60834E7C(&dword_60CA4D60, 0);
+    Model_s_Nin_NX_NVN_szs_ref_834E7C(&dword_60CA4D60, 0);
     v9 = MEMORY[0xC99DEC];
     *(_DWORD *)(a1 + 21860) = -1;
     *(_DWORD *)(a1 + 21864) = 0;
@@ -50202,7 +50202,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C(a1 + 40);
     v12 = 12321336;
     v13 = (int)"CourseSelectVSConfirm.bflyt";
-    sub_60475CDC((_DWORD *)(a1 + 40), &v12, a1 + 3680, 0, 0);
+    message_ref((_DWORD *)(a1 + 40), &v12, a1 + 3680, 0, 0);
     v12 = 12321336;
     v10 = 12321336;
     v13 = (int)"Pa_Return_00";
@@ -50214,11 +50214,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = 11778612;
     v14 = 12321336;
     v15 = 11778612;
-    v3 = sub_604DC078(0);
+    v3 = T_Text_00_T_World_00_ref(0);
     v10 = 12321336;
     v11 = (const char *)v3;
     (*(void (__fastcall **)(int *, int *))(v12 + 8))(&v12, &v10);
-    v4 = sub_604DC078(1);
+    v4 = T_Text_00_T_World_00_ref(1);
     v10 = 12321336;
     v11 = (const char *)v4;
     (*(void (__fastcall **)(int *, int *))(v14 + 8))(&v14, &v10);
@@ -50229,22 +50229,22 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = 11778612;
     v14 = 12321336;
     v15 = 11778612;
-    v5 = sub_604DBE64(0);
+    v5 = InOut_Pos_ref(0);
     v10 = 12321336;
     v11 = (const char *)v5;
     sead::SafeStringBase<char>::operator=(&v12, &v10);
-    v6 = sub_604DBE64(1);
+    v6 = InOut_Pos_ref(1);
     v10 = 12321336;
     v11 = (const char *)v6;
     (*(void (__fastcall **)(int *, int *))(v14 + 8))(&v14, &v10);
     v10 = 2;
     sub_60476030(a1 + 40, &v12, &v10);
-    v7 = sub_604DBE64(1);
+    v7 = InOut_Pos_ref(1);
     v12 = 12321336;
     v13 = v7;
     sub_60473DE4((_DWORD *)(a1 + 40), 1u, &v12, 0);
     sub_6047459C(a1 + 40, 1);
-    v8 = sub_604DBE64(0);
+    v8 = InOut_Pos_ref(0);
     v12 = 12321336;
     v13 = v8;
     sub_60473DE4((_DWORD *)(a1 + 40), 0, &v12, 0);
@@ -50299,7 +50299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C(a1 + 44);
     v22 = 12321336;
     v23 = (int)"CourseSelectVSRandom.bflyt";
-    sub_60475CDC((_DWORD *)(a1 + 44), &v22, a1 + 3732, 0, 0);
+    message_ref((_DWORD *)(a1 + 44), &v22, a1 + 3732, 0, 0);
     v22 = 12321336;
     v20 = 12321336;
     v23 = (int)"Pa_Return_00";
@@ -50327,19 +50327,19 @@ static inline unsigned int uxtb16(unsigned int x)
     v25[1] = 11778612;
     v26[0] = 12321336;
     v26[1] = 11778612;
-    v6 = sub_604DCDAC(0);
+    v6 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(0);
     v20 = 12321336;
     v21 = (const char *)v6;
     sead::SafeStringBase<char>::operator=(&v22, &v20);
-    v7 = sub_604DCDAC(1);
+    v7 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(1);
     v20 = 12321336;
     v21 = (const char *)v7;
     (*(void (__fastcall **)(_DWORD *, int *))(v24[0] + 8))(v24, &v20);
-    v8 = sub_604DCDAC(2);
+    v8 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(2);
     v20 = 12321336;
     v21 = (const char *)v8;
     (*(void (__fastcall **)(_DWORD *, int *))(v25[0] + 8))(v25, &v20);
-    v9 = sub_604DCDAC(3);
+    v9 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
     v20 = 12321336;
     v21 = (const char *)v9;
     (*(void (__fastcall **)(_DWORD *, int *))(v26[0] + 8))(v26, &v20);
@@ -50353,7 +50353,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v21 = (const char *)v10;
     (*(void (__fastcall **)(int *, int *))(v22 + 8))(&v22, &v20);
     sub_604734E4((_DWORD *)(a1 + 5792), 0);
-    v11 = sub_604DC9F8(0);
+    v11 = Pa_ArrowL_00_Pa_ArrowR_00_ref(0);
     v20 = 12321336;
     v21 = (const char *)v11;
     sub_60476388((_DWORD *)(a1 + 5792), a1 + 44, &v20);
@@ -50361,7 +50361,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v19 = 1;
     v12(a1 + 5792, &v22, &v19);
     sub_604734E4((_DWORD *)(a1 + 9332), 0);
-    v13 = sub_604DC9F8(1);
+    v13 = Pa_ArrowL_00_Pa_ArrowR_00_ref(1);
     v20 = 12321336;
     v21 = (const char *)v13;
     sub_60476388((_DWORD *)(a1 + 9332), a1 + 44, &v20);
@@ -50372,12 +50372,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v15 = *(_DWORD *)(a1 + 13276);
     if ( v15 == 2 )
     {
-      v16 = sub_604DCDAC(1);
+      v16 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(1);
       goto LABEL_9;
     }
     if ( !v15 )
     {
-      v16 = sub_604DCDAC(2);
+      v16 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(2);
   LABEL_9:
       v22 = 12321336;
       v23 = v16;
@@ -50385,7 +50385,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604745C0(a1 + 44, 1);
       sub_6047455C(a1 + 44, 1);
     }
-    v17 = sub_604DCDAC(0);
+    v17 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(0);
     v22 = 12321336;
     v23 = v17;
     sub_60473DE4((_DWORD *)(a1 + 44), 0, &v22, 0);
@@ -51071,12 +51071,12 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C(a1 + 60);
     v20 = 12321336;
     v21 = (int)"CourseSelectVSWin.bflyt";
-    sub_60475CDC((_DWORD *)(a1 + 60), &v20, a1 + 3940, 0, 0);
+    message_ref((_DWORD *)(a1 + 60), &v20, a1 + 3940, 0, 0);
     v12 = sub_60473B4C(a1 + 60);
     *(_DWORD *)(a1 + 3648) = v12;
     *(_BYTE *)(v12 + 64) |= 2u;
     sub_604D5588(a1);
-    sub_604D57C0(a1);
+    CourseSelVSWin_ref(a1);
     sub_604D5934(a1);
     v20 = 12321336;
     v21 = 11778612;
@@ -51085,13 +51085,13 @@ static inline unsigned int uxtb16(unsigned int x)
     v23[0] = 12321336;
     v23[1] = 11778612;
     v18 = 12321336;
-    v19 = sub_604DBAB0(0);
+    v19 = Out_Select_Mode_ref(0);
     sead::SafeStringBase<char>::operator=(&v20, &v18);
-    v13 = sub_604DBAB0(1);
+    v13 = Out_Select_Mode_ref(1);
     v18 = 12321336;
     v19 = v13;
     (*(void (__fastcall **)(_DWORD *, int *))(v22[0] + 8))(v22, &v18);
-    v14 = sub_604DBAB0(2);
+    v14 = Out_Select_Mode_ref(2);
     v18 = 12321336;
     v19 = v14;
     (*(void (__fastcall **)(_DWORD *, int *))(v23[0] + 8))(v23, &v18);
@@ -51621,7 +51621,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604D1C04
+ * G_PlayerNum_00_ref_4D1C04
  * RVA 0x004d1c04   size 0x1b0   xrefs 3
  * ============================================================================ */
   int __fastcall sub_604D1C04(int a1)
@@ -52275,7 +52275,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v31[0] = *(_DWORD *)(a1 + 52620);
     *(_DWORD *)(a1 + 4928) = v31[0];
     v31[0] = 12321336;
-    v31[1] = sub_604DBAB0(2);
+    v31[1] = Out_Select_Mode_ref(2);
     sub_60473DE4((_DWORD *)(a1 + 60), 2u, v31, 0);
     sub_6047455C(a1 + 60, 2);
     sub_6047459C(a1 + 60, 2);
@@ -52630,7 +52630,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604D2F44
+ * SE_SYS_CURSOR_ref_4D2F44
  * RVA 0x004d2f44   size 0x11c   xrefs 2
  * ============================================================================ */
   int __fastcall sub_604D2F44(int a1)
@@ -52776,7 +52776,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604D3270
+ * SE_SYS_PAGE_ref_4D3270
  * RVA 0x004d3270   size 0x2fc   xrefs 2
  * ============================================================================ */
   int __fastcall sub_604D3270(int a1, int a2)
@@ -53332,7 +53332,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v18; // r3
   
     v2 = 1;
-    if ( sub_604D3270(a1, 0) )
+    if ( SE_SYS_PAGE_ref_4D3270(a1, 0) )
       return v2;
     if ( sub_6045C130(a1 + 20244) == 1 )
     {
@@ -53483,7 +53483,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v16 = 0;
       *(_DWORD *)(a1 + 6136) = 0;
       v14 = 12321336;
-      v15 = (const char *)sub_604DBE64(1);
+      v15 = (const char *)InOut_Pos_ref(1);
       sub_60473DE4((_DWORD *)(a1 + 40), 1u, &v14, 0);
       sub_6047455C(a1 + 40, 1);
       sub_6047459C(a1 + 40, 1);
@@ -53499,7 +53499,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v16 = 0;
         *(_DWORD *)(a1 + 6136) = 0;
         v14 = 12321336;
-        v15 = (const char *)sub_604DBE64(1);
+        v15 = (const char *)InOut_Pos_ref(1);
         sub_60473DE4((_DWORD *)(a1 + 40), 1u, &v14, 0);
         sub_6047455C(a1 + 40, 1);
         sub_6047459C(a1 + 40, 1);
@@ -53519,7 +53519,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 6136) = 0;
       }
       v14 = 12321336;
-      v15 = (const char *)sub_604DBE64(1);
+      v15 = (const char *)InOut_Pos_ref(1);
       sub_60473DE4((_DWORD *)(a1 + 40), 1u, &v14, 0);
       sub_6047455C(a1 + 40, 1);
       sub_6047459C(a1 + 40, 1);
@@ -53930,7 +53930,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     sub_604D70FC(a1);
     v3[0] = 12321336;
-    v3[1] = sub_604DBAB0(0);
+    v3[1] = Out_Select_Mode_ref(0);
     return sub_60473DE4((_DWORD *)(a1 + 60), 0, v3, 0);
   }
 
@@ -53957,7 +53957,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v3[2]; // [sp+0h] [bp-8h] BYREF
   
     v3[0] = 12321336;
-    v3[1] = sub_604DBAB0(1u);
+    v3[1] = Out_Select_Mode_ref(1u);
     return sub_60473DE4((_DWORD *)(a1 + 60), 1u, v3, 0);
   }
 
@@ -54066,9 +54066,9 @@ static inline unsigned int uxtb16(unsigned int x)
   
     sub_604D70FC(a1);
     v4 = 12321336;
-    v5 = sub_604DBAB0(0);
+    v5 = Out_Select_Mode_ref(0);
     sub_60473DE4((_DWORD *)(a1 + 60), 0, &v4, 0);
-    v2 = sub_604DBAB0(1u);
+    v2 = Out_Select_Mode_ref(1u);
     v4 = 12321336;
     v5 = v2;
     sub_60473DE4((_DWORD *)(a1 + 60), 1u, &v4, 0);
@@ -54100,7 +54100,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     sub_604D70FC(a1);
     v3[0] = 12321336;
-    v3[1] = sub_604DBAB0(1u);
+    v3[1] = Out_Select_Mode_ref(1u);
     return sub_604741D8((_DWORD *)(a1 + 60), 1u, v3, 0);
   }
 
@@ -54127,7 +54127,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v3[2]; // [sp+0h] [bp-8h] BYREF
   
     v3[0] = 12321336;
-    v3[1] = sub_604DBAB0(0);
+    v3[1] = Out_Select_Mode_ref(0);
     return sub_604741D8((_DWORD *)(a1 + 60), 0, v3, 0);
   }
 
@@ -54164,7 +54164,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v3[2]; // [sp+0h] [bp-8h] BYREF
   
     v3[0] = 12321336;
-    v3[1] = sub_604DBAB0(0);
+    v3[1] = Out_Select_Mode_ref(0);
     return sub_604741D8((_DWORD *)(a1 + 60), 0, v3, 0);
   }
 
@@ -54222,7 +54222,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3640) = 0;
     *(_BYTE *)(a1 + 3644) = 0;
     memset((void *)(a1 + 3648), 0, 0xFCu);
-    sub_6050208C(a1 + 3900);
+    SE_SYS_DECIDE_ref_50208C(a1 + 3900);
     v2 = a1 + 5980;
     memset((void *)(a1 + 5980), 0, 0xB3C4u);
     do
@@ -54431,7 +54431,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604D57C0
+ * CourseSelVSWin_ref
  * RVA 0x004d57c0   size 0x160   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604D57C0(int a1)
@@ -54970,7 +54970,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v14 <= 0 )
         v14 = 0;
       v15 = sub_609184C4(*(_DWORD *)(v24 + 20), v14);
-      v16 = sub_6091FD58(v26);
+      v16 = agl_TextureData_ref(v26);
       sub_60959954(v16, v15);
       v17 = *v9;
       if ( *v7 > v11 )
@@ -55582,7 +55582,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_BYTE *)(a1 + 37) = 1;
     v3[0] = 12321336;
-    v3[1] = sub_604DBE64(0);
+    v3[1] = InOut_Pos_ref(0);
     return sub_60473DE4((_DWORD *)(a1 + 40), 0, v3, 0);
   }
 
@@ -55741,7 +55741,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     sub_60502548(a1 + 3640);
     v3[0] = 12321336;
-    v3[1] = sub_604DBE64(0);
+    v3[1] = InOut_Pos_ref(0);
     return sub_604741D8((_DWORD *)(a1 + 40), 0, v3, 0);
   }
 
@@ -55814,15 +55814,15 @@ static inline unsigned int uxtb16(unsigned int x)
     v8[4] = 12321336;
     v8[5] = 11778612;
     v5 = 12321336;
-    v6 = (const char *)sub_604DC42C(0);
+    v6 = (const char *)Pa_Return_00_Pa_BtnLB_00_Pa_BtnRB_00_ref(0);
     MEMORY[0xBC0240](v8, &v5);
     v7 = 1;
-    v2 = sub_604DC42C(1);
+    v2 = Pa_Return_00_Pa_BtnLB_00_Pa_BtnRB_00_ref(1);
     v5 = 12321336;
     v6 = (const char *)v2;
     (*(void (__fastcall **)(_DWORD *, int *))(v8[2 * v7] + 8))(&v8[2 * v7], &v5);
     v7 = 2;
-    v3 = sub_604DC42C(2);
+    v3 = Pa_Return_00_Pa_BtnLB_00_Pa_BtnRB_00_ref(2);
     v5 = 12321336;
     v6 = (const char *)v3;
     (*(void (__fastcall **)(_DWORD *, int *))(v8[2 * v7] + 8))(&v8[2 * v7], &v5);
@@ -56039,7 +56039,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 37) = 1;
     *(_DWORD *)(a1 + 40) = 0;
     v6[0] = 12321336;
-    v6[1] = sub_604DCDAC(0);
+    v6[1] = InOut_ScrollToR_ScrollToL_LoopArrow_ref(0);
     sub_60473DE4((_DWORD *)(a1 + 44), 0, v6, 0);
     v6[0] = 257;
     v2 = *(_DWORD *)(a1 + 13276);
@@ -56274,7 +56274,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     if ( sub_60502D80(a1 + 3692) || *(_BYTE *)(a1 + 4738) )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13254904);
-    if ( !sub_604D95CC(a1) )
+    if ( !SE_SYS_PAGE_ref_4D95CC(a1) )
       return sub_604D9B70(a1);
     *(_BYTE *)(a1 + 4746) = 0;
     return 4746;
@@ -56290,7 +56290,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r0
     unsigned int v4; // r1
   
-    if ( sub_604D9864(a1) == 1 )
+    if ( SE_SYS_PAGE_ref_4D9864(a1) == 1 )
     {
       result = 4746;
       *(_BYTE *)(a1 + 4746) = 0;
@@ -56355,7 +56355,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v3[2]; // [sp+0h] [bp-8h] BYREF
   
     v3[0] = 12321336;
-    v3[1] = sub_604DCDAC(0);
+    v3[1] = InOut_ScrollToR_ScrollToL_LoopArrow_ref(0);
     sub_604741D8((_DWORD *)(a1 + 44), 0, v3, 0);
     return sub_60502548(a1 + 3692);
   }
@@ -56563,13 +56563,13 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_DWORD *)(a1 + 13276) == 1 )
     {
       v3 = 12321336;
-      v4 = sub_604DCDAC(2u);
+      v4 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(2u);
       sub_60473DE4(v1 - 3308, 1u, &v3, 0);
     }
     else
     {
       v3 = 12321336;
-      v4 = sub_604DCDAC(1u);
+      v4 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(1u);
       sub_604741D8(v1 - 3308, 1u, &v3, 0);
     }
     result = *v1 - 1;
@@ -56706,13 +56706,13 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_DWORD *)(a1 + 13276) == 1 )
     {
       v3 = 12321336;
-      v4 = sub_604DCDAC(1u);
+      v4 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(1u);
       sub_60473DE4(v1 - 3308, 1u, &v3, 0);
     }
     else
     {
       v3 = 12321336;
-      v4 = sub_604DCDAC(2u);
+      v4 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(2u);
       sub_604741D8(v1 - 3308, 1u, &v3, 0);
     }
     result = *v1 + 1;
@@ -56799,7 +56799,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3644) = 0;
     *(_BYTE *)(a1 + 3648) = 0;
     memset((void *)(a1 + 3652), 0, 0x28u);
-    sub_6050208C(a1 + 3692);
+    SE_SYS_DECIDE_ref_50208C(a1 + 3692);
     memset((void *)(a1 + 5796), 0, 0x1BA4u);
     *(_DWORD *)(a1 + 5792) = 12572588;
     *sub_6047611C(a1 + 5792, a1 + 9312, 1) = 12572588;
@@ -57024,7 +57024,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604D95CC
+ * SE_SYS_PAGE_ref_4D95CC
  * RVA 0x004d95cc   size 0x25c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604D95CC(int a1)
@@ -57127,7 +57127,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604D9864
+ * SE_SYS_PAGE_ref_4D9864
  * RVA 0x004d9864   size 0x128   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604D9864(int a1)
@@ -57267,12 +57267,12 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA4D58);
     }
     v22 = 12321336;
-    v23 = sub_604DCDAC(3);
+    v23 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
     v3 = (_DWORD *)(a1 + 44);
     v20 = 12321336;
     v21 = sub_604DD940(dword_60CA4DE8);
     v4 = sub_604746E4(a1 + 44, &v22, &v20);
-    v5 = sub_604DCDAC(3);
+    v5 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
     v22 = 12321336;
     v23 = v5;
     v6 = sub_604DD940(dword_60CA4DEC);
@@ -57287,18 +57287,18 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v8 )
       {
         v15 = dword_60CA4DE8;
-        v16 = sub_604DCDAC(3);
+        v16 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
         v22 = 12321336;
         v23 = v16;
         sub_604742D0(v3, v15, &v22, v4, 1);
         v17 = dword_60CA4DEC;
-        v18 = sub_604DCDAC(3);
+        v18 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
         v22 = 12321336;
         v23 = v18;
         sub_604742D0(v3, v17, &v22, v7, 1);
         goto LABEL_11;
       }
-      v14 = sub_604DCDAC(3);
+      v14 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
       v22 = 12321336;
       v23 = v14;
       sub_604742D0(v3, 3u, &v22, v4, 1);
@@ -57309,7 +57309,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( !v8 )
     {
-      v11 = sub_604DCDAC(3);
+      v11 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
       v22 = 12321336;
       v23 = v11;
       sub_604742D0(v3, 2u, &v22, v7, 1);
@@ -57347,7 +57347,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604D9EB0
+ * N_WinPosL_00_N_WinPosC_00_N_WinPosR_00_ref
  * RVA 0x004d9eb0   size 0x1c4   xrefs 3
  * ============================================================================ */
   int __fastcall sub_604D9EB0(unsigned int a1)
@@ -58660,7 +58660,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604DBAB0
+ * Out_Select_Mode_ref
  * RVA 0x004dbab0   size 0x1c4   xrefs 11
  * ============================================================================ */
   int __fastcall sub_604DBAB0(unsigned int a1)
@@ -58833,7 +58833,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604DBE64
+ * InOut_Pos_ref
  * RVA 0x004dbe64   size 0x1c4   xrefs 10
  * ============================================================================ */
   int __fastcall sub_604DBE64(unsigned int a1)
@@ -58902,7 +58902,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604DC078
+ * T_Text_00_T_World_00_ref
  * RVA 0x004dc078   size 0x1c4   xrefs 2
  * ============================================================================ */
   int __fastcall sub_604DC078(unsigned int a1)
@@ -59075,7 +59075,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604DC42C
+ * Pa_Return_00_Pa_BtnLB_00_Pa_BtnRB_00_ref
  * RVA 0x004dc42c   size 0x1c4   xrefs 3
  * ============================================================================ */
   int __fastcall sub_604DC42C(unsigned int a1)
@@ -59317,7 +59317,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604DC9F8
+ * Pa_ArrowL_00_Pa_ArrowR_00_ref
  * RVA 0x004dc9f8   size 0x1c4   xrefs 2
  * ============================================================================ */
   int __fastcall sub_604DC9F8(unsigned int a1)
@@ -59490,7 +59490,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604DCDAC
+ * InOut_ScrollToR_ScrollToL_LoopArrow_ref
  * RVA 0x004dcdac   size 0x1c4   xrefs 19
  * ============================================================================ */
   int __fastcall sub_604DCDAC(unsigned int a1)
@@ -60779,7 +60779,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"CourseSelectWorldName.bflyt";
-    sub_60475CDC(v2, v6, 0, 0, 0);
+    message_ref(v2, v6, 0, 0, 0);
     if ( ((unsigned int)&unk_60CA5060 & ~(1615717408 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA5060) )
     {
       dword_60CA5070 = 12321336;
@@ -61008,7 +61008,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12572424;
     *(_BYTE *)(a1 + 12) = 0;
-    sub_6047E4BC(a1 + 24);
+    SE_SYS_BACK_ref(a1 + 24);
     v2 = sub_6045BF30(a1 + 88);
     *(_BYTE *)(a1 + 492) = 0;
     *(_BYTE *)(a1 + 493) = 0;
@@ -61158,7 +61158,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604DEBF0
+ * DarknessFrame_bflyt_ref
  * RVA 0x004debf0   size 0x98   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604DEBF0(int a1)
@@ -61171,7 +61171,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v4[0] = 12321336;
     v4[1] = "DarknessFrame.bflyt";
-    sub_60475CDC(v2, v4, 0, 0, 0);
+    message_ref(v2, v4, 0, 0, 0);
     return (*(int (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3524) + 12))(
              *(_DWORD *)(a1 + 3524),
              10029528,
@@ -61600,7 +61600,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604DF3C4
+ * SE_SYS_DECIDE_ref_4DF3C4
  * RVA 0x004df3c4   size 0x54   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604DF3C4(int a1)
@@ -61655,7 +61655,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604DF4B4
+ * InOutMenu_ref
  * RVA 0x004df4b4   size 0x308   xrefs 0
  * ============================================================================ */
   int sub_604DF4B4()
@@ -62289,7 +62289,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"EventWindow.bflyt";
-    sub_60475CDC(v2, v5, 0, 0, 0);
+    message_ref(v2, v5, 0, 0, 0);
     sub_604E06F8(a1);
     if ( ((unsigned int)&unk_60CA5350 & ~(1615725592 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA5350) )
     {
@@ -62428,7 +62428,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604E0844
+ * PositionY_ref
  * RVA 0x004e0844   size 0x240   xrefs 0
  * ============================================================================ */
   int sub_604E0844()
@@ -62614,7 +62614,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604E0C28
+ * Rotate_ref
  * RVA 0x004e0c28   size 0x32c   xrefs 0
  * ============================================================================ */
   int sub_604E0C28()
@@ -63152,7 +63152,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"Command.bflyt";
-    sub_60475CDC(v2, v7, 0, 0, 0);
+    message_ref(v2, v7, 0, 0, 0);
     if ( ((unsigned int)&unk_60CA55C0 & ~(1615730852 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA55C0) )
     {
       dword_60CA55EC = 12321336;
@@ -64443,7 +64443,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604E34D0
+ * SE_SYS_DIALOGUE_OUT_AUTO_ref
  * RVA 0x004e34d0   size 0x30   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604E34D0(int a1)
@@ -64575,7 +64575,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v8[0] = 12321336;
     v8[1] = (int)"GameOver.bflyt";
-    sub_60475CDC(v2, v8, 0, 0, 0);
+    message_ref(v2, v8, 0, 0, 0);
     if ( ((unsigned int)&unk_60CA5950 & ~(1615739020 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA5950) )
     {
       dword_60CA5964 = 12321336;
@@ -65938,7 +65938,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (const char *)dword_60CA5AF4;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA5AF8 + 3))(&off_60CA5AF8);
     sub_608FDDF4(&v8, "%s.%s", v2, (const char *)dword_60CA5AFC);
-    sub_60475CDC(*(_DWORD **)(a1 + 4), &v8, 0, 0, 0);
+    message_ref(*(_DWORD **)(a1 + 4), &v8, 0, 0, 0);
     Pa_IconB_ref(a1);
     Pa_IconA_ref(a1);
     Pa_VSIcon_ref(a1);
@@ -69121,7 +69121,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   void __fastcall sub_604EA0DC(int a1)
   {
-    sub_604EA114(a1);
+    ChallengeGameScene_bflyt_ref(a1);
     sub_604EA3C8(a1);
     sub_604EA520(a1);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 44))(a1);
@@ -69129,7 +69129,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604EA114
+ * ChallengeGameScene_bflyt_ref
  * RVA 0x004ea114   size 0x25c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604EA114(int a1)
@@ -69187,7 +69187,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = *(_DWORD **)(a1 + 4);
     v10 = 12321336;
     v11 = "ChallengeGameScene.bflyt";
-    sub_60475CDC(v5, &v10, 0, 0, 0);
+    message_ref(v5, &v10, 0, 0, 0);
     if ( ((unsigned int)&unk_60CA5E90 & ~(1615766080 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA5E90) )
     {
       dword_60CA5F30 = 12321336;
@@ -69830,7 +69830,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604EB4AC
+ * s_02d_ref
  * RVA 0x004eb4ac   size 0xc4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604EB4AC(_DWORD *a1)
@@ -70140,7 +70140,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 14384) = 11778612;
     *(_DWORD *)(a1 + 14388) = 0;
     *(_BYTE *)(a1 + 14392) = 0;
-    sub_6050208C(a1 + 14396);
+    SE_SYS_DECIDE_ref_50208C(a1 + 14396);
     *(_DWORD *)(a1 + 16488) = 0;
     *(_DWORD *)(a1 + 16492) = 0;
     sub_6050A308(a1 + 16496);
@@ -70185,12 +70185,12 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // [sp+14h] [bp-8h] BYREF
     const char *v11; // [sp+18h] [bp-4h]
   
-    sub_60834E7C(&dword_60CA60D0, 0);
+    Model_s_Nin_NX_NVN_szs_ref_834E7C(&dword_60CA60D0, 0);
     sub_604734E4((_DWORD *)(a1 + 10808), 0);
     sub_60475C8C(a1 + 10808);
     v10 = 12321336;
     v11 = "Help.bflyt";
-    sub_60475CDC((_DWORD *)(a1 + 10808), &v10, a1 + 14436, 0, 0);
+    message_ref((_DWORD *)(a1 + 10808), &v10, a1 + 14436, 0, 0);
     v10 = 12321336;
     v9[0] = 12321336;
     v11 = "Pa_Close_00";
@@ -70272,7 +70272,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(sub_608DE61C(a1 + 14448, *v3) - *(_DWORD *)(a1 + 14460) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(sub_608DE61C(a1 + 14448, *v3) - *(_DWORD *)(a1 + 14460) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     v7 = sub_604EC71C();
-    sub_604EC910(a1, v7);
+    HelpImage__02d_ref(a1, v7);
     sub_604ECAA8(a1, v7);
     *(float *)(a1 + 23732) = *(float *)(*(_DWORD *)(a1 + 23716) + 24) - *(float *)(*(_DWORD *)(a1 + 23712) + 24);
     return a1 + 23732;
@@ -70435,7 +70435,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604EC910
+ * HelpImage__02d_ref
  * RVA 0x004ec910   size 0x188   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604EC910(int a1, signed int a2, int a3, int a4)
@@ -70509,7 +70509,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v17 <= 0 )
           v17 = 0;
         v18 = sub_609184C4(*(_DWORD *)(v13 + 20), v17);
-        v19 = sub_6091FD58(v20);
+        v19 = agl_TextureData_ref(v20);
         sub_60959954(v19, v18);
         sub_6098E0F8(v15, v20, 0);
         result = sub_609175E4(&v21);
@@ -71314,7 +71314,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60473DE4((_DWORD *)(a1 + 40), 0, (_DWORD *)0xCA61A8, 0);
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_NEW_OSHIRASE", 0);
     sub_604EE4B0(a1);
-    sub_608164F8(MEMORY[0xCC6B68], 10);
+    SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 10);
     *(_BYTE *)(a1 + 10833) = 1;
     return 10833;
   }
@@ -71362,7 +71362,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604EDBC4
+ * SE_SYS_DECIDE_ref_4EDBC4
  * RVA 0x004edbc4   size 0x4c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604EDBC4(int a1)
@@ -71543,7 +71543,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v5 = 12321336;
     v6 = "InfoWindow.bflyt";
-    sub_60475CDC(v2, &v5, 0, 0, 0);
+    message_ref(v2, &v5, 0, 0, 0);
     v5 = 12321336;
     v6 = "Pa_KeyAssign_00";
     sub_6050A4EC(a1 + 904, v2, &v5, 1, 1);
@@ -71921,7 +71921,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 74477) = 1;
     *(_BYTE *)(a1 + 74478) = 1;
     *(_BYTE *)(a1 + 74479) = 0;
-    return sub_608164F8(MEMORY[0xCC6B68], 4);
+    return SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 4);
   }
 
 /* ============================================================================
@@ -72454,7 +72454,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604EF5B4
+ * SE_SYS_INVALID_ref_4EF5B4
  * RVA 0x004ef5b4   size 0x130   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604EF5B4(_DWORD *a1)
@@ -73031,7 +73031,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 46076) = 11778612;
     *(_DWORD *)(a1 + 46080) = 0;
     *(_BYTE *)(a1 + 46084) = 0;
-    sub_6050208C(a1 + 46088);
+    SE_SYS_DECIDE_ref_50208C(a1 + 46088);
     sub_604793CC(a1 + 48168);
     sub_6045BF30(a1 + 48184);
     MovingSoundActor_ctor(a1 + 48588, 0, 1);
@@ -73296,7 +73296,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = "ItemList.bflyt";
     }
     v8 = v3;
-    sub_60475CDC(v2, &v7, (int)(a1 + 11532), (int)(a1 + 12042), 0);
+    message_ref(v2, &v7, (int)(a1 + 11532), (int)(a1 + 12042), 0);
     v7 = 12321336;
     v6[0] = 12321336;
     v8 = "Pa_Cancel_00";
@@ -74788,7 +74788,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604F3F60
+ * SE_SYS_DIALOGUE_IN_ref_4F3F60
  * RVA 0x004f3f60   size 0x98   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604F3F60(int a1)
@@ -74798,7 +74798,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 7142) = 0;
     *(_BYTE *)(a1 + 7142) = *(_BYTE *)(MEMORY[0xCC6D78] + 20) ^ 1;
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
-    return sub_608164F8(MEMORY[0xCC6B68], 4);
+    return SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 4);
   }
 
 /* ============================================================================
@@ -74887,7 +74887,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604F4148
+ * SE_SYS_DIALOGUE_OUT_AUTO_ref_4F4148
  * RVA 0x004f4148   size 0x40   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604F4148(int a1)
@@ -74921,7 +74921,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604F41D0
+ * SE_SYS_DIALOGUE_IN_ref_4F41D0
  * RVA 0x004f41d0   size 0x98   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604F41D0(int a1)
@@ -74930,7 +74930,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60473DE4((_DWORD *)(a1 + 3596), 0, (_DWORD *)0xCA67EC, 0);
     *(_BYTE *)(a1 + 7142) = 0;
     *(_BYTE *)(a1 + 7142) = *(_BYTE *)(MEMORY[0xCC6D78] + 20) ^ 1;
-    sub_608164F8(MEMORY[0xCC6B68], 4);
+    SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 4);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
   }
 
@@ -75531,7 +75531,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604F4E20
+ * SE_SYS_DIALOGUE_IN_ref_4F4E20
  * RVA 0x004f4e20   size 0x6c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604F4E20(int a1)
@@ -75605,7 +75605,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
     sub_60473B58(v2, 0xEu, nullptr);
-    sub_604F7D9C(*v3, (int)(v3 - 623));
+    SE_SYS_BACK_ref_4F7D9C(*v3, (int)(v3 - 623));
     result = *(_DWORD *)(*v3 + 5804);
     if ( result )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13265372);
@@ -75894,7 +75894,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 7140) = 0;
     *(_BYTE *)(a1 + 7142) = 0;
     sub_6045BF30(a1 + 7144);
-    sub_6050208C(a1 + 7548);
+    SE_SYS_DECIDE_ref_50208C(a1 + 7548);
     *(_DWORD *)(a1 + 3588) = 0;
     *(_DWORD *)(a1 + 3592) = 0;
     *(_DWORD *)(a1 + 9648) = 0;
@@ -76020,7 +76020,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(v9 + 3536) = 11778612;
     *(_DWORD *)(v9 + 3540) = 0;
     *(_BYTE *)(v9 + 3544) = 0;
-    sub_6050208C(v9 + 3720);
+    SE_SYS_DECIDE_ref_50208C(v9 + 3720);
     *(_DWORD *)(v9 + 5800) = v8;
     sub_604F8D20(v9);
     sub_604F8E9C(v9);
@@ -76060,7 +76060,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[1] = 12321336;
     v6[2] = (int)"CourseSelect";
     sub_60475C8C(a1 + 40);
-    sub_60475CDC((_DWORD *)(a1 + 40), &dword_60CA6CE0[2 * v3 + 4], a1 + 7588, 0, 0);
+    message_ref((_DWORD *)(a1 + 40), &dword_60CA6CE0[2 * v3 + 4], a1 + 7588, 0, 0);
     if ( ((unsigned int)&unk_60CA6C6C & ~(1615813488 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA6C6C) )
     {
       dword_60CA6D90 = 12321336;
@@ -77274,7 +77274,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604F7D9C
+ * SE_SYS_BACK_ref_4F7D9C
  * RVA 0x004f7d9c   size 0x104   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604F7D9C(int a1, int a2)
@@ -77829,7 +77829,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
     sub_604734E4((_DWORD *)a1, 0);
     sub_60475C8C(a1);
-    sub_60475CDC((_DWORD *)a1, &dword_60CA6CE0[2 * v3 + 16], a1 + 3760, 0, 0);
+    message_ref((_DWORD *)a1, &dword_60CA6CE0[2 * v3 + 16], a1 + 3760, 0, 0);
     (*(void (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3520) + 12))(*(_DWORD *)(a1 + 3520), 10029528, 0);
     v4 = sub_60473B4C(a1);
     return sub_608589FC(*(_DWORD *)(a1 + 5800), v4);
@@ -78284,7 +78284,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 3690) = 1;
     }
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_KO_DIALOGUE_IN", 0);
-    return sub_608164F8(MEMORY[0xCC6B68], 13);
+    return SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 13);
   }
 
 /* ============================================================================
@@ -78396,7 +78396,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * SE_MG_CMN_WIN_ref
+ * SE_MG_CMN_WIN_CL_ref
  * RVA 0x004f9a24   size 0x21c   xrefs 0
  * ============================================================================ */
   int __fastcall SE_MG_CMN_WIN_ref(int a1)
@@ -78843,7 +78843,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"TalkWindow.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CA7024 & ~(1615832008 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA7024) )
     {
       dword_60CA7070 = 12321336;
@@ -79791,7 +79791,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604FBAF4
+ * SE_SYS_PAGE_ref_4FBAF4
  * RVA 0x004fbaf4   size 0x2d0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604FBAF4(int a1)
@@ -80276,7 +80276,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 35496) = 11778612;
     *(_DWORD *)(a1 + 35500) = 0;
     *(_BYTE *)(a1 + 35504) = 0;
-    sub_6050208C(a1 + 35508);
+    SE_SYS_DECIDE_ref_50208C(a1 + 35508);
     sub_6045BF30(a1 + 37768);
     sub_6045BF30(a1 + 38172);
     sub_6045BF30(a1 + 38576);
@@ -80371,7 +80371,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v4);
     v20 = 12321336;
     v21 = "MiiSelectWindow.bflyt";
-    sub_60475CDC(v4, &v20, a1 + 35548, 0, 0);
+    message_ref(v4, &v20, a1 + 35548, 0, 0);
     if ( ((unsigned int)&unk_60CA72A0 & ~(1615840804 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA72A0) )
     {
       dword_60CA7320 = 12321336;
@@ -81531,7 +81531,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604FE6A8
+ * MovieFrame_bflyt_ref
  * RVA 0x004fe6a8   size 0x8c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604FE6A8(int a1)
@@ -81544,7 +81544,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v3[0] = 12321336;
     v3[1] = (int)"MovieFrame.bflyt";
-    sub_60475CDC(v1, v3, 0, 0, 0);
+    message_ref(v1, v3, 0, 0, 0);
     v3[0] = 0;
     return sub_60476030((int)v1, nullptr, v3);
   }
@@ -81865,7 +81865,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 36), a1 + 20, 13267784);
     *(_DWORD *)(a1 + 16) = 12578768;
     *(_DWORD *)(a1 + 52) = 0;
-    sub_6050208C(a1 + 56);
+    SE_SYS_DECIDE_ref_50208C(a1 + 56);
     *(_DWORD *)(a1 + 2140) = 12570900;
     *sub_60475900(a1 + 2140, a1 + 5668, 1) = 12570900;
     *(_DWORD *)(a1 + 5668) = 0;
@@ -81957,7 +81957,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (const char *)dword_60CA740C;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA7410 + 3))(&off_60CA7410);
     sub_608FDDF4(&v6, "%s.%s", v3, (const char *)dword_60CA7414);
-    sub_60475CDC(v2, &v6, (int)(a1 + 24), 0, 0);
+    message_ref(v2, &v6, (int)(a1 + 24), 0, 0);
     v11[0] = 12321336;
     v10[0] = 12321336;
     v11[1] = (int)"Pa_Close_00";
@@ -82185,7 +82185,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v21 = v4;
           v22 = sub_608DE1A4(272, 16);
-          sub_6098530C(v22, a1[3796], a1[539]);
+          LetterAnimOn_ref_98530C(v22, a1[3796], a1[539]);
           *v19 = v22;
           v23 = v22;
           v4 = v21;
@@ -82223,7 +82223,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v13 )
       {
         v14 = sub_608DE1A4(272, 16);
-        sub_6098530C(v14, a1[3746], a1[539]);
+        LetterAnimOn_ref_98530C(v14, a1[3746], a1[539]);
         *v12 = v14;
         sub_608589FC(*v35, v14);
         v11 = *v12;
@@ -82849,7 +82849,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3576) = 11778612;
     *(_DWORD *)(a1 + 3580) = 0;
     *(_BYTE *)(a1 + 3584) = 0;
-    sub_6050208C(a1 + 3588);
+    SE_SYS_DECIDE_ref_50208C(a1 + 3588);
     sub_6045BF30(a1 + 5700);
     sub_6045BF30(a1 + 6104);
     sub_6045BF30(a1 + 6508);
@@ -82957,7 +82957,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (const char *)dword_60CA75B4;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA75B8 + 3))(&off_60CA75B8);
     sub_608FDDF4(&v7, "%s.%s", v3, (const char *)dword_60CA75BC);
-    sub_60475CDC(v2, &v7, a1 + 3628, 0, 0);
+    message_ref(v2, &v7, a1 + 3628, 0, 0);
     if ( ((unsigned int)&unk_60CA7598 & ~(1615858424 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA7598) )
     {
       dword_60CA7620 = 12321336;
@@ -83324,7 +83324,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * OverlayDialog_OverlayDialog_ref
+ * OverlayDialog_ref
  * RVA 0x00501608   size 0x250   xrefs 0
  * ============================================================================ */
   int OverlayDialog_OverlayDialog_ref()
@@ -83972,7 +83972,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6050208C
+ * SE_SYS_DECIDE_ref_50208C
  * RVA 0x0050208c   size 0x100   xrefs 33
  * ============================================================================ */
   _DWORD *__fastcall sub_6050208C(_DWORD *a1)
@@ -83985,7 +83985,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[5] = 0;
     StateMgr_ctor(a1 + 6, (int)(a1 + 2), 13268572);
     a1[1] = 12579024;
-    sub_6047E4BC((int)(a1 + 10));
+    SE_SYS_BACK_ref((int)(a1 + 10));
     sub_6045BF30(a1 + 24);
     a1[253] = 12321336;
     a1[254] = 11778612;
@@ -91260,7 +91260,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6050B850
+ * G_InOut_00_ref
  * RVA 0x0050b850   size 0xbc   xrefs 0
  * ============================================================================ */
   int sub_6050B850()
@@ -91407,7 +91407,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[0] = 12321336;
     v4[1] = 11778612;
     v3[0] = 12321336;
-    v3[1] = sub_6050C600(0);
+    v3[1] = P_MiiIcon_00_ref(0);
     MEMORY[0xBC0240](v4, v3);
     v3[0] = 1;
     sub_604752D4(a1 + 60, a1 + 3640, v4, v3);
@@ -91455,13 +91455,13 @@ static inline unsigned int uxtb16(unsigned int x)
     v16[0] = 12321336;
     v16[1] = 11778612;
     v12 = 12321336;
-    v13 = sub_6050C24C(0);
+    v13 = CharaSet_Team_Loop_ref(0);
     sead::SafeStringBase<char>::operator=(v14, &v12);
-    v7 = sub_6050C24C(1);
+    v7 = CharaSet_Team_Loop_ref(1);
     v12 = 12321336;
     v13 = v7;
     (*(void (__fastcall **)(_DWORD *, int *))(v15[0] + 8))(v15, &v12);
-    v8 = sub_6050C24C(2);
+    v8 = CharaSet_Team_Loop_ref(2);
     v12 = 12321336;
     v13 = v8;
     (*(void (__fastcall **)(_DWORD *, int *))(v16[0] + 8))(v16, &v12);
@@ -91500,9 +91500,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v13; // [sp+14h] [bp-4h]
   
     v12 = 12321336;
-    v13 = sub_6050C24C(0);
+    v13 = CharaSet_Team_Loop_ref(0);
     v11[0] = 12321336;
-    v11[1] = sub_6050C9B8(0);
+    v11[1] = G_Icon_00_G_Team_00_G_Loop_00_ref(0);
     result = sub_6047467C(a1 + 15, 0, &v12, (int)v11, 0);
     if ( result == 1 )
     {
@@ -91572,9 +91572,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // [sp+14h] [bp-4h]
   
     v9 = 12321336;
-    v10 = sub_6050C24C(1);
+    v10 = CharaSet_Team_Loop_ref(1);
     v8[0] = 12321336;
-    v8[1] = sub_6050C9B8(1);
+    v8[1] = G_Icon_00_G_Team_00_G_Loop_00_ref(1);
     result = sub_6047467C((_DWORD *)(a1 + 60), 1u, &v9, (int)v8, 0);
     if ( result == 1 )
     {
@@ -91658,7 +91658,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6050C24C
+ * CharaSet_Team_Loop_ref
  * RVA 0x0050c24c   size 0x1c4   xrefs 5
  * ============================================================================ */
   int __fastcall sub_6050C24C(unsigned int a1)
@@ -91831,7 +91831,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6050C600
+ * P_MiiIcon_00_ref
  * RVA 0x0050c600   size 0x1c8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6050C600(int a1)
@@ -92004,7 +92004,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6050C9B8
+ * G_Icon_00_G_Team_00_G_Loop_00_ref
  * RVA 0x0050c9b8   size 0x1c4   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6050C9B8(unsigned int a1)
@@ -92190,7 +92190,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6050CCD0
+ * G_Icon_00_ref
  * RVA 0x0050ccd0   size 0xb8   xrefs 0
  * ============================================================================ */
   int sub_6050CCD0()
@@ -92257,7 +92257,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[0] = 12321336;
     v4[1] = 11778612;
     v3[0] = 12321336;
-    v3[1] = sub_6050D228(0);
+    v3[1] = P_MiiIcon_00_ref_50D228(0);
     MEMORY[0xBC0240](v4, v3);
     v3[0] = 1;
     sub_604752D4(a1, a1 + 3540, v4, v3);
@@ -92345,7 +92345,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v5[2]; // [sp+8h] [bp-8h] BYREF
   
     v5[0] = 12321336;
-    v5[1] = sub_6050D440(0);
+    v5[1] = G_Icon_00_ref_50D440(0);
     result = sub_6047467C(a1, 0, &dword_60BFF6A8, (int)v5, 0);
     if ( result == 1 )
     {
@@ -92404,7 +92404,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6050D228
+ * P_MiiIcon_00_ref_50D228
  * RVA 0x0050d228   size 0x1c8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6050D228(int a1)
@@ -92473,7 +92473,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6050D440
+ * G_Icon_00_ref_50D440
  * RVA 0x0050d440   size 0x1c8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6050D440(int a1)
@@ -95127,7 +95127,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3692) = 11778612;
     *(_DWORD *)(a1 + 3696) = 0;
     *(_BYTE *)(a1 + 3700) = 0;
-    sub_6050208C((_DWORD *)(a1 + 3704));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 3704));
     sub_60506DB0(a1 + 5924);
     *(_DWORD *)(a1 + 9552) = 21;
     *(_DWORD *)(a1 + 9556) = 0;
@@ -95174,7 +95174,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v2 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v2 + 104))(v2);
     }
-    v3 = sub_60511208(a1);
+    v3 = T_Btn_00_ref_511208(a1);
     if ( !*(_DWORD *)(sub_60834614(v3) + 492) && MEMORY[0xCC6D78] && *(_BYTE *)(MEMORY[0xCC6D78] + 109032) )
     {
       v5 = *(_DWORD *)(a1 + 9544);
@@ -95223,7 +95223,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (const char *)dword_60CA83F8;
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA83FC + 3))(&off_60CA83FC);
     sub_608FDDF4(&v5, "%s.%s", v3, (const char *)dword_60CA8400);
-    sub_60475CDC(v2, &v5, a1 + 3744, 0, 0);
+    message_ref(v2, &v5, a1 + 3744, 0, 0);
     v9[0] = 12321336;
     v9[1] = (int)"Pa_CharacterIcon_00";
     sub_60506F20((_DWORD *)(a1 + 5924), (int)v2, v9);
@@ -95261,7 +95261,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60511208
+ * T_Btn_00_ref_511208
  * RVA 0x00511208   size 0xec   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60511208(int a1)
@@ -95399,7 +95399,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605115FC
+ * SE_SYS_PAUSE_ref_5115FC
  * RVA 0x005115fc   size 0x3c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_605115FC(int a1)
@@ -97971,7 +97971,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3584) = 11778612;
     *(_DWORD *)(a1 + 3588) = 0;
     *(_BYTE *)(a1 + 3592) = 0;
-    sub_6050208C((_DWORD *)(a1 + 3596));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 3596));
     sub_6050A308(a1 + 5676);
     *(_DWORD *)(a1 + 12932) = 21;
     *(_DWORD *)(a1 + 12936) = 0;
@@ -98040,7 +98040,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (const char *)(*(int (__fastcall **)(_DWORD *))(*a1 + 16))(a1);
     (*((void (__fastcall **)(_UNKNOWN **))off_60CA8684 + 3))(&off_60CA8684);
     sub_608FDDF4(&v5, "%s.%s", v3, (const char *)dword_60CA8688);
-    sub_60475CDC(v2, &v5, (int)(a1 + 909), 0, 0);
+    message_ref(v2, &v5, (int)(a1 + 909), 0, 0);
     v10[0] = 12321336;
     v9[0] = 12321336;
     v10[1] = (int)"Pa_ReturnBtn_00";
@@ -99077,7 +99077,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_OUT", 0);
     v3[0] = 12321336;
-    v3[1] = sub_60517018(4u);
+    v3[1] = WipeIn_LevelNum_Mode_Loop_Out_ref(4u);
     return sub_60473DE4((_DWORD *)(a1 + 36), 0, v3, 0);
   }
 
@@ -99162,7 +99162,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v9 = 12321336;
     v10 = (int)"PreGameChallenge.bflyt";
-    sub_60475CDC(v1, &v9, 0, 0, 0);
+    message_ref(v1, &v9, 0, 0, 0);
     v9 = 12321336;
     v10 = 11778612;
     v11[0] = 12321336;
@@ -99174,21 +99174,21 @@ static inline unsigned int uxtb16(unsigned int x)
     v14[0] = 12321336;
     v14[1] = 11778612;
     v7 = 12321336;
-    v8 = sub_60517018(0);
+    v8 = WipeIn_LevelNum_Mode_Loop_Out_ref(0);
     sead::SafeStringBase<char>::operator=(&v9, &v7);
-    v2 = sub_60517018(1);
+    v2 = WipeIn_LevelNum_Mode_Loop_Out_ref(1);
     v7 = 12321336;
     v8 = v2;
     (*(void (__fastcall **)(_DWORD *, int *))(v11[0] + 8))(v11, &v7);
-    v3 = sub_60517018(2);
+    v3 = WipeIn_LevelNum_Mode_Loop_Out_ref(2);
     v7 = 12321336;
     v8 = v3;
     (*(void (__fastcall **)(_DWORD *, int *))(v12[0] + 8))(v12, &v7);
-    v4 = sub_60517018(3);
+    v4 = WipeIn_LevelNum_Mode_Loop_Out_ref(3);
     v7 = 12321336;
     v8 = v4;
     (*(void (__fastcall **)(_DWORD *, int *))(v13[0] + 8))(v13, &v7);
-    v5 = sub_60517018(4);
+    v5 = WipeIn_LevelNum_Mode_Loop_Out_ref(4);
     v7 = 12321336;
     v8 = v5;
     (*(void (__fastcall **)(_DWORD *, int *))(v14[0] + 8))(v14, &v7);
@@ -99320,22 +99320,22 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = sub_603FD91C(MEMORY[0xC9A1F0] + 16, *(unsigned __int8 *)(v2 + 564));
     v4 = (_DWORD *)(a1 + 36);
     v11 = 12321336;
-    v12 = sub_60517018(0);
+    v12 = WipeIn_LevelNum_Mode_Loop_Out_ref(0);
     sub_60473DE4(v4, 0, &v11, 0);
-    v5 = sub_60517018(1);
+    v5 = WipeIn_LevelNum_Mode_Loop_Out_ref(1);
     v11 = 12321336;
     v12 = v5;
     sub_60473DE4(v4, 1u, &v11, 0);
     v6 = sub_6047482C(v4, 1);
     (*(void (__fastcall **)(int))(*(_DWORD *)v6 + 96))(v6);
     sub_603FD93C(v3);
-    v7 = sub_60517018(2);
+    v7 = WipeIn_LevelNum_Mode_Loop_Out_ref(2);
     v11 = 12321336;
     v12 = v7;
     sub_60473DE4(v4, 2u, &v11, 0);
     v8 = sub_6047482C(v4, 2);
     (*(void (__fastcall **)(int))(*(_DWORD *)v8 + 96))(v8);
-    v9 = sub_60517018(3);
+    v9 = WipeIn_LevelNum_Mode_Loop_Out_ref(3);
     v11 = 12321336;
     v12 = v9;
     return sub_60473DE4(v4, 3u, &v11, 1);
@@ -99397,7 +99397,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60517018
+ * WipeIn_LevelNum_Mode_Loop_Out_ref
  * RVA 0x00517018   size 0x1c4   xrefs 10
  * ============================================================================ */
   int __fastcall sub_60517018(unsigned int a1)
@@ -100065,7 +100065,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (const char *)dword_60CA887C;
     (*(void (__fastcall **)(int *))(dword_60CA8880 + 12))(&dword_60CA8880);
     sub_608FDDF4(&v8, "%s.%s", v3, (const char *)dword_60CA8884);
-    sub_60475CDC(v2, &v8, 0, 0, 0);
+    message_ref(v2, &v8, 0, 0, 0);
     if ( ((unsigned int)&unk_60CA8870 & ~(1615953576 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA8870) )
     {
       dword_60CA8910 = 12321336;
@@ -100560,7 +100560,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"PreGameEdit.bflyt";
-    sub_60475CDC(v2, v6, 0, 0, 0);
+    message_ref(v2, v6, 0, 0, 0);
     if ( ((unsigned int)&unk_60CA89C0 & ~(1615956652 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA89C0) )
     {
       dword_60CA89D0 = 12321336;
@@ -100588,7 +100588,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60518C80
+ * WipeIn_ref
  * RVA 0x00518c80   size 0x15c   xrefs 0
  * ============================================================================ */
   int sub_60518C80()
@@ -101000,7 +101000,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v11 = 12321336;
     v12 = (int)"PreGameFree.bflyt";
-    sub_60475CDC(v2, &v11, 0, 0, 0);
+    message_ref(v2, &v11, 0, 0, 0);
     sub_605196A8(a1);
     sub_605197DC(a1);
     if ( ((unsigned int)&unk_60CA8BC0 & ~(1615959188 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA8BC0) )
@@ -102048,7 +102048,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6051AD94
+ * Player_ref
  * RVA 0x0051ad94   size 0x174   xrefs 0
  * ============================================================================ */
   int sub_6051AD94()
@@ -102397,7 +102397,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v10[1] = 12321336;
       v10[2] = "Common";
       sub_60475C8C(v5);
-      result = sub_60475CDC(*(_DWORD **)(a1 + 4), &dword_60CA8CC0[i], 0, 0, 0);
+      result = message_ref(*(_DWORD **)(a1 + 4), &dword_60CA8CC0[i], 0, 0, 0);
       if ( result == 1 )
       {
         if ( ((unsigned int)&unk_60CA8D54 & ~(1615968068 << v7) & 1) == 0 )
@@ -102685,7 +102685,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6051BF30
+ * CourseInAnim_ref
  * RVA 0x0051bf30   size 0x22c   xrefs 0
  * ============================================================================ */
   int sub_6051BF30()
@@ -102899,7 +102899,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v3[2]; // [sp+0h] [bp-8h] BYREF
   
     v3[0] = 12321336;
-    v3[1] = sub_6051DB50(5u);
+    v3[1] = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(5u);
     sub_60473DE4((_DWORD *)(a1 + 36), 0, v3, 0);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_SCORE_PAGE_OUT", 0);
   }
@@ -103035,13 +103035,13 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[0] = 12321336;
     v9[1] = 11778612;
     v5 = 12321336;
-    v6 = sub_6051DD64(0);
+    v6 = T_Random_00_T_World_00_T_Round_00_ref(0);
     sead::SafeStringBase<char>::operator=(v7, &v5);
-    v2 = sub_6051DD64(1);
+    v2 = T_Random_00_T_World_00_T_Round_00_ref(1);
     v5 = 12321336;
     v6 = v2;
     (*(void (__fastcall **)(_DWORD *, int *))(v8[0] + 8))(v8, &v5);
-    v3 = sub_6051DD64(2);
+    v3 = T_Random_00_T_World_00_T_Round_00_ref(2);
     v5 = 12321336;
     v6 = v3;
     (*(void (__fastcall **)(_DWORD *, int *))(v9[0] + 8))(v9, &v5);
@@ -103076,7 +103076,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v11 = 12321336;
     v12 = (int)"PreGameVS.bflyt";
-    sub_60475CDC(v2, &v11, 0, 0, 0);
+    message_ref(v2, &v11, 0, 0, 0);
     sub_6051C908(a1);
     sub_6051CB4C(a1);
     Pa_VSCoinCount_ref(a1);
@@ -103093,25 +103093,25 @@ static inline unsigned int uxtb16(unsigned int x)
     v17[0] = 12321336;
     v17[1] = 11778612;
     v9 = 12321336;
-    v10 = sub_6051DB50(0);
+    v10 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(0);
     sead::SafeStringBase<char>::operator=(&v11, &v9);
-    v3 = sub_6051DB50(1);
+    v3 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(1);
     v9 = 12321336;
     v10 = v3;
     (*(void (__fastcall **)(_DWORD *, int *))(v13[0] + 8))(v13, &v9);
-    v4 = sub_6051DB50(2);
+    v4 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(2);
     v9 = 12321336;
     v10 = v4;
     (*(void (__fastcall **)(_DWORD *, int *))(v14[0] + 8))(v14, &v9);
-    v5 = sub_6051DB50(3);
+    v5 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(3);
     v9 = 12321336;
     v10 = v5;
     (*(void (__fastcall **)(_DWORD *, int *))(v15[0] + 8))(v15, &v9);
-    v6 = sub_6051DB50(4);
+    v6 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(4);
     v9 = 12321336;
     v10 = v6;
     (*(void (__fastcall **)(_DWORD *, int *))(v16[0] + 8))(v16, &v9);
-    v7 = sub_6051DB50(5);
+    v7 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(5);
     v9 = 12321336;
     v10 = v7;
     (*(void (__fastcall **)(_DWORD *, int *))(v17[0] + 8))(v17, &v9);
@@ -103834,25 +103834,25 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // [sp+4h] [bp-4h]
   
     v7 = 12321336;
-    v8 = sub_6051DB50(0);
+    v8 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(0);
     sub_60473DE4((_DWORD *)(a1 + 36), 0, &v7, 0);
-    v2 = sub_6051DB50(4);
+    v2 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(4);
     v7 = 12321336;
     v8 = v2;
     sub_60473DE4((_DWORD *)(a1 + 36), 4u, &v7, 1);
-    v3 = sub_6051DB50(1);
+    v3 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(1);
     v7 = 12321336;
     v8 = v3;
     sub_60473DE4((_DWORD *)(a1 + 36), 1u, &v7, 0);
     sub_6047455C(a1 + 36, 1);
     sub_6047459C(a1 + 36, 1);
-    v4 = sub_6051DB50(3);
+    v4 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(3);
     v7 = 12321336;
     v8 = v4;
     sub_60473DE4((_DWORD *)(a1 + 36), 3u, &v7, 0);
     sub_6047455C(a1 + 36, 3);
     sub_6047459C(a1 + 36, 3);
-    v5 = sub_6051DB50(2);
+    v5 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(2);
     v7 = 12321336;
     v8 = v5;
     sub_60473DE4((_DWORD *)(a1 + 36), 2u, &v7, 0);
@@ -104153,7 +104153,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6051DB50
+ * WipeIn_Mode_Team_PlayerNum_Loop_Out_ref
  * RVA 0x0051db50   size 0x1c4   xrefs 12
  * ============================================================================ */
   int __fastcall sub_6051DB50(unsigned int a1)
@@ -104222,7 +104222,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6051DD64
+ * T_Random_00_T_World_00_T_Round_00_ref
  * RVA 0x0051dd64   size 0x1c4   xrefs 3
  * ============================================================================ */
   int __fastcall sub_6051DD64(unsigned int a1)
@@ -105008,7 +105008,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3616) = 11778612;
     *(_DWORD *)(a1 + 3620) = 0;
     *(_BYTE *)(a1 + 3624) = 0;
-    sub_6050208C((_DWORD *)(a1 + 3708));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 3708));
     sub_6050A308(a1 + 5788);
     *(_WORD *)(a1 + 13004) = 0;
     sub_6045BF30(a1 + 13008);
@@ -105115,7 +105115,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "RecordList.bflyt";
-    sub_60475CDC(v2, &v6, (int)(a1 + 937), 0, 0);
+    message_ref(v2, &v6, (int)(a1 + 937), 0, 0);
     v6 = 12321336;
     v5[0] = 12321336;
     v7 = "Pa_Close_00";
@@ -106144,10 +106144,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v8[2] = 12321336;
     v8[3] = 11778612;
     v5 = 12321336;
-    v6 = sub_60522BF0(0);
+    v6 = N_PlayerPos_00_N_Score_00_ref(0);
     MEMORY[0xBC0240](v8, &v5);
     v7 = 1;
-    v2 = sub_60522BF0(1);
+    v2 = N_PlayerPos_00_N_Score_00_ref(1);
     v5 = 12321336;
     v6 = v2;
     (*(void (__fastcall **)(_DWORD *, int *))(v8[2 * v7] + 8))(&v8[2 * v7], &v5);
@@ -106216,7 +106216,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v13 = 12321336;
     v14 = (int)"ResultChallenge.bflyt";
-    sub_60475CDC(v2, &v13, 0, 0, 0);
+    message_ref(v2, &v13, 0, 0, 0);
     v13 = 12321336;
     v14 = 11778612;
     v15 = 12321336;
@@ -107234,7 +107234,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60522BF0
+ * N_PlayerPos_00_N_Score_00_ref
  * RVA 0x00522bf0   size 0x1c4   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60522BF0(unsigned int a1)
@@ -107834,7 +107834,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)a1);
     v8 = 12321336;
     v9 = (int)"ResultChallengeScreen.bflyt";
-    sub_60475CDC(a1, &v8, 0, 0, 0);
+    message_ref(a1, &v8, 0, 0, 0);
     v8 = 12321336;
     v9 = 11778612;
     v10[0] = 12321336;
@@ -108463,7 +108463,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605242AC
+ * STRM_BGM_COIN_WIN_ref
  * RVA 0x005242ac   size 0x1c8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_605242AC(_DWORD *a1)
@@ -108666,7 +108666,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605245B0
+ * STRM_BGM_COIN_WIN_ref_5245B0
  * RVA 0x005245b0   size 0x218   xrefs 0
  * ============================================================================ */
   int __fastcall sub_605245B0(_DWORD *a1)
@@ -108970,7 +108970,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60524A38
+ * STRM_BGM_COIN_WIN_ref_524A38
  * RVA 0x00524a38   size 0x1d4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60524A38(_DWORD *a1)
@@ -109086,7 +109086,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60524C24
+ * SE_SYS_MODE_RESULT_EXIT_ref_524C24
  * RVA 0x00524c24   size 0x74   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60524C24(int a1)
@@ -109334,7 +109334,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60524FC4
+ * STRM_BGM_COIN_WIN_ref_524FC4
  * RVA 0x00524fc4   size 0x224   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60524FC4(_DWORD *a1)
@@ -109469,7 +109469,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60525200
+ * SE_SYS_MODE_RESULT_EXIT_ref_525200
  * RVA 0x00525200   size 0x74   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60525200(int a1)
@@ -109550,7 +109550,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60525348
+ * SE_SYS_MODE_RESULT_EXIT_ref_525348
  * RVA 0x00525348   size 0x58   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60525348(int a1)
@@ -109636,7 +109636,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605254D8
+ * SE_SYS_MODE_RESULT_EXIT_ref_5254D8
  * RVA 0x005254d8   size 0x78   xrefs 0
  * ============================================================================ */
   int __fastcall sub_605254D8(int a1)
@@ -109994,7 +109994,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int *))(dword_60CAA320 + 12))(&dword_60CAA320);
     v4 = 12321336;
     v5 = dword_60CAA324;
-    sub_60475CDC(v1, &v4, 0, 0, 0);
+    message_ref(v1, &v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CAA2F0 & ~(1616010836 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAA2F0) )
     {
       dword_60CAA400 = 12321336;
@@ -112018,7 +112018,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_608589FC(a1[9], v9);
     sub_6052A250(a1, v9, a3[5]);
     v10 = sub_608DE1A4(272, 16);
-    sub_6098530C(v10, a3[6], a4);
+    LetterAnimOn_ref_98530C(v10, a3[6], a4);
     a1[10] = v10;
     sub_608589FC(a1[9], v10);
     sub_6047E0EC((_DWORD *)0xCAA27C, a1[10], 1);
@@ -113018,7 +113018,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ResultVSScreen.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CAA440 & ~(1616031368 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAA440) )
     {
       dword_60CAA444 = 12321336;
@@ -114485,7 +114485,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"ResultFree.bflyt";
-    sub_60475CDC(v2, v5, 0, 0, 0);
+    message_ref(v2, v5, 0, 0, 0);
     sub_6052DFA0(a1);
     if ( ((unsigned int)&unk_60CAA6A4 & ~(1616039948 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAA6A4) )
     {
@@ -115765,7 +115765,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v4[2]; // [sp+4h] [bp-Ch] BYREF
     int v5; // [sp+Ch] [bp-4h] BYREF
   
-    sub_6052EF18();
+    ResultMiniGame_bflyt_ref();
     if ( ((unsigned int)&unk_60CAAA74 & ~(1616047576 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAAA74) )
     {
       dword_60CAAA7C = 12321336;
@@ -115791,7 +115791,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6052EF18
+ * ResultMiniGame_bflyt_ref
  * RVA 0x0052ef18   size 0x148   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6052EF18(int a1)
@@ -115805,7 +115805,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ResultMiniGame.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CAAA70 & ~(1616048024 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAAA70) )
     {
       dword_60CAAA8C = 12321336;
@@ -120798,7 +120798,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 15688) = 11778612;
     *(_DWORD *)(a1 + 15692) = 0;
     *(_BYTE *)(a1 + 15696) = 0;
-    sub_6050208C((_DWORD *)(a1 + 15700));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 15700));
     sub_60540B18(a1 + 17780);
     sub_6045BF30(a1 + 52676);
     sub_6045BF30(a1 + 53080);
@@ -120875,7 +120875,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v11 = 12321336;
     v12 = "SaveDataSelect.bflyt";
-    sub_60475CDC(v2, &v11, a1 + 15740, 0, 0);
+    message_ref(v2, &v11, a1 + 15740, 0, 0);
     sub_60537024(a1);
     if ( ((unsigned int)&unk_60CAB270 & ~(1616079640 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAB270) )
     {
@@ -124224,7 +124224,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 15668) = 11778612;
     *(_DWORD *)(a1 + 15672) = 0;
     *(_BYTE *)(a1 + 15676) = 0;
-    sub_6050208C((_DWORD *)(a1 + 15680));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 15680));
     sub_60540B18(a1 + 17760);
     sub_6045BF30(a1 + 52616);
     sub_6045BF30(a1 + 53020);
@@ -124306,7 +124306,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v10 = 12321336;
     v11 = "SaveDataSelectDL.bflyt";
-    sub_60475CDC(v2, &v10, a1 + 15720, 0, 0);
+    message_ref(v2, &v10, a1 + 15720, 0, 0);
     sub_6053D538(a1);
     if ( ((unsigned int)&unk_60CAB920 & ~(1616105660 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAB920) )
     {
@@ -125367,7 +125367,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6053F754
+ * SE_SYS_DIALOGUE_IN_ref_53F754
  * RVA 0x0053f754   size 0x160   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6053F754(int a1)
@@ -125504,7 +125504,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6053FA9C
+ * SE_SYS_BACK_ref_53FA9C
  * RVA 0x0053fa9c   size 0x78   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6053FA9C(int a1)
@@ -125687,7 +125687,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6053FEA8
+ * SE_SYS_DIALOGUE_OUT_AUTO_ref_53FEA8
  * RVA 0x0053fea8   size 0x48   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6053FEA8(int a1)
@@ -125700,7 +125700,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6053FEF8
+ * SE_SYS_DIALOGUE_IN_ref_53FEF8
  * RVA 0x0053fef8   size 0x25c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6053FEF8(int a1)
@@ -125981,7 +125981,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6054064C
+ * SE_SYS_BACK_ref_54064C
  * RVA 0x0054064c   size 0x15c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6054064C(int a1)
@@ -126159,7 +126159,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60540AC8
+ * SE_SYS_DIALOGUE_OUT_AUTO_ref_540AC8
  * RVA 0x00540ac8   size 0x48   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60540AC8(int a1)
@@ -126207,7 +126207,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 31684) = 11778612;
     *(_DWORD *)(a1 + 31688) = 0;
     *(_BYTE *)(a1 + 31692) = 0;
-    sub_6050208C((_DWORD *)(a1 + 31800));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 31800));
     sub_6045BF30(a1 + 33880);
     sub_6045BF30(a1 + 34284);
     *(_BYTE *)(a1 + 34730) = 0;
@@ -126298,7 +126298,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = "SaveDataSelectWin.bflyt";
     }
     v10 = v5;
-    sub_60475CDC(v4, &v9, a1 + 31840, 0, 0);
+    message_ref(v4, &v9, a1 + 31840, 0, 0);
     if ( ((unsigned int)&unk_60CABCA0 & ~(1616121640 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CABCA0) )
     {
       dword_60CABCF0 = 12321336;
@@ -126931,7 +126931,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"Screen.bflyt";
-    sub_60475CDC(v2, v6, 0, 0, 0);
+    message_ref(v2, v6, 0, 0, 0);
     if ( ((unsigned int)&unk_60CABE20 & ~(1616126824 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CABE20) )
     {
       dword_60CABE30 = 12321336;
@@ -127250,7 +127250,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60542970
+ * SelectBG_bflyt_ref
  * RVA 0x00542970   size 0x19c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60542970(int a1)
@@ -127264,7 +127264,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"SelectBG.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CABE40 & ~(1616128496 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CABE40) )
     {
       dword_60CABE44 = 12321336;
@@ -127380,7 +127380,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"SelectCursor.bflyt";
-    sub_60475CDC(v2, v6, 0, 0, 0);
+    message_ref(v2, v6, 0, 0, 0);
     if ( ((unsigned int)&unk_60CABE60 & ~(1616129436 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CABE60) )
     {
       dword_60CABE68 = 12321336;
@@ -127647,7 +127647,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"SelectCursorMini.bflyt";
-    sub_60475CDC(v2, v6, 0, 0, 0);
+    message_ref(v2, v6, 0, 0, 0);
     if ( ((unsigned int)&unk_60CABEA0 & ~(1616130828 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CABEA0) )
     {
       dword_60CABEA8 = 12321336;
@@ -129082,7 +129082,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3620) = 11778612;
     *(_DWORD *)(a1 + 3624) = 0;
     *(_BYTE *)(a1 + 3628) = 0;
-    sub_6050208C((_DWORD *)(a1 + 3632));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 3632));
     sub_605477B8(a1 + 5712);
     sub_6050A308(a1 + 24204);
     *(_DWORD *)(a1 + 31420) = 0;
@@ -129200,7 +129200,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "SelectMenu.bflyt";
-    sub_60475CDC(v2, &v6, (int)(a1 + 918), 0, 0);
+    message_ref(v2, &v6, (int)(a1 + 918), 0, 0);
     v6 = 12321336;
     v5[0] = 12321336;
     v7 = "Pa_Close_00";
@@ -130413,7 +130413,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60546DB8
+ * SE_SYS_DIALOGUE_IN_ref_546DB8
  * RVA 0x00546db8   size 0x1c4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60546DB8(_DWORD *a1)
@@ -130662,7 +130662,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605472EC
+ * SE_SYS_PAGE_ref_5472EC
  * RVA 0x005472ec   size 0x20   xrefs 0
  * ============================================================================ */
   int sub_605472EC()
@@ -130705,7 +130705,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605473C0
+ * SE_SYS_PAGE_ref_5473C0
  * RVA 0x005473c0   size 0x20   xrefs 0
  * ============================================================================ */
   int sub_605473C0()
@@ -130975,7 +130975,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3656) = 11778612;
     *(_DWORD *)(a1 + 3660) = 0;
     *(_BYTE *)(a1 + 3664) = 0;
-    sub_6050208C((_DWORD *)(a1 + 3700));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 3700));
     *(_DWORD *)(a1 + 5812) = 12572588;
     *sub_6047611C(a1 + 5812, a1 + 9332, 1) = 12572588;
     *(_DWORD *)(a1 + 9332) = 0;
@@ -131095,7 +131095,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047518C(a1 + 40, a1 + 3668, &dword_60CAC6D8, &v4);
     sub_60547FDC(a1);
     sub_60548168(a1);
-    sub_605483E0(a1);
+    Pa_Index_00_ref(a1);
     sub_60548530(a1);
     sub_6045BF58(a1 + 16444, 0);
     sub_6045BF58(a1 + 16848, 1);
@@ -131129,7 +131129,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[1] = 12321336;
     v6[2] = (int)"Common";
     sub_60475C8C(a1 + 40);
-    sub_60475CDC((_DWORD *)(a1 + 40), (_DWORD *)&unk_60CAC6A0 + 2 * v3 + 6, a1 + 3740, 0, 0);
+    message_ref((_DWORD *)(a1 + 40), (_DWORD *)&unk_60CAC6A0 + 2 * v3 + 6, a1 + 3740, 0, 0);
     if ( ((unsigned int)&unk_60CAC6A4 & ~(1616150144 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAC6A4) )
     {
       dword_60CAC740 = 12321336;
@@ -131242,7 +131242,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605483E0
+ * Pa_Index_00_ref
  * RVA 0x005483e0   size 0x120   xrefs 1
  * ============================================================================ */
   int __fastcall sub_605483E0(int a1)
@@ -131306,7 +131306,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = a1 + 9352;
     sub_604734E4((_DWORD *)(a1 + 9352), 0);
     v4 = v17;
-    v5 = sub_60549854(v17);
+    v5 = Pa_ArrowBtnR_00_Pa_ArrowBtnL_00_ref(v17);
     v15 = 12321336;
     v16 = v5;
     if ( v4 >= 2 )
@@ -131323,7 +131323,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v17 = 1;
     sub_604734E4((_DWORD *)(a1 + 12892), 0);
     v10 = v17;
-    v11 = sub_60549854(v17);
+    v11 = Pa_ArrowBtnR_00_Pa_ArrowBtnL_00_ref(v17);
     v15 = 12321336;
     v16 = v11;
     if ( v10 >= 2 )
@@ -131989,7 +131989,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60549854
+ * Pa_ArrowBtnR_00_Pa_ArrowBtnL_00_ref
  * RVA 0x00549854   size 0x1c4   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60549854(unsigned int a1)
@@ -132314,7 +132314,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60549E38
+ * ShadowClear_bflyt_ref
  * RVA 0x00549e38   size 0x114   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60549E38(int a1)
@@ -132328,7 +132328,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ShadowClear.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CAC7F0 & ~(1616158392 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAC7F0) )
     {
       dword_60CAC7F4 = 12321336;
@@ -132725,7 +132725,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "ShadowDirectArrow.bflyt";
-    sub_60475CDC(v2, &v6, 0, 0, 0);
+    message_ref(v2, &v6, 0, 0, 0);
     if ( ((unsigned int)&unk_60CAC8C0 & ~(1616160444 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAC8C0) )
     {
       dword_60CAC8C4 = 12321336;
@@ -132746,7 +132746,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6054A7E4
+ * Rotate_ref_54A7E4
  * RVA 0x0054a7e4   size 0x1d0   xrefs 0
  * ============================================================================ */
   int sub_6054A7E4()
@@ -133285,7 +133285,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6054B3D8
+ * ShadowFail_bflyt_ref
  * RVA 0x0054b3d8   size 0x114   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6054B3D8(int a1)
@@ -133299,7 +133299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ShadowFail.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CAC960 & ~(1616163928 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAC960) )
     {
       dword_60CAC964 = 12321336;
@@ -133642,7 +133642,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6054BAC0
+ * ShadowStartMessage_bflyt_ref
  * RVA 0x0054bac0   size 0x114   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6054BAC0(int a1)
@@ -133656,7 +133656,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"ShadowStartMessage.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CACA00 & ~(1616165696 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CACA00) )
     {
       dword_60CACA04 = 12321336;
@@ -133858,7 +133858,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6054BEE8
+ * SE_SYS_DIALOGUE_IN_ref_54BEE8
  * RVA 0x0054bee8   size 0x13c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6054BEE8(int a1)
@@ -133910,7 +133910,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = *(_DWORD *)(a1 + 3660);
     }
     sub_6047E0EC(&v13, v9, 0);
-    sub_608164F8(MEMORY[0xCC6B68], 10);
+    SE_SYS_HURRY_UP_ref_8164F8(MEMORY[0xCC6B68], 10);
     return sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
   }
 
@@ -134215,7 +134215,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"TalkWindow.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CACB34 & ~(1616168516 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CACB34) )
     {
       dword_60CACB90 = 12321336;
@@ -134643,7 +134643,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v4[0] = 12321336;
     v4[1] = "Skip.bflyt";
-    sub_60475CDC(v2, v4, 0, 0, 0);
+    message_ref(v2, v4, 0, 0, 0);
     return (*(int (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3524) + 12))(
              *(_DWORD *)(a1 + 3524),
              10029528,
@@ -135422,7 +135422,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"PointGet.bflyt";
-    sub_60475CDC(v2, v7, 0, 0, 0);
+    message_ref(v2, v7, 0, 0, 0);
     if ( ((unsigned int)&unk_60CACE30 & ~(1616176096 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CACE30) )
     {
       dword_60CACE54 = 12321336;
@@ -136424,12 +136424,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   unsigned int __fastcall sub_6054FD98(int a1)
   {
-    sub_6054FDB0(a1);
+    SpeedUp_bflyt_ref(a1);
     return T_Text_ref(a1);
   }
 
 /* ============================================================================
- * sub_6054FDB0
+ * SpeedUp_bflyt_ref
  * RVA 0x0054fdb0   size 0x148   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6054FDB0(int a1)
@@ -136443,7 +136443,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"SpeedUp.bflyt";
-    sub_60475CDC(v2, v5, 0, 0, 0);
+    message_ref(v2, v5, 0, 0, 0);
     if ( ((unsigned int)&unk_60CACF60 & ~(1616182836 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CACF60) )
     {
       dword_60CACF6C = 12321336;
@@ -136773,7 +136773,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "StaffCreditScene.bflyt";
-    sub_60475CDC(v2, &v6, 0, 0, 0);
+    message_ref(v2, &v6, 0, 0, 0);
     if ( ((unsigned int)&unk_60CACFE0 & ~(1616184900 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CACFE0) )
     {
       dword_60CACFE4 = 12321336;
@@ -137424,7 +137424,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60551510
+ * SE_SYS_PAGE_ref_551510
  * RVA 0x00551510   size 0x1a8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60551510(_DWORD *a1)
@@ -137790,7 +137790,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 17800) = 11778612;
     *(_DWORD *)(a1 + 17804) = 0;
     *(_BYTE *)(a1 + 17808) = 0;
-    sub_6050208C((_DWORD *)(a1 + 17840));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 17840));
     sub_6050A308(a1 + 19932);
     sub_6045BF30(a1 + 27148);
     *(_DWORD *)(a1 + 27552) = 0;
@@ -138061,7 +138061,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "StarCoinList.bflyt";
-    sub_60475CDC(v2, &v6, (int)(a1 + 4470), 0, 0);
+    message_ref(v2, &v6, (int)(a1 + 4470), 0, 0);
     v6 = 12321336;
     v5[0] = 12321336;
     v7 = "Pa_Close_00";
@@ -139250,7 +139250,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)a1);
     v4[0] = 12321336;
     v4[1] = (int)"StarCoinListWin.bflyt";
-    sub_60475CDC(a1, v4, 0, 0, 0);
+    message_ref(a1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CAD330 & ~(1616202108 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAD330) )
     {
       dword_60CAD360 = 12321336;
@@ -139399,7 +139399,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_608589FC(*(_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 36));
     sub_608589FC(*(_DWORD *)(a1 + 28), *(_DWORD *)(a1 + 40));
     v17 = sub_608DE1A4(272, 16);
-    sub_6098530C(v17, a4, a8);
+    LetterAnimOn_ref_98530C(v17, a4, a8);
     v20[0] = 12321336;
     v20[1] = "StarCoinListWin_CourseNum_00";
     sub_6047E0EC(v20, v17, 1);
@@ -140449,7 +140449,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6055631C
+ * SE_SYS_BACK_ref_55631C
  * RVA 0x0055631c   size 0x11c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6055631C(int a1)
@@ -140807,7 +140807,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045BF30(a1 + 4460);
     sub_6045BF30(a1 + 4864);
     sub_6045BF30(a1 + 5268);
-    sub_6050208C((_DWORD *)(a1 + 5820));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 5820));
     sub_60557FE4(a1 + 7900);
     *(_DWORD *)(a1 + 11592) = 0;
     sub_6050A308(a1 + 11596);
@@ -140900,7 +140900,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v11 = 12321336;
     v12 = "TeamSelect.bflyt";
-    sub_60475CDC(v2, &v11, (int)(a1 + 1465), 0, 0);
+    message_ref(v2, &v11, (int)(a1 + 1465), 0, 0);
     v11 = 12321336;
     v10[0] = 12321336;
     v12 = "Pa_Return_00";
@@ -140992,7 +140992,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v8 = 1;
     sub_60475618(v2, a1 + 3632, v7, (int)&dword_60CAD628, &v8);
-    return sub_60557814(a1, v6);
+    return B_Btn_00_ref_557814(a1, v6);
   }
 
 /* ============================================================================
@@ -141187,7 +141187,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60557814
+ * B_Btn_00_ref_557814
  * RVA 0x00557814   size 0x108   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60557814(int a1, _DWORD *a2)
@@ -141791,7 +141791,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v5[0] = 12321336;
     v5[1] = (int)"TeamSelectGround.bflyt";
-    sub_60475CDC(v2, v5, 0, 0, 0);
+    message_ref(v2, v5, 0, 0, 0);
     if ( ((unsigned int)&unk_60CAD760 & ~(1616216580 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAD760) )
     {
       dword_60CAD768 = 12321336;
@@ -141806,7 +141806,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605582D8
+ * InTeam_ref
  * RVA 0x005582d8   size 0x240   xrefs 0
  * ============================================================================ */
   int sub_605582D8()
@@ -142586,7 +142586,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v1);
     v4[0] = 12321336;
     v4[1] = (int)"TheEnd.bflyt";
-    sub_60475CDC(v1, v4, 0, 0, 0);
+    message_ref(v1, v4, 0, 0, 0);
     if ( ((unsigned int)&unk_60CAD8F0 & ~(1616220560 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAD8F0) )
     {
       dword_60CAD8F4 = 12321336;
@@ -142942,7 +142942,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v7[0] = 12321336;
     v7[1] = (int)"TimeLimit.bflyt";
-    sub_60475CDC(v2, v7, 0, 0, 0);
+    message_ref(v2, v7, 0, 0, 0);
     if ( ((unsigned int)&unk_60CAD950 & ~(1616222624 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAD950) )
     {
       dword_60CAD96C = 12321336;
@@ -143371,7 +143371,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6[0] = 12321336;
     v6[1] = (int)"TimeUp.bflyt";
-    sub_60475CDC(v2, v6, 0, 0, 0);
+    message_ref(v2, v6, 0, 0, 0);
     if ( ((unsigned int)&unk_60CADA20 & ~(1616224856 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CADA20) )
     {
       dword_60CADA30 = 12321336;
@@ -143896,7 +143896,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9 = 12321336;
       v10 = "TitleMarioPlusLuigi.bflyt";
-      sub_60475CDC(v2, &v9, 0, 0, 0);
+      message_ref(v2, &v9, 0, 0, 0);
       if ( ((unsigned int)&unk_60CADB90 & ~(1616227468 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CADB90) )
       {
         dword_60CADBB4 = 12321336;
@@ -143917,7 +143917,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9 = 12321336;
       v10 = "Title.bflyt";
-      sub_60475CDC(v2, &v9, 0, 0, 0);
+      message_ref(v2, &v9, 0, 0, 0);
       if ( ((unsigned int)&unk_60CADB94 & ~(1616227720 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CADB94) )
       {
         dword_60CADBD4 = 12321336;
@@ -144215,9 +144215,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 36);
     *(_BYTE *)(a1 + 13309) = 1;
     if ( *(_BYTE *)(a1 + 13310) )
-      v2 = sub_6055C1E0(0);
+      v2 = InOutR_InOutL_ref(0);
     else
-      v2 = sub_6055C1E0(1u);
+      v2 = InOutR_InOutL_ref(1u);
     v4[0] = 12321336;
     v4[1] = v2;
     return sub_60473DE4(v1, 0, v4, 0);
@@ -144267,9 +144267,9 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = sub_6055BF48(a1);
+    result = SE_SYS_COURSE_IN_ref_55BF48(a1);
     if ( !result )
-      return sub_6055C048(a1);
+      return SE_SYS_COURSE_IN_ref_55C048(a1);
     return result;
   }
 
@@ -144331,9 +144331,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(_DWORD *)(a1 + 13312);
     v3 = (_DWORD *)(a1 + 36);
     if ( v2 )
-      v4 = sub_6055C1E0(1u);
+      v4 = InOutR_InOutL_ref(1u);
     else
-      v4 = sub_6055C1E0(0);
+      v4 = InOutR_InOutL_ref(0);
     v6[0] = 12321336;
     v6[1] = v4;
     return sub_604741D8(v3, 0, v6, 0);
@@ -144391,7 +144391,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3596) = 0;
     *(_DWORD *)(a1 + 3600) = 0;
     *(_DWORD *)(a1 + 3604) = 0;
-    sub_6050208C((_DWORD *)(a1 + 3608));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 3608));
     sub_6045BF30(a1 + 5688);
     sub_6050A308(a1 + 6092);
     *(_BYTE *)(a1 + 13308) = 0;
@@ -144442,7 +144442,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "VSModeSelect.bflyt";
-    sub_60475CDC(v2, &v6, (int)(a1 + 912), 0, 0);
+    message_ref(v2, &v6, (int)(a1 + 912), 0, 0);
     v6 = 12321336;
     v9 = 12321336;
     v7 = "Pa_ReturnBtn_00";
@@ -144454,11 +144454,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = (const char *)11778612;
     v8[0] = 12321336;
     v8[1] = 11778612;
-    v3 = sub_6055C1E0(0);
+    v3 = InOutR_InOutL_ref(0);
     v9 = 12321336;
     v10 = (const char *)v3;
     sead::SafeStringBase<char>::operator=(&v6, &v9);
-    v4 = sub_6055C1E0(1);
+    v4 = InOutR_InOutL_ref(1);
     v9 = 12321336;
     v10 = (const char *)v4;
     (*(void (__fastcall **)(_DWORD *, int *))(v8[0] + 8))(v8, &v9);
@@ -144573,9 +144573,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 13308) = 1;
     *(_BYTE *)(a1 + 13310) = a2;
     if ( a2 == 1 )
-      v3 = sub_6055C1E0(0);
+      v3 = InOutR_InOutL_ref(0);
     else
-      v3 = sub_6055C1E0(1);
+      v3 = InOutR_InOutL_ref(1);
     v5[0] = 12321336;
     v5[1] = v3;
     sub_60473DE4((_DWORD *)(a1 + 36), 0, v5, 0);
@@ -144585,7 +144585,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6055BF48
+ * SE_SYS_COURSE_IN_ref_55BF48
  * RVA 0x0055bf48   size 0xe4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6055BF48(int a1)
@@ -144620,7 +144620,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6055C048
+ * SE_SYS_COURSE_IN_ref_55C048
  * RVA 0x0055c048   size 0x180   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6055C048(int a1)
@@ -144701,7 +144701,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6055C1E0
+ * InOutR_InOutL_ref
  * RVA 0x0055c1e0   size 0x1c4   xrefs 8
  * ============================================================================ */
   int __fastcall sub_6055C1E0(unsigned int a1)
@@ -145110,7 +145110,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6055CA84
+ * SE_SYS_DIALOGUE_IN_ref_55CA84
  * RVA 0x0055ca84   size 0xb8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6055CA84(int a1)
@@ -145176,7 +145176,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6055CBE8
+ * SE_SYS_DIALOGUE_IN_ref_55CBE8
  * RVA 0x0055cbe8   size 0x10   xrefs 0
  * ============================================================================ */
   int sub_6055CBE8()
@@ -145674,7 +145674,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6055D82C
+ * SE_SYS_PAGE_ref_55D82C
  * RVA 0x0055d82c   size 0x10   xrefs 0
  * ============================================================================ */
   int sub_6055D82C()
@@ -145976,7 +145976,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3680) = 11778612;
     *(_DWORD *)(a1 + 3684) = 0;
     *(_BYTE *)(a1 + 3688) = 0;
-    sub_6050208C((_DWORD *)(a1 + 3692));
+    SE_SYS_DECIDE_ref_50208C((_DWORD *)(a1 + 3692));
     sub_6045BF30(a1 + 5772);
     sub_6050A308(a1 + 6176);
     sub_6090E38C(a1 + 13712);
@@ -146098,7 +146098,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60475C8C((int)v2);
     v6 = 12321336;
     v7 = "WarpSelectWindow.bflyt";
-    sub_60475CDC(v2, &v6, (int)(a1 + 933), 0, 0);
+    message_ref(v2, &v6, (int)(a1 + 933), 0, 0);
     v6 = 12321336;
     v5[0] = 12321336;
     v7 = "Pa_Return_00";
@@ -146357,7 +146357,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = a1 + 13756;
     sub_604734E4((_DWORD *)(a1 + 13756), 0);
     v12 = 12321336;
-    v13 = sub_60560654(0);
+    v13 = Pa_ArrowBtnR_00_Pa_ArrowBtnL_00_ref_560654(0);
     sub_60476388((_DWORD *)(a1 + 13756), a1 + 44, &v12);
     v5 = v14;
     if ( v14 >= 2 )
@@ -146368,7 +146368,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = 1;
     sub_604734E4((_DWORD *)(a1 + 17296), 0);
     v7 = v14;
-    v8 = sub_60560654(v14);
+    v8 = Pa_ArrowBtnR_00_Pa_ArrowBtnL_00_ref_560654(v14);
     v12 = 12321336;
     v13 = v8;
     if ( v7 >= 2 )
@@ -147312,7 +147312,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60560654
+ * Pa_ArrowBtnR_00_Pa_ArrowBtnL_00_ref_560654
  * RVA 0x00560654   size 0x1c4   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60560654(unsigned int a1)
@@ -148172,7 +148172,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       sub_604734E4(v4, 0);
       sub_60475C8C((int)v4);
-      if ( sub_60475CDC(v4, &dword_60CAE2A0[i], 0, 0, 0) == 1 )
+      if ( message_ref(v4, &dword_60CAE2A0[i], 0, 0, 0) == 1 )
       {
         if ( ((unsigned int)&unk_60CAE20C & ~(1616255500 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAE20C) )
         {
@@ -148192,7 +148192,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = a1 + 5326;
     sub_604734E4(a1 + 5326, 0);
     sub_60475C8C((int)(a1 + 5326));
-    if ( sub_60475CDC(a1 + 5326, &dword_60CAE2D0, 0, 0, 0) )
+    if ( message_ref(a1 + 5326, &dword_60CAE2D0, 0, 0, 0) )
     {
       if ( ((unsigned int)&unk_60CAE210 & ~(1616255740 << v9) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAE210) )
       {
@@ -148209,7 +148209,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     sub_604734E4(a1 + 6213, 0);
     sub_60475C8C((int)(a1 + 6213));
-    result = sub_60475CDC(a1 + 6213, &dword_60CAE2D8, 0, 0, 0);
+    result = message_ref(a1 + 6213, &dword_60CAE2D8, 0, 0, 0);
     if ( result == 1 )
     {
       if ( ((unsigned int)&unk_60CAE214 & ~(1616256004 << v12) & 1) == 0 )
@@ -149573,7 +149573,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60563A0C
+ * SE_OBJ_CMN_SPLASH_POISON_ref_563A0C
  * RVA 0x00563a0c   size 0xa8   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60563A0C(int a1)
@@ -151294,7 +151294,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = *(float *)(a1 + 108) + 16.0;
     v9 = v4;
     v10 = v3;
-    sub_603EE4F4(MEMORY[0xC99CDC], &v8, 0);
+    BigBlockFragmentHeap_ref(MEMORY[0xC99CDC], &v8, 0);
     LODWORD(v12[0]) = 46;
     v5 = sub_60002B90(v2);
     v6 = MEMORY[0xC7F534];
@@ -152639,7 +152639,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = Actor::getProfileId(a1);
     if ( result == MEMORY[0xAF31B0] )
-      return sub_60563A0C(a1);
+      return SE_OBJ_CMN_SPLASH_POISON_ref_563A0C(a1);
     return result;
   }
 
@@ -155384,7 +155384,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6056E0AC
+ * SE_OBJ_BOUND_BLOCK_BOUND_ref
  * RVA 0x0056e0ac   size 0x84   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6056E0AC(int a1)
@@ -157266,7 +157266,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = Actor::getProfileId(a1);
     if ( result == MEMORY[0xAF31B8] )
-      return sub_60563A0C(a1);
+      return SE_OBJ_CMN_SPLASH_POISON_ref_563A0C(a1);
     return result;
   }
 
@@ -159605,7 +159605,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60576A00
+ * SE_OBJ_ITEM_APPEAR_ref_576A00
  * RVA 0x00576a00   size 0x170   xrefs 2
  * ============================================================================ */
   int __fastcall sub_60576A00(int a1)
@@ -159669,7 +159669,7 @@ static inline unsigned int uxtb16(unsigned int x)
   // attributes: thunk
   int __fastcall BabyYoshiBlock::spawnItemUp(int a1)
   {
-    return sub_60576A00(a1);
+    return SE_OBJ_ITEM_APPEAR_ref_576A00(a1);
   }
 
 /* ============================================================================
@@ -159679,7 +159679,7 @@ static inline unsigned int uxtb16(unsigned int x)
   // attributes: thunk
   int __fastcall BabyYoshiBlock::spawnItemDown(int a1)
   {
-    return sub_60576A00(a1);
+    return SE_OBJ_ITEM_APPEAR_ref_576A00(a1);
   }
 
 /* ============================================================================
@@ -161373,7 +161373,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6057A064
+ * obj_coin_ref
  * RVA 0x0057a064   size 0xc4   xrefs 7
  * ============================================================================ */
   int __fastcall sub_6057A064(int a1)
@@ -161708,7 +161708,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6057A6E4
+ * SE_OBJ_CMN_SPLASH_ref_57A6E4
  * RVA 0x0057a6e4   size 0x1b0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6057A6E4(int a1)
@@ -162447,7 +162447,7 @@ static inline unsigned int uxtb16(unsigned int x)
             sub_60584678(MEMORY[0xCAF15C], v11, v7);
             v6 = *(_DWORD *)(a1 + 36);
           }
-          sub_60002BC0(v5, (int *)(v6 + 108));
+          SE_OBJ_GET_COIN_ref(v5, (int *)(v6 + 108));
           v8 = *(_DWORD *)(a1 + 36);
           v9 = *(_DWORD *)(v8 + 7308);
           if ( v9 )
@@ -163028,7 +163028,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 7560) = v1;
     *(_DWORD *)(a1 + 7564) = v2;
     *(_DWORD *)(a1 + 7568) = v3;
-    sub_6057A064(a1);
+    obj_coin_ref(a1);
     balloon_coin_ref((_DWORD *)a1);
     sub_6057A244((_DWORD *)a1, 0);
     sub_601606A4((__int64 *)(a1 + 6120), 1);
@@ -163692,7 +163692,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6057DB40
+ * obj_coin_ref_57DB40
  * RVA 0x0057db40   size 0xc4   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6057DB40(int a1)
@@ -163822,7 +163822,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r0
     float *v6; // r1
   
-    sub_6057DB40(a1);
+    obj_coin_ref_57DB40(a1);
     *(float *)(a1 + 112) = *(float *)(a1 + 112) + 16.0;
     *(_DWORD *)(a1 + 144) = 1065353216;
     *(_DWORD *)(a1 + 148) = 1065353216;
@@ -163833,7 +163833,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6112) = v3;
     if ( v3 != 15 )
     {
-      sub_60002BC0(v3, (int *)(a1 + 108));
+      SE_OBJ_GET_COIN_ref(v3, (int *)(a1 + 108));
       v2 = *(_DWORD *)(a1 + 6120);
     }
     if ( v2 == 3 )
@@ -164163,7 +164163,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v5 = (char)v4;
           sub_60584408(MEMORY[0xCAF15C], (char)v4, 1);
-          sub_60002BC0(v5, (int *)(*(_DWORD *)(a1 + 36) + 108));
+          SE_OBJ_GET_COIN_ref(v5, (int *)(*(_DWORD *)(a1 + 36) + 108));
           v6 = *(_DWORD *)(a1 + 36);
           v7 = *(_DWORD *)(v6 + 20);
           v9[0] = *(float *)(v6 + 6148);
@@ -164480,7 +164480,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 148) = 1063507722;
         *(_DWORD *)(a1 + 152) = 1063507722;
         *(_WORD *)(a1 + 7376) = 1;
-        sub_6057A064(a1);
+        obj_coin_ref(a1);
         v5 = *(float *)(a1 + 112);
         v6 = *(_DWORD *)(a1 + 108);
         memset(&v9[1], 0, 0x24u);
@@ -164810,7 +164810,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     unsigned int v2; // r0
   
-    sub_6057DB40(a1);
+    obj_coin_ref_57DB40(a1);
     *(float *)(a1 + 108) = *(float *)(a1 + 108) + 8.0;
     *(float *)(a1 + 112) = *(float *)(a1 + 112) + -8.0;
     *(_DWORD *)(a1 + 144) = 1065353216;
@@ -164825,7 +164825,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 140) = 0;
     *(_DWORD *)(a1 + 124) = MEMORY[0xB04858];
     *(_DWORD *)(a1 + 100) = MEMORY[0xB0485C];
-    sub_60002BC0(v2, (int *)(a1 + 108));
+    SE_OBJ_GET_COIN_ref(v2, (int *)(a1 + 108));
     sub_6057D990((_DWORD *)a1);
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13299676);
     return 1;
@@ -165011,7 +165011,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605805A0(int a1)
   {
-    sub_6057A064(a1);
+    obj_coin_ref(a1);
     *(_WORD *)(a1 + 7376) = 1;
     *(_DWORD *)(a1 + 7372) = 1;
     *(_DWORD *)(a1 + 144) = 1065353216;
@@ -165223,7 +165223,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( Actor::getProfileId((Actor *)a1) != MEMORY[0xAF3374] )
     {
       v5 = *(unsigned __int8 *)(a1 + 7404);
-      sub_6057A6E4(a1);
+      SE_OBJ_CMN_SPLASH_ref_57A6E4(a1);
       if ( v5 && !*(_BYTE *)(a1 + 7404) )
         *v2 = 1;
       v6 = 8.0;
@@ -165359,7 +165359,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 7500) = (unsigned __int8)v2 >> 4;
     *(_DWORD *)(a1 + 7504) = (v2 >> 8) & 0xF;
     *(_DWORD *)(a1 + 7508) = HIWORD(v2) & 0xF;
-    sub_6057A064(a1);
+    obj_coin_ref(a1);
     *(_WORD *)(a1 + 7376) = 1;
     *(_DWORD *)(a1 + 7288) = 0;
     sub_60579AE4(a1);
@@ -171539,7 +171539,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 7352) = 0;
     *(_DWORD *)(a1 + 7356) = 1090519040;
     *(_DWORD *)(a1 + 7372) = 1;
-    sub_6057A064(a1);
+    obj_coin_ref(a1);
     *(_WORD *)(a1 + 7376) = 1;
     *(_DWORD *)(a1 + 7288) = 0;
     sub_60579AE4(a1);
@@ -178180,7 +178180,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 10420) = 0;
     v2 = (int *)(a1 + 6260);
     if ( (*(_BYTE *)(a1 + 6264) & 2) != 0 && (*(_BYTE *)(a1 + 6262) & 8) != 0 )
-      sub_60598BD4(a1);
+      skl_root_ref_598BD4(a1);
     v3 = *v2;
     if ( (*v2 & 0x80000) != 0 )
     {
@@ -178202,7 +178202,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60598BD4
+ * skl_root_ref_598BD4
  * RVA 0x00598bd4   size 0x2b0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_60598BD4(int a1)
@@ -184309,7 +184309,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605A1AFC
+ * SE_OBJ_CMN_SPLASH_ref_5A1AFC
  * RVA 0x005a1afc   size 0x88   xrefs 0
  * ============================================================================ */
   int *__fastcall sub_605A1AFC(int a1, float *a2)
@@ -191219,7 +191219,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605ADDD0
+ * daikonbou_ref
  * RVA 0x005addd0   size 0x20   xrefs 0
  * ============================================================================ */
   _DWORD *__fastcall sub_605ADDD0(_DWORD *result)
@@ -191230,7 +191230,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605ADDF8
+ * daikonbou_ref_5ADDF8
  * RVA 0x005addf8   size 0x20   xrefs 0
  * ============================================================================ */
   _DWORD *__fastcall sub_605ADDF8(_DWORD *result)
@@ -191241,7 +191241,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605ADE20
+ * daikonbou_ref_5ADE20
  * RVA 0x005ade20   size 0x20   xrefs 0
  * ============================================================================ */
   _DWORD *__fastcall sub_605ADE20(_DWORD *result)
@@ -191252,7 +191252,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605ADE48
+ * daikonbou_ref_5ADE48
  * RVA 0x005ade48   size 0x20   xrefs 0
  * ============================================================================ */
   _DWORD *__fastcall sub_605ADE48(_DWORD *result)
@@ -193719,7 +193719,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605B2094
+ * block_challenge_ref
  * RVA 0x005b2094   size 0x2a0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_605B2094(int a1)
@@ -197041,7 +197041,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StageActor::cullCheck(a1, 0);
       return 1;
     }
-    if ( sub_605B77BC((_DWORD *)(a1 + 644)) == 1 )
+    if ( block_challenge_ref_5B77BC((_DWORD *)(a1 + 644)) == 1 )
     {
       v8 = 1065353216;
       v9 = 0;
@@ -197282,18 +197282,18 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[40] = a2;
     a1[169] = a3;
     a1[170] = a4;
-    sub_605B77BC(a1);
+    block_challenge_ref_5B77BC(a1);
     if ( sub_607F6904(MEMORY[0xCC62E4]) || (result = *(_DWORD *)(MEMORY[0xC99DD4] + 764), result == 3) )
     {
       do
-        result = sub_605B77BC(a1);
+        result = block_challenge_ref_5B77BC(a1);
       while ( result != 1 );
     }
     return result;
   }
 
 /* ============================================================================
- * sub_605B77BC
+ * block_challenge_ref_5B77BC
  * RVA 0x005b77bc   size 0x1b0   xrefs 3
  * ============================================================================ */
   int __fastcall sub_605B77BC(_DWORD *a1)
@@ -198959,7 +198959,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_603FBA2C(MEMORY[0xC99DD4], 10, v9);
     if ( v9 > 0 )
       v5 = v9;
-    v11 = sub_603EDFA0(MEMORY[0xC99CDC], &v18, v10, v5);
+    v11 = BlockFragmentHeap_ref(MEMORY[0xC99CDC], &v18, v10, v5);
     result = Pa0_jyotyu_ref(v11, &v18);
     if ( !a3 )
     {
@@ -201254,7 +201254,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 140) = 0;
     *(_DWORD *)(a1 + 100) = -1103101952;
     *(_DWORD *)(a1 + 124) = 1077936128;
-    return sub_60002BC0(v1, (int *)(a1 + 108));
+    return SE_OBJ_GET_COIN_ref(v1, (int *)(a1 + 108));
   }
 
 /* ============================================================================
@@ -201714,7 +201714,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605BDDE0
+ * green_ring_ref
  * RVA 0x005bdde0   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_605BDDE0(int a1)
@@ -201764,7 +201764,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605BDF18
+ * green_ring_ref_5BDF18
  * RVA 0x005bdf18   size 0xc0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_605BDF18(int a1)
@@ -201817,7 +201817,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605BE044
+ * SE_SYS_RED_RING_ref
  * RVA 0x005be044   size 0xc4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_605BE044(float *a1)
@@ -201971,7 +201971,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605BE4E8
+ * SE_OBJ_CMN_TOUCH_HARD_ref_5BE4E8
  * RVA 0x005be4e8   size 0x3c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_605BE4E8(int a1, int a2, int a3)
@@ -202860,7 +202860,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v17; // [sp+1Ch] [bp-Ch]
     int v18; // [sp+20h] [bp-8h]
   
-    sub_605BF824(a1, a3, a4);
+    bolt_pyramid_ref(a1, a3, a4);
     if ( ((unsigned int)&unk_60CB08A0 & ~(1616639636 << v8) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CB08A0) )
     {
       dword_60CB08AC = -1048576000;
@@ -202903,7 +202903,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605BF824
+ * bolt_pyramid_ref
  * RVA 0x005bf824   size 0x120   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_605BF824(_DWORD *a1, int a2, int a3)
@@ -203279,14 +203279,14 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 504) = 1111490560;
     *(_DWORD *)(a1 + 508) = 1111490560;
     *(_DWORD *)(a1 + 512) = 1111490560;
-    boss_koopa_ref(a1);
+    boss_koopa_ashiba_ref(a1);
     sub_605C0470((float *)a1);
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13306148);
     return 1;
   }
 
 /* ============================================================================
- * boss_koopa_ref
+ * boss_koopa_ashiba_ref
  * RVA 0x005c0258   size 0x1e0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_605C0258(int a1)
@@ -203653,7 +203653,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_WORD *)(a1 + 6968) = 4;
     *(_BYTE *)(a1 + 6843) = 1;
-    sub_603EDFA0(MEMORY[0xC99CDC], (_DWORD *)(a1 + 108), (v7 >> 12) & 0xF00 | v3, v8);
+    BlockFragmentHeap_ref(MEMORY[0xC99CDC], (_DWORD *)(a1 + 108), (v7 >> 12) & 0xF00 | v3, v8);
     v9 = *(float *)(a1 + 112);
     v10 = *(_DWORD *)(a1 + 116);
     v12[0] = *(_DWORD *)(a1 + 108);
@@ -203813,12 +203813,12 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 15004) = 0;
     *(_DWORD *)(a1 + 15000) = 0;
     *(_DWORD *)(a1 + 14996) = 0;
-    sub_6091FD58(a1 + 15024);
-    sub_6091FD58(a1 + 15296);
-    sub_6091FD58(a1 + 15568);
-    sub_6091FD58(a1 + 15840);
-    sub_6091FD58(a1 + 16112);
-    sub_6091FD58(a1 + 0x4000);
+    agl_TextureData_ref(a1 + 15024);
+    agl_TextureData_ref(a1 + 15296);
+    agl_TextureData_ref(a1 + 15568);
+    agl_TextureData_ref(a1 + 15840);
+    agl_TextureData_ref(a1 + 16112);
+    agl_TextureData_ref(a1 + 0x4000);
     return a1;
   }
 
@@ -204185,37 +204185,37 @@ static inline unsigned int uxtb16(unsigned int x)
       v254 = 12321336;
       v257 = dword_60C09E38[v6];
       v255 = dword_60C09E50[v6];
-      sub_60448C14(&v256, &v254, a1 + 15024, (_DWORD *)(a1 + 15016), 0);
+      output_bfres_ref_448C14(&v256, &v254, a1 + 15024, (_DWORD *)(a1 + 15016), 0);
       v7 = *(unsigned __int8 *)(a1 + 160);
       v256 = 12321336;
       v254 = 12321336;
       v257 = dword_60C09E38[v7];
       v255 = dword_60C09E5C[v7];
-      sub_60448C14(&v256, &v254, a1 + 15296, (_DWORD *)(a1 + 15016), 0);
+      output_bfres_ref_448C14(&v256, &v254, a1 + 15296, (_DWORD *)(a1 + 15016), 0);
       v8 = *(unsigned __int8 *)(a1 + 160);
       v256 = 12321336;
       v254 = 12321336;
       v257 = dword_60C09E38[v8];
       v255 = dword_60C09E68[v8];
-      sub_60448C14(&v256, &v254, a1 + 15568, (_DWORD *)(a1 + 15016), 0);
+      output_bfres_ref_448C14(&v256, &v254, a1 + 15568, (_DWORD *)(a1 + 15016), 0);
       v9 = *(unsigned __int8 *)(a1 + 160);
       v256 = 12321336;
       v254 = 12321336;
       v257 = dword_60C09E38[v9];
       v255 = dword_60C09E74[v9];
-      sub_60448D04(&v256, &v254, a1 + 15840, (_DWORD *)(a1 + 15016), 0);
+      output_bfres_ref_448D04(&v256, &v254, a1 + 15840, (_DWORD *)(a1 + 15016), 0);
       v10 = *(unsigned __int8 *)(a1 + 160);
       v256 = 12321336;
       v254 = 12321336;
       v257 = dword_60C09E38[v10];
       v255 = dword_60C09E80[v10];
-      sub_60448D04(&v256, &v254, a1 + 16112, (_DWORD *)(a1 + 15016), 0);
+      output_bfres_ref_448D04(&v256, &v254, a1 + 16112, (_DWORD *)(a1 + 15016), 0);
       v11 = *(unsigned __int8 *)(a1 + 160);
       v256 = 12321336;
       v254 = 12321336;
       v257 = dword_60C09E38[v11];
       v255 = dword_60C09E8C[v11];
-      sub_60448D04(&v256, &v254, a1 + 0x4000, (_DWORD *)(a1 + 15016), 0);
+      output_bfres_ref_448D04(&v256, &v254, a1 + 0x4000, (_DWORD *)(a1 + 15016), 0);
       v235 = *(_DWORD *)(a1 + 15024);
       v12 = MEMORY[0xCBD254];
       v236 = *(_DWORD *)(a1 + 15028);
@@ -205226,7 +205226,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4[0] = 12321336;
       v5[1] = "env_underwater";
       v4[1] = "wmy_ef_bubble";
-      sub_60448C14(v5, v4, v2 + 44744, a1 + 1575, 0);
+      output_bfres_ref_448C14(v5, v4, v2 + 44744, a1 + 1575, 0);
       v2 = MEMORY[0xCBD254];
     }
     sub_6044B314((int)(a1 + 1576), v2 + 44744, -1, 15);
@@ -205257,7 +205257,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605C32CC(int a1)
   {
-    if ( sub_605C32F8(a1) == 1 )
+    if ( face_1_ref_5C32F8(a1) == 1 )
     {
       sub_605C399C(a1);
       sub_605C4308(a1);
@@ -205266,7 +205266,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605C32F8
+ * face_1_ref_5C32F8
  * RVA 0x005c32f8   size 0x670   xrefs 1
  * ============================================================================ */
   int __fastcall sub_605C32F8(int a1)
@@ -207288,7 +207288,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605C6C40
+ * SE_EMY_CMN_TOUCH_DISAPPEAR_ref_5C6C40
  * RVA 0x005c6c40   size 0x54   xrefs 0
  * ============================================================================ */
   int __fastcall sub_605C6C40(int result, int a2, int a3)
@@ -210144,7 +210144,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           result = (**v2)(v2, 13116368);
           if ( result == 1 )
-            return sub_600424E0((int)v2);
+            return SE_OBJ_PNGN_ICEBALL_DISAPP_ref((int)v2);
         }
       }
     }
@@ -213845,7 +213845,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[35] = 0.0;
       a1[31] = 3.0;
       a1[25] = -0.1875;
-      sub_60002BC0(*((_DWORD *)a1 + 1832), (int *)a1 + 27);
+      SE_OBJ_GET_COIN_ref(*((_DWORD *)a1 + 1832), (int *)a1 + 27);
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)a1 + 1530);
       *((_WORD *)a1 + 3667) = 4;
       *((_BYTE *)a1 + 535) = 1;
@@ -214535,7 +214535,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605D111C
+ * swing_sea_ref
  * RVA 0x005d111c   size 0x158   xrefs 0
  * ============================================================================ */
   int __fastcall sub_605D111C(int a1)
@@ -216679,7 +216679,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605D47E0
+ * SE_OBJ_CMN_BALLOON_BREAK_ref_5D47E0
  * RVA 0x005d47e0   size 0xc0   xrefs 1
  * ============================================================================ */
   int __fastcall sub_605D47E0(int a1, int a2)
@@ -216702,7 +216702,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605D48AC
+ * SE_OBJ_CMN_BALLOON_BREAK_ref_5D48AC
  * RVA 0x005d48ac   size 0x6c   xrefs 0
  * ============================================================================ */
   int *__fastcall sub_605D48AC(int a1)
@@ -217340,7 +217340,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 748) = 0;
       if ( *(_BYTE *)(a1 + 752) )
         sub_605D4BF4(a1, a2);
-      sub_605D47E0(a1, a4);
+      SE_OBJ_CMN_BALLOON_BREAK_ref_5D47E0(a1, a4);
       StateMgr::changeState(v8, 13308584);
       return 1;
     }
@@ -221164,9 +221164,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (unsigned int)(v7 - 3) <= 2 && (float)(*(float *)(a1 + 112) + *(float *)(a1 + 576)) <= *(float *)(a1 + 6852) )
     {
       if ( v7 == 5 )
-        sub_605E4DE0(a1);
+        SE_OBJ_CMN_SPLASH_POISON_ref_5E4DE0(a1);
       else
-        sub_605E4E30(a1, v7 == 4);
+        SE_OBJ_CMN_SPLASH_LAVA_ref_5E4E30(a1, v7 == 4);
       v5 = 0;
       return sub_605E0870(a1, 13310400, v5);
     }
@@ -222040,7 +222040,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v39; // [sp+28h] [bp-8h]
     float v40; // [sp+2Ch] [bp-4h]
   
-    result = sub_6079D5A0(a2, v31);
+    result = Player_setupWristNodes_79D5A0(a2, v31);
     if ( result != 1 )
       return result;
     sub_6079D45C(a2);
@@ -227867,7 +227867,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605E4C38
+ * SE_OBJ_CMN_SPLASH_ref_5E4C38
  * RVA 0x005e4c38   size 0xcc   xrefs 2
  * ============================================================================ */
   int __fastcall sub_605E4C38(int result, int a2)
@@ -227908,7 +227908,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605E4D0C
+ * SE_OBJ_CMN_SPLASH_ref_5E4D0C
  * RVA 0x005e4d0c   size 0xcc   xrefs 3
  * ============================================================================ */
   int __fastcall sub_605E4D0C(int result, int a2)
@@ -227949,7 +227949,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605E4DE0
+ * SE_OBJ_CMN_SPLASH_POISON_ref_5E4DE0
  * RVA 0x005e4de0   size 0x4c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_605E4DE0(int a1)
@@ -227965,7 +227965,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605E4E30
+ * SE_OBJ_CMN_SPLASH_LAVA_ref_5E4E30
  * RVA 0x005e4e30   size 0x84   xrefs 1
  * ============================================================================ */
   int __fastcall sub_605E4E30(int a1, int a2)
@@ -228497,7 +228497,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         *(float *)(a1 + 120) = v13;
         *v3 = ((3 * (unsigned __int64)sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32) + 5;
-        sub_605E4C38(a1, (*(_BYTE *)(a1 + 6805) & 0x10) != 0);
+        SE_OBJ_CMN_SPLASH_ref_5E4C38(a1, (*(_BYTE *)(a1 + 6805) & 0x10) != 0);
       }
       if ( *(_DWORD *)(a1 + 6144) == 11 )
         sub_605EB980(**(_DWORD **)(*(_DWORD *)(a1 + 6076) + 12));
@@ -228528,11 +228528,11 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(_DWORD *)(a1 + 6808);
       if ( (result & 0x1000) != 0 )
       {
-        return sub_605E4D0C(a1, 1);
+        return SE_OBJ_CMN_SPLASH_ref_5E4D0C(a1, 1);
       }
       else if ( (result & 0x800) != 0 )
       {
-        return sub_605E4D0C(a1, 0);
+        return SE_OBJ_CMN_SPLASH_ref_5E4D0C(a1, 0);
       }
     }
     return result;
@@ -229224,7 +229224,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605E6A40
+ * SE_OBJ_ITEM_APPEAR_ref_5E6A40
  * RVA 0x005e6a40   size 0x104   xrefs 0
  * ============================================================================ */
   int *__fastcall sub_605E6A40(int a1)
@@ -233644,7 +233644,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v5[6]; // [sp+0h] [bp-28h] BYREF
     _DWORD v6[4]; // [sp+18h] [bp-10h] BYREF
   
-    sub_605EC240(a1);
+    obj_chikuwa_block_ref(a1);
     v2 = *(float *)(a1 + 108) + 8.0;
     *(float *)(a1 + 108) = v2;
     v3 = *(float *)(a1 + 112) + -16.0;
@@ -233937,7 +233937,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605EC240
+ * obj_chikuwa_block_ref
  * RVA 0x005ec240   size 0x130   xrefs 2
  * ============================================================================ */
   int __fastcall sub_605EC240(int a1)
@@ -235625,7 +235625,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605EE7C0
+ * SE_OBJ_DOKAN_APPEAR_ref
  * RVA 0x005ee7c0   size 0x68   xrefs 0
  * ============================================================================ */
   int *__fastcall sub_605EE7C0(int a1)
@@ -236195,7 +236195,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605EF624
+ * SE_OBJ_DOKAN_APPEAR_ref_5EF624
  * RVA 0x005ef624   size 0x70   xrefs 0
  * ============================================================================ */
   int *__fastcall sub_605EF624(int a1)
@@ -236669,7 +236669,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605F0278
+ * SE_OBJ_DOKAN_APPEAR_ref_5F0278
  * RVA 0x005f0278   size 0x68   xrefs 0
  * ============================================================================ */
   int *__fastcall sub_605F0278(int a1)
@@ -237143,7 +237143,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605F0EBC
+ * SE_OBJ_DOKAN_APPEAR_ref_5F0EBC
  * RVA 0x005f0ebc   size 0x70   xrefs 0
  * ============================================================================ */
   int *__fastcall sub_605F0EBC(int a1)
@@ -237884,7 +237884,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v6 != 2 )
     {
       *(_BYTE *)(a1 + 7484) = v5;
-      sub_6057A064(a1);
+      obj_coin_ref(a1);
       *(_DWORD *)(a1 + 7288) = 0;
       *(_BYTE *)(a1 + 87) = 3;
       *(_BYTE *)(a1 + 86) = 0;
@@ -244625,7 +244625,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605FD7AC
+ * chidimi_ref
  * RVA 0x005fd7ac   size 0xdc   xrefs 1
  * ============================================================================ */
   unsigned int __fastcall sub_605FD7AC(int a1)
@@ -244708,7 +244708,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         if ( v2 < v1 )
         {
-          sub_605FD7AC(a1);
+          chidimi_ref(a1);
           return 0;
         }
       }
@@ -245921,7 +245921,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605FFB18
+ * chidimi_ref_5FFB18
  * RVA 0x005ffb18   size 0xdc   xrefs 1
  * ============================================================================ */
   unsigned int __fastcall sub_605FFB18(int a1)
@@ -246041,7 +246041,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         if ( v2 < v1 )
         {
-          sub_605FFB18(a1);
+          chidimi_ref_5FFB18(a1);
           return 0;
         }
       }

@@ -257,7 +257,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60782948
+ * ExcelOR_MiiTexAnmData_NX_exbin_ref
  * RVA 0x00782948   size 0x10c   xrefs 1
  * ============================================================================ */
   _DWORD *__fastcall sub_60782948(int a1)
@@ -1058,7 +1058,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           result = (**v3)(v3, 13386484);
           if ( result == 1 )
-            return sub_60785B04((int)v3);
+            return SE_OBJ_PNGN_ICE_BREAK_ref_785B04((int)v3);
         }
       }
     }
@@ -1092,7 +1092,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           result = (**v3)(v3, 13386484);
           if ( result == 1 )
-            return sub_60785B04((int)v3);
+            return SE_OBJ_PNGN_ICE_BREAK_ref_785B04((int)v3);
         }
       }
     }
@@ -1141,7 +1141,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           result = (**v6)(v6, 13386484);
           if ( result == 1 )
-            return sub_60785B04((int)v6);
+            return SE_OBJ_PNGN_ICE_BREAK_ref_785B04((int)v6);
         }
       }
     }
@@ -1262,11 +1262,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         _cxa_guard_release_0(13087604);
       }
       if ( !v6 )
-        return sub_60785B04(a1);
+        return SE_OBJ_PNGN_ICE_BREAK_ref_785B04(a1);
   LABEL_27:
       if ( (**v6)(v6, 13087600) == 1 )
         sub_607A1E44(v6);
-      return sub_60785B04(a1);
+      return SE_OBJ_PNGN_ICE_BREAK_ref_785B04(a1);
     }
     v3 = sub_607869D0(v2 + 688);
     v4 = v3 == 1;
@@ -1287,7 +1287,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           _cxa_guard_release_0(13087604);
         }
         if ( !v6 )
-          return sub_60785B04(a1);
+          return SE_OBJ_PNGN_ICE_BREAK_ref_785B04(a1);
         goto LABEL_27;
       }
     }
@@ -1304,14 +1304,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( (**v8)(v8, 13087600) == 1 )
           sub_607A1E44(v8);
       }
-      sub_60785B04(a1);
+      SE_OBJ_PNGN_ICE_BREAK_ref_785B04(a1);
     }
     sub_607A1DE0(v2);
     return sub_607A1DF4(v2, a1 + 108);
   }
 
 /* ============================================================================
- * sub_60785B04
+ * SE_OBJ_PNGN_ICE_BREAK_ref_785B04
  * RVA 0x00785b04   size 0x12c   xrefs 6
  * ============================================================================ */
   int __fastcall sub_60785B04(int a1)
@@ -1344,16 +1344,6 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_602F335C((_BYTE *)(a1 + 648), (int *)&v8, 4u);
     *(_BYTE *)(a1 + 19) = 1;
     return 1;
-  }
-
-/* ============================================================================
- * sub_60785C54
- * RVA 0x00785c54   size 0x4   xrefs 1
- * ============================================================================ */
-  // attributes: thunk
-  int __fastcall sub_60785C54(int a1)
-  {
-    return sub_60785B04(a1);
   }
 
 /* ============================================================================
@@ -5364,7 +5354,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6078A964
+ * STRM_BGM_COURSE_OUT_ALL_BUBBLE_ref_78A964
  * RVA 0x0078a964   size 0x84   xrefs 6
  * ============================================================================ */
   int __fastcall sub_6078A964(int result, unsigned int a2)
@@ -7294,7 +7284,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6078D328
+ * face_1_ref_78D328
  * RVA 0x0078d328   size 0x178   xrefs 4
  * ============================================================================ */
   float __fastcall sub_6078D328(int a1)
@@ -8076,7 +8066,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6078E17C
+ * face_1_ref_78E17C
  * RVA 0x0078e17c   size 0xe8   xrefs 1
  * ============================================================================ */
   float __fastcall sub_6078E17C(int a1)
@@ -8123,7 +8113,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6078E270
+ * Player_setupModelNodes_78E270
  * RVA 0x0078e270   size 0x20c   xrefs 3
  * ============================================================================ */
   int *__fastcall sub_6078E270(int a1)
@@ -8200,7 +8190,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6078E48C
+ * face_1_ref_78E48C
  * RVA 0x0078e48c   size 0xd4   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6078E48C(int *a1, int a2)
@@ -9726,7 +9716,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607915D4
+ * Player_registerRideAnimations
  * RVA 0x007915d4   size 0x844   xrefs 3
  * ============================================================================ */
   int __fastcall sub_607915D4(_DWORD *a1, int a2, int a3, int a4)
@@ -12565,7 +12555,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       case 0:
       case 1:
         v11 = operator new(584);
-        result = sub_6075A088(v11, a1, a2, a3, a5);
+        result = LuigiAnm_ref(v11, a1, a2, a3, a5);
         break;
       case 2:
       case 3:
@@ -12592,7 +12582,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v17 = *(_DWORD *)(v16 + 36);
         v18 = *(_DWORD *)(v16 + 44);
         v19 = operator new(1184);
-        result = sub_6075C02C(v19, 8, a2, a3, v17, v18, a4, 0, a5, 0);
+        result = MiiAnm_ref(v19, 8, a2, a3, v17, v18, a4, 0, a5, 0);
         break;
       default:
         return result;
@@ -12628,7 +12618,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60794828();
     *a1 = 12733536;
     v12 = (_DWORD *)operator new(1184);
-    sub_6075C02C((int)v12, 8, a2, 3, a3, a4, a5, a6, a7, a8);
+    MiiAnm_ref((int)v12, 8, a2, 3, a3, a4, a5, a6, a7, a8);
     a1[3] = v12;
     sub_60794848((int)a1, v12);
     (*(void (__fastcall **)(_DWORD, int, _DWORD))(*(_DWORD *)a1[3] + 176))(a1[3], 1, 0);
@@ -13792,7 +13782,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607966D8
+ * skl_root_ref_7966D8
  * RVA 0x007966d8   size 0x148   xrefs 0
  * ============================================================================ */
   int __fastcall sub_607966D8(int a1)
@@ -14112,7 +14102,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 = *(_DWORD *)(*v5 + 208) | 0x20000;
     *(_DWORD *)(*v5 + 208) = v7;
     if ( sub_607C70B0(a1) && (!*(_DWORD *)(a1 + 11988) || !sub_6074F0C4(a1 + 11956)) )
-      return sub_607C7450(a1);
+      return skl_root_ref_7C7450(a1);
     result = *(_DWORD *)(a1 + 1216);
     if ( (result & 0x2000000) != 0 )
       return sub_60793FF0(*v5, (__int64 *)(a1 + 13004));
@@ -15485,7 +15475,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (v9 & 0x20000000) != 0 )
     {
       if ( *(char *)(MEMORY[0xC9CF0C] + 1404) >= 0 && !*(_BYTE *)(MEMORY[0xC9CF0C] + 1406) )
-        sub_60817284(MEMORY[0xCC6B68]);
+        STRM_BGM_COURSE_OUT_ALL_BUBBLE_ref_817284(MEMORY[0xCC6B68]);
       if ( !*(_DWORD *)(a1 + 12208) && (*(_BYTE *)(a1 + 1206) & 1) == 0 )
       {
         *(_DWORD *)(MEMORY[0xCC62E4] + 108) = 196610;
@@ -17572,7 +17562,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(a1 + 9940);
     if ( v2 == 4 )
     {
-      SE_PLY_THROW_ref(a1, 0);
+      SE_PLY_THROW_ICEBALL_ref(a1, 0);
     }
     else if ( v2 == 7 )
     {
@@ -17670,7 +17660,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = sub_60793DA0(a1[2840]);
           if ( result != 1 )
             return result;
-          SE_PLY_THROW_ref((int)a1, 0);
+          SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
           result = 5;
           goto LABEL_26;
         case 7:
@@ -18466,7 +18456,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6079D5A0
+ * Player_setupWristNodes_79D5A0
  * RVA 0x0079d5a0   size 0x1d0   xrefs 6
  * ============================================================================ */
   int __fastcall sub_6079D5A0(int a1, float32x2_t *a2)
@@ -19768,7 +19758,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6079F548
+ * Player_setupModelNodes_79F548
  * RVA 0x0079f548   size 0x5c4   xrefs 3
  * ============================================================================ */
   int __fastcall sub_6079F548(int a1)
@@ -20659,7 +20649,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607A0E98
+ * Player_poisonDownUpdate
  * RVA 0x007a0e98   size 0x2d4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_607A0E98(int a1, int a2, int a3)
@@ -20736,7 +20726,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return (*(int (__fastcall **)(int, int, int))(*(_DWORD *)a1 + 1416))(a1, a3, a2);
       case 9:
       case 10:
-        sub_607A1198(a1, a3);
+        LavaDown_type_d_mode_d_IsPassingDown_s_ref(a1, a3);
         return v4;
       case 11:
       case 12:
@@ -20807,7 +20797,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607A1198
+ * LavaDown_type_d_mode_d_IsPassingDown_s_ref
  * RVA 0x007a1198   size 0xcc   xrefs 2
  * ============================================================================ */
   int __fastcall sub_607A1198(int a1, int a2)
@@ -21986,7 +21976,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_607734E8(a1, v4, 0, 0);
     }
     sub_607A293C((int)a1);
-    return sub_6079F548(a1);
+    return Player_setupModelNodes_79F548(a1);
   }
 
 /* ============================================================================
@@ -24406,7 +24396,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607A6B18
+ * Player_playDownSound_7A6B18
  * RVA 0x007a6b18   size 0x1e0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_607A6B18(int a1)
@@ -24664,7 +24654,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (int *)(a1 + 9696);
     if ( *(_DWORD *)(a1 + 9696) == 5 )
       goto LABEL_4;
-    sub_6078A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
+    STRM_BGM_COURSE_OUT_ALL_BUBBLE_ref_78A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
     v3 = *v2;
     if ( (unsigned int)*v2 > 5 )
       goto LABEL_6;
@@ -24705,7 +24695,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607A716C
+ * FallDown_type_d_mode_d_IsPassingDown_s_ref
  * RVA 0x007a716c   size 0xa4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_607A716C(int a1)
@@ -24734,7 +24724,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607A7220
+ * FallDown_type_d_mode_d_IsPassingDown_s_ref_7A7220
  * RVA 0x007a7220   size 0x98   xrefs 1
  * ============================================================================ */
   int __fastcall sub_607A7220(int a1)
@@ -24768,7 +24758,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607A72DC
+ * Player_playDownSound_7A72DC
  * RVA 0x007a72dc   size 0x1e4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_607A72DC(int a1)
@@ -24865,7 +24855,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       *v3 = 1;
       if ( *(_DWORD *)(a1 + 9696) != 1 )
-        sub_6078A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
+        STRM_BGM_COURSE_OUT_ALL_BUBBLE_ref_78A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
       sub_603E4AD8(*(_DWORD *)(a1 + 12008));
       sub_607602AC(a1, 2, 0);
       v4 = 50;
@@ -24886,7 +24876,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607A75EC
+ * Player_playDownSound_7A75EC
  * RVA 0x007a75ec   size 0x1b4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_607A75EC(int a1)
@@ -24899,7 +24889,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD v8[3]; // [sp+4h] [bp-Ch] BYREF
   
     if ( *(_DWORD *)(a1 + 7076) == 8 )
-      sub_6076CCA4((int *)a1);
+      SE_PLY_SPLASH_LAVA_ref_76CCA4((int *)a1);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1384))(a1);
     v2 = *(_DWORD *)(a1 + 1204);
     if ( (v2 & 0x8000) == 0 )
@@ -25014,7 +25004,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( !*(_DWORD *)(a1 + 9712) )
         {
-          sub_6078A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
+          STRM_BGM_COURSE_OUT_ALL_BUBBLE_ref_78A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
           *(_DWORD *)(a1 + 9712) = 80;
           sub_60773630(a1, 44, 0);
           sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_BURN_DOWN", 0, 0);
@@ -25166,7 +25156,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( (result & 0x200000) != 0 )
             {
               if ( *v3 != 4 )
-                sub_6078A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
+                STRM_BGM_COURSE_OUT_ALL_BUBBLE_ref_78A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
               v5 = 30;
               *v3 = 4;
               result = 9712;
@@ -25281,7 +25271,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (result & 0x200000) != 0 )
       {
         if ( *(_DWORD *)(a1 + 9704) != 4 )
-          sub_6078A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
+          STRM_BGM_COURSE_OUT_ALL_BUBBLE_ref_78A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
         *(_DWORD *)(a1 + 9704) = 4;
         *(_DWORD *)(a1 + 9712) = 30;
         return 9712;
@@ -25367,7 +25357,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v3 == v4 && *(_DWORD *)(a1 + 9704) == 3 )
     {
       *(_DWORD *)(a1 + 9704) = 4;
-      sub_6078A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
+      STRM_BGM_COURSE_OUT_ALL_BUBBLE_ref_78A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
       *(_DWORD *)(a1 + 9712) = 80;
       return 1;
     }
@@ -26365,7 +26355,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v5 )
         {
           if ( (**v5)(v5, 13388660) == 1 )
-            sub_6083038C(v5, *(_DWORD *)(a1 + 20) & 0xF);
+            SE_SYS_DECIDE_ref_83038C(v5, *(_DWORD *)(a1 + 20) & 0xF);
         }
         sub_607865D0(a1 + 688);
         return 1;
@@ -26404,7 +26394,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v5 )
         {
           if ( (**v5)(v5, 13388660) == 1 )
-            sub_60830400(v5, *(_DWORD *)(a1 + 20) & 0xF);
+            SE_SYS_DECIDE_ref_830400(v5, *(_DWORD *)(a1 + 20) & 0xF);
         }
         sub_607865D0(a1 + 688);
         return 1;
@@ -27248,7 +27238,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * SE_PLY_THROW_ref
+ * SE_PLY_THROW_ICEBALL_ref
  * RVA 0x007aaba0   size 0x344   xrefs 15
  * ============================================================================ */
   void __fastcall sub_607AABA0(int a1, int a2)
@@ -27536,7 +27526,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = sub_60793DA0(*(_DWORD *)(a1 + 11360));
       if ( result == 1 )
       {
-        SE_PLY_THROW_ref(a1, 0);
+        SE_PLY_THROW_ICEBALL_ref(a1, 0);
         *v8 = 1;
         result = *(_DWORD *)(a1 + 1224) & 0xFFFBFFFF;
         *(_DWORD *)(a1 + 1224) = result;
@@ -27574,7 +27564,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v3 = (int)v1;
   LABEL_6:
-      SE_PLY_THROW_ref(v3, 1);
+      SE_PLY_THROW_ICEBALL_ref(v3, 1);
     }
   }
 
@@ -28067,7 +28057,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           result = *(_DWORD *)(a1 + 6900) & 0x40001;
           if ( result == 1 )
-            return sub_6076EB7C(a1);
+            return skl_root_ref_76EB7C(a1);
           return result;
         }
         if ( *(_DWORD *)(a1 + 1320) == 9 && *(int *)(a1 + 15084) <= 0 )
@@ -32764,7 +32754,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (*(_BYTE *)(a1 + 1204) & 8) == 0 )
       {
         sub_607BB7D8(a1);
-        sub_607B6D90(a1);
+        Player_setupRingNode_7B6D90(a1);
         (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 11360) + 148))(*(_DWORD *)(a1 + 11360));
         sub_6079D390(a1);
       }
@@ -32781,7 +32771,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else if ( sub_6076645C(a1) == 1 )
       {
-        return sub_6079F548(a1);
+        return Player_setupModelNodes_79F548(a1);
       }
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1052))(a1);
       sub_607965CC(a1);
@@ -32804,7 +32794,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_6079C470(a1);
       sub_6075EEA0(a1);
       sub_60760110(a1);
-      sub_6079F548(a1);
+      Player_setupModelNodes_79F548(a1);
       if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1204))(a1) == 1 )
         sub_60764FD8(a1);
       sub_60799BA0(a1, 0);
@@ -34458,7 +34448,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607B6D90
+ * Player_setupRingNode_7B6D90
  * RVA 0x007b6d90   size 0x258   xrefs 1
  * ============================================================================ */
   int __fastcall sub_607B6D90(int a1)
@@ -34601,7 +34591,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_607B7140
+ * Player_setupWristNodes_7B7140
  * RVA 0x007b7140   size 0x25c   xrefs 1
  * ============================================================================ */
   int __fastcall sub_607B7140(int a1, float *a2)
@@ -34714,7 +34704,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = (**(int (__fastcall ***)(int, int))v3)(v3, 13087600);
         if ( result == 1 )
         {
-          if ( sub_607B7140(v3, v7) == 1 )
+          if ( Player_setupWristNodes_7B7140(v3, v7) == 1 )
           {
             v4 = v7[0];
             v5 = v7[1];
@@ -34991,7 +34981,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             result = sub_60793DA0(*(_DWORD *)(a1 + 11360));
             if ( result != 1 )
               return result;
-            SE_PLY_THROW_ref(a1, 0);
+            SE_PLY_THROW_ICEBALL_ref(a1, 0);
             result = 4;
             goto LABEL_25;
           default:
@@ -35359,7 +35349,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[2485];
     if ( v3 == 4 )
     {
-      SE_PLY_THROW_ref((int)a1, 0);
+      SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
     }
     else if ( v3 == 7 )
     {
@@ -35529,7 +35519,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = sub_60793DA0(a1[2840]);
           if ( result != 1 )
             return result;
-          SE_PLY_THROW_ref((int)a1, 0);
+          SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
           result = 5;
           goto LABEL_50;
         case 7:
@@ -38015,7 +38005,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       *(_DWORD *)(a1 + 9940) = 3;
       *(_DWORD *)(a1 + 12396) = 1;
-      SE_PLY_THROW_ref(a1, 0);
+      SE_PLY_THROW_ICEBALL_ref(a1, 0);
       PlayerBase_dispatchVirtual3(a1 + 11356, 34);
       *(_DWORD *)(a1 + 160) = sub_60773F3C(a1, *(_DWORD *)(a1 + 80));
       *(_DWORD *)(a1 + 12048) = *(_DWORD *)(a1 + 80);
@@ -38314,7 +38304,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( sub_607BF96C(a1) == 1 )
       {
         if ( a1[2485] == 3 && !a1[3099] )
-          SE_PLY_THROW_ref((int)a1, 0);
+          SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
       }
       else
       {
@@ -38357,7 +38347,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * SE_PLY_SWIM_KICK_ref
+ * SE_PLY_SWIM_KICK_PENGUIN_ref
  * RVA 0x007bcd34   size 0x6c4   xrefs 1
  * ============================================================================ */
   void __fastcall sub_607BCD34(_DWORD *a1)
@@ -38417,7 +38407,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_607BF96C(a1) == 1 )
     {
       if ( a1[2485] == 3 && !a1[3099] )
-        SE_PLY_THROW_ref((int)a1, 0);
+        SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
       return;
     }
     v6 = 0;
@@ -38549,7 +38539,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_607BF96C(a1) == 1 )
     {
       if ( a1[2485] == 3 && !a1[3099] )
-        SE_PLY_THROW_ref((int)a1, 0);
+        SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
       return;
     }
     if ( a1[330] == 5 || sub_6075EE0C((int)a1) )
@@ -38595,7 +38585,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return;
     if ( sub_60793DA0(a1[2840]) == 1 )
     {
-      SE_PLY_THROW_ref((int)a1, 0);
+      SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
       *v6 = 1;
       return;
     }
@@ -38681,7 +38671,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( sub_607BF96C(a1) == 1 )
       {
         if ( *(_DWORD *)(a1 + 9940) == 3 && !*(_DWORD *)(a1 + 12396) )
-          SE_PLY_THROW_ref(a1, 0);
+          SE_PLY_THROW_ICEBALL_ref(a1, 0);
       }
       else
       {
@@ -38808,7 +38798,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( sub_6078663C((int)(a1 + 172)) == 1 && (a1[2485] != 2 || sub_60786738(a1 + 172) == 1) )
         a1[3102] = 20;
       if ( sub_607BF96C(a1) == 1 && a1[2485] == 3 && !a1[3099] )
-        SE_PLY_THROW_ref((int)a1, 0);
+        SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
     }
   }
 
@@ -39203,7 +39193,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_607BF96C(a1) == 1 )
     {
       if ( *(_DWORD *)(a1 + 9940) == 3 && !*(_DWORD *)(a1 + 12396) )
-        SE_PLY_THROW_ref(a1, 0);
+        SE_PLY_THROW_ICEBALL_ref(a1, 0);
       return;
     }
     v7 = *(_DWORD *)(a1 + 12404);

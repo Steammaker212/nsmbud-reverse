@@ -367,7 +367,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = dword_60B023BC[i];
       if ( *(_DWORD *)(MEMORY[0xC9CD58] + 16) > v4 )
         v3 = *(_DWORD *)(*(_DWORD *)(MEMORY[0xC9CD58] + 24) + 4 * v4);
-      sub_6091CC00(v3, 3, a1);
+      Undefined_ref_91CC00(v3, 3, a1);
       v6 = 12321336;
       v7 = "cWorldMtx[0]";
       sub_6091CD98(v3, 0, &v6);
@@ -377,7 +377,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = 12321336;
       v7 = "cProjMtx[0]";
       sub_6091CD98(v3, 2, &v6);
-      sub_6091CE08(v3, 5, a1);
+      Undefined_ref_91CE08(v3, 5, a1);
       v6 = 12321336;
       v7 = "sampler2d_00";
       sub_6091CFA0(v3, 0, &v6);
@@ -9107,7 +9107,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 6321) = (unsigned __int8)v2 >> 4;
     *(_BYTE *)(a1 + 6322) = BYTE1(v2) & 0xF;
     *(_BYTE *)(a1 + 6323) = (v2 & 0x1000) != 0;
-    sub_6045C720(a1);
+    Item_loadSwitchAssets_45C720(a1);
     sub_6045C9A0(a1);
     if ( !*(_BYTE *)(a1 + 6323) )
     {
@@ -9121,7 +9121,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045C720
+ * Item_loadSwitchAssets_45C720
  * RVA 0x0045c720   size 0x254   xrefs 1
  * ============================================================================ */
   unsigned int __fastcall sub_6045C720(int a1)
@@ -9729,7 +9729,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045D79C
+ * I_fireflower_ref
  * RVA 0x0045d79c   size 0xf4   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045D79C(int a1)
@@ -9754,7 +9754,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
     sub_6046135C(a1);
-    sub_60461C50(a1);
+    Item_playAppearSound_461C50(a1);
     sub_60462018(a1);
     return 1;
   }
@@ -9819,7 +9819,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045D980
+ * I_fireflower_ref_45D980
  * RVA 0x0045d980   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045D980(int a1)
@@ -9846,7 +9846,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045DA4C
+ * I_fireflower_ref_45DA4C
  * RVA 0x0045da4c   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045DA4C(int a1)
@@ -9873,7 +9873,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045DB18
+ * I_fireflower_ref_45DB18
  * RVA 0x0045db18   size 0xd0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045DB18(int a1)
@@ -9910,7 +9910,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045DBF8
+ * I_fireflower_ref_45DBF8
  * RVA 0x0045dbf8   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045DBF8(int a1)
@@ -9937,7 +9937,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045DCC4
+ * I_fireflower_ref_45DCC4
  * RVA 0x0045dcc4   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045DCC4(int a1)
@@ -10173,7 +10173,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045E310
+ * I_iceflower_ref
  * RVA 0x0045e310   size 0xf8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045E310(int a1)
@@ -10198,7 +10198,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
     sub_6046135C(a1);
-    sub_60461C50(a1);
+    Item_playAppearSound_461C50(a1);
     sub_60462018(a1);
     return 1;
   }
@@ -10263,7 +10263,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045E4F8
+ * I_iceflower_ref_45E4F8
  * RVA 0x0045e4f8   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045E4F8(int a1)
@@ -10290,7 +10290,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045E5C4
+ * I_iceflower_ref_45E5C4
  * RVA 0x0045e5c4   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045E5C4(int a1)
@@ -10317,7 +10317,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045E690
+ * I_iceflower_ref_45E690
  * RVA 0x0045e690   size 0xd0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045E690(int a1)
@@ -10354,7 +10354,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045E770
+ * I_iceflower_ref_45E770
  * RVA 0x0045e770   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045E770(int a1)
@@ -10381,7 +10381,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045E83C
+ * I_iceflower_ref_45E83C
  * RVA 0x0045e83c   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045E83C(int a1)
@@ -10618,7 +10618,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045EF40
+ * SE_OBJ_ITEM_APPEAR_ref
  * RVA 0x0045ef40   size 0x188   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045EF40(int a1)
@@ -10681,7 +10681,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045F474
+ * SE_OBJ_ITEM_APPEAR_ref_45F474
  * RVA 0x0045f474   size 0x188   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6045F474(int a1)
@@ -11051,7 +11051,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( (v19 & 2) != 0 )
       *(_DWORD *)(a1 + 124) = -1082130432;
-    sub_60462370(a1);
+    SE_OBJ_CMN_SPLASH_ref_462370(a1);
     if ( sub_60003AE0(a1) == 1 )
       return SE_OBJ_ITEM_DISAPP_ref(a1, 1, 1);
     if ( *(_DWORD *)(a1 + 6180) == 13 && *(float *)(a1 + 124) <= 0.0 )
@@ -11351,7 +11351,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( (v26 & 2) != 0 )
       *(_DWORD *)(a1 + 124) = -1082130432;
-    sub_60462370(a1);
+    SE_OBJ_CMN_SPLASH_ref_462370(a1);
     if ( sub_60003AE0(a1) == 1 )
       return SE_OBJ_ITEM_DISAPP_ref(a1, 1, 1);
     if ( *(_DWORD *)(a1 + 6180) == 13 && *(float *)(a1 + 124) <= 0.0 )
@@ -12035,7 +12035,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60461C50
+ * Item_playAppearSound_461C50
  * RVA 0x00461c50   size 0x374   xrefs 10
  * ============================================================================ */
   int __fastcall sub_60461C50(int a1)
@@ -12311,7 +12311,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60462370
+ * SE_OBJ_CMN_SPLASH_ref_462370
  * RVA 0x00462370   size 0x1b0   xrefs 8
  * ============================================================================ */
   int __fastcall sub_60462370(int a1)
@@ -13046,7 +13046,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604632A0
+ * SE_OBJ_CMN_SPLASH_LAVA_ref_4632A0
  * RVA 0x004632a0   size 0xfc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604632A0(int a1, int a2)
@@ -13081,7 +13081,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604633AC
+ * SE_OBJ_CMN_SPLASH_LAVA_ref_4633AC
  * RVA 0x004633ac   size 0xfc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604633AC(int a1, int a2)
@@ -13116,7 +13116,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604634B8
+ * SE_OBJ_CMN_SPLASH_POISON_ref_4634B8
  * RVA 0x004634b8   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604634B8(int a1, int *a2)
@@ -13552,7 +13552,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 124) = 1082130432;
       }
       sub_60462888(a1, 1);
-      return sub_60462370(a1);
+      return SE_OBJ_CMN_SPLASH_ref_462370(a1);
     }
     else
     {
@@ -13564,7 +13564,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60464028
+ * SE_OBJ_ITEM_APPEAR_ref_464028
  * RVA 0x00464028   size 0x178   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60464028(int a1)
@@ -13718,7 +13718,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v18 || (v19 = v18 - 1, (*(_DWORD *)(a1 + 6228) = v19) == 0) )
         EffectWrapper_update((int32x4_t *)(a1 + 6684), 90, (float *)(a1 + 6124), nullptr, (float *)(a1 + 144));
     }
-    sub_60462370(a1);
+    SE_OBJ_CMN_SPLASH_ref_462370(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     if ( *(_BYTE *)(a1 + 6255) && *(float *)(a1 + 124) < 0.0 )
       *(_DWORD *)(a1 + 124) = 1082130432;
@@ -14008,7 +14008,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v13 || (v14 = v13 - 1, (*(_DWORD *)(a1 + 6228) = v14) == 0) )
         EffectWrapper_update((int32x4_t *)(a1 + 6684), 90, (float *)(a1 + 6124), nullptr, (float *)(a1 + 144));
     }
-    sub_60462370(a1);
+    SE_OBJ_CMN_SPLASH_ref_462370(a1);
     if ( (CollisionActor::sub_600034C8(a1) & 1) != 0 )
     {
       *(_DWORD *)(a1 + 6192) = 1;
@@ -15207,7 +15207,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_22:
       sub_60462B7C(a1);
       *(float *)(a1 + 116) = v1;
-      sub_60462370(a1);
+      SE_OBJ_CMN_SPLASH_ref_462370(a1);
       if ( *(_DWORD *)(a1 + 6180) == 13 && *(float *)(a1 + 124) <= 0.0 )
       {
         sub_60463178(a1);
@@ -15294,7 +15294,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_18:
       sub_60462B7C(a1);
       *(float *)(a1 + 116) = v1;
-      sub_60462370(a1);
+      SE_OBJ_CMN_SPLASH_ref_462370(a1);
       if ( *(_DWORD *)(a1 + 6180) == 13 && *(float *)(a1 + 124) <= 0.0 )
       {
         sub_60463178(a1);
@@ -15536,7 +15536,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6168) = 0;
     sub_60467880(a1);
     sub_6046135C((_DWORD *)a1);
-    sub_60461C50(a1);
+    Item_playAppearSound_461C50(a1);
     sub_60462018(a1);
     return 1;
   }
@@ -15660,7 +15660,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60467B08
+ * I_kinoko_ref
  * RVA 0x00467b08   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60467B08(int a1)
@@ -15687,7 +15687,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60467BD4
+ * I_kinoko_ref_467BD4
  * RVA 0x00467bd4   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60467BD4(int a1)
@@ -15714,7 +15714,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60467CA0
+ * I_kinoko_ref_467CA0
  * RVA 0x00467ca0   size 0xd0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60467CA0(int a1)
@@ -15751,7 +15751,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60467D80
+ * I_kinoko_ref_467D80
  * RVA 0x00467d80   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60467D80(int a1)
@@ -15778,7 +15778,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60467E4C
+ * I_kinoko_ref_467E4C
  * RVA 0x00467e4c   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60467E4C(int a1)
@@ -15949,7 +15949,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 572) = 1065353216;
     *(_DWORD *)(a1 + 576) = 1084227584;
     *(_DWORD *)(a1 + 580) = 0;
-    sub_60461C50(a1);
+    Item_playAppearSound_461C50(a1);
     sub_60462018(a1);
     return 1;
   }
@@ -16099,7 +16099,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60468698
+ * I_kinoko_ref_468698
  * RVA 0x00468698   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60468698(int a1)
@@ -16126,7 +16126,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60468764
+ * I_kinoko_ref_468764
  * RVA 0x00468764   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60468764(int a1)
@@ -16153,7 +16153,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60468830
+ * I_kinoko_ref_468830
  * RVA 0x00468830   size 0xd0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60468830(int a1)
@@ -16190,7 +16190,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60468910
+ * I_kinoko_ref_468910
  * RVA 0x00468910   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60468910(int a1)
@@ -16217,7 +16217,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604689DC
+ * I_kinoko_ref_4689DC
  * RVA 0x004689dc   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604689DC(int a1)
@@ -16407,7 +16407,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60468EEC
+ * I_musasabi_ref
  * RVA 0x00468eec   size 0xf8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60468EEC(int a1)
@@ -16432,7 +16432,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
     sub_6046135C((_DWORD *)a1);
-    sub_60461C50(a1);
+    Item_playAppearSound_461C50(a1);
     sub_60462018(a1);
     return 1;
   }
@@ -16511,7 +16511,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60469158
+ * I_musasabi_ref_469158
  * RVA 0x00469158   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60469158(int a1)
@@ -16538,7 +16538,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60469224
+ * I_musasabi_ref_469224
  * RVA 0x00469224   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60469224(int a1)
@@ -16565,7 +16565,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604693E8
+ * I_musasabi_ref_4693E8
  * RVA 0x004693e8   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604693E8(int a1)
@@ -16592,7 +16592,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604694B4
+ * I_musasabi_ref_4694B4
  * RVA 0x004694b4   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_604694B4(int a1)
@@ -16764,7 +16764,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 6168) = 4;
       sub_6046999C(a1);
       sub_6046135C((_DWORD *)a1);
-      sub_60461C50(a1);
+      Item_playAppearSound_461C50(a1);
       sub_60462018(a1);
     }
     return v2;
@@ -16888,7 +16888,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60469C38
+ * I_kinoko_ref_469C38
  * RVA 0x00469c38   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60469C38(int a1)
@@ -16915,7 +16915,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60469D04
+ * I_kinoko_ref_469D04
  * RVA 0x00469d04   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60469D04(int a1)
@@ -16942,7 +16942,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60469DD0
+ * I_kinoko_ref_469DD0
  * RVA 0x00469dd0   size 0xd0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60469DD0(int a1)
@@ -16979,7 +16979,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60469EB0
+ * I_kinoko_ref_469EB0
  * RVA 0x00469eb0   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60469EB0(int a1)
@@ -17006,7 +17006,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60469F7C
+ * I_kinoko_ref_469F7C
  * RVA 0x00469f7c   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60469F7C(int a1)
@@ -17192,7 +17192,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046A568
+ * I_crown_ref
  * RVA 0x0046a568   size 0xf8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046A568(int a1)
@@ -17217,7 +17217,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
     sub_6046135C((_DWORD *)a1);
-    sub_60461C50(a1);
+    Item_playAppearSound_461C50(a1);
     sub_60462018(a1);
     return 1;
   }
@@ -17282,7 +17282,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046A750
+ * I_crown_ref_46A750
  * RVA 0x0046a750   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046A750(int a1)
@@ -17309,7 +17309,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046A81C
+ * I_crown_ref_46A81C
  * RVA 0x0046a81c   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046A81C(int a1)
@@ -17336,7 +17336,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046A8E8
+ * I_crown_ref_46A8E8
  * RVA 0x0046a8e8   size 0xd0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046A8E8(int a1)
@@ -17373,7 +17373,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046A9C8
+ * I_crown_ref_46A9C8
  * RVA 0x0046a9c8   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046A9C8(int a1)
@@ -17400,7 +17400,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046AA94
+ * I_crown_ref_46AA94
  * RVA 0x0046aa94   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046AA94(int a1)
@@ -17565,7 +17565,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046AF20
+ * I_penguin_ref
  * RVA 0x0046af20   size 0xf8   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046AF20(int a1)
@@ -17590,7 +17590,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
     sub_6046135C((_DWORD *)a1);
-    sub_60461C50(a1);
+    Item_playAppearSound_461C50(a1);
     sub_60462018(a1);
     return 1;
   }
@@ -17729,7 +17729,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046B260
+ * I_penguin_ref_46B260
  * RVA 0x0046b260   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046B260(int a1)
@@ -17756,7 +17756,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046B32C
+ * I_penguin_ref_46B32C
  * RVA 0x0046b32c   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046B32C(int a1)
@@ -17783,7 +17783,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046B3F8
+ * I_penguin_ref_46B3F8
  * RVA 0x0046b3f8   size 0xd0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046B3F8(int a1)
@@ -17820,7 +17820,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046B4D8
+ * I_penguin_ref_46B4D8
  * RVA 0x0046b4d8   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046B4D8(int a1)
@@ -17847,7 +17847,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046B5A4
+ * I_penguin_ref_46B5A4
  * RVA 0x0046b5a4   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046B5A4(int a1)
@@ -18260,7 +18260,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046C1AC
+ * I_propeller_ref
  * RVA 0x0046c1ac   size 0xd0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046C1AC(int a1)
@@ -18297,7 +18297,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046C28C
+ * I_propeller_ref_46C28C
  * RVA 0x0046c28c   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046C28C(int a1)
@@ -19254,7 +19254,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2 != 7 )
     {
       a1[1535] = v2;
-      sub_6046DD80((int)a1);
+      Item_loadKinokoSwitch_46DD80((int)a1);
       a1[36] = MEMORY[0xB3B95C];
       a1[37] = MEMORY[0xB3B960];
       a1[38] = MEMORY[0xB3B964];
@@ -19275,7 +19275,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046DD80
+ * Item_loadKinokoSwitch_46DD80
  * RVA 0x0046dd80   size 0x1d8   xrefs 1
  * ============================================================================ */
   int __fastcall sub_6046DD80(int a1)
@@ -19915,7 +19915,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046EE68
+ * I_star_ref
  * RVA 0x0046ee68   size 0x14c   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046EE68(int a1)
@@ -19940,7 +19940,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
     sub_6046135C((_DWORD *)a1);
-    sub_60461C50(a1);
+    Item_playAppearSound_461C50(a1);
     if ( (*(_DWORD *)(a1 + 20) & 0x1F000000) == 0xA000000 )
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13227136);
     *(_BYTE *)(a1 + 6988) = 1;
@@ -20171,7 +20171,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046F4BC
+ * I_star_ref_46F4BC
  * RVA 0x0046f4bc   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046F4BC(int a1)
@@ -20198,7 +20198,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046F588
+ * I_star_ref_46F588
  * RVA 0x0046f588   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046F588(int a1)
@@ -20225,7 +20225,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046F654
+ * I_star_ref_46F654
  * RVA 0x0046f654   size 0xd0   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046F654(int a1)
@@ -20262,7 +20262,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046F734
+ * I_star_ref_46F734
  * RVA 0x0046f734   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046F734(int a1)
@@ -20289,7 +20289,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6046F800
+ * I_star_ref_46F800
  * RVA 0x0046f800   size 0xbc   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6046F800(int a1)
@@ -20551,7 +20551,7 @@ static inline unsigned int uxtb16(unsigned int x)
       ModelWrapper_setup(v6, v3, 0, 0);
       *(_DWORD *)(a1 + 6160) = v5;
       sub_6046135C((_DWORD *)a1);
-      sub_60461C50(a1);
+      Item_playAppearSound_461C50(a1);
       sub_60462018(a1);
     }
     return v2;
@@ -20945,7 +20945,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60470B10
+ * Item_loadMusasabi_470B10
  * RVA 0x00470b10   size 0x290   xrefs 0
  * ============================================================================ */
   int __fastcall sub_60470B10(int a1)
@@ -21326,14 +21326,14 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 148) = 1056964608;
       *(_DWORD *)(a1 + 152) = 1056964608;
     }
-    sub_604714E4(a1);
+    Item_loadKinokoSwitch_4714E4(a1);
     sub_60471698((int *)a1);
     StateMgr::changeState((_DWORD *)(a1 + 6084), 13228256);
     return 1;
   }
 
 /* ============================================================================
- * sub_604714E4
+ * Item_loadKinokoSwitch_4714E4
  * RVA 0x004714e4   size 0x194   xrefs 1
  * ============================================================================ */
   int __fastcall sub_604714E4(int a1)
@@ -23502,12 +23502,12 @@ static inline unsigned int uxtb16(unsigned int x)
         v10 = v14 + 1;
     }
   LABEL_13:
-    sub_60473EDC(a1, a2, a3, a4, v14[6]);
+    LoopRandom_ref(a1, a2, a3, a4, v14[6]);
     return v11;
   }
 
 /* ============================================================================
- * sub_60473EDC
+ * LoopRandom_ref
  * RVA 0x00473edc   size 0x2d4   xrefs 5
  * ============================================================================ */
   int __fastcall sub_60473EDC(_DWORD *a1, unsigned int a2, _DWORD *a3, int a4, int *a5)
@@ -23706,7 +23706,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v10 = (int *)(v14 + 4);
     }
   LABEL_13:
-    sub_60473EDC(a1, a2, a3, a4, *(int **)(v14 + 24));
+    LoopRandom_ref(a1, a2, a3, a4, *(int **)(v14 + 24));
     return v11;
   }
 
@@ -23781,7 +23781,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v19 = nullptr;
     }
     if ( v19[1] > a4 )
-      sub_60473EDC(a1, a2, a3, a5, *(int **)(v19[2] + 4 * a4));
+      LoopRandom_ref(a1, a2, a3, a5, *(int **)(v19[2] + 4 * a4));
     return v11;
   }
 
@@ -23856,7 +23856,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v19 = nullptr;
     }
     if ( v19[1] > a4 )
-      sub_60473EDC(a1, a2, a3, a5, *(int **)(v19[2] + 4 * a4));
+      LoopRandom_ref(a1, a2, a3, a5, *(int **)(v19[2] + 4 * a4));
     return v11;
   }
 
@@ -24868,7 +24868,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v11 = (int *)(v13 + 4);
       }
   LABEL_16:
-      sub_60473EDC((_DWORD *)v7, 0, a2, 0, *(int **)(v13 + 24));
+      LoopRandom_ref((_DWORD *)v7, 0, a2, 0, *(int **)(v13 + 24));
       v18 = a5 == 1;
       if ( a5 == 1 )
         v18 = *(_DWORD *)(v9 + 32) == 6;
@@ -25053,7 +25053,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60475CDC
+ * message_ref
  * RVA 0x00475cdc   size 0x314   xrefs 91
  * ============================================================================ */
   int __fastcall sub_60475CDC(_DWORD *a1, _DWORD *a2, int a3, int a4, int a5)
@@ -25098,13 +25098,13 @@ static inline unsigned int uxtb16(unsigned int x)
            *(_DWORD *)(MEMORY[0xCD0C84] + 836),
            &v30);
     sub_60982EE0(a1[880], *(_DWORD *)(v9 + 104), *(_DWORD *)(v9 + 108));
-    v10 = sub_60986F04(*(_DWORD *)(MEMORY[0xCD0C84] + 852), &v30);
+    v10 = s_msbt_ref(*(_DWORD *)(MEMORY[0xCD0C84] + 852), &v30);
     if ( !v10 )
     {
       v11 = *(_DWORD *)(MEMORY[0xCD0C84] + 852);
       v25[0] = 12321336;
       v25[1] = "message";
-      v10 = sub_60986F04(v11, v25);
+      v10 = s_msbt_ref(v11, v25);
     }
     sub_609897B0(v25, v10, a1[879]);
     v25[0] = 12571388;
@@ -26162,7 +26162,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE *v19; // r1
     int result; // r0
   
-    sub_60852BFC(a1, *(_DWORD *)(MEMORY[0xCCF464] + 36), a3, a2);
+    Disable_ref(a1, *(_DWORD *)(MEMORY[0xCCF464] + 36), a3, a2);
     v6 = sub_60853E04(a2, "OnOff");
     v7 = sub_60980A38(a3, v6, 1);
     a1[32] = v7;
@@ -27597,7 +27597,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = (_DWORD *)(a1 + 12);
     sub_604734E4((_DWORD *)(a1 + 12), a4);
     sub_60475C8C((int)v6);
-    sub_60475CDC(v6, a3, 0, 0, 0);
+    message_ref(v6, a3, 0, 0, 0);
     return (*(int (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3532) + 12))(
              *(_DWORD *)(a1 + 3532),
              10029528,
@@ -28184,7 +28184,7 @@ static inline unsigned int uxtb16(unsigned int x)
         case 829716596:
           sub_60981CF4(a1, (int)a4, a5, a6);
           v8 = (_DWORD *)sub_60855BA4(272, 16);
-          sub_60985240((int)v8, (int)a4, a5, a6, v26);
+          LetterAnimOn_ref((int)v8, (int)a4, a5, a6, v26);
           *v8 = 12571188;
           MEMORY[0xBFD2A0](v8, a2, *(_DWORD *)(MEMORY[0xCCF464] + 36), a6, v26);
           break;
@@ -29766,7 +29766,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047DC84
+ * TextScaleOn_ref
  * RVA 0x0047dc84   size 0x44   xrefs 0
  * ============================================================================ */
   int __fastcall sub_6047DC84(int a1, int *a2)
@@ -29826,7 +29826,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60000288();
       _cxa_guard_release_0(&unk_60C9EB40);
     }
-    return sub_60986F04(*(_DWORD *)(MEMORY[0xCD0C84] + 852), (char *)&unk_60C9EB40 + 8 * a1 + 4);
+    return s_msbt_ref(*(_DWORD *)(MEMORY[0xCD0C84] + 852), (char *)&unk_60C9EB40 + 8 * a1 + 4);
   }
 
 /* ============================================================================
@@ -30065,7 +30065,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047E4BC
+ * SE_SYS_BACK_ref
  * RVA 0x0047e4bc   size 0x58   xrefs 2
  * ============================================================================ */
   int __fastcall sub_6047E4BC(int result)
