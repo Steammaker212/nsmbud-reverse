@@ -143,5 +143,5 @@
 /* line: 141, address: 0x6027de10 */   MEMORY[0xC8F04C] = 13174976;
 /* line: 142, address: 0x6027de2c */   v1[0] = 12321336;
 /* line: 143, address: 0x6027de38 */   v1[1] = &unk_60AC2D34;
-/* line: 144, address: 0x6027de6c */   return Profile::Profile(13168720, 2601744, MEMORY[0xAF36B4], (int)v1, &unk_60AFDD80, 18);
+/* line: 144, address: 0x6027de6c */   return Profile__Profile(13168720, 2601744, MEMORY[0xAF36B4], (int)v1, &unk_60AFDD80, 18);
 /* line: 145 */ }

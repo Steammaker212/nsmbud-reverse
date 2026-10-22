@@ -25,7 +25,7 @@ int __fastcall sub_6045EC8C(int a1);
 /* line: 2 */   int v2; // r0
 /* line: 3 */   int v3; // r1
 /* line: 4 */ 
-/* line: 5, address: 0x6045ec94 */   MultiStateActor::MultiStateActor();
+/* line: 5, address: 0x6045ec94 */   MultiStateActor__MultiStateActor();
 /* line: 6, address: 0x6045ecb8 */   *(_DWORD *)a1 = 12564060;
 /* line: 7, address: 0x6045ecc0 */   *(_DWORD *)(a1 + 6104) = 0;
 /* line: 8, address: 0x6045ecc8 */   *(_DWORD *)(a1 + 6108) = 0;

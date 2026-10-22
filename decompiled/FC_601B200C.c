@@ -54,7 +54,7 @@ int __fastcall sub_601B200C(int a1);
 /* line: 31 */   float v32[12]; // [sp+0h] [bp-30h] BYREF
 /* line: 32 */ 
 /* line: 33, address: 0x601b2024 */   if ( sub_601C4404() == 1 )
-/* line: 34, address: 0x601b202c */     StateMgr::execute((_DWORD *)(a1 + 904));
+/* line: 34, address: 0x601b202c */     StateMgr__execute((_DWORD *)(a1 + 904));
 /* line: 35, address: 0x601b2068 */   if ( sub_60190968(MEMORY[0xC8996C]) != 1 || *(_DWORD *)(a1 + 1032) == 3 && sub_601916EC(MEMORY[0xC8996C]) == 39 )
 /* line: 36, address: 0x601b2070 */     sub_601B2404(a1);
 /* line: 37, address: 0x601b2078 */   sub_601861EC(a1);

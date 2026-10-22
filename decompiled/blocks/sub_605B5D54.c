@@ -60,7 +60,7 @@ float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a
 /* line: 40, address: 0x605b5e38 */         v7 = v7 + 16.0;
 /* line: 41, address: 0x605b5e48 */       memset(v15, 0, sizeof(v15));
 /* line: 42, address: 0x605b5e58 */       v14 = (unsigned __int16)(a4 << 8) | (16 * v8);
-/* line: 43, address: 0x605b5e70 */       LODWORD(v15[2]) = Profile::get(MEMORY[0xAF301C]);
+/* line: 43, address: 0x605b5e70 */       LODWORD(v15[2]) = Profile__get(MEMORY[0xAF301C]);
 /* line: 44, address: 0x605b5e70 */       v15[3] = v6;
 /* line: 45, address: 0x605b5e70 */       v15[4] = v7;
 /* line: 46, address: 0x605b5e78 */       v15[5] = -32.0;
@@ -84,7 +84,7 @@ float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a
 /* line: 64, address: 0x605b5f20 */       BasicSoundActor2_play(v13, "SE_OBJ_JUMPDAI_APP", v17, 0);
 /* line: 65, address: 0x605b5f2c */       memset(v15, 0, sizeof(v15));
 /* line: 66, address: 0x605b5f34 */       v14 = 0x10000000;
-/* line: 67, address: 0x605b5f48 */       LODWORD(v15[2]) = Profile::get(MEMORY[0xAF35D4]);
+/* line: 67, address: 0x605b5f48 */       LODWORD(v15[2]) = Profile__get(MEMORY[0xAF35D4]);
 /* line: 68, address: 0x605b5f50 */       v15[3] = v10;
 /* line: 69, address: 0x605b5f54 */       v15[4] = v9 + v12;
 /* line: 70, address: 0x605b5f58 */       v15[5] = 0.0;
@@ -92,7 +92,7 @@ float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a
 /* line: 72, address: 0x605b5f64 */       BYTE2(v15[7]) = 0;
 /* line: 73, address: 0x605b5f68 */       v16 = 0;
 /* line: 74 */ LABEL_9:
-/* line: 75, address: 0x605b5f70 */       result = (float *)ActorMgr::create(MEMORY[0xC7B400], (int)&v14, 0);
+/* line: 75, address: 0x605b5f70 */       result = (float *)ActorMgr__create(MEMORY[0xC7B400], (int)&v14, 0);
 /* line: 76, address: 0x605b5f7c */       break;
 /* line: 77 */     default:
 /* line: 78 */       return result;

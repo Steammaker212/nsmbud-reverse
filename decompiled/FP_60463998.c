@@ -88,7 +88,7 @@ int __fastcall sub_60463998(_DWORD *a1, _DWORD *a2, int a3, int a4);
 /* line: 65 */         }
 /* line: 66, address: 0x60463bc4 */         if ( (*(int (__fastcall **)(_DWORD *, int))*v15)(v15, 13226960) == 1 )
 /* line: 67 */         {
-/* line: 68, address: 0x60463bcc */           ProfileId = Actor::getProfileId((Actor *)a1);
+/* line: 68, address: 0x60463bcc */           ProfileId = Actor__getProfileId((Actor *)a1);
 /* line: 69, address: 0x60463bd8 */           sub_607C9370(v15, ProfileId);
 /* line: 70 */         }
 /* line: 71 */       }

@@ -22,7 +22,7 @@ int __fastcall CollisionActor_CollisionActor(int a1);
 int __fastcall CollisionActor_CollisionActor(int a1);
 /* line: 0, address: 0x6000306c */ int __fastcall CollisionActor_CollisionActor(int a1)
 /* line: 1 */ {
-/* line: 2, address: 0x60003074 */   StageActor::StageActor();
+/* line: 2, address: 0x60003074 */   StageActor__StageActor();
 /* line: 3, address: 0x6000308c */   *(_DWORD *)a1 = 12321080;
 /* line: 4, address: 0x60003094 */   ActorCollisionMgr_ctor(a1 + 648);
 /* line: 5, address: 0x600030a4 */   *(_DWORD *)(a1 + 6000) = 0;

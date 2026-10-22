@@ -34,7 +34,7 @@ int __fastcall sub_602C2F88(_DWORD *a1);
 /* line: 11 */ 
 /* line: 12, address: 0x602c2f98 */   CurrentState = a1[1525];
 /* line: 13, address: 0x602c2fa0 */   if ( !CurrentState )
-/* line: 14, address: 0x602c2fac */     CurrentState = StateMgr::getCurrentState((StateMgr *)(a1 + 1521));
+/* line: 14, address: 0x602c2fac */     CurrentState = StateMgr__getCurrentState((StateMgr *)(a1 + 1521));
 /* line: 15, address: 0x602c2fb4 */   a1[3008] = CurrentState;
 /* line: 16, address: 0x602c2fbc */   result = sub_602C2BD4(a1);
 /* line: 17, address: 0x602c2fc4 */   if ( !result )

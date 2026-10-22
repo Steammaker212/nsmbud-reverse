@@ -38,7 +38,7 @@ int __fastcall sub_60773E6C(int a1, int a2, int a3);
 /* line: 15, address: 0x60773edc */     *(_DWORD *)(a1 + 1204) &= ~0x400u;
 /* line: 16, address: 0x60773ee4 */     *(_DWORD *)(a1 + 9932) = a3;
 /* line: 17, address: 0x60773eec */     *(_DWORD *)(a1 + 9936) = 0;
-/* line: 18, address: 0x60773efc */     StateMgr::changeState((_DWORD *)(a1 + 9916), a2);
+/* line: 18, address: 0x60773efc */     StateMgr__changeState((_DWORD *)(a1 + 9916), a2);
 /* line: 19, address: 0x60773f10 */     return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1044))(a1);
 /* line: 20 */   }
 /* line: 21, address: 0x60773e84 */   return result;

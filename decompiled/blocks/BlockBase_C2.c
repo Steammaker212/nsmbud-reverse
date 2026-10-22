@@ -2,7 +2,7 @@
 
 // ---- addr: 0x60563544 */ int __fastcall BlockBase_BlockBase(int a1)
 /* line: 1 */ {
-/* line: 2, address: 0x6056354c */   MovementBlockCoinBase::MovementBlockCoinBase();
+/* line: 2, address: 0x6056354c */   MovementBlockCoinBase__MovementBlockCoinBase();
 /* line: 3, address: 0x60563568 */   *(_DWORD *)a1 = 12587764;
 /* line: 4, address: 0x60563574 */   *(_DWORD *)(a1 + 7380) = 0;
 /* line: 5, address: 0x60563580 */   memset((void *)(a1 + 7348), 0, 0x1Fu);

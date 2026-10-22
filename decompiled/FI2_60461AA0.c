@@ -49,7 +49,7 @@ int __fastcall sub_60461AA0(int result);
 /* line: 26, address: 0x60461b70 */       result = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
 /* line: 27, address: 0x60461b70 */       if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
 /* line: 28 */       {
-/* line: 29, address: 0x60461b84 */         CurrentState = StateMgr::getCurrentState((int)(v2 + 1521));
+/* line: 29, address: 0x60461b84 */         CurrentState = StateMgr__getCurrentState((int)(v2 + 1521));
 /* line: 30, address: 0x60461b94 */         v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
 /* line: 31, address: 0x60461ba8 */         result = (*(int (**)(void))(MEMORY[0xC95038] + 8))();
 /* line: 32, address: 0x60461bb8 */         *(_BYTE *)(v1 + 535) = v4 != result;

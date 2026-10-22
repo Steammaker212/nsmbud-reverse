@@ -14,13 +14,13 @@
 /* line: 11 */   {
 /* line: 12, address: 0x60563914 */     v2 = a1 + 6120;
 /* line: 13 */   }
-/* line: 14, address: 0x60563920 */   StateMgr::execute((_DWORD *)a1 + 1521);
+/* line: 14, address: 0x60563920 */   StateMgr__execute((_DWORD *)a1 + 1521);
 /* line: 15, address: 0x60563930 */   (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 372))(a1);
 /* line: 16, address: 0x6056393c */   *((_DWORD *)a1 + 1591) = *((_DWORD *)a1 + 41);
 /* line: 17, address: 0x60563944 */   ShapedCollider_execute(v2);
 /* line: 18, address: 0x60563954 */   (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 388))(a1);
 /* line: 19, address: 0x6056395c */   sub_605B2D70(a1);
 /* line: 20, address: 0x60563964 */   if ( a1[7384] )
-/* line: 21, address: 0x60563978 */     StageActor::cullCheck((StageActor *)a1, 0x10u);
+/* line: 21, address: 0x60563978 */     StageActor__cullCheck((StageActor *)a1, 0x10u);
 /* line: 22, address: 0x60563980 */   return 1;
 /* line: 23 */ }

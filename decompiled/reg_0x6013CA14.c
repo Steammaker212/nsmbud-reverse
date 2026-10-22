@@ -13,7 +13,7 @@
 /* line: 11, address: 0x6013cac8 */   dword_60C87BF0 = (int)(float)((float)(MEMORY[0xB0E1E0] * 0.9) / MEMORY[0xB0E1D8]);
 /* line: 12, address: 0x6013cad8 */   v1[0] = 12321336;
 /* line: 13, address: 0x6013cae4 */   v1[1] = &unk_60ABEC88;
-/* line: 14, address: 0x6013cb04 */   Profile::Profile(13138796, 1292884, MEMORY[0xAF372C], (int)v1, &unk_60AF6824, 160);
+/* line: 14, address: 0x6013cb04 */   Profile__Profile(13138796, 1292884, MEMORY[0xAF372C], (int)v1, &unk_60AF6824, 160);
 /* line: 15, address: 0x6013cb28 */   MEMORY[0xC87B88] = MEMORY[0xC7B788] + 1;
 /* line: 16, address: 0x6013cb38 */   MEMORY[0xC87B84] = 12398176;
 /* line: 17, address: 0x6013cb3c */   MEMORY[0xC87B8C] = 1292968;

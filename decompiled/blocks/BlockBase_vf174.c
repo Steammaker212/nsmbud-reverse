@@ -8,7 +8,7 @@
 /* line: 5 */   bool v6; // zf
 /* line: 6 */   float v7; // s0
 /* line: 7 */ 
-/* line: 8, address: 0x60563cd4 */   CurrentState = StateMgr::getCurrentState(a1 + 6084);
+/* line: 8, address: 0x60563cd4 */   CurrentState = StateMgr__getCurrentState(a1 + 6084);
 /* line: 9, address: 0x60563ce4 */   v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
 /* line: 10, address: 0x60563d00 */   if ( v3 == (*(int (**)(void))(MEMORY[0xCB117C] + 8))() )
 /* line: 11 */   {
@@ -22,7 +22,7 @@
 /* line: 19, address: 0x60563d30 */     v6 = *(_DWORD *)(a1 + 7304) == 0;
 /* line: 20, address: 0x60563d34 */   if ( v6 )
 /* line: 21, address: 0x60563d34 */     goto LABEL_10;
-/* line: 22, address: 0x60563d44 */   MovementHandler::execute((MovementHandler *)(a1 + 6992));
+/* line: 22, address: 0x60563d44 */   MovementHandler__execute((MovementHandler *)(a1 + 6992));
 /* line: 23, address: 0x60563d54 */   if ( *(_DWORD *)(a1 + 7040) != 1 )
 /* line: 24, address: 0x60563d54 */     goto LABEL_10;
 /* line: 25, address: 0x60563d64 */   if ( *(_DWORD *)(a1 + 7060) != 1 )

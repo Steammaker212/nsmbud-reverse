@@ -19,7 +19,7 @@ _DWORD * __fastcall StateActor_ctor(_DWORD *a1);
 _DWORD * __fastcall StateActor_ctor(_DWORD *a1);
 /* line: 0, address: 0x6000929c */ _DWORD *__fastcall StateActor_ctor(_DWORD *a1)
 /* line: 1 */ {
-/* line: 2, address: 0x600092a4 */   CollisionActor::CollisionActor();
+/* line: 2, address: 0x600092a4 */   CollisionActor__CollisionActor();
 /* line: 3, address: 0x600092c4 */   *a1 = 12321360;
 /* line: 4, address: 0x600092d8 */   a1[1516] = 12321780;
 /* line: 5, address: 0x600092ec */   a1[1517] = 12321796;

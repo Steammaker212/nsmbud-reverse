@@ -53,10 +53,10 @@ int __fastcall sub_600082CC(int a1, int a2, char a3);
 /* line: 30, address: 0x60008420 */     return 0;
 /* line: 31, address: 0x600083bc */   *(_DWORD *)(a1 + 27192) = *(_DWORD *)(a1 + 27184) | (*(_DWORD *)(a1 + 27176) << 22);
 /* line: 32, address: 0x600083c4 */   *(_BYTE *)(a1 + 27196) = a3;
-/* line: 33, address: 0x600083d8 */   v9 = sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
+/* line: 33, address: 0x600083d8 */   v9 = sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
 /* line: 34, address: 0x600083ec */   v10 = (*(int (__fastcall **)(int))(*(_DWORD *)(a2 + 12) + 4))(a2);
 /* line: 35, address: 0x600083fc */   sub_60008BC8(a1 + 27168, v10);
 /* line: 36, address: 0x60008404 */   if ( v9 != 1 )
-/* line: 37, address: 0x60008418 */     sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
+/* line: 37, address: 0x60008418 */     sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
 /* line: 38, address: 0x6000842c */   return v10;
 /* line: 39 */ }

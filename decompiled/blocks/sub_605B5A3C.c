@@ -46,7 +46,7 @@ int __fastcall sub_605B5A3C(int a1, int a2, int a3, int a4, int a5);
 /* line: 23 */ 
 /* line: 24, address: 0x605b5a5c */   v9 = (int *)(a1 + 6860);
 /* line: 25, address: 0x605b5a90 */   if ( sub_6078A3DC(MEMORY[0xCC436C], *(_DWORD *)(a1 + 6860)) == 1
-/* line: 26 */     && Actor::getProfileId((Actor *)a1) != MEMORY[0xAF322C] )
+/* line: 26 */     && Actor__getProfileId((Actor *)a1) != MEMORY[0xAF322C] )
 /* line: 27 */   {
 /* line: 28, address: 0x605b5a9c */     v10 = *(_DWORD *)(a1 + 6856);
 /* line: 29, address: 0x605b5aa4 */     if ( v10 == 2 )

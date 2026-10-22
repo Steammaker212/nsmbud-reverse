@@ -39,7 +39,7 @@ int __fastcall FireballBase_onExecute(int *a1);
 /* line: 16 */   int v17; // [sp+14h] [bp-4h]
 /* line: 17 */ 
 /* line: 18, address: 0x60135e58 */   v2 = (StateMgr *)(a1 + 1521);
-/* line: 19, address: 0x60135e60 */   StateMgr::execute((StateMgr *)(a1 + 1521));
+/* line: 19, address: 0x60135e60 */   StateMgr__execute((StateMgr *)(a1 + 1521));
 /* line: 20, address: 0x60135e78 */   (*(void (__fastcall **)(int *))(*a1 + 264))(a1);
 /* line: 21, address: 0x60135e7c */   v3 = a1[1561];
 /* line: 22, address: 0x60135e84 */   if ( v3 < 1 )
@@ -50,10 +50,10 @@ int __fastcall FireballBase_onExecute(int *a1);
 /* line: 27, address: 0x60135edc */   a1[1528] = a1[27];
 /* line: 28, address: 0x60135ee8 */   a1[1529] = a1[28];
 /* line: 29, address: 0x60135ef4 */   a1[1530] = a1[29];
-/* line: 30, address: 0x60135f00 */   LightMask::update((LightMask *)(a1 + 1525));
+/* line: 30, address: 0x60135f00 */   LightMask__update((LightMask *)(a1 + 1525));
 /* line: 31, address: 0x60135f10 */   if ( a1[1539] != 2 )
 /* line: 32 */   {
-/* line: 33, address: 0x60135f18 */     CurrentState = StateMgr::getCurrentState(v2);
+/* line: 33, address: 0x60135f18 */     CurrentState = StateMgr__getCurrentState(v2);
 /* line: 34, address: 0x60135f28 */     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
 /* line: 35, address: 0x60135f44 */     if ( v6 != (*(int (**)(void))(MEMORY[0xC877FC] + 8))() )
 /* line: 36 */     {
@@ -122,7 +122,7 @@ int __fastcall FireballBase_onExecute(int *a1);
 /* line: 99, address: 0x60135f50 */   v7 = a1 + 1560;
 /* line: 100, address: 0x60135f50 */   if ( !*((_BYTE *)a1 + 6240) )
 /* line: 101 */   {
-/* line: 102, address: 0x60135f6c */     if ( StageActor::cullCheck((StageActor *)a1, 0xAu) == 1 )
+/* line: 102, address: 0x60135f6c */     if ( StageActor__cullCheck((StageActor *)a1, 0xAu) == 1 )
 /* line: 103 */     {
 /* line: 104, address: 0x60135f7c */       (*(void (__fastcall **)(int *))(*a1 + 296))(a1);
 /* line: 105, address: 0x60135f84 */       *v7 = 1;

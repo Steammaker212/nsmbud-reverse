@@ -28,7 +28,7 @@ int __fastcall sub_60451FEC(int a1);
 /* line: 5, address: 0x60452004 */   if ( !MEMORY[0xC9CF0C] )
 /* line: 6 */   {
 /* line: 7, address: 0x60452020 */     v2 = operator new[](5136, a1, 4);
-/* line: 8, address: 0x60452028 */     sead::IDisposer::IDisposer(v2, a1, 3);
+/* line: 8, address: 0x60452028 */     sead__IDisposer__IDisposer(v2, a1, 3);
 /* line: 9, address: 0x60452038 */     *(_DWORD *)v2 = 12562700;
 /* line: 10, address: 0x60452044 */     MEMORY[0xC9CF08] = v2;
 /* line: 11, address: 0x6045204c */     sub_604551B4(v2 + 16);
@@ -38,7 +38,7 @@ int __fastcall sub_60451FEC(int a1);
 /* line: 15, address: 0x60452074 */     *(_DWORD *)(v2 + 1280) = 0;
 /* line: 16, address: 0x60452078 */     *(_DWORD *)(v2 + 1316) = 3;
 /* line: 17, address: 0x6045207c */     *(_BYTE *)(v2 + 1320) = 0;
-/* line: 18, address: 0x60452080 */     sead::Random::init((struct sead_Random *)(v2 + 1340));
+/* line: 18, address: 0x60452080 */     sead__Random__init((struct sead_Random *)(v2 + 1340));
 /* line: 19, address: 0x6045208c */     *(_BYTE *)(v2 + 1356) = 0;
 /* line: 20, address: 0x60452090 */     *(_WORD *)(v2 + 1358) = 120;
 /* line: 21, address: 0x6045209c */     *(_BYTE *)(v2 + 1360) = 0;

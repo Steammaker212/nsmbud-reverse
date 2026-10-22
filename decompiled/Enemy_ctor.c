@@ -29,7 +29,7 @@ int __fastcall Enemy_Enemy(int a1);
 /* line: 6 */   int v6; // r5
 /* line: 7 */   int v7; // r6
 /* line: 8 */ 
-/* line: 9, address: 0x602a1a94 */   MultiStateActor::MultiStateActor();
+/* line: 9, address: 0x602a1a94 */   MultiStateActor__MultiStateActor();
 /* line: 10, address: 0x602a1aac */   *(_DWORD *)a1 = 12462088;
 /* line: 11, address: 0x602a1ab4 */   v2 = MEMORY[0xAFE454];
 /* line: 12, address: 0x602a1ab4 */   v3 = MEMORY[0xAFE458];

@@ -6,7 +6,7 @@
 /* line: 4, address: 0x6046edb4 */   v0 = operator new(6992);
 /* line: 5, address: 0x6046edb8 */   sub_60466BC4();
 /* line: 6, address: 0x6046edd0 */   *(_DWORD *)v0 = 12567868;
-/* line: 7, address: 0x6046eddc */   LightMask::LightMask((LightMask *)(v0 + 6828));
+/* line: 7, address: 0x6046eddc */   LightMask__LightMask((LightMask *)(v0 + 6828));
 /* line: 8, address: 0x6046ede8 */   EffectWrapper_ctor(v0 + 6868);
 /* line: 9, address: 0x6046edfc */   *(_DWORD *)(v0 + 6868) = 12325968;
 /* line: 10, address: 0x6046ee04 */   *(_WORD *)(v0 + 6988) = 0;

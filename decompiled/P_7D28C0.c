@@ -29,7 +29,7 @@ unsigned int __fastcall sub_607D28C0(int a1, int a2);
 /* line: 9, address: 0x607d28d8 */   *(_BYTE *)(a1 + 110) |= 2u;
 /* line: 10, address: 0x607d28e8 */   if ( (unsigned int)v3[533] - 1 > 1 )
 /* line: 11 */   {
-/* line: 12, address: 0x607d2994 */     result = Actor::getProfileId((Actor *)v3);
+/* line: 12, address: 0x607d2994 */     result = Actor__getProfileId((Actor *)v3);
 /* line: 13, address: 0x607d2998 */     v6 = *(_DWORD *)(v4 + 648);
 /* line: 14, address: 0x607d29a0 */     if ( v6 == 1 )
 /* line: 15 */     {

@@ -62,7 +62,7 @@ int __fastcall sub_607AAA00(int a1);
 /* line: 39 */     }
 /* line: 40, address: 0x607aaae0 */     if ( (*(_BYTE *)(a1 + 1207) & 0x40) == 0 || (*(_BYTE *)(a1 + 6905) & 0x80) == 0 || (v2 = 0, !sub_60763E28(a1)) )
 /* line: 41 */     {
-/* line: 42, address: 0x607aaaf8 */       CurrentState = StateMgr::getCurrentState(a1 + 9916);
+/* line: 42, address: 0x607aaaf8 */       CurrentState = StateMgr__getCurrentState(a1 + 9916);
 /* line: 43, address: 0x607aab08 */       v9 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
 /* line: 44, address: 0x607aab24 */       if ( v9 == (*(int (**)(void))(MEMORY[0xCC4BE0] + 8))() )
 /* line: 45 */       {

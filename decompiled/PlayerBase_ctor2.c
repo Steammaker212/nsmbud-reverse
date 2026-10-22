@@ -27,7 +27,7 @@ int __fastcall PlayerBase_ctor(int a1, int a2);
 /* line: 4 */   int v5; // r0
 /* line: 5 */   int v6; // r1
 /* line: 6 */ 
-/* line: 7, address: 0x6075df08 */   StageActor::StageActor(a1, a2);
+/* line: 7, address: 0x6075df08 */   StageActor__StageActor(a1, a2);
 /* line: 8, address: 0x6075df24 */   *(_DWORD *)a1 = 12730884;
 /* line: 9, address: 0x6075df28 */   *(_DWORD *)(a1 + 668) = 0;
 /* line: 10, address: 0x6075df2c */   *(_DWORD *)(a1 + 664) = 0;

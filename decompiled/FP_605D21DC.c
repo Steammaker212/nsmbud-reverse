@@ -65,7 +65,7 @@ int __fastcall sub_605D21DC(int a1, int a2);
 /* line: 42, address: 0x605d23ec */                 v8 = 0;
 /* line: 43 */ LABEL_22:
 /* line: 44, address: 0x605d23c4 */                 sub_605D1F54(v2, (char)v6, v8);
-/* line: 45, address: 0x605d23e8 */                 return StateMgr::changeState((_DWORD *)(v2 + 6084), 13308384);
+/* line: 45, address: 0x605d23e8 */                 return StateMgr__changeState((_DWORD *)(v2 + 6084), 13308384);
 /* line: 46 */               }
 /* line: 47 */ LABEL_19:
 /* line: 48, address: 0x605d2394 */               v8 = 0;

@@ -32,7 +32,7 @@ _BYTE * __fastcall FireBros_createFireball(_DWORD *a1);
 /* line: 12, address: 0x602a9ba4 */   (*(void (__fastcall **)(_DWORD *))(*a1 + 708))(a1);
 /* line: 13, address: 0x602a9bc0 */   memset(&v11[1], 0, 0x28u);
 /* line: 14, address: 0x602a9bcc */   v11[0] = a1[20] & 1;
-/* line: 15, address: 0x602a9be4 */   v11[3] = Profile::get(MEMORY[0xAF3914]);
+/* line: 15, address: 0x602a9be4 */   v11[3] = Profile__get(MEMORY[0xAF3914]);
 /* line: 16, address: 0x602a9bf4 */   v5 = a1[20];
 /* line: 17, address: 0x602a9bf8 */   v11[4] = v1;
 /* line: 18, address: 0x602a9bfc */   v11[5] = v2;
@@ -46,7 +46,7 @@ _BYTE * __fastcall FireBros_createFireball(_DWORD *a1);
 /* line: 26, address: 0x602a9c20 */   v8 = 0;
 /* line: 27, address: 0x602a9c24 */   v11[7] = v7;
 /* line: 28, address: 0x602a9c2c */   LOBYTE(v11[8]) = 0;
-/* line: 29, address: 0x602a9c3c */   v9 = ActorMgr::create(MEMORY[0xC7B400], (int)v11, 0);
+/* line: 29, address: 0x602a9c3c */   v9 = ActorMgr__create(MEMORY[0xC7B400], (int)v11, 0);
 /* line: 30, address: 0x602a9c5c */   if ( _cxa_guard_acquire_0(13087588) )
 /* line: 31 */   {
 /* line: 32, address: 0x602a9c7c */     MEMORY[0xC7B360] = 12320920;

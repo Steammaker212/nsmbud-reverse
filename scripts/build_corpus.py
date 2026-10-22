@@ -84,8 +84,32 @@ def main():
     open(tmp, "w", encoding="utf-8").write(src)
     run("1/6 fix asm escapes", [sys.executable, tmp, "--apply"])
 
+    # 1b. C++-qualified names -> C identifiers, on the clean tree, before the corpus is assembled.
+    #     IDA recovered many callees under their Itanium-demangled names, so the pseudo-code says
+    #     `StateMgr::changeState(...)`, which is not C: the parser reads it as a declaration and the
+    #     whole translation unit fails with "expected identifier or '('". This was 137 files and
+    #     18,598 call sites -- by far the largest single cause of unparseable output. It must run
+    #     before step 2 because step 2 aggregates the clean tree into the region files.
+    #     BOTH source trees need this. make_decompiled_corpus.py reads the 10 aggregate region files
+    #     from `decompiled_clean` AND the ~464 per-function files from `decompiled`; fixing only the
+    #     first left the per-function files with qualified names, so 257/475 did not move at all.
+    CLEAN = r"C:\Users\Saif Khan\Downloads\main.idb\.rea\decompiled_clean"
+    PERFN = r"C:\Users\Saif Khan\Downloads\main.idb\.rea"
+    run("1b/8 fix qualified names",
+        [sys.executable, "scripts/fix_qualified_names.py", CLEAN, "--write"])
+    run("1c/8 fix qualified names (per-function)",
+        [sys.executable, "scripts/fix_qualified_names.py", PERFN, "--write"])
+
     # 2. assemble corpus
     run("2/7 build corpus", [sys.executable, "scripts/make_decompiled_corpus.py"])
+    # 2b. the ~369 per-function files live at the ROOT of decompiled/ and are NOT part of the
+    #     LAYOUT-driven copy above -- make_decompiled_corpus.py only knows about the 11 region files.
+    #     They therefore still carried `StateMgr::execute(...)` and kept their errors. Fixing them in
+    #     place took the parse count from 257 to 323; without this step a rebuild reverts that,
+    #     because the files are regenerated into decompiled/ by the export, not by this script.
+    run("2b/8 fix qualified names (repo tree)",
+        [sys.executable, "scripts/fix_qualified_names.py",
+         os.path.join(REPO, "decompiled"), "--write"])
     # 3. data header MUST precede restructure: restructure regenerates the prelude, and if
     #    nsmbudx_data.h does not exist yet the prelude cannot reference it. Getting this backwards
     #    silently dropped 31 files (250 -> 219) with no error, because the include still resolved.
@@ -97,6 +121,15 @@ def main():
     run("4/7 restructure includes", [sys.executable, "scripts/restructure_includes.py"])
     # 5. prelude include in every .c, including the region files just written
     run("5/7 add prelude", [sys.executable, "scripts/add_prelude.py"])
+    # 5b. drop conflicting duplicate prototypes. Two distinct functions were named the same
+    #     (Pokey__vf15C at 0x2856dc and 0x3835e8, ShellEnemy__vf110 at 0x2725ac and 0x3a1418,
+    #     Enemy__beforeExecute at 0x2a1bc8 and 0x40a800), so the header declared each identifier
+    #     twice. That is three conflicts, but every .c includes actors.h, so all of them failed.
+    for g in ("actors", "systems", "libs", "player", "powerup"):
+        hdr = os.path.join(REPO, "decompiled", "include", "%s.h" % g)
+        if os.path.exists(hdr):
+            run("5b/8 dedupe %s.h" % g,
+                [sys.executable, "scripts/dedupe_header_decls.py", hdr, "--write"])
     # 6. forward declarations. This is NEUTRAL for parsing (measured identical with and without)
     #    and is NOT run by default: it inserts thousands of prototypes into every region file for no
     #    compile benefit. Pass --hoist to enable it. Kept as a stage because a reader may want the

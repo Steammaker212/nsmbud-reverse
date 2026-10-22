@@ -21,5 +21,5 @@
 /* line: 18, address: 0x60563f5c */   ((void (__fastcall *)(_DWORD, float *, _DWORD))sub_605B8E44)(MEMORY[0xCB061C], v4, *(unsigned __int8 *)(a1 + 6879));
 /* line: 19, address: 0x60563f80 */   sub_605BA078(MEMORY[0xCB061C], a1 + 6980, 2, *(unsigned __int8 *)(MEMORY[0xC9A684] + 18));
 /* line: 20, address: 0x60563f98 */   ColliderMgr_removeRelated1(MEMORY[0xC8820C], a1 + 6120);
-/* line: 21, address: 0x60563fac */   return StageActor::delete((StageActor *)a1, 1u);
+/* line: 21, address: 0x60563fac */   return StageActor__delete((StageActor *)a1, 1u);
 /* line: 22 */ }

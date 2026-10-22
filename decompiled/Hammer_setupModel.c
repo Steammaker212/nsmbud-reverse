@@ -28,7 +28,7 @@ int __fastcall HammerActor_setupModel(int a1);
 /* line: 5 */   int v5; // r0
 /* line: 6 */   _DWORD v7[2]; // [sp+18h] [bp-8h] BYREF
 /* line: 7 */ 
-/* line: 8, address: 0x6013fcf0 */   ResArchiveById = Profile::getResArchiveById(*(Profile **)(a1 + 12), 0);
+/* line: 8, address: 0x6013fcf0 */   ResArchiveById = Profile__getResArchiveById(*(Profile **)(a1 + 12), 0);
 /* line: 9, address: 0x6013fd20 */   v7[0] = 12321336;
 /* line: 10, address: 0x6013fd2c */   v7[1] = "bros_hammer";
 /* line: 11, address: 0x6013fd38 */   v3 = ((int (__fastcall *)(int, _DWORD *, int, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD))Resource_getModel2)(

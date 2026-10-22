@@ -24,7 +24,7 @@ int __fastcall FireballBase_ctor(int a1);
 /* line: 1 */ {
 /* line: 2, address: 0x60135a98 */   StateActor_ctor();
 /* line: 3, address: 0x60135aa8 */   *(_DWORD *)a1 = 12395168;
-/* line: 4, address: 0x60135ab4 */   LightMask::LightMask((LightMask *)(a1 + 6100));
+/* line: 4, address: 0x60135ab4 */   LightMask__LightMask((LightMask *)(a1 + 6100));
 /* line: 5, address: 0x60135ac0 */   *(_DWORD *)(a1 + 6140) = 0;
 /* line: 6, address: 0x60135acc */   sub_6000BAC8(a1 + 6144, *(_DWORD *)(a1 + 8));
 /* line: 7, address: 0x60135ae4 */   *(_DWORD *)(a1 + 6144) = 12395480;
@@ -42,7 +42,7 @@ int __fastcall FireballBase_ctor(int a1);
 /* line: 19, address: 0x60135b54 */   *(_DWORD *)(a1 + 6244) = 0;
 /* line: 20, address: 0x60135b5c */   EffectWrapper_ctor(a1 + 6260);
 /* line: 21, address: 0x60135b6c */   *(_DWORD *)(a1 + 6260) = 12325968;
-/* line: 22, address: 0x60135b78 */   LightSource::LightSource((LightSource *)(a1 + 6364));
+/* line: 22, address: 0x60135b78 */   LightSource__LightSource((LightSource *)(a1 + 6364));
 /* line: 23, address: 0x60135b84 */   ActiveCollider_ctor(a1 + 6436);
 /* line: 24, address: 0x60135b98 */   *(_DWORD *)(a1 + 6740) = 12395568;
 /* line: 25, address: 0x60135ba0 */   *(_DWORD *)(a1 + 6756) = 0;

@@ -39,7 +39,7 @@ _DWORD * __fastcall sub_6040FF08(_DWORD *a1);
 /* line: 19, address: 0x6040ffd0 */   a1[3198] = 0;
 /* line: 20, address: 0x6040ffe0 */   a1[3195] = 12419988;
 /* line: 21, address: 0x6040fff0 */   sub_609394E8(a1 + 3203);
-/* line: 22, address: 0x6040fffc */   sead::CriticalSection::CriticalSection((struct sead_CriticalSection *)(a1 + 3325));
+/* line: 22, address: 0x6040fffc */   sead__CriticalSection__CriticalSection((struct sead_CriticalSection *)(a1 + 3325));
 /* line: 23, address: 0x60410004 */   v3 = 12321336;
 /* line: 24, address: 0x60410018 */   v4 = "Capture";
 /* line: 25, address: 0x60410020 */   nullsub_123(a1 + 3203, 1, &v3, 0);

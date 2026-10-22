@@ -38,7 +38,7 @@ int __fastcall sub_607D2194(_DWORD *a1, int a2);
 /* line: 15 */   }
 /* line: 16, address: 0x607d224c */   if ( v5 && (**v5)(v5, 13087584) )
 /* line: 17, address: 0x607d224c */     return 0;
-/* line: 18, address: 0x607d2264 */   CurrentState = StateMgr::getCurrentState((StateMgr *)(a1 + 2851));
+/* line: 18, address: 0x607d2264 */   CurrentState = StateMgr__getCurrentState((StateMgr *)(a1 + 2851));
 /* line: 19, address: 0x607d2274 */   v7 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
 /* line: 20, address: 0x607d2288 */   v8 = (*(int (**)(void))(MEMORY[0xCC5398] + 8))();
 /* line: 21, address: 0x607d2290 */   if ( !a2 )
@@ -50,6 +50,6 @@ int __fastcall sub_607D2194(_DWORD *a1, int a2);
 /* line: 27, address: 0x607d21b4 */     return 0;
 /* line: 28, address: 0x607d22c8 */   a1[2839] = *(_DWORD *)(a2 + 8);
 /* line: 29, address: 0x607d22d0 */   a1[2857] = 0;
-/* line: 30, address: 0x607d22e0 */   StateMgr::changeState(a1 + 2851, 13390840);
+/* line: 30, address: 0x607d22e0 */   StateMgr__changeState(a1 + 2851, 13390840);
 /* line: 31, address: 0x607d21b8 */   return 1;
 /* line: 32 */ }

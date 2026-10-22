@@ -41,7 +41,7 @@ int __fastcall sub_607D1A3C(int a1, int a2);
 /* line: 18 */   }
 /* line: 19, address: 0x607d1ae4 */   if ( !v5 || (v6 = (**v5)(v5, 13087584), v7 = 0, !v6) )
 /* line: 20 */   {
-/* line: 21, address: 0x607d1af0 */     CurrentState = StateMgr::getCurrentState((StateMgr *)(a1 + 11404));
+/* line: 21, address: 0x607d1af0 */     CurrentState = StateMgr__getCurrentState((StateMgr *)(a1 + 11404));
 /* line: 22, address: 0x607d1b00 */     v9 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
 /* line: 23, address: 0x607d1b18 */     v7 = 0;
 /* line: 24, address: 0x607d1b20 */     if ( v9 != (*(int (**)(void))(MEMORY[0xCC5398] + 8))() )

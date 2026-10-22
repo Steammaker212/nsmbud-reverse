@@ -42,7 +42,7 @@ int __fastcall StageActor_StageActor(int a1, int a2);
 /* line: 19 */   float v21; // s2
 /* line: 20 */   float v22; // s4
 /* line: 21 */ 
-/* line: 22, address: 0x600002ac */   Actor::Actor();
+/* line: 22, address: 0x600002ac */   Actor__Actor();
 /* line: 23, address: 0x600002cc */   *(_DWORD *)a1 = 12320780;
 /* line: 24, address: 0x600002d4 */   *(_DWORD *)(a1 + 80) = 0;
 /* line: 25, address: 0x600002d8 */   *(_WORD *)(a1 + 84) = -1;

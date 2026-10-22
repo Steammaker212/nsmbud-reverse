@@ -52,7 +52,7 @@ int __fastcall sub_6000A2E8(int a1, unsigned int a2);
 /* line: 29, address: 0x6000a348 */         v9 = *v4;
 /* line: 30, address: 0x6000a348 */         if ( *v4 )
 /* line: 31 */         {
-/* line: 32, address: 0x6000a358 */           result = Actor::getProfileId(*v4);
+/* line: 32, address: 0x6000a358 */           result = Actor__getProfileId(*v4);
 /* line: 33, address: 0x6000a35c */           v10 = result == v8;
 /* line: 34, address: 0x6000a360 */           if ( result == v8 )
 /* line: 35 */           {

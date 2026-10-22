@@ -327,7 +327,11 @@ int __fastcall sub_60817F90(int a1);  /* 0x00817f90 */
 int __fastcall sub_60818070(int result);  /* 0x00818070 */
 int __fastcall sub_608180B8(int a1);  /* 0x008180b8 */
 int __fastcall sub_60818138(int result, int a2);  /* 0x00818138 */
+int __fastcall StateMgr__getCurrentState(int a1);  /* 0x00818198 */
+int __fastcall StateMgr__execute(_DWORD *a1);  /* 0x008181d4 */
+int __fastcall StateMgr__changeState(_DWORD *a1, int a2);  /* 0x00818224 */
 int __fastcall StateMgrExt_changeState(int *a1, int a2);  /* 0x00818290 */
+int __fastcall StateBase__dtor(int a1);  /* 0x00818320 */
 int __fastcall sub_60818350(struct sead_TaskBase *a1);  /* 0x00818350 */
 int __fastcall sub_608183B8(int a1);  /* 0x008183b8 */
 int __fastcall sub_60818430(int a1);  /* 0x00818430 */
@@ -574,6 +578,8 @@ bool __fastcall sub_6082CBEC(int a1, int a2);  /* 0x0082cbec */
 int __fastcall sub_6082CD60(_DWORD *a1);  /* 0x0082cd60 */
 bool __fastcall sub_6082CED4(int a1, int a2);  /* 0x0082ced4 */
 int __fastcall sub_6082D0BC(Actor *a1);  /* 0x0082d0bc */
+bool __fastcall BgCenter__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x0082d194 */
+int __fastcall BgCenter__dtor(_DWORD *a1);  /* 0x0082d308 */
 int __fastcall sub_6082D4B8(int result);  /* 0x0082d4b8 */
 int __fastcall sub_6082D4C8(_DWORD *a1);  /* 0x0082d4c8 */
 int __fastcall sub_6082D5A4(_BYTE *a1);  /* 0x0082d5a4 */
@@ -752,6 +758,7 @@ int __fastcall sub_6083B4C8(int a1);  /* 0x0083b4c8 */
 int __fastcall sub_6083B4F8(int a1, _DWORD *a2, int a3);  /* 0x0083b4f8 */
 int __fastcall sub_6083BD18(int a1);  /* 0x0083bd18 */
 int __fastcall sub_6083BDB8(int a1, int a2, int a3, int a4);  /* 0x0083bdb8 */
+int __fastcall nn__os__Mutex__dtor(int a1);  /* 0x0083c2ec */
 int __fastcall sub_6083C318(int a1, int a2, unsigned __int8 *a3);  /* 0x0083c318 */
 int __fastcall sub_6083C4F8(int result);  /* 0x0083c4f8 */
 int __fastcall sub_6083C504(unsigned __int8 *a1);  /* 0x0083c504 */
@@ -1559,7 +1566,10 @@ int __fastcall sub_60873A18(_DWORD *a1, int a2);  /* 0x00873a18 */
 int __fastcall sub_60873A50(int result, int a2);  /* 0x00873a50 */
 int __fastcall sub_60873D58(_DWORD *a1, int *a2, int a3, unsigned int a4);  /* 0x00873d58 */
 int __fastcall sub_60873E60(int a1, int a2);  /* 0x00873e60 */
+int __fastcall nn__g3d__ShapeAnimObj__Bind(int a1, int a2);  /* 0x00873f04 */
 int __fastcall sub_608741C8(int a1, int a2, int a3);  /* 0x008741c8 */
+int __fastcall nn__g3d__ShapeAnimObj__ApplyTo(int result, int a2);  /* 0x00874654 */
+int __fastcall nn__g3d__ShapeAnimObj__dtor(int a1);  /* 0x0087479c */
 int __fastcall sub_60874E50(int a1, float32x4_t *a2);  /* 0x00874e50 */
 int __fastcall sub_60874EB8(int a1, float32x4_t *a2);  /* 0x00874eb8 */
 int __fastcall sub_60874F3C(__int64 *a1, int a2);  /* 0x00874f3c */
@@ -1582,12 +1592,17 @@ int __fastcall sub_60877FB4(int a1, int a2);  /* 0x00877fb4 */
 int __fastcall sub_60878050(int a1, int a2);  /* 0x00878050 */
 int __fastcall sub_60878088(int a1, int a2);  /* 0x00878088 */
 int __fastcall sub_608782F4(int result, int a2);  /* 0x008782f4 */
+int __fastcall nn__g3d__SkeletalAnimObj__Bind(int a1, int a2);  /* 0x00878460 */
+int __fastcall nn__g3d__SkeletalAnimObj__BindFast(int a1, int a2);  /* 0x008784dc */
+int __fastcall nn__g3d__SkeletalAnimObj__ClearResult(int result);  /* 0x00878588 */
 int __fastcall sub_608785CC(int a1, int a2, int a3, int a4);  /* 0x008785cc */
+int __fastcall nn__g3d__SkeletalAnimObj__ApplyTo(int a1, int a2);  /* 0x00878698 */
 int __fastcall sub_608786C8(int a1);  /* 0x008786c8 */
 int __fastcall sub_60879E44(int a1, __int16 *a2, int a3, unsigned int a4);  /* 0x00879e44 */
 void __fastcall sub_60879EA0(int a1);  /* 0x00879ea0 */
 int __fastcall sub_60879ECC(int result, _DWORD *a2);  /* 0x00879ecc */
 int __fastcall sub_60879F6C(int a1);  /* 0x00879f6c */
+int __fastcall nn__g3d__SkeletalAnimObj__dtor(int a1);  /* 0x00879fb0 */
 int __fastcall sub_6087B0E0(int result, int a2);  /* 0x0087b0e0 */
 int __fastcall sub_6087BEC0(int a1, int a2);  /* 0x0087bec0 */
 int __fastcall sub_6087C164(int a1, int a2);  /* 0x0087c164 */
@@ -1908,6 +1923,13 @@ int __fastcall sub_608A9464(int a1, int a2, int a3);  /* 0x008a9464 */
 int __fastcall sub_608A95B4(int result, int a2);  /* 0x008a95b4 */
 int __fastcall sub_608A95C4(int result, int a2);  /* 0x008a95c4 */
 int __fastcall sub_608A95E0(int a1);  /* 0x008a95e0 */
+int __fastcall nn__atk__SoundActor__SoundActor(int a1, int a2);  /* 0x008a95f8 */
+int __fastcall nn__atk__SoundActor__dtor(int a1);  /* 0x008a96cc */
+int __fastcall nn__atk__SoundActor__GetPlayingSoundCount(int a1, int a2);  /* 0x008a97a4 */
+int __fastcall nn__atk__SoundActor__SetPlayableSoundCount(int a1, int a2, int a3);  /* 0x008a97d0 */
+int __fastcall nn__atk__SoundActor__SetupSound(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 *a5);  /* 0x008a97e0 */
+int __fastcall nn__atk__SoundActor__detail_SetupSound(int a1, int a2, int a3, char a4, int a5, int a6);  /* 0x008a98bc */
+int __fastcall nn__atk__SoundActor__detail_GetItemId(int a1);  /* 0x008a9914 */
 int __fastcall nn_atk_SoundArchive_ctor(int result);  /* 0x008a9954 */
 bool __fastcall sub_608A9984(int a1);  /* 0x008a9984 */
 int __fastcall sub_608A9994(int a1, _WORD *a2);  /* 0x008a9994 */
@@ -1917,6 +1939,8 @@ int __fastcall sub_608A99E4(int a1);  /* 0x008a99e4 */
 int __fastcall sub_608A99EC(int a1);  /* 0x008a99ec */
 int __fastcall sub_608A99F4(int a1);  /* 0x008a99f4 */
 int __fastcall sub_608A99FC(int a1);  /* 0x008a99fc */
+int __fastcall nn__atk__SoundArchive__GetItemLabel(int a1, int a2);  /* 0x008a9a04 */
+int __fastcall nn__atk__SoundArchive__GetItemId(int a1, int a2);  /* 0x008a9a4c */
 int __fastcall sub_608A9A94(int a1, unsigned int a2);  /* 0x008a9a94 */
 int __fastcall sub_608A9A9C(int a1, int a2);  /* 0x008a9a9c */
 int __fastcall sub_608A9AA4(int a1, int a2);  /* 0x008a9aa4 */
@@ -2057,6 +2081,7 @@ int __fastcall sub_608B0798(_DWORD *a1);  /* 0x008b0798 */
 int __fastcall sub_608B07EC(int a1, int a2);  /* 0x008b07ec */
 int __fastcall sub_608B0870(int a1, int a2);  /* 0x008b0870 */
 int __fastcall sub_608B08B8(_DWORD *a1, int a2);  /* 0x008b08b8 */
+int __fastcall nn__atk__detail__ExternalSoundPlayer__SetPlayableSoundCount(int a1, int a2);  /* 0x008b0a04 */
 int __fastcall sub_608B0AA0(int a1, int a2);  /* 0x008b0aa0 */
 int __fastcall sub_608B0C4C(int a1, _DWORD *a2, unsigned int a3);  /* 0x008b0c4c */
 int __fastcall sub_608B0CA4(int a1);  /* 0x008b0ca4 */
@@ -2098,6 +2123,7 @@ int __fastcall sub_608B1550(_WORD *a1);  /* 0x008b1550 */
 int __fastcall sub_608B1590(_WORD *a1);  /* 0x008b1590 */
 int __fastcall sub_608B15C8(_WORD *a1);  /* 0x008b15c8 */
 int __fastcall sub_608B1608(_WORD *a1);  /* 0x008b1608 */
+int __fastcall nn__atk__detail__SoundArchiveFile__StringBlockBody__GetString(int a1, int a2);  /* 0x008b1648 */
 int __fastcall sub_608B1674(int a1, int a2, int a3);  /* 0x008b1674 */
 int __fastcall sub_608B175C(int a1, int a2);  /* 0x008b175c */
 int __fastcall sub_608B1794(int a1);  /* 0x008b1794 */
@@ -2114,6 +2140,7 @@ int __fastcall sub_608B18E8(int a1, int a2);  /* 0x008b18e8 */
 int __fastcall sub_608B1914(int a1);  /* 0x008b1914 */
 int __fastcall sub_608B1A60(int a1);  /* 0x008b1a60 */
 int __fastcall sub_608B1A94(int a1);  /* 0x008b1a94 */
+int __fastcall nn__atk__detail__SoundArchiveFile__InfoBlockBody__GetItemStringId(_DWORD *a1, unsigned int a2);  /* 0x008b1aa0 */
 int __fastcall sub_608B1C30(int a1);  /* 0x008b1c30 */
 int __fastcall sub_608B1C3C(int a1);  /* 0x008b1c3c */
 int __fastcall sub_608B1C48(int a1);  /* 0x008b1c48 */
@@ -2145,6 +2172,8 @@ int __fastcall sub_608B2118(int result);  /* 0x008b2118 */
 int __fastcall sub_608B2188(int result);  /* 0x008b2188 */
 int __fastcall sub_608B2198(int result, int a2);  /* 0x008b2198 */
 int __fastcall sub_608B21A4(int result, int a2);  /* 0x008b21a4 */
+int __fastcall nn__atk__detail__SoundArchiveFileReader__GetItemId(int a1, int a2);  /* 0x008b21b0 */
+int __fastcall nn__atk__detail__SoundArchiveFileReader__GetItemLabel(int a1, unsigned int a2);  /* 0x008b21cc */
 int __fastcall sub_608B2218(int a1);  /* 0x008b2218 */
 int __fastcall sub_608B222C(int a1);  /* 0x008b222c */
 int __fastcall sub_608B2240(int a1);  /* 0x008b2240 */
@@ -3088,6 +3117,7 @@ void __fastcall sub_608DE6F4(int a1, _DWORD *a2, _DWORD *a3);  /* 0x008de6f4 */
 int __fastcall sub_608DE7F0(int a1, int a2, int a3, int (__fastcall *a4)(int, int));  /* 0x008de7f0 */
 unsigned int __fastcall sub_608DE844(unsigned int result, struct sead_Random *a2);  /* 0x008de844 */
 int __fastcall sub_608DEA40(char *a1, int a2, int (__fastcall *a3)(char *, char *));  /* 0x008dea40 */
+int __fastcall sead__PtrArrayImpl__allocBuffer(int result, int a2, int a3, int a4);  /* 0x008deb28 */
 int __fastcall sub_608DEB70(_DWORD *a1);  /* 0x008deb70 */
 int __fastcall sub_608DEB9C(int *a1, int a2, int a3, int a4);  /* 0x008deb9c */
 int __fastcall sub_608DEBEC(int *a1, struct sead_Random *a2);  /* 0x008debec */
@@ -3096,16 +3126,20 @@ signed int __fastcall sub_608DED80(signed int result, int (__fastcall *a2)(int, 
 int __fastcall sub_608DEEE0(int *a1, int a2, int (__fastcall *a3)(_DWORD, int));  /* 0x008deee0 */
 int __fastcall sub_608DF11C(int *a1, int *a2);  /* 0x008df11c */
 int __fastcall sub_608DF200(int result, _DWORD *a2);  /* 0x008df200 */
+int __fastcall sead__TreeNode__detachAll(_DWORD *a1);  /* 0x008df2e0 */
 int __fastcall sub_608DF38C(int result);  /* 0x008df38c */
 int __fastcall sub_608DF3CC(int a1, int a2, int a3);  /* 0x008df3cc */
 int __fastcall sub_608DF43C(int a1);  /* 0x008df43c */
 int __fastcall sub_608DF448(int a1);  /* 0x008df448 */
 bool __fastcall sub_608E0AC8(int a1, int a2);  /* 0x008e0ac8 */
+int __fastcall sead__NinJoyNpadDevice__dtor(int *a1);  /* 0x008e0f90 */
+unsigned int __fastcall sead__NinJoyNpadDevice__calc(int a1, const unsigned int *a2);  /* 0x008e100c */
 int __fastcall sub_608E1248(int result, unsigned int a2);  /* 0x008e1248 */
 int __fastcall sub_608E1254(int a1, int a2);  /* 0x008e1254 */
 int __fastcall sub_608E125C(int a1, int a2);  /* 0x008e125c */
 int __fastcall sub_608E1268(_DWORD *a1);  /* 0x008e1268 */
 int __fastcall sub_608E1300(_DWORD *a1);  /* 0x008e1300 */
+bool __fastcall sead__NinJoyNpadDevice__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x008e133c */
 int __fastcall sub_608E14B0(int a1, int a2, char a3);  /* 0x008e14b0 */
 int __fastcall sub_608E1518(int a1);  /* 0x008e1518 */
 bool __fastcall sub_608E1A48(int a1, int a2);  /* 0x008e1a48 */
@@ -3238,6 +3272,8 @@ int __fastcall sub_608E7F30(int a1);  /* 0x008e7f30 */
 int __fastcall sub_608E7F80(int a1, int a2, int a3);  /* 0x008e7f80 */
 bool __fastcall sub_608E8000(int a1, int a2);  /* 0x008e8000 */
 int __fastcall sub_608E81AC(struct sead_IDisposer *a1, const char *a2);  /* 0x008e81ac */
+int __fastcall sead__FileDeviceMgr__createInstance(int a1);  /* 0x008e8264 */
+int __fastcall sead__FileDeviceMgr__FileDeviceMgr(int a1);  /* 0x008e82dc */
 int __fastcall sub_608E83B4(int a1, _DWORD *a2, _DWORD *a3);  /* 0x008e83b4 */
 int __fastcall sub_608E8584(int a1, _DWORD *a2);  /* 0x008e8584 */
 int __fastcall sub_608E86B8(int a1, _DWORD *a2, int a3, int a4, int a5);  /* 0x008e86b8 */
@@ -3277,6 +3313,7 @@ int __fastcall sub_608E93BC(int a1, _DWORD *a2);  /* 0x008e93bc */
 int __fastcall sub_608E978C(int a1, _DWORD *a2);  /* 0x008e978c */
 int __fastcall sub_608E9B50(_DWORD *a1, _DWORD *a2);  /* 0x008e9b50 */
 int __fastcall sub_608E9F1C(_DWORD *a1, char a2);  /* 0x008e9f1c */
+int __fastcall sead__GameFrameworkNx__initialize(_DWORD *a1);  /* 0x008ea004 */
 int __fastcall sub_608EA014(int a1, const void *a2);  /* 0x008ea014 */
 int __fastcall sub_608EA118(_DWORD *a1);  /* 0x008ea118 */
 int __fastcall sub_608EABF8(unsigned int a1, unsigned int a2);  /* 0x008eabf8 */
@@ -3299,7 +3336,16 @@ bool __fastcall sub_608EB74C(int a1, int a2);  /* 0x008eb74c */
 bool __fastcall sub_608EB934(int a1, int a2);  /* 0x008eb934 */
 int __fastcall sub_608EBA30(int result);  /* 0x008eba30 */
 int __fastcall sub_608EBABC(int a1, int a2);  /* 0x008ebabc */
+void __fastcall sead__CalculateTask__dtor(int a1);  /* 0x008ebcb0 */
+int __fastcall sead__CalculateTask__attachCalcImpl(_DWORD *a1);  /* 0x008ebdcc */
+int __fastcall sead__CalculateTask__detachCalcImpl(int a1);  /* 0x008ebe5c */
+int __fastcall sead__CalculateTask__pauseCalc(_DWORD *a1, int a2);  /* 0x008ebe68 */
+int __fastcall sead__CalculateTask__pauseCalcRec(_DWORD *a1, int a2);  /* 0x008ebee4 */
+int __fastcall sead__CalculateTask__pauseCalcChild(_DWORD *a1, int a2);  /* 0x008ebf60 */
+int __fastcall sead__CalculateTask__getMethodTreeNode(int a1, unsigned int a2);  /* 0x008ebfdc */
+bool __fastcall sead__CalculateTask__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x008ebff0 */
 int __fastcall sub_608EC164(int result);  /* 0x008ec164 */
+int __fastcall sead__FaderTaskBase__FaderTaskBase(int a1, int a2, const char *a3);  /* 0x008ec224 */
 int __fastcall sub_608EC4FC(int result, int a2);  /* 0x008ec4fc */
 int __fastcall sub_608EC528(_DWORD *a1);  /* 0x008ec528 */
 int __fastcall sub_608EC934(_DWORD *a1);  /* 0x008ec934 */
@@ -3310,11 +3356,13 @@ int __fastcall sub_608ECE10(int a1);  /* 0x008ece10 */
 int __fastcall sub_608ECE18(int a1, unsigned int a2);  /* 0x008ece18 */
 void __fastcall sub_608ECEA0(int a1);  /* 0x008ecea0 */
 int __fastcall sub_608ECF64(int a1);  /* 0x008ecf64 */
+bool __fastcall sead__TaskBase__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x008ed02c */
 int __fastcall sub_608ED128(int a1);  /* 0x008ed128 */
 bool __fastcall sub_608ED210(int a1, void *a2);  /* 0x008ed210 */
 int __fastcall sub_608ED394(int result);  /* 0x008ed394 */
 int __fastcall sub_608ED438(int result);  /* 0x008ed438 */
 int __fastcall sub_608ED654(_DWORD *a1);  /* 0x008ed654 */
+int __fastcall sead__Framework__initialize(_DWORD *a1);  /* 0x008ed684 */
 int __fastcall sub_608ED764(_DWORD *a1, _DWORD *a2, int a3, int a4);  /* 0x008ed764 */
 int __fastcall sub_608ED878(int a1);  /* 0x008ed878 */
 bool __fastcall sub_608ED8F0(int a1, int a2);  /* 0x008ed8f0 */
@@ -3325,8 +3373,11 @@ int __fastcall sub_608EDB70(_DWORD *a1);  /* 0x008edb70 */
 int __fastcall sub_608EDBD0(int result);  /* 0x008edbd0 */
 int __fastcall sub_608EDBE4(int a1, int a2, _DWORD *a3);  /* 0x008edbe4 */
 int __fastcall sub_608EDCA0(int a1, int a2);  /* 0x008edca0 */
+int __fastcall sead__GameFramework__initialize(_DWORD *a1);  /* 0x008eddec */
 int __fastcall sub_608EDFD0(int a1);  /* 0x008edfd0 */
 bool __fastcall sub_608EE0BC(int a1, int a2);  /* 0x008ee0bc */
+int __fastcall sead__MethodTreeNode__attachMutexRec_(_DWORD *a1, int a2);  /* 0x008ee2ac */
+int __fastcall sead__MethodTreeNode__detachAll(_DWORD *a1);  /* 0x008ee36c */
 int __fastcall sub_608EE3EC(int a1);  /* 0x008ee3ec */
 int __fastcall sub_608EE498(struct sead_IDisposer *a1);  /* 0x008ee498 */
 int __fastcall sub_608EEB20(_DWORD *a1);  /* 0x008eeb20 */
@@ -3337,11 +3388,17 @@ int __fastcall sub_608EEFA8(int result);  /* 0x008eefa8 */
 int __fastcall sub_608EF048(int result, int *a2);  /* 0x008ef048 */
 int __fastcall sub_608EF0F0(int result, int *a2);  /* 0x008ef0f0 */
 int __fastcall sub_608EF2B0(int result, int a2, int *a3, int a4);  /* 0x008ef2b0 */
+void __fastcall sead__TaskBase__dtor(struct sead_IDisposer *a1, int a2);  /* 0x008ef434 */
 int __fastcall sub_608EF560(int a1);  /* 0x008ef560 */
+int __fastcall sead__TaskBase__enterCommon(int a1);  /* 0x008ef590 */
 int __fastcall sub_608EF6A8(int a1);  /* 0x008ef6a8 */
 int __fastcall sub_608EF744(int a1, _DWORD *a2);  /* 0x008ef744 */
+int __fastcall sead__TaskBase__doneDestroy(int result);  /* 0x008ef74c */
 int __fastcall sub_608EF75C(int a1);  /* 0x008ef75c */
+int __fastcall sead__TaskBase__getMethodTreeMgr(int a1);  /* 0x008ef768 */
+int __fastcall sead__TaskBase__attachMethodWithCheck(int a1);  /* 0x008ef778 */
 int __fastcall sub_608EFCAC(_DWORD *a1);  /* 0x008efcac */
+int __fastcall sead__TaskMgr__destroyTaskSync(int a1, int a2);  /* 0x008efd84 */
 int __fastcall sub_608EFDC8(int a1);  /* 0x008efdc8 */
 int __fastcall sub_608EFF80(int a1, _DWORD *a2);  /* 0x008eff80 */
 int __fastcall sub_608EFFD4(int a1, int a2, int a3);  /* 0x008effd4 */
@@ -3429,7 +3486,10 @@ int __fastcall sub_608F534C(int result, int a2, int a3, int a4);  /* 0x008f534c 
 float __fastcall sub_608F5718(float result, int a2, int a3);  /* 0x008f5718 */
 void __fastcall sub_608F5830(int *a1, int a2);  /* 0x008f5830 */
 int __fastcall sub_608F5918(int result, _WORD *a2, int a3);  /* 0x008f5918 */
+int __fastcall sead__IDisposer__dtor(_DWORD *a1);  /* 0x008f5c94 */
 int __fastcall sub_608F5D08(_DWORD *a1);  /* 0x008f5d08 */
+int __fastcall sead__ExpHeap__create(int a1, int a2, _DWORD *a3, int a4, int a5, int a6);  /* 0x008f5d44 */
+int __fastcall sead__ExpHeap__tryCreate(int a1, int a2, _DWORD *a3, int a4, int a5, int a6);  /* 0x008f5d68 */
 int __fastcall sub_608F6050(int a1, int a2, int a3, int a4);  /* 0x008f6050 */
 int __fastcall sub_608F61B0(int a1);  /* 0x008f61b0 */
 int __fastcall sub_608F61B8(int a1);  /* 0x008f61b8 */
@@ -3484,15 +3544,20 @@ int __fastcall sub_608F8FB4(int a1, int a2, int a3);  /* 0x008f8fb4 */
 int __fastcall sub_608F9384(int result);  /* 0x008f9384 */
 bool __fastcall sub_608F93B0(_DWORD *a1);  /* 0x008f93b0 */
 bool __fastcall sub_608F9418(int a1, void *a2);  /* 0x008f9418 */
+int __fastcall sead__Heap__Heap(int a1, int a2, struct sead_Heap *a3, int a4, int a5, int a6, int a7);  /* 0x008f9594 */
 int __fastcall sub_608F9724(_DWORD *a1);  /* 0x008f9724 */
 int __fastcall sub_608F9760(int a1);  /* 0x008f9760 */
 int __fastcall sub_608F98A4(int a1, unsigned int a2, unsigned int a3);  /* 0x008f98a4 */
+int __fastcall sead__Heap__appendDisposer_(int a1, int a2);  /* 0x008f9998 */
+int __fastcall sead__Heap__removeDisposer_(int a1, int a2);  /* 0x008f99f0 */
 int __fastcall sub_608F9A44(int a1, int a2);  /* 0x008f9a44 */
 int __fastcall sub_608F9AEC(int a1, int a2);  /* 0x008f9aec */
 int __fastcall sub_608F9B64(int a1, int a2, signed int a3);  /* 0x008f9b64 */
 int __fastcall sub_608FA528(int a1, int a2);  /* 0x008fa528 */
 bool __fastcall sub_608FA5A8(int a1, void *a2);  /* 0x008fa5a8 */
 int __fastcall sub_608FA7D4(int *a1);  /* 0x008fa7d4 */
+int __fastcall sead__HeapMgr__getCurrentHeap(int a1);  /* 0x008fac18 */
+int __fastcall sead__HeapMgr__setCurrentHeap_(int a1, int a2);  /* 0x008fac4c */
 int __fastcall sub_608FAC7C(int result);  /* 0x008fac7c */
 int __fastcall sub_608FAE28(_DWORD *a1);  /* 0x008fae28 */
 int __fastcall sub_608FAE64(int a1, int a2, int a3, int a4);  /* 0x008fae64 */
@@ -3546,6 +3611,7 @@ int __fastcall sub_60900FB4(float *a1, _DWORD *a2);  /* 0x00900fb4 */
 int __fastcall sub_60900FB8(float *a1, _DWORD *a2);  /* 0x00900fb8 */
 unsigned int __fastcall sub_60901464(_DWORD *a1, int a2);  /* 0x00901464 */
 int __fastcall sub_60901490(_DWORD *a1);  /* 0x00901490 */
+int __fastcall sead__StringUtil__vsnprintf(int a1, unsigned int a2);  /* 0x009014b8 */
 unsigned int __fastcall sub_60901524(_WORD *a1, int a2, _BYTE *a3, int a4);  /* 0x00901524 */
 unsigned int __fastcall sub_609017B8(int a1, int a2, int a3, int a4);  /* 0x009017b8 */
 int __fastcall sub_60901A08(_WORD *a1, unsigned int a2, int a3, int a4);  /* 0x00901a08 */
@@ -3556,6 +3622,7 @@ int __fastcall sub_60901C70(struct sead_IDisposer *a1);  /* 0x00901c70 */
 bool __fastcall sub_6090200C(int a1, int a2);  /* 0x0090200c */
 bool __fastcall sub_60902168(int a1, int a2);  /* 0x00902168 */
 int __fastcall sub_60902378(struct sead_IDisposer *a1);  /* 0x00902378 */
+int __fastcall sead__ResourceMgr__createInstance(struct sead_Heap *a1);  /* 0x0090240c */
 int __fastcall sub_6090261C(int a1, _DWORD *a2, _DWORD *a3);  /* 0x0090261c */
 int __fastcall sub_60902734(int a1, _DWORD *a2);  /* 0x00902734 */
 int __fastcall sub_60902770(_DWORD *a1, int a2);  /* 0x00902770 */
@@ -3663,7 +3730,10 @@ int __fastcall sub_60907CE0(int a1, int a2, _DWORD *a3);  /* 0x00907ce0 */
 int __fastcall sub_60907D94(int a1, int a2);  /* 0x00907d94 */
 int __fastcall sub_60907DC8(_DWORD *a1, int (__fastcall ***a2)(_DWORD, unsigned __int8 *, int));  /* 0x00907dc8 */
 int __fastcall sub_60907E00(int a1, int a2);  /* 0x00907e00 */
+int __fastcall sead__CriticalSection__dtor(struct sead_IDisposer *a1);  /* 0x00907f58 */
+int __fastcall sead__CriticalSection__lock(int a1);  /* 0x00907f8c */
 int __fastcall sub_60907F94(int a1);  /* 0x00907f94 */
+int __fastcall sead__CriticalSection__unlock(int a1);  /* 0x00907f9c */
 int __fastcall sub_60908010(struct sead_IDisposer *a1);  /* 0x00908010 */
 int __fastcall sub_60908044(int a1);  /* 0x00908044 */
 int __fastcall sub_6090804C(int a1);  /* 0x0090804c */
@@ -3680,6 +3750,7 @@ int __fastcall sub_6090863C(int a1);  /* 0x0090863c */
 int __fastcall sub_60908668(int a1);  /* 0x00908668 */
 int __fastcall sub_6090868C(int a1);  /* 0x0090868c */
 int __fastcall sub_60908708(struct sead_IDisposer *a1);  /* 0x00908708 */
+int __fastcall sead__ThreadMgr__createInstance(struct sead_Heap *a1);  /* 0x00908780 */
 int __fastcall sub_60908808(struct nn_os *a1, int a2);  /* 0x00908808 */
 int __fastcall sub_609088D0(struct sead_IDisposer *a1);  /* 0x009088d0 */
 int __fastcall sub_60908984(struct sead_IDisposer *a1);  /* 0x00908984 */
@@ -3689,6 +3760,7 @@ int __fastcall sub_609089F8(int a1, int a2);  /* 0x009089f8 */
 int __fastcall sub_60908A2C(int a1, int a2);  /* 0x00908a2c */
 int __fastcall sub_60908A44(int result, int a2);  /* 0x00908a44 */
 int __fastcall sub_60908A98(int a1);  /* 0x00908a98 */
+int __fastcall sead__ThreadMgr__initialize(struct nn_os *a1, int a2);  /* 0x00908b14 */
 int __fastcall sub_60908C18(_DWORD *a1);  /* 0x00908c18 */
 int __fastcall sub_60908CA8(_DWORD *a1);  /* 0x00908ca8 */
 bool __fastcall sub_60908DA0(int a1);  /* 0x00908da0 */
@@ -3703,6 +3775,9 @@ int __fastcall sub_60909504(int result);  /* 0x00909504 */
 bool __fastcall sub_60909518(int a1);  /* 0x00909518 */
 int __fastcall sub_60909634(int result);  /* 0x00909634 */
 int __fastcall sub_609097DC(int a1, int a2);  /* 0x009097dc */
+int __fastcall sead__ControllerMgr__calc(_DWORD *a1);  /* 0x00909820 */
+void __fastcall sead__ControllerMgr__dtor(int a1);  /* 0x0090989c */
+bool __fastcall sead__ControllerMgr__checkDerivedRuntimeTypeInfo(int a1, void *a2);  /* 0x00909918 */
 int __fastcall sub_60909B48(int a1, int a2, int a3);  /* 0x00909b48 */
 void __fastcall sub_60909CAC(_DWORD *a1, signed int a2, unsigned __int8 *a3, int a4);  /* 0x00909cac */
 int __fastcall sub_60909DC8(_DWORD *a1);  /* 0x00909dc8 */
@@ -3791,9 +3866,15 @@ int __fastcall sub_6090E680(int result, float *a2, float *a3);  /* 0x0090e680 */
 unsigned int __fastcall sub_6090E7FC(int a1, float *a2, float *a3);  /* 0x0090e7fc */
 int __fastcall sub_6090E888(int a1, int a2, float *a3);  /* 0x0090e888 */
 int __fastcall sub_6090E95C(int a1, int a2, float *a3);  /* 0x0090e95c */
+int __fastcall sead__GlobalRandom__SingletonDisposer___dtor(struct sead_IDisposer *a1);  /* 0x0090eacc */
+int __fastcall sead__GlobalRandom__createInstance(struct sead_Heap *a1);  /* 0x0090eb2c */
+unsigned int __fastcall sead__Random__init(unsigned int *a1);  /* 0x0090ebb4 */
+unsigned int __fastcall sead__Random__getU32(int *a1);  /* 0x0090ec50 */
+int __fastcall sead__Random__getContext(_DWORD *a1, _DWORD *a2, _DWORD *a3, _DWORD *a4, _DWORD *a5);  /* 0x0090ec84 */
 int __fastcall sub_6090F22C(float *a1, float *a2, float *a3);  /* 0x0090f22c */
 int __fastcall sub_6090F2F0(float *a1, float *a2, __int64 a3);  /* 0x0090f2f0 */
 int __fastcall sub_6090F474(float *a1, float *a2, __int64 a3);  /* 0x0090f474 */
+int __fastcall sead__Base64__decode(int a1, unsigned int a2, unsigned __int8 *a3, unsigned int a4, unsigned int *a5);  /* 0x0090f88c */
 int __fastcall sub_6090FB50(unsigned __int8 *a1, int a2);  /* 0x0090fb50 */
 int __fastcall sub_6090FB78(unsigned int *a1, unsigned __int8 *a2, int a3);  /* 0x0090fb78 */
 int __fastcall sub_6090FC70(_BYTE *a1);  /* 0x0090fc70 */

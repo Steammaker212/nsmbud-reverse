@@ -5,5 +5,5 @@
 /* line: 3 */ 
 /* line: 4, address: 0x6045e288 */   v1[0] = 12321336;
 /* line: 5, address: 0x6045e294 */   v1[1] = &unk_60AC9872;
-/* line: 6, address: 0x6045e2c4 */   return Profile::Profile(13226308, 4577132, MEMORY[0xAF3668], (int)v1, &unk_60B02594, 16406);
+/* line: 6, address: 0x6045e2c4 */   return Profile__Profile(13226308, 4577132, MEMORY[0xAF3668], (int)v1, &unk_60B02594, 16406);
 /* line: 7 */ }

@@ -28,7 +28,7 @@ int __fastcall sub_60134914(int a1);
 /* line: 5 */   int v6; // [sp+10h] [bp-8h] BYREF
 /* line: 6 */   _BYTE v7[4]; // [sp+14h] [bp-4h] BYREF
 /* line: 7 */ 
-/* line: 8, address: 0x60134928 */   StateMgr::execute((StateMgr *)(a1 + 6084));
+/* line: 8, address: 0x60134928 */   StateMgr__execute((StateMgr *)(a1 + 6084));
 /* line: 9, address: 0x60134934 */   ActorScaler_execute(a1 + 6440);
 /* line: 10, address: 0x60134940 */   if ( !*(_BYTE *)(a1 + 6100) )
 /* line: 11 */   {

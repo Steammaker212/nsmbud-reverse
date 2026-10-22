@@ -26,7 +26,7 @@ int __fastcall FireballBase_addActiveColliders(int a1);
 /* line: 3 */   int v3; // r5
 /* line: 4 */   int result; // r0
 /* line: 5 */ 
-/* line: 6, address: 0x60136204 */   StageActor::addActiveColliders(a1);
+/* line: 6, address: 0x60136204 */   StageActor__addActiveColliders(a1);
 /* line: 7, address: 0x6013620c */   v2 = a1 + 6436;
 /* line: 8, address: 0x6013621c */   v3 = MEMORY[0xC88234];
 /* line: 9, address: 0x60136224 */   result = ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], v2);

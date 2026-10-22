@@ -70,9 +70,9 @@ int __fastcall sub_60460DD0(int a1, int a2);
 /* line: 47, address: 0x60460eec */       result = *(unsigned __int8 *)(v5 + 533);
 /* line: 48, address: 0x60460ef4 */       if ( result == 3 )
 /* line: 49 */       {
-/* line: 50, address: 0x60461060 */         if ( Actor::getProfileId((Actor *)v5) == MEMORY[0xAF30A0] )
+/* line: 50, address: 0x60461060 */         if ( Actor__getProfileId((Actor *)v5) == MEMORY[0xAF30A0] )
 /* line: 51, address: 0x60461068 */           *((_BYTE *)v8 + 6200) = 1;
-/* line: 52, address: 0x60461084 */         if ( Actor::getProfileId((Actor *)v5) == MEMORY[0xAF3520] )
+/* line: 52, address: 0x60461084 */         if ( Actor__getProfileId((Actor *)v5) == MEMORY[0xAF3520] )
 /* line: 53 */         {
 /* line: 54, address: 0x604610a4 */           if ( _cxa_guard_acquire_0(13164588) )
 /* line: 55 */           {
@@ -89,7 +89,7 @@ int __fastcall sub_60460DD0(int a1, int a2);
 /* line: 66 */       }
 /* line: 67, address: 0x60460eec */       else if ( !*(_BYTE *)(v5 + 533) )
 /* line: 68 */       {
-/* line: 69, address: 0x60460f04 */         result = Actor::getProfileId((Actor *)v5);
+/* line: 69, address: 0x60460f04 */         result = Actor__getProfileId((Actor *)v5);
 /* line: 70, address: 0x60460f18 */         if ( result == MEMORY[0xAF3664] )
 /* line: 71 */         {
 /* line: 72, address: 0x60460f38 */           if ( _cxa_guard_acquire_0(13087768) )
@@ -135,7 +135,7 @@ int __fastcall sub_60460DD0(int a1, int a2);
 /* line: 112, address: 0x60461138 */         v8[1552] = (int (__fastcall **)(_DWORD, int))-1;
 /* line: 113, address: 0x60461140 */         return 6208;
 /* line: 114 */       }
-/* line: 115, address: 0x6046115c */       if ( Actor::getProfileId((Actor *)v8) != MEMORY[0xAF368C] )
+/* line: 115, address: 0x6046115c */       if ( Actor__getProfileId((Actor *)v8) != MEMORY[0xAF368C] )
 /* line: 116, address: 0x6046115c */         goto LABEL_59;
 /* line: 117, address: 0x6046117c */       if ( _cxa_guard_acquire_0(13087752) )
 /* line: 118 */       {
@@ -147,7 +147,7 @@ int __fastcall sub_60460DD0(int a1, int a2);
 /* line: 124 */         || (result = sub_6075EE0C(v13), result == 1) )
 /* line: 125 */       {
 /* line: 126 */ LABEL_59:
-/* line: 127, address: 0x6046120c */         if ( *(_BYTE *)(v5 + 533) != 1 || Actor::getProfileId((Actor *)v8) != MEMORY[0xAF368C] )
+/* line: 127, address: 0x6046120c */         if ( *(_BYTE *)(v5 + 533) != 1 || Actor__getProfileId((Actor *)v8) != MEMORY[0xAF368C] )
 /* line: 128, address: 0x6046120c */           goto LABEL_56;
 /* line: 129, address: 0x6046122c */         if ( _cxa_guard_acquire_0(13087604) )
 /* line: 130 */         {

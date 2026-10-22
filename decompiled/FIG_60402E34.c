@@ -51,12 +51,12 @@ int __fastcall sub_60402E34(int a1);
 /* line: 28 */     {
 /* line: 29, address: 0x60402e84 */       if ( *(_BYTE *)(a1 + 2697) )
 /* line: 30 */       {
-/* line: 31, address: 0x60402ea0 */         CurrentState = StateMgr::getCurrentState(a1 + 40);
+/* line: 31, address: 0x60402ea0 */         CurrentState = StateMgr__getCurrentState(a1 + 40);
 /* line: 32, address: 0x60402eb0 */         v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
 /* line: 33, address: 0x60402ecc */         if ( v5 != (*(int (**)(void))(MEMORY[0xC99E7C] + 8))() )
-/* line: 34, address: 0x60402edc */           StateMgr::changeState((_DWORD *)(a1 + 40), 13213340);
+/* line: 34, address: 0x60402edc */           StateMgr__changeState((_DWORD *)(a1 + 40), 13213340);
 /* line: 35 */       }
-/* line: 36, address: 0x60402ee4 */       StateMgr::execute((_DWORD *)(a1 + 40));
+/* line: 36, address: 0x60402ee4 */       StateMgr__execute((_DWORD *)(a1 + 40));
 /* line: 37, address: 0x60402ef8 */       (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(*(_DWORD *)(a1 + 16) + 4) + 148))(*(_DWORD *)(*(_DWORD *)(a1 + 16)
 /* line: 38 */                                                                                                  + 4));
 /* line: 39, address: 0x60402f18 */       if ( *(_BYTE *)(a1 + 2709) && sub_60793CA8(*(_DWORD *)(*(_DWORD *)(a1 + 16) + 4)) == 1 )
@@ -88,13 +88,13 @@ int __fastcall sub_60402E34(int a1);
 /* line: 65, address: 0x60402e84 */     if ( *(_BYTE *)(a1 + 2697) )
 /* line: 66 */     {
 /* line: 67, address: 0x60403010 */       v7 = (_DWORD *)(a1 + 40);
-/* line: 68, address: 0x60403018 */       v8 = StateMgr::getCurrentState((int)v7);
+/* line: 68, address: 0x60403018 */       v8 = StateMgr__getCurrentState((int)v7);
 /* line: 69, address: 0x60403028 */       v9 = (*(int (__fastcall **)(int))(*(_DWORD *)v8 + 8))(v8);
 /* line: 70, address: 0x6040303c */       result = (*(int (**)(void))(MEMORY[0xC99E7C] + 8))();
 /* line: 71, address: 0x60403044 */       if ( v9 != result )
 /* line: 72 */       {
-/* line: 73, address: 0x60403058 */         StateMgr::changeState(v7, 13213340);
-/* line: 74, address: 0x60403064 */         return StateMgr::execute(v7);
+/* line: 73, address: 0x60403058 */         StateMgr__changeState(v7, 13213340);
+/* line: 74, address: 0x60403064 */         return StateMgr__execute(v7);
 /* line: 75 */       }
 /* line: 76 */     }
 /* line: 77 */   }

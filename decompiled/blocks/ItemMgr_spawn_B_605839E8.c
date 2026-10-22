@@ -37,14 +37,14 @@ void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8
 /* line: 14 */     {
 /* line: 15, address: 0x60583a90 */       memset(&v12[1], 0, 0x28u);
 /* line: 16, address: 0x60583a9c */       v12[0] = v10 | v7;
-/* line: 17, address: 0x60583aa8 */       v12[3] = Profile::get(v8);
+/* line: 17, address: 0x60583aa8 */       v12[3] = Profile__get(v8);
 /* line: 18, address: 0x60583ab8 */       v12[4] = *a2;
 /* line: 19, address: 0x60583ac0 */       v12[5] = a2[1];
 /* line: 20, address: 0x60583ac8 */       v12[6] = a2[2];
 /* line: 21, address: 0x60583ad0 */       LOWORD(v12[8]) = a5;
 /* line: 22, address: 0x60583adc */       BYTE2(v12[8]) = 0;
 /* line: 23, address: 0x60583ae0 */       v12[10] = 0;
-/* line: 24, address: 0x60583ae8 */       v9 = ActorMgr::create(MEMORY[0xC7B400], (int)v12, 0);
+/* line: 24, address: 0x60583ae8 */       v9 = ActorMgr__create(MEMORY[0xC7B400], (int)v12, 0);
 /* line: 25, address: 0x60583afc */       if ( _cxa_guard_acquire_0(13087588) )
 /* line: 26 */       {
 /* line: 27, address: 0x60583b10 */         MEMORY[0xC7B360] = 12320920;

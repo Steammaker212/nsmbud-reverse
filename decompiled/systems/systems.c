@@ -432,7 +432,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_607F6ABC(MEMORY[0xCC62E4]);
     if ( !result )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13233472);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13233472);
     return result;
   }
 
@@ -456,7 +456,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 2060, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13233504);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13233504);
     return result;
   }
 
@@ -476,11 +476,11 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60480AE8(int result)
   {
     if ( *(_BYTE *)(result + 12838) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13233536);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13233536);
     if ( MEMORY[0xC99D70] )
     {
       if ( *(_DWORD *)(MEMORY[0xC99D70] + 1832) == 1 )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13233568);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13233568);
     }
     return result;
   }
@@ -504,7 +504,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 2060, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13233408);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13233408);
     return result;
   }
 
@@ -538,7 +538,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 2060, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13233600);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13233600);
     return result;
   }
 
@@ -549,7 +549,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60480C24(int result)
   {
     if ( *(_DWORD *)(MEMORY[0xC99D70] + 1832) != 1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13233472);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13233472);
     return result;
   }
 
@@ -705,7 +705,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 12836);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050A950(a1 + 5608, *(_DWORD *)(a1 + 12832));
       sub_6050A8A4(a1 + 5608);
       return Table_getEntryById(a1 + 2060, 14, 0);
@@ -752,7 +752,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = 13233440;
     else
       v6 = 13233472;
-    return StateMgr::changeState(v5, v6);
+    return StateMgr__changeState(v5, v6);
   }
 
 /* ============================================================================
@@ -898,7 +898,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6048142C(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13233704);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13233704);
   }
 
 /* ============================================================================
@@ -985,7 +985,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     result = *(unsigned __int8 *)(a1[888] + 16);
     if ( *(_BYTE *)(a1[888] + 16) )
-      return StateMgr::changeState(a1 + 6, 13233736);
+      return StateMgr__changeState(a1 + 6, 13233736);
     return result;
   }
 
@@ -1088,7 +1088,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(v17 + 32) = 0;
       *(_BYTE *)(v17 + 64) |= 0x10u;
       *(_BYTE *)(*(_DWORD *)(result + 3588) + 65) = 0;
-      return StateMgr::changeState((_DWORD *)(result + 24), 13233768);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13233768);
     }
     return result;
   }
@@ -1273,7 +1273,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3668);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
@@ -1443,7 +1443,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60481FD8(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13233916);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13233916);
   }
 
 /* ============================================================================
@@ -1477,7 +1477,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13233948);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13233948);
     return result;
   }
 
@@ -1507,7 +1507,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6048208C(int result)
   {
     if ( *(_BYTE *)(result + 3589) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13233980);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13233980);
     return result;
   }
 
@@ -1527,7 +1527,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604820CC(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 3552) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13234012);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13234012);
     return result;
   }
 
@@ -1683,7 +1683,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60482614(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 24));
+    StateMgr__execute((_DWORD *)(a1 + 24));
     return Table_getEntryById((_DWORD *)(a1 + 40), 0xEu, 0);
   }
 
@@ -1918,7 +1918,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( v5 == v4 )
   LABEL_12:
-      StateMgr::changeState(a1 + 830, 13234076);
+      StateMgr__changeState(a1 + 830, 13234076);
   LABEL_15:
     sub_60472ADC((int)a1);
     result = *v3 + 1;
@@ -2205,8 +2205,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 3320);
     if ( (*(_BYTE *)(a1 + 3336) & 1) != 0 )
-      StateMgr::changeState(v2, 13234108);
-    StateMgr::execute(v2);
+      StateMgr__changeState(v2, 13234108);
+    StateMgr__execute(v2);
     v3 = *(_DWORD *)(a1 + 6888);
     if ( v3 )
     {
@@ -2517,7 +2517,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13234264);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13234264);
     return result;
   }
 
@@ -2542,7 +2542,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 3644) - 1;
     *(_DWORD *)(result + 3644) = v1;
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13234296);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13234296);
     return result;
   }
 
@@ -2585,7 +2585,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = 0;
     result = sub_6050A95C(*(_DWORD *)(a1 + 4 * v2 + 3652));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13234328);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13234328);
     return result;
   }
 
@@ -2601,7 +2601,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 0x20) != 0 )
     {
       SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13234360);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13234360);
     }
     return result;
   }
@@ -2645,7 +2645,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = 0;
     result = sub_6050A8AC(*(_DWORD *)(a1 + 4 * v2 + 3652));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13234392);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13234392);
     return result;
   }
 
@@ -2659,7 +2659,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13234200);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13234200);
     return result;
   }
 
@@ -2829,7 +2829,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3636);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050A8A4(*(_DWORD *)(a1 + 3652));
       sub_6050A8A4(*(_DWORD *)(a1 + 3656));
       sub_6050A8A4(*(_DWORD *)(a1 + 3660));
@@ -2972,7 +2972,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v26 < 4 )
       v24 = v26;
     sub_6050A660(*(_DWORD *)(a1 + 4 * v24 + 3652));
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13234232);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13234232);
   }
 
 /* ============================================================================
@@ -3299,7 +3299,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60484AF0(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13234768);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13234768);
   }
 
 /* ============================================================================
@@ -3329,7 +3329,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13234800);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13234800);
     return result;
   }
 
@@ -3354,7 +3354,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 3588);
     *(_DWORD *)(result + 3588) = v1 - 1;
     if ( v1 <= 1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13234832);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13234832);
     return result;
   }
 
@@ -3378,7 +3378,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13234736);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13234736);
     return result;
   }
 
@@ -3523,7 +3523,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3592);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
@@ -3670,7 +3670,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC9F2CC])(MEMORY[0xC9F2CC]);
       MEMORY[0xC9F2CC] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -3688,7 +3688,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xC9F2CC])(MEMORY[0xC9F2CC]);
       MEMORY[0xC9F2CC] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -3705,7 +3705,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xC9F2CC] )
     {
       v2 = operator new[](612, a1, 4);
-      v3 = sead::IDisposer::IDisposer(v2 + 496, a1, 3);
+      v3 = sead__IDisposer__IDisposer(v2 + 496, a1, 3);
       *(_DWORD *)(v2 + 496) = 12572384;
       MEMORY[0xC9F2C8] = v3;
       sub_604DE8F8(v2);
@@ -3859,7 +3859,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 532), 13235040);
+      return StateMgr__changeState((_DWORD *)(a1 + 532), 13235040);
     return result;
   }
 
@@ -3882,12 +3882,12 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
     if ( !result )
-      return StateMgr::changeState((_DWORD *)(a1 + 532), 13234944);
+      return StateMgr__changeState((_DWORD *)(a1 + 532), 13234944);
     if ( *(float *)(result + 44) == 0.0 )
     {
       result = *(unsigned __int8 *)(result + 51);
       if ( (result & 1) == 0 )
-        return StateMgr::changeState((_DWORD *)(a1 + 532), 13234944);
+        return StateMgr__changeState((_DWORD *)(a1 + 532), 13234944);
     }
     return result;
   }
@@ -4012,7 +4012,7 @@ static inline unsigned int uxtb16(unsigned int x)
           break;
       }
       *(_BYTE *)(a1 + 597) = 1;
-      StateMgr::changeState((_DWORD *)(a1 + 532), 13235008);
+      StateMgr__changeState((_DWORD *)(a1 + 532), 13235008);
     }
     return sub_604DEA24((_DWORD *)a1);
   }
@@ -4297,7 +4297,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( *(_BYTE *)(a1 + 596) )
       {
-        StateMgr::execute((_DWORD *)(a1 + 532));
+        StateMgr__execute((_DWORD *)(a1 + 532));
         Table_getEntryById(*(_DWORD *)(a1 + 4), 14, 0);
       }
       return sub_604DE9B0(a1, 1, 0);
@@ -4631,12 +4631,12 @@ static inline unsigned int uxtb16(unsigned int x)
             v3 = 13236000;
           else
             v3 = 13235392;
-          return StateMgr::changeState(v4, v3);
+          return StateMgr__changeState(v4, v3);
         }
         v3 = 13235936;
       }
       v4 = (_DWORD *)(a1 + 20);
-      return StateMgr::changeState(v4, v3);
+      return StateMgr__changeState(v4, v3);
     }
     return result;
   }
@@ -4744,11 +4744,11 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         return result;
       }
-      return StateMgr::changeState(a1 + 5, 13235392);
+      return StateMgr__changeState(a1 + 5, 13235392);
     }
     result = sub_6047EF24((int)(a1 + 952), v9);
     if ( (v6 & result) != 0 )
-      return StateMgr::changeState(a1 + 5, 13235392);
+      return StateMgr__changeState(a1 + 5, 13235392);
     return result;
   }
 
@@ -5059,7 +5059,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v13 = 13235360;
         else
           v13 = 13235392;
-        return StateMgr::changeState(a1 + 5, v13);
+        return StateMgr__changeState(a1 + 5, v13);
       }
     }
     return result;
@@ -5202,7 +5202,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v9 = 13235360;
         else
           v9 = 13235392;
-        return StateMgr::changeState((_DWORD *)(a1 + 20), v9);
+        return StateMgr__changeState((_DWORD *)(a1 + 20), v9);
       }
     }
     return result;
@@ -5381,7 +5381,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v13 = 13235360;
         else
           v13 = 13235392;
-        return StateMgr::changeState(a1 + 5, v13);
+        return StateMgr__changeState(a1 + 5, v13);
       }
     }
     return result;
@@ -5524,7 +5524,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v9 = 13235360;
         else
           v9 = 13235392;
-        return StateMgr::changeState((_DWORD *)(a1 + 20), v9);
+        return StateMgr__changeState((_DWORD *)(a1 + 20), v9);
       }
     }
     return result;
@@ -5547,7 +5547,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60488094(int result)
   {
     if ( !*(_BYTE *)(*(_DWORD *)(result + 14244) + 10832) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13235616);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13235616);
     return result;
   }
 
@@ -5597,7 +5597,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 13235360;
     else
       v5 = 13235392;
-    return StateMgr::changeState(a1 + 5, v5);
+    return StateMgr__changeState(a1 + 5, v5);
   }
 
 /* ============================================================================
@@ -5662,7 +5662,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v11 = 13235360;
       else
         v11 = 13235392;
-      return StateMgr::changeState(a1 + 5, v11);
+      return StateMgr__changeState(a1 + 5, v11);
     }
     return result;
   }
@@ -5711,7 +5711,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60488420(int result)
   {
     if ( !*(_BYTE *)(result + 4810) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13235712);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13235712);
     return result;
   }
 
@@ -5776,7 +5776,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 4u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13235744);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13235744);
     return result;
   }
 
@@ -5867,7 +5867,7 @@ static inline unsigned int uxtb16(unsigned int x)
       case 3:
         v4 = 13235776;
   LABEL_14:
-        result = StateMgr::changeState(a1 + 5, v4);
+        result = StateMgr__changeState(a1 + 5, v4);
         break;
       default:
         return result;
@@ -5921,7 +5921,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 13235360;
     else
       v5 = 13235392;
-    return StateMgr::changeState(a1 + 5, v5);
+    return StateMgr__changeState(a1 + 5, v5);
   }
 
 /* ============================================================================
@@ -5931,7 +5931,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60488910(int result)
   {
     if ( !*(_BYTE *)(result + 4810) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13235840);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13235840);
     return result;
   }
 
@@ -5958,7 +5958,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 4u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13235872);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13235872);
     return result;
   }
 
@@ -6029,7 +6029,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       a1[3455] = 3;
       v9 = 13235552;
-      return StateMgr::changeState(a1 + 5, v9);
+      return StateMgr__changeState(a1 + 5, v9);
     }
     v3 = v10 == 7;
     if ( v10 != 7 )
@@ -6055,7 +6055,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60502C84((int)(a1 + 942), &v4[v8], 0);
       sub_608169AC(MEMORY[0xCC6B68]);
       v9 = 13235904;
-      return StateMgr::changeState(a1 + 5, v9);
+      return StateMgr__changeState(a1 + 5, v9);
     }
     return result;
   }
@@ -6132,7 +6132,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v5 = 13235360;
             else
               v5 = 13235392;
-            return StateMgr::changeState(a1 + 5, v5);
+            return StateMgr__changeState(a1 + 5, v5);
           }
           v3 = 0;
         }
@@ -6153,7 +6153,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v5 = 13235360;
           else
             v5 = 13235392;
-          return StateMgr::changeState(a1 + 5, v5);
+          return StateMgr__changeState(a1 + 5, v5);
         }
         v6 = 0;
       }
@@ -6203,7 +6203,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13236000;
       else
         v3 = 13235968;
-      return StateMgr::changeState(v2, v3);
+      return StateMgr__changeState(v2, v3);
     }
     return result;
   }
@@ -6254,7 +6254,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 13235360;
     else
       v5 = 13235392;
-    return StateMgr::changeState(a1 + 5, v5);
+    return StateMgr__changeState(a1 + 5, v5);
   }
 
 /* ============================================================================
@@ -6279,7 +6279,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60488FF8(int result)
   {
     if ( !*(_BYTE *)(*(_DWORD *)(result + 47756) + 3637) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13236032);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13236032);
     return result;
   }
 
@@ -6329,7 +6329,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 13235360;
     else
       v5 = 13235392;
-    return StateMgr::changeState(a1 + 5, v5);
+    return StateMgr__changeState(a1 + 5, v5);
   }
 
 /* ============================================================================
@@ -6343,7 +6343,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(a1 + 14228);
     if ( v1 >= 4 )
       v1 = 0;
-    return StateMgr::changeState((_DWORD *)(*(_DWORD *)(a1 + 4 * v1 + 47800) + 20), 13236192);
+    return StateMgr__changeState((_DWORD *)(*(_DWORD *)(a1 + 4 * v1 + 47800) + 20), 13236192);
   }
 
 /* ============================================================================
@@ -6384,7 +6384,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v7 = 13235360;
       else
         v7 = 13235392;
-      return (int *)StateMgr::changeState(a1 + 5, v7);
+      return (int *)StateMgr__changeState(a1 + 5, v7);
     }
     return result;
   }
@@ -8649,7 +8649,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v22 = (_DWORD *)MEMORY[0xC9A68C];
     v3 = MEMORY[0xC9C0FC];
     v24 = MEMORY[0xCCEE90];
-    CurrentHeap = sead::HeapMgr::getCurrentHeap(MEMORY[0xCCEE90]);
+    CurrentHeap = sead__HeapMgr__getCurrentHeap(MEMORY[0xCCEE90]);
     sub_6042A6C8(v3, 5u, 34, CurrentHeap);
     memset(v28, 255, 0x88u);
     v5 = 0;
@@ -8712,7 +8712,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( (unsigned int)v6 < 0x80 )
             v18 = v6;
           v19 = v25 + 4424 * v18;
-          v20 = sead::HeapMgr::getCurrentHeap(v24);
+          v20 = sead__HeapMgr__getCurrentHeap(v24);
           sub_6042C4DC(v19 + 47848, v20, dword_60B02B40);
           sub_6042BD4C(v19 + 49632, v19 + 47848);
           v21 = operator new(1224);
@@ -9015,13 +9015,13 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 13816);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 20));
+      StateMgr__execute((_DWORD *)(a1 + 20));
       v3 = 0;
       v4 = *(_DWORD *)(a1 + 14228);
       if ( v4 >= 4 )
         v4 = 0;
       v5 = *(_DWORD **)(a1 + 4 * v4 + 47800);
-      StateMgr::execute(v5 + 5);
+      StateMgr__execute(v5 + 5);
       v5[20] = v5[19];
       v5[26] = *(_DWORD *)(v5[18] + 28);
       sub_60491118(v5);
@@ -9129,7 +9129,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = *(void (**)(void))(**(_DWORD **)v6 + 108);
     }
     v5();
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13235328);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13235328);
   }
 
 /* ============================================================================
@@ -9174,7 +9174,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = 1;
         ArrayOf5_lookupByIndex(v7, 1u, &v12, 1);
         sub_604745C0(v7, 1);
-        v1 = (float)(v1 * (float)(COERCE_FLOAT((sead::Random::getU32(v8) >> 9) | 0x3F800000) + -1.0)) + 0.0;
+        v1 = (float)(v1 * (float)(COERCE_FLOAT((sead__Random__getU32(v8) >> 9) | 0x3F800000) + -1.0)) + 0.0;
         result = ArrayOf5_setEntryFloat16(v7, 1);
       }
       *(_BYTE *)(v3 + v2++) = v6;
@@ -10382,7 +10382,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_77:
       v31 = (_DWORD *)(a1 + 20);
   LABEL_78:
-      StateMgr::changeState(v31, v30);
+      StateMgr__changeState(v31, v30);
       return 1;
     }
     if ( v4 == *(_DWORD *)(a1 + 5868) )
@@ -10423,7 +10423,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6048EE54((_DWORD *)a1, 0);
       v4 = 13235680;
   LABEL_5:
-      StateMgr::changeState((_DWORD *)(a1 + 20), v4);
+      StateMgr__changeState((_DWORD *)(a1 + 20), v4);
       return 1;
     }
     if ( sub_6048FAA4(a1) )
@@ -10487,7 +10487,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6048EBD4((int)a1, v4);
       sub_6048F09C((int)a1, 0, a1[1466]);
       sub_6048EE54(a1, 0);
-      StateMgr::changeState(a1 + 5, 13235808);
+      StateMgr__changeState(a1 + 5, 13235808);
       return 1;
     }
     return result;
@@ -10536,7 +10536,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else if ( v7 <= *(_DWORD *)(v6 + 48) )
       {
-        StateMgr::changeState((_DWORD *)(v6 + 20), 13236160);
+        StateMgr__changeState((_DWORD *)(v6 + 20), 13236160);
       }
       v8 = *v5;
       v9 = a1 + 11941;
@@ -10557,7 +10557,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( *(_BYTE *)(a1[v10 + 11950] + 64) )
         {
           StateMgr_resetAndMaybeChange(a1 + 942);
-          StateMgr::changeState(a1 + 5, 13235648);
+          StateMgr__changeState(a1 + 5, 13235648);
         }
         else
         {
@@ -10635,7 +10635,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else if ( v7 >= *(_DWORD *)(v6 + 48) + 3 )
       {
-        StateMgr::changeState((_DWORD *)(v6 + 20), 13236128);
+        StateMgr__changeState((_DWORD *)(v6 + 20), 13236128);
       }
       v9 = *v5;
       v10 = a1 + 11941;
@@ -10656,7 +10656,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( *(_BYTE *)(a1[v11 + 11950] + 64) )
         {
           StateMgr_resetAndMaybeChange(a1 + 942);
-          StateMgr::changeState(a1 + 5, 13235648);
+          StateMgr__changeState(a1 + 5, 13235648);
         }
         else
         {
@@ -10993,7 +10993,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_605054F0(*(_DWORD *)(a1 + 68));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13236096);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13236096);
     return result;
   }
 
@@ -11094,7 +11094,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_605054F0(*(_DWORD *)(a1 + 68));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13236096);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13236096);
     return result;
   }
 
@@ -11360,7 +11360,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 52) = v9;
         }
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13236096);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13236096);
     }
     if ( v4 != 1.0 )
       return result;
@@ -11370,7 +11370,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v11 = *(_DWORD *)(a1 + 48) + 3;
   LABEL_27:
       *(_DWORD *)(a1 + 52) = v11;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13236096);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13236096);
     }
     if ( v8 == 1 )
     {
@@ -11385,7 +11385,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60505324(*(_DWORD *)(a1 + 68), 3, *(_DWORD *)(a1 + 44) + 3);
       sub_60505324(*(_DWORD *)(a1 + 68), 4, *(_DWORD *)(a1 + 44) + 4);
       sub_60505324(*(_DWORD *)(a1 + 68), 5, *(_DWORD *)(a1 + 44) + 5);
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13236096);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13236096);
     }
     if ( v8 )
     {
@@ -11402,7 +11402,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 44) = 0;
     *(_DWORD *)(a1 + 48) = 1;
     *(_DWORD *)(a1 + 52) = 4;
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13236096);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13236096);
   }
 
 /* ============================================================================
@@ -11503,12 +11503,12 @@ static inline unsigned int uxtb16(unsigned int x)
     float v23; // s4
   
     v4 = a1 + 20;
-    CurrentState = StateMgr::getCurrentState(a1 + 20);
+    CurrentState = StateMgr__getCurrentState(a1 + 20);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xC9F7E0] + 8))();
     if ( v6 != result )
     {
-      v8 = StateMgr::getCurrentState(v4);
+      v8 = StateMgr__getCurrentState(v4);
       v9 = (*(int (__fastcall **)(int))(*(_DWORD *)v8 + 8))(v8);
       if ( v9 == (*(int (**)(void))(MEMORY[0xC9F800] + 8))() )
       {
@@ -11609,7 +11609,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xC9F820] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xC9F820] )
         {
           if ( _cxa_guard_acquire_0(13236280) )
@@ -11650,7 +11650,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13236284, MEMORY[0xC9F828], 1);
           MEMORY[0xC9F820] = 13236284;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xC9F820];
       }
       return *(_DWORD *)v3;
@@ -11678,7 +11678,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xC9F840] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xC9F840] )
         {
           if ( _cxa_guard_acquire_0(13236340) )
@@ -11719,7 +11719,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13236344, MEMORY[0xC9F848], 2);
           MEMORY[0xC9F840] = 13236344;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xC9F840];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -11851,7 +11851,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xC9F880] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xC9F880] )
         {
           if ( _cxa_guard_acquire_0(13236480) )
@@ -11896,7 +11896,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13236484, MEMORY[0xC9F888], 7);
           MEMORY[0xC9F880] = 13236484;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xC9F880];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -12028,7 +12028,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xC9F920] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xC9F920] )
         {
           if ( _cxa_guard_acquire_0(13236900) )
@@ -12079,7 +12079,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13236904, MEMORY[0xC9F928], 24);
           MEMORY[0xC9F920] = 13236904;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xC9F920];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -12211,7 +12211,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xC9FB08] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xC9FB08] )
         {
           if ( _cxa_guard_acquire_0(13237104) )
@@ -12255,7 +12255,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13237108, MEMORY[0xC9FB10], 4);
           MEMORY[0xC9FB08] = 13237108;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xC9FB08];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -12387,7 +12387,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xC9FB84] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xC9FB84] )
         {
           if ( _cxa_guard_acquire_0(13237188) )
@@ -12428,7 +12428,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13237192, MEMORY[0xC9FB8C], 5);
           MEMORY[0xC9FB84] = 13237192;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xC9FB84];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -12560,7 +12560,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xC9FBDC] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xC9FBDC] )
         {
           if ( _cxa_guard_acquire_0(13237332) )
@@ -12605,7 +12605,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13237336, MEMORY[0xC9FBE4], 8);
           MEMORY[0xC9FBDC] = 13237336;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xC9FBDC];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -12737,7 +12737,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xC9FC78] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xC9FC78] )
         {
           if ( _cxa_guard_acquire_0(13237436) )
@@ -12778,7 +12778,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13237440, MEMORY[0xC9FC80], 3);
           MEMORY[0xC9FC78] = 13237440;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xC9FC78];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -12910,7 +12910,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xC9FCCC] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xC9FCCC] )
         {
           if ( _cxa_guard_acquire_0(13237540) )
@@ -12951,7 +12951,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13237544, MEMORY[0xC9FCD4], 7);
           MEMORY[0xC9FCCC] = 13237544;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xC9FCCC];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -13517,7 +13517,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6098F1D4(v3);
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(v2, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13238288);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13238288);
     return result;
   }
 
@@ -13669,7 +13669,7 @@ static inline unsigned int uxtb16(unsigned int x)
         Object_clampFieldPairsToMin(result);
         v14 = 13238320;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 20), v14);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), v14);
     }
     v5 = (unsigned int *)(a1 + 4884);
     result = *(_DWORD *)(a1 + 4884);
@@ -13682,12 +13682,12 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v6 = 13238416;
   LABEL_24:
-      StateMgr::changeState((_DWORD *)(a1 + 20), v6);
+      StateMgr__changeState((_DWORD *)(a1 + 20), v6);
       result = *v5;
       if ( *v5 != 8 )
         return result;
       v14 = 13238352;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), v14);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), v14);
     }
     if ( result == 8 )
     {
@@ -13704,7 +13704,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049407C(int result)
   {
     if ( !*(_BYTE *)(result + 4898) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13238352);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13238352);
     return result;
   }
 
@@ -13731,7 +13731,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13238224);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13238224);
     return result;
   }
 
@@ -13789,7 +13789,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60494190(int result)
   {
     if ( !*(_BYTE *)(result + 4898) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13238224);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13238224);
     return result;
   }
 
@@ -13811,7 +13811,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604941E4(int result)
   {
     if ( !*(_BYTE *)(result + 4898) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13238448);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13238448);
     return result;
   }
 
@@ -13850,7 +13850,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13238480);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13238480);
     return result;
   }
 
@@ -13890,7 +13890,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13238544;
       else
         v3 = 13238512;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), v3);
     }
     return result;
   }
@@ -13902,7 +13902,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60494364(int result)
   {
     if ( !*(_BYTE *)(result + 4898) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13238224);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13238224);
     return result;
   }
 
@@ -13934,7 +13934,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604943F0(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13238576);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13238576);
   }
 
 /* ============================================================================
@@ -13946,7 +13946,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( MEMORY[0xC99DD0] )
     {
       if ( *(_DWORD *)(MEMORY[0xC99DD0] + 3796) == 3 )
-        return StateMgr::changeState((_DWORD *)(result + 20), 13238608);
+        return StateMgr__changeState((_DWORD *)(result + 20), 13238608);
     }
     return result;
   }
@@ -13974,7 +13974,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( MEMORY[0xC99DD0] )
     {
       if ( !*(_BYTE *)(MEMORY[0xC99DD0] + 3793) )
-        return StateMgr::changeState((_DWORD *)(result + 20), 13238640);
+        return StateMgr__changeState((_DWORD *)(result + 20), 13238640);
     }
     return result;
   }
@@ -14014,7 +14014,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13238288);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13238288);
     return result;
   }
 
@@ -14025,7 +14025,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60494580(int result)
   {
     if ( !*(_BYTE *)(result + 4898) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13238704);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13238704);
     return result;
   }
 
@@ -14052,7 +14052,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13238224);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13238224);
     return result;
   }
 
@@ -14643,7 +14643,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 5936);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 20));
+      StateMgr__execute((_DWORD *)(a1 + 20));
       sub_60507028(*(_DWORD *)(a1 + 5960));
       sub_6050229C(a1 + 3856);
       sub_6050A8A4(a1 + 5972);
@@ -15088,7 +15088,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA01D0] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA01D0] )
         {
           if ( _cxa_guard_acquire_0(13238888) )
@@ -15134,7 +15134,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13238892, MEMORY[0xCA01D8], 15);
           MEMORY[0xCA01D0] = 13238892;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA01D0];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -15266,7 +15266,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA02A8] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA02A8] )
         {
           if ( _cxa_guard_acquire_0(13238980) )
@@ -15307,7 +15307,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13238984, MEMORY[0xCA02B0], 1);
           MEMORY[0xCA02A8] = 13238984;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA02A8];
       }
       return *(_DWORD *)v3;
@@ -15387,7 +15387,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA02CC] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA02CC] )
         {
           if ( _cxa_guard_acquire_0(13239156) )
@@ -15433,7 +15433,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13239160, MEMORY[0xCA02D4], 9);
           MEMORY[0xCA02CC] = 13239160;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA02CC];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -15565,7 +15565,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA039C] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA039C] )
         {
           if ( _cxa_guard_acquire_0(13239368) )
@@ -15611,7 +15611,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13239372, MEMORY[0xCA03A4], 9);
           MEMORY[0xCA039C] = 13239372;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA039C];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -15931,7 +15931,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60498EB0(MEMORY[0xCA059C]);
       MEMORY[0xCA059C] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -15949,7 +15949,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60498EB0(MEMORY[0xCA059C]);
       MEMORY[0xCA059C] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -15967,7 +15967,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCA059C] )
     {
       v3 = operator new[](148908, a1, 4);
-      v4 = (_DWORD *)sead::IDisposer::IDisposer(v3, a1, 3);
+      v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12573632;
       MEMORY[0xCA0598] = v4;
       result = sub_60498980();
@@ -16074,7 +16074,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
         v4 = 13239776;
     }
-    return StateMgr::changeState(v5, v4);
+    return StateMgr__changeState(v5, v4);
   }
 
 /* ============================================================================
@@ -16109,7 +16109,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 56) = 1;
       v4 = 13239808;
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 40), v4);
+    return StateMgr__changeState((_DWORD *)(a1 + 40), v4);
   }
 
 /* ============================================================================
@@ -16168,7 +16168,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 56) = 1;
       v5 = 13239776;
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 40), v5);
+    return StateMgr__changeState((_DWORD *)(a1 + 40), v5);
   }
 
 /* ============================================================================
@@ -16216,7 +16216,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60497A60(int a1)
   {
     *(_BYTE *)(a1 + 56) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 40), 13239872);
+    return StateMgr__changeState((_DWORD *)(a1 + 40), 13239872);
   }
 
 /* ============================================================================
@@ -16326,7 +16326,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     *(_BYTE *)(a1 + 56) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 40), 13239904);
+    return StateMgr__changeState((_DWORD *)(a1 + 40), 13239904);
   }
 
 /* ============================================================================
@@ -16512,7 +16512,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v11 == result )
       {
         *(_BYTE *)(a1 + 56) = 1;
-        StateMgr::changeState((_DWORD *)(a1 + 40), 13239936);
+        StateMgr__changeState((_DWORD *)(a1 + 40), 13239936);
       }
       goto LABEL_54;
     }
@@ -16575,7 +16575,7 @@ static inline unsigned int uxtb16(unsigned int x)
           while ( (int)v19 < *v3 );
         }
         *(_BYTE *)(a1 + 56) = 1;
-        return StateMgr::changeState((_DWORD *)(a1 + 40), 13239968);
+        return StateMgr__changeState((_DWORD *)(a1 + 40), 13239968);
       }
       sub_605025FC(a1 + 3648);
       *(_WORD *)(a1 + 4700) = 0;
@@ -16753,7 +16753,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( MEMORY[0xC99E1C] )
         sub_603FE994(MEMORY[0xC99E1C]);
       *(_BYTE *)(a1 + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), 13240000);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), 13240000);
     }
     else
     {
@@ -16812,7 +16812,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else
     {
       *(_BYTE *)(a1 + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), 13240000);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), 13240000);
     }
     return result;
   }
@@ -16915,7 +16915,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 56) = 1;
       v10 = 13239712;
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 40), v10);
+    return StateMgr__changeState((_DWORD *)(a1 + 40), v10);
   }
 
 /* ============================================================================
@@ -17213,14 +17213,14 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (*(_BYTE *)(a1 + 16) & 1) != 0 )
     {
       *(_BYTE *)(a1 + 56) = 1;
-      StateMgr::changeState((_DWORD *)(a1 + 40), 13239744);
+      StateMgr__changeState((_DWORD *)(a1 + 40), 13239744);
     }
     if ( *(_BYTE *)(a1 + 56) )
     {
       *(_DWORD *)(a1 + 60) = 0;
       *(_BYTE *)(a1 + 56) = 0;
     }
-    StateMgr::execute((_DWORD *)(a1 + 40));
+    StateMgr__execute((_DWORD *)(a1 + 40));
     v2 = *(_DWORD *)(a1 + 60);
     if ( v2 != 0x7FFFFFFF )
       *(_DWORD *)(a1 + 60) = v2 + 1;
@@ -18073,7 +18073,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_604745C0(a1 + 44, 0);
         ArrayOf5_setEntryFloat16(a1 + 44, 0);
         v6 = 13240584;
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v6);
       }
       if ( result )
       {
@@ -18095,7 +18095,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_604745C0(a1 + 44, 0);
         ArrayOf5_setEntryFloat16(a1 + 44, 0);
         v6 = 13240392;
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v6);
       }
       if ( sub_604592A0(v9, *v5) )
       {
@@ -18117,7 +18117,7 @@ static inline unsigned int uxtb16(unsigned int x)
       ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
       ArrayOf5_setEntryFloat16(a1 + 44, 0);
       v6 = 13240328;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v6);
     }
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
     {
@@ -18177,7 +18177,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( sub_604593D0(MEMORY[0xC9CFB8], *(_DWORD *)(a1 + 5332)) )
     {
       *(_BYTE *)(a1 + 5356) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13240360);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13240360);
     }
     if ( sub_604592A0(v3, *v2) )
     {
@@ -18188,7 +18188,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 5356) = result;
       *(_DWORD *)(a1 + 5344) = 0;
       if ( result == 1 )
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13240360);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13240360);
     }
     else
     {
@@ -18238,7 +18238,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13240392);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13240392);
     return result;
   }
 
@@ -18280,7 +18280,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 5356) = 0;
   LABEL_17:
       v10 = 13240424;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v10);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v10);
     }
     v8 = *v2;
     if ( (unsigned int)*v2 >= 4 )
@@ -18299,14 +18299,14 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v6 & 0x2000) != 0 && !*(_BYTE *)(a1 + 5357) )
     {
       v10 = 13240520;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v10);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v10);
     }
     result = *(_DWORD *)(v5 + 3728) | v6;
     if ( (result & 0x40) != 0 && !*(_BYTE *)(a1 + 5357) )
     {
       *(_BYTE *)(a1 + 5352) = 0;
       v10 = 13240456;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v10);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v10);
     }
     if ( (result & 0x80) != 0 )
     {
@@ -18315,7 +18315,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         *(_BYTE *)(a1 + 5352) = 1;
         v10 = 13240456;
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v10);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v10);
       }
     }
     return result;
@@ -18342,7 +18342,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13240328);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13240328);
     return result;
   }
 
@@ -18447,7 +18447,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13240392);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13240392);
     return result;
   }
 
@@ -18533,7 +18533,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13240392);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13240392);
     return result;
   }
 
@@ -18570,7 +18570,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13240552);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13240552);
     return result;
   }
 
@@ -18596,7 +18596,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v1 )
     {
       if ( !*(_BYTE *)(v1 + 2699) )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13240616);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13240616);
     }
     return result;
   }
@@ -18607,7 +18607,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049B6CC(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13240616);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13240616);
   }
 
 /* ============================================================================
@@ -18701,7 +18701,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 5356) = 0;
   LABEL_16:
       *(_DWORD *)(a1 + 40) = 13240712;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13240648);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13240648);
     }
     v7 = *v5;
     if ( (unsigned int)*v5 >= 4 )
@@ -18722,7 +18722,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !*(_BYTE *)(a1 + 5357) )
       {
         *(_DWORD *)(a1 + 40) = 13240744;
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13240648);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13240648);
       }
     }
     return result;
@@ -18735,7 +18735,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049B93C(int result)
   {
     if ( !*(_BYTE *)(*(_DWORD *)(result + 3632) + 2699) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13240680);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13240680);
     return result;
   }
 
@@ -18749,7 +18749,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = (_BYTE *)result[908];
     if ( !v1[2691] && !v1[2702] && !v1[2690] )
-      return (_DWORD *)StateMgr::changeState(result + 6, result[10]);
+      return (_DWORD *)StateMgr__changeState(result + 6, result[10]);
     return result;
   }
 
@@ -18787,7 +18787,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13240328);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13240328);
     return result;
   }
 
@@ -18822,7 +18822,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13240392);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13240392);
     return result;
   }
 
@@ -19088,7 +19088,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049C5E8(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13241292);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13241292);
   }
 
 /* ============================================================================
@@ -19278,7 +19278,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(MEMORY[0xC99DEC] + 522) )
         v1 = *(_BYTE *)(result + 12981) == 0;
       if ( v1 )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13241324);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13241324);
     }
     return result;
   }
@@ -19501,7 +19501,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6[6] = 0;
         v8 = 13241388;
       }
-      return StateMgr::changeState(v7, v8);
+      return StateMgr__changeState(v7, v8);
     }
     else
     {
@@ -19562,12 +19562,12 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v2 )
         {
           if ( (v2 | 1) == 3 )
-            return StateMgr::changeState((_DWORD *)(result + 24), 13241452);
+            return StateMgr__changeState((_DWORD *)(result + 24), 13241452);
         }
         else
         {
           *(_DWORD *)(result + 40) = 13242284;
-          return StateMgr::changeState((_DWORD *)(result + 24), 13242060);
+          return StateMgr__changeState((_DWORD *)(result + 24), 13242060);
         }
       }
       else
@@ -19577,7 +19577,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           *v1 = 0;
           *(_DWORD *)(result + 40) = 13242284;
-          return StateMgr::changeState((_DWORD *)(result + 24), 13242028);
+          return StateMgr__changeState((_DWORD *)(result + 24), 13242028);
         }
         else
         {
@@ -19595,7 +19595,7 @@ static inline unsigned int uxtb16(unsigned int x)
           else if ( (v5 & 0x2000) != 0 )
           {
             *(_DWORD *)(result + 40) = 13241452;
-            return StateMgr::changeState((_DWORD *)(result + 24), 13241420);
+            return StateMgr__changeState((_DWORD *)(result + 24), 13241420);
           }
         }
       }
@@ -19668,7 +19668,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( !v1 )
         {
           *(_DWORD *)(result + 40) = 13242220;
-          return StateMgr::changeState((_DWORD *)(result + 24), 13242060);
+          return StateMgr__changeState((_DWORD *)(result + 24), 13242060);
         }
         return result;
       }
@@ -19685,7 +19685,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_11:
         *(_DWORD *)(result + 40) = 13241452;
         *(_DWORD *)(result + 22480) = 0;
-        return StateMgr::changeState((_DWORD *)(result + 24), 13241420);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13241420);
       }
     }
     v4 = *(_DWORD *)(result + 20276);
@@ -19702,7 +19702,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v7 + 2695) = 1;
     *(_DWORD *)(result + 4664) = 0;
     *(_DWORD *)(result + 40) = 13242220;
-    return StateMgr::changeState((_DWORD *)(result + 24), 13242028);
+    return StateMgr__changeState((_DWORD *)(result + 24), 13242028);
   }
 
 /* ============================================================================
@@ -19721,7 +19721,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049D3B0(int result)
   {
     if ( !*(_BYTE *)(result + 4676) )
-      return StateMgr::changeState((_DWORD *)(result + 24), *(_DWORD *)(result + 40));
+      return StateMgr__changeState((_DWORD *)(result + 24), *(_DWORD *)(result + 40));
     return result;
   }
 
@@ -19777,12 +19777,12 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v3 == 1 )
       {
         v4 = 13241484;
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v4);
       }
       if ( !v3 )
       {
         v4 = 13241516;
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v4);
       }
       v5 = *(_DWORD *)(a1 + 22496);
       v6 = v5 - 2;
@@ -19828,7 +19828,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         while ( (signed int)v7 < *(_DWORD *)(a1 + 22496) );
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13242092);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13242092);
     }
     return result;
   }
@@ -19917,7 +19917,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = *(_DWORD *)(result + 22496);
     if ( v1 < 1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241548);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241548);
     v2 = 0;
     while ( 1 )
     {
@@ -19931,7 +19931,7 @@ static inline unsigned int uxtb16(unsigned int x)
           break;
       }
       if ( (int)++v2 >= v1 )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13241548);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13241548);
     }
     return result;
   }
@@ -19972,7 +19972,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049D760(int result)
   {
     if ( !*(_BYTE *)(result + 22504) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241548);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241548);
     return result;
   }
 
@@ -20017,7 +20017,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049D90C(int result)
   {
     if ( !*(_BYTE *)(result + 22501) && !*(_BYTE *)(result + 12981) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241580);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241580);
     return result;
   }
 
@@ -20158,7 +20158,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = 13242028;
   LABEL_28:
       *(_DWORD *)(a1 + 40) = v3;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v4);
     }
     v5 = *(_DWORD *)(a1 + 22496);
     if ( v5 >= 1 )
@@ -20212,7 +20212,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( (*(_DWORD *)result)++ < 59 )
             return result;
           v4 = 13241676;
-          return StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+          return StateMgr__changeState((_DWORD *)(a1 + 24), v4);
         }
       }
     }
@@ -20329,7 +20329,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
   LABEL_8:
       if ( !*(_BYTE *)(result + 22501) )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13241644);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13241644);
     }
     else
     {
@@ -20399,7 +20399,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049E11C(int result)
   {
     if ( !*(_BYTE *)(result + 22501) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241356);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241356);
     return result;
   }
 
@@ -20427,7 +20427,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049E1A8(int result)
   {
     if ( !*(_BYTE *)(result + 22501) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241708);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241708);
     return result;
   }
 
@@ -20470,7 +20470,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049E330(int result)
   {
     if ( !*(_BYTE *)(result + 22501) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241740);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241740);
     return result;
   }
 
@@ -20516,7 +20516,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v4 = 13242252;
           else
             v4 = 13241964;
-          return StateMgr::changeState(v9, v4);
+          return StateMgr__changeState(v9, v4);
         }
         if ( result != 4 )
           return result;
@@ -20561,7 +20561,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
       }
       v9 = (_DWORD *)(a1 + 24);
-      return StateMgr::changeState(v9, v4);
+      return StateMgr__changeState(v9, v4);
     }
     return result;
   }
@@ -20596,7 +20596,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13241804;
       else
         v3 = 13241484;
-      return StateMgr::changeState(v2, v3);
+      return StateMgr__changeState(v2, v3);
     }
     return result;
   }
@@ -20618,7 +20618,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049E5AC(int result)
   {
     if ( !*(_BYTE *)(result + 22504) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241836);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241836);
     return result;
   }
 
@@ -20653,7 +20653,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049E6E0(int result)
   {
     if ( !*(_BYTE *)(result + 12981) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241868);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241868);
     return result;
   }
 
@@ -20721,7 +20721,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = *(_DWORD *)(result + 22496);
     if ( v1 < 1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241900);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241900);
     v2 = 0;
     while ( 1 )
     {
@@ -20735,7 +20735,7 @@ static inline unsigned int uxtb16(unsigned int x)
           break;
       }
       if ( (int)++v2 >= v1 )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13241900);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13241900);
     }
     return result;
   }
@@ -20768,7 +20768,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049E934(int result)
   {
     if ( !*(_BYTE *)(result + 22501) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241356);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241356);
     return result;
   }
 
@@ -20813,7 +20813,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049EA8C(int result)
   {
     if ( !*(_BYTE *)(result + 22501) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241580);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241580);
     return result;
   }
 
@@ -20935,7 +20935,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v11 = (_BYTE *)*v7;
           if ( !*(_BYTE *)(*v7 + 2689) || !v11[2691] && !v11[2702] && !v11[2690] )
-            return (_DWORD *)StateMgr::changeState(result + 6, 13241996);
+            return (_DWORD *)StateMgr__changeState(result + 6, 13241996);
         }
       }
     }
@@ -20971,7 +20971,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049EDE8(int result)
   {
     if ( !*(_BYTE *)(result + 22501) && !*(_BYTE *)(result + 12981) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241260);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241260);
     return result;
   }
 
@@ -21076,7 +21076,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049EF9C(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13242060);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13242060);
   }
 
 /* ============================================================================
@@ -21086,7 +21086,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049EFB8(int result)
   {
     if ( !*(_BYTE *)(result + 4676) )
-      return StateMgr::changeState((_DWORD *)(result + 24), *(_DWORD *)(result + 40));
+      return StateMgr__changeState((_DWORD *)(result + 24), *(_DWORD *)(result + 40));
     return result;
   }
 
@@ -21113,7 +21113,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = *(_DWORD *)(result + 22496);
     if ( v1 < 1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13242124);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13242124);
     v2 = 0;
     while ( 1 )
     {
@@ -21127,7 +21127,7 @@ static inline unsigned int uxtb16(unsigned int x)
           break;
       }
       if ( (int)++v2 >= v1 )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13242124);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13242124);
     }
     return result;
   }
@@ -21179,7 +21179,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049F0FC(int result)
   {
     if ( !*(_BYTE *)(result + 22501) && !*(_BYTE *)(result + 12981) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13242156);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13242156);
     return result;
   }
 
@@ -21211,7 +21211,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13241708;
       else
         v3 = 13242188;
-      return StateMgr::changeState(v2, v3);
+      return StateMgr__changeState(v2, v3);
     }
     return result;
   }
@@ -21269,7 +21269,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049F304(int result)
   {
     if ( !*(_BYTE *)(result + 22501) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241388);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241388);
     return result;
   }
 
@@ -21305,7 +21305,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v4 = (_BYTE *)result[5072];
           if ( !v4[2689] || !v4[2691] && !v4[2702] && !v4[2690] )
-            return (_DWORD *)StateMgr::changeState(result + 6, 13242316);
+            return (_DWORD *)StateMgr__changeState(result + 6, 13242316);
         }
       }
     }
@@ -21370,7 +21370,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v4 = (_BYTE *)result[5072];
           if ( !v4[2689] || !v4[2691] && !v4[2702] && !v4[2690] )
-            return (_DWORD *)StateMgr::changeState(result + 6, 13242348);
+            return (_DWORD *)StateMgr__changeState(result + 6, 13242348);
         }
       }
     }
@@ -21517,7 +21517,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v11 = (_BYTE *)*v7;
           if ( !*(_BYTE *)(*v7 + 2689) || !v11[2691] && !v11[2702] && !v11[2690] )
-            return (_DWORD *)StateMgr::changeState(result + 6, 13242316);
+            return (_DWORD *)StateMgr__changeState(result + 6, 13242316);
         }
       }
     }
@@ -21589,7 +21589,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(MEMORY[0xC99DEC] + 522) )
         v1 = *(_BYTE *)(result + 12981) == 0;
       if ( v1 )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13241260);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13241260);
     }
     return result;
   }
@@ -21636,7 +21636,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6049FA8C(int result)
   {
     if ( !*(_BYTE *)(result + 22501) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13241260);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13241260);
     return result;
   }
 
@@ -21767,17 +21767,17 @@ static inline unsigned int uxtb16(unsigned int x)
       v7 = (struct sead_IDisposer *)((char *)a1 + v2);
       *(_DWORD *)((char *)a1 + v2 + 2884) = 12325992;
       EffectData_release((int)a1 + v5);
-      sead::IDisposer::~IDisposer(v6);
+      sead__IDisposer__dtor(v6);
       *((_DWORD *)v7 + 695) = 12325992;
       EffectData_release((int)&a1[v18]);
-      sead::IDisposer::~IDisposer((struct sead_IDisposer *)&a1[v18]);
+      sead__IDisposer__dtor((struct sead_IDisposer *)&a1[v18]);
       thunk_sub_60909E64(&a1[v17]);
       thunk_sub_60909E64(&a1[v16]);
       thunk_sub_60909E64((char *)a1 + v12);
       thunk_sub_60909E64(&a1[v15]);
       thunk_sub_60909E64(&a1[v14]);
       SoundActor_destroySevenDisposers(&a1[v4]);
-      sead::IDisposer::~IDisposer(v7);
+      sead__IDisposer__dtor(v7);
       v1 = v12 - 2988;
       v4 -= 747;
       v18 -= 747;
@@ -22359,7 +22359,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 22500);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 3636);
       sub_6050B744(a1 + 5716);
       sub_6050A8A4(a1 + 12988);
@@ -23369,7 +23369,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604A2D58(int a1)
   {
     *(_BYTE *)(a1 + 40) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13242576);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13242576);
   }
 
 /* ============================================================================
@@ -23473,14 +23473,14 @@ static inline unsigned int uxtb16(unsigned int x)
             *(_DWORD *)(a1 + 20492) = 3;
             *(_BYTE *)(a1 + 40) = 1;
             v5 = 13242672;
-            return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+            return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
           }
           if ( v4 == 1 )
           {
             *(_DWORD *)(a1 + 20492) = 2;
             *(_BYTE *)(a1 + 40) = 1;
             v5 = 13242672;
-            return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+            return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
           }
           StateMgr_resetAndMaybeChange(a1 + 3936);
           *(_WORD *)(a1 + 4988) = 0;
@@ -23505,7 +23505,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v7 = (int *)(a1 + 13268);
               *v7 = v8 | 2;
               *((_BYTE *)v7 - 13228) = 1;
-              return StateMgr::changeState(v7 - 3311, 13242800);
+              return StateMgr__changeState(v7 - 3311, 13242800);
             }
           }
           return result;
@@ -23528,7 +23528,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   Sound_dispatchByKind((int)"SE_SYS_BTN_OVER", 15);
                   *(_BYTE *)(a1 + 40) = 1;
                   v5 = 13242768;
-                  return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+                  return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
                 }
               }
             }
@@ -23544,7 +23544,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *(_DWORD *)(a1 + 20492) = 2;
               *(_BYTE *)(a1 + 40) = 1;
               v5 = 13242672;
-              return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+              return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
             }
             v12 = 1;
           }
@@ -23558,7 +23558,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *(_DWORD *)(a1 + 20492) = 3;
               *(_BYTE *)(a1 + 40) = 1;
               v5 = 13242672;
-              return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+              return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
             }
             v12 = 0;
           }
@@ -23572,7 +23572,7 @@ static inline unsigned int uxtb16(unsigned int x)
           SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
           *(_BYTE *)(a1 + 40) = 1;
           v5 = 13242832;
-          return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+          return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
         }
         v14 = *(_BYTE **)(a1 + 20488);
         if ( v14 )
@@ -23585,7 +23585,7 @@ static inline unsigned int uxtb16(unsigned int x)
               SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
               *(_BYTE *)(a1 + 40) = 1;
               v5 = 13242736;
-              return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+              return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
             }
             v13 = 3;
           }
@@ -23597,7 +23597,7 @@ static inline unsigned int uxtb16(unsigned int x)
         SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
         *(_BYTE *)(a1 + 40) = 1;
         v5 = 13242704;
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
       }
     }
     return result;
@@ -23624,7 +23624,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       *(_BYTE *)(a1 + 40) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13242640);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13242640);
     }
     return result;
   }
@@ -23705,7 +23705,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     *(_BYTE *)(a1 + 40) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13242640);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13242640);
   }
 
 /* ============================================================================
@@ -23767,7 +23767,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     *(_BYTE *)(a1 + 40) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13242640);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13242640);
   }
 
 /* ============================================================================
@@ -23817,7 +23817,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 40) = 1;
       v4 = 13242640;
   LABEL_7:
-      StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+      StateMgr__changeState((_DWORD *)(a1 + 24), v4);
       goto LABEL_8;
     }
     result = *(unsigned __int8 *)(a1 + 20500);
@@ -23853,7 +23853,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
     *(_BYTE *)(a1 + 40) = 1;
-    StateMgr::changeState((_DWORD *)(a1 + 24), 13242704);
+    StateMgr__changeState((_DWORD *)(a1 + 24), 13242704);
     v9 = 12321336;
     v10 = dword_60CA12CC;
     ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0x11u, &v9, (int)&dword_60CA13B8, 0);
@@ -23951,7 +23951,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     *(_BYTE *)(a1 + 40) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13242640);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13242640);
   }
 
 /* ============================================================================
@@ -23991,7 +23991,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       *(_BYTE *)(a1 + 40) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13242896);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13242896);
     }
     return result;
   }
@@ -24033,7 +24033,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v5 = 13242704;
           else
             v5 = 13242640;
-          StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+          StateMgr__changeState((_DWORD *)(a1 + 24), v5);
           *(_DWORD *)(v3 + 40108) = 0;
           *(_BYTE *)(v3 + 40098) = 1;
           return 40098;
@@ -24080,7 +24080,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_BYTE *)(a1 + 20553) = 0;
           *(_BYTE *)(a1 + 40) = 1;
         }
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13242864);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13242864);
       }
     }
     return result;
@@ -24107,7 +24107,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       *(_BYTE *)(a1 + 40) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13242576);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13242576);
     }
     return result;
   }
@@ -24190,7 +24190,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     *(_BYTE *)(a1 + 40) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13242576);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13242576);
   }
 
 /* ============================================================================
@@ -24547,7 +24547,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 40) = 1;
       v10 = 13242928;
     }
-    StateMgr::changeState((_DWORD *)(a1 + 24), v10);
+    StateMgr__changeState((_DWORD *)(a1 + 24), v10);
   LABEL_26:
     if ( (*(_DWORD *)a1 & 4) != 0 )
     {
@@ -24590,7 +24590,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 44) = 0;
       *(_BYTE *)(a1 + 40) = 0;
     }
-    StateMgr::execute((_DWORD *)(a1 + 24));
+    StateMgr__execute((_DWORD *)(a1 + 24));
     v20 = *(_DWORD *)(a1 + 44);
     if ( v20 != 0x7FFFFFFF )
       *(_DWORD *)(a1 + 44) = v20 + 1;
@@ -24779,7 +24779,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r4
     int v6; // r0
   
-    CurrentState = StateMgr::getCurrentState(a1 + 24);
+    CurrentState = StateMgr__getCurrentState(a1 + 24);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v4 = 1;
     if ( v3 == (*(int (**)(void))(MEMORY[0xCA1190] + 8))() )
@@ -26671,7 +26671,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604AB390(MEMORY[0xCA146C]);
       MEMORY[0xCA146C] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -26689,7 +26689,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_604AB390(MEMORY[0xCA146C]);
       MEMORY[0xCA146C] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -26707,7 +26707,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCA146C] )
     {
       v3 = operator new[](279744, a1, 4);
-      v4 = (_DWORD *)sead::IDisposer::IDisposer(v3, a1, 3);
+      v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12574144;
       MEMORY[0xCA1468] = v4;
       result = sub_604AAEB4();
@@ -26745,7 +26745,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604A7F18(int a1)
   {
     *(_BYTE *)(a1 + 56) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 40), 13243568);
+    return StateMgr__changeState((_DWORD *)(a1 + 40), 13243568);
   }
 
 /* ============================================================================
@@ -26883,7 +26883,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       *(_BYTE *)(a1 + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), 13243600);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), 13243600);
     }
     return result;
   }
@@ -27009,7 +27009,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v17 == result )
           {
             *(_BYTE *)(a1 + 56) = 1;
-            StateMgr::changeState((_DWORD *)(a1 + 40), 13243632);
+            StateMgr__changeState((_DWORD *)(a1 + 40), 13243632);
           }
           goto LABEL_69;
         }
@@ -27132,7 +27132,7 @@ static inline unsigned int uxtb16(unsigned int x)
           while ( (int)v25 < *v3 );
         }
         *(_BYTE *)(a1 + 56) = 1;
-        return StateMgr::changeState((_DWORD *)(a1 + 40), 13243984);
+        return StateMgr__changeState((_DWORD *)(a1 + 40), 13243984);
       }
       StateMgr_resetAndMaybeChange(a1 + 85956);
       *(_WORD *)(a1 + 87008) = 0;
@@ -27231,7 +27231,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
   LABEL_7:
       *(_BYTE *)(a1 + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), 13243664);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), 13243664);
     }
     else
     {
@@ -27421,7 +27421,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_BYTE *)(a1 + 56) = 1;
           v6 = 13243696;
         }
-        return (_BYTE *)StateMgr::changeState((_DWORD *)(a1 + 40), v6);
+        return (_BYTE *)StateMgr__changeState((_DWORD *)(a1 + 40), v6);
       }
     }
     return result;
@@ -27588,7 +27588,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       *(_BYTE *)(a1 + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), 13243728);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), 13243728);
     }
     return result;
   }
@@ -27742,7 +27742,7 @@ static inline unsigned int uxtb16(unsigned int x)
         case 3:
           *(_BYTE *)(a1 + 56) = 1;
           v8 = 13243920;
-          return StateMgr::changeState((_DWORD *)(a1 + 40), v8);
+          return StateMgr__changeState((_DWORD *)(a1 + 40), v8);
         default:
           return result;
       }
@@ -27775,7 +27775,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_43:
       *(_BYTE *)(a1 + 56) = 1;
       v8 = 13243888;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), v8);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), v8);
     }
     if ( sub_6047F384(a1 + 277668, 0x4000) )
     {
@@ -27817,7 +27817,7 @@ static inline unsigned int uxtb16(unsigned int x)
       IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
       *(_BYTE *)(a1 + 56) = 1;
       v8 = 13243888;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), v8);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), v8);
     }
     if ( sub_6047F384(a1 + 277668, 64) )
     {
@@ -27993,7 +27993,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       *(_BYTE *)(a1 + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), 13243600);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), 13243600);
     }
     return result;
   }
@@ -28158,7 +28158,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       *(_BYTE *)(a1 + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), 13243824);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), 13243824);
     }
     return result;
   }
@@ -28256,7 +28256,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(a1 + 56) = 1;
         v3 = 13243856;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 40), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), v3);
     }
     if ( sub_6047F384(a1 + 277668, 0x4000) )
     {
@@ -28268,7 +28268,7 @@ static inline unsigned int uxtb16(unsigned int x)
         IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 85996));
         *(_BYTE *)(a1 + 56) = 1;
         v3 = 13243888;
-        return StateMgr::changeState((_DWORD *)(a1 + 40), v3);
+        return StateMgr__changeState((_DWORD *)(a1 + 40), v3);
       }
       *(_DWORD *)(a1 + 86984) = 12;
       goto LABEL_9;
@@ -28448,7 +28448,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result == 1 )
       {
         *(_BYTE *)(a1 + 56) = 1;
-        return StateMgr::changeState((_DWORD *)(a1 + 40), 13244016);
+        return StateMgr__changeState((_DWORD *)(a1 + 40), 13244016);
       }
     }
     return result;
@@ -28554,7 +28554,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else if ( !v4 )
     {
       *(_BYTE *)(result + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(result + 40), 13243760);
+      return StateMgr__changeState((_DWORD *)(result + 40), 13243760);
     }
     return result;
   }
@@ -28669,7 +28669,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else if ( !v4 )
     {
       *(_BYTE *)(result + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(result + 40), 13243952);
+      return StateMgr__changeState((_DWORD *)(result + 40), 13243952);
     }
     return result;
   }
@@ -28824,7 +28824,7 @@ static inline unsigned int uxtb16(unsigned int x)
         while ( (signed int)v3 < *(_DWORD *)(a1 + 279736) );
       }
       *(_BYTE *)(a1 + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), 13243504);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), 13243504);
     }
     return result;
   }
@@ -28939,7 +28939,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(result + 279732) )
     {
       *(_BYTE *)(result + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(result + 40), 13244048);
+      return StateMgr__changeState((_DWORD *)(result + 40), 13244048);
     }
     return result;
   }
@@ -29091,7 +29091,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       *(_BYTE *)(a1 + 56) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 40), 13243824);
+      return StateMgr__changeState((_DWORD *)(a1 + 40), 13243824);
     }
     return result;
   }
@@ -29362,17 +29362,17 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(v2 + v5) = 12556340;
       *(_DWORD *)(v2 + v5 + 2884) = 12325992;
       EffectData_release(v14 + v5);
-      sead::IDisposer::~IDisposer((struct sead_IDisposer *)(v14 + v5));
+      sead__IDisposer__dtor((struct sead_IDisposer *)(v14 + v5));
       *(_DWORD *)(v2 + v5 + 2780) = 12325992;
       EffectData_release(v13 + v5);
-      sead::IDisposer::~IDisposer((struct sead_IDisposer *)(v13 + v5));
+      sead__IDisposer__dtor((struct sead_IDisposer *)(v13 + v5));
       thunk_sub_60909E64(v12 + v5);
       thunk_sub_60909E64(v11 + v5);
       thunk_sub_60909E64(v10 + v5);
       thunk_sub_60909E64(v9 + v5 + 93184);
       thunk_sub_60909E64(v3 + v5);
       SoundActor_destroySevenDisposers((_DWORD *)(v6 + v5));
-      sead::IDisposer::~IDisposer((struct sead_IDisposer *)(v2 + v5));
+      sead__IDisposer__dtor((struct sead_IDisposer *)(v2 + v5));
       v5 -= 2988;
     }
     while ( v5 != -182268 );
@@ -29553,14 +29553,14 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (*(_BYTE *)(a1 + 16) & 1) != 0 )
     {
       *(_BYTE *)(a1 + 56) = 1;
-      StateMgr::changeState((_DWORD *)(a1 + 40), 13243536);
+      StateMgr__changeState((_DWORD *)(a1 + 40), 13243536);
     }
     if ( *(_BYTE *)(a1 + 56) )
     {
       *(_DWORD *)(a1 + 60) = 0;
       *(_BYTE *)(a1 + 56) = 0;
     }
-    StateMgr::execute((_DWORD *)(a1 + 40));
+    StateMgr__execute((_DWORD *)(a1 + 40));
     v2 = *(_DWORD *)(a1 + 60);
     if ( v2 != 0x7FFFFFFF )
       *(_DWORD *)(a1 + 60) = v2 + 1;
@@ -29719,7 +29719,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r0
     int result; // r0
   
-    CurrentState = StateMgr::getCurrentState(a1 + 40);
+    CurrentState = StateMgr__getCurrentState(a1 + 40);
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v6 = (*(int (**)(void))(MEMORY[0xCA1670] + 8))();
     if ( v5 == v6 )
@@ -31290,7 +31290,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604AE650(int result)
   {
     if ( *(float *)(**(_DWORD **)(result + 3548) + 44) == 0.0 )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13244392);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13244392);
     return result;
   }
 
@@ -31326,7 +31326,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result[886] > 2u )
       v1 += 40;
     if ( *(float *)(*(_DWORD *)v1 + 44) == 0.0 )
-      return (_DWORD *)StateMgr::changeState(result + 5, 13244392);
+      return (_DWORD *)StateMgr__changeState(result + 5, 13244392);
     return result;
   }
 
@@ -31360,7 +31360,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604AE718(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 3548) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13244328);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13244328);
     return result;
   }
 
@@ -31646,7 +31646,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( !v4 )
     {
-      StateMgr::execute((_DWORD *)(a1 + 20));
+      StateMgr__execute((_DWORD *)(a1 + 20));
       return Table_getEntryById(a1 + 36, 9, 0);
     }
     return result;
@@ -31659,7 +31659,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604AEFA0(int result)
   {
     if ( !*(_BYTE *)(result + 3664) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13244360);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13244360);
     return result;
   }
 
@@ -31679,7 +31679,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(a1 + 3667) )
         v3 = &dword_60CA1868;
       ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 2u, v3, 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13244424);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13244424);
     }
     return result;
   }
@@ -31846,7 +31846,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA1910])(MEMORY[0xCA1910]);
       MEMORY[0xCA1910] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -31864,7 +31864,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA1910])(MEMORY[0xCA1910]);
       MEMORY[0xCA1910] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -31881,7 +31881,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCA1910] )
     {
       v2 = operator new[](38108, a1, 4);
-      v3 = sead::IDisposer::IDisposer(v2 + 4, a1, 3);
+      v3 = sead__IDisposer__IDisposer(v2 + 4, a1, 3);
       *(_DWORD *)(v2 + 4) = 12574440;
       MEMORY[0xCA190C] = v3;
       *(_DWORD *)v2 = 12574456;
@@ -32046,7 +32046,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v4 = (_BYTE *)(a1 + 38090);
       if ( *(_BYTE *)(a1 + 38090) )
-        return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244916);
+        return StateMgr__changeState((_DWORD *)(a1 + 6112), 13244916);
       *(_BYTE *)(MEMORY[0xC99D70] + 1874) = 0;
       if ( *(_DWORD *)(a1 + 3656) == 1 && *(_DWORD *)(a1 + 4636) == 7 && sub_6047F1CC(a1 + 3648) )
         *(_BYTE *)(MEMORY[0xC99D70] + 1874) = 1;
@@ -32069,7 +32069,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
       {
         if ( *(_BYTE *)(a1 + 4651) )
-          return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244884);
+          return StateMgr__changeState((_DWORD *)(a1 + 6112), 13244884);
         if ( !*(_BYTE *)(a1 + 4654)
           && !*(_BYTE *)(a1 + 38106)
           && !*(_BYTE *)(a1 + 38107)
@@ -32078,7 +32078,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           *(_DWORD *)(a1 + 4636) = 7;
           Object_clampFieldPairsToMin(a1 + 3608);
-          return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244884);
+          return StateMgr__changeState((_DWORD *)(a1 + 6112), 13244884);
         }
         if ( *v4 || (*(_BYTE *)(MEMORY[0xC99DD4] + 1376) & 0xC) != 0 )
           sub_607FCB00(MEMORY[0xCC6484]);
@@ -32169,7 +32169,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 20, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244852);
+      return StateMgr__changeState((_DWORD *)(a1 + 6112), 13244852);
     return result;
   }
 
@@ -32234,7 +32234,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v4 = 13244980;
       else
         v4 = 13244916;
-      return StateMgr::changeState((_DWORD *)(v1 + 6112), v4);
+      return StateMgr__changeState((_DWORD *)(v1 + 6112), v4);
     }
     return result;
   }
@@ -32317,19 +32317,19 @@ static inline unsigned int uxtb16(unsigned int x)
         return result;
       }
       if ( *(_BYTE *)(a1 + 4651) )
-        return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244884);
+        return StateMgr__changeState((_DWORD *)(a1 + 6112), 13244884);
       v5 = *(_DWORD *)(a1 + 5692);
       if ( (v5 & 0xC00) != 0 )
       {
         sub_60402084(MEMORY[0xC99E68], *(_DWORD *)(a1 + 4644));
         *v4 = 8;
         Object_clampFieldPairsToMin(a1 + 3608);
-        return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244884);
+        return StateMgr__changeState((_DWORD *)(a1 + 6112), 13244884);
       }
       if ( (v5 & 0x2000) != 0 )
       {
         Object_clampFieldPairsToMin(a1 + 3608);
-        return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244884);
+        return StateMgr__changeState((_DWORD *)(a1 + 6112), 13244884);
       }
       if ( !*(_BYTE *)(a1 + 4654) )
       {
@@ -32536,25 +32536,25 @@ static inline unsigned int uxtb16(unsigned int x)
         case 1:
         case 2:
         case 3:
-          result = StateMgr::changeState((_DWORD *)(result + 6112), 13245012);
+          result = StateMgr__changeState((_DWORD *)(result + 6112), 13245012);
           break;
         case 4:
           *(_DWORD *)(result + 38064) = 5;
-          result = StateMgr::changeState((_DWORD *)(result + 6112), 13244820);
+          result = StateMgr__changeState((_DWORD *)(result + 6112), 13244820);
           break;
         case 5:
           *(_DWORD *)(result + 38064) = 10;
-          result = StateMgr::changeState((_DWORD *)(result + 6112), 13244820);
+          result = StateMgr__changeState((_DWORD *)(result + 6112), 13244820);
           break;
         case 6:
           *(_DWORD *)(result + 38064) = 12;
-          result = StateMgr::changeState((_DWORD *)(result + 6112), 13244820);
+          result = StateMgr__changeState((_DWORD *)(result + 6112), 13244820);
           break;
         case 7:
-          result = StateMgr::changeState((_DWORD *)(result + 6112), 13244788);
+          result = StateMgr__changeState((_DWORD *)(result + 6112), 13244788);
           break;
         case 8:
-          result = StateMgr::changeState((_DWORD *)(result + 6112), 13244820);
+          result = StateMgr__changeState((_DWORD *)(result + 6112), 13244820);
           break;
       }
     }
@@ -32671,7 +32671,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           *(_DWORD *)(v1 + 38064) = 11;
           *(_DWORD *)(v3 + 3780) |= 1u;
-          return StateMgr::changeState((_DWORD *)(v1 + 6112), 13244948);
+          return StateMgr__changeState((_DWORD *)(v1 + 6112), 13244948);
         }
         else
         {
@@ -32684,7 +32684,7 @@ static inline unsigned int uxtb16(unsigned int x)
           StateMgr_resetAndMaybeChange(v1 + 3608);
           *(_WORD *)(v1 + 4660) = 0;
           IntrusiveList_clearAndDestroy((_DWORD *)(v1 + 3648));
-          return StateMgr::changeState((_DWORD *)(v1 + 6112), 13244756);
+          return StateMgr__changeState((_DWORD *)(v1 + 6112), 13244756);
         }
       }
     }
@@ -32737,7 +32737,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604B0BEC(int result)
   {
     if ( *(_DWORD *)(MEMORY[0xCC6E04] + 24) != 2 )
-      return StateMgr::changeState((_DWORD *)(result + 6112), 13244916);
+      return StateMgr__changeState((_DWORD *)(result + 6112), 13244916);
     return result;
   }
 
@@ -32771,7 +32771,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604B0D04(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244756);
+    return StateMgr__changeState((_DWORD *)(a1 + 6112), 13244756);
   }
 
 /* ============================================================================
@@ -33151,7 +33151,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( *(_BYTE *)(a1 + 38088) )
       {
-        StateMgr::execute((_DWORD *)(a1 + 6112));
+        StateMgr__execute((_DWORD *)(a1 + 6112));
         sub_6050229C(a1 + 3608);
         sub_604B1E54(a1);
         Table_getEntryById(a1 + 20, 14, 0);
@@ -33163,7 +33163,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v7[1] = -v3;
         sub_6047E518(a1 + 3648, (*(_DWORD *)(a1 + 5960) >> 12) & 1, (*(_DWORD *)(a1 + 5692) >> 12) & 1, (int)v7);
       }
-      CurrentState = StateMgr::getCurrentState(a1 + 6112);
+      CurrentState = StateMgr__getCurrentState(a1 + 6112);
       v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       v6 = v5 == (*(int (**)(void))(MEMORY[0xCA1954] + 8))()
         && !*(_BYTE *)(a1 + 38090)
@@ -33761,7 +33761,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(MEMORY[0xC99D70] + 1868) = 0;
     if ( sub_604B2054(MEMORY[0xCA1910]) == 1 )
     {
-      StateMgr::changeState((_DWORD *)(a1 + 516), 13245364);
+      StateMgr__changeState((_DWORD *)(a1 + 516), 13245364);
       goto LABEL_15;
     }
     v11 = *(_DWORD *)(a1 + 32);
@@ -33858,7 +33858,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_604B2054(MEMORY[0xCA1910]);
     if ( !result )
-      return StateMgr::changeState((_DWORD *)(a1 + 516), 13245332);
+      return StateMgr__changeState((_DWORD *)(a1 + 516), 13245332);
     return result;
   }
 
@@ -34649,7 +34649,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
   LABEL_9:
     sub_604B4644(a1);
-    StateMgr::execute((_DWORD *)(a1 + 516));
+    StateMgr__execute((_DWORD *)(a1 + 516));
     sub_604B4A78(a1);
     sub_604B4370(a1);
     Table_getEntryById(*(_DWORD *)(a1 + 4), 14, 0);
@@ -35637,7 +35637,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604B5CB8(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 3748), 13245816);
+    return StateMgr__changeState((_DWORD *)(a1 + 3748), 13245816);
   }
 
 /* ============================================================================
@@ -35667,7 +35667,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_604B81E4(a1);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 3748), 13245848);
+      return StateMgr__changeState((_DWORD *)(a1 + 3748), 13245848);
     return result;
   }
 
@@ -35718,7 +35718,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( (*(_BYTE *)(a1 + 3764) & 2) == 0 )
         *(_BYTE *)(a1 + 3778) = 1;
-      StateMgr::changeState((_DWORD *)(a1 + 3748), 13245880);
+      StateMgr__changeState((_DWORD *)(a1 + 3748), 13245880);
       *(_DWORD *)(a1 + 3780) = 3;
       return 3;
     }
@@ -35727,7 +35727,7 @@ static inline unsigned int uxtb16(unsigned int x)
       Sound_dispatchByKind((int)"SE_SYS_BACK", 9);
       v3 = (_DWORD *)(a1 + 3748);
   LABEL_17:
-      StateMgr::changeState(v3, 13245880);
+      StateMgr__changeState(v3, 13245880);
       v4 = *(_DWORD *)(a1 + 3652);
       if ( v4 )
         sub_604B74B0(v4, 0);
@@ -35792,7 +35792,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2 < 1 )
     {
       if ( *(_DWORD *)(a1 + 3724) != 4 || sub_604B8420(a1) == 1 )
-        StateMgr::changeState((_DWORD *)(a1 + 3748), 13245912);
+        StateMgr__changeState((_DWORD *)(a1 + 3748), 13245912);
     }
     else
     {
@@ -35861,7 +35861,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = *(_DWORD *)(a1 + 3724);
       if ( result != 4 )
-        return StateMgr::changeState((_DWORD *)(a1 + 3748), 13245752);
+        return StateMgr__changeState((_DWORD *)(a1 + 3748), 13245752);
     }
     return result;
   }
@@ -35979,9 +35979,9 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v5 = 13245912;
   LABEL_9:
-      StateMgr::changeState(v4, v5);
+      StateMgr__changeState(v4, v5);
     }
-    StateMgr::execute(v4);
+    StateMgr__execute(v4);
     v6 = *(_DWORD *)(a1 + 3652);
     if ( v6 )
       sub_604B70B4(v6);
@@ -37240,7 +37240,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Disposer_allocateChildren((_DWORD *)(a1 + 4), 0);
     Player_allocateSlotObject((int)v2);
     *(_DWORD *)(a1 + 3652) = 0;
-    CurrentHeap = sead::HeapMgr::getCurrentHeap(MEMORY[0xCCEE90]);
+    CurrentHeap = sead__HeapMgr__getCurrentHeap(MEMORY[0xCCEE90]);
     if ( CurrentHeap )
     {
       v4 = operator new(2132, CurrentHeap, 4);
@@ -38530,7 +38530,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(int *)(a1 + 3664) <= 0 )
     {
       *(_DWORD *)(a1 + 3684) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13247872);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13247872);
     }
     else
     {
@@ -38576,7 +38576,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v5 = 13247936;
         }
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
       }
     }
     else
@@ -38624,7 +38624,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 3688);
     *(_DWORD *)(result + 3688) = v1 + 1;
     if ( v1 >= 9 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13247904);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13247904);
     return result;
   }
 
@@ -38637,7 +38637,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(int *)(a1 + 3660) <= 0 )
     {
       *(_DWORD *)(a1 + 3680) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13247872);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13247872);
     }
     else
     {
@@ -38677,7 +38677,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v4 = 13248000;
         }
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v4);
       }
     }
     else
@@ -38724,7 +38724,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 3688);
     *(_DWORD *)(result + 3688) = v1 + 1;
     if ( v1 >= 9 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13247968);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13247968);
     return result;
   }
 
@@ -38949,7 +38949,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = 12321336;
     v10 = v7;
     MessageQueue_postType3(&v9, v6, 1);
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13247872);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13247872);
   }
 
 /* ============================================================================
@@ -38963,7 +38963,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3697);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
@@ -38992,7 +38992,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r6
   
     v2 = a1 + 6;
-    CurrentState = StateMgr::getCurrentState((int)(a1 + 6));
+    CurrentState = StateMgr__getCurrentState((int)(a1 + 6));
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v5 = 0;
     if ( v4 == (*(int (**)(void))(MEMORY[0xCA2580] + 8))() )
@@ -39000,7 +39000,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 1;
       a1[915] = 1;
       a1[923] = 0;
-      StateMgr::changeState(v2, 13247968);
+      StateMgr__changeState(v2, 13247968);
     }
     return v5;
   }
@@ -39018,7 +39018,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v4 = a1 + 6;
-    CurrentState = StateMgr::getCurrentState((int)(a1 + 6));
+    CurrentState = StateMgr__getCurrentState((int)(a1 + 6));
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v7 = (*(int (**)(void))(MEMORY[0xCA2580] + 8))();
     result = 0;
@@ -39026,7 +39026,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       a1[916] = a2;
       a1[923] = 0;
-      StateMgr::changeState(v4, 13247904);
+      StateMgr__changeState(v4, 13247904);
       return 1;
     }
     return result;
@@ -39174,7 +39174,7 @@ static inline unsigned int uxtb16(unsigned int x)
       Disposer_destroyAllocated((struct sead_IDisposer *)(MEMORY[0xCA2674] + 84));
       MEMORY[0xCA2674] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -39192,7 +39192,7 @@ static inline unsigned int uxtb16(unsigned int x)
       Disposer_destroyAllocated((struct sead_IDisposer *)(MEMORY[0xCA2674] + 84));
       MEMORY[0xCA2674] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -39208,7 +39208,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCA2674] )
     {
       v2 = operator new[](3644, a1, 4);
-      sead::IDisposer::IDisposer(v2, a1, 3);
+      sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12575120;
       MEMORY[0xCA2670] = v2;
       *(_DWORD *)(v2 + 48) = 12575172;
@@ -39348,7 +39348,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 84, 0) + 51);
       if ( (result & 1) != 0 )
       {
-        StateMgr::changeState((_DWORD *)(a1 + 68), 13248120);
+        StateMgr__changeState((_DWORD *)(a1 + 68), 13248120);
         *(_DWORD *)(a1 + 3636) = 0;
         *(_WORD *)(a1 + 3632) = 0;
         return 3632;
@@ -39478,7 +39478,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3640);
     if ( !result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 68));
+      StateMgr__execute((_DWORD *)(a1 + 68));
       result = *(unsigned __int8 *)(a1 + 3633);
       if ( *(_BYTE *)(a1 + 3633) )
       {
@@ -39514,7 +39514,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = sub_6040E44C(MEMORY[0xC9A684]);
     if ( !result )
     {
-      StateMgr::changeState((_DWORD *)(a1 + 68), 13248152);
+      StateMgr__changeState((_DWORD *)(a1 + 68), 13248152);
       *(_DWORD *)(a1 + 3636) = 0;
       return 0;
     }
@@ -39760,7 +39760,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( v5 == v4 )
   LABEL_13:
-      StateMgr::changeState(a1 + 830, 13248300);
+      StateMgr__changeState(a1 + 830, 13248300);
   LABEL_17:
     sub_60472ADC((int)a1);
     result = *v3 + 1;
@@ -40010,8 +40010,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 3320);
     if ( (*(_BYTE *)(a1 + 3336) & 1) != 0 )
-      StateMgr::changeState(v2, 13248332);
-    StateMgr::execute(v2);
+      StateMgr__changeState(v2, 13248332);
+    StateMgr__execute(v2);
     v3 = *(_DWORD *)(a1 + 6888);
     if ( v3 )
     {
@@ -40270,7 +40270,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604BC9A8(int result)
   {
     if ( !*(_BYTE *)(result + 35560) )
-      return StateMgr::changeState((_DWORD *)(result + 520), 13248472);
+      return StateMgr__changeState((_DWORD *)(result + 520), 13248472);
     return result;
   }
 
@@ -40522,7 +40522,7 @@ static inline unsigned int uxtb16(unsigned int x)
             *(_DWORD *)(v29 + 32) = v28;
             *(_BYTE *)(v29 + 64) |= 0x10u;
             v30 = 13248600;
-            return StateMgr::changeState((_DWORD *)(a1 + 520), v30);
+            return StateMgr__changeState((_DWORD *)(a1 + 520), v30);
           }
           result = SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_INVALID", 0);
           *(_BYTE *)(a1 + 35564) = 0;
@@ -40590,7 +40590,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *(_DWORD *)(v81 + 32) = v80;
               *(_BYTE *)(v81 + 64) |= 0x10u;
               v30 = 13248792;
-              return StateMgr::changeState((_DWORD *)(a1 + 520), v30);
+              return StateMgr__changeState((_DWORD *)(a1 + 520), v30);
             case 2:
               *(_WORD *)(a1 + 35576) = 256;
               v82 = *(_DWORD *)(a1 + 2648);
@@ -40649,7 +40649,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *(_DWORD *)(v106 + 32) = v105;
               *(_BYTE *)(v106 + 64) |= 0x10u;
               v30 = 13248536;
-              return StateMgr::changeState((_DWORD *)(a1 + 520), v30);
+              return StateMgr__changeState((_DWORD *)(a1 + 520), v30);
             case 1:
               *(_WORD *)(a1 + 35576) = 257;
               v31 = *(_DWORD *)(a1 + 2648);
@@ -40708,7 +40708,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *(_DWORD *)(v55 + 32) = v54;
               *(_BYTE *)(v55 + 64) |= 0x10u;
               v30 = 13248536;
-              return StateMgr::changeState((_DWORD *)(a1 + 520), v30);
+              return StateMgr__changeState((_DWORD *)(a1 + 520), v30);
           }
         }
         else
@@ -40842,7 +40842,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604BDD0C(int result)
   {
     if ( !*(_BYTE *)(result + 1606) )
-      return StateMgr::changeState((_DWORD *)(result + 520), 13248536);
+      return StateMgr__changeState((_DWORD *)(result + 520), 13248536);
     return result;
   }
 
@@ -40907,7 +40907,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( *(_BYTE *)(a1 + 35577) )
           {
             v7 = 13248472;
-            return StateMgr::changeState((_DWORD *)(a1 + 520), v7);
+            return StateMgr__changeState((_DWORD *)(a1 + 520), v7);
           }
           v8 = *(_DWORD *)(a1 + 360);
           if ( *v2 )
@@ -40915,17 +40915,17 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( (v8 & 0x40) == 0 )
             {
               v7 = 13248472;
-              return StateMgr::changeState((_DWORD *)(a1 + 520), v7);
+              return StateMgr__changeState((_DWORD *)(a1 + 520), v7);
             }
           }
           else if ( (v8 & 0x80) == 0 )
           {
             v7 = 13248472;
-            return StateMgr::changeState((_DWORD *)(a1 + 520), v7);
+            return StateMgr__changeState((_DWORD *)(a1 + 520), v7);
           }
           Object_clampFieldPairsToMin(a1 + 564);
           v7 = 13248504;
-          return StateMgr::changeState((_DWORD *)(a1 + 520), v7);
+          return StateMgr__changeState((_DWORD *)(a1 + 520), v7);
         }
       }
     }
@@ -40994,7 +40994,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( ((*(_DWORD *)(a1 + 100) | *(_DWORD *)(a1 + 92)) & 0x40) == 0 )
         {
           v4 = 13248472;
-          return StateMgr::changeState((_DWORD *)(a1 + 520), v4);
+          return StateMgr__changeState((_DWORD *)(a1 + 520), v4);
         }
       }
       else
@@ -41002,7 +41002,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (v3 & 0x80) == 0 )
         {
           v4 = 13248472;
-          return StateMgr::changeState((_DWORD *)(a1 + 520), v4);
+          return StateMgr__changeState((_DWORD *)(a1 + 520), v4);
         }
         result = *(_DWORD *)(a1 + 100) | *(_DWORD *)(a1 + 92);
         if ( (result & 0x80) == 0 )
@@ -41010,7 +41010,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       Object_clampFieldPairsToMin(a1 + 564);
       v4 = 13248504;
-      return StateMgr::changeState((_DWORD *)(a1 + 520), v4);
+      return StateMgr__changeState((_DWORD *)(a1 + 520), v4);
     }
     return result;
   }
@@ -41066,7 +41066,7 @@ static inline unsigned int uxtb16(unsigned int x)
       Table_getEntryById(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 520), 13248632);
+      return StateMgr__changeState((_DWORD *)(a1 + 520), 13248632);
     }
     return result;
   }
@@ -41273,7 +41273,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(v27 + 32) = v26;
           *(_BYTE *)(v27 + 64) |= 0x10u;
           StateMgr_resetAndMaybeChange(a1 + 564);
-          StateMgr::changeState((_DWORD *)(a1 + 520), 13248824);
+          StateMgr__changeState((_DWORD *)(a1 + 520), 13248824);
           return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_COURSE_IN", 0);
         }
         return result;
@@ -41334,7 +41334,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(v53 + 32) = v52;
       *(_BYTE *)(v53 + 64) |= 0x10u;
       v54 = 13248728;
-      return StateMgr::changeState((_DWORD *)(a1 + 520), v54);
+      return StateMgr__changeState((_DWORD *)(a1 + 520), v54);
     }
     result = sub_60502D80(a1 + 564);
     v28 = result == 0;
@@ -41410,7 +41410,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(float *)(v104 + 28) = v101 + 10000.0;
           *(_DWORD *)(v104 + 32) = v103;
           *(_BYTE *)(v104 + 64) |= 0x10u;
-          StateMgr::changeState((_DWORD *)(a1 + 520), 13248664);
+          StateMgr__changeState((_DWORD *)(a1 + 520), 13248664);
           return SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_COURSE_IN", 0);
         }
         if ( (result & 0x4000) != 0 )
@@ -41473,7 +41473,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(v79 + 32) = v78;
           *(_BYTE *)(v79 + 64) |= 0x10u;
           v54 = 13248696;
-          return StateMgr::changeState((_DWORD *)(a1 + 520), v54);
+          return StateMgr__changeState((_DWORD *)(a1 + 520), v54);
         }
       }
     }
@@ -41492,7 +41492,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !result )
     {
       StateMgr_resetAndMaybeChange(a1 + 564);
-      return StateMgr::changeState((_DWORD *)(a1 + 520), 13248824);
+      return StateMgr__changeState((_DWORD *)(a1 + 520), 13248824);
     }
     return result;
   }
@@ -41504,7 +41504,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604BEC04(int result)
   {
     if ( !*(_BYTE *)(result + 1606) )
-      return StateMgr::changeState((_DWORD *)(result + 520), 13248728);
+      return StateMgr__changeState((_DWORD *)(result + 520), 13248728);
     return result;
   }
 
@@ -41539,7 +41539,7 @@ static inline unsigned int uxtb16(unsigned int x)
       Table_getEntryById(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 520), 13248472);
+      return StateMgr__changeState((_DWORD *)(a1 + 520), 13248472);
     }
     return result;
   }
@@ -41551,7 +41551,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604BED04(int result)
   {
     if ( !*(_BYTE *)(result + 1606) )
-      return StateMgr::changeState((_DWORD *)(result + 520), 13248792);
+      return StateMgr__changeState((_DWORD *)(result + 520), 13248792);
     return result;
   }
 
@@ -41584,7 +41584,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       sub_604BFE2C(a1);
-      return StateMgr::changeState((_DWORD *)(a1 + 520), 13248856);
+      return StateMgr__changeState((_DWORD *)(a1 + 520), 13248856);
     }
     return result;
   }
@@ -41627,7 +41627,7 @@ static inline unsigned int uxtb16(unsigned int x)
       Table_getEntryById(*(_DWORD **)(a1 + 4), 6u, 0);
       v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 520), 13248472);
+      return StateMgr__changeState((_DWORD *)(a1 + 520), 13248472);
     }
     return result;
   }
@@ -42264,7 +42264,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       while ( (signed int)v2 < a1[8888] );
     }
-    StateMgr::execute(a1 + 130);
+    StateMgr__execute(a1 + 130);
     sub_60507028(a1 + 8895);
     sub_60507028(a1 + 9800);
     sub_60507028(a1 + 10705);
@@ -43351,7 +43351,7 @@ static inline unsigned int uxtb16(unsigned int x)
           return result;
         v3 = 13249548;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     return result;
   }
@@ -43462,7 +43462,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( getIndexTableBase(MEMORY[0xC8996C]) == 51 )
     {
       v2 = 13249548;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v2);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v2);
     }
     result = *(unsigned __int8 *)(a1 + 14162);
     v4 = result == 0;
@@ -43477,7 +43477,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !result )
       {
         v2 = 13249580;
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v2);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v2);
       }
     }
     return result;
@@ -43506,7 +43506,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = hasIndexTable(MEMORY[0xC8996C]);
       if ( !result )
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13249580);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13249580);
     }
     return result;
   }
@@ -43573,7 +43573,7 @@ static inline unsigned int uxtb16(unsigned int x)
       && !*(_BYTE *)(result + 13902)
       && !*(_BYTE *)(result + 13903) )
     {
-      return StateMgr::changeState((_DWORD *)(result + 24), 13249612);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13249612);
     }
     return result;
   }
@@ -43639,18 +43639,18 @@ static inline unsigned int uxtb16(unsigned int x)
         v4 = 13249740;
       else
         v4 = 13249772;
-      return StateMgr::changeState(v3, v4);
+      return StateMgr__changeState(v3, v4);
     }
     if ( *(_BYTE *)(MEMORY[0xC89E18] + 156940) )
     {
       v3 = (_DWORD *)(result + 24);
       v4 = 13249932;
-      return StateMgr::changeState(v3, v4);
+      return StateMgr__changeState(v3, v4);
     }
     if ( *(_BYTE *)(MEMORY[0xC89E18] + 254212) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13249932);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13249932);
     if ( *(_BYTE *)(result + 14163) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13249644);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13249644);
     return result;
   }
 
@@ -43731,7 +43731,7 @@ static inline unsigned int uxtb16(unsigned int x)
                         {
                           result = *(unsigned __int8 *)(a1 + 13903);
                           if ( !*(_BYTE *)(a1 + 13903) )
-                            return StateMgr::changeState((_DWORD *)(a1 + 24), 13249676);
+                            return StateMgr__changeState((_DWORD *)(a1 + 24), 13249676);
                         }
                       }
                     }
@@ -43790,11 +43790,11 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else if ( (*v3)++ >= 19 )
     {
-      StateMgr::changeState((_DWORD *)(a1 + 24), 13249708);
+      StateMgr__changeState((_DWORD *)(a1 + 24), 13249708);
     }
     result = *(unsigned __int8 *)(MEMORY[0xC89E18] + 254212);
     if ( *(_BYTE *)(MEMORY[0xC89E18] + 254212) )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13250156);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13250156);
     return result;
   }
 
@@ -43876,7 +43876,7 @@ static inline unsigned int uxtb16(unsigned int x)
                         {
                           result = *(unsigned __int8 *)(a1 + 13903);
                           if ( !*(_BYTE *)(a1 + 13903) )
-                            return StateMgr::changeState((_DWORD *)(a1 + 24), 13249612);
+                            return StateMgr__changeState((_DWORD *)(a1 + 24), 13249612);
                         }
                       }
                     }
@@ -43929,7 +43929,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604C2DC0(int result)
   {
     if ( !*(_BYTE *)(result + 5096) )
-      return StateMgr::changeState((_DWORD *)(result + 24), *(_DWORD *)(result + 40));
+      return StateMgr__changeState((_DWORD *)(result + 24), *(_DWORD *)(result + 40));
     return result;
   }
 
@@ -43969,7 +43969,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604C2E48(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13249740);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13249740);
   }
 
 /* ============================================================================
@@ -44048,7 +44048,7 @@ static inline unsigned int uxtb16(unsigned int x)
       && !*(_BYTE *)(result + 13903) )
     {
       if ( *(_BYTE *)(result + 14188) )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13249836);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13249836);
     }
     return result;
   }
@@ -44135,7 +44135,7 @@ static inline unsigned int uxtb16(unsigned int x)
       && !*(_BYTE *)(result + 13911)
       && !*(_BYTE *)(result + 13912) )
     {
-      return StateMgr::changeState((_DWORD *)(result + 24), 13249868);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13249868);
     }
     return result;
   }
@@ -44229,13 +44229,13 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_60502C04(v3, &dword_60B02F58, 1);
         v4 = 13249772;
       }
-      StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+      StateMgr__changeState((_DWORD *)(a1 + 24), v4);
       *(_BYTE *)(a1 + 14178) = 0;
       return 14178;
     }
     else if ( *(_BYTE *)(a1 + 14178) )
     {
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13249964);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13249964);
     }
     else
     {
@@ -44337,7 +44337,7 @@ static inline unsigned int uxtb16(unsigned int x)
       && !*(_BYTE *)(result + 13911)
       && !*(_BYTE *)(result + 13912) )
     {
-      return StateMgr::changeState((_DWORD *)(result + 24), 13249612);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13249612);
     }
     return result;
   }
@@ -44376,9 +44376,9 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604C3AF8(int result)
   {
     if ( *(_BYTE *)(result + 14166) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13250156);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13250156);
     if ( *(_BYTE *)(result + 14170) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13249804);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13249804);
     return result;
   }
 
@@ -44431,7 +44431,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_60502C04(a1 + 4056, &dword_60B02F5C, 1);
         v2 = 13249772;
       }
-      StateMgr::changeState((_DWORD *)(a1 + 24), v2);
+      StateMgr__changeState((_DWORD *)(a1 + 24), v2);
       *(_BYTE *)(a1 + 14178) = 0;
       return 14178;
     }
@@ -44472,7 +44472,7 @@ static inline unsigned int uxtb16(unsigned int x)
                           {
                             result = *(unsigned __int8 *)(a1 + 13903);
                             if ( !*(_BYTE *)(a1 + 13903) )
-                              return StateMgr::changeState((_DWORD *)(a1 + 24), 13249996);
+                              return StateMgr__changeState((_DWORD *)(a1 + 24), 13249996);
                           }
                         }
                       }
@@ -44510,7 +44510,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_60502C04(a1 + 4056, &dword_60B02F60, 1);
         v2 = 13249772;
       }
-      StateMgr::changeState((_DWORD *)(a1 + 24), v2);
+      StateMgr__changeState((_DWORD *)(a1 + 24), v2);
       *(_BYTE *)(a1 + 14178) = 0;
       return 14178;
     }
@@ -44521,7 +44521,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         result = *(_DWORD *)(*(_DWORD *)(MEMORY[0xCCF448] + 220) + 20);
         if ( *(float *)(result + 284) == MEMORY[0xB3B944] && *(float *)(result + 288) == MEMORY[0xB3B948] )
-          return StateMgr::changeState((_DWORD *)(a1 + 24), 13250028);
+          return StateMgr__changeState((_DWORD *)(a1 + 24), 13250028);
       }
     }
     return result;
@@ -44572,7 +44572,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_60502C04(a1 + 4056, &dword_60B02F64, 1);
         v2 = 13249772;
       }
-      StateMgr::changeState((_DWORD *)(a1 + 24), v2);
+      StateMgr__changeState((_DWORD *)(a1 + 24), v2);
       *(_BYTE *)(a1 + 14178) = 0;
       return 14178;
     }
@@ -44613,7 +44613,7 @@ static inline unsigned int uxtb16(unsigned int x)
                           {
                             result = *(unsigned __int8 *)(a1 + 13903);
                             if ( !*(_BYTE *)(a1 + 13903) )
-                              return StateMgr::changeState((_DWORD *)(a1 + 24), 13249868);
+                              return StateMgr__changeState((_DWORD *)(a1 + 24), 13249868);
                           }
                         }
                       }
@@ -44663,7 +44663,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604C8318(a1);
     result = *(unsigned __int8 *)(a1 + 5096);
     if ( !*(_BYTE *)(a1 + 5096) )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 40));
+      return StateMgr__changeState((_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 40));
     return result;
   }
 
@@ -44674,7 +44674,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604C40D4(int a1)
   {
     *(_DWORD *)(a1 + 40) = 13250124;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13250060);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13250060);
   }
 
 /* ============================================================================
@@ -44724,7 +44724,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604C8318(a1);
     result = *(unsigned __int8 *)(a1 + 13903);
     if ( !*(_BYTE *)(a1 + 13903) )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 44));
+      return StateMgr__changeState((_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 44));
     return result;
   }
 
@@ -44814,7 +44814,7 @@ static inline unsigned int uxtb16(unsigned int x)
         else
           v2 = 13249548;
       }
-      return (_BYTE *)StateMgr::changeState(v1, v2);
+      return (_BYTE *)StateMgr__changeState(v1, v2);
     }
     return result;
   }
@@ -44836,7 +44836,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604C44C4(int result)
   {
     if ( !*(_BYTE *)(result + 14166) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13249580);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13249580);
     return result;
   }
 
@@ -44877,7 +44877,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604C4588(int result)
   {
     if ( !*(_BYTE *)(MEMORY[0xC89E18] + 254212) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13249676);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13249676);
     return result;
   }
 
@@ -44948,7 +44948,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604C46E4(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13250188);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13250188);
   }
 
 /* ============================================================================
@@ -45491,7 +45491,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v20; // r3
   
     sub_604C5C04();
-    StateMgr::execute((_DWORD *)(a1 + 24));
+    StateMgr__execute((_DWORD *)(a1 + 24));
     sub_6050DB10(a1 + 14192);
     sub_6050DB10(a1 + 17796);
     sub_6050DB10(a1 + 21400);
@@ -47163,7 +47163,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604C8A1C(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13250968);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13250968);
   }
 
 /* ============================================================================
@@ -47240,7 +47240,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_607F6ABC(MEMORY[0xCC62E4]);
     if ( !result )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251000);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251000);
     return result;
   }
 
@@ -47267,7 +47267,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 4u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251032);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251032);
     return result;
   }
 
@@ -47302,7 +47302,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502C84(a1 + 3800, &v4, 0);
     if ( *(_DWORD *)(a1 + 615700) < 0xAu )
       v2 = *(_DWORD *)(a1 + 615700);
-    return StateMgr::changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254104);
+    return StateMgr__changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254104);
   }
 
 /* ============================================================================
@@ -47351,7 +47351,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           v6 = 13251096;
         }
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v6);
       }
     }
     return result;
@@ -47412,7 +47412,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v1 != 13 );
     *(_DWORD *)(v3 + 94176) = 256;
-    return StateMgr::changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254200);
+    return StateMgr__changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254200);
   }
 
 /* ============================================================================
@@ -47485,7 +47485,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 13251864;
     else
       v5 = 13251032;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
   }
 
 /* ============================================================================
@@ -47520,7 +47520,7 @@ static inline unsigned int uxtb16(unsigned int x)
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
     if ( *(_DWORD *)(a1 + 615700) < 0xAu )
       v2 = *(_DWORD *)(a1 + 615700);
-    return StateMgr::changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254136);
+    return StateMgr__changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254136);
   }
 
 /* ============================================================================
@@ -47544,13 +47544,13 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v4 <= 6 && ((1 << v4) & 0x68) != 0 || *(_BYTE *)(v3 + 94191) )
     {
       v5 = 13251128;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
     }
     result = *(unsigned __int8 *)(a1 + 52644 * v2 + 94194);
     if ( !result )
     {
       v5 = 13251032;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
     }
     return result;
   }
@@ -47604,7 +47604,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(a1 + 615720) = 1;
         v4 = 13251544;
   LABEL_9:
-        result = StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+        result = StateMgr__changeState((_DWORD *)(a1 + 24), v4);
         break;
       default:
         return result;
@@ -47633,7 +47633,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2 >= 0xA )
       v2 = 0;
     sub_604D23A8(a1 + 52644 * v2 + 89248, 6);
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13251032);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13251032);
   }
 
 /* ============================================================================
@@ -47684,7 +47684,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(a1 + 615720) )
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13251032);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13251032);
       else
         return sub_604D3074((_DWORD *)a1);
     }
@@ -47707,7 +47707,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604C96AC(int result)
   {
     if ( *(_DWORD *)(MEMORY[0xCC6E04] + 24) != 2 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13251256);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13251256);
     return result;
   }
 
@@ -47748,7 +47748,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 6u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251320);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251320);
     return result;
   }
 
@@ -47789,7 +47789,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604C9830(int result)
   {
     if ( *(_DWORD *)(result + 27992) != 1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13251352);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13251352);
     return result;
   }
 
@@ -47799,7 +47799,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604C9858(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 21888), 13254552);
+    return StateMgr__changeState((_DWORD *)(a1 + 21888), 13254552);
   }
 
 /* ============================================================================
@@ -47920,10 +47920,10 @@ static inline unsigned int uxtb16(unsigned int x)
           v12 = 0;
   LABEL_28:
         *(_BYTE *)(v2 + 529) = sub_6040137C(v14, v13, v12);
-        result = StateMgr::changeState(v5 - 153919, 13251224);
+        result = StateMgr__changeState(v5 - 153919, 13251224);
         break;
       case 5:
-        result = StateMgr::changeState(a1 + 6, 13251384);
+        result = StateMgr__changeState(a1 + 6, 13251384);
         break;
       default:
         return result;
@@ -47952,7 +47952,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 40), 6u, &v5, 0);
     if ( *(_DWORD *)(a1 + 615700) < 0xAu )
       v2 = *(_DWORD *)(a1 + 615700);
-    return StateMgr::changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254392);
+    return StateMgr__changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254392);
   }
 
 /* ============================================================================
@@ -47965,7 +47965,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 4u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251416);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251416);
     return result;
   }
 
@@ -47987,7 +47987,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = *(_DWORD *)(a1 + 615700);
     if ( v3 >= 0xA )
       v3 = 0;
-    CurrentState = StateMgr::getCurrentState(a1 + 52644 * v3 + 89268);
+    CurrentState = StateMgr__getCurrentState(a1 + 52644 * v3 + 89268);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCA3DB8] + 8))();
     if ( v6 == result )
@@ -47995,7 +47995,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (unsigned int)*v4 < 0xA )
         v2 = *v4;
       sub_604D23A8(a1 + 52644 * v2 + 89248, 7);
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251032);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251032);
     }
     return result;
   }
@@ -48026,7 +48026,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = 12321336;
     v10 = "CouseSelectVSRandom_World_00";
     MessageQueue_postType3(&v9, a1[9725], 1);
-    StateMgr::changeState(a1 + 8813, 13254808);
+    StateMgr__changeState(a1 + 8813, 13254808);
     v5 = sub_604DABE0(3u);
     v6 = a1 + 10;
     v9 = 12321336;
@@ -48067,7 +48067,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v2 + 512) = 0;
       v4 = 13251224;
     }
-    return StateMgr::changeState(a1 + 6, v4);
+    return StateMgr__changeState(a1 + 6, v4);
   }
 
 /* ============================================================================
@@ -48091,7 +48091,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 40), 6u, &v5, 0);
     if ( *(_DWORD *)(a1 + 615700) < 0xAu )
       v2 = *(_DWORD *)(a1 + 615700);
-    return StateMgr::changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254392);
+    return StateMgr__changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254392);
   }
 
 /* ============================================================================
@@ -48104,7 +48104,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 4u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251512);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251512);
     return result;
   }
 
@@ -48126,7 +48126,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = *(_DWORD *)(a1 + 615700);
     if ( v3 >= 0xA )
       v3 = 0;
-    CurrentState = StateMgr::getCurrentState(a1 + 52644 * v3 + 89268);
+    CurrentState = StateMgr__getCurrentState(a1 + 52644 * v3 + 89268);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCA3DB8] + 8))();
     if ( v6 == result )
@@ -48134,7 +48134,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (unsigned int)*v4 < 0xA )
         v2 = *v4;
       sub_604D23A8(a1 + 52644 * v2 + 89248, 8);
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251032);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251032);
     }
     return result;
   }
@@ -48159,7 +48159,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 5880, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251608);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251608);
     return result;
   }
 
@@ -48170,7 +48170,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604CA0A8(int result)
   {
     if ( !*(_BYTE *)(result + 4842) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13251608);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13251608);
     return result;
   }
 
@@ -48209,7 +48209,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       sub_6054555C(a1 + 55740, *(_DWORD *)(a1 + 21864));
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251640);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251640);
     }
     return result;
   }
@@ -48255,7 +48255,7 @@ static inline unsigned int uxtb16(unsigned int x)
       case 9:
         v1 = 13252120;
   LABEL_7:
-        result = (_DWORD *)StateMgr::changeState(result + 6, v1);
+        result = (_DWORD *)StateMgr__changeState(result + 6, v1);
         break;
       default:
         return result;
@@ -48313,7 +48313,7 @@ static inline unsigned int uxtb16(unsigned int x)
         CourseSelectVS_Score_00_ref((int)a1);
       v5 = 13251192;
     }
-    return StateMgr::changeState(a1 + 6, v5);
+    return StateMgr__changeState(a1 + 6, v5);
   }
 
 /* ============================================================================
@@ -48361,7 +48361,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251000);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251000);
     return result;
   }
 
@@ -48421,7 +48421,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251000);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251000);
     return result;
   }
 
@@ -48492,13 +48492,13 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( !v3 )
           return result;
-        return StateMgr::changeState(a1 + 6, 13251832);
+        return StateMgr__changeState(a1 + 6, 13251832);
       }
       v6 = sub_6047F178((int)(a1 + 960), dword_60CA4D74);
     }
     result = !v6;
     if ( (v3 & result) != 0 )
-      return StateMgr::changeState(a1 + 6, 13251832);
+      return StateMgr__changeState(a1 + 6, 13251832);
     return result;
   }
 
@@ -48538,7 +48538,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = *(_DWORD *)(a1 + 615700);
     v3 = a1 + 52644 * v2;
     *(_DWORD *)(v3 + 94176) = 256;
-    return StateMgr::changeState((_DWORD *)(v3 + 89268), 13254168);
+    return StateMgr__changeState((_DWORD *)(v3 + 89268), 13254168);
   }
 
 /* ============================================================================
@@ -48587,7 +48587,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           v6 = 13251096;
         }
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v6);
       }
     }
     return result;
@@ -48648,7 +48648,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v1 != 13 );
     *(_DWORD *)(v3 + 94176) = 256;
-    return StateMgr::changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254200);
+    return StateMgr__changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254200);
   }
 
 /* ============================================================================
@@ -48711,7 +48711,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
       IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
-      return (_BYTE *)StateMgr::changeState((_DWORD *)(a1 + 24), 13251832);
+      return (_BYTE *)StateMgr__changeState((_DWORD *)(a1 + 24), 13251832);
     }
     return result;
   }
@@ -48772,7 +48772,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v2 != 13 );
     *(_DWORD *)(v4 + 94176) = 256;
-    return StateMgr::changeState((_DWORD *)(v10 + 52644 * v3 + 89268), 13254200);
+    return StateMgr__changeState((_DWORD *)(v10 + 52644 * v3 + 89268), 13254200);
   }
 
 /* ============================================================================
@@ -48789,7 +48789,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
       IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251960);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251960);
     }
     return result;
   }
@@ -48849,7 +48849,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v1 != 13 );
     *(_DWORD *)(v3 + 94176) = 256;
-    return StateMgr::changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254200);
+    return StateMgr__changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254200);
   }
 
 /* ============================================================================
@@ -48866,7 +48866,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
       IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13251960);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13251960);
     }
     return result;
   }
@@ -48989,7 +48989,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v2 != 13 );
     *(_DWORD *)(v4 + 94176) = 256;
-    return StateMgr::changeState((_DWORD *)(v10 + 52644 * v3 + 89268), 13254200);
+    return StateMgr__changeState((_DWORD *)(v10 + 52644 * v3 + 89268), 13254200);
   }
 
 /* ============================================================================
@@ -49006,7 +49006,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
       IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13252056);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13252056);
     }
     return result;
   }
@@ -49066,7 +49066,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v1 != 13 );
     *(_DWORD *)(v3 + 94176) = 256;
-    return StateMgr::changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254200);
+    return StateMgr__changeState((_DWORD *)(a1 + 52644 * v2 + 89268), 13254200);
   }
 
 /* ============================================================================
@@ -49083,7 +49083,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr_resetAndMaybeChange(a1 + 3800);
       *(_WORD *)(a1 + 4852) = 0;
       IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13252056);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13252056);
     }
     return result;
   }
@@ -49169,7 +49169,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604CB6A0(int result)
   {
     if ( *(_DWORD *)(result + 89212) != 9 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13251640);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13251640);
     return result;
   }
 
@@ -51294,7 +51294,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 20240);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 3800);
       Table_getEntryById(a1 + 40, 14, 0);
       v3 = 10;
@@ -51307,7 +51307,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           if ( *v5 )
           {
-            StateMgr::execute((_DWORD *)v6);
+            StateMgr__execute((_DWORD *)v6);
             sub_6050229C(v4);
           }
           Table_getEntryById(v6 + 40, 14, 0);
@@ -51320,14 +51320,14 @@ static inline unsigned int uxtb16(unsigned int x)
       while ( v3 );
       if ( *(_BYTE *)(a1 + 21904) )
       {
-        StateMgr::execute((_DWORD *)(a1 + 21888));
+        StateMgr__execute((_DWORD *)(a1 + 21888));
         sub_6050229C(a1 + 25508);
         sub_6050A8A4(a1 + 28016);
         Table_getEntryById(a1 + 21908, 14, 0);
       }
       if ( *(_BYTE *)(a1 + 35268) )
       {
-        StateMgr::execute((_DWORD *)(a1 + 35252));
+        StateMgr__execute((_DWORD *)(a1 + 35252));
         sub_6050229C(a1 + 38924);
         sub_6050A8A4(a1 + 48512);
         Table_getEntryById(a1 + 35276, 14, 0);
@@ -51792,7 +51792,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v5 >= 0xA )
       v5 = 0;
     v6 = &a1[13161 * v5];
-    StateMgr::changeState(v6 + 22317, 13254072);
+    StateMgr__changeState(v6 + 22317, 13254072);
     v7 = v6[23224];
     if ( v7 )
     {
@@ -52153,7 +52153,7 @@ static inline unsigned int uxtb16(unsigned int x)
       default:
         v30 = 13254104;
   LABEL_117:
-        result = StateMgr::changeState((_DWORD *)(a1 + 20), v30);
+        result = StateMgr__changeState((_DWORD *)(a1 + 20), v30);
         break;
     }
     return result;
@@ -52178,7 +52178,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v5 >= 0xA )
       v5 = 0;
     v6 = &a1[13161 * v5];
-    StateMgr::changeState(v6 + 22317, 13254072);
+    StateMgr__changeState(v6 + 22317, 13254072);
     v7 = v6[23224];
     if ( v7 )
     {
@@ -52524,7 +52524,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(a1 + 615720) = 1;
         v4 = 13251544;
   LABEL_8:
-        StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+        StateMgr__changeState((_DWORD *)(a1 + 24), v4);
         sub_604D1A84(a1);
         v2 = 1;
         break;
@@ -52633,7 +52633,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
         v9 = 13251832;
     }
-    return StateMgr::changeState(v10, v9);
+    return StateMgr__changeState(v10, v9);
   }
 
 /* ============================================================================
@@ -52763,7 +52763,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v19 = 13251992;
   LABEL_32:
-    StateMgr::changeState((_DWORD *)(a1 + 24), v19);
+    StateMgr__changeState((_DWORD *)(a1 + 24), v19);
     return 1;
   }
 
@@ -52808,7 +52808,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v11 >= 0xA )
             v11 = 0;
           v12 = (_DWORD *)(a1 + 52644 * v11);
-          StateMgr::changeState(v12 + 22317, 13254168);
+          StateMgr__changeState(v12 + 22317, 13254168);
           if ( v12[35467] == 12 )
           {
             v12[35467] = -1;
@@ -52817,7 +52817,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           v6 = 13251768;
   LABEL_26:
-          StateMgr::changeState((_DWORD *)(a1 + 24), v6);
+          StateMgr__changeState((_DWORD *)(a1 + 24), v6);
           result = 1;
           break;
         case 2:
@@ -52827,7 +52827,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( v7 >= 0xA )
               v7 = 0;
             v8 = (_DWORD *)(a1 + 52644 * v7);
-            StateMgr::changeState(v8 + 22317, 13254168);
+            StateMgr__changeState(v8 + 22317, 13254168);
             if ( v8[35467] == 12 )
             {
               v8[35467] = -1;
@@ -52845,7 +52845,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( v9 >= 0xA )
               v9 = 0;
             v10 = (_DWORD *)(a1 + 52644 * v9);
-            StateMgr::changeState(v10 + 22317, 13254168);
+            StateMgr__changeState(v10 + 22317, 13254168);
             if ( v10[35467] == 12 )
             {
               v10[35467] = -1;
@@ -53200,7 +53200,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 615720) = 0;
       v4 = 13251544;
   LABEL_14:
-      StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+      StateMgr__changeState((_DWORD *)(a1 + 24), v4);
       return 1;
     }
     v5 = *(_DWORD *)(a1 + 20248);
@@ -53337,7 +53337,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 36) = 1;
     *(_DWORD *)(a1 + 6124) = 1;
     *(_DWORD *)(a1 + 6128) = 0;
-    StateMgr::changeState((_DWORD *)(a1 + 20), 13254520);
+    StateMgr__changeState((_DWORD *)(a1 + 20), 13254520);
     v6 = (_BYTE *)(a1 + 6144);
     if ( *(_BYTE *)(a1 + 6144) )
     {
@@ -53524,7 +53524,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = 13254200;
       v7 = (_DWORD *)(a1 + 20);
   LABEL_17:
-      StateMgr::changeState(v7, v6);
+      StateMgr__changeState(v7, v6);
       return sub_604D1A84(*v3);
     }
     v8 = *(_DWORD *)(a1 + 52216) | *(_DWORD *)(a1 + 52208);
@@ -53592,7 +53592,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 52620) = v4;
         v3 = 13254328;
       }
-      StateMgr::changeState((_DWORD *)(a1 + 20), v3);
+      StateMgr__changeState((_DWORD *)(a1 + 20), v3);
       return sub_604D1A84(*(_DWORD *)(a1 + 52608));
     }
     return result;
@@ -53679,7 +53679,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 52620) = v4;
         v3 = 13254328;
       }
-      StateMgr::changeState((_DWORD *)(a1 + 20), v3);
+      StateMgr__changeState((_DWORD *)(a1 + 20), v3);
       return sub_604D1A84(*(_DWORD *)(a1 + 52608));
     }
     return result;
@@ -53691,7 +53691,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604D4BB4(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13254072);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13254072);
   }
 
 /* ============================================================================
@@ -53765,7 +53765,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v4 = 13;
       }
       while ( v4 != 13 );
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254264);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254264);
     }
     return result;
   }
@@ -53805,7 +53805,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254296);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254296);
     return result;
   }
 
@@ -53834,7 +53834,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 52612) = 4;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254200);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254200);
     }
     return result;
   }
@@ -53899,7 +53899,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v4 = 13;
       }
       while ( v4 != 13 );
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254360);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254360);
     }
     return result;
   }
@@ -53947,7 +53947,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254072);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254072);
     return result;
   }
 
@@ -53975,7 +53975,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254424);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254424);
     return result;
   }
 
@@ -54002,7 +54002,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254072);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254072);
     return result;
   }
 
@@ -54039,7 +54039,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254104);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254104);
     return result;
   }
 
@@ -55033,7 +55033,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_WORD *)(a1 + 4952) = 0;
         IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3940));
         *v3 = 256;
-        StateMgr::changeState((_DWORD *)(a1 + 20), 13254072);
+        StateMgr__changeState((_DWORD *)(a1 + 20), 13254072);
         return 1;
       }
     }
@@ -55459,7 +55459,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 6124) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254488);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254488);
     }
     return result;
   }
@@ -55511,7 +55511,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     if ( sub_60502D80(a1 + 3640) || *(_BYTE *)(a1 + 4686) )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254584);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254584);
     result = sub_604D79F4(a1);
     if ( result == 1 )
     {
@@ -55552,7 +55552,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_BYTE *)(*(_DWORD *)(a1 + 3632) + 64) &= ~1u;
           *(_BYTE *)(*(_DWORD *)(a1 + 3636) + 64) &= ~1u;
           *(_BYTE *)(a1 + 4694) = 0;
-          return StateMgr::changeState((_DWORD *)(a1 + 20), 13254616);
+          return StateMgr__changeState((_DWORD *)(a1 + 20), 13254616);
         }
       }
     }
@@ -55566,7 +55566,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604D74A4(int result)
   {
     if ( !*(_BYTE *)(result + 4682) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13254552);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13254552);
     return result;
   }
 
@@ -55588,7 +55588,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604D74F8(int result)
   {
     if ( !*(_BYTE *)(result + 4682) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13254680);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13254680);
     return result;
   }
 
@@ -55616,7 +55616,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254488);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254488);
     return result;
   }
 
@@ -55649,7 +55649,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_DWORD *)(a1 + 6124) = *(_DWORD *)(a1 + 6128);
       StateMgr_resetAndMaybeChange(a1 + 3640);
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254744);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254744);
     }
     return result;
   }
@@ -55739,7 +55739,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = 1;
       SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
       *(_DWORD *)(a1 + 6128) = 3;
-      StateMgr::changeState((_DWORD *)(a1 + 20), 13254712);
+      StateMgr__changeState((_DWORD *)(a1 + 20), 13254712);
       return v2;
     }
     if ( v3 == 1 )
@@ -55763,7 +55763,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6128) = 5;
     v4 = 13254648;
   LABEL_12:
-    StateMgr::changeState((_DWORD *)(a1 + 20), v4);
+    StateMgr__changeState((_DWORD *)(a1 + 20), v4);
     return 1;
   }
 
@@ -55792,7 +55792,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 6128) = 5;
           *(_DWORD *)(a1 + 4668) = 0;
           Object_clampFieldPairsToMin(a1 + 3640);
-          StateMgr::changeState((_DWORD *)(a1 + 20), 13254648);
+          StateMgr__changeState((_DWORD *)(a1 + 20), 13254648);
         }
         else
         {
@@ -55855,7 +55855,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
   LABEL_9:
           Object_clampFieldPairsToMin(a1 + 3640);
-          StateMgr::changeState((_DWORD *)(a1 + 20), 13254712);
+          StateMgr__changeState((_DWORD *)(a1 + 20), 13254712);
           return 1;
         }
         if ( *(_BYTE *)(a1 + 6144) )
@@ -55970,7 +55970,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 13254840;
     else
       v5 = 13254872;
-    return StateMgr::changeState((_DWORD *)(a1 + 20), v5);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), v5);
   }
 
 /* ============================================================================
@@ -56064,13 +56064,13 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( !v4 )
           return result;
-        return StateMgr::changeState(a1 + 5, 13254872);
+        return StateMgr__changeState(a1 + 5, 13254872);
       }
       v7 = sub_6047F178((int)(a1 + 933), dword_60CA4DF4);
     }
     result = !v7;
     if ( (v4 & result) != 0 )
-      return StateMgr::changeState(a1 + 5, 13254872);
+      return StateMgr__changeState(a1 + 5, 13254872);
     return result;
   }
 
@@ -56134,7 +56134,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604D81A0(int a1)
   {
     if ( sub_60502D80(a1 + 3692) || *(_BYTE *)(a1 + 4738) )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254904);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254904);
     if ( !SE_SYS_PAGE_ref_4D95CC(a1) )
       return sub_604D9B70(a1);
     *(_BYTE *)(a1 + 4746) = 0;
@@ -56158,7 +56158,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return result;
     }
     if ( !sub_60502D80(a1 + 3692) && !*(_BYTE *)(a1 + 4738) )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254936);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254936);
     result = *(_DWORD *)(a1 + 4720);
     if ( result == 3 )
     {
@@ -56192,7 +56192,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604D8314(int result)
   {
     if ( !*(_BYTE *)(result + 4734) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13254872);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13254872);
     return result;
   }
 
@@ -56233,7 +56233,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 40) = 2;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13254776);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13254776);
     }
     return result;
   }
@@ -56284,7 +56284,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(result + 4734) )
     {
       *(_DWORD *)(result + 40) = 1;
-      return StateMgr::changeState((_DWORD *)(result + 20), 13255032);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13255032);
     }
     return result;
   }
@@ -56322,7 +56322,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604D8564(int result)
   {
     if ( !*(_BYTE *)(result + 4734) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13254968);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13254968);
     return result;
   }
 
@@ -56366,7 +56366,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 5792, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13255160);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13255160);
     return result;
   }
 
@@ -56394,7 +56394,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604D86EC(int result)
   {
     if ( !*(_BYTE *)(result + 4734) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13255160);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13255160);
     return result;
   }
 
@@ -56475,7 +56475,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 13254840;
     else
       v5 = 13254872;
-    return StateMgr::changeState(a1 + 5, v5);
+    return StateMgr__changeState(a1 + 5, v5);
   }
 
 /* ============================================================================
@@ -56509,7 +56509,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 9332, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13255256);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13255256);
     return result;
   }
 
@@ -56537,7 +56537,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604D8A14(int result)
   {
     if ( !*(_BYTE *)(result + 4734) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13255256);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13255256);
     return result;
   }
 
@@ -56618,7 +56618,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 13254840;
     else
       v5 = 13254872;
-    return StateMgr::changeState(a1 + 5, v5);
+    return StateMgr__changeState(a1 + 5, v5);
   }
 
 /* ============================================================================
@@ -56923,7 +56923,7 @@ static inline unsigned int uxtb16(unsigned int x)
           Object_clampFieldPairsToMin(v3);
           v6 = 13255064;
   LABEL_25:
-          StateMgr::changeState((_DWORD *)(a1 + 20), v6);
+          StateMgr__changeState((_DWORD *)(a1 + 20), v6);
           return 1;
       }
     }
@@ -56962,7 +56962,7 @@ static inline unsigned int uxtb16(unsigned int x)
           SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_PAGE", 0, 1);
           v8 = 13255192;
   LABEL_16:
-          StateMgr::changeState((_DWORD *)(a1 + 20), v8);
+          StateMgr__changeState((_DWORD *)(a1 + 20), v8);
           return v2;
         }
         return v2;
@@ -57008,7 +57008,7 @@ static inline unsigned int uxtb16(unsigned int x)
         case 1:
           v3 = 13255000;
   LABEL_8:
-          StateMgr::changeState((_DWORD *)(a1 + 20), v3);
+          StateMgr__changeState((_DWORD *)(a1 + 20), v3);
           return 1;
         case 2:
           v2 = 1;
@@ -57032,7 +57032,7 @@ static inline unsigned int uxtb16(unsigned int x)
         default:
           return v2;
       }
-      StateMgr::changeState((_DWORD *)(a1 + 20), v4);
+      StateMgr__changeState((_DWORD *)(a1 + 20), v4);
     }
     return v2;
   }
@@ -57227,7 +57227,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4278] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4278] )
         {
           if ( _cxa_guard_acquire_0(13255348) )
@@ -57268,7 +57268,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13255352, MEMORY[0xCA4280], 3);
           MEMORY[0xCA4278] = 13255352;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4278];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -57400,7 +57400,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA42C4] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA42C4] )
         {
           if ( _cxa_guard_acquire_0(13255452) )
@@ -57441,7 +57441,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13255456, MEMORY[0xCA42CC], 5);
           MEMORY[0xCA42C4] = 13255456;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA42C4];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -57573,7 +57573,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4334] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4334] )
         {
           if ( _cxa_guard_acquire_0(13255552) )
@@ -57614,7 +57614,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13255556, MEMORY[0xCA433C], 4);
           MEMORY[0xCA4334] = 13255556;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4334];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -57746,7 +57746,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4394] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4394] )
         {
           if ( _cxa_guard_acquire_0(13255648) )
@@ -57787,7 +57787,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13255652, MEMORY[0xCA439C], 4);
           MEMORY[0xCA4394] = 13255652;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4394];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -57815,7 +57815,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA43F4] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA43F4] )
         {
           if ( _cxa_guard_acquire_0(13255796) )
@@ -57860,7 +57860,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13255800, MEMORY[0xCA43FC], 13);
           MEMORY[0xCA43F4] = 13255800;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA43F4];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -57992,7 +57992,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA44AC] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA44AC] )
         {
           if ( _cxa_guard_acquire_0(13255980) )
@@ -58037,7 +58037,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13255984, MEMORY[0xCA44B4], 9);
           MEMORY[0xCA44AC] = 13255984;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA44AC];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -58169,7 +58169,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4554] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4554] )
         {
           if ( _cxa_guard_acquire_0(13256816) )
@@ -58229,7 +58229,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13256820, MEMORY[0xCA455C], 49);
           MEMORY[0xCA4554] = 13256820;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4554];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -58361,7 +58361,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4938] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4938] )
         {
           if ( _cxa_guard_acquire_0(13257216) )
@@ -58408,7 +58408,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257220, MEMORY[0xCA4940], 13);
           MEMORY[0xCA4938] = 13257220;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4938];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -58540,7 +58540,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4A38] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4A38] )
         {
           if ( _cxa_guard_acquire_0(13257308) )
@@ -58581,7 +58581,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257312, MEMORY[0xCA4A40], 3);
           MEMORY[0xCA4A38] = 13257312;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4A38];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -58713,7 +58713,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4A6C] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4A6C] )
         {
           if ( _cxa_guard_acquire_0(13257352) )
@@ -58754,7 +58754,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257356, MEMORY[0xCA4A74], 2);
           MEMORY[0xCA4A6C] = 13257356;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4A6C];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -58782,7 +58782,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4A94] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4A94] )
         {
           if ( _cxa_guard_acquire_0(13257404) )
@@ -58823,7 +58823,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257408, MEMORY[0xCA4A9C], 2);
           MEMORY[0xCA4A94] = 13257408;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4A94];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -58955,7 +58955,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4AC8] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4AC8] )
         {
           if ( _cxa_guard_acquire_0(13257472) )
@@ -58996,7 +58996,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257476, MEMORY[0xCA4AD0], 3);
           MEMORY[0xCA4AC8] = 13257476;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4AC8];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -59128,7 +59128,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4B10] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4B10] )
         {
           if ( _cxa_guard_acquire_0(13257512) )
@@ -59169,7 +59169,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257516, MEMORY[0xCA4B18], 1);
           MEMORY[0xCA4B10] = 13257516;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4B10];
       }
       return *(_DWORD *)v3;
@@ -59197,7 +59197,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4B30] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4B30] )
         {
           if ( _cxa_guard_acquire_0(13257564) )
@@ -59238,7 +59238,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257568, MEMORY[0xCA4B38], 2);
           MEMORY[0xCA4B30] = 13257568;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4B30];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -59370,7 +59370,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4B68] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4B68] )
         {
           if ( _cxa_guard_acquire_0(13257632) )
@@ -59411,7 +59411,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257636, MEMORY[0xCA4B70], 4);
           MEMORY[0xCA4B68] = 13257636;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4B68];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -59439,7 +59439,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4BB4] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4BB4] )
         {
           if ( _cxa_guard_acquire_0(13257680) )
@@ -59480,7 +59480,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257684, MEMORY[0xCA4BBC], 1);
           MEMORY[0xCA4BB4] = 13257684;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4BB4];
       }
       return *(_DWORD *)v3;
@@ -59612,7 +59612,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4BD8] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4BD8] )
         {
           if ( _cxa_guard_acquire_0(13257760) )
@@ -59653,7 +59653,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257764, MEMORY[0xCA4BE0], 4);
           MEMORY[0xCA4BD8] = 13257764;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4BD8];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -59785,7 +59785,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4C34] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4C34] )
         {
           if ( _cxa_guard_acquire_0(13257868) )
@@ -59826,7 +59826,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257872, MEMORY[0xCA4C3C], 5);
           MEMORY[0xCA4C34] = 13257872;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4C34];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -59854,7 +59854,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA4CA4] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA4CA4] )
         {
           if ( _cxa_guard_acquire_0(13257960) )
@@ -59895,7 +59895,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13257964, MEMORY[0xCA4CAC], 4);
           MEMORY[0xCA4CA4] = 13257964;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA4CA4];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -60492,7 +60492,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604DE10C(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13258748);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13258748);
   }
 
 /* ============================================================================
@@ -60518,7 +60518,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13258780);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13258780);
     return result;
   }
 
@@ -60539,7 +60539,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DE1B8(int result)
   {
     if ( *(_BYTE *)(result + 3599) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13258812);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13258812);
     return result;
   }
 
@@ -60561,7 +60561,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DE20C(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 3552) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13258716);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13258716);
     return result;
   }
 
@@ -60725,7 +60725,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3596);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
@@ -61131,7 +61131,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604DEDC4(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13258932);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13258932);
   }
 
 /* ============================================================================
@@ -61227,7 +61227,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DEFC0(int result)
   {
     if ( *(_BYTE *)(result + 6296) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13258964);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13258964);
     return result;
   }
 
@@ -61299,7 +61299,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13259028);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13259028);
     return result;
   }
 
@@ -61336,7 +61336,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(_DWORD *)(result + 6292) - 119 < 0;
     *(_DWORD *)(result + 6292) = v1;
     if ( v2 == __OFSUB__(v1, 120) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13259156);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13259156);
     return result;
   }
 
@@ -61397,7 +61397,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v3 )
         v6 = 13259092;
       *(_DWORD *)(a1 + 40) = v6;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13259060);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13259060);
     }
     v7 = *(_DWORD *)(a1 + 5676);
     result = a1 + 3592;
@@ -61406,14 +61406,14 @@ static inline unsigned int uxtb16(unsigned int x)
       *v4 = 0;
       Object_clampFieldPairsToMin(result);
       *(_DWORD *)(a1 + 40) = 13259092;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13259060);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13259060);
     }
     if ( (v7 & 0x2000) != 0 )
     {
       *v4 = dword_60B02FCC[*(_DWORD *)(a1 + 6288)];
       Object_clampFieldPairsToMin(result);
       *(_DWORD *)(a1 + 40) = 13259188;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13259060);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13259060);
     }
     if ( v3 == 3 )
     {
@@ -61456,7 +61456,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DF3A4(int result)
   {
     if ( !*(_BYTE *)(result + 4632) )
-      return StateMgr::changeState((_DWORD *)(result + 24), *(_DWORD *)(result + 40));
+      return StateMgr__changeState((_DWORD *)(result + 24), *(_DWORD *)(result + 40));
     return result;
   }
 
@@ -61481,7 +61481,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13259124);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13259124);
     return result;
   }
 
@@ -61632,7 +61632,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13259268);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13259268);
     return result;
   }
 
@@ -61666,7 +61666,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 7160);
     *(_DWORD *)(result + 7160) = v1 + 1;
     if ( v1 >= 299 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13259300);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13259300);
     return result;
   }
 
@@ -61686,7 +61686,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DF968(int result)
   {
     if ( *(_BYTE *)(MEMORY[0xCC62E4] + 112) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13259332);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13259332);
     return result;
   }
 
@@ -61763,7 +61763,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604DFBA0(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13259440);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13259440);
   }
 
 /* ============================================================================
@@ -61917,7 +61917,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13259472);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13259472);
     return result;
   }
 
@@ -61954,7 +61954,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_6050A95C(*(_DWORD *)(a1 + 4 * *(unsigned __int8 *)(a1 + 4075) + 4060));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13259504);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13259504);
     return result;
   }
 
@@ -61974,7 +61974,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604DFFE4(int result)
   {
     if ( (*(_BYTE *)(result + 3613) & 0x20) != 0 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13259536);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13259536);
     return result;
   }
 
@@ -62003,7 +62003,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_6050A8AC(*(_DWORD *)(a1 + 4 * *(unsigned __int8 *)(a1 + 4075) + 4060));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13259568);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13259568);
     return result;
   }
 
@@ -62035,7 +62035,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604E00BC(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 3552) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13259408);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13259408);
     return result;
   }
 
@@ -62214,7 +62214,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 4072);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050A8A4(*(_DWORD *)(a1 + 4060));
       sub_6050A8A4(*(_DWORD *)(a1 + 4064));
       return Table_getEntryById(a1 + 40, 14, 0);
@@ -62622,7 +62622,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     sub_604E2228(a1);
     sub_6047572C((int)(a1 + 10), (_DWORD *)0xCA53F4, a1[1431], 0xEu, 0);
-    return StateMgr::changeState(a1 + 6, 13260124);
+    return StateMgr__changeState(a1 + 6, 13260124);
   }
 
 /* ============================================================================
@@ -62646,7 +62646,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13260156);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13260156);
     return result;
   }
 
@@ -62789,7 +62789,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v4 <= 0 )
       {
         if ( v8 != 1 )
-          return StateMgr::changeState((_DWORD *)(a1 + 24), 13260188);
+          return StateMgr__changeState((_DWORD *)(a1 + 24), 13260188);
   LABEL_15:
         v9 = v4 == 0;
         if ( !v4 )
@@ -62801,7 +62801,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v10 = 0;
           *(_BYTE *)(MEMORY[0xC99DD4] + 72 * v10 + 323) = 1;
         }
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13260188);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13260188);
       }
     }
     else if ( result >= 0 )
@@ -62881,7 +62881,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13260092);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13260092);
     return result;
   }
 
@@ -63122,7 +63122,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 5746);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_604E1E4C(a1);
       return Table_getEntryById(a1 + 40, 14, 0);
     }
@@ -63273,7 +63273,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_DWORD *)(a1 + 5724) < 4u )
       v1 = *(_DWORD *)(a1 + 5724);
     *(_DWORD *)(a1 + 4 * v1 + 3664) = 3;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13260092);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13260092);
   }
 
 /* ============================================================================
@@ -63537,7 +63537,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(result + 5736) = -1;
       *(_BYTE *)(result + 5746) = 1;
       *(_BYTE *)(result + 5745) = 0;
-      return StateMgr::changeState((_DWORD *)(result + 24), 13260092);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13260092);
     }
     return result;
   }
@@ -63809,7 +63809,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13260652;
       else
         v3 = 13260524;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     return result;
   }
@@ -63845,7 +63845,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13260556);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13260556);
     return result;
   }
 
@@ -63893,7 +63893,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13260588;
       else
         v3 = 13260620;
-      return StateMgr::changeState(v2, v3);
+      return StateMgr__changeState(v2, v3);
     }
     return result;
   }
@@ -63919,7 +63919,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = result[5129] - 1;
     result[5129] = v1;
     if ( !v1 || (result[4624] & 0x2000) != 0 )
-      return (_DWORD *)StateMgr::changeState(result + 6, 13260620);
+      return (_DWORD *)StateMgr__changeState(result + 6, 13260620);
     return result;
   }
 
@@ -63951,7 +63951,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13260972;
       else
         v3 = 13260652;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     return result;
   }
@@ -63991,7 +63991,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13260684);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13260684);
     return result;
   }
 
@@ -64016,7 +64016,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 20516) - 1;
     *(_DWORD *)(result + 20516) = v1;
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13260716);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13260716);
     return result;
   }
 
@@ -64133,7 +64133,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v13 = 0;
       v5[64] = v13;
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13260812);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13260812);
   }
 
 /* ============================================================================
@@ -64157,7 +64157,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 20516) - 1;
     *(_DWORD *)(result + 20516) = v1;
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13260780);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13260780);
     return result;
   }
 
@@ -64167,7 +64167,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604E3278(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13260812);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13260812);
   }
 
 /* ============================================================================
@@ -64191,7 +64191,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 20516) - 1;
     *(_DWORD *)(result + 20516) = v1;
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13260844);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13260844);
     return result;
   }
 
@@ -64246,7 +64246,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v6 = (_DWORD *)(result + 24);
           if ( !v5 )
             v3[78] = v4;
-          return StateMgr::changeState(v6, 13260876);
+          return StateMgr__changeState(v6, 13260876);
         }
       }
     }
@@ -64274,7 +64274,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 20516) - 1;
     *(_DWORD *)(result + 20516) = v1;
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13260908);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13260908);
     return result;
   }
 
@@ -64299,7 +64299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = result[5129] - 1;
     result[5129] = v1;
     if ( !v1 || (result[4624] & 0x2000) != 0 )
-      return (_DWORD *)StateMgr::changeState(result + 6, 13260940);
+      return (_DWORD *)StateMgr__changeState(result + 6, 13260940);
     return result;
   }
 
@@ -64323,7 +64323,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13260972);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13260972);
     return result;
   }
 
@@ -64684,7 +64684,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 20520);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       Table_getEntryById(a1 + 40, 14, 0);
       sub_604E4418(a1);
       sub_604BAE44(a1 + 3608);
@@ -65220,7 +65220,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(a1 + 4508) )
     {
       *(_DWORD *)(a1 + 4552) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 4536), 13261260);
+      return StateMgr__changeState((_DWORD *)(a1 + 4536), 13261260);
     }
     return result;
   }
@@ -65249,7 +65249,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(a1 + 4510) )
     {
       *(_DWORD *)(a1 + 4552) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 4536), 13261292);
+      return StateMgr__changeState((_DWORD *)(a1 + 4536), 13261292);
     }
     return result;
   }
@@ -65316,7 +65316,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (*(_BYTE *)(v3 + 51) & 1) != 0 )
         {
           a1[1138] = 0;
-          return StateMgr::changeState(a1 + 1134, 13261228);
+          return StateMgr__changeState(a1 + 1134, 13261228);
         }
       }
       else
@@ -65921,7 +65921,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v9 = (_DWORD *)(a1 + 4536);
         v10 = 13261356;
   LABEL_27:
-        StateMgr::changeState(v9, v10);
+        StateMgr__changeState(v9, v10);
         break;
     }
     *(_BYTE *)(a1 + 20) = 1;
@@ -66070,7 +66070,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604E5F54(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 4536));
+    StateMgr__execute((_DWORD *)(a1 + 4536));
     ++*(_DWORD *)(a1 + 4552);
     sub_604E5FE0(a1);
     SE_SYS_SCORE_COUNT_ref(a1);
@@ -68624,7 +68624,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_DWORD *)(result + 544) != v1 )
     {
       *(_DWORD *)(result + 544) = v1;
-      return StateMgr::changeState((_DWORD *)(result + 4536), 13262244);
+      return StateMgr__changeState((_DWORD *)(result + 4536), 13262244);
     }
     return result;
   }
@@ -68649,7 +68649,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 2u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 4536), 13262212);
+      return StateMgr__changeState((_DWORD *)(a1 + 4536), 13262212);
     return result;
   }
 
@@ -68665,7 +68665,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v1 != *(_DWORD *)(MEMORY[0xC9A1F0] + 6500) && v1 < result[1139] )
     {
       result[136] = v1 + 1;
-      return (_DWORD *)StateMgr::changeState(result + 1134, 13262308);
+      return (_DWORD *)StateMgr__changeState(result + 1134, 13262308);
     }
     return result;
   }
@@ -68720,7 +68720,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 3u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 4536), 13262276);
+      return StateMgr__changeState((_DWORD *)(a1 + 4536), 13262276);
     return result;
   }
 
@@ -68749,7 +68749,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_DWORD *)(a1 + 4552) != v3 )
       {
         *result = v3;
-        return (_DWORD *)StateMgr::changeState((_DWORD *)(a1 + 4536), 13262372);
+        return (_DWORD *)StateMgr__changeState((_DWORD *)(a1 + 4536), 13262372);
       }
     }
     return result;
@@ -68775,7 +68775,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 5u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 4536), 13262340);
+      return StateMgr__changeState((_DWORD *)(a1 + 4536), 13262340);
     return result;
   }
 
@@ -68805,7 +68805,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v3 < result )
       {
         a1[1138] = v3 + 1;
-        return StateMgr::changeState(a1 + 1134, 13262436);
+        return StateMgr__changeState(a1 + 1134, 13262436);
       }
     }
     return result;
@@ -68861,7 +68861,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 4u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 4536), 13262404);
+      return StateMgr__changeState((_DWORD *)(a1 + 4536), 13262404);
     return result;
   }
 
@@ -69249,7 +69249,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = (_DWORD *)(a1 + 4536);
         v6 = 13262180;
   LABEL_10:
-        StateMgr::changeState(v5, v6);
+        StateMgr__changeState(v5, v6);
         break;
       default:
         break;
@@ -69421,7 +69421,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_6047DEC8(*(_DWORD **)(a1 + 4), *(_DWORD *)(*(_DWORD *)(a1 + 12) + 16), 1);
       }
     }
-    StateMgr::execute((_DWORD *)(a1 + 4536));
+    StateMgr__execute((_DWORD *)(a1 + 4536));
     sub_604E8C6C(a1);
     sub_604E9478(a1);
     return Table_getEntryById(*(_DWORD **)(a1 + 4), 0xEu, 0);
@@ -69491,7 +69491,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
       {
         ArrayOf5_lookupByIndex(v11, 0, (_DWORD *)&unk_60CA5E90 + 2 * v5 + 6, 0);
-        CurrentState = StateMgr::getCurrentState((int)(a1 + 1134));
+        CurrentState = StateMgr__getCurrentState((int)(a1 + 1134));
         v13 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         result = (*(int (**)(void))(MEMORY[0xCA5D24] + 8))();
         if ( v13 != result )
@@ -69668,7 +69668,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604EB488(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13262944);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13262944);
   }
 
 /* ============================================================================
@@ -69713,7 +69713,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(result + 15438) )
     {
       if ( *(_BYTE *)(result + 15439) )
-        return StateMgr::changeState((_DWORD *)(result + 20), 13262976);
+        return StateMgr__changeState((_DWORD *)(result + 20), 13262976);
     }
     return result;
   }
@@ -69735,11 +69735,11 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_DWORD *)(a1 + 16476) == result || (v3 = 1, *(_DWORD *)(a1 + 16480) == result) )
       {
         *(_DWORD *)(a1 + 23744) = v3;
-        return StateMgr::changeState((_DWORD *)(a1 + 20), 13263008);
+        return StateMgr__changeState((_DWORD *)(a1 + 20), 13263008);
       }
       else if ( *(_DWORD *)(a1 + 16484) == result )
       {
-        StateMgr::changeState((_DWORD *)(a1 + 20), 13262880);
+        StateMgr__changeState((_DWORD *)(a1 + 20), 13262880);
         *(_BYTE *)(a1 + 23750) = 1;
         return 23750;
       }
@@ -69941,7 +69941,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v25 = *(_DWORD *)(a1 + 23720);
       *(float *)(v25 + 24) = *(float *)(v25 + 24) - (float)(*v9 * (float)*v6);
       *(_BYTE *)(v25 + 64) |= 0x10u;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13262944);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13262944);
     }
     return result;
   }
@@ -70558,7 +70558,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *v3 = 1;
       if ( sub_604ED5EC(a1 + 7212) == 1 )
         *v3 = 1;
-      StateMgr::execute((_DWORD *)(a1 + 20));
+      StateMgr__execute((_DWORD *)(a1 + 20));
       if ( *(_BYTE *)(a1 + 23749) )
         sub_6050229C(a1 + 14396);
       sub_6050A8A4(a1 + 16496);
@@ -70627,7 +70627,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604ECFA0(int result)
   {
     if ( !*(_BYTE *)(result + 23748) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13262912);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13262912);
     return result;
   }
 
@@ -71133,7 +71133,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_607F6ABC(MEMORY[0xCC62E4]);
     if ( !result )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13263360);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13263360);
     return result;
   }
 
@@ -71161,7 +71161,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13263392);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13263392);
     return result;
   }
 
@@ -71189,7 +71189,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_6050A95C(a1 + 3616);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13263424);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13263424);
     return result;
   }
 
@@ -71205,7 +71205,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 0x20) != 0 )
     {
       SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13263456);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13263456);
     }
     return result;
   }
@@ -71230,7 +71230,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_6050A8AC(a1 + 3616);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13263488);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13263488);
     return result;
   }
 
@@ -71253,7 +71253,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13263296);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13263296);
     return result;
   }
 
@@ -71407,7 +71407,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 10832);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050A8A4(a1 + 3616);
       return Table_getEntryById(a1 + 40, 14, 0);
     }
@@ -71432,7 +71432,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604EE198(int a1)
   {
     *(_BYTE *)(a1 + 10832) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13263328);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13263328);
   }
 
 /* ============================================================================
@@ -71660,7 +71660,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604EE6B4(int result)
   {
     if ( *(_BYTE *)(MEMORY[0xC89E18] + 17049) )
-      return StateMgr::changeState((_DWORD *)(result + 42504), 13263776);
+      return StateMgr__changeState((_DWORD *)(result + 42504), 13263776);
     return result;
   }
 
@@ -71731,7 +71731,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604EE7F0(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 42504), 13263808);
+    return StateMgr__changeState((_DWORD *)(a1 + 42504), 13263808);
   }
 
 /* ============================================================================
@@ -71771,11 +71771,11 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = (_DWORD *)(a1 + 42504);
       if ( (*(_BYTE *)(*(_DWORD *)(a1 + 74356) + 64) & 1) != 0 )
       {
-        return StateMgr::changeState(v3, 13264160);
+        return StateMgr__changeState(v3, 13264160);
       }
       else
       {
-        StateMgr::changeState(v3, 13263840);
+        StateMgr__changeState(v3, 13263840);
         *(_DWORD *)(a1 + 47116) = 1;
         *(_BYTE *)(a1 + 47131) = 0;
         *(_BYTE *)(a1 + 47128) = 1;
@@ -71892,13 +71892,13 @@ static inline unsigned int uxtb16(unsigned int x)
           Sound_dispatchByKind((int)"SE_SYS_DECIDE", 9);
           v6 = (_DWORD *)(a1 + 42504);
           v7 = 13263936;
-          return StateMgr::changeState(v6, v7);
+          return StateMgr__changeState(v6, v7);
         }
-        return StateMgr::changeState((_DWORD *)(a1 + 42504), 13264032);
+        return StateMgr__changeState((_DWORD *)(a1 + 42504), 13264032);
       }
       else
       {
-        return StateMgr::changeState((_DWORD *)(a1 + 42504), 13263904);
+        return StateMgr__changeState((_DWORD *)(a1 + 42504), 13263904);
       }
     }
     else
@@ -71909,7 +71909,7 @@ static inline unsigned int uxtb16(unsigned int x)
         result = *(_DWORD *)(a1 + 48188);
         if ( (result & 0x4000) != 0 )
         {
-          return StateMgr::changeState((_DWORD *)(a1 + 42504), 13263872);
+          return StateMgr__changeState((_DWORD *)(a1 + 42504), 13263872);
         }
         else if ( (result & 0x2000) != 0 )
         {
@@ -71922,7 +71922,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v7 = 13263936;
             else
               v7 = 13264032;
-            return StateMgr::changeState(v6, v7);
+            return StateMgr__changeState(v6, v7);
           }
           return Sound_dispatchByKind((int)"SE_SYS_INVALID", 9);
         }
@@ -71996,7 +71996,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604EEEFC(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 42504), 13263904);
+    return StateMgr__changeState((_DWORD *)(a1 + 42504), 13263904);
   }
 
 /* ============================================================================
@@ -72054,7 +72054,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604EF074(int result)
   {
     if ( *(_BYTE *)(result + 47140) )
-      return StateMgr::changeState((_DWORD *)(result + 42504), 13264224);
+      return StateMgr__changeState((_DWORD *)(result + 42504), 13264224);
     return result;
   }
 
@@ -72134,7 +72134,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v3 >= 0xA )
         v3 = 0;
       *(_DWORD *)(MEMORY[0xCC6D78] + 4 * v3 + 98488) = 15;
-      return StateMgr::changeState((_DWORD *)(a1 + 42504), 13263968);
+      return StateMgr__changeState((_DWORD *)(a1 + 42504), 13263968);
     }
     return result;
   }
@@ -72211,7 +72211,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604F39D8((int)a1);
     result = sub_6047EF24((int)(a1 + 11532), a1[11779]);
     if ( result == 1 )
-      return StateMgr::changeState(a1 + 10626, 13264000);
+      return StateMgr__changeState(a1 + 10626, 13264000);
     return result;
   }
 
@@ -72253,7 +72253,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_604F39D8(a1);
     if ( !result )
-      return StateMgr::changeState((_DWORD *)(a1 + 42504), 13264192);
+      return StateMgr__changeState((_DWORD *)(a1 + 42504), 13264192);
     return result;
   }
 
@@ -72325,7 +72325,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604EF6E8(int result)
   {
     if ( *(_BYTE *)(result + 47140) )
-      return StateMgr::changeState((_DWORD *)(result + 42504), 13264064);
+      return StateMgr__changeState((_DWORD *)(result + 42504), 13264064);
     return result;
   }
 
@@ -72469,7 +72469,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 42520, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 42504), 13264096);
+      return StateMgr__changeState((_DWORD *)(a1 + 42504), 13264096);
     return result;
   }
 
@@ -72480,7 +72480,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604EFBAC(int result)
   {
     if ( (*(_DWORD *)(result + 48188) & 0x7FFFF) != 0 )
-      return StateMgr::changeState((_DWORD *)(result + 42504), 13264128);
+      return StateMgr__changeState((_DWORD *)(result + 42504), 13264128);
     return result;
   }
 
@@ -72503,7 +72503,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 42520, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 42504), 13263840);
+      return StateMgr__changeState((_DWORD *)(a1 + 42504), 13263840);
     return result;
   }
 
@@ -72604,9 +72604,9 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604EFEF8(int result)
   {
     if ( *(_BYTE *)(result + 47131) && !*(_DWORD *)(result + 47116) )
-      return StateMgr::changeState((_DWORD *)(result + 42504), 13263904);
+      return StateMgr__changeState((_DWORD *)(result + 42504), 13263904);
     if ( !*(_BYTE *)(result + 47130) && (*(_BYTE *)(result + 48189) & 0x40) != 0 )
-      return StateMgr::changeState((_DWORD *)(result + 42504), 13263872);
+      return StateMgr__changeState((_DWORD *)(result + 42504), 13263872);
     return result;
   }
 
@@ -72633,7 +72633,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 74472);
     *(_DWORD *)(result + 74472) = v1 - 1;
     if ( v1 <= 1 )
-      return StateMgr::changeState((_DWORD *)(result + 42504), 13264224);
+      return StateMgr__changeState((_DWORD *)(result + 42504), 13264224);
     return result;
   }
 
@@ -72661,7 +72661,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604F00AC(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 46032) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 42504), 13263744);
+      return StateMgr__changeState((_DWORD *)(result + 42504), 13263744);
     return result;
   }
 
@@ -72917,87 +72917,87 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[18487] = 12325992;
     v4 = (struct sead_IDisposer *)(a1 + 18487);
     EffectData_release((int)(a1 + 18487));
-    sead::IDisposer::~IDisposer(v4);
+    sead__IDisposer__dtor(v4);
     a1[18461] = 12325992;
     EffectData_release((int)(a1 + 18461));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18461));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 18461));
     thunk_sub_60909E64(a1 + 18298);
     thunk_sub_60909E64(a1 + 18197);
     thunk_sub_60909E64(a1 + 18096);
     thunk_sub_60909E64(a1 + 17995);
     thunk_sub_60909E64(v2);
     SoundActor_destroySevenDisposers(a1 + 17780);
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[17019] = 12556340;
     a1[17740] = 12325992;
     EffectData_release((int)(a1 + 17740));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 17740));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 17740));
     a1[17714] = 12325992;
     EffectData_release((int)(a1 + 17714));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 17714));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 17714));
     thunk_sub_60909E64(a1 + 17551);
     thunk_sub_60909E64(a1 + 17450);
     thunk_sub_60909E64(a1 + 17349);
     thunk_sub_60909E64(a1 + 17248);
     thunk_sub_60909E64(a1 + 17147);
     SoundActor_destroySevenDisposers(a1 + 17033);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 17019));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 17019));
     a1[16272] = 12556340;
     a1[16993] = 12325992;
     EffectData_release((int)(a1 + 16993));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16993));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 16993));
     a1[16967] = 12325992;
     EffectData_release((int)(a1 + 16967));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16967));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 16967));
     thunk_sub_60909E64(a1 + 16804);
     thunk_sub_60909E64(a1 + 16703);
     thunk_sub_60909E64(a1 + 16602);
     thunk_sub_60909E64(a1 + 16501);
     thunk_sub_60909E64(a1 + 16400);
     SoundActor_destroySevenDisposers(a1 + 16286);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16272));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 16272));
     a1[15525] = 12556340;
     a1[16246] = 12325992;
     EffectData_release((int)(a1 + 16246));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16246));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 16246));
     a1[16220] = 12325992;
     EffectData_release((int)(a1 + 16220));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16220));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 16220));
     thunk_sub_60909E64(a1 + 16057);
     thunk_sub_60909E64(a1 + 15956);
     thunk_sub_60909E64(a1 + 15855);
     thunk_sub_60909E64(a1 + 15754);
     thunk_sub_60909E64(a1 + 15653);
     SoundActor_destroySevenDisposers(a1 + 15539);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15525));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 15525));
     a1[14778] = 12556340;
     a1[15499] = 12325992;
     EffectData_release((int)(a1 + 15499));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15499));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 15499));
     a1[15473] = 12325992;
     EffectData_release((int)(a1 + 15473));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15473));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 15473));
     thunk_sub_60909E64(a1 + 15310);
     thunk_sub_60909E64(a1 + 15209);
     thunk_sub_60909E64(a1 + 15108);
     thunk_sub_60909E64(a1 + 15007);
     thunk_sub_60909E64(a1 + 14906);
     SoundActor_destroySevenDisposers(a1 + 14792);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14778));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 14778));
     a1[14031] = 12556340;
     a1[14752] = 12325992;
     EffectData_release((int)(a1 + 14752));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14752));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 14752));
     a1[14726] = 12325992;
     EffectData_release((int)(a1 + 14726));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14726));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 14726));
     thunk_sub_60909E64(a1 + 14563);
     thunk_sub_60909E64(a1 + 14462);
     thunk_sub_60909E64(a1 + 14361);
     thunk_sub_60909E64(a1 + 14260);
     thunk_sub_60909E64(a1 + 14159);
     SoundActor_destroySevenDisposers(a1 + 14045);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14031));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 14031));
     sub_6050A4C4(a1 + 12227);
     SoundActor_destroySevenDisposers(a1 + 12147);
     thunk_sub_60909E64(a1 + 12046);
@@ -73360,7 +73360,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 74476);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 42504));
+      StateMgr__execute((_DWORD *)(a1 + 42504));
       sub_6050229C(a1 + 46088);
       sub_6050A8A4(a1 + 48908);
       Table_getEntryById(a1 + 42520, 14, 0);
@@ -74643,7 +74643,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13264956);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13264956);
     return result;
   }
 
@@ -74678,7 +74678,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = v4;
       if ( v4 == 10 )
       {
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13264988);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13264988);
       }
       else
       {
@@ -74714,7 +74714,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 9640) - 1;
     *(_DWORD *)(result + 9640) = v1;
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13265020);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13265020);
     return result;
   }
 
@@ -74738,7 +74738,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13264892);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13264892);
     return result;
   }
 
@@ -74782,7 +74782,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13265084;
       else
         v3 = 13265116;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     return result;
   }
@@ -74817,7 +74817,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = v4;
       if ( v4 == 10 )
       {
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13265116);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13265116);
       }
       else
       {
@@ -74892,10 +74892,10 @@ static inline unsigned int uxtb16(unsigned int x)
             {
               v5 = v4[4];
               if ( !*(_BYTE *)(v5 + 3597) )
-                return StateMgr::changeState(a1 + 6, 13265148);
+                return StateMgr__changeState(a1 + 6, 13265148);
               v6 = (_BYTE *)(v5 + 3580);
               if ( *(_BYTE *)(v5 + 3580) )
-                return StateMgr::changeState(a1 + 6, 13265148);
+                return StateMgr__changeState(a1 + 6, 13265148);
               v7 = 14;
             }
           }
@@ -74933,7 +74933,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 9640) - 1;
     *(_DWORD *)(result + 9640) = v1;
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13265180);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13265180);
     return result;
   }
 
@@ -74956,7 +74956,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13265212);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13265212);
     return result;
   }
 
@@ -75130,7 +75130,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v21 > v22 )
         return (int *)ItemStock_DelItem_ref(a1, v21 - v22);
       v23 = 13265308;
-      return (int *)StateMgr::changeState((_DWORD *)(a1 + 24), v23);
+      return (int *)StateMgr__changeState((_DWORD *)(a1 + 24), v23);
     }
     if ( *(_BYTE *)(a1 + 8594) || *(_BYTE *)(a1 + 8590) )
       return result;
@@ -75206,7 +75206,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v40 )
         *(_BYTE *)(v40 + 64) &= ~1u;
       v23 = 13265244;
-      return (int *)StateMgr::changeState((_DWORD *)(a1 + 24), v23);
+      return (int *)StateMgr__changeState((_DWORD *)(a1 + 24), v23);
     }
     v17 = *(_DWORD *)(a1 + 7156) | v16;
     if ( (v17 & 0x10) != 0 )
@@ -75323,14 +75323,14 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1[2407] + 4 * v2), 1u) + 51);
       if ( (result & 1) == 0 )
         return result;
-      return StateMgr::changeState(a1 + 6, 13265276);
+      return StateMgr__changeState(a1 + 6, 13265276);
     }
     v3 = v2 - 10;
     if ( v3 >= 5 )
       v3 = 0;
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1[2408] + 4 * v3), 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState(a1 + 6, 13265276);
+      return StateMgr__changeState(a1 + 6, 13265276);
     return result;
   }
 
@@ -75359,7 +75359,7 @@ static inline unsigned int uxtb16(unsigned int x)
       ItemStock_DelItem_ref((int)a1, v4 - v5);
       v6 = 13265212;
     }
-    return StateMgr::changeState(a1 + 6, v6);
+    return StateMgr__changeState(a1 + 6, v6);
   }
 
 /* ============================================================================
@@ -75388,7 +75388,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Table_getEntryById(v2, 0xEu, 0);
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13265340);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13265340);
     return result;
   }
 
@@ -75440,7 +75440,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SE_SYS_BACK_ref_4F7D9C(*v3, (int)(v3 - 623));
     result = *(_DWORD *)(*v3 + 5804);
     if ( result )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13265372);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13265372);
     return result;
   }
 
@@ -75474,7 +75474,7 @@ static inline unsigned int uxtb16(unsigned int x)
           return result;
         v5 = 13265404;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
     }
     return result;
   }
@@ -75589,7 +75589,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_BYTE *)(a1 + 8591) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13264924);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13264924);
     }
     return result;
   }
@@ -75658,7 +75658,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050229C((int)(v2 + 930));
     Table_getEntryById(v2, 0xEu, 0);
     *(_BYTE *)(a1 + 8591) = 0;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13265468);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13265468);
   }
 
 /* ============================================================================
@@ -75675,7 +75675,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Table_getEntryById(v2, 0xEu, 0);
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13265212);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13265212);
     return result;
   }
 
@@ -76261,7 +76261,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 7140);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 7548);
       return Table_getEntryById(a1 + 40, 14, 0);
     }
@@ -76482,7 +76482,7 @@ static inline unsigned int uxtb16(unsigned int x)
       ItemStock_DelItem_ref(v30, v25);
       v26 = 13265052;
     }
-    return StateMgr::changeState((_DWORD *)(v30 + 24), v26);
+    return StateMgr__changeState((_DWORD *)(v30 + 24), v26);
   }
 
 /* ============================================================================
@@ -77261,7 +77261,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = ArrayOf20_getEntryPtr(a1, 2);
     v7 = (struct sead_Random *)MEMORY[0xCCF4E4];
     v8 = Object_getHalfwordAtChildPlus8(v6);
-    *(float *)(v6 + 16) = (float)(int)(((unsigned int)sead::Random::getU32(v7) * (unsigned __int64)(unsigned int)v8) >> 32);
+    *(float *)(v6 + 16) = (float)(int)(((unsigned int)sead__Random__getU32(v7) * (unsigned __int64)(unsigned int)v8) >> 32);
     v9 = sub_60473B4C(a1);
     if ( ((unsigned int)&unk_60CA6C84 & ~(1615823036 << v10) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA6C84) )
     {
@@ -78121,7 +78121,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_BYTE *)(a1 + 3688) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13266708);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13266708);
     }
     return result;
   }
@@ -78167,9 +78167,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2 <= 1 )
     {
       if ( (result[1028] | 2) == 2 )
-        return (_DWORD *)StateMgr::changeState(result + 6, 13266740);
+        return (_DWORD *)StateMgr__changeState(result + 6, 13266740);
       else
-        return (_DWORD *)StateMgr::changeState(result + 6, 13266772);
+        return (_DWORD *)StateMgr__changeState(result + 6, 13266772);
     }
     return result;
   }
@@ -78213,7 +78213,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 0;
     result = sub_6050A95C(*(_DWORD *)(a1 + 4 * v3 + 3668));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13266772);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13266772);
     return result;
   }
 
@@ -78243,7 +78243,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v4 = 13266804;
             else
               v4 = 13266868;
-            return StateMgr::changeState(v5, v4);
+            return StateMgr__changeState(v5, v4);
           }
         }
         else if ( (*(_BYTE *)(a1 + 3697) & 0x20) != 0 )
@@ -78277,7 +78277,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v4 = 13266900;
   LABEL_29:
             v5 = (_DWORD *)(a1 + 24);
-            return StateMgr::changeState(v5, v4);
+            return StateMgr__changeState(v5, v4);
           }
           goto LABEL_28;
         }
@@ -78301,7 +78301,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v4 = 13266804;
         else
           v4 = 13266868;
-        return StateMgr::changeState(v5, v4);
+        return StateMgr__changeState(v5, v4);
     }
     return result;
   }
@@ -78345,7 +78345,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 0;
     result = sub_6050A8AC(*(_DWORD *)(a1 + 4 * v3 + 3668));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13266836);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13266836);
     return result;
   }
 
@@ -78374,7 +78374,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_BYTE *)(a1 + 3688) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13266644);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13266644);
     }
     return result;
   }
@@ -78429,7 +78429,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 0;
     result = sub_6050A8AC(*(_DWORD *)(a1 + 4 * v3 + 3668));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13266900);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13266900);
     return result;
   }
 
@@ -78467,7 +78467,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 3686) = 0;
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 2u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13266932);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13266932);
     return result;
   }
 
@@ -78524,7 +78524,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_BYTE *)(a1 + 3689) = 1;
       *(_DWORD *)(a1 + 4120) = *(_DWORD *)(a1 + 4116);
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13266708);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13266708);
     }
     return result;
   }
@@ -78886,7 +78886,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3684);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050A8A4(*(_DWORD *)(a1 + 3668));
       sub_6050A8A4(*(_DWORD *)(a1 + 3672));
       sub_6050A8A4(*(_DWORD *)(a1 + 3676));
@@ -78931,7 +78931,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else
       v8 = *(void (**)(void))(v7 + 104);
     v8();
-    StateMgr::changeState((_DWORD *)(a1 + 24), 13266676);
+    StateMgr__changeState((_DWORD *)(a1 + 24), 13266676);
     return Table_getEntryById(v5, 14, 0);
   }
 
@@ -79091,7 +79091,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = ArrayOf20_getEntryPtr(a1 + 31900, 3u);
       if ( v4 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 104))(v4);
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13267192);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13267192);
     }
     return result;
   }
@@ -79307,7 +79307,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v1 )
     {
       if ( *(unsigned __int8 *)(v1 + 65) == 255 )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13267224);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13267224);
     }
     return result;
   }
@@ -79460,7 +79460,7 @@ static inline unsigned int uxtb16(unsigned int x)
             else
             {
               sub_60807FC0(MEMORY[0xCC6AF8], (int)"SE_SYS_DECIDE", 0);
-              StateMgr::changeState((_DWORD *)(a1 + 24), 13267320);
+              StateMgr__changeState((_DWORD *)(a1 + 24), 13267320);
               result = 40114;
             }
             *(_BYTE *)(a1 + result) = 1;
@@ -79491,7 +79491,7 @@ static inline unsigned int uxtb16(unsigned int x)
             *v3 = 1;
             sub_60402084(MEMORY[0xC99E68], *(_DWORD *)(a1 + 36544));
             *(_BYTE *)(a1 + 40102) = 1;
-            StateMgr::changeState((_DWORD *)(a1 + 24), 13267384);
+            StateMgr__changeState((_DWORD *)(a1 + 24), 13267384);
             return sub_60807FC0(MEMORY[0xCC6AF8], (int)"SE_SYS_BACK", 0);
           }
         }
@@ -79579,7 +79579,7 @@ static inline unsigned int uxtb16(unsigned int x)
         else
           v9 = 13267288;
       }
-      return StateMgr::changeState(v10, v9);
+      return StateMgr__changeState(v10, v9);
     }
     return result;
   }
@@ -79608,7 +79608,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604FBACC(int result)
   {
     if ( !*(_BYTE *)(result + 36550) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13267288);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13267288);
     return result;
   }
 
@@ -79774,7 +79774,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 31900, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13267192);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13267192);
     return result;
   }
 
@@ -80004,7 +80004,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604FC1D4(int result)
   {
     if ( *(_BYTE *)(result + 36560) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13267352);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13267352);
     return result;
   }
 
@@ -80035,7 +80035,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604FC238(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13267384);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13267384);
   }
 
 /* ============================================================================
@@ -80661,9 +80661,9 @@ static inline unsigned int uxtb16(unsigned int x)
         goto LABEL_6;
       v8 = 13267160;
     }
-    StateMgr::changeState(v7, v8);
+    StateMgr__changeState(v7, v8);
   LABEL_6:
-    StateMgr::execute(v7);
+    StateMgr__execute(v7);
     sub_6050229C(a1 + 35508);
     v9 = a1 + 40108;
     if ( *(_DWORD *)(a1 + 40108) )
@@ -81267,7 +81267,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA7344])(MEMORY[0xCA7344]);
       MEMORY[0xCA7344] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -81285,7 +81285,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA7344])(MEMORY[0xCA7344]);
       MEMORY[0xCA7344] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -81302,7 +81302,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCA7344] )
     {
       v2 = (_DWORD *)operator new[](20, a1, 4);
-      v3 = sead::IDisposer::IDisposer(v2 + 1, a1, 3);
+      v3 = sead__IDisposer__IDisposer(v2 + 1, a1, 3);
       v2[1] = 12578700;
       MEMORY[0xCA7340] = v3;
       *v2 = 12578716;
@@ -81467,7 +81467,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604FE914(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 36), 13267848);
+    return StateMgr__changeState((_DWORD *)(a1 + 36), 13267848);
   }
 
 /* ============================================================================
@@ -81536,7 +81536,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
       }
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 36), 13267880);
+    return StateMgr__changeState((_DWORD *)(a1 + 36), 13267880);
   }
 
 /* ============================================================================
@@ -81601,7 +81601,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = *(_DWORD *)(a1 + 2136);
       if ( *(_DWORD *)(a1 + 1084) == result )
-        return StateMgr::changeState((_DWORD *)(a1 + 36), 13267912);
+        return StateMgr__changeState((_DWORD *)(a1 + 36), 13267912);
     }
     return result;
   }
@@ -81670,7 +81670,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
       }
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 36), 13267784);
+    return StateMgr__changeState((_DWORD *)(a1 + 36), 13267784);
   }
 
 /* ============================================================================
@@ -82098,8 +82098,8 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 7712) = *(_DWORD *)(a1 + 7312) & 0x6086;
     *(_BYTE *)(a1 + 5688) = 0;
     if ( (*(_BYTE *)(a1 + 52) & 1) != 0 )
-      StateMgr::changeState((_DWORD *)(a1 + 36), 13267816);
-    StateMgr::execute((_DWORD *)(a1 + 36));
+      StateMgr__changeState((_DWORD *)(a1 + 36), 13267816);
+    StateMgr__execute((_DWORD *)(a1 + 36));
     sub_6050229C(a1 + 56);
     sub_6050A8A4(a1 + 7720);
     Table_getEntryById(a1 + 2140, 14, 0);
@@ -82136,11 +82136,11 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( v2 <= 1 )
             {
               v3 = (_DWORD *)(result + 36);
-              CurrentState = StateMgr::getCurrentState(result + 36);
+              CurrentState = StateMgr__getCurrentState(result + 36);
               v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
               result = (*(int (**)(void))(MEMORY[0xCA73A8] + 8))();
               if ( v5 == result )
-                return StateMgr::changeState(v3, 13267912);
+                return StateMgr__changeState(v3, 13267912);
             }
           }
         }
@@ -82383,7 +82383,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605001B0(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13268200);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13268200);
   }
 
 /* ============================================================================
@@ -82448,7 +82448,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13268232);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13268232);
     return result;
   }
 
@@ -82481,13 +82481,13 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
       return result;
     if ( *(_BYTE *)(a1 + 4631) )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13268264);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13268264);
     v3 = *(_DWORD *)(a1 + 7724);
     if ( (v3 & 0x2000) != 0 )
     {
   LABEL_38:
       Object_clampFieldPairsToMin(a1 + 3588);
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13268264);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13268264);
     }
     result = *(unsigned __int8 *)(a1 + 4634);
     if ( *(_BYTE *)(a1 + 4634) )
@@ -82592,12 +82592,12 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_DWORD *)(result + 4616) )
       {
         *v1 = 0;
-        return StateMgr::changeState((_DWORD *)(result + 24), 13268296);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13268296);
       }
       else
       {
         *v1 = 1;
-        return StateMgr::changeState((_DWORD *)(result + 24), 13268328);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13268328);
       }
     }
     return result;
@@ -82621,7 +82621,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605005E8(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 3552) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13268168);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13268168);
     return result;
   }
 
@@ -82912,7 +82912,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_15:
         if ( ++v2 == 5 )
         {
-          StateMgr::execute((_DWORD *)(a1 + 24));
+          StateMgr__execute((_DWORD *)(a1 + 24));
           sub_6050229C(a1 + 3588);
           return Table_getEntryById(a1 + 40, 17, 0);
         }
@@ -82931,7 +82931,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 7720) = a2;
     if ( !a2 && *(_DWORD *)(sub_60834644(7720) + 492) )
       *(_DWORD *)(a1 + 7720) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13268168);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13268168);
   }
 
 /* ============================================================================
@@ -83225,7 +83225,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605018F4(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13268604);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13268604);
   }
 
 /* ============================================================================
@@ -83332,7 +83332,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13268668;
       else
         v3 = 13268636;
-      return StateMgr::changeState(v2, v3);
+      return StateMgr__changeState(v2, v3);
     }
     else
     {
@@ -83440,7 +83440,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v12 = 13268604;
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 24), v12);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), v12);
   }
 
 /* ============================================================================
@@ -83485,7 +83485,7 @@ static inline unsigned int uxtb16(unsigned int x)
         else
           v5 = 13268636;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
     }
     return result;
   }
@@ -83775,7 +83775,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           v13 = 13268668;
         }
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v13);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v13);
       }
     }
     return result;
@@ -83899,7 +83899,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(a1 + 1040) )
     {
       if ( !*(_BYTE *)(a1 + 1047) )
-        StateMgr::execute((_DWORD *)(a1 + 24));
+        StateMgr__execute((_DWORD *)(a1 + 24));
       sub_605023E8(a1);
       if ( *(_BYTE *)(a1 + 1052) )
         goto LABEL_18;
@@ -83998,7 +83998,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( *(_BYTE *)(a1 + 1049) )
           {
             *(_BYTE *)(a1 + 1046) = 1;
-            return StateMgr::changeState((_DWORD *)(a1 + 24), 13268700);
+            return StateMgr__changeState((_DWORD *)(a1 + 24), 13268700);
           }
         }
       }
@@ -84035,7 +84035,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 1028) = 256;
       sub_6047EBB4(a1 + 40, 0);
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13268572);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13268572);
   }
 
 /* ============================================================================
@@ -84062,7 +84062,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 1028) = 256;
       sub_6047EBB4(a1 + 40, 0);
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13268572);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13268572);
   }
 
 /* ============================================================================
@@ -84912,7 +84912,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050328C(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13268776);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13268776);
   }
 
 /* ============================================================================
@@ -85020,7 +85020,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13268840;
       else
         v3 = 13268808;
-      return StateMgr::changeState(v2, v3);
+      return StateMgr__changeState(v2, v3);
     }
     else
     {
@@ -85128,7 +85128,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v12 = 13268776;
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 24), v12);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), v12);
   }
 
 /* ============================================================================
@@ -85173,7 +85173,7 @@ static inline unsigned int uxtb16(unsigned int x)
         else
           v5 = 13268808;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v5);
     }
     return result;
   }
@@ -85434,7 +85434,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           v13 = 13268840;
         }
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v13);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v13);
       }
     }
     return result;
@@ -85829,7 +85829,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605043AC(int a1)
   {
-    return StateMgr::execute((_DWORD *)(a1 + 20));
+    return StateMgr__execute((_DWORD *)(a1 + 20));
   }
 
 /* ============================================================================
@@ -86756,7 +86756,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA77F0] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA77F0] )
         {
           if ( _cxa_guard_acquire_0(13269076) )
@@ -86800,7 +86800,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13269080, MEMORY[0xCA77F8], 7);
           MEMORY[0xCA77F0] = 13269080;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA77F0];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -86932,7 +86932,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA7874] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA7874] )
         {
           if ( _cxa_guard_acquire_0(13269184) )
@@ -86973,7 +86973,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13269188, MEMORY[0xCA787C], 6);
           MEMORY[0xCA7874] = 13269188;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA7874];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -87364,7 +87364,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v22 = v14;
     ArrayOf5_lookupByIndex(a1, 3u, &v21, 1);
     sub_604745C0(a1, 3);
-    sead::Random::getU32(MEMORY[0xCCF4E4]);
+    sead__Random__getU32(MEMORY[0xCCF4E4]);
     ArrayOf5_setEntryFloat16(a1, 3);
     v15 = 0;
     v16 = sub_605067A0(0);
@@ -87408,7 +87408,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA7934] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA7934] )
         {
           if ( _cxa_guard_acquire_0(13269364) )
@@ -87449,7 +87449,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13269368, MEMORY[0xCA793C], 4);
           MEMORY[0xCA7934] = 13269368;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA7934];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -87581,7 +87581,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA7988] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA7988] )
         {
           if ( _cxa_guard_acquire_0(13269488) )
@@ -87625,7 +87625,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13269492, MEMORY[0xCA7990], 4);
           MEMORY[0xCA7988] = 13269492;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA7988];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -87768,7 +87768,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60507028(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 44));
+    StateMgr__execute((_DWORD *)(a1 + 44));
     *(_DWORD *)(a1 + 4) = 0;
     return 0;
   }
@@ -88444,7 +88444,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60507FA0(int a1)
   {
-    return StateMgr::execute((_DWORD *)(a1 + 20));
+    return StateMgr__execute((_DWORD *)(a1 + 20));
   }
 
 /* ============================================================================
@@ -88743,7 +88743,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605084AC(_DWORD *a1)
   {
     LabelFree_CourseNum_00_ref(a1);
-    return StateMgr::changeState(a1 + 5, 13269784);
+    return StateMgr__changeState(a1 + 5, 13269784);
   }
 
 /* ============================================================================
@@ -88954,7 +88954,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // r3
     int result; // r0
   
-    StateMgr::execute((_DWORD *)(a1 + 20));
+    StateMgr__execute((_DWORD *)(a1 + 20));
     if ( *(_BYTE *)(a1 + 3750) && !*(_BYTE *)(a1 + 3748) )
     {
       v2 = 7;
@@ -89599,7 +89599,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v2 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v2 + 96))(v2);
     }
-    return StateMgr::changeState(a1 + 5, 13270336);
+    return StateMgr__changeState(a1 + 5, 13270336);
   }
 
 /* ============================================================================
@@ -89661,7 +89661,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60509CB8(int a1)
   {
-    return StateMgr::execute((_DWORD *)(a1 + 20));
+    return StateMgr__execute((_DWORD *)(a1 + 20));
   }
 
 /* ============================================================================
@@ -90176,7 +90176,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050A8A4(int a1)
   {
-    return StateMgr::execute((_DWORD *)(a1 + 20));
+    return StateMgr__execute((_DWORD *)(a1 + 20));
   }
 
 /* ============================================================================
@@ -90455,7 +90455,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050AD50(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 20));
+    StateMgr__execute((_DWORD *)(a1 + 20));
     *(_DWORD *)(a1 + 36) = 0;
     return 0;
   }
@@ -90676,7 +90676,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6050B0CC(int result)
   {
     if ( *(_BYTE *)(result + 3589) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13270592);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13270592);
     return result;
   }
 
@@ -90712,7 +90712,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13270624);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13270624);
     return result;
   }
 
@@ -90733,7 +90733,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6050B174(int result)
   {
     if ( *(_BYTE *)(result + 3590) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13270656);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13270656);
     return result;
   }
 
@@ -90768,7 +90768,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13270560);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13270560);
     return result;
   }
 
@@ -90941,7 +90941,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050B744(int a1)
   {
-    return StateMgr::execute((_DWORD *)(a1 + 20));
+    return StateMgr__execute((_DWORD *)(a1 + 20));
   }
 
 /* ============================================================================
@@ -91279,7 +91279,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050BDDC(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 44));
+    StateMgr__execute((_DWORD *)(a1 + 44));
     *(_DWORD *)(a1 + 4) = 0;
     return 0;
   }
@@ -91479,7 +91479,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA7F0C] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA7F0C] )
         {
           if ( _cxa_guard_acquire_0(13270836) )
@@ -91520,7 +91520,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13270840, MEMORY[0xCA7F14], 3);
           MEMORY[0xCA7F0C] = 13270840;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA7F0C];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -91652,7 +91652,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA7F44] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA7F44] )
         {
           if ( _cxa_guard_acquire_0(13270884) )
@@ -91693,7 +91693,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13270888, MEMORY[0xCA7F4C], 1);
           MEMORY[0xCA7F44] = 13270888;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA7F44];
       }
       return *(_DWORD *)v3;
@@ -91825,7 +91825,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA7F6C] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA7F6C] )
         {
           if ( _cxa_guard_acquire_0(13270940) )
@@ -91866,7 +91866,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13270944, MEMORY[0xCA7F74], 3);
           MEMORY[0xCA7F6C] = 13270944;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA7F6C];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -92225,7 +92225,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA7FF0] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA7FF0] )
         {
           if ( _cxa_guard_acquire_0(13271056) )
@@ -92266,7 +92266,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13271060, MEMORY[0xCA7FF8], 1);
           MEMORY[0xCA7FF0] = 13271060;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA7FF0];
       }
       return *(_DWORD *)v3;
@@ -92294,7 +92294,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA8018] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA8018] )
         {
           if ( _cxa_guard_acquire_0(13271092) )
@@ -92335,7 +92335,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13271096, MEMORY[0xCA8020], 1);
           MEMORY[0xCA8018] = 13271096;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA8018];
       }
       return *(_DWORD *)v3;
@@ -92552,7 +92552,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050DB10(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 44));
+    StateMgr__execute((_DWORD *)(a1 + 44));
     *(_DWORD *)(a1 + 4) = 0;
     return 0;
   }
@@ -93005,7 +93005,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050E4C0(_DWORD *a1)
   {
-    StateMgr::execute(a1 + 11);
+    StateMgr__execute(a1 + 11);
     a1[916] = -1;
     a1[1] = 0;
     return 0;
@@ -93642,7 +93642,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6050F224(_DWORD *a1)
   {
-    StateMgr::execute(a1 + 11);
+    StateMgr__execute(a1 + 11);
     a1[946] = -1;
     a1[1] = 0;
     return 0;
@@ -94466,10 +94466,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     if ( !MEMORY[0xCABDE4] )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13271648);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13271648);
     result = sub_60542604(MEMORY[0xCABDE4]);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13271648);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13271648);
     return result;
   }
 
@@ -94538,7 +94538,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_60511FFC(a1);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13271680);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13271680);
     return result;
   }
 
@@ -94653,14 +94653,14 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 11616) = dword_60B03790[v9];
   LABEL_29:
       *v2 = 3;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13271712);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13271712);
     }
     v4 = (int *)(a1 + 9580);
     if ( sub_6047F384(a1 + 9580, 0x4000) )
     {
       *(_DWORD *)(a1 + 11616) = 1;
       *v2 = 2;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13271712);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13271712);
     }
     result = a1 + 9560;
     if ( *(int *)(a1 + 9560) >= 1 )
@@ -94808,7 +94808,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13271552;
       else
         v3 = 13271584;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -94836,7 +94836,7 @@ static inline unsigned int uxtb16(unsigned int x)
       Disposer_destroyAllocated((struct sead_IDisposer *)(v2 + 56));
       MEMORY[0xCA83DC] = 0;
     }
-    sead::IDisposer::~IDisposer(a1);
+    sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -94865,7 +94865,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCA83DC] )
     {
       v3 = operator new[](11620, a1, 4);
-      v4 = (_DWORD *)sead::IDisposer::IDisposer(v3, a1, 3);
+      v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12581012;
       MEMORY[0xCA83D8] = v4;
       result = sub_60510C68();
@@ -95090,8 +95090,8 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(a1 + 9574) )
     {
       if ( (*(_BYTE *)(a1 + 52) & 4) != 0 )
-        StateMgr::changeState((_DWORD *)(a1 + 36), 13271616);
-      StateMgr::execute((_DWORD *)(a1 + 36));
+        StateMgr__changeState((_DWORD *)(a1 + 36), 13271616);
+      StateMgr__execute((_DWORD *)(a1 + 36));
       v2 = 0;
       v3 = *(_DWORD *)(a1 + 9568);
       if ( v3 <= 3 )
@@ -97086,7 +97086,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60513D20(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13272344);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13272344);
   }
 
 /* ============================================================================
@@ -97131,7 +97131,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13272376);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13272376);
     return result;
   }
 
@@ -97179,7 +97179,7 @@ static inline unsigned int uxtb16(unsigned int x)
         return 5684;
       }
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13272408);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13272408);
   }
 
 /* ============================================================================
@@ -97203,7 +97203,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13272312);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13272312);
     return result;
   }
 
@@ -97419,7 +97419,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60514474(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13272520);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13272520);
   }
 
 /* ============================================================================
@@ -97432,7 +97432,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_60515390(a1);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 40));
+      return StateMgr__changeState((_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 40));
     return result;
   }
 
@@ -97488,7 +97488,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(result + 4639) )
     {
       if ( !*(_BYTE *)(result + 4636) )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13272648);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13272648);
       return result;
     }
     v1 = *(_DWORD *)(result + 14964);
@@ -97599,7 +97599,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(result + 4639) )
     {
       if ( !*(_BYTE *)(result + 4636) )
-        return StateMgr::changeState((_DWORD *)(result + 24), 13272648);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13272648);
       return result;
     }
     v1 = *(_DWORD *)(result + 14964);
@@ -97691,7 +97691,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_6051551C(a1);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13272456);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13272456);
     return result;
   }
 
@@ -97942,7 +97942,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_BYTE *)(a1 + 14974) = 1;
           v11 = (_BYTE *)(a1 + 14974);
           v12 = (_DWORD *)(a1 + 24);
-          StateMgr::changeState((_DWORD *)(a1 + 24), 13272488);
+          StateMgr__changeState((_DWORD *)(a1 + 24), 13272488);
           *(_DWORD *)(a1 + 40) = 13272552;
           result = *(unsigned __int8 *)(a1 + 14974);
           if ( *(_BYTE *)(a1 + 14974) )
@@ -97950,7 +97950,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v13 = a1 + 48;
             do
             {
-              StateMgr::execute(v12);
+              StateMgr__execute(v12);
               Table_getEntryById(v13, *v9, 0);
               result = (unsigned __int8)*v11;
             }
@@ -98009,16 +98009,16 @@ static inline unsigned int uxtb16(unsigned int x)
         ++v7;
       if ( v7 == 8 )
       {
-        CurrentState = StateMgr::getCurrentState(a1 + 24);
+        CurrentState = StateMgr__getCurrentState(a1 + 24);
         v9 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         if ( v9 == (*(int (**)(void))(MEMORY[0xCA85E8] + 8))() )
           v10 = 13272616;
         else
           v10 = 13272488;
-        StateMgr::changeState((_DWORD *)(a1 + 24), v10);
+        StateMgr__changeState((_DWORD *)(a1 + 24), v10);
       }
     }
-    StateMgr::execute((_DWORD *)(a1 + 24));
+    StateMgr__execute((_DWORD *)(a1 + 24));
     sub_6050229C(a1 + 3596);
     sub_6050A8A4(a1 + 5676);
     result = Table_getEntryById(a1 + 48, *(_DWORD *)(a1 + 12932), 0);
@@ -98856,7 +98856,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13272892);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13272892);
     return result;
   }
 
@@ -99062,7 +99062,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60516CA4(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 20));
+    StateMgr__execute((_DWORD *)(a1 + 20));
     return Table_getEntryById((_DWORD *)(a1 + 36), 0xEu, 0);
   }
 
@@ -99087,7 +99087,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Table_getEntryById(a1 + 36, 14, 0);
     sub_60516D28(a1);
     sub_60516E80(a1);
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13272860);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13272860);
   }
 
 /* ============================================================================
@@ -99186,7 +99186,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60517004(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13272924);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13272924);
   }
 
 /* ============================================================================
@@ -99209,7 +99209,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA877C] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA877C] )
         {
           if ( _cxa_guard_acquire_0(13273008) )
@@ -99250,7 +99250,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13273012, MEMORY[0xCA8784], 5);
           MEMORY[0xCA877C] = 13273012;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA877C];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -99382,7 +99382,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA87C8] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA87C8] )
         {
           if ( _cxa_guard_acquire_0(13273132) )
@@ -99426,7 +99426,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13273136, MEMORY[0xCA87D0], 7);
           MEMORY[0xCA87C8] = 13273136;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA87C8];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -99902,7 +99902,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605180D0(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 20));
+    StateMgr__execute((_DWORD *)(a1 + 20));
     sub_6050DB10(a1 + 3652);
     sub_6050DB10(a1 + 7256);
     sub_6050DB10(a1 + 10860);
@@ -100271,7 +100271,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 10), 0) + 51);
     if ( (result & 1) != 0 )
     {
-      StateMgr::changeState(a1 + 6, 13273468);
+      StateMgr__changeState(a1 + 6, 13273468);
       return sub_6047DEC8(v2, a1[902], 0);
     }
     return result;
@@ -100429,7 +100429,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60518E34(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 24));
+    StateMgr__execute((_DWORD *)(a1 + 24));
     return Table_getEntryById((_DWORD *)(a1 + 40), 0xEu, 0);
   }
 
@@ -100453,7 +100453,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v1; // r4
   
     v1 = a1;
-    StateMgr::changeState(a1 + 6, 13273436);
+    StateMgr__changeState(a1 + 6, 13273436);
     v1 += 10;
     ArrayOf5_lookupByIndex(v1, 0, (_DWORD *)0xCA8944, 0);
     return ArrayOf5_lookupByIndex(v1, 1u, (_DWORD *)0xCA894C, 1);
@@ -100465,7 +100465,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60518ECC(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13273500);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13273500);
   }
 
 /* ============================================================================
@@ -100622,7 +100622,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 3724), 13273684);
+      return StateMgr__changeState((_DWORD *)(a1 + 3724), 13273684);
     return result;
   }
 
@@ -100947,7 +100947,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60519910(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 3724));
+    StateMgr__execute((_DWORD *)(a1 + 3724));
     sub_60507028(a1 + 3820);
     sub_60507028(a1 + 7440);
     sub_60507028(a1 + 11060);
@@ -100977,7 +100977,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60519D88(a1);
     sub_60519EF8(a1);
     sub_6051A034(a1);
-    return StateMgr::changeState((_DWORD *)(a1 + 3724), 13273620);
+    return StateMgr__changeState((_DWORD *)(a1 + 3724), 13273620);
   }
 
 /* ============================================================================
@@ -101293,7 +101293,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051A2E0(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 3724), 13273652);
+    return StateMgr__changeState((_DWORD *)(a1 + 3724), 13273652);
   }
 
 /* ============================================================================
@@ -101325,7 +101325,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA8A74] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA8A74] )
         {
           if ( _cxa_guard_acquire_0(13273792) )
@@ -101366,7 +101366,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13273796, MEMORY[0xCA8A7C], 4);
           MEMORY[0xCA8A74] = 13273796;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA8A74];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -101394,7 +101394,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA8AD4] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA8AD4] )
         {
           if ( _cxa_guard_acquire_0(13273884) )
@@ -101435,7 +101435,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13273888, MEMORY[0xCA8ADC], 4);
           MEMORY[0xCA8AD4] = 13273888;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA8AD4];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -101567,7 +101567,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA8B30] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA8B30] )
         {
           if ( _cxa_guard_acquire_0(13274004) )
@@ -101611,7 +101611,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13274008, MEMORY[0xCA8B38], 9);
           MEMORY[0xCA8B30] = 13274008;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA8B30];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -101924,7 +101924,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 62316), 13274176);
+      return StateMgr__changeState((_DWORD *)(a1 + 62316), 13274176);
     return result;
   }
 
@@ -101944,7 +101944,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051B038(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 62316), 13274208);
+    return StateMgr__changeState((_DWORD *)(a1 + 62316), 13274208);
   }
 
 /* ============================================================================
@@ -102299,7 +102299,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_60518138(a1 + 62552);
         sub_6051BBD0(a1);
         *(_WORD *)(a1 + 62512) = 0;
-        return StateMgr::changeState((_DWORD *)(a1 + 62316), 13274144);
+        return StateMgr__changeState((_DWORD *)(a1 + 62316), 13274144);
     }
   }
 
@@ -102348,7 +102348,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051BCEC(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 62316));
+    StateMgr__execute((_DWORD *)(a1 + 62316));
     sub_605180D0(a1 + 62552);
     return Table_getEntryById(*(_DWORD *)(a1 + 4), 14, 0);
   }
@@ -102369,7 +102369,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051BD50(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 62316), 13274240);
+    return StateMgr__changeState((_DWORD *)(a1 + 62316), 13274240);
   }
 
 /* ============================================================================
@@ -102679,7 +102679,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13274620);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13274620);
     return result;
   }
 
@@ -102703,7 +102703,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051C3E4(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13274652);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13274652);
   }
 
 /* ============================================================================
@@ -103226,7 +103226,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051CFD8(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 20));
+    StateMgr__execute((_DWORD *)(a1 + 20));
     sub_6051D004(a1);
     return Table_getEntryById((_DWORD *)(a1 + 36), 0xEu, 0);
   }
@@ -103610,7 +103610,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6047DE6C(3, (int)&v62, v2, *(_DWORD *)(a1 + 3668), 0);
     }
     sub_6051D5FC(a1);
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13274524);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13274524);
   }
 
 /* ============================================================================
@@ -103668,7 +103668,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051D7D4(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13274556);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13274556);
   }
 
 /* ============================================================================
@@ -103965,7 +103965,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA8E3C] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA8E3C] )
         {
           if ( _cxa_guard_acquire_0(13274744) )
@@ -104006,7 +104006,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13274748, MEMORY[0xCA8E44], 6);
           MEMORY[0xCA8E3C] = 13274748;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA8E3C];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -104034,7 +104034,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA8E94] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA8E94] )
         {
           if ( _cxa_guard_acquire_0(13274824) )
@@ -104075,7 +104075,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13274828, MEMORY[0xCA8E9C], 3);
           MEMORY[0xCA8E94] = 13274828;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA8E94];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -104475,7 +104475,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_603FBC88(MEMORY[0xC99DD4]);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13275188);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13275188);
     return result;
   }
 
@@ -104509,7 +104509,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_BYTE *)(a1[3759] + 64) &= ~1u;
       *(_BYTE *)(a1[3760] + 64) |= 1u;
-      return StateMgr::changeState(a1 + 6, 13275220);
+      return StateMgr__changeState(a1 + 6, 13275220);
     }
     return result;
   }
@@ -104560,17 +104560,17 @@ static inline unsigned int uxtb16(unsigned int x)
       switch ( v1 )
       {
         case 2:
-          return StateMgr::changeState((_DWORD *)(result + 24), 13275380);
+          return StateMgr__changeState((_DWORD *)(result + 24), 13275380);
         case 1:
           *(_BYTE *)(*(_DWORD *)(result + 15036) + 64) &= ~1u;
           *(_BYTE *)(*(_DWORD *)(result + 15040) + 64) &= ~1u;
           *(_BYTE *)(result + 15044) = 1;
-          return StateMgr::changeState((_DWORD *)(result + 24), 13275316);
+          return StateMgr__changeState((_DWORD *)(result + 24), 13275316);
         case 0:
           *(_BYTE *)(*(_DWORD *)(result + 15036) + 64) &= ~1u;
           *(_BYTE *)(*(_DWORD *)(result + 15040) + 64) &= ~1u;
           *(_BYTE *)(result + 15044) = 1;
-          return StateMgr::changeState((_DWORD *)(result + 24), 13275284);
+          return StateMgr__changeState((_DWORD *)(result + 24), 13275284);
       }
       return result;
     }
@@ -104591,13 +104591,13 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (v3 & 0x10080) == 0 )
         {
           if ( (v3 & 0x4000) != 0 )
-            return StateMgr::changeState((_DWORD *)(result + 24), 13275348);
+            return StateMgr__changeState((_DWORD *)(result + 24), 13275348);
           return result;
         }
         if ( !*(_BYTE *)(result + 15028) )
           return result;
       }
-      return StateMgr::changeState((_DWORD *)(result + 24), 13275252);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13275252);
     }
     return result;
   }
@@ -104653,7 +104653,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13275284;
       else
         v3 = 13275316;
-      return StateMgr::changeState(v2, v3);
+      return StateMgr__changeState(v2, v3);
     }
     return result;
   }
@@ -104682,7 +104682,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(*(_DWORD *)(a1 + 15036) + 64) |= 1u;
       *(_BYTE *)(a1 + 15044) = 0;
       *(_BYTE *)(a1 + 15028) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13275220);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13275220);
     }
     return result;
   }
@@ -104711,7 +104711,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(*(_DWORD *)(a1 + 15040) + 64) |= 1u;
       *(_BYTE *)(a1 + 15044) = 0;
       *(_BYTE *)(a1 + 15028) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13275220);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13275220);
     }
     return result;
   }
@@ -104733,7 +104733,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6051ECCC(int result)
   {
     if ( !*(_BYTE *)(result + 4750) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13275380);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13275380);
     return result;
   }
 
@@ -104756,7 +104756,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13275124);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13275124);
     return result;
   }
 
@@ -105197,7 +105197,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 13004);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 3708);
       sub_6050A8A4(a1 + 5788);
       Table_getEntryById(a1 + 40, 14, 0);
@@ -105290,7 +105290,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = 12321336;
     v9 = "RecordList_MiniAssist_00";
     MessageQueue_postType3(&v8, *(_DWORD *)(a1 + 3652), 1);
-    StateMgr::changeState((_DWORD *)(a1 + 24), 13275156);
+    StateMgr__changeState((_DWORD *)(a1 + 24), 13275156);
     ArrayOf5_lookupByIndex(v3, 2u, (_DWORD *)0xCA8FEC, 0);
     v4 = *(int ***)(a1 + 3552);
     if ( *(_DWORD *)(a1 + 3548) > 2u )
@@ -105469,7 +105469,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = 13275788;
         v4 = (_DWORD *)(a1 + 20);
       }
-      StateMgr::changeState(v4, v5);
+      StateMgr__changeState(v4, v5);
       result = *(_DWORD *)v2;
     }
     if ( result == 60 )
@@ -105477,7 +105477,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_RESULT_SCORE", 0);
       v6 = ArrayOf20_getEntryPtr(a1 + 36, 1);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v6 + 84))(v6, 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13275692);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13275692);
     }
     return result;
   }
@@ -105525,7 +105525,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = 13275724;
       else
         v5 = 13275788;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), v5);
     }
     return result;
   }
@@ -105580,7 +105580,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = 13275756;
       else
         v6 = 13275788;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), v6);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), v6);
     }
     return result;
   }
@@ -105682,7 +105682,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v12 = 12321336;
       v13 = v9;
       ArrayOf5_lookupByIndex(v5, 4u, &v12, 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13275788);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13275788);
     }
     return result;
   }
@@ -105774,7 +105774,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 4300) = 1;
     result = *(unsigned __int8 *)(a1 + 4301);
     if ( *(_BYTE *)(a1 + 4301) )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13275852);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13275852);
     return result;
   }
 
@@ -105803,7 +105803,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 4316) = --result;
     if ( *(_DWORD *)(MEMORY[0xCC6E04] + 24) != 2 && result <= 0 )
     {
-      StateMgr::changeState((_DWORD *)(a1 + 20), 13275852);
+      StateMgr__changeState((_DWORD *)(a1 + 20), 13275852);
       *(_BYTE *)(a1 + 4314) = 1;
       return 4314;
     }
@@ -106146,7 +106146,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3904) = v2;
     *(_DWORD *)(a1 + 3908) = v2;
     *(_DWORD *)(a1 + 3912) = v2;
-    StateMgr::execute((_DWORD *)(a1 + 20));
+    StateMgr__execute((_DWORD *)(a1 + 20));
     v3 = *(_DWORD *)(a1 + 3784);
     v4 = *(_DWORD *)(v3 + 92);
     v5 = *(_DWORD *)(v3 + 108);
@@ -106858,7 +106858,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA939C] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA939C] )
         {
           if ( _cxa_guard_acquire_0(13276240) )
@@ -106904,7 +106904,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13276244, MEMORY[0xCA93A4], 16);
           MEMORY[0xCA939C] = 13276244;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA939C];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -107036,7 +107036,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA9494] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA9494] )
         {
           if ( _cxa_guard_acquire_0(13276352) )
@@ -107077,7 +107077,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13276356, MEMORY[0xCA949C], 2);
           MEMORY[0xCA9494] = 13276356;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA9494];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -107105,7 +107105,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA94CC] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA94CC] )
         {
           if ( _cxa_guard_acquire_0(13276724) )
@@ -107156,7 +107156,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13276728, MEMORY[0xCA94D4], 19);
           MEMORY[0xCA94CC] = 13276728;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA94CC];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -107288,7 +107288,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA9684] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA9684] )
         {
           if ( _cxa_guard_acquire_0(13276992) )
@@ -107335,7 +107335,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13276996, MEMORY[0xCA968C], 11);
           MEMORY[0xCA9684] = 13276996;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA9684];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -107723,7 +107723,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCA9908] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCA9908] )
         {
           if ( _cxa_guard_acquire_0(13277512) )
@@ -107764,7 +107764,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13277516, MEMORY[0xCA9910], 4);
           MEMORY[0xCA9908] = 13277516;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCA9908];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -107846,7 +107846,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *v3 = 2;
         v4 = 13277956;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v4);
     }
     return result;
   }
@@ -107873,7 +107873,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 4664) = 2;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13277956);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13277956);
     }
     return result;
   }
@@ -107899,7 +107899,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 2u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13277988);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13277988);
     return result;
   }
 
@@ -107925,7 +107925,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278020);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278020);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108096,7 +108096,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60524078(int result)
   {
     if ( !*(_BYTE *)(MEMORY[0xCAA450] + 56) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13278052);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13278052);
     return result;
   }
 
@@ -108122,7 +108122,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278084);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278084);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108181,11 +108181,11 @@ static inline unsigned int uxtb16(unsigned int x)
           else
             v5 = 13278148;
         }
-        return StateMgr::changeState(v4, v5);
+        return StateMgr__changeState(v4, v5);
       }
       else
       {
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13278116);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13278116);
       }
     }
     return result;
@@ -108213,7 +108213,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13277956);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13277956);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108240,7 +108240,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278180);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278180);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108372,7 +108372,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278692);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278692);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108399,7 +108399,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278244);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278244);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108416,7 +108416,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_TOTAL_COIN_NUM", 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278276);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278276);
     }
     return result;
   }
@@ -108443,7 +108443,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278308);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278308);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108594,7 +108594,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278692);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278692);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108621,7 +108621,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278372);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278372);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108703,7 +108703,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278404);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278404);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108748,7 +108748,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = 13278436;
       else
         v5 = 13278660;
-      return StateMgr::changeState(v4, v5);
+      return StateMgr__changeState(v4, v5);
     }
   }
 
@@ -108888,7 +108888,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         *(_DWORD *)(a1 + 4668) = 2;
         SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13278724);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13278724);
       }
     }
     else
@@ -108920,7 +108920,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278500);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278500);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108950,7 +108950,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278532);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278532);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -108967,7 +108967,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_TOTAL_COIN_NUM", 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278564);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278564);
     }
     return result;
   }
@@ -108994,7 +108994,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4660);
     v2 = *(_DWORD *)(a1 + 4660);
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278596);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278596);
     *v1 = v2 - 1;
     return v2 - 1;
   }
@@ -109112,7 +109112,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = 13278628;
       else
         v5 = 13278660;
-      return StateMgr::changeState(v4, v5);
+      return StateMgr__changeState(v4, v5);
     }
   }
 
@@ -109271,7 +109271,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         *(_DWORD *)(a1 + 4668) = 2;
         SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13278724);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13278724);
       }
     }
     else
@@ -109327,7 +109327,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v1 || (v2 = v1 - 1, (*(_DWORD *)(result + 4660) = v2) == 0) || (*(_BYTE *)(result + 4221) & 0x20) != 0 )
     {
       *(_DWORD *)(result + 4668) = 1;
-      return StateMgr::changeState((_DWORD *)(result + 24), 13278724);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13278724);
     }
     return result;
   }
@@ -109345,7 +109345,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_DWORD *)(a1 + 4668) = 2;
       SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278724);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278724);
     }
     return result;
   }
@@ -109370,7 +109370,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_607F6ABC(MEMORY[0xCC62E4]);
     if ( !result )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278788);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278788);
     return result;
   }
 
@@ -109408,11 +109408,11 @@ static inline unsigned int uxtb16(unsigned int x)
           v3 = 13278852;
         else
           v3 = 13278820;
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
       }
       else
       {
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13278820);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13278820);
       }
     }
     return result;
@@ -109440,7 +109440,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *v3 = 2;
         SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_MODE_RESULT_EXIT", 0);
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13278724);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13278724);
     }
     return result;
   }
@@ -109486,7 +109486,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = 13278500;
       else
         v6 = 13278372;
-      return StateMgr::changeState(v5, v6);
+      return StateMgr__changeState(v5, v6);
     }
     return result;
   }
@@ -110674,7 +110674,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 40);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       v3 = 0;
       Table_getEntryById(a1 + 44, 5, 0);
       v4 = (int *)(a1 + 4620);
@@ -110687,12 +110687,12 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v3 < 4 )
             v5 = v3;
           v6 = *(_DWORD *)(a1 + 4 * v5 + 4152);
-          StateMgr::execute((_DWORD *)(v6 + 3100));
+          StateMgr__execute((_DWORD *)(v6 + 3100));
           (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(v6 + 3124) + 12))(*(_DWORD *)(v6 + 3124));
           (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(v6 + 3124) + 20))(*(_DWORD *)(v6 + 3124));
           (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(v6 + 3128) + 12))(*(_DWORD *)(v6 + 3128));
           (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(v6 + 3128) + 20))(*(_DWORD *)(v6 + 3128));
-          StateMgr::execute((_DWORD *)(v6 + 32));
+          StateMgr__execute((_DWORD *)(v6 + 32));
           sub_60402E34(v6 + 56);
           *(_DWORD *)(v6 + 2644) = 1086953882;
           ++v3;
@@ -110754,7 +110754,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 13277892;
     else
       v3 = 13278756;
-    StateMgr::changeState(v2, v3);
+    StateMgr__changeState(v2, v3);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 2u, (_DWORD *)0xCA996C, 0);
     v4 = *(_DWORD **)(a1 + 3556);
     if ( *(_DWORD *)(a1 + 3552) > 2u )
@@ -111190,7 +111190,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v4 = 0;
         if ( v3 < 4 )
           v4 = v3;
-        StateMgr::changeState((_DWORD *)(a1[v4 + 1038] + 3100), 13279940);
+        StateMgr__changeState((_DWORD *)(a1[v4 + 1038] + 3100), 13279940);
         ++v3;
       }
       while ( (int)v3 < *v2 );
@@ -111870,14 +111870,14 @@ static inline unsigned int uxtb16(unsigned int x)
           {
             *(_DWORD *)(result + 2756) = 2;
             if ( *(_BYTE *)(result + 2734) || *(_BYTE *)(result + 2735) )
-              return StateMgr::changeState((_DWORD *)(result + 20), 13279612);
+              return StateMgr__changeState((_DWORD *)(result + 20), 13279612);
             v7 = 6;
           }
           else
           {
             *(_DWORD *)(result + 2756) = 1;
             if ( *(_BYTE *)(result + 2734) || *(_BYTE *)(result + 2735) )
-              return StateMgr::changeState((_DWORD *)(result + 20), 13279612);
+              return StateMgr__changeState((_DWORD *)(result + 20), 13279612);
             v7 = 5;
           }
           *(_BYTE *)(result + 2743) = 1;
@@ -111886,7 +111886,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(result + 2576) = 0;
           *(_DWORD *)(result + 2604) = 1065353216;
           *(_BYTE *)(result + 2737) = 1;
-          return StateMgr::changeState((_DWORD *)(result + 20), 13279612);
+          return StateMgr__changeState((_DWORD *)(result + 20), 13279612);
         }
         v4 = (float *)((char *)&unk_60AF2954 + 4 * v1);
       }
@@ -111894,13 +111894,13 @@ static inline unsigned int uxtb16(unsigned int x)
       goto LABEL_14;
     }
     if ( *(_BYTE *)(result + 3052) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13279644);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13279644);
     if ( *(_BYTE *)(result + 3053) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13279708);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13279708);
     if ( *(_BYTE *)(result + 3054) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13279772);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13279772);
     if ( *(_BYTE *)(result + 3055) )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13279804);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13279804);
     return result;
   }
 
@@ -111913,7 +111913,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(result + 2745) )
     {
       *(_DWORD *)(result + 3036) = *(_DWORD *)(result + 3032);
-      return StateMgr::changeState((_DWORD *)(result + 20), 13279580);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13279580);
     }
     return result;
   }
@@ -111952,7 +111952,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = Object_getBit5(*(_DWORD *)(*(_DWORD *)(a1 + 60) + 4));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13279676);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13279676);
     return result;
   }
 
@@ -112003,7 +112003,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = Object_getBit5(*(_DWORD *)(*(_DWORD *)(a1 + 60) + 4));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13279740);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13279740);
     return result;
   }
 
@@ -112044,7 +112044,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       (*(void (__fastcall **)(_DWORD *, int))(*result + 84))(result, 192);
       *(_BYTE *)(a1 + 3054) = 0;
-      return (_DWORD *)StateMgr::changeState((_DWORD *)(a1 + 20), 13279580);
+      return (_DWORD *)StateMgr__changeState((_DWORD *)(a1 + 20), 13279580);
     }
     return result;
   }
@@ -112072,7 +112072,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = Object_getBit5(*(_DWORD *)(*(_DWORD *)(a1 + 60) + 4));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13279836);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13279836);
     return result;
   }
 
@@ -112099,7 +112099,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v1 )
     {
       *(_BYTE *)(result + 3055) = 0;
-      return StateMgr::changeState((_DWORD *)(result + 20), 13279772);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13279772);
     }
     return result;
   }
@@ -112111,7 +112111,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_6052A0E0(_DWORD *result)
   {
     if ( result[14] != result[13] )
-      return (_DWORD *)StateMgr::changeState(result + 5, 13279908);
+      return (_DWORD *)StateMgr__changeState(result + 5, 13279908);
     return result;
   }
 
@@ -112131,7 +112131,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6052A120(int result)
   {
     if ( (*(_BYTE *)(*(_DWORD *)(result + 44) + 44) & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(result + 20), 13279876);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13279876);
     return result;
   }
 
@@ -112168,7 +112168,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (*(_BYTE *)(result[12] + 44) & 1) != 0 )
     {
       *(_BYTE *)(result[9] + 64) &= ~1u;
-      return (_DWORD *)StateMgr::changeState(result + 5, 13279876);
+      return (_DWORD *)StateMgr__changeState(result + 5, 13279876);
     }
     return result;
   }
@@ -112838,7 +112838,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAA450])(MEMORY[0xCAA450]);
       MEMORY[0xCAA450] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -112856,7 +112856,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAA450])(MEMORY[0xCAA450]);
       MEMORY[0xCAA450] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -112873,7 +112873,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCAA450] )
     {
       v2 = operator new[](3232, a1, 4);
-      v3 = sead::IDisposer::IDisposer(v2 + 4, a1, 3);
+      v3 = sead__IDisposer__IDisposer(v2 + 4, a1, 3);
       *(_DWORD *)(v2 + 4) = 12583088;
       MEMORY[0xCAA44C] = v3;
       sub_6052B328(v2);
@@ -112960,7 +112960,7 @@ static inline unsigned int uxtb16(unsigned int x)
             else
             {
               v9 = v6[797];
-              *v8 = (sead::Random::getU32(MEMORY[0xCCF4E4]) * (unsigned __int64)v9) >> 32;
+              *v8 = (sead__Random__getU32(MEMORY[0xCCF4E4]) * (unsigned __int64)v9) >> 32;
             }
           }
         }
@@ -112972,7 +112972,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     if ( v2 == result )
-      return StateMgr::changeState(a1 + 10, 13280404);
+      return StateMgr__changeState(a1 + 10, 13280404);
     return result;
   }
 
@@ -113001,7 +113001,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
   LABEL_14:
             *(_BYTE *)(a1 + 56) = 0;
-            return StateMgr::changeState((_DWORD *)(a1 + 40), 13280340);
+            return StateMgr__changeState((_DWORD *)(a1 + 40), 13280340);
           }
         }
       }
@@ -113307,7 +113307,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 56);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 40));
+      StateMgr__execute((_DWORD *)(a1 + 40));
       return SE_SYS_CB_RESULT_ref_2(a1);
     }
     return result;
@@ -113475,7 +113475,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     *(_BYTE *)(a1 + 56) = 1;
-    return StateMgr::changeState((_DWORD *)(a1 + 40), 13280372);
+    return StateMgr__changeState((_DWORD *)(a1 + 40), 13280372);
   }
 
 /* ============================================================================
@@ -113545,7 +113545,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(v13 + 2972) )
         v14 = &flt_6052C148;
       *(float *)(v13 + 2984) = *v14;
-      *(_DWORD *)(v13 + 2964) = (((12 * (unsigned __int64)(unsigned int)sead::Random::getU32(v4)) >> 32 << 24) & 0xF000000)
+      *(_DWORD *)(v13 + 2964) = (((12 * (unsigned __int64)(unsigned int)sead__Random__getU32(v4)) >> 32 << 24) & 0xF000000)
                               + 0x4000000;
     }
     else
@@ -113572,7 +113572,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v16 = a1 + 4 * v15;
       v17 = (float *)(v16 + 3204);
       do
-        v18 = (float)(int)(((15 * (unsigned __int64)(unsigned int)sead::Random::getU32(v4)) >> 32) - 7);
+        v18 = (float)(int)(((15 * (unsigned __int64)(unsigned int)sead__Random__getU32(v4)) >> 32) - 7);
       while ( (float)(*v17 * v18) >= 0.0 );
       *v17 = v18;
       if ( *(_DWORD *)(v16 + 3108) == 1 )
@@ -113604,7 +113604,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(v25 + 92) )
         v26 = &flt_6052C148;
       *(float *)(v25 + 104) = *v26;
-      *(_DWORD *)(v25 + 84) = (((12 * (unsigned __int64)(unsigned int)sead::Random::getU32(MEMORY[0xCCF4E4])) >> 32 << 24)
+      *(_DWORD *)(v25 + 84) = (((12 * (unsigned __int64)(unsigned int)sead__Random__getU32(MEMORY[0xCCF4E4])) >> 32 << 24)
                              & 0xF000000)
                             + 0x4000000;
     }
@@ -114124,7 +114124,7 @@ static inline unsigned int uxtb16(unsigned int x)
         return result;
       case 9:
         if ( result <= 0 )
-          return StateMgr::changeState((_DWORD *)(a1 + 24), 13280512);
+          return StateMgr__changeState((_DWORD *)(a1 + 24), 13280512);
         return result;
       default:
         return result;
@@ -114721,7 +114721,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6052DBEC(_DWORD *a1)
   {
     Table_getEntryById(a1 + 18, 14, 0);
-    StateMgr::execute(a1 + 6);
+    StateMgr__execute(a1 + 6);
     sub_60507028(a1[935]);
     sub_60507028(a1[936]);
     sub_60507028(a1[937]);
@@ -114948,7 +114948,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCAA540] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCAA540] )
         {
           if ( _cxa_guard_acquire_0(13280852) )
@@ -114997,7 +114997,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13280856, MEMORY[0xCAA548], 17);
           MEMORY[0xCAA540] = 13280856;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCAA540];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -115282,7 +115282,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13281344);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13281344);
     return result;
   }
 
@@ -115307,7 +115307,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 11388);
     *(_DWORD *)(result + 11388) = v1 - 1;
     if ( v1 <= 1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13281376);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13281376);
     return result;
   }
 
@@ -115368,7 +115368,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
   LABEL_23:
           SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLOSE", 0);
-          return StateMgr::changeState((_DWORD *)(a1 + 24), 13281408);
+          return StateMgr__changeState((_DWORD *)(a1 + 24), 13281408);
         }
   LABEL_20:
         *(_DWORD *)result = v4 - 1;
@@ -115380,7 +115380,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
   LABEL_17:
           SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_MG_CMN_WIN_CLK", 0);
-          return StateMgr::changeState((_DWORD *)(a1 + 24), 13281408);
+          return StateMgr__changeState((_DWORD *)(a1 + 24), 13281408);
         }
       }
       else if ( (*(_BYTE *)(a1 + 10989) & 0x20) != 0 )
@@ -115422,7 +115422,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_6050A8AC(a1 + 3760);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13281440);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13281440);
     return result;
   }
 
@@ -115445,7 +115445,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13281280);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13281280);
     return result;
   }
 
@@ -115904,7 +115904,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( !*(_BYTE *)(a1 + 10978) && *(_BYTE *)(a1 + 10979) && sub_6050A95C(a1 + 3760) == 1 )
         *(_BYTE *)(a1 + 10978) = 1;
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050A950(a1 + 3760, 0);
       sub_6050A8A4(a1 + 3760);
       return Table_getEntryById(a1 + 40, 14, 0);
@@ -116040,7 +116040,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + v18) = v17;
     *(_WORD *)(a1 + 10976) = 257;
     *(_BYTE *)(a1 + 10980) = 0;
-    StateMgr::changeState((_DWORD *)(a1 + 24), 13281312);
+    StateMgr__changeState((_DWORD *)(a1 + 24), 13281312);
     return Table_getEntryById(v16, 14, 0);
   }
 
@@ -116392,7 +116392,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAAAC0])(MEMORY[0xCAAAC0]);
       MEMORY[0xCAAAC0] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -116410,7 +116410,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAAAC0])(MEMORY[0xCAAAC0]);
       MEMORY[0xCAAAC0] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -116427,7 +116427,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCAAAC0] )
     {
       v2 = operator new[](708, a1, 4);
-      v3 = sead::IDisposer::IDisposer(v2 + 4, a1, 3);
+      v3 = sead__IDisposer__IDisposer(v2 + 4, a1, 3);
       *(_DWORD *)(v2 + 4) = 12583536;
       MEMORY[0xCAAABC] = v3;
       sub_60530420(v2);
@@ -116807,8 +116807,8 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( i < 4 )
           v4 = i;
         v5 = a1 + 80 * v4;
-        StateMgr::execute((_DWORD *)(v5 + 88));
-        StateMgr::execute((_DWORD *)(v5 + 408));
+        StateMgr__execute((_DWORD *)(v5 + 88));
+        StateMgr__execute((_DWORD *)(v5 + 408));
         result = *(_DWORD *)(a1 + 64);
       }
     }
@@ -116880,14 +116880,14 @@ static inline unsigned int uxtb16(unsigned int x)
         v8[34] = v9;
         v8[35] = v10;
         sub_60531178(v8 + 17);
-        StateMgr::changeState(v8 + 22, 13282068);
+        StateMgr__changeState(v8 + 22, 13282068);
         v11 = v7[1];
         v12 = v7[2];
         v8[113] = *v7;
         v8[114] = v11;
         v8[115] = v12;
         sub_60531178(v8 + 97);
-        StateMgr::changeState(v8 + 102, 13282068);
+        StateMgr__changeState(v8 + 102, 13282068);
         result = *(_DWORD *)(v3 + 64);
         ++v5;
       }
@@ -116918,14 +116918,14 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = v6;
     v4[2] = v7;
     sub_60531178(a1 + 17);
-    StateMgr::changeState(a1 + 22, 13282068);
+    StateMgr__changeState(a1 + 22, 13282068);
     v8 = a2[4];
     v9 = a2[5];
     a1[53] = a2[3];
     a1[54] = v8;
     a1[55] = v9;
     sub_60531178(a1 + 37);
-    return StateMgr::changeState(a1 + 42, 13282068);
+    return StateMgr__changeState(a1 + 42, 13282068);
   }
 
 /* ============================================================================
@@ -116963,7 +116963,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( !v5 )
           return result;
       }
-      return StateMgr::changeState((_DWORD *)(result + 20), 13282100);
+      return StateMgr__changeState((_DWORD *)(result + 20), 13282100);
     }
     return result;
   }
@@ -117656,7 +117656,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60531DE4(int a1)
   {
-    return StateMgr::execute((_DWORD *)(a1 + 20));
+    return StateMgr__execute((_DWORD *)(a1 + 20));
   }
 
 /* ============================================================================
@@ -118263,7 +118263,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_605369BC(MEMORY[0xCAADA8]);
       MEMORY[0xCAADA8] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -118281,7 +118281,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_605369BC(MEMORY[0xCAADA8]);
       MEMORY[0xCAADA8] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -118299,7 +118299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCAADA8] )
     {
       v3 = operator new[](83640, a1, 4);
-      v4 = (_DWORD *)sead::IDisposer::IDisposer(v3, a1, 3);
+      v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12583932;
       MEMORY[0xCAADA4] = v4;
       result = sub_605366EC();
@@ -118348,7 +118348,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v2 = 13282980;
       else
         v2 = 13282852;
-      return StateMgr::changeState(v1, v2);
+      return StateMgr__changeState(v1, v2);
     }
     return result;
   }
@@ -118500,7 +118500,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v3 = 13282884;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -118577,7 +118577,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result[3900] > 1u )
       v1 += 20;
     if ( *(_BYTE *)(v1 + 16) )
-      return (_DWORD *)StateMgr::changeState(result + 9, 13282916);
+      return (_DWORD *)StateMgr__changeState(result + 9, 13282916);
     return result;
   }
 
@@ -118682,7 +118682,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 52) = v10;
         v5 = 13283204;
       }
-      return (_BYTE *)StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return (_BYTE *)StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( *(_BYTE *)(a1 + 16746) )
       return result;
@@ -118693,7 +118693,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *v3 = 12;
       *(_DWORD *)(a1 + 52) = 13282820;
       v5 = 13283108;
-      return (_BYTE *)StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return (_BYTE *)StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     v8 = (int)(result - 67933);
     if ( (v6 & 0x2000) != 0 )
@@ -118734,7 +118734,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       *(_DWORD *)(a1 + 52) = v11;
       v5 = 13283204;
-      return (_BYTE *)StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return (_BYTE *)StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( *(_BYTE *)(a1 + 83632) )
     {
@@ -118908,7 +118908,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_605391B0((_DWORD *)a1, v2);
       sub_60502A24(v8, &dword_60B03A54, 5, 1);
       v5 = 13283236;
-      return (_BYTE *)StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return (_BYTE *)StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( ((v6 & 0x800) == 0 || sub_60459718(MEMORY[0xC9CFB8], 0))
       && !sub_6045ADE4(MEMORY[0xC9CFB8], 0, 0x4000, 1)
@@ -118920,7 +118920,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605391B0((_DWORD *)a1, v2);
     sub_60502A24(v8, &dword_60B03A54, 5, 1);
     v5 = 13283524;
-    return (_BYTE *)StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+    return (_BYTE *)StateMgr__changeState((_DWORD *)(a1 + 36), v5);
   }
 
 /* ============================================================================
@@ -118976,7 +118976,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13282980);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13282980);
     return result;
   }
 
@@ -119009,7 +119009,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60534044(int result)
   {
     if ( *(_BYTE *)(result + 83636) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13283012);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13283012);
     return result;
   }
 
@@ -119034,7 +119034,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13282916);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13282916);
     return result;
   }
 
@@ -119106,7 +119106,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13283236;
       else
         v3 = 13283524;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -119144,7 +119144,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = 0;
     result = sub_60532834(a1 + 4012 * v2 + 56);
     if ( !result )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13283876);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13283876);
     return result;
   }
 
@@ -119163,7 +119163,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60534310(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 36), 13283140);
+    return StateMgr__changeState((_DWORD *)(a1 + 36), 13283140);
   }
 
 /* ============================================================================
@@ -119173,7 +119173,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053432C(int result)
   {
     if ( !*(_BYTE *)(result + 16740) )
-      return StateMgr::changeState((_DWORD *)(result + 36), *(_DWORD *)(result + 52));
+      return StateMgr__changeState((_DWORD *)(result + 36), *(_DWORD *)(result + 52));
     return result;
   }
 
@@ -119245,7 +119245,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605343F8(int result)
   {
     if ( !*(_BYTE *)(result + 16742) )
-      return StateMgr::changeState((_DWORD *)(result + 36), *(_DWORD *)(result + 52));
+      return StateMgr__changeState((_DWORD *)(result + 36), *(_DWORD *)(result + 52));
     return result;
   }
 
@@ -119342,7 +119342,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605391B0(a1, v2);
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 3023), 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState(a1 + 9, 13283300);
+      return StateMgr__changeState(a1 + 9, 13283300);
     return result;
   }
 
@@ -119373,10 +119373,10 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !*(_BYTE *)(a1 + 52673) || (result = sub_6047EF24(a1 + 15740, 2), result == 1) )
       {
         if ( !*(_BYTE *)(a1 + 52674) )
-          return StateMgr::changeState((_DWORD *)(a1 + 36), *(_DWORD *)(a1 + 52));
+          return StateMgr__changeState((_DWORD *)(a1 + 36), *(_DWORD *)(a1 + 52));
         result = sub_6047EF24(a1 + 15740, 3);
         if ( result == 1 )
-          return StateMgr::changeState((_DWORD *)(a1 + 36), *(_DWORD *)(a1 + 52));
+          return StateMgr__changeState((_DWORD *)(a1 + 36), *(_DWORD *)(a1 + 52));
       }
     }
     return result;
@@ -119424,7 +119424,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 52) = 13283332;
         v5 = 13283204;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( *(_BYTE *)(a1 + 16746) )
       return result;
@@ -119434,14 +119434,14 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)result = 9;
       *(_DWORD *)(a1 + 52) = 13283460;
       v5 = 13283108;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( (v6 & 0x2000) != 0 )
     {
       Object_clampFieldPairsToMin(result - 1028);
       *(_DWORD *)(a1 + 52) = 13283332;
       v5 = 13283204;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( v3 == 3 )
     {
@@ -119514,7 +119514,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13283364);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13283364);
     return result;
   }
 
@@ -119547,9 +119547,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v1 )
     {
       if ( v1 == 2 )
-        return StateMgr::changeState((_DWORD *)(result + 36), 13283428);
+        return StateMgr__changeState((_DWORD *)(result + 36), 13283428);
       else
-        return StateMgr::changeState((_DWORD *)(result + 36), 13283396);
+        return StateMgr__changeState((_DWORD *)(result + 36), 13283396);
     }
     return result;
   }
@@ -119607,7 +119607,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
   }
 
@@ -119722,7 +119722,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
   }
 
@@ -119754,7 +119754,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60535104(int result)
   {
     if ( !*(_BYTE *)(result + 16740) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13283492);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13283492);
     return result;
   }
 
@@ -119820,7 +119820,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
   }
 
@@ -119889,7 +119889,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605391B0(a1, v2);
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 3023), 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState(a1 + 9, 13283556);
+      return StateMgr__changeState(a1 + 9, 13283556);
     return result;
   }
 
@@ -119949,7 +119949,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 52) = 13283588;
         v5 = 13283204;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( *(_BYTE *)(a1 + 16746) )
       return result;
@@ -119959,14 +119959,14 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)result = 10;
       *(_DWORD *)(a1 + 52) = 13283812;
       v5 = 13283108;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( (v6 & 0x2000) != 0 )
     {
       Object_clampFieldPairsToMin(result - 1028);
       *(_DWORD *)(a1 + 52) = 13283588;
       v5 = 13283204;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( v3 == 3 )
     {
@@ -120064,7 +120064,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13283620);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13283620);
     return result;
   }
 
@@ -120123,12 +120123,12 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60535B94(int result)
   {
     if ( *(_BYTE *)(result + 52506) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13283652);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13283652);
     if ( *(_BYTE *)(result + 16743) && *(_DWORD *)(result + 16728) == 11 )
     {
       *(_BYTE *)(result + 52505) = 1;
       *(_DWORD *)(result + 52) = 13283716;
-      return StateMgr::changeState((_DWORD *)(result + 36), 13283140);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13283140);
     }
     else if ( !*(_BYTE *)(result + 16746) && !*(_BYTE *)(result + 50626) )
     {
@@ -120137,11 +120137,11 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(result + 52505) = 1;
         *(_DWORD *)(result + 16728) = 11;
         *(_DWORD *)(result + 52) = 13283716;
-        return StateMgr::changeState((_DWORD *)(result + 36), 13283108);
+        return StateMgr__changeState((_DWORD *)(result + 36), 13283108);
       }
       else if ( *(_DWORD *)(result + 52472) )
       {
-        return StateMgr::changeState((_DWORD *)(result + 36), 13283780);
+        return StateMgr__changeState((_DWORD *)(result + 36), 13283780);
       }
     }
     return result;
@@ -120176,7 +120176,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13283684);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13283684);
     return result;
   }
 
@@ -120201,7 +120201,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60535DE0(int result)
   {
     if ( *(_DWORD *)(result + 52472) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13283780);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13283780);
     return result;
   }
 
@@ -120222,7 +120222,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60535E18(int result)
   {
     if ( *(_DWORD *)(result + 52472) == 3 )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13283780);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13283780);
     return result;
   }
 
@@ -120272,7 +120272,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
   }
 
@@ -120315,7 +120315,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
   }
 
@@ -120367,7 +120367,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605362E4(int result)
   {
     if ( !*(_BYTE *)(result + 16740) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13283844);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13283844);
     return result;
   }
 
@@ -120420,7 +120420,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
   }
 
@@ -120470,7 +120470,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60536620(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 15604) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13282820);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13282820);
     return result;
   }
 
@@ -121290,19 +121290,19 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( !v14 )
         {
           do
-            StateMgr::execute(v15);
+            StateMgr__execute(v15);
           while ( !*v13 );
         }
         sub_604745C0(v3, 0);
         ArrayOf5_setEntryFloat16(v3, 0);
         Table_getEntryById(v3, 5, 0);
-        StateMgr::execute(v15);
-        CurrentState = StateMgr::getCurrentState((int)v15);
+        StateMgr__execute(v15);
+        CurrentState = StateMgr__getCurrentState((int)v15);
         v17 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         result = (*(int (**)(void))(MEMORY[0xCAAE44] + 8))();
         if ( v17 == result )
         {
-          StateMgr::execute(v15);
+          StateMgr__execute(v15);
           sub_604745C0(v3, 1);
           ArrayOf5_setEntryFloat16(v3, 1);
           return Table_getEntryById(v3, 5, 0);
@@ -121350,7 +121350,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       *(float *)(a1 + 52476) = v4;
     }
-    StateMgr::execute((_DWORD *)(a1 + 36));
+    StateMgr__execute((_DWORD *)(a1 + 36));
     v6 = *(float *)(a1 + 83596) + 1.0;
     *(float *)(a1 + 83596) = v6;
     if ( v6 > *(float *)(a1 + 83600) )
@@ -121750,7 +121750,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6053CF68(MEMORY[0xCAB438]);
       MEMORY[0xCAB438] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -121768,7 +121768,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6053CF68(MEMORY[0xCAB438]);
       MEMORY[0xCAB438] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -121786,7 +121786,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCAB438] )
     {
       v3 = operator new[](83580, a1, 4);
-      v4 = (_DWORD *)sead::IDisposer::IDisposer(v3, a1, 3);
+      v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12584060;
       MEMORY[0xCAB434] = v4;
       result = sub_6053CC7C();
@@ -121827,7 +121827,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = 13284532;
     else
       v2 = 13284660;
-    return StateMgr::changeState(v1, v2);
+    return StateMgr__changeState(v1, v2);
   }
 
 /* ============================================================================
@@ -121961,7 +121961,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13284564;
       else
         v3 = 13284596;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -122035,7 +122035,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 1u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13284596);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13284596);
     return result;
   }
 
@@ -122174,7 +122174,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 52) = v14;
         v9 = 13284852;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v9);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v9);
     }
     result = *(unsigned __int8 *)(a1 + 16726);
     if ( !*(_BYTE *)(a1 + 16726) )
@@ -122186,7 +122186,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *v2 = 7;
         *(_DWORD *)(a1 + 52) = 13284628;
         v9 = 13284788;
-        return StateMgr::changeState((_DWORD *)(a1 + 36), v9);
+        return StateMgr__changeState((_DWORD *)(a1 + 36), v9);
       }
       if ( (v10 & 0x2000) != 0 )
       {
@@ -122218,7 +122218,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         *(_DWORD *)(a1 + 52) = v17;
         v9 = 13284852;
-        return StateMgr::changeState((_DWORD *)(a1 + 36), v9);
+        return StateMgr__changeState((_DWORD *)(a1 + 36), v9);
       }
       if ( *(_BYTE *)(a1 + 83572) )
         goto LABEL_17;
@@ -122328,7 +122328,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
   LABEL_86:
             v9 = 13285172;
-            return StateMgr::changeState((_DWORD *)(a1 + 36), v9);
+            return StateMgr__changeState((_DWORD *)(a1 + 36), v9);
           }
           ArrayOf5_writeEntry((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, *(_DWORD *)(a1 + 54636), 0);
           v20 = 1;
@@ -122354,7 +122354,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
   LABEL_82:
           v9 = 13284884;
-          return StateMgr::changeState((_DWORD *)(a1 + 36), v9);
+          return StateMgr__changeState((_DWORD *)(a1 + 36), v9);
         }
         ArrayOf5_writeEntry((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, *(_DWORD *)(a1 + 54636), 0);
         v22 = 1;
@@ -122410,7 +122410,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13284660);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13284660);
     return result;
   }
 
@@ -122443,7 +122443,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053A600(int result)
   {
     if ( *(_BYTE *)(result + 83575) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13284692);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13284692);
     return result;
   }
 
@@ -122468,7 +122468,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13284596);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13284596);
     return result;
   }
 
@@ -122539,7 +122539,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13284884;
       else
         v3 = 13285172;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -122577,7 +122577,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = 0;
     result = sub_60532834(a1 + 4012 * v2 + 56);
     if ( !result )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13285524);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13285524);
     return result;
   }
 
@@ -122596,7 +122596,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6053A8C0(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 36), 13284820);
+    return StateMgr__changeState((_DWORD *)(a1 + 36), 13284820);
   }
 
 /* ============================================================================
@@ -122606,7 +122606,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053A8DC(int result)
   {
     if ( !*(_BYTE *)(result + 16720) )
-      return StateMgr::changeState((_DWORD *)(result + 36), *(_DWORD *)(result + 52));
+      return StateMgr__changeState((_DWORD *)(result + 36), *(_DWORD *)(result + 52));
     return result;
   }
 
@@ -122617,7 +122617,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053A900(int result)
   {
     if ( !*(_BYTE *)(result + 16722) )
-      return StateMgr::changeState((_DWORD *)(result + 36), *(_DWORD *)(result + 52));
+      return StateMgr__changeState((_DWORD *)(result + 36), *(_DWORD *)(result + 52));
     return result;
   }
 
@@ -122705,7 +122705,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_7:
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 3023), 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState(a1 + 9, 13284948);
+      return StateMgr__changeState(a1 + 9, 13284948);
     return result;
   }
 
@@ -122736,10 +122736,10 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !*(_BYTE *)(a1 + 52613) || (result = sub_6047EF24(a1 + 15720, 2), result == 1) )
       {
         if ( !*(_BYTE *)(a1 + 52614) )
-          return StateMgr::changeState((_DWORD *)(a1 + 36), *(_DWORD *)(a1 + 52));
+          return StateMgr__changeState((_DWORD *)(a1 + 36), *(_DWORD *)(a1 + 52));
         result = sub_6047EF24(a1 + 15720, 3);
         if ( result == 1 )
-          return StateMgr::changeState((_DWORD *)(a1 + 36), *(_DWORD *)(a1 + 52));
+          return StateMgr__changeState((_DWORD *)(a1 + 36), *(_DWORD *)(a1 + 52));
       }
     }
     return result;
@@ -122787,7 +122787,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 52) = 13284980;
         v5 = 13284852;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( *(_BYTE *)(a1 + 16726) )
       return result;
@@ -122797,14 +122797,14 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)result = 4;
       *(_DWORD *)(a1 + 52) = 13285108;
       v5 = 13284788;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( (v6 & 0x2000) != 0 )
     {
       Object_clampFieldPairsToMin(result - 1028);
       *(_DWORD *)(a1 + 52) = 13284980;
       v5 = 13284852;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( v3 == 3 )
     {
@@ -122877,7 +122877,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13285012);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13285012);
     return result;
   }
 
@@ -122910,9 +122910,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v1 )
     {
       if ( v1 == 2 )
-        return StateMgr::changeState((_DWORD *)(result + 36), 13285076);
+        return StateMgr__changeState((_DWORD *)(result + 36), 13285076);
       else
-        return StateMgr::changeState((_DWORD *)(result + 36), 13285044);
+        return StateMgr__changeState((_DWORD *)(result + 36), 13285044);
     }
     return result;
   }
@@ -122974,7 +122974,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13284596;
       else
         v3 = 13284564;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -123094,7 +123094,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13284596;
       else
         v3 = 13284564;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -123127,7 +123127,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053B5CC(int result)
   {
     if ( !*(_BYTE *)(result + 16720) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13285140);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13285140);
     return result;
   }
 
@@ -123191,7 +123191,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13284596;
       else
         v3 = 13284564;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -123283,7 +123283,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_7:
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 3023), 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState(a1 + 9, 13285204);
+      return StateMgr__changeState(a1 + 9, 13285204);
     return result;
   }
 
@@ -123343,7 +123343,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 52) = 13285236;
         v5 = 13284852;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( *(_BYTE *)(a1 + 16726) )
       return result;
@@ -123353,14 +123353,14 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)result = 5;
       *(_DWORD *)(a1 + 52) = 13285460;
       v5 = 13284788;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( (v6 & 0x2000) != 0 )
     {
       Object_clampFieldPairsToMin(result - 1028);
       *(_DWORD *)(a1 + 52) = 13285236;
       v5 = 13284852;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v5);
     }
     if ( v3 == 3 )
     {
@@ -123456,7 +123456,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13285268);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13285268);
     return result;
   }
 
@@ -123513,12 +123513,12 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053C06C(int result)
   {
     if ( *(_BYTE *)(result + 52486) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13285300);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13285300);
     if ( *(_BYTE *)(result + 16723) && *(_DWORD *)(result + 16708) == 6 )
     {
       *(_BYTE *)(result + 52485) = 1;
       *(_DWORD *)(result + 52) = 13285364;
-      return StateMgr::changeState((_DWORD *)(result + 36), 13284820);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13284820);
     }
     else if ( !*(_BYTE *)(result + 16726) && !*(_BYTE *)(result + 50606) )
     {
@@ -123527,11 +123527,11 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(result + 52485) = 1;
         *(_DWORD *)(result + 16708) = 6;
         *(_DWORD *)(result + 52) = 13285364;
-        return StateMgr::changeState((_DWORD *)(result + 36), 13284788);
+        return StateMgr__changeState((_DWORD *)(result + 36), 13284788);
       }
       else if ( *(_DWORD *)(result + 52452) )
       {
-        return StateMgr::changeState((_DWORD *)(result + 36), 13285428);
+        return StateMgr__changeState((_DWORD *)(result + 36), 13285428);
       }
     }
     return result;
@@ -123566,7 +123566,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 36), 13285332);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), 13285332);
     return result;
   }
 
@@ -123591,7 +123591,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053C2B8(int result)
   {
     if ( *(_DWORD *)(result + 52452) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13285428);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13285428);
     return result;
   }
 
@@ -123612,7 +123612,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053C2F0(int result)
   {
     if ( *(_DWORD *)(result + 52452) == 3 )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13285428);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13285428);
     return result;
   }
 
@@ -123666,7 +123666,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13284596;
       else
         v3 = 13284564;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -123716,7 +123716,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13284596;
       else
         v3 = 13284564;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -123767,7 +123767,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053C7D4(int result)
   {
     if ( !*(_BYTE *)(result + 16720) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13285492);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13285492);
     return result;
   }
 
@@ -123818,7 +123818,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13284596;
       else
         v3 = 13284564;
-      return StateMgr::changeState((_DWORD *)(a1 + 36), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 36), v3);
     }
     return result;
   }
@@ -123869,7 +123869,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053CAE0(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 15604) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 36), 13284500);
+      return StateMgr__changeState((_DWORD *)(result + 36), 13284500);
     return result;
   }
 
@@ -123917,7 +123917,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         result = sub_604B80D0(v3);
         if ( !result )
-          return StateMgr::changeState((_DWORD *)(a1 + 36), 13285588);
+          return StateMgr__changeState((_DWORD *)(a1 + 36), 13285588);
       }
     }
     return result;
@@ -123934,7 +123934,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_DWORD *)(MEMORY[0xC99DD0] + 3796) == 3 )
       {
         *(_DWORD *)(MEMORY[0xC99DD0] + 3780) |= 2u;
-        return StateMgr::changeState((_DWORD *)(result + 36), 13285620);
+        return StateMgr__changeState((_DWORD *)(result + 36), 13285620);
       }
     }
     return result;
@@ -123958,7 +123958,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         result = sub_604B80D0(v3);
         if ( !result )
-          return StateMgr::changeState((_DWORD *)(a1 + 36), 13285524);
+          return StateMgr__changeState((_DWORD *)(a1 + 36), 13285524);
       }
     }
     return result;
@@ -124686,13 +124686,13 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v13 )
       {
         do
-          StateMgr::execute(v14);
+          StateMgr__execute(v14);
         while ( !*v12 );
       }
       sub_604745C0(v3, 0);
       ArrayOf5_setEntryFloat16(v3, 0);
       Table_getEntryById(v3, 5, 0);
-      StateMgr::execute(v14);
+      StateMgr__execute(v14);
     }
     ArrayOf5_lookupByIndex(v3, 1u, (_DWORD *)0xCAB45C, 0);
     sub_604745C0(v3, 1);
@@ -124735,7 +124735,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         *(float *)(a1 + 52456) = v4;
       }
-      StateMgr::execute((_DWORD *)(a1 + 36));
+      StateMgr__execute((_DWORD *)(a1 + 36));
       v5 = *(float *)(a1 + 83532) + 1.0;
       *(float *)(a1 + 83532) = v5;
       if ( v5 > *(float *)(a1 + 83536) )
@@ -125095,9 +125095,9 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = *(_DWORD *)(result + 34688);
     if ( v1 == 2 )
-      return StateMgr::changeState((_DWORD *)(result + 28108), 13286300);
+      return StateMgr__changeState((_DWORD *)(result + 28108), 13286300);
     if ( v1 == 1 )
-      return StateMgr::changeState((_DWORD *)(result + 28108), 13286076);
+      return StateMgr__changeState((_DWORD *)(result + 28108), 13286076);
     return result;
   }
 
@@ -125175,7 +125175,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053F8C8(int result)
   {
     if ( *(_BYTE *)(result + 34731) )
-      return StateMgr::changeState((_DWORD *)(result + 28108), 13286108);
+      return StateMgr__changeState((_DWORD *)(result + 28108), 13286108);
     return result;
   }
 
@@ -125228,23 +125228,23 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v3 )
         {
           *v5 = 13286268;
-          return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286236);
+          return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286236);
         }
         else
         {
           *v5 = 13286044;
-          return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286204);
+          return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286204);
         }
       }
       else
       {
         v6 = *(_DWORD *)(a1 + 34704);
         if ( (v6 & 0x4000) != 0 )
-          return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286140);
+          return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286140);
         v7 = *(_DWORD *)(a1 + 34708);
         if ( (v7 & 0x4000) != 0 )
         {
-          return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286140);
+          return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286140);
         }
         else
         {
@@ -125256,7 +125256,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( !v3 )
               v9 = 13286044;
             *(_DWORD *)(a1 + 28124) = v9;
-            return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286236);
+            return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286236);
           }
           else if ( !*(_BYTE *)(a1 + 32846) )
           {
@@ -125301,7 +125301,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 28128, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286044);
+      return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286044);
     return result;
   }
 
@@ -125332,7 +125332,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6053FB90(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286204);
+    return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286204);
   }
 
 /* ============================================================================
@@ -125342,7 +125342,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053FBB0(int result)
   {
     if ( !*(_BYTE *)(result + 32840) )
-      return StateMgr::changeState((_DWORD *)(result + 28108), *(_DWORD *)(result + 28124));
+      return StateMgr__changeState((_DWORD *)(result + 28108), *(_DWORD *)(result + 28124));
     return result;
   }
 
@@ -125371,7 +125371,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6053FC00(int result)
   {
     if ( !*(_BYTE *)(result + 32842) )
-      return StateMgr::changeState((_DWORD *)(result + 28108), *(_DWORD *)(result + 28124));
+      return StateMgr__changeState((_DWORD *)(result + 28108), *(_DWORD *)(result + 28124));
     return result;
   }
 
@@ -125454,7 +125454,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = *(_DWORD *)(MEMORY[0xCC6E04] + 32);
       if ( !result )
-        return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286044);
+        return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286044);
     }
     return result;
   }
@@ -125537,7 +125537,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 28128, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286332);
+      return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286332);
     return result;
   }
 
@@ -125583,14 +125583,14 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( *(_BYTE *)(a1 + 34725) )
       {
-        return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286364);
+        return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286364);
       }
       else if ( *(_BYTE *)(a1 + 32843) )
       {
         *(_DWORD *)(a1 + 34720) = *(_DWORD *)(a1 + 4 * (v3 != 4) + 31792);
         *(_BYTE *)(a1 + 34726) = 1;
         *(_DWORD *)(a1 + 28124) = 13286428;
-        return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286236);
+        return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286236);
       }
       else
       {
@@ -125601,7 +125601,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_BYTE *)(a1 + 34726) = 1;
           Object_clampFieldPairsToMin(result - 1028);
           *(_DWORD *)(a1 + 28124) = 13286428;
-          return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286236);
+          return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286236);
         }
         else if ( !*(_BYTE *)(a1 + 32846) )
         {
@@ -125639,7 +125639,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60540398(int result)
   {
     if ( !*(_BYTE *)(result + 34725) )
-      return StateMgr::changeState((_DWORD *)(result + 28108), 13286044);
+      return StateMgr__changeState((_DWORD *)(result + 28108), 13286044);
     return result;
   }
 
@@ -125676,7 +125676,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 28128, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286044);
+      return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286044);
     return result;
   }
 
@@ -125725,7 +125725,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 28128, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286460);
+      return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286460);
     return result;
   }
 
@@ -125779,12 +125779,12 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v3 )
         {
           *v5 = 13286524;
-          return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286236);
+          return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286236);
         }
         else
         {
           *v5 = 13286492;
-          return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286204);
+          return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286204);
         }
       }
       else
@@ -125793,7 +125793,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (v6 & 0x4000) != 0 || (v7 = *(_DWORD *)(a1 + 34708), (v7 & 0x4000) != 0) )
         {
           Sound_dispatchByKind((int)"SE_SYS_BACK", 15);
-          return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286492);
+          return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286492);
         }
         else
         {
@@ -125805,7 +125805,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( !v3 )
               v9 = 13286492;
             *(_DWORD *)(a1 + 28124) = v9;
-            return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286236);
+            return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286236);
           }
           else if ( !*(_BYTE *)(a1 + 32846) )
           {
@@ -125842,7 +125842,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60540800(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286044);
+    return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286044);
   }
 
 /* ============================================================================
@@ -125926,7 +125926,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = *(_DWORD *)(MEMORY[0xCC6E04] + 32);
       if ( !result )
-        return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286044);
+        return StateMgr__changeState((_DWORD *)(a1 + 28108), 13286044);
     }
     return result;
   }
@@ -126383,7 +126383,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[8677] = 0;
     if ( v2 )
       a1[8677] = a1[8572] & 0x60C0;
-    StateMgr::execute(a1 + 7027);
+    StateMgr__execute(a1 + 7027);
     sub_6050229C((int)(a1 + 7950));
     return Table_getEntryById(a1 + 7032, 14, 0);
   }
@@ -126605,7 +126605,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCABDE4])(MEMORY[0xCABDE4]);
       MEMORY[0xCABDE4] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -126623,7 +126623,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCABDE4])(MEMORY[0xCABDE4]);
       MEMORY[0xCABDE4] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -126640,7 +126640,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCABDE4] )
     {
       v2 = operator new[](3612, a1, 4);
-      v3 = sead::IDisposer::IDisposer(v2 + 4, a1, 3);
+      v3 = sead__IDisposer__IDisposer(v2 + 4, a1, 3);
       *(_DWORD *)(v2 + 4) = 12584316;
       MEMORY[0xCABDE0] = v3;
       *(_DWORD *)v2 = 12584332;
@@ -126757,7 +126757,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605425C8(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 44));
+    StateMgr__execute((_DWORD *)(a1 + 44));
     return Table_getEntryById((_DWORD *)(a1 + 60), 0xEu, 0);
   }
 
@@ -127595,7 +127595,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v1 = (_DWORD *)(result + 24);
       v2 = 13287228;
-      return StateMgr::changeState(v1, v2);
+      return StateMgr__changeState(v1, v2);
     }
     v3 = MEMORY[0xC89E18] == 0;
     if ( MEMORY[0xC89E18] )
@@ -127607,7 +127607,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v2 = 13288124;
       else
         v2 = 13287228;
-      return StateMgr::changeState(v1, v2);
+      return StateMgr__changeState(v1, v2);
     }
     return result;
   }
@@ -127672,7 +127672,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13287260);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13287260);
     return result;
   }
 
@@ -127735,7 +127735,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = 13288060;
       else
         v5 = 13287292;
-      return StateMgr::changeState(v4, v5);
+      return StateMgr__changeState(v4, v5);
     }
     if ( (*(_BYTE *)(a1 + 31453) & 0x40) != 0 || sub_6045C130(a1 + 31448) )
     {
@@ -127743,7 +127743,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = 13288028;
   LABEL_10:
       v4 = (_DWORD *)(a1 + 24);
-      return StateMgr::changeState(v4, v5);
+      return StateMgr__changeState(v4, v5);
     }
     v6 = (_BYTE *)(a1 + 31452);
     if ( (*(_BYTE *)(a1 + 31453) & 0x20) != 0 )
@@ -127837,7 +127837,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v1 = *(_DWORD *)(result + 4660);
       if ( v1 <= 0x19 && ((0x3FFFFFBu >> v1) & 1) != 0 )
         *(_DWORD *)(result + 40) = dword_60C006E0[v1];
-      return StateMgr::changeState((_DWORD *)(result + 24), 13287324);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13287324);
     }
     return result;
   }
@@ -127871,7 +127871,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 40));
+      return StateMgr__changeState((_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 40));
     return result;
   }
 
@@ -127896,7 +127896,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60543C80(int result)
   {
     if ( !*(_BYTE *)(MEMORY[0xC89E18] + 157400) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13287932);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13287932);
     return result;
   }
 
@@ -127944,7 +127944,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         v3 = 13287196;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     return result;
   }
@@ -127969,7 +127969,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v3 = 13287964;
     }
-    return StateMgr::changeState(a1 + 6, v3);
+    return StateMgr__changeState(a1 + 6, v3);
   }
 
 /* ============================================================================
@@ -128012,7 +128012,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         v3 = 13287196;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     return result;
   }
@@ -128048,7 +128048,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_608169AC(MEMORY[0xCC6B68]);
         *(_BYTE *)(a1 + 33504) = 0;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13287196);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13287196);
     }
     return result;
   }
@@ -128080,7 +128080,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = sub_604B80D0(v2);
       if ( !result )
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13287548);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13287548);
     }
     return result;
   }
@@ -128110,11 +128110,11 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = dword_60AF5A10[v1];
       if ( v2 == 1 )
       {
-        return StateMgr::changeState((_DWORD *)(result + 24), 13287932);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13287932);
       }
       else if ( !v2 )
       {
-        return StateMgr::changeState((_DWORD *)(result + 24), 13287580);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13287580);
       }
     }
     return result;
@@ -128150,7 +128150,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else
   LABEL_5:
       v3 = 13287932;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
   }
 
 /* ============================================================================
@@ -128179,7 +128179,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605441D4(int result)
   {
     if ( *(_DWORD *)(MEMORY[0xCC6E04] + 24) != 2 && !*(_BYTE *)(MEMORY[0xC99DD0] + 3793) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13287644);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13287644);
     return result;
   }
 
@@ -128209,7 +128209,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = sub_604B80D0(v2);
       if ( !result )
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13287676);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13287676);
     }
     return result;
   }
@@ -128231,7 +128231,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605442CC(int result)
   {
     if ( *(_DWORD *)(MEMORY[0xC99DD0] + 3796) == 3 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13287708);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13287708);
     return result;
   }
 
@@ -128257,7 +128257,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_604B7FC8(MEMORY[0xC99DD0] + 16);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13287996);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13287996);
     return result;
   }
 
@@ -128293,7 +128293,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605443D4(int result)
   {
     if ( !*(_BYTE *)(MEMORY[0xC89E18] + 299212) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13287932);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13287932);
     return result;
   }
 
@@ -128348,7 +128348,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = sub_604B80D0(v2);
       if ( !result )
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13287804);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13287804);
     }
     return result;
   }
@@ -128378,12 +128378,12 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = dword_60AF5A10[v1];
       if ( v2 == 1 )
       {
-        return StateMgr::changeState((_DWORD *)(result + 24), 13287932);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13287932);
       }
       else if ( !v2 )
       {
         *(_DWORD *)(result + 40) = 13287996;
-        return StateMgr::changeState((_DWORD *)(result + 24), 13287836);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13287836);
       }
     }
     return result;
@@ -128429,7 +128429,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else
   LABEL_5:
       v3 = 13287932;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
   }
 
 /* ============================================================================
@@ -128449,7 +128449,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054466C(int result)
   {
     if ( *(_DWORD *)(MEMORY[0xC99DD0] + 3796) == 3 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13287900);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13287900);
     return result;
   }
 
@@ -128471,7 +128471,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605446CC(int result)
   {
     if ( !*(_BYTE *)(MEMORY[0xC99DD0] + 3793) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13287932);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13287932);
     return result;
   }
 
@@ -128495,7 +128495,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60544720(int result)
   {
     if ( !*(_BYTE *)(MEMORY[0xC99DD0] + 3793) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13287964);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13287964);
     return result;
   }
 
@@ -128536,7 +128536,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60544824(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 3556) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13287260);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13287260);
     return result;
   }
 
@@ -128579,7 +128579,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605448A4(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13288060);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13288060);
   }
 
 /* ============================================================================
@@ -128589,7 +128589,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605448C0(int result)
   {
     if ( !*(_BYTE *)(result + 4672) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13288092);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13288092);
     return result;
   }
 
@@ -128637,7 +128637,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13287196);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13287196);
     return result;
   }
 
@@ -128660,7 +128660,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605449D0(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13287356);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13287356);
   }
 
 /* ============================================================================
@@ -128683,12 +128683,12 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( *(_DWORD *)(MEMORY[0xC99E2C] + 638252) == 3 )
       {
-        return StateMgr::changeState((_DWORD *)(result + 24), 13287964);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13287964);
       }
       else
       {
         *(_DWORD *)(result + 33476) = 3;
-        return StateMgr::changeState((_DWORD *)(result + 24), 13288188);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13288188);
       }
     }
     return result;
@@ -128728,7 +128728,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13287196);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13287196);
     return result;
   }
 
@@ -128772,7 +128772,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = sub_604B80D0(v2);
       if ( !result )
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13288252);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13288252);
     }
     return result;
   }
@@ -128802,12 +128802,12 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = dword_60AF5A10[v1];
       if ( v2 == 1 )
       {
-        return StateMgr::changeState((_DWORD *)(result + 24), 13287932);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13287932);
       }
       else if ( !v2 )
       {
         *(_DWORD *)(result + 40) = 13288284;
-        return StateMgr::changeState((_DWORD *)(result + 24), 13287836);
+        return StateMgr__changeState((_DWORD *)(result + 24), 13287836);
       }
     }
     return result;
@@ -129050,7 +129050,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 33496);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 3632);
       sub_60548D68(a1 + 5712);
       sub_6050A8A4(a1 + 24204);
@@ -130248,7 +130248,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13288544);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13288544);
     return result;
   }
 
@@ -130298,7 +130298,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60547068(int result)
   {
     if ( !*(_BYTE *)(result + 4742) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13288608);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13288608);
     return result;
   }
 
@@ -130319,7 +130319,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605470BC(int result)
   {
     if ( *(_DWORD *)(MEMORY[0xCC6E04] + 24) != 2 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13288640);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13288640);
     return result;
   }
 
@@ -130364,7 +130364,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13288896);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13288896);
     return result;
   }
 
@@ -130385,7 +130385,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054720C(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13288480);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13288480);
   }
 
 /* ============================================================================
@@ -130429,7 +130429,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13288800;
       else
         v3 = 13288768;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     return result;
   }
@@ -130472,7 +130472,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13288864;
       else
         v3 = 13288832;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     return result;
   }
@@ -130514,7 +130514,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 18464) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13288544);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13288544);
     }
     return result;
   }
@@ -130547,7 +130547,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 18464) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13288544);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13288544);
     }
     return result;
   }
@@ -130580,7 +130580,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 18464) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13288544);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13288544);
     }
     return result;
   }
@@ -130613,7 +130613,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 18464) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13288544);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13288544);
     }
     return result;
   }
@@ -130639,7 +130639,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 16432);
     *(_DWORD *)(result + 16432) = v1 + 1;
     if ( v1 >= 10 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13288928);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13288928);
     return result;
   }
 
@@ -130667,7 +130667,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = sub_604B80D0(v2);
       if ( !result )
-        return StateMgr::changeState((_DWORD *)(a1 + 24), 13288960);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), 13288960);
     }
     return result;
   }
@@ -130679,7 +130679,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60547730(int result)
   {
     if ( *(_DWORD *)(MEMORY[0xC99DD0] + 3796) == 3 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13288992);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13288992);
     return result;
   }
 
@@ -130703,7 +130703,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60547784(int result)
   {
     if ( !*(_BYTE *)(MEMORY[0xC99DD0] + 3793) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13288672);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13288672);
     return result;
   }
 
@@ -131294,7 +131294,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 16440);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 3700);
       Table_getEntryById(a1 + 40, 14, 0);
       v3 = *(float **)(a1 + 3668);
@@ -131396,7 +131396,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a2 >= 4 )
       a2 = 0;
     *(_DWORD *)(a1 + 16436) = a2;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13288512);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13288512);
   }
 
 /* ============================================================================
@@ -131553,11 +131553,11 @@ static inline unsigned int uxtb16(unsigned int x)
         else
           v5 = 13288768;
   LABEL_5:
-        result = StateMgr::changeState(v4, v5);
+        result = StateMgr__changeState(v4, v5);
         break;
       case 3:
         *(_DWORD *)(MEMORY[0xC9CFB8] + 16) = *(_DWORD *)(a1 + 18464) != 0;
-        result = StateMgr::changeState((_DWORD *)(a1 + 24), 13288576);
+        result = StateMgr__changeState((_DWORD *)(a1 + 24), 13288576);
         break;
       default:
         return result;
@@ -131591,7 +131591,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *v4 = 3;
         Object_clampFieldPairsToMin((int)(a1 + 925));
         v6 = 13288576;
-        return StateMgr::changeState(a1 + 6, v6);
+        return StateMgr__changeState(a1 + 6, v6);
       }
   LABEL_18:
       result = 3;
@@ -131600,12 +131600,12 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v5 & 0x140) != 0 )
     {
       v6 = 13288704;
-      return StateMgr::changeState(a1 + 6, v6);
+      return StateMgr__changeState(a1 + 6, v6);
     }
     if ( (v5 & 0x10080) != 0 )
     {
       v6 = 13288736;
-      return StateMgr::changeState(a1 + 6, v6);
+      return StateMgr__changeState(a1 + 6, v6);
     }
     if ( (v5 & 0x10) != 0 )
     {
@@ -131712,7 +131712,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCAC640] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCAC640] )
         {
           if ( _cxa_guard_acquire_0(13289048) )
@@ -131753,7 +131753,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13289052, MEMORY[0xCAC648], 1);
           MEMORY[0xCAC640] = 13289052;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCAC640];
       }
       return *(_DWORD *)v3;
@@ -131781,7 +131781,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCAC660] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCAC660] )
         {
           if ( _cxa_guard_acquire_0(13289108) )
@@ -131822,7 +131822,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13289112, MEMORY[0xCAC668], 2);
           MEMORY[0xCAC660] = 13289112;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCAC660];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -131953,7 +131953,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60549B70(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13289360);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13289360);
   }
 
 /* ============================================================================
@@ -131981,7 +131981,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13289392);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13289392);
     return result;
   }
 
@@ -131992,7 +131992,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60549C1C(int result)
   {
     if ( *(_BYTE *)(result + 3596) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13289424);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13289424);
     return result;
   }
 
@@ -132019,7 +132019,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13289328);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13289328);
     return result;
   }
 
@@ -132168,7 +132168,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3592);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
@@ -132312,7 +132312,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = sub_6054AA9C();
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 28), 13289532);
+      return StateMgr__changeState((_DWORD *)(a1 + 28), 13289532);
     return result;
   }
 
@@ -132378,7 +132378,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6054AC20((float *)a1);
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 2u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 28), 13289564);
+      return StateMgr__changeState((_DWORD *)(a1 + 28), 13289564);
     return result;
   }
 
@@ -132393,7 +132393,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6054AC20((float *)a1);
     result = sub_6054AE8C();
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 28), 13289596);
+      return StateMgr__changeState((_DWORD *)(a1 + 28), 13289596);
     return result;
   }
 
@@ -132417,7 +132417,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6054AC20((float *)a1);
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 2u) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 28), 13289500);
+      return StateMgr__changeState((_DWORD *)(a1 + 28), 13289500);
     return result;
   }
 
@@ -132580,7 +132580,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054AA2C(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 28));
+    StateMgr__execute((_DWORD *)(a1 + 28));
     return Table_getEntryById((_DWORD *)(a1 + 44), 0xEu, 0);
   }
 
@@ -132922,7 +132922,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054B108(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13289724);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13289724);
   }
 
 /* ============================================================================
@@ -132952,7 +132952,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13289756);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13289756);
     return result;
   }
 
@@ -132963,7 +132963,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054B1B8(int result)
   {
     if ( *(_BYTE *)(result + 3596) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13289788);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13289788);
     return result;
   }
 
@@ -132991,7 +132991,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13289692);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13289692);
     return result;
   }
 
@@ -133139,7 +133139,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3592);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
@@ -133279,7 +133279,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054B7F4(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13289876);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13289876);
   }
 
 /* ============================================================================
@@ -133309,7 +133309,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13289908);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13289908);
     return result;
   }
 
@@ -133320,7 +133320,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054B8A4(int result)
   {
     if ( *(_BYTE *)(result + 3596) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13289940);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13289940);
     return result;
   }
 
@@ -133348,7 +133348,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13289844);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13289844);
     return result;
   }
 
@@ -133496,7 +133496,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3592);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
@@ -133697,7 +133697,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13290116);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13290116);
     return result;
   }
 
@@ -133731,7 +133731,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 4100) - 1;
     *(_DWORD *)(result + 4100) = v1;
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13290148);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13290148);
     return result;
   }
 
@@ -133774,7 +133774,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 0;
     result = sub_6050A95C(*(_DWORD *)(a1 + 4 * v3 + 3672));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13290180);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13290180);
     return result;
   }
 
@@ -133785,7 +133785,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6054C158(int result)
   {
     if ( (*(_WORD *)(result + 3696) & 0x20F0) != 0 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13290212);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13290212);
     return result;
   }
 
@@ -133828,7 +133828,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 0;
     result = sub_6050A8AC(*(_DWORD *)(a1 + 4 * v3 + 3672));
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13290244);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13290244);
     return result;
   }
 
@@ -133852,7 +133852,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13290052);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13290052);
     return result;
   }
 
@@ -134181,7 +134181,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3688);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050A8A4(*(_DWORD *)(a1 + 3672));
       sub_6050A8A4(*(_DWORD *)(a1 + 3676));
       sub_6050A8A4(*(_DWORD *)(a1 + 3680));
@@ -134243,7 +134243,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(*(_DWORD *)(a1 + 3652) + 64) |= 1u;
       *(_BYTE *)(*(_DWORD *)(a1 + 3656) + 64) &= ~1u;
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13290084);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13290084);
   }
 
 /* ============================================================================
@@ -134828,7 +134828,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v11 = 13290956;
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 24), v11);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), v11);
   }
 
 /* ============================================================================
@@ -134906,7 +134906,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(result + 3800) = 120;
     }
     if ( *(float *)(result + 3744) == 0.0 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13290892);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13290892);
     return result;
   }
 
@@ -134983,7 +134983,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return result;
     }
     *(_DWORD *)(a1 + 3796) = 0;
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13290828);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13290828);
   }
 
 /* ============================================================================
@@ -135285,7 +135285,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6054E87C(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 24));
+    StateMgr__execute((_DWORD *)(a1 + 24));
     sub_6054E8A8(a1);
     return Table_getEntryById((_DWORD *)(a1 + 40), 0xEu, 0);
   }
@@ -135555,7 +135555,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (**(int (__fastcall ***)(int, int))v2)(v2, 13087748) != 1 )
     {
   LABEL_9:
-      StateMgr::changeState((_DWORD *)(a1 + 24), 13290892);
+      StateMgr__changeState((_DWORD *)(a1 + 24), 13290892);
       v7 = (_DWORD *)(a1 + 3800);
       goto LABEL_10;
     }
@@ -135572,7 +135572,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(_DWORD *)(a1 + 3800);
     if ( *(_DWORD *)(a1 + 3796) >= result )
     {
-      StateMgr::changeState((_DWORD *)(a1 + 24), 13290892);
+      StateMgr__changeState((_DWORD *)(a1 + 24), 13290892);
   LABEL_10:
       *v7 = 0;
       return 0;
@@ -135616,7 +135616,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      StateMgr::changeState((_DWORD *)(a1 + 24), 13290892);
+      StateMgr__changeState((_DWORD *)(a1 + 24), 13290892);
       *(_DWORD *)(a1 + 3800) = 0;
       return 0;
     }
@@ -135661,7 +135661,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v4 )
     {
   LABEL_20:
-      StateMgr::changeState((_DWORD *)(a1 + 24), 13290892);
+      StateMgr__changeState((_DWORD *)(a1 + 24), 13290892);
       *(_DWORD *)(a1 + 3800) = 0;
       return 0;
     }
@@ -135802,7 +135802,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(*(_DWORD *)(a1 + 3672) + 64) &= ~1u;
       *(_BYTE *)(*(_DWORD *)(a1 + 3676) + 64) &= ~1u;
       PointGet_1UP_00_ref(a1);
-      StateMgr::changeState((_DWORD *)(a1 + 24), 13290892);
+      StateMgr__changeState((_DWORD *)(a1 + 24), 13290892);
       *(_DWORD *)(a1 + 3800) = 0;
       *(_BYTE *)(a1 + 3816) = 0;
       v3 = *(_DWORD *)(a1 + 3792);
@@ -135904,7 +135904,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else
       {
-        StateMgr::changeState(a1 + 6, 13290892);
+        StateMgr__changeState(a1 + 6, 13290892);
         a1[950] = 0;
       }
       ArrayOf5_lookupByIndex(a1 + 10, 1u, (_DWORD *)0xCACBD4, 0);
@@ -136132,7 +136132,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) != 0 )
     {
       *(_WORD *)(a1 + 3608) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13291288);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13291288);
     }
     return result;
   }
@@ -136319,7 +136319,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3608);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
@@ -136354,7 +136354,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MessageQueue_postType3((_DWORD *)v3, *(_DWORD *)(a1 + 3596), 0);
     MessageQueue_postType3((_DWORD *)v3, *(_DWORD *)(a1 + 3600), 0);
     MessageQueue_postType3((_DWORD *)v3, *(_DWORD *)(a1 + 3604), 0);
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13291320);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13291320);
   }
 
 /* ============================================================================
@@ -137058,7 +137058,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13291704);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13291704);
     return result;
   }
 
@@ -137114,7 +137114,7 @@ static inline unsigned int uxtb16(unsigned int x)
             return result;
           sub_60553BD4(a1, 0);
           v6 = 13291864;
-          return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
+          return StateMgr__changeState((_DWORD *)(a1 + 24), v6);
         }
   LABEL_15:
         result = *(_DWORD *)(a1 + 70232);
@@ -137132,7 +137132,7 @@ static inline unsigned int uxtb16(unsigned int x)
             Object_clampFieldPairsToMin(v4);
             v6 = 13291736;
           }
-          return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
+          return StateMgr__changeState((_DWORD *)(a1 + 24), v6);
         }
         return result;
       }
@@ -137152,7 +137152,7 @@ static inline unsigned int uxtb16(unsigned int x)
           Object_clampFieldPairsToMin(v4);
           v6 = 13291736;
         }
-        return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
+        return StateMgr__changeState((_DWORD *)(a1 + 24), v6);
       }
       return result;
     }
@@ -137172,7 +137172,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 18868) = 2;
       Object_clampFieldPairsToMin(v4);
       v6 = 13291832;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v6);
     }
     return result;
   }
@@ -137191,7 +137191,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr_resetAndMaybeChange(a1 + 17840);
       *(_WORD *)(a1 + 18892) = 0;
       IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 17880));
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13291768);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13291768);
     }
     return result;
   }
@@ -137317,7 +137317,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(a1 + 70260) = 0;
         v4 = 13291704;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v4);
     }
     return result;
   }
@@ -137397,7 +137397,7 @@ static inline unsigned int uxtb16(unsigned int x)
             *(float *)(v6 + 28) = *(float *)(v6 + 28) + 10000.0;
             *(_BYTE *)(v6 + 64) |= 0x10u;
             *(_BYTE *)(a1 + 70260) = 0;
-            return StateMgr::changeState((_DWORD *)(a1 + 24), 13291704);
+            return StateMgr__changeState((_DWORD *)(a1 + 24), 13291704);
           }
         }
       }
@@ -137412,7 +137412,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60551948(int result)
   {
     if ( !*(_BYTE *)(result + 18882) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13291864);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13291864);
     return result;
   }
 
@@ -137437,7 +137437,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13291896);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13291896);
     return result;
   }
 
@@ -137458,7 +137458,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60551A3C(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13291640);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13291640);
   }
 
 /* ============================================================================
@@ -138018,7 +138018,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 40);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 17840);
       sub_6050A8A4(a1 + 19932);
       Table_getEntryById(a1 + 44, 14, 0);
@@ -138321,7 +138321,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 3652), 0, (_DWORD *)0xCAD000, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 7164) + 104))(**(_DWORD **)(a1 + 7164));
     Table_getEntryById(a1 + 44, 14, 0);
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13291672);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13291672);
   }
 
 /* ============================================================================
@@ -139519,7 +139519,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60555684(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13292680);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13292680);
   }
 
 /* ============================================================================
@@ -139560,7 +139560,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60555718(int result)
   {
     if ( !*(_BYTE *)(result + 3648) && !*(_BYTE *)(result + 3649) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13292712);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13292712);
     return result;
   }
 
@@ -139796,14 +139796,14 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_DWORD *)(a1 + 40) = 13292808;
       v3 = 13292776;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     if ( (*(_BYTE *)(a1 + 18813) & 0x40) != 0 )
     {
       *(_DWORD *)(a1 + 6848) = 2;
       *(_DWORD *)(a1 + 40) = 13292808;
       v3 = 13292744;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     v4 = *(_DWORD *)(a1 + 5672);
     v5 = v4 == 0;
@@ -139897,7 +139897,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (*v22)++ >= 59 )
     {
       v3 = 13292872;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     return result;
   }
@@ -139917,7 +139917,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60555D9C(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13292776);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13292776);
   }
 
 /* ============================================================================
@@ -139927,7 +139927,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60555DB8(int result)
   {
     if ( !*(_BYTE *)(result + 6860) )
-      return StateMgr::changeState((_DWORD *)(result + 24), *(_DWORD *)(result + 40));
+      return StateMgr__changeState((_DWORD *)(result + 24), *(_DWORD *)(result + 40));
     return result;
   }
 
@@ -140057,7 +140057,7 @@ static inline unsigned int uxtb16(unsigned int x)
                     v17 = 13292712;
                   else
                     v17 = 13292840;
-                  return StateMgr::changeState(v16, v17);
+                  return StateMgr__changeState(v16, v17);
                 }
               }
             }
@@ -140097,7 +140097,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(result + 3648) )
       v1 = *(_BYTE *)(result + 3649) == 0;
     if ( v1 && !*(_BYTE *)(result + 11585) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13292648);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13292648);
     return result;
   }
 
@@ -140198,7 +140198,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(result + 3648) )
       v1 = *(_BYTE *)(result + 3649) == 0;
     if ( v1 && !*(_BYTE *)(result + 11585) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13292904);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13292904);
     return result;
   }
 
@@ -140261,7 +140261,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_WORD *)(a1 + 6872) = 0;
           IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 5860));
           *(_DWORD *)(a1 + 40) = 13292936;
-          StateMgr::changeState((_DWORD *)(a1 + 24), 13292776);
+          StateMgr__changeState((_DWORD *)(a1 + 24), 13292776);
           return Sound_dispatchByKind((int)"SE_SYS_BACK", 15);
         }
         if ( (v5 & 0x80) != 0 )
@@ -140279,7 +140279,7 @@ static inline unsigned int uxtb16(unsigned int x)
         Object_clampFieldPairsToMin(result);
         v4 = 13292968;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v4);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v4);
     }
     return result;
   }
@@ -140315,7 +140315,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v1 && !*(_BYTE *)(result + 11585) )
     {
       *(_DWORD *)(result + 40) = 13292712;
-      return StateMgr::changeState((_DWORD *)(result + 24), 13292808);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13292808);
     }
     return result;
   }
@@ -140406,7 +140406,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13293000;
       else
         v3 = 13292936;
-      return StateMgr::changeState(v2, v3);
+      return StateMgr__changeState(v2, v3);
     }
     return result;
   }
@@ -140512,12 +140512,12 @@ static inline unsigned int uxtb16(unsigned int x)
               {
                 v13 = result[1424];
                 if ( !v13 )
-                  return (_DWORD *)StateMgr::changeState(result + 6, 13293032);
+                  return (_DWORD *)StateMgr__changeState(result + 6, 13293032);
                 v14 = *(_BYTE *)(v13 + 2689) == 0;
                 if ( *(_BYTE *)(v13 + 2689) )
                   v14 = *(_BYTE *)(v13 + 2699) == 0;
                 if ( v14 )
-                  return (_DWORD *)StateMgr::changeState(result + 6, 13293032);
+                  return (_DWORD *)StateMgr__changeState(result + 6, 13293032);
               }
             }
           }
@@ -140794,7 +140794,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 18816) = 0;
       if ( v3 )
         *(_DWORD *)(a1 + 18816) = *(_DWORD *)(a1 + 5272) & 0x7FF0;
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 5820);
       sub_6050A8A4(a1 + 11596);
       Table_getEntryById(a1 + 44, 5, 0);
@@ -141286,7 +141286,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60557D34(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13293208);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13293208);
   }
 
 /* ============================================================================
@@ -141335,7 +141335,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60557DE4(int result)
   {
     if ( !*(_BYTE *)(result + 3685) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13293240);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13293240);
     return result;
   }
 
@@ -141363,7 +141363,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
         v2 = 13293304;
     }
-    return StateMgr::changeState(v1, v2);
+    return StateMgr__changeState(v1, v2);
   }
 
 /* ============================================================================
@@ -141396,7 +141396,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60557ECC(int result)
   {
     if ( !*(_BYTE *)(result + 3685) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13293176);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13293176);
     return result;
   }
 
@@ -141432,7 +141432,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60557F30(int result)
   {
     if ( !*(_BYTE *)(result + 3685) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13293336);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13293336);
     return result;
   }
 
@@ -141453,7 +141453,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60557F60(int result)
   {
     if ( *(_BYTE *)(result + 3686) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13293272);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13293272);
     return result;
   }
 
@@ -141479,7 +141479,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60557FC0(int result)
   {
     if ( !*(_BYTE *)(result + 3685) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13293240);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13293240);
     return result;
   }
 
@@ -141693,7 +141693,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3684);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return sub_60558728((_BYTE *)a1);
     }
     return result;
@@ -142065,7 +142065,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 3588);
     *(_DWORD *)(result + 3588) = v1 - 1;
     if ( v1 <= 1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13293552);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13293552);
     return result;
   }
 
@@ -142091,7 +142091,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13293584);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13293584);
     return result;
   }
 
@@ -142126,7 +142126,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 3592);
     *(_DWORD *)(result + 3592) = v1 - 1;
     if ( v1 <= 1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13293616);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13293616);
     return result;
   }
 
@@ -142210,7 +142210,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13293708);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13293708);
     return result;
   }
 
@@ -142245,7 +142245,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 3588) - 1;
     *(_DWORD *)(result + 3588) = v1;
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13293740);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13293740);
     return result;
   }
 
@@ -142270,7 +142270,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13293772);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13293772);
     return result;
   }
 
@@ -142433,7 +142433,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3592);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
@@ -142580,7 +142580,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAD908])(MEMORY[0xCAD908]);
       MEMORY[0xCAD908] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -142598,7 +142598,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAD908])(MEMORY[0xCAD908]);
       MEMORY[0xCAD908] = 0;
     }
-    v2 = sead::IDisposer::~IDisposer(a1);
+    v2 = sead__IDisposer__dtor(a1);
     return operator delete((int)v2);
   }
 
@@ -142615,7 +142615,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCAD908] )
     {
       v2 = operator new[](3628, a1, 4);
-      v3 = sead::IDisposer::IDisposer(v2 + 4, a1, 3);
+      v3 = sead__IDisposer__IDisposer(v2 + 4, a1, 3);
       *(_DWORD *)(v2 + 4) = 12586484;
       MEMORY[0xCAD904] = v3;
       *(_DWORD *)v2 = 12586500;
@@ -142790,7 +142790,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60559CF0(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 48));
+    StateMgr__execute((_DWORD *)(a1 + 48));
     return Table_getEntryById((_DWORD *)(a1 + 64), 0xEu, 0);
   }
 
@@ -142974,7 +142974,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13294036);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13294036);
     return result;
   }
 
@@ -143021,7 +143021,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(result + 3696);
     *(_DWORD *)(result + 3696) = v1 - 1;
     if ( v1 <= 1 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13294068);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13294068);
     return result;
   }
 
@@ -143046,7 +143046,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13293972);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13293972);
     return result;
   }
 
@@ -143104,7 +143104,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[897] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 897);
     EffectData_release((int)(a1 + 897));
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     Disposer_destroyAllocated(v2);
     return a1;
   }
@@ -143123,7 +143123,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[897] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 897);
     EffectData_release((int)(a1 + 897));
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     Disposer_destroyAllocated(v2);
     return operator delete((int)a1);
   }
@@ -143236,7 +143236,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3700);
     if ( !result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       result = *(unsigned __int8 *)(a1 + 3701);
       if ( *(_BYTE *)(a1 + 3701) )
         return Table_getEntryById(a1 + 40, 14, 0);
@@ -143402,7 +143402,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055A7A4(int result)
   {
     if ( *(_BYTE *)(result + 4039) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13294220);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13294220);
     return result;
   }
 
@@ -143424,7 +143424,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055A7F8(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 3552) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13294252);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13294252);
     return result;
   }
 
@@ -143446,7 +143446,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055A834(int result)
   {
     if ( *(_BYTE *)(result + 4043) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13294284);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13294284);
     return result;
   }
 
@@ -143477,7 +143477,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 13294316;
       else
         v3 = 13294380;
-      return StateMgr::changeState((_DWORD *)(a1 + 24), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), v3);
     }
     return result;
   }
@@ -143504,9 +143504,9 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055A930(int result)
   {
     if ( *(_BYTE *)(result + 4042) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13294412);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13294412);
     if ( *(_BYTE *)(result + 4044) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13294348);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13294348);
     return result;
   }
 
@@ -143526,7 +143526,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 13294412;
     else
       v3 = 13294380;
-    return StateMgr::changeState(v2, v3);
+    return StateMgr__changeState(v2, v3);
   }
 
 /* ============================================================================
@@ -143536,7 +143536,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055A9B0(int result)
   {
     if ( *(_BYTE *)(result + 4042) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13294412);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13294412);
     return result;
   }
 
@@ -143558,7 +143558,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055AA04(int result)
   {
     if ( *(_BYTE *)(*(_DWORD *)(result + 3552) + 16) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13294444);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13294444);
     return result;
   }
 
@@ -143841,7 +143841,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 4036);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       return Table_getEntryById(a1 + 40, 14, 0);
     }
     return result;
@@ -144006,7 +144006,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13294644);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13294644);
     return result;
   }
 
@@ -144084,7 +144084,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v3 = 13294708;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 20), v3);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), v3);
     }
     return result;
   }
@@ -144122,7 +144122,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13294580);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13294580);
     return result;
   }
 
@@ -144315,7 +144315,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 13308);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 20));
+      StateMgr__execute((_DWORD *)(a1 + 20));
       sub_6050229C(a1 + 3608);
       sub_6050A8A4(a1 + 6092);
       return Table_getEntryById(a1 + 36, 14, 0);
@@ -144354,7 +144354,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, v5, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3548) + 104))(**(_DWORD **)(a1 + 3548));
     Table_getEntryById(a1 + 36, 14, 0);
-    return StateMgr::changeState((_DWORD *)(a1 + 20), 13294612);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), 13294612);
   }
 
 /* ============================================================================
@@ -144377,7 +144377,7 @@ static inline unsigned int uxtb16(unsigned int x)
         SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_COURSE_IN", 0, 1);
         *(_DWORD *)(a1 + 13312) = 2;
   LABEL_8:
-        StateMgr::changeState((_DWORD *)(a1 + 20), 13294676);
+        StateMgr__changeState((_DWORD *)(a1 + 20), 13294676);
         return v2;
       case 1:
         v2 = 1;
@@ -144386,7 +144386,7 @@ static inline unsigned int uxtb16(unsigned int x)
         goto LABEL_8;
       case 0:
         *(_DWORD *)(a1 + 13312) = 0;
-        StateMgr::changeState((_DWORD *)(a1 + 20), 13294676);
+        StateMgr__changeState((_DWORD *)(a1 + 20), 13294676);
         return 1;
     }
     return v2;
@@ -144447,7 +144447,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 4636) = 0;
         Object_clampFieldPairsToMin(a1 + 3608);
   LABEL_16:
-        StateMgr::changeState((_DWORD *)(a1 + 20), 13294676);
+        StateMgr__changeState((_DWORD *)(a1 + 20), 13294676);
         return 1;
       }
       v9 = *(_DWORD *)(a1 + 4636);
@@ -144493,7 +144493,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCADC94] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCADC94] )
         {
           if ( _cxa_guard_acquire_0(13294772) )
@@ -144534,7 +144534,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13294776, MEMORY[0xCADC9C], 2);
           MEMORY[0xCADC94] = 13294776;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCADC94];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -144666,7 +144666,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCADCC0] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCADCC0] )
         {
           if ( _cxa_guard_acquire_0(13294852) )
@@ -144707,7 +144707,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13294856, MEMORY[0xCADCC8], 3);
           MEMORY[0xCADCC0] = 13294856;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCADCC0];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -144921,7 +144921,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055CB4C(int result)
   {
     if ( !*(_BYTE *)(result + 13749) || *(_BYTE *)(MEMORY[0xC89E18] + 17049) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13295024);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13295024);
     return result;
   }
 
@@ -144945,7 +144945,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055CBD4(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13295024);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13295024);
   }
 
 /* ============================================================================
@@ -145216,7 +145216,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055D384(int result)
   {
     if ( !*(_BYTE *)(result + 13749) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13295056);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13295056);
     return result;
   }
 
@@ -145279,11 +145279,11 @@ static inline unsigned int uxtb16(unsigned int x)
           v4 = 13295184;
           ++*(_DWORD *)(a1 + 13736);
           v5 = (_DWORD *)(a1 + 24);
-          return StateMgr::changeState(v5, v4);
+          return StateMgr__changeState(v5, v4);
         case 2:
           *(_BYTE *)(a1 + 13752) = 0;
           --*(_DWORD *)(a1 + 13736);
-          result = StateMgr::changeState((_DWORD *)(a1 + 24), 13295184);
+          result = StateMgr__changeState((_DWORD *)(a1 + 24), 13295184);
           break;
         case 3:
           v4 = 13295216;
@@ -145320,7 +145320,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
   LABEL_14:
       v5 = (_DWORD *)(a1 + 24);
-      return StateMgr::changeState(v5, v4);
+      return StateMgr__changeState(v5, v4);
     }
     if ( (v7 & 0x4000) != 0 )
     {
@@ -145334,7 +145334,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v8 = a1 + 13736;
       *(_DWORD *)v8 = v9 - 1;
       *(_BYTE *)(v8 + 16) = 0;
-      return StateMgr::changeState((_DWORD *)(v8 - 13712), 13295152);
+      return StateMgr__changeState((_DWORD *)(v8 - 13712), 13295152);
     }
     else if ( (result & 0x10080) != 0 )
     {
@@ -145342,7 +145342,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v10 = a1 + 13736;
       *(_DWORD *)v10 = v11 + 1;
       *(_BYTE *)(v10 + 16) = 1;
-      return StateMgr::changeState((_DWORD *)(v10 - 13712), 13295152);
+      return StateMgr__changeState((_DWORD *)(v10 - 13712), 13295152);
     }
     else if ( (result & 0x10) != 0 )
     {
@@ -145397,7 +145397,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055D714(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13295120);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13295120);
   }
 
 /* ============================================================================
@@ -145409,7 +145409,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(result + 4734) )
     {
       *(_DWORD *)(result + 40) = 13295376;
-      return StateMgr::changeState((_DWORD *)(result + 24), 13295280);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13295280);
     }
     return result;
   }
@@ -145442,7 +145442,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = 0;
     result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 3540 * v2 + 13756, 0) + 51);
     if ( (result & 1) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 24), 13295184);
+      return StateMgr__changeState((_DWORD *)(a1 + 24), 13295184);
     return result;
   }
 
@@ -145507,7 +145507,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055D914(int result)
   {
     if ( !*(_BYTE *)(result + 13749) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13295056);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13295056);
     return result;
   }
 
@@ -145546,7 +145546,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(result + 4734) )
     {
       *(_DWORD *)(result + 40) = 13295312;
-      return StateMgr::changeState((_DWORD *)(result + 24), 13295280);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13295280);
     }
     return result;
   }
@@ -145581,7 +145581,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(result + 4734) )
     {
       *(_DWORD *)(result + 40) = 13295312;
-      return StateMgr::changeState((_DWORD *)(result + 24), 13295056);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13295056);
     }
     return result;
   }
@@ -145621,7 +145621,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = result[3436];
     result[3436] = v1 - 1;
     if ( v1 <= 1 )
-      return (_DWORD *)StateMgr::changeState(result + 6, result[10]);
+      return (_DWORD *)StateMgr__changeState(result + 6, result[10]);
     return result;
   }
 
@@ -145644,7 +145644,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055DB0C(int result)
   {
     if ( !*(_BYTE *)(result + 13749) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13295344);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13295344);
     return result;
   }
 
@@ -145676,7 +145676,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055DB64(int result)
   {
     if ( *(_BYTE *)(result + 13753) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13294992);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13294992);
     return result;
   }
 
@@ -145699,7 +145699,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055DBDC(int result)
   {
     if ( !*(_BYTE *)(result + 13749) )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13294992);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13294992);
     return result;
   }
 
@@ -146177,7 +146177,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 13748);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_6050229C(a1 + 3692);
       sub_6050A8A4(a1 + 6176);
       sub_6055EFA8(a1);
@@ -147104,7 +147104,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !MEMORY[0xCADFF4] )
       {
         v4 = (struct sead_CriticalSection *)CriticalSection_getGlobal();
-        sead::CriticalSection::lock(v4);
+        sead__CriticalSection__lock(v4);
         if ( !MEMORY[0xCADFF4] )
         {
           if ( _cxa_guard_acquire_0(13295656) )
@@ -147145,7 +147145,7 @@ static inline unsigned int uxtb16(unsigned int x)
           String_copyUntilTerminator(13295660, MEMORY[0xCADFFC], 2);
           MEMORY[0xCADFF4] = 13295660;
         }
-        sead::CriticalSection::unlock(v4);
+        sead__CriticalSection__unlock(v4);
         v3 = MEMORY[0xCADFF4];
       }
       return *(_DWORD *)(v3 + 4 * a1);
@@ -147276,7 +147276,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60560970(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 24), 13296032);
+    return StateMgr__changeState((_DWORD *)(a1 + 24), 13296032);
   }
 
 /* ============================================================================
@@ -147334,18 +147334,18 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = *(_DWORD *)(result + 40);
     if ( v1 == 8 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13296000);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13296000);
     if ( v1 != 4 )
     {
       if ( !*(_BYTE *)(result + 32013) )
         return result;
-      return StateMgr::changeState((_DWORD *)(result + 24), 13296000);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13296000);
     }
     v2 = *(_BYTE *)(result + 32013) == 0;
     if ( *(_BYTE *)(result + 32013) )
       v2 = *(_BYTE *)(result + 63969) == 0;
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(result + 24), 13296000);
+      return StateMgr__changeState((_DWORD *)(result + 24), 13296000);
     return result;
   }
 
@@ -147485,7 +147485,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 52);
     if ( result )
     {
-      StateMgr::execute((_DWORD *)(a1 + 24));
+      StateMgr__execute((_DWORD *)(a1 + 24));
       sub_60560E80(a1 + 60);
       result = *(_DWORD *)(a1 + 40);
       if ( result == 4 )
@@ -148449,10 +148449,10 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v4; // [sp+10h] [bp-18h]
   
     nninitStartup_helper();
-    nn::os::QueryMemoryInfo(&v3);
-    nn::os::SetMemoryHeapSize((struct nn_os *)((v3 - v4) & 0xFFE00000), v4);
-    nn::os::AllocateMemoryBlock((struct nn_os *)&v2, (unsigned int *)0x2000000, v0);
-    return nn::init::InitializeAllocator(v2, 0x2000000u);
+    nn__os__QueryMemoryInfo(&v3);
+    nn__os__SetMemoryHeapSize((struct nn_os *)((v3 - v4) & 0xFFE00000), v4);
+    nn__os__AllocateMemoryBlock((struct nn_os *)&v2, (unsigned int *)0x2000000, v0);
+    return nn__init__InitializeAllocator(v2, 0x2000000u);
   }
 
 /* ============================================================================
@@ -148500,9 +148500,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v38; // [sp+78h] [bp-104h]
     _DWORD v39[64]; // [sp+7Ch] [bp-100h] BYREF
   
-    HostArgc = (struct nn_os *)nn::os::GetHostArgc(a1);
-    nn::os::GetHostArgv(HostArgc);
-    nn::os::QueryMemoryInfo(&v36);
+    HostArgc = (struct nn_os *)nn__os__GetHostArgc(a1);
+    nn__os__GetHostArgv(HostArgc);
+    nn__os__QueryMemoryInfo(&v36);
     v37 = (char *)v39;
     v36 = 12322272;
     v38 = 256;
@@ -148532,9 +148532,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = "SEAD_NIN_SAVE_DIR";
     nnMain_helper_8FD644(&v36, &v13);
     nnMain_helper_8ED664(v35);
-    nn::os::QueryMemoryInfo(&v36);
+    nn__os__QueryMemoryInfo(&v36);
     v35[0] = v39[0] - v39[1];
-    sead::GameFrameworkNx::initialize(v35);
+    sead__GameFrameworkNx__initialize(v35);
     v3 = 0;
     v13 = 1;
     v17 = MEMORY[0xB45CE8];
@@ -148565,20 +148565,20 @@ static inline unsigned int uxtb16(unsigned int x)
     v37 = "Framework";
     if ( MEMORY[0xCCEEA4] )
       v4 = *MEMORY[0xCCEEAC];
-    v5 = sead::ExpHeap::create(0, &v36, v4, 4, 1, 0);
+    v5 = sead__ExpHeap__create(0, &v36, v4, 4, 1, 0);
     v6 = operator new(368, v5, 4);
     nnMain_helper(v6, &v13);
     v7 = (struct nn_oe *)(*(int (__fastcall **)(int))(*(_DWORD *)v5 + 20))(v5);
-    nn::oe::Initialize(v7);
-    nn::oe::SetPerformanceConfiguration(1, 65537);
-    nn::oe::SetPerformanceConfiguration(0, 131075);
-    nn::oe::SetFocusHandlingMode(2);
+    nn__oe__Initialize(v7);
+    nn__oe__SetPerformanceConfiguration(1, 65537);
+    nn__oe__SetPerformanceConfiguration(0, 131075);
+    nn__oe__SetFocusHandlingMode(2);
     v36 = 12321336;
     v37 = "FwGraphicSystem";
     if ( MEMORY[0xCCEEA4] )
       v3 = *MEMORY[0xCCEEAC];
     v8 = 0;
-    v9 = sead::ExpHeap::create(0, &v36, v3, 4, 1, 0);
+    v9 = sead__ExpHeap__create(0, &v36, v3, 4, 1, 0);
     nnMain_helper_8EA13C(v6, v9, v12);
     (*(void (__fastcall **)(int))(*(_DWORD *)v9 + 20))(v9);
     v11[0] = 2;
@@ -148613,7 +148613,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    result = (_DWORD *)BlockBase::BlockBase(a1);
+    result = (_DWORD *)BlockBase__BlockBase(a1);
     *result = 12587316;
     return result;
   }
@@ -148680,7 +148680,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v20[1] = *(_DWORD *)(a1 + 112);
       v20[2] = *(_DWORD *)(a1 + 116);
       v4 = (float *)(a1 + 6992);
-      v20[3] = MovementHandler::getMaskForMovementType((MovementHandler *)(a1 + 6992), *(_DWORD *)(a1 + 7300));
+      v20[3] = MovementHandler__getMaskForMovementType((MovementHandler *)(a1 + 6992), *(_DWORD *)(a1 + 7300));
       v21 = *(_DWORD *)(a1 + 7304);
       v22 = 0;
       v23 = 0;
@@ -148692,7 +148692,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v28 = 0;
       v29 = (v5 & 0x2000000) != 0;
       MovementHandler_initFromStruct(a1 + 6992, v20);
-      MovementHandler::execute((MovementHandler *)(a1 + 6992));
+      MovementHandler__execute((MovementHandler *)(a1 + 6992));
       if ( *(_DWORD *)(a1 + 7040) == 1 && *(_DWORD *)(a1 + 7060) != 1 )
       {
         v6 = *v4;
@@ -148779,7 +148779,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v13; // r2
     int v14; // r1
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 == (*(int (**)(void))(MEMORY[0xCB117C] + 8))() )
     {
@@ -148796,7 +148796,7 @@ static inline unsigned int uxtb16(unsigned int x)
         || (v7 = *(float *)(a1 + 108),
             v8 = *(float *)(a1 + 112),
             v9 = (float *)(a1 + 6992),
-            MovementHandler::execute((_DWORD *)(a1 + 6992)),
+            MovementHandler__execute((_DWORD *)(a1 + 6992)),
             *(_DWORD *)(a1 + 7040) != 1)
         || *(_DWORD *)(a1 + 7060) == 1 )
       {
@@ -148916,13 +148916,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBaseD2Ev
  * RVA 0x00563170   size 0x48   xrefs 0
  * ============================================================================ */
-  void __fastcall MovementBlockCoinBase::~MovementBlockCoinBase(Actor *a1)
+  void __fastcall MovementBlockCoinBase__dtor(Actor *a1)
   {
     *(_DWORD *)a1 = 12620796;
     ShapedCollider_dtor();
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((char *)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
   }
 
 /* ============================================================================
@@ -148937,7 +148937,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -148945,7 +148945,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfC4Ev
  * RVA 0x00563268   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::vfC4()
+  void BlockCoinBase__vfC4()
   {
     ;
   }
@@ -148954,7 +148954,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfC8Ev
  * RVA 0x0056326c   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::vfC8()
+  void BlockCoinBase__vfC8()
   {
     ;
   }
@@ -148963,7 +148963,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfD0Ev
  * RVA 0x00563270   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::vfD0()
+  void BlockCoinBase__vfD0()
   {
     ;
   }
@@ -148972,7 +148972,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfD8Ev
  * RVA 0x00563274   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::vfD8()
+  void BlockCoinBase__vfD8()
   {
     ;
   }
@@ -148981,7 +148981,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfDCEv
  * RVA 0x00563278   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::vfDC()
+  void BlockCoinBase__vfDC()
   {
     ;
   }
@@ -148990,7 +148990,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase5vf14CEv
  * RVA 0x0056327c   size 0x4   xrefs 0
  * ============================================================================ */
-  void MovementBlockCoinBase::vf14C()
+  void MovementBlockCoinBase__vf14C()
   {
     ;
   }
@@ -148999,7 +148999,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase5vf154Ev
  * RVA 0x00563280   size 0x8   xrefs 0
  * ============================================================================ */
-  int MovementBlockCoinBase::vf154()
+  int MovementBlockCoinBase__vf154()
   {
     return 0;
   }
@@ -149008,7 +149008,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase5vf158Ev
  * RVA 0x00563288   size 0x4   xrefs 0
  * ============================================================================ */
-  void MovementBlockCoinBase::vf158()
+  void MovementBlockCoinBase__vf158()
   {
     ;
   }
@@ -149017,7 +149017,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase5vf15CEv
  * RVA 0x0056328c   size 0x4   xrefs 0
  * ============================================================================ */
-  void MovementBlockCoinBase::vf15C()
+  void MovementBlockCoinBase__vf15C()
   {
     ;
   }
@@ -149026,7 +149026,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf164Ev
  * RVA 0x00563290   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockBase::vf164()
+  void BlockBase__vf164()
   {
     ;
   }
@@ -149035,7 +149035,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase11getContentsEv
  * RVA 0x00563294   size 0x18   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_getContents(int a1)
+  int __fastcall BlockBase__getContents(int a1)
   {
     return HIBYTE(*(_DWORD *)(a1 + 24)) & 0x10 | *(_DWORD *)(a1 + 24) & 0xF;
   }
@@ -149044,7 +149044,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf184Ev
  * RVA 0x005632ac   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockBase::vf184()
+  void BlockBase__vf184()
   {
     ;
   }
@@ -149053,7 +149053,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf188Ev
  * RVA 0x005632b0   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockBase::vf188()
+  void BlockBase__vf188()
   {
     ;
   }
@@ -149062,7 +149062,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf18CEv
  * RVA 0x005632b4   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockBase::vf18C()
+  void BlockBase__vf18C()
   {
     ;
   }
@@ -149071,7 +149071,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf190Ev
  * RVA 0x005632b8   size 0x8   xrefs 0
  * ============================================================================ */
-  int BlockBase::vf190()
+  int BlockBase__vf190()
   {
     return 0;
   }
@@ -149131,9 +149131,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBaseC2EPK14ActorBuildInfo
  * RVA 0x00563544   size 0x64   xrefs 23
  * ============================================================================ */
-  int __fastcall BlockBase_BlockBase(int a1)
+  int __fastcall BlockBase__BlockBase(int a1)
   {
-    MovementBlockCoinBase::MovementBlockCoinBase();
+    MovementBlockCoinBase__MovementBlockCoinBase();
     *(_DWORD *)a1 = 12587764;
     *(_DWORD *)(a1 + 7380) = 0;
     memset((void *)(a1 + 7348), 0, 0x1Fu);
@@ -149258,7 +149258,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase9onExecuteEv
  * RVA 0x005638c8   size 0xbc   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_onExecute(_BYTE *a1)
+  int __fastcall BlockBase__onExecute(_BYTE *a1)
   {
     _BYTE *v2; // r5
   
@@ -149272,14 +149272,14 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v2 = a1 + 6120;
     }
-    StateMgr::execute((_DWORD *)a1 + 1521);
+    StateMgr__execute((_DWORD *)a1 + 1521);
     (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 372))(a1);
     *((_DWORD *)a1 + 1591) = *((_DWORD *)a1 + 41);
     ShapedCollider_execute(v2);
     (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 388))(a1);
     sub_605B2D70(a1);
     if ( a1[7384] )
-      StageActor::cullCheck((StageActor *)a1, 0x10u);
+      StageActor__cullCheck((StageActor *)a1, 0x10u);
     return 1;
   }
 
@@ -149287,7 +149287,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase6onDrawEv
  * RVA 0x00563984   size 0x68   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_onDraw(int a1)
+  int __fastcall BlockBase__onDraw(int a1)
   {
     float v1; // r2
     int v2; // r3
@@ -149340,7 +149340,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase15damageFromUnderEv
  * RVA 0x00563a08   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockBase::damageFromUnder()
+  void BlockBase__damageFromUnder()
   {
     ;
   }
@@ -149382,7 +149382,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v7 = result == 0;
     }
     if ( v7 )
-      result = StageActor::createWaterSplash(a1, (int *)&v10, 621, 23, (int)"SE_OBJ_CMN_SPLASH_POISON");
+      result = StageActor__createWaterSplash(a1, (int *)&v10, 621, 23, (int)"SE_OBJ_CMN_SPLASH_POISON");
     if ( v4 == 5 )
       v2 = 1;
     *v6 = v2;
@@ -149467,9 +149467,9 @@ static inline unsigned int uxtb16(unsigned int x)
       result = a1[1826];
       if ( result )
       {
-        MaskForMovementType = MovementHandler::getMaskForMovementType((MovementHandler *)(a1 + 1748), v3);
-        MovementHandler::link(a1 + 1748, a1 + 27, MaskForMovementType, *((unsigned __int8 *)a1 + 7304));
-        MovementHandler::execute((MovementHandler *)(a1 + 1748));
+        MaskForMovementType = MovementHandler__getMaskForMovementType((MovementHandler *)(a1 + 1748), v3);
+        MovementHandler__link(a1 + 1748, a1 + 27, MaskForMovementType, *((unsigned __int8 *)a1 + 7304));
+        MovementHandler__execute((MovementHandler *)(a1 + 1748));
         result = a1[1760];
         if ( result == 1 )
         {
@@ -149491,7 +149491,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf174Ev
  * RVA 0x00563cc4   size 0x17c   xrefs 3
  * ============================================================================ */
-  int __fastcall BlockBase_vf174(int a1)
+  int __fastcall BlockBase__vf174(int a1)
   {
     int CurrentState; // r0
     int v3; // r5
@@ -149499,7 +149499,7 @@ static inline unsigned int uxtb16(unsigned int x)
     bool v6; // zf
     float v7; // s0
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 == (*(int (**)(void))(MEMORY[0xCB117C] + 8))() )
     {
@@ -149513,7 +149513,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = *(_DWORD *)(a1 + 7304) == 0;
     if ( v6 )
       goto LABEL_10;
-    MovementHandler::execute((MovementHandler *)(a1 + 6992));
+    MovementHandler__execute((MovementHandler *)(a1 + 6992));
     if ( *(_DWORD *)(a1 + 7040) != 1 )
       goto LABEL_10;
     if ( *(_DWORD *)(a1 + 7060) != 1 )
@@ -149548,7 +149548,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf160Ev
  * RVA 0x00563e44   size 0x8c   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_vf160(int a1)
+  int __fastcall BlockBase__vf160(int a1)
   {
     int v2; // r0
     int v3; // r0
@@ -149585,7 +149585,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf178Ev
  * RVA 0x00563ed8   size 0xd8   xrefs 1
  * ============================================================================ */
-  int __fastcall BlockBase_vf178(int a1)
+  int __fastcall BlockBase__vf178(int a1)
   {
     int v2; // r0
     float v4[2]; // [sp+0h] [bp-10h] BYREF
@@ -149609,14 +149609,14 @@ static inline unsigned int uxtb16(unsigned int x)
       *(unsigned __int8 *)(a1 + 6879));
     sub_605BA078(MEMORY[0xCB061C], a1 + 6980, 2, *(unsigned __int8 *)(MEMORY[0xC9A684] + 18));
     ColliderMgr_removeRelated1(MEMORY[0xC8820C], a1 + 6120);
-    return StageActor::delete((StageActor *)a1, 1u);
+    return StageActor__delete((StageActor *)a1, 1u);
   }
 
 /* ============================================================================
  * _ZN9BlockBase5vf17CEv
  * RVA 0x00563fc0   size 0xc8   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_vf17C(int a1)
+  int __fastcall BlockBase__vf17C(int a1)
   {
     _DWORD v3[2]; // [sp+4h] [bp-Ch] BYREF
     char v4; // [sp+Ch] [bp-4h]
@@ -149631,7 +149631,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SE_OBJ_BLOCK_BREAK_ref_3(MEMORY[0xCB061C], v3, 0, *(unsigned __int8 *)(a1 + 6879));
     sub_605BA078(MEMORY[0xCB061C], a1 + 6980, 2, *(unsigned __int8 *)(MEMORY[0xC9A684] + 18));
     ColliderMgr_removeRelated1(MEMORY[0xC8820C], a1 + 6120);
-    return StageActor::delete((StageActor *)a1, 1u);
+    return StageActor__delete((StageActor *)a1, 1u);
   }
 
 /* ============================================================================
@@ -149649,7 +149649,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf16CEv
  * RVA 0x005640bc   size 0xec   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_vf16C(int a1)
+  int __fastcall BlockBase__vf16C(int a1)
   {
     int v2; // r1
     int *v3; // r5
@@ -149661,7 +149661,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (int *)(a1 + 6856);
     if ( *(_DWORD *)(a1 + 6856) == 13 )
     {
-      v4 = BlockBase::vf16C(MEMORY[0xCB061C], a1 + 6980);
+      v4 = BlockBase__vf16C(MEMORY[0xCB061C], a1 + 6980);
       v2 = 0;
       if ( (v4 | 1) == 3 )
       {
@@ -149813,7 +149813,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v31; // [sp+18h] [bp-8h]
     int v32; // [sp+1Ch] [bp-4h]
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
     if ( v3 != result )
@@ -149861,7 +149861,7 @@ static inline unsigned int uxtb16(unsigned int x)
             {
               v11 = &v26;
               do
-                Actor::removeChild((Actor *)a1);
+                Actor__removeChild((Actor *)a1);
               while ( *v11++ );
             }
           }
@@ -149918,7 +149918,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
             v19 = &v26;
             do
-              Actor::removeChild((Actor *)a1);
+              Actor__removeChild((Actor *)a1);
             while ( *v19++ );
           }
         }
@@ -150171,7 +150171,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00564ba8   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int BlockBase::spawnItemUp()
+  int BlockBase__spawnItemUp()
   {
     return BlockBase_onEmptied();
   }
@@ -150180,7 +150180,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase4vfCCEv
  * RVA 0x00564bac   size 0x14   xrefs 0
  * ============================================================================ */
-  _DWORD *__fastcall BlockBase_vfCC(int a1)
+  _DWORD *__fastcall BlockBase__vfCC(int a1)
   {
     return CollisionMgr_setSensor(a1 + 648, (int *)(a1 + 6968), 3);
   }
@@ -150189,7 +150189,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase13spawnItemDownEv
  * RVA 0x00564bc0   size 0x24   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_spawnItemDown(int a1)
+  int __fastcall BlockBase__spawnItemDown(int a1)
   {
     CollisionMgr_setSensor(a1 + 648, 0, 3);
     return BlockBase_onEmptied(a1);
@@ -150199,7 +150199,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase4vfE4Ev
  * RVA 0x00564be4   size 0x14   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_vfE4(int a1)
+  int __fastcall BlockBase__vfE4(int a1)
   {
     return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13296376);
   }
@@ -150269,7 +150269,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v9 = v12;
               do
               {
-                Actor::removeChild(a1, v8);
+                Actor__removeChild(a1, v8);
                 v10 = *v9++;
                 v8 = v10;
               }
@@ -150287,7 +150287,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase4vfF4Ev
  * RVA 0x00564d3c   size 0x1c   xrefs 0
  * ============================================================================ */
-  int BlockBase::vfF4()
+  int BlockBase__vfF4()
   {
     int result; // r0
   
@@ -150300,7 +150300,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf194Ev
  * RVA 0x00564d5c   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockBase::vf194()
+  void BlockBase__vf194()
   {
     ;
   }
@@ -150309,7 +150309,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf19CEv
  * RVA 0x00564d60   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockBase::vf19C()
+  void BlockBase__vf19C()
   {
     ;
   }
@@ -150318,7 +150318,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf198Ev
  * RVA 0x00564d64   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_vf198(int a1)
+  int __fastcall BlockBase__vf198(int a1)
   {
     *(_DWORD *)(a1 + 6880) = 0;
     return sub_605643B8(a1);
@@ -150328,7 +150328,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf1A0Ev
  * RVA 0x00564d74   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockBase::vf1A0()
+  void BlockBase__vf1A0()
   {
     ;
   }
@@ -150337,7 +150337,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf1A8Ev
  * RVA 0x00564d78   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockBase::vf1A8()
+  void BlockBase__vf1A8()
   {
     ;
   }
@@ -150346,7 +150346,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf1A4Ev
  * RVA 0x00564d7c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_vf1A4(int a1)
+  int __fastcall BlockBase__vf1A4(int a1)
   {
     *(_DWORD *)(a1 + 6880) = 0;
     return sub_60564BFC();
@@ -150356,7 +150356,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf180Ev
  * RVA 0x00564d8c   size 0x88   xrefs 0
  * ============================================================================ */
-  bool __fastcall BlockBase_vf180(int a1)
+  bool __fastcall BlockBase__vf180(int a1)
   {
     int v1; // r4
     int CurrentState; // r0
@@ -150365,11 +150365,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r4
   
     v1 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 == (*(int (**)(void))(MEMORY[0xCB111C] + 8))() )
       return 1;
-    v5 = StateMgr::getCurrentState(v1);
+    v5 = StateMgr__getCurrentState(v1);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
     return v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
   }
@@ -150378,7 +150378,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK9BlockBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
  * RVA 0x00564e1c   size 0x130   xrefs 0
  * ============================================================================ */
-  bool __fastcall BlockBase_checkDerivedRuntimeTypeInfo(int a1, int a2)
+  bool __fastcall BlockBase__checkDerivedRuntimeTypeInfo(int a1, int a2)
   {
     if ( _cxa_guard_acquire_0(13296372) )
     {
@@ -150406,7 +150406,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK9BlockBase18getRuntimeTypeInfoEv
  * RVA 0x00564f94   size 0x5c   xrefs 0
  * ============================================================================ */
-  int BlockBase::getRuntimeTypeInfo()
+  int BlockBase__getRuntimeTypeInfo()
   {
     if ( _cxa_guard_acquire_0(13296372) )
     {
@@ -150420,7 +150420,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBaseD0Ev
  * RVA 0x00565008   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase::~BlockBase(int a1)
+  int __fastcall BlockBase__dtor(int a1)
   {
     int v2; // r0
   
@@ -150428,7 +150428,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -150436,7 +150436,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN9BlockBase5vf170Ev
  * RVA 0x0056505c   size 0xc   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockBase_vf170(int a1)
+  int __fastcall BlockBase__vf170(int a1)
   {
     return a1 + 108;
   }
@@ -150506,7 +150506,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1CE8u);
-    result = (_DWORD *)BlockBase::BlockBase(v0);
+    result = (_DWORD *)BlockBase__BlockBase(v0);
     *result = 12588220;
     return result;
   }
@@ -150586,11 +150586,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 6120);
     if ( !sub_60003B88(a1, (_DWORD *)(a1 + 6120)) )
       sub_6069B070((float *)(a1 + 7240), (float *)(a1 + 108));
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     *(float *)(a1 + 112) = *(float *)(a1 + 6984) + *(float *)(a1 + 6796);
     ShapedCollider_execute(v2, a1 + 6796, v3, v4);
     sub_605B2D70(a1);
-    StageActor::cullCheck(a1, 16);
+    StageActor__cullCheck(a1, 16);
     return 1;
   }
 
@@ -150739,7 +150739,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -150753,20 +150753,20 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD13AC;
-    return Profile::Profile(13296496, 5656984, MEMORY[0xAF3220], (int)v1, &unk_60B041B4, 4098);
+    return Profile__Profile(13296496, 5656984, MEMORY[0xAF3220], (int)v1, &unk_60B041B4, 4098);
   }
 
 /* ============================================================================
  * _ZN14BrickBlockHuge6createEPK14ActorBuildInfo
  * RVA 0x00565ac8   size 0x3c   xrefs 0
  * ============================================================================ */
-  int BrickBlockHuge::create()
+  int BrickBlockHuge__create()
   {
     int v0; // r0
     int result; // r0
   
     v0 = operator new(7400);
-    result = BlockBase::BlockBase(v0);
+    result = BlockBase__BlockBase(v0);
     *(_DWORD *)result = 12588656;
     *(_WORD *)(result + 7396) = 0;
     return result;
@@ -150871,7 +150871,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHuge8onCreateEv
  * RVA 0x00565ca8   size 0x22c   xrefs 0
  * ============================================================================ */
-  int __fastcall BrickBlockHuge_onCreate(int a1)
+  int __fastcall BrickBlockHuge__onCreate(int a1)
   {
     _DWORD *v2; // r7
     int v3; // r1
@@ -150948,7 +150948,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHuge9onExecuteEv
  * RVA 0x00565ee8   size 0xbc   xrefs 0
  * ============================================================================ */
-  int __fastcall BrickBlockHuge_onExecute(int a1)
+  int __fastcall BrickBlockHuge__onExecute(int a1)
   {
     _DWORD *v2; // r5
     int CurrentState; // r0
@@ -150960,8 +150960,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 6120);
     if ( !sub_60003B88(a1, (_DWORD *)(a1 + 6120)) )
       sub_6069B070((float *)(a1 + 7240), (float *)(a1 + 108));
-    StateMgr::execute((_DWORD *)(a1 + 6084));
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    StateMgr__execute((_DWORD *)(a1 + 6084));
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 != (*(int (**)(void))(MEMORY[0xCAE3E8] + 8))() )
     {
@@ -150970,7 +150970,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     ShapedCollider_execute(v2, v5, v6, v7);
     sub_605B2D70(a1);
-    StageActor::cullCheck(a1, 16);
+    StageActor__cullCheck(a1, 16);
     return 1;
   }
 
@@ -150978,7 +150978,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHuge6onDrawEv
  * RVA 0x00565fa8   size 0x154   xrefs 0
  * ============================================================================ */
-  int __fastcall BrickBlockHuge_onDraw(int a1)
+  int __fastcall BrickBlockHuge__onDraw(int a1)
   {
     int v2; // r7
     int v3; // r6
@@ -151036,7 +151036,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00566100   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BrickBlockHuge_vf178(int a1)
+  int __fastcall BrickBlockHuge__vf178(int a1)
   {
     return SE_OBJ_BLOCK_BREAK_ref(a1);
   }
@@ -151084,7 +151084,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00566228   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BrickBlockHuge_vf17C(int a1)
+  int __fastcall BrickBlockHuge__vf17C(int a1)
   {
     return SE_OBJ_BLOCK_BREAK_ref(a1);
   }
@@ -151093,7 +151093,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHuge15spawnCoinShowerEv
  * RVA 0x0056622c   size 0xd8   xrefs 0
  * ============================================================================ */
-  void __fastcall BrickBlockHuge_spawnCoinShower(int a1)
+  void __fastcall BrickBlockHuge__spawnCoinShower(int a1)
   {
     float v2; // r1
     int v3; // r2
@@ -151188,7 +151188,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00566488   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BrickBlockHuge_spawnItemUp(int a1)
+  int __fastcall BrickBlockHuge__spawnItemUp(int a1)
   {
     return sub_60566310(a1);
   }
@@ -151198,7 +151198,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x0056648c   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BrickBlockHuge_spawnItemDown(int a1)
+  int __fastcall BrickBlockHuge__spawnItemDown(int a1)
   {
     return sub_60566310(a1);
   }
@@ -151222,7 +151222,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( !result )
       {
-        CurrentState = StateMgr::getCurrentState(a1 + 6084);
+        CurrentState = StateMgr__getCurrentState(a1 + 6084);
         v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         result = (*(int (**)(void))(MEMORY[0xCAE3C8] + 8))();
         if ( v5 == result )
@@ -151240,7 +151240,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else if ( result )
     {
-      v6 = StateMgr::getCurrentState(a1 + 6084);
+      v6 = StateMgr__getCurrentState(a1 + 6084);
       v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 8))(v6);
       result = (*(int (**)(void))(MEMORY[0xCAE3A8] + 8))();
       if ( v7 == result )
@@ -151262,7 +151262,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHuge5vf180Ev
  * RVA 0x00566628   size 0x88   xrefs 0
  * ============================================================================ */
-  bool __fastcall BrickBlockHuge_vf180(int a1)
+  bool __fastcall BrickBlockHuge__vf180(int a1)
   {
     int v1; // r4
     int CurrentState; // r0
@@ -151271,11 +151271,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r4
   
     v1 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 == (*(int (**)(void))(MEMORY[0xCAE3A8] + 8))() )
       return 1;
-    v5 = StateMgr::getCurrentState(v1);
+    v5 = StateMgr__getCurrentState(v1);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
     return v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
   }
@@ -151284,7 +151284,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK14BrickBlockHuge18getRuntimeTypeInfoEv
  * RVA 0x005666c0   size 0x5c   xrefs 0
  * ============================================================================ */
-  int BrickBlockHuge::getRuntimeTypeInfo()
+  int BrickBlockHuge__getRuntimeTypeInfo()
   {
     if ( _cxa_guard_acquire_0(13296652) )
     {
@@ -151298,7 +151298,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BrickBlockHugeD0Ev
  * RVA 0x00566734   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall BrickBlockHuge::~BrickBlockHuge(int a1)
+  int __fastcall BrickBlockHuge__dtor(int a1)
   {
     int v2; // r0
   
@@ -151306,7 +151306,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -151320,7 +151320,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD13D4;
-    Profile::Profile(13296528, 5659336, MEMORY[0xAF321C], (int)v1, &unk_60B041D8, 4098);
+    Profile__Profile(13296528, 5659336, MEMORY[0xAF321C], (int)v1, &unk_60B041D8, 4098);
     MEMORY[0xCAE3AC] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAE3A8] = 12589092;
     MEMORY[0xCAE3B0] = 5659400;
@@ -151359,7 +151359,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1CE0u);
-    result = (_DWORD *)BlockBase::BlockBase(v0);
+    result = (_DWORD *)BlockBase__BlockBase(v0);
     *result = 12589112;
     return result;
   }
@@ -151421,7 +151421,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *((_DWORD *)a1 + 1609) = 5664228;
         *((_DWORD *)a1 + 1610) = 0;
         sub_605D0024((int)a1);
-        if ( Actor::getProfileId((Actor *)a1) == MEMORY[0xAF31C4] )
+        if ( Actor__getProfileId((Actor *)a1) == MEMORY[0xAF31C4] )
         {
           v6 = (unsigned __int8)a1[539];
           if ( a1[539] )
@@ -151565,7 +151565,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // lr
     __int64 v4; // r2
   
-    if ( Actor::getProfileId(a1) == MEMORY[0xAF31C4] && !*(_BYTE *)(a1 + 7312) )
+    if ( Actor__getProfileId(a1) == MEMORY[0xAF31C4] && !*(_BYTE *)(a1 + 7312) )
     {
       v2 = *(unsigned __int8 *)(a1 + 539);
       if ( *(_BYTE *)(a1 + 539) )
@@ -151614,7 +151614,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -151644,10 +151644,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD1426;
-    Profile::Profile(13296656, 5663512, MEMORY[0xAF31C0], (int)&v1, &unk_60B041FC, 4098);
+    Profile__Profile(13296656, 5663512, MEMORY[0xAF31C0], (int)&v1, &unk_60B041FC, 4098);
     v1 = 12321336;
     v2 = &unk_60AD1445;
-    Profile::Profile(13296680, 5663512, MEMORY[0xAF31C4], (int)&v1, &unk_60B041FC, 4098);
+    Profile__Profile(13296680, 5663512, MEMORY[0xAF31C4], (int)&v1, &unk_60B041FC, 4098);
     MEMORY[0xCAE444] = ++MEMORY[0xC7B788];
     MEMORY[0xCAE448] = 404;
     MEMORY[0xCAE44C] = 1;
@@ -151670,7 +151670,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1CF0u);
-    result = (_DWORD *)BlockBase::BlockBase(v0);
+    result = (_DWORD *)BlockBase__BlockBase(v0);
     *result = 12589568;
     result[1851] = 0;
     result[1850] = 0;
@@ -151845,15 +151845,15 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r5
   
     v2 = a1 + 6084;
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     *(float *)(a1 + 112) = *(float *)(a1 + 6984) + *(float *)(a1 + 6796);
     ShapedCollider_execute((_DWORD *)(a1 + 6120), a1 + 6796, v3, v4);
     block_cloud_model_ref(a1);
     sub_605B2D70(a1);
-    CurrentState = StateMgr::getCurrentState(v2);
+    CurrentState = StateMgr__getCurrentState(v2);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v6 == (*(int (**)(void))(MEMORY[0xCAE484] + 8))() )
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -151899,7 +151899,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v29; // [sp+28h] [bp-10h]
     float v30[2]; // [sp+30h] [bp-8h] BYREF
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (_BYTE *)(*(int (**)(void))(MEMORY[0xCAE484] + 8))();
     if ( (_BYTE *)v4 == result )
@@ -151927,7 +151927,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v20 = v8;
       mapPositionToScreen(v30, (float *)&v19);
       BasicSoundActor2_play(v9, "SE_OBJ_CLOUD_BLOCK_TO_JUGEM", v30, 0);
-      MovementBlockCoinBase::vf150(a1);
+      MovementBlockCoinBase__vf150(a1);
       *(_DWORD *)(a1 + 7404) = 4;
       v10 = *(float *)(a1 + 112);
       v11 = *(_DWORD *)(a1 + 108);
@@ -151946,14 +151946,14 @@ static inline unsigned int uxtb16(unsigned int x)
       uxtb16(r0)
       v19 = v13 | _R0;
       v20 = *(_DWORD *)(a1 + 24);
-      v22 = Profile::get(MEMORY[0xAF36E0]);
+      v22 = Profile__get(MEMORY[0xAF36E0]);
       v23 = v11;
       v24 = v10 + 8.0;
       v25 = v1;
       LOWORD(v27) = *(unsigned __int8 *)(a1 + 86);
       BYTE2(v27) = 0;
       v29 = 0;
-      return ActorMgr::create(MEMORY[0xC7B400], (int)&v19, 0);
+      return ActorMgr__create(MEMORY[0xC7B400], (int)&v19, 0);
     }
     return result;
   }
@@ -152048,7 +152048,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAE50C = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD1469;
-    Profile::Profile(13296748, 5666116, MEMORY[0xAF3208], (int)v1, &unk_60B04220, 4);
+    Profile__Profile(13296748, 5666116, MEMORY[0xAF3208], (int)v1, &unk_60B04220, 4);
     MEMORY[0xCAE488] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAE48C] = 404;
     MEMORY[0xCAE490] = 1;
@@ -152080,7 +152080,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r5
   
     v0 = (_DWORD *)operator new(0x1A98u);
-    MultiStateActor::MultiStateActor(v0);
+    MultiStateActor__MultiStateActor(v0);
     *v0 = 12590024;
     *RectCollider_ctor(v0 + 1528) = 12333272;
     return v0;
@@ -152256,7 +152256,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -152271,7 +152271,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -152294,20 +152294,20 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAE530 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD14B3;
-    return Profile::Profile(13296948, 5669456, MEMORY[0xAF3100], (int)v1, &unk_60B04244, 4098);
+    return Profile__Profile(13296948, 5669456, MEMORY[0xAF3100], (int)v1, &unk_60B04244, 4098);
   }
 
 /* ============================================================================
  * _ZN11FlyingBlock6createEPK14ActorBuildInfo
  * RVA 0x00568888   size 0x2c   xrefs 0
  * ============================================================================ */
-  _DWORD *FlyingBlock::create()
+  _DWORD *FlyingBlock__create()
   {
     int v0; // r0
     _DWORD *result; // r0
   
     v0 = operator new(0x1CE0u);
-    result = (_DWORD *)BlockBase::BlockBase(v0);
+    result = (_DWORD *)BlockBase__BlockBase(v0);
     *result = 12590228;
     return result;
   }
@@ -152316,7 +152316,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlock8onCreateEv
  * RVA 0x005688b8   size 0x230   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlock_onCreate(int a1)
+  int __fastcall FlyingBlock__onCreate(int a1)
   {
     _DWORD *v2; // r9
     unsigned int v3; // r0
@@ -152372,7 +152372,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         *(_DWORD *)(a1 + 7352) = 1096810496;
       }
-      ProfileId = Actor::getProfileId((Actor *)a1);
+      ProfileId = Actor__getProfileId((Actor *)a1);
       v9 = &flt_60568AFC;
       *(_DWORD *)(a1 + 500) = 1149239296;
       if ( ProfileId == MEMORY[0xAF31B0] )
@@ -152406,11 +152406,11 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlock5vf184Ev
  * RVA 0x00568b14   size 0x2c   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlock_vf184(int a1)
+  int __fastcall FlyingBlock__vf184(int a1)
   {
     int result; // r0
   
-    result = Actor::getProfileId(a1);
+    result = Actor__getProfileId(a1);
     if ( result == MEMORY[0xAF31B0] )
       return SE_OBJ_CMN_SPLASH_POISON_ref_563A0C(a1);
     return result;
@@ -152420,7 +152420,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlock5vf188Ev
  * RVA 0x00568b44   size 0x88   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlock_vf188(int result)
+  int __fastcall FlyingBlock__vf188(int result)
   {
     bool v1; // zf
   
@@ -152439,7 +152439,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlock5vf18CEv
  * RVA 0x00568bd4   size 0x98   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlock_vf18C(int a1)
+  int __fastcall FlyingBlock__vf18C(int a1)
   {
     int result; // r0
     int v3; // r0
@@ -152449,7 +152449,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
     {
-      result = Actor::getProfileId(a1);
+      result = Actor__getProfileId(a1);
       if ( result == MEMORY[0xAF31B0] )
       {
         result = a1 + 6884;
@@ -152476,10 +152476,10 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlock5vf190Ev
  * RVA 0x00568c78   size 0x6c   xrefs 0
  * ============================================================================ */
-  bool __fastcall FlyingBlock_vf190(int a1)
+  bool __fastcall FlyingBlock__vf190(int a1)
   {
     return *(_BYTE *)(MEMORY[0xCC6D8C] + 17)
-        && Actor::getProfileId(a1) == MEMORY[0xAF31B0]
+        && Actor__getProfileId(a1) == MEMORY[0xAF31B0]
         && *(_DWORD *)(a1 + 7300)
         && *(_DWORD *)(a1 + 7304) != 0;
   }
@@ -152488,7 +152488,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK11FlyingBlock18getRuntimeTypeInfoEv
  * RVA 0x00568cf4   size 0x5c   xrefs 0
  * ============================================================================ */
-  int FlyingBlock::getRuntimeTypeInfo()
+  int FlyingBlock__getRuntimeTypeInfo()
   {
     if ( _cxa_guard_acquire_0(13297032) )
     {
@@ -152502,7 +152502,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN11FlyingBlockD0Ev
  * RVA 0x00568d68   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlock::~FlyingBlock(int a1)
+  int __fastcall FlyingBlock__dtor(int a1)
   {
     int v2; // r0
   
@@ -152510,7 +152510,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -152525,10 +152525,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD14EC;
-    Profile::Profile(13296980, 5671048, MEMORY[0xAF31AC], (int)&v1, &unk_60B04268, 4098);
+    Profile__Profile(13296980, 5671048, MEMORY[0xAF31AC], (int)&v1, &unk_60B04268, 4098);
     v1 = 12321336;
     v2 = &unk_60AD150E;
-    return Profile::Profile(13297004, 5671048, MEMORY[0xAF31B0], (int)&v1, &unk_60B04268, 4098);
+    return Profile__Profile(13297004, 5671048, MEMORY[0xAF31B0], (int)&v1, &unk_60B04268, 4098);
   }
 
 /* ============================================================================
@@ -152565,7 +152565,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *((_DWORD *)a1 + 125) = 1157627904;
       *((_DWORD *)a1 + 126) = 1140850688;
-      if ( Actor::getProfileId(a1) == MEMORY[0xAF31DC] )
+      if ( Actor__getProfileId(a1) == MEMORY[0xAF31DC] )
       {
         *((_DWORD *)a1 + 1611) = 5650928;
         *((_DWORD *)a1 + 1612) = 5650936;
@@ -152616,7 +152616,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -152647,23 +152647,23 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD1537;
-    Profile::Profile(13297036, 5673156, MEMORY[0xAF31D8], (int)&v1, &unk_60B0428C, 6);
+    Profile__Profile(13297036, 5673156, MEMORY[0xAF31D8], (int)&v1, &unk_60B0428C, 6);
     v1 = 12321336;
     v2 = &unk_60AD1565;
-    return Profile::Profile(13297060, 5673156, MEMORY[0xAF31DC], (int)&v1, &unk_60B0428C, 6);
+    return Profile__Profile(13297060, 5673156, MEMORY[0xAF31DC], (int)&v1, &unk_60B0428C, 6);
   }
 
 /* ============================================================================
  * _ZN20FlyingBlockForAmbush6createEPK14ActorBuildInfo
  * RVA 0x00569474   size 0x3c   xrefs 0
  * ============================================================================ */
-  _DWORD *FlyingBlockForAmbush::create()
+  _DWORD *FlyingBlockForAmbush__create()
   {
     int v0; // r0
     _DWORD *result; // r0
   
     v0 = operator new(0x1CE0u);
-    result = (_DWORD *)BlockBase::BlockBase(v0);
+    result = (_DWORD *)BlockBase__BlockBase(v0);
     *result = 12591112;
     result[1847] = 0;
     return result;
@@ -152673,7 +152673,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN20FlyingBlockForAmbush8onCreateEv
  * RVA 0x005694b4   size 0x1a8   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlockForAmbush_onCreate(int a1)
+  int __fastcall FlyingBlockForAmbush__onCreate(int a1)
   {
     unsigned int v2; // r0
     int v3; // r1
@@ -152734,7 +152734,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN20FlyingBlockForAmbush9onExecuteEv
  * RVA 0x00569668   size 0xcc   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlockForAmbush_onExecute(int a1)
+  int __fastcall FlyingBlockForAmbush__onExecute(int a1)
   {
     _DWORD *v2; // r5
     int v3; // r2
@@ -152752,15 +152752,15 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v2 = (_DWORD *)(a1 + 6120);
     }
-    StateMgr::execute((_DWORD *)(a1 + 6084));
-    BlockBase::vf174(a1);
+    StateMgr__execute((_DWORD *)(a1 + 6084));
+    BlockBase__vf174(a1);
     *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
     ShapedCollider_execute(v2, 6364, v3, v4);
     sub_605B2D70(a1);
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))() )
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -152769,7 +152769,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00569738   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  unsigned int __fastcall FlyingBlockForAmbush_vf16C(int a1)
+  unsigned int __fastcall FlyingBlockForAmbush__vf16C(int a1)
   {
     return sub_605641B4(a1);
   }
@@ -152778,7 +152778,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN20FlyingBlockForAmbush5vf1A0Ev
  * RVA 0x0056973c   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlockForAmbush_vf1A0(int result)
+  int __fastcall FlyingBlockForAmbush__vf1A0(int result)
   {
     *(_DWORD *)(result + 7388) = 420;
     return result;
@@ -152788,7 +152788,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN20FlyingBlockForAmbush5vf1A8Ev
  * RVA 0x0056974c   size 0x4   xrefs 0
  * ============================================================================ */
-  void FlyingBlockForAmbush::vf1A8()
+  void FlyingBlockForAmbush__vf1A8()
   {
     ;
   }
@@ -152797,7 +152797,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN20FlyingBlockForAmbush5vf1A4Ev
  * RVA 0x00569750   size 0x9c   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlockForAmbush_vf1A4(_DWORD *a1)
+  int __fastcall FlyingBlockForAmbush__vf1A4(_DWORD *a1)
   {
     int v2; // r2
     int v3; // r2
@@ -152820,7 +152820,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK20FlyingBlockForAmbush18getRuntimeTypeInfoEv
  * RVA 0x00569804   size 0x5c   xrefs 0
  * ============================================================================ */
-  int FlyingBlockForAmbush::getRuntimeTypeInfo()
+  int FlyingBlockForAmbush__getRuntimeTypeInfo()
   {
     if ( _cxa_guard_acquire_0(13297156) )
     {
@@ -152834,7 +152834,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN20FlyingBlockForAmbushD0Ev
  * RVA 0x00569878   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall FlyingBlockForAmbush::~FlyingBlockForAmbush(int a1)
+  int __fastcall FlyingBlockForAmbush__dtor(int a1)
   {
     int v2; // r0
   
@@ -152842,7 +152842,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -152871,7 +152871,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1598;
-    Profile::Profile(13297092, 5674100, MEMORY[0xAF3224], (int)v1, &unk_60B042B0, 4098);
+    Profile__Profile(13297092, 5674100, MEMORY[0xAF3224], (int)v1, &unk_60B042B0, 4098);
     MEMORY[0xCAE5E0] = ++MEMORY[0xC7B788];
     MEMORY[0xCAE5E4] = 416;
     MEMORY[0xCAE5E8] = 1;
@@ -152894,7 +152894,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(7400);
-    result = (_DWORD *)BlockBase::BlockBase(v0);
+    result = (_DWORD *)BlockBase__BlockBase(v0);
     *result = 12591568;
     result[1847] = 0;
     result[1848] = 0;
@@ -152976,14 +152976,14 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v2 = (_DWORD *)(a1 + 6120);
     }
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v3 = MEMORY[0xCC6484];
     *(float *)(a1 + 108) = *(float *)(a1 + 7388) + *(float *)(MEMORY[0xCC6484] + 112);
     *(float *)(a1 + 112) = (float)(*(float *)(a1 + 7392) + *(float *)(v3 + 124)) + *(float *)(a1 + 6796);
     *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
     ShapedCollider_execute(v2, 6364, a1 + 7392, v4);
     sub_605B2D70(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -153013,7 +153013,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -153027,7 +153027,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD15BD;
-    return Profile::Profile(13297160, 5675996, MEMORY[0xAF31F4], (int)v1, &unk_60B042D4, 4098);
+    return Profile__Profile(13297160, 5675996, MEMORY[0xAF31F4], (int)v1, &unk_60B042D4, 4098);
   }
 
 /* ============================================================================
@@ -153112,7 +153112,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -153127,7 +153127,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -153193,10 +153193,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD15DF;
-    Profile::Profile(13297192, 5677520, MEMORY[0xAF31C8], (int)&v1, &unk_60B042F8, 4098);
+    Profile__Profile(13297192, 5677520, MEMORY[0xAF31C8], (int)&v1, &unk_60B042F8, 4098);
     v1 = 12321336;
     v2 = &unk_60AD160A;
-    return Profile::Profile(13297216, 5677520, MEMORY[0xAF31D0], (int)&v1, &unk_60B0431C, 4098);
+    return Profile__Profile(13297216, 5677520, MEMORY[0xAF31D0], (int)&v1, &unk_60B0431C, 4098);
   }
 
 /* ============================================================================
@@ -153276,7 +153276,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -153341,7 +153341,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1641;
-    return Profile::Profile(13297256, 5678996, MEMORY[0xAF31EC], (int)v1, &unk_60B04340, 6);
+    return Profile__Profile(13297256, 5678996, MEMORY[0xAF31EC], (int)v1, &unk_60B04340, 6);
   }
 
 /* ============================================================================
@@ -153353,9 +153353,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r5
   
     v0 = operator new(0x1D18u);
-    BlockBase::BlockBase(v0);
+    BlockBase__BlockBase(v0);
     *(_DWORD *)v0 = 12592900;
-    LightMask::LightMask((_DWORD *)(v0 + 7396));
+    LightMask__LightMask((_DWORD *)(v0 + 7396));
     *(_DWORD *)(v0 + 7436) = 0;
     *(_DWORD *)(v0 + 7440) = 0;
     *(_BYTE *)(v0 + 7444) = 0;
@@ -153415,7 +153415,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 512) = 1107296256;
       sub_6056AF34(a1);
       sub_6056B158(a1);
-      LightMask::init(a1 + 7396, 0, 2);
+      LightMask__init(a1 + 7396, 0, 2);
       v5 = *(float *)(a1 + 112);
       v6 = *(_DWORD *)(a1 + 108);
       v7 = *(_DWORD *)(a1 + 116);
@@ -153423,7 +153423,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 7408) = v6;
       *(float *)(a1 + 7412) = v5 + 8.0;
       *(_DWORD *)(a1 + 7416) = v7;
-      LightMask::update((LightMask *)(a1 + 7396));
+      LightMask__update((LightMask *)(a1 + 7396));
       *(_DWORD *)(a1 + 7280) = 1115684864;
       *(_DWORD *)(a1 + 7284) = 1115684864;
       sub_605D0024(a1);
@@ -153599,7 +153599,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = *(_DWORD *)(a1 + 7436);
     if ( v3 )
       *(_DWORD *)(a1 + 7436) = v3 - 1;
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     *(float *)(a1 + 112) = *(float *)(a1 + 6984) + *(float *)(a1 + 6796);
     ShapedCollider_execute(v2, a1 + 6796, v4, v5);
     sub_6056B158((int *)a1);
@@ -153632,8 +153632,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 7408) = v11;
     *(float *)(a1 + 7412) = v10 + 8.0;
     *(_DWORD *)(a1 + 7416) = v12;
-    LightMask::update(a1 + 7396);
-    StageActor::cullCheck(a1, 0);
+    LightMask__update(a1 + 7396);
+    StageActor__cullCheck(a1, 0);
     sub_605B2D70(a1);
     *(_BYTE *)(a1 + 6841) = 0;
     return 1;
@@ -153648,7 +153648,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int savedregs; // [sp+0h] [bp+0h]
   
     DrawMgr_drawModel2(MEMORY[0xC9CD1C], *(_DWORD **)(a1 + 7388), a3, a4, savedregs);
-    LightMask::draw(a1 + 7396);
+    LightMask__draw(a1 + 7396);
     return 1;
   }
 
@@ -153784,7 +153784,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE *v14; // r2
     int v15; // r0
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCAE6A8] + 8))();
     if ( v3 == result )
@@ -153950,7 +153950,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5[1] = v2;
     v5[2] = v3;
     EffectData_create(573, (int)v5, 0, (int)(a1 + 36));
-    return StageActor::delete((int)a1, 1);
+    return StageActor__delete((int)a1, 1);
   }
 
 /* ============================================================================
@@ -153977,7 +153977,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -153992,7 +153992,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -154033,7 +154033,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAE70C = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD1675;
-    Profile::Profile(13297296, 5680248, MEMORY[0xAF3108], (int)v1, &unk_60B04364, 4098);
+    Profile__Profile(13297296, 5680248, MEMORY[0xAF3108], (int)v1, &unk_60B04364, 4098);
     MEMORY[0xCAE6AC] = ++MEMORY[0xC7B788];
     MEMORY[0xCAE6B0] = 404;
     MEMORY[0xCAE6B4] = 1;
@@ -154055,7 +154055,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r4
   
     v0 = operator new(7512);
-    BlockBase::BlockBase(v0);
+    BlockBase__BlockBase(v0);
     *(_DWORD *)v0 = 12593356;
     *(_BYTE *)(v0 + 7416) = 0;
     *(_DWORD *)(v0 + 7412) = 0;
@@ -154482,7 +154482,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *v6 = 1;
       }
     }
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
     ShapedCollider_execute((_DWORD *)(a1 + 6120), 6364, v11, v12);
     *(_BYTE *)(a1 + 7468) = 0;
@@ -154516,7 +154516,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(_DWORD, float *))(***(_DWORD ***)(a1 + 7388) + 60))(**(_DWORD **)(a1 + 7388), v20);
     (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 7388) + 68))(**(_DWORD **)(a1 + 7388), a1 + 144);
     ModelWrapper_updateModel(*(_DWORD **)(a1 + 7388));
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -155210,7 +155210,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( v2 <= -4.5 )
       *(_DWORD *)(a1 + 124) = 1083179008;
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleSpeed(a1);
     *(_DWORD *)(a1 + 108) = *(_DWORD *)(a1 + 6980);
     result = a1 + 6984;
     v4 = *(float *)(a1 + 6984);
@@ -155275,7 +155275,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2.n64_u32[0] = 4.5;
     v1.n64_f32[0] = *(float *)(a1 + 124) + 0.64;
     *(_DWORD *)(a1 + 124) = vmin_f32(v1, v2).n64_u32[0];
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleSpeed(a1);
     if ( *(_DWORD *)(a1 + 7404) == 1 )
     {
       if ( *(_BYTE *)(a1 + 7452) )
@@ -155403,7 +155403,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -155432,7 +155432,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD16A4;
-    Profile::Profile(13297424, 5685512, MEMORY[0xAF30B8], (int)v1, &unk_60B04388, 2);
+    Profile__Profile(13297424, 5685512, MEMORY[0xAF30B8], (int)v1, &unk_60B04388, 2);
     MEMORY[0xCAE72C] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAE728] = 12593848;
     MEMORY[0xCAE730] = 5685772;
@@ -155477,7 +155477,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_6056EA60(_DWORD *a1)
   {
-    BlockBase::BlockBase((int)a1);
+    BlockBase__BlockBase((int)a1);
     *a1 = 12593888;
     LineFollower_ctor(a1 + 1847);
     a1[1883] = 0;
@@ -155561,15 +155561,15 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (_DWORD *)(a1 + 108);
     if ( sub_60003B88(a1, (_DWORD *)(a1 + 6120)) != 1 )
       sub_6069B070((float *)(a1 + 7240), (float *)(a1 + 108));
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     sub_6000F338(a1 + 7388);
-    StateMgr::execute((_DWORD *)(a1 + 7408));
+    StateMgr__execute((_DWORD *)(a1 + 7408));
     v4 = *(float *)(a1 + 7492);
     *v3 = *(_DWORD *)(a1 + 7488);
     *(float *)(a1 + 112) = (float)(v4 + -5.0) + *(float *)(a1 + 6796);
     ShapedCollider_execute(v2, a1 + 7492, v5, v6);
     sub_605B2D70(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -155608,7 +155608,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -155622,7 +155622,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1723;
-    return Profile::Profile(13297592, 4576572, MEMORY[0xAF31FC], (int)v1, 0, 0);
+    return Profile__Profile(13297592, 4576572, MEMORY[0xAF31FC], (int)v1, 0, 0);
   }
 
 /* ============================================================================
@@ -155634,7 +155634,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r4
   
     v0 = operator new(0x1D60u);
-    BlockBase::BlockBase(v0);
+    BlockBase__BlockBase(v0);
     *(_DWORD *)v0 = 12594324;
     memset((void *)(v0 + 7396), 0, 0x24u);
     *(_DWORD *)(v0 + 7432) = 1;
@@ -155947,9 +155947,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !sub_60003B88(a1, (_DWORD *)(a1 + 6120)) )
       sub_6069B070((float *)(a1 + 7240), (float *)(a1 + 108));
     sub_6056FBD8(a1);
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     if ( *(_BYTE *)(a1 + 7436) && !*(_DWORD *)(a1 + 7464) )
-      StateMgr::execute((_DWORD *)(a1 + 7496));
+      StateMgr__execute((_DWORD *)(a1 + 7496));
     ShapedCollider_execute(v2, v3, v4, v5);
     ActorScaler_execute(a1 + 7440);
     sub_6056F9A4(a1);
@@ -156137,7 +156137,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -156152,7 +156152,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -156162,7 +156162,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605700B4(int a1, int a2)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 7496), a2);
+    return StateMgr__changeState((_DWORD *)(a1 + 7496), a2);
   }
 
 /* ============================================================================
@@ -156184,7 +156184,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAE7F0 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD174B;
-    Profile::Profile(13297652, 5697168, MEMORY[0xAF3200], (int)v1, &unk_60B04478, 4098);
+    Profile__Profile(13297652, 5697168, MEMORY[0xAF3200], (int)v1, &unk_60B04478, 4098);
     MEMORY[0xCAE810] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAE80C] = 12594812;
     MEMORY[0xCAE814] = 5697524;
@@ -156240,7 +156240,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r4
   
     v0 = (_DWORD *)operator new(0x1D58u);
-    BlockBase::BlockBase((int)v0);
+    BlockBase__BlockBase((int)v0);
     *v0 = 12594832;
     v0[1856] = 0;
     v0[1855] = 0;
@@ -156575,9 +156575,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r2
     int v4; // r3
   
-    StateMgr::execute(a1 + 1521);
+    StateMgr__execute(a1 + 1521);
     if ( !a1[1864] )
-      StateMgr::execute(a1 + 1872);
+      StateMgr__execute(a1 + 1872);
     ShapedCollider_execute(a1 + 1530, v2, v3, v4);
     ActorScaler_execute((int)(a1 + 1858));
     sub_60570EA8(a1);
@@ -156607,7 +156607,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r5
     int result; // r0
   
-    CurrentState = StateMgr::getCurrentState(a1 + 7488);
+    CurrentState = StateMgr__getCurrentState(a1 + 7488);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCAE93C] + 8))();
     if ( v3 != result )
@@ -156745,7 +156745,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *((_DWORD *)a1 + 153) = v3;
     *((_DWORD *)a1 + 154) = v4;
     Object_updateSubObjectsAndRefresh((_DWORD *)a1 + 1530);
-    CurrentState = StateMgr::getCurrentState((int)a1 + 6084);
+    CurrentState = StateMgr__getCurrentState((int)a1 + 6084);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
     if ( v6 != result )
@@ -156815,7 +156815,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -156830,7 +156830,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -156840,7 +156840,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605718FC(int a1, int a2)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 7488), a2);
+    return StateMgr__changeState((_DWORD *)(a1 + 7488), a2);
   }
 
 /* ============================================================================
@@ -156862,7 +156862,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAE8E0 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD1772;
-    Profile::Profile(13297892, 5702992, MEMORY[0xAF3228], (int)v1, &unk_60B0449C, 4098);
+    Profile__Profile(13297892, 5702992, MEMORY[0xAF3228], (int)v1, &unk_60B0449C, 4098);
     MEMORY[0xCAE900] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAE8FC] = 12595320;
     MEMORY[0xCAE904] = 5703384;
@@ -156902,7 +156902,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1CE0u);
-    result = (_DWORD *)BlockBase::BlockBase(v0);
+    result = (_DWORD *)BlockBase__BlockBase(v0);
     *result = 12595340;
     return result;
   }
@@ -156970,7 +156970,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       *(float *)(a1 + 7364) = v9;
     }
-    if ( Actor::getProfileId((Actor *)a1) == MEMORY[0xAF31BC] )
+    if ( Actor__getProfileId((Actor *)a1) == MEMORY[0xAF31BC] )
     {
       v10 = 1133510656;
       *(_DWORD *)(a1 + 500) = 1133510656;
@@ -157020,11 +157020,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r4
   
     v1 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 == (*(int (**)(void))(MEMORY[0xCB111C] + 8))() )
       return 1;
-    v5 = StateMgr::getCurrentState(v1);
+    v5 = StateMgr__getCurrentState(v1);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
     return v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
   }
@@ -157037,7 +157037,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = Actor::getProfileId(a1);
+    result = Actor__getProfileId(a1);
     if ( result == MEMORY[0xAF31B8] )
       return SE_OBJ_CMN_SPLASH_POISON_ref_563A0C(a1);
     return result;
@@ -157050,7 +157050,7 @@ static inline unsigned int uxtb16(unsigned int x)
   bool __fastcall sub_60572038(int a1)
   {
     return *(_BYTE *)(MEMORY[0xCC6D8C] + 17)
-        && Actor::getProfileId(a1) == MEMORY[0xAF31B8]
+        && Actor__getProfileId(a1) == MEMORY[0xAF31B8]
         && *(_DWORD *)(a1 + 7300)
         && *(_DWORD *)(a1 + 7304) != 0;
   }
@@ -157081,7 +157081,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -157096,13 +157096,13 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD17A0;
-    Profile::Profile(13298024, 5709024, MEMORY[0xAF31B4], (int)&v1, &unk_60B044C0, 4098);
+    Profile__Profile(13298024, 5709024, MEMORY[0xAF31B4], (int)&v1, &unk_60B044C0, 4098);
     v1 = 12321336;
     v2 = &unk_60AD17C2;
-    Profile::Profile(13298048, 5709024, MEMORY[0xAF31B8], (int)&v1, &unk_60B044C0, 4098);
+    Profile__Profile(13298048, 5709024, MEMORY[0xAF31B8], (int)&v1, &unk_60B044C0, 4098);
     v1 = 12321336;
     v2 = &unk_60AD17EB;
-    return Profile::Profile(13298072, 5709024, MEMORY[0xAF31BC], (int)&v1, &unk_60B044E4, 4098);
+    return Profile__Profile(13298072, 5709024, MEMORY[0xAF31BC], (int)&v1, &unk_60B044E4, 4098);
   }
 
 /* ============================================================================
@@ -157141,7 +157141,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2 == 1 )
     {
       sub_60563AB8((_DWORD *)a1);
-      ProfileId = Actor::getProfileId((Actor *)a1);
+      ProfileId = Actor__getProfileId((Actor *)a1);
       v5 = &flt_60572590;
       if ( ProfileId == MEMORY[0xAF31E4] )
         v5 = &flt_60572594;
@@ -157152,7 +157152,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 7288) = 1;
       if ( *(_DWORD *)(a1 + 6856) == 21 )
         *(_BYTE *)(a1 + 6876) = 1;
-      v7 = Actor::getProfileId((Actor *)a1);
+      v7 = Actor__getProfileId((Actor *)a1);
       result = 1;
       if ( v7 == MEMORY[0xAF31E8] )
         *(_DWORD *)(a1 + 6452) = 5650944;
@@ -157173,11 +157173,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r4
   
     v1 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 == (*(int (**)(void))(MEMORY[0xCB111C] + 8))() )
       return 1;
-    v5 = StateMgr::getCurrentState(v1);
+    v5 = StateMgr__getCurrentState(v1);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
     return v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
   }
@@ -157222,7 +157222,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -157237,13 +157237,13 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD1825;
-    Profile::Profile(13298104, 5710976, MEMORY[0xAF31E0], (int)&v1, &unk_60B04508, 6);
+    Profile__Profile(13298104, 5710976, MEMORY[0xAF31E0], (int)&v1, &unk_60B04508, 6);
     v1 = 12321336;
     v2 = &unk_60AD1853;
-    Profile::Profile(13298128, 5710976, MEMORY[0xAF31E4], (int)&v1, &unk_60B0452C, 6);
+    Profile__Profile(13298128, 5710976, MEMORY[0xAF31E4], (int)&v1, &unk_60B0452C, 6);
     v1 = 12321336;
     v2 = &unk_60AD1888;
-    return Profile::Profile(13298152, 5710976, MEMORY[0xAF31E8], (int)&v1, &unk_60B04508, 6);
+    return Profile__Profile(13298152, 5710976, MEMORY[0xAF31E8], (int)&v1, &unk_60B04508, 6);
   }
 
 /* ============================================================================
@@ -157256,7 +157256,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1CE8u);
-    result = (_DWORD *)BlockBase::BlockBase(v0);
+    result = (_DWORD *)BlockBase__BlockBase(v0);
     *result = 12596212;
     result[1847] = 0;
     result[1848] = 0;
@@ -157355,14 +157355,14 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v2 = (_DWORD *)(a1 + 6120);
     }
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v3 = MEMORY[0xCC6484];
     *(float *)(a1 + 108) = *(float *)(a1 + 7388) + *(float *)(MEMORY[0xCC6484] + 112);
     *(float *)(a1 + 112) = (float)(*(float *)(a1 + 7392) + *(float *)(v3 + 124)) + *(float *)(a1 + 6796);
     *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
     ShapedCollider_execute(v2, 6364, a1 + 7392, v4);
     sub_605B2D70(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -157379,11 +157379,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r4
   
     v1 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 == (*(int (**)(void))(MEMORY[0xCB111C] + 8))() )
       return 1;
-    v5 = StateMgr::getCurrentState(v1);
+    v5 = StateMgr__getCurrentState(v1);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
     return v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
   }
@@ -157414,7 +157414,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -157428,7 +157428,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD18AF;
-    return Profile::Profile(13298184, 5712032, MEMORY[0xAF31F8], (int)v1, &unk_60B04550, 4098);
+    return Profile__Profile(13298184, 5712032, MEMORY[0xAF31F8], (int)v1, &unk_60B04550, 4098);
   }
 
 /* ============================================================================
@@ -157496,11 +157496,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r4
   
     v1 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 == (*(int (**)(void))(MEMORY[0xCB111C] + 8))() )
       return 1;
-    v5 = StateMgr::getCurrentState(v1);
+    v5 = StateMgr__getCurrentState(v1);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
     return v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
   }
@@ -157545,7 +157545,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -157560,10 +157560,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD18D1;
-    Profile::Profile(13298216, 5713812, MEMORY[0xAF31CC], (int)&v1, &unk_60B04574, 4098);
+    Profile__Profile(13298216, 5713812, MEMORY[0xAF31CC], (int)&v1, &unk_60B04574, 4098);
     v1 = 12321336;
     v2 = &unk_60AD18FC;
-    return Profile::Profile(13298240, 5713812, MEMORY[0xAF31D4], (int)&v1, &unk_60B04598, 4098);
+    return Profile__Profile(13298240, 5713812, MEMORY[0xAF31D4], (int)&v1, &unk_60B04598, 4098);
   }
 
 /* ============================================================================
@@ -157626,11 +157626,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r4
   
     v1 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 == (*(int (**)(void))(MEMORY[0xCB111C] + 8))() )
       return 1;
-    v5 = StateMgr::getCurrentState(v1);
+    v5 = StateMgr__getCurrentState(v1);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
     return v6 == (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
   }
@@ -157675,7 +157675,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -157689,7 +157689,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1933;
-    return Profile::Profile(13298272, 5714812, MEMORY[0xAF31F0], (int)v1, &unk_60B045BC, 6);
+    return Profile__Profile(13298272, 5714812, MEMORY[0xAF31F0], (int)v1, &unk_60B045BC, 6);
   }
 
 /* ============================================================================
@@ -157700,7 +157700,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    result = (_DWORD *)BlockBase::BlockBase(a1);
+    result = (_DWORD *)BlockBase__BlockBase(a1);
     *result = 12597520;
     result[1847] = 0;
     return result;
@@ -157740,12 +157740,12 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[1826] = *((unsigned __int8 *)a1 + 28);
       *((_BYTE *)a1 + 6878) = 1;
       memset(v14, 0, sizeof(v14));
-      MaskForMovementType = MovementHandler::getMaskForMovementType((MovementHandler *)(a1 + 1748), 9u);
+      MaskForMovementType = MovementHandler__getMaskForMovementType((MovementHandler *)(a1 + 1748), 9u);
       sub_606B0CCC(a1 + 1748, a1 + 27, MaskForMovementType, *((unsigned __int8 *)a1 + 7304), v14, 1);
-      MovementHandler::execute((MovementHandler *)(a1 + 1748));
+      MovementHandler__execute((MovementHandler *)(a1 + 1748));
       if ( a1[1760] != 1 || a1[1765] == 1 )
         goto LABEL_17;
-      CurrentState = StateMgr::getCurrentState((int)(a1 + 1521));
+      CurrentState = StateMgr__getCurrentState((int)(a1 + 1521));
       v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       if ( v5 != (*(int (**)(void))(MEMORY[0xCAEA80] + 8))() || !a1[1791] )
       {
@@ -157846,17 +157846,17 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( *(_BYTE *)(a1 + 7312) && !sub_60003B88(a1, (_DWORD *)(a1 + 6120)) )
       sub_6069B070((float *)(a1 + 7240), (float *)(a1 + 108));
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v4 = *(_DWORD *)(a1 + 7300);
     v5 = v4 == 0;
     if ( v4 )
       v5 = *(_DWORD *)(a1 + 7304) == 0;
     if ( v5 )
       goto LABEL_35;
-    MovementHandler::execute((_DWORD *)(a1 + 6992));
+    MovementHandler__execute((_DWORD *)(a1 + 6992));
     if ( *(_DWORD *)(a1 + 7040) != 1 || *(_DWORD *)(a1 + 7060) == 1 )
       goto LABEL_35;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v7 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v7 == (*(int (**)(void))(MEMORY[0xCAEA80] + 8))() && *(_DWORD *)(a1 + 7164) )
     {
@@ -157900,7 +157900,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
           v14 = (*(_BYTE *)(a1 + 26) & 0x10) == 0;
         if ( !v14 && *(_DWORD *)(a1 + 7172) )
-          StageActor::delete(a1, 1);
+          StageActor__delete(a1, 1);
       }
       else if ( v12 == 1 )
       {
@@ -157923,7 +157923,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
     ShapedCollider_execute((_DWORD *)(a1 + 6120), 6364, v2, v3);
     sub_605B2D70(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -158024,7 +158024,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -158055,7 +158055,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v0 = operator new(0x1CE8u);
-    result = BlockBase::BlockBase(v0);
+    result = BlockBase__BlockBase(v0);
     *(_DWORD *)result = 12597976;
     *(_DWORD *)(result + 7388) = 0;
     *(_DWORD *)(result + 7392) = 0;
@@ -158136,7 +158136,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = *(float *)(a1 + 112);
     if ( *(_BYTE *)(a1 + 7312) && !sub_60003B88(a1, (_DWORD *)(a1 + 6120)) )
       sub_6069B070((float *)(a1 + 7240), (float *)(a1 + 108));
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v4 = *(_DWORD **)(a1 + 56);
     if ( _cxa_guard_acquire_0(13298376) )
     {
@@ -158234,7 +158234,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -158248,7 +158248,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aIn_0;
-    Profile::Profile(13298336, 5717756, MEMORY[0xAF320C], (int)v1, &unk_60B045E0, 4098);
+    Profile__Profile(13298336, 5717756, MEMORY[0xAF320C], (int)v1, &unk_60B045E0, 4098);
     MEMORY[0xCAEAB8] = 0x4000000;
     return 13298360;
   }
@@ -158262,7 +158262,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r5
   
     v0 = operator new(0x1AB0u);
-    MultiStateActor::MultiStateActor((_DWORD *)v0);
+    MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12598412;
     RectCollider_ctor((_DWORD *)(v0 + 6112));
     *(_DWORD *)(v0 + 6112) = 12333272;
@@ -158291,7 +158291,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v10[2]; // [sp+20h] [bp-10h] BYREF
     _DWORD v11[2]; // [sp+28h] [bp-8h] BYREF
   
-    if ( Actor::getProfileId(a1) == MEMORY[0xAF3104] )
+    if ( Actor__getProfileId(a1) == MEMORY[0xAF3104] )
     {
       *(_DWORD *)(a1 + 6824) = 1;
       v2 = 1140457472;
@@ -158606,7 +158606,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_execute(v2, v3, v4, v5);
     if ( *(_DWORD *)(a1 + 6824) == 1 )
       sub_60574F00(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     *(_BYTE *)(a1 + 6820) = 0;
     return 1;
   }
@@ -158650,7 +158650,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v8[1] = v6 + v4;
       v9 = -253;
       SE_OBJ_BLOCK_BREAK_ref_3(MEMORY[0xCB061C], v8, 0, 0);
-      return StageActor::delete((StageActor *)a1, 1u);
+      return StageActor__delete((StageActor *)a1, 1u);
     }
     return result;
   }
@@ -158723,7 +158723,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -158738,7 +158738,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -158770,10 +158770,10 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_QWORD *)&dword_60CAEB50 = 3238002688LL;
     v1 = 12321336;
     v2 = &aA;
-    Profile::Profile(13298380, 5719720, MEMORY[0xAF30FC], (int)&v1, &unk_60B04604, 4098);
+    Profile__Profile(13298380, 5719720, MEMORY[0xAF30FC], (int)&v1, &unk_60B04604, 4098);
     v1 = 12321336;
     v2 = &aA_0;
-    return Profile::Profile(13298404, 5719720, MEMORY[0xAF3104], (int)&v1, &unk_60B04628, 4098);
+    return Profile__Profile(13298404, 5719720, MEMORY[0xAF3104], (int)&v1, &unk_60B04628, 4098);
   }
 
 /* ============================================================================
@@ -158786,7 +158786,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1CE0u);
-    result = (_DWORD *)BlockBase::BlockBase(v0);
+    result = (_DWORD *)BlockBase__BlockBase(v0);
     *result = 12598616;
     result[1847] = 0;
     return result;
@@ -158823,7 +158823,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_601604FC(v3, &v8);
       }
       *(_DWORD *)(a1 + 7388) = 0;
-      if ( Actor::getProfileId(a1) == MEMORY[0xAF3214] )
+      if ( Actor__getProfileId(a1) == MEMORY[0xAF3214] )
         *(_DWORD *)(a1 + 7388) = 1;
       v4 = 1;
       *(_DWORD *)(a1 + 7288) = 1;
@@ -158859,7 +158859,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r0
     char v6; // r1
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCAEB88] + 8))();
     if ( v3 == result )
@@ -158896,7 +158896,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           goto LABEL_9;
         }
-        return BlockBase::vf178(a1);
+        return BlockBase__vf178(a1);
       }
     }
     return result;
@@ -158955,14 +158955,14 @@ static inline unsigned int uxtb16(unsigned int x)
     v15[1] = *(_DWORD *)(a1 + 24);
     LOWORD(v22) = *(_WORD *)(a1 + 28);
     v9 = v8 + v7;
-    v16 = Profile::get(*((_DWORD *)&unk_60CAEBB4 + *(_DWORD *)(a1 + 7388) + 1));
+    v16 = Profile__get(*((_DWORD *)&unk_60CAEBB4 + *(_DWORD *)(a1 + 7388) + 1));
     v17 = v6;
     v18 = v9;
     v19 = v5;
     LOBYTE(v21) = *(_BYTE *)(a1 + 86);
     *(_WORD *)((char *)&v21 + 1) = *(_WORD *)(a1 + 539);
     v23 = 0;
-    ActorMgr::create(MEMORY[0xC7B400], (int)v15, 0);
+    ActorMgr__create(MEMORY[0xC7B400], (int)v15, 0);
     v10 = -16.0;
     if ( !a2 )
       v10 = 24.0;
@@ -159085,10 +159085,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &aAI;
-    Profile::Profile(13298520, 5723524, MEMORY[0xAF3210], (int)&v1, &unk_60B0464C, 4098);
+    Profile__Profile(13298520, 5723524, MEMORY[0xAF3210], (int)&v1, &unk_60B0464C, 4098);
     v1 = 12321336;
     v2 = &aAPI;
-    Profile::Profile(13298544, 5723524, MEMORY[0xAF3214], (int)&v1, &unk_60B0464C, 4098);
+    Profile__Profile(13298544, 5723524, MEMORY[0xAF3214], (int)&v1, &unk_60B0464C, 4098);
     MEMORY[0xCAEB8C] = ++MEMORY[0xC7B788];
     MEMORY[0xCAEB90] = 404;
     MEMORY[0xCAEB94] = 1;
@@ -159110,7 +159110,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r5
   
     v0 = (_DWORD *)operator new(7432);
-    BlockBase::BlockBase((int)v0);
+    BlockBase__BlockBase((int)v0);
     *v0 = 12599072;
     sub_606DF458();
     return v0;
@@ -159207,7 +159207,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v2 = (_DWORD *)(a1 + 6120);
     }
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v10 = 0;
     v3 = *(float *)(a1 + 112);
     v4 = *(float *)(a1 + 116);
@@ -159222,7 +159222,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6364) = v5;
     ShapedCollider_execute(v2, 6364, a1 + 7424, v6);
     sub_605B2D70(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -159284,7 +159284,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -159299,7 +159299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -159313,20 +159313,20 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aA_1;
-    return Profile::Profile(13298624, 5726236, MEMORY[0xAF3204], (int)v1, &unk_60B04670, 4098);
+    return Profile__Profile(13298624, 5726236, MEMORY[0xAF3204], (int)v1, &unk_60B04670, 4098);
   }
 
 /* ============================================================================
  * _ZN14BabyYoshiBlock6createEPK14ActorBuildInfo
  * RVA 0x005767dc   size 0x2c   xrefs 0
  * ============================================================================ */
-  _DWORD *BabyYoshiBlock::create()
+  _DWORD *BabyYoshiBlock__create()
   {
     int v0; // r0
     _DWORD *result; // r0
   
     v0 = operator new(0x1CE0u);
-    result = (_DWORD *)BlockBase::BlockBase(v0);
+    result = (_DWORD *)BlockBase__BlockBase(v0);
     *result = 12599508;
     return result;
   }
@@ -159335,7 +159335,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BabyYoshiBlock8onCreateEv
  * RVA 0x0057680c   size 0x120   xrefs 0
  * ============================================================================ */
-  int __fastcall BabyYoshiBlock_onCreate(int a1)
+  int __fastcall BabyYoshiBlock__onCreate(int a1)
   {
     _DWORD *v2; // r5
     int v3; // r1
@@ -159440,7 +159440,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00576b8c   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BabyYoshiBlock_spawnItemUp(int a1)
+  int __fastcall BabyYoshiBlock__spawnItemUp(int a1)
   {
     return SE_OBJ_ITEM_APPEAR_ref_576A00(a1);
   }
@@ -159450,7 +159450,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * RVA 0x00576b90   size 0x4   xrefs 0
  * ============================================================================ */
   // attributes: thunk
-  int __fastcall BabyYoshiBlock_spawnItemDown(int a1)
+  int __fastcall BabyYoshiBlock__spawnItemDown(int a1)
   {
     return SE_OBJ_ITEM_APPEAR_ref_576A00(a1);
   }
@@ -159459,7 +159459,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK14BabyYoshiBlock18getRuntimeTypeInfoEv
  * RVA 0x00576b9c   size 0x5c   xrefs 0
  * ============================================================================ */
-  int BabyYoshiBlock::getRuntimeTypeInfo()
+  int BabyYoshiBlock__getRuntimeTypeInfo()
   {
     if ( _cxa_guard_acquire_0(13298696) )
     {
@@ -159473,7 +159473,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN14BabyYoshiBlockD0Ev
  * RVA 0x00576c10   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall BabyYoshiBlock::~BabyYoshiBlock(int a1)
+  int __fastcall BabyYoshiBlock__dtor(int a1)
   {
     int v2; // r0
   
@@ -159481,7 +159481,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -159498,7 +159498,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAEBE8 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD1A52;
-    return Profile::Profile(13298668, 5728220, MEMORY[0xAF3218], (int)v1, &unk_60B04694, 4098);
+    return Profile__Profile(13298668, 5728220, MEMORY[0xAF3218], (int)v1, &unk_60B04694, 4098);
   }
 
 /* ============================================================================
@@ -159511,7 +159511,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D48u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12599944;
     result[1871] = 0;
     result[1872] = 0;
@@ -159585,7 +159585,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       *(_DWORD *)(a1 + 7308) = *(unsigned __int8 *)(a1 + 29);
       sub_60579FC8((_DWORD *)a1);
-      if ( Actor::getProfileId(a1) == MEMORY[0xAF3358] )
+      if ( Actor__getProfileId(a1) == MEMORY[0xAF3358] )
       {
         v10 = 1149239296;
         v11 = 1166016512;
@@ -159652,12 +159652,12 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_DWORD *)(a1 + 7492) )
     {
       sub_605D006C(a1);
-      StateMgr::execute((_DWORD *)(a1 + 6084));
-      CurrentState = StateMgr::getCurrentState(a1 + 6084);
+      StateMgr__execute((_DWORD *)(a1 + 6084));
+      CurrentState = StateMgr__getCurrentState(a1 + 6084);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       if ( v4 != (*(int (**)(void))(MEMORY[0xCAED90] + 8))() )
       {
-        v5 = StateMgr::getCurrentState(a1 + 6084);
+        v5 = StateMgr__getCurrentState(a1 + 6084);
         v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
         v7 = (*(int (**)(void))(MEMORY[0xCAED48] + 8))();
         v10 = v6 == v7;
@@ -159675,11 +159675,11 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       sub_605B2D70(a1);
       *(_DWORD *)(a1 + 7372) = 2;
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
     }
     else
     {
-      CoinBase::onExecute(a1);
+      CoinBase__onExecute(a1);
     }
     return 1;
   }
@@ -159710,7 +159710,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -159718,7 +159718,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase4vf94Ev
  * RVA 0x00577458   size 0xc   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_vf94(int a1)
+  int __fastcall CoinBase__vf94(int a1)
   {
     return *(unsigned __int8 *)(a1 + 7466);
   }
@@ -159727,7 +159727,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase4vf9CEv
  * RVA 0x00577464   size 0x8   xrefs 0
  * ============================================================================ */
-  int CoinBase::vf9C()
+  int CoinBase__vf9C()
   {
     return 1;
   }
@@ -159780,7 +159780,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfCCEv
  * RVA 0x005774c0   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::vfCC()
+  void BlockCoinBase__vfCC()
   {
     ;
   }
@@ -159789,7 +159789,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfE4Ev
  * RVA 0x005774c4   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::vfE4()
+  void BlockCoinBase__vfE4()
   {
     ;
   }
@@ -159798,7 +159798,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfF4Ev
  * RVA 0x005774c8   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::vfF4()
+  void BlockCoinBase__vfF4()
   {
     ;
   }
@@ -159807,7 +159807,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf160Ev
  * RVA 0x005774cc   size 0x8   xrefs 0
  * ============================================================================ */
-  int CoinBase::vf160()
+  int CoinBase__vf160()
   {
     return 1;
   }
@@ -159823,10 +159823,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &aAIn;
-    Profile::Profile(13298700, 5730028, MEMORY[0xAF3354], (int)&v1, &unk_60B046B8, 8194);
+    Profile__Profile(13298700, 5730028, MEMORY[0xAF3354], (int)&v1, &unk_60B046B8, 8194);
     v1 = 12321336;
     v2 = &aAInrdash;
-    return Profile::Profile(13298724, 5730028, MEMORY[0xAF3358], (int)&v1, &unk_60B046DC, 8194);
+    return Profile__Profile(13298724, 5730028, MEMORY[0xAF3358], (int)&v1, &unk_60B046DC, 8194);
   }
 
 /* ============================================================================
@@ -159839,7 +159839,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D40u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12600340;
     return result;
   }
@@ -159920,7 +159920,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v7; // s2
     int v8; // r0
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v2 = *(_DWORD *)(a1 + 56);
     if ( _cxa_guard_acquire_0(13226972) )
     {
@@ -159978,7 +159978,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -159992,7 +159992,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAAIn;
-    return Profile::Profile(13298756, 5732252, MEMORY[0xAF3398], (int)v1, &unk_60B04700, 8194);
+    return Profile__Profile(13298756, 5732252, MEMORY[0xAF3398], (int)v1, &unk_60B04700, 8194);
   }
 
 /* ============================================================================
@@ -160005,7 +160005,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v0 = operator new(0x1D48u);
-    result = CoinBase::CoinBase(v0);
+    result = CoinBase__CoinBase(v0);
     *(_DWORD *)result = 12600736;
     *(_DWORD *)(result + 7484) = 0;
     *(_BYTE *)(result + 7488) = 0;
@@ -160112,7 +160112,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v14[0] = v6;
       v14[1] = v7;
       v14[2] = *(_DWORD *)(a1 + 116);
-      v14[3] = MovementHandler::getMaskForMovementType(a1 + 6992, v5);
+      v14[3] = MovementHandler__getMaskForMovementType(a1 + 6992, v5);
       v15 = *(_DWORD *)(a1 + 7304);
       v16 = 0;
       v17 = 0;
@@ -160124,7 +160124,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v22 = 1;
       v23 = (v8 & 0x2000000) != 0;
       MovementHandler_initFromStruct(a1 + 6992, v14);
-      MovementHandler::execute((_DWORD *)(a1 + 6992));
+      MovementHandler__execute((_DWORD *)(a1 + 6992));
       *(_BYTE *)(a1 + 7488) = 0;
       if ( *(_DWORD *)(a1 + 7040) == 1 && *(_DWORD *)(a1 + 7060) != 1 )
       {
@@ -160188,12 +160188,12 @@ static inline unsigned int uxtb16(unsigned int x)
     int v14; // r2
   
     v2 = a1 + 6084;
-    StateMgr::execute((_DWORD *)(a1 + 6084));
-    CurrentState = StateMgr::getCurrentState(v2);
+    StateMgr__execute((_DWORD *)(a1 + 6084));
+    CurrentState = StateMgr__getCurrentState(v2);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 != (*(int (**)(void))(MEMORY[0xCAED90] + 8))() )
     {
-      v5 = StateMgr::getCurrentState(v2);
+      v5 = StateMgr__getCurrentState(v2);
       v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
       if ( v6 != (*(int (**)(void))(MEMORY[0xCAED48] + 8))() )
       {
@@ -160204,7 +160204,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( !v10 )
         {
           v11 = (int *)(a1 + 6992);
-          MovementHandler::execute((_DWORD *)(a1 + 6992));
+          MovementHandler__execute((_DWORD *)(a1 + 6992));
           if ( *(_DWORD *)(a1 + 7040) == 1 && *(_DWORD *)(a1 + 7060) != 1 )
           {
             v12 = *v11;
@@ -160254,7 +160254,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = result;
     if ( a2 == 1 )
     {
-      CurrentState = StateMgr::getCurrentState(result + 6084);
+      CurrentState = StateMgr__getCurrentState(result + 6084);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       result = (*(int (**)(void))(MEMORY[0xCB10FC] + 8))();
       if ( v4 == result )
@@ -160334,7 +160334,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -160348,7 +160348,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAIn_0;
-    Profile::Profile(13298788, 5733968, MEMORY[0xAF337C], (int)v1, &unk_60B04724, 8196);
+    Profile__Profile(13298788, 5733968, MEMORY[0xAF337C], (int)v1, &unk_60B04724, 8196);
     MEMORY[0xCAEC80] = ++MEMORY[0xC7B788];
     MEMORY[0xCAEC7C] = 12601132;
     MEMORY[0xCAEC84] = 5734040;
@@ -160370,7 +160370,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D40u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12601152;
     return result;
   }
@@ -160417,8 +160417,8 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 508) = 1107296256;
       *(_DWORD *)(a1 + 512) = 1107296256;
       *(_DWORD *)(a1 + 7144) = *(_DWORD *)(a1 + 20) & 0xF;
-      MovementHandler::link(a1 + 6992, (int *)(a1 + 108), 128, v5);
-      MovementHandler::execute((_DWORD *)(a1 + 6992));
+      MovementHandler__link(a1 + 6992, (int *)(a1 + 108), 128, v5);
+      MovementHandler__execute((_DWORD *)(a1 + 6992));
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13308156);
     }
     return v2;
@@ -160435,14 +160435,14 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r0
     bool v5; // zf
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v4 = *(_DWORD *)(a1 + 7300);
     v5 = v4 == 0;
     if ( v4 )
       v5 = *(_DWORD *)(a1 + 7304) == 0;
     if ( !v5 )
     {
-      MovementHandler::execute((_DWORD *)(a1 + 6992));
+      MovementHandler__execute((_DWORD *)(a1 + 6992));
       if ( *(_DWORD *)(a1 + 7040) == 1 && *(_DWORD *)(a1 + 7060) != 1 )
       {
         *(_DWORD *)(a1 + 108) = *(_DWORD *)(a1 + 6992);
@@ -160453,7 +160453,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
     ShapedCollider_execute((_DWORD *)(a1 + 6120), 6364, v2, v3);
     sub_605B2D70(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -160502,7 +160502,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAIn_1;
-    return Profile::Profile(13298852, 5736704, MEMORY[0xAF3380], (int)v1, &unk_60B04748, 0x2000);
+    return Profile__Profile(13298852, 5736704, MEMORY[0xAF3380], (int)v1, &unk_60B04748, 0x2000);
   }
 
 /* ============================================================================
@@ -160515,7 +160515,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v0 = operator new(0x1D48u);
-    result = CoinBase::CoinBase(v0);
+    result = CoinBase__CoinBase(v0);
     *(_DWORD *)result = 12601548;
     *(_BYTE *)(result + 7481) = 0;
     *(_DWORD *)(result + 7484) = 0;
@@ -160548,7 +160548,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 136) = -1065353216;
     *(_DWORD *)(a1 + 140) = 0;
     *(_DWORD *)(a1 + 7388) = 0;
-    v2 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31;
+    v2 = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31;
     *(_DWORD *)(a1 + 7484) = v2;
     *(_DWORD *)(a1 + 7492) = dword_60AF2198[v2];
     sub_6057A4C4(a1);
@@ -160572,8 +160572,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( sub_6057A3E4(a1) )
       return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 336))(a1);
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     v3 = SE_OBJ_COIN_BOUND_ref(a1, 0, 1);
     if ( (v3 & 1) != 0 && *(_DWORD *)(a1 + 7380) == 1 )
@@ -160653,7 +160653,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r5
     _DWORD v6[2]; // [sp+0h] [bp-8h] BYREF
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCAECDC] + 8))();
     if ( v3 != result )
@@ -160693,14 +160693,14 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r5
   
     v2 = (int)(a1 + 1521);
-    StateMgr::execute(a1 + 1521);
+    StateMgr__execute(a1 + 1521);
     sub_605791F0((int)a1);
     a1[1591] = a1[41];
     ShapedCollider_execute(a1 + 1530, 6364, v3, v4);
-    CurrentState = StateMgr::getCurrentState(v2);
+    CurrentState = StateMgr__getCurrentState(v2);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v6 == (*(int (**)(void))(MEMORY[0xCAECDC] + 8))() )
-      StageActor::cullCheck((int)a1, 0);
+      StageActor__cullCheck((int)a1, 0);
     return 1;
   }
 
@@ -160713,7 +160713,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int (__fastcall ***v2)(_DWORD, int); // r4
     int result; // r0
   
-    MovementBlockCoinBase::vf150(a1);
+    MovementBlockCoinBase__vf150(a1);
     v2 = *(int (__fastcall ****)(_DWORD, int))(a1 + 56);
     result = _cxa_guard_acquire_0(13163764);
     if ( result )
@@ -160756,7 +160756,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -160782,7 +160782,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unk_60CAED3C = 0;
     v1[0] = 12321336;
     v1[1] = &aAIn_2;
-    Profile::Profile(13298884, 5738076, MEMORY[0xAF33B8], (int)v1, &unk_60B0476C, 8198);
+    Profile__Profile(13298884, 5738076, MEMORY[0xAF33B8], (int)v1, &unk_60B0476C, 8198);
     MEMORY[0xCAECE0] = ++MEMORY[0xC7B788];
     MEMORY[0xCAECDC] = 12601944;
     MEMORY[0xCAECE4] = 5738164;
@@ -160798,9 +160798,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBaseC2EPK14ActorBuildInfo
  * RVA 0x00579890   size 0x134   xrefs 26
  * ============================================================================ */
-  int __fastcall CoinBase_CoinBase(int a1)
+  int __fastcall CoinBase__CoinBase(int a1)
   {
-    MovementBlockCoinBase::MovementBlockCoinBase();
+    MovementBlockCoinBase__MovementBlockCoinBase();
     *(_DWORD *)a1 = 12601964;
     *(_WORD *)(a1 + 7376) = 0;
     *(_DWORD *)(a1 + 7372) = 0;
@@ -160911,7 +160911,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase9onExecuteEv
  * RVA 0x00579ba0   size 0x1a4   xrefs 1
  * ============================================================================ */
-  int __fastcall CoinBase_onExecute(int a1)
+  int __fastcall CoinBase__onExecute(int a1)
   {
     int CurrentState; // r0
     int v3; // r6
@@ -160923,12 +160923,12 @@ static inline unsigned int uxtb16(unsigned int x)
     bool v9; // zf
   
     sub_605D006C();
-    StateMgr::execute((_DWORD *)(a1 + 6084));
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    StateMgr__execute((_DWORD *)(a1 + 6084));
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 != (*(int (**)(void))(MEMORY[0xCAED90] + 8))() )
     {
-      v4 = StateMgr::getCurrentState(a1 + 6084);
+      v4 = StateMgr__getCurrentState(a1 + 6084);
       v5 = (*(int (__fastcall **)(int))(*(_DWORD *)v4 + 8))(v4);
       if ( v5 != (*(int (**)(void))(MEMORY[0xCAED48] + 8))() )
       {
@@ -160943,7 +160943,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         else
         {
-          MovementHandler::execute((MovementHandler *)(a1 + 6992));
+          MovementHandler__execute((MovementHandler *)(a1 + 6992));
           if ( *(_DWORD *)(a1 + 7040) == 1 && *(_DWORD *)(a1 + 7060) != 1 )
           {
             *(_DWORD *)(a1 + 108) = *(_DWORD *)(a1 + 6992);
@@ -160960,7 +160960,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605B2D70(a1);
     *(_DWORD *)(a1 + 7372) = 2;
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 352))(a1) == 1 )
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -161054,7 +161054,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase6onDrawEv
  * RVA 0x00579ee0   size 0xb4   xrefs 3
  * ============================================================================ */
-  int __fastcall CoinBase_onDraw(int a1, int a2, int a3, int a4)
+  int __fastcall CoinBase__onDraw(int a1, int a2, int a3, int a4)
   {
     float v4; // r2
     int v5; // r3
@@ -161087,7 +161087,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf154Ev
  * RVA 0x00579f9c   size 0x14   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_vf154(int a1)
+  int __fastcall CoinBase__vf154(int a1)
   {
     int result; // r0
   
@@ -161101,7 +161101,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf164Ev
  * RVA 0x00579fb0   size 0x18   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_vf164(int result)
+  int __fastcall CoinBase__vf164(int result)
   {
     *(_DWORD *)(result + 7440) = 3;
     *(_DWORD *)(result + 620) = result + 7424;
@@ -161125,9 +161125,9 @@ static inline unsigned int uxtb16(unsigned int x)
       result = a1[1826];
       if ( result )
       {
-        MaskForMovementType = MovementHandler::getMaskForMovementType((MovementHandler *)(a1 + 1748), v3);
-        MovementHandler::link(a1 + 1748, a1 + 27, MaskForMovementType, *((unsigned __int8 *)a1 + 7304));
-        MovementHandler::execute((MovementHandler *)(a1 + 1748));
+        MaskForMovementType = MovementHandler__getMaskForMovementType((MovementHandler *)(a1 + 1748), v3);
+        MovementHandler__link(a1 + 1748, a1 + 27, MaskForMovementType, *((unsigned __int8 *)a1 + 7304));
+        MovementHandler__execute((MovementHandler *)(a1 + 1748));
         result = a1[1760];
         if ( result == 1 )
         {
@@ -161175,7 +161175,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase4vfA0Ev
  * RVA 0x0057a134   size 0x94   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_vfA0(int result, int a2)
+  int __fastcall CoinBase__vfA0(int result, int a2)
   {
     int v2; // r4
     int CurrentState; // r0
@@ -161184,7 +161184,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = result;
     if ( a2 == 1 )
     {
-      CurrentState = StateMgr::getCurrentState(result + 6084);
+      CurrentState = StateMgr__getCurrentState(result + 6084);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       result = (*(int (**)(void))(MEMORY[0xCB10FC] + 8))();
       if ( v4 == result )
@@ -161205,7 +161205,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase15damageFromUnderEv
  * RVA 0x0057a1d4   size 0x4   xrefs 0
  * ============================================================================ */
-  void CoinBase::damageFromUnder()
+  void CoinBase__damageFromUnder()
   {
     ;
   }
@@ -161433,7 +161433,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase4vf8CEv
  * RVA 0x0057a650   size 0x18   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_vf8C(int result)
+  int __fastcall CoinBase__vf8C(int result)
   {
     *(_BYTE *)(result + 7466) = 1;
     *(_DWORD *)(result + 120) = 0;
@@ -161444,7 +161444,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase4vf90Ev
  * RVA 0x0057a668   size 0x14   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_vf90(int result)
+  int __fastcall CoinBase__vf90(int result)
   {
     int v1; // s0
   
@@ -161678,7 +161678,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase11splashWaterEP4Vec3
  * RVA 0x0057ab10   size 0x44   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_splashWater(int a1, _DWORD *a2)
+  int __fastcall CoinBase__splashWater(int a1, _DWORD *a2)
   {
     int v3; // r2
     int v4; // r3
@@ -161695,7 +161695,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase10splashLavaEP4Vec3
  * RVA 0x0057ab58   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_splashLava(int a1, _DWORD *a2)
+  int __fastcall CoinBase__splashLava(int a1, _DWORD *a2)
   {
     int v3; // r2
     int v4; // r3
@@ -161713,7 +161713,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase14splashLavaWaveEP4Vec3
  * RVA 0x0057abac   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_splashLavaWave(int a1, _DWORD *a2)
+  int __fastcall CoinBase__splashLavaWave(int a1, _DWORD *a2)
   {
     int v3; // r2
     int v4; // r3
@@ -161731,7 +161731,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase12splashPoisonEP4Vec3
  * RVA 0x0057ac00   size 0x50   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_splashPoison(int a1, _DWORD *a2)
+  int __fastcall CoinBase__splashPoison(int a1, _DWORD *a2)
   {
     int v3; // r2
     int v4; // r3
@@ -161953,7 +161953,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf16CEv
  * RVA 0x0057af9c   size 0x164   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_vf16C(int a1)
+  int __fastcall CoinBase__vf16C(int a1)
   {
     int v3[4]; // [sp+0h] [bp-10h] BYREF
   
@@ -161972,7 +161972,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 6056) = 1;
     }
     if ( *(_BYTE *)(a1 + 7340) )
-      MovementBlockCoinBase::vf150(a1);
+      MovementBlockCoinBase__vf150(a1);
     *(_BYTE *)(a1 + 7402) = 1;
     sub_6057A4C4(a1);
     CollisionMgr_setSensor(a1 + 648, dword_60B047E8, 0);
@@ -161981,7 +161981,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[2] = -1061158912;
     CollisionMgr_setSensor(a1 + 648, v3, 1);
     *(_DWORD *)(a1 + 3200) |= 0x800000u;
-    *(_DWORD *)(a1 + 80) = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31;
+    *(_DWORD *)(a1 + 80) = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31;
     *(_BYTE *)(a1 + 7464) = 0;
     *(_DWORD *)(a1 + 7372) = 2;
     *(_DWORD *)(a1 + 6004) = 1036831949;
@@ -161993,7 +161993,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf174Ev
  * RVA 0x0057b10c   size 0x4   xrefs 0
  * ============================================================================ */
-  void CoinBase::vf174()
+  void CoinBase__vf174()
   {
     ;
   }
@@ -162002,7 +162002,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf178Ev
  * RVA 0x0057b2d4   size 0xec   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_vf178(int a1)
+  int __fastcall CoinBase__vf178(int a1)
   {
     unsigned int U32; // r0
     int v3; // r1
@@ -162013,13 +162013,13 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 136) = -1056964608;
     *(_DWORD *)(a1 + 140) = 0;
     *(_DWORD *)(a1 + 100) = -1105199104;
-    U32 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
+    U32 = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340));
     v3 = *(_DWORD *)(a1 + 7396);
     v4 = (float)(dword_60AF2964[v3] & HIWORD(U32)) * 0.00024414;
     if ( v4 >= flt_60AF2974[v3] )
       v4 = v4 - flt_60AF2984[v3];
     v5 = -v4;
-    if ( (sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) & 1) == 0 )
+    if ( (sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340)) & 1) == 0 )
       v5 = v4;
     *(float *)(a1 + 120) = v5;
     *(_DWORD *)(a1 + 124) = 0;
@@ -162033,7 +162033,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf180Ev
  * RVA 0x0057b3d8   size 0x4   xrefs 0
  * ============================================================================ */
-  void CoinBase::vf180()
+  void CoinBase__vf180()
   {
     ;
   }
@@ -162042,7 +162042,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf17CEv
  * RVA 0x0057b3dc   size 0x2d8   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase_vf17C(int a1)
+  int __fastcall CoinBase__vf17C(int a1)
   {
     int result; // r0
     int v3; // r1
@@ -162060,10 +162060,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int v15; // [sp+10h] [bp-8h]
   
     if ( sub_605D01D4(a1) == 1 )
-      return MovementBlockCoinBase::vf150(a1);
-    StageActor::accelerateX((float *)a1);
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+      return MovementBlockCoinBase__vf150(a1);
+    StageActor__accelerateX((float *)a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     if ( sub_60003460(a1) == 1 )
     {
@@ -162237,12 +162237,12 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBase5vf168Ev
  * RVA 0x0057b8ac   size 0x48   xrefs 0
  * ============================================================================ */
-  bool __fastcall CoinBase_vf168(int a1)
+  bool __fastcall CoinBase__vf168(int a1)
   {
     int CurrentState; // r0
     int v2; // r4
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     return v2 == (*(int (**)(void))(MEMORY[0xCB111C] + 8))();
   }
@@ -162251,7 +162251,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK8CoinBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
  * RVA 0x0057b8f8   size 0x130   xrefs 0
  * ============================================================================ */
-  bool __fastcall CoinBase_checkDerivedRuntimeTypeInfo(int a1, int a2)
+  bool __fastcall CoinBase__checkDerivedRuntimeTypeInfo(int a1, int a2)
   {
     if ( _cxa_guard_acquire_0(13142624) )
     {
@@ -162279,7 +162279,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK8CoinBase18getRuntimeTypeInfoEv
  * RVA 0x0057ba70   size 0x5c   xrefs 0
  * ============================================================================ */
-  int CoinBase::getRuntimeTypeInfo()
+  int CoinBase__getRuntimeTypeInfo()
   {
     if ( _cxa_guard_acquire_0(13142624) )
     {
@@ -162293,7 +162293,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN8CoinBaseD0Ev
  * RVA 0x0057bae4   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall CoinBase::~CoinBase(int a1)
+  int __fastcall CoinBase__dtor(int a1)
   {
     int v2; // r0
   
@@ -162301,7 +162301,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -162405,7 +162405,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r4
   
     v0 = (_DWORD *)operator new(0x1DA8u);
-    CoinBase::CoinBase((int)v0);
+    CoinBase__CoinBase((int)v0);
     *v0 = 12602452;
     v0[1888] = 0;
     memset(v0 + 1874, 0, 0x35u);
@@ -162537,7 +162537,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( sub_605D01D4(a1) == 1 )
     {
-      MovementBlockCoinBase::vf150(a1);
+      MovementBlockCoinBase__vf150(a1);
       if ( *(_DWORD *)(a1 + 7524) )
       {
         return EffectData_create(442, a1 + 7508, 0, 0);
@@ -162562,7 +162562,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (*(_BYTE *)(a1 + 22) & 0x10) != 0 )
       {
         *(_DWORD *)(a1 + 112) = *(_DWORD *)(a1 + 7520);
-        CollisionActor::handleSpeed(a1);
+        CollisionActor__handleSpeed(a1);
         v6 = *(float *)(a1 + 112);
         *(float *)(a1 + 7520) = v6;
         v4 = a1 + 7552;
@@ -162578,7 +162578,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else
       {
-        CollisionActor::handleSpeed(a1);
+        CollisionActor__handleSpeed(a1);
       }
       sub_6057A67C(a1, v3, v4, v5);
       if ( *(_DWORD *)(a1 + 7544) )
@@ -162650,7 +162650,7 @@ static inline unsigned int uxtb16(unsigned int x)
         memset(v25, 0, sizeof(v25));
         v24 = 0x20000;
         v23 = MEMORY[0xAF338C];
-        v25[2] = Profile::get(MEMORY[0xAF338C]);
+        v25[2] = Profile__get(MEMORY[0xAF338C]);
         v16 = v11 + flt_60B04844[v13];
         *(float *)&v25[3] = v15 + flt_60B04838[v13];
         *(float *)&v25[4] = v16;
@@ -162658,7 +162658,7 @@ static inline unsigned int uxtb16(unsigned int x)
         LOWORD(v25[7]) = *((unsigned __int8 *)v12 - 7458);
         BYTE2(v25[7]) = 0;
         v26 = 0;
-        ActorMgr::create(MEMORY[0xC7B400], (int)&v24, 0);
+        ActorMgr__create(MEMORY[0xC7B400], (int)&v24, 0);
         v17 = *v12 - 1;
         *v12 = v17;
         v18 = *v7;
@@ -162668,14 +162668,14 @@ static inline unsigned int uxtb16(unsigned int x)
         v24 = 0x20000;
         v21 = flt_60B04844[v17];
         v22 = v19 + flt_60B04838[v17];
-        v25[2] = Profile::get(v23);
+        v25[2] = Profile__get(v23);
         *(float *)&v25[3] = v22;
         *(float *)&v25[4] = v18 + v21;
         v25[5] = v20;
         LOWORD(v25[7]) = *((unsigned __int8 *)v12 - 7458);
         BYTE2(v25[7]) = 0;
         v26 = 0;
-        ActorMgr::create(MEMORY[0xC7B400], (int)&v24, 0);
+        ActorMgr__create(MEMORY[0xC7B400], (int)&v24, 0);
         result = *v12 - 1;
         *v12 = result;
       }
@@ -162705,7 +162705,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( sub_605D01D4(a1) == 1 )
     {
-      MovementBlockCoinBase::vf150(a1);
+      MovementBlockCoinBase__vf150(a1);
       if ( *(_DWORD *)(a1 + 7524) )
       {
         return EffectData_create(442, a1 + 7508, 0, 0);
@@ -162746,14 +162746,14 @@ static inline unsigned int uxtb16(unsigned int x)
         v14[0] = 0x20000;
         v8 = flt_60B04844[v4];
         v9 = v7 + flt_60B04838[v4];
-        v14[3] = Profile::get(MEMORY[0xAF338C]);
+        v14[3] = Profile__get(MEMORY[0xAF338C]);
         *(float *)&v14[4] = v9;
         *(float *)&v14[5] = v5 + v8;
         v14[6] = v6;
         LOWORD(v14[8]) = *(unsigned __int8 *)(a1 + 86);
         BYTE2(v14[8]) = 0;
         v14[10] = 0;
-        ActorMgr::create(MEMORY[0xC7B400], (int)v14, 0);
+        ActorMgr__create(MEMORY[0xC7B400], (int)v14, 0);
         --*(_DWORD *)(a1 + 7544);
       }
       result = *(unsigned __int8 *)(MEMORY[0xC9CF0C] + 1361);
@@ -162823,14 +162823,14 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 7528) = v6 & 0xF;
     *(_DWORD *)(a1 + 7532) = HIWORD(v6) & 0xF;
     *(_DWORD *)(a1 + 7536) = (v6 >> 8) & 0xF;
-    *(_DWORD *)(a1 + 80) = StageActor::directionToPlayerX(a1, (int *)(a1 + 108));
+    *(_DWORD *)(a1 + 80) = StageActor__directionToPlayerX(a1, (int *)(a1 + 108));
     v7 = (_DWORD *)(a1 + 7532);
     if ( *(_DWORD *)(a1 + 7532) == 3 )
     {
       *(_DWORD *)(a1 + 80) = 1;
       *v7 = 0;
     }
-    *(_DWORD *)(a1 + 7540) = StageActor::directionToPlayerY(a1, (int *)(a1 + 108));
+    *(_DWORD *)(a1 + 7540) = StageActor__directionToPlayerY(a1, (int *)(a1 + 108));
     if ( *(_DWORD *)(a1 + 7528) == 1 )
     {
       v8 = (int *)(a1 + 7536);
@@ -163055,7 +163055,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE *v4; // r0
   
     sub_605D006C(a1);
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
     ShapedCollider_execute((_DWORD *)(a1 + 6120), 6364, v2, v3);
     sub_6057A200(a1);
@@ -163063,7 +163063,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60579D4C(a1);
     balloon_coin_model_ref_3(a1);
     sub_605B2D70(a1);
-    if ( StageActor::cullCheck(a1, 0) == 1 && (*(_BYTE *)(a1 + 24) & 1) != 0 )
+    if ( StageActor__cullCheck(a1, 0) == 1 && (*(_BYTE *)(a1 + 24) & 1) != 0 )
     {
       v4 = *(_BYTE **)(a1 + 632);
       if ( v4 )
@@ -163165,14 +163165,14 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     memset(&v15[1], 0, 0x24u);
     v15[0] = *(_DWORD *)(a1 + 20) & 0x100000 | v10 | *(_DWORD *)(a1 + 20) & 0xF0000;
-    v15[3] = Profile::get(MEMORY[0xAF338C]);
+    v15[3] = Profile__get(MEMORY[0xAF338C]);
     *(float *)&v15[4] = v11;
     *(float *)&v15[5] = v12;
     v15[6] = v4;
     LOWORD(v15[8]) = *(unsigned __int8 *)(a1 + 86);
     BYTE2(v15[8]) = 0;
     v15[10] = 0;
-    ActorMgr::create(MEMORY[0xC7B400], (int)v15, 1);
+    ActorMgr__create(MEMORY[0xC7B400], (int)v15, 1);
     result = *v3 - 1;
     *v3 = result;
     return result;
@@ -163284,7 +163284,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3 = 1;
         if ( !sub_6057D26C(v2) )
         {
-          CurrentState = StateMgr::getCurrentState(v2 + 6084);
+          CurrentState = StateMgr__getCurrentState(v2 + 6084);
           v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
           if ( v5 != (*(int (**)(void))(MEMORY[0xCAED48] + 8))() )
           {
@@ -163328,7 +163328,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -163342,7 +163342,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAIn_3;
-    Profile::Profile(13299236, 5750148, MEMORY[0xAF338C], (int)v1, &unk_60B04808, 8194);
+    Profile__Profile(13299236, 5750148, MEMORY[0xAF338C], (int)v1, &unk_60B04808, 8194);
     MEMORY[0xCAEE40] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAEE3C] = 12602896;
     MEMORY[0xCAEE44] = 5750344;
@@ -163371,7 +163371,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    result = MultiStateActor::MultiStateActor(a1);
+    result = MultiStateActor__MultiStateActor(a1);
     *result = 12602916;
     result[1527] = 0;
     result[1528] = 0;
@@ -163385,7 +163385,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6057D96C(_DWORD *a1)
   {
-    StateMgr::execute(a1 + 1521);
+    StateMgr__execute(a1 + 1521);
     sub_6057D990(a1);
     return 1;
   }
@@ -163528,7 +163528,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -163558,8 +163558,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r1
     int v4; // r1
   
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     *(_DWORD *)(a1 + 160) += 0x10000000;
     result = a1 + 6108;
     v3 = *(_DWORD *)(a1 + 6108);
@@ -163691,7 +163691,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -163721,7 +163721,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAInN;
-    Profile::Profile(13299400, 5758280, MEMORY[0xAF3364], (int)v1, &unk_60B04860, 2);
+    Profile__Profile(13299400, 5758280, MEMORY[0xAF3364], (int)v1, &unk_60B04860, 2);
     MEMORY[0xCAEEE4] = ++MEMORY[0xC7B788];
     MEMORY[0xCAEEE0] = 12603336;
     MEMORY[0xCAEEE8] = 5758344;
@@ -163742,7 +163742,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r5
   
     v0 = (_DWORD *)operator new(0x1810u);
-    MultiStateActor::MultiStateActor(v0);
+    MultiStateActor__MultiStateActor(v0);
     *v0 = 12603356;
     sub_6000BAC8(v0 + 1527, v0[2]);
     v0[1527] = 12603560;
@@ -163897,7 +163897,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAIn_4;
-    return Profile::Profile(13299464, 5759776, MEMORY[0xAF33C8], (int)v1, &unk_60B04884, 2);
+    return Profile__Profile(13299464, 5759776, MEMORY[0xAF33C8], (int)v1, &unk_60B04884, 2);
   }
 
 /* ============================================================================
@@ -163987,7 +163987,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -164010,7 +164010,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D48u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12603612;
     result[1871] = 0;
     result[1872] = 0;
@@ -164066,8 +164066,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r1
   
     v2 = a1 + 6084;
-    StateMgr::execute((_DWORD *)(a1 + 6084));
-    CurrentState = StateMgr::getCurrentState(v2);
+    StateMgr__execute((_DWORD *)(a1 + 6084));
+    CurrentState = StateMgr__getCurrentState(v2);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 != (*(int (**)(void))(MEMORY[0xCAED48] + 8))() )
     {
@@ -164080,7 +164080,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_execute((_DWORD *)(a1 + 6120), 6364, v5, v6);
     sub_605B2D70(a1);
     *(_DWORD *)(a1 + 7372) = 2;
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -164110,7 +164110,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -164124,7 +164124,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAIn_5;
-    return Profile::Profile(13299524, 5761616, MEMORY[0xAF3388], (int)v1, &unk_60B048A8, 8194);
+    return Profile__Profile(13299524, 5761616, MEMORY[0xAF3388], (int)v1, &unk_60B048A8, 8194);
   }
 
 /* ============================================================================
@@ -164137,7 +164137,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D40u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12604008;
     result[1871] = 0;
     return result;
@@ -164259,14 +164259,14 @@ static inline unsigned int uxtb16(unsigned int x)
         memset(&v9[1], 0, 0x24u);
         v9[0] = 1;
         v9[2] = *(_DWORD *)(a1 + 8);
-        v9[3] = Profile::get(MEMORY[0xAF3194]);
+        v9[3] = Profile__get(MEMORY[0xAF3194]);
         v9[4] = v6;
         *(float *)&v9[5] = v5 + -8.0;
         v9[6] = 1137180672;
         LOWORD(v9[8]) = *(unsigned __int8 *)(a1 + 86);
         BYTE2(v9[8]) = 0;
         v9[10] = 0;
-        ActorMgr::create(MEMORY[0xC7B400], (int)v9, 1);
+        ActorMgr__create(MEMORY[0xC7B400], (int)v9, 1);
         sub_60579D4C(a1);
       }
       *(_DWORD *)(a1 + 7300) = 0;
@@ -164314,7 +164314,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -164328,7 +164328,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAIn_6;
-    Profile::Profile(13299556, 5762980, MEMORY[0xAF335C], (int)v1, &unk_60B048CC, 8198);
+    Profile__Profile(13299556, 5762980, MEMORY[0xAF335C], (int)v1, &unk_60B048CC, 8198);
     MEMORY[0xCAEF80] = ++MEMORY[0xC7B788];
     MEMORY[0xCAEF7C] = 12604404;
     MEMORY[0xCAEF84] = 5763044;
@@ -164350,7 +164350,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D40u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12604424;
     return result;
   }
@@ -164446,8 +164446,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // t1
     int v5; // [sp+4h] [bp-4h] BYREF
   
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     *(_BYTE *)(a1 + 6059) = *(_DWORD *)(a1 + 2872) & 1;
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     v5 = 0;
@@ -164512,7 +164512,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -164526,7 +164526,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAIn_7;
-    return Profile::Profile(13299620, 5765188, MEMORY[0xAF33BC], (int)v1, &unk_60B048F0, 8194);
+    return Profile__Profile(13299620, 5765188, MEMORY[0xAF33BC], (int)v1, &unk_60B048F0, 8194);
   }
 
 /* ============================================================================
@@ -164554,8 +164554,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r1
     int v4; // r1
   
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     *(_DWORD *)(a1 + 160) += 0x10000000;
     result = a1 + 6108;
     v3 = *(_DWORD *)(a1 + 6108);
@@ -164649,7 +164649,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -164663,7 +164663,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAInhopN;
-    Profile::Profile(13299652, 5766800, MEMORY[0xAF3368], (int)v1, &unk_60B04914, 2);
+    Profile__Profile(13299652, 5766800, MEMORY[0xAF3368], (int)v1, &unk_60B04914, 2);
     MEMORY[0xCAEFE0] = ++MEMORY[0xC7B788];
     MEMORY[0xCAEFDC] = 12605024;
     MEMORY[0xCAEFE4] = 5766848;
@@ -164684,7 +164684,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r5
   
     v0 = operator new(0x1DB0u);
-    CoinBase::CoinBase(v0);
+    CoinBase__CoinBase(v0);
     *(_DWORD *)v0 = 12605044;
     EffectWrapper_ctor(v0 + 7484);
     *(_DWORD *)(v0 + 7484) = 12325968;
@@ -164749,8 +164749,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r3
     float v9[4]; // [sp+8h] [bp-10h] BYREF
   
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     if ( (SE_OBJ_COIN_BOUND_ref(a1, 0, 1) & 1) == 0 )
     {
@@ -164808,7 +164808,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v3; // s0
     float v4; // s2
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     if ( *(_BYTE *)(a1 + 7592) )
     {
       v2 = ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, *(_DWORD *)(a1 + 7588));
@@ -164829,7 +164829,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     sub_60579D4C(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -164859,12 +164859,12 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1871] = 12325992;
     v2 = (struct sead_IDisposer *)(a1 + 1871);
     EffectData_release((int)(a1 + 1871));
-    sead::IDisposer::~IDisposer(v2);
+    sead__IDisposer__dtor(v2);
     *a1 = 12620796;
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1530));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -164880,12 +164880,12 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1871] = 12325992;
     v2 = (struct sead_IDisposer *)(a1 + 1871);
     EffectData_release((int)(a1 + 1871));
-    sead::IDisposer::~IDisposer(v2);
+    sead__IDisposer__dtor(v2);
     *a1 = 12620796;
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1530));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -164902,7 +164902,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAF00C = 0;
     v1[0] = 12321336;
     v1[1] = &aAIn_8;
-    Profile::Profile(13299728, 5767924, MEMORY[0xAF3390], (int)v1, &unk_60B04938, 8198);
+    Profile__Profile(13299728, 5767924, MEMORY[0xAF3390], (int)v1, &unk_60B04938, 8198);
     MEMORY[0xCAF02C] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF028] = 12605440;
     MEMORY[0xCAF030] = 5768036;
@@ -164933,7 +164933,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v0 = operator new(0x1D60u);
-    result = CoinBase::CoinBase(v0);
+    result = CoinBase__CoinBase(v0);
     *(_DWORD *)result = 12605460;
     *(_WORD *)(result + 7512) = 0;
     *(_DWORD *)(result + 7508) = 0;
@@ -164960,8 +164960,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r0
     unsigned int v8; // r0
   
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     *(_BYTE *)(a1 + 6059) = *(_DWORD *)(a1 + 2872) & 1;
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     sub_60003840(a1);
@@ -164983,7 +164983,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = SE_OBJ_COIN_BOUND_ref(a1, 1, 0);
       if ( (v3 & 0xC) == 0xC )
         *(float *)(a1 + 7484) = -*(float *)(a1 + 7484);
-      ProfileId = Actor::getProfileId((Actor *)a1);
+      ProfileId = Actor__getProfileId((Actor *)a1);
       if ( v3 && ProfileId == MEMORY[0xAF3374] )
         sub_6057AF58(a1);
       sub_6057A460(a1);
@@ -164993,7 +164993,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6057A3E4(a1);
     else
       sub_605D01D4(a1);
-    if ( Actor::getProfileId((Actor *)a1) != MEMORY[0xAF3374] )
+    if ( Actor__getProfileId((Actor *)a1) != MEMORY[0xAF3374] )
     {
       v5 = *(unsigned __int8 *)(a1 + 7404);
       SE_OBJ_CMN_SPLASH_ref_57A6E4(a1);
@@ -165139,7 +165139,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 572) = 0;
     *(_DWORD *)(a1 + 576) = 1090519040;
     *(_DWORD *)(a1 + 580) = 0;
-    if ( Actor::getProfileId(a1) != MEMORY[0xAF3374] && *(_BYTE *)(MEMORY[0xC9A684] + 17) != 40 )
+    if ( Actor__getProfileId(a1) != MEMORY[0xAF3374] && *(_BYTE *)(MEMORY[0xC9A684] + 17) != 40 )
       sub_6057A360(a1, 3);
     v8 = (*(_DWORD *)(a1 + 20) >> 20) & 1;
     *(_BYTE *)(a1 + 7401) = (*(_DWORD *)(a1 + 20) & 0x100000) != 0;
@@ -165189,7 +165189,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -165204,13 +165204,13 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &aAInN_0;
-    Profile::Profile(13299816, 5770324, MEMORY[0xAF336C], (int)&v1, &unk_60B0495C, 8198);
+    Profile__Profile(13299816, 5770324, MEMORY[0xAF336C], (int)&v1, &unk_60B0495C, 8198);
     v1 = 12321336;
     v2 = &aAInN_1;
-    Profile::Profile(13299840, 5770324, MEMORY[0xAF3370], (int)&v1, &unk_60B0495C, 8198);
+    Profile__Profile(13299840, 5770324, MEMORY[0xAF3370], (int)&v1, &unk_60B0495C, 8198);
     v1 = 12321336;
     v2 = &aAInNN;
-    Profile::Profile(13299864, 5770324, MEMORY[0xAF3374], (int)&v1, &unk_60B0495C, 8198);
+    Profile__Profile(13299864, 5770324, MEMORY[0xAF3374], (int)&v1, &unk_60B0495C, 8198);
     MEMORY[0xCAF0B4] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF0B0] = 12605856;
     MEMORY[0xCAF0B8] = 5770444;
@@ -165249,7 +165249,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D40u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12605876;
     return result;
   }
@@ -165320,7 +165320,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -165334,7 +165334,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAIn_9;
-    return Profile::Profile(13300024, 5774996, MEMORY[0xAF33B4], (int)v1, &unk_60B049C0, 8196);
+    return Profile__Profile(13300024, 5774996, MEMORY[0xAF33B4], (int)v1, &unk_60B049C0, 8196);
   }
 
 /* ============================================================================
@@ -165349,7 +165349,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF158] = 0;
       MEMORY[0xCAF15C] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -165366,7 +165366,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF158] = 0;
       MEMORY[0xCAF15C] = 0;
     }
-    v1 = sead::IDisposer::~IDisposer(a1);
+    v1 = sead__IDisposer__dtor(a1);
     return operator delete((int)v1);
   }
 
@@ -165391,7 +165391,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCAF15C] )
     {
       v3 = operator new[](33816, a1, 4);
-      result = (_DWORD *)sead::IDisposer::IDisposer(v3, a1, 3);
+      result = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *result = 12606272;
       v4 = result + 1557;
       MEMORY[0xCAF158] = result;
@@ -165573,14 +165573,14 @@ static inline unsigned int uxtb16(unsigned int x)
       v8 = *((_DWORD *)a2 + 1);
       memset(&v11[1], 0, 0x28u);
       v11[0] = 128;
-      v11[3] = Profile::get(MEMORY[0xAF3394]);
+      v11[3] = Profile__get(MEMORY[0xAF3394]);
       *(float *)&v11[4] = v7;
       v11[5] = v8;
       v11[6] = 0;
       LOWORD(v11[8]) = **(unsigned __int8 **)(a5 + 2212);
       BYTE2(v11[8]) = 0;
       v11[10] = 0;
-      v9 = ActorMgr::create(MEMORY[0xC7B400], (int)v11, 1);
+      v9 = ActorMgr__create(MEMORY[0xC7B400], (int)v11, 1);
       if ( v9 )
       {
         if ( _cxa_guard_acquire_0(13142616) )
@@ -165796,14 +165796,14 @@ static inline unsigned int uxtb16(unsigned int x)
   
     memset(&v8[1], 0, 0x24u);
     v8[0] = a4 | (16 * a3);
-    v8[3] = Profile::get(MEMORY[0xAF3364]);
+    v8[3] = Profile__get(MEMORY[0xAF3364]);
     v8[4] = *a2;
     v8[5] = a2[1];
     v8[6] = a2[2];
     LOWORD(v8[8]) = 0;
     BYTE2(v8[8]) = 0;
     v8[10] = 0;
-    return ActorMgr::create(MEMORY[0xC7B400], (int)v8, 0);
+    return ActorMgr__create(MEMORY[0xC7B400], (int)v8, 0);
   }
 
 /* ============================================================================
@@ -165835,13 +165835,13 @@ static inline unsigned int uxtb16(unsigned int x)
     v11[2] = 0;
     v11[0] = a4 | (16 * a5) | (a6 << 24) | (a2[18] << 8) | (a2[19] << 12) | (a2[20] << 16) | (a2[21] << 20);
     v11[1] = a2[22] << 12;
-    v12 = Profile::get(MEMORY[0xAF336C]);
+    v12 = Profile__get(MEMORY[0xAF336C]);
     v13 = *a3;
     v14 = a3[1];
     v15 = a3[2];
     LOWORD(v17) = a2[17];
     v19 = 0;
-    v9 = ActorMgr::create(MEMORY[0xC7B400], (int)v11, 0);
+    v9 = ActorMgr__create(MEMORY[0xC7B400], (int)v11, 0);
     if ( _cxa_guard_acquire_0(13087588) )
     {
       MEMORY[0xC7B360] = 12320920;
@@ -165885,13 +165885,13 @@ static inline unsigned int uxtb16(unsigned int x)
     v11[2] = 0;
     v11[0] = a4 | (16 * a5) | (a6 << 24) | (a2[18] << 8) | (a2[19] << 12) | (a2[20] << 16) | (a2[21] << 20);
     v11[1] = a2[22] << 12;
-    v12 = Profile::get(MEMORY[0xAF3374]);
+    v12 = Profile__get(MEMORY[0xAF3374]);
     v13 = *a3;
     v14 = a3[1];
     v15 = a3[2];
     LOWORD(v17) = a2[17];
     v19 = 0;
-    v9 = ActorMgr::create(MEMORY[0xC7B400], (int)v11, 0);
+    v9 = ActorMgr__create(MEMORY[0xC7B400], (int)v11, 0);
     if ( _cxa_guard_acquire_0(13087588) )
     {
       MEMORY[0xC7B360] = 12320920;
@@ -165935,13 +165935,13 @@ static inline unsigned int uxtb16(unsigned int x)
     v10[2] = 0;
     v10[0] = a4 | (16 * a5) | (a2[18] << 8) | (a2[19] << 12) | (a2[20] << 16) | (a2[21] << 20) | 0x1000000;
     v10[1] = a2[22] << 12;
-    v11 = Profile::get(MEMORY[0xAF3370]);
+    v11 = Profile__get(MEMORY[0xAF3370]);
     v12 = *a3;
     v13 = a3[1];
     v14 = a3[2];
     LOWORD(v16) = a2[17];
     v18 = 0;
-    v8 = ActorMgr::create(MEMORY[0xC7B400], (int)v10, 0);
+    v8 = ActorMgr__create(MEMORY[0xC7B400], (int)v10, 0);
     if ( _cxa_guard_acquire_0(13087588) )
     {
       MEMORY[0xC7B360] = 12320920;
@@ -166538,14 +166538,14 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         memset(&v12[1], 0, 0x28u);
         v12[0] = v10 | v7;
-        v12[3] = Profile::get(v8);
+        v12[3] = Profile__get(v8);
         v12[4] = *a2;
         v12[5] = a2[1];
         v12[6] = a2[2];
         LOWORD(v12[8]) = a5;
         BYTE2(v12[8]) = 0;
         v12[10] = 0;
-        v9 = ActorMgr::create(MEMORY[0xC7B400], (int)v12, 0);
+        v9 = ActorMgr__create(MEMORY[0xC7B400], (int)v12, 0);
         if ( _cxa_guard_acquire_0(13087588) )
         {
           MEMORY[0xC7B360] = 12320920;
@@ -166585,12 +166585,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[2] = 0;
     v9[0] = ((a5 << 28) + 0x20000000) & 0xF0FFFFFF | ((a3 & 0xF) << 24) | 0x400;
     v9[1] = (a4 << 8) | 0x120000;
-    v9[3] = Profile::get(MEMORY[0xAF3350]);
+    v9[3] = Profile__get(MEMORY[0xAF3350]);
     v10 = *a2;
     v11 = a2[1];
     v12 = a2[2];
     v16 = 0;
-    v7 = ActorMgr::create(MEMORY[0xC7B400], (int)v9, 0);
+    v7 = ActorMgr__create(MEMORY[0xC7B400], (int)v9, 0);
     result = _cxa_guard_acquire_0(13300068);
     if ( result )
     {
@@ -167193,13 +167193,13 @@ static inline unsigned int uxtb16(unsigned int x)
       v10 = 3;
     if ( (a5 & 0xFF0000) != 0x20000 )
     {
-      v11 = Profile::get(MEMORY[0xAF3368]);
+      v11 = Profile__get(MEMORY[0xAF3368]);
       ++*(_DWORD *)(a1 + 33808);
     }
     else
     {
       v10 = (v10 << 12) | 0x10000;
-      v11 = Profile::get(MEMORY[0xAF33CC]);
+      v11 = Profile__get(MEMORY[0xAF33CC]);
     }
     v13[0] = v10;
     v13[3] = v11;
@@ -167209,7 +167209,7 @@ static inline unsigned int uxtb16(unsigned int x)
     LOWORD(v13[8]) = 0;
     BYTE2(v13[8]) = 0;
     v13[10] = 0;
-    return ActorMgr::create(MEMORY[0xC7B400], (int)v13, 0);
+    return ActorMgr__create(MEMORY[0xC7B400], (int)v13, 0);
   }
 
 /* ============================================================================
@@ -167235,12 +167235,12 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a3 == 1 )
     {
       v14[0] = (v11 << 12) | 0x10000;
-      v14[3] = Profile::get(MEMORY[0xAF33CC]);
+      v14[3] = Profile__get(MEMORY[0xAF33CC]);
     }
     else
     {
       v14[0] = v11;
-      v14[3] = Profile::get(MEMORY[0xAF3368]);
+      v14[3] = Profile__get(MEMORY[0xAF3368]);
       if ( a5 == 1 )
         ++*(_DWORD *)(a1 + 33812);
     }
@@ -167251,7 +167251,7 @@ static inline unsigned int uxtb16(unsigned int x)
     BYTE2(v14[8]) = 0;
     BYTE1(v14[9]) = a6;
     v14[10] = 0;
-    return ActorMgr::create(MEMORY[0xC7B400], (int)v14, 1);
+    return ActorMgr__create(MEMORY[0xC7B400], (int)v14, 1);
   }
 
 /* ============================================================================
@@ -167275,14 +167275,14 @@ static inline unsigned int uxtb16(unsigned int x)
       0);
     memset(&v8[1], 0, 0x24u);
     v8[0] = a3;
-    v8[3] = Profile::get(MEMORY[0xAF33C8]);
+    v8[3] = Profile__get(MEMORY[0xAF33C8]);
     v8[4] = *(_DWORD *)a2;
     v8[5] = *(_DWORD *)(a2 + 4);
     v8[6] = *(_DWORD *)(a2 + 8);
     LOWORD(v8[8]) = 0;
     BYTE2(v8[8]) = 0;
     v8[10] = 0;
-    return ActorMgr::create(MEMORY[0xC7B400], (int)v8, 0);
+    return ActorMgr__create(MEMORY[0xC7B400], (int)v8, 0);
   }
 
 /* ============================================================================
@@ -167363,14 +167363,14 @@ static inline unsigned int uxtb16(unsigned int x)
                 v14 = 0;
             }
             v18[1] = v14;
-            v18[3] = Profile::get(*(_DWORD *)v15);
+            v18[3] = Profile__get(*(_DWORD *)v15);
             *(float *)&v18[4] = v12;
             *(float *)&v18[5] = v3;
             v18[6] = 0;
             LOWORD(v18[8]) = 0;
             BYTE2(v18[8]) = 0;
             v18[10] = 0;
-            ActorMgr::create(MEMORY[0xC7B400], (int)v18, 1);
+            ActorMgr__create(MEMORY[0xC7B400], (int)v18, 1);
           }
           v12 = v12 + 16.0;
           --v13;
@@ -167869,7 +167869,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D40u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12606288;
     return result;
   }
@@ -167903,8 +167903,8 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 7300) = 4;
       *(_DWORD *)(a1 + 7304) = *(unsigned __int8 *)(a1 + 28);
       *(_DWORD *)(a1 + 7308) = *(unsigned __int8 *)(a1 + 29);
-      MaskForMovementType = MovementHandler::getMaskForMovementType(a1 + 6992, 4u);
-      MovementHandler::link(a1 + 6992, (int *)(a1 + 108), MaskForMovementType, *(_BYTE *)(a1 + 7304));
+      MaskForMovementType = MovementHandler__getMaskForMovementType(a1 + 6992, 4u);
+      MovementHandler__link(a1 + 6992, (int *)(a1 + 108), MaskForMovementType, *(_BYTE *)(a1 + 7304));
       v5 = *(_DWORD *)(a1 + 24);
       v6 = HIWORD(v5) & 0xF;
       if ( v6 )
@@ -167915,7 +167915,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v8 )
         v7 = (float)((float)(unsigned int)v8 / 100.0) + v7;
       *(float *)(a1 + 7080) = v7;
-      MovementHandler::execute((_DWORD *)(a1 + 6992));
+      MovementHandler__execute((_DWORD *)(a1 + 6992));
       if ( *(_DWORD *)(a1 + 7040) == 1 && *(_DWORD *)(a1 + 7060) != 1 )
       {
         *(_DWORD *)(a1 + 108) = *(_DWORD *)(a1 + 6992);
@@ -167961,7 +167961,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -167975,7 +167975,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aANIn;
-    return Profile::Profile(13300072, 5789448, MEMORY[0xAF3360], (int)v1, &unk_60B049FC, 8198);
+    return Profile__Profile(13300072, 5789448, MEMORY[0xAF3360], (int)v1, &unk_60B049FC, 8198);
   }
 
 /* ============================================================================
@@ -167988,7 +167988,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D40u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12606684;
     return result;
   }
@@ -168113,7 +168113,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v4 & 1) != 0 )
       DrawMgr_drawModel2(MEMORY[0xC9CD1C], *(_DWORD **)(a1 + 7348), a3, a4, savedregs);
     else
-      CoinBase::onDraw(a1, v4, a3, a4);
+      CoinBase__onDraw(a1, v4, a3, a4);
     return 1;
   }
 
@@ -168143,7 +168143,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -168157,7 +168157,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aADrcIn;
-    return Profile::Profile(13300104, 5790776, MEMORY[0xAF33C4], (int)v1, &unk_60B04A20, 8194);
+    return Profile__Profile(13300104, 5790776, MEMORY[0xAF33C4], (int)v1, &unk_60B04A20, 8194);
   }
 
 /* ============================================================================
@@ -168170,7 +168170,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v0 = operator new(0x1D48u);
-    result = CoinBase::CoinBase(v0);
+    result = CoinBase__CoinBase(v0);
     *(_DWORD *)result = 12607080;
     *(_BYTE *)(result + 7481) = 0;
     *(_DWORD *)(result + 7484) = 0;
@@ -168202,7 +168202,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 136) = -1065353216;
     *(_DWORD *)(a1 + 140) = 0;
     *(_DWORD *)(a1 + 7388) = 0;
-    v2 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31;
+    v2 = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31;
     *(_DWORD *)(a1 + 7484) = v2;
     *(_DWORD *)(a1 + 7492) = dword_60AF2198[v2];
     sub_6057A4C4(a1);
@@ -168226,8 +168226,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( sub_6057A3E4(a1) )
       return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 336))(a1);
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     v3 = *(_DWORD *)(a1 + 2872);
     if ( (v3 & 1) != 0 )
@@ -168279,7 +168279,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 136) = -1065353216;
     *(_DWORD *)(a1 + 140) = 0;
     *(_DWORD *)(a1 + 7388) = 0;
-    v2 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31;
+    v2 = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 31;
     *(_DWORD *)(a1 + 7484) = v2;
     *(_DWORD *)(a1 + 7492) = dword_60AF2198[v2];
     sub_6057A4C4(a1);
@@ -168303,8 +168303,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( sub_6057A3E4(a1) )
       return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 336))(a1);
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     v3 = SE_OBJ_COIN_BOUND_ref(a1, 0, 1);
     if ( (v3 & 1) != 0 && *(_DWORD *)(a1 + 7380) == 1 )
@@ -168389,11 +168389,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r2
     int v3; // r3
   
-    StateMgr::execute(a1 + 1521);
+    StateMgr__execute(a1 + 1521);
     sub_605868C0((int)a1);
     a1[1591] = a1[41];
     ShapedCollider_execute(a1 + 1530, 6364, v2, v3);
-    StageActor::cullCheck((int)a1, 0);
+    StageActor__cullCheck((int)a1, 0);
     return 1;
   }
 
@@ -168413,12 +168413,12 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v9[2]; // [sp+0h] [bp-8h] BYREF
   
     v2 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCAF1EC] + 8))();
     if ( v4 != result )
     {
-      v6 = StateMgr::getCurrentState(v2);
+      v6 = StateMgr__getCurrentState(v2);
       v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 8))(v6);
       result = (*(int (**)(void))(MEMORY[0xCAF1CC] + 8))();
       if ( v7 != result )
@@ -168523,7 +168523,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -168584,7 +168584,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAF1B0 = 0;
     v1[0] = 12321336;
     v1[1] = &aAIn_10;
-    Profile::Profile(13300148, 5792444, MEMORY[0xAF33AC], (int)v1, &unk_60B04A44, 8198);
+    Profile__Profile(13300148, 5792444, MEMORY[0xAF33AC], (int)v1, &unk_60B04A44, 8198);
     MEMORY[0xCAF1D0] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF1CC] = 12607476;
     MEMORY[0xCAF1D4] = 5792532;
@@ -168614,7 +168614,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r4
   
     v0 = operator new(0x1920u);
-    Enemy::Enemy(v0);
+    Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12607496;
     *(_DWORD *)(v0 + 6332) = 0;
     *(_DWORD *)(v0 + 6328) = 0;
@@ -168732,7 +168732,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_DWORD *)(a1 + 124) = v7;
   LABEL_9:
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleSpeed(a1);
     *(_DWORD *)(a1 + 6312) = -(*(int *)(a1 + 6388) >> 2);
     *(_DWORD *)(a1 + 6308) = *(_DWORD *)(a1 + 160);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
@@ -168863,13 +168863,13 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         while ( (char *)v7 - v8 != (char *)a1 - v8 + 32 );
         if ( v11 )
-          Actor::removeChild((int)a1, v11);
+          Actor__removeChild((int)a1, v11);
       }
       if ( v12 )
-        Actor::removeChild((int)a1, v12);
+        Actor__removeChild((int)a1, v12);
       if ( v13 )
-        Actor::removeChild((int)a1, v13);
-      return StageActor::delete((int)a1, 1);
+        Actor__removeChild((int)a1, v13);
+      return StageActor__delete((int)a1, 1);
     }
     return result;
   }
@@ -169050,9 +169050,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60587B7C(_DWORD *a1)
   {
-    StateMgr::execute(a1 + 1521);
+    StateMgr__execute(a1 + 1521);
     sub_605879E4(a1);
-    StageActor::cullCheck((int)a1, 0);
+    StageActor__cullCheck((int)a1, 0);
     return 1;
   }
 
@@ -169077,7 +169077,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v5; // r5
   
-    result = Enemy::processCollision((float *)a1, a2, a3, 0) | 2;
+    result = Enemy__processCollision((float *)a1, a2, a3, 0) | 2;
     if ( result != 2 )
     {
       v5 = MEMORY[0xC88234];
@@ -169117,10 +169117,10 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v5 = 0;
     }
-    if ( Actor::getProfileId(v5) == MEMORY[0xAF3928]
-      || Actor::getProfileId(v5) == MEMORY[0xAF3934]
-      || Actor::getProfileId(v5) == MEMORY[0xAF392C]
-      || (result = Actor::getProfileId(v5), result == MEMORY[0xAF3930]) )
+    if ( Actor__getProfileId(v5) == MEMORY[0xAF3928]
+      || Actor__getProfileId(v5) == MEMORY[0xAF3934]
+      || Actor__getProfileId(v5) == MEMORY[0xAF392C]
+      || (result = Actor__getProfileId(v5), result == MEMORY[0xAF3930]) )
     {
       v7 = MEMORY[0xC88234];
       ActiveColldierMgr_removeFromActiveList(MEMORY[0xC88234], (int)(a1 + 188));
@@ -169165,11 +169165,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r5
   
     v2 = (int)(a1 + 6084);
-    CurrentState = StateMgr::getCurrentState((int)(a1 + 6084));
+    CurrentState = StateMgr__getCurrentState((int)(a1 + 6084));
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xCAF244] + 8))() )
     {
-      v5 = StateMgr::getCurrentState(v2);
+      v5 = StateMgr__getCurrentState(v2);
       v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
       if ( v6 != (*(int (**)(void))(MEMORY[0xCAF284] + 8))() )
       {
@@ -169195,7 +169195,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v5; // r5
   
-    CurrentState = StateMgr::getCurrentState((int)(a1 + 6084));
+    CurrentState = StateMgr__getCurrentState((int)(a1 + 6084));
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCAF284] + 8))();
     if ( v3 != result )
@@ -169259,7 +169259,7 @@ static inline unsigned int uxtb16(unsigned int x)
     memset(&v20[1], 0, 0x24u);
     v20[0] = *(_DWORD *)(a1 + 20) & 0x10000000 | (unsigned __int8)a2;
     v18 = (float)(v13 & 0xFFFFFF);
-    v20[3] = Profile::get(MEMORY[0xAF33AC]);
+    v20[3] = Profile__get(MEMORY[0xAF33AC]);
     v20[2] = *(_DWORD *)(a1 + 8);
     *(float *)&v20[4] = v11 + (float)(v10 * (float)(v16 + (float)((float)(v18 * 0.000000059605) * v17)));
     *(float *)&v20[5] = v12 - (float)(v10 * (float)(v14 + (float)(v15 * (float)(v18 * 0.000000059605))));
@@ -169269,7 +169269,7 @@ static inline unsigned int uxtb16(unsigned int x)
     BYTE1(v20[9]) = *(_BYTE *)(a1 + 29);
     BYTE2(v20[8]) = 0;
     v20[10] = 0;
-    result = (int)ActorMgr::create(MEMORY[0xC7B400], (int)v20, 0);
+    result = (int)ActorMgr__create(MEMORY[0xC7B400], (int)v20, 0);
     if ( !result )
     {
       *(_BYTE *)(a1 + 6342) = 1;
@@ -169478,12 +169478,12 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( (**(int (__fastcall ***)(_BYTE *, int))v2)(v2, 13300244) == 1 )
       {
-        CurrentState = StateMgr::getCurrentState((int)(v2 + 6084));
+        CurrentState = StateMgr__getCurrentState((int)(v2 + 6084));
         v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         v3 = 1;
         if ( v5 == (*(int (**)(void))(MEMORY[0xCAF244] + 8))() )
         {
-          v6 = StateMgr::getCurrentState((int)(v2 + 6084));
+          v6 = StateMgr__getCurrentState((int)(v2 + 6084));
           v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 8))(v6);
           if ( v7 != (*(int (**)(void))(MEMORY[0xCAF284] + 8))() )
           {
@@ -169548,7 +169548,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -169574,7 +169574,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAF224 = 0;
     v1[0] = 12321336;
     v1[1] = &aIn_1;
-    Profile::Profile(13300264, 5795888, MEMORY[0xAF2DF0], (int)v1, &unk_60B04A68, 2);
+    Profile__Profile(13300264, 5795888, MEMORY[0xAF2DF0], (int)v1, &unk_60B04A68, 2);
     MEMORY[0xCAF240] = 17825792;
     MEMORY[0xCAF248] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF244] = 12608220;
@@ -169613,7 +169613,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r5
   
     v0 = (_DWORD *)operator new(0x1DE0u);
-    CoinBase::CoinBase((int)v0);
+    CoinBase__CoinBase((int)v0);
     *v0 = 12608240;
     memset(v0 + 1871, 0, 0x22u);
     memset(v0 + 1880, 0, 0x80u);
@@ -169809,7 +169809,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_DWORD *)(a1 + 7496) = 0;
       v3 = (_DWORD *)(a1 + 7496);
-      if ( Actor::getProfileId(a1) == MEMORY[0xAF33A0] )
+      if ( Actor__getProfileId(a1) == MEMORY[0xAF33A0] )
         *v3 = 1;
       *(_BYTE *)(a1 + 6876) = 1;
       *(_DWORD *)(a1 + 7388) = 3;
@@ -169877,7 +169877,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v41 = *(_DWORD *)(a1 + 112);
               v42 = *(_DWORD *)(a1 + 116);
               v18 = (_DWORD *)(a1 + 6992);
-              MaskForMovementType = MovementHandler::getMaskForMovementType(a1 + 6992, 1u);
+              MaskForMovementType = MovementHandler__getMaskForMovementType(a1 + 6992, 1u);
               v44 = *(_DWORD *)v14;
               v45 = 0;
               v46 = 0;
@@ -169892,7 +169892,7 @@ static inline unsigned int uxtb16(unsigned int x)
               break;
             case 2u:
               v18 = (_DWORD *)(a1 + 6992);
-              v21 = MovementHandler::getMaskForMovementType(a1 + 6992, 2u);
+              v21 = MovementHandler__getMaskForMovementType(a1 + 6992, 2u);
               MovementHandler_init2(
                 a1 + 6992,
                 v38,
@@ -169909,23 +169909,23 @@ static inline unsigned int uxtb16(unsigned int x)
               v40 = 0.0;
               v41 = 0;
               v42 = 0;
-              v23 = MovementHandler::getMaskForMovementType(a1 + 6992, 9u);
+              v23 = MovementHandler__getMaskForMovementType(a1 + 6992, 9u);
               sub_606B0CCC(a1 + 6992, v38, v23, *v14, &v40, 0);
               break;
             default:
   LABEL_25:
               v18 = (_DWORD *)(a1 + 6992);
-              v22 = MovementHandler::getMaskForMovementType(a1 + 6992, v16);
-              MovementHandler::link(a1 + 6992, v38, v22, *v14);
+              v22 = MovementHandler__getMaskForMovementType(a1 + 6992, v16);
+              MovementHandler__link(a1 + 6992, v38, v22, *v14);
               break;
           }
           v20 = (__int64 *)(a1 + 6120);
-          MovementHandler::execute(v18);
+          MovementHandler__execute(v18);
           if ( *(_DWORD *)(a1 + 7040) != 1 || *(_DWORD *)(a1 + 7060) == 1 )
             goto LABEL_45;
           if ( *v3 == 1 )
           {
-            CurrentState = StateMgr::getCurrentState(a1 + 6084);
+            CurrentState = StateMgr__getCurrentState(a1 + 6084);
             v25 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
             if ( v25 == (*(int (**)(void))(MEMORY[0xCAF2F8] + 8))() )
             {
@@ -170170,14 +170170,14 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( (*(_BYTE *)(a1 + 20) & 0x80) != 0 )
     {
-      StateMgr::execute((_DWORD *)(a1 + 6084));
+      StateMgr__execute((_DWORD *)(a1 + 6084));
       *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
       ShapedCollider_execute((_DWORD *)(a1 + 6120), 6364, v12, v13);
       return 1;
     }
     sub_6069B070((float *)(a1 + 7240), (float *)(a1 + 108));
-    StateMgr::execute((_DWORD *)(a1 + 6084));
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    StateMgr__execute((_DWORD *)(a1 + 6084));
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 != (*(int (**)(void))(MEMORY[0xCAED48] + 8))() )
     {
@@ -170196,12 +170196,12 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         goto LABEL_29;
       }
-      MovementHandler::execute((_DWORD *)(a1 + 6992));
+      MovementHandler__execute((_DWORD *)(a1 + 6992));
       if ( *(_DWORD *)(a1 + 7040) == 1 && *(_DWORD *)(a1 + 7060) != 1 )
       {
         if ( *(_DWORD *)(a1 + 7496) == 1 )
         {
-          v8 = StateMgr::getCurrentState(a1 + 6084);
+          v8 = StateMgr__getCurrentState(a1 + 6084);
           v9 = (*(int (__fastcall **)(int))(*(_DWORD *)v8 + 8))(v8);
           if ( v9 == (*(int (**)(void))(MEMORY[0xCAF2F8] + 8))() )
           {
@@ -170261,10 +170261,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605B2D70(a1);
     if ( !*(_DWORD *)(a1 + 7496) )
     {
-      v18 = StateMgr::getCurrentState(a1 + 6084);
+      v18 = StateMgr__getCurrentState(a1 + 6084);
       v19 = (*(int (__fastcall **)(int))(*(_DWORD *)v18 + 8))(v18);
       if ( v19 != (*(int (**)(void))(MEMORY[0xCAF338] + 8))() )
-        StageActor::cullCheck(a1, 0);
+        StageActor__cullCheck(a1, 0);
     }
     return 1;
   }
@@ -170299,7 +170299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int CurrentState; // r0
     int v3; // r5
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 == (*(int (**)(void))(MEMORY[0xCAF338] + 8))() && !*(_BYTE *)(a1 + 7517) )
     {
@@ -170583,7 +170583,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -170598,10 +170598,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &aAIn_11;
-    Profile::Profile(13300424, 5802708, MEMORY[0xAF3394], (int)&v1, &unk_60B04ABC, 8194);
+    Profile__Profile(13300424, 5802708, MEMORY[0xAF3394], (int)&v1, &unk_60B04ABC, 8194);
     v1 = 12321336;
     v2 = &aIn_2;
-    Profile::Profile(13300448, 5802708, MEMORY[0xAF33A0], (int)&v1, &unk_60B04AE0, 8194);
+    Profile__Profile(13300448, 5802708, MEMORY[0xAF33A0], (int)&v1, &unk_60B04AE0, 8194);
     MEMORY[0xCAF2FC] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF2F8] = 12608636;
     MEMORY[0xCAF300] = 5802800;
@@ -170640,7 +170640,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D40u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12608656;
     return result;
   }
@@ -170673,9 +170673,9 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 7304) = *(unsigned __int8 *)(a1 + 28);
       *(_DWORD *)(a1 + 7308) = *(unsigned __int8 *)(a1 + 29);
       memset(v6, 0, sizeof(v6));
-      MaskForMovementType = MovementHandler::getMaskForMovementType(a1 + 6992, 9u);
+      MaskForMovementType = MovementHandler__getMaskForMovementType(a1 + 6992, 9u);
       sub_606B0CCC(a1 + 6992, (int *)(a1 + 108), MaskForMovementType, *(_BYTE *)(a1 + 7304), v6, 0);
-      MovementHandler::execute((_DWORD *)(a1 + 6992));
+      MovementHandler__execute((_DWORD *)(a1 + 6992));
       if ( *(_DWORD *)(a1 + 7040) == 1 && *(_DWORD *)(a1 + 7060) != 1 )
       {
         *(_DWORD *)(a1 + 108) = *(_DWORD *)(a1 + 6992);
@@ -170733,7 +170733,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (*(_BYTE *)(a1 + 24) & 1) != 0 )
     {
       v2 = (_DWORD *)(a1 + 6084);
-      CurrentState = StateMgr::getCurrentState(a1 + 6084);
+      CurrentState = StateMgr__getCurrentState(a1 + 6084);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       if ( v4 != (*(int (**)(void))(MEMORY[0xCAF370] + 8))() )
         sub_605D006C(a1);
@@ -170743,8 +170743,8 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_605D006C(a1);
       v2 = (_DWORD *)(a1 + 6084);
     }
-    StateMgr::execute(v2);
-    v5 = StateMgr::getCurrentState((int)v2);
+    StateMgr__execute(v2);
+    v5 = StateMgr__getCurrentState((int)v2);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
     if ( v6 != (*(int (**)(void))(MEMORY[0xCAED48] + 8))() )
     {
@@ -170754,12 +170754,12 @@ static inline unsigned int uxtb16(unsigned int x)
         v10 = *(_DWORD *)(a1 + 7304) == 0;
       if ( !v10 )
       {
-        MovementHandler::execute((_DWORD *)(a1 + 6992));
+        MovementHandler__execute((_DWORD *)(a1 + 6992));
         if ( *(_DWORD *)(a1 + 7040) == 1 && *(_DWORD *)(a1 + 7060) != 1 )
         {
           if ( (*(_BYTE *)(a1 + 24) & 1) != 0 )
           {
-            v11 = StateMgr::getCurrentState((int)v2);
+            v11 = StateMgr__getCurrentState((int)v2);
             v12 = (*(int (__fastcall **)(int))(*(_DWORD *)v11 + 8))(v11);
             if ( v12 == (*(int (**)(void))(MEMORY[0xCAF370] + 8))() )
             {
@@ -170785,10 +170785,10 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6364) = *(_DWORD *)(a1 + 164);
     ShapedCollider_execute((_DWORD *)(a1 + 6120), 6364, v7, v8);
     sub_605B2D70(a1);
-    v14 = StateMgr::getCurrentState((int)v2);
+    v14 = StateMgr__getCurrentState((int)v2);
     v15 = (*(int (__fastcall **)(int))(*(_DWORD *)v14 + 8))(v14);
     if ( v15 == (*(int (**)(void))(MEMORY[0xCAED48] + 8))() )
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -170852,7 +170852,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -170866,7 +170866,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aAIn_12;
-    Profile::Profile(13300568, 5810404, MEMORY[0xAF339C], (int)v1, &unk_60B04B04, 8198);
+    Profile__Profile(13300568, 5810404, MEMORY[0xAF339C], (int)v1, &unk_60B04B04, 8198);
     MEMORY[0xCAF374] = ++MEMORY[0xC7B788];
     MEMORY[0xCAF370] = 12609052;
     MEMORY[0xCAF378] = 5810452;
@@ -170888,7 +170888,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v0 = operator new(0x1D40u);
-    result = CoinBase::CoinBase(v0);
+    result = CoinBase__CoinBase(v0);
     *(_DWORD *)result = 12609072;
     *(_BYTE *)(result + 7481) = 0;
     return result;
@@ -170926,9 +170926,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 7308) = *(unsigned __int8 *)(a1 + 29);
     v4 = *(_DWORD *)(a1 + 20);
     v5 = MEMORY[0xCAF3B0];
-    MaskForMovementType = MovementHandler::getMaskForMovementType(a1 + 6992, 0xAu);
+    MaskForMovementType = MovementHandler__getMaskForMovementType(a1 + 6992, 0xAu);
     sub_606B0DAC(a1 + 6992, (int *)(a1 + 108), MaskForMovementType, *(_BYTE *)(a1 + 7304), ((v4 << 16) & 0xFF000000) + v5);
-    MovementHandler::execute((_DWORD *)(a1 + 6992));
+    MovementHandler__execute((_DWORD *)(a1 + 6992));
     if ( *(_DWORD *)(a1 + 7040) != 1 )
       goto LABEL_4;
     if ( *(_DWORD *)(a1 + 7060) == 1 )
@@ -170996,10 +170996,10 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v13; // r5
   
     sub_605D006C(a1);
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v2 = *(float *)(a1 + 108);
     v3 = *(float *)(a1 + 112);
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v5 != (*(int (**)(void))(MEMORY[0xCAED48] + 8))() )
     {
@@ -171014,12 +171014,12 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       else
       {
-        MovementHandler::execute((_DWORD *)(a1 + 6992));
+        MovementHandler__execute((_DWORD *)(a1 + 6992));
         if ( *(_DWORD *)(a1 + 7040) == 1 )
         {
           if ( *(_DWORD *)(a1 + 7060) == 1 )
           {
-            StageActor::delete(a1, 0);
+            StageActor__delete(a1, 0);
           }
           else
           {
@@ -171035,7 +171035,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *(_BYTE *)(a1 + 7481) = 1;
               if ( sub_605D00B8(a1) == 1 )
               {
-                StageActor::delete(a1, 1);
+                StageActor__delete(a1, 1);
                 return 1;
               }
             }
@@ -171095,7 +171095,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -171109,7 +171109,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aIn_3;
-    Profile::Profile(13300632, 5812672, MEMORY[0xAF33A8], (int)v1, &unk_60B04B28, 8198);
+    Profile__Profile(13300632, 5812672, MEMORY[0xAF33A8], (int)v1, &unk_60B04B28, 8198);
     MEMORY[0xCAF3B0] = 0x40000000;
     return 13300656;
   }
@@ -171124,7 +171124,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D48u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12609468;
     result[1871] = 0;
     result[1872] = 0;
@@ -171148,7 +171148,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 100) = MEMORY[0xB0479C];
     v2 = *(_DWORD *)(a1 + 20) & 7;
     v3 = flt_60AF4C50[v2];
-    U32 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
+    U32 = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340));
     *(float *)(a1 + 120) = v3;
     *(float *)(a1 + 124) = flt_60AF4C30[v2] + (float)((float)(COERCE_FLOAT((U32 >> 9) | 0x3F800000) + -1.0) * 0.4);
     *(_DWORD *)(a1 + 128) = 0;
@@ -171156,12 +171156,12 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v5 = 0.6;
       v8 = -0.5;
-      LODWORD(v6) = (sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000;
+      LODWORD(v6) = (sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000;
     }
     else
     {
       v5 = -0.6;
-      LODWORD(v6) = (sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000;
+      LODWORD(v6) = (sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000;
       v8 = 0.5;
     }
     *(float *)(a1 + 120) = (float)(v3 + v8) + (float)((float)(v6 + -1.0) * v5);
@@ -171211,8 +171211,8 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( !v5 || (result = sub_6057A3E4(a1)) == 0 )
     {
-      CollisionActor::handleGravity(a1);
-      CollisionActor::handleSpeed(a1);
+      CollisionActor__handleGravity(a1);
+      CollisionActor__handleSpeed(a1);
       *(_BYTE *)(a1 + 6059) = *(_DWORD *)(a1 + 2872) & 1;
       CollisionMgr_process((unsigned __int8 *)(a1 + 648));
       if ( !sub_6057AA48((_DWORD *)a1) )
@@ -171245,7 +171245,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)(a1 + 120) = v2;
     *(_DWORD *)(a1 + 124) = 0;
     *(_DWORD *)(a1 + 128) = 0;
-    U32 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
+    U32 = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340));
     if ( v2 >= 0.0 )
     {
       v5 = 0.1;
@@ -171383,7 +171383,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -171397,7 +171397,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1E6B;
-    Profile::Profile(13300668, 5814784, MEMORY[0xAF3378], (int)v1, &unk_60B04B4C, 8198);
+    Profile__Profile(13300668, 5814784, MEMORY[0xAF3378], (int)v1, &unk_60B04B4C, 8198);
     MEMORY[0xCAF3D8] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF3D4] = 12609864;
     MEMORY[0xCAF3DC] = 5814856;
@@ -171428,7 +171428,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v0 = operator new(0x1D58u);
-    result = CoinBase::CoinBase(v0);
+    result = CoinBase__CoinBase(v0);
     *(_DWORD *)result = 12609884;
     *(_BYTE *)(result + 7504) = 0;
     *(_DWORD *)(result + 7500) = 0;
@@ -171525,7 +171525,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(float *)(a1 + 108);
     v3 = *(float *)(a1 + 112);
     sub_605D006C(a1);
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v4 = *(_DWORD **)(a1 + 56);
     if ( _cxa_guard_acquire_0(13298376) )
     {
@@ -171627,7 +171627,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -171641,7 +171641,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1E99;
-    Profile::Profile(13300776, 5817544, MEMORY[0xAF33B0], (int)v1, &unk_60B04B70, 8198);
+    Profile__Profile(13300776, 5817544, MEMORY[0xAF33B0], (int)v1, &unk_60B04B70, 8198);
     MEMORY[0xCAF440] = 0x4000000;
     return 13300800;
   }
@@ -171656,7 +171656,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D40u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12610280;
     result[1871] = 0;
     return result;
@@ -171705,8 +171705,8 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      CollisionActor::handleGravity(a1);
-      CollisionActor::handleSpeed(a1);
+      CollisionActor__handleGravity(a1);
+      CollisionActor__handleSpeed(a1);
       *(_BYTE *)(a1 + 6059) = *(_DWORD *)(a1 + 2872) & 1;
       CollisionMgr_process((unsigned __int8 *)(a1 + 648));
       SE_OBJ_COIN_BOUND_ref(a1, 0, 1);
@@ -171759,7 +171759,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r2
     int v4; // r3
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     ShapedCollider_execute((_DWORD *)(a1 + 6120), v2, v3, v4);
     return 1;
   }
@@ -171815,7 +171815,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -171829,7 +171829,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1EB5;
-    Profile::Profile(13300812, 5819592, MEMORY[0xAF33C0], (int)v1, &unk_60B04B94, 8194);
+    Profile__Profile(13300812, 5819592, MEMORY[0xAF33C0], (int)v1, &unk_60B04B94, 8194);
     MEMORY[0xCAF468] = ++MEMORY[0xC7B788];
     MEMORY[0xCAF464] = 12610676;
     MEMORY[0xCAF46C] = 5819656;
@@ -171851,7 +171851,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x1D40u);
-    result = (_DWORD *)CoinBase::CoinBase(v0);
+    result = (_DWORD *)CoinBase__CoinBase(v0);
     *result = 12610696;
     return result;
   }
@@ -171881,7 +171881,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 7300) = 2;
       *(_DWORD *)(a1 + 7304) = *(unsigned __int8 *)(a1 + 28);
       *(_DWORD *)(a1 + 7308) = *(unsigned __int8 *)(a1 + 29);
-      MaskForMovementType = MovementHandler::getMaskForMovementType(a1 + 6992, 2u);
+      MaskForMovementType = MovementHandler__getMaskForMovementType(a1 + 6992, 2u);
       MovementHandler_init2(
         a1 + 6992,
         (int *)(a1 + 108),
@@ -171889,7 +171889,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(a1 + 7304),
         *(_WORD *)(a1 + 22) & 0xF,
         *(_WORD *)(a1 + 26) & 7);
-      MovementHandler::execute((_DWORD *)(a1 + 6992));
+      MovementHandler__execute((_DWORD *)(a1 + 6992));
       if ( *(_DWORD *)(a1 + 7040) == 1 && *(_DWORD *)(a1 + 7060) != 1 )
       {
         *(_DWORD *)(a1 + 108) = *(_DWORD *)(a1 + 6992);
@@ -171938,7 +171938,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -171952,7 +171952,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1EF5;
-    return Profile::Profile(13300876, 5821372, MEMORY[0xAF33A4], (int)v1, &unk_60B04BB8, 8198);
+    return Profile__Profile(13300876, 5821372, MEMORY[0xAF33A4], (int)v1, &unk_60B04BB8, 8198);
   }
 
 /* ============================================================================
@@ -171965,7 +171965,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = (_DWORD *)operator new(0x17E8u);
-    result = MultiStateActor::MultiStateActor(v0);
+    result = MultiStateActor__MultiStateActor(v0);
     *result = 12611092;
     *((_WORD *)result + 3056) = 0;
     result[1526] = 0;
@@ -172140,7 +172140,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6058DC48(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     return 1;
   }
 
@@ -172182,7 +172182,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -172196,7 +172196,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1F11;
-    Profile::Profile(13300908, 5822676, MEMORY[0xAF334C], (int)v1, &unk_60B04BDC, 0);
+    Profile__Profile(13300908, 5822676, MEMORY[0xAF334C], (int)v1, &unk_60B04BDC, 0);
     MEMORY[0xCAF4C8] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF4C4] = 12611296;
     MEMORY[0xCAF4CC] = 5822756;
@@ -172227,7 +172227,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = (_DWORD *)operator new(0x17F0u);
-    result = MultiStateActor::MultiStateActor(v0);
+    result = MultiStateActor__MultiStateActor(v0);
     *result = 12611316;
     *((_BYTE *)result + 6124) = 0;
     result[1530] = 0;
@@ -172315,7 +172315,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6058E44C(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     return 1;
   }
 
@@ -172357,7 +172357,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -172371,7 +172371,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1F46;
-    Profile::Profile(13301004, 5824232, MEMORY[0xAF3350], (int)v1, &unk_60B04C00, 0);
+    Profile__Profile(13301004, 5824232, MEMORY[0xAF3350], (int)v1, &unk_60B04C00, 0);
     MEMORY[0xCAF528] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF524] = 12611520;
     MEMORY[0xCAF52C] = 5824336;
@@ -172401,7 +172401,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r5
   
     v0 = (_DWORD *)operator new(0x1D68u);
-    CoinBase::CoinBase((int)v0);
+    CoinBase__CoinBase((int)v0);
     *v0 = 12611540;
     sub_606DF458();
     return v0;
@@ -172469,7 +172469,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v9[3]; // [sp+8h] [bp-10h] BYREF
     int v10; // [sp+14h] [bp-4h] BYREF
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v10 = 0;
     v2 = *(float *)(a1 + 112);
     v3 = *(float *)(a1 + 116);
@@ -172484,7 +172484,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6364) = v4;
     ShapedCollider_execute((_DWORD *)(a1 + 6120), 6364, v5, v6);
     sub_605B2D70(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -172512,7 +172512,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -172527,7 +172527,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -172541,7 +172541,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1F74;
-    return Profile::Profile(13301092, 5826284, MEMORY[0xAF3384], (int)v1, &unk_60B04C24, 8198);
+    return Profile__Profile(13301092, 5826284, MEMORY[0xAF3384], (int)v1, &unk_60B04C24, 8198);
   }
 
 /* ============================================================================
@@ -172554,7 +172554,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = (_DWORD *)operator new(0x17E0u);
-    result = MultiStateActor::MultiStateActor(v0);
+    result = MultiStateActor__MultiStateActor(v0);
     *result = 12611936;
     result[1526] = 0;
     result[1527] = 0;
@@ -172707,7 +172707,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6058F110(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     return 1;
   }
 
@@ -172854,7 +172854,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -172871,7 +172871,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAF58C = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD1F90;
-    Profile::Profile(13301136, 5827772, MEMORY[0xAF2D50], (int)v1, 0, 4);
+    Profile__Profile(13301136, 5827772, MEMORY[0xAF2D50], (int)v1, 0, 4);
     MEMORY[0xCAF5AC] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF5A8] = 12612156;
     MEMORY[0xCAF5B0] = 5827844;
@@ -172917,7 +172917,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v2; // r4
   
     v2 = (_DWORD *)operator new(0x878u);
-    StageActor::StageActor((int)v2, a1);
+    StageActor__StageActor((int)v2, a1);
     *v2 = 12612176;
     v2[165] = 0;
     v2[166] = 0;
@@ -172938,7 +172938,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_6058F710(_DWORD *a1, int a2)
   {
-    StageActor::StageActor((int)a1, a2);
+    StageActor__StageActor((int)a1, a2);
     *a1 = 12612176;
     a1[165] = 0;
     a1[166] = 0;
@@ -173069,7 +173069,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v32; // [sp+20h] [bp-Ch]
     _DWORD v33[2]; // [sp+24h] [bp-8h] BYREF
   
-    ResArchiveById = Profile::getResArchiveById(a1[3], 0);
+    ResArchiveById = Profile__getResArchiveById(a1[3], 0);
     v30 = 12321336;
     v31 = "ship_bottom_top";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v30, 0, 0, 0, 0, 0, 0, 0);
@@ -173533,7 +173533,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 712);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1512));
     ShapedCollider_dtor(v2);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -173549,7 +173549,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 712);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1512));
     ShapedCollider_dtor(v2);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -173563,7 +173563,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1FAF;
-    return Profile::Profile(13301372, 5830280, MEMORY[0xAF3150], (int)v1, &unk_60B04C48, 2);
+    return Profile__Profile(13301372, 5830280, MEMORY[0xAF3150], (int)v1, &unk_60B04C48, 2);
   }
 
 /* ============================================================================
@@ -173603,7 +173603,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = a1 + 144;
     do
     {
-      ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+      ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
       v11[0] = 12321336;
       v11[1] = "ship_bottom_waku";
       Model2 = Resource_getModel2(ResArchiveById, (int)v11, 0, 0, 0, 0, 0, 0, 0);
@@ -173751,7 +173751,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 712);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1512));
     ShapedCollider_dtor(v2);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -173781,7 +173781,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD1FE7;
-    return Profile::Profile(13301460, 5835460, MEMORY[0xAF3158], (int)v1, &unk_60B04C6C, 2);
+    return Profile__Profile(13301460, 5835460, MEMORY[0xAF3158], (int)v1, &unk_60B04C6C, 2);
   }
 
 /* ============================================================================
@@ -173894,7 +173894,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = (_DWORD *)operator new(0x17E8u);
-    result = MultiStateActor::MultiStateActor(v0);
+    result = MultiStateActor__MultiStateActor(v0);
     *result = 12612492;
     result[1527] = 0;
     result[1528] = 0;
@@ -173935,7 +173935,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     _DWORD v8[2]; // [sp+18h] [bp-8h] BYREF
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v8[0] = 12321336;
     v8[1] = "ship_bottom_waku";
     Model2 = Resource_getModel2(ResArchiveById, (int)v8, 0, 0, 0, 0, 0, 0, 0);
@@ -174026,8 +174026,8 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60591878(int a1)
   {
-    StageActor::cullCheck(a1, 0);
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StageActor__cullCheck(a1, 0);
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     sub_6059170C(a1);
     return 1;
   }
@@ -174082,7 +174082,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -174113,7 +174113,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCAF730] = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD1FFE;
-    return Profile::Profile(13301556, 5838056, MEMORY[0xAF3154], (int)v1, &unk_60B04C90, 2);
+    return Profile__Profile(13301556, 5838056, MEMORY[0xAF3154], (int)v1, &unk_60B04C90, 2);
   }
 
 /* ============================================================================
@@ -174125,7 +174125,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r4
   
     v0 = operator new(0x2068u);
-    MultiStateActor::MultiStateActor((_DWORD *)v0);
+    MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12612716;
     *(_DWORD *)(v0 + 6152) = 0;
     *(_DWORD *)(v0 + 6164) = 0;
@@ -174144,7 +174144,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(v0 + 7088) = 12333272;
     *(_DWORD *)(v0 + 7744) = 0;
     *(_DWORD *)(v0 + 7752) = 0;
-    LightMask::LightMask((_DWORD *)(v0 + 7760));
+    LightMask__LightMask((_DWORD *)(v0 + 7760));
     memset((void *)(v0 + 7800), 0, 0x28u);
     ActiveCollider_ctor(v0 + 7840);
     *(_BYTE *)(v0 + 8160) = 0;
@@ -174239,8 +174239,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( sub_6059634C(a1) || *(_BYTE *)(a1 + 8208) )
       *(_DWORD *)(a1 + 124) = 1065353216;
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     v2 = 1;
     v3 = *(float *)(a1 + 108) + -8.0;
     TileLayer_getCollisionAtPos(MEMORY[0xCBD254], (int)v3, (unsigned __int16)(int)(float)-*(float *)(a1 + 112), 0, 1);
@@ -174255,7 +174255,7 @@ static inline unsigned int uxtb16(unsigned int x)
       1);
     if ( (v6 & 0xF) != 0 )
       v5 |= 2u;
-    v7 = CollisionActor::sub_600034C8(a1);
+    v7 = CollisionActor__sub_600034C8(a1);
     if ( (v7 & 4) != 0 )
     {
       if ( *(float *)(a1 + 120) >= 0.0 )
@@ -174331,7 +174331,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else if ( *(float *)(a1 + 124) <= 0.0 )
       {
         *(_DWORD *)(a1 + 0x2000) += 0x2000000;
-        v15 = StageActor::directionToPlayerX(a1, (int *)(a1 + 108));
+        v15 = StageActor__directionToPlayerX(a1, (int *)(a1 + 108));
         v16 = (float)(*(float *)(((*(_DWORD *)(a1 + 0x2000) >> 20) & 0xFF0) + 0xB3A484)
                     + (float)((float)((float)(*(_DWORD *)(a1 + 0x2000) & 0xFFFFFF)
                                     * *(float *)(((*(_DWORD *)(a1 + 0x2000) >> 20) & 0xFF0) + 0xB3A488))
@@ -175169,7 +175169,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v6; // r1
     float v7; // s0
   
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleSpeed(a1);
     result = *(_BYTE *)(a1 + 8220) & 2;
     v3 = MEMORY[0xCAF784];
     v4 = MEMORY[0xCAF784];
@@ -175223,7 +175223,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60593B3C(int a1)
   {
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleSpeed(a1);
     if ( !*(_BYTE *)(a1 + 8213) )
     {
       CollisionMgr_process((unsigned __int8 *)(a1 + 648));
@@ -175429,7 +175429,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v15 = 1132789760;
       *(_DWORD *)(a1 + 8180) = 1132789760;
       v16 = (float *)(a1 + 8180);
-      LightMask::init((_DWORD *)(a1 + 7760), 0, 2);
+      LightMask__init((_DWORD *)(a1 + 7760), 0, 2);
       v17 = *(float *)(a1 + 8180);
       if ( *(_BYTE *)(a1 + 8214) )
       {
@@ -175446,7 +175446,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 7772) = v20;
           *(float *)(a1 + 7776) = v22 + 8.0;
           *(_DWORD *)(a1 + 7780) = v21;
-          LightMask::update(a1 + 7760);
+          LightMask__update(a1 + 7760);
           return 1;
         }
       }
@@ -175673,7 +175673,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v15; // r0
     float v16; // s0
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     sub_6059499C(a1);
     if ( *(_BYTE *)(a1 + 8215) )
       v5 = 7088;
@@ -175710,7 +175710,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 7772) = v14;
           *(float *)(a1 + 7776) = v16 + 8.0;
           *(_DWORD *)(a1 + 7780) = v15;
-          LightMask::update(a1 + 7760);
+          LightMask__update(a1 + 7760);
           goto LABEL_19;
         }
         v12 = 1132789760;
@@ -175731,7 +175731,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
   LABEL_19:
     if ( *(_BYTE *)(a1 + 30) )
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
     *(_BYTE *)(a1 + 8208) = 0;
     return 1;
   }
@@ -175809,7 +175809,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     DrawMgr_drawModel2(MEMORY[0xC9CD1C], *(_DWORD **)(a1 + 6104), a3, a4, savedregs);
     if ( *(_DWORD *)(a1 + 8216) )
-      LightMask::draw(a1 + 7760);
+      LightMask__draw(a1 + 7760);
     return 1;
   }
 
@@ -175843,7 +175843,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2014;
-    Profile::Profile(13301588, 5839704, MEMORY[0xAF32AC], (int)v1, &unk_60B04CB4, 2);
+    Profile__Profile(13301588, 5839704, MEMORY[0xAF32AC], (int)v1, &unk_60B04CB4, 2);
     MEMORY[0xCAF76C] = 83886080;
     MEMORY[0xCAF770] = 0x80000;
     MEMORY[0xCAF774] = 0x800000;
@@ -176846,14 +176846,14 @@ static inline unsigned int uxtb16(unsigned int x)
     memset(&v10[1], 0, 0x24u);
     v10[0] = *(_DWORD *)(a1 + 20) & 0xF000 | 0x10000000;
     v10[2] = *(_DWORD *)(a1 + 8);
-    v10[3] = Profile::get(MEMORY[0xAF33D0]);
+    v10[3] = Profile__get(MEMORY[0xAF33D0]);
     v10[4] = v3;
     *(float *)&v10[5] = v4 + 16.0;
     v10[6] = v2;
     LOWORD(v10[8]) = *(unsigned __int8 *)(a1 + 86);
     BYTE2(v10[8]) = 0;
     v10[10] = 0;
-    v5 = ActorMgr::create(MEMORY[0xC7B400], (int)v10, 1);
+    v5 = ActorMgr__create(MEMORY[0xC7B400], (int)v10, 1);
     if ( v5 )
     {
       if ( _cxa_guard_acquire_0(13301996) )
@@ -176907,7 +176907,7 @@ static inline unsigned int uxtb16(unsigned int x)
     memset(v11, 0, sizeof(v11));
     v11[2] = *(_DWORD *)(a1 + 8);
     v6 = v5 + 6.0;
-    v11[3] = Profile::get(MEMORY[0xAF3398]);
+    v11[3] = Profile__get(MEMORY[0xAF3398]);
     *(float *)&v11[4] = v4 + -8.0;
     *(float *)&v11[5] = v6;
     v11[6] = v2;
@@ -176915,7 +176915,7 @@ static inline unsigned int uxtb16(unsigned int x)
     BYTE2(v11[8]) = 0;
     BYTE1(v11[9]) = *(_BYTE *)(a1 + 29);
     v12 = 0;
-    v7 = ActorMgr::create(MEMORY[0xC7B400], (int)v11, 1);
+    v7 = ActorMgr__create(MEMORY[0xC7B400], (int)v11, 1);
     if ( v7 )
     {
       if ( _cxa_guard_acquire_0(13298784) )
@@ -176935,7 +176935,7 @@ static inline unsigned int uxtb16(unsigned int x)
     memset(&v11[1], 0, 0x24u);
     v11[0] = 1;
     v11[2] = *(_DWORD *)(a1 + 8);
-    v11[3] = Profile::get(MEMORY[0xAF3398]);
+    v11[3] = Profile__get(MEMORY[0xAF3398]);
     *(float *)&v11[4] = v8 + 8.0;
     *(float *)&v11[5] = v6;
     v11[6] = v2;
@@ -176943,7 +176943,7 @@ static inline unsigned int uxtb16(unsigned int x)
     BYTE2(v11[8]) = 0;
     BYTE1(v11[9]) = *(_BYTE *)(a1 + 29);
     v12 = 0;
-    result = ActorMgr::create(MEMORY[0xC7B400], (int)v11, 1);
+    result = ActorMgr__create(MEMORY[0xC7B400], (int)v11, 1);
     v10 = result;
     if ( result )
     {
@@ -176986,14 +176986,14 @@ static inline unsigned int uxtb16(unsigned int x)
     memset(&v10[1], 0, 0x24u);
     v10[0] = 150994944;
     v10[2] = *(_DWORD *)(a1 + 8);
-    v10[3] = Profile::get(MEMORY[0xAF367C]);
+    v10[3] = Profile__get(MEMORY[0xAF367C]);
     v10[4] = v4;
     v10[5] = v3;
     v10[6] = v2;
     LOWORD(v10[8]) = *(unsigned __int8 *)(a1 + 86);
     BYTE2(v10[8]) = 0;
     v10[10] = 0;
-    v5 = ActorMgr::create(MEMORY[0xC7B400], (int)v10, 1);
+    v5 = ActorMgr__create(MEMORY[0xC7B400], (int)v10, 1);
     if ( v5 )
     {
       if ( _cxa_guard_acquire_0(13087768) )
@@ -177041,14 +177041,14 @@ static inline unsigned int uxtb16(unsigned int x)
     memset(&v7[1], 0, 0x24u);
     v7[0] = *(_DWORD *)(a1 + 20) & 0xFF00 | 0x20000;
     v7[2] = *(_DWORD *)(a1 + 8);
-    v7[3] = Profile::get(MEMORY[0xAF328C]);
+    v7[3] = Profile__get(MEMORY[0xAF328C]);
     v7[4] = v4;
     v7[5] = v3;
     v7[6] = v2;
     LOWORD(v7[8]) = *(unsigned __int8 *)(a1 + 86);
     BYTE2(v7[8]) = 0;
     v7[10] = 0;
-    result = ActorMgr::create(MEMORY[0xC7B400], (int)v7, 1);
+    result = ActorMgr__create(MEMORY[0xC7B400], (int)v7, 1);
     v6 = result;
     if ( result )
     {
@@ -177448,7 +177448,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v14; // r5
   
     v2 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xCAF848] + 8))() )
     {
@@ -177515,7 +177515,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13301896);
       return Scale_init(a1 + 8260, 24);
     }
-    v9 = StateMgr::getCurrentState(v2);
+    v9 = StateMgr__getCurrentState(v2);
     v10 = (*(int (__fastcall **)(int))(*(_DWORD *)v9 + 8))(v9);
     if ( v10 == (*(int (**)(void))(MEMORY[0xCAF868] + 8))() )
     {
@@ -177651,7 +177651,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -177670,7 +177670,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -178376,7 +178376,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (*(_DWORD *)(a1 + 6260) & 0x3000000) == 0x2000000 )
       SE_VOC_CH_YS_GOKUN_ref_2(a1);
     *(_BYTE *)(a1 + 13476) = 0;
-    CurrentState = StateMgr::getCurrentState(a1 + 13452);
+    CurrentState = StateMgr__getCurrentState(a1 + 13452);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xCAF9BC] + 8))() )
     {
@@ -178385,7 +178385,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v6 = StateMgr::getCurrentState(a1 + 13452);
+      v6 = StateMgr__getCurrentState(a1 + 13452);
       v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 8))(v6);
       v8 = (*(int (**)(void))(MEMORY[0xCAF9DC] + 8))();
       v9 = (int *)(a1 + 13468);
@@ -178403,7 +178403,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = 13302268;
       }
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 13452), v5);
+    return StateMgr__changeState((_DWORD *)(a1 + 13452), v5);
   }
 
 /* ============================================================================
@@ -178437,7 +178437,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v6 )
         *(_DWORD *)(a1 + 13472) = v6 - 1;
     }
-    return StateMgr::execute((_DWORD *)(a1 + 13452));
+    return StateMgr__execute((_DWORD *)(a1 + 13452));
   }
 
 /* ============================================================================
@@ -178447,7 +178447,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605994F4(int a1)
   {
     *(_DWORD *)(a1 + 13468) = 0;
-    return StateMgr::changeState((_DWORD *)(a1 + 13452), 13302204);
+    return StateMgr__changeState((_DWORD *)(a1 + 13452), 13302204);
   }
 
 /* ============================================================================
@@ -178467,7 +178467,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( (*(_BYTE *)(a1 + 6262) & 2) == 0 )
       return sub_605E160C(a1);
-    CurrentState = StateMgr::getCurrentState(a1 + 13452);
+    CurrentState = StateMgr__getCurrentState(a1 + 13452);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v4 = (*(int (**)(void))(MEMORY[0xCAF9DC] + 8))();
     v5 = (_DWORD *)(a1 + 13468);
@@ -178480,7 +178480,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return sub_605E160C(a1);
     }
     *v5 = 3;
-    StateMgr::changeState((_DWORD *)(a1 + 13452), 13302332);
+    StateMgr__changeState((_DWORD *)(a1 + 13452), 13302332);
     *(_DWORD *)(a1 + 80) = 0;
     if ( *(_DWORD *)(a1 + 8020) == 2 )
     {
@@ -178575,7 +178575,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( (*(_BYTE *)(a1 + 6262) & 2) == 0 )
       return sub_605E1C54((_DWORD *)a1);
-    CurrentState = StateMgr::getCurrentState(a1 + 13452);
+    CurrentState = StateMgr__getCurrentState(a1 + 13452);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v5 = (*(int (**)(void))(MEMORY[0xCAF9DC] + 8))();
     v6 = (_DWORD *)(a1 + 13468);
@@ -178588,7 +178588,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return sub_605E1C54((_DWORD *)a1);
     }
     *v6 = 3;
-    StateMgr::changeState((_DWORD *)(a1 + 13452), 13302332);
+    StateMgr__changeState((_DWORD *)(a1 + 13452), 13302332);
     *(_DWORD *)(a1 + 6264) |= 0x400000u;
     Object_setTripleAndChangeState(a1, 13309832, 0);
     *(_DWORD *)(a1 + 120) = 0;
@@ -178988,7 +178988,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v12 = 13302204;
       else
         v12 = 13302268;
-      return (float *)StateMgr::changeState((_DWORD *)(a1 + 13452), v12);
+      return (float *)StateMgr__changeState((_DWORD *)(a1 + 13452), v12);
     }
     else
     {
@@ -179059,17 +179059,17 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v6 )
       {
         *(_DWORD *)(a1 + 13468) = 3;
-        return StateMgr::changeState((_DWORD *)(a1 + 13452), 13302332);
+        return StateMgr__changeState((_DWORD *)(a1 + 13452), 13302332);
       }
       if ( (*(_BYTE *)(v6 + 1231) & 1) != 0 )
       {
         *(_DWORD *)(a1 + 13468) = 1;
-        return StateMgr::changeState((_DWORD *)(a1 + 13452), 13302332);
+        return StateMgr__changeState((_DWORD *)(a1 + 13452), 13302332);
       }
       if ( (*(_BYTE *)(v6 + 6900) & 1) != 0 )
       {
         *(_DWORD *)(a1 + 13468) = 2;
-        return StateMgr::changeState((_DWORD *)(a1 + 13452), 13302332);
+        return StateMgr__changeState((_DWORD *)(a1 + 13452), 13302332);
       }
     }
     v2 = *(float *)(a1 + 13484);
@@ -179119,7 +179119,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       *(_DWORD *)(a1 + 13468) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 13452), 13302300);
+      return StateMgr__changeState((_DWORD *)(a1 + 13452), 13302300);
     }
     return result;
   }
@@ -179170,24 +179170,24 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v3 )
       {
         *(_DWORD *)(a1 + 13468) = 3;
-        return StateMgr::changeState((_DWORD *)(a1 + 13452), 13302332);
+        return StateMgr__changeState((_DWORD *)(a1 + 13452), 13302332);
       }
       if ( (*(_BYTE *)(v3 + 1231) & 1) != 0 )
       {
         *(_DWORD *)(a1 + 13468) = 1;
-        return StateMgr::changeState((_DWORD *)(a1 + 13452), 13302332);
+        return StateMgr__changeState((_DWORD *)(a1 + 13452), 13302332);
       }
       if ( (*(_BYTE *)(v3 + 6900) & 1) != 0 )
       {
         *(_DWORD *)(a1 + 13468) = 2;
-        return StateMgr::changeState((_DWORD *)(a1 + 13452), 13302332);
+        return StateMgr__changeState((_DWORD *)(a1 + 13452), 13302332);
       }
     }
     result = *(_DWORD *)(a1 + 13472);
     if ( result <= MEMORY[0xB05AC0] - MEMORY[0xB05AC4] )
     {
       *(_DWORD *)(a1 + 13468) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 13452), 13302332);
+      return StateMgr__changeState((_DWORD *)(a1 + 13452), 13302332);
     }
     return result;
   }
@@ -179290,7 +179290,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       *(_DWORD *)(a1 + 13468) = 1;
-      return StateMgr::changeState((_DWORD *)(a1 + 13452), 13302236);
+      return StateMgr__changeState((_DWORD *)(a1 + 13452), 13302236);
     }
     return result;
   }
@@ -179325,7 +179325,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 0;
     if ( (*(_BYTE *)(a1 + 6262) & 2) != 0 )
     {
-      CurrentState = StateMgr::getCurrentState(a1 + 13452);
+      CurrentState = StateMgr__getCurrentState(a1 + 13452);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       v5 = (*(int (**)(void))(MEMORY[0xCAF9DC] + 8))();
       v6 = (_DWORD *)(a1 + 13468);
@@ -179338,7 +179338,7 @@ static inline unsigned int uxtb16(unsigned int x)
         return 1;
       }
       *v6 = 3;
-      StateMgr::changeState((_DWORD *)(a1 + 13452), 13302332);
+      StateMgr__changeState((_DWORD *)(a1 + 13452), 13302332);
       return 1;
     }
     return v2;
@@ -179581,16 +179581,16 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12628472;
     *(_DWORD *)(a1 + 7896) = 12325992;
     EffectData_release(a1 + 7896);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7896));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 7896));
     *(_DWORD *)(a1 + 7792) = 12325992;
     EffectData_release(a1 + 7792);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7792));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 7792));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7452));
     ActiveCollider_dtor(v2);
     nullsub_407(a1 + 6080);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -179609,16 +179609,16 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12628472;
     *(_DWORD *)(a1 + 7896) = 12325992;
     EffectData_release(a1 + 7896);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7896));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 7896));
     *(_DWORD *)(a1 + 7792) = 12325992;
     EffectData_release(a1 + 7792);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7792));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 7792));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7452));
     ActiveCollider_dtor(v2);
     nullsub_407(a1 + 6080);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -179905,7 +179905,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD207B;
-    Profile::Profile(13302076, 5866788, MEMORY[0xAF3428], (int)v1, &unk_60B04D3C, 6);
+    Profile__Profile(13302076, 5866788, MEMORY[0xAF3428], (int)v1, &unk_60B04D3C, 6);
     MEMORY[0xCAF958] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAF95C] = 292;
     MEMORY[0xCAF960] = 1;
@@ -180521,7 +180521,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[25] = -0.1875;
       a1[34] = -6.0;
     }
-    ActiveCollider::init((int)(a1 + 47), (int)a1, dword_60C07960, 0);
+    ActiveCollider__init((int)(a1 + 47), (int)a1, dword_60C07960, 0);
     v3.n64_u32[0] = 5.0;
     v15 = (float)(*(_DWORD *)v10 & 0xFFFFFF) * 0.000000059605;
     v16 = *(float *)(((*(_DWORD *)v10 >> 20) & 0xFF0) + 0xB3A48C)
@@ -180586,7 +180586,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v33(v31, v34, v40);
     a1[1603] = *v10;
     if ( !*(_BYTE *)(MEMORY[0xCC6D8C] + 17)
-      || (v35 = a1[128], a1[128] = v35 * 0.5, isOffScreen = StageActor::isOffScreen(a1), a1[128] = v35, !isOffScreen) )
+      || (v35 = a1[128], a1[128] = v35 * 0.5, isOffScreen = StageActor__isOffScreen(a1), a1[128] = v35, !isOffScreen) )
     {
       sub_605C6F0C(a1 + 1531, v40, a1 + 1606);
     }
@@ -180625,7 +180625,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE v26[48]; // [sp+10h] [bp-30h] BYREF
   
     v2 = (_BYTE *)(a1 + 7128);
-    if ( Actor::getProfileId((Actor *)a1) == MEMORY[0xAF30A8] && *v2 )
+    if ( Actor__getProfileId((Actor *)a1) == MEMORY[0xAF30A8] && *v2 )
     {
       checkLiquidCollisions(&v24, 0, (float *)(a1 + 6440), *(unsigned __int8 *)(a1 + 86));
       v3 = v24;
@@ -180634,7 +180634,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v4 )
       {
         v5 = (_DWORD *)(a1 + 6084);
-        CurrentState = StateMgr::getCurrentState(a1 + 6084);
+        CurrentState = StateMgr__getCurrentState(a1 + 6084);
         v10 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         if ( v10 == (*(int (**)(void))(MEMORY[0xCAFB0C] + 8))() )
           goto LABEL_10;
@@ -180644,21 +180644,21 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v3 )
       {
         v5 = (_DWORD *)(a1 + 6084);
-        v6 = StateMgr::getCurrentState(a1 + 6084);
+        v6 = StateMgr__getCurrentState(a1 + 6084);
         v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 8))(v6);
         if ( v7 == (*(int (**)(void))(MEMORY[0xCAFB0C] + 8))() )
         {
           v8 = 13302468;
   LABEL_9:
-          StateMgr::changeState(v5, v8);
+          StateMgr__changeState(v5, v8);
         }
       }
     }
   LABEL_10:
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     if ( *v2 )
     {
-      CollisionActor::handleGravity(a1);
+      CollisionActor__handleGravity(a1);
       *(float *)(a1 + 108) = *(float *)(a1 + 108) + *(float *)(a1 + 120);
       *(float *)(a1 + 112) = *(float *)(a1 + 112) + *(float *)(a1 + 124);
       *(float *)(a1 + 116) = *(float *)(a1 + 116) + *(float *)(a1 + 128);
@@ -180693,13 +180693,13 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(MEMORY[0xCC6D8C] + 17)
       || (v21 = *(float *)(a1 + 512),
           *(float *)(a1 + 512) = v21 * 0.5,
-          isOffScreen = StageActor::isOffScreen((float *)a1),
+          isOffScreen = StageActor__isOffScreen((float *)a1),
           *(float *)(a1 + 512) = v21,
           !isOffScreen) )
     {
       sub_605C6F0C(a1 + 6124, v26, a1 + 6424);
     }
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -180721,7 +180721,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6059C8C0(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 6084), 13302504);
+    return StateMgr__changeState((_DWORD *)(a1 + 6084), 13302504);
   }
 
 /* ============================================================================
@@ -180843,11 +180843,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r5
   
     v2 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xCAFAC4] + 8))() )
       return *(_DWORD *)(a1 + 7136) < 60;
-    v6 = StateMgr::getCurrentState(v2);
+    v6 = StateMgr__getCurrentState(v2);
     v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 8))(v6);
     if ( v7 != (*(int (**)(void))(MEMORY[0xCAFAE8] + 8))() )
       return 0;
@@ -180878,11 +180878,11 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = *(_DWORD *)(result + 7136);
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 6084), 13302504);
+      return StateMgr__changeState((_DWORD *)(result + 6084), 13302504);
     v2 = v1 - 1;
     *(_DWORD *)(result + 7136) = v2;
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(result + 6084), 13302504);
+      return StateMgr__changeState((_DWORD *)(result + 6084), 13302504);
     return result;
   }
 
@@ -181010,16 +181010,16 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12613744;
     v2 = (struct sead_IDisposer *)(a1 + 6340);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
-    LightSource::~LightSource(v2);
+    LightSource__dtor(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
     EffectData_release(a1 + 6236);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
     EffectData_release(a1 + 6132);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -181034,16 +181034,16 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12613744;
     v2 = (struct sead_IDisposer *)(a1 + 6340);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
-    LightSource::~LightSource(v2);
+    LightSource__dtor(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
     EffectData_release(a1 + 6236);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
     EffectData_release(a1 + 6132);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -181088,7 +181088,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AC7583;
-    Profile::Profile(13302444, 5881452, MEMORY[0xAF30A8], (int)v1, &unk_60B04D84, 2);
+    Profile__Profile(13302444, 5881452, MEMORY[0xAF30A8], (int)v1, &unk_60B04D84, 2);
     MEMORY[0xCAFAC8] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAFACC] = 228;
     MEMORY[0xCAFAD0] = 1;
@@ -181231,11 +181231,11 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = *(_DWORD *)(result + 7140);
     if ( !v1 )
-      return StateMgr::changeState((_DWORD *)(result + 6084), 13302712);
+      return StateMgr__changeState((_DWORD *)(result + 6084), 13302712);
     v2 = v1 - 1;
     *(_DWORD *)(result + 7140) = v2;
     if ( !v2 )
-      return StateMgr::changeState((_DWORD *)(result + 6084), 13302712);
+      return StateMgr__changeState((_DWORD *)(result + 6084), 13302712);
     return result;
   }
 
@@ -181253,11 +181253,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r5
   
     v2 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xCAFB94] + 8))() )
       return *(_DWORD *)(a1 + 7140) < 41;
-    v6 = StateMgr::getCurrentState(v2);
+    v6 = StateMgr__getCurrentState(v2);
     v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 8))(v6);
     if ( v7 != (*(int (**)(void))(MEMORY[0xCAFBB8] + 8))() )
       return 0;
@@ -181374,7 +181374,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v15 = v14 == 1;
       if ( v15 )
       {
-        StateMgr::changeState((_DWORD *)(a1 + 6084), 13302676);
+        StateMgr__changeState((_DWORD *)(a1 + 6084), 13302676);
         v5 = *(float *)(a1 + 144);
       }
     }
@@ -181469,16 +181469,16 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12613744;
     v2 = (struct sead_IDisposer *)(a1 + 6340);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
-    LightSource::~LightSource(v2);
+    LightSource__dtor(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
     EffectData_release(a1 + 6236);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
     EffectData_release(a1 + 6132);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -181523,7 +181523,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2100;
-    Profile::Profile(13302652, 5886560, MEMORY[0xAF30AC], (int)v1, &unk_60B04DB8, 2);
+    Profile__Profile(13302652, 5886560, MEMORY[0xAF30AC], (int)v1, &unk_60B04DB8, 2);
     MEMORY[0xCAFB98] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAFB9C] = 228;
     MEMORY[0xCAFBA0] = 1;
@@ -181581,7 +181581,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v1 || (v2 = v1 - 1, (result[1939] = v2) == 0) )
     {
       result[20] ^= 1u;
-      return (_DWORD *)StateMgr::changeState(result + 1521, 13302812);
+      return (_DWORD *)StateMgr__changeState(result + 1521, 13302812);
     }
     return result;
   }
@@ -181626,7 +181626,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v5 >= v7 )
     {
       *result = v6;
-      return (int *)StateMgr::changeState(a1 + 1521, 13302780);
+      return (int *)StateMgr__changeState(a1 + 1521, 13302780);
     }
     return result;
   }
@@ -181719,7 +181719,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v32[9]; // [sp+80h] [bp-24h] BYREF
   
     v2 = 0;
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v16 = 12321336;
     v17 = (int)"fire_rot_cannon";
     *(_DWORD *)(a1 + 6120) = Resource_getModel2(ResArchiveById, (int)&v16, 0, 0, 0, 0, 0, 0, 0);
@@ -181788,14 +181788,14 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v2 < 0xA )
         v10 = v2;
       v11 = a1 + 304 * v10 + 7780;
-      ActiveCollider::init(v11, a1, dword_60C07BA8, 0);
+      ActiveCollider__init(v11, a1, dword_60C07BA8, 0);
       v12 = MEMORY[0xC88234];
       if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], v11) && !ActiveColliderMgr_isInCreateList(v12, v11) )
         ActiveColliderMgr_addToCreateList(v12, v11);
       ++v2;
     }
     while ( (signed int)v2 < *(_DWORD *)(a1 + 7764) );
-    StateMgr::changeState((_DWORD *)(a1 + 6084), 13302812);
+    StateMgr__changeState((_DWORD *)(a1 + 6084), 13302812);
     ef_fire_rot_cannon_ref(a1);
     v13 = *(float *)(a1 + 7748) - *(float *)(a1 + 112);
     *(float *)(a1 + 7268) = *(float *)(a1 + 7744) - *(float *)(a1 + 108);
@@ -181913,7 +181913,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return sub_605C6F0C(a1 + 6124, v17, &v14);
     v12 = *(float *)(a1 + 512);
     *(float *)(a1 + 512) = v12 * 0.5;
-    result = StageActor::isOffScreen((float *)a1);
+    result = StageActor__isOffScreen((float *)a1);
     *(float *)(a1 + 512) = v12;
     if ( !result )
       return sub_605C6F0C(a1 + 6124, v17, &v14);
@@ -182067,10 +182067,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = v8 & 0xFE;
   LABEL_13:
     *v7 = v9;
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     if ( *(_BYTE *)(a1 + 10820) )
     {
-      CollisionActor::handleGravity(a1);
+      CollisionActor__handleGravity(a1);
       *(float *)(a1 + 108) = *(float *)(a1 + 108) + *(float *)(a1 + 120);
       *(float *)(a1 + 112) = *(float *)(a1 + 112) + *(float *)(a1 + 124);
       *(float *)(a1 + 116) = *(float *)(a1 + 116) + *(float *)(a1 + 128);
@@ -182083,7 +182083,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_execute((_DWORD *)(a1 + 6424), v10, v11, v12);
     *(_DWORD *)(a1 + 7324) = *(_DWORD *)(a1 + 7736);
     ShapedCollider_execute((_DWORD *)(a1 + 7080), 7324, v13, v14);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -182245,16 +182245,16 @@ static inline unsigned int uxtb16(unsigned int x)
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7780));
     ShapedCollider_dtor(a1 + 7080);
     ShapedCollider_dtor(a1 + 6424);
-    LightSource::~LightSource((LightSource *)(a1 + 6340));
+    LightSource__dtor((LightSource *)(a1 + 6340));
     *(_DWORD *)(a1 + 6236) = 12325992;
     EffectData_release(a1 + 6236);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
     EffectData_release(a1 + 6132);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -182279,7 +182279,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2112;
-    Profile::Profile(13302756, 5888868, MEMORY[0xAF30B4], (int)v1, &unk_60B04DDC, 2);
+    Profile__Profile(13302756, 5888868, MEMORY[0xAF30B4], (int)v1, &unk_60B04DDC, 2);
     MEMORY[0xCAFC00] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAFBFC] = 12614620;
     MEMORY[0xCAFC04] = 5888896;
@@ -182421,7 +182421,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v5 == 1 )
           {
             v6 = (_DWORD *)(a1 + 6084);
-            CurrentState = StateMgr::getCurrentState((int)v6);
+            CurrentState = StateMgr__getCurrentState((int)v6);
             v11 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
             if ( v11 != (*(int (**)(void))(MEMORY[0xCAFCA0] + 8))() )
             {
@@ -182432,13 +182432,13 @@ static inline unsigned int uxtb16(unsigned int x)
           else if ( !v5 )
           {
             v6 = (_DWORD *)(a1 + 6084);
-            v7 = StateMgr::getCurrentState((int)v6);
+            v7 = StateMgr__getCurrentState((int)v6);
             v8 = (*(int (__fastcall **)(int))(*(_DWORD *)v7 + 8))(v7);
             if ( v8 != (*(int (**)(void))(MEMORY[0xCAFCC4] + 8))() )
             {
               v9 = 13302980;
   LABEL_13:
-              StateMgr::changeState(v6, v9);
+              StateMgr__changeState(v6, v9);
             }
           }
         }
@@ -182463,7 +182463,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6059F25C(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 6084), 13302912);
+    return StateMgr__changeState((_DWORD *)(a1 + 6084), 13302912);
   }
 
 /* ============================================================================
@@ -182491,11 +182491,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r5
   
     v2 = a1 + 6084;
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xCAFCA0] + 8))() )
       return *(_DWORD *)(a1 + 7168) < 0x3Cu;
-    v6 = StateMgr::getCurrentState(v2);
+    v6 = StateMgr__getCurrentState(v2);
     v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 8))(v6);
     if ( v7 != (*(int (**)(void))(MEMORY[0xCAFCC4] + 8))() )
       return 0;
@@ -182668,16 +182668,16 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12613744;
     v2 = (struct sead_IDisposer *)(a1 + 6340);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
-    LightSource::~LightSource(v2);
+    LightSource__dtor(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
     EffectData_release(a1 + 6236);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
     EffectData_release(a1 + 6132);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -182690,7 +182690,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int ProfileId; // r1
     _BOOL4 result; // r0
   
-    ProfileId = Actor::getProfileId(a2);
+    ProfileId = Actor__getProfileId(a2);
     result = 0;
     if ( ProfileId == MEMORY[0xAF2D78] )
       return (*(_BYTE *)(a2 + 23) & 0xF) == *(_BYTE *)(a1 + 4);
@@ -182722,7 +182722,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2138;
-    Profile::Profile(13302888, 5893692, MEMORY[0xAF30B0], (int)v1, &unk_60B04E0C, 2);
+    Profile__Profile(13302888, 5893692, MEMORY[0xAF30B0], (int)v1, &unk_60B04E0C, 2);
     MEMORY[0xCAFC84] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAFC80] = 12614900;
     MEMORY[0xCAFC88] = 5893872;
@@ -182764,7 +182764,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v4; // r1
   
     v2 = operator new(0x298u);
-    result = (_DWORD *)StageActor::StageActor(v2, a1);
+    result = (_DWORD *)StageActor__StageActor(v2, a1);
     *result = 12614940;
     result[161] = 0;
     v4 = result[5];
@@ -182879,7 +182879,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v1);
   }
 
@@ -182893,7 +182893,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &aObj;
-    return Profile::Profile(13303032, 5896648, MEMORY[0xAF2D78], (int)v1, &unk_60B04E30, 0);
+    return Profile__Profile(13303032, 5896648, MEMORY[0xAF2D78], (int)v1, &unk_60B04E30, 0);
   }
 
 /* ============================================================================
@@ -182908,7 +182908,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r2
   
     v0 = (_DWORD *)operator new(0x1A98u);
-    Enemy::Enemy((int)v0);
+    Enemy__Enemy((int)v0);
     *v0 = 12615080;
     memset(v0 + 1575, 0, 0x23u);
     v0[1589] = 0;
@@ -182951,7 +182951,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6059FEA4(float *a1)
   {
     if ( a1[28] >= a1[1577] )
-      return CollisionActor::handleGravity((int)a1);
+      return CollisionActor__handleGravity((int)a1);
     else
       return (*(int (__fastcall **)(float *, int))(*(_DWORD *)a1 + 192))(a1, 13303188);
   }
@@ -183840,7 +183840,7 @@ static inline unsigned int uxtb16(unsigned int x)
     while ( !v18 );
     if ( v19 == 0.0 )
     {
-      StageActor::delete(a1, 1);
+      StageActor__delete(a1, 1);
       v5 = v19;
     }
     else
@@ -183855,9 +183855,9 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(float *)(a1 + 6308) = v5;
     v7 = (float *)(a1 + 6308);
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     SE_OBJ_TARU_LIFT_ROLL_ref(a1);
-    StageActor::accelerateX((float *)a1);
+    StageActor__accelerateX((float *)a1);
     *(_DWORD *)(a1 + 6312) = *(_DWORD *)(a1 + 112);
     v9 = (_DWORD *)(a1 + 6336);
     v8 = *(_DWORD *)(a1 + 6336);
@@ -183879,7 +183879,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
       }
     }
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleSpeed(a1);
     SolidOnTopCollider_execute(a1 + 6360);
     sub_605A1410((_DWORD *)a1);
     if ( *v9 == *(_DWORD *)(a1 + 6340) )
@@ -183914,7 +183914,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v16 < 0.0 && *(float *)(a1 + 112) <= v15 && *v14 > v15 )
       goto LABEL_27;
   LABEL_28:
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -184144,7 +184144,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -184161,7 +184161,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -184178,7 +184178,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAFD18 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD2167;
-    Profile::Profile(13303068, 5897504, MEMORY[0xAF30A4], (int)v1, &unk_60B04E54, 2);
+    Profile__Profile(13303068, 5897504, MEMORY[0xAF30A4], (int)v1, &unk_60B04E54, 2);
     MEMORY[0xCAFD38] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAFD34] = 12615712;
     MEMORY[0xCAFD3C] = 5897888;
@@ -184619,7 +184619,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[22416] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 22416);
     ActorMgr_unregisterIfActive(a1 + 22416);
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[18252] = 12615976;
     nullsub_1720();
     Object_releaseHandle(v2);
@@ -184632,13 +184632,13 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12616008;
     a1[18064] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 18064);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18064));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 18064));
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor(a1 + 1534);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -184746,7 +184746,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2187;
-    return Profile::Profile(13303444, 5906608, MEMORY[0xAF2E94], (int)v1, &unk_60B04E78, 0);
+    return Profile__Profile(13303444, 5906608, MEMORY[0xAF2E94], (int)v1, &unk_60B04E78, 0);
   }
 
 /* ============================================================================
@@ -184755,7 +184755,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall TerrainActor_ctor(_DWORD *a1)
   {
-    MultiStateActor::MultiStateActor(a1);
+    MultiStateActor__MultiStateActor(a1);
     *a1 = 12616008;
     a1[1533] = 0;
     a1[1532] = 0;
@@ -185942,7 +185942,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( !*(_DWORD *)(MEMORY[0xC995D0] + 32) || (*(_BYTE *)(a1 + 27) & 0x20) != 0 && *(_DWORD *)(MEMORY[0xC99DD4] + 764) )
     {
-      StateMgr::execute((_DWORD *)(a1 + 6084));
+      StateMgr__execute((_DWORD *)(a1 + 6084));
       if ( *(_BYTE *)(a1 + 6893) )
         ShapedCollider_execute((_DWORD *)(a1 + 6136), v2, v3, v4);
       if ( !*(_BYTE *)(a1 + 6892) )
@@ -186338,13 +186338,13 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
     ActorMgr_unregisterIfActive(a1 + 18064);
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -186362,13 +186362,13 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
     ActorMgr_unregisterIfActive(a1 + 18064);
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v4);
   }
 
@@ -187323,13 +187323,13 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12616008;
     a1[18064] = 12348984;
     ActorMgr_unregisterIfActive((int)(a1 + 18064));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18064));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 18064));
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1534));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -187355,13 +187355,13 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12616008;
     a1[18064] = 12348984;
     ActorMgr_unregisterIfActive((int)(a1 + 18064));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18064));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 18064));
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1534));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -187387,7 +187387,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB0058 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD21A6;
-    return Profile::Profile(13303900, 5922064, MEMORY[0xAF2E90], (int)v1, &unk_60B04F14, 0);
+    return Profile__Profile(13303900, 5922064, MEMORY[0xAF2E90], (int)v1, &unk_60B04F14, 0);
   }
 
 /* ============================================================================
@@ -187571,13 +187571,13 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
     ActorMgr_unregisterIfActive(a1 + 18064);
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v4);
   }
 
@@ -187591,7 +187591,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD21DF;
-    return Profile::Profile(13303932, 5928872, MEMORY[0xAF2E88], (int)v1, &unk_60B04F38, 0);
+    return Profile__Profile(13303932, 5928872, MEMORY[0xAF2E88], (int)v1, &unk_60B04F38, 0);
   }
 
 /* ============================================================================
@@ -187685,7 +187685,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(MEMORY[0xCBD830] + 1509) = 1;
       }
       sub_605A51B0(a1, v11);
-      CurrentState = StateMgr::getCurrentState(a1 + 6084);
+      CurrentState = StateMgr__getCurrentState(a1 + 6084);
       v13 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       if ( v13 == (*(int (**)(void))(MEMORY[0xCAFEE8] + 8))() )
         sub_605A512C(a1);
@@ -188296,13 +188296,13 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
     ActorMgr_unregisterIfActive(a1 + 18064);
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v4);
   }
 
@@ -188331,7 +188331,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2202;
-    Profile::Profile(13303964, 5930288, MEMORY[0xAF2E7C], (int)v1, &unk_60B04F5C, 1024);
+    Profile__Profile(13303964, 5930288, MEMORY[0xAF2E7C], (int)v1, &unk_60B04F5C, 1024);
     MEMORY[0xCB00B8] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB00BC] = 212;
     MEMORY[0xCB00C0] = 1;
@@ -188534,13 +188534,13 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
     ActorMgr_unregisterIfActive(a1 + 18064);
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v4);
   }
 
@@ -188554,7 +188554,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2239;
-    return Profile::Profile(13304060, 5936264, MEMORY[0xAF2E8C], (int)v1, &unk_60B04F80, 0);
+    return Profile__Profile(13304060, 5936264, MEMORY[0xAF2E8C], (int)v1, &unk_60B04F80, 0);
   }
 
 /* ============================================================================
@@ -188633,7 +188633,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     sub_605A51B0(a1, 0);
     sub_605A53E4(a1);
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v9 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v9 == (*(int (**)(void))(MEMORY[0xCB0008] + 8))() )
       sub_605A512C(a1);
@@ -188960,13 +188960,13 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
     ActorMgr_unregisterIfActive(a1 + 18064);
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v4);
   }
 
@@ -188995,7 +188995,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD224F;
-    Profile::Profile(13304092, 5937644, MEMORY[0xAF2E80], (int)v1, &unk_60B04FA4, 0);
+    Profile__Profile(13304092, 5937644, MEMORY[0xAF2E80], (int)v1, &unk_60B04FA4, 0);
     MEMORY[0xCB0138] = ++MEMORY[0xC7B788];
     MEMORY[0xCB013C] = 224;
     MEMORY[0xCB0140] = 1;
@@ -189369,13 +189369,13 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
     ActorMgr_unregisterIfActive(a1 + 18064);
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v4);
   }
 
@@ -189404,7 +189404,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD22A5;
-    Profile::Profile(13304160, 5941104, MEMORY[0xAF2E84], (int)v1, &unk_60B04FC8, 0);
+    Profile__Profile(13304160, 5941104, MEMORY[0xAF2E84], (int)v1, &unk_60B04FC8, 0);
     MEMORY[0xCB017C] = ++MEMORY[0xC7B788];
     MEMORY[0xCB0180] = 224;
     MEMORY[0xCB0184] = 1;
@@ -190273,13 +190273,13 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[18064] = 12348984;
     v3 = (struct sead_IDisposer *)(a1 + 18064);
     ActorMgr_unregisterIfActive(a1 + 18064);
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1725] = 12615992;
     nullsub_1721();
     ShapedCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v4);
   }
 
@@ -190299,7 +190299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB01E4 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD22ED;
-    return Profile::Profile(13304228, 5943892, MEMORY[0xAF2E78], (int)v1, &unk_60B04FEC, 0);
+    return Profile__Profile(13304228, 5943892, MEMORY[0xAF2E78], (int)v1, &unk_60B04FEC, 0);
   }
 
 /* ============================================================================
@@ -190993,7 +190993,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -191012,7 +191012,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -191155,8 +191155,8 @@ static inline unsigned int uxtb16(unsigned int x)
     result = 0;
     if ( v2 == 1 )
     {
-      ActiveCollider::init((int)(a1 + 1606), (int)a1, dword_60C08BD4, 0);
-      ActiveCollider::init((int)(a1 + 1530), (int)a1, dword_60C08BD4, 0);
+      ActiveCollider__init((int)(a1 + 1606), (int)a1, dword_60C08BD4, 0);
+      ActiveCollider__init((int)(a1 + 1530), (int)a1, dword_60C08BD4, 0);
       a1[1639] = 0;
       v4 = (*(int (__fastcall **)(_DWORD *))(*a1 + 212))(a1);
       v5 = 2;
@@ -191283,7 +191283,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v1; // r1
     _BOOL4 result; // r0
   
-    v1 = CollisionActor::beforeExecute(a1);
+    v1 = CollisionActor__beforeExecute(a1);
     result = 0;
     if ( v1 == 1 )
       return !sub_607781EC(MEMORY[0xCBFA90]);
@@ -191302,7 +191302,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v5; // s0
   
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 216))(a1);
-    if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 220))(a1) == 1 && StageActor::cullCheck(a1, 0) == 1 )
+    if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 220))(a1) == 1 && StageActor__cullCheck(a1, 0) == 1 )
       *(_BYTE *)(a1 + 19) = 1;
     v2 = *(_DWORD *)(a1 + 6732);
     if ( v2 >= 1 )
@@ -191447,10 +191447,10 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           else
           {
-            result = Actor::getProfileId(a2[16]);
+            result = Actor__getProfileId(a2[16]);
             if ( result != MEMORY[0xAF31FC] )
             {
-              result = Actor::getProfileId(v5);
+              result = Actor__getProfileId(v5);
               if ( result == MEMORY[0xAF3914] )
               {
                 if ( _cxa_guard_acquire_0(13138136) )
@@ -191738,7 +191738,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ActiveCollider_dtor(v3);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v6);
   }
 
@@ -191870,7 +191870,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -191959,7 +191959,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD23B4;
-    return Profile::Profile(13304504, 5959248, MEMORY[0xAF360C], (int)v1, &unk_60B051CC, 2);
+    return Profile__Profile(13304504, 5959248, MEMORY[0xAF360C], (int)v1, &unk_60B051CC, 2);
   }
 
 /* ============================================================================
@@ -192094,7 +192094,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -192167,7 +192167,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD23C7;
-    return Profile::Profile(13304536, 5960796, MEMORY[0xAF3608], (int)v1, &unk_60B05200, 2);
+    return Profile__Profile(13304536, 5960796, MEMORY[0xAF3608], (int)v1, &unk_60B05200, 2);
   }
 
 /* ============================================================================
@@ -192305,7 +192305,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -192406,7 +192406,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD23DA;
-    return Profile::Profile(13304568, 5962208, MEMORY[0xAF3600], (int)v1, &unk_60B05234, 2);
+    return Profile__Profile(13304568, 5962208, MEMORY[0xAF3600], (int)v1, &unk_60B05234, 2);
   }
 
 /* ============================================================================
@@ -192544,7 +192544,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ActiveCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -192647,7 +192647,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD23ED;
-    return Profile::Profile(13304600, 5963820, MEMORY[0xAF3604], (int)v1, &unk_60B05268, 2);
+    return Profile__Profile(13304600, 5963820, MEMORY[0xAF3604], (int)v1, &unk_60B05268, 2);
   }
 
 /* ============================================================================
@@ -192706,7 +192706,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[36] = 1065353216;
     a1[37] = 1065353216;
     a1[38] = 1065353216;
-    StateMgr::changeState(a1 + 1521, 13304656);
+    StateMgr__changeState(a1 + 1521, 13304656);
     return 1;
   }
 
@@ -192735,7 +192735,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v19; // [sp+14h] [bp-8h] BYREF
     const char *v20; // [sp+18h] [bp-4h]
   
-    ResArchiveById = Profile::getResArchiveById(a1[3], 0);
+    ResArchiveById = Profile__getResArchiveById(a1[3], 0);
     v19 = 12321336;
     v20 = "big_shell_A_temae";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v19, 0, 0, 0, 0, 0, 0, 0);
@@ -192782,7 +192782,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605B0ADC(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     return 1;
   }
 
@@ -192880,7 +192880,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -192894,7 +192894,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2400;
-    Profile::Profile(13304632, 5965448, MEMORY[0xAF39A8], (int)v1, &unk_60B0529C, 2);
+    Profile__Profile(13304632, 5965448, MEMORY[0xAF39A8], (int)v1, &unk_60B0529C, 2);
     MEMORY[0xCB0354] = ++MEMORY[0xC7B788];
     MEMORY[0xCB0350] = 12620172;
     MEMORY[0xCB0358] = 5965552;
@@ -192916,7 +192916,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v0 = operator new(0x1B58u);
-    result = BlockCoinBase::BlockCoinBase(v0);
+    result = BlockCoinBase__BlockCoinBase(v0);
     *(_DWORD *)result = 12620192;
     *(_BYTE *)(result + 6992) = 0;
     *(_DWORD *)(result + 6988) = 0;
@@ -192938,7 +192938,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r2
     int v4; // r3
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     ShapedCollider_execute((_DWORD *)(a1 + 6120), v2, v3, v4);
     if ( *(_WORD *)(a1 + 6832) )
       --*(_WORD *)(a1 + 6832);
@@ -193271,13 +193271,13 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBaseD2Ev
  * RVA 0x005b1bec   size 0x48   xrefs 0
  * ============================================================================ */
-  void __fastcall BlockCoinBase::~BlockCoinBase(int a1)
+  void __fastcall BlockCoinBase__dtor(int a1)
   {
     *(_DWORD *)a1 = 12620796;
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -193292,7 +193292,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -193300,7 +193300,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase11spawnItemUpEv
  * RVA 0x005b1c90   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::spawnItemUp()
+  void BlockCoinBase__spawnItemUp()
   {
     ;
   }
@@ -193309,7 +193309,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase13spawnItemDownEv
  * RVA 0x005b1c94   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::spawnItemDown()
+  void BlockCoinBase__spawnItemDown()
   {
     ;
   }
@@ -193318,7 +193318,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfECEv
  * RVA 0x005b1c98   size 0x8   xrefs 0
  * ============================================================================ */
-  int BlockCoinBase::vfEC()
+  int BlockCoinBase__vfEC()
   {
     return 0;
   }
@@ -193345,7 +193345,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB03BC = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD2450;
-    return Profile::Profile(13304688, 5967340, MEMORY[0xAF31A4], (int)v1, 0, 4098);
+    return Profile__Profile(13304688, 5967340, MEMORY[0xAF31A4], (int)v1, 0, 4098);
   }
 
 /* ============================================================================
@@ -193422,7 +193422,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605B1EC4(int result)
   {
     if ( *(_BYTE *)(result + 6766) == 1 )
-      return StateMgr::changeState((_DWORD *)(result + 6084), 13304896);
+      return StateMgr__changeState((_DWORD *)(result + 6084), 13304896);
     --*(_BYTE *)(result + 6766);
     *(float *)(result + 144) = *(float *)(result + 144) + -0.1875;
     return result;
@@ -193446,7 +193446,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605B1F24(int result)
   {
     if ( *(_BYTE *)(result + 6766) == 1 )
-      return StateMgr::changeState((_DWORD *)(result + 6084), 13304864);
+      return StateMgr__changeState((_DWORD *)(result + 6084), 13304864);
     --*(_BYTE *)(result + 6766);
     *(float *)(result + 144) = *(float *)(result + 144) + 0.1875;
     return result;
@@ -193473,7 +193473,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605B1FA4(int a1, int a2, int a3, int a4)
   {
     if ( !*(_WORD *)(a1 + 6764) && !sub_605B2460((float *)a1) )
-      StateMgr::changeState((_DWORD *)(a1 + 6084), 13304800);
+      StateMgr__changeState((_DWORD *)(a1 + 6084), 13304800);
     return ShapedCollider_execute((_DWORD *)(a1 + 6104), a2, a3, a4);
   }
 
@@ -193509,10 +193509,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     if ( *(_WORD *)(a1 + 6764) )
-      return StateMgr::changeState((_DWORD *)(a1 + 6084), 13304832);
+      return StateMgr__changeState((_DWORD *)(a1 + 6084), 13304832);
     result = sub_605B2460((float *)a1);
     if ( result == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 6084), 13304832);
+      return StateMgr__changeState((_DWORD *)(a1 + 6084), 13304832);
     return result;
   }
 
@@ -193549,7 +193549,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)(a1 + 492) = 0;
     *(_DWORD *)(a1 + 496) = 0;
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v15 = 12321336;
     v16 = "block_challenge";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v15, 0, 0, 0, 0, 0, 0, 0);
@@ -193557,7 +193557,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = ModelWrapper_ctor(v4, Model2, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6100) = v4;
-    ActiveCollider::init(a1 + 188, a1, (int *)0xC092EC, 0);
+    ActiveCollider__init(a1 + 188, a1, (int *)0xC092EC, 0);
     v6 = MEMORY[0xC88234];
     if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 188) && !ActiveColliderMgr_isInCreateList(v6, a1 + 188) )
       ActiveColliderMgr_addToCreateList(v6, a1 + 188);
@@ -193589,7 +193589,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v11 = *v10;
     }
     *(float *)(a1 + 6760) = v11;
-    StateMgr::changeState((_DWORD *)(a1 + 6084), 13304896);
+    StateMgr__changeState((_DWORD *)(a1 + 6084), 13304896);
     v12 = *(_DWORD **)(a1 + 6100);
     v13 = *v12;
     (*(void (__fastcall **)(_DWORD, int))(*(_DWORD *)*v12 + 68))(*v12, a1 + 144);
@@ -193628,7 +193628,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = v4;
     if ( v4 )
       *v2 = v3 - 1;
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v5 = *(_DWORD **)(a1 + 6100);
     v6 = *v5;
     (*(void (__fastcall **)(_DWORD, int))(*(_DWORD *)*v5 + 68))(*v5, a1 + 144);
@@ -193646,7 +193646,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8[11] = *(_DWORD *)(a1 + 116);
     (*(void (__fastcall **)(int, _DWORD *))(*(_DWORD *)v6 + 60))(v6, v8);
     ModelWrapper_updateModel(v5);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -193755,7 +193755,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -193770,7 +193770,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -193786,7 +193786,7 @@ static inline unsigned int uxtb16(unsigned int x)
     flt_60CB03C4 = 0.0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD245D;
-    Profile::Profile(13304776, 5971500, MEMORY[0xAF3018], (int)v1, &unk_60B05348, 2);
+    Profile__Profile(13304776, 5971500, MEMORY[0xAF3018], (int)v1, &unk_60B05348, 2);
     MEMORY[0xCB03E4] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB03E0] = 12620776;
     MEMORY[0xCB03E8] = 5971628;
@@ -193827,9 +193827,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBaseC2EPK14ActorBuildInfo
  * RVA 0x005b2988   size 0x280   xrefs 4
  * ============================================================================ */
-  int __fastcall BlockCoinBase_BlockCoinBase(int a1)
+  int __fastcall BlockCoinBase__BlockCoinBase(int a1)
   {
-    MultiStateActor::MultiStateActor((_DWORD *)a1);
+    MultiStateActor__MultiStateActor((_DWORD *)a1);
     *(_DWORD *)a1 = 12620796;
     RectCollider_ctor((_DWORD *)(a1 + 6120));
     *(_DWORD *)(a1 + 6120) = 12333272;
@@ -194153,7 +194153,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           if ( *(_BYTE *)(v7 + 6844) )
             *(_BYTE *)(v7 + 6844) = 0;
-          result = Actor::getProfileId((Actor *)v4);
+          result = Actor__getProfileId((Actor *)v4);
           if ( result != MEMORY[0xAF32F0] )
           {
             (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 68))(v4, *(char *)(v3 + 84));
@@ -194893,7 +194893,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( (**(int (__fastcall ***)(int, int))a2)(a2, 13119732) != 1 )
       return v9;
-    CurrentState = StateMgr::getCurrentState(a2 + 6084);
+    CurrentState = StateMgr__getCurrentState(a2 + 6084);
     v11 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v11 != (*(int (**)(void))(MEMORY[0xC97720] + 8))() )
       return v9;
@@ -195457,14 +195457,14 @@ static inline unsigned int uxtb16(unsigned int x)
     BasicSoundActor2_play(v7, "SE_PLY_YOSHI_EGG_APPEAR", v11, 0);
     memset(&v10[1], 0, 0x24u);
     LODWORD(v10[0]) = (16 * a3) | (a2 << 12);
-    LODWORD(v10[3]) = Profile::get(MEMORY[0xAF39D4]);
+    LODWORD(v10[3]) = Profile__get(MEMORY[0xAF39D4]);
     v10[4] = v3;
     v10[5] = v4;
     v10[6] = v9;
     LOWORD(v10[8]) = 0;
     BYTE2(v10[8]) = 0;
     v10[10] = 0.0;
-    return ActorMgr::create(MEMORY[0xC7B400], (int)v10, 1);
+    return ActorMgr__create(MEMORY[0xC7B400], (int)v10, 1);
   }
 
 /* ============================================================================
@@ -195523,14 +195523,14 @@ static inline unsigned int uxtb16(unsigned int x)
         v17 = v20 | (v16 << 28);
         v18 = *v10++;
         LODWORD(v21[0]) = v17 | (v18 << 31) | 0x1002000;
-        LODWORD(v21[3]) = Profile::get(v19);
+        LODWORD(v21[3]) = Profile__get(v19);
         v21[4] = v13;
         v21[5] = v6;
         v21[6] = v12;
         LOWORD(v21[8]) = 0;
         BYTE2(v21[8]) = 0;
         v21[10] = 0.0;
-        result = ActorMgr::create(MEMORY[0xC7B400], (int)v21, 1);
+        result = ActorMgr__create(MEMORY[0xC7B400], (int)v21, 1);
         v8 = v13;
         --v9;
       }
@@ -195593,14 +195593,14 @@ static inline unsigned int uxtb16(unsigned int x)
         BasicSoundActor2_play(v14, "SE_PLY_YOSHI_EGG_APPEAR", v25, 0);
         memset(v24, 0, sizeof(v24));
         v23 = v22 | (dword_60AF2614[(_DWORD)v11] << 28) | (dword_60AF28C4[(_DWORD)v11] << 31) | 0x1000000;
-        v24[2] = Profile::get(v20);
+        v24[2] = Profile__get(v20);
         v24[3] = v8;
         *(float *)&v24[4] = v9;
         v24[5] = v21;
         LOWORD(v24[7]) = 0;
         BYTE2(v24[7]) = 0;
         v24[9] = 0;
-        ActorMgr::create(MEMORY[0xC7B400], v13, 1);
+        ActorMgr__create(MEMORY[0xC7B400], v13, 1);
         result = v12 + 1;
         v10 = (float *)v13;
         v11 = v12;
@@ -195622,14 +195622,14 @@ static inline unsigned int uxtb16(unsigned int x)
               | (dword_60AF2614[(_DWORD)v18 - v15 + 1] << 28)
               | (dword_60AF28C4[(_DWORD)v18 - v15 + 1] << 31)
               | 0x1002000;
-          v24[2] = Profile::get(v19);
+          v24[2] = Profile__get(v19);
           v24[3] = v8;
           *(float *)&v24[4] = v9;
           v24[5] = v21;
           LOWORD(v24[7]) = 0;
           BYTE2(v24[7]) = 0;
           v24[9] = 0;
-          result = ActorMgr::create(MEMORY[0xC7B400], v13, 1);
+          result = ActorMgr__create(MEMORY[0xC7B400], v13, 1);
           v10 = (float *)v13;
           --v15;
         }
@@ -195673,7 +195673,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase15spawnCoinShowerEv
  * RVA 0x005b5958   size 0xd8   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_spawnCoinShower(int a1)
+  int __fastcall BlockCoinBase__spawnCoinShower(int a1)
   {
     float v2; // r1
     int v3; // r2
@@ -195746,7 +195746,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v9 = (int *)(a1 + 6860);
     if ( sub_6078A3DC(MEMORY[0xCC436C], *(_DWORD *)(a1 + 6860)) == 1
-      && Actor::getProfileId((Actor *)a1) != MEMORY[0xAF322C] )
+      && Actor__getProfileId((Actor *)a1) != MEMORY[0xAF322C] )
     {
       v10 = *(_DWORD *)(a1 + 6856);
       if ( v10 == 2 )
@@ -195837,7 +195837,7 @@ static inline unsigned int uxtb16(unsigned int x)
       case 6:
         v6 = a1[1715];
         v7 = a1[1716];
-        return (int)BlockCoinBase::executeState_BumpUp2(MEMORY[0xCAF15C], a2, v7, v6);
+        return (int)BlockCoinBase__executeState_BumpUp2(MEMORY[0xCAF15C], a2, v7, v6);
       case 12:
       case 17:
         if ( sub_60465D70(MEMORY[0xC9D3E4], a1[1715]) )
@@ -195845,7 +195845,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *v4 = 12;
           v7 = a1[1716];
           v6 = a1[1715];
-          return (int)BlockCoinBase::executeState_BumpUp2(MEMORY[0xCAF15C], a2, v7, v6);
+          return (int)BlockCoinBase__executeState_BumpUp2(MEMORY[0xCAF15C], a2, v7, v6);
         }
         result = 3;
         goto LABEL_10;
@@ -195855,7 +195855,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *v4 = 12;
           v6 = a1[1715];
           v7 = a1[1716];
-          return (int)BlockCoinBase::executeState_BumpUp2(MEMORY[0xCAF15C], a2, v7, v6);
+          return (int)BlockCoinBase__executeState_BumpUp2(MEMORY[0xCAF15C], a2, v7, v6);
         }
         else
         {
@@ -195916,7 +195916,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v7 = v7 + 16.0;
         memset(v15, 0, sizeof(v15));
         v14 = (unsigned __int16)(a4 << 8) | (16 * v8);
-        LODWORD(v15[2]) = Profile::get(MEMORY[0xAF301C]);
+        LODWORD(v15[2]) = Profile__get(MEMORY[0xAF301C]);
         v15[3] = v6;
         v15[4] = v7;
         v15[5] = -32.0;
@@ -195940,7 +195940,7 @@ static inline unsigned int uxtb16(unsigned int x)
         BasicSoundActor2_play(v13, "SE_OBJ_JUMPDAI_APP", v17, 0);
         memset(v15, 0, sizeof(v15));
         v14 = 0x10000000;
-        LODWORD(v15[2]) = Profile::get(MEMORY[0xAF35D4]);
+        LODWORD(v15[2]) = Profile__get(MEMORY[0xAF35D4]);
         v15[3] = v10;
         v15[4] = v9 + v12;
         v15[5] = 0.0;
@@ -195948,7 +195948,7 @@ static inline unsigned int uxtb16(unsigned int x)
         BYTE2(v15[7]) = 0;
         v16 = 0;
   LABEL_9:
-        result = (float *)ActorMgr::create(MEMORY[0xC7B400], (int)&v14, 0);
+        result = (float *)ActorMgr__create(MEMORY[0xC7B400], (int)&v14, 0);
         break;
       default:
         return result;
@@ -196011,7 +196011,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v23 = v13;
     v14 = sub_60465D48(MEMORY[0xC9D3E4]);
     v25 = v14 + 1;
-    if ( sub_6078A168(MEMORY[0xCC436C]) == 1 && Actor::getProfileId((Actor *)a1) != MEMORY[0xAF322C] )
+    if ( sub_6078A168(MEMORY[0xCC436C]) == 1 && Actor__getProfileId((Actor *)a1) != MEMORY[0xAF322C] )
     {
       v16 = sub_60466074(MEMORY[0xC9D3E4], *v9);
       if ( sub_60466088(MEMORY[0xC9D3E4], v16) == 1 )
@@ -196225,7 +196225,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase4vfE8Ev
  * RVA 0x005b65a8   size 0xa0   xrefs 0
  * ============================================================================ */
-  float *__fastcall BlockCoinBase_vfE8(float *result, int a2)
+  float *__fastcall BlockCoinBase__vfE8(float *result, int a2)
   {
     float v2; // s0
     float *v3; // r1
@@ -196268,7 +196268,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase17beginState_BumpUpEv
  * RVA 0x005b6648   size 0x40   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_beginState_BumpUp(int a1)
+  int __fastcall BlockCoinBase__beginState_BumpUp(int a1)
   {
     *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
     *(_DWORD *)(a1 + 124) = 0x40000000;
@@ -196281,7 +196281,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase15endState_BumpUpEv
  * RVA 0x005b6688   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::endState_BumpUp()
+  void BlockCoinBase__endState_BumpUp()
   {
     ;
   }
@@ -196290,7 +196290,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase19executeState_BumpUpEv
  * RVA 0x005b668c   size 0x94   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_executeState_BumpUp(int a1)
+  int __fastcall BlockCoinBase__executeState_BumpUp(int a1)
   {
     float v2; // s0
   
@@ -196310,7 +196310,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase28beginState_BlockCoinBaseUnk1Ev
  * RVA 0x005b6720   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_beginState_BlockCoinBaseUnk1(int result)
+  int __fastcall BlockCoinBase__beginState_BlockCoinBaseUnk1(int result)
   {
     *(_BYTE *)(result + 6868) = 0;
     return result;
@@ -196320,7 +196320,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase26endState_BlockCoinBaseUnk1Ev
  * RVA 0x005b6730   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::endState_BlockCoinBaseUnk1()
+  void BlockCoinBase__endState_BlockCoinBaseUnk1()
   {
     ;
   }
@@ -196329,7 +196329,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase30executeState_BlockCoinBaseUnk1Ev
  * RVA 0x005b6734   size 0x14   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_executeState_BlockCoinBaseUnk1(int a1)
+  int __fastcall BlockCoinBase__executeState_BlockCoinBaseUnk1(int a1)
   {
     return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13305068);
   }
@@ -196338,7 +196338,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase19beginState_BumpDownEv
  * RVA 0x005b674c   size 0x40   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_beginState_BumpDown(int a1)
+  int __fastcall BlockCoinBase__beginState_BumpDown(int a1)
   {
     *(_DWORD *)(a1 + 6880) = 2;
     *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
@@ -196351,7 +196351,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase17endState_BumpDownEv
  * RVA 0x005b678c   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::endState_BumpDown()
+  void BlockCoinBase__endState_BumpDown()
   {
     ;
   }
@@ -196360,7 +196360,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase21executeState_BumpDownEv
  * RVA 0x005b6790   size 0x88   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_executeState_BumpDown(int a1)
+  int __fastcall BlockCoinBase__executeState_BumpDown(int a1)
   {
     float32x2_t v1; // d0
     float32x2_t v2; // d2
@@ -196380,7 +196380,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase28beginState_BlockCoinBaseUnk2Ev
  * RVA 0x005b6818   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_beginState_BlockCoinBaseUnk2(int result)
+  int __fastcall BlockCoinBase__beginState_BlockCoinBaseUnk2(int result)
   {
     *(_DWORD *)(result + 6816) = 6;
     return result;
@@ -196390,7 +196390,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase26endState_BlockCoinBaseUnk2Ev
  * RVA 0x005b6828   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::endState_BlockCoinBaseUnk2()
+  void BlockCoinBase__endState_BlockCoinBaseUnk2()
   {
     ;
   }
@@ -196399,7 +196399,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase30executeState_BlockCoinBaseUnk2Ev
  * RVA 0x005b682c   size 0x2c   xrefs 0
  * ============================================================================ */
-  _DWORD *__fastcall BlockCoinBase_executeState_BlockCoinBaseUnk2(_DWORD *result)
+  _DWORD *__fastcall BlockCoinBase__executeState_BlockCoinBaseUnk2(_DWORD *result)
   {
     int v1; // r2
     int v2; // r2
@@ -196418,7 +196418,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase18beginState_BumpUp2Ev
  * RVA 0x005b6858   size 0x84   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_beginState_BumpUp2(int a1)
+  int __fastcall BlockCoinBase__beginState_BumpUp2(int a1)
   {
     int *v1; // r4
     int v2; // t1
@@ -196443,7 +196443,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase16endState_BumpUp2Ev
  * RVA 0x005b68dc   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::endState_BumpUp2()
+  void BlockCoinBase__endState_BumpUp2()
   {
     ;
   }
@@ -196452,7 +196452,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase20executeState_BumpUp2Ev
  * RVA 0x005b68e0   size 0x240   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_executeState_BumpUp2(_BYTE *a1)
+  int __fastcall BlockCoinBase__executeState_BumpUp2(_BYTE *a1)
   {
     int v2; // r0
     _DWORD *v3; // r5
@@ -196542,7 +196542,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase20beginState_BumpDown2Ev
  * RVA 0x005b6b38   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_beginState_BumpDown2(int a1)
+  int __fastcall BlockCoinBase__beginState_BumpDown2(int a1)
   {
     *(float *)(a1 + 116) = *(float *)(a1 + 116) + 2.0;
     *(_DWORD *)(a1 + 6796) = 0;
@@ -196556,7 +196556,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase18endState_BumpDown2Ev
  * RVA 0x005b6b84   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::endState_BumpDown2()
+  void BlockCoinBase__endState_BumpDown2()
   {
     ;
   }
@@ -196565,7 +196565,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase22executeState_BumpDown2Ev
  * RVA 0x005b6b88   size 0xb4   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_executeState_BumpDown2(int a1)
+  int __fastcall BlockCoinBase__executeState_BumpDown2(int a1)
   {
     float32x2_t v1; // d0
     float32x2_t v2; // d2
@@ -196593,7 +196593,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase24beginState_BlockCoinUnk3Ev
  * RVA 0x005b6c40   size 0x10   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_beginState_BlockCoinUnk3(int result)
+  int __fastcall BlockCoinBase__beginState_BlockCoinUnk3(int result)
   {
     *(_DWORD *)(result + 6816) = 6;
     return result;
@@ -196603,7 +196603,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase22endState_BlockCoinUnk3Ev
  * RVA 0x005b6c50   size 0x4   xrefs 0
  * ============================================================================ */
-  void BlockCoinBase::endState_BlockCoinUnk3()
+  void BlockCoinBase__endState_BlockCoinUnk3()
   {
     ;
   }
@@ -196612,7 +196612,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBase26executeState_BlockCoinUnk3Ev
  * RVA 0x005b6c54   size 0x48   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase_executeState_BlockCoinUnk3(_DWORD *a1)
+  int __fastcall BlockCoinBase__executeState_BlockCoinUnk3(_DWORD *a1)
   {
     _DWORD *v2; // r0
     int v3; // r1
@@ -196631,7 +196631,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK13BlockCoinBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
  * RVA 0x005b6c9c   size 0x78   xrefs 0
  * ============================================================================ */
-  bool __fastcall BlockCoinBase_checkDerivedRuntimeTypeInfo(int a1, int a2)
+  bool __fastcall BlockCoinBase__checkDerivedRuntimeTypeInfo(int a1, int a2)
   {
     if ( _cxa_guard_acquire_0(13087620) )
     {
@@ -196645,7 +196645,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK13BlockCoinBase18getRuntimeTypeInfoEv
  * RVA 0x005b6d2c   size 0x5c   xrefs 0
  * ============================================================================ */
-  int BlockCoinBase::getRuntimeTypeInfo()
+  int BlockCoinBase__getRuntimeTypeInfo()
   {
     if ( _cxa_guard_acquire_0(13087620) )
     {
@@ -196659,7 +196659,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN13BlockCoinBaseD0Ev
  * RVA 0x005b6da0   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall BlockCoinBase::~BlockCoinBase(int a1)
+  int __fastcall BlockCoinBase__dtor(int a1)
   {
     int v2; // r0
   
@@ -196667,7 +196667,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -196771,7 +196771,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r5
   
     v2 = operator new(0x7D8u);
-    StageActor::StageActor(v2, a1);
+    StageActor__StageActor(v2, a1);
     *(_DWORD *)v2 = 12621156;
     Actor_charenjimodoexclusive_buroku_build_helper((_DWORD *)(v2 + 644));
     RectCollider_ctor((_DWORD *)(v2 + 1344));
@@ -196803,7 +196803,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 580) = 0;
       *(float *)(a1 + 572) = (float)(unsigned int)v5 * 8.0;
       *(float *)(a1 + 576) = (float)(unsigned int)v4 * -8.0;
-      ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+      ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
       sub_605B774C((_DWORD *)(a1 + 644), ResArchiveById, v5, v4);
       return 1;
     }
@@ -196836,7 +196836,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = (_DWORD *)(a1 + 1344);
   LABEL_5:
       ShapedCollider_execute(v5, a2, a3, a4);
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
       return 1;
     }
     if ( block_challenge_ref_5B77BC((_DWORD *)(a1 + 644)) == 1 )
@@ -196891,7 +196891,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605B7284(int a1)
   {
-    if ( Actor::beforeDelete() == 1 )
+    if ( Actor__beforeDelete() == 1 )
       return sub_605B7974((_DWORD *)(a1 + 644));
     else
       return 0;
@@ -196957,7 +196957,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 161;
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 336));
     sub_605B750C(v2);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -196973,7 +196973,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 161;
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 336));
     sub_605B750C(v2);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -196988,28 +196988,28 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[35] = 12348984;
     v2 = (struct sead_IDisposer *)(a1 + 35);
     ActorMgr_unregisterIfActive(a1 + 35);
-    sead::IDisposer::~IDisposer(v2);
+    sead__IDisposer__dtor(v2);
     a1[30] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 30);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 30));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 30));
     a1[25] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 25);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 25));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 25));
     a1[20] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 20);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 20));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 20));
     a1[15] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 15);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 15));
     a1[10] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 10);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 10));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 10));
     a1[5] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 5);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 5));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 5));
     *a1 = 12348984;
     ActorMgr_unregisterIfActive(a1);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)a1);
+    sead__IDisposer__dtor((struct sead_IDisposer *)a1);
   }
 
 /* ============================================================================
@@ -197025,7 +197025,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB05A8 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD24A4;
-    return Profile::Profile(13305260, 5992460, MEMORY[0xAF2FFC], (int)v1, &unk_60B053E8, 2);
+    return Profile__Profile(13305260, 5992460, MEMORY[0xAF2FFC], (int)v1, &unk_60B053E8, 2);
   }
 
 /* ============================================================================
@@ -197378,14 +197378,14 @@ static inline unsigned int uxtb16(unsigned int x)
     v0 = (_DWORD *)operator new(0x1C48u);
     sub_60676744(v0);
     *v0 = 12630420;
-    LightMask::LightMask(v0 + 1534);
+    LightMask__LightMask(v0 + 1534);
     v0[1544] = 0;
     *v0 = 12621344;
     RectCollider_ctor(v0 + 1546);
     v0[1546] = 12333272;
     v0[1710] = 0;
     v0[1711] = 0;
-    LightSource::LightSource((int)(v0 + 1712));
+    LightSource__LightSource((int)(v0 + 1712));
     ActiveCollider_ctor((int)(v0 + 1730));
     v0[1806] = 12621296;
     v0[1807] = 0;
@@ -197410,7 +197410,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // [sp+14h] [bp-8h] BYREF
     const char *v11; // [sp+18h] [bp-4h]
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v10 = 12321336;
     v11 = "light_block";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v10, 1, 0, 1, 0, 0, 0, 0);
@@ -197419,7 +197419,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6180) = v4;
     v6 = **(_DWORD **)(v4 + 12);
-    v7 = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v7 = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v10 = 12321336;
     v11 = "light_block";
     SkeletalAnim_play(v6, v7, &v10);
@@ -197479,7 +197479,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 572) = 0;
     *(_DWORD *)(a1 + 576) = 0;
     *(_DWORD *)(a1 + 580) = 0;
-    LightMask::init((_DWORD *)(a1 + 6136), 0, 2);
+    LightMask__init((_DWORD *)(a1 + 6136), 0, 2);
     light_block_ref(a1);
     memset(v15, 0, 16);
     v15[4] = -1048576000;
@@ -197494,7 +197494,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 6512) = 5996952;
       *(_DWORD *)(a1 + 6516) = 5996984;
     }
-    ActiveCollider::init(a1 + 6920, a1, (int *)0xB05430, a1 + 7224);
+    ActiveCollider__init(a1 + 6920, a1, (int *)0xB05430, a1 + 7224);
     v3 = MEMORY[0xC88234];
     if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 6920)
       && !ActiveColliderMgr_isInCreateList(v3, a1 + 6920) )
@@ -197625,10 +197625,10 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = 1;
     if ( *(_DWORD *)(a1 + 6124) && !sub_6067699C(a1) )
     {
-      StageActor::delete(a1, 1);
+      StageActor__delete(a1, 1);
       return 1;
     }
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v4 = 0.0;
     v5 = (_DWORD **)(a1 + 6180);
     if ( *(_BYTE *)(a1 + 6104) )
@@ -197729,7 +197729,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
       v28 = v3 == 0;
     if ( v28 )
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
     if ( *v19 > 0.0 )
       LightSource_update1(
         a1 + 6848,
@@ -197900,11 +197900,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12621344;
     v2 = (struct sead_IDisposer *)(a1 + 6184);
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6920));
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6848));
+    LightSource__dtor((struct sead_IDisposer *)(a1 + 6848));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -197919,11 +197919,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12621344;
     v2 = (struct sead_IDisposer *)(a1 + 6184);
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 6920));
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6848));
+    LightSource__dtor((struct sead_IDisposer *)(a1 + 6848));
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -197977,7 +197977,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD24CF;
-    Profile::Profile(13305292, 5995644, MEMORY[0xAF3048], (int)v1, &unk_60B0540C, 2);
+    Profile__Profile(13305292, 5995644, MEMORY[0xAF3048], (int)v1, &unk_60B0540C, 2);
     MEMORY[0xCB05E8] = ++MEMORY[0xC7B788];
     MEMORY[0xCB05EC] = 192;
     MEMORY[0xCB05F0] = 1;
@@ -198002,7 +198002,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB0618] = 0;
       MEMORY[0xCB061C] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -198019,7 +198019,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB0618] = 0;
       MEMORY[0xCB061C] = 0;
     }
-    v1 = sead::IDisposer::~IDisposer(a1);
+    v1 = sead__IDisposer__dtor(a1);
     return operator delete((int)v1);
   }
 
@@ -198043,7 +198043,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCB061C] )
     {
       v3 = operator new[](61660, a1, 4);
-      result = (_DWORD *)sead::IDisposer::IDisposer(v3, a1, 3);
+      result = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       v4 = -17 - (_DWORD)result;
       *result = 12621612;
       v5 = result + 8;
@@ -198178,14 +198178,14 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v11 != 255 )
       v12 = (v11 << 16) & 0x30000;
     v20[0] = v12 | (16 * v10) | (v9 << 8) | (v8 << 20) | (v7 << 24) & 0xF000000;
-    v20[3] = Profile::get(MEMORY[0xAF31A8]);
+    v20[3] = Profile__get(MEMORY[0xAF31A8]);
     *(float *)&v20[4] = v5;
     *(float *)&v20[5] = v6;
     v20[6] = 0;
     LOWORD(v20[8]) = 0;
     BYTE2(v20[8]) = 0;
     v20[10] = 0;
-    ActorMgr::create(MEMORY[0xC7B400], (int)v20, 0);
+    ActorMgr__create(MEMORY[0xC7B400], (int)v20, 0);
     v14 = *(char *)(a2 + 11);
     if ( v14 >= 0 && (a3 ^ 1) == 1 )
       sub_603FBA2C(MEMORY[0xC99DD4], 10, v14);
@@ -198620,7 +198620,7 @@ static inline unsigned int uxtb16(unsigned int x)
                     | v27 & 0x1F
                     | (v29 << 15)
                     | (v46 << 24) & 0xF000000;
-    LODWORD(v62[3]) = Profile::get(MEMORY[0xAF31A4]);
+    LODWORD(v62[3]) = Profile__get(MEMORY[0xAF31A4]);
     v62[4] = v5;
     v62[5] = v6;
     v47 = 0;
@@ -198629,7 +198629,7 @@ static inline unsigned int uxtb16(unsigned int x)
     LOWORD(v62[8]) = 0;
     BYTE2(v62[8]) = 0;
     v62[10] = 0.0;
-    v48 = ActorMgr::create(MEMORY[0xC7B400], (int)v62, 1);
+    v48 = ActorMgr__create(MEMORY[0xC7B400], (int)v62, 1);
     if ( v48 )
     {
       if ( _cxa_guard_acquire_0(13304716) )
@@ -198887,14 +198887,14 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = a2[1];
       TileMgr_setTile(MEMORY[0xCBD254], (unsigned int)v4, (unsigned int)(float)-v5, 0, 0);
       memset(v6, 0, 0x28u);
-      v6[3] = Profile::get(MEMORY[0xAF3230]);
+      v6[3] = Profile__get(MEMORY[0xAF3230]);
       *(float *)&v6[4] = v4;
       *(float *)&v6[5] = v5;
       v6[6] = 1137180672;
       LOWORD(v6[8]) = 0;
       BYTE2(v6[8]) = 0;
       v6[10] = 0;
-      return ActorMgr::create(MEMORY[0xC7B400], (int)v6, 1);
+      return ActorMgr__create(MEMORY[0xC7B400], (int)v6, 1);
     }
     return result;
   }
@@ -199107,14 +199107,14 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a5 == -1 )
       v11 = 15728640;
     LODWORD(v13[0]) = v11 | (16 * a4) | dword_60AF2A44[a3] | 0x1000;
-    LODWORD(v13[3]) = Profile::get(MEMORY[0xAF39D4]);
+    LODWORD(v13[3]) = Profile__get(MEMORY[0xAF39D4]);
     v13[4] = v9;
     v13[5] = v7;
     v13[6] = v8;
     LOWORD(v13[8]) = 0;
     BYTE2(v13[8]) = 0;
     v13[10] = 0.0;
-    return ActorMgr::create(MEMORY[0xC7B400], (int)v13, 1);
+    return ActorMgr__create(MEMORY[0xC7B400], (int)v13, 1);
   }
 
 /* ============================================================================
@@ -199144,14 +199144,14 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a5 == -1 )
       v12 = 15728640;
     LODWORD(v14[0]) = (16 * a4) | (a6 << 16) | v12 | dword_60AF2A44[a3] | 0x1000;
-    LODWORD(v14[3]) = Profile::get(MEMORY[0xAF39D4]);
+    LODWORD(v14[3]) = Profile__get(MEMORY[0xAF39D4]);
     v14[4] = v10;
     v14[5] = v8;
     v14[6] = v9;
     LOWORD(v14[8]) = 0;
     BYTE2(v14[8]) = 0;
     v14[10] = 0.0;
-    return ActorMgr::create(MEMORY[0xC7B400], (int)v14, 1);
+    return ActorMgr__create(MEMORY[0xC7B400], (int)v14, 1);
   }
 
 /* ============================================================================
@@ -199172,7 +199172,7 @@ static inline unsigned int uxtb16(unsigned int x)
     stub_return0_000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AD2577;
-    Profile::Profile(13305376, 6006496, MEMORY[0xAF3000], (int)v1, &unk_60B054CC, 2);
+    Profile__Profile(13305376, 6006496, MEMORY[0xAF3000], (int)v1, &unk_60B054CC, 2);
     MEMORY[0xCB063C] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB0638] = 12621828;
     MEMORY[0xCB0640] = 6006664;
@@ -199339,7 +199339,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = sub_606BAB1C(v8, &v7, a1 + 7456);
     *(_WORD *)(a1 + 8170) = v2;
     if ( v2 )
-      StateMgr::changeState((_DWORD *)(a1 + 6084), 13305464);
+      StateMgr__changeState((_DWORD *)(a1 + 6084), 13305464);
     sub_605BB7F0(a1 + 6100);
     sub_6069B070((float *)(a1 + 8112), (float *)(a1 + 108));
     return ShapedCollider_execute((_DWORD *)(a1 + 7456), v3, v4, v5);
@@ -199370,7 +199370,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      StateMgr::changeState((_DWORD *)(a1 + 6084), 13305560);
+      StateMgr__changeState((_DWORD *)(a1 + 6084), 13305560);
       return sub_605BB7F0(a1 + 6100);
     }
   }
@@ -199427,7 +199427,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      StateMgr::changeState((_DWORD *)(a1 + 6084), 13305560);
+      StateMgr__changeState((_DWORD *)(a1 + 6084), 13305560);
       return sub_605BB7F0(a1 + 6100);
     }
   }
@@ -199446,7 +199446,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 1 )
     {
       sub_605BB950(a1 + 6100, 0);
-      StateMgr::changeState((_DWORD *)(a1 + 6084), 13305400);
+      StateMgr__changeState((_DWORD *)(a1 + 6084), 13305400);
       memset(v4, 0, sizeof(v4));
       v3 = 0;
       result = sub_606BAB1C(v4, &v3, a1 + 7456);
@@ -199535,7 +199535,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 580) = 0;
     *(float *)(a1 + 572) = (float)v7 * 8.0;
     *(float *)(a1 + 576) = (float)v6 * -8.0;
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), v3);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), v3);
     sub_605BB524(a1 + 6100, ResArchiveById, (int)&dword_60CB0700[2 * v3 + 3], v7, v6);
     v15[0] = -1056964608;
     v15[1] = 1090519040;
@@ -199579,7 +199579,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v11 = 13305400;
       }
     }
-    StateMgr::changeState(v10, v11);
+    StateMgr__changeState(v10, v11);
     return 1;
   }
 
@@ -199603,7 +199603,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605BAFC8(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     return 1;
   }
 
@@ -199660,7 +199660,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605BB1D4(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -199678,7 +199678,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605BB1D4(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -199693,52 +199693,52 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[75] = 12348984;
     v2 = (struct sead_IDisposer *)(a1 + 75);
     ActorMgr_unregisterIfActive(a1 + 75);
-    sead::IDisposer::~IDisposer(v2);
+    sead__IDisposer__dtor(v2);
     a1[70] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 70);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 70));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 70));
     a1[65] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 65);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 65));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 65));
     a1[60] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 60);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 60));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 60));
     a1[55] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 55);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 55));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 55));
     a1[50] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 50);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 50));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 50));
     a1[45] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 45);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 45));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 45));
     a1[40] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 40);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 40));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 40));
     a1[35] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 35);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 35));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 35));
     a1[30] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 30);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 30));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 30));
     a1[25] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 25);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 25));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 25));
     a1[20] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 20);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 20));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 20));
     a1[15] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 15);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 15));
     a1[10] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 10);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 10));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 10));
     a1[5] = 12348984;
     ActorMgr_unregisterIfActive(a1 + 5);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 5));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 5));
     *a1 = 12348984;
     ActorMgr_unregisterIfActive(a1);
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)a1);
+    sead__IDisposer__dtor((struct sead_IDisposer *)a1);
   }
 
 /* ============================================================================
@@ -200189,7 +200189,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r4
   
     v0 = operator new(0x1C10u);
-    MultiStateActor::MultiStateActor((_DWORD *)v0);
+    MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12621848;
     RectCollider_ctor((_DWORD *)(v0 + 6104));
     *(_DWORD *)(v0 + 6104) = 12333272;
@@ -200680,7 +200680,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v5; // s0
     int v6; // r0
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     ActorScaler_execute(a1 + 7140);
     head_root_ref_2(a1);
     v4 = a1 + 6800;
@@ -200856,7 +200856,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -200874,7 +200874,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -200906,7 +200906,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB0750 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD2597;
-    Profile::Profile(13305684, 6011440, MEMORY[0xAF301C], (int)v1, &unk_60B054F0, 0);
+    Profile__Profile(13305684, 6011440, MEMORY[0xAF301C], (int)v1, &unk_60B054F0, 0);
     MEMORY[0xCB0770] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB076C] = 12622112;
     MEMORY[0xCB0774] = 6011748;
@@ -200944,12 +200944,12 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r4
   
     v0 = operator new(0x1E78u);
-    CoinBase::CoinBase(v0);
+    CoinBase__CoinBase(v0);
     *(_DWORD *)v0 = 12622132;
-    MovementHandler::MovementHandler((_DWORD *)(v0 + 7484));
+    MovementHandler__MovementHandler((_DWORD *)(v0 + 7484));
     *(_DWORD *)(v0 + 7732) = 0;
     *(_DWORD *)(v0 + 7736) = 0;
-    LightMask::LightMask((_DWORD *)(v0 + 7740));
+    LightMask__LightMask((_DWORD *)(v0 + 7740));
     *(_DWORD *)(v0 + 7780) = 0;
     *(_WORD *)(v0 + 7784) = 0;
     *(_BYTE *)(v0 + 7786) = 0;
@@ -201064,8 +201064,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     *(_DWORD *)(a1 + 160) += 0x8000000;
     result = a1 + 7784;
     if ( *(_WORD *)(a1 + 7784) )
@@ -201183,7 +201183,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_17:
         *(_DWORD *)(a1 + 7308) = *(unsigned __int8 *)(a1 + 29);
         if ( (*(_BYTE *)(a1 + 22) & 0x10) != 0 )
-          LightMask::init((_DWORD *)(a1 + 7740), 0, 2);
+          LightMask__init((_DWORD *)(a1 + 7740), 0, 2);
         *(_DWORD *)(a1 + 492) = 0;
         *(_DWORD *)(a1 + 496) = 1090519040;
         if ( *(_DWORD *)(a1 + 7732) )
@@ -201230,7 +201230,7 @@ static inline unsigned int uxtb16(unsigned int x)
           break;
         case 2u:
           v10 = (_DWORD *)(a1 + 7484);
-          MaskForMovementType = MovementHandler::getMaskForMovementType(a1 + 7484, 2u);
+          MaskForMovementType = MovementHandler__getMaskForMovementType(a1 + 7484, 2u);
           MovementHandler_init2(a1 + 7484, (int *)(a1 + 108), MaskForMovementType, *v7, *(_DWORD *)(a1 + 24) & 0xF, 0);
           goto LABEL_14;
         case 1u:
@@ -201238,7 +201238,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v20 = 1090519040;
           v21 = 0;
           v10 = (_DWORD *)(a1 + 7484);
-          v11 = MovementHandler::getMaskForMovementType(a1 + 7484, 1u);
+          v11 = MovementHandler__getMaskForMovementType(a1 + 7484, 1u);
           MovementHandler_init3(
             a1 + 7484,
             (int *)(a1 + 108),
@@ -201250,7 +201250,7 @@ static inline unsigned int uxtb16(unsigned int x)
             HIBYTE(*(_DWORD *)(a1 + 20)) & 1,
             1);
   LABEL_14:
-          MovementHandler::execute(v10);
+          MovementHandler__execute(v10);
           if ( *(_DWORD *)(a1 + 7532) == 1 && *(_DWORD *)(a1 + 7552) != 1 )
           {
             *(_DWORD *)(a1 + 108) = *v10;
@@ -201260,8 +201260,8 @@ static inline unsigned int uxtb16(unsigned int x)
           goto LABEL_17;
       }
       v10 = (_DWORD *)(a1 + 7484);
-      v12 = MovementHandler::getMaskForMovementType(a1 + 7484, v8);
-      MovementHandler::link(a1 + 7484, (int *)(a1 + 108), v12, *v7);
+      v12 = MovementHandler__getMaskForMovementType(a1 + 7484, v8);
+      MovementHandler__link(a1 + 7484, (int *)(a1 + 108), v12, *v7);
       goto LABEL_14;
     }
     return v2;
@@ -201289,8 +201289,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v15; // r5
   
     v2 = a1 + 6084;
-    StateMgr::execute((_DWORD *)(a1 + 6084));
-    CurrentState = StateMgr::getCurrentState(v2);
+    StateMgr__execute((_DWORD *)(a1 + 6084));
+    CurrentState = StateMgr__getCurrentState(v2);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 != (*(int (**)(void))(MEMORY[0xCAED90] + 8))() )
     {
@@ -201300,7 +201300,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v8 = *(_DWORD *)(a1 + 7736) == 0;
       if ( !v8 )
       {
-        MovementHandler::execute((_DWORD *)(a1 + 7484));
+        MovementHandler__execute((_DWORD *)(a1 + 7484));
         if ( *(_DWORD *)(a1 + 7532) == 1 && *(_DWORD *)(a1 + 7552) != 1 )
         {
           *(_DWORD *)(a1 + 108) = *(_DWORD *)(a1 + 7484);
@@ -201330,7 +201330,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 7752) = *(_DWORD *)(a1 + 108);
           *(_DWORD *)(a1 + 7756) = *(_DWORD *)(a1 + 112);
           *(_DWORD *)(a1 + 7760) = *(_DWORD *)(a1 + 116);
-          LightMask::update(a1 + 7740);
+          LightMask__update(a1 + 7740);
           goto LABEL_20;
         }
         v12 = 1111490560;
@@ -201350,10 +201350,10 @@ static inline unsigned int uxtb16(unsigned int x)
       goto LABEL_19;
     }
   LABEL_20:
-    v14 = StateMgr::getCurrentState(v2);
+    v14 = StateMgr__getCurrentState(v2);
     v15 = (*(int (__fastcall **)(int))(*(_DWORD *)v14 + 8))(v14);
     if ( v15 != (*(int (**)(void))(MEMORY[0xCB082C] + 8))() )
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -201364,9 +201364,9 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605BD7EC(int a1, int a2, int a3, int a4)
   {
     if ( *(_BYTE *)(a1 + 7793) )
-      CoinBase::onDraw(a1, a2, a3, a4);
+      CoinBase__onDraw(a1, a2, a3, a4);
     if ( (*(_BYTE *)(a1 + 22) & 0x10) != 0 )
-      LightMask::draw(a1 + 7740);
+      LightMask__draw(a1 + 7740);
     return 1;
   }
 
@@ -201431,7 +201431,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD25D6;
-    Profile::Profile(13305812, 6016512, MEMORY[0xAF33CC], (int)v1, &unk_60B05540, 8196);
+    Profile__Profile(13305812, 6016512, MEMORY[0xAF33CC], (int)v1, &unk_60B05540, 8196);
     MEMORY[0xCB07F0] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB07EC] = 12622528;
     MEMORY[0xCB07F4] = 6016656;
@@ -201523,7 +201523,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v5; // r0
     _DWORD v7[2]; // [sp+18h] [bp-8h] BYREF
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v7[0] = 12321336;
     v7[1] = "green_ring";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 1, 0, 1, 0, 0, 0, 0);
@@ -201579,12 +201579,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = a1 + 6328;
     v2 = **(_DWORD **)(*(_DWORD *)(a1 + 6328) + 12);
     v3 = (int *)(a1 + 12);
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v8 = 12321336;
     v9 = "green_ring";
     SkeletalAnim_play(v2, ResArchiveById, &v8);
     v5 = **(_DWORD ***)(*(_DWORD *)v1 + 28);
-    v6 = Profile::getResArchiveById(*v3, 0);
+    v6 = Profile__getResArchiveById(*v3, 0);
     v8 = 12321336;
     v9 = "green_ring";
     AnimationCtrl_setupFromResource((int)v5, v6, &v8);
@@ -201693,13 +201693,13 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1556] = 12325992;
     v2 = (struct sead_IDisposer *)(a1 + 1556);
     EffectData_release((int)(a1 + 1556));
-    sead::IDisposer::~IDisposer(v2);
+    sead__IDisposer__dtor(v2);
     a1[1530] = 12325992;
     EffectData_release((int)(a1 + 1530));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1530));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 1530));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -201715,13 +201715,13 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1556] = 12325992;
     v2 = (struct sead_IDisposer *)(a1 + 1556);
     EffectData_release((int)(a1 + 1556));
-    sead::IDisposer::~IDisposer(v2);
+    sead__IDisposer__dtor(v2);
     a1[1530] = 12325992;
     EffectData_release((int)(a1 + 1530));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1530));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 1530));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -201751,7 +201751,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD25E3;
-    return Profile::Profile(13305972, 6020420, MEMORY[0xAF38F0], (int)v1, &unk_60B05564, 2);
+    return Profile__Profile(13305972, 6020420, MEMORY[0xAF38F0], (int)v1, &unk_60B05564, 2);
   }
 
 /* ============================================================================
@@ -202069,8 +202069,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[6] = 0x800000;
     v3[7] = 0x400000;
     sub_608337BC(a1 + 24, v3);
-    *(_DWORD *)(a1 + 60) = sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 0xFFFFFFFE;
-    *(_DWORD *)(a1 + 64) = sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 0xFFFFFFFE;
+    *(_DWORD *)(a1 + 60) = sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 0xFFFFFFFE;
+    *(_DWORD *)(a1 + 64) = sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 0xFFFFFFFE;
     *(_BYTE *)(a1 + 82) = 0;
     *(_WORD *)(a1 + 80) = 0;
     *(_DWORD *)(a1 + 76) = 0;
@@ -202894,7 +202894,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r4
   
     v0 = operator new(0x1A90u);
-    MultiStateActor::MultiStateActor((_DWORD *)v0);
+    MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12622848;
     RectCollider_ctor((_DWORD *)(v0 + 6112));
     *(_DWORD *)(v0 + 6112) = 12333272;
@@ -203012,8 +203012,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     if ( (a1[5] & 3) == 0 )
-      sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
-    _R0 = (200 * (unsigned __int64)sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32 << 16;
+      sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340));
+    _R0 = (200 * (unsigned __int64)sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32 << 16;
     uxtb16(r0)
     if ( !_ZF )
       _R0 = -_R0;
@@ -203045,9 +203045,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = a1[1695] + a1[1696];
     *v2 = v3;
     a1[41] = v3;
-    CollisionActor::handleGravity((int)a1);
-    CollisionActor::handleSpeed((int)a1);
-    return StageActor::cullCheck((int)a1, 0);
+    CollisionActor__handleGravity((int)a1);
+    CollisionActor__handleSpeed((int)a1);
+    return StageActor__cullCheck((int)a1, 0);
   }
 
 /* ============================================================================
@@ -203233,7 +203233,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r2
     int v4; // r3
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     ShapedCollider_execute((_DWORD *)(a1 + 6112), v2, v3, v4);
     sub_605C0470((float *)a1);
     ++*(_DWORD *)(a1 + 6788);
@@ -203271,7 +203271,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB0908 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD261A;
-    Profile::Profile(13306124, 6028472, MEMORY[0xAF3148], (int)v1, &unk_60B055AC, 2);
+    Profile__Profile(13306124, 6028472, MEMORY[0xAF3148], (int)v1, &unk_60B055AC, 2);
     MEMORY[0xCB0928] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB0924] = 12623052;
     MEMORY[0xCB092C] = 6028624;
@@ -203338,7 +203338,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -203353,7 +203353,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -203383,7 +203383,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v0 = operator new(0x1B40u);
-    result = BlockCoinBase::BlockCoinBase(v0);
+    result = BlockCoinBase__BlockCoinBase(v0);
     *(_DWORD *)result = 12623084;
     *(_BYTE *)(result + 6974) = 0;
     *(_DWORD *)(result + 6968) = 0;
@@ -203555,7 +203555,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -203578,7 +203578,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB09E0 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD2689;
-    return Profile::Profile(13306340, 6032180, MEMORY[0xAF31A8], (int)v1, 0, 2);
+    return Profile__Profile(13306340, 6032180, MEMORY[0xAF31A8], (int)v1, 0, 2);
   }
 
 /* ============================================================================
@@ -204322,11 +204322,11 @@ static inline unsigned int uxtb16(unsigned int x)
               *v3 = 1.0;
               v20 = *((_DWORD **)v3 + 915);
               v21 = MEMORY[0xCBD254];
-              sead::ListNode::erase_((struct sead_ListNode *)(v20 + 5));
+              sead__ListNode__erase_((struct sead_ListNode *)(v20 + 5));
               --*(_DWORD *)(v21 + 13024);
               *v20 = *(_DWORD *)(v21 + 13028);
               *(_DWORD *)(v21 + 13028) = v20;
-              sead::ListNode::erase_(v5);
+              sead__ListNode__erase_(v5);
               --a1[43];
               *v3 = *((float *)a1 + 44);
               a1[44] = v3;
@@ -204572,11 +204572,11 @@ static inline unsigned int uxtb16(unsigned int x)
       *v3 = 1.0;
       v26 = *((_DWORD **)v3 + 915);
       v27 = MEMORY[0xCBD254];
-      sead::ListNode::erase_((struct sead_ListNode *)(v26 + 5));
+      sead__ListNode__erase_((struct sead_ListNode *)(v26 + 5));
       --*(_DWORD *)(v27 + 13024);
       *v26 = *(_DWORD *)(v27 + 13028);
       *(_DWORD *)(v27 + 13028) = v26;
-      sead::ListNode::erase_((struct sead_ListNode *)(v3 + 923));
+      sead__ListNode__erase_((struct sead_ListNode *)(v3 + 923));
       --*((_DWORD *)a1 + 43);
       *v3 = a1[44];
       *((_DWORD *)a1 + 44) = v3;
@@ -204996,7 +204996,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r4
   
     v0 = operator new(0x4D48u);
-    Enemy::Enemy(v0);
+    Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12623532;
     sub_60448BFC(v0 + 6308);
     memset((void *)(v0 + 6372), 0, 0x58u);
@@ -205308,7 +205308,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_49:
                 v60 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_50:
-                v61 = (int)(float)((float)(1.0 - v58) * (float)(unsigned int)((sead::Random::getU32(v60) >> 29) + 2));
+                v61 = (int)(float)((float)(1.0 - v58) * (float)(unsigned int)((sead__Random__getU32(v60) >> 29) + 2));
                 v62 = *(unsigned __int8 *)(MEMORY[0xC9A684] + 16);
                 if ( v62 == 2 )
                 {
@@ -205317,7 +205317,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_58:
                     v64 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_59:
-                    U32 = sead::Random::getU32(v64);
+                    U32 = sead__Random__getU32(v64);
                     v66 = v5;
                     v67 = v6;
                     *v53 = (int)(float)(v58 * (float)((80 * (unsigned __int64)U32) >> 32)) + v61;
@@ -205577,7 +205577,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 }
                 v45 = (struct sead_Random *)MEMORY[0xCCF4E4];
   LABEL_57:
-                U32 = sead::Random::getU32(v45);
+                U32 = sead__Random__getU32(v45);
                 v6 = v80;
                 v5 = (_DWORD **)v81;
                 v47 = (float *)*v81;
@@ -205613,7 +205613,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 }
                 v52 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_63:
-                v53 = sead::Random::getU32(v52);
+                v53 = sead__Random__getU32(v52);
                 v6 = v80;
                 v5 = (_DWORD **)v81;
                 v54 = (float *)*v81;
@@ -205651,7 +205651,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 }
                 v56 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_69:
-                v57 = sead::Random::getU32(v56);
+                v57 = sead__Random__getU32(v56);
                 v6 = v80;
                 v5 = (_DWORD **)v81;
                 v58 = (float *)*v81;
@@ -205688,7 +205688,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 }
                 v59 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_75:
-                v60 = sead::Random::getU32(v59);
+                v60 = sead__Random__getU32(v59);
                 v6 = v80;
                 v5 = (_DWORD **)v81;
                 v61 = (float *)*v81;
@@ -205734,7 +205734,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   v62 = (struct sead_Random *)MEMORY[0xCCF4E4];
   LABEL_81:
                   v77 = (float *)((v36 >> 20) & 0xFF0);
-                  v63 = sead::Random::getU32(v62);
+                  v63 = sead__Random__getU32(v62);
                   v64 = v36 & 0xFFFFFF;
                   v65 = v77[2943265];
                   v66 = v77[2943266];
@@ -206054,7 +206054,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_10:
               v15 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_11:
-              U32 = sead::Random::getU32(v15);
+              U32 = sead__Random__getU32(v15);
               v17 = *v181;
               if ( *v175 > v8 )
                 v17 = (float *)((char *)v17 + v7);
@@ -206067,7 +206067,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_21:
                   v20 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
   LABEL_22:
-                  v21 = sead::Random::getU32(v20);
+                  v21 = sead__Random__getU32(v20);
                   v22 = *v161;
                   if ( *v160 > v8 )
                     v22 = (float *)((char *)v22 + v7);
@@ -206092,7 +206092,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   }
                   v25 = (struct sead_Random *)MEMORY[0xCCF4E4];
   LABEL_33:
-                  v26 = sead::Random::getU32(v25);
+                  v26 = sead__Random__getU32(v25);
                   v27 = *v180;
                   if ( *v179 > v8 )
                     v27 = (int *)((char *)v27 + v7);
@@ -206240,7 +206240,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
   }
 
 /* ============================================================================
@@ -206257,7 +206257,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -206293,7 +206293,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB0A5C = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD287F;
-    return Profile::Profile(13306380, 6041808, MEMORY[0xAF3984], (int)v1, &unk_60B056AC, 0);
+    return Profile__Profile(13306380, 6041808, MEMORY[0xAF3984], (int)v1, &unk_60B056AC, 0);
   }
 
 /* ============================================================================
@@ -206507,12 +206507,12 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)&v19[5] = v14;
     *(float *)&v19[6] = v18 + (float)((float)((float)(v16 * 7.0) + (float)(v15 * 4.0)) + (float)(v17 * 0.0));
     v19[0] = *(_DWORD *)(a1 + 80) | (16 * *(char *)(a1 + 84)) | (*(_DWORD *)(a1 + 8048) << 8);
-    v19[3] = Profile::get(MEMORY[0xAF3434]);
+    v19[3] = Profile__get(MEMORY[0xAF3434]);
     v4 = *(_DWORD *)(a2 + 12);
     v5 = 0;
     v19[7] = v4;
     LOBYTE(v19[8]) = *(_BYTE *)(a1 + 86);
-    v6 = ActorMgr::create(MEMORY[0xC7B400], (int)v19, 0);
+    v6 = ActorMgr__create(MEMORY[0xC7B400], (int)v19, 0);
     if ( v6 )
     {
       v7 = *(_DWORD *)(a1 + 636);
@@ -206603,7 +206603,7 @@ static inline unsigned int uxtb16(unsigned int x)
               }
               if ( (**(int (__fastcall ***)(int, int))v8)(v8, 13087788) != 1
                 || !Object_isActive(v8)
-                && (CurrentState = StateMgr::getCurrentState(v8 + 6084),
+                && (CurrentState = StateMgr__getCurrentState(v8 + 6084),
                     v27 = a3,
                     v14 = a2,
                     v15 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState),
@@ -206888,16 +206888,16 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1974] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1974);
     EffectData_release((int)(a1 + 1974));
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1948] = 12325992;
     EffectData_release((int)(a1 + 1948));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 1948));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
     nullsub_407(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -206915,16 +206915,16 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1974] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1974);
     EffectData_release((int)(a1 + 1974));
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1948] = 12325992;
     EffectData_release((int)(a1 + 1948));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 1948));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
     nullsub_407(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v4);
   }
 
@@ -206941,7 +206941,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB0A68 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD28A0;
-    return Profile::Profile(13306476, 6052524, MEMORY[0xAF3424], (int)v1, &unk_60B056D0, 6);
+    return Profile__Profile(13306476, 6052524, MEMORY[0xAF3424], (int)v1, &unk_60B056D0, 6);
   }
 
 /* ============================================================================
@@ -206974,7 +206974,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r1
     float v6; // s2
   
-    v2 = CollisionActor::beforeExecute(a1);
+    v2 = CollisionActor__beforeExecute(a1);
     result = 0;
     if ( v2 == 1 )
     {
@@ -207042,7 +207042,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a1[1525] )
       return 1;
     a1[1525] = 48;
-    CurrentState = StateMgr::getCurrentState((int)(a1 + 1521));
+    CurrentState = StateMgr__getCurrentState((int)(a1 + 1521));
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v4 = (*(int (**)(void))(MEMORY[0xCB0A8C] + 8))();
     result = 2;
@@ -207144,7 +207144,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -207203,7 +207203,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 8) = 12325968;
     EffectWrapper_ctor(a1 + 112);
     *(_DWORD *)(a1 + 112) = 12325968;
-    LightSource::LightSource(a1 + 216);
+    LightSource__LightSource(a1 + 216);
     *(_DWORD *)(a1 + 288) = 0;
     *(_DWORD *)(a1 + 292) = 0;
     *(_BYTE *)(a1 + 296) = 3;
@@ -207328,7 +207328,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605C7220(int result)
   {
     if ( *(unsigned __int8 *)(result + 2940) != 255 )
-      return StateMgr::changeState((_DWORD *)(result + 1024), 13306660);
+      return StateMgr__changeState((_DWORD *)(result + 1024), 13306660);
     return result;
   }
 
@@ -207356,7 +207356,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(a1 + 2940) = -1;
       }
     }
-    return StateMgr::changeState((_DWORD *)(a1 + 1024), 13306692);
+    return StateMgr__changeState((_DWORD *)(a1 + 1024), 13306692);
   }
 
 /* ============================================================================
@@ -207376,7 +207376,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605C72E8(int result)
   {
     if ( --*(_BYTE *)(result + 2942) == 0 )
-      return StateMgr::changeState((_DWORD *)(result + 1024), 13306724);
+      return StateMgr__changeState((_DWORD *)(result + 1024), 13306724);
     return result;
   }
 
@@ -207430,7 +207430,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v9, (int)"SE_PLY_CANNON_READY", v8, v10, 0);
     }
     if ( v5 == 1 )
-      return StateMgr::changeState((_DWORD *)(a1 + 1024), 13306756);
+      return StateMgr__changeState((_DWORD *)(a1 + 1024), 13306756);
     return result;
   }
 
@@ -207440,7 +207440,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605C7410(int a1)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 1024), 13306788);
+    return StateMgr__changeState((_DWORD *)(a1 + 1024), 13306788);
   }
 
 /* ============================================================================
@@ -207467,7 +207467,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       result = (int)&unk_60B05754 + 4 * *(unsigned __int8 *)(a1 + 2944);
       if ( *(float *)(**(_DWORD **)(*(_DWORD *)(a1 + 912) + 12) + 20) >= *(float *)result )
-        return StateMgr::changeState((_DWORD *)(a1 + 1024), 13306820);
+        return StateMgr__changeState((_DWORD *)(a1 + 1024), 13306820);
     }
     else if ( result == 1 )
     {
@@ -207506,7 +207506,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = moveValueTo(a1 + 249, a1 + 248, &v7, a4);
     result = sub_60694FD4((int)a1);
     if ( v5 == 1 )
-      return StateMgr::changeState(a1 + 256, 13306628);
+      return StateMgr__changeState(a1 + 256, 13306628);
     return result;
   }
 
@@ -207623,7 +207623,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v10; // s0
     float v11; // s2
   
-    CurrentState = StateMgr::getCurrentState(a1 + 1024);
+    CurrentState = StateMgr__getCurrentState(a1 + 1024);
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v6 = (*(int (**)(void))(MEMORY[0xCB0B04] + 8))();
     v7 = v5 == v6;
@@ -207954,7 +207954,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v40; // [sp+24h] [bp-4h]
   
     *(_DWORD *)(a1 + 2936) = (*(_DWORD *)(a1 + 20) >> 28) & 3;
-    ProfileId = Actor::getProfileId((Actor *)a1);
+    ProfileId = Actor__getProfileId((Actor *)a1);
     v3 = *(_DWORD *)(a1 + 2936);
     if ( ProfileId == MEMORY[0xAF2F6C] )
     {
@@ -208030,7 +208030,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(float *)&v35 = v15 * (float)(v18 + (float)((float)((float)v11 * v19) * 0.000000059605));
         v36 = v15 * (float)(v16 + (float)((float)((float)v11 * v17) * 0.000000059605));
         sub_6079C870(v10, &v38, &v35, *(unsigned __int8 *)(v12 + 8));
-        if ( Actor::getProfileId((Actor *)a1) == MEMORY[0xAF2F70] && (*(_BYTE *)(a1 + 23) & 1) != 0 )
+        if ( Actor__getProfileId((Actor *)a1) == MEMORY[0xAF2F70] && (*(_BYTE *)(a1 + 23) & 1) != 0 )
           *(_DWORD *)(v10 + 1232) |= 0x20000000u;
         result = *(_DWORD *)(a1 + 2936) - 1;
         if ( result <= 1 )
@@ -208103,7 +208103,7 @@ static inline unsigned int uxtb16(unsigned int x)
       else
       {
         v9 = *(float *)(a1 + 2948) + (float)(*(float *)(v7 + 108) - *(float *)(a1 + 2952));
-        ProfileId = Actor::getProfileId((Actor *)a1);
+        ProfileId = Actor__getProfileId((Actor *)a1);
         v11 = ProfileId == MEMORY[0xAF2F70];
         if ( ProfileId == MEMORY[0xAF2F70] )
           v11 = *(_DWORD *)(a1 + 2936) == 2;
@@ -208227,7 +208227,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v15[5] = 0;
     sub_60161E18(a1 + 1696, a1, (int)v15, v13);
     ColliderMgr_add(MEMORY[0xC8820C], (_DWORD *)(a1 + 1696));
-    StateMgr::changeState((_DWORD *)(a1 + 1024), 13306628);
+    StateMgr__changeState((_DWORD *)(a1 + 1024), 13306628);
     return 1;
   }
 
@@ -208330,15 +208330,15 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // r3
   
     v2 = a1 + 256;
-    CurrentState = StateMgr::getCurrentState((int)(a1 + 256));
+    CurrentState = StateMgr__getCurrentState((int)(a1 + 256));
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xCB0B04] + 8))()
-      || (v5 = StateMgr::getCurrentState((int)v2),
+      || (v5 = StateMgr__getCurrentState((int)v2),
           v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5),
           v6 == (*(int (**)(void))(MEMORY[0xCB0BC4] + 8))()) )
     {
       v7 = a1 + 734;
-      if ( !a1[734] && StageActor::cullCheck((int)a1, 0) )
+      if ( !a1[734] && StageActor__cullCheck((int)a1, 0) )
         return 1;
     }
     else
@@ -208346,7 +208346,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v7 = a1 + 734;
     }
     sub_606951A4(a1);
-    StateMgr::execute(v2);
+    StateMgr__execute(v2);
     a1[321] = a1[249] - 0x40000000;
     ShapedCollider_execute(a1 + 260, v8, v9, v10);
     sub_605C7C70((int)a1);
@@ -208415,7 +208415,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1040);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1696));
     ShapedCollider_dtor(v2);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -208431,7 +208431,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1040);
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1696));
     ShapedCollider_dtor(v2);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -208639,10 +208639,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD2902;
-    Profile::Profile(13306580, 6058260, MEMORY[0xAF2F6C], (int)&v1, &unk_60B05704, 2);
+    Profile__Profile(13306580, 6058260, MEMORY[0xAF2F6C], (int)&v1, &unk_60B05704, 2);
     v1 = 12321336;
     v2 = &unk_60AD290F;
-    Profile::Profile(13306604, 6058260, MEMORY[0xAF2F70], (int)&v1, &unk_60B05704, 2);
+    Profile__Profile(13306604, 6058260, MEMORY[0xAF2F70], (int)&v1, &unk_60B05704, 2);
     MEMORY[0xCB0B08] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB0B04] = 12625140;
     MEMORY[0xCB0B0C] = 6058504;
@@ -208815,7 +208815,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = a1[1536];
     if ( v3 )
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 28))(v3);
-    StageActor::cullCheck((int)a1, 0);
+    StageActor__cullCheck((int)a1, 0);
     return 1;
   }
 
@@ -209019,7 +209019,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (result & 1) == 0 )
     {
       *(_DWORD *)(a1 + 6116) = 1;
-      *(_DWORD *)(a1 + 120) = *(_DWORD *)(4 * (sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) & 1) + 0xB057D4);
+      *(_DWORD *)(a1 + 120) = *(_DWORD *)(4 * (sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340)) & 1) + 0xB057D4);
       *(_DWORD *)(a1 + 124) = 1080033280;
       *(_DWORD *)(a1 + 128) = 0;
       result = _cxa_guard_acquire_0(13087612);
@@ -209047,7 +209047,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     a1[1529] = 1;
-    result = *(_DWORD *)(4 * (sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 1) + 0xB057D4);
+    result = *(_DWORD *)(4 * (sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 1) + 0xB057D4);
     a1[30] = result;
     a1[31] = 1080033280;
     a1[32] = 0;
@@ -209073,7 +209073,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r6
     int result; // r0
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCB0F14] + 8))();
     if ( v6 == result )
@@ -209337,9 +209337,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v9; // r0
     int v10; // r2
   
-    StageActor::accelerateX((float *)a1);
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    StageActor__accelerateX((float *)a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 248))(a1);
     sub_605CC4D8(a1);
     v2 = *(_DWORD *)(a1 + 2872);
@@ -209358,7 +209358,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v6 )
       {
         *(_DWORD *)(a1 + 6116) = 1;
-        *(_DWORD *)(a1 + 120) = *(_DWORD *)(4 * (sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 1)
+        *(_DWORD *)(a1 + 120) = *(_DWORD *)(4 * (sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) & 1)
                                           + 0xB057D4);
         *(_DWORD *)(a1 + 124) = 1080033280;
         *(_DWORD *)(a1 + 128) = 0;
@@ -209375,7 +209375,7 @@ static inline unsigned int uxtb16(unsigned int x)
         else
         {
           *(_DWORD *)(a1 + 124) = 0;
-          StateMgr::changeState((_DWORD *)(a1 + 6084), 13307596);
+          StateMgr__changeState((_DWORD *)(a1 + 6084), 13307596);
         }
       }
     }
@@ -209527,7 +209527,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -209622,7 +209622,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r6
   
     v3 = *(_DWORD *)(a2 + 64);
-    CurrentState = StateMgr::getCurrentState(v3 + 6084);
+    CurrentState = StateMgr__getCurrentState(v3 + 6084);
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v6 = 0;
     if ( v5 != (*(int (**)(void))(MEMORY[0xCB0CEC] + 8))() )
@@ -209665,7 +209665,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60813BDC(v6, "SE_OBJ_TARU_BREAK", v9, 1, 0);
     else
       BasicSoundActor2_play(v6, "SE_OBJ_TARU_BREAK", v9, 0);
-    return StateMgr::changeState((_DWORD *)(a1 + 6084), 13307116);
+    return StateMgr__changeState((_DWORD *)(a1 + 6084), 13307116);
   }
 
 /* ============================================================================
@@ -209721,7 +209721,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r6
     _DWORD v9[2]; // [sp+18h] [bp-8h] BYREF
   
-    ResArchiveById = Profile::getResArchiveById(a1[3], 0);
+    ResArchiveById = Profile__getResArchiveById(a1[3], 0);
     v9[0] = 12321336;
     v9[1] = "block_taru";
     Model2 = Resource_getModel2(ResArchiveById, (int)v9, 1, 0, 0, 0, 0, 0, 0);
@@ -209737,21 +209737,21 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[124] = 1094713344;
     a1[125] = 1140850688;
     a1[126] = 1140850688;
-    ActiveCollider::init((int)(a1 + 47), (int)a1, (int *)&qword_60CB0DB8, (int)(a1 + 1704));
+    ActiveCollider__init((int)(a1 + 47), (int)a1, (int *)&qword_60CB0DB8, (int)(a1 + 1704));
     v7 = MEMORY[0xC88234];
     if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], (int)(a1 + 47))
       && !ActiveColliderMgr_isInCreateList(v7, (int)(a1 + 47)) )
     {
       ActiveColliderMgr_addToCreateList(v7, (int)(a1 + 47));
     }
-    ActiveCollider::init((int)(a1 + 1705), (int)a1, &dword_60CB0EA0, 0);
+    ActiveCollider__init((int)(a1 + 1705), (int)a1, &dword_60CB0EA0, 0);
     CollisionMgr_init((int)(a1 + 162), (int)a1, dword_60B057A4, dword_60B057B0, flt_60B057BC);
     ShapedCollider_init((int)(a1 + 1540), (int)a1, &dword_60CB0D90);
     a1[1618] = 6072760;
     a1[1619] = 6073100;
     a1[1620] = 6073172;
     ColliderMgr_add(MEMORY[0xC8820C], a1 + 1540);
-    StateMgr::changeState(a1 + 1521, 13307172);
+    StateMgr__changeState(a1 + 1521, 13307172);
     (*(void (__fastcall **)(int *))(*a1 + 256))(a1);
     return 1;
   }
@@ -209802,7 +209802,7 @@ static inline unsigned int uxtb16(unsigned int x)
         return result;
       }
     }
-    result = Actor::getProfileId(v2);
+    result = Actor__getProfileId(v2);
     v7 = result == MEMORY[0xAF3238];
     if ( result == MEMORY[0xAF3238] )
     {
@@ -209878,7 +209878,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605CABBC(int a1)
   {
-    return StateMgr::execute((_DWORD *)(a1 + 6084));
+    return StateMgr__execute((_DWORD *)(a1 + 6084));
   }
 
 /* ============================================================================
@@ -209918,7 +209918,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( !v7 )
       {
-        CurrentState = StateMgr::getCurrentState(v6 + 6084);
+        CurrentState = StateMgr__getCurrentState(v6 + 6084);
         v9 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         if ( v9 == (*(int (**)(void))(MEMORY[0xCB0CEC] + 8))() )
         {
@@ -209978,7 +209978,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v27[2]; // [sp+8h] [bp-8h] BYREF
   
     v6 = *(_DWORD *)(a3 + 64);
-    ProfileId = Actor::getProfileId((Actor *)v6);
+    ProfileId = Actor__getProfileId((Actor *)v6);
     if ( ProfileId == MEMORY[0xAF3344] )
     {
       if ( v6 )
@@ -210193,7 +210193,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // r0
   
     v4 = (_DWORD *)(a1 + 6084);
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v7 = (*(int (**)(void))(MEMORY[0xCB0ECC] + 8))();
     result = 0;
@@ -210208,7 +210208,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 124) = v11;
       *(_DWORD *)(a1 + 128) = 0;
       *(_DWORD *)(a1 + 6124) |= 0x10u;
-      StateMgr::changeState(v4, 13307208);
+      StateMgr__changeState(v4, 13307208);
       return 1;
     }
     return result;
@@ -210239,7 +210239,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = *(_DWORD *)(a1 + 6124);
     v6 = (int *)(a1 + 6124);
     *v6 = v7 | 0x18;
-    return StateMgr::changeState(v6 - 10, 13307208);
+    return StateMgr__changeState(v6 - 10, 13307208);
   }
 
 /* ============================================================================
@@ -210254,7 +210254,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = a1;
     sub_605C9CA0(a1);
     *(_DWORD *)(v1 + 164) = 0x40000000;
-    ActiveCollider::init(v1 + 188, v1, (int *)&qword_60CB0DE8, v1 + 6816);
+    ActiveCollider__init(v1 + 188, v1, (int *)&qword_60CB0DE8, v1 + 6816);
     v1 += 648;
     CollisionMgr_setSensor(v1, dword_60B057C8, 0);
     v3[1] = 1090519040;
@@ -210319,7 +210319,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = *(char *)(a1 + 84);
         if ( v6 <= 3 )
           *(_WORD *)(a1 + 2 * v6 + 6128) = 32;
-        return StateMgr::changeState((_DWORD *)(a1 + 6084), 13307208);
+        return StateMgr__changeState((_DWORD *)(a1 + 6084), 13307208);
       }
       result = *(unsigned __int8 *)(v3 + 1217);
       if ( (result & 0x20) == 0 )
@@ -210343,7 +210343,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v8 = *(char *)(a1 + 84);
               if ( v8 <= 3 )
                 *(_WORD *)(a1 + 2 * v8 + 6128) = 32;
-              return StateMgr::changeState((_DWORD *)(a1 + 6084), 13307208);
+              return StateMgr__changeState((_DWORD *)(a1 + 6084), 13307208);
             }
           }
         }
@@ -210381,7 +210381,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = &qword_60CB0E18;
     else
       v3 = &qword_60CB0E48;
-    ActiveCollider::init(a1 + 188, a1, (int *)v3, a1 + 6816);
+    ActiveCollider__init(a1 + 188, a1, (int *)v3, a1 + 6816);
     result = *(unsigned __int8 *)(a1 + 84);
     if ( result <= 3 )
     {
@@ -210436,8 +210436,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v12; // [sp+10h] [bp-8h] BYREF
     int v13; // [sp+14h] [bp-4h]
   
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     v2 = *(_DWORD *)(a1 + 2872);
     sub_605CC4D8(a1);
     if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
@@ -210575,7 +210575,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -210593,7 +210593,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor(v2);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -210622,7 +210622,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD294A;
-    Profile::Profile(13307148, 6071900, MEMORY[0xAF3344], (int)v1, &unk_60B05780, 2070);
+    Profile__Profile(13307148, 6071900, MEMORY[0xAF3344], (int)v1, &unk_60B05780, 2070);
     MEMORY[0xCB0D28] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB0D2C] = 196;
     MEMORY[0xCB0D30] = 1;
@@ -210769,7 +210769,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _WORD *v10; // r4
     int v11; // t1
   
-    v2 = CollisionActor::beforeExecute(a1);
+    v2 = CollisionActor__beforeExecute(a1);
     result = 0;
     if ( v2 == 1 )
     {
@@ -210862,7 +210862,7 @@ static inline unsigned int uxtb16(unsigned int x)
         a1[6112] = 0;
       }
     }
-    return CollisionActor::afterExecute(a1, a2);
+    return CollisionActor__afterExecute(a1, a2);
   }
 
 /* ============================================================================
@@ -210938,7 +210938,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)(a1 + 120) = v6;
     *(float *)(a1 + 124) = v7;
     *(_DWORD *)(a1 + 128) = 0;
-    return StateMgr::changeState((_DWORD *)(a1 + 6084), 13307668);
+    return StateMgr__changeState((_DWORD *)(a1 + 6084), 13307668);
   }
 
 /* ============================================================================
@@ -211024,7 +211024,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = a1[1531];
     v5 = a1 + 1531;
     *v5 = v6 | 0x18;
-    return StateMgr::changeState(v5 - 10, 13307704);
+    return StateMgr__changeState(v5 - 10, 13307704);
   }
 
 /* ============================================================================
@@ -211047,7 +211047,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *v4 = 0;
     }
     *(_BYTE *)(a1 + 84) = v5;
-    return StateMgr::changeState((_DWORD *)(a1 + 6084), 13307632);
+    return StateMgr__changeState((_DWORD *)(a1 + 6084), 13307632);
   }
 
 /* ============================================================================
@@ -211186,8 +211186,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (int *)(a1 + 6124);
     *(_DWORD *)(a1 + 6124) &= ~1u;
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     result = *(unsigned __int8 *)(a1 + 2872);
     if ( (result & 1) != 0 )
@@ -211361,7 +211361,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -211435,7 +211435,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v2; // r4
   
     v2 = (_DWORD *)operator new(0x2F8u);
-    StageActor::StageActor((int)v2, a1);
+    StageActor__StageActor((int)v2, a1);
     *v2 = 12626364;
     v2[162] = 12626520;
     v2[163] = 12626536;
@@ -211582,7 +211582,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v1);
   }
 
@@ -211713,7 +211713,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2993;
-    return Profile::Profile(13307748, 6082056, MEMORY[0xAF2DC8], (int)v1, &unk_60B057E8, 0);
+    return Profile__Profile(13307748, 6082056, MEMORY[0xAF2DC8], (int)v1, &unk_60B057E8, 0);
   }
 
 /* ============================================================================
@@ -211737,7 +211737,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     if ( (*(_QWORD *)(MEMORY[0xCBD8AC] + 16) & *(_QWORD *)(a1 + 48)) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 20), 13307812);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), 13307812);
     result = *(unsigned __int8 *)(a1 + 92);
     if ( !*(_BYTE *)(a1 + 92) )
     {
@@ -211800,7 +211800,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         *(_DWORD *)(a1 + 84) += *(char *)(*(unsigned __int8 *)(a1 + 106) + 0xAFE3F4) * *(_DWORD *)(a1 + 76);
         v2 = 13307812;
-        return StateMgr::changeState((_DWORD *)(a1 + 20), v2);
+        return StateMgr__changeState((_DWORD *)(a1 + 20), v2);
       }
     }
     else if ( (*(_QWORD *)(MEMORY[0xCBD8AC] + 16) & *(_QWORD *)(a1 + 48)) == 0 )
@@ -211808,7 +211808,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 95) = 1;
       *(_BYTE *)(a1 + 98) = 0;
       v2 = 13307780;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), v2);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), v2);
     }
     result = *(unsigned __int8 *)(a1 + 92);
     if ( !*(_BYTE *)(a1 + 92) )
@@ -211894,7 +211894,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       **(_DWORD **)(result + 36) += v3;
       if ( *(_BYTE *)(result + 101) )
-        return StateMgr::changeState((_DWORD *)(result + 20), 13307876);
+        return StateMgr__changeState((_DWORD *)(result + 20), 13307876);
     }
     return result;
   }
@@ -211934,7 +211934,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       **(_DWORD **)(result + 36) += *(_DWORD *)(result + 64);
       if ( --*(_BYTE *)(result + 108) == 0 )
-        return StateMgr::changeState((_DWORD *)(result + 20), 13307908);
+        return StateMgr__changeState((_DWORD *)(result + 20), 13307908);
     }
     return result;
   }
@@ -211983,7 +211983,7 @@ static inline unsigned int uxtb16(unsigned int x)
         Float_clampWithSign((float *)(a1 + 56));
         v6 = 13307844;
       }
-      return StateMgr::changeState((_DWORD *)(a1 + 20), v6);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), v6);
     }
     return result;
   }
@@ -212065,16 +212065,16 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( !a8 )
         {
           v22 = 13307780;
-          return StateMgr::changeState((_DWORD *)(a1 + 20), v22);
+          return StateMgr__changeState((_DWORD *)(a1 + 20), v22);
         }
   LABEL_10:
         v22 = 13307812;
-        return StateMgr::changeState((_DWORD *)(a1 + 20), v22);
+        return StateMgr__changeState((_DWORD *)(a1 + 20), v22);
       }
   LABEL_12:
       *(_BYTE *)(a1 + 96) = 1;
       v22 = 13307844;
-      return StateMgr::changeState((_DWORD *)(a1 + 20), v22);
+      return StateMgr__changeState((_DWORD *)(a1 + 20), v22);
     }
     if ( a8 == 1 )
     {
@@ -212085,7 +212085,7 @@ static inline unsigned int uxtb16(unsigned int x)
       goto LABEL_10;
     *a2 = *(_DWORD *)(a1 + 84) + v18 * (a6 << 28);
     v22 = 13307812;
-    return StateMgr::changeState((_DWORD *)(a1 + 20), v22);
+    return StateMgr__changeState((_DWORD *)(a1 + 20), v22);
   }
 
 /* ============================================================================
@@ -212100,7 +212100,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_QWORD *)(a1 + 48) = *a2;
     *(_BYTE *)(a1 + 95) = 0;
     *(_BYTE *)(a1 + 102) = 0;
-    result = StateMgr::execute((_DWORD *)(a1 + 20));
+    result = StateMgr__execute((_DWORD *)(a1 + 20));
     *(_BYTE *)(a1 + 92) = 0;
     *(_BYTE *)(a1 + 101) = 0;
     return result;
@@ -212399,7 +212399,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
   }
 
 /* ============================================================================
@@ -212412,7 +212412,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -212442,7 +212442,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD29A6;
-    return Profile::Profile(13307996, 6086352, MEMORY[0xAF2DD0], (int)v1, &unk_60B0580C, 0);
+    return Profile__Profile(13307996, 6086352, MEMORY[0xAF2DD0], (int)v1, &unk_60B0580C, 0);
   }
 
 /* ============================================================================
@@ -212455,7 +212455,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = operator new(0x2A0u);
-    result = StageActor::StageActor(v2, a1);
+    result = StageActor__StageActor(v2, a1);
     *(_DWORD *)result = 12626848;
     *(_BYTE *)(result + 668) = 0;
     *(_DWORD *)(result + 644) = 0;
@@ -212562,7 +212562,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v1);
   }
 
@@ -212576,7 +212576,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD29CE;
-    return Profile::Profile(13308036, 6087692, MEMORY[0xAF2DC4], (int)v1, &unk_60B05830, 0);
+    return Profile__Profile(13308036, 6087692, MEMORY[0xAF2DC4], (int)v1, &unk_60B05830, 0);
   }
 
 /* ============================================================================
@@ -212911,7 +212911,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -212925,7 +212925,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD29E4;
-    return Profile::Profile(13308068, 6089236, MEMORY[0xAF2DCC], (int)v1, &unk_60B05854, 0);
+    return Profile__Profile(13308068, 6089236, MEMORY[0xAF2DCC], (int)v1, &unk_60B05854, 0);
   }
 
 /* ============================================================================
@@ -212937,7 +212937,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r5
   
     v0 = (_DWORD *)operator new(0x1800u);
-    MultiStateActor::MultiStateActor(v0);
+    MultiStateActor__MultiStateActor(v0);
     *v0 = 12627208;
     memset(v0 + 1526, 0, 0x21u);
     return v0;
@@ -213239,7 +213239,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   v40 = (float)v23 + 8.0;
                   v41 = (float)(-8 - v15);
                   v42 = *(_DWORD *)(a1 + 116);
-                  if ( Actor::getProfileId((Actor *)a1) == v33 )
+                  if ( Actor__getProfileId((Actor *)a1) == v33 )
                     v41 = v41 + 8.0;
                   EffectData_create(1143, (int)&v40, 0, 0);
                 }
@@ -213300,7 +213300,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     TileGod_onExecute_helper(a1);
     if ( !*(_BYTE *)(a1 + 6136) )
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -213446,7 +213446,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -213461,24 +213461,24 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD2A0F;
-    Profile::Profile(13308100, 6090520, MEMORY[0xAF38DC], (int)&v1, &unk_60B05878, 4);
+    Profile__Profile(13308100, 6090520, MEMORY[0xAF38DC], (int)&v1, &unk_60B05878, 4);
     v1 = 12321336;
     v2 = &unk_60AD2A28;
-    return Profile::Profile(13308124, 6090520, MEMORY[0xAF38E0], (int)&v1, &unk_60B05878, 4);
+    return Profile__Profile(13308124, 6090520, MEMORY[0xAF38E0], (int)&v1, &unk_60B05878, 4);
   }
 
 /* ============================================================================
  * _ZN21MovementBlockCoinBaseC2EPK14ActorBuildInfo
  * RVA 0x005cfa04   size 0x118   xrefs 2
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase_MovementBlockCoinBase(int a1)
+  int __fastcall MovementBlockCoinBase__MovementBlockCoinBase(int a1)
   {
-    BlockCoinBase::BlockCoinBase(a1);
+    BlockCoinBase__BlockCoinBase(a1);
     *(_DWORD *)a1 = 12627412;
     *(_DWORD *)(a1 + 6980) = 0;
     *(_DWORD *)(a1 + 6984) = 0;
     *(_DWORD *)(a1 + 6988) = 0;
-    MovementHandler::MovementHandler((MovementHandler *)(a1 + 6992));
+    MovementHandler__MovementHandler((MovementHandler *)(a1 + 6992));
     *(_BYTE *)(a1 + 7320) = 0;
     *(_BYTE *)(a1 + 7292) = 0;
     *(_DWORD *)(a1 + 7288) = 0;
@@ -213660,8 +213660,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     *(_DWORD *)(a1 + 160) += 0x10000000;
     result = a1 + 7332;
     if ( *(_WORD *)(a1 + 7332) )
@@ -213716,9 +213716,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase4vfECEv
  * RVA 0x005d009c   size 0x18   xrefs 0
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase_vfEC(int a1)
+  int __fastcall MovementBlockCoinBase__vfEC(int a1)
   {
-    return BlockBase::vf16C(MEMORY[0xCB061C], a1 + 6980);
+    return BlockBase__vf16C(MEMORY[0xCB061C], a1 + 6980);
   }
 
 /* ============================================================================
@@ -213738,7 +213738,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase5vf150Ev
  * RVA 0x005d00fc   size 0x40   xrefs 7
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase_vf150(int a1)
+  int __fastcall MovementBlockCoinBase__vf150(int a1)
   {
     return sub_60716778(
              MEMORY[0xCBD254],
@@ -213976,7 +213976,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( result )
           return result;
         v4 = *(_DWORD *)(a1 + 7288);
-        CurrentState = StateMgr::getCurrentState(a1 + 6084);
+        CurrentState = StateMgr__getCurrentState(a1 + 6084);
         v6 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         if ( v4 == 1 )
         {
@@ -214018,7 +214018,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( !result )
           return result;
         v7 = *(_DWORD *)(a1 + 7288);
-        v8 = StateMgr::getCurrentState(a1 + 6084);
+        v8 = StateMgr__getCurrentState(a1 + 6084);
         v9 = (*(int (__fastcall **)(int))(*(_DWORD *)v8 + 8))(v8);
         if ( v7 != 1 )
         {
@@ -214064,7 +214064,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase11spawnItemUpEv
  * RVA 0x005d0a80   size 0x20   xrefs 0
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase_spawnItemUp(_DWORD *a1)
+  int __fastcall MovementBlockCoinBase__spawnItemUp(_DWORD *a1)
   {
     a1[1699] = 0;
     return (*(int (__fastcall **)(_DWORD *, int))(*a1 + 192))(a1, 13308188);
@@ -214074,7 +214074,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBase13spawnItemDownEv
  * RVA 0x005d0aa4   size 0xc   xrefs 0
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase_spawnItemDown(int a1)
+  int __fastcall MovementBlockCoinBase__spawnItemDown(int a1)
   {
     return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 212))(a1);
   }
@@ -214083,7 +214083,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK21MovementBlockCoinBase27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
  * RVA 0x005d0ab0   size 0xd4   xrefs 0
  * ============================================================================ */
-  bool __fastcall MovementBlockCoinBase_checkDerivedRuntimeTypeInfo(int a1, int a2)
+  bool __fastcall MovementBlockCoinBase__checkDerivedRuntimeTypeInfo(int a1, int a2)
   {
     if ( _cxa_guard_acquire_0(13142632) )
     {
@@ -214104,7 +214104,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZNK21MovementBlockCoinBase18getRuntimeTypeInfoEv
  * RVA 0x005d0bb4   size 0x5c   xrefs 0
  * ============================================================================ */
-  int MovementBlockCoinBase::getRuntimeTypeInfo()
+  int MovementBlockCoinBase__getRuntimeTypeInfo()
   {
     if ( _cxa_guard_acquire_0(13142632) )
     {
@@ -214118,7 +214118,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * _ZN21MovementBlockCoinBaseD0Ev
  * RVA 0x005d0c28   size 0x4c   xrefs 0
  * ============================================================================ */
-  int __fastcall MovementBlockCoinBase::~MovementBlockCoinBase(int a1)
+  int __fastcall MovementBlockCoinBase__dtor(int a1)
   {
     int v2; // r0
   
@@ -214126,7 +214126,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6120));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -214219,7 +214219,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // [sp+0h] [bp-8h] BYREF
     const char *v12; // [sp+4h] [bp-4h]
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v5 = *(_DWORD *)(a1 + 6100);
     v4 = (_BYTE *)(a1 + 6100);
     v3 = v5;
@@ -214317,7 +214317,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 6517);
     if ( *(_BYTE *)(a1 + 6517) )
     {
-      CollisionActor::handleGravity(a1);
+      CollisionActor__handleGravity(a1);
       *(float *)(a1 + 112) = *(float *)(a1 + 124) + *(float *)(a1 + 112);
       CollisionMgr_process((unsigned __int8 *)(a1 + 648));
       result = *(_DWORD *)(a1 + 2872);
@@ -214351,7 +214351,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v13; // [sp+0h] [bp-8h] BYREF
     const char *v14; // [sp+4h] [bp-4h]
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v4 = a1 + 6100;
     v3 = *(_DWORD **)(a1 + 6100);
     if ( *(_BYTE *)(a1 + 6408) )
@@ -214407,14 +214407,14 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 += 4 * v4;
     if ( (*(_BYTE *)(*(_DWORD *)v5 + 28) & 0x20) != 0 )
     {
-      StateMgr::changeState((_DWORD *)(a1 + 6084), 13308352);
+      StateMgr__changeState((_DWORD *)(a1 + 6084), 13308352);
       v2 = *v3;
     }
     j_ModelWrapper_updateAnims((int)v2);
     result = *(unsigned __int8 *)(a1 + 6517);
     if ( *(_BYTE *)(a1 + 6517) )
     {
-      CollisionActor::handleGravity(a1);
+      CollisionActor__handleGravity(a1);
       *(float *)(a1 + 112) = *(float *)(a1 + 124) + *(float *)(a1 + 112);
       CollisionMgr_process((unsigned __int8 *)(a1 + 648));
       result = *(_DWORD *)(a1 + 2872);
@@ -214533,7 +214533,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *(float *)(a1 + 112) = v41;
           }
         }
-        ActiveCollider::init(a1 + 6104, a1, dword_60C0B040, 0);
+        ActiveCollider__init(a1 + 6104, a1, dword_60C0B040, 0);
         v6 = MEMORY[0xC88234];
         if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 6104)
           && !ActiveColliderMgr_isInCreateList(v6, a1 + 6104) )
@@ -214541,7 +214541,7 @@ static inline unsigned int uxtb16(unsigned int x)
           ActiveColliderMgr_addToCreateList(v6, a1 + 6104);
         }
         v38 = a1 + 6104;
-        ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+        ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
         v39 = 1.7266e-38;
         v40 = COERCE_FLOAT("middle_flag");
         Model2 = Resource_getModel2(ResArchiveById, (int)&v39, 2, 1, 1, 0, 0, 0, 0);
@@ -214562,7 +214562,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v39 = 1.7266e-38;
         v40 = COERCE_FLOAT("wait");
         AnimationCtrl_setupFromResource(v13, ResArchiveById, &v39);
-        StateMgr::changeState((_DWORD *)(a1 + 6084), 13308352);
+        StateMgr__changeState((_DWORD *)(a1 + 6084), 13308352);
         v14 = (_DWORD **)(a1 + 6100);
         v15 = *(unsigned __int8 *)(MEMORY[0xC9A684] + 16);
         v16 = *(unsigned __int8 *)(MEMORY[0xC9A684] + 17);
@@ -214672,7 +214672,7 @@ static inline unsigned int uxtb16(unsigned int x)
     char v16; // r1
     float v18[12]; // [sp+0h] [bp-30h] BYREF
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     v2 = *(_DWORD *)(a1 + 156);
     v3 = *(_DWORD *)(a1 + 160);
     v4 = *(_DWORD *)(a1 + 164);
@@ -214716,7 +214716,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v16 = 8;
     else
       v16 = 0;
-    StageActor::cullCheck(a1, v16);
+    StageActor__cullCheck(a1, v16);
     return 1;
   }
 
@@ -214759,7 +214759,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         if ( v2
           && (**(int (__fastcall ***)(unsigned __int8 *, int))v2)(v2, 13087584) == 1
-          && Actor::getProfileId((Actor *)v2) == v4 )
+          && Actor__getProfileId((Actor *)v2) == v4 )
         {
           if ( _cxa_guard_acquire_0(13308428) )
           {
@@ -214923,7 +214923,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   v8 = 0;
   LABEL_22:
                   SE_SYS_MID_POINT_ref(v2, (char)v6, v8);
-                  return StateMgr::changeState((_DWORD *)(v2 + 6084), 13308384);
+                  return StateMgr__changeState((_DWORD *)(v2 + 6084), 13308384);
                 }
   LABEL_19:
                 v8 = 0;
@@ -214996,11 +214996,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60959BAC(a1 + 1630);
     a1[1603] = 12325992;
     EffectData_release((int)(a1 + 1603));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1603));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 1603));
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -215017,11 +215017,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60959BAC(a1 + 1630);
     a1[1603] = 12325992;
     EffectData_release((int)(a1 + 1603));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1603));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 1603));
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -215038,7 +215038,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB11A4 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD2A7E;
-    Profile::Profile(13308328, 6098516, MEMORY[0xAF35FC], (int)v1, &unk_60B058B4, 2);
+    Profile__Profile(13308328, 6098516, MEMORY[0xAF35FC], (int)v1, &unk_60B058B4, 2);
     MEMORY[0xCB11C4] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB11C0] = 12628084;
     MEMORY[0xCB11C8] = 6098676;
@@ -215074,7 +215074,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // r0
   
     v2 = operator new(0x3BCu);
-    StageActor::StageActor(v2, a1);
+    StageActor__StageActor(v2, a1);
     *(_DWORD *)v2 = 12628104;
     *(_DWORD *)(v2 + 644) = (unsigned __int8)*(_DWORD *)(v2 + 20) >> 4;
     *(_DWORD *)(v2 + 648) = 0;
@@ -215233,7 +215233,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(float *)(a1 + 100) = *(float *)(a1 + 860) + MEMORY[0xB05AD4];
       *(float *)(a1 + 104) = v11 + 0.005;
-      StageActor::accelerateX((float *)a1);
+      StageActor__accelerateX((float *)a1);
       result = StageAcor_handleYspeed(a1);
       goto LABEL_31;
     }
@@ -215558,7 +215558,7 @@ static inline unsigned int uxtb16(unsigned int x)
                     if ( v40 != 1 )
                     {
                       if ( !v40
-                        && (unsigned int)((100 * (unsigned __int64)sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32) >= 0x51 )
+                        && (unsigned int)((100 * (unsigned __int64)sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32) >= 0x51 )
                       {
                         v42 = *(_DWORD *)(a1 + 644);
                         v38 = 1;
@@ -215584,7 +215584,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   *(_DWORD *)(a1 + 756) = 660;
                   *(_DWORD *)(a1 + 760) = 4;
                   *(_DWORD *)(a1 + 764) = 0;
-                  return StateMgr::changeState((_DWORD *)(a1 + 940), 13308520);
+                  return StateMgr__changeState((_DWORD *)(a1 + 940), 13308520);
                 }
                 return (*(int (__fastcall **)(int *, int))(LODWORD(v37) + 4))(v4, a1);
               }
@@ -215699,7 +215699,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB1388 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD2AC1;
-    Profile::Profile(13308432, 6105048, MEMORY[0xAF3434], (int)v1, 0, 34);
+    Profile__Profile(13308432, 6105048, MEMORY[0xAF3434], (int)v1, 0, 34);
     MEMORY[0xCB122C] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB1228] = 12628336;
     MEMORY[0xCB1230] = 6105592;
@@ -215827,13 +215827,13 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 533) = 0;
     *(_DWORD *)(a1 + 500) = 1115684864;
     *(_DWORD *)(a1 + 504) = 1115684864;
-    ActiveCollider::init(a1 + 188, a1, dword_60C0B10C, a1 + 884);
+    ActiveCollider__init(a1 + 188, a1, dword_60C0B10C, a1 + 884);
     v7 = MEMORY[0xC88234];
     if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 188) && !ActiveColliderMgr_isInCreateList(v7, a1 + 188) )
       ActiveColliderMgr_addToCreateList(v7, a1 + 188);
     v8 = (float)((float)((*(_DWORD *)(a1 + 20) >> 8) & 0xF) * 16.0) + 6016.0;
     *(float *)(a1 + 116) = v8;
-    StateMgr::changeState((_DWORD *)(a1 + 940), 13308456);
+    StateMgr__changeState((_DWORD *)(a1 + 940), 13308456);
     (**(void (__fastcall ***)(int))(a1 + 888))(a1 + 888);
     *(float *)(a1 + 892) = v8;
     *(_DWORD *)(a1 + 896) = v1;
@@ -216075,15 +216075,15 @@ static inline unsigned int uxtb16(unsigned int x)
         v11 = 0.0;
     }
     *(float *)(a1 + 636) = v11;
-    StateMgr::execute((_DWORD *)(a1 + 940));
+    StateMgr__execute((_DWORD *)(a1 + 940));
     ActorScaler_execute(a1 + 888);
     balloon_awachibiyoshi_ref_2(a1);
     if ( *(_BYTE *)(a1 + 752) )
       sub_605D40F0(a1);
-    CurrentState = StateMgr::getCurrentState(a1 + 940);
+    CurrentState = StateMgr__getCurrentState(a1 + 940);
     v16 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v16 != (*(int (**)(void))(MEMORY[0xCB1248] + 8))() )
-      StageActor::cullCheck(a1, 0);
+      StageActor__cullCheck(a1, 0);
     v17 = *(float *)(a1 + 772) - *(float *)(a1 + 112);
     *(float *)(a1 + 304) = *(float *)(a1 + 768) - *(float *)(a1 + 108);
     *(float *)(a1 + 308) = v17;
@@ -216358,7 +216358,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[217] = 0;
       a1[218] = 0;
     }
-    return StageActor::afterExecute((int)a1, a2);
+    return StageActor__afterExecute((int)a1, a2);
   }
 
 /* ============================================================================
@@ -216388,7 +216388,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int savedregs; // [sp+0h] [bp+0h]
     int savedregsa; // [sp+0h] [bp+0h]
   
-    CurrentState = StateMgr::getCurrentState(a1 + 940);
+    CurrentState = StateMgr__getCurrentState(a1 + 940);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v6 = 0;
     if ( v3 == (*(int (**)(void))(MEMORY[0xCB12A8] + 8))() )
@@ -216586,7 +216586,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(float *)(a1 + 840) = v12;
     }
     v16 = *(_DWORD *)(a1 + 828);
-    v17 = ((238609294 * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+    v17 = ((238609294 * (unsigned __int64)(unsigned int)sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
         - 119304647;
     v18 = *(float *)((((unsigned int)(v17 + v16) >> 20) & 0xFF0) + 0xB3A484);
     v19 = *(float *)((((unsigned int)(v17 + v16) >> 20) & 0xFF0) + 0xB3A488);
@@ -216625,11 +216625,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)(a1 + 88) = v31;
     v32 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
     *(float *)(a1 + 848) = MEMORY[0xB05AE0]
-                         * (float)(COERCE_FLOAT((sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000)
+                         * (float)(COERCE_FLOAT((sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340)) >> 9) | 0x3F800000)
                                  + -1.0);
-    *(float *)(a1 + 852) = MEMORY[0xB05AE4] * (float)(COERCE_FLOAT((sead::Random::getU32(v32) >> 9) | 0x3F800000) + -1.0);
-    *(float *)(a1 + 856) = MEMORY[0xB05AE8] * (float)(COERCE_FLOAT((sead::Random::getU32(v32) >> 9) | 0x3F800000) + -1.0);
-    result = (sead::Random::getU32(v32) >> 9) | 0x3F800000;
+    *(float *)(a1 + 852) = MEMORY[0xB05AE4] * (float)(COERCE_FLOAT((sead__Random__getU32(v32) >> 9) | 0x3F800000) + -1.0);
+    *(float *)(a1 + 856) = MEMORY[0xB05AE8] * (float)(COERCE_FLOAT((sead__Random__getU32(v32) >> 9) | 0x3F800000) + -1.0);
+    result = (sead__Random__getU32(v32) >> 9) | 0x3F800000;
     *(float *)(a1 + 860) = MEMORY[0xB05AEC] * (float)(*(float *)&result + -1.0);
     return result;
   }
@@ -216958,7 +216958,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = *(_DWORD *)(a3 + 64);
     if ( v6 )
     {
-      result = Actor::getProfileId(*(Actor **)(a3 + 64));
+      result = Actor__getProfileId(*(Actor **)(a3 + 64));
       if ( result == MEMORY[0xAF3434] )
         return sub_605D547C(v5, a2, a3);
       v7 = *(_DWORD *)(v6 + 640);
@@ -217026,18 +217026,18 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v6 = *(_DWORD *)(a3 + 64);
     v7 = a1 + 940;
-    CurrentState = StateMgr::getCurrentState(a1 + 940);
+    CurrentState = StateMgr__getCurrentState(a1 + 940);
     v9 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v9 == (*(int (**)(void))(MEMORY[0xCB1248] + 8))()
-      || (v10 = StateMgr::getCurrentState(v7),
+      || (v10 = StateMgr__getCurrentState(v7),
           v11 = (*(int (__fastcall **)(int))(*(_DWORD *)v10 + 8))(v10),
           result = (*(int (**)(void))(MEMORY[0xCB1268] + 8))(),
           v11 == result) )
     {
-      v13 = StateMgr::getCurrentState(v6 + 940);
+      v13 = StateMgr__getCurrentState(v6 + 940);
       v14 = (*(int (__fastcall **)(int))(*(_DWORD *)v13 + 8))(v13);
       if ( v14 == (*(int (**)(void))(MEMORY[0xCB1248] + 8))()
-        || (v15 = StateMgr::getCurrentState(v6 + 940),
+        || (v15 = StateMgr__getCurrentState(v6 + 940),
             v16 = (*(int (__fastcall **)(int))(*(_DWORD *)v15 + 8))(v15),
             result = (*(int (**)(void))(MEMORY[0xCB1268] + 8))(),
             v16 == result) )
@@ -217080,13 +217080,13 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = *(_DWORD *)(a2 + 640) == 0;
       if ( !v6 )
       {
-        CurrentState = StateMgr::getCurrentState((int)(a1 + 235));
+        CurrentState = StateMgr__getCurrentState((int)(a1 + 235));
         v8 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         if ( v8 == (*(int (**)(void))(MEMORY[0xCB1228] + 8))() )
         {
           a1[187] = *(_DWORD *)(a2 + 8);
           a1[204] = FixedPoint_atan2();
-          StateMgr::changeState(a1 + 235, 13308488);
+          StateMgr__changeState(a1 + 235, 13308488);
           return 1;
         }
       }
@@ -217109,7 +217109,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v14; // r7
   
     v8 = (_DWORD *)(a1 + 940);
-    CurrentState = StateMgr::getCurrentState(a1 + 940);
+    CurrentState = StateMgr__getCurrentState(a1 + 940);
     v10 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v11 = (*(int (**)(void))(MEMORY[0xCB12A8] + 8))();
     result = 0;
@@ -217139,7 +217139,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_BYTE *)(a1 + 752) )
         sub_605D4BF4(a1, a2);
       SE_OBJ_CMN_BALLOON_BREAK_ref_5D47E0(a1, a4);
-      StateMgr::changeState(v8, 13308584);
+      StateMgr__changeState(v8, 13308584);
       return 1;
     }
     return result;
@@ -217172,7 +217172,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v24; // [sp+8Ch] [bp-4h]
   
     v6 = *(_DWORD *)(a2 + 64);
-    CurrentState = StateMgr::getCurrentState(v6 + 940);
+    CurrentState = StateMgr__getCurrentState(v6 + 940);
     v8 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     v9 = (*(int (**)(void))(MEMORY[0xCB12A8] + 8))();
     result = 0;
@@ -217267,7 +217267,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v1; // r0
   
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v1);
   }
 
@@ -217688,7 +217688,7 @@ static inline unsigned int uxtb16(unsigned int x)
     else
     {
       *(_DWORD *)(a1 + 80) = HIBYTE(v4) & 1;
-      U32 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
+      U32 = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340));
       v7 = *(_DWORD *)(a1 + 80);
       v8 = (float)((float)(COERCE_FLOAT((U32 >> 9) | 0x3F800000) + -1.0) * 0.7) + 0.3;
       v5 = 0x40000000;
@@ -217748,7 +217748,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 8000) = 0x1000000;
         *(_DWORD *)(a1 + 8004) = 0;
         *v4 = 0;
-        return StateMgr::changeState((_DWORD *)(a1 + 6292), 13309584);
+        return StateMgr__changeState((_DWORD *)(a1 + 6292), 13309584);
       }
     }
     else if ( !v3 )
@@ -217934,7 +217934,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 8000) = 0;
           *(_DWORD *)(a1 + 8004) = 0;
           *(_DWORD *)(a1 + 8008) = 0;
-          return StateMgr::changeState((_DWORD *)(a1 + 6292), 13309620);
+          return StateMgr__changeState((_DWORD *)(a1 + 6292), 13309620);
         }
       }
       else
@@ -217942,7 +217942,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 8000) = v3;
         *(_DWORD *)(a1 + 8004) = 0;
         *(_DWORD *)(a1 + 8008) = 0;
-        return StateMgr::changeState((_DWORD *)(a1 + 6292), 13309896);
+        return StateMgr__changeState((_DWORD *)(a1 + 6292), 13309896);
       }
     }
     else
@@ -217957,7 +217957,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 8000) = 67305472;
       *(_DWORD *)(a1 + 8004) = 0;
       *(_DWORD *)(a1 + 8008) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 6292), 13309584);
+      return StateMgr__changeState((_DWORD *)(a1 + 6292), 13309584);
     }
     return result;
   }
@@ -218076,7 +218076,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 8000) = 3;
       *(_DWORD *)(a1 + 8004) = 0;
       *(_DWORD *)(a1 + 8008) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 6292), 13309796);
+      return StateMgr__changeState((_DWORD *)(a1 + 6292), 13309796);
     }
     else
     {
@@ -218151,7 +218151,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // r0
     int v12; // r1
   
-    CollisionActor::CollisionActor(a1);
+    CollisionActor__CollisionActor(a1);
     *(_DWORD *)a1 = 12628472;
     sub_605EA200(a1 + 6064, a3, 0);
     *(_DWORD *)(a1 + 6252) = a3;
@@ -218407,7 +218407,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = (_DWORD *)(a1 + 6292);
       v7 = 13309584;
   LABEL_16:
-      StateMgr::changeState(v6, v7);
+      StateMgr__changeState(v6, v7);
     }
     return 1;
   }
@@ -218482,7 +218482,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[2000] = a3;
     a1[2001] = 0;
     a1[2002] = 0;
-    return StateMgr::changeState(a1 + 1573, a2);
+    return StateMgr__changeState(a1 + 1573, a2);
   }
 
 /* ============================================================================
@@ -218493,7 +218493,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     if ( a2 == 2 && a1[1564] != 1 )
       (*(void (__fastcall **)(_DWORD *))(*a1 + 200))(a1);
-    CollisionActor::afterCreate(a1);
+    CollisionActor__afterCreate(a1);
   }
 
 /* ============================================================================
@@ -218519,7 +218519,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v4 & 0x20000000) == 0 )
       v2 = (v4 & 0x10000) == 0;
     *(_BYTE *)(a1 + 534) = v2;
-    if ( CollisionActor::beforeExecute(a1) == 1 )
+    if ( CollisionActor__beforeExecute(a1) == 1 )
     {
       *(_DWORD *)(a1 + 6320) = *(_DWORD *)(a1 + 120);
       *(_DWORD *)(a1 + 6324) = *(_DWORD *)(a1 + 124);
@@ -218887,7 +218887,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 7144) = 0;
       sub_605E3F2C(a1);
     }
-    return CollisionActor::afterExecute((CollisionActor *)a1, a2);
+    return CollisionActor__afterExecute((CollisionActor *)a1, a2);
   }
 
 /* ============================================================================
@@ -218899,7 +218899,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r1
     _BOOL4 result; // r0
   
-    v2 = StageActor::befreDraw(a1);
+    v2 = StageActor__befreDraw(a1);
     result = 0;
     if ( v2 == 1 )
       return (*((_BYTE *)a1 + 6267) & 0x20) == 0;
@@ -218941,7 +218941,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605DC0F8((int)a1);
     sub_605E3BD4(a1);
     sub_6040B3B0(MEMORY[0xC9A1F0], *(unsigned __int8 *)(MEMORY[0xC9A1F0] + 6527));
-    return CollisionActor::onDelete((int)a1);
+    return CollisionActor__onDelete((int)a1);
   }
 
 /* ============================================================================
@@ -218984,7 +218984,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 8000) = 1;
         *v3 = 0;
         *(_DWORD *)(a1 + 8008) = 0;
-        StateMgr::changeState((_DWORD *)(a1 + 6292), 13309692);
+        StateMgr__changeState((_DWORD *)(a1 + 6292), 13309692);
       }
       else
       {
@@ -218992,7 +218992,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_605E5644(a1);
       }
     }
-    return StateMgr::execute((_DWORD *)(a1 + 6292));
+    return StateMgr__execute((_DWORD *)(a1 + 6292));
   }
 
 /* ============================================================================
@@ -219420,13 +219420,13 @@ static inline unsigned int uxtb16(unsigned int x)
         result = MEMORY[0xB05B84];
         goto LABEL_8;
       case 1:
-        result = ((30 * (unsigned __int64)sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+        result = ((30 * (unsigned __int64)sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
                + MEMORY[0xB05B84];
         goto LABEL_8;
       case 2:
         goto LABEL_8;
       case 3:
-        result = ((180 * (unsigned __int64)sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32) + 120;
+        result = ((180 * (unsigned __int64)sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32) + 120;
   LABEL_8:
         a1[2001] = result;
         break;
@@ -219468,7 +219468,7 @@ static inline unsigned int uxtb16(unsigned int x)
             *(_DWORD *)(a1 + 8000) = 0;
             *result = 0;
             *v3 = 0;
-            return (_DWORD *)StateMgr::changeState((_DWORD *)(a1 + 6292), 13309620);
+            return (_DWORD *)StateMgr__changeState((_DWORD *)(a1 + 6292), 13309620);
           }
         }
         return result;
@@ -219501,7 +219501,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 8000) = v6;
         *(_DWORD *)(a1 + 8004) = 0;
         *v3 = 0;
-        return (_DWORD *)StateMgr::changeState((_DWORD *)(a1 + 6292), 13309896);
+        return (_DWORD *)StateMgr__changeState((_DWORD *)(a1 + 6292), 13309896);
       }
       result = (_DWORD *)*v3;
       if ( *v3 != 1 )
@@ -219510,7 +219510,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = (_DWORD *)sub_605E3BBC(a1);
     if ( result == (_DWORD *)1 )
     {
-      *(_DWORD *)(a1 + 8004) = ((30 * (unsigned __int64)sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+      *(_DWORD *)(a1 + 8004) = ((30 * (unsigned __int64)sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
                              + MEMORY[0xB05B84];
       result = (_DWORD *)sub_605EAC24(a1 + 6064);
       *v3 = 0;
@@ -219549,7 +219549,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(float *)(a1 + 120) = MEMORY[0xB05B78] * (float)*(char *)(*(_DWORD *)(a1 + 80) + 11557196);
       *(_DWORD *)(a1 + 104) = 0;
-      v5 = (unsigned __int8)(((sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) * (unsigned __int64)MEMORY[0xB05B7C]) >> 32)
+      v5 = (unsigned __int8)(((sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340)) * (unsigned __int64)MEMORY[0xB05B7C]) >> 32)
                            + 1);
       if ( v5 < MEMORY[0xB05B80] )
         LOBYTE(v5) = MEMORY[0xB05B80];
@@ -219595,7 +219595,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_DWORD *)(a1 + 8004) = 0;
       *(_DWORD *)(a1 + 8008) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 6292), 13309584);
+      return StateMgr__changeState((_DWORD *)(a1 + 6292), 13309584);
     }
     return result;
   }
@@ -219622,7 +219622,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 8000) = a2;
       *(_DWORD *)(a1 + 8004) = 0;
       *(_DWORD *)(a1 + 8008) = 0;
-      StateMgr::changeState((_DWORD *)(a1 + 6292), 13309692);
+      StateMgr__changeState((_DWORD *)(a1 + 6292), 13309692);
       return 1;
     }
     return v6;
@@ -219643,7 +219643,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[2000] = a2;
     a1[2001] = 0;
     a1[2002] = 0;
-    StateMgr::changeState(a1 + 1573, 13309692);
+    StateMgr__changeState(a1 + 1573, 13309692);
     return 1;
   }
 
@@ -219662,7 +219662,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[2000] = a2;
     a1[2001] = 0;
     a1[2002] = 0;
-    StateMgr::changeState(a1 + 1573, 13309692);
+    StateMgr__changeState(a1 + 1573, 13309692);
     return 1;
   }
 
@@ -219750,7 +219750,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 8000) = 0;
         *(_DWORD *)(a1 + 8004) = 0;
         *v5 = 0;
-        return StateMgr::changeState((_DWORD *)(a1 + 6292), 13309584);
+        return StateMgr__changeState((_DWORD *)(a1 + 6292), 13309584);
       }
     }
     else if ( !result )
@@ -219801,7 +219801,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 8000) = 0;
         *(_DWORD *)(a1 + 8004) = 0;
         *(_DWORD *)(a1 + 8008) = 0;
-        return StateMgr::changeState((_DWORD *)(a1 + 6292), 13309728);
+        return StateMgr__changeState((_DWORD *)(a1 + 6292), 13309728);
       }
     }
     return result;
@@ -219823,7 +219823,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[2000] = 0;
       a1[2001] = 0;
       a1[2002] = 0;
-      return StateMgr::changeState(a1 + 1573, 13309656);
+      return StateMgr__changeState(a1 + 1573, 13309656);
     }
     return result;
   }
@@ -219921,7 +219921,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 8000) = a2;
     *(_DWORD *)(a1 + 8004) = 0;
     *(_DWORD *)(a1 + 8008) = 0;
-    return StateMgr::changeState((_DWORD *)(a1 + 6292), 13309796);
+    return StateMgr__changeState((_DWORD *)(a1 + 6292), 13309796);
   }
 
 /* ============================================================================
@@ -220018,7 +220018,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[2000] = 0;
     a1[2001] = 0;
     a1[2002] = 0;
-    return StateMgr::changeState(a1 + 1573, 13309656);
+    return StateMgr__changeState(a1 + 1573, 13309656);
   }
 
 /* ============================================================================
@@ -220105,7 +220105,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 8000) = 0;
     *(_DWORD *)(a1 + 8004) = 0;
     *(_DWORD *)(a1 + 8008) = 0;
-    return StateMgr::changeState((_DWORD *)(a1 + 6292), 13309928);
+    return StateMgr__changeState((_DWORD *)(a1 + 6292), 13309928);
   }
 
 /* ============================================================================
@@ -220138,7 +220138,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[2000] = a4;
     a1[2001] = 0;
     a1[2002] = 0;
-    return StateMgr::changeState(a1 + 1573, 13309960);
+    return StateMgr__changeState(a1 + 1573, 13309960);
   }
 
 /* ============================================================================
@@ -220179,16 +220179,16 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1974] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1974);
     EffectData_release((int)(a1 + 1974));
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1948] = 12325992;
     EffectData_release((int)(a1 + 1948));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 1948));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
     nullsub_407(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v4);
   }
 
@@ -221430,7 +221430,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = v2 == 0;
     }
     if ( !v4 )
-      return Actor::getProfileId(v2) == MEMORY[0xAF2E90];
+      return Actor__getProfileId(v2) == MEMORY[0xAF2E90];
     return result;
   }
 
@@ -221453,7 +221453,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = v2 == 0;
     }
     if ( !v4 )
-      return Actor::getProfileId(v2) == MEMORY[0xAF2E90];
+      return Actor__getProfileId(v2) == MEMORY[0xAF2E90];
     return result;
   }
 
@@ -221964,16 +221964,16 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( sub_6075EDE0(a2) || isMode4(a2) )
     {
-      CurrentState = StateMgr::getCurrentState(a2 + 9680);
+      CurrentState = StateMgr__getCurrentState(a2 + 9680);
       v21 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       if ( v21 == (*(int (**)(void))(MEMORY[0xCBF4C0] + 8))()
-        || (v22 = StateMgr::getCurrentState(a2 + 9680),
+        || (v22 = StateMgr__getCurrentState(a2 + 9680),
             v23 = (*(int (__fastcall **)(int))(*(_DWORD *)v22 + 8))(v22),
             v23 == (*(int (**)(void))(MEMORY[0xCBF49C] + 8))())
-        || (v24 = StateMgr::getCurrentState(a2 + 9680),
+        || (v24 = StateMgr__getCurrentState(a2 + 9680),
             v25 = (*(int (__fastcall **)(int))(*(_DWORD *)v24 + 8))(v24),
             v25 == (*(int (**)(void))(MEMORY[0xCBF598] + 8))())
-        || (v26 = StateMgr::getCurrentState(a2 + 9680),
+        || (v26 = StateMgr__getCurrentState(a2 + 9680),
             v27 = (*(int (__fastcall **)(int))(*(_DWORD *)v26 + 8))(v26),
             v27 == (*(int (**)(void))(MEMORY[0xCBF574] + 8))()) )
       {
@@ -222497,9 +222497,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605DD398(int a1)
   {
-    ActiveCollider::init(a1 + 188, a1, dword_60C0B480, 0);
-    ActiveCollider::init(a1 + 7148, a1, dword_60C0B4AC, 0);
-    return ActiveCollider::init(a1 + 7452, a1, dword_60B05A10, 0);
+    ActiveCollider__init(a1 + 188, a1, dword_60C0B480, 0);
+    ActiveCollider__init(a1 + 7148, a1, dword_60C0B4AC, 0);
+    return ActiveCollider__init(a1 + 7452, a1, dword_60B05A10, 0);
   }
 
 /* ============================================================================
@@ -223076,7 +223076,7 @@ static inline unsigned int uxtb16(unsigned int x)
     bool v8; // zf
   
     v6 = *(_DWORD *)(a3 + 64);
-    if ( Actor::getProfileId(v6) == MEMORY[0xAF30A0] && *(float *)(a1 + 124) < 0.0 )
+    if ( Actor__getProfileId(v6) == MEMORY[0xAF30A0] && *(float *)(a1 + 124) < 0.0 )
     {
       result = *(_DWORD *)(a1 + 6260) | 0x40000000;
       *(_DWORD *)(a1 + 6260) = result;
@@ -223849,7 +223849,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605DEF3C(Actor *a1)
   {
     sub_605D8994(a1);
-    if ( (*((_BYTE *)a1 + 6265) & 0x20) == 0 && Actor::getProfileId(a1) != MEMORY[0xAF343C] )
+    if ( (*((_BYTE *)a1 + 6265) & 0x20) == 0 && Actor__getProfileId(a1) != MEMORY[0xAF343C] )
       sub_605D9454((int)a1, 0);
     return 1;
   }
@@ -223888,7 +223888,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v3 == -8000.0 || *(float *)(a1 + 108) <= v3 || *(float *)(a1 + 120) < 0.0 )
       return sub_605E12F8((_DWORD *)a1, a2);
     *(_DWORD *)(a1 + 8020) = 0;
-    return StateMgr::changeState((_DWORD *)(a1 + 6740), 13310432);
+    return StateMgr__changeState((_DWORD *)(a1 + 6740), 13310432);
   }
 
 /* ============================================================================
@@ -223964,7 +223964,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
   LABEL_14:
       *(_DWORD *)(a1 + 8020) = 0;
-      return StateMgr::changeState((_DWORD *)(a1 + 6740), 13310112);
+      return StateMgr__changeState((_DWORD *)(a1 + 6740), 13310112);
     }
     result = *(unsigned __int8 *)(a1 + 6240);
     if ( (result & 0x40) != 0 )
@@ -224039,7 +224039,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( sub_605D840C(a1, 301989888) == 1 )
       {
         *(_DWORD *)(a1 + 8020) = 0;
-        StateMgr::changeState((_DWORD *)(a1 + 6740), 13310112);
+        StateMgr__changeState((_DWORD *)(a1 + 6740), 13310112);
         Object_setTripleAndChangeState((_DWORD *)a1, 13309584, 50331648);
       }
     }
@@ -224208,13 +224208,13 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v4 == 1 )
     {
       *result = 0;
-      StateMgr::changeState(a1 + 1685, 13310112);
+      StateMgr__changeState(a1 + 1685, 13310112);
       return (_DWORD *)Object_setTripleAndChangeState(a1, 13309620, 1);
     }
     else if ( !v3 && *(char *)(MEMORY[0xC9CF0C] + 1404) >= 0 && !*(_BYTE *)(MEMORY[0xC9CF0C] + 1406) )
     {
       *result = 0;
-      StateMgr::changeState(a1 + 1685, 13310112);
+      StateMgr__changeState(a1 + 1685, 13310112);
       return (_DWORD *)Object_setTripleAndChangeState(a1, 13309584, 50331648);
     }
     return result;
@@ -224279,7 +224279,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(float *)(a1 + 124) < 0.0 )
       {
         *(_DWORD *)(a1 + 8020) = 0;
-        StateMgr::changeState((_DWORD *)(a1 + 6740), 13310112);
+        StateMgr__changeState((_DWORD *)(a1 + 6740), 13310112);
         return (_DWORD *)sub_605D9504((_DWORD *)a1, 0);
       }
     }
@@ -224362,7 +224362,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(float *)(a1 + 120) == 0.0 )
       {
         *(_DWORD *)(a1 + 8020) = 0;
-        StateMgr::changeState((_DWORD *)(a1 + 6740), 13310112);
+        StateMgr__changeState((_DWORD *)(a1 + 6740), 13310112);
         return (_DWORD *)Object_setTripleAndChangeState((_DWORD *)a1, 13309584, 50331648);
       }
     }
@@ -224429,7 +224429,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(float *)(a1 + 124) < -1.0 )
       {
         *(_DWORD *)(a1 + 8020) = 0;
-        StateMgr::changeState((_DWORD *)(a1 + 6740), 13310112);
+        StateMgr__changeState((_DWORD *)(a1 + 6740), 13310112);
         return (_DWORD *)Object_setTripleAndChangeState((_DWORD *)a1, 13309656, 50331648);
       }
     }
@@ -224830,7 +224830,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = *(_DWORD *)(a1 + 8016);
     if ( v1 )
       *(_DWORD *)(a1 + 8016) = v1 - 1;
-    return StateMgr::execute((_DWORD *)(a1 + 6740));
+    return StateMgr__execute((_DWORD *)(a1 + 6740));
   }
 
 /* ============================================================================
@@ -224840,7 +224840,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605E0870(int a1, int a2, int a3)
   {
     *(_DWORD *)(a1 + 8020) = a3;
-    return StateMgr::changeState((_DWORD *)(a1 + 6740), a2);
+    return StateMgr__changeState((_DWORD *)(a1 + 6740), a2);
   }
 
 /* ============================================================================
@@ -224883,7 +224883,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605E9384(MEMORY[0xCB1BE4], a1);
     if ( *v13 == 3 )
     {
-      StageActor::updateZoneId(a1);
+      StageActor__updateZoneId(a1);
       *(_BYTE *)(a1 + 6796) = *(_BYTE *)(MEMORY[0xC9A684] + 18);
       return (_DWORD *)sub_605E93C8(MEMORY[0xCB1BE4], a1);
     }
@@ -224904,7 +224904,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 612) = a2[1];
       *(_DWORD *)(a1 + 616) = a2[2];
       sub_605D796C(a1);
-      StageActor::updateZoneId(a1);
+      StageActor__updateZoneId(a1);
       *(_BYTE *)(a1 + 6796) = *(_BYTE *)(MEMORY[0xC9A684] + 18);
       *(_DWORD *)(a1 + 80) = a4;
       sub_605E3BA4(a1);
@@ -224973,36 +224973,36 @@ static inline unsigned int uxtb16(unsigned int x)
         case 2:
         case 15:
           result[2005] = 0;
-          result = (_DWORD *)StateMgr::changeState(result + 1685, 13310176);
+          result = (_DWORD *)StateMgr__changeState(result + 1685, 13310176);
           break;
         case 3:
         case 4:
         case 5:
         case 6:
           result[2005] = 0;
-          result = (_DWORD *)StateMgr::changeState(result + 1685, 13310208);
+          result = (_DWORD *)StateMgr__changeState(result + 1685, 13310208);
           break;
         case 7:
         case 8:
           result[2005] = 0;
-          result = (_DWORD *)StateMgr::changeState(result + 1685, 13310336);
+          result = (_DWORD *)StateMgr__changeState(result + 1685, 13310336);
           break;
         case 9:
           result[2005] = 0;
-          result = (_DWORD *)StateMgr::changeState(result + 1685, 13310304);
+          result = (_DWORD *)StateMgr__changeState(result + 1685, 13310304);
           break;
         case 10:
           result[2005] = 0;
-          result = (_DWORD *)StateMgr::changeState(result + 1685, 13310368);
+          result = (_DWORD *)StateMgr__changeState(result + 1685, 13310368);
           break;
         case 20:
         case 22:
           result[2005] = 0;
-          result = (_DWORD *)StateMgr::changeState(result + 1685, 13310272);
+          result = (_DWORD *)StateMgr__changeState(result + 1685, 13310272);
           break;
         default:
           result[2005] = a3;
-          result = (_DWORD *)StateMgr::changeState(result + 1685, 13310240);
+          result = (_DWORD *)StateMgr__changeState(result + 1685, 13310240);
           break;
       }
     }
@@ -225250,7 +225250,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (v7 & 0x2000000) == 0 )
           v8 = (v7 >> 23) & 2;
         a1[2005] = v8;
-        StateMgr::changeState(a1 + 1685, 13310144);
+        StateMgr__changeState(a1 + 1685, 13310144);
       }
       return v5;
     }
@@ -225350,7 +225350,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( (result & 2) == 0 )
           {
             *(_DWORD *)(a1 + 8020) = 2;
-            return StateMgr::changeState((_DWORD *)(a1 + 6740), 13310432);
+            return StateMgr__changeState((_DWORD *)(a1 + 6740), 13310432);
           }
         }
       }
@@ -225601,7 +225601,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = *v0;
       if ( *v0 && !*((_BYTE *)v6 + 19) )
       {
-        ProfileId = Actor::getProfileId(*v0);
+        ProfileId = Actor__getProfileId(*v0);
         v8 = ProfileId == v5;
         if ( ProfileId != v5 )
           v8 = ProfileId == v4;
@@ -225631,7 +225631,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v1 & 0x20000) == 0 && !(result[1565] & 2 | v1 & 0x10000) )
     {
       result[2005] = 0;
-      return (_DWORD *)StateMgr::changeState(result + 1685, 13310464);
+      return (_DWORD *)StateMgr__changeState(result + 1685, 13310464);
     }
     return result;
   }
@@ -225720,7 +225720,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(MEMORY[0xCC6D78] + 109032) )
       return 0;
     *(_DWORD *)(a1 + 8020) = 0;
-    StateMgr::changeState((_DWORD *)(a1 + 6740), 13310532);
+    StateMgr__changeState((_DWORD *)(a1 + 6740), 13310532);
     return 1;
   }
 
@@ -225740,7 +225740,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v3 )
     {
       *(_DWORD *)(a1 + 8020) = 0;
-      StateMgr::changeState((_DWORD *)(a1 + 6740), 13310112);
+      StateMgr__changeState((_DWORD *)(a1 + 6740), 13310112);
       Object_setTripleAndChangeState(a1, 13309620, 0);
       return 1;
     }
@@ -225781,7 +225781,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 612) = a2[1];
       *(_DWORD *)(a1 + 616) = a2[2];
       *(_DWORD *)(a1 + 8020) = 0;
-      StateMgr::changeState((_DWORD *)(a1 + 6740), 13310564);
+      StateMgr__changeState((_DWORD *)(a1 + 6740), 13310564);
       return 1;
     }
     return result;
@@ -225911,7 +225911,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[1697] = *(_DWORD *)(a2 + 8);
       Object_setTripleAndChangeState(a1, 13309832, 0);
       a1[2005] = 0;
-      StateMgr::changeState(a1 + 1685, 13310596);
+      StateMgr__changeState(a1 + 1685, 13310596);
       return 1;
     }
     return result;
@@ -225934,7 +225934,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 160) = v3;
     *(_DWORD *)(a1 + 164) = 0;
     *(_DWORD *)(a1 + 8020) = 0;
-    StateMgr::changeState((_DWORD *)(a1 + 6740), 13310112);
+    StateMgr__changeState((_DWORD *)(a1 + 6740), 13310112);
     v2 = 1;
     sub_605DAD24(a1, 1);
     if ( (*(_BYTE *)(a1 + 6805) & 8) == 0 )
@@ -226280,7 +226280,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v28 = 13310692;
         else
           v28 = 13310628;
-        return StateMgr::changeState(a1 + 1606, v28);
+        return StateMgr__changeState(a1 + 1606, v28);
       }
     }
     return result;
@@ -226387,7 +226387,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6260) = *(_DWORD *)(a1 + 6260) & 0xF1FFFFFF | 0xC000000;
     v2 = (int *)(a1 + 6456);
     if ( !*(_DWORD *)(a1 + 6456) )
-      return StateMgr::changeState((_DWORD *)(v1 + 6424), 13310628);
+      return StateMgr__changeState((_DWORD *)(v1 + 6424), 13310628);
     v3 = 0;
     v36 = a1 + 6264;
     v4 = (int *)(a1 + 6448);
@@ -226525,7 +226525,7 @@ static inline unsigned int uxtb16(unsigned int x)
     while ( v3 != v20 );
     v1 = a1;
     if ( !v3 )
-      return StateMgr::changeState((_DWORD *)(v1 + 6424), 13310628);
+      return StateMgr__changeState((_DWORD *)(v1 + 6424), 13310628);
   LABEL_45:
     result = v39;
     if ( v39 == v3 )
@@ -226657,7 +226657,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // r0
     bool v12; // zf
   
-    if ( Actor::getProfileId((Actor *)a1) != MEMORY[0xAF343C]
+    if ( Actor__getProfileId((Actor *)a1) != MEMORY[0xAF343C]
       && ((*(_DWORD *)(a1 + 6260) & 0x820C02) != 0x400 || (*(_BYTE *)(a1 + 6265) & 0x20) != 0) )
     {
       return 0;
@@ -226702,7 +226702,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int ProfileId; // r1
     _BOOL4 result; // r0
   
-    ProfileId = Actor::getProfileId((Actor *)a1);
+    ProfileId = Actor__getProfileId((Actor *)a1);
     result = 1;
     if ( ProfileId != MEMORY[0xAF343C] )
     {
@@ -226886,14 +226886,14 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 6168) = v30;
       *(_DWORD *)(a1 + 6172) = v30;
       *(_DWORD *)(a1 + 6440) = sub_6000AED0(a1, a2);
-      CurrentState = StateMgr::getCurrentState(a1 + 6424);
+      CurrentState = StateMgr__getCurrentState(a1 + 6424);
       v32 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       if ( v32 == (*(int (**)(void))(MEMORY[0xCB1AE4] + 8))() )
         (*(void (__fastcall **)(_DWORD, _DWORD))(**(_DWORD **)(a1 + 6424) + 24))(
           *(_DWORD *)(a1 + 6424),
           *(_DWORD *)(a1 + 6432));
       else
-        StateMgr::changeState((_DWORD *)(a1 + 6424), 13310692);
+        StateMgr__changeState((_DWORD *)(a1 + 6424), 13310692);
       return 1;
     }
     return v5;
@@ -226905,7 +226905,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605E3980(int a1)
   {
-    return StateMgr::execute((_DWORD *)(a1 + 6424));
+    return StateMgr__execute((_DWORD *)(a1 + 6424));
   }
 
 /* ============================================================================
@@ -226914,7 +226914,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605E398C(int a1, int a2)
   {
-    return StateMgr::changeState((_DWORD *)(a1 + 6424), a2);
+    return StateMgr__changeState((_DWORD *)(a1 + 6424), a2);
   }
 
 /* ============================================================================
@@ -226971,7 +226971,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_605D8994(v12);
       v10 = Global_setBitmaskAndReturnC7B3A8(*(char *)(v12 + 6336));
       sub_605D8938(v12, (int)"SE_VOC_CH_YS_GOKUN", v10);
-      return StateMgr::changeState((_DWORD *)(v12 + 6424), 13310628);
+      return StateMgr__changeState((_DWORD *)(v12 + 6424), 13310628);
     }
     return result;
   }
@@ -227700,7 +227700,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = *(_DWORD *)(result + 108);
       v7 = v4;
       v8 = 1170939904;
-      return StageActor::createWaterSplash(result, &v6, 437, 6, (int)"SE_OBJ_CMN_SPLASH");
+      return StageActor__createWaterSplash(result, &v6, 437, 6, (int)"SE_OBJ_CMN_SPLASH");
     }
     return result;
   }
@@ -227741,7 +227741,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = *(_DWORD *)(result + 108);
       v7 = v4;
       v8 = 1170939904;
-      return StageActor::createWaterSplash(result, &v6, 437, 6, (int)"SE_OBJ_CMN_SPLASH");
+      return StageActor__createWaterSplash(result, &v6, 437, 6, (int)"SE_OBJ_CMN_SPLASH");
     }
     return result;
   }
@@ -227759,7 +227759,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[0] = *(_DWORD *)(a1 + 108);
     v3[1] = v1;
     v3[2] = 1170939904;
-    return StageActor::createWaterSplash(a1, v3, 438, 23, (int)"SE_OBJ_CMN_SPLASH_POISON");
+    return StageActor__createWaterSplash(a1, v3, 438, 23, (int)"SE_OBJ_CMN_SPLASH_POISON");
   }
 
 /* ============================================================================
@@ -227786,7 +227786,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v5[1] = v2;
     v5[2] = 1170939904;
-    return StageActor::createWaterSplash(a1, v5, v3, 16, (int)"SE_OBJ_CMN_SPLASH_LAVA");
+    return StageActor__createWaterSplash(a1, v5, v3, 16, (int)"SE_OBJ_CMN_SPLASH_LAVA");
   }
 
 /* ============================================================================
@@ -228249,7 +228249,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 6908) = *(_DWORD *)(a1 + 6760);
           *(_DWORD *)(a1 + 6912) = *(_DWORD *)(a1 + 6764);
           *(_DWORD *)(a1 + 6916) = *(_DWORD *)(a1 + 6768);
-          U32 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
+          U32 = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340));
           v6 = *(_DWORD *)(a1 + 6772);
           v7 = ((3 * (unsigned __int64)U32) >> 32) + 3;
           if ( v6 < 2 )
@@ -228294,13 +228294,13 @@ static inline unsigned int uxtb16(unsigned int x)
             v13 = v12;
         }
         *(float *)(a1 + 120) = v13;
-        *v3 = ((3 * (unsigned __int64)sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32) + 5;
+        *v3 = ((3 * (unsigned __int64)sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32) + 5;
         SE_OBJ_CMN_SPLASH_ref_5E4C38(a1, (*(_BYTE *)(a1 + 6805) & 0x10) != 0);
       }
       if ( *(_DWORD *)(a1 + 6144) == 11 )
         sub_605EB980(**(_DWORD **)(*(_DWORD *)(a1 + 6076) + 12));
       Object_releaseIfNotSentinel(a1 + 6064);
-      *v2 = ((120 * (unsigned __int64)sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32) + 180;
+      *v2 = ((120 * (unsigned __int64)sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32) + 180;
       *(_DWORD *)(a1 + 8008) = 2;
       return 8008;
     }
@@ -228446,7 +228446,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_605EB980(**(_DWORD **)(*(_DWORD *)(a1 + 6076) + 12));
       Object_releaseIfNotSentinel(a1 + 6064);
       *(_DWORD *)(a1 + 6920) = ((120
-                               * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+                               * (unsigned __int64)(unsigned int)sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
                              + 180;
       *(_DWORD *)(a1 + 8008) = 2;
       return 8008;
@@ -228551,7 +228551,7 @@ static inline unsigned int uxtb16(unsigned int x)
         Object_releaseIfNotSentinel(a1 + 6064);
       }
       *(_DWORD *)(a1 + 6920) = ((120
-                               * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+                               * (unsigned __int64)(unsigned int)sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
                              + 120;
       *(_DWORD *)(a1 + 8008) = 3;
       return 8008;
@@ -228579,7 +228579,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 6920);
     if ( !*(_DWORD *)(a1 + 6920) || sub_605DA7CC(a1, *(_DWORD *)(a1 + 80)) == 1 )
     {
-      *v2 = ((120 * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+      *v2 = ((120 * (unsigned __int64)(unsigned int)sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
           + 120;
       *(_DWORD *)(a1 + 80) ^= 1u;
     }
@@ -228713,7 +228713,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_605EB980(**(_DWORD **)(*(_DWORD *)(a1 + 6076) + 12));
     Object_releaseIfNotSentinel(a1 + 6064);
     *(_DWORD *)(a1 + 6920) = ((120
-                             * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C]
+                             * (unsigned __int64)(unsigned int)sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C]
                                                                                                    + 1340))) >> 32)
                            + 180;
     *(_DWORD *)(a1 + 8008) = 2;
@@ -228808,7 +228808,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_605EB980(**(_DWORD **)(*(_DWORD *)(result + 6076) + 12));
       Object_releaseIfNotSentinel(v5 + 6064);
       *(_DWORD *)(v5 + 6920) = ((120
-                               * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
+                               * (unsigned __int64)(unsigned int)sead__Random__getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
                              + 180;
       *(_DWORD *)(v5 + 8008) = 2;
       return Object_setTripleAndChangeState(v5, 13310756, 1);
@@ -228932,8 +228932,8 @@ static inline unsigned int uxtb16(unsigned int x)
     StateActor_ctor((_DWORD *)v0);
     *(_DWORD *)v0 = 12629316;
     Actor_chibiyoshi_3_build_helper(v0 + 6100);
-    LightMask::LightMask((_DWORD *)(v0 + 6132));
-    LightSource::LightSource(v0 + 6172);
+    LightMask__LightMask((_DWORD *)(v0 + 6132));
+    LightSource__LightSource(v0 + 6172);
     *(_BYTE *)(v0 + 6244) = 0;
     *(_BYTE *)(v0 + 6272) = 0;
     *(_DWORD *)(v0 + 6268) = 0;
@@ -229011,13 +229011,13 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 112) = v14;
       *(_BYTE *)(a1 + 6272) = 0;
     }
-    CollisionActor::handleGravity(a1);
+    CollisionActor__handleGravity(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
       *(_DWORD *)(a1 + 124) = 0;
     result = *(unsigned __int8 *)(**(_DWORD **)(*(_DWORD *)(a1 + 6104) + 12) + 28);
     if ( (result & 0x20) != 0 )
-      return StateMgr::changeState((_DWORD *)(a1 + 6084), 13310892);
+      return StateMgr__changeState((_DWORD *)(a1 + 6084), 13310892);
     return result;
   }
 
@@ -229148,7 +229148,7 @@ static inline unsigned int uxtb16(unsigned int x)
         CollisionMgr_process((unsigned __int8 *)(a1 + 648));
         result = *(unsigned __int8 *)(a1 + 2872);
         if ( (result & 1) != 0 )
-          return StateMgr::changeState((_DWORD *)(a1 + 6084), 13310828);
+          return StateMgr__changeState((_DWORD *)(a1 + 6084), 13310828);
         break;
       case 1:
         StageAcor_handleYspeed(a1);
@@ -229170,7 +229170,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 6256) = v13 - 1;
         result = *(unsigned __int8 *)(**(_DWORD **)(*(_DWORD *)(a1 + 6104) + 12) + 28);
         if ( (result & 0x20) != 0 )
-          return StateMgr::changeState((_DWORD *)(a1 + 6084), 13310828);
+          return StateMgr__changeState((_DWORD *)(a1 + 6084), 13310828);
         break;
     }
     return result;
@@ -229253,7 +229253,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_DWORD *)(a1 + 6248) == 2 && MEMORY[0xCB84A4] && sub_6068C438(MEMORY[0xCB84A4]) == 1 )
     {
       *(_BYTE *)(a1 + 6244) = 1;
-      LightMask::init((_DWORD *)(a1 + 6132), 0, 2);
+      LightMask__init((_DWORD *)(a1 + 6132), 0, 2);
       v6 = MEMORY[0xB05B58];
       v7 = MEMORY[0xB05B58] + *(float *)(a1 + 6268);
       v8 = v7 < MEMORY[0xB05B58];
@@ -229275,7 +229275,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(float *)(a1 + 6144) = v10 + v9;
       *(float *)(a1 + 6148) = v13 + v11;
       *(float *)(a1 + 6152) = v14 + v12;
-      LightMask::update(a1 + 6132);
+      LightMask__update(a1 + 6132);
       *(_DWORD *)(a1 + 6268) = MEMORY[0xB05B5C];
     }
     CollisionMgr_init(a1 + 648, a1, dword_60B05AA4, 0, 0);
@@ -229285,7 +229285,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (unsigned __int8)v2 >> 4 == 1 )
         v15 = 2;
       *(_DWORD *)(a1 + 6252) = v15;
-      StateMgr::changeState((_DWORD *)(a1 + 6084), 13310860);
+      StateMgr__changeState((_DWORD *)(a1 + 6084), 13310860);
       sub_605E7054(a1);
     }
     return 1;
@@ -229375,7 +229375,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v10; // s10
     float v12[3]; // [sp+14h] [bp-Ch] BYREF
   
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     sub_605E7054(a1);
     if ( *(_DWORD *)(a1 + 6248) == 2 )
     {
@@ -229408,9 +229408,9 @@ static inline unsigned int uxtb16(unsigned int x)
       *(float *)(a1 + 6144) = v6 + v5;
       *(float *)(a1 + 6148) = v9 + v7;
       *(float *)(a1 + 6152) = v10 + v8;
-      LightMask::update(a1 + 6132);
+      LightMask__update(a1 + 6132);
     }
-    StageActor::cullCheck(a1, 4);
+    StageActor__cullCheck(a1, 4);
     return 1;
   }
 
@@ -229428,8 +229428,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int savedregs; // [sp+0h] [bp+0h]
   
     if ( *(_BYTE *)(a1 + 6244) )
-      LightMask::draw(a1 + 6132);
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+      LightMask__draw(a1 + 6132);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v3 != (*(int (**)(void))(MEMORY[0xCB1BAC] + 8))() )
       sub_6045D3E0(a1 + 6100, v4, v5, v6, savedregs);
@@ -229572,10 +229572,10 @@ static inline unsigned int uxtb16(unsigned int x)
   void __fastcall sub_605E7670(int a1)
   {
     *(_DWORD *)a1 = 12629316;
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6172));
+    LightSource__dtor((struct sead_IDisposer *)(a1 + 6172));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -229587,10 +229587,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12629316;
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6172));
+    LightSource__dtor((struct sead_IDisposer *)(a1 + 6172));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -229604,7 +229604,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2C10;
-    Profile::Profile(13310792, 6186960, MEMORY[0xAF3420], (int)v1, 0, 2);
+    Profile__Profile(13310792, 6186960, MEMORY[0xAF3420], (int)v1, 0, 2);
     unk_60CB1B60 = 1065353216;
     unk_60CB1B64 = -1056964608;
     dword_60CB1B68 = 0;
@@ -229648,7 +229648,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB1BE0] = 0;
       MEMORY[0xCB1BE4] = 0;
     }
-    return sead::IDisposer::~IDisposer(a1);
+    return sead__IDisposer__dtor(a1);
   }
 
 /* ============================================================================
@@ -229665,7 +229665,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB1BE0] = 0;
       MEMORY[0xCB1BE4] = 0;
     }
-    v1 = sead::IDisposer::~IDisposer(a1);
+    v1 = sead__IDisposer__dtor(a1);
     return operator delete((int)v1);
   }
 
@@ -229683,7 +229683,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !MEMORY[0xCB1BE4] )
     {
       v3 = operator new[](348, a1, 4);
-      v4 = (_DWORD *)sead::IDisposer::IDisposer(v3, a1, 3);
+      v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12629536;
       MEMORY[0xCB1BE0] = v4;
       result = sub_605E7D24();
@@ -229746,7 +229746,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(result + 292) = 1;
           return result;
         }
-        return StateMgr::changeState((_DWORD *)(result + 332), 13310952);
+        return StateMgr__changeState((_DWORD *)(result + 332), 13310952);
       }
     }
     else if ( v1 == 1 )
@@ -229823,7 +229823,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(v6 + 6264) |= 0x800000u;
         }
       }
-      return (_DWORD *)StateMgr::changeState(result + 83, 13310952);
+      return (_DWORD *)StateMgr__changeState(result + 83, 13310952);
     }
     return result;
   }
@@ -229992,7 +229992,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 160) = 0;
     *(_DWORD *)(a1 + 228) = 0;
     *(_DWORD *)(a1 + 224) = 0;
-    StateMgr::changeState(v2, 13310952);
+    StateMgr__changeState(v2, 13310952);
     return a1;
   }
 
@@ -230013,7 +230013,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_DWORD *)(a1 + 32) = 0;
       *(_DWORD *)(a1 + 36) = 0;
-      StateMgr::changeState((_DWORD *)(a1 + 332), 13310952);
+      StateMgr__changeState((_DWORD *)(a1 + 332), 13310952);
       *(_BYTE *)(a1 + 309) = 0;
       if ( *(_DWORD *)(a2 + 492) == 1 && !*(_BYTE *)(MEMORY[0xC9A684] + 16) && *(_BYTE *)(MEMORY[0xC9A684] + 17) == 3 )
       {
@@ -230304,7 +230304,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 160) = 0;
       *(_DWORD *)(a1 + 280) = 0;
       *(_DWORD *)(a1 + 284) = 0;
-      StateMgr::changeState((_DWORD *)(a1 + 332), 13310952);
+      StateMgr__changeState((_DWORD *)(a1 + 332), 13310952);
       Area = Level_getArea(MEMORY[0xCBD89C]);
       v10 = sub_60727D48(Area, a3);
       if ( *(_BYTE *)(v10 + 18) )
@@ -230597,7 +230597,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v6; // r2
     int v7; // r0
   
-    result = StateMgr::changeState(a1 + 83, 13310952);
+    result = StateMgr__changeState(a1 + 83, 13310952);
     v3 = a1[9];
     if ( v3 )
     {
@@ -230631,14 +230631,14 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CB1C88);
     }
     memset(&v18[1], 0, 0x28u);
-    v18[3] = Profile::get(*((_DWORD *)&unk_60CB1C88 + a1 + 1));
+    v18[3] = Profile__get(*((_DWORD *)&unk_60CB1C88 + a1 + 1));
     _R1 = a3 << 20;
     uxtb16(r1)
     v18[4] = *a2;
     v18[5] = a2[1];
     v18[6] = a2[2];
     v18[0] = _R1 & 0xFFF0FFFF | ((a4 & 0xF) << 16) | (a5 << 24) & 0xF000000 | (a6 << 28);
-    return ActorMgr::create(MEMORY[0xC7B400], (int)v18, 0);
+    return ActorMgr__create(MEMORY[0xC7B400], (int)v18, 0);
   }
 
 /* ============================================================================
@@ -230659,12 +230659,12 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v7[11]; // [sp+4h] [bp+0h] BYREF
   
     memset(&v7[1], 0, 0x28u);
-    v7[3] = Profile::get(MEMORY[0xAF3420]);
+    v7[3] = Profile__get(MEMORY[0xAF3420]);
     v7[4] = *a1;
     v7[5] = a1[1];
     v7[6] = a1[2];
     v7[0] = a2 & 0xF | (16 * (a3 & 0xF));
-    return ActorMgr::create(MEMORY[0xC7B400], (int)v7, 0);
+    return ActorMgr__create(MEMORY[0xC7B400], (int)v7, 0);
   }
 
 /* ============================================================================
@@ -231186,7 +231186,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = *(_DWORD *)(MEMORY[0xC995D0] + 32);
     if ( !v2 )
-      return StateMgr::execute((_DWORD *)(a1 + 332));
+      return StateMgr__execute((_DWORD *)(a1 + 332));
     if ( _cxa_guard_acquire_0(13163568) )
     {
       MEMORY[0xC8DC2C] = 12424368;
@@ -231194,7 +231194,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     result = (*(int (__fastcall **)(int, int))(*(_DWORD *)v2 + 8))(v2, 13163564);
     if ( !result )
-      return StateMgr::execute((_DWORD *)(a1 + 332));
+      return StateMgr__execute((_DWORD *)(a1 + 332));
     return result;
   }
 
@@ -231262,7 +231262,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     if ( !*(_DWORD *)(a1 + 228) )
-      return StateMgr::changeState((_DWORD *)(a1 + 332), 13310952);
+      return StateMgr__changeState((_DWORD *)(a1 + 332), 13310952);
     switch ( *(_BYTE *)(a1 + 296) )
     {
       case 0:
@@ -231270,10 +231270,10 @@ static inline unsigned int uxtb16(unsigned int x)
       case 7:
       case 0x19:
       case 0x22:
-        result = StateMgr::changeState((_DWORD *)(a1 + 332), 13311016);
+        result = StateMgr__changeState((_DWORD *)(a1 + 332), 13311016);
         break;
       default:
-        result = StateMgr::changeState((_DWORD *)(a1 + 332), 13310984);
+        result = StateMgr__changeState((_DWORD *)(a1 + 332), 13310984);
         break;
     }
     return result;
@@ -231288,7 +231288,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int CurrentState; // r0
     int v2; // r4
   
-    CurrentState = StateMgr::getCurrentState(a1 + 332);
+    CurrentState = StateMgr__getCurrentState(a1 + 332);
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     return v2 == (*(int (**)(void))(MEMORY[0xCB1BE8] + 8))();
   }
@@ -231306,7 +231306,7 @@ static inline unsigned int uxtb16(unsigned int x)
     bool v6; // zf
   
     v2 = (_DWORD *)(a1 + 332);
-    CurrentState = StateMgr::getCurrentState(a1 + 332);
+    CurrentState = StateMgr__getCurrentState(a1 + 332);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCB1C48] + 8))();
     v6 = v4 == result;
@@ -231316,7 +231316,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = result == 0;
     }
     if ( !v6 )
-      return StateMgr::changeState(v2, 13311048);
+      return StateMgr__changeState(v2, 13311048);
     return result;
   }
 
@@ -231646,7 +231646,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( !v3 )
     {
-      result = StateMgr::changeState(a1 + 83, 13310952);
+      result = StateMgr__changeState(a1 + 83, 13310952);
       v4 = a1[9];
       if ( v4 )
       {
@@ -231743,13 +231743,13 @@ static inline unsigned int uxtb16(unsigned int x)
         v13 = *v8;
         if ( *v8 && sub_605E1E84(*v8, a3, a4) == 1 )
         {
-          CurrentState = StateMgr::getCurrentState((int)(a1 + 83));
+          CurrentState = StateMgr__getCurrentState((int)(a1 + 83));
           v15 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
           if ( v15 != (*(int (**)(void))(MEMORY[0xCB1C68] + 8))() )
           {
             a1[56] = 0;
             a1[57] = 0;
-            StateMgr::changeState(a1 + 83, 13311080);
+            StateMgr__changeState(a1 + 83, 13311080);
           }
           v16 = a1[55];
           v17 = a1[57];
@@ -231786,7 +231786,7 @@ static inline unsigned int uxtb16(unsigned int x)
     bool v11; // vf
     int v12; // r1
   
-    CurrentState = StateMgr::getCurrentState((int)(a1 + 83));
+    CurrentState = StateMgr__getCurrentState((int)(a1 + 83));
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCB1C68] + 8))();
     if ( v5 == result )
@@ -232436,7 +232436,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v9 = (struct sead_Random *)MEMORY[0xCCF4E4];
           if ( !*(_DWORD *)(a1 + 8) )
             v9 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
-          result = ((60 * (unsigned __int64)(unsigned int)sead::Random::getU32(v9)) >> 32) + 10;
+          result = ((60 * (unsigned __int64)(unsigned int)sead__Random__getU32(v9)) >> 32) + 10;
           *(_DWORD *)(a1 + 96) = result;
         }
       }
@@ -232628,7 +232628,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = (struct sead_Random *)MEMORY[0xCCF4E4];
     if ( !v4 )
       v5 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
-    result = sead::Random::getU32(v5);
+    result = sead__Random__getU32(v5);
     if ( a2 != -1 )
       return sub_605EA46C(a1, a2);
     return result;
@@ -232659,7 +232659,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = (struct sead_Random *)MEMORY[0xCCF4E4];
     if ( !v4 )
       v5 = (struct sead_Random *)(MEMORY[0xC9CF0C] + 1340);
-    result = sead::Random::getU32(v5);
+    result = sead__Random__getU32(v5);
     if ( a2 != -1 )
       return sub_605EA46C(a1, a2);
     return result;
@@ -233498,7 +233498,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = v4;
     if ( v4 )
       *v2 = v3 - 1;
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     SolidOnTopCollider_execute(a1 + 6104);
     sub_605EC218(a1);
     sub_605EC37C(a1);
@@ -233583,7 +233583,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -233598,7 +233598,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -233628,7 +233628,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2C8A;
-    return Profile::Profile(13311272, 6207900, MEMORY[0xAF3230], (int)v1, &unk_60B05C04, 2);
+    return Profile__Profile(13311272, 6207900, MEMORY[0xAF3230], (int)v1, &unk_60B05C04, 2);
   }
 
 /* ============================================================================
@@ -233641,7 +233641,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r1
     int v4; // r2
   
-    MultiStateActor::MultiStateActor((_DWORD *)a1);
+    MultiStateActor__MultiStateActor((_DWORD *)a1);
     *(_DWORD *)a1 = 12629936;
     SolidOnTopCollider_ctor();
     *(_DWORD *)(a1 + 6104) = 12355000;
@@ -233963,8 +233963,8 @@ static inline unsigned int uxtb16(unsigned int x)
       else
         (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 196))(a1);
     }
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     v3 = *(_DWORD *)(a1 + 6588);
     if ( v3 )
     {
@@ -234031,10 +234031,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r0
   
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-    result = StageActor::cullCheck(a1, 2);
+    result = StageActor__cullCheck(a1, 2);
     if ( result == 1 )
     {
       ColliderMgr_removeRelated1(MEMORY[0xC8820C], (_DWORD *)(a1 + 6104));
@@ -234174,7 +234174,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6104));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -234248,7 +234248,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r4
   
     v0 = (_DWORD *)operator new(0x2950u);
-    MultiStateActor::MultiStateActor(v0);
+    MultiStateActor__MultiStateActor(v0);
     *v0 = 12630216;
     v0[1530] = 0;
     v0[1536] = 0;
@@ -234362,7 +234362,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     memset(&v12[1], 0, 0x24u);
     v12[0] = a1[4];
-    v12[3] = Profile::get(MEMORY[0xAF33FC]);
+    v12[3] = Profile__get(MEMORY[0xAF33FC]);
     v12[4] = *a2;
     v12[5] = a2[1];
     v12[6] = a2[2];
@@ -234371,7 +234371,7 @@ static inline unsigned int uxtb16(unsigned int x)
     BYTE1(v12[9]) = a4;
     BYTE2(v12[8]) = 0;
     v12[10] = 0;
-    v8 = ActorMgr::create(MEMORY[0xC7B400], (int)v12, 1);
+    v8 = ActorMgr__create(MEMORY[0xC7B400], (int)v12, 1);
     result = _cxa_guard_acquire_0(13311496);
     if ( result )
     {
@@ -234651,7 +234651,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v2[3] = 0;
         return 0;
       }
-      CurrentState = StateMgr::getCurrentState(v5 + 6084);
+      CurrentState = StateMgr__getCurrentState(v5 + 6084);
       v7 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       result = (*(int (**)(void))(MEMORY[0xCAED90] + 8))();
       if ( v7 != result )
@@ -234733,7 +234733,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           if ( v5 && (**v5)(v5, 13087584) )
           {
-            if ( StageActor::cullCheck((int)v5, 2) != 1 )
+            if ( StageActor__cullCheck((int)v5, 2) != 1 )
               return 0;
           }
           else
@@ -234787,7 +234787,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -234801,7 +234801,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2CA0;
-    return Profile::Profile(13311468, 6212948, MEMORY[0xAF2D84], (int)v1, &unk_60B05C34, 0);
+    return Profile__Profile(13311468, 6212948, MEMORY[0xAF2D84], (int)v1, &unk_60B05C34, 0);
   }
 
 /* ============================================================================
@@ -234815,7 +234815,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v0 = (_DWORD *)operator new(0x1828u);
     sub_60676744(v0);
     *v0 = 12630420;
-    LightMask::LightMask(v0 + 1534);
+    LightMask__LightMask(v0 + 1534);
     v0[1544] = 0;
     return v0;
   }
@@ -234833,7 +234833,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1537] = a1[27];
     a1[1538] = a1[28];
     a1[1539] = a1[29];
-    return LightMask::update((LightMask *)(a1 + 1534));
+    return LightMask__update((LightMask *)(a1 + 1534));
   }
 
 /* ============================================================================
@@ -234850,7 +234850,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 496) = 0;
     *(_DWORD *)(a1 + 500) = 1157562368;
     *(_DWORD *)(a1 + 504) = 1157562368;
-    LightMask::init((_DWORD *)(a1 + 6136), 0, 2);
+    LightMask__init((_DWORD *)(a1 + 6136), 0, 2);
     v2 = (float)(60 * (*(_WORD *)(a1 + 22) & 0xFu) + 120);
     *(float *)(a1 + 6176) = v2;
     *(float *)(a1 + 6140) = v2;
@@ -234871,18 +234871,18 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( a1[1531] && !sub_6067699C((int)a1) )
     {
-      StageActor::delete((int)a1, 1);
+      StageActor__delete((int)a1, 1);
       return 1;
     }
     else
     {
-      StateMgr::execute(a1 + 1521);
+      StateMgr__execute(a1 + 1521);
       (*(void (__fastcall **)(_DWORD *))(*a1 + 220))(a1);
       a1[1535] = v1;
       a1[1537] = a1[27];
       a1[1538] = a1[28];
       a1[1539] = a1[29];
-      LightMask::update((int)(a1 + 1534));
+      LightMask__update((int)(a1 + 1534));
       return 1;
     }
   }
@@ -234903,7 +234903,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605EDC2C(int a1)
   {
-    return LightMask::draw(a1 + 6136);
+    return LightMask__draw(a1 + 6136);
   }
 
 /* ============================================================================
@@ -234942,7 +234942,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
   }
 
 /* ============================================================================
@@ -234955,7 +234955,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -234978,7 +234978,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2CC8;
-    return Profile::Profile(13311500, 6216208, MEMORY[0xAF39A4], (int)v1, &unk_60B05C58, 2);
+    return Profile__Profile(13311500, 6216208, MEMORY[0xAF39A4], (int)v1, &unk_60B05C58, 2);
   }
 
 /* ============================================================================
@@ -235237,16 +235237,16 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1974] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1974);
     EffectData_release((int)(a1 + 1974));
-    sead::IDisposer::~IDisposer(v3);
+    sead__IDisposer__dtor(v3);
     a1[1948] = 12325992;
     EffectData_release((int)(a1 + 1948));
-    sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
+    sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 1948));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
     nullsub_407(v2);
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v4);
   }
 
@@ -235275,7 +235275,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2CD5;
-    Profile::Profile(13311524, 6217268, MEMORY[0xAF3430], (int)v1, &unk_60B05C7C, 2070);
+    Profile__Profile(13311524, 6217268, MEMORY[0xAF3430], (int)v1, &unk_60B05C7C, 2070);
     MEMORY[0xCB1E40] = ++MEMORY[0xC7B788];
     MEMORY[0xCB1E44] = 292;
     MEMORY[0xCB1E48] = 1;
@@ -235382,7 +235382,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v4 < 0 )
       v4 = -v4;
     if ( v4 >= result[1717] )
-      return (_DWORD *)StateMgr::changeState(result + 1521, 13311712);
+      return (_DWORD *)StateMgr__changeState(result + 1521, 13311712);
     return result;
   }
 
@@ -235407,7 +235407,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = result[1722] + 1;
     result[1722] = v1;
     if ( v1 == result[1723] )
-      return (_DWORD *)StateMgr::changeState(result + 1521, 13311712);
+      return (_DWORD *)StateMgr__changeState(result + 1521, 13311712);
     return result;
   }
 
@@ -235418,7 +235418,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605EE770(int result)
   {
     if ( *(_DWORD *)(result + 6880) <= *(_DWORD *)(MEMORY[0xCAF15C] + 33812) + *(_DWORD *)(MEMORY[0xCAF15C] + 33808) )
-      return StateMgr::changeState((_DWORD *)(result + 6084), 13311712);
+      return StateMgr__changeState((_DWORD *)(result + 6084), 13311712);
     return result;
   }
 
@@ -235549,7 +235549,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v12 = (_DWORD *)(a1 + 6084);
         v11 = 13311648;
   LABEL_41:
-        StateMgr::changeState(v12, v11);
+        StateMgr__changeState(v12, v11);
         return 1;
       case 0u:
         v4 = 0;
@@ -235686,7 +235686,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605EEDDC(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     *(_BYTE *)(a1 + 6858) = -1;
     sub_6069E88C(a1);
     return 1;
@@ -235737,7 +235737,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -235752,7 +235752,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -235821,7 +235821,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2CED;
-    Profile::Profile(13311592, 6218896, MEMORY[0xAF2F48], (int)v1, &unk_60B05CA0, 2);
+    Profile__Profile(13311592, 6218896, MEMORY[0xAF2F48], (int)v1, &unk_60B05CA0, 2);
     MEMORY[0xCB1E84] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB1E80] = 12631384;
     MEMORY[0xCB1E88] = 6219288;
@@ -235952,7 +235952,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v4 < 0 )
       v4 = -v4;
     if ( v4 >= result[1717] )
-      return (_DWORD *)StateMgr::changeState(result + 1521, 13311880);
+      return (_DWORD *)StateMgr__changeState(result + 1521, 13311880);
     return result;
   }
 
@@ -235977,7 +235977,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = result[1722] + 1;
     result[1722] = v1;
     if ( v1 == result[1723] )
-      return (_DWORD *)StateMgr::changeState(result + 1521, 13311880);
+      return (_DWORD *)StateMgr__changeState(result + 1521, 13311880);
     return result;
   }
 
@@ -235988,7 +235988,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605EF5D4(int result)
   {
     if ( *(_DWORD *)(result + 6880) <= *(_DWORD *)(MEMORY[0xCAF15C] + 33812) + *(_DWORD *)(MEMORY[0xCAF15C] + 33808) )
-      return StateMgr::changeState((_DWORD *)(result + 6084), 13311880);
+      return StateMgr__changeState((_DWORD *)(result + 6084), 13311880);
     return result;
   }
 
@@ -236159,7 +236159,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 6864) = v7;
       v12 = (_DWORD *)(a1 + 6084);
     }
-    StateMgr::changeState(v12, v11);
+    StateMgr__changeState(v12, v11);
     return 1;
   }
 
@@ -236228,7 +236228,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605EFB58(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     *(_BYTE *)(a1 + 6858) = -1;
     sub_6069E88C(a1);
     return 1;
@@ -236281,7 +236281,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -236295,7 +236295,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2D31;
-    Profile::Profile(13311760, 6222580, MEMORY[0xAF2F4C], (int)v1, &unk_60B05CC4, 1026);
+    Profile__Profile(13311760, 6222580, MEMORY[0xAF2F4C], (int)v1, &unk_60B05CC4, 1026);
     MEMORY[0xCB1F2C] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB1F28] = 12631608;
     MEMORY[0xCB1F30] = 6222972;
@@ -236426,7 +236426,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v4 < 0 )
       v4 = -v4;
     if ( v4 >= result[1717] )
-      return (_DWORD *)StateMgr::changeState(result + 1521, 13312040);
+      return (_DWORD *)StateMgr__changeState(result + 1521, 13312040);
     return result;
   }
 
@@ -236451,7 +236451,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = result[1722] + 1;
     result[1722] = v1;
     if ( v1 == result[1723] )
-      return (_DWORD *)StateMgr::changeState(result + 1521, 13312040);
+      return (_DWORD *)StateMgr__changeState(result + 1521, 13312040);
     return result;
   }
 
@@ -236462,7 +236462,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605F0228(int result)
   {
     if ( *(_DWORD *)(result + 6880) <= *(_DWORD *)(MEMORY[0xCAF15C] + 33812) + *(_DWORD *)(MEMORY[0xCAF15C] + 33808) )
-      return StateMgr::changeState((_DWORD *)(result + 6084), 13312040);
+      return StateMgr__changeState((_DWORD *)(result + 6084), 13312040);
     return result;
   }
 
@@ -236633,7 +236633,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 6864) = v7;
       v12 = (_DWORD *)(a1 + 6084);
     }
-    StateMgr::changeState(v12, v11);
+    StateMgr__changeState(v12, v11);
     return 1;
   }
 
@@ -236702,7 +236702,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605F079C(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     *(_BYTE *)(a1 + 6858) = -1;
     sub_6069E88C(a1);
     return 1;
@@ -236755,7 +236755,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -236769,7 +236769,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2D61;
-    Profile::Profile(13311920, 6225736, MEMORY[0xAF2F50], (int)v1, &unk_60B05CE8, 1026);
+    Profile__Profile(13311920, 6225736, MEMORY[0xAF2F50], (int)v1, &unk_60B05CE8, 1026);
     MEMORY[0xCB1FCC] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB1FC8] = 12631832;
     MEMORY[0xCB1FD0] = 6226128;
@@ -236900,7 +236900,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v4 < 0 )
       v4 = -v4;
     if ( v4 >= result[1717] )
-      return (_DWORD *)StateMgr::changeState(result + 1521, 13312200);
+      return (_DWORD *)StateMgr__changeState(result + 1521, 13312200);
     return result;
   }
 
@@ -236925,7 +236925,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = result[1722] + 1;
     result[1722] = v1;
     if ( v1 == result[1723] )
-      return (_DWORD *)StateMgr::changeState(result + 1521, 13312200);
+      return (_DWORD *)StateMgr__changeState(result + 1521, 13312200);
     return result;
   }
 
@@ -236936,7 +236936,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605F0E6C(int result)
   {
     if ( *(_DWORD *)(result + 6880) <= *(_DWORD *)(MEMORY[0xCAF15C] + 33812) + *(_DWORD *)(MEMORY[0xCAF15C] + 33808) )
-      return StateMgr::changeState((_DWORD *)(result + 6084), 13312200);
+      return StateMgr__changeState((_DWORD *)(result + 6084), 13312200);
     return result;
   }
 
@@ -237109,7 +237109,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 6864) = v7;
       v12 = (_DWORD *)(a1 + 6084);
     }
-    StateMgr::changeState(v12, v11);
+    StateMgr__changeState(v12, v11);
     return 1;
   }
 
@@ -237205,7 +237205,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605F14DC(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     *(_BYTE *)(a1 + 6858) = -1;
     sub_6069E88C(a1);
     return 1;
@@ -237258,7 +237258,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -237272,7 +237272,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2D91;
-    Profile::Profile(13312080, 6228876, MEMORY[0xAF2F44], (int)v1, &unk_60B05D0C, 2);
+    Profile__Profile(13312080, 6228876, MEMORY[0xAF2F44], (int)v1, &unk_60B05D0C, 2);
     MEMORY[0xCB206C] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB2068] = 12632056;
     MEMORY[0xCB2070] = 6229268;
@@ -237318,9 +237318,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r5
   
     v0 = operator new(0x18E0u);
-    MultiStateActor::MultiStateActor((_DWORD *)v0);
+    MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12632076;
-    MovementHandler::MovementHandler((_DWORD *)(v0 + 6104));
+    MovementHandler__MovementHandler((_DWORD *)(v0 + 6104));
     *(_BYTE *)(v0 + 6364) = 0;
     *(_DWORD *)(v0 + 6360) = 0;
     *(_DWORD *)(v0 + 6352) = 0;
@@ -237342,7 +237342,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)(a1 + 6356) = 0;
     v2 = (_DWORD *)(a1 + 6356);
-    if ( Actor::getProfileId(a1) != MEMORY[0xAF2DE0] )
+    if ( Actor__getProfileId(a1) != MEMORY[0xAF2DE0] )
     {
       v3 = (_DWORD *)(a1 + 20);
   LABEL_6:
@@ -237367,7 +237367,7 @@ static inline unsigned int uxtb16(unsigned int x)
         (*v3 & 0x8000000) != 0,
         HIBYTE(*v3) & 1,
         0);
-      MovementHandler::execute((_DWORD *)(a1 + 6104));
+      MovementHandler__execute((_DWORD *)(a1 + 6104));
       return v4;
     }
     v3 = (_DWORD *)(a1 + 20);
@@ -237456,7 +237456,7 @@ static inline unsigned int uxtb16(unsigned int x)
           LOBYTE(v29) = *v16;
           BYTE1(v29) = *(_BYTE *)(a1 + 29);
           v22 = *(_DWORD *)(a1 + 8);
-          v23 = Profile::get(v14);
+          v23 = Profile__get(v14);
           v24 = v13;
           v25 = v12;
           v26 = v9;
@@ -237474,7 +237474,7 @@ static inline unsigned int uxtb16(unsigned int x)
           LOBYTE(v29) = *v16;
           BYTE1(v29) = *(_BYTE *)(a1 + 29);
           v22 = *(_DWORD *)(a1 + 8);
-          v23 = Profile::get(v15);
+          v23 = Profile__get(v15);
           v24 = v13;
           v25 = v12;
           v26 = v9;
@@ -237482,7 +237482,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         *(_WORD *)((char *)&v28 + 1) = 0;
         v30 = 0;
-        ActorMgr::create(MEMORY[0xC7B400], (int)&v20, 0);
+        ActorMgr__create(MEMORY[0xC7B400], (int)&v20, 0);
         ++v6;
         v7 += v19;
         result = *v18;
@@ -237510,14 +237510,14 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v2; // r5
   
     v2 = a1 + 1526;
-    MovementHandler::execute(a1 + 1526);
+    MovementHandler__execute(a1 + 1526);
     if ( a1[1538] == 1 && a1[1543] != 1 )
     {
       a1[27] = *v2;
       a1[28] = a1[1527];
       a1[41] = a1[1546];
     }
-    StageActor::cullCheck((int)a1, 0);
+    StageActor__cullCheck((int)a1, 0);
     return 1;
   }
 
@@ -237557,7 +237557,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
   }
 
 /* ============================================================================
@@ -237570,7 +237570,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -237585,10 +237585,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD2DC1;
-    Profile::Profile(13312240, 6232268, MEMORY[0xAF2DDC], (int)&v1, &unk_60B05D30, 0);
+    Profile__Profile(13312240, 6232268, MEMORY[0xAF2DDC], (int)&v1, &unk_60B05D30, 0);
     v1 = 12321336;
     v2 = &unk_60AD2DD7;
-    return Profile::Profile(13312264, 6232268, MEMORY[0xAF2DE0], (int)&v1, &unk_60B05D54, 0);
+    return Profile__Profile(13312264, 6232268, MEMORY[0xAF2DE0], (int)&v1, &unk_60B05D54, 0);
   }
 
 /* ============================================================================
@@ -237601,7 +237601,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v0 = operator new(0x1D50u);
-    result = CoinBase::CoinBase(v0);
+    result = CoinBase__CoinBase(v0);
     *(_DWORD *)result = 12632280;
     *(_BYTE *)(result + 7482) = 0;
     *(_BYTE *)(result + 7481) = 0;
@@ -237720,20 +237720,20 @@ static inline unsigned int uxtb16(unsigned int x)
     int v13; // r5
   
     v2 = (_DWORD *)(a1 + 6084);
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 != (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))() )
     {
-      v5 = StateMgr::getCurrentState((int)v2);
+      v5 = StateMgr__getCurrentState((int)v2);
       v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
       if ( v6 != (*(int (**)(void))(MEMORY[0xCB0534] + 8))() )
       {
-        v7 = StateMgr::getCurrentState((int)v2);
+        v7 = StateMgr__getCurrentState((int)v2);
         (*(void (__fastcall **)(int))(*(_DWORD *)v7 + 8))(v7);
         (*(void (**)(void))(MEMORY[0xCB0558] + 8))();
       }
     }
-    StateMgr::execute(v2);
+    StateMgr__execute(v2);
     sub_60003B2C(a1, a1 + 6120);
     sub_6057A200(a1);
     ShapedCollider_execute((_DWORD *)(a1 + 6120), v8, v9, v10);
@@ -237744,10 +237744,10 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v12 = StateMgr::getCurrentState((int)v2);
+      v12 = StateMgr__getCurrentState((int)v2);
       v13 = (*(int (__fastcall **)(int))(*(_DWORD *)v12 + 8))(v12);
       if ( v13 != (*(int (**)(void))(MEMORY[0xCB2140] + 8))() )
-        StageActor::cullCheck(a1, 0);
+        StageActor__cullCheck(a1, 0);
       sub_60579D4C(a1);
       return 1;
     }
@@ -237759,7 +237759,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605F2390(int a1, int a2, int a3, int a4)
   {
-    CoinBase::onDraw(a1, a2, a3, a4);
+    CoinBase__onDraw(a1, a2, a3, a4);
     return 1;
   }
 
@@ -237818,7 +237818,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2DF3;
-    Profile::Profile(13312296, 6234096, MEMORY[0xAF33FC], (int)v1, &unk_60B05D78, 2);
+    Profile__Profile(13312296, 6234096, MEMORY[0xAF33FC], (int)v1, &unk_60B05D78, 2);
     MEMORY[0xCB2144] = ++MEMORY[0xC7B788];
     MEMORY[0xCB2140] = 12632676;
     MEMORY[0xCB2148] = 6234180;
@@ -237884,7 +237884,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(float *)(a1 + 6300) = v4;
       *(_DWORD *)(a1 + 6312) = *(_DWORD *)(result + 648);
       *(_BYTE *)(a1 + 6319) = *(_BYTE *)(result + 668);
-      return StateMgr::changeState((_DWORD *)(a1 + 6084), 13312408);
+      return StateMgr__changeState((_DWORD *)(a1 + 6084), 13312408);
     }
     return result;
   }
@@ -238062,12 +238062,12 @@ static inline unsigned int uxtb16(unsigned int x)
           v49 = v29;
           memset(v95, 0, sizeof(v95));
           v94 = *((_DWORD *)v28 - 1);
-          v95[2] = Profile::get(v87);
+          v95[2] = Profile__get(v87);
           *(float *)&v95[3] = *v48;
           *(float *)&v95[4] = *v30;
           v95[5] = *v49;
           LOBYTE(v95[7]) = 0;
-          v47 = ActorMgr::create(MEMORY[0xC7B400], (int)&v94, 0);
+          v47 = ActorMgr__create(MEMORY[0xC7B400], (int)&v94, 0);
           if ( v47 )
           {
             *((_DWORD *)v28 - 2) = *((_DWORD *)v47 + 2);
@@ -238150,12 +238150,12 @@ static inline unsigned int uxtb16(unsigned int x)
               v77 = v73;
               memset(v95, 0, sizeof(v95));
               v94 = *((_DWORD *)v55 - 1);
-              v95[2] = Profile::get(MEMORY[0xAF33FC]);
+              v95[2] = Profile__get(MEMORY[0xAF33FC]);
               v95[3] = *v54;
               v95[4] = *v53;
               v95[5] = *v77;
               LOBYTE(v95[7]) = 0;
-              v72 = (float *)ActorMgr::create(MEMORY[0xC7B400], (int)&v94, 0);
+              v72 = (float *)ActorMgr__create(MEMORY[0xC7B400], (int)&v94, 0);
               if ( !v72 )
                 goto LABEL_38;
               *(v55 - 2) = v72[2];
@@ -238265,12 +238265,12 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         memset(v95, 0, sizeof(v95));
         v94 = *((_DWORD *)v19 - 1);
-        v95[2] = Profile::get(MEMORY[0xAF33FC]);
+        v95[2] = Profile__get(MEMORY[0xAF33FC]);
         v95[3] = *v91;
         *(float *)&v95[4] = *v23;
         v95[5] = *v22;
         LOBYTE(v95[7]) = 0;
-        v72 = (float *)ActorMgr::create(MEMORY[0xC7B400], (int)&v94, 0);
+        v72 = (float *)ActorMgr__create(MEMORY[0xC7B400], (int)&v94, 0);
         if ( !v72 )
           goto LABEL_54;
         *((float *)v19 - 2) = v72[2];
@@ -238357,7 +238357,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = (_DWORD *)(a1 + 6084);
       v10 = 13312376;
     }
-    StateMgr::changeState(v9, v10);
+    StateMgr__changeState(v9, v10);
     return 1;
   }
 
@@ -238379,10 +238379,10 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 6312) = *(_DWORD *)(v3 + 648);
       *(_BYTE *)(a1 + 6319) = *(_BYTE *)(v3 + 668);
   LABEL_4:
-      StateMgr::execute((_DWORD *)(a1 + 6084));
+      StateMgr__execute((_DWORD *)(a1 + 6084));
       return 1;
     }
-    StageActor::delete(a1, 1);
+    StageActor__delete(a1, 1);
     return 1;
   }
 
@@ -238428,7 +238428,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -238442,7 +238442,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2E15;
-    Profile::Profile(13312352, 6236040, MEMORY[0xAF33F8], (int)v1, &unk_60B05D9C, 0);
+    Profile__Profile(13312352, 6236040, MEMORY[0xAF33F8], (int)v1, &unk_60B05D9C, 0);
     MEMORY[0xCB217C] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCB2178] = 12632896;
     MEMORY[0xCB2180] = 6236224;
@@ -238556,7 +238556,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v11; // [sp+4h] [bp-4h] BYREF
   
     v2 = a1 + 6084;
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     if ( (*(_BYTE *)(a1 + 23) & 0x10) != 0 )
     {
       v5 = *(_DWORD *)(a1 + 56);
@@ -238581,7 +238581,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      CurrentState = StateMgr::getCurrentState(v2);
+      CurrentState = StateMgr__getCurrentState(v2);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       if ( v4 != (*(int (**)(void))(MEMORY[0xCB2200] + 8))() )
       {
@@ -238591,7 +238591,7 @@ static inline unsigned int uxtb16(unsigned int x)
           checkLiquidCollisions(&v10, &v11, (float *)(a1 + 108), *(unsigned __int8 *)(a1 + 86));
           *(float *)(a1 + 112) = *(float *)(a1 + 6188) + (float)(v11 - *(float *)(a1 + 6192));
         }
-        StageActor::cullCheck(a1, 0);
+        StageActor__cullCheck(a1, 0);
       }
     }
     StarCoinBase_updateModel((_DWORD *)a1);
@@ -238643,7 +238643,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -238666,7 +238666,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2E37;
-    return Profile::Profile(13312440, 6239612, MEMORY[0xAF33D0], (int)v1, &unk_60B05DC0, 8194);
+    return Profile__Profile(13312440, 6239612, MEMORY[0xAF33D0], (int)v1, &unk_60B05DC0, 8194);
   }
 
 /* ============================================================================
@@ -238675,7 +238675,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall StarCoinBase_ctor(int a1)
   {
-    MultiStateActor::MultiStateActor((_DWORD *)a1);
+    MultiStateActor__MultiStateActor((_DWORD *)a1);
     *(_DWORD *)a1 = 12633136;
     memset((void *)(a1 + 6108), 0, 0x38u);
     *(_BYTE *)(a1 + 6164) = -1;
@@ -238735,8 +238735,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     *(_DWORD *)(a1 + 160) += MEMORY[0xCB21DC];
-    CollisionActor::handleGravity(a1);
-    result = (int)CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    result = (int)CollisionActor__handleSpeed(a1);
     if ( *(float *)(a1 + 124) < -3.0 )
     {
       *(_BYTE *)(a1 + 19) = 1;
@@ -238790,9 +238790,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // [sp+0h] [bp-8h] BYREF
     int v5; // [sp+4h] [bp-4h] BYREF
   
-    CollisionActor::handleGravity(a1);
-    StageActor::accelerateX((float *)a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    StageActor__accelerateX((float *)a1);
+    CollisionActor__handleSpeed(a1);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
     sub_605F53A8(a1);
     if ( *(unsigned __int8 *)(a1 + 6164) != 255 )
@@ -238873,8 +238873,8 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
+    CollisionActor__handleGravity(a1);
+    CollisionActor__handleSpeed(a1);
     if ( *(float *)(MEMORY[0xCC6484] + 124) > (float)(*(float *)(a1 + 112) + 16.0) )
     {
       *(_DWORD *)(a1 + 3200) &= ~0x40000000u;
@@ -239277,7 +239277,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v5; // r0
   
-    CurrentState = StateMgr::getCurrentState((int)(a1 + 6084));
+    CurrentState = StateMgr__getCurrentState((int)(a1 + 6084));
     v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     result = (*(int (**)(void))(MEMORY[0xCB2220] + 8))();
     if ( v3 == result )
@@ -239587,7 +239587,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(unsigned __int8 *)(result + 535);
       if ( *(_BYTE *)(v2 + 535) )
       {
-        CurrentState = StateMgr::getCurrentState(v2 + 6084);
+        CurrentState = StateMgr__getCurrentState(v2 + 6084);
         v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
         result = (*(int (**)(void))(MEMORY[0xCB21E0] + 8))();
         if ( v4 == result )
@@ -239718,7 +239718,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -239825,7 +239825,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 2;
     if ( sub_605F43EC((int)a1, 0) == 1 )
     {
-      if ( Actor::getProfileId((int)a1) == MEMORY[0xAF33D8] )
+      if ( Actor__getProfileId((int)a1) == MEMORY[0xAF33D8] )
         *((_BYTE *)a1 + 534) = 0;
       v3 = dword_60AF4BD0[HIWORD(a1[6]) & 7];
       a1[1583] = v3;
@@ -239865,20 +239865,20 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r0
   
     v2 = (int)(a1 + 1521);
-    StateMgr::execute(a1 + 1521);
-    CurrentState = StateMgr::getCurrentState(v2);
+    StateMgr__execute(a1 + 1521);
+    CurrentState = StateMgr__getCurrentState(v2);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xCB21E0] + 8))() )
     {
       sub_6000F338((int)(a1 + 1547));
-      StateMgr::execute(a1 + 1552);
+      StateMgr__execute(a1 + 1552);
       v5 = a1[1573];
       a1[27] = a1[1572];
       a1[28] = v5;
     }
     StarCoinBase_updateModel(a1);
-    if ( Actor::getProfileId((int)a1) != MEMORY[0xAF33D8] )
-      StageActor::cullCheck((int)a1, 0);
+    if ( Actor__getProfileId((int)a1) != MEMORY[0xAF33D8] )
+      StageActor__cullCheck((int)a1, 0);
     return 1;
   }
 
@@ -239925,7 +239925,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
   }
 
 /* ============================================================================
@@ -239938,7 +239938,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -239953,10 +239953,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD2E95;
-    Profile::Profile(13312640, 6248544, MEMORY[0xAF33D4], (int)&v1, &unk_60B05E10, 8194);
+    Profile__Profile(13312640, 6248544, MEMORY[0xAF33D4], (int)&v1, &unk_60B05E10, 8194);
     v1 = 12321336;
     v2 = &unk_60AD2EBA;
-    return Profile::Profile(13312664, 6248544, MEMORY[0xAF33D8], (int)&v1, &unk_60B05E34, 8194);
+    return Profile__Profile(13312664, 6248544, MEMORY[0xAF33D8], (int)&v1, &unk_60B05E34, 8194);
   }
 
 /* ============================================================================
@@ -239970,7 +239970,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v0 = operator new(0x1930u);
     StarCoinBase_ctor(v0);
     *(_DWORD *)v0 = 12633640;
-    MovementHandler::MovementHandler((_DWORD *)(v0 + 6188));
+    MovementHandler__MovementHandler((_DWORD *)(v0 + 6188));
     *(_WORD *)(v0 + 6444) = 0;
     *(_DWORD *)(v0 + 6436) = 0;
     *(_DWORD *)(v0 + 6440) = 0;
@@ -239998,7 +239998,7 @@ static inline unsigned int uxtb16(unsigned int x)
     bool v14; // zf
     _DWORD v15[3]; // [sp+14h] [bp-Ch] BYREF
   
-    if ( Actor::getProfileId(a1) == MEMORY[0xAF33DC] )
+    if ( Actor__getProfileId(a1) == MEMORY[0xAF33DC] )
     {
       *(_DWORD *)(a1 + 6120) = 2;
       *(_BYTE *)(a1 + 6444) = *(_BYTE *)(a1 + 28);
@@ -240009,7 +240009,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 6444) = *(_BYTE *)(a1 + 28);
       *(_DWORD *)(a1 + 508) = 1115684864;
       *(_DWORD *)(a1 + 512) = 1115684864;
-      if ( Actor::getProfileId(a1) == MEMORY[0xAF33E8] )
+      if ( Actor__getProfileId(a1) == MEMORY[0xAF33E8] )
         *(_DWORD *)(a1 + 500) = 1166016512;
       else
         *(_DWORD *)(a1 + 500) = 1157234688;
@@ -240043,7 +240043,7 @@ static inline unsigned int uxtb16(unsigned int x)
             break;
           case 2u:
             v8 = (_DWORD *)(a1 + 6188);
-            MaskForMovementType = MovementHandler::getMaskForMovementType(a1 + 6188, 2u);
+            MaskForMovementType = MovementHandler__getMaskForMovementType(a1 + 6188, 2u);
             MovementHandler_init2(
               a1 + 6188,
               (int *)(a1 + 108),
@@ -240052,12 +240052,12 @@ static inline unsigned int uxtb16(unsigned int x)
               *(_WORD *)(a1 + 22) & 0xF,
               *(_WORD *)(a1 + 26) & 7);
   LABEL_20:
-            MovementHandler::execute(v8);
+            MovementHandler__execute(v8);
             if ( *(_DWORD *)(a1 + 6236) == 1 && *(_DWORD *)(a1 + 6256) != 1 )
             {
               *(_DWORD *)(a1 + 108) = *v8;
               *(_DWORD *)(a1 + 112) = *(_DWORD *)(a1 + 6192);
-              if ( Actor::getProfileId(a1) == MEMORY[0xAF33E4] && (*(_BYTE *)(a1 + 26) & 1) != 0 )
+              if ( Actor__getProfileId(a1) == MEMORY[0xAF33E4] && (*(_BYTE *)(a1 + 26) & 1) != 0 )
                 v12 = 6316;
               else
                 v12 = 6268;
@@ -240065,7 +240065,7 @@ static inline unsigned int uxtb16(unsigned int x)
             }
             if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
             {
-              ProfileId = Actor::getProfileId(a1);
+              ProfileId = Actor__getProfileId(a1);
               v14 = ProfileId == MEMORY[0xAF33E0];
               if ( ProfileId == MEMORY[0xAF33E0] )
                 v14 = *(_DWORD *)(a1 + 6120) == 3;
@@ -240076,7 +240076,7 @@ static inline unsigned int uxtb16(unsigned int x)
           case 1u:
             memset(v15, 0, sizeof(v15));
             v8 = (_DWORD *)(a1 + 6188);
-            v9 = MovementHandler::getMaskForMovementType(a1 + 6188, 1u);
+            v9 = MovementHandler__getMaskForMovementType(a1 + 6188, 1u);
             MovementHandler_init3(
               a1 + 6188,
               (int *)(a1 + 108),
@@ -240090,8 +240090,8 @@ static inline unsigned int uxtb16(unsigned int x)
             goto LABEL_20;
         }
         v8 = (_DWORD *)(a1 + 6188);
-        v10 = MovementHandler::getMaskForMovementType(a1 + 6188, v5);
-        MovementHandler::link(a1 + 6188, (int *)(a1 + 108), v10, *v7);
+        v10 = MovementHandler__getMaskForMovementType(a1 + 6188, v5);
+        MovementHandler__link(a1 + 6188, (int *)(a1 + 108), v10, *v7);
         goto LABEL_20;
       }
   LABEL_34:
@@ -240136,8 +240136,8 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1609] = a1[27];
     a1[1610] = a1[28];
     v3 = (int)(a1 + 1521);
-    StateMgr::execute(a1 + 1521);
-    CurrentState = StateMgr::getCurrentState(v3);
+    StateMgr__execute(a1 + 1521);
+    CurrentState = StateMgr__getCurrentState(v3);
     v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v5 == (*(int (**)(void))(MEMORY[0xCB21E0] + 8))() )
     {
@@ -240147,12 +240147,12 @@ static inline unsigned int uxtb16(unsigned int x)
         v7 = *((_BYTE *)a1 + 6444) == 0;
       if ( !v7 )
       {
-        MovementHandler::execute(a1 + 1547);
+        MovementHandler__execute(a1 + 1547);
         if ( a1[1559] == 1 && a1[1564] != 1 )
         {
           a1[27] = a1[1547];
           a1[28] = a1[1548];
-          if ( Actor::getProfileId((int)a1) == MEMORY[0xAF33E4] )
+          if ( Actor__getProfileId((int)a1) == MEMORY[0xAF33E4] )
           {
             v8 = a1[6];
             v9 = (v8 & 0x10000) != 0 ? 6316 : 6268;
@@ -240189,7 +240189,7 @@ static inline unsigned int uxtb16(unsigned int x)
             *((_BYTE *)a1 + 19) = 1;
         }
       }
-      if ( Actor::getProfileId((int)a1) == MEMORY[0xAF33EC]
+      if ( Actor__getProfileId((int)a1) == MEMORY[0xAF33EC]
         && (a1[718] & 0x10401) == 0x401
         && *((_WORD *)a1 + 2972) != 0x1F )
       {
@@ -240210,7 +240210,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     StarCoinBase_updateModel(a1);
-    StageActor::cullCheck((int)a1, 0);
+    StageActor__cullCheck((int)a1, 0);
     return 1;
   }
 
@@ -240222,7 +240222,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = Actor::getProfileId(a1);
+    result = Actor__getProfileId(a1);
     if ( result == MEMORY[0xAF33EC] )
     {
       CollisionMgr_setSensor(a1 + 648, dword_60B05EC4, 2);
@@ -240275,7 +240275,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
   }
 
 /* ============================================================================
@@ -240288,7 +240288,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -240303,19 +240303,19 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = 12321336;
     v2 = &unk_60AD2EEB;
-    Profile::Profile(13312696, 6249832, MEMORY[0xAF33E0], (int)&v1, &unk_60B05E58, 8194);
+    Profile__Profile(13312696, 6249832, MEMORY[0xAF33E0], (int)&v1, &unk_60B05E58, 8194);
     v1 = 12321336;
     v2 = &unk_60AD2F07;
-    Profile::Profile(13312720, 6249832, MEMORY[0xAF33DC], (int)&v1, &unk_60B05E7C, 8194);
+    Profile__Profile(13312720, 6249832, MEMORY[0xAF33DC], (int)&v1, &unk_60B05E7C, 8194);
     v1 = 12321336;
     v2 = &unk_60AD2F32;
-    Profile::Profile(13312744, 6249832, MEMORY[0xAF33E4], (int)&v1, &unk_60B05E58, 8194);
+    Profile__Profile(13312744, 6249832, MEMORY[0xAF33E4], (int)&v1, &unk_60B05E58, 8194);
     v1 = 12321336;
     v2 = &unk_60AD2F55;
-    Profile::Profile(13312768, 6249832, MEMORY[0xAF33E8], (int)&v1, &unk_60B05EA0, 8194);
+    Profile__Profile(13312768, 6249832, MEMORY[0xAF33E8], (int)&v1, &unk_60B05EA0, 8194);
     v1 = 12321336;
     v2 = &unk_60AD2F8D;
-    return Profile::Profile(13312792, 6249832, MEMORY[0xAF33EC], (int)&v1, &unk_60B05E58, 8194);
+    return Profile__Profile(13312792, 6249832, MEMORY[0xAF33EC], (int)&v1, &unk_60B05E58, 8194);
   }
 
 /* ============================================================================
@@ -240329,7 +240329,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v0 = (_DWORD *)operator new(0x1930u);
     StarCoinBase_ctor((int)v0);
     *v0 = 12633860;
-    MovementHandler::MovementHandler(v0 + 1547);
+    MovementHandler__MovementHandler(v0 + 1547);
     return v0;
   }
 
@@ -240389,9 +240389,9 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v8 )
       {
         memset(v11, 0, sizeof(v11));
-        MaskForMovementType = MovementHandler::getMaskForMovementType((int)(a1 + 1547), v7);
+        MaskForMovementType = MovementHandler__getMaskForMovementType((int)(a1 + 1547), v7);
         sub_606B0CCC((int)(a1 + 1547), a1 + 27, MaskForMovementType, *v1, v11, 0);
-        MovementHandler::execute(a1 + 1547);
+        MovementHandler__execute(a1 + 1547);
         if ( a1[1559] == 1 && a1[1564] != 1 )
         {
           a1[27] = a1[1547];
@@ -240425,8 +240425,8 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // r5
   
     v2 = (int)(a1 + 1521);
-    StateMgr::execute(a1 + 1521);
-    CurrentState = StateMgr::getCurrentState(v2);
+    StateMgr__execute(a1 + 1521);
+    CurrentState = StateMgr__getCurrentState(v2);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xCB21E0] + 8))() )
     {
@@ -240436,10 +240436,10 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = *((_BYTE *)a1 + 6440) == 0;
       if ( !v6 )
       {
-        MovementHandler::execute(a1 + 1547);
+        MovementHandler__execute(a1 + 1547);
         if ( a1[1559] == 1 && a1[1564] != 1 )
         {
-          v7 = StateMgr::getCurrentState(v2);
+          v7 = StateMgr__getCurrentState(v2);
           v8 = (*(int (__fastcall **)(int))(*(_DWORD *)v7 + 8))(v7);
           if ( v8 == (*(int (**)(void))(MEMORY[0xCB2350] + 8))() && a1[1590] )
             (*(void (__fastcall **)(_DWORD *, int))(*a1 + 192))(a1, 13312480);
@@ -240450,7 +240450,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     StarCoinBase_updateModel(a1);
-    StageActor::cullCheck((int)a1, 0);
+    StageActor__cullCheck((int)a1, 0);
     return 1;
   }
 
@@ -240497,7 +240497,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
   }
 
 /* ============================================================================
@@ -240510,7 +240510,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -240524,7 +240524,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2FB2;
-    Profile::Profile(13312824, 6252652, MEMORY[0xAF33F4], (int)v1, &unk_60B05ED0, 8194);
+    Profile__Profile(13312824, 6252652, MEMORY[0xAF33F4], (int)v1, &unk_60B05ED0, 8194);
     MEMORY[0xCB2354] = ++MEMORY[0xC7B788];
     MEMORY[0xCB2350] = 12634080;
     MEMORY[0xCB2358] = 6252720;
@@ -240593,8 +240593,8 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD v10[2]; // [sp+0h] [bp-8h] BYREF
   
     v2 = a1 + 6084;
-    StateMgr::execute((_DWORD *)(a1 + 6084));
-    CurrentState = StateMgr::getCurrentState(v2);
+    StateMgr__execute((_DWORD *)(a1 + 6084));
+    CurrentState = StateMgr__getCurrentState(v2);
     v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     if ( v4 == (*(int (**)(void))(MEMORY[0xCB21E0] + 8))() )
     {
@@ -240669,7 +240669,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -240683,7 +240683,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2FDD;
-    Profile::Profile(13312888, 6254212, MEMORY[0xAF33F0], (int)v1, &unk_60B05EF4, 8194);
+    Profile__Profile(13312888, 6254212, MEMORY[0xAF33F0], (int)v1, &unk_60B05EF4, 8194);
     MEMORY[0xCB2390] = 0x4000000;
     return 13312912;
   }
@@ -240698,7 +240698,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x17B8u);
-    result = (_DWORD *)CollisionActor::CollisionActor(v0);
+    result = (_DWORD *)CollisionActor__CollisionActor(v0);
     *result = 12634320;
     return result;
   }
@@ -240767,7 +240767,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605F75F8(int a1)
   {
     sub_605F7478(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -240807,7 +240807,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -240821,7 +240821,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD2FFF;
-    return Profile::Profile(13312924, 6255396, MEMORY[0xAF3A2C], (int)v1, &unk_60B05F18, 2);
+    return Profile__Profile(13312924, 6255396, MEMORY[0xAF3A2C], (int)v1, &unk_60B05F18, 2);
   }
 
 /* ============================================================================
@@ -240834,7 +240834,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x17B8u);
-    result = (_DWORD *)CollisionActor::CollisionActor(v0);
+    result = (_DWORD *)CollisionActor__CollisionActor(v0);
     *result = 12634520;
     return result;
   }
@@ -240903,7 +240903,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605F7C40(int a1)
   {
     sub_605F7AC0(a1);
-    StageActor::cullCheck(a1, 0);
+    StageActor__cullCheck(a1, 0);
     return 1;
   }
 
@@ -240943,7 +240943,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -240957,7 +240957,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD301B;
-    return Profile::Profile(13312956, 6256988, MEMORY[0xAF3A30], (int)v1, &unk_60B05F3C, 2);
+    return Profile__Profile(13312956, 6256988, MEMORY[0xAF3A30], (int)v1, &unk_60B05F3C, 2);
   }
 
 /* ============================================================================
@@ -240968,7 +240968,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = Enemy::Enemy(a1);
+    result = Enemy__Enemy(a1);
     *(_DWORD *)result = 12634720;
     *(_DWORD *)(result + 6308) = 0;
     *(_DWORD *)(result + 6316) = 0;
@@ -241086,9 +241086,9 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605F82F4(int a1)
   {
-    if ( !StageActor::cullCheck(a1, 0) )
+    if ( !StageActor__cullCheck(a1, 0) )
     {
-      StateMgr::execute((_DWORD *)(a1 + 6084));
+      StateMgr__execute((_DWORD *)(a1 + 6084));
       sub_605F8328(a1);
     }
     return 1;
@@ -241215,7 +241215,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( !(*(int (__fastcall **)(_DWORD *))(*v5 + 680))(v5) )
     {
-      CurrentState = StateMgr::getCurrentState((int)(v5 + 1521));
+      CurrentState = StateMgr__getCurrentState((int)(v5 + 1521));
       v7 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       result = (*(int (**)(void))(MEMORY[0xCB23E8] + 8))();
       if ( v7 != result )
@@ -241224,8 +241224,8 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result != 1 )
         return result;
     }
-    if ( Actor::getProfileId(*(_DWORD *)(a1 + 64)) == MEMORY[0xAF3694]
-      || Actor::getProfileId(*(_DWORD *)(a1 + 64)) == MEMORY[0xAF3698] )
+    if ( Actor__getProfileId(*(_DWORD *)(a1 + 64)) == MEMORY[0xAF3694]
+      || Actor__getProfileId(*(_DWORD *)(a1 + 64)) == MEMORY[0xAF3698] )
     {
       v8 = *(_DWORD *)(a1 + 64);
       v9 = 0;
@@ -241237,7 +241237,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5[1578] = 1;
       goto LABEL_15;
     }
-    if ( Actor::getProfileId(*(_DWORD *)(a1 + 64)) == MEMORY[0xAF36A8] )
+    if ( Actor__getProfileId(*(_DWORD *)(a1 + 64)) == MEMORY[0xAF36A8] )
     {
       v8 = *(_DWORD *)(a1 + 64);
       v10 = *(int (__fastcall **)(_BYTE *, int, int))(*(_DWORD *)v2 + 672);
@@ -241246,15 +241246,15 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = 2;
       goto LABEL_13;
     }
-    if ( Actor::getProfileId(*(_DWORD *)(a1 + 64)) == MEMORY[0xAF36A0]
-      || Actor::getProfileId(*(_DWORD *)(a1 + 64)) == MEMORY[0xAF36B0] )
+    if ( Actor__getProfileId(*(_DWORD *)(a1 + 64)) == MEMORY[0xAF36A0]
+      || Actor__getProfileId(*(_DWORD *)(a1 + 64)) == MEMORY[0xAF36B0] )
     {
       v8 = *(_DWORD *)(a1 + 64);
       v10 = *(int (__fastcall **)(_BYTE *, int, int))(*(_DWORD *)v2 + 672);
     }
     else
     {
-      ProfileId = Actor::getProfileId(*(_DWORD *)(a1 + 64));
+      ProfileId = Actor__getProfileId(*(_DWORD *)(a1 + 64));
       v8 = *(_DWORD *)(a1 + 64);
       v10 = *(int (__fastcall **)(_BYTE *, int, int))(*(_DWORD *)v2 + 672);
       if ( ProfileId == MEMORY[0xAF36A4] )
@@ -241381,7 +241381,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _BYTE *__fastcall sub_605F8968(int a1)
   {
-    return StageActor::delete(a1, 1);
+    return StageActor__delete(a1, 1);
   }
 
 /* ============================================================================
@@ -241509,7 +241509,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -241522,7 +241522,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int CurrentState; // r0
     int v2; // r4
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     return v2 == (*(int (**)(void))(MEMORY[0xCB2430] + 8))();
   }
@@ -241707,7 +241707,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v9; // [sp+14h] [bp-8h] BYREF
     const char *v10; // [sp+18h] [bp-4h]
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v9 = 12321336;
     v10 = "obj_door_shiroboss";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v9, 1, 1, 2, 1, 0, 0, 0);
@@ -241716,7 +241716,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
     v6 = **(_DWORD **)(v4 + 12);
-    v7 = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v7 = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v9 = 12321336;
     v10 = "obj_door_shiroboss";
     SkeletalAnim_play(v6, v7, &v9);
@@ -241735,7 +241735,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r5
   
     v1 = a1 + 188;
-    ActiveCollider::init(a1 + 188, a1, dword_60C0D044, 0);
+    ActiveCollider__init(a1 + 188, a1, dword_60C0D044, 0);
     if ( *(_DWORD *)(MEMORY[0xC99DD4] + 764) != 4 )
     {
       v2 = MEMORY[0xC88234];
@@ -241835,7 +241835,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -241848,7 +241848,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int CurrentState; // r0
     int v2; // r4
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     return v2 == (*(int (**)(void))(MEMORY[0xCB2430] + 8))();
   }
@@ -241910,7 +241910,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB2488 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD3083;
-    return Profile::Profile(13313164, 6262596, MEMORY[0xAF36A4], (int)v1, &unk_60B05F60, 2);
+    return Profile__Profile(13313164, 6262596, MEMORY[0xAF36A4], (int)v1, &unk_60B05F60, 2);
   }
 
 /* ============================================================================
@@ -241950,7 +241950,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( !(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 736))(a1) || (v2 = sub_603FBEA8(MEMORY[0xC99DD4]), result = 0, !v2) )
     {
-      CurrentState = StateMgr::getCurrentState(a1 + 6084);
+      CurrentState = StateMgr__getCurrentState(a1 + 6084);
       v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       return v5 == (*(int (**)(void))(MEMORY[0xCB2430] + 8))();
     }
@@ -241969,7 +241969,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -241986,7 +241986,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB24AC = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD30E0;
-    return Profile::Profile(13313200, 6264168, MEMORY[0xAF36A8], (int)v1, &unk_60B05F84, 2);
+    return Profile__Profile(13313200, 6264168, MEMORY[0xAF36A8], (int)v1, &unk_60B05F84, 2);
   }
 
 /* ============================================================================
@@ -242000,9 +242000,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v0 = (_DWORD *)operator new(0x19C0u);
     sub_605F7FA4((int)v0);
     *v0 = 12637028;
-    LightSource::LightSource((int)(v0 + 1594));
-    LightSource::LightSource((int)(v0 + 1612));
-    LightSource::LightSource((int)(v0 + 1630));
+    LightSource__LightSource((int)(v0 + 1594));
+    LightSource__LightSource((int)(v0 + 1612));
+    LightSource__LightSource((int)(v0 + 1630));
     v0[1579] = 1;
     memset(v0 + 1585, 0, 0x24u);
     v0[1583] = 84;
@@ -242017,9 +242017,9 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     sub_605F7FA4((int)a1);
     *a1 = 12637028;
-    LightSource::LightSource((int)(a1 + 1594));
-    LightSource::LightSource((int)(a1 + 1612));
-    LightSource::LightSource((int)(a1 + 1630));
+    LightSource__LightSource((int)(a1 + 1594));
+    LightSource__LightSource((int)(a1 + 1612));
+    LightSource__LightSource((int)(a1 + 1630));
     a1[1579] = 1;
     memset(a1 + 1585, 0, 0x24u);
     a1[1583] = 84;
@@ -242117,7 +242117,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v22; // [sp+14h] [bp-8h] BYREF
     const char *v23; // [sp+18h] [bp-4h]
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v22 = 12321336;
     v23 = "boss_koopa_door";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v22, 1, 1, 2, 1, 0, 0, 0);
@@ -242126,7 +242126,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
     v6 = **(_DWORD **)(v4 + 12);
-    v7 = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v7 = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v22 = 12321336;
     v23 = "boss_koopa_door";
     SkeletalAnim_play(v6, v7, &v22);
@@ -242134,7 +242134,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 4, 0);
     v8 = **(_DWORD **)(*(_DWORD *)(a1 + 6300) + 28);
-    v9 = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v9 = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v22 = 12321336;
     v23 = (const char *)&unk_60AD3107;
     ShuAnim_play(v8, v9, &v22);
@@ -242146,7 +242146,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v11 > 1 )
       ++v12;
     v13 = *v12;
-    v14 = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v14 = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v22 = 12321336;
     v23 = (const char *)&unk_60AD3107;
     AnimationCtrl_setupFromResource(v13, v14, &v22);
@@ -242231,7 +242231,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r5
   
     v1 = a1 + 188;
-    ActiveCollider::init(a1 + 188, a1, dword_60C0D648, 0);
+    ActiveCollider__init(a1 + 188, a1, dword_60C0D648, 0);
     if ( *(_DWORD *)(MEMORY[0xC99DD4] + 764) != 4 )
     {
       v2 = MEMORY[0xC88234];
@@ -242355,14 +242355,14 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12637028;
     v2 = (struct sead_IDisposer *)(a1 + 6376);
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6520));
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6448));
-    LightSource::~LightSource(v2);
+    LightSource__dtor((struct sead_IDisposer *)(a1 + 6520));
+    LightSource__dtor((struct sead_IDisposer *)(a1 + 6448));
+    LightSource__dtor(v2);
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -242376,14 +242376,14 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12637028;
     v2 = (struct sead_IDisposer *)(a1 + 6376);
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6520));
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6448));
-    LightSource::~LightSource(v2);
+    LightSource__dtor((struct sead_IDisposer *)(a1 + 6520));
+    LightSource__dtor((struct sead_IDisposer *)(a1 + 6448));
+    LightSource__dtor(v2);
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -242396,7 +242396,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int CurrentState; // r0
     int v2; // r4
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     return v2 == (*(int (**)(void))(MEMORY[0xCB2430] + 8))();
   }
@@ -242437,7 +242437,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB24F8 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD30F7;
-    Profile::Profile(13313224, 6264632, MEMORY[0xAF36AC], (int)v1, &unk_60B05FA8, 2);
+    Profile__Profile(13313224, 6264632, MEMORY[0xAF36AC], (int)v1, &unk_60B05FA8, 2);
     flt_60CB24E0 = 56.0;
     flt_60CB24E4 = 110.0;
     flt_60CB24E8 = 0.0;
@@ -242480,14 +242480,14 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12637028;
     v2 = (struct sead_IDisposer *)(a1 + 6376);
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6520));
-    LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6448));
-    LightSource::~LightSource(v2);
+    LightSource__dtor((struct sead_IDisposer *)(a1 + 6520));
+    LightSource__dtor((struct sead_IDisposer *)(a1 + 6448));
+    LightSource__dtor(v2);
     *(_DWORD *)a1 = 12462088;
     Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v3);
   }
 
@@ -242504,7 +242504,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB2504 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD316D;
-    return Profile::Profile(13313288, 6267752, MEMORY[0xAF36B0], (int)v1, &unk_60B05FCC, 2);
+    return Profile__Profile(13313288, 6267752, MEMORY[0xAF36B0], (int)v1, &unk_60B05FCC, 2);
   }
 
 /* ============================================================================
@@ -242539,7 +242539,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v9; // [sp+14h] [bp-8h] BYREF
     const char *v10; // [sp+18h] [bp-4h]
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v9 = 12321336;
     v10 = "obj_doorA";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v9, 1, 1, 2, 1, 0, 0, 0);
@@ -242548,7 +242548,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
     v6 = **(_DWORD **)(v4 + 12);
-    v7 = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v7 = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v9 = 12321336;
     v10 = "obj_doorA";
     SkeletalAnim_play(v6, v7, &v9);
@@ -242567,7 +242567,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r5
   
     v1 = a1 + 188;
-    ActiveCollider::init(a1 + 188, a1, dword_60C0DC4C, 0);
+    ActiveCollider__init(a1 + 188, a1, dword_60C0DC4C, 0);
     if ( *(_DWORD *)(MEMORY[0xC99DD4] + 764) != 4 )
     {
       v2 = MEMORY[0xC88234];
@@ -242646,7 +242646,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -242659,7 +242659,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int CurrentState; // r0
     int v2; // r4
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     return v2 == (*(int (**)(void))(MEMORY[0xCB2430] + 8))();
   }
@@ -242719,7 +242719,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB2528 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD3187;
-    return Profile::Profile(13313324, 6268136, MEMORY[0xAF3694], (int)v1, &unk_60B05FF0, 2);
+    return Profile__Profile(13313324, 6268136, MEMORY[0xAF3694], (int)v1, &unk_60B05FF0, 2);
   }
 
 /* ============================================================================
@@ -242754,7 +242754,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v9; // [sp+14h] [bp-8h] BYREF
     const char *v10; // [sp+18h] [bp-4h]
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v9 = 12321336;
     v10 = "obj_obake_door";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v9, 1, 1, 2, 1, 0, 0, 0);
@@ -242763,7 +242763,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
     v6 = **(_DWORD **)(v4 + 12);
-    v7 = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v7 = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v9 = 12321336;
     v10 = "obj_obake_door";
     SkeletalAnim_play(v6, v7, &v9);
@@ -242782,7 +242782,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r5
   
     v1 = a1 + 188;
-    ActiveCollider::init(a1 + 188, a1, dword_60C0DF64, 0);
+    ActiveCollider__init(a1 + 188, a1, dword_60C0DF64, 0);
     v2 = MEMORY[0xC88234];
     if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], v1) && !ActiveColliderMgr_isInCreateList(v2, v1) )
       ActiveColliderMgr_addToCreateList(v2, v1);
@@ -242912,11 +242912,11 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (*(_BYTE *)(a1 + 22) & 1) != 0 )
     {
       v2 = a1 + 6084;
-      CurrentState = StateMgr::getCurrentState(a1 + 6084);
+      CurrentState = StateMgr__getCurrentState(a1 + 6084);
       v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       if ( v4 != (*(int (**)(void))(MEMORY[0xCB23E8] + 8))() )
       {
-        v5 = StateMgr::getCurrentState(v2);
+        v5 = StateMgr__getCurrentState(v2);
         v6 = (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 8))(v5);
         return v6 != (*(int (**)(void))(MEMORY[0xCB240C] + 8))();
       }
@@ -242936,7 +242936,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -242949,7 +242949,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int CurrentState; // r0
     int v2; // r4
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     return v2 == (*(int (**)(void))(MEMORY[0xCB2430] + 8))();
   }
@@ -243009,7 +243009,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB254C = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD31A1;
-    return Profile::Profile(13313360, 6269420, MEMORY[0xAF3698], (int)v1, &unk_60B06014, 2);
+    return Profile__Profile(13313360, 6269420, MEMORY[0xAF3698], (int)v1, &unk_60B06014, 2);
   }
 
 /* ============================================================================
@@ -243059,7 +243059,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v9; // [sp+14h] [bp-8h] BYREF
     const char *v10; // [sp+18h] [bp-4h]
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v9 = 12321336;
     v10 = "obj_door_torideboss";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v9, 1, 1, 2, 1, 0, 0, 0);
@@ -243068,7 +243068,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
     v6 = **(_DWORD **)(v4 + 12);
-    v7 = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    v7 = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     v9 = 12321336;
     v10 = "obj_door_torideboss";
     SkeletalAnim_play(v6, v7, &v9);
@@ -243087,7 +243087,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r5
   
     v1 = a1 + 188;
-    ActiveCollider::init(a1 + 188, a1, dword_60C0E27C, 0);
+    ActiveCollider__init(a1 + 188, a1, dword_60C0E27C, 0);
     if ( *(_DWORD *)(MEMORY[0xC99DD4] + 764) != 4 )
     {
       v2 = MEMORY[0xC88234];
@@ -243187,7 +243187,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -243200,7 +243200,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int CurrentState; // r0
     int v2; // r4
   
-    CurrentState = StateMgr::getCurrentState(a1 + 6084);
+    CurrentState = StateMgr__getCurrentState(a1 + 6084);
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
     return v2 == (*(int (**)(void))(MEMORY[0xCB2430] + 8))();
   }
@@ -243262,7 +243262,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB2570 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD31C9;
-    return Profile::Profile(13313396, 6271200, MEMORY[0xAF369C], (int)v1, &unk_60B06038, 2);
+    return Profile__Profile(13313396, 6271200, MEMORY[0xAF369C], (int)v1, &unk_60B06038, 2);
   }
 
 /* ============================================================================
@@ -243302,7 +243302,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( !(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 736))(a1) || (v2 = sub_603FBEA8(MEMORY[0xC99DD4]), result = 0, !v2) )
     {
-      CurrentState = StateMgr::getCurrentState(a1 + 6084);
+      CurrentState = StateMgr__getCurrentState(a1 + 6084);
       v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       return v5 == (*(int (**)(void))(MEMORY[0xCB2430] + 8))();
     }
@@ -243321,7 +243321,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -243338,7 +243338,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB2594 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD31F0;
-    return Profile::Profile(13313432, 6272772, MEMORY[0xAF36A0], (int)v1, &unk_60B0605C, 2);
+    return Profile__Profile(13313432, 6272772, MEMORY[0xAF36A0], (int)v1, &unk_60B0605C, 2);
   }
 
 /* ============================================================================
@@ -243351,7 +243351,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD3207;
-    return Profile::Profile(13313456, 4576572, MEMORY[0xAF3254], (int)v1, 0, 0);
+    return Profile__Profile(13313456, 4576572, MEMORY[0xAF3254], (int)v1, 0, 0);
   }
 
 /* ============================================================================
@@ -243364,7 +243364,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = operator new(0x17B8u);
-    result = (_DWORD *)CollisionActor::CollisionActor(v0);
+    result = (_DWORD *)CollisionActor__CollisionActor(v0);
     *result = 12641692;
     return result;
   }
@@ -243377,7 +243377,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
   }
 
 /* ============================================================================
@@ -243390,7 +243390,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -243415,20 +243415,20 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60718110(MEMORY[0xCBD254], 2, *(unsigned __int8 *)(a1 + 6064), 8u);
     sub_60718110(MEMORY[0xCBD254], 4, *(unsigned __int8 *)(a1 + 6064), 0x18u);
     v3 = MEMORY[0xCBD254];
-    U32 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
+    U32 = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340));
     sub_60718198(
       v3,
       (unsigned __int8)(int)(float)((float)(COERCE_FLOAT((U32 >> 9) | 0x3F800000) + -1.0) * 2.99),
       *(unsigned __int8 *)(a1 + 6064),
       0xF8u);
     v5 = MEMORY[0xCBD254];
-    v6 = sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340));
+    v6 = sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340));
     sub_60718198(
       v5,
       (unsigned __int8)(int)(float)((float)(COERCE_FLOAT((v6 >> 9) | 0x3F800000) + -1.0) * 2.99),
       *(unsigned __int8 *)(a1 + 6064),
       8u);
-    if ( (sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340)) & 7) == 0 )
+    if ( (sead__Random__getU32((int *)(MEMORY[0xC9CF0C] + 1340)) & 7) == 0 )
       sub_60716978(MEMORY[0xCBD254], 0, *(unsigned __int8 *)v2, 0xF8u);
     *(_DWORD *)(a1 + 116) = -987594752;
     if ( *(float *)(a1 + 112) < -500.0 )
@@ -243537,7 +243537,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB25D0 = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD3232;
-    return Profile::Profile(13313492, 6273352, MEMORY[0xAF38D4], (int)v1, &unk_60B06080, 0);
+    return Profile__Profile(13313492, 6273352, MEMORY[0xAF38D4], (int)v1, &unk_60B06080, 0);
   }
 
 /* ============================================================================
@@ -243549,7 +243549,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r5
   
     v0 = operator new(0x17D8u);
-    MultiStateActor::MultiStateActor((_DWORD *)v0);
+    MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12641892;
     Actor_editokoinakutarange_Tag_build_helper(MEMORY[0xC7B3F8], *(unsigned __int8 *)(v0 + 20));
     *(_BYTE *)(v0 + 19) = 1;
@@ -243594,7 +243594,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -243608,7 +243608,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1[0] = 12321336;
     v1[1] = &unk_60AD3245;
-    return Profile::Profile(13313524, 6274844, MEMORY[0xAF3A74], (int)v1, &unk_60B060A4, 0);
+    return Profile__Profile(13313524, 6274844, MEMORY[0xAF3A74], (int)v1, &unk_60B060A4, 0);
   }
 
 /* ============================================================================
@@ -243741,7 +243741,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v19 = sub_605FDA58(a1);
     if ( v19 )
     {
-      CurrentState = StateMgr::getCurrentState((int)(v19 + 1521));
+      CurrentState = StateMgr__getCurrentState((int)(v19 + 1521));
       v21 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       result = (*(int (**)(void))(MEMORY[0xCB26D8] + 8))();
       if ( v21 != result )
@@ -243792,7 +243792,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = sub_605FDA58((int)a1);
     if ( v3 )
     {
-      CurrentState = StateMgr::getCurrentState((int)(v3 + 1521));
+      CurrentState = StateMgr__getCurrentState((int)(v3 + 1521));
       v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       result = (*(int (**)(void))(MEMORY[0xCB26B8] + 8))();
       if ( v5 != result )
@@ -243813,7 +243813,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r4
   
     v0 = operator new(0x1B38u);
-    MultiStateActor::MultiStateActor((_DWORD *)v0);
+    MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12642096;
     *(_DWORD *)(v0 + 6164) = 0;
     RectCollider_ctor((_DWORD *)(v0 + 6168));
@@ -244020,7 +244020,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v8; // r0
     _DWORD v9[2]; // [sp+1Ch] [bp-8h] BYREF
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     result = *(unsigned __int8 *)(a1 + 6871);
     if ( *(_BYTE *)(a1 + 6871) )
     {
@@ -244299,9 +244299,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // r3
   
     v2 = (_BYTE *)(a1 + 6870);
-    if ( *(_BYTE *)(a1 + 6870) || !StageActor::cullCheck(a1, 0) )
+    if ( *(_BYTE *)(a1 + 6870) || !StageActor__cullCheck(a1, 0) )
     {
-      StateMgr::execute((_DWORD *)(a1 + 6084));
+      StateMgr__execute((_DWORD *)(a1 + 6084));
       if ( *(_BYTE *)(a1 + 6868) )
       {
         *(_BYTE *)(a1 + 19) = 1;
@@ -244339,7 +244339,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r1
     _BOOL4 result; // r0
   
-    v2 = StageActor::befreDraw((Actor *)a1);
+    v2 = StageActor__befreDraw((Actor *)a1);
     result = 0;
     if ( v2 == 1 )
       return !*(_BYTE *)(a1 + 6870) || *(_DWORD *)(a1 + 6164) != 0;
@@ -244398,7 +244398,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = 0;
       do
       {
-        ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+        ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
         v6 = v4;
         if ( v4 >= 0xFu )
           v6 = 0;
@@ -244446,7 +244446,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = 0;
       do
       {
-        ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+        ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
         v6 = v4;
         if ( v4 >= 0xFu )
           v6 = 0;
@@ -244637,7 +244637,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6168));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
   }
 
 /* ============================================================================
@@ -244652,7 +244652,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6168));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
-    StageActor::~StageActor((Actor *)a1);
+    StageActor__dtor((Actor *)a1);
     return operator delete(v2);
   }
 
@@ -244697,7 +244697,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCB2670] = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD327C;
-    return Profile::Profile(13313652, 6277248, MEMORY[0xAF3054], (int)v1, &unk_60B060C8, 2);
+    return Profile__Profile(13313652, 6277248, MEMORY[0xAF3054], (int)v1, &unk_60B060C8, 2);
   }
 
 /* ============================================================================
@@ -244769,7 +244769,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v0 = (_DWORD *)operator new(0x17F0u);
-    result = MultiStateActor::MultiStateActor(v0);
+    result = MultiStateActor__MultiStateActor(v0);
     *result = 12642320;
     result[1529] = 0;
     result[1528] = 0;
@@ -244807,7 +244807,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605FE168(int a1)
   {
-    StateMgr::execute((_DWORD *)(a1 + 6084));
+    StateMgr__execute((_DWORD *)(a1 + 6084));
     return 1;
   }
 
@@ -244894,7 +244894,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
-    StageActor::~StageActor(a1);
+    StageActor__dtor(a1);
     return operator delete(v2);
   }
 
@@ -244925,7 +244925,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCB26F4] = 0;
     v1[0] = 12321336;
     v1[1] = &unk_60AD32A7;
-    return Profile::Profile(13313784, 6283404, MEMORY[0xAF2DF8], (int)v1, &unk_60B0610C, 0);
+    return Profile__Profile(13313784, 6283404, MEMORY[0xAF2DF8], (int)v1, &unk_60B0610C, 0);
   }
 
 /* ============================================================================
@@ -245028,7 +245028,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v19 = sub_605FFE7C(a1);
     if ( v19 )
     {
-      CurrentState = StateMgr::getCurrentState((int)(v19 + 1521));
+      CurrentState = StateMgr__getCurrentState((int)(v19 + 1521));
       v21 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       result = (*(int (**)(void))(MEMORY[0xCB26D8] + 8))();
       if ( v21 != result )
@@ -245079,7 +245079,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = sub_605FFE7C((int)a1);
     if ( v3 )
     {
-      CurrentState = StateMgr::getCurrentState((int)(v3 + 1521));
+      CurrentState = StateMgr__getCurrentState((int)(v3 + 1521));
       v5 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       result = (*(int (**)(void))(MEMORY[0xCB26B8] + 8))();
       if ( v5 != result )
@@ -245110,7 +245110,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r4
   
     v0 = operator new(0x1B40u);
-    MultiStateActor::MultiStateActor((_DWORD *)v0);
+    MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12642544;
     RectCollider_ctor((_DWORD *)(v0 + 6168));
     *(_DWORD *)(v0 + 6168) = 12333272;
@@ -245282,7 +245282,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v14; // [sp+24h] [bp-8h] BYREF
     const char *v15; // [sp+28h] [bp-4h]
   
-    ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+    ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     result = *(unsigned __int8 *)(a1 + 6879);
     if ( *(_BYTE *)(a1 + 6879) )
     {
@@ -245609,9 +245609,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r3
   
     *(float *)(a1 + 492) = *(float *)(a1 + 6840) - *(float *)(a1 + 108);
-    if ( !StageActor::cullCheck(a1, 0) )
+    if ( !StageActor__cullCheck(a1, 0) )
     {
-      StateMgr::execute((_DWORD *)(a1 + 6084));
+      StateMgr__execute((_DWORD *)(a1 + 6084));
       if ( *(_BYTE *)(a1 + 6876) )
       {
         *(_BYTE *)(a1 + 19) = 1;
@@ -245635,7 +245635,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r1
     _BOOL4 result; // r0
   
-    v2 = StageActor::befreDraw((Actor *)a1);
+    v2 = StageActor__befreDraw((Actor *)a1);
     result = 0;
     if ( v2 == 1 )
       return !*(_BYTE *)(a1 + 6878) || *(_DWORD *)(a1 + 6824) != 0;
@@ -245694,7 +245694,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = 0;
       do
       {
-        ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+        ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
         v6 = v4;
         if ( v4 >= 0xFu )
           v6 = 0;
@@ -245742,7 +245742,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = 0;
       do
       {
-        ResArchiveById = Profile::getResArchiveById(*(_DWORD *)(a1 + 12), 0);
+        ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
         v6 = v4;
         if ( v4 >= 0xFu )
           v6 = 0;

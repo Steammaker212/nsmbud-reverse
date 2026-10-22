@@ -141,7 +141,7 @@ int __fastcall sub_607988F4(int a1);
 /* line: 118 */       {
 /* line: 119, address: 0x60798c0c */         *v11 = 0;
 /* line: 120, address: 0x60798c2c */         result = 30
-/* line: 121 */                * ((5 * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(result + 1340))) >> 32);
+/* line: 121 */                * ((5 * (unsigned __int64)(unsigned int)sead__Random__getU32((struct sead_Random *)(result + 1340))) >> 32);
 /* line: 122, address: 0x60798c30 */         *(_DWORD *)(a1 + 9944) = result;
 /* line: 123 */       }
 /* line: 124, address: 0x60798c34 */       break;

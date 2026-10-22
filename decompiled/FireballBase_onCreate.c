@@ -46,14 +46,14 @@ int __fastcall FireballBase_onCreate(int a1);
 /* line: 23, address: 0x60135c7c */       *(_DWORD *)(a1 + 576) = 0;
 /* line: 24, address: 0x60135c80 */       *(_DWORD *)(a1 + 580) = 0;
 /* line: 25, address: 0x60135c84 */       *(_DWORD *)(a1 + 6160) = 5;
-/* line: 26, address: 0x60135ca8 */       ActiveCollider::init(a1 + 6436, a1, &unk_60AF666C, a1 + 6740);
+/* line: 26, address: 0x60135ca8 */       ActiveCollider__init(a1 + 6436, a1, &unk_60AF666C, a1 + 6740);
 /* line: 27, address: 0x60135cb8 */       v5 = MEMORY[0xC88234];
 /* line: 28, address: 0x60135cd4 */       if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 6436)
 /* line: 29 */         && !ActiveColliderMgr_isInCreateList(v5, a1 + 6436) )
 /* line: 30 */       {
 /* line: 31, address: 0x60135ce8 */         ActiveColliderMgr_addToCreateList(v5, a1 + 6436);
 /* line: 32 */       }
-/* line: 33, address: 0x60135cfc */       LightMask::init(a1 + 6100, 0, 2);
+/* line: 33, address: 0x60135cfc */       LightMask__init(a1 + 6100, 0, 2);
 /* line: 34, address: 0x60135d0c */       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 288))(a1);
 /* line: 35, address: 0x60135d1c */       *(_DWORD *)(a1 + 6140) = v1;
 /* line: 36, address: 0x60135d3c */       physics_21893E8(&v7, a1 + 6220, a1 + 6744, a1 + 108, *(unsigned __int8 *)(a1 + 86));
@@ -62,7 +62,7 @@ int __fastcall FireballBase_onCreate(int a1);
 /* line: 39, address: 0x60135d60 */       *(_DWORD *)(a1 + 6232) = *(_DWORD *)(a1 + 112);
 /* line: 40, address: 0x60135d6c */       *(_DWORD *)(a1 + 6236) = *(_DWORD *)(a1 + 116);
 /* line: 41, address: 0x60135d7c */       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 264))(a1);
-/* line: 42, address: 0x60135d90 */       StateMgr::changeState(a1 + 6084, 13137880);
+/* line: 42, address: 0x60135d90 */       StateMgr__changeState(a1 + 6084, 13137880);
 /* line: 43, address: 0x60135d94 */       return 1;
 /* line: 44 */     }
 /* line: 45 */   }

@@ -1171,6 +1171,7 @@ int __fastcall ActiveCollider_ctor(int a1);  /* 0x00158c7c */
 void __fastcall ActiveCollider_dtor(struct sead_IDisposer *a1);  /* 0x00158cf8 */
 int __fastcall ActiveCollider_dtorFree(struct sead_IDisposer *a1);  /* 0x00158d54 */
 void __fastcall ActiveCollider_reset(_DWORD *a1);  /* 0x00158db4 */
+int __fastcall ActiveCollider__init(int a1, int a2, int *a3, int a4);  /* 0x00158de8 */
 int __fastcall ActiveCollider_init2(int a1, int a2, int *a3, unsigned __int8 *a4, int a5);  /* 0x00158ebc */
 int __fastcall ActiveCollider_init3(int a1, int a2, int *a3, _BYTE *a4, int a5, int a6);  /* 0x00158edc */
 int __fastcall sub_60158F04(int a1, int a2);  /* 0x00158f04 */
@@ -2904,6 +2905,7 @@ int __fastcall sub_601FF634(int a1);  /* 0x001ff634 */
 int __fastcall sub_601FF75C(int a1);  /* 0x001ff75c */
 int __fastcall sub_601FF878(int a1, int a2, int a3, int a4);  /* 0x001ff878 */
 bool __fastcall sub_601FF9D4(int a1, int a2);  /* 0x001ff9d4 */
+int __fastcall sead__TaskBase__onDestroy(struct sead_TaskBase *a1);  /* 0x001ffbbc */
 int __fastcall sub_601FFC5C(int a1, int a2);  /* 0x001ffc5c */
 int __fastcall sub_601FFCF4(int a1, int a2);  /* 0x001ffcf4 */
 int __fastcall sub_601FFD90(int a1);  /* 0x001ffd90 */
@@ -3862,9 +3864,21 @@ int __fastcall sub_602585C0(int *a1);  /* 0x002585c0 */
 int __fastcall sub_602586D8(int *a1);  /* 0x002586d8 */
 int __fastcall sub_60258A64(int a1);  /* 0x00258a64 */
 int __fastcall sub_60258C1C(int a1);  /* 0x00258c1c */
+int __fastcall Amp__onExecute(int a1);  /* 0x00258d50 */
+int __fastcall Amp__onDraw(int a1, int a2, int a3, int a4);  /* 0x00259018 */
+int __fastcall Amp__vf274(int a1);  /* 0x00259050 */
+int __fastcall Amp__vfD0(int a1);  /* 0x002591ac */
+int __fastcall Amp__collisionFireball(int a1, int a2, int a3);  /* 0x00259234 */
+int __fastcall Amp__collisionPlayer(float *a1, int a2, int a3);  /* 0x00259298 */
+int __fastcall Amp__collisionPenguinSlide(int a1, int a2, int a3);  /* 0x002593ec */
+int __fastcall Amp__collisionYoshi(int a1, int a2, int a3);  /* 0x002594d4 */
+int __fastcall Amp__beginState_DieFall(int a1);  /* 0x00259560 */
+int __fastcall Amp__executeState_DieFall(int a1);  /* 0x00259750 */
 int __fastcall sub_602597BC(int a1, int a2);  /* 0x002597bc */
 int __fastcall sub_6025985C(int a1);  /* 0x0025985c */
 int __fastcall sub_60259964(int a1, int a2);  /* 0x00259964 */
+bool __fastcall Amp__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x00259a58 */
+void __fastcall Amp__dtor(_BYTE *a1);  /* 0x00259bd0 */
 int __fastcall sub_60259D4C(int a1);  /* 0x00259d4c */
 bool __fastcall sub_60259F90(int a1, int a2);  /* 0x00259f90 */
 int __fastcall SE_EMY_TOUCH_BH_HIBANA_ref(int result, int a2, int a3);  /* 0x00259fb8 */
@@ -3975,20 +3989,65 @@ int __fastcall BoomerangBro_vf55(int *a1);  /* 0x002629fc */
 int __fastcall BoomerangBro_vf188(int a1);  /* 0x00262a48 */
 int __fastcall BoomerangBro_vf202(int result);  /* 0x00262d44 */
 bool __fastcall BoomerangBro_vf0(int a1, int a2);  /* 0x00262e1c */
+void __fastcall BrosBase__dtor(_BYTE *a1);  /* 0x00263008 */
 int __fastcall BoomerangBro_vf3(_BYTE *a1);  /* 0x002630b4 */
 int __fastcall BoomerangBro_vf190(int result);  /* 0x0026316c */
+int __fastcall BrosBase__doAirAttack(int a1);  /* 0x0026317c */
+int __fastcall BrosBase__doAttack(_DWORD *a1);  /* 0x002631c4 */
+int __fastcall BrosBase__vf310(int result);  /* 0x002631e8 */
 int __fastcall BrosBase_ctor(int a1);  /* 0x002632f0 */
+int __fastcall BrosBase__onCreate(_DWORD *a1);  /* 0x002634d8 */
 int __fastcall sub_60263858(int a1);  /* 0x00263858 */
 int __fastcall sub_60263968(int a1);  /* 0x00263968 */
 int __fastcall sub_60263B68(_DWORD *a1);  /* 0x00263b68 */
+int __fastcall BrosBase__onExecute(_BYTE *a1);  /* 0x00263d10 */
 int __fastcall sub_60263E44(int a1);  /* 0x00263e44 */
 bool __fastcall sub_60263FA4(int a1);  /* 0x00263fa4 */
+int __fastcall BrosBase__onDraw(int a1, int a2, int a3, int a4);  /* 0x00264068 */
+int __fastcall BrosBase__vfE0(int a1);  /* 0x0026409c */
 int __fastcall sub_602640A0(int a1);  /* 0x002640a0 */
+int __fastcall BrosBase__vf2C4(int a1);  /* 0x00264430 */
+int __fastcall BrosBase__collisionPlayer(float *a1, int a2, int a3);  /* 0x00264458 */
+int __fastcall BrosBase__collisionYoshi(float *a1, int a2, int a3);  /* 0x002645c4 */
+int __fastcall BrosBase__collisionIceball(int a1, int a2, int a3);  /* 0x002646c4 */
+int __fastcall BrosBase__vfD4(int a1);  /* 0x00264800 */
 int __fastcall sub_60264900(int a1, const char *a2, int a3);  /* 0x00264900 */
+int __fastcall BrosBase__vfDC(int a1);  /* 0x002649d0 */
+int __fastcall BrosBase__collisionPropellerDrill(int *a1, int a2, int a3);  /* 0x002649e8 */
+int __fastcall BrosBase__collisionGroundPound(int *a1, int a2, int a3);  /* 0x00264b6c */
+int __fastcall BrosBase__collisionHammer(float *a1, int a2, int a3, int a4);  /* 0x00264b70 */
+int __fastcall BrosBase__collisionStar(int a1, int a2, int a3);  /* 0x00264ce0 */
+int __fastcall BrosBase__vfC8(int a1, int a2, int a3);  /* 0x00264e40 */
+int __fastcall BrosBase__vfD0(int a1);  /* 0x00264f6c */
+int __fastcall BrosBase__vf2E4(int result);  /* 0x00264fec */
 int __fastcall sub_6026508C(int result);  /* 0x0026508c */
+int __fastcall BrosBase__setThrowAnimation(int a1);  /* 0x00265164 */
+int __fastcall BrosBase__beginState_Move(int a1);  /* 0x0026522c */
+int __fastcall BrosBase__executeState_Move(int a1);  /* 0x00265384 */
+int __fastcall BrosBase__beginState_Attack(_DWORD *a1);  /* 0x00265670 */
+int __fastcall BrosBase__executeState_Attack(int a1);  /* 0x00265698 */
+int __fastcall BrosBase__beginState_JumpSt(int a1);  /* 0x002658e0 */
+int __fastcall BrosBase__executeState_JumpSt(int a1);  /* 0x002659d4 */
+int __fastcall BrosBase__beginState_Jump(int a1);  /* 0x00265b00 */
+int __fastcall BrosBase__endState_Jump(int result);  /* 0x00265bc8 */
+int __fastcall BrosBase__executeState_Jump(int a1);  /* 0x00265bd8 */
+int __fastcall BrosBase__beginState_AirAttack(_DWORD *a1);  /* 0x00265ca4 */
+int __fastcall BrosBase__endState_AirAttack(int result);  /* 0x00265ce4 */
+int __fastcall BrosBase__executeState_AirAttack(unsigned __int8 *a1);  /* 0x00265d08 */
+int __fastcall BrosBase__beginState_JumpEd(_DWORD *a1);  /* 0x00265f6c */
+int __fastcall BrosBase__executeState_JumpEd(int a1);  /* 0x00266080 */
+int __fastcall BrosBase__beginState_DieFumi(int a1);  /* 0x00266130 */
+int __fastcall BrosBase__beginState_DieFall(int a1);  /* 0x00266294 */
 bool __fastcall sub_60266410(int a1);  /* 0x00266410 */
+int __fastcall BrosBase__vf150(int a1, int a2, int a3);  /* 0x002664ac */
+int __fastcall BrosBase__beginState_Down(_DWORD *a1);  /* 0x002668fc */
+int __fastcall BrosBase__executeState_Down(int a1);  /* 0x00266a00 */
+int __fastcall BrosBase__endState_Down(int a1);  /* 0x00266c90 */
+int __fastcall BrosBase__killAtGoal(int a1);  /* 0x00266cc4 */
+bool __fastcall BrosBase__vf32C(int a1);  /* 0x00266d64 */
 int __fastcall sub_60266ED4(int a1, int a2);  /* 0x00266ed4 */
 int __fastcall sub_602671E4(int a1, int a2);  /* 0x002671e4 */
+bool __fastcall BrosBase__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x00267320 */
 int __fastcall StateVirtual_BroBase_vf2(int a1);  /* 0x002675a8 */
 int __fastcall sub_602675D0(int a1, int a2);  /* 0x002675d0 */
 int __fastcall sub_60267A60(unsigned __int16 *a1);  /* 0x00267a60 */
@@ -4094,19 +4153,39 @@ int __fastcall sub_602717D4(int a1);  /* 0x002717d4 */
 bool __fastcall sub_60271978(int a1, int a2);  /* 0x00271978 */
 void __fastcall sub_60271A7C(int a1);  /* 0x00271a7c */
 int __fastcall sub_60271ADC(int a1);  /* 0x00271adc */
+int __fastcall CarryableEnemy__CarryableEnemy(int a1);  /* 0x00271d84 */
+int __fastcall CarryableEnemy__beforeExecute(_BYTE *a1);  /* 0x00271dd4 */
+int __fastcall CarryableEnemy__onDelete(int a1);  /* 0x00271dd8 */
 int __fastcall sub_60271E38(int a1);  /* 0x00271e38 */
 int __fastcall sub_60271E94(int a1);  /* 0x00271e94 */
 int __fastcall sub_60271EC4(int a1);  /* 0x00271ec4 */
 int __fastcall sub_60271EF4(int a1, int a2);  /* 0x00271ef4 */
+int __fastcall CarryableEnemy__vf5C(int a1, int a2);  /* 0x00272064 */
 int __fastcall sub_602720FC(int a1, float *a2);  /* 0x002720fc */
 int __fastcall sub_602723A8(int a1, int a2, int a3);  /* 0x002723a8 */
 int __fastcall sub_602724B0(int a1);  /* 0x002724b0 */
 unsigned int __fastcall sub_60272510(int a1);  /* 0x00272510 */
 bool __fastcall sub_60272570(int a1, int a2);  /* 0x00272570 */
+bool __fastcall ShellEnemy__vf110(int a1, int a2, int a3);  /* 0x002725ac */
+int __fastcall CarryableEnemy__collisionPlayer(int *a1, int a2, int a3);  /* 0x002725cc */
+int __fastcall CarryableEnemy__vf27C(float *a1, int a2, int a3);  /* 0x00272684 */
 int __fastcall sub_602726F8(int a1, int a2, int a3);  /* 0x002726f8 */
+int __fastcall CarryableEnemy__vf280(float *a1, int a2, int a3);  /* 0x00272760 */
+int __fastcall CarryableEnemy__vf284(int a1, int a2, int a3);  /* 0x0027286c */
+int __fastcall CarryableEnemy__vf278(int a1, int a2);  /* 0x00272988 */
+int __fastcall CarryableEnemy__collisionIceball(int a1, int a2, int a3);  /* 0x0027298c */
+int __fastcall CarryableEnemy__collisionThrowableObject(int a1, int a2, int a3);  /* 0x00272a04 */
+int __fastcall CarryableEnemy__vf158(int a1, _BYTE *a2, int a3, int a4);  /* 0x00272cdc */
+int __fastcall CarryableEnemy__vf294(int a1);  /* 0x00272d5c */
+int __fastcall CarryableEnemy__vf29C(int a1);  /* 0x00272de8 */
+int __fastcall CarryableEnemy__vf298(int a1);  /* 0x00272ed0 */
 int __fastcall sub_60273034(int result, float *a2, _DWORD *a3);  /* 0x00273034 */
 int __fastcall sub_6027326C(int result, float *a2, int a3);  /* 0x0027326c */
+int __fastcall CarryableEnemy__vf2AC(int a1);  /* 0x0027341c */
+int __fastcall CarryableEnemy__vf2B4(_DWORD *a1);  /* 0x002734a4 */
 bool __fastcall sub_60273514(int a1);  /* 0x00273514 */
+bool __fastcall CarryableEnemy__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x002735fc */
+int __fastcall CarryableEnemy__dtor(Actor *a1);  /* 0x00273774 */
 int __fastcall sub_602737D0(int a1);  /* 0x002737d0 */
 int __fastcall sub_60273940(int a1, int a2);  /* 0x00273940 */
 int __fastcall sub_60273B70(_DWORD *a1);  /* 0x00273b70 */
@@ -4140,13 +4219,46 @@ int __fastcall sub_60275DAC(int a1);  /* 0x00275dac */
 int __fastcall sub_60275F48(int a1);  /* 0x00275f48 */
 int __fastcall sub_60276228(int a1);  /* 0x00276228 */
 int __fastcall sub_60276278(int a1);  /* 0x00276278 */
+int __fastcall Fuzzy__onCreate(int a1);  /* 0x0027650c */
 int __fastcall Fuzzy_setupModel(int *a1);  /* 0x00276d00 */
 bool __fastcall sub_60276E10(int a1);  /* 0x00276e10 */
 int __fastcall sub_60276FBC(float a1);  /* 0x00276fbc */
+int __fastcall Fuzzy__beforeExecute(_BYTE *a1);  /* 0x0027730c */
+int __fastcall Fuzzy__onExecute(int a1);  /* 0x0027733c */
 int __fastcall sub_60277540(int a1);  /* 0x00277540 */
+int __fastcall Fuzzy__onDraw(int a1, int a2, int a3, int a4);  /* 0x0027767c */
+int __fastcall Fuzzy__onDelete(_DWORD *a1);  /* 0x002776b8 */
+int __fastcall Fuzzy__vfE0(int a1);  /* 0x00277760 */
 int __fastcall sub_602778D0(int a1);  /* 0x002778d0 */
+int __fastcall Fuzzy__vf17C(int a1, _DWORD *a2);  /* 0x00277b20 */
+int __fastcall Fuzzy__collisionPlayer(int a1, int a2, int a3);  /* 0x00277bd4 */
+int __fastcall Fuzzy__collisionYoshi(float *a1, int a2, int a3);  /* 0x00277c98 */
+int __fastcall Fuzzy__collisionGroundPound(int a1, int a2, int a3);  /* 0x00277d34 */
+int __fastcall Fuzzy__vf270(int a1, int a2, int a3);  /* 0x00277dfc */
+int __fastcall Fuzzy__collisionPenguinSlide(int a1, int a2, int a3);  /* 0x00277ec4 */
+int __fastcall Fuzzy__collisionGroundPoundYoshi(float *a1, int a2, int a3);  /* 0x00277f8c */
+int __fastcall Fuzzy__killAtGoal(int a1);  /* 0x00277fd4 */
 int __fastcall sub_60278058(int a1);  /* 0x00278058 */
+void __fastcall Fuzzy__addActiveColliders(int a1);  /* 0x0027820c */
+int __fastcall Fuzzy__removeActiveColliders(int a1);  /* 0x0027826c */
+int __fastcall Fuzzy__splashWater(int a1, int *a2);  /* 0x002782f0 */
+int __fastcall Fuzzy__splashPoison(int a1, int *a2);  /* 0x00278364 */
+int __fastcall Fuzzy__splashLava(int a1, int *a2);  /* 0x002783a0 */
+int __fastcall Fuzzy__beginState_DieFall(_DWORD *a1);  /* 0x002783dc */
+int __fastcall Fuzzy__endState_DieFall(Enemy *a1);  /* 0x00278458 */
+int __fastcall Fuzzy__executeState_DieFall(int a1);  /* 0x0027845c */
+int __fastcall Fuzzy__vf210(Enemy *a1);  /* 0x002784d8 */
+int __fastcall Fuzzy__vf218(Enemy *a1);  /* 0x00278534 */
+int __fastcall Fuzzy__vf234(Enemy *a1);  /* 0x0027853c */
+int __fastcall Fuzzy__vf23C(Enemy *a1);  /* 0x00278598 */
+int __fastcall Fuzzy__vf264(int a1);  /* 0x002785a0 */
+int __fastcall Fuzzy__vf26C(Enemy *a1);  /* 0x0027861c */
+int __fastcall Fuzzy__vf268(_BYTE *a1);  /* 0x00278620 */
 int __fastcall sub_60278648(int a1, int a2, int a3);  /* 0x00278648 */
+bool __fastcall Fuzzy__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x0027869c */
+void __fastcall Fuzzy__dtor(_BYTE *a1);  /* 0x00278814 */
+int __fastcall Fuzzy__getRect(int result, float *a2);  /* 0x00278978 */
+int __fastcall Fuzzy__vfDC(int a1);  /* 0x002789dc */
 int __fastcall sub_60278B4C(int a1);  /* 0x00278b4c */
 int __fastcall choropoo_hole_ref(int *a1);  /* 0x00278fe8 */
 int __fastcall sub_602790B8(int a1);  /* 0x002790b8 */
@@ -4225,6 +4337,7 @@ int __fastcall sub_60283D2C(int a1);  /* 0x00283d2c */
 int __fastcall sub_60284F44(int a1, int a2, int a3, int a4);  /* 0x00284f44 */
 int __fastcall sub_602850C8(int a1);  /* 0x002850c8 */
 int __fastcall sub_6028514C(int a1);  /* 0x0028514c */
+bool __fastcall Enemy__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x00285164 */
 void __fastcall sub_60285268(Actor *a1);  /* 0x00285268 */
 int __fastcall sub_602852D8(Actor *a1);  /* 0x002852d8 */
 int __fastcall sub_6028534C(int a1);  /* 0x0028534c */
@@ -4233,6 +4346,7 @@ int __fastcall sub_60285440(int a1, int a2);  /* 0x00285440 */
 int __fastcall sub_60285510(int a1);  /* 0x00285510 */
 int __fastcall sub_602855F4(int a1);  /* 0x002855f4 */
 int __fastcall sub_602856C4(_DWORD *a1);  /* 0x002856c4 */
+int __fastcall Pokey__vf15C(int a1, int a2);  /* 0x002856dc */
 int __fastcall sub_602856EC(int *a1, int a2);  /* 0x002856ec */
 void __fastcall sub_6028573C(int *a1, int a2, signed int a3, int a4);  /* 0x0028573c */
 int __fastcall sub_60285818(int a1);  /* 0x00285818 */
@@ -4543,9 +4657,20 @@ int __fastcall sub_6029D8C8(int a1);  /* 0x0029d8c8 */
 int __fastcall sub_6029D94C(int result);  /* 0x0029d94c */
 int __fastcall sub_6029D9A4(int a1);  /* 0x0029d9a4 */
 int __fastcall sub_6029DA20(int a1);  /* 0x0029da20 */
+int __fastcall Thwomp__onCreate(float *a1);  /* 0x0029da4c */
 int __fastcall sub_6029DDD8(int a1);  /* 0x0029ddd8 */
 int __fastcall Thwomp_updateModel(float *a1);  /* 0x0029e02c */
+int __fastcall Thwomp__onExecute(int a1);  /* 0x0029e1ac */
+int __fastcall Thwomp__onDraw(int a1, int a2, int a3, int a4);  /* 0x0029e21c */
+int __fastcall Thwomp__collisionStar(int a1);  /* 0x0029e24c */
+int __fastcall Thwomp__collisionPenguinSlide(int a1, int a2, int a3);  /* 0x0029e258 */
+int __fastcall Thwomp__vf15C(int a1, int a2);  /* 0x0029e328 */
 bool __fastcall sub_6029E430(int a1);  /* 0x0029e430 */
+int __fastcall Thwomp__beginState_DieFall(int a1);  /* 0x0029eaa4 */
+bool __fastcall Thwomp__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x0029ed8c */
+void __fastcall Thwomp__dtor(_BYTE *a1);  /* 0x0029ef04 */
+int __fastcall Thwomp__collisionFireball(int a1, int a2, int a3);  /* 0x0029f05c */
+int __fastcall Thwomp__collisionIceball(int a1, int a2, int a3);  /* 0x0029f0c0 */
 int __fastcall sub_6029F0DC(int a1);  /* 0x0029f0dc */
 int __fastcall sub_6029F204(int result);  /* 0x0029f204 */
 int __fastcall sub_6029F248(int a1);  /* 0x0029f248 */
@@ -4585,18 +4710,50 @@ int __fastcall sub_602A18B8(int result, _DWORD *a2);  /* 0x002a18b8 */
 int __fastcall sub_602A18C8(int a1, int a2);  /* 0x002a18c8 */
 int __fastcall sub_602A18F0(int a1);  /* 0x002a18f0 */
 int __fastcall sub_602A18F8(int a1);  /* 0x002a18f8 */
+int __fastcall Enemy__Enemy(int a1);  /* 0x002a1a8c */
+int __fastcall Enemy__beforeExecute(_BYTE *a1);  /* 0x002a1bc8 */
+int __fastcall Enemy__damageFromUnder(int a1);  /* 0x002a1e1c */
 bool __fastcall sub_602A1F74(int a1);  /* 0x002a1f74 */
+int __fastcall Enemy__vfC8(int a1, int a2, int a3);  /* 0x002a20e0 */
+unsigned int __fastcall Enemy__collisionCallback(int a1, _DWORD *a2);  /* 0x002a21b0 */
 bool __fastcall sub_602A25C0(int a1);  /* 0x002a25c0 */
 int __fastcall sub_602A25F8(int result);  /* 0x002a25f8 */
+bool __fastcall Enemy__vfE8(int a1, int a2, int a3);  /* 0x002a2674 */
+bool __fastcall Enemy__vfEC(_BYTE *a1, _BYTE *a2, int a3);  /* 0x002a26b0 */
+bool __fastcall Enemy__vfF0(int a1, int a2, int a3, int a4);  /* 0x002a296c */
+bool __fastcall Enemy__vfF8(int a1, int a2, int a3);  /* 0x002a29ac */
+bool __fastcall Enemy__vfFC(int a1, int a2, int a3);  /* 0x002a2ab0 */
+bool __fastcall Enemy__vf100(int a1, int a2, int a3);  /* 0x002a2b8c */
+int __fastcall Enemy__collisionPlayer(int result, int a2, int a3);  /* 0x002a2d54 */
+int __fastcall Enemy__collisionYoshi(int result, int a2, int a3);  /* 0x002a2d78 */
 int __fastcall sub_602A2DA0(int a1);  /* 0x002a2da0 */
+int __fastcall Enemy__processCollision(float *a1, int a2, int a3, int a4);  /* 0x002a2e28 */
 int __fastcall sub_602A3124(int a1, int a2);  /* 0x002a3124 */
 int __fastcall sub_602A3160(_WORD *a1);  /* 0x002a3160 */
 int __fastcall sub_602A3178(_DWORD *a1);  /* 0x002a3178 */
+int __fastcall Enemy__vf174(int a1, _DWORD *a2);  /* 0x002a31b0 */
 void __fastcall sub_602A3250(int a1, int a2);  /* 0x002a3250 */
 int __fastcall sub_602A3358(int a1, int a2);  /* 0x002a3358 */
+void __fastcall Enemy__vf178(int a1, int a2);  /* 0x002a33a4 */
+int __fastcall Enemy__vf17C(int a1, _DWORD *a2);  /* 0x002a33d0 */
+int __fastcall Enemy__vf180(int a1);  /* 0x002a3470 */
+int __fastcall Enemy__vf184(int a1, _DWORD *a2);  /* 0x002a347c */
+bool __fastcall Enemy__vfCC(int a1, int a2);  /* 0x002a34f8 */
 int __fastcall sub_602A3520(float *a1, int a2, int a3);  /* 0x002a3520 */
 int __fastcall sub_602A358C(float *a1, unsigned int a2, int a3, unsigned int a4, int a5);  /* 0x002a358c */
+int __fastcall Enemy__vf188(float *a1, int a2);  /* 0x002a362c */
+int __fastcall Enemy__vf18C(int a1, int (__fastcall ***a2)(_DWORD, int));  /* 0x002a37cc */
 int __fastcall sub_602A38A4(int a1, int *a2);  /* 0x002a38a4 */
+int __fastcall Enemy__vf190(float *a1, int a2);  /* 0x002a38dc */
+int __fastcall Enemy__vf194(float *a1);  /* 0x002a3a7c */
+int __fastcall Enemy__vf19C(float *a1, int a2);  /* 0x002a3aec */
+int __fastcall Enemy__vf1A0(int a1, int a2);  /* 0x002a3c94 */
+int __fastcall Enemy__vf1A4(int result);  /* 0x002a3ca4 */
+bool __fastcall Enemy__vf1A8(float *a1);  /* 0x002a3cb8 */
+int __fastcall Enemy__vf1AC(int a1, int a2);  /* 0x002a3d38 */
+int __fastcall Enemy__vf1B0(int a1, int a2);  /* 0x002a3dac */
+int __fastcall Enemy__vf1B4(int a1, int a2);  /* 0x002a3e20 */
+int __fastcall Enemy__dtor(Actor *a1);  /* 0x002a3ea8 */
 int __fastcall ActorScaler_execute(int a1);  /* 0x002a3f10 */
 int __fastcall sub_602A3F7C(int a1, int a2);  /* 0x002a3f7c */
 int __fastcall ActorScaler_getOwnerScale(int a1);  /* 0x002a3fec */
@@ -4631,18 +4788,52 @@ int __fastcall sub_602A5824(int a1);  /* 0x002a5824 */
 int __fastcall sub_602A588C(int a1);  /* 0x002a588c */
 int __fastcall sub_602A58B4(int a1, int a2);  /* 0x002a58b4 */
 int __fastcall Enemy_killSpin(int a1, int a2);  /* 0x002a5ae8 */
+int __fastcall Enemy__collisionStar(int a1);  /* 0x002a5bf4 */
+int __fastcall Enemy__collisionSlide(int a1, int a2, int a3);  /* 0x002a5c00 */
 int __fastcall sub_602A5EF4(float *a1, int a2);  /* 0x002a5ef4 */
 int __fastcall sub_602A6024(int a1, int a2, char a3, char a4);  /* 0x002a6024 */
+int __fastcall Enemy__collisionPropellerDrill(int *a1, int a2, int a3);  /* 0x002a6128 */
+int __fastcall Enemy__vf120(int a1, int a2, int a3);  /* 0x002a6298 */
 int __fastcall sub_602A63E4(int a1, int a2, int a3, char a4, char a5);  /* 0x002a63e4 */
+int __fastcall Enemy__collisionGroundPound(int *a1, int a2, int a3);  /* 0x002a6454 */
+int __fastcall Enemy__collisionGroundPoundYoshi(_DWORD *a1, int a2, int a3);  /* 0x002a65d4 */
 int __fastcall Enemy_killYoshi(int a1, int a2);  /* 0x002a66f8 */
+int __fastcall Enemy__collisionPenguinSlide(int a1);  /* 0x002a675c */
+int __fastcall Enemy__collisionPipeCannon(int a1, int a2, int a3);  /* 0x002a6768 */
+int __fastcall Enemy__vf134(int a1);  /* 0x002a68e0 */
+int __fastcall Enemy__collisionThrowableObject(_DWORD *a1, int a2, int a3);  /* 0x002a68ec */
+int __fastcall Enemy__collisionFireball(float *a1, int a2, int a3);  /* 0x002a6ab8 */
 int __fastcall sub_602A6C70(float *a1, float a2, int a3, int a4);  /* 0x002a6c70 */
+int __fastcall Enemy__collisionIceball(int a1, int a2, int a3);  /* 0x002a6cf8 */
+int __fastcall Enemy__collisionHammer(float *a1, int a2, int a3);  /* 0x002a6df4 */
+int __fastcall Enemy__collisionFireballYoshi(int a1, int a2, int a3);  /* 0x002a6fc4 */
+int __fastcall Enemy__vf154(int a1);  /* 0x002a7148 */
+int __fastcall Enemy__vf158(int a1, _BYTE *a2);  /* 0x002a7154 */
 int __fastcall Enemy_killWithState(int a1, int a2, _DWORD *a3, int a4);  /* 0x002a7164 */
+int __fastcall Enemy__vf15C(int a1, int a2);  /* 0x002a71d8 */
+int __fastcall Enemy__vfA4(int a1, int a2);  /* 0x002a7348 */
+int __fastcall Enemy__vf160(int a1);  /* 0x002a73ac */
 int __fastcall sub_602A74C0(int a1);  /* 0x002a74c0 */
 int __fastcall sub_602A75C4(int a1, int a2);  /* 0x002a75c4 */
 int __fastcall sub_602A7624(int a1);  /* 0x002a7624 */
+int __fastcall Enemy__vf164(int a1, int a2, int a3);  /* 0x002a77ac */
+int __fastcall Enemy__vfA8(int a1, float *a2);  /* 0x002a7960 */
 int __fastcall sub_602A7BAC(int a1, int a2);  /* 0x002a7bac */
+int __fastcall Enemy__isOnGround(int a1);  /* 0x002a7be8 */
+int __fastcall Enemy__vf16C(int a1);  /* 0x002a7bf4 */
+int __fastcall Enemy__vf170(int a1);  /* 0x002a7c50 */
 void __fastcall sub_602A7CEC(char *a1);  /* 0x002a7cec */
+int __fastcall Enemy__beginState_DieFumi(int a1);  /* 0x002a7d9c */
+int __fastcall Enemy__beginState_DieFall(int a1);  /* 0x002a7ff0 */
+int __fastcall Enemy__vf1D4(float *a1);  /* 0x002a80ec */
+int __fastcall Enemy__vf1D8(int result);  /* 0x002a8158 */
+int __fastcall Enemy__vf1E0(int a1);  /* 0x002a8164 */
+int __fastcall Enemy__vf1E4(int result);  /* 0x002a8174 */
+void __fastcall Enemy__vf1EC(char *a1);  /* 0x002a8180 */
+int __fastcall Enemy__vf1F0(int result);  /* 0x002a8234 */
+int __fastcall Enemy__vf1F8(int result);  /* 0x002a8240 */
 int __fastcall sub_602A8254(int a1);  /* 0x002a8254 */
+int __fastcall Enemy__vf204(_BYTE *a1);  /* 0x002a82a8 */
 int __fastcall StateVirtual_Enemy_dtorFree(int a1);  /* 0x002a82e8 */
 int __fastcall StateVirtual_Enemy_getId(int a1);  /* 0x002a82ec */
 int __fastcall sub_602A852C(int a1, _DWORD *a2);  /* 0x002a852c */
@@ -4665,8 +4856,23 @@ int __fastcall sub_602A8F40(int a1, int *a2, int a3);  /* 0x002a8f40 */
 int __fastcall sub_602A8FA4(int a1, int a2);  /* 0x002a8fa4 */
 bool __fastcall sub_602A8FDC(int a1, int a2);  /* 0x002a8fdc */
 int __fastcall sub_602A9154(Actor *a1);  /* 0x002a9154 */
+int __fastcall Enemy__doStateChange(_DWORD *a1, int a2);  /* 0x002a929c */
+int __fastcall Enemy__vfD0(_DWORD *a1);  /* 0x002a9358 */
+int __fastcall Enemy__vfDC(int a1);  /* 0x002a93b4 */
+int __fastcall Enemy__vf264(_BYTE *a1);  /* 0x002a9420 */
+int __fastcall Enemy__vf26C(int result);  /* 0x002a9490 */
+int __fastcall Enemy__vf268(_BYTE *a1);  /* 0x002a94a8 */
+int __fastcall Enemy__vf210(int a1);  /* 0x002a9610 */
+int __fastcall Enemy__vf234(int a1);  /* 0x002a9738 */
 int __fastcall sub_602A9A1C(int a1, _BYTE *a2);  /* 0x002a9a1c */
 int __fastcall sub_602A9A2C(int a1, bool *a2, int a3, int a4);  /* 0x002a9a2c */
+bool __fastcall FireBros__vf2D4(int a1);  /* 0x002a9a9c */
+int __fastcall FireBros__setWalkingSpeed(int result);  /* 0x002a9ad0 */
+int __fastcall FireBros__setHopTimer(int a1);  /* 0x002a9afc */
+__int64 __fastcall FireBros__setHopSpeed(int a1);  /* 0x002a9b44 */
+bool __fastcall FireBros__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x002a9eb0 */
+int __fastcall FireBros__dtor(_BYTE *a1);  /* 0x002aa09c */
+int __fastcall FireBros__setWalkingTimer(int a1);  /* 0x002aa154 */
 int __fastcall sub_602AA2BC(int a1);  /* 0x002aa2bc */
 int __fastcall sub_602AA4D0(int a1);  /* 0x002aa4d0 */
 int __fastcall sub_602AA630(int *a1);  /* 0x002aa630 */
@@ -4688,14 +4894,28 @@ int __fastcall sub_602ABBB0(int a1);  /* 0x002abbb0 */
 int __fastcall sub_602ABCDC(int result);  /* 0x002abcdc */
 int __fastcall sub_602ABCF0(int a1, int a2);  /* 0x002abcf0 */
 int __fastcall FireSnake_ctor(int a1);  /* 0x002abde8 */
+int __fastcall FireSnake__onCreate(int a1);  /* 0x002ac064 */
 int __fastcall sub_602AC53C(int *a1);  /* 0x002ac53c */
 int __fastcall sub_602AC6EC(int a1);  /* 0x002ac6ec */
+int __fastcall FireSnake__onExecute(_DWORD *a1);  /* 0x002aca38 */
 int __fastcall sub_602ACF44(int a1);  /* 0x002acf44 */
 int __fastcall sub_602AD28C(int a1);  /* 0x002ad28c */
+int __fastcall FireSnake__onDraw(int a1);  /* 0x002ad3d0 */
+int __fastcall FireSnake__onDelete(int a1);  /* 0x002ad518 */
+int __fastcall FireSnake__splashWater(int a1, int *a2, int a3, int a4);  /* 0x002ad530 */
+int __fastcall FireSnake__splashLava(int a1, int *a2);  /* 0x002ad5b4 */
+int __fastcall FireSnake__splashPoison(int a1, int *a2, int a3, int a4);  /* 0x002ad5e0 */
+int __fastcall FireSnake__removeActiveColliders(_DWORD *a1);  /* 0x002ad664 */
+int __fastcall FireSnake__collisionIceball(int a1, int a2, int a3);  /* 0x002ad780 */
+int __fastcall FireSnake__vf150(int a1, int a2, int a3);  /* 0x002ad7e8 */
 int __fastcall sub_602ADA1C(float *a1);  /* 0x002ada1c */
+int __fastcall FireSnake__beginState_DieFall(int a1);  /* 0x002adb68 */
 int __fastcall sub_602ADE50(int a1);  /* 0x002ade50 */
 int __fastcall sub_602ADF98(int a1);  /* 0x002adf98 */
 int __fastcall sub_602AE16C(unsigned int *a1, int a2);  /* 0x002ae16c */
+bool __fastcall FireSnake__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x002ae6e4 */
+void __fastcall FireSnake__dtor(_BYTE *a1);  /* 0x002ae85c */
+int __fastcall FireSnake__collisionFireball(int a1, int a2, int a3);  /* 0x002ae9c0 */
 int __fastcall sub_602AEA2C(int a1);  /* 0x002aea2c */
 void __fastcall sub_602AEF18(int a1, int a2, int a3);  /* 0x002aef18 */
 int __fastcall sub_602AEFE0(int **a1);  /* 0x002aefe0 */
@@ -5044,6 +5264,27 @@ int __fastcall sub_602CB818(int result, int a2, int a3, int a4, int a5);  /* 0x0
 void __fastcall sub_602CB83C(int a1);  /* 0x002cb83c */
 int __fastcall sub_602CB904(_DWORD *a1);  /* 0x002cb904 */
 unsigned __int32 __fastcall sub_602CB9B0(int a1, int a2, int a3);  /* 0x002cb9b0 */
+bool __fastcall HammerBros__vf2D4(int a1);  /* 0x002cbb8c */
+int __fastcall HammerBros__setWalkingSpeed(int result);  /* 0x002cbba4 */
+bool __fastcall HammerBros__vf300(_DWORD *a1);  /* 0x002cbbd0 */
+int __fastcall HammerBros__setHopTimer(int a1);  /* 0x002cbd14 */
+int __fastcall HammerBros__setHopSpeed(int a1);  /* 0x002cbd58 */
+int __fastcall HammerBros__vf2E8(_DWORD *a1);  /* 0x002cbe30 */
+int __fastcall HammerBros__throwProjectile(int a1);  /* 0x002cc124 */
+int __fastcall HammerBros__collisionIceball(int a1, int a2, int a3);  /* 0x002cc380 */
+int __fastcall HammerBros__doAttack(_DWORD *a1);  /* 0x002cc608 */
+int __fastcall HammerBros__setThrowAnimation(int a1);  /* 0x002cc650 */
+int __fastcall HammerBros__setWalkingTimer(int a1);  /* 0x002cc6a0 */
+int __fastcall HammerBros__beginState_JumpSt(_DWORD *a1);  /* 0x002cc71c */
+int __fastcall HammerBros__executeState_JumpSt(unsigned __int8 *a1);  /* 0x002cc758 */
+int __fastcall HammerBros__beginState_AirAttack(_DWORD *a1);  /* 0x002cc93c */
+int __fastcall HammerBros__endState_AirAttack(int result);  /* 0x002cc97c */
+int __fastcall HammerBros__executeState_AirAttack(int a1);  /* 0x002cc9a0 */
+int __fastcall HammerBros__vf328(int a1);  /* 0x002ccbe4 */
+bool __fastcall HammerBros__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x002ccd78 */
+int __fastcall HammerBros__dtor(_BYTE *a1);  /* 0x002ccf64 */
+int __fastcall HammerBros__doAirAttack(int a1);  /* 0x002cd030 */
+int __fastcall HammerBros__vf318(int result);  /* 0x002cd048 */
 int __fastcall sub_602CD060(int a1);  /* 0x002cd060 */
 int __fastcall sub_602CD22C(int *a1);  /* 0x002cd22c */
 int __fastcall sub_602CD244(int a1);  /* 0x002cd244 */
@@ -5132,13 +5373,35 @@ int __fastcall sub_602D4954(int a1);  /* 0x002d4954 */
 int __fastcall sub_602D4A18(int a1);  /* 0x002d4a18 */
 int __fastcall sub_602D5200(int result);  /* 0x002d5200 */
 int __fastcall SledgeBro_ctor(int a1);  /* 0x002d5210 */
+int __fastcall SledgeBro__onCreate(_DWORD *a1);  /* 0x002d545c */
 int __fastcall sub_602D5890(int a1);  /* 0x002d5890 */
 int __fastcall sub_602D59A8(_DWORD *a1);  /* 0x002d59a8 */
+int __fastcall SledgeBro__onExecute(int a1);  /* 0x002d5b50 */
 int __fastcall sub_602D5DF0(int a1);  /* 0x002d5df0 */
 int __fastcall sub_602D5EF8(int a1);  /* 0x002d5ef8 */
+int __fastcall SledgeBro__afterExecute(int a1, unsigned int a2);  /* 0x002d6000 */
+int __fastcall SledgeBro__vfE0(float *a1);  /* 0x002d6030 */
+int __fastcall SledgeBro__onDraw(int a1, int a2, int a3, int a4);  /* 0x002d61fc */
+int __fastcall SledgeBro__onDelete(int a1);  /* 0x002d622c */
+int __fastcall SledgeBro__collisionPlayer(float *a1, int a2, int a3);  /* 0x002d630c */
+int __fastcall SledgeBro__collisionStar(int a1, int a2, int a3);  /* 0x002d639c */
+int __fastcall SledgeBro__collisionYoshi(float *a1, int a2, int a3);  /* 0x002d64fc */
+int __fastcall SledgeBro__vfC8(int a1, int a2, int a3);  /* 0x002d6548 */
+int __fastcall SledgeBro__collisionGroundPound(int *a1, int a2, int a3);  /* 0x002d6760 */
 int __fastcall SumoBro_StunPlayers(unsigned __int8 *a1);  /* 0x002d6764 */
+int __fastcall SledgeBro__vfD0(int a1);  /* 0x002d693c */
+int __fastcall SledgeBro__vfD4(int a1);  /* 0x002d69d0 */
+int __fastcall SledgeBro__collisionIceball(int a1, int a2, int a3);  /* 0x002d6a88 */
+int __fastcall SledgeBro__vfDC(int a1);  /* 0x002d6b00 */
+int __fastcall SledgeBro__beginState_DieFumi(int *a1);  /* 0x002d6b18 */
+int __fastcall SledgeBro__beginState_DieFall(int a1);  /* 0x002d6c40 */
+int __fastcall SledgeBro__killAtGoal(float *a1);  /* 0x002d6d5c */
 int __fastcall sub_602D6DAC(int a1, int a2);  /* 0x002d6dac */
 int __fastcall sub_602D7440(int a1, int a2);  /* 0x002d7440 */
+bool __fastcall SledgeBro__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x002d757c */
+void __fastcall SledgeBro__dtor(_BYTE *a1);  /* 0x002d76f4 */
+int __fastcall SledgeBro__removeActiveColliders(int a1);  /* 0x002d7888 */
+void __fastcall SledgeBro__addActiveColliders(int a1);  /* 0x002d78fc */
 int __fastcall sub_602D79A8(int a1);  /* 0x002d79a8 */
 bool __fastcall sub_602D7E68(int a1, int a2, int a3);  /* 0x002d7e68 */
 int __fastcall sub_602D7E88(int a1, int a2, int a3);  /* 0x002d7e88 */
@@ -5705,12 +5968,65 @@ bool __fastcall sub_6030DE30(int a1, int a2);  /* 0x0030de30 */
 void __fastcall sub_6030DFA8(_BYTE *a1);  /* 0x0030dfa8 */
 int __fastcall sub_6030E018(_BYTE *a1);  /* 0x0030e018 */
 int __fastcall sub_6030E170(int a1, int a2);  /* 0x0030e170 */
+int __fastcall Kanibo__executeState_Wait(int a1);  /* 0x0030e4ac */
+int __fastcall Kanibo__endState_Wait(int result);  /* 0x0030e72c */
+int __fastcall Kanibo__beginState_RockUp(int a1);  /* 0x0030e73c */
+int __fastcall Kanibo__executeState_RockUp(int a1);  /* 0x0030e7a0 */
+int __fastcall Kanibo__endState_RockUp(_DWORD *a1);  /* 0x0030e968 */
+int __fastcall Kanibo__executeState_Jump(int a1);  /* 0x0030e9cc */
+int __fastcall Kanibo__beginState_BackMove(int a1);  /* 0x0030eb78 */
+int __fastcall Kanibo__executeState_BackMove(int a1);  /* 0x0030ec88 */
+int __fastcall Kanibo__onCreate(int a1);  /* 0x0030f220 */
+int __fastcall Kanibo__createModel(_DWORD *a1);  /* 0x0030f3c0 */
+int __fastcall Kanibo__updateModelMatrix(int a1);  /* 0x0030f544 */
+int __fastcall Kanibo__onExecute(int a1);  /* 0x0030f798 */
 int __fastcall sub_6030F9FC(int a1);  /* 0x0030f9fc */
+int __fastcall Kanibo__onDraw(int a1, int a2, int a3, int a4);  /* 0x0030fc38 */
+int __fastcall Kanibo__collisionPlayer(int a1, int a2, int a3);  /* 0x0030fc64 */
+int __fastcall Kanibo__collisionYoshi(float *a1, int a2, int a3);  /* 0x0030fcfc */
+int __fastcall Kanibo__vf184(int a1, int a2);  /* 0x0030fd54 */
+int __fastcall Kanibo__vfD0(int a1);  /* 0x0030fd8c */
+int __fastcall Kanibo__vfD4(int a1);  /* 0x0030fdf0 */
+int __fastcall Kanibo__vfDC(int a1);  /* 0x0030fe98 */
+int __fastcall Kanibo__setTamaAction(_DWORD *a1, int a2);  /* 0x0030feb0 */
+int __fastcall Kanibo__vf264(_DWORD *a1);  /* 0x00310008 */
+int __fastcall Kanibo__vf26C(int result);  /* 0x00310024 */
+int __fastcall Kanibo__vf268(_DWORD *a1);  /* 0x00310028 */
+int __fastcall Kanibo__beginState_DieFall(_DWORD *a1);  /* 0x00310044 */
+int __fastcall Kanibo__beginState_DieFumi(_DWORD *a1);  /* 0x003100cc */
+int __fastcall Kanibo__executeState_DieFall(int a1);  /* 0x00310158 */
+int __fastcall Kanibo__executeState_DieFumi(int a1);  /* 0x00310180 */
 int __fastcall sub_603101A4(int result, int a2, int a3);  /* 0x003101a4 */
+int __fastcall Kanibo__killAtGoal(float *a1);  /* 0x00310320 */
+int __fastcall Kanibo__splashWater(int a1, int *a2);  /* 0x00310370 */
+int __fastcall Kanibo__splashLava(int a1, int *a2);  /* 0x0031039c */
+int __fastcall Kanibo__splashPoison(int a1, int *a2);  /* 0x003103c8 */
+bool __fastcall Kanibo__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x003103f4 */
+int __fastcall Kanibo__dtor(Actor *a1);  /* 0x0031056c */
+int __fastcall Kanibo__vfE0(int a1);  /* 0x003105c0 */
 int __fastcall sub_603105CC(int a1);  /* 0x003105cc */
 int __fastcall sub_603105F4(int a1, int a2);  /* 0x003105f4 */
+int __fastcall KaniboTama__beginState_Unk1(int a1);  /* 0x00310718 */
+int __fastcall KaniboTama__beginState_Unk2(int a1);  /* 0x00310990 */
+int __fastcall KaniboTama__executeState_Unk2(int a1);  /* 0x00310a2c */
+int __fastcall KaniboTama__beginState_Unk3(int result);  /* 0x00310aac */
+int __fastcall KaniboTama__executeState_Unk3(int result);  /* 0x00310abc */
+int __fastcall KaniboTama__onCreate(int32x4_t *a1);  /* 0x00310b4c */
+int __fastcall KaniboTama__updateModel(int32x4_t *a1);  /* 0x00310cf4 */
+int __fastcall KaniboTama__onExecute(int32x4_t *a1);  /* 0x00310ec4 */
+int __fastcall KaniboTama__onDraw(int a1, int a2, int a3, int a4);  /* 0x00310f30 */
+int __fastcall KaniboTama__damageFromUnder(int a1);  /* 0x00310f6c */
+int __fastcall KaniboTama__sub_60310F74(int a1, int a2);  /* 0x00310f74 */
+int __fastcall KaniboTama__killAtGoal(int a1);  /* 0x003110e4 */
+int __fastcall KaniboTama__vf8C(int result);  /* 0x0031117c */
+int __fastcall KaniboTama__vf90(int result);  /* 0x0031119c */
 int __fastcall sub_60311598(int result, int a2);  /* 0x00311598 */
+int __fastcall KaniboTama__vf188(float *a1, int a2);  /* 0x003116ec */
+int __fastcall KaniboTama__vf190(float *a1, int a2);  /* 0x00311840 */
 int __fastcall sub_603119A0(int a1);  /* 0x003119a0 */
+bool __fastcall KaniboTama__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x003119ac */
+void __fastcall KaniboTama__dtor(_BYTE *a1);  /* 0x00311b24 */
+int __fastcall KaniboTama__vf94(int a1);  /* 0x00311c48 */
 int __fastcall DryBones_beginState_Walk(int a1);  /* 0x00312034 */
 int __fastcall DryBones_executeState_Walk(_BYTE *a1);  /* 0x0031215c */
 int __fastcall DryBones_beginState_Turn(int a1);  /* 0x003124f8 */
@@ -5725,16 +6041,41 @@ int __fastcall sub_603136DC(int a1);  /* 0x003136dc */
 int __fastcall sub_603139EC(int a1);  /* 0x003139ec */
 int __fastcall sub_60314424(int a1);  /* 0x00314424 */
 int __fastcall sub_6031467C(int a1, _DWORD *a2, int a3);  /* 0x0031467c */
+int __fastcall DryBones__onDraw(int a1);  /* 0x00314d30 */
+int __fastcall DryBones__vfE0(int a1);  /* 0x00314e44 */
 int __fastcall sub_60314EA0(int a1);  /* 0x00314ea0 */
 int __fastcall sub_60315140(int a1);  /* 0x00315140 */
 int __fastcall sub_603155DC(int a1);  /* 0x003155dc */
+int __fastcall DryBones__collisionEnemy(int a1);  /* 0x003158dc */
 int __fastcall sub_60315974(int a1, int a2, int a3);  /* 0x00315974 */
+int __fastcall DryBones__collisionPlayer(float *a1, int a2, int a3);  /* 0x00315b68 */
+int __fastcall DryBones__collisionYoshi(int a1, int a2, int a3);  /* 0x00315edc */
 int __fastcall sub_60316180(int a1, int a2, int a3, int a4);  /* 0x00316180 */
+int __fastcall DryBones__collisionGroundPound(_BYTE *a1, int a2, int a3);  /* 0x00316408 */
+int __fastcall DryBones__collisionGroundPoundYoshi(_BYTE *a1, int a2, int a3);  /* 0x00316454 */
+int __fastcall DryBones__collisionFireball(int a1, int a2, int a3);  /* 0x003164a0 */
+int __fastcall DryBones__collisionIceball(int a1);  /* 0x00316504 */
+int __fastcall DryBones__collisionPropellerDrill(_BYTE *a1, int a2, int a3);  /* 0x003165c8 */
+int __fastcall DryBones__collisionSlide(int a1, int a2, int a3);  /* 0x00316614 */
+int __fastcall DryBones__collisionThrowableObject(_DWORD *a1, int a2, int a3);  /* 0x003167c4 */
+int __fastcall DryBones__damageFromUnder(int a1);  /* 0x00316828 */
+int __fastcall DryBones__vf188(int a1, int a2);  /* 0x003169dc */
+int __fastcall DryBones__vf190(int a1, int a2);  /* 0x00316aa0 */
+int __fastcall DryBones__vf19C(int a1, int a2);  /* 0x00316b64 */
+int __fastcall DryBones__vfD0(int a1);  /* 0x00316c28 */
+unsigned int __fastcall DryBones__vfD4(int a1);  /* 0x00316d2c */
+int __fastcall DryBones__vfD8(int result);  /* 0x00316e0c */
 int __fastcall DryBones_checkCollapse(int a1);  /* 0x00316e28 */
 int __fastcall sub_60316F50(int a1);  /* 0x00316f50 */
 int __fastcall sub_603171E8(int a1);  /* 0x003171e8 */
+void __fastcall DryBones__addActiveColliders(int a1);  /* 0x0031755c */
+int __fastcall DryBones__removeActiveColliders(int a1);  /* 0x00317698 */
 int __fastcall sub_6031776C(int a1);  /* 0x0031776c */
+bool __fastcall DryBones__vf1A8(int a1);  /* 0x0031789c */
+int __fastcall DryBones__beginState_DieFall(int a1);  /* 0x00317a94 */
 int __fastcall sub_60317E28(int a1, int a2);  /* 0x00317e28 */
+bool __fastcall DryBones__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x00317e3c */
+void __fastcall DryBones__dtor(_BYTE *a1);  /* 0x00317fb4 */
 int __fastcall sub_603180E0(int a1);  /* 0x003180e0 */
 int __fastcall head_anim_ref(int a1);  /* 0x00318654 */
 int __fastcall sub_603188A0(_DWORD *a1);  /* 0x003188a0 */
@@ -6133,18 +6474,81 @@ int __fastcall sub_603390BC(_DWORD *a1);  /* 0x003390bc */
 int __fastcall sub_60339178(int a1);  /* 0x00339178 */
 int __fastcall sub_6033922C(int a1);  /* 0x0033922c */
 void __fastcall sub_6033934C(int a1);  /* 0x0033934c */
+int __fastcall Goomba__vf270(int a1);  /* 0x003393f0 */
+int __fastcall Goomba__vf274(_DWORD **a1);  /* 0x00339c98 */
+int __fastcall Goomba__vf278(int a1, int a2, int a3, int a4, int a5);  /* 0x00339cd4 */
+int __fastcall Goomba__onDelete(int a1);  /* 0x00339cf0 */
 int __fastcall sub_6033A26C(__int64 a1);  /* 0x0033a26c */
+int __fastcall Goomba__vf27C(unsigned int a1);  /* 0x0033a590 */
+int __fastcall Goomba__vf284(int result);  /* 0x0033a814 */
 int __fastcall sub_6033A830(int a1);  /* 0x0033a830 */
 int __fastcall sub_6033AA2C(int a1);  /* 0x0033aa2c */
+int __fastcall Goomba__collisionEnemy(int a1, int a2, int a3);  /* 0x0033ac8c */
+int __fastcall Goomba__collisionGroundPound(int a1, int a2, int a3);  /* 0x0033acec */
+int __fastcall Goomba__collisionPropellerDrill(int *a1, int a2, int a3);  /* 0x0033ad7c */
+int __fastcall Goomba__vf2EC(int a1);  /* 0x0033adf4 */
+int __fastcall Goomba__vfD0(int a1);  /* 0x0033b068 */
+int __fastcall Goomba__vfDC(int a1);  /* 0x0033b0cc */
+int __fastcall Goomba__vf29C(int a1, int a2);  /* 0x0033b28c */
+int __fastcall Goomba__vf2C4(int a1);  /* 0x0033b3a0 */
+int __fastcall Goomba__vf2C8(int a1);  /* 0x0033b3dc */
+bool __fastcall Goomba__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x0033b3e0 */
+void __fastcall GoombaBase__dtor(_BYTE *a1);  /* 0x0033b5cc */
+int __fastcall Goomba__dtor(_BYTE *a1);  /* 0x0033b64c */
+int __fastcall GoombaBase__damageFromUnder(int result);  /* 0x0033b6d0 */
+int __fastcall Goomba__vf8C(int result);  /* 0x0033b6e4 */
+int __fastcall Goomba__vf90(int result);  /* 0x0033b73c */
+int __fastcall Goomba__vf94(int a1);  /* 0x0033b780 */
+int __fastcall GoombaBase__vf294(int a1, int a2);  /* 0x0033b79c */
+int __fastcall GoombaBase__vf298(int a1, int a2);  /* 0x0033b7a0 */
+bool __fastcall Goomba__vf2A0(int a1);  /* 0x0033b7c4 */
+bool __fastcall Goomba__vf2A4(int a1);  /* 0x0033b810 */
+bool __fastcall Goomba__vf2A8(int a1);  /* 0x0033b830 */
+bool __fastcall Goomba__vf2E0(int a1);  /* 0x0033b878 */
+int __fastcall Goomba__vf2F8(int a1);  /* 0x0033b918 */
 int __fastcall sub_6033B95C(int a1);  /* 0x0033b95c */
 int __fastcall sub_6033B984(int a1, int a2);  /* 0x0033b984 */
 unsigned int __fastcall sub_6033BC60(int a1, _DWORD *a2);  /* 0x0033bc60 */
+int __fastcall GoombaBase__GoombaBase(int a1);  /* 0x0033bd20 */
+int __fastcall GoombaBase__onCreate(int a1);  /* 0x0033be80 */
+int __fastcall GoombaBase__onExecute(int a1);  /* 0x0033bfcc */
 int __fastcall sub_6033C38C(int a1);  /* 0x0033c38c */
 int __fastcall sub_6033C4A8(int a1);  /* 0x0033c4a8 */
+int __fastcall GoombaBase__onDraw(int a1);  /* 0x0033c790 */
+int __fastcall GoombaBase__vfE0(int a1);  /* 0x0033c7b0 */
+int __fastcall GoombaBase__collisionEnemy(int result, int a2, int a3);  /* 0x0033c7bc */
+int __fastcall GoombaBase__collisionPlayer(float *a1, int a2, int a3);  /* 0x0033c844 */
+int __fastcall GoombaBase__collisionYoshi(float *a1, int a2, int a3);  /* 0x0033c95c */
+void __fastcall GoombaBase__vfF4(int a1, int a2);  /* 0x0033cab0 */
+int __fastcall GoombaBase__collisionGroundPoundYoshi(_DWORD *a1, int a2, int a3);  /* 0x0033cb84 */
+int __fastcall GoombaBase__vf110(int a1);  /* 0x0033cca0 */
+int __fastcall GoombaBase__vf14C(int a1, int a2);  /* 0x0033ccac */
+int __fastcall GoombaBase__vf1AC(int a1, int a2);  /* 0x0033cd80 */
+int __fastcall GoombaBase__vf2DC(int a1);  /* 0x0033cdb4 */
+int __fastcall GoombaBase__vf28C(int a1, int a2);  /* 0x0033cf30 */
 int __fastcall sub_6033CF5C(int a1, int a2, int a3);  /* 0x0033cf5c */
 int __fastcall sub_6033D008(int a1, _DWORD *a2);  /* 0x0033d008 */
+int __fastcall GoombaBase__vf280(int a1);  /* 0x0033d584 */
+int __fastcall GoombaBase__vfC8(int a1, int a2, int a3);  /* 0x0033d62c */
+int __fastcall GoombaBase__splashLava(int a1, int *a2);  /* 0x0033d71c */
+int __fastcall GoombaBase__killAtGoal(float *a1);  /* 0x0033d7f4 */
+void __fastcall GoombaBase__addActiveColliders(int a1);  /* 0x0033d848 */
+int __fastcall GoombaBase__removeActiveColliders(int a1);  /* 0x0033d8ec */
+int __fastcall GoombaBase__vf2AC(_DWORD **a1);  /* 0x0033d960 */
+int __fastcall GoombaBase__vf2B0(int *a1);  /* 0x0033da0c */
+int __fastcall GoombaBase__vf2B8(int a1);  /* 0x0033db5c */
+int __fastcall GoombaBase__vf2BC(int *a1);  /* 0x0033dbb8 */
+int __fastcall GoombaBase__vf2C4(int result);  /* 0x0033dca0 */
+int __fastcall GoombaBase__vf2CC(int result);  /* 0x0033dce0 */
+int __fastcall GoombaBase__vf2C8(int a1);  /* 0x0033dcf0 */
+int __fastcall GoombaBase__vf2D0(_DWORD *a1);  /* 0x0033ded4 */
+int __fastcall GoombaBase__vf2D4(int a1);  /* 0x0033df00 */
+int __fastcall GoombaBase__vf1FC(int a1);  /* 0x0033e210 */
+int __fastcall GoombaBase__beginState_DieFall(int a1);  /* 0x0033e22c */
+int __fastcall GoombaBase__executeState_DieFall(int a1);  /* 0x0033e2bc */
 int __fastcall sub_6033E2D4(int a1, int a2);  /* 0x0033e2d4 */
 int __fastcall sub_6033E380(int a1, int a2, int a3);  /* 0x0033e380 */
+bool __fastcall GoombaBase__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x0033e3c4 */
 int __fastcall sub_6033E5FC(int a1);  /* 0x0033e5fc */
 int __fastcall LargeGoomba_vf156(_DWORD *a1);  /* 0x0033e66c */
 int __fastcall LargeGoomba_vf160(int a1);  /* 0x0033e7f4 */
@@ -6365,6 +6769,8 @@ int __fastcall SE_EMY_REV_KOURA_FALL_ref_2(int a1, int a2, float *a3);  /* 0x003
 int __fastcall sub_6034E314(int a1, float *a2);  /* 0x0034e314 */
 void __fastcall sub_6034E3F0(_BYTE *a1);  /* 0x0034e3f0 */
 int __fastcall sub_6034E4CC(_BYTE *a1);  /* 0x0034e4cc */
+int __fastcall ShellEnemy__vf94(int a1);  /* 0x0034e5ac */
+void __fastcall ShellEnemy__vf180(_BYTE *a1, int a2);  /* 0x0034e5c0 */
 int __fastcall sub_6034E5FC(int a1);  /* 0x0034e5fc */
 int __fastcall sub_6034E614(int a1);  /* 0x0034e614 */
 int __fastcall sub_6034E824(int a1);  /* 0x0034e824 */
@@ -6626,8 +7032,27 @@ int __fastcall wing_kuri_ref(_DWORD *a1);  /* 0x00362b90 */
 int __fastcall sub_60362CF4(int a1);  /* 0x00362cf4 */
 int __fastcall sub_60362E68(int result);  /* 0x00362e68 */
 int __fastcall sub_60362EB4(int a1);  /* 0x00362eb4 */
+int __fastcall ParaGoomba__vf270(int a1);  /* 0x00362f2c */
 int __fastcall sub_60363110(int a1);  /* 0x00363110 */
 int __fastcall sub_60363230(int a1);  /* 0x00363230 */
+int __fastcall ParaGoomba__vf274(int a1);  /* 0x00363790 */
+int __fastcall ParaGoomba__vf278(int a1, int a2, int a3, int a4, int a5);  /* 0x00363794 */
+int __fastcall ParaGoomba__vf27C(int a1);  /* 0x003637e8 */
+int __fastcall ParaGoomba__vf280(int a1);  /* 0x003638c4 */
+int __fastcall ParaGoomba__vf28C(unsigned __int8 *a1, int a2);  /* 0x003639b0 */
+int __fastcall ParaGoomba__vf294(int a1, int a2);  /* 0x00363a3c */
+int __fastcall ParaGoomba__vf298(int a1, int a2);  /* 0x00363a80 */
+int __fastcall ParaGoomba__collisionIceball(int a1, int a2, int a3);  /* 0x00363adc */
+int __fastcall ParaGoomba__collisionGroundPound(int a1, int a2, int a3);  /* 0x00363b68 */
+int __fastcall ParaGoomba__collisionPropellerDrill(int a1, int a2, int a3);  /* 0x00363bb4 */
+int __fastcall ParaGoomba__collisionGroundPoundYoshi(int a1, int a2, int a3);  /* 0x00363c00 */
+int __fastcall ParaGoomba__vfD0(int a1);  /* 0x00363c4c */
+int __fastcall ParaGoomba__vfDC(int a1);  /* 0x00363d00 */
+int __fastcall ParaGoomba__vf284(int result);  /* 0x00363e6c */
+int __fastcall ParaGoomba__vf2EC(_BYTE *a1);  /* 0x00363e94 */
+bool __fastcall ParaGoomba__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x00364020 */
+int __fastcall ParaGoomba__dtor(_BYTE *a1);  /* 0x0036420c */
+int __fastcall ParaGoomba__vf2F8(int a1);  /* 0x00364290 */
 int __fastcall Actor_gurupupatapata_build(_DWORD *a1);  /* 0x003642ac */
 int __fastcall sub_60364320(int a1);  /* 0x00364320 */
 int __fastcall sub_6036446C(int a1);  /* 0x0036446c */
@@ -6711,6 +7136,7 @@ bool __fastcall sub_6036B4D0(int a1, int a2);  /* 0x0036b4d0 */
 void __fastcall sub_6036B648(_BYTE *a1);  /* 0x0036b648 */
 int __fastcall sub_6036B6F4(_BYTE *a1);  /* 0x0036b6f4 */
 int __fastcall sub_6036B7AC(int a1);  /* 0x0036b7ac */
+int __fastcall CooliganSunglasses__CooliganSunglasses(int a1);  /* 0x0036b7e0 */
 int __fastcall penguin_glasses_ref(int *a1);  /* 0x0036b894 */
 int __fastcall sub_6036B9FC(int a1);  /* 0x0036b9fc */
 int __fastcall sub_6036BA4C(int a1);  /* 0x0036ba4c */
@@ -6909,6 +7335,7 @@ int __fastcall sub_603797F8(int result);  /* 0x003797f8 */
 int __fastcall sub_60379890(int a1, int a2, int a3);  /* 0x00379890 */
 int __fastcall sub_60379998(int a1);  /* 0x00379998 */
 int __fastcall sub_60379A50(unsigned int *a1, float *a2, int (__fastcall *a3)(int));  /* 0x00379a50 */
+int __fastcall SpinyUpsideDown__SpinyUpsideDown(_DWORD *a1);  /* 0x00379bdc */
 int __fastcall sub_60379C1C(int a1);  /* 0x00379c1c */
 unsigned int __fastcall sub_60379E48(int a1);  /* 0x00379e48 */
 unsigned int __fastcall sub_6037A010(int a1, unsigned int a2);  /* 0x0037a010 */
@@ -6919,7 +7346,9 @@ int __fastcall sub_6037A3CC(int a1);  /* 0x0037a3cc */
 int __fastcall sub_6037A494(int a1);  /* 0x0037a494 */
 int __fastcall sub_6037A4C4(int a1);  /* 0x0037a4c4 */
 bool __fastcall sub_6037A50C(int a1, int a2);  /* 0x0037a50c */
+void __fastcall ShellEnemy__dtor(_BYTE *a1);  /* 0x0037a610 */
 int __fastcall sub_6037A6BC(_BYTE *a1);  /* 0x0037a6bc */
+bool __fastcall ShellEnemy__vf58(int a1);  /* 0x0037a76c */
 bool __fastcall sub_6037A7D8(int a1);  /* 0x0037a7d8 */
 bool __fastcall sub_6037A800(int a1);  /* 0x0037a800 */
 int __fastcall sub_6037A9F4(int a1);  /* 0x0037a9f4 */
@@ -7015,20 +7444,45 @@ int __fastcall sub_6038032C(int a1);  /* 0x0038032c */
 int __fastcall sub_60380A04(int a1);  /* 0x00380a04 */
 int __fastcall sub_60380F6C(int a1);  /* 0x00380f6c */
 int __fastcall sub_603812B4(int a1);  /* 0x003812b4 */
+int __fastcall Pokey__onDraw(int a1);  /* 0x003813f8 */
+int __fastcall Pokey__onDelete(_DWORD *a1);  /* 0x0038146c */
+int __fastcall Pokey__vfE4(int a1);  /* 0x00381694 */
+int __fastcall Pokey__vf8C(int result);  /* 0x003816a0 */
+int __fastcall Pokey__vf90(int result);  /* 0x003816b0 */
+int __fastcall Pokey__removeActiveColliders(int a1);  /* 0x003816c0 */
+void __fastcall Pokey__addActiveColliders(int a1);  /* 0x00381740 */
+int __fastcall Pokey__killAtGoal(int result);  /* 0x003817d4 */
+int __fastcall Pokey__vfA8(int a1, float *a2, int a3, int a4);  /* 0x00381814 */
 int __fastcall sub_60381950(int a1, int a2);  /* 0x00381950 */
 int __fastcall sub_60381BAC(unsigned int *a1, int a2, unsigned int a3);  /* 0x00381bac */
 int __fastcall sub_60381D18(int a1, int a2, unsigned int a3);  /* 0x00381d18 */
 unsigned int __fastcall sub_60381F48(int a1, unsigned int a2);  /* 0x00381f48 */
 int __fastcall sub_603823D4(int a1, int a2);  /* 0x003823d4 */
+int __fastcall Pokey__damageFromUnder(int a1);  /* 0x00382680 */
+int __fastcall Pokey__collisionStar(int a1, int a2, _DWORD *a3);  /* 0x00382744 */
+int __fastcall Pokey__vf154(_DWORD *a1, int a2, _DWORD *a3);  /* 0x00382924 */
+int __fastcall Pokey__collisionPenguinSlide(int a1, int a2, int a3);  /* 0x00382ab4 */
+int __fastcall Pokey__collisionThrowableObject(_DWORD *a1, int a2, _DWORD *a3);  /* 0x00382b8c */
+int __fastcall Pokey__collisionFireballYoshi(int a1, int a2, _DWORD *a3);  /* 0x00382ef4 */
+int __fastcall Pokey__vf14C(_DWORD *a1, int a2, int a3);  /* 0x00383010 */
+int __fastcall Pokey__vfF4(int a1, int a2, int a3);  /* 0x003830c4 */
+int __fastcall Pokey__collisionFireball(unsigned int *a1, int a2, int a3);  /* 0x003832f4 */
+int __fastcall Pokey__collisionIceball(int a1, int a2, int a3);  /* 0x00383520 */
+int __fastcall Pokey__collisionEnemy(int a1, int a2, int a3);  /* 0x003836a0 */
+int __fastcall Pokey__collisionYoshi(int a1, int a2, int a3);  /* 0x00383814 */
+bool __fastcall Pokey__vfF8(int a1, int a2, int a3);  /* 0x00383978 */
 bool __fastcall sub_6038397C(int a1);  /* 0x0038397c */
 int __fastcall sub_60383BAC(int a1, int a2);  /* 0x00383bac */
 int __fastcall sub_60383EAC(int a1, int a2);  /* 0x00383eac */
+bool __fastcall Pokey__isOnGround(int a1);  /* 0x00384198 */
 int __fastcall sub_603841C8(_DWORD *a1, int (__fastcall ***a2)(_DWORD, int));  /* 0x003841c8 */
 int __fastcall sub_60384458(int a1, int a2);  /* 0x00384458 */
 int __fastcall sub_603844D8(int a1, int a2);  /* 0x003844d8 */
 int __fastcall sub_603845B8(int a1, int (__fastcall ***a2)(_DWORD, int));  /* 0x003845b8 */
 int __fastcall sub_603846A0(int a1, int a2);  /* 0x003846a0 */
 int __fastcall sub_60384770(int a1, int a2, int a3);  /* 0x00384770 */
+bool __fastcall Pokey__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x003848c8 */
+void __fastcall Pokey__dtor(_BYTE *a1);  /* 0x00384a40 */
 int __fastcall sub_60385010(_DWORD *a1);  /* 0x00385010 */
 int __fastcall sub_6038511C(int a1);  /* 0x0038511c */
 int __fastcall sub_603852CC(int a1);  /* 0x003852cc */
@@ -7294,30 +7748,80 @@ int __fastcall sub_6039EDB8(int a1);  /* 0x0039edb8 */
 int __fastcall sub_6039EDF4(_DWORD *a1, int a2);  /* 0x0039edf4 */
 bool __fastcall sub_6039EE7C(int a1, int a2);  /* 0x0039ee7c */
 int __fastcall sub_6039EEA4(int result, int a2, int a3);  /* 0x0039eea4 */
+int __fastcall ShellEnemy__ShellEnemy(int a1, int a2, int a3, char a4, char a5);  /* 0x0039ef44 */
+void __fastcall ShellEnemy__afterCreate(_BYTE *a1, int a2);  /* 0x0039f2a8 */
 int __fastcall sub_6039F328(int a1, int a2);  /* 0x0039f328 */
+int __fastcall ShellEnemy__beforeExecute(int a1);  /* 0x0039f350 */
+int __fastcall ShellEnemy__afterExecute(_BYTE *a1, unsigned int a2);  /* 0x0039f4a8 */
 bool __fastcall sub_6039F5FC(int a1);  /* 0x0039f5fc */
 int __fastcall sub_6039F6E0(int a1);  /* 0x0039f6e0 */
 int __fastcall sub_6039FB38(int a1, float *a2);  /* 0x0039fb38 */
+int __fastcall ShellEnemy__vf100(_DWORD *a1, int a2, int a3);  /* 0x0039fe58 */
+int __fastcall ShellEnemy__collisionPlayer(int a1, int a2, int a3);  /* 0x0039ff68 */
 int __fastcall sub_603A009C(float *a1, int a2, int a3);  /* 0x003a009c */
 int __fastcall sub_603A037C(int a1, int a2, int a3);  /* 0x003a037c */
 int __fastcall sub_603A047C(int a1, int a2, int a3);  /* 0x003a047c */
+int __fastcall ShellEnemy__vf2C0(int a1);  /* 0x003a0558 */
 int __fastcall sub_603A06B0(int a1, int *a2, int a3, int a4, int a5, int a6);  /* 0x003a06b0 */
 bool __fastcall sub_603A0780(int a1, float *a2);  /* 0x003a0780 */
 int __fastcall sub_603A08E4(int a1, int a2, int a3, int a4);  /* 0x003a08e4 */
+int __fastcall ShellEnemy__collisionEnemy(int a1, int a2, int a3);  /* 0x003a0c74 */
 int __fastcall sub_603A0E5C(int a1, int a2);  /* 0x003a0e5c */
+int __fastcall ShellEnemy__collisionGroundPound(int a1, int a2, int a3);  /* 0x003a1250 */
 int __fastcall sub_603A126C(int a1, int a2);  /* 0x003a126c */
+int __fastcall ShellEnemy__collisionPropellerDrill(int a1, int a2, int a3);  /* 0x003a1344 */
+int __fastcall ShellEnemy__collisionGroundPoundYoshi(_DWORD *a1, int a2, int a3);  /* 0x003a1360 */
+int __fastcall ShellEnemy__collisionThrowableObject(int a1, int a2, int a3);  /* 0x003a1364 */
+int __fastcall ShellEnemy__vf174(int a1, _DWORD *a2);  /* 0x003a1460 */
+void __fastcall ShellEnemy__vf178(_BYTE *a1, int a2);  /* 0x003a1580 */
+int __fastcall ShellEnemy__vf188(int a1, int a2);  /* 0x003a15c8 */
+int __fastcall ShellEnemy__damageFromUnder(_DWORD *a1);  /* 0x003a174c */
 int __fastcall sub_603A1830(int a1, int a2, _DWORD *a3, int a4, int a5);  /* 0x003a1830 */
+int __fastcall ShellEnemy__vfD4(int result);  /* 0x003a1c38 */
+int __fastcall ShellEnemy__vfDC(int a1);  /* 0x003a1c9c */
 int __fastcall sub_603A1E88(int a1, int a2);  /* 0x003a1e88 */
+int __fastcall ShellEnemy__vf28C(int a1);  /* 0x003a1f30 */
+int __fastcall ShellEnemy__vf290(int a1, int a2, int a3);  /* 0x003a1fec */
 int __fastcall sub_603A2194(int a1);  /* 0x003a2194 */
 int __fastcall sub_603A21FC(int result, int a2, int a3);  /* 0x003a21fc */
+int __fastcall ShellEnemy__vf2E4(int a1);  /* 0x003a227c */
+int __fastcall ShellEnemy__vf2D8(int a1);  /* 0x003a2284 */
+int __fastcall ShellEnemy__vf54(int result, int a2, __int16 a3);  /* 0x003a240c */
 int __fastcall sub_603A2430(int a1, int a2, int a3, int a4);  /* 0x003a2430 */
 bool __fastcall sub_603A24A8(int a1, int a2, int a3);  /* 0x003a24a8 */
+int __fastcall ShellEnemy__vf150(int a1);  /* 0x003a2500 */
+int __fastcall ShellEnemy__collisionSlide(int a1, int a2, int a3);  /* 0x003a2630 */
+int __fastcall ShellEnemy__collisionPenguinSlide(int a1, int a2, int a3);  /* 0x003a272c */
+int __fastcall ShellEnemy__vf2C4(int a1, int a2, float *a3);  /* 0x003a280c */
 int __fastcall sub_603A2A60(int a1, int a2);  /* 0x003a2a60 */
 int __fastcall sub_603A2CA0(int a1, int a2, int a3);  /* 0x003a2ca0 */
 int __fastcall sub_603A2F54(int a1);  /* 0x003a2f54 */
 int __fastcall sub_603A2F84(int result);  /* 0x003a2f84 */
+int __fastcall ShellEnemy__vf2A0(int a1);  /* 0x003a2fb8 */
+int __fastcall ShellEnemy__vf2A8(int a1);  /* 0x003a3070 */
+int __fastcall ShellEnemy__vf2A4(int a1);  /* 0x003a30b0 */
 int __fastcall sub_603A338C(int a1);  /* 0x003a338c */
+int __fastcall ShellEnemy__vf294(int a1);  /* 0x003a3540 */
+int __fastcall ShellEnemy__vf29C(int a1);  /* 0x003a35fc */
+int __fastcall ShellEnemy__vf298(int a1);  /* 0x003a3618 */
+int __fastcall ShellEnemy__vf314(int a1);  /* 0x003a3a80 */
+int __fastcall ShellEnemy__vf31C(int a1);  /* 0x003a3f8c */
+int __fastcall ShellEnemy__vf320(int a1);  /* 0x003a3fe8 */
+int __fastcall ShellEnemy__vf328(_DWORD *a1);  /* 0x003a40e4 */
+int __fastcall ShellEnemy__vf32C(int a1);  /* 0x003a4110 */
+int __fastcall ShellEnemy__vf334(int result);  /* 0x003a4218 */
+int __fastcall ShellEnemy__vf338(int a1);  /* 0x003a4274 */
+int __fastcall ShellEnemy__beginState_DieFall(int a1);  /* 0x003a4378 */
+int __fastcall ShellEnemy__executeState_DieFall(int a1);  /* 0x003a44b4 */
+int __fastcall ShellEnemy__vf2BC(int a1, int a2);  /* 0x003a455c */
 int __fastcall sub_603A4974(int a1, int a2);  /* 0x003a4974 */
+int __fastcall ShellEnemy__vf8C(int a1);  /* 0x003a4dd4 */
+int __fastcall ShellEnemy__vf90(_BYTE *a1);  /* 0x003a4f60 */
+int __fastcall ShellEnemy__vf2EC(int a1, int a2);  /* 0x003a4f8c */
+int __fastcall ShellEnemy__vf300(int a1, int a2);  /* 0x003a4fa0 */
+int __fastcall ShellEnemy__killAtGoal(int a1);  /* 0x003a4fb4 */
+int __fastcall ShellEnemy__vfC4(int a1);  /* 0x003a4ff8 */
+bool __fastcall ShellEnemy__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x003a5104 */
 int __fastcall sub_603A53B4(int a1);  /* 0x003a53b4 */
 int __fastcall sub_603A5930(int a1, int a2, int a3);  /* 0x003a5930 */
 unsigned int __fastcall sub_603A5B40(int a1, int a2);  /* 0x003a5b40 */
@@ -7578,6 +8082,7 @@ int __fastcall sub_603BC9C4(int result);  /* 0x003bc9c4 */
 int __fastcall sub_603BC9D0(int a1);  /* 0x003bc9d0 */
 int __fastcall sub_603BCAD8(int a1);  /* 0x003bcad8 */
 int __fastcall sub_603BCB94(_DWORD *a1);  /* 0x003bcb94 */
+int __fastcall SpinyBase__SpinyBase(int a1, _DWORD *a2);  /* 0x003bd010 */
 int __fastcall sub_603BD3B8(_DWORD *a1);  /* 0x003bd3b8 */
 int __fastcall sub_603BD508(int a1);  /* 0x003bd508 */
 int __fastcall sub_603BD52C(int a1);  /* 0x003bd52c */
@@ -7946,6 +8451,7 @@ bool __fastcall sub_603DCEDC(int a1, int a2);  /* 0x003dcedc */
 int __fastcall sub_603DD054(int a1);  /* 0x003dd054 */
 int __fastcall sub_603DD0A8(int a1, int a2);  /* 0x003dd0a8 */
 int __fastcall sub_603DD360(int a1, int a2);  /* 0x003dd360 */
+int __fastcall RiverPiranha__vf270(int a1);  /* 0x003dd37c */
 int __fastcall sub_603DD498(int32x4_t *a1);  /* 0x003dd498 */
 int __fastcall sub_603DD59C(unsigned int *a1);  /* 0x003dd59c */
 int __fastcall sub_603DD9F0(int32x4_t *a1);  /* 0x003dd9f0 */
@@ -7957,9 +8463,25 @@ int __fastcall sub_603DE108(_DWORD *a1);  /* 0x003de108 */
 int __fastcall sub_603DE11C(unsigned int *a1);  /* 0x003de11c */
 int __fastcall sub_603DE378(_DWORD *a1);  /* 0x003de378 */
 int __fastcall sub_603DE398(int32x4_t *a1);  /* 0x003de398 */
+int __fastcall RiverPiranha__onCreate(int a1);  /* 0x003de3d4 */
 int __fastcall sub_603DE84C(int a1);  /* 0x003de84c */
+int __fastcall RiverPiranha__onExecute(int a1);  /* 0x003deb84 */
+int __fastcall RiverPiranha__onDraw(int a1, int a2, int a3, int a4);  /* 0x003df25c */
+int __fastcall RiverPiranha__collisionGroundPoundYoshi(float *a1, int a2, int a3);  /* 0x003df290 */
+int __fastcall RiverPiranha__collisionIceball(int a1, int a2, int a3);  /* 0x003df374 */
+int __fastcall RiverPiranha__vfD0(int a1);  /* 0x003df394 */
+int __fastcall RiverPiranha__vfDC(int a1);  /* 0x003df400 */
 int __fastcall sub_603DF4C4(int32x4_t *a1, int (__fastcall ***a2)(_DWORD, int));  /* 0x003df4c4 */
 int __fastcall sub_603DF65C(_DWORD *a1, int a2);  /* 0x003df65c */
+int __fastcall RiverPiranha__beginState_DieFall(int a1);  /* 0x003dfb28 */
+int __fastcall RiverPiranha__executeState_DieFall(int result);  /* 0x003dfc20 */
+int __fastcall RiverPiranha__collisionYoshi(float *a1, int a2, int a3);  /* 0x003dfca0 */
+int __fastcall RiverPiranha__collisionPenguinSlide(int a1, int a2, int a3);  /* 0x003dfcd4 */
+int __fastcall RiverPiranha__killAtGoal(int a1);  /* 0x003dfd9c */
+bool __fastcall RiverPiranha__checkDerivedRuntimeTypeInfo(int a1, int a2);  /* 0x003dfe38 */
+void __fastcall RiverPiranha__dtor(_BYTE *a1);  /* 0x003dffb0 */
+int __fastcall RiverPiranha__removeActiveColliders(int a1);  /* 0x003e0124 */
+void __fastcall RiverPiranha__addActiveColliders(int a1);  /* 0x003e0198 */
 int __fastcall sub_603E0264(int a1);  /* 0x003e0264 */
 int __fastcall sub_603E03B4(int a1);  /* 0x003e03b4 */
 int __fastcall SE_EMY_WOOCHAN_MOGURU_LAST_ref(int a1);  /* 0x003e0504 */
@@ -8961,6 +9483,8 @@ int __fastcall sub_60423A84(struct sead_IDisposer *a1);  /* 0x00423a84 */
 int __fastcall sub_60423AC8(int a1, int a2);  /* 0x00423ac8 */
 int __fastcall sub_60423AD8(struct sead_IDisposer *a1);  /* 0x00423ad8 */
 int __fastcall sub_60423B1C(struct sead_IDisposer *a1);  /* 0x00423b1c */
+int __fastcall LightSource__LightSource(int a1);  /* 0x00423bec */
+int __fastcall LightSource__dtor(struct sead_IDisposer *a1);  /* 0x00423ca0 */
 int __fastcall BigBoo_onCreate_helper_423EBC(int a1, int a2);  /* 0x00423ebc */
 bool __fastcall LightSource_unkUpdate3(int a1);  /* 0x00423ecc */
 int __fastcall sub_60423F0C(int a1);  /* 0x00423f0c */

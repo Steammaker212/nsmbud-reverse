@@ -64,5 +64,5 @@ int __fastcall sub_600DAB98(int a1);
 /* line: 41, address: 0x600dacb0 */     *(float *)&v11[1] = *(float *)&v10[7] + -4.0;
 /* line: 42, address: 0x600dacb4 */     EffectData_create(759, v11, 0, 0);
 /* line: 43 */   }
-/* line: 44, address: 0x600dacc4 */   return KoopalingBase::vf670((KoopalingBase *)a1);
+/* line: 44, address: 0x600dacc4 */   return KoopalingBase__vf670((KoopalingBase *)a1);
 /* line: 45 */ }

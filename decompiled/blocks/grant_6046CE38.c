@@ -47,7 +47,7 @@ int __fastcall sub_6046CE38(int a1);
 /* line: 24, address: 0x6046ce78 */         v2 = *(float *)(a1 + 136);
 /* line: 25 */     }
 /* line: 26, address: 0x6046cea0 */     *(float *)(a1 + 124) = v2;
-/* line: 27, address: 0x6046cea4 */     CollisionActor::handleSpeed((CollisionActor *)a1);
+/* line: 27, address: 0x6046cea4 */     CollisionActor__handleSpeed((CollisionActor *)a1);
 /* line: 28 */   }
 /* line: 29, address: 0x6046ceac */   sub_6046313C(a1);
 /* line: 30, address: 0x6046ceb4 */   sub_60463584(a1);

@@ -57,9 +57,9 @@ int __fastcall sub_60139988(int a1, _DWORD *a2);
 /* line: 34, address: 0x60139a54 */       switch ( *(_BYTE *)(v4 + 533) )
 /* line: 35 */       {
 /* line: 36, address: 0x60139a54 */         case 0:
-/* line: 37, address: 0x60139a84 */           if ( Actor::getProfileId((Actor *)v4) == MEMORY[0xAF3490] )
+/* line: 37, address: 0x60139a84 */           if ( Actor__getProfileId((Actor *)v4) == MEMORY[0xAF3490] )
 /* line: 38, address: 0x60139a84 */             goto LABEL_35;
-/* line: 39, address: 0x60139a8c */           result = Actor::getProfileId((Actor *)v4);
+/* line: 39, address: 0x60139a8c */           result = Actor__getProfileId((Actor *)v4);
 /* line: 40, address: 0x60139aa0 */           if ( result == MEMORY[0xAF34A0] )
 /* line: 41, address: 0x60139aa0 */             goto LABEL_35;
 /* line: 42, address: 0x60139aa0 */           break;

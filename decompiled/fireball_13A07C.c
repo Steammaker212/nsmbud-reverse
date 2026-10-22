@@ -27,7 +27,7 @@ int __fastcall sub_6013A07C(int a1);
 /* line: 4 */   int result; // r0
 /* line: 5 */ 
 /* line: 6, address: 0x6013a08c */   v2 = a1 + 188;
-/* line: 7, address: 0x6013a09c */   ActiveCollider::init(a1 + 188, a1, (int *)0xBD28C0, 0);
+/* line: 7, address: 0x6013a09c */   ActiveCollider__init(a1 + 188, a1, (int *)0xBD28C0, 0);
 /* line: 8, address: 0x6013a0ac */   v3 = MEMORY[0xC88234];
 /* line: 9, address: 0x6013a0c8 */   if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], v2) && !ActiveColliderMgr_isInCreateList(v3, v2) )
 /* line: 10, address: 0x6013a0dc */     ActiveColliderMgr_addToCreateList(v3, v2);

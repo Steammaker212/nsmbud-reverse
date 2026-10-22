@@ -143,7 +143,7 @@ int __fastcall sub_607AAA00(int a1)
     }
     if ( (*(_BYTE *)(a1 + 1207) & 0x40) == 0 || (*(_BYTE *)(a1 + 6905) & 0x80) == 0 || (v2 = 0, !sub_60763E28(a1)) )
     {
-      CurrentState = StateMgr::getCurrentState(a1 + 9916);
+      CurrentState = StateMgr__getCurrentState(a1 + 9916);
       v9 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
       if ( v9 == (*(int (**)(void))(MEMORY[0xCC4BE0] + 8))() )
       {
@@ -242,7 +242,7 @@ LABEL_15:
         sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_THROW_ICEBALL", 0, 0);
         v10 = 11482256;
 LABEL_25:
-        v32[3] = Profile::get(*(_DWORD *)v10);
+        v32[3] = Profile__get(*(_DWORD *)v10);
         v32[7] = sub_608336A8(*(_DWORD *)(a1 + 12048));
         v32[0] = ((*(_BYTE *)(a1 + 87) & 0xF) << 12)
                | (a2 << 16)

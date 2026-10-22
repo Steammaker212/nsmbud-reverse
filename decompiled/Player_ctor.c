@@ -42,7 +42,7 @@ int __fastcall Player_ctor(int a1, int a2);
 /* line: 19, address: 0x60794f60 */   *(_DWORD *)(a1 + 11480) = 0;
 /* line: 20, address: 0x60794f68 */   *(_DWORD *)(a1 + 11484) = 1;
 /* line: 21, address: 0x60794f74 */   sub_60021018(a1 + 11488);
-/* line: 22, address: 0x60794f80 */   LightSource::LightSource((LightSource *)(a1 + 11868));
+/* line: 22, address: 0x60794f80 */   LightSource__LightSource((LightSource *)(a1 + 11868));
 /* line: 23, address: 0x60794f88 */   *(_DWORD *)(a1 + 11940) = 0;
 /* line: 24, address: 0x60794f90 */   *(_DWORD *)(a1 + 11944) = 0;
 /* line: 25, address: 0x60794f98 */   *(_BYTE *)(a1 + 11948) = 0;

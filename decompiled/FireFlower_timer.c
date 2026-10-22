@@ -33,12 +33,12 @@ int __fastcall sub_60461904(int a1);
 /* line: 10 */   __int16 v10; // r0
 /* line: 11 */ 
 /* line: 12, address: 0x60461910 */   v2 = (StateMgr *)(a1 + 6084);
-/* line: 13, address: 0x60461918 */   CurrentState = StateMgr::getCurrentState((StateMgr *)(a1 + 6084));
+/* line: 13, address: 0x60461918 */   CurrentState = StateMgr__getCurrentState((StateMgr *)(a1 + 6084));
 /* line: 14, address: 0x60461928 */   v4 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
 /* line: 15, address: 0x6046193c */   result = (*(int (**)(void))(MEMORY[0xC9D2B8] + 8))();
 /* line: 16, address: 0x60461944 */   if ( v4 != result )
 /* line: 17 */   {
-/* line: 18, address: 0x6046194c */     v6 = StateMgr::getCurrentState(v2);
+/* line: 18, address: 0x6046194c */     v6 = StateMgr__getCurrentState(v2);
 /* line: 19, address: 0x6046195c */     v7 = (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 8))(v6);
 /* line: 20, address: 0x60461970 */     result = (*(int (**)(void))(MEMORY[0xC9D2D8] + 8))();
 /* line: 21, address: 0x60461978 */     if ( v7 != result )

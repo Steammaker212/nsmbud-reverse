@@ -84,7 +84,7 @@ void __fastcall sub_607AABA0(int a1, int a2);
 /* line: 61, address: 0x607aac84 */         sub_607734E8(a1, "SE_PLY_THROW_ICEBALL", 0, 0);
 /* line: 62, address: 0x607aac8c */         v10 = 11482256;
 /* line: 63 */ LABEL_25:
-/* line: 64, address: 0x607aad18 */         v32[3] = Profile::get(*(_DWORD *)v10);
+/* line: 64, address: 0x607aad18 */         v32[3] = Profile__get(*(_DWORD *)v10);
 /* line: 65, address: 0x607aad34 */         v32[7] = sub_608336A8(*(_DWORD *)(a1 + 12048));
 /* line: 66, address: 0x607aad90 */         v32[0] = ((*(_BYTE *)(a1 + 87) & 0xF) << 12)
 /* line: 67 */                | (a2 << 16)

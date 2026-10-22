@@ -33,12 +33,12 @@ int __fastcall sub_6037856C(CollisionActor *a1);
 /* line: 10 */   int v11; // [sp+34h] [bp-Ch] BYREF
 /* line: 11 */   int v12; // [sp+38h] [bp-8h] BYREF
 /* line: 12 */ 
-/* line: 13, address: 0x60378580 */   StateMgr::execute((_DWORD *)a1 + 1521);
+/* line: 13, address: 0x60378580 */   StateMgr__execute((_DWORD *)a1 + 1521);
 /* line: 14, address: 0x6037859c */   (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(*((_DWORD *)a1 + 1525) + 4) + 148))(*(_DWORD *)(*((_DWORD *)a1 + 1525)
 /* line: 15 */                                                                                                + 4));
-/* line: 16, address: 0x603785a4 */   CollisionActor::handleGravity(a1);
-/* line: 17, address: 0x603785ac */   CollisionActor::handleSpeed(a1);
-/* line: 18, address: 0x603785b4 */   CollisionActor::sub_600034C8(a1);
+/* line: 16, address: 0x603785a4 */   CollisionActor__handleGravity(a1);
+/* line: 17, address: 0x603785ac */   CollisionActor__handleSpeed(a1);
+/* line: 18, address: 0x603785b4 */   CollisionActor__sub_600034C8(a1);
 /* line: 19, address: 0x603785b8 */   v2 = *((_DWORD *)a1 + 28);
 /* line: 20, address: 0x603785bc */   v3 = *((_DWORD *)a1 + 29);
 /* line: 21, address: 0x603785c0 */   v4 = *((_DWORD *)a1 + 27);

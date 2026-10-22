@@ -32,7 +32,7 @@ _BYTE * __fastcall HammerBros_createHammer(_DWORD *a1);
 /* line: 12, address: 0x602cc264 */   v5 = a1[20];
 /* line: 13, address: 0x602cc280 */   memset(&v10[1], 0, 0x28u);
 /* line: 14, address: 0x602cc288 */   v10[0] = v5 | 0xA0000;
-/* line: 15, address: 0x602cc29c */   v10[3] = Profile::get(MEMORY[0xAF3904]);
+/* line: 15, address: 0x602cc29c */   v10[3] = Profile__get(MEMORY[0xAF3904]);
 /* line: 16, address: 0x602cc2a0 */   v10[4] = v1;
 /* line: 17, address: 0x602cc2a4 */   v10[5] = v2;
 /* line: 18, address: 0x602cc2a8 */   v10[6] = v3;
@@ -40,7 +40,7 @@ _BYTE * __fastcall HammerBros_createHammer(_DWORD *a1);
 /* line: 20, address: 0x602cc2b8 */   v7 = 0;
 /* line: 21, address: 0x602cc2bc */   v10[7] = v6;
 /* line: 22, address: 0x602cc2c4 */   LOBYTE(v10[8]) = 0;
-/* line: 23, address: 0x602cc2d4 */   v8 = ActorMgr::create(MEMORY[0xC7B400], (int)v10, 0);
+/* line: 23, address: 0x602cc2d4 */   v8 = ActorMgr__create(MEMORY[0xC7B400], (int)v10, 0);
 /* line: 24, address: 0x602cc2f4 */   if ( _cxa_guard_acquire_0(13087588) )
 /* line: 25 */   {
 /* line: 26, address: 0x602cc314 */     MEMORY[0xC7B360] = 12320920;

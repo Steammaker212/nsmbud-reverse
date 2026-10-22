@@ -31,7 +31,7 @@ int __fastcall sub_601DBA74(_DWORD *a1);
 /* line: 8 */   _DWORD v9[12]; // [sp+10h] [bp-30h] BYREF
 /* line: 9 */ 
 /* line: 10, address: 0x601dba80 */   sub_601861EC(a1);
-/* line: 11, address: 0x601dba88 */   StateMgr::execute(a1 + 74);
+/* line: 11, address: 0x601dba88 */   StateMgr__execute(a1 + 74);
 /* line: 12, address: 0x601dba9c */   if ( sub_60235E50(a1 + 112) == 1 )
 /* line: 13 */   {
 /* line: 14, address: 0x601dbaa8 */     v2 = a1[21];

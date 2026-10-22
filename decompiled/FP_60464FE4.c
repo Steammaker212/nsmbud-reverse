@@ -53,7 +53,7 @@ int __fastcall sub_60464FE4(int a1);
 /* line: 30, address: 0x6046503c */     *(_DWORD *)(a1 + 6208) = -1;
 /* line: 31 */   else
 /* line: 32, address: 0x60465050 */     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 224))(a1);
-/* line: 33, address: 0x60465058 */   CollisionActor::handleGravity((CollisionActor *)a1);
+/* line: 33, address: 0x60465058 */   CollisionActor__handleGravity((CollisionActor *)a1);
 /* line: 34, address: 0x60465064 */   v6 = sub_6014C4A4(a1 + 648);
 /* line: 35, address: 0x60465088 */   v7 = *(float *)(a1 + 120);
 /* line: 36, address: 0x604650a8 */   v8 = (float)(v6 & 0xFFFFFF) * 0.000000059605;

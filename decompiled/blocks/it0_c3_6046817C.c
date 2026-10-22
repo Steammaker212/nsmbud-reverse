@@ -30,10 +30,10 @@ int __fastcall sub_6046817C(_DWORD *a1);
 /* line: 7, address: 0x604681b0 */   a1[1671] = 12325992;
 /* line: 8, address: 0x604681b0 */   v3 = (struct sead_IDisposer *)(a1 + 1671);
 /* line: 9, address: 0x604681b8 */   sub_60237560(a1 + 1671);
-/* line: 10, address: 0x604681c0 */   sead::IDisposer::~IDisposer(v3);
+/* line: 10, address: 0x604681c0 */   sead__IDisposer__dtor(v3);
 /* line: 11, address: 0x604681c8 */   ActiveCollider_dtor(v2);
 /* line: 12, address: 0x604681dc */   *a1 = 12321080;
 /* line: 13, address: 0x604681e0 */   CollisionMgr_dtor(a1 + 162);
-/* line: 14, address: 0x604681e8 */   StageActor::~StageActor((Actor *)a1);
+/* line: 14, address: 0x604681e8 */   StageActor__dtor((Actor *)a1);
 /* line: 15 */   return operator delete();
 /* line: 16 */ }

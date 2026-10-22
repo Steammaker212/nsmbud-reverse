@@ -32,7 +32,7 @@
 /* line: 29 */   int v31; // [sp+18h] [bp-8h]
 /* line: 30 */   int v32; // [sp+1Ch] [bp-4h]
 /* line: 31 */ 
-/* line: 32, address: 0x605643cc */   CurrentState = StateMgr::getCurrentState(a1 + 6084);
+/* line: 32, address: 0x605643cc */   CurrentState = StateMgr__getCurrentState(a1 + 6084);
 /* line: 33, address: 0x605643dc */   v3 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
 /* line: 34, address: 0x605643f0 */   result = (*(int (**)(void))(MEMORY[0xCAE2F8] + 8))();
 /* line: 35, address: 0x605643f8 */   if ( v3 != result )
@@ -80,7 +80,7 @@
 /* line: 77 */           {
 /* line: 78, address: 0x605644ac */             v11 = &v26;
 /* line: 79, address: 0x605644c0 */             do
-/* line: 80, address: 0x605644b4 */               Actor::removeChild((Actor *)a1);
+/* line: 80, address: 0x605644b4 */               Actor__removeChild((Actor *)a1);
 /* line: 81, address: 0x605644c0 */             while ( *v11++ );
 /* line: 82 */           }
 /* line: 83 */         }
@@ -137,7 +137,7 @@
 /* line: 134 */         {
 /* line: 135, address: 0x6056459c */           v19 = &v26;
 /* line: 136, address: 0x605645b0 */           do
-/* line: 137, address: 0x605645a4 */             Actor::removeChild((Actor *)a1);
+/* line: 137, address: 0x605645a4 */             Actor__removeChild((Actor *)a1);
 /* line: 138, address: 0x605645b0 */           while ( *v19++ );
 /* line: 139 */         }
 /* line: 140 */       }

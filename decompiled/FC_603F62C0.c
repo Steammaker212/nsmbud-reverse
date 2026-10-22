@@ -26,7 +26,7 @@ int __fastcall sub_603F62C0(int a1);
 /* line: 3 */   int v3; // r0
 /* line: 4 */   int v4; // r0
 /* line: 5 */ 
-/* line: 6, address: 0x603f62cc */   StateMgr::execute((_DWORD *)(a1 + 80));
+/* line: 6, address: 0x603f62cc */   StateMgr__execute((_DWORD *)(a1 + 80));
 /* line: 7, address: 0x603f62d0 */   result = *(unsigned __int8 *)(a1 + 48);
 /* line: 8, address: 0x603f62d0 */   if ( *(_BYTE *)(a1 + 48) )
 /* line: 9 */   {

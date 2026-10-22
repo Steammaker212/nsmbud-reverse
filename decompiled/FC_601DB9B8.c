@@ -43,6 +43,6 @@ int __fastcall sub_601DB9B8(_DWORD *a1);
 /* line: 20, address: 0x601dba30 */   sub_60793FF0(*(_DWORD *)(a1[67] + 4), v8, v5);
 /* line: 21, address: 0x601dba44 */   (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1[67] + 4) + 148))(*(_DWORD *)(a1[67] + 4));
 /* line: 22, address: 0x601dba54 */   a1[53] = 1116471296;
-/* line: 23, address: 0x601dba60 */   StateMgr::changeState(a1 + 74, 13152200);
+/* line: 23, address: 0x601dba60 */   StateMgr__changeState(a1 + 74, 13152200);
 /* line: 24, address: 0x601dba6c */   return 1;
 /* line: 25 */ }

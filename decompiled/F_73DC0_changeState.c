@@ -38,7 +38,7 @@ int __fastcall Player_changeState(int a1, int a2, int a3);
 /* line: 15, address: 0x60773e30 */     *(_DWORD *)(a1 + 1204) &= ~0x400u;
 /* line: 16, address: 0x60773e38 */     *(_DWORD *)(a1 + 9932) = 0;
 /* line: 17, address: 0x60773e44 */     *(_DWORD *)(a1 + 9936) = a3;
-/* line: 18, address: 0x60773e50 */     StateMgr::changeState(a1 + 9916, a2);
+/* line: 18, address: 0x60773e50 */     StateMgr__changeState(a1 + 9916, a2);
 /* line: 19, address: 0x60773e64 */     return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1044))(a1);
 /* line: 20 */   }
 /* line: 21, address: 0x60773dd8 */   return result;

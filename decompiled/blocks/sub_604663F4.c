@@ -61,14 +61,14 @@ unsigned int __fastcall sub_604663F4(int a1, _DWORD *a2, int a3, int a4, unsigne
 /* line: 41, address: 0x60466570 */     v12[0] = a3;
 /* line: 42, address: 0x60466574 */     if ( a6 )
 /* line: 43, address: 0x60466574 */       v12[2] = a6;
-/* line: 44, address: 0x60466588 */     v12[3] = Profile::get(*((_DWORD *)&unk_60C9D3F0 + v11 + 1));
+/* line: 44, address: 0x60466588 */     v12[3] = Profile__get(*((_DWORD *)&unk_60C9D3F0 + v11 + 1));
 /* line: 45, address: 0x60466598 */     v12[4] = *a2;
 /* line: 46, address: 0x604665a0 */     v12[5] = a2[1];
 /* line: 47, address: 0x604665a8 */     v12[6] = a2[2];
 /* line: 48, address: 0x604665b0 */     LOWORD(v12[8]) = a5;
 /* line: 49, address: 0x604665b8 */     BYTE2(v12[8]) = 0;
 /* line: 50, address: 0x604665bc */     v12[10] = 0;
-/* line: 51, address: 0x604665cc */     return (unsigned int)ActorMgr::create(MEMORY[0xC7B400], (int)v12, 0);
+/* line: 51, address: 0x604665cc */     return (unsigned int)ActorMgr__create(MEMORY[0xC7B400], (int)v12, 0);
 /* line: 52 */   }
 /* line: 53, address: 0x604665d4 */   return result;
 /* line: 54 */ }

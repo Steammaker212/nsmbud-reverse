@@ -102,7 +102,7 @@ int __fastcall sub_60460408(int a1, int a2, int a3, int a4);
 /* line: 79, address: 0x604604c8 */       *v10 = 0;
 /* line: 80 */     }
 /* line: 81 */   }
-/* line: 82, address: 0x604604d0 */   CollisionActor::handleGravity((CollisionActor *)a1);
+/* line: 82, address: 0x604604d0 */   CollisionActor__handleGravity((CollisionActor *)a1);
 /* line: 83, address: 0x604604d8 */   v13 = sub_6014C4A4(a1 + 648);
 /* line: 84, address: 0x60460508 */   v14 = (float)(v13 & 0xFFFFFF);
 /* line: 85, address: 0x6046050c */   v15 = (float *)(((v13 >> 20) & 0xFF0) + 11773060);
@@ -131,7 +131,7 @@ int __fastcall sub_60460408(int a1, int a2, int a3, int a4);
 /* line: 108 */   }
 /* line: 109, address: 0x60460658 */   if ( *(_BYTE *)(a1 + 6255) && *(float *)(a1 + 124) < 0.0 )
 /* line: 110, address: 0x60460660 */     *(_DWORD *)(a1 + 124) = 1082130432;
-/* line: 111, address: 0x6046066c */   v26 = CollisionActor::sub_600034C8((CollisionActor *)a1);
+/* line: 111, address: 0x6046066c */   v26 = CollisionActor__sub_600034C8((CollisionActor *)a1);
 /* line: 112, address: 0x60460674 */   if ( (v26 & 1) != 0 )
 /* line: 113 */   {
 /* line: 114, address: 0x6046069c */     *(_DWORD *)(a1 + 120) = *(_DWORD *)(4 * *(_DWORD *)(a1 + 80) + 0xB025FC);

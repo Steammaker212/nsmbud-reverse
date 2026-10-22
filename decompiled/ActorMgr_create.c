@@ -38,7 +38,7 @@ _BYTE * __fastcall ActorMgr_create(_DWORD *a1, int a2, int a3);
 /* line: 18 */ LABEL_4:
 /* line: 19, address: 0x60008174 */       if ( !a3 )
 /* line: 20 */       {
-/* line: 21, address: 0x6000818c */         sead::ListNode::insertFront_(a1 + 5730, &v6[a1[5733]]);
+/* line: 21, address: 0x6000818c */         sead__ListNode__insertFront_(a1 + 5730, &v6[a1[5733]]);
 /* line: 22, address: 0x6000819c */         ++a1[5732];
 /* line: 23 */       }
 /* line: 24, address: 0x600081a0 */       return v6;
@@ -50,7 +50,7 @@ _BYTE * __fastcall ActorMgr_create(_DWORD *a1, int a2, int a3);
 /* line: 30, address: 0x600081b0 */   if ( (*(int (__fastcall **)(_BYTE *))(*(_DWORD *)v5 + 16))(v5) )
 /* line: 31 */   {
 /* line: 32, address: 0x600081bc */     if ( *((_DWORD *)v6 + 1) )
-/* line: 33, address: 0x600081d8 */       v8 = sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
+/* line: 33, address: 0x600081d8 */       v8 = sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
 /* line: 34 */     else
 /* line: 35, address: 0x600081f8 */       v8 = 1;
 /* line: 36, address: 0x60008208 */     v9 = (*(int (__fastcall **)(_BYTE *))(*(_DWORD *)v6 + 20))(v6);
@@ -58,7 +58,7 @@ _BYTE * __fastcall ActorMgr_create(_DWORD *a1, int a2, int a3);
 /* line: 38, address: 0x60008214 */     if ( v9 < 3 )
 /* line: 39, address: 0x60008214 */       v10 = 3 - v9;
 /* line: 40, address: 0x6000821c */     if ( v8 != 1 )
-/* line: 41, address: 0x60008230 */       sead::HeapMgr::setCurrentHeap_(MEMORY[0xCCEE90]);
+/* line: 41, address: 0x60008230 */       sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
 /* line: 42, address: 0x60008244 */     (*(void (__fastcall **)(_BYTE *, unsigned int))(*(_DWORD *)v6 + 24))(v6, v10);
 /* line: 43, address: 0x60008254 */     if ( v10 >= 2 && v10 != 3 )
 /* line: 44 */     {
@@ -76,7 +76,7 @@ _BYTE * __fastcall ActorMgr_create(_DWORD *a1, int a2, int a3);
 /* line: 56, address: 0x600081f0 */     (*(void (__fastcall **)(_BYTE *, _DWORD))(*(_DWORD *)v6 + 24))(v6, 0);
 /* line: 57 */   }
 /* line: 58, address: 0x60008294 */   v6[19] = 1;
-/* line: 59, address: 0x600082a8 */   sead::ListNode::insertFront_(a1 + 5734, &v6[a1[5737]]);
+/* line: 59, address: 0x600082a8 */   sead__ListNode__insertFront_(a1 + 5734, &v6[a1[5737]]);
 /* line: 60, address: 0x600082b8 */   ++a1[5736];
 /* line: 61, address: 0x60008288 */   return 0;
 /* line: 62 */ }

@@ -42,7 +42,7 @@ int __fastcall sub_6013AA08(int a1, unsigned int a2);
 /* line: 19 */   _DWORD v22[3]; // [sp+14h] [bp-Ch] BYREF
 /* line: 20 */ 
 /* line: 21, address: 0x6013aa1c */   if ( a2 != 2 )
-/* line: 22, address: 0x6013aa1c */     return CollisionActor::afterCreate((CollisionActor *)a1, a2);
+/* line: 22, address: 0x6013aa1c */     return CollisionActor__afterCreate((CollisionActor *)a1, a2);
 /* line: 23, address: 0x6013aa24 */   v4 = *(float *)(a1 + 108);
 /* line: 24, address: 0x6013aa30 */   v5 = *(float *)(MEMORY[0xCC6484] + 120);
 /* line: 25, address: 0x6013aa4c */   if ( v4 <= v5 && v4 >= *(float *)(MEMORY[0xCC6484] + 112) )
@@ -68,7 +68,7 @@ int __fastcall sub_6013AA08(int a1, unsigned int a2);
 /* line: 45 */       && (v10 & 0x10400) != 0x400 )
 /* line: 46 */     {
 /* line: 47, address: 0x6013ac10 */       if ( (v10 & 1) == 0 )
-/* line: 48, address: 0x6013ac10 */         return CollisionActor::afterCreate((CollisionActor *)a1, a2);
+/* line: 48, address: 0x6013ac10 */         return CollisionActor__afterCreate((CollisionActor *)a1, a2);
 /* line: 49, address: 0x6013ac44 */       v12 = (int)(float)((float)(MEMORY[0xB0E1E0] * 63.4) / MEMORY[0xB0E1D8]);
 /* line: 50, address: 0x6013ac48 */       v13 = sub_6014C508(a1 + 648, *(_DWORD *)(a1 + 80));
 /* line: 51, address: 0x6013acac */       if ( (float)(*(float *)(((v13 >> 20) & 0xFF0) + 0xB3A484)
@@ -104,7 +104,7 @@ int __fastcall sub_6013AA08(int a1, unsigned int a2);
 /* line: 81, address: 0x6013ad68 */             *(_DWORD *)(a1 + 124) = v18[v15];
 /* line: 82, address: 0x6013ad6c */             if ( !v21 )
 /* line: 83, address: 0x6013ad6c */               *(_DWORD *)(a1 + 120) = v17;
-/* line: 84, address: 0x6013ad6c */             return CollisionActor::afterCreate((CollisionActor *)a1, a2);
+/* line: 84, address: 0x6013ad6c */             return CollisionActor__afterCreate((CollisionActor *)a1, a2);
 /* line: 85 */           }
 /* line: 86, address: 0x6013ad40 */           v17 = 0;
 /* line: 87 */         }
@@ -131,7 +131,7 @@ int __fastcall sub_6013AA08(int a1, unsigned int a2);
 /* line: 108, address: 0x6013abb4 */     LightSource_update1(a1 + 6364, 0, a1 + 108, 0, 0, 0, 0, 0, 0);
 /* line: 109, address: 0x6013abc4 */     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 240))(a1);
 /* line: 110, address: 0x6013abcc */     sub_601362A0(a1);
-/* line: 111, address: 0x6013abe0 */     return CollisionActor::afterCreate((CollisionActor *)a1, a2);
+/* line: 111, address: 0x6013abe0 */     return CollisionActor__afterCreate((CollisionActor *)a1, a2);
 /* line: 112 */   }
 /* line: 113, address: 0x6013aa5c */   if ( *(_DWORD *)(MEMORY[0xC99D70] + 1828) )
 /* line: 114 */   {
@@ -146,11 +146,11 @@ int __fastcall sub_6013AA08(int a1, unsigned int a2);
 /* line: 123, address: 0x6013aa8c */     *(float *)(a1 + 608) = v5;
 /* line: 124, address: 0x6013aa90 */     *(_DWORD *)(a1 + 612) = v6;
 /* line: 125, address: 0x6013aa94 */     *(_DWORD *)(a1 + 616) = v7;
-/* line: 126, address: 0x6013aaa8 */     return CollisionActor::afterCreate((CollisionActor *)a1, 2u);
+/* line: 126, address: 0x6013aaa8 */     return CollisionActor__afterCreate((CollisionActor *)a1, 2u);
 /* line: 127 */   }
 /* line: 128 */   else
 /* line: 129 */   {
-/* line: 130, address: 0x6013aab4 */     CollisionActor::afterCreate((CollisionActor *)a1, 2u);
+/* line: 130, address: 0x6013aab4 */     CollisionActor__afterCreate((CollisionActor *)a1, 2u);
 /* line: 131, address: 0x6013aacc */     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 296))(a1);
 /* line: 132, address: 0x6013aad4 */     *(_BYTE *)(a1 + 6240) = 1;
 /* line: 133, address: 0x6013aad0 */     return 1;

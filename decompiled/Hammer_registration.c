@@ -8,7 +8,7 @@
 /* line: 6, address: 0x60140870 */   dword_60C87D38 = 0;
 /* line: 7, address: 0x60140880 */   v1[0] = 12321336;
 /* line: 8, address: 0x6014088c */   v1[1] = &unk_60ABECE7;
-/* line: 9, address: 0x601408b8 */   Profile::Profile(13139116, 1306668, MEMORY[0xAF3904], (int)v1, &unk_60AF68AC, 18);
+/* line: 9, address: 0x601408b8 */   Profile__Profile(13139116, 1306668, MEMORY[0xAF3904], (int)v1, &unk_60AF68AC, 18);
 /* line: 10, address: 0x601408c0 */   flt_60C87D3C = 0.0;
 /* line: 11, address: 0x601408c8 */   flt_60C87D40 = 5.0;
 /* line: 12, address: 0x601408d0 */   flt_60C87D44 = 0.0;

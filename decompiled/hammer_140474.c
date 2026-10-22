@@ -28,5 +28,5 @@ void __fastcall sub_60140474(StageActor *a1);
 /* line: 5, address: 0x601404b0 */   ActiveCollider_dtor();
 /* line: 6, address: 0x601404c4 */   *(_DWORD *)a1 = 12321080;
 /* line: 7, address: 0x601404c8 */   CollisionMgr_dtor((char *)a1 + 648);
-/* line: 8, address: 0x601404d4 */   StageActor::~StageActor(a1);
+/* line: 8, address: 0x601404d4 */   StageActor__dtor(a1);
 /* line: 9 */ }
