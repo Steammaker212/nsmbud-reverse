@@ -1,0 +1,50 @@
+{
+ "KoopalingBase": {
+  "7184": "ActiveCollider"
+ },
+ "FireballBase": {
+  "6100": "LightMask",
+  "6364": "LightSource",
+  "6436": "ActiveCollider"
+ },
+ "GiantWiggler": {
+  "10404": "ActiveCollider",
+  "10708": "ActiveCollider",
+  "11012": "ActiveCollider",
+  "11316": "ActiveCollider",
+  "11620": "ActiveCollider",
+  "11924": "ActiveCollider",
+  "12228": "ActiveCollider",
+  "12532": "ActiveCollider",
+  "12836": "ActiveCollider",
+  "13140": "ActiveCollider"
+ },
+ "BobOmb": {
+  "6492": "LightMask",
+  "6532": "LightSource",
+  "6756": "ActiveCollider"
+ },
+ "BrosBase": {
+  "12124": "ActiveCollider"
+ },
+ "Enemy": {
+  "6152": "EnemyFreezeMgr"
+ },
+ "SledgeBro": {
+  "6360": "ActiveCollider"
+ },
+ "ShellEnemy": {},
+ "TerrainActor": {
+  "6900": "TerrainEffects"
+ },
+ "MovementBlockCoinBase": {
+  "6992": "MovementHandler"
+ },
+ "Yoshi": {},
+ "NinJoyNpadDevice": {
+  "34168": "CriticalSection"
+ },
+ "nn_atk_FsSoundArchive": {
+  "1432": "InitializeMutex"
+ }
+}
