@@ -16855,7 +16855,7 @@
           v16 = *(float *)(a1 + 112) - v25;
           *(float *)(a1 + 6872) = v16;
           v14 = v16 + 16.0;
-          CollisionActor4vf84Ev_vf70(a1, 11532992, 0, 1);
+          sub_60003D80(a1, 11532992, 0, 1);
         }
         LOBYTE(v28[0]) = v10;
         sub_60022B80(v28);
@@ -41809,7 +41809,7 @@
     CollisionMgr_setSensor(a1 + 648, nullptr, 2);
     CollisionMgr_setSensor(a1 + 648, nullptr, 0);
     CollisionMgr_setSensor(a1 + 648, nullptr, 1);
-    CollisionMgr_vf14(a1 + 648);
+    sub_6014B310(a1 + 648);
     v10 = *(float *)(a1 + 112);
     v11 = MEMORY[0xC7F530];
     v17[0] = *(float *)(a1 + 108);
@@ -42300,7 +42300,7 @@
     CollisionMgr_setSensor(v11, dword_60B009CC, 2);
     CollisionMgr_setSensor(v11, nullptr, 0);
     CollisionMgr_setSensor(v11, nullptr, 1);
-    return CollisionMgr_vf14(v11);
+    return sub_6014B310(v11);
   }
 
 /* ============================================================================
@@ -42878,7 +42878,7 @@
       CollisionMgr_setSensor(a1 + 648, nullptr, 2);
       CollisionMgr_setSensor(a1 + 648, nullptr, 0);
       CollisionMgr_setSensor(a1 + 648, nullptr, 1);
-      CollisionMgr_vf14(a1 + 648);
+      sub_6014B310(a1 + 648);
       return (*(int (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13202400);
     }
     return result;
@@ -49000,7 +49000,7 @@
         *(_DWORD *)(a1 + 116) = v29;
         sub_603A4974(a1, 1);
         *(_BYTE *)(a1 + 6584) = 1;
-        CollisionMgr_vf14(a1 + 648);
+        sub_6014B310(a1 + 648);
         v22 = *(char *)(a2 + 84);
         if ( v22 <= 3 )
           *(_WORD *)(a1 + 2 * v22 + 6140) = 16;
@@ -52174,7 +52174,7 @@
         v19 = v11 + 16.0;
         v12 = sub_60285510(v7);
         v13 = sub_602856EC(a1 + 1573, v12);
-        SE_SYS_THREE_UP_ref_2(MEMORY[0xC7F52C], (int)&v18, v13, v6, 1);
+        sub_60022540(MEMORY[0xC7F52C], (int)&v18, v13, v6, 1);
       }
     }
     v18 = 0;

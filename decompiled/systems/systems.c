@@ -112072,7 +112072,7 @@
       v21 = *(_DWORD *)(a1 + 108);
       v22 = v18 + 32.0;
       v23 = v19;
-      SE_SYS_THREE_UP_ref_2(MEMORY[0xC7F52C], (int)&v21, 5u, a2, 1);
+      sub_60022540(MEMORY[0xC7F52C], (int)&v21, 5u, a2, 1);
     }
     sub_603F6984(
       MEMORY[0xC99DD4] + 272,
@@ -117477,7 +117477,7 @@
     sub_605DEEC4(a1);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 424))(a1);
     *(_DWORD *)(a1 + 6804) = 0;
-    CollisionMgr_vf14(a1 + 648);
+    sub_6014B310(a1 + 648);
     result = *(_DWORD *)(a1 + 8020);
     if ( result == 1 )
     {
@@ -118247,7 +118247,7 @@
       sub_605E5144(a1);
       sub_605D845C(a1);
       *(_DWORD *)(a1 + 6804) = 0;
-      CollisionMgr_vf14(a1 + 648);
+      sub_6014B310(a1 + 648);
       sub_605DEEC4(a1);
       *(_DWORD *)(a1 + 80) = a3;
       *(_DWORD *)(a1 + 108) = *a2;

@@ -1970,7 +1970,7 @@
   }
 
 /* ============================================================================
- * SE_OBJ_GET_COIN_ref
+ * sub_60002BC0
  * RVA 0x00002bc0   size 0x84   xrefs 7
  * ============================================================================ */
   int __fastcall sub_60002BC0(unsigned int a1, int *a2)
@@ -2465,7 +2465,7 @@
     v2 = 0;
     if ( StageActor::beforeExecute(a1) == 1 )
     {
-      CollisionMgr_vf18((_BYTE *)(a1 + 648));
+      sub_6014BBC8((_BYTE *)(a1 + 648));
       *(_BYTE *)(a1 + 6053) = 0;
       v3 = (_DWORD *)(a1 + 6024);
       *(_DWORD *)(a1 + 6032) = *(_DWORD *)(a1 + 6024);
@@ -2524,7 +2524,7 @@
  * ============================================================================ */
   int __fastcall CollisionActor::onDelete(int a1)
   {
-    CollisionMgr_vf14(a1 + 648);
+    sub_6014B310(a1 + 648);
     return Actor::onDelete();
   }
 
@@ -3103,16 +3103,6 @@
       }
     }
     return result;
-  }
-
-/* ============================================================================
- * CollisionActor4vf84Ev_vf70
- * RVA 0x00003d80   size 0x4   xrefs 8
- * ============================================================================ */
-  // attributes: thunk
-  void CollisionActor4vf84Ev_vf70()
-  {
-    JUMPOUT(0x60003C88);
   }
 
 /* ============================================================================
@@ -13177,7 +13167,7 @@
         v9 = *(_DWORD *)(sub_6075F950(v6) + 4);
         v8 = *(_DWORD *)(v6 + 108);
         v10 = 0;
-        return SE_SYS_THREE_UP_ref_2(0, &v8, a2, a3);
+        return sub_60022540(0, &v8, a2, a3);
       }
     }
     return result;
@@ -13204,7 +13194,7 @@
         v5 = *(float *)(MEMORY[0xCC6484] + 112) + 16.0;
         v6 = v1 + 8.0;
         v7 = 0;
-        SE_SYS_THREE_UP_ref_2(0, &v5, 8, 0);
+        sub_60022540(0, &v5, 8, 0);
         v3 = v3 + 16.0;
       }
       else
@@ -13219,7 +13209,7 @@
         v5 = *(float *)(MEMORY[0xCC6484] + 112) + 16.0;
         v6 = v3;
         v7 = 0;
-        SE_SYS_THREE_UP_ref_2(0, &v5, 8, 1);
+        sub_60022540(0, &v5, 8, 1);
         v3 = v3 + 16.0;
       }
       else
@@ -13234,7 +13224,7 @@
         v5 = *(float *)(MEMORY[0xCC6484] + 112) + 16.0;
         v6 = v3;
         v7 = 0;
-        SE_SYS_THREE_UP_ref_2(0, &v5, 8, 2);
+        sub_60022540(0, &v5, 8, 2);
         v3 = v3 + 16.0;
       }
       else
@@ -13250,7 +13240,7 @@
         v5 = *(float *)(MEMORY[0xCC6484] + 112) + 16.0;
         v6 = v3;
         v7 = 0;
-        return SE_SYS_THREE_UP_ref_2(0, &v5, 8, 3);
+        return sub_60022540(0, &v5, 8, 3);
       }
       else
       {
@@ -13261,7 +13251,7 @@
   }
 
 /* ============================================================================
- * SE_SYS_THREE_UP_ref_2
+ * sub_60022540
  * RVA 0x00022540   size 0x1e8   xrefs 27
  * ============================================================================ */
   void __fastcall sub_60022540(int a1, int a2, unsigned int a3, int a4, int a5)
@@ -13351,7 +13341,7 @@
     v7[0] = *(float *)(a2 + 108) + v4;
     v7[1] = v6;
     v7[2] = 0.0;
-    SE_SYS_THREE_UP_ref_2(1, (int)v7, a3, a4, 1);
+    sub_60022540(1, (int)v7, a3, a4, 1);
   }
 
 /* ============================================================================
@@ -15191,7 +15181,7 @@
     {
       v4 = *(char *)(a2 + 84);
       if ( v4 <= 3 )
-        SE_SYS_THREE_UP_ref_2(MEMORY[0xC7F52C], a3, a4, v4, 1);
+        sub_60022540(MEMORY[0xC7F52C], a3, a4, v4, 1);
     }
     else
     {
@@ -15215,7 +15205,7 @@
     {
       v4 = *(char *)(a2 + 84);
       if ( v4 <= 3 )
-        SE_SYS_THREE_UP_ref_2(MEMORY[0xC7F52C], a3, a4, v4, 1);
+        sub_60022540(MEMORY[0xC7F52C], a3, a4, v4, 1);
     }
     else
     {
@@ -17294,285 +17284,6 @@
   }
 
 /* ============================================================================
- * SE_VOC_BKK_ref
- * RVA 0x0002bfd4   size 0x6e4   xrefs 0
- * ============================================================================ */
-  int __fastcall sub_6002BFD4(int a1)
-  {
-    _WORD *v2; // r0
-    __int16 v3; // r1
-    int v4; // t1
-    unsigned int v5; // r0
-    _BYTE *v6; // r7
-    int v7; // r0
-    _BYTE *v8; // r8
-    _DWORD *v9; // r0
-    int v10; // r5
-    _DWORD *v11; // r1
-    unsigned int v12; // r2
-    unsigned int v13; // r0
-    _DWORD *v14; // r0
-    const char *v15; // r1
-    float v16; // r0
-    float v17; // s0
-    int v18; // r0
-    int result; // r0
-    _DWORD *v20; // r1
-    unsigned int v21; // r0
-    int v22; // r6
-    _DWORD *v23; // t1
-    int *v24; // r1
-    unsigned int v25; // r0
-    int v26; // r0
-    int v27; // r1
-    int v28; // r0
-    float v29; // s0
-    int v30; // s0
-    _DWORD *v31; // r5
-    int v32; // s0
-    int v33; // r5
-    int v34; // r1
-    int v35; // r0
-    _DWORD *v36; // r1
-    unsigned int v37; // r0
-    int v38; // r1
-    unsigned int v39; // r0
-    int v40[10]; // [sp+8h] [bp-98h] BYREF
-    int v41; // [sp+30h] [bp-70h] BYREF
-    int v42; // [sp+34h] [bp-6Ch]
-    int v43; // [sp+38h] [bp-68h]
-    __int16 v44; // [sp+80h] [bp-20h] BYREF
-    char v45; // [sp+82h] [bp-1Eh]
-    char v46; // [sp+83h] [bp-1Dh]
-    int v47; // [sp+84h] [bp-1Ch]
-    int *v48; // [sp+88h] [bp-18h]
-    int v49; // [sp+8Ch] [bp-14h] BYREF
-    float v50[2]; // [sp+90h] [bp-10h] BYREF
-    float v51[2]; // [sp+98h] [bp-8h] BYREF
-  
-    v4 = *(unsigned __int16 *)(a1 + 7424);
-    v2 = (_WORD *)(a1 + 7424);
-    v3 = v4;
-    if ( v4 )
-      *v2 = v3 - 1;
-    v6 = (_BYTE *)(a1 + 7427);
-    v5 = *(unsigned __int8 *)(a1 + 7427);
-    if ( v5 > 0x1D )
-    {
-      if ( v5 == 30 )
-      {
-        CollisionActor::handleGravity(a1);
-        CollisionActor::handleSpeed(a1);
-        v16 = *(float *)(a1 + 108);
-        v17 = *(float *)(a1 + 112);
-        v44 = 0;
-        v50[0] = v16;
-        v51[0] = v16;
-        v50[1] = v17;
-        v51[1] = v17 + -5.0;
-        v49 = 12328856;
-        v45 = *(_BYTE *)(a1 + 86);
-        v46 = *(_BYTE *)(a1 + 87);
-        v47 = 0;
-        v48 = &v49;
-        v18 = TileCheck_ctor((int)&v41, (int)&v44);
-        v40[3] = 0;
-        v40[4] = 0;
-        if ( !TileCheck_check(v18, (int)v40, v51, v50, 15) )
-          *(_DWORD *)(a1 + 116) = 1153138688;
-        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-        if ( *(float *)(a1 + 124) < 0.0 )
-        {
-  LABEL_24:
-          *v6 = 100;
-          goto LABEL_26;
-        }
-      }
-      else
-      {
-        if ( v5 != 100 )
-          goto LABEL_25;
-        CollisionActor::handleGravity(a1);
-        CollisionActor::handleSpeed(a1);
-        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-        if ( *(float *)(a1 + 112) < (float)(*(float *)(a1 + 7368) + 10.0) )
-          *(_DWORD *)(a1 + 3204) &= ~4u;
-        if ( !*(_WORD *)(a1 + 7416) && (*(_BYTE *)(a1 + 2872) & 1) != 0 )
-        {
-          *(_DWORD *)(a1 + 120) = 0;
-          *(_DWORD *)(a1 + 124) = 0;
-          *(_DWORD *)(a1 + 128) = 0;
-          *(_DWORD *)(a1 + 3180) &= ~4u;
-          *(_DWORD *)(a1 + 3188) &= ~4u;
-          *(_DWORD *)(a1 + 3204) &= ~4u;
-          v7 = *(_DWORD *)(a1 + 108);
-          v42 = *(_DWORD *)(a1 + 112);
-          v41 = v7;
-          v43 = 1166843904;
-          EffectData_create(971, (int)&v41, 0, 0);
-          v41 = 15;
-          v42 = MEMORY[0xC263B4];
-          LOBYTE(v43) = 0;
-          sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_LAND", &v41);
-          AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 6, 1, 0, 0);
-          if ( !*(_BYTE *)(a1 + 7433) )
-          {
-  LABEL_25:
-            (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13105256);
-            goto LABEL_26;
-          }
-        }
-      }
-      goto LABEL_26;
-    }
-    if ( *(_BYTE *)(a1 + 7427) )
-    {
-      if ( v5 == 10 )
-      {
-        CollisionActor::handleGravity(a1);
-        CollisionActor::handleSpeed(a1);
-        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-        if ( *(float *)(a1 + 124) >= 0.0 )
-          goto LABEL_26;
-        *(_DWORD *)(a1 + 3204) &= ~4u;
-        goto LABEL_24;
-      }
-      goto LABEL_25;
-    }
-    v8 = (_BYTE *)(a1 + 7426);
-    if ( *(_BYTE *)(a1 + 7426) == 15 )
-    {
-      v10 = a1 + 7096;
-      v9 = *(_DWORD **)(a1 + 7096);
-      v11 = (_DWORD *)v9[3];
-      v12 = v9[2];
-      v13 = v9[17];
-      if ( v12 > v13 )
-        v11 += v13;
-      if ( sub_60418548(*v11 + 4) == 1 )
-      {
-        v14 = (_DWORD *)(a1 + 6332);
-        v15 = "SE_VOC_BKK_RCV_SIGN";
-  LABEL_36:
-        sub_60813430(v14, (int)v15, nullptr);
-        goto LABEL_37;
-      }
-      v20 = *(_DWORD **)(*(_DWORD *)v10 + 12);
-      v21 = *(_DWORD *)(*(_DWORD *)v10 + 68);
-      if ( *(_DWORD *)(*(_DWORD *)v10 + 8) > v21 )
-        v20 += v21;
-      if ( sub_60418548(*v20 + 4) == 1 )
-      {
-        v14 = (_DWORD *)(a1 + 6332);
-        v15 = "SE_VOC_BKK_RCV_SHAKE";
-        goto LABEL_36;
-      }
-    }
-  LABEL_37:
-    CollisionActor::handleGravity(a1);
-    CollisionActor::handleSpeed(a1);
-    CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-    if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
-      *(_DWORD *)(a1 + 124) = 0;
-    v23 = *(_DWORD **)(a1 + 7096);
-    v22 = a1 + 7096;
-    v24 = (int *)v23[3];
-    v25 = v23[17];
-    if ( v23[2] > v25 )
-      v24 += v25;
-    v26 = *v24;
-    v27 = (unsigned __int8)*v8;
-    if ( (*(float *)(v26 + 20) <= 65.0 || v27 != 15) && (v27 != 5 || (*(_BYTE *)(v26 + 28) & 0x20) == 0) )
-      goto LABEL_26;
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_BKK_JUMP", nullptr);
-    sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_JUMP_L", nullptr);
-    *(_DWORD *)(a1 + 3180) |= 4u;
-    *(_DWORD *)(a1 + 3188) |= 4u;
-    *(_DWORD *)(a1 + 3204) |= 4u;
-    *(_DWORD *)(a1 + 116) = 1153138688;
-    v28 = *(_DWORD *)(a1 + 80);
-    if ( *(float *)(a1 + 108) < *(float *)(MEMORY[0xCC6484] + 116) )
-    {
-      if ( !v28 )
-        goto LABEL_50;
-      goto LABEL_49;
-    }
-    if ( v28 != 1 )
-  LABEL_49:
-      *(_DWORD *)(a1 + 80) = v28 ^ 1;
-  LABEL_50:
-    *(_BYTE *)(a1 + 7433) = 1;
-    *(_DWORD *)(a1 + 304) = 0;
-    *(_DWORD *)(a1 + 308) = 1099956224;
-    *(_DWORD *)(a1 + 312) = 1099956224;
-    *(_DWORD *)(a1 + 316) = 1099956224;
-    v29 = *(float *)(a1 + 112);
-    if ( v29 >= -680.0 )
-    {
-      if ( v29 >= -560.0 )
-        goto LABEL_26;
-      *(_DWORD *)(a1 + 7400) = 2;
-      *v6 = 30;
-      *(_WORD *)(a1 + 7416) = 36;
-      sub_6002F720(a1, (float *)(a1 + 7364), 2);
-      *(float *)(a1 + 120) = v29;
-      v30 = *(_DWORD *)(a1 + 7400) > 2u ? 0 : dword_60AF51A4[*(_DWORD *)(a1 + 7400)];
-      *(_DWORD *)(a1 + 124) = v30;
-      if ( *v8 == 6 )
-        goto LABEL_26;
-      v33 = *(_DWORD *)(a1 + 7380);
-      v34 = *(_DWORD *)(a1 + 7100);
-      v35 = *(_DWORD *)v22;
-    }
-    else
-    {
-      *(_DWORD *)(a1 + 7400) = 0;
-      v31 = (_DWORD *)(a1 + 7400);
-      *v6 = 10;
-      sub_6002F720(a1, (float *)(a1 + 7364), 0);
-      *(float *)(a1 + 120) = v29;
-      if ( *v31 > 2u )
-        v32 = 0;
-      else
-        v32 = dword_60AF51A4[*v31];
-      *(_DWORD *)(a1 + 124) = v32;
-      if ( *v8 == 6 )
-        goto LABEL_26;
-      v33 = *(_DWORD *)(a1 + 7380);
-      v34 = *(_DWORD *)(a1 + 7100);
-      v35 = *(_DWORD *)v22;
-    }
-    sub_60421938(v35, v34, 13104976);
-    v36 = *(_DWORD **)(*(_DWORD *)v22 + 12);
-    v37 = *(_DWORD *)(*(_DWORD *)v22 + 68);
-    if ( *(_DWORD *)(*(_DWORD *)v22 + 8) > v37 )
-      v36 += v37;
-    AnimationCtrl_setRepeat(*v36 + 4, 0);
-    v38 = *(_DWORD *)(*(_DWORD *)v22 + 12);
-    v39 = *(_DWORD *)(*(_DWORD *)v22 + 68);
-    if ( *(_DWORD *)(*(_DWORD *)v22 + 8) > v39 )
-      v38 += 4 * v39;
-    *(_DWORD *)(*(_DWORD *)v38 + 24) = v33;
-    *v8 = 6;
-  LABEL_26:
-    if ( *(_WORD *)(a1 + 7416) )
-      --*(_WORD *)(a1 + 7416);
-    result = *(unsigned __int8 *)(a1 + 7433);
-    if ( *(_BYTE *)(a1 + 7433) )
-    {
-      v41 = (int)(float)((float)(MEMORY[0xB0E1E0] * 35.0) / MEMORY[0xB0E1D8]) * *(char *)(*(_DWORD *)(a1 + 80) + 11527156);
-      v40[0] = 0x8000000;
-      result = moveValueTo((int *)(a1 + 160), &v41, v40, 11592160);
-      if ( result == 1 )
-      {
-        result = 0;
-        *(_BYTE *)(a1 + 7433) = 0;
-      }
-    }
-    return result;
-  }
-
-/* ============================================================================
  * sub_6002C728
  * RVA 0x0002c728   size 0x1a0   xrefs 1
  * ============================================================================ */
@@ -17633,326 +17344,6 @@
     *(_WORD *)(v8 + 6132) = 30;
     *(_BYTE *)(v8 + 7283) = 0;
     return 7283;
-  }
-
-/* ============================================================================
- * SE_VOC_BKK_JUMP_ref
- * RVA 0x0002e24c   size 0x7b0   xrefs 0
- * ============================================================================ */
-  int __fastcall SE_VOC_BKK_JUMP_ref(int a1)
-  {
-    int v2; // r0
-    _BYTE *v3; // r6
-    int v4; // r7
-    _DWORD *v5; // t1
-    int v6; // r1
-    unsigned int v7; // r0
-    __int64 v8; // r8
-    int v9; // r1
-    _BYTE *v10; // r5
-    int v11; // r6
-    int v12; // r1
-    int v13; // r0
-    _DWORD *v14; // r0
-    int v15; // r1
-    unsigned int v16; // r2
-    unsigned int v17; // r0
-    int v18; // r0
-    int v19; // r1
-    void (__fastcall *v20)(int, int); // r2
-    float v21; // s0
-    int v22; // r0
-    int v23; // r0
-    float v24; // s0
-    int v25; // r0
-    int v26; // r0
-    int v27; // r7
-    int v28; // r8
-    _DWORD *v29; // r1
-    unsigned int v30; // r0
-    int v31; // r1
-    unsigned int v32; // r0
-    _DWORD *v33; // r0
-    int result; // r0
-    _DWORD *v35; // r1
-    unsigned int v36; // r0
-    int v37; // r1
-    unsigned int v38; // r0
-    int v39[3]; // [sp+8h] [bp-98h] BYREF
-    int v40; // [sp+14h] [bp-8Ch]
-    int v41; // [sp+18h] [bp-88h]
-    int v42; // [sp+30h] [bp-70h] BYREF
-    int v43; // [sp+34h] [bp-6Ch]
-    int v44; // [sp+38h] [bp-68h]
-    __int16 v45; // [sp+80h] [bp-20h] BYREF
-    char v46; // [sp+82h] [bp-1Eh]
-    char v47; // [sp+83h] [bp-1Dh]
-    int v48; // [sp+84h] [bp-1Ch]
-    int *v49; // [sp+88h] [bp-18h]
-    int v50; // [sp+8Ch] [bp-14h] BYREF
-    int v51; // [sp+90h] [bp-10h] BYREF
-    float v52; // [sp+94h] [bp-Ch]
-    int v53; // [sp+98h] [bp-8h] BYREF
-    float v54; // [sp+9Ch] [bp-4h]
-  
-    v3 = (_BYTE *)(a1 + 7427);
-    v2 = *(unsigned __int8 *)(a1 + 7427);
-    switch ( v2 )
-    {
-      case 0:
-        CollisionActor::handleSpeed(a1);
-        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-        if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
-          *(_DWORD *)(a1 + 124) = 0;
-        v5 = *(_DWORD **)(a1 + 7096);
-        v4 = a1 + 7096;
-        v6 = v5[3];
-        v7 = v5[17];
-        if ( v5[2] > v7 )
-          v6 += 4 * v7;
-        if ( (*(_BYTE *)(*(_DWORD *)v6 + 28) & 0x20) == 0 )
-          goto LABEL_51;
-        LODWORD(v8) = 0;
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_VOC_BKK_JUMP", nullptr);
-        sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_JUMP_L", nullptr);
-        *(_DWORD *)(a1 + 3180) |= 4u;
-        *(_DWORD *)(a1 + 3188) |= 4u;
-        *(_DWORD *)(a1 + 3204) |= 4u;
-        v9 = *(unsigned __int8 *)(a1 + 7428);
-        if ( v9 == 1 )
-        {
-          HIDWORD(v8) = 1090833613;
-          *(_DWORD *)(a1 + 7400) = 0;
-          *v3 = 20;
-          *(_QWORD *)(a1 + 120) = v8;
-          v10 = (_BYTE *)(a1 + 7426);
-          if ( *(_BYTE *)(a1 + 7426) == 6 )
-            goto LABEL_51;
-          v11 = *(_DWORD *)(a1 + 7380);
-          v12 = *(_DWORD *)(a1 + 7100);
-          v13 = *(_DWORD *)v4;
-        }
-        else
-        {
-          v33 = (_DWORD *)(a1 + 7400);
-          if ( v9 == 2 )
-          {
-            *v33 = 0;
-            *v3 = 20;
-            *(_QWORD *)(a1 + 120) = 0x4104CCCDC0200000LL;
-            v10 = (_BYTE *)(a1 + 7426);
-            if ( *(_BYTE *)(a1 + 7426) == 6 )
-              goto LABEL_51;
-            v11 = *(_DWORD *)(a1 + 7380);
-            v12 = *(_DWORD *)(a1 + 7100);
-            v13 = *(_DWORD *)v4;
-          }
-          else
-          {
-            *v33 = 2;
-            *v3 = 30;
-            *(_WORD *)(a1 + 7416) = 36;
-            *(_QWORD *)(a1 + 120) = 0x4080000040200000LL;
-            v10 = (_BYTE *)(a1 + 7426);
-            if ( *(_BYTE *)(a1 + 7426) == 6 )
-              goto LABEL_51;
-            v11 = *(_DWORD *)(a1 + 7380);
-            v12 = *(_DWORD *)(a1 + 7100);
-            v13 = *(_DWORD *)v4;
-          }
-        }
-        sub_60421938(v13, v12, 13104976);
-        v35 = *(_DWORD **)(*(_DWORD *)v4 + 12);
-        v36 = *(_DWORD *)(*(_DWORD *)v4 + 68);
-        if ( *(_DWORD *)(*(_DWORD *)v4 + 8) > v36 )
-          v35 += v36;
-        AnimationCtrl_setRepeat(*v35 + 4, 0);
-        v37 = *(_DWORD *)(*(_DWORD *)v4 + 12);
-        v38 = *(_DWORD *)(*(_DWORD *)v4 + 68);
-        if ( *(_DWORD *)(*(_DWORD *)v4 + 8) > v38 )
-          v37 += 4 * v38;
-        *(_DWORD *)(*(_DWORD *)v37 + 24) = v11;
-        *v10 = 6;
-        goto LABEL_51;
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-      case 6:
-      case 7:
-      case 8:
-      case 9:
-      case 11:
-      case 12:
-      case 13:
-      case 14:
-      case 15:
-      case 16:
-      case 17:
-      case 18:
-      case 19:
-      case 21:
-      case 22:
-      case 23:
-      case 24:
-      case 25:
-      case 26:
-      case 27:
-      case 28:
-      case 29:
-        goto LABEL_19;
-      case 10:
-      case 20:
-        CollisionActor::handleGravity(a1);
-        CollisionActor::handleSpeed(a1);
-        v21 = *(float *)(a1 + 112);
-        v51 = *(_DWORD *)(a1 + 108);
-        v53 = v51;
-        v52 = v21;
-        v54 = v21 + -5.0;
-        v50 = 12328856;
-        v45 = 0;
-        v46 = *(_BYTE *)(a1 + 86);
-        v47 = *(_BYTE *)(a1 + 87);
-        v48 = 0;
-        v49 = &v50;
-        v22 = TileCheck_ctor((int)&v42, (int)&v45);
-        v40 = 0;
-        v41 = 0;
-        if ( !TileCheck_check(v22, (int)v39, (float *)&v53, (float *)&v51, 15) )
-          *(_DWORD *)(a1 + 116) = 1153138688;
-        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-        if ( *(float *)(a1 + 124) >= 0.0 )
-          goto LABEL_51;
-        *(_DWORD *)(a1 + 3204) &= ~4u;
-  LABEL_28:
-        *v3 = 100;
-        goto LABEL_51;
-      case 30:
-        CollisionActor::handleGravity(a1);
-        CollisionActor::handleSpeed(a1);
-        v23 = *(_DWORD *)(a1 + 108);
-        v24 = *(float *)(a1 + 112);
-        v45 = 0;
-        v51 = v23;
-        v53 = v23;
-        v52 = v24;
-        v54 = v24 + -5.0;
-        v50 = 12328856;
-        v46 = *(_BYTE *)(a1 + 86);
-        v47 = *(_BYTE *)(a1 + 87);
-        v48 = 0;
-        v49 = &v50;
-        v25 = TileCheck_ctor((int)&v42, (int)&v45);
-        v40 = 0;
-        v41 = 0;
-        if ( !TileCheck_check(v25, (int)v39, (float *)&v53, (float *)&v51, 15) )
-          *(_DWORD *)(a1 + 116) = 1153138688;
-        CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-        if ( *(float *)(a1 + 124) < 0.0 )
-          goto LABEL_28;
-        goto LABEL_51;
-      default:
-        if ( v2 == 100 )
-        {
-          CollisionActor::handleGravity(a1);
-          CollisionActor::handleSpeed(a1);
-          CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-          if ( !*(_WORD *)(a1 + 7416) && (*(_BYTE *)(a1 + 2872) & 1) != 0 )
-          {
-            *(_DWORD *)(a1 + 120) = 0;
-            *(_DWORD *)(a1 + 124) = 0;
-            *(_DWORD *)(a1 + 128) = 0;
-            *(_DWORD *)(a1 + 3180) &= ~4u;
-            *(_DWORD *)(a1 + 3188) &= ~4u;
-            *(_DWORD *)(a1 + 3204) &= ~4u;
-            v26 = *(_DWORD *)(a1 + 108);
-            v43 = *(_DWORD *)(a1 + 112);
-            v42 = v26;
-            v44 = 1166843904;
-            EffectData_create(971, (int)&v42, 0, 0);
-            v42 = 15;
-            v43 = MEMORY[0xC263B4];
-            LOBYTE(v44) = 0;
-            sub_60813430((_DWORD *)(a1 + 6332), (int)"SE_BOSS_KK_LAND", &v42);
-            AreaRumbleMgr_rumble(MEMORY[0xC99E3C], 6, 1, 0, 0);
-            if ( !*(_BYTE *)(a1 + 7433) )
-            {
-              if ( *(_BYTE *)(a1 + 7426) != 8 )
-              {
-                v27 = a1 + 7096;
-                v28 = *(_DWORD *)(a1 + 7380);
-                sub_60421938(*(_DWORD *)(a1 + 7096), *(_DWORD *)(a1 + 7100), 13104992);
-                v29 = *(_DWORD **)(*(_DWORD *)(a1 + 7096) + 12);
-                v30 = *(_DWORD *)(*(_DWORD *)(a1 + 7096) + 68);
-                if ( *(_DWORD *)(*(_DWORD *)(a1 + 7096) + 8) > v30 )
-                  v29 += v30;
-                AnimationCtrl_setRepeat(*v29 + 4, 0);
-                v31 = *(_DWORD *)(*(_DWORD *)v27 + 12);
-                v32 = *(_DWORD *)(*(_DWORD *)v27 + 68);
-                if ( *(_DWORD *)(*(_DWORD *)v27 + 8) > v32 )
-                  v31 += 4 * v32;
-                *(_DWORD *)(*(_DWORD *)v31 + 24) = v28;
-                *(_BYTE *)(a1 + 7426) = 8;
-              }
-              ++*v3;
-            }
-          }
-        }
-        else
-        {
-          if ( v2 != 101 )
-          {
-  LABEL_19:
-            v19 = 13105256;
-            v20 = *(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192);
-  LABEL_20:
-            v20(a1, v19);
-            goto LABEL_51;
-          }
-          CollisionMgr_process((unsigned __int8 *)(a1 + 648));
-          if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
-            *(_DWORD *)(a1 + 124) = 0;
-          v14 = *(_DWORD **)(a1 + 7096);
-          v15 = v14[3];
-          v16 = v14[2];
-          v17 = v14[17];
-          if ( v16 > v17 )
-            v15 += 4 * v17;
-          if ( (*(_BYTE *)(*(_DWORD *)v15 + 28) & 0x20) != 0 )
-          {
-            v18 = *(unsigned __int8 *)(a1 + 7428);
-            if ( v18 == 1 )
-            {
-              (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13106016);
-              goto LABEL_51;
-            }
-            v20 = *(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192);
-            if ( v18 == 2 )
-              return ((int (__fastcall *)(int, int))v20)(a1, 13106080);
-            v19 = 13105128;
-            goto LABEL_20;
-          }
-        }
-  LABEL_51:
-        if ( *(_WORD *)(a1 + 7416) )
-          --*(_WORD *)(a1 + 7416);
-        result = *(unsigned __int8 *)(a1 + 7433);
-        if ( *(_BYTE *)(a1 + 7433) )
-        {
-          v42 = (int)(float)((float)(MEMORY[0xB0E1E0] * 35.0) / MEMORY[0xB0E1D8])
-              * *(char *)(*(_DWORD *)(a1 + 80) + 11527156);
-          v39[0] = 0x8000000;
-          result = moveValueTo((int *)(a1 + 160), &v42, v39, 11592160);
-          if ( result == 1 )
-          {
-            result = 0;
-            *(_BYTE *)(a1 + 7433) = 0;
-          }
-        }
-        return result;
-    }
   }
 
 /* ============================================================================
@@ -20648,57 +20039,6 @@
       return 0;
     }
     return result;
-  }
-
-/* ============================================================================
- * SE_OBJ_BOSS_KK_THUNDER_ref_2
- * RVA 0x00033f90   size 0x224   xrefs 0
- * ============================================================================ */
-  int __fastcall SE_OBJ_BOSS_KK_THUNDER_ref_2(int a1)
-  {
-    _BOOL4 v2; // r0
-    float v3; // t1
-    int v4; // r7
-    int v5; // r7
-    int v6; // r1
-    float v8[4]; // [sp+18h] [bp-10h] BYREF
-  
-    v2 = *(_DWORD *)(a1 + 20) != 0;
-    *(_DWORD *)(a1 + 6900) = v2;
-    *(_BYTE *)(a1 + 6905) = v2;
-    v3 = *(float *)(a1 + 108);
-    v8[1] = *(float *)(a1 + 112);
-    v8[0] = v3;
-    v8[2] = 4500.0;
-    EffectWrapper_update((int32x4_t *)(a1 + 6488), 35, v8, nullptr, nullptr);
-    *(_DWORD *)(a1 + 116) = 1153138688;
-    ActiveCollider::init(a1 + 188, a1, dword_60BC272C, 0);
-    v4 = MEMORY[0xC88234];
-    if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 188) && !ActiveColliderMgr_isInCreateList(v4, a1 + 188) )
-      ActiveColliderMgr_addToCreateList(v4, a1 + 188);
-    ActiveCollider::init(a1 + 6592, a1, dword_60BC2758, a1 + 6104);
-    v5 = MEMORY[0xC88234];
-    if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 6592)
-      && !ActiveColliderMgr_isInCreateList(v5, a1 + 6592) )
-    {
-      ActiveColliderMgr_addToCreateList(v5, a1 + 6592);
-    }
-    CollisionMgr_init(a1 + 648, a1, dword_60AF51F8, nullptr, flt_60AF5204);
-    *(_BYTE *)(a1 + 6904) = 0;
-    *(_DWORD *)(a1 + 100) = 0;
-    *(_DWORD *)(a1 + 3196) |= 4u;
-    *(_DWORD *)(a1 + 3180) |= 4u;
-    *(_DWORD *)(a1 + 3188) |= 4u;
-    *(_DWORD *)(a1 + 3204) |= 4u;
-    *(_DWORD *)(a1 + 136) = -1054867456;
-    LightSource_update1(a1 + 6416, 35, (_DWORD *)(a1 + 108), nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
-    if ( *(_DWORD *)(a1 + 6900) )
-      v6 = 13106520;
-    else
-      v6 = 13106456;
-    (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, v6);
-    sub_60813430((_DWORD *)(a1 + 6108), (int)"SE_OBJ_BOSS_KK_THUNDER", nullptr);
-    return 1;
   }
 
 /* ============================================================================
@@ -26733,30 +26073,6 @@
   }
 
 /* ============================================================================
- * ColliderBase_vf10
- * RVA 0x0004b9b0   size 0x30   xrefs 0
- * ============================================================================ */
-  bool __fastcall ColliderBase_vf10(int a1, int a2, char a3)
-  {
-    int v4; // [sp+4h] [bp-4h] BYREF
-  
-    v4 = a2;
-    return sub_6015A8D0(&v4, (_DWORD *)0xAF76F8, (_DWORD *)0xAF7708, a3);
-  }
-
-/* ============================================================================
- * ColliderBase_vf14
- * RVA 0x0004b9e8   size 0x2c   xrefs 0
- * ============================================================================ */
-  int __fastcall ColliderBase_vf14(int a1, int a2)
-  {
-    int v3; // [sp+4h] [bp-4h] BYREF
-  
-    v3 = a2;
-    return sub_6015A964(&v3, (_DWORD *)0xAF76F8, (int *)0xAF7708);
-  }
-
-/* ============================================================================
  * RectCollider_dtorFree
  * RVA 0x0004ba1c   size 0x10   xrefs 0
  * ============================================================================ */
@@ -26831,15 +26147,6 @@
       }
     }
     return v2;
-  }
-
-/* ============================================================================
- * SolidOnTopCollider_vf28
- * RVA 0x0004c118   size 0x8   xrefs 0
- * ============================================================================ */
-  int SolidOnTopCollider_vf28()
-  {
-    return 0;
   }
 
 /* ============================================================================
@@ -38101,7 +37408,7 @@
             {
               sub_60000A18(v5);
               v17 = sub_602856EC((int *)(a1 + 6292), *(_DWORD *)(v5 + 564));
-              SE_SYS_THREE_UP_ref_2(MEMORY[0xC7F52C], v5 + 108, v17, v16, 1);
+              sub_60022540(MEMORY[0xC7F52C], v5 + 108, v17, v16, 1);
             }
             sub_602A58B4(v5, v5);
           }
@@ -72997,44 +72304,6 @@
         (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 720))(v5);
       return sub_60421AD4(*(_DWORD *)(a1 + 7096), v6, 0);
     }
-  }
-
-/* ============================================================================
- * SE_VOC_LUD_MAGIC_SHOT_ref
- * RVA 0x000eada4   size 0x11c   xrefs 0
- * ============================================================================ */
-  int *__fastcall SE_VOC_LUD_MAGIC_SHOT_ref(int a1)
-  {
-    int v2; // r6
-    int v3; // r1
-    _BYTE *v4; // r7
-    int v5; // r0
-    int v6; // r5
-    int v7; // r6
-    int *result; // r0
-  
-    v2 = a1;
-    v4 = (_BYTE *)(a1 + 8132);
-    v3 = *(unsigned __int8 *)(a1 + 8132);
-    v5 = *(_DWORD *)(a1 + 7112);
-    if ( v3 )
-      v2 = *(_DWORD *)(a1 + 56);
-    v6 = v5 + 16;
-    if ( !(*(int (__fastcall **)(int))(*(_DWORD *)v2 + 716))(v2) )
-      (*(int (__fastcall **)(int))(*(_DWORD *)v2 + 720))(v2);
-    sub_60421AD4(*(_DWORD *)(a1 + 7096), v6, 0);
-    ActiveCollider::init(a1 + 7184, a1, dword_60BCE2E8, 0);
-    v7 = MEMORY[0xC88234];
-    if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 7184)
-      && !ActiveColliderMgr_isInCreateList(v7, a1 + 7184) )
-    {
-      ActiveColliderMgr_addToCreateList(v7, a1 + 7184);
-    }
-    *(_DWORD *)(a1 + 7092) = 1;
-    result = (int *)(unsigned __int8)*v4;
-    if ( !*v4 )
-      return sub_608134CC((_DWORD *)(a1 + 6332), (int)"SE_VOC_LUD_MAGIC_SHOT", *(__int16 *)(a1 + 6640), nullptr);
-    return result;
   }
 
 /* ============================================================================

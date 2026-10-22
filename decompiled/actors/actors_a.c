@@ -32681,7 +32681,7 @@
     if ( *(_BYTE *)(a1 + 6364) == 2 )
     {
       v7 = sub_60285510(a2);
-      SE_SYS_THREE_UP_ref_2(MEMORY[0xC7F52C], a1 + 108, v7, *(char *)(a1 + 6356), 1);
+      sub_60022540(MEMORY[0xC7F52C], a1 + 108, v7, *(char *)(a1 + 6356), 1);
     }
     v8 = *(_DWORD *)(a1 + 112);
     v9 = MEMORY[0xC7F530];
@@ -35125,7 +35125,7 @@
     *(_DWORD *)(v5 + 28) |= 2u;
     AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4, 1);
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
-    CollisionMgr_vf14(a1 + 648);
+    sub_6014B310(a1 + 648);
     v6 = *(_DWORD *)(a1 + 6128);
     *(_DWORD *)(a1 + 6284) = v6;
     *(_DWORD *)(a1 + 104) = 0;
@@ -35144,7 +35144,7 @@
       }
       else
       {
-        SE_SYS_THREE_UP_ref_2(MEMORY[0xC7F52C], a1 + 108, v8, v9, 1);
+        sub_60022540(MEMORY[0xC7F52C], a1 + 108, v8, v9, 1);
       }
     }
     v10 = &flt_60259740;
@@ -43589,7 +43589,7 @@
     sub_6015913C(v2, 1024);
     *(_DWORD *)(a1 + 328) = 9;
     *(_DWORD *)(a1 + 568) &= ~2u;
-    CollisionMgr_vf14(a1 + 648);
+    sub_6014B310(a1 + 648);
     *(_BYTE *)(a1 + 6055) = 1;
     return 6055;
   }
@@ -43627,7 +43627,7 @@
     }
     *(_BYTE *)(a1 + 6340) = -1;
     *(_DWORD *)(a1 + 6344) = 0;
-    CollisionMgr_vf14(a1 + 648);
+    sub_6014B310(a1 + 648);
     *(_DWORD *)(a1 + 568) |= 2u;
     *(_BYTE *)(a1 + 538) &= 0xF8u;
     *(_BYTE *)(a1 + 6055) = 0;
@@ -45079,7 +45079,7 @@
     result = 0;
     if ( v2 == 1 )
     {
-      CollisionMgr_vf18(a1 + 6664);
+      sub_6014BBC8(a1 + 6664);
       return 1;
     }
     return result;
@@ -57157,7 +57157,7 @@
         }
         else if ( v6 == 1 )
         {
-          SE_SYS_THREE_UP_ref_2(MEMORY[0xC7F52C], (int)v7, v4, *(char *)(a2 + 84), 1);
+          sub_60022540(MEMORY[0xC7F52C], (int)v7, v4, *(char *)(a2 + 84), 1);
         }
       }
     }
@@ -59684,7 +59684,7 @@
         sub_60022760(MEMORY[0xC7F52C], a1, v3, v4);
       }
     }
-    CollisionMgr_vf14(a1 + 648);
+    sub_6014B310(a1 + 648);
     v5 = *(_DWORD *)(a1 + 6108);
     *(_DWORD *)(a1 + 120) = *(_DWORD *)(a1 + 6104);
     *(_DWORD *)(a1 + 124) = v5;
@@ -60375,7 +60375,7 @@
   {
     sub_602F37B0(a1 + 6152);
     (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 208))(a1);
-    CollisionMgr_vf14((int)(a1 + 648));
+    sub_6014B310((int)(a1 + 648));
     (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 212))(a1);
     (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)a1 + 72))(a1);
     a1[6220] = 1;
@@ -60460,7 +60460,7 @@
  * ============================================================================ */
   int __fastcall Enemy::vf210(int a1)
   {
-    return CollisionMgr_vf14(a1 + 648);
+    return sub_6014B310(a1 + 648);
   }
 
 /* ============================================================================
@@ -60568,7 +60568,7 @@
  * ============================================================================ */
   int __fastcall Enemy::vf234(int a1)
   {
-    return CollisionMgr_vf14(a1 + 648);
+    return sub_6014B310(a1 + 648);
   }
 
 /* ============================================================================
@@ -62116,7 +62116,7 @@
   
     v4 = *(char *)(*(_DWORD *)(a3 + 64) + 84);
     if ( v4 <= 3 )
-      SE_SYS_THREE_UP_ref_2(MEMORY[0xC7F52C], a1 + 108, 1u, v4, 1);
+      sub_60022540(MEMORY[0xC7F52C], a1 + 108, 1u, v4, 1);
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13175600);
     return 1;
   }
@@ -62262,7 +62262,7 @@
     float *v4; // r1
   
     (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
-    CollisionMgr_vf14(a1 + 648);
+    sub_6014B310(a1 + 648);
     *(_DWORD *)(a1 + 500) = 1124073472;
     *(_DWORD *)(a1 + 504) = 1132462080;
     *(_DWORD *)(a1 + 508) = 1124073472;
@@ -62285,7 +62285,7 @@
       }
       else
       {
-        SE_SYS_THREE_UP_ref_2(MEMORY[0xC7F52C], a1 + 108, v2, v3, 1);
+        sub_60022540(MEMORY[0xC7F52C], a1 + 108, v2, v3, 1);
       }
     }
     v4 = &flt_602ADCEC;

@@ -3399,9 +3399,7 @@ int __fastcall sub_60027798(int a1);  /* 0x00027798 */
 int __fastcall sub_60027938(int a1);  /* 0x00027938 */
 int __fastcall sub_60027A7C(_DWORD *a1);  /* 0x00027a7c */
 bool __fastcall sub_60027FB0(int a1);  /* 0x00027fb0 */
-int __fastcall sub_6002BFD4(int a1);  /* 0x0002bfd4 */
 int __fastcall sub_6002C728(int a1);  /* 0x0002c728 */
-int __fastcall SE_VOC_BKK_JUMP_ref(int a1);  /* 0x0002e24c */
 int __fastcall sub_6002F5B0(int a1);  /* 0x0002f5b0 */
 int __fastcall sub_6002F720(int a1, float *a2, int a3);  /* 0x0002f720 */
 int __fastcall sub_6002F978(int a1);  /* 0x0002f978 */
@@ -3414,7 +3412,6 @@ int __fastcall sub_60033498(int a1);  /* 0x00033498 */
 int __fastcall SE_OBJ_BOSS_KK_THUNDER_L_ref(int a1);  /* 0x00033b54 */
 int __fastcall SE_OBJ_BOSS_KK_THUNDER_SEPARATE_ref(_DWORD *a1);  /* 0x00033ce4 */
 int __fastcall SE_OBJ_BOSS(_DWORD *a1);  /* 0x00033d4c */
-int __fastcall SE_OBJ_BOSS_KK_THUNDER_ref_2(int a1);  /* 0x00033f90 */
 int __fastcall SE_OBJ_CMN_TOUCH_THUNDER_ref(int a1, int a2, int a3);  /* 0x0003454c */
 int __fastcall jcb_demo_battleA_ref(int a1);  /* 0x00034c20 */
 int __fastcall sub_60034D14(int a1);  /* 0x00034d14 */
@@ -3463,8 +3460,6 @@ int __fastcall sub_60048550(int a1);  /* 0x00048550 */
 int __fastcall SE_BOSS_JR_CLOWN_DAMAGE_ref(int a1, int a2, int a3, int a4);  /* 0x00048e20 */
 int __fastcall SE_BOSS_JR_CLOWN_COME_BOXER_ref(int a1);  /* 0x00049898 */
 int __fastcall SE_BOSS_JR_CLOWN_PUNCH_ref(int a1);  /* 0x00049a28 */
-bool __fastcall ColliderBase_vf10(int a1, int a2, char a3);  /* 0x0004b9b0 */
-int __fastcall ColliderBase_vf14(int a1, int a2);  /* 0x0004b9e8 */
 int __fastcall RectCollider_dtorFree(int a1);  /* 0x0004ba1c */
 bool __fastcall RectCollider_checkRTTI(int a1, int a2);  /* 0x0004ba2c */
 bool __fastcall sub_6004BAA8(int a1);  /* 0x0004baa8 */
