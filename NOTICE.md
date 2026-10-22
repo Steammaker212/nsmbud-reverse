@@ -35,6 +35,28 @@ remain under their own authorship and licence terms. They are present as
 reference for class layout and semantics — not as a claim of authorship, and
 not as a description of the Switch binary.
 
+## Third-party tooling and licensing
+
+Two GPL-3.0 projects informed this work:
+
+* [`codedx`](https://github.com/RicBent/codedx) by RicBent — a Switch-side
+  reference for class layout and symbol naming.
+* [`sweet-dx`](https://github.com/jabonchan/sweet-dx) by jabonchan — the build
+  toolchain the `sweetdx/` project targets.
+
+**Neither is vendored.** Both are GPL-3.0, and this repository is not; including
+their source here would force this repository under GPL-3.0. Both are listed in
+`.gitignore`, and `sweetdx/` contains none of their code.
+
+The headers under `sweetdx/include/` were written from offsets and behaviour
+recovered from the retail binary. Where a name or offset coincides with theirs,
+it is because there is only one correct answer, not because the text was copied.
+`scripts/audit_similarity.py` measures this claim rather than asserting it — the
+highest similarity to any codedx header is 0.70, and every file is categorised as
+independent.
+
+You will need your own copies of those projects if you want to build with them.
+
 ## Patch tooling
 
 `scripts/apply_approach_b.py` and related tools operate on a **copy** of the

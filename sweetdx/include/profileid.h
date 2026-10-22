@@ -17,10 +17,14 @@ enum ProfileIdType
     FlagSwitchRandom,
 
     // ---- power-up projectiles -----------------------------------------
+    // Verified against doc/profiles.csv: 474 Ice ball, 475 "Ice ice ball for
+    // packon" (Piranha Plant), 476 Player fireball, 477 Fireball Packon,
+    // 478 Yoshi's Flame.
     PlayerIceBall = 474,        // Ice ball thrown by a player
-    PlayerFireBall,             // 476 -- the slot the Hammer reuses
-    PlantFireBall,
-    YoshiFlame,
+    PlantIceBall,               // 475  Piranha Plant's ice ball
+    PlayerFireBall,             // 476  the slot the Hammer reuses
+    PlantFireBall,              // 477
+    YoshiFlame,                 // 478
 
     // ---- enemies -------------------------------------------------------
     Goomba = 467,
@@ -62,8 +66,24 @@ enum ProfileIdType
     // ---- Toad explainer NPC (NOT a Cheep Cheep) ------------------------
     ExplanationKinopio = 887,
 
-    // ---- custom profiles start here ------------------------------------
-    Num = 914
+    // ---- custom profiles start at 914 -----------------------------------
+    //
+    // These are additions, not retail ids. The first two are confirmed working
+    // in-game (the Fake Star Coin replaces a star coin and collects correctly;
+    // Mr. Sun behaves as the Angry Sun enemy). The rest follow the same pattern
+    // and are kept so existing sources compile against this tree.
+    FakeStarCoin = 914,
+    MrSun,              // 915  Angry Sun / Mad Moon
+    MrMoon,             // 916
+    ActorSpawner,       // 917
+    ModelTest,          // 918
+    LightActor,         // 919
+    BombBros,           // 920
+    EffectSpawner,      // 921
+    MagicLift,          // 922
+    KoopaShellBros,     // 923
+
+    Num                 // 924 -- one past the last valid custom id
 };
 
 }; // namespace ProfileId

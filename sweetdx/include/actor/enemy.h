@@ -2,7 +2,7 @@
 
 #include "multistateactor.h"
 
-class EnemyFreezeMgr;
+#include "enemyfreezemgr.h"
 
 // An enemy. freezeMgr sits at +0x1808 (confirmed).
 //
@@ -18,7 +18,12 @@ public:
 
     virtual void freeze();
 
+    // Default collision handler for enemies. Derived classes that need custom
+    // contact behaviour assign their own here and let ActiveCollider::Info point
+    // at it.
+    static void collisionCallback(ActiveCollider* acSelf, ActiveCollider* acOther);
+
     u8 _17D8[0x1808 - 0x17D8];   // +0x17D8..0x1808  unmapped
-    EnemyFreezeMgr* freezeMgr;   // +0x1808  confirmed
-    u8 _180C[0x189A - 0x180C];   // +0x180C..0x189A  unmapped tail
+    EnemyFreezeMgr freezeMgr;    // +0x1808  confirmed (embedded, not a pointer)
+    u8 _tail[0x189A - (0x1808 + 0x50)];   // +0x1858..0x189A  unmapped tail
 };
