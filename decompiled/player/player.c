@@ -254,7 +254,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCC2C60] = 0;
     }
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -280,7 +280,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (_DWORD *)MEMORY[0xCC2C60];
     if ( !MEMORY[0xCC2C60] )
     {
-      v2 = (_DWORD *)operator new[](20, a1, 4);
+      v2 = (_DWORD *)__operator_new[](20, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *v2 = 12732888;
       MEMORY[0xCC2C5C] = v2;
@@ -934,7 +934,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v2; // r4
   
-    v2 = (_DWORD *)operator new(0x768u);
+    v2 = (_DWORD *)__operator_new(0x768u);
     StageActor__StageActor((int)v2, a1);
     *v2 = 12732904;
     v2[161] = 0;
@@ -973,7 +973,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     Model2 = Resource_getModel2(ResArchiveById, (int)&dword_60CC4304, 0, 0, 1, 0, 0, 0, 0);
-    v4 = operator new(0x30u, 0, 4);
+    v4 = __operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 644) = v4;
@@ -1445,7 +1445,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     EffectData_release((int)(a1 + 193));
     sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 193));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -2532,7 +2532,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xCC436C] = 0;
     }
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -2548,7 +2548,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xCC436C];
     if ( !MEMORY[0xCC436C] )
     {
-      v3 = operator new[](212, a1, 4);
+      v3 = __operator_new[](212, a1, 4);
       v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12733044;
       MEMORY[0xCC4368] = v4;
@@ -6689,7 +6689,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
         Model = Resource_getModel2(a1[4], (int)v13, 3, 2, 4, 0, 0, 0, 0);
       v15 = Model;
-      v16 = (_DWORD *)operator new(48, 0, 4);
+      v16 = (_DWORD *)__operator_new(48, 0, 4);
       v17 = ModelWrapper_ctor(v16, v15, 3, 2, 4, 0, 0);
       v3 = a2;
       ModelWrapper_setup(v17, v12, a2, 0);
@@ -6706,7 +6706,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
           Model2 = Resource_getModel2(v20, (int)v21, 1, 2, 4, 0, 0, 0, 0);
         v23 = Model2;
-        v24 = (_DWORD *)operator new(48, 0, 4);
+        v24 = (_DWORD *)__operator_new(48, 0, 4);
         v25 = ModelWrapper_ctor(v24, v23, 1, 2, 4, 0, 0);
         v3 = a2;
         result = (int)ModelWrapper_setup(v25, v20, a2, 0);
@@ -6747,7 +6747,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
         v28 = Resource_getModel2(v7, (int)v27, 3, 2, 4, 0, 0, 0, 0);
       v29 = v28;
-      v30 = (_DWORD *)operator new(48, 0, 4);
+      v30 = (_DWORD *)__operator_new(48, 0, 4);
       v31 = ModelWrapper_ctor(v30, v29, 3, 2, 4, 0, 0);
       result = (int)ModelWrapper_setup(v31, v7, (int)&v35, 0);
       a1[65] = (int)v30;
@@ -10569,7 +10569,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12733060;
     nullsub_407((char *)a1 + 408);
     v2 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v2);
+    return __operator_delete((int)v2);
   }
 
 /* ============================================================================
@@ -10676,7 +10676,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     struct sead_IDisposer *v1; // r0
   
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -12555,21 +12555,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       case 0:
       case 1:
-        v11 = operator new(584);
+        v11 = __operator_new(584);
         result = LuigiAnm_ref(v11, a1, a2, a3, a5);
         break;
       case 2:
       case 3:
       case 4:
-        v10 = operator new(564);
+        v10 = __operator_new(564);
         result = sub_607578C8(v10, a1, a2, a3, a5);
         break;
       case 5:
-        v12 = operator new(580);
+        v12 = __operator_new(580);
         result = shadowkun_player_ref(v12, 5, a2, a3, a5);
         break;
       case 6:
-        v13 = operator new(1060);
+        v13 = __operator_new(1060);
         result = sub_60751808(v13, 6, a2, a3, a5);
         break;
       case 8:
@@ -12582,7 +12582,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v16 = v14 + 72 * v15;
         v17 = *(_DWORD *)(v16 + 36);
         v18 = *(_DWORD *)(v16 + 44);
-        v19 = operator new(1184);
+        v19 = __operator_new(1184);
         result = MiiAnm_ref(v19, 8, a2, a3, v17, v18, a4, 0, a5, 0);
         break;
       default:
@@ -12618,7 +12618,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     sub_60794828();
     *a1 = 12733536;
-    v12 = (_DWORD *)operator new(1184);
+    v12 = (_DWORD *)__operator_new(1184);
     MiiAnm_ref((int)v12, 8, a2, 3, a3, a4, a5, a6, a7, a8);
     a1[3] = v12;
     sub_60794848((int)a1, v12);
@@ -12661,7 +12661,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v2; // r0
   
-    v2 = operator new(0x3AF8u);
+    v2 = __operator_new(0x3AF8u);
     return Player_ctor(v2, a1);
   }
 
@@ -12695,12 +12695,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 11940) = 0;
     *(_DWORD *)(a1 + 11944) = 0;
     *(_BYTE *)(a1 + 11948) = 0;
-    v5 = operator new(28);
+    v5 = __operator_new(28);
     *(_DWORD *)(a1 + 11952) = Player_ctor_helper_3E568C(v5, *(_DWORD *)(a1 + 20) & 0xF);
     sub_6074EE98(a1 + 11956);
     *(_DWORD *)(a1 + 12000) = 0;
     *(_BYTE *)(a1 + 12004) = 0;
-    v6 = operator new(36);
+    v6 = __operator_new(36);
     *(_DWORD *)(a1 + 12008) = Player_ctor_helper(v6, *(_DWORD *)(a1 + 20) & 0xF);
     *(_BYTE *)(a1 + 12012) = 0;
     *(_BYTE *)(a1 + 12013) = 0;
@@ -14951,7 +14951,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v1; // r0
   
     v1 = Player_vf8(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================

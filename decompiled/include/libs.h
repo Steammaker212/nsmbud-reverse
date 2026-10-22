@@ -3107,9 +3107,11 @@ int __fastcall sub_608DE018(int a1);  /* 0x008de018 */
 int __fastcall sub_608DE020(int a1);  /* 0x008de020 */
 int __fastcall sub_608DE02C(int a1);  /* 0x008de02c */
 int __fastcall sub_608DE034(int a1);  /* 0x008de034 */
+int __fastcall __operator_new(unsigned int a1);  /* 0x008de044 */
 int __fastcall sub_608DE1A4(unsigned int a1, int a2);  /* 0x008de1a4 */
 int __fastcall sub_608DE200(unsigned int a1, int a2);  /* 0x008de200 */
 int __fastcall sub_608DE334(unsigned int a1, int CurrentHeap, int a3);  /* 0x008de334 */
+int __fastcall __operator_delete(int a1);  /* 0x008de3a0 */
 int __fastcall sub_608DE510(int result, _DWORD *a2);  /* 0x008de510 */
 int __fastcall sub_608DE61C(int a1, int a2);  /* 0x008de61c */
 int __fastcall sub_608DE684(int a1, int a2);  /* 0x008de684 */

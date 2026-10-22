@@ -110,6 +110,15 @@ def main():
     run("2b/8 fix qualified names (repo tree)",
         [sys.executable, "scripts/fix_qualified_names.py",
          os.path.join(REPO, "decompiled"), "--write"])
+    # 2c. the data-label JSON that gen_data_header.py consumes listed only 233 labels, but the
+    #     corpus references 23,704 distinct dword_/unk_/byte_ names. The 23,471 that were never
+    #     exported are simply undefined when the header is included -- that is the whole
+    #     "use of undeclared identifier 'dword_...'" class. Derive the full set from the corpus,
+    #     so it cannot drift out of sync with what the code actually mentions.
+    LABELS = r"C:\Users\Saif Khan\Downloads\main.idb\.rea\data_labels_full.json"
+    run("2c/8 derive data labels",
+        [sys.executable, "scripts/gen_data_labels_from_corpus.py",
+         os.path.join(REPO, "decompiled"), LABELS])
     # 3. data header MUST precede restructure: restructure regenerates the prelude, and if
     #    nsmbudx_data.h does not exist yet the prelude cannot reference it. Getting this backwards
     #    silently dropped 31 files (250 -> 219) with no error, because the include still resolved.

@@ -27,7 +27,7 @@ int __fastcall sub_60451FEC(int a1);
 /* line: 4, address: 0x60451ffc */   v2 = MEMORY[0xC9CF0C];
 /* line: 5, address: 0x60452004 */   if ( !MEMORY[0xC9CF0C] )
 /* line: 6 */   {
-/* line: 7, address: 0x60452020 */     v2 = operator new[](5136, a1, 4);
+/* line: 7, address: 0x60452020 */     v2 = __operator_new[](5136, a1, 4);
 /* line: 8, address: 0x60452028 */     sead__IDisposer__IDisposer(v2, a1, 3);
 /* line: 9, address: 0x60452038 */     *(_DWORD *)v2 = 12562700;
 /* line: 10, address: 0x60452044 */     MEMORY[0xC9CF08] = v2;

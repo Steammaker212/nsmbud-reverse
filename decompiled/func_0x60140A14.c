@@ -26,7 +26,7 @@ int __fastcall sub_60140A14(int a1);
 /* line: 3 */   int result; // r0
 /* line: 4 */   int v4; // r1
 /* line: 5 */ 
-/* line: 6, address: 0x60140a20 */   v2 = operator new(6768);
+/* line: 6, address: 0x60140a20 */   v2 = __operator_new(6768);
 /* line: 7, address: 0x60140a28 */   result = sub_601424B4(v2, a1);
 /* line: 8, address: 0x60140a40 */   *(_DWORD *)result = 12399680;
 /* line: 9, address: 0x60140a48 */   *(_DWORD *)(result + 6760) = 0;

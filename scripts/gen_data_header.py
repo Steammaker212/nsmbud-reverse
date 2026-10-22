@@ -21,7 +21,7 @@ the two sources are compared and any disagreement is reported rather than averag
 import json
 import os
 
-SRC = r"C:\Users\Saif Khan\Downloads\main.idb\.rea\data_labels.json"
+SRC = r"C:\Users\Saif Khan\Downloads\main.idb\.rea\data_labels_full.json"
 OUT = r"C:\Users\Saif Khan\Downloads\nsmbud-reverse\decompiled\include\nsmbudx_data.h"
 
 BASE = 0x60000000

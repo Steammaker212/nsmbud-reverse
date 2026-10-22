@@ -86,7 +86,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v2; // r4
   
-    v2 = operator new(0x178u);
+    v2 = __operator_new(0x178u);
     sub_601A75F0(v2, a1);
     *(_DWORD *)v2 = 12420300;
     *(_DWORD *)(v2 + 280) = 12420520;
@@ -136,7 +136,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v12; // r0
     int v13; // r1
   
-    v2 = operator new(0x44u);
+    v2 = __operator_new(0x44u);
     v3 = sub_601DFE10(v2);
     a1[79] = v3;
     *(_DWORD *)(v3 + 16) = a1 + 80;
@@ -169,7 +169,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     do
     {
       Model = Resource_getModel(ResArchiveById, v8, 6, 1, 0, 0, 0, 0, 1, 0);
-      v10 = operator new(0x30u, 0, 4);
+      v10 = __operator_new(0x30u, 0, 4);
       v11 = ModelWrapper_ctor((_DWORD *)v10, Model, 1, 0, 0, 0, 0);
       ModelWrapper_setup(v11, ResArchiveById, 0, 0);
       v6[v7] = v10;
@@ -1142,7 +1142,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v1; // r0
   
     v1 = Actor__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -1287,7 +1287,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float v3; // s0
     int v4; // r0
   
-    v2 = operator new(0x250u);
+    v2 = __operator_new(0x250u);
     sub_6018668C(v2, (int)a1);
     *(_DWORD *)v2 = 12420608;
     *(_DWORD *)(v2 + 372) = 0;
@@ -1974,7 +1974,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
            0,
            1,
            0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, v3, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 372) = v4;
@@ -2271,7 +2271,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12407388;
     nullsub_691(a1 + 81);
     v3 = Actor__dtor(a1);
-    return operator delete((int)v3);
+    return __operator_delete((int)v3);
   }
 
 /* ============================================================================
@@ -2465,7 +2465,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8C5E4] = 0;
     }
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -2480,7 +2480,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xC8C5E4];
     if ( !MEMORY[0xC8C5E4] )
     {
-      v3 = operator new[](52, a1, 4);
+      v3 = __operator_new[](52, a1, 4);
       result = sead__IDisposer__IDisposer(v3, a1, 3);
       *(_DWORD *)result = 12420820;
       MEMORY[0xC8C5E0] = result;
@@ -2846,7 +2846,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     int result; // r0
   
-    v2 = operator new(0x130u);
+    v2 = __operator_new(0x130u);
     result = sub_601A75F0(v2, a1);
     *(_DWORD *)result = 12420848;
     *(_DWORD *)(result + 268) = 0;
@@ -2877,7 +2877,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "cobTomb";
     Model = Resource_getModel(ResArchiveById, v7, 6, 1, 0, 0, 0, 0, 1, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 268) = v4;
@@ -3126,7 +3126,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v1; // r0
   
     v1 = Actor__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -3138,7 +3138,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     int result; // r0
   
-    v2 = operator new(0x120u);
+    v2 = __operator_new(0x120u);
     result = sub_601A75F0(v2, a1);
     *(_DWORD *)result = 12420960;
     *(_BYTE *)(result + 284) = 0;
@@ -3198,7 +3198,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)v38 = 12321336;
     *(_DWORD *)&v38[4] = "cobToride";
     Model = Resource_getModel(ResArchiveById, v38, 6, 1, 0, 0, 0, 0, 1, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 268) = v4;
@@ -3715,7 +3715,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v1; // r0
   
     v1 = Actor__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -3749,7 +3749,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v5; // r1
     int v6; // r2
   
-    v2 = operator new(0x170u);
+    v2 = __operator_new(0x170u);
     sub_601A75F0(v2, a1);
     *(_DWORD *)v2 = 12421072;
     *(_DWORD *)(v2 + 268) = 0;
@@ -3926,7 +3926,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v24[0] = 12321336;
       v24[1] = "kameck";
       Model = Resource_getModel(ResArchiveById, v24, 6, 2, 1, 2, 0, 0, 1, 0);
-      v4 = (_DWORD *)operator new(0x48u, 0, 4);
+      v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
       v5 = ModelWrapper_ctorWithChild(v4, Model, 2, 1, 2, 0, 0);
       j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
       *(_DWORD *)(a1 + 268) = v4;
@@ -3952,7 +3952,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v24[0] = 12321336;
         v24[1] = "boss_KK";
         v12 = Resource_getModel(v11, v24, 6, 2, 1, 2, 0, 0, 1, 0);
-        v13 = (_DWORD *)operator new(0x48u, 0, 4);
+        v13 = (_DWORD *)__operator_new(0x48u, 0, 4);
         v14 = ModelWrapper_ctorWithChild(v13, v12, 2, 1, 2, 0, 0);
         j_ModelWrapper_setupModel(v14, v11, 0, 0);
         v15 = 1082130432;
@@ -3964,7 +3964,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v24[0] = 12321336;
         v24[1] = "bunbun";
         v18 = Resource_getModel(v17, v24, 6, 2, 1, 2, 0, 0, 1, 0);
-        v13 = (_DWORD *)operator new(0x48u, 0, 4);
+        v13 = (_DWORD *)__operator_new(0x48u, 0, 4);
         v19 = ModelWrapper_ctorWithChild(v13, v18, 2, 1, 2, 0, 0);
         j_ModelWrapper_setupModel(v19, v17, 0, 0);
         v15 = 1077936128;
@@ -5274,7 +5274,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v1; // r0
   
     v1 = Actor__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -5417,7 +5417,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v2; // r5
   
-    v2 = (_DWORD *)operator new(0x198u);
+    v2 = (_DWORD *)__operator_new(0x198u);
     sub_6018668C((int)v2, a1);
     *v2 = 12421404;
     memset(v2 + 93, 0, 0x21u);
@@ -5663,7 +5663,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Resource = LoadResource(MEMORY[0xC9CA88], v4);
     a1[94] = Resource;
     Model = Resource_getModel(Resource, v5, 6, 2, 0, 0, 0, 0, 1, 0);
-    v8 = operator new(72, 0, 4);
+    v8 = __operator_new(72, 0, 4);
     v9 = ModelWrapper_ctorWithChild(v8, Model, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v9, Resource, 0, 0);
     a1[93] = v8;
@@ -5927,7 +5927,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12407388;
     nullsub_691(a1 + 81);
     v2 = Actor__dtor(a1);
-    return operator delete((int)v2);
+    return __operator_delete((int)v2);
   }
 
 /* ============================================================================
@@ -6019,7 +6019,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v2; // r5
   
-    v2 = operator new(0x218u);
+    v2 = __operator_new(0x218u);
     sub_6020AB88(v2, a1);
     *(_DWORD *)v2 = 12421596;
     *(_DWORD *)(v2 + 408) = 0;
@@ -6059,7 +6059,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13 = 12321336;
     v14 = "bros";
     Model = Resource_getModel(ResArchiveById, &v13, 6, 2, 1, 0, 0, 0, 1, 0);
-    v4 = (_DWORD *)operator new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     a1[102] = (int)v4;
@@ -6977,7 +6977,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12407388;
     nullsub_691(a1 + 81);
     v3 = Actor__dtor(a1);
-    return operator delete((int)v3);
+    return __operator_delete((int)v3);
   }
 
 /* ============================================================================
@@ -7345,7 +7345,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12407388;
     nullsub_691(a1 + 81);
     v2 = Actor__dtor(a1);
-    return operator delete((int)v2);
+    return __operator_delete((int)v2);
   }
 
 /* ============================================================================
@@ -7392,7 +7392,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v2; // r5
   
-    v2 = operator new(0x220u);
+    v2 = __operator_new(0x220u);
     sub_6020AB88(v2, a1);
     *(_DWORD *)v2 = 12422092;
     *(_DWORD *)(v2 + 408) = 0;
@@ -7953,7 +7953,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v9 = "kuribo";
     Model = Resource_getModel(v2, &v8, 6, 2, 1, 0, 0, 0, 1, 0);
-    v4 = operator new(72, 0, 4);
+    v4 = __operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     a1[102] = v4;
@@ -8289,7 +8289,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12407388;
     nullsub_691(a1 + 81);
     v3 = Actor__dtor(a1);
-    return operator delete((int)v3);
+    return __operator_delete((int)v3);
   }
 
 /* ============================================================================
@@ -8558,7 +8558,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v2; // r5
   
-    v2 = operator new(0x1C8u);
+    v2 = __operator_new(0x1C8u);
     sub_6018668C(v2, a1);
     *(_DWORD *)v2 = 12422376;
     memset((void *)(v2 + 372), 0, 0x40u);
@@ -9120,7 +9120,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Resource = LoadResource(MEMORY[0xC9CA88], v3);
     a1[94] = Resource;
     Model = Resource_getModel(Resource, v3, 6, 2, 0, 0, 0, 0, 1, 0);
-    v6 = operator new(72, 0, 4);
+    v6 = __operator_new(72, 0, 4);
     v7 = ModelWrapper_ctorWithChild(v6, Model, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v7, Resource, 0, 0);
     a1[93] = v6;
@@ -9370,7 +9370,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12407388;
     nullsub_691(a1 + 81);
     v2 = Actor__dtor(a1);
-    return operator delete((int)v2);
+    return __operator_delete((int)v2);
   }
 
 /* ============================================================================
@@ -9394,7 +9394,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v5; // r1
     int v6; // r2
   
-    v2 = operator new(0x1D8u);
+    v2 = __operator_new(0x1D8u);
     sub_6018668C(v2, a1);
     *(_DWORD *)v2 = 12422568;
     *(_DWORD *)(v2 + 380) = 0;
@@ -9486,14 +9486,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v4 = 0;
     Model = Resource_getModel(ResArchiveById, &dword_60C8CF7C, 6, 1, 0, 0, 0, 0, 1, 0);
-    v6 = operator new(0x30u, 0, 4);
+    v6 = __operator_new(0x30u, 0, 4);
     v7 = ModelWrapper_ctor((_DWORD *)v6, Model, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v7, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 372) = v6;
     SkeletalAnim_play(**(_DWORD **)(v6 + 12), ResArchiveById, &dword_60C8CF8C);
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 372) + 12) + 24) = 1065353216;
     v8 = Resource_getModel(ResArchiveById, &dword_60C8CF84, 6, 1, 0, 0, 0, 0, 1, 0);
-    v9 = operator new(0x30u, 0, 4);
+    v9 = __operator_new(0x30u, 0, 4);
     v10 = ModelWrapper_ctor((_DWORD *)v9, v8, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v10, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 376) = v9;
@@ -11160,7 +11160,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12407388;
     nullsub_691(a1 + 81);
     v2 = Actor__dtor(a1);
-    return operator delete((int)v2);
+    return __operator_delete((int)v2);
   }
 
 /* ============================================================================
@@ -11189,7 +11189,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    v2 = operator new(0x128u);
+    v2 = __operator_new(0x128u);
     result = sub_601A75F0(v2, a1);
     *(_DWORD *)result = 12422920;
     *(_DWORD *)(result + 272) = 0;
@@ -11254,7 +11254,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v8 = *(_DWORD *)(a1 + 276);
       ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), v8);
       Model = Resource_getModel(ResArchiveById, (_DWORD *)&unk_60C8CFD0 + 2 * v8 + 3, 6, 0, 0, 1, 0, 0, 1, 0);
-      v11 = (_DWORD *)operator new(0x30u, 0, 4);
+      v11 = (_DWORD *)__operator_new(0x30u, 0, 4);
       v12 = ModelWrapper_ctor(v11, Model, 0, 0, 1, 0, 0);
       ModelWrapper_setup(v12, ResArchiveById, 0, 0);
       *(_DWORD *)(a1 + 268) = v11;
@@ -12470,7 +12470,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v1; // r0
   
     v1 = Actor__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -12481,7 +12481,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v2; // r5
   
-    v2 = operator new(0x1E0u);
+    v2 = __operator_new(0x1E0u);
     sub_6018668C(v2, a1);
     *(_DWORD *)v2 = 12423032;
     memset((void *)(v2 + 372), 0, 0x36u);
@@ -13320,7 +13320,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Resource = LoadResource(MEMORY[0xC9CA88], v4);
     a1[93] = Resource;
     Model = Resource_getModel(Resource, v4, 6, 1, 1, 0, 0, 0, 1, 0);
-    v7 = operator new(48, 0, 4);
+    v7 = __operator_new(48, 0, 4);
     v8 = ModelWrapper_ctor(v7, Model, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v8, Resource, 0, 0);
     a1[94] = v7;
@@ -13354,7 +13354,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v23 = 12321336;
     v24 = "block_pata";
     v16 = Resource_getModel(v15, &v23, 6, 1, 0, 0, 0, 0, 1, 0);
-    v17 = operator new(48, 0, 4);
+    v17 = __operator_new(48, 0, 4);
     v18 = ModelWrapper_ctor(v17, v16, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v18, v15, 0, 0);
     a1[96] = v17;
@@ -13935,7 +13935,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12407388;
     nullsub_691(a1 + 81);
     v2 = Actor__dtor(a1);
-    return operator delete((int)v2);
+    return __operator_delete((int)v2);
   }
 
 /* ============================================================================
@@ -14102,7 +14102,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x124u);
+    v2 = __operator_new(0x124u);
     result = (_DWORD *)sub_601A75F0(v2, a1);
     *result = 12423220;
     result[67] = 0;
@@ -14216,7 +14216,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v40 = 1.7266e-38;
         v41 = COERCE_FLOAT("CS_W8a_DarkCloud_Demo1");
         Model = Resource_getModel(v5, &v40, 6, 1, 0, 2, 0, 0, 1, 0);
-        v8 = (_DWORD *)operator new(0x30u, 0, 4);
+        v8 = (_DWORD *)__operator_new(0x30u, 0, 4);
         v9 = ModelWrapper_ctor(v8, Model, 1, 0, 2, 0, 0);
         ModelWrapper_setup(v9, v6, 0, 0);
         a1[68] = v8;
@@ -14229,7 +14229,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v40 = 1.7266e-38;
         v41 = COERCE_FLOAT("CS_W8a_DarkCloud_Demo1");
         v12 = Resource_getModel(v6, &v40, 6, 1, 0, 2, 0, 0, 1, 0);
-        v13 = (_DWORD *)operator new(0x30u, 0, 4);
+        v13 = (_DWORD *)__operator_new(0x30u, 0, 4);
         v14 = ModelWrapper_ctor(v13, v12, 1, 0, 2, 0, 0);
         ModelWrapper_setup(v14, v6, 0, 0);
         a1[67] = v13;
@@ -14243,7 +14243,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v40 = 1.7266e-38;
         v41 = COERCE_FLOAT("CS_W8a_DarkCloud");
         v15 = Resource_getModel(v6, &v40, 6, 1, 0, 2, 0, 0, 1, 0);
-        v16 = (_DWORD *)operator new(0x30u, 0, 4);
+        v16 = (_DWORD *)__operator_new(0x30u, 0, 4);
         v17 = ModelWrapper_ctor(v16, v15, 1, 0, 2, 0, 0);
         ModelWrapper_setup(v17, v6, 0, 0);
         a1[67] = v16;
@@ -14252,7 +14252,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v40 = 1.7266e-38;
         v41 = COERCE_FLOAT("CS_W8a_DarkCloud_Demo2");
         v18 = Resource_getModel(v6, &v40, 6, 1, 0, 2, 0, 0, 1, 0);
-        v19 = (int *)operator new(0x30u, 0, 4);
+        v19 = (int *)__operator_new(0x30u, 0, 4);
         v20 = ModelWrapper_ctor(v19, v18, 1, 0, 2, 0, 0);
         ModelWrapper_setup(v20, v6, 0, 0);
         a1[68] = v19;
@@ -14275,7 +14275,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v40 = 1.7266e-38;
         v41 = COERCE_FLOAT("CS_W8a_DarkCloud");
         v22 = Resource_getModel(v6, &v40, 6, 1, 0, 2, 0, 0, 1, 0);
-        v23 = (_DWORD *)operator new(0x30u, 0, 4);
+        v23 = (_DWORD *)__operator_new(0x30u, 0, 4);
         v24 = ModelWrapper_ctor(v23, v22, 1, 0, 2, 0, 0);
         ModelWrapper_setup(v24, v6, 0, 0);
         a1[67] = v23;
@@ -14601,7 +14601,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v1; // r0
   
     v1 = Actor__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -14613,7 +14613,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x138u);
+    v2 = __operator_new(0x138u);
     result = (_DWORD *)sub_601A75F0(v2, a1);
     *result = 12423352;
     result[67] = 12423332;
@@ -14761,7 +14761,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v15 = 12321336;
     v16 = "cobCannon";
     Model = Resource_getModel(ResArchiveById, &v15, 6, 1, 0, 0, 0, 0, 1, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 276) = v4;
@@ -15331,7 +15331,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v1; // r0
   
     v1 = Actor__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -15342,7 +15342,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v2; // r4
   
-    v2 = operator new(0x218u);
+    v2 = __operator_new(0x218u);
     sub_601A75F0(v2, a1);
     *(_DWORD *)v2 = 12423464;
     *(_DWORD *)(v2 + 268) = 12423648;
@@ -15396,7 +15396,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = 12321336;
     v11 = "cobWaterPillar";
     Model = Resource_getModel(ResArchiveById, &v10, 6, 1, 0, 1, 0, 0, 1, 0);
-    v4 = (int *)operator new(0x30u, 0, 4);
+    v4 = (int *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 304) = v4;
@@ -15791,7 +15791,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     EffectData_release((int)(a1 + 81));
     sead__IDisposer__dtor((struct sead_IDisposer *)(a1 + 81));
     v3 = Actor__dtor(a1);
-    return operator delete((int)v3);
+    return __operator_delete((int)v3);
   }
 
 /* ============================================================================
@@ -15956,7 +15956,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8D3F0] = 0;
     }
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -15971,7 +15971,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (_DWORD *)MEMORY[0xC8D3F0];
     if ( !MEMORY[0xC8D3F0] )
     {
-      v2 = (_DWORD *)operator new[](44, a1, 4);
+      v2 = (_DWORD *)__operator_new[](44, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *v2 = 12423724;
       MEMORY[0xC8D3EC] = v2;
@@ -16227,7 +16227,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = *(_DWORD *)(MEMORY[0xC8D408] + 548);
       if ( v3 )
       {
-        operator delete(v3);
+        __operator_delete(v3);
         *(_DWORD *)(v2 + 548) = 0;
       }
       nullsub_113(v2 + 364);
@@ -16257,7 +16257,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = *(_DWORD *)(MEMORY[0xC8D408] + 548);
       if ( v3 )
       {
-        operator delete(v3);
+        __operator_delete(v3);
         *(_DWORD *)(v2 + 548) = 0;
       }
       nullsub_113(v2 + 364);
@@ -16267,7 +16267,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8D408] = 0;
     }
     v4 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v4);
+    return __operator_delete((int)v4);
   }
 
 /* ============================================================================
@@ -16291,7 +16291,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xC8D408];
     if ( !MEMORY[0xC8D408] )
     {
-      v2 = operator new[](1456, a1, 4);
+      v2 = __operator_new[](1456, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12423740;
       MEMORY[0xC8D404] = v2;
@@ -16583,7 +16583,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !*(_DWORD *)(a1 + 548) )
     {
       CurrentHeap = sead__HeapMgr__getCurrentHeap(MEMORY[0xCCEE90]);
-      *(_DWORD *)(a1 + 548) = operator new(240, CurrentHeap, 16);
+      *(_DWORD *)(a1 + 548) = __operator_new(240, CurrentHeap, 16);
     }
     sub_60411260(a1 + 548, a1 + 276, a1 + 364);
     result = MEMORY[0xC8C188];
@@ -17585,7 +17585,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v61 )
     {
       CurrentHeap = sead__HeapMgr__getCurrentHeap(MEMORY[0xCCEE90]);
-      *v60 = operator new(240, CurrentHeap, 16);
+      *v60 = __operator_new(240, CurrentHeap, 16);
     }
     return sub_60411260(v60, v59, v41);
   }
@@ -18295,7 +18295,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v37 )
     {
       CurrentHeap = sead__HeapMgr__getCurrentHeap(MEMORY[0xCCEE90]);
-      *v36 = operator new(240, CurrentHeap, 16);
+      *v36 = __operator_new(240, CurrentHeap, 16);
     }
     return sub_60411260(v36, v35, v17);
   }
@@ -19491,7 +19491,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8D4EC] = 0;
     }
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -19505,7 +19505,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xC8D4EC];
     if ( !MEMORY[0xC8D4EC] )
     {
-      v2 = operator new[](64, a1, 4);
+      v2 = __operator_new[](64, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12423756;
       MEMORY[0xC8D4E8] = v2;
@@ -22100,7 +22100,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 = a1;
     Resource = LoadResource(MEMORY[0xC9CA88], a1[1] + 1792);
     Model = Resource_getModel(Resource, v1 + 2, 6, 1, 1, 2, 1, 1, 1, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model, 1, 1, 2, 1, 1);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *v1 = v4;
@@ -22768,7 +22768,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v38 = 12405792;
     Model = Resource_getModel(v16, &v38, 6, 0, 0, 0, 0, 0, 1, 0);
-    v21 = operator new(48, 0, 4);
+    v21 = __operator_new(48, 0, 4);
     v22 = ModelWrapper_ctor(v21, Model, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v22, v16, 0, 0);
     a1[1] = v21;
@@ -22778,7 +22778,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(int))(MEMORY[0xBD92EC] + 12))(12423916);
     sub_6017D524(v37, "%s_%s", v23, MEMORY[0xBD92F0]);
     v24 = Resource_getModel(v16, v37, 6, 64, 0, 8, 0, 0, 2, 0);
-    v25 = operator new(48, 0, 4);
+    v25 = __operator_new(48, 0, 4);
     v26 = ModelWrapper_ctor(v25, v24, 64, 0, 8, 0, 0);
     ModelWrapper_setup(v26, v16, 0, 0);
     a1[2] = v25;
@@ -22797,7 +22797,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       (*(void (__fastcall **)(int *))(v46 + 12))(&v46);
       sub_6017D524(v36, "%s_Trap", v47);
       v30 = Resource_getModel(v16, v36, 6, 1, 0, 1, 0, 0, 1, 0);
-      v31 = operator new(48, 0, 4);
+      v31 = __operator_new(48, 0, 4);
       v32 = ModelWrapper_ctor(v31, v30, 1, 0, 1, 0, 0);
       ModelWrapper_setup(v32, v16, 0, 0);
       a1[3] = v31;
@@ -22992,7 +22992,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                     v18 = *(unsigned __int8 *)v17 - 70;
                     if ( v18 <= 0x11 && ((1 << v18) & 0x20021) != 0 )
                     {
-                      v19 = (_DWORD *)operator new(28);
+                      v19 = (_DWORD *)__operator_new(28);
                       *v19 = 12322272;
                       v19[1] = v19 + 3;
                       v19[2] = 14;
@@ -23656,7 +23656,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     bool v13; // cc
     signed int v14; // r0
   
-    v4 = (_DWORD *)operator new(28);
+    v4 = (_DWORD *)__operator_new(28);
     v4[1] = v4 + 3;
     *v4 = 12322272;
     v4[2] = 14;
@@ -25231,7 +25231,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return result;
     v19 = 0;
     Model = Resource_getModel(Resource, a2, 6, 4, 0, 4, 0, 0, 1, 0);
-    v21 = (_DWORD *)operator new(48, 0, 4);
+    v21 = (_DWORD *)__operator_new(48, 0, 4);
     v22 = ModelWrapper_ctor(v21, Model, 4, 0, 4, 0, 0);
     ModelWrapper_setup(v22, Resource, 0, 0);
     *(_DWORD *)(*v21 + 316) |= 8u;
@@ -25309,7 +25309,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(*(_DWORD *)(a1 + 704) + 4 * v40) = v21;
       ++*(_DWORD *)(a1 + 696);
     }
-    v41 = (_DWORD *)operator new(24);
+    v41 = (_DWORD *)__operator_new(24);
     v41[1] = v41 + 3;
     *v41 = 12322272;
     v41[2] = 10;
@@ -26296,7 +26296,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 0;
     if ( v19 || (int)v11 - v5 - 24 < 0 )
       return v8;
-    v8 = (int **)operator new(68);
+    v8 = (int **)__operator_new(68);
     v21 = (int *)sub_60221178((int)v8, (int)a1, a2);
     sub_6022135C(v21);
     v22 = a1[441];
@@ -27069,7 +27069,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v6; // r5
   
-    v6 = operator new(80);
+    v6 = __operator_new(80);
     sub_60220CB0(v6, a1, a2);
     *(_DWORD *)v6 = 12424004;
     *(_DWORD *)(v6 + 28) = -1;
@@ -27574,7 +27574,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8D864] = 0;
     }
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -27590,7 +27590,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xC8D864];
     if ( !MEMORY[0xC8D864] )
     {
-      v3 = operator new[](344, a1, 4);
+      v3 = __operator_new[](344, a1, 4);
       v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12424080;
       MEMORY[0xC8D860] = v4;
@@ -30678,7 +30678,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v12; // r0
     _DWORD *v13; // r5
   
-    v8 = (_DWORD *)operator new(88);
+    v8 = (_DWORD *)__operator_new(88);
     sub_60220CDC((int)v8, a1, a2, a3, a4);
     v8[21] = 0;
     *v8 = 12424096;
@@ -30716,7 +30716,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v8; // r5
   
-    v8 = (_DWORD *)operator new(88);
+    v8 = (_DWORD *)__operator_new(88);
     sub_60220CDC((int)v8, a1, a2, a3, a4);
     v8[21] = 0;
     *v8 = 12424172;
@@ -31053,7 +31053,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v9; // r5
   
-    v9 = (_DWORD *)operator new(92);
+    v9 = (_DWORD *)__operator_new(92);
     sub_60220CDC((int)v9, a1, a2, a3, a4);
     *v9 = 12424248;
     v9[21] = 0;
@@ -32461,7 +32461,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     struct sead_IDisposer *v1; // r0
   
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -32526,7 +32526,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_6092D260(v2 + 456);
       if ( *(_DWORD *)(v2 + 352) )
       {
-        operator delete();
+        __operator_delete();
         *(_DWORD *)(v2 + 352) = 0;
       }
       nullsub_113(v2 + 168);
@@ -32545,7 +32545,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v1; // r0
   
     sub_60231264(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -32561,7 +32561,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xC8D904];
     if ( !MEMORY[0xC8D904] )
     {
-      v3 = operator new[](4736, a1, 8);
+      v3 = __operator_new[](4736, a1, 8);
       v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12424340;
       MEMORY[0xC8D900] = v4;
@@ -33745,7 +33745,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v4; // r2
     int v5; // r3
   
-    result = (_DWORD *)operator new(0x10u, a2, 4);
+    result = (_DWORD *)__operator_new(0x10u, a2, 4);
     *result = 12424492;
     v4 = a1[2];
     v5 = a1[3];
@@ -34221,7 +34221,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12424512;
     sub_6042FE94(MEMORY[0xC9C2D0], a1 + 10);
     v2 = sead__IDisposer__dtor((struct sead_IDisposer *)a1);
-    return operator delete((int)v2);
+    return __operator_delete((int)v2);
   }
 
 /* ============================================================================
@@ -34512,7 +34512,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v22 = v6;
     v23 = v7;
     Model = Resource_getModel(a3, v28, 1, 2, 0, 0, 0, 0, 1, a2);
-    v12 = (_DWORD **)operator new(72, a2, 4);
+    v12 = (_DWORD **)__operator_new(72, a2, 4);
     v13 = ModelWrapper_ctorWithChild(v12, Model, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v13, a3, 0, a2);
     a1[1] = v12;
@@ -35138,7 +35138,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60820A50(a1 + 19);
     sub_60820A50(v2);
     v3 = sead__IDisposer__dtor((struct sead_IDisposer *)a1);
-    return operator delete((int)v3);
+    return __operator_delete((int)v3);
   }
 
 /* ============================================================================
@@ -35150,7 +35150,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v1; // r0
   
     sub_60820A50(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -35162,7 +35162,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v1; // r0
   
     sub_60820A50(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -35174,7 +35174,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v1; // r0
   
     sub_60820A50(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -37270,7 +37270,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     struct sead_IDisposer *v1; // r0
   
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -37475,7 +37475,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8D9DC] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v2);
+    return __operator_delete((int)v2);
   }
 
 /* ============================================================================
@@ -37490,7 +37490,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xC8D9DC];
     if ( !MEMORY[0xC8D9DC] )
     {
-      v2 = operator new[](2316, a1, 4);
+      v2 = __operator_new[](2316, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12424656;
       MEMORY[0xC8D9D8] = v2;
@@ -37499,7 +37499,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(v2 + 24) = 12424672;
       *(_DWORD *)(v2 + 32) = 12424672;
       memset((void *)(v2 + 40), 0, 0xB0u);
-      v3 = operator new(112);
+      v3 = __operator_new(112);
       *(_DWORD *)(v2 + 216) = sub_60237870(v3);
       *(_DWORD *)(v2 + 220) = 0;
       *(_DWORD *)(v2 + 232) = 0;
@@ -37694,7 +37694,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = a1 + 8;
     v19 = *(const char **)(MEMORY[0xCCFC8C] + 24);
     v30 = 3;
-    v8 = operator new(7368, a2, 4);
+    v8 = __operator_new(7368, a2, 4);
     v9 = sub_602384C8(v8, &v18);
     a1[4] = v9;
     *(_DWORD *)(v9 + 7348) = Effect_ref;
@@ -37732,7 +37732,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_608874D8(v5, v11[1837], 0);
     if ( v4 != 1 )
       sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
-    v14 = operator new(8, a2, 4);
+    v14 = __operator_new(8, a2, 4);
     a1[55] = sub_6023B02C(v14);
     Effect_Eset_param_ref();
     return sub_602387C8(a1);
@@ -39367,7 +39367,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12424712;
     sead__CriticalSection__dtor((struct sead_IDisposer *)(a1 + 1828));
     v2 = sub_6088F868((int)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -39743,7 +39743,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x31D8u);
+    v0 = __operator_new(0x31D8u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12424768;
     ActiveCollider_ctor(v0 + 6300);
@@ -40743,7 +40743,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = 12321336;
     v29 = "bakubaku";
     Model2 = Resource_getModel2(v2, &v28, 2, 0, 1, 0, 0, 0, 0);
-    v5 = (_DWORD *)operator new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v6, v2, 0, 0);
     *(v3 - 2) = (int)v5;
@@ -42698,7 +42698,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -44528,7 +44528,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1A00u);
+    v0 = __operator_new(0x1A00u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12425592;
     *(_BYTE *)(v0 + 6312) = 0;
@@ -44870,7 +44870,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = 12321336;
     v29 = "balloon";
     Model2 = Resource_getModel2(ResArchiveById, &v28, 1, 1, 1, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(48, 0, 4);
+    v4 = (_DWORD *)__operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 1, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     a1[1575] = (int)v4;
@@ -44904,7 +44904,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = 12321336;
     v29 = "balloon_back";
     v14 = Resource_getModel2(v13, &v28, 1, 1, 0, 0, 0, 0, 0);
-    v15 = (_DWORD *)operator new(48, 0, 4);
+    v15 = (_DWORD *)__operator_new(48, 0, 4);
     v16 = ModelWrapper_ctor(v15, v14, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v16, v13, 0, 0);
     a1[1576] = (int)v15;
@@ -44932,7 +44932,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v28 = 12321336;
       v29 = "I_kinoko";
       v23 = Resource_getModel2(v22, &v28, 1, 0, 0, 0, 0, 0, 0);
-      v24 = (_DWORD *)operator new(48, 0, 4);
+      v24 = (_DWORD *)__operator_new(48, 0, 4);
       v25 = ModelWrapper_ctor(v24, v23, 1, 0, 0, 0, 0);
       ModelWrapper_setup(v25, v22, 0, 0);
       a1[1577] = (int)v24;
@@ -48028,7 +48028,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -48160,7 +48160,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v0; // r5
   
-    v0 = (_DWORD *)operator new(0x18D0u);
+    v0 = (_DWORD *)__operator_new(0x18D0u);
     Enemy__Enemy((int)v0);
     *v0 = 12426340;
     memset(v0 + 1577, 0, 0x1Fu);
@@ -48448,7 +48448,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = 12321336;
     v13 = "obj_balloon";
     Model2 = Resource_getModel2(v2, &v12, 1, 0, 1, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1575] = v4;
@@ -49046,7 +49046,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -49119,7 +49119,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int i; // r3
     _DWORD *v4; // r4
   
-    v0 = (_DWORD *)operator new(0x3C68u);
+    v0 = (_DWORD *)__operator_new(0x3C68u);
     result = Actor_Blooper_raki_build_helper(v0);
     *result = 12427104;
     v2 = result + 3095;
@@ -50418,7 +50418,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -50620,7 +50620,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x2F90u);
+    v0 = __operator_new(0x2F90u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12427836;
     *(_DWORD *)(v0 + 6356) = 0;
@@ -51971,7 +51971,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = 12321336;
     v17 = "basabasa_wait";
     Model2 = Resource_getModel2(v2, &v16, 2, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(72, 0, 4);
+    v4 = (_DWORD *)__operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -52038,7 +52038,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = 12321336;
     v17 = "basabasa_fly";
     Model2 = Resource_getModel2(v2, &v16, 2, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(72, 0, 4);
+    v4 = (_DWORD *)__operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6304) = v4;
@@ -52103,7 +52103,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = 12321336;
     v15 = "basa_eye_light";
     Model2 = Resource_getModel2(v2, &v14, 2, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(72, 0, 4);
+    v4 = (_DWORD *)__operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6308) = v4;
@@ -53033,7 +53033,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -53191,7 +53191,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1AA0u);
+    v0 = __operator_new(0x1AA0u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12428604;
     *(_DWORD *)(v0 + 6352) = 0;
@@ -53770,7 +53770,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = 12321336;
     v12 = "kuriboMini";
     Model2 = Resource_getModel2(v2, &v11, 2, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(72, 0, 4);
+    v4 = (_DWORD *)__operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     a1[1] = (int)v4;
@@ -54630,7 +54630,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -54785,7 +54785,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       MEMORY[0xC8DFBC] = 0;
     }
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -54802,7 +54802,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xC8DFBC];
     if ( !MEMORY[0xC8DFBC] )
     {
-      v2 = operator new[](528, a1, 4);
+      v2 = __operator_new[](528, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12429368;
       MEMORY[0xC8DFB8] = v2;
@@ -55006,7 +55006,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v0; // r0
   
-    v0 = (_DWORD *)operator new(0x3488u);
+    v0 = (_DWORD *)__operator_new(0x3488u);
     return GiantWiggler_ctor(v0);
   }
 
@@ -55276,7 +55276,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8[0] = 12321336;
     v8[1] = "hanachan_big_head";
     Model2 = Resource_getModel2(ResArchiveById, (int)v8, 2, 0, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)operator new(0x48u, 0, 4);
+    v5 = (_DWORD *)__operator_new(0x48u, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v6, ResArchiveById, 0, 0);
     a1[1] = v5;
@@ -55585,7 +55585,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = a1[12];
     ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a2 + 12), 0);
     Model2 = Resource_getModel2(ResArchiveById, (int)&unk_60C8E040 + 8 * (v5 & 1) + 12, 2, 0, 0, 0, 0, 0, 0);
-    v8 = (_DWORD *)operator new(0x48u, 0, 4);
+    v8 = (_DWORD *)__operator_new(0x48u, 0, 4);
     v9 = ModelWrapper_ctorWithChild(v8, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v9, ResArchiveById, 0, 0);
     a1[1] = v8;
@@ -55932,23 +55932,23 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *result; // r0
   
     v2 = a1[20];
-    v3 = (_DWORD *)operator new(188);
+    v3 = (_DWORD *)__operator_new(188);
     v4 = *(unsigned __int8 *)(v2 + 11527156) << 30;
     sub_60257AE8(v3, 0, v4, 0, a1, 1);
     *v3 = 12430112;
     a1[1594] = 1084227584;
     a1[1625] = v3;
-    v5 = (_DWORD *)operator new(188);
+    v5 = (_DWORD *)__operator_new(188);
     sub_60257AE8(v5, 0, v4, 0, a1, 2);
     v3[15] = 1084227584;
     *v5 = 12430112;
     v3[46] = v5;
-    v6 = (_DWORD *)operator new(188);
+    v6 = (_DWORD *)__operator_new(188);
     sub_60257AE8(v6, 0, v4, 0, a1, 3);
     v5[15] = 1084227584;
     *v6 = 12430112;
     v5[46] = v6;
-    v7 = operator new(188);
+    v7 = __operator_new(188);
     result = (_DWORD *)sub_60257AE8(v7, 0, v4, 0, a1, 4);
     v6[15] = 1084227584;
     *result = 12430112;
@@ -57179,7 +57179,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (struct sead_IDisposer *)(a1 + 19);
     EffectData_release((int)(a1 + 19));
     sead__IDisposer__dtor(v2);
-    return operator delete((int)a1);
+    return __operator_delete((int)a1);
   }
 
 /* ============================================================================
@@ -57224,7 +57224,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (struct sead_IDisposer *)(a1 + 19);
     EffectData_release((int)(a1 + 19));
     sead__IDisposer__dtor(v2);
-    return operator delete((int)a1);
+    return __operator_delete((int)a1);
   }
 
 /* ============================================================================
@@ -57340,7 +57340,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v1; // r0
   
     GiantWiggler_vf2(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -57748,7 +57748,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (struct sead_IDisposer *)(a1 + 19);
     EffectData_release((int)(a1 + 19));
     sead__IDisposer__dtor(v2);
-    return operator delete((int)a1);
+    return __operator_delete((int)a1);
   }
 
 /* ============================================================================
@@ -57759,7 +57759,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1B10u);
+    v0 = __operator_new(0x1B10u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12430332;
     EffectWrapper_ctor(v0 + 6316);
@@ -57989,7 +57989,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = 12321336;
     v15 = "bilikyu";
     Model2 = Resource_getModel2(ResArchiveById, &v14, 1, 1, 1, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 1, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -58658,7 +58658,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -58796,7 +58796,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r0
   
-    v0 = operator new(0x1BA0u);
+    v0 = __operator_new(0x1BA0u);
     return BobOmb_ctor(v0);
   }
 
@@ -60070,7 +60070,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1 + 1589;
     v3 = a1[1589];
     Model2 = Resource_getModel2(v3, &dword_60C8E364, 2, 0, 1, 0, 0, 0, 0);
-    v5 = (_DWORD *)operator new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, 0, 0);
     a1[1588] = v5;
@@ -62726,7 +62726,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -62781,7 +62781,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v6; // r2
     int v7; // r3
   
-    v2 = operator new(0x1BD8u);
+    v2 = __operator_new(0x1BD8u);
     result = BobOmb_ctor(v2);
     *(_DWORD *)result = 12432000;
     *(_DWORD *)(result + 7068) = 0;
@@ -63036,7 +63036,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "parachute";
     Model2 = Resource_getModel2(v2, &v9, 1, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(48, 0, 4);
+    v4 = (_DWORD *)__operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1767] = (int)v4;
@@ -63439,7 +63439,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x30C0u);
+    v0 = __operator_new(0x30C0u);
     result = (_DWORD *)BrosBase_ctor(v0);
     *result = 12432728;
     result[3117] = 0;
@@ -63900,7 +63900,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -64217,7 +64217,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v12 = "bros";
     Model2 = Resource_getModel2(v2, &v11, 2, 1, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)operator new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, 0, 0);
     *(_DWORD *)(a1 + 6300) = v5;
@@ -66767,7 +66767,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -67020,7 +67020,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1B40u);
+    v0 = __operator_new(0x1B40u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12434516;
     *(_DWORD *)(v0 + 6300) = 0;
@@ -67247,7 +67247,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = 12321336;
     v29 = "bubble";
     Model2 = Resource_getModel2(ResArchiveById, &v28, 0, 0, 1, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(48, 0, 4);
+    v4 = (_DWORD *)__operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     a1[1575] = (int)v4;
@@ -67267,7 +67267,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = 12321336;
     v29 = "bubble_fog";
     v10 = Resource_getModel2(v9, &v28, 1, 0, 1, 0, 0, 0, 0);
-    v11 = (_DWORD *)operator new(48, 0, 4);
+    v11 = (_DWORD *)__operator_new(48, 0, 4);
     v12 = ModelWrapper_ctor(v11, v10, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v12, v9, 0, 0);
     a1[1576] = (int)v11;
@@ -67293,7 +67293,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v28 = 12321336;
     v29 = "bubble_fog2";
     v19 = Resource_getModel2(v18, &v28, 1, 0, 1, 0, 0, 0, 0);
-    v20 = (_DWORD *)operator new(48, 0, 4);
+    v20 = (_DWORD *)__operator_new(48, 0, 4);
     v21 = ModelWrapper_ctor(v20, v19, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v21, v18, 0, 0);
     a1[1577] = (int)v20;
@@ -68086,7 +68086,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -68179,7 +68179,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x1B40u);
+    v0 = __operator_new(0x1B40u);
     result = (_DWORD *)Actor_baburu_RDash_build_helper(v0);
     *result = 12435376;
     return result;
@@ -68259,7 +68259,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -68348,7 +68348,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x2DE0u);
+    v0 = __operator_new(0x2DE0u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12436028;
     *(_DWORD *)(v0 + 6332) = 0;
@@ -68534,7 +68534,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = v15;
     v22 = "houdai_ball";
     Model2 = Resource_getModel2(v15, (int)&v21, 0, 0, 0, 0, 0, 0, 0);
-    v18 = (_DWORD *)operator new(0x30u, 0, 4);
+    v18 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v19 = ModelWrapper_ctor(v18, Model2, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v19, v16, 0, 0);
     *(_DWORD *)(v13 - 5408) = v18;
@@ -68954,7 +68954,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -69078,7 +69078,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1B20u);
+    v0 = __operator_new(0x1B20u);
     MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12436820;
     RectCollider_ctor((_DWORD *)(v0 + 6120));
@@ -69269,21 +69269,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13 = 12321336;
     v14 = "houdai_mouth";
     Model2 = Resource_getModel2(ResArchiveById, &v13, 0, 0, 0, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     a1[1526] = v4;
     v13 = 12321336;
     v14 = "houdai_body";
     v6 = Resource_getModel2(ResArchiveById, &v13, 0, 0, 0, 0, 0, 0, 0);
-    v7 = operator new(48, 0, 4);
+    v7 = __operator_new(48, 0, 4);
     v8 = ModelWrapper_ctor(v7, v6, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v8, ResArchiveById, 0, 0);
     a1[1527] = v7;
     v13 = 12321336;
     v14 = "houdai_root";
     v9 = Resource_getModel2(ResArchiveById, &v13, 0, 0, 0, 0, 0, 0, 0);
-    v10 = operator new(48, 0, 4);
+    v10 = __operator_new(48, 0, 4);
     v11 = ModelWrapper_ctor(v10, v9, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v11, ResArchiveById, 0, 0);
     a1[1528] = v10;
@@ -69829,7 +69829,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -70017,7 +70017,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v0; // r4
   
-    v0 = (_DWORD *)operator new(0x2538u);
+    v0 = (_DWORD *)__operator_new(0x2538u);
     MultiStateActor__MultiStateActor(v0);
     *v0 = 12437044;
     RectCollider_ctor(v0 + 1528);
@@ -70623,7 +70623,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "houdai_rot";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 0, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6104) = v4;
@@ -70859,7 +70859,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -70956,7 +70956,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v0; // r5
   
-    v0 = (_DWORD *)operator new(0x2570u);
+    v0 = (_DWORD *)__operator_new(0x2570u);
     Actor_rotate_big_build_helper(v0);
     *v0 = 12437296;
     memset(v0 + 2382, 0, 0x34u);
@@ -71287,7 +71287,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[0] = 12321336;
     v7[1] = "houdai_rot_large_B";
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 0, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 0, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6104) = v4;
@@ -71553,7 +71553,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -71812,7 +71812,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1D58u);
+    v0 = __operator_new(0x1D58u);
     MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12437540;
     RectCollider_ctor((_DWORD *)(v0 + 6112));
@@ -72226,7 +72226,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -73538,7 +73538,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -73646,7 +73646,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v3; // r1
     int v4; // r2
   
-    v0 = operator new(0x2E98u);
+    v0 = __operator_new(0x2E98u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12438488;
     *(_DWORD *)(v0 + 6300) = LoadResource(MEMORY[0xC9CA88], &dword_60C8EC08);
@@ -73864,7 +73864,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1 = (_DWORD *)(a1 + 6300);
     v2 = *(_DWORD *)(a1 + 6300);
     Model2 = Resource_getModel2(v2, &dword_60C8EC10, 3, 0, 0, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 3, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     v1[1] = v4;
@@ -73902,7 +73902,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     CollisionMask_markPair(v10, 8);
     v13 = *v1;
     v14 = Resource_getModel2(*v1, &dword_60C8EC18, 0, 0, 2, 0, 0, 0, 0);
-    v15 = operator new(48, 0, 4);
+    v15 = __operator_new(48, 0, 4);
     v16 = ModelWrapper_ctor(v15, v14, 0, 0, 2, 0, 0);
     ModelWrapper_setup(v16, v13, 0, 0);
     v1[2] = v15;
@@ -73913,7 +73913,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v18 > 1 )
       ++v19;
     AnimationCtrl_setupFromResource(*v19, *v1, &dword_60C8EC30);
-    v20 = (LightMask *)operator new(40);
+    v20 = (LightMask *)__operator_new(40);
     v21 = LightMask__LightMask(v20);
     v1[3] = v21;
     return (**(int (__fastcall ***)(LightMask *, _DWORD, int))v21)(v21, 0, 2);
@@ -74384,7 +74384,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -74493,7 +74493,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x3090u);
+    v0 = __operator_new(0x3090u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12439252;
     *(_DWORD *)(v0 + 6312) = 0;
@@ -75411,7 +75411,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "chorobon";
     Model2 = Resource_getModel2(v2, &v9, 1, 1, 1, 1, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 1, 1, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(a1 - 1) = v4;
@@ -76609,7 +76609,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -76868,7 +76868,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v0; // r0
     _DWORD *result; // r0
   
-    v0 = (_DWORD *)operator new(0x17D8u);
+    v0 = (_DWORD *)__operator_new(0x17D8u);
     result = StateActor_ctor(v0);
     *result = 12440064;
     return result;
@@ -76995,7 +76995,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -77799,7 +77799,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r0
   
-    v0 = operator new(0x2470u);
+    v0 = __operator_new(0x2470u);
     return sub_6027B330(v0);
   }
 
@@ -77945,7 +77945,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "choropoo";
     Model2 = Resource_getModel2(ResArchiveById, &v9, 1, 0, 0, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -79137,7 +79137,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -79339,7 +79339,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x40B8u);
+    v0 = __operator_new(0x40B8u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12441060;
     sub_60448BFC(v0 + 6308);
@@ -79368,7 +79368,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x40B8u);
+    v0 = __operator_new(0x40B8u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12441060;
     sub_60448BFC(v0 + 6308);
@@ -81634,7 +81634,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -81667,7 +81667,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -81738,7 +81738,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r2
     _DWORD *v3; // r1
   
-    v0 = operator new(0x2330u);
+    v0 = __operator_new(0x2330u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12442344;
     sub_60448BFC(v0 + 6308);
@@ -82445,7 +82445,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -82465,7 +82465,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_60285364(int a1)
   {
     nullsub_1030_0(a1 + 4);
-    return operator delete(a1);
+    return __operator_delete(a1);
   }
 
 /* ============================================================================
@@ -82647,7 +82647,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x18D8u);
+    v0 = __operator_new(0x18D8u);
     result = (_DWORD *)Enemy__Enemy(v0);
     *result = 12442996;
     result[1580] = 0;
@@ -82852,7 +82852,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v14 = v3;
     Model2 = Resource_getModel2(ResArchiveById, &v13, 2, 0, 2, 0, 0, 0, 0);
-    v5 = operator new(72, 0, 4);
+    v5 = __operator_new(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 2, 0, 0);
     j_ModelWrapper_setupModel(v6, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v5;
@@ -83021,7 +83021,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -83202,7 +83202,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x19D8u);
+    v0 = __operator_new(0x19D8u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12443736;
     *(_DWORD *)(v0 + 6312) = 0;
@@ -84464,7 +84464,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v11 = 12321336;
     v12 = "crasher";
     Model2 = Resource_getModel2(v2, &v11, 2, 0, 1, 0, 0, 0, 0);
-    v4 = operator new(72, 0, 4);
+    v4 = __operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     *(a1 - 1) = v4;
@@ -86038,7 +86038,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -86106,7 +86106,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1918u);
+    v0 = __operator_new(0x1918u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12444536;
     *(_DWORD *)(v0 + 6344) = 0;
@@ -86897,7 +86897,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v24 = 12321336;
     v25 = "crow";
     Model2 = Resource_getModel2(v2, &v24, 1, 0, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)operator new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 1, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v6, v2, 0, 0);
     *(v3 - 1) = (int)v5;
@@ -87548,7 +87548,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -87661,7 +87661,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x4658u);
+    v2 = __operator_new(0x4658u);
     result = (_DWORD *)sub_603C967C(v2, a1, 1);
     *result = 12445252;
     return result;
@@ -87748,7 +87748,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -89016,7 +89016,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !Resource )
       return 0;
     Model2 = Resource_getModel2(Resource, &dword_60C8F8A8, 2, 0, 1, 0, 0, 0, 0);
-    v5 = operator new(72, 0, 4);
+    v5 = __operator_new(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, 0, 0);
     a1[10] = v5;
@@ -89482,7 +89482,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     Model2 = Resource_getModel2(ResArchiveById, 13171864, 2, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 2, 0, 0, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 7500) = v4;
@@ -90895,7 +90895,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -91117,7 +91117,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x1DB8u);
+    v0 = __operator_new(0x1DB8u);
     result = (_DWORD *)sub_602904E8(v0);
     *result = 12446860;
     return result;
@@ -91269,7 +91269,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x1DB8u);
+    v0 = __operator_new(0x1DB8u);
     result = (_DWORD *)sub_602904E8(v0);
     *result = 12447692;
     return result;
@@ -91379,7 +91379,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -91452,7 +91452,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x1DB8u);
+    v0 = __operator_new(0x1DB8u);
     result = (_DWORD *)sub_602904E8(v0);
     *result = 12448512;
     return result;
@@ -91562,7 +91562,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -91635,7 +91635,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x1DB8u);
+    v0 = __operator_new(0x1DB8u);
     result = (_DWORD *)sub_602904E8(v0);
     *result = 12449332;
     return result;
@@ -91772,7 +91772,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x1DB8u);
+    v2 = __operator_new(0x1DB8u);
     result = (_DWORD *)Actor_kipipe_aisuPiranha_furawa_build_helper(v2, a1);
     *result = 12450152;
     return result;
@@ -91860,7 +91860,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -91904,7 +91904,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x1DB8u);
+    v2 = __operator_new(0x1DB8u);
     result = (_DWORD *)Actor_kipipe_aisuPiranha_furawa_2_build_helper(v2, a1);
     *result = 12450984;
     return result;
@@ -91990,7 +91990,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -92034,7 +92034,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x1DB8u);
+    v2 = __operator_new(0x1DB8u);
     result = (_DWORD *)Actor_kipipe_aisuPiranha_furawa_3_build_helper(v2, a1);
     *result = 12451816;
     return result;
@@ -92120,7 +92120,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -92164,7 +92164,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x1DB8u);
+    v2 = __operator_new(0x1DB8u);
     result = (_DWORD *)Actor_kipipe_aisuPiranha_furawa_4_build_helper(v2, a1);
     *result = 12452648;
     return result;
@@ -92252,7 +92252,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -92752,7 +92752,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -93266,7 +93266,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     Model2 = Resource_getModel2(ResArchiveById, 13171864, 2, 0, 1, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -95366,7 +95366,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -95392,7 +95392,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v2; // r5
   
-    v2 = operator new(0x1D50u);
+    v2 = __operator_new(0x1D50u);
     sub_60295C50(v2, a1);
     *(_DWORD *)v2 = 12455260;
     *(_WORD *)(v2 + 7500) = 3;
@@ -95711,7 +95711,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -95837,7 +95837,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x1D50u);
+    v2 = __operator_new(0x1D50u);
     result = (_DWORD *)sub_60295C50(v2, a1);
     *result = 12456164;
     return result;
@@ -95917,7 +95917,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -95955,7 +95955,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x1D50u);
+    v2 = __operator_new(0x1D50u);
     result = (_DWORD *)sub_60295C50(v2, a1);
     *result = 12456992;
     return result;
@@ -96041,7 +96041,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -96079,7 +96079,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x1D50u);
+    v2 = __operator_new(0x1D50u);
     result = (_DWORD *)sub_60295C50(v2, a1);
     *result = 12457820;
     return result;
@@ -96165,7 +96165,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -96203,7 +96203,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x1D50u);
+    v2 = __operator_new(0x1D50u);
     result = (_DWORD *)sub_60295C50(v2, a1);
     *result = 12458660;
     return result;
@@ -96268,7 +96268,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -96308,7 +96308,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v0; // r4
   
-    v0 = (_DWORD *)operator new(0x1A90u);
+    v0 = (_DWORD *)__operator_new(0x1A90u);
     Enemy__Enemy((int)v0);
     *v0 = 12459512;
     memset(v0 + 1575, 0, 0x34u);
@@ -96928,7 +96928,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = *(_DWORD *)(a1 + 6304);
     v4 = (_DWORD *)(a1 + 6304);
     Model2 = Resource_getModel2(ResArchiveById, &flt_60C901C0[2 * v5 + 7], 0, 0, 0, 1, 0, 0, 0);
-    v7 = operator new(48, 0, 4);
+    v7 = __operator_new(48, 0, 4);
     v8 = ModelWrapper_ctor(v7, Model2, 0, 0, 0, 1, 0);
     ModelWrapper_setup(v8, ResArchiveById, 0, 0);
     *(v4 - 1) = v7;
@@ -97422,7 +97422,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -97518,7 +97518,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x19B8u);
+    v0 = __operator_new(0x19B8u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12460320;
     EffectWrapper_ctor(v0 + 6316);
@@ -97723,7 +97723,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = LoadResource(MEMORY[0xC9CA88], &v23);
     v22 = "densen";
     Model2 = Resource_getModel2(v2, &v21, 1, 0, 1, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1575] = v4;
@@ -97754,7 +97754,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = 12321336;
     v22 = "light";
     v11 = Resource_getModel2(v10, &v21, 1, 0, 0, 0, 0, 0, 0);
-    v12 = operator new(48, 0, 4);
+    v12 = __operator_new(48, 0, 4);
     v13 = ModelWrapper_ctor(v12, v11, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v13, v10, 0, 0);
     a1[2] = v12;
@@ -97774,7 +97774,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = 12321336;
     v22 = "densen_line";
     v17 = Resource_getModel2(v16, &v21, 1, 0, 0, 0, 0, 0, 0);
-    v18 = operator new(48, 0, 4);
+    v18 = __operator_new(48, 0, 4);
     v19 = ModelWrapper_ctor(v18, v17, 1, 0, 0, 0, 0);
     result = ModelWrapper_setup(v19, v16, 0, 0);
     a1[3] = v18;
@@ -98189,7 +98189,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -98293,7 +98293,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v0; // r0
     _DWORD *result; // r0
   
-    v0 = (_DWORD *)operator new(0x17F8u);
+    v0 = (_DWORD *)__operator_new(0x17F8u);
     result = sub_60618BBC(v0);
     *result = 12461064;
     *((_BYTE *)result + 6128) = 0;
@@ -98485,7 +98485,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -98551,7 +98551,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v0; // r4
   
-    v0 = (_DWORD *)operator new(0x19B8u);
+    v0 = (_DWORD *)__operator_new(0x19B8u);
     Enemy__Enemy((int)v0);
     *v0 = 12461300;
     EffectWrapper_ctor((int)(v0 + 1575));
@@ -98872,7 +98872,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -100637,7 +100637,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -101132,7 +101132,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1868u);
+    v0 = __operator_new(0x1868u);
     StateActor_ctor((_DWORD *)v0);
     *(_DWORD *)v0 = 12462792;
     *(_DWORD *)(v0 + 6100) = 0;
@@ -101540,7 +101540,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v4 = a1 + 1525;
       Model2 = Resource_getModel2(ResArchiveById, &unk_60C906D4, 2, 0, 1, 0, 0, 0, 0);
-      v6 = operator new(72, 0, 4);
+      v6 = __operator_new(72, 0, 4);
       v7 = ModelWrapper_ctorWithChild(v6, Model2, 2, 0, 1, 0, 0);
       j_ModelWrapper_setupModel(v7, ResArchiveById, 0, 0);
       a1[1526] = v6;
@@ -101759,7 +101759,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -103646,7 +103646,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   // attributes: thunk
   int __fastcall StateVirtual_Enemy_dtorFree(int a1)
   {
-    return operator delete(a1);
+    return __operator_delete(a1);
   }
 
 /* ============================================================================
@@ -104269,7 +104269,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -104853,7 +104853,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x30B8u);
+    v0 = __operator_new(0x30B8u);
     result = (_DWORD *)BrosBase_ctor(v0);
     *result = 12463804;
     return result;
@@ -105111,7 +105111,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -105178,7 +105178,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r0
   
-    v0 = operator new(0x1DD8u);
+    v0 = __operator_new(0x1DD8u);
     return FireSnake_ctor(v0);
   }
 
@@ -106388,7 +106388,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_BYTE *)(v17 + 4) = 0;
     }
     while ( v15 != 492 );
-    v18 = (_DWORD *)operator new(0x1BCu);
+    v18 = (_DWORD *)__operator_new(0x1BCu);
     *v18 = 0;
     v18[1] = 0;
     v18[2] = 0;
@@ -106403,7 +106403,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18[85] = 12325968;
     *(_DWORD *)(a1 + 6800) = v18;
     FireSnake__onCreate((int)v18, a1, 0);
-    v19 = (_DWORD *)operator new(0x1BCu);
+    v19 = (_DWORD *)__operator_new(0x1BCu);
     *v19 = 0;
     v19[1] = 0;
     v19[2] = 0;
@@ -106418,7 +106418,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19[85] = 12325968;
     *(_DWORD *)(a1 + 6804) = v19;
     FireSnake__onCreate((int)v19, a1, 1);
-    v20 = (_DWORD *)operator new(0x1BCu);
+    v20 = (_DWORD *)__operator_new(0x1BCu);
     *v20 = 0;
     v20[1] = 0;
     v20[2] = 0;
@@ -106433,7 +106433,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v20[85] = 12325968;
     *(_DWORD *)(a1 + 6808) = v20;
     FireSnake__onCreate((int)v20, a1, 2);
-    v21 = (_DWORD *)operator new(0x1BCu);
+    v21 = (_DWORD *)__operator_new(0x1BCu);
     *v21 = 0;
     v21[1] = 0;
     v21[2] = 0;
@@ -106489,7 +106489,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = 12321336;
     v11 = "fire_snake_head";
     Model2 = Resource_getModel2(ResArchiveById, &v10, 2, 1, 1, 0, 0, 0, 0);
-    v4 = operator new(72, 0, 4);
+    v4 = __operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     a1[1575] = v4;
@@ -107821,7 +107821,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -108076,7 +108076,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v9 = "fire_snake_body";
     Model2 = Resource_getModel2(v2, &v8, 0, 0, 1, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *a1 = v4;
@@ -108197,7 +108197,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     unsigned int v5; // r0
     unsigned int v6; // r0
   
-    v2 = operator new(0x1AE8u);
+    v2 = __operator_new(0x1AE8u);
     Enemy__Enemy(v2);
     *(_DWORD *)v2 = 12465544;
     memset((void *)(v2 + 6300), 0, 0xB8u);
@@ -108622,7 +108622,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C90C84);
     Model2 = Resource_getModel2(Resource, &dword_60C90C98, 2, 0, 1, 0, 0, 0, 0);
-    v4 = operator new(72, 0, 4);
+    v4 = __operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, Resource, 0, 0);
     a1[1575] = v4;
@@ -108635,7 +108635,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( sub_6068C438(MEMORY[0xCB84A4]) )
     {
       v7 = Resource_getModel2(Resource, &dword_60C90CA0, 2, 0, 1, 0, 0, 0, 0);
-      v8 = operator new(72, 0, 4);
+      v8 = __operator_new(72, 0, 4);
       v9 = ModelWrapper_ctorWithChild(v8, v7, 2, 0, 1, 0, 0);
       j_ModelWrapper_setupModel(v9, Resource, 0, 0);
       a1[1576] = v8;
@@ -109656,7 +109656,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -109692,7 +109692,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1AF0u);
+    v0 = __operator_new(0x1AF0u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12466308;
     *(_BYTE *)(v0 + 6299) = 0;
@@ -110766,7 +110766,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -110982,7 +110982,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1A08u);
+    v0 = __operator_new(0x1A08u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12467056;
     *(_WORD *)(v0 + 6308) = 0;
@@ -111175,7 +111175,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = LoadResource(MEMORY[0xC9CA88], &v12);
     v11 = "fruit";
     Model2 = Resource_getModel2(v2, &v10, 1, 0, 0, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     a1[1575] = v4;
@@ -111408,7 +111408,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -111514,7 +111514,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v2; // r4
   
-    v2 = operator new(0x2EC0u);
+    v2 = __operator_new(0x2EC0u);
     Enemy__Enemy(v2);
     *(_DWORD *)v2 = 12467804;
     *(_DWORD *)(v2 + 6300) = MEMORY[0xAF35C0] == *(_DWORD *)(*(_DWORD *)(a1 + 12) + 8);
@@ -112081,7 +112081,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1 + 1575;
     Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C90FB0[2 * a1[1575] + 9]);
     Model2 = Resource_getModel2(Resource, &dword_60C90FB0[2 * *v2 + 13], 2, 0, 0, 0, 0, 0, 0);
-    v5 = operator new(72, 0, 4);
+    v5 = __operator_new(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v6, Resource, 0, 0);
     a1[1576] = v5;
@@ -112651,7 +112651,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -112697,7 +112697,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x1B38u);
+    v0 = __operator_new(0x1B38u);
     result = (_DWORD *)sub_602BA5F0(v0);
     *result = 12468568;
     return result;
@@ -112739,7 +112739,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7 = 12321336;
     v8 = "gabon";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v7, 2, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;
@@ -112961,7 +112961,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -114356,7 +114356,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -114457,7 +114457,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x1B38u);
+    v0 = __operator_new(0x1B38u);
     result = (_DWORD *)sub_602BA5F0(v0);
     *result = 12470032;
     return result;
@@ -114512,7 +114512,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -114672,7 +114672,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1B68u);
+    v0 = __operator_new(0x1B68u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12470704;
     *(_BYTE *)(v0 + 6333) = 0;
@@ -114749,7 +114749,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = v8;
     v19.n64_u32[1] = (unsigned __int32)"block_ice";
     Model2 = Resource_getModel2(v8, (int)&v19, 1, 0, 0, 0, 0, 0, 0);
-    v11 = (_DWORD *)operator new(0x30u, 0, 4);
+    v11 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v12 = ModelWrapper_ctor(v11, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v12, v9, 0, 0);
     *(_DWORD *)(a1 + 6300) = v11;
@@ -115073,7 +115073,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -115117,7 +115117,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v0; // r4
   
-    v0 = (_DWORD *)operator new(0x3038u);
+    v0 = (_DWORD *)__operator_new(0x3038u);
     Enemy__Enemy((int)v0);
     *v0 = 12471400;
     v0[1575] = 0;
@@ -117667,7 +117667,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "gesso";
     Model2 = Resource_getModel2(v2, &v9, 2, 0, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(72, 0, 4);
+    v4 = (_DWORD *)__operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6304) = v4;
@@ -118899,7 +118899,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -118937,7 +118937,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     int v3; // r2
   
-    v0 = operator new(0x2650u);
+    v0 = __operator_new(0x2650u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12472220;
     *(_DWORD *)(v0 + 6320) = 0;
@@ -119158,7 +119158,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = 12321336;
     v13 = "gessoMini";
     Model2 = Resource_getModel2(v3, (int)&v12, 2, 0, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)operator new(0x48u, 0, 4);
+    v5 = (_DWORD *)__operator_new(0x48u, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, 0, 0);
     *(_DWORD *)(a1 + 6304) = v5;
@@ -119916,7 +119916,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -120059,7 +120059,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x6E88u);
+    v0 = __operator_new(0x6E88u);
     sub_606E6B44(v0);
     *(_DWORD *)v0 = 12472952;
     *(_DWORD *)(v0 + 28092) = 0;
@@ -120412,7 +120412,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v10 = "gorogoro";
     Model2 = Resource_getModel2(v2, (int)&v9, 0, 0, 1, 0, 0, 0, 0);
-    v5 = operator new(0x30u, 0, 4);
+    v5 = __operator_new(0x30u, 0, 4);
     v6 = ModelWrapper_ctor((_DWORD *)v5, Model2, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v6, v3, 0, 0);
     *(_DWORD *)(a1 + 6308) = v5;
@@ -121369,7 +121369,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -121550,7 +121550,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *v0; // r4
   
-    v0 = (_DWORD *)operator new(0x6E68u);
+    v0 = (_DWORD *)__operator_new(0x6E68u);
     sub_606E6B44((int)v0);
     *v0 = 12473788;
     memset(v0 + 7020, 0, 0x29u);
@@ -121781,7 +121781,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 12321336;
     v9 = "gorogoroL";
     Model2 = Resource_getModel2(v2, (int)&v8, 0, 0, 1, 0, 0, 0, 0);
-    v4 = operator new(0x30u, 0, 4);
+    v4 = __operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6308) = v4;
@@ -122386,7 +122386,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -122639,7 +122639,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r2
     int v3; // r1
   
-    v0 = operator new(0x19D8u);
+    v0 = __operator_new(0x19D8u);
     MultiStateActor__MultiStateActor((_DWORD *)v0);
     *(_DWORD *)v0 = 12474584;
     *(_DWORD *)(v0 + 6112) = Profile__getResArchiveById(*(_DWORD *)(v0 + 12), 0);
@@ -122773,7 +122773,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13 = 12321336;
     v14 = "lift_guraIwa";
     Model2 = Resource_getModel2(v2, &v13, 1, 0, 0, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(v1 - 2) = v4;
@@ -122786,7 +122786,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13 = 12321336;
     v14 = "lift_guraIwa_ziku";
     v9 = Resource_getModel2(v8, &v13, 0, 0, 0, 0, 0, 0, 0);
-    v10 = operator new(48, 0, 4);
+    v10 = __operator_new(48, 0, 4);
     v11 = ModelWrapper_ctor(v10, v9, 0, 0, 0, 0, 0);
     result = ModelWrapper_setup(v11, v8, 0, 0);
     *(v1 - 1) = v10;
@@ -122979,7 +122979,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -123036,7 +123036,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x30A0u);
+    v0 = __operator_new(0x30A0u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12474808;
     *(_DWORD *)(v0 + 6300) = v0;
@@ -123256,7 +123256,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -123402,7 +123402,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 20) = v8;
     ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(v7 + 12), 0);
     Model2 = Resource_getModel2(ResArchiveById, (char *)&dword_60C918C0 + (v4 & 8) + 20, 1, 0, 0, 0, 0, 0, 0);
-    v13 = (_DWORD *)operator new(48, 0, 4);
+    v13 = (_DWORD *)__operator_new(48, 0, 4);
     v14 = ModelWrapper_ctor(v13, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v14, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 4) = v13;
@@ -123807,7 +123807,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(12496);
+    v2 = __operator_new(12496);
     result = (_DWORD *)BrosBase_ctor(v2, a1);
     *result = 12475616;
     result[3122] = 0;
@@ -124706,7 +124706,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -124811,7 +124811,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r0
   
-    v0 = operator new(0x25B0u);
+    v0 = __operator_new(0x25B0u);
     return Actor_Wiggler_2_build_helper(v0);
   }
 
@@ -125463,7 +125463,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = 12321336;
     v10 = "hanachan_head";
     Model2 = Resource_getModel2(ResArchiveById, (int)&v9, 2, 1, 0, 1, 0, 0, 0);
-    v5 = (_DWORD *)operator new(0x48u, 0, 4);
+    v5 = (_DWORD *)__operator_new(0x48u, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 0, 1, 0);
     j_ModelWrapper_setupModel(v6, ResArchiveById, 0, 0);
     a1[1] = v5;
@@ -125556,7 +125556,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a2 + 12), 0);
     v7 = (_DWORD *)((char *)&unk_60C91A70 + 8 * (v5 & 1) + 4);
     Model2 = Resource_getModel2(ResArchiveById, (int)v7, 2, 1, 0, 1, 0, 0, 0);
-    v9 = (_DWORD *)operator new(0x48u, 0, 4);
+    v9 = (_DWORD *)__operator_new(0x48u, 0, 4);
     v10 = ModelWrapper_ctorWithChild(v9, Model2, 2, 1, 0, 1, 0);
     j_ModelWrapper_setupModel(v10, ResArchiveById, 0, 0);
     a1[1] = v9;
@@ -125895,22 +125895,22 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_602D17E0(a1 + 6316, a1 + 108, &v9);
     v10 = *(unsigned __int8 *)(*(_DWORD *)(a1 + 80) + 11527156) << 30;
     v3 = v10;
-    v4 = (_DWORD *)operator new(128);
+    v4 = (_DWORD *)__operator_new(128);
     sub_602D1614(v4, v9, v3, v11, a1);
     *v4 = 12477212;
     v4[31] = 0;
     *(_DWORD *)(a1 + 6436) = v4;
-    v5 = (_DWORD *)operator new(128);
+    v5 = (_DWORD *)__operator_new(128);
     sub_602D1614(v5, v9, v10, v11, a1);
     *v5 = 12477212;
     v4[30] = v5;
     v5[31] = 1;
-    v6 = (_DWORD *)operator new(128);
+    v6 = (_DWORD *)__operator_new(128);
     sub_602D1614(v6, v9, v10, v11, a1);
     *v6 = 12477212;
     v5[30] = v6;
     v6[31] = 2;
-    v7 = operator new(128);
+    v7 = __operator_new(128);
     result = (_DWORD *)sub_602D1614(v7, v9, v10, v11, a1);
     *result = 12477212;
     v6[30] = result;
@@ -127179,7 +127179,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (struct sead_IDisposer *)(a1 + 31);
     EffectData_release((int)(a1 + 31));
     sead__IDisposer__dtor(v2);
-    return operator delete((int)a1);
+    return __operator_delete((int)a1);
   }
 
 /* ============================================================================
@@ -127301,7 +127301,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v1; // r0
   
     sub_602D1450(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -128198,7 +128198,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x25B0u);
+    v0 = __operator_new(0x25B0u);
     result = (_DWORD *)Actor_Wiggler_2_build_helper(v0);
     *result = 12477428;
     return result;
@@ -128361,7 +128361,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v1; // r0
   
     sub_602D1450(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -128404,7 +128404,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r0
   
-    v0 = operator new(0x1D00u);
+    v0 = __operator_new(0x1D00u);
     return SledgeBro_ctor(v0);
   }
 
@@ -130166,7 +130166,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v13 = "bros_mega";
     Model2 = Resource_getModel2(v2, &v12, 2, 0, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)operator new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, 0, 0);
     *(_DWORD *)(a1 + 6856) = v5;
@@ -131395,7 +131395,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -131634,7 +131634,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r0
   
-    v0 = operator new(0x1C68u);
+    v0 = __operator_new(0x1C68u);
     return sub_602DA2D8(v0);
   }
 
@@ -132721,7 +132721,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C91D6C);
     Model2 = Resource_getModel2(Resource, &dword_60C91D74, 2, 0, 0, 0, 0, 0, 0);
-    v4 = operator new(72, 0, 4);
+    v4 = __operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 0, 0, 0);
     j_ModelWrapper_setupModel(v5, Resource, 0, 0);
     a1[1575] = v4;
@@ -134442,7 +134442,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -134493,7 +134493,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r3
     int v8; // r6
   
-    v2 = (_DWORD *)operator new(0x1818u);
+    v2 = (_DWORD *)__operator_new(0x1818u);
     result = StateActor_ctor(v2);
     *result = 12479668;
     result[1529] = 0;
@@ -134959,7 +134959,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 116) = *(float *)(a1 + 116) + 16.0;
       Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C91FA0);
       Model2 = Resource_getModel2(Resource, (int)&unk_60C91FA8, 1, 0, 0, 0, 0, 0, 0);
-      v5 = (_DWORD *)operator new(0x30u, 0, 4);
+      v5 = (_DWORD *)__operator_new(0x30u, 0, 4);
       v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 0, 0, 0);
       ModelWrapper_setup(v6, Resource, 0, 0);
       *(_DWORD *)(a1 + 6100) = v5;
@@ -135587,7 +135587,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -136083,7 +136083,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r0
   
-    v0 = operator new(0x3C80u);
+    v0 = __operator_new(0x3C80u);
     return sub_602E175C(v0);
   }
 
@@ -139139,7 +139139,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -139274,7 +139274,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = v2;
     v15 = "ibaramushi";
     Model2 = Resource_getModel2(v2, &v14, 2, 1, 1, 0, 0, 0, 0);
-    v5 = (_DWORD *)operator new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 1, 0, 0);
     j_ModelWrapper_setupModel(v6, v3, 0, 0);
     *(_DWORD *)a1 = v5;
@@ -139295,7 +139295,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = 12321336;
     v15 = "ibaramushi_orange";
     v10 = Resource_getModel2(v3, &v14, 0, 1, 1, 0, 0, 0, 0);
-    v11 = operator new(72, 0, 4);
+    v11 = __operator_new(72, 0, 4);
     v12 = ModelWrapper_ctorWithChild(v11, v10, 0, 1, 1, 0, 0);
     j_ModelWrapper_setupModel(v12, v3, 0, 0);
     *(_DWORD *)(a1 + 4) = v11;
@@ -139874,7 +139874,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1D78u);
+    v0 = __operator_new(0x1D78u);
     StateActor_ctor((_DWORD *)v0);
     *(_DWORD *)v0 = 12480796;
     RectCollider_ctor((_DWORD *)(v0 + 6104));
@@ -145791,7 +145791,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -146038,7 +146038,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x30B8u);
+    v0 = __operator_new(0x30B8u);
     result = (_DWORD *)BrosBase_ctor(v0);
     *result = 12481084;
     result[3117] = 3;
@@ -146501,7 +146501,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -146599,7 +146599,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       v7 = (char *)&unk_60C927A0 + 8 * a3 + 4;
       Model2 = Resource_getModel2(a2, v7, 1, 1, 1, 1, 0, 0, 0);
-      v9 = (_DWORD **)operator new(48, 0, 4);
+      v9 = (_DWORD **)__operator_new(48, 0, 4);
       v10 = ModelWrapper_ctor(v9, Model2, 1, 1, 1, 1, 0);
       ModelWrapper_setup(v10, a2, 0, 0);
       *v6 = v9;
@@ -148140,7 +148140,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v0; // r4
   
-    v0 = operator new(0x1AF8u);
+    v0 = __operator_new(0x1AF8u);
     Enemy__Enemy(v0);
     *(_DWORD *)v0 = 12482236;
     *(_DWORD *)(v0 + 6316) = 0;
@@ -149025,7 +149025,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v17 = 12321336;
     v18 = "kuribo_iga";
     Model2 = Resource_getModel2(v2, &v17, 2, 1, 1, 1, 0, 0, 0);
-    v5 = (_DWORD *)operator new(72, 0, 4);
+    v5 = (_DWORD *)__operator_new(72, 0, 4);
     v6 = ModelWrapper_ctorWithChild(v5, Model2, 2, 1, 1, 1, 0);
     j_ModelWrapper_setupModel(v6, v2, 0, 0);
     v3[1] = v5;
@@ -150049,7 +150049,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -150167,7 +150167,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int v2; // r0
   
-    v2 = operator new(0x2EA0u);
+    v2 = __operator_new(0x2EA0u);
     return kurage_ref(v2, a1);
   }
 
@@ -151002,7 +151002,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v26 = 12321336;
     v27 = "kurage";
     Model2 = Resource_getModel2(v2, &v26, 2, 1, 2, 0, 0, 0, 0);
-    v4 = operator new(72, 0, 4);
+    v4 = __operator_new(72, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 1, 2, 0, 0);
     j_ModelWrapper_setupModel(v5, v2, 0, 0);
     v1[1] = v4;
@@ -151031,7 +151031,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v26 = 12321336;
     v27 = "kurage_light_fog";
     v14 = Resource_getModel2(v13, &v26, 0, 0, 1, 0, 0, 0, 0);
-    v15 = operator new(48, 0, 4);
+    v15 = __operator_new(48, 0, 4);
     v16 = ModelWrapper_ctor(v15, v14, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v16, v13, 0, 0);
     v1[2] = v15;
@@ -151046,7 +151046,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v26 = 12321336;
     v27 = "kurage_light_mask";
     v20 = Resource_getModel2(v19, &v26, 0, 0, 1, 0, 0, 0, 0);
-    v21 = operator new(48, 0, 4);
+    v21 = __operator_new(48, 0, 4);
     v22 = ModelWrapper_ctor(v21, v20, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v22, v19, 0, 0);
     v1[3] = v21;
@@ -152265,7 +152265,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -152291,7 +152291,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
   
-    operator new(0x36A8u);
+    __operator_new(0x36A8u);
     result = sub_602FCF24();
     *(_DWORD *)result = 12483768;
     *(_WORD *)(result + 13984) = 3;
@@ -152577,7 +152577,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -152830,7 +152830,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *result; // r0
   
-    operator new(0x36B0u);
+    __operator_new(0x36B0u);
     result = Actor_level_big_Piranha_furawa_build_helper();
     *result = 12484520;
     *((_WORD *)result + 6996) = 3;
@@ -153055,7 +153055,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -153099,7 +153099,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     int result; // r0
   
-    v0 = operator new(0x36A0u);
+    v0 = __operator_new(0x36A0u);
     result = sub_602FEC74(v0);
     *(_DWORD *)result = 12485244;
     *(_DWORD *)(result + 13980) = 0;
@@ -153706,7 +153706,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -153805,7 +153805,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     _DWORD *result; // r0
   
-    operator new(0x36A0u);
+    __operator_new(0x36A0u);
     result = (_DWORD *)sub_602FCF24();
     *result = 12485992;
     return result;
@@ -153902,7 +153902,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v0; // r0
     _DWORD *result; // r0
   
-    v0 = operator new(0x36A8u);
+    v0 = __operator_new(0x36A8u);
     result = (_DWORD *)sub_602FEC74(v0);
     *result = 12486720;
     result[3495] = 0;
@@ -154219,7 +154219,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -154824,7 +154824,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     ResArchiveById = Profile__getResArchiveById(*(_DWORD *)(a1 + 12), 0);
     Model2 = Resource_getModel2(ResArchiveById, (int)&dword_60C92E10, 2, 0, 1, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x48u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x48u, 0, 4);
     v5 = ModelWrapper_ctorWithChild(v4, Model2, 2, 0, 1, 0, 0);
     j_ModelWrapper_setupModel(v5, ResArchiveById, 0, 0);
     *(_DWORD *)(a1 + 6300) = v4;

@@ -26,7 +26,7 @@ int __fastcall PlayerFireball_ctor(int a1);
 /* line: 3 */   int result; // r0
 /* line: 4 */   int v4; // r1
 /* line: 5 */ 
-/* line: 6, address: 0x6013a7b0 */   v2 = operator new(6776);
+/* line: 6, address: 0x6013a7b0 */   v2 = __operator_new(6776);
 /* line: 7, address: 0x6013a7b8 */   result = FireballBase_ctor(v2, a1);
 /* line: 8, address: 0x6013a7cc */   *(_DWORD *)result = 12397132;
 /* line: 9, address: 0x6013a7d4 */   *(_DWORD *)(result + 6760) = 0;

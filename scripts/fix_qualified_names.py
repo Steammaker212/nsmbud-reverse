@@ -49,6 +49,20 @@ def rewrite_qualified(match):
     return run.replace("::", "__")
 
 
+# C++ allocation operators. IDA prints these with their C++ spelling, which no C compiler knows:
+# `v2 = operator new(0x178u);`. There are 2,107 operator new, 1,699 operator delete, 257 new[] and
+# 200 delete[] sites, across 40 files -- and every one of those 40 files fails to parse. The
+# replacements are plain C identifiers declared in nsmbudx_types.h, so the call still means the same
+# allocation and the reference stays greppable.
+OPERATOR = re.compile(r"\boperator\s*(new\[\]|delete\[\]|new|delete)\b")
+
+
+def rewrite_operator(match):
+    kind = match.group(1)
+    # operator new[] -> __operator_new_array, operator delete -> __operator_delete, ...
+    return "__operator_" + kind.replace("[]", "_array")
+
+
 def split_code_mask(text):
     """Yield (is_code, chunk) so rewrites never touch strings or comments."""
     i = 0
@@ -97,7 +111,8 @@ def transform(text):
     for is_code, chunk in split_code_mask(text):
         if is_code:
             new, k = CALL.subn(rewrite_qualified, chunk)
-            changed += k
+            new, k2 = OPERATOR.subn(rewrite_operator, new)
+            changed += k + k2
             out.append(new)
         else:
             out.append(chunk)

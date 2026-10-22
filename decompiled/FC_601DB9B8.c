@@ -29,7 +29,7 @@ int __fastcall sub_601DB9B8(_DWORD *a1);
 /* line: 6 */   _DWORD v7[3]; // [sp+4h] [bp-3Ch] BYREF
 /* line: 7 */   _BYTE v8[48]; // [sp+10h] [bp-30h] BYREF
 /* line: 8 */ 
-/* line: 9, address: 0x601db9c8 */   v2 = operator new(16);
+/* line: 9, address: 0x601db9c8 */   v2 = __operator_new(16);
 /* line: 10, address: 0x601db9e4 */   a1[67] = sub_60794D48(v2, 4, 1, 1, 1);
 /* line: 11, address: 0x601db9f8 */   a1[32] = 1036831949;
 /* line: 12, address: 0x601db9fc */   a1[33] = 1036831949;

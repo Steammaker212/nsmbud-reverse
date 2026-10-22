@@ -91,6 +91,16 @@ typedef struct { uint32x4_t val[2]; }  uint32x4x2_t;
 typedef struct { int8x16_t val[2]; }   int8x16x2_t;
 typedef struct { uint8x16_t val[2]; }  uint8x16x2_t;
 
+/* ---- C++ allocation operators ----
+ * The decompiler prints `operator new(size)` / `operator delete(p)`, which is not C. Those call
+ * sites are rewritten to these names by scripts/fix_qualified_names.py.
+ *
+ * NO declarations here. The real `__operator_new` and `__operator_delete` are functions in this
+ * binary with known addresses (0x008de044 and 0x008de3a0) and libs.h already declares them from the
+ * database. Declaring them again here collided with those prototypes and took the parse count from
+ * 334 to 0 -- the rewrite is legitimate, but the signatures must come from the one place that knows
+ * them. Only the [] variants, which the database does not name, are declared. */
+
 /* ---- opaque types for C++-qualified names ----
  * Incomplete on purpose: no layout is claimed. */
 struct sead_IDisposer;

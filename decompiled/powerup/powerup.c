@@ -286,29 +286,29 @@ static inline unsigned int uxtb16(unsigned int x)
     int v12; // r0
     int v13; // r0
   
-    v2 = operator new(2320);
+    v2 = __operator_new(2320);
     *(_DWORD *)(a1 + 16) = sub_6044F1C4(v2, 0);
-    v3 = operator new(2320);
+    v3 = __operator_new(2320);
     *(_DWORD *)(a1 + 20) = sub_6044F1C4(v3, 1);
-    v4 = operator new(2320);
+    v4 = __operator_new(2320);
     *(_DWORD *)(a1 + 24) = sub_6044F1C4(v4, 2);
-    v5 = operator new(2320);
+    v5 = __operator_new(2320);
     *(_DWORD *)(a1 + 28) = sub_6044F1C4(v5, 3);
-    v6 = operator new(2320);
+    v6 = __operator_new(2320);
     *(_DWORD *)(a1 + 32) = sub_6044F1C4(v6, 4);
-    v7 = operator new(2320);
+    v7 = __operator_new(2320);
     *(_DWORD *)(a1 + 36) = sub_6044F1C4(v7, 5);
-    v8 = operator new(2320);
+    v8 = __operator_new(2320);
     *(_DWORD *)(a1 + 40) = sub_6044F1C4(v8, 6);
-    v9 = operator new(2320);
+    v9 = __operator_new(2320);
     *(_DWORD *)(a1 + 44) = sub_6044F1C4(v9, 7);
-    v10 = operator new(2320);
+    v10 = __operator_new(2320);
     *(_DWORD *)(a1 + 48) = sub_6044F1C4(v10, 8);
-    v11 = operator new(2320);
+    v11 = __operator_new(2320);
     *(_DWORD *)(a1 + 52) = sub_6044F1C4(v11, 9);
-    v12 = operator new(2320);
+    v12 = __operator_new(2320);
     *(_DWORD *)(a1 + 56) = sub_6044F1C4(v12, 10);
-    v13 = operator new(2320);
+    v13 = __operator_new(2320);
     *(_DWORD *)(a1 + 60) = sub_6044F1C4(v13, 11);
     *(_BYTE *)(a1 + 64) = 1;
     return a1;
@@ -342,7 +342,7 @@ static inline unsigned int uxtb16(unsigned int x)
         Slot_detachChild(v3 + 168);
         sub_60921BD4(v3 + 84);
         sub_60922478(v3 + 16);
-        operator delete(v3);
+        __operator_delete(v3);
         *(_DWORD *)(a1 + 4 * i) = 0;
       }
     }
@@ -551,7 +551,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12562648;
     v1 = Slot_destroy((int)a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -574,7 +574,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12562648;
     v1 = Slot_destroy((int)a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -788,7 +788,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result >= 0 )
       {
         sub_6086AC64(&v27);
-        v22 = operator new[](v34, a5, 8);
+        v22 = __operator_new[](v34, a5, 8);
         return sub_6086ADCC(v23 + 32, &v27, v22, v34);
       }
     }
@@ -1226,7 +1226,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result >= 0 )
     {
       sub_6086A438(&v78);
-      *(_DWORD *)(a1 + 236) = operator new[](v83, a5, 8);
+      *(_DWORD *)(a1 + 236) = __operator_new[](v83, a5, 8);
       result = sub_6086A548(a1 + 32, &v78);
     }
     v23 = *(unsigned __int16 *)(a3 + 82);
@@ -1354,7 +1354,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result >= 0 )
       {
         sub_6086AC64(&v45);
-        v43 = operator new[](v52, a5, 8);
+        v43 = __operator_new[](v52, a5, 8);
         return sub_6086ADCC(v44 + 120, &v45, v43, v52);
       }
     }
@@ -1724,7 +1724,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC9CF0C] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v2);
+    return __operator_delete((int)v2);
   }
 
 /* ============================================================================
@@ -1738,7 +1738,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = MEMORY[0xC9CF0C];
     if ( !MEMORY[0xC9CF0C] )
     {
-      v2 = operator new[](5136, a1, 4);
+      v2 = __operator_new[](5136, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12562700;
       MEMORY[0xC9CF08] = v2;
@@ -1834,7 +1834,7 @@ static inline unsigned int uxtb16(unsigned int x)
     switch ( v7 )
     {
       case 2:
-        v8 = operator new(236, a4, 4);
+        v8 = __operator_new(236, a4, 4);
         *(_DWORD *)(a1 + 1388) = sub_60455CB8(v8);
         (*(void (__fastcall **)(_DWORD *))(*a3 + 12))(a3);
         (*(void (__fastcall **)(_DWORD *))(*a3 + 12))(a3);
@@ -1860,7 +1860,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_60452470(a1);
         break;
       case 1:
-        v12 = operator new(236, a4, 4);
+        v12 = __operator_new(236, a4, 4);
         v13 = sub_60455CB8(v12);
         *(_DWORD *)(a1 + 1388) = v13;
         sub_60455E7C(v13, a4);
@@ -1869,15 +1869,15 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 1388) = 0;
         break;
     }
-    v14 = operator new(404, a4, 4);
+    v14 = __operator_new(404, a4, 4);
     *(_DWORD *)(a1 + 1264) = ctor_installTwoVtables(v14);
-    v15 = operator new(404, a4, 4);
+    v15 = __operator_new(404, a4, 4);
     *(_DWORD *)(a1 + 1268) = ctor_installTwoVtables(v15);
-    v16 = operator new(404, a4, 4);
+    v16 = __operator_new(404, a4, 4);
     *(_DWORD *)(a1 + 1272) = ctor_installTwoVtables(v16);
-    v17 = operator new(404, a4, 4);
+    v17 = __operator_new(404, a4, 4);
     *(_DWORD *)(a1 + 1276) = ctor_installTwoVtables(v17);
-    v18 = operator new(404, a4, 4);
+    v18 = __operator_new(404, a4, 4);
     *(_DWORD *)(a1 + 1280) = ctor_installTwoVtables(v18);
     v19 = *(_DWORD *)(a1 + 1316);
     if ( v19 >= 2 )
@@ -4545,7 +4545,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[1] = 864136;
       a1[2] = v5;
     }
-    v6 = operator new(32, a3, 4);
+    v6 = __operator_new(32, a3, 4);
     v7 = sub_60905100(v6, a1[2], 864136, 0);
     a1[3] = v7;
     sub_609052F4(v7, 0);
@@ -4591,7 +4591,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[1] = 864136;
       a1[2] = v3;
     }
-    v4 = operator new(32, a2, 4);
+    v4 = __operator_new(32, a2, 4);
     v5 = sub_60905100(v4, a1[2], 864136, 0);
     a1[3] = v5;
     sub_609052F4(v5, 0);
@@ -5503,7 +5503,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_BYTE *)(a1 + 192) )
       MEMORY[0xC9CF18] = 0;
     sead__CalculateTask__dtor(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -7030,7 +7030,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC9CFB8] = 0;
     }
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -7044,7 +7044,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = MEMORY[0xC9CFB8];
     if ( !MEMORY[0xC9CFB8] )
     {
-      v2 = operator new[](88, a1, 4);
+      v2 = __operator_new[](88, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12562916;
       MEMORY[0xC9CFB4] = v2;
@@ -8810,7 +8810,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v1; // r0
   
     v1 = sub_60909E64(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -8822,7 +8822,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v1; // r0
   
     v1 = sub_60909E64((_DWORD *)(a1 - 308));
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -8929,7 +8929,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v0; // r4
   
-    v0 = operator new(0x18E8u);
+    v0 = __operator_new(0x18E8u);
     StateActor_ctor((_DWORD *)v0);
     *(_DWORD *)v0 = 12562996;
     *(_DWORD *)(v0 + 6100) = 0;
@@ -9120,7 +9120,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C9D030[2 * *(unsigned __int8 *)(a1 + 6320) + 3]);
     *((_DWORD *)v2 - 55) = Resource;
     Model2 = Resource_getModel2(Resource, (int)&unk_60C9D0A0 + 8 * (unsigned __int8)*v2, 1, 1, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)operator new(48, 0, 4);
+    v5 = (_DWORD *)__operator_new(48, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v6, Resource, 0, 0);
     *((_DWORD *)v2 - 54) = v5;
@@ -9471,7 +9471,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -9514,7 +9514,7 @@ static inline unsigned int uxtb16(unsigned int x)
       Model = Resource_getModel(Resource, dword_60BFB318, 6, 1, 1, 1, 0, 0, 1, 0);
     else
       Model = Resource_getModel2(Resource, (int)dword_60BFB318, 1, 1, 1, 0, 0, 0, 0);
-    v9 = operator new(48, 0, 4);
+    v9 = __operator_new(48, 0, 4);
     v10 = ModelWrapper_ctor((_DWORD *)v9, Model, 1, 1, 1, 0, 0);
     ModelWrapper_setup(v10, v7, 0, 0);
     a1[1] = v9;
@@ -9609,7 +9609,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(0x50u);
+    v2 = __operator_new(0x50u);
     result = (_DWORD *)Actor__Actor(v2, a1);
     *result = 12563256;
     return result;
@@ -9659,7 +9659,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v1; // r0
   
     v1 = Actor__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -9693,7 +9693,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(6832);
+    v2 = __operator_new(6832);
     result = (_DWORD *)sub_60466BC4(v2, a1);
     *result = 12563332;
     return result;
@@ -9720,7 +9720,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_fireflower";
     Model2 = Resource_getModel2(Resource, v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -10052,7 +10052,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -10137,7 +10137,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = operator new(6832);
+    v2 = __operator_new(6832);
     result = (_DWORD *)sub_60466BC4(v2, a1);
     *result = 12563708;
     return result;
@@ -10164,7 +10164,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_iceflower";
     Model2 = Resource_getModel2(Resource, v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -10477,7 +10477,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor(a1 + 162);
     StageActor__dtor((StageActor *)a1);
-    return operator delete();
+    return __operator_delete();
   }
 
 /* ============================================================================
@@ -14304,7 +14304,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -14532,7 +14532,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC9D3E4] = 0;
     }
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -14547,7 +14547,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = (_DWORD *)MEMORY[0xC9D3E4];
     if ( !MEMORY[0xC9D3E4] )
     {
-      v3 = operator new[](16, a1, 4);
+      v3 = __operator_new[](16, a1, 4);
       result = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *result = 12564612;
       MEMORY[0xC9D3E0] = result;
@@ -15429,7 +15429,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -15491,7 +15491,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    operator new(6832);
+    __operator_new(6832);
     result = (_DWORD *)sub_60466BC4();
     *result = 12565000;
     return result;
@@ -15538,7 +15538,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = LoadResource(MEMORY[0xC9CA88], &v13);
     v12 = "I_kinoko";
     Model2 = Resource_getModel2(v2, (int)&v11, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(48, 0, 4);
+    v4 = (_DWORD *)__operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -15874,7 +15874,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor(a1 + 162);
     StageActor__dtor((Actor *)a1);
-    return operator delete();
+    return __operator_delete();
   }
 
 /* ============================================================================
@@ -15898,7 +15898,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    operator new(6832);
+    __operator_new(6832);
     result = (_DWORD *)sub_60466BC4();
     *result = 12565352;
     return result;
@@ -15950,7 +15950,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = LoadResource(MEMORY[0xC9CA88], &v12);
     v11 = "I_kinoko";
     Model2 = Resource_getModel2(v2, (int)&v10, 1, 1, 0, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -16347,7 +16347,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -16371,7 +16371,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    operator new(6832);
+    __operator_new(6832);
     result = (_DWORD *)sub_60466BC4();
     *result = 12565748;
     return result;
@@ -16398,7 +16398,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_musasabi";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -16686,7 +16686,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -16710,7 +16710,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    operator new(6832);
+    __operator_new(6832);
     result = (_DWORD *)sub_60466BC4();
     *result = 12566100;
     return result;
@@ -16766,7 +16766,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = LoadResource(MEMORY[0xC9CA88], &v12);
     v11 = "I_kinoko";
     Model2 = Resource_getModel2(v2, (int)&v10, 1, 1, 0, 0, 0, 0, 0);
-    v4 = operator new(48, 0, 4);
+    v4 = __operator_new(48, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -17129,7 +17129,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -17156,7 +17156,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    operator new(6832);
+    __operator_new(6832);
     result = (_DWORD *)sub_60466BC4();
     *result = 12566452;
     return result;
@@ -17183,7 +17183,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_crown";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -17495,7 +17495,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -17529,7 +17529,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    operator new(6832);
+    __operator_new(6832);
     result = (_DWORD *)sub_60466BC4();
     *result = 12566804;
     return result;
@@ -17556,7 +17556,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_penguin";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -17951,7 +17951,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -17985,7 +17985,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    operator new(6872);
+    __operator_new(6872);
     result = (_DWORD *)sub_60466BC4();
     *result = 12567156;
     result[1713] = 0;
@@ -18051,7 +18051,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7[0] = 12321336;
     v7[1] = "I_propeller_model";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     a1[1540] = v4;
@@ -18890,7 +18890,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -19086,7 +19086,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *v0; // r5
   
-    v0 = (_DWORD *)operator new(0x18A0u);
+    v0 = (_DWORD *)__operator_new(0x18A0u);
     StateActor_ctor(v0);
     *v0 = 12567548;
     v0[1531] = 0;
@@ -19269,7 +19269,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 6140);
     Resource = LoadResource(MEMORY[0xC9CA88], (_DWORD *)&unk_60C9D720 + 2 * *(_DWORD *)(a1 + 6140));
     Model2 = Resource_getModel2(Resource, (int)&unk_60C9D720 + 8 * *v2 + 56, 1, 1, 0, 0, 0, 0, 0);
-    v5 = operator new(48, 0, 4);
+    v5 = __operator_new(48, 0, 4);
     v6 = ModelWrapper_ctor((_DWORD *)v5, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v6, Resource, 0, 0);
     *(v2 - 10) = v5;
@@ -19473,7 +19473,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
     StageActor__dtor((Actor *)a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -19487,7 +19487,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r2
     int v5; // r3
   
-    v2 = operator new(0x7Cu);
+    v2 = __operator_new(0x7Cu);
     result = Actor__Actor(v2, a1);
     *(_DWORD *)result = 12567780;
     v4 = *(_DWORD *)(a1 + 20);
@@ -19805,7 +19805,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v1; // r0
   
     v1 = Actor__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -19850,7 +19850,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v0; // r4
   
-    v0 = operator new(6992);
+    v0 = __operator_new(6992);
     sub_60466BC4();
     *(_DWORD *)v0 = 12567868;
     LightMask__LightMask((LightMask *)(v0 + 6828));
@@ -19906,7 +19906,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], v8);
     v7[1] = "I_star";
     Model2 = Resource_getModel2(Resource, (int)v7, 1, 1, 0, 0, 0, 0, 0);
-    v4 = (_DWORD *)operator new(0x30u, 0, 4);
+    v4 = (_DWORD *)__operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v5, Resource, 0, 0);
     *(_DWORD *)(a1 + 6160) = v4;
@@ -20444,7 +20444,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v3);
+    return __operator_delete(v3);
   }
 
 /* ============================================================================
@@ -20480,7 +20480,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     _DWORD *result; // r0
   
-    operator new(6832);
+    __operator_new(6832);
     result = (_DWORD *)sub_60466BC4();
     *result = 12568240;
     result[1707] = 0;
@@ -20517,7 +20517,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v8 = 12321336;
       v9 = "I_moon";
       Model2 = Resource_getModel2(v3, (int)&v8, 1, 1, 0, 0, 0, 0, 0);
-      v5 = (_DWORD *)operator new(0x30u, 0, 4);
+      v5 = (_DWORD *)__operator_new(0x30u, 0, 4);
       v6 = ModelWrapper_ctor(v5, Model2, 1, 1, 0, 0, 0);
       ModelWrapper_setup(v6, v3, 0, 0);
       *(_DWORD *)(a1 + 6160) = v5;
@@ -20870,7 +20870,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
     StageActor__dtor((Actor *)a1);
-    return operator delete(v4);
+    return __operator_delete(v4);
   }
 
 /* ============================================================================
@@ -20898,7 +20898,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r0
     _DWORD *result; // r0
   
-    v0 = (_DWORD *)operator new(0x17E0u);
+    v0 = (_DWORD *)__operator_new(0x17E0u);
     result = MultiStateActor__MultiStateActor(v0);
     *result = 12568592;
     result[1526] = 0;
@@ -20945,7 +20945,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = LoadResource(MEMORY[0xC9CA88], &v18);
     v17 = "I_musasabi";
     Model2 = Resource_getModel2(v2, (int)&v16, 1, 0, 0, 0, 0, 0, 0);
-    v4 = operator new(0x30u, 0, 4);
+    v4 = __operator_new(0x30u, 0, 4);
     v5 = ModelWrapper_ctor((_DWORD *)v4, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v5, v2, 0, 0);
     *(_DWORD *)(a1 + 6104) = v4;
@@ -21121,7 +21121,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -21161,7 +21161,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v0; // r0
     _DWORD *result; // r0
   
-    v0 = (_DWORD *)operator new(0x17F0u);
+    v0 = (_DWORD *)__operator_new(0x17F0u);
     result = StateActor_ctor(v0);
     *result = 12568816;
     result[1530] = 0;
@@ -21327,7 +21327,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Resource = LoadResource(MEMORY[0xC9CA88], &dword_60C9D920[2 * *(_DWORD *)(a1 + 6112)]);
     *(v2 - 3) = Resource;
     Model2 = Resource_getModel2(Resource, (int)&unk_60C9D960 + 8 * *v2, 1, 1, 0, 0, 0, 0, 0);
-    v5 = (_DWORD *)operator new(48, 0, 4);
+    v5 = (_DWORD *)__operator_new(48, 0, 4);
     v6 = ModelWrapper_ctor(v5, Model2, 1, 1, 0, 0, 0);
     ModelWrapper_setup(v6, Resource, 0, 0);
     *(v2 - 2) = v5;
@@ -21535,7 +21535,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor__dtor(a1);
-    return operator delete(v2);
+    return __operator_delete(v2);
   }
 
 /* ============================================================================
@@ -21611,7 +21611,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1[818];
     if ( v2 )
     {
-      operator delete[](v2);
+      __operator_delete[](v2);
       a1[817] = 0;
       a1[818] = 0;
     }
@@ -21631,12 +21631,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1[818];
     if ( v2 )
     {
-      operator delete[](v2);
+      __operator_delete[](v2);
       a1[817] = 0;
       a1[818] = 0;
     }
     sub_608DEB70(a1 + 819);
-    return operator delete((int)a1);
+    return __operator_delete((int)a1);
   }
 
 /* ============================================================================
@@ -21701,7 +21701,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(_DWORD *)(a1 + 3272);
     if ( v4 )
     {
-      operator delete[](v4);
+      __operator_delete[](v4);
       *(_DWORD *)(a1 + 3268) = 0;
       *(_DWORD *)(a1 + 3272) = 0;
     }
@@ -22052,7 +22052,7 @@ static inline unsigned int uxtb16(unsigned int x)
         else
         {
   LABEL_14:
-          v16 = operator new(88, a3, 4);
+          v16 = __operator_new(88, a3, 4);
           v27 = sub_60476898(v16);
           sub_60472DBC(v7, &v28, &v27);
           v17 = v27;
@@ -22765,7 +22765,7 @@ static inline unsigned int uxtb16(unsigned int x)
     struct sead_IDisposer *v1; // r0
   
     v1 = sub_60902104(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -22824,7 +22824,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v3; // r0
   
-    v3 = operator new(0x14u, a2, a3);
+    v3 = __operator_new(0x14u, a2, a3);
     return sub_60901BCC(v3);
   }
 
@@ -22866,7 +22866,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 20) = 0;
     }
     v3 = sead__IDisposer__dtor((struct sead_IDisposer *)a1);
-    return operator delete((int)v3);
+    return __operator_delete((int)v3);
   }
 
 /* ============================================================================
@@ -22890,11 +22890,11 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[5] = CurrentHeap;
     sub_60855B70(4690912, 4690940);
     (*(void (__fastcall **)(_DWORD *, int))(*a1 + 12))(a1, a2);
-    v5 = operator new(84, a2, 4);
+    v5 = __operator_new(84, a2, 4);
     v6 = (*(int (__fastcall **)(_DWORD *))(*a1 + 16))(a1);
     sub_60479C44(v5, v6);
     a1[4] = v5;
-    v7 = operator new(240, a2, 16);
+    v7 = __operator_new(240, a2, 16);
     v8 = sub_60853EC0(v7);
     *(_DWORD *)v8 = 12569292;
     *(_DWORD *)(v8 + 224) = 0;
@@ -22902,12 +22902,12 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(v8 + 232) = v8 + 232;
     *(_DWORD *)(v8 + 236) = v8 + 232;
     a1[6] = v8;
-    v9 = operator new(60, a2, 4);
+    v9 = __operator_new(60, a2, 4);
     v10 = (_DWORD *)sub_60987E7C(v9, *(_DWORD *)(MEMORY[0xCD0C84] + 852), *(_DWORD *)(MEMORY[0xCD0C84] + 856));
     *v10 = 12571036;
     v10[14] = 1065353216;
     a1[879] = v10;
-    result = operator new(48, a2, 16);
+    result = __operator_new(48, a2, 16);
     a1[7] = result;
     return result;
   }
@@ -22936,7 +22936,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = sub_60980818(v4, a2[1]);
     sub_60851BDC(&v14, v5);
     v6 = sub_60851D10(&v14);
-    v7 = (int *)operator new[](4 * v6, MEMORY[0xCC7F90], 4);
+    v7 = (int *)__operator_new[](4 * v6, MEMORY[0xCC7F90], 4);
     v16 = v7;
     sub_6090B310(MEMORY[0xCCF464]);
     v8 = *(_DWORD *)(a1 + 16);
@@ -25003,7 +25003,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)a1 = 12569208;
     }
     v5 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v5);
+    return __operator_delete((int)v5);
   }
 
 /* ============================================================================
@@ -25017,7 +25017,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     CurrentHeap = sead__HeapMgr__getCurrentHeap(MEMORY[0xCCEE90]);
-    v3 = operator new(36, CurrentHeap, 4);
+    v3 = __operator_new(36, CurrentHeap, 4);
     result = sub_60982D30(v3, *(_DWORD *)(MEMORY[0xCD0C84] + 836), *(_DWORD *)(MEMORY[0xCD0C84] + 856));
     *(_DWORD *)(a1 + 3520) = result;
     return result;
@@ -25155,7 +25155,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v3; // r5
     int v4; // r4
   
-    v3 = (_DWORD *)operator new(0x84u, a2, 4);
+    v3 = (_DWORD *)__operator_new(0x84u, a2, 4);
     memset(v3, 0, 0x84u);
     sub_6098B61C((struct sead_IDisposer *)v3);
     *v3 = 12569336;
@@ -25344,7 +25344,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 20) = 0;
     }
     v3 = sead__IDisposer__dtor((struct sead_IDisposer *)a1);
-    return operator delete((int)v3);
+    return __operator_delete((int)v3);
   }
 
 /* ============================================================================
@@ -25375,7 +25375,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = nullsub_1416();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -25436,7 +25436,7 @@ static inline unsigned int uxtb16(unsigned int x)
     struct sead_IDisposer *v1; // r0
   
     v1 = sub_6098B728(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -26015,7 +26015,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = nullsub_1443();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -26065,7 +26065,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = nullsub_1443();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -26928,7 +26928,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = nullsub_1443();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -27016,7 +27016,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = nullsub_1443();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -27115,7 +27115,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = nullsub_1443();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -27296,7 +27296,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = nullsub_1443();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -27342,7 +27342,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = nullsub_1443();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -27406,7 +27406,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = nullsub_1443();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -27544,7 +27544,7 @@ static inline unsigned int uxtb16(unsigned int x)
       while ( v2 );
     }
     Disposer_destroyAllocated((struct sead_IDisposer *)(a1 + 3));
-    return operator delete((int)a1);
+    return __operator_delete((int)a1);
   }
 
 /* ============================================================================
@@ -27596,7 +27596,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v10 += 208 * a2;
     sub_6091FDB0(v10, 1, 29, *a3, a3[1], 1, 1, 0, 0, 1);
     v11 = v10[10];
-    v12 = (_DWORD *)operator new(28, a6, 4);
+    v12 = (_DWORD *)__operator_new(28, a6, 4);
     Slot_construct(v12);
     *v12 = 12557340;
     Slot_initFromResource(v12, v11, a6, 0x2000, 0);
@@ -27681,7 +27681,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v7 += 208 * a2;
     sub_6091FDB0(v7, 1, 29, *a3, a3[1], 1, 1, 0, 0, 1);
     v8 = v7[10];
-    v9 = (_DWORD *)operator new(28, a5, 4);
+    v9 = (_DWORD *)__operator_new(28, a5, 4);
     Slot_construct(v9);
     *v9 = 12557340;
     Slot_initFromResource(v9, v8, a5, 0x2000, 0);
@@ -27869,7 +27869,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v1; // r0
   
     Disposer_destroyAllocated(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -28295,7 +28295,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = sub_60855C6C();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -29723,7 +29723,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v1; // r0
   
     v1 = nullsub_91(a1);
-    return operator delete(v1);
+    return __operator_delete(v1);
   }
 
 /* ============================================================================
@@ -29993,7 +29993,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v0; // r0
   
     v0 = sub_6085CFF8();
-    return operator delete(v0);
+    return __operator_delete(v0);
   }
 
 /* ============================================================================
@@ -31390,7 +31390,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC9EBB4] = 0;
     }
     v1 = sead__IDisposer__dtor(a1);
-    return operator delete((int)v1);
+    return __operator_delete((int)v1);
   }
 
 /* ============================================================================
@@ -31404,7 +31404,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = MEMORY[0xC9EBB4];
     if ( !MEMORY[0xC9EBB4] )
     {
-      v2 = operator new[](108, a1, 4);
+      v2 = __operator_new[](108, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12571436;
       MEMORY[0xC9EBB0] = v2;
