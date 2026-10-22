@@ -3106,6 +3106,16 @@
   }
 
 /* ============================================================================
+ * CollisionActor4vf84Ev_vf70
+ * RVA 0x00003d80   size 0x4   xrefs 8
+ * ============================================================================ */
+  // attributes: thunk
+  void CollisionActor4vf84Ev_vf70()
+  {
+    JUMPOUT(0x60003C88);
+  }
+
+/* ============================================================================
  * _ZNK14CollisionActor27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE
  * RVA 0x00003dac   size 0x12c   xrefs 0
  * ============================================================================ */

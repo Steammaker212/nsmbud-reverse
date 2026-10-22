@@ -76059,7 +76059,7 @@
   }
 
 /* ============================================================================
- * sub_60563C28
+ * BlockBase_setupMovement
  * RVA 0x00563c28   size 0x9c   xrefs 5
  * ============================================================================ */
   int __fastcall sub_60563C28(_DWORD *a1)
@@ -76698,7 +76698,7 @@
   }
 
 /* ============================================================================
- * sub_605649F8
+ * BlockBase_onEmptied
  * RVA 0x005649f8   size 0x190   xrefs 2
  * ============================================================================ */
   int __fastcall sub_605649F8(int a1)
@@ -76770,7 +76770,7 @@
   // attributes: thunk
   int BlockBase::spawnItemUp()
   {
-    return sub_605649F8();
+    return BlockBase_onEmptied();
   }
 
 /* ============================================================================
@@ -76789,7 +76789,7 @@
   int __fastcall BlockBase::spawnItemDown(int a1)
   {
     CollisionMgr_setSensor(a1 + 648, 0, 3);
-    return sub_605649F8(a1);
+    return BlockBase_onEmptied(a1);
   }
 
 /* ============================================================================
@@ -77959,7 +77959,7 @@
         sub_60003D84(a1);
       *(_DWORD *)(a1 + 7300) = *(_DWORD *)((char *)&unk_60AF2188 + ((*(_DWORD *)(a1 + 24) >> 2) & 4));
       *(_DWORD *)(a1 + 7304) = *(unsigned __int8 *)(a1 + 28);
-      sub_60563C28(a1);
+      BlockBase_setupMovement(a1);
       v6 = *(_DWORD *)(a1 + 7304);
       if ( v6 )
         *(_BYTE *)(a1 + 6878) = 1;
@@ -78181,7 +78181,7 @@
       *(_DWORD *)(a1 + 6856) = sub_60563BB8(a1, 7);
       *(_DWORD *)(a1 + 7300) = *(_DWORD *)((char *)&unk_60AF2188 + ((*(_DWORD *)(a1 + 24) >> 2) & 4));
       *(_DWORD *)(a1 + 7304) = *(unsigned __int8 *)(a1 + 28);
-      sub_60563C28(a1);
+      BlockBase_setupMovement(a1);
       v5 = *(_DWORD *)(a1 + 7304);
       if ( v5 )
         *(_BYTE *)(a1 + 6878) = 1;

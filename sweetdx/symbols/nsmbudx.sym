@@ -5,7 +5,7 @@
 # Addresses are in-image addresses (VA - 0x60000000) and are
 # strictly below NSMBUDX_NSO_MEMORY_SIZE (0x00CD1000).
 #
-# symbols: 17972
+# symbols: 17977
 #
 # Name corrections applied (verified against disassembly):
 #   _ZN10StageActor18directionToPlayerXERK4Vec2
@@ -91,6 +91,7 @@ _ZN14CollisionActor4vfA0Ev = 0x00003554;
 _ZN14CollisionActor4vfA4Ev = 0x00003558;
 _ZN14CollisionActor13handleGravityEv = 0x0000355C;
 _ZN14CollisionActor11handleSpeedEv = 0x00003624;
+CollisionActor4vf84Ev_vf70 = 0x00003D80;
 _ZNK14CollisionActor27checkDerivedRuntimeTypeInfoEPKN4sead15RuntimeTypeInfo9InterfaceE = 0x00003DAC;
 _ZNK14CollisionActor18getRuntimeTypeInfoEv = 0x00003F20;
 _ZN14CollisionActorD2Ev = 0x00003F94;
@@ -3493,11 +3494,13 @@ _ZN9BlockBaseC2EPK14ActorBuildInfo = 0x00563544;
 _ZN9BlockBase9onExecuteEv = 0x005638C8;
 _ZN9BlockBase6onDrawEv = 0x00563984;
 _ZN9BlockBase15damageFromUnderEv = 0x00563A08;
+BlockBase_setupMovement = 0x00563C28;
 _ZN9BlockBase5vf174Ev = 0x00563CC4;
 _ZN9BlockBase5vf160Ev = 0x00563E44;
 _ZN9BlockBase5vf178Ev = 0x00563ED8;
 _ZN9BlockBase5vf17CEv = 0x00563FC0;
 _ZN9BlockBase5vf16CEv = 0x005640BC;
+BlockBase_onEmptied = 0x005649F8;
 _ZN9BlockBase11spawnItemUpEv = 0x00564BA8;
 _ZN9BlockBase4vfCCEv = 0x00564BAC;
 _ZN9BlockBase13spawnItemDownEv = 0x00564BC0;
@@ -4781,6 +4784,9 @@ ChallengeRetryScene_ctor = 0x007E1C78;
 challenge_replay_ref_2 = 0x007E2734;
 DarkCloudDemoScene_ctor = 0x007E3508;
 DemoScene_ctor = 0x007E4F40;
+PlayerStates_loadModelResources = 0x007E55DC;
+
+PlayerStates_updateModelAndAnims = 0x007E8220;
 
 GameOverScene_ctor = 0x007EC020;
 GameSetupScene_ctor = 0x007ED9D8;

@@ -7,7 +7,7 @@ symbol names applied so cross-calls read by name.
 |---|---|
 | Game | New Super Mario Bros. U Deluxe |
 | Version | v1.0.0 |
-| Symbols applied | 3,170 |
+| Symbols applied | 17,972 |
 | Files | 11 source files, 5 subsystems |
 
 ## Naming
@@ -70,5 +70,5 @@ all.
 | `player/` | 453 | 393 |
 | `powerup/` | 328 | 257 |
 | `actors/` | 4,669 | 3,139 |
-| `systems/` | 5,937 | 3,791 |
+| `systems/` | 5,938 | 3,791 |
 | `libs/` | 3,358 | 2,527 |
