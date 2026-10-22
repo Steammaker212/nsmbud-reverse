@@ -95859,7 +95859,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 736))(a1);
     if ( !result )
     {
-      if ( a2[330] != 5 && !sub_6075EE0C((int)a2) )
+      if ( a2[330] != 5 && !isMode4((int)a2) )
         isMode5((int)a2);
       result = (*(int (__fastcall **)(_DWORD *, int, _DWORD, int))(*a2 + 748))(a2, 1, 0, 2);
       if ( result == 1 )
@@ -125069,7 +125069,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v28 = 0;
       v29 = 0;
       v7 = (_DWORD *)MEMORY[0xCC436C];
-      sub_608DEB0C(&v27, 4, &v30);
+      Buffer_initIfValid(&v27, 4, &v30);
       v27 = 0;
       v8 = (_DWORD *)(a1 + 6132);
       v9 = *a3;
@@ -167411,7 +167411,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         memset(v18, 0, 16);
         v12(v10 + 1692, v11, 3, v18, 0);
         v13 = sub_6090E3D4((int)v18);
-        sub_6090E560(v13, v11, (float *)(v10 + 1692));
+        Rect_computeOverlapBlend(v13, v11, (float *)(v10 + 1692));
       }
     }
     return sead::CriticalSection::unlock(v15);
@@ -167433,7 +167433,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = *(_DWORD *)(a4 + 32);
     v7 = *(_DWORD *)(a4 + 40);
     v8 = (float *)sub_60958564(a4);
-    return sub_6090E560(v6, v7, v8);
+    return Rect_computeOverlapBlend(v6, v7, v8);
   }
 
 /* ============================================================================
@@ -167467,7 +167467,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v11 = *(_DWORD *)(a4 + 40);
         Object_callSlot7(v10 + 1692, v11);
         v12 = sub_6090E3D4((int)v17);
-        sub_6090E560(v12, v11, (float *)(v10 + 1692));
+        Rect_computeOverlapBlend(v12, v11, (float *)(v10 + 1692));
       }
     }
     return sead::CriticalSection::unlock(v14);
@@ -167509,7 +167509,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = *(_DWORD *)(a4 + 32);
     v13 = *(_DWORD *)(a4 + 40);
     v14 = (float *)sub_60958564(a4);
-    sub_6090E560(v12, v13, v14);
+    Rect_computeOverlapBlend(v12, v13, v14);
     return sead::CriticalSection::unlock(v16);
   }
 
@@ -167999,7 +167999,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = 0;
     a1[588] = 0;
     a1[4] = a1 + 5;
-    sub_608DEB0C(a1, 54, a1 + 599);
+    Buffer_initIfValid(a1, 54, a1 + 599);
     a1[653] = 0;
     a1[654] = 0;
     a1[655] = 0;
@@ -168018,7 +168018,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = 0;
     a1[1241] = 0;
     a1[657] = a1 + 658;
-    sub_608DEB0C(a1 + 653, 54, a1 + 1252);
+    Buffer_initIfValid(a1 + 653, 54, a1 + 1252);
     a1[1306] = 0;
     v7 = a1 + 1322;
     a1[1307] = 0;
@@ -168037,7 +168037,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = 0;
     a1[1894] = 0;
     a1[1310] = a1 + 1311;
-    sub_608DEB0C(a1 + 1306, 54, a1 + 1905);
+    Buffer_initIfValid(a1 + 1306, 54, a1 + 1905);
     a1[1959] = 0;
     v9 = a1 + 1976;
     a1[1960] = 0;
@@ -168055,7 +168055,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     a1[2600] = 0;
     a1[1963] = a1 + 1964;
-    sub_608DEB0C(a1 + 1959, 54, a1 + 2612);
+    Buffer_initIfValid(a1 + 1959, 54, a1 + 2612);
     return a1;
   }
 
@@ -169706,7 +169706,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[57402] = 0;
     a1[57403] = 0;
     a1[57404] = 0;
-    sub_608DEB0C(a1 + 57402, 61, a1 + 57405);
+    Buffer_initIfValid(a1 + 57402, 61, a1 + 57405);
     return a1;
   }
 
@@ -170403,21 +170403,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[99] = 12557520;
     sub_60922344(a1 + 106);
     sub_60921AE8(a1 + 174);
-    sub_60919C54(a1 + 258);
+    Slot_constructDefaults(a1 + 258);
     Slot_construct(a1 + 278);
     a1[278] = 12557488;
     Slot_construct(a1 + 285);
     a1[285] = 12557520;
     sub_60922344(a1 + 292);
     sub_60921AE8(a1 + 360);
-    sub_60919C54(a1 + 444);
+    Slot_constructDefaults(a1 + 444);
     Slot_construct(a1 + 464);
     a1[464] = 12557488;
     Slot_construct(a1 + 471);
     a1[471] = 12557520;
     sub_60922344(a1 + 478);
     sub_60921AE8(a1 + 546);
-    sub_60919C54(a1 + 630);
+    Slot_constructDefaults(a1 + 630);
     return a1;
   }
 
@@ -171002,7 +171002,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_60920EC8(a1 + 2, a5);
     sub_6091D95C(v9);
     v118 = a1 + 2;
-    sub_60920FDC(a1 + 2, a2, v9[159], -1, 0);
+    Object_acquireSpinlockWithTimeout(a1 + 2, a2, v9[159], -1, 0);
     sub_6090BE54(a4);
     v10 = (_DWORD *)v9[153];
     if ( *v10 != -1 )
@@ -171108,7 +171108,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6091DD8C(v35, a2, 1);
     sub_60920EC8(v118, a5);
     sub_6091D95C(v35);
-    sub_60920FDC(v118, a2, v35[159], -1, 0);
+    Object_acquireSpinlockWithTimeout(v118, a2, v35[159], -1, 0);
     sub_6090BE54(v122);
     v36 = (_DWORD *)v35[153];
     if ( *v36 != -1 )
@@ -171209,7 +171209,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6091DD8C(v61, a2, 1);
     sub_60920EC8(v118, a5);
     sub_6091D95C(v61);
-    sub_60920FDC(v118, a2, v61[159], -1, 0);
+    Object_acquireSpinlockWithTimeout(v118, a2, v61[159], -1, 0);
     sub_6090BE54(v122);
     v62 = (_DWORD *)v61[153];
     if ( *v62 != -1 )
@@ -171691,7 +171691,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       sub_60920EC8(a1 + 3704, v6);
       v7 = sub_6090E438(v8, v5);
-      sub_6090E560(v7, *(_DWORD *)(a2 + 40), v5);
+      Rect_computeOverlapBlend(v7, *(_DWORD *)(a2 + 40), v5);
       sub_60934560(a1 + 16, *(_DWORD *)(a2 + 40), 0, v5, v8, a1 + 3704, 0, 0, 0);
       result = sub_6093EA98(MEMORY[0xCD09F8], *(_DWORD *)(a1 + 4048));
       *(_DWORD *)(a1 + 4048) = 0;
@@ -172131,7 +172131,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v24 = *(_DWORD *)(v22 + 32);
     v23 = (float *)(v22 + 32);
     v25 = sub_6090E438(v109, v24);
-    sub_6090E560(v25, *v18, *(_DWORD *)v23);
+    Rect_computeOverlapBlend(v25, *v18, *(_DWORD *)v23);
     RenderParams_updateFromModel(a1 + 276, *v18);
     v26 = (float)(v113 - v111) / (float)(*(float *)(v20 + 24) - *(float *)(v20 + 16));
     v108[0] = (float)(v112 - v110) / (float)(*(float *)(v20 + 20) - *(float *)(v20 + 12));
@@ -172335,7 +172335,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   LABEL_49:
     sub_6091ADF4(*(_DWORD *)(*(_DWORD *)v94 + 28), *v98);
     v88 = sub_6090E438(v101, v96);
-    sub_6090E560(v88, *v98, v96);
+    Rect_computeOverlapBlend(v88, *v98, v96);
     Object_callSlot7(v96, *v98);
     Object_releaseHandle(v104);
     return sub_60917AE4(v102);
@@ -172451,7 +172451,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 &= ~1u;
     RenderParams_updateFromModel(v4, a2[10]);
     Object_callSlot7(a2[3], a2[10]);
-    sub_6090E560(a2[8], a2[10], a2[3]);
+    Rect_computeOverlapBlend(a2[8], a2[10], a2[3]);
     agl_TextureSampler_copy_ref(v17, v3);
     v5 = (_DWORD *)a2[8];
     v6 = *(unsigned __int16 *)(v3 + 24);
@@ -177675,7 +177675,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     MEMORY[0xCC7970](*(_DWORD *)(a2 + 192), 50);
     Object_callSlot7(a1 + 4328, a2);
     v5 = sub_6090E438(v37, a1 + 4328);
-    sub_6090E560(v5, a2, a1 + 4328);
+    Rect_computeOverlapBlend(v5, a2, a1 + 4328);
     v28 = a1 + 4328;
     sub_6091A624(a1 + 4328, a2, 7, a1 + 4404, 255);
     v6 = RenderParams_defaultInit(&v31);
@@ -179984,7 +179984,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(v3 + 272) = v4 + 1600;
     Object_callSlot7(v5, v12);
     v6 = sub_6090E438(v11, (int)v5);
-    sub_6090E560((int)v6, (int)v12, v5);
+    Rect_computeOverlapBlend((int)v6, (int)v12, v5);
     v7 = *(unsigned __int8 *)(a1 + 689);
     if ( *(_BYTE *)(a1 + 689) )
     {
@@ -183430,7 +183430,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_6095CAA8(a1 + 6896, a2[10], a3, 1);
       sub_6091380C(a2[10], 0, 0);
       Object_callSlot7(a2[3], a2[10]);
-      return sub_6090E560(a2[8], a2[10], a2[3]);
+      return Rect_computeOverlapBlend(a2[8], a2[10], a2[3]);
     }
     else if ( result == 1 )
     {
@@ -186897,7 +186897,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = 12559732;
     sub_60922344(a1 + 4);
     sub_60921AE8(a1 + 72);
-    sub_60919C54(a1 + 156);
+    Slot_constructDefaults(a1 + 156);
     Slot_construct(a1 + 176);
     a1[176] = 12559808;
     Slot_construct(a1 + 183);
@@ -187460,7 +187460,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = *(_DWORD *)(v9 + 636);
     if ( *(_DWORD *)(v9 + 632) > a4 )
       v10 += 12 * a4;
-    return sub_60920FDC(v8, a2, v10, -1, 0);
+    return Object_acquireSpinlockWithTimeout(v8, a2, v10, -1, 0);
   }
 
 /* ============================================================================
@@ -188241,7 +188241,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = *(_DWORD *)(v7 + 636);
     if ( *(_DWORD *)(v7 + 632) > 1u )
       v9 += 12;
-    sub_60920FDC(v8, a2, v9, -1, 0);
+    Object_acquireSpinlockWithTimeout(v8, a2, v9, -1, 0);
     if ( !v4 )
     {
       v13 = sub_60426814(MEMORY[0xC9BBD4], v5);
@@ -188279,7 +188279,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   LABEL_17:
     if ( v17 )
       v16 += 24;
-    return sub_60920FDC(v18, a2, v16, -1, 0);
+    return Object_acquireSpinlockWithTimeout(v18, a2, v16, -1, 0);
   }
 
 /* ============================================================================
@@ -193389,7 +193389,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v28 = a4[222];
           if ( !v28 )
             v28 = *(_DWORD *)(MEMORY[0xCD0A14] + 28);
-          sub_60920FDC(v28, *(_DWORD *)(a2 + 44), v27, 15, 0);
+          Object_acquireSpinlockWithTimeout(v28, *(_DWORD *)(a2 + 44), v27, 15, 0);
           v26 = *(_DWORD *)(a2 + 16);
         }
         v29 = *(_DWORD **)(v26 + 24);
@@ -193399,7 +193399,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v31 = a4[223];
           if ( !v31 )
             v31 = *(_DWORD *)(MEMORY[0xCD0A14] + 28);
-          sub_60920FDC(v31, *(_DWORD *)(a2 + 44), v29, 14, 0);
+          Object_acquireSpinlockWithTimeout(v31, *(_DWORD *)(a2 + 44), v29, 14, 0);
           v30 = v71;
         }
         v63 = v7;
@@ -194205,7 +194205,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v17 = *(_DWORD *)(MEMORY[0xC9BBD4] + 7300);
       if ( *(_DWORD *)(MEMORY[0xC9BBD4] + 7296) > v14 )
         v17 += 2088 * v14;
-      sub_60920FDC(v17 + 224, *(_DWORD *)(a2 + 44), v16, -1, 0);
+      Object_acquireSpinlockWithTimeout(v17 + 224, *(_DWORD *)(a2 + 44), v16, -1, 0);
     }
     result = a5[1];
     v19 = result == -1;
@@ -194220,7 +194220,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v21 = *(_DWORD *)(MEMORY[0xC9BBD4] + 7300);
       if ( *(_DWORD *)(MEMORY[0xC9BBD4] + 7296) > result )
         v21 += 2088 * result;
-      return sub_60920FDC(v21 + 224, *(_DWORD *)(a2 + 44), v20, -1, 0);
+      return Object_acquireSpinlockWithTimeout(v21 + 224, *(_DWORD *)(a2 + 44), v20, -1, 0);
     }
     return result;
   }
@@ -201915,7 +201915,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     Slot_construct(a1 + 9);
     a1[9] = 12557488;
     sub_60922344(a1 + 16);
-    sub_60919C54(a1 + 84);
+    Slot_constructDefaults(a1 + 84);
     sub_60921AE8(a1 + 104);
     sub_6091ABEC(a1 + 188);
     v4[0] = 1151336448;
@@ -202283,7 +202283,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     agl_TextureSampler_copy_ref(v48, *(_DWORD *)(v4 + 28));
     Object_callSlot7(a1 + 1096, *(_DWORD *)(a2 + 40));
     v32 = sub_6090E438(v43, a1 + 1096);
-    sub_6090E560(v32, *(_DWORD *)(a2 + 40), a1 + 1096);
+    Rect_computeOverlapBlend(v32, *(_DWORD *)(a2 + 40), a1 + 1096);
     v33 = (float)(v47 - v45) / (float)(*(float *)(v4 + 24) - *(float *)(v4 + 16));
     v42[0] = (float)(v46 - v44) / (float)(*(float *)(v4 + 20) - *(float *)(v4 + 12));
     v42[1] = v33;
@@ -202366,7 +202366,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       Sound_setTrackVolume(v15, *(_DWORD *)(a2 + 40), 4, v23);
       v13 = (_DWORD *)a1[1];
     }
-    sub_60920FDC(v21, *(_DWORD *)(a2 + 40), v13[159], -1, 0);
+    Object_acquireSpinlockWithTimeout(v21, *(_DWORD *)(a2 + 40), v13[159], -1, 0);
     sub_60922278(a1 + 104, *(_DWORD *)(a2 + 40));
     v16 = a1[86];
     v17 = *(_DWORD *)(*(_DWORD *)(a2 + 40) + 192);
@@ -203954,7 +203954,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[4099] = 0;
     a1[4097] = 0;
     a1[4098] = 0;
-    sub_608DEB0C(a1 + 4098, 3, a1 + 4101);
+    Buffer_initIfValid(a1 + 4098, 3, a1 + 4101);
     a1[4104] = 0;
     return a1;
   }
@@ -205023,7 +205023,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v6 = a1[224];
     v7 = a1[225];
-    sub_6090E560(a3[8], a3[10], a3[3]);
+    Rect_computeOverlapBlend(a3[8], a3[10], a3[3]);
     result = a1[10];
     if ( v6 > a2 )
       v7 += a2 << 7;
@@ -205094,7 +205094,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v6 = a1[224];
     v7 = a1[225];
-    sub_6090E560(a3[8], a3[10], a3[3]);
+    Rect_computeOverlapBlend(a3[8], a3[10], a3[3]);
     result = a1[12];
     if ( v6 > a2 )
       v7 += a2 << 7;
@@ -205543,7 +205543,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2[4] = 0;
       v2[5] = 0;
       v2[6] = 0;
-      sub_608DEB0C(v2 + 4, 24, v2 + 7);
+      Buffer_initIfValid(v2 + 4, 24, v2 + 7);
       Icon_LAYOUT_Security_agl_shader_ref(v2 + 31);
       MEMORY[0xC9CD58] = v2;
     }
@@ -207594,7 +207594,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v18 = *(_DWORD *)(MEMORY[0xCD0A14] + 28);
           do
           {
-            sub_60920FDC(v18, v20, v13 + v17, 0, 1);
+            Object_acquireSpinlockWithTimeout(v18, v20, v13 + v17, 0, 1);
             v13 = *v14;
             ++v16;
             v17 += 16;
@@ -213232,7 +213232,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 56) = v5;
     sub_60922344(a1 + 64);
     sub_60921AE8(a1 + 336);
-    sub_60919C54(a1 + 672);
+    Slot_constructDefaults(a1 + 672);
     RenderParams_defaultInit(a1 + 752);
     *(_DWORD *)(a1 + 860) = 0;
     Slot_construct(a1 + 884);

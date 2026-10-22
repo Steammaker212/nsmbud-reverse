@@ -1,0 +1,31 @@
+[
+  {"rva": "0x5029FC", "name": "ListEntry_setDword172",
+   "why": "List_getNthNode(a1+52, *a2) minus the base at a1+64, then stores a3 at +172 -- a accessor on a list entry"},
+
+  {"rva": "0x8DEB0C", "name": "Buffer_initIfValid",
+   "why": "when a2>=1 and a3 nonzero, writes {0, a2, a3} -- capacity/length/data triple"},
+
+  {"rva": "0x4742D0", "name": "ArrayOf5_writeEntry",
+   "why": "same [878]/[877] stride-5 accessor as 0x473DE4 but performs a write instead of a read"},
+
+  {"rva": "0x75EE0C", "name": "isMode4",
+   "why": "returns whether the dword at +1316 equals 4; the sibling of isMode5 at 0x75EDF8"},
+
+  {"rva": "0x502694", "name": "Object_clampFieldPairsToMin",
+   "why": "sets byte +1043=1 then walks 128 8-byte records clamping two fields to a minimum of 1 or 2"},
+
+  {"rva": "0x1916F4", "name": "Table_getEntryByIndexPair",
+   "why": "double-indirect through 8*a1[1296]+0xBD5518 with a1[1376], else -1"},
+
+  {"rva": "0x476030", "name": "Object_appendPairsThenFlush",
+   "why": "loops *a3 times calling sub_60473624 on advancing a2 by 2, then flushes via vtable+12 with 10029528"},
+
+  {"rva": "0x90E560", "name": "Rect_computeOverlapBlend",
+   "why": "computes per-axis differences between +12/+4 and +16/+8 and a3[6]-a3[4], branching on a1[20] in 1..2"},
+
+  {"rva": "0x920FDC", "name": "Object_acquireSpinlockWithTimeout",
+   "why": "__ldrex/__strex on a1+82 setting 0x80000000, then compares the clock at MEMORY[0xCCFB50] in microseconds"},
+
+  {"rva": "0x502B04", "name": "Object_getByte500AndDispatchSlot10",
+   "why": "indexes by *a2 when <0x100, reads byte at +500, resolves via List_getNthNode then vtable+40"}
+]

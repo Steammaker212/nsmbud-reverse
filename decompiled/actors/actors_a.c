@@ -753,7 +753,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return result;
       case 4:
         *(_DWORD *)(a1 + 340) = 0;
-        v10 = (unsigned __int64)(1717986919LL * (int)(sub_608FBB48() - 0x40000000)) >> 32;
+        v10 = (unsigned __int64)(1717986919LL * (int)(FixedPoint_sinTableLerp() - 0x40000000)) >> 32;
         *(_DWORD *)(a1 + 352) = 20;
         *(_DWORD *)(a1 + 356) = (v10 >> 3) + ((unsigned int)v10 >> 31);
         if ( *(_DWORD *)(a1 + 364) == 3 )
@@ -890,7 +890,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         goto LABEL_13;
       case 3:
         *(_DWORD *)(a1 + 340) = 0;
-        v4 = (unsigned __int64)(1717986919LL * (int)(sub_608FBB48() - 0x40000000)) >> 32;
+        v4 = (unsigned __int64)(1717986919LL * (int)(FixedPoint_sinTableLerp() - 0x40000000)) >> 32;
         *(_DWORD *)(a1 + 352) = 20;
         *(_DWORD *)(a1 + 356) = (v4 >> 3) + ((unsigned int)v4 >> 31);
         result = 4;
@@ -1020,7 +1020,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       case 4:
         *(_DWORD *)(a1 + 340) = 0;
         *(_DWORD *)(a1 + 368) = -715827883;
-        v5 = (unsigned __int64)(1717986919LL * (int)(sub_608FBB48() - 0x40000000)) >> 32;
+        v5 = (unsigned __int64)(1717986919LL * (int)(FixedPoint_sinTableLerp() - 0x40000000)) >> 32;
         *(_DWORD *)(a1 + 352) = 20;
         *(_DWORD *)(a1 + 356) = (v5 >> 3) + ((unsigned int)v5 >> 31);
         *(_DWORD *)(a1 + 344) = 5;
@@ -1555,7 +1555,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
     int v3; // r1
   
-    if ( !sub_60190968(MEMORY[0xC8996C]) )
+    if ( !hasIndexTable(MEMORY[0xC8996C]) )
       return StateMgr::changeState(a1 + 71, 13157336);
     result = MEMORY[0xC8996C];
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
@@ -2022,7 +2022,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
   LABEL_9:
     StateMgr::execute((_DWORD *)a1 + 71);
-    if ( sub_60190968(MEMORY[0xC8996C]) )
+    if ( hasIndexTable(MEMORY[0xC8996C]) )
     {
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
       {
@@ -2160,7 +2160,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       (*(void (__fastcall **)(_DWORD, float32x2_t *))(***(_DWORD ***)(a1 + 372) + 60))(**(_DWORD **)(a1 + 372), &v12);
       (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 372) + 68))(**(_DWORD **)(a1 + 372), a1 + 128);
       ModelWrapper_updateModel(*(_DWORD **)(a1 + 372));
-      result = sub_60190968(MEMORY[0xC8996C]);
+      result = hasIndexTable(MEMORY[0xC8996C]);
       if ( !result )
       {
         CurrentState = StateMgr::getCurrentState(a1 + 284);
@@ -5432,7 +5432,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
   
-    if ( !sub_60190968(MEMORY[0xC8996C]) )
+    if ( !hasIndexTable(MEMORY[0xC8996C]) )
       return StateMgr::changeState((_DWORD *)(a1 + 284), 13158388);
     result = MEMORY[0xC8996C];
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
@@ -5701,7 +5701,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
   LABEL_8:
-    if ( !sub_60190968(MEMORY[0xC8996C]) )
+    if ( !hasIndexTable(MEMORY[0xC8996C]) )
     {
       v4 = sub_601774C8(MEMORY[0xC88E60], (int)a1 + 324);
       if ( v4 )
@@ -5716,7 +5716,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     StateMgr::execute((_DWORD *)a1 + 71);
-    if ( sub_60190968(MEMORY[0xC8996C])
+    if ( hasIndexTable(MEMORY[0xC8996C])
       && *(_BYTE *)(MEMORY[0xC8996C] + 1384)
       && (sub_6019112C(MEMORY[0xC8996C]) | 0x10) != 0x34 )
     {
@@ -5815,7 +5815,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = *(unsigned __int8 *)(a1 + 404);
       if ( !*(_BYTE *)(a1 + 404) )
       {
-        result = sub_60190968(MEMORY[0xC8996C]);
+        result = hasIndexTable(MEMORY[0xC8996C]);
         if ( !result )
         {
           CurrentState = StateMgr::getCurrentState(a1 + 284);
@@ -6105,7 +6105,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     sub_60209598(a1);
     StateMgr::execute(a1 + 71);
-    if ( sub_60190968(MEMORY[0xC8996C]) )
+    if ( hasIndexTable(MEMORY[0xC8996C]) )
     {
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
       {
@@ -6249,7 +6249,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       (*(void (__fastcall **)(_DWORD, float32x2_t *))(*(_DWORD *)*v3 + 60))(*v3, &v13);
       (*(void (__fastcall **)(_DWORD, int))(*(_DWORD *)*v3 + 68))(*v3, a1 + 128);
       sub_60421880(v3);
-      result = sub_60190968(MEMORY[0xC8996C]);
+      result = hasIndexTable(MEMORY[0xC8996C]);
       if ( !result )
       {
         CurrentState = StateMgr::getCurrentState(a1 + 284);
@@ -6294,7 +6294,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6[0] = 0x20000000;
     v7 = 0x4000000;
     FixedPoint_lerp((int *)(a1 + 180), (int *)(a1 + 520), v6, &v7);
-    if ( !sub_60190968(MEMORY[0xC8996C]) || (result = sub_60185D08((Actor *)a1), result == 1) )
+    if ( !hasIndexTable(MEMORY[0xC8996C]) || (result = sub_60185D08((Actor *)a1), result == 1) )
     {
       v3 = *(_DWORD **)(a1 + 372);
       v6[0] = v3[21];
@@ -6837,7 +6837,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v3; // r1
     _DWORD *v4; // r0
   
-    if ( sub_60190968(MEMORY[0xC8996C]) )
+    if ( hasIndexTable(MEMORY[0xC8996C]) )
     {
       result = (_DWORD *)MEMORY[0xC8996C];
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
@@ -7421,7 +7421,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     unsigned int v3; // r0
     int v4; // r1
   
-    if ( !sub_60190968(MEMORY[0xC8996C]) || (result = sub_60185D08((Actor *)a1), result == 1) )
+    if ( !hasIndexTable(MEMORY[0xC8996C]) || (result = sub_60185D08((Actor *)a1), result == 1) )
     {
       result = sub_6020AE98();
       if ( result == 1 )
@@ -7747,7 +7747,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v3; // r1
     _DWORD *v4; // r0
   
-    if ( sub_60190968(MEMORY[0xC8996C]) )
+    if ( hasIndexTable(MEMORY[0xC8996C]) )
     {
       result = (_DWORD *)MEMORY[0xC8996C];
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
@@ -7977,7 +7977,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     sub_6020BDBC(a1);
     StateMgr::execute((_DWORD *)a1 + 71);
-    if ( sub_60190968(MEMORY[0xC8996C]) )
+    if ( hasIndexTable(MEMORY[0xC8996C]) )
     {
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
       {
@@ -8177,7 +8177,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       (*(void (__fastcall **)(_DWORD, float32x2_t *))(***(_DWORD ***)(a1 + 408) + 60))(**(_DWORD **)(a1 + 408), &v10);
       (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 408) + 68))(**(_DWORD **)(a1 + 408), a1 + 128);
       sub_60421880(*(_DWORD **)(a1 + 408));
-      result = sub_60190968(MEMORY[0xC8996C]);
+      result = hasIndexTable(MEMORY[0xC8996C]);
       if ( !result )
       {
         CurrentState = StateMgr::getCurrentState(a1 + 284);
@@ -8732,7 +8732,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
   
-    result = sub_60190968(MEMORY[0xC8996C]);
+    result = hasIndexTable(MEMORY[0xC8996C]);
     if ( !result )
       return StateMgr::changeState((_DWORD *)(a1 + 284), 13159564);
     return result;
@@ -8746,7 +8746,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     int result; // r0
   
-    if ( !sub_60190968(MEMORY[0xC8996C]) )
+    if ( !hasIndexTable(MEMORY[0xC8996C]) )
       return StateMgr::changeState(a1 + 71, 13159500);
     result = MEMORY[0xC8996C];
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
@@ -9141,7 +9141,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1385) && sub_60185D08(a1) )
       StateMgr::changeState((_DWORD *)a1 + 71, 13159660);
-    if ( !sub_60190968(MEMORY[0xC8996C]) )
+    if ( !hasIndexTable(MEMORY[0xC8996C]) )
     {
       v2 = sub_601774C8(MEMORY[0xC88E60], (int)a1 + 324);
       if ( v2 )
@@ -9156,7 +9156,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     StateMgr::execute((_DWORD *)a1 + 71);
-    if ( sub_60190968(MEMORY[0xC8996C])
+    if ( hasIndexTable(MEMORY[0xC8996C])
       && *(_BYTE *)(MEMORY[0xC8996C] + 1384)
       && (sub_6019112C(MEMORY[0xC8996C]) | 0x10) != 0x34 )
     {
@@ -9253,7 +9253,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       (*(void (__fastcall **)(_DWORD, float32x2_t *))(***(_DWORD ***)(a1 + 372) + 60))(**(_DWORD **)(a1 + 372), &v20);
       (*(void (__fastcall **)(_DWORD, int))(***(_DWORD ***)(a1 + 372) + 68))(**(_DWORD **)(a1 + 372), a1 + 128);
       sub_60421880(*(_DWORD **)(a1 + 372));
-      result = sub_60190968(MEMORY[0xC8996C]);
+      result = hasIndexTable(MEMORY[0xC8996C]);
       if ( !result )
       {
         CurrentState = StateMgr::getCurrentState(a1 + 284);
@@ -9691,7 +9691,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1385) && sub_60185D08(a1) && !sub_6020EDB4((int)a1) )
       StateMgr::changeState((_DWORD *)a1 + 71, 13160244);
     StateMgr::execute((_DWORD *)a1 + 71);
-    if ( sub_60190968(MEMORY[0xC8996C]) )
+    if ( hasIndexTable(MEMORY[0xC8996C]) )
     {
       if ( *(_BYTE *)(MEMORY[0xC8996C] + 1384) )
       {
@@ -10905,7 +10905,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60210958(int a1)
   {
-    if ( sub_60190968(MEMORY[0xC8996C]) )
+    if ( hasIndexTable(MEMORY[0xC8996C]) )
       return sub_6020EDB4(a1);
     else
       return StateMgr::changeState((_DWORD *)(a1 + 284), 13159884);
@@ -11490,7 +11490,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v10; // r1
   
     sub_601861EC((Actor *)a1);
-    if ( !sub_60190968(MEMORY[0xC8996C]) )
+    if ( !hasIndexTable(MEMORY[0xC8996C]) )
     {
       v2 = *(_DWORD *)(a1 + 272);
       v3 = v2 == 2;
@@ -11615,7 +11615,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v15 == 180 )
         {
           v4 = (_DWORD *)sub_601E0010(a1 + 284);
-          v5 = sub_601916F4(MEMORY[0xC8996C]);
+          v5 = Table_getEntryByIndexPair(MEMORY[0xC8996C]);
           v6 = *(_DWORD *)(a1 + 276);
           if ( v5 )
           {
@@ -11651,7 +11651,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-        v3 = sub_601916F4(MEMORY[0xC8996C]);
+        v3 = Table_getEntryByIndexPair(MEMORY[0xC8996C]);
         if ( sub_602120D8(a1, v15, v3) )
         {
           switch ( v3 )
@@ -11694,7 +11694,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( v15 == 180 )
       {
-        result = sub_601916F4(MEMORY[0xC8996C]);
+        result = Table_getEntryByIndexPair(MEMORY[0xC8996C]);
         if ( (*(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 268) + 28) + 28) & 0x20) == 0 )
           return result;
   LABEL_29:
@@ -11704,7 +11704,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
     }
-    v9 = sub_601916F4(MEMORY[0xC8996C]);
+    v9 = Table_getEntryByIndexPair(MEMORY[0xC8996C]);
     if ( !sub_602120D8(a1, v15, v9) )
       return (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
     result = v9 - 2;
@@ -12530,7 +12530,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else if ( result == 1 )
     {
       v3 = MEMORY[0xC8996C];
-      result = sub_60190968(MEMORY[0xC8996C]);
+      result = hasIndexTable(MEMORY[0xC8996C]);
       if ( result == 1 )
       {
         result = *(unsigned __int8 *)(v3 + 1384);
@@ -12891,7 +12891,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD *v5; // r0
   
     v2 = MEMORY[0xC8996C];
-    result = sub_60190968(MEMORY[0xC8996C]);
+    result = hasIndexTable(MEMORY[0xC8996C]);
     if ( result == 1 )
     {
       result = *(unsigned __int8 *)(v2 + 1384);
@@ -13557,7 +13557,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     if ( *(_BYTE *)(MEMORY[0xC8996C] + 1385) && sub_60185D08((Actor *)a1) )
       StateMgr::changeState((_DWORD *)(a1 + 284), 13160740);
-    if ( !*(_BYTE *)(a1 + 477) && !sub_60190968(MEMORY[0xC8996C]) )
+    if ( !*(_BYTE *)(a1 + 477) && !hasIndexTable(MEMORY[0xC8996C]) )
     {
       v2 = sub_601774C8(MEMORY[0xC88E60], a1 + 324);
       if ( v2 )
@@ -13580,7 +13580,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     StateMgr::execute((_DWORD *)(a1 + 284));
     v4 = MEMORY[0xC8996C];
-    if ( sub_60190968(MEMORY[0xC8996C]) && *(_BYTE *)(v4 + 1384) )
+    if ( hasIndexTable(MEMORY[0xC8996C]) && *(_BYTE *)(v4 + 1384) )
     {
       v5 = sub_6019112C(v4);
       if ( *(_BYTE *)(a1 + 476) )
@@ -14472,7 +14472,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = sub_6019112C(MEMORY[0xC8996C]);
     if ( *(_BYTE *)(v4 + 1384) )
     {
-      v5 = sub_601916F4(v4);
+      v5 = Table_getEntryByIndexPair(v4);
       if ( v9 != 143 )
       {
         if ( v9 != 142 )
@@ -14516,7 +14516,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   LABEL_13:
     if ( v9 == 143 )
     {
-      if ( sub_601916F4(v4) && sub_601916F4(v4) == 1 )
+      if ( Table_getEntryByIndexPair(v4) && Table_getEntryByIndexPair(v4) == 1 )
       {
         v2.n64_u32[0] = 1.0;
         v1.n64_f32[0] = *((float *)a1 + 72) + 0.0027778;
@@ -14531,7 +14531,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       return (*(int (__fastcall **)(_DWORD *))(*a1 + 72))(a1);
     }
-    if ( v9 != 142 || sub_601916F4(v4) )
+    if ( v9 != 142 || Table_getEntryByIndexPair(v4) )
       return (*(int (__fastcall **)(_DWORD *))(*a1 + 72))(a1);
     v2.n64_u32[0] = 0.5;
     v1.n64_f32[0] = *((float *)a1 + 72) + 0.0020833;
@@ -15014,9 +15014,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         switch ( v43 )
         {
           case 223:
-            if ( sub_601916F4(v2) && sub_601916F4(v2) != 2 )
+            if ( Table_getEntryByIndexPair(v2) && Table_getEntryByIndexPair(v2) != 2 )
             {
-              if ( sub_601916F4(v2) == 1 )
+              if ( Table_getEntryByIndexPair(v2) == 1 )
                 a1[76] = 536870910;
             }
             else
@@ -15032,7 +15032,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             break;
           case 222:
             SoundActor_playByIdWithPosition(MEMORY[0xC8B13C], 68, a1 + 20);
-            switch ( sub_601916F4(v2) )
+            switch ( Table_getEntryByIndexPair(v2) )
             {
               case 0:
                 a1[45] = FixedPoint_atan2_byRegs(a1 + 20, v4 + 980);
@@ -15155,7 +15155,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             break;
           case 221:
             v6 = a1[74];
-            if ( v6 == sub_601916F4(v2) )
+            if ( v6 == Table_getEntryByIndexPair(v2) )
               *(_DWORD *)(**(_DWORD **)(a1[69] + 12) + 24) = 1065353216;
             break;
         }
@@ -15191,7 +15191,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( a1[77] != result )
           return result;
       }
-      else if ( v43 == 222 || v43 == 221 && (v30 = a1[74], v30 == sub_601916F4(v2)) )
+      else if ( v43 == 222 || v43 == 221 && (v30 = a1[74], v30 == Table_getEntryByIndexPair(v2)) )
       {
   LABEL_57:
         result = *(unsigned __int8 *)(**(_DWORD **)(a1[69] + 12) + 28);
@@ -15213,7 +15213,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = 1;
         break;
       case 1:
-        v31 = sub_601916F4(v2);
+        v31 = Table_getEntryByIndexPair(v2);
         v33 = 30;
         if ( !v31 )
         {
@@ -19899,11 +19899,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 v64 = 0;
                 v65 = 0;
                 v66 = 0;
-                sub_608DEB0C(&v64, 8, &v67);
+                Buffer_initIfValid(&v64, 8, &v67);
                 v60 = 0;
                 v61 = 0;
                 v62 = 0;
-                sub_608DEB0C(&v60, 6, &v63);
+                Buffer_initIfValid(&v60, 6, &v63);
                 v58[0] = 1;
                 v58[1] = 0;
                 v59 = 0;
@@ -20941,7 +20941,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v19 = 0;
     v20 = 0;
     v21 = 0;
-    sub_608DEB0C(&v19, 5, &v22);
+    Buffer_initIfValid(&v19, 5, &v22);
     for ( i = 0; i != 5; ++i )
     {
       if ( sub_6021EE50(6, i) != -1 )
@@ -21507,7 +21507,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v32 = 0;
         v33 = 0;
         v34 = 0;
-        sub_608DEB0C(&v32, 6, &v35);
+        Buffer_initIfValid(&v32, 6, &v35);
         v31[0] = v9;
         v31[1] = v10;
         v31[2] = v12;
@@ -22488,27 +22488,27 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 28) = 0;
     *(_DWORD *)(a1 + 32) = 0;
     *(_DWORD *)(a1 + 36) = 0;
-    sub_608DEB0C(a1 + 28, 64, a1 + 40);
+    Buffer_initIfValid(a1 + 28, 64, a1 + 40);
     *(_DWORD *)(a1 + 296) = 0;
     *(_DWORD *)(a1 + 300) = 0;
     *(_DWORD *)(a1 + 304) = 0;
-    sub_608DEB0C(a1 + 296, 64, a1 + 308);
+    Buffer_initIfValid(a1 + 296, 64, a1 + 308);
     *(_DWORD *)(a1 + 564) = 0;
     *(_DWORD *)(a1 + 568) = 0;
     *(_DWORD *)(a1 + 572) = 0;
-    sub_608DEB0C(a1 + 564, 16, a1 + 576);
+    Buffer_initIfValid(a1 + 564, 16, a1 + 576);
     *(_DWORD *)(a1 + 640) = 0;
     *(_DWORD *)(a1 + 644) = 0;
     *(_DWORD *)(a1 + 648) = 0;
-    sub_608DEB0C(a1 + 640, 2, a1 + 652);
+    Buffer_initIfValid(a1 + 640, 2, a1 + 652);
     *(_DWORD *)(a1 + 660) = 0;
     *(_DWORD *)(a1 + 664) = 0;
     *(_DWORD *)(a1 + 668) = 0;
-    sub_608DEB0C(a1 + 660, 6, a1 + 672);
+    Buffer_initIfValid(a1 + 660, 6, a1 + 672);
     *(_DWORD *)(a1 + 696) = 0;
     *(_DWORD *)(a1 + 700) = 0;
     *(_DWORD *)(a1 + 704) = 0;
-    sub_608DEB0C(a1 + 696, 16, a1 + 708);
+    Buffer_initIfValid(a1 + 696, 16, a1 + 708);
     EffectWrapper_ctor(a1 + 788);
     *(_DWORD *)(a1 + 788) = 12325968;
     EffectWrapper_ctor(a1 + 892);
@@ -33944,7 +33944,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = a1 + 10;
     a1[11] = 0;
     a1[12] = 0;
-    sub_608DEB0C(a1 + 10, 15, a1 + 13);
+    Buffer_initIfValid(a1 + 10, 15, a1 + 13);
     a1[28] = 0;
     a1[29] = 0;
     a1[30] = 0;
@@ -37508,11 +37508,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(v2 + 236) = 0;
       *(_DWORD *)(v2 + 240) = 0;
       *(_DWORD *)(v2 + 244) = 0;
-      sub_608DEB0C(v2 + 236, 256, v2 + 248);
+      Buffer_initIfValid(v2 + 236, 256, v2 + 248);
       *(_DWORD *)(v2 + 1272) = 0;
       *(_DWORD *)(v2 + 1276) = 0;
       *(_DWORD *)(v2 + 1280) = 0;
-      sub_608DEB0C(v2 + 1272, 256, v2 + 1284);
+      Buffer_initIfValid(v2 + 1272, 256, v2 + 1284);
       *(_DWORD *)(v2 + 2308) = -1;
       *(_BYTE *)(v2 + 2312) = 0;
       *(_BYTE *)(v2 + 2313) = 0;
@@ -100093,7 +100093,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall Enemy_vf174(int a1, _DWORD *a2)
   {
-    if ( a2[330] != 5 && !sub_6075EE0C((int)a2) )
+    if ( a2[330] != 5 && !isMode4((int)a2) )
       isMode5((int)a2);
     (*(void (__fastcall **)(_DWORD *, int, _DWORD, int))(*a2 + 748))(a2, 1, 0, 2);
     a2[2398] = 1;
@@ -100192,7 +100192,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall Enemy_vf17C(int a1, _DWORD *a2)
   {
-    if ( a2[330] != 5 && !sub_6075EE0C((int)a2) )
+    if ( a2[330] != 5 && !isMode4((int)a2) )
       isMode5((int)a2);
     (*(void (__fastcall **)(_DWORD *, int, _DWORD, int))(*a2 + 748))(a2, 1, 0, 2);
     a2[2398] = 1;

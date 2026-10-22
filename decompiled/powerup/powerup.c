@@ -94,7 +94,7 @@ static inline unsigned int uxtb16(unsigned int x)
       while ( __strex(v17 | 4, v13) );
       v18 = *(_DWORD *)(a1 + 32);
       sub_6091D95C(v18);
-      sub_60920FDC(a1 + 1256, a2, *(_DWORD *)(v18 + 636), -1, 0);
+      Object_acquireSpinlockWithTimeout(a1 + 1256, a2, *(_DWORD *)(v18 + 636), -1, 0);
       v6 = *(unsigned __int8 *)(*(_DWORD *)(a1 + 2288) + a3);
       v7 = MEMORY[0xC9BAAC];
       result = *(unsigned __int8 *)(a1 + 944);
@@ -128,7 +128,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v29 = *(_DWORD *)(v28 + 636);
       if ( *(_DWORD *)(v28 + 632) > 1u )
         v29 += 12;
-      sub_60920FDC(a1 + 1600, a2, v29, -1, 0);
+      Object_acquireSpinlockWithTimeout(a1 + 1600, a2, v29, -1, 0);
       result = *(unsigned __int8 *)(a1 + 944);
     }
     if ( result == 1 )
@@ -139,7 +139,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v31 = *(_DWORD *)(v30 + 636);
       if ( *(_DWORD *)(v30 + 632) > 2u )
         v31 += 24;
-      sub_60920FDC(a1 + 1944, a2, v31, -1, 0);
+      Object_acquireSpinlockWithTimeout(a1 + 1944, a2, v31, -1, 0);
       v32 = sub_604267D0(MEMORY[0xC9BBD4], 2u);
       v33 = *(_DWORD *)(a1 + 32);
       v34 = v32;
@@ -147,7 +147,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v35 = *(_DWORD *)(v33 + 636);
       if ( *(_DWORD *)(v33 + 632) > 3u )
         v35 += 36;
-      sub_60920FDC(v34, a2, v35, -1, 0);
+      Object_acquireSpinlockWithTimeout(v34, a2, v35, -1, 0);
       v36 = sub_60426814(MEMORY[0xC9BBD4], 2u);
       v37 = *(_DWORD *)(a1 + 32);
       v38 = v36;
@@ -155,7 +155,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v39 = *(_DWORD *)(v37 + 636);
       if ( *(_DWORD *)(v37 + 632) > 4u )
         v39 += 48;
-      return sub_60920FDC(v38, a2, v39, -1, 0);
+      return Object_acquireSpinlockWithTimeout(v38, a2, v39, -1, 0);
     }
     return result;
   }
@@ -11594,7 +11594,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         if ( (**(int (__fastcall ***)(int, int))v5)(v5, 13087748) != 1
           || (v13 = sub_607D6C28(v5)) == 0
-          || (result = sub_6075EE0C(v13), result == 1) )
+          || (result = isMode4(v13), result == 1) )
         {
   LABEL_59:
           if ( *(_BYTE *)(v5 + 533) != 1 || Actor::getProfileId((Actor *)v8) != MEMORY[0xAF368C] )
@@ -11607,7 +11607,7 @@ static inline unsigned int uxtb16(unsigned int x)
           result = (**(int (__fastcall ***)(int, int))v5)(v5, 13087600);
           if ( result == 1 )
           {
-            result = sub_6075EE0C(v5);
+            result = isMode4(v5);
             if ( result == 1 )
             {
   LABEL_56:
@@ -13190,7 +13190,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( !v3
       || (**(int (__fastcall ***)(int, int))v3)(v3, 13087608) != 1
-      || !sub_6075EE0C(v3)
+      || !isMode4(v3)
       || Actor::getProfileId((Actor *)a1) != MEMORY[0xAF368C] )
     {
       goto LABEL_13;
@@ -19601,7 +19601,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18 = 0;
     v19 = 0;
     v20 = 0;
-    sub_608DEB0C(&v18, 16, &v21);
+    Buffer_initIfValid(&v18, 16, &v21);
     v17[0] = (int (__fastcall **)(_DWORD))&unk_60BFC530;
     v17[1] = a1;
     v2 = MEMORY[0xC7B400];
@@ -23702,7 +23702,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604742D0
+ * ArrayOf5_writeEntry
  * RVA 0x004742d0   size 0x14c   xrefs 76
  * ============================================================================ */
   int __fastcall sub_604742D0(_DWORD *a1, unsigned int a2, _DWORD *a3, unsigned int a4, int a5)
@@ -23852,7 +23852,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047455C
+ * ArrayOf5_setEntryFloat16
  * RVA 0x0047455c   size 0x20   xrefs 72
  * ============================================================================ */
   int __fastcall sub_6047455C(int a1, unsigned int a2)
@@ -23973,7 +23973,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = ListNode_findByKey(a1, a3, a4);
     if ( v8 == -1 )
       return 0;
-    sub_604742D0(a1, a2, a3, v8, a5);
+    ArrayOf5_writeEntry(a1, a2, a3, v8, a5);
     return 1;
   }
 
@@ -25142,7 +25142,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60476030
+ * Object_appendPairsThenFlush
  * RVA 0x00476030   size 0x60   xrefs 74
  * ============================================================================ */
   int __fastcall sub_60476030(int a1, _DWORD *a2, int *a3)
@@ -27855,7 +27855,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v36[3] = 0;
         sub_6091A624(v38, v24, 1, v36, 0);
         v25 = sub_6090E438(v37, v38);
-        sub_6090E560(v25, *(_DWORD *)(a2 + 40), v38);
+        Rect_computeOverlapBlend(v25, *(_DWORD *)(a2 + 40), v38);
         sub_6090C7F8(v36, v37);
         v26 = RenderParams_defaultInit(v35);
         RenderParams_updateFromModel(v26, *(_DWORD *)(a2 + 40));

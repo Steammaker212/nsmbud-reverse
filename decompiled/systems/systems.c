@@ -688,7 +688,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60C9EDE0);
     }
     v5 = 2;
-    sub_60476030((int)v2, &dword_60C9EDF0, &v5);
+    Object_appendPairsThenFlush((int)v2, &dword_60C9EDF0, &v5);
     result = sub_60473B4C(v2);
     a1[3207] = result;
     return result;
@@ -1193,7 +1193,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60C9EE90);
     }
     v7[0] = 1;
-    sub_60476030((int)v2, &dword_60C9EE9C, v7);
+    Object_appendPairsThenFlush((int)v2, &dword_60C9EE9C, v7);
     if ( ((unsigned int)&unk_60C9EE94 & ~(1615338220 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9EE94) )
     {
       dword_60C9EEA4 = 12321336;
@@ -1618,7 +1618,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60C9EF80);
     }
     v4[0] = 3;
-    return sub_60476030((int)v1, &dword_60C9EF84, v4);
+    return Object_appendPairsThenFlush((int)v1, &dword_60C9EF84, v4);
   }
 
 /* ============================================================================
@@ -2781,7 +2781,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60C9F114);
     }
     v5[0] = 2;
-    return sub_60476030((int)v2, &dword_60C9F120, v5);
+    return Object_appendPairsThenFlush((int)v2, &dword_60C9F120, v5);
   }
 
 /* ============================================================================
@@ -3076,7 +3076,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = (_DWORD *)(a1 + 40);
     result = ListNode_findByKey((int)v4, (_DWORD *)0xC9F008, &dword_60C9F170[2 * v3]);
     if ( result != -1 )
-      return sub_604742D0(v4, 0, (_DWORD *)0xC9F008, result, 0);
+      return ArrayOf5_writeEntry(v4, 0, (_DWORD *)0xC9F008, result, 0);
     return result;
   }
 
@@ -3108,7 +3108,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = (_DWORD *)(a1 + 40);
     result = ListNode_findByKey((int)v4, (_DWORD *)0xC9F008, &dword_60C9F170[2 * v3 + 8]);
     if ( result != -1 )
-      return sub_604742D0(v4, 0, (_DWORD *)0xC9F010, result, 0);
+      return ArrayOf5_writeEntry(v4, 0, (_DWORD *)0xC9F010, result, 0);
     return result;
   }
 
@@ -3467,7 +3467,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60C9F2B0);
     }
     v4[0] = 1;
-    return sub_60476030((int)v1, &dword_60C9F2B4, v4);
+    return Object_appendPairsThenFlush((int)v1, &dword_60C9F2B4, v4);
   }
 
 /* ============================================================================
@@ -4957,7 +4957,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = *v8;
     if ( (unsigned int)*v8 >= 4 )
       v13 = 0;
-    sub_604742D0(v4, v11, &v24, *(_DWORD *)(a1 + 4 * v13 + 13784), 0);
+    ArrayOf5_writeEntry(v4, v11, &v24, *(_DWORD *)(a1 + 4 * v13 + 13784), 0);
     StateMgr_resetAndMaybeChange(a1 + 3768);
     *(_WORD *)(a1 + 4820) = 0;
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3808));
@@ -5130,7 +5130,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = *v8;
     if ( (unsigned int)*v8 >= 4 )
       v13 = 0;
-    sub_604742D0(v4, v11, &v18, a1[v13 + 3446], 0);
+    ArrayOf5_writeEntry(v4, v11, &v18, a1[v13 + 3446], 0);
     v14 = *v3;
     if ( (unsigned int)*v3 >= 4 )
       v14 = 0;
@@ -5279,7 +5279,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = *v8;
     if ( (unsigned int)*v8 >= 4 )
       v13 = 0;
-    sub_604742D0(v4, v11, &v24, *(_DWORD *)(a1 + 4 * v13 + 13784), 0);
+    ArrayOf5_writeEntry(v4, v11, &v24, *(_DWORD *)(a1 + 4 * v13 + 13784), 0);
     StateMgr_resetAndMaybeChange(a1 + 3768);
     *(_WORD *)(a1 + 4820) = 0;
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3808));
@@ -5452,7 +5452,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = *v8;
     if ( (unsigned int)*v8 >= 4 )
       v13 = 0;
-    sub_604742D0(v4, v11, &v18, a1[v13 + 3446], 0);
+    ArrayOf5_writeEntry(v4, v11, &v18, a1[v13 + 3446], 0);
     v14 = *v3;
     if ( (unsigned int)*v3 >= 4 )
       v14 = 0;
@@ -5681,7 +5681,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r5
     int result; // r0
   
-    sub_60502694(a1 + 3768);
+    Object_clampFieldPairsToMin(a1 + 3768);
     v3 = *(_DWORD *)(a1 + 14228);
     if ( v3 >= 4 )
       v3 = 0;
@@ -5993,18 +5993,18 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (unsigned int)dword_60C9FDDC >= 7 )
       v4 = 0;
     v5 = a1 + 3768;
-    sub_60502B04(v5, (unsigned int *)(v3 + 4 * v4), 1);
+    Object_getByte500AndDispatchSlot10(v5, (unsigned int *)(v3 + 4 * v4), 1);
     v6 = dword_60C9FDE0;
     if ( (unsigned int)dword_60C9FDE0 >= 7 )
       v6 = 0;
-    sub_60502B04(v5, (unsigned int *)(v3 + 4 * v6), 1);
+    Object_getByte500AndDispatchSlot10(v5, (unsigned int *)(v3 + 4 * v6), 1);
     v7 = dword_60C9FDE4;
     if ( (unsigned int)dword_60C9FDE4 >= 7 )
       v7 = 0;
-    sub_60502B04(v5, (unsigned int *)(v3 + 4 * v7), 1);
+    Object_getByte500AndDispatchSlot10(v5, (unsigned int *)(v3 + 4 * v7), 1);
     if ( (unsigned int)dword_60C9FDE8 < 7 )
       v2 = dword_60C9FDE8;
-    return sub_60502B04(v5, (unsigned int *)(v3 + 4 * v2), 1);
+    return Object_getByte500AndDispatchSlot10(v5, (unsigned int *)(v3 + 4 * v2), 1);
   }
 
 /* ============================================================================
@@ -7366,7 +7366,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v21 = (int)"ChallengeSelect";
     sead::SafeStringBase<char>::operator=(a1 + 4780, &v20);
     sub_6048D158(a1);
-    sub_605029FC(a1 + 3768, a1 + 5864, "SE_SYS_PAUSE");
+    ListEntry_setDword172(a1 + 3768, a1 + 5864, "SE_SYS_PAUSE");
     if ( ((unsigned int)&unk_60C9FD54 & ~(1615374508 << v8) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9FD54) )
     {
       dword_60C9FE30 = 0;
@@ -7800,7 +7800,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = v13;
     (*(void (__fastcall **)(_DWORD *, int *))(v14[2 * v2] + 8))(&v14[2 * v2], &v11);
     v11 = 5;
-    return sub_60476030(a1 + 36, v14, &v11);
+    return Object_appendPairsThenFlush(a1 + 36, v14, &v11);
   }
 
 /* ============================================================================
@@ -7955,7 +7955,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = *v3;
     if ( *v3 >= 4 )
       v8 = 0;
-    sub_604742D0(v4, v7, &v14, a1[v8 + 3446], 0);
+    ArrayOf5_writeEntry(v4, v7, &v14, a1[v8 + 3446], 0);
     v14 = *v3;
     if ( ((unsigned int)&unk_60C9FD78 & ~(1615379288 << v9) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9FD78) )
     {
@@ -9175,7 +9175,7 @@ static inline unsigned int uxtb16(unsigned int x)
         ArrayOf5_lookupByIndex(v7, 1u, &v12, 1);
         sub_604745C0(v7, 1);
         v1 = (float)(v1 * (float)(COERCE_FLOAT((sead::Random::getU32(v8) >> 9) | 0x3F800000) + -1.0)) + 0.0;
-        result = sub_6047455C(v7, 1);
+        result = ArrayOf5_setEntryFloat16(v7, 1);
       }
       *(_BYTE *)(v3 + v2++) = v6;
     }
@@ -9568,7 +9568,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v17 = 0;
           v18 = a1 + 4 * v17 + 5848;
           if ( v14 == v16 )
-            result = sub_60502B04(v8, v18, 1);
+            result = Object_getByte500AndDispatchSlot10(v8, v18, 1);
           else
             result = sub_60502C84(v8, v18, 0);
           v5 = a3;
@@ -9598,7 +9598,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v25 = dword_60C9FE1C;
           if ( (unsigned int)dword_60C9FE1C >= 7 )
             v25 = 0;
-          sub_60502B04(v19, a1 + 4 * v25 + 5848, 1);
+          Object_getByte500AndDispatchSlot10(v19, a1 + 4 * v25 + 5848, 1);
           v5 = a3;
         }
       }
@@ -9618,7 +9618,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           if ( (unsigned int)dword_60C9FE20 < 7 )
             v28 = dword_60C9FE20;
-          sub_60502B04(v19, a1 + 4 * v28 + 5848, 1);
+          Object_getByte500AndDispatchSlot10(v19, a1 + 4 * v28 + 5848, 1);
           v5 = a3;
         }
       }
@@ -9640,7 +9640,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v35 = dword_60C9FE24;
           if ( (unsigned int)dword_60C9FE24 >= 7 )
             v35 = 0;
-          sub_60502B04(v19, a1 + 4 * v35 + 5848, 1);
+          Object_getByte500AndDispatchSlot10(v19, a1 + 4 * v35 + 5848, 1);
           v5 = a3;
         }
       }
@@ -9660,7 +9660,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           if ( (unsigned int)dword_60C9FE28 < 7 )
             v38 = dword_60C9FE28;
-          sub_60502B04(v19, a1 + 4 * v38 + 5848, 1);
+          Object_getByte500AndDispatchSlot10(v19, a1 + 4 * v38 + 5848, 1);
           v5 = a3;
         }
       }
@@ -9682,7 +9682,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v43 = dword_60C9FE2C;
           if ( (unsigned int)dword_60C9FE2C >= 7 )
             v43 = 0;
-          return sub_60502B04(v19, a1 + 4 * v43 + 5848, 1);
+          return Object_getByte500AndDispatchSlot10(v19, a1 + 4 * v43 + 5848, 1);
         }
       }
     }
@@ -10481,7 +10481,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2 == 1 )
     {
       a1[1199] = a1[1466];
-      sub_60502694(a1 + 942);
+      Object_clampFieldPairsToMin(a1 + 942);
       v4 = a1[1466];
       sub_6048E23C((int)a1, 0, v4);
       sub_6048EBD4((int)a1, v4);
@@ -10817,18 +10817,18 @@ static inline unsigned int uxtb16(unsigned int x)
         v16 = sub_604923E4(4);
         v22 = 12321336;
         v23 = v16;
-        sub_604742D0(v3, v15, &v22, v4, 1);
+        ArrayOf5_writeEntry(v3, v15, &v22, v4, 1);
         v17 = dword_60C9FDB0;
         v18 = sub_604923E4(4);
         v22 = 12321336;
         v23 = v18;
-        sub_604742D0(v3, v17, &v22, v7, 1);
+        ArrayOf5_writeEntry(v3, v17, &v22, v7, 1);
         goto LABEL_11;
       }
       v14 = sub_604923E4(4);
       v22 = 12321336;
       v23 = v14;
-      sub_604742D0(v3, 7u, &v22, v4, 1);
+      ArrayOf5_writeEntry(v3, 7u, &v22, v4, 1);
       sub_6047457C(v3, 6);
       v12 = v3;
       v13 = 7;
@@ -10839,12 +10839,12 @@ static inline unsigned int uxtb16(unsigned int x)
       v11 = sub_604923E4(4);
       v22 = 12321336;
       v23 = v11;
-      sub_604742D0(v3, 6u, &v22, v7, 1);
+      ArrayOf5_writeEntry(v3, 6u, &v22, v7, 1);
       sub_6047457C(v3, 7);
       v12 = v3;
       v13 = 6;
   LABEL_9:
-      sub_6047455C(v12, v13);
+      ArrayOf5_setEntryFloat16(v12, v13);
     }
   LABEL_11:
     *(v9 - 1) = 1;
@@ -13572,7 +13572,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v7 = *(_DWORD *)(*(_DWORD *)(a1 + 5952) + 4);
       if ( (v7 & 0x2000) != 0 )
       {
-        sub_60502694(result);
+        Object_clampFieldPairsToMin(result);
         result = *(_DWORD *)(a1 + 4884);
         if ( result < 4 )
         {
@@ -13666,7 +13666,7 @@ static inline unsigned int uxtb16(unsigned int x)
           return result;
         }
         *(_DWORD *)(a1 + 4884) = 8;
-        sub_60502694(result);
+        Object_clampFieldPairsToMin(result);
         v14 = 13238320;
       }
       return StateMgr::changeState((_DWORD *)(a1 + 20), v14);
@@ -14001,7 +14001,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = sub_604962DC(1u);
     v6 = 12321336;
     v7 = v3;
-    return sub_604742D0(v1, 1u, &v6, v2, 0);
+    return ArrayOf5_writeEntry(v1, 1u, &v6, v2, 0);
   }
 
 /* ============================================================================
@@ -14434,16 +14434,16 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v13 = dword_60CA04C0;
     v15 = dword_60CA04C0;
-    sub_605029FC(a1 + 964, &v15, "SE_SYS_COURSE_IN");
+    ListEntry_setDword172(a1 + 964, &v15, "SE_SYS_COURSE_IN");
     v13 = dword_60CA04C4;
     v15 = dword_60CA04C4;
-    sub_605029FC(a1 + 964, &v15, "SE_SYS_COURSE_IN");
+    ListEntry_setDword172(a1 + 964, &v15, "SE_SYS_COURSE_IN");
     v13 = dword_60CA04C8;
     v15 = dword_60CA04C8;
-    sub_605029FC(a1 + 964, &v15, "SE_SYS_COURSE_IN");
+    ListEntry_setDword172(a1 + 964, &v15, "SE_SYS_COURSE_IN");
     v13 = dword_60CA04CC;
     v15 = dword_60CA04CC;
-    sub_605029FC(a1 + 964, &v15, "SE_SYS_COURSE_IN");
+    ListEntry_setDword172(a1 + 964, &v15, "SE_SYS_COURSE_IN");
     if ( ((unsigned int)&unk_60CA0484 & ~(1615417600 << v11) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA0484) )
     {
       dword_60CA04D0 = 4;
@@ -14454,18 +14454,18 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v13 = dword_60CA04D0;
     v15 = dword_60CA04D0;
-    sub_605029FC(a1 + 964, &v15, "SE_SYS_GOTO_MOVIE");
+    ListEntry_setDword172(a1 + 964, &v15, "SE_SYS_GOTO_MOVIE");
     v13 = dword_60CA04D4;
     v15 = dword_60CA04D4;
-    sub_605029FC(a1 + 964, &v15, "SE_SYS_GOTO_MOVIE");
+    ListEntry_setDword172(a1 + 964, &v15, "SE_SYS_GOTO_MOVIE");
     v13 = dword_60CA04D8;
     v15 = dword_60CA04D8;
-    sub_605029FC(a1 + 964, &v15, "SE_SYS_GOTO_MOVIE");
+    ListEntry_setDword172(a1 + 964, &v15, "SE_SYS_GOTO_MOVIE");
     v13 = dword_60CA04DC;
     v15 = dword_60CA04DC;
-    sub_605029FC(a1 + 964, &v15, "SE_SYS_GOTO_MOVIE");
+    ListEntry_setDword172(a1 + 964, &v15, "SE_SYS_GOTO_MOVIE");
     v13 = 8;
-    sub_605029FC(a1 + 964, &v13, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 964, &v13, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 977, v13) - a1[980] + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 977, v13) - a1[980] + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     *(_DWORD *)(List_getNthNode(a1 + 977, v13) - a1[980] + 204) = 0;
@@ -14537,7 +14537,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v5 != 15 );
     v7[0] = 15;
-    return sub_60476030(a1 + 36, v9, v7);
+    return Object_appendPairsThenFlush(a1 + 36, v9, v7);
   }
 
 /* ============================================================================
@@ -14936,7 +14936,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v75 = 12321336;
     v76 = (const char *)v37;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, &v75, 0);
-    sub_6047455C(a1 + 36, 0);
+    ArrayOf5_setEntryFloat16(a1 + 36, 0);
     sub_6047459C(a1 + 36, 0);
     v38 = sub_604962DC(11);
     v75 = 12321336;
@@ -16650,7 +16650,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( result == 1 )
         {
           *(_DWORD *)(a1 + 87988) |= 2u;
-          sub_60502694(a1 + 3648);
+          Object_clampFieldPairsToMin(a1 + 3648);
   LABEL_85:
           result = 0;
           *v18 = 0;
@@ -17153,7 +17153,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v12 = "Pa_Index_00";
     sub_6050B5E4(v1 + 1795, v2, &v11);
     v11 = 3;
-    return sub_60476030((int)v2, &dword_60CA070C, &v11);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA070C, &v11);
   }
 
 /* ============================================================================
@@ -17170,13 +17170,13 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502960(v2, 15);
     sub_60502994(v2, 15);
     sub_605029C8(v2, 15);
-    sub_605029FC(v2, &unk_60B02B7C, "SE_SYS_BACK");
+    ListEntry_setDword172(v2, &unk_60B02B7C, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 3700, 8) - *(_DWORD *)(a1 + 3712) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3700, 8) - *(_DWORD *)(a1 + 3712) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605028F0(v2, &unk_60B02B7C, 1);
-    sub_605029FC(v2, &unk_60B02B78, "SE_SYS_PAGE");
+    ListEntry_setDword172(v2, &unk_60B02B78, "SE_SYS_PAGE");
     *(_DWORD *)(List_getNthNode(a1 + 3700, 0) - *(_DWORD *)(a1 + 3712) + 184) = "SE_SYS_PAGE";
-    sub_605029FC(v2, &unk_60B02B80, "SE_SYS_PAGE");
+    ListEntry_setDword172(v2, &unk_60B02B80, "SE_SYS_PAGE");
     *(_DWORD *)(List_getNthNode(a1 + 3700, 1) - *(_DWORD *)(a1 + 3712) + 184) = "SE_SYS_PAGE";
     *(_BYTE *)(a1 + 4702) = 1;
     return 4702;
@@ -18071,7 +18071,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_6049C294(a1, (int *)(a1 + 5336));
         ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
         sub_604745C0(a1 + 44, 0);
-        sub_6047455C(a1 + 44, 0);
+        ArrayOf5_setEntryFloat16(a1 + 44, 0);
         v6 = 13240584;
         return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
       }
@@ -18093,7 +18093,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_15:
         ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
         sub_604745C0(a1 + 44, 0);
-        sub_6047455C(a1 + 44, 0);
+        ArrayOf5_setEntryFloat16(a1 + 44, 0);
         v6 = 13240392;
         return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
       }
@@ -18115,7 +18115,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_DWORD *)(a1 + 3632) )
         *(_DWORD *)(a1 + 3632) = 0;
       ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA0788, 0);
-      sub_6047455C(a1 + 44, 0);
+      ArrayOf5_setEntryFloat16(a1 + 44, 0);
       v6 = 13240328;
       return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
     }
@@ -18621,7 +18621,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = a1 + 44;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCA07C8, 0);
     sub_604745C0(v1, 0);
-    return sub_6047455C(v1, 0);
+    return ArrayOf5_setEntryFloat16(v1, 0);
   }
 
 /* ============================================================================
@@ -19033,7 +19033,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA09EC);
     }
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 44), 1u, &dword_60CA0AC0[2 * *a2 + 10], 0);
-    sub_6047455C(a1 + 44, 1);
+    ArrayOf5_setEntryFloat16(a1 + 44, 1);
     sub_6049C484(a1, *a2);
     sub_603FCFF8(MEMORY[0xC99DEC] + 16, *a2);
     return MessageQueue_postType3((_DWORD *)0xCA07E0, *(_DWORD *)(a1 + 3692), 1);
@@ -19711,7 +19711,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049D3A4(int a1)
   {
-    return sub_60502694(a1 + 3636);
+    return Object_clampFieldPairsToMin(a1 + 3636);
   }
 
 /* ============================================================================
@@ -21067,7 +21067,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6049EF90(int a1)
   {
-    return sub_60502694(a1 + 3636);
+    return Object_clampFieldPairsToMin(a1 + 3636);
   }
 
 /* ============================================================================
@@ -21876,7 +21876,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA1010);
     }
     v8 = 8;
-    sub_60476030((int)v2, &dword_60CA102C, &v8);
+    Object_appendPairsThenFlush((int)v2, &dword_60CA102C, &v8);
     *(_BYTE *)(a1 + 4690) = 1;
     v7 = a1 + 3636;
     sub_60502210(a1 + 3636, 11545616, 9);
@@ -21954,9 +21954,9 @@ static inline unsigned int uxtb16(unsigned int x)
     CharacterSelectPosTmpHeap_ref(a1);
     sub_6050292C(v7, 9);
     sub_605029C8(v7, 9);
-    sub_605029FC(v7, &unk_60B02C14, "SE_SYS_BACK");
+    ListEntry_setDword172(v7, &unk_60B02C14, "SE_SYS_BACK");
     sub_605028F0(v7, &unk_60B02C14, 1);
-    sub_605029FC(v7, 11545616, "SE_SYS_BACK");
+    ListEntry_setDword172(v7, 11545616, "SE_SYS_BACK");
     sub_60558180(a1 + 9296, 0);
     sub_605585A4(a1 + 9296);
     Registry_iterateAndRegister(a1 + 20312, 0);
@@ -23563,7 +23563,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v12 = 0;
           }
           *(_DWORD *)(a1 + 4964) = v12;
-          return sub_60502694(a1 + 3936);
+          return Object_clampFieldPairsToMin(a1 + 3936);
         }
         *(_DWORD *)(a1 + 6052) |= 2u;
         v13 = *(_DWORD *)(a1 + 20496);
@@ -24408,7 +24408,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StringUtil_formatInto(&v12, "%s.%s", v7, (const char *)dword_60CA13E0);
     message_ref(v6, &v12, a1 + 3976, 0, 0);
     v11 = 24;
-    sub_60476030((int)v6, &dword_60CA1270, &v11);
+    Object_appendPairsThenFlush((int)v6, &dword_60CA1270, &v11);
     v12 = 1;
     sub_60475484((int)v6, a1 + 20448, &dword_60CA13E4, &v12);
     v12 = 5;
@@ -24432,9 +24432,9 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502960(a1 + 3936, 15);
     sub_60502994(a1 + 3936, 15);
     sub_605029C8(a1 + 3936, 15);
-    sub_605029FC(a1 + 3936, &unk_60B02CF8, "SE_SYS_CURSOR");
+    ListEntry_setDword172(a1 + 3936, &unk_60B02CF8, "SE_SYS_CURSOR");
     sub_605028F0(a1 + 3936, &unk_60B02CF8, 1);
-    sub_605029FC(a1 + 3936, &unk_60B02CFC, "SE_SYS_CURSOR");
+    ListEntry_setDword172(a1 + 3936, &unk_60B02CFC, "SE_SYS_CURSOR");
     sub_605028F0(a1 + 3936, &unk_60B02CFC, 1);
     *(_BYTE *)(a1 + 4990) = 1;
     *(_DWORD *)(a1 + 20484) = a3;
@@ -27169,7 +27169,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( result == 1 )
         {
           *(_DWORD *)(a1 + 88072) |= 2u;
-          sub_60502694(a1 + 85956);
+          Object_clampFieldPairsToMin(a1 + 85956);
   LABEL_83:
           result = 0;
           *v24 = 0;
@@ -27672,8 +27672,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = 3;
   LABEL_23:
     *(_DWORD *)(a1 + 86984) = v6;
-    sub_605029FC(a1 + 85956, &unk_60B02D48, "SE_SYS_BACK");
-    sub_605029FC(a1 + 85956, &unk_60B02D54, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 85956, &unk_60B02D48, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 85956, &unk_60B02D54, "SE_SYS_BACK");
     *(_BYTE *)(a1 + 86999) = 0;
     *(_BYTE *)(a1 + 86996) = 1;
     return 86996;
@@ -27725,7 +27725,7 @@ static inline unsigned int uxtb16(unsigned int x)
       goto LABEL_7;
     if ( sub_6047F384(a1 + 277668, 0x2000) )
     {
-      sub_60502694(a1 + 85956);
+      Object_clampFieldPairsToMin(a1 + 85956);
   LABEL_7:
       result = *(_DWORD *)(a1 + 86984);
       switch ( result )
@@ -28201,8 +28201,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502A24(a1 + 85956, dword_60B02DF4, 13, 1);
     sub_60502C04(a1 + 85956, (int *)&unk_60B02E28, 2);
     *(_DWORD *)(a1 + 86984) = 1;
-    sub_605029FC(a1 + 85956, &unk_60B02D48, "SE_SYS_DECIDE");
-    sub_605029FC(a1 + 85956, &unk_60B02D54, "SE_SYS_DECIDE");
+    ListEntry_setDword172(a1 + 85956, &unk_60B02D48, "SE_SYS_DECIDE");
+    ListEntry_setDword172(a1 + 85956, &unk_60B02D54, "SE_SYS_DECIDE");
     *(_BYTE *)(a1 + 86999) = 0;
     *(_BYTE *)(a1 + 86996) = 1;
     return 86996;
@@ -28229,7 +28229,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( sub_6047F384(a1 + 277668, 0x2000) )
     {
   LABEL_9:
-      sub_60502694(a1 + 85956);
+      Object_clampFieldPairsToMin(a1 + 85956);
   LABEL_10:
       result = *(_DWORD *)(a1 + 86984);
       if ( result )
@@ -29448,7 +29448,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[22019] = 2;
     a1[22018] |= 1u;
     v10[0] = 8;
-    return sub_60476030((int)v2, &off_60CA1768, v10);
+    return Object_appendPairsThenFlush((int)v2, &off_60CA1768, v10);
   }
 
 /* ============================================================================
@@ -29471,7 +29471,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502960(v2, 15);
     sub_60502994(v2, 15);
     sub_605029C8(v2, 15);
-    sub_605029FC(v2, &unk_60B02D4C, "SE_SYS_BACK");
+    ListEntry_setDword172(v2, &unk_60B02D4C, "SE_SYS_BACK");
     v3 = v1 + 86008;
     v4 = List_getNthNode(v1 + 86008, 12);
     v5 = *(_DWORD *)(v1 + 86020);
@@ -29479,10 +29479,10 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(v4 - v5 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v3, 12) - *(_DWORD *)v1 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605028F0(v2, &unk_60B02D4C, 1);
-    sub_605029FC(v2, &unk_60B02D48, "SE_SYS_BACK");
-    sub_605029FC(v2, &unk_60B02D50, "SE_SYS_BTN_GAME_START");
-    sub_605029FC(v2, &unk_60B02D54, "SE_SYS_BACK");
-    result = sub_605029FC(v2, &unk_60B02D58, "SE_SYS_BTN_GAME_START");
+    ListEntry_setDword172(v2, &unk_60B02D48, "SE_SYS_BACK");
+    ListEntry_setDword172(v2, &unk_60B02D50, "SE_SYS_BTN_GAME_START");
+    ListEntry_setDword172(v2, &unk_60B02D54, "SE_SYS_BACK");
+    result = ListEntry_setDword172(v2, &unk_60B02D58, "SE_SYS_BTN_GAME_START");
     *(_BYTE *)(v1 + 990) = 1;
     return result;
   }
@@ -31473,7 +31473,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA1850);
     }
     v5[0] = 10;
-    sub_60476030((int)v2, &dword_60CA18B0, v5);
+    Object_appendPairsThenFlush((int)v2, &dword_60CA18B0, v5);
     return (*(int (__fastcall **)(_DWORD, int, _DWORD))(**(_DWORD **)(a1 + 3556) + 12))(
              *(_DWORD *)(a1 + 3556),
              10029528,
@@ -31579,7 +31579,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)(v4 + 52) = v3;
     *(_BYTE *)(v4 + 64) |= 0x10u;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 1u, &dword_60CA1860, 0);
-    sub_6047455C(a1 + 36, 1);
+    ArrayOf5_setEntryFloat16(a1 + 36, 1);
     sub_6047459C(a1 + 36, 1);
     v5 = *(unsigned __int8 *)(a1 + 3667);
     v6 = &dword_60CA1878;
@@ -31599,7 +31599,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v1; // r4
   
     v1 = a1 + 36;
-    sub_6047455C(a1 + 36, 1u);
+    ArrayOf5_setEntryFloat16(a1 + 36, 1u);
     return sub_6047459C(v1, 1u);
   }
 
@@ -31972,7 +31972,7 @@ static inline unsigned int uxtb16(unsigned int x)
     Table_getEntryById((_DWORD *)(a1 + 20), 0xEu, 0);
     if ( (*(_BYTE *)(MEMORY[0xC99DD4] + 1376) & 4) != 0 )
     {
-      sub_60502B04(a1 + 3608, (unsigned int *)0xB02E68, 1);
+      Object_getByte500AndDispatchSlot10(a1 + 3608, (unsigned int *)0xB02E68, 1);
       v2 = 1;
     }
     else
@@ -31983,14 +31983,14 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60502C84(a1 + 3608, (unsigned int *)0xB02E68, 0);
     }
     *(_BYTE *)(a1 + 38104) = v2;
-    sub_60502B04(a1 + 3608, &dword_60B02E78, 1);
-    sub_60502B04(a1 + 3608, &dword_60B02E7C, 1);
-    sub_60502B04(a1 + 3608, &dword_60B02E80, 1);
-    sub_60502B04(a1 + 3608, &dword_60B02E84, 1);
-    sub_60502B04(a1 + 3608, &dword_60B02E88, 1);
-    sub_60502B04(a1 + 3608, &dword_60B02E8C, 1);
-    sub_60502B04(a1 + 3608, &dword_60B02E90, 1);
-    sub_60502B04(a1 + 3608, &dword_60B02E94, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3608, &dword_60B02E78, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3608, &dword_60B02E7C, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3608, &dword_60B02E80, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3608, &dword_60B02E84, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3608, &dword_60B02E88, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3608, &dword_60B02E8C, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3608, &dword_60B02E90, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3608, &dword_60B02E94, 1);
     v4 = *(_DWORD *)(a1 + 6148);
     v5 = *(_DWORD *)(v4 + 92);
     v6 = *(_DWORD *)(v4 + 108);
@@ -32077,7 +32077,7 @@ static inline unsigned int uxtb16(unsigned int x)
           && (*(_BYTE *)(a1 + 5693) & 0xC) != 0 )
         {
           *(_DWORD *)(a1 + 4636) = 7;
-          sub_60502694(a1 + 3608);
+          Object_clampFieldPairsToMin(a1 + 3608);
           return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244884);
         }
         if ( *v4 || (*(_BYTE *)(MEMORY[0xC99DD4] + 1376) & 0xC) != 0 )
@@ -32141,10 +32141,10 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(MEMORY[0xC99DD4] + 1376) |= 1u;
     sub_603F5020(MEMORY[0xC99D70]);
     sub_604B2528(a1);
-    sub_60502B04(v2, (unsigned int *)0xB02E68, 1);
-    sub_60502B04(v2, (unsigned int *)0xB02E5C, 1);
-    sub_60502B04(v2, (unsigned int *)0xB02E60, 1);
-    sub_60502B04(v2, (unsigned int *)0xB02E64, 1);
+    Object_getByte500AndDispatchSlot10(v2, (unsigned int *)0xB02E68, 1);
+    Object_getByte500AndDispatchSlot10(v2, (unsigned int *)0xB02E5C, 1);
+    Object_getByte500AndDispatchSlot10(v2, (unsigned int *)0xB02E60, 1);
+    Object_getByte500AndDispatchSlot10(v2, (unsigned int *)0xB02E64, 1);
     SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], (int)"SE_SYS_CE_MENU_IN", 0);
     *(_BYTE *)(*(_DWORD *)(a1 + 6168) + 64) &= ~1u;
     *(_BYTE *)(*(_DWORD *)(a1 + 6172) + 64) &= ~1u;
@@ -32246,7 +32246,7 @@ static inline unsigned int uxtb16(unsigned int x)
   unsigned int __fastcall sub_604AFF74(int a1)
   {
     *(_BYTE *)(*(_DWORD *)(a1 + 6148) + 64) |= 1u;
-    return sub_60502B04(a1 + 3608, (unsigned int *)0xB02E6C, 1);
+    return Object_getByte500AndDispatchSlot10(a1 + 3608, (unsigned int *)0xB02E6C, 1);
   }
 
 /* ============================================================================
@@ -32263,7 +32263,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 4648) = 1;
     *(_DWORD *)(a1 + 38068) = 4;
     v2 = a1 + 3608;
-    sub_60502B04(a1 + 3608, (unsigned int *)0xB02E68, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3608, (unsigned int *)0xB02E68, 1);
     sub_60502C84(v2, (unsigned int *)0xB02E6C, 0);
     sub_60502C84(v2, (unsigned int *)0xB02E5C, 0);
     sub_60502C84(v2, (unsigned int *)0xB02E60, 0);
@@ -32323,12 +32323,12 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         sub_60402084(MEMORY[0xC99E68], *(_DWORD *)(a1 + 4644));
         *v4 = 8;
-        sub_60502694(a1 + 3608);
+        Object_clampFieldPairsToMin(a1 + 3608);
         return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244884);
       }
       if ( (v5 & 0x2000) != 0 )
       {
-        sub_60502694(a1 + 3608);
+        Object_clampFieldPairsToMin(a1 + 3608);
         return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244884);
       }
       if ( !*(_BYTE *)(a1 + 4654) )
@@ -32982,7 +32982,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA1A80);
     }
     v5[0] = 7;
-    return sub_60476030((int)v2, &dword_60CA1AAC, v5);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA1AAC, v5);
   }
 
 /* ============================================================================
@@ -33125,12 +33125,12 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_BYTE *)(a1 + 38088) = 1;
     Registry_iterateAndRegister(a1 + 5688, 0);
-    sub_605029FC(a1 + 3608, 11546220, "SE_SYS_CE_MENU_OUT");
+    ListEntry_setDword172(a1 + 3608, 11546220, "SE_SYS_CE_MENU_OUT");
     *(_DWORD *)(List_getNthNode(a1 + 3660, 8) - *(_DWORD *)(a1 + 3672) + 192) = 0;
-    sub_605029FC(a1 + 3608, 11546188, "SE_SYS_CE_AREA_CHANGE");
-    sub_605029FC(a1 + 3608, 11546192, "SE_SYS_CE_AREA_CHANGE");
-    sub_605029FC(a1 + 3608, 11546196, "SE_SYS_CE_AREA_CHANGE");
-    return sub_605029FC(a1 + 3608, 11546200, "SE_SYS_CE_AREA_CHANGE");
+    ListEntry_setDword172(a1 + 3608, 11546188, "SE_SYS_CE_AREA_CHANGE");
+    ListEntry_setDword172(a1 + 3608, 11546192, "SE_SYS_CE_AREA_CHANGE");
+    ListEntry_setDword172(a1 + 3608, 11546196, "SE_SYS_CE_AREA_CHANGE");
+    return ListEntry_setDword172(a1 + 3608, 11546200, "SE_SYS_CE_AREA_CHANGE");
   }
 
 /* ============================================================================
@@ -33285,7 +33285,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 38106) = a2;
     v2 = a1 + 3608;
     if ( a2 == 1 )
-      return sub_60502B04(v2, 11546216, 1);
+      return Object_getByte500AndDispatchSlot10(v2, 11546216, 1);
     else
       return sub_60502C84(v2, 11546216, 0);
   }
@@ -33493,18 +33493,18 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = *(_DWORD *)(MEMORY[0xC99D70] + 1864);
     if ( v2 < 2 )
     {
-      sub_60502B04(v4, 11546188, 1);
+      Object_getByte500AndDispatchSlot10(v4, 11546188, 1);
       goto LABEL_12;
     }
     if ( v2 == 2 )
     {
   LABEL_12:
-      sub_60502B04(v4, 11546192, 1);
+      Object_getByte500AndDispatchSlot10(v4, 11546192, 1);
       goto LABEL_13;
     }
     if ( v2 == 3 )
   LABEL_13:
-      sub_60502B04(v4, 11546196, 1);
+      Object_getByte500AndDispatchSlot10(v4, 11546196, 1);
     v6 = 3;
     if ( v5 != v2 - 1 )
       v6 = dword_60B02E98[v5];
@@ -35414,7 +35414,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6047457C(*(_DWORD *)(a1 + 4), 7);
       v11 = *(_DWORD *)(a1 + 4);
       v12 = 8;
-      return sub_6047455C(v11, v12);
+      return ArrayOf5_setEntryFloat16(v11, v12);
     }
     if ( v1 >= 0 )
     {
@@ -35424,17 +35424,17 @@ static inline unsigned int uxtb16(unsigned int x)
           sub_6047457C(*(_DWORD *)(a1 + 4), 6);
           v11 = *(_DWORD *)(a1 + 4);
           v12 = 5;
-          return sub_6047455C(v11, v12);
+          return ArrayOf5_setEntryFloat16(v11, v12);
         case 4:
           sub_6047457C(*(_DWORD *)(a1 + 4), 8);
           v11 = *(_DWORD *)(a1 + 4);
           v12 = 7;
-          return sub_6047455C(v11, v12);
+          return ArrayOf5_setEntryFloat16(v11, v12);
         case 3:
           sub_6047457C(*(_DWORD *)(a1 + 4), 5);
           v11 = *(_DWORD *)(a1 + 4);
           v12 = 6;
-          return sub_6047455C(v11, v12);
+          return ArrayOf5_setEntryFloat16(v11, v12);
       }
     }
     return result;
@@ -35740,7 +35740,7 @@ static inline unsigned int uxtb16(unsigned int x)
       goto LABEL_17;
     }
     if ( sub_6047F384(a1 + 3792, 0x2000) )
-      return sub_604B70B8(*(_DWORD *)(a1 + 3652));
+      return j_Object_clampFieldPairsToMin(*(_DWORD *)(a1 + 3652));
     if ( sub_6047F384(a1 + 3792, 64) )
       return sub_604B70BC(*(_DWORD *)(a1 + 3652), v5);
     result = sub_6047F384(a1 + 3792, 128);
@@ -36604,16 +36604,6 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604B70B8
- * RVA 0x004b70b8   size 0x4   xrefs 1
- * ============================================================================ */
-  // attributes: thunk
-  int __fastcall sub_604B70B8(int result)
-  {
-    return sub_60502694(result);
-  }
-
-/* ============================================================================
  * sub_604B70BC
  * RVA 0x004b70bc   size 0x114   xrefs 1
  * ============================================================================ */
@@ -36919,7 +36909,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v17 = *(_DWORD *)(a1 + 4 * v11 + 2080);
     result = v17;
     if ( v17 != 256 )
-      return sub_605029FC(a1, &v17, v3);
+      return ListEntry_setDword172(a1, &v17, v3);
     return result;
   }
 
@@ -37282,7 +37272,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StringUtil_formatInto(&v9, "%s.%s", v6, (const char *)dword_60CA2450);
     message_ref(v2, &v9, *(_DWORD *)(a1 + 3652) + 40, 0, 0);
     v8 = 9;
-    return sub_60476030((int)v2, &dword_60CA24B0, &v8);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA24B0, &v8);
   }
 
 /* ============================================================================
@@ -38832,7 +38822,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA2620);
     }
     v9[0] = 4;
-    sub_60476030((int)v4, &dword_60CA2644, v9);
+    Object_appendPairsThenFlush((int)v4, &dword_60CA2644, v9);
     if ( ((unsigned int)&unk_60CA2624 & ~(1615571216 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA2624) )
     {
       dword_60CA262C = 12321336;
@@ -38948,7 +38938,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3684) = 0;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 3u, (_DWORD *)0xCA2560, 0);
     sub_604745EC(a1 + 40, 3u, 0);
-    sub_6047455C(a1 + 40, 3);
+    ArrayOf5_setEntryFloat16(a1 + 40, 3);
     v4 = *(_DWORD *)(a1 + 3652);
     v5 = *(_DWORD *)(v4 + 176);
     v9 = 12321336;
@@ -39402,7 +39392,7 @@ static inline unsigned int uxtb16(unsigned int x)
         _cxa_guard_release_0(&unk_60CA26D0);
       }
       v8[0] = 2;
-      sub_60476030(a1 + 84, &dword_60CA26DC, v8);
+      Object_appendPairsThenFlush(a1 + 84, &dword_60CA26DC, v8);
       if ( ((unsigned int)&unk_60CA26D4 & ~(1615575036 << v5) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA26D4) )
       {
         dword_60CA26FC = 12321336;
@@ -40318,9 +40308,9 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 35564) = 0;
     sub_604C04C8((float *)a1, 1);
     v7 = 4;
-    sub_60502B04(a1 + 564, &v7, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 564, &v7, 1);
     v6 = 3;
-    return sub_60502B04(a1 + 564, &v6, 1);
+    return Object_getByte500AndDispatchSlot10(a1 + 564, &v6, 1);
   }
 
 /* ============================================================================
@@ -40933,7 +40923,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v7 = 13248472;
             return StateMgr::changeState((_DWORD *)(a1 + 520), v7);
           }
-          sub_60502694(a1 + 564);
+          Object_clampFieldPairsToMin(a1 + 564);
           v7 = 13248504;
           return StateMgr::changeState((_DWORD *)(a1 + 520), v7);
         }
@@ -41018,7 +41008,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (result & 0x80) == 0 )
           return result;
       }
-      sub_60502694(a1 + 564);
+      Object_clampFieldPairsToMin(a1 + 564);
       v4 = 13248504;
       return StateMgr::changeState((_DWORD *)(a1 + 520), v4);
     }
@@ -41363,7 +41353,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (result & 0x2000) != 0 )
         {
           *(_DWORD *)(a1 + 1592) = 4;
-          sub_60502694(a1 + 564);
+          Object_clampFieldPairsToMin(a1 + 564);
           sub_604C0EF0(a1);
           v80 = *(_DWORD *)(a1 + 2648);
           v81 = *(float *)(a1 + 2668);
@@ -41426,7 +41416,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (result & 0x4000) != 0 )
         {
           *(_DWORD *)(a1 + 1592) = 3;
-          sub_60502694(a1 + 564);
+          Object_clampFieldPairsToMin(a1 + 564);
           v55 = *(_DWORD *)(a1 + 2648);
           v56 = *(float *)(a1 + 2668);
           v57 = *(_DWORD *)(v55 + 24);
@@ -41974,13 +41964,13 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
     *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 192) = 0;
     v5[0] = 0;
-    sub_605029FC(a1 + 564, v5, "SE_SYS_PAUSE");
+    ListEntry_setDword172(a1 + 564, v5, "SE_SYS_PAUSE");
     v5[0] = 1;
-    sub_605029FC(a1 + 564, v5, "SE_SYS_PAGE");
+    ListEntry_setDword172(a1 + 564, v5, "SE_SYS_PAGE");
     v5[0] = 2;
-    sub_605029FC(a1 + 564, v5, "SE_SYS_PAGE");
+    ListEntry_setDword172(a1 + 564, v5, "SE_SYS_PAGE");
     v5[0] = 3;
-    sub_605029FC(a1 + 564, v5, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 564, v5, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 176) = "SE_SYS_BACK_BTN_OVER";
     result = List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628);
     *(_DWORD *)(result + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
@@ -43012,13 +43002,13 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_6047457C(v7, 7);
         v8 = *(_DWORD *)(a1 + 4);
         v9 = 6;
-        return sub_6047455C(v8, v9);
+        return ArrayOf5_setEntryFloat16(v8, v9);
       }
   LABEL_11:
       sub_6047457C(v7, 6);
       v8 = *(_DWORD *)(a1 + 4);
       v9 = 7;
-      return sub_6047455C(v8, v9);
+      return ArrayOf5_setEntryFloat16(v8, v9);
     }
     return result;
   }
@@ -43326,7 +43316,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 48);
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 48), 0, (_DWORD *)0xCA2AD4, 0);
     *(_BYTE *)(a1 + 13892) = 1;
-    sub_6047455C((int)v2, 0);
+    ArrayOf5_setEntryFloat16((int)v2, 0);
     ArrayOf5_lookupByIndex(v2, 0xCu, (_DWORD *)0xCA2AFC, 0);
     sub_604745C0((int)v2, 0xCu);
     *(float *)(a1 + 14124) = 1.0;
@@ -43483,7 +43473,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( !v4 )
     {
-      result = sub_60190968(MEMORY[0xC8996C]);
+      result = hasIndexTable(MEMORY[0xC8996C]);
       if ( !result )
       {
         v2 = 13249580;
@@ -43514,7 +43504,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 14162);
     if ( result )
     {
-      result = sub_60190968(MEMORY[0xC8996C]);
+      result = hasIndexTable(MEMORY[0xC8996C]);
       if ( !result )
         return StateMgr::changeState((_DWORD *)(a1 + 24), 13249580);
     }
@@ -43970,7 +43960,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = dword_60B02F44[v1];
     *(_DWORD *)(a1 + 5084) = v2;
     *(_BYTE *)(a1 + 14177) = 1;
-    return sub_60502694(a1 + 4056);
+    return Object_clampFieldPairsToMin(a1 + 4056);
   }
 
 /* ============================================================================
@@ -44220,7 +44210,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_BYTE *)(*(_DWORD *)(a1 + 13780) + 64) |= 1u;
         *(_BYTE *)(a1 + 14021) = 1;
         *(_BYTE *)(a1 + 14010) = 1;
-        sub_604742D0((_DWORD *)(a1 + 48), 6u, (_DWORD *)0xCA2AD4, *(_DWORD *)(a1 + 13984), 0);
+        ArrayOf5_writeEntry((_DWORD *)(a1 + 48), 6u, (_DWORD *)0xCA2AD4, *(_DWORD *)(a1 + 13984), 0);
         *(_BYTE *)(a1 + 13898) = 1;
       }
     }
@@ -44659,7 +44649,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604C4094(int a1)
   {
-    return sub_60502694(a1 + 4056);
+    return Object_clampFieldPairsToMin(a1 + 4056);
   }
 
 /* ============================================================================
@@ -44941,7 +44931,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         goto LABEL_7;
       }
-      sub_6047455C((int)(a1 + 48), v2);
+      ArrayOf5_setEntryFloat16((int)(a1 + 48), v2);
   LABEL_7:
       ++v2;
       ++v3;
@@ -45309,7 +45299,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA2EF4);
     }
     v6 = 6;
-    return sub_60476030((int)v2, &dword_60CA3018, &v6);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA3018, &v6);
   }
 
 /* ============================================================================
@@ -45332,8 +45322,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v7[0] = 12321336;
     v7[1] = "CourseSelectGuide";
     sead::SafeStringBase<char>::operator=(v1 + 1267, v7);
-    sub_605029FC(v2, 11546304, "SE_SYS_MAP_VIEW_MODE");
-    sub_605029FC(v2, 11546308, "SE_SYS_MAP_VIEW_QUIT");
+    ListEntry_setDword172(v2, 11546304, "SE_SYS_MAP_VIEW_MODE");
+    ListEntry_setDword172(v2, 11546308, "SE_SYS_MAP_VIEW_QUIT");
     v3 = v1 + 1027;
     v4 = List_getNthNode(v1 + 1027, 1);
     v5 = v1[1030];
@@ -46034,7 +46024,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( !*v12 )
             {
               *v4 = 1;
-              sub_604742D0(v17, v7, (_DWORD *)0xCA2AD4, *v3, 0);
+              ArrayOf5_writeEntry(v17, v7, (_DWORD *)0xCA2AD4, *v3, 0);
               *v12 = 1;
             }
             goto LABEL_26;
@@ -46108,7 +46098,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v3 = 1;
           if ( v6 != -1 )
           {
-            sub_604742D0((_DWORD *)(a1 + 48), 0x15u, (_DWORD *)0xCA2AE4, v6, 0);
+            ArrayOf5_writeEntry((_DWORD *)(a1 + 48), 0x15u, (_DWORD *)0xCA2AE4, v6, 0);
             if ( ArrayOf20_getEntryPtr(a1 + 48, 21) )
             {
               v7 = ArrayOf20_getEntryPtr(a1 + 48, 21);
@@ -46292,11 +46282,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(v8 + 64) |= 1u;
     v9 = dword_60B02F2C[a2];
     if ( a3 == 1 )
-      sub_604742D0((_DWORD *)(a1 + 48), v9, (_DWORD *)0xCA2AEC, v7, 0);
+      ArrayOf5_writeEntry((_DWORD *)(a1 + 48), v9, (_DWORD *)0xCA2AEC, v7, 0);
     else
       sub_60474420((_DWORD *)(a1 + 48), v9, (_DWORD *)0xCA2AEC, v7, 0);
     sub_604745C0(a1 + 48, v9);
-    return sub_6047455C(a1 + 48, v9);
+    return ArrayOf5_setEntryFloat16(a1 + 48, v9);
   }
 
 /* ============================================================================
@@ -46327,7 +46317,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = dword_60B02F2C[a2];
     sub_60474420((_DWORD *)(a1 + 48), v7, (_DWORD *)0xCA2AEC, v5, 0);
     sub_604745C0(a1 + 48, v7);
-    return sub_6047455C(a1 + 48, v7);
+    return ArrayOf5_setEntryFloat16(a1 + 48, v7);
   }
 
 /* ============================================================================
@@ -46465,7 +46455,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = ListNode_findByKey(a1 + 48, (_DWORD *)0xCA2ADC, v13);
     if ( result != -1 )
     {
-      sub_604742D0((_DWORD *)(a1 + 48), 0x17u, (_DWORD *)0xCA2ADC, result, 0);
+      ArrayOf5_writeEntry((_DWORD *)(a1 + 48), 0x17u, (_DWORD *)0xCA2ADC, result, 0);
       result = ArrayOf20_getEntryPtr(a1 + 48, 23);
       if ( result )
       {
@@ -46875,7 +46865,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v7 = v3 + 4 * v2;
           *(_BYTE *)(*(_DWORD *)(v7 - 89) + 64) |= 1u;
-          result = sub_604742D0(v1, v2 + 17, (_DWORD *)0xCA2AF4, *(_DWORD *)(v7 + 35), 0);
+          result = ArrayOf5_writeEntry(v1, v2 + 17, (_DWORD *)0xCA2AF4, *(_DWORD *)(v7 + 35), 0);
           v5[31] = 1;
           *(_BYTE *)(v3 + v2) = 1;
           v5[27] = 1;
@@ -46899,8 +46889,8 @@ static inline unsigned int uxtb16(unsigned int x)
       result = v5[27];
       if ( v5[27] )
       {
-        sub_604742D0(v1, v2 + 17, (_DWORD *)0xCA2AFC, *(_DWORD *)(v3 + 4 * v2 + 35), 1);
-        result = sub_6047455C(v1, v2 + 17);
+        ArrayOf5_writeEntry(v1, v2 + 17, (_DWORD *)0xCA2AFC, *(_DWORD *)(v3 + 4 * v2 + 35), 1);
+        result = ArrayOf5_setEntryFloat16(v1, v2 + 17);
         *(_BYTE *)(v3 + v2) = 1;
       }
       v5[31] = 0;
@@ -47209,7 +47199,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = 12321336;
     v11 = (const char *)v6;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 0, &v10, 0);
-    sub_6047455C(a1 + 40, 0);
+    ArrayOf5_setEntryFloat16(a1 + 40, 0);
     sub_6047459C(a1 + 40, 0);
     if ( *(_DWORD *)(a1 + 21860) == -1 )
       G_PlayerNum_00_ref_4D1C04(a1);
@@ -47228,16 +47218,16 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = 0;
     v12 = 0;
     v8 = a1 + 3800;
-    sub_60502B04(v8, &v12, 1);
+    Object_getByte500AndDispatchSlot10(v8, &v12, 1);
     v10 = 1;
     v12 = 1;
-    sub_60502B04(v8, &v12, 1);
+    Object_getByte500AndDispatchSlot10(v8, &v12, 1);
     v10 = 2;
     v12 = 2;
-    sub_60502B04(v8, &v12, 1);
+    Object_getByte500AndDispatchSlot10(v8, &v12, 1);
     v10 = 3;
     v12 = 3;
-    return sub_60502B04(v8, &v12, 1);
+    return Object_getByte500AndDispatchSlot10(v8, &v12, 1);
   }
 
 /* ============================================================================
@@ -47412,7 +47402,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
   LABEL_13:
             v11 = v6;
-            sub_60502B04(v3 + 93148, &v11, 1);
+            Object_getByte500AndDispatchSlot10(v3 + 93148, &v11, 1);
           }
         }
       }
@@ -47444,16 +47434,16 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 4854) = 0;
       v7 = 0;
       v6 = 0;
-      sub_60502B04(v2, &v6, 1);
+      Object_getByte500AndDispatchSlot10(v2, &v6, 1);
       v7 = 1;
       v6 = 1;
-      sub_60502B04(v2, &v6, 1);
+      Object_getByte500AndDispatchSlot10(v2, &v6, 1);
       v7 = 2;
       v6 = 2;
-      sub_60502B04(v2, &v6, 1);
+      Object_getByte500AndDispatchSlot10(v2, &v6, 1);
       v7 = 3;
       v6 = 3;
-      return sub_60502B04(v2, &v6, 1);
+      return Object_getByte500AndDispatchSlot10(v2, &v6, 1);
     }
     if ( sub_60502D80(a1 + 3800) == 1 )
     {
@@ -47514,16 +47504,16 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = 0;
     v5 = 0;
     v3 = a1 + 3800;
-    sub_60502B04(a1 + 3800, &v5, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3800, &v5, 1);
     v6 = 1;
     v5 = 1;
-    sub_60502B04(v3, &v5, 1);
+    Object_getByte500AndDispatchSlot10(v3, &v5, 1);
     v6 = 2;
     v5 = 2;
-    sub_60502B04(v3, &v5, 1);
+    Object_getByte500AndDispatchSlot10(v3, &v5, 1);
     v6 = 3;
     v5 = 3;
-    sub_60502B04(v3, &v5, 1);
+    Object_getByte500AndDispatchSlot10(v3, &v5, 1);
     *(_DWORD *)(a1 + 4828) = 256;
     StateMgr_resetAndMaybeChange(v3);
     *(_WORD *)(a1 + 4852) = 0;
@@ -48648,7 +48638,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
   LABEL_13:
             v11 = v6;
-            sub_60502B04(v3 + 93148, &v11, 1);
+            Object_getByte500AndDispatchSlot10(v3 + 93148, &v11, 1);
           }
         }
       }
@@ -48678,16 +48668,16 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 4854) = 0;
       v5 = 0;
       v4 = 0;
-      sub_60502B04(v2, &v4, 1);
+      Object_getByte500AndDispatchSlot10(v2, &v4, 1);
       v5 = 1;
       v4 = 1;
-      sub_60502B04(v2, &v4, 1);
+      Object_getByte500AndDispatchSlot10(v2, &v4, 1);
       v5 = 2;
       v4 = 2;
-      sub_60502B04(v2, &v4, 1);
+      Object_getByte500AndDispatchSlot10(v2, &v4, 1);
       v5 = 3;
       v4 = 3;
-      return (_BYTE *)sub_60502B04(v2, &v4, 1);
+      return (_BYTE *)Object_getByte500AndDispatchSlot10(v2, &v4, 1);
     }
     else if ( sub_60502D80(a1 + 3800) || *(_BYTE *)(a1 + 4846) )
     {
@@ -48772,7 +48762,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
   LABEL_13:
             v11 = v2;
-            sub_60502B04(v4 + 93148, &v11, 1);
+            Object_getByte500AndDispatchSlot10(v4 + 93148, &v11, 1);
           }
         }
       }
@@ -48849,7 +48839,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
   LABEL_13:
             v11 = v6;
-            sub_60502B04(v3 + 93148, &v11, 1);
+            Object_getByte500AndDispatchSlot10(v3 + 93148, &v11, 1);
           }
         }
       }
@@ -48989,7 +48979,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
   LABEL_13:
             v11 = v2;
-            sub_60502B04(v4 + 93148, &v11, 1);
+            Object_getByte500AndDispatchSlot10(v4 + 93148, &v11, 1);
           }
         }
       }
@@ -49066,7 +49056,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
   LABEL_13:
             v11 = v6;
-            sub_60502B04(v3 + 93148, &v11, 1);
+            Object_getByte500AndDispatchSlot10(v3 + 93148, &v11, 1);
           }
         }
       }
@@ -49885,16 +49875,16 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(List_getNthNode(a1 + 3852, v9) - *(_DWORD *)(a1 + 3864) + 208) = 0;
     v7 = 0;
     v9 = 0;
-    sub_605029FC(a1 + 3800, &v9, "SE_SYS_PAUSE");
+    ListEntry_setDword172(a1 + 3800, &v9, "SE_SYS_PAUSE");
     v7 = 1;
     v9 = 1;
-    sub_605029FC(a1 + 3800, &v9, "SE_SYS_CURSOR");
+    ListEntry_setDword172(a1 + 3800, &v9, "SE_SYS_CURSOR");
     v7 = 3;
     v9 = 3;
-    sub_605029FC(a1 + 3800, &v9, "SE_SYS_PAGE");
+    ListEntry_setDword172(a1 + 3800, &v9, "SE_SYS_PAGE");
     v7 = 2;
     v9 = 2;
-    sub_605029FC(a1 + 3800, &v9, "SE_SYS_PAGE");
+    ListEntry_setDword172(a1 + 3800, &v9, "SE_SYS_PAGE");
     *(_WORD *)(a1 + 4852) = 0;
     return IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 3840));
   }
@@ -50043,7 +50033,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA4D10);
     }
     v4 = 13;
-    return sub_60476030(a1 + 40, &dword_60CA4F50, &v4);
+    return Object_appendPairsThenFlush(a1 + 40, &dword_60CA4F50, &v4);
   }
 
 /* ============================================================================
@@ -50109,7 +50099,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = (const char *)v6;
     (*(void (__fastcall **)(int *, int *))(v14 + 8))(&v14, &v10);
     v10 = 2;
-    sub_60476030(a1 + 40, &v12, &v10);
+    Object_appendPairsThenFlush(a1 + 40, &v12, &v10);
     v7 = InOut_Pos_ref(1);
     v12 = 12321336;
     v13 = v7;
@@ -50215,7 +50205,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v21 = (const char *)v9;
     (*(void (__fastcall **)(_DWORD *, int *))(v26[0] + 8))(v26, &v20);
     v20 = 4;
-    sub_60476030(a1 + 44, &v22, &v20);
+    Object_appendPairsThenFlush(a1 + 44, &v22, &v20);
     v22 = 12321336;
     v23 = 11778612;
     v19 = 0;
@@ -50254,7 +50244,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v23 = v16;
       ArrayOf5_lookupByIndex((_DWORD *)(a1 + 44), 1u, &v22, 0);
       sub_604745C0(a1 + 44, 1);
-      sub_6047455C(a1 + 44, 1);
+      ArrayOf5_setEntryFloat16(a1 + 44, 1);
     }
     v17 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(0);
     v22 = 12321336;
@@ -50967,7 +50957,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v19 = v14;
     (*(void (__fastcall **)(_DWORD *, int *))(v23[0] + 8))(v23, &v18);
     v18 = 3;
-    sub_60476030(a1 + 60, &v20, &v18);
+    Object_appendPairsThenFlush(a1 + 60, &v20, &v18);
     sub_60858A34(*(_DWORD *)(*(_DWORD *)(a1 + 3848) + 12));
     sub_60858A34(*(_DWORD *)(*(_DWORD *)(a1 + 3852) + 12));
     sub_60858A34(*(_DWORD *)(*(_DWORD *)(a1 + 3856) + 12));
@@ -51440,16 +51430,16 @@ static inline unsigned int uxtb16(unsigned int x)
     v12 = 0;
     v11 = 0;
     v3 = a1 + 3800;
-    sub_60502B04(a1 + 3800, &v11, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 3800, &v11, 1);
     v12 = 1;
     v11 = 1;
-    sub_60502B04(v3, &v11, 1);
+    Object_getByte500AndDispatchSlot10(v3, &v11, 1);
     v12 = 2;
     v11 = 2;
-    sub_60502B04(v3, &v11, 1);
+    Object_getByte500AndDispatchSlot10(v3, &v11, 1);
     v12 = 3;
     v11 = 3;
-    sub_60502B04(v3, &v11, 1);
+    Object_getByte500AndDispatchSlot10(v3, &v11, 1);
     v4 = *(_DWORD *)(a1 + 615700);
     if ( v4 >= 0xA )
       v4 = 0;
@@ -51479,7 +51469,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
   LABEL_13:
             v12 = v2;
-            result = sub_60502B04(v5 + 93148, &v12, 1);
+            result = Object_getByte500AndDispatchSlot10(v5 + 93148, &v12, 1);
           }
         }
       }
@@ -51530,8 +51520,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v20 = 12321336;
       v21 = v4;
       v5 = 0;
-      sub_604742D0((_DWORD *)(a1 + 40), 5u, &v20, v3, 0);
-      sub_6047455C(a1 + 40, 5);
+      ArrayOf5_writeEntry((_DWORD *)(a1 + 40), 5u, &v20, v3, 0);
+      ArrayOf5_setEntryFloat16(a1 + 40, 5);
       sub_6047459C(a1 + 40, 5);
       v6 = sub_604DABE0(10);
       v20 = 12321336;
@@ -52148,7 +52138,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v31[0] = 12321336;
     v31[1] = Out_Select_Mode_ref(2);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 60), 2u, v31, 0);
-    sub_6047455C(a1 + 60, 2);
+    ArrayOf5_setEntryFloat16(a1 + 60, 2);
     sub_6047459C(a1 + 60, 2);
     result = v32;
     switch ( v32 )
@@ -53144,18 +53134,18 @@ static inline unsigned int uxtb16(unsigned int x)
         v16 = sub_604DABE0(12);
         v22 = 12321336;
         v23 = v16;
-        sub_604742D0(v3, v15, &v22, v4, 1);
+        ArrayOf5_writeEntry(v3, v15, &v22, v4, 1);
         v17 = dword_60CA4D9C;
         v18 = sub_604DABE0(12);
         v22 = 12321336;
         v23 = v18;
-        sub_604742D0(v3, v17, &v22, v7, 1);
+        ArrayOf5_writeEntry(v3, v17, &v22, v7, 1);
         goto LABEL_11;
       }
       v14 = sub_604DABE0(12);
       v22 = 12321336;
       v23 = v14;
-      sub_604742D0(v3, 8u, &v22, v4, 1);
+      ArrayOf5_writeEntry(v3, 8u, &v22, v4, 1);
       sub_6047457C(v3, 7);
       v12 = v3;
       v13 = 8;
@@ -53166,12 +53156,12 @@ static inline unsigned int uxtb16(unsigned int x)
       v11 = sub_604DABE0(12);
       v22 = 12321336;
       v23 = v11;
-      sub_604742D0(v3, 7u, &v22, v7, 1);
+      ArrayOf5_writeEntry(v3, 7u, &v22, v7, 1);
       sub_6047457C(v3, 8);
       v12 = v3;
       v13 = 7;
   LABEL_9:
-      sub_6047455C(v12, v13);
+      ArrayOf5_setEntryFloat16(v12, v13);
     }
   LABEL_11:
     *(v9 - 1) = 1;
@@ -53356,7 +53346,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v14 = 12321336;
       v15 = (const char *)InOut_Pos_ref(1);
       ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, &v14, 0);
-      sub_6047455C(a1 + 40, 1);
+      ArrayOf5_setEntryFloat16(a1 + 40, 1);
       sub_6047459C(a1 + 40, 1);
       *(_BYTE *)(a1 + 6133) = 0;
       v7 = (_BYTE *)(a1 + 6133);
@@ -53372,7 +53362,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v14 = 12321336;
         v15 = (const char *)InOut_Pos_ref(1);
         ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, &v14, 0);
-        sub_6047455C(a1 + 40, 1);
+        ArrayOf5_setEntryFloat16(a1 + 40, 1);
         sub_6047459C(a1 + 40, 1);
         *(_BYTE *)(a1 + 6133) = 0;
         goto LABEL_13;
@@ -53392,7 +53382,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v14 = 12321336;
       v15 = (const char *)InOut_Pos_ref(1);
       ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, &v14, 0);
-      sub_6047455C(a1 + 40, 1);
+      ArrayOf5_setEntryFloat16(a1 + 40, 1);
       sub_6047459C(a1 + 40, 1);
       *(_BYTE *)(a1 + 6132) = v8;
       *(_BYTE *)(a1 + 6133) = 0;
@@ -53520,7 +53510,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 4943) = 0;
     if ( (*(_BYTE *)(a1 + 52209) & 0x20) != 0 )
     {
-      sub_60502694(a1 + 3900);
+      Object_clampFieldPairsToMin(a1 + 3900);
       v7 = (_DWORD *)(a1 + 20);
       if ( *(_DWORD *)(a1 + 4928) == 12 )
         v6 = 13254232;
@@ -53766,7 +53756,7 @@ static inline unsigned int uxtb16(unsigned int x)
             {
   LABEL_12:
               v8 = v4;
-              sub_60502B04(a1 + 3900, &v8, 1);
+              Object_getByte500AndDispatchSlot10(a1 + 3900, &v8, 1);
             }
           }
         }
@@ -53900,7 +53890,7 @@ static inline unsigned int uxtb16(unsigned int x)
             {
   LABEL_12:
               v8 = v4;
-              sub_60502B04(a1 + 3900, &v8, 1);
+              Object_getByte500AndDispatchSlot10(a1 + 3900, &v8, 1);
             }
           }
         }
@@ -54627,7 +54617,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v25 = 12321336;
         v26 = "Level";
         ArrayOf5_lookupByIndex(v6, 0, &v25, 0);
-        sub_6047455C(v6, 0);
+        ArrayOf5_setEntryFloat16(v6, 0);
         sub_6047459C(v6, 0);
   LABEL_13:
         result = 3540;
@@ -54684,7 +54674,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v25 = 12321336;
           v26 = "Level";
           ArrayOf5_lookupByIndex(v15, 0, &v25, 0);
-          sub_6047455C(v15, 0);
+          ArrayOf5_setEntryFloat16(v15, 0);
           result = sub_6047459C(v15, 0);
           goto LABEL_28;
         }
@@ -55719,7 +55709,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(List_getNthNode(a1 + 3692, 1) - *(_DWORD *)(a1 + 3704) + 192) = 0;
     *(_DWORD *)(List_getNthNode(a1 + 3692, 2) - *(_DWORD *)(a1 + 3704) + 192) = 0;
     v5 = 0;
-    sub_605029FC(a1 + 3640, &v5, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 3640, &v5, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     *(_DWORD *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 204) = 0;
@@ -55801,7 +55791,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           *(_DWORD *)(a1 + 6128) = 5;
           *(_DWORD *)(a1 + 4668) = 0;
-          sub_60502694(a1 + 3640);
+          Object_clampFieldPairsToMin(a1 + 3640);
           StateMgr::changeState((_DWORD *)(a1 + 20), 13254648);
         }
         else
@@ -55864,7 +55854,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v4 != 1 )
         {
   LABEL_9:
-          sub_60502694(a1 + 3640);
+          Object_clampFieldPairsToMin(a1 + 3640);
           StateMgr::changeState((_DWORD *)(a1 + 20), 13254712);
           return 1;
         }
@@ -56805,9 +56795,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = "CourseSelVSRandom";
     sead::SafeStringBase<char>::operator=(a1 + 4704, &v8);
     v8 = 1;
-    sub_605029FC(a1 + 3692, &v8, "SE_SYS_COURSE_IN");
+    ListEntry_setDword172(a1 + 3692, &v8, "SE_SYS_COURSE_IN");
     v8 = 0;
-    sub_605029FC(a1 + 3692, &v8, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 3692, &v8, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     *(_DWORD *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 204) = 0;
@@ -56926,11 +56916,11 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_DWORD *)(a1 + 4720) = 1;
           break;
         case 1:
-          sub_60502694(v3);
+          Object_clampFieldPairsToMin(v3);
           v6 = 13255000;
           goto LABEL_25;
         case 0:
-          sub_60502694(v3);
+          Object_clampFieldPairsToMin(v3);
           v6 = 13255064;
   LABEL_25:
           StateMgr::changeState((_DWORD *)(a1 + 20), v6);
@@ -56940,7 +56930,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v4 & 0x4000) != 0 )
     {
       *(_DWORD *)(a1 + 4720) = 0;
-      sub_60502694(v3);
+      Object_clampFieldPairsToMin(v3);
       v6 = 13255064;
       goto LABEL_25;
     }
@@ -57161,18 +57151,18 @@ static inline unsigned int uxtb16(unsigned int x)
         v16 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
         v22 = 12321336;
         v23 = v16;
-        sub_604742D0(v3, v15, &v22, v4, 1);
+        ArrayOf5_writeEntry(v3, v15, &v22, v4, 1);
         v17 = dword_60CA4DEC;
         v18 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
         v22 = 12321336;
         v23 = v18;
-        sub_604742D0(v3, v17, &v22, v7, 1);
+        ArrayOf5_writeEntry(v3, v17, &v22, v7, 1);
         goto LABEL_11;
       }
       v14 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
       v22 = 12321336;
       v23 = v14;
-      sub_604742D0(v3, 3u, &v22, v4, 1);
+      ArrayOf5_writeEntry(v3, 3u, &v22, v4, 1);
       sub_6047457C(v3, 2);
       v12 = v3;
       v13 = 3;
@@ -57183,12 +57173,12 @@ static inline unsigned int uxtb16(unsigned int x)
       v11 = InOut_ScrollToR_ScrollToL_LoopArrow_ref(3);
       v22 = 12321336;
       v23 = v11;
-      sub_604742D0(v3, 2u, &v22, v7, 1);
+      ArrayOf5_writeEntry(v3, 2u, &v22, v7, 1);
       sub_6047457C(v3, 3);
       v12 = v3;
       v13 = 2;
   LABEL_9:
-      sub_6047455C(v12, v13);
+      ArrayOf5_setEntryFloat16(v12, v13);
     }
   LABEL_11:
     *(v9 - 1) = 1;
@@ -60661,7 +60651,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA5060);
     }
     v6[0] = 2;
-    sub_60476030((int)v2, &dword_60CA5070, v6);
+    Object_appendPairsThenFlush((int)v2, &dword_60CA5070, v6);
     if ( ((unsigned int)&unk_60CA5064 & ~(1615717568 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA5064) )
     {
       dword_60CA5068 = 12321336;
@@ -61414,14 +61404,14 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v7 & 0x800) != 0 )
     {
       *v4 = 0;
-      sub_60502694(result);
+      Object_clampFieldPairsToMin(result);
       *(_DWORD *)(a1 + 40) = 13259092;
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13259060);
     }
     if ( (v7 & 0x2000) != 0 )
     {
       *v4 = dword_60B02FCC[*(_DWORD *)(a1 + 6288)];
-      sub_60502694(result);
+      Object_clampFieldPairsToMin(result);
       *(_DWORD *)(a1 + 40) = 13259188;
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13259060);
     }
@@ -62176,7 +62166,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA5350);
     }
     v5[0] = 4;
-    return sub_60476030((int)v2, &dword_60CA5380, v5);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA5380, v5);
   }
 
 /* ============================================================================
@@ -63042,7 +63032,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA55C0);
     }
     v7[0] = 6;
-    sub_60476030((int)v2, &dword_60CA55EC, v7);
+    Object_appendPairsThenFlush((int)v2, &dword_60CA55EC, v7);
     if ( ((unsigned int)&unk_60CA55C4 & ~(1615731092 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA55C4) )
     {
       dword_60CA5620 = 12321336;
@@ -63503,7 +63493,7 @@ static inline unsigned int uxtb16(unsigned int x)
                       return sub_6047459C(v7, 0);
                   }
                   ArrayOf5_lookupByIndex(v7, 0, v9, 1);
-                  return sub_6047455C(v7, 0);
+                  return ArrayOf5_setEntryFloat16(v7, 0);
                 }
               }
             }
@@ -63987,7 +63977,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 40);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCA56A4, 0);
     sub_604745EC((int)v1, 1u, 0);
-    sub_6047455C((int)v1, 1u);
+    ArrayOf5_setEntryFloat16((int)v1, 1u);
     return ArrayOf5_lookupByIndex(v1, 0, (_DWORD *)0xCA56BC, 0);
   }
 
@@ -64463,7 +64453,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA5950);
     }
     v8[0] = 5;
-    sub_60476030((int)v2, &dword_60CA5964, v8);
+    Object_appendPairsThenFlush((int)v2, &dword_60CA5964, v8);
     if ( ((unsigned int)&unk_60CA5954 & ~(1615739240 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA5954) )
     {
       dword_60CA58CC = 12321336;
@@ -68716,7 +68706,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v3 = ListNode_findByKey(a1[1], (_DWORD *)0xCA5CF4, &dword_60CA5F80[2 * (a1[1139] - a1[136])]);
     if ( v3 != -1 )
-      sub_604742D0((_DWORD *)a1[1], 3u, (_DWORD *)0xCA5CF4, v3, 0);
+      ArrayOf5_writeEntry((_DWORD *)a1[1], 3u, (_DWORD *)0xCA5CF4, v3, 0);
     return SE_SYS_CH_TARGET_MEDAL_ref(a1, a1[136]);
   }
 
@@ -68857,7 +68847,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     result = ListNode_findByKey(a1[1], (_DWORD *)0xCA5CFC, &dword_60CA5FD0[2 * (a1[1139] - a1[1138])]);
     if ( result != -1 )
-      return sub_604742D0((_DWORD *)a1[1], 4u, (_DWORD *)0xCA5CFC, result, 0);
+      return ArrayOf5_writeEntry((_DWORD *)a1[1], 4u, (_DWORD *)0xCA5CFC, result, 0);
     return result;
   }
 
@@ -70087,7 +70077,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA60C4);
     }
     v10 = 3;
-    sub_60476030(a1 + 10808, &dword_60CA6130, &v10);
+    Object_appendPairsThenFlush(a1 + 10808, &dword_60CA6130, &v10);
     *(_BYTE *)(a1 + 15450) = 1;
     sub_60502210(a1 + 14396, a1 + 16484, 17);
     v10 = 12321336;
@@ -70125,11 +70115,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502960(a1 + 14396, 15);
     sub_60502994(a1 + 14396, 15);
     sub_605029C8(a1 + 14396, 15);
-    sub_605029FC(a1 + 14396, a1 + 16476, "SE_SYS_PAGE");
+    ListEntry_setDword172(a1 + 14396, a1 + 16476, "SE_SYS_PAGE");
     sub_605028F0(a1 + 14396, a1 + 16476, 1);
-    sub_605029FC(a1 + 14396, a1 + 16480, "SE_SYS_PAGE");
+    ListEntry_setDword172(a1 + 14396, a1 + 16480, "SE_SYS_PAGE");
     sub_605028F0(a1 + 14396, a1 + 16480, 1);
-    sub_605029FC(a1 + 14396, a1 + 16484, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 14396, a1 + 16484, "SE_SYS_BACK");
     sub_605028F0(a1 + 14396, a1 + 16484, 1);
     *(_DWORD *)(List_getNthNode(a1 + 14448, *v3) - *(_DWORD *)(a1 + 14460) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 14448, *v3) - *(_DWORD *)(a1 + 14460) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
@@ -70655,7 +70645,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( a2 >= 3 )
         a2 = 0;
       *(_DWORD *)(a1 + 15424) = *(_DWORD *)(a1 + 4 * a2 + 16476);
-      sub_60502694(a1 + 14396);
+      Object_clampFieldPairsToMin(a1 + 14396);
       return 1;
     }
     return v2;
@@ -70717,7 +70707,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v7 = v2;
       v8 = 1;
     }
-    return sub_6047455C(v7, v8);
+    return ArrayOf5_setEntryFloat16(v7, v8);
   }
 
 /* ============================================================================
@@ -71403,7 +71393,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA62A0);
     }
     v5 = 3;
-    return sub_60476030((int)v2, &dword_60CA62CC, &v5);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA62CC, &v5);
   }
 
 /* ============================================================================
@@ -71925,7 +71915,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           if ( v5 != 15 )
           {
-            sub_60502694(a1 + 46088);
+            Object_clampFieldPairsToMin(a1 + 46088);
             v12 = sub_604F31CC(a1, v5);
             v6 = (_DWORD *)(a1 + 42504);
             if ( v12 )
@@ -71997,7 +71987,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604EEEE4(int a1)
   {
     *(_DWORD *)(a1 + 47116) = 0;
-    return sub_60502694(a1 + 46088);
+    return Object_clampFieldPairsToMin(a1 + 46088);
   }
 
 /* ============================================================================
@@ -72409,62 +72399,62 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(int *)(MEMORY[0xCC6D78] + 98488) <= 14 )
     {
       v8 = 1;
-      sub_60502B04(v5, &v8, 1);
+      Object_getByte500AndDispatchSlot10(v5, &v8, 1);
       v6 = (int *)MEMORY[0xCC6D78];
     }
     if ( v6[24623] <= 14 )
     {
       v8 = 2;
-      sub_60502B04(v5, &v8, 1);
+      Object_getByte500AndDispatchSlot10(v5, &v8, 1);
       v6 = (int *)MEMORY[0xCC6D78];
     }
     if ( v6[24624] <= 14 )
     {
       v8 = 3;
-      sub_60502B04(v5, &v8, 1);
+      Object_getByte500AndDispatchSlot10(v5, &v8, 1);
       v6 = (int *)MEMORY[0xCC6D78];
     }
     if ( v6[24625] <= 14 )
     {
       v8 = 4;
-      sub_60502B04(v5, &v8, 1);
+      Object_getByte500AndDispatchSlot10(v5, &v8, 1);
       v6 = (int *)MEMORY[0xCC6D78];
     }
     if ( v6[24626] <= 14 )
     {
       v8 = 5;
-      sub_60502B04(v5, &v8, 1);
+      Object_getByte500AndDispatchSlot10(v5, &v8, 1);
       v6 = (int *)MEMORY[0xCC6D78];
     }
     if ( v6[24627] <= 14 )
     {
       v8 = 6;
-      sub_60502B04(v5, &v8, 1);
+      Object_getByte500AndDispatchSlot10(v5, &v8, 1);
       v6 = (int *)MEMORY[0xCC6D78];
     }
     if ( v6[24628] <= 14 )
     {
       v8 = 7;
-      sub_60502B04(v5, &v8, 1);
+      Object_getByte500AndDispatchSlot10(v5, &v8, 1);
       v6 = (int *)MEMORY[0xCC6D78];
     }
     if ( v6[24629] <= 14 )
     {
       v8 = 8;
-      sub_60502B04(v5, &v8, 1);
+      Object_getByte500AndDispatchSlot10(v5, &v8, 1);
       v6 = (int *)MEMORY[0xCC6D78];
     }
     if ( v6[24630] <= 14 )
     {
       v8 = 9;
-      sub_60502B04(v5, &v8, 1);
+      Object_getByte500AndDispatchSlot10(v5, &v8, 1);
       v6 = (int *)MEMORY[0xCC6D78];
     }
     result = v6[24631];
     if ( result <= 14 )
     {
       v8 = 10;
-      return sub_60502B04(v5, &v8, 1);
+      return Object_getByte500AndDispatchSlot10(v5, &v8, 1);
     }
     return result;
   }
@@ -73162,7 +73152,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA6580);
     }
     v7 = 5;
-    return sub_60476030((int)v2, &dword_60CA65E0, &v7);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA65E0, &v7);
   }
 
 /* ============================================================================
@@ -73187,7 +73177,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7[0] = 12321336;
     v7[1] = "ItemList";
     sead::SafeStringBase<char>::operator=(v1 + 11775, v7);
-    sub_605029FC(v2, &unk_60B03214, "SE_SYS_BACK");
+    ListEntry_setDword172(v2, &unk_60B03214, "SE_SYS_BACK");
     sub_605028F0(v2, &unk_60B03214, 1);
     v3 = v1 + 11535;
     v4 = List_getNthNode(v1 + 11535, 0);
@@ -75925,7 +75915,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA6C6C);
     }
     v6[0] = 8;
-    return sub_60476030(a1 + 40, &dword_60CA6D90, v6);
+    return Object_appendPairsThenFlush(a1 + 40, &dword_60CA6D90, v6);
   }
 
 /* ============================================================================
@@ -77178,12 +77168,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = *(_DWORD *)(a1 + 4748);
     if ( v7 == 1 )
     {
-      sub_60502694(result);
+      Object_clampFieldPairsToMin(result);
       goto LABEL_20;
     }
     if ( !v7 )
     {
-      sub_60502694(result);
+      Object_clampFieldPairsToMin(result);
       goto LABEL_4;
     }
     return result;
@@ -77801,7 +77791,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = (int)"ItemStockConfirm";
     sead::SafeStringBase<char>::operator=(a1 + 4732, v4);
     v4[0] = 0;
-    return sub_605029FC(a1 + 3720, v4, "SE_SYS_BACK");
+    return ListEntry_setDword172(a1 + 3720, v4, "SE_SYS_BACK");
   }
 
 /* ============================================================================
@@ -78694,7 +78684,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA7024);
     }
     v4[0] = 6;
-    return sub_60476030((int)v1, &dword_60CA7070, v4);
+    return Object_appendPairsThenFlush((int)v1, &dword_60CA7070, v4);
   }
 
 /* ============================================================================
@@ -79093,11 +79083,11 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_BYTE *)(a1 + 40012) = 0;
       *(_BYTE *)(a1 + 40013) = 0;
-      sub_604742D0((_DWORD *)(a1 + 31900), 2u, (_DWORD *)0xCA70A0, *(_DWORD *)(a1 + 39788), 0);
+      ArrayOf5_writeEntry((_DWORD *)(a1 + 31900), 2u, (_DWORD *)0xCA70A0, *(_DWORD *)(a1 + 39788), 0);
       v3 = ArrayOf20_getEntryPtr(a1 + 31900, 2u);
       if ( v3 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
-      sub_604742D0((_DWORD *)(a1 + 31900), 3u, (_DWORD *)0xCA70A0, *(_DWORD *)(a1 + 39792), 0);
+      ArrayOf5_writeEntry((_DWORD *)(a1 + 31900), 3u, (_DWORD *)0xCA70A0, *(_DWORD *)(a1 + 39792), 0);
       v4 = ArrayOf20_getEntryPtr(a1 + 31900, 3u);
       if ( v4 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 104))(v4);
@@ -79300,7 +79290,7 @@ static inline unsigned int uxtb16(unsigned int x)
       memset((void *)(a1 + 40014), 0, 0x36u);
     }
     MessageQueue_postType3((_DWORD *)0xCA70D0, *(_DWORD *)(a1 + 37756), 2);
-    sub_60502694(a1 + 35508);
+    Object_clampFieldPairsToMin(a1 + 35508);
     *(_BYTE *)(a1 + 36549) = 1;
     return 36549;
   }
@@ -79495,7 +79485,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v14 = 0;
           v15 = *(_DWORD *)(a1 + 404 * v14 + 37772);
           if ( (v15 & 0x2000) != 0 )
-            return sub_60502694((int)(v2 - 4605));
+            return Object_clampFieldPairsToMin((int)(v2 - 4605));
           if ( (v15 & 0x4000) != 0 )
           {
             *v3 = 1;
@@ -79608,7 +79598,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(a1 + 40100) )
       v1 = 18;
     *(_DWORD *)(a1 + 36536) = v1;
-    return sub_60502694(a1 + 35508);
+    return Object_clampFieldPairsToMin(a1 + 35508);
   }
 
 /* ============================================================================
@@ -80002,7 +79992,7 @@ static inline unsigned int uxtb16(unsigned int x)
         a1 += v6;
       *(_BYTE *)(a1 + 40014) = 1;
     }
-    sub_60502694(v1 + 35508);
+    Object_clampFieldPairsToMin(v1 + 35508);
     *(_BYTE *)(v1 + 40097) = 1;
     return 40097;
   }
@@ -80219,7 +80209,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v6 = a1 + 35508;
     v20 = 4;
-    sub_60476030((int)v4, &dword_60CA7320, &v20);
+    Object_appendPairsThenFlush((int)v4, &dword_60CA7320, &v20);
     v7 = 19;
     *(_BYTE *)(a1 + 36562) = 1;
     if ( a2 <= 3 )
@@ -80231,11 +80221,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sead::SafeStringBase<char>::operator=(a1 + 36520, &v20);
     sub_6050292C(a1 + 35508, 15);
     sub_605029C8(a1 + 35508, 15);
-    sub_605029FC(v6, &unk_60B035AC, "SE_SYS_PAGE");
+    ListEntry_setDword172(v6, &unk_60B035AC, "SE_SYS_PAGE");
     sub_605028F0(v6, &unk_60B035AC, 1);
     v18 = a1;
     *(_DWORD *)(List_getNthNode(a1 + 35560, 18) - *(_DWORD *)(a1 + 35572) + 184) = "SE_SYS_PAGE";
-    sub_605029FC(v6, &unk_60B035B0, "SE_SYS_PAGE");
+    ListEntry_setDword172(v6, &unk_60B035B0, "SE_SYS_PAGE");
     sub_605028F0(v6, &unk_60B035B0, 1);
     v8 = List_getNthNode(a1 + 35560, 19);
     v9 = *(_DWORD *)(a1 + 35572);
@@ -80760,7 +80750,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( !v4 )
       {
-        sub_604742D0((_DWORD *)(a1 + 31900), 2u, (_DWORD *)0xCA70A0, *(_DWORD *)(a1 + 39788), 0);
+        ArrayOf5_writeEntry((_DWORD *)(a1 + 31900), 2u, (_DWORD *)0xCA70A0, *(_DWORD *)(a1 + 39788), 0);
         *v5 = 1;
       }
     }
@@ -80780,12 +80770,12 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else if ( !*(_BYTE *)(a1 + 40013) )
     {
-      sub_604742D0((_DWORD *)(a1 + 31900), 3u, (_DWORD *)0xCA70A0, *(_DWORD *)(a1 + 39792), 0);
+      ArrayOf5_writeEntry((_DWORD *)(a1 + 31900), 3u, (_DWORD *)0xCA70A0, *(_DWORD *)(a1 + 39792), 0);
       *v6 = 1;
     }
     v7 = a1 + 35508;
-    sub_60502B04(a1 + 35508, 11548068, 1);
-    sub_60502B04(a1 + 35508, 11548072, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 35508, 11548068, 1);
+    Object_getByte500AndDispatchSlot10(a1 + 35508, 11548072, 1);
     v8 = ArrayOf20_getEntryPtr(a1 + 31900, 1);
     v9 = v8;
     if ( v8 )
@@ -81108,7 +81098,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         *v30 = 1;
   LABEL_38:
-        sub_60502B04(v33, v18, 1);
+        Object_getByte500AndDispatchSlot10(v33, v18, 1);
   LABEL_40:
         v31 = *(_DWORD *)(v16 + 128);
         if ( v31 )
@@ -81378,7 +81368,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[1] = (int)"MovieFrame.bflyt";
     message_ref(v1, v3, 0, 0, 0);
     v3[0] = 0;
-    return sub_60476030((int)v1, 0, v3);
+    return Object_appendPairsThenFlush((int)v1, 0, v3);
   }
 
 /* ============================================================================
@@ -81434,7 +81424,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 2140);
     v3 = ListNode_findByKey(a1 + 2140, &off_60CA7420, &dword_60CA7428);
     if ( v3 != -1 )
-      sub_604742D0(v2, 0, &off_60CA7420, v3, 0);
+      ArrayOf5_writeEntry(v2, 0, &off_60CA7420, v3, 0);
     if ( ArrayOf20_getEntryPtr((int)v2, 0) )
     {
       v4 = ArrayOf20_getEntryPtr((int)v2, 0);
@@ -81459,7 +81449,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 535;
     v3 = ListNode_findByKey((int)(a1 + 535), &off_60CA7420, &dword_60CA7428);
     if ( v3 != -1 )
-      sub_604742D0(v2, 0, &off_60CA7420, v3, 0);
+      ArrayOf5_writeEntry(v2, 0, &off_60CA7420, v3, 0);
     if ( ArrayOf20_getEntryPtr((int)v2, 0) )
     {
       v4 = ArrayOf20_getEntryPtr((int)v2, 0);
@@ -81495,7 +81485,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 2140);
     v3 = ListNode_findByKey((int)v2, &off_60CA7418, &dword_60CA7428);
     if ( v3 != -1 )
-      sub_604742D0(v2, 0, &off_60CA7418, v3, 0);
+      ArrayOf5_writeEntry(v2, 0, &off_60CA7418, v3, 0);
     return sub_608091F4(MEMORY[0xCC6AF8], (int)"STRM_BGM_NX_STAFF_CREDIT", 40, 90, 0, 0);
   }
 
@@ -81592,7 +81582,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
   LABEL_14:
           *(_DWORD *)(a1 + 1084) = *(_DWORD *)(a1 + 2136);
-          sub_60502694(a1 + 56);
+          Object_clampFieldPairsToMin(a1 + 56);
           result = *(unsigned __int8 *)(a1 + 1099);
           if ( !*(_BYTE *)(a1 + 1099) )
             return result;
@@ -81628,7 +81618,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 2140);
     v2 = ListNode_findByKey(a1 + 2140, &off_60CA7420, &dword_60CA7428);
     if ( v2 != -1 )
-      sub_604742D0(v1, 0, &off_60CA7420, v2, 0);
+      ArrayOf5_writeEntry(v1, 0, &off_60CA7420, v2, 0);
     ArrayOf20_getEntryPtr((int)v1, 0);
     return sub_6080A310(MEMORY[0xCC6AF8], 40, 1000);
   }
@@ -81807,7 +81797,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA73F4);
     }
     v11[0] = 2;
-    return sub_60476030((int)v2, &dword_60CA7448, v11);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA7448, v11);
   }
 
 /* ============================================================================
@@ -81919,7 +81909,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502960(a1 + 56, 15);
     sub_60502994(a1 + 56, 15);
     sub_605029C8(a1 + 56, 15);
-    sub_605029FC(a1 + 56, a1 + 2136, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 56, a1 + 2136, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 108, *(_DWORD *)(a1 + 2136)) - *(_DWORD *)(a1 + 120) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 108, *(_DWORD *)(a1 + 2136)) - *(_DWORD *)(a1 + 120) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     return sub_605028F0(a1 + 56, a1 + 2136, 1);
@@ -82496,7 +82486,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v3 & 0x2000) != 0 )
     {
   LABEL_38:
-      sub_60502694(a1 + 3588);
+      Object_clampFieldPairsToMin(a1 + 3588);
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13268264);
     }
     result = *(unsigned __int8 *)(a1 + 4634);
@@ -82800,7 +82790,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA7598);
     }
     v6 = 2;
-    return sub_60476030((int)v2, &dword_60CA7620, &v6);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA7620, &v6);
   }
 
 /* ============================================================================
@@ -84076,7 +84066,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60502694
+ * Object_clampFieldPairsToMin
  * RVA 0x00502694   size 0x78   xrefs 75
  * ============================================================================ */
   int __fastcall sub_60502694(int result)
@@ -84309,7 +84299,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605029FC
+ * ListEntry_setDword172
  * RVA 0x005029fc   size 0x28   xrefs 78
  * ============================================================================ */
   int __fastcall sub_605029FC(int a1, int *a2, int a3)
@@ -84399,7 +84389,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60502B04
+ * Object_getByte500AndDispatchSlot10
  * RVA 0x00502b04   size 0x8c   xrefs 73
  * ============================================================================ */
   unsigned int __fastcall sub_60502B04(int a1, unsigned int *a2, int a3)
@@ -86223,7 +86213,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v24 = 12321336;
     v25 = v21;
     ArrayOf5_lookupByIndex(a1, 2u, &v24, 0);
-    sub_6047455C(a1, 2);
+    ArrayOf5_setEntryFloat16(a1, 2);
     return sub_6047459C(a1, 2);
   }
 
@@ -86467,7 +86457,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v3 < 0.0 )
       return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3512) + 108))(**(_DWORD **)(a1 + 3512));
   LABEL_11:
-    sub_6047455C(a1, 0);
+    ArrayOf5_setEntryFloat16(a1, 0);
     return sub_6047459C(a1, 0);
   }
 
@@ -86731,7 +86721,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60505730(int a1)
   {
     sub_604745C0(a1, 0);
-    sub_6047455C(a1, 0);
+    ArrayOf5_setEntryFloat16(a1, 0);
     return sub_6047459C(a1, 0);
   }
 
@@ -86742,7 +86732,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60505788(int a1)
   {
     sub_604745C0(a1, 0);
-    sub_6047455C(a1, 0);
+    ArrayOf5_setEntryFloat16(a1, 0);
     return sub_6047459C(a1, 0);
   }
 
@@ -87365,7 +87355,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( a1[877] > 2u )
         v9 += 10;
       (*(void (__fastcall **)(_DWORD))(*(_DWORD *)*v9 + 104))(*v9);
-      sub_6047455C(a1, 1);
+      ArrayOf5_setEntryFloat16(a1, 1);
       sub_6047459C(a1, 1);
     }
   LABEL_21:
@@ -87375,13 +87365,13 @@ static inline unsigned int uxtb16(unsigned int x)
     ArrayOf5_lookupByIndex(a1, 3u, &v21, 1);
     sub_604745C0(a1, 3);
     sead::Random::getU32(MEMORY[0xCCF4E4]);
-    sub_6047455C(a1, 3);
+    ArrayOf5_setEntryFloat16(a1, 3);
     v15 = 0;
     v16 = sub_605067A0(0);
     v21 = 12321336;
     v22 = v16;
     ArrayOf5_lookupByIndex(a1, 0, &v21, 0);
-    sub_6047455C(a1, 0);
+    ArrayOf5_setEntryFloat16(a1, 0);
     sub_6047459C(a1, 0);
     v21 = 0;
     v22 = 1;
@@ -90856,13 +90846,13 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v5 = ListNode_findByKey(a1 + 40, &dword_60CA7ECC, &dword_60CA7ED4);
       if ( v5 != -1 )
-        sub_604742D0((_DWORD *)(a1 + 40), 0, &dword_60CA7ECC, v5, 0);
+        ArrayOf5_writeEntry((_DWORD *)(a1 + 40), 0, &dword_60CA7ECC, v5, 0);
     }
     else if ( (v2 & 2) != 0 )
     {
       v3 = ListNode_findByKey(a1 + 40, &dword_60CA7EC4, &dword_60CA7ED4);
       if ( v3 != -1 )
-        sub_604742D0((_DWORD *)(a1 + 40), 0, &dword_60CA7EC4, v3, 0);
+        ArrayOf5_writeEntry((_DWORD *)(a1 + 40), 0, &dword_60CA7EC4, v3, 0);
       v4 = sub_60473B4C(a1 + 40);
       sub_6098F1D4(v4);
     }
@@ -90935,7 +90925,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60474848((int)v3, &dword_60CA7EDC, &v10);
     v7 = ListNode_findByKey((int)v3, &dword_60CA7EC4, &dword_60CA7ED4);
     if ( v7 != -1 )
-      sub_604742D0(v3, 0, &dword_60CA7EC4, v7, 0);
+      ArrayOf5_writeEntry(v3, 0, &dword_60CA7EC4, v7, 0);
     result = ArrayOf20_getEntryPtr(v3, 0);
     if ( result )
     {
@@ -94683,7 +94673,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return result;
     }
     if ( sub_6047F384(a1 + 9580, 0x2000) )
-      return sub_60502694((int)(v2 - 1468));
+      return Object_clampFieldPairsToMin((int)(v2 - 1468));
     v10 = dword_60CA84C4;
     v11 = ArrayOf20_getEntryPtr(a1 + 56, 5u);
     if ( !v11 )
@@ -95031,7 +95021,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[1] = (int)"Pa_CharacterIcon_00";
     sub_60506F20((_DWORD *)(a1 + 5924), (int)v2, v9);
     v9[0] = 9;
-    return sub_60476030((int)v2, &dword_60CA84A0, v9);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA84A0, v9);
   }
 
 /* ============================================================================
@@ -97505,11 +97495,11 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v1 & 0x4000) != 0 || (v2 = *(_DWORD *)(result + 14960), (v2 & 0x4000) != 0) )
     {
       *(_DWORD *)(result + 4624) = *(_DWORD *)(result + 12892);
-      return sub_60502694(result + 3596);
+      return Object_clampFieldPairsToMin(result + 3596);
     }
     v3 = v1 | v2;
     if ( (v3 & 0x2000) != 0 )
-      return sub_60502694(result + 3596);
+      return Object_clampFieldPairsToMin(result + 3596);
     if ( *(_BYTE *)(result + 4642) )
       return result;
     v5 = (int *)(result + 4624);
@@ -97616,11 +97606,11 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (v1 & 0x4000) != 0 || (v2 = *(_DWORD *)(result + 14960), (v2 & 0x4000) != 0) )
     {
       *(_DWORD *)(result + 4624) = *(_DWORD *)(result + 12892);
-      return sub_60502694(result + 3596);
+      return Object_clampFieldPairsToMin(result + 3596);
     }
     v3 = v1 | v2;
     if ( (v3 & 0x2000) != 0 )
-      return sub_60502694(result + 3596);
+      return Object_clampFieldPairsToMin(result + 3596);
     if ( *(_BYTE *)(result + 4642) )
       return result;
     v5 = (int *)(result + 4624);
@@ -97852,7 +97842,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[1429] = 2;
     a1[1428] |= 1u;
     v10[0] = 2;
-    return sub_60476030((int)v2, &off_60CA8694, v10);
+    return Object_appendPairsThenFlush((int)v2, &off_60CA8694, v10);
   }
 
 /* ============================================================================
@@ -97885,7 +97875,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502960(v2, 15);
     sub_60502994(v2, 15);
     sub_605029C8(v2, 15);
-    sub_605029FC(v2, a1 + 12892, "SE_SYS_BACK");
+    ListEntry_setDword172(v2, a1 + 12892, "SE_SYS_BACK");
     sub_605028F0(v2, (_DWORD *)(a1 + 12892), 1);
     *(_DWORD *)(List_getNthNode(a1 + 3648, *(_DWORD *)(a1 + 12892)) - *(_DWORD *)(a1 + 3660) + 176) = "SE_SYS_BACK_BTN_OVER";
     result = List_getNthNode(a1 + 3648, *(_DWORD *)(a1 + 12892)) - *(_DWORD *)(a1 + 3660);
@@ -98996,7 +98986,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = v5;
     (*(void (__fastcall **)(_DWORD *, int *))(v14[0] + 8))(v14, &v7);
     v7 = 5;
-    return sub_60476030((int)v1, &v9, &v7);
+    return Object_appendPairsThenFlush((int)v1, &v9, &v7);
   }
 
 /* ============================================================================
@@ -99826,7 +99816,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = ListNode_findByKey(a1 + 40, &off_60CA8888, &dword_60CA88CC);
     if ( v3 != -1 )
     {
-      sub_604742D0((_DWORD *)(a1 + 40), 0, &off_60CA8888, v3, 0);
+      ArrayOf5_writeEntry((_DWORD *)(a1 + 40), 0, &off_60CA8888, v3, 0);
       if ( ArrayOf20_getEntryPtr(a1 + 40, 0) )
       {
         v4 = ArrayOf20_getEntryPtr(a1 + 40, 0);
@@ -99903,7 +99893,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA8874);
     }
     v7 = 4;
-    return sub_60476030((int)v2, &dword_60CA88F0, &v7);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA88F0, &v7);
   }
 
 /* ============================================================================
@@ -99965,7 +99955,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = ListNode_findByKey(a1 + 40, &off_60CA8888, &dword_60CA88CC);
     if ( v3 != -1 )
     {
-      sub_604742D0(v2, 0, &off_60CA8888, v3, 0);
+      ArrayOf5_writeEntry(v2, 0, &off_60CA8888, v3, 0);
       ArrayOf20_getEntryPtr(v2, 0);
     }
     v25 = v2;
@@ -99979,7 +99969,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = ListNode_findByKey((int)v2, &dword_60CA8898, &dword_60CA88DC);
         if ( v6 != -1 )
         {
-          sub_604742D0(v2, 2u, &dword_60CA8898, v6, 0);
+          ArrayOf5_writeEntry(v2, 2u, &dword_60CA8898, v6, 0);
           if ( ArrayOf20_getEntryPtr(v2, 2) )
           {
             v7 = ArrayOf20_getEntryPtr(v2, 2);
@@ -100063,7 +100053,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = ListNode_findByKey((int)v20, &off_60CA8890, &dword_60CA88E4);
     if ( result != -1 )
     {
-      sub_604742D0(v20, 3u, &off_60CA8890, result, 0);
+      ArrayOf5_writeEntry(v20, 3u, &off_60CA8890, result, 0);
       result = ArrayOf20_getEntryPtr(v20, 3);
       if ( result )
       {
@@ -100087,7 +100077,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = ListNode_findByKey(a1 + 40, &dword_60CA88A0, &dword_60CA88CC);
     if ( result != -1 )
     {
-      sub_604742D0(v1, 0, &dword_60CA88A0, result, 0);
+      ArrayOf5_writeEntry(v1, 0, &dword_60CA88A0, result, 0);
       return ArrayOf20_getEntryPtr(v1, 0);
     }
     return result;
@@ -100376,7 +100366,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA89C0);
     }
     v6[0] = 3;
-    sub_60476030((int)v2, &dword_60CA89D0, v6);
+    Object_appendPairsThenFlush((int)v2, &dword_60CA89D0, v6);
     if ( ((unsigned int)&unk_60CA89C4 & ~(1615956832 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA89C4) )
     {
       dword_60CA89C8 = 12321336;
@@ -100859,7 +100849,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v7 != 9 );
     v9[0] = 9;
-    sub_60476030((int)v2, &v11, v9);
+    Object_appendPairsThenFlush((int)v2, &v11, v9);
     return Table_getEntryById(v2, 14, 0);
   }
 
@@ -101294,7 +101284,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = sub_6051A8DC(4);
     v16 = 12321336;
     v17 = v14;
-    return sub_604742D0(v5, 4u, &v16, v13, 1);
+    return ArrayOf5_writeEntry(v5, 4u, &v16, v13, 1);
   }
 
 /* ============================================================================
@@ -102919,7 +102909,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = v7;
     (*(void (__fastcall **)(_DWORD *, int *))(v17[0] + 8))(v17, &v9);
     v9 = 6;
-    return sub_60476030((int)v2, &v11, &v9);
+    return Object_appendPairsThenFlush((int)v2, &v11, &v9);
   }
 
 /* ============================================================================
@@ -103647,19 +103637,19 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = 12321336;
     v8 = v3;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 1u, &v7, 0);
-    sub_6047455C(a1 + 36, 1);
+    ArrayOf5_setEntryFloat16(a1 + 36, 1);
     sub_6047459C(a1 + 36, 1);
     v4 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(3);
     v7 = 12321336;
     v8 = v4;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 3u, &v7, 0);
-    sub_6047455C(a1 + 36, 3);
+    ArrayOf5_setEntryFloat16(a1 + 36, 3);
     sub_6047459C(a1 + 36, 3);
     v5 = WipeIn_Mode_Team_PlayerNum_Loop_Out_ref(2);
     v7 = 12321336;
     v8 = v5;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 2u, &v7, 0);
-    sub_6047455C(a1 + 36, 2);
+    ArrayOf5_setEntryFloat16(a1 + 36, 2);
     return sub_6047459C(a1 + 36, 2);
   }
 
@@ -104429,7 +104419,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     ArrayOf5_lookupByIndex((_DWORD *)a1, 0, &dword_60CA8FC4, 0);
     sub_604745C0(a1, 0);
-    sub_6047455C(a1, 0);
+    ArrayOf5_setEntryFloat16(a1, 0);
     sub_6047459C(a1, 0);
     *(_BYTE *)(a1 + 3552) = 1;
     *(_WORD *)(a1 + 3554) = 45;
@@ -104642,7 +104632,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(*(_DWORD *)(a1 + 15040) + 64) &= ~1u;
     *(_BYTE *)(a1 + 15044) = 1;
     *(_DWORD *)(a1 + 4736) = *(unsigned __int8 *)(a1 + 15028);
-    return sub_60502694(a1 + 3708);
+    return Object_clampFieldPairsToMin(a1 + 3708);
   }
 
 /* ============================================================================
@@ -104733,7 +104723,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6051ECB4(int a1)
   {
     *(_DWORD *)(a1 + 4736) = 2;
-    return sub_60502694(a1 + 3708);
+    return Object_clampFieldPairsToMin(a1 + 3708);
   }
 
 /* ============================================================================
@@ -104940,7 +104930,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA9120);
     }
     v6 = 4;
-    return sub_60476030((int)v2, &dword_60CA916C, &v6);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CA916C, &v6);
   }
 
 /* ============================================================================
@@ -105091,13 +105081,13 @@ static inline unsigned int uxtb16(unsigned int x)
     v11[1] = (int)"RecordList";
     sead::SafeStringBase<char>::operator=(a1 + 1180, v11);
     v11[0] = 1;
-    sub_605029FC(a1 + 927, v11, "SE_SYS_PAGE");
+    ListEntry_setDword172(a1 + 927, v11, "SE_SYS_PAGE");
     v11[0] = 0;
-    sub_605029FC(a1 + 927, v11, "SE_SYS_PAGE");
+    ListEntry_setDword172(a1 + 927, v11, "SE_SYS_PAGE");
     v11[0] = 2;
-    sub_605029FC(a1 + 927, v11, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 927, v11, "SE_SYS_BACK");
     v11[0] = 2;
-    sub_605029FC(a1 + 927, v11, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 927, v11, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 940, v11[0]) - a1[943] + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 940, v11[0]) - a1[943] + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605028F0((int)(a1 + 927), v11, 1);
@@ -105444,7 +105434,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[0] = 12321336;
     v3[1] = sub_6052283C(1u);
     ArrayOf5_lookupByIndex(v1, 1u, v3, 0);
-    sub_6047455C((int)v1, 1u);
+    ArrayOf5_setEntryFloat16((int)v1, 1u);
     return sub_6047459C((int)v1, 1u);
   }
 
@@ -105686,7 +105676,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v8 = sub_6052283C(v7);
       v12 = 12321336;
       v13 = v8;
-      sub_604742D0(v5, 8u, &v12, v6, 0);
+      ArrayOf5_writeEntry(v5, 8u, &v12, v6, 0);
   LABEL_15:
       v9 = sub_6052283C(4u);
       v12 = 12321336;
@@ -106060,7 +106050,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v6 != 16 );
     v10 = 16;
-    sub_60476030((int)v2, &v13, &v10);
+    Object_appendPairsThenFlush((int)v2, &v13, &v10);
     v7 = sub_6052283C(2);
     v10 = 12321336;
     v11 = v7;
@@ -106438,7 +106428,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = 12321336;
     v10 = sub_6052283C(10);
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 7u, &v9, 0);
-    sub_6047455C(a1 + 36, 7);
+    ArrayOf5_setEntryFloat16(a1 + 36, 7);
     sub_6047459C(a1 + 36, 7);
     if ( ((unsigned int)&unk_60CA9770 & ~(1615993200 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA9770) )
     {
@@ -106459,7 +106449,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = 12321336;
     v10 = v7;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 36), 0, &v9, 0);
-    sub_6047455C(a1 + 36, 0);
+    ArrayOf5_setEntryFloat16(a1 + 36, 0);
     sub_6047459C(a1 + 36, 0);
     return sub_60522068(a1);
   }
@@ -106674,7 +106664,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = sub_6052283C(v5);
     v10 = 12321336;
     v11 = v6;
-    return sub_604742D0(v3, 9u, &v10, v4, 0);
+    return ArrayOf5_writeEntry(v3, 9u, &v10, v4, 0);
   }
 
 /* ============================================================================
@@ -107652,7 +107642,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = v4;
     (*(void (__fastcall **)(_DWORD *, int *))(v12[0] + 8))(v12, &v6);
     v6 = 4;
-    return sub_60476030((int)a1, &v8, &v6);
+    return Object_appendPairsThenFlush((int)a1, &v8, &v6);
   }
 
 /* ============================================================================
@@ -109810,7 +109800,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAA2F0);
     }
     v4 = 8;
-    return sub_60476030((int)v1, &dword_60CAA400, &v4);
+    return Object_appendPairsThenFlush((int)v1, &dword_60CAA400, &v4);
   }
 
 /* ============================================================================
@@ -111650,8 +111640,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v16[0] = 12321336;
     v16[1] = v12;
     v14 = ListNode_findByKey((int)v13, (_DWORD *)0xCA9984, v16);
-    sub_604742D0(v13, a2 + 4, (_DWORD *)0xCA9984, v14, 0);
-    sub_6047455C(v13, a2 + 4);
+    ArrayOf5_writeEntry(v13, a2 + 4, (_DWORD *)0xCA9984, v14, 0);
+    ArrayOf5_setEntryFloat16(v13, a2 + 4);
     sub_6047459C(v13, a2 + 4);
     return Table_getEntryById(v13, 5, 0);
   }
@@ -111710,8 +111700,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v18[0] = 12321336;
     v18[1] = v14;
     v16 = ListNode_findByKey((int)v15, (_DWORD *)0xCA9984, v18);
-    sub_604742D0(v15, a2 + 4, (_DWORD *)0xCA9984, v16, 0);
-    sub_6047455C(v15, a2 + 4);
+    ArrayOf5_writeEntry(v15, a2 + 4, (_DWORD *)0xCA9984, v16, 0);
+    ArrayOf5_setEntryFloat16(v15, a2 + 4);
     sub_6047459C(v15, a2 + 4);
     return Table_getEntryById(v15, 5, 0);
   }
@@ -112820,7 +112810,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAA440);
     }
     v4[0] = 1;
-    sub_60476030((int)v1, &dword_60CAA444, v4);
+    Object_appendPairsThenFlush((int)v1, &dword_60CAA444, v4);
     return ArrayOf5_lookupByIndex(v1, 0, (_DWORD *)0xC00090, 1);
   }
 
@@ -114306,7 +114296,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAA6A4);
     }
     v5[0] = 10;
-    return sub_60476030((int)v2, &dword_60CAA790, v5);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CAA790, v5);
   }
 
 /* ============================================================================
@@ -114805,7 +114795,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAA6AC);
     }
     v6 = ListNode_findByKey(a1 + 72, &dword_60CAA6E0, &dword_60CAA710[2 * v5 + 8]);
-    sub_604742D0((_DWORD *)(a1 + 72), a2 + 2, &dword_60CAA6E0, v6, 0);
+    ArrayOf5_writeEntry((_DWORD *)(a1 + 72), a2 + 2, &dword_60CAA6E0, v6, 0);
     *(_BYTE *)(a1 + v5 + 68) = 0;
     return a1 + v5;
   }
@@ -114839,7 +114829,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAA6AC);
     }
     v6 = ListNode_findByKey((int)v3, &dword_60CAA6E0, &dword_60CAA710[2 * v5 + 8]);
-    return sub_604742D0(v3, a2 + 2, &dword_60CAA6F0, v6, 1);
+    return ArrayOf5_writeEntry(v3, a2 + 2, &dword_60CAA6F0, v6, 1);
   }
 
 /* ============================================================================
@@ -115611,7 +115601,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAAA70);
     }
     v4[0] = 3;
-    sub_60476030((int)v1, &dword_60CAAA8C, v4);
+    Object_appendPairsThenFlush((int)v1, &dword_60CAAA8C, v4);
     return ArrayOf5_lookupByIndex(v1, 1u, (_DWORD *)0xCAA7F0, 1);
   }
 
@@ -117729,7 +117719,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6047DEC8((_DWORD *)(v1 + 36), v3, 1);
     v5 = ListNode_findByKey(v1 + 36, &dword_60CAAD00, &dword_60CAAC1C);
     if ( v5 != -1 )
-      sub_604742D0((_DWORD *)(v1 + 36), 6u, &dword_60CAAD00, v5, 0);
+      ArrayOf5_writeEntry((_DWORD *)(v1 + 36), 6u, &dword_60CAAD00, v5, 0);
     if ( ArrayOf20_getEntryPtr(v1 + 36, 6) )
     {
       v6 = *(_DWORD *)(v1 + 3980);
@@ -117749,7 +117739,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6047DEC8((_DWORD *)(v1 + 36), v10, 1);
     v11 = ListNode_findByKey(v1 + 36, &dword_60CAAD00, &dword_60CAAC14);
     if ( v11 != -1 )
-      sub_604742D0((_DWORD *)(v1 + 36), 5u, &dword_60CAAD00, v11, 0);
+      ArrayOf5_writeEntry((_DWORD *)(v1 + 36), 5u, &dword_60CAAD00, v11, 0);
     if ( ArrayOf20_getEntryPtr(v1 + 36, 5) )
     {
       v12 = *(_DWORD *)(v1 + 3984);
@@ -117763,7 +117753,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v16 = ListNode_findByKey(v1 + 36, &dword_60CAACD0, &dword_60CAAC24);
     if ( v16 != -1 )
-      sub_604742D0((_DWORD *)(v1 + 36), 7u, &dword_60CAACD0, v16, 0);
+      ArrayOf5_writeEntry((_DWORD *)(v1 + 36), 7u, &dword_60CAACD0, v16, 0);
     if ( ArrayOf20_getEntryPtr(v1 + 36, 7) )
     {
       v17 = ArrayOf20_getEntryPtr(v1 + 36, 7);
@@ -117771,7 +117761,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v18 = ListNode_findByKey(v1 + 36, &dword_60CAACA8, &dword_60CAAC74);
     if ( v18 != -1 )
-      sub_604742D0((_DWORD *)(v1 + 36), 0x11u, &dword_60CAACA8, v18, 0);
+      ArrayOf5_writeEntry((_DWORD *)(v1 + 36), 0x11u, &dword_60CAACA8, v18, 0);
     if ( ArrayOf20_getEntryPtr(v1 + 36, 17) )
     {
       v19 = *(_DWORD *)(v1 + 3992);
@@ -117784,7 +117774,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v22 = ListNode_findByKey(v1 + 36, &dword_60CAACB0, &dword_60CAAC8C);
     if ( v22 != -1 )
-      sub_604742D0((_DWORD *)(v1 + 36), 0x14u, &dword_60CAACB0, v22, 0);
+      ArrayOf5_writeEntry((_DWORD *)(v1 + 36), 0x14u, &dword_60CAACB0, v22, 0);
     v23 = *(_DWORD *)(v1 + 3992);
     v24 = *(_DWORD *)ArrayOf20_getEntryPtr(v1 + 36, 20);
     if ( v23 == 1 )
@@ -117794,10 +117784,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v25();
     v26 = ListNode_findByKey(v1 + 36, &off_60CAACF0, &dword_60CAAC84);
     if ( v26 != -1 )
-      sub_604742D0((_DWORD *)(v1 + 36), 0x13u, &off_60CAACF0, v26, 1);
+      ArrayOf5_writeEntry((_DWORD *)(v1 + 36), 0x13u, &off_60CAACF0, v26, 1);
     v27 = ListNode_findByKey(v1 + 36, &off_60CAACF8, &dword_60CAABF4);
     if ( v27 != -1 )
-      sub_604742D0((_DWORD *)(v1 + 36), 1u, &off_60CAACF8, v27, 0);
+      ArrayOf5_writeEntry((_DWORD *)(v1 + 36), 1u, &off_60CAACF8, v27, 0);
     if ( ArrayOf20_getEntryPtr(v1 + 36, 1) )
     {
       v28 = ArrayOf20_getEntryPtr(v1 + 36, 1);
@@ -117811,7 +117801,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v31 = dword_60B039EC[i];
       v32 = ListNode_findByKey((int)v4, &dword_60CAACB8, &dword_60CAABEC[2 * v31]);
       if ( v32 != -1 )
-        sub_604742D0(v4, v30, &dword_60CAACB8, v32, 0);
+        ArrayOf5_writeEntry(v4, v30, &dword_60CAACB8, v32, 0);
       if ( ArrayOf20_getEntryPtr(v4, v30) )
       {
         v33 = v1;
@@ -117827,7 +117817,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v37 = ListNode_findByKey((int)v4, &dword_60CAACC0, &dword_60CAAC7C);
     if ( v37 != -1 )
-      sub_604742D0(v4, 0x12u, &dword_60CAACC0, v37, 0);
+      ArrayOf5_writeEntry(v4, 0x12u, &dword_60CAACC0, v37, 0);
     if ( ArrayOf20_getEntryPtr(v4, 18) )
     {
       v38 = *(unsigned __int8 *)(v1 + 3976);
@@ -117840,7 +117830,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v41 = ListNode_findByKey((int)v4, &dword_60CAACC8, &dword_60CAAC2C);
     if ( v41 != -1 )
-      sub_604742D0(v4, 8u, &dword_60CAACC8, v41, 0);
+      ArrayOf5_writeEntry(v4, 8u, &dword_60CAACC8, v41, 0);
     v42 = ArrayOf20_getEntryPtr(v4, 8);
     return (*(int (__fastcall **)(int))(*(_DWORD *)v42 + 96))(v42);
   }
@@ -117873,7 +117863,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = &dword_60CAAD10[2 * a2];
     result = ListNode_findByKey((int)v5, v6, &dword_60CAABFC);
     if ( result != -1 )
-      return sub_604742D0(v5, 2u, v6, result, 0);
+      return ArrayOf5_writeEntry(v5, 2u, v6, result, 0);
     return result;
   }
 
@@ -117923,7 +117913,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     result = ListNode_findByKey((int)v1, &off_60CAACF8, &dword_60CAABF4);
     if ( result != -1 )
-      return sub_604742D0(v1, 1u, &off_60CAACF8, result, 0);
+      return ArrayOf5_writeEntry(v1, 1u, &off_60CAACF8, result, 0);
     return result;
   }
 
@@ -118465,12 +118455,12 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       ArrayOf5_lookupByIndex((_DWORD *)(a1 + 12092), 1u, (_DWORD *)0xCAADCC, 0);
       sub_604745C0(a1 + 12092, 1u);
-      sub_6047455C(a1 + 12092, 1u);
+      ArrayOf5_setEntryFloat16(a1 + 12092, 1u);
     }
     sub_60474420((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAADB4, *(_DWORD *)(a1 + 54696), 0);
-    sub_6047455C(a1 + 12092, 2u);
+    ArrayOf5_setEntryFloat16(a1 + 12092, 2u);
     sub_60474420((_DWORD *)(a1 + 12092), 3u, (_DWORD *)0xCAADB4, *(_DWORD *)(a1 + 54700), 0);
-    sub_6047455C(a1 + 12092, 3u);
+    ArrayOf5_setEntryFloat16(a1 + 12092, 3u);
     *(_DWORD *)(a1 + 83584) = 0;
     return 83584;
   }
@@ -118710,7 +118700,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( (*(_BYTE *)(a1 + 54297) & 0x20) != 0 )
         *result = 1;
-      sub_60502694((int)(result - 67933));
+      Object_clampFieldPairsToMin((int)(result - 67933));
       v11 = 13283172;
       switch ( v2 )
       {
@@ -119164,7 +119154,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60534304(int a1)
   {
-    return sub_60502694(a1 + 15700);
+    return Object_clampFieldPairsToMin(a1 + 15700);
   }
 
 /* ============================================================================
@@ -119448,7 +119438,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( (v6 & 0x2000) != 0 )
     {
-      sub_60502694(result - 1028);
+      Object_clampFieldPairsToMin(result - 1028);
       *(_DWORD *)(a1 + 52) = 13283332;
       v5 = 13283204;
       return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
@@ -119973,7 +119963,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( (v6 & 0x2000) != 0 )
     {
-      sub_60502694(result - 1028);
+      Object_clampFieldPairsToMin(result - 1028);
       *(_DWORD *)(a1 + 52) = 13283588;
       v5 = 13283204;
       return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
@@ -120703,7 +120693,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAB274);
     }
     v11 = 11;
-    sub_60476030((int)v2, &dword_60CAB3D0, &v11);
+    Object_appendPairsThenFlush((int)v2, &dword_60CAB3D0, &v11);
     *(_BYTE *)(a1 + 16754) = 1;
     sub_60502210(a1 + 15700, (_DWORD *)0xB03A28, 17);
     v11 = 12321336;
@@ -120713,7 +120703,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502960(a1 + 15700, 15);
     sub_60502994(a1 + 15700, 15);
     sub_605029C8(a1 + 15700, 15);
-    sub_605029FC(v4, &dword_60B03A2C, "SE_SYS_BACK");
+    ListEntry_setDword172(v4, &dword_60B03A2C, "SE_SYS_BACK");
     sub_605028F0(v4, &dword_60B03A2C, 1);
     v6 = a1 + 15752;
     v7 = List_getNthNode(a1 + 15752, 9);
@@ -120721,15 +120711,15 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = (_DWORD *)(a1 + 15764);
     *(_DWORD *)(v7 - v9 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v6, 9) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    sub_605029FC(v4, &dword_60B03A30, "SE_SYS_BACK");
+    ListEntry_setDword172(v4, &dword_60B03A30, "SE_SYS_BACK");
     sub_605028F0(v4, &dword_60B03A30, 1);
     *(_DWORD *)(List_getNthNode(v6, 10) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v6, 10) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    sub_605029FC(v4, &dword_60B03A34, "SE_SYS_BACK");
+    ListEntry_setDword172(v4, &dword_60B03A34, "SE_SYS_BACK");
     sub_605028F0(v4, &dword_60B03A34, 1);
     *(_DWORD *)(List_getNthNode(v6, 11) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v6, 11) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    sub_605029FC(v4, &dword_60B03A38, "SE_SYS_BACK");
+    ListEntry_setDword172(v4, &dword_60B03A38, "SE_SYS_BACK");
     sub_605028F0(v4, &dword_60B03A38, 1);
     *(_DWORD *)(List_getNthNode(v6, 12) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v6, 12) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
@@ -121304,7 +121294,7 @@ static inline unsigned int uxtb16(unsigned int x)
           while ( !*v13 );
         }
         sub_604745C0(v3, 0);
-        sub_6047455C(v3, 0);
+        ArrayOf5_setEntryFloat16(v3, 0);
         Table_getEntryById(v3, 5, 0);
         StateMgr::execute(v15);
         CurrentState = StateMgr::getCurrentState((int)v15);
@@ -121314,7 +121304,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           StateMgr::execute(v15);
           sub_604745C0(v3, 1);
-          sub_6047455C(v3, 1);
+          ArrayOf5_setEntryFloat16(v3, 1);
           return Table_getEntryById(v3, 5, 0);
         }
       }
@@ -121597,7 +121587,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = a1[20896];
       if ( result == 2 )
         return result;
-      sub_604742D0(a1 + 3023, 3u, (_DWORD *)0xCAADB4, a1[13675], 0);
+      ArrayOf5_writeEntry(a1 + 3023, 3u, (_DWORD *)0xCAADB4, a1[13675], 0);
       if ( *v4 == 1 )
         sub_60474420(a1 + 3023, 2u, (_DWORD *)0xCAADB4, a1[13674], 0);
       result = 2;
@@ -121609,7 +121599,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = a1[20896];
       if ( result == 1 )
         return result;
-      sub_604742D0(a1 + 3023, 2u, (_DWORD *)0xCAADB4, a1[13674], 0);
+      ArrayOf5_writeEntry(a1 + 3023, 2u, (_DWORD *)0xCAADB4, a1[13674], 0);
       if ( *v4 == 2 )
         sub_60474420(a1 + 3023, 3u, (_DWORD *)0xCAADB4, a1[13675], 0);
       result = 1;
@@ -121938,7 +121928,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 16732) = 0;
     IntrusiveList_clearAndDestroy((_DWORD *)(a1 + 15720));
     sub_60474420((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, *(_DWORD *)(a1 + 54636), 0);
-    sub_6047455C(a1 + 12092, 2u);
+    ArrayOf5_setEntryFloat16(a1 + 12092, 2u);
     *(_DWORD *)(a1 + 83520) = 0;
     return 83520;
   }
@@ -122081,7 +122071,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( result == 1 )
         return result;
-      result = sub_604742D0((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, *(_DWORD *)(a1 + 54636), 0);
+      result = ArrayOf5_writeEntry((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, *(_DWORD *)(a1 + 54636), 0);
       v2 = 1;
     }
     *(_DWORD *)(a1 + 83520) = v2;
@@ -122142,7 +122132,7 @@ static inline unsigned int uxtb16(unsigned int x)
         return result;
       v7 = *(_DWORD *)(a1 + 54636);
   LABEL_5:
-      result = sub_604742D0((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, v7, 0);
+      result = ArrayOf5_writeEntry((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, v7, 0);
       v8 = 1;
   LABEL_11:
       *v6 = v8;
@@ -122202,7 +122192,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( (*(_BYTE *)(a1 + 54237) & 0x20) != 0 )
           *v4 = 1;
-        sub_60502694((int)(v4 - 67893));
+        Object_clampFieldPairsToMin((int)(v4 - 67893));
         v15 = 0;
         v16 = 0;
         if ( (unsigned int)(v3 - 1) <= 2 )
@@ -122340,7 +122330,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v9 = 13285172;
             return StateMgr::changeState((_DWORD *)(a1 + 36), v9);
           }
-          sub_604742D0((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, *(_DWORD *)(a1 + 54636), 0);
+          ArrayOf5_writeEntry((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, *(_DWORD *)(a1 + 54636), 0);
           v20 = 1;
         }
         *(_DWORD *)(a1 + 83520) = v20;
@@ -122366,7 +122356,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v9 = 13284884;
           return StateMgr::changeState((_DWORD *)(a1 + 36), v9);
         }
-        sub_604742D0((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, *(_DWORD *)(a1 + 54636), 0);
+        ArrayOf5_writeEntry((_DWORD *)(a1 + 12092), 2u, (_DWORD *)0xCAB444, *(_DWORD *)(a1 + 54636), 0);
         v22 = 1;
       }
       *(_DWORD *)(a1 + 83520) = v22;
@@ -122597,7 +122587,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6053A8B8(int a1)
   {
-    return sub_60502694(a1 + 15680);
+    return Object_clampFieldPairsToMin(a1 + 15680);
   }
 
 /* ============================================================================
@@ -122708,7 +122698,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( v3 == 1 )
         goto LABEL_7;
-      sub_604742D0(a1 + 3023, 2u, (_DWORD *)0xCAB444, a1[13659], 0);
+      ArrayOf5_writeEntry(a1 + 3023, 2u, (_DWORD *)0xCAB444, a1[13659], 0);
       v5 = 1;
     }
     *v4 = v5;
@@ -122811,7 +122801,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( (v6 & 0x2000) != 0 )
     {
-      sub_60502694(result - 1028);
+      Object_clampFieldPairsToMin(result - 1028);
       *(_DWORD *)(a1 + 52) = 13284980;
       v5 = 13284852;
       return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
@@ -123286,7 +123276,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( v3 == 1 )
         goto LABEL_7;
-      sub_604742D0(a1 + 3023, 2u, (_DWORD *)0xCAB444, a1[13659], 0);
+      ArrayOf5_writeEntry(a1 + 3023, 2u, (_DWORD *)0xCAB444, a1[13659], 0);
       v5 = 1;
     }
     *v4 = v5;
@@ -123367,7 +123357,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( (v6 & 0x2000) != 0 )
     {
-      sub_60502694(result - 1028);
+      Object_clampFieldPairsToMin(result - 1028);
       *(_DWORD *)(a1 + 52) = 13285236;
       v5 = 13284852;
       return StateMgr::changeState((_DWORD *)(a1 + 36), v5);
@@ -124133,7 +124123,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAB924);
     }
     v10 = 11;
-    sub_60476030((int)v2, &dword_60CABA10, &v10);
+    Object_appendPairsThenFlush((int)v2, &dword_60CABA10, &v10);
     *(_BYTE *)(a1 + 16734) = 1;
     sub_60502210(a1 + 15680, (_DWORD *)0xB03A74, 17);
     v10 = 12321336;
@@ -124143,13 +124133,13 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502960(a1 + 15680, 15);
     sub_60502994(a1 + 15680, 15);
     sub_605029C8(a1 + 15680, 15);
-    sub_605029FC(a1 + 15680, &dword_60B03A78, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 15680, &dword_60B03A78, "SE_SYS_BACK");
     sub_605028F0(a1 + 15680, &dword_60B03A78, 1);
-    sub_605029FC(a1 + 15680, &dword_60B03A7C, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 15680, &dword_60B03A7C, "SE_SYS_BACK");
     sub_605028F0(a1 + 15680, &dword_60B03A7C, 1);
-    sub_605029FC(a1 + 15680, &dword_60B03A80, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 15680, &dword_60B03A80, "SE_SYS_BACK");
     sub_605028F0(a1 + 15680, &dword_60B03A80, 1);
-    sub_605029FC(a1 + 15680, &dword_60B03A84, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 15680, &dword_60B03A84, "SE_SYS_BACK");
     sub_605028F0(a1 + 15680, &dword_60B03A84, 1);
     v5 = a1 + 15732;
     v6 = List_getNthNode(a1 + 15732, 7);
@@ -124700,13 +124690,13 @@ static inline unsigned int uxtb16(unsigned int x)
         while ( !*v12 );
       }
       sub_604745C0(v3, 0);
-      sub_6047455C(v3, 0);
+      ArrayOf5_setEntryFloat16(v3, 0);
       Table_getEntryById(v3, 5, 0);
       StateMgr::execute(v14);
     }
     ArrayOf5_lookupByIndex(v3, 1u, (_DWORD *)0xCAB45C, 0);
     sub_604745C0(v3, 1);
-    sub_6047455C(v3, 1);
+    ArrayOf5_setEntryFloat16(v3, 1);
     return Table_getEntryById(v3, 5, 0);
   }
 
@@ -125168,7 +125158,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (unsigned int *)(a1 + 34712);
     sub_60541DF8(a1, *(_DWORD *)(a1 + 34712), 0);
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 28128), 0, (_DWORD *)0xCABA7C, 0);
-    sub_6047455C(a1 + 28128, 0);
+    ArrayOf5_setEntryFloat16(a1 + 28128, 0);
     Table_getEntryById((_DWORD *)(a1 + 28128), 0xEu, 0);
     sub_605324A4(a1 + 4, *v2);
     sub_605324A4(a1 + 4016, *v2);
@@ -125261,7 +125251,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v8 = v6 | v7;
           if ( (v8 & 0x2000) != 0 )
           {
-            sub_60502694(result - 1028);
+            Object_clampFieldPairsToMin(result - 1028);
             v9 = 13286268;
             if ( !v3 )
               v9 = 13286044;
@@ -125333,7 +125323,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6053FB84(int a1)
   {
-    return sub_60502694(a1 + 31800);
+    return Object_clampFieldPairsToMin(a1 + 31800);
   }
 
 /* ============================================================================
@@ -125609,7 +125599,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           *(_DWORD *)(a1 + 34720) = *(_DWORD *)(a1 + 4 * (v3 != 4) + 31792);
           *(_BYTE *)(a1 + 34726) = 1;
-          sub_60502694(result - 1028);
+          Object_clampFieldPairsToMin(result - 1028);
           *(_DWORD *)(a1 + 28124) = 13286428;
           return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286236);
         }
@@ -125810,7 +125800,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v8 = v6 | v7;
           if ( (v8 & 0x2000) != 0 )
           {
-            sub_60502694(result - 1028);
+            Object_clampFieldPairsToMin(result - 1028);
             v9 = 13286524;
             if ( !v3 )
               v9 = 13286492;
@@ -126124,7 +126114,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CABCA4);
     }
     v9 = 5;
-    sub_60476030((int)v4, &dword_60CABCC4, &v9);
+    Object_appendPairsThenFlush((int)v4, &dword_60CABCC4, &v9);
     *(_BYTE *)(a1 + 32854) = 1;
     sub_60502210(a1 + 31800, (_DWORD *)0xB03AAC, 18);
     v9 = 12321336;
@@ -126139,7 +126129,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605028F0(a1 + 31800, &dword_60B03AB8, 1);
     sub_605028F0(a1 + 31800, &dword_60B03ABC, 1);
     sub_605028F0(a1 + 31800, &dword_60B03AC0, 1);
-    sub_605029FC(a1 + 31800, 11549356, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 31800, 11549356, "SE_SYS_BACK");
     sub_60502A24(a1 + 31800, dword_60B03AC4, 5, 1);
     Registry_iterateAndRegister(a1 + 33880, 0);
     return Registry_iterateAndRegister(a1 + 34284, 4);
@@ -126725,7 +126715,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CABE20);
     }
     v6[0] = 2;
-    sub_60476030((int)v2, &dword_60CABE30, v6);
+    Object_appendPairsThenFlush((int)v2, &dword_60CABE30, v6);
     if ( ((unsigned int)&unk_60CABE24 & ~(1616126984 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CABE24) )
     {
       dword_60CABE28 = 12321336;
@@ -127058,7 +127048,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CABE40);
     }
     v4[0] = 2;
-    sub_60476030((int)v1, &dword_60CABE44, v4);
+    Object_appendPairsThenFlush((int)v1, &dword_60CABE44, v4);
     ArrayOf5_lookupByIndex(v1, 1u, (_DWORD *)0xC0060C, 1);
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
     {
@@ -127069,7 +127059,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       ArrayOf5_lookupByIndex2(v1, 0, (_DWORD *)0xC00604, 0);
     }
-    return sub_6047455C(v1, 0);
+    return ArrayOf5_setEntryFloat16(v1, 0);
   }
 
 /* ============================================================================
@@ -127172,7 +127162,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CABE60);
     }
     v6[0] = 1;
-    sub_60476030((int)v2, &dword_60CABE68, v6);
+    Object_appendPairsThenFlush((int)v2, &dword_60CABE68, v6);
     *(_DWORD *)(a1 + 3556) = sub_60473B4C(v2);
     if ( ((unsigned int)&unk_60CABE64 & ~(1616129588 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CABE64) )
     {
@@ -127439,7 +127429,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CABEA0);
     }
     v6[0] = 1;
-    sub_60476030((int)v2, &dword_60CABEA8, v6);
+    Object_appendPairsThenFlush((int)v2, &dword_60CABEA8, v6);
     if ( ((unsigned int)&unk_60CABEA4 & ~(1616130968 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CABEA4) )
     {
       dword_60CABEB0 = 12321336;
@@ -127758,7 +127748,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = (_BYTE *)(a1 + 31452);
     if ( (*(_BYTE *)(a1 + 31453) & 0x20) != 0 )
     {
-      sub_60502694(a1 + 3632);
+      Object_clampFieldPairsToMin(a1 + 3632);
       v5 = 13287292;
       goto LABEL_10;
     }
@@ -128580,7 +128570,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60544890(int a1)
   {
     *(_DWORD *)(a1 + 4660) = 2;
-    return sub_60502694(a1 + 3632);
+    return Object_clampFieldPairsToMin(a1 + 3632);
   }
 
 /* ============================================================================
@@ -128948,7 +128938,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[0] = 12321336;
     v4[1] = "SelectMenu";
     sead::SafeStringBase<char>::operator=(a1 + 4644, v4);
-    sub_605029FC(a1 + 3632, dword_60B03AD8, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 3632, dword_60B03AD8, "SE_SYS_BACK");
     sub_605028F0(a1 + 3632, dword_60B03AD8, 1);
     *(_DWORD *)(List_getNthNode(a1 + 3684, 2) - *(_DWORD *)(a1 + 3696) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3684, 2) - *(_DWORD *)(a1 + 3696) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
@@ -129011,7 +129001,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAC380);
     }
     v6 = 7;
-    return sub_60476030((int)v2, &dword_60CAC3AC, &v6);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CAC3AC, &v6);
   }
 
 /* ============================================================================
@@ -130071,10 +130061,10 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[7855] = v3;
     a1[7857] = v3;
     ArrayOf5_lookupByIndex(a1 + 11, 1u, (_DWORD *)0xCABEEC, 0);
-    sub_6047455C(a1 + 11, 1);
+    ArrayOf5_setEntryFloat16(a1 + 11, 1);
     sub_6047459C(a1 + 11, 1);
     ArrayOf5_lookupByIndex(a1 + 11, 2u, (_DWORD *)0xCABEFC, 0);
-    sub_6047455C(a1 + 11, 2);
+    ArrayOf5_setEntryFloat16(a1 + 11, 2);
     return sub_6047459C(a1 + 11, 2);
   }
 
@@ -130931,7 +130921,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAC6A4);
     }
     v6[0] = 6;
-    return sub_60476030(a1 + 40, &dword_60CAC740, v6);
+    return Object_appendPairsThenFlush(a1 + 40, &dword_60CAC740, v6);
   }
 
 /* ============================================================================
@@ -130961,11 +130951,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sead::SafeStringBase<char>::operator=(a1 + 4712, v3);
     *(_DWORD *)(List_getNthNode(a1 + 3752, 0) - *(_DWORD *)(a1 + 3764) + 192) = 0;
     v3[0] = 2;
-    sub_605029FC(a1 + 3700, v3, "SE_SYS_PAGE");
+    ListEntry_setDword172(a1 + 3700, v3, "SE_SYS_PAGE");
     sub_605028F0(a1 + 3700, v3, 1);
     *(_BYTE *)(List_getNthNode(a1 + 3752, v3[0]) - *(_DWORD *)(a1 + 3764) + 208) = 0;
     v3[0] = 1;
-    sub_605029FC(a1 + 3700, v3, "SE_SYS_PAGE");
+    ListEntry_setDword172(a1 + 3700, v3, "SE_SYS_PAGE");
     sub_605028F0(a1 + 3700, v3, 1);
     result = List_getNthNode(a1 + 3752, v3[0]) - *(_DWORD *)(a1 + 3764);
     *(_BYTE *)(result + 208) = 0;
@@ -131599,7 +131589,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         *(_DWORD *)(MEMORY[0xC9CFB8] + 16) = a1[4616] != 0;
         *v4 = 3;
-        sub_60502694((int)(a1 + 925));
+        Object_clampFieldPairsToMin((int)(a1 + 925));
         v6 = 13288576;
         return StateMgr::changeState(a1 + 6, v6);
       }
@@ -131691,13 +131681,13 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_6047457C(v2, 4);
         v7 = v2;
         v8 = 3;
-        return sub_6047455C(v7, v8);
+        return ArrayOf5_setEntryFloat16(v7, v8);
       }
   LABEL_11:
       sub_6047457C(v2, 3);
       v7 = v2;
       v8 = 4;
-      return sub_6047455C(v7, v8);
+      return ArrayOf5_setEntryFloat16(v7, v8);
     }
     return result;
   }
@@ -132122,7 +132112,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAC7F0);
     }
     v4[0] = 2;
-    return sub_60476030((int)v1, &dword_60CAC7F4, v4);
+    return Object_appendPairsThenFlush((int)v1, &dword_60CAC7F4, v4);
   }
 
 /* ============================================================================
@@ -132521,7 +132511,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAC8C0);
     }
     v6 = 3;
-    sub_60476030((int)v2, &dword_60CAC8C4, &v6);
+    Object_appendPairsThenFlush((int)v2, &dword_60CAC8C4, &v6);
     v6 = 12321336;
     v7 = "N_ShadowArrow_00";
     v5 = 1;
@@ -133093,7 +133083,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAC960);
     }
     v4[0] = 2;
-    return sub_60476030((int)v1, &dword_60CAC964, v4);
+    return Object_appendPairsThenFlush((int)v1, &dword_60CAC964, v4);
   }
 
 /* ============================================================================
@@ -133450,7 +133440,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CACA00);
     }
     v4[0] = 2;
-    return sub_60476030((int)v1, &dword_60CACA04, v4);
+    return Object_appendPairsThenFlush((int)v1, &dword_60CACA04, v4);
   }
 
 /* ============================================================================
@@ -134017,7 +134007,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CACB34);
     }
     v4[0] = 6;
-    return sub_60476030((int)v1, &dword_60CACB90, v4);
+    return Object_appendPairsThenFlush((int)v1, &dword_60CACB90, v4);
   }
 
 /* ============================================================================
@@ -135018,7 +135008,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 40;
     ArrayOf5_lookupByIndex((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCACBD4, 0);
-    sub_6047455C(v2, 1u);
+    ArrayOf5_setEntryFloat16(v2, 1u);
     v3 = ArrayOf20_getEntryPtr(v2, 1u);
     (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 96))(v3);
     *(_DWORD *)(a1 + 3796) = 0;
@@ -135222,7 +135212,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CACE30);
     }
     v7[0] = 5;
-    sub_60476030((int)v2, &dword_60CACE54, v7);
+    Object_appendPairsThenFlush((int)v2, &dword_60CACE54, v7);
     if ( ((unsigned int)&unk_60CACE34 & ~(1616176316 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CACE34) )
     {
       dword_60CACE80 = 12321336;
@@ -135519,7 +135509,7 @@ static inline unsigned int uxtb16(unsigned int x)
             goto LABEL_36;
           }
   LABEL_37:
-          sub_6047455C(v6, 0);
+          ArrayOf5_setEntryFloat16(v6, 0);
           sub_6047459C(v6, 0);
           return Table_getEntryById(v6, 14, 0);
         default:
@@ -135918,7 +135908,7 @@ static inline unsigned int uxtb16(unsigned int x)
         a1[950] = 0;
       }
       ArrayOf5_lookupByIndex(a1 + 10, 1u, (_DWORD *)0xCACBD4, 0);
-      sub_6047455C(a1 + 10, 1);
+      ArrayOf5_setEntryFloat16(a1 + 10, 1);
       v9 = ArrayOf20_getEntryPtr(a1 + 10, 1);
       return (*(int (__fastcall **)(int))(*(_DWORD *)v9 + 96))(v9);
     }
@@ -136235,7 +136225,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CACF60);
     }
     v5[0] = 1;
-    sub_60476030((int)v2, &dword_60CACF6C, v5);
+    Object_appendPairsThenFlush((int)v2, &dword_60CACF6C, v5);
     ArrayOf5_lookupByIndex(v2, 0, (_DWORD *)0xCACF00, 0);
     (*(void (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3552) + 104))(**(_DWORD **)(a1 + 3552));
     return Table_getEntryById(v2, 14, 0);
@@ -137139,7 +137129,7 @@ static inline unsigned int uxtb16(unsigned int x)
           else
           {
             *(_DWORD *)(a1 + 18868) = 1;
-            sub_60502694(v4);
+            Object_clampFieldPairsToMin(v4);
             v6 = 13291736;
           }
           return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
@@ -137159,7 +137149,7 @@ static inline unsigned int uxtb16(unsigned int x)
         else
         {
           *(_DWORD *)(a1 + 18868) = 0;
-          sub_60502694(v4);
+          Object_clampFieldPairsToMin(v4);
           v6 = 13291736;
         }
         return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
@@ -137180,7 +137170,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       sub_60553BD4(a1, 0);
       *(_DWORD *)(a1 + 18868) = 2;
-      sub_60502694(v4);
+      Object_clampFieldPairsToMin(v4);
       v6 = 13291832;
       return StateMgr::changeState((_DWORD *)(a1 + 24), v6);
     }
@@ -137868,7 +137858,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAD1A0);
     }
     v6 = 5;
-    return sub_60476030((int)v2, &dword_60CAD280, &v6);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CAD280, &v6);
   }
 
 /* ============================================================================
@@ -137971,7 +137961,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(List_getNthNode(v4, 0) - *v6 + 192) = 0;
     *(_DWORD *)(List_getNthNode(v4, 1) - *v6 + 192) = 0;
     v9[0] = 2;
-    sub_605029FC(v3, v9, "SE_SYS_BACK");
+    ListEntry_setDword172(v3, v9, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(v4, v9[0]) - *v6 + 176) = "SE_SYS_BACK_BTN_OVER";
     result = List_getNthNode(v4, v9[0]) - *v6;
     *(_DWORD *)(result + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
@@ -138708,7 +138698,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v6 )
     {
       v1 = 1;
-      sub_604742D0(v4, 2u, (_DWORD *)0xCAD020, a1[17563], 1);
+      ArrayOf5_writeEntry(v4, 2u, (_DWORD *)0xCAD020, a1[17563], 1);
     }
     result = ArrayOf20_getEntryPtr(v4, 3);
     v8 = result == 0;
@@ -138721,7 +138711,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v8 )
     {
       v2 = 1;
-      result = sub_604742D0(v4, 3u, (_DWORD *)0xCAD020, a1[17564], 1);
+      result = ArrayOf5_writeEntry(v4, 3u, (_DWORD *)0xCAD020, a1[17564], 1);
     }
     if ( v1 == 1 )
     {
@@ -138732,7 +138722,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(float *)(*v9 + 44) != 0.0 )
       {
         sub_6047457C(v4, 3);
-        result = sub_6047455C(v4, 2);
+        result = ArrayOf5_setEntryFloat16(v4, 2);
       }
     }
     if ( v2 == 1 )
@@ -138744,7 +138734,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(float *)(*v10 + 44) != 0.0 )
       {
         sub_6047457C(v4, 2);
-        return sub_6047455C(v4, 3);
+        return ArrayOf5_setEntryFloat16(v4, 3);
       }
     }
     return result;
@@ -139046,7 +139036,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAD330);
     }
     v4[0] = 3;
-    return sub_60476030((int)a1, &dword_60CAD360, v4);
+    return Object_appendPairsThenFlush((int)a1, &dword_60CAD360, v4);
   }
 
 /* ============================================================================
@@ -139918,7 +139908,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60555D90(int a1)
   {
-    return sub_60502694(a1 + 5820);
+    return Object_clampFieldPairsToMin(a1 + 5820);
   }
 
 /* ============================================================================
@@ -140286,7 +140276,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         if ( (v5 & 0x2000) == 0 )
           return result;
-        sub_60502694(result);
+        Object_clampFieldPairsToMin(result);
         v4 = 13292968;
       }
       return StateMgr::changeState((_DWORD *)(a1 + 24), v4);
@@ -140705,7 +140695,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAD610);
     }
     v11 = 4;
-    sub_60476030((int)v2, &dword_60CAD648, &v11);
+    Object_appendPairsThenFlush((int)v2, &dword_60CAD648, &v11);
     v4 = a1 + 1455;
     sub_60502210((int)(a1 + 1455), (_DWORD *)0xB040BC, 8);
     v11 = 12321336;
@@ -140717,7 +140707,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502960((int)(a1 + 1455), 15);
     sub_60502994((int)(a1 + 1455), 15);
     sub_605029C8((int)(a1 + 1455), 15);
-    sub_605029FC(a1 + 1455, dword_60B040C0, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 1455, dword_60B040C0, "SE_SYS_BACK");
     sub_605028F0((int)(a1 + 1455), dword_60B040C0, 1);
     v5 = a1 + 1468;
     v6 = List_getNthNode(a1 + 1468, 2);
@@ -140725,8 +140715,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = a1 + 1471;
     *(_DWORD *)(v6 - v8 + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(v5, 2) - *v7 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    sub_605029FC(v4, 11550900, "SE_SYS_BACK");
-    sub_605029FC(v4, 11550904, "SE_SYS_BTN_GAME_START");
+    ListEntry_setDword172(v4, 11550900, "SE_SYS_BACK");
+    ListEntry_setDword172(v4, 11550904, "SE_SYS_BTN_GAME_START");
     sub_60558180(v7 + 504, 1);
     Registry_iterateAndRegister((int)(v7 - 558), 0);
     Registry_iterateAndRegister((int)(v7 - 457), 1);
@@ -141585,7 +141575,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAD760);
     }
     v5[0] = 2;
-    return sub_60476030((int)v2, &dword_60CAD768, v5);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CAD768, v5);
   }
 
 /* ============================================================================
@@ -142380,7 +142370,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAD8F0);
     }
     v4[0] = 2;
-    return sub_60476030((int)v1, &dword_60CAD8F4, v4);
+    return Object_appendPairsThenFlush((int)v1, &dword_60CAD8F4, v4);
   }
 
 /* ============================================================================
@@ -142738,7 +142728,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAD950);
     }
     v7[0] = 3;
-    sub_60476030((int)v2, &dword_60CAD96C, v7);
+    Object_appendPairsThenFlush((int)v2, &dword_60CAD96C, v7);
     if ( ((unsigned int)&unk_60CAD954 & ~(1616222804 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAD954) )
     {
       dword_60CAD95C = 12321336;
@@ -143165,7 +143155,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CADA20);
     }
     v6[0] = 2;
-    sub_60476030((int)v2, &dword_60CADA30, v6);
+    Object_appendPairsThenFlush((int)v2, &dword_60CADA30, v6);
     if ( ((unsigned int)&unk_60CADA24 & ~(1616225016 << v4) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CADA24) )
     {
       dword_60CADA28 = 12321336;
@@ -143717,7 +143707,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = 4;
       v4 = &dword_60CADBD4;
     }
-    sub_60476030((int)v2, v4, &v9);
+    Object_appendPairsThenFlush((int)v2, v4, &v9);
     if ( ((unsigned int)&unk_60CADB98 & ~(1616227932 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CADB98) )
     {
       dword_60CADB9C = 12321336;
@@ -144246,7 +144236,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = (const char *)v4;
     (*(void (__fastcall **)(_DWORD *, int *))(v8[0] + 8))(v8, &v9);
     v9 = 2;
-    return sub_60476030((int)v2, &v6, &v9);
+    return Object_appendPairsThenFlush((int)v2, &v6, &v9);
   }
 
 /* ============================================================================
@@ -144300,7 +144290,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = "VSModeSelect";
     sead::SafeStringBase<char>::operator=(a1 + 4620, &v5);
     v5 = 0;
-    sub_605029FC(a1 + 3608, &v5, "SE_SYS_BACK");
+    ListEntry_setDword172(a1 + 3608, &v5, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     *(_DWORD *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 204) = 0;
@@ -144455,7 +144445,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         *(_DWORD *)(a1 + 13312) = 0;
         *(_DWORD *)(a1 + 4636) = 0;
-        sub_60502694(a1 + 3608);
+        Object_clampFieldPairsToMin(a1 + 3608);
   LABEL_16:
         StateMgr::changeState((_DWORD *)(a1 + 20), 13294676);
         return 1;
@@ -144471,7 +144461,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v9 != 1 )
         {
   LABEL_15:
-          sub_60502694(a1 + 3608);
+          Object_clampFieldPairsToMin(a1 + 3608);
           goto LABEL_16;
         }
         v10 = 1;
@@ -144913,11 +144903,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 13587) = 0;
     *(_BYTE *)(a1 + 13586) = 0;
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 44), 0, (_DWORD *)0xCADD20, 0);
-    sub_6047455C((int)v2, 0);
+    ArrayOf5_setEntryFloat16((int)v2, 0);
     *v3 = 1;
     sub_60478680((int)"SE_SYS_DIALOGUE_IN", 9);
     ArrayOf5_lookupByIndex2(v2, 1u, (_DWORD *)0xCADD28, 0);
-    result = sub_6047455C((int)v2, 1u);
+    result = ArrayOf5_setEntryFloat16((int)v2, 1u);
     *v1 = 1;
     v1[164] = 1;
     v1[166] = 0;
@@ -145133,7 +145123,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6055F880(v5, 1);
     v18 = 0;
     ArrayOf5_lookupByIndex2((_DWORD *)(v5 + 44), 5u, (_DWORD *)0xCADD50, 0);
-    sub_6047455C(v5 + 44, 5u);
+    ArrayOf5_setEntryFloat16(v5 + 44, 5u);
     sub_6047459C(v5 + 44, 5u);
     *(_BYTE *)(v5 + 13749) = 1;
     *(_BYTE *)(v5 + 13751) = 1;
@@ -145321,7 +145311,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( v3 == 3 )
       {
-        sub_60502694((int)(v2 - 257));
+        Object_clampFieldPairsToMin((int)(v2 - 257));
         v4 = 13295216;
       }
       else
@@ -145398,7 +145388,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6055D6FC(int a1)
   {
     *(_DWORD *)(a1 + 4720) = 4;
-    return sub_60502694(a1 + 3692);
+    return Object_clampFieldPairsToMin(a1 + 3692);
   }
 
 /* ============================================================================
@@ -145531,7 +145521,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 44;
     ArrayOf5_lookupByIndex2((_DWORD *)(a1 + 44), 1u, (_DWORD *)0xCADD28, 0);
-    sub_6047455C(v2, 1u);
+    ArrayOf5_setEntryFloat16(v2, 1u);
     sub_6055F880(a1, 1);
     *(_DWORD *)(a1 + 4720) = 0;
     return 4720;
@@ -145577,7 +145567,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055D9E4(int a1)
   {
-    sub_60502694(a1 + 3692);
+    Object_clampFieldPairsToMin(a1 + 3692);
     *(_BYTE *)(a1 + 13749) = 1;
     return 13749;
   }
@@ -145909,7 +145899,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CAE040);
     }
     v6 = 7;
-    return sub_60476030((int)v2, &dword_60CAE0D8, &v6);
+    return Object_appendPairsThenFlush((int)v2, &dword_60CAE0D8, &v6);
   }
 
 /* ============================================================================
@@ -145927,9 +145917,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[0] = 12321336;
     v4[1] = "WarpSelectWindow";
     sead::SafeStringBase<char>::operator=(a1 + 4704, v4);
-    sub_605029FC(v2, 11550924, "SE_SYS_PAGE");
-    sub_605029FC(v2, 11550920, "SE_SYS_PAGE");
-    sub_605029FC(v2, 11550928, "SE_SYS_BACK");
+    ListEntry_setDword172(v2, 11550924, "SE_SYS_PAGE");
+    ListEntry_setDword172(v2, 11550920, "SE_SYS_PAGE");
+    ListEntry_setDword172(v2, 11550928, "SE_SYS_BACK");
     *(_DWORD *)(List_getNthNode(a1 + 3744, 4) - *(_DWORD *)(a1 + 3756) + 176) = "SE_SYS_BACK_BTN_OVER";
     *(_DWORD *)(List_getNthNode(a1 + 3744, 4) - *(_DWORD *)(a1 + 3756) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605028F0(v2, (_DWORD *)0xB040CC, 1);
@@ -146647,7 +146637,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v14 = (_DWORD *)(a1 + 44);
         sub_6047457C(v14, 2);
         ArrayOf5_lookupByIndex(v14, 2u, (_DWORD *)0xCADD38, 0);
-        result = sub_6047455C(v14, 2);
+        result = ArrayOf5_setEntryFloat16(v14, 2);
         *v13 = 0;
       }
     }
@@ -146868,13 +146858,13 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_6047457C(v2, 4);
         v7 = v2;
         v8 = 3;
-        return sub_6047455C(v7, v8);
+        return ArrayOf5_setEntryFloat16(v7, v8);
       }
   LABEL_11:
       sub_6047457C(v2, 3);
       v7 = v2;
       v8 = 4;
-      return sub_6047455C(v7, v8);
+      return ArrayOf5_setEntryFloat16(v7, v8);
     }
     return result;
   }
@@ -176263,7 +176253,7 @@ static inline unsigned int uxtb16(unsigned int x)
               if ( !v10 )
               {
                 *(_BYTE *)result = 1;
-                if ( *(_DWORD *)(v3 + 1320) != 5 && !sub_6075EE0C(v3) )
+                if ( *(_DWORD *)(v3 + 1320) != 5 && !isMode4(v3) )
                   isMode5(v3);
                 return (*(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(_DWORD *)v3 + 748))(v3, 1, 0, 0);
               }
@@ -221972,7 +221962,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v19 = 11579484;
       goto LABEL_53;
     }
-    if ( sub_6075EDE0(a2) || sub_6075EE0C(a2) )
+    if ( sub_6075EDE0(a2) || isMode4(a2) )
     {
       CurrentState = StateMgr::getCurrentState(a2 + 9680);
       v21 = (*(int (__fastcall **)(int))(*(_DWORD *)CurrentState + 8))(CurrentState);
@@ -230345,15 +230335,15 @@ static inline unsigned int uxtb16(unsigned int x)
       v58 = 0;
       v59 = 0;
       v60 = 0;
-      sub_608DEB0C(&v58, 12, &v61);
+      Buffer_initIfValid(&v58, 12, &v61);
       v54 = 0;
       v55 = 0;
       v56 = 0;
-      sub_608DEB0C(&v54, 12, &v57);
+      Buffer_initIfValid(&v54, 12, &v57);
       v50 = 0;
       v51 = 0;
       v52 = 0;
-      sub_608DEB0C(&v50, 12, &v53);
+      Buffer_initIfValid(&v50, 12, &v53);
       v17 = *(_DWORD *)(a1 + 36);
       if ( v17 )
       {
@@ -231433,7 +231423,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v20 = 0;
       v21 = 0;
       v22 = 0;
-      sub_608DEB0C(&v20, 12, &v23);
+      Buffer_initIfValid(&v20, 12, &v23);
       v20 = 0;
       v6 = a1[41];
       if ( v6 )

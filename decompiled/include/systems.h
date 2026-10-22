@@ -821,7 +821,6 @@ bool __fastcall sub_604B6DDC(int a1);  /* 0x004b6ddc */
 bool __fastcall sub_604B6E00(int a1, unsigned int a2);  /* 0x004b6e00 */
 bool __fastcall sub_604B6F58(int a1, unsigned int a2);  /* 0x004b6f58 */
 int __fastcall sub_604B70B4(int a1);  /* 0x004b70b4 */
-int __fastcall sub_604B70B8(int result);  /* 0x004b70b8 */
 unsigned int __fastcall sub_604B70BC(int a1, unsigned int a2);  /* 0x004b70bc */
 unsigned int __fastcall sub_604B71E0(int a1, unsigned int a2);  /* 0x004b71e0 */
 int __fastcall sub_604B7320(_DWORD *a1);  /* 0x004b7320 */

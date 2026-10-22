@@ -5004,7 +5004,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         goto LABEL_11;
       }
-      v4 = sub_6075EE0C(v3);
+      v4 = isMode4(v3);
       result = 1;
       if ( v4 )
         return result;
@@ -5025,7 +5025,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         goto LABEL_21;
       }
-      v8 = sub_6075EE0C(v7);
+      v8 = isMode4(v7);
       result = 1;
       if ( v8 )
         return result;
@@ -5046,7 +5046,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         goto LABEL_31;
       }
-      v11 = sub_6075EE0C(v10);
+      v11 = isMode4(v10);
       result = 1;
       if ( v11 )
         return result;
@@ -5062,10 +5062,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( !v13 || (*(_BYTE *)(v13 + 1219) & 8) != 0 )
         return 0;
-      return sub_6075EE0C(v13);
+      return isMode4(v13);
     }
     if ( v13 )
-      return sub_6075EE0C(v13);
+      return isMode4(v13);
     return 0;
   }
 
@@ -5107,7 +5107,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a2 >= 4 )
       a2 = 0;
     v8 = *(_DWORD *)(a1 + 4 * a2 + 32);
-    return v8 && sub_6075EE0C(v8);
+    return v8 && isMode4(v8);
   }
 
 /* ============================================================================
@@ -6720,7 +6720,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v35 = 0;
       v36 = 0;
       v37 = 0;
-      sub_608DEB0C(&v35, 2, &v38);
+      Buffer_initIfValid(&v35, 2, &v38);
       v8 = (*(int (__fastcall **)(int *))(*a1 + 28))(a1);
       if ( v8 )
       {
@@ -13169,7 +13169,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (*(int (__fastcall **)(_DWORD *))(*a1 + 152))(a1);
     v3 = a1[330];
     v4 = v2;
-    v5 = sub_6075EE0C((int)a1);
+    v5 = isMode4((int)a1);
     if ( v4 == 1 )
     {
       if ( v3 == 3 )
@@ -13345,7 +13345,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v16 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 152))(a1);
     v17 = *(_DWORD *)(a1 + 1320);
     v18 = v16;
-    v19 = sub_6075EE0C(a1);
+    v19 = isMode4(a1);
     if ( v18 == 1 )
     {
       if ( v17 == 3 )
@@ -14152,7 +14152,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v36 = v28 * *((float *)&v25 + 1);
         v37 = v29 * *(float *)&v25;
         v38 = 0.0;
-        if ( sub_6075EE0C(a1) && *(_DWORD *)(a1 + 1320) == 9 )
+        if ( isMode4(a1) && *(_DWORD *)(a1 + 1320) == 9 )
         {
           v39 = 0.0;
           if ( (*(_BYTE *)(*v5 + 198) & 0x80) != 0 )
@@ -14793,7 +14793,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( v3 )
         {
   LABEL_8:
-          v4 = sub_6075EE0C(a1);
+          v4 = isMode4(a1);
           v5 = v4;
           if ( v4 )
             v5 = *(_DWORD *)(a1 + 1320) == 9;
@@ -15866,7 +15866,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         goto LABEL_27;
       if ( !isMode5(a1) )
       {
-        if ( !sub_6075EE0C(a1) )
+        if ( !isMode4(a1) )
           goto LABEL_11;
         v7 = *(_DWORD *)(a1 + 1320);
         v8 = v7 == 0;
@@ -15917,7 +15917,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else if ( !isMode5(a1) )
     {
-      sub_6075EE0C(a1);
+      isMode4(a1);
     }
     if ( (*(_BYTE *)(a1 + 1226) & 0x40) != 0 )
     {
@@ -16170,7 +16170,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return &unk_60B0C3A4;
     if ( !isMode5((int)a1) )
     {
-      if ( !sub_6075EE0C((int)a1) )
+      if ( !isMode4((int)a1) )
         goto LABEL_8;
       v4 = a1[330];
       v5 = v4 == 0;
@@ -19218,7 +19218,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       Player_ReleaseCarryableEnemy_helper(*v4);
       Player_ReleaseCarryableEnemy_helper_794678(*v4);
-      v5 = sub_6075EE0C((int)a1);
+      v5 = isMode4((int)a1);
       v6 = v5;
       if ( v5 )
         v6 = a1[330] == 9;
@@ -19304,7 +19304,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(*((_DWORD *)a1 + 2840) + 40) = *(_DWORD *)(*(_DWORD *)(v2 + 648) + 4);
     if ( isMode5((int)a1) )
       goto LABEL_16;
-    v6 = sub_6075EE0C((int)a1);
+    v6 = isMode4((int)a1);
     v7 = v6;
     if ( v6 )
       v7 = *((_DWORD *)a1 + 330) == 9;
@@ -19838,7 +19838,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
       sub_6015913C(a1 + 7440, 32775);
     v4 = *(_DWORD *)(a1 + 1216) & 8;
-    if ( sub_6075EE0C(a1) )
+    if ( isMode4(a1) )
     {
       v5 = *(_DWORD *)(a1 + 1320);
       if ( !v5 || v5 == 3 || !v4 )
@@ -19873,7 +19873,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 11360),
         &v54,
         &v52);
-      v11 = sub_6075EE0C(a1);
+      v11 = isMode4(a1);
       v12 = v11;
       if ( v11 )
         v12 = *(_DWORD *)(a1 + 1320) == 9;
@@ -21608,7 +21608,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = (unsigned int)(v2 - 7) > 1;
         break;
       case 9:
-        result = sub_6075EE0C(a1) && v2 != 9;
+        result = isMode4(a1) && v2 != 9;
         break;
     }
     return result;
@@ -27712,7 +27712,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v5; // r7
     int v6; // r5
   
-    v2 = sub_6075EE0C(a1);
+    v2 = isMode4(a1);
     result = 0;
     v4 = v2;
     if ( v2 )
@@ -27841,7 +27841,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v33 = 0;
     if ( *(_DWORD *)(a1 + 80) == 1 )
       v32 = (const char *)0x80000000;
-    v18 = sub_6075EE0C(a1);
+    v18 = isMode4(a1);
     v19 = v18;
     if ( v18 )
       v19 = *(_DWORD *)(a1 + 1320) == 9;
@@ -27860,7 +27860,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v22 > 1 )
       v22 = 0;
     *v21 = v22;
-    v23 = sub_6075EE0C(a1);
+    v23 = isMode4(a1);
     v24 = v23;
     if ( v23 )
       v24 = *(_DWORD *)(a1 + 1320) == 9;
@@ -27944,7 +27944,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     Object_callSlots19And21(v5, v6);
-    result = sub_6075EE0C((int)a1);
+    result = isMode4((int)a1);
     v9 = result == 1;
     if ( result == 1 )
     {
@@ -28819,7 +28819,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 goto LABEL_53;
               goto LABEL_47;
             }
-            v23 = sub_6075EE0C(v21);
+            v23 = isMode4(v21);
             v24 = v23;
             if ( v23 )
               v24 = *(_DWORD *)(v22 + 1320) == 9;
@@ -29087,7 +29087,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( Child_getU8IfOwnerMatches(a1 + 14132) )
     {
-      v4 = sub_6075EE0C(a1);
+      v4 = isMode4(a1);
       v5 = v4;
       if ( v4 )
         v5 = *(_DWORD *)(a1 + 1320) == 9;
@@ -29106,7 +29106,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( Child_getU8IfOwnerMatches(a1 + 14236) )
     {
-      v6 = sub_6075EE0C(a1);
+      v6 = isMode4(a1);
       v7 = v6;
       if ( v6 )
         v7 = *(_DWORD *)(a1 + 1320) == 9;
@@ -35410,7 +35410,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               a1[40] = v6;
               a1[41] = v7;
             }
-            v8 = sub_6075EE0C((int)a1);
+            v8 = isMode4((int)a1);
             v9 = v8;
             if ( v8 )
               v9 = a1[330] == 9;
@@ -35456,7 +35456,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             if ( result )
               return result;
             a1[304] |= 0x4000000u;
-            v21 = sub_6075EE0C((int)a1);
+            v21 = isMode4((int)a1);
             v22 = v21;
             if ( v21 )
               v22 = a1[330] == 9;
@@ -35473,7 +35473,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         case 2:
           if ( Object_getBit5(a1[2840]) == 1 )
           {
-            v11 = sub_6075EE0C((int)a1);
+            v11 = isMode4((int)a1);
             v12 = v11;
             if ( v11 )
               v12 = a1[330] == 9;
@@ -35505,7 +35505,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = a1[2486];
           if ( result )
             return result;
-          v14 = sub_6075EE0C((int)a1);
+          v14 = isMode4((int)a1);
           v15 = v14;
           if ( v14 )
             v15 = a1[330] == 9;
@@ -38030,7 +38030,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
       {
         v6 = 1;
-        if ( *(_DWORD *)(a1 + 1320) != 5 && !sub_6075EE0C(a1) )
+        if ( *(_DWORD *)(a1 + 1320) != 5 && !isMode4(a1) )
           v6 = isMode5(a1);
       }
       sub_607BBBF8(a1, v6, v5);
@@ -38259,7 +38259,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       v2 = 1;
-      if ( a1[330] == 5 || sub_6075EE0C((int)a1) || isMode5((int)a1) )
+      if ( a1[330] == 5 || isMode4((int)a1) || isMode5((int)a1) )
         return sub_607BBBF8((int)a1, v2, 1);
     }
     return SE_PLY_SWIM_ref_2(a1);
@@ -38293,7 +38293,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       v2 = 1;
-      if ( a1[330] == 5 || sub_6075EE0C((int)a1) || isMode5((int)a1) )
+      if ( a1[330] == 5 || isMode4((int)a1) || isMode5((int)a1) )
         goto LABEL_9;
     }
     sub_607BE9F8(a1);
@@ -38396,7 +38396,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_607BBBF8((int)a1, v4, 1);
       return;
     }
-    if ( a1[330] != 5 && !sub_6075EE0C((int)a1) )
+    if ( a1[330] != 5 && !isMode4((int)a1) )
     {
       v5 = isMode5((int)a1);
       v4 = 0;
@@ -38543,7 +38543,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         SE_PLY_THROW_ICEBALL_ref((int)a1, 0);
       return;
     }
-    if ( a1[330] == 5 || sub_6075EE0C((int)a1) )
+    if ( a1[330] == 5 || isMode4((int)a1) )
     {
       a1[304] |= 8u;
       sub_607BF0EC(a1, 0);
@@ -38590,7 +38590,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *v6 = 1;
       return;
     }
-    if ( sub_6075EE0C((int)a1) )
+    if ( isMode4((int)a1) )
     {
       v8 = a1[330];
       if ( v8 > 6 || ((1 << v8) & 0x64) == 0 )
@@ -38612,7 +38612,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         else
         {
           v9 = 1;
-          if ( a1[330] != 5 && !sub_6075EE0C((int)a1) )
+          if ( a1[330] != 5 && !isMode4((int)a1) )
             v9 = isMode5((int)a1);
         }
         sub_607BBBF8((int)a1, v9, 1);
@@ -38644,7 +38644,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1064))(a1) != 1 )
     {
       v2 = 1;
-      if ( *(_DWORD *)(a1 + 1320) != 5 && !sub_6075EE0C(a1) )
+      if ( *(_DWORD *)(a1 + 1320) != 5 && !isMode4(a1) )
         v2 = isMode5(a1);
       goto LABEL_10;
     }
@@ -38771,7 +38771,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (*(int (__fastcall **)(_DWORD *))(*a1 + 1064))(a1) != 1 )
     {
       v2 = 1;
-      if ( a1[330] != 5 && !sub_6075EE0C((int)a1) )
+      if ( a1[330] != 5 && !isMode4((int)a1) )
         v2 = isMode5((int)a1);
       goto LABEL_10;
     }
@@ -38884,7 +38884,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (*(_BYTE *)(a1 + 1216) & 8) == 0 )
       goto LABEL_2;
     v3 = *(_DWORD *)(a1 + 1320);
-    if ( sub_6075EE0C(a1) )
+    if ( isMode4(a1) )
     {
       v4 = v3 == 9;
       if ( v3 != 9 )
@@ -38920,7 +38920,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v68 = v68 + (float)((float)((float)(v66 * 8.0) + (float)(v65 * 0.0)) + (float)(v67 * 0.0));
     v72 = v72 + (float)((float)((float)(v70 * 8.0) + (float)(v69 * 0.0)) + (float)(v71 * 0.0));
     Mtx34_rotateZ(&v61, a1 + 164);
-    if ( sub_6075EE0C(a1) )
+    if ( isMode4(a1) )
     {
       v7 = *(_DWORD *)(a1 + 1320);
       v8 = v7 == 0;
@@ -39004,7 +39004,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v58 = v15;
     v59 = v31 + 4.0;
     v60 = v28;
-    v32 = sub_6075EE0C(a1);
+    v32 = isMode4(a1);
     if ( (v3 != 9 || !v32) && !isMode5(a1) )
     {
       v64 = 0.0;
@@ -39037,12 +39037,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v34 = 0.0;
     }
-    if ( sub_6075EE0C(a1) )
+    if ( isMode4(a1) )
       v33 = *(_DWORD *)(a1 + 1320) == 9;
     if ( (float)(*(float *)(((*v6 >> 20) & 0xFF0) + 0xB3A484)
                + (float)((float)((float)(*v6 & 0xFFFFFF) * *(float *)(((*v6 >> 20) & 0xFF0) + 0xB3A488)) * 0.000000059605)) >= 0.0 )
       goto LABEL_69;
-    v35 = sub_6075EE0C(a1);
+    v35 = isMode4(a1);
     v36 = v35;
     if ( v35 )
       v36 = *(_DWORD *)(a1 + 1320) == 9;
@@ -39885,7 +39885,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( sub_6079DF08(a1) )
             sub_6079B7A4(a1);
         }
-        else if ( *(_DWORD *)(a1 + 1320) != 5 && !sub_6075EE0C(a1) )
+        else if ( *(_DWORD *)(a1 + 1320) != 5 && !isMode4(a1) )
         {
           isMode5(a1);
         }
@@ -39989,7 +39989,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           goto LABEL_84;
         }
       }
-      else if ( *(_DWORD *)(a1 + 1320) != 5 && !sub_6075EE0C(a1) )
+      else if ( *(_DWORD *)(a1 + 1320) != 5 && !isMode4(a1) )
       {
         isMode5(a1);
       }
@@ -40126,7 +40126,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
   LABEL_11:
         v6 = *(float *)(v2 + 12424);
-        if ( (*(_BYTE *)(v2 + 1216) & 8) != 0 || sub_6075EE0C(v2) || (result = isMode5(v2), result == 1) )
+        if ( (*(_BYTE *)(v2 + 1216) & 8) != 0 || isMode4(v2) || (result = isMode5(v2), result == 1) )
         {
           if ( (float)(v6 * v3) >= 0.0 )
           {
@@ -40211,7 +40211,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
   LABEL_5:
       v6 = *(float *)(result + 12420);
-      if ( (*(_BYTE *)(result + 1216) & 8) != 0 || sub_6075EE0C(result) || (result = isMode5(v2), result == 1) )
+      if ( (*(_BYTE *)(result + 1216) & 8) != 0 || isMode4(result) || (result = isMode5(v2), result == 1) )
       {
         if ( (float)(v6 * v3) < 0.0 )
         {
