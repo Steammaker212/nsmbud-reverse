@@ -66,7 +66,7 @@ unsigned int __fastcall sub_604663F4(int a1, _DWORD *a2, int a3, int a4, unsigne
 /* line: 46, address: 0x604665a0 */     v12[5] = a2[1];
 /* line: 47, address: 0x604665a8 */     v12[6] = a2[2];
 /* line: 48, address: 0x604665b0 */     LOWORD(v12[8]) = a5;
-/* line: 49, address: 0x604665b8 */     BYTE2(v12[8]) = 0;
+/* line: 49, address: 0x604665b8 */     *(uint8_t *)((uint8_t *)&(v12[8]) + 2) = 0;
 /* line: 50, address: 0x604665bc */     v12[10] = 0;
 /* line: 51, address: 0x604665cc */     return (unsigned int)ActorMgr__create(MEMORY[0xC7B400], (int)v12, 0);
 /* line: 52 */   }

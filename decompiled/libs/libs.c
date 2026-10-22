@@ -9,6 +9,12 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 int __fastcall sead__SafeStringBase_char__operator_assign(int result, int a2);
 
 /* ---- forward declarations: these are called above where they are defined ---- */
@@ -4721,7 +4727,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v7.n64_u32[0] = 0;
     v6.n64_f32[0] = v6.n64_f32[0] + -1.0;
-    v6.n64_u32[0] = vmax_f32(v6, v7).n64_u32[0];
+    v6.n64_u32[0] = vmax_f32_v2(v6, v7).n64_u32[0];
     *(_DWORD *)(a1 + 40) = v6.n64_u32[0];
     if ( *(_DWORD *)(a2 + 48) == 24 )
     {
@@ -12289,7 +12295,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5.n64_u32[0] = 0;
       if ( v6.n64_f32[0] <= 0.0 )
         v6.n64_f32[0] = -v6.n64_f32[0];
-      v15 = 1.0 - (float)((float)(vmax_f32(v6, v5).n64_f32[0] * 0.5) * 0.5);
+      v15 = 1.0 - (float)((float)(vmax_f32_v2(v6, v5).n64_f32[0] * 0.5) * 0.5);
       if ( v15 >= 0.0 )
       {
         v5.n64_f32[0] = v15;
@@ -47707,7 +47713,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5[5] = *(_DWORD *)(a2 + 16) / 2;
     v5[6] = sub_6083DA30(a2);
     v5[4] = 128;
-    BYTE1(v5[0]) = 2;
+    *(uint8_t *)((uint8_t *)&(v5[0]) + 1) = 2;
     v5[3] = sub_6083DA10(a2);
     HIWORD(v5[1]) = sub_6083DA20(a2);
     return sub_6083CF64(a1, (int)v5);
@@ -47734,7 +47740,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10[5] = *(_DWORD *)(a2 + 16) / 2;
     v10[6] = sub_6083DA30(a2);
     v10[4] = 128;
-    BYTE1(v10[0]) = 2;
+    *(uint8_t *)((uint8_t *)&(v10[0]) + 1) = 2;
     v10[3] = sub_6083DA10(a2);
     HIWORD(v10[1]) = sub_6083DA20(a2);
     v4 = sub_6083D1F4(a1, (unsigned __int8 *)v10);
@@ -47745,7 +47751,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10[5] = sub_6083DA38(a2);
     v10[6] = sub_6083DA38(a2);
     v10[4] = 128;
-    BYTE1(v10[0]) = 2;
+    *(uint8_t *)((uint8_t *)&(v10[0]) + 1) = 2;
     v10[3] = sub_6083DA18(a2);
     HIWORD(v10[1]) = sub_6083DA28(a2);
     v5 = sub_6083CF64(a1, (int)v10);
@@ -58668,7 +58674,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v21 = v13 + *(_DWORD *)(v20 + 4 * v18);
               sub_6085F6A0((float *)(v21 + *(_DWORD *)(v21 + 8)), *(unsigned __int16 *)(v21 + 4));
               v3.n64_f32[0] = v19 + 0.5;
-              v3.n64_u64[0] = vmin_f32(vmax_f32(v3, v4), v5).n64_u64[0];
+              v3.n64_u64[0] = vmin_f32_v2(vmax_f32_v2(v3, v4), v5).n64_u64[0];
               (*(void (__fastcall **)(_BYTE *, _DWORD, unsigned int))(*(_DWORD *)a2 + 28))(
                 a2,
                 *(unsigned __int8 *)(v21 + 1),
@@ -58953,7 +58959,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 v3.n64_f32[0] = v57 + 0.5;
                 v60 = a2[3];
                 ++v56;
-                v3.n64_u64[0] = vmin_f32(vmax_f32(v3, v4), v6).n64_u64[0];
+                v3.n64_u64[0] = vmin_f32_v2(vmax_f32_v2(v3, v4), v6).n64_u64[0];
                 *(_BYTE *)(a2[5]
                          + ((8 * v60) & 0x18)
                          + (v60 & 0x30)
@@ -58999,7 +59005,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 *(unsigned __int16 *)(v14 + *(_DWORD *)(v30 + 4 * v28) + 4));
               v31 = a2[5];
               ++v28;
-              v3.n64_u64[0] = vmin_f32(vmax_f32(v3, v4), v5).n64_u64[0];
+              v3.n64_u64[0] = vmin_f32_v2(vmax_f32_v2(v3, v4), v5).n64_u64[0];
               v32 = ((8 * a2[3]) & 0x18) + (a2[3] & 0x30) + 20 * ((a2[3] >> 2) & 3);
               v34 = *(unsigned __int8 *)(v31 + v32);
               v33 = (_DWORD *)(v31 + v32);
@@ -59049,7 +59055,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               else
               {
                 v3.n64_f32[0] = v36 + 0.5;
-                v3.n64_u64[0] = vmin_f32(vmax_f32(v3, v4), v6).n64_u64[0];
+                v3.n64_u64[0] = vmin_f32_v2(vmax_f32_v2(v3, v4), v6).n64_u64[0];
                 sub_608521F4((int)a2, v39, (unsigned int)v3.n64_f32[0]);
               }
               ++v35;
@@ -61812,7 +61818,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v33 = arr_dword_60B14E94[v32];
         LOBYTE(v68[0]) = v57;
         v58 = v33;
-        BYTE1(v68[0]) = v33;
+        *(uint8_t *)((uint8_t *)&(v68[0]) + 1) = v33;
         HIWORD(v68[1]) = 21;
         sub_6083B2BC(*(_DWORD *)(a1 + 536) + v29 - 360, (int)a2, (unsigned __int8 *)v68);
         v34 = *(_DWORD *)(a1 + 540) + v30;
@@ -61821,7 +61827,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         memset(v68, 0, 32);
         sub_60998EA8(v68);
         LOBYTE(v68[0]) = v57;
-        BYTE1(v68[0]) = v58;
+        *(uint8_t *)((uint8_t *)&(v68[0]) + 1) = v58;
         HIWORD(v68[1]) = 37;
         sub_6083B2BC(*(_DWORD *)(a1 + 536) + v29 - 240, (int)a2, (unsigned __int8 *)v68);
         v35 = *(_DWORD *)(a1 + 540) + v30;
@@ -61830,7 +61836,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         memset(v68, 0, 32);
         sub_60998EA8(v68);
         LOBYTE(v68[0]) = v57;
-        BYTE1(v68[0]) = v58;
+        *(uint8_t *)((uint8_t *)&(v68[0]) + 1) = v58;
         HIWORD(v68[1]) = 25;
         sub_6083B2BC(*(_DWORD *)(a1 + 536) + v29 - 120, (int)a2, (unsigned __int8 *)v68);
         v36 = *(_DWORD *)(a1 + 540) + v30;
@@ -61839,7 +61845,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         memset(v68, 0, 32);
         sub_60998EA8(v68);
         LOBYTE(v68[0]) = v57;
-        BYTE1(v68[0]) = v58;
+        *(uint8_t *)((uint8_t *)&(v68[0]) + 1) = v58;
         HIWORD(v68[1]) = 41;
         sub_6083B2BC(*(_DWORD *)(a1 + 536) + v29, (int)a2, (unsigned __int8 *)v68);
         v37 = *(_DWORD *)(a1 + 540);
@@ -63242,7 +63248,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = 1;
     if ( HIBYTE(v11) <= 8u )
       v12 = (v11 & 0xFF000000) == 0x8000000 && (v11 & 0xFF0000) > 0x20000;
-    BYTE1(v42[6]) = v12;
+    *(uint8_t *)((uint8_t *)&(v42[6]) + 1) = v12;
     if ( a7 )
     {
       v13 = a7[6];
@@ -63262,7 +63268,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v42[14] = *(_DWORD *)(a6 + 28);
     LOBYTE(v42[24]) = *(_BYTE *)(a6 + 68);
     v15 = 0;
-    BYTE1(v42[24]) = *(_BYTE *)(a6 + 69);
+    *(uint8_t *)((uint8_t *)&(v42[24]) + 1) = *(_BYTE *)(a6 + 69);
     LOWORD(v42[17]) = 0;
     LOWORD(v42[18]) = 0;
     v42[20] = 0;
@@ -69182,8 +69188,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v20 = v14;
     v16 = *((_WORD *)a1 + 108);
     LOBYTE(v21) = (v16 & 8) != 0;
-    BYTE1(v21) = (v16 & 0x20) != 0;
-    BYTE2(v21) = (unsigned __int8)v16 >> 7;
+    *(uint8_t *)((uint8_t *)&(v21) + 1) = (v16 & 0x20) != 0;
+    *(uint8_t *)((uint8_t *)&(v21) + 2) = (unsigned __int8)v16 >> 7;
     HIBYTE(v21) = (v16 & 0x400) != 0;
     result = sub_6084A168(a3, (int)&v18);
     if ( a2 )
@@ -71986,8 +71992,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v5;
     v7 = a1[12];
     v8 = v7 + 1;
-    v9 = vmin_f32(v2, v3).n64_f32[0];
-    v10 = vmin_f32(v1, v3).n64_f32[0];
+    v9 = vmin_f32_v2(v2, v3).n64_f32[0];
+    v10 = vmin_f32_v2(v1, v3).n64_f32[0];
     v11 = 1.0 - v10;
     v12 = 1.0 - v9;
     if ( v7 == -1 )
@@ -82227,7 +82233,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           LOBYTE(v10) = 1;
         LOBYTE(v34) = v10;
         v33 = v28;
-        BYTE1(v34) = *((_BYTE *)a1 + 32);
+        *(uint8_t *)((uint8_t *)&(v34) + 1) = *((_BYTE *)a1 + 32);
         v35 = a1[7];
         sub_60875064(&v31);
         v3 = v30;
@@ -82639,7 +82645,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v32 = 1;
           LOBYTE(v76) = v32;
           v75 = v7;
-          BYTE1(v76) = *((_BYTE *)a2 + 32);
+          *(uint8_t *)((uint8_t *)&(v76) + 1) = *((_BYTE *)a2 + 32);
           v77 = a2[7];
           sub_60875064(&v73);
           v33 = v78;
@@ -90082,7 +90088,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5.n64_f32[0] = (float)(v9 - *result) * (float)(v9 - *result);
     v11.n128_u64[0] = vadd_f32(*(float32x2_t *)&v11.n128_i8[8], (float32x2_t)v11.n128_u64[0]).n64_u64[0];
     v12 = vpadd_f32((float32x2_t)v11.n128_u64[0], (float32x2_t)v11.n128_u64[0]).n64_f32[0];
-    if ( v12 >= vmax_f32(v5, v4).n64_f32[0] )
+    if ( v12 >= vmax_f32_v2(v5, v4).n64_f32[0] )
     {
       v3.n64_f32[0] = v12 * (float)(1.0 / sqrtf(v12));
       v22 = (float)(v3.n64_f32[0] + (float)(a2[1].n128_f32[0] + a3[1].n128_f32[0])) * 0.5;
@@ -90387,7 +90393,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v33.val[1] = vtbl2_s8(_Q11, (int8x8_t)0xF0E0D0C07060504LL);
     v36 = vmulq_f32(v35, v35);
     v33.val[0] = vtbl2_s8(_Q11, (int8x8_t)0x30201000B0A0908LL);
-    _Q11.val[0] = vadd_f32(*(float32x2_t *)&v36.n128_i8[8], (float32x2_t)v36.n128_u64[0]);
+    _Q11.val[0] = vadd_f32_v2(*(float32x2_t *)&v36.n128_i8[8], (float32x2_t)v36.n128_u64[0]);
     v37 = vmlsq_f32(vmulq_f32(v31, v30), (float32x4_t)v33, v32);
     _Q11.val[0] = vpadd_f32(_Q11.val[0], _Q11.val[0]);
     _Q11.val[1].n64_u64[0] = _Q11.val[0].n64_u64[0];
@@ -90410,7 +90416,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v52.n128_u64[0] = vadd_f32(*(float32x2_t *)&v52.n128_i8[8], (float32x2_t)v52.n128_u64[0]).n64_u64[0];
     v54 = vmulq_f32(v105, v53);
     v49.n128_f32[0] = vpadd_f32((float32x2_t)v52.n128_u64[0], (float32x2_t)v52.n128_u64[0]).n64_f32[0];
-    v52.n128_u64[0] = vadd_f32(*(float32x2_t *)&v54.n128_i8[8], (float32x2_t)v54.n128_u64[0]).n64_u64[0];
+    v52.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v54.n128_i8[8], (float32x2_t)v54.n128_u64[0]).n64_u64[0];
     result[3].n128_f32[0] = -v49.n128_f32[0];
     result[4] = v53;
     result[5].n128_f32[0] = -vpadd_f32((float32x2_t)v52.n128_u64[0], (float32x2_t)v52.n128_u64[0]).n64_f32[0];
@@ -90436,7 +90442,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v63 = vbslq_s64(_Q13, (int64x2_t)0, vmulq_f32(v57, vmulq_f32(v60, vrsqrtsq_f32(v60, v61))));
     v64 = vmulq_f32(v63, v96);
     result[6] = v63;
-    v64.n128_u64[0] = vadd_f32(*(float32x2_t *)&v64.n128_i8[8], (float32x2_t)v64.n128_u64[0]).n64_u64[0];
+    v64.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v64.n128_i8[8], (float32x2_t)v64.n128_u64[0]).n64_u64[0];
     result[7].n128_f32[0] = -vpadd_f32((float32x2_t)v64.n128_u64[0], (float32x2_t)v64.n128_u64[0]).n64_f32[0];
     v65 = (int8x8x2_t)vsubq_f32(v103, v100);
     v66 = (int8x8x2_t)vsubq_f32(v102, v100);
@@ -90460,7 +90466,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v73 = vbslq_s64(_Q13, (int64x2_t)0, vmulq_f32(v67, vmulq_f32(v70, vrsqrtsq_f32(v70, v71))));
     v74 = vmulq_f32(v73, v100);
     result[8] = v73;
-    v74.n128_u64[0] = vadd_f32(*(float32x2_t *)&v74.n128_i8[8], (float32x2_t)v74.n128_u64[0]).n64_u64[0];
+    v74.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v74.n128_i8[8], (float32x2_t)v74.n128_u64[0]).n64_u64[0];
     result[9].n128_f32[0] = -vpadd_f32((float32x2_t)v74.n128_u64[0], (float32x2_t)v74.n128_u64[0]).n64_f32[0];
     v75 = (int8x8x2_t)vsubq_f32(v96, v105);
     v76 = (int8x8x2_t)vsubq_f32(v97, v105);
@@ -90508,7 +90514,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v94 = vbslq_s64(_Q10, (int64x2_t)0, vmulq_f32(v88, vmulq_f32(v91, vrsqrtsq_f32(v91, v92))));
     v95 = vmulq_f32(v105, v94);
     result[12] = v94;
-    v95.n128_u64[0] = vadd_f32(*(float32x2_t *)&v95.n128_i8[8], (float32x2_t)v95.n128_u64[0]).n64_u64[0];
+    v95.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v95.n128_i8[8], (float32x2_t)v95.n128_u64[0]).n64_u64[0];
     result[13].n128_f32[0] = -vpadd_f32((float32x2_t)v95.n128_u64[0], (float32x2_t)v95.n128_u64[0]).n64_f32[0];
     result[14].n128_u64[0] = 6;
     return result;
@@ -90539,7 +90545,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       while ( 1 )
       {
         v9 = vmulq_f32(*(float32x4_t *)(v6 - 4), v5);
-        v9.n128_u64[0] = vadd_f32(*(float32x2_t *)&v9.n128_i8[8], (float32x2_t)v9.n128_u64[0]).n64_u64[0];
+        v9.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v9.n128_i8[8], (float32x2_t)v9.n128_u64[0]).n64_u64[0];
         if ( (float)(vpadd_f32((float32x2_t)v9.n128_u64[0], (float32x2_t)v9.n128_u64[0]).n64_f32[0] + *v6) > v7 )
           break;
         ++v8;
@@ -90578,7 +90584,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     while ( 1 )
     {
       v8 = vmulq_f32(*(float32x4_t *)(v6 - 4), v3);
-      v8.n128_u64[0] = vadd_f32(*(float32x2_t *)&v8.n128_i8[8], (float32x2_t)v8.n128_u64[0]).n64_u64[0];
+      v8.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v8.n128_i8[8], (float32x2_t)v8.n128_u64[0]).n64_u64[0];
       v9 = vpadd_f32((float32x2_t)v8.n128_u64[0], (float32x2_t)v8.n128_u64[0]).n64_f32[0] + *v6;
       if ( v9 > v5 )
         break;
@@ -90642,7 +90648,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v15.n128_u32[1] = HIDWORD(v13);
           v15.n128_u64[1] = *(unsigned int *)(v14 + 8);
           v16 = vmulq_f32(v11, v15);
-          v16.n128_u64[0] = vadd_f32(*(float32x2_t *)&v16.n128_i8[8], (float32x2_t)v16.n128_u64[0]).n64_u64[0];
+          v16.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v16.n128_i8[8], (float32x2_t)v16.n128_u64[0]).n64_u64[0];
           if ( (float)(vpadd_f32((float32x2_t)v16.n128_u64[0], (float32x2_t)v16.n128_u64[0]).n64_f32[0] + *v8) > 0.0 )
             break;
           ++v9;
@@ -91329,7 +91335,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v48 = vmulq_f32(v47, v47);
             v49 = vrsqrteq_f32(_Q12);
             v50 = vrsqrteq_f32(_Q13);
-            *(float32x2_t *)&v31.n128_i8[8] = vadd_f32(*(float32x2_t *)&v48.n128_i8[8], (float32x2_t)v48.n128_u64[0]);
+            *(float32x2_t *)&v31.n128_i8[8] = vadd_f32_v2(*(float32x2_t *)&v48.n128_i8[8], (float32x2_t)v48.n128_u64[0]);
             _Q7.n128_u64[0] = vpadd_f32(*(float32x2_t *)&v31.n128_i8[8], *(float32x2_t *)&v31.n128_i8[8]).n64_u64[0];
             _Q7.n128_u64[1] = _Q7.n128_u64[0];
             v52 = vmulq_f32(v49, vrsqrtsq_f32(v49, vmulq_f32(v49, _Q12)));
@@ -91360,10 +91366,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v65 = vsubq_f32(v95, v11);
             v96 = v31.n128_f32[0] * v31.n128_f32[2];
             v66 = vmulq_f32(v65, v65);
-            v66.n128_u64[0] = vadd_f32(*(float32x2_t *)&v66.n128_i8[8], (float32x2_t)v66.n128_u64[0]).n64_u64[0];
+            v66.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v66.n128_i8[8], (float32x2_t)v66.n128_u64[0]).n64_u64[0];
             v67 = vpadd_f32((float32x2_t)v66.n128_u64[0], (float32x2_t)v66.n128_u64[0]).n64_f32[0];
             v31.n128_f32[2] = (float)(v64 - *v36) * (float)(v64 - *v36);
-            if ( v67 >= vmax_f32(*(float32x2_t *)&v31.n128_i8[8], v3).n64_f32[0] )
+            if ( v67 >= vmax_f32_v2(*(float32x2_t *)&v31.n128_i8[8], v3).n64_f32[0] )
             {
               v31.n128_f32[0] = v67 * (float)(1.0 / sqrtf(v67));
               v76 = (float)(v31.n128_f32[0] + (float)(*v36 + v64)) * 0.5;
@@ -94587,7 +94593,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v17 = vmulq_f32(v36, v36);
           *(int8x8_t *)&v18.n128_i8[8] = vtbl2_s8(v37, (int8x8_t)0xF0E0D0C07060504LL);
           v18.n128_u64[0] = vtbl2_s8(v37, (int8x8_t)0x30201000B0A0908LL).n64_u64[0];
-          v17.n128_u64[0] = vadd_f32(*(float32x2_t *)&v17.n128_i8[8], (float32x2_t)v17.n128_u64[0]).n64_u64[0];
+          v17.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v17.n128_i8[8], (float32x2_t)v17.n128_u64[0]).n64_u64[0];
           v19 = vpadd_f32((float32x2_t)v17.n128_u64[0], (float32x2_t)v17.n128_u64[0]).n64_f32[0];
           if ( v19 != 0.0 )
           {
@@ -94705,13 +94711,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v13 = vmulq_f32(v30, v30);
           *(int8x8_t *)&v14.n128_i8[8] = vtbl2_s8(v31, (int8x8_t)0xF0E0D0C07060504LL);
           v14.n128_u64[0] = vtbl2_s8(v31, (int8x8_t)0x30201000B0A0908LL).n64_u64[0];
-          v13.n128_u64[0] = vadd_f32(*(float32x2_t *)&v13.n128_i8[8], (float32x2_t)v13.n128_u64[0]).n64_u64[0];
+          v13.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v13.n128_i8[8], (float32x2_t)v13.n128_u64[0]).n64_u64[0];
           v15 = vpadd_f32((float32x2_t)v13.n128_u64[0], (float32x2_t)v13.n128_u64[0]).n64_f32[0];
           if ( v15 != 0.0 )
           {
             v16 = vmlsq_f32(vmulq_f32(v11, v10), v14, v12);
             v17 = vmulq_f32(v16, v16);
-            v17.n128_u64[0] = vadd_f32(*(float32x2_t *)&v17.n128_i8[8], (float32x2_t)v17.n128_u64[0]).n64_u64[0];
+            v17.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v17.n128_i8[8], (float32x2_t)v17.n128_u64[0]).n64_u64[0];
             v18 = vpadd_f32((float32x2_t)v17.n128_u64[0], (float32x2_t)v17.n128_u64[0]).n64_f32[0];
             if ( v18 != 0.0 )
             {
@@ -95204,11 +95210,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9.n128_f32[2] = 1.0;
       v9.n128_f32[3] = 1.0;
       v112 = (float32x4_t)vld1q_dup_f32(0);
-      v8.n128_u64[0] = vadd_f32(*(float32x2_t *)&v8.n128_i8[8], (float32x2_t)v8.n128_u64[0]).n64_u64[0];
+      v8.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v8.n128_i8[8], (float32x2_t)v8.n128_u64[0]).n64_u64[0];
       v114 = (float32x4_t)vld1q_dup_f32((const float *)8);
       v10.n64_u64[0] = vpadd_f32((float32x2_t)v8.n128_u64[0], (float32x2_t)v8.n128_u64[0]).n64_u64[0];
       v3.n64_f32[0] = -MEMORY[0x10];
-      v8.n128_u64[0] = vmul_f32(v10, v10).n64_u64[0];
+      v8.n128_u64[0] = vmul_f32_v2(v10, v10).n64_u64[0];
       v8.n128_u64[1] = v8.n128_u64[0];
       _Q9 = vsubq_f32(v9, v8);
       v12 = vrsqrteq_f32(_Q9);
@@ -95805,7 +95811,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v153 = v93;
       v158 = v37;
       v168 = (float32x4_t)vld1q_dup_f32((const float *)0x10);
-      v94.n128_u64[0] = vadd_f32(*(float32x2_t *)&v94.n128_i8[8], (float32x2_t)v94.n128_u64[0]).n64_u64[0];
+      v94.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v94.n128_i8[8], (float32x2_t)v94.n128_u64[0]).n64_u64[0];
 
 /* ============================================================================
  * sub_6087B0E0
@@ -99536,7 +99542,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                        v40,
                        a3[3],
                        0);
-    v5.n128_u64[0] = vadd_f32(*(float32x2_t *)&v5.n128_i8[8], (float32x2_t)v5.n128_u64[0]).n64_u64[0];
+    v5.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v5.n128_i8[8], (float32x2_t)v5.n128_u64[0]).n64_u64[0];
     _Q0.n128_u64[0] = vpadd_f32((float32x2_t)v5.n128_u64[0], (float32x2_t)v5.n128_u64[0]).n64_u64[0];
     if ( _Q0.n128_f32[0] <= 0.0 )
     {
@@ -99659,7 +99665,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                            a3[7],
                            0)),
                        v4);
-    v5.n128_u64[0] = vadd_f32(*(float32x2_t *)&v5.n128_i8[8], (float32x2_t)v5.n128_u64[0]).n64_u64[0];
+    v5.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v5.n128_i8[8], (float32x2_t)v5.n128_u64[0]).n64_u64[0];
     _Q0.n128_u64[0] = vpadd_f32((float32x2_t)v5.n128_u64[0], (float32x2_t)v5.n128_u64[0]).n64_u64[0];
     if ( _Q0.n128_f32[0] <= 0.0 )
     {
@@ -99781,7 +99787,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6.n128_u64[0] = 0;
     v6.n128_u32[2] = 0;
     v7 = vmulq_f32(v5, v5);
-    v7.n128_u64[0] = vadd_f32(*(float32x2_t *)&v7.n128_i8[8], (float32x2_t)v7.n128_u64[0]).n64_u64[0];
+    v7.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v7.n128_i8[8], (float32x2_t)v7.n128_u64[0]).n64_u64[0];
     _Q0.n128_u64[0] = vpadd_f32((float32x2_t)v7.n128_u64[0], (float32x2_t)v7.n128_u64[0]).n64_u64[0];
     if ( _Q0.n128_f32[0] <= 0.0 )
     {
@@ -99885,7 +99891,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _Q9 = vmulq_f32(v28, v28);
     v8 = vmulq_f32(v27, v27);
     _Q8.n128_u64[0] = vadd_f32(*(float32x2_t *)&_Q8.n128_i8[8], (float32x2_t)_Q8.n128_u64[0]).n64_u64[0];
-    *(float32x2_t *)&_Q8.n128_i8[8] = vadd_f32(*(float32x2_t *)&v8.n128_i8[8], (float32x2_t)v8.n128_u64[0]);
+    *(float32x2_t *)&_Q8.n128_i8[8] = vadd_f32_v2(*(float32x2_t *)&v8.n128_i8[8], (float32x2_t)v8.n128_u64[0]);
     _Q10.n128_u64[0] = vpadd_f32((float32x2_t)_Q8.n128_u64[0], (float32x2_t)_Q8.n128_u64[0]).n64_u64[0];
     _Q8.n128_u64[0] = vadd_f32(*(float32x2_t *)&_Q9.n128_i8[8], (float32x2_t)_Q9.n128_u64[0]).n64_u64[0];
     _Q9.n128_u64[0] = vpadd_f32((float32x2_t)_Q8.n128_u64[0], (float32x2_t)_Q8.n128_u64[0]).n64_u64[0];
@@ -99938,7 +99944,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3.n128_u64[0] = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*a2, a3[2].n64_f32[0]), a2[1], a3[2], 1), a2[2], a3[3], 0).n128_u64[0];
     v3.n128_u64[1] = 0;
     v4 = vmulq_f32((float32x4_t)v3.n128_u64[0], (float32x4_t)v3.n128_u64[0]);
-    v4.n128_u64[0] = vadd_f32(*(float32x2_t *)&v4.n128_i8[8], (float32x2_t)v4.n128_u64[0]).n64_u64[0];
+    v4.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v4.n128_i8[8], (float32x2_t)v4.n128_u64[0]).n64_u64[0];
     _Q0.n128_u64[0] = vpadd_f32((float32x2_t)v4.n128_u64[0], (float32x2_t)v4.n128_u64[0]).n64_u64[0];
     if ( _Q0.n128_f32[0] <= 0.0 )
     {
@@ -100004,7 +100010,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4.n128_u64[1] = 0;
     v4.n128_u64[0] = *(_QWORD *)(a4 + 16);
     v5 = vmulq_f32((float32x4_t)v4.n128_u64[0], (float32x4_t)v4.n128_u64[0]);
-    v5.n128_u64[0] = vadd_f32(*(float32x2_t *)&v5.n128_i8[8], (float32x2_t)v5.n128_u64[0]).n64_u64[0];
+    v5.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v5.n128_i8[8], (float32x2_t)v5.n128_u64[0]).n64_u64[0];
     _Q1.n128_u64[0] = vpadd_f32((float32x2_t)v5.n128_u64[0], (float32x2_t)v5.n128_u64[0]).n64_u64[0];
     if ( _Q1.n128_f32[0] <= 0.0 )
     {
@@ -100068,7 +100074,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5.n128_f32[1] = -v3.n128_f32[0];
     v4 = vmulq_f32(v3, v3);
     v5.n128_u32[0] = v3.n128_u32[1];
-    v4.n128_u64[0] = vadd_f32(*(float32x2_t *)&v4.n128_i8[8], (float32x2_t)v4.n128_u64[0]).n64_u64[0];
+    v4.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v4.n128_i8[8], (float32x2_t)v4.n128_u64[0]).n64_u64[0];
     _Q2.n128_u64[0] = vpadd_f32((float32x2_t)v4.n128_u64[0], (float32x2_t)v4.n128_u64[0]).n64_u64[0];
     if ( _Q2.n128_f32[0] <= 0.0 )
     {
@@ -100089,7 +100095,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( _Q2.n128_f32[0] <= 0.0 )
       v5 = (float32x4_t)0x3F800000uLL;
     v15 = vmulq_f32(v5, v5);
-    v15.n128_u64[0] = vadd_f32(*(float32x2_t *)&v15.n128_i8[8], (float32x2_t)v15.n128_u64[0]).n64_u64[0];
+    v15.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v15.n128_i8[8], (float32x2_t)v15.n128_u64[0]).n64_u64[0];
     _Q2.n128_u64[0] = vpadd_f32((float32x2_t)v15.n128_u64[0], (float32x2_t)v15.n128_u64[0]).n64_u64[0];
     if ( _Q2.n128_f32[0] <= 0.0 )
     {
@@ -104680,7 +104686,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         (vceq_zero_q(_Q9.n128_f32[0], _Q9.n128_f32[1], _Q9.n128_f32[2], _Q9.n128_f32[3]), vceq_zero_q(_Q8.n128_f32[0], _Q8.n128_f32[1], _Q8.n128_f32[2], _Q8.n128_f32[3]))
         v33 = vmulq_f32(v25, vrsqrtsq_f32(v25, vmulq_f32(v25, _Q9)));
         v34 = vmulq_f32(v26, vrsqrtsq_f32(v26, vmulq_f32(v26, _Q8)));
-        v35.n64_u64[0] = vadd_f32(*(float32x2_t *)&v24.n128_i8[8], (float32x2_t)v24.n128_u64[0]).n64_u64[0];
+        v35.n64_u64[0] = vadd_f32_v2(*(float32x2_t *)&v24.n128_i8[8], (float32x2_t)v24.n128_u64[0]).n64_u64[0];
         _Q12.n128_u64[0] = vpadd_f32(v35, v35).n64_u64[0];
         _Q12.n128_u64[1] = _Q12.n128_u64[0];
         vceq_zero_q(_Q12.n128_f32[0], _Q12.n128_f32[1], _Q12.n128_f32[2], _Q12.n128_f32[3])
@@ -104888,7 +104894,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           (vceq_zero_q(_Q9.n128_f32[0], _Q9.n128_f32[1], _Q9.n128_f32[2], _Q9.n128_f32[3]), vceq_zero_q(_Q8.n128_f32[0], _Q8.n128_f32[1], _Q8.n128_f32[2], _Q8.n128_f32[3]))
           v44 = vmulq_f32(v36, vrsqrtsq_f32(v36, vmulq_f32(v36, _Q9)));
           v45 = vmulq_f32(v37, vrsqrtsq_f32(v37, vmulq_f32(v37, _Q8)));
-          v46.n64_u64[0] = vadd_f32(*(float32x2_t *)&v35.n128_i8[8], (float32x2_t)v35.n128_u64[0]).n64_u64[0];
+          v46.n64_u64[0] = vadd_f32_v2(*(float32x2_t *)&v35.n128_i8[8], (float32x2_t)v35.n128_u64[0]).n64_u64[0];
           _Q12.n128_u64[0] = vpadd_f32(v46, v46).n64_u64[0];
           _Q12.n128_u64[1] = _Q12.n128_u64[0];
           vceq_zero_q(_Q12.n128_f32[0], _Q12.n128_f32[1], _Q12.n128_f32[2], _Q12.n128_f32[3])
@@ -110430,7 +110436,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v141 = v46;
         }
         v50 = vmulq_f32(v46, v46);
-        v50.n128_u64[0] = vadd_f32(*(float32x2_t *)&v50.n128_i8[8], (float32x2_t)v50.n128_u64[0]).n64_u64[0];
+        v50.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v50.n128_i8[8], (float32x2_t)v50.n128_u64[0]).n64_u64[0];
         if ( vpadd_f32((float32x2_t)v50.n128_u64[0], (float32x2_t)v50.n128_u64[0]).n64_f32[0] < 0.00001 )
         {
           v46 = v44[36];
@@ -110520,7 +110526,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v93 = v139;
           v94 = v138;
           v95 = v137;
-          v102.n128_u64[0] = vadd_f32(*(float32x2_t *)&v102.n128_i8[8], (float32x2_t)v102.n128_u64[0]).n64_u64[0];
+          v102.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v102.n128_i8[8], (float32x2_t)v102.n128_u64[0]).n64_u64[0];
           _Q0.n128_u64[0] = vpadd_f32((float32x2_t)v102.n128_u64[0], (float32x2_t)v102.n128_u64[0]).n64_u64[0];
           if ( _Q0.n128_f32[0] > 0.0 )
           {
@@ -112332,7 +112338,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v65 = (float)v28 / (float)(v8 - 1);
           v64 = v65;
           v63 = v65;
-          v7.n64_u64[0] = vmin_f32(v7, v6).n64_u64[0];
+          v7.n64_u64[0] = vmin_f32_v2(v7, v6).n64_u64[0];
           v68 = v7.n64_f32[0];
           v67 = v7.n64_f32[0];
           v66 = v7.n64_f32[0];
@@ -112613,7 +112619,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v94 = v37 / v34;
               v93 = v37 / v34;
               _D0.n64_f32[0] = (float)(v33 + v37) / _D0.n64_f32[0];
-              _D0.n64_u64[0] = vmin_f32(_D0, v6).n64_u64[0];
+              _D0.n64_u64[0] = vmin_f32_v2(_D0, v6).n64_u64[0];
               v98 = _D0.n64_f32[0];
               v97 = _D0.n64_f32[0];
               v96 = _D0.n64_f32[0];
@@ -119983,9 +119989,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           LOBYTE(v26) = 0x4020001u >> (8 * v12);
         v13 = *(unsigned __int8 *)(v10 + 17);
         if ( v13 <= 3 )
-          BYTE1(v26) = 0x4020001u >> (8 * v13);
+          *(uint8_t *)((uint8_t *)&(v26) + 1) = 0x4020001u >> (8 * v13);
         v5 = v9;
-        BYTE2(v26) = 1;
+        *(uint8_t *)((uint8_t *)&(v26) + 2) = 1;
         sub_6083B2BC(v4 + v7 + 48, a1, v9);
         v4 = v21;
         ++v8;
@@ -120032,8 +120038,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           LOBYTE(v26) = 0x4020001u >> (8 * v18);
         v19 = *(unsigned __int8 *)(v6 + 17);
         if ( v19 <= 3 )
-          BYTE1(v26) = 0x4020001u >> (8 * v19);
-        BYTE2(v26) = 1;
+          *(uint8_t *)((uint8_t *)&(v26) + 1) = 0x4020001u >> (8 * v19);
+        *(uint8_t *)((uint8_t *)&(v26) + 2) = 1;
         result = sub_6083B2BC(v6 + 48, v24, (unsigned __int8 *)&v26);
         ++v16;
         *(_BYTE *)v6 = 1;
@@ -121731,7 +121737,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v27 = 0;
     v26 = 0;
     v25 = 0;
-    BYTE1(v33[0]) = 3;
+    *(uint8_t *)((uint8_t *)&(v33[0]) + 1) = 3;
     v33[3] = 2817;
     sub_6083D5C0(&v25);
     v25 = 36;
@@ -122306,7 +122312,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v35 = *v30 + (float)((float)(v31 * v7.n64_f32[0]) * v34);
         v7.n64_u32[0] = 0;
         v8.n64_f32[0] = *a3 + (float)((float)(v35 * a6[5].n128_f32[3]) * *(float *)(v16 + 68));
-        v7.n64_f32[0] = vmax_f32(v8, v7).n64_f32[0];
+        v7.n64_f32[0] = vmax_f32_v2(v8, v7).n64_f32[0];
         *a3 = v7.n64_f32[0];
         if ( (int)v7.n64_f32[0] )
         {
@@ -125247,7 +125253,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v19 = vtrnq_s32(vrev64q_s32(v183), (int32x4_t)0).val[1];
       v20 = vmulq_f32(v19, v19);
-      v20.n128_u64[0] = vadd_f32(*(float32x2_t *)&v20.n128_i8[8], (float32x2_t)v20.n128_u64[0]).n64_u64[0];
+      v20.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v20.n128_i8[8], (float32x2_t)v20.n128_u64[0]).n64_u64[0];
       if ( vpadd_f32((float32x2_t)v20.n128_u64[0], (float32x2_t)v20.n128_u64[0]).n64_f32[0] <= 0.00000011921 )
       {
         v21 = *(_DWORD *)(a2 + 144);
@@ -129894,12 +129900,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v10 = 7;
         v11 = 1;
   LABEL_9:
-        BYTE1(v19) = v11;
-        BYTE2(v19) = v10;
+        *(uint8_t *)((uint8_t *)&(v19) + 1) = v11;
+        *(uint8_t *)((uint8_t *)&(v19) + 2) = v10;
         HIBYTE(v19) = v6;
         LOBYTE(v20) = v11;
-        BYTE1(v20) = v10;
-        BYTE2(v20) = v6;
+        *(uint8_t *)((uint8_t *)&(v20) + 1) = v10;
+        *(uint8_t *)((uint8_t *)&(v20) + 2) = v6;
         break;
       default:
         break;
@@ -129941,10 +129947,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6083C7C0((int)(a1 + 12), a2, (unsigned __int8 *)v18);
     memset(v18, 0, sizeof(v18));
     sub_6083D614((int)v18);
-    BYTE2(v18[0]) = 0;
+    *(uint8_t *)((uint8_t *)&(v18[0]) + 2) = 0;
     v16 = *(unsigned __int8 *)(*a1 + 7);
     if ( v16 <= 2 )
-      BYTE2(v18[0]) = 0x10200u >> (8 * v16);
+      *(uint8_t *)((uint8_t *)&(v18[0]) + 2) = 0x10200u >> (8 * v16);
     LOWORD(v18[1]) = v18[1] & 0xFFF3 | 8;
     return sub_6083C318((int)(a1 + 19), a2, (unsigned __int8 *)v18);
   }
@@ -131796,7 +131802,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v11 = vmulq_f32(v10, v7);
         v12 = vmulq_f32(v10, v8);
         v11.n128_u64[0] = vadd_f32(*(float32x2_t *)&v11.n128_i8[8], (float32x2_t)v11.n128_u64[0]).n64_u64[0];
-        v12.n128_u64[0] = vadd_f32(*(float32x2_t *)&v12.n128_i8[8], (float32x2_t)v12.n128_u64[0]).n64_u64[0];
+        v12.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v12.n128_i8[8], (float32x2_t)v12.n128_u64[0]).n64_u64[0];
         v13 = vpadd_f32((float32x2_t)v12.n128_u64[0], (float32x2_t)v12.n128_u64[0]).n64_u32[0];
         v14 = -vpadd_f32((float32x2_t)v11.n128_u64[0], (float32x2_t)v11.n128_u64[0]).n64_f32[0];
       }
@@ -135518,7 +135524,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float32x2_t v2; // d1
   
     v2.n64_u32[0] = 0;
-    *(_DWORD *)(result + 44) = vmax_f32(v1, v2).n64_u32[0];
+    *(_DWORD *)(result + 44) = vmax_f32_v2(v1, v2).n64_u32[0];
     return result;
   }
 
@@ -135610,7 +135616,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !a2 )
     {
       v3.n64_u32[0] = 0;
-      *(_DWORD *)(result + 64) = vmax_f32(v2, v3).n64_u32[0];
+      *(_DWORD *)(result + 64) = vmax_f32_v2(v2, v3).n64_u32[0];
     }
     return result;
   }
@@ -138553,7 +138559,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float32x2_t v2; // d1
   
     v2.n64_u32[0] = 0;
-    *(_DWORD *)(result + 240) = vmax_f32(v1, v2).n64_u32[0];
+    *(_DWORD *)(result + 240) = vmax_f32_v2(v1, v2).n64_u32[0];
     return result;
   }
 
@@ -138574,7 +138580,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(float *)(result + 268);
     v5 = *(_DWORD *)(result + 272);
     v6 = *(_DWORD *)(result + 276);
-    v7 = vmax_f32(v2, v3).n64_u32[0];
+    v7 = vmax_f32_v2(v2, v3).n64_u32[0];
     if ( v6 < v5 )
       v4 = *(float *)(result + 264) + (float)((float)((float)v6 * (float)(v4 - *(float *)(result + 264))) / (float)v5);
     *(float *)(result + 264) = v4;
@@ -144793,7 +144799,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3.n64_u32[0] = 0;
     v4 = *(float *)(result + 144);
     v5 = *(_DWORD *)(result + 152);
-    v6 = vmax_f32(v2, v3).n64_u32[0];
+    v6 = vmax_f32_v2(v2, v3).n64_u32[0];
     v7 = *(_DWORD *)(result + 148);
     if ( v5 < v7 )
       v4 = *(float *)(result + 140) + (float)((float)((float)v5 * (float)(v4 - *(float *)(result + 140))) / (float)v7);
@@ -149870,7 +149876,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v36 = *(__int16 *)(a1 + 232);
       v37 = *(__int16 *)(a1 + 234);
       v1.n64_f32[0] = v1.n64_f32[0] / 63.0;
-      v38.n64_u64[0] = vmax_f32(v1, v3).n64_u64[0];
+      v38.n64_u64[0] = vmax_f32_v2(v1, v3).n64_u64[0];
       if ( v1.n64_f32[0] <= 1.0 )
         v39 = v38.n64_f32[0];
       else
@@ -149902,7 +149908,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v62[13] = *(float *)(a1 + 72) * v62[13];
       v38.n64_f32[0] = (float)(char)v41 / 63.0;
       v62[14] = (float)(v40 + v62[14]) + *(float *)(a1 + 76);
-      LODWORD(v43) = vmax_f32(v38, v2).n64_u32[0];
+      LODWORD(v43) = vmax_f32_v2(v38, v2).n64_u32[0];
       if ( v38.n64_f32[0] > 2.0 )
         v43 = 2.0;
       v62[15] = (float)(v43 + v62[15]) + *(float *)(a1 + 80);
@@ -150912,7 +150918,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( a2 )
     {
       v4.n64_u32[0] = 0;
-      v5 = vmax_f32(v3, v4).n64_u32[0];
+      v5 = vmax_f32_v2(v3, v4).n64_u32[0];
       v6 = *(_WORD *)(result + 572) & a2;
       for ( i = 0; i != 128; i += 16 )
       {
@@ -156194,7 +156200,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v64[1] = 1065353216;
     v64[2] = 127;
     LOWORD(v64[3]) = 0;
-    BYTE2(v64[3]) = 0;
+    *(uint8_t *)((uint8_t *)&(v64[3]) + 2) = 0;
     v64[4] = 127;
     v64[5] = 64;
     v64[6] = 0xFFFF;
@@ -156203,7 +156209,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v64[8] = 0x400000;
     v64[9] = -65536;
     LOWORD(v64[10]) = 0;
-    BYTE2(v64[10]) = 0;
+    *(uint8_t *)((uint8_t *)&(v64[10]) + 2) = 0;
     v64[11] = 127;
     v64[12] = 64;
     v64[13] = 0xFFFF;
@@ -156212,7 +156218,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v64[15] = 0x400000;
     v64[16] = -65536;
     LOWORD(v64[17]) = 0;
-    BYTE2(v64[17]) = 0;
+    *(uint8_t *)((uint8_t *)&(v64[17]) + 2) = 0;
     v64[18] = 127;
     v64[19] = 64;
     v64[20] = 0xFFFF;
@@ -156221,7 +156227,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v64[22] = 0x400000;
     v64[23] = -65536;
     LOWORD(v64[24]) = 0;
-    BYTE2(v64[24]) = 0;
+    *(uint8_t *)((uint8_t *)&(v64[24]) + 2) = 0;
     v64[25] = 127;
     v64[26] = 64;
     v64[27] = 0xFFFF;
@@ -156272,7 +156278,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           return 255;
         v18 = 0;
       }
-      BYTE2(v56[2]) = v18;
+      *(uint8_t *)((uint8_t *)&(v56[2]) + 2) = v18;
       if ( v64[32] < 3u )
       {
         v56[35] = v64[32];
@@ -160217,7 +160223,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     v1.n64_u32[0] = -1028338483;
-    v2 = (int)(float)(vmax_f32(v0, v1).n64_f32[0] * 10.0) + 904;
+    v2 = (int)(float)(vmax_f32_v2(v0, v1).n64_f32[0] * 10.0) + 904;
     if ( v0.n64_f32[0] > 6.0 )
       v2 = 964;
     return (char *)&unk_60B34BDC + 4 * v2;
@@ -163051,7 +163057,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     __int16 v4; // t1
   
     v2.n64_u32[0] = 0;
-    v3 = vmax_f32(v1, v2).n64_f32[0];
+    v3 = vmax_f32_v2(v1, v2).n64_f32[0];
     if ( v3 != *(float *)(result + 428) )
     {
       *(float *)(result + 428) = v3;
@@ -163150,7 +163156,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v3.n64_u32[0] = 0;
     v4 = 0;
-    v3.n64_u32[0] = vmax_f32(v2, v3).n64_u32[0];
+    v3.n64_u32[0] = vmax_f32_v2(v2, v3).n64_u32[0];
     if ( v2.n64_f32[0] <= 1.0 )
       v5 = v3.n64_f32[0];
     else
@@ -163256,7 +163262,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v3.n64_u32[0] = 0;
     v4.n64_u32[0] = *(_DWORD *)a2;
-    v3.n64_f32[0] = vmax_f32(v4, v3).n64_f32[0];
+    v3.n64_f32[0] = vmax_f32_v2(v4, v3).n64_f32[0];
     if ( v3.n64_f32[0] != *(float *)a3 )
     {
       *(_DWORD *)a3 = v3.n64_u32[0];
@@ -163478,7 +163484,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           v5.n64_u32[0] = 0;
           v6.n64_u32[0] = *(_DWORD *)(a5 + 12);
-          v5.n64_f32[0] = vmax_f32(v6, v5).n64_f32[0];
+          v5.n64_f32[0] = vmax_f32_v2(v6, v5).n64_f32[0];
           if ( v5.n64_f32[0] != *(float *)(v20 + 12) )
           {
             *(_DWORD *)(v20 + 12) = v5.n64_u32[0];
@@ -163735,7 +163741,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       goto LABEL_31;
     }
     v18 = 0;
-    BYTE2(v44) = 0;
+    *(uint8_t *)((uint8_t *)&(v44) + 2) = 0;
     LOWORD(v44) = 0;
     v43 = 0;
     switch ( *(_DWORD *)(a1 + 440) )
@@ -164072,7 +164078,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               goto LABEL_27;
             }
             sub_608B0EF4(a5, v21);
-            v22 = vmax_f32(v6, v7).n64_u32[0];
+            v22 = vmax_f32_v2(v6, v7).n64_u32[0];
             result = (int)&v42[v21];
             if ( v6.n64_f32[0] <= 1.0 )
               v6.n64_u32[0] = v22;
@@ -164101,7 +164107,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               LODWORD(v42[v21]) = result;
               goto LABEL_30;
             }
-            v6.n64_u64[0] = vmax_f32(v8, v7).n64_u64[0];
+            v6.n64_u64[0] = vmax_f32_v2(v8, v7).n64_u64[0];
             result = (int)&v42[v21];
             if ( v8.n64_f32[0] > 1.0 )
               v6.n64_u32[0] = 1.0;
@@ -164127,7 +164133,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v41 = v8.n64_f32[0];
         if ( (*(int (__fastcall **)(_DWORD, int))(**(_DWORD **)(a1 + 556) + 16))(*(_DWORD *)(a1 + 556), j) )
         {
-          v27 = vmax_f32(v8, v7).n64_u32[0];
+          v27 = vmax_f32_v2(v8, v7).n64_u32[0];
           result = (int)&v42[j];
           if ( v8.n64_f32[0] > 1.0 )
             v27 = 1.0;
@@ -167616,7 +167622,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -167648,7 +167654,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -167680,7 +167686,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -167712,7 +167718,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -167744,7 +167750,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -167949,7 +167955,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -168018,7 +168024,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -168091,7 +168097,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 1036831949;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -168123,7 +168129,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -168155,7 +168161,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -168187,7 +168193,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -168219,7 +168225,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v7; // r0
   
     v2.n64_u32[0] = 0;
-    v2.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+    v2.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
     if ( v1.n64_f32[0] <= 1.0 )
       v4 = v2.n64_f32[0];
     else
@@ -223345,7 +223351,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v5.n64_u32[0] = 0;
       v4.n64_f32[0] = -v4.n64_f32[0];
-      v4.n64_u32[0] = vmax_f32(v4, v5).n64_u32[0];
+      v4.n64_u32[0] = vmax_f32_v2(v4, v5).n64_u32[0];
     }
     if ( a3 )
       *a3 = v4.n64_u32[0];
@@ -253175,8 +253181,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5.n64_u32[0] = 981668463;
     v4.n64_u32[0] = *((_DWORD *)v16 + 13);
     v6.n64_u32[0] = *((_DWORD *)v16 + 12);
-    LODWORD(v19) = vmax_f32(v4, v5).n64_u32[0];
-    LODWORD(v20) = vmax_f32(v6, v5).n64_u32[0];
+    LODWORD(v19) = vmax_f32_v2(v4, v5).n64_u32[0];
+    LODWORD(v20) = vmax_f32_v2(v6, v5).n64_u32[0];
     v21 = 0.0;
     v22 = 1.0 - *((float *)v16 + 7);
     v23 = 0.0;
@@ -258803,7 +258809,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v30 = (float)(v127 * MEMORY[0xB3B974]) - (float)(MEMORY[0xB3B97C] * v125);
     v31 = (float)(v126 * MEMORY[0xB3B97C]) - (float)(v127 * MEMORY[0xB3B978]);
     v32 = (float)(MEMORY[0xB3B978] * v125) - (float)(v126 * MEMORY[0xB3B974]);
-    v33 = (float)((float)(v29 + (float)((float)(v28 - v29) * vmax_f32(v8, v9).n64_f32[0])) * 0.0005) * flt_60C5E314;
+    v33 = (float)((float)(v29 + (float)((float)(v28 - v29) * vmax_f32_v2(v8, v9).n64_f32[0])) * 0.0005) * flt_60C5E314;
     v34 = v27 + (float)((float)(v33 * (float)(flt_60C5E318 * 30.0)) * v11);
     if ( v29 < v34 )
       v29 = v34;
@@ -259277,7 +259283,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v55 = (unsigned __int8 *)RenderParams_defaultInit((int)&v81);
     v85 = 2;
     LODWORD(v82) &= ~1u;
-    BYTE2(v81) = 0;
+    *(uint8_t *)((uint8_t *)&(v81) + 2) = 0;
     RenderParams_updateFromModel(v55, a1);
     if ( v79 >= 1 )
     {
@@ -284866,7 +284872,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4.n64_u32[0] = 1184645120;
     v34 = (float *)(*(_DWORD *)(a1 + 568) + 4 * v27);
     v3.n64_f32[0] = *(v34 - 1) + 500.0;
-    *(_DWORD *)v34 = vmax_f32(v3, v4).n64_u32[0];
+    *(_DWORD *)v34 = vmax_f32_v2(v3, v4).n64_u32[0];
     v44 = *v5;
     Shadow_Map_ref();
     v42 = 12321336;
@@ -309312,8 +309318,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14[2] = (unsigned __int8 *)256;
     v15 = MEMORY[0xB3BA34];
     LOBYTE(v12) = HIBYTE(a3);
-    BYTE1(v12) = BYTE2(a3);
-    BYTE2(v12) = BYTE1(a3);
+    *(uint8_t *)((uint8_t *)&(v12) + 1) = BYTE2(a3);
+    *(uint8_t *)((uint8_t *)&(v12) + 2) = BYTE1(a3);
     HIBYTE(v12) = a3;
     LOBYTE(v13) = 0;
     sub_608FDFB8((int)v14, &v12, 4);
@@ -322945,7 +322951,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v6.n64_u32[0] = 0;
         v5.n64_f32[0] = v5.n64_f32[0] - v4.n64_f32[0];
-        *(_DWORD *)(a1 + 48) = vmax_f32(v5, v6).n64_u32[0];
+        *(_DWORD *)(a1 + 48) = vmax_f32_v2(v5, v6).n64_u32[0];
       }
     }
     result = *(_DWORD *)(a1 + 20);
@@ -322970,7 +322976,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v6.n64_u32[0] = 0;
         v4.n64_f32[0] = v11 - v4.n64_f32[0];
-        *(_DWORD *)(a1 + 44) = vmax_f32(v4, v6).n64_u32[0];
+        *(_DWORD *)(a1 + 44) = vmax_f32_v2(v4, v6).n64_u32[0];
         return result;
       }
       *(_DWORD *)(a1 + 44) = 0;
@@ -323057,7 +323063,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           goto LABEL_83;
         case 1:
           v4.n64_f32[0] = *(float *)&v29 * *(float *)(a1 + 36);
-          v4.n64_u64[0] = vmax_f32(v4, v7).n64_u64[0];
+          v4.n64_u64[0] = vmax_f32_v2(v4, v7).n64_u64[0];
           *(_DWORD *)(a1 + 32) = v4.n64_u32[0];
           goto LABEL_82;
         case 2:

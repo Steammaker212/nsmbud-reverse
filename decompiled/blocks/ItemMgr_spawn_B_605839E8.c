@@ -42,7 +42,7 @@ void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8
 /* line: 19, address: 0x60583ac0 */       v12[5] = a2[1];
 /* line: 20, address: 0x60583ac8 */       v12[6] = a2[2];
 /* line: 21, address: 0x60583ad0 */       LOWORD(v12[8]) = a5;
-/* line: 22, address: 0x60583adc */       BYTE2(v12[8]) = 0;
+/* line: 22, address: 0x60583adc */       *(uint8_t *)((uint8_t *)&(v12[8]) + 2) = 0;
 /* line: 23, address: 0x60583ae0 */       v12[10] = 0;
 /* line: 24, address: 0x60583ae8 */       v9 = ActorMgr__create(MEMORY[0xC7B400], (int)v12, 0);
 /* line: 25, address: 0x60583afc */       if ( _cxa_guard_acquire_0(13087588) )

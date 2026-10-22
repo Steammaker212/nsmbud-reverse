@@ -85,7 +85,7 @@ int __fastcall sub_60460408(int a1, int a2, int a3, int a4);
 /* line: 62, address: 0x60460478 */   if ( v4.n64_f32[0] < 1.0 )
 /* line: 63 */   {
 /* line: 64, address: 0x60460480 */     v4.n64_f32[0] = v4.n64_f32[0] + 0.1;
-/* line: 65, address: 0x60460484 */     v9 = vmin_f32(v4, v5).n64_u32[0];
+/* line: 65, address: 0x60460484 */     v9 = vmin_f32_v2(v4, v5).n64_u32[0];
 /* line: 66, address: 0x60460488 */     *(_DWORD *)(a1 + 144) = v9;
 /* line: 67, address: 0x6046048c */     *(_DWORD *)(a1 + 148) = v9;
 /* line: 68, address: 0x60460490 */     *(_DWORD *)(a1 + 152) = v9;

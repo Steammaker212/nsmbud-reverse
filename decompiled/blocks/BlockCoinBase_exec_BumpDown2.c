@@ -7,7 +7,7 @@
 /* line: 4 */ 
 /* line: 5, address: 0x605b6b94 */   v2.n64_u32[0] = 2.0;
 /* line: 6, address: 0x605b6ba0 */   v1.n64_f32[0] = *(float *)(a1 + 124) + 0.281;
-/* line: 7, address: 0x605b6ba8 */   *(_DWORD *)(a1 + 124) = vmin_f32(v1, v2).n64_u32[0];
+/* line: 7, address: 0x605b6ba8 */   *(_DWORD *)(a1 + 124) = vmin_f32_v2(v1, v2).n64_u32[0];
 /* line: 8, address: 0x605b6bb8 */   (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 232))(a1, 2);
 /* line: 9, address: 0x605b6bd4 */   *(float *)(a1 + 6796) = *(float *)(a1 + 124) + *(float *)(a1 + 6796);
 /* line: 10, address: 0x605b6bd8 */   CollisionMgr_process((unsigned __int8 *)(a1 + 648));

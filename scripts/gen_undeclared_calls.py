@@ -55,6 +55,12 @@ FN_PTR = re.compile(r"\)\s*\(\s*(sub_[0-9A-Fa-f]{6,8})\s*\)")
 # These are not variables of the program, they are artefacts of how the condition codes were read, so a
 # local declaration is the honest fix -- the value is genuinely used as a boolean at that point.
 FLAGREG = re.compile(r"\b(_[ZNCFV]{1,2})\s*=(?!=)")
+# NEON float min/max helpers. IDA emits `vmin_f32(a, b)` and then reads a member off the RESULT:
+#     v1.n64_u64[0] = vmax_f32(v1, v2).n64_u64[0];
+#     v9 = vmin_f32(v4, v5).n64_u32[0];
+# A member read on a call result requires the call to RETURN a vector, so a macro or an `int`
+# prototype cannot satisfy it -- it needs a typed declaration returning float32x4_t. 222 uses.
+NEON_BINOP = re.compile(r"\b(v(?:min|max|add|sub|mul)(?:q)?_f32)\s*\(")
 
 
 def declared_names(headers_dir, self_name):
@@ -91,7 +97,7 @@ def main(argv):
     have = declared_names(inc, os.path.basename(out))
 
     used = {"nullsub": {}, "algn": {}, "simd": {}, "floats": {}, "str": {},
-            "scoped": {}, "table": {}, "fnptr": {}, "flags": {}}
+            "scoped": {}, "table": {}, "fnptr": {}, "flags": {}, "neon": {}}
     for dp, _, fs in os.walk(root):
         for f in fs:
             if not f.endswith(".c"):
@@ -119,6 +125,8 @@ def main(argv):
                 used["fnptr"][m.group(1)] = used["fnptr"].get(m.group(1), 0) + 1
             for m in FLAGREG.finditer(text):
                 used["flags"][m.group(1)] = used["flags"].get(m.group(1), 0) + 1
+            for m in NEON_BINOP.finditer(text):
+                used["neon"][m.group(1)] = used["neon"].get(m.group(1), 0) + 1
 
     lines = [
         "/* NSMBU Deluxe (Switch) v1.0.0 -- callables and data the corpus uses that no header declared",
@@ -237,10 +245,25 @@ def main(argv):
         lines.append("int %s;  /* %d assignment(s) */" % (name, used["flags"][name]))
         n_flag += 1
 
+    lines += ["", "/* ---- NEON float min/max ----", " * These return a vector, not a scalar: the corpus reads `.n64_u32[0]` off the RESULT, which is only", " * legal if the declaration says so. The operation is lane-wise min/max of two float32x4_t. */"]
+    n_neon = 0
+    for name in sorted(used["neon"]):
+        if name in have:
+            continue
+        # Declared per WIDTH: the same helper is called with float32x2_t in some places and
+        # float32x4_t in others, and C has no overloading. Two distinct names, chosen by the width
+        # the corpus actually passes, keeps both call sites correct without guessing what the
+        # hardware did.
+        lines.append("float32x2_t %s_v2(float32x2_t a, float32x2_t b);  /* %d use(s) */"
+                     % (name, used["neon"][name]))
+        lines.append("float32x4_t %s(float32x4_t a, float32x4_t b);  /* %d use(s) */"
+                     % (name, used["neon"][name]))
+        n_neon += 1
+
     lines += ["", "#endif /* NSMBUDX_UNDECLARED_H */", ""]
 
-    print("declared: nullsub %d, algn %d, simd %d, float %d, str %d, scoped %d, table %d, fnptr %d, flags %d"
-          % (n_null, n_algn, n_simd, n_float, n_str, n_scoped, n_table, n_fnptr, n_flag))
+    print("declared: nullsub %d, algn %d, simd %d, float %d, str %d, scoped %d, table %d, fnptr %d, flags %d, neon %d"
+          % (n_null, n_algn, n_simd, n_float, n_str, n_scoped, n_table, n_fnptr, n_flag, n_neon))
     if write:
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, "w", encoding="utf-8", newline="\n") as fh:

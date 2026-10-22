@@ -17,6 +17,12 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _BYTE *__fastcall sub_60502210(int a1, _DWORD *a2, int a3);
 _DWORD *__fastcall sub_604B63E0(_DWORD *result, int a2, unsigned int a3);
 _DWORD *__fastcall sub_60498EB0(_DWORD *a1);
@@ -11723,7 +11729,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v12 = v1.n64_f32[0];
         sub_604745C0(*(_DWORD *)(a1 + 68), 0);
         v2.n64_u32[0] = 981668463;
-        LODWORD(v13) = vmax_f32(v1, v2).n64_u32[0];
+        LODWORD(v13) = vmax_f32_v2(v1, v2).n64_u32[0];
         switch ( *(_DWORD *)(a1 + 60) )
         {
           case 0:
@@ -52451,7 +52457,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         ++*v4;
         v2.n64_f32[0] = (float)*(unsigned int *)(v5 + v3 + 56);
-        v2.n64_u64[0] = vmin_f32(v2, v1).n64_u64[0];
+        v2.n64_u64[0] = vmin_f32_v2(v2, v1).n64_u64[0];
         v6 = (unsigned int)v2.n64_f32[0];
         if ( (unsigned int)v2.n64_f32[0] >= 2 )
           v6 = 0;
@@ -67346,7 +67352,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(MEMORY[0xC9A1E0] + 696) = 1176256502;
     }
     v1.n64_f32[0] = v1.n64_f32[0] + v5;
-    v1.n64_f32[0] = vmin_f32(v1, v2).n64_f32[0];
+    v1.n64_f32[0] = vmin_f32_v2(v1, v2).n64_f32[0];
     v6 = *(_DWORD *)(a1 + 62844);
     v7 = (int)v1.n64_f32[0];
     if ( (float)(int)v1.n64_f32[0] != v1.n64_f32[0] )
@@ -101472,7 +101478,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(int))(*(_DWORD *)v12 + 96))(v12);
     Table_getEntryById(v5, 14, 0);
     v19[3] = 0;
-    BYTE1(v19[2]) = 0;
+    *(uint8_t *)((uint8_t *)&(v19[2]) + 1) = 0;
     HIWORD(v19[2]) = 0;
     v18[1] = v19;
     strcpy((char *)v19, "G_Place_");
@@ -114613,7 +114619,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v6 )
     {
       v1.n64_u32[0] = 1176256502;
-      v2.n64_f32[0] = vmin_f32(v2, v1).n64_f32[0];
+      v2.n64_f32[0] = vmin_f32_v2(v2, v1).n64_f32[0];
       v22 = 12321336;
       v23 = "ResultFree_BestTime_00";
       MessageQueue_postType3(&v22, v7, 2);
@@ -152153,7 +152159,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v24 = v10 + 8.0;
       v25 = v1;
       LOWORD(v27) = *(unsigned __int8 *)(a1 + 86);
-      BYTE2(v27) = 0;
+      *(uint8_t *)((uint8_t *)&(v27) + 2) = 0;
       v29 = 0;
       return ActorMgr__create(MEMORY[0xC7B400], (int)&v19, 0);
     }
@@ -155476,7 +155482,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2.n64_u32[0] = 4.5;
     v1.n64_f32[0] = *(float *)(a1 + 124) + 0.64;
-    *(_DWORD *)(a1 + 124) = vmin_f32(v1, v2).n64_u32[0];
+    *(_DWORD *)(a1 + 124) = vmin_f32_v2(v1, v2).n64_u32[0];
     CollisionActor__handleSpeed(a1);
     if ( *(_DWORD *)(a1 + 7404) == 1 )
     {
@@ -162858,7 +162864,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(float *)&v25[4] = v16;
         v25[5] = v14;
         LOWORD(v25[7]) = *((unsigned __int8 *)v12 - 7458);
-        BYTE2(v25[7]) = 0;
+        *(uint8_t *)((uint8_t *)&(v25[7]) + 2) = 0;
         v26 = 0;
         ActorMgr__create(MEMORY[0xC7B400], (int)&v24, 0);
         v17 = *v12 - 1;
@@ -162875,7 +162881,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(float *)&v25[4] = v18 + v21;
         v25[5] = v20;
         LOWORD(v25[7]) = *((unsigned __int8 *)v12 - 7458);
-        BYTE2(v25[7]) = 0;
+        *(uint8_t *)((uint8_t *)&(v25[7]) + 2) = 0;
         v26 = 0;
         ActorMgr__create(MEMORY[0xC7B400], (int)&v24, 0);
         result = *v12 - 1;
@@ -162953,7 +162959,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(float *)&v14[5] = v5 + v8;
         v14[6] = v6;
         LOWORD(v14[8]) = *(unsigned __int8 *)(a1 + 86);
-        BYTE2(v14[8]) = 0;
+        *(uint8_t *)((uint8_t *)&(v14[8]) + 2) = 0;
         v14[10] = 0;
         ActorMgr__create(MEMORY[0xC7B400], (int)v14, 0);
         --*(_DWORD *)(a1 + 7544);
@@ -163372,7 +163378,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)&v15[5] = v12;
     v15[6] = v4;
     LOWORD(v15[8]) = *(unsigned __int8 *)(a1 + 86);
-    BYTE2(v15[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v15[8]) + 2) = 0;
     v15[10] = 0;
     ActorMgr__create(MEMORY[0xC7B400], (int)v15, 1);
     result = *v3 - 1;
@@ -164466,7 +164472,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(float *)&v9[5] = v5 + -8.0;
         v9[6] = 1137180672;
         LOWORD(v9[8]) = *(unsigned __int8 *)(a1 + 86);
-        BYTE2(v9[8]) = 0;
+        *(uint8_t *)((uint8_t *)&(v9[8]) + 2) = 0;
         v9[10] = 0;
         ActorMgr__create(MEMORY[0xC7B400], (int)v9, 1);
         sub_60579D4C(a1);
@@ -165780,7 +165786,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v11[5] = v8;
       v11[6] = 0;
       LOWORD(v11[8]) = **(unsigned __int8 **)(a5 + 2212);
-      BYTE2(v11[8]) = 0;
+      *(uint8_t *)((uint8_t *)&(v11[8]) + 2) = 0;
       v11[10] = 0;
       v9 = ActorMgr__create(MEMORY[0xC7B400], (int)v11, 1);
       if ( v9 )
@@ -166003,7 +166009,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8[5] = a2[1];
     v8[6] = a2[2];
     LOWORD(v8[8]) = 0;
-    BYTE2(v8[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v8[8]) + 2) = 0;
     v8[10] = 0;
     return ActorMgr__create(MEMORY[0xC7B400], (int)v8, 0);
   }
@@ -166745,7 +166751,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v12[5] = a2[1];
         v12[6] = a2[2];
         LOWORD(v12[8]) = a5;
-        BYTE2(v12[8]) = 0;
+        *(uint8_t *)((uint8_t *)&(v12[8]) + 2) = 0;
         v12[10] = 0;
         v9 = ActorMgr__create(MEMORY[0xC7B400], (int)v12, 0);
         if ( _cxa_guard_acquire_0(13087588) )
@@ -167409,7 +167415,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)&v13[5] = v9 + 8.0;
     v13[6] = 0;
     LOWORD(v13[8]) = 0;
-    BYTE2(v13[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v13[8]) + 2) = 0;
     v13[10] = 0;
     return ActorMgr__create(MEMORY[0xC7B400], (int)v13, 0);
   }
@@ -167450,8 +167456,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)&v14[5] = v12;
     v14[6] = 1141473280;
     LOWORD(v14[8]) = 0;
-    BYTE2(v14[8]) = 0;
-    BYTE1(v14[9]) = a6;
+    *(uint8_t *)((uint8_t *)&(v14[8]) + 2) = 0;
+    *(uint8_t *)((uint8_t *)&(v14[9]) + 1) = a6;
     v14[10] = 0;
     return ActorMgr__create(MEMORY[0xC7B400], (int)v14, 1);
   }
@@ -167482,7 +167488,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8[5] = *(_DWORD *)(a2 + 4);
     v8[6] = *(_DWORD *)(a2 + 8);
     LOWORD(v8[8]) = 0;
-    BYTE2(v8[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v8[8]) + 2) = 0;
     v8[10] = 0;
     return ActorMgr__create(MEMORY[0xC7B400], (int)v8, 0);
   }
@@ -167570,7 +167576,7 @@ static inline unsigned int uxtb16(unsigned int x)
             *(float *)&v18[5] = v3;
             v18[6] = 0;
             LOWORD(v18[8]) = 0;
-            BYTE2(v18[8]) = 0;
+            *(uint8_t *)((uint8_t *)&(v18[8]) + 2) = 0;
             v18[10] = 0;
             ActorMgr__create(MEMORY[0xC7B400], (int)v18, 1);
           }
@@ -169468,8 +169474,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v20[6] = v4;
     LOWORD(v20[8]) = *(unsigned __int8 *)(a1 + 86);
     LOBYTE(v20[9]) = 0;
-    BYTE1(v20[9]) = *(_BYTE *)(a1 + 29);
-    BYTE2(v20[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v20[9]) + 1) = *(_BYTE *)(a1 + 29);
+    *(uint8_t *)((uint8_t *)&(v20[8]) + 2) = 0;
     v20[10] = 0;
     result = (int)ActorMgr__create(MEMORY[0xC7B400], (int)v20, 0);
     if ( !result )
@@ -177053,7 +177059,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)&v10[5] = v4 + 16.0;
     v10[6] = v2;
     LOWORD(v10[8]) = *(unsigned __int8 *)(a1 + 86);
-    BYTE2(v10[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v10[8]) + 2) = 0;
     v10[10] = 0;
     v5 = ActorMgr__create(MEMORY[0xC7B400], (int)v10, 1);
     if ( v5 )
@@ -177114,8 +177120,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)&v11[5] = v6;
     v11[6] = v2;
     LOWORD(v11[8]) = *(unsigned __int8 *)(a1 + 86);
-    BYTE2(v11[8]) = 0;
-    BYTE1(v11[9]) = *(_BYTE *)(a1 + 29);
+    *(uint8_t *)((uint8_t *)&(v11[8]) + 2) = 0;
+    *(uint8_t *)((uint8_t *)&(v11[9]) + 1) = *(_BYTE *)(a1 + 29);
     v12 = 0;
     v7 = ActorMgr__create(MEMORY[0xC7B400], (int)v11, 1);
     if ( v7 )
@@ -177142,8 +177148,8 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)&v11[5] = v6;
     v11[6] = v2;
     LOWORD(v11[8]) = *(unsigned __int8 *)(a1 + 86);
-    BYTE2(v11[8]) = 0;
-    BYTE1(v11[9]) = *(_BYTE *)(a1 + 29);
+    *(uint8_t *)((uint8_t *)&(v11[8]) + 2) = 0;
+    *(uint8_t *)((uint8_t *)&(v11[9]) + 1) = *(_BYTE *)(a1 + 29);
     v12 = 0;
     result = ActorMgr__create(MEMORY[0xC7B400], (int)v11, 1);
     v10 = result;
@@ -177193,7 +177199,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10[5] = v3;
     v10[6] = v2;
     LOWORD(v10[8]) = *(unsigned __int8 *)(a1 + 86);
-    BYTE2(v10[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v10[8]) + 2) = 0;
     v10[10] = 0;
     v5 = ActorMgr__create(MEMORY[0xC7B400], (int)v10, 1);
     if ( v5 )
@@ -177248,7 +177254,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7[5] = v3;
     v7[6] = v2;
     LOWORD(v7[8]) = *(unsigned __int8 *)(a1 + 86);
-    BYTE2(v7[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v7[8]) + 2) = 0;
     v7[10] = 0;
     result = ActorMgr__create(MEMORY[0xC7B400], (int)v7, 1);
     v6 = result;
@@ -178442,7 +178448,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           v4.n64_u32[0] = 4.0;
           v8 = *(_DWORD *)(a1 + 6260);
-          LODWORD(v9) = vmin_f32(v3, v4).n64_u32[0];
+          LODWORD(v9) = vmin_f32_v2(v3, v4).n64_u32[0];
         }
         else
         {
@@ -178533,7 +178539,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v9 = 357913941;
         *(_DWORD *)(a1 + 80) = result;
         *(_DWORD *)(a1 + 156) = 0;
-        LODWORD(v10) = vmin_f32(v2, v3).n64_u32[0];
+        LODWORD(v10) = vmin_f32_v2(v2, v3).n64_u32[0];
         if ( result == 1 )
           v9 = -357913941;
         *(_DWORD *)(a1 + 160) = v9;
@@ -180743,8 +180749,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v2.n64_f32[0] = v18;
     a1[76] = v21;
     a1[77] = v20;
-    *((_DWORD *)a1 + 78) = vmax_f32(v1, v3).n64_u32[0];
-    *((_DWORD *)a1 + 79) = vmax_f32(v2, v3).n64_u32[0];
+    *((_DWORD *)a1 + 78) = vmax_f32_v2(v1, v3).n64_u32[0];
+    *((_DWORD *)a1 + 79) = vmax_f32_v2(v2, v3).n64_u32[0];
     v22 = MEMORY[0xC88234];
     if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], (int)(a1 + 47))
       && !ActiveColliderMgr_isInCreateList(v22, (int)(a1 + 47)) )
@@ -185570,7 +185576,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2.n64_u32[0] = -8.0;
     v1.n64_f32[0] = *(float *)(result + 6876) + (float)(*(float *)(result + 6868) * -0.5);
-    v3 = vmax_f32(v1, v2).n64_f32[0];
+    v3 = vmax_f32_v2(v1, v2).n64_f32[0];
     *(float *)(result + 6876) = v3;
     v4 = *(float *)(result + 112);
     v5 = *(_DWORD *)(result + 72304) + MEMORY[0xCAFEC4];
@@ -185943,7 +185949,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // r3
     __int64 v9; // r0
   
-    WORD2(a1) = 6786;
+    *(uint16_t *)((uint8_t *)&(a1) + 2 * 2) = 6786;
     HIWORD(a1) = 1;
     v2 = (unsigned __int8 *)(a1 + HIDWORD(a1));
     v1 = *(unsigned __int8 *)(a1 + HIDWORD(a1));
@@ -190104,7 +190110,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2.n64_u32[0] = 0;
       v82 = v82 + -8.0;
       v1.n64_f32[0] = v37 + -1.0;
-      v1.n64_u64[0] = vmax_f32(v1, v2).n64_u64[0];
+      v1.n64_u64[0] = vmax_f32_v2(v1, v2).n64_u64[0];
       v73 = v1.n64_f32[0];
       (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v7 + 60))(**v7, &v75);
       (*(void (__fastcall **)(_DWORD, int *))(*(_DWORD *)**v7 + 68))(**v7, &v72);
@@ -190191,7 +190197,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v3.n64_u32[0] = 0;
         v82 = v82 - (float)((float)(*v56 * 0.5) * 16.0);
         v1.n64_f32[0] = v71 - v1.n64_f32[0];
-        LODWORD(v73) = vmax_f32(v1, v3).n64_u32[0];
+        LODWORD(v73) = vmax_f32_v2(v1, v3).n64_u32[0];
         (*(void (__fastcall **)(_DWORD, float *))(*(_DWORD *)**v40 + 60))(**v40, &v75);
         (*(void (__fastcall **)(_DWORD, int *))(*(_DWORD *)**v40 + 68))(**v40, &v72);
         return ModelWrapper_updateModel(*v40);
@@ -195664,7 +195670,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10[5] = v4;
     v10[6] = v9;
     LOWORD(v10[8]) = 0;
-    BYTE2(v10[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v10[8]) + 2) = 0;
     v10[10] = 0.0;
     return ActorMgr__create(MEMORY[0xC7B400], (int)v10, 1);
   }
@@ -195730,7 +195736,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v21[5] = v6;
         v21[6] = v12;
         LOWORD(v21[8]) = 0;
-        BYTE2(v21[8]) = 0;
+        *(uint8_t *)((uint8_t *)&(v21[8]) + 2) = 0;
         v21[10] = 0.0;
         result = ActorMgr__create(MEMORY[0xC7B400], (int)v21, 1);
         v8 = v13;
@@ -195800,7 +195806,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(float *)&v24[4] = v9;
         v24[5] = v21;
         LOWORD(v24[7]) = 0;
-        BYTE2(v24[7]) = 0;
+        *(uint8_t *)((uint8_t *)&(v24[7]) + 2) = 0;
         v24[9] = 0;
         ActorMgr__create(MEMORY[0xC7B400], v13, 1);
         result = v12 + 1;
@@ -195829,7 +195835,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(float *)&v24[4] = v9;
           v24[5] = v21;
           LOWORD(v24[7]) = 0;
-          BYTE2(v24[7]) = 0;
+          *(uint8_t *)((uint8_t *)&(v24[7]) + 2) = 0;
           v24[9] = 0;
           result = ActorMgr__create(MEMORY[0xC7B400], v13, 1);
           v10 = (float *)v13;
@@ -196123,7 +196129,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v15[4] = v7;
         v15[5] = -32.0;
         LOWORD(v15[7]) = 0;
-        BYTE2(v15[7]) = 0;
+        *(uint8_t *)((uint8_t *)&(v15[7]) + 2) = 0;
         v16 = 0;
         goto LABEL_9;
       case 0x10:
@@ -196147,7 +196153,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v15[4] = v9 + v12;
         v15[5] = 0.0;
         LOWORD(v15[7]) = 0;
-        BYTE2(v15[7]) = 0;
+        *(uint8_t *)((uint8_t *)&(v15[7]) + 2) = 0;
         v16 = 0;
   LABEL_9:
         result = (float *)ActorMgr__create(MEMORY[0xC7B400], (int)&v14, 0);
@@ -196569,7 +196575,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2.n64_u32[0] = 2.0;
     v1.n64_f32[0] = *(float *)(a1 + 6812) + *(float *)(a1 + 124);
-    *(_DWORD *)(a1 + 124) = vmin_f32(v1, v2).n64_u32[0];
+    *(_DWORD *)(a1 + 124) = vmin_f32_v2(v1, v2).n64_u32[0];
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 232))(a1, 2);
     *(float *)(a1 + 108) = *(float *)(a1 + 108) + *(float *)(a1 + 120);
     *(float *)(a1 + 112) = *(float *)(a1 + 112) + *(float *)(a1 + 124);
@@ -196774,7 +196780,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2.n64_u32[0] = 2.0;
     v1.n64_f32[0] = *(float *)(a1 + 124) + 0.281;
-    *(_DWORD *)(a1 + 124) = vmin_f32(v1, v2).n64_u32[0];
+    *(_DWORD *)(a1 + 124) = vmin_f32_v2(v1, v2).n64_u32[0];
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 232))(a1, 2);
     *(float *)(a1 + 6796) = *(float *)(a1 + 124) + *(float *)(a1 + 6796);
     CollisionMgr_process((unsigned __int8 *)(a1 + 648));
@@ -198385,7 +198391,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)&v20[5] = v6;
     v20[6] = 0;
     LOWORD(v20[8]) = 0;
-    BYTE2(v20[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v20[8]) + 2) = 0;
     v20[10] = 0;
     ActorMgr__create(MEMORY[0xC7B400], (int)v20, 0);
     v14 = *(char *)(a2 + 11);
@@ -198581,8 +198587,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v62[2] = *(float *)(a2 + 8);
       LODWORD(v62[3]) = (unsigned __int16)v7;
       LOBYTE(v62[4]) = v10;
-      BYTE1(v62[4]) = v12;
-      BYTE2(v62[4]) = *(_BYTE *)(a2 + 15);
+      *(uint8_t *)((uint8_t *)&(v62[4]) + 1) = v12;
+      *(uint8_t *)((uint8_t *)&(v62[4]) + 2) = *(_BYTE *)(a2 + 15);
       v62[5] = v11;
       sub_605B9974(a1, v62);
       return 0;
@@ -198664,7 +198670,7 @@ static inline unsigned int uxtb16(unsigned int x)
       LOBYTE(v31) = *(_BYTE *)(a2 + 12);
   LABEL_46:
       LOWORD(v62[2]) = (unsigned __int8)v31;
-      BYTE2(v62[2]) = *(_BYTE *)(a2 + 15);
+      *(uint8_t *)((uint8_t *)&(v62[2]) + 2) = *(_BYTE *)(a2 + 15);
       HIBYTE(v62[2]) = v54;
       LOWORD(v62[3]) = 0;
       SE_OBJ_BLOCK_BREAK_ref_2(a1, (int)v62, 0);
@@ -198689,7 +198695,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v62[0] = v5;
             v62[1] = v6;
             LOBYTE(v62[2]) = v31;
-            BYTE1(v62[2]) = v54;
+            *(uint8_t *)((uint8_t *)&(v62[2]) + 1) = v54;
             HIWORD(v62[2]) = 0;
             SE_OBJ_BLOCK_BREAK_ref_3(a1, v62, 0, 0);
             return v16;
@@ -198829,7 +198835,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v16 = 1;
     v62[6] = 4.0;
     LOWORD(v62[8]) = 0;
-    BYTE2(v62[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v62[8]) + 2) = 0;
     v62[10] = 0.0;
     v48 = ActorMgr__create(MEMORY[0xC7B400], (int)v62, 1);
     if ( v48 )
@@ -199094,7 +199100,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(float *)&v6[5] = v5;
       v6[6] = 1137180672;
       LOWORD(v6[8]) = 0;
-      BYTE2(v6[8]) = 0;
+      *(uint8_t *)((uint8_t *)&(v6[8]) + 2) = 0;
       v6[10] = 0;
       return ActorMgr__create(MEMORY[0xC7B400], (int)v6, 1);
     }
@@ -199314,7 +199320,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v13[5] = v7;
     v13[6] = v8;
     LOWORD(v13[8]) = 0;
-    BYTE2(v13[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v13[8]) + 2) = 0;
     v13[10] = 0.0;
     return ActorMgr__create(MEMORY[0xC7B400], (int)v13, 1);
   }
@@ -199351,7 +199357,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v14[5] = v8;
     v14[6] = v9;
     LOWORD(v14[8]) = 0;
-    BYTE2(v14[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v14[8]) + 2) = 0;
     v14[10] = 0.0;
     return ActorMgr__create(MEMORY[0xC7B400], (int)v14, 1);
   }
@@ -205500,7 +205506,7 @@ static inline unsigned int uxtb16(unsigned int x)
           else if ( v46 | (v55 < 1) )
           {
   LABEL_41:
-            v56 = vmin_f32(v44, v1).n64_f32[0];
+            v56 = vmin_f32_v2(v44, v1).n64_f32[0];
             v57 = *(unsigned __int8 *)(MEMORY[0xC9A684] + 16);
             v58 = (float)(1.0 - v56) * (float)(1.0 - v56);
             if ( v57 == 2 )
@@ -206355,7 +206361,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v194 = *(float *)v33;
           v195 = *(float *)(v33 + 4);
           v196 = *(_DWORD *)(v33 + 8);
-          v1.n64_u32[0] = vmax_f32(v1, v2).n64_u32[0];
+          v1.n64_u32[0] = vmax_f32_v2(v1, v2).n64_u32[0];
           v34 = *v180;
           if ( *v179 > v8 )
             v34 = (int *)((char *)v34 + v7);
@@ -215414,7 +215420,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2.n64_u32[0] = 0.5;
     v1.n64_f32[0] = *(float *)(a1 + 144) + 0.025;
-    v4 = vmin_f32(v1, v2).n64_f32[0];
+    v4 = vmin_f32_v2(v1, v2).n64_f32[0];
     *(float *)(a1 + 144) = v4;
     *(float *)(a1 + 148) = v4;
     *(float *)(a1 + 152) = v4;
@@ -216819,7 +216825,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3.n64_u32[0] = 4.0;
     if ( v2.n64_f32[0] <= 0.0 )
       v2.n64_f32[0] = -v2.n64_f32[0];
-    LODWORD(v31) = vmin_f32(v2, v3).n64_u32[0];
+    LODWORD(v31) = vmin_f32_v2(v2, v3).n64_u32[0];
     if ( v25 <= 0.0 )
       v25 = -v25;
     *(float *)(a1 + 120) = v26 * (float)(v25 * v31);
@@ -220117,7 +220123,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v4.n64_u32[0] = 4.0;
     *(_DWORD *)(a1 + 132) = 0;
-    *(float *)(a1 + 120) = vmin_f32(v3, v4).n64_f32[0] * (float)*(char *)(*(_DWORD *)(a1 + 80) + 11557196);
+    *(float *)(a1 + 120) = vmin_f32_v2(v3, v4).n64_f32[0] * (float)*(char *)(*(_DWORD *)(a1 + 80) + 11557196);
     *(_DWORD *)(a1 + 124) = 1069547520;
     *(_DWORD *)(a1 + 128) = 0;
     *(_DWORD *)(a1 + 8000) = a2;
@@ -228867,7 +228873,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = -v9;
     v1.n64_u32[0] = 0.75;
     v2.n64_f32[0] = (float)(v9 * 0.0625) + 0.125;
-    v1.n64_u32[0] = vmin_f32(v2, v1).n64_u32[0];
+    v1.n64_u32[0] = vmin_f32_v2(v2, v1).n64_u32[0];
     if ( v8 >= 0.0 )
       v10 = v1.n64_f32[0];
     else
@@ -228983,7 +228989,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v16 = *(_DWORD *)(v5 + 6264);
           v15 = (int *)(v5 + 6264);
           *v15 = v16 | 2;
-          *(v15 - 1544) = vmin_f32(v3, (float32x2_t)__PAIR64__(LODWORD(v13), 3.0)).n64_u32[0];
+          *(v15 - 1544) = vmin_f32_v2(v3, (float32x2_t)__PAIR64__(LODWORD(v13), 3.0)).n64_u32[0];
           *(v15 - 1524) = v14;
           v15[164] = 5;
           Object_releaseIfNotSentinel(v15 - 50);
@@ -234570,8 +234576,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v12[6] = a2[2];
     LOWORD(v12[8]) = 0;
     LOBYTE(v12[9]) = 0;
-    BYTE1(v12[9]) = a4;
-    BYTE2(v12[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v12[9]) + 1) = a4;
+    *(uint8_t *)((uint8_t *)&(v12[8]) + 2) = 0;
     v12[10] = 0;
     v8 = ActorMgr__create(MEMORY[0xC7B400], (int)v12, 1);
     result = _cxa_guard_acquire_0(13311496);
@@ -237656,7 +237662,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v20 = v11 | (v10 << 6) & 0x4000000 | 0x10;
           v21 = 16;
           LOBYTE(v29) = *v16;
-          BYTE1(v29) = *(_BYTE *)(a1 + 29);
+          *(uint8_t *)((uint8_t *)&(v29) + 1) = *(_BYTE *)(a1 + 29);
           v22 = *(_DWORD *)(a1 + 8);
           v23 = Profile__get(v14);
           v24 = v13;
@@ -237674,7 +237680,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v20 = v11;
           v21 = 0;
           LOBYTE(v29) = *v16;
-          BYTE1(v29) = *(_BYTE *)(a1 + 29);
+          *(uint8_t *)((uint8_t *)&(v29) + 1) = *(_BYTE *)(a1 + 29);
           v22 = *(_DWORD *)(a1 + 8);
           v23 = Profile__get(v15);
           v24 = v13;

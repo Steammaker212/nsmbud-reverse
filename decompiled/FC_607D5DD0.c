@@ -100,7 +100,7 @@ int __fastcall sub_607D5DD0(int a1);
 /* line: 77, address: 0x607d5ee0 */       if ( !v20 && !v19 )
 /* line: 78 */       {
 /* line: 79, address: 0x607d5ee4 */         v1.n64_f32[0] = v1.n64_f32[0] - v16;
-/* line: 80, address: 0x607d5ee8 */         v1.n64_u64[0] = vmax_f32(v1, v2).n64_u64[0];
+/* line: 80, address: 0x607d5ee8 */         v1.n64_u64[0] = vmax_f32_v2(v1, v2).n64_u64[0];
 /* line: 81, address: 0x607d5eec */         v1.n64_f32[0] = v1.n64_f32[0] / v14;
 /* line: 82, address: 0x607d5ef4 */         v21 = -v1.n64_f32[0];
 /* line: 83, address: 0x607d5efc */         if ( v1.n64_f32[0] > 0.0 )

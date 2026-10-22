@@ -37,7 +37,7 @@ int __fastcall sub_6079EE98(int *a1);
 /* line: 14, address: 0x6079eec8 */   v1.n64_u32[0] = 1.0;
 /* line: 15, address: 0x6079eecc */   *v4 = v5;
 /* line: 16, address: 0x6079eed4 */   v2.n64_f32[0] = (float)v5 / 30.0;
-/* line: 17, address: 0x6079eedc */   *(v4 - 2) = vmin_f32(v2, v1).n64_u32[0];
+/* line: 17, address: 0x6079eedc */   *(v4 - 2) = vmin_f32_v2(v2, v1).n64_u32[0];
 /* line: 18, address: 0x6079eee0 */   v10[0] = 0;
 /* line: 19, address: 0x6079eee8 */   v9[0] = 16384000;
 /* line: 20, address: 0x6079eef0 */   sub_6083224C(v4 - 16, v10, v9);

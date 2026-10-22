@@ -138,6 +138,17 @@ def main():
     for tag, target in (("1k/9", CLEAN), ("1l/9", PERFN), ("1m/9", os.path.join(REPO, "decompiled"))):
         run("%s operator zero-arg" % tag,
             [sys.executable, "scripts/fix_operator_zero_arg.py", target, "--write"])
+    # IDA's byte-extract macros are used as STORE targets 186 times (`BYTE2(v8[8]) = 0`). A
+    # function-like macro is not an lvalue, so those need an explicit dereferencing cast.
+    for tag, target in (("1n/9", CLEAN), ("1o/9", PERFN), ("1p/9", os.path.join(REPO, "decompiled"))):
+        run("%s byte-extract stores" % tag,
+            [sys.executable, "scripts/fix_byte_assign.py", target, "--write"])
+    # vmin_f32/vmax_f32 take a quadword at most sites but a doubleword at some. C cannot overload, so
+    # the narrow call sites are routed to the _v2 declarations -- only where the argument width is
+    # READ FROM A DECLARATION, never guessed.
+    for tag, target in (("1q/9", CLEAN), ("1r/9", PERFN), ("1s/9", os.path.join(REPO, "decompiled"))):
+        run("%s NEON width" % tag,
+            [sys.executable, "scripts/fix_neon_width.py", target, "--write"])
 
     # 2. assemble corpus
     run("2/7 build corpus", [sys.executable, "scripts/make_decompiled_corpus.py"])

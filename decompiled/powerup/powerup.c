@@ -17,6 +17,12 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _DWORD *__fastcall sub_604551B4(int a1);
 _DWORD *__fastcall sub_60459270(_DWORD *result);
 _BYTE *__fastcall sub_60455400(int a1);
@@ -11263,7 +11269,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v4.n64_f32[0] < 1.0 )
     {
       v4.n64_f32[0] = v4.n64_f32[0] + 0.1;
-      v9 = vmin_f32(v4, v5).n64_u32[0];
+      v9 = vmin_f32_v2(v4, v5).n64_u32[0];
       *(_DWORD *)(a1 + 144) = v9;
       *(_DWORD *)(a1 + 148) = v9;
       *(_DWORD *)(a1 + 152) = v9;
@@ -14884,7 +14890,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v12[5] = a2[1];
       v12[6] = a2[2];
       LOWORD(v12[8]) = a5;
-      BYTE2(v12[8]) = 0;
+      *(uint8_t *)((uint8_t *)&(v12[8]) + 2) = 0;
       v12[10] = 0;
       return (unsigned int)ActorMgr__create(MEMORY[0xC7B400], (int)v12, 0);
     }
@@ -15044,7 +15050,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[5] = a2[1];
     v4[6] = a2[2];
     LOWORD(v4[8]) = 0;
-    BYTE2(v4[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v4[8]) + 2) = 0;
     v4[10] = 0;
     return ActorMgr__create(MEMORY[0xC7B400], (int)v4, 0);
   }
@@ -15065,7 +15071,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6[5] = a2[1];
     v6[6] = a2[2];
     LOWORD(v6[8]) = 0;
-    BYTE2(v6[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v6[8]) + 2) = 0;
     v6[10] = 0;
     return ActorMgr__create(MEMORY[0xC7B400], (int)v6, 0);
   }
@@ -15089,7 +15095,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(float *)&v5[5] = v2 + 8.0;
     v5[6] = 1143111680;
     LOWORD(v5[8]) = 0;
-    BYTE2(v5[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v5[8]) + 2) = 0;
     v5[10] = 0;
     return ActorMgr__create(MEMORY[0xC7B400], (int)v5, 0);
   }

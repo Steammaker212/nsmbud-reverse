@@ -709,4 +709,18 @@ extern uint32_t RollingHill_typeInfos[];  /* 5 reference(s) */
 int _CF;  /* 5 assignment(s) */
 int _ZF;  /* 20 assignment(s) */
 
+/* ---- NEON float min/max ----
+ * These return a vector, not a scalar: the corpus reads `.n64_u32[0]` off the RESULT, which is only
+ * legal if the declaration says so. The operation is lane-wise min/max of two float32x4_t. */
+float32x2_t vadd_f32_v2(float32x2_t a, float32x2_t b);  /* 65 use(s) */
+float32x4_t vadd_f32(float32x4_t a, float32x4_t b);  /* 65 use(s) */
+float32x2_t vaddq_f32_v2(float32x2_t a, float32x2_t b);  /* 375 use(s) */
+float32x4_t vaddq_f32(float32x4_t a, float32x4_t b);  /* 375 use(s) */
+float32x2_t vmin_f32_v2(float32x2_t a, float32x2_t b);  /* 10 use(s) */
+float32x4_t vmin_f32(float32x4_t a, float32x4_t b);  /* 10 use(s) */
+float32x2_t vmulq_f32_v2(float32x2_t a, float32x2_t b);  /* 750 use(s) */
+float32x4_t vmulq_f32(float32x4_t a, float32x4_t b);  /* 750 use(s) */
+float32x2_t vsubq_f32_v2(float32x2_t a, float32x2_t b);  /* 106 use(s) */
+float32x4_t vsubq_f32(float32x4_t a, float32x4_t b);  /* 106 use(s) */
+
 #endif /* NSMBUDX_UNDECLARED_H */

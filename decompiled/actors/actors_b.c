@@ -19,6 +19,12 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _DWORD *__fastcall ModelWrapper_ctor(_DWORD *a1, int a2, int a3, int a4, int a5, int a6, int a7);
 _DWORD *__fastcall ModelWrapper_setup(_DWORD *result, int a2, int a3, int a4);
 int *__fastcall sub_603405F4(int a1);
@@ -832,7 +838,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 || (result &= 0x440000u) == 0 )
               {
                 v3.n64_u32[0] = 1.5;
-                *(float *)(v6 + 108) = *(float *)(v6 + 108) + (float)(v12 * vmin_f32(v2, v3).n64_f32[0]);
+                *(float *)(v6 + 108) = *(float *)(v6 + 108) + (float)(v12 * vmin_f32_v2(v2, v3).n64_f32[0]);
               }
             }
           }
@@ -3120,7 +3126,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4[5] = a1[28];
     v4[6] = a1[29];
     LOWORD(v4[8]) = 0;
-    BYTE2(v4[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v4[8]) + 2) = 0;
     v4[10] = 0;
     v2 = ActorMgr__create(MEMORY[0xC7B400], (int)v4, 0);
     result = _cxa_guard_acquire_0(13087588);
@@ -3169,7 +3175,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4[5] = a1[28];
     v4[6] = a1[29];
     LOWORD(v4[8]) = 0;
-    BYTE2(v4[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v4[8]) + 2) = 0;
     v4[10] = 0;
     v2 = ActorMgr__create(MEMORY[0xC7B400], (int)v4, 0);
     result = _cxa_guard_acquire_0(13087588);
@@ -3217,7 +3223,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4[5] = a1[28];
     v4[6] = a1[29];
     LOWORD(v4[8]) = 0;
-    BYTE2(v4[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v4[8]) + 2) = 0;
     v4[10] = 0;
     v2 = ActorMgr__create(MEMORY[0xC7B400], (int)v4, 0);
     result = _cxa_guard_acquire_0(13087588);
@@ -4693,7 +4699,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v2.n64_u32[0] = 1.25;
         v1.n64_f32[0] = v1.n64_f32[0] + 0.015625;
-        v10 = vmin_f32(v1, v2).n64_u32[0];
+        v10 = vmin_f32_v2(v1, v2).n64_u32[0];
         *((_DWORD *)a1 + 36) = v10;
         *((_DWORD *)a1 + 37) = v10;
         *((_DWORD *)a1 + 38) = v10;
@@ -5077,7 +5083,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v13[5] = *(float *)(a1 + 112);
     v13[6] = *(float *)(a1 + 116);
     LOWORD(v14) = 0;
-    BYTE2(v14) = 0;
+    *(uint8_t *)((uint8_t *)&(v14) + 2) = 0;
     v16 = 0;
     ActorMgr__create(MEMORY[0xC7B400], (int)v13, 0);
     return 1;
@@ -6193,7 +6199,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4[5] = a1[28];
     v4[6] = a1[29];
     LOWORD(v4[8]) = 0;
-    BYTE2(v4[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v4[8]) + 2) = 0;
     v4[10] = 0;
     v2 = ActorMgr__create(MEMORY[0xC7B400], (int)v4, 0);
     result = _cxa_guard_acquire_0(13087588);
@@ -30997,13 +31003,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3.n64_u32[0] = -1061695783;
       v1.n64_f32[0] = v2.n64_f32[0] + *(float *)(a1 + 124);
       v2.n64_u32[0] = 1085787865;
-      v1.n64_u32[0] = vmin_f32(vmax_f32(v1, v3), v2).n64_u32[0];
+      v1.n64_u32[0] = vmin_f32_v2(vmax_f32_v2(v1, v3), v2).n64_u32[0];
     }
     else
     {
       v2.n64_u32[0] = -1061695783;
       v3.n64_u32[0] = 1085787865;
-      v1.n64_u32[0] = vmin_f32(vmax_f32(v1, v2), v3).n64_u32[0];
+      v1.n64_u32[0] = vmin_f32_v2(vmax_f32_v2(v1, v2), v3).n64_u32[0];
     }
     *(_DWORD *)(a1 + 124) = v1.n64_u32[0];
     CollisionActor__handleSpeed(a1);
@@ -37770,7 +37776,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v26 = v17 + v16;
       v27 = v7 < 0.0;
       LOBYTE(v28) = 3;
-      BYTE1(v28) = *(_BYTE *)(a1 + 86);
+      *(uint8_t *)((uint8_t *)&(v28) + 1) = *(_BYTE *)(a1 + 86);
       v29 = 0;
       HIWORD(v28) = 0;
       v30 = 0;
@@ -40918,7 +40924,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[5] = v3;
     v7[6] = 1167867904;
     LOWORD(v7[8]) = 0;
-    BYTE2(v7[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v7[8]) + 2) = 0;
     v7[10] = 0;
     v5 = ActorMgr__create(MEMORY[0xC7B400], (int)v7, 0);
     if ( v5 )
@@ -40970,7 +40976,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v7[5] = v3;
     v7[6] = 1167867904;
     LOWORD(v7[8]) = 0;
-    BYTE2(v7[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v7[8]) + 2) = 0;
     v7[10] = 0;
     v5 = ActorMgr__create(MEMORY[0xC7B400], (int)v7, 0);
     if ( v5 )
@@ -43330,7 +43336,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v1.n64_u32[0] = *(_DWORD *)(a1 + 124);
     v2.n64_u32[0] = -1.0;
-    *(_DWORD *)(a1 + 124) = vmax_f32(v1, v2).n64_u32[0];
+    *(_DWORD *)(a1 + 124) = vmax_f32_v2(v1, v2).n64_u32[0];
     LODWORD(result) = 7776;
     HIDWORD(result) = (*(_DWORD *)(a1 + 2872) & 0x10400) == 1024;
     *(_DWORD *)(a1 + 7776) = HIDWORD(result);
@@ -54654,7 +54660,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v1.n64_f32[0] = *(float *)(a1 + 584) - v23;
       if ( v1.n64_f32[0] <= 0.0 )
         v1.n64_f32[0] = -v1.n64_f32[0];
-      v24 = vmin_f32(v1, v2).n64_f32[0];
+      v24 = vmin_f32_v2(v1, v2).n64_f32[0];
       *(float *)(a1 + 6924) = v24;
       v25 = *(_DWORD *)(a1 + 8);
       v26 = MEMORY[0xC7F530];
@@ -54949,7 +54955,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v1.n64_f32[0] = *v20 - *v21;
       if ( v1.n64_f32[0] <= 0.0 )
         v1.n64_f32[0] = -v1.n64_f32[0];
-      v22 = vmin_f32(v1, v2).n64_f32[0];
+      v22 = vmin_f32_v2(v1, v2).n64_f32[0];
       *(float *)(a1 + 6924) = v22;
       v23 = *(float *)(a1 + 112);
       v24 = *(_DWORD *)(a1 + 8);
@@ -61405,7 +61411,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14[0] = *(float *)(a1 + 108) + *(float *)(a1 + 572);
     v14[1] = v11 + v9;
     v13[0] = v14[0] + (float)((float)(v6 + (float)(v10 * v7)) * 48.0);
-    v13[1] = (float)(v11 + v9) + (float)(vmax_f32(v2, v1).n64_f32[0] * 48.0);
+    v13[1] = (float)(v11 + v9) + (float)(vmax_f32_v2(v2, v1).n64_f32[0] * 48.0);
     return TileCheck_check(v8, (int)v15, v14, v13, 15) == 1 && (v15[0] & (*(_DWORD *)(a1 + 80) + 1)) != 0;
   }
 
@@ -71502,7 +71508,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     mapPositionToScreen(v12, v13);
     BasicSoundActor2_play(v9, "SE_EMY_REV_KOURA_FALL", v12, 0);
     LOWORD(v13[0]) = 0;
-    BYTE2(v13[0]) = 4;
+    *(uint8_t *)((uint8_t *)&(v13[0]) + 2) = 4;
     EnemyFreezeMgr_setFlags(a1 + 6152, (char *)v13);
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13203232);
     *(_BYTE *)(a1 + 84) = -1;
@@ -81070,7 +81076,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
              (int)"SE_EMY_SR_TORPEDO_MOVE",
              v43,
              (float *)v45,
-             (int)(float)(vmax_f32(v2, v1).n64_f32[0] * 50.0),
+             (int)(float)(vmax_f32_v2(v2, v1).n64_f32[0] * 50.0),
              0);
   }
 
@@ -81232,7 +81238,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
              (int)"SE_EMY_SR_TORPEDO_MOVE",
              v22,
              v25,
-             (int)(float)(vmax_f32(v2, v1).n64_f32[0] * 50.0),
+             (int)(float)(vmax_f32_v2(v2, v1).n64_f32[0] * 50.0),
              0);
   }
 
@@ -81325,7 +81331,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
              (int)"SE_EMY_SR_TORPEDO_MOVE",
              v18,
              (float *)v21,
-             (int)(float)(vmax_f32(v2, v1).n64_f32[0] * 50.0),
+             (int)(float)(vmax_f32_v2(v2, v1).n64_f32[0] * 50.0),
              0);
   }
 
@@ -81432,7 +81438,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
              (int)"SE_EMY_SR_TORPEDO_MOVE",
              v21,
              (float *)v24,
-             (int)(float)(vmax_f32(v2, v1).n64_f32[0] * 50.0),
+             (int)(float)(vmax_f32_v2(v2, v1).n64_f32[0] * 50.0),
              0);
   }
 
@@ -81774,7 +81780,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
              (int)"SE_EMY_SR_TORPEDO_MOVE",
              v59,
              v61,
-             (int)(float)(vmax_f32(v2, v1).n64_f32[0] * 50.0),
+             (int)(float)(vmax_f32_v2(v2, v1).n64_f32[0] * 50.0),
              0);
   }
 
@@ -81957,7 +81963,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
              (int)"SE_EMY_SR_TORPEDO_MOVE",
              v31,
              (float *)v34,
-             (int)(float)(vmax_f32(v2, v1).n64_f32[0] * 50.0),
+             (int)(float)(vmax_f32_v2(v2, v1).n64_f32[0] * 50.0),
              0);
   }
 
@@ -82219,7 +82225,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                  (int)"SE_EMY_SR_TORPEDO_MOVE",
                  v49,
                  (float *)v52,
-                 (int)(float)(vmax_f32(v2, v1).n64_f32[0] * 50.0),
+                 (int)(float)(vmax_f32_v2(v2, v1).n64_f32[0] * 50.0),
                  0);
       case 4:
         v25 = a1[39];
@@ -88429,7 +88435,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v3.n64_u32[0] = 1.0;
       v2.n64_f32[0] = (float)((float)*(int *)(a1 + 6532) * -0.05) + 1.2;
-      v1.n64_u64[0] = vmax_f32(v2, v3).n64_u64[0];
+      v1.n64_u64[0] = vmax_f32_v2(v2, v3).n64_u64[0];
       v5 = v1.n64_f32[0] * 1.7;
     }
     else
@@ -88447,7 +88453,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v3.n64_u32[0] = 0.5;
       v1.n64_f32[0] = (float)*(int *)(a1 + 6528) * 0.05;
-      v1.n64_f32[0] = (float)((float)(1.0 - vmin_f32(v1, v3).n64_f32[0]) * 2.9) / 1.7;
+      v1.n64_f32[0] = (float)((float)(1.0 - vmin_f32_v2(v1, v3).n64_f32[0]) * 2.9) / 1.7;
     }
     else
     {
@@ -88878,7 +88884,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6039AF5C(a1, 0);
     v1.n64_u32[0] = *(_DWORD *)(a1 + 124);
     v2.n64_u32[0] = -1.0;
-    *(_DWORD *)(a1 + 124) = vmax_f32(v1, v2).n64_u32[0];
+    *(_DWORD *)(a1 + 124) = vmax_f32_v2(v1, v2).n64_u32[0];
     v5 = (_DWORD *)(a1 + 6312);
     if ( *(_DWORD *)(a1 + 6312) )
     {
@@ -106932,7 +106938,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v7 > v8 )
       v6 += 4 * v8;
     v1.n64_f32[0] = v1.n64_f32[0] * 1.75;
-    *(_DWORD *)(*(_DWORD *)v6 + 24) = vmin_f32(v1, v2).n64_u32[0];
+    *(_DWORD *)(*(_DWORD *)v6 + 24) = vmin_f32_v2(v1, v2).n64_u32[0];
     j_ModelWrapper_updateAnims(*v5);
     sub_603B3C4C(a1);
     return CollisionActor__handleSpeed(a1);
@@ -112908,7 +112914,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v1.n64_u32[0] = a1[31];
     v2.n64_u32[0] = -2.0;
-    a1[31] = vmax_f32(v1, v2).n64_u32[0];
+    a1[31] = vmax_f32_v2(v1, v2).n64_u32[0];
     a1[1715] = 8;
     return 6860;
   }
@@ -119002,7 +119008,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v4 == 1 )
     {
       v2.n64_u32[0] = 0.5;
-      v10.n64_u32[0] = vmin_f32(v10, v2).n64_u32[0];
+      v10.n64_u32[0] = vmin_f32_v2(v10, v2).n64_u32[0];
       *(_DWORD *)(a1 + 124) = v10.n64_u32[0];
     }
     v11 = 15;
@@ -119215,7 +119221,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = -v5;
     v1.n64_u32[0] = 0.5;
     v2.n64_f32[0] = (float)(v5 * 0.0625) + 0.125;
-    LODWORD(v6) = vmin_f32(v2, v1).n64_u32[0];
+    LODWORD(v6) = vmin_f32_v2(v2, v1).n64_u32[0];
     if ( v4 == 1 )
       v6 = -v6;
     v7 = v3 + v6;
@@ -119294,7 +119300,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v9 <= 0.0 )
       v9 = -v9;
     v1.n64_f32[0] = (float)(v9 * 0.0625) + 0.125;
-    LODWORD(v10) = vmin_f32(v1, v2).n64_u32[0];
+    LODWORD(v10) = vmin_f32_v2(v1, v2).n64_u32[0];
     if ( v7 == 1 )
       v10 = -v10;
     v11 = v4 + v10;
@@ -119324,7 +119330,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14.n64_u32[1] = *(_DWORD *)(a1 + 136);
     StageAcor_handleYspeed(a1);
     v14.n64_u32[0] = *(_DWORD *)(a1 + 124);
-    v14.n64_f32[0] = vmin_f32(v14, v2).n64_f32[0];
+    v14.n64_f32[0] = vmin_f32_v2(v14, v2).n64_f32[0];
     *(_DWORD *)(a1 + 124) = v14.n64_u32[0];
     *(float *)(a1 + 112) = *(float *)(a1 + 112) + v14.n64_f32[0];
     if ( (sub_603CACBC(a1, 1, 15, 0) & 1) != 0 )
@@ -120487,7 +120493,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2.n64_u32[0] = 2.0;
     v20 = v1.n64_f32[0] * v20;
     v1.n64_f32[0] = *(float *)(a1 + 17340) * (float)(v1.n64_f32[0] * *(float *)&v19);
-    v19 = vmin_f32(v1, v2).n64_u32[0];
+    v19 = vmin_f32_v2(v1, v2).n64_u32[0];
     (*(void (__fastcall **)(int, int, float *, float *))(*(_DWORD *)v10 + 96))(v10, v12, &v21, &v18);
     if ( v14 != -1 )
     {
@@ -124151,7 +124157,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v29[3] = Profile__get(v28);
             v29[2] = *(_DWORD *)(a1 + 8);
             LOWORD(v29[8]) = 0;
-            BYTE2(v29[8]) = 0;
+            *(uint8_t *)((uint8_t *)&(v29[8]) + 2) = 0;
             v29[10] = 0;
             v26 = ActorMgr__create(MEMORY[0xC7B400], (int)v29, 0);
             if ( v26 )
@@ -126052,7 +126058,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 v15[6] = v10;
                 LOBYTE(v15[8]) = a1[86];
                 if ( Actor__getProfileId((int)a1) == v14 )
-                  BYTE1(v15[8]) = *v2;
+                  *(uint8_t *)((uint8_t *)&(v15[8]) + 1) = *v2;
                 ActorMgr__create(MEMORY[0xC7B400], (int)v15, 0);
                 *((_BYTE *)v2 - 2) = 0;
               }
@@ -128477,7 +128483,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return result;
       v2.n64_u32[0] = 8.0;
       v1.n64_f32[0] = *(float *)(a1 + 88) + 1.0;
-      v6 = vmin_f32(v1, v2).n64_f32[0];
+      v6 = vmin_f32_v2(v1, v2).n64_f32[0];
       *(float *)(a1 + 88) = v6;
       v7 = *(float *)(a1 + 11824) * v6;
       *(float *)(a1 + 120) = v7;
@@ -130434,7 +130440,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v6 = result + i;
         v2.n64_f32[0] = *(float *)(result + i + 208) + -0.15;
-        v2.n64_u64[0] = vmax_f32(v2, v1).n64_u64[0];
+        v2.n64_u64[0] = vmax_f32_v2(v2, v1).n64_u64[0];
         *(_DWORD *)(v6 + 208) = v2.n64_u32[0];
         *(float *)v6 = *(float *)(result + i) + *(float *)(result + i + 204);
         v2.n64_f32[0] = v2.n64_f32[0] + *(float *)(result + i + 4);
@@ -130726,7 +130732,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                                      * (float)(*(float *)(v6 + 11784) - *(float *)(v6 + 11748))));
             v1.n64_u32[0] = 1.0;
             v13.n64_f32[0] = v13.n64_f32[0] / (float)((float)*(int *)(a1 + 1044) * 4.0);
-            v13.n64_u32[0] = vmin_f32(v13, v1).n64_u32[0];
+            v13.n64_u32[0] = vmin_f32_v2(v13, v1).n64_u32[0];
           }
         }
         v14 = *(_DWORD *)(a1 + 1044);
@@ -131369,7 +131375,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)&v14[5] = v5 + 12.0;
     v14[6] = 0;
     LOWORD(v14[8]) = 0;
-    BYTE2(v14[8]) = 0;
+    *(uint8_t *)((uint8_t *)&(v14[8]) + 2) = 0;
     v14[10] = 0;
     v9 = ActorMgr__create(MEMORY[0xC7B400], (int)v14, 0);
     v10 = v9;
@@ -145760,7 +145766,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v1.n64_u32[0] = *(_DWORD *)(MEMORY[0xC9CF0C] + 1380);
       v20 = (float *)(a1 + 2564);
       v21 = (float *)(a1 + 2568);
-      v22 = vmax_f32(v1, v2).n64_f32[0];
+      v22 = vmax_f32_v2(v1, v2).n64_f32[0];
       v23 = (float)(*(float *)(MEMORY[0xC9CF0C] + 1376) * 0.0) + 640.0;
       v24 = (float)(v22 + v22) + -1.0;
       v25 = *(float *)(a1 + 2568);
@@ -150593,7 +150599,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               *(_DWORD *)(MEMORY[0xC9A1E0] + 696) = 1176256502;
             }
             v1.n64_f32[0] = v1.n64_f32[0] + v36;
-            *(_DWORD *)(v35 + 696) = vmin_f32(v1, v2).n64_u32[0];
+            *(_DWORD *)(v35 + 696) = vmin_f32_v2(v1, v2).n64_u32[0];
             *(_BYTE *)(v35 + 700) = 1;
           }
           if ( *(_DWORD *)(MEMORY[0xC99DEC] + 40) )
@@ -150668,7 +150674,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               *(_DWORD *)(MEMORY[0xC9A1E0] + 696) = 1176256502;
             }
             v1.n64_f32[0] = v1.n64_f32[0] + v25;
-            *(_DWORD *)(v18 + 696) = vmin_f32(v1, v2).n64_u32[0];
+            *(_DWORD *)(v18 + 696) = vmin_f32_v2(v1, v2).n64_u32[0];
             *(_BYTE *)(v18 + 700) = 1;
           }
         }
@@ -169631,7 +169637,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C9AB34 = 0;
     dword_60C9AB38 = 1090519040;
     strcpy((char *)&dword_60C9AB3C, "333?fff?333?");
-    BYTE1(dword_60C9AB48) = 0;
+    *(uint8_t *)((uint8_t *)&(dword_60C9AB48) + 1) = 0;
     HIWORD(dword_60C9AB48) = 16256;
     dword_60C9AB4C = 1058642330;
     dword_60C9AB50 = 1111490560;
@@ -193750,7 +193756,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v79 = 1;
           v80 = 0;
           v81 = 0;
-          BYTE2(v75) = 1;
+          *(uint8_t *)((uint8_t *)&(v75) + 2) = 1;
           LOBYTE(v75) = 1;
           sub_6090BC48(&v75, *(_DWORD *)(a2 + 44));
           nullsub_112(&v75, *(_DWORD *)(a2 + 44));

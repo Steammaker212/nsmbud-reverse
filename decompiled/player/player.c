@@ -19,6 +19,12 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 int sub_607878A0();
 int *__fastcall sub_60787B8C(int a1, int a2, int a3);
 int sub_6078AFBC();
@@ -19448,7 +19454,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v1.n64_u32[0] = 1.0;
     *v4 = v5;
     v2.n64_f32[0] = (float)v5 / 30.0;
-    *(v4 - 2) = vmin_f32(v2, v1).n64_u32[0];
+    *(v4 - 2) = vmin_f32_v2(v2, v1).n64_u32[0];
     v17[0] = 0;
     v16[0] = 16384000;
     sub_6083224C(v4 - 16, v17, v16);
@@ -33326,12 +33332,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v1.n64_f32[0] = v5;
       v2.n64_u32[0] = 1.0;
       v1.n64_f32[0] = (float)(v1.n64_f32[0] / *(float *)(*(_DWORD *)v7 + 8)) + 0.2;
-      v8.n64_u64[0] = vmin_f32(v1, v2).n64_u64[0];
+      v8.n64_u64[0] = vmin_f32_v2(v1, v2).n64_u64[0];
       v1.n64_u32[0] = 0.5;
-      v9.n64_u64[0] = vmax_f32(v8, v1).n64_u64[0];
+      v9.n64_u64[0] = vmax_f32_v2(v8, v1).n64_u64[0];
       v2.n64_f32[0] = *(float *)(a1 + 88) + (float)(*(float *)(4 * *(_DWORD *)(a1 + 80) + 0xB0A898) * v9.n64_f32[0]);
       v9.n64_u32[0] = -4.0;
-      *(_DWORD *)(a1 + 12804) = vmax_f32(vmin_f32(v2, v3), v9).n64_u32[0];
+      *(_DWORD *)(a1 + 12804) = vmax_f32_v2(vmin_f32_v2(v2, v3), v9).n64_u32[0];
       *(_BYTE *)(a1 + 12808) = 1;
     }
     if ( *(float *)(a1 + 112) >= (float)(*(float *)(a1 + 7012) + -4.0) )
@@ -34717,7 +34723,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2.n64_u32[0] = 2.0;
     v16 = *(float *)(a1 + 112);
     *a2 = v11 * 0.5;
-    a2[1] = v16 + vmax_f32(v3, v2).n64_f32[0];
+    a2[1] = v16 + vmax_f32_v2(v3, v2).n64_f32[0];
     a2[2] = v12 * 0.5;
     return 1;
   }

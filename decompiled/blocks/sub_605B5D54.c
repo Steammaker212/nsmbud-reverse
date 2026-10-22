@@ -65,7 +65,7 @@ float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a
 /* line: 45, address: 0x605b5e70 */       v15[4] = v7;
 /* line: 46, address: 0x605b5e78 */       v15[5] = -32.0;
 /* line: 47, address: 0x605b5e80 */       LOWORD(v15[7]) = 0;
-/* line: 48, address: 0x605b5e88 */       BYTE2(v15[7]) = 0;
+/* line: 48, address: 0x605b5e88 */       *(uint8_t *)((uint8_t *)&(v15[7]) + 2) = 0;
 /* line: 49, address: 0x605b5e8c */       v16 = 0;
 /* line: 50, address: 0x605b5e98 */       goto LABEL_9;
 /* line: 51, address: 0x605b5d80 */     case 0x10:
@@ -89,7 +89,7 @@ float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a
 /* line: 69, address: 0x605b5f54 */       v15[4] = v9 + v12;
 /* line: 70, address: 0x605b5f58 */       v15[5] = 0.0;
 /* line: 71, address: 0x605b5f5c */       LOWORD(v15[7]) = 0;
-/* line: 72, address: 0x605b5f64 */       BYTE2(v15[7]) = 0;
+/* line: 72, address: 0x605b5f64 */       *(uint8_t *)((uint8_t *)&(v15[7]) + 2) = 0;
 /* line: 73, address: 0x605b5f68 */       v16 = 0;
 /* line: 74 */ LABEL_9:
 /* line: 75, address: 0x605b5f70 */       result = (float *)ActorMgr__create(MEMORY[0xC7B400], (int)&v14, 0);
