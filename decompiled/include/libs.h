@@ -3238,7 +3238,7 @@ bool __fastcall sub_608E5F20(int a1, void *a2);  /* 0x008e5f20 */
 void __fastcall sub_608E60A4(struct sead_IDisposer *a1);  /* 0x008e60a4 */
 int __fastcall sub_608E60EC(struct sead_IDisposer *a1);  /* 0x008e60ec */
 int __fastcall sub_608E6138(_BYTE *a1);  /* 0x008e6138 */
-int __fastcall sub_608E6154(_BYTE *a1);  /* 0x008e6154 */
+int __fastcall sub_608E6154(_BYTE *a1, ...);   /* body only reads a1[76] then calls vtable+40; the 2nd argument is never touched */  /* 0x008e6154 */
 int __fastcall sub_608E6170(_BYTE *a1, int a2);  /* 0x008e6170 */
 int __fastcall sub_608E6578(_BYTE *a1, _DWORD *a2, int a3, int a4, int a5);  /* 0x008e6578 */
 int __fastcall sub_608E65CC(_BYTE *a1, int a2, int a3);  /* 0x008e65cc */

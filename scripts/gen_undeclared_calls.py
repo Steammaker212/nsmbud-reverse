@@ -104,6 +104,31 @@ NEON_EXCLUDE = {
     "vmaxnmq_f32", "vminnmq_f32",
 }
 
+# Names the CORPUS ITSELF defines as `static inline` helpers in its .c files, e.g.
+#     static inline float vminnm_f32(float a, float b) { return fminf(a, b); }
+# Declaring these as `int name();` is a direct type conflict:
+#     error: conflicting types for 'vminnm_f32'
+# and it broke player.c, core.c, states.c, actors_a.c, actors_b.c, actor_construction.c and libs.c --
+# 7 of the 17 failing translation units had this one cause. The generator only consulted the HEADERS,
+# so a definition living in a .c file was invisible to it.
+CORPUS_STATIC_INLINE = {
+    "vceq_zero", "vcge_zero", "vcgt_zero", "vcle_zero", "vclt_zero",
+    "vmaxnm_f32", "vmaxnm_f64", "vminnm_f32",
+}
+
+# The corpus ALSO defines WIDE (_q) variants of those same helpers, e.g.
+#     static inline int32x4_t vceq_zero_q(float a, float b, float c, float d)
+# so excluding only the exact names above still emitted `int vceq_zero_q();`, which collided in libs.c.
+# Match the STEM plus optional suffix rather than enumerating every spelling -- the enumerated approach
+# already failed twice on this exact class of bug.
+CORPUS_STATIC_INLINE_STEM = re.compile(
+    r"^(?:vceq_zero|vcge_zero|vcgt_zero|vcle_zero|vclt_zero|vmaxnm_f32|vmaxnm_f64|vminnm_f32)"
+    r"(?:_q|_v2|_v4)?$")
+
+
+def is_corpus_inline(name):
+    return name in CORPUS_STATIC_INLINE or bool(CORPUS_STATIC_INLINE_STEM.match(name))
+
 
 def prelude_headers(headers_dir):
     """The headers actually reachable from a .c file, i.e. included by the prelude.
@@ -407,7 +432,7 @@ def main(argv):
     lines += ["", "/* ---- NEON float min/max ----", " * These return a vector, not a scalar: the corpus reads `.n64_u32[0]` off the RESULT, which is only", " * legal if the declaration says so. The operation is lane-wise min/max of two float32x4_t. */"]
     n_neon = 0
     for name in sorted(used["neon"]):
-        if name in have:
+        if name in have or is_corpus_inline(name):
             continue
         # Declared per WIDTH: the same helper is called with float32x2_t in some places and
         # float32x4_t in others, and C has no overloading. Two distinct names, chosen by the width
@@ -426,7 +451,7 @@ def main(argv):
         # NEON_ANY also matches the `_v2` spelling, so emitting an unprototyped `int vadd_f32_v2();`
         # here conflicts with the typed one -- that took the corpus to 0/475. Skip anything the typed
         # block, the `have` set, or the exclusion list already covers.
-        if name in have or name in used["neon"] or name in NEON_EXCLUDE:
+        if name in have or name in used["neon"] or name in NEON_EXCLUDE or is_corpus_inline(name):
             continue
         if name.endswith("_v2") and name[:-3] in used["neon"]:
             continue

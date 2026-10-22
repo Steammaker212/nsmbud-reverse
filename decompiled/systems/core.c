@@ -3794,7 +3794,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xC7B3F8];
     if ( !MEMORY[0xC7B3F8] )
     {
-      v2 = __operator_new[](5628, a1, 4);
+      v2 = __operator_new_array_al(5628, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12321280;
       MEMORY[0xC7B3F4] = v2;
@@ -6325,7 +6325,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xC7B400];
     if ( !MEMORY[0xC7B400] )
     {
-      v2 = __operator_new[](27204, a1, 4);
+      v2 = __operator_new_array_al(27204, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12321320;
       MEMORY[0xC7B3FC] = v2;
@@ -7457,7 +7457,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[1];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       *a1 = 0;
       a1[1] = 0;
     }
@@ -8386,7 +8386,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xC7B420];
     if ( !MEMORY[0xC7B420] )
     {
-      v3 = __operator_new[](2548, a1, 4);
+      v3 = __operator_new_array_al(2548, a1, 4);
       v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12321948;
       MEMORY[0xC7B41C] = v4;
@@ -9563,7 +9563,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (_DWORD *)MEMORY[0xC7B464];
     if ( !MEMORY[0xC7B464] )
     {
-      v2 = (_DWORD *)__operator_new[](36, a1, 4);
+      v2 = (_DWORD *)__operator_new_array_al(36, a1, 4);
       v3 = sead__IDisposer__IDisposer(v2 + 1, a1, 3);
       v2[1] = 12322004;
       MEMORY[0xC7B460] = v3;
@@ -12035,6 +12035,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   unsigned int __fastcall sub_6000EA00(int a1)
   {
+    int regTmp0 = 0, regTmp1 = 0, regTmp2 = 0;   /* ARM scratch registers, named instead of left as rN */
     int v2; // r8
     unsigned int v3; // r10
     float v4; // s2
@@ -12057,11 +12058,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v21 = *(_DWORD *)(a1 + 104);
     v6 = (int)(float)((float)HIWORD(v3) + (float)(v4 * 1303.8));
     v7 = *(_DWORD *)(a1 + 100);
-    _R1 = v6 << 16;
+    regTmp1 = v6 << 16;
     *(_DWORD *)(a1 + 132) = v6 << 16;
-    uxtb16(r1)
+    regTmp1 = (unsigned int)uxtb16((unsigned int)regTmp1);
     v14 = (float *)(((v6 >> 4) & 0xFF0) + 11773060);
-    v15 = (float)_R1 * 0.000000059605;
+    v15 = (float)regTmp1 * 0.000000059605;
     v16 = *v14 + (float)(v14[1] * v15);
     v17 = v14[2] + (float)(v14[3] * v15);
     *(float *)(a1 + 92) = -(float)(v4 * v16);
@@ -13389,6 +13390,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 if ( v37 > v36 )
                   v36 = v209 - (float)(v203 + -16.0);
 
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6001185C
  * RVA 0x0001185c   size 0x550   xrefs 5
@@ -14709,6 +14716,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60013408(int a1)
   {
+    int regTmp0 = 0, regTmp1 = 0, regTmp2 = 0;   /* ARM scratch registers, named instead of left as rN */
     float v1; // s0
     float v2; // s1
     float v4; // s16
@@ -14738,11 +14746,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v26 = *(_DWORD *)(a1 + 104);
     v9 = (int)(float)((float)HIWORD(v6) + (float)(v7 * v2));
     v10 = *(_DWORD *)(a1 + 100);
-    _R1 = v9 << 16;
+    regTmp1 = v9 << 16;
     *(_DWORD *)(a1 + 132) = v9 << 16;
-    uxtb16(r1)
+    regTmp1 = (unsigned int)uxtb16((unsigned int)regTmp1);
     v17 = (float *)(((v9 >> 4) & 0xFF0) + 11773060);
-    v18 = (float)_R1 * 0.000000059605;
+    v18 = (float)regTmp1 * 0.000000059605;
     v19 = *v17 + (float)(v17[1] * v18);
     v20 = v17[2] + (float)(v17[3] * v18);
     *(float *)(a1 + 92) = -(float)(v7 * v19);
@@ -14808,6 +14816,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60013668(int a1)
   {
+    int regTmp0 = 0, regTmp1 = 0, regTmp2 = 0;   /* ARM scratch registers, named instead of left as rN */
     float v1; // s0
     float v2; // s1
     float v4; // s16
@@ -14838,11 +14847,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v26 = *(_DWORD *)(a1 + 104);
     v9 = (int)(float)((float)HIWORD(v6) + (float)(v7 * v2));
     v10 = *(_DWORD *)(a1 + 100);
-    _R1 = v9 << 16;
+    regTmp1 = v9 << 16;
     *(_DWORD *)(a1 + 132) = v9 << 16;
-    uxtb16(r1)
+    regTmp1 = (unsigned int)uxtb16((unsigned int)regTmp1);
     v17 = (float *)(((v9 >> 4) & 0xFF0) + 11773060);
-    v18 = (float)_R1 * 0.000000059605;
+    v18 = (float)regTmp1 * 0.000000059605;
     v19 = *v17 + (float)(v17[1] * v18);
     v20 = v17[2] + (float)(v17[3] * v18);
     *(float *)(a1 + 92) = -(float)(v7 * v19);
@@ -14907,6 +14916,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_600138E0(int a1)
   {
+    int regTmp0 = 0, regTmp1 = 0, regTmp2 = 0;   /* ARM scratch registers, named instead of left as rN */
     float v1; // s0
     float v2; // s1
     float v4; // s16
@@ -14936,11 +14946,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v26 = *(_DWORD *)(a1 + 104);
     v9 = (int)(float)((float)HIWORD(v6) + (float)(v7 * v2));
     v10 = *(_DWORD *)(a1 + 100);
-    _R1 = v9 << 16;
+    regTmp1 = v9 << 16;
     *(_DWORD *)(a1 + 132) = v9 << 16;
-    uxtb16(r1)
+    regTmp1 = (unsigned int)uxtb16((unsigned int)regTmp1);
     v17 = (float *)(((v9 >> 4) & 0xFF0) + 11773060);
-    v18 = (float)_R1 * 0.000000059605;
+    v18 = (float)regTmp1 * 0.000000059605;
     v19 = *v17 + (float)(v17[1] * v18);
     v20 = v17[2] + (float)(v17[3] * v18);
     *(float *)(a1 + 92) = -(float)(v7 * v19);
@@ -15007,6 +15017,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60013B40(int a1)
   {
+    int regTmp0 = 0, regTmp1 = 0, regTmp2 = 0;   /* ARM scratch registers, named instead of left as rN */
     float v1; // s0
     float v2; // s1
     float v4; // s16
@@ -15037,11 +15048,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v26 = *(_DWORD *)(a1 + 104);
     v9 = (int)(float)((float)HIWORD(v6) + (float)(v7 * v2));
     v10 = *(_DWORD *)(a1 + 100);
-    _R1 = v9 << 16;
+    regTmp1 = v9 << 16;
     *(_DWORD *)(a1 + 132) = v9 << 16;
-    uxtb16(r1)
+    regTmp1 = (unsigned int)uxtb16((unsigned int)regTmp1);
     v17 = (float *)(((v9 >> 4) & 0xFF0) + 11773060);
-    v18 = (float)_R1 * 0.000000059605;
+    v18 = (float)regTmp1 * 0.000000059605;
     v19 = *v17 + (float)(v17[1] * v18);
     v20 = v17[2] + (float)(v17[3] * v18);
     *(float *)(a1 + 92) = -(float)(v7 * v19);
@@ -15841,6 +15852,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     MEMORY[0xC7BDE4] = MEMORY[0xAF3138];
     MEMORY[0xC7BDE8] = MEMORY[0xAF31EC];
 
+  }
 /* ============================================================================
  * _ZN7ProfileC2EPFP5ActorPK14ActorBuildInfoEjPvPK9ActorInfoj
  * RVA 0x00017f6c   size 0x54   xrefs 911
@@ -16503,6 +16515,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C7D368 = 12321336;
     dword_60C7D36C = (int)"obj_dokan_CB";
 
+  }
 /* ============================================================================
  * Profile_getResourceListById
  * RVA 0x00020ff0   size 0x24   xrefs 2
@@ -17039,7 +17052,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = (_DWORD *)MEMORY[0xC7F52C];
     if ( !MEMORY[0xC7F52C] )
     {
-      v3 = __operator_new[](16, a1, 4);
+      v3 = __operator_new_array_al(16, a1, 4);
       result = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *result = 12326028;
       MEMORY[0xC7F528] = result;
@@ -31848,6 +31861,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v111 = "jc_demo_W7_shock";
         dispatch_setFlag1(v76, v78, &v110);
 
+  }
+  }
 /* ============================================================================
  * sub_60038624
  * RVA 0x00038624   size 0x8   xrefs 1
@@ -38850,6 +38865,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     (*(void (__fastcall **)(_DWORD, unsigned int *))(*(_DWORD *)**v63 + 68))(**v63, v97);
     v64 = StateMgr__getCurrentState(a1 + 6084);
 
+  }
 /* ============================================================================
  * sub_60045604
  * RVA 0x00045604   size 0x328   xrefs 1
@@ -39546,6 +39562,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           v49 = *(_DWORD **)(*(_DWORD *)v48 + 12);
 
+  }
+  }
+  }
 /* ============================================================================
  * AnimationPlayer_startFullSequence
  * RVA 0x00047464   size 0x180   xrefs 72
@@ -40846,6 +40865,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *(float *)(a1 + 108) = *(float *)&v23;
           v22 = *(float *)(a1 + 588);
 
+  }
+  }
+  }
 /* ============================================================================
  * SE_BOSS_JR_CLOWN_COME_BOXER_ref
  * RVA 0x00049898   size 0x94   xrefs 0
@@ -41504,6 +41526,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v147.n128_f32[2] = v140 * v147.n128_f32[2];
         v148.n128_f32[2] = v140 * v148.n128_f32[2];
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_6004B0C0
  * RVA 0x0004b0c0   size 0x50   xrefs 0
@@ -62000,6 +62025,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v56 = v25 || v24;
         if ( !v56 )
 
+  }
+  }
 /* ============================================================================
  * _ZN11FinalBowser12afterExecuteEj
  * RVA 0x0006fea4   size 0xa4   xrefs 0
@@ -78678,6 +78705,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v25 = StateMgr__getCurrentState(v6 + 6084);
     v26 = (*(int (__fastcall **)(int))(*(_DWORD *)v25 + 8))(v25);
 
+  }
 /* ============================================================================
  * sub_6009219C
  * RVA 0x0009219c   size 0x154   xrefs 2

@@ -4855,6 +4855,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v68 = sub_60832524();
 
+  }
+  }
 /* ============================================================================
  * sub_60804D48
  * RVA 0x00804d48   size 0x10   xrefs 0
@@ -5259,7 +5261,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8[1] = 1120403456;
     v8[2] = 1140457472;
     sub_608DA794(a1, v8);
-    v4 = (_QWORD *)__operator_new[](720, a2, 16);
+    v4 = (_QWORD *)__operator_new_array_al(720, a2, 16);
     *v4 = 0x4000000B0LL;
     sub_608DA230(v4 + 2);
     sub_608DA230(v4 + 24);
@@ -5308,7 +5310,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v6 );
       }
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[14] = 0;
     }
     if ( a1[15] )
@@ -6527,7 +6529,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCC6AF8];
     if ( !MEMORY[0xCC6AF8] )
     {
-      v2 = __operator_new[](1056, a1, 8);
+      v2 = __operator_new_array_al(1056, a1, 8);
       v3 = sead__IDisposer__IDisposer(v2 + 28, a1, 3);
       *(_DWORD *)(v2 + 28) = 12746956;
       MEMORY[0xCC6AF4] = v3;
@@ -10185,7 +10187,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xCC6B0C];
     if ( !MEMORY[0xCC6B0C] )
     {
-      v3 = __operator_new[](152, a1, 8);
+      v3 = __operator_new_array_al(152, a1, 8);
       result = sead__IDisposer__IDisposer(v3, a1, 3);
       *(_DWORD *)result = 12747144;
       MEMORY[0xCC6B08] = result;
@@ -11736,6 +11738,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return sub_608A86F0(&v24);
   LABEL_157:
 
+  }
 /* ============================================================================
  * sub_6080D47C
  * RVA 0x0080d47c   size 0xbc   xrefs 1
@@ -12209,6 +12212,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
 
+  }
 /* ============================================================================
  * sub_6080DE84
  * RVA 0x0080de84   size 0x170   xrefs 1
@@ -16901,7 +16905,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     nn__atk__SoundActor__SetPlayableSoundCount(a1, 0, a3);
     *((_DWORD *)a1 + 30) = a3 + 2;
     *((_DWORD *)a1 + 32) = a2;
-    v7 = (_DWORD *)__operator_new[](saturated_mul(4u, a3 + 2));
+    v7 = (_DWORD *)__operator_new_array_al(saturated_mul(4u, a3 + 2));
     *v7 = 4;
     v7[1] = a3 + 2;
     v8 = v7 + 2;
@@ -19641,7 +19645,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xCC6B68];
     if ( !MEMORY[0xCC6B68] )
     {
-      v3 = __operator_new[](76, a1, 4);
+      v3 = __operator_new_array_al(76, a1, 4);
       result = sead__IDisposer__IDisposer(v3, a1, 3);
       *(_DWORD *)result = 12755092;
       MEMORY[0xCC6B64] = result;
@@ -22722,7 +22726,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xCC6BF4];
     if ( !MEMORY[0xCC6BF4] )
     {
-      v3 = __operator_new[](40, a1, 4);
+      v3 = __operator_new_array_al(40, a1, 4);
       result = sead__IDisposer__IDisposer(v3, a1, 3);
       *(_DWORD *)result = 12755632;
       MEMORY[0xCC6BF0] = result;
@@ -23032,7 +23036,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xCC6BFC];
     if ( !MEMORY[0xCC6BFC] )
     {
-      v3 = __operator_new[](24, a1, 4);
+      v3 = __operator_new_array_al(24, a1, 4);
       result = sead__IDisposer__IDisposer(v3, a1, 3);
       *(_DWORD *)result = 12755688;
       MEMORY[0xCC6BF8] = result;
@@ -23643,7 +23647,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = (_DWORD *)MEMORY[0xCC6C28];
     if ( !MEMORY[0xCC6C28] )
     {
-      v3 = __operator_new[](40, a1, 4);
+      v3 = __operator_new_array_al(40, a1, 4);
       result = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *result = 12755984;
       MEMORY[0xCC6C24] = result;
@@ -24199,7 +24203,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( MEMORY[0xC9CF18] )
       sub_604574C8(MEMORY[0xC9CF18], 2, 1);
     sub_60817D54(MEMORY[0xCC6B68]);
-    *(_DWORD *)(a1 + 272) = __operator_new[](37748736, v6, 4);
+    *(_DWORD *)(a1 + 272) = __operator_new_array_al(37748736, v6, 4);
     *(_BYTE *)(a1 + 284) = a3;
     *(_DWORD *)(a1 + 280) = a2;
     *(_DWORD *)(a1 + 264) = 1;
@@ -24240,7 +24244,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 264) = 0;
     v2 = *(_DWORD *)(a1 + 272);
     if ( v2 )
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
     *(_DWORD *)(a1 + 272) = 0;
     if ( *(_BYTE *)(a1 + 276) )
       sub_60819C54(MEMORY[0xCC6BF4]);
@@ -24398,7 +24402,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCC6C3C];
     if ( !MEMORY[0xCC6C3C] )
     {
-      v2 = __operator_new[](92, a1, 4);
+      v2 = __operator_new_array_al(92, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12756188;
       MEMORY[0xCC6C38] = v2;
@@ -24830,6 +24834,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               if ( *((unsigned __int8 *)v43 + v32 + 1) == v6 )
               {
 
+  }
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6081CA7C
  * RVA 0x0081ca7c   size 0x844   xrefs 1
@@ -25235,6 +25246,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       case 0xC:
         v2 = *(char **)(a1 + 24);
 
+  }
+  }
 /* ============================================================================
  * sub_6081D3DC
  * RVA 0x0081d3dc   size 0x24   xrefs 1
@@ -25822,7 +25835,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xCC6D78];
     if ( !MEMORY[0xCC6D78] )
     {
-      v3 = __operator_new[](109080, a1, 8);
+      v3 = __operator_new_array_al(109080, a1, 8);
       v4 = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *v4 = 12756348;
       MEMORY[0xCC6D74] = v4;
@@ -27810,7 +27823,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xCC6D8C];
     if ( !MEMORY[0xCC6D8C] )
     {
-      v3 = __operator_new[](24, a1, 4);
+      v3 = __operator_new_array_al(24, a1, 4);
       result = sead__IDisposer__IDisposer(v3, a1, 3);
       *(_DWORD *)result = 12756384;
       MEMORY[0xCC6D88] = result;
@@ -27907,7 +27920,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = (_DWORD *)MEMORY[0xCC6D94];
     if ( !MEMORY[0xCC6D94] )
     {
-      v3 = __operator_new[](17452, a1, 4);
+      v3 = __operator_new_array_al(17452, a1, 4);
       result = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       v4 = 255;
       *result = 12756400;
@@ -29741,6 +29754,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v34 = 0;
       }
 
+  }
+  }
 /* ============================================================================
  * sub_608248C4
  * RVA 0x008248c4   size 0x2c   xrefs 0
@@ -30764,7 +30779,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCC6E04];
     if ( !MEMORY[0xCC6E04] )
     {
-      v2 = __operator_new[](80, a1, 8);
+      v2 = __operator_new_array_al(80, a1, 8);
       v3 = sead__IDisposer__IDisposer(v2 + 4, a1, 3);
       *(_DWORD *)(v2 + 4) = 12756780;
       MEMORY[0xCC6E00] = v3;
@@ -31512,6 +31527,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         v33 = 0;
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_60828180
  * RVA 0x00828180   size 0x340   xrefs 3
@@ -35282,7 +35300,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xCC6E1C];
     if ( !MEMORY[0xCC6E1C] )
     {
-      v3 = __operator_new[](24, a1, 4);
+      v3 = __operator_new_array_al(24, a1, 4);
       result = sead__IDisposer__IDisposer(v3, a1, 3);
       *(_DWORD *)result = 12756852;
       MEMORY[0xCC6E18] = result;
@@ -43156,6 +43174,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     MEMORY[0xCC7890] = a2(a1, "nvnCommandBufferMultiDrawElementsIndirectCount");
     MEMORY[0xCC7894] = a2(a1, "nvnCommandBufferClearColor");
 
+  }
 /* ============================================================================
  * sub_6083A9A4
  * RVA 0x0083a9a4   size 0x74   xrefs 3
@@ -53628,13 +53647,18 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *(_DWORD *)(v79 + 28) = v110;
             v111 = (unsigned __int8)(v101 * v103 / 0xFFu) | ((unsigned __int8)(v102 * v104 / 0xFFu) << 8);
             *(_BYTE *)(v79 + 33) = BYTE1(v111);
-            _R1 = (2155905153u * (unsigned __int64)(unsigned int)(v124 * v105)) >> 32 << 9;
-            uxtb16(r1)
-            v118 = v111 | _R1;
+            regTmp1 = (2155905153u * (unsigned __int64)(unsigned int)(v124 * v105)) >> 32 << 9;
+            regTmp1 = (unsigned int)uxtb16((unsigned int)regTmp1);
+            v118 = v111 | regTmp1;
             *(_BYTE *)(v79 + 32) = v118;
             *(_BYTE *)(v79 + 35) = (v118
                                   | ((2155905153u * (unsigned __int64)(unsigned int)(v125 * v106)) >> 32 << 17)
 
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6084B178
  * RVA 0x0084b178   size 0x8   xrefs 1
@@ -63646,6 +63670,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v42[28] = 0;
           }
 
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_60856AAC
  * RVA 0x00856aac   size 0x44   xrefs 1
@@ -76663,6 +76691,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       (v37 >> 9) & 1,
       v213,
 
+  }
 /* ============================================================================
  * sub_608665C4
  * RVA 0x008665c4   size 0x1d4   xrefs 2
@@ -82803,6 +82832,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v57 = *(_DWORD *)(v64 + 8);
           v58 = *(_DWORD *)(v57 + 4 * (v56 >> 5));
 
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6086D358
  * RVA 0x0086d358   size 0xe4   xrefs 1
@@ -95854,6 +95887,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v168 = (float32x4_t)vld1q_dup_f32((const float *)0x10);
       v94.n128_u64[0] = vadd_f32_v2(*(float32x2_t *)&v94.n128_i8[8], (float32x2_t)v94.n128_u64[0]).n64_u64[0];
 
+  }
+  }
 /* ============================================================================
  * sub_6087B0E0
  * RVA 0x0087b0e0   size 0x1f0   xrefs 0
@@ -96773,6 +96808,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       do
       {
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_6087BAA0
  * RVA 0x0087baa0   size 0x410   xrefs 0
@@ -97178,6 +97216,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 += 12;
       v28 += 4;
 
+  }
+  }
 /* ============================================================================
  * sub_6087BEC0
  * RVA 0x0087bec0   size 0x2a4   xrefs 0
@@ -98136,6 +98176,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                   v70[1],
                   0);
 
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6087CA60
  * RVA 0x0087ca60   size 0x480   xrefs 0
@@ -98541,6 +98585,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v103 = v92 + 96 * v105;
           (*(void (__fastcall **)(_DWORD, int **, int *))(**(_DWORD **)(a1 + 44) + 8))(*(_DWORD *)(a1 + 44), &v104, &v101);
 
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6087CEF0
  * RVA 0x0087cef0   size 0x124   xrefs 2
@@ -101200,6 +101248,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           else
 
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6088003C
  * RVA 0x0088003c   size 0x20   xrefs 1
@@ -110574,6 +110626,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             _Q0.n128_u64[1] = _Q0.n128_u64[0];
             v103 = vrsqrteq_f32(_Q0);
 
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6088A3A8
  * RVA 0x0088a3a8   size 0x310   xrefs 1
@@ -112175,6 +112232,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v20 = *(float32x4_t **)(a3 + 84);
       v410 = (float32x4_t **)&v20[5].n128_u32[1];
 
+  }
+  }
 /* ============================================================================
  * sub_6088D7C8
  * RVA 0x0088d7c8   size 0x400   xrefs 2
@@ -113766,6 +113825,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_BYTE *)(v65 + 1196) = 0;
         sub_6083651C(v65 + 1200);
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_6088F868
  * RVA 0x0088f868   size 0x224   xrefs 3
@@ -115419,6 +115481,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               {
                 while ( v43 < v44 || *(_DWORD *)(LODWORD(v13) + 4) < *((_DWORD *)v45 + 1) )
 
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_60891658
  * RVA 0x00891658   size 0x23c   xrefs 3
@@ -116498,6 +116566,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               {
                 while ( v43 > v44 || *(_DWORD *)(LODWORD(v13) + 4) < *((_DWORD *)v45 + 1) )
 
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6089270C
  * RVA 0x0089270c   size 0x23c   xrefs 3
@@ -117577,6 +117651,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                     {
                       v17 -= 8;
 
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6089397C
  * RVA 0x0089397c   size 0x29c   xrefs 3
@@ -118861,6 +118944,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                     {
                       v17 -= 8;
 
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_60894E9C
  * RVA 0x00894e9c   size 0x29c   xrefs 3
@@ -120864,6 +120956,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                    v22,
                    *(float32x2_t *)&v31.n128_i8[8],
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_60897044
  * RVA 0x00897044   size 0x1c0   xrefs 1
@@ -122820,6 +122915,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *(_QWORD *)(v2 + 652) = v48;
         }
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_608993D8
  * RVA 0x008993d8   size 0xa58   xrefs 1
@@ -123225,6 +123323,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v83 = v82 < 1;
     if ( v82 >= 1 )
 
+  }
 /* ============================================================================
  * sub_60899E38
  * RVA 0x00899e38   size 0xce8   xrefs 1
@@ -123630,6 +123729,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v223 = v21;
             v221.n128_u64[0] = *(_QWORD *)(*(_DWORD *)(v5 + 148) + 24 * v21 + 16);
 
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6089AB20
  * RVA 0x0089ab20   size 0x398   xrefs 3
@@ -125495,6 +125599,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v83 = vmulq_f32(v78, v82);
       *(int8x8_t *)&v78.n128_i8[8] = vtbl2_s8((int8x8x2_t)v184.val[0], (int8x8_t)0xF0E0D0C07060504LL);
 
+  }
+  }
 /* ============================================================================
  * sub_6089DB2C
  * RVA 0x0089db2c   size 0x24   xrefs 5
@@ -126340,6 +126446,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v15 = *(_DWORD *)(a1 + 12);
       if ( v16 + 1 <= 7 )
 
+  }
+  }
 /* ============================================================================
  * sub_6089F86C
  * RVA 0x0089f86c   size 0x428   xrefs 1
@@ -130778,6 +130886,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v333 = 0u;
         memset(&v334, 0, sizeof(v334));
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_608A7810
  * RVA 0x008a7810   size 0x55c   xrefs 1
@@ -134661,6 +134772,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         (*(void (__fastcall **)(_DWORD *))(*v41 + 16))(v41);
   LABEL_27:
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_608ABD28
  * RVA 0x008abd28   size 0x54   xrefs 1
@@ -175985,6 +176099,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         case 0xD4u:
           v29 = *(unsigned __int8 *)(a2 + 192);
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_608D6CD4
  * RVA 0x008d6cd4   size 0x30   xrefs 0
@@ -177582,6 +177699,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v88[0] = 0;
       v97 = 0;
 
+  }
+  }
 /* ============================================================================
  * sub_608D891C
  * RVA 0x008d891c   size 0x670   xrefs 1
@@ -179452,7 +179571,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[4];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[4] = 0;
     }
     v3 = a1[5];
@@ -179486,7 +179605,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[4];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[4] = 0;
     }
     v3 = a1[5];
@@ -179534,7 +179653,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = 456;
     v7 = sub_608DC930(*(_DWORD *)v6);
     v8 = sub_608A92A8(a1[3], v7);
-    v9 = __operator_new[](v8, a3, 32);
+    v9 = __operator_new_array_al(v8, a3, 32);
     a1[4] = v9;
     result = sub_608A92F0(a1[3], v7, v9, v8);
     if ( result == 1 )
@@ -179584,7 +179703,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(_DWORD *)(a1 + 16);
     if ( result )
     {
-      __operator_delete[](result);
+      __operator_delete_array_al(result);
       *(_DWORD *)(a1 + 16) = 0;
       return 0;
     }
@@ -179750,19 +179869,19 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = a1[107];
     if ( v8 )
     {
-      __operator_delete[](v8);
+      __operator_delete_array_al(v8);
       a1[107] = 0;
     }
     v9 = a1[109];
     if ( v9 )
     {
-      __operator_delete[](v9);
+      __operator_delete_array_al(v9);
       a1[109] = 0;
     }
     v10 = a1[112];
     if ( v10 )
     {
-      __operator_delete[](v10);
+      __operator_delete_array_al(v10);
       a1[112] = 0;
     }
     v11 = a1[115];
@@ -179972,13 +180091,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = *(_DWORD *)(a1 + 436);
       if ( v5 )
       {
-        __operator_delete[](v5);
+        __operator_delete_array_al(v5);
         *(_DWORD *)(a1 + 436) = 0;
       }
       result = *(_DWORD *)(a1 + 428);
       if ( result )
       {
-        __operator_delete[](result);
+        __operator_delete_array_al(result);
         *(_DWORD *)(a1 + 428) = 0;
         return 0;
       }
@@ -180372,16 +180491,16 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !*(_BYTE *)v11 )
       return 0;
     v12 = sub_608AA9FC(a2, a5);
-    a1[107] = __operator_new[](v12, a6, 4096);
+    a1[107] = __operator_new_array_al(v12, a6, 4096);
     if ( a3 )
     {
-      a1[109] = __operator_new[](a3, a6, 4096);
+      a1[109] = __operator_new_array_al(a3, a6, 4096);
       v13 = a1 + 109;
       if ( a4 )
       {
         v14 = sub_608AAA0C(a2, (a4 + 63) & 0xFFFFFFC0);
         a1[113] = v14;
-        a1[112] = __operator_new[](v14, a6, 64);
+        a1[112] = __operator_new_array_al(v14, a6, 64);
       }
     }
     else
@@ -180655,13 +180774,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 1464);
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       *(_DWORD *)(a1 + 1464) = 0;
     }
     v4 = *(_DWORD *)(a1 + 1468);
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       *(_DWORD *)(a1 + 1468) = 0;
     }
     sub_6099BBD4(a1 + 8);
@@ -180686,13 +180805,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 1456);
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       *(_DWORD *)(a1 + 1456) = 0;
     }
     v4 = *(_DWORD *)(a1 + 1460);
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       *(_DWORD *)(a1 + 1460) = 0;
     }
     return sub_6099BBD4(a1);
@@ -180716,13 +180835,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 1464);
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       *(_DWORD *)(a1 + 1464) = 0;
     }
     v4 = *(_DWORD *)(a1 + 1468);
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       *(_DWORD *)(a1 + 1468) = 0;
     }
     sub_6099BBD4(a1 + 8);
@@ -180747,13 +180866,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(_DWORD *)(a1 + 1456);
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       *(_DWORD *)(a1 + 1456) = 0;
     }
     v4 = *(_DWORD *)(a1 + 1460);
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       *(_DWORD *)(a1 + 1460) = 0;
     }
     sub_6099BBD4(a1);
@@ -180775,13 +180894,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_BYTE *)(a1 + 793) = 1;
     sub_6099BCC8(a1 + 8, a2);
     v3 = sub_608B1550((_WORD *)(a1 + 664));
-    v4 = __operator_new[](v3, *(_DWORD *)(a1 + 1460), 64);
+    v4 = __operator_new_array_al(v3, *(_DWORD *)(a1 + 1460), 64);
     *(_DWORD *)(a1 + 1464) = v4;
     sub_6099BF58(a1 + 8, v4, v3);
     if ( *(_BYTE *)(a1 + 1472) )
     {
       v5 = sub_608B1518((_WORD *)(a1 + 664));
-      v6 = __operator_new[](v5, *(_DWORD *)(a1 + 1460), 64);
+      v6 = __operator_new_array_al(v5, *(_DWORD *)(a1 + 1460), 64);
       *(_DWORD *)(a1 + 1468) = v6;
       sub_6099BFFC(a1 + 8, v6, v5);
     }
@@ -180944,7 +181063,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(a1 + 548);
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       *(_DWORD *)(a1 + 548) = 0;
     }
     return sub_608ABD84(a1);
@@ -180979,7 +181098,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(v2 + 548);
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       *(_DWORD *)(v2 + 548) = 0;
     }
     return sub_608ABD84(v2);
@@ -181013,7 +181132,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(a1 + 548);
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       *(_DWORD *)(a1 + 548) = 0;
     }
     v5 = sub_608ABD84(a1);
@@ -181050,7 +181169,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = *(_DWORD *)(v2 + 548);
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       *(_DWORD *)(v2 + 548) = 0;
     }
     v5 = sub_608ABD84(v2);
@@ -181222,7 +181341,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       return 0;
     v6 = sub_608DC930(a1);
     v7 = sub_608ABDD0(a1, v6);
-    *(_DWORD *)(a1 + 548) = __operator_new[](v7, a2, 64);
+    *(_DWORD *)(a1 + 548) = __operator_new_array_al(v7, a2, 64);
     v8 = sub_608DC930(a1);
     result = sub_608ABDF0(a1, v8, *(_DWORD *)(a1 + 548), v7);
     *(_BYTE *)(a1 + 556) = 1;
@@ -181298,7 +181417,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = *(_DWORD *)(a1 + 548);
       if ( result )
       {
-        result = __operator_delete[](result);
+        result = __operator_delete_array_al(result);
         *(_DWORD *)(a1 + 548) = 0;
       }
     }
@@ -181561,7 +181680,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       CurrentHeap = sead__HeapMgr__getCurrentHeap(MEMORY[0xCCEE90]);
     if ( !a2 )
       a2 = (*(int (__fastcall **)(int, int))(*(_DWORD *)CurrentHeap + 64))(CurrentHeap, 4) - 16;
-    v7 = __operator_new[](a2, CurrentHeap, 4);
+    v7 = __operator_new_array_al(a2, CurrentHeap, 4);
     a1[12] = v7;
     sub_608AC3CC((int)a1, v7, a2);
     return a1;
@@ -181583,7 +181702,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[12];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[12] = 0;
     }
     return sub_608AC2B0(a1);
@@ -181606,7 +181725,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[12];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[12] = 0;
     }
     v4 = sub_608AC2B0(a1);
@@ -181677,7 +181796,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_BYTE *)(a1 + 192) )
     {
       v5 = sub_608AD370(a1 + 16);
-      v6 = __operator_new[](v5, *(_DWORD *)(a1 + 116), 64);
+      v6 = __operator_new_array_al(v5, *(_DWORD *)(a1 + 116), 64);
       *(_DWORD *)(a1 + 120) = v6;
       *(_DWORD *)(a1 + 8) = v6;
       *(_DWORD *)(a1 + 12) = v5;
@@ -181721,7 +181840,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_608ADFE8();
       v4 = *(_DWORD *)(a1 + 120);
       if ( v4 )
-        __operator_delete[](v4);
+        __operator_delete_array_al(v4);
       *(_DWORD *)(a1 + 120) = 0;
       result = *(_DWORD *)(a1 + 180);
       if ( result )
@@ -182184,7 +182303,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _Znaj
  * RVA 0x008de09c   size 0x54   xrefs 32
  * ============================================================================ */
-  int __fastcall __operator_new[](unsigned int a1)
+  int __fastcall __operator_new_array_al(unsigned int a1)
   {
     int CurrentHeap; // r0
   
@@ -182218,7 +182337,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZnajRKSt9nothrow_t
  * RVA 0x008de14c   size 0x54   xrefs 0
  * ============================================================================ */
-  int __fastcall __operator_new[](unsigned int a1)
+  int __fastcall __operator_new_array_al(unsigned int a1)
   {
     int CurrentHeap; // r0
   
@@ -182285,7 +182404,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZnamPN4sead4HeapEi
  * RVA 0x008de2c8   size 0x68   xrefs 238
  * ============================================================================ */
-  int __fastcall __operator_new[](unsigned int a1, int CurrentHeap, int a3)
+  int __fastcall __operator_new_array_al(unsigned int a1, int CurrentHeap, int a3)
   {
     if ( !MEMORY[0xCCEE90] )
       return malloc(a1);
@@ -182337,7 +182456,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZdaPv
  * RVA 0x008de3fc   size 0x58   xrefs 222
  * ============================================================================ */
-  int __fastcall __operator_delete[](int a1)
+  int __fastcall __operator_delete_array_al(int a1)
   {
     int result; // r0
   
@@ -182377,7 +182496,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * _ZdaPvRKSt9nothrow_t
  * RVA 0x008de4b4   size 0x58   xrefs 0
  * ============================================================================ */
-  _DWORD *__fastcall __operator_delete[](void *a1)
+  _DWORD *__fastcall __operator_delete_array_al(void *a1)
   {
     _DWORD *result; // r0
   
@@ -182946,7 +183065,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = a1[2];
     if ( result )
     {
-      __operator_delete[](result);
+      __operator_delete_array_al(result);
       *a1 = 0;
       a1[1] = 0;
       a1[2] = 0;
@@ -184023,6 +184142,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           *(_BYTE *)(v187 + 352) = v103;
           goto LABEL_153;
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_608E0AC8
  * RVA 0x008e0ac8   size 0x12c   xrefs 0
@@ -187973,7 +188095,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v13 = abs32(v11);
               if ( v13 <= 32 )
                 v13 = 32;
-              v9 = __operator_new[](v8, *(_DWORD *)(a3 + 16), v13 * v12);
+              v9 = __operator_new_array_al(v8, *(_DWORD *)(a3 + 16), v13 * v12);
             }
             v19 = 0;
             if ( sub_608E65F8((_BYTE *)a1, &v19, (int)v20, v9, v8) && sub_608E6738((_BYTE *)a1, (int)v20) )
@@ -187987,7 +188109,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             {
               v6 = 0;
               if ( v9 && v10 == 1 )
-                __operator_delete[](v9);
+                __operator_delete_array_al(v9);
             }
             goto LABEL_25;
           }
@@ -188669,7 +188791,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return v4;
       }
   LABEL_35:
-      __operator_delete[](v5);
+      __operator_delete_array_al(v5);
       goto LABEL_36;
     }
     return v4;
@@ -189551,6 +189673,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 else
                 {
 
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_608E7618
  * RVA 0x008e7618   size 0x2ac   xrefs 1
@@ -190202,7 +190332,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       nn__fs__Unmount((struct nn_fs *)"content", a2);
       v5 = *(_DWORD *)(v3 + 36);
       if ( v5 )
-        __operator_delete[](v5);
+        __operator_delete_array_al(v5);
       MEMORY[0xCCEBD0] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -190233,7 +190363,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       nn__fs__Unmount((struct nn_fs *)"content", a2);
       v5 = *(_DWORD *)(v3 + 36);
       if ( v5 )
-        __operator_delete[](v5);
+        __operator_delete_array_al(v5);
       MEMORY[0xCCEBD0] = 0;
     }
     v6 = sead__IDisposer__dtor(a1);
@@ -190253,7 +190383,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xCCEBD0];
     if ( !MEMORY[0xCCEBD0] )
     {
-      v3 = __operator_new[](0x2Cu, a1, 4);
+      v3 = __operator_new_array_al(0x2Cu, a1, 4);
       v4 = (struct sead_FileDeviceMgr *)sead__IDisposer__IDisposer(v3, a1, 3);
       *(_DWORD *)v4 = dword_60C797CC + 8;
       *(_DWORD *)off_60C797D0 = v4;
@@ -190290,7 +190420,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       ContainHeap = sead__HeapMgr__findContainHeap(MEMORY[0xCCEE90], a1);
       v9 = 0;
       nn__fs__QueryMountRomCacheSize((struct nn_fs *)&v9, v4);
-      v5 = (const char *)__operator_new[]((unsigned int)v9, ContainHeap, 8);
+      v5 = (const char *)__operator_new_array_al((unsigned int)v9, ContainHeap, 8);
       *(_DWORD *)(a1 + 36) = v5;
       nn__fs__MountRom((struct nn_fs *)"content", v5, v9, v6);
       v7 = __operator_new_al(0x54u, ContainHeap, 4);
@@ -192285,7 +192415,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             MEMORY[0xCC73C4](&v46);
             MEMORY[0xCC73C0](&v46, v34);
             MEMORY[0xCC73CC](&v46, 18);
-            v35 = __operator_new[](dword_60CCEBE4, a2, 4096);
+            v35 = __operator_new_array_al(dword_60CCEBE4, a2, 4096);
             MEMORY[0xCC73C8](&v46, v35, dword_60CCEBE4);
             MEMORY[0xCC73DC](*(_DWORD *)(a1 + 228), &v46);
             v45 = 0;
@@ -192306,7 +192436,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             MEMORY[0xCC73C4](&v46);
             MEMORY[0xCC73C0](&v46, *(_DWORD *)(MEMORY[0xCCF464] + 24));
             MEMORY[0xCC73CC](&v46, 33);
-            v37 = __operator_new[](*(_DWORD *)(a1 + 252), a2, 4096);
+            v37 = __operator_new_array_al(*(_DWORD *)(a1 + 252), a2, 4096);
             MEMORY[0xCC73C8](&v46, v37, *(_DWORD *)(a1 + 252));
             MEMORY[0xCC73DC](*(_DWORD *)(a1 + 248), &v46);
             MEMORY[0xCC7444](&v46, *(_DWORD *)(MEMORY[0xCCF464] + 24));
@@ -195110,7 +195240,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(_DWORD **)off_60C79874;
     if ( !*(_DWORD *)off_60C79874 )
     {
-      v3 = __operator_new[](0x10u, a1, 4);
+      v3 = __operator_new_array_al(0x10u, a1, 4);
       result = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *result = dword_60C7986C + 8;
       *(_DWORD *)off_60C79870 = result;
@@ -198006,7 +198136,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     MEMORY[0xCC73C0](v31, v23);
     MEMORY[0xCC73CC](v31, 161);
     v10 = (4095 - (v7 + v8 - 1) % v8 + v7 + v8 - 1 + v9) & 0xFFFFF000;
-    v11 = __operator_new[](v10, a1, 4096);
+    v11 = __operator_new_array_al(v10, a1, 4096);
     MEMORY[0xCC73C8](v31, v11, v10);
     MEMORY[0xCC73DC](v30, v31);
     MEMORY[0xCC74CC](v33, v30, 0);
@@ -198246,7 +198376,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     MEMORY[0xCC73C4](v33);
     MEMORY[0xCC73C0](v33, *(_DWORD *)(MEMORY[0xCCF464] + 24));
     MEMORY[0xCC73CC](v33, 36);
-    v16 = __operator_new[](v15, v3, 4096);
+    v16 = __operator_new_array_al(v15, v3, 4096);
     MEMORY[0xCC73C8](v33, v16, v15);
     MEMORY[0xCC73DC](v9, v33);
     if ( *(unsigned __int8 *)(v32 + 41) < 3u )
@@ -198493,7 +198623,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     MEMORY[0xCC73C0](v15, a1[6]);
     MEMORY[0xCC73CC](v15, 34);
     v10 = (v9 * v6 + v8 * v7 + 4095) & 0xFFFFF000;
-    v11 = __operator_new[](v10, a2, 4096);
+    v11 = __operator_new_array_al(v10, a2, 4096);
     MEMORY[0xCC73C8](v15, v11, v10);
     MEMORY[0xCC73DC](a1[54], v15);
     MEMORY[0xCC7424](a1 + 20, a1[54], 0, a1[58]);
@@ -198839,7 +198969,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)off_60C79804;
     if ( !*(_DWORD *)off_60C79804 )
     {
-      v2 = __operator_new[](0x7B8u, a1, 8);
+      v2 = __operator_new_array_al(0x7B8u, a1, 8);
       v3 = sead__IDisposer__IDisposer(v2 + 4, a1, 3);
       *(_DWORD *)(v2 + 4) = dword_60C798C8 + 8;
       *(_DWORD *)off_60C798CC = v3;
@@ -198935,7 +199065,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     MEMORY[0xCC73C0](v43, v7);
     MEMORY[0xCC73CC](v43, 34);
     v13 = (v12 + 20479) & 0xFFFFF000;
-    v14 = __operator_new[](v13, a2, 4096);
+    v14 = __operator_new_array_al(v13, a2, 4096);
     MEMORY[0xCC73C8](v43, v14, v13);
     MEMORY[0xCC73DC](a1 + 544, v43);
     MEMORY[0xCC7444](v43, *(_DWORD *)(MEMORY[0xCCF464] + 24));
@@ -205004,6 +205134,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           ++v43;
           break;
 
+  }
+  }
+  }
+  }
 /* ============================================================================
  * SEAD_META_HEAP__03d_ref
  * RVA 0x008fa528   size 0x7c   xrefs 0
@@ -206472,7 +206606,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)off_60C79968 = 0;
       v2 = *(_DWORD *)(*(_DWORD *)off_60C7996C + 28);
       if ( v2 )
-        __operator_delete[](v2);
+        __operator_delete_array_al(v2);
       *(_DWORD *)off_60C7996C = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -206493,7 +206627,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)off_60C79968 = 0;
       v2 = *(_DWORD *)(*(_DWORD *)off_60C7996C + 28);
       if ( v2 )
-        __operator_delete[](v2);
+        __operator_delete_array_al(v2);
       *(_DWORD *)off_60C7996C = 0;
     }
     v3 = sead__IDisposer__dtor(a1);
@@ -206512,7 +206646,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(struct sead_IDisposer **)off_60C7996C;
     if ( !*(_DWORD *)off_60C7996C )
     {
-      v3 = (struct sead_IDisposer *)__operator_new[](0x24u, (int)a1, 4);
+      v3 = (struct sead_IDisposer *)__operator_new_array_al(0x24u, (int)a1, 4);
       result = sead__IDisposer__IDisposer(v3, a1, 3u);
       *(_DWORD *)result = dword_60C79964 + 8;
       *(_DWORD *)off_60C79968 = result;
@@ -206796,7 +206930,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             }
             if ( v30 >= 1 )
             {
-              v37 = __operator_new[](v30 + 1, *(_DWORD *)(v40 + 20), 4);
+              v37 = __operator_new_array_al(v30 + 1, *(_DWORD *)(v40 + 20), 4);
               *(_DWORD *)(v41 + 28) = v37;
               v45 = v37;
               v44 = 12322272;
@@ -212211,7 +212345,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = v2 == 0;
     }
     if ( !v3 )
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
     return a1;
   }
 
@@ -212233,7 +212367,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = v2 == 0;
     }
     if ( !v3 )
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
     return __operator_delete(a1);
   }
 
@@ -212598,7 +212732,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = MEMORY[0xCCEF7C];
     if ( !MEMORY[0xCCEF7C] )
     {
-      v3 = (struct sead_IDisposer *)__operator_new[](0x30u, (int)a1, 4);
+      v3 = (struct sead_IDisposer *)__operator_new_array_al(0x30u, (int)a1, 4);
       v4 = sead__IDisposer__IDisposer(v3, a1, 3u);
       *(_DWORD *)v4 = dword_60C79974 + 8;
       *(_DWORD *)off_60C79978 = v4;
@@ -214097,7 +214231,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( *(_DWORD *)(a1 + 80) )
           goto LABEL_73;
   LABEL_14:
-        __operator_delete[]((int)v14);
+        __operator_delete_array_al((int)v14);
         goto LABEL_73;
       }
       v39 = a4;
@@ -214180,7 +214314,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             {
               if ( v32 < 0 || (v33 = 0, !sub_608E7C10((int)v48, &v47, (int)v14, *(_DWORD *)(a1 + 76))) )
               {
-                __operator_delete[]((int)v26);
+                __operator_delete_array_al((int)v26);
                 v33 = 1;
                 if ( !*(_DWORD *)(a1 + 80) )
                   goto LABEL_48;
@@ -214209,7 +214343,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               if ( !*(_DWORD *)(a1 + 80) )
               {
   LABEL_48:
-                __operator_delete[]((int)v14);
+                __operator_delete_array_al((int)v14);
                 v34 = 1;
   LABEL_63:
                 if ( v34 == 3 )
@@ -214231,7 +214365,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 }
   LABEL_65:
                 if ( !*(_DWORD *)(a1 + 80) )
-                  __operator_delete[]((int)v14);
+                  __operator_delete_array_al((int)v14);
                 v11 = v26;
                 if ( v39 )
                   *v39 = v23;
@@ -214268,7 +214402,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
       }
       if ( v29 == 1 )
-        __operator_delete[]((int)v26);
+        __operator_delete_array_al((int)v26);
       goto LABEL_40;
     }
     return v11;
@@ -217501,7 +217635,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *((_DWORD *)a1 + 35) = a4;
     *((_DWORD *)a1 + 23) = a1;
     sub_60912E2C((char *)a1 + 28, a8, a3);
-    *((_DWORD *)a1 + 33) = __operator_new[](a7, a3, 4096);
+    *((_DWORD *)a1 + 33) = __operator_new_array_al(a7, a3, 4096);
     v13 = __operator_new_al(0x100u, a3, 4);
     *((_DWORD *)a1 + 32) = v13;
     nn__os__CreateThread(v13, dword_60C799D4);
@@ -217660,7 +217794,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           __operator_delete(v6);
         v7 = *((_DWORD *)a1 + 33);
         if ( v7 )
-          __operator_delete[](v7);
+          __operator_delete_array_al(v7);
       }
       v5 = (char *)a1 + 28;
       sub_60912E7C((char *)a1 + 28);
@@ -217820,7 +217954,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)off_60C79854;
     if ( !*(_DWORD *)off_60C79854 )
     {
-      v2 = __operator_new[](0x4Cu, (int)a1, 4);
+      v2 = __operator_new_array_al(0x4Cu, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C799D8 + 8;
       *(_DWORD *)off_60C799DC = v3;
@@ -220045,6 +220179,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6090AFF4(unsigned __int8 *a1, unsigned __int8 *a2)
   {
+    int regTmp0 = 0, regTmp1 = 0, regTmp2 = 0;   /* ARM scratch registers, named instead of left as rN */
     float v2; // s0
     unsigned int v3; // r3
     int v4; // s12
@@ -220066,11 +220201,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = (float)a1[3] + (float)(v2 * (float)(a2[3] - a1[3]));
     v6 = a1[1];
     v7 = (int)(float)((float)*a1 + (float)(v2 * (float)(*a2 - *a1)));
-    _R1 = (int)(float)((float)v3 + (float)(v2 * (float)(int)(a2[2] - v3))) << 16;
-    uxtb16(r1)
+    regTmp1 = (int)(float)((float)v3 + (float)(v2 * (float)(int)(a2[2] - v3))) << 16;
+    regTmp1 = (unsigned int)uxtb16((unsigned int)regTmp1);
     return v7
          | ((int)v5 << 24)
-         | _R1
+         | regTmp1
          | (unsigned __int16)((unsigned __int16)(int)(float)((float)v6 + (float)(v2 * (float)v4)) << 8);
   }
 
@@ -223007,7 +223142,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCCF4E4];
     if ( !MEMORY[0xCCF4E4] )
     {
-      v2 = __operator_new[](0x20u, (int)a1, 4);
+      v2 = __operator_new_array_al(0x20u, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 16), a1, 3u);
       *(_DWORD *)(v2 + 16) = dword_60C79A58 + 8;
       *(_DWORD *)off_60C79A5C = v3;
@@ -224344,7 +224479,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (_DWORD *)MEMORY[0xCCFAF4];
     if ( !MEMORY[0xCCFAF4] )
     {
-      v2 = (_DWORD *)__operator_new[](0x3Cu, (int)a1, 4);
+      v2 = (_DWORD *)__operator_new_array_al(0x3Cu, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 1), a1, 3u);
       v2[1] = dword_60C79A74 + 8;
       *(_DWORD *)off_60C79A78 = v3;
@@ -224840,7 +224975,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = -1;
     if ( !is_mul_ok(4u, a2) )
       v6 = -1;
-    v7 = (_DWORD *)__operator_new[](v6, a3, 4);
+    v7 = (_DWORD *)__operator_new_array_al(v6, a3, 4);
     v8 = v7 + 2;
     *v7 = 4;
     v7[1] = a2;
@@ -224901,7 +225036,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           while ( v9 );
         }
-        __operator_delete[](v7 - 4);
+        __operator_delete_array_al(v7 - 4);
       }
       *(_DWORD *)(a1 + 16) = 0;
     }
@@ -224983,7 +225118,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           while ( v9 );
         }
-        __operator_delete[](v7 - 4);
+        __operator_delete_array_al(v7 - 4);
       }
       *(_DWORD *)(a1 + 16) = 0;
     }
@@ -225661,7 +225796,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60911994(unsigned int a1)
   {
-    return __operator_new[](a1, *(_DWORD *)off_60C79AE4, 4);
+    return __operator_new_array_al(a1, *(_DWORD *)off_60C79AE4, 4);
   }
 
 /* ============================================================================
@@ -225671,7 +225806,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall sub_609119AC(int result)
   {
     if ( result )
-      return __operator_delete[](result);
+      return __operator_delete_array_al(result);
     return result;
   }
 
@@ -226821,7 +226956,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         HIDWORD(v5) = 1;
       if ( HIDWORD(v5) )
         LODWORD(v5) = -1;
-      v6 = __operator_new[](v5, a3, 4);
+      v6 = __operator_new_array_al(v5, a3, 4);
       *(_DWORD *)(v4 + 48) = v6;
       return nn__os__InitializeMessageQueue(v4, v6, a2);
     }
@@ -226840,7 +226975,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(_DWORD *)(a1 + 48);
     if ( result )
     {
-      __operator_delete[](result);
+      __operator_delete_array_al(result);
       *(_DWORD *)(a1 + 48) = 0;
       return 0;
     }
@@ -229288,7 +229423,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)off_60C79B28;
     if ( !*(_DWORD *)off_60C79B28 )
     {
-      v2 = __operator_new[](0x4Cu, (int)a1, 4);
+      v2 = __operator_new_array_al(0x4Cu, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C79B34 + 8;
       *(_DWORD *)off_60C79B38 = v3;
@@ -229639,7 +229774,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCCFC8C];
     if ( !MEMORY[0xCCFC8C] )
     {
-      v2 = __operator_new[](0x3D0u, (int)a1, 8);
+      v2 = __operator_new_array_al(0x3D0u, (int)a1, 8);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C79B44 + 8;
       *(_DWORD *)off_60C79B48 = v3;
@@ -229794,7 +229929,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[48];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[47] = 0;
       a1[48] = 0;
     }
@@ -229802,7 +229937,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[54];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[53] = 0;
       a1[54] = 0;
     }
@@ -234924,7 +235059,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[151];
     if ( v2 )
     {
-      __operator_delete[](v2 - 8);
+      __operator_delete_array_al(v2 - 8);
       a1[150] = 0;
       a1[151] = 0;
     }
@@ -234937,7 +235072,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( *v5 )
         {
-          __operator_delete[](*v5 - 8);
+          __operator_delete_array_al(*v5 - 8);
           *(v5 - 1) = 0;
           *v5 = 0;
         }
@@ -234949,7 +235084,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = a1[153];
     if ( v6 )
     {
-      __operator_delete[](v6 - 8);
+      __operator_delete_array_al(v6 - 8);
       a1[152] = 0;
       a1[153] = 0;
     }
@@ -234962,7 +235097,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( *v9 )
         {
-          __operator_delete[](*v9 - 8);
+          __operator_delete_array_al(*v9 - 8);
           *(v9 - 1) = 0;
           *v9 = 0;
         }
@@ -234974,7 +235109,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v10 = a1[159];
     if ( v10 )
     {
-      __operator_delete[](v10 - 8);
+      __operator_delete_array_al(v10 - 8);
       a1[158] = 0;
       a1[159] = 0;
     }
@@ -234987,7 +235122,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( *v13 )
         {
-          __operator_delete[](*v13 - 8);
+          __operator_delete_array_al(*v13 - 8);
           *(v13 - 1) = 0;
           *v13 = 0;
         }
@@ -234999,7 +235134,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v14 = a1[161];
     if ( v14 )
     {
-      __operator_delete[](v14 - 8);
+      __operator_delete_array_al(v14 - 8);
       a1[160] = 0;
       a1[161] = 0;
     }
@@ -235012,7 +235147,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( *v17 )
         {
-          __operator_delete[](*v17 - 8);
+          __operator_delete_array_al(*v17 - 8);
           *(v17 - 1) = 0;
           *v17 = 0;
         }
@@ -235024,7 +235159,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v18 = a1[155];
     if ( v18 )
     {
-      __operator_delete[](v18 - 8);
+      __operator_delete_array_al(v18 - 8);
       a1[154] = 0;
       a1[155] = 0;
     }
@@ -235037,7 +235172,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( *v21 )
         {
-          __operator_delete[](*v21 - 8);
+          __operator_delete_array_al(*v21 - 8);
           *(v21 - 1) = 0;
           *v21 = 0;
         }
@@ -235049,7 +235184,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v22 = a1[157];
     if ( v22 )
     {
-      __operator_delete[](v22 - 8);
+      __operator_delete_array_al(v22 - 8);
       a1[156] = 0;
       a1[157] = 0;
     }
@@ -235063,7 +235198,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = *v25;
         if ( *v25 )
         {
-          result = __operator_delete[](result - 8);
+          result = __operator_delete_array_al(result - 8);
           *(v25 - 1) = 0;
           *v25 = 0;
         }
@@ -235693,7 +235828,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[151];
     if ( v2 )
     {
-      __operator_delete[](v2 - 8);
+      __operator_delete_array_al(v2 - 8);
       a1[150] = 0;
       a1[151] = 0;
     }
@@ -235707,7 +235842,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = *v5;
         if ( *v5 )
         {
-          result = __operator_delete[](result - 8);
+          result = __operator_delete_array_al(result - 8);
           *(v5 - 1) = 0;
           *v5 = 0;
         }
@@ -235979,7 +236114,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[159];
     if ( v2 )
     {
-      __operator_delete[](v2 - 8);
+      __operator_delete_array_al(v2 - 8);
       a1[158] = 0;
       a1[159] = 0;
     }
@@ -235993,7 +236128,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = *v5;
         if ( *v5 )
         {
-          result = __operator_delete[](result - 8);
+          result = __operator_delete_array_al(result - 8);
           *(v5 - 1) = 0;
           *v5 = 0;
         }
@@ -236265,7 +236400,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[155];
     if ( v2 )
     {
-      __operator_delete[](v2 - 8);
+      __operator_delete_array_al(v2 - 8);
       a1[154] = 0;
       a1[155] = 0;
     }
@@ -236279,7 +236414,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         result = *v5;
         if ( *v5 )
         {
-          result = __operator_delete[](result - 8);
+          result = __operator_delete_array_al(result - 8);
           *(v5 - 1) = 0;
           *v5 = 0;
         }
@@ -237208,7 +237343,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v6 );
       }
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[2] = 0;
       a1[3] = 0;
     }
@@ -237221,7 +237356,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         if ( *v9 )
         {
-          __operator_delete[](*v9 - 8);
+          __operator_delete_array_al(*v9 - 8);
           *(v9 - 1) = 0;
           *v9 = 0;
         }
@@ -237233,7 +237368,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v8 )
     {
-      __operator_delete[](v8 - 8);
+      __operator_delete_array_al(v8 - 8);
       a1[4] = 0;
       a1[5] = 0;
     }
@@ -237589,7 +237724,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v6 );
       }
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       *(_DWORD *)(a1 + 28) = 0;
       *(_DWORD *)(a1 + 32) = 0;
     }
@@ -238197,14 +238332,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = a1[21];
       if ( v2 )
       {
-        __operator_delete[](v2);
+        __operator_delete_array_al(v2);
         a1[20] = 0;
         a1[21] = 0;
       }
       v3 = a1[23];
       if ( v3 )
       {
-        __operator_delete[](v3);
+        __operator_delete_array_al(v3);
         a1[22] = 0;
         a1[23] = 0;
       }
@@ -238240,7 +238375,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v14 = *(_DWORD *)(v11 - 4);
             if ( v14 )
             {
-              __operator_delete[](v14);
+              __operator_delete_array_al(v14);
               *(_DWORD *)(v11 - 8) = 0;
               *(_DWORD *)(v11 - 4) = 0;
             }
@@ -238249,7 +238384,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           while ( v8 + v6 );
         }
-        __operator_delete[](v16);
+        __operator_delete_array_al(v16);
         a1[18] = 0;
         a1[19] = 0;
       }
@@ -238422,7 +238557,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v9 = *(_DWORD *)(v4 + v3 - 8);
           if ( v9 )
           {
-            __operator_delete[](v9);
+            __operator_delete_array_al(v9);
             *(_DWORD *)(v8 - 12) = 0;
             *(_DWORD *)(v8 - 8) = 0;
           }
@@ -238434,7 +238569,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v5 + v3 );
       }
-      __operator_delete[](v10);
+      __operator_delete_array_al(v10);
       *v11 = 0;
       v11[1] = 0;
       return 0;
@@ -238862,7 +238997,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[76];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[75] = 0;
       a1[76] = 0;
     }
@@ -238885,7 +239020,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[76];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[75] = 0;
       a1[76] = 0;
     }
@@ -238925,7 +239060,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = *((_DWORD *)a1 + 12);
     if ( v5 )
     {
-      __operator_delete[](v5);
+      __operator_delete_array_al(v5);
       *((_DWORD *)a1 + 11) = 0;
       *((_DWORD *)a1 + 12) = 0;
     }
@@ -238962,7 +239097,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = *((_DWORD *)a1 + 12);
     if ( v5 )
     {
-      __operator_delete[](v5);
+      __operator_delete_array_al(v5);
       *((_DWORD *)a1 + 11) = 0;
       *((_DWORD *)a1 + 12) = 0;
     }
@@ -239812,6 +239947,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60920AC4(int *a1, unsigned __int8 a2, unsigned __int8 a3, int a4, int a5)
   {
+    int regTmp0 = 0, regTmp1 = 0, regTmp2 = 0;   /* ARM scratch registers, named instead of left as rN */
     int v6; // r0
     unsigned int v13; // r0
     int v14; // r1
@@ -239823,9 +239959,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v6 = a2 | (a3 << 8);
     *((_BYTE *)a1 + 57) = a3;
-    _R1 = a4 << 16;
-    uxtb16(r1)
-    v13 = v6 | _R1;
+    regTmp1 = a4 << 16;
+    regTmp1 = (unsigned int)uxtb16((unsigned int)regTmp1);
+    v13 = v6 | regTmp1;
     v14 = v13 | (a5 << 24);
     result = HIWORD(v13);
     *((_BYTE *)a1 + 56) = v14;
@@ -240420,7 +240556,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       HIDWORD(v6) = 1;
     if ( HIDWORD(v6) )
       LODWORD(v6) = -1;
-    **(_DWORD **)(a1 + 4) = __operator_new[](v6, a3, 4);
+    **(_DWORD **)(a1 + 4) = __operator_new_array_al(v6, a3, 4);
     *(_WORD *)(*(_DWORD *)(a1 + 4) + 4) = a2;
     *(_WORD *)(*(_DWORD *)(a1 + 4) + 6) = 0;
     result = *(unsigned __int8 *)(a1 + 38) | 1;
@@ -240814,7 +240950,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = *(_DWORD *)(a1 + 136);
       if ( v4 )
       {
-        __operator_delete[](v4);
+        __operator_delete_array_al(v4);
         *(_DWORD *)(a1 + 132) = 0;
         *(_DWORD *)(a1 + 136) = 0;
       }
@@ -240862,7 +240998,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = v3 == 0;
     }
     if ( !v4 )
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
     return __operator_delete(a1);
   }
 
@@ -242687,14 +242823,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[6];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[5] = 0;
       a1[6] = 0;
     }
     v3 = a1[4];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[3] = 0;
       a1[4] = 0;
     }
@@ -242714,13 +242850,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[6];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[5] = 0;
       a1[6] = 0;
     }
     v3 = a1[4];
     if ( v3 )
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
     return __operator_delete((int)a1);
   }
 
@@ -242811,14 +242947,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[6];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[5] = 0;
       a1[6] = 0;
     }
     result = a1[4];
     if ( result )
     {
-      __operator_delete[](result);
+      __operator_delete_array_al(result);
       a1[3] = 0;
       a1[4] = 0;
       return 0;
@@ -243207,14 +243343,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v9 );
       }
-      __operator_delete[](v7);
+      __operator_delete_array_al(v7);
       a1[193] = 0;
       a1[194] = 0;
     }
     v11 = a1[126];
     if ( v11 )
     {
-      __operator_delete[](v11);
+      __operator_delete_array_al(v11);
       a1[125] = 0;
       a1[126] = 0;
     }
@@ -244751,6 +244887,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                     ++v65;
                     v66 += 8;
 
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6092616C
  * RVA 0x0092616c   size 0xc   xrefs 0
@@ -245007,7 +245152,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v8 );
       }
-      __operator_delete[](v6);
+      __operator_delete_array_al(v6);
       a1[49] = 0;
       a1[50] = 0;
       a1[41] = 0;
@@ -246911,7 +247056,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[68];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[67] = 0;
       a1[68] = 0;
     }
@@ -246941,7 +247086,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[61];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       v2[67] = 0;
       v2[68] = 0;
     }
@@ -246970,7 +247115,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[68];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[67] = 0;
       a1[68] = 0;
     }
@@ -247002,7 +247147,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[61];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       v2[67] = 0;
       v2[68] = 0;
     }
@@ -247302,14 +247447,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[81];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[80] = 0;
       a1[81] = 0;
     }
     v4 = a1[79];
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[78] = 0;
       a1[79] = 0;
     }
@@ -247342,14 +247487,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[74];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       v2[80] = 0;
       v2[81] = 0;
     }
     v4 = v2[79];
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       v2[78] = 0;
       v2[79] = 0;
     }
@@ -247381,14 +247526,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[81];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[80] = 0;
       a1[81] = 0;
     }
     v4 = a1[79];
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[78] = 0;
       a1[79] = 0;
     }
@@ -247423,14 +247568,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[74];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       v2[80] = 0;
       v2[81] = 0;
     }
     v4 = v2[79];
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       v2[78] = 0;
       v2[79] = 0;
     }
@@ -247824,7 +247969,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[76];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[75] = 0;
       a1[76] = 0;
     }
@@ -247856,7 +248001,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[69];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       v2[75] = 0;
       v2[76] = 0;
     }
@@ -247887,7 +248032,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[76];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[75] = 0;
       a1[76] = 0;
     }
@@ -247921,7 +248066,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[69];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       v2[75] = 0;
       v2[76] = 0;
     }
@@ -248198,14 +248343,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[92];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[91] = 0;
       a1[92] = 0;
     }
     v4 = a1[90];
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[89] = 0;
       a1[90] = 0;
     }
@@ -248241,14 +248386,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[85];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       v2[91] = 0;
       v2[92] = 0;
     }
     v4 = v2[90];
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       v2[89] = 0;
       v2[90] = 0;
     }
@@ -248283,14 +248428,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[92];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       a1[91] = 0;
       a1[92] = 0;
     }
     v4 = a1[90];
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[89] = 0;
       a1[90] = 0;
     }
@@ -248328,14 +248473,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = a1[85];
     if ( v3 )
     {
-      __operator_delete[](v3);
+      __operator_delete_array_al(v3);
       v2[91] = 0;
       v2[92] = 0;
     }
     v4 = v2[90];
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       v2[89] = 0;
       v2[90] = 0;
     }
@@ -250294,14 +250439,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v6 + v4 );
       }
-      __operator_delete[](v21);
+      __operator_delete_array_al(v21);
       a1[206] = 0;
       a1[207] = 0;
     }
     v11 = a1[209];
     if ( v11 )
     {
-      __operator_delete[](v11);
+      __operator_delete_array_al(v11);
       a1[208] = 0;
       a1[209] = 0;
     }
@@ -250360,7 +250505,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v16 );
       }
-      __operator_delete[](v14);
+      __operator_delete_array_al(v14);
       a1[210] = 0;
       a1[211] = 0;
     }
@@ -254383,7 +254528,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v10 );
       }
-      __operator_delete[](v9);
+      __operator_delete_array_al(v9);
       a1[390] = 0;
       a1[391] = 0;
     }
@@ -254854,6 +254999,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v30 = (int *)((char *)v30 + v12);
         sub_6091FDB0((int)(v30 + 776), 0, 18, 1, 1, 1, 1, 0, 0, 1);
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_60933D90
  * RVA 0x00933d90   size 0x22c   xrefs 1
@@ -255687,6 +255835,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v236[1] = 1.0 / _D1.n64_f32[0];
     v237 = (float)(1.0 / _D0.n64_f32[0]) * 0.5;
 
+  }
 /* ============================================================================
  * sub_60935A3C
  * RVA 0x00935a3c   size 0x274   xrefs 2
@@ -256406,6 +256555,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _DWORD **v401; // [sp+5Ch] [bp-53Ch]
     int v402; // [sp+60h] [bp-538h]
 
+  }
 /* ============================================================================
  * sub_60938B50
  * RVA 0x00938b50   size 0x8   xrefs 0
@@ -256598,7 +256748,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v6 );
       }
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[6] = 0;
       a1[7] = 0;
     }
@@ -256750,7 +256900,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCD09EC];
     if ( !MEMORY[0xCD09EC] )
     {
-      v2 = __operator_new[](0x46F0u, (int)a1, 4);
+      v2 = __operator_new_array_al(0x46F0u, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C79CAC + 8;
       *(_DWORD *)off_60C79CB0 = v3;
@@ -256837,7 +256987,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v6 );
       }
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[5] = 0;
       a1[6] = 0;
     }
@@ -256876,7 +257026,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v6 );
       }
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[5] = 0;
       a1[6] = 0;
     }
@@ -256921,7 +257071,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v8 );
       }
-      __operator_delete[](v6);
+      __operator_delete_array_al(v6);
       result = 0;
       a1[5] = 0;
       a1[6] = 0;
@@ -257542,6 +257692,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v71 = vdupq_lane_s32(*(int32x2_t *)&v169.n128_i8[8], 1);
     v72 = vextq_s8((int8x16_t)vzipq_s32(v69, v69).val, (int8x16_t)0LL, 0xCu);
 
+  }
 /* ============================================================================
  * sub_6093A72C
  * RVA 0x0093a72c   size 0x4bc   xrefs 1
@@ -259796,7 +259947,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCD09F8];
     if ( !MEMORY[0xCD09F8] )
     {
-      v2 = __operator_new[](0xA10u, (int)a1, 8);
+      v2 = __operator_new_array_al(0xA10u, (int)a1, 8);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C79CC0 + 8;
       *(_DWORD *)off_60C79CC4 = v3;
@@ -259883,7 +260034,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           while ( v8 );
         }
-        __operator_delete[](v6);
+        __operator_delete_array_al(v6);
         v3[7] = 0;
         v3[6] = 0;
       }
@@ -259913,14 +260064,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v13 );
       }
-      __operator_delete[](v11);
+      __operator_delete_array_al(v11);
       a1[614] = 0;
       a1[615] = 0;
     }
     v14 = a1[642];
     if ( v14 )
     {
-      __operator_delete[](v14 - 8);
+      __operator_delete_array_al(v14 - 8);
       a1[641] = 0;
       a1[642] = 0;
     }
@@ -262401,7 +262552,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v6 );
       }
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[4] = 0;
       a1[5] = 0;
     }
@@ -262442,7 +262593,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v6 );
       }
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[4] = 0;
       a1[5] = 0;
     }
@@ -264037,9 +264188,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v22 = 2 * (v10 + 1);
     if ( v22 < v21 )
       v22 = -1;
-    v23 = (_WORD *)__operator_new[](v22, v7, 4);
+    v23 = (_WORD *)__operator_new_array_al(v22, v7, 4);
     v39 = v7;
-    v24 = (unsigned __int8 *)__operator_new[](v21, v7, 4);
+    v24 = (unsigned __int8 *)__operator_new_array_al(v21, v7, 4);
     (*(void (__fastcall **)(_DWORD *))(*a2 + 12))(a2);
     sub_60901A08(v23, v21, a2[1], -1);
     v40 = v23;
@@ -264073,7 +264224,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 28))(a1) == 20 )
     {
-      v26 = (unsigned __int8 *)__operator_new[](v21, v39, 4);
+      v26 = (unsigned __int8 *)__operator_new_array_al(v21, v39, 4);
       v42 = 12321336;
       v43 = v26;
       v27 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 44))(a1);
@@ -264125,7 +264276,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 = 1;
       if ( v40 )
   LABEL_74:
-        __operator_delete[](v36);
+        __operator_delete_array_al(v36);
     }
     else
     {
@@ -264185,7 +264336,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         goto LABEL_74;
     }
     if ( v35 )
-      __operator_delete[](v35);
+      __operator_delete_array_al(v35);
     return v6;
   }
 
@@ -264833,7 +264984,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 28))(a1) - 8;
       v24 = a3;
       v29 = 16 * (2 * v9 + (v8 >> 2));
-      v10 = __operator_new[](v29, a3, 4);
+      v10 = __operator_new_array_al(v29, a3, 4);
       v11 = v10;
       v26 = v9;
       if ( v9 )
@@ -264913,7 +265064,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v31 = (const char *)v11;
       result = sub_609A6570(v23, &v30, v24);
       if ( v11 )
-        return __operator_delete[](v11);
+        return __operator_delete_array_al(v11);
     }
     return result;
   }
@@ -265323,6 +265474,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         do
         {
 
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_60944BC8
  * RVA 0x00944bc8   size 0x8   xrefs 0
@@ -265609,7 +265764,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v9 = (*(int (__fastcall **)(float *))(*(_DWORD *)a1 + 28))(a1) - 8;
       v24 = a3;
       v29 = 16 * (2 * v9 + (v8 >> 2));
-      v10 = __operator_new[](v29, a3, 4);
+      v10 = __operator_new_array_al(v29, a3, 4);
       v11 = v10;
       v26 = v9;
       if ( v9 )
@@ -265689,7 +265844,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v31 = (const char *)v11;
       result = sub_609A6570(v23, &v30, v24);
       if ( v11 )
-        return __operator_delete[](v11);
+        return __operator_delete_array_al(v11);
     }
     return result;
   }
@@ -266099,6 +266254,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v49 = 0;
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_60945CD8
  * RVA 0x00945cd8   size 0x8   xrefs 0
@@ -266305,7 +266463,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = *(_DWORD *)(a1 + 12);
       if ( v2 )
-        __operator_delete[](v2);
+        __operator_delete_array_al(v2);
       *(_BYTE *)(a1 + 20) = 0;
     }
     *(_DWORD *)a1 = dword_60C79BD4 + 8;
@@ -266330,7 +266488,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = v2 == 0;
     }
     if ( !v3 )
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
     return __operator_delete(a1);
   }
 
@@ -266518,7 +266676,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = *(_DWORD *)(a1 + 12);
       if ( v2 )
-        __operator_delete[](v2);
+        __operator_delete_array_al(v2);
       *(_BYTE *)(a1 + 20) = 0;
     }
     *(_DWORD *)a1 = dword_60C79BD4 + 8;
@@ -266543,7 +266701,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = v2 == 0;
     }
     if ( !v3 )
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
     return __operator_delete(a1);
   }
 
@@ -266731,7 +266889,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = *(_DWORD *)(a1 + 12);
       if ( v2 )
-        __operator_delete[](v2);
+        __operator_delete_array_al(v2);
       *(_BYTE *)(a1 + 20) = 0;
     }
     *(_DWORD *)a1 = dword_60C79BD4 + 8;
@@ -266756,7 +266914,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = v2 == 0;
     }
     if ( !v3 )
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
     return __operator_delete(a1);
   }
 
@@ -266944,7 +267102,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v2 = *(_DWORD *)(a1 + 12);
       if ( v2 )
-        __operator_delete[](v2);
+        __operator_delete_array_al(v2);
       *(_BYTE *)(a1 + 20) = 0;
     }
     *(_DWORD *)a1 = dword_60C79BD4 + 8;
@@ -266969,7 +267127,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = v2 == 0;
     }
     if ( !v3 )
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
     return __operator_delete(a1);
   }
 
@@ -268418,7 +268576,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)off_60C79B80;
     if ( !*(_DWORD *)off_60C79B80 )
     {
-      v2 = __operator_new[](0x25F8u, (int)a1, 8);
+      v2 = __operator_new_array_al(0x25F8u, (int)a1, 8);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C79D34 + 8;
       *(_DWORD *)off_60C79D38 = v3;
@@ -271013,6 +271171,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         Slot_initWithOwnerAndOffset(v62, a1 + 7928, 0);
         Slot_initWithOwnerAndOffset(v61, a1 + 7928, 0);
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_6094C7E4
  * RVA 0x0094c7e4   size 0x58c   xrefs 1
@@ -273700,6 +273861,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         do
         {
 
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6094F5D4
  * RVA 0x0094f5d4   size 0x3b0   xrefs 1
@@ -274701,7 +274866,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (_DWORD *)MEMORY[0xCD0A14];
     if ( !MEMORY[0xCD0A14] )
     {
-      v2 = (_DWORD *)__operator_new[](0x264u, (int)a1, 4);
+      v2 = (_DWORD *)__operator_new_array_al(0x264u, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 1), a1, 3u);
       v2[1] = dword_60C79D48 + 8;
       *(_DWORD *)off_60C79D4C = v3;
@@ -275145,7 +275310,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD **)off_60C79B88;
     if ( !*(_DWORD *)off_60C79B88 )
     {
-      v2 = (_DWORD *)__operator_new[](0x3A0u, (int)a1, 8);
+      v2 = (_DWORD *)__operator_new_array_al(0x3A0u, (int)a1, 8);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 1), a1, 3u);
       v2[1] = dword_60C79D54 + 8;
       *(_DWORD *)off_60C79D58 = v3;
@@ -275835,6 +276000,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 break;
               default:
 
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_60951E50
  * RVA 0x00951e50   size 0x308   xrefs 15
@@ -275963,8 +276134,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               if ( 2 * v18 < v18 )
                 v22 = -1;
               v23 = *(_DWORD *)(MEMORY[0xCD0B50] + 20);
-              v24 = (_WORD *)__operator_new[](v22, v23, 4);
-              v25 = (unsigned __int8 *)__operator_new[](2 * v18, v23, 4);
+              v24 = (_WORD *)__operator_new_array_al(v22, v23, 4);
+              v25 = (unsigned __int8 *)__operator_new_array_al(2 * v18, v23, 4);
               sub_60901524(v24, v18, v10, -1);
               sub_60901AE8((int)v25, 2 * v18, v24, -1);
               v26 = 0;
@@ -276788,7 +276959,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[7];
     if ( v2 )
     {
-      __operator_delete[](v2 - 8);
+      __operator_delete_array_al(v2 - 8);
       a1[6] = 0;
       a1[7] = 0;
     }
@@ -276806,7 +276977,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *a1 = dword_60C79D68 + 8;
     v2 = a1[7];
     if ( v2 )
-      __operator_delete[](v2 - 8);
+      __operator_delete_array_al(v2 - 8);
     return __operator_delete((int)a1);
   }
 
@@ -277669,7 +277840,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)off_60C79B84;
     if ( !*(_DWORD *)off_60C79B84 )
     {
-      v2 = __operator_new[](0xFD8u, (int)a1, 8);
+      v2 = __operator_new_array_al(0xFD8u, (int)a1, 8);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C79D6C + 8;
       *(_DWORD *)off_60C79D70 = v3;
@@ -277906,7 +278077,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *((_DWORD *)a1 + 31);
     if ( v3 )
     {
-      __operator_delete[](v3 - 8);
+      __operator_delete_array_al(v3 - 8);
       *((_DWORD *)a1 + 30) = 0;
       *((_DWORD *)a1 + 31) = 0;
     }
@@ -277915,7 +278086,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v5 = *(_DWORD *)(v4 + 888);
       if ( !v5
-        || (__operator_delete[](v5 - 8),
+        || (__operator_delete_array_al(v5 - 8),
             *(_DWORD *)(v4 + 884) = 0,
             *(_DWORD *)(v4 + 888) = 0,
             (v4 = *((_DWORD *)a1 + 103)) != 0) )
@@ -279029,6 +279200,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v57 = *(float **)(a1 + 412);
             v58 = v57[40] + v57[48];
 
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_60956514
  * RVA 0x00956514   size 0x4c   xrefs 1
@@ -279420,7 +279596,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCD0B40];
     if ( !MEMORY[0xCD0B40] )
     {
-      v2 = __operator_new[](0x370u, (int)a1, 4);
+      v2 = __operator_new_array_al(0x370u, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C79D84 + 8;
       *(_DWORD *)off_60C79D88 = v3;
@@ -279825,7 +280001,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = a1[9];
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       a1[8] = 0;
       a1[9] = 0;
     }
@@ -279845,7 +280021,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v9 );
       }
-      __operator_delete[](v7);
+      __operator_delete_array_al(v7);
       a1[10] = 0;
       a1[11] = 0;
     }
@@ -279865,7 +280041,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v14 );
       }
-      __operator_delete[](v12);
+      __operator_delete_array_al(v12);
       a1[12] = 0;
       a1[13] = 0;
     }
@@ -279885,7 +280061,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v19 );
       }
-      __operator_delete[](v17);
+      __operator_delete_array_al(v17);
       a1[14] = 0;
       a1[15] = 0;
     }
@@ -279905,7 +280081,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( v21 )
     {
-      __operator_delete[]((int)v21);
+      __operator_delete_array_al((int)v21);
       a1[6] = 0;
       a1[7] = 0;
     }
@@ -282561,7 +282737,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v6 );
       }
-      __operator_delete[](v5);
+      __operator_delete_array_al(v5);
       a1[100] = 0;
       a1[101] = 0;
     }
@@ -283072,6 +283248,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( v84 >= 1 )
     {
 
+  }
+  }
 /* ============================================================================
  * sub_6095B8EC
  * RVA 0x0095b8ec   size 0x51c   xrefs 1
@@ -284670,7 +284848,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v7 );
       }
-      __operator_delete[](v6);
+      __operator_delete_array_al(v6);
       *(_DWORD *)(a1 + 620) = 0;
       *(_DWORD *)(a1 + 624) = 0;
     }
@@ -284680,7 +284858,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v9 = *(_DWORD *)(a1 + 608);
       if ( v9 )
-        __operator_delete[](v9);
+        __operator_delete_array_al(v9);
       *(_BYTE *)(a1 + 616) = 0;
     }
     v10 = dword_60C79BD4 + 8;
@@ -284691,7 +284869,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v11 = *(_DWORD *)(a1 + 568);
       if ( v11 )
-        __operator_delete[](v11);
+        __operator_delete_array_al(v11);
       *(_BYTE *)(a1 + 576) = 0;
     }
     v12 = dword_60C79BD4 + 8;
@@ -284816,7 +284994,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       HIDWORD(v15) = 1;
     if ( HIDWORD(v15) )
       LODWORD(v15) = -1;
-    v16 = (_DWORD *)__operator_new[](v15, a3, 4);
+    v16 = (_DWORD *)__operator_new_array_al(v15, a3, 4);
     v18 = v14 == 0;
     *(_DWORD *)(a1 + 568) = v16;
     *(_DWORD *)(a1 + 572) = v14;
@@ -284854,7 +285032,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       HIDWORD(v22) = 1;
     if ( HIDWORD(v22) )
       LODWORD(v22) = -1;
-    v23 = (_DWORD *)__operator_new[](v22, a3, 4);
+    v23 = (_DWORD *)__operator_new_array_al(v22, a3, 4);
     v24 = v21 == 0;
     *(_DWORD *)(a1 + 608) = v23;
     *(_DWORD *)(a1 + 612) = v21;
@@ -286322,6 +286500,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 844) = 2139095039;
     *(_DWORD *)(a1 + 848) = 2139095039;
 
+  }
 /* ============================================================================
  * sub_6095F06C
  * RVA 0x0095f06c   size 0x58   xrefs 0
@@ -288483,6 +288662,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                   0),
                 v224,
 
+  }
 /* ============================================================================
  * sub_60961E98
  * RVA 0x00961e98   size 0x46c   xrefs 1
@@ -290833,7 +291013,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           v7 = *(_DWORD *)(v6 + 4);
           if ( v7 )
-            __operator_delete[](v7);
+            __operator_delete_array_al(v7);
           __operator_delete(v6);
           v2 = *a1;
         }
@@ -290843,7 +291023,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = a1[1];
     if ( v8 )
     {
-      __operator_delete[](v8);
+      __operator_delete_array_al(v8);
       *a1 = 0;
       a1[1] = 0;
     }
@@ -292232,6 +292412,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v63 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)v134 + 28) + 420) + 4);
         v64 = *(_DWORD *)(v63 + 20);
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_60966DF4
  * RVA 0x00966df4   size 0x24   xrefs 1
@@ -292911,7 +293094,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)off_60C79B8C;
     if ( !*(_DWORD *)off_60C79B8C )
     {
-      v2 = __operator_new[](0x154u, (int)a1, 4);
+      v2 = __operator_new_array_al(0x154u, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       v4 = 0;
       *(_DWORD *)(v2 + 4) = dword_60C79E04 + 8;
@@ -293003,7 +293186,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[7];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[6] = 0;
       a1[7] = 0;
     }
@@ -293023,7 +293206,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[7];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[6] = 0;
       a1[7] = 0;
     }
@@ -293238,7 +293421,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v33 = v7;
       v19 = *(_DWORD *)(MEMORY[0xCD0B50] + 60);
-      v20 = __operator_new[](a4, v19, 64);
+      v20 = __operator_new_array_al(a4, v19, 64);
       sub_60904C68((int)v39, (int)v36, 0);
       v21 = v20;
       sub_60904900(v35, v39, v20, a4);
@@ -293291,7 +293474,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
       }
       if ( v21 )
-        __operator_delete[](v21);
+        __operator_delete_array_al(v21);
       sub_60904980(v35);
       sub_60904D08((int)v39);
       v7 = v33;
@@ -293526,7 +293709,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v6 += 4 * a2;
     if ( *v6 )
     {
-      __operator_delete[](*v6);
+      __operator_delete_array_al(*v6);
       *v6 = 0;
       v6[1] = 0;
       v6[2] = 0;
@@ -293581,7 +293764,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (_DWORD *)MEMORY[0xCD0B50];
     if ( !MEMORY[0xCD0B50] )
     {
-      v2 = (_DWORD *)__operator_new[](0x80u, (int)a1, 4);
+      v2 = (_DWORD *)__operator_new_array_al(0x80u, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 1), a1, 3u);
       v2[1] = dword_60C79E10 + 8;
       *(_DWORD *)off_60C79E14 = v3;
@@ -293669,7 +293852,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4[29] = 0;
     v4[30] = 0;
     v4[31] = 0;
-    v4[16] = __operator_new[](0x158u, a2, 4);
+    v4[16] = __operator_new_array_al(0x158u, a2, 4);
     agl_TextureData_ref((int)v9);
     sub_6091FDB0((int)v9, 1, 29, 32, 32, 1, 1, 0, 0, 1);
     v4 += 18;
@@ -293786,7 +293969,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD **)off_60C79B74;
     if ( !*(_DWORD *)off_60C79B74 )
     {
-      v2 = (_DWORD *)__operator_new[](0x144u, (int)a1, 4);
+      v2 = (_DWORD *)__operator_new_array_al(0x144u, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 1), a1, 3u);
       v2[1] = dword_60C79E1C + 8;
       *(_DWORD *)off_60C79E20 = v3;
@@ -294296,7 +294479,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)off_60C79B78;
     if ( !*(_DWORD *)off_60C79B78 )
     {
-      v2 = __operator_new[](0x598u, (int)a1, 4);
+      v2 = __operator_new_array_al(0x598u, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C79E28 + 8;
       *(_DWORD *)off_60C79E2C = v3;
@@ -294754,6 +294937,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             NameTable_setEntryString(v16, 1u, (int)&v50);
             v50 = 12321336;
 
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_60970920
  * RVA 0x00970920   size 0x814   xrefs 1
@@ -295068,7 +295255,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v47 = v44 + v12;
               v48 = v44 + v12 + 1;
               v81 = v47;
-              v88 = (void *)__operator_new[](v48, a6, 4);
+              v88 = (void *)__operator_new_array_al(v48, a6, 4);
               memset(v88, 0, v48);
               *v46 = 12322272;
               v46[1] = v88;
@@ -295124,7 +295311,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               }
               (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
               v55 = v10[1];
-              v56 = (unsigned __int8 *)__operator_new[](v12 + 1, a6, 4);
+              v56 = (unsigned __int8 *)__operator_new_array_al(v12 + 1, a6, 4);
               (*(void (__fastcall **)(_DWORD *))(*v89 + 12))(v89);
               v57 = &v75[-v55];
               v58 = v56;
@@ -295159,6 +295346,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                 while ( v68 );
               }
 
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6097114C
  * RVA 0x0097114c   size 0x214   xrefs 8
@@ -295204,7 +295397,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     v12 = v10 + 1;
-    v13 = (void *)__operator_new[](v10 + 1, a2, a4);
+    v13 = (void *)__operator_new_array_al(v10 + 1, a2, a4);
     memset(v13, 0, v12);
     (*(void (__fastcall **)(_DWORD *))(*a3 + 12))(a3);
     v14 = a3[1];
@@ -295885,7 +296078,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD **)off_60C79B7C;
     if ( !*(_DWORD *)off_60C79B7C )
     {
-      v2 = (_DWORD *)__operator_new[](0x68u, (int)a1, 8);
+      v2 = (_DWORD *)__operator_new_array_al(0x68u, (int)a1, 8);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 1), a1, 3u);
       v2[1] = dword_60C79E38 + 8;
       *(_DWORD *)off_60C79E3C = v3;
@@ -297651,7 +297844,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v10 );
       }
-      __operator_delete[](v8);
+      __operator_delete_array_al(v8);
       *(_DWORD *)(a1 + 2368) = 0;
       *(_DWORD *)(a1 + 2372) = 0;
     }
@@ -297672,7 +297865,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v15 );
       }
-      __operator_delete[](v13);
+      __operator_delete_array_al(v13);
       *(_DWORD *)(a1 + 3596) = 0;
       *(_DWORD *)(a1 + 3600) = 0;
     }
@@ -297907,7 +298100,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v37 = *(_QWORD *)v39;
     LODWORD(v27) = a1 + 2416;
     sub_60918E08(v27, 16);
-    v28 = __operator_new[](0x100u, a10, 8);
+    v28 = __operator_new_array_al(0x100u, a10, 8);
     sub_60918D40(a1 + 2416, v28, 256);
     v29 = (_DWORD *)__operator_new_al(0x1Cu, a10, 4);
     v30 = Slot_construct((int)v29);
@@ -297919,7 +298112,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v37 = *(_QWORD *)v39;
     LODWORD(v31) = a1 + 3000;
     sub_60918E08(v31, 16);
-    v32 = __operator_new[](0x100u, a10, 8);
+    v32 = __operator_new_array_al(0x100u, a10, 8);
     sub_60918D40(a1 + 3000, v32, 256);
     result = a9;
     if ( a9 == (_DWORD *)1 )
@@ -298539,6 +298732,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (unsigned __int16)*v73 != v74 )
       {
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_609757A8
  * RVA 0x009757a8   size 0x20   xrefs 1
@@ -299640,21 +299836,21 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1[18];
     if ( v2 )
     {
-      __operator_delete[](v2 - 8);
+      __operator_delete_array_al(v2 - 8);
       a1[17] = 0;
       a1[18] = 0;
     }
     v3 = a1[25];
     if ( v3 )
     {
-      __operator_delete[](v3 - 8);
+      __operator_delete_array_al(v3 - 8);
       a1[24] = 0;
       a1[25] = 0;
     }
     v4 = a1[32];
     if ( v4 )
     {
-      __operator_delete[](v4 - 8);
+      __operator_delete_array_al(v4 - 8);
       a1[31] = 0;
       a1[32] = 0;
     }
@@ -299674,7 +299870,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v9 );
       }
-      __operator_delete[](v7);
+      __operator_delete_array_al(v7);
       a1[38] = 0;
       a1[39] = 0;
     }
@@ -299746,7 +299942,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = 3 * a3;
     if ( 3 * a3 )
     {
-      result = __operator_new[](result, a6, 8);
+      result = __operator_new_array_al(result, a6, 8);
       *(_DWORD *)(a1 + 60) = result;
     }
     if ( v10 )
@@ -300275,7 +300471,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v8 );
       }
-      __operator_delete[](v6);
+      __operator_delete_array_al(v6);
       a1[403] = 0;
       a1[404] = 0;
     }
@@ -300295,7 +300491,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v15 );
       }
-      __operator_delete[](v13);
+      __operator_delete_array_al(v13);
       a1[430] = 0;
       a1[431] = 0;
     }
@@ -300325,7 +300521,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v21 + v19 );
       }
-      __operator_delete[](v18);
+      __operator_delete_array_al(v18);
       a1[53] = 0;
       a1[54] = 0;
     }
@@ -300789,6 +300985,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v34 = (char *)v112;
     (*(void (__fastcall **)(int))(MEMORY[0xC5CB30] + 12))(12962608);
 
+  }
 /* ============================================================================
  * sub_609795F8
  * RVA 0x009795f8   size 0x268   xrefs 2
@@ -303579,7 +303776,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = (_DWORD *)result;
     if ( a2 >= 1 )
     {
-      result = __operator_new[](4 * a2, a3, a4);
+      result = __operator_new_array_al(4 * a2, a3, a4);
       if ( result )
       {
         v5[2] = result;
@@ -303602,7 +303799,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = a1[2];
     if ( result )
     {
-      __operator_delete[](result);
+      __operator_delete_array_al(result);
       a1[2] = 0;
       *a1 = 0;
       a1[1] = 0;
@@ -305319,6 +305516,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v45 = __operator_new_al(0x1Cu, a2, 4);
     Slot_construct(v45);
 
+  }
 /* ============================================================================
  * sub_6097E74C
  * RVA 0x0097e74c   size 0x9c   xrefs 1
@@ -311521,7 +311719,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = (_DWORD *)MEMORY[0xCD0C24];
     if ( !MEMORY[0xCD0C24] )
     {
-      v2 = (_DWORD *)__operator_new[](0x30u, (int)a1, 4);
+      v2 = (_DWORD *)__operator_new_array_al(0x30u, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 1), a1, 3u);
       v2[1] = dword_60C79F44 + 8;
       *(_DWORD *)off_60C79F48 = v3;
@@ -311933,7 +312131,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCD0C2C];
     if ( !MEMORY[0xCD0C2C] )
     {
-      v2 = __operator_new[](0x30u, (int)a1, 4);
+      v2 = __operator_new_array_al(0x30u, (int)a1, 4);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C79F50 + 8;
       *(_DWORD *)off_60C79F54 = v3;
@@ -312344,7 +312542,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         while ( v7 );
       }
-      __operator_delete[](v5);
+      __operator_delete_array_al(v5);
       a1[7] = 0;
       a1[8] = 0;
     }
@@ -317462,7 +317660,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = MEMORY[0xCD0C84];
     if ( !MEMORY[0xCD0C84] )
     {
-      v2 = __operator_new[](0x368u, (int)a1, 8);
+      v2 = __operator_new_array_al(0x368u, (int)a1, 8);
       v3 = sead__IDisposer__IDisposer((struct sead_IDisposer *)(v2 + 4), a1, 3u);
       *(_DWORD *)(v2 + 4) = dword_60C79FE0 + 8;
       *(_DWORD *)off_60C79FE4 = v3;
@@ -319406,6 +319604,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         sub_6097D880(v40, v39);
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_609900F4
  * RVA 0x009900f4   size 0x124   xrefs 1
@@ -321983,6 +322184,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
 
+  }
+  }
 /* ============================================================================
  * sub_60992D00
  * RVA 0x00992d00   size 0x4c   xrefs 1
@@ -323318,6 +323521,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         (*(void (__fastcall **)(_DWORD, _DWORD, _DWORD))(**(_DWORD **)(a1 + 20) + 156))(
           *(_DWORD *)(a1 + 20),
 
+  }
+  }
+  }
 /* ============================================================================
  * sub_60994728
  * RVA 0x00994728   size 0xc   xrefs 2
@@ -333098,7 +333304,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = a1[10];
       if ( v2 )
   LABEL_7:
-        __operator_delete[](v2);
+        __operator_delete_array_al(v2);
       a1[9] = 0;
       a1[10] = 0;
       a1[11] = 0;
@@ -333143,7 +333349,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v2 = a1[10];
       if ( v2 )
   LABEL_7:
-        __operator_delete[](v2);
+        __operator_delete_array_al(v2);
     }
     return __operator_delete((int)a1);
   }
@@ -333207,7 +333413,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = a1[10];
       if ( v4 )
   LABEL_5:
-        __operator_delete[](v4);
+        __operator_delete_array_al(v4);
       a1[9] = 0;
       a1[10] = 0;
       a1[11] = 0;
@@ -333860,7 +334066,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v31 = v3[10];
           if ( v31 )
   LABEL_50:
-            __operator_delete[](v31);
+            __operator_delete_array_al(v31);
           v3[9] = 0;
           v3[10] = 0;
           v3[11] = 0;
@@ -333990,3 +334196,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                   break;
                 }
 
+
+  }
+  }
+  }
+  }
+  }
+  }
+  }

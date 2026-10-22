@@ -870,7 +870,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result >= 0 )
       {
         sub_6086AC64(&v27);
-        v22 = __operator_new[](v34, a5, 8);
+        v22 = __operator_new_array_al(v34, a5, 8);
         return sub_6086ADCC(v23 + 32, &v27, v22, v34);
       }
     }
@@ -1308,7 +1308,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result >= 0 )
     {
       sub_6086A438(&v78);
-      *(_DWORD *)(a1 + 236) = __operator_new[](v83, a5, 8);
+      *(_DWORD *)(a1 + 236) = __operator_new_array_al(v83, a5, 8);
       result = sub_6086A548(a1 + 32, &v78);
     }
     v23 = *(unsigned __int16 *)(a3 + 82);
@@ -1436,7 +1436,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result >= 0 )
       {
         sub_6086AC64(&v45);
-        v43 = __operator_new[](v52, a5, 8);
+        v43 = __operator_new_array_al(v52, a5, 8);
         return sub_6086ADCC(v44 + 120, &v45, v43, v52);
       }
     }
@@ -1820,7 +1820,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = MEMORY[0xC9CF0C];
     if ( !MEMORY[0xC9CF0C] )
     {
-      v2 = __operator_new[](5136, a1, 4);
+      v2 = __operator_new_array_al(5136, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12562700;
       MEMORY[0xC9CF08] = v2;
@@ -7126,7 +7126,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = MEMORY[0xC9CFB8];
     if ( !MEMORY[0xC9CFB8] )
     {
-      v2 = __operator_new[](88, a1, 4);
+      v2 = __operator_new_array_al(88, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12562916;
       MEMORY[0xC9CFB4] = v2;
@@ -7812,6 +7812,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v64 = 1;
       v65 = 1;
 
+  }
+  }
 /* ============================================================================
  * sub_6045A444
  * RVA 0x0045a444   size 0xb0   xrefs 3
@@ -14629,7 +14631,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = (_DWORD *)MEMORY[0xC9D3E4];
     if ( !MEMORY[0xC9D3E4] )
     {
-      v3 = __operator_new[](16, a1, 4);
+      v3 = __operator_new_array_al(16, a1, 4);
       result = (_DWORD *)sead__IDisposer__IDisposer(v3, a1, 3);
       *result = 12564612;
       MEMORY[0xC9D3E0] = result;
@@ -14927,6 +14929,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60466620(int a1, _DWORD **a2, int a3)
   {
+    int regTmp0 = 0, regTmp1 = 0, regTmp2 = 0;   /* ARM scratch registers, named instead of left as rN */
     int result; // r0
     int v5; // r1
     int *v6; // r10
@@ -14972,8 +14975,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v20 = v6[v9];
           v18 = a3;
           v10 = a3;
-          _R2 = arr_dword_60AF2614[v8] << 22;
-          uxtb16(r2)
+          regTmp2 = arr_dword_60AF2614[v8] << 22;
+          regTmp2 = (unsigned int)uxtb16((unsigned int)regTmp2);
           v17 = (arr_dword_60AF28C4[v8] << 31)
               | (((unsigned int)a2[5] & 3) << 12)
               | ((_DWORD)a2[6] << 14) & 0x4000
@@ -14981,7 +14984,7 @@ static inline unsigned int uxtb16(unsigned int x)
               | ((_DWORD)a2[8] << 16) & 0x30000
               | ((_DWORD)a2[9] << 18) & 0xC0000
               | ((_DWORD)a2[10] << 20) & 0x300000
-              | _R2
+              | regTmp2
               | ((_DWORD)a2[12] << 24) & 0x1F000000;
           result = sub_604663F4(v17, *a2, v17 | ((_DWORD)a2[14] << 30) & 0x40000000, v20, *((_BYTE *)a2 + 12), v18);
           ++v8;
@@ -14999,6 +15002,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   unsigned int __fastcall sub_60466800(int a1, int a2, int a3, int a4)
   {
+    int regTmp0 = 0, regTmp1 = 0, regTmp2 = 0;   /* ARM scratch registers, named instead of left as rN */
     int v6; // r4
     int v7; // r0
     _DWORD *v8; // r10
@@ -15035,9 +15039,9 @@ static inline unsigned int uxtb16(unsigned int x)
         | (*(_DWORD *)(a2 + 32) << 16) & 0x30000
         | (*(_DWORD *)(a2 + 36) << 18) & 0xC0000
         | (v12 << 20) & 0x300000;
-    _R2 = arr_dword_60AF2614[v6] << 22;
-    uxtb16(r2)
-    v22 = v15 | _R2 | (v10 << 24) & 0x1F000000 | (v9 << 30) & 0x40000000;
+    regTmp2 = arr_dword_60AF2614[v6] << 22;
+    regTmp2 = (unsigned int)uxtb16((unsigned int)regTmp2);
+    v22 = v15 | regTmp2 | (v10 << 24) & 0x1F000000 | (v9 << 30) & 0x40000000;
     return sub_604663F4(v22, v14, v22 | 0x20000000, a3, v24, 0);
   }
 
@@ -21693,7 +21697,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1[818];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[817] = 0;
       a1[818] = 0;
     }
@@ -21713,7 +21717,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1[818];
     if ( v2 )
     {
-      __operator_delete[](v2);
+      __operator_delete_array_al(v2);
       a1[817] = 0;
       a1[818] = 0;
     }
@@ -21783,7 +21787,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(_DWORD *)(a1 + 3272);
     if ( v4 )
     {
-      __operator_delete[](v4);
+      __operator_delete_array_al(v4);
       *(_DWORD *)(a1 + 3268) = 0;
       *(_DWORD *)(a1 + 3272) = 0;
     }
@@ -23018,7 +23022,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = sub_60980818(v4, a2[1]);
     sub_60851BDC(&v14, v5);
     v6 = sub_60851D10(&v14);
-    v7 = (int *)__operator_new[](4 * v6, MEMORY[0xCC7F90], 4);
+    v7 = (int *)__operator_new_array_al(4 * v6, MEMORY[0xCC7F90], 4);
     v16 = v7;
     sub_6090B310(MEMORY[0xCCF464]);
     v8 = *(_DWORD *)(a1 + 16);
@@ -26088,6 +26092,14 @@ static inline unsigned int uxtb16(unsigned int x)
                 if ( !v45 )
                 {
 
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_604774E0
  * RVA 0x004774e0   size 0x10   xrefs 0
@@ -28990,6 +29002,11 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_109:
             v47 = v45[1];
 
+  }
+  }
+  }
+  }
+  }
 /* ============================================================================
  * sub_6047BE64
  * RVA 0x0047be64   size 0x5c   xrefs 3
@@ -29522,6 +29539,8 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9E060 = 12321336;
       dword_60C9E064 = (int)&unk_60ABC94D;
 
+  }
+  }
 /* ============================================================================
  * sub_6047D75C
  * RVA 0x0047d75c   size 0x1b8   xrefs 1
@@ -31486,7 +31505,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = MEMORY[0xC9EBB4];
     if ( !MEMORY[0xC9EBB4] )
     {
-      v2 = __operator_new[](108, a1, 4);
+      v2 = __operator_new_array_al(108, a1, 4);
       sead__IDisposer__IDisposer(v2, a1, 3);
       *(_DWORD *)v2 = 12571436;
       MEMORY[0xC9EBB0] = v2;
