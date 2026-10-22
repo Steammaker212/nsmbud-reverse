@@ -582,7 +582,7 @@ instructions at `0x6013FB38`/`0x6013FB68`, and the five ctor field patches at
 
 - Source: `convertedmain.rebased.elf`, MD5 `f8a2e4c3616b8a99632b8ffe68938c34`.
 - Patched copy: `convertedmain.hammer_b.elf`, MD5 `e8dbb86b7a96d3077dad8d4aeec95a7a`,
-  SHA-256 (recompute below).
+  SHA-256 `a8e72cbe4fc84ea82961c1aa08dba0180d71e242fcc39966b2589b44ea20d920`.
 - 91 differing bytes; every difference is accounted for by the table above (no unexpected
   diffs).
 - All original byte sequences matched before writing; all new instruction words were decoded
@@ -651,8 +651,8 @@ instructions at `0x6013FB38`/`0x6013FB68`, and the five ctor field patches at
 | `0x60B0C2BC` | power-up height table (10 floats; index 10 overlaps `dword_60B0C2E4[]`) |
 | `0x60B0C230` | body-ID table (10 dwords; index 10 overlaps `dword_60B0C258[]`) |
 | `0x60B0C300` | tall-type table (10 dwords; index 10 is padding) |
-| `0x60BBF938` | new 11-entry height table (Approach B) |
-| `0x60BBF968` | new 11-entry body-ID table (Approach B) |
+| `0x60B493A8` | new 11-entry height table (Approach B; `.rodata` zero-padding block) |
+| `0x60B493D8` | new 11-entry body-ID table (Approach B; same block) |
 | `0x60CA6BB8` | power-up model table (20 entries) |
 | `0x60C24D08` | player vtable entry containing `0x60795CDC` |
 

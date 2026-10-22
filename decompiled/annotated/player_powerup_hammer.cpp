@@ -2,11 +2,17 @@
  * player_powerup_hammer.cpp  —  NSMBU Deluxe (Switch)
  *
  * Readable reconstruction of the player power-up / projectile path, and of the
- * "Approach B" custom Hammer power-up patch plan.
+ * "Approach B" custom Hammer power-up patch. Approach B is IMPLEMENTED and
+ * byte-verified; only a runtime test remains.
  *
  * Recovered from convertedmain.rebased.elf
  *   ARM32 / AArch32 (ARMv8-A), image base 0x60000000
  *   MD5 f8a2e4c3616b8a99632b8ffe68938c34
+ *
+ * Patched output: convertedmain.hammer_b.elf
+ *   MD5    e8dbb86b7a96d3077dad8d4aeec95a7a
+ *   SHA256 a8e72cbe4fc84ea82961c1aa08dba0180d71e242fcc39966b2589b44ea20d920
+ *   91 differing bytes, all accounted for
  *
  * PROVENANCE / CONFIDENCE
  *   [V]  verified in IDA *and* byte-checked against the ELF
@@ -594,10 +600,35 @@ static constexpr u32 cHammerAlloc   = 11912;
 
 
 // ===========================================================================
-// 9. Profile ID constants
+// 9. Profile ID constants and Hammer data addresses
 // ===========================================================================
 static constexpr u32 cProfileID_FireBall = 476;   // 0x00AF3498 -> 476  [V]
+static constexpr u32 cProfileID_IceBall  = 474;                       // [V]
 static constexpr u32 cProfileID_Hammer   = 759;   // 0x00AF3904 -> 759  [V]
+
+// Hammer actor data referenced by the collision / physics path.        [V]
+static constexpr u32 cHammerDirSpeedTable = 0x60AF1EC0;  // [+2.0, -2.0]
+static constexpr u32 cHammerInfo1VA       = 0x60BD31F0;  // ActiveCollider Info #1
+static constexpr u32 cHammerInfo2VA       = 0x60AF6604;  // ActiveCollider Info #2
+static constexpr u32 cHammerBodyBoxVA     = 0x60AF68D0;  // body box vectors
+static constexpr u32 cPowerUpModelTableVA = 0x60CA6BB8;  // 20 entries, no Hammer suit
+static constexpr u32 cPlayerVtsModeSet    = 0x60C24D08;  // contains 0x60795CDC
+
+// Hammer instance fields touched by the Approach A ctor patch.         [V]
+//   +0x50   direction
+//   +0x54   player index (byte)      |  +0x55 == 0xFF
+//   +0x56   collision layer          |  +0x57 == attack type 19
+//   +0xA0   X speed (+/-2.0)
+//   +0x2E40 model scale denominator
+//   +0x533  actor category (0 = projectile)
+static constexpr u32 cHammerOffDirection   = 0x50;
+static constexpr u32 cHammerOffPlayerIndex = 0x54;
+static constexpr u32 cHammerOffLayer       = 0x56;
+static constexpr u32 cHammerOffAttackType  = 0x57;
+static constexpr u32 cHammerOffSpeedX      = 0xA0;
+static constexpr u32 cHammerOffScaleDenom  = 0x2E40;
+static constexpr u32 cHammerOffCategory    = 0x533;
+
 
 
 // ===========================================================================
@@ -622,6 +653,51 @@ struct BytePatch
     u8          oldBytes[4];
     u8          newBytes[4];
     const char* what;
+};
+
+/**
+ * Approach A -- the 11 mode-independent Hammer actor / projectile patches.
+ * These make a player-thrown Hammer behave like a projectile: correct owner
+ * attribution, correct collision dispatch, no player self-hit, right size and
+ * facing. They do not depend on the power-up value, so they are identical
+ * whether Hammer is reached via Fire (mode 2) or via mode 10.
+ *
+ * The five ctor instructions at 0x60140744..0x60140778 build one 32-bit word
+ * and store it at Hammer+0x54, packing the per-hit attribution bytes:
+ *
+ *     +0x54 = player index (0..3)
+ *     +0x55 = 0xFF                 (preserved)
+ *     +0x56 = 0x00                 (collision layer)
+ *     +0x57 = 0x13 = 19            (hammer attack type)
+ *
+ * The stores these replace were redundant: +6112/+6116/+6120 were already
+ * zeroed earlier, +11824 is written by HammerActor_setupModel, and +11840 is
+ * set to 10 by the hammer init. R6 is callee-saved and survives the
+ * sub_601531B4 call, so carrying the packed word across it is safe.
+ */
+static const BytePatch cApproachAPatches[] = {
+    { 0x60C61BE4, {0x98,0x34,0xAF,0x00}, {0x04,0x39,0xAF,0x00},
+      "Fire profile ptr 476 -> Hammer 759" },
+    { 0x60BD3208, {0x00,0x00,0x00,0x00}, {0x13,0x00,0x00,0x00},
+      "Hammer Info#1 subtype = 19" },
+    { 0x60BD3210, {0x00,0x82,0x08,0x00}, {0x01,0x00,0x08,0x00},
+      "Hammer Info#1 mask = 0x00080001 (enemy 0 + hammer 19, not player 11)" },
+    { 0x60AF6620, {0x00,0x08,0x00,0x00}, {0x00,0x00,0x00,0x00},
+      "Hammer Info#2 mask = 0 (no player-body hit)" },
+    { 0x6013FB38, {0x01,0x10,0x00,0xE2}, {0x50,0x12,0xE0,0xE7},
+      "direction = (param >> 4) & 1   [UBFX R1,R0,#4,#1]" },
+    { 0x6013FB68, {0x50,0x08,0xE7,0xE7}, {0x0A,0x00,0xA0,0xE3},
+      "scale denominator = 10   [MOV R0,#10]" },
+    { 0x60140744, {0x00,0x50,0x86,0xE5}, {0x14,0x60,0x94,0xE5},
+      "ctor: LDR R6,[R4,#0x14]        (the spawn param)" },
+    { 0x60140748, {0x00,0x50,0x87,0xE5}, {0x0F,0x60,0x06,0xE2},
+      "ctor: AND R6,R6,#0xF           (player index)" },
+    { 0x6014074C, {0x00,0x50,0x8A,0xE5}, {0x13,0x64,0x86,0xE3},
+      "ctor: ORR R6,R6,#0x13000000    (+0x57=19, +0x56=0)" },
+    { 0x60140770, {0x00,0x50,0x84,0xE7}, {0xFF,0x6C,0x86,0xE3},
+      "ctor: ORR R6,R6,#0xFF00        (+0x55=0xFF)" },
+    { 0x60140778, {0x00,0x50,0x84,0xE7}, {0x54,0x60,0x84,0xE5},
+      "ctor: STR R6,[R4,#0x54]        (commit +0x54..+0x57)" },
 };
 
 static const BytePatch cApproachBPatches[] = {
@@ -653,25 +729,61 @@ static constexpr u32 cTallTypeIdx10PatchVA = 0x60B0C328;   // [P] -> u32 2
 
 
 // ===========================================================================
-// 11. Verification results (current work state)
+// 11. Final build state  (regenerated build, independently re-verified)
 // ===========================================================================
 /**
- * Verified against convertedmain.rebased.elf:
- *   MD5 f8a2e4c3616b8a99632b8ffe68938c34
- *   PT_LOAD 0: vaddr 0x60000000 filesz 0x9AE990 off 0x45C
- *   PT_LOAD 1: vaddr 0x609AF000 filesz 0x210A53 off 0x9AEDEC
- *   PT_LOAD 2: vaddr 0x60BC0000 filesz 0x0BB274 off 0xBBF83F
+ * SOURCE
+ *   convertedmain.rebased.elf
+ *     MD5    f8a2e4c3616b8a99632b8ffe68938c34
+ *     size   13085363 bytes
  *
- *   All 9 instruction patches: original bytes MATCH.
- *   All 5 literal cells:       current values MATCH the recorded ones.
- *   Profile pointer cell:      0x00AF3498 -> 476  (MATCH)
- *   Relocation block:          160 bytes, all zero (MATCH)
- *   Profile entries:           0x00AF3498 -> 476, 0x00AF3904 -> 759 (MATCH)
+ * PATCHED OUTPUT
+ *   convertedmain.hammer_b.elf
+ *     MD5    e8dbb86b7a96d3077dad8d4aeec95a7a
+ *     SHA256 a8e72cbe4fc84ea82961c1aa08dba0180d71e242fcc39966b2589b44ea20d920
+ *     size   13085363 bytes (unchanged -- no section grew)
  *
- * NOT yet verified:
- *   - Runtime behaviour of the patched build in an emulator or on hardware.
- *   - Whether a dedicated Hammer suit model exists (none found; the current
- *     plan reuses the Normal body with the Fire suit colour).
- *   - Double-hit risk, direction bit-4 behaviour, model-swap stability for
- *     mode 10, and the Hammer spawn parameters taken from the fire path.
+ * INDEPENDENT RE-VERIFICATION
+ *   A separate verifier re-read both files and re-derived every claim from
+ *   bytes rather than trusting the patch script:
+ *     - size equal, program headers byte-identical
+ *     - Approach A: all 11 patches, src and out bytes both correct
+ *     - Approach B: all 9 instruction patches correct
+ *     - all 5 literal redirects correct in the output file
+ *     - profile cell 0x00AF3498 -> 0x00AF3904
+ *     - tall type[10] = 2
+ *     - 0x60B0C2E4 still 0.0, 0x60B0C258 still 0xA5  (neighbours intact)
+ *     - new height table = [16,31,31,6,31,31,31,31,31,31,31]
+ *     - new body table   = [1,0,0,1,2,3,0,4,4,5,0]
+ *     - padding block bytes 88..160 still zero
+ *     - total differing bytes: 91, all accounted for
+ *
+ * SECTION MAPPING (parsed from program headers, not hardcoded)
+ *   PT_LOAD 0: vaddr 0x60000000 filesz 0x09AE990 off 0x00045C
+ *   PT_LOAD 1: vaddr 0x609AF000 filesz 0x210A53  off 0x9AEDEC
+ *   PT_LOAD 2: vaddr 0x60BC0000 filesz 0x0BB274  off 0xBBF83F
+ *
+ * WHY THE .rodata BLOCK AND NOT THE ORPHAN TAIL
+ *   An earlier attempt placed the new tables past the end of the last loaded
+ *   section ("orphan tail"). That works in a raw ELF but is not section-backed,
+ *   so it does not survive NSP/NSO repacking. The current build uses a genuine
+ *   0xA0-byte zero-padding block inside .rodata, which does.
+ *
+ * FIRE MODE 2 IS RETIRED
+ *   Legacy Fire saves will show Normal colour and cannot throw. Fire becomes
+ *   unreachable once the Fire Flower grants 10. If compatibility is ever
+ *   wanted, add a mode 2 -> 10 remap in sub_607A2F40 before the vf+0x90 call.
+ *
+ * STILL UNPROVEN AT RUNTIME
+ *   - direction bit 4 sourced from player+0x2F10
+ *   - double-hit risk between the body CollisionMgr and Info#1 ActiveCollider
+ *   - Hammer spawn velocity/position inherited from the fireball path
+ *   - model/animation stability while switching to mode 10
+ *   All of these need an actual patched run in an emulator or on hardware.
+ *
+ * NO HAMMER SUIT MODEL EXISTS
+ *   Mode 10 uses body type 0 (Normal) with colour type 2 (Fire), i.e. a
+ *   Fire-coloured Normal body. A true Hammer suit needs new model resources,
+ *   which is an asset job, not a patch.
  */
+
