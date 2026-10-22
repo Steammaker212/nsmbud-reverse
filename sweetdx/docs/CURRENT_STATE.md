@@ -1,122 +1,143 @@
-# Where the rendering fault is, and where it is not
+# Where things stand
 
-Status: three claims retracted, one confirmed by byte-exact comparison.
-Date: 2026-10-22
+Status: **the rendering fault is solved.** `subsdk0` was malformed; the cause is found,
+fixed, and verified with real code in the module.
 
-## The measurement that settles the most
+Last updated: 2026-10-22
 
-Applying our shipped IPS to the retail ELF and diffing the result against the reference
-build:
+---
 
-| build | bytes differing from reference |
-|---|---|
-| `output_step2_hammer_enabled` | **6** |
-| `output_step3b_ctor_kept` | 14 |
-| `output_step4_gate_only` | 110 |
+## 1. The rendering fault — SOLVED
 
-The six in step 2 are exactly the hooks we had already quarantined:
+Every build that shipped a `subsdk0` broke model rendering (black figures, missing
+models). Builds with only the IPS rendered cleanly. The game never crashed.
+
+**Cause.** `sweetdx/symbols/nsmbudx.sym` listed the C runtime entry points:
 
 ```
-0x00AF6621   0x00BD3208   0x00BD3210   0x00BD3211   0x00C61BE4   0x00C61BE5
+_init = 0x00000024;
+_fini = 0x00000218;
 ```
 
-So **the build reproduces the reference build almost byte-for-byte.** Whatever is wrong is
-not a transcription error on our side — we are faithfully implementing something that does
-not work on retail Deluxe. That reframes the problem entirely: the search is no longer "find
-our typo", it is "the reference approach is incomplete".
+sweet-dx turns each `.sym` entry into an *absolute* linker-script assignment of
+`address - 0xCD1000`. Because `crt0.s` also defines `_init`, the generated script
+overrode it, and `0x24 - 0xCD1000` wrapped to `0xff32f024`. The module therefore shipped
+`DT_INIT = 0xff32f024` — an entry point outside the module. The dynamic loader branched
+there at startup, resource loading half-failed, and models rendered as black figures while
+the game kept running.
 
-## Retracted: "the six readers were collapsed into three tables"
+**Fix.** Remove `_init` and `_fini` from the symbol file. Nothing else.
 
-Wrong, and the cause was an off-by-8 in `pc`. The correct relation is
+**Verified.**
 
-    table = stored_word + pc        where pc = DCD_address + 0x14   (LDR + 0x10)
+| | before | after |
+|---|---|---|
+| `DT_INIT` | `0xff32f024` (outside) | `0x24` in `.text+0x24` |
+| module size | 577 b | 569 b |
+| `.dynamic` pointers | one invalid | all inside segments |
 
-With that, all six readers resolve exactly as `mode_tables.hks` documents:
+Full write-up: `SUBSDK0_DT_INIT_ROOT_CAUSE.md`.
 
-| reader | retail table | ours | reference |
+**Proof the toolchain works with real code.** `scripts/subsdk0_smoketest.py` builds a
+throwaway project containing one `hook` whose C++ body returns its argument untouched,
+hooked onto the semantically inert gate at `0x465E4C`. Result:
+
+```
+subsdk0: 601 bytes, .text 0x70
+DT_INIT 0x24 -> .text+0x24   OK
+real function compiled into .text : yes  (at module offset 0x58)
+hook branch written into the IPS   : yes  (BL 0xea21ac81 at IPS 0x465F4C)
+```
+
+So the compile path is sound. That was the requirement: the source and the reverse
+engineering must work for other patches too.
+
+### Two wrong diagnoses, retracted
+
+Recorded because they were mine, not properties of the module:
+
+1. *"The stub declares segments past EOF."* False — with correct NSO0 offsets all three
+   segments fit inside 577 bytes.
+2. *"MOD0's `dynamic` pointer lands in a hole."* False — MOD0 offsets are relative to the
+   MOD0 struct, not module base. `dynamic = 0x1000` is the start of `.rodata`.
+
+A third, earlier: *"the mode tables are written with holes"* — also false. The records are
+16/16/12 bytes, which is exactly 44, so no entry is skipped.
+
+---
+
+## 2. "Nothing fires" — cause found, fixed
+
+With the full 36-record set, receiving a Fire Flower produced no fireballs. With only the
+gate records it threw normally.
+
+**Cause.** Five hooks *replaced* the Fire-mode test instead of adding mode 10:
+
+```
+check_set_fireball_mode   0x7AA9BC   CMP R1,#2 -> #0xa
+set_fireball_action_mode  0x7AAA88   CMP R0,#2 -> #0xa
+create_fireball_a_mode    0x7AABB8   CMP R0,#2 -> #0xa
+create_fireball_b_mode    0x7AAC94   CMP R0,#2 -> #0xa
+execute_mode_guard2       0x7AB0E4   CMP R0,#2 -> #0xa
+mode_six_or_ten           0x78E6A8   CMP R0,#2 -> #0xa
+```
+
+Each site is followed by a conditional branch, so changing the constant changed the
+meaning from "is this Fire?" to "is this Hammer?". Fire Flower stopped being able to
+throw. `mode_six_or_ten` did the same to the body selector.
+
+A single ARM `cmp` cannot express "mode == 2 or mode == 10", so these sites are no longer
+patched. Mode 2 keeps its retail behaviour exactly.
+
+**Only additive patches remain.** `execute_mode_mask` widens the mask from `0x64`
+(bits 2,5,6) to `0x464` (bits 2,5,6,10). Since `0x464 & 0x64 == 0x64`, every previously
+accepted mode still passes and bit 10 is added. That is the one hook that cannot remove a
+behaviour.
+
+IPS: 356 bytes, 28 records, no destructive substitutions, none of the mode-2 comparison
+sites patched. `scripts/decode_ips.py` checks this on every build.
+
+---
+
+## 3. What mode 10 still lacks
+
+Removing the bad hooks means Hammer currently gets: the item gate widened, the three mode
+tables extended to 11 entries with the six readers repointed, and the tall-actor type set.
+It does **not** get a throwing path, because that needs real code — which is now possible.
+
+The correct next step is a `hook` with a trampoline on `sub_607AA954`
+(`checkSetFireBall`), whose C++ body returns "may throw" for mode 2 **or** mode 10. That
+is additive by construction and cannot repeat the Fire regression.
+
+Also still open:
+
+- no Hammer suit model exists; mode 10 uses body type 0 + colour 2 and looks like big Mario
+- body-table semantic: `1 << table[mode]` is a bit position, so `body[10] = 0` means bit 0
+- `ActiveCollider` size (`0xB8` vs `0x130`)
+- contents→item mapping (best fit 3/16)
+- Cheep Cheep bee reskin
+- HammerQuestionBlock Yaz0moto patch still 0.9-UNRELEASED
+- quarantined hooks: `hammer_profile_cell` `0xC61BE4`, 3 × ActorInfo, `grant_hammer_mode`
+
+---
+
+## 4. Dead hooks to delete
+
+`hammer_actor.hks` patches seven sites in two functions IDA reports as follows:
+
+| function | RVA | xrefs | sites |
 |---|---|---|---|
-| body_a/b/c | `0xB0C230` | `0xB493D8` | `0xB493D8` |
-| height_a/b | `0xB0C2BC` | `0xB493A8` | `0xB493A8` |
-| balloon | `0xB0C34C` | `0xB49404` | `0xB49404` |
+| `sub_6013FB0C` | `0x13FB0C` | **0** — unreachable | `0x13FB38`, `0x13FB68` |
+| `sub_6014065C` | `0x14065C` | 1 (from `0x13F044`) | `0x140744`, `0x140748`, `0x14074C`, `0x140770`, `0x140778` |
 
-Groups match retail, groups match the reference, and the first ten entries of every relocated
-table are identical to retail (verified). The relocation is structurally sound. This was the
-third time a `pc` off-by-8 produced a confident wrong answer in this project; the hook file's
-own comments were right and the analysis scripts were wrong.
-
-## Retracted: "the two 0x13FBxx scale hooks rescale every actor"
-
-`sub_6013FB0C` has zero references — no xrefs, no data pointer, no `ADR`/`ADD PC`. It is dead
-in retail. The hooks are inert.
-
-## Retracted: "can_change_to_hammer branches out of bounds"
-
-The jump table starts one word after `ADD PC`, so `MOVHI R3,#1` is a correctly formed
-redirect of out-of-range modes to case 1.
-
-## Confirmed: what the reference build actually does
-
-Every "mode" hook substitutes, it does not extend:
+The retail bytes at those addresses also do not match what the hook file claims:
 
 ```
-grant_hammer_mode        0x45DDCC   mov r2,#2 -> #0xa
-mode_six_or_ten          0x78E6A8   cmp r0,#2 -> #0xa
-check_set_fireball_mode  0x7AA9BC   cmp r1,#2 -> #0xa
-set_fireball_action_mode 0x7AAA88   cmp r0,#2 -> #0xa
-create_fireball_a_mode   0x7AABB8   cmp r0,#2 -> #0xa
-create_fireball_b_mode   0x7AAC94   cmp r0,#2 -> #0xa
-execute_mode_guard       0x7AAFF4   cmp r1,#6 -> #0xa
-execute_mode_guard2      0x7AB0E4   cmp r0,#2 -> #0xa
+0x13FB38  retail AND  R1, R0, #1        hook claims ubfx r1, r0, #4, #1
+0x13FB68  retail UBFX R0, R0, #0x10,#8  hook claims mov r0, #0xa
+0x140744  retail STR  R5, [R6]          hook claims ldr r6, [r4, #0x14]
 ```
 
-`sub_6078E608` (11 callers) uses that test to choose a body-variant selector handed to a
-vtable call: `1` normal, `2` fire, `3` mode 6. Rewriting `#2` to `#0xa` makes Fire Mario
-select variant `1` at all eleven sites.
-
-## The two reported symptoms, explained
-
-**"Consumed like a Mushroom, stays big."** The reference build's quirk, faithfully
-reproduced. Mode 10 maps to body type 0 via the relocated body table, and body type 0 is the
-normal big body. The item is consumed; the visible form is the same big Mario. There is no
-hammer model anywhere in the image — the only hammer-named resources are
-`EF_MortonHammerBlur*` (Morton's boss effect) and `SE_OBJ_HAMMER_HIT_BOTH` (audio). A mode-10
-player cannot look like a Hammer because no such model exists.
-
-**"Some models do not load, black figure or shadow."** Not yet attributed. It survives
-builds that contain none of the actor or projectile hooks, so it lives in `item_grant.hks`,
-`mode_tables.hks`, or `grant_hammer_mode` — or it is not caused by our patch at all and is
-sitting in the user's mod stack (a Yaz0moto question block patch is loaded alongside).
-
-## The builds that will decide it
-
-Each is a single concern, so a clean or dirty result is unambiguous.
-
-| build | contents | IPS | question it answers |
-|---|---|---|---|
-| `output_step5_grant_only` | 1 record: `0x45DDCC` | 17 b | does the grant hook alone break models? |
-| `output_step6_gate_only_no_grant` | 4 records: item gate | 44 b | does the gate alone break models? |
-| `output_step4_gate_only` | 5 records: gate + grant | 53 b | do both together break models? |
-
-Run order: **step 5**, then **step 6**, then step 4.
-
-- Step 5 clean → the grant hook is innocent; mode 10 is never applied anyway.
-- Step 6 clean → the gate is innocent.
-- Step 4 clean → the fault needs `mode_tables.hks` or later hooks.
-- Any of them dirty → that build's records are the cause, and there are at most five of them.
-
-If **all three are clean**, the corruption comes from `mode_tables.hks` (the relocated tables
-or `mode_six_or_ten`) and the next test is that file alone.
-
-If **step 5 alone is dirty**, stop and suspect the mod stack rather than the patch, because
-one instruction writing `mov r2,#0xa` into a function with no references cannot plausibly
-delete models — that result would mean something else is in play.
-
-## What is still genuinely unknown
-
-1. Whether the six tables are *read* with a mode index or something else. The
-   `1 << table[a2]` form in `sub_6078C444` treats the value as a **bit position**, which is a
-   different contract from "body type". Not yet resolved, and it matters for whether
-   `body[10] = 0` is even the right value to use.
-2. Whether a Hammer projectile exists to be thrown. The diff contains no new code, so the
-   reference build cannot have added one; mode 10 reuses the fireball path.
-3. Which of the ~20 `+0x2C7C` mode-field sites still lack a slot for mode 10.
+These records should be dropped. They are five unexplained stores and two writes into
+unreachable code. They were never needed for the gate or the tables, and step 7 proved
+the gate works without them.

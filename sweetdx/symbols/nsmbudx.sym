@@ -4,6 +4,24 @@
 #
 # IMPORTANT: do not list a symbol here if our own subsdk code defines it.
 #
+# IMPORTANT: NEVER list crt0.s / runtime labels here. sweet-dx turns each entry into an
+# ABSOLUTE linker-script assignment, which overrides crt0's own definition. Listing
+# `_init = 0x24;` made the linker script clobber crt0's `_init`, and because 0x24 is
+# below 0xCD1000 it wrapped to 0xFF32F024, so the emitted module shipped
+# DT_INIT = 0xFF32F024 -- an entry point outside the module. The dynamic loader branched
+# there at startup, resource loading half-failed, and models rendered as black figures
+# while the game kept running. That was the whole "rendering bug".
+#
+# Forbidden names (crt0.s / linker.ld provide them; never redefine them here):
+#   _init  _fini  _start  _crt0_section  static_init_hook
+#   __mod0_start  __bss_start__  __bss_end__
+#   __eh_frame_hdr_start  __eh_frame_hdr_end
+#
+# Verify every build with:
+#   python .rea/verify_subsdk0.py <output>/.../exefs/subsdk0
+# It must report DT_INIT inside .text (it should be 0x24). See
+# sweetdx/docs/SUBSDK0_DT_INIT_ROOT_CAUSE.md.
+#
 # sweet-dx converts every entry into an absolute linker-script assignment of
 # `address - NSMBUDX_NSO_MEMORY_SIZE` (0xCD1000). For addresses below that offset the
 # value wraps negative into 0xFFxxxxxx, and any hook on it then tries to branch to
@@ -34,8 +52,6 @@
 #   _ZN5Enemy4vfD0Ev
 #     -> _ZN5Enemy6freezeEv
 
-_init = 0x00000024;
-_fini = 0x00000218;
 __nnDetailNintendoSdkRuntimeObjectFileRefer = 0x00000298;
 __nnDetailNintendoSdkRuntimeObjectFile = 0x0000029C;
 _ZN10StageActorC2EPK14ActorBuildInfo = 0x000002A0;

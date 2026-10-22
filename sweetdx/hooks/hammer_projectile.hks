@@ -1,58 +1,45 @@
-@Hammer power-up: the throw path (fireball code reused for Hammer).
+@Hammer power-up: projectile / mode hooks.
 @
-@ Generated from the byte diff between the stock NSMBU Deluxe v1.0.0 main NSO and the
-@ Hammer reference build. NOTE: "came from the diff" is not a correctness claim. Six
-@ hooks in mode_tables.hks also came from the diff, reproduced it byte-perfectly, and
-@ still broke the game. See docs/INCIDENT_2026-10-22.md.
+@ REVISION: the previous version of this file made mode 10 work by REPLACING the mode-2
+@ test at each site:
 @
-@ SweetDX format: an unindented 'name:' header, indented 'key: value' fields, and '@'
-@ comments. 'instr' hooks are reassembled by clang and were round-trip verified against
-@ the reference bytes; 'data' hooks are written verbatim.
-
-can_change_to_hammer:
-    @ canChangeTo: accept mode 10.
-    type:    instr
-    instruction: movhi r3, #1
-    address: 0x007A2708
-
-check_set_fireball_mode:
-    @ checkSetFireBall: accept mode 10.
-    type:    instr
-    instruction: cmp r1, #0xa
-    address: 0x007AA9BC
-
-set_fireball_action_mode:
-    @ setFireBallAction: treat mode 10 as the projectile-throwing mode.
-    type:    instr
-    instruction: cmp r0, #0xa
-    address: 0x007AAA88
-
-create_fireball_a_mode:
-    @ createFireBall: accept mode 10 at the first guard.
-    type:    instr
-    instruction: cmp r0, #0xa
-    address: 0x007AABB8
-
-create_fireball_b_mode:
-    @ createFireBall: accept mode 10 at the second guard.
-    type:    instr
-    instruction: cmp r0, #0xa
-    address: 0x007AAC94
-
-execute_mode_guard:
-    @ Projectile execute: accept mode 10.
-    type:    instr
-    instruction: cmp r1, #0xa
-    address: 0x007AAFF4
+@     cmp r1, #2   ->   cmp r1, #0xa
+@
+@ That is not an addition, it is a substitution. Every one of those sites is followed by a
+@ conditional branch, so rewriting the constant changed the meaning from "is this Fire?"
+@ to "is this Hammer?". Fire Flower stopped being able to throw. Observed symptom: with
+@ the full record set, receiving a Fire Flower produced no fireballs at all; with only the
+@ gate records, Fire Flower threw normally.
+@
+@ A single ARM `cmp` cannot express "mode == 2 or mode == 10", so these sites are NOT
+@ patched here. Mode 2 keeps its original behaviour exactly, and Hammer's throwing path
+@ must be provided by real code in subsdk0 via a `hook` with a trampoline -- which is now
+@ possible because the DT_INIT defect that made every subsdk0 build break rendering has
+@ been fixed (see docs/SUBSDK0_DT_INIT_ROOT_CAUSE.md).
+@
+@ Only ADDITIVE patches remain in this file. An additive patch accepts every value the
+@ retail instruction accepted and adds mode 10; it can never remove a behaviour.
 
 execute_mode_mask:
-    @ Projectile execute: extend the mode mask to include bit 10 (0x464).
+    @ Projectile execute: widen the mode bitmask from 0x64 (bits 2,5,6) to 0x464 (bits
+    @ 2,5,6,10). Pure addition: 0x464 & 0x64 == 0x64, so every previously accepted mode
+    @ still passes and bit 10 is now accepted too.
     type:    instr
     instruction: movw r3, #0x464
     address: 0x007AB000
 
-execute_mode_guard2:
-    @ Projectile execute: accept mode 10 at the second guard.
-    type:    instr
-    instruction: cmp r0, #0xa
-    address: 0x007AB0E4
+@ ---------------------------------------------------------------------------------------
+@ REMOVED - destructive substitutions. Do not reintroduce without a real hook.
+@
+@   can_change_to_hammer    0x007A2708   cmp r3,#8   -> movhi r3,#1
+@       `sub_607A26F8` has 0 callers in the image: dead code. Dropped as pointless.
+@
+@   check_set_fireball_mode 0x007AA9BC   cmp r1,#2 -> #0xa
+@   set_fireball_action_mode0x007AAA88   cmp r0,#2 -> #0xa
+@   create_fireball_a_mode  0x007AABB8   cmp r0,#2 -> #0xa
+@   create_fireball_b_mode  0x007AAC94   cmp r0,#2 -> #0xa
+@   execute_mode_guard      0x007AAFF4   cmp r1,#6 -> #0xa
+@   execute_mode_guard2     0x007AB0E4   cmp r0,#2 -> #0xa
+@       Each removed the retail mode from the branch condition. These are the cause of
+@       "fire flower appears but nothing fires".
+@ ---------------------------------------------------------------------------------------

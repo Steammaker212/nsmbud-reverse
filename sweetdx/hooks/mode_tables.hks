@@ -156,9 +156,23 @@ tall_actor_type_hammer:
     data:    02 00 00 00
     address: 0x00B0C328
 
-@ --- a gate that must also accept mode 10 --------------------------------
-mode_six_or_ten:
-    @ Retail e3500002 (cmp r0, #2) -> e350000a (cmp r0, #0xa).
-    type:    instr
-    instruction: cmp r0, #0xa
-    address: 0x0078E6A8
+@ --- REMOVED: mode_six_or_ten at 0x0078E6A8 ------------------------------
+@
+@ This was `cmp r0, #2` -> `cmp r0, #0xa`, a destructive substitution. In
+@ `sub_6078E608` the instruction sequence is:
+@
+@     cmp  r0, #6      ; beq -> r1 = 3
+@     cmp  r0, #2      ; movne r1,#1  /  moveq r1,#2    <- hooked here
+@
+@ Overwriting the #2 with #0xa means mode 2 no longer matches, so the Fire Flower
+@ loses its body selector (r1 = 2) and falls through to the default (r1 = 1). That
+@ is a second, independent way the Fire Flower stops behaving like a Fire Flower.
+@
+@ The body/height/balloon tables are already extended to 11 entries and their six
+@ readers are repointed at the copies (see the data records above), so mode 10 is
+@ served by the tables themselves. This comparison does not need to change to admit
+@ mode 10, and changing it can only break mode 2. Left at retail.
+@
+@ If mode 10 later turns out to need a body selector here, the correct fix is a
+@ `hook` with a trampoline that returns 2 for both mode 2 and mode 10 -- not a
+@ constant rewrite.
