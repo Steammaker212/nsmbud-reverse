@@ -15,6 +15,14 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 struct sead_ListNode *__fastcall PlayerLookTargetMgr_remove(int a1, int a2);
 
 /* ---- forward declarations: these are called above where they are defined ---- */

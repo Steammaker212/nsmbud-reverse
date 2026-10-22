@@ -85,8 +85,8 @@ int __fastcall nullsub_20();  /* 1 call site(s) */
 int __fastcall nullsub_202();  /* 1 call site(s) */
 int __fastcall nullsub_21();  /* 2 call site(s) */
 int __fastcall nullsub_212();  /* 44 call site(s) */
-int __fastcall nullsub_2135();  /* 1 call site(s) */
-int __fastcall nullsub_2136();  /* 1 call site(s) */
+void nullsub_2135();  /* 1 call site(s) */
+void nullsub_2136();  /* 1 call site(s) */
 int __fastcall nullsub_2142();  /* 1 call site(s) */
 int __fastcall nullsub_2157();  /* 1 call site(s) */
 int __fastcall nullsub_22();  /* 2 call site(s) */
@@ -779,8 +779,8 @@ int __fastcall sub_60439F70();  /* 1 cast site(s) */
 int __fastcall sub_60448388();  /* 1 cast site(s) */
 int __fastcall sub_60457304();  /* 1 cast site(s) */
 int __fastcall sub_6047E13C();  /* 3 cast site(s) */
-int __fastcall sub_604B7F9C();  /* 1 cast site(s) */
-int __fastcall sub_604ED25C();  /* 1 cast site(s) */
+_DWORD *__fastcall sub_604B7F9C(int a1);  /* 1 cast site(s), signature from its definition */
+int sub_604ED25C();  /* 1 cast site(s), signature from its definition */
 int __fastcall sub_60506EB8();  /* 1 cast site(s) */
 int __fastcall sub_60509920();  /* 2 cast site(s) */
 int __fastcall sub_6050A704();  /* 1 cast site(s) */
@@ -794,7 +794,7 @@ int __fastcall sub_60583410();  /* 2 cast site(s) */
 void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);  /* 2 cast site(s), signature from its definition */
 int __fastcall sub_60584938();  /* 1 cast site(s) */
 float *__fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);  /* 1 cast site(s), signature from its definition */
-int __fastcall sub_605B624C();  /* 2 cast site(s) */
+_BYTE *__fastcall sub_605B624C(float *a1, _DWORD *a2, int a3, int a4, int a5);  /* 2 cast site(s), signature from its definition */
 int __fastcall sub_605B8E44();  /* 1 cast site(s) */
 int __fastcall sub_605BE5EC();  /* 1 cast site(s) */
 int __fastcall sub_605BE6BC();  /* 1 cast site(s) */
@@ -806,24 +806,24 @@ int __fastcall sub_606A7D14();  /* 1 cast site(s) */
 int __fastcall sub_606B4E90();  /* 4 cast site(s) */
 int __fastcall sub_606EA1A4();  /* 4 cast site(s) */
 int __fastcall sub_607201B0();  /* 1 cast site(s) */
-int __fastcall sub_60802488();  /* 1 cast site(s) */
-int __fastcall sub_6080E4E0();  /* 7 cast site(s) */
+int sub_60802488();  /* 1 cast site(s), signature from its definition */
+void sub_6080E4E0();  /* 7 cast site(s), signature from its definition */
 int __fastcall sub_60881BB0();  /* 2 cast site(s) */
 int __fastcall sub_60882028();  /* 1 cast site(s) */
-int __fastcall sub_608A3778();  /* 1 cast site(s) */
-int __fastcall sub_608A3A30();  /* 1 cast site(s) */
-int __fastcall sub_608C4DF4();  /* 1 cast site(s) */
+int sub_608A3778();  /* 1 cast site(s), signature from its definition */
+int sub_608A3A30();  /* 1 cast site(s), signature from its definition */
+int * sub_608C4DF4();  /* 1 cast site(s), signature from its definition */
 int __fastcall sub_608C66DC();  /* 2 cast site(s) */
 int __fastcall sub_608FAFA4();  /* 3 cast site(s) */
 int __fastcall sub_609313BC();  /* 2 cast site(s) */
 int __fastcall sub_60939804();  /* 1 cast site(s) */
-int __fastcall sub_6093D054();  /* 2 cast site(s) */
+void *__fastcall sub_6093D054(int a1, int a2, int a3, float32x2_t *a4);  /* 2 cast site(s), signature from its definition */
 int __fastcall sub_6093E3D8();  /* 1 cast site(s) */
 int __fastcall sub_60970920();  /* 1 cast site(s) */
 int __fastcall sub_6097580C();  /* 1 cast site(s) */
-int __fastcall sub_60990A9C();  /* 2 cast site(s) */
-int __fastcall sub_60990BBC();  /* 1 cast site(s) */
-int __fastcall sub_60990CDC();  /* 3 cast site(s) */
+void * sub_60990A9C();  /* 2 cast site(s), signature from its definition */
+int sub_60990BBC();  /* 1 cast site(s), signature from its definition */
+void * sub_60990CDC();  /* 3 cast site(s), signature from its definition */
 int __fastcall u_Modulate_ref();  /* 1 cast site(s) */
 int __fastcall v10();  /* 42 cast site(s) */
 int __fastcall v11();  /* 43 cast site(s) */
@@ -883,5 +883,54 @@ float32x2_t vmulq_f32_v2(float32x2_t a, float32x2_t b);  /* 750 use(s) */
 float32x4_t vmulq_f32(float32x4_t a, float32x4_t b);  /* 750 use(s) */
 float32x2_t vsubq_f32_v2(float32x2_t a, float32x2_t b);  /* 106 use(s) */
 float32x4_t vsubq_f32(float32x4_t a, float32x4_t b);  /* 106 use(s) */
+
+/* ---- remaining NEON intrinsics ----
+ * Declared unprototyped: the real lane and predicate signatures differ per intrinsic, and inventing
+ * one per name would state things about the instruction that were never checked. Callers get a
+ * declaration and clang stops treating them as undeclared identifiers. */
+int vabsq_f32();  /* 1 use(s) */
+int vandq_s64();  /* 8 use(s) */
+int vbslq_s64();  /* 173 use(s) */
+int vceq_zero();  /* 1 use(s) */
+int vceq_zero_q();  /* 80 use(s) */
+int vcge_zero();  /* 1 use(s) */
+int vcge_zero_q();  /* 11 use(s) */
+int vcgeq_f32();  /* 11 use(s) */
+int vcgt_zero();  /* 1 use(s) */
+int vcgt_zero_q();  /* 1 use(s) */
+int vcgtq_f32();  /* 24 use(s) */
+int vcle_zero();  /* 1 use(s) */
+int vcle_zero_q();  /* 1 use(s) */
+int vclt_zero();  /* 1 use(s) */
+int vclt_zero_q();  /* 2 use(s) */
+int vcvt_f32_s32();  /* 20 use(s) */
+int vdup_lane_s32();  /* 19 use(s) */
+int vdupq_lane_s32();  /* 339 use(s) */
+int vext_s8();  /* 2 use(s) */
+int vextq_s8();  /* 560 use(s) */
+int vld1q_dup_f32();  /* 86 use(s) */
+int vmax_f32_v2();  /* 119 use(s) */
+int vmaxnm_f32();  /* 28 use(s) */
+int vmaxnm_f64();  /* 7 use(s) */
+int vminnm_f32();  /* 21 use(s) */
+int vmlaq_f32();  /* 170 use(s) */
+int vmlaq_lane_f32();  /* 894 use(s) */
+int vmlsq_f32();  /* 67 use(s) */
+int vmlsq_lane_f32();  /* 10 use(s) */
+int vmul_f32_v2();  /* 1 use(s) */
+int vmulq_lane_f32();  /* 46 use(s) */
+int vmulq_n_f32();  /* 462 use(s) */
+int vnegq_f32();  /* 6 use(s) */
+int vorrq_s64();  /* 1 use(s) */
+int vpadd_f32();  /* 103 use(s) */
+int vrecpeq_f32();  /* 18 use(s) */
+int vrev64q_s32();  /* 1 use(s) */
+int vrsqrteq_f32();  /* 69 use(s) */
+int vtbl2_s8();  /* 403 use(s) */
+int vtbl4_s8();  /* 94 use(s) */
+int vtrn_s32();  /* 18 use(s) */
+int vtrnq_s32();  /* 13 use(s) */
+int vuzpq_s32();  /* 4 use(s) */
+int vzipq_s32();  /* 380 use(s) */
 
 #endif /* NSMBUDX_UNDECLARED_H */

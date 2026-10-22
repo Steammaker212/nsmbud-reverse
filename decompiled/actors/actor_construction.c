@@ -39,6 +39,14 @@
 /* ---- forward declarations: these are called above where they are defined ---- */
 
 /* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
+
+/* ---- forward declarations: these are called above where they are defined ---- */
 _DWORD *__fastcall ActiveColldierMgr_removeFromActiveList(_DWORD *result, int a2);
 _DWORD *__fastcall CollisionMgr_setSensor(int a1, int *a2, int a3);
 float *__fastcall sub_600F5A20(int a1, int a2, int a3);

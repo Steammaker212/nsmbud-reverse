@@ -85,6 +85,24 @@ C_TYPENAMES = {
 # A member read on a call result requires the call to RETURN a vector, so a macro or an `int`
 # prototype cannot satisfy it -- it needs a typed declaration returning float32x4_t. 222 uses.
 NEON_BINOP = re.compile(r"\b(v(?:min|max|add|sub|mul)(?:q)?_f32)\s*\(")
+# EVERY other NEON intrinsic IDA emits (`vdupq_lane_s32`, `vmlaq_lane_f32`, `vextq_s8`, `vtbl2_s8`,
+# `vzipq_s32`, `vbslq_s64`, ...). These are not in any header the corpus includes, so every call was
+# undeclared. They are declared unprototyped and variadic-free -- an unprototyped declaration is legal C
+# and constrains nothing, which matters because the real lane/predicate signatures differ per intrinsic
+# and guessing one would be worse than declaring none.
+NEON_ANY = re.compile(r"\b(v(?:ld|st|dup|mov|ext|zip|uzp|trn|tbl|tbx|bsl|bit|bif|add|sub|mul|mla|mls|"
+                      r"neg|abs|min|max|ceq|cge|cle|cgt|clt|shl|shr|sli|sri|and|orr|eor|bic|not|rev|"
+                      r"padd|pmax|pmin|cvt|rnd|recpe|rsqrte|sqrt|qadd|qsub|combine|get|set|create|"
+                      r"dup_n|lane|n_|q_)[a-z0-9_]*)\s*\(")
+
+
+# Names that match the NEON-intrinsic shape but are not intrinsics: local variables, the vector
+# typedefs themselves, and standard library variadic functions. Declaring these as functions would be
+# wrong (and `int void();` is not even parseable).
+NEON_EXCLUDE = {
+    "v", "val", "void", "ver", "vtable", "vec", "vsnprintf", "vprintf", "vfprintf", "vsprintf",
+    "vmaxnmq_f32", "vminnmq_f32",
+}
 
 
 def prelude_headers(headers_dir):
@@ -149,7 +167,7 @@ def main(argv):
     have = declared_names(inc, os.path.basename(out))
 
     used = {"nullsub": {}, "algn": {}, "simd": {}, "floats": {}, "str": {},
-            "scoped": {}, "table": {}, "fnptr": {}, "flags": {}, "neon": {}}
+            "scoped": {}, "table": {}, "fnptr": {}, "flags": {}, "neon": {}, "neonall": {}}
     # Every function the corpus DEFINES, with its REAL signature.
     #
     # Omission is not the answer. A name defined in one file may be used as a cast target in a
@@ -189,6 +207,25 @@ def main(argv):
                     continue
                 defined_in_corpus[m.group(2)] = (m.group(1).strip(), args)
 
+    # ALSO collect plain DECLARATIONS the corpus contains (`_DWORD *sub_604B7F9C(int a1);`). systems.c
+    # declares that helper itself and the cast-target emission was overriding it with an unprototyped
+    # `int f()`, which conflicts. A signature stated anywhere in the corpus beats a guess.
+    for dp, _, fs in os.walk(root):
+        for f in fs:
+            if not f.endswith(".c"):
+                continue
+            with open(os.path.join(dp, f), encoding="utf-8", errors="replace") as fh:
+                text = fh.read()
+            for line in text.splitlines():
+                body = re.sub(r"^\s*/\*[^*]*\*/\s*", "", line)
+                dm = re.match(r"([A-Za-z_][\w \t\*]*?)\b(\w+)\s*\((.*)\)\s*;\s*$", body)
+                if not dm:
+                    continue
+                name, args = dm.group(2), dm.group(3)
+                if "{" in args or "}" in args or args.count("(") != args.count(")"):
+                    continue
+                defined_in_corpus.setdefault(name, (dm.group(1).strip(), args))
+
     for dp, _, fs in os.walk(root):
         for f in fs:
             if not f.endswith(".c"):
@@ -226,6 +263,11 @@ def main(argv):
                 used["flags"][m.group(1)] = used["flags"].get(m.group(1), 0) + 1
             for m in NEON_BINOP.finditer(text):
                 used["neon"][m.group(1)] = used["neon"].get(m.group(1), 0) + 1
+            for m in NEON_ANY.finditer(text):
+                nm = m.group(1)
+                if nm in NEON_EXCLUDE:
+                    continue
+                used["neonall"][nm] = used["neonall"].get(nm, 0) + 1
 
     lines = [
         "/* NSMBU Deluxe (Switch) v1.0.0 -- callables and data the corpus uses that no header declared",
@@ -248,6 +290,15 @@ def main(argv):
     n_null = 0
     for name in sorted(used["nullsub"]):
         if name in have:
+            continue
+        # A nullsub that the corpus DEFINES as something other than `int f()` still needs the real
+        # signature: T_5E758.c defines `void nullsub_2135()`, and an unprototyped `int` here conflicts
+        # with it. The definition wins.
+        if name in defined_in_corpus:
+            ret, args = defined_in_corpus[name]
+            lines.append("%s %s(%s);  /* %d call site(s) */" % (ret, name, args,
+                                                                used["nullsub"][name]))
+            n_null += 1
             continue
         lines.append("int __fastcall %s();  /* %d call site(s) */" % (name, used["nullsub"][name]))
         n_null += 1
@@ -368,10 +419,24 @@ def main(argv):
                      % (name, used["neon"][name]))
         n_neon += 1
 
+    lines += ["", "/* ---- remaining NEON intrinsics ----", " * Declared unprototyped: the real lane and predicate signatures differ per intrinsic, and inventing", " * one per name would state things about the instruction that were never checked. Callers get a", " * declaration and clang stops treating them as undeclared identifiers. */"]
+    n_neonall = 0
+    for name in sorted(used["neonall"]):
+        # The typed NEON declarations above already emitted `vadd_f32`, `vadd_f32_v2` and friends.
+        # NEON_ANY also matches the `_v2` spelling, so emitting an unprototyped `int vadd_f32_v2();`
+        # here conflicts with the typed one -- that took the corpus to 0/475. Skip anything the typed
+        # block, the `have` set, or the exclusion list already covers.
+        if name in have or name in used["neon"] or name in NEON_EXCLUDE:
+            continue
+        if name.endswith("_v2") and name[:-3] in used["neon"]:
+            continue
+        lines.append("int %s();  /* %d use(s) */" % (name, used["neonall"][name]))
+        n_neonall += 1
+
     lines += ["", "#endif /* NSMBUDX_UNDECLARED_H */", ""]
 
-    print("declared: nullsub %d, algn %d, simd %d, float %d, str %d, scoped %d, table %d, fnptr %d, flags %d, neon %d"
-          % (n_null, n_algn, n_simd, n_float, n_str, n_scoped, n_table, n_fnptr, n_flag, n_neon))
+    print("declared: nullsub %d, algn %d, simd %d, float %d, str %d, scoped %d, table %d, fnptr %d, flags %d, neon %d, neonall %d"
+          % (n_null, n_algn, n_simd, n_float, n_str, n_scoped, n_table, n_fnptr, n_flag, n_neon, n_neonall))
     if write:
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, "w", encoding="utf-8", newline="\n") as fh:
