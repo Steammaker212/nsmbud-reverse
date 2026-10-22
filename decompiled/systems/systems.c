@@ -63166,7 +63166,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result )
     {
       v5 = MEMORY[0xC99DD4];
-      v6 = sub_6079D894();
+      v6 = ActorMgr_findAndInstantiate3();
       if ( v6 )
         v2 = *(char *)(v6 + 84);
       v7 = 0;
@@ -151069,7 +151069,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = v3;
     BigBlockFragmentHeap_ref(MEMORY[0xC99CDC], &v8, 0);
     LODWORD(v12[0]) = 46;
-    v5 = sub_60002B90(v2);
+    v5 = Global_setBitmaskAndReturnC7B3A8(v2);
     v6 = MEMORY[0xC7F534];
     v12[0] = v8;
     v12[1] = v9;
@@ -154639,7 +154639,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v4 = a2[84];
     v12 = 40;
-    v5 = sub_60002B90(v4);
+    v5 = Global_setBitmaskAndReturnC7B3A8(v4);
     v6 = *(_DWORD *)(a1 + 112);
     v7 = MEMORY[0xC7F534];
     v12 = *(_DWORD *)(a1 + 108);
@@ -154674,7 +154674,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v4 = *(char *)(a2 + 84);
     v13 = 40;
-    v5 = sub_60002B90(v4);
+    v5 = Global_setBitmaskAndReturnC7B3A8(v4);
     v6 = *(_DWORD *)(a1 + 112);
     v7 = MEMORY[0xC7F534];
     v13 = *(_DWORD *)(a1 + 108);
@@ -154726,7 +154726,7 @@ static inline unsigned int uxtb16(unsigned int x)
       BasicSoundActor2_play(v6, "SE_OBJ_BOUND_BLOCK_BOUND", v11, 0);
       v7 = *(char *)(a2 + 84);
       v12 = 39;
-      v8 = sub_60002B90(v7);
+      v8 = Global_setBitmaskAndReturnC7B3A8(v7);
       v9 = *(_DWORD *)(a1 + 112);
       v10 = MEMORY[0xC7F534];
       v12 = *(_DWORD *)(a1 + 108);
@@ -154842,7 +154842,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v24 = v11;
               v14 = v11[84];
               v30 = 39;
-              v25 = sub_60002B90(v14);
+              v25 = Global_setBitmaskAndReturnC7B3A8(v14);
               v15 = *(_DWORD *)(a1 + 112);
               v16 = MEMORY[0xC7F534];
               v30 = *(_DWORD *)(a1 + 108);
@@ -178371,7 +178371,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int *v9; // r1
     int result; // r0
   
-    v2 = sub_60002B90(*(char *)(a1 + 6336));
+    v2 = Global_setBitmaskAndReturnC7B3A8(*(char *)(a1 + 6336));
     sub_605D8938(a1, "SE_PLY_CH_YOSHI_BLLN", v2);
     if ( (*(_DWORD *)(a1 + 6260) & 0x3000000) == 0x2000000 )
       SE_VOC_CH_YS_GOKUN_ref_2(a1);
@@ -178426,7 +178426,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = (*(_BYTE *)(v3 + 1221) & 0x40) == 0;
     if ( !v4 )
     {
-      v5 = sub_60002B90(*(char *)(a1 + 6336));
+      v5 = Global_setBitmaskAndReturnC7B3A8(*(char *)(a1 + 6336));
       sub_605D8938(a1, (int)"SE_PLY_CH_YOSHI_BLLN_FLY", v5);
       sub_6059BDD4(v2);
       *(_BYTE *)(a1 + 13888) = 1;
@@ -194458,7 +194458,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( (**v10)(v10, 13087600) == 1 )
         {
-          v11 = (int (__fastcall ***)(_DWORD, int))sub_6079D894();
+          v11 = (int (__fastcall ***)(_DWORD, int))ActorMgr_findAndInstantiate3();
           if ( v11 )
           {
             if ( _cxa_guard_acquire_0(13087588) )
@@ -198207,7 +198207,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v15 = *(char *)(a2 + 11);
     v22 = 46;
-    v16 = sub_60002B90(v15);
+    v16 = Global_setBitmaskAndReturnC7B3A8(v15);
     *(float *)&v22 = v5;
     v23 = v6;
     v17 = MEMORY[0xC7F534];
@@ -198781,7 +198781,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         v14 = *(char *)(a2 + 9);
         v22 = 46;
-        v15 = sub_60002B90(v14);
+        v15 = Global_setBitmaskAndReturnC7B3A8(v14);
         v16 = MEMORY[0xC7F534];
         v22 = LODWORD(v18);
         v23 = v19;
@@ -206401,7 +206401,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *v3 &= 0xFFFEEFFF;
       if ( *(_DWORD *)(a1 + 6144) == 9 )
-        sub_605EAB48(a1 + 6064);
+        Object_releaseIfNotSentinel(a1 + 6064);
       *v2 = 0;
       *(_DWORD *)(a1 + 8056) = 0;
       *(_DWORD *)(a1 + 8080) = 0;
@@ -206429,7 +206429,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           if ( *v2 == 2 || *v2 == 1 && !*(_DWORD *)(a1 + 8048) )
           {
-            v12 = sub_60002B90(*(char *)(a1 + 6336));
+            v12 = Global_setBitmaskAndReturnC7B3A8(*(char *)(a1 + 6336));
             sub_605D8938(a1, "SE_PLY_CH_YOSHI_BBL", v12);
           }
           sub_60409340(MEMORY[0xC9A1F0]);
@@ -206464,7 +206464,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           *(_DWORD *)(a1 + 6260) &= 0xFFFEEFFF;
           if ( *(_DWORD *)(a1 + 6144) == 9 )
-            sub_605EAB48(a1 + 6064);
+            Object_releaseIfNotSentinel(a1 + 6064);
           *v2 = 0;
           *v18 = 0;
           *v5 = 0;
@@ -206714,7 +206714,7 @@ static inline unsigned int uxtb16(unsigned int x)
               *v8 = 0;
               *v6 |= 0x11000u;
               *v7 = 2;
-              sub_605EAB48(a1 + 6064);
+              Object_releaseIfNotSentinel(a1 + 6064);
               goto LABEL_8;
             case 1:
             case 3:
@@ -206734,7 +206734,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_11:
               sub_605E6738(a1);
               *v6 |= 0x13000u;
-              sub_605EAB48(a1 + 6064);
+              Object_releaseIfNotSentinel(a1 + 6064);
               v5 = 1;
               v11 = 4;
               *v7 = 1;
@@ -206838,7 +206838,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     a1[1565] &= 0xFFFEEFFF;
     if ( a1[1536] == 9 )
-      sub_605EAB48(a1 + 1516);
+      Object_releaseIfNotSentinel(a1 + 1516);
     a1[2009] = 0;
     a1[2014] = 0;
     a1[2020] = 0;
@@ -208020,7 +208020,7 @@ static inline unsigned int uxtb16(unsigned int x)
         EffectData_create(334, (int)&v35, (int)v34, 0);
         v31 = *(char *)(v10 + 84);
         v35 = 37;
-        v32 = sub_60002B90(v31);
+        v32 = Global_setBitmaskAndReturnC7B3A8(v31);
         v35 = v20;
         v36 = v21;
         v33 = MEMORY[0xC7F534];
@@ -209700,7 +209700,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3 = *(float *)(a1 + 108) + *(float *)(a1 + 572);
     v4 = *(float *)(a1 + 112) + *(float *)(a1 + 576);
-    sub_600024C4(a1);
+    TileCheck_spawnEffectIfFlag(a1);
     v5 = v4;
     EffectData_create(919, (int)&v3, 0, 0);
     *(_BYTE *)(a1 + 19) = 1;
@@ -214711,7 +214711,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)**v14 + 56))(**v14);
     v15 = (_BYTE *)(a1 + 6518);
     if ( !*(_BYTE *)(a1 + 6516) && !*v15 )
-      sub_60237208((int32x4_t *)(a1 + 6412), (float *)(a1 + 108), 0, 0);
+      EffectSlot_updateAndRelink((int32x4_t *)(a1 + 6412), (float *)(a1 + 108), 0, 0);
     if ( *v15 )
       v16 = 8;
     else
@@ -214817,7 +214817,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = a2;
     if ( a3 )
       v8 = -1;
-    v9 = sub_60002B90(v8);
+    v9 = Global_setBitmaskAndReturnC7B3A8(v8);
     SoundPlayer_updateWithLocation(MEMORY[0xCC6AF8], "SE_SYS_MID_POINT", v9, 1);
     v10 = (unsigned __int8)*v7;
     if ( v10 < 6 )
@@ -214917,7 +214917,7 @@ static inline unsigned int uxtb16(unsigned int x)
                   _cxa_guard_release_0(13087752);
                 }
                 (**(void (__fastcall ***)(int, int))v5)(v5, 13087748);
-                v7 = sub_607D6C28();
+                v7 = ActorMgr_findAndInstantiate4();
                 if ( !v7 )
                 {
                   v8 = 0;
@@ -217676,7 +217676,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 0.0;
     v3 = a1 + 6260;
     *(_DWORD *)(a1 + 6260) |= 0x10000000u;
-    sub_605EAB48(a1 + 6064);
+    Object_releaseIfNotSentinel(a1 + 6064);
     *(_DWORD *)(v3 + 1744) = 30;
     *(_DWORD *)(v3 + 1748) = 0;
     v4 = *(_DWORD *)(v3 - 6240);
@@ -217758,7 +217758,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( (*(_BYTE *)(a1 + 6804) & 1) == 0 )
         {
-          sub_605EAB48(a1 + 6064);
+          Object_releaseIfNotSentinel(a1 + 6064);
           *v4 = 1;
           return 1;
         }
@@ -217802,7 +217802,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r1
   
     a1[1565] |= 1u;
-    sub_605EAB48(a1 + 1516);
+    Object_releaseIfNotSentinel(a1 + 1516);
     a1[30] = 0;
     a1[26] = 0;
     a1[33] = 0;
@@ -217882,7 +217882,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int result; // r0
   
     if ( a1[2000] <= 1u )
-      sub_605EAB48(a1 + 1516);
+      Object_releaseIfNotSentinel(a1 + 1516);
     a1[30] = 0;
     v2 = a1[40];
     if ( v2 < 0 && v2 != 0x80000000 )
@@ -218030,7 +218030,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 6260);
     *(_DWORD *)(a1 + 6264) |= 0x22u;
     *(_DWORD *)(a1 + 6260) = v2 | 0x210;
-    sub_605EAB48(a1 + 6064);
+    Object_releaseIfNotSentinel(a1 + 6064);
     v3 = FixedPoint_atan2();
     v4 = *(v1 - 1545);
     *(v1 - 1526) = v3;
@@ -219405,11 +219405,11 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[2002] = 0;
     if ( sub_605E3BBC(a1) )
     {
-      sub_605EAB48(a1 + 1516);
+      Object_releaseIfNotSentinel(a1 + 1516);
     }
     else
     {
-      sub_605EAB48(a1 + 1516);
+      Object_releaseIfNotSentinel(a1 + 1516);
       v2 = 1;
     }
     a1[2002] = v2;
@@ -219485,7 +219485,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v5 == 1 )
           v4 = -1073741824;
         *(_DWORD *)(a1 + 160) = v4;
-        sub_605EAB48(a1 + 6064);
+        Object_releaseIfNotSentinel(a1 + 6064);
         *v3 = 1;
       }
       v6 = 0;
@@ -219565,7 +219565,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605D9390(int a1)
   {
-    return sub_605EAB48(a1 + 6064);
+    return Object_releaseIfNotSentinel(a1 + 6064);
   }
 
 /* ============================================================================
@@ -219686,7 +219686,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2[299] == 1 && a1[1536] == 14 )
       sub_605EB89C(v3);
     else
-      sub_605EAB48(v3);
+      Object_releaseIfNotSentinel(v3);
     v4 = a1[20];
     v5 = 0x40000000;
     a1[39] = 0;
@@ -219765,7 +219765,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (result & 1) != 0 )
       {
         *(_DWORD *)(a1 + 120) = 0;
-        sub_605EAB48(a1 + 6064);
+        Object_releaseIfNotSentinel(a1 + 6064);
         *v5 = 1;
         return 1;
       }
@@ -219838,7 +219838,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1 + 6260;
     *(_DWORD *)(a1 + 6260) |= 0x40u;
-    sub_605EAB48(a1 + 6064);
+    Object_releaseIfNotSentinel(a1 + 6064);
     *(_DWORD *)(v1 - 6140) = 0;
     return -6140;
   }
@@ -219945,7 +219945,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 6260) |= 0x18u;
     v2 = a1 + 6264;
     *(_DWORD *)(a1 + 6264) |= 2u;
-    sub_605EAB48(a1 + 6064);
+    Object_releaseIfNotSentinel(a1 + 6064);
     v3 = *(_DWORD *)(v2 - 6184);
     *(_DWORD *)(v2 - 6108) = 0;
     v4 = 0x40000000;
@@ -220043,7 +220043,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( *(_DWORD *)(a1 + 6144) == dword_60B059A4[v4] )
           sub_605EB89C(v5);
         else
-          sub_605EAB48(v5);
+          Object_releaseIfNotSentinel(v5);
         return 1;
       }
     }
@@ -222033,7 +222033,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (*(_BYTE *)(a1 + 6265) & 0x80) != 0 )
     {
       if ( *(_DWORD *)(a1 + 6144) != 2 )
-        sub_605EAB48(a1 + 6064);
+        Object_releaseIfNotSentinel(a1 + 6064);
       goto LABEL_15;
     }
     result = *(_DWORD *)(a1 + 6340);
@@ -222064,7 +222064,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     result = *(_DWORD *)(a1 + 6144);
     if ( result != ((*(_DWORD *)(v3 + 1212) >> 18) & 8 | 2) )
-      return sub_605EAB48(a1 + 6064);
+      return Object_releaseIfNotSentinel(a1 + 6064);
     return result;
   }
 
@@ -223773,7 +223773,7 @@ static inline unsigned int uxtb16(unsigned int x)
           result = (**v10)(v10, 13087748);
           if ( result == 1 )
           {
-            result = sub_607D6C28();
+            result = ActorMgr_findAndInstantiate4();
   LABEL_7:
             v7 = (_DWORD *)result;
             if ( result )
@@ -224052,7 +224052,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_DWORD *)(a1 + 8016) = 20;
       *v2 = 1;
-      sub_605EAB48(a1 + 6064);
+      Object_releaseIfNotSentinel(a1 + 6064);
       *(_DWORD *)(a1 + 6268) &= ~2u;
       *(_DWORD *)(a1 + 6264) &= ~1u;
     }
@@ -224258,7 +224258,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 160) = v4;
     *(_DWORD *)(a1 + 164) = 0;
     *(_DWORD *)(a1 + 8012) = 0;
-    return sub_605EAB48(a1 + 6064);
+    return Object_releaseIfNotSentinel(a1 + 6064);
   }
 
 /* ============================================================================
@@ -224325,7 +224325,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // t1
   
     v1 = a1;
-    sub_605EAB48(a1 + 6064);
+    Object_releaseIfNotSentinel(a1 + 6064);
     sub_605D847C((_DWORD *)v1);
     v2 = *(_DWORD *)(v1 + 80);
     *(float *)(v1 + 120) = (float)*(char *)(v2 + 11557196) + (float)*(char *)(v2 + 11557196);
@@ -224399,7 +224399,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    sub_605EAB48(a1 + 1516);
+    Object_releaseIfNotSentinel(a1 + 1516);
     sub_605D847C(a1);
     a1[1566] |= 1u;
     a1[1567] |= 1u;
@@ -224558,7 +224558,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(_DWORD *)(a1 + 8020);
     if ( result == 1 )
     {
-      sub_605EAB48(a1 + 6064);
+      Object_releaseIfNotSentinel(a1 + 6064);
       v6 = (float)*(char *)(((float)(*(float *)(a1 + 108) - *(float *)(a1 + 584)) < 0.0) + 0xB0594C);
       *(_DWORD *)(a1 + 80) = (float)(*(float *)(a1 + 108) - *(float *)(a1 + 584)) >= 0.0;
       *(float *)(a1 + 120) = v6 * 1.25;
@@ -225305,7 +225305,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_60407E74(MEMORY[0xC9A1E8], (int)v7, 0x15u, -1, 0, 0);
       }
       sub_603FFDBC(MEMORY[0xC99DD4] + 852, 1);
-      sub_605EAB48(a1 + 6064);
+      Object_releaseIfNotSentinel(a1 + 6064);
       *(_DWORD *)(a1 + 8012) = 7;
       return 8012;
     }
@@ -225384,7 +225384,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      sub_605EAB48(a1 + 6064);
+      Object_releaseIfNotSentinel(a1 + 6064);
       v6 = (float)MEMORY[0xB0594C];
       *(_DWORD *)(a1 + 80) = 0;
       *(float *)(a1 + 120) = v6 + v6;
@@ -225448,7 +225448,7 @@ static inline unsigned int uxtb16(unsigned int x)
         result = *(unsigned __int8 *)(a1 + 6804);
         if ( (result & 1) != 0 )
         {
-          sub_605EAB48(a1 + 6064);
+          Object_releaseIfNotSentinel(a1 + 6064);
           *(_DWORD *)(a1 + 120) = 0;
           *(_DWORD *)(a1 + 124) = 0;
           *(_DWORD *)(a1 + 104) = 0;
@@ -225519,7 +225519,7 @@ static inline unsigned int uxtb16(unsigned int x)
         result = moveValueTo(a1 + 160, &v18, &v17, v3);
         if ( result != 1 )
           return result;
-        sub_605EAB48(a1 + 6064);
+        Object_releaseIfNotSentinel(a1 + 6064);
         result = 6;
         goto LABEL_31;
       case 8:
@@ -225650,7 +225650,7 @@ static inline unsigned int uxtb16(unsigned int x)
     a1[32] = 0;
     sub_605D793C(a1);
     a1[26] = 0;
-    sub_605EAB48(a1 + 1516);
+    Object_releaseIfNotSentinel(a1 + 1516);
     a1[2003] = 0;
     return 8012;
   }
@@ -225703,7 +225703,7 @@ static inline unsigned int uxtb16(unsigned int x)
           return result;
         }
   LABEL_7:
-        sub_605EAB48(a1 + 6064);
+        Object_releaseIfNotSentinel(a1 + 6064);
         result = 2;
         goto LABEL_8;
       }
@@ -225800,7 +225800,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v1 = (_DWORD *)(result + 8012);
       if ( !*(_DWORD *)(result + 8012) )
       {
-        sub_605EAB48(result + 6064);
+        Object_releaseIfNotSentinel(result + 6064);
         *v1 = 1;
         return 1;
       }
@@ -226327,7 +226327,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = sub_605DBDDC(a1);
     if ( v3 )
       *(_DWORD *)(v3 + 644) = MEMORY[0xB05B14];
-    v4 = sub_60002B90(*(char *)(a1 + 6336));
+    v4 = Global_setBitmaskAndReturnC7B3A8(*(char *)(a1 + 6336));
     sub_605D8938(a1, (int)"SE_VOC_CH_YS_EAT", v4);
     result = *(_DWORD *)(a1 + 6260) & 0xF9FFFFFF | 0x4000000;
     *(_DWORD *)(a1 + 6260) = result;
@@ -226466,7 +226466,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v1 = a1;
             if ( (v35 & 1) == 0 )
             {
-              v12 = sub_60002B90(*v34);
+              v12 = Global_setBitmaskAndReturnC7B3A8(*v34);
               sub_605D8938(a1, (int)"SE_VOC_CH_YS_GOKUN", v12);
               sub_605D8994(a1);
             }
@@ -226579,7 +226579,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 += 1567;
     *v1 = v5 | 1;
     *v3 = v4 | 0x10800000;
-    sub_605EAB48(v1 - 51);
+    Object_releaseIfNotSentinel(v1 - 51);
     v1[134] = 0;
     return ActorCollisionMgr_vf5((int)(v1 - 1405));
   }
@@ -226969,7 +226969,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *v11 = 0;
       *v4 = 0;
       sub_605D8994(v12);
-      v10 = sub_60002B90(*(char *)(v12 + 6336));
+      v10 = Global_setBitmaskAndReturnC7B3A8(*(char *)(v12 + 6336));
       sub_605D8938(v12, (int)"SE_VOC_CH_YS_GOKUN", v10);
       return StateMgr::changeState((_DWORD *)(v12 + 6424), 13310628);
     }
@@ -227547,7 +227547,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v5 = *(_DWORD *)(a1 + 108);
           v6 = *(_DWORD *)(a1 + 112);
-          sub_600024C4(a1);
+          TileCheck_spawnEffectIfFlag(a1);
           v8[0] = v5;
           v8[1] = v6;
           *(float *)&v8[2] = v1;
@@ -227610,7 +227610,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *((float *)&v11 + 1) = *(float *)&v11;
       sub_602362F4(a1 + 7912, &v11);
       (*(void (__fastcall **)(int, unsigned __int64 *))(*(_DWORD *)a1 + 476))(a1, &v11);
-      result = sub_60237208((int32x4_t *)(a1 + 7896), (float *)&v11, 0, 0);
+      result = EffectSlot_updateAndRelink((int32x4_t *)(a1 + 7896), (float *)&v11, 0, 0);
       if ( !result )
       {
         result = EffectData_release(a1 + 7896);
@@ -228245,7 +228245,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( result == 2 )
         {
-          sub_605EAB48(a1 + 6064);
+          Object_releaseIfNotSentinel(a1 + 6064);
           *(_DWORD *)(a1 + 6908) = *(_DWORD *)(a1 + 6760);
           *(_DWORD *)(a1 + 6912) = *(_DWORD *)(a1 + 6764);
           *(_DWORD *)(a1 + 6916) = *(_DWORD *)(a1 + 6768);
@@ -228299,7 +228299,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( *(_DWORD *)(a1 + 6144) == 11 )
         sub_605EB980(**(_DWORD **)(*(_DWORD *)(a1 + 6076) + 12));
-      sub_605EAB48(a1 + 6064);
+      Object_releaseIfNotSentinel(a1 + 6064);
       *v2 = ((120 * (unsigned __int64)sead::Random::getU32((int *)(MEMORY[0xC9CF0C] + 1340))) >> 32) + 180;
       *(_DWORD *)(a1 + 8008) = 2;
       return 8008;
@@ -228444,7 +228444,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 88) = 0;
       if ( *(_DWORD *)(a1 + 6144) == 11 )
         sub_605EB980(**(_DWORD **)(*(_DWORD *)(a1 + 6076) + 12));
-      sub_605EAB48(a1 + 6064);
+      Object_releaseIfNotSentinel(a1 + 6064);
       *(_DWORD *)(a1 + 6920) = ((120
                                * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
                              + 180;
@@ -228548,7 +228548,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *(_DWORD *)(a1 + 6144) == 10 )
       {
         sub_605EB980(**(_DWORD **)(*(_DWORD *)(a1 + 6076) + 12));
-        sub_605EAB48(a1 + 6064);
+        Object_releaseIfNotSentinel(a1 + 6064);
       }
       *(_DWORD *)(a1 + 6920) = ((120
                                * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
@@ -228711,7 +228711,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 124) = 0;
     if ( *(_DWORD *)(a1 + 6144) == 11 )
       sub_605EB980(**(_DWORD **)(*(_DWORD *)(a1 + 6076) + 12));
-    sub_605EAB48(a1 + 6064);
+    Object_releaseIfNotSentinel(a1 + 6064);
     *(_DWORD *)(a1 + 6920) = ((120
                              * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C]
                                                                                                    + 1340))) >> 32)
@@ -228784,7 +228784,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *(v15 - 1544) = vmin_f32(v3, (float32x2_t)__PAIR64__(LODWORD(v13), 3.0)).n64_u32[0];
           *(v15 - 1524) = v14;
           v15[164] = 5;
-          sub_605EAB48(v15 - 50);
+          Object_releaseIfNotSentinel(v15 - 50);
           v15[436] = 1;
           result = 1;
           break;
@@ -228806,7 +228806,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(result + 128) = 0;
       if ( *(_DWORD *)(result + 6144) == 11 )
         sub_605EB980(**(_DWORD **)(*(_DWORD *)(result + 6076) + 12));
-      sub_605EAB48(v5 + 6064);
+      Object_releaseIfNotSentinel(v5 + 6064);
       *(_DWORD *)(v5 + 6920) = ((120
                                * (unsigned __int64)(unsigned int)sead::Random::getU32((struct sead_Random *)(MEMORY[0xC9CF0C] + 1340))) >> 32)
                              + 180;
@@ -232604,7 +232604,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_605EAB48
+ * Object_releaseIfNotSentinel
  * RVA 0x005eab48   size 0x28   xrefs 58
  * ============================================================================ */
   int __fastcall sub_605EAB48(int result, int a2)

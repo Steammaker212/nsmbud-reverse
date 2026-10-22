@@ -1,0 +1,31 @@
+[
+  {"rva": "0x91DD8C", "name": "Object_lockedReleaseIfFlag2",
+   "why": "if byte +8 has bit 2, locks the sead::CriticalSection at MEMORY[0xCCFC8C]+44, re-tests the bit, calls sub_6091D9B0, then unlocks"},
+
+  {"rva": "0x83D5B0", "name": "Pair_zero",
+   "why": "writes 0 to result[0] and result[1] -- a two-dword clear"},
+
+  {"rva": "0x855BA4", "name": "Object_freeViaGlobalWithSize",
+   "why": "tail-calls MEMORY[0xCC7F88](a1, a2, MEMORY[0xCC7F90]) -- same global as 0x855BC8 but forwards a2 as the size"},
+
+  {"rva": "0x921540", "name": "Node_appendRecord",
+   "why": "bumps the record cursor at a1[+4]+6, then writes the byte at +8 and the dword at +0, with an a2==17 branch storing a4>>2 into +6"},
+
+  {"rva": "0x0024C4", "name": "TileCheck_spawnEffectIfFlag",
+   "why": "guarded on byte +87 bit 0 and byte +86, builds a TileCheck record via TileCheck_ctor and sub_6015DBD8"},
+
+  {"rva": "0x5EAB48", "name": "Object_releaseIfNotSentinel",
+   "why": "if a2 != -1, tail-calls sub_605EA46C; otherwise returns unchanged"},
+
+  {"rva": "0x8352A0", "name": "Object_readFlagsAndSizes",
+   "why": "reads bit 0x10 and 0x200 of a2[1], querying MEMORY[0xCC72BC] for a value clamped to a minimum of 8"},
+
+  {"rva": "0x237208", "name": "EffectSlot_updateAndRelink",
+   "why": "EffectData_update on a1+1, then erases and re-inserts the sead::ListNode at a1[5] into the list at MEMORY[0xC8D9DC]+224"},
+
+  {"rva": "0x8B7240", "name": "Object_emitCommand30",
+   "why": "allocates 32 bytes via sub_608C2698, writes 30 into v6[1], then commits with sub_608C2C1C"},
+
+  {"rva": "0x93AD38", "name": "SoundObject_buildAndApplyVolume",
+   "why": "checks the version at off_60C79B78+20 >= 0x38, then uses Slot_constructDefaults, Sound_setTrackVolume and Slot_detachChild"}
+]

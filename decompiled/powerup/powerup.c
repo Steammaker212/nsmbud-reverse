@@ -11593,7 +11593,7 @@ static inline unsigned int uxtb16(unsigned int x)
           _cxa_guard_release_0(13087752);
         }
         if ( (**(int (__fastcall ***)(int, int))v5)(v5, 13087748) != 1
-          || (v13 = sub_607D6C28(v5)) == 0
+          || (v13 = ActorMgr_findAndInstantiate4(v5)) == 0
           || (result = isMode4(v13), result == 1) )
         {
   LABEL_59:
@@ -28164,13 +28164,13 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         case 829716596:
           sub_60981CF4(a1, (int)a4, a5, a6);
-          v8 = (_DWORD *)sub_60855BA4(272, 16);
+          v8 = (_DWORD *)Object_freeViaGlobalWithSize(272, 16);
           LetterAnimOn_ref((int)v8, (int)a4, a5, a6, v26);
           *v8 = 12571188;
           MEMORY[0xBFD2A0](v8, a2, *(_DWORD *)(MEMORY[0xCCF464] + 36), a6, v26);
           break;
         case 829715056:
-          v14 = sub_60855BA4(192, 16);
+          v14 = Object_freeViaGlobalWithSize(192, 16);
           if ( v14 )
             return (_DWORD *)sub_60984604(v14, a4, a5, a6);
           break;
@@ -28179,21 +28179,21 @@ static inline unsigned int uxtb16(unsigned int x)
           {
             if ( sub_6098E28C(*(_DWORD *)(a6 + 64), (int)"DynamicCaptureOn") )
             {
-              v18 = sub_60855BA4(640, 16);
+              v18 = Object_freeViaGlobalWithSize(640, 16);
               if ( !v18 )
                 return v8;
               return (_DWORD *)sub_6097F600(v18, a4, a6);
             }
             else if ( sub_6098E28C(*(_DWORD *)(a6 + 64), (int)"ScissorOn") )
             {
-              v20 = sub_60855BA4(176, 16);
+              v20 = Object_freeViaGlobalWithSize(176, 16);
               if ( !v20 )
                 return v8;
               return (_DWORD *)sub_60984EF8(v20, a4, a6);
             }
             else if ( sub_6098E28C(*(_DWORD *)(a6 + 64), (int)"AlignOn") )
             {
-              v22 = sub_60855BA4(192, 16);
+              v22 = Object_freeViaGlobalWithSize(192, 16);
               if ( !v22 )
                 return v8;
               return (_DWORD *)sub_6097C8D4(v22, a4, a6);
@@ -28201,7 +28201,7 @@ static inline unsigned int uxtb16(unsigned int x)
             else
             {
               v24 = *(_DWORD *)(a6 + 52);
-              v25 = sub_60855BA4(176, 16);
+              v25 = Object_freeViaGlobalWithSize(176, 16);
               if ( v24 )
               {
                 if ( !v25 )
@@ -28216,7 +28216,7 @@ static inline unsigned int uxtb16(unsigned int x)
               }
             }
           }
-          v11 = sub_60855BA4(640, 16);
+          v11 = Object_freeViaGlobalWithSize(640, 16);
           if ( v11 )
             return (_DWORD *)sub_6097D9D0(v11, a4, a6);
           break;
@@ -28231,32 +28231,32 @@ static inline unsigned int uxtb16(unsigned int x)
           {
             if ( sub_6098E28C(*(_DWORD *)(a6 + 64), (int)"DynamicCaptureUseName") )
             {
-              v19 = sub_60855BA4(208, 16);
+              v19 = Object_freeViaGlobalWithSize(208, 16);
               if ( !v19 )
                 return v8;
               return (_DWORD *)sub_6097FF94(v19, a4, a5, a6);
             }
             else if ( sub_6098E28C(*(_DWORD *)(a6 + 64), (int)"MassDrawOn") )
             {
-              v21 = sub_60855BA4(512, 16);
+              v21 = Object_freeViaGlobalWithSize(512, 16);
               if ( !v21 )
                 return v8;
               return (_DWORD *)sub_609823F8(v21);
             }
             else
             {
-              v23 = sub_60855BA4(208, 16);
+              v23 = Object_freeViaGlobalWithSize(208, 16);
               if ( !v23 )
                 return v8;
               return sub_60984774(v23, (int)a4, a5, a6);
             }
           }
-          v12 = sub_60855BA4(240, 16);
+          v12 = Object_freeViaGlobalWithSize(240, 16);
           if ( v12 )
             return (_DWORD *)sub_60983E78(v12);
           break;
         case 828665442:
-          v13 = sub_60855BA4(176, 16);
+          v13 = Object_freeViaGlobalWithSize(176, 16);
           if ( v13 )
             return (_DWORD *)sub_6097D860(v13, a4, a5, a6);
           break;
@@ -28264,7 +28264,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( !sub_6098E28C(*(_DWORD *)(a6 + 64), (int)"FrameBufferUse") )
           {
             v16 = sub_6098E28C(*(_DWORD *)(a6 + 64), (int)"DynamicCaptureUseName");
-            v17 = sub_60855BA4(240, 16);
+            v17 = Object_freeViaGlobalWithSize(240, 16);
             if ( v16 )
             {
               if ( !v17 )
@@ -28278,7 +28278,7 @@ static inline unsigned int uxtb16(unsigned int x)
               return sub_6098620C(v17, (int)a4, a5, a6);
             }
           }
-          v9 = sub_60855BA4(272, 16);
+          v9 = Object_freeViaGlobalWithSize(272, 16);
           if ( v9 )
             return (_DWORD *)sub_60984234(v9);
           break;

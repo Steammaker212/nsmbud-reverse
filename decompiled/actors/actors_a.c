@@ -36674,7 +36674,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60237208
+ * EffectSlot_updateAndRelink
  * RVA 0x00237208   size 0xb0   xrefs 57
  * ============================================================================ */
   int __fastcall sub_60237208(int32x4_t *a1, float *a2, unsigned int *a3, float *a4)
@@ -58905,7 +58905,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             v11 = *(_DWORD *)(a1 + 108);
             v12 = *(_DWORD *)(a1 + 112);
-            sub_600024C4(a1);
+            TileCheck_spawnEffectIfFlag(a1);
             v15[0] = v11;
             v15[1] = v12;
             *(float *)&v15[2] = v1;
@@ -59237,7 +59237,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_WORD *)(a1 + 6364) = *(_WORD *)(a1 + 6364) & 0xFFF2 | 9;
     v3 = *(float *)(a1 + 6476);
     v4 = *(float *)(a1 + 6472);
-    sub_600024C4(a1);
+    TileCheck_spawnEffectIfFlag(a1);
     v14 = v4;
     v15 = v3;
     v16 = v1;
@@ -59501,7 +59501,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v3 = *(float *)(a1 + 108);
     v4 = *(float *)(a1 + 572);
     v5 = *(float *)(a1 + 576);
-    v6 = (int *)sub_60002B90(*(char *)(a1 + 84));
+    v6 = (int *)Global_setBitmaskAndReturnC7B3A8(*(char *)(a1 + 84));
     v11[0] = v3 + v4;
     v11[1] = v2 + v5;
     v7 = MEMORY[0xC7F530];
@@ -59588,7 +59588,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               {
                 v18 = *(_DWORD *)(a1 + 108);
                 v19 = *(_DWORD *)(a1 + 112);
-                sub_600024C4(a1);
+                TileCheck_spawnEffectIfFlag(a1);
                 v20[0] = v18;
                 v20[1] = v19;
                 *(float *)&v20[2] = v1;
@@ -61789,7 +61789,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             v11 = *(_DWORD *)(a1 + 108);
             v12 = *(_DWORD *)(a1 + 112);
-            sub_600024C4(a1);
+            TileCheck_spawnEffectIfFlag(a1);
             v13[0] = v11;
             v13[1] = v12;
             v13[2] = v2;
@@ -62071,7 +62071,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               {
                 v16 = *(_DWORD *)(a1 + 108);
                 v17 = *(_DWORD *)(a1 + 112);
-                sub_600024C4(a1);
+                TileCheck_spawnEffectIfFlag(a1);
                 v18[0] = v16;
                 v18[1] = v17;
                 *(float *)&v18[2] = v1;
@@ -62124,7 +62124,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v3 = *(_DWORD *)(a1 + 6476);
     v4 = *(_DWORD *)(a1 + 6472);
-    sub_600024C4(a1);
+    TileCheck_spawnEffectIfFlag(a1);
     v8[0] = v4;
     v8[1] = v3;
     v9 = v1;
@@ -62364,7 +62364,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               {
                 v17 = *(_DWORD *)(a1 + 108);
                 v18 = *(_DWORD *)(a1 + 112);
-                sub_600024C4(a1);
+                TileCheck_spawnEffectIfFlag(a1);
                 v19[0] = v17;
                 v19[1] = v18;
                 *(float *)&v19[2] = v1;
@@ -62488,7 +62488,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v2 = a1[27] + a1[143];
     v3 = a1[28] + a1[144];
-    sub_600024C4((int)a1);
+    TileCheck_spawnEffectIfFlag((int)a1);
     v4 = v3;
     return EffectData_create(643, (int)&v2, 0, 0);
   }
@@ -83667,7 +83667,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v47 = *(float *)(a1 + 108);
       v48 = v12;
       v49 = 1166843904;
-      sub_60237208((int32x4_t *)(a1 + 6452), &v47, 0, 0);
+      EffectSlot_updateAndRelink((int32x4_t *)(a1 + 6452), &v47, 0, 0);
       if ( (*(_BYTE *)(a1 + 2880) & 1) == 0 )
       {
         v13 = *(float *)(a1 + 112);
@@ -100313,7 +100313,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v5 = *(char *)(a2 + 84);
     LODWORD(v14[0]) = 19;
-    v6 = sub_60002B90(v5);
+    v6 = Global_setBitmaskAndReturnC7B3A8(v5);
     v7 = *(char *)(a2 + 1313);
     if ( v7 >= 8 )
       v7 = 8;
@@ -100410,7 +100410,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v5 = *(char *)(a2 + 84);
     LODWORD(v14[0]) = 20;
-    v6 = sub_60002B90(v5);
+    v6 = Global_setBitmaskAndReturnC7B3A8(v5);
     v7 = *(char *)(a2 + 1313);
     if ( v7 >= 8 )
       v7 = 8;
@@ -100490,7 +100490,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v5 = *(char *)(a2 + 84);
     LODWORD(v16[0]) = 21;
-    v6 = sub_60002B90(v5);
+    v6 = Global_setBitmaskAndReturnC7B3A8(v5);
     v7 = *(char *)(a2 + 1313);
     if ( v7 >= 8 )
       v7 = 8;
@@ -101977,7 +101977,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v12 = *(char *)(v6 + 1314);
     v13 = *(char *)(v6 + 84);
     v21 = 60;
-    v14 = sub_60002B90(v13);
+    v14 = Global_setBitmaskAndReturnC7B3A8(v13);
     sub_602A358C((float *)a1, v12, (int)&dword_60C9083C, 9u, v14);
     v15 = sub_602855F4(v8);
     v16 = sub_602856EC((int *)(a1 + 6292), v15);
@@ -102027,7 +102027,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       _cxa_guard_release_0(&unk_60C907FC);
     }
     v5 = *(char *)(a2 + 1314);
-    v6 = sub_60002B90(*(char *)(a2 + 84));
+    v6 = Global_setBitmaskAndReturnC7B3A8(*(char *)(a2 + 84));
     return sub_602A358C(a1, v5, (int)&dword_60C9083C, 9u, v6);
   }
 
@@ -115616,7 +115616,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v21[0] = *(float *)(a1 + 108);
       v21[1] = v19;
       v21[2] = 4500.0;
-      return sub_60237208((int32x4_t *)(a1 + 6508), v21, (unsigned int *)(a1 + 156), 0);
+      return EffectSlot_updateAndRelink((int32x4_t *)(a1 + 6508), v21, (unsigned int *)(a1 + 156), 0);
     }
   }
 
@@ -117370,7 +117370,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v33[0] = *(float *)(a1 + 108);
     v33[1] = v31;
     v33[2] = 4500.0;
-    return sub_60237208((int32x4_t *)(a1 + 6508), v33, (unsigned int *)(a1 + 156), 0);
+    return EffectSlot_updateAndRelink((int32x4_t *)(a1 + 6508), v33, (unsigned int *)(a1 + 156), 0);
   }
 
 /* ============================================================================
@@ -128532,7 +128532,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
           {
             EffectData_setEffectId(a1 + 6988, 646);
-            sub_60237208((int32x4_t *)(a1 + 6972), v36, 0, 0);
+            EffectSlot_updateAndRelink((int32x4_t *)(a1 + 6972), v36, 0, 0);
           }
           (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13179648);
   LABEL_47:
@@ -129174,7 +129174,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v22 = v20;
         v23 = v21;
         v24 = 1166843904;
-        result = sub_60237208((int32x4_t *)(a1 + 6868), (float *)&v22, 0, 0);
+        result = EffectSlot_updateAndRelink((int32x4_t *)(a1 + 6868), (float *)&v22, 0, 0);
       }
       if ( v3 )
       {
@@ -129400,7 +129400,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
       {
         EffectData_setEffectId(a1 + 6988, 646);
-        sub_60237208((int32x4_t *)(a1 + 6972), v28, 0, 0);
+        EffectSlot_updateAndRelink((int32x4_t *)(a1 + 6972), v28, 0, 0);
       }
     }
     v11 = *(_DWORD *)(a1 + 80);
@@ -129552,7 +129552,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( (*(_BYTE *)(a1 + 2872) & 1) != 0 )
       {
         EffectData_setEffectId(a1 + 6988, 646);
-        sub_60237208((int32x4_t *)(a1 + 6972), v14, 0, 0);
+        EffectSlot_updateAndRelink((int32x4_t *)(a1 + 6972), v14, 0, 0);
       }
     }
     v10 = *(_DWORD *)(a1 + 80);
@@ -134001,7 +134001,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v4 = *(char *)(a2 + 84);
     LODWORD(v10[0]) = 22;
-    v5 = (int *)sub_60002B90(v4);
+    v5 = (int *)Global_setBitmaskAndReturnC7B3A8(v4);
     v6 = a1[28];
     v7 = MEMORY[0xC7F530];
     v10[0] = a1[27];
@@ -134030,7 +134030,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v4 = *(char *)(a2 + 84);
     LODWORD(v10[0]) = 22;
-    v5 = (int *)sub_60002B90(v4);
+    v5 = (int *)Global_setBitmaskAndReturnC7B3A8(v4);
     v6 = a1[28];
     v7 = MEMORY[0xC7F530];
     v10[0] = a1[27];
@@ -134059,7 +134059,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v4 = *(char *)(a2 + 84);
     LODWORD(v10[0]) = 22;
-    v5 = (int *)sub_60002B90(v4);
+    v5 = (int *)Global_setBitmaskAndReturnC7B3A8(v4);
     v6 = a1[28];
     v7 = MEMORY[0xC7F530];
     v10[0] = a1[27];
@@ -149307,7 +149307,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return StageActor::createWaterSplash(a1, (int *)&v17, v8, v9, (int)v10);
       }
       *v3 = 1;
-      sub_600024C4(a1);
+      TileCheck_spawnEffectIfFlag(a1);
       v19 = v1;
       v11 = *(_DWORD *)(a1 + 5956);
       if ( (unsigned int)(unsigned __int8)__ROR4__(v11, 8) - 3 > 1 )

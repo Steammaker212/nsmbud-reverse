@@ -1876,7 +1876,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_600024C4
+ * TileCheck_spawnEffectIfFlag
  * RVA 0x000024c4   size 0xe4   xrefs 58
  * ============================================================================ */
   int __fastcall sub_600024C4(int result)
@@ -2176,7 +2176,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60002B90
+ * Global_setBitmaskAndReturnC7B3A8
  * RVA 0x00002b90   size 0x2c   xrefs 56
  * ============================================================================ */
   int __fastcall sub_60002B90(unsigned int a1)
@@ -16643,7 +16643,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
   LABEL_9:
       if ( Child_getU8IfOwnerMatches(a1 + 24) == 1 )
-        sub_60237208(a1 + 8, a2, 0, 0);
+        EffectSlot_updateAndRelink(a1 + 8, a2, 0, 0);
       else
         *(_DWORD *)(a1 + 4) = 0;
       goto LABEL_12;
@@ -24848,7 +24848,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v38 = v36;
       v39 = v37;
       v40 = 1166843904;
-      sub_60237208((int32x4_t *)(a1 + 7212), (float *)&v38, 0, (float *)(a1 + 144));
+      EffectSlot_updateAndRelink((int32x4_t *)(a1 + 7212), (float *)&v38, 0, (float *)(a1 + 144));
     }
     v20 = (_DWORD *)(*v3)[3];
     v21 = (*v3)[17];
@@ -29178,7 +29178,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4[1] = *(float *)(a1 + 112);
     v4[0] = v2;
     v4[2] = 4500.0;
-    sub_60237208((int32x4_t *)(a1 + 6488), v4, 0, 0);
+    EffectSlot_updateAndRelink((int32x4_t *)(a1 + 6488), v4, 0, 0);
     LightSource_update2((_DWORD *)(a1 + 6416), (_DWORD *)(a1 + 108), 0, 0, 0, 0, 0, 0);
     if ( StageActor::cullCheck(a1, 0) == 1 )
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 224))(a1);
@@ -48259,7 +48259,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     switch ( result )
     {
       case 2:
-        sub_60237208((int32x4_t *)(a1 + 8524), v12, 0, 0);
+        EffectSlot_updateAndRelink((int32x4_t *)(a1 + 8524), v12, 0, 0);
         v10 = (int32x4_t *)(a1 + 8540);
         sub_602368E0(v10);
         result = Child_getU8IfOwnerMatches((int)v10);
@@ -103327,7 +103327,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = *(_DWORD *)(MEMORY[0xCC6484] + 116);
     v10 = *(const char **)(MEMORY[0xCC6484] + 128);
     v11 = 43;
-    v7 = sub_60002B90(a2);
+    v7 = Global_setBitmaskAndReturnC7B3A8(a2);
     (*(void (__fastcall **)(_DWORD, const char *, int *, int))(*MEMORY[0xC7F534] + 36))(
       MEMORY[0xC7F534],
       "SE_OBJ_BOSS_SHIP_BOUND",
@@ -105718,7 +105718,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(v5 + 160) = 0x80000000 - dword_60C83938;
       }
       v16 = 42;
-      v9 = sub_60002B90(a2);
+      v9 = Global_setBitmaskAndReturnC7B3A8(a2);
       v10 = *(_DWORD *)(v3 + 112);
       v11 = (unsigned __int8 *)v15;
       v12 = MEMORY[0xC7F534];
@@ -106554,7 +106554,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 128) = 0;
         v25 = *(float *)(a1 + 108);
         v26 = *(_DWORD *)(a1 + 112);
-        sub_600024C4(a1);
+        TileCheck_spawnEffectIfFlag(a1);
         v35 = v25;
         v36 = v26;
         v37 = v21;
@@ -106595,7 +106595,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(a1 + 124) = v29;
       *(_DWORD *)(a1 + 128) = 0;
       v31 = *(_DWORD *)(a1 + 112);
-      sub_600024C4(a1);
+      TileCheck_spawnEffectIfFlag(a1);
       v35 = v27;
       v36 = v31;
       v37 = v30;
@@ -109404,7 +109404,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       v18 = v18 + flt_60C83CAC;
       v19 = v19 + flt_60C83CB0;
-      sub_600024C4(a1);
+      TileCheck_spawnEffectIfFlag(a1);
       v20 = v19;
       EffectData_create(1088, &v18, 0, a1 + 144);
       return SoundActor_tryStartSoundIfFree(a1 + 6332, "SE_BOSS_KOOPA_FOOT", 0);
@@ -112169,7 +112169,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v11 = *((_DWORD *)v4 + 27);
         v12 = *((_DWORD *)v4 + 28);
-        sub_600024C4((int)v4);
+        TileCheck_spawnEffectIfFlag((int)v4);
         v15[0] = v11;
         v15[1] = v12;
         v15[2] = v2;
@@ -112314,7 +112314,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v9 = *(_DWORD *)(a1 + 108);
         v10 = *(_DWORD *)(a1 + 112);
-        sub_600024C4(a1);
+        TileCheck_spawnEffectIfFlag(a1);
         v15 = v9;
         v16 = v10;
         v17 = v1;
@@ -112571,7 +112571,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v12 = a2[35];
           v13 = *((_DWORD *)v6 + 27);
           v14 = *((_DWORD *)v6 + 28);
-          sub_600024C4((int)v6);
+          TileCheck_spawnEffectIfFlag((int)v6);
           v15 = 957;
           v18[0] = v13;
           v18[1] = v14;
@@ -112640,7 +112640,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v9 = *(_DWORD *)(a1 + 108);
     v10 = *(_DWORD *)(a1 + 112);
-    sub_600024C4(a1);
+    TileCheck_spawnEffectIfFlag(a1);
     v15[0] = v9;
     v15[1] = v10;
     v15[2] = v4;

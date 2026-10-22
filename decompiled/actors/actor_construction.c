@@ -103895,12 +103895,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1;
     v3 = a2;
     v4 = MEMORY[0xCC6D78] + 796;
-    v5 = sub_603F6AA0(MEMORY[0xCC6D78] + 796, a1, a2);
+    v5 = Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, a1, a2);
     v21 = sub_603F6B0C(v4, v2, v3);
-    v6 = sub_603F6AA0(v4, v2, v3);
+    v6 = Object_resolveWithFallbackTable(v4, v2, v3);
     v7 = sub_603F6B0C(v4, v2, v3);
     v20 = v6;
-    v19 = sub_603F6AA0(v4, v2, v3);
+    v19 = Object_resolveWithFallbackTable(v4, v2, v3);
     v8 = v6 == 3 || v19 == 4 || v5 < 3;
     v9 = v6 != 3;
     v10 = v19 != 4;
@@ -103966,11 +103966,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = (unsigned __int8)a2;
     v6 = (unsigned __int8)a1;
     v24 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
-    v23 = sub_603F6AA0(MEMORY[0xCC6D78] + 796, (unsigned __int8)a1, (unsigned __int8)a2);
+    v23 = Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, (unsigned __int8)a1, (unsigned __int8)a2);
     v22 = sub_603F6B0C(MEMORY[0xCC6D78] + 796, v6, v5);
-    v7 = sub_603F6AA0(MEMORY[0xCC6D78] + 796, v6, v5);
+    v7 = Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, v6, v5);
     v8 = sub_603F6B0C(MEMORY[0xCC6D78] + 796, v6, v5);
-    v9 = sub_603F6AA0(MEMORY[0xCC6D78] + 796, v6, v5);
+    v9 = Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, v6, v5);
     v10 = sub_603F6B0C(MEMORY[0xCC6D78] + 796, v6, v5);
     v11 = 14;
     if ( *(_DWORD *)(MEMORY[0xCC6D78] + 428) != a1
@@ -104152,7 +104152,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = *(_DWORD *)(MEMORY[0xCC6D78] + 448);
     if ( v2 )
     {
-      if ( sub_603F6AA0(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) <= 3
+      if ( Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) <= 3
         && sub_603F6B0C(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) < 4 )
       {
         v3 = 16;
@@ -104170,15 +104170,15 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v3 = 0;
     }
-    if ( sub_603F6AA0(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) == 4
-      && sub_603F6AA0(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) <= 3
+    if ( Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) == 4
+      && Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) <= 3
       && (unsigned int)(v2 - 1) <= 4 )
     {
       v3 = dword_60AFC090[v2 - 1];
     }
-    if ( sub_603F6AA0(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) == 3
-      && sub_603F6AA0(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) <= 3
-      && sub_603F6AA0(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) != 4
+    if ( Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) == 3
+      && Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) <= 3
+      && Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, (unsigned __int8)v0, (unsigned __int8)v1) != 4
       && (unsigned int)(v2 - 1) <= 4 )
     {
       v3 = dword_60AFC0B0[v2 - 1];
@@ -104215,9 +104215,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1;
     v3 = a2;
     v4 = MEMORY[0xCC6D78] + 796;
-    v5 = sub_603F6AA0(MEMORY[0xCC6D78] + 796, a1, a2) > 2;
-    v6 = sub_603F6AA0(v4, v2, v3);
-    return (v5 || v6 == 3) | (sub_603F6AA0(v4, v2, v3) == 4);
+    v5 = Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, a1, a2) > 2;
+    v6 = Object_resolveWithFallbackTable(v4, v2, v3);
+    return (v5 || v6 == 3) | (Object_resolveWithFallbackTable(v4, v2, v3) == 4);
   }
 
 /* ============================================================================
@@ -104254,7 +104254,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1;
     v3 = a2;
     v4 = MEMORY[0xCC6D78] + 796;
-    v5 = sub_603F6AA0(MEMORY[0xCC6D78] + 796, a1, a2) == 3;
+    v5 = Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, a1, a2) == 3;
     return v5 | (sub_603F6B0C(v4, v2, v3) == 3);
   }
 
@@ -104276,11 +104276,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1;
     v3 = a2;
     v4 = MEMORY[0xCC6D78] + 796;
-    v5 = sub_603F6AA0(MEMORY[0xCC6D78] + 796, a1, a2) > 2;
+    v5 = Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, a1, a2) > 2;
     v6 = sub_603F6B0C(v4, v2, v3);
-    v7 = sub_603F6AA0(v4, v2, v3) != 3;
+    v7 = Object_resolveWithFallbackTable(v4, v2, v3) != 3;
     v8 = sub_603F6B0C(v4, v2, v3) != 3;
-    v9 = sub_603F6AA0(v4, v2, v3);
+    v9 = Object_resolveWithFallbackTable(v4, v2, v3);
     return (v5 && v7 || v6 > 2 && v8 || v9 == 4 && v7) | (sub_603F6B0C(v4, v2, v3) == 4 && v8);
   }
 
@@ -104299,9 +104299,9 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1;
     v3 = a2;
     v4 = MEMORY[0xCC6D78] + 796;
-    v5 = sub_603F6AA0(MEMORY[0xCC6D78] + 796, a1, a2) > 2;
-    v6 = sub_603F6AA0(v4, v2, v3);
-    return sub_603F6AA0(v4, v2, v3) == 4 || v5 && v6 != 3;
+    v5 = Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, a1, a2) > 2;
+    v6 = Object_resolveWithFallbackTable(v4, v2, v3);
+    return Object_resolveWithFallbackTable(v4, v2, v3) == 4 || v5 && v6 != 3;
   }
 
 /* ============================================================================
@@ -104342,11 +104342,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = a1;
     v3 = a2;
     v4 = MEMORY[0xCC6D78] + 796;
-    v5 = sub_603F6AA0(MEMORY[0xCC6D78] + 796, a1, a2) > 2;
+    v5 = Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, a1, a2) > 2;
     v6 = v5 | (sub_603F6B0C(v4, v2, v3) > 2);
-    v7 = v6 | (sub_603F6AA0(v4, v2, v3) == 3);
+    v7 = v6 | (Object_resolveWithFallbackTable(v4, v2, v3) == 3);
     v8 = v7 | (sub_603F6B0C(v4, v2, v3) == 3);
-    v9 = sub_603F6AA0(v4, v2, v3);
+    v9 = Object_resolveWithFallbackTable(v4, v2, v3);
     return v8 & 1 | (v9 == 4) | (sub_603F6B0C(v4, v2, v3) == 4);
   }
 
@@ -104375,11 +104375,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     v1 = a1;
     v2 = MEMORY[0xCC6D78] + 796;
-    v3 = sub_603F6AA0(MEMORY[0xCC6D78] + 796, a1, 36) > 2;
+    v3 = Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, a1, 36) > 2;
     v4 = v3 | (sub_603F6B0C(v2, v1, 36) > 2);
-    v5 = v4 | (sub_603F6AA0(v2, v1, 36) == 3);
+    v5 = v4 | (Object_resolveWithFallbackTable(v2, v1, 36) == 3);
     v6 = v5 | (sub_603F6B0C(v2, v1, 36) == 3);
-    v7 = sub_603F6AA0(v2, v1, 36);
+    v7 = Object_resolveWithFallbackTable(v2, v1, 36);
     return v6 & 1 | (v7 == 4) | (sub_603F6B0C(v2, v1, 36) == 4);
   }
 
@@ -104448,7 +104448,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           else
           {
-            if ( sub_603F6AA0(v4 + 796, (unsigned __int8)a1, (unsigned __int8)a2) <= 2 )
+            if ( Object_resolveWithFallbackTable(v4 + 796, (unsigned __int8)a1, (unsigned __int8)a2) <= 2 )
             {
               *(_DWORD *)(v4 + 448) = 2;
               sub_6081F140(v4, 2);
@@ -121693,7 +121693,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_601B51EC(int a1)
   {
-    return sub_60793DA0(*(_DWORD *)(*(_DWORD *)(a1 + 4 * *(_DWORD *)(a1 + 1248) + 920) + 4));
+    return Object_isFloat2EqualViaChain(*(_DWORD *)(*(_DWORD *)(a1 + 4 * *(_DWORD *)(a1 + 1248) + 920) + 4));
   }
 
 /* ============================================================================
@@ -127139,7 +127139,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (a1[66] | 1) == 7 )
       return Float2_equalTest(**(_DWORD **)(*(_DWORD *)(a1[236] + 12) + 12) + 4);
     else
-      return sub_60793DA0(*(_DWORD *)(a1[a1[368] + 230] + 4));
+      return Object_isFloat2EqualViaChain(*(_DWORD *)(a1[a1[368] + 230] + 4));
   }
 
 /* ============================================================================
@@ -130888,7 +130888,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v4 = dword_60AFC140[v2 - 24];
         result[265] = v4;
         result[266] = v2;
-        return (_DWORD *)sub_605EAB48(result[236]);
+        return (_DWORD *)Object_releaseIfNotSentinel(result[236]);
       }
     }
     return result;
@@ -132122,7 +132122,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         }
         return EffectWrapper_update(a1 + 444, v7, a1 + 80, 0, 0);
       case 2:
-        if ( !sub_60237208(a1 + 444, a1 + 80, 0, 0) )
+        if ( !EffectSlot_updateAndRelink(a1 + 444, a1 + 80, 0, 0) )
         {
           EffectData_release(a1 + 444);
           *(_DWORD *)(a1 + 548) = 0;
@@ -132223,7 +132223,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(_DWORD *)(a1 + 660);
     if ( result == 2 )
     {
-      if ( !sub_60237208(a1 + 556, a1 + 80, 0, 0) )
+      if ( !EffectSlot_updateAndRelink(a1 + 556, a1 + 80, 0, 0) )
       {
         EffectData_release(a1 + 556);
         *(_DWORD *)(a1 + 660) = 0;
@@ -132268,7 +132268,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(_DWORD *)(a1 + 772);
     if ( result == 2 )
     {
-      if ( !sub_60237208(a1 + 668, a1 + 80, 0, 0) )
+      if ( !EffectSlot_updateAndRelink(a1 + 668, a1 + 80, 0, 0) )
       {
         EffectData_release(a1 + 668);
         *(_DWORD *)(a1 + 772) = 0;
@@ -145246,7 +145246,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( *(_DWORD *)(MEMORY[0xCC6D78] + 440) )
           goto LABEL_65;
         v4 = 0;
-        if ( sub_603F6AA0(MEMORY[0xCC6D78] + 796, 0, 0) < 3 )
+        if ( Object_resolveWithFallbackTable(MEMORY[0xCC6D78] + 796, 0, 0) < 3 )
           goto LABEL_64;
         v3 = *(_DWORD *)(v0 + 428);
         if ( v3 == 1 )
@@ -145255,7 +145255,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( *(_DWORD *)(v0 + 440) != 5 )
             goto LABEL_65;
           v4 = 1;
-          if ( sub_603F6AA0(v2, 1, 5) < 3 )
+          if ( Object_resolveWithFallbackTable(v2, 1, 5) < 3 )
             goto LABEL_64;
           v3 = *(_DWORD *)(v0 + 428);
           if ( v3 != 2 )
@@ -145266,7 +145266,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               if ( *(_DWORD *)(v0 + 440) != 2 )
                 goto LABEL_65;
               v4 = 3;
-              if ( sub_603F6AA0(v2, 3, 2) < 3 )
+              if ( Object_resolveWithFallbackTable(v2, 3, 2) < 3 )
                 goto LABEL_64;
               v3 = *(_DWORD *)(v0 + 428);
             }
@@ -145275,7 +145275,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               if ( *(_DWORD *)(v0 + 440) )
                 goto LABEL_65;
               v4 = 4;
-              if ( sub_603F6AA0(v2, 4, 0) < 3 )
+              if ( Object_resolveWithFallbackTable(v2, 4, 0) < 3 )
                 goto LABEL_64;
               v3 = *(_DWORD *)(v0 + 428);
             }
@@ -145288,13 +145288,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               if ( !v6 )
                 goto LABEL_65;
               v4 = 6;
-              v7 = sub_603F6AA0(v2, 6, 1);
+              v7 = Object_resolveWithFallbackTable(v2, 6, 1);
               goto LABEL_63;
             }
             if ( *(_DWORD *)(v0 + 440) != 4 )
               goto LABEL_65;
             v4 = 5;
-            if ( sub_603F6AA0(v2, 5, 4) >= 3 )
+            if ( Object_resolveWithFallbackTable(v2, 5, 4) >= 3 )
             {
               v3 = *(_DWORD *)(v0 + 428);
               goto LABEL_34;
@@ -145307,7 +145307,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( *(_DWORD *)(v0 + 440) != 3 )
             goto LABEL_65;
           v4 = 2;
-          if ( sub_603F6AA0(v2, 2, 3) < 3 )
+          if ( Object_resolveWithFallbackTable(v2, 2, 3) < 3 )
             goto LABEL_64;
           v3 = *(_DWORD *)(v0 + 428);
           goto LABEL_22;
@@ -151029,31 +151029,31 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           result = sub_603F6F84(v21);
           if ( result == 1 )
           {
-            result = sub_603F6AA0(v21, 8, 0);
+            result = Object_resolveWithFallbackTable(v21, 8, 0);
             if ( result != 4 )
             {
-              result = sub_603F6AA0(v21, 8, 1);
+              result = Object_resolveWithFallbackTable(v21, 8, 1);
               if ( result != 4 )
               {
-                result = sub_603F6AA0(v21, 8, 2);
+                result = Object_resolveWithFallbackTable(v21, 8, 2);
                 if ( result != 4 )
                 {
-                  result = sub_603F6AA0(v21, 8, 3);
+                  result = Object_resolveWithFallbackTable(v21, 8, 3);
                   if ( result != 4 )
                   {
-                    result = sub_603F6AA0(v21, 8, 4);
+                    result = Object_resolveWithFallbackTable(v21, 8, 4);
                     if ( result != 4 )
                     {
-                      result = sub_603F6AA0(v21, 8, 5);
+                      result = Object_resolveWithFallbackTable(v21, 8, 5);
                       if ( result != 4 )
                       {
-                        result = sub_603F6AA0(v21, 8, 6);
+                        result = Object_resolveWithFallbackTable(v21, 8, 6);
                         if ( result != 4 )
                         {
-                          result = sub_603F6AA0(v21, 8, 7);
+                          result = Object_resolveWithFallbackTable(v21, 8, 7);
                           if ( result != 4 )
                           {
-                            result = sub_603F6AA0(v21, 8, 8);
+                            result = Object_resolveWithFallbackTable(v21, 8, 8);
                             if ( result != 4 )
                             {
                               result = *(unsigned __int8 *)(v2 + 2092) | 0x10;
@@ -158870,7 +158870,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v6 = v9[3];
     v7 = v9[7];
     v8 = v9[11];
-    return sub_60237208((int32x4_t *)(a1 + 440), (float *)&v6, 0, (float *)(a1 + 544));
+    return EffectSlot_updateAndRelink((int32x4_t *)(a1 + 440), (float *)&v6, 0, (float *)(a1 + 544));
   }
 
 /* ============================================================================
