@@ -361,7 +361,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xC9ECF4] = "BaloonGuide_Text_00";
     MEMORY[0xC9ECF8] = 12321336;
     MEMORY[0xC9ECFC] = "BaloonGuide_Text_02";
-    sub_60000288();
+    stub_return0_000288();
     MEMORY[0xC9ED04] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC9ED00] = 12571580;
     MEMORY[0xC9ED08] = 4721128;
@@ -454,7 +454,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 2060, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 2060, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13233504);
     return result;
@@ -502,7 +502,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 2060, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 2060, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13233408);
     return result;
@@ -536,7 +536,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 2060, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 2060, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13233600);
     return result;
@@ -600,11 +600,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 12836) = 0;
     sub_6050A4C4(a1 + 5608);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 2060));
-    sub_6045C0A0(v2);
-    sub_6045C0A0(a1 + 1252);
-    sub_6045C0A0(a1 + 848);
-    sub_6045C0A0(a1 + 444);
-    sub_6045C0A0(a1 + 40);
+    thunk_sub_60909E64(v2);
+    thunk_sub_60909E64(a1 + 1252);
+    thunk_sub_60909E64(a1 + 848);
+    thunk_sub_60909E64(a1 + 444);
+    thunk_sub_60909E64(a1 + 40);
     return a1;
   }
 
@@ -621,11 +621,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 12836) = 0;
     sub_6050A4C4(a1 + 5608);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 2060));
-    sub_6045C0A0(v2);
-    sub_6045C0A0((_DWORD *)(a1 + 1252));
-    sub_6045C0A0((_DWORD *)(a1 + 848));
-    sub_6045C0A0((_DWORD *)(a1 + 444));
-    sub_6045C0A0((_DWORD *)(a1 + 40));
+    thunk_sub_60909E64(v2);
+    thunk_sub_60909E64((_DWORD *)(a1 + 1252));
+    thunk_sub_60909E64((_DWORD *)(a1 + 848));
+    thunk_sub_60909E64((_DWORD *)(a1 + 444));
+    thunk_sub_60909E64((_DWORD *)(a1 + 40));
     return operator delete(a1);
   }
 
@@ -643,7 +643,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60C9EDE8 = 12321336;
       dword_60C9EDEC = (int)"T_Text_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9EDE4);
     }
     v4 = 1;
@@ -684,7 +684,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9EDF4 = MEMORY[0xC9ECDC];
       dword_60C9EDF8 = 12321336;
       dword_60C9EDFC = MEMORY[0xC9ECE4];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9EDE0);
     }
     v5 = 2;
@@ -1189,7 +1189,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60C9EE9C = 12321336;
       dword_60C9EEA0 = MEMORY[0xC9EE04];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9EE90);
     }
     v7[0] = 1;
@@ -1200,7 +1200,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9EEA8 = (int)"N_All_00";
       dword_60C9EEAC = 12321336;
       dword_60C9EEB0 = (int)"N_BonusTime_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9EE94);
     }
     v7[0] = 2;
@@ -1211,7 +1211,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9EEB8 = (int)"T_BonusTime_00";
       dword_60C9EEBC = 12321336;
       dword_60C9EEC0 = (int)"T_BonusFlash_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9EE98);
     }
     v7[0] = 2;
@@ -1475,7 +1475,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13233948);
     return result;
@@ -1614,7 +1614,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9EF90 = MEMORY[0xC9EED0];
       dword_60C9EF94 = 12321336;
       dword_60C9EF98 = MEMORY[0xC9EED8];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9EF80);
     }
     v4[0] = 3;
@@ -2090,7 +2090,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v13 = -1;
           if ( !is_mul_ok(0xE00u, v11) )
             v13 = -1;
-          v14 = (_DWORD *)sub_608DE334(v13, 0, 4, 0);
+          v14 = (_DWORD *)Heap_allocate(v13, 0, 4, 0);
           if ( v14 )
           {
             *v14 = 3584;
@@ -2515,7 +2515,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13234264);
     return result;
@@ -2657,7 +2657,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13234200);
     return result;
@@ -2746,7 +2746,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F1E4 = (int)"N_SilverComplete_00";
       dword_60C9F1E8 = 12321336;
       dword_60C9F1EC = (int)"N_BronzeComplete_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F118);
     }
     v5 = 4;
@@ -2777,7 +2777,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F124 = MEMORY[0xC9F00C];
       dword_60C9F128 = 12321336;
       dword_60C9F12C = MEMORY[0xC9F014];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F114);
     }
     v5[0] = 2;
@@ -2811,7 +2811,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F224 = (int)"T_SilverComplete_01";
       dword_60C9F228 = 12321336;
       dword_60C9F22C = (int)"T_BronzeComplete_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F11C);
     }
     v4 = 8;
@@ -2886,7 +2886,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F144 = (int)"ChallengeCompleteWindow_SilverComplete_00";
       dword_60C9F148 = 12321336;
       dword_60C9F14C = (int)"ChallengeCompleteWindow_BronzeComplete_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F100);
     }
     *(_WORD *)(a1 + 3636) = 257;
@@ -2921,7 +2921,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60C9F164 = (int)"ChallengeCompleteWindow_category_03";
         dword_60C9F168 = 12321336;
         dword_60C9F16C = (int)"ChallengeCompleteWindow_category_04";
-        sub_60000288();
+        stub_return0_000288();
         _cxa_guard_release_0(&unk_60C9F104);
       }
       v13 = *(_DWORD *)(a1 + 3648);
@@ -3069,7 +3069,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F184 = (int)"G_SilverComplete_00";
       dword_60C9F188 = 12321336;
       dword_60C9F18C = (int)"G_BronzeComplete_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F108);
     }
     v3 = *(_DWORD *)(a1 + 3648);
@@ -3101,7 +3101,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F1A4 = (int)"G_SilverComplete_00";
       dword_60C9F1A8 = 12321336;
       dword_60C9F1AC = (int)"G_BronzeComplete_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F10C);
     }
     v3 = *(_DWORD *)(a1 + 3648);
@@ -3142,7 +3142,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F1C4 = (int)"Pa_KeyAssign_02";
       dword_60C9F1C8 = 12321336;
       dword_60C9F1CC = (int)"Pa_KeyAssign_03";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F110);
     }
     v3 = operator new(7216);
@@ -3327,7 +3327,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13234800);
     return result;
@@ -3376,7 +3376,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13234736);
     return result;
@@ -3463,7 +3463,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60C9F2B4 = 12321336;
       dword_60C9F2B8 = (int)"InOut";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F2B0);
     }
     v4[0] = 1;
@@ -3857,7 +3857,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1 + 4), 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 532), 13235040);
     return result;
@@ -3880,7 +3880,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
+    result = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
     if ( !result )
       return StateMgr::changeState((_DWORD *)(a1 + 532), 13234944);
     if ( *(float *)(result + 44) == 0.0 )
@@ -4046,7 +4046,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60485B20(_DWORD *a1)
   {
     *a1 = 12572424;
-    sub_6045C0A0(a1 + 22);
+    thunk_sub_60909E64(a1 + 22);
     return a1;
   }
 
@@ -4057,7 +4057,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60485B4C(_DWORD *a1)
   {
     *a1 = 12572424;
-    sub_6045C0A0(a1 + 22);
+    thunk_sub_60909E64(a1 + 22);
     return operator delete((int)a1);
   }
 
@@ -4125,7 +4125,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F3D4 = MEMORY[0xC9F2F4];
       dword_60C9F3D8 = 12321336;
       dword_60C9F3DC = MEMORY[0xC9F2FC];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F380);
     }
     v7 = *(_DWORD *)(a1 + 4);
@@ -4151,7 +4151,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F414 = (int)"Pa_RetrySpecial_00";
       dword_60C9F418 = 12321336;
       dword_60C9F41C = (int)"Pa_ExitSpecial_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F384);
     }
     sub_6047ED10(a1 + 24, *(_DWORD *)(a1 + 16), (int)&dword_60C9F3E0, 8);
@@ -4168,7 +4168,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F3A4 = (int)"N_Btn1UP_00";
       dword_60C9F3A8 = 12321336;
       dword_60C9F3AC = (int)"N_BtnSpecial_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F388);
     }
     v11 = *(_DWORD *)(a1 + 4);
@@ -4192,7 +4192,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9F454 = (int)"Pa_RetrySpecial_00";
       dword_60C9F458 = 12321336;
       dword_60C9F45C = (int)"Pa_ExitSpecial_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9F38C);
     }
     v13 = *(_DWORD *)(a1 + 4);
@@ -4415,7 +4415,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60486674(_DWORD *a1)
   {
     *a1 = 12572424;
-    sub_6045C0A0(a1 + 22);
+    thunk_sub_60909E64(a1 + 22);
     return a1;
   }
 
@@ -4426,7 +4426,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604866A0(_DWORD *a1)
   {
     *a1 = 12572424;
-    sub_6045C0A0(a1 + 22);
+    thunk_sub_60909E64(a1 + 22);
     return operator delete((int)a1);
   }
 
@@ -5587,7 +5587,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r1
     _BYTE v6[4]; // [sp+4h] [bp-4h] BYREF
   
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 9), 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 9), 4u) + 51);
     if ( (result & 1) == 0 )
       return result;
     v3 = 1;
@@ -5784,7 +5784,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 4u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13235744);
     return result;
@@ -5911,7 +5911,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r1
     _BYTE v6[4]; // [sp+4h] [bp-4h] BYREF
   
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 9), 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 9), 4u) + 51);
     if ( (result & 1) == 0 )
       return result;
     v3 = 1;
@@ -5966,7 +5966,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 4u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13235872);
     return result;
@@ -6119,7 +6119,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE v9[4]; // [sp+8h] [bp-8h] BYREF
     _BYTE v10[4]; // [sp+Ch] [bp-4h] BYREF
   
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 9), 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 9), 4u) + 51);
     if ( (result & 1) != 0 )
     {
       v8 = a1[11930];
@@ -6243,7 +6243,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r1
     _BYTE v6[4]; // [sp+4h] [bp-4h] BYREF
   
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 9), 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 9), 4u) + 51);
     if ( (result & 1) == 0 )
       return result;
     sub_6048E014(a1);
@@ -6318,7 +6318,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r1
     _BYTE v6[4]; // [sp+4h] [bp-4h] BYREF
   
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 9), 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 9), 4u) + 51);
     if ( (result & 1) == 0 )
       return result;
     sub_6048E014(a1);
@@ -6645,7 +6645,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v2 );
     sub_60544E84(a1 + 7124);
-    sub_6045C0A0(a1 + 6912);
+    thunk_sub_60909E64(a1 + 6912);
     sub_6047643C((struct sead_IDisposer *)(a1 + 5122));
     sub_6047643C((struct sead_IDisposer *)(a1 + 3352));
     sub_605021B0(a1 + 1884);
@@ -6717,7 +6717,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60C9FD9C = 12321336;
       dword_60C9FDA0 = dword_60C9FD98;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9FD50);
     }
     v27 = 0;
@@ -7401,27 +7401,27 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = dword_60C9FE30;
     if ( (unsigned int)dword_60C9FE30 >= 7 )
       v10 = 0;
-    *(_DWORD *)(sub_608DE61C(a1 + 3820, *(_DWORD *)(v9 + 4 * v10)) - *(_DWORD *)(a1 + 3832) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3820, *(_DWORD *)(v9 + 4 * v10)) - *(_DWORD *)(a1 + 3832) + 192) = 0;
     v11 = dword_60C9FE34;
     if ( (unsigned int)dword_60C9FE34 >= 7 )
       v11 = 0;
-    *(_DWORD *)(sub_608DE61C(a1 + 3820, *(_DWORD *)(v9 + 4 * v11)) - *(_DWORD *)(a1 + 3832) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3820, *(_DWORD *)(v9 + 4 * v11)) - *(_DWORD *)(a1 + 3832) + 192) = 0;
     v12 = dword_60C9FE38;
     if ( (unsigned int)dword_60C9FE38 >= 7 )
       v12 = 0;
-    *(_DWORD *)(sub_608DE61C(a1 + 3820, *(_DWORD *)(v9 + 4 * v12)) - *(_DWORD *)(a1 + 3832) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3820, *(_DWORD *)(v9 + 4 * v12)) - *(_DWORD *)(a1 + 3832) + 192) = 0;
     v13 = dword_60C9FE3C;
     if ( (unsigned int)dword_60C9FE3C >= 7 )
       v13 = 0;
-    *(_DWORD *)(sub_608DE61C(a1 + 3820, *(_DWORD *)(v9 + 4 * v13)) - *(_DWORD *)(a1 + 3832) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3820, *(_DWORD *)(v9 + 4 * v13)) - *(_DWORD *)(a1 + 3832) + 192) = 0;
     v14 = dword_60C9FE40;
     if ( (unsigned int)dword_60C9FE40 >= 7 )
       v14 = 0;
-    *(_DWORD *)(sub_608DE61C(a1 + 3820, *(_DWORD *)(v9 + 4 * v14)) - *(_DWORD *)(a1 + 3832) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3820, *(_DWORD *)(v9 + 4 * v14)) - *(_DWORD *)(a1 + 3832) + 192) = 0;
     v15 = dword_60C9FE44;
     if ( (unsigned int)dword_60C9FE44 >= 7 )
       v15 = 0;
-    result = sub_608DE61C(a1 + 3820, *(_DWORD *)(v9 + 4 * v15)) - *(_DWORD *)(a1 + 3832);
+    result = List_getNthNode(a1 + 3820, *(_DWORD *)(v9 + 4 * v15)) - *(_DWORD *)(a1 + 3832);
     *(_DWORD *)(result + 192) = 0;
     return result;
   }
@@ -7454,7 +7454,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9FE64 = (int)"L_CategoryList1UP_00";
       dword_60C9FE68 = 12321336;
       dword_60C9FE6C = (int)"L_CategoryListSpecial_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9FD58);
     }
     if ( ((unsigned int)&unk_60C9FD5C & ~(1615375080 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9FD5C) )
@@ -7467,7 +7467,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9FE84 = (int)"Pa_ScrollBtn1UP_00";
       off_60C9FE88 = (_UNKNOWN *)12321336;
       dword_60C9FE8C = (int)"Pa_ScrollBtnSpecial_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9FD5C);
     }
     v3 = a1[13];
@@ -7528,7 +7528,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9FF5C = (int)"B_Arrow_00";
       dword_60C9FF60 = 12321336;
       dword_60C9FF64 = (int)"B_Arrow_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9FD60);
     }
     v3 = *(_DWORD *)(a1 + 52);
@@ -7581,7 +7581,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9FEA4 = (int)"L_CategoryList1UP_00";
       dword_60C9FEA8 = 12321336;
       dword_60C9FEAC = (int)"L_CategoryListSpecial_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9FD64);
     }
     v3 = 0;
@@ -7676,7 +7676,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9FEC4 = (int)"L_CategoryList1UP_00";
       dword_60C9FEC8 = 12321336;
       dword_60C9FECC = (int)"L_CategoryListSpecial_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9FD68);
     }
     if ( ((unsigned int)&unk_60C9FD6C & ~(1615376768 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9FD6C) )
@@ -8130,10 +8130,10 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6048D43C(*(_DWORD *)(v3 + v2));
       v6 = *(_DWORD *)(v9 + v2);
       sub_6050270C(v5, v6, 1);
-      *(_DWORD *)(sub_608DE61C(v4, v6) - *(_DWORD *)(a1 + 3832) + 176) = "SE_SYS_SCROLL_LIST_BTN_OVER";
-      *(_DWORD *)(sub_608DE61C(v4, v6) - *(_DWORD *)(a1 + 3832) + 180) = "SE_SYS_SCROLL_LIST_BTN_OVER_OFF";
+      *(_DWORD *)(List_getNthNode(v4, v6) - *(_DWORD *)(a1 + 3832) + 176) = "SE_SYS_SCROLL_LIST_BTN_OVER";
+      *(_DWORD *)(List_getNthNode(v4, v6) - *(_DWORD *)(a1 + 3832) + 180) = "SE_SYS_SCROLL_LIST_BTN_OVER_OFF";
       sub_605028F0(v5, v9 + v2, 0);
-      v7 = sub_608DE61C(v4, *(_DWORD *)(v9 + v2));
+      v7 = List_getNthNode(v4, *(_DWORD *)(v9 + v2));
       v2 += 4;
       result = v7 - *(_DWORD *)(a1 + 3832);
       *(_BYTE *)(result + 208) = 0;
@@ -8873,7 +8873,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( !v8 )
         {
           sub_605028F0(a1 + 3768, v6, 1);
-          *(_BYTE *)(sub_608DE61C(a1 + 3820, *v6) - *(_DWORD *)(a1 + 3832) + 208) = 0;
+          *(_BYTE *)(List_getNthNode(a1 + 3820, *v6) - *(_DWORD *)(a1 + 3832) + 208) = 0;
         }
         ++v6;
         ++v4;
@@ -8898,19 +8898,19 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 942;
     sub_605028F0(a1 + 942, a1 + 1462, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 955, a1[1462]) - a1[958] + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 955, a1[1462]) - a1[958] + 208) = 0;
     sub_605028F0(v2, a1 + 1463, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 955, a1[1463]) - a1[958] + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 955, a1[1463]) - a1[958] + 208) = 0;
     sub_605028F0(v2, a1 + 1464, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 955, a1[1464]) - a1[958] + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 955, a1[1464]) - a1[958] + 208) = 0;
     sub_605028F0(v2, a1 + 1465, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 955, a1[1465]) - a1[958] + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 955, a1[1465]) - a1[958] + 208) = 0;
     sub_605028F0(v2, a1 + 1466, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 955, a1[1466]) - a1[958] + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 955, a1[1466]) - a1[958] + 208) = 0;
     sub_605028F0(v2, a1 + 1467, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 955, a1[1467]) - a1[958] + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 955, a1[1467]) - a1[958] + 208) = 0;
     sub_605028F0(v2, a1 + 1468, 1);
-    result = sub_608DE61C(a1 + 955, a1[1468]) - a1[958];
+    result = List_getNthNode(a1 + 955, a1[1468]) - a1[958];
     *(_BYTE *)(result + 208) = 0;
     return result;
   }
@@ -8953,7 +8953,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9FF04 = (int)"W_ScrollBar1UP_00";
       dword_60C9FF08 = 12321336;
       dword_60C9FF0C = (int)"W_ScrollBarSpecial_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9FD8C);
     }
     if ( ((unsigned int)&unk_60C9FD90 & ~(1615385856 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60C9FD90) )
@@ -8966,7 +8966,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9FF24 = (int)"Pa_ScrollBtn1UP_00";
       dword_60C9FF28 = 12321336;
       dword_60C9FF2C = (int)"Pa_ScrollBtnSpecial_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9FD90);
     }
     v3 = 0;
@@ -9058,7 +9058,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( *(_DWORD *)(a1 + 47788) < 4u )
           v3 = *(_DWORD *)(a1 + 47788);
-        result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1 + 4 * v3 + 13800), 2) + 51);
+        result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4 * v3 + 13800), 2) + 51);
         if ( (result & 1) != 0 )
         {
           v7 = *(_DWORD *)(a1 + 47788);
@@ -9352,7 +9352,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1[11947];
     if ( v2 >= 4 )
       v2 = 0;
-    result = *(unsigned __int8 *)(sub_6047482C(a1[v2 + 3450], 2) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1[v2 + 3450], 2) + 51);
     if ( (result & 1) != 0 )
     {
       v5 = 0;
@@ -10891,7 +10891,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9FEE4 = (int)"Pa_1UPBtn_00";
       dword_60C9FEE8 = 12321336;
       dword_60C9FEEC = (int)"Pa_SpecialBtn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9FD88);
     }
     v6 = 0;
@@ -13394,7 +13394,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA058C = (int)"ChallengeSelectWindow_BestCoinCount_00";
     dword_60CA0590 = 12321336;
     dword_60CA0594 = (int)"ChallengeSelectWindow_BestTime_00";
-    sub_60000288();
+    stub_return0_000288();
     MEMORY[0xC9FFD4] = MEMORY[0xC7B788] + 1;
     MEMORY[0xC9FFD0] = 12573448;
     MEMORY[0xC9FFD8] = 4799296;
@@ -13555,7 +13555,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 36;
     v3 = sub_60473B4C(a1 + 36);
     sub_6098F1D4(v3);
-    result = *(unsigned __int8 *)(sub_6047482C(v2, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(v2, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13238288);
     return result;
@@ -13769,7 +13769,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13238224);
     return result;
@@ -13888,7 +13888,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13238480);
     return result;
@@ -14052,7 +14052,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13238288);
     return result;
@@ -14090,7 +14090,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13238224);
     return result;
@@ -14516,11 +14516,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(a1 + 964, &v15, "SE_SYS_GOTO_MOVIE");
     v13 = 8;
     sub_605029FC(a1 + 964, &v13, "SE_SYS_BACK");
-    *(_DWORD *)(sub_608DE61C(a1 + 977, v13) - a1[980] + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(a1 + 977, v13) - a1[980] + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    *(_DWORD *)(sub_608DE61C(a1 + 977, v13) - a1[980] + 204) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 977, v13) - a1[980] + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(a1 + 977, v13) - a1[980] + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(a1 + 977, v13) - a1[980] + 204) = 0;
     sub_605028F0(a1 + 964, &v13, 1);
-    result = sub_608DE61C(a1 + 977, v13) - a1[980];
+    result = List_getNthNode(a1 + 977, v13) - a1[980];
     *(_BYTE *)(result + 208) = 0;
     return result;
   }
@@ -14624,7 +14624,7 @@ static inline unsigned int uxtb16(unsigned int x)
       _cxa_guard_release_0(&unk_60CA0488);
     }
     Model_s_Nin_NX_NVN_szs_ref_834E7C(&dword_60CA04AC, 0);
-    v3 = (_QWORD *)sub_608DE334(7208, 0, 4, 0);
+    v3 = (_QWORD *)Heap_allocate(7208, 0, 4, 0);
     v6 = 5964;
     v7 = (int *)(a1 + 5964);
     if ( v3 )
@@ -14675,7 +14675,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v18 = agl_TextureData_ref(v19);
         sub_60959954(v18, v17);
         sub_6098E0F8(v13, v19, 0);
-        result = sub_609175E4(&v20);
+        result = Object_releaseHandle(&v20);
         v13 += 24;
       }
     }
@@ -15011,10 +15011,10 @@ static inline unsigned int uxtb16(unsigned int x)
           v75 = 12321336;
           v76 = (const char *)v49;
           sub_60473DE4((_DWORD *)(a1 + 36), 3u, &v75, 0);
-          *(_BYTE *)(sub_608DE61C(a1 + 3908, 4) - *(_DWORD *)(a1 + 3920) + 208) = 1;
-          *(_BYTE *)(sub_608DE61C(a1 + 3908, 5) - *(_DWORD *)(a1 + 3920) + 208) = 1;
-          *(_BYTE *)(sub_608DE61C(a1 + 3908, 6) - *(_DWORD *)(a1 + 3920) + 208) = 1;
-          *(_BYTE *)(sub_608DE61C(a1 + 3908, 7) - *(_DWORD *)(a1 + 3920) + 208) = 1;
+          *(_BYTE *)(List_getNthNode(a1 + 3908, 4) - *(_DWORD *)(a1 + 3920) + 208) = 1;
+          *(_BYTE *)(List_getNthNode(a1 + 3908, 5) - *(_DWORD *)(a1 + 3920) + 208) = 1;
+          *(_BYTE *)(List_getNthNode(a1 + 3908, 6) - *(_DWORD *)(a1 + 3920) + 208) = 1;
+          *(_BYTE *)(List_getNthNode(a1 + 3908, 7) - *(_DWORD *)(a1 + 3920) + 208) = 1;
           goto LABEL_61;
         case 4:
           v47 = sub_604962DC(7);
@@ -15030,19 +15030,19 @@ static inline unsigned int uxtb16(unsigned int x)
       v75 = 12321336;
       v76 = (const char *)v47;
       sub_60473DE4((_DWORD *)(a1 + 36), 3u, &v75, 0);
-      *(_BYTE *)(sub_608DE61C(a1 + 3908, 4) - *(_DWORD *)(a1 + 3920) + 208) = 1;
-      *(_BYTE *)(sub_608DE61C(a1 + 3908, 5) - *(_DWORD *)(a1 + 3920) + 208) = 1;
-      *(_BYTE *)(sub_608DE61C(a1 + 3908, 6) - *(_DWORD *)(a1 + 3920) + 208) = 1;
-      *(_BYTE *)(sub_608DE61C(a1 + 3908, 7) - *(_DWORD *)(a1 + 3920) + 208) = 1;
+      *(_BYTE *)(List_getNthNode(a1 + 3908, 4) - *(_DWORD *)(a1 + 3920) + 208) = 1;
+      *(_BYTE *)(List_getNthNode(a1 + 3908, 5) - *(_DWORD *)(a1 + 3920) + 208) = 1;
+      *(_BYTE *)(List_getNthNode(a1 + 3908, 6) - *(_DWORD *)(a1 + 3920) + 208) = 1;
+      *(_BYTE *)(List_getNthNode(a1 + 3908, 7) - *(_DWORD *)(a1 + 3920) + 208) = 1;
       goto LABEL_61;
     }
     (*(void (__fastcall **)(int *))(v41 + 108))(v40);
     v42 = a1 + 3908;
     v43 = (_DWORD *)(a1 + 3920);
-    *(_BYTE *)(sub_608DE61C(a1 + 3908, 4) - *(_DWORD *)(a1 + 3920) + 208) = 0;
-    *(_BYTE *)(sub_608DE61C(a1 + 3908, 5) - *v43 + 208) = 0;
-    *(_BYTE *)(sub_608DE61C(a1 + 3908, 6) - *v43 + 208) = 0;
-    *(_BYTE *)(sub_608DE61C(a1 + 3908, 7) - *v43 + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3908, 4) - *(_DWORD *)(a1 + 3920) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3908, 5) - *v43 + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3908, 6) - *v43 + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3908, 7) - *v43 + 208) = 0;
     *(_BYTE *)(a1 + 5956) = 1;
     v44 = (_BYTE *)(a1 + 5956);
     v45 = v12;
@@ -15051,10 +15051,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v75 = 12321336;
     v76 = (const char *)v50;
     sub_60473DE4((_DWORD *)(a1 + 36), 3u, &v75, 0);
-    *(_BYTE *)(sub_608DE61C(v42, 4) - *v43 + 208) = 0;
-    *(_BYTE *)(sub_608DE61C(v42, 5) - *v43 + 208) = 0;
-    *(_BYTE *)(sub_608DE61C(v42, 6) - *v43 + 208) = 0;
-    *(_BYTE *)(sub_608DE61C(v42, 7) - *v43 + 208) = 0;
+    *(_BYTE *)(List_getNthNode(v42, 4) - *v43 + 208) = 0;
+    *(_BYTE *)(List_getNthNode(v42, 5) - *v43 + 208) = 0;
+    *(_BYTE *)(List_getNthNode(v42, 6) - *v43 + 208) = 0;
+    *(_BYTE *)(List_getNthNode(v42, 7) - *v43 + 208) = 0;
     *v44 = 0;
   LABEL_61:
     v51 = sub_604962DC(12);
@@ -16042,10 +16042,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 64);
     v4[0] = 12321336;
     v4[1] = dword_60CA0710;
-    result = sub_6047467C(v2, 0, v4, (int)&dword_60CA06FC, 0);
+    result = ArrayOf20_insertEntry(v2, 0, v4, (int)&dword_60CA06FC, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C((int)v2, 0);
+      result = ArrayOf20_getEntryPtr((int)v2, 0);
       if ( result )
         return (*(int (__fastcall **)(int))(*(_DWORD *)result + 104))(result);
     }
@@ -16085,10 +16085,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = (_DWORD *)(a1 + 64);
     v7[0] = 12321336;
     v7[1] = dword_60CA0710;
-    result = sub_6047467C(v5, 0, v7, (int)&dword_60CA06FC, 0);
+    result = ArrayOf20_insertEntry(v5, 0, v7, (int)&dword_60CA06FC, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C((int)v5, 0);
+      result = ArrayOf20_getEntryPtr((int)v5, 0);
       if ( result )
         return (*(int (__fastcall **)(int))(*(_DWORD *)result + 104))(result);
     }
@@ -16289,16 +16289,16 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = dword_60CA0718;
     v2 = (int *)(a1 + 146864);
     v3 = (_DWORD *)(a1 + 64);
-    if ( sub_6047467C((_DWORD *)(a1 + 64), 1u, &v10, (int)&dword_60CA0704, 0) == 1 )
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 64), 1u, &v10, (int)&dword_60CA0704, 0) == 1 )
     {
-      v4 = sub_6047482C((int)v3, 1u);
+      v4 = ArrayOf20_getEntryPtr((int)v3, 1u);
       if ( v4 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 96))(v4);
     }
     v10 = 12321336;
     v11 = dword_60CA0710;
-    if ( sub_6047467C(v3, 0, &v10, (int)&dword_60CA06FC, 0) == 1 )
-      sub_6047482C((int)v3, 0);
+    if ( ArrayOf20_insertEntry(v3, 0, &v10, (int)&dword_60CA06FC, 0) == 1 )
+      ArrayOf20_getEntryPtr((int)v3, 0);
     *(_DWORD *)(a1 + 95204) |= 2u;
     *(_BYTE *)(a1 + 146868) = 0;
     *(_BYTE *)(a1 + 146873) = 0;
@@ -16345,7 +16345,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = dword_60CA0710;
-    v3 = sub_6047482C(a1 + 64, 0);
+    v3 = ArrayOf20_getEntryPtr(a1 + 64, 0);
     if ( v3 )
     {
       v4 = *(_DWORD *)(v3 + 56);
@@ -16882,8 +16882,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (int)(a1 + 16);
     v6[0] = 12321336;
     v6[1] = dword_60CA0720;
-    if ( sub_6047467C(a1 + 16, 0, v6, (int)&dword_60CA06FC, 0) == 1 )
-      sub_6047482C(v2, 0);
+    if ( ArrayOf20_insertEntry(a1 + 16, 0, v6, (int)&dword_60CA06FC, 0) == 1 )
+      ArrayOf20_getEntryPtr(v2, 0);
     a1[23801] |= 1u;
     result = a1 + 36716;
     if ( (int)a1[36716] >= 1 )
@@ -16919,7 +16919,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // r1
   
     v2 = dword_60CA0720;
-    v3 = sub_6047482C(a1 + 64, 0);
+    v3 = ArrayOf20_getEntryPtr(a1 + 64, 0);
     if ( v3 )
     {
       v4 = *(_DWORD *)(v3 + 56);
@@ -17098,11 +17098,11 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   _DWORD *__fastcall sub_60498EB0(_DWORD *a1)
   {
-    sub_6045C0A0(a1 + 37124);
-    sub_6045C0A0(a1 + 37023);
-    sub_6045C0A0(a1 + 36922);
-    sub_6045C0A0(a1 + 36821);
-    sub_6045C0A0(a1 + 36720);
+    thunk_sub_60909E64(a1 + 37124);
+    thunk_sub_60909E64(a1 + 37023);
+    thunk_sub_60909E64(a1 + 36922);
+    thunk_sub_60909E64(a1 + 36821);
+    thunk_sub_60909E64(a1 + 36720);
     sub_603FF5F4(a1 + 35926);
     sub_603FF5F4(a1 + 35179);
     sub_603FF5F4(a1 + 34432);
@@ -17231,13 +17231,13 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502994(v2, 15);
     sub_605029C8(v2, 15);
     sub_605029FC(v2, &unk_60B02B7C, "SE_SYS_BACK");
-    *(_DWORD *)(sub_608DE61C(a1 + 3700, 8) - *(_DWORD *)(a1 + 3712) + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(a1 + 3700, 8) - *(_DWORD *)(a1 + 3712) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(a1 + 3700, 8) - *(_DWORD *)(a1 + 3712) + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(a1 + 3700, 8) - *(_DWORD *)(a1 + 3712) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605028F0(v2, &unk_60B02B7C, 1);
     sub_605029FC(v2, &unk_60B02B78, "SE_SYS_PAGE");
-    *(_DWORD *)(sub_608DE61C(a1 + 3700, 0) - *(_DWORD *)(a1 + 3712) + 184) = "SE_SYS_PAGE";
+    *(_DWORD *)(List_getNthNode(a1 + 3700, 0) - *(_DWORD *)(a1 + 3712) + 184) = "SE_SYS_PAGE";
     sub_605029FC(v2, &unk_60B02B80, "SE_SYS_PAGE");
-    *(_DWORD *)(sub_608DE61C(a1 + 3700, 1) - *(_DWORD *)(a1 + 3712) + 184) = "SE_SYS_PAGE";
+    *(_DWORD *)(List_getNthNode(a1 + 3700, 1) - *(_DWORD *)(a1 + 3712) + 184) = "SE_SYS_PAGE";
     *(_BYTE *)(a1 + 4702) = 1;
     return 4702;
   }
@@ -18078,12 +18078,12 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA0718 = (int)"PlayerNum";
     dword_60CA071C = 12321336;
     dword_60CA0720 = (int)"Out";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA06FC = 12321336;
     dword_60CA0700 = (int)"G_InOut_00";
     dword_60CA0704 = 12321336;
     dword_60CA0708 = (int)"G_PlayerNum_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA0724 = 12321336;
     *(_DWORD *)algn_60CA0728 = "N_Player_00";
     *(_DWORD *)&algn_60CA0728[4] = 12321336;
@@ -18092,7 +18092,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA0738 = (int)"N_Player_02";
     dword_60CA073C = 12321336;
     dword_60CA0740 = (int)"N_Player_03";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -18296,7 +18296,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13240392);
     return result;
@@ -18400,7 +18400,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13240328);
     return result;
@@ -18442,7 +18442,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CA0AAC = MEMORY[0xCA07AC];
         dword_60CA0AB0 = 12321336;
         dword_60CA0AB4 = MEMORY[0xCA079C];
-        sub_60000288();
+        stub_return0_000288();
         _cxa_guard_release_0(&unk_60CA09F8);
       }
       v3 = (_DWORD *)(a1 + 44);
@@ -18466,7 +18466,7 @@ static inline unsigned int uxtb16(unsigned int x)
           dword_60CA0AD8 = 12321336;
           dword_60CA0ADC = MEMORY[0xCA07A4];
           *(_QWORD *)&dword_60CA0AE0 = v5;
-          sub_60000288();
+          stub_return0_000288();
           _cxa_guard_release_0(&unk_60CA09FC);
         }
         v6 = &dword_60CA0AC0[2 * *(_DWORD *)(a1 + 5336)];
@@ -18483,7 +18483,7 @@ static inline unsigned int uxtb16(unsigned int x)
           dword_60CA0A84 = MEMORY[0xCA0794];
           dword_60CA0A88 = 12321336;
           dword_60CA0A8C = MEMORY[0xCA07A4];
-          sub_60000288();
+          stub_return0_000288();
           _cxa_guard_release_0(&unk_60CA0A00);
         }
         v6 = (int *)((char *)&unk_60CA0A50 + 8 * *(_DWORD *)(a1 + 5336) + 32);
@@ -18505,7 +18505,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13240392);
     return result;
@@ -18591,7 +18591,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13240392);
     return result;
@@ -18628,7 +18628,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13240552);
     return result;
@@ -18845,7 +18845,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13240328);
     return result;
@@ -18880,7 +18880,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13240392);
     return result;
@@ -19089,7 +19089,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA0B0C = MEMORY[0xCA079C];
       dword_60CA0B10 = 12321336;
       dword_60CA0B14 = MEMORY[0xCA07AC];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA09EC);
     }
     sub_604741D8((_DWORD *)(a1 + 44), 1u, &dword_60CA0AC0[2 * *a2 + 10], 0);
@@ -19122,7 +19122,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA0B44 = MEMORY[0xCA0774];
       dword_60CA0B48 = 12321336;
       dword_60CA0B4C = MEMORY[0xCA0754];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA09F0);
     }
     if ( a2 < 0 )
@@ -21826,16 +21826,16 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)((char *)a1 + v2) = 12556340;
       v7 = (struct sead_IDisposer *)((char *)a1 + v2);
       *(_DWORD *)((char *)a1 + v2 + 2884) = 12325992;
-      sub_60237560((int)a1 + v5);
+      EffectData_release((int)a1 + v5);
       sead::IDisposer::~IDisposer(v6);
       *((_DWORD *)v7 + 695) = 12325992;
-      sub_60237560((int)&a1[v18]);
+      EffectData_release((int)&a1[v18]);
       sead::IDisposer::~IDisposer((struct sead_IDisposer *)&a1[v18]);
-      sub_6045C0A0(&a1[v17]);
-      sub_6045C0A0(&a1[v16]);
-      sub_6045C0A0((char *)a1 + v12);
-      sub_6045C0A0(&a1[v15]);
-      sub_6045C0A0(&a1[v14]);
+      thunk_sub_60909E64(&a1[v17]);
+      thunk_sub_60909E64(&a1[v16]);
+      thunk_sub_60909E64((char *)a1 + v12);
+      thunk_sub_60909E64(&a1[v15]);
+      thunk_sub_60909E64(&a1[v14]);
       sub_60026BFC(&a1[v4]);
       sead::IDisposer::~IDisposer(v7);
       v1 = v12 - 2988;
@@ -21850,11 +21850,11 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = v13 - 2988;
     }
     while ( v10 != -2988 );
-    sub_6045C0A0(a1 + 5482);
-    sub_6045C0A0(a1 + 5381);
-    sub_6045C0A0(a1 + 5280);
-    sub_6045C0A0(a1 + 5179);
-    sub_6045C0A0(a1 + 5078);
+    thunk_sub_60909E64(a1 + 5482);
+    thunk_sub_60909E64(a1 + 5381);
+    thunk_sub_60909E64(a1 + 5280);
+    thunk_sub_60909E64(a1 + 5179);
+    thunk_sub_60909E64(a1 + 5078);
     sub_6050A4C4(a1 + 3247);
     sub_60558120(a1 + 2324);
     sub_6050B5C8(a1 + 1429);
@@ -21932,7 +21932,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA1060 = MEMORY[0xCA0B90];
       dword_60CA1064 = 12321336;
       dword_60CA1068 = MEMORY[0xCA0B98];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1010);
     }
     v8 = 8;
@@ -21981,7 +21981,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA10C4 = (int)"N_4Player_02";
       dword_60CA10C8 = 12321336;
       dword_60CA10CC = (int)"N_4Player_03";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1014);
     }
     v20 = 12;
@@ -21994,7 +21994,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA1020 = (int)"G_Kojin_00";
       dword_60CA1024 = 12321336;
       dword_60CA1028 = (int)"G_Team_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1018);
     }
     *(_DWORD *)(a1 + 20304) = -1;
@@ -22511,14 +22511,14 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a1[22501] )
     {
       v5 = a1 + 20308;
-      if ( a1[20308] && (*(_BYTE *)(sub_6047482C(v2, 0) + 51) & 1) != 0 )
+      if ( a1[20308] && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 0) + 51) & 1) != 0 )
         *v5 = 0;
       v6 = a1 + 20309;
-      if ( a1[20309] && (*(_BYTE *)(sub_6047482C(v2, 1) + 51) & 1) != 0 )
+      if ( a1[20309] && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 1) + 51) & 1) != 0 )
         *v6 = 0;
       v8 = (unsigned __int8)a1[20310];
       v7 = a1 + 20310;
-      if ( v8 && (*(_BYTE *)(sub_6047482C(v2, 2) + 51) & 1) != 0 )
+      if ( v8 && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 2) + 51) & 1) != 0 )
         *v7 = 0;
       result = (unsigned __int8)*v5;
       if ( !*v5 )
@@ -23705,8 +23705,8 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v5[0] = 12321336;
       v5[1] = dword_60CA1314;
-      if ( sub_6047467C((_DWORD *)(a1 + 48), 0, v5, (int)dword_60CA1330, 0) == 1 )
-        sub_6047482C(a1 + 48, 0);
+      if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v5, (int)dword_60CA1330, 0) == 1 )
+        ArrayOf20_getEntryPtr(a1 + 48, 0);
     }
     v3 = *(_BYTE **)(a1 + 20488);
     if ( v3 )
@@ -23734,7 +23734,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = dword_60CA130C;
-    v3 = sub_6047482C(a1 + 48, 1u);
+    v3 = ArrayOf20_getEntryPtr(a1 + 48, 1u);
     if ( v3 )
     {
       v4 = *(_DWORD *)(v3 + 56);
@@ -23778,7 +23778,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2[0] = 12321336;
     v2[1] = dword_60CA1304;
-    return sub_6047467C((_DWORD *)(a1 + 48), 1u, v2, (int)&unk_60CA1338, 0);
+    return ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 1u, v2, (int)&unk_60CA1338, 0);
   }
 
 /* ============================================================================
@@ -23796,7 +23796,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = dword_60CA1304;
-    v3 = sub_6047482C(a1 + 48, 1u);
+    v3 = ArrayOf20_getEntryPtr(a1 + 48, 1u);
     if ( v3 )
     {
       v4 = *(_DWORD *)(v3 + 56);
@@ -23846,9 +23846,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 48);
     v4[0] = 12321336;
     v4[1] = dword_60CA12C4;
-    result = sub_6047467C(v2, 0x11u, v4, (int)&dword_60CA13B8, 0);
+    result = ArrayOf20_insertEntry(v2, 0x11u, v4, (int)&dword_60CA13B8, 0);
     if ( result == 1 )
-      return sub_6047482C((int)v2, 0x11u);
+      return ArrayOf20_getEntryPtr((int)v2, 0x11u);
     return result;
   }
 
@@ -23916,14 +23916,14 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr::changeState((_DWORD *)(a1 + 24), 13242704);
     v9 = 12321336;
     v10 = dword_60CA12CC;
-    sub_6047467C((_DWORD *)(a1 + 48), 0x11u, &v9, (int)&dword_60CA13B8, 0);
+    ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0x11u, &v9, (int)&dword_60CA13B8, 0);
   LABEL_8:
     v5 = (_DWORD *)(a1 + 48);
     v9 = 12321336;
     v10 = dword_60CA12C4;
-    result = sub_6047467C(v5, 0x11u, &v9, (int)&dword_60CA13B8, 0);
+    result = ArrayOf20_insertEntry(v5, 0x11u, &v9, (int)&dword_60CA13B8, 0);
     if ( result == 1 )
-      return sub_6047482C((int)v5, 0x11u);
+      return ArrayOf20_getEntryPtr((int)v5, 0x11u);
     return result;
   }
 
@@ -23942,8 +23942,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604A7048(a1, *(_DWORD *)(a1 + 20496));
     v6[0] = 12321336;
     v6[1] = dword_60CA1314;
-    if ( sub_6047467C((_DWORD *)(a1 + 48), 0, v6, (int)dword_60CA1330, 0) == 1 )
-      sub_6047482C(a1 + 48, 0);
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v6, (int)dword_60CA1330, 0) == 1 )
+      ArrayOf20_getEntryPtr(a1 + 48, 0);
     if ( *v2 == 6 )
     {
       if ( MEMORY[0xC99E24] )
@@ -23980,7 +23980,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = dword_60CA130C;
-    v3 = sub_6047482C(a1 + 48, 1u);
+    v3 = ArrayOf20_getEntryPtr(a1 + 48, 1u);
     if ( v3 )
     {
       v4 = *(_DWORD *)(v3 + 56);
@@ -24193,7 +24193,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3[0] = 12321336;
     v3[1] = dword_60CA132C;
-    sub_6047467C((_DWORD *)(a1 + 48), 0x10u, v3, (int)&dword_60CA13B0, 0);
+    ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0x10u, v3, (int)&dword_60CA13B0, 0);
     result = MEMORY[0xC99E24];
     if ( MEMORY[0xC99E24] )
     {
@@ -24219,7 +24219,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = dword_60CA132C;
-    v3 = sub_6047482C(a1 + 48, 0x10u);
+    v3 = ArrayOf20_getEntryPtr(a1 + 48, 0x10u);
     if ( v3 )
     {
       v4 = *(_DWORD *)(v3 + 56);
@@ -24510,7 +24510,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 20484) = a3;
     *(_DWORD *)(a1 + 20488) = a4;
     *(_DWORD *)(a1 + 20528) = a2;
-    result = sub_608DE334(32, 0, 4, 0);
+    result = Heap_allocate(32, 0, 4, 0);
     if ( result )
     {
       *(_DWORD *)result = 24;
@@ -24631,7 +24631,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v13 = dword_60CA132C;
   LABEL_30:
       v27[1] = v13;
-      sub_6047467C((_DWORD *)(a1 + 48), 0x10u, v27, (int)&dword_60CA13B0, 0);
+      ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0x10u, v27, (int)&dword_60CA13B0, 0);
     }
     v14 = *(_DWORD *)(a1 + 20484);
     v15 = (bool *)(a1 + 20500);
@@ -24732,10 +24732,10 @@ static inline unsigned int uxtb16(unsigned int x)
           v3 = a1 + 48;
           v7 = 12321336;
           v8 = dword_60CA12D4;
-          result = sub_6047467C((_DWORD *)(a1 + 48), 0xEu, &v7, (int)&dword_60CA13A0, 0);
+          result = ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0xEu, &v7, (int)&dword_60CA13A0, 0);
           if ( result == 1 )
           {
-            result = sub_6047482C(v3, 14);
+            result = ArrayOf20_getEntryPtr(v3, 14);
             if ( result )
             {
               v5 = *(int (**)(void))(*(_DWORD *)result + 108);
@@ -24749,10 +24749,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = a1 + 48;
     v7 = 12321336;
     v8 = dword_60CA12D4;
-    result = sub_6047467C((_DWORD *)(a1 + 48), 0xEu, &v7, (int)&dword_60CA13A0, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0xEu, &v7, (int)&dword_60CA13A0, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v6, 14);
+      result = ArrayOf20_getEntryPtr(v6, 14);
       if ( result )
       {
         v5 = *(int (**)(void))(*(_DWORD *)result + 104);
@@ -24809,7 +24809,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 0;
     while ( 1 )
     {
-      v3 = sub_6047482C(v1, v2);
+      v3 = ArrayOf20_getEntryPtr(v1, v2);
       v4 = v3;
       v5 = 0;
       if ( v3 )
@@ -25065,7 +25065,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v27 = 12321336;
     v3 = dword_60CA131C;
     v28 = dword_60CA131C;
-    v4 = sub_6047482C(a1 + 48, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 48, 0);
     v5 = MEMORY[0xB3BA34];
     if ( v4 )
     {
@@ -25100,7 +25100,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( (v2 & 3 | 4) == 4 )
     {
-      v10 = sub_6047482C(v1, 1);
+      v10 = ArrayOf20_getEntryPtr(v1, 1);
       v11 = v10;
       v2 = 0;
       if ( v10 )
@@ -25139,7 +25139,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( (v2 & 3 | 4) == 4 )
       {
-        v17 = sub_6047482C(v1, 2);
+        v17 = ArrayOf20_getEntryPtr(v1, 2);
         v18 = v17;
         v2 = 0;
         if ( v17 )
@@ -25203,7 +25203,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v11; // r3
     int v12; // r3
   
-    v1 = sub_6047482C(a1 + 48, 2);
+    v1 = ArrayOf20_getEntryPtr(a1 + 48, 2);
     v2 = v1;
     if ( !v1 )
       return 1;
@@ -25291,7 +25291,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v27 = 12321336;
     v3 = dword_60CA12EC;
     v28 = dword_60CA12EC;
-    v4 = sub_6047482C(a1 + 48, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 48, 0);
     v5 = MEMORY[0xB3BA34];
     if ( v4 )
     {
@@ -25326,7 +25326,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( (v2 & 3 | 4) == 4 )
     {
-      v10 = sub_6047482C(v1, 1);
+      v10 = ArrayOf20_getEntryPtr(v1, 1);
       v11 = v10;
       v2 = 0;
       if ( v10 )
@@ -25365,7 +25365,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( (v2 & 3 | 4) == 4 )
       {
-        v17 = sub_6047482C(v1, 8);
+        v17 = ArrayOf20_getEntryPtr(v1, 8);
         v18 = v17;
         v2 = 0;
         if ( v17 )
@@ -25636,18 +25636,18 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     sead::SafeStringBase<char>::operator=(v11, v8);
     v9 = 0;
-    sub_6047467C((_DWORD *)(a1 + 48), 2u, v11, (int)&dword_60CA1340, 0);
+    ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 2u, v11, (int)&dword_60CA1340, 0);
     if ( a3 >= 7 )
       a3 = 0;
     v10 = dword_60BFDD80[a3];
     if ( v10 >= 0x12 )
       v10 = 0;
-    sub_6047467C((_DWORD *)(a1 + 48), dword_60BFDD9C[a3], v13, (int)&dword_60CA1330[2 * v10], 0);
+    ArrayOf20_insertEntry((_DWORD *)(a1 + 48), dword_60BFDD9C[a3], v13, (int)&dword_60CA1330[2 * v10], 0);
     if ( a2 >= 7 )
       a2 = 0;
     if ( dword_60BFDD80[a2] < 0x12u )
       v9 = dword_60BFDD80[a2];
-    return sub_6047467C((_DWORD *)(a1 + 48), dword_60BFDD9C[a2], v12, (int)&dword_60CA1330[2 * v9], 0);
+    return ArrayOf20_insertEntry((_DWORD *)(a1 + 48), dword_60BFDD9C[a2], v12, (int)&dword_60CA1330[2 * v9], 0);
   }
 
 /* ============================================================================
@@ -25675,13 +25675,13 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA145C = dword_60CA1284;
       dword_60CA1460 = 12321336;
       dword_60CA1464 = dword_60CA12AC;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA13D0);
     }
     v5 = 0;
     if ( a2 < 7 )
       v5 = a2;
-    return sub_6047467C((_DWORD *)(a1 + 48), 9u, &dword_60CA1430[2 * v5], (int)&dword_60CA1378, 0);
+    return ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 9u, &dword_60CA1430[2 * v5], (int)&dword_60CA1378, 0);
   }
 
 /* ============================================================================
@@ -25730,9 +25730,9 @@ static inline unsigned int uxtb16(unsigned int x)
         v7 = dword_60BFDD80[v5 + 7];
         if ( v6 >= 0x12 )
           v6 = 0;
-        if ( sub_6047467C(v3, v7, &v27, (int)&dword_60CA1330[2 * v6], 0) == 1 )
+        if ( ArrayOf20_insertEntry(v3, v7, &v27, (int)&dword_60CA1330[2 * v6], 0) == 1 )
         {
-          v8 = sub_6047482C(v3, v7);
+          v8 = ArrayOf20_getEntryPtr(v3, v7);
           if ( v8 )
           {
             v9 = *(void (**)(void))(*(_DWORD *)v8 + 108);
@@ -25753,9 +25753,9 @@ static inline unsigned int uxtb16(unsigned int x)
         v11 = dword_60BFDD80[v5 + 7];
         if ( v10 >= 0x12 )
           v10 = 0;
-        if ( sub_6047467C(v3, v11, &v27, (int)&dword_60CA1330[2 * v10], 0) == 1 )
+        if ( ArrayOf20_insertEntry(v3, v11, &v27, (int)&dword_60CA1330[2 * v10], 0) == 1 )
         {
-          v12 = sub_6047482C(v3, v11);
+          v12 = ArrayOf20_getEntryPtr(v3, v11);
           if ( v12 )
           {
             v9 = *(void (**)(void))(*(_DWORD *)v12 + 104);
@@ -25899,39 +25899,39 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a2 == 6 )
     {
       v10 = (_BYTE *)(a1 + 20553);
-      if ( sub_6047467C((_DWORD *)(a1 + 48), 1u, v14, (int)&unk_60CA1338, 0) == 1 )
-        sub_6047482C(a1 + 48, 1);
+      if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 1u, v14, (int)&unk_60CA1338, 0) == 1 )
+        ArrayOf20_getEntryPtr(a1 + 48, 1);
       if ( !*v10 )
       {
-        if ( sub_6047467C((_DWORD *)(a1 + 48), 2u, v14, (int)&dword_60CA1340, 0) == 1 )
-          sub_6047482C(a1 + 48, 2);
+        if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 2u, v14, (int)&dword_60CA1340, 0) == 1 )
+          ArrayOf20_getEntryPtr(a1 + 48, 2);
         if ( !*v10 )
           goto LABEL_20;
       }
       if ( !*(_BYTE *)(a1 + 20545) )
       {
   LABEL_20:
-        if ( sub_6047467C((_DWORD *)(a1 + 48), 7u, v14, (int)&dword_60CA1368, 0) == 1 )
-          sub_6047482C(a1 + 48, 7);
+        if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 7u, v14, (int)&dword_60CA1368, 0) == 1 )
+          ArrayOf20_getEntryPtr(a1 + 48, 7);
       }
-      result = sub_6047467C((_DWORD *)(a1 + 48), 8u, v14, (int)&dword_60CA1370, 0);
+      result = ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 8u, v14, (int)&dword_60CA1370, 0);
       if ( result == 1 )
       {
         v12 = a1 + 48;
         v13 = 8;
-        return sub_6047482C(v12, v13);
+        return ArrayOf20_getEntryPtr(v12, v13);
       }
     }
     else
     {
-      if ( sub_6047467C(v9, 1u, v14, (int)&unk_60CA1338, 0) == 1 )
-        sub_6047482C(v9, 1);
-      result = sub_6047467C(v9, 2u, v14, (int)&dword_60CA1340, 0);
+      if ( ArrayOf20_insertEntry(v9, 1u, v14, (int)&unk_60CA1338, 0) == 1 )
+        ArrayOf20_getEntryPtr(v9, 1);
+      result = ArrayOf20_insertEntry(v9, 2u, v14, (int)&dword_60CA1340, 0);
       if ( result == 1 )
       {
         v12 = a1 + 48;
         v13 = 2;
-        return sub_6047482C(v12, v13);
+        return ArrayOf20_getEntryPtr(v12, v13);
       }
     }
     return result;
@@ -26004,22 +26004,22 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[1] = dword_60CA131C;
     if ( a2 == 1 )
     {
-      if ( sub_6047467C((_DWORD *)(a1 + 48), 0, v9, (int)dword_60CA1330, 0) )
+      if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v9, (int)dword_60CA1330, 0) )
       {
-        v7 = sub_6047482C(v2, 0);
+        v7 = ArrayOf20_getEntryPtr(v2, 0);
         if ( v7 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v7 + 108))(v7);
       }
-      if ( sub_6047467C(v2, 1u, v9, (int)&unk_60CA1338, 0) )
+      if ( ArrayOf20_insertEntry(v2, 1u, v9, (int)&unk_60CA1338, 0) )
       {
-        v8 = sub_6047482C(v2, 1);
+        v8 = ArrayOf20_getEntryPtr(v2, 1);
         if ( v8 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v8 + 108))(v8);
       }
-      result = sub_6047467C(v2, 2u, v9, (int)&dword_60CA1340, 0);
+      result = ArrayOf20_insertEntry(v2, 2u, v9, (int)&dword_60CA1340, 0);
       if ( result == 1 )
       {
-        result = sub_6047482C(v2, 2);
+        result = ArrayOf20_getEntryPtr(v2, 2);
         if ( result )
         {
           v6 = *(int (**)(void))(*(_DWORD *)result + 108);
@@ -26029,22 +26029,22 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else if ( a2 == 2 )
     {
-      if ( sub_6047467C((_DWORD *)(a1 + 48), 0, v9, (int)dword_60CA1330, 0) )
+      if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v9, (int)dword_60CA1330, 0) )
       {
-        v3 = sub_6047482C(v2, 0);
+        v3 = ArrayOf20_getEntryPtr(v2, 0);
         if ( v3 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
       }
-      if ( sub_6047467C(v2, 1u, v9, (int)&unk_60CA1338, 0) )
+      if ( ArrayOf20_insertEntry(v2, 1u, v9, (int)&unk_60CA1338, 0) )
       {
-        v4 = sub_6047482C(v2, 1);
+        v4 = ArrayOf20_getEntryPtr(v2, 1);
         if ( v4 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 104))(v4);
       }
-      result = sub_6047467C(v2, 2u, v9, (int)&dword_60CA1340, 0);
+      result = ArrayOf20_insertEntry(v2, 2u, v9, (int)&dword_60CA1340, 0);
       if ( result == 1 )
       {
-        result = sub_6047482C(v2, 2);
+        result = ArrayOf20_getEntryPtr(v2, 2);
         if ( result )
         {
           v6 = *(int (**)(void))(*(_DWORD *)result + 104);
@@ -26054,13 +26054,13 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      if ( sub_6047467C((_DWORD *)(a1 + 48), 0, v9, (int)dword_60CA1330, 0) )
-        sub_6047482C(v2, 0);
-      if ( sub_6047467C(v2, 1u, v9, (int)&unk_60CA1338, 0) == 1 )
-        sub_6047482C(v2, 1);
-      result = sub_6047467C(v2, 2u, v9, (int)&dword_60CA1340, 0);
+      if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v9, (int)dword_60CA1330, 0) )
+        ArrayOf20_getEntryPtr(v2, 0);
+      if ( ArrayOf20_insertEntry(v2, 1u, v9, (int)&unk_60CA1338, 0) == 1 )
+        ArrayOf20_getEntryPtr(v2, 1);
+      result = ArrayOf20_insertEntry(v2, 2u, v9, (int)&dword_60CA1340, 0);
       if ( result == 1 )
-        return sub_6047482C(v2, 2);
+        return ArrayOf20_getEntryPtr(v2, 2);
     }
     return result;
   }
@@ -26103,10 +26103,10 @@ static inline unsigned int uxtb16(unsigned int x)
         v8 = dword_60B02D10[v5];
         if ( result >= 0x12 )
           result = 0;
-        result = sub_6047467C(v4, v8, v19, (int)&dword_60CA1330[2 * result], 0);
+        result = ArrayOf20_insertEntry(v4, v8, v19, (int)&dword_60CA1330[2 * result], 0);
         if ( result != 1 )
           goto LABEL_14;
-        result = sub_6047482C(v4, v8);
+        result = ArrayOf20_getEntryPtr(v4, v8);
         if ( !result )
           goto LABEL_14;
         if ( a2 == 1 )
@@ -26124,31 +26124,31 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = *(int (**)(void))(*(_DWORD *)result + 108);
       goto LABEL_13;
     }
-    v10 = sub_6047467C((_DWORD *)(a1 + 48), 0, v19, (int)dword_60CA1330, 0);
+    v10 = ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v19, (int)dword_60CA1330, 0);
     if ( a2 == 1 )
     {
       if ( v10 == 1 )
       {
-        v11 = sub_6047482C(v4, 0);
+        v11 = ArrayOf20_getEntryPtr(v4, 0);
         if ( v11 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v11 + 108))(v11);
       }
-      if ( sub_6047467C(v4, 1u, v19, (int)&unk_60CA1338, 0) )
+      if ( ArrayOf20_insertEntry(v4, 1u, v19, (int)&unk_60CA1338, 0) )
       {
-        v12 = sub_6047482C(v4, 1);
+        v12 = ArrayOf20_getEntryPtr(v4, 1);
         if ( v12 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v12 + 108))(v12);
       }
-      if ( sub_6047467C(v4, 2u, v19, (int)&dword_60CA1340, 0) == 1 )
+      if ( ArrayOf20_insertEntry(v4, 2u, v19, (int)&dword_60CA1340, 0) == 1 )
       {
-        v13 = sub_6047482C(v4, 2);
+        v13 = ArrayOf20_getEntryPtr(v4, 2);
         if ( v13 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v13 + 108))(v13);
       }
-      result = sub_6047467C(v4, 8u, v19, (int)&dword_60CA1370, 0);
+      result = ArrayOf20_insertEntry(v4, 8u, v19, (int)&dword_60CA1370, 0);
       if ( result == 1 )
       {
-        result = sub_6047482C(v4, 8);
+        result = ArrayOf20_getEntryPtr(v4, 8);
         if ( result )
         {
           v14 = *(int (**)(void))(*(_DWORD *)result + 108);
@@ -26160,35 +26160,35 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( v10 )
       {
-        v15 = sub_6047482C(v4, 0);
+        v15 = ArrayOf20_getEntryPtr(v4, 0);
         if ( v15 )
         {
           if ( a2 == 2 )
             (*(void (__fastcall **)(int))(*(_DWORD *)v15 + 104))(v15);
         }
       }
-      if ( sub_6047467C(v4, 1u, v19, (int)&unk_60CA1338, 0) )
+      if ( ArrayOf20_insertEntry(v4, 1u, v19, (int)&unk_60CA1338, 0) )
       {
-        v16 = sub_6047482C(v4, 1);
+        v16 = ArrayOf20_getEntryPtr(v4, 1);
         if ( v16 )
         {
           if ( a2 == 2 )
             (*(void (__fastcall **)(int))(*(_DWORD *)v16 + 104))(v16);
         }
       }
-      if ( sub_6047467C(v4, 2u, v19, (int)&dword_60CA1340, 0) == 1 )
+      if ( ArrayOf20_insertEntry(v4, 2u, v19, (int)&dword_60CA1340, 0) == 1 )
       {
-        v17 = sub_6047482C(v4, 2);
+        v17 = ArrayOf20_getEntryPtr(v4, 2);
         if ( v17 )
         {
           if ( a2 == 2 )
             (*(void (__fastcall **)(int))(*(_DWORD *)v17 + 104))(v17);
         }
       }
-      result = sub_6047467C(v4, 8u, v19, (int)&dword_60CA1370, 0);
+      result = ArrayOf20_insertEntry(v4, 8u, v19, (int)&dword_60CA1370, 0);
       if ( result == 1 )
       {
-        result = sub_6047482C(v4, 8);
+        result = ArrayOf20_getEntryPtr(v4, 8);
         if ( result )
         {
           if ( a2 == 2 )
@@ -26225,17 +26225,17 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a2 == 6 )
     {
       v4 = (_BYTE *)(a1 + 20553);
-      if ( sub_6047467C(v3, 1u, v12, (int)&unk_60CA1338, 0) == 1 )
+      if ( ArrayOf20_insertEntry(v3, 1u, v12, (int)&unk_60CA1338, 0) == 1 )
       {
-        v5 = sub_6047482C(v3, 1);
+        v5 = ArrayOf20_getEntryPtr(v3, 1);
         if ( v5 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v5 + 104))(v5);
       }
       if ( !*v4 )
       {
-        if ( sub_6047467C(v3, 2u, v12, (int)&dword_60CA1340, 0) == 1 )
+        if ( ArrayOf20_insertEntry(v3, 2u, v12, (int)&dword_60CA1340, 0) == 1 )
         {
-          v6 = sub_6047482C(v3, 2);
+          v6 = ArrayOf20_getEntryPtr(v3, 2);
           if ( v6 )
             (*(void (__fastcall **)(int))(*(_DWORD *)v6 + 104))(v6);
         }
@@ -26245,14 +26245,14 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !*(_BYTE *)(a1 + 20545) )
       {
   LABEL_25:
-        if ( sub_6047467C(v3, 7u, v12, (int)&dword_60CA1368, 0) == 1 )
+        if ( ArrayOf20_insertEntry(v3, 7u, v12, (int)&dword_60CA1368, 0) == 1 )
         {
-          v7 = sub_6047482C(v3, 7);
+          v7 = ArrayOf20_getEntryPtr(v3, 7);
           if ( v7 )
             (*(void (__fastcall **)(int))(*(_DWORD *)v7 + 104))(v7);
         }
       }
-      result = sub_6047467C(v3, 8u, v12, (int)&dword_60CA1370, 0);
+      result = ArrayOf20_insertEntry(v3, 8u, v12, (int)&dword_60CA1370, 0);
       if ( result == 1 )
       {
         v9 = v3;
@@ -26262,19 +26262,19 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      if ( sub_6047467C(v3, 1u, v12, (int)&unk_60CA1338, 0) == 1 )
+      if ( ArrayOf20_insertEntry(v3, 1u, v12, (int)&unk_60CA1338, 0) == 1 )
       {
-        v11 = sub_6047482C(v3, 1);
+        v11 = ArrayOf20_getEntryPtr(v3, 1);
         if ( v11 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v11 + 104))(v11);
       }
-      result = sub_6047467C(v3, 2u, v12, (int)&dword_60CA1340, 0);
+      result = ArrayOf20_insertEntry(v3, 2u, v12, (int)&dword_60CA1340, 0);
       if ( result == 1 )
       {
         v9 = v3;
         v10 = 2;
   LABEL_21:
-        result = sub_6047482C(v9, v10);
+        result = ArrayOf20_getEntryPtr(v9, v10);
         if ( result )
           return (*(int (__fastcall **)(int))(*(_DWORD *)result + 104))(result);
       }
@@ -26298,31 +26298,31 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (_DWORD *)(a1 + 48);
     v8[0] = 12321336;
     v8[1] = dword_60CA130C;
-    v4 = sub_6047467C((_DWORD *)(a1 + 48), 1u, v8, (int)&unk_60CA1338, 0);
+    v4 = ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 1u, v8, (int)&unk_60CA1338, 0);
     if ( a2 == 6 )
     {
       if ( v4 == 1 )
-        sub_6047482C(v3, 1);
-      if ( sub_6047467C(v3, 2u, v8, (int)&dword_60CA1340, 0) == 1 )
-        sub_6047482C(v3, 2);
-      result = sub_6047467C(v3, 7u, v8, (int)&dword_60CA1368, 0);
+        ArrayOf20_getEntryPtr(v3, 1);
+      if ( ArrayOf20_insertEntry(v3, 2u, v8, (int)&dword_60CA1340, 0) == 1 )
+        ArrayOf20_getEntryPtr(v3, 2);
+      result = ArrayOf20_insertEntry(v3, 7u, v8, (int)&dword_60CA1368, 0);
       if ( result == 1 )
       {
         v6 = v3;
         v7 = 7;
-        return sub_6047482C(v6, v7);
+        return ArrayOf20_getEntryPtr(v6, v7);
       }
     }
     else
     {
       if ( v4 == 1 )
-        sub_6047482C(v3, 1);
-      result = sub_6047467C(v3, 2u, v8, (int)&dword_60CA1340, 0);
+        ArrayOf20_getEntryPtr(v3, 1);
+      result = ArrayOf20_insertEntry(v3, 2u, v8, (int)&dword_60CA1340, 0);
       if ( result == 1 )
       {
         v6 = v3;
         v7 = 2;
-        return sub_6047482C(v6, v7);
+        return ArrayOf20_getEntryPtr(v6, v7);
       }
     }
     return result;
@@ -26342,16 +26342,16 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 48);
     v5[0] = 12321336;
     v5[1] = dword_60CA12EC;
-    if ( sub_6047467C((_DWORD *)(a1 + 48), 0, v5, (int)dword_60CA1330, 0) == 1 )
-      sub_6047482C(v2, 0);
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v5, (int)dword_60CA1330, 0) == 1 )
+      ArrayOf20_getEntryPtr(v2, 0);
     v3 = (_BYTE *)(a1 + 20553);
-    if ( sub_6047467C(v2, 1u, v5, (int)&unk_60CA1338, 0) == 1 )
-      sub_6047482C(v2, 1);
-    if ( !*v3 && sub_6047467C(v2, 2u, v5, (int)&dword_60CA1340, 0) == 1 )
-      sub_6047482C(v2, 2);
-    result = sub_6047467C(v2, 8u, v5, (int)&dword_60CA1370, 0);
+    if ( ArrayOf20_insertEntry(v2, 1u, v5, (int)&unk_60CA1338, 0) == 1 )
+      ArrayOf20_getEntryPtr(v2, 1);
+    if ( !*v3 && ArrayOf20_insertEntry(v2, 2u, v5, (int)&dword_60CA1340, 0) == 1 )
+      ArrayOf20_getEntryPtr(v2, 2);
+    result = ArrayOf20_insertEntry(v2, 8u, v5, (int)&dword_60CA1370, 0);
     if ( result == 1 )
-      return sub_6047482C(v2, 8);
+      return ArrayOf20_getEntryPtr(v2, 8);
     return result;
   }
 
@@ -26668,7 +26668,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA1324 = (int)"Cancel";
     dword_60CA1328 = 12321336;
     dword_60CA132C = (int)"Out";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA1330[0] = 12321336;
     *(_DWORD *)algn_60CA1334 = "G_Guide_00";
     unk_60CA1338 = 12321336;
@@ -26705,10 +26705,10 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA13B4 = (int)"G_InOut_00";
     dword_60CA13B8 = 12321336;
     dword_60CA13BC = (int)"G_Touch_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA13E4 = 12321336;
     dword_60CA13E8 = (int)"B_CharaBtn_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA1408 = 12321336;
     dword_60CA140C = (int)"N_CharaBtn_00";
     dword_60CA1410 = 12321336;
@@ -26719,13 +26719,13 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA1424 = (int)"N_Allign_00";
     dword_60CA1428 = 12321336;
     dword_60CA142C = (int)"N_Allign_01";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA13EC = 12321336;
     dword_60CA13F0 = (int)"P_DecideMii_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA13F4 = 12321336;
     dword_60CA13F8 = (int)"T_Zanki_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -26843,9 +26843,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (_DWORD *)(a1 + 64);
     v15 = 12321336;
     v16 = dword_60CA17A4;
-    if ( sub_6047467C((_DWORD *)(a1 + 64), 6u, &v15, (int)&dword_60CA1760, 0) == 1 )
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 64), 6u, &v15, (int)&dword_60CA1760, 0) == 1 )
     {
-      v3 = (int *)sub_6047482C((int)v2, 6u);
+      v3 = (int *)ArrayOf20_getEntryPtr((int)v2, 6u);
       v4 = sub_60834FDC();
       v5 = *v3;
       if ( v4 == 1 )
@@ -26856,9 +26856,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v15 = 12321336;
     v16 = dword_60CA1774;
     v6 = (int *)(a1 + 279736);
-    if ( sub_6047467C(v2, 4u, &v15, (int)&dword_60CA1750, 0) == 1 )
+    if ( ArrayOf20_insertEntry(v2, 4u, &v15, (int)&dword_60CA1750, 0) == 1 )
     {
-      v7 = sub_6047482C((int)v2, 4u);
+      v7 = ArrayOf20_getEntryPtr((int)v2, 4u);
       if ( v7 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v7 + 96))(v7);
     }
@@ -27548,11 +27548,11 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_10:
     v18[0] = 12321336;
     v18[1] = dword_60CA1784;
-    sub_6047467C(a1 + 16, 1u, v18, (int)&unk_60CA1738, 0);
-    sub_6047467C(a1 + 16, 2u, v18, (int)&dword_60CA1740, 0);
-    sub_6047467C(a1 + 16, 3u, v18, (int)&dword_60CA1748, 0);
+    ArrayOf20_insertEntry(a1 + 16, 1u, v18, (int)&unk_60CA1738, 0);
+    ArrayOf20_insertEntry(a1 + 16, 2u, v18, (int)&dword_60CA1740, 0);
+    ArrayOf20_insertEntry(a1 + 16, 3u, v18, (int)&dword_60CA1748, 0);
     if ( v2 == 1 )
-      sub_6047467C(a1 + 16, 5u, v18, (int)&dword_60CA1758, 0);
+      ArrayOf20_insertEntry(a1 + 16, 5u, v18, (int)&dword_60CA1758, 0);
     result = a1[20];
     if ( result )
     {
@@ -27708,7 +27708,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = 1;
     sub_60502A24(a1 + 85956, dword_60B02DB0, 13, 1);
     v7 = dword_60CA17A4;
-    v8 = sub_6047482C(a1 + 64, 6u);
+    v8 = ArrayOf20_getEntryPtr(a1 + 64, 6u);
     if ( !v8 )
       goto LABEL_22;
     v9 = *(_DWORD *)(v8 + 56);
@@ -27892,7 +27892,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( sub_6047F384(a1 + 277668, 64) )
     {
       v14 = dword_60CA17A4;
-      v15 = sub_6047482C(a1 + 64, 6u);
+      v15 = ArrayOf20_getEntryPtr(a1 + 64, 6u);
       if ( v15 )
       {
         v16 = *(_DWORD *)(v15 + 56);
@@ -27933,7 +27933,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result != 1 )
         return result;
       v22 = dword_60CA17A4;
-      v23 = sub_6047482C(a1 + 64, 6u);
+      v23 = ArrayOf20_getEntryPtr(a1 + 64, 6u);
       if ( v23 )
       {
         v24 = *(_DWORD *)(v23 + 56);
@@ -28013,11 +28013,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v6 = (_DWORD *)(a1 + 64);
     v8[0] = 12321336;
     v8[1] = dword_60CA178C;
-    sub_6047467C((_DWORD *)(a1 + 64), 1u, v8, (int)&unk_60CA1738, 0);
-    sub_6047467C(v6, 2u, v8, (int)&dword_60CA1740, 0);
-    result = sub_6047467C(v6, 3u, v8, (int)&dword_60CA1748, 0);
+    ArrayOf20_insertEntry((_DWORD *)(a1 + 64), 1u, v8, (int)&unk_60CA1738, 0);
+    ArrayOf20_insertEntry(v6, 2u, v8, (int)&dword_60CA1740, 0);
+    result = ArrayOf20_insertEntry(v6, 3u, v8, (int)&dword_60CA1748, 0);
     if ( v1 == 1 )
-      return sub_6047467C(v6, 5u, v8, (int)&dword_60CA1758, 0);
+      return ArrayOf20_insertEntry(v6, 5u, v8, (int)&dword_60CA1758, 0);
     return result;
   }
 
@@ -28148,11 +28148,11 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_10:
     v12[0] = 12321336;
     v12[1] = dword_60CA1784;
-    sub_6047467C(a1 + 16, 1u, v12, (int)&unk_60CA1738, 0);
-    sub_6047467C(a1 + 16, 2u, v12, (int)&dword_60CA1740, 0);
-    sub_6047467C(a1 + 16, 3u, v12, (int)&dword_60CA1748, 0);
+    ArrayOf20_insertEntry(a1 + 16, 1u, v12, (int)&unk_60CA1738, 0);
+    ArrayOf20_insertEntry(a1 + 16, 2u, v12, (int)&dword_60CA1740, 0);
+    ArrayOf20_insertEntry(a1 + 16, 3u, v12, (int)&dword_60CA1748, 0);
     if ( v2 == 1 )
-      sub_6047467C(a1 + 16, 5u, v12, (int)&dword_60CA1758, 0);
+      ArrayOf20_insertEntry(a1 + 16, 5u, v12, (int)&dword_60CA1758, 0);
     result = a1[20];
     if ( result )
     {
@@ -29410,11 +29410,11 @@ static inline unsigned int uxtb16(unsigned int x)
     int v13; // [sp+14h] [bp-8h]
     int v14; // [sp+18h] [bp-4h]
   
-    sub_6045C0A0(a1 + 279288);
-    sub_6045C0A0(a1 + 278884);
-    sub_6045C0A0(a1 + 278480);
-    sub_6045C0A0(a1 + 278076);
-    sub_6045C0A0(a1 + 277672);
+    thunk_sub_60909E64(a1 + 279288);
+    thunk_sub_60909E64(a1 + 278884);
+    thunk_sub_60909E64(a1 + 278480);
+    thunk_sub_60909E64(a1 + 278076);
+    thunk_sub_60909E64(a1 + 277672);
     v8 = a1;
     v2 = a1 + 274536;
     v14 = a1 + 277420;
@@ -29431,16 +29431,16 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       *(_DWORD *)(v2 + v5) = 12556340;
       *(_DWORD *)(v2 + v5 + 2884) = 12325992;
-      sub_60237560(v14 + v5);
+      EffectData_release(v14 + v5);
       sead::IDisposer::~IDisposer((struct sead_IDisposer *)(v14 + v5));
       *(_DWORD *)(v2 + v5 + 2780) = 12325992;
-      sub_60237560(v13 + v5);
+      EffectData_release(v13 + v5);
       sead::IDisposer::~IDisposer((struct sead_IDisposer *)(v13 + v5));
-      sub_6045C0A0(v12 + v5);
-      sub_6045C0A0(v11 + v5);
-      sub_6045C0A0(v10 + v5);
-      sub_6045C0A0(v9 + v5 + 93184);
-      sub_6045C0A0(v3 + v5);
+      thunk_sub_60909E64(v12 + v5);
+      thunk_sub_60909E64(v11 + v5);
+      thunk_sub_60909E64(v10 + v5);
+      thunk_sub_60909E64(v9 + v5 + 93184);
+      thunk_sub_60909E64(v3 + v5);
       sub_60026BFC((_DWORD *)(v6 + v5));
       sead::IDisposer::~IDisposer((struct sead_IDisposer *)(v2 + v5));
       v5 -= 2988;
@@ -29553,11 +29553,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029C8(v2, 15);
     sub_605029FC(v2, &unk_60B02D4C, "SE_SYS_BACK");
     v3 = v1 + 86008;
-    v4 = sub_608DE61C(v1 + 86008, 12);
+    v4 = List_getNthNode(v1 + 86008, 12);
     v5 = *(_DWORD *)(v1 + 86020);
     v1 += 86020;
     *(_DWORD *)(v4 - v5 + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(v3, 12) - *(_DWORD *)v1 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(v3, 12) - *(_DWORD *)v1 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605028F0(v2, &unk_60B02D4C, 1);
     sub_605029FC(v2, &unk_60B02D48, "SE_SYS_BACK");
     sub_605029FC(v2, &unk_60B02D50, "SE_SYS_BTN_GAME_START");
@@ -29860,7 +29860,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v12 = dword_60B02D28[v3];
         if ( v12 != 5 )
         {
-          v13 = sub_6047482C(v2, v12);
+          v13 = ArrayOf20_getEntryPtr(v2, v12);
           v14 = v13;
           if ( v13 )
           {
@@ -29903,7 +29903,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     do
     {
-      v5 = sub_6047482C(v2, dword_60B02D28[v3]);
+      v5 = ArrayOf20_getEntryPtr(v2, dword_60B02D28[v3]);
       v6 = v5;
       if ( v5 )
       {
@@ -29986,7 +29986,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v12 = dword_60B02D38[v3];
         if ( v12 != 5 )
         {
-          v13 = sub_6047482C(v2, v12);
+          v13 = ArrayOf20_getEntryPtr(v2, v12);
           v14 = v13;
           if ( v13 )
           {
@@ -30029,7 +30029,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     do
     {
-      v5 = sub_6047482C(v2, dword_60B02D38[v3]);
+      v5 = ArrayOf20_getEntryPtr(v2, dword_60B02D38[v3]);
       v6 = v5;
       if ( v5 )
       {
@@ -30119,7 +30119,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = a1 + 64;
     v39 = 12321336;
     v40 = dword_60CA1794;
-    v4 = sub_6047482C(a1 + 64, 1);
+    v4 = ArrayOf20_getEntryPtr(a1 + 64, 1);
     v5 = MEMORY[0xB3BA34];
     if ( a2 != 1 )
     {
@@ -30158,7 +30158,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
         }
       }
-      v31 = sub_6047482C(v3, 2);
+      v31 = ArrayOf20_getEntryPtr(v3, 2);
       v20 = v31;
       if ( v31 )
       {
@@ -30227,7 +30227,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
       }
     }
-    v12 = sub_6047482C(v3, 2);
+    v12 = ArrayOf20_getEntryPtr(v3, 2);
     v13 = v12;
     if ( v12 )
     {
@@ -30264,7 +30264,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
       }
     }
-    v19 = sub_6047482C(v3, 5);
+    v19 = ArrayOf20_getEntryPtr(v3, 5);
     v20 = v19;
     if ( !v19 )
       return 1;
@@ -30731,7 +30731,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = MEMORY[0xB3BA34];
     while ( 1 )
     {
-      v3 = sub_6047482C(v16, dword_60B02D6C[v1]);
+      v3 = ArrayOf20_getEntryPtr(v16, dword_60B02D6C[v1]);
       v4 = v3;
       if ( !v3 )
         return 0;
@@ -30828,71 +30828,71 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = (_DWORD *)(a1 + 64);
     if ( a3 == 1 )
     {
-      if ( sub_6047467C(v7, 0, v14, (int)&dword_60CA1730, 0) )
+      if ( ArrayOf20_insertEntry(v7, 0, v14, (int)&dword_60CA1730, 0) )
       {
-        v11 = sub_6047482C(v7, 0);
+        v11 = ArrayOf20_getEntryPtr(v7, 0);
         if ( v11 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v11 + 108))(v11);
       }
-      if ( sub_6047467C(v7, 1u, v14, (int)&unk_60CA1738, 0) )
+      if ( ArrayOf20_insertEntry(v7, 1u, v14, (int)&unk_60CA1738, 0) )
       {
-        v12 = sub_6047482C(v7, 1);
+        v12 = ArrayOf20_getEntryPtr(v7, 1);
         if ( v12 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v12 + 108))(v12);
       }
-      if ( sub_6047467C(v7, 2u, v14, (int)&dword_60CA1740, 0) == 1 )
+      if ( ArrayOf20_insertEntry(v7, 2u, v14, (int)&dword_60CA1740, 0) == 1 )
       {
-        v13 = sub_6047482C(v7, 2);
+        v13 = ArrayOf20_getEntryPtr(v7, 2);
         if ( v13 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v13 + 108))(v13);
       }
-      result = sub_6047467C(v7, 3u, v14, (int)&dword_60CA1748, 0);
+      result = ArrayOf20_insertEntry(v7, 3u, v14, (int)&dword_60CA1748, 0);
       if ( result == 1 )
       {
-        result = sub_6047482C(v7, 3);
+        result = ArrayOf20_getEntryPtr(v7, 3);
         if ( result )
           return (*(int (__fastcall **)(int))(*(_DWORD *)result + 108))(result);
       }
     }
     else if ( a3 == 2 )
     {
-      if ( sub_6047467C(v7, 0, v14, (int)&dword_60CA1730, 0) )
+      if ( ArrayOf20_insertEntry(v7, 0, v14, (int)&dword_60CA1730, 0) )
       {
-        v8 = sub_6047482C(v7, 0);
+        v8 = ArrayOf20_getEntryPtr(v7, 0);
         if ( v8 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v8 + 104))(v8);
       }
-      if ( sub_6047467C(v7, 1u, v14, (int)&unk_60CA1738, 0) )
+      if ( ArrayOf20_insertEntry(v7, 1u, v14, (int)&unk_60CA1738, 0) )
       {
-        v9 = sub_6047482C(v7, 1);
+        v9 = ArrayOf20_getEntryPtr(v7, 1);
         if ( v9 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v9 + 104))(v9);
       }
-      if ( sub_6047467C(v7, 2u, v14, (int)&dword_60CA1740, 0) == 1 )
+      if ( ArrayOf20_insertEntry(v7, 2u, v14, (int)&dword_60CA1740, 0) == 1 )
       {
-        v10 = sub_6047482C(v7, 2);
+        v10 = ArrayOf20_getEntryPtr(v7, 2);
         if ( v10 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v10 + 104))(v10);
       }
-      result = sub_6047467C(v7, 3u, v14, (int)&dword_60CA1748, 0);
+      result = ArrayOf20_insertEntry(v7, 3u, v14, (int)&dword_60CA1748, 0);
       if ( result == 1 )
       {
-        result = sub_6047482C(v7, 3);
+        result = ArrayOf20_getEntryPtr(v7, 3);
         if ( result )
           return (*(int (__fastcall **)(int))(*(_DWORD *)result + 104))(result);
       }
     }
     else
     {
-      if ( sub_6047467C(v7, 0, v14, (int)&dword_60CA1730, 0) )
-        sub_6047482C(v7, 0);
-      if ( sub_6047467C(v7, 1u, v14, (int)&unk_60CA1738, 0) )
-        sub_6047482C(v7, 1);
-      if ( sub_6047467C(v7, 2u, v14, (int)&dword_60CA1740, 0) == 1 )
-        sub_6047482C(v7, 2);
-      result = sub_6047467C(v7, 3u, v14, (int)&dword_60CA1748, 0);
+      if ( ArrayOf20_insertEntry(v7, 0, v14, (int)&dword_60CA1730, 0) )
+        ArrayOf20_getEntryPtr(v7, 0);
+      if ( ArrayOf20_insertEntry(v7, 1u, v14, (int)&unk_60CA1738, 0) )
+        ArrayOf20_getEntryPtr(v7, 1);
+      if ( ArrayOf20_insertEntry(v7, 2u, v14, (int)&dword_60CA1740, 0) == 1 )
+        ArrayOf20_getEntryPtr(v7, 2);
+      result = ArrayOf20_insertEntry(v7, 3u, v14, (int)&dword_60CA1748, 0);
       if ( result == 1 )
-        return sub_6047482C(v7, 3);
+        return ArrayOf20_getEntryPtr(v7, 3);
     }
     return result;
   }
@@ -30920,9 +30920,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v14[1] = dword_60CA1794;
     if ( !a2 )
     {
-      if ( sub_6047467C((_DWORD *)(a1 + 64), 1u, v14, (int)&unk_60CA1738, 0) == 1 )
+      if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 64), 1u, v14, (int)&unk_60CA1738, 0) == 1 )
       {
-        v9 = sub_6047482C(v4, 1);
+        v9 = ArrayOf20_getEntryPtr(v4, 1);
         if ( v9 )
         {
           if ( a3 == 1 )
@@ -30938,10 +30938,10 @@ static inline unsigned int uxtb16(unsigned int x)
           }
         }
       }
-      result = sub_6047467C(v4, 2u, v14, (int)&dword_60CA1740, 0);
+      result = ArrayOf20_insertEntry(v4, 2u, v14, (int)&dword_60CA1740, 0);
       if ( result != 1 )
         return result;
-      result = sub_6047482C(v4, 2);
+      result = ArrayOf20_getEntryPtr(v4, 2);
       if ( !result )
         return result;
       if ( a3 == 1 )
@@ -30956,51 +30956,51 @@ static inline unsigned int uxtb16(unsigned int x)
       v13 = *(int (**)(void))(*(_DWORD *)result + 104);
       return v13();
     }
-    v5 = sub_6047467C((_DWORD *)(a1 + 64), 1u, v14, (int)&unk_60CA1738, 0);
+    v5 = ArrayOf20_insertEntry((_DWORD *)(a1 + 64), 1u, v14, (int)&unk_60CA1738, 0);
     if ( a3 == 1 )
     {
       if ( v5 == 1 )
       {
-        v6 = sub_6047482C(v4, 1);
+        v6 = ArrayOf20_getEntryPtr(v4, 1);
         if ( v6 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v6 + 108))(v6);
       }
-      if ( sub_6047467C(v4, 2u, v14, (int)&dword_60CA1740, 0) )
+      if ( ArrayOf20_insertEntry(v4, 2u, v14, (int)&dword_60CA1740, 0) )
       {
-        v7 = sub_6047482C(v4, 2);
+        v7 = ArrayOf20_getEntryPtr(v4, 2);
         if ( v7 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v7 + 108))(v7);
       }
-      result = sub_6047467C(v4, 5u, v14, (int)&dword_60CA1758, 0);
+      result = ArrayOf20_insertEntry(v4, 5u, v14, (int)&dword_60CA1758, 0);
       if ( result != 1 )
         return result;
-      result = sub_6047482C(v4, 5);
+      result = ArrayOf20_getEntryPtr(v4, 5);
       if ( !result )
         return result;
       goto LABEL_35;
     }
     if ( v5 )
     {
-      v11 = sub_6047482C(v4, 1);
+      v11 = ArrayOf20_getEntryPtr(v4, 1);
       if ( v11 )
       {
         if ( a3 == 2 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v11 + 104))(v11);
       }
     }
-    if ( sub_6047467C(v4, 2u, v14, (int)&dword_60CA1740, 0) )
+    if ( ArrayOf20_insertEntry(v4, 2u, v14, (int)&dword_60CA1740, 0) )
     {
-      v12 = sub_6047482C(v4, 2);
+      v12 = ArrayOf20_getEntryPtr(v4, 2);
       if ( v12 )
       {
         if ( a3 == 2 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v12 + 104))(v12);
       }
     }
-    result = sub_6047467C(v4, 5u, v14, (int)&dword_60CA1758, 0);
+    result = ArrayOf20_insertEntry(v4, 5u, v14, (int)&dword_60CA1758, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v4, 5);
+      result = ArrayOf20_getEntryPtr(v4, 5);
       if ( result )
         goto LABEL_33;
     }
@@ -31310,7 +31310,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA179C = (int)"InOutReturnBtn";
     dword_60CA17A0 = 12321336;
     dword_60CA17A4 = (int)"Mode";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA1730 = 12321336;
     *(_DWORD *)algn_60CA1734 = "G_All_00";
     unk_60CA1738 = 12321336;
@@ -31325,7 +31325,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA175C = (int)"G_Cap_00";
     dword_60CA1760 = 12321336;
     dword_60CA1764 = (int)"G_Mode_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA1704 = 12321336;
     dword_60CA1708 = (int)"N_Player_00";
     dword_60CA170C = 12321336;
@@ -31334,7 +31334,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA1718 = (int)"N_Player_02";
     dword_60CA171C = 12321336;
     dword_60CA1720 = (int)"N__Player_03";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA16D0 = 12321336;
     dword_60CA16D4 = (int)"CharacterSelectPos_BtnL_00";
     dword_60CA16D8 = 12321336;
@@ -31559,7 +31559,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA18F4 = dword_60CA189C;
       dword_60CA18F8 = 12321336;
       dword_60CA18FC = dword_60CA18A4;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1850);
     }
     v5[0] = 10;
@@ -31658,7 +31658,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA18A8 = 12321336;
       dword_60CA18AC = (int)"N_NormalCoin_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1854);
     }
     v8 = 1;
@@ -32057,7 +32057,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 38100) = 0;
     *(_BYTE *)(a1 + 38102) = 1;
     sub_60473DE4((_DWORD *)(a1 + 20), 0, (_DWORD *)0xCA1914, 0);
-    v3 = sub_6047482C(a1 + 20, 0);
+    v3 = ArrayOf20_getEntryPtr(a1 + 20, 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
     sub_60473B58((_DWORD *)(a1 + 20), 0xEu, 0);
     if ( (*(_BYTE *)(MEMORY[0xC99DD4] + 1376) & 4) != 0 )
@@ -32257,7 +32257,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 20, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 20, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 6112), 13244852);
     return result;
@@ -32317,7 +32317,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !v2 )
       a1 = *(unsigned __int8 *)(v1 + 38090) | (*(_DWORD *)(MEMORY[0xC99DD4] + 1376) >> 3) & 1;
     *(_BYTE *)(v1 + 4653) = a1;
-    result = *(unsigned __int8 *)(sub_6047482C(v1 + 20, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(v1 + 20, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_DWORD *)(v1 + 4636) == 8 )
@@ -32983,7 +32983,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047643C((struct sead_IDisposer *)(a1 + 3321));
     sub_6047643C((struct sead_IDisposer *)(a1 + 2436));
     sub_6047643C((struct sead_IDisposer *)(a1 + 1551));
-    sub_6045C0A0(a1 + 1422);
+    thunk_sub_60909E64(a1 + 1422);
     sub_605021B0(a1 + 902);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 5));
     return a1;
@@ -33068,7 +33068,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA1AD8 = MEMORY[0xCA1940];
       dword_60CA1ADC = 12321336;
       dword_60CA1AE0 = MEMORY[0xCA1948];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1A80);
     }
     v5[0] = 7;
@@ -33100,7 +33100,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA1A94 = 12321336;
       dword_60CA1A98 = (int)"N_TopBottom_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1A84);
     }
     v3 = (int)(a1 + 5);
@@ -33126,7 +33126,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA1B2C = (int)"Pa_Save_00";
       dword_60CA1B30 = 12321336;
       dword_60CA1B34 = (int)"Pa_End_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1A88);
     }
     v16 = 9;
@@ -33135,7 +33135,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA1A9C = 12321336;
       dword_60CA1AA0 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1A8C);
     }
     v16 = 1;
@@ -33162,7 +33162,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA1AA4 = 12321336;
       dword_60CA1AA8 = MEMORY[0xCA1950];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1A90);
     }
     v7 = *(void (__fastcall **)(_DWORD *, int *, int *))(a1[1551] + 8);
@@ -33174,7 +33174,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA1AA4 = 12321336;
       dword_60CA1AA8 = MEMORY[0xCA1950];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1A90);
     }
     v9 = *(void (__fastcall **)(_DWORD *, int *, int *))(a1[2436] + 8);
@@ -33186,7 +33186,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA1AA4 = 12321336;
       dword_60CA1AA8 = MEMORY[0xCA1950];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1A90);
     }
     v11 = *(void (__fastcall **)(_DWORD *, int *, int *))(a1[3321] + 8);
@@ -33199,7 +33199,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA1AA4 = 12321336;
       dword_60CA1AA8 = MEMORY[0xCA1950];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1A90);
     }
     v14 = *(int (__fastcall **)(_DWORD *, int *, int *))(*v12 + 8);
@@ -33216,7 +33216,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 38088) = 1;
     sub_6045BF58(a1 + 5688, 0);
     sub_605029FC(a1 + 3608, 11546220, "SE_SYS_CE_MENU_OUT");
-    *(_DWORD *)(sub_608DE61C(a1 + 3660, 8) - *(_DWORD *)(a1 + 3672) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3660, 8) - *(_DWORD *)(a1 + 3672) + 192) = 0;
     sub_605029FC(a1 + 3608, 11546188, "SE_SYS_CE_AREA_CHANGE");
     sub_605029FC(a1 + 3608, 11546192, "SE_SYS_CE_AREA_CHANGE");
     sub_605029FC(a1 + 3608, 11546196, "SE_SYS_CE_AREA_CHANGE");
@@ -34083,13 +34083,13 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12574584;
     v2 = (struct sead_IDisposer *)(a1 + 2813);
-    sub_6045C0A0(a1 + 3737);
+    thunk_sub_60909E64(a1 + 3737);
     sub_6047643C(v2);
     sub_6047643C((struct sead_IDisposer *)(a1 + 1928));
     sub_6047643C((struct sead_IDisposer *)(a1 + 1043));
     sub_6047643C((struct sead_IDisposer *)(a1 + 158));
     *a1 = 12572424;
-    sub_6045C0A0(a1 + 22);
+    thunk_sub_60909E64(a1 + 22);
     return a1;
   }
 
@@ -34103,13 +34103,13 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12574584;
     v2 = (struct sead_IDisposer *)(a1 + 2813);
-    sub_6045C0A0(a1 + 3737);
+    thunk_sub_60909E64(a1 + 3737);
     sub_6047643C(v2);
     sub_6047643C((struct sead_IDisposer *)(a1 + 1928));
     sub_6047643C((struct sead_IDisposer *)(a1 + 1043));
     sub_6047643C((struct sead_IDisposer *)(a1 + 158));
     *a1 = 12572424;
-    sub_6045C0A0(a1 + 22);
+    thunk_sub_60909E64(a1 + 22);
     return operator delete((int)a1);
   }
 
@@ -34130,7 +34130,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA1C04 = 12321336;
       dword_60CA1C08 = (int)"P_Arrow_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1BEC);
     }
     v3 = *(_DWORD *)(a1 + 4);
@@ -34239,7 +34239,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA1CBC = MEMORY[0xCA1B80];
       dword_60CA1CC0 = 12321336;
       dword_60CA1CC4 = MEMORY[0xCA1B88];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1BE0);
     }
     v7 = *(_DWORD *)(a1 + 4);
@@ -34272,7 +34272,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA1C74 = (int)"Pa_ArrowBtnT_00";
       dword_60CA1C78 = 12321336;
       dword_60CA1C7C = (int)"Pa_ArrowBtnB_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1BE4);
     }
     sub_6047ED10(a1 + 24, *(_DWORD *)(a1 + 16), (int)&dword_60CA1C50, 6);
@@ -34324,7 +34324,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA1D2C = (int)"N_ArrowB_00";
       dword_60CA1D30 = 12321336;
       dword_60CA1D34 = (int)"N_TopBottom_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1BE8);
     }
     v3 = *(_DWORD *)(a1 + 4);
@@ -34365,14 +34365,14 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA1C40 = (int)"Pa_ArrowBtnT_00";
       dword_60CA1C44 = 12321336;
       dword_60CA1C48 = (int)"Pa_ArrowBtnB_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1BF0);
     }
     if ( ((unsigned int)&unk_60CA1BF4 & ~(1615542912 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1BF4) )
     {
       dword_60CA1C0C = 12321336;
       dword_60CA1C10 = (int)"T_Num_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1BF4);
     }
     v3 = a1[1];
@@ -34384,7 +34384,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA1C14 = 12321336;
       dword_60CA1C18 = MEMORY[0xCA1B90];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1BF8);
     }
     v5 = *(void (__fastcall **)(int *, int *, int *))(a1[158] + 8);
@@ -34396,7 +34396,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA1C14 = 12321336;
       dword_60CA1C18 = MEMORY[0xCA1B90];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1BF8);
     }
     v7 = *(void (__fastcall **)(int *, int *, int *))(a1[1043] + 8);
@@ -34410,14 +34410,14 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA1C1C = 12321336;
       dword_60CA1C20 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1BFC);
     }
     if ( ((unsigned int)&unk_60CA1C00 & ~(1615543588 << v8) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA1C00) )
     {
       dword_60CA1C24 = 12321336;
       dword_60CA1C28 = (int)"B_Arrow_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA1C00);
     }
     v9 = a1[1];
@@ -34490,7 +34490,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604B4228(a1);
     sub_6045BF58(a1 + 88, 4);
     sub_6045BF58(a1 + 14948, 0);
-    v4 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
+    v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 108))(v4);
     *(_BYTE *)(a1 + 14945) = 1;
     result = sub_604B4370(a1);
@@ -34517,28 +34517,28 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047F28C((_DWORD *)(a1 + 24), (int)"SE_SYS_CE_DECIDE", 5);
     sub_6047F2C8(v2, (int)"SE_SYS_CE_BTN_OVER", 5);
     sub_6047F304(v2, (int)"SE_SYS_CE_BTN_OVER_OFF", 5);
-    v3 = sub_608DE61C(a1 + 36, 2);
+    v3 = List_getNthNode(a1 + 36, 2);
     if ( v3 )
     {
       v4 = v3 - *(_DWORD *)(a1 + 48);
       if ( v4 )
         *(_DWORD *)(v4 + 172) = "SE_SYS_CE_BTN_OVER_OFF";
     }
-    v5 = sub_608DE61C(a1 + 36, 3);
+    v5 = List_getNthNode(a1 + 36, 3);
     if ( v5 )
     {
       v6 = v5 - *(_DWORD *)(a1 + 48);
       if ( v6 )
         *(_DWORD *)(v6 + 172) = "SE_SYS_CE_BTN_OVER_OFF";
     }
-    v7 = sub_608DE61C(a1 + 36, 4);
+    v7 = List_getNthNode(a1 + 36, 4);
     if ( v7 )
     {
       v8 = v7 - *(_DWORD *)(a1 + 48);
       if ( v8 )
         *(_DWORD *)(v8 + 172) = "SE_SYS_CE_BTN_OVER_OFF";
     }
-    result = sub_608DE61C(a1 + 36, 5);
+    result = List_getNthNode(a1 + 36, 5);
     if ( result )
     {
       result -= *(_DWORD *)(a1 + 48);
@@ -35453,7 +35453,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v13; // [sp+8h] [bp-8h] BYREF
     const char *v14; // [sp+Ch] [bp-4h]
   
-    v3 = sub_6047482C(*(_DWORD *)(a1 + 4), 6);
+    v3 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 6);
     v4 = v3 == 0;
     if ( v3 )
     {
@@ -35464,10 +35464,10 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v13 = 12321336;
       v14 = "G_ArrowL_00";
-      sub_6047467C(*(_DWORD **)(a1 + 4), 6u, (_DWORD *)0xCA1B84, (int)&v13, 1);
+      ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 6u, (_DWORD *)0xCA1B84, (int)&v13, 1);
       v1 = 3;
     }
-    v5 = sub_6047482C(*(_DWORD *)(a1 + 4), 5);
+    v5 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 5);
     v6 = v5 == 0;
     if ( v5 )
       v6 = *(_BYTE *)(v5 + 20) == 0;
@@ -35475,10 +35475,10 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v13 = 12321336;
       v14 = "G_ArrowR_00";
-      sub_6047467C(*(_DWORD **)(a1 + 4), 5u, (_DWORD *)0xCA1B84, (int)&v13, 1);
+      ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 5u, (_DWORD *)0xCA1B84, (int)&v13, 1);
       v1 = 2;
     }
-    v7 = sub_6047482C(*(_DWORD *)(a1 + 4), 7);
+    v7 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 7);
     v8 = v7 == 0;
     if ( v7 )
       v8 = *(_BYTE *)(v7 + 20) == 0;
@@ -35486,10 +35486,10 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v13 = 12321336;
       v14 = "G_ArrowT_00";
-      sub_6047467C(*(_DWORD **)(a1 + 4), 7u, (_DWORD *)0xCA1B84, (int)&v13, 1);
+      ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 7u, (_DWORD *)0xCA1B84, (int)&v13, 1);
       v1 = 4;
     }
-    result = sub_6047482C(*(_DWORD *)(a1 + 4), 8);
+    result = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 8);
     v10 = result == 0;
     if ( result )
     {
@@ -35500,7 +35500,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v13 = 12321336;
       v14 = "G_ArrowB_00";
-      sub_6047467C(*(_DWORD **)(a1 + 4), 8u, (_DWORD *)0xCA1B84, (int)&v13, 1);
+      ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 8u, (_DWORD *)0xCA1B84, (int)&v13, 1);
       sub_6047457C(*(_DWORD *)(a1 + 4), 7);
       v11 = *(_DWORD *)(a1 + 4);
       v12 = 8;
@@ -36011,11 +36011,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12574748;
     if ( *(_BYTE *)(a1 + 3776) )
       sub_608169AC(MEMORY[0xCC6B68]);
-    sub_6045C0A0(a1 + 5412);
-    sub_6045C0A0(a1 + 5008);
-    sub_6045C0A0(a1 + 4604);
-    sub_6045C0A0(a1 + 4200);
-    sub_6045C0A0(a1 + 3796);
+    thunk_sub_60909E64(a1 + 5412);
+    thunk_sub_60909E64(a1 + 5008);
+    thunk_sub_60909E64(a1 + 4604);
+    thunk_sub_60909E64(a1 + 4200);
+    thunk_sub_60909E64(a1 + 3796);
     return sub_604B79F4(a1);
   }
 
@@ -36030,11 +36030,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12574748;
     if ( *(_BYTE *)(a1 + 3776) )
       sub_608169AC(MEMORY[0xCC6B68]);
-    sub_6045C0A0((_DWORD *)(a1 + 5412));
-    sub_6045C0A0((_DWORD *)(a1 + 5008));
-    sub_6045C0A0((_DWORD *)(a1 + 4604));
-    sub_6045C0A0((_DWORD *)(a1 + 4200));
-    sub_6045C0A0((_DWORD *)(a1 + 3796));
+    thunk_sub_60909E64((_DWORD *)(a1 + 5412));
+    thunk_sub_60909E64((_DWORD *)(a1 + 5008));
+    thunk_sub_60909E64((_DWORD *)(a1 + 4604));
+    thunk_sub_60909E64((_DWORD *)(a1 + 4200));
+    thunk_sub_60909E64((_DWORD *)(a1 + 3796));
     v2 = sub_604B79F4((_DWORD *)a1);
     return operator delete((int)v2);
   }
@@ -36561,7 +36561,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( (unsigned int)(*((_DWORD *)&dword_60CA1E08 + v7 + 8) - 1) <= 1 )
           {
             v8 = dword_60CA24BC;
-            v9 = sub_6047482C(v4 + 4, 2);
+            v9 = ArrayOf20_getEntryPtr(v4 + 4, 2);
             if ( v9 )
             {
               v10 = *(_DWORD *)(v9 + 56);
@@ -36652,7 +36652,7 @@ static inline unsigned int uxtb16(unsigned int x)
           {
             v8 = 2;
             v9 = dword_60CA24BC;
-            v10 = sub_6047482C(v4 + 4, 2);
+            v10 = ArrayOf20_getEntryPtr(v4 + 4, 2);
             if ( v10 )
             {
               v11 = *(_DWORD *)(v10 + 56);
@@ -36750,7 +36750,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (unsigned int)(*((_DWORD *)&dword_60CA1E08 + v6 + 8) - 1) <= 1 )
         {
           v7 = dword_60CA24BC;
-          v8 = sub_6047482C(result + 4, 2);
+          v8 = ArrayOf20_getEntryPtr(result + 4, 2);
           if ( v8 )
           {
             v9 = *(_DWORD *)(v8 + 56);
@@ -36833,7 +36833,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v7 = 2;
           v8 = dword_60CA24BC;
-          v9 = sub_6047482C(result + 4, 2);
+          v9 = ArrayOf20_getEntryPtr(result + 4, 2);
           if ( v9 )
           {
             v10 = *(_DWORD *)(v9 + 56);
@@ -36979,7 +36979,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !(_UNKNOWN *)((char *)&dword_60CA1E08 + 4 * v7) || (unsigned int)(dword_60CA1E28[v7] - 1) > 1 )
       goto LABEL_19;
     v8 = dword_60CA24BC;
-    v9 = sub_6047482C(v4 + 4, 2);
+    v9 = ArrayOf20_getEntryPtr(v4 + 4, 2);
     if ( v9 )
     {
       v10 = *(_DWORD *)(v9 + 56);
@@ -37075,7 +37075,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v10 = 2;
           v15 = dword_60CA24BC;
-          v16 = sub_6047482C(result + 4, 2);
+          v16 = ArrayOf20_getEntryPtr(result + 4, 2);
           if ( v16 )
           {
             v17 = *(_DWORD *)(v16 + 56);
@@ -37110,7 +37110,7 @@ static inline unsigned int uxtb16(unsigned int x)
         else if ( v7 == 1 )
         {
           v21 = dword_60CA24BC;
-          v22 = sub_6047482C(result + 4, 2);
+          v22 = ArrayOf20_getEntryPtr(result + 4, 2);
           if ( v22 )
           {
             v23 = *(_DWORD *)(v22 + 56);
@@ -37152,7 +37152,7 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v7 )
             return result;
           v8 = dword_60CA24BC;
-          v9 = sub_6047482C(result + 4, 2);
+          v9 = ArrayOf20_getEntryPtr(result + 4, 2);
           v10 = 0;
           if ( v9 )
           {
@@ -37319,9 +37319,9 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( result )
       {
         *(_DWORD *)(a1 + 3716) = 14;
-        if ( sub_6047467C((_DWORD *)(a1 + 4), 0, &dword_60CA24B0, (int)&dword_60CA2480, 0) == 1 )
+        if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 4), 0, &dword_60CA24B0, (int)&dword_60CA2480, 0) == 1 )
         {
-          v4 = sub_6047482C(a1 + 4, 0);
+          v4 = ArrayOf20_getEntryPtr(a1 + 4, 0);
           if ( v4 )
             (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 104))(v4);
         }
@@ -37413,7 +37413,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA245C = 12321336;
       dword_60CA2460 = (int)"T_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2440);
     }
     v5 = 1;
@@ -37510,7 +37510,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = 0;
     v2 = dword_60CA24D4;
     v3 = dword_60CA24EC;
-    v4 = sub_6047482C(a1 + 4, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 4, 0);
     if ( v4 )
     {
       v5 = *(_DWORD *)(v4 + 56);
@@ -37578,7 +37578,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = 0;
     v2 = dword_60CA24D4;
     v3 = dword_60CA24EC;
-    v4 = sub_6047482C(a1 + 4, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 4, 0);
     if ( v4 )
     {
       v5 = *(_DWORD *)(v4 + 56);
@@ -37646,7 +37646,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = 0;
     v2 = dword_60CA24B4;
     v3 = dword_60CA24DC;
-    v4 = sub_6047482C(a1 + 4, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 4, 0);
     if ( v4 )
     {
       v5 = *(_DWORD *)(v4 + 56);
@@ -37714,7 +37714,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = 0;
     v2 = dword_60CA24B4;
     v3 = dword_60CA24DC;
-    v4 = sub_6047482C(a1 + 4, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 4, 0);
     if ( v4 )
     {
       v5 = *(_DWORD *)(v4 + 56);
@@ -37801,7 +37801,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = a1 + 4;
     v2 = 0;
     v3 = dword_60CA24E4;
-    v4 = sub_6047482C(a1 + 4, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 4, 0);
     if ( v4 )
     {
       v5 = *(_DWORD *)(v4 + 56);
@@ -37823,7 +37823,7 @@ static inline unsigned int uxtb16(unsigned int x)
           return (*(unsigned __int8 *)(v4 + 51) >> 2) & 1;
       }
     }
-    v4 = sub_6047482C(v1, 1);
+    v4 = ArrayOf20_getEntryPtr(v1, 1);
     if ( !v4 )
       return v2;
     v9 = *(_DWORD *)(v4 + 56);
@@ -37960,10 +37960,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r0
   
     v2 = a1 + 4;
-    result = sub_6047467C((_DWORD *)(a1 + 4), 2u, &dword_60CA24B8, (int)&dword_60CA2490, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 4), 2u, &dword_60CA24B8, (int)&dword_60CA2490, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v2, 2);
+      result = ArrayOf20_getEntryPtr(v2, 2);
       if ( result )
       {
         if ( MEMORY[0xC99DD4] )
@@ -37986,7 +37986,7 @@ static inline unsigned int uxtb16(unsigned int x)
             }
           }
         }
-        result = sub_6047482C(v2, 2);
+        result = ArrayOf20_getEntryPtr(v2, 2);
         if ( result )
           return (*(int (__fastcall **)(int))(*(_DWORD *)result + 96))(result);
       }
@@ -38004,13 +38004,13 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v1 = a1 + 4;
-    result = sub_6047467C((_DWORD *)(a1 + 4), 4u, &dword_60CA24C0, (int)&dword_60CA24A0, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 4), 4u, &dword_60CA24C0, (int)&dword_60CA24A0, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v1, 4);
+      result = ArrayOf20_getEntryPtr(v1, 4);
       if ( result )
       {
-        result = sub_6047482C(v1, 4);
+        result = ArrayOf20_getEntryPtr(v1, 4);
         if ( result )
           return (*(int (__fastcall **)(int))(*(_DWORD *)result + 96))(result);
       }
@@ -38032,14 +38032,14 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4);
     v4[0] = 12321336;
     v4[1] = dword_60CA24DC;
-    result = sub_6047467C((_DWORD *)(a1 + 4), 0, v4, (int)&dword_60CA2480, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 4), 0, v4, (int)&dword_60CA2480, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v1, 0);
+      result = ArrayOf20_getEntryPtr(v1, 0);
       if ( result )
       {
-        if ( sub_6047467C(v1, 1u, v4, (int)&dword_60CA2488, 0) == 1 )
-          sub_6047482C(v1, 1);
+        if ( ArrayOf20_insertEntry(v1, 1u, v4, (int)&dword_60CA2488, 0) == 1 )
+          ArrayOf20_getEntryPtr(v1, 1);
         v3 = sub_60473B4C(v1);
         return sub_6098F1D4(v3);
       }
@@ -38058,10 +38058,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r0
   
     v1 = a1 + 4;
-    result = sub_6047467C((_DWORD *)(a1 + 4), 0, &dword_60CA24B0, (int)&dword_60CA2480, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 4), 0, &dword_60CA24B0, (int)&dword_60CA2480, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v1, 0);
+      result = ArrayOf20_getEntryPtr(v1, 0);
       if ( result )
       {
         v3 = sub_60473B4C(v1);
@@ -38084,15 +38084,15 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4);
     v3[0] = 12321336;
     v3[1] = dword_60CA24E4;
-    result = sub_6047467C((_DWORD *)(a1 + 4), 0, v3, (int)&dword_60CA2480, 1);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 4), 0, v3, (int)&dword_60CA2480, 1);
     if ( result == 1 )
     {
-      result = sub_6047482C(v1, 0);
+      result = ArrayOf20_getEntryPtr(v1, 0);
       if ( result )
       {
-        result = sub_6047467C(v1, 1u, v3, (int)&dword_60CA2488, 1);
+        result = ArrayOf20_insertEntry(v1, 1u, v3, (int)&dword_60CA2488, 1);
         if ( result == 1 )
-          return sub_6047482C(v1, 1);
+          return ArrayOf20_getEntryPtr(v1, 1);
       }
     }
     return result;
@@ -38111,15 +38111,15 @@ static inline unsigned int uxtb16(unsigned int x)
     v1 = (_DWORD *)(a1 + 4);
     v3[0] = 12321336;
     v3[1] = dword_60CA24EC;
-    result = sub_6047467C((_DWORD *)(a1 + 4), 0, v3, (int)&dword_60CA2480, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 4), 0, v3, (int)&dword_60CA2480, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v1, 0);
+      result = ArrayOf20_getEntryPtr(v1, 0);
       if ( result )
       {
-        result = sub_6047467C(v1, 1u, v3, (int)&dword_60CA2488, 0);
+        result = ArrayOf20_insertEntry(v1, 1u, v3, (int)&dword_60CA2488, 0);
         if ( result == 1 )
-          return sub_6047482C(v1, 1);
+          return ArrayOf20_getEntryPtr(v1, 1);
       }
     }
     return result;
@@ -38135,9 +38135,9 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v1 = a1 + 4;
-    result = sub_6047467C((_DWORD *)(a1 + 4), 0, &dword_60CA24D0, (int)&dword_60CA2480, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 4), 0, &dword_60CA24D0, (int)&dword_60CA2480, 0);
     if ( result == 1 )
-      return sub_6047482C(v1, 0);
+      return ArrayOf20_getEntryPtr(v1, 0);
     return result;
   }
 
@@ -38151,13 +38151,13 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v1 = a1 + 4;
-    result = sub_6047467C((_DWORD *)(a1 + 4), 3u, &dword_60CA24C8, (int)&dword_60CA2498, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 4), 3u, &dword_60CA24C8, (int)&dword_60CA2498, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v1, 3);
+      result = ArrayOf20_getEntryPtr(v1, 3);
       if ( result )
       {
-        result = sub_6047482C(v1, 3);
+        result = ArrayOf20_getEntryPtr(v1, 3);
         if ( result )
           return (*(int (__fastcall **)(int))(*(_DWORD *)result + 96))(result);
       }
@@ -38948,7 +38948,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2658 = MEMORY[0xCA2574];
       dword_60CA265C = 12321336;
       dword_60CA2660 = MEMORY[0xCA257C];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2620);
     }
     v9[0] = 4;
@@ -38957,7 +38957,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA262C = 12321336;
       dword_60CA2630 = (int)"N_All_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2624);
     }
     v9[0] = 1;
@@ -38968,7 +38968,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2638 = (int)"T_ZankiNum_00";
       dword_60CA263C = 12321336;
       dword_60CA2640 = (int)"T_Num_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2628);
     }
     v9[0] = 2;
@@ -39475,7 +39475,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3636) = result + 1;
     if ( result >= 180 )
     {
-      result = *(unsigned __int8 *)(sub_6047482C(a1 + 84, 0) + 51);
+      result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 84, 0) + 51);
       if ( (result & 1) != 0 )
       {
         StateMgr::changeState((_DWORD *)(a1 + 68), 13248120);
@@ -39518,7 +39518,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CA26E0 = MEMORY[0xCA26BC];
         dword_60CA26E4 = 12321336;
         dword_60CA26E8 = MEMORY[0xCA26C4];
-        sub_60000288();
+        stub_return0_000288();
         _cxa_guard_release_0(&unk_60CA26D0);
       }
       v8[0] = 2;
@@ -39537,7 +39537,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CA2720 = (int)"N_MiniGame_00";
         dword_60CA2724 = 12321336;
         dword_60CA2728 = (int)"N_Shadow_00";
-        sub_60000288();
+        stub_return0_000288();
         _cxa_guard_release_0(&unk_60CA26D4);
       }
       v8[0] = 6;
@@ -39550,7 +39550,7 @@ static inline unsigned int uxtb16(unsigned int x)
           dword_60CA26F0 = (int)"T_Count_00";
           dword_60CA26F4 = 12321336;
           dword_60CA26F8 = (int)"T_Start_00";
-          sub_60000288();
+          stub_return0_000288();
           _cxa_guard_release_0(&unk_60CA26D8);
         }
       }
@@ -40062,7 +40062,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v13 = -1;
           if ( !is_mul_ok(0xE00u, v11) )
             v13 = -1;
-          v14 = (_DWORD *)sub_608DE334(v13, 0, 4, 0);
+          v14 = (_DWORD *)Heap_allocate(v13, 0, 4, 0);
           if ( v14 )
           {
             *v14 = 3584;
@@ -40600,8 +40600,8 @@ static inline unsigned int uxtb16(unsigned int x)
             v6 = *(float *)(a1 + 2668);
             v7 = *(_DWORD *)(v5 + 24);
             v8 = *(_DWORD *)(v5 + 32);
-            *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
-            *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
+            *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
+            *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
             v9 = *(_DWORD *)(a1 + 2648);
             *(_DWORD *)(v9 + 24) = v7;
             *(float *)(v9 + 28) = v6 + 10000.0;
@@ -40611,8 +40611,8 @@ static inline unsigned int uxtb16(unsigned int x)
             v11 = *(float *)(a1 + 2672);
             v12 = *(_DWORD *)(v10 + 24);
             v13 = *(_DWORD *)(v10 + 32);
-            *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
-            *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
+            *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
+            *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
             v14 = *(_DWORD *)(a1 + 2652);
             *(_DWORD *)(v14 + 24) = v12;
             *(float *)(v14 + 28) = v11 + 10000.0;
@@ -40622,8 +40622,8 @@ static inline unsigned int uxtb16(unsigned int x)
             v16 = *(float *)(a1 + 2676);
             v17 = *(_DWORD *)(v15 + 24);
             v18 = *(_DWORD *)(v15 + 32);
-            *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
-            *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
+            *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
+            *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
             v19 = *(_DWORD *)(a1 + 2656);
             *(_DWORD *)(v19 + 24) = v17;
             *(float *)(v19 + 28) = v16 + 10000.0;
@@ -40633,8 +40633,8 @@ static inline unsigned int uxtb16(unsigned int x)
             v21 = *(float *)(a1 + 2680);
             v22 = *(_DWORD *)(v20 + 24);
             v23 = *(_DWORD *)(v20 + 32);
-            *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
-            *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
+            *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
+            *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
             v24 = *(_DWORD *)(a1 + 2660);
             *(_DWORD *)(v24 + 24) = v22;
             *(float *)(v24 + 28) = v21 + 10000.0;
@@ -40644,8 +40644,8 @@ static inline unsigned int uxtb16(unsigned int x)
             v26 = *(float *)(a1 + 2684);
             v27 = *(_DWORD *)(v25 + 24);
             v28 = *(_DWORD *)(v25 + 32);
-            *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
-            *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
+            *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
+            *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
             v29 = *(_DWORD *)(a1 + 2664);
             *(_DWORD *)(v29 + 24) = v27;
             *(float *)(v29 + 28) = v26 + 10000.0;
@@ -40668,8 +40668,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v58 = *(float *)(a1 + 2668);
               v59 = *(_DWORD *)(v57 + 24);
               v60 = *(_DWORD *)(v57 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v61 = *(_DWORD *)(a1 + 2648);
               *(_DWORD *)(v61 + 24) = v59;
               *(float *)(v61 + 28) = v58 + 10000.0;
@@ -40679,8 +40679,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v63 = *(float *)(a1 + 2672);
               v64 = *(_DWORD *)(v62 + 24);
               v65 = *(_DWORD *)(v62 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v66 = *(_DWORD *)(a1 + 2652);
               *(_DWORD *)(v66 + 24) = v64;
               *(float *)(v66 + 28) = v63 + 10000.0;
@@ -40690,8 +40690,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v68 = *(float *)(a1 + 2676);
               v69 = *(_DWORD *)(v67 + 24);
               v70 = *(_DWORD *)(v67 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v71 = *(_DWORD *)(a1 + 2656);
               *(_DWORD *)(v71 + 24) = v69;
               *(float *)(v71 + 28) = v68 + 10000.0;
@@ -40701,8 +40701,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v73 = *(float *)(a1 + 2680);
               v74 = *(_DWORD *)(v72 + 24);
               v75 = *(_DWORD *)(v72 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v76 = *(_DWORD *)(a1 + 2660);
               *(_DWORD *)(v76 + 24) = v74;
               *(float *)(v76 + 28) = v73 + 10000.0;
@@ -40712,8 +40712,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v78 = *(float *)(a1 + 2684);
               v79 = *(_DWORD *)(v77 + 24);
               v80 = *(_DWORD *)(v77 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v81 = *(_DWORD *)(a1 + 2664);
               *(_DWORD *)(v81 + 24) = v79;
               *(float *)(v81 + 28) = v78 + 10000.0;
@@ -40727,8 +40727,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v83 = *(float *)(a1 + 2668);
               v84 = *(_DWORD *)(v82 + 24);
               v85 = *(_DWORD *)(v82 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v86 = *(_DWORD *)(a1 + 2648);
               *(_DWORD *)(v86 + 24) = v84;
               *(float *)(v86 + 28) = v83 + 10000.0;
@@ -40738,8 +40738,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v88 = *(float *)(a1 + 2672);
               v89 = *(_DWORD *)(v87 + 24);
               v90 = *(_DWORD *)(v87 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v91 = *(_DWORD *)(a1 + 2652);
               *(_DWORD *)(v91 + 24) = v89;
               *(float *)(v91 + 28) = v88 + 10000.0;
@@ -40749,8 +40749,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v93 = *(float *)(a1 + 2676);
               v94 = *(_DWORD *)(v92 + 24);
               v95 = *(_DWORD *)(v92 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v96 = *(_DWORD *)(a1 + 2656);
               *(_DWORD *)(v96 + 24) = v94;
               *(float *)(v96 + 28) = v93 + 10000.0;
@@ -40760,8 +40760,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v98 = *(float *)(a1 + 2680);
               v99 = *(_DWORD *)(v97 + 24);
               v100 = *(_DWORD *)(v97 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v101 = *(_DWORD *)(a1 + 2660);
               *(_DWORD *)(v101 + 24) = v99;
               *(float *)(v101 + 28) = v98 + 10000.0;
@@ -40771,8 +40771,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v103 = *(float *)(a1 + 2684);
               v104 = *(_DWORD *)(v102 + 24);
               v105 = *(_DWORD *)(v102 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v106 = *(_DWORD *)(a1 + 2664);
               *(_DWORD *)(v106 + 24) = v104;
               *(float *)(v106 + 28) = v103 + 10000.0;
@@ -40786,8 +40786,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v32 = *(float *)(a1 + 2668);
               v33 = *(_DWORD *)(v31 + 24);
               v34 = *(_DWORD *)(v31 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v35 = *(_DWORD *)(a1 + 2648);
               *(_DWORD *)(v35 + 24) = v33;
               *(float *)(v35 + 28) = v32 + 10000.0;
@@ -40797,8 +40797,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v37 = *(float *)(a1 + 2672);
               v38 = *(_DWORD *)(v36 + 24);
               v39 = *(_DWORD *)(v36 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v40 = *(_DWORD *)(a1 + 2652);
               *(_DWORD *)(v40 + 24) = v38;
               *(float *)(v40 + 28) = v37 + 10000.0;
@@ -40808,8 +40808,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v42 = *(float *)(a1 + 2676);
               v43 = *(_DWORD *)(v41 + 24);
               v44 = *(_DWORD *)(v41 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v45 = *(_DWORD *)(a1 + 2656);
               *(_DWORD *)(v45 + 24) = v43;
               *(float *)(v45 + 28) = v42 + 10000.0;
@@ -40819,8 +40819,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v47 = *(float *)(a1 + 2680);
               v48 = *(_DWORD *)(v46 + 24);
               v49 = *(_DWORD *)(v46 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v50 = *(_DWORD *)(a1 + 2660);
               *(_DWORD *)(v50 + 24) = v48;
               *(float *)(v50 + 28) = v47 + 10000.0;
@@ -40830,8 +40830,8 @@ static inline unsigned int uxtb16(unsigned int x)
               v52 = *(float *)(a1 + 2684);
               v53 = *(_DWORD *)(v51 + 24);
               v54 = *(_DWORD *)(v51 + 32);
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
-              *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
+              *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
               v55 = *(_DWORD *)(a1 + 2664);
               *(_DWORD *)(v55 + 24) = v53;
               *(float *)(v55 + 28) = v52 + 10000.0;
@@ -40911,8 +40911,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(float *)(a1 + 2668);
     v5 = *(_DWORD *)(v2 + 24);
     v6 = *(_DWORD *)(v2 + 32);
-    *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
     v7 = *(_DWORD *)(a1 + 2648);
     *(_DWORD *)(v7 + 24) = v5;
     *(float *)(v7 + 28) = v4 + 10000.0;
@@ -40922,8 +40922,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v9 = *(float *)(a1 + 2672);
     v10 = *(_DWORD *)(v8 + 24);
     v11 = *(_DWORD *)(v8 + 32);
-    *(_DWORD *)(sub_608DE61C(v3, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
     v12 = *(_DWORD *)(a1 + 2652);
     *(_DWORD *)(v12 + 24) = v10;
     *(float *)(v12 + 28) = v9 + 10000.0;
@@ -40933,8 +40933,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v14 = *(float *)(a1 + 2676);
     v15 = *(_DWORD *)(v13 + 24);
     v16 = *(_DWORD *)(v13 + 32);
-    *(_DWORD *)(sub_608DE61C(v3, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
     v17 = *(_DWORD *)(a1 + 2656);
     *(_DWORD *)(v17 + 24) = v15;
     *(float *)(v17 + 28) = v14 + 10000.0;
@@ -40944,8 +40944,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v19 = *(float *)(a1 + 2680);
     v20 = *(_DWORD *)(v18 + 24);
     v21 = *(_DWORD *)(v18 + 32);
-    *(_DWORD *)(sub_608DE61C(v3, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
     v22 = *(_DWORD *)(a1 + 2660);
     *(_DWORD *)(v22 + 24) = v20;
     *(float *)(v22 + 28) = v19 + 10000.0;
@@ -40955,8 +40955,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v24 = *(float *)(a1 + 2684);
     v25 = *(_DWORD *)(v23 + 24);
     v26 = *(_DWORD *)(v23 + 32);
-    *(_DWORD *)(sub_608DE61C(v3, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
     result = *(_DWORD *)(a1 + 2664);
     *(_DWORD *)(result + 24) = v25;
     *(float *)(result + 28) = v24 + 10000.0;
@@ -41188,13 +41188,13 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r0
     int v4; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1 + 4), 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u) + 51);
     if ( (result & 1) != 0 )
     {
-      v3 = sub_6047482C(*(_DWORD *)(a1 + 4), 1u);
+      v3 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 108))(v3);
       sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
-      v4 = sub_6047482C(*(_DWORD *)(a1 + 4), 1u);
+      v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248632);
     }
@@ -41351,8 +41351,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v4 = *(float *)(a1 + 2668);
           v5 = *(_DWORD *)(v3 + 24);
           v6 = *(_DWORD *)(v3 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v7 = *(_DWORD *)(a1 + 2648);
           *(_DWORD *)(v7 + 24) = v5;
           *(float *)(v7 + 28) = v4 + 10000.0;
@@ -41362,8 +41362,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v9 = *(float *)(a1 + 2672);
           v10 = *(_DWORD *)(v8 + 24);
           v11 = *(_DWORD *)(v8 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v12 = *(_DWORD *)(a1 + 2652);
           *(_DWORD *)(v12 + 24) = v10;
           *(float *)(v12 + 28) = v9 + 10000.0;
@@ -41373,8 +41373,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v14 = *(float *)(a1 + 2676);
           v15 = *(_DWORD *)(v13 + 24);
           v16 = *(_DWORD *)(v13 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v17 = *(_DWORD *)(a1 + 2656);
           *(_DWORD *)(v17 + 24) = v15;
           *(float *)(v17 + 28) = v14 + 10000.0;
@@ -41384,8 +41384,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v19 = *(float *)(a1 + 2680);
           v20 = *(_DWORD *)(v18 + 24);
           v21 = *(_DWORD *)(v18 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v22 = *(_DWORD *)(a1 + 2660);
           *(_DWORD *)(v22 + 24) = v20;
           *(float *)(v22 + 28) = v19 + 10000.0;
@@ -41395,8 +41395,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v24 = *(float *)(a1 + 2684);
           v25 = *(_DWORD *)(v23 + 24);
           v26 = *(_DWORD *)(v23 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v27 = *(_DWORD *)(a1 + 2664);
           *(_DWORD *)(v27 + 24) = v25;
           *(float *)(v27 + 28) = v24 + 10000.0;
@@ -41412,8 +41412,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v30 = *(float *)(a1 + 2668);
       v31 = *(_DWORD *)(v29 + 24);
       v32 = *(_DWORD *)(v29 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
       v33 = *(_DWORD *)(a1 + 2648);
       *(_DWORD *)(v33 + 24) = v31;
       *(float *)(v33 + 28) = v30 + 10000.0;
@@ -41423,8 +41423,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v35 = *(float *)(a1 + 2672);
       v36 = *(_DWORD *)(v34 + 24);
       v37 = *(_DWORD *)(v34 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
       v38 = *(_DWORD *)(a1 + 2652);
       *(_DWORD *)(v38 + 24) = v36;
       *(float *)(v38 + 28) = v35 + 10000.0;
@@ -41434,8 +41434,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v40 = *(float *)(a1 + 2676);
       v41 = *(_DWORD *)(v39 + 24);
       v42 = *(_DWORD *)(v39 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
       v43 = *(_DWORD *)(a1 + 2656);
       *(_DWORD *)(v43 + 24) = v41;
       *(float *)(v43 + 28) = v40 + 10000.0;
@@ -41445,8 +41445,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v45 = *(float *)(a1 + 2680);
       v46 = *(_DWORD *)(v44 + 24);
       v47 = *(_DWORD *)(v44 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
       v48 = *(_DWORD *)(a1 + 2660);
       *(_DWORD *)(v48 + 24) = v46;
       *(float *)(v48 + 28) = v45 + 10000.0;
@@ -41456,8 +41456,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v50 = *(float *)(a1 + 2684);
       v51 = *(_DWORD *)(v49 + 24);
       v52 = *(_DWORD *)(v49 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
       v53 = *(_DWORD *)(a1 + 2664);
       *(_DWORD *)(v53 + 24) = v51;
       *(float *)(v53 + 28) = v50 + 10000.0;
@@ -41489,8 +41489,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v81 = *(float *)(a1 + 2668);
           v82 = *(_DWORD *)(v80 + 24);
           v83 = *(_DWORD *)(v80 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v84 = *(_DWORD *)(a1 + 2648);
           *(_DWORD *)(v84 + 24) = v82;
           *(float *)(v84 + 28) = v81 + 10000.0;
@@ -41500,8 +41500,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v86 = *(float *)(a1 + 2672);
           v87 = *(_DWORD *)(v85 + 24);
           v88 = *(_DWORD *)(v85 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v89 = *(_DWORD *)(a1 + 2652);
           *(_DWORD *)(v89 + 24) = v87;
           *(float *)(v89 + 28) = v86 + 10000.0;
@@ -41511,8 +41511,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v91 = *(float *)(a1 + 2676);
           v92 = *(_DWORD *)(v90 + 24);
           v93 = *(_DWORD *)(v90 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v94 = *(_DWORD *)(a1 + 2656);
           *(_DWORD *)(v94 + 24) = v92;
           *(float *)(v94 + 28) = v91 + 10000.0;
@@ -41522,8 +41522,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v96 = *(float *)(a1 + 2680);
           v97 = *(_DWORD *)(v95 + 24);
           v98 = *(_DWORD *)(v95 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v99 = *(_DWORD *)(a1 + 2660);
           *(_DWORD *)(v99 + 24) = v97;
           *(float *)(v99 + 28) = v96 + 10000.0;
@@ -41533,8 +41533,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v101 = *(float *)(a1 + 2684);
           v102 = *(_DWORD *)(v100 + 24);
           v103 = *(_DWORD *)(v100 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v104 = *(_DWORD *)(a1 + 2664);
           *(_DWORD *)(v104 + 24) = v102;
           *(float *)(v104 + 28) = v101 + 10000.0;
@@ -41551,8 +41551,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v56 = *(float *)(a1 + 2668);
           v57 = *(_DWORD *)(v55 + 24);
           v58 = *(_DWORD *)(v55 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 0) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v59 = *(_DWORD *)(a1 + 2648);
           *(_DWORD *)(v59 + 24) = v57;
           *(float *)(v59 + 28) = v56 + 10000.0;
@@ -41562,8 +41562,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v61 = *(float *)(a1 + 2672);
           v62 = *(_DWORD *)(v60 + 24);
           v63 = *(_DWORD *)(v60 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 1) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v64 = *(_DWORD *)(a1 + 2652);
           *(_DWORD *)(v64 + 24) = v62;
           *(float *)(v64 + 28) = v61 + 10000.0;
@@ -41573,8 +41573,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v66 = *(float *)(a1 + 2676);
           v67 = *(_DWORD *)(v65 + 24);
           v68 = *(_DWORD *)(v65 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 2) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v69 = *(_DWORD *)(a1 + 2656);
           *(_DWORD *)(v69 + 24) = v67;
           *(float *)(v69 + 28) = v66 + 10000.0;
@@ -41584,8 +41584,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v71 = *(float *)(a1 + 2680);
           v72 = *(_DWORD *)(v70 + 24);
           v73 = *(_DWORD *)(v70 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 3) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v74 = *(_DWORD *)(a1 + 2660);
           *(_DWORD *)(v74 + 24) = v72;
           *(float *)(v74 + 28) = v71 + 10000.0;
@@ -41595,8 +41595,8 @@ static inline unsigned int uxtb16(unsigned int x)
           v76 = *(float *)(a1 + 2684);
           v77 = *(_DWORD *)(v75 + 24);
           v78 = *(_DWORD *)(v75 + 32);
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
-          *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 196) = 0;
+          *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 200) = 0;
           v79 = *(_DWORD *)(a1 + 2664);
           *(_DWORD *)(v79 + 24) = v77;
           *(float *)(v79 + 28) = v76 + 10000.0;
@@ -41660,14 +41660,14 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r0
     int v4; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1 + 4), 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u) + 51);
     if ( (result & 1) != 0 )
     {
       sub_604C04C8((float *)a1, 1);
-      v3 = sub_6047482C(*(_DWORD *)(a1 + 4), 1u);
+      v3 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
       sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
-      v4 = sub_6047482C(*(_DWORD *)(a1 + 4), 1u);
+      v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 1u);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248472);
     }
@@ -41708,10 +41708,10 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 35562);
     if ( !result )
     {
-      v3 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
+      v3 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
       sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
-      v4 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
+      v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       sub_604BFE2C(a1);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248856);
@@ -41748,14 +41748,14 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r0
     int v4; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1 + 4), 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0) + 51);
     if ( (result & 1) != 0 )
     {
       sub_604C04C8((float *)a1, 1);
-      v3 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
+      v3 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 108))(v3);
       sub_60473B58(*(_DWORD **)(a1 + 4), 6u, 0);
-      v4 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
+      v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 16))(v4, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 520), 13248472);
     }
@@ -41860,7 +41860,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 672);
     sub_605021B0(a1 + 141);
     *a1 = 12572424;
-    sub_6045C0A0(a1 + 22);
+    thunk_sub_60909E64(a1 + 22);
     return a1;
   }
 
@@ -41900,7 +41900,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA29A8 = 12321336;
       dword_60CA29AC = (int)"N_Back_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2988);
     }
     v3 = *(_DWORD *)(a1 + 4);
@@ -41911,7 +41911,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA29B0 = 12321336;
       dword_60CA29B4 = (int)"B_Pack_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2990);
     }
     v5 = *(_DWORD *)(a1 + 4);
@@ -41928,7 +41928,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA29F4 = (int)"Pa_Icon3P_00";
       dword_60CA29F8 = 12321336;
       dword_60CA29FC = (int)"Pa_Icon4P_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2980);
     }
     sub_60506F20(a1 + 35580, *(_DWORD *)(a1 + 4), &dword_60CA29E0);
@@ -41955,7 +41955,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2A3C = MEMORY[0xCA27AC];
       dword_60CA2A40 = 12321336;
       dword_60CA2A44 = MEMORY[0xCA27B4];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2984);
     }
     v9 = *(_DWORD *)(a1 + 4);
@@ -42069,7 +42069,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2A6C = (int)"Pa_Return_00";
       dword_60CA2A70 = 12321336;
       dword_60CA2A74 = (int)"Pa_BtnR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA298C);
     }
     v3 = *(_DWORD *)(a1 + 4);
@@ -42082,17 +42082,17 @@ static inline unsigned int uxtb16(unsigned int x)
     sead::SafeStringBase<char>::operator=(a1 + 1576, v5);
     v5[0] = 0;
     sub_605028F0(a1 + 564, v5, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
     v5[0] = 1;
     sub_605028F0(a1 + 564, v5, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
     v5[0] = 2;
     sub_605028F0(a1 + 564, v5, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
     v5[0] = 3;
     sub_605028F0(a1 + 564, v5, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
-    *(_DWORD *)(sub_608DE61C(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 192) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 208) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 616, 4) - *(_DWORD *)(a1 + 628) + 192) = 0;
     v5[0] = 0;
     sub_605029FC(a1 + 564, v5, "SE_SYS_PAUSE");
     v5[0] = 1;
@@ -42101,8 +42101,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(a1 + 564, v5, "SE_SYS_PAGE");
     v5[0] = 3;
     sub_605029FC(a1 + 564, v5, "SE_SYS_BACK");
-    *(_DWORD *)(sub_608DE61C(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 176) = "SE_SYS_BACK_BTN_OVER";
-    result = sub_608DE61C(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628);
+    *(_DWORD *)(List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628) + 176) = "SE_SYS_BACK_BTN_OVER";
+    result = List_getNthNode(a1 + 616, v5[0]) - *(_DWORD *)(a1 + 628);
     *(_DWORD *)(result + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     return result;
   }
@@ -42136,7 +42136,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2A90[0] = 12321336;
       dword_60CA2A90[1] = "B_Btn_00";
       *(_QWORD *)&dword_60CA2A98 = v3;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2994);
     }
     if ( ((unsigned int)&unk_60CA2998 & ~(1615592508 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA2998) )
@@ -42151,7 +42151,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2ABC = (int)"Pa_Return_00";
       dword_60CA2AC0 = 12321336;
       dword_60CA2AC4 = (int)"Pa_BtnR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2998);
     }
     v4 = a1[1];
@@ -42364,7 +42364,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(MEMORY[0xC9A1E0] + 532) = 0;
     sub_60473DE4(*(_DWORD **)(a1 + 4), 2u, (_DWORD *)0xCA27A8, 1);
     sub_60473DE4(*(_DWORD **)(a1 + 4), 4u, (_DWORD *)0xCA2798, 0);
-    v2 = sub_6047482C(*(_DWORD *)(a1 + 4), 4);
+    v2 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 4);
     return (*(int (__fastcall **)(int))(*(_DWORD *)v2 + 96))(v2);
   }
 
@@ -42425,7 +42425,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( sub_60502D80(a1 + 564) != 1 )
         return sub_604C154C(a1);
-      v3 = sub_608DE61C(a1 + 616, 1);
+      v3 = List_getNthNode(a1 + 616, 1);
       v4 = v3 == 0;
       if ( v3 )
       {
@@ -42434,7 +42434,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( !v4 && (*(_DWORD *)(v3 + 4) | 2) == 3 )
         return sub_6047459C(*(_DWORD *)(a1 + 4), 6);
-      v5 = sub_608DE61C(a1 + 616, 2);
+      v5 = List_getNthNode(a1 + 616, 2);
       v6 = v5 == 0;
       if ( v5 )
       {
@@ -42516,8 +42516,8 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a2 == 1 )
     {
       v6 = *((_DWORD *)a1 + 667);
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 0) - *((_DWORD *)a1 + 157) + 196) = 9;
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 0) - *((_DWORD *)a1 + 157) + 200) = 9;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 0) - *((_DWORD *)a1 + 157) + 196) = 9;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 0) - *((_DWORD *)a1 + 157) + 200) = 9;
       v7 = *((_DWORD *)a1 + 662);
       *(_DWORD *)(v7 + 24) = v4;
       *(_DWORD *)(v7 + 28) = v6;
@@ -42527,8 +42527,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v9 = *((_DWORD *)a1 + 668);
       v10 = *(_DWORD *)(v8 + 24);
       v11 = *(_DWORD *)(v8 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 1) - *((_DWORD *)a1 + 157) + 196) = 9;
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 1) - *((_DWORD *)a1 + 157) + 200) = 9;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 1) - *((_DWORD *)a1 + 157) + 196) = 9;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 1) - *((_DWORD *)a1 + 157) + 200) = 9;
       v12 = *((_DWORD *)a1 + 663);
       *(_DWORD *)(v12 + 24) = v10;
       *(_DWORD *)(v12 + 28) = v9;
@@ -42538,8 +42538,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v14 = *((_DWORD *)a1 + 669);
       v15 = *(_DWORD *)(v13 + 24);
       v16 = *(_DWORD *)(v13 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 2) - *((_DWORD *)a1 + 157) + 196) = 9;
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 2) - *((_DWORD *)a1 + 157) + 200) = 9;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 2) - *((_DWORD *)a1 + 157) + 196) = 9;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 2) - *((_DWORD *)a1 + 157) + 200) = 9;
       v17 = *((_DWORD *)a1 + 664);
       *(_DWORD *)(v17 + 24) = v15;
       *(_DWORD *)(v17 + 28) = v14;
@@ -42549,8 +42549,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v19 = *((_DWORD *)a1 + 670);
       v20 = *(_DWORD *)(v18 + 24);
       v21 = *(_DWORD *)(v18 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 3) - *((_DWORD *)a1 + 157) + 196) = 9;
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 3) - *((_DWORD *)a1 + 157) + 200) = 9;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 3) - *((_DWORD *)a1 + 157) + 196) = 9;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 3) - *((_DWORD *)a1 + 157) + 200) = 9;
       v22 = *((_DWORD *)a1 + 665);
       *(_DWORD *)(v22 + 24) = v20;
       *(_DWORD *)(v22 + 28) = v19;
@@ -42560,8 +42560,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v24 = *((_DWORD *)a1 + 671);
       v25 = *(_DWORD *)(v23 + 24);
       v26 = *(_DWORD *)(v23 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 4) - *((_DWORD *)a1 + 157) + 196) = 9;
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 4) - *((_DWORD *)a1 + 157) + 200) = 9;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 4) - *((_DWORD *)a1 + 157) + 196) = 9;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 4) - *((_DWORD *)a1 + 157) + 200) = 9;
       result = *((_DWORD *)a1 + 666);
       *(_DWORD *)(result + 24) = v25;
       *(_DWORD *)(result + 28) = v24;
@@ -42569,8 +42569,8 @@ static inline unsigned int uxtb16(unsigned int x)
     else
     {
       v28 = a1[667];
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 0) - *((_DWORD *)a1 + 157) + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 0) - *((_DWORD *)a1 + 157) + 200) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 0) - *((_DWORD *)a1 + 157) + 196) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 0) - *((_DWORD *)a1 + 157) + 200) = 0;
       v29 = *((_DWORD *)a1 + 662);
       *(_DWORD *)(v29 + 24) = v4;
       *(float *)(v29 + 28) = v28 + 10000.0;
@@ -42580,8 +42580,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v31 = a1[668];
       v32 = *(_DWORD *)(v30 + 24);
       v33 = *(_DWORD *)(v30 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 1) - *((_DWORD *)a1 + 157) + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 1) - *((_DWORD *)a1 + 157) + 200) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 1) - *((_DWORD *)a1 + 157) + 196) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 1) - *((_DWORD *)a1 + 157) + 200) = 0;
       v34 = *((_DWORD *)a1 + 663);
       *(_DWORD *)(v34 + 24) = v32;
       *(float *)(v34 + 28) = v31 + 10000.0;
@@ -42591,8 +42591,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v36 = a1[669];
       v37 = *(_DWORD *)(v35 + 24);
       v38 = *(_DWORD *)(v35 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 2) - *((_DWORD *)a1 + 157) + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 2) - *((_DWORD *)a1 + 157) + 200) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 2) - *((_DWORD *)a1 + 157) + 196) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 2) - *((_DWORD *)a1 + 157) + 200) = 0;
       v39 = *((_DWORD *)a1 + 664);
       *(_DWORD *)(v39 + 24) = v37;
       *(float *)(v39 + 28) = v36 + 10000.0;
@@ -42602,8 +42602,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v41 = a1[670];
       v42 = *(_DWORD *)(v40 + 24);
       v43 = *(_DWORD *)(v40 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 3) - *((_DWORD *)a1 + 157) + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 3) - *((_DWORD *)a1 + 157) + 200) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 3) - *((_DWORD *)a1 + 157) + 196) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 3) - *((_DWORD *)a1 + 157) + 200) = 0;
       v44 = *((_DWORD *)a1 + 665);
       *(_DWORD *)(v44 + 24) = v42;
       *(float *)(v44 + 28) = v41 + 10000.0;
@@ -42613,8 +42613,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v46 = a1[671];
       v47 = *(_DWORD *)(v45 + 24);
       v26 = *(_DWORD *)(v45 + 32);
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 4) - *((_DWORD *)a1 + 157) + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(a1 + 154, 4) - *((_DWORD *)a1 + 157) + 200) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 4) - *((_DWORD *)a1 + 157) + 196) = 0;
+      *(_DWORD *)(List_getNthNode(a1 + 154, 4) - *((_DWORD *)a1 + 157) + 200) = 0;
       result = *((_DWORD *)a1 + 666);
       *(_DWORD *)(result + 24) = v47;
       *(float *)(result + 28) = v46 + 10000.0;
@@ -43095,7 +43095,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // [sp+8h] [bp-8h] BYREF
     const char *v11; // [sp+Ch] [bp-4h]
   
-    v3 = sub_6047482C(*(_DWORD *)(a1 + 4), 6);
+    v3 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 6);
     v4 = v3 == 0;
     if ( v3 )
     {
@@ -43107,9 +43107,9 @@ static inline unsigned int uxtb16(unsigned int x)
       v1 = 1;
       v10 = 12321336;
       v11 = "G_ArrowL_00";
-      sub_6047467C(*(_DWORD **)(a1 + 4), 6u, (_DWORD *)0xCA27B0, (int)&v10, 1);
+      ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 6u, (_DWORD *)0xCA27B0, (int)&v10, 1);
     }
-    result = sub_6047482C(*(_DWORD *)(a1 + 4), 7);
+    result = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 7);
     v6 = result == 0;
     if ( result )
     {
@@ -43120,7 +43120,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v10 = 12321336;
       v11 = "G_ArrowR_00";
-      sub_6047467C(*(_DWORD **)(a1 + 4), 7u, (_DWORD *)0xCA27B0, (int)&v10, 1);
+      ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 7u, (_DWORD *)0xCA27B0, (int)&v10, 1);
       v7 = *(_DWORD *)(a1 + 4);
       goto LABEL_11;
     }
@@ -43201,7 +43201,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA29D4 = (int)"Pa_PackC_00";
       dword_60CA29D8 = 12321336;
       dword_60CA29DC = (int)"Pa_PackR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA299C);
     }
     if ( ((unsigned int)&unk_60CA29A0 & ~(1615599632 << v2) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA29A0) )
@@ -43210,7 +43210,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA29BC = (int)"N_Scroll_00";
       dword_60CA29C0 = 12321336;
       dword_60CA29C4 = (int)"N_Pack_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA29A0);
     }
     v5 = sub_60407384(MEMORY[0xC9A1E0]);
@@ -43272,7 +43272,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2A14 = (int)"Pa_Icon3P_00";
       dword_60CA2A18 = 12321336;
       dword_60CA2A1C = (int)"Pa_Icon4P_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA29A4);
     }
     result = 25648;
@@ -43513,7 +43513,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2FDC = MEMORY[0xCA2B50];
       dword_60CA2FE0 = 12321336;
       dword_60CA2FE4 = MEMORY[0xCA2B58];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F24);
     }
     *(_DWORD *)(a1 + 13944) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AF4, &dword_60CA2FC8);
@@ -43544,7 +43544,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA316C = MEMORY[0xCA2BC0];
       dword_60CA3170 = 12321336;
       dword_60CA3174 = MEMORY[0xCA2BC8];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F28);
     }
     *(_DWORD *)(a1 + 13960) = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AD4, &dword_60CA3120);
@@ -45327,7 +45327,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050D8F4(a1 + 4449);
     sub_6050D8F4(a1 + 3548);
     sub_6050A4C4(a1 + 1635);
-    sub_6045C0A0(a1 + 1534);
+    thunk_sub_60909E64(a1 + 1534);
     sub_605021B0(a1 + 1014);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
     return a1;
@@ -45355,7 +45355,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050D8F4(a1 + 4449);
     sub_6050D8F4(a1 + 3548);
     sub_6050A4C4(a1 + 1635);
-    sub_6045C0A0(a1 + 1534);
+    thunk_sub_60909E64(a1 + 1534);
     sub_605021B0(a1 + 1014);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
     return operator delete((int)a1);
@@ -45380,7 +45380,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2F48 = (int)"T_CourseNum_00";
       dword_60CA2F4C = 12321336;
       dword_60CA2F50 = (int)"T_CourseName_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F00);
     }
     v4 = 2;
@@ -45435,7 +45435,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA303C = MEMORY[0xCA2AF8];
       dword_60CA3040 = 12321336;
       dword_60CA3044 = MEMORY[0xCA2B00];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2EF4);
     }
     v6 = 6;
@@ -45465,18 +45465,18 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(v2, 11546304, "SE_SYS_MAP_VIEW_MODE");
     sub_605029FC(v2, 11546308, "SE_SYS_MAP_VIEW_QUIT");
     v3 = v1 + 1027;
-    v4 = sub_608DE61C(v1 + 1027, 1);
+    v4 = List_getNthNode(v1 + 1027, 1);
     v5 = v1[1030];
     v1 += 1030;
     *(_DWORD *)(v4 - v5 + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(v3, 1) - *v1 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    *(_DWORD *)(sub_608DE61C(v3, 2) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 4) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 4) - *v1 + 196) = 15;
-    *(_DWORD *)(sub_608DE61C(v3, 4) - *v1 + 200) = 15;
-    *(_DWORD *)(sub_608DE61C(v3, 5) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 5) - *v1 + 196) = 15;
-    result = sub_608DE61C(v3, 5) - *v1;
+    *(_DWORD *)(List_getNthNode(v3, 1) - *v1 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(v3, 2) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 4) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 4) - *v1 + 196) = 15;
+    *(_DWORD *)(List_getNthNode(v3, 4) - *v1 + 200) = 15;
+    *(_DWORD *)(List_getNthNode(v3, 5) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 5) - *v1 + 196) = 15;
+    result = List_getNthNode(v3, 5) - *v1;
     *(_DWORD *)(result + 200) = 15;
     return result;
   }
@@ -45512,7 +45512,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA30C4 = (int)"N_Item_00";
       dword_60CA30C8 = 12321336;
       dword_60CA30CC = (int)"N_Zoom_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2EF8);
     }
     v4 = 10;
@@ -45550,7 +45550,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA3114 = (int)"P_ArrowL_00";
       dword_60CA3118 = 12321336;
       dword_60CA311C = (int)"P_ArrowR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2EFC);
     }
     v4 = 10;
@@ -45570,7 +45570,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA2F34 = 12321336;
       dword_60CA2F38 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F0C);
     }
     if ( ((unsigned int)&unk_60CA2F10 & ~(1615615812 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA2F10) )
@@ -45587,7 +45587,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA3074 = (int)"Pa_ZoomIn_00";
       dword_60CA3078 = 12321336;
       dword_60CA307C = (int)"Pa_ZoomOut_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F10);
     }
     v4 = 1;
@@ -45827,7 +45827,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2F9C = (int)"Pa_Zanki_02";
       dword_60CA2FA0 = 12321336;
       dword_60CA2FA4 = (int)"Pa_Zanki_03";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2EF0);
     }
     sub_6050D95C(a1 + 14192, a1 + 48, &dword_60CA2F88);
@@ -46239,9 +46239,9 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v6 != -1 )
           {
             sub_604742D0((_DWORD *)(a1 + 48), 0x15u, (_DWORD *)0xCA2AE4, v6, 0);
-            if ( sub_6047482C(a1 + 48, 21) )
+            if ( ArrayOf20_getEntryPtr(a1 + 48, 21) )
             {
-              v7 = sub_6047482C(a1 + 48, 21);
+              v7 = ArrayOf20_getEntryPtr(a1 + 48, 21);
               (*(void (__fastcall **)(int))(*(_DWORD *)v7 + 96))(v7);
             }
           }
@@ -46284,7 +46284,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA300C = (int)"Pa_ZoomIn_00";
       dword_60CA3010 = 12321336;
       dword_60CA3014 = (int)"Pa_ZoomOut_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F14);
     }
     v3 = a1 + 4096;
@@ -46414,7 +46414,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2F60 = MEMORY[0xCA2BB0];
       dword_60CA2F64 = 12321336;
       dword_60CA2F68 = MEMORY[0xCA2BB8];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F18);
     }
     v7 = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AEC, (_DWORD *)&unk_60CA2EF0 + 2 * a2 + 25);
@@ -46448,7 +46448,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA2F7C = MEMORY[0xCA2BB0];
       dword_60CA2F80 = 12321336;
       dword_60CA2F84 = MEMORY[0xCA2BB8];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2F1C);
     }
     v5 = sub_604746E4(a1 + 48, (_DWORD *)0xCA2AEC, &dword_60CA2F70[2 * a2]);
@@ -46596,10 +46596,10 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result != -1 )
     {
       sub_604742D0((_DWORD *)(a1 + 48), 0x17u, (_DWORD *)0xCA2ADC, result, 0);
-      result = sub_6047482C(a1 + 48, 23);
+      result = ArrayOf20_getEntryPtr(a1 + 48, 23);
       if ( result )
       {
-        v12 = sub_6047482C(a1 + 48, 23);
+        v12 = ArrayOf20_getEntryPtr(a1 + 48, 23);
         return (*(int (__fastcall **)(int))(*(_DWORD *)v12 + 96))(v12);
       }
     }
@@ -47405,7 +47405,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 4u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13251032);
     return result;
@@ -47820,7 +47820,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 4u) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(a1 + 615720) )
@@ -47886,7 +47886,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 6u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 6u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13251320);
     return result;
@@ -48103,7 +48103,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 4u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13251416);
     return result;
@@ -48242,7 +48242,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 4u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13251512);
     return result;
@@ -48297,7 +48297,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 5880, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 5880, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13251608);
     return result;
@@ -48345,7 +48345,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 4u) + 51);
     if ( (result & 1) != 0 )
     {
       sub_6054555C(a1 + 55740, *(_DWORD *)(a1 + 21864));
@@ -48499,7 +48499,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13251000);
     return result;
@@ -48559,7 +48559,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13251000);
     return result;
@@ -48923,7 +48923,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 9420, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 9420, 0) + 51);
     if ( (result & 1) != 0 )
     {
       sub_60502548(a1 + 3800);
@@ -49058,7 +49058,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 10), 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 10), 1u) + 51);
     if ( (result & 1) != 0 )
       return sub_604D3074(a1);
     return result;
@@ -49140,7 +49140,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12960, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12960, 0) + 51);
     if ( (result & 1) != 0 )
     {
       sub_60502548(a1 + 3800);
@@ -49277,7 +49277,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 10), 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 10), 1u) + 51);
     if ( (result & 1) != 0 )
       return sub_604D3074(a1);
     return result;
@@ -49619,19 +49619,19 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604CC1DC(a1 + 22312);
     sub_60544E84(a1 + 13935);
     sub_6050A4C4(v2);
-    sub_6045C0A0(a1 + 12026);
+    thunk_sub_60909E64(a1 + 12026);
     sub_6047643C((struct sead_IDisposer *)(a1 + 11141));
     sub_6047643C((struct sead_IDisposer *)(a1 + 10256));
     sub_605021B0(a1 + 9731);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 8819));
     sub_6050A4C4(a1 + 7004);
-    sub_6045C0A0(a1 + 6897);
+    thunk_sub_60909E64(a1 + 6897);
     sub_605021B0(a1 + 6377);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 5477));
-    sub_6045C0A0(a1 + 5364);
-    sub_6045C0A0(a1 + 5263);
-    sub_6045C0A0(a1 + 5162);
-    sub_6045C0A0(a1 + 5061);
+    thunk_sub_60909E64(a1 + 5364);
+    thunk_sub_60909E64(a1 + 5263);
+    thunk_sub_60909E64(a1 + 5162);
+    thunk_sub_60909E64(a1 + 5061);
     sub_6047643C((struct sead_IDisposer *)(a1 + 4125));
     sub_6047643C((struct sead_IDisposer *)(a1 + 3240));
     sub_6047643C((struct sead_IDisposer *)(a1 + 2355));
@@ -49647,43 +49647,43 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_604CC1DC(int a1)
   {
-    sub_6045C0A0(a1 + 526000);
+    thunk_sub_60909E64(a1 + 526000);
     sub_604D9DF8(a1 + 479776);
     sub_605021B0(a1 + 477696);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 473856));
-    sub_6045C0A0(a1 + 473356);
+    thunk_sub_60909E64(a1 + 473356);
     sub_604D9DF8(a1 + 427132);
     sub_605021B0(a1 + 425052);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 421212));
-    sub_6045C0A0(a1 + 420712);
+    thunk_sub_60909E64(a1 + 420712);
     sub_604D9DF8(a1 + 374488);
     sub_605021B0(a1 + 372408);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 368568));
-    sub_6045C0A0(a1 + 368068);
+    thunk_sub_60909E64(a1 + 368068);
     sub_604D9DF8(a1 + 321844);
     sub_605021B0(a1 + 319764);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 315924));
-    sub_6045C0A0(a1 + 315424);
+    thunk_sub_60909E64(a1 + 315424);
     sub_604D9DF8(a1 + 269200);
     sub_605021B0(a1 + 267120);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 263280));
-    sub_6045C0A0(a1 + 262780);
+    thunk_sub_60909E64(a1 + 262780);
     sub_604D9DF8(a1 + 216556);
     sub_605021B0(a1 + 214476);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 210636));
-    sub_6045C0A0(a1 + 210136);
+    thunk_sub_60909E64(a1 + 210136);
     sub_604D9DF8(a1 + 163912);
     sub_605021B0(a1 + 161832);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 157992));
-    sub_6045C0A0(a1 + 157492);
+    thunk_sub_60909E64(a1 + 157492);
     sub_604D9DF8(a1 + 111268);
     sub_605021B0(a1 + 109188);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 105348));
-    sub_6045C0A0(a1 + 104848);
+    thunk_sub_60909E64(a1 + 104848);
     sub_604D9DF8(a1 + 58624);
     sub_605021B0(a1 + 56544);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 52704));
-    sub_6045C0A0(a1 + 52204);
+    thunk_sub_60909E64(a1 + 52204);
     sub_604D9DF8(a1 + 5980);
     sub_605021B0(a1 + 3900);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 60));
@@ -50004,15 +50004,15 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = dword_60CA4E0C;
     v9 = dword_60CA4E0C;
     sub_605028F0(a1 + 3800, &v9, 0);
-    *(_BYTE *)(sub_608DE61C(a1 + 3852, v9) - *(_DWORD *)(a1 + 3864) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3852, v9) - *(_DWORD *)(a1 + 3864) + 208) = 0;
     v7 = dword_60CA4E10;
     v9 = dword_60CA4E10;
     sub_605028F0(a1 + 3800, &v9, 0);
-    *(_BYTE *)(sub_608DE61C(a1 + 3852, v9) - *(_DWORD *)(a1 + 3864) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3852, v9) - *(_DWORD *)(a1 + 3864) + 208) = 0;
     v7 = dword_60CA4E14;
     v9 = dword_60CA4E14;
     sub_605028F0(a1 + 3800, &v9, 0);
-    *(_BYTE *)(sub_608DE61C(a1 + 3852, v9) - *(_DWORD *)(a1 + 3864) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3852, v9) - *(_DWORD *)(a1 + 3864) + 208) = 0;
     v7 = 0;
     v9 = 0;
     sub_605029FC(a1 + 3800, &v9, "SE_SYS_PAUSE");
@@ -50063,7 +50063,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA4D80 = 12321336;
       dword_60CA4D84 = dword_60CA4D6C;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D04);
     }
     v3 = a1;
@@ -50169,7 +50169,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA4FAC = (int)"Loop";
       dword_60CA4FB0 = 12321336;
       dword_60CA4FB4 = (int)"LoopArrow";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D10);
     }
     v4 = 13;
@@ -50528,7 +50528,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA4E4C = (int)"Pa_VSPoint_02";
       dword_60CA4E50 = 12321336;
       dword_60CA4E54 = (int)"Pa_VSPoint_03";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D08);
     }
     v3 = operator new(3572);
@@ -50579,7 +50579,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA4EAC = (int)"Pa_IconB_01";
       dword_60CA4EB0 = 12321336;
       dword_60CA4EB4 = (int)"Pa_IconB_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D0C);
     }
     v3 = operator new(3620);
@@ -51851,7 +51851,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CA4E7C = (int)"2vs2";
         dword_60CA4E80 = 12321336;
         dword_60CA4E84 = (int)"3vs1";
-        sub_60000288();
+        stub_return0_000288();
         _cxa_guard_release_0(&unk_60CA4D14);
       }
       v27 = v41[5465];
@@ -53164,7 +53164,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v13 = (char *)a1 + v28;
       v12[4300] = v13[615732];
       v15 = v12 + 4300;
-      v16 = sub_608DE61C(a1 + 963, v14);
+      v16 = List_getNthNode(a1 + 963, v14);
       v17 = v16 == 0;
       if ( v16 )
       {
@@ -53541,7 +53541,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA4E1C = (int)"CourseSelectVS_Text_00";
       dword_60CA4E20 = 12321336;
       dword_60CA4E24 = (int)"CourseSelectVS_Text_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D40);
     }
     sub_6047E0EC(&dword_60CA4E00[2 * v9 + 6], *(_DWORD *)(a1 + 3608), 0);
@@ -53551,7 +53551,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA4E2C = (int)"CourseSelectVSConfirm_BtnL_00";
       dword_60CA4E30 = 12321336;
       dword_60CA4E34 = (int)"CourseSelectVSConfirm_BtnL_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D44);
     }
     v12 = (*(int (__fastcall **)(_DWORD, const char *, int))(**(_DWORD **)(a1 + 3620) + 48))(
@@ -53943,7 +53943,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 60, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13254296);
     return result;
@@ -53970,7 +53970,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 60, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 1u) + 51);
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 52612) = 4;
@@ -54085,7 +54085,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 60, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13254072);
     return result;
@@ -54113,7 +54113,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 60, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13254424);
     return result;
@@ -54140,7 +54140,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 60, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13254072);
     return result;
@@ -54177,7 +54177,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 60, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 60, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13254104);
     return result;
@@ -54537,14 +54537,14 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA4F44 = (int)"Pa_Course_10";
       dword_60CA4F48 = 12321336;
       dword_60CA4F4C = (int)"Pa_Course_11";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D24);
     }
     if ( ((unsigned int)&unk_60CA4D28 & ~(1615682176 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA4D28) )
     {
       dword_60CA4DA0 = 12321336;
       dword_60CA4DA4 = (int)"Level";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D28);
     }
     v3 = a1 + 60;
@@ -54565,7 +54565,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA4DA8 = 12321336;
       dword_60CA4DAC = (int)"N_Level_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D2C);
     }
     v9 = 1;
@@ -54883,7 +54883,7 @@ static inline unsigned int uxtb16(unsigned int x)
       unk_60CA4EEC = 11;
       _cxa_guard_release_0(&unk_60CA4D34);
     }
-    v3 = (_DWORD *)sub_608DE334(296, 0, 4, 0);
+    v3 = (_DWORD *)Heap_allocate(296, 0, 4, 0);
     v6 = 52628;
     v7 = a1 + 13157;
     if ( v3 )
@@ -54988,7 +54988,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( *v7 > v11 )
         v22 += v10;
       sub_6098E754(v21, v22, 0);
-      result = sub_609175E4(&v27);
+      result = Object_releaseHandle(&v27);
       ++v11;
       v10 += 24;
       v12 = v25 + 16;
@@ -55595,7 +55595,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 6124) = 0;
@@ -55754,7 +55754,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13254488);
     return result;
@@ -55846,15 +55846,15 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = 12321336;
     v6 = "CourseSelVSConfirm";
     sead::SafeStringBase<char>::operator=(a1 + 4652, &v5);
-    *(_DWORD *)(sub_608DE61C(a1 + 3692, 1) - *(_DWORD *)(a1 + 3704) + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(a1 + 3692, 2) - *(_DWORD *)(a1 + 3704) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3692, 1) - *(_DWORD *)(a1 + 3704) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3692, 2) - *(_DWORD *)(a1 + 3704) + 192) = 0;
     v5 = 0;
     sub_605029FC(a1 + 3640, &v5, "SE_SYS_BACK");
-    *(_DWORD *)(sub_608DE61C(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    *(_DWORD *)(sub_608DE61C(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 204) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 204) = 0;
     sub_605028F0(a1 + 3640, &v5, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3692, v5) - *(_DWORD *)(a1 + 3704) + 208) = 0;
     *(_BYTE *)(a1 + 4685) = 1;
     return 4685;
   }
@@ -56085,7 +56085,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE v6[4]; // [sp+0h] [bp-8h] BYREF
     int v7; // [sp+4h] [bp-4h]
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) == 0 )
       return result;
     result = *(unsigned __int8 *)(a1 + 4734);
@@ -56369,7 +56369,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 40) = 2;
@@ -56504,7 +56504,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 5792, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 5792, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13255160);
     return result;
@@ -56593,7 +56593,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE v6[4]; // [sp+0h] [bp-8h] BYREF
     int v7; // [sp+4h] [bp-4h]
   
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 11), 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 11), 1u) + 51);
     if ( (result & 1) == 0 )
       return result;
     v6[0] = 1;
@@ -56647,7 +56647,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 9332, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 9332, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13255256);
     return result;
@@ -56736,7 +56736,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _BYTE v6[4]; // [sp+0h] [bp-8h] BYREF
     int v7; // [sp+4h] [bp-4h]
   
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 11), 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 11), 1u) + 51);
     if ( (result & 1) == 0 )
       return result;
     v6[0] = 1;
@@ -56938,11 +56938,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(a1 + 3692, &v8, "SE_SYS_COURSE_IN");
     v8 = 0;
     sub_605029FC(a1 + 3692, &v8, "SE_SYS_BACK");
-    *(_DWORD *)(sub_608DE61C(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    *(_DWORD *)(sub_608DE61C(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 204) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 204) = 0;
     sub_605028F0(a1 + 3692, &v8, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3744, v8) - *(_DWORD *)(a1 + 3756) + 208) = 0;
     if ( ((unsigned int)&unk_60CA4D48 & ~(1615696384 << v6) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA4D48) )
     {
       *(_QWORD *)&dword_60CA4DC8 = 0x400000003LL;
@@ -56951,18 +56951,18 @@ static inline unsigned int uxtb16(unsigned int x)
     v8 = dword_60CA4DC8;
     v10 = dword_60CA4DC8;
     sub_605028F0(a1 + 3692, &v10, 0);
-    *(_BYTE *)(sub_608DE61C(a1 + 3744, v10) - *(_DWORD *)(a1 + 3756) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3744, v10) - *(_DWORD *)(a1 + 3756) + 208) = 0;
     v8 = dword_60CA4DCC;
     v10 = dword_60CA4DCC;
     sub_605028F0(a1 + 3692, &v10, 0);
-    *(_BYTE *)(sub_608DE61C(a1 + 3744, v10) - *(_DWORD *)(a1 + 3756) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3744, v10) - *(_DWORD *)(a1 + 3756) + 208) = 0;
     *(_BYTE *)(a1 + 4737) = 1;
     v8 = 2;
-    *(_DWORD *)(sub_608DE61C(a1 + 3744, 2) - *(_DWORD *)(a1 + 3756) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3744, 2) - *(_DWORD *)(a1 + 3756) + 192) = 0;
     v8 = 3;
-    *(_DWORD *)(sub_608DE61C(a1 + 3744, 3) - *(_DWORD *)(a1 + 3756) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3744, 3) - *(_DWORD *)(a1 + 3756) + 192) = 0;
     v8 = 4;
-    result = sub_608DE61C(a1 + 3744, 4) - *(_DWORD *)(a1 + 3756);
+    result = List_getNthNode(a1 + 3744, 4) - *(_DWORD *)(a1 + 3756);
     *(_DWORD *)(result + 192) = 0;
     return result;
   }
@@ -56987,14 +56987,14 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA4DD0 = 12321336;
       dword_60CA4DD4 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D4C);
     }
     if ( ((unsigned int)&unk_60CA4D50 & ~(1615696884 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA4D50) )
     {
       dword_60CA4DD8 = 12321336;
       dword_60CA4DDC = (int)"B_Arrow_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA4D50);
     }
     v3 = a1[918];
@@ -60656,7 +60656,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13258780);
     return result;
@@ -60787,7 +60787,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5074 = MEMORY[0xCA4FC8];
       dword_60CA5078 = 12321336;
       dword_60CA507C = MEMORY[0xCA4FD0];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5060);
     }
     v6[0] = 2;
@@ -60796,7 +60796,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA5068 = 12321336;
       dword_60CA506C = (int)"T_WorldName_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5064);
     }
     v6[0] = 1;
@@ -61437,7 +61437,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13259028);
     return result;
@@ -61619,7 +61619,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13259124);
     return result;
@@ -61770,7 +61770,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13259268);
     return result;
@@ -62055,7 +62055,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13259472);
     return result;
@@ -62230,7 +62230,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12577048;
     v2 = (struct sead_IDisposer *)(a1 + 10);
-    sub_6045C0A0(a1 + 902);
+    thunk_sub_60909E64(a1 + 902);
     sub_60475AE8(v2);
     return a1;
   }
@@ -62245,7 +62245,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12577048;
     v2 = (struct sead_IDisposer *)(a1 + 10);
-    sub_6045C0A0(a1 + 902);
+    thunk_sub_60909E64(a1 + 902);
     sub_60475AE8(v2);
     return operator delete((int)a1);
   }
@@ -62266,7 +62266,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5374 = (int)"N_Complete_00";
       dword_60CA5378 = 12321336;
       dword_60CA537C = (int)"N_Dokan_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5358);
     }
     v4 = 2;
@@ -62302,7 +62302,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5394 = MEMORY[0xCA5284];
       dword_60CA5398 = 12321336;
       dword_60CA539C = MEMORY[0xCA528C];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5350);
     }
     v5[0] = 4;
@@ -62336,7 +62336,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA53D4 = (int)"T_Dokan_00";
       dword_60CA53D8 = 12321336;
       dword_60CA53DC = (int)"T_Dokan_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA535C);
     }
     v4 = 8;
@@ -62408,7 +62408,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5364 = (int)"Pa_KeyAssign_00";
       dword_60CA5368 = 12321336;
       dword_60CA536C = (int)"Pa_KeyAssign_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5354);
     }
     v3 = operator new(7216);
@@ -62707,7 +62707,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA5530 = (int)&a0;
     dword_60CA5534 = 12321336;
     dword_60CA5538 = (int)&a0;
-    sub_60000288();
+    stub_return0_000288();
     MEMORY[0xCA5540] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCA553C] = 12577192;
     MEMORY[0xCA5544] = 5115880;
@@ -62784,7 +62784,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13260156);
     return result;
@@ -63019,7 +63019,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13260092);
     return result;
@@ -63111,11 +63111,11 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604E1754(_DWORD *a1)
   {
     *a1 = 12577176;
-    sub_6045C0A0(a1 + 1324);
-    sub_6045C0A0(a1 + 1223);
-    sub_6045C0A0(a1 + 1122);
-    sub_6045C0A0(a1 + 1021);
-    sub_6045C0A0(a1 + 920);
+    thunk_sub_60909E64(a1 + 1324);
+    thunk_sub_60909E64(a1 + 1223);
+    thunk_sub_60909E64(a1 + 1122);
+    thunk_sub_60909E64(a1 + 1021);
+    thunk_sub_60909E64(a1 + 920);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
   }
@@ -63127,11 +63127,11 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604E17B8(_DWORD *a1)
   {
     *a1 = 12577176;
-    sub_6045C0A0(a1 + 1324);
-    sub_6045C0A0(a1 + 1223);
-    sub_6045C0A0(a1 + 1122);
-    sub_6045C0A0(a1 + 1021);
-    sub_6045C0A0(a1 + 920);
+    thunk_sub_60909E64(a1 + 1324);
+    thunk_sub_60909E64(a1 + 1223);
+    thunk_sub_60909E64(a1 + 1122);
+    thunk_sub_60909E64(a1 + 1021);
+    thunk_sub_60909E64(a1 + 920);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
   }
@@ -63168,7 +63168,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5610 = MEMORY[0xCA5410];
       dword_60CA5614 = 12321336;
       dword_60CA5618 = MEMORY[0xCA5418];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA55C0);
     }
     v7[0] = 6;
@@ -63205,7 +63205,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA568C = (int)"N_Beat4BtnR_00";
       dword_60CA5690 = 12321336;
       dword_60CA5694 = (int)"N_Beat4BtnB_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA55C4);
     }
     v7[0] = 15;
@@ -63235,7 +63235,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA55E0 = (int)"P_RBtn_05";
       dword_60CA55E4 = 12321336;
       dword_60CA55E8 = (int)"P_Arrow_07";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA55C8);
     }
     v7[0] = 4;
@@ -63597,7 +63597,7 @@ static inline unsigned int uxtb16(unsigned int x)
               v6 = 0;
             a1[v6 + 916] = 1;
             sub_6047457C(a1 + 10, 0);
-            v8 = *(unsigned __int8 *)(sub_6047482C(a1 + 10, 0) + 50);
+            v8 = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 10, 0) + 50);
             sub_604E2228(a1);
             result = sub_6047572C((int)(a1 + 10), (_DWORD *)0xCA53F4, *v3, 0xEu, 0);
             if ( v8 == 1 )
@@ -63983,7 +63983,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13260556);
     return result;
@@ -64084,7 +64084,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_DWORD *)(MEMORY[0xC99DEC] + 508) == 1 )
@@ -64129,7 +64129,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13260684);
     return result;
@@ -64461,7 +64461,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13260972);
     return result;
@@ -64525,11 +64525,11 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604E36DC(_DWORD *a1)
   {
     *a1 = 12577304;
-    sub_6045C0A0(a1 + 5027);
-    sub_6045C0A0(a1 + 4926);
-    sub_6045C0A0(a1 + 4825);
-    sub_6045C0A0(a1 + 4724);
-    sub_6045C0A0(a1 + 4623);
+    thunk_sub_60909E64(a1 + 5027);
+    thunk_sub_60909E64(a1 + 4926);
+    thunk_sub_60909E64(a1 + 4825);
+    thunk_sub_60909E64(a1 + 4724);
+    thunk_sub_60909E64(a1 + 4623);
     sub_604BA75C(a1 + 3677);
     sub_604BA75C(a1 + 2752);
     sub_604BA75C(a1 + 1827);
@@ -64545,11 +64545,11 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_604E3770(_DWORD *a1)
   {
     *a1 = 12577304;
-    sub_6045C0A0(a1 + 5027);
-    sub_6045C0A0(a1 + 4926);
-    sub_6045C0A0(a1 + 4825);
-    sub_6045C0A0(a1 + 4724);
-    sub_6045C0A0(a1 + 4623);
+    thunk_sub_60909E64(a1 + 5027);
+    thunk_sub_60909E64(a1 + 4926);
+    thunk_sub_60909E64(a1 + 4825);
+    thunk_sub_60909E64(a1 + 4724);
+    thunk_sub_60909E64(a1 + 4623);
     sub_604BA75C(a1 + 3677);
     sub_604BA75C(a1 + 2752);
     sub_604BA75C(a1 + 1827);
@@ -64589,7 +64589,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5980 = MEMORY[0xCA56C0];
       dword_60CA5984 = 12321336;
       dword_60CA5988 = MEMORY[0xCA56C8];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5950);
     }
     v8[0] = 5;
@@ -64628,7 +64628,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5940 = (int)"N_1PPos_00";
       dword_60CA5944 = 12321336;
       dword_60CA5948 = (int)"N_ContinuePos_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5954);
     }
     v8[0] = 16;
@@ -64637,7 +64637,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA595C = 12321336;
       dword_60CA5960 = (int)"T_GameOver_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5958);
     }
     v8[0] = 1;
@@ -65220,7 +65220,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(_DWORD *)(a1 + 4556);
     if ( (v2 & 1) != 0 )
     {
-      v6 = sub_6047482C(*(_DWORD *)(a1 + 4), 5u);
+      v6 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 5u);
       v7 = v6;
       if ( v6 )
       {
@@ -65267,7 +65267,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v27 = 12321336;
       v28 = v9;
-      v14 = sub_6047467C(*(_DWORD **)(a1 + 4), 5u, &v27, (int)&dword_60CA5C48, 0);
+      v14 = ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 5u, &v27, (int)&dword_60CA5C48, 0);
     }
     else
     {
@@ -65287,7 +65287,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       v27 = 12321336;
       v28 = dword_60CA5A68;
-      v14 = sub_6047467C(*(_DWORD **)(a1 + 4), 5u, &v27, (int)&dword_60CA5C48, 0);
+      v14 = ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 5u, &v27, (int)&dword_60CA5C48, 0);
     }
     if ( v14 == 1 )
       *(_BYTE *)(a1 + 4560) = 1;
@@ -65407,7 +65407,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v6[0] = 12321336;
     v6[1] = dword_60CA5A80;
-    if ( sub_6047467C((_DWORD *)a1[1], 0xAu, v6, (int)&dword_60CA5C68, 0) == 1 && sub_6047482C(a1[1], 0xAu) )
+    if ( ArrayOf20_insertEntry((_DWORD *)a1[1], 0xAu, v6, (int)&dword_60CA5C68, 0) == 1
+      && ArrayOf20_getEntryPtr(a1[1], 0xAu) )
     {
       (*(void (__fastcall **)(_DWORD *))(v6[0] + 12))(v6);
       (*(void (__fastcall **)(_DWORD *))(v6[0] + 12))(v6);
@@ -65445,7 +65446,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v10; // t1
   
     v2 = dword_60CA5A80;
-    v3 = sub_6047482C(a1[1], 10);
+    v3 = ArrayOf20_getEntryPtr(a1[1], 10);
     if ( v3 )
     {
       v4 = *(_DWORD *)(v3 + 56);
@@ -66010,7 +66011,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_604E5DFC(a1);
         v16[0] = 12321336;
         v16[1] = dword_60CA5A68;
-        if ( sub_6047467C(*(_DWORD **)(a1 + 4), 5u, v16, (int)&dword_60CA5C48, 0) == 1 )
+        if ( ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 5u, v16, (int)&dword_60CA5C48, 0) == 1 )
           *(_BYTE *)(a1 + 4560) = 1;
         v11 = 13397388;
         if ( MEMORY[0xCC6D8C] )
@@ -66162,10 +66163,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v9 = 12321336;
     v10 = dword_60CA5A50;
-    result = sub_6047467C(*(_DWORD **)(a1 + 4), 0xBu, &v9, (int)&dword_60CA5C70, 0);
+    result = ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 0xBu, &v9, (int)&dword_60CA5C70, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(*(_DWORD *)(a1 + 4), 11);
+      result = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 11);
       v3 = result;
       if ( result )
       {
@@ -66492,10 +66493,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v8 = 12321336;
     v9 = dword_60CA5A58;
-    result = sub_6047467C(*(_DWORD **)(a1 + 4), 0xCu, &v8, (int)&dword_60CA5C78, 0);
+    result = ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 0xCu, &v8, (int)&dword_60CA5C78, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(*(_DWORD *)(a1 + 4), 12);
+      result = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 12);
       v3 = result;
       if ( result )
       {
@@ -66546,7 +66547,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5B20 = (int)"Pa_IconB_01";
       dword_60CA5B24 = 12321336;
       dword_60CA5B28 = (int)"Pa_IconB_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5AE0);
     }
     sub_60506F20(a1 + 4576, *(_DWORD *)(a1 + 4), &dword_60CA5B14);
@@ -66570,7 +66571,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5B38 = (int)"Pa_IconA_01";
       dword_60CA5B3C = 12321336;
       dword_60CA5B40 = (int)"Pa_IconA_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5AE8);
     }
     sub_60506F20(a1 + 15436, *(_DWORD *)(a1 + 4), &dword_60CA5B2C);
@@ -66596,7 +66597,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5B64 = (int)"Pa_VSIcon_02";
       dword_60CA5B68 = 12321336;
       dword_60CA5B6C = (int)"Pa_VSIcon_03";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5AE4);
     }
     sub_60506F20(a1 + 26296, *(_DWORD *)(a1 + 4), &dword_60CA5B50);
@@ -66623,7 +66624,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5B84 = (int)"Pa_Zanki3P_00";
       dword_60CA5B88 = 12321336;
       dword_60CA5B8C = (int)"Pa_Zanki4P_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5AEC);
     }
     sub_6050E38C(a1 + 44360, *(_DWORD *)(a1 + 4), &dword_60CA5B70);
@@ -66669,7 +66670,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     result = *v6;
     if ( result != MEMORY[0xB3BA34] )
-      return sub_6047467C(*(_DWORD **)(a1 + 4), 4u, &v5, (int)&dword_60CA5C40, 0);
+      return ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 4u, &v5, (int)&dword_60CA5C40, 0);
     return result;
   }
 
@@ -67019,7 +67020,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v48 = 12321336;
     v49 = MEMORY[0xC5CB34];
     sead::SafeStringBase<char>::operator=(&v48, &dword_60CA5AAC);
-    v4 = sub_6047482C(*(_DWORD *)(a1 + 4), 7);
+    v4 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 7);
     if ( v4 )
     {
       v5 = *(_DWORD *)(v4 + 56);
@@ -67048,10 +67049,10 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     v1 = 1.0;
-    sub_6047467C(*(_DWORD **)(a1 + 4), 7u, &v48, (int)&dword_60CA5C58, 0);
+    ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 7u, &v48, (int)&dword_60CA5C58, 0);
     *(_DWORD *)(a1 + 62864) = 0;
   LABEL_13:
-    v10 = sub_6047482C(*(_DWORD *)(a1 + 4), 7);
+    v10 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 7);
     v11 = v10;
     if ( !v10 )
       goto LABEL_35;
@@ -67116,7 +67117,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(int *)(MEMORY[0xC9A1E0] + 724) >= 1 )
     {
       sead::SafeStringBase<char>::operator=(&v48, &dword_60CA5AC4);
-      v24 = sub_6047482C(*(_DWORD *)(a1 + 4), 9);
+      v24 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 9);
       if ( v24 )
       {
         v25 = *(_DWORD *)(v24 + 56);
@@ -67141,13 +67142,13 @@ static inline unsigned int uxtb16(unsigned int x)
         }
       }
   LABEL_62:
-      sub_6047467C(*(_DWORD **)(a1 + 4), 9u, &v48, (int)&dword_60CA5C60, 1);
+      ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 9u, &v48, (int)&dword_60CA5C60, 1);
       goto LABEL_63;
     }
     if ( *(float *)(a1 + 62864) >= 100.0 )
     {
       sead::SafeStringBase<char>::operator=(&v48, &dword_60CA5ABC);
-      v31 = sub_6047482C(*(_DWORD *)(a1 + 4), 9);
+      v31 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 9);
       if ( v31 )
       {
         v32 = *(_DWORD *)(v31 + 56);
@@ -67173,7 +67174,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       goto LABEL_62;
     }
-    v29 = (_BYTE *)sub_6047482C(*(_DWORD *)(a1 + 4), 9);
+    v29 = (_BYTE *)ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 9);
     v30 = v29 == 0;
     if ( v29 )
       v30 = (v29[51] & 4) == 0;
@@ -67181,7 +67182,7 @@ static inline unsigned int uxtb16(unsigned int x)
       (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)v29 + 104))(v29);
   LABEL_63:
     sead::SafeStringBase<char>::operator=(&v48, &dword_60CA5AB4);
-    v36 = sub_6047482C(*(_DWORD *)(a1 + 4), 8);
+    v36 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 8);
     if ( v36 )
     {
       v37 = *(_DWORD *)(v36 + 56);
@@ -67205,9 +67206,9 @@ static inline unsigned int uxtb16(unsigned int x)
           goto LABEL_74;
       }
     }
-    sub_6047467C(*(_DWORD **)(a1 + 4), 8u, &v48, (int)&dword_60CA5C58, 1);
+    ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 8u, &v48, (int)&dword_60CA5C58, 1);
   LABEL_74:
-    result = sub_6047482C(*(_DWORD *)(a1 + 4), 8);
+    result = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 8);
     v41 = result;
     if ( result )
     {
@@ -67312,7 +67313,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v23 = 12321336;
     v12 = dword_60CA5AD0;
     v24 = dword_60CA5AD0;
-    v13 = sub_6047482C(*(_DWORD *)(a1 + 4), 13);
+    v13 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 13);
     if ( v13 )
     {
       v14 = *(_DWORD *)(v13 + 56);
@@ -67334,9 +67335,9 @@ static inline unsigned int uxtb16(unsigned int x)
           goto LABEL_32;
       }
     }
-    sub_6047467C(*(_DWORD **)(a1 + 4), 0xDu, &v23, (int)&dword_60CA5C80, 0);
+    ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 0xDu, &v23, (int)&dword_60CA5C80, 0);
   LABEL_32:
-    result = sub_6047482C(*(_DWORD *)(a1 + 4), 13);
+    result = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 13);
     v18 = (float *)result;
     if ( result )
     {
@@ -67426,7 +67427,7 @@ static inline unsigned int uxtb16(unsigned int x)
           || (result = *((unsigned __int8 *)&v24 + v4), result != 255) )
         {
           v7 = dword_60B03208[v4];
-          v8 = sub_6047482C(*(_DWORD *)(a1 + 4), v7);
+          v8 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), v7);
           if ( v8 )
           {
             v9 = *(_DWORD *)(v8 + 56);
@@ -67458,10 +67459,10 @@ static inline unsigned int uxtb16(unsigned int x)
           v14 = dword_60B031FC[v4];
           if ( v14 >= 0xD )
             v14 = 0;
-          result = sub_6047467C(*(_DWORD **)(a1 + 4), v7, &v26, (int)&dword_60CA5C20[2 * v14], 0);
+          result = ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), v7, &v26, (int)&dword_60CA5C20[2 * v14], 0);
           if ( result == 1 )
           {
-            result = sub_6047482C(*(_DWORD *)(a1 + 4), v7);
+            result = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), v7);
             v15 = result;
             if ( result )
             {
@@ -67539,7 +67540,7 @@ static inline unsigned int uxtb16(unsigned int x)
           return result;
         v12 = 12321336;
         v13 = dword_60CA5A70;
-        sub_6047467C(*(_DWORD **)(a1 + 4), 6u, &v12, (int)&dword_60CA5C50, 0);
+        ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 6u, &v12, (int)&dword_60CA5C50, 0);
         if ( (*(_BYTE *)(MEMORY[0xCC6D78] + 44) & 1) == 0 )
         {
           v8 = *(_DWORD **)(a1 + 62820);
@@ -67558,7 +67559,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v12 = 12321336;
           v13 = dword_60CA5A60;
-          sub_6047467C(*(_DWORD **)(a1 + 4), 0, &v12, (int)dword_60CA5C20, 0);
+          ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 0, &v12, (int)dword_60CA5C20, 0);
         }
       }
       *(_DWORD *)(a1 + 544) = v5;
@@ -67592,10 +67593,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v8 = 12321336;
     v9 = dword_60CA5A80;
-    result = sub_6047467C(*(_DWORD **)(a1 + 4), 0xAu, &v8, (int)&dword_60CA5C68, 0);
+    result = ArrayOf20_insertEntry(*(_DWORD **)(a1 + 4), 0xAu, &v8, (int)&dword_60CA5C68, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(*(_DWORD *)(a1 + 4), 10);
+      result = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 10);
       v3 = result;
       if ( result )
       {
@@ -67865,7 +67866,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA5AC8 = (int)"HyperBoost";
     dword_60CA5ACC = 12321336;
     dword_60CA5AD0 = (int)"FreeDigit";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA5C20[0] = 12321336;
     unk_60CA5C24 = "G_1UP_00";
     unk_60CA5C28 = 12321336;
@@ -67892,7 +67893,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA5C7C = (int)"G_Mode_00";
     dword_60CA5C80 = 12321336;
     dword_60CA5C84 = (int)"G_FreeDigit_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA5BD0 = 12321336;
     unk_60CA5BD4 = "N_Zanki1P_00";
     unk_60CA5BD8 = 12321336;
@@ -67911,10 +67912,10 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA5C0C = (int)"N_ScrollMeter_00";
     dword_60CA5C10 = 12321336;
     dword_60CA5C14 = (int)"N_VSPlayer_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA5B00 = 12321336;
     dword_60CA5B04 = (int)"P_CoinIcon_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA5B90 = 12321336;
     unk_60CA5B94 = "T_Score_00";
     unk_60CA5B98 = 12321336;
@@ -67929,7 +67930,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA5BBC = (int)"T_FreeTimer_00";
     dword_60CA5BC0 = 12321336;
     dword_60CA5BC4 = (int)"T_FreeTimer_01";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -68796,7 +68797,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1 + 4), 2u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 2u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 4536), 13262212);
     return result;
@@ -68850,7 +68851,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5FC4 = (int)"G_CoinLost_08";
       dword_60CA5FC8 = 12321336;
       dword_60CA5FCC = (int)"G_CoinLost_09";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5E9C);
     }
     v3 = sub_604746E4(a1[1], (_DWORD *)0xCA5CF4, &dword_60CA5F80[2 * (a1[1139] - a1[136])]);
@@ -68867,7 +68868,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1 + 4), 3u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 3u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 4536), 13262276);
     return result;
@@ -68922,7 +68923,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1 + 4), 5u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 5u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 4536), 13262340);
     return result;
@@ -68991,7 +68992,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6014 = (int)"G_EnemyLost_08";
       dword_60CA6018 = 12321336;
       dword_60CA601C = (int)"G_EnemyLost_09";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5EA0);
     }
     result = sub_604746E4(a1[1], (_DWORD *)0xCA5CFC, &dword_60CA5FD0[2 * (a1[1139] - a1[1138])]);
@@ -69008,7 +69009,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1 + 4), 4u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 4u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 4536), 13262404);
     return result;
@@ -69209,7 +69210,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5F6C = MEMORY[0xCA5D00];
       dword_60CA5F70 = 12321336;
       dword_60CA5F74 = MEMORY[0xCA5D08];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5E90);
     }
     v7 = *(_DWORD *)(a1 + 4);
@@ -69245,7 +69246,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5F1C = (int)"N_Timer_00";
       dword_60CA5F20 = 12321336;
       dword_60CA5F24 = (int)"N_Score_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5E94);
     }
     v3 = operator new[](28);
@@ -69278,7 +69279,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5EDC = (int)"T_UP_00";
       dword_60CA5EE0 = 12321336;
       dword_60CA5EE4 = (int)"T_Timer_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5E98);
     }
     v3 = operator new[](20);
@@ -69602,7 +69603,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA5EB4 = MEMORY[0xCA5CD0];
       dword_60CA5EB8 = 12321336;
       dword_60CA5EBC = MEMORY[0xCA5CC8];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA5EA4);
     }
     v5 = 0;
@@ -70207,7 +70208,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA611C = (int)"Pa_ArrowBtnR_00";
       dword_60CA6120 = 12321336;
       dword_60CA6124 = (int)"Pa_Close_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA60C0);
     }
     *(_DWORD *)(a1 + 16476) = sub_60502E60(a1 + 14396, &dword_60CA6110);
@@ -70222,7 +70223,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA613C = dword_60CA60F4;
       dword_60CA6140 = 12321336;
       dword_60CA6144 = dword_60CA60FC;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA60C4);
     }
     v10 = 3;
@@ -70240,7 +70241,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6154 = (int)"Pa_PackC_00";
       dword_60CA6158 = 12321336;
       dword_60CA615C = (int)"Pa_PackR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA60C8);
     }
     P_Page_00_ref(a1 + 36, a1 + 10808, &dword_60CA6148);
@@ -70254,7 +70255,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6104 = (int)"T_Text_00";
       dword_60CA6108 = 12321336;
       dword_60CA610C = (int)"T_PageNum_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA60CC);
     }
     v10 = 2;
@@ -70270,8 +70271,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605028F0(a1 + 14396, a1 + 16480, 1);
     sub_605029FC(a1 + 14396, a1 + 16484, "SE_SYS_BACK");
     sub_605028F0(a1 + 14396, a1 + 16484, 1);
-    *(_DWORD *)(sub_608DE61C(a1 + 14448, *v3) - *(_DWORD *)(a1 + 14460) + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(a1 + 14448, *v3) - *(_DWORD *)(a1 + 14460) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(a1 + 14448, *v3) - *(_DWORD *)(a1 + 14460) + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(a1 + 14448, *v3) - *(_DWORD *)(a1 + 14460) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     v7 = sub_604EC71C();
     HelpImage__02d_ref(a1, v7);
     sub_604ECAA8(a1, v7);
@@ -70469,7 +70470,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v7 = -1;
       if ( !is_mul_ok(0x18u, a2) )
         v7 = -1;
-      v8 = (_DWORD *)sub_608DE334(v7, 0, 4, 0);
+      v8 = (_DWORD *)Heap_allocate(v7, 0, 4, 0);
       if ( v8 )
       {
         *v8 = 24;
@@ -70513,7 +70514,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v19 = agl_TextureData_ref(v20);
         sub_60959954(v19, v18);
         sub_6098E0F8(v15, v20, 0);
-        result = sub_609175E4(&v21);
+        result = Object_releaseHandle(&v21);
         ++v14;
         v15 += 24;
       }
@@ -70558,7 +70559,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = -1;
       if ( !is_mul_ok(0xDD4u, a2) )
         v5 = -1;
-      v6 = (_DWORD *)sub_608DE334(v5, 0, 4, 0);
+      v6 = (_DWORD *)Heap_allocate(v5, 0, 4, 0);
       if ( v6 )
       {
         v7 = 3540 * a2;
@@ -70734,7 +70735,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( sub_60502D80(a1 + 3599) != 1 )
         return sub_604ED028(a1);
-      v3 = sub_608DE61C(a1 + 3612, a1[4119]);
+      v3 = List_getNthNode(a1 + 3612, a1[4119]);
       v4 = v3 == 0;
       if ( v3 )
       {
@@ -70743,7 +70744,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( !v4 && (*(_DWORD *)(v3 + 4) | 2) == 3 )
         return sub_6047459C(a1 + 2702, 1);
-      v5 = sub_608DE61C(a1 + 3612, a1[4120]);
+      v5 = List_getNthNode(a1 + 3612, a1[4120]);
       v6 = v5 == 0;
       if ( v5 )
       {
@@ -70818,7 +70819,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v10; // [sp+Ch] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 10808);
-    v3 = sub_6047482C(a1 + 10808, 1);
+    v3 = ArrayOf20_getEntryPtr(a1 + 10808, 1);
     v4 = v3 == 0;
     if ( v3 )
     {
@@ -70829,10 +70830,10 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9 = 12321336;
       v10 = "G_ArrowL_00";
-      sub_6047467C(v2, 1u, &dword_60CA60F8, (int)&v9, 1);
+      ArrayOf20_insertEntry(v2, 1u, &dword_60CA60F8, (int)&v9, 1);
       v1 = 0;
     }
-    result = sub_6047482C(v2, 2);
+    result = ArrayOf20_getEntryPtr(v2, 2);
     v6 = result == 0;
     if ( result )
     {
@@ -70843,7 +70844,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9 = 12321336;
       v10 = "G_ArrowR_00";
-      sub_6047467C(v2, 2u, &dword_60CA60F8, (int)&v9, 1);
+      ArrayOf20_insertEntry(v2, 2u, &dword_60CA60F8, (int)&v9, 1);
       sub_6047457C(v2, 1);
       v7 = v2;
       v8 = 2;
@@ -71072,7 +71073,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6190 = dword_60BFECB8;
       dword_60CA6194 = 12321336;
       dword_60CA6198 = dword_60BFECC0;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6160);
     }
     v10 = 3;
@@ -71081,7 +71082,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA616C = 12321336;
       dword_60CA6170 = (int)"P_Page_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6164);
     }
     v9 = 1;
@@ -71139,7 +71140,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6178 = dword_60BFECB0;
       dword_60CA617C = 12321336;
       dword_60CA6180 = dword_60BFECB8;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6168);
     }
     if ( a2 >= 2 )
@@ -71252,7 +71253,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA61A0 = 12321336;
       dword_60CA61A4 = dword_60BFECE4;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA619C);
     }
     v6 = 1;
@@ -71328,7 +71329,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13263392);
     return result;
@@ -71420,7 +71421,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13263296);
     return result;
@@ -71481,7 +71482,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12578032;
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 10832) = 0;
-    sub_6045C0A0((_DWORD *)(a1 + 10836));
+    thunk_sub_60909E64((_DWORD *)(a1 + 10836));
     sub_6050A4C4(a1 + 3616);
     sub_60475AE8(v2);
     return a1;
@@ -71498,7 +71499,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12578032;
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 10832) = 0;
-    sub_6045C0A0((_DWORD *)(a1 + 10836));
+    thunk_sub_60909E64((_DWORD *)(a1 + 10836));
     sub_6050A4C4(a1 + 3616);
     sub_60475AE8(v2);
     return operator delete(a1);
@@ -71520,7 +71521,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA62B0 = (int)"T_Text_00";
       dword_60CA62B4 = 12321336;
       dword_60CA62B8 = (int)"T_Text_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA62A4);
     }
     v4 = 2;
@@ -71558,7 +71559,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA62D8 = MEMORY[0xCA61B4];
       dword_60CA62DC = 12321336;
       dword_60CA62E0 = MEMORY[0xCA61BC];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA62A0);
     }
     v5 = 3;
@@ -71696,7 +71697,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CA62C0 = (int)"FreeInfoWindow_Text_00";
         dword_60CA62C4 = 12321336;
         dword_60CA62C8 = (int)"ChallengeInfoWindow_Text_00";
-        sub_60000288();
+        stub_return0_000288();
         v3 = _cxa_guard_release_0(&unk_60CA62A8);
       }
     }
@@ -71934,7 +71935,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     _DWORD *v3; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 42520, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 42520, 0) + 51);
     if ( (result & 1) != 0 )
     {
       v3 = (_DWORD *)(a1 + 42504);
@@ -72468,19 +72469,19 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1;
     v2 = (int)(a1 + 11535);
-    v3 = sub_608DE61C((int)(a1 + 11535), 1);
+    v3 = List_getNthNode((int)(a1 + 11535), 1);
     v4 = v1[11538];
     v1 += 11538;
     *(_BYTE *)(v3 - v4 + 188) = 1;
-    *(_BYTE *)(sub_608DE61C(v2, 2) - *v1 + 188) = 1;
-    *(_BYTE *)(sub_608DE61C(v2, 3) - *v1 + 188) = 1;
-    *(_BYTE *)(sub_608DE61C(v2, 4) - *v1 + 188) = 1;
-    *(_BYTE *)(sub_608DE61C(v2, 5) - *v1 + 188) = 1;
-    *(_BYTE *)(sub_608DE61C(v2, 6) - *v1 + 188) = 1;
-    *(_BYTE *)(sub_608DE61C(v2, 7) - *v1 + 188) = 1;
-    *(_BYTE *)(sub_608DE61C(v2, 8) - *v1 + 188) = 1;
-    *(_BYTE *)(sub_608DE61C(v2, 9) - *v1 + 188) = 1;
-    *(_BYTE *)(sub_608DE61C(v2, 10) - *v1 + 188) = 1;
+    *(_BYTE *)(List_getNthNode(v2, 2) - *v1 + 188) = 1;
+    *(_BYTE *)(List_getNthNode(v2, 3) - *v1 + 188) = 1;
+    *(_BYTE *)(List_getNthNode(v2, 4) - *v1 + 188) = 1;
+    *(_BYTE *)(List_getNthNode(v2, 5) - *v1 + 188) = 1;
+    *(_BYTE *)(List_getNthNode(v2, 6) - *v1 + 188) = 1;
+    *(_BYTE *)(List_getNthNode(v2, 7) - *v1 + 188) = 1;
+    *(_BYTE *)(List_getNthNode(v2, 8) - *v1 + 188) = 1;
+    *(_BYTE *)(List_getNthNode(v2, 9) - *v1 + 188) = 1;
+    *(_BYTE *)(List_getNthNode(v2, 10) - *v1 + 188) = 1;
     sub_60478680((int)"SE_SYS_INVALID", 9);
     result = v1[7072];
     *(_BYTE *)(result + 64) &= ~1u;
@@ -72512,19 +72513,19 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1;
     v2 = (int)(a1 + 11535);
-    v3 = sub_608DE61C((int)(a1 + 11535), 1);
+    v3 = List_getNthNode((int)(a1 + 11535), 1);
     v4 = v1[11538];
     v1 += 11538;
     *(_BYTE *)(v3 - v4 + 188) = 0;
-    *(_BYTE *)(sub_608DE61C(v2, 2) - *v1 + 188) = 0;
-    *(_BYTE *)(sub_608DE61C(v2, 3) - *v1 + 188) = 0;
-    *(_BYTE *)(sub_608DE61C(v2, 4) - *v1 + 188) = 0;
-    *(_BYTE *)(sub_608DE61C(v2, 5) - *v1 + 188) = 0;
-    *(_BYTE *)(sub_608DE61C(v2, 6) - *v1 + 188) = 0;
-    *(_BYTE *)(sub_608DE61C(v2, 7) - *v1 + 188) = 0;
-    *(_BYTE *)(sub_608DE61C(v2, 8) - *v1 + 188) = 0;
-    *(_BYTE *)(sub_608DE61C(v2, 9) - *v1 + 188) = 0;
-    result = sub_608DE61C(v2, 10) - *v1;
+    *(_BYTE *)(List_getNthNode(v2, 2) - *v1 + 188) = 0;
+    *(_BYTE *)(List_getNthNode(v2, 3) - *v1 + 188) = 0;
+    *(_BYTE *)(List_getNthNode(v2, 4) - *v1 + 188) = 0;
+    *(_BYTE *)(List_getNthNode(v2, 5) - *v1 + 188) = 0;
+    *(_BYTE *)(List_getNthNode(v2, 6) - *v1 + 188) = 0;
+    *(_BYTE *)(List_getNthNode(v2, 7) - *v1 + 188) = 0;
+    *(_BYTE *)(List_getNthNode(v2, 8) - *v1 + 188) = 0;
+    *(_BYTE *)(List_getNthNode(v2, 9) - *v1 + 188) = 0;
+    result = List_getNthNode(v2, 10) - *v1;
     *(_BYTE *)(result + 188) = 0;
     return result;
   }
@@ -72636,7 +72637,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 42520, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 42520, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 42504), 13264096);
     return result;
@@ -72670,7 +72671,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 42520, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 42520, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 42504), 13263840);
     return result;
@@ -73085,91 +73086,91 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (struct sead_IDisposer *)(a1 + 17766);
     a1[18487] = 12325992;
     v4 = (struct sead_IDisposer *)(a1 + 18487);
-    sub_60237560((int)(a1 + 18487));
+    EffectData_release((int)(a1 + 18487));
     sead::IDisposer::~IDisposer(v4);
     a1[18461] = 12325992;
-    sub_60237560((int)(a1 + 18461));
+    EffectData_release((int)(a1 + 18461));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 18461));
-    sub_6045C0A0(a1 + 18298);
-    sub_6045C0A0(a1 + 18197);
-    sub_6045C0A0(a1 + 18096);
-    sub_6045C0A0(a1 + 17995);
-    sub_6045C0A0(v2);
+    thunk_sub_60909E64(a1 + 18298);
+    thunk_sub_60909E64(a1 + 18197);
+    thunk_sub_60909E64(a1 + 18096);
+    thunk_sub_60909E64(a1 + 17995);
+    thunk_sub_60909E64(v2);
     sub_60026BFC(a1 + 17780);
     sead::IDisposer::~IDisposer(v3);
     a1[17019] = 12556340;
     a1[17740] = 12325992;
-    sub_60237560((int)(a1 + 17740));
+    EffectData_release((int)(a1 + 17740));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 17740));
     a1[17714] = 12325992;
-    sub_60237560((int)(a1 + 17714));
+    EffectData_release((int)(a1 + 17714));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 17714));
-    sub_6045C0A0(a1 + 17551);
-    sub_6045C0A0(a1 + 17450);
-    sub_6045C0A0(a1 + 17349);
-    sub_6045C0A0(a1 + 17248);
-    sub_6045C0A0(a1 + 17147);
+    thunk_sub_60909E64(a1 + 17551);
+    thunk_sub_60909E64(a1 + 17450);
+    thunk_sub_60909E64(a1 + 17349);
+    thunk_sub_60909E64(a1 + 17248);
+    thunk_sub_60909E64(a1 + 17147);
     sub_60026BFC(a1 + 17033);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 17019));
     a1[16272] = 12556340;
     a1[16993] = 12325992;
-    sub_60237560((int)(a1 + 16993));
+    EffectData_release((int)(a1 + 16993));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16993));
     a1[16967] = 12325992;
-    sub_60237560((int)(a1 + 16967));
+    EffectData_release((int)(a1 + 16967));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16967));
-    sub_6045C0A0(a1 + 16804);
-    sub_6045C0A0(a1 + 16703);
-    sub_6045C0A0(a1 + 16602);
-    sub_6045C0A0(a1 + 16501);
-    sub_6045C0A0(a1 + 16400);
+    thunk_sub_60909E64(a1 + 16804);
+    thunk_sub_60909E64(a1 + 16703);
+    thunk_sub_60909E64(a1 + 16602);
+    thunk_sub_60909E64(a1 + 16501);
+    thunk_sub_60909E64(a1 + 16400);
     sub_60026BFC(a1 + 16286);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16272));
     a1[15525] = 12556340;
     a1[16246] = 12325992;
-    sub_60237560((int)(a1 + 16246));
+    EffectData_release((int)(a1 + 16246));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16246));
     a1[16220] = 12325992;
-    sub_60237560((int)(a1 + 16220));
+    EffectData_release((int)(a1 + 16220));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 16220));
-    sub_6045C0A0(a1 + 16057);
-    sub_6045C0A0(a1 + 15956);
-    sub_6045C0A0(a1 + 15855);
-    sub_6045C0A0(a1 + 15754);
-    sub_6045C0A0(a1 + 15653);
+    thunk_sub_60909E64(a1 + 16057);
+    thunk_sub_60909E64(a1 + 15956);
+    thunk_sub_60909E64(a1 + 15855);
+    thunk_sub_60909E64(a1 + 15754);
+    thunk_sub_60909E64(a1 + 15653);
     sub_60026BFC(a1 + 15539);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15525));
     a1[14778] = 12556340;
     a1[15499] = 12325992;
-    sub_60237560((int)(a1 + 15499));
+    EffectData_release((int)(a1 + 15499));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15499));
     a1[15473] = 12325992;
-    sub_60237560((int)(a1 + 15473));
+    EffectData_release((int)(a1 + 15473));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 15473));
-    sub_6045C0A0(a1 + 15310);
-    sub_6045C0A0(a1 + 15209);
-    sub_6045C0A0(a1 + 15108);
-    sub_6045C0A0(a1 + 15007);
-    sub_6045C0A0(a1 + 14906);
+    thunk_sub_60909E64(a1 + 15310);
+    thunk_sub_60909E64(a1 + 15209);
+    thunk_sub_60909E64(a1 + 15108);
+    thunk_sub_60909E64(a1 + 15007);
+    thunk_sub_60909E64(a1 + 14906);
     sub_60026BFC(a1 + 14792);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14778));
     a1[14031] = 12556340;
     a1[14752] = 12325992;
-    sub_60237560((int)(a1 + 14752));
+    EffectData_release((int)(a1 + 14752));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14752));
     a1[14726] = 12325992;
-    sub_60237560((int)(a1 + 14726));
+    EffectData_release((int)(a1 + 14726));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14726));
-    sub_6045C0A0(a1 + 14563);
-    sub_6045C0A0(a1 + 14462);
-    sub_6045C0A0(a1 + 14361);
-    sub_6045C0A0(a1 + 14260);
-    sub_6045C0A0(a1 + 14159);
+    thunk_sub_60909E64(a1 + 14563);
+    thunk_sub_60909E64(a1 + 14462);
+    thunk_sub_60909E64(a1 + 14361);
+    thunk_sub_60909E64(a1 + 14260);
+    thunk_sub_60909E64(a1 + 14159);
     sub_60026BFC(a1 + 14045);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 14031));
     sub_6050A4C4(a1 + 12227);
     sub_60026BFC(a1 + 12147);
-    sub_6045C0A0(a1 + 12046);
+    thunk_sub_60909E64(a1 + 12046);
     sub_605021B0(a1 + 11522);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 10630));
     sub_6047643C((struct sead_IDisposer *)(a1 + 9736));
@@ -73226,7 +73227,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA65A0 = 12321336;
       dword_60CA65A4 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6594);
     }
     v12 = 1;
@@ -73235,7 +73236,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA65A8 = 12321336;
       dword_60CA65AC = (int)"T_InvalidItem_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6598);
     }
     v11 = 1;
@@ -73317,7 +73318,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA65FC = MEMORY[0xCA6300];
       dword_60CA6600 = 12321336;
       dword_60CA6604 = MEMORY[0xCA6308];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6580);
     }
     v7 = 5;
@@ -73349,21 +73350,21 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(v2, &unk_60B03214, "SE_SYS_BACK");
     sub_605028F0(v2, &unk_60B03214, 1);
     v3 = v1 + 11535;
-    v4 = sub_608DE61C(v1 + 11535, 0);
+    v4 = List_getNthNode(v1 + 11535, 0);
     v5 = v1[11538];
     v1 += 11538;
     *(_DWORD *)(v4 - v5 + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(v3, 0) - *v1 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    *(_DWORD *)(sub_608DE61C(v3, 1) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 2) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 3) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 4) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 5) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 6) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 7) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 8) - *v1 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v3, 9) - *v1 + 192) = 0;
-    result = sub_608DE61C(v3, 10) - *v1;
+    *(_DWORD *)(List_getNthNode(v3, 0) - *v1 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(v3, 1) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 2) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 3) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 4) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 5) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 6) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 7) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 8) - *v1 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v3, 9) - *v1 + 192) = 0;
+    result = List_getNthNode(v3, 10) - *v1;
     *(_DWORD *)(result + 192) = 0;
     return result;
   }
@@ -73389,7 +73390,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA65C0 = MEMORY[0xCA62E8];
       dword_60CA65C4 = 12321336;
       dword_60CA65C8 = MEMORY[0xCA6300];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6584);
     }
     if ( ((unsigned int)&unk_60CA6588 & ~(1615795464 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA6588) )
@@ -73414,7 +73415,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA664C = MEMORY[0xCA6358];
       dword_60CA6650 = 12321336;
       dword_60CA6654 = MEMORY[0xCA6360];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6588);
     }
     sub_604734E4((_DWORD *)(a1 + 4), 0);
@@ -73471,7 +73472,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA66AC = (int)"N_Pos4P_03";
       dword_60CA66B0 = 12321336;
       dword_60CA66B4 = (int)"N_MessageWin_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA658C);
     }
     v4 = 11;
@@ -73493,7 +73494,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA65D0 = (int)"P_ItemIcon_00";
       dword_60CA65D4 = 12321336;
       dword_60CA65D8 = (int)"P_Base_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6590);
     }
     v4 = 2;
@@ -73791,7 +73792,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA6714 = (int)"Pa_Item_09";
     dword_60CA6718 = 12321336;
     dword_60CA671C = (int)"Pa_Cancel_00";
-    sub_60000288();
+    stub_return0_000288();
     MEMORY[0xCA62E4] = 12321336;
     MEMORY[0xCA62E8] = "In";
     MEMORY[0xCA62EC] = 12321336;
@@ -74473,7 +74474,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA678C = MEMORY[0xCA6330];
       dword_60CA6790 = 12321336;
       dword_60CA6794 = MEMORY[0xCA6360];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA659C);
     }
     v7 = &dword_60CA6720[2 * a3];
@@ -74810,7 +74811,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13264956);
     return result;
@@ -74905,7 +74906,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13264892);
     return result;
@@ -74944,7 +74945,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_DWORD *)(a1 + 9644) )
@@ -75123,7 +75124,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13265212);
     return result;
@@ -75489,7 +75490,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1[1784];
     if ( v2 < 0xA )
     {
-      result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1[2407] + 4 * v2), 1u) + 51);
+      result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1[2407] + 4 * v2), 1u) + 51);
       if ( (result & 1) == 0 )
         return result;
       return StateMgr::changeState(a1 + 6, 13265276);
@@ -75497,7 +75498,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = v2 - 10;
     if ( v3 >= 5 )
       v3 = 0;
-    result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1[2408] + 4 * v3), 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1[2408] + 4 * v3), 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState(a1 + 6, 13265276);
     return result;
@@ -75555,7 +75556,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
     sub_60473B58(v2, 0xEu, 0);
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13265340);
     return result;
@@ -75754,7 +75755,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
     sub_60473B58(v2, 0xEu, 0);
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
       *(_BYTE *)(a1 + 8591) = 0;
@@ -75842,7 +75843,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(_DWORD **)(a1 + 9636);
     sub_6050229C((int)(v2 + 930));
     sub_60473B58(v2, 0xEu, 0);
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13265212);
     return result;
@@ -75930,7 +75931,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_WORD *)(a1 + 7140) = 0;
     sub_605021B0(a1 + 7548);
-    sub_6045C0A0(a1 + 7144);
+    thunk_sub_60909E64(a1 + 7144);
     sub_6047643C((struct sead_IDisposer *)(a1 + 3596));
     sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return a1;
@@ -75960,7 +75961,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *(_WORD *)(a1 + 7140) = 0;
     sub_605021B0(a1 + 7548);
-    sub_6045C0A0((_DWORD *)(a1 + 7144));
+    thunk_sub_60909E64((_DWORD *)(a1 + 7144));
     sub_6047643C((struct sead_IDisposer *)(a1 + 3596));
     sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
     return operator delete(a1);
@@ -75992,7 +75993,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6CE4 = MEMORY[0xCA67F0];
       dword_60CA6CE8 = 12321336;
       dword_60CA6CEC = MEMORY[0xCA67F8];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6C60);
     }
     v12 = 2;
@@ -76053,7 +76054,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6CF4 = (int)"ItemStock.bflyt";
       dword_60CA6CF8 = 12321336;
       dword_60CA6CFC = (int)"ItemStockDL.bflyt";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6C68);
     }
     v3 = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
@@ -76080,7 +76081,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6DC4 = MEMORY[0xCA67D8];
       dword_60CA6DC8 = 12321336;
       dword_60CA6DCC = MEMORY[0xCA67E0];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6C6C);
     }
     v6[0] = 8;
@@ -76325,7 +76326,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCA6B28] = "TouchCheckOnOff";
     MEMORY[0xCA6B2C] = 12321336;
     MEMORY[0xCA6B30] = "Loop";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -76345,7 +76346,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6D04 = (int)"T_DelItem_00";
       dword_60CA6D08 = 12321336;
       dword_60CA6D0C = (int)"T_AddItem_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6C70);
     }
     v5 = 2;
@@ -76360,7 +76361,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CA6D14 = (int)"ItemStock_DelItem_00";
         dword_60CA6D18 = 12321336;
         dword_60CA6D1C = (int)"ItemStock_DelItem_01";
-        sub_60000288();
+        stub_return0_000288();
         return _cxa_guard_release_0(&unk_60CA6C74);
       }
     }
@@ -76409,7 +76410,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6E8C = (int)"Pa_NewItem_03";
       dword_60CA6E90 = 12321336;
       dword_60CA6E94 = (int)"Pa_NewItem_04";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6C78);
     }
     v5 = 0;
@@ -77427,7 +77428,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v19 = 13;
     sub_60474848(a1, (_DWORD *)0xCA6ACC, &v19);
     sub_60473DE4((_DWORD *)a1, 2u, (_DWORD *)0xCA6AC4, 1);
-    v6 = sub_6047482C(a1, 2);
+    v6 = ArrayOf20_getEntryPtr(a1, 2);
     v7 = (struct sead_Random *)MEMORY[0xCCF4E4];
     v8 = sub_608502E4(v6);
     *(float *)(v6 + 16) = (float)(int)(((unsigned int)sead::Random::getU32(v7) * (unsigned __int64)(unsigned int)v8) >> 32);
@@ -77514,9 +77515,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( *(_DWORD *)(a1 + 3508) > 1u )
       v3 += 5;
     (*(void (__fastcall **)(_DWORD))(*(_DWORD *)*v3 + 104))(*v3);
-    v4 = sub_6047482C(a1, 1);
+    v4 = ArrayOf20_getEntryPtr(a1, 1);
     (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 20))(v4);
-    v5 = sub_6047482C(a1, 1);
+    v5 = ArrayOf20_getEntryPtr(a1, 1);
     return (*(int (__fastcall **)(int))(*(_DWORD *)v5 + 12))(v5);
   }
 
@@ -77563,7 +77564,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6E14 = (int)"Pa_Item_08";
       dword_60CA6E18 = 12321336;
       dword_60CA6E1C = (int)"Pa_Item_09";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6C8C);
     }
     v5 = operator new(3600);
@@ -77635,7 +77636,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6D5C = (int)"Pa_NewItem_03";
       dword_60CA6D60 = 12321336;
       dword_60CA6D64 = (int)"Pa_NewItem_04";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6C90);
     }
     v5 = sub_60473B4C(a2);
@@ -77700,7 +77701,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6D84 = (int)"N_NewItemPos4_00";
       off_60CA6D88 = (_UNKNOWN *)12321336;
       dword_60CA6D8C = (int)"N_NewItemPos5_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6C98);
     }
     v24 = *(int (__fastcall **)(int, int, int))(*(_DWORD *)v5 + 48);
@@ -77824,7 +77825,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6D24 = (int)"ItemStockConfirm.bflyt";
       dword_60CA6D28 = 12321336;
       dword_60CA6D2C = (int)"ItemStockConfirmDL.bflyt";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6C9C);
     }
     v3 = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
@@ -77879,7 +77880,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6BA8 = (int)"N_DelItemPos5_03";
       dword_60CA6BAC = 12321336;
       dword_60CA6BB0 = (int)"N_DelItemPos5_04";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6BB4);
     }
     v4 = 16;
@@ -77937,7 +77938,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6C4C = (int)"P_PNutKinoko_01";
       dword_60CA6C50 = 12321336;
       dword_60CA6C54 = (int)"P_PeachCrown_01";
-      sub_60000288(nullsub_6781_0, 0, 12320768);
+      stub_return0_000288(nullsub_6781_0, 0, 12320768);
       _cxa_guard_release_0(&unk_60CA6C58);
     }
     v4 = 20;
@@ -77959,7 +77960,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA6D34 = (int)"Pa_BtnL_00";
       dword_60CA6D38 = 12321336;
       dword_60CA6D3C = (int)"Pa_BtnR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA6CA0);
     }
     v4[0] = 2;
@@ -78296,7 +78297,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
       *(_BYTE *)(a1 + 3688) = 1;
@@ -78323,7 +78324,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     *(_DWORD *)(a1 + 4108) = 60;
-    result = sub_6047482C(a1 + 40, 2u);
+    result = ArrayOf20_getEntryPtr(a1 + 40, 2u);
     if ( result )
       return (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)result + 16))(result, 0);
     return result;
@@ -78549,7 +78550,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
       *(_BYTE *)(a1 + 3688) = 1;
@@ -78644,7 +78645,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     *(_BYTE *)(a1 + 3686) = 0;
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 2u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 2u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13266932);
     return result;
@@ -78698,7 +78699,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 2u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 2u) + 51);
     if ( (result & 1) != 0 )
     {
       *(_BYTE *)(a1 + 3689) = 1;
@@ -78782,7 +78783,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12578444;
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3684) = 0;
-    sub_6045C0A0(a1 + 3692);
+    thunk_sub_60909E64(a1 + 3692);
     sub_60475AE8(v2);
     return a1;
   }
@@ -78798,7 +78799,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12578444;
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3684) = 0;
-    sub_6045C0A0((_DWORD *)(a1 + 3692));
+    thunk_sub_60909E64((_DWORD *)(a1 + 3692));
     sub_60475AE8(v2);
     return operator delete(a1);
   }
@@ -78820,7 +78821,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7034 = (int)"T_Kinopio_00";
       dword_60CA7038 = 12321336;
       dword_60CA703C = (int)"T_Kinopio_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA702C);
     }
     v4 = 2;
@@ -78859,7 +78860,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7094 = MEMORY[0xCA6EC8];
       dword_60CA7098 = 12321336;
       dword_60CA709C = MEMORY[0xCA6ED0];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7024);
     }
     v4[0] = 6;
@@ -78884,7 +78885,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7064 = (int)"N_Sign_00";
       dword_60CA7068 = 12321336;
       dword_60CA706C = (int)"N_W9Win_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7028);
     }
     v4 = 3;
@@ -78922,7 +78923,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA704C = (int)"Pa_KeyAssign_01";
       dword_60CA7050 = 12321336;
       dword_60CA7054 = (int)"Pa_KeyAssign_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7020);
     }
     v3 = operator new(7216);
@@ -79263,11 +79264,11 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 40012) = 0;
       *(_BYTE *)(a1 + 40013) = 0;
       sub_604742D0((_DWORD *)(a1 + 31900), 2u, (_DWORD *)0xCA70A0, *(_DWORD *)(a1 + 39788), 0);
-      v3 = sub_6047482C(a1 + 31900, 2u);
+      v3 = ArrayOf20_getEntryPtr(a1 + 31900, 2u);
       if ( v3 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 104))(v3);
       sub_604742D0((_DWORD *)(a1 + 31900), 3u, (_DWORD *)0xCA70A0, *(_DWORD *)(a1 + 39792), 0);
-      v4 = sub_6047482C(a1 + 31900, 3u);
+      v4 = ArrayOf20_getEntryPtr(a1 + 31900, 3u);
       if ( v4 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 104))(v4);
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13267192);
@@ -79362,7 +79363,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = (_DWORD *)(a1 + 31900);
     sub_60473DE4((_DWORD *)(a1 + 31900), 1u, (_DWORD *)0xCA70B8, 0);
-    v3 = sub_6047482C((int)v2, 1u);
+    v3 = ArrayOf20_getEntryPtr((int)v2, 1u);
     v4 = (int *)v3;
     if ( v3 )
     {
@@ -79398,7 +79399,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
     }
     sub_60473DE4(v2, 0, (_DWORD *)0xCA70A8, 0);
-    v10 = sub_6047482C((int)v2, 0);
+    v10 = ArrayOf20_getEntryPtr((int)v2, 0);
     if ( v10 )
       (*(void (__fastcall **)(int))(*(_DWORD *)v10 + 104))(v10);
     v29 = (_DWORD *)(a1 + 40080);
@@ -79951,7 +79952,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 31900, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 31900, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13267192);
     return result;
@@ -80295,11 +80296,11 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_604FC4A0(_DWORD *a1)
   {
     *a1 = 12578572;
-    sub_6045C0A0(a1 + 9846);
-    sub_6045C0A0(a1 + 9745);
-    sub_6045C0A0(a1 + 9644);
-    sub_6045C0A0(a1 + 9543);
-    sub_6045C0A0(a1 + 9442);
+    thunk_sub_60909E64(a1 + 9846);
+    thunk_sub_60909E64(a1 + 9745);
+    thunk_sub_60909E64(a1 + 9644);
+    thunk_sub_60909E64(a1 + 9543);
+    thunk_sub_60909E64(a1 + 9442);
     sub_605021B0(a1 + 8877);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 7975));
     sub_6047643C((struct sead_IDisposer *)(a1 + 7090));
@@ -80383,7 +80384,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7334 = MEMORY[0xCA70B4];
       dword_60CA7338 = 12321336;
       dword_60CA733C = MEMORY[0xCA70BC];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA72A0);
     }
     v6 = a1 + 35508;
@@ -80403,10 +80404,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(v6, &unk_60B035AC, "SE_SYS_PAGE");
     sub_605028F0(v6, &unk_60B035AC, 1);
     v18 = a1;
-    *(_DWORD *)(sub_608DE61C(a1 + 35560, 18) - *(_DWORD *)(a1 + 35572) + 184) = "SE_SYS_PAGE";
+    *(_DWORD *)(List_getNthNode(a1 + 35560, 18) - *(_DWORD *)(a1 + 35572) + 184) = "SE_SYS_PAGE";
     sub_605029FC(v6, &unk_60B035B0, "SE_SYS_PAGE");
     sub_605028F0(v6, &unk_60B035B0, 1);
-    v8 = sub_608DE61C(a1 + 35560, 19);
+    v8 = List_getNthNode(a1 + 35560, 19);
     v9 = *(_DWORD *)(a1 + 35572);
     v10 = 0;
     *(_DWORD *)(v8 - v9 + 184) = "SE_SYS_PAGE";
@@ -80435,7 +80436,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA72E8 = MEMORY[0xCA70C4];
       dword_60CA72EC = 12321336;
       dword_60CA72F0 = MEMORY[0xCA70CC];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA72A4);
     }
     v12 = (_DWORD *)(v18 + 40);
@@ -80464,7 +80465,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6045BF58(v18 + 39384, 4);
     sub_609094C4(v18 + 39384, 240, v14, v15);
     *(_DWORD *)(v18 + 40076) = v17;
-    result = sub_608DE334(440, 0, 4, 0);
+    result = Heap_allocate(440, 0, 4, 0);
     if ( result )
     {
       *(_DWORD *)result = 24;
@@ -80683,7 +80684,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA72C4 = 12321336;
       dword_60CA72C8 = (int)"N_MiiSelect_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA72A8);
     }
     v12 = 1;
@@ -80730,7 +80731,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA728C = (int)"Pa_ArrowBtnL_00";
       dword_60CA7290 = 12321336;
       dword_60CA7294 = (int)"Pa_ArrowBtnR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA72AC);
     }
     v12 = 20;
@@ -80741,7 +80742,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA72F8 = (int)"P_ArrowL_00";
       dword_60CA72FC = 12321336;
       dword_60CA7300 = (int)"P_ArrowR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA72B0);
     }
     v12 = 2;
@@ -80750,7 +80751,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA72CC = 12321336;
       dword_60CA72D0 = (int)"P_MiiIcon_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA72B4);
     }
     v6 = 0;
@@ -80767,7 +80768,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA72D4 = 12321336;
       dword_60CA72D8 = (int)"T_Page_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA72B8);
     }
     v12 = 1;
@@ -80778,7 +80779,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7308 = (int)"G_ArrowL_00";
       dword_60CA730C = 12321336;
       dword_60CA7310 = (int)"G_ArrowR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA72BC);
     }
     *(_DWORD *)(a1 + 39788) = -1;
@@ -80791,7 +80792,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA72DC = 12321336;
       dword_60CA72E0 = (int)"B_Arrow_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA72C0);
     }
     v12 = 1;
@@ -80955,7 +80956,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = a1 + 35508;
     sub_60502B04(a1 + 35508, 11548068, 1);
     sub_60502B04(a1 + 35508, 11548072, 1);
-    v8 = sub_6047482C(a1 + 31900, 1);
+    v8 = ArrayOf20_getEntryPtr(a1 + 31900, 1);
     v9 = v8;
     if ( v8 )
     {
@@ -81123,7 +81124,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v8 == *(unsigned __int8 *)(result + 1) )
           goto LABEL_14;
         *(_BYTE *)(result + 1) = v8;
-        result = sub_608DE61C(v10, dword_60B035D8[v4 % 9]);
+        result = List_getNthNode(v10, dword_60B035D8[v4 % 9]);
         if ( v8 )
         {
           if ( !result )
@@ -81196,7 +81197,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = (int *)(a1 + 35572);
       do
       {
-        v6 = sub_608DE61C(a1 + 35560, dword_60B036B0[v4++]);
+        v6 = List_getNthNode(a1 + 35560, dword_60B036B0[v4++]);
         *(_DWORD *)(v6 - *v5 + 192) = 0;
       }
       while ( v4 != 18 );
@@ -81604,9 +81605,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = sub_604746E4(a1 + 2140, &off_60CA7420, &dword_60CA7428);
     if ( v3 != -1 )
       sub_604742D0(v2, 0, &off_60CA7420, v3, 0);
-    if ( sub_6047482C((int)v2, 0) )
+    if ( ArrayOf20_getEntryPtr((int)v2, 0) )
     {
-      v4 = sub_6047482C((int)v2, 0);
+      v4 = ArrayOf20_getEntryPtr((int)v2, 0);
       (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 108))(v4);
     }
     *(_WORD *)(a1 + 16012) = 0;
@@ -81629,9 +81630,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = sub_604746E4((int)(a1 + 535), &off_60CA7420, &dword_60CA7428);
     if ( v3 != -1 )
       sub_604742D0(v2, 0, &off_60CA7420, v3, 0);
-    if ( sub_6047482C((int)v2, 0) )
+    if ( ArrayOf20_getEntryPtr((int)v2, 0) )
     {
-      v4 = sub_6047482C((int)v2, 0);
+      v4 = ArrayOf20_getEntryPtr((int)v2, 0);
       (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 108))(v4);
     }
     result = a1[3735];
@@ -81682,7 +81683,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r3
     int result; // r0
   
-    v2 = sub_6047482C(a1 + 2140, 0);
+    v2 = ArrayOf20_getEntryPtr(a1 + 2140, 0);
     v3 = v2;
     if ( v2 )
     {
@@ -81798,7 +81799,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = sub_604746E4(a1 + 2140, &off_60CA7420, &dword_60CA7428);
     if ( v2 != -1 )
       sub_604742D0(v1, 0, &off_60CA7420, v2, 0);
-    sub_6047482C((int)v1, 0);
+    ArrayOf20_getEntryPtr((int)v1, 0);
     return sub_6080A310(MEMORY[0xCC6AF8], 40, 1000);
   }
 
@@ -81816,7 +81817,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r3
     int result; // r0
   
-    v2 = sub_6047482C(a1 + 2140, 0);
+    v2 = ArrayOf20_getEntryPtr(a1 + 2140, 0);
     v3 = v2;
     if ( v2 )
     {
@@ -81972,7 +81973,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA744C = dword_60CA741C;
       dword_60CA7450 = 12321336;
       dword_60CA7454 = dword_60CA7424;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA73F4);
     }
     v11[0] = 2;
@@ -82016,7 +82017,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA74AC = (int)"N_CopyRight_00";
       dword_60CA74B0 = 12321336;
       dword_60CA74B4 = (int)"N_EndPosition_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA73F8);
     }
     v12 = 9;
@@ -82034,7 +82035,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA745C = (int)"T_Heading_00";
       dword_60CA7460 = 12321336;
       dword_60CA7464 = (int)"T_CopyRight_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA73FC);
     }
     v12 = 2;
@@ -82043,7 +82044,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA7438 = 12321336;
       dword_60CA743C = (int)"T_Post_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7400);
     }
     memset(a1 + 3746, 0, 0xC8u);
@@ -82053,7 +82054,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA7440 = 12321336;
       dword_60CA7444 = (int)"T_Name_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7404);
     }
     v10 = a1 + 3796;
@@ -82075,7 +82076,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA7430 = 12321336;
       dword_60CA7434 = (int)"Pa_Close_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA73F0);
     }
     *(_DWORD *)(a1 + 2136) = sub_60502E60(a1 + 56, &dword_60CA7430);
@@ -82089,8 +82090,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60502994(a1 + 56, 15);
     sub_605029C8(a1 + 56, 15);
     sub_605029FC(a1 + 56, a1 + 2136, "SE_SYS_BACK");
-    *(_DWORD *)(sub_608DE61C(a1 + 108, *(_DWORD *)(a1 + 2136)) - *(_DWORD *)(a1 + 120) + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(a1 + 108, *(_DWORD *)(a1 + 2136)) - *(_DWORD *)(a1 + 120) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(a1 + 108, *(_DWORD *)(a1 + 2136)) - *(_DWORD *)(a1 + 120) + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(a1 + 108, *(_DWORD *)(a1 + 2136)) - *(_DWORD *)(a1 + 120) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     return sub_605028F0(a1 + 56, a1 + 2136, 1);
   }
 
@@ -82553,7 +82554,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA7424 = (int)"Out";
     dword_60CA7428 = 12321336;
     dword_60CA742C = (int)"G_InOut_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -82625,7 +82626,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13268232);
     return result;
@@ -82882,11 +82883,11 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_60500824(_DWORD *a1)
   {
     *a1 = 12578860;
-    sub_6045C0A0(a1 + 1829);
-    sub_6045C0A0(a1 + 1728);
-    sub_6045C0A0(a1 + 1627);
-    sub_6045C0A0(a1 + 1526);
-    sub_6045C0A0(a1 + 1425);
+    thunk_sub_60909E64(a1 + 1829);
+    thunk_sub_60909E64(a1 + 1728);
+    thunk_sub_60909E64(a1 + 1627);
+    thunk_sub_60909E64(a1 + 1526);
+    thunk_sub_60909E64(a1 + 1425);
     sub_605021B0(a1 + 897);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return a1;
@@ -82899,11 +82900,11 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_60500898(_DWORD *a1)
   {
     *a1 = 12578860;
-    sub_6045C0A0(a1 + 1829);
-    sub_6045C0A0(a1 + 1728);
-    sub_6045C0A0(a1 + 1627);
-    sub_6045C0A0(a1 + 1526);
-    sub_6045C0A0(a1 + 1425);
+    thunk_sub_60909E64(a1 + 1829);
+    thunk_sub_60909E64(a1 + 1728);
+    thunk_sub_60909E64(a1 + 1627);
+    thunk_sub_60909E64(a1 + 1526);
+    thunk_sub_60909E64(a1 + 1425);
     sub_605021B0(a1 + 897);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 10));
     return operator delete((int)a1);
@@ -82965,7 +82966,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7624 = MEMORY[0xCA74BC];
       dword_60CA7628 = 12321336;
       dword_60CA762C = MEMORY[0xCA74C4];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7598);
     }
     v6 = 2;
@@ -82991,7 +82992,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7634 = (int)"Pa_BtnR_00";
       dword_60CA7638 = 12321336;
       dword_60CA763C = (int)"Pa_BtnL_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA759C);
     }
     v8 = 2;
@@ -83000,7 +83001,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA75C0 = 12321336;
       dword_60CA75C4 = (int)"N_null_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA75A0);
     }
     v8 = 1;
@@ -83011,7 +83012,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7644 = (int)"T_OverlayDialog_00";
       dword_60CA7648 = 12321336;
       dword_60CA764C = (int)"T_OverlayDialog_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA75A4);
     }
     v8 = 2;
@@ -83020,7 +83021,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA75C8 = 12321336;
       dword_60CA75CC = (int)"T_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA75A8);
     }
     v8 = 1;
@@ -83031,7 +83032,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA75D0 = 12321336;
       dword_60CA75D4 = (int)"P_Back_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA75AC);
     }
     v8 = 1;
@@ -83134,7 +83135,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA75F8 = (int)"CmnWindow_BtnL_Cancel_00";
       dword_60CA75FC = 12321336;
       dword_60CA7600 = (int)"CmnWindow_BtnL_Cancel_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7590);
     }
     v3 = (int *)(a1 + 7720);
@@ -83181,7 +83182,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7614 = (int)"CmnWindow_BtnR_OK_00";
       dword_60CA7618 = 12321336;
       dword_60CA761C = (int)"CmnWindow_BtnR_OK_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7594);
     }
     v3 = (int *)(a1 + 7720);
@@ -83341,7 +83342,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)algn_60CA75E8 = "OverlayDialog_OverlayDialog_01";
     *(_DWORD *)&algn_60CA75E8[4] = 12321336;
     dword_60CA75F0 = (int)"OverlayDialog_OverlayDialog_00";
-    sub_60000288();
+    stub_return0_000288();
     MEMORY[0xCA74B8] = 12321336;
     MEMORY[0xCA74BC] = "In";
     MEMORY[0xCA74C0] = 12321336;
@@ -83430,7 +83431,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (_DWORD *)(a1 + 40);
     if ( v2 < 256 )
     {
-      v6 = sub_608DE61C(a1 + 52, v2);
+      v6 = List_getNthNode(a1 + 52, v2);
       if ( v6 )
         v5 = v6 - *(_DWORD *)(a1 + 64);
       else
@@ -83465,7 +83466,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(unsigned __int8 *)(a1 + v9 + 500);
       if ( !*(_BYTE *)(a1 + v9 + 500) )
       {
-        v12 = sub_608DE61C(a1 + 52, v9);
+        v12 = List_getNthNode(a1 + 52, v9);
         if ( v12 )
           v13 = v12 - *(_DWORD *)(a1 + 64);
         else
@@ -83515,7 +83516,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v4 = sub_608DE61C(a1 + 52, *(_DWORD *)(a1 + 1028));
+      v4 = List_getNthNode(a1 + 52, *(_DWORD *)(a1 + 1028));
       v6 = v4 == 0;
       if ( v4 )
         v5 = *(_DWORD *)(a1 + 64);
@@ -83584,7 +83585,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2 >= 256 )
       return sub_6047EBB4(a1 + 40, 0);
     v5 = *(_DWORD *)(a1 + 68);
-    v6 = sub_608DE61C(a1 + 52, v2);
+    v6 = List_getNthNode(a1 + 52, v2);
     if ( v6 )
       v7 = v6 - *(_DWORD *)(a1 + 64);
     else
@@ -83609,7 +83610,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( !*(_BYTE *)(a1 + 500 + i) )
         {
-          v10 = sub_608DE61C(a1 + 52, i);
+          v10 = List_getNthNode(a1 + 52, i);
           if ( v10 )
             v11 = v10 - *(_DWORD *)(a1 + 64);
           else
@@ -83842,7 +83843,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           else
           {
-            v20 = sub_608DE61C(a1 + 52, v12);
+            v20 = List_getNthNode(a1 + 52, v12);
             if ( v20 )
               v21 = v20 - *(_DWORD *)(a1 + 64);
             else
@@ -83862,7 +83863,7 @@ static inline unsigned int uxtb16(unsigned int x)
               }
               else
               {
-                v28 = sub_608DE61C(a1 + 52, v25);
+                v28 = List_getNthNode(a1 + 52, v25);
                 v29 = v28 == 0;
                 if ( v28 )
                 {
@@ -83919,7 +83920,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v22 = *(_DWORD *)(a1 + 1032);
             *(_DWORD *)(a1 + 1028) = v22;
           }
-          v23 = sub_608DE61C(a1 + 52, v22);
+          v23 = List_getNthNode(a1 + 52, v22);
           if ( v23 )
             v24 = v23 - *(_DWORD *)(a1 + 64);
           else
@@ -84011,7 +84012,7 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605021B0(_DWORD *a1)
   {
     *a1 = 12578988;
-    sub_6045C0A0(a1 + 24);
+    thunk_sub_60909E64(a1 + 24);
     return a1;
   }
 
@@ -84022,7 +84023,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_605021E0(_DWORD *a1)
   {
     *a1 = 12578988;
-    sub_6045C0A0(a1 + 24);
+    thunk_sub_60909E64(a1 + 24);
     return operator delete((int)a1);
   }
 
@@ -84057,7 +84058,7 @@ static inline unsigned int uxtb16(unsigned int x)
       goto LABEL_9;
     }
     *(_BYTE *)(a1 + 92) = 1;
-    result = (_BYTE *)(sub_608DE61C(a1 + 52, *a2) - *(_DWORD *)(a1 + 64) + 208);
+    result = (_BYTE *)(List_getNthNode(a1 + 52, *a2) - *(_DWORD *)(a1 + 64) + 208);
   LABEL_9:
     *result = 0;
     return result;
@@ -84209,7 +84210,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(a1 + 1052) = 0;
     }
     v3 = *(_DWORD *)(a1 + 1028);
-    if ( v3 != 256 && *(_DWORD *)(sub_608DE61C(a1 + 52, v3) - *(_DWORD *)(a1 + 64) + 164) == 4 )
+    if ( v3 != 256 && *(_DWORD *)(List_getNthNode(a1 + 52, v3) - *(_DWORD *)(a1 + 64) + 164) == 4 )
     {
       *(_DWORD *)(a1 + 1028) = 256;
       sub_6047EBB4(a1 + 40, 0);
@@ -84236,7 +84237,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2 != 25 )
       sub_60402084(MEMORY[0xC99E68], v2);
     v3 = *(_DWORD *)(a1 + 1028);
-    if ( v3 != 256 && *(_DWORD *)(sub_608DE61C(a1 + 52, v3) - *(_DWORD *)(a1 + 64) + 164) == 4 )
+    if ( v3 != 256 && *(_DWORD *)(List_getNthNode(a1 + 52, v3) - *(_DWORD *)(a1 + 64) + 164) == 4 )
     {
       *(_DWORD *)(a1 + 1028) = 256;
       sub_6047EBB4(a1 + 40, 0);
@@ -84294,7 +84295,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v9; // r0
     int result; // r0
   
-    v9 = sub_608DE61C(a1 + 52, a2);
+    v9 = List_getNthNode(a1 + 52, a2);
     *(_DWORD *)(v9 - *(_DWORD *)(a1 + 64) + 8) = *(_DWORD *)(v9 - *(_DWORD *)(a1 + 64) + 8) & 0xFFFFFF3F | (a3 << 6);
     result = sub_60502790();
     *(_BYTE *)(result + 240) = v3 != v5;
@@ -84352,7 +84353,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r0
     int v6; // r2
   
-    v5 = sub_608DE61C(a1 + 52, *a2);
+    v5 = List_getNthNode(a1 + 52, *a2);
     v6 = 0;
     if ( v5 )
       v6 = v5 - *(_DWORD *)(a1 + 64);
@@ -84485,7 +84486,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = sub_608DE61C(a1 + 52, *a2) - *(_DWORD *)(a1 + 64);
+    result = List_getNthNode(a1 + 52, *a2) - *(_DWORD *)(a1 + 64);
     *(_DWORD *)(result + 172) = a3;
     return result;
   }
@@ -84525,7 +84526,7 @@ static inline unsigned int uxtb16(unsigned int x)
           result = (unsigned __int8)*v9;
           if ( *v9 )
           {
-            v10 = sub_608DE61C(v6 + 52, *a2);
+            v10 = List_getNthNode(v6 + 52, *a2);
             result = (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)(v10 - *(_DWORD *)(v6 + 64)) + 40))(
                        v10 - *(_DWORD *)(v6 + 64),
                        0);
@@ -84550,7 +84551,7 @@ static inline unsigned int uxtb16(unsigned int x)
           result = v14;
           if ( v14 )
           {
-            v15 = sub_608DE61C(v6 + 52, v11);
+            v15 = List_getNthNode(v6 + 52, v11);
             if ( v15 )
               v16 = v15 - *(_DWORD *)(v6 + 64);
             else
@@ -84587,7 +84588,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 500);
     if ( result )
     {
-      v8 = sub_608DE61C(v4 + 52, v6);
+      v8 = List_getNthNode(v4 + 52, v6);
       v9 = 0;
       if ( v8 )
         v9 = v8 - *(_DWORD *)(v4 + 64);
@@ -84632,7 +84633,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = (unsigned __int8)*v7;
       if ( *v7 )
       {
-        v8 = sub_608DE61C(a1 + 52, a2);
+        v8 = List_getNthNode(a1 + 52, a2);
         result = (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)(v8 - *(_DWORD *)(a1 + 64)) + 40))(
                    v8 - *(_DWORD *)(a1 + 64),
                    0);
@@ -84673,7 +84674,7 @@ static inline unsigned int uxtb16(unsigned int x)
         result = v9;
         if ( !v9 )
         {
-          v10 = sub_608DE61C(v5 + 52, v6);
+          v10 = List_getNthNode(v5 + 52, v6);
           if ( v10 )
             v11 = v10 - *(_DWORD *)(v5 + 64);
           else
@@ -84709,7 +84710,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 500);
     if ( !result )
     {
-      v8 = sub_608DE61C(v4 + 52, v6);
+      v8 = List_getNthNode(v4 + 52, v6);
       if ( v8 )
         v9 = v8 - *(_DWORD *)(v4 + 64);
       else
@@ -84751,7 +84752,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = (unsigned __int8)*v7;
       if ( !*v7 )
       {
-        v8 = sub_608DE61C(a1 + 52, a2);
+        v8 = List_getNthNode(a1 + 52, a2);
         result = (*(int (__fastcall **)(int, int))(*(_DWORD *)(v8 - *(_DWORD *)(a1 + 64)) + 40))(
                    v8 - *(_DWORD *)(a1 + 64),
                    1);
@@ -84805,7 +84806,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v4; // r2
     _BOOL4 result; // r0
   
-    v3 = sub_608DE61C(a1 + 52, *a2);
+    v3 = List_getNthNode(a1 + 52, *a2);
     v4 = 0;
     result = 0;
     if ( v3 )
@@ -84825,7 +84826,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r1
     int result; // r0
   
-    v4 = sub_608DE61C(a1 + 52, a2);
+    v4 = List_getNthNode(a1 + 52, a2);
     if ( v4 )
       v5 = v4 - *(_DWORD *)(a1 + 64);
     else
@@ -85117,7 +85118,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (_DWORD *)(a1 + 40);
     if ( v2 < 99 )
     {
-      v6 = sub_608DE61C(a1 + 52, v2);
+      v6 = List_getNthNode(a1 + 52, v2);
       if ( v6 )
         v5 = v6 - *(_DWORD *)(a1 + 64);
       else
@@ -85153,7 +85154,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = *(unsigned __int8 *)(a1 + v9 + 500);
       if ( !*(_BYTE *)(a1 + v9 + 500) )
       {
-        v12 = sub_608DE61C(a1 + 52, v9);
+        v12 = List_getNthNode(a1 + 52, v9);
         if ( v12 )
           v13 = v12 - *(_DWORD *)(a1 + 64);
         else
@@ -85203,7 +85204,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      v4 = sub_608DE61C(a1 + 52, *(_DWORD *)(a1 + 716));
+      v4 = List_getNthNode(a1 + 52, *(_DWORD *)(a1 + 716));
       v6 = v4 == 0;
       if ( v4 )
         v5 = *(_DWORD *)(a1 + 64);
@@ -85272,7 +85273,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v2 >= 99 )
       return sub_6047EBB4(a1 + 40, 0);
     v5 = *(_DWORD *)(a1 + 68);
-    v6 = sub_608DE61C(a1 + 52, v2);
+    v6 = List_getNthNode(a1 + 52, v2);
     if ( v6 )
       v7 = v6 - *(_DWORD *)(a1 + 64);
     else
@@ -85297,7 +85298,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( !*(_BYTE *)(a1 + 500 + i) )
         {
-          v10 = sub_608DE61C(a1 + 52, i);
+          v10 = List_getNthNode(a1 + 52, i);
           if ( v10 )
             v11 = v10 - *(_DWORD *)(a1 + 64);
           else
@@ -85497,7 +85498,7 @@ static inline unsigned int uxtb16(unsigned int x)
           }
           else
           {
-            v20 = sub_608DE61C(a1 + 52, v12);
+            v20 = List_getNthNode(a1 + 52, v12);
             if ( v20 )
               v21 = v20 - *(_DWORD *)(a1 + 64);
             else
@@ -85517,7 +85518,7 @@ static inline unsigned int uxtb16(unsigned int x)
               }
               else
               {
-                v28 = sub_608DE61C(a1 + 52, v25);
+                v28 = List_getNthNode(a1 + 52, v25);
                 v29 = v28 == 0;
                 if ( v28 )
                 {
@@ -85574,7 +85575,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v22 = *(_DWORD *)(a1 + 720);
             *(_DWORD *)(a1 + 716) = v22;
           }
-          v23 = sub_608DE61C(a1 + 52, v22);
+          v23 = List_getNthNode(a1 + 52, v22);
           if ( v23 )
             v24 = v23 - *(_DWORD *)(a1 + 64);
           else
@@ -85715,9 +85716,9 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v19 = 12321336;
       v20 = dword_60CA77E4;
-      if ( sub_6047467C((_DWORD *)(a1 + 40), 0, &v19, (int)&dword_60CA77D0, 0) == 1 )
+      if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 0, &v19, (int)&dword_60CA77D0, 0) == 1 )
       {
-        v3 = sub_6047482C(a1 + 40, 0);
+        v3 = ArrayOf20_getEntryPtr(a1 + 40, 0);
         v4 = v3;
         if ( v3 )
         {
@@ -85756,14 +85757,14 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( (result & 4) == 0 )
         return result;
-      v9 = sub_6047482C(a1 + 40, 0);
+      v9 = ArrayOf20_getEntryPtr(a1 + 40, 0);
       if ( !v9 || *(float *)(v9 + 44) == 0.0 )
       {
         v19 = 12321336;
         v20 = dword_60CA77EC;
-        sub_6047467C((_DWORD *)(a1 + 40), 0, &v19, (int)&dword_60CA77D0, 0);
+        ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 0, &v19, (int)&dword_60CA77D0, 0);
       }
-      result = sub_6047482C(a1 + 40, 0);
+      result = ArrayOf20_getEntryPtr(a1 + 40, 0);
       if ( !result )
         return result;
       v10 = *(_DWORD *)(result + 56);
@@ -85795,21 +85796,21 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_DWORD *)(a1 + 36) = result;
       return result;
     }
-    v14 = sub_6047482C(a1 + 40, 0);
+    v14 = ArrayOf20_getEntryPtr(a1 + 40, 0);
     if ( !v14 || *(float *)(v14 + 44) == 0.0 )
     {
       v19 = 12321336;
       v20 = dword_60CA77E4;
-      if ( sub_6047467C((_DWORD *)(a1 + 40), 0, &v19, (int)&dword_60CA77D0, 0) == 1 )
+      if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 0, &v19, (int)&dword_60CA77D0, 0) == 1 )
       {
-        if ( sub_6047482C(a1 + 40, 0) )
+        if ( ArrayOf20_getEntryPtr(a1 + 40, 0) )
         {
           (*(void (__fastcall **)(int *))(v19 + 12))(&v19);
           (*(void (__fastcall **)(int *))(v19 + 12))(&v19);
         }
       }
     }
-    result = sub_6047482C(a1 + 40, 0);
+    result = ArrayOf20_getEntryPtr(a1 + 40, 0);
     if ( !result )
       return result;
     v15 = *(_DWORD *)(result + 56);
@@ -85901,10 +85902,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604753A8((int)v6, a1 + 3580, &dword_60CA77D8, &v13);
     v13 = 12321336;
     v14 = dword_60CA77E4;
-    result = sub_6047467C(v6, 0, &v13, (int)&dword_60CA77D0, 0);
+    result = ArrayOf20_insertEntry(v6, 0, &v13, (int)&dword_60CA77D0, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v6, 0);
+      result = ArrayOf20_getEntryPtr(v6, 0);
       v8 = result;
       if ( result )
       {
@@ -85964,10 +85965,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604753A8((int)v4, a1 + 3580, &dword_60CA77D8, &v11);
     v11 = 12321336;
     v12 = dword_60CA77E4;
-    result = sub_6047467C(v4, 0, &v11, (int)&dword_60CA77D0, 0);
+    result = ArrayOf20_insertEntry(v4, 0, &v11, (int)&dword_60CA77D0, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v4, 0);
+      result = ArrayOf20_getEntryPtr(v4, 0);
       v6 = result;
       if ( result )
       {
@@ -86021,7 +86022,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     v1 = 0;
-    v2 = sub_6047482C(a1 + 40, 0);
+    v2 = ArrayOf20_getEntryPtr(a1 + 40, 0);
     if ( v2 )
       return *(float *)(v2 + 44) != 0.0;
     return v1;
@@ -86255,13 +86256,13 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA77E4 = (int)"In";
     off_60CA77E8 = (_UNKNOWN *)12321336;
     dword_60CA77EC = (int)"Out";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA77D0 = 12321336;
     dword_60CA77D4 = (int)"G_All_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA77D8 = 12321336;
     dword_60CA77DC = (int)"T_ChallengeClear_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -86430,7 +86431,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7928 = (int)"L_CategoryList1UP_00";
       dword_60CA792C = 12321336;
       dword_60CA7930 = (int)"L_CategoryListSpecial_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA78E8);
     }
     sub_604734E4(a1, 0);
@@ -86794,7 +86795,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605054F0(int a1)
   {
-    return *(_BYTE *)(sub_6047482C(a1, 0) + 51) & 1;
+    return *(_BYTE *)(ArrayOf20_getEntryPtr(a1, 0) + 51) & 1;
   }
 
 /* ============================================================================
@@ -87407,7 +87408,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7A44 = (int)"Pa_Btn1UP_0";
       dword_60CA7A48 = 12321336;
       dword_60CA7A4C = (int)"Pa_BtnSpecial_0";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7A10);
     }
     sub_604734E4(a1, 0);
@@ -87929,7 +87930,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60507044(a1, v8);
     v11 = 2;
     sub_604752D4((int)v6, (int)(a1 + 900), dword_60CA7A9C, &v11);
-    result = sub_608DE334(56, 0, 4, 0);
+    result = Heap_allocate(56, 0, 4, 0);
     if ( result )
     {
       *(_DWORD *)result = 24;
@@ -87986,10 +87987,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = a1 + 15;
     v16 = 12321336;
     v17 = dword_60CA7A84;
-    result = sub_6047467C(a1 + 15, 0, &v16, (int)&dword_60CA7A88, 0);
+    result = ArrayOf20_insertEntry(a1 + 15, 0, &v16, (int)&dword_60CA7A88, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v4, 0);
+      result = ArrayOf20_getEntryPtr(v4, 0);
       v6 = result;
       if ( result )
       {
@@ -88252,15 +88253,15 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCA7A6C] = 0;
     dword_60CA7A80 = 12321336;
     dword_60CA7A84 = (int)"CharaSet";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA7A88 = 12321336;
     dword_60CA7A8C = (int)"G_Icon_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA7A9C[0] = 12321336;
     unk_60CA7AA0 = "P_MiiIcon_00";
     unk_60CA7AA4 = 12321336;
     dword_60CA7AA8 = (int)"P_MiiIcon_01";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -88299,9 +88300,9 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v24 = 12321336;
       v25 = dword_60CA7AE4;
-      if ( sub_6047467C((_DWORD *)(a1 + 40), 0, &v24, (int)&dword_60CA7AD0, 0) == 1 )
+      if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 0, &v24, (int)&dword_60CA7AD0, 0) == 1 )
       {
-        v3 = sub_6047482C(a1 + 40, 0);
+        v3 = ArrayOf20_getEntryPtr(a1 + 40, 0);
         v4 = v3;
         if ( v3 )
         {
@@ -88338,21 +88339,21 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     if ( (result & 2) != 0 )
     {
-      v12 = sub_6047482C(a1 + 40, 0);
+      v12 = ArrayOf20_getEntryPtr(a1 + 40, 0);
       if ( !v12 || *(float *)(v12 + 44) == 0.0 )
       {
         v24 = 12321336;
         v25 = dword_60CA7AE4;
-        if ( sub_6047467C((_DWORD *)(a1 + 40), 0, &v24, (int)&dword_60CA7AD0, 0) == 1 )
+        if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 0, &v24, (int)&dword_60CA7AD0, 0) == 1 )
         {
-          if ( sub_6047482C(a1 + 40, 0) )
+          if ( ArrayOf20_getEntryPtr(a1 + 40, 0) )
           {
             (*(void (__fastcall **)(int *))(v24 + 12))(&v24);
             (*(void (__fastcall **)(int *))(v24 + 12))(&v24);
           }
         }
       }
-      result = sub_6047482C(a1 + 40, 0);
+      result = ArrayOf20_getEntryPtr(a1 + 40, 0);
       if ( !result )
         return result;
       v13 = *(_DWORD *)(result + 56);
@@ -88387,14 +88388,14 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( (result & 8) == 0 )
           return result;
-        v9 = sub_6047482C(a1 + 40, 0);
+        v9 = ArrayOf20_getEntryPtr(a1 + 40, 0);
         if ( !v9 || *(float *)(v9 + 44) == 0.0 )
         {
           v24 = 12321336;
           v25 = dword_60CA7AF4;
-          sub_6047467C((_DWORD *)(a1 + 40), 0, &v24, (int)&dword_60CA7AD0, 0);
+          ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 0, &v24, (int)&dword_60CA7AD0, 0);
         }
-        result = sub_6047482C(a1 + 40, 0);
+        result = ArrayOf20_getEntryPtr(a1 + 40, 0);
         if ( !result )
           return result;
         v10 = *(_DWORD *)(result + 56);
@@ -88426,14 +88427,14 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 36) = result;
         return result;
       }
-      v19 = sub_6047482C(a1 + 40, 0);
+      v19 = ArrayOf20_getEntryPtr(a1 + 40, 0);
       if ( !v19 || *(float *)(v19 + 44) == 0.0 )
       {
         v24 = 12321336;
         v25 = dword_60CA7AEC;
-        sub_6047467C((_DWORD *)(a1 + 40), 0, &v24, (int)&dword_60CA7AD0, 0);
+        ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 0, &v24, (int)&dword_60CA7AD0, 0);
       }
-      result = sub_6047482C(a1 + 40, 0);
+      result = ArrayOf20_getEntryPtr(a1 + 40, 0);
       if ( !result )
         return result;
       v20 = *(_DWORD *)(result + 56);
@@ -88526,10 +88527,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604753A8((int)v6, a1 + 3580, &dword_60CA7AD8, &v13);
     v13 = 12321336;
     v14 = dword_60CA7AE4;
-    result = sub_6047467C(v6, 0, &v13, (int)&dword_60CA7AD0, 0);
+    result = ArrayOf20_insertEntry(v6, 0, &v13, (int)&dword_60CA7AD0, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v6, 0);
+      result = ArrayOf20_getEntryPtr(v6, 0);
       v8 = result;
       if ( result )
       {
@@ -88589,10 +88590,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604753A8((int)v4, a1 + 3580, &dword_60CA7AD8, &v11);
     v11 = 12321336;
     v12 = dword_60CA7AE4;
-    result = sub_6047467C(v4, 0, &v11, (int)&dword_60CA7AD0, 0);
+    result = ArrayOf20_insertEntry(v4, 0, &v11, (int)&dword_60CA7AD0, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v4, 0);
+      result = ArrayOf20_getEntryPtr(v4, 0);
       v6 = result;
       if ( result )
       {
@@ -88646,7 +88647,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     v1 = 0;
-    v2 = sub_6047482C(a1 + 40, 0);
+    v2 = ArrayOf20_getEntryPtr(a1 + 40, 0);
     if ( v2 )
       return *(float *)(v2 + 44) != 0.0;
     return v1;
@@ -88906,13 +88907,13 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA7AEC = (int)"Jump";
     off_60CA7AF0 = (_UNKNOWN *)12321336;
     dword_60CA7AF4 = (int)"Out";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA7AD0 = 12321336;
     dword_60CA7AD4 = (int)"G_All_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA7AD8 = 12321336;
     dword_60CA7ADC = (int)"T_CourseClear_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -89038,7 +89039,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA7B50 = 12321336;
       dword_60CA7B54 = (int)"N_Pack_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7B4C);
     }
     v12 = 1;
@@ -89075,7 +89076,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7B98 = (int)"T_Special_00";
       dword_60CA7B9C = 12321336;
       dword_60CA7BA0 = (int)"T_Random_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7B40);
     }
     v7 = 8;
@@ -89098,7 +89099,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7BE4 = (int)"LabelFree_Special_00";
       dword_60CA7BE8 = 12321336;
       dword_60CA7BEC = (int)"LabelFree_Random_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7B44);
     }
     sub_6047E0EC(&dword_60CA7BB0, a1[920], 0);
@@ -89131,7 +89132,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7C34 = (int)"T_BestTime_00";
       dword_60CA7C38 = 12321336;
       dword_60CA7C3C = (int)"T_BestTime_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7B48);
     }
     v6 = 10;
@@ -89165,14 +89166,14 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( !v3 )
         v2 = 5;
       *(_DWORD *)(a1 + 3740) = v2;
-      sub_6047467C((_DWORD *)(a1 + 40), 0, &dword_60CA7C40[2 * v2], (int)&dword_60CA7CB0[2 * v2], 0);
+      ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 0, &dword_60CA7C40[2 * v2], (int)&dword_60CA7CB0[2 * v2], 0);
     }
-    if ( *(_BYTE *)(a1 + 3748) && (*(_BYTE *)(sub_6047482C(a1 + 40, 0) + 51) & 1) != 0 )
+    if ( *(_BYTE *)(a1 + 3748) && (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51) & 1) != 0 )
       *(_WORD *)(a1 + 3748) = 0;
     sub_60508E90(a1);
     if ( *(_BYTE *)(a1 + 3751) )
     {
-      v4 = (_BYTE *)sub_6047482C(a1 + 40, 3);
+      v4 = (_BYTE *)ArrayOf20_getEntryPtr(a1 + 40, 3);
       if ( (v4[51] & 1) != 0 )
       {
         (*(void (__fastcall **)(_BYTE *))(*(_DWORD *)v4 + 96))(v4);
@@ -89216,11 +89217,11 @@ static inline unsigned int uxtb16(unsigned int x)
           *(_BYTE *)(a1 + 3749) = 1;
           *(_BYTE *)(a1 + 3752) = 1;
           *(_DWORD *)(a1 + 3740) = v8;
-          sub_6047467C((_DWORD *)(a1 + 40), 0, &dword_60CA7C40[2 * v8], (int)&dword_60CA7CB0[2 * v8], 0);
+          ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 0, &dword_60CA7C40[2 * v8], (int)&dword_60CA7CB0[2 * v8], 0);
         }
       }
     }
-    if ( *(_BYTE *)(a1 + 3752) && (*(_BYTE *)(sub_6047482C(a1 + 40, 0) + 51) & 1) != 0 )
+    if ( *(_BYTE *)(a1 + 3752) && (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51) & 1) != 0 )
     {
       *(_BYTE *)(a1 + 3752) = 0;
       *(_BYTE *)(a1 + 3749) = 0;
@@ -89228,7 +89229,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 3754);
     if ( *(_BYTE *)(a1 + 3754) )
     {
-      result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 1) + 51);
+      result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 1) + 51);
       if ( (result & 1) != 0 )
       {
         *(_BYTE *)(a1 + 3754) = 0;
@@ -89280,7 +89281,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = *(_DWORD *)(a1 + 3740);
     if ( v4 >= 0xE )
       v4 = 0;
-    result = sub_6047467C((_DWORD *)(a1 + 40), 3u, &dword_60CA7C40[2 * v4], (int)&dword_60CA7CB0[2 * v4], 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 3u, &dword_60CA7C40[2 * v4], (int)&dword_60CA7CB0[2 * v4], 0);
     *(_DWORD *)(a1 + 3736) = 0;
     return result;
   }
@@ -89348,7 +89349,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA7CA4 = (int)"OutBest";
     off_60CA7CA8 = (_UNKNOWN *)12321336;
     dword_60CA7CAC = (int)"WaitNew";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA7CB0[0] = 12321336;
     unk_60CA7CB4 = "G_Label_00";
     unk_60CA7CB8 = 12321336;
@@ -89377,7 +89378,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA7D14 = (int)"G_BestTime_00";
     dword_60CA7D18 = 12321336;
     dword_60CA7D1C = (int)"G_Loop_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -89401,7 +89402,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = 0;
     sub_6047E0EC(v7, a1[v2 + 920], 1);
     sub_605093C8(a1);
-    result = sub_6047467C(a1 + 10, 4u, &dword_60CA7C60, (int)&dword_60CA7CD0, 0);
+    result = ArrayOf20_insertEntry(a1 + 10, 4u, &dword_60CA7C60, (int)&dword_60CA7CD0, 0);
     if ( result == 1 )
     {
       v4 = (int **)a1[888];
@@ -89429,10 +89430,10 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r0
   
     v2 = a1 + 40;
-    result = sub_6047467C((_DWORD *)(a1 + 40), 0, dword_60CA7C40, (int)dword_60CA7CB0, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 0, dword_60CA7C40, (int)dword_60CA7CB0, 0);
     if ( result == 1 )
     {
-      v4 = sub_6047482C(v2, 0);
+      v4 = ArrayOf20_getEntryPtr(v2, 0);
       if ( v4 )
         (*(void (**)(void))(*(_DWORD *)v4 + 96))();
       *(_BYTE *)(*(_DWORD *)(a1 + 3720) + 65) = 0;
@@ -89486,19 +89487,19 @@ static inline unsigned int uxtb16(unsigned int x)
     int v8; // r0
   
     v2 = a1 + 40;
-    sub_6047467C((_DWORD *)(a1 + 40), 1u, &dword_60CA7C88, (int)&dword_60CA7CF8, 0);
+    ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 1u, &dword_60CA7C88, (int)&dword_60CA7CF8, 0);
     *(_BYTE *)(a1 + 3754) = 1;
-    result = sub_6047482C(v2, 5);
+    result = ArrayOf20_getEntryPtr(v2, 5);
     if ( result )
     {
-      v4 = *(_DWORD *)(sub_6047482C(v2, 5) + 56);
+      v4 = *(_DWORD *)(ArrayOf20_getEntryPtr(v2, 5) + 56);
       (*((void (__fastcall **)(_UNKNOWN **))off_60CA7CA8 + 3))(&off_60CA7CA8);
       (*((void (__fastcall **)(_UNKNOWN **))off_60CA7CA8 + 3))(&off_60CA7CA8);
       result = dword_60CA7CAC;
       if ( dword_60CA7CAC == v4 )
       {
   LABEL_10:
-        v8 = sub_6047482C(v2, 5);
+        v8 = ArrayOf20_getEntryPtr(v2, 5);
         return (*(int (__fastcall **)(int))(*(_DWORD *)v8 + 104))(v8);
       }
       else
@@ -89530,7 +89531,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int __fastcall sub_6050961C(int a1)
   {
     *(_BYTE *)(a1 + 3754) = 0;
-    return sub_6047467C((_DWORD *)(a1 + 40), 1u, &dword_60CA7C98, (int)&dword_60CA7D08, 0);
+    return ArrayOf20_insertEntry((_DWORD *)(a1 + 40), 1u, &dword_60CA7C98, (int)&dword_60CA7D08, 0);
   }
 
 /* ============================================================================
@@ -89792,9 +89793,9 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int v2; // r0
   
-    if ( (int)a1[894] <= 6 && sub_6047467C(a1 + 9, 0, &dword_60CA7D60, (int)&dword_60CA7D68, 0) == 1 )
+    if ( (int)a1[894] <= 6 && ArrayOf20_insertEntry(a1 + 9, 0, &dword_60CA7D60, (int)&dword_60CA7D68, 0) == 1 )
     {
-      v2 = sub_6047482C((int)(a1 + 9), 0);
+      v2 = ArrayOf20_getEntryPtr((int)(a1 + 9), 0);
       if ( v2 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v2 + 96))(v2);
     }
@@ -90008,10 +90009,10 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCA7D5C] = 0;
     dword_60CA7D60 = 12321336;
     dword_60CA7D64 = (int)"CharaSet";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA7D68 = 12321336;
     dword_60CA7D6C = (int)"G_Icon_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -90048,9 +90049,9 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_60459718(MEMORY[0xC9CFB8], *(_DWORD *)(a1 + 44));
       v20 = 12321336;
       v21 = dword_60CA7DD4;
-      if ( sub_6047467C((_DWORD *)(a1 + 48), 1u, &v20, (int)&dword_60CA7DB0, 0) == 1 )
+      if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 1u, &v20, (int)&dword_60CA7DB0, 0) == 1 )
       {
-        v3 = sub_6047482C(a1 + 48, 1u);
+        v3 = ArrayOf20_getEntryPtr(a1 + 48, 1u);
         if ( v3 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 96))(v3);
       }
@@ -90060,7 +90061,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v20 = 12321336;
       v21 = dword_60CA7DDC;
-      result = sub_6047467C((_DWORD *)(a1 + 48), 2u, &v20, (int)&unk_60CA7DA8, 0);
+      result = ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 2u, &v20, (int)&unk_60CA7DA8, 0);
       if ( result != 1 )
         return result;
       result = *(_DWORD *)(a1 + 36) & 0xFFFFFFFD;
@@ -90079,7 +90080,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v20 = 12321336;
         v21 = dword_60CA7DBC;
-        sub_6047467C((_DWORD *)(a1 + 48), 2u, &v20, (int)&unk_60CA7DA8, 0);
+        ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 2u, &v20, (int)&unk_60CA7DA8, 0);
         v9 = *(_DWORD *)(a1 + 36);
         v10 = v9 | 8;
         result = v9 | 9;
@@ -90101,7 +90102,7 @@ static inline unsigned int uxtb16(unsigned int x)
         close_ref(v11, 0, 0);
       v20 = 12321336;
       v21 = dword_60CA7DCC;
-      sub_6047467C((_DWORD *)(a1 + 48), 2u, &v20, (int)&unk_60CA7DA8, 0);
+      ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 2u, &v20, (int)&unk_60CA7DA8, 0);
       result = *(_DWORD *)(a1 + 36) & 0xFFFFFF9F | 0x40;
       goto LABEL_30;
     }
@@ -90110,7 +90111,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( (result & 0x40) == 0 )
         return result;
       v4 = dword_60CA7DCC;
-      result = sub_6047482C(a1 + 48, 2u);
+      result = ArrayOf20_getEntryPtr(a1 + 48, 2u);
       if ( !result )
         return result;
       v5 = *(_DWORD *)(result + 56);
@@ -90143,7 +90144,7 @@ static inline unsigned int uxtb16(unsigned int x)
       return result;
     }
     v15 = dword_60CA7DBC;
-    result = sub_6047482C(a1 + 48, 2u);
+    result = ArrayOf20_getEntryPtr(a1 + 48, 2u);
     if ( !result )
       return result;
     v16 = *(_DWORD *)(result + 56);
@@ -90267,15 +90268,15 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60474848((int)v9, &dword_60CA7DB8, &v15);
     v15 = 12321336;
     v16 = dword_60CA7DD4;
-    if ( sub_6047467C(v9, 1u, &v15, (int)&dword_60CA7DB0, 0) == 1 )
+    if ( ArrayOf20_insertEntry(v9, 1u, &v15, (int)&dword_60CA7DB0, 0) == 1 )
     {
-      v10 = sub_6047482C(v9, 1);
+      v10 = ArrayOf20_getEntryPtr(v9, 1);
       if ( v10 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v10 + 96))(v10);
     }
     v15 = 12321336;
     v16 = dword_60CA7DBC;
-    if ( sub_6047467C(v9, 2u, &v15, (int)&unk_60CA7DA8, 0) == 1 )
+    if ( ArrayOf20_insertEntry(v9, 2u, &v15, (int)&unk_60CA7DA8, 0) == 1 )
     {
       v11 = *(int ***)(a1 + 3560);
       if ( *(_DWORD *)(a1 + 3556) > 2u )
@@ -90304,7 +90305,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v6[0] = 12321336;
     v6[1] = dword_60CA7DBC;
-    if ( sub_6047467C((_DWORD *)(a1 + 48), 2u, v6, (int)&unk_60CA7DA8, 0) == 1 )
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 2u, v6, (int)&unk_60CA7DA8, 0) == 1 )
     {
       v2 = *(int ***)(a1 + 3560);
       if ( *(_DWORD *)(a1 + 3556) > 2u )
@@ -90345,15 +90346,15 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 7213) = a6;
     v16 = 12321336;
     v17 = dword_60CA7DD4;
-    if ( sub_6047467C((_DWORD *)(a1 + 48), 1u, &v16, (int)&dword_60CA7DB0, 0) == 1 )
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 1u, &v16, (int)&dword_60CA7DB0, 0) == 1 )
     {
-      v11 = sub_6047482C(a1 + 48, 1);
+      v11 = ArrayOf20_getEntryPtr(a1 + 48, 1);
       if ( v11 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v11 + 96))(v11);
     }
     v16 = 12321336;
     v17 = dword_60CA7DBC;
-    if ( sub_6047467C((_DWORD *)(a1 + 48), 2u, &v16, (int)&unk_60CA7DA8, 0) == 1 )
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 2u, &v16, (int)&unk_60CA7DA8, 0) == 1 )
     {
       v12 = *(int ***)(a1 + 3560);
       if ( *(_DWORD *)(a1 + 3556) > 2u )
@@ -90393,7 +90394,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r4
   
     v1 = dword_60CA7DDC;
-    v2 = sub_6047482C(a1 + 48, 2);
+    v2 = ArrayOf20_getEntryPtr(a1 + 48, 2);
     result = 0;
     if ( v2 )
     {
@@ -90585,14 +90586,14 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA7DD4 = (int)"Key";
     dword_60CA7DD8 = 12321336;
     dword_60CA7DDC = (int)"Decide";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA7DA0 = 12321336;
     *(_DWORD *)algn_60CA7DA4 = "G_Loop_00";
     unk_60CA7DA8 = 12321336;
     dword_60CA7DAC = (int)"G_Btn_00";
     dword_60CA7DB0 = 12321336;
     dword_60CA7DB4 = (int)"G_Key_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -90679,10 +90680,10 @@ static inline unsigned int uxtb16(unsigned int x)
       v2 = result + 40;
       v8 = 12321336;
       v9 = dword_60CA7E04;
-      result = sub_6047467C((_DWORD *)(result + 40), 0, &v8, (int)&dword_60CA7E08, 0);
+      result = ArrayOf20_insertEntry((_DWORD *)(result + 40), 0, &v8, (int)&dword_60CA7E08, 0);
       if ( result == 1 )
       {
-        result = sub_6047482C(v2, 0);
+        result = ArrayOf20_getEntryPtr(v2, 0);
         v3 = result;
         if ( result )
         {
@@ -90851,10 +90852,10 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCA7DFC] = 0;
     dword_60CA7E00 = 12321336;
     dword_60CA7E04 = (int)"Color";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA7E08 = 12321336;
     dword_60CA7E0C = (int)"G_Color_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -90909,7 +90910,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13270624);
     return result;
@@ -90965,7 +90966,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13270560);
     return result;
@@ -91117,7 +91118,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA7EE0 = dword_60CA7EC8;
       dword_60CA7EE4 = 12321336;
       dword_60CA7EE8 = dword_60CA7ED0;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA7EC0);
     }
     v10 = 2;
@@ -91125,10 +91126,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v7 = sub_604746E4((int)v3, &dword_60CA7EC4, &dword_60CA7ED4);
     if ( v7 != -1 )
       sub_604742D0(v3, 0, &dword_60CA7EC4, v7, 0);
-    result = sub_6047482C(v3, 0);
+    result = ArrayOf20_getEntryPtr(v3, 0);
     if ( result )
     {
-      v9 = sub_6047482C(v3, 0);
+      v9 = ArrayOf20_getEntryPtr(v3, 0);
       return (*(int (__fastcall **)(int))(*(_DWORD *)v9 + 104))(v9);
     }
     return result;
@@ -91280,7 +91281,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA7ED0 = (int)"Out";
     dword_60CA7ED4 = 12321336;
     dword_60CA7ED8 = (int)"G_InOut_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -91412,7 +91413,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xBC0240](v4, v3);
     v3[0] = 1;
     sub_604752D4(a1 + 60, a1 + 3640, v4, v3);
-    result = sub_608DE334(32, 0, 4, 0);
+    result = Heap_allocate(32, 0, 4, 0);
     if ( result )
     {
       *(_DWORD *)result = 24;
@@ -91504,10 +91505,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v13 = CharaSet_Team_Loop_ref(0);
     v11[0] = 12321336;
     v11[1] = G_Icon_00_G_Team_00_G_Loop_00_ref(0);
-    result = sub_6047467C(a1 + 15, 0, &v12, (int)v11, 0);
+    result = ArrayOf20_insertEntry(a1 + 15, 0, &v12, (int)v11, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(a1 + 15, 0);
+      result = ArrayOf20_getEntryPtr(a1 + 15, 0);
       v5 = result;
       if ( result )
       {
@@ -91576,10 +91577,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v10 = CharaSet_Team_Loop_ref(1);
     v8[0] = 12321336;
     v8[1] = G_Icon_00_G_Team_00_G_Loop_00_ref(1);
-    result = sub_6047467C((_DWORD *)(a1 + 60), 1u, &v9, (int)v8, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 60), 1u, &v9, (int)v8, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(a1 + 60, 1);
+      result = ArrayOf20_getEntryPtr(a1 + 60, 1);
       v3 = result;
       if ( result )
       {
@@ -92213,7 +92214,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA7FE4 = (int)"G_Icon_00";
     dword_60CA7FE8 = 12321336;
     dword_60CA7FEC = (int)"G_Icon_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -92262,7 +92263,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xBC0240](v4, v3);
     v3[0] = 1;
     sub_604752D4(a1, a1 + 3540, v4, v3);
-    result = sub_608DE334(32, 0, 4, 0);
+    result = Heap_allocate(32, 0, 4, 0);
     if ( result )
     {
       *(_DWORD *)result = 24;
@@ -92294,7 +92295,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA8040 = 12321336;
       dword_60CA8044 = dword_60BFF6AC;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA803C);
     }
     v8 = 1;
@@ -92347,13 +92348,13 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v5[0] = 12321336;
     v5[1] = G_Icon_00_ref_50D440(0);
-    result = sub_6047467C(a1, 0, &dword_60BFF6A8, (int)v5, 0);
+    result = ArrayOf20_insertEntry(a1, 0, &dword_60BFF6A8, (int)v5, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(a1, 0);
+      result = ArrayOf20_getEntryPtr(a1, 0);
       if ( result )
       {
-        v3 = sub_6047482C(a1, 0);
+        v3 = ArrayOf20_getEntryPtr(a1, 0);
         (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 96))(v3);
         result = a1[888];
         if ( result == 6 )
@@ -92565,9 +92566,9 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6050DF0C(a1, a2);
       v11 = 12321336;
       v12 = (const char *)dword_60CA8074;
-      if ( sub_6047467C(a1 + 15, 0, &v11, (int)&dword_60CA8078, 0) == 1 )
+      if ( ArrayOf20_insertEntry(a1 + 15, 0, &v11, (int)&dword_60CA8078, 0) == 1 )
       {
-        v5 = sub_6047482C(a1 + 15, 0);
+        v5 = ArrayOf20_getEntryPtr(a1 + 15, 0);
         v6 = v5;
         if ( v5 )
         {
@@ -92707,10 +92708,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050DF0C(a1, v7);
     v15 = 12321336;
     v16 = dword_60CA8074;
-    result = sub_6047467C(v6, 0, &v15, (int)&dword_60CA8078, 0);
+    result = ArrayOf20_insertEntry(v6, 0, &v15, (int)&dword_60CA8078, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v6, 0);
+      result = ArrayOf20_getEntryPtr(v6, 0);
       v9 = result;
       if ( result )
       {
@@ -92933,13 +92934,13 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCA8064] = 0;
     dword_60CA8070 = 12321336;
     dword_60CA8074 = (int)"CharaSet";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA8078 = 12321336;
     dword_60CA807C = (int)"G_Icon_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA8080 = 12321336;
     dword_60CA8084 = (int)"T_Zanki_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -93070,11 +93071,11 @@ static inline unsigned int uxtb16(unsigned int x)
         v10 = (const char *)dword_60CA80F0;
       }
       v6 = a1 + 15;
-      sub_6047467C(a1 + 15, 2u, &v9, (int)&dword_60CA8104, 0);
+      ArrayOf20_insertEntry(a1 + 15, 2u, &v9, (int)&dword_60CA8104, 0);
   LABEL_10:
       v9 = 12321336;
       v10 = (const char *)dword_60CA80E8;
-      sub_6047467C(v6, 1u, &v9, (int)&dword_60CA80FC, 0);
+      ArrayOf20_insertEntry(v6, 1u, &v9, (int)&dword_60CA80FC, 0);
       v7 = a1[913];
       if ( v7 )
       {
@@ -93181,7 +93182,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604752D4((int)v6, (int)(a1 + 911), &dword_60CA80CC, &v10);
     v10 = 1;
     sub_604753A8((int)v6, (int)(a1 + 913), &dword_60CA80B8, &v10);
-    result = sub_608DE334(32, 0, 4, 0);
+    result = Heap_allocate(32, 0, 4, 0);
     if ( result )
     {
       *(_DWORD *)result = 24;
@@ -93374,10 +93375,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = a1 + 15;
     v12 = 12321336;
     v13 = dword_60CA80E0;
-    result = sub_6047467C(a1 + 15, 0, &v12, (int)&dword_60CA80F4, 0);
+    result = ArrayOf20_insertEntry(a1 + 15, 0, &v12, (int)&dword_60CA80F4, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v4, 0);
+      result = ArrayOf20_getEntryPtr(v4, 0);
       v6 = result;
       if ( result )
       {
@@ -93614,25 +93615,25 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA80E8 = (int)"1UPZanki";
     dword_60CA80EC = 12321336;
     dword_60CA80F0 = (int)"Zanki";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA80F4 = 12321336;
     dword_60CA80F8 = (int)"G_Icon_00";
     dword_60CA80FC = 12321336;
     dword_60CA8100 = (int)"G_1UPZanki_00";
     dword_60CA8104 = 12321336;
     dword_60CA8108 = (int)"G_Zanki_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA80B0 = 12321336;
     dword_60CA80B4 = (int)"N_Capture_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA80CC = 12321336;
     dword_60CA80D0 = (int)"P_Icon_00";
     dword_60CA80D4 = 12321336;
     dword_60CA80D8 = (int)"P_MiiIcon_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA80B8 = 12321336;
     dword_60CA80BC = (int)"T_Zanki_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -93673,11 +93674,11 @@ static inline unsigned int uxtb16(unsigned int x)
         v7 = (const char *)dword_60CA8178;
       }
       v3 = a1 + 15;
-      sub_6047467C(a1 + 15, 6u, &v6, (int)&dword_60CA81AC, 0);
+      ArrayOf20_insertEntry(a1 + 15, 6u, &v6, (int)&dword_60CA81AC, 0);
   LABEL_10:
       v6 = 12321336;
       v7 = (const char *)dword_60CA8170;
-      sub_6047467C(v3, 5u, &v6, (int)&dword_60CA81A4, 0);
+      ArrayOf20_insertEntry(v3, 5u, &v6, (int)&dword_60CA81A4, 0);
       v4 = a1[939];
       if ( v4 )
       {
@@ -93813,7 +93814,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604752D4((int)v6, (int)(a1 + 931), dword_60CA81C0, &v8);
     v8 = 1;
     sub_604753A8((int)v6, (int)(a1 + 939), &dword_60CA8148, &v8);
-    result = sub_608DE334(104, 0, 4, 0);
+    result = Heap_allocate(104, 0, 4, 0);
     if ( result )
     {
       *(_DWORD *)result = 24;
@@ -94079,10 +94080,10 @@ static inline unsigned int uxtb16(unsigned int x)
       ++v2;
     if ( v2 )
     {
-      result = (_DWORD *)sub_6047467C(a1 + 15, 4u, &v14, (int)&dword_60CA819C, 0);
+      result = (_DWORD *)ArrayOf20_insertEntry(a1 + 15, 4u, &v14, (int)&dword_60CA819C, 0);
       if ( result == (_DWORD *)1 )
       {
-        result = (_DWORD *)sub_6047482C(v3, 4);
+        result = (_DWORD *)ArrayOf20_getEntryPtr(v3, 4);
         v5 = result;
         if ( result )
         {
@@ -94117,7 +94118,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     else
     {
-      result = (_DWORD *)sub_6047482C(a1 + 15, 4);
+      result = (_DWORD *)ArrayOf20_getEntryPtr(a1 + 15, 4);
       if ( result )
       {
         v10 = result[14];
@@ -94197,7 +94198,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v7 = v5 + 940;
       if ( v5[940] == 7 )
       {
-        result = sub_6047482C(v3, dword_60B03770[v2]);
+        result = ArrayOf20_getEntryPtr(v3, dword_60B03770[v2]);
         if ( !result )
           goto LABEL_36;
         v9 = *(_DWORD *)(result + 56);
@@ -94211,7 +94212,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v10 == v28 )
         {
   LABEL_12:
-          v14 = sub_6047482C(v3, v6);
+          v14 = ArrayOf20_getEntryPtr(v3, v6);
           result = (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)v14 + 16))(v14, 0);
         }
         else
@@ -94237,10 +94238,10 @@ static inline unsigned int uxtb16(unsigned int x)
       v15 = dword_60B03780[v2];
       if ( v15 >= 7 )
         v15 = 0;
-      result = sub_6047467C(v3, v6, &v29, (int)&dword_60CA8140[2 * v15 + 15], 0);
+      result = ArrayOf20_insertEntry(v3, v6, &v29, (int)&dword_60CA8140[2 * v15 + 15], 0);
       if ( result == 1 )
       {
-        result = sub_6047482C(v3, v6);
+        result = ArrayOf20_getEntryPtr(v3, v6);
         v16 = result;
         if ( result )
         {
@@ -94509,7 +94510,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA8170 = (int)"1PZanki";
     dword_60CA8174 = 12321336;
     dword_60CA8178 = (int)"Zanki";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA817C = 12321336;
     dword_60CA8180 = (int)"G_1P_00";
     dword_60CA8184 = 12321336;
@@ -94524,10 +94525,10 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA81A8 = (int)"G_1PZanki_00";
     dword_60CA81AC = 12321336;
     dword_60CA81B0 = (int)"G_Zanki_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA8140[0] = 12321336;
     dword_60CA8144 = (int)"N_Capture_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA81C0[0] = 12321336;
     unk_60CA81C4 = "P_Icon1P_00";
     unk_60CA81C8 = 12321336;
@@ -94544,10 +94545,10 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA81F4 = (int)"P_MiiIcon3P_00";
     dword_60CA81F8 = 12321336;
     dword_60CA81FC = (int)"P_MiiIcon4P_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA8148 = 12321336;
     dword_60CA814C = (int)"T_FreeZanki_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -94614,17 +94615,17 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 11612) = v7;
     sub_6051141C((_DWORD *)a1);
     sub_60512E5C(a1);
-    if ( sub_6047467C((_DWORD *)(a1 + 56), 2u, &dword_60CA84B8, (int)&dword_60CA8478, 0) == 1 )
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 56), 2u, &dword_60CA84B8, (int)&dword_60CA8478, 0) == 1 )
     {
-      if ( sub_6047482C(a1 + 56, 2u) )
+      if ( ArrayOf20_getEntryPtr(a1 + 56, 2u) )
       {
-        v9 = sub_6047482C(a1 + 56, 2u);
+        v9 = ArrayOf20_getEntryPtr(a1 + 56, 2u);
         if ( v9 )
           (*(void (__fastcall **)(int))(*(_DWORD *)v9 + 96))(v9);
       }
     }
     sub_60512F4C(a1);
-    v10 = sub_6047482C(a1 + 56, 0);
+    v10 = ArrayOf20_getEntryPtr(a1 + 56, 0);
     if ( v10 )
     {
       v11 = *(_DWORD *)(v10 + 56);
@@ -94648,9 +94649,9 @@ static inline unsigned int uxtb16(unsigned int x)
           goto LABEL_30;
       }
     }
-    if ( sub_6047467C((_DWORD *)(a1 + 56), 0, &dword_60CA84A0, (int)&dword_60CA8468, 0) == 1 )
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 56), 0, &dword_60CA84A0, (int)&dword_60CA8468, 0) == 1 )
     {
-      v15 = sub_6047482C(a1 + 56, 0);
+      v15 = ArrayOf20_getEntryPtr(a1 + 56, 0);
       if ( v15 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v15 + 104))(v15);
     }
@@ -94697,7 +94698,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     sub_6047F3A8(a1 + 2395, a1[2392]);
     sub_60513080((int)a1);
-    v2 = sub_6047482C((int)(a1 + 14), 0);
+    v2 = ArrayOf20_getEntryPtr((int)(a1 + 14), 0);
     if ( v2 )
     {
       v3 = *(_DWORD *)(v2 + 56);
@@ -94706,8 +94707,8 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( dword_60CA84DC == v3 )
       {
   LABEL_10:
-        if ( sub_6047467C(a1 + 14, 0, &dword_60CA84D0, (int)&dword_60CA8468, 0) == 1 )
-          sub_6047482C((int)(a1 + 14), 0);
+        if ( ArrayOf20_insertEntry(a1 + 14, 0, &dword_60CA84D0, (int)&dword_60CA8468, 0) == 1 )
+          ArrayOf20_getEntryPtr((int)(a1 + 14), 0);
         goto LABEL_15;
       }
       for ( i = 1; ; i += 2 )
@@ -94726,7 +94727,8 @@ static inline unsigned int uxtb16(unsigned int x)
           goto LABEL_10;
       }
     }
-    if ( sub_6047467C(a1 + 14, 0, &dword_60CA84A0, (int)&dword_60CA8468, 0) == 1 && sub_6047482C((int)(a1 + 14), 0) )
+    if ( ArrayOf20_insertEntry(a1 + 14, 0, &dword_60CA84A0, (int)&dword_60CA8468, 0) == 1
+      && ArrayOf20_getEntryPtr((int)(a1 + 14), 0) )
     {
       v7 = sub_60473B4C((int)(a1 + 14));
       sub_6098F1D4(v7);
@@ -94883,7 +94885,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( sub_6047F384(a1 + 9580, 0x2000) )
       return sub_60502694((int)(v2 - 1468));
     v10 = dword_60CA84C4;
-    v11 = sub_6047482C(a1 + 56, 5u);
+    v11 = ArrayOf20_getEntryPtr(a1 + 56, 5u);
     if ( !v11 )
       goto LABEL_50;
     v12 = *(_DWORD *)(v11 + 56);
@@ -94961,10 +94963,10 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( *(_DWORD *)(a1 + 11616) == 2 )
     {
-      v2 = sub_6047467C((_DWORD *)(a1 + 56), 0, &off_60CA84D8, (int)&dword_60CA8468, 0);
+      v2 = ArrayOf20_insertEntry((_DWORD *)(a1 + 56), 0, &off_60CA84D8, (int)&dword_60CA8468, 0);
       goto LABEL_14;
     }
-    v3 = sub_6047482C(a1 + 56, 0);
+    v3 = ArrayOf20_getEntryPtr(a1 + 56, 0);
     if ( v3 )
     {
       v4 = *(_DWORD *)(v3 + 56);
@@ -94973,7 +94975,7 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( dword_60CA84DC == v4 )
       {
   LABEL_12:
-        v2 = sub_6047467C((_DWORD *)(a1 + 56), 0, &dword_60CA84E0, (int)&dword_60CA8468, 0);
+        v2 = ArrayOf20_insertEntry((_DWORD *)(a1 + 56), 0, &dword_60CA84E0, (int)&dword_60CA8468, 0);
         goto LABEL_14;
       }
       for ( i = 1; ; i += 2 )
@@ -94992,10 +94994,10 @@ static inline unsigned int uxtb16(unsigned int x)
           goto LABEL_12;
       }
     }
-    v2 = sub_6047467C((_DWORD *)(a1 + 56), 0, &dword_60CA84C8, (int)&dword_60CA8468, 0);
+    v2 = ArrayOf20_insertEntry((_DWORD *)(a1 + 56), 0, &dword_60CA84C8, (int)&dword_60CA8468, 0);
   LABEL_14:
     if ( v2 == 1 )
-      sub_6047482C(a1 + 56, 0);
+      ArrayOf20_getEntryPtr(a1 + 56, 0);
     *(_BYTE *)(a1 + 4751) = 1;
     return sub_60402084(MEMORY[0xC99E68], *(_DWORD *)(a1 + 4740));
   }
@@ -95034,11 +95036,11 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       MEMORY[0xCA83D8] = 0;
       v2 = MEMORY[0xCA83DC];
-      sub_6045C0A0(MEMORY[0xCA83DC] + 11200);
-      sub_6045C0A0(v2 + 10796);
-      sub_6045C0A0(v2 + 10392);
-      sub_6045C0A0(v2 + 9988);
-      sub_6045C0A0(v2 + 9584);
+      thunk_sub_60909E64(MEMORY[0xCA83DC] + 11200);
+      thunk_sub_60909E64(v2 + 10796);
+      thunk_sub_60909E64(v2 + 10392);
+      thunk_sub_60909E64(v2 + 9988);
+      thunk_sub_60909E64(v2 + 9584);
       sub_60506EB8(v2 + 5924);
       sub_605021B0(v2 + 3704);
       sub_60475AE8((struct sead_IDisposer *)(v2 + 56));
@@ -95169,9 +95171,9 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6051113C(a1);
     *(_BYTE *)(a1 + 9574) = 1;
     *(_DWORD *)(a1 + 9552) = 14;
-    if ( sub_6047467C((_DWORD *)(a1 + 56), 0, &dword_60CA84A0, (int)&dword_60CA8468, 0) == 1 )
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 56), 0, &dword_60CA84A0, (int)&dword_60CA8468, 0) == 1 )
     {
-      v2 = sub_6047482C(a1 + 56, 0);
+      v2 = ArrayOf20_getEntryPtr(a1 + 56, 0);
       if ( v2 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v2 + 104))(v2);
     }
@@ -95275,7 +95277,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA8404 = 12321336;
       dword_60CA8408 = (int)"T_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA83F0);
     }
     v5 = 1;
@@ -95338,20 +95340,20 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( a1[2903] != 4 )
     {
-      result = sub_6047467C(a1 + 14, 4u, &dword_60CA84A8, (int)&dword_60CA8488, 0);
+      result = ArrayOf20_insertEntry(a1 + 14, 4u, &dword_60CA84A8, (int)&dword_60CA8488, 0);
       if ( result != 1 )
         return result;
-      result = sub_6047482C(a1 + 14, 4);
+      result = ArrayOf20_getEntryPtr(a1 + 14, 4);
       if ( !result )
         return result;
-      v3 = sub_6047482C(a1 + 14, 4);
+      v3 = ArrayOf20_getEntryPtr(a1 + 14, 4);
       if ( v3 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 96))(v3);
     }
     v4 = 33;
     if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
       v4 = 34;
-    result = sub_608DE61C(a1 + 939, a1[v4 + 1446]);
+    result = List_getNthNode(a1 + 939, a1[v4 + 1446]);
     v5 = result == 0;
     if ( result )
     {
@@ -95521,7 +95523,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1 + 56;
     v2 = dword_60CA84C4;
-    v3 = sub_6047482C(a1 + 56, 5);
+    v3 = ArrayOf20_getEntryPtr(a1 + 56, 5);
     if ( !v3 )
       return 0;
     v4 = *(_DWORD *)(v3 + 56);
@@ -95555,7 +95557,7 @@ static inline unsigned int uxtb16(unsigned int x)
         return 6;
       case 2:
         v10 = dword_60CA84B4;
-        v11 = sub_6047482C(v1, 1);
+        v11 = ArrayOf20_getEntryPtr(v1, 1);
         result = 9;
         if ( !v11 )
           return result;
@@ -95590,7 +95592,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
       case 3:
         v17 = dword_60CA84B4;
-        v18 = sub_6047482C(v1, 1);
+        v18 = ArrayOf20_getEntryPtr(v1, 1);
         result = 25;
         if ( !v18 )
           return result;
@@ -95641,7 +95643,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int v7; // r0
   
     v1 = dword_60CA84C4;
-    v2 = sub_6047482C(a1 + 56, 5);
+    v2 = ArrayOf20_getEntryPtr(a1 + 56, 5);
     if ( v2 )
     {
       v3 = *(_DWORD *)(v2 + 56);
@@ -95706,10 +95708,10 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA8444 = dword_60CA84DC;
       off_60CA8448 = (_UNKNOWN *)12321336;
       dword_60CA844C = dword_60CA84E4;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA83E0);
     }
-    v3 = sub_6047482C(a1 + 56, 0);
+    v3 = ArrayOf20_getEntryPtr(a1 + 56, 0);
     v4 = v3;
     if ( !v3 )
       return 1;
@@ -95810,11 +95812,11 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA845C = dword_60CA84DC;
       off_60CA8460 = (_UNKNOWN *)12321336;
       dword_60CA8464 = dword_60CA84E4;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA83E4);
     }
     v3 = 0;
-    v4 = sub_6047482C(a1 + 56, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 56, 0);
     v5 = v4;
     if ( v4 )
     {
@@ -95914,10 +95916,10 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA841C = dword_60CA84A4;
       off_60CA8420 = (_UNKNOWN *)12321336;
       dword_60CA8424 = dword_60CA84D4;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA83E8);
     }
-    v3 = sub_6047482C(a1 + 56, 0);
+    v3 = ArrayOf20_getEntryPtr(a1 + 56, 0);
     v4 = v3;
     if ( !v3 )
       return 1;
@@ -95992,11 +95994,11 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA842C = dword_60CA84A4;
       off_60CA8430 = (_UNKNOWN *)12321336;
       dword_60CA8434 = dword_60CA84D4;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA83EC);
     }
     v3 = 0;
-    v4 = sub_6047482C(a1 + 56, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 56, 0);
     v5 = v4;
     if ( v4 )
     {
@@ -96191,7 +96193,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 14;
     v3 = dword_60CA84C4;
-    result = sub_6047482C(a1 + 14, 5);
+    result = ArrayOf20_getEntryPtr(a1 + 14, 5);
     if ( result )
     {
       v5 = *(_DWORD *)(result + 56);
@@ -96208,7 +96210,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( a1[1183] != result )
             {
               v9 = dword_60CA84C4;
-              v10 = sub_6047482C(v2, 5);
+              v10 = ArrayOf20_getEntryPtr(v2, 5);
               v11 = 0;
               if ( !v10 )
                 goto LABEL_47;
@@ -96242,7 +96244,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( a1[1183] != result )
             {
               v23 = dword_60CA84C4;
-              v24 = sub_6047482C(v2, 5);
+              v24 = ArrayOf20_getEntryPtr(v2, 5);
               v11 = 0;
               if ( !v24 )
                 goto LABEL_47;
@@ -96273,7 +96275,7 @@ static inline unsigned int uxtb16(unsigned int x)
             break;
           case 4:
             v17 = dword_60CA84C4;
-            v18 = sub_6047482C(v2, 5);
+            v18 = ArrayOf20_getEntryPtr(v2, 5);
             v11 = 0;
             if ( v18 )
             {
@@ -96353,7 +96355,7 @@ static inline unsigned int uxtb16(unsigned int x)
     char *v12; // r2
   
     v2 = dword_60CA84C4;
-    result = sub_6047482C(a1 + 56, 5);
+    result = ArrayOf20_getEntryPtr(a1 + 56, 5);
     if ( !result )
       return result;
     v4 = *(_DWORD *)(result + 56);
@@ -96441,7 +96443,7 @@ static inline unsigned int uxtb16(unsigned int x)
     char *v13; // r2
   
     v2 = dword_60CA84C4;
-    result = sub_6047482C(a1 + 56, 5);
+    result = ArrayOf20_getEntryPtr(a1 + 56, 5);
     if ( !result )
       return result;
     v4 = *(_DWORD *)(result + 56);
@@ -96545,7 +96547,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v2 = a1 + 14;
     v3 = dword_60CA84C4;
-    result = sub_6047482C(a1 + 14, 5);
+    result = ArrayOf20_getEntryPtr(a1 + 14, 5);
     if ( result )
     {
       v5 = *(_DWORD *)(result + 56);
@@ -96562,7 +96564,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( a1[1183] != result )
             {
               v9 = dword_60CA84C4;
-              v10 = sub_6047482C(v2, 5);
+              v10 = ArrayOf20_getEntryPtr(v2, 5);
               v11 = 0;
               if ( !v10 )
                 goto LABEL_47;
@@ -96596,7 +96598,7 @@ static inline unsigned int uxtb16(unsigned int x)
             if ( a1[1183] != result )
             {
               v23 = dword_60CA84C4;
-              v24 = sub_6047482C(v2, 5);
+              v24 = ArrayOf20_getEntryPtr(v2, 5);
               v11 = 0;
               if ( !v24 )
                 goto LABEL_47;
@@ -96627,7 +96629,7 @@ static inline unsigned int uxtb16(unsigned int x)
             break;
           case 4:
             v17 = dword_60CA84C4;
-            v18 = sub_6047482C(v2, 5);
+            v18 = ArrayOf20_getEntryPtr(v2, 5);
             v11 = 0;
             if ( v18 )
             {
@@ -96698,15 +96700,15 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v1 = a1 + 56;
-    result = sub_6047467C((_DWORD *)(a1 + 56), 1u, &dword_60CA84B0, (int)&unk_60CA8470, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 56), 1u, &dword_60CA84B0, (int)&unk_60CA8470, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v1, 1);
+      result = ArrayOf20_getEntryPtr(v1, 1);
       if ( result )
       {
         if ( *(_DWORD *)(sub_60834614(result) + 492) == 4 && MEMORY[0xC9A1F0] )
           sub_60408934();
-        result = sub_6047482C(v1, 1);
+        result = ArrayOf20_getEntryPtr(v1, 1);
         if ( result )
           return (*(int (__fastcall **)(int))(*(_DWORD *)result + 96))(result);
       }
@@ -96724,14 +96726,14 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v1 = a1 + 56;
-    result = sub_6047467C((_DWORD *)(a1 + 56), 5u, &dword_60CA84C0, (int)&dword_60CA8490, 0);
+    result = ArrayOf20_insertEntry((_DWORD *)(a1 + 56), 5u, &dword_60CA84C0, (int)&dword_60CA8490, 0);
     if ( result == 1 )
     {
-      result = sub_6047482C(v1, 5);
+      result = ArrayOf20_getEntryPtr(v1, 5);
       if ( result )
       {
         sub_60834614(result);
-        result = sub_6047482C(v1, 5);
+        result = ArrayOf20_getEntryPtr(v1, 5);
         if ( result )
           return (*(int (__fastcall **)(int))(*(_DWORD *)result + 96))(result);
       }
@@ -96805,7 +96807,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = a1 + 56;
     v51 = a1;
     v5 = dword_60CA84C4;
-    v6 = sub_6047482C(a1 + 56, 5);
+    v6 = ArrayOf20_getEntryPtr(a1 + 56, 5);
     v7 = 0;
     if ( v6 )
     {
@@ -96847,7 +96849,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v16 = *(_DWORD *)(v14 + 4 * v2);
       if ( v16 != 256 )
       {
-        v17 = sub_608DE61C(v15, v16) - *(_DWORD *)(v51 + 3768);
+        v17 = List_getNthNode(v15, v16) - *(_DWORD *)(v51 + 3768);
         if ( v2 < v3 || v2 >= v13 )
         {
           v18 = 0;
@@ -96871,7 +96873,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     while ( v2 != 35 );
     v21 = dword_60CA84C4;
-    v22 = sub_6047482C(v4, 5);
+    v22 = ArrayOf20_getEntryPtr(v4, 5);
     if ( v22 )
     {
       v23 = *(_DWORD *)(v22 + 56);
@@ -96893,7 +96895,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v29 = *(_DWORD *)(v51 + v28);
         if ( v29 != 256 )
         {
-          *(_BYTE *)(sub_608DE61C(v15, v29) - *(_DWORD *)(v51 + 3768) + 208) = 1;
+          *(_BYTE *)(List_getNthNode(v15, v29) - *(_DWORD *)(v51 + 3768) + 208) = 1;
           v31 = *v30;
           sub_6047EFCC(v50, *v30);
           v32 = v51;
@@ -96959,7 +96961,7 @@ static inline unsigned int uxtb16(unsigned int x)
   LABEL_53:
     v38 = sub_605117A0(v51);
     v39 = dword_60CA84C4;
-    v40 = sub_6047482C(v49, 5);
+    v40 = ArrayOf20_getEntryPtr(v49, 5);
     v41 = 0;
     if ( v40 )
     {
@@ -97201,7 +97203,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA84DC = (int)"OutBtn";
     dword_60CA84E0 = 12321336;
     dword_60CA84E4 = (int)"OutScreen";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA8468 = 12321336;
     *(_DWORD *)algn_60CA846C = "G_InOut_00";
     unk_60CA8470 = 12321336;
@@ -97214,7 +97216,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA848C = (int)"G_Controller_00";
     dword_60CA8490 = 12321336;
     dword_60CA8494 = (int)"G_WindowPattern_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA82C0 = 12321336;
     *(_DWORD *)algn_60CA82C4 = "Pa_Continue_00";
     dword_60CA82C8 = 12321336;
@@ -97285,7 +97287,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA83CC = (int)"Pa_SetUp_00";
     dword_60CA83D0 = 12321336;
     dword_60CA83D4 = (int)"Pa_SetUpDL_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -97337,7 +97339,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13272376);
     return result;
@@ -97409,7 +97411,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13272312);
     return result;
@@ -97526,8 +97528,8 @@ static inline unsigned int uxtb16(unsigned int x)
       v4 = &off_60CA8694;
     }
     sead::SafeStringBase<char>::operator=((int)v21, (int)v4);
-    if ( sub_6047467C((_DWORD *)(a1 + 48), 0, v21, (int)&dword_60CA868C, 0) == 1 )
-      sub_6047482C(a1 + 48, 0);
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v21, (int)&dword_60CA868C, 0) == 1 )
+      ArrayOf20_getEntryPtr(a1 + 48, 0);
   LABEL_7:
     *v3 = 3;
     v5 = sub_60834614(3);
@@ -97883,9 +97885,9 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     sead::SafeStringBase<char>::operator=((int)&v5, (int)v2);
     v3 = a1 + 12;
-    result = sub_6047467C(v3, 0, &v5, (int)&dword_60CA868C, 0);
+    result = ArrayOf20_insertEntry(v3, 0, &v5, (int)&dword_60CA868C, 0);
     if ( result == 1 )
-      return sub_6047482C((int)v3, 0);
+      return ArrayOf20_getEntryPtr((int)v3, 0);
     return result;
   }
 
@@ -98003,11 +98005,11 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12581160;
     v2 = a1 + 3235;
-    sub_6045C0A0(a1 + 3639);
-    sub_6045C0A0(a1 + 3538);
-    sub_6045C0A0(a1 + 3437);
-    sub_6045C0A0(a1 + 3336);
-    sub_6045C0A0(v2);
+    thunk_sub_60909E64(a1 + 3639);
+    thunk_sub_60909E64(a1 + 3538);
+    thunk_sub_60909E64(a1 + 3437);
+    thunk_sub_60909E64(a1 + 3336);
+    thunk_sub_60909E64(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
@@ -98085,8 +98087,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029C8(v2, 15);
     sub_605029FC(v2, a1 + 12892, "SE_SYS_BACK");
     sub_605028F0(v2, (_DWORD *)(a1 + 12892), 1);
-    *(_DWORD *)(sub_608DE61C(a1 + 3648, *(_DWORD *)(a1 + 12892)) - *(_DWORD *)(a1 + 3660) + 176) = "SE_SYS_BACK_BTN_OVER";
-    result = sub_608DE61C(a1 + 3648, *(_DWORD *)(a1 + 12892)) - *(_DWORD *)(a1 + 3660);
+    *(_DWORD *)(List_getNthNode(a1 + 3648, *(_DWORD *)(a1 + 12892)) - *(_DWORD *)(a1 + 3660) + 176) = "SE_SYS_BACK_BTN_OVER";
+    result = List_getNthNode(a1 + 3648, *(_DWORD *)(a1 + 12892)) - *(_DWORD *)(a1 + 3660);
     *(_DWORD *)(result + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     return result;
   }
@@ -98123,9 +98125,9 @@ static inline unsigned int uxtb16(unsigned int x)
       v5 = &off_60CA8694;
     }
     sead::SafeStringBase<char>::operator=(v14, v5);
-    if ( sub_6047467C((_DWORD *)(a1 + 48), 0, v14, (int)&dword_60CA868C, 0) == 1 )
+    if ( ArrayOf20_insertEntry((_DWORD *)(a1 + 48), 0, v14, (int)&dword_60CA868C, 0) == 1 )
     {
-      v6 = sub_6047482C(a1 + 48, 0);
+      v6 = ArrayOf20_getEntryPtr(a1 + 48, 0);
       if ( v6 )
         (*(void (__fastcall **)(int))(*(_DWORD *)v6 + 104))(v6);
     }
@@ -98255,7 +98257,7 @@ static inline unsigned int uxtb16(unsigned int x)
     float v13; // s16
   
     v1 = 0;
-    v2 = sub_6047482C(a1 + 48, 0);
+    v2 = ArrayOf20_getEntryPtr(a1 + 48, 0);
     v3 = v2;
     if ( v2 )
     {
@@ -98334,7 +98336,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v12; // r2
   
     v1 = 0;
-    v2 = sub_6047482C(a1 + 48, 0);
+    v2 = ArrayOf20_getEntryPtr(a1 + 48, 0);
     v3 = v2;
     if ( v2 )
     {
@@ -98412,20 +98414,20 @@ static inline unsigned int uxtb16(unsigned int x)
   _DWORD *__fastcall sub_605156F4(_DWORD *a1)
   {
     a1[3746] = 12581160;
-    sub_6045C0A0(a1 + 7385);
-    sub_6045C0A0(a1 + 7284);
-    sub_6045C0A0(a1 + 7183);
-    sub_6045C0A0(a1 + 7082);
-    sub_6045C0A0(a1 + 6981);
+    thunk_sub_60909E64(a1 + 7385);
+    thunk_sub_60909E64(a1 + 7284);
+    thunk_sub_60909E64(a1 + 7183);
+    thunk_sub_60909E64(a1 + 7082);
+    thunk_sub_60909E64(a1 + 6981);
     sub_6050A4C4(a1 + 5165);
     sub_605021B0(a1 + 4645);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 3758));
     *a1 = 12581160;
-    sub_6045C0A0(a1 + 3639);
-    sub_6045C0A0(a1 + 3538);
-    sub_6045C0A0(a1 + 3437);
-    sub_6045C0A0(a1 + 3336);
-    sub_6045C0A0(a1 + 3235);
+    thunk_sub_60909E64(a1 + 3639);
+    thunk_sub_60909E64(a1 + 3538);
+    thunk_sub_60909E64(a1 + 3437);
+    thunk_sub_60909E64(a1 + 3336);
+    thunk_sub_60909E64(a1 + 3235);
     sub_6050A4C4(a1 + 1419);
     sub_605021B0(a1 + 899);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
@@ -98442,11 +98444,11 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12581160;
     v2 = a1 + 3235;
-    sub_6045C0A0(a1 + 3639);
-    sub_6045C0A0(a1 + 3538);
-    sub_6045C0A0(a1 + 3437);
-    sub_6045C0A0(a1 + 3336);
-    sub_6045C0A0(v2);
+    thunk_sub_60909E64(a1 + 3639);
+    thunk_sub_60909E64(a1 + 3538);
+    thunk_sub_60909E64(a1 + 3437);
+    thunk_sub_60909E64(a1 + 3336);
+    thunk_sub_60909E64(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
@@ -98723,11 +98725,11 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12581160;
     v2 = a1 + 3235;
-    sub_6045C0A0(a1 + 3639);
-    sub_6045C0A0(a1 + 3538);
-    sub_6045C0A0(a1 + 3437);
-    sub_6045C0A0(a1 + 3336);
-    sub_6045C0A0(v2);
+    thunk_sub_60909E64(a1 + 3639);
+    thunk_sub_60909E64(a1 + 3538);
+    thunk_sub_60909E64(a1 + 3437);
+    thunk_sub_60909E64(a1 + 3336);
+    thunk_sub_60909E64(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
@@ -98805,11 +98807,11 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12581160;
     v2 = a1 + 3235;
-    sub_6045C0A0(a1 + 3639);
-    sub_6045C0A0(a1 + 3538);
-    sub_6045C0A0(a1 + 3437);
-    sub_6045C0A0(a1 + 3336);
-    sub_6045C0A0(v2);
+    thunk_sub_60909E64(a1 + 3639);
+    thunk_sub_60909E64(a1 + 3538);
+    thunk_sub_60909E64(a1 + 3437);
+    thunk_sub_60909E64(a1 + 3336);
+    thunk_sub_60909E64(v2);
     sub_6050A4C4((int)(a1 + 1419));
     sub_605021B0(a1 + 899);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 12));
@@ -99016,7 +99018,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA8698 = (int)"InOutR";
     off_60CA869C = (_UNKNOWN *)12321336;
     dword_60CA86A0 = (int)"InOutL";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA86D0 = 12321336;
     *(_DWORD *)algn_60CA86D4 = "Pa_ReturnBtn_00";
     dword_60CA86D8 = 12321336;
@@ -99033,15 +99035,15 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA8704 = (int)"Pa_BtnVS_01";
     dword_60CA8708 = 12321336;
     dword_60CA870C = (int)"Pa_BtnVS_02";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA868C = 12321336;
     dword_60CA8690 = (int)"G_InOut_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA86A4 = 12321336;
     *(_DWORD *)algn_60CA86A8 = "N_Story_00";
     *(_DWORD *)&algn_60CA86A8[4] = 12321336;
     dword_60CA86B0 = (int)"N_VS_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -99062,7 +99064,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13272892);
     return result;
@@ -99327,14 +99329,14 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = 12321336;
     v12 = v5;
     sub_60473DE4(v4, 1u, &v11, 0);
-    v6 = sub_6047482C(v4, 1);
+    v6 = ArrayOf20_getEntryPtr(v4, 1);
     (*(void (__fastcall **)(int))(*(_DWORD *)v6 + 96))(v6);
     sub_603FD93C(v3);
     v7 = WipeIn_LevelNum_Mode_Loop_Out_ref(2);
     v11 = 12321336;
     v12 = v7;
     sub_60473DE4(v4, 2u, &v11, 0);
-    v8 = sub_6047482C(v4, 2);
+    v8 = ArrayOf20_getEntryPtr(v4, 2);
     (*(void (__fastcall **)(int))(*(_DWORD *)v8 + 96))(v8);
     v9 = WipeIn_LevelNum_Mode_Loop_Out_ref(3);
     v11 = 12321336;
@@ -99385,7 +99387,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60516FE8(int a1)
   {
-    return *(_BYTE *)(sub_6047482C(a1 + 36, 0) + 51) & 1;
+    return *(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51) & 1;
   }
 
 /* ============================================================================
@@ -99822,7 +99824,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v19; // t1
   
     v2 = a1 + 40;
-    result = sub_6047482C(a1 + 40, 0);
+    result = ArrayOf20_getEntryPtr(a1 + 40, 0);
     v4 = result;
     if ( !result )
       return result;
@@ -99833,7 +99835,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( dword_60CA888C == v5 )
     {
   LABEL_10:
-      result = sub_6047482C(v2, 3u);
+      result = ArrayOf20_getEntryPtr(v2, 3u);
       v9 = result;
       if ( !result )
         return result;
@@ -100025,9 +100027,9 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v3 != -1 )
     {
       sub_604742D0((_DWORD *)(a1 + 40), 0, &off_60CA8888, v3, 0);
-      if ( sub_6047482C(a1 + 40, 0) )
+      if ( ArrayOf20_getEntryPtr(a1 + 40, 0) )
       {
-        v4 = sub_6047482C(a1 + 40, 0);
+        v4 = ArrayOf20_getEntryPtr(a1 + 40, 0);
         (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 104))(v4);
       }
     }
@@ -100079,7 +100081,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA892C = (int)"Pa_Zanki_03";
       dword_60CA8930 = 12321336;
       dword_60CA8934 = (int)"Pa_Zanki_04";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA8870);
     }
     sub_6050D95C(a1 + 3652);
@@ -100097,7 +100099,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA8904 = dword_60CA889C;
       dword_60CA8908 = 12321336;
       dword_60CA890C = dword_60CA88A4;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA8874);
     }
     v7 = 4;
@@ -100164,7 +100166,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v3 != -1 )
     {
       sub_604742D0(v2, 0, &off_60CA8888, v3, 0);
-      sub_6047482C(v2, 0);
+      ArrayOf20_getEntryPtr(v2, 0);
     }
     v25 = v2;
     *(_WORD *)(a1 + 21684) = 0;
@@ -100178,9 +100180,9 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( v6 != -1 )
         {
           sub_604742D0(v2, 2u, &dword_60CA8898, v6, 0);
-          if ( sub_6047482C(v2, 2) )
+          if ( ArrayOf20_getEntryPtr(v2, 2) )
           {
-            v7 = sub_6047482C(v2, 2);
+            v7 = ArrayOf20_getEntryPtr(v2, 2);
             (*(void (__fastcall **)(int))(*(_DWORD *)v7 + 96))(v7);
           }
         }
@@ -100262,10 +100264,10 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result != -1 )
     {
       sub_604742D0(v20, 3u, &off_60CA8890, result, 0);
-      result = sub_6047482C(v20, 3);
+      result = ArrayOf20_getEntryPtr(v20, 3);
       if ( result )
       {
-        v24 = sub_6047482C(v20, 3);
+        v24 = ArrayOf20_getEntryPtr(v20, 3);
         return (*(int (__fastcall **)(int))(*(_DWORD *)v24 + 96))(v24);
       }
     }
@@ -100286,7 +100288,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result != -1 )
     {
       sub_604742D0(v1, 0, &dword_60CA88A0, result, 0);
-      return sub_6047482C(v1, 0);
+      return ArrayOf20_getEntryPtr(v1, 0);
     }
     return result;
   }
@@ -100445,14 +100447,14 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA88E0 = (int)"G_Zanki_00";
     dword_60CA88E4 = 12321336;
     dword_60CA88E8 = (int)"G_CourseInPattern_00";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA88B4 = 12321336;
     *(_DWORD *)algn_60CA88B8 = "N_ModelPlayMario_00";
     *(_DWORD *)&algn_60CA88B8[4] = 12321336;
     dword_60CA88C0 = (int)"N_ModelPlayLuigi_00";
     dword_60CA88C4 = 12321336;
     dword_60CA88C8 = (int)"N_Totten_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -100476,7 +100478,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     v2 = a1 + 10;
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 10), 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 10), 0) + 51);
     if ( (result & 1) != 0 )
     {
       StateMgr::changeState(a1 + 6, 13273468);
@@ -100570,7 +100572,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA89DC = MEMORY[0xCA8950];
       dword_60CA89E0 = 12321336;
       dword_60CA89E4 = MEMORY[0xCA8958];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA89C0);
     }
     v6[0] = 3;
@@ -100579,7 +100581,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CA89C8 = 12321336;
       dword_60CA89CC = (int)"T_Original_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA89C4);
     }
     v6[0] = 1;
@@ -100682,7 +100684,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_60518EE0(int a1)
   {
-    return *(_BYTE *)(sub_6047482C(a1 + 40, 0) + 51) & 1;
+    return *(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51) & 1;
   }
 
 /* ============================================================================
@@ -100828,7 +100830,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 3724), 13273684);
     return result;
@@ -101014,7 +101016,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA8BD8 = (int)"Pa_Icon3P_00";
       dword_60CA8BDC = 12321336;
       dword_60CA8BE0 = (int)"Pa_Icon4P_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA8BC0);
     }
     sub_60506F20(a1 + 955, (int)v2, &dword_60CA8BC4);
@@ -101213,7 +101215,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5[0] = 12321336;
     v5[1] = sub_6051A8DC(8);
     sub_60473DE4(a1 + 9, 6u, v5, 0);
-    result = sub_6047482C(a1 + 9, 6);
+    result = ArrayOf20_getEntryPtr(a1 + 9, 6);
     if ( result )
       return (*(int (__fastcall **)(int))(*(_DWORD *)result + 96))(result);
     return result;
@@ -101390,7 +101392,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[0] = 12321336;
     v9[1] = sub_6051A8DC(1);
     sub_60473DE4((_DWORD *)(a1 + 36), 1u, v9, 0);
-    v4 = sub_6047482C(v2 - 3716, 1);
+    v4 = ArrayOf20_getEntryPtr(v2 - 3716, 1);
     (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 96))(v4);
     for ( i = 0; i != 4; ++i )
     {
@@ -101454,27 +101456,27 @@ static inline unsigned int uxtb16(unsigned int x)
     v19[0] = 12321336;
     v19[1] = sub_6051A8DC(3);
     sub_60473DE4(v5, 3u, v19, 0);
-    v6 = sub_6047482C(v5, 3);
+    v6 = ArrayOf20_getEntryPtr(v5, 3);
     if ( (float)v2 <= (float)(unsigned int)sub_608502E4(v6) )
     {
-      v7 = sub_6047482C(v5, 3);
+      v7 = ArrayOf20_getEntryPtr(v5, 3);
       (*(void (__fastcall **)(int))(*(_DWORD *)v7 + 96))(v7);
     }
     v8 = sub_6051A8DC(2);
     v19[0] = 12321336;
     v19[1] = v8;
     sub_60473DE4(v5, 2u, v19, 0);
-    v9 = sub_6047482C(v5, 2);
+    v9 = ArrayOf20_getEntryPtr(v5, 2);
     if ( (float)(8 - v4) <= (float)(unsigned int)sub_608502E4(v9) )
     {
-      v10 = sub_6047482C(v5, 2);
+      v10 = ArrayOf20_getEntryPtr(v5, 2);
       (*(void (__fastcall **)(int))(*(_DWORD *)v10 + 96))(v10);
     }
     v11 = sub_6051A8DC(5);
     v19[0] = 12321336;
     v19[1] = v11;
     sub_60473DE4(v5, 4u, v19, 0);
-    v12 = sub_6047482C(v5, 4);
+    v12 = ArrayOf20_getEntryPtr(v5, 4);
     (*(void (__fastcall **)(int))(*(_DWORD *)v12 + 96))(v12);
     sub_60473B58(v5, 14, 0);
     v19[3] = 0;
@@ -101510,7 +101512,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051A2F8(int a1)
   {
-    return *(_BYTE *)(sub_6047482C(a1 + 36, 0) + 51) & 1;
+    return *(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51) & 1;
   }
 
 /* ============================================================================
@@ -102130,7 +102132,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(*(_DWORD *)(a1 + 4), 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 62316), 13274176);
     return result;
@@ -102386,7 +102388,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA8D3C = (int)"PreGameStoryW7.bflyt";
       dword_60CA8D40 = 12321336;
       dword_60CA8D44 = (int)"PreGameStoryW7.bflyt";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA8D50);
     }
     v3 = (_DWORD *)(a1 + 8);
@@ -102411,7 +102413,7 @@ static inline unsigned int uxtb16(unsigned int x)
             dword_60CA8D84 = MEMORY[0xCA8BFC];
             dword_60CA8D88 = 12321336;
             dword_60CA8D8C = MEMORY[0xCA8C04];
-            sub_60000288();
+            stub_return0_000288();
             _cxa_guard_release_0(&unk_60CA8D54);
           }
         }
@@ -102485,7 +102487,7 @@ static inline unsigned int uxtb16(unsigned int x)
           dword_60CA8D6C = (int)"T_WorldCourse_00";
           dword_60CA8D70 = 12321336;
           dword_60CA8D74 = (int)"T_WorldName_00";
-          sub_60000288();
+          stub_return0_000288();
           _cxa_guard_release_0(&unk_60CA8D58);
         }
         v4 = *(_DWORD *)(a1 + 4);
@@ -102495,7 +102497,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           dword_60CA8D60 = 12321336;
           dword_60CA8D64 = (int)"W_Wipe_00";
-          sub_60000288();
+          stub_return0_000288();
           _cxa_guard_release_0(&unk_60CA8D5C);
         }
         sub_604754E4(*(_DWORD *)(a1 + 4), (int *)(a1 + 62168), &dword_60CA8D60, 1);
@@ -102503,7 +102505,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = *(_DWORD **)(a1 + 4);
         v9[0] = 12321336;
         v9[1] = "G_Loop_00";
-        sub_6047467C(v6, 3u, (_DWORD *)0xCA8BF8, (int)v9, 1);
+        ArrayOf20_insertEntry(v6, 3u, (_DWORD *)0xCA8BF8, (int)v9, 1);
         sub_60518138(a1 + 62552);
         sub_6051BBD0(a1);
         *(_WORD *)(a1 + 62512) = 0;
@@ -102586,7 +102588,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051BD68(int a1)
   {
-    return *(_BYTE *)(sub_6047482C(*(_DWORD *)(a1 + 4), 0) + 51) & 1;
+    return *(_BYTE *)(ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0) + 51) & 1;
   }
 
 /* ============================================================================
@@ -102604,7 +102606,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r3
   
     v1 = 0;
-    v2 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
+    v2 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
     v3 = v2;
     if ( v2 )
     {
@@ -102652,7 +102654,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r3
   
     v1 = 0;
-    v2 = sub_6047482C(*(_DWORD *)(a1 + 4), 0);
+    v2 = ArrayOf20_getEntryPtr(*(_DWORD *)(a1 + 4), 0);
     v3 = v2;
     if ( v2 )
     {
@@ -102885,7 +102887,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13274620);
     return result;
@@ -103158,7 +103160,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA8F00 = (int)"Pa_Icon3P_00";
       dword_60CA8F04 = 12321336;
       dword_60CA8F08 = (int)"Pa_Icon4P_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA8EE0);
     }
     v3 = (_DWORD *)operator new(3620);
@@ -103264,7 +103266,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA8F50 = (int)"Pa_IconB_01";
       dword_60CA8F54 = 12321336;
       dword_60CA8F58 = (int)"Pa_IconB_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA8EE4);
     }
     v3 = 0;
@@ -103362,7 +103364,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA8F20 = (int)"Pa_VSCoinCount_02";
       dword_60CA8F24 = 12321336;
       dword_60CA8F28 = (int)"Pa_VSCoinCount_03";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA8EE8);
     }
     v3 = operator new(3668);
@@ -103867,7 +103869,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6051D7B8(int a1)
   {
-    return *(_BYTE *)(sub_6047482C(a1 + 36, 0) + 51) & 1;
+    return *(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51) & 1;
   }
 
 /* ============================================================================
@@ -104582,10 +104584,10 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CA8FC8 = (int)"In";
     dword_60CA8FCC = 12321336;
     dword_60CA8FD0 = (int)"Out";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CA8FB0 = 12321336;
     dword_60CA8FB4 = (int)"N_TimeUp_00";
-    sub_60000288();
+    stub_return0_000288();
     MEMORY[0xCA8F60] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCA8F5C] = 12582280;
     MEMORY[0xCA8F64] = 5367216;
@@ -104712,7 +104714,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 10), 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 10), 0) + 51);
     if ( (result & 1) != 0 )
     {
       *(_BYTE *)(a1[3759] + 64) &= ~1u;
@@ -104884,7 +104886,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
       *(_BYTE *)(*(_DWORD *)(a1 + 15036) + 64) |= 1u;
@@ -104913,7 +104915,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
       *(_BYTE *)(*(_DWORD *)(a1 + 15040) + 64) |= 1u;
@@ -104962,7 +104964,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13275124);
     return result;
@@ -105034,11 +105036,11 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12582300;
     *(_WORD *)(a1 + 13004) = 0;
-    sub_6045C0A0((_DWORD *)(a1 + 14624));
-    sub_6045C0A0((_DWORD *)(a1 + 14220));
-    sub_6045C0A0((_DWORD *)(a1 + 13816));
-    sub_6045C0A0((_DWORD *)(a1 + 13412));
-    sub_6045C0A0((_DWORD *)(a1 + 13008));
+    thunk_sub_60909E64((_DWORD *)(a1 + 14624));
+    thunk_sub_60909E64((_DWORD *)(a1 + 14220));
+    thunk_sub_60909E64((_DWORD *)(a1 + 13816));
+    thunk_sub_60909E64((_DWORD *)(a1 + 13412));
+    thunk_sub_60909E64((_DWORD *)(a1 + 13008));
     sub_6050A4C4(a1 + 5788);
     sub_605021B0((_DWORD *)(a1 + 3708));
     sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
@@ -105053,11 +105055,11 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12582300;
     *(_WORD *)(a1 + 13004) = 0;
-    sub_6045C0A0((_DWORD *)(a1 + 14624));
-    sub_6045C0A0((_DWORD *)(a1 + 14220));
-    sub_6045C0A0((_DWORD *)(a1 + 13816));
-    sub_6045C0A0((_DWORD *)(a1 + 13412));
-    sub_6045C0A0((_DWORD *)(a1 + 13008));
+    thunk_sub_60909E64((_DWORD *)(a1 + 14624));
+    thunk_sub_60909E64((_DWORD *)(a1 + 14220));
+    thunk_sub_60909E64((_DWORD *)(a1 + 13816));
+    thunk_sub_60909E64((_DWORD *)(a1 + 13412));
+    thunk_sub_60909E64((_DWORD *)(a1 + 13008));
     sub_6050A4C4(a1 + 5788);
     sub_605021B0((_DWORD *)(a1 + 3708));
     sub_60475AE8((struct sead_IDisposer *)(a1 + 40));
@@ -105134,7 +105136,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA9180 = MEMORY[0xCA8FE8];
       dword_60CA9184 = 12321336;
       dword_60CA9188 = MEMORY[0xCA8FF0];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA9120);
     }
     v6 = 4;
@@ -105181,7 +105183,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA91F4 = (int)"T_Goal1UPNum_00";
       dword_60CA91F8 = 12321336;
       dword_60CA91FC = (int)"T_GoalHanabiNum_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA9124);
     }
     v4 = 14;
@@ -105255,7 +105257,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA9148 = (int)"Pa_ArrowL_00";
       dword_60CA914C = 12321336;
       dword_60CA9150 = (int)"Pa_Close_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA9128);
     }
     v11[0] = 3;
@@ -105268,7 +105270,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA9160 = (int)"B_Arrow_00";
       off_60CA9164 = (_UNKNOWN *)12321336;
       dword_60CA9168 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA912C);
     }
     v4 = a1[921];
@@ -105296,10 +105298,10 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(a1 + 927, v11, "SE_SYS_BACK");
     v11[0] = 2;
     sub_605029FC(a1 + 927, v11, "SE_SYS_BACK");
-    *(_DWORD *)(sub_608DE61C(a1 + 940, v11[0]) - a1[943] + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(a1 + 940, v11[0]) - a1[943] + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(a1 + 940, v11[0]) - a1[943] + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(a1 + 940, v11[0]) - a1[943] + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605028F0((int)(a1 + 927), v11, 1);
-    result = sub_608DE61C(a1 + 940, v11[0]) - a1[943];
+    result = List_getNthNode(a1 + 940, v11[0]) - a1[943];
     *(_BYTE *)(result + 208) = 0;
     return result;
   }
@@ -105440,7 +105442,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( sub_60502D80(a1 + 3708) != 1 )
     {
       v6 = (_DWORD *)(a1 + 40);
-      result = sub_6047482C(v6, 1);
+      result = ArrayOf20_getEntryPtr(v6, 1);
       v7 = result == 0;
       if ( result )
       {
@@ -105451,9 +105453,9 @@ static inline unsigned int uxtb16(unsigned int x)
         return result;
       return sub_60473DE4(v6, 1u, (_DWORD *)0xCA8FE4, 1);
     }
-    if ( (*(_DWORD *)(sub_608DE61C(a1 + 3760, 1) - *(_DWORD *)(a1 + 3772) + 4) | 2) == 3 )
+    if ( (*(_DWORD *)(List_getNthNode(a1 + 3760, 1) - *(_DWORD *)(a1 + 3772) + 4) | 2) == 3 )
       goto LABEL_3;
-    v4 = sub_608DE61C(a1 + 3760, 0);
+    v4 = List_getNthNode(a1 + 3760, 0);
     v5 = *(_DWORD *)(a1 + 3772);
     v6 = (_DWORD *)(a1 + 40);
     if ( (*(_DWORD *)(v4 - v5 + 4) | 2) == 3 )
@@ -105461,7 +105463,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v3 = v6;
       return sub_6047459C(v3, 1);
     }
-    result = sub_6047482C(v6, 1);
+    result = ArrayOf20_getEntryPtr(v6, 1);
     v8 = result == 0;
     if ( result )
     {
@@ -105683,7 +105685,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( result == 60 )
     {
       sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_RESULT_SCORE", 0);
-      v6 = sub_6047482C(a1 + 36, 1);
+      v6 = ArrayOf20_getEntryPtr(a1 + 36, 1);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v6 + 84))(v6, 0);
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13275692);
     }
@@ -105705,8 +105707,8 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[0] = 12321336;
     v4[1] = sub_6052283C(2u);
     sub_60473DE4(v1, 2u, v4, 0);
-    *(_DWORD *)(sub_6047482C((int)v1, 2u) + 16) = 0;
-    v2 = sub_6047482C((int)v1, 2u);
+    *(_DWORD *)(ArrayOf20_getEntryPtr((int)v1, 2u) + 16) = 0;
+    v2 = ArrayOf20_getEntryPtr((int)v1, 2u);
     return (*(int (__fastcall **)(int))(*(_DWORD *)v2 + 96))(v2);
   }
 
@@ -105726,7 +105728,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *v2 = result;
     if ( result == 60 )
     {
-      v4 = sub_6047482C(a1 + 36, 2);
+      v4 = ArrayOf20_getEntryPtr(a1 + 36, 2);
       (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v4 + 84))(v4, 0);
       sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CH_RESULT_SCORE", 0);
       if ( *(_BYTE *)(a1 + 4308) || *(_BYTE *)(a1 + 4312) )
@@ -105968,7 +105970,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_60807EF0(MEMORY[0xCC6AF8], (int)v5, 0);
     }
   LABEL_19:
-    v6 = sub_6047482C(a1 + 36, 4);
+    v6 = ArrayOf20_getEntryPtr(a1 + 36, 4);
     v7 = v6 == 0;
     if ( v6 )
       v7 = (*(_BYTE *)(v6 + 51) & 1) == 0;
@@ -106707,7 +106709,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA97E0 = MEMORY[0xC5CB34];
       dword_60CA97E4 = 12321336;
       dword_60CA97E8 = MEMORY[0xC5CB34];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA9774);
     }
     if ( ((unsigned int)&unk_60CA9778 & ~(1615993744 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA9778) )
@@ -106734,7 +106736,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA983C = MEMORY[0xC5CB34];
       dword_60CA9840 = 12321336;
       dword_60CA9844 = MEMORY[0xC5CB34];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA9778);
     }
     if ( ((unsigned int)&unk_60CA977C & ~(1615993992 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA977C) )
@@ -106761,7 +106763,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA989C = MEMORY[0xC5CB34];
       dword_60CA98A0 = 12321336;
       dword_60CA98A4 = (int)"ResultChallenge_PlayScoreText_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA977C);
     }
     if ( ((unsigned int)&unk_60CA9780 & ~(1615994232 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CA9780) )
@@ -106788,7 +106790,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CA98FC = MEMORY[0xC5CB34];
       dword_60CA9900 = 12321336;
       dword_60CA9904 = (int)"ResultChallenge_BestScoreText_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA9780);
     }
     result = MEMORY[0xC9A1F0];
@@ -108087,7 +108089,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 4664) = 2;
@@ -108115,7 +108117,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 2u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 2u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13277988);
     return result;
@@ -108365,7 +108367,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v4; // r0
     int v5; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 2u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 2u) + 51);
     if ( (result & 1) != 0 )
     {
       v3 = *(_DWORD *)(a1 + 4664) + 1;
@@ -108630,7 +108632,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 9) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 9) + 51);
     if ( (result & 1) != 0 )
     {
       sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_TOTAL_COIN_NUM", 0);
@@ -109181,7 +109183,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 9) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 9) + 51);
     if ( (result & 1) != 0 )
     {
       sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_CB_TOTAL_COIN_NUM", 0);
@@ -109617,7 +109619,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 3u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 3u) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(a1 + 4672) )
@@ -109810,7 +109812,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12582712;
     v2 = (struct sead_IDisposer *)(a1 + 11);
-    sub_6045C0A0(a1 + 1054);
+    thunk_sub_60909E64(a1 + 1054);
     sub_60475AE8(v2);
     return a1;
   }
@@ -109825,7 +109827,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12582712;
     v2 = (struct sead_IDisposer *)(a1 + 11);
-    sub_6045C0A0(a1 + 1054);
+    thunk_sub_60909E64(a1 + 1054);
     sub_60475AE8(v2);
     return operator delete((int)a1);
   }
@@ -109878,7 +109880,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA360 = (int)"P_ScoreIconA_00";
       dword_60CAA364 = 12321336;
       dword_60CAA368 = (int)"P_ScoreIconB_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA2F4);
     }
     v25[0] = 3;
@@ -109897,7 +109899,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA3F4 = (int)"W_TeamBBase_03";
       dword_60CAA3F8 = 12321336;
       dword_60CAA3FC = (int)"W_TeamBFrame_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA2F8);
     }
     sub_604754E4(a1 + 44, (int *)(a1 + 4128), &dword_60CAA3D0, 6);
@@ -110014,7 +110016,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA434 = MEMORY[0xCA9990];
       dword_60CAA438 = 12321336;
       dword_60CAA43C = MEMORY[0xCA9998];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA2F0);
     }
     v4 = 8;
@@ -110167,7 +110169,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA0B0 = (int)"N_ScoreTeamAAll_00";
       dword_60CAA0B4 = 12321336;
       dword_60CAA0B8 = (int)"N_ScoreTeamBAll_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA0BC);
     }
     v4 = 67;
@@ -110229,7 +110231,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA14C = (int)"T_ScoreA_00";
       dword_60CAA150 = 12321336;
       dword_60CAA154 = (int)"T_ScoreB_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA158);
     }
     v4 = 19;
@@ -110322,11 +110324,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v42[5] = a1[1029];
     v42[6] = a1[1026];
     sub_60473DE4(a1 + 11, 8u, (_DWORD *)0xCA998C, 0);
-    v42[7] = *(_DWORD *)(sub_6047482C(a1 + 11, 8) + 12);
+    v42[7] = *(_DWORD *)(ArrayOf20_getEntryPtr(a1 + 11, 8) + 12);
     sub_60473DE4(a1 + 11, 9u, (_DWORD *)0xCA9994, 0);
     v8 = 0;
     v40 = v4;
-    v42[8] = *(_DWORD *)(sub_6047482C(a1 + 11, 9) + 12);
+    v42[8] = *(_DWORD *)(ArrayOf20_getEntryPtr(a1 + 11, 9) + 12);
     v34 = a1 + 1171;
     v9 = v7 - 1;
     v10 = 0;
@@ -111015,7 +111017,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA3BC = (int)"ResultVS_Round_03";
       dword_60CAA3C0 = 12321336;
       dword_60CAA3C4 = (int)"ResultVS_Round_04";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA2FC);
     }
     *(_BYTE *)(*(_DWORD *)(a1 + 3976) + 64) &= ~1u;
@@ -111834,7 +111836,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA37C = (int)"G_Color1st_01";
       dword_60CAA380 = 12321336;
       dword_60CAA384 = (int)"G_Color1st_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA300);
     }
     v7 = a3 + 59;
@@ -111891,7 +111893,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA394 = (int)"G_Color2nd_01";
       dword_60CAA398 = 12321336;
       dword_60CAA39C = (int)"G_Color2nd_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA304);
     }
     v7 = a3 + 62;
@@ -113024,7 +113026,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAA444 = 12321336;
       dword_60CAA448 = MEMORY[0xC00094];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA440);
     }
     v4[0] = 1;
@@ -114217,7 +114219,7 @@ static inline unsigned int uxtb16(unsigned int x)
         result = 4;
         goto LABEL_67;
       case 4:
-        result = *(unsigned __int8 *)(sub_6047482C(a1 + 72, 0) + 51);
+        result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 72, 0) + 51);
         if ( (result & 1) == 0 )
           return result;
         if ( *(_BYTE *)(a1 + 58) )
@@ -114239,7 +114241,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         return result;
       case 6:
-        result = *(unsigned __int8 *)(sub_6047482C(a1 + 72, 0) + 51);
+        result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 72, 0) + 51);
         if ( (result & 1) != 0 )
         {
           *(_DWORD *)(a1 + 52) = 7;
@@ -114277,7 +114279,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v10 = *(_BYTE *)(v2 + 580) == 0;
           if ( *(_BYTE *)(v2 + 580) )
             v10 = *(_BYTE *)(v2 + 568) == 0;
-          if ( !v10 && (*(_BYTE *)(sub_6047482C(a1 + 72, 2) + 51) & 1) != 0 )
+          if ( !v10 && (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 72, 2) + 51) & 1) != 0 )
           {
             sub_6052DE5C(a1, 0);
             *(_BYTE *)(a1 + 68) = 1;
@@ -114288,7 +114290,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v11 = *(_BYTE *)(MEMORY[0xC9A1E0] + 616) == 0;
           if ( *(_BYTE *)(MEMORY[0xC9A1E0] + 616) )
             v11 = *(_BYTE *)(MEMORY[0xC9A1E0] + 604) == 0;
-          if ( !v11 && (*(_BYTE *)(sub_6047482C(a1 + 72, 3) + 51) & 1) != 0 )
+          if ( !v11 && (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 72, 3) + 51) & 1) != 0 )
           {
             sub_6052DE5C(a1, 1u);
             *(_BYTE *)(a1 + 69) = 1;
@@ -114299,7 +114301,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v12 = *(_BYTE *)(MEMORY[0xC9A1E0] + 652) == 0;
           if ( *(_BYTE *)(MEMORY[0xC9A1E0] + 652) )
             v12 = *(_BYTE *)(MEMORY[0xC9A1E0] + 640) == 0;
-          if ( !v12 && (*(_BYTE *)(sub_6047482C(a1 + 72, 4) + 51) & 1) != 0 )
+          if ( !v12 && (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 72, 4) + 51) & 1) != 0 )
           {
             sub_6052DE5C(a1, 2u);
             *(_BYTE *)(a1 + 70) = 1;
@@ -114314,7 +114316,7 @@ static inline unsigned int uxtb16(unsigned int x)
             v13 = *(_BYTE *)(MEMORY[0xC9A1E0] + 676) == 0;
           if ( !v13 )
           {
-            if ( (*(_BYTE *)(sub_6047482C(a1 + 72, 5) + 51) & 1) != 0 )
+            if ( (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 72, 5) + 51) & 1) != 0 )
             {
               sub_6052DE5C(a1, 3u);
               result = 1;
@@ -114510,7 +114512,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA7D4 = dword_60CAA6F4;
       dword_60CAA7D8 = 12321336;
       dword_60CAA7DC = dword_60CAA6FC;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA6A4);
     }
     v5[0] = 10;
@@ -114742,7 +114744,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA784 = (int)"ResultFree_Propller_00";
       dword_60CAA788 = 12321336;
       dword_60CAA78C = (int)"ResultFree_Random_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA6A0);
     }
     v19 = *(_DWORD *)(MEMORY[0xC9A1E0] + 532);
@@ -114750,7 +114752,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v19 = 0;
     sub_6047E0EC(&dword_60CAA750[2 * v19], *(_DWORD *)(a1 + 3756), 0);
     sub_60473DE4((_DWORD *)(a1 + 72), 0, &dword_60CAA6C8, 0);
-    v20 = sub_6047482C(a1 + 72, 0);
+    v20 = ArrayOf20_getEntryPtr(a1 + 72, 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)v20 + 104))(v20);
     sub_6052DB30(a1);
     *(_DWORD *)(a1 + 52) = 0;
@@ -114828,7 +114830,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v17 = 12321336;
     v4 = dword_60CAA6FC;
     v18 = dword_60CAA6FC;
-    v5 = sub_6047482C(a1 + 72, 6);
+    v5 = ArrayOf20_getEntryPtr(a1 + 72, 6);
     if ( v5 )
     {
       v6 = *(_DWORD *)(v5 + 56);
@@ -114852,9 +114854,9 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v16[0] = 12321336;
     v16[1] = "G_FreeDigit_00";
-    sub_6047467C(v3, 6u, &v17, (int)v16, 0);
+    ArrayOf20_insertEntry(v3, 6u, &v17, (int)v16, 0);
   LABEL_12:
-    result = sub_6047482C(v3, 6);
+    result = ArrayOf20_getEntryPtr(v3, 6);
     v11 = (float *)result;
     if ( result )
     {
@@ -115009,7 +115011,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA744 = (int)"G_MVP3P_00";
       dword_60CAA748 = 12321336;
       dword_60CAA74C = (int)"G_MVP4P_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA6AC);
     }
     v6 = sub_604746E4(a1 + 72, &dword_60CAA6E0, &dword_60CAA710[2 * v5 + 8]);
@@ -115043,7 +115045,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA744 = (int)"G_MVP3P_00";
       dword_60CAA748 = 12321336;
       dword_60CAA74C = (int)"G_MVP4P_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA6AC);
     }
     v6 = sub_604746E4((int)v3, &dword_60CAA6E0, &dword_60CAA710[2 * v5 + 8]);
@@ -115076,7 +115078,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA724 = (int)"Pa_Icon3P_00";
       dword_60CAA728 = 12321336;
       dword_60CAA72C = (int)"Pa_Icon4P_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA6A8);
     }
     v3 = operator new(3620);
@@ -115498,7 +115500,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13281344);
     return result;
@@ -115661,7 +115663,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13281280);
     return result;
@@ -115732,7 +115734,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12583408;
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 10976) = 0;
-    sub_6045C0A0(a1 + 10984);
+    thunk_sub_60909E64(a1 + 10984);
     sub_6050A4C4(a1 + 3760);
     sub_60475AE8(v2);
     return a1;
@@ -115749,7 +115751,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12583408;
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 10976) = 0;
-    sub_6045C0A0((_DWORD *)(a1 + 10984));
+    thunk_sub_60909E64((_DWORD *)(a1 + 10984));
     sub_6050A4C4(a1 + 3760);
     sub_60475AE8(v2);
     return operator delete(a1);
@@ -115773,7 +115775,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAAA80 = (int)"N_DelItem_00";
       dword_60CAAA84 = 12321336;
       dword_60CAAA88 = (int)"N_ItemNum_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAAA74);
     }
     v5 = 2;
@@ -115815,7 +115817,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAAA98 = MEMORY[0xCAA7F4];
       dword_60CAAA9C = 12321336;
       dword_60CAAAA0 = MEMORY[0xCAA7FC];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAAA70);
     }
     v4[0] = 3;
@@ -115841,7 +115843,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAAAB0 = (int)"T_ItemNum_00";
       dword_60CAAAB4 = 12321336;
       dword_60CAAAB8 = (int)"T_ItemNum_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAAA78);
     }
     v5 = 3;
@@ -115906,7 +115908,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAA964 = (int)"P_3UPMoon_01";
       dword_60CAA968 = 12321336;
       dword_60CAA96C = (int)"P_1UPKinoko_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAA970);
     }
     v4 = 22;
@@ -116426,7 +116428,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAAA58 = (int)"N_ItemNumPos_00";
       dword_60CAAA5C = 12321336;
       dword_60CAAA60 = (int)"N_ItemNumPos_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAAA64);
     }
     v30 = sub_608DE1A4(176, 16);
@@ -117236,7 +117238,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAABC0 = (int)"stand_1_2";
       dword_60CAABC4 = 12321336;
       dword_60CAABC8 = (int)"stand_1_3";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAAB6C);
     }
     *(_DWORD *)(a1 + 56) = a2;
@@ -117871,7 +117873,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAAD8C = dword_60CAAD04;
       dword_60CAAD90 = 12321336;
       dword_60CAAD94 = dword_60CAAD0C;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAACA4);
     }
     v8 = 13;
@@ -117948,10 +117950,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = sub_604746E4(v1 + 36, &dword_60CAAD00, &dword_60CAAC1C);
     if ( v5 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 6u, &dword_60CAAD00, v5, 0);
-    if ( sub_6047482C(v1 + 36, 6) )
+    if ( ArrayOf20_getEntryPtr(v1 + 36, 6) )
     {
       v6 = *(_DWORD *)(v1 + 3980);
-      v7 = *(_DWORD *)sub_6047482C(v1 + 36, 6);
+      v7 = *(_DWORD *)ArrayOf20_getEntryPtr(v1 + 36, 6);
       if ( v6 < 99 )
         v8 = *(void (**)(void))(v7 + 104);
       else
@@ -117968,11 +117970,11 @@ static inline unsigned int uxtb16(unsigned int x)
     v11 = sub_604746E4(v1 + 36, &dword_60CAAD00, &dword_60CAAC14);
     if ( v11 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 5u, &dword_60CAAD00, v11, 0);
-    if ( sub_6047482C(v1 + 36, 5) )
+    if ( ArrayOf20_getEntryPtr(v1 + 36, 5) )
     {
       v12 = *(_DWORD *)(v1 + 3984);
       v13 = *(_DWORD *)(v1 + 4004);
-      v14 = *(_DWORD *)sub_6047482C(v1 + 36, 5);
+      v14 = *(_DWORD *)ArrayOf20_getEntryPtr(v1 + 36, 5);
       if ( v12 >= v13 )
         v15 = *(void (**)(void))(v14 + 108);
       else
@@ -117982,18 +117984,18 @@ static inline unsigned int uxtb16(unsigned int x)
     v16 = sub_604746E4(v1 + 36, &dword_60CAACD0, &dword_60CAAC24);
     if ( v16 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 7u, &dword_60CAACD0, v16, 0);
-    if ( sub_6047482C(v1 + 36, 7) )
+    if ( ArrayOf20_getEntryPtr(v1 + 36, 7) )
     {
-      v17 = sub_6047482C(v1 + 36, 7);
+      v17 = ArrayOf20_getEntryPtr(v1 + 36, 7);
       (*(void (__fastcall **)(int))(*(_DWORD *)v17 + 96))(v17);
     }
     v18 = sub_604746E4(v1 + 36, &dword_60CAACA8, &dword_60CAAC74);
     if ( v18 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 0x11u, &dword_60CAACA8, v18, 0);
-    if ( sub_6047482C(v1 + 36, 17) )
+    if ( ArrayOf20_getEntryPtr(v1 + 36, 17) )
     {
       v19 = *(_DWORD *)(v1 + 3992);
-      v20 = *(_DWORD *)sub_6047482C(v1 + 36, 17);
+      v20 = *(_DWORD *)ArrayOf20_getEntryPtr(v1 + 36, 17);
       if ( v19 )
         v21 = *(void (**)(void))(v20 + 108);
       else
@@ -118004,7 +118006,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( v22 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 0x14u, &dword_60CAACB0, v22, 0);
     v23 = *(_DWORD *)(v1 + 3992);
-    v24 = *(_DWORD *)sub_6047482C(v1 + 36, 20);
+    v24 = *(_DWORD *)ArrayOf20_getEntryPtr(v1 + 36, 20);
     if ( v23 == 1 )
       v25 = *(void (**)(void))(v24 + 108);
     else
@@ -118016,9 +118018,9 @@ static inline unsigned int uxtb16(unsigned int x)
     v27 = sub_604746E4(v1 + 36, &off_60CAACF8, &dword_60CAABF4);
     if ( v27 != -1 )
       sub_604742D0((_DWORD *)(v1 + 36), 1u, &off_60CAACF8, v27, 0);
-    if ( sub_6047482C(v1 + 36, 1) )
+    if ( ArrayOf20_getEntryPtr(v1 + 36, 1) )
     {
-      v28 = sub_6047482C(v1 + 36, 1);
+      v28 = ArrayOf20_getEntryPtr(v1 + 36, 1);
       (*(void (__fastcall **)(int))(*(_DWORD *)v28 + 104))(v28);
     }
     for ( i = 0; i != 8; ++i )
@@ -118030,11 +118032,11 @@ static inline unsigned int uxtb16(unsigned int x)
       v32 = sub_604746E4((int)v4, &dword_60CAACB8, &dword_60CAABEC[2 * v31]);
       if ( v32 != -1 )
         sub_604742D0(v4, v30, &dword_60CAACB8, v32, 0);
-      if ( sub_6047482C(v4, v30) )
+      if ( ArrayOf20_getEntryPtr(v4, v30) )
       {
         v33 = v1;
         v34 = *(unsigned __int8 *)(v1 + 3976) & (1 << i);
-        v35 = *(_DWORD *)sub_6047482C(v4, v30);
+        v35 = *(_DWORD *)ArrayOf20_getEntryPtr(v4, v30);
         if ( (_BYTE)v34 )
           v36 = *(void (**)(void))(v35 + 108);
         else
@@ -118046,10 +118048,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v37 = sub_604746E4((int)v4, &dword_60CAACC0, &dword_60CAAC7C);
     if ( v37 != -1 )
       sub_604742D0(v4, 0x12u, &dword_60CAACC0, v37, 0);
-    if ( sub_6047482C(v4, 18) )
+    if ( ArrayOf20_getEntryPtr(v4, 18) )
     {
       v38 = *(unsigned __int8 *)(v1 + 3976);
-      v39 = *(_DWORD *)sub_6047482C(v4, 18);
+      v39 = *(_DWORD *)ArrayOf20_getEntryPtr(v4, 18);
       if ( v38 == 255 )
         v40 = *(void (**)(void))(v39 + 108);
       else
@@ -118059,7 +118061,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v41 = sub_604746E4((int)v4, &dword_60CAACC8, &dword_60CAAC2C);
     if ( v41 != -1 )
       sub_604742D0(v4, 8u, &dword_60CAACC8, v41, 0);
-    v42 = sub_6047482C(v4, 8);
+    v42 = ArrayOf20_getEntryPtr(v4, 8);
     return (*(int (__fastcall **)(int))(*(_DWORD *)v42 + 96))(v42);
   }
 
@@ -118082,7 +118084,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAAD1C = dword_60CAACE4;
       dword_60CAAD20 = 12321336;
       dword_60CAAD24 = dword_60CAACEC;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAACA0);
     }
     v5 = (_DWORD *)(a1 + 36);
@@ -118110,16 +118112,16 @@ static inline unsigned int uxtb16(unsigned int x)
     unsigned int result; // r0
   
     v1 = (_DWORD *)(a1 + 36);
-    if ( sub_6047482C(a1 + 36, 1) )
+    if ( ArrayOf20_getEntryPtr(a1 + 36, 1) )
     {
       v2 = 1;
-      v3 = *(_DWORD *)(sub_6047482C(v1, 1) + 56);
+      v3 = *(_DWORD *)(ArrayOf20_getEntryPtr(v1, 1) + 56);
       (*((void (__fastcall **)(_UNKNOWN **))off_60CAACF8 + 3))(&off_60CAACF8);
       (*((void (__fastcall **)(_UNKNOWN **))off_60CAACF8 + 3))(&off_60CAACF8);
       if ( dword_60CAACFC == v3 )
       {
   LABEL_10:
-        v6 = sub_6047482C(v1, 1);
+        v6 = ArrayOf20_getEntryPtr(v1, 1);
         return (*(int (__fastcall **)(int))(*(_DWORD *)v6 + 88))(v6);
       }
       while ( 1 )
@@ -118160,17 +118162,17 @@ static inline unsigned int uxtb16(unsigned int x)
     int v7; // r0
   
     v1 = a1 + 36;
-    result = sub_6047482C(a1 + 36, 19);
+    result = ArrayOf20_getEntryPtr(a1 + 36, 19);
     if ( result )
     {
-      v3 = *(_DWORD *)(sub_6047482C(v1, 19) + 56);
+      v3 = *(_DWORD *)(ArrayOf20_getEntryPtr(v1, 19) + 56);
       (*((void (__fastcall **)(_UNKNOWN **))off_60CAACF0 + 3))(&off_60CAACF0);
       (*((void (__fastcall **)(_UNKNOWN **))off_60CAACF0 + 3))(&off_60CAACF0);
       result = dword_60CAACF4;
       if ( dword_60CAACF4 == v3 )
       {
   LABEL_10:
-        v7 = sub_6047482C(v1, 19);
+        v7 = ArrayOf20_getEntryPtr(v1, 19);
         return sub_608502E4(v7);
       }
       else
@@ -118231,15 +118233,15 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1 + 36;
     v2 = 0;
-    if ( sub_6047482C(a1 + 36, 1) )
+    if ( ArrayOf20_getEntryPtr(a1 + 36, 1) )
     {
       v3 = 1;
-      v4 = *(_DWORD *)(sub_6047482C(v1, 1) + 56);
+      v4 = *(_DWORD *)(ArrayOf20_getEntryPtr(v1, 1) + 56);
       (*((void (__fastcall **)(_UNKNOWN **))off_60CAACF8 + 3))(&off_60CAACF8);
       (*((void (__fastcall **)(_UNKNOWN **))off_60CAACF8 + 3))(&off_60CAACF8);
       if ( dword_60CAACFC == v4 )
       {
-        return (*(_BYTE *)(sub_6047482C(v1, 1) + 51) & 1) == 0;
+        return (*(_BYTE *)(ArrayOf20_getEntryPtr(v1, 1) + 51) & 1) == 0;
       }
       else
       {
@@ -118249,14 +118251,14 @@ static inline unsigned int uxtb16(unsigned int x)
           if ( v5 != *(unsigned __int8 *)(v4 + v3 - 1) )
             break;
           if ( v5 == MEMORY[0xB3BA34] )
-            return (*(_BYTE *)(sub_6047482C(v1, 1) + 51) & 1) == 0;
+            return (*(_BYTE *)(ArrayOf20_getEntryPtr(v1, 1) + 51) & 1) == 0;
           if ( v3 > 0x80000 )
             break;
           v6 = *(unsigned __int8 *)(dword_60CAACFC + v3);
           if ( v6 != *(unsigned __int8 *)(v4 + v3) )
             break;
           if ( v6 == MEMORY[0xB3BA34] )
-            return (*(_BYTE *)(sub_6047482C(v1, 1) + 51) & 1) == 0;
+            return (*(_BYTE *)(ArrayOf20_getEntryPtr(v1, 1) + 51) & 1) == 0;
           v3 += 2;
         }
       }
@@ -118475,7 +118477,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CAAC88 = (int)"G_LoopBaloon_00";
     dword_60CAAC8C = 12321336;
     dword_60CAAC90 = (int)"G_QuickSave_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -118714,7 +118716,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(*(_DWORD *)(MEMORY[0xCC6E04] + 40) + 8) || !*(_BYTE *)(a1 + 83634) )
@@ -119202,7 +119204,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13282980);
     return result;
@@ -119260,7 +119262,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13282916);
     return result;
@@ -119327,7 +119329,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 1u) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_DWORD *)(a1 + 83580) == 1 )
@@ -119568,7 +119570,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1[4183];
     a1[4182] = v2;
     sub_605391B0(a1, v2);
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 3023), 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 3023), 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState(a1 + 9, 13283300);
     return result;
@@ -119740,7 +119742,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13283364);
     return result;
@@ -119833,7 +119835,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
@@ -119948,7 +119950,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
@@ -120046,7 +120048,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
@@ -120115,7 +120117,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1[4183];
     a1[4182] = v2;
     sub_605391B0(a1, v2);
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 3023), 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 3023), 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState(a1 + 9, 13283556);
     return result;
@@ -120290,7 +120292,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13283620);
     return result;
@@ -120402,7 +120404,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13283684);
     return result;
@@ -120498,7 +120500,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
@@ -120541,7 +120543,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
@@ -120646,7 +120648,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13282884);
     return result;
@@ -120840,11 +120842,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 69136);
     sub_6050A4C4(a1 + 61920);
     sub_6050A4C4(a1 + 54704);
-    sub_6045C0A0(a1 + 54292);
-    sub_6045C0A0(a1 + 53888);
-    sub_6045C0A0(a1 + 53484);
-    sub_6045C0A0(a1 + 53080);
-    sub_6045C0A0(a1 + 52676);
+    thunk_sub_60909E64(a1 + 54292);
+    thunk_sub_60909E64(a1 + 53888);
+    thunk_sub_60909E64(a1 + 53484);
+    thunk_sub_60909E64(a1 + 53080);
+    thunk_sub_60909E64(a1 + 52676);
     sub_60540D10(a1 + 17780);
     sub_605021B0(a1 + 15700);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 12092));
@@ -120886,7 +120888,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB2DC = (int)"Pa_SaveData_01";
       dword_60CAB2E0 = 12321336;
       dword_60CAB2E4 = (int)"Pa_SaveData_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB270);
     }
     v4 = a1 + 15700;
@@ -120917,7 +120919,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB41C = MEMORY[0xCAADF8];
       dword_60CAB420 = 12321336;
       dword_60CAB424 = MEMORY[0xCAAE00];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB274);
     }
     v11 = 11;
@@ -120934,23 +120936,23 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(v4, &dword_60B03A2C, "SE_SYS_BACK");
     sub_605028F0(v4, &dword_60B03A2C, 1);
     v6 = a1 + 15752;
-    v7 = sub_608DE61C(a1 + 15752, 9);
+    v7 = List_getNthNode(a1 + 15752, 9);
     v9 = *(_DWORD *)(a1 + 15764);
     v8 = (_DWORD *)(a1 + 15764);
     *(_DWORD *)(v7 - v9 + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(v6, 9) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(v6, 9) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605029FC(v4, &dword_60B03A30, "SE_SYS_BACK");
     sub_605028F0(v4, &dword_60B03A30, 1);
-    *(_DWORD *)(sub_608DE61C(v6, 10) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(v6, 10) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(v6, 10) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(v6, 10) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605029FC(v4, &dword_60B03A34, "SE_SYS_BACK");
     sub_605028F0(v4, &dword_60B03A34, 1);
-    *(_DWORD *)(sub_608DE61C(v6, 11) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(v6, 11) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(v6, 11) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(v6, 11) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605029FC(v4, &dword_60B03A38, "SE_SYS_BACK");
     sub_605028F0(v4, &dword_60B03A38, 1);
-    *(_DWORD *)(sub_608DE61C(v6, 12) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(v6, 12) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(v6, 12) - *v8 + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(v6, 12) - *v8 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_6045BF58((int)(v8 + 9228), 0);
     sub_6045BF58((int)(v8 + 9329), 1);
     sub_6045BF58((int)(v8 + 9430), 2);
@@ -120979,7 +120981,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB33C = (int)"Pa_CancelWhich_00";
       dword_60CAB340 = 12321336;
       dword_60CAB344 = (int)"Pa_Return_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB29C);
     }
     v4 = 12321336;
@@ -121358,14 +121360,14 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB31C = (int)"Pa_CancelWhich_00";
       dword_60CAB320 = 12321336;
       dword_60CAB324 = (int)"Pa_Return_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB278);
     }
     if ( ((unsigned int)&unk_60CAB27C & ~(1616085220 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAB27C) )
     {
       dword_60CAB2A0 = 12321336;
       dword_60CAB2A4 = (int)"N_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB27C);
     }
     v3 = a1 + 12092;
@@ -121397,7 +121399,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB3BC = (int)"N_Return_00";
       dword_60CAB3C0 = 12321336;
       dword_60CAB3C4 = (int)"N_Window_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB280);
     }
     v19[0] = 9;
@@ -121406,7 +121408,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAB2A8 = 12321336;
       dword_60CAB2AC = (int)"P_Base_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB284);
     }
     v19[0] = 1;
@@ -121427,7 +121429,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB2FC = (int)"Pa_MovieBtn_00";
       dword_60CAB300 = 12321336;
       dword_60CAB304 = (int)"Pa_HelpBtn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB288);
     }
     v19[0] = 3;
@@ -121436,7 +121438,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAB2B0 = 12321336;
       dword_60CAB2B4 = (int)"T_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB28C);
     }
     v19[0] = 12321336;
@@ -121457,14 +121459,14 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB374 = (int)"Pa_MovieBtn_00";
       dword_60CAB378 = 12321336;
       dword_60CAB37C = (int)"Pa_HelpBtn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB290);
     }
     if ( ((unsigned int)&unk_60CAB294 & ~(1616086668 << v8) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAB294) )
     {
       dword_60CAB2B8 = 12321336;
       dword_60CAB2BC = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB294);
     }
     v19[0] = 1;
@@ -121493,7 +121495,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB2C4 = (int)"G_StoryIndex_00";
       dword_60CAB2C8 = 12321336;
       dword_60CAB2CC = (int)"G_WithMiiIndex_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB298);
     }
     *(_DWORD *)(a1 + 54696) = sub_604746E4(a1 + 12092, (_DWORD *)0xCAADB4, &dword_60CAB2C0);
@@ -122182,7 +122184,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( (!*(_BYTE *)(a1 + 83572) || *(_BYTE *)(a1 + 83574)) && *(_BYTE *)(a1 + 83577) )
@@ -122261,7 +122263,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 1u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13284596);
     return result;
@@ -122636,7 +122638,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13284660);
     return result;
@@ -122694,7 +122696,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13284596);
     return result;
@@ -122760,7 +122762,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 1u) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_DWORD *)(a1 + 83516) == 1 )
@@ -122931,7 +122933,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *v4 = v5;
   LABEL_7:
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 3023), 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 3023), 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState(a1 + 9, 13284948);
     return result;
@@ -123103,7 +123105,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13285012);
     return result;
@@ -123195,7 +123197,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(a1 + 83572) && !*(_BYTE *)(a1 + 83574) )
@@ -123315,7 +123317,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(a1 + 83572) && !*(_BYTE *)(a1 + 83574) )
@@ -123412,7 +123414,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(a1 + 83572) && !*(_BYTE *)(a1 + 83574) )
@@ -123509,7 +123511,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     *v4 = v5;
   LABEL_7:
-    result = *(unsigned __int8 *)(sub_6047482C((int)(a1 + 3023), 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr((int)(a1 + 3023), 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState(a1 + 9, 13285204);
     return result;
@@ -123682,7 +123684,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13285268);
     return result;
@@ -123792,7 +123794,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 36), 13285332);
     return result;
@@ -123887,7 +123889,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(a1 + 83572) && !*(_BYTE *)(a1 + 83574) )
@@ -123937,7 +123939,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(a1 + 83572) && !*(_BYTE *)(a1 + 83574) )
@@ -124039,7 +124041,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12092, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12092, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(a1 + 83572) && !*(_BYTE *)(a1 + 83574) )
@@ -124272,11 +124274,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 69072);
     sub_6050A4C4(a1 + 61856);
     sub_6050A4C4(a1 + 54640);
-    sub_6045C0A0(a1 + 54232);
-    sub_6045C0A0(a1 + 53828);
-    sub_6045C0A0(a1 + 53424);
-    sub_6045C0A0(a1 + 53020);
-    sub_6045C0A0(a1 + 52616);
+    thunk_sub_60909E64(a1 + 54232);
+    thunk_sub_60909E64(a1 + 53828);
+    thunk_sub_60909E64(a1 + 53424);
+    thunk_sub_60909E64(a1 + 53020);
+    thunk_sub_60909E64(a1 + 52616);
     sub_60540D10(a1 + 17760);
     sub_605021B0(a1 + 15680);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 12092));
@@ -124317,7 +124319,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB97C = (int)"Pa_SaveData_01";
       dword_60CAB980 = 12321336;
       dword_60CAB984 = (int)"Pa_SaveData_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB920);
     }
     sub_60531B9C(a1 + 56);
@@ -124347,7 +124349,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABA5C = MEMORY[0xCAB488];
       dword_60CABA60 = 12321336;
       dword_60CABA64 = MEMORY[0xCAB490];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB924);
     }
     v10 = 11;
@@ -124370,11 +124372,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(a1 + 15680, &dword_60B03A84, "SE_SYS_BACK");
     sub_605028F0(a1 + 15680, &dword_60B03A84, 1);
     v5 = a1 + 15732;
-    v6 = sub_608DE61C(a1 + 15732, 7);
+    v6 = List_getNthNode(a1 + 15732, 7);
     v8 = *(_DWORD *)(a1 + 15744);
     v7 = (_DWORD *)(a1 + 15744);
     *(_DWORD *)(v6 - v8 + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(v5, 7) - *v7 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(v5, 7) - *v7 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_6045BF58((int)(v7 + 9218), 0);
     sub_6045BF58((int)(v7 + 9319), 1);
     sub_6045BF58((int)(v7 + 9420), 2);
@@ -124404,7 +124406,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB9C4 = (int)"Pa_CancelWhich_00";
       dword_60CAB9C8 = 12321336;
       dword_60CAB9CC = (int)"Pa_Return_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB944);
     }
     v4 = 12321336;
@@ -124791,7 +124793,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAB948 = 12321336;
       dword_60CAB94C = (int)"N_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB928);
     }
     v3 = (_DWORD *)(a1 + 12092);
@@ -124821,7 +124823,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABA04 = (int)"N_Return_00";
       dword_60CABA08 = 12321336;
       dword_60CABA0C = (int)"N_Window_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB92C);
     }
     v16 = 8;
@@ -124830,7 +124832,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAB950 = 12321336;
       dword_60CAB954 = (int)"P_Base_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB930);
     }
     v16 = 1;
@@ -124847,7 +124849,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAB958 = 12321336;
       dword_60CAB95C = (int)"Pa_MarioUBtn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB934);
     }
     v16 = 1;
@@ -124862,14 +124864,14 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAB9A4 = (int)"Pa_SaveData_02";
       dword_60CAB9A8 = 12321336;
       dword_60CAB9AC = (int)"Pa_MarioUBtn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB938);
     }
     if ( ((unsigned int)&unk_60CAB93C & ~(1616112180 << v7) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAB93C) )
     {
       dword_60CAB960 = 12321336;
       dword_60CAB964 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB93C);
     }
     v16 = 1;
@@ -124892,7 +124894,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAB968 = 12321336;
       dword_60CAB96C = (int)"G_StoryIndex_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAB940);
     }
     *(_DWORD *)(a1 + 54636) = sub_604746E4(a1 + 12092, (_DWORD *)0xCAB444, &dword_60CAB968);
@@ -125527,7 +125529,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 28128, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 28128, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286044);
     return result;
@@ -125666,7 +125668,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6080840C(MEMORY[0xCC6AF8], (int)"SE_SYS_FS_PROCESSING", 1, 0, 0);
     }
     v3 = (_BYTE *)(a1 + 34727);
-    if ( !*(_BYTE *)(a1 + 34727) && (*(_BYTE *)(sub_6047482C(a1 + 28128, 0) + 51) & 1) != 0 )
+    if ( !*(_BYTE *)(a1 + 34727) && (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 28128, 0) + 51) & 1) != 0 )
       *v3 = 1;
     result = 1;
     if ( *(_BYTE *)(a1 + 34729) )
@@ -125763,7 +125765,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 28128, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 28128, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286332);
     return result;
@@ -125902,7 +125904,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 28128, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 28128, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286044);
     return result;
@@ -125951,7 +125953,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 28128, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 28128, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 28108), 13286460);
     return result;
@@ -126138,7 +126140,7 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6080840C(MEMORY[0xCC6AF8], (int)"SE_SYS_FS_PROCESSING", 1, 0, 0);
     }
     v3 = (_BYTE *)(a1 + 34728);
-    if ( !*(_BYTE *)(a1 + 34728) && (*(_BYTE *)(sub_6047482C(a1 + 28128, 0) + 51) & 1) != 0 )
+    if ( !*(_BYTE *)(a1 + 34728) && (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 28128, 0) + 51) & 1) != 0 )
       *v3 = 1;
     result = 1;
     if ( *(_BYTE *)(a1 + 34729) )
@@ -126229,8 +126231,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12584188;
     v2 = a1 + 6019;
-    sub_6045C0A0(a1 + 8571);
-    sub_6045C0A0(a1 + 8470);
+    thunk_sub_60909E64(a1 + 8571);
+    thunk_sub_60909E64(a1 + 8470);
     sub_605021B0(a1 + 7950);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 7032));
     sub_60531B7C(v2);
@@ -126253,8 +126255,8 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12584188;
     v2 = (int)(a1 + 6019);
-    sub_6045C0A0(a1 + 8571);
-    sub_6045C0A0(a1 + 8470);
+    thunk_sub_60909E64(a1 + 8571);
+    thunk_sub_60909E64(a1 + 8470);
     sub_605021B0(a1 + 7950);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 7032));
     sub_60531B7C(v2);
@@ -126316,7 +126318,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABD1C = (int)"Pa_OverWriteDataR_00";
       dword_60CABD20 = 12321336;
       dword_60CABD24 = (int)"Pa_CompleteData_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABCA0);
     }
     sub_60531B9C(a1 + 4);
@@ -126338,7 +126340,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABCE0 = MEMORY[0xCABA90];
       dword_60CABCE4 = 12321336;
       dword_60CABCE8 = MEMORY[0xCABA98];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABCA4);
     }
     v9 = 5;
@@ -126545,7 +126547,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABD5C = (int)"N_OverWriteEffect_00";
       dword_60CABD60 = 12321336;
       dword_60CABD64 = (int)"N_CompleteOverWrite_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABCA8);
     }
     v8 = 8;
@@ -126556,7 +126558,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABCB8 = (int)"Pa_BtnL_00";
       dword_60CABCBC = 12321336;
       dword_60CABCC0 = (int)"Pa_BtnR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABCAC);
     }
     v7 = 2;
@@ -126591,7 +126593,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABDD4 = (int)"T_DeleteEnd_00";
       dword_60CABDD8 = 12321336;
       dword_60CABDDC = (int)"T_DeleteEnd_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABCB0);
     }
     v6 = 14;
@@ -126939,7 +126941,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABE34 = MEMORY[0xCABE0C];
       dword_60CABE38 = 12321336;
       dword_60CABE3C = MEMORY[0xCABE14];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABE20);
     }
     v6[0] = 2;
@@ -126948,7 +126950,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CABE28 = 12321336;
       dword_60CABE2C = (int)"N_Fade_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABE24);
     }
     v6[0] = 1;
@@ -127018,7 +127020,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( !*(_BYTE *)(a1 + 3608) )
     {
       v2 = 0;
-      v3 = sub_6047482C(a1 + 60, 0);
+      v3 = ArrayOf20_getEntryPtr(a1 + 60, 0);
       v4 = v3;
       if ( v3 )
       {
@@ -127272,7 +127274,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABE48 = MEMORY[0xC00608];
       dword_60CABE4C = 12321336;
       dword_60CABE50 = MEMORY[0xC00610];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABE40);
     }
     v4[0] = 2;
@@ -127386,7 +127388,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CABE68 = 12321336;
       dword_60CABE6C = MEMORY[0xC00628];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABE60);
     }
     v6[0] = 1;
@@ -127404,7 +127406,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABE8C = (int)"N_LU_00";
       dword_60CABE90 = 12321336;
       dword_60CABE94 = (int)"N_RU_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABE64);
     }
     v6[0] = 5;
@@ -127653,7 +127655,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CABEA8 = 12321336;
       dword_60CABEAC = MEMORY[0xC00640];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABEA0);
     }
     v6[0] = 1;
@@ -127670,7 +127672,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CABECC = (int)"N_LU_00";
       dword_60CABED0 = 12321336;
       dword_60CABED4 = (int)"N_RU_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CABEA4);
     }
     v6[0] = 5;
@@ -127870,7 +127872,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v5; // r1
   
     sub_60546B50((_DWORD *)a1);
-    v3 = sub_608DE61C(a1 + 3684, *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17));
+    v3 = List_getNthNode(a1 + 3684, *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17));
     v4 = v3 == 0;
     if ( v3 )
     {
@@ -127898,7 +127900,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13287260);
     return result;
@@ -127983,7 +127985,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 4678);
     if ( *(_BYTE *)(a1 + 4678) )
       return result;
-    v7 = sub_608DE61C(a1 + 3684, *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17));
+    v7 = List_getNthNode(a1 + 3684, *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17));
     v8 = v7 == 0;
     if ( v7 )
     {
@@ -128097,7 +128099,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), *(_DWORD *)(a1 + 40));
     return result;
@@ -128738,7 +128740,7 @@ static inline unsigned int uxtb16(unsigned int x)
     bool v4; // zf
     int v5; // r1
   
-    v3 = sub_608DE61C(a1 + 3684, *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17));
+    v3 = List_getNthNode(a1 + 3684, *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17));
     v4 = v3 == 0;
     if ( v3 )
     {
@@ -128863,7 +128865,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13287196);
     return result;
@@ -128954,7 +128956,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13287196);
     return result;
@@ -129125,11 +129127,11 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_608169AC(MEMORY[0xCC6B68]);
       *v2 = 0;
     }
-    sub_6045C0A0(a1 + 33064);
-    sub_6045C0A0(a1 + 32660);
-    sub_6045C0A0(a1 + 32256);
-    sub_6045C0A0(a1 + 31852);
-    sub_6045C0A0(a1 + 31448);
+    thunk_sub_60909E64(a1 + 33064);
+    thunk_sub_60909E64(a1 + 32660);
+    thunk_sub_60909E64(a1 + 32256);
+    thunk_sub_60909E64(a1 + 31852);
+    thunk_sub_60909E64(a1 + 31448);
     sub_6050A4C4(a1 + 24204);
     sub_60547AA4(a1 + 5712);
     sub_605021B0(a1 + 3632);
@@ -129168,8 +129170,8 @@ static inline unsigned int uxtb16(unsigned int x)
     sead::SafeStringBase<char>::operator=(a1 + 4644, v4);
     sub_605029FC(a1 + 3632, dword_60B03AD8, "SE_SYS_BACK");
     sub_605028F0(a1 + 3632, dword_60B03AD8, 1);
-    *(_DWORD *)(sub_608DE61C(a1 + 3684, 2) - *(_DWORD *)(a1 + 3696) + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(a1 + 3684, 2) - *(_DWORD *)(a1 + 3696) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(a1 + 3684, 2) - *(_DWORD *)(a1 + 3696) + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(a1 + 3684, 2) - *(_DWORD *)(a1 + 3696) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_60545310(a1);
     v2 = MEMORY[0xCC6D78];
     sub_6045BF58(a1 + 31448, 0);
@@ -129225,7 +129227,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC3D8 = MEMORY[0xCABF10];
       dword_60CAC3DC = 12321336;
       dword_60CAC3E0 = MEMORY[0xCABF18];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC380);
     }
     v6 = 7;
@@ -129249,7 +129251,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC390 = (int)"N_SaveData_00";
       dword_60CAC394 = 12321336;
       dword_60CAC398 = (int)"N_SaveData_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC384);
     }
     v6 = 2;
@@ -129260,7 +129262,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC3A0 = (int)"Pa_SetUp_00";
       dword_60CAC3A4 = 12321336;
       dword_60CAC3A8 = (int)"Pa_SetUpDL_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC388);
     }
     v5 = 2;
@@ -130460,7 +130462,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60807EF0(MEMORY[0xCC6AF8], (int)"SE_SYS_DIALOGUE_IN", 0);
     sub_6045B330(MEMORY[0xC9CFB8], a1[4109]);
     sub_60473DE4(v2, 2u, (_DWORD *)0xCAC410, 0);
-    result = sub_6047482C((int)v2, 2u);
+    result = ArrayOf20_getEntryPtr((int)v2, 2u);
     if ( result )
       return (*(int (__fastcall **)(int))(*(_DWORD *)result + 96))(result);
     return result;
@@ -130474,7 +130476,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13288544);
     return result;
@@ -130590,7 +130592,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13288896);
     return result;
@@ -130650,7 +130652,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 12892, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 12892, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_DWORD *)(a1 + 18464) )
@@ -130693,7 +130695,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 9352, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 9352, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_DWORD *)(a1 + 18464) )
@@ -130738,7 +130740,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 1u) + 51);
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 18464) = 1;
@@ -130771,7 +130773,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 1u) + 51);
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 18464) = 0;
@@ -130804,7 +130806,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 1u) + 51);
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 18464) = 1;
@@ -130837,7 +130839,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 1u) + 51);
     if ( (result & 1) != 0 )
     {
       *(_DWORD *)(a1 + 18464) = 0;
@@ -131035,11 +131037,11 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12584784;
     *(_WORD *)(a1 + 16440) = 0;
-    sub_6045C0A0(a1 + 18060);
-    sub_6045C0A0(a1 + 17656);
-    sub_6045C0A0(a1 + 17252);
-    sub_6045C0A0(a1 + 16848);
-    sub_6045C0A0(a1 + 16444);
+    thunk_sub_60909E64(a1 + 18060);
+    thunk_sub_60909E64(a1 + 17656);
+    thunk_sub_60909E64(a1 + 17252);
+    thunk_sub_60909E64(a1 + 16848);
+    thunk_sub_60909E64(a1 + 16444);
     sub_6047643C((struct sead_IDisposer *)(a1 + 12892));
     sub_6047643C((struct sead_IDisposer *)(a1 + 9352));
     sub_6047643C((struct sead_IDisposer *)(a1 + 5812));
@@ -131056,11 +131058,11 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12584784;
     *(_WORD *)(a1 + 16440) = 0;
-    sub_6045C0A0((_DWORD *)(a1 + 18060));
-    sub_6045C0A0((_DWORD *)(a1 + 17656));
-    sub_6045C0A0((_DWORD *)(a1 + 17252));
-    sub_6045C0A0((_DWORD *)(a1 + 16848));
-    sub_6045C0A0((_DWORD *)(a1 + 16444));
+    thunk_sub_60909E64((_DWORD *)(a1 + 18060));
+    thunk_sub_60909E64((_DWORD *)(a1 + 17656));
+    thunk_sub_60909E64((_DWORD *)(a1 + 17252));
+    thunk_sub_60909E64((_DWORD *)(a1 + 16848));
+    thunk_sub_60909E64((_DWORD *)(a1 + 16444));
     sub_6047643C((struct sead_IDisposer *)(a1 + 12892));
     sub_6047643C((struct sead_IDisposer *)(a1 + 9352));
     sub_6047643C((struct sead_IDisposer *)(a1 + 5812));
@@ -131089,7 +131091,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC6EC = (int)"N_TypeA_00";
       dword_60CAC6F0 = 12321336;
       dword_60CAC6F4 = (int)"N_TypeBL_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC6A8);
     }
     v4 = 4;
@@ -131122,7 +131124,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC6BC = (int)"SetUpBtn.bflyt";
       dword_60CAC6C0 = 12321336;
       dword_60CAC6C4 = (int)"SetUpBtnDL.bflyt";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC6A0);
     }
     v3 = *(unsigned __int8 *)(MEMORY[0xCC6D8C] + 17);
@@ -131145,7 +131147,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC764 = MEMORY[0xCAC414];
       dword_60CAC768 = 12321336;
       dword_60CAC76C = MEMORY[0xCAC41C];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC6A4);
     }
     v6[0] = 6;
@@ -131177,15 +131179,15 @@ static inline unsigned int uxtb16(unsigned int x)
     v3[0] = 12321336;
     v3[1] = (int)"SetUpBtn";
     sead::SafeStringBase<char>::operator=(a1 + 4712, v3);
-    *(_DWORD *)(sub_608DE61C(a1 + 3752, 0) - *(_DWORD *)(a1 + 3764) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3752, 0) - *(_DWORD *)(a1 + 3764) + 192) = 0;
     v3[0] = 2;
     sub_605029FC(a1 + 3700, v3, "SE_SYS_PAGE");
     sub_605028F0(a1 + 3700, v3, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 3752, v3[0]) - *(_DWORD *)(a1 + 3764) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3752, v3[0]) - *(_DWORD *)(a1 + 3764) + 208) = 0;
     v3[0] = 1;
     sub_605029FC(a1 + 3700, v3, "SE_SYS_PAGE");
     sub_605028F0(a1 + 3700, v3, 1);
-    result = sub_608DE61C(a1 + 3752, v3[0]) - *(_DWORD *)(a1 + 3764);
+    result = List_getNthNode(a1 + 3752, v3[0]) - *(_DWORD *)(a1 + 3764);
     *(_BYTE *)(result + 208) = 0;
     return result;
   }
@@ -131210,7 +131212,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC70C = (int)"B_Arrow_00";
       dword_60CAC710 = 12321336;
       dword_60CAC714 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC6AC);
     }
     if ( ((unsigned int)&unk_60CAC6B0 & ~(1616151068 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAC6B0) )
@@ -131223,7 +131225,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC734 = (int)"Pa_ArrowBtnL_00";
       dword_60CAC738 = 12321336;
       dword_60CAC73C = (int)"Pa_OK_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC6B0);
     }
     v4 = 1;
@@ -131258,7 +131260,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC6CC = MEMORY[0xCAC3F4];
       dword_60CAC6D0 = 12321336;
       dword_60CAC6D4 = MEMORY[0xCAC3FC];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC6B4);
     }
     sub_604734E4((_DWORD *)(a1 + 5812), 0);
@@ -131575,7 +131577,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( sub_60502D80(a1 + 3700) != 1 )
         return sub_60549510(a1);
-      v3 = sub_608DE61C(a1 + 3752, 2);
+      v3 = List_getNthNode(a1 + 3752, 2);
       v4 = v3 == 0;
       if ( v3 )
       {
@@ -131584,7 +131586,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( !v4 && (*(_DWORD *)(v3 + 4) | 2) == 3 )
         return sub_6047459C(a1 + 40, 3);
-      v5 = sub_608DE61C(a1 + 3752, 1);
+      v5 = List_getNthNode(a1 + 3752, 1);
       v6 = v5 == 0;
       if ( v5 )
       {
@@ -131668,8 +131670,8 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a2 )
     {
       v8 = *v6;
-      *(_DWORD *)(sub_608DE61C(v5, 0) - a1[941] + 196) = 9;
-      *(_DWORD *)(sub_608DE61C(v5, 0) - a1[941] + 200) = 9;
+      *(_DWORD *)(List_getNthNode(v5, 0) - a1[941] + 196) = 9;
+      *(_DWORD *)(List_getNthNode(v5, 0) - a1[941] + 200) = 9;
       v9 = *v4;
       *(_DWORD *)(v9 + 24) = v7;
       *(float *)(v9 + 28) = v8;
@@ -131677,8 +131679,8 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v9 + 64) |= 0x10u;
       v10 = a1[1450];
       v11 = *(_DWORD *)(a1[1446] + 24);
-      *(_DWORD *)(sub_608DE61C(v5, 2) - a1[941] + 196) = 9;
-      *(_DWORD *)(sub_608DE61C(v5, 2) - a1[941] + 200) = 9;
+      *(_DWORD *)(List_getNthNode(v5, 2) - a1[941] + 196) = 9;
+      *(_DWORD *)(List_getNthNode(v5, 2) - a1[941] + 200) = 9;
       v12 = a1[1446];
       *(_DWORD *)(v12 + 24) = v11;
       *(_DWORD *)(v12 + 28) = v10;
@@ -131686,8 +131688,8 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v12 + 64) |= 0x10u;
       v13 = a1[1451];
       v14 = *(_DWORD *)(a1[1447] + 24);
-      *(_DWORD *)(sub_608DE61C(v5, 1) - a1[941] + 196) = 9;
-      *(_DWORD *)(sub_608DE61C(v5, 1) - a1[941] + 200) = 9;
+      *(_DWORD *)(List_getNthNode(v5, 1) - a1[941] + 196) = 9;
+      *(_DWORD *)(List_getNthNode(v5, 1) - a1[941] + 200) = 9;
       v15 = a1[1447];
       *(_DWORD *)(v15 + 24) = v14;
       *(_DWORD *)(v15 + 28) = v13;
@@ -131695,8 +131697,8 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v15 + 64) |= 0x10u;
       v16 = a1[1452];
       v17 = *(_DWORD *)(a1[1448] + 24);
-      *(_DWORD *)(sub_608DE61C(v5, 3) - a1[941] + 196) = 9;
-      *(_DWORD *)(sub_608DE61C(v5, 3) - a1[941] + 200) = 9;
+      *(_DWORD *)(List_getNthNode(v5, 3) - a1[941] + 196) = 9;
+      *(_DWORD *)(List_getNthNode(v5, 3) - a1[941] + 200) = 9;
       result = a1[1448];
       *(_DWORD *)(result + 24) = v17;
       *(_DWORD *)(result + 28) = v16;
@@ -131704,8 +131706,8 @@ static inline unsigned int uxtb16(unsigned int x)
     else
     {
       v19 = *v6;
-      *(_DWORD *)(sub_608DE61C(v5, 0) - a1[941] + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(v5, 0) - a1[941] + 200) = 0;
+      *(_DWORD *)(List_getNthNode(v5, 0) - a1[941] + 196) = 0;
+      *(_DWORD *)(List_getNthNode(v5, 0) - a1[941] + 200) = 0;
       v20 = *v4;
       *(_DWORD *)(v20 + 24) = v7;
       *(float *)(v20 + 28) = v19 + 10000.0;
@@ -131713,8 +131715,8 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v20 + 64) |= 0x10u;
       v21 = *((float *)a1 + 1450);
       v22 = *(_DWORD *)(a1[1446] + 24);
-      *(_DWORD *)(sub_608DE61C(v5, 2) - a1[941] + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(v5, 2) - a1[941] + 200) = 0;
+      *(_DWORD *)(List_getNthNode(v5, 2) - a1[941] + 196) = 0;
+      *(_DWORD *)(List_getNthNode(v5, 2) - a1[941] + 200) = 0;
       v23 = a1[1446];
       *(_DWORD *)(v23 + 24) = v22;
       *(float *)(v23 + 28) = v21 + 10000.0;
@@ -131722,8 +131724,8 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v23 + 64) |= 0x10u;
       v24 = *((float *)a1 + 1451);
       v25 = *(_DWORD *)(a1[1447] + 24);
-      *(_DWORD *)(sub_608DE61C(v5, 1) - a1[941] + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(v5, 1) - a1[941] + 200) = 0;
+      *(_DWORD *)(List_getNthNode(v5, 1) - a1[941] + 196) = 0;
+      *(_DWORD *)(List_getNthNode(v5, 1) - a1[941] + 200) = 0;
       v26 = a1[1447];
       *(_DWORD *)(v26 + 24) = v25;
       *(float *)(v26 + 28) = v24 + 10000.0;
@@ -131731,8 +131733,8 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_BYTE *)(v26 + 64) |= 0x10u;
       v27 = *((float *)a1 + 1452);
       v28 = *(_DWORD *)(a1[1448] + 24);
-      *(_DWORD *)(sub_608DE61C(v5, 3) - a1[941] + 196) = 0;
-      *(_DWORD *)(sub_608DE61C(v5, 3) - a1[941] + 200) = 0;
+      *(_DWORD *)(List_getNthNode(v5, 3) - a1[941] + 196) = 0;
+      *(_DWORD *)(List_getNthNode(v5, 3) - a1[941] + 200) = 0;
       result = a1[1448];
       *(_DWORD *)(result + 24) = v28;
       *(float *)(result + 28) = v27 + 10000.0;
@@ -131874,7 +131876,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v10; // [sp+Ch] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 40);
-    v3 = sub_6047482C(a1 + 40, 3);
+    v3 = ArrayOf20_getEntryPtr(a1 + 40, 3);
     v4 = v3 == 0;
     if ( v3 )
     {
@@ -131885,10 +131887,10 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9 = 12321336;
       v10 = "G_ArrowL_00";
-      sub_6047467C(v2, 3u, (_DWORD *)0xCAC418, (int)&v9, 1);
+      ArrayOf20_insertEntry(v2, 3u, (_DWORD *)0xCAC418, (int)&v9, 1);
       v1 = 2;
     }
-    result = sub_6047482C(v2, 4);
+    result = ArrayOf20_getEntryPtr(v2, 4);
     v6 = result == 0;
     if ( result )
     {
@@ -131899,7 +131901,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9 = 12321336;
       v10 = "G_ArrowR_00";
-      sub_6047467C(v2, 4u, (_DWORD *)0xCAC418, (int)&v9, 1);
+      ArrayOf20_insertEntry(v2, 4u, (_DWORD *)0xCAC418, (int)&v9, 1);
       goto LABEL_11;
     }
     if ( v1 >= 0 )
@@ -132207,7 +132209,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13289392);
     return result;
@@ -132245,7 +132247,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13289328);
     return result;
@@ -132336,7 +132338,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC7F8 = (int)"In";
       dword_60CAC7FC = 12321336;
       dword_60CAC800 = (int)"Out";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC7F0);
     }
     v4[0] = 2;
@@ -132604,7 +132606,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     sub_6054AC20((float *)a1);
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 2u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 2u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 28), 13289564);
     return result;
@@ -132643,7 +132645,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
   
     sub_6054AC20((float *)a1);
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 2u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 2u) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 28), 13289500);
     return result;
@@ -132735,7 +132737,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC8D0 = MEMORY[0xCAC810];
       dword_60CAC8D4 = 12321336;
       dword_60CAC8D8 = MEMORY[0xCAC818];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC8C0);
     }
     v6 = 3;
@@ -132960,7 +132962,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v20 = v17;
           v11 = sub_608330EC(&v18);
           atan2f_0(v11);
-          v12 = sub_6047482C(a1 + 11, 1);
+          v12 = ArrayOf20_getEntryPtr(a1 + 11, 1);
           (*(void (__fastcall **)(int))(*(_DWORD *)v12 + 96))(v12);
           result = *((_DWORD *)a1 + 1);
           v13 = v16;
@@ -133178,7 +133180,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13289756);
     return result;
@@ -133217,7 +133219,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13289692);
     return result;
@@ -133307,7 +133309,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAC968 = (int)"In";
       dword_60CAC96C = 12321336;
       dword_60CAC970 = (int)"Out";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAC960);
     }
     v4[0] = 2;
@@ -133535,7 +133537,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13289908);
     return result;
@@ -133574,7 +133576,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13289844);
     return result;
@@ -133664,7 +133666,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CACA08 = (int)"In";
       dword_60CACA0C = 12321336;
       dword_60CACA10 = (int)"Out";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACA00);
     }
     v4[0] = 2;
@@ -133923,7 +133925,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13290116);
     return result;
@@ -134078,7 +134080,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13290052);
     return result;
@@ -134152,7 +134154,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12585424;
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3688) = 0;
-    sub_6045C0A0(a1 + 3692);
+    thunk_sub_60909E64(a1 + 3692);
     sub_60475AE8(v2);
     return a1;
   }
@@ -134168,7 +134170,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12585424;
     v2 = (struct sead_IDisposer *)(a1 + 40);
     *(_WORD *)(a1 + 3688) = 0;
-    sub_6045C0A0((_DWORD *)(a1 + 3692));
+    thunk_sub_60909E64((_DWORD *)(a1 + 3692));
     sub_60475AE8(v2);
     return operator delete(a1);
   }
@@ -134192,7 +134194,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CACB7C = (int)"T_W9_00";
       dword_60CACB80 = 12321336;
       dword_60CACB84 = (int)"T_W9_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACB3C);
     }
     v4 = 3;
@@ -134231,7 +134233,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CACBB4 = MEMORY[0xCACA38];
       dword_60CACBB8 = 12321336;
       dword_60CACBBC = MEMORY[0xCACA40];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACB34);
     }
     v4[0] = 6;
@@ -134256,7 +134258,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CACB64 = (int)"N_Sign_00";
       dword_60CACB68 = 12321336;
       dword_60CACB6C = (int)"N_W9Win_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACB38);
     }
     v4 = 3;
@@ -134293,7 +134295,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CACB4C = (int)"Pa_KeyAssign_01";
       dword_60CACB50 = 12321336;
       dword_60CACB54 = (int)"Pa_KeyAssign_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACB30);
     }
     v3 = operator new(7216);
@@ -134774,7 +134776,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CACD40 = (int)&unk_60ABC94D;
     dword_60CACD44 = 12321336;
     dword_60CACD48 = (int)"PointGet_Coin_00";
-    sub_60000288();
+    stub_return0_000288();
     MEMORY[0xCACD50] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCACD4C] = 12585584;
     MEMORY[0xCACD54] = 5559972;
@@ -135237,7 +135239,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 40;
     sub_60473DE4((_DWORD *)(a1 + 40), 1u, (_DWORD *)0xCACBD4, 0);
     sub_6047455C(v2, 1u);
-    v3 = sub_6047482C(v2, 1u);
+    v3 = ArrayOf20_getEntryPtr(v2, 1u);
     (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 96))(v3);
     *(_DWORD *)(a1 + 3796) = 0;
     *(_DWORD *)(a1 + 3800) = *(_DWORD *)(MEMORY[0xC9A1E8] + 231392);
@@ -135286,7 +135288,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *v2; // r5
   
     v2 = (_DWORD *)(a1 + 40);
-    if ( (*(_BYTE *)(sub_6047482C(a1 + 40, 2u) + 51) & 1) != 0 )
+    if ( (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 40, 2u) + 51) & 1) != 0 )
       sub_60473DE4(v2, 2u, (_DWORD *)0xCACBE4, 1);
     if ( MEMORY[0xCC6484] )
       *(float *)(a1 + 3788) = *(float *)(MEMORY[0xCC6484] + 124) + 320.0;
@@ -135436,7 +135438,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CACE70 = MEMORY[0xCACBE8];
       dword_60CACE74 = 12321336;
       dword_60CACE78 = MEMORY[0xCACBF0];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACE30);
     }
     v7[0] = 5;
@@ -135459,7 +135461,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CACEB4 = (int)"T_BonusCoin_00";
       dword_60CACEB8 = 12321336;
       dword_60CACEBC = (int)"T_BonusCoin_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACE34);
     }
     v7[0] = 8;
@@ -135482,7 +135484,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CACEF4 = (int)"N_Bonus_00";
       dword_60CACEF8 = 12321336;
       dword_60CACEFC = (int)"N_Bonus_01";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACE38);
     }
     v7[0] = 8;
@@ -136137,7 +136139,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       sub_60473DE4(a1 + 10, 1u, (_DWORD *)0xCACBD4, 0);
       sub_6047455C(a1 + 10, 1);
-      v9 = sub_6047482C(a1 + 10, 1);
+      v9 = ArrayOf20_getEntryPtr(a1 + 10, 1);
       return (*(int (__fastcall **)(int))(*(_DWORD *)v9 + 96))(v9);
     }
     return result;
@@ -136356,7 +136358,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
       *(_WORD *)(a1 + 3608) = 0;
@@ -136449,7 +136451,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CACF6C = 12321336;
       dword_60CACF70 = MEMORY[0xCACF04];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACF60);
     }
     v5[0] = 1;
@@ -136482,7 +136484,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CACFA0 = (int)"T_Text_03";
       dword_60CACFA4 = 12321336;
       dword_60CACFA8 = (int)"T_Text_04";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACF64);
     }
     v5 = 5;
@@ -136497,7 +136499,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CACF78 = MEMORY[0xCACF0C];
         dword_60CACF7C = 12321336;
         dword_60CACF80 = MEMORY[0xCACF14];
-        sub_60000288();
+        stub_return0_000288();
         return _cxa_guard_release_0(&unk_60CACF68);
       }
     }
@@ -136781,7 +136783,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CACFE8 = (int)"T_CoinNum_00";
       dword_60CACFEC = 12321336;
       dword_60CACFF0 = (int)"T_HighScoreNum_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CACFE0);
     }
     v6 = 2;
@@ -137188,7 +137190,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCAD06C] = "StarCoinList_Index_00";
     MEMORY[0xCAD070] = 12321336;
     MEMORY[0xCAD074] = "StarCoinListDL_Index_00";
-    sub_60000288();
+    stub_return0_000288();
     MEMORY[0xCAD07C] = MEMORY[0xC7B788] + 1;
     MEMORY[0xCAD078] = 12585968;
     MEMORY[0xCAD080] = 5575148;
@@ -137284,7 +137286,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13291704);
     return result;
@@ -137528,7 +137530,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v3; // r1
     int v4; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 1u) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 1u) + 51);
     if ( (result & 1) != 0 )
     {
       v3 = 2;
@@ -137663,7 +137665,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13291896);
     return result;
@@ -137978,7 +137980,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60555668(a1 + 31328);
     sub_60555668(a1 + 31240);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 27560));
-    sub_6045C0A0(a1 + 27148);
+    thunk_sub_60909E64(a1 + 27148);
     sub_6050A4C4(a1 + 19932);
     sub_605021B0(a1 + 17840);
     sub_6047643C((struct sead_IDisposer *)(a1 + 14272));
@@ -138028,7 +138030,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAD1C8 = 12321336;
       dword_60CAD1CC = (int)"T_Index_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD1B0);
     }
     v4 = 1;
@@ -138082,7 +138084,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD29C = MEMORY[0xCAD01C];
       dword_60CAD2A0 = 12321336;
       dword_60CAD2A4 = MEMORY[0xCAD024];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD1A0);
     }
     v6 = 5;
@@ -138110,7 +138112,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD26C = MEMORY[0xCAD054];
       dword_60CAD270 = 12321336;
       dword_60CAD274 = MEMORY[0xCAD05C];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD1A4);
     }
     sub_604734E4((_DWORD *)(a1 + 3652), 0);
@@ -138127,7 +138129,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD1E4 = MEMORY[0xCAD004];
       dword_60CAD1E8 = 12321336;
       dword_60CAD1EC = MEMORY[0xCAD00C];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD1A8);
     }
     v4 = *(void (__fastcall **)(int, int *, int *))(*(_DWORD *)(a1 + 3652) + 8);
@@ -138162,7 +138164,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD1FC = (int)"Pa_ArrowBtnR_00";
       dword_60CAD200 = 12321336;
       dword_60CAD204 = (int)"Pa_Close_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD1AC);
     }
     v9[0] = 3;
@@ -138176,22 +138178,22 @@ static inline unsigned int uxtb16(unsigned int x)
     v9[0] = 0;
     sub_605028F0(a1 + 17840, v9, 1);
     v4 = a1 + 17892;
-    v5 = sub_608DE61C(a1 + 17892, 0);
+    v5 = List_getNthNode(a1 + 17892, 0);
     v7 = *(_DWORD *)(a1 + 17904);
     v6 = (_DWORD *)(a1 + 17904);
     *(_BYTE *)(v5 - v7 + 208) = 0;
     v9[0] = 1;
     sub_605028F0(v3, v9, 1);
-    *(_BYTE *)(sub_608DE61C(v4, 1) - *v6 + 208) = 0;
+    *(_BYTE *)(List_getNthNode(v4, 1) - *v6 + 208) = 0;
     v9[0] = 2;
     sub_605028F0(v3, v9, 1);
-    *(_BYTE *)(sub_608DE61C(v4, 2) - *v6 + 208) = 0;
-    *(_DWORD *)(sub_608DE61C(v4, 0) - *v6 + 192) = 0;
-    *(_DWORD *)(sub_608DE61C(v4, 1) - *v6 + 192) = 0;
+    *(_BYTE *)(List_getNthNode(v4, 2) - *v6 + 208) = 0;
+    *(_DWORD *)(List_getNthNode(v4, 0) - *v6 + 192) = 0;
+    *(_DWORD *)(List_getNthNode(v4, 1) - *v6 + 192) = 0;
     v9[0] = 2;
     sub_605029FC(v3, v9, "SE_SYS_BACK");
-    *(_DWORD *)(sub_608DE61C(v4, v9[0]) - *v6 + 176) = "SE_SYS_BACK_BTN_OVER";
-    result = sub_608DE61C(v4, v9[0]) - *v6;
+    *(_DWORD *)(List_getNthNode(v4, v9[0]) - *v6 + 176) = "SE_SYS_BACK_BTN_OVER";
+    result = List_getNthNode(v4, v9[0]) - *v6;
     *(_DWORD *)(result + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     return result;
   }
@@ -138213,7 +138215,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD21C = (int)"B_Arrow_00";
       dword_60CAD220 = 12321336;
       dword_60CAD224 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD1B4);
     }
     if ( ((unsigned int)&unk_60CAD1B8 & ~(1616195404 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAD1B8) )
@@ -138224,7 +138226,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD234 = (int)"Pa_ArrowBtnR_00";
       dword_60CAD238 = 12321336;
       dword_60CAD23C = (int)"Pa_Close_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD1B8);
     }
     v4 = 1;
@@ -138283,9 +138285,9 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( sub_60502D80(a1 + 17840) == 1 )
       {
-        if ( (*(_DWORD *)(sub_608DE61C(a1 + 17892, 0) - *(_DWORD *)(a1 + 17904) + 4) | 2) == 3 )
+        if ( (*(_DWORD *)(List_getNthNode(a1 + 17892, 0) - *(_DWORD *)(a1 + 17904) + 4) | 2) == 3 )
           return sub_6047459C(a1 + 44, 2);
-        if ( (*(_DWORD *)(sub_608DE61C(a1 + 17892, 1) - *(_DWORD *)(a1 + 17904) + 4) | 2) == 3 )
+        if ( (*(_DWORD *)(List_getNthNode(a1 + 17892, 1) - *(_DWORD *)(a1 + 17904) + 4) | 2) == 3 )
         {
           v4 = a1 + 44;
           return sub_6047459C(v4, 3);
@@ -138457,7 +138459,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD24C = MEMORY[0xCAD034];
       off_60CAD250 = (_UNKNOWN *)12321336;
       dword_60CAD254 = MEMORY[0xCAD03C];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD1BC);
     }
     v14 = sub_60473B4C(a1 + 44);
@@ -138483,7 +138485,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v19 = 0;
     *(_BYTE *)(a1 + 18340) = v16;
-    v20 = sub_608DE61C(a1 + 17892, 0);
+    v20 = List_getNthNode(a1 + 17892, 0);
     if ( v20 )
       v19 = (_DWORD *)(v20 - *(_DWORD *)(a1 + 17904));
     sub_60478650(v19);
@@ -138675,7 +138677,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *(_BYTE *)(*(_DWORD *)(a1 + 19920) + 64) = *(_BYTE *)(*(_DWORD *)(a1 + 19920) + 64) & 0xFE | a2;
     v4 = a1 + 17892;
-    v5 = sub_608DE61C(a1 + 17892, 0);
+    v5 = List_getNthNode(a1 + 17892, 0);
     v6 = a2;
     v9 = *(_DWORD *)(a1 + 17904);
     v8 = (_DWORD *)(a1 + 17904);
@@ -138683,13 +138685,13 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a2 )
       v6 = 9;
     *(_DWORD *)(v5 - v7 + 196) = v6;
-    *(_DWORD *)(sub_608DE61C(v4, 0) - *v8 + 200) = v6;
+    *(_DWORD *)(List_getNthNode(v4, 0) - *v8 + 200) = v6;
     *(_BYTE *)(v8[505] + 64) = *(_BYTE *)(v8[505] + 64) & 0xFE | a2;
-    *(_DWORD *)(sub_608DE61C(v4, 1) - *v8 + 196) = v6;
-    *(_DWORD *)(sub_608DE61C(v4, 1) - *v8 + 200) = v6;
+    *(_DWORD *)(List_getNthNode(v4, 1) - *v8 + 196) = v6;
+    *(_DWORD *)(List_getNthNode(v4, 1) - *v8 + 200) = v6;
     *(_BYTE *)(v8[506] + 64) = *(_BYTE *)(v8[506] + 64) & 0xFE | a2;
-    *(_DWORD *)(sub_608DE61C(v4, 2) - *v8 + 196) = v6;
-    result = sub_608DE61C(v4, 2) - *v8;
+    *(_DWORD *)(List_getNthNode(v4, 2) - *v8 + 196) = v6;
+    result = List_getNthNode(v4, 2) - *v8;
     *(_DWORD *)(result + 200) = v6;
     return result;
   }
@@ -138916,7 +138918,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int *v10; // r1
   
     v4 = a1 + 11;
-    v5 = sub_6047482C(a1 + 11, 2);
+    v5 = ArrayOf20_getEntryPtr(a1 + 11, 2);
     v6 = v5 == 0;
     if ( v5 )
     {
@@ -138928,7 +138930,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v1 = 1;
       sub_604742D0(v4, 2u, (_DWORD *)0xCAD020, a1[17563], 1);
     }
-    result = sub_6047482C(v4, 3);
+    result = ArrayOf20_getEntryPtr(v4, 3);
     v8 = result == 0;
     if ( result )
     {
@@ -139158,7 +139160,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCAD320] = "N_Course11pos_00";
     MEMORY[0xCAD324] = 12321336;
     MEMORY[0xCAD328] = "N_Course12pos_00";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -139190,7 +139192,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD384 = (int)"T_TotalSCoin_00";
       dword_60CAD388 = 12321336;
       dword_60CAD38C = (int)"T_CourseNum_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD33C);
     }
     v14 = 3;
@@ -139201,7 +139203,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD354 = (int)"W_InfoBase_00";
       dword_60CAD358 = 12321336;
       dword_60CAD35C = (int)"W_InfoFrame_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD340);
     }
     sub_604754E4(a1, (int *)(a1 + 3668), &dword_60CAD350, 2);
@@ -139212,7 +139214,7 @@ static inline unsigned int uxtb16(unsigned int x)
     do
     {
       v9 = *(_DWORD *)(a1 + 3664);
-      v10 = sub_6047482C(a1, 1);
+      v10 = ArrayOf20_getEntryPtr(a1, 1);
       sub_60554D9C(
         a1 + 3572 + v7 + 108,
         a1 + 3620,
@@ -139260,7 +139262,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD36C = MEMORY[0xCAD2C0];
       dword_60CAD370 = 12321336;
       dword_60CAD374 = MEMORY[0xCAD2C8];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD330);
     }
     v4[0] = 3;
@@ -139304,7 +139306,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD43C = (int)"N_Course11pos_00";
       dword_60CAD440 = 12321336;
       dword_60CAD444 = (int)"N_Course12pos_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD334);
     }
     v4 = 13;
@@ -139340,7 +139342,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD3CC = (int)"P_Light_01";
       dword_60CAD3D0 = 12321336;
       dword_60CAD3D4 = (int)"P_Light_02";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD338);
     }
     v4 = 9;
@@ -140848,11 +140850,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4(a1 + 2899);
     sub_60558120(a1 + 1975);
     sub_605021B0(a1 + 1455);
-    sub_6045C0A0(v2);
-    sub_6045C0A0(a1 + 1216);
-    sub_6045C0A0(a1 + 1115);
-    sub_6045C0A0(a1 + 1014);
-    sub_6045C0A0(a1 + 913);
+    thunk_sub_60909E64(v2);
+    thunk_sub_60909E64(a1 + 1216);
+    thunk_sub_60909E64(a1 + 1115);
+    thunk_sub_60909E64(a1 + 1014);
+    thunk_sub_60909E64(a1 + 913);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return a1;
   }
@@ -140870,11 +140872,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6050A4C4((int)(a1 + 2899));
     sub_60558120(a1 + 1975);
     sub_605021B0(a1 + 1455);
-    sub_6045C0A0(v2);
-    sub_6045C0A0(a1 + 1216);
-    sub_6045C0A0(a1 + 1115);
-    sub_6045C0A0(a1 + 1014);
-    sub_6045C0A0(a1 + 913);
+    thunk_sub_60909E64(v2);
+    thunk_sub_60909E64(a1 + 1216);
+    thunk_sub_60909E64(a1 + 1115);
+    thunk_sub_60909E64(a1 + 1014);
+    thunk_sub_60909E64(a1 + 913);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return operator delete((int)a1);
   }
@@ -140919,7 +140921,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD65C = MEMORY[0xCAD45C];
       dword_60CAD660 = 12321336;
       dword_60CAD664 = MEMORY[0xCAD464];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD610);
     }
     v11 = 4;
@@ -140938,11 +140940,11 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(a1 + 1455, dword_60B040C0, "SE_SYS_BACK");
     sub_605028F0((int)(a1 + 1455), dword_60B040C0, 1);
     v5 = a1 + 1468;
-    v6 = sub_608DE61C(a1 + 1468, 2);
+    v6 = List_getNthNode(a1 + 1468, 2);
     v8 = a1[1471];
     v7 = a1 + 1471;
     *(_DWORD *)(v6 - v8 + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(v5, 2) - *v7 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(v5, 2) - *v7 + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605029FC(v4, 11550900, "SE_SYS_BACK");
     sub_605029FC(v4, 11550904, "SE_SYS_BTN_GAME_START");
     sub_60558180(v7 + 504, 1);
@@ -140979,7 +140981,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAD620 = 12321336;
       dword_60CAD624 = (int)"N_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD614);
     }
     v8 = 1;
@@ -140988,7 +140990,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAD628 = 12321336;
       dword_60CAD62C = (int)"P_Base_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD618);
     }
     v8 = 1;
@@ -141027,12 +141029,12 @@ static inline unsigned int uxtb16(unsigned int x)
       sub_6050A8A4(a1 + 11596);
       sub_60473B58(a1 + 44, 5, 0);
       sub_60558700(a1 + 7900);
-      if ( *(_BYTE *)(a1 + 3648) && (*(_BYTE *)(sub_6047482C(a1 + 44, 0) + 51) & 1) != 0 )
+      if ( *(_BYTE *)(a1 + 3648) && (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 44, 0) + 51) & 1) != 0 )
         *(_BYTE *)(a1 + 3648) = 0;
       result = *(unsigned __int8 *)(a1 + 3649);
       if ( *(_BYTE *)(a1 + 3649) )
       {
-        result = *(unsigned __int8 *)(sub_6047482C(a1 + 44, 1) + 51);
+        result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 44, 1) + 51);
         if ( (result & 1) != 0 )
         {
           *(_BYTE *)(a1 + 3649) = 0;
@@ -141204,7 +141206,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD63C = (int)"B_Btn_00";
       dword_60CAD640 = 12321336;
       dword_60CAD644 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD61C);
     }
     v6 = 1;
@@ -141799,7 +141801,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD76C = MEMORY[0xCAD66C];
       dword_60CAD770 = 12321336;
       dword_60CAD774 = MEMORY[0xCAD674];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD760);
     }
     v5[0] = 2;
@@ -141903,7 +141905,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD7AC = (int)"N_TeamBPos_02";
       dword_60CAD7B0 = 12321336;
       dword_60CAD7B4 = (int)"N_TeamBPos_03";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD764);
     }
     v4 = 8;
@@ -141970,9 +141972,9 @@ static inline unsigned int uxtb16(unsigned int x)
     result = (unsigned __int8)a1[3685];
     if ( a1[3685] )
     {
-      if ( a1[3672] && (*(_BYTE *)(sub_6047482C(v2, 0) + 51) & 1) != 0 )
+      if ( a1[3672] && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 0) + 51) & 1) != 0 )
         a1[3672] = 0;
-      if ( a1[3673] && (*(_BYTE *)(sub_6047482C(v2, 1) + 51) & 1) != 0 )
+      if ( a1[3673] && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 1) + 51) & 1) != 0 )
         a1[3673] = 0;
       result = (unsigned __int8)a1[3672];
       if ( !a1[3672] )
@@ -142317,7 +142319,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13293584);
     return result;
@@ -142436,7 +142438,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13293708);
     return result;
@@ -142496,7 +142498,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13293772);
     return result;
@@ -142594,7 +142596,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD8F8 = MEMORY[0xCAD860];
       dword_60CAD8FC = 12321336;
       dword_60CAD900 = MEMORY[0xCAD868];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD8F0);
     }
     v4[0] = 2;
@@ -142952,7 +142954,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAD978 = MEMORY[0xCAD938];
       dword_60CAD97C = 12321336;
       dword_60CAD980 = MEMORY[0xCAD940];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD950);
     }
     v7[0] = 3;
@@ -142961,7 +142963,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAD95C = 12321336;
       dword_60CAD960 = (int)"N_Timer_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD954);
     }
     v7[0] = 1;
@@ -142970,7 +142972,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAD964 = 12321336;
       dword_60CAD968 = (int)"T_Timer_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAD958);
     }
     v7[0] = 1;
@@ -143200,7 +143202,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13294036);
     return result;
@@ -143272,7 +143274,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13293972);
     return result;
@@ -143331,7 +143333,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 10);
     a1[897] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 897);
-    sub_60237560((int)(a1 + 897));
+    EffectData_release((int)(a1 + 897));
     sead::IDisposer::~IDisposer(v3);
     sub_60475AE8(v2);
     return a1;
@@ -143350,7 +143352,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 10);
     a1[897] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 897);
-    sub_60237560((int)(a1 + 897));
+    EffectData_release((int)(a1 + 897));
     sead::IDisposer::~IDisposer(v3);
     sub_60475AE8(v2);
     return operator delete((int)a1);
@@ -143379,7 +143381,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CADA34 = MEMORY[0xCAD988];
       dword_60CADA38 = 12321336;
       dword_60CADA3C = MEMORY[0xCAD990];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CADA20);
     }
     v6[0] = 2;
@@ -143388,7 +143390,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CADA28 = 12321336;
       dword_60CADA2C = (int)"N_TimeUp_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CADA24);
     }
     v6[0] = 1;
@@ -143698,7 +143700,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int result; // r0
     int v3; // r1
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 40, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 40, 0) + 51);
     if ( (result & 1) != 0 )
     {
       if ( *(_BYTE *)(MEMORY[0xCC6D8C] + 16) )
@@ -143807,7 +143809,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_6055AA3C(int a1)
   {
-    return sub_6047482C(a1 + 40, 0);
+    return ArrayOf20_getEntryPtr(a1 + 40, 0);
   }
 
 /* ============================================================================
@@ -143853,7 +143855,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12586756;
     v2 = (struct sead_IDisposer *)(a1 + 10);
-    sub_6045C0A0(a1 + 902);
+    thunk_sub_60909E64(a1 + 902);
     sub_60475AE8(v2);
     return a1;
   }
@@ -143868,7 +143870,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     *a1 = 12586756;
     v2 = (struct sead_IDisposer *)(a1 + 10);
-    sub_6045C0A0(a1 + 902);
+    thunk_sub_60909E64(a1 + 902);
     sub_60475AE8(v2);
     return operator delete((int)a1);
   }
@@ -143908,7 +143910,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CADBC8 = MEMORY[0xCADA60];
         dword_60CADBCC = 12321336;
         dword_60CADBD0 = MEMORY[0xCADA68];
-        sub_60000288();
+        stub_return0_000288();
         _cxa_guard_release_0(&unk_60CADB90);
       }
       v9 = 4;
@@ -143929,7 +143931,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CADBE8 = MEMORY[0xCADA60];
         dword_60CADBEC = 12321336;
         dword_60CADBF0 = MEMORY[0xCADA68];
-        sub_60000288();
+        stub_return0_000288();
         _cxa_guard_release_0(&unk_60CADB94);
       }
       v9 = 4;
@@ -143944,7 +143946,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CADBA8 = (int)"T_Title_00";
       dword_60CADBAC = 12321336;
       dword_60CADBB0 = (int)"T_Ver_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CADB98);
     }
     v9 = 3;
@@ -144232,7 +144234,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13294644);
     return result;
@@ -144348,7 +144350,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     int result; // r0
   
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 36, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 36, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 20), 13294580);
     return result;
@@ -144519,15 +144521,15 @@ static inline unsigned int uxtb16(unsigned int x)
     sead::SafeStringBase<char>::operator=(a1 + 4620, &v5);
     v5 = 0;
     sub_605029FC(a1 + 3608, &v5, "SE_SYS_BACK");
-    *(_DWORD *)(sub_608DE61C(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
-    *(_DWORD *)(sub_608DE61C(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 204) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 204) = 0;
     sub_605028F0(a1 + 3608, &v5, 1);
-    *(_BYTE *)(sub_608DE61C(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 208) = 0;
+    *(_BYTE *)(List_getNthNode(a1 + 3660, v5) - *(_DWORD *)(a1 + 3672) + 208) = 0;
     v5 = 2;
-    *(_DWORD *)(sub_608DE61C(a1 + 3660, 2) - *(_DWORD *)(a1 + 3672) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3660, 2) - *(_DWORD *)(a1 + 3672) + 192) = 0;
     v5 = 1;
-    *(_DWORD *)(sub_608DE61C(a1 + 3660, 1) - *(_DWORD *)(a1 + 3672) + 192) = 0;
+    *(_DWORD *)(List_getNthNode(a1 + 3660, 1) - *(_DWORD *)(a1 + 3672) + 192) = 0;
     *(_BYTE *)(a1 + 4653) = 1;
     return 4653;
   }
@@ -145668,7 +145670,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = *(unsigned __int8 *)(a1 + 13752) ^ 1;
     if ( v2 >= 2 )
       v2 = 0;
-    result = *(unsigned __int8 *)(sub_6047482C(a1 + 3540 * v2 + 13756, 0) + 51);
+    result = *(unsigned __int8 *)(ArrayOf20_getEntryPtr(a1 + 3540 * v2 + 13756, 0) + 51);
     if ( (result & 1) != 0 )
       return StateMgr::changeState((_DWORD *)(a1 + 24), 13295184);
     return result;
@@ -146015,7 +146017,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047643C((struct sead_IDisposer *)(a1 + 4324));
     sub_6047643C((struct sead_IDisposer *)(a1 + 3439));
     sub_6050A4C4(a1 + 1544);
-    sub_6045C0A0(a1 + 1443);
+    thunk_sub_60909E64(a1 + 1443);
     sub_605021B0(a1 + 923);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return a1;
@@ -146031,7 +146033,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_6047643C((struct sead_IDisposer *)(a1 + 4324));
     sub_6047643C((struct sead_IDisposer *)(a1 + 3439));
     sub_6050A4C4((int)(a1 + 1544));
-    sub_6045C0A0(a1 + 1443);
+    thunk_sub_60909E64(a1 + 1443);
     sub_605021B0(a1 + 923);
     sub_60475AE8((struct sead_IDisposer *)(a1 + 11));
     return operator delete((int)a1);
@@ -146059,7 +146061,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAE0A8 = (int)"T_TextC_00";
       dword_60CAE0AC = 12321336;
       dword_60CAE0B0 = (int)"T_TextL_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE048);
     }
     v6 = 3;
@@ -146071,7 +146073,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAE080 = (int)"W_Frame_00";
       dword_60CAE084 = 12321336;
       dword_60CAE088 = (int)"W_Arrow_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE04C);
     }
     sub_604754E4(a1 + 44, (int *)(a1 + 13556), &dword_60CAE07C, 2);
@@ -146123,7 +146125,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAE104 = MEMORY[0xCADD4C];
       dword_60CAE108 = 12321336;
       dword_60CAE10C = MEMORY[0xCADD54];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE040);
     }
     v6 = 7;
@@ -146148,12 +146150,12 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_605029FC(v2, 11550924, "SE_SYS_PAGE");
     sub_605029FC(v2, 11550920, "SE_SYS_PAGE");
     sub_605029FC(v2, 11550928, "SE_SYS_BACK");
-    *(_DWORD *)(sub_608DE61C(a1 + 3744, 4) - *(_DWORD *)(a1 + 3756) + 176) = "SE_SYS_BACK_BTN_OVER";
-    *(_DWORD *)(sub_608DE61C(a1 + 3744, 4) - *(_DWORD *)(a1 + 3756) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
+    *(_DWORD *)(List_getNthNode(a1 + 3744, 4) - *(_DWORD *)(a1 + 3756) + 176) = "SE_SYS_BACK_BTN_OVER";
+    *(_DWORD *)(List_getNthNode(a1 + 3744, 4) - *(_DWORD *)(a1 + 3756) + 180) = "SE_SYS_BACK_BTN_OVER_OFF";
     sub_605028F0(v2, (_DWORD *)0xB040CC, 1);
     sub_605028F0(v2, (_DWORD *)0xB040C8, 1);
     sub_605028F0(v2, (_DWORD *)0xB040D0, 1);
-    result = sub_608DE61C(a1 + 3744, 0) - *(_DWORD *)(a1 + 3756);
+    result = List_getNthNode(a1 + 3744, 0) - *(_DWORD *)(a1 + 3756);
     *(_DWORD *)(result + 192) = 0;
     return result;
   }
@@ -146197,7 +146199,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAE174 = (int)"N_Shadow_00";
       dword_60CAE178 = 12321336;
       dword_60CAE17C = (int)"N_Point_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE044);
     }
     v4 = 14;
@@ -146263,7 +146265,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CADFE4 = (int)"P_ShadowOff_00";
       dword_60CADFE8 = 12321336;
       dword_60CADFEC = (int)"P_Icon_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CADFF0);
     }
     v4 = 24;
@@ -146289,14 +146291,14 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAE0CC = (int)"Pa_OK_00";
       dword_60CAE0D0 = 12321336;
       dword_60CAE0D4 = (int)"Pa_Return_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE050);
     }
     if ( ((unsigned int)&unk_60CAE054 & ~(1616243244 << v1) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAE054) )
     {
       dword_60CAE064 = 12321336;
       dword_60CAE068 = (int)"B_Btn_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE054);
     }
     v6 = 1;
@@ -146311,14 +146313,14 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAE090 = (int)"Pa_ArrowBtnL_00";
       dword_60CAE094 = 12321336;
       dword_60CAE098 = (int)"Pa_ArrowBtnR_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE058);
     }
     if ( ((unsigned int)&unk_60CAE05C & ~(1616243608 << v3) & 1) == 0 && _cxa_guard_acquire_0(&unk_60CAE05C) )
     {
       dword_60CAE06C = 12321336;
       dword_60CAE070 = (int)"B_Arrow_00";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE05C);
     }
     v5 = 1;
@@ -146350,7 +146352,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       dword_60CAE074 = 12321336;
       dword_60CAE078 = MEMORY[0xCADD6C];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE060);
     }
     v3 = 0;
@@ -146464,23 +146466,23 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a1[13749] )
     {
       v5 = a1 + 13584;
-      if ( a1[13584] && (*(_BYTE *)(sub_6047482C(v2, 0) + 51) & 1) != 0 )
+      if ( a1[13584] && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 0) + 51) & 1) != 0 )
         *v5 = 0;
       v6 = a1 + 13585;
-      if ( a1[13585] && (*(_BYTE *)(sub_6047482C(v2, 1) + 51) & 1) != 0 )
+      if ( a1[13585] && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 1) + 51) & 1) != 0 )
         *v6 = 0;
       v7 = a1 + 13586;
-      if ( a1[13586] && (*(_BYTE *)(sub_6047482C(v2, 2) + 51) & 1) != 0 )
+      if ( a1[13586] && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 2) + 51) & 1) != 0 )
         *v7 = 0;
       v8 = a1 + 13587;
-      if ( a1[13587] && (*(_BYTE *)(sub_6047482C(v2, 3) + 51) & 1) != 0 )
+      if ( a1[13587] && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 3) + 51) & 1) != 0 )
         *v8 = 0;
       v9 = a1 + 13588;
-      if ( a1[13588] && (*(_BYTE *)(sub_6047482C(v2, 4) + 51) & 1) != 0 )
+      if ( a1[13588] && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 4) + 51) & 1) != 0 )
         *v9 = 0;
       v11 = (unsigned __int8)a1[13589];
       v10 = a1 + 13589;
-      if ( v11 && (*(_BYTE *)(sub_6047482C(v2, 5) + 51) & 1) != 0 )
+      if ( v11 && (*(_BYTE *)(ArrayOf20_getEntryPtr(v2, 5) + 51) & 1) != 0 )
         *v10 = 0;
       result = (unsigned __int8)*v5;
       if ( !*v5 )
@@ -146529,7 +146531,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       if ( sub_60502D80(a1 + 3692) != 1 )
         return sub_60560298(a1);
-      v3 = sub_608DE61C(a1 + 3744, 2);
+      v3 = List_getNthNode(a1 + 3744, 2);
       v4 = v3 == 0;
       if ( v3 )
       {
@@ -146538,7 +146540,7 @@ static inline unsigned int uxtb16(unsigned int x)
       }
       if ( !v4 && (*(_DWORD *)(v3 + 4) | 2) == 3 )
         return sub_6047459C(a1 + 44, 3);
-      v5 = sub_608DE61C(a1 + 3744, 1);
+      v5 = List_getNthNode(a1 + 3744, 1);
       v6 = v5 == 0;
       if ( v5 )
       {
@@ -147051,7 +147053,7 @@ static inline unsigned int uxtb16(unsigned int x)
     const char *v10; // [sp+Ch] [bp-4h]
   
     v2 = (_DWORD *)(a1 + 44);
-    v3 = sub_6047482C(a1 + 44, 3);
+    v3 = ArrayOf20_getEntryPtr(a1 + 44, 3);
     v4 = v3 == 0;
     if ( v3 )
     {
@@ -147062,10 +147064,10 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9 = 12321336;
       v10 = "G_ArrowL_00";
-      sub_6047467C(v2, 3u, (_DWORD *)0xCADD48, (int)&v9, 1);
+      ArrayOf20_insertEntry(v2, 3u, (_DWORD *)0xCADD48, (int)&v9, 1);
       v1 = 2;
     }
-    result = sub_6047482C(v2, 4);
+    result = ArrayOf20_getEntryPtr(v2, 4);
     v6 = result == 0;
     if ( result )
     {
@@ -147076,7 +147078,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9 = 12321336;
       v10 = "G_ArrowR_00";
-      sub_6047467C(v2, 4u, (_DWORD *)0xCADD48, (int)&v9, 1);
+      ArrayOf20_insertEntry(v2, 4u, (_DWORD *)0xCADD48, (int)&v9, 1);
       goto LABEL_11;
     }
     if ( v1 >= 0 )
@@ -147753,7 +147755,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         if ( result >= 9 )
           result = 0;
-        if ( (*(_BYTE *)(sub_6047482C(a1 + 3548 * result + 16, 0) + 51) & 1) != 0 )
+        if ( (*(_BYTE *)(ArrayOf20_getEntryPtr(a1 + 3548 * result + 16, 0) + 51) & 1) != 0 )
           *(_BYTE *)(a1 + 31953) = 1;
       }
       v6 = *(_DWORD *)(a1 + 8);
@@ -147994,7 +147996,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAE294 = MEMORY[0xCAE1E4];
       dword_60CAE298 = 12321336;
       dword_60CAE29C = MEMORY[0xCAE1EC];
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE200);
     }
     v3 = *(_DWORD *)(a1 + 8);
@@ -148165,7 +148167,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAE2D8 = 12321336;
       dword_60CAE2DC = (int)"WipeWave.bflyt";
       *(_QWORD *)&dword_60CAE2E0 = v3;
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAE208);
     }
     v4 = a1 + 4;
@@ -148181,7 +148183,7 @@ static inline unsigned int uxtb16(unsigned int x)
           dword_60CAE224 = MEMORY[0xCAE1C4];
           dword_60CAE228 = 12321336;
           dword_60CAE22C = MEMORY[0xCAE1CC];
-          sub_60000288();
+          stub_return0_000288();
           _cxa_guard_release_0(&unk_60CAE20C);
         }
         v7 = *(void (__fastcall **)(_DWORD *, int *, int *))(*v4 + 8);
@@ -148201,7 +148203,7 @@ static inline unsigned int uxtb16(unsigned int x)
         dword_60CAE234 = MEMORY[0xCAE1F4];
         dword_60CAE238 = 12321336;
         dword_60CAE23C = MEMORY[0xCAE1FC];
-        sub_60000288();
+        stub_return0_000288();
         _cxa_guard_release_0(&unk_60CAE210);
       }
       v10 = *(void (__fastcall **)(_DWORD *, int *, int *))(*v8 + 8);
@@ -148225,7 +148227,7 @@ static inline unsigned int uxtb16(unsigned int x)
           dword_60CAE254 = MEMORY[0xCAE1E4];
           dword_60CAE258 = 12321336;
           dword_60CAE25C = MEMORY[0xCAE1EC];
-          sub_60000288();
+          stub_return0_000288();
           _cxa_guard_release_0(&unk_60CAE214);
         }
       }
@@ -148313,7 +148315,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 0;
     if ( v3 >= 9 )
       v3 = 0;
-    v4 = sub_6047482C(a1 + 3548 * v3 + 16, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 3548 * v3 + 16, 0);
     if ( !v4 )
       return v2;
     v5 = *(_DWORD *)(a1 + 8);
@@ -148448,7 +148450,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = 0;
     if ( v3 >= 9 )
       v3 = 0;
-    v4 = sub_6047482C(a1 + 3548 * v3 + 16, 0);
+    v4 = ArrayOf20_getEntryPtr(a1 + 3548 * v3 + 16, 0);
     if ( !v4 )
       return v2;
     v5 = *(_DWORD *)(a1 + 8);
@@ -149336,7 +149338,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a1 == 13087616 || sub_60026DC8(a1);
+    return a1 == 13087616 || StaticInit_guardRegister(a1);
   }
 
 /* ============================================================================
@@ -150627,7 +150629,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -151985,7 +151987,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v6, v7, &v9);
     *(_DWORD *)(**(_DWORD **)(*a1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*a1 + 12) + 4, 1);
-    return sub_6041838C(**(_DWORD **)(*a1 + 12) + 4);
+    return Vector2_pickBySignAndTag2(**(_DWORD **)(*a1 + 12) + 4);
   }
 
 /* ============================================================================
@@ -152236,7 +152238,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -152457,7 +152459,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAE54C] = 12320968;
       _cxa_guard_release_0(13296976);
     }
-    return a2 == 13296972 || sub_60026DC8(a2);
+    return a2 == 13296972 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -153391,7 +153393,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a1 == 13087616 || sub_60026DC8(a1);
+    return a1 == 13087616 || StaticInit_guardRegister(a1);
   }
 
 /* ============================================================================
@@ -153540,7 +153542,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a1 == 13087616 || sub_60026DC8(a1);
+    return a1 == 13087616 || StaticInit_guardRegister(a1);
   }
 
 /* ============================================================================
@@ -156078,7 +156080,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18 = v11;
     SkeletalAnim_play(v9, v10, &v17);
     AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v8 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)v8 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v8 + 12) + 4);
     v12 = **(_DWORD **)(*(_DWORD *)v8 + 20);
     *(_DWORD *)(a1 + 7392) = v12;
     v13 = (int *)(a1 + 7392);
@@ -156712,7 +156714,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v18 = v11;
     SkeletalAnim_play(v9, v10, &v17);
     AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v8 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)v8 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v8 + 12) + 4);
     v12 = **(_DWORD **)(*(_DWORD *)v8 + 20);
     *(_DWORD *)(a1 + 7392) = v12;
     v13 = (int *)(a1 + 7392);
@@ -158924,7 +158926,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAEAFC] = 12320968;
       _cxa_guard_release_0(13298432);
     }
-    return a2 == 13298428 || sub_60026DC8(a2);
+    return a2 == 13298428 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -159284,7 +159286,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -160717,7 +160719,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -162500,7 +162502,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -163147,7 +163149,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v6, v7, &v17);
     *(_DWORD *)(**(_DWORD **)(*a1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*a1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*a1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*a1 + 12) + 4);
     v8 = **(_DWORD **)(*a1 + 28);
     a1[2] = v8;
     v19 = 12321336;
@@ -163177,7 +163179,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v14, v15, &v17);
     *(_DWORD *)(**(_DWORD **)(a1[1] + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(a1[1] + 12) + 4, 1);
-    return sub_6041838C(**(_DWORD **)(a1[1] + 12) + 4);
+    return Vector2_pickBySignAndTag2(**(_DWORD **)(a1[1] + 12) + 4);
   }
 
 /* ============================================================================
@@ -163729,7 +163731,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAEEC0] = 12320968;
       _cxa_guard_release_0(13299396);
     }
-    return a2 == 13299392 || sub_60026DC8(a2);
+    return a2 == 13299392 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -163892,7 +163894,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAEEC0] = 12320968;
       _cxa_guard_release_0(13299396);
     }
-    return a2 == 13299392 || sub_60026DC8(a2);
+    return a2 == 13299392 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -164017,7 +164019,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAEF38 = (int)"obj_coin";
       dword_60CAEF3C = 12321336;
       dword_60CAEF40 = (int)"obj_coin_blue";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAEF30);
     }
     v8[0] = 12321336;
@@ -164188,7 +164190,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAEF20] = 12320968;
       _cxa_guard_release_0(13299492);
     }
-    return a2 == 13299488 || sub_60026DC8(a2);
+    return a2 == 13299488 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -164850,7 +164852,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAEEC0] = 12320968;
       _cxa_guard_release_0(13299396);
     }
-    return a2 == 13299392 || sub_60026DC8(a2);
+    return a2 == 13299392 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -165086,7 +165088,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12605044;
     a1[1871] = 12325992;
     v2 = (struct sead_IDisposer *)(a1 + 1871);
-    sub_60237560((int)(a1 + 1871));
+    EffectData_release((int)(a1 + 1871));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12620796;
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1530));
@@ -165107,7 +165109,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12605044;
     a1[1871] = 12325992;
     v2 = (struct sead_IDisposer *)(a1 + 1871);
-    sub_60237560((int)(a1 + 1871));
+    EffectData_release((int)(a1 + 1871));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12620796;
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 1530));
@@ -168995,7 +168997,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     *(v1 - 1545) = 0;
     *(v1 - 1544) = 0;
     *(v1 - 1543) = 0;
@@ -169186,7 +169188,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v6, v7, &v9);
     *(_DWORD *)(**(_DWORD **)(*a1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*a1 + 12) + 4, 1);
-    return sub_6041838C(**(_DWORD **)(*a1 + 12) + 4);
+    return Vector2_pickBySignAndTag2(**(_DWORD **)(*a1 + 12) + 4);
   }
 
 /* ============================================================================
@@ -169727,7 +169729,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B42C] = 12320968;
       _cxa_guard_release_0(13087792);
     }
-    return a2 == 13087788 || sub_60026DC8(a2);
+    return a2 == 13087788 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -169753,7 +169755,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0((_BYTE *)a1 + 6152);
+    Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
@@ -172363,7 +172365,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF504] = 12320968;
       _cxa_guard_release_0(13301000);
     }
-    return a2 == 13300996 || sub_60026DC8(a2);
+    return a2 == 13300996 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -172538,7 +172540,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF160] = 12320968;
       _cxa_guard_release_0(13300068);
     }
-    return a2 == 13300064 || sub_60026DC8(a2);
+    return a2 == 13300064 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -173035,7 +173037,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF628] = 12320968;
       _cxa_guard_release_0(13301292);
     }
-    return a2 == 13301288 || sub_60026DC8(a2);
+    return a2 == 13301288 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -174263,7 +174265,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF74C] = 12320968;
       _cxa_guard_release_0(13301584);
     }
-    return a2 == 13301580 || sub_60026DC8(a2);
+    return a2 == 13301580 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -175710,7 +175712,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v6, v7, &v11);
     *(_DWORD *)(**(_DWORD **)(*a1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*a1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*a1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*a1 + 12) + 4);
     v8 = **(_DWORD **)(*a1 + 28);
     a1[1] = v8;
     v13 = 12321336;
@@ -175746,7 +175748,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CAF930 = (int)"close_signal";
       dword_60CAF934 = 12321336;
       dword_60CAF938 = (int)"touch_open";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CAF900);
     }
     v5 = **(_DWORD **)(*(_DWORD *)(a1 + 6104) + 12);
@@ -177822,7 +177824,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC9D3D8] = 12320968;
       _cxa_guard_release_0(13226972);
     }
-    return a2 == 13226968 || sub_60026DC8(a2);
+    return a2 == 13226968 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -179783,10 +179785,10 @@ static inline unsigned int uxtb16(unsigned int x)
     CollisionMgr_dtor(a1 + 8080);
     *(_DWORD *)a1 = 12628472;
     *(_DWORD *)(a1 + 7896) = 12325992;
-    sub_60237560(a1 + 7896);
+    EffectData_release(a1 + 7896);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7896));
     *(_DWORD *)(a1 + 7792) = 12325992;
-    sub_60237560(a1 + 7792);
+    EffectData_release(a1 + 7792);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7792));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7452));
     ActiveCollider_dtor(v2);
@@ -179811,10 +179813,10 @@ static inline unsigned int uxtb16(unsigned int x)
     CollisionMgr_dtor(a1 + 8080);
     *(_DWORD *)a1 = 12628472;
     *(_DWORD *)(a1 + 7896) = 12325992;
-    sub_60237560(a1 + 7896);
+    EffectData_release(a1 + 7896);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7896));
     *(_DWORD *)(a1 + 7792) = 12325992;
-    sub_60237560(a1 + 7792);
+    EffectData_release(a1 + 7792);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 7792));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 7452));
     ActiveCollider_dtor(v2);
@@ -181215,10 +181217,10 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
-    sub_60237560(a1 + 6236);
+    EffectData_release(a1 + 6236);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
-    sub_60237560(a1 + 6132);
+    EffectData_release(a1 + 6132);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -181239,10 +181241,10 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
-    sub_60237560(a1 + 6236);
+    EffectData_release(a1 + 6236);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
-    sub_60237560(a1 + 6132);
+    EffectData_release(a1 + 6132);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -181674,10 +181676,10 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
-    sub_60237560(a1 + 6236);
+    EffectData_release(a1 + 6236);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
-    sub_60237560(a1 + 6132);
+    EffectData_release(a1 + 6132);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -182450,10 +182452,10 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor(a1 + 6424);
     LightSource::~LightSource((LightSource *)(a1 + 6340));
     *(_DWORD *)(a1 + 6236) = 12325992;
-    sub_60237560(a1 + 6236);
+    EffectData_release(a1 + 6236);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
-    sub_60237560(a1 + 6132);
+    EffectData_release(a1 + 6132);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -182873,10 +182875,10 @@ static inline unsigned int uxtb16(unsigned int x)
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 6472));
     LightSource::~LightSource(v2);
     *(_DWORD *)(a1 + 6236) = 12325992;
-    sub_60237560(a1 + 6236);
+    EffectData_release(a1 + 6236);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6236));
     *(_DWORD *)(a1 + 6132) = 12325992;
-    sub_60237560(a1 + 6132);
+    EffectData_release(a1 + 6132);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6132));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -184344,7 +184346,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12615080;
     SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6360));
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0(a1 + 6152);
+    Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor::~StageActor((Actor *)a1);
@@ -184361,7 +184363,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12615080;
     SolidOnTopCollider_dtor((struct sead_IDisposer *)(a1 + 6360));
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0(a1 + 6152);
+    Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor::~StageActor((Actor *)a1);
@@ -184791,7 +184793,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8284C] = 12320968;
       _cxa_guard_release_0(13117520);
     }
-    return a2 == 13117516 || sub_60026DC8(a2);
+    return a2 == 13117516 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -184825,12 +184827,12 @@ static inline unsigned int uxtb16(unsigned int x)
     sead::IDisposer::~IDisposer(v3);
     a1[18252] = 12615976;
     nullsub_1720();
-    sub_609175E4(v2);
-    sub_609175E4(a1 + 22296);
-    sub_609175E4(a1 + 22228);
-    sub_609175E4(a1 + 22160);
-    sub_609175E4(a1 + 22092);
-    sub_609175E4(a1 + 22024);
+    Object_releaseHandle(v2);
+    Object_releaseHandle(a1 + 22296);
+    Object_releaseHandle(a1 + 22228);
+    Object_releaseHandle(a1 + 22160);
+    Object_releaseHandle(a1 + 22092);
+    Object_releaseHandle(a1 + 22024);
     ShapedCollider_dtor(a1 + 18082);
     *a1 = 12616008;
     a1[18064] = 12348984;
@@ -186510,7 +186512,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8284C] = 12320968;
       _cxa_guard_release_0(13117520);
     }
-    return a2 == 13117516 || sub_60026DC8(a2);
+    return a2 == 13117516 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -187487,7 +187489,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8284C] = 12320968;
       _cxa_guard_release_0(13117520);
     }
-    return a2 == 13117516 || sub_60026DC8(a2);
+    return a2 == 13117516 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -187516,12 +187518,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (int)(a1 + 22360);
     a1[18248] = 12615976;
     nullsub_1720();
-    sub_609175E4(v2);
-    sub_609175E4((int)(a1 + 22292));
-    sub_609175E4((int)(a1 + 22224));
-    sub_609175E4((int)(a1 + 22156));
-    sub_609175E4((int)(a1 + 22088));
-    sub_609175E4((int)(a1 + 22020));
+    Object_releaseHandle(v2);
+    Object_releaseHandle((int)(a1 + 22292));
+    Object_releaseHandle((int)(a1 + 22224));
+    Object_releaseHandle((int)(a1 + 22156));
+    Object_releaseHandle((int)(a1 + 22088));
+    Object_releaseHandle((int)(a1 + 22020));
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 18082));
     *a1 = 12616008;
     a1[18064] = 12348984;
@@ -187548,12 +187550,12 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (int)(a1 + 22360);
     a1[18248] = 12615976;
     nullsub_1720();
-    sub_609175E4(v2);
-    sub_609175E4((int)(a1 + 22292));
-    sub_609175E4((int)(a1 + 22224));
-    sub_609175E4((int)(a1 + 22156));
-    sub_609175E4((int)(a1 + 22088));
-    sub_609175E4((int)(a1 + 22020));
+    Object_releaseHandle(v2);
+    Object_releaseHandle((int)(a1 + 22292));
+    Object_releaseHandle((int)(a1 + 22224));
+    Object_releaseHandle((int)(a1 + 22156));
+    Object_releaseHandle((int)(a1 + 22088));
+    Object_releaseHandle((int)(a1 + 22020));
     ShapedCollider_dtor((struct sead_IDisposer *)(a1 + 18082));
     *a1 = 12616008;
     a1[18064] = 12348984;
@@ -187742,7 +187744,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8284C] = 12320968;
       _cxa_guard_release_0(13117520);
     }
-    return a2 == 13117516 || sub_60026DC8(a2);
+    return a2 == 13117516 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -188467,7 +188469,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8284C] = 12320968;
       _cxa_guard_release_0(13117520);
     }
-    return a2 == 13117516 || sub_60026DC8(a2);
+    return a2 == 13117516 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -188705,7 +188707,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8284C] = 12320968;
       _cxa_guard_release_0(13117520);
     }
-    return a2 == 13117516 || sub_60026DC8(a2);
+    return a2 == 13117516 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -189131,7 +189133,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8284C] = 12320968;
       _cxa_guard_release_0(13117520);
     }
-    return a2 == 13117516 || sub_60026DC8(a2);
+    return a2 == 13117516 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -189540,7 +189542,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8284C] = 12320968;
       _cxa_guard_release_0(13117520);
     }
-    return a2 == 13117516 || sub_60026DC8(a2);
+    return a2 == 13117516 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -190444,7 +190446,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8284C] = 12320968;
       _cxa_guard_release_0(13117520);
     }
-    return a2 == 13117516 || sub_60026DC8(a2);
+    return a2 == 13117516 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -190711,7 +190713,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB01EC = 0;
     dword_60CB01F0 = 0;
     memset((void *)0xCB01F4, 0, 0xB4u);
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -193453,7 +193455,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -196841,7 +196843,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -199372,7 +199374,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB0710 = (int)"block_odai";
     dword_60CB0714 = 12321336;
     dword_60CB0718 = (int)"coin_edit_batten";
-    sub_60000288();
+    stub_return0_000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AD2577;
     Profile::Profile(13305376, 6006496, MEMORY[0xAF3000], (int)v1, &unk_60B054CC, 2);
@@ -199954,7 +199956,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB0720 = (int)"appear";
     dword_60CB0724 = 12321336;
     dword_60CB0728 = (int)"disappear";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -200747,7 +200749,7 @@ static inline unsigned int uxtb16(unsigned int x)
       AnimationCtrl_setRepeat(**(_DWORD **)(*v6 + 12) + 4, 0);
       *(_DWORD *)(*(_DWORD *)*v6 + 36) = 1;
     }
-    sub_6041838C(**(_DWORD **)(*v6 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v6 + 12) + 4);
     v10 = **(_DWORD **)(*v6 + 28);
     a1[1695] = v10;
     v11 = a1 + 1695;
@@ -201028,7 +201030,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB07CC] = 12320968;
       _cxa_guard_release_0(13305808);
     }
-    return a2 == 13305804 || sub_60026DC8(a2);
+    return a2 == 13305804 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -201621,7 +201623,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -201867,7 +201869,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB0894] = 12320968;
       _cxa_guard_release_0(13306008);
     }
-    return a2 == 13306004 || sub_60026DC8(a2);
+    return a2 == 13306004 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -201895,10 +201897,10 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12698944;
     a1[1556] = 12325992;
     v2 = (struct sead_IDisposer *)(a1 + 1556);
-    sub_60237560((int)(a1 + 1556));
+    EffectData_release((int)(a1 + 1556));
     sead::IDisposer::~IDisposer(v2);
     a1[1530] = 12325992;
-    sub_60237560((int)(a1 + 1530));
+    EffectData_release((int)(a1 + 1530));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1530));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
@@ -201917,10 +201919,10 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12698944;
     a1[1556] = 12325992;
     v2 = (struct sead_IDisposer *)(a1 + 1556);
-    sub_60237560((int)(a1 + 1556));
+    EffectData_release((int)(a1 + 1556));
     sead::IDisposer::~IDisposer(v2);
     a1[1530] = 12325992;
-    sub_60237560((int)(a1 + 1530));
+    EffectData_release((int)(a1 + 1530));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1530));
     *a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 162));
@@ -202921,7 +202923,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CB08C0 = (int)"bolt";
       dword_60CB08C4 = 12321336;
       dword_60CB08C8 = (int)"bolt_pyramid";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CB08A8);
     }
     Model2 = Resource_getModel2(a2, (int)&unk_60CB08A0 + 8 * a3 + 28, 0, 0, 0, 0, 0, 0, 0);
@@ -203314,7 +203316,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60CB09B0 = (int)"boss_koopa_ashibaC";
       dword_60CB09B4 = 12321336;
       dword_60CB09B8 = (int)"boss_koopa_ashibaB";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60CB09A0);
     }
     v3 = *(_DWORD *)(a1 + 20);
@@ -203337,7 +203339,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v12[1] = "boss_koopa_ashiba_cut";
     SkeletalAnim_play(v9, v10, v12);
     AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)(a1 + 6104) + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)(a1 + 6104) + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)(a1 + 6104) + 12) + 4);
     result = **(_DWORD **)(*(_DWORD *)(a1 + 6104) + 12);
     *(_DWORD *)(result + 24) = 0;
     return result;
@@ -203514,7 +203516,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB0984] = 12320968;
       _cxa_guard_release_0(13306248);
     }
-    return a2 == 13306244 || sub_60026DC8(a2);
+    return a2 == 13306244 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -203729,7 +203731,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -204277,7 +204279,7 @@ static inline unsigned int uxtb16(unsigned int x)
       *(_WORD *)(v12 + 35516) = v33;
       sub_60917754(v12 + 35520, v252);
       *(_DWORD *)(v12 + 35720) = v253;
-      sub_609175E4(v252);
+      Object_releaseHandle(v252);
       v34 = MEMORY[0xCBD254];
       v216 = *(_DWORD *)(a1 + 15296);
       v217 = *(_DWORD *)(a1 + 15300);
@@ -206440,7 +206442,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12623532;
     nullsub_1030_0((char *)a1 + 6308);
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0((_BYTE *)a1 + 6152);
+    Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
@@ -206457,7 +206459,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12623532;
     nullsub_1030_0((char *)a1 + 6308);
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0((_BYTE *)a1 + 6152);
+    Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
@@ -207090,10 +207092,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1520;
     a1[1974] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1974);
-    sub_60237560((int)(a1 + 1974));
+    EffectData_release((int)(a1 + 1974));
     sead::IDisposer::~IDisposer(v3);
     a1[1948] = 12325992;
-    sub_60237560((int)(a1 + 1948));
+    EffectData_release((int)(a1 + 1948));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
@@ -207117,10 +207119,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1520;
     a1[1974] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1974);
-    sub_60237560((int)(a1 + 1974));
+    EffectData_release((int)(a1 + 1974));
     sead::IDisposer::~IDisposer(v3);
     a1[1948] = 12325992;
-    sub_60237560((int)(a1 + 1948));
+    EffectData_release((int)(a1 + 1948));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
@@ -213622,7 +213624,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB10F4] = 12320968;
       _cxa_guard_release_0(13308152);
     }
-    return a2 == 13308148 || sub_60026DC8(a2);
+    return a2 == 13308148 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -214300,7 +214302,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -214437,7 +214439,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v6 = "wait";
     }
     v12 = v6;
-    sub_60421938(v3, ResArchiveById, &v11);
+    dispatch_setFlag1(v3, ResArchiveById, &v11);
     v7 = **(_DWORD **)(*(_DWORD *)v4 + 28);
     v11 = 12321336;
     v12 = v6;
@@ -214567,7 +214569,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v13 = 12321336;
       v14 = "swing";
     }
-    sub_60421938(v3, ResArchiveById, (int)&v13);
+    dispatch_setFlag1(v3, ResArchiveById, (int)&v13);
     v5 = **(_DWORD **)(*(_DWORD *)v4 + 28);
     v13 = 12321336;
     v14 = "swing";
@@ -214755,7 +214757,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 6100) = v9;
         v39 = 1.7266e-38;
         v40 = COERCE_FLOAT("wait");
-        sub_60421938(v9, ResArchiveById, &v39);
+        dispatch_setFlag1(v9, ResArchiveById, &v39);
         v12 = **(_DWORD **)(*(_DWORD *)(a1 + 6100) + 20);
         v39 = 1.7266e-38;
         v40 = COERCE_FLOAT("middle_flag");
@@ -215198,7 +215200,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1526);
     sub_60959BAC(a1 + 1630);
     a1[1603] = 12325992;
-    sub_60237560((int)(a1 + 1603));
+    EffectData_release((int)(a1 + 1603));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1603));
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -215219,7 +215221,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1526);
     sub_60959BAC(a1 + 1630);
     a1[1603] = 12325992;
-    sub_60237560((int)(a1 + 1603));
+    EffectData_release((int)(a1 + 1603));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1603));
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -215952,7 +215954,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB1390 = (int)"float";
     dword_60CB1394 = 12321336;
     dword_60CB1398 = (int)"vibrate";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CB1370 = 1098907648;
     dword_60CB1374 = 1098907648;
     dword_60CB12C8 = 12321336;
@@ -215991,7 +215993,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB134C = (int)"I_musasabi";
     dword_60CB1350 = 12321336;
     dword_60CB1354 = (int)"wait";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CB1378 = 12321336;
     dword_60CB137C = (int)"I_kinoko_switch";
     return "I_kinoko_switch";
@@ -217852,7 +217854,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MEMORY[0xCB1678] = 1065353216;
     MEMORY[0xCB167C] = 1082130432;
     MEMORY[0xCB1680] = 0;
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -220381,10 +220383,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1520;
     a1[1974] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1974);
-    sub_60237560((int)(a1 + 1974));
+    EffectData_release((int)(a1 + 1974));
     sead::IDisposer::~IDisposer(v3);
     a1[1948] = 12325992;
-    sub_60237560((int)(a1 + 1948));
+    EffectData_release((int)(a1 + 1948));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
@@ -227816,7 +227818,7 @@ static inline unsigned int uxtb16(unsigned int x)
       result = sub_60237208((int32x4_t *)(a1 + 7896), (float *)&v11, 0, 0);
       if ( !result )
       {
-        result = sub_60237560(a1 + 7896);
+        result = EffectData_release(a1 + 7896);
         *v5 = 0;
       }
   LABEL_15:
@@ -232365,12 +232367,12 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60CB1D1C = (int)"YoshiChibi_TexBalloon";
     dword_60CB1D20 = 12321336;
     dword_60CB1D24 = (int)"YoshiChibi_TexLight";
-    sub_60000288();
+    stub_return0_000288();
     dword_60CB1CD0 = 12321336;
     dword_60CB1CD4 = (int)"lm_02p";
     dword_60CB1CD8 = 12321336;
     dword_60CB1CDC = (int)"star_env";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -232491,7 +232493,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( (float)(*(float *)(*(_DWORD *)result + 24) * v2) <= 0.0 )
         {
           v7 = *(_DWORD *)(v6 + 20);
-          sub_6041838C(v6 + 4);
+          Vector2_pickBySignAndTag2(v6 + 4);
           *(_DWORD *)(v6 + 20) = v7;
           result = *(_DWORD *)(v6 + 28) | 2;
           *(_DWORD *)(v6 + 28) = result;
@@ -232501,7 +232503,7 @@ static inline unsigned int uxtb16(unsigned int x)
         {
           v8 = **(_DWORD **)(v4[3] + 12);
           v9 = *(float *)(v8 + 8);
-          sub_6041838C(v8 + 4);
+          Vector2_pickBySignAndTag2(v8 + 4);
           v10 = 0.0;
           if ( v3 <= (float)(v9 + -1.0) )
             v10 = v3;
@@ -232628,7 +232630,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         *(_DWORD *)(a1 + 96) = v7 - 1;
         *(_DWORD *)(v8 + 24) = 0;
-        return sub_6041838C(v8 + 4);
+        return Vector2_pickBySignAndTag2(v8 + 4);
       }
       else
       {
@@ -233023,13 +233025,13 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (float)(*(float *)(*v1 + 24) * 0.0) <= 0.0 )
     {
       v4 = *(_DWORD *)(v2 + 20);
-      sub_6041838C(*v1 + 4);
+      Vector2_pickBySignAndTag2(*v1 + 4);
       *(_DWORD *)(v2 + 20) = v4;
       *(_DWORD *)(v2 + 28) |= 2u;
     }
     *(_DWORD *)(v2 + 24) = 0;
     v5 = *(float *)(v2 + 8);
-    sub_6041838C(v3);
+    Vector2_pickBySignAndTag2(v3);
     if ( (float)(v5 + -1.0) >= 5.0 )
       v6 = 5.0;
     else
@@ -233054,7 +233056,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (float)(*(float *)(result + 24) * v1) <= 0.0 )
     {
       v3 = *(_DWORD *)(result + 20);
-      sub_6041838C(result + 4);
+      Vector2_pickBySignAndTag2(result + 4);
       *(_DWORD *)(v2 + 20) = v3;
       result = *(_DWORD *)(v2 + 28) | 2;
       *(_DWORD *)(v2 + 28) = result;
@@ -233077,7 +233079,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v3 = v1;
     v4 = *(float *)(a1 + 8);
-    sub_6041838C(a1 + 4);
+    Vector2_pickBySignAndTag2(a1 + 4);
     v5 = 0.0;
     if ( v3 <= (float)(v4 + -1.0) )
       v5 = v3;
@@ -233567,7 +233569,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v6 = v4[32] == 0;
       if ( !v6 )
       {
-        sub_6041838C((int)(v4 + 1));
+        Vector2_pickBySignAndTag2((int)(v4 + 1));
         v4[5] = 0;
         v4[7] |= 2u;
       }
@@ -233589,7 +233591,7 @@ static inline unsigned int uxtb16(unsigned int x)
         }
         if ( !v11 )
         {
-          sub_6041838C((int)(v10 + 1));
+          Vector2_pickBySignAndTag2((int)(v10 + 1));
           v10[5] = 0;
           result = v10[7] | 2;
           v10[7] = result;
@@ -233759,7 +233761,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB1D48] = 12320968;
       _cxa_guard_release_0(13311308);
     }
-    return a2 == 13311304 || sub_60026DC8(a2);
+    return a2 == 13311304 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -234348,7 +234350,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB1D48] = 12320968;
       _cxa_guard_release_0(13311308);
     }
-    return a2 == 13311304 || sub_60026DC8(a2);
+    return a2 == 13311304 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -234963,7 +234965,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC8EDD8] = 12320968;
       _cxa_guard_release_0(13168092);
     }
-    return a2 == 13168088 || sub_60026DC8(a2);
+    return a2 == 13168088 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -235439,10 +235441,10 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1520;
     a1[1974] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1974);
-    sub_60237560((int)(a1 + 1974));
+    EffectData_release((int)(a1 + 1974));
     sead::IDisposer::~IDisposer(v3);
     a1[1948] = 12325992;
-    sub_60237560((int)(a1 + 1948));
+    EffectData_release((int)(a1 + 1948));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1948));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1863));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1787));
@@ -237735,7 +237737,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB2120] = 12320968;
       _cxa_guard_release_0(13312292);
     }
-    return a2 == 13312288 || sub_60026DC8(a2);
+    return a2 == 13312288 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -238008,7 +238010,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B380] = 12320968;
       _cxa_guard_release_0(13087620);
     }
-    return a2 == 13087616 || sub_60026DC8(a2);
+    return a2 == 13087616 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -238819,7 +238821,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF8F0] = 12320968;
       _cxa_guard_release_0(13302004);
     }
-    return a2 == 13302000 || sub_60026DC8(a2);
+    return a2 == 13302000 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -239894,7 +239896,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF8F0] = 12320968;
       _cxa_guard_release_0(13302004);
     }
-    return a2 == 13302000 || sub_60026DC8(a2);
+    return a2 == 13302000 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -240103,7 +240105,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF8F0] = 12320968;
       _cxa_guard_release_0(13302004);
     }
-    return a2 == 13302000 || sub_60026DC8(a2);
+    return a2 == 13302000 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -240453,7 +240455,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF8F0] = 12320968;
       _cxa_guard_release_0(13302004);
     }
-    return a2 == 13302000 || sub_60026DC8(a2);
+    return a2 == 13302000 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -240675,7 +240677,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF8F0] = 12320968;
       _cxa_guard_release_0(13302004);
     }
-    return a2 == 13302000 || sub_60026DC8(a2);
+    return a2 == 13302000 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -240845,7 +240847,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCAF8F0] = 12320968;
       _cxa_guard_release_0(13302004);
     }
-    return a2 == 13302000 || sub_60026DC8(a2);
+    return a2 == 13302000 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -241683,7 +241685,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B42C] = 12320968;
       _cxa_guard_release_0(13087792);
     }
-    return a2 == 13087788 || sub_60026DC8(a2);
+    return a2 == 13087788 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -241709,7 +241711,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0((_BYTE *)a1 + 6152);
+    Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
@@ -241963,7 +241965,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = "obj_door_shiroboss";
     sub_6040F4B8(v1, (int)v4, 0);
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v2 + 12) + 24) = 1065353216;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
     return AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4, 0);
   }
 
@@ -241983,7 +241985,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = "obj_door_shiroboss_close";
     sub_6040F4B8(v1, (int)v4, 0);
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v2 + 12) + 24) = 1065353216;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
     return AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4, 0);
   }
 
@@ -242035,7 +242037,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0((_BYTE *)a1 + 6152);
+    Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
@@ -242169,7 +242171,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0((_BYTE *)a1 + 6152);
+    Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
@@ -242459,7 +242461,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = "boss_koopa_door_open";
     sub_6040F4B8(v1, (int)v4, 0);
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v2 + 12) + 24) = 1065353216;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
     return AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4, 0);
   }
 
@@ -242479,7 +242481,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = "boss_koopa_door_close";
     sub_6040F4B8(v1, (int)v4, 0);
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v2 + 12) + 24) = 1065353216;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
     return AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4, 0);
   }
 
@@ -242562,7 +242564,7 @@ static inline unsigned int uxtb16(unsigned int x)
     LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6448));
     LightSource::~LightSource(v2);
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0(a1 + 6152);
+    Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor::~StageActor((Actor *)a1);
@@ -242583,7 +242585,7 @@ static inline unsigned int uxtb16(unsigned int x)
     LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6448));
     LightSource::~LightSource(v2);
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0(a1 + 6152);
+    Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor::~StageActor((Actor *)a1);
@@ -242687,7 +242689,7 @@ static inline unsigned int uxtb16(unsigned int x)
     LightSource::~LightSource((struct sead_IDisposer *)(a1 + 6448));
     LightSource::~LightSource(v2);
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0(a1 + 6152);
+    Array_compactByFlag(a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)(a1 + 648));
     StageActor::~StageActor((Actor *)a1);
@@ -242789,7 +242791,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1 + 6300;
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 24) = 1065353216;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 4);
     return AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v1 + 12) + 4, 0);
   }
 
@@ -242803,7 +242805,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1 + 6300;
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 24) = -1082130432;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 4);
     return AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v1 + 12) + 4, 0);
   }
 
@@ -242846,7 +242848,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0((_BYTE *)a1 + 6152);
+    Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
@@ -243050,7 +243052,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1 + 6300;
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 24) = 1065353216;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 4);
     return AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v1 + 12) + 4, 0);
   }
 
@@ -243064,7 +243066,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     v1 = a1 + 6300;
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 24) = -1082130432;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)(a1 + 6300) + 12) + 4);
     return AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v1 + 12) + 4, 0);
   }
 
@@ -243136,7 +243138,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0((_BYTE *)a1 + 6152);
+    Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
@@ -243315,7 +243317,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = "obj_door_torideboss";
     sub_6040F4B8(v1, (int)v4, 0);
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v2 + 12) + 24) = 1065353216;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
     return AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4, 0);
   }
 
@@ -243335,7 +243337,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4[1] = "obj_door_torideboss_close";
     sub_6040F4B8(v1, (int)v4, 0);
     *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v2 + 12) + 24) = 1065353216;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
     return AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4, 0);
   }
 
@@ -243387,7 +243389,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0((_BYTE *)a1 + 6152);
+    Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
@@ -243521,7 +243523,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
   
     *(_DWORD *)a1 = 12462088;
-    sub_602F36E0((_BYTE *)a1 + 6152);
+    Array_compactByFlag((_BYTE *)a1 + 6152);
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor((int)a1 + 648);
     StageActor::~StageActor(a1);
@@ -243770,7 +243772,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB260C] = 12320968;
       _cxa_guard_release_0(13313552);
     }
-    return a2 == 13313548 || sub_60026DC8(a2);
+    return a2 == 13313548 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -244813,7 +244815,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB268C] = 12320968;
       _cxa_guard_release_0(13313680);
     }
-    return a2 == 13313676 || sub_60026DC8(a2);
+    return a2 == 13313676 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -245070,7 +245072,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB2694] = 12320968;
       _cxa_guard_release_0(13313688);
     }
-    return a2 == 13313684 || sub_60026DC8(a2);
+    return a2 == 13313684 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -246124,6 +246126,6 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCB2794] = 12320968;
       _cxa_guard_release_0(13313944);
     }
-    return a2 == 13313940 || sub_60026DC8(a2);
+    return a2 == 13313940 || StaticInit_guardRegister(a2);
   }
 

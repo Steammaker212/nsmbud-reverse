@@ -218,7 +218,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v10 = *(_DWORD *)(a1 + 856);
       v11 = *(_DWORD *)(a1 + 876);
       v12 = MEMORY[0xCC73E8](*(_DWORD *)(a1 + 924));
-      v13 = sub_60913FB4(a1 + 912);
+      v13 = Slot_getRelativeOffset(a1 + 912);
       if ( a3 >= 1 )
       {
         v14 = 17 * v11 * v10;
@@ -329,11 +329,11 @@ static inline unsigned int uxtb16(unsigned int x)
       if ( v3 )
       {
         *v3 = 12562572;
-        sub_609175E4(v3 + 506);
+        Object_releaseHandle(v3 + 506);
         sub_60917AE4(v3 + 486);
-        sub_609175E4(v3 + 420);
+        Object_releaseHandle(v3 + 420);
         sub_60917AE4(v3 + 400);
-        sub_609175E4(v3 + 334);
+        Object_releaseHandle(v3 + 334);
         sub_60917AE4(v3 + 314);
         v3[228] = 12562648;
         sub_60913C18(v3 + 228);
@@ -371,29 +371,29 @@ static inline unsigned int uxtb16(unsigned int x)
       Undefined_ref_91CC00(v3, 3, a1);
       v6 = 12321336;
       v7 = "cWorldMtx[0]";
-      sub_6091CD98(v3, 0, &v6);
+      NameTable_setEntryString(v3, 0, &v6);
       v6 = 12321336;
       v7 = "cViewMtx[0]";
-      sub_6091CD98(v3, 1, &v6);
+      NameTable_setEntryString(v3, 1, &v6);
       v6 = 12321336;
       v7 = "cProjMtx[0]";
-      sub_6091CD98(v3, 2, &v6);
+      NameTable_setEntryString(v3, 2, &v6);
       Undefined_ref_91CE08(v3, 5, a1);
       v6 = 12321336;
       v7 = "sampler2d_00";
-      sub_6091CFA0(v3, 0, &v6);
+      NameTable2_setEntryString(v3, 0, &v6);
       v6 = 12321336;
       v7 = "sampler2d_01";
-      sub_6091CFA0(v3, 1, &v6);
+      NameTable2_setEntryString(v3, 1, &v6);
       v6 = 12321336;
       v7 = "sampler2d_normal";
-      sub_6091CFA0(v3, 2, &v6);
+      NameTable2_setEntryString(v3, 2, &v6);
       v6 = 12321336;
       v7 = "sampler2d_lightmap";
-      sub_6091CFA0(v3, 3, &v6);
+      NameTable2_setEntryString(v3, 3, &v6);
       v6 = 12321336;
       v7 = "sampler2d_lightmap2";
-      result = sub_6091CFA0(v3, 4, &v6);
+      result = NameTable2_setEntryString(v3, 4, &v6);
     }
     return result;
   }
@@ -818,7 +818,7 @@ static inline unsigned int uxtb16(unsigned int x)
       AnimationCtrl_setRepeat(a1 + 4, 1);
       *(_DWORD *)(a1 + 20) = 0;
       *(_DWORD *)(a1 + 28) |= 2u;
-      sub_6041838C(a1 + 4);
+      Vector2_pickBySignAndTag2(a1 + 4);
       result = *(_DWORD *)(a1 + 140);
       if ( result )
       {
@@ -1540,7 +1540,7 @@ static inline unsigned int uxtb16(unsigned int x)
           AnimationCtrl_setRepeat(a1 + 4, 1);
           *(_DWORD *)(a1 + 20) = 0;
           *(_DWORD *)(a1 + 28) |= 2u;
-          sub_6041838C(a1 + 4);
+          Vector2_pickBySignAndTag2(a1 + 4);
           result = *(unsigned __int16 **)(a1 + 228);
           if ( result )
           {
@@ -1576,7 +1576,7 @@ static inline unsigned int uxtb16(unsigned int x)
     AnimationCtrl_setRepeat(v17 + 4, 1);
     *(_DWORD *)(v17 + 20) = 0;
     *(_DWORD *)(v17 + 28) |= 2u;
-    sub_6041838C(v17 + 4);
+    Vector2_pickBySignAndTag2(v17 + 4);
     result = *(unsigned __int16 **)(v17 + 228);
     if ( result )
     {
@@ -8813,16 +8813,6 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6045C0A0
- * RVA 0x0045c0a0   size 0x4   xrefs 327
- * ============================================================================ */
-  // attributes: thunk
-  _DWORD *__fastcall sub_6045C0A0(_DWORD *a1)
-  {
-    return sub_60909E64(a1);
-  }
-
-/* ============================================================================
  * sub_6045C0A4
  * RVA 0x0045c0a4   size 0x8   xrefs 0
  * ============================================================================ */
@@ -9407,7 +9397,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unk_60C9D090 = "I_kinoko";
     dword_60C9D094 = 12321336;
     dword_60C9D098 = (int)"I_crown";
-    sub_60000288();
+    stub_return0_000288();
     unk_60C9D0A0 = 12321336;
     unk_60C9D0A4 = "I_kinoko";
     dword_60C9D0A8 = 12321336;
@@ -9432,7 +9422,7 @@ static inline unsigned int uxtb16(unsigned int x)
     unk_60C9D0F4 = "I_kinoko";
     dword_60C9D0F8 = 12321336;
     dword_60C9D0FC = (int)"I_crown";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -9472,10 +9462,10 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12562996;
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6328));
     *(_DWORD *)(a1 + 6216) = 12325992;
-    sub_60237560(a1 + 6216);
+    EffectData_release(a1 + 6216);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6216));
     *(_DWORD *)(a1 + 6112) = 12325992;
-    sub_60237560(a1 + 6112);
+    EffectData_release(a1 + 6112);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -9493,10 +9483,10 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12562996;
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6328));
     *(_DWORD *)(a1 + 6216) = 12325992;
-    sub_60237560(a1 + 6216);
+    EffectData_release(a1 + 6216);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6216));
     *(_DWORD *)(a1 + 6112) = 12325992;
-    sub_60237560(a1 + 6112);
+    EffectData_release(a1 + 6112);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6112));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -9614,7 +9604,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9D118 = (int)"wait";
       dword_60C9D11C = 12321336;
       dword_60C9D120 = (int)"cs_item";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9D100);
     }
     result = a1[7];
@@ -9841,7 +9831,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 1;
     return 1;
   }
@@ -9868,7 +9858,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 3;
     return 3;
   }
@@ -9903,7 +9893,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v6, Resource, v8);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v4 + 12) + 24) = 1065353216;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
       *v3 = 4;
       return 4;
     }
@@ -9932,7 +9922,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 5;
     return 5;
   }
@@ -9959,7 +9949,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 2;
     return 2;
   }
@@ -10024,7 +10014,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -10054,7 +10044,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1583;
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560(a1 + 1671);
+    EffectData_release(a1 + 1671);
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -10076,7 +10066,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -10285,7 +10275,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 1;
     return 1;
   }
@@ -10312,7 +10302,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 3;
     return 3;
   }
@@ -10347,7 +10337,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v6, Resource, v8);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v4 + 12) + 24) = 1065353216;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
       *v3 = 4;
       return 4;
     }
@@ -10376,7 +10366,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 5;
     return 5;
   }
@@ -10403,7 +10393,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 2;
     return 2;
   }
@@ -10471,7 +10461,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a2 == 13087764 )
       return 1;
     else
-      return sub_60026DC8(a2);
+      return StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -10501,7 +10491,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1583;
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560(a1 + 1671);
+    EffectData_release(a1 + 1671);
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -11314,7 +11304,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v33 = **(_DWORD **)(*(_DWORD *)(a1 + 6160) + 12);
         v34 = *(_DWORD *)(v33 + 20);
         *(float *)(v33 + 24) = v31;
-        sub_6041838C(**(_DWORD **)(*(_DWORD *)v32 + 12) + 4);
+        Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v32 + 12) + 4);
         v35 = **(_DWORD **)(*(_DWORD *)v32 + 12);
         *(_DWORD *)(v35 + 20) = v34;
         *(_DWORD *)(v35 + 28) |= 2u;
@@ -11345,7 +11335,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v39 = **(_DWORD **)(*(_DWORD *)(a1 + 6160) + 12);
       v40 = *(_DWORD *)(v39 + 20);
       *(float *)(v39 + 24) = v37;
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v38 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v38 + 12) + 4);
       v41 = **(_DWORD **)(*(_DWORD *)v38 + 12);
       *(_DWORD *)(v41 + 20) = v40;
       *(_DWORD *)(v41 + 28) |= 2u;
@@ -13436,7 +13426,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v5 = *v4;
     v6 = *(_DWORD *)(v5 + 20);
     *(float *)(v5 + 24) = v1;
-    sub_6041838C(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v2 + 12) + 4);
     result = **(_DWORD **)(*(_DWORD *)v2 + 12);
     *(_DWORD *)(result + 20) = v6;
     *(_DWORD *)(result + 28) |= 2u;
@@ -14297,7 +14287,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -14328,7 +14318,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -15422,7 +15412,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -15453,7 +15443,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -15682,7 +15672,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 1;
     return 1;
   }
@@ -15709,7 +15699,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 3;
     return 3;
   }
@@ -15744,7 +15734,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v6, Resource, v8);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v4 + 12) + 24) = 1065353216;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
       *v3 = 4;
       return 4;
     }
@@ -15773,7 +15763,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 5;
     return 5;
   }
@@ -15800,7 +15790,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 2;
     return 2;
   }
@@ -15868,7 +15858,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( a2 == 13087764 )
       return 1;
     else
-      return sub_60026DC8(a2);
+      return StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -15898,7 +15888,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = a1 + 1583;
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560(a1 + 1671);
+    EffectData_release(a1 + 1671);
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -16121,7 +16111,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 1;
     return 1;
   }
@@ -16148,7 +16138,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 3;
     return 3;
   }
@@ -16183,7 +16173,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v6, Resource, v8);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v4 + 12) + 24) = 1065353216;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
       *v3 = 4;
       return 4;
     }
@@ -16212,7 +16202,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 5;
     return 5;
   }
@@ -16239,7 +16229,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 2;
     return 2;
   }
@@ -16340,7 +16330,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -16371,7 +16361,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -16533,7 +16523,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 1;
     return 1;
   }
@@ -16560,7 +16550,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 3;
     return 3;
   }
@@ -16587,7 +16577,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 5;
     return 5;
   }
@@ -16614,7 +16604,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 2;
     return 2;
   }
@@ -16679,7 +16669,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -16710,7 +16700,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -16910,7 +16900,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 1;
     return 1;
   }
@@ -16937,7 +16927,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 3;
     return 3;
   }
@@ -16972,7 +16962,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v6, Resource, v8);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v4 + 12) + 24) = 1065353216;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
       *v3 = 4;
       return 4;
     }
@@ -17001,7 +16991,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 5;
     return 5;
   }
@@ -17028,7 +17018,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 2;
     return 2;
   }
@@ -17122,7 +17112,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -17153,7 +17143,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -17304,7 +17294,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 1;
     return 1;
   }
@@ -17331,7 +17321,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 3;
     return 3;
   }
@@ -17366,7 +17356,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v6, Resource, v8);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v4 + 12) + 24) = 1065353216;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
       *v3 = 4;
       return 4;
     }
@@ -17395,7 +17385,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 5;
     return 5;
   }
@@ -17422,7 +17412,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 2;
     return 2;
   }
@@ -17488,7 +17478,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -17519,7 +17509,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -17751,7 +17741,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 1;
     return 1;
   }
@@ -17778,7 +17768,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 3;
     return 3;
   }
@@ -17813,7 +17803,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v6, Resource, v8);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v4 + 12) + 24) = 1065353216;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
       *v3 = 4;
       return 4;
     }
@@ -17842,7 +17832,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 5;
     return 5;
   }
@@ -17869,7 +17859,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 2;
     return 2;
   }
@@ -17944,7 +17934,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -17975,7 +17965,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -18290,7 +18280,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v6, Resource, v8);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v4 + 12) + 24) = 1065353216;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
       *v3 = 4;
       return 4;
     }
@@ -18319,7 +18309,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 5;
     return 5;
   }
@@ -18883,7 +18873,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -18914,7 +18904,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -19038,7 +19028,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60C9D74C = (int)"I_musasabi";
     dword_60C9D750 = 12321336;
     dword_60C9D754 = (int)"I_kinoko";
-    sub_60000288();
+    stub_return0_000288();
     dword_60C9D758 = 12321336;
     unk_60C9D75C = "I_musasabiP";
     unk_60C9D760 = 12321336;
@@ -19053,7 +19043,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60C9D784 = (int)"I_musasabi";
     dword_60C9D788 = 12321336;
     dword_60C9D78C = (int)"I_kinoko";
-    sub_60000288();
+    stub_return0_000288();
     dword_60C9D790 = 12321336;
     unk_60C9D794 = "wait2";
     unk_60C9D798 = 12321336;
@@ -19068,7 +19058,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60C9D7BC = (int)"wait";
     dword_60C9D7C0 = 12321336;
     dword_60C9D7C4 = (int)"wait";
-    sub_60000288();
+    stub_return0_000288();
     v1[0] = 12321336;
     v1[1] = &unk_60AC9980;
     Profile::Profile(13227656, 4643396, MEMORY[0xAF3464], (int)v1, &unk_60B0286C, 2);
@@ -19308,7 +19298,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v7, v8, &dword_60C9D790[2 * *v2]);
     *(_DWORD *)(**(_DWORD **)(*(v2 - 10) + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*(v2 - 10) + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*(v2 - 10) + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*(v2 - 10) + 12) + 4);
     if ( *v2 == 6 )
     {
       v9 = *(int **)(*(v2 - 10) + 20);
@@ -19480,7 +19470,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12567548;
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6248));
     *(_DWORD *)(a1 + 6144) = 12325992;
-    sub_60237560(a1 + 6144);
+    EffectData_release(a1 + 6144);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -19498,7 +19488,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12567548;
     PlayerLookTarget_vf0((struct sead_IDisposer *)(a1 + 6248));
     *(_DWORD *)(a1 + 6144) = 12325992;
-    sub_60237560(a1 + 6144);
+    EffectData_release(a1 + 6144);
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 6144));
     *(_DWORD *)a1 = 12321080;
     CollisionMgr_dtor(a1 + 648);
@@ -20193,7 +20183,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 1;
     return 1;
   }
@@ -20220,7 +20210,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 0);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 3;
     return 3;
   }
@@ -20255,7 +20245,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v6, Resource, v8);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v4 + 12) + 24) = 1065353216;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v4 + 12) + 4);
       *v3 = 4;
       return 4;
     }
@@ -20284,7 +20274,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 5;
     return 5;
   }
@@ -20311,7 +20301,7 @@ static inline unsigned int uxtb16(unsigned int x)
     SkeletalAnim_play(v2, Resource, v5);
     *(_DWORD *)(**(_DWORD **)(*v1 + 12) + 24) = 1065353216;
     AnimationCtrl_setRepeat(**(_DWORD **)(*v1 + 12) + 4, 1);
-    sub_6041838C(**(_DWORD **)(*v1 + 12) + 4);
+    Vector2_pickBySignAndTag2(**(_DWORD **)(*v1 + 12) + 4);
     v1[4] = 2;
     return 2;
   }
@@ -20412,7 +20402,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -20440,11 +20430,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12567868;
     a1[1717] = 12325992;
     v2 = (struct sead_IDisposer *)(a1 + 1717);
-    sub_60237560((int)(a1 + 1717));
+    EffectData_release((int)(a1 + 1717));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12564060;
     a1[1671] = 12325992;
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1671));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1583));
     *a1 = 12321080;
@@ -20464,11 +20454,11 @@ static inline unsigned int uxtb16(unsigned int x)
     *a1 = 12567868;
     a1[1717] = 12325992;
     v2 = (struct sead_IDisposer *)(a1 + 1717);
-    sub_60237560((int)(a1 + 1717));
+    EffectData_release((int)(a1 + 1717));
     sead::IDisposer::~IDisposer(v2);
     *a1 = 12564060;
     a1[1671] = 12325992;
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer((struct sead_IDisposer *)(a1 + 1671));
     ActiveCollider_dtor((struct sead_IDisposer *)(a1 + 1583));
     *a1 = 12321080;
@@ -20863,7 +20853,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC7B414] = 12320968;
       _cxa_guard_release_0(13087768);
     }
-    return a2 == 13087764 || sub_60026DC8(a2);
+    return a2 == 13087764 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -20894,7 +20884,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v2 = (struct sead_IDisposer *)(a1 + 1583);
     a1[1671] = 12325992;
     v3 = (struct sead_IDisposer *)(a1 + 1671);
-    sub_60237560((int)(a1 + 1671));
+    EffectData_release((int)(a1 + 1671));
     sead::IDisposer::~IDisposer(v3);
     ActiveCollider_dtor(v2);
     *a1 = 12321080;
@@ -20991,7 +20981,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v7, v8, &v16);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v6 + 12) + 24) = 1065353216;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v6 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v6 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v6 + 12) + 4);
       v9 = &dword_60C9D8C4;
       v10 = &flt_60C9D8C0;
       v11 = &flt_60C9D8BC;
@@ -21006,7 +20996,7 @@ static inline unsigned int uxtb16(unsigned int x)
       SkeletalAnim_play(v7, v12, &v16);
       *(_DWORD *)(**(_DWORD **)(*(_DWORD *)v6 + 12) + 24) = -1082130432;
       AnimationCtrl_setRepeat(**(_DWORD **)(*(_DWORD *)v6 + 12) + 4, 1);
-      sub_6041838C(**(_DWORD **)(*(_DWORD *)v6 + 12) + 4);
+      Vector2_pickBySignAndTag2(**(_DWORD **)(*(_DWORD *)v6 + 12) + 4);
       v11 = &flt_60C9D8B0;
       v9 = &dword_60C9D8B8;
       v10 = &flt_60C9D8B4;
@@ -21123,7 +21113,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xC9D8A8] = 12320968;
       _cxa_guard_release_0(13228204);
     }
-    return a2 == 13228200 || sub_60026DC8(a2);
+    return a2 == 13228200 || StaticInit_guardRegister(a2);
   }
 
 /* ============================================================================
@@ -21534,7 +21524,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60C9D954 = (int)"I_iceflower";
     dword_60C9D958 = 12321336;
     dword_60C9D95C = (int)"I_musasabi";
-    sub_60000288();
+    stub_return0_000288();
     unk_60C9D960 = 12321336;
     unk_60C9D964 = "I_kinoko";
     dword_60C9D968 = 12321336;
@@ -21551,7 +21541,7 @@ static inline unsigned int uxtb16(unsigned int x)
     dword_60C9D994 = (int)"I_iceflower";
     dword_60C9D998 = 12321336;
     dword_60C9D99C = (int)"I_musasabi";
-    return sub_60000288();
+    return stub_return0_000288();
   }
 
 /* ============================================================================
@@ -21771,7 +21761,7 @@ static inline unsigned int uxtb16(unsigned int x)
         HIDWORD(v12) = 1;
       if ( HIDWORD(v12) )
         LODWORD(v12) = -1;
-      v13 = sub_608DE334(v12, 0, 4);
+      v13 = Heap_allocate(v12, 0, 4);
       if ( v13 )
       {
         *(_DWORD *)(a1 + 3268) = v11;
@@ -23973,7 +23963,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047467C
+ * ArrayOf20_insertEntry
  * RVA 0x0047467c   size 0x68   xrefs 190
  * ============================================================================ */
   int __fastcall sub_6047467C(_DWORD *a1, unsigned int a2, _DWORD *a3, int a4, int a5)
@@ -24051,7 +24041,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047482C
+ * ArrayOf20_getEntryPtr
  * RVA 0x0047482c   size 0x1c   xrefs 575
  * ============================================================================ */
   int __fastcall sub_6047482C(int a1, unsigned int a2)
@@ -27807,7 +27797,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( *(_BYTE *)(a1 + 3561) )
         {
           sub_60473DE4(v3, 0, (_DWORD *)(v4 + 752), 0);
-          v5 = sub_6047482C(v3, 0);
+          v5 = ArrayOf20_getEntryPtr(v3, 0);
           (*(void (__fastcall **)(int))(*(_DWORD *)v5 + 96))(v5);
         }
         sub_604739E8(v3, (__int64 *)0xB3B8CC, 0);
@@ -27891,7 +27881,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_60959C28(v4 + 288, v4, 0);
         nullsub_113(v36);
         j_nullsub_280(v38);
-        sub_609175E4(v43);
+        Object_releaseHandle(v43);
         v2 = v33 + 1;
       }
       while ( v33 + 1 != v30 );
@@ -29018,7 +29008,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9EB28 = (int)"WorldName_Coin_Battle";
       dword_60C9EB2C = 12321336;
       dword_60C9EB30 = (int)"WorldName_ShadowIsl";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9EAD0);
     }
     switch ( a2 )
@@ -29824,7 +29814,7 @@ static inline unsigned int uxtb16(unsigned int x)
       dword_60C9EB98 = (int)"staff_credit_NX";
       dword_60C9EB9C = 12321336;
       dword_60C9EBA0 = (int)"NXStaffCredit";
-      sub_60000288();
+      stub_return0_000288();
       _cxa_guard_release_0(&unk_60C9EB40);
     }
     return s_msbt_ref(*(_DWORD *)(MEMORY[0xCD0C84] + 852), (char *)&unk_60C9EB40 + 8 * a1 + 4);
