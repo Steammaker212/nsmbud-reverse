@@ -147,6 +147,17 @@ def main():
     rc, tail = run([os.path.join(REPO, "scripts", "align_header_prototypes.py"), "--write"])
     print("header prototypes: %s" % tail)
 
+    # `flt_` / `dbl_` accessors were generated from the WIDTH of the symbol alone, so every float was typed
+    # int32_t. That reads a float's bytes as an integer and turns 1.0f into 1065353216.0f without any error.
+    rc, tail = run([os.path.join(REPO, "scripts", "retype_float_symbols.py")])
+    print("float symbols: %s" % tail)
+
+    # A function called both with and without its trailing arguments cannot keep a full prototype anywhere:
+    # a later full prototype overrides an earlier old-style one and re-enables arity checking. Make every
+    # declaration of such a name old-style.
+    rc, tail = run([os.path.join(REPO, "scripts", "relax_all_decls.py"), "--write"])
+    print("declaration arity: %s" % tail)
+
     # Collapse duplicate helper definitions and, only where unambiguous, align in-file prototypes to the
     # header. Both are repairs for earlier passes that were not idempotent.
     rc, tail = run([os.path.join(REPO, "scripts", "repair_dup_helpers.py"), "--write"])

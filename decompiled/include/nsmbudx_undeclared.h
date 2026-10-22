@@ -704,8 +704,8 @@ extern uint32_t RollingHill_typeInfos[];  /* 5 reference(s) */
 int __fastcall AnimationPlayer_startFullSequence();  /* 30 cast site(s) */
 int __fastcall AreaTask_getWrappedXPos(int result);  /* 2 cast site(s) */
 int __fastcall CollisionMgr_dtor(int a1);  /* 2 cast site(s) */
-int __fastcall DrawMgr_drawTile(int a1, int a2, int a3, _DWORD *a4, int a5);  /* 2 cast site(s) */
-int __fastcall EffectData_create(int a1, int a2, int a3, int a4);  /* 4 cast site(s) */
+int __fastcall DrawMgr_drawTile();  /* 2 cast site(s) */
+int __fastcall EffectData_create();  /* 4 cast site(s) */
 int __fastcall EffectSlot_startEffectInstance();  /* 1 cast site(s) */
 int __fastcall FixedPoint_lerp();  /* 3 cast site(s) */
 int __fastcall Global_getContextVtable();  /* 1 cast site(s) */
@@ -713,12 +713,12 @@ int __fastcall Global_initMessageQueueSubsystem();  /* 2 cast site(s) */
 int __fastcall IceFragmentHeap_ref_3EE1B0();  /* 3 cast site(s) */
 int __fastcall Object_destroyViaGlobal();  /* 1 cast site(s) */
 int __fastcall Object_queryByteViaThreeArgSlot();  /* 1 cast site(s) */
-int __fastcall Resource_getModel(int a1, _DWORD *a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);  /* 1 cast site(s) */
-int __fastcall Resource_getModel2(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);  /* 2 cast site(s) */
+int __fastcall Resource_getModel();  /* 1 cast site(s) */
+int __fastcall Resource_getModel2();  /* 2 cast site(s) */
 int __fastcall SE_EMY_DOWN_ref_3A1830();  /* 1 cast site(s) */
 int __fastcall SE_OBJ_BLOCK_BREAK_ref_2();  /* 2 cast site(s) */
 int __fastcall SE_OBJ_JUMPDAI_APP_ref();  /* 1 cast site(s) */
-int __fastcall SolidOnTopCollider_init(int a1, int a2, int a3);  /* 2 cast site(s) */
+int __fastcall SolidOnTopCollider_init();  /* 2 cast site(s) */
 int __fastcall Sound_setTrackVolume();  /* 6 cast site(s) */
 int __fastcall fmodf_0();  /* 1 cast site(s) */
 int __fastcall ibaramushi_ref_2E6E24();  /* 1 cast site(s) */
@@ -760,13 +760,13 @@ int __fastcall loc_6099C15C();  /* 1 cast site(s) */
 int __fastcall logf_0();  /* 1 cast site(s) */
 int __fastcall param_root_ref();  /* 2 cast site(s) */
 int __fastcall result();  /* 14 cast site(s) */
-int __fastcall sub_60051794(int a1, int a2, int a3);  /* 3 cast site(s) */
+int __fastcall sub_60051794();  /* 3 cast site(s) */
 int __fastcall sub_60106C90(int a1, int a2, float *a3, int a4);  /* 4 cast site(s) */
-int __fastcall sub_60151960(int a1, float *a2, int a3);  /* 1 cast site(s) */
+int __fastcall sub_60151960();  /* 1 cast site(s) */
 int __fastcall sub_60161E68(int a1, _DWORD *a2, _DWORD *a3, int a4);  /* 1 cast site(s) */
 int __fastcall sub_6018EDF4(int a1, _DWORD *a2, _DWORD *a3, _DWORD *a4, _DWORD *a5);  /* 1 cast site(s) */
 int __fastcall sub_6018F98C(float *a1, _DWORD *a2, unsigned int a3, unsigned int a4, int a5, int a6);  /* 2 cast site(s) */
-int __fastcall sub_602375C4(int32x4_t *a1, int a2, float *a3, unsigned int *a4, float *a5);  /* 1 cast site(s) */
+int __fastcall sub_602375C4();  /* 1 cast site(s) */
 signed int __fastcall sub_603778B4(int a1, unsigned int a2, unsigned __int8 **a3);  /* 1 cast site(s) */
 int __fastcall sub_603F5BC4(int a1, float *a2, float *a3, float *a4, float *a5);  /* 1 cast site(s) */
 int __fastcall sub_603F6F84(unsigned __int8 *a1);  /* 1 cast site(s) */
@@ -791,7 +791,7 @@ int __fastcall sub_6054F8EC(int a1, _DWORD *a2, int a3, _DWORD *a4, int a5, int 
 int __fastcall sub_6058262C(int a1, float *a2, int a3, int a4, int a5);  /* 1 cast site(s) */
 _BYTE * __fastcall sub_60582B14(int a1, _DWORD *a2, int a3, int a4);  /* 1 cast site(s), signature from its definition */
 _BYTE * __fastcall sub_60583410(int a1, int a2, int a3);  /* 2 cast site(s) */
-void __fastcall sub_605839E8(int a1, _DWORD *a2, int a3, int a4, unsigned __int8 a5, int a6);  /* 2 cast site(s), signature from its definition */
+void __fastcall sub_605839E8();  /* 2 cast site(s), signature from its definition */
 int __fastcall sub_60584938(int a1, int a2, int a3, unsigned int a4, int a5, int a6, int a7);  /* 1 cast site(s) */
 float * __fastcall sub_605B5D54(float *result, int a2, int a3, __int16 a4, int a5);  /* 1 cast site(s), signature from its definition */
 _BYTE * __fastcall sub_605B624C(float *a1, _DWORD *a2, int a3, int a4, int a5);  /* 2 cast site(s), signature from its definition */
@@ -800,7 +800,7 @@ _BYTE * __fastcall sub_605BE5EC(_BYTE *result);  /* 1 cast site(s) */
 bool __fastcall sub_605BE6BC(unsigned __int8 *a1);  /* 1 cast site(s) */
 _DWORD * __fastcall sub_605CC1F8(_DWORD *a1, int a2, _DWORD *a3);  /* 1 cast site(s) */
 int __fastcall sub_605E9A4C(_DWORD *a1, unsigned int a2, _DWORD *a3, int a4);  /* 1 cast site(s) */
-int __fastcall sub_60644758(_DWORD **a1, float *a2, int a3);  /* 1 cast site(s) */
+int __fastcall sub_60644758();  /* 1 cast site(s) */
 int __fastcall sub_6068C8E0(int a1, int *a2, int *a3);  /* 4 cast site(s) */
 int __fastcall sub_606A7D14(int result, int a2);  /* 1 cast site(s) */
 int __fastcall sub_606B4E90(int a1, int a2, int a3, __int64 *a4);  /* 4 cast site(s) */

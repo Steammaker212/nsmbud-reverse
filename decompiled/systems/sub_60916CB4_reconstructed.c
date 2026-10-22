@@ -64,8 +64,8 @@ extern NvnDispatchFn *const p_nvn_dispatch_3;   /* off_60C78B38 */
 extern void (*const nvn_final_f32)(void *channel, uint32_t a, uint32_t b, uint32_t c,
                                     float scale);   /* off_60C790D4, scale in S0 */
 
-extern const float flt_60C5D5B0;                /* 1.0f */
-extern const float flt_60C5D5B4;                /* 1.0f */
+/* flt_60C5D5B0 / flt_60C5D5B4 are accessor macros from nsmbudx_data.h, not linkable symbols;
+ * declaring them extern re-expands the macro and cannot parse. Both are the constant 1.0f. */
 
 /* Called from sub_6091A0C8 exactly once. */
 void sub_60916CB4(void *a1, void *a2, uint8_t *a3)
