@@ -12,11 +12,13 @@
 #define NSMBUDX_PRELUDE_H
 
 #include "nsmbudx_types.h"
+#include "nsmbudx_data_symbols.h"
 #include "structs.h"
 #include "nsmbudx_recovered_types.h"
 #include "nsmbudx_data.h"
 #include "nsmbudx_subfuncs.h"
 #include "nsmbudx_undeclared.h"
+#include "nsmbudx_string_symbols.h"
 
 #include "libs.h"
 

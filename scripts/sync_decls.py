@@ -1,65 +1,100 @@
-"""Make forward declarations agree with the authoritative definition that follows them in the same file.
+"""Make forward declarations agree with the definition in the same file -- single pass, linear time.
 
-When a merged corpus function is replaced by fresh Hex-Rays output, its real signature can differ from the
-forward declaration the corpus already emitted -- typically the fresh one is wider (void, 9 params) than the
-stale declaration (int *, 3 params). clang then rejects the file with "conflicting types for X".
+Symptom this fixes:
 
-This rewrites the forward declarations of a named function to match the definition in the same file: same
-return type, same parameter list text. It does not touch call sites, so any caller that passes the wrong
-argument count will still be reported -- which is correct, because that is a real disagreement to look at
-rather than something to paper over.
+    player.c:53    int *__fastcall sub_60787B8C(int a1, int a2, int a3);           <- stale
+    player.c:3206  int *__fastcall sub_60787B8C(int a1, unsigned int a2, int a3)   <- definition
 
-Usage: sync_decls.py <file> <function-name> [--write]
+They differ only in a2's type, but clang reports "conflicting types" and the whole unit fails.
+
+The first version of this script re-scanned and rewrote the whole file once per function, which is quadratic:
+on a 1.1 MB player.c with ~900 definitions it had to be killed after 10 minutes. This version reads each file
+once, collects every definition, then rewrites declarations in a single pass.
+
+Only declarations whose parameter COUNT matches the definition are rewritten, so a genuine arity disagreement
+stays visible instead of being silently papered over.
 """
+import os
 import re
 import sys
 
+DEF = re.compile(r"^[ \t]*(?P<ret>[A-Za-z_][\w \t\*]*?)\b(?P<conv>__\w+)\s+(?P<name>\w+)\s*"
+                 r"\((?P<params>[^;{]*?)\)\s*\n[ \t]*\{", re.M | re.S)
 
-def definition_signature(text, name):
-    """Find `... name(` at the start of a line followed by a param list and a newline + `{`."""
-    pattern = re.compile(r"^(?P<ret>[A-Za-z_][\w \t\*]*?)\b(?P<conv>__\w+)\s+" + re.escape(name)
-                         + r"\s*\((?P<params>[^;{]*?)\)\s*\n?\s*\{", re.M | re.S)
-    m = pattern.search(text)
-    if not m:
-        return None
-    ret = m.group("ret").strip()
-    conv = m.group("conv")
-    params = " ".join(m.group("params").split())
-    return "%s %s %s(%s)" % (ret, conv, name, params)
+DECL = re.compile(r"^[ \t]*(?P<ret>[A-Za-z_][\w \t\*]*?)\b(?P<conv>__\w+)\s+(?P<name>\w+)\s*"
+                  r"\((?P<params>[^;{\)]*)\)\s*;", re.M)
+
+
+def nparams(s):
+    return len([x for x in s.split(",") if x.strip()])
+
+
+def norm(s):
+    return " ".join(s.split())
+
+
+def process(text):
+    defs = {}
+    for m in DEF.finditer(text):
+        name = m.group("name")
+        defs.setdefault(name, (norm(m.group("ret")), m.group("conv"), norm(m.group("params"))))
+
+    changed = 0
+    out = []
+    last = 0
+    for m in DECL.finditer(text):
+        name = m.group("name")
+        if name not in defs:
+            continue
+        ret, conv, dparams = defs[name]
+        if nparams(dparams) != nparams(m.group("params")):
+            continue
+        new = "%s %s %s(%s);" % (ret, conv, name, dparams)
+        old = m.group(0)
+        if norm(old) == norm(new):
+            continue
+        out.append(text[last:m.start()])
+        out.append(new)
+        last = m.end()
+        changed += 1
+    out.append(text[last:])
+    return "".join(out), changed
 
 
 def main(argv):
-    path = argv[1]
-    name = argv[2]
     write = "--write" in argv
-    with open(path, encoding="utf-8", errors="replace") as fh:
-        text = fh.read()
+    root = argv[argv.index("--all") + 1] if "--all" in argv else None
+    if root is None:
+        path = argv[1]
+        with open(path, encoding="utf-8", errors="replace") as fh:
+            text = fh.read()
+        new, n = process(text)
+        print("%s: %d declaration(s) synchronised" % (os.path.basename(path), n))
+        if write and n:
+            with open(path, "w", encoding="utf-8", newline="") as fh:
+                fh.write(new)
+        return 0
 
-    sig = definition_signature(text, name)
-    if sig is None:
-        print("no definition found for %s in %s" % (name, path))
-        return 1
-
-    print("definition: %s" % sig)
-
-    # prototypes are one-line `RET __fastcall NAME(args);`
-    proto = re.compile(r"^[A-Za-z_][\w \t\*]*?\b__\w+\s+" + re.escape(name) + r"\s*\([^;]*\)\s*;",
-                       re.M)
-    matches = list(proto.finditer(text))
-    print("forward declarations found: %d" % len(matches))
-    changed = 0
-    for m in matches:
-        old = m.group(0)
-        new = sig + ";"
-        if old != new:
-            text = text.replace(old, new, 1)
-            changed += 1
-            print("  was: %s" % old.strip())
-            print("  now: %s" % new.strip())
-    if write and changed:
-        with open(path, "w", encoding="utf-8", newline="") as fh:
-            fh.write(text)
-    print("changed %d declaration(s), write=%s" % (changed, write))
+    total = 0
+    files = 0
+    for dirpath, _, names in os.walk(root):
+        if "include" in dirpath or "authoritative" in dirpath:
+            continue
+        for fn in sorted(names):
+            if not fn.endswith(".c"):
+                continue
+            path = os.path.join(dirpath, fn)
+            with open(path, encoding="utf-8", errors="replace") as fh:
+                text = fh.read()
+            new, n = process(text)
+            if n:
+                files += 1
+                total += n
+                print("  %-42s %d decl(s)" % (fn, n))
+                if write:
+                    with open(path, "w", encoding="utf-8", newline="") as fh:
+                        fh.write(new)
+    print("\nfiles: %d, declarations synchronised: %d (write=%s)" % (files, total, write))
     return 0
 
 

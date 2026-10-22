@@ -143,4 +143,19 @@ struct nn_fnd_Allocator;
 struct nn_gfx_Device;
 struct nn_account;
 
+/* ---- named data symbols that Hex-Rays referenced by name but never declared ----
+ *
+ * The symbol file records these addresses; other translation units reach the same storage as
+ * MEMORY[<offset>]. Hex-Rays emitted the NAME in some places and the raw offset in others, so the
+ * name has to exist or those units do not compile. Only symbols present in the .sym file are
+ * emitted -- nothing is guessed.
+ */
+#define ArchiveManagerMaybe_instance   (MEMORY[0x00CC6D94 / 4])
+#define EnemyCounterMaybe_instance     (MEMORY[0x00C7B420 / 4])
+#define LevelInfo_instance             (MEMORY[0x00C9A684 / 4])
+#define Level_instance                 (MEMORY[0x00CBD89C / 4])
+#define ResourceMgrRelated_instance    (MEMORY[0x00C9CA88 / 4])
+#define SoundSystem_instance           (MEMORY[0x00CC6AF8 / 4])
+#define TileMgr_instance               (MEMORY[0x00CBD254 / 4])
+
 #endif /* NSMBUDX_TYPES_H */
