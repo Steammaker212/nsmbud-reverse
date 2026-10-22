@@ -51,3 +51,12 @@ codedx/
 # ---- SweetDX input: the retail NSO, supplied by the user, never committed ----
 # sweetdx/nso/README.md is tracked; the 8 MB image next to it is not.
 sweetdx/nso/main
+
+# ---- SweetDX build output: NEVER commit these ----
+# Build artefacts are reproducible from sweetdx/hooks + sweetdx/code + sweetdx/symbols.
+# Committing them bloats the repo, and a stale build is worse than no build because it
+# looks authoritative. Test builds are shared out-of-band, not through git history.
+# The patterns cover output/, output_stepN_*/, and the atmosphère tree they contain.
+sweetdx/output*/
+sweetdx/out*/
+atmosphere/
