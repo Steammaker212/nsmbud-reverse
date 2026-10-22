@@ -1,0 +1,22 @@
+[
+  {"rva": "0x40F4B8", "name": "SkeletalAnim_playWithRepeatAndFlags",
+   "why": "SkeletalAnim_play on the anim at a1+12, AnimationCtrl_setRepeat, then sets bit 1 of [7]"},
+
+  {"rva": "0x475900", "name": "Disposer_ctorWithRingOfChildren",
+   "why": "IDisposer ctor then installs vptr 12569208 and links a circular chain result+13/+40/+67/+94/+121"},
+
+  {"rva": "0x448AF4", "name": "CollisionMask_markPair",
+   "why": "reads a 15-bit index from bits 15..29, and if not 0x7FFF sets mask bits 0xC0007FFF and 0x3FFF8000 on both entries"},
+
+  {"rva": "0x8322C0", "name": "FixedPoint_lerp",
+   "why": "computes |b-a| as a fixed-point delta, scales by the float in s0, and stores into the four result pointers"},
+
+  {"rva": "0x2A852C", "name": "Transform_copyFromLayout",
+   "why": "copies a2[0..1] to a1[0..1], then five dwords from a2+8 into a1+8, and sets the flag byte at +32"},
+
+  {"rva": "0x90B260", "name": "Object_callSlot7",
+   "why": "tail-calls vtable slot 7 (+28) of this -- a one-line virtual dispatch"},
+
+  {"rva": "0x7734E8", "name": "Player_checkTwoFlagsAndDispatch",
+   "why": "guards on byte +1240 bit 4 and byte +1204 bit 6, then dispatches via sub_6040E538/sub_60814010"}
+]

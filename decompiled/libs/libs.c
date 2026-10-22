@@ -21676,7 +21676,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   void __fastcall sub_608195A8(int a1)
   {
     *(_DWORD *)a1 = 12755464;
-    sub_60954610((struct sead_IDisposer *)(a1 + 224));
+    Disposer_unregisterFromGlobal((struct sead_IDisposer *)(a1 + 224));
     if ( *(_BYTE *)(a1 + 192) )
       MEMORY[0xCC6BE4] = 0;
     sead::CalculateTask::~CalculateTask(a1);
@@ -21691,7 +21691,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v2; // r0
   
     *(_DWORD *)a1 = 12755464;
-    sub_60954610((struct sead_IDisposer *)(a1 + 224));
+    Disposer_unregisterFromGlobal((struct sead_IDisposer *)(a1 + 224));
     if ( *(_BYTE *)(a1 + 192) )
       MEMORY[0xCC6BE4] = 0;
     sead::CalculateTask::~CalculateTask(a1);
@@ -23020,7 +23020,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     thunk_sub_60909E64((_DWORD *)(a1 + 1256));
     sead::CriticalSection::~CriticalSection((struct sead_IDisposer *)(a1 + 692));
     thunk_sub_60909E64((_DWORD *)(a1 + 288));
-    sub_60954610((struct sead_IDisposer *)(a1 + 196));
+    Disposer_unregisterFromGlobal((struct sead_IDisposer *)(a1 + 196));
     if ( *(_BYTE *)(a1 + 192) )
       MEMORY[0xCC6C2C] = 0;
     sead::CalculateTask::~CalculateTask(a1);
@@ -23038,7 +23038,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     thunk_sub_60909E64((_DWORD *)(a1 + 1256));
     sead::CriticalSection::~CriticalSection((struct sead_IDisposer *)(a1 + 692));
     thunk_sub_60909E64((_DWORD *)(a1 + 288));
-    sub_60954610((struct sead_IDisposer *)(a1 + 196));
+    Disposer_unregisterFromGlobal((struct sead_IDisposer *)(a1 + 196));
     if ( *(_BYTE *)(a1 + 192) )
       MEMORY[0xCC6C2C] = 0;
     sead::CalculateTask::~CalculateTask(a1);
@@ -23119,14 +23119,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     result = *(_DWORD *)(a1 + 264);
     if ( result == 1 )
     {
-      sub_6090B260(*(_DWORD *)(a2 + 12), *(_DWORD *)(a2 + 40));
+      Object_callSlot7(*(_DWORD *)(a2 + 12), *(_DWORD *)(a2 + 40));
       sub_6090E560(*(_DWORD *)(a2 + 32), *(_DWORD *)(a2 + 40), *(float **)(a2 + 12));
       v5 = (unsigned __int8 *)RenderParams_defaultInit((int)v11);
-      sub_6090B4B0(v5, *(_DWORD *)(a2 + 40));
+      RenderParams_updateFromModel(v5, *(_DWORD *)(a2 + 40));
       v6 = *(_DWORD *)(a1 + 280);
       v7 = (unsigned __int8 *)RenderParams_defaultInit((int)v24);
       v24[0] = 0;
-      sub_6090B4B0(v7, *(_DWORD *)(a2 + 40));
+      RenderParams_updateFromModel(v7, *(_DWORD *)(a2 + 40));
       v8 = (_QWORD *)MEMORY[0xCCF468];
       sub_6090BCF8(MEMORY[0xCCF468], *(_DWORD *)(a2 + 24));
       sub_6090BD34(v8, *(_DWORD *)(a2 + 28));
@@ -30029,163 +30029,163 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v4 = *(_DWORD *)(a1 + 40);
       v5 = 12321336;
       v6 = "AppBootCnt";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44124));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44124));
       v5 = 12321336;
       v6 = "TotalPlayTime";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44128));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44128));
       v5 = 12321336;
       v6 = "MarioStoryPlayTime";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44132));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44132));
       v5 = 12321336;
       v6 = "LuigiStoryPlayTime";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44136));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44136));
       v5 = 12321336;
       v6 = "BoostModePlayTime";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44140));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44140));
       v5 = 12321336;
       v6 = "ChallengeModePlayTime";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44144));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44144));
       v5 = 12321336;
       v6 = "CoinBattlePlayTime";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44148));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44148));
       v5 = 12321336;
       v6 = "CoinEditPlayTime";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44152));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44152));
       v5 = 12321336;
       v6 = "HavePlayed2P";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44300));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44300));
       v5 = 12321336;
       v6 = "HavePlayed3P";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44301));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44301));
       v5 = 12321336;
       v6 = "HavePlayed4P";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44302));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44302));
       v5 = 12321336;
       v6 = "StoryCourseCount1P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44156));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44156));
       v5 = 12321336;
       v6 = "StoryCourseCount2P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44160));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44160));
       v5 = 12321336;
       v6 = "StoryCourseCount3P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44164));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44164));
       v5 = 12321336;
       v6 = "StoryCourseCount4P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44168));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44168));
       v5 = 12321336;
       v6 = "MarioStoryCourseCount";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44172));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44172));
       v5 = 12321336;
       v6 = "MarioStoryReachedWorld";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44303));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44303));
       v5 = 12321336;
       v6 = "MarioStoryComplete";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44304));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44304));
       v5 = 12321336;
       v6 = "MarioStoryStarCoinNum";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44296));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44296));
       v5 = 12321336;
       v6 = "LuigiStoryCourseCount";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44176));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44176));
       v5 = 12321336;
       v6 = "LuigiStoryReachedWorld";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44305));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44305));
       v5 = 12321336;
       v6 = "LuigiStoryComplete";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44306));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44306));
       v5 = 12321336;
       v6 = "LuigiStoryStarCoinNum";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44297));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44297));
       v5 = 12321336;
       v6 = "QuestPlayCount";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44180));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44180));
       v5 = 12321336;
       v6 = "OtehonPlayCount";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44184));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44184));
       v5 = 12321336;
       v6 = "CourseChangePlayerNum";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44188));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44188));
       v5 = 12321336;
       v6 = "WorldChangePlayerNum";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44192));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44192));
       v5 = 12321336;
       v6 = "WorldChangeChara";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44196));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44196));
       v5 = 12321336;
       v6 = "WorldItemUseCount";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44200));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44200));
       v5 = 12321336;
       v6 = "BoostCourseCount1P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44204));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44204));
       v5 = 12321336;
       v6 = "BoostCourseCount2P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44208));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44208));
       v5 = 12321336;
       v6 = "BoostCourseCount3P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44212));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44212));
       v5 = 12321336;
       v6 = "BoostCourseCount4P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44216));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44216));
       v5 = 12321336;
       v6 = "BoostChangeChara";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44220));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44220));
       v5 = 12321336;
       v6 = "ChallengePlayAndRetryCount";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44224));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44224));
       v5 = 12321336;
       v6 = "ChallengePlayCount";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44228));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44228));
       v5 = 12321336;
       v6 = "ChallengeReplayPlayCount";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44232));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44232));
       v5 = 12321336;
       v6 = "ChallengeGoldCount";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44307));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44307));
       v5 = 12321336;
       v6 = "ChallengeSilverCount";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44308));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44308));
       v5 = 12321336;
       v6 = "ChallengeBronzeCount";
-      sub_6074EC10(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44309));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(unsigned __int8 *)(v4 + 44309));
       v5 = 12321336;
       v6 = "ChallengeChangeChara";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44236));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44236));
       v5 = 12321336;
       v6 = "CoinEditPlayCourseCount";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44240));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44240));
       v5 = 12321336;
       v6 = "CoinBattlePlayCourseCount2P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44244));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44244));
       v5 = 12321336;
       v6 = "CoinBattlePlayCourseCount3P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44248));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44248));
       v5 = 12321336;
       v6 = "CoinBattlePlayCourseCount4P";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44252));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44252));
       v5 = 12321336;
       v6 = "CoinBattlePlayEditCourseCount";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44256));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44256));
       v5 = 12321336;
       v6 = "CoinBattleChangeChara";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44260));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44260));
       v5 = 12321336;
       v6 = "CoinBattleChangeTeam";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44264));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44264));
       v5 = 12321336;
       v6 = "CoinEditGoToBattle";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44268));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44268));
       v5 = 12321336;
       v6 = "TimesSelectLuigiU";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44272));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44272));
       v5 = 12321336;
       v6 = "TimesHint";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44276));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44276));
       v5 = 12321336;
       v6 = "TimesOnlineMovie";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44280));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44280));
       v5 = 12321336;
       v6 = "TimesStaffRollNX";
-      sub_6074EC10(v3, (const char **)&v5, *(_DWORD *)(v4 + 44284));
+      PlayReport_addIfEnabled(v3, (const char **)&v5, *(_DWORD *)(v4 + 44284));
       return sub_6074EC70(v3);
     }
     return result;
@@ -30250,17 +30250,17 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = *(_DWORD *)(a1 + 40);
       v41 = 12321336;
       v42 = "AppBootCnt";
-      v6 = sub_6074EC10((int)v2, (const char **)&v41, *(_DWORD *)(v5 + 44124));
+      v6 = PlayReport_addIfEnabled((int)v2, (const char **)&v41, *(_DWORD *)(v5 + 44124));
       OperationMode = nn::oe::GetOperationMode((struct nn_oe *)v6);
       v41 = 12321336;
       if ( OperationMode != 1 )
         OperationMode = 0;
       v42 = "TVConnected";
-      sub_6074EC10((int)v2, (const char **)&v41, OperationMode);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, OperationMode);
       v8 = *(_DWORD *)(a1 + 40);
       v41 = 12321336;
       v42 = "KeyMapType";
-      sub_6074EC10((int)v2, (const char **)&v41, *(unsigned __int8 *)(v8 + 9));
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, *(unsigned __int8 *)(v8 + 9));
       v9 = v3 + 272;
       if ( !v3 )
         v9 = v4 + 16;
@@ -30287,45 +30287,45 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       v41 = 12321336;
       v42 = "GameModeType";
-      sub_6074EC10((int)v2, (const char **)&v41, v11);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v11);
       v12 = MEMORY[0xC9A684];
       if ( MEMORY[0xC9A684] )
       {
         v41 = 12321336;
         v42 = "WorldNo";
-        sub_6074EC10((int)v2, (const char **)&v41, *(unsigned __int8 *)(MEMORY[0xC9A684] + 16) + 1);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, *(unsigned __int8 *)(MEMORY[0xC9A684] + 16) + 1);
         v41 = 12321336;
         v42 = "CourseNo";
-        sub_6074EC10((int)v2, (const char **)&v41, *(unsigned __int8 *)(v12 + 17) + 1);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, *(unsigned __int8 *)(v12 + 17) + 1);
       }
       v41 = 12321336;
       v42 = "PlayerNum";
       v13 = sub_603FD0B4((_BYTE *)v9);
-      sub_6074EC10((int)v2, (const char **)&v41, v13);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v13);
       v14 = (unsigned int *)MEMORY[0xC9CFB8];
       v41 = 12321336;
       v42 = "StyleNumFullKeyStick";
       if ( MEMORY[0xC9CFB8] )
       {
-        sub_6074EC10((int)v2, (const char **)&v41, *(_DWORD *)(MEMORY[0xC9CFB8] + 40));
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, *(_DWORD *)(MEMORY[0xC9CFB8] + 40));
         v41 = 12321336;
         v42 = "StyleNumFullKeyCross";
-        sub_6074EC10((int)v2, (const char **)&v41, v14[11]);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, v14[11]);
         v41 = 12321336;
         v42 = "StyleNumHandheldStick";
-        sub_6074EC10((int)v2, (const char **)&v41, v14[12]);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, v14[12]);
         v41 = 12321336;
         v42 = "StyleNumHandheldCross";
-        sub_6074EC10((int)v2, (const char **)&v41, v14[13]);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, v14[13]);
         v41 = 12321336;
         v42 = "StyleNumDualStick";
-        sub_6074EC10((int)v2, (const char **)&v41, v14[14]);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, v14[14]);
         v41 = 12321336;
         v42 = "StyleNumDualCross";
-        sub_6074EC10((int)v2, (const char **)&v41, v14[15]);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, v14[15]);
         v41 = 12321336;
         v42 = "StyleNumLeft";
-        sub_6074EC10((int)v2, (const char **)&v41, v14[16]);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, v14[16]);
         v41 = 12321336;
         v42 = "StyleNumRight";
         v15 = (int)v2;
@@ -30333,31 +30333,31 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       else
       {
-        sub_6074EC10((int)v2, (const char **)&v41, 0);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, 0);
         v41 = 12321336;
         v42 = "StyleNumFullKeyCross";
-        sub_6074EC10((int)v2, (const char **)&v41, 0);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, 0);
         v41 = 12321336;
         v42 = "StyleNumHandheldStick";
-        sub_6074EC10((int)v2, (const char **)&v41, 0);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, 0);
         v41 = 12321336;
         v42 = "StyleNumHandheldCross";
-        sub_6074EC10((int)v2, (const char **)&v41, 0);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, 0);
         v41 = 12321336;
         v42 = "StyleNumDualStick";
-        sub_6074EC10((int)v2, (const char **)&v41, 0);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, 0);
         v41 = 12321336;
         v42 = "StyleNumDualCross";
-        sub_6074EC10((int)v2, (const char **)&v41, 0);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, 0);
         v41 = 12321336;
         v42 = "StyleNumLeft";
-        sub_6074EC10((int)v2, (const char **)&v41, 0);
+        PlayReport_addIfEnabled((int)v2, (const char **)&v41, 0);
         v41 = 12321336;
         v16 = 0;
         v42 = "StyleNumRight";
         v15 = (int)v2;
       }
-      sub_6074EC10(v15, (const char **)&v41, v16);
+      PlayReport_addIfEnabled(v15, (const char **)&v41, v16);
       v17 = 0;
       if ( *(_BYTE *)(v9 + 20) )
       {
@@ -30477,62 +30477,62 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       v41 = 12321336;
       v42 = "CharaNumMario";
-      sub_6074EC10((int)v2, (const char **)&v41, v17);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v17);
       v41 = 12321336;
       v42 = "CharaNumLuigi";
-      sub_6074EC10((int)v2, (const char **)&v41, v19);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v19);
       v41 = 12321336;
       v42 = "CharaNumKinopioYellow";
-      sub_6074EC10((int)v2, (const char **)&v41, v20);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v20);
       v41 = 12321336;
       v42 = "CharaNumKinopico";
-      sub_6074EC10((int)v2, (const char **)&v41, v21);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v21);
       v41 = 12321336;
       v42 = "CharaNumTotten";
-      sub_6074EC10((int)v2, (const char **)&v41, v22);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v22);
       v41 = 12321336;
       v42 = "CharaNumMii";
-      sub_6074EC10((int)v2, (const char **)&v41, v23);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v23);
       v41 = 12321336;
       v42 = "CharaNumKinopioBlue";
-      sub_6074EC10((int)v2, (const char **)&v41, v24);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v24);
       v25 = *(unsigned __int8 *)(MEMORY[0xC9CFB8] + 84);
       v41 = 12321336;
       v42 = "ValidSkySpinByJump";
-      sub_6074EC10((int)v2, (const char **)&v41, v25);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v25);
       v41 = 12321336;
       v42 = "SkySpinCountByShake";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[5]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[5]);
       v41 = 12321336;
       v42 = "SkySpinCountByR";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[6]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[6]);
       v41 = 12321336;
       v42 = "SkySpinCountByJump";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[7]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[7]);
       v41 = 12321336;
       v42 = "MusaRiseCountByShake";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[8]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[8]);
       v41 = 12321336;
       v42 = "MusaRiseCountByR";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[9]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[9]);
       v41 = 12321336;
       v42 = "BubbleRiseCountByShake";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[10]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[10]);
       v41 = 12321336;
       v42 = "BubbleRiseCountByR";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[11]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[11]);
       v41 = 12321336;
       v42 = "BubbleRiseCountByJump";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[12]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[12]);
       v41 = 12321336;
       v42 = "WaterSpinCountByShake";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[13]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[13]);
       v41 = 12321336;
       v42 = "WaterSpinCountByR";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[14]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[14]);
       v41 = 12321336;
       v42 = "WaterSpinCountByJump";
-      sub_6074EC10((int)v2, (const char **)&v41, v2[15]);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v2[15]);
       v26 = MEMORY[0xC99DC8];
       v27 = *(unsigned __int8 *)(sub_603F7EFC(MEMORY[0xC99DC8], 0) + 2);
       v40 = *(unsigned __int8 *)(sub_603F7EFC(v26, 1) + 2);
@@ -30566,7 +30566,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         ++v27;
       if ( v32 == 1 )
         ++v27;
-      sub_6074EC10((int)v2, (const char **)&v41, v27);
+      PlayReport_addIfEnabled((int)v2, (const char **)&v41, v27);
       if ( sub_603FD0B4((_BYTE *)v9) == 3 )
       {
         v33 = *(unsigned __int8 *)(v9 + 506);
@@ -37878,7 +37878,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_608322C0
+ * FixedPoint_lerp
  * RVA 0x008322c0   size 0x78   xrefs 94
  * ============================================================================ */
   int *__fastcall sub_608322C0(int *result, int *a2, int *a3, int *a4)
@@ -38824,7 +38824,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_608332B0
+ * FixedPoint_atan2_byRegs
  * RVA 0x008332b0   size 0x1c   xrefs 103
  * ============================================================================ */
   unsigned int sub_608332B0()
@@ -191596,7 +191596,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 = *(_DWORD *)(a1 + 176);
       if ( v7 )
       {
-        sub_6090B260(v7, v14);
+        Object_callSlot7(v7, v14);
         (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 136))(a1, 3);
       }
       v8 = *(int (__fastcall ****)(_DWORD, void *))(a1 + 32);
@@ -219214,7 +219214,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6090B260
+ * Object_callSlot7
  * RVA 0x0090b260   size 0xc   xrefs 92
  * ============================================================================ */
   int __fastcall sub_6090B260(int a1)
@@ -219388,7 +219388,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6090B4B0
+ * RenderParams_updateFromModel
  * RVA 0x0090b4b0   size 0x394   xrefs 111
  * ============================================================================ */
   int __fastcall sub_6090B4B0(unsigned __int8 *a1, int a2)
@@ -221330,7 +221330,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6090DBC8(int a1)
   {
-    return sub_6090B4B0(byte_60CCF474, a1);
+    return RenderParams_updateFromModel(byte_60CCF474, a1);
   }
 
 /* ============================================================================
@@ -238596,7 +238596,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v4 = (unsigned __int8 *)RenderParams_defaultInit((int)&v17);
     v18 &= ~1u;
     v17 = 0;
-    sub_6090B4B0(v4, a2);
+    RenderParams_updateFromModel(v4, a2);
     sub_60972394(v7);
     v7[18] = 0;
     v8 = 1;
@@ -243064,7 +243064,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v49 = 8;
       v47 &= ~1u;
       v48 &= 0xFFFFFFF0;
-      sub_6090B4B0((unsigned __int8 *)&v46, a2);
+      RenderParams_updateFromModel((unsigned __int8 *)&v46, a2);
       v34 = 0.25;
       v35 = 0.0;
       v36 = 0.0;
@@ -243083,7 +243083,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v47 |= 1u;
       v48 = v48 & 0xFFFFFFF0 | 7;
       v20 = a5;
-      sub_6090B4B0((unsigned __int8 *)&v46, a2);
+      RenderParams_updateFromModel((unsigned __int8 *)&v46, a2);
       v22 = sub_6090BDE0((int)v60);
       sub_6093AC5C(a2, v50, v22);
       v37 = 0.0;
@@ -250753,13 +250753,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( *(_DWORD *)(a1 + 1600) == 2 )
           {
             sub_6090E438(v55, (int)v45);
-            sub_6090B260(v45, a2);
+            Object_callSlot7(v45, a2);
             sub_6090E560((int)v55, a2, v45);
             v33 = (unsigned __int8 *)RenderParams_defaultInit((int)&v52);
             v52 = 0;
             v54 |= 0xFu;
             v53 &= ~1u;
-            sub_6090B4B0(v33, a2);
+            RenderParams_updateFromModel(v33, a2);
             v51[0] = MEMORY[0xB3B954] + MEMORY[0xB3B954];
             v51[1] = MEMORY[0xB3B958] + MEMORY[0xB3B958];
             sub_6093F840(a2, v43 + 1104, v55, v51, 11778372);
@@ -250888,7 +250888,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v54 &= ~1u;
     v55 = (unsigned __int8)(8 * *(_BYTE *)(a1 + 204)) | 7 | v55 & 0xFFFFFFF0;
     v53 = 0;
-    sub_6090B4B0(v8, a2);
+    RenderParams_updateFromModel(v8, a2);
     v51 = v7 + 688;
     sub_60919F70();
     *(_DWORD *)(v7 + 748) = 0;
@@ -251113,7 +251113,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v76 &= ~1u;
     v77 = v77 & 0xFFFFFFF0 | 1;
     v75 = 0;
-    sub_6090B4B0(v6, a2);
+    RenderParams_updateFromModel(v6, a2);
     v69 = v5 + 688;
     sub_60919F70();
     *(_DWORD *)(v5 + 748) = 0;
@@ -251515,10 +251515,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       v39 = sub_6090E438(v61, *(_DWORD *)(a3 + 16));
       sub_6090E560((int)v39, a2, *(float **)(a3 + 16));
-      sub_6090B260(*(_DWORD *)(a3 + 16), a2);
+      Object_callSlot7(*(_DWORD *)(a3 + 16), a2);
       v38 = (unsigned __int8 *)v62;
     }
-    sub_6090B4B0(v38, a2);
+    RenderParams_updateFromModel(v38, a2);
     v40 = *(unsigned __int8 *)(a3 + 36);
     if ( *(_DWORD *)(a1 + 1600) == 1 )
     {
@@ -251576,7 +251576,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v54 = (float *)v61[4];
       v55 = sub_6090E438(v59, v61[4]);
       sub_6090E560((int)v55, a2, v54);
-      sub_6090B260(v54, a2);
+      Object_callSlot7(v54, a2);
       v56 = *(_DWORD *)(v61[3] + 720);
       v57 = sub_6091DD8C(v56, a2);
       sub_60930DEC(v57, a2, v61, v56);
@@ -251618,10 +251618,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v17 = 1;
       v18 = 1;
     }
-    sub_6090B4B0(v11, a2);
+    RenderParams_updateFromModel(v11, a2);
     v8 = sub_6090E438(v10, *(_DWORD *)(a3 + 16));
     sub_6090E560((int)v8, a2, *(float **)(a3 + 16));
-    sub_6090B260(*(_DWORD *)(a3 + 16), a2);
+    Object_callSlot7(*(_DWORD *)(a3 + 16), a2);
     sub_6091DD8C(*(_DWORD *)(*(_DWORD *)(a3 + 12) + 716), a2);
     sub_60930AA8(*(_DWORD *)(a3 + 12), a2, a3, *(_DWORD *)(*(_DWORD *)(a3 + 12) + 716));
     return sub_609301A4(a1, a2, a3);
@@ -251721,7 +251721,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a3 + 8) = (float)v13;
     v25 = sub_6090E438(v27, a3);
     sub_6090E560((int)v25, a2, (float *)a3);
-    return sub_6090B260(a3, a2);
+    return Object_callSlot7(a3, a2);
   }
 
 /* ============================================================================
@@ -254183,7 +254183,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(v7 + 8) = v41;
       *(float *)(v7 + 12) = v42;
       *(_DWORD *)(v7 + 32) = v50;
-      sub_6090B260(v7 + 4, a2);
+      Object_callSlot7(v7 + 4, a2);
       sub_60920EC8(v7 + 760, *(int **)(*v51 + 28));
       v47 = sub_6090E438(v54, v7 + 4);
       sub_6090E560((int)v47, a2, (float *)(v7 + 4));
@@ -254286,7 +254286,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = *(_DWORD *)(a1 + 1564);
     if ( *(_DWORD *)(a1 + 1560) > a3 )
       v9 += 3608 * a3;
-    sub_6090B4B0((unsigned __int8 *)(v9 + 2984), a2);
+    RenderParams_updateFromModel((unsigned __int8 *)(v9 + 2984), a2);
     if ( !*(_BYTE *)(a1 + 1108) )
       goto LABEL_12;
     v10 = *(_BYTE **)(a1 + 1564);
@@ -255024,7 +255024,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(v7 + 8) = v28;
     *(float *)(v7 + 12) = v29;
     *(_DWORD *)(v7 + 32) = v51;
-    sub_6090B260(v7 + 4, a2);
+    Object_callSlot7(v7 + 4, a2);
     v35 = sub_6090E438(&v56, v7 + 4);
     sub_6090E560((int)v35, a2, (float *)(v7 + 4));
     sub_6093F214(a2, v55, v53, 11778388, 11778372);
@@ -255032,7 +255032,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( *(_BYTE *)(a1 + 1549) )
       sub_6091A0C8((int)v54, a2, 255);
     else
-      sub_6090B260(v54, a2);
+      Object_callSlot7(v54, a2);
     v36 = sub_6090E438(&v56, v7 + 4);
     sub_6090E888((int)v36, a2, v54);
     sub_6090E95C(v53, a2, v54);
@@ -256202,7 +256202,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _BYTE v14[104]; // [sp+40h] [bp-68h] BYREF
   
     v11 = (unsigned __int8 *)RenderParams_defaultInit((int)v14);
-    sub_6090B4B0(v11, a1);
+    RenderParams_updateFromModel(v11, a1);
     sub_601B59CC(v13, a2);
     return sub_60939898(a1, v13, a3, a4, a5, a6, a7);
   }
@@ -256783,7 +256783,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     _BYTE v15[104]; // [sp+40h] [bp-68h] BYREF
   
     v11 = (unsigned __int8 *)RenderParams_defaultInit((int)v15);
-    sub_6090B4B0(v11, a1);
+    RenderParams_updateFromModel(v11, a1);
     sub_601B59CC(v14, a2);
     v12 = (float *)sub_6090BDE0(a3);
     return sub_6093A72C(a1, v14, v12, a4, a5, 0, a7);
@@ -257283,7 +257283,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     v22 = (unsigned __int8 *)RenderParams_defaultInit((int)v96);
     v97 = v97 & 0xFFFFFFF0 | 7;
-    sub_6090B4B0(v22, a1);
+    RenderParams_updateFromModel(v22, a1);
     sub_6093AC5C(a1, (int)a6, (int)a7);
     v23 = v10 * 0.1;
     v95[0] = -(float)((float)(v10 * 0.1) * v17);
@@ -257622,7 +257622,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v13 = (unsigned __int8 *)RenderParams_defaultInit((int)&v40);
       v40 = 0;
       v41 |= 1u;
-      sub_6090B4B0(v13, a1);
+      RenderParams_updateFromModel(v13, a1);
       v14 = (float *)v38;
       v15 = MEMORY[0xB45CBC];
       v16 = MEMORY[0xB45CC0];
@@ -258395,7 +258395,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v85 = 2;
     LODWORD(v82) &= ~1u;
     BYTE2(v81) = 0;
-    sub_6090B4B0(v55, a1);
+    RenderParams_updateFromModel(v55, a1);
     if ( v79 >= 1 )
     {
       v56 = a1;
@@ -275464,11 +275464,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 1224) = (float)v16;
       v38 = sub_6090E438(v70, a1 + 1216);
       sub_6090E560((int)v38, v62, (float *)(a1 + 1216));
-      sub_6090B260(a1 + 1216, v62);
+      Object_callSlot7(a1 + 1216, v62);
       v39 = (unsigned __int8 *)RenderParams_defaultInit((int)&v68);
       v69 &= ~1u;
       v68 = 0;
-      sub_6090B4B0(v39, v62);
+      RenderParams_updateFromModel(v39, v62);
       if ( *(_BYTE *)(a1 + 864) && !*(_BYTE *)(a1 + 1692) )
         sub_6093FE48(v62, v57);
       else
@@ -276869,7 +276869,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_60954610
+ * Disposer_unregisterFromGlobal
  * RVA 0x00954610   size 0x40   xrefs 101
  * ============================================================================ */
   struct sead_IDisposer *__fastcall sub_60954610(struct sead_IDisposer *a1)
@@ -280054,7 +280054,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6095856C(int a1, int a2)
   {
-    sub_6090B260(*(_DWORD *)(a1 + 12));
+    Object_callSlot7(*(_DWORD *)(a1 + 12));
     return sub_6090E560(*(_DWORD *)(a1 + 32), a2, *(float **)(a1 + 12));
   }
 
@@ -282515,7 +282515,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   }
 
 /* ============================================================================
- * sub_6095C088
+ * Array_scanForMatchingEntry
  * RVA 0x0095c088   size 0xf0   xrefs 99
  * ============================================================================ */
   int __fastcall sub_6095C088(int a1, _DWORD *a2)
@@ -287840,7 +287840,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v87 &= ~1u;
       v86 = 0;
       v85 = 256;
-      sub_6090B4B0(v10, a2);
+      RenderParams_updateFromModel(v10, a2);
       if ( !*(_BYTE *)(a1 + 1376) )
         sub_60967650(a2, a1 + 244, a1 + 292, a4, a5, 11820284);
       sub_60967650(a2, a1 + 532, a1 + 580, a4, a5, 11820236);
@@ -290774,7 +290774,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(float *)(a1 + 2104) = v15;
     *(float *)(a1 + 2084) = (float)v12;
     *(float *)(a1 + 2088) = (float)v13;
-    sub_6090B260(a1 + 2080, a2);
+    Object_callSlot7(a1 + 2080, a2);
     v18 = sub_6090E438(v21, a1 + 2080);
     sub_6090E560((int)v18, a2, (float *)(a1 + 2080));
     sub_6090E438(v21, a1 + 2080);
@@ -291147,7 +291147,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v157 = v157 & 0xFFFFFFF0 | 3;
     LOWORD(v155) = 0;
     v156 &= ~1u;
-    sub_6090B4B0(v19, v17);
+    RenderParams_updateFromModel(v19, v17);
     v21 = sub_6090E438(v154, a1 + 2080);
     v145 = a1 + 2080;
     sub_6090E560((int)v21, v17, (float *)(a1 + 2080));
@@ -291286,7 +291286,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_6091AC94(v32);
         *(_DWORD *)(a1 + 2108) = v32;
         *(_DWORD *)(a1 + 2140) = 0;
-        sub_6090B260(v145, a2);
+        Object_callSlot7(v145, a2);
         v58 = *v135;
         v59 = *(_DWORD *)(*v135 + 920);
         if ( v59 )
@@ -291822,7 +291822,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     float32x4_t v66; // 0:q9.16
   
     v10 = (unsigned __int8 *)RenderParams_defaultInit((int)v65);
-    sub_6090B4B0(v10, a1);
+    RenderParams_updateFromModel(v10, a1);
     sub_6093AC5C(a1, a4, a5);
     v11.n64_u64[0] = a3[1].n64_u64[0];
     v12.n64_u64[0] = a3[3].n64_u64[0];
@@ -297781,7 +297781,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
         v7 = *(_DWORD *)(a1 + 2376);
         v8 = *(_DWORD *)(v6 + 60);
-        sub_6090B260(v6, a2);
+        Object_callSlot7(v6, a2);
         v9 = v7 & 0xFFFFFFFD;
         if ( v8 )
           v9 = v7;
@@ -298305,13 +298305,13 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v11 = (unsigned __int8 *)RenderParams_defaultInit((int)&v18);
       v18 = 0;
       v19 &= ~1u;
-      sub_6090B4B0(v11, a2);
+      RenderParams_updateFromModel(v11, a2);
       v12 = *(_DWORD *)(a1 + 8);
       v13 = *(_DWORD *)(v12 + 28);
       v14 = *(_DWORD *)(v12 + 60);
       *(_DWORD *)(v12 + 28) = a1 + 1944;
       *(_DWORD *)(*(_DWORD *)(a1 + 8) + 60) = 0;
-      sub_6090B260(*(_DWORD *)(a1 + 8), a2);
+      Object_callSlot7(*(_DWORD *)(a1 + 8), a2);
       sub_6090E560(a1 + 2328, a2, *(float **)(a1 + 8));
       v15 = agl_TextureSampler_ref((int)v16);
       sub_60920EC8(v15, (int *)(a1 + 568));
@@ -301794,7 +301794,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v39 = *(_DWORD *)(v39 + 208);
     }
     while ( v39 );
-    sub_6090B4B0(
+    RenderParams_updateFromModel(
       (unsigned __int8 *)(104 * (*(unsigned __int8 *)(v26 + 845) != 255) + *(_DWORD *)a4 + 208 * *(_DWORD *)(v40 + 1956)),
       a2);
     sub_6091DD8C(v100, a2);
@@ -301911,7 +301911,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             }
           }
         }
-        sub_6090B260(v24, a2);
+        Object_callSlot7(v24, a2);
         v73 = sub_6090E438(v102, v24);
         sub_6090E560((int)v73, a2, (float *)v24);
         v74 = *(_DWORD *)(v49 + 1720);
@@ -304745,11 +304745,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 236) = v32;
       *(float *)(a1 + 216) = v33;
       *(float *)(a1 + 220) = v32;
-      sub_6090B260(a1 + 212);
+      Object_callSlot7(a1 + 212);
       v37 = (unsigned __int8 *)RenderParams_defaultInit((int)v79);
       v80 &= ~1u;
       v79[0] = 0;
-      sub_6090B4B0(v37, *(_DWORD *)(v68 + 16));
+      RenderParams_updateFromModel(v37, *(_DWORD *)(v68 + 16));
       agl_TextureSampler_copy_ref((int)v71, v67);
       if ( v66 > 52 )
       {
@@ -305127,7 +305127,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v41 = *(_DWORD *)(a1 + 60);
     *(_DWORD *)(a5 + 4) = *(_DWORD *)(a1 + 56);
     *(_DWORD *)(a5 + 8) = v41;
-    sub_6090B260(a5, *(_DWORD *)(v105 + 16));
+    Object_callSlot7(a5, *(_DWORD *)(v105 + 16));
     v42 = sub_6090E438(v137, a5);
     if ( a7 )
     {
@@ -305175,7 +305175,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v51 = (unsigned __int8 *)RenderParams_defaultInit((int)&v109);
       v110 &= ~1u;
       LOBYTE(v109) = 0;
-      sub_6090B4B0(v51, *(_DWORD *)(v105 + 16));
+      RenderParams_updateFromModel(v51, *(_DWORD *)(v105 + 16));
       v52 = *(float **)(a1 + 12);
       v53 = *(float *)(a1 + 28);
       v54 = *(float *)(a1 + 32);
@@ -305213,7 +305213,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_60917AE4((int)v125);
       v43 = a4;
     }
-    sub_6090B4B0(*(unsigned __int8 **)(v105 + 4), *(_DWORD *)(v105 + 16));
+    RenderParams_updateFromModel(*(unsigned __int8 **)(v105 + 4), *(_DWORD *)(v105 + 16));
     sub_60853FF8(v44);
     v72 = v44[5];
     v73 = v44[6];
@@ -305351,7 +305351,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int v3; // r0
     int v4; // r1
   
-    sub_6090B260(*a1, a1[4]);
+    Object_callSlot7(*a1, a1[4]);
     v2 = *a1;
     v3 = (int)a1[2];
     v4 = (int)a1[4];
@@ -305364,7 +305364,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       sub_6090E560(v3, v4, v2);
     }
-    return sub_6090B4B0((unsigned __int8 *)a1[1], (int)a1[4]);
+    return RenderParams_updateFromModel((unsigned __int8 *)a1[1], (int)a1[4]);
   }
 
 /* ============================================================================
@@ -305838,11 +305838,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *(float *)(a1 + 244) = v37;
             *(float *)(a1 + 224) = v16;
             *(float *)(a1 + 228) = v15;
-            sub_6090B260((int)v48);
+            Object_callSlot7((int)v48);
             v40 = (unsigned __int8 *)RenderParams_defaultInit((int)v53);
             v54 &= ~1u;
             v53[0] = 0;
-            sub_6090B4B0(v40, *(_DWORD *)(v3 + 16));
+            RenderParams_updateFromModel(v40, *(_DWORD *)(v3 + 16));
             agl_TextureSampler_copy_ref((int)v51, *(_DWORD *)(a1 + 216));
             v41 = sub_6090E438(v50, (int)v48);
             sub_6090E560((int)v41, *(_DWORD *)(v3 + 16), v48);
@@ -308014,7 +308014,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_6098E23C((int *)(v3 + 200), *(_DWORD **)(*(_DWORD *)(v6 + 20) + 4));
         *(_BYTE *)(v3 + 496) = 1;
       }
-      sub_6090B4B0(*(unsigned __int8 **)(v2 + 4), *(_DWORD *)(v2 + 16));
+      RenderParams_updateFromModel(*(unsigned __int8 **)(v2 + 4), *(_DWORD *)(v2 + 16));
       v7 = *(float *)(v3 + 56);
       v8 = *(float *)(v3 + 60);
       v9 = *(unsigned __int16 *)(v3 + 224);
@@ -325475,7 +325475,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(float *)(a1 + 32) = v50;
       *(float *)(a1 + 12) = v25;
       *(float *)(a1 + 16) = v26;
-      sub_6090B260(a1 + 8, v3[4]);
+      Object_callSlot7(a1 + 8, v3[4]);
       v53 = sub_6090E438(v89, a1 + 8);
       sub_6090E560((int)v53, v3[4], (float *)(a1 + 8));
       v6 = (int *)v72;
@@ -325499,7 +325499,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v57 = (unsigned __int8 *)RenderParams_defaultInit((int)v78);
       v79 &= ~1u;
       v78[0] = 0;
-      sub_6090B4B0(v57, v3[4]);
+      RenderParams_updateFromModel(v57, v3[4]);
       v58 = v3[4];
       v59 = v26 / *(float *)(v71 + 24);
       v77[0] = v25 / *(float *)(v71 + 20);

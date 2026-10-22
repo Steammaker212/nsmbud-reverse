@@ -7387,7 +7387,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v28 = 0;
       v27 = MEMORY[0xB0AF90];
       v26 = 0x100000;
-      return sub_608322C0(a1 + 484, &v28, &v27, &v26);
+      return FixedPoint_lerp(a1 + 484, &v28, &v27, &v26);
     }
     v5 = *(_DWORD *)(a1 + 492);
     if ( v5 )
@@ -7489,7 +7489,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v28 = 0;
         v27 = MEMORY[0xB0AF90];
         v26 = 0x100000;
-        sub_608322C0(a1 + 484, &v28, &v27, &v26);
+        FixedPoint_lerp(a1 + 484, &v28, &v27, &v26);
         sub_6040EC08(a1 + 408, 23);
         v21 = 0;
       }
@@ -7499,14 +7499,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v28 = 0;
         v27 = MEMORY[0xB0AF90];
         v26 = 0x100000;
-        sub_608322C0(a1 + 484, &v28, &v27, &v26);
+        FixedPoint_lerp(a1 + 484, &v28, &v27, &v26);
       }
     }
     else
     {
       v28 = MEMORY[0xB0AF8C];
       v27 = 0x100000;
-      sub_608322C0(a1 + 484, a1 + 488, &v28, &v27);
+      FixedPoint_lerp(a1 + 484, a1 + 488, &v28, &v27);
       v21 = 1;
       if ( (*(_BYTE *)(a1 + 210) & 1) != 0 )
       {
@@ -10450,7 +10450,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v15 = v2 == *(_DWORD *)(a1 + 400);
         if ( v15 )
         {
-          sub_60448AF4(v10, v2);
+          CollisionMask_markPair(v10, v2);
           v16 = v9;
         }
         else
@@ -10492,10 +10492,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           else
   LABEL_13:
             v13 = v9;
-          sub_60448AF4(v13, v2);
+          CollisionMask_markPair(v13, v2);
           v16 = v11;
         }
-        result = (int *)sub_60448AF4(v16, v2++);
+        result = (int *)CollisionMask_markPair(v16, v2++);
       }
       while ( v3 != v2 );
     }
@@ -15145,7 +15145,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   {
     *(_DWORD *)(a1 + 1204) &= ~0x10u;
     sub_60773630(a1, 38, 0);
-    sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_BALLOON_BRAKE", 0, 0);
+    Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_BALLOON_BRAKE", 0, 0);
     AreaRumbleMgr_rumbleForPlayer(MEMORY[0xC99E3C], *(char *)(a1 + 84), 4, 0, 0);
     *(_DWORD *)(a1 + 9964) = 30;
     *(_DWORD *)(a1 + 9584) = 30;
@@ -15379,7 +15379,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         return sub_60786034(a1 + 14980, (char)a1[84]);
       case 4:
         v13 = sub_60002B90((char)a1[84]);
-        sub_607734E8(a1, (int)"SE_PLY_BALLOON_SELF", 0, v13);
+        Player_checkTwoFlagsAndDispatch(a1, (int)"SE_PLY_BALLOON_SELF", 0, v13);
         goto LABEL_24;
       default:
         goto LABEL_24;
@@ -15707,7 +15707,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     if ( sub_60760184(a1) )
     {
-      sub_607734E8(a1, (int)"SE_EMY_MAMEKURIBO_CLINGING_NOW", 0, 0);
+      Player_checkTwoFlagsAndDispatch(a1, (int)"SE_EMY_MAMEKURIBO_CLINGING_NOW", 0, 0);
       return 0;
     }
     v2 = 1;
@@ -19298,7 +19298,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
       v5 = 18;
     sub_60773630((int)a1, v5, 0);
-    sub_607734E8(a1, (int)"SE_PLY_OTHER_ON", 0, 0);
+    Player_checkTwoFlagsAndDispatch(a1, (int)"SE_PLY_OTHER_ON", 0, 0);
     sub_607946B0(*((_DWORD *)a1 + 2840));
     if ( v2 )
       *(_DWORD *)(*((_DWORD *)a1 + 2840) + 40) = *(_DWORD *)(*(_DWORD *)(v2 + 648) + 4);
@@ -20984,7 +20984,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( !v4 )
         sub_60773630(a1, 52, 0);
       if ( !v6 )
-        sub_607734E8(a1, "SE_PLY_CRASH_L", 0, 0);
+        Player_checkTwoFlagsAndDispatch(a1, "SE_PLY_CRASH_L", 0, 0);
       *(_DWORD *)(a1 + 1220) |= 0x100000u;
       sub_6078667C(a1 + 688, 2);
       *(_DWORD *)(a1 + 9940) = 0;
@@ -21028,7 +21028,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !v4 )
       sub_60773630(a1, 52, 0);
     if ( !v6 )
-      sub_607734E8(a1, "SE_PLY_CRASH_S", 0, 0);
+      Player_checkTwoFlagsAndDispatch(a1, "SE_PLY_CRASH_S", 0, 0);
     v7 = (_DWORD *)(a1 + 80);
     v8 = (unsigned int)*v5 >= 2;
     *(float *)(a1 + 88) = *(float *)(4 * *(_DWORD *)(a1 + 80) + 0xB0A898) * *(float *)(4 * ((*v5 & 1) == 0) + 0xB0A898);
@@ -21459,7 +21459,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     sub_60773630(a1, 47, 0);
     v2 = sub_60002B90(*(char *)(a1 + 84));
-    sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_TOUCH_BIRI", 0, v2);
+    Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_TOUCH_BIRI", 0, v2);
     PlayerBase_dispatchVirtual3(a1 + 11356, 82);
     *(_DWORD *)(a1 + 9944) = 60;
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 624))(a1, 1);
@@ -21974,7 +21974,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( !isMode5((int)a1) )
     {
       v4 = SE_PLY_CHANGE_ref(a1 + 11956);
-      sub_607734E8(a1, v4, 0, 0);
+      Player_checkTwoFlagsAndDispatch(a1, v4, 0, 0);
     }
     sub_607A293C((int)a1);
     return Player_setupModelNodes_79F548(a1);
@@ -24466,7 +24466,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v7 = *(char *)(a1 + 84);
       v10[0] = 30;
       v8 = sub_60002B90(v7);
-      sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_DOWN", 0, v8);
+      Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_DOWN", 0, v8);
     }
     AreaRumbleMgr_rumbleForPlayer(MEMORY[0xC99E3C], *(char *)(a1 + 84), 4, 0, 0);
     result = *v3;
@@ -24813,7 +24813,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       && (*(_BYTE *)(a1 + 1227) & 0x20) == 0 )
     {
       v8 = sub_60002B90(*(char *)(a1 + 84));
-      sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_DOWN", 0, v8);
+      Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_DOWN", 0, v8);
     }
     *(_DWORD *)(a1 + 1224) |= 0x100000u;
     if ( *v2 != 1 )
@@ -24937,7 +24937,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v5 = *(char *)(a1 + 84);
       v8[0] = 30;
       v6 = sub_60002B90(v5);
-      sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_DOWN", 0, v6);
+      Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_DOWN", 0, v6);
     }
     return AreaRumbleMgr_rumbleForPlayer(MEMORY[0xC99E3C], *(char *)(a1 + 84), 4, 0, 0);
   }
@@ -25008,7 +25008,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           STRM_BGM_COURSE_OUT_ALL_BUBBLE_ref_78A964(MEMORY[0xCC436C], *(char *)(a1 + 84));
           *(_DWORD *)(a1 + 9712) = 80;
           sub_60773630(a1, 44, 0);
-          sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_BURN_DOWN", 0, 0);
+          Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_BURN_DOWN", 0, 0);
           (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 1084))(a1);
           PlayerBase_dispatchVirtual3(a1 + 11356, 81);
           *(_DWORD *)(a1 + 120) = 0;
@@ -25188,7 +25188,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           if ( !isMode5(a1) )
             sub_607A2894((_DWORD *)a1, (_DWORD *)(*(_DWORD *)(a1 + 1320) != 1));
           if ( !isMode5(a1) )
-            sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_CHANGE_SMALL", 0, 0);
+            Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_CHANGE_SMALL", 0, 0);
           v12 = a1;
           v13 = 0;
           v11 = 0;
@@ -25219,7 +25219,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( (*(_BYTE *)(a1 + 1227) & 0x20) == 0 )
         {
           v9 = sub_60002B90(*(char *)(a1 + 84));
-          sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_DOWN", 0, v9);
+          Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_DOWN", 0, v9);
         }
         v10 = (int (__fastcall ***)(_DWORD, int))ActorMgrRelated_getById(MEMORY[0xC7B400] + 27168, *(_DWORD *)(a1 + 9720));
         if ( _cxa_guard_acquire_0(13087588) )
@@ -27024,11 +27024,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
   
     v2 = (int32x4_t *)(a1 + 13064);
-    if ( sub_60235E50(a1 + 13064) == 1 )
+    if ( Child_getU8IfOwnerMatches(a1 + 13064) == 1 )
       EffectData_update(v2, (float *)(a1 + 108), 0, 0);
-    if ( sub_60235E50(a1 + 13128) == 1 )
+    if ( Child_getU8IfOwnerMatches(a1 + 13128) == 1 )
       EffectData_update((int32x4_t *)(a1 + 13128), (float *)(a1 + 108), 0, 0);
-    result = sub_60235E50(a1 + 13192);
+    result = Child_getU8IfOwnerMatches(a1 + 13192);
     if ( result == 1 )
       return EffectData_update((int32x4_t *)(a1 + 13192), (float *)(a1 + 108), 0, 0);
     return result;
@@ -27044,7 +27044,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     int result; // r0
   
     v1 = a1 + 13192;
-    result = sub_60235E50(a1 + 13192);
+    result = Child_getU8IfOwnerMatches(a1 + 13192);
     if ( result == 1 )
       return EffectData_init(v1);
     return result;
@@ -27303,7 +27303,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
   LABEL_15:
           memset(v32, 0, 0x2Cu);
-          sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_THROW_ICEBALL", 0, 0);
+          Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_THROW_ICEBALL", 0, 0);
           v10 = 11482256;
   LABEL_25:
           v32[3] = Profile::get(*(_DWORD *)v10);
@@ -27365,7 +27365,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
   LABEL_24:
         memset(v32, 0, 0x2Cu);
-        sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_THROW_FIRE", 0, 0);
+        Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_THROW_FIRE", 0, 0);
         v10 = 11482264;
         goto LABEL_25;
       }
@@ -27831,7 +27831,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v16 = "SE_PLY_KINOPEACH_JUMP";
     else
       v16 = "SE_PLY_MSSB_JUMP";
-    sub_607734E8((unsigned __int8 *)a1, (int)v16, 0, 0);
+    Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)v16, 0, 0);
     v17 = *(_DWORD *)(a1 + 648);
     v31 = 12321336;
     v32 = "skl_root";
@@ -27992,7 +27992,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v8 = v10;
     if ( v10 >= 2 )
       v8 = 0;
-    if ( sub_60235E50(a1 + 104 * v8 + 14132) == 1 )
+    if ( Child_getU8IfOwnerMatches(a1 + 104 * v8 + 14132) == 1 )
     {
       if ( (unsigned int)*v9 < 2 )
         v2 = *v9;
@@ -28666,7 +28666,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     a1[303] = v2 & 0xFFFFFDFE;
     a1[39] = 0;
     v3 = (int)(a1 + 3506);
-    if ( sub_60235E50((int)(a1 + 3506)) == 1 )
+    if ( Child_getU8IfOwnerMatches((int)(a1 + 3506)) == 1 )
       sub_60236074(v3);
     sub_60782550();
     MEMORY[0xCC2C50] = 0;
@@ -28807,7 +28807,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               if ( v15
                 && (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(v15 + 11360) + 132))(*(_DWORD *)(v15 + 11360)) == 1 )
               {
-                sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_MSSB_FALL", 0, 0);
+                Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_MSSB_FALL", 0, 0);
               }
               goto LABEL_64;
             }
@@ -28828,7 +28828,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               if ( (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(v22 + 11360) + 132))(*(_DWORD *)(v22 + 11360)) != 1 )
                 goto LABEL_53;
   LABEL_47:
-              sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_MSSB_FALL", 0, 0);
+              Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_MSSB_FALL", 0, 0);
               goto LABEL_53;
             }
             v26 = sqrtf(
@@ -29067,7 +29067,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     const char *v10; // [sp+4h] [bp-34h]
     __int64 v11[6]; // [sp+8h] [bp-30h] BYREF
   
-    if ( sub_60235E50(a1 + 14024) )
+    if ( Child_getU8IfOwnerMatches(a1 + 14024) )
     {
       v9 = 12321336;
       v10 = "skl_root";
@@ -29085,7 +29085,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = (int *)(a1 + 1208);
       v2 = (_DWORD *)(a1 + 11360);
     }
-    if ( sub_60235E50(a1 + 14132) )
+    if ( Child_getU8IfOwnerMatches(a1 + 14132) )
     {
       v4 = sub_6075EE0C(a1);
       v5 = v4;
@@ -29104,7 +29104,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       sub_60237454(a1 + 14116, v11, 0);
       *v3 |= 0x80000000;
     }
-    if ( sub_60235E50(a1 + 14236) )
+    if ( Child_getU8IfOwnerMatches(a1 + 14236) )
     {
       v6 = sub_6075EE0C(a1);
       v7 = v6;
@@ -29353,7 +29353,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           if ( (unsigned int)*v8 < 2 )
             v16 = *v8;
-          if ( sub_60235E50(a1 + 104 * v16 + 14340) == 1 )
+          if ( Child_getU8IfOwnerMatches(a1 + 104 * v16 + 14340) == 1 )
           {
             v17 = *v8;
             if ( (unsigned int)*v8 >= 2 )
@@ -29934,7 +29934,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   int __fastcall SE_PLY_ROLLING_ref(unsigned __int8 *a1)
   {
     sub_6076F3CC(a1);
-    return sub_607734E8(a1, (int)"SE_PLY_ROLLING", 0, 0);
+    return Player_checkTwoFlagsAndDispatch(a1, (int)"SE_PLY_ROLLING", 0, 0);
   }
 
 /* ============================================================================
@@ -30155,7 +30155,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(a1 + 12676) = 0x10000000;
       *v7 &= ~1u;
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 1056))(a1, 8);
-      sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_LETDOWN_FAST_LAND", 0, 0);
+      Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_LETDOWN_FAST_LAND", 0, 0);
       goto LABEL_18;
     }
     if ( (*(_BYTE *)v7 & 1) == 0 )
@@ -30186,7 +30186,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
     }
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 1056))(a1, 8);
-    sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_LETDOWN_FAST_LAND", 0, 0);
+    Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_LETDOWN_FAST_LAND", 0, 0);
     result = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1028))(a1);
     if ( !result )
     {
@@ -30438,7 +30438,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v12 = (unsigned __int8 *)a1;
       v13 = 1;
     }
-    return sub_607734E8(v12, (int)v7, v13, 0);
+    return Player_checkTwoFlagsAndDispatch(v12, (int)v7, v13, 0);
   }
 
 /* ============================================================================
@@ -30942,7 +30942,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v9 = (_DWORD *)(a1 + 11360);
   LABEL_30:
     if ( sub_60793DA0(*v9) || sub_60793DA0(*v9) == 1 )
-      sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_FLY", 0, 0);
+      Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_FLY", 0, 0);
     return sub_607B03C0(a1);
   }
 
@@ -31884,7 +31884,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         sub_60793088(v8);
         result = sub_60793DA0(*v9);
         if ( result == 1 )
-          return sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SHUFFLE", 0, 0);
+          return Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SHUFFLE", 0, 0);
       }
     }
     return result;
@@ -32044,7 +32044,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           }
           sub_60793088(v13);
           if ( sub_60793DA0(*v14) == 1 )
-            sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_HANG_MOVE", 0, 0);
+            Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_HANG_MOVE", 0, 0);
         }
         result = *(unsigned __int8 *)(a1 + 6900);
         if ( (result & 2) == 0 )
@@ -32405,7 +32405,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             *(_DWORD *)(a1 + 9940) = 2;
             PlayerBase_dispatchVirtual3(a1 + 11356, dword_60AF2290[*(_DWORD *)(a1 + 12988)]);
             *(_DWORD *)(a1 + 12988) ^= 1u;
-            return sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_MONKEY_BARS", 0, 0);
+            return Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_MONKEY_BARS", 0, 0);
           }
           break;
         case 0:
@@ -32442,7 +32442,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       *(_DWORD *)(a1 + 9940) = 2;
       PlayerBase_dispatchVirtual3((int)(v2 - 408), dword_60AF2290[*v2]);
       *v2 ^= 1u;
-      return sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_MONKEY_BARS", 0, 0);
+      return Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_MONKEY_BARS", 0, 0);
     }
     return result;
   }
@@ -32476,7 +32476,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 9940) = 2;
         PlayerBase_dispatchVirtual3(a1 + 11356, dword_60AF2290[*(_DWORD *)(a1 + 12988)]);
         *(_DWORD *)(a1 + 12988) ^= 1u;
-        return sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_MONKEY_BARS", 0, 0);
+        return Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_MONKEY_BARS", 0, 0);
       }
       else
       {
@@ -33441,7 +33441,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         || sub_60763E28((float *)a1) == 1 )
       {
         PlayerBase_dispatchVirtual3(a1 + 11356, 146);
-        sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_PNGN_JUMP", 0, 0);
+        Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PNGN_JUMP", 0, 0);
         *(_DWORD *)(a1 + 1216) |= 0x20u;
         v4 = MEMORY[0xB0B438];
         v5 = MEMORY[0xB0B43C];
@@ -33539,7 +33539,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     else
     {
       PlayerBase_dispatchVirtual3(a1 + 11356, 45);
-      sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_POLE_CATCH", 0, 0);
+      Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_POLE_CATCH", 0, 0);
       sub_60773630(a1, 28, 0);
       *(_DWORD *)(a1 + 9940) = 0;
       return 9940;
@@ -33754,7 +33754,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     sub_60774040(a1, *(_DWORD *)(a1 + 80) ^ 1, a3, a4);
     if ( sub_60793DA0(*(_DWORD *)(a1 + 11360)) == 1 )
-      sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_POLE_CLIMB", 0, 0);
+      Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_POLE_CLIMB", 0, 0);
     *(_DWORD *)(a1 + 124) = 0;
     if ( (*(_BYTE *)(a1 + 6907) & 4) == 0 )
       *(_DWORD *)(a1 + 112) = *(_DWORD *)(a1 + 12388);
@@ -33851,7 +33851,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         *(_DWORD *)(a1 + 12100) = 327680000;
         *(_DWORD *)(a1 + 12448) = 1;
         PlayerBase_dispatchVirtual3(a1 + 11356, 140);
-        sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_LETDOWN_SPIN", 0, 0);
+        Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_LETDOWN_SPIN", 0, 0);
         v5 = *(_DWORD *)(a1 + 12460);
         v4 = (_DWORD *)(a1 + 12460);
         if ( !v5 )
@@ -33948,7 +33948,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 12100) = 786432000;
     *(_DWORD *)(a1 + 12448) = 0;
     sub_60773630(a1, 26, 0);
-    sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_JUMP", 0, 0);
+    Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_JUMP", 0, 0);
     if ( isMode5(a1) && (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1064))(a1) == 1 )
       *(_BYTE *)(*(_DWORD *)(a1 + 11360) + 236) = 1;
     PlayerBase_dispatchVirtual3(a1 + 11356, 140);
@@ -33973,7 +33973,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 12100) = 786432000;
     *(_DWORD *)(a1 + 12448) = 0;
     sub_60773630(a1, 26, 0);
-    sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_JUMP", 0, 0);
+    Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_JUMP", 0, 0);
     if ( isMode5(a1) && (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1064))(a1) == 1 )
       *(_BYTE *)(*(_DWORD *)(a1 + 11360) + 236) = 1;
     PlayerBase_dispatchVirtual3(a1 + 11356, 140);
@@ -34176,10 +34176,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_DWORD *)(*v7 + 28) == 166 )
       {
         if ( sub_60793DA0(result) )
-          return sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_FLY", 0, 0);
+          return Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_FLY", 0, 0);
         result = sub_60793DA0(*v7);
         if ( result == 1 )
-          return sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_FLY", 0, 0);
+          return Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_PRPL_FLY", 0, 0);
       }
     }
     return result;
@@ -36253,7 +36253,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     *v4 = 30;
     *(_DWORD *)(a1 + 12104) = 0;
-    if ( sub_60235E50(a1 + 13840) == 1 )
+    if ( Child_getU8IfOwnerMatches(a1 + 13840) == 1 )
       sub_602360C0(a1 + 13840);
     SE_PLY_SPIN_ONCE_ref(a1, 6);
     *v4 = 0;
@@ -36397,7 +36397,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     if ( (*(_BYTE *)(a1 + 1213) & 2) != 0 )
       Player_changeState(a1, 13388804, 1);
     *(_DWORD *)(a1 + 12104) = 335544320;
-    sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SPIN_ONCE", 1, 0);
+    Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SPIN_ONCE", 1, 0);
     v3 = (int *)(a1 + 11360);
     result = *(_DWORD *)(a1 + 11360);
     v4 = *(_DWORD *)(result + 28);
@@ -36442,7 +36442,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     *(_DWORD *)(a1 + 12104) = 0;
     v4 = a1 + 13840;
-    if ( sub_60235E50(a1 + 13840) == 1 )
+    if ( Child_getU8IfOwnerMatches(a1 + 13840) == 1 )
       sub_602360C0(v4);
     SE_PLY_SPIN_ONCE_ref(a1, a2);
     *(_DWORD *)(a1 + 12084) = 0;
@@ -36794,7 +36794,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     if ( (a1[75].n128_u8[12] & 0x40) == 0 )
     {
-      if ( sub_60235E50((int)&a1[861]) == 1 )
+      if ( Child_getU8IfOwnerMatches((int)&a1[861]) == 1 )
         sub_60236074((int)&a1[861]);
       sub_607736A8(a1, "SE_PLY_SPIN_ATTACK", 6);
     }
@@ -36804,14 +36804,14 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v3 = (int32x4_t *)v2;
       if ( v2 )
       {
-        if ( sub_60235E50(v2 + 13776) == 1 )
+        if ( Child_getU8IfOwnerMatches(v2 + 13776) == 1 )
         {
           (*(void (__fastcall **)(int32x4_t *, float *))(v3->n128_u32[0] + 1404))(v3, v5);
           EffectData_update(v3 + 861, v5, 0, 0);
         }
       }
     }
-    result = sub_60235E50((int)&a1[861]);
+    result = Child_getU8IfOwnerMatches((int)&a1[861]);
     if ( result == 1 )
     {
       (*(void (__fastcall **)(int32x4_t *, float *))(a1->n128_u32[0] + 1404))(a1, v5);
@@ -36834,7 +36834,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v2 = sub_6079D894();
     if ( v2 )
     {
-      result = sub_60235E50(v2 + 13840);
+      result = Child_getU8IfOwnerMatches(v2 + 13840);
       if ( result != 1 )
         return result;
       v4 = (float *)(v2 + 108);
@@ -36842,7 +36842,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     }
     else
     {
-      result = sub_60235E50((int)&a1[865]);
+      result = Child_getU8IfOwnerMatches((int)&a1[865]);
       if ( result != 1 )
         return result;
       v4 = &a1[6].n128_f32[3];
@@ -37547,8 +37547,8 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       result = *(unsigned __int8 *)(MEMORY[0xCBFA90] + 460);
       if ( *(_BYTE *)(MEMORY[0xCBFA90] + 460) )
         return result;
-      sub_607734E8(a1, (int)"SE_SYS_STAR_FINISH", 0, 0);
-      sub_607734E8(a1, (int)"SE_SYS_STAR_FINISH_RC", 0, 0);
+      Player_checkTwoFlagsAndDispatch(a1, (int)"SE_SYS_STAR_FINISH", 0, 0);
+      Player_checkTwoFlagsAndDispatch(a1, (int)"SE_SYS_STAR_FINISH_RC", 0, 0);
       result = *v4;
   LABEL_12:
       if ( result > 59 )
@@ -38066,7 +38066,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     if ( (*(_BYTE *)(a1 + 6902) & 0x80) != 0 )
     {
-      sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SPLASH_GEL", 0, 0);
+      Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SPLASH_GEL", 0, 0);
       v12 = 0;
       v13 = 0;
       v14 = *(float *)(a1 + 7040);
@@ -38088,7 +38088,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v4 = "SE_PLY_SPLASH_MAME";
         else
           v4 = "SE_PLY_SPLASH";
-        sub_607734E8((unsigned __int8 *)a1, (int)v4, 0, 0);
+        Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)v4, 0, 0);
         v8 = MEMORY[0xCBD254];
         v10 = v12;
         v11 = v13;
@@ -38101,7 +38101,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           v6 = "SE_PLY_SPLASH_SHALLOW_MAME";
         else
           v6 = "SE_PLY_SPLASH_SHALLOW";
-        sub_607734E8((unsigned __int8 *)a1, (int)v6, 0, 0);
+        Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)v6, 0, 0);
         v8 = MEMORY[0xCBD254];
         v10 = v12;
         v11 = v13;
@@ -38201,7 +38201,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     if ( (*(_BYTE *)(a1 + 6914) & 0x80) != 0 )
     {
-      sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SPLASH_GEL_OUT", 0, 0);
+      Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SPLASH_GEL_OUT", 0, 0);
       v10 = 0;
       v11 = 0;
       v12 = *(float *)(a1 + 7040);
@@ -38219,7 +38219,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_DWORD *)(a1 + 7024) == 3 )
       {
         SE_PLY_SPLASH_ref_2_helper((char *)a1, (int)&v10);
-        sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SPLASH_OUT", 0, 0);
+        Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SPLASH_OUT", 0, 0);
         v5 = MEMORY[0xCBD254];
         v8 = v10;
         v9 = v11;
@@ -38228,7 +38228,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       else
       {
         SE_PLY_SPLASH_ref_2_helper((char *)a1, (int)&v10);
-        sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SPLASH_SHALLOW_OUT", 0, 0);
+        Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SPLASH_SHALLOW_OUT", 0, 0);
         v5 = MEMORY[0xCBD254];
         v8 = v10;
         v9 = v11;
@@ -38320,7 +38320,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         a1[3102] = 0;
         PlayerBase_dispatchVirtual3((int)(a1 + 2839), 38);
         a1[39] = 0;
-        sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SWIM", 0, 0);
+        Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SWIM", 0, 0);
         a1[3102] = 20;
       }
     }
@@ -38431,7 +38431,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
           {
             v18 = "SE_PLY_SWIM_KICK_TOTTEN";
   LABEL_40:
-            sub_607734E8((unsigned __int8 *)a1, (int)v18, 0, 0);
+            Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)v18, 0, 0);
           }
         }
         else if ( sub_60793DA0(v16) || sub_60793DA0(*v17) == 1 )
@@ -38719,7 +38719,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             }
             *v4 = 1;
             PlayerBase_dispatchVirtual3(a1 + 11356, 44);
-            sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SWIM_WITH_CHIBI", 0, 0);
+            Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SWIM_WITH_CHIBI", 0, 0);
             *(_DWORD *)(a1 + 9944) = 35;
           }
         }
@@ -39229,7 +39229,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( sub_60786A8C(a1 + 688, v7) == 1 )
       {
-        sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SWIM", 0, 0);
+        Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SWIM", 0, 0);
         if ( (*(_BYTE *)(a1 + 1216) & 1) != 0 )
         {
           v10 = 11583008;
@@ -39272,7 +39272,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         {
           sub_60793088(*(_DWORD **)(a1 + 11360));
           if ( sub_60793DA0(*(_DWORD *)(a1 + 11360)) || sub_60793DA0(*(_DWORD *)(a1 + 11360)) == 1 )
-            sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SWIM_KICK", 0, 0);
+            Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SWIM_KICK", 0, 0);
           if ( !sub_607869C4(a1 + 688) )
           {
             *v13 = 2;
@@ -39675,7 +39675,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     *(_DWORD *)(a1 + 12408) = 0;
     PlayerBase_dispatchVirtual3(a1 + 11356, 38);
     *(_DWORD *)(a1 + 156) = 0;
-    sub_607734E8((unsigned __int8 *)a1, (int)"SE_PLY_SWIM", 0, 0);
+    Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SWIM", 0, 0);
     *(_DWORD *)(a1 + 12408) = 20;
     return 20;
   }
@@ -39770,7 +39770,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         PlayerBase_dispatchVirtual3(a1 + 11356, 167);
         v5 = "SE_PLY_PNGN_SWIM";
       }
-      sub_607734E8((unsigned __int8 *)a1, (int)v5, 0, 0);
+      Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)v5, 0, 0);
       *(_DWORD *)(a1 + 1212) |= 0x400000u;
       *(_DWORD *)(a1 + 12432) = 35;
       return 1;

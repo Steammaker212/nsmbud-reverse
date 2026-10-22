@@ -9150,7 +9150,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v18 = 12321336;
       v19 = "out2";
-      sub_6040F4B8((int)v5, (int)&v18, 1);
+      SkeletalAnim_playWithRepeatAndFlags((int)v5, (int)&v18, 1);
       v9 = **(_DWORD **)(*(_DWORD *)v7 + 20);
       *(_DWORD *)(a1 + 6108) = v9;
       v10 = (unsigned int *)(a1 + 6108);
@@ -9172,7 +9172,7 @@ static inline unsigned int uxtb16(unsigned int x)
     }
     v18 = 12321336;
     v19 = "wait2";
-    sub_6040F4B8((int)v5, (int)&v18, 1);
+    SkeletalAnim_playWithRepeatAndFlags((int)v5, (int)&v18, 1);
     result = (unsigned __int8)*v2;
     if ( result <= 0xA && ((1 << result) & 0x411) != 0 )
     {
@@ -21353,7 +21353,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(v2 - 2) = v5;
     v13 = 12321336;
     v14 = "wait2";
-    sub_6040F4B8((int)v5, (int)&v13, 1);
+    SkeletalAnim_playWithRepeatAndFlags((int)v5, (int)&v13, 1);
     result = *v2 | 4;
     if ( result == 4 )
     {
@@ -23314,7 +23314,7 @@ static inline unsigned int uxtb16(unsigned int x)
       v25[0] = 0;
       v26 = 0;
     }
-    sub_6090B4B0(a3, a2[10]);
+    RenderParams_updateFromModel(a3, a2[10]);
     v23[0] = a2[3];
     v23[1] = a3;
     v23[2] = a2[8];
@@ -23647,7 +23647,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_604741D8
+ * ArrayOf5_lookupByIndex2
  * RVA 0x004741d8   size 0xf4   xrefs 105
  * ============================================================================ */
   int __fastcall sub_604741D8(_DWORD *a1, unsigned int a2, _DWORD *a3, int a4)
@@ -24886,7 +24886,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_60475900
+ * Disposer_ctorWithRingOfChildren
  * RVA 0x00475900   size 0x1e0   xrefs 96
  * ============================================================================ */
   _DWORD *__fastcall sub_60475900(int a1, int a2, int a3)
@@ -25322,7 +25322,7 @@ static inline unsigned int uxtb16(unsigned int x)
   }
 
 /* ============================================================================
- * sub_6047643C
+ * Disposer_destroyInnerOnly
  * RVA 0x0047643c   size 0x84   xrefs 110
  * ============================================================================ */
   void __fastcall sub_6047643C(struct sead_IDisposer *a1)
@@ -27496,7 +27496,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 4) = 0;
     *(_DWORD *)(a1 + 8) = 0;
     *(_DWORD *)(a1 + 12) = 12570900;
-    v6 = sub_60475900(a1 + 12, a1 + 3540, 1);
+    v6 = Disposer_ctorWithRingOfChildren(a1 + 12, a1 + 3540, 1);
     *v6 = 12570900;
     v6[882] = 0;
     v6[883] = 12321336;
@@ -27847,7 +27847,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_609200A0(v4);
         sub_60919ED8(v38, v4 + 744);
         v39 = v40;
-        sub_6090B260(v38, *(_DWORD *)(a2 + 40));
+        Object_callSlot7(v38, *(_DWORD *)(a2 + 40));
         v24 = *(_DWORD *)(a2 + 40);
         v36[0] = 1065353216;
         v36[1] = 1065353216;
@@ -27858,7 +27858,7 @@ static inline unsigned int uxtb16(unsigned int x)
         sub_6090E560(v25, *(_DWORD *)(a2 + 40), v38);
         sub_6090C7F8(v36, v37);
         v26 = RenderParams_defaultInit(v35);
-        sub_6090B4B0(v26, *(_DWORD *)(a2 + 40));
+        RenderParams_updateFromModel(v26, *(_DWORD *)(a2 + 40));
         v34[1] = v35;
         v34[3] = 0;
         v34[4] = *(_DWORD *)(a2 + 40);

@@ -1,0 +1,34 @@
+[
+  {"rva": "0x90B4B0", "name": "RenderParams_updateFromModel",
+   "why": "reads the model at a2+192, builds two temporary structs via MEMORY[0xCC7674]/0xCC76B0, then loops over a1[1] entries"},
+
+  {"rva": "0x421AE4", "name": "AnimationCtrl_switchBothHalves",
+   "why": "calls sub_60421C34 on a1+12, then invokes vtable+164 twice with a1[17] and a1[17]^1, then SkeletalAnim_play"},
+
+  {"rva": "0x47643C", "name": "Disposer_destroyInnerOnly",
+   "why": "installs vptr 12569208, releases the child at +16, calls IDisposer dtor -- the base-class half of 0x475AE8"},
+
+  {"rva": "0x555668", "name": "Object_releaseChildAt52",
+   "why": "tail-calls sub_6085036C on a1+52 and returns this"},
+
+  {"rva": "0x4741D8", "name": "ArrayOf5_lookupByIndex2",
+   "why": "row base [878] stride 5 bounds [877] > a2 -- same accessor shape as 0x473DE4 but a different caller contract"},
+
+  {"rva": "0x8332B0", "name": "FixedPoint_atan2_byRegs",
+   "why": "zero-argument wrapper that tail-calls FixedPoint_atan2, which reads its inputs from s0/s1"},
+
+  {"rva": "0x7160F4", "name": "TileLayer_getCollisionAtPos",
+   "why": "wraps the X position, resolves the tile layer, gets the tile pointer, then indexes the table at a1+20 by tile&0x3FF"},
+
+  {"rva": "0x74EC10", "name": "PlayReport_addIfEnabled",
+   "why": "guarded on byte a1+16, then nn::prepo::PlayReport::Add with the report at a1+64"},
+
+  {"rva": "0x954610", "name": "Disposer_unregisterFromGlobal",
+   "why": "installs vptr 12970404, calls sub_609580C8 with MEMORY[0xCD0B40] if set, then IDisposer dtor"},
+
+  {"rva": "0x95C088", "name": "Array_scanForMatchingEntry",
+   "why": "walks the array at a1+400 with count at a1+404 looking for a match, sentinel -1"},
+
+  {"rva": "0x235E50", "name": "Child_getU8IfOwnerMatches",
+   "why": "checks the child at a1+52 against owner at +56, then sub_60881E10 and reads the byte at +8"}
+]
