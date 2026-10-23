@@ -54,7 +54,7 @@ typedef struct ModelWrapper { uint8_t _opaque[0x30]; } ModelWrapper;   /* sizeof
 typedef struct MovingSoundActorHandle { uint8_t _opaque[0x18]; } MovingSoundActorHandle;   /* sizeof 0x18 */
 typedef struct Mtx34 { uint8_t _opaque[0x30]; } Mtx34;   /* sizeof 0x30 */
 typedef struct Profile { uint8_t _opaque[0x18]; } Profile;   /* sizeof 0x18 */
-typedef struct RevealMaskRelated { uint8_t _opaque[0x28]; } RevealMaskRelated;   /* sizeof 0x28 */
+typedef struct RevealMaskRelated { void *vtable; uint8_t _opaque[0x24]; } RevealMaskRelated;   /* sizeof 0x28 */
 typedef struct RollingHill { uint8_t _opaque[0x43A]; } RollingHill;   /* sizeof 0x43A */
 typedef struct RollingHill_TypeInfo { uint8_t _opaque[0x18]; } RollingHill_TypeInfo;   /* sizeof 0x18 */
 typedef struct Seaweed { uint8_t _opaque[0x298]; } Seaweed;   /* sizeof 0x298 */
@@ -64,9 +64,9 @@ typedef struct SolidOnTopCollider { uint8_t _opaque[0x174]; } SolidOnTopCollider
 typedef struct SolidOnTopColliderInfo { uint8_t _opaque[0x18]; } SolidOnTopColliderInfo;   /* sizeof 0x18 */
 typedef struct StarCoin { uint8_t _opaque[0x1838]; } StarCoin;   /* sizeof 0x1838 */
 typedef struct State { uint8_t _opaque[0x20]; } State;   /* sizeof 0x20 */
-typedef struct StateBase { uint8_t _opaque[0x8]; } StateBase;   /* sizeof 0x8 */
+typedef struct StateBase { void *vtable; uint8_t _opaque[0x4]; } StateBase;   /* sizeof 0x8 */
 typedef struct StateExecuter { uint8_t _opaque[0x10]; } StateExecuter;   /* sizeof 0x10 */
-typedef struct StateMethodExecuter { uint8_t _opaque[0xC]; } StateMethodExecuter;   /* sizeof 0xC */
+typedef struct StateMethodExecuter { void *vtable; uint8_t _opaque[0x8]; } StateMethodExecuter;   /* sizeof 0xC */
 typedef struct StateVirtual { uint8_t _opaque[0x24]; } StateVirtual;   /* sizeof 0x24 */
 typedef struct StateWrapper { uint8_t _opaque[0x24]; } StateWrapper;   /* sizeof 0x24 */
 typedef struct TileCheck_Param { uint8_t _opaque[0xC]; } TileCheck_Param;   /* sizeof 0xC */

@@ -1,6 +1,13 @@
 #include "nsmbudx_prelude.h"
 #include "nsmbudx_recovered_deps.h"
 
+/* Forward prototypes. A call before the definition would otherwise be an implicit `int`
+ * declaration, and the later real definition then conflicts with it. */
+int __cdecl _cxa_guard_acquire();
+sead_IDisposer *__fastcall CalculateTask3_ctor();
+void __cdecl _cxa_guard_release();
+
+
 /* Recovered from main.i64: functions present in the database but absent from the corpus.
  *
  * Hex-Rays emitted these as C++; names are flattened from Outer_method to Outer_method and `this->`
