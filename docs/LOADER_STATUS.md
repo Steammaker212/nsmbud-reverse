@@ -21,22 +21,30 @@ binary in this repo; the row itself needs a console.
 
 | Measure | Value | How checked |
 | --- | --- | --- |
-| Functions decompiled | 46,879 | `verify_all.py` |
-| Compile clean (`-fsyntax-only`) | ~37,787 (80.6%) | `verify_all.py` |
+| Functions decompiled | 45,148 | `verify_all.py` |
+| Compile clean (`-fsyntax-only`) | 37,787 (83.8%) | `verify_all.py` |
 | Named (not `sub_`) | 9,671 (20.5%) | database |
-| C calls corroborated by a real `BL`/`B` | 418/419 (99.8%) | `verify_codegen.py` |
+| C calls corroborated by a real `BL`/`B` | 591/594 (99.5%) | `verify_codegen.py` |
+
+The jump from 46,879 to 45,148 files is the veneer collapse, not lost work: 1,789
+`operator_delete` veneers became one maplist, and every one of them was already
+compiling clean, so removing them lifted the percentage without changing the
+count of working functions.
 
 ## Loader
 
 | Artefact | Count | Verified how |
 | --- | --- | --- |
-| `data/loader/main.sym` symbols | 23,503 | every address checked inside a loaded section |
+| `data/loader/main.sym` symbols | 23,502 | every address checked inside a loaded section |
 | of which functions | 9,401 | — |
 | of which data | 13,537 | includes the 31 adopted from codedx |
-| of which linker-absolute | 565 | past the last section, kept and marked |
+| of which linker-absolute | 564 | past the last section, kept and marked |
 | Verified hook sites | 80 | `verify_hooks.py`, displacement re-decoded |
 | Buildable hooks | 1 | `select_hooks.py` (needs real C) |
 | `operator_delete` veneers collapsed | 1,789 | all branch to `0x008DE3A0` |
+
+Consistency across all three views (`check_loader_consistency.py`): 0 functions
+with no corpus file, 0 name mismatches, 0 hook inconsistencies.
 
 The gap between 80 verified sites and 1 buildable hook is the important one: a
 * site is an opportunity, a hook needs a function whose true prototype you know.
