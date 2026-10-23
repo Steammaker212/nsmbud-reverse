@@ -149746,7 +149746,7 @@ static inline unsigned int uxtb16(unsigned int x)
     int v2; // r0
     _DWORD *result; // r0
   
-    v2 = __operator_new(0xC0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0xC0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     result = (_DWORD *)CalculateTask2_ctor(v2, a1, "RootTask");
     *result = 12756468;
     return result;

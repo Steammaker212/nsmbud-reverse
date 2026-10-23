@@ -140694,7 +140694,7 @@ sub_603B7478__LABEL_57:
   {
     _DWORD *v2; // r0
   
-    v2 = (_DWORD *)__operator_new(0x14C48u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = (_DWORD *)__operator_new_al(0x14C48u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return WithMiiPackSelectScene_ref(v2, a1);
   }
 
@@ -151646,7 +151646,7 @@ sub_603F8408__LABEL_96:
   {
     _DWORD *v2; // r0
   
-    v2 = (_DWORD *)__operator_new(0x22Cu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = (_DWORD *)__operator_new_al(0x22Cu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return ChallengeSelectScene_ref(v2, a1);
   }
 

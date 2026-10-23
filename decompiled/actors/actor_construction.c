@@ -97821,7 +97821,7 @@ sub_60181FC0__LABEL_147:
   {
     int v2; // r0
   
-    v2 = __operator_new(0x28E0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0x28E0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return TheEndScene_ref(v2, a1);
   }
 

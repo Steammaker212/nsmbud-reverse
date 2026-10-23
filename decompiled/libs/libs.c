@@ -31318,7 +31318,7 @@ sub_6081CA7C__LABEL_157:
   {
     int v2; // r0
   
-    v2 = __operator_new(0x42ECu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0x42ECu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return LayerMgr_ref(v2, a1);
   }
 
@@ -32204,7 +32204,7 @@ sub_6081CA7C__LABEL_157:
   {
     int v2; // r0
   
-    v2 = __operator_new(0x128u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0x128u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return ApplicationTask_ref(v2, a1);
   }
 
@@ -32216,7 +32216,7 @@ sub_6081CA7C__LABEL_157:
   {
     int v2; // r0
   
-    v2 = __operator_new(0x680u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0x680u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return ErrorViewerTask_ref(v2, a1);
   }
 
@@ -32228,7 +32228,7 @@ sub_6081CA7C__LABEL_157:
   {
     int v2; // r0
   
-    v2 = __operator_new(0x415Cu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0x415Cu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return HDRumbleMgr_ref(v2, a1);
   }
 
@@ -32240,7 +32240,7 @@ sub_6081CA7C__LABEL_157:
   {
     int v2; // r0
   
-    v2 = __operator_new(0xA28u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0xA28u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return RumbleMgr_ctor(v2, a1);
   }
 
@@ -198279,7 +198279,7 @@ sub_608DF448__LABEL_158:
   {
     _DWORD *v2; // r0
   
-    v2 = (_DWORD *)__operator_new(0xE0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = (_DWORD *)__operator_new_al(0xE0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return sead__ControllerMgr__ControllerMgr(v2, a1);
   }
 

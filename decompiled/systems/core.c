@@ -18838,7 +18838,7 @@ sub_6000FD08__LABEL_240:
   {
     int v2; // r0
   
-    v2 = __operator_new(0xF74u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0xF74u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return BootScene_ctor(v2, a1);
   }
 
@@ -18903,7 +18903,7 @@ sub_6000FD08__LABEL_240:
   {
     int v2; // r0
   
-    v2 = __operator_new(0xA28u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0xA28u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return AreaTask_ctor(v2, a1);
   }
 
@@ -20228,7 +20228,7 @@ sub_6000FD08__LABEL_240:
   {
     int v2; // r0
   
-    v2 = __operator_new(0x578u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0x578u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return CourseTask_ref(v2, a1);
   }
 
@@ -20240,7 +20240,7 @@ sub_6000FD08__LABEL_240:
   {
     int v2; // r0
   
-    v2 = __operator_new(0xC0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0xC0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return TitleScene_ctor(v2, a1);
   }
 
@@ -20252,7 +20252,7 @@ sub_6000FD08__LABEL_240:
   {
     _DWORD *v2; // r0
   
-    v2 = (_DWORD *)__operator_new(0x1A62D8u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = (_DWORD *)__operator_new_al(0x1A62D8u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return DemoScene_ctor(v2, a1);
   }
 
@@ -20264,7 +20264,7 @@ sub_6000FD08__LABEL_240:
   {
     _DWORD *v2; // r0
   
-    v2 = (_DWORD *)__operator_new(0xD7Cu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = (_DWORD *)__operator_new_al(0xD7Cu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return ChallengeRetryScene_ctor(v2, a1);
   }
 
@@ -20276,7 +20276,7 @@ sub_6000FD08__LABEL_240:
   {
     _DWORD *v2; // r0
   
-    v2 = (_DWORD *)__operator_new(0x2A6Cu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = (_DWORD *)__operator_new_al(0x2A6Cu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return ChallengeResultScene_ctor(v2, a1);
   }
 
@@ -20288,7 +20288,7 @@ sub_6000FD08__LABEL_240:
   {
     _DWORD *v2; // r0
   
-    v2 = (_DWORD *)__operator_new(0x515Cu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = (_DWORD *)__operator_new_al(0x515Cu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return GameOverScene_ctor(v2, a1);
   }
 
@@ -20300,7 +20300,7 @@ sub_6000FD08__LABEL_240:
   {
     int v2; // r0
   
-    v2 = __operator_new(0x104CCu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0x104CCu, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return GameSetupScene_ctor(v2, a1);
   }
 
@@ -20312,7 +20312,7 @@ sub_6000FD08__LABEL_240:
   {
     _DWORD *v2; // r0
   
-    v2 = (_DWORD *)__operator_new(0x5B8u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = (_DWORD *)__operator_new_al(0x5B8u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return MultiPlayCourseSelectScene_ctor(v2, a1);
   }
 
@@ -20324,7 +20324,7 @@ sub_6000FD08__LABEL_240:
   {
     _DWORD *v2; // r0
   
-    v2 = (_DWORD *)__operator_new(0x410u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = (_DWORD *)__operator_new_al(0x410u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return ResultScene_ctor(v2, a1);
   }
 
@@ -20336,7 +20336,7 @@ sub_6000FD08__LABEL_240:
   {
     _DWORD *v2; // r0
   
-    v2 = (_DWORD *)__operator_new(0xA40u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = (_DWORD *)__operator_new_al(0xA40u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return DarkCloudDemoScene_ctor(v2, a1);
   }
 
@@ -20348,7 +20348,7 @@ sub_6000FD08__LABEL_240:
   {
     int v2; // r0
   
-    v2 = __operator_new(0x6720u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0x6720u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return HelpMenuScene_ref(v2, a1);
   }
 
@@ -20360,7 +20360,7 @@ sub_6000FD08__LABEL_240:
   {
     int v2; // r0
   
-    v2 = __operator_new(0xCA0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+    v2 = __operator_new_al(0xCA0u, *(_DWORD *)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
     return CourseSelectTask_ctor(v2, a1);
   }
 
