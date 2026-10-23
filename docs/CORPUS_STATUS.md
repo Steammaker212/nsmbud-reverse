@@ -47,6 +47,33 @@ readable C:
 Verified independently by re-running `verify_all.py` against the published
 directory, not just self-reported by the build.
 
+### Does the C actually match the binary?
+
+Compiling proves a body is well-formed, not that it belongs to the address in
+its filename. `verify_codegen.py` disassembles each sampled function out of the
+ELF and checks that the calls the C claims are present as branch instructions.
+
+| Check | Result |
+| --- | --- |
+| Sampled functions with calls and disassemblable code | 419 |
+| C calls corroborated by a BL/B in the code | 418 (99.8%) |
+
+The one exception, `nn__mii__GetExpressionCount`, calls only itself, so its
+body has no distinct call target to find.
+
+Getting this number honestly took three fixes to the checker itself, and each
+bug had been reporting a false failure:
+
+- Branch decoding masked a nibble instead of the top byte, so every veneer
+  (`0xEA......`, an ARM `B`) looked like it contained no call.
+- `range(0, len(code) - 4, 4)` is empty for a 4-byte body — exactly the thunks
+  under test.
+- IDA pseudo-calls (`HIDWORD`, `vaddq_f32`, `COERCE_FLOAT`) are macros and
+  intrinsics that inline to no branch.
+
+The first measurement said 83%, then 98.9%, then 99.8%. The wrong numbers
+looked just as plausible as the right one.
+
 ### The `->` problem, and how it was solved
 
 Hex-Rays emits `base->member` because the database has struct types. Those types
