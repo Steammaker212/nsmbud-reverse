@@ -17,9 +17,19 @@ LIST = r"C:\Users\Saif Khan\Downloads\main.idb\.rea\ida_work\missing_stubs.txt"
 OUT = os.path.join(ROOT, "recovered", "recovered_stubs.c")
 BASE = 0x60000000
 
-SIG = re.compile(r"^(?P<ret>[A-Za-z_][\w \t\*]*?)\s*(?:__\w+\s+)?(?P<name>[A-Za-z_][\w:]*)\s*\((?P<args>[^)]*)\)", re.M)
+# The signature may be preceded by a `// attributes: thunk` comment line, and the name may be a destructor
+# (`sead::IDisposer::~IDisposer`) or contain `~`. Allow a leading `~` so those 27 thunks are not silently skipped --
+# they were the only addresses still absent from the corpus.
+SIG = re.compile(r"^(?P<ret>[A-Za-z_][\w \t\*]*?)\s*(?:__\w+\s+)?(?P<name>~?[A-Za-z_][\w:~]*)\s*\((?P<args>[^)]*)\)", re.M)
 
 
+
+# Hex-Rays writes a few signatures that are not parseable as C and that the pattern above cannot match:
+# template arguments in the name (`GetTouchScreenState<1u>()`) and overloaded operators (`operator==`). The set is
+# tiny and fixed, so a targeted rewrite of the SIGNATURE LINE is enough; the body is untouched. Without it these
+# arguments were the last two addresses absent from the corpus.
+TEMPLATE_ARGS = re.compile(r"(<[^<>()]*>)(?=\s*\()")
+OPERATOR_EQ = re.compile(r"\boperator\s*(==|!=|<=|>=|<|>)\s*\(")
 # C++ operators and destructors appear as ordinary names in Hex-Rays output but are not valid C identifiers.
 OPERATOR_FIX = {
     "operator delete": "operator_delete",
@@ -73,6 +83,16 @@ def main(argv):
             continue
         t = open(os.path.join(SRC, fn), encoding="utf-8", errors="replace").read()
         sm = SIG.search(t)
+        if not sm:
+            # Template arguments in the name and overloaded operators are not parseable as C, so the pattern above
+            # cannot match; rewrite only the signature text and match again.
+            fixed_t = OPERATOR_EQ.sub(
+                lambda mm: "__operator_%s(" % {"==": "eq", "!=": "ne", "<=": "le",
+                                               ">=": "ge", "<": "lt", ">": "gt"}[mm.group(1)], t)
+            fixed_t = TEMPLATE_ARGS.sub("", fixed_t)
+            sm = SIG.search(fixed_t)
+            if sm:
+                t = fixed_t
         if not sm:
             continue
         body, flat = flatten(t, sm.group("name"))

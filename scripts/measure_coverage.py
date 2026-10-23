@@ -18,7 +18,9 @@ for ln in open(ALL, encoding="utf-8", errors="replace"):
     except ValueError:
         pass
 
-BANNER = re.compile(r"(?m)^/\* =+\n \* (?P<name>\w+)\n \* RVA (?P<rva>0x[0-9a-fA-F]+)\s+size (?P<size>0x[0-9a-fA-F]+)")
+# The name may be a C++-shaped one (`sead::IDisposer::~IDisposer`) after the destructor support was added, so `\w+`
+# no longer matches and 27 banners were invisible to this counter. Allow any non-newline name.
+BANNER = re.compile(r"(?m)^/\* =+\n \* (?P<name>[^\n]+?)\n \* RVA (?P<rva>0x[0-9a-fA-F]+)\s+size (?P<size>0x[0-9a-fA-F]+)")
 cor = {}
 for dp, _, ns in os.walk(ROOT):
     if os.path.basename(dp) == "include" or "authoritative" in dp:

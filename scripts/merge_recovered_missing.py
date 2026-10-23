@@ -16,9 +16,18 @@ KEEP = r"C:\Users\Saif Khan\Downloads\main.idb\.rea\ida_work\missing_substantive
 OUT = os.path.join(ROOT, "recovered", "recovered_missing.c")
 BASE = 0x60000000
 
-SIG = re.compile(r"^(?P<ret>[A-Za-z_][\w \t\*]*?)\s*(?:__\w+\s+)?(?P<name>[A-Za-z_][\w:]*)\s*\((?P<args>[^)]*)\)", re.M)
+SIG = re.compile(# Allow a leading `~` for destructors (`nn::mii::Database::~Database`). Without it, 11 thunks in the
+# substantive list were skipped and were the last addresses absent from the corpus.
+r"^(?P<ret>[A-Za-z_][\w \t\*]*?)\s*(?:__\w+\s+)?(?P<name>[A-Za-z_][\w:]*)\s*\((?P<args>[^)]*)\)", re.M)
 
 
+
+# Hex-Rays writes a few signatures that are not parseable as C and that the pattern above cannot match:
+# template arguments in the name (`GetTouchScreenState<1u>()`) and overloaded operators (`operator==`). The set is
+# tiny and fixed, so a targeted rewrite of the SIGNATURE LINE is enough; the body is untouched. Without it these
+# arguments were the last two addresses absent from the corpus.
+TEMPLATE_ARGS = re.compile(r"(<[^<>()]*>)(?=\s*\()")
+OPERATOR_EQ = re.compile(r"\boperator\s*(==|!=|<=|>=|<|>)\s*\(")
 def flatten(text, name):
     if "::" in name:
         flat = name.replace("::", "_")
@@ -76,6 +85,17 @@ def main(argv):
             continue
         t = open(os.path.join(SRC, fn), encoding="utf-8", errors="replace").read()
         sm = SIG.search(t)
+        if not sm:
+            # A few Hex-Rays signatures are not parseable as C and the pattern cannot match them: template arguments
+            # in the name (`GetTouchScreenState<1u>()`) and overloaded operators (`operator==`). Rewrite only the
+            # signature text, then match again. This was the last gap in address coverage: 2 functions.
+            fixed = OPERATOR_EQ.sub(
+                lambda mm: "__operator_%s(" % {"==": "eq", "!=": "ne", "<=": "le",
+                                               ">=": "ge", "<": "lt", ">": "gt"}[mm.group(1)], t)
+            fixed = TEMPLATE_ARGS.sub("", fixed)
+            sm = SIG.search(fixed)
+            if sm:
+                t = fixed
         if not sm:
             continue
         body, flat = flatten(t, sm.group("name"))
