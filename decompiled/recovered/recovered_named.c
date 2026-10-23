@@ -317,7 +317,7 @@ int __fastcall BootScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC5774);
   *(_DWORD *)(a1 + 192) = &off_60C26594;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
-  *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_v3_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_296_off_60C26570_DWORD_a1_312_0_DWORD_a1_316_0_DWORD_a1_320_v3_DWORD_a1_324_0_BYTE_a1_352_0_DWORD_a1_336_a1_DWORD_a1_340_sub_607DF058_DWORD_a1_344_0_DWORD_a1_332_off_60C265F0_DWORD_a1_328_a1_332_sub_6048210C_a1_356_BYTE_a1_3952_0_return_a1_ChallengeResultScene_ctor_RVA_0x007E0EE0_size_0x1BC_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607E0EE0_RVA_0x607E0EE0_size_0x1BC_int_fastcall_ChallengeResultScene_ctor_int_a1_int_a2_CalculateTask3_ctor_a1_a2_int_ChallengeResultScene_DWORD_a1_off_60C2670C_sub_6090A654_DWORD_a1_192_sub_6090C6DC_a1_280_DWORD_a1_452_off_60C2679C_DWORD_a1_456_off_60C267AC_DWORD_a1_460_off_60C267D0_DWORD_a1_464_a1_DWORD_a1_468_0_StateMgr_ctor_StateMgr_a1_472_StateExecuter_a1_456_StateBase_dword_60CC58C4_DWORD_a1_452_off_60C2678C_sead_IDisposer_ctor_sead_IDisposer_a1_488_DWORD_a1_504_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_v3_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_296_off_60C26570_DWORD_a1_312_0_DWORD_a1_316_0_DWORD_a1_320_v3_DWORD_a1_324_0_BYTE_a1_352_0_DWORD_a1_336_a1_DWORD_a1_340_sub_607DF058_DWORD_a1_344_0_DWORD_a1_332_off_60C265F0_DWORD_a1_328_a1_332_sub_6048210C_a1_356_BYTE_a1_3952_0_return_a1_ChallengeResultScene_ctor_RVA_0x007E0EE0_size_0x1BC_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607E0EE0_RVA_0x607E0EE0_size_0x1BC_int_fastcall_ChallengeResultScene_ctor_int_a1_int_a2_CalculateTask3_ctor_a1_a2_int_ChallengeResultScene_DWORD_a1_off_60C2670C_sub_6090A654_DWORD_a1_192_sub_6090C6DC_a1_280_DWORD_a1_452_off_60C2679C_DWORD_a1_456_off_60C267AC_DWORD_a1_460_off_60C267D0_DWORD_a1_464_a1_DWORD_a1_468_0_StateMgr_ctor_StateMgr_a1_472_StateExecuter_a1_456_StateBase_dword_60CC58C4_DWORD_a1_452_off_60C2678C_sead_IDisposer_ctor_sead_IDisposer_a1_488_DWORD_a1_504_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 508) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 488) = off_60C5E9A4;
   *(_DWORD *)(a1 + 512) = 0;
@@ -328,7 +328,7 @@ int __fastcall BootScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 536) = 0;
   *(_DWORD *)(a1 + 524) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 556));
-  *(_DWORD *)(a1 + 572) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_576_byte_60ABC94D_DWORD_a1_556_off_60C5E9A4_DWORD_a1_580_0_DWORD_a1_584_0_DWORD_a1_588_1_DWORD_a1_596_0_DWORD_a1_600_0_DWORD_a1_604_0_DWORD_a1_592_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_624_DWORD_a1_640_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 572) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_576_byte_60ABC94D_DWORD_a1_556_off_60C5E9A4_DWORD_a1_580_0_DWORD_a1_584_0_DWORD_a1_588_1_DWORD_a1_596_0_DWORD_a1_600_0_DWORD_a1_604_0_DWORD_a1_592_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_624_DWORD_a1_640_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 644) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 624) = off_60C5E9A4;
   *(_DWORD *)(a1 + 648) = 0;
@@ -370,7 +370,7 @@ int __fastcall ChallengeRetryScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 472), (StateExecuter *)(a1 + 456), (StateBase *)&dword_60CC59B0);
   *(_DWORD *)(a1 + 452) = &off_60C268A4;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 488));
-  *(_DWORD *)(a1 + 504) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_508_byte_60ABC94D_DWORD_a1_488_off_60C5E9A4_DWORD_a1_512_0_DWORD_a1_516_0_DWORD_a1_520_1_DWORD_a1_528_0_DWORD_a1_532_0_DWORD_a1_536_0_DWORD_a1_524_off_60BD8394_sub_6090A654_DWORD_a1_556_sub_6090C6DC_a1_644_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_60485A74_a1_2836_DWORD_a1_3448_0_return_a1_DarkCloudDemoScene_ctor_RVA_0x007E3508_size_0x13C_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607E3508_RVA_0x607E3508_size_0x13C_sead_IDisposer_fastcall_DarkCloudDemoScene_ctor_sead_IDisposer_a1_int_a2_CalculateTask3_ctor_int_a1_a2_int_DarkCloudDemoScene_a1_vtable_int_off_60C26AE0_sead_IDisposer_ctor_a1_12_a1_13_vtable_int_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 504) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_508_byte_60ABC94D_DWORD_a1_488_off_60C5E9A4_DWORD_a1_512_0_DWORD_a1_516_0_DWORD_a1_520_1_DWORD_a1_528_0_DWORD_a1_532_0_DWORD_a1_536_0_DWORD_a1_524_off_60BD8394_sub_6090A654_DWORD_a1_556_sub_6090C6DC_a1_644_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_60485A74_a1_2836_DWORD_a1_3448_0_return_a1_DarkCloudDemoScene_ctor_RVA_0x007E3508_size_0x13C_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607E3508_RVA_0x607E3508_size_0x13C_sead_IDisposer_fastcall_DarkCloudDemoScene_ctor_sead_IDisposer_a1_int_a2_CalculateTask3_ctor_int_a1_a2_int_DarkCloudDemoScene_a1_vtable_int_off_60C26AE0_sead_IDisposer_ctor_a1_12_a1_13_vtable_int_vtable_forsead_SafeStringBase_char;
   a1[13].containingHeap = (int)&byte_60ABC94D;
   a1[12].vtable = (int)off_60C5E9A4;
   a1[13].field_8 = 0;
@@ -431,7 +431,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)a1 = off_60C26B88;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 192));
   v3 = 0;
-  *(_DWORD *)(a1 + 208) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_212_byte_60ABC94D_DWORD_a1_192_off_60C5E9A4_DWORD_a1_216_0_DWORD_a1_220_0_DWORD_a1_224_1_DWORD_a1_232_0_DWORD_a1_236_0_DWORD_a1_240_0_DWORD_a1_228_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_260_DWORD_a1_276_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 208) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_212_byte_60ABC94D_DWORD_a1_192_off_60C5E9A4_DWORD_a1_216_0_DWORD_a1_220_0_DWORD_a1_224_1_DWORD_a1_232_0_DWORD_a1_236_0_DWORD_a1_240_0_DWORD_a1_228_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_260_DWORD_a1_276_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 280) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 260) = off_60C5E9A4;
   *(_DWORD *)(a1 + 284) = 0;
@@ -442,7 +442,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 292) = 1;
   *(_DWORD *)(a1 + 296) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 328));
-  *(_DWORD *)(a1 + 344) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_348_byte_60ABC94D_DWORD_a1_328_off_60C5E9A4_DWORD_a1_352_0_DWORD_a1_368_0_DWORD_a1_372_0_DWORD_a1_376_0_DWORD_a1_356_0_DWORD_a1_360_1_DWORD_a1_364_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_396_DWORD_a1_412_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 344) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_348_byte_60ABC94D_DWORD_a1_328_off_60C5E9A4_DWORD_a1_352_0_DWORD_a1_368_0_DWORD_a1_372_0_DWORD_a1_376_0_DWORD_a1_356_0_DWORD_a1_360_1_DWORD_a1_364_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_396_DWORD_a1_412_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 416) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 396) = off_60C5E9A4;
   *(_DWORD *)(a1 + 420) = 0;
@@ -453,7 +453,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 428) = 1;
   *(_DWORD *)(a1 + 432) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 464));
-  *(_DWORD *)(a1 + 480) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_484_byte_60ABC94D_DWORD_a1_464_off_60C5E9A4_DWORD_a1_488_0_DWORD_a1_504_0_DWORD_a1_508_0_DWORD_a1_512_0_DWORD_a1_492_0_DWORD_a1_496_1_DWORD_a1_500_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_532_DWORD_a1_548_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 480) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_484_byte_60ABC94D_DWORD_a1_464_off_60C5E9A4_DWORD_a1_488_0_DWORD_a1_504_0_DWORD_a1_508_0_DWORD_a1_512_0_DWORD_a1_492_0_DWORD_a1_496_1_DWORD_a1_500_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_532_DWORD_a1_548_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 552) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 532) = off_60C5E9A4;
   *(_DWORD *)(a1 + 556) = 0;
@@ -500,7 +500,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 3416) = 0;
   *(_DWORD *)(a1 + 3420) = 0;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 3940));
-  *(_DWORD *)(a1 + 3956) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_3960_byte_60ABC94D_DWORD_a1_3940_off_60C5E9A4_DWORD_a1_3964_0_DWORD_a1_3968_0_DWORD_a1_3972_1_DWORD_a1_3980_0_DWORD_a1_3984_0_DWORD_a1_3988_0_DWORD_a1_3976_off_60BD8394_v4_a1_20780_do_EffectWrapper_ctor_EffectWrapper_v4_v3_DWORD_v4_v3_off_60BC1450_v3_104_while_v3_425984_v5_0_v6_a1_463408_do_MovingSoundActor_ctor_MovingSoundActor_v6_v5_0_1_DWORD_v6_v5_off_60C26BF4_v5_308_while_v5_1261568_DWORD_a1_1725004_0_DWORD_a1_1725028_0_DWORD_a1_1725024_0_DWORD_a1_1725020_0_DWORD_a1_1725032_1065353216_DWORD_a1_1725036_dword_6086A208_DWORD_a1_1725064_0_DWORD_a1_1725060_0_DWORD_a1_1725056_0_DWORD_a1_1725052_0_DWORD_a1_1725048_0_DWORD_a1_1725044_0_DWORD_a1_1725040_0_DWORD_a1_1725016_a1_1725020_DWORD_a1_1725068_0_DWORD_a1_1725012_off_60C5A7FC_DWORD_a1_1725072_0_DWORD_a1_1725076_0_DWORD_a1_1725100_0_DWORD_a1_1725096_0_DWORD_a1_1725092_0_DWORD_a1_1725104_1065353216_DWORD_a1_1725108_dword_6086A208_DWORD_a1_1725136_0_DWORD_a1_1725132_0_DWORD_a1_1725128_0_DWORD_a1_1725124_0_DWORD_a1_1725120_0_DWORD_a1_1725116_0_DWORD_a1_1725112_0_DWORD_a1_1725088_a1_1725092_DWORD_a1_1725140_0_DWORD_a1_1725084_off_60C5A7FC_DWORD_a1_1725144_0_sub_6092D040_a1_1725152_DWORD_a1_1729180_0_DWORD_a1_1729184_0_return_a1_GameOverScene_ctor_RVA_0x007EC020_size_0xFC_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607EC020_RVA_0x607EC020_size_0xFC_int_fastcall_GameOverScene_ctor_int_a1_int_a2_CalculateTask3_ctor_a1_a2_int_GameOverScene_DWORD_a1_off_60C26DA4_DWORD_a1_192_off_60C26E34_DWORD_a1_196_off_60C26E44_DWORD_a1_200_off_60C26E68_DWORD_a1_204_a1_DWORD_a1_208_0_StateMgr_ctor_StateMgr_a1_212_StateExecuter_a1_196_StateBase_dword_60CC5B5C_DWORD_a1_192_off_60C26E24_sead_IDisposer_ctor_sead_IDisposer_a1_228_DWORD_a1_244_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 3956) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_3960_byte_60ABC94D_DWORD_a1_3940_off_60C5E9A4_DWORD_a1_3964_0_DWORD_a1_3968_0_DWORD_a1_3972_1_DWORD_a1_3980_0_DWORD_a1_3984_0_DWORD_a1_3988_0_DWORD_a1_3976_off_60BD8394_v4_a1_20780_do_EffectWrapper_ctor_EffectWrapper_v4_v3_DWORD_v4_v3_off_60BC1450_v3_104_while_v3_425984_v5_0_v6_a1_463408_do_MovingSoundActor_ctor_MovingSoundActor_v6_v5_0_1_DWORD_v6_v5_off_60C26BF4_v5_308_while_v5_1261568_DWORD_a1_1725004_0_DWORD_a1_1725028_0_DWORD_a1_1725024_0_DWORD_a1_1725020_0_DWORD_a1_1725032_1065353216_DWORD_a1_1725036_dword_6086A208_DWORD_a1_1725064_0_DWORD_a1_1725060_0_DWORD_a1_1725056_0_DWORD_a1_1725052_0_DWORD_a1_1725048_0_DWORD_a1_1725044_0_DWORD_a1_1725040_0_DWORD_a1_1725016_a1_1725020_DWORD_a1_1725068_0_DWORD_a1_1725012_off_60C5A7FC_DWORD_a1_1725072_0_DWORD_a1_1725076_0_DWORD_a1_1725100_0_DWORD_a1_1725096_0_DWORD_a1_1725092_0_DWORD_a1_1725104_1065353216_DWORD_a1_1725108_dword_6086A208_DWORD_a1_1725136_0_DWORD_a1_1725132_0_DWORD_a1_1725128_0_DWORD_a1_1725124_0_DWORD_a1_1725120_0_DWORD_a1_1725116_0_DWORD_a1_1725112_0_DWORD_a1_1725088_a1_1725092_DWORD_a1_1725140_0_DWORD_a1_1725084_off_60C5A7FC_DWORD_a1_1725144_0_sub_6092D040_a1_1725152_DWORD_a1_1729180_0_DWORD_a1_1729184_0_return_a1_GameOverScene_ctor_RVA_0x007EC020_size_0xFC_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607EC020_RVA_0x607EC020_size_0xFC_int_fastcall_GameOverScene_ctor_int_a1_int_a2_CalculateTask3_ctor_a1_a2_int_GameOverScene_DWORD_a1_off_60C26DA4_DWORD_a1_192_off_60C26E34_DWORD_a1_196_off_60C26E44_DWORD_a1_200_off_60C26E68_DWORD_a1_204_a1_DWORD_a1_208_0_StateMgr_ctor_StateMgr_a1_212_StateExecuter_a1_196_StateBase_dword_60CC5B5C_DWORD_a1_192_off_60C26E24_sead_IDisposer_ctor_sead_IDisposer_a1_228_DWORD_a1_244_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 228) = off_60C5E9A4;
   *(_DWORD *)(a1 + 252) = 0;
@@ -533,7 +533,7 @@ int __fastcall GameSetupScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 216), (StateExecuter *)(a1 + 200), (StateBase *)&dword_60CC5BAC);
   *(_DWORD *)(a1 + 196) = &off_60C26F3C;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 232));
-  *(_DWORD *)(a1 + 248) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_252_byte_60ABC94D_DWORD_a1_232_off_60C5E9A4_DWORD_a1_256_0_DWORD_a1_260_0_DWORD_a1_264_1_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_280_0_DWORD_a1_268_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_300_DWORD_a1_300_off_60C5E9A4_DWORD_a1_316_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 248) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_252_byte_60ABC94D_DWORD_a1_232_off_60C5E9A4_DWORD_a1_256_0_DWORD_a1_260_0_DWORD_a1_264_1_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_280_0_DWORD_a1_268_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_300_DWORD_a1_300_off_60C5E9A4_DWORD_a1_316_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 320) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 324) = 0;
   *(_DWORD *)(a1 + 328) = 0;
@@ -544,7 +544,7 @@ int __fastcall GameSetupScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 336) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 368));
   *(_DWORD *)(a1 + 368) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 384) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_388_byte_60ABC94D_DWORD_a1_392_0_DWORD_a1_396_0_DWORD_a1_400_1_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_416_0_DWORD_a1_404_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_436_DWORD_a1_436_off_60C5E9A4_DWORD_a1_452_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 384) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_388_byte_60ABC94D_DWORD_a1_392_0_DWORD_a1_396_0_DWORD_a1_400_1_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_416_0_DWORD_a1_404_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_436_DWORD_a1_436_off_60C5E9A4_DWORD_a1_452_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 456) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 460) = 0;
   *(_DWORD *)(a1 + 464) = 0;
@@ -604,7 +604,7 @@ int __fastcall MultiPlayCourseSelectScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC5F28);
   *(_DWORD *)(a1 + 192) = &off_60C274A0;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
-  *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_296_off_60C5E9A4_DWORD_a1_312_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_296_off_60C5E9A4_DWORD_a1_312_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 316) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 320) = 0;
   *(_DWORD *)(a1 + 324) = 0;
@@ -615,7 +615,7 @@ int __fastcall MultiPlayCourseSelectScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 332) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 364));
   *(_DWORD *)(a1 + 364) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 380) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_384_byte_60ABC94D_DWORD_a1_388_0_DWORD_a1_392_0_DWORD_a1_396_1_DWORD_a1_404_0_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_400_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_432_DWORD_a1_432_off_60C5E9A4_DWORD_a1_448_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 380) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_384_byte_60ABC94D_DWORD_a1_388_0_DWORD_a1_392_0_DWORD_a1_396_1_DWORD_a1_404_0_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_400_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_432_DWORD_a1_432_off_60C5E9A4_DWORD_a1_448_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 452) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 456) = 0;
   *(_DWORD *)(a1 + 460) = 0;
@@ -671,7 +671,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC6260);
   *(_DWORD *)(a1 + 192) = &off_60C27740;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
-  *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_312_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_312_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 316) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 296) = off_60C5E9A4;
   *(_DWORD *)(a1 + 320) = 0;
@@ -682,7 +682,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 344) = 0;
   *(_DWORD *)(a1 + 332) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 364));
-  *(_DWORD *)(a1 + 380) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_384_byte_60ABC94D_DWORD_a1_364_off_60C5E9A4_DWORD_a1_388_0_DWORD_a1_392_0_DWORD_a1_396_1_DWORD_a1_404_0_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_400_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_432_DWORD_a1_448_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 380) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_384_byte_60ABC94D_DWORD_a1_364_off_60C5E9A4_DWORD_a1_388_0_DWORD_a1_392_0_DWORD_a1_396_1_DWORD_a1_404_0_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_400_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_432_DWORD_a1_448_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 452) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 432) = off_60C5E9A4;
   *(_DWORD *)(a1 + 456) = 0;
@@ -693,7 +693,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 480) = 0;
   *(_DWORD *)(a1 + 468) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 500));
-  *(_DWORD *)(a1 + 516) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_520_byte_60ABC94D_DWORD_a1_500_off_60C5E9A4_DWORD_a1_524_0_DWORD_a1_528_0_DWORD_a1_532_1_DWORD_a1_540_0_DWORD_a1_544_0_DWORD_a1_548_0_DWORD_a1_536_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_568_DWORD_a1_584_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 516) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_520_byte_60ABC94D_DWORD_a1_500_off_60C5E9A4_DWORD_a1_524_0_DWORD_a1_528_0_DWORD_a1_532_1_DWORD_a1_540_0_DWORD_a1_544_0_DWORD_a1_548_0_DWORD_a1_536_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_568_DWORD_a1_584_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 588) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 568) = off_60C5E9A4;
   *(_DWORD *)(a1 + 592) = 0;
@@ -704,7 +704,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 616) = 0;
   *(_DWORD *)(a1 + 604) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 636));
-  *(_DWORD *)(a1 + 652) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_656_byte_60ABC94D_DWORD_a1_636_off_60C5E9A4_DWORD_a1_660_0_DWORD_a1_664_0_DWORD_a1_668_1_DWORD_a1_676_0_DWORD_a1_680_0_DWORD_a1_684_0_DWORD_a1_672_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_704_DWORD_a1_720_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 652) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_656_byte_60ABC94D_DWORD_a1_636_off_60C5E9A4_DWORD_a1_660_0_DWORD_a1_664_0_DWORD_a1_668_1_DWORD_a1_676_0_DWORD_a1_680_0_DWORD_a1_684_0_DWORD_a1_672_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_704_DWORD_a1_720_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 724) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 704) = off_60C5E9A4;
   *(_DWORD *)(a1 + 728) = 0;

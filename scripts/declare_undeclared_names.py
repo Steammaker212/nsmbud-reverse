@@ -52,8 +52,13 @@ def declared_names():
         if not hf.endswith(".h"):
             continue
         t = open(os.path.join(INC, hf), encoding="utf-8", errors="replace").read()
-        names.update(re.findall(r"\b(?:extern|struct|union|enum)\s+[\w \t\*]*?(\w+)\s*[;(]", t))
-        names.update(re.findall(r"\btypedef\s+[^;]*?(\w+)\s*;", t))
+        # Only real declarations count. The previous patterns used a lazy `[\w \t\*]*?`, which for a line like
+        #   extern int32_t g_vtable_for_sead_SafeStringBase_char_..._sead_IDisposer_ctor_...;
+        # captured a fragment of the LONG name and made that fragment look "already declared", so 142 genuinely
+        # undeclared identifiers were skipped. Anchor to the whole declarator instead.
+        names.update(re.findall(r"(?m)^\s*extern\s+[A-Za-z_][\w \t\*]*?\b(\w+)\s*[;(]", t))
+        names.update(re.findall(r"(?m)^\s*typedef\s+[^;=]*?\b(\w+)\s*\[?[^;]*;", t))
+        names.update(re.findall(r"(?m)^\s*(?:struct|union|enum)\s+(\w+)\s*[;{]", t))
         names.update(re.findall(r"#define\s+(\w+)", t))
     return names
 
@@ -82,7 +87,12 @@ def main(argv):
         # `nullsub_N` and `j_XXXX` are DEFINED as stub functions in recovered_stubs.c. Declaring them here with a
         # different return type conflicts with those definitions (154 errors). They are functions; leave them to the
         # stub unit, which already matches each signature to the corpus header.
+        # nullsub_/j_ names ARE defined -- but in recovered_stubs.c, a DIFFERENT translation unit, so they are not
+        # visible here. They need a declaration, just not `uintptr_t`: the stub unit defines them as `void N()` and
+        # the dependency header must agree, or the two conflict (154 errors the first time). Match the stub's own
+        # signature instead of skipping them.
         if re.fullmatch(r"(?:nullsub_|j_)\w+", n):
+            added.append("void %s();" % n)
             continue
         # a type position looks like `N *ident` or `N ident;` at the start of a declaration
         if re.search(r"\b%s\s*\*" % re.escape(n), src) and not re.search(r"\b%s\s*\(" % re.escape(n), src):

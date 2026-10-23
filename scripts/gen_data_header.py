@@ -89,7 +89,11 @@ def main():
         r = clean[n]
         cty = CTYPE.get(r["width"], "uint8_t")
         lines.append(
-            "#define %s (*(%s *)(uintptr_t)(0x%08Xu + 0x%08Xu))" % (n, cty, BASE, r["rva"])
+            # r["rva"] is ALREADY an absolute address (IDA names these labels with the full VA, e.g. byte_60AC73A0).
+            # Emitting `BASE + r["rva"]` therefore double-counted the image base: 0x60000000 + 0x60AC73A0 ==
+            # 0xC0AC73A0, which is not mapped, so every one of the 47,408 data macros read the wrong memory while
+            # still looking syntactically fine. Emit the address alone.
+            "#define %s (*(%s *)(uintptr_t)(0x%08Xu))" % (n, cty, r["rva"])
         )
 
     # Pointer form for the same addresses.

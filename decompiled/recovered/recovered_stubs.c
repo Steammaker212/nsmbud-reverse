@@ -81470,7 +81470,7 @@ int __fastcall ChallengeResultScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 472), (StateExecuter *)(a1 + 456), (StateBase *)&dword_60CC58C4);
   *(_DWORD *)(a1 + 452) = &off_60C2678C;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 488));
-  *(_DWORD *)(a1 + 504) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 504) = &`vtable for'sead_SafeStringBase_char;
   *(_DWORD *)(a1 + 508) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 488) = off_60C5E9A4;
   *(_DWORD *)(a1 + 512) = 0;
@@ -81481,7 +81481,7 @@ int __fastcall ChallengeResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 536) = 0;
   *(_DWORD *)(a1 + 524) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 556));
-  *(_DWORD *)(a1 + 572) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 572) = &`vtable for'sead_SafeStringBase_char;
   *(_DWORD *)(a1 + 576) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 556) = off_60C5E9A4;
   *(_DWORD *)(a1 + 580) = 0;
@@ -81492,7 +81492,7 @@ int __fastcall ChallengeResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 604) = 0;
   *(_DWORD *)(a1 + 592) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 624));
-  *(_DWORD *)(a1 + 640) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 640) = &`vtable for'sead_SafeStringBase_char;
   *(_DWORD *)(a1 + 644) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 624) = off_60C5E9A4;
   *(_DWORD *)(a1 + 648) = 0;
@@ -81939,7 +81939,7 @@ sead_IDisposer *__fastcall DarkCloudDemoScene_ctor(sead_IDisposer *a1, int a2)
   CalculateTask3_ctor((int)a1, a2, (int)"DarkCloudDemoScene");
   a1->vtable = (int)off_60C26AE0;
   sead_IDisposer_ctor(a1 + 12);
-  a1[13].vtable = (int)&`vtable for'sead_SafeStringBase<char>;
+  a1[13].vtable = (int)&`vtable for'sead_SafeStringBase_char;
   a1[13].containingHeap = (int)&byte_60ABC94D;
   a1[12].vtable = (int)off_60C5E9A4;
   a1[13].field_8 = 0;
@@ -82201,7 +82201,7 @@ int __fastcall GameOverScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC5B5C);
   *(_DWORD *)(a1 + 192) = &off_60C26E24;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
-  *(_DWORD *)(a1 + 244) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 244) = &`vtable for'sead_SafeStringBase_char;
   *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 228) = off_60C5E9A4;
   *(_DWORD *)(a1 + 252) = 0;

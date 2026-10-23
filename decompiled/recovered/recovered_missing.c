@@ -2993,7 +2993,7 @@ unsigned int __fastcall sub_60629500(unsigned int *a1)
   (*(void (__fastcall **)(unsigned int))(*(_DWORD *)*v1 + 52))(*v1);
   v7 = *v1;
   v8 = *(int (__fastcall **)(unsigned int, _DWORD *))(*(_DWORD *)*v1 + 84);
-  v12[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v12[0] = &g_vtable_forsead_SafeStringBase_char;
   v12[1] = "j_spring";
   v9 = v8(v7, v12);
   (*(void (__fastcall **)(unsigned int, int, _DWORD *, _DWORD *))(*(_DWORD *)*v1 + 100))(*v1, v9, v12, v11);
@@ -5476,7 +5476,7 @@ int __fastcall sub_607C2C90(int a1)
     {
       *(_DWORD *)(a1 + 1216) |= 0x20000u;
       v5 = *(_DWORD *)(a1 + 648);
-      v9 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase<char>);
+      v9 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase_char);
       v10 = COERCE_FLOAT("wrist_r1");
       (*(void (__fastcall **)(_DWORD, float *, float *))(**(_DWORD **)(v5 + 4) + 144))(*(_DWORD *)(v5 + 4), v12, &v9);
       v13 = v13 + (float)((float)((float)(v12[1] * 0.0) + (float)(v12[0] * 3.0)) + (float)(v12[2] * 0.0));
@@ -7057,7 +7057,7 @@ void __fastcall sub_607C72D0(int a1)
       {
         v4 = sub_6075EDC8(v2);
         v5 = *(void (__fastcall **)(int, float *, _DWORD *))(*(_DWORD *)v4 + 144);
-        v10[0] = &g_vtable_forsead_SafeStringBase<char>;
+        v10[0] = &g_vtable_forsead_SafeStringBase_char;
         v10[1] = "spin";
         v5(v4, v11, v10);
         v12 = v12 + (float)((float)((float)(v11[0] * 0.0) - (float)(v11[1] * 5.0)) + (float)(v11[2] * 0.0));
@@ -7147,7 +7147,7 @@ LABEL_14:
           v8 = *v5;
           v9 = *(_DWORD *)(v2 + 648);
           v10 = *v7;
-          v14 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase<char>);
+          v14 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase_char);
           v15 = COERCE_FLOAT("skl_root");
           (*(void (__fastcall **)(_DWORD, float32x2_t *, float *))(**(_DWORD **)(v9 + 4) + 144))(
             *(_DWORD *)(v9 + 4),
@@ -8030,7 +8030,7 @@ void sub_607C8DBC()
 {
   sead_SafeString v0; // [sp+10h] [bp-10h] BYREF
 
-  v0.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  v0.vtable = &g_vtable_forsead_SafeStringBase_char;
   v0.cstr = (char *)&unk_60ADC1DD;
   Profile_Profile(&stru_60CC51CC, sub_607C807C, 0x1BBu, &v0, &unk_60B0D068, 0);
 }
@@ -8418,21 +8418,21 @@ int __fastcall sub_607C95B0(_DWORD *a1)
 /* Recovered from main.idb: VA 0x607C9630  RVA 0x007C9630  size 0xAC */
 int sub_607C9630()
 {
-  dword_60CC51E4 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC51E4 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC51E8 = (int)"Mario";
-  dword_60CC51EC = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC51EC = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC51F0 = (int)"Luigi";
-  dword_60CC51F4 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC51F4 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC51F8 = (int)"KinopioYellow";
-  dword_60CC51FC = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC51FC = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5200 = (int)"KinopioBlue";
-  dword_60CC5204 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5204 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5208 = (int)"Kinopico";
-  dword_60CC520C = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC520C = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5210 = (int)"Totten";
-  dword_60CC5214 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5214 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5218 = (int)"Mii";
-  dword_60CC521C = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC521C = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5220 = (int)"???";
   return sub_60000288();
 }
@@ -8460,7 +8460,7 @@ int __fastcall sub_607C970C(int a1, int r1_0, int a3, int a4, signed int unk4)
 
   sub_6078C444(a1, &dword_60CC5224, r1_0, a3, a4, unk4);
   *(_DWORD *)a1 = off_60C25998;
-  v16 = &g_vtable_forsead_SafeStringBase<char>;
+  v16 = &g_vtable_forsead_SafeStringBase_char;
   v17 = "shadowkun_player";
   *(_DWORD *)(a1 + 544) = LoadResource(ResourceMgrRelated_instance, &v16);
   *(_DWORD *)(a1 + 568) = 0;
@@ -8487,7 +8487,7 @@ int __fastcall sub_607C970C(int a1, int r1_0, int a3, int a4, signed int unk4)
   }
   v8 = sub_60792ACC(a1);
   v9 = *(void **)(a1 + 16);
-  a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  a2.vtable = &g_vtable_forsead_SafeStringBase_char;
   a2.cstr = "shadowkun";
   if ( v8 == 1 )
     Model = Resource_getModel(v9, &a2, 6, 3, 2, 4, 0, 0, 1, 0);
@@ -8588,7 +8588,7 @@ int __fastcall sub_607C9A80(_DWORD *a1)
   sub_6078E940(a1, a1[6]);
   v2 = a1[136];
   v3 = a1[6];
-  v5[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v5[0] = &g_vtable_forsead_SafeStringBase_char;
   v5[1] = "shadowkun_star_color";
   return ((int (__fastcall *)(_DWORD *, int, int, _DWORD *, float))sub_6078ED00)(a1, v3, v2, v5, 0.0);
 }
@@ -9512,53 +9512,53 @@ int __fastcall sub_607CAFD8(int a1)
 
   if ( ((unsigned int)&dword_60CC536C & ~(1618784240 << v1) & 1) == 0 && _cxa_guard_acquire(&dword_60CC536C) )
   {
-    dword_60CC52AC = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52AC = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC52B0 = (int)"nw4r_root";
-    dword_60CC52B4 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52B4 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC52B8 = (int)"skl_root";
-    dword_60CC52BC = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52BC = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC52C0 = (int)"legL1";
-    dword_60CC52C4 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52C4 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC52C8 = (int)"legL2";
-    dword_60CC52CC = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52CC = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC52D0 = (int)"ankleL";
-    dword_60CC52D4 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52D4 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC52D8 = (int)"legR1";
-    dword_60CC52DC = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52DC = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC52E0 = (int)"legR2";
-    dword_60CC52E4 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52E4 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC52E8 = (int)"ankleR";
-    dword_60CC52EC = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52EC = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC52F0 = (int)"spine";
-    dword_60CC52F4 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52F4 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC52F8 = (int)"armL1";
-    dword_60CC52FC = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC52FC = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5300 = (int)"armL2";
-    dword_60CC5304 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC5304 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5308 = (int)"armL2";
-    dword_60CC530C = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC530C = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5310 = (int)"armR1";
-    dword_60CC5314 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC5314 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5318 = (int)"armR2";
-    dword_60CC531C = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC531C = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5320 = (int)"armR2";
-    dword_60CC5324 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC5324 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5328 = (int)"head";
-    dword_60CC532C = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC532C = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5330 = (int)"head";
-    dword_60CC5334 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC5334 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5338 = (int)"fukuro_root";
-    dword_60CC533C = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC533C = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5340 = (int)"bottom0";
-    dword_60CC5344 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC5344 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5348 = (int)"bottom1";
-    dword_60CC534C = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC534C = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5350 = (int)"up0";
-    dword_60CC5354 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC5354 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5358 = (int)"hip";
-    dword_60CC535C = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC535C = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5360 = (int)"earL";
-    dword_60CC5364 = (int)&g_vtable_forsead_SafeStringBase<char>;
+    dword_60CC5364 = (int)&g_vtable_forsead_SafeStringBase_char;
     dword_60CC5368 = (int)"earR";
     sub_60000288();
     _cxa_guard_release(&dword_60CC536C);
@@ -9584,37 +9584,37 @@ int __fastcall sub_607CAFD8(int a1)
 /* Recovered from main.idb: VA 0x607CB264  RVA 0x007CB264  size 0x10C */
 int sub_607CB264()
 {
-  dword_60CC5370 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5370 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5374 = (int)"invalid anm";
-  dword_60CC5378 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5378 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC537C = (int)"wait01";
-  dword_60CC5224 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5224 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5228 = (int)"shadowkun_player";
-  dword_60CC522C = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC522C = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5230 = (int)"CommonAnm";
-  dword_60CC5234 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5234 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5238 = (int)"shadowkun";
-  dword_60CC523C = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC523C = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5240 = (int)"shadowkun";
-  dword_60CC5244 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5244 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5248 = (int)"shadowkun";
-  dword_60CC524C = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC524C = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5250 = (int)"shadowkun";
-  dword_60CC5254 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5254 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5258 = (int)"shadowkun";
-  dword_60CC525C = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC525C = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5260 = (int)&byte_60ABC94D;
-  dword_60CC5264 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5264 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5268 = (int)&byte_60ABC94D;
-  dword_60CC526C = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC526C = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5270 = (int)&byte_60ABC94D;
-  dword_60CC5274 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5274 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5278 = (int)&byte_60ABC94D;
-  dword_60CC527C = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC527C = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5280 = (int)&byte_60ABC94D;
-  dword_60CC5284 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5284 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5288 = (int)&byte_60ABC94D;
-  dword_60CC528C = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC528C = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5290 = (int)&byte_60ABC94D;
   dword_60CC5294 = 1099956224;
   dword_60CC5298 = 1095761920;
@@ -9639,7 +9639,7 @@ int __fastcall sub_607CB39C(int a1, int a2)
 
   v4 = **(_DWORD **)(a1 + 24);
   v5 = *(int (__fastcall **)(int, _DWORD *))(*(_DWORD *)v4 + 84);
-  v8[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v8[0] = &g_vtable_forsead_SafeStringBase_char;
   v8[1] = "bottom1";
   v6 = v5(v4, v8);
   return sub_60793F98(a1, a2, v6);
@@ -10518,7 +10518,7 @@ void sub_607CC958()
 {
   sead_SafeString v0; // [sp+10h] [bp-10h] BYREF
 
-  v0.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  v0.vtable = &g_vtable_forsead_SafeStringBase_char;
   v0.cstr = (char *)&unk_60ADC29E;
   Profile_Profile(&stru_60CC5380, sub_607CB7B4, 0x1BAu, &v0, &unk_60B0D0C4, 0);
 }
@@ -10814,11 +10814,11 @@ int __fastcall sub_607CD09C(int a1)
   float v16; // [sp+24h] [bp-1Ch] BYREF
   float v17; // [sp+28h] [bp-18h]
 
-  v14 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase<char>);
+  v14 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase_char);
   v15 = COERCE_FLOAT("tongue_tip");
   v2 = (float *)(a1 + 11368);
   sub_60793F04(*(_DWORD *)(a1 + 11368), &v16, &v14);
-  v12 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase<char>);
+  v12 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase_char);
   v13 = COERCE_FLOAT("tongue_1");
   sub_60793F04(*(_DWORD *)v2, &v14, &v12);
   result = (int)(v2 - 2814);
@@ -10866,7 +10866,7 @@ int __fastcall sub_607CD1D4(int a1)
   float v17; // [sp+40h] [bp-10h]
   float v18; // [sp+44h] [bp-Ch]
 
-  v7 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase<char>);
+  v7 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase_char);
   v8 = COERCE_FLOAT("tongue_1");
   (*(void (__fastcall **)(_DWORD, float *, float *))(**(_DWORD **)(a1 + 11368) + 144))(*(_DWORD *)(a1 + 11368), v9, &v7);
   v10 = v10 + (float)((float)((float)(v9[1] * 3.0) + (float)(v9[0] * 5.0)) + (float)(v9[2] * 0.0));
@@ -13039,7 +13039,7 @@ int __fastcall sub_607D044C(int a1, int a2)
 {
   _DWORD v3[4]; // [sp+0h] [bp-10h] BYREF
 
-  v3[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v3[0] = &g_vtable_forsead_SafeStringBase_char;
   v3[1] = "tongue_tip";
   (*(void (__fastcall **)(_DWORD, int, _DWORD *))(**(_DWORD **)(a1 + 11368) + 144))(*(_DWORD *)(a1 + 11368), a2, v3);
   return 1;
@@ -13054,7 +13054,7 @@ int __fastcall sub_607D049C(int a1, int a2)
 {
   _DWORD v3[4]; // [sp+0h] [bp-10h] BYREF
 
-  v3[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v3[0] = &g_vtable_forsead_SafeStringBase_char;
   v3[1] = "mouth_1";
   (*(void (__fastcall **)(_DWORD, int, _DWORD *))(**(_DWORD **)(a1 + 11368) + 144))(*(_DWORD *)(a1 + 11368), a2, v3);
   return 1;
@@ -13693,7 +13693,7 @@ int __fastcall sub_607D15F0(int a1)
   v3 = (_BYTE *)(a1 + 11468);
   if ( *(int *)(a1 + 11464) < 5 && !*v3 )
     return 0;
-  v17 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase<char>);
+  v17 = COERCE_FLOAT(&g_vtable_forsead_SafeStringBase_char);
   v18 = COERCE_FLOAT("spin");
   (*(void (__fastcall **)(_DWORD, float *, float *))(**(_DWORD **)(a1 + 11368) + 144))(
     *(_DWORD *)(a1 + 11368),
@@ -14462,7 +14462,7 @@ int *sub_607D2E14()
 {
   sead_SafeString v1; // [sp+10h] [bp-10h] BYREF
 
-  v1.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  v1.vtable = &g_vtable_forsead_SafeStringBase_char;
   v1.cstr = "ヨッシーの炎";
   Profile_Profile(&stru_60CC5418, YoshiFlame_YoshiFlame, 0x1DEu, &v1, &unk_60B0D334, 34);
   dword_60CC5430 = 1067869798;
@@ -14690,7 +14690,7 @@ int __fastcall sub_607D3560(int a1)
   *(_DWORD *)(a1 + 100) = *(_DWORD *)(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 1100))(a1);
   *(_DWORD *)(a1 + 96) = -1065353216;
   sub_60773F4C(a1);
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "face_1";
   (*(void (__fastcall **)(_DWORD, _BYTE *, int (***)()))(**(_DWORD **)(a1 + 11368) + 144))(
     *(_DWORD *)(a1 + 11368),
@@ -15463,22 +15463,22 @@ LABEL_5:
 /* Recovered from main.idb: VA 0x607D4748  RVA 0x007D4748  size 0xAC */
 int sub_607D4748()
 {
-  dword_60CC5468 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5468 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC546C = (int)"Yoshi_TexGreen";
-  dword_60CC5470 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5470 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5474 = (int)"Yoshi_TexGreen";
-  dword_60CC5478 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5478 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC547C = (int)"Yoshi_TexGreen";
-  dword_60CC5480 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5480 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5484 = (int)"Yoshi_TexGreen";
   sub_60000288();
-  dword_60CC5448 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5448 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC544C = (int)"YoshiAnm";
-  dword_60CC5450 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5450 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5454 = (int)"YB_model";
-  dword_60CC5458 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5458 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC545C = (int)"mat_yoshitongue";
-  dword_60CC5460 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  dword_60CC5460 = (int)&g_vtable_forsead_SafeStringBase_char;
   dword_60CC5464 = (int)"face_1";
   dword_60CC5440 = -327680000;
   dword_60CC5444 = -327680000;
@@ -15606,7 +15606,7 @@ int __fastcall sub_607D4AF8(_DWORD *a1, int a2)
     if ( v6 > 1 )
       ++v7;
     v8 = *v7;
-    v9[0] = &g_vtable_forsead_SafeStringBase<char>;
+    v9[0] = &g_vtable_forsead_SafeStringBase_char;
     v9[1] = "YB_wait";
     TexAnim_play(v8, v5, v9);
     AnimationCtrl_setRepeat((ModelAnimation *)(v8 + 4), 1);
@@ -15969,7 +15969,7 @@ int __fastcall sub_607D596C(int a1)
   v1 = a1;
   if ( *(_DWORD *)(a1 + 324) == 1 )
   {
-    v26.n64_u32[0] = (unsigned __int32)&g_vtable_forsead_SafeStringBase<char>;
+    v26.n64_u32[0] = (unsigned __int32)&g_vtable_forsead_SafeStringBase_char;
     v26.n64_u32[1] = (unsigned __int32)"yoshi_all_root";
     sub_60793F04(a1, v34, &v26);
     if ( *(_BYTE *)(v1 + 340) )
@@ -18846,7 +18846,7 @@ int __fastcall sub_607DADE0(int a1, int a2)
   *(_DWORD *)(a1 + 16616) = 1015580809;
   *(_DWORD *)(a1 + 16620) = 0;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 16624));
-  *(_DWORD *)(a1 + 16640) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 16640) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 16644) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 16624) = off_60C5E9A4;
   *(_DWORD *)(a1 + 16648) = 0;
@@ -19102,7 +19102,7 @@ int __fastcall sub_607DB2B4(_DWORD *a1)
   a1[4134] = 1;
   a1[4135] = 0;
   v9 = __operator_new(0x94u);
-  v13[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v13[0] = &g_vtable_forsead_SafeStringBase_char;
   v13[1] = "Lp_Sys_VibrationThread";
   v10 = (_DWORD *)__operator_new(0x10u);
   v10[1] = a1;
@@ -22185,7 +22185,7 @@ int __fastcall sub_607DF208(int a1)
     sub_6043FCB8(dword_60C9CC80, 0);
   }
   v6 = 1;
-  str1.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  str1.vtable = &g_vtable_forsead_SafeStringBase_char;
   str1.cstr = "PtclMgr";
   v7 = sead_ExpHeap_create(0, (int)&str1, 0, 4, 1, 0);
   v8 = v7;
@@ -22213,41 +22213,41 @@ int __fastcall sub_607DF208(int a1)
   }
   if ( v10 )
     (*(void (__fastcall **)(int, int *))(*(_DWORD *)v10 + 8))(v10, &dword_60C9BED8);
-  str1.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  str1.vtable = &g_vtable_forsead_SafeStringBase_char;
   str1.cstr = "ActorResLoader";
   v12 = (void *)sead_ExpHeap_create(0, (int)&str1, 0, 4, 1, 0);
-  str1.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  str1.vtable = &g_vtable_forsead_SafeStringBase_char;
   str1.cstr = "Pack/jyotyuActorPack.pack";
   ArchiveManagerMaybe_loadPack(ArchiveManagerMaybe_instance, (int)&str1, (int)v12);
-  str1.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  str2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  str1.vtable = &g_vtable_forsead_SafeStringBase_char;
+  str2.vtable = &g_vtable_forsead_SafeStringBase_char;
   str1.cstr = "Pa0_jyotyu";
   str2.cstr = "Unit/Pa0_jyotyu.szs";
   ArchiveManager_loadSzs(ArchiveManagerMaybe_instance, &str1, &str2, v12, 1);
-  str1.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  str2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  str1.vtable = &g_vtable_forsead_SafeStringBase_char;
+  str2.vtable = &g_vtable_forsead_SafeStringBase_char;
   str1.cstr = "Pa0_jyotyu_chika";
   str2.cstr = "Unit/Pa0_jyotyu_chika.szs";
   ArchiveManager_loadSzs(ArchiveManagerMaybe_instance, &str1, &str2, v12, 1);
-  str1.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  str2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  str1.vtable = &g_vtable_forsead_SafeStringBase_char;
+  str2.vtable = &g_vtable_forsead_SafeStringBase_char;
   str1.cstr = "Pa0_jyotyu_setsugen";
   str2.cstr = "Unit/Pa0_jyotyu_setsugen.szs";
   ArchiveManager_loadSzs(ArchiveManagerMaybe_instance, &str1, &str2, v12, 1);
-  str1.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  str2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  str1.vtable = &g_vtable_forsead_SafeStringBase_char;
+  str2.vtable = &g_vtable_forsead_SafeStringBase_char;
   str1.cstr = "Pa0_jyotyu_yougan";
   str2.cstr = "Unit/Pa0_jyotyu_yougan.szs";
   ArchiveManager_loadSzs(ArchiveManagerMaybe_instance, &str1, &str2, v12, 1);
-  str1.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  str2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  str1.vtable = &g_vtable_forsead_SafeStringBase_char;
+  str2.vtable = &g_vtable_forsead_SafeStringBase_char;
   str1.cstr = "Pa0_jyotyu_yougan2";
   str2.cstr = "Unit/Pa0_jyotyu_yougan2.szs";
   ArchiveManager_loadSzs(ArchiveManagerMaybe_instance, &str1, &str2, v12, 1);
   (*(void (__fastcall **)(void *))(*(_DWORD *)v12 + 20))(v12);
   LoadProfileArchives(0, 0);
-  str1.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  str2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  str1.vtable = &g_vtable_forsead_SafeStringBase_char;
+  str2.vtable = &g_vtable_forsead_SafeStringBase_char;
   str1.cstr = "Mask";
   str2.cstr = "Mask";
   result = sub_6043B2D8(ResourceMgrRelated_instance, &str1, (int)&str2, 0);
@@ -22288,7 +22288,7 @@ int __fastcall sub_607DF724(_DWORD *a1)
   BYTE1(v6[5 * v6[22] + 6]) = 1;
   v6[28] = a1 + 74;
   sub_608EF744(a1, v6);
-  v6[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v6[0] = &g_vtable_forsead_SafeStringBase_char;
   v6[1] = "BootScene";
   a1[67] = a1;
   a1[68] = sub_607DF868;
@@ -22368,22 +22368,22 @@ int *sub_607DF8C4()
     v2 = dword_60CC6E04;
     if ( dword_60CC6E04 )
     {
-      v7 = &g_vtable_forsead_SafeStringBase<char>;
+      v7 = &g_vtable_forsead_SafeStringBase_char;
       v8 = "boot";
       sub_6074E918(dword_60CBEA44, &v7);
       v3 = *(_DWORD *)(*(_DWORD *)(v2 + 40) + 44124);
-      v7 = &g_vtable_forsead_SafeStringBase<char>;
+      v7 = &g_vtable_forsead_SafeStringBase_char;
       v8 = "AppBootCnt";
       sub_6074EC10(v1, &v7, v3);
-      v7 = &g_vtable_forsead_SafeStringBase<char>;
+      v7 = &g_vtable_forsead_SafeStringBase_char;
       v8 = "RomVersion";
       sub_6074EC10(v1, &v7, 100);
-      v7 = &g_vtable_forsead_SafeStringBase<char>;
+      v7 = &g_vtable_forsead_SafeStringBase_char;
       v8 = "RlId";
       v4 = sub_608FD248();
       v5 = (nn_oe *)sub_6074EC10(v1, &v7, v4);
       OperationMode = nn_oe_GetOperationMode(v5);
-      v7 = &g_vtable_forsead_SafeStringBase<char>;
+      v7 = &g_vtable_forsead_SafeStringBase_char;
       if ( OperationMode != 1 )
         OperationMode = 0;
       v8 = "TVConnected";
@@ -23558,7 +23558,7 @@ int __fastcall sub_607E1218(int a1)
   sub_6045BF58(a1 + 2164, 3);
   sub_6045BF58(a1 + 2568, 4);
   v2 = dword_60CD0B40;
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "ChallengeResultScene";
   *(_DWORD *)(a1 + 528) = a1;
   *(_DWORD *)(a1 + 532) = sub_607E14F4;
@@ -23570,7 +23570,7 @@ int __fastcall sub_607E1218(int a1)
   if ( *(_DWORD *)(v2 + 32) > 5u )
     v3 += 5;
   sub_6095537C(*v3, 1, a1 + 488);
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "ChallengeResultScene";
   *(_DWORD *)(a1 + 596) = a1;
   *(_DWORD *)(a1 + 600) = sub_607E14FC;
@@ -23582,7 +23582,7 @@ int __fastcall sub_607E1218(int a1)
   if ( *(_DWORD *)(v2 + 32) > 7u )
     v4 += 7;
   sub_6095537C(*v4, 1, a1 + 556);
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "ChallengeResultSceneGather";
   *(_DWORD *)(a1 + 664) = a1;
   *(_DWORD *)(a1 + 668) = sub_607E1548;
@@ -24098,7 +24098,7 @@ int __fastcall sub_607E1F54(int a1)
   sub_6045BF58(a1 + 2028, 3);
   sub_6045BF58(a1 + 2432, 4);
   v2 = dword_60CD0B40;
-  v12[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v12[0] = &g_vtable_forsead_SafeStringBase_char;
   v12[1] = "ChallengeRetryScene";
   *(_DWORD *)(a1 + 528) = a1;
   *(_DWORD *)(a1 + 532) = sub_607E2120;
@@ -24570,7 +24570,7 @@ int __fastcall sub_607E2840(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC59FC);
   *(_DWORD *)(a1 + 192) = &off_60C269BC;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
-  *(_DWORD *)(a1 + 244) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 244) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 228) = off_60C5E9A4;
   *(_DWORD *)(a1 + 252) = 0;
@@ -24687,7 +24687,7 @@ StateMethodExecuter *__fastcall sub_607E2B48(int a1)
   sub_60815858(dword_60CC6B68, 3);
   *(_BYTE *)(dword_60C9BB38 + 628) = *(_BYTE *)(dword_60CC6D78 + 20) ^ 1;
   v2 = dword_60CD0B40;
-  a5[0] = (int)&g_vtable_forsead_SafeStringBase<char>;
+  a5[0] = (int)&g_vtable_forsead_SafeStringBase_char;
   a5[1] = (int)"ChallengeSelectScene2D";
   *(_DWORD *)(a1 + 268) = a1;
   *(_DWORD *)(a1 + 272) = sub_607E2D18;
@@ -25363,25 +25363,25 @@ int __fastcall sub_607E375C(_DWORD *a1)
 
   sub_60023F4C(a1);
   v2 = __operator_new(0x390u);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "DarkCloudDemo";
   sub_60443FE0(v2, &identifier);
   sub_60444108(v2, 3, 128, 5, 5, 0);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   v3 = dword_60CD0B40;
   identifier.cstr = "3D";
   v4 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v3, v4, 6, &identifier, 0, 0);
   sub_60443628(v4, v2);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "DepthShadow";
   v5 = __operator_new_al(0x1550u, 0, 4);
   sub_60446220();
   sub_60958220(v3, v5, 5, &identifier, 0, 0);
   sub_60443628(v5, v2);
   *(_BYTE *)(v5 + 5449) = 1;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "Reflection";
   v6 = __operator_new_al(0x898u, 0, 4);
   sub_60441B18();
@@ -25389,41 +25389,41 @@ int __fastcall sub_607E375C(_DWORD *a1)
   sub_60443628(v6, v2);
   sub_604269A8(dword_60C9BBD4, 0);
   sub_60819D20(dword_60CC6BF4);
-  path.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  path.vtable = &g_vtable_forsead_SafeStringBase_char;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeach";
   path.cstr = "Model/cobFlagPeach.Nin_NX_NVN.szs";
   ArchiveManager_loadSzs(ArchiveManagerMaybe_instance, &identifier, &path, 0, 1);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
+  path.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeach";
   path.cstr = "cobFlagPeach";
   sub_6043B2D8(ResourceMgrRelated_instance, &identifier, (int)&path, 0);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeach";
   v7 = (void *)LoadResource(ResourceMgrRelated_instance, &identifier);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeach";
   Model = (void *)Resource_getModel(v7, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v9 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v10 = ModelWrapper_ctor(v9, Model, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v10, (int)v7, 0, 0);
   a1[642] = v9;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeach";
   v11 = (void *)Resource_getModel(v7, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v12 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v13 = ModelWrapper_ctor(v12, v11, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v13, (int)v7, 0, 0);
   a1[643] = v12;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeach";
   v14 = (void *)Resource_getModel(v7, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v15 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v16 = ModelWrapper_ctor(v15, v14, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v16, (int)v7, 0, 0);
   a1[644] = v15;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeach";
   v17 = (void *)Resource_getModel(v7, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v18 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
@@ -25431,19 +25431,19 @@ int __fastcall sub_607E375C(_DWORD *a1)
   ModelWrapper_setup(v19, (int)v7, 0, 0);
   a1[645] = v18;
   v20 = a1[642];
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeachWait";
   sub_6040F4B8(v20, &identifier, 1);
   v21 = a1[643];
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeachWait";
   sub_6040F4B8(v21, &identifier, 1);
   v22 = a1[644];
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeachWait";
   sub_6040F4B8(v22, &identifier, 1);
   v23 = a1[645];
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "cobFlagPeachWait";
   sub_6040F4B8(v23, &identifier, 1);
   sub_60427BC8(dword_60C9BBD4, *(_DWORD *)a1[642], 7, 0);
@@ -25549,36 +25549,36 @@ int __fastcall sub_607E375C(_DWORD *a1)
   v111 = -1004175360;
   (*(void (__fastcall **)(_DWORD, sead_SafeString *))(**(_DWORD **)a1[645] + 60))(*(_DWORD *)a1[645], &identifier);
   (*(void (__fastcall **)(_DWORD, sead_SafeString *))(**(_DWORD **)a1[645] + 68))(*(_DWORD *)a1[645], &path);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
+  path.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a";
   path.cstr = "CS_W8a";
   sub_6043B2D8(ResourceMgrRelated_instance, &identifier, (int)&path, 0);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a";
   v36 = (void *)LoadResource(ResourceMgrRelated_instance, &identifier);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_World";
   v37 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v38 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v39 = ModelWrapper_ctor(v38, v37, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v39, (int)v36, 0, 0);
   a1[639] = v38;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_Castle";
   v40 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v41 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v42 = ModelWrapper_ctor(v41, v40, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v42, (int)v36, 0, 0);
   a1[640] = v41;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_Wall";
   v43 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v44 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v45 = ModelWrapper_ctor(v44, v43, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v45, (int)v36, 0, 0);
   a1[641] = v44;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_Ocean";
   v46 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v47 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
@@ -25586,7 +25586,7 @@ int __fastcall sub_607E375C(_DWORD *a1)
   ModelWrapper_setup(v48, (int)v36, 0, 0);
   a1[646] = v47;
   v49 = (int)*v47->shuAnims.animations;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_Ocean";
   sub_60446088(v49, (int)v36, (int)&identifier);
   AnimationCtrl_setRepeat((ModelAnimation *)(**(_DWORD **)(a1[646] + 28) + 4), 1);
@@ -25595,17 +25595,17 @@ int __fastcall sub_607E375C(_DWORD *a1)
   *(_DWORD *)(v50 + 28) |= 2u;
   *(_DWORD *)(**(_DWORD **)(a1[646] + 28) + 24) = 1065353216;
   sub_6041838C((ModelAnimation *)(**(_DWORD **)(a1[646] + 28) + 4));
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_Synchro";
   v51 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v52 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v53 = ModelWrapper_ctor(v52, v51, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v53, (int)v36, 0, 0);
   a1[647] = v52;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_Synchro";
   sub_6040F4B8(v52, &identifier, 1);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_CloudBG";
   v54 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v55 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
@@ -25613,7 +25613,7 @@ int __fastcall sub_607E375C(_DWORD *a1)
   ModelWrapper_setup(v56, (int)v36, 0, 0);
   a1[648] = v55;
   v57 = (int)*v55->shuAnims.animations;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_CloudBG";
   sub_60446088(v57, (int)v36, (int)&identifier);
   AnimationCtrl_setRepeat((ModelAnimation *)(**(_DWORD **)(a1[648] + 28) + 4), 1);
@@ -25628,7 +25628,7 @@ int __fastcall sub_607E375C(_DWORD *a1)
   if ( v60 > 1 )
     ++v61;
   v62 = *v61;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_CloudBG_EndDemo";
   ShuAnim_play(v62, (int)v36, (int)&identifier);
   v63 = a1[648];
@@ -25657,18 +25657,18 @@ int __fastcall sub_607E375C(_DWORD *a1)
   if ( v74 > 1 )
     v75 += 4;
   sub_6041838C((ModelAnimation *)(*(_DWORD *)v75 + 4));
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_DarkCloud_Demo2";
   v76 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
   v77 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v78 = ModelWrapper_ctor(v77, v76, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v78, (int)v36, 0, 0);
   a1[649] = v77;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_DarkCloud_EndDemo";
   sub_6040F4B8(v77, &identifier, 0);
   v79 = **(_DWORD **)(a1[649] + 28);
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_DarkCloud_EndDemo";
   sub_60446088(v79, (int)v36, (int)&identifier);
   AnimationCtrl_setRepeat((ModelAnimation *)(**(_DWORD **)(a1[649] + 28) + 4), 0);
@@ -25683,7 +25683,7 @@ int __fastcall sub_607E375C(_DWORD *a1)
   if ( v82 > 1 )
     ++v83;
   v84 = *v83;
-  identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  identifier.vtable = &g_vtable_forsead_SafeStringBase_char;
   identifier.cstr = "CS_W8a_DarkCloud_EndDemo";
   ShuAnim_play(v84, (int)v36, (int)&identifier);
   v85 = a1[649];
@@ -25744,7 +25744,7 @@ int __fastcall sub_607E4720(float *a1)
 
   *(_BYTE *)(dword_60C9BB38 + 628) = 0;
   v2 = dword_60CD0B40;
-  v19[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v19[0] = &g_vtable_forsead_SafeStringBase_char;
   v19[1] = "DarkCloudDemoScene";
   *((_DWORD *)a1 + 58) = a1;
   *((_DWORD *)a1 + 59) = sub_607E4B1C;
@@ -26273,23 +26273,23 @@ int __fastcall sub_607E55DC(int a1)
   v174 = (_DWORD *)a1;
   *(_BYTE *)(a1 + 1728768) = 0;
   v3 = __operator_new(0x390u);
-  a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  a2.vtable = &g_vtable_forsead_SafeStringBase_char;
   a2.cstr = "Demo";
   sub_60443FE0(v3, &a2);
   v4 = __operator_new(0x390u);
-  a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  a2.vtable = &g_vtable_forsead_SafeStringBase_char;
   a2.cstr = "DemoDV";
   sub_60443FE0(v4, &a2);
   sub_60444108(v3, 1, 1024, 1, 1, 0);
   sub_60444108(v4, 1, 1024, 1, 1, 0);
-  a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  a2.vtable = &g_vtable_forsead_SafeStringBase_char;
   v5 = dword_60CD0B40;
   a2.cstr = "3D";
   v6 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v5, v6, 7, &a2, 0, 0);
   sub_60443628(v6, v3);
-  a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  a2.vtable = &g_vtable_forsead_SafeStringBase_char;
   a2.cstr = "DV";
   v7 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
@@ -26297,26 +26297,26 @@ int __fastcall sub_607E55DC(int a1)
   sub_60443628(v7, v4);
   if ( (*(_BYTE *)(dword_60CC6D78 + 109048) & 0x7F) != 0 )
   {
-    path.vtable = &g_vtable_forsead_SafeStringBase<char>;
-    a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    path.vtable = &g_vtable_forsead_SafeStringBase_char;
+    a2.vtable = &g_vtable_forsead_SafeStringBase_char;
     a2.cstr = "demoData";
     path.cstr = "Demo/010data.sarc";
     ArchiveManager_loadSzs(ArchiveManagerMaybe_instance, &a2, &path, 0, 0);
-    a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    a2.vtable = &g_vtable_forsead_SafeStringBase_char;
     a2.cstr = "demoData";
-    path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    path.vtable = &g_vtable_forsead_SafeStringBase_char;
     v8 = "010data.bin";
   }
   else
   {
-    path.vtable = &g_vtable_forsead_SafeStringBase<char>;
-    a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    path.vtable = &g_vtable_forsead_SafeStringBase_char;
+    a2.vtable = &g_vtable_forsead_SafeStringBase_char;
     a2.cstr = "demoData";
     path.cstr = "Demo/000data.sarc";
     ArchiveManager_loadSzs(ArchiveManagerMaybe_instance, &a2, &path, 0, 0);
-    a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    a2.vtable = &g_vtable_forsead_SafeStringBase_char;
     a2.cstr = "demoData";
-    path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    path.vtable = &g_vtable_forsead_SafeStringBase_char;
     v8 = "000data.bin";
   }
   path.cstr = v8;
@@ -26328,8 +26328,8 @@ int __fastcall sub_607E55DC(int a1)
   if ( v11 )
   {
     v12 = ArchiveManagerMaybe_instance;
-    a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
-    path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    a2.vtable = &g_vtable_forsead_SafeStringBase_char;
+    path.vtable = &g_vtable_forsead_SafeStringBase_char;
     a2.cstr = "demo";
     if ( v11 == 10 )
       v13 = "Demo/Ending.szs";
@@ -26339,16 +26339,16 @@ int __fastcall sub_607E55DC(int a1)
   else
   {
     v12 = ArchiveManagerMaybe_instance;
-    a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
-    path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    a2.vtable = &g_vtable_forsead_SafeStringBase_char;
+    path.vtable = &g_vtable_forsead_SafeStringBase_char;
     a2.cstr = "demo";
     v13 = "Demo/Opening.szs";
   }
   path.cstr = v13;
   ArchiveManager_loadSzs(v12, &a2, &path, 0, 1);
   v14 = 128;
-  a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  a2.vtable = &g_vtable_forsead_SafeStringBase_char;
+  path.vtable = &g_vtable_forsead_SafeStringBase_char;
   a2.cstr = "demo";
   path.cstr = "demo";
   v15 = sub_6043B8B0(ResourceMgrRelated_instance, (int)&a2, (int)(v174 + 856), 128, &path, 0);
@@ -26386,7 +26386,7 @@ int __fastcall sub_607E55DC(int a1)
       v172 = (char *)v10 + v18 + 1729000;
       v22 = (_DWORD *)v21[856];
       v24 = *(_DWORD *)(*(_DWORD *)(v22[5] + 40) + 16);
-      a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+      a2.vtable = &g_vtable_forsead_SafeStringBase_char;
       a2.cstr = (char *)(v24 + 2);
       modela = (void *)Resource_getModel2(v22, &a2, 1, 1, 1, 1, 0, 0, 0);
       v10 = v174;
@@ -26399,8 +26399,8 @@ int __fastcall sub_607E55DC(int a1)
         v27 += v18;
       *v27 = v25;
       v28 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*v23 + 20) + 40) + 16);
-      a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
-      path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+      a2.vtable = &g_vtable_forsead_SafeStringBase_char;
+      path.vtable = &g_vtable_forsead_SafeStringBase_char;
       a2.cstr = (char *)(v28 + 2);
       path.cstr = "DV_";
       if ( sub_6018506C(&a2, &path) >= 0 )
@@ -26409,15 +26409,15 @@ int __fastcall sub_607E55DC(int a1)
       v29 = v173 + 4136;
       v173[4264] = 0;
       v30 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*v23 + 20) + 40) + 16);
-      a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
-      path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+      a2.vtable = &g_vtable_forsead_SafeStringBase_char;
+      path.vtable = &g_vtable_forsead_SafeStringBase_char;
       a2.cstr = (char *)(v30 + 2);
       path.cstr = "effect";
       if ( sub_6018506C(&a2, &path) >= 0 )
         *v29 = 1;
       v31 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*v23 + 20) + 40) + 16);
-      a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
-      path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+      a2.vtable = &g_vtable_forsead_SafeStringBase_char;
+      path.vtable = &g_vtable_forsead_SafeStringBase_char;
       a2.cstr = (char *)(v31 + 2);
       path.cstr = "DV_effect";
       v32 = sub_6018506C(&a2, &path);
@@ -26435,8 +26435,8 @@ int __fastcall sub_607E55DC(int a1)
       v35 = &v173[v34];
       v173[v34 + 128] = 0;
       v36 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*v23 + 20) + 40) + 16);
-      a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
-      path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+      a2.vtable = &g_vtable_forsead_SafeStringBase_char;
+      path.vtable = &g_vtable_forsead_SafeStringBase_char;
       a2.cstr = (char *)(v36 + 2);
       path.cstr = "sound";
       if ( sub_6018506C(&a2, &path) >= 0 )
@@ -26464,10 +26464,10 @@ int __fastcall sub_607E55DC(int a1)
   }
   if ( *(_BYTE *)(dword_60CC6D8C + 17) )
   {
-    a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    a2.vtable = &g_vtable_forsead_SafeStringBase_char;
     a2.cstr = "MarioMdl";
     v40 = (void *)LoadResource(ResourceMgrRelated_instance, &a2);
-    a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    a2.vtable = &g_vtable_forsead_SafeStringBase_char;
     a2.cstr = "MH_model";
     Model2 = (void *)Resource_getModel2(v40, &a2, 1, 1, 1, 1, 0, 0, 0);
     v42 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
@@ -26813,8 +26813,8 @@ LABEL_189:
     }
     while ( (int)v50 < *v169 );
   }
-  a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
-  path.vtable = &g_vtable_forsead_SafeStringBase<char>;
+  a2.vtable = &g_vtable_forsead_SafeStringBase_char;
+  path.vtable = &g_vtable_forsead_SafeStringBase_char;
   a2.cstr = "demo";
   path.cstr = "Camera.bfres";
   v121 = (nn_util_BinaryFileHeader *)sub_608226EC(ArchiveManagerMaybe_instance, &a2, &path, 0);
@@ -26957,50 +26957,50 @@ LABEL_189:
   v174[431249] = 1065353216;
   if ( (*(_BYTE *)(dword_60CC6D78 + 109048) & 0x7F) != 0 )
   {
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko";
     v174[432282] = sub_6042105C(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko_e1_fog";
     v174[432285] = sub_6042105C(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko";
     v174[432288] = sub_60421114(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko_e2_fog";
     v174[432286] = sub_6042105C(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko_e3_fog";
     v152 = sub_6042105C(dword_60C9BAFC, nptr, 0);
     LOWORD(v153) = 25212;
   }
   else
   {
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko";
     v174[432282] = sub_6042105C(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko_fog";
     v174[432285] = sub_6042105C(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko";
     v174[432288] = sub_60421114(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Castle";
     v174[432283] = sub_6042105C(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Castle_fog";
     v174[432286] = sub_6042105C(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Castle";
     v174[432289] = sub_60421114(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Isiyama";
     v174[432284] = sub_6042105C(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Isiyama_fog";
     v174[432287] = sub_6042105C(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Isiyama";
     v152 = sub_60421114(dword_60C9BAFC, nptr, 0);
     LOWORD(v153) = 25224;
@@ -27020,13 +27020,13 @@ LABEL_189:
   sub_60426E38(dword_60C9BBD4, v154);
   if ( (*(_BYTE *)(dword_60CC6D78 + 109048) & 0x7F) != 0 )
   {
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko_e1";
     v174[432291] = sub_604210B8(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko_e2";
     v174[432292] = sub_604210B8(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko_e3";
     v174[432293] = sub_604210B8(dword_60C9BAFC, nptr, 0);
     sub_60951E50(&v177);
@@ -27050,13 +27050,13 @@ LABEL_189:
   }
   else
   {
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Kinoko";
     v174[432291] = sub_604210B8(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Castle";
     v174[432292] = sub_604210B8(dword_60C9BAFC, nptr, 0);
-    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase<char>;
+    *(_DWORD *)nptr = &g_vtable_forsead_SafeStringBase_char;
     v183 = "demo_Isiyama";
     v174[432293] = sub_604210B8(dword_60C9BAFC, nptr, 0);
     sub_60951E50(&v178);
@@ -27165,7 +27165,7 @@ void __fastcall sub_607E74E0(int a1)
 
   *(_BYTE *)(dword_60C9BB38 + 628) = *(_BYTE *)(dword_60CC6D78 + 20) ^ 1;
   v2 = dword_60CD0B40;
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = "DemoTestScene";
   *(_DWORD *)(a1 + 368) = a1;
   *(_DWORD *)(a1 + 372) = sub_607E792C;
@@ -27177,7 +27177,7 @@ void __fastcall sub_607E74E0(int a1)
   if ( *(_DWORD *)(v2 + 32) > 5u )
     v3 += 5;
   sub_609553AC(*v3, a1 + 328);
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = "DemoTestScene";
   *(_DWORD *)(a1 + 436) = a1;
   *(_DWORD *)(a1 + 440) = sub_607E7AA8;
@@ -27189,7 +27189,7 @@ void __fastcall sub_607E74E0(int a1)
   if ( *(_DWORD *)(v2 + 32) > 5u )
     v4 += 5;
   sub_6095537C(*v4, 5, a1 + 396);
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = "DemoTestScene";
   *(_DWORD *)(a1 + 232) = a1;
   *(_DWORD *)(a1 + 236) = sub_607E7B48;
@@ -27198,7 +27198,7 @@ void __fastcall sub_607E74E0(int a1)
   sead_SafeStringBase_char::operator=(a1 + 208, (int)&v15);
   *(_DWORD *)(a1 + 216) = 1;
   sub_609553AC(**(_DWORD **)(v2 + 36), a1 + 192);
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = "DemoTestScene";
   *(_DWORD *)(a1 + 300) = a1;
   *(_DWORD *)(a1 + 304) = sub_607E8134;
@@ -27210,7 +27210,7 @@ void __fastcall sub_607E74E0(int a1)
   if ( *(_DWORD *)(v2 + 32) > 7u )
     v5 += 7;
   sub_609553AC(*v5, a1 + 260);
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = "DemoTestScene";
   *(_DWORD *)(a1 + 3980) = a1;
   *(_DWORD *)(a1 + 3984) = sub_607E815C;
@@ -27226,7 +27226,7 @@ void __fastcall sub_607E74E0(int a1)
   if ( *(_DWORD *)(v2 + 32) > 0xEu )
     v7 += 56;
   *(_BYTE *)(*(_DWORD *)v7 + 91) = 4;
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = "DemoTestScene_prepareFilterAA_";
   *(_DWORD *)(a1 + 504) = a1;
   *(_DWORD *)(a1 + 508) = sub_607E81F0;
@@ -27239,7 +27239,7 @@ void __fastcall sub_607E74E0(int a1)
   if ( *(_DWORD *)(v2 + 32) > 5u )
     v8 += 5;
   sub_6095537C(*v8, 2, a1 + 464);
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = "DemoTestScene_applyFilterAA_";
   *(_DWORD *)(a1 + 572) = a1;
   *(_DWORD *)(a1 + 576) = sub_607E8204;
@@ -28441,7 +28441,7 @@ LABEL_144:
         v106 += 22;
       v107 = **v106;
       v108 = *(int (__fastcall **)(int, int *))(*(_DWORD *)v107 + 84);
-      v208 = (int)&g_vtable_forsead_SafeStringBase<char>;
+      v208 = (int)&g_vtable_forsead_SafeStringBase_char;
       s = "smallhill";
       v109 = v108(v107, &v208);
       (*(void (__fastcall **)(int, int, int))(*(_DWORD *)v107 + 108))(v107, v109, v1 + 1729188);
@@ -30161,7 +30161,7 @@ int __fastcall sub_607EC1F0(_DWORD *a1)
   _DWORD *v2; // r0
   _DWORD v4[4]; // [sp+0h] [bp-10h] BYREF
 
-  v4[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v4[0] = &g_vtable_forsead_SafeStringBase_char;
   v4[1] = "GameOverScene";
   a1[67] = a1;
   a1[68] = sub_607EC29C;
@@ -31440,17 +31440,17 @@ int __fastcall sub_607EDD38(int a1)
   sub_60426530(dword_60C9BBD4, 0);
   *(_BYTE *)(dword_60C99DEC + 522) = 0;
   v6 = __operator_new(0x390u);
-  v14 = &g_vtable_forsead_SafeStringBase<char>;
+  v14 = &g_vtable_forsead_SafeStringBase_char;
   v15 = "3D";
   sub_60443FE0(v6, &v14);
   sub_60444108(v6, 1, 128, 5, 26, 0);
-  v14 = &g_vtable_forsead_SafeStringBase<char>;
+  v14 = &g_vtable_forsead_SafeStringBase_char;
   v15 = "3D";
   v7 = dword_60CD0B40;
   v8 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v7, v8, 6, &v14, 0, 0);
-  v14 = &g_vtable_forsead_SafeStringBase<char>;
+  v14 = &g_vtable_forsead_SafeStringBase_char;
   v15 = "BackLayout";
   v9 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v9, 0, 0x1A4u);
@@ -31458,7 +31458,7 @@ int __fastcall sub_607EDD38(int a1)
   *v9 = off_60BF9FE4;
   v9[4] = &off_60BFA03C;
   sub_60958220(v7, v9, 5, &v14, 0, 0);
-  v14 = &g_vtable_forsead_SafeStringBase<char>;
+  v14 = &g_vtable_forsead_SafeStringBase_char;
   v15 = "FrontLayout";
   v10 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v10, 0, 0x1A4u);
@@ -31533,7 +31533,7 @@ int __fastcall sub_607EE160(int a1)
   *(_BYTE *)(v2 + 109056) = 0;
   nullsub_20();
   v3 = dword_60CD0B40;
-  v18 = &g_vtable_forsead_SafeStringBase<char>;
+  v18 = &g_vtable_forsead_SafeStringBase_char;
   v19 = "GameSetupScene";
   *(_DWORD *)(a1 + 476) = a1;
   *(_DWORD *)(a1 + 480) = sub_607EE584;
@@ -31542,7 +31542,7 @@ int __fastcall sub_607EE160(int a1)
   sead_SafeStringBase_char::operator=(a1 + 452, (int)&v18);
   *(_DWORD *)(a1 + 460) = 2;
   sub_6095537C(**(_DWORD **)(v3 + 36), 0, a1 + 436);
-  v18 = &g_vtable_forsead_SafeStringBase<char>;
+  v18 = &g_vtable_forsead_SafeStringBase_char;
   v19 = "GameSetupSceneBack";
   *(_DWORD *)(a1 + 272) = a1;
   *(_DWORD *)(a1 + 276) = sub_607EE67C;
@@ -31554,7 +31554,7 @@ int __fastcall sub_607EE160(int a1)
   if ( *(_DWORD *)(v3 + 32) > 5u )
     v4 += 5;
   sub_6095537C(*v4, 1, a1 + 232);
-  v18 = &g_vtable_forsead_SafeStringBase<char>;
+  v18 = &g_vtable_forsead_SafeStringBase_char;
   v19 = "GameSetupScene3DUI";
   *(_DWORD *)(a1 + 340) = a1;
   *(_DWORD *)(a1 + 344) = sub_607EE820;
@@ -31566,7 +31566,7 @@ int __fastcall sub_607EE160(int a1)
   if ( *(_DWORD *)(v3 + 32) > 6u )
     v5 += 6;
   sub_6095537C(*v5, 2, a1 + 300);
-  v18 = &g_vtable_forsead_SafeStringBase<char>;
+  v18 = &g_vtable_forsead_SafeStringBase_char;
   v19 = "GameSetupSceneFront";
   *(_DWORD *)(a1 + 408) = a1;
   *(_DWORD *)(a1 + 412) = sub_607EE85C;
@@ -32280,7 +32280,7 @@ int __fastcall sub_607EF3BC(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 2236), (StateExecuter *)(a1 + 2220), (StateBase *)&dword_60CC5DF0);
   *(_DWORD *)(a1 + 2216) = &off_60C2707C;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 2252));
-  *(_DWORD *)(a1 + 2268) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 2268) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 2272) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 2252) = off_60C5E9A4;
   *(_DWORD *)(a1 + 2276) = 0;
@@ -32291,7 +32291,7 @@ int __fastcall sub_607EF3BC(int a1, int a2)
   *(_DWORD *)(a1 + 2300) = 0;
   *(_DWORD *)(a1 + 2288) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 2320));
-  *(_DWORD *)(a1 + 2336) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 2336) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 2340) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 2320) = off_60C5E9A4;
   *(_DWORD *)(a1 + 2344) = 0;
@@ -32357,7 +32357,7 @@ int __fastcall sub_607EF620(int a1)
   const char *v7; // [sp+Ch] [bp-24h]
 
   v2 = dword_60CD0B40;
-  v6 = &g_vtable_forsead_SafeStringBase<char>;
+  v6 = &g_vtable_forsead_SafeStringBase_char;
   v7 = "BackLayout";
   v3 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v3, 0, 0x1A4u);
@@ -32365,7 +32365,7 @@ int __fastcall sub_607EF620(int a1)
   *v3 = off_60BF9FE4;
   v3[4] = &off_60BFA03C;
   sub_60958220(v2, v3, 5, &v6, 0, 0);
-  v6 = &g_vtable_forsead_SafeStringBase<char>;
+  v6 = &g_vtable_forsead_SafeStringBase_char;
   v7 = "FrontLayout";
   v4 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v4, 0, 0x1A4u);
@@ -32404,7 +32404,7 @@ int __fastcall sub_607EF794(int a1)
   const char *v13; // [sp+4h] [bp-24h]
 
   v2 = dword_60CD0B40;
-  v12 = &g_vtable_forsead_SafeStringBase<char>;
+  v12 = &g_vtable_forsead_SafeStringBase_char;
   v13 = "HelpMenuSceneBack2D";
   *(_DWORD *)(a1 + 2292) = a1;
   *(_DWORD *)(a1 + 2296) = sub_607EF984;
@@ -32416,7 +32416,7 @@ int __fastcall sub_607EF794(int a1)
   if ( *(_DWORD *)(v2 + 32) > 5u )
     v3 += 5;
   sub_6095537C(*v3, 1, a1 + 2252);
-  v12 = &g_vtable_forsead_SafeStringBase<char>;
+  v12 = &g_vtable_forsead_SafeStringBase_char;
   v13 = "HelpMenuSceneFront2D";
   *(_DWORD *)(a1 + 2360) = a1;
   *(_DWORD *)(a1 + 2364) = sub_607EF990;
@@ -32900,7 +32900,7 @@ int __fastcall sub_607EFFF8(int a1, int a2, const char *a3)
   sead_FaderTaskBase_FaderTaskBase(a1, a2, a3);
   *(_DWORD *)a1 = off_60C271A0;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 500));
-  *(_DWORD *)(a1 + 516) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 516) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 520) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 500) = off_60C5E9A4;
   *(_DWORD *)(a1 + 524) = 0;
@@ -32987,7 +32987,7 @@ int __fastcall sub_607F01E8(_DWORD *a1)
   _DWORD *v2; // r0
   _DWORD v4[6]; // [sp+0h] [bp-18h] BYREF
 
-  v4[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v4[0] = &g_vtable_forsead_SafeStringBase_char;
   v4[1] = "LayerFaderTask";
   a1[135] = a1;
   a1[136] = 100;
@@ -33114,7 +33114,7 @@ int __fastcall sub_607F0458(int a1, int a2)
   sead_FaderTaskBase_FaderTaskBase(a1, a2, "WipeFaderTask");
   *(_DWORD *)a1 = off_60C271A0;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 500));
-  *(_DWORD *)(a1 + 516) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 516) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 520) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 500) = off_60C5E9A4;
   *(_DWORD *)(a1 + 524) = 0;
@@ -33602,7 +33602,7 @@ StateMethodExecuter *__fastcall sub_607F0E3C(int a1, int a2, float *a3)
   nn_oe_SetExpectedVolumeBalance(ExpectedVolumeBalance, 1.0, v14);
   if ( ((unsigned int)&dword_60CC5EC0 & ~(1618939536 << v5) & 1) == 0 && _cxa_guard_acquire(&dword_60CC5EC0) )
   {
-    stru_60CC5EC8.vtable = &g_vtable_forsead_SafeStringBase<char>;
+    stru_60CC5EC8.vtable = &g_vtable_forsead_SafeStringBase_char;
     stru_60CC5EC8.cstr = "https://www-adala-%-hac.cdn.nintendo.net";
     _cxa_guard_release(&dword_60CC5EC0);
   }
@@ -34280,17 +34280,17 @@ int __fastcall sub_607F1F18(int a1)
   sub_60023F4C(a1);
   sub_60426530(dword_60C9BBD4, 0);
   v1 = __operator_new(0x390u);
-  v10 = &g_vtable_forsead_SafeStringBase<char>;
+  v10 = &g_vtable_forsead_SafeStringBase_char;
   v11 = "3D";
   sub_60443FE0(v1, &v10);
   sub_60444108(v1, 1, 128, 5, 26, 0);
-  v10 = &g_vtable_forsead_SafeStringBase<char>;
+  v10 = &g_vtable_forsead_SafeStringBase_char;
   v11 = "3D";
   v2 = dword_60CD0B40;
   v3 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v2, v3, 6, &v10, 0, 0);
-  v10 = &g_vtable_forsead_SafeStringBase<char>;
+  v10 = &g_vtable_forsead_SafeStringBase_char;
   v11 = "BackLayout";
   v4 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v4, 0, 0x1A4u);
@@ -34298,7 +34298,7 @@ int __fastcall sub_607F1F18(int a1)
   *v4 = off_60BF9FE4;
   v4[4] = &off_60BFA03C;
   sub_60958220(v2, v4, 5, &v10, 0, 0);
-  v10 = &g_vtable_forsead_SafeStringBase<char>;
+  v10 = &g_vtable_forsead_SafeStringBase_char;
   v11 = "FrontLayout";
   v5 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v5, 0, 0x1A4u);
@@ -34391,7 +34391,7 @@ int __fastcall sub_607F225C(int a1)
   sub_6045BF58(a1 + 1056, 0);
   *(_BYTE *)(dword_60C9BB38 + 628) = 1;
   v2 = dword_60CD0B40;
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "MultiPlayCourseSelectScene";
   *(_DWORD *)(a1 + 472) = a1;
   *(_DWORD *)(a1 + 476) = sub_607F2624;
@@ -34400,7 +34400,7 @@ int __fastcall sub_607F225C(int a1)
   sead_SafeStringBase_char::operator=(a1 + 448, (int)&v17);
   *(_DWORD *)(a1 + 456) = 2;
   sub_6095537C(**(_DWORD **)(v2 + 36), 0, a1 + 432);
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "MultiPlayCourseSelectSceneBack";
   *(_DWORD *)(a1 + 268) = a1;
   *(_DWORD *)(a1 + 272) = sub_607F271C;
@@ -34412,7 +34412,7 @@ int __fastcall sub_607F225C(int a1)
   if ( *(_DWORD *)(v2 + 32) > 5u )
     v3 += 5;
   sub_6095537C(*v3, 1, a1 + 228);
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "MultiPlayCourseSelectScene3DUI";
   *(_DWORD *)(a1 + 336) = a1;
   *(_DWORD *)(a1 + 340) = sub_607F2730;
@@ -34424,7 +34424,7 @@ int __fastcall sub_607F225C(int a1)
   if ( *(_DWORD *)(v2 + 32) > 6u )
     v4 += 6;
   sub_6095537C(*v4, 2, a1 + 296);
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "MultiPlayCourseSelectSceneFront";
   *(_DWORD *)(a1 + 404) = a1;
   *(_DWORD *)(a1 + 408) = sub_607F27A8;
@@ -36639,7 +36639,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
 
   *(_BYTE *)(dword_60C9BB38 + 628) = 1;
   v2 = dword_60CD0B40;
-  a5 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  a5 = (int)&g_vtable_forsead_SafeStringBase_char;
   v17 = "ResultScene2D";
   *(_DWORD *)(a1 + 268) = a1;
   *(_DWORD *)(a1 + 272) = sub_607F5370;
@@ -36651,7 +36651,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   if ( *(_DWORD *)(v2 + 32) > 5u )
     v3 += 5;
   sub_609553AC(*v3, a1 + 228);
-  a5 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  a5 = (int)&g_vtable_forsead_SafeStringBase_char;
   v17 = "ResultScene3D";
   *(_DWORD *)(a1 + 336) = a1;
   *(_DWORD *)(a1 + 340) = sub_607F54F4;
@@ -36663,7 +36663,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   if ( *(_DWORD *)(v2 + 32) > 6u )
     v4 += 6;
   sub_609553AC(*v4, a1 + 296);
-  a5 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  a5 = (int)&g_vtable_forsead_SafeStringBase_char;
   v17 = "ResultScene2DFront";
   *(_DWORD *)(a1 + 404) = a1;
   *(_DWORD *)(a1 + 408) = sub_607F551C;
@@ -36675,7 +36675,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   if ( *(_DWORD *)(v2 + 32) > 7u )
     v5 += 7;
   sub_609553AC(*v5, a1 + 364);
-  a5 = (int)&g_vtable_forsead_SafeStringBase<char>;
+  a5 = (int)&g_vtable_forsead_SafeStringBase_char;
   v17 = "ResultSceneGather";
   *(_DWORD *)(a1 + 676) = a1;
   *(_DWORD *)(a1 + 680) = sub_607F5530;
@@ -37897,7 +37897,7 @@ int __fastcall sub_607F6C14(int a1, int a2)
   sub_60519160(a1 + 568);
   *(_DWORD *)(a1 + 18872) = 5;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 18876));
-  *(_DWORD *)(a1 + 18892) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 18892) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 18896) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 18876) = off_60C5E9A4;
   *(_DWORD *)(a1 + 18900) = 0;
@@ -37908,7 +37908,7 @@ int __fastcall sub_607F6C14(int a1, int a2)
   *(_DWORD *)(a1 + 18924) = 0;
   *(_DWORD *)(a1 + 18912) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 18944));
-  *(_DWORD *)(a1 + 18960) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 18960) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 18964) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 18944) = off_60C5E9A4;
   *(_DWORD *)(a1 + 18968) = 0;
@@ -37919,7 +37919,7 @@ int __fastcall sub_607F6C14(int a1, int a2)
   *(_DWORD *)(a1 + 18992) = 0;
   *(_DWORD *)(a1 + 18980) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 19012));
-  *(_DWORD *)(a1 + 19028) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 19028) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 19032) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 19012) = off_60C5E9A4;
   *(_DWORD *)(a1 + 19036) = 0;
@@ -37930,7 +37930,7 @@ int __fastcall sub_607F6C14(int a1, int a2)
   *(_DWORD *)(a1 + 19060) = 0;
   *(_DWORD *)(a1 + 19048) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 19080));
-  *(_DWORD *)(a1 + 19096) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 19096) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 19100) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 19080) = off_60C5E9A4;
   *(_DWORD *)(a1 + 19104) = 0;
@@ -38547,7 +38547,7 @@ int __fastcall sub_607F79B0(int a1, int a2)
   sub_60558FBC(a1 + 232);
   sub_604B610C(a1 + 3828);
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 9652));
-  *(_DWORD *)(a1 + 9668) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 9668) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 9672) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 9652) = off_60C5E9A4;
   *(_DWORD *)(a1 + 9676) = 0;
@@ -38558,7 +38558,7 @@ int __fastcall sub_607F79B0(int a1, int a2)
   *(_DWORD *)(a1 + 9700) = 0;
   *(_DWORD *)(a1 + 9688) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 9720));
-  *(_DWORD *)(a1 + 9736) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 9736) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 9740) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 9720) = off_60C5E9A4;
   *(_DWORD *)(a1 + 9744) = 0;
@@ -38569,7 +38569,7 @@ int __fastcall sub_607F79B0(int a1, int a2)
   *(_DWORD *)(a1 + 9768) = 0;
   *(_DWORD *)(a1 + 9756) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 9788));
-  *(_DWORD *)(a1 + 9804) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 9804) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 9808) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 9788) = off_60C5E9A4;
   *(_DWORD *)(a1 + 9812) = 0;
@@ -38580,7 +38580,7 @@ int __fastcall sub_607F79B0(int a1, int a2)
   *(_DWORD *)(a1 + 9836) = 0;
   *(_DWORD *)(a1 + 9824) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 9856));
-  *(_DWORD *)(a1 + 9872) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 9872) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 9876) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 9856) = off_60C5E9A4;
   *(_DWORD *)(a1 + 9880) = 0;
@@ -38674,17 +38674,17 @@ int __fastcall sub_607F7DA4(int a1)
   sub_60023F4C(a1);
   sub_60426530(dword_60C9BBD4, 0);
   v1 = __operator_new(0x390u);
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "3D";
   sub_60443FE0(v1, &v9);
   sub_60444108(v1, 1, 128, 5, 26, 0);
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "3D";
   v2 = dword_60CD0B40;
   v3 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v2, v3, 6, &v9, 0, 0);
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "BackLayout";
   v4 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v4, 0, 0x1A4u);
@@ -38692,7 +38692,7 @@ int __fastcall sub_607F7DA4(int a1)
   *v4 = off_60BF9FE4;
   v4[4] = &off_60BFA03C;
   sub_60958220(v2, v4, 5, &v9, 0, 0);
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "FrontLayout";
   v5 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v5, 0, 0x1A4u);
@@ -38736,7 +38736,7 @@ int __fastcall sub_607F7FB0(int a1)
   const char *v18; // [sp+Ch] [bp-24h]
 
   v2 = dword_60CD0B40;
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "TheEndScene";
   *(_DWORD *)(a1 + 9896) = a1;
   *(_DWORD *)(a1 + 9900) = nullsub_5605;
@@ -38745,7 +38745,7 @@ int __fastcall sub_607F7FB0(int a1)
   sead_SafeStringBase_char::operator=(a1 + 9872, (int)&v17);
   *(_DWORD *)(a1 + 9880) = 2;
   sub_6095537C(**(_DWORD **)(v2 + 36), 0, a1 + 9856);
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "TheEndSceneBack";
   *(_DWORD *)(a1 + 9692) = a1;
   *(_DWORD *)(a1 + 9696) = nullsub_5606;
@@ -38757,7 +38757,7 @@ int __fastcall sub_607F7FB0(int a1)
   if ( *(_DWORD *)(v2 + 32) > 5u )
     v3 += 5;
   sub_6095537C(*v3, 1, a1 + 9652);
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "TheEndScene3DUI";
   *(_DWORD *)(a1 + 9760) = a1;
   *(_DWORD *)(a1 + 9764) = nullsub_5607;
@@ -38769,7 +38769,7 @@ int __fastcall sub_607F7FB0(int a1)
   if ( *(_DWORD *)(v2 + 32) > 6u )
     v4 += 6;
   sub_6095537C(*v4, 3, a1 + 9720);
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "TheEndSceneFront";
   *(_DWORD *)(a1 + 9828) = a1;
   *(_DWORD *)(a1 + 9832) = sub_607F83C8;
@@ -39743,7 +39743,7 @@ int __fastcall sub_607F9380(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 744), (StateExecuter *)(a1 + 728), (StateBase *)&dword_60CC63E0);
   *(_DWORD *)(a1 + 724) = &off_60C27C9C;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 760));
-  *(_DWORD *)(a1 + 776) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 776) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 780) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 760) = off_60C5E9A4;
   *(_DWORD *)(a1 + 784) = 0;
@@ -39754,7 +39754,7 @@ int __fastcall sub_607F9380(int a1, int a2)
   *(_DWORD *)(a1 + 808) = 0;
   *(_DWORD *)(a1 + 796) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 828));
-  *(_DWORD *)(a1 + 844) = &g_vtable_forsead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 844) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 848) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 828) = off_60C5E9A4;
   *(_DWORD *)(a1 + 852) = 0;
@@ -39904,7 +39904,7 @@ int __fastcall sub_607F982C(int a1)
   *(_BYTE *)(dword_60C9BB38 + 628) = *(_BYTE *)(dword_60CC6D78 + 20) ^ 1;
   sub_604C0278(a1 + 1304);
   v2 = dword_60CD0B40;
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "WithMiiPackSelectScene";
   *(_DWORD *)(a1 + 800) = a1;
   *(_DWORD *)(a1 + 804) = sub_607F9AFC;
@@ -39916,7 +39916,7 @@ int __fastcall sub_607F982C(int a1)
   if ( *(_DWORD *)(v2 + 32) > 6u )
     v3 += 6;
   sub_6095537C(*v3, 1, a1 + 760);
-  v17 = &g_vtable_forsead_SafeStringBase<char>;
+  v17 = &g_vtable_forsead_SafeStringBase_char;
   v18 = "WithMiiPackSelectSceneGather";
   *(_DWORD *)(a1 + 868) = a1;
   *(_DWORD *)(a1 + 872) = sub_607F9BB4;
@@ -43816,7 +43816,7 @@ int __fastcall sub_609A0208(_DWORD *a1, int a2, int a3, int a4, int a5)
     else
     {
       v22 = 0;
-      v43[0] = &g_vtable_forsead_SafeStringBase<char>;
+      v43[0] = &g_vtable_forsead_SafeStringBase_char;
       v43[1] = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
       while ( aXmlVersion10En[v22] )
       {
@@ -43836,7 +43836,7 @@ int __fastcall sub_609A0208(_DWORD *a1, int a2, int a3, int a4, int a5)
       if ( v11 >= 1 )
       {
         v23 = 0;
-        v42[0] = &g_vtable_forsead_SafeStringBase<char>;
+        v42[0] = &g_vtable_forsead_SafeStringBase_char;
         v42[1] = "<!DOCTYPE doc[\n";
         while ( aDoctypeDoc[v23] )
         {
@@ -43914,7 +43914,7 @@ int __fastcall sub_609A0208(_DWORD *a1, int a2, int a3, int a4, int a5)
         v10 = v36;
         a1 = v34;
         v32 = 0;
-        v38 = &g_vtable_forsead_SafeStringBase<char>;
+        v38 = &g_vtable_forsead_SafeStringBase_char;
         v39 = "]>\n";
         while ( asc_60AF1758[v32] )
         {
@@ -44273,7 +44273,7 @@ int __fastcall sub_609A0B94(int result, int a2, int a3, int a4, int a5)
         result = v36;
         if ( !v36 )
           return result;
-        v37 = &g_vtable_forsead_SafeStringBase<char>;
+        v37 = &g_vtable_forsead_SafeStringBase_char;
         v38 = "/>";
         sub_6090567C(v8, &v37, 2);
         return sub_60905558(v8, 10);
@@ -44282,7 +44282,7 @@ int __fastcall sub_609A0B94(int result, int a2, int a3, int a4, int a5)
       {
         sub_60905558(v8, 62);
         sub_609A5290(v8, v10, v10[27], a4, a5);
-        v37 = &g_vtable_forsead_SafeStringBase<char>;
+        v37 = &g_vtable_forsead_SafeStringBase_char;
         v38 = "</";
         sub_6090567C(v8, &v37, 2);
         (*(void (__fastcall **)(int))(v10[5] + 12))(v9);
@@ -44326,7 +44326,7 @@ int __fastcall sub_609A0B94(int result, int a2, int a3, int a4, int a5)
     }
     else
     {
-      v37 = &g_vtable_forsead_SafeStringBase<char>;
+      v37 = &g_vtable_forsead_SafeStringBase_char;
       v38 = ">\n";
       sub_6090567C(v8, &v37, 2);
       sub_609A0B94(v8, v5, v7 + 1, a4, a5);
@@ -44395,7 +44395,7 @@ int __fastcall sub_609A0B94(int result, int a2, int a3, int a4, int a5)
                 sub_60905558(v8, 62);
                 a4 = v21;
                 sub_609A5290(v8, v5, *(_DWORD *)(v5 + 108), v21, a5);
-                v37 = &g_vtable_forsead_SafeStringBase<char>;
+                v37 = &g_vtable_forsead_SafeStringBase_char;
                 v38 = "</";
                 sub_6090567C(v8, &v37, 2);
                 (*(void (__fastcall **)(int))(*(_DWORD *)(v5 + 20) + 12))(v5 + 20);
@@ -44445,7 +44445,7 @@ int __fastcall sub_609A0B94(int result, int a2, int a3, int a4, int a5)
             a4 = v21;
             if ( !v16 )
             {
-              v37 = &g_vtable_forsead_SafeStringBase<char>;
+              v37 = &g_vtable_forsead_SafeStringBase_char;
               v38 = "/>";
               sub_6090567C(v8, &v37, 2);
 LABEL_55:
@@ -44474,7 +44474,7 @@ LABEL_55:
           }
           while ( v7 );
         }
-        v37 = &g_vtable_forsead_SafeStringBase<char>;
+        v37 = &g_vtable_forsead_SafeStringBase_char;
         v38 = "</";
         sub_6090567C(v8, &v37, 2);
         (*(void (__fastcall **)(int))(*(_DWORD *)(a2 + 20) + 12))(v34);
@@ -47877,11 +47877,11 @@ void __fastcall sub_609A5290(int a1, int a2, int a3, unsigned int a4, int a5)
   {
     if ( a3 == 1 )
     {
-      v37 = &g_vtable_forsead_SafeStringBase<char>;
+      v37 = &g_vtable_forsead_SafeStringBase_char;
       v38 = "<![CDATA[";
       sub_6090567C(a1, &v37, 9);
       sub_609056A8(v6, *(_DWORD *)(a2 + 96), *(_DWORD *)(a2 + 100));
-      v37 = &g_vtable_forsead_SafeStringBase<char>;
+      v37 = &g_vtable_forsead_SafeStringBase_char;
       v38 = "]]>";
       sub_6090567C(v6, &v37, 3);
       return;
@@ -48051,11 +48051,11 @@ LABEL_59:
   {
     v10 = (_BYTE *)__operator_new_array_al(v9, a5, -4);
     sead_Base64_encode(v10, *(unsigned __int8 **)(a2 + 96), *(_DWORD *)(a2 + 100), 0);
-    v37 = &g_vtable_forsead_SafeStringBase<char>;
+    v37 = &g_vtable_forsead_SafeStringBase_char;
     v38 = "<![CDATA[<!BASE64[";
     sub_6090567C(v6, &v37, 18);
     sub_609056A8(v6, v10, v9);
-    v37 = &g_vtable_forsead_SafeStringBase<char>;
+    v37 = &g_vtable_forsead_SafeStringBase_char;
     v38 = "]>]]>";
     sub_6090567C(v6, &v37, 5);
     if ( v10 )
@@ -48391,7 +48391,7 @@ char *__fastcall sub_609A5C60(_DWORD *a1, int a2, _DWORD *a3)
   if ( v3 == a2 + 112 )
   {
 LABEL_13:
-    *a1 = &g_vtable_forsead_SafeStringBase<char>;
+    *a1 = &g_vtable_forsead_SafeStringBase_char;
     v12 = &off_60C5CB34;
   }
   else
@@ -48423,7 +48423,7 @@ LABEL_13:
         goto LABEL_13;
     }
 LABEL_14:
-    *a1 = &g_vtable_forsead_SafeStringBase<char>;
+    *a1 = &g_vtable_forsead_SafeStringBase_char;
     v12 = v7 + 4;
   }
   result = *v12;
@@ -48884,7 +48884,7 @@ _DWORD *__fastcall sub_609A6538(_DWORD *result, int a2)
   char *v2; // r1
 
   v2 = *(char **)(a2 + 96);
-  *result = &g_vtable_forsead_SafeStringBase<char>;
+  *result = &g_vtable_forsead_SafeStringBase_char;
   if ( !v2 )
     v2 = off_60C5CB34;
   result[1] = v2;
@@ -49071,7 +49071,7 @@ int __fastcall sub_609A6840(int a1)
   char *v7; // [sp+1Ch] [bp-24h]
 
   *(_DWORD *)a1 = &off_60C5D53C;
-  v6 = &g_vtable_forsead_SafeStringBase<char>;
+  v6 = &g_vtable_forsead_SafeStringBase_char;
   v7 = "aglmf";
   sub_6094688C(a1 + 4, &v6, 0);
   *(_DWORD *)(a1 + 408) = 0;
@@ -49125,18 +49125,18 @@ int __fastcall sub_609A6840(int a1)
   *(_DWORD *)(a1 + 1700) = 0;
   sub_60947BCC(a1 + 1704);
   *(_DWORD *)(a1 + 1704) = &off_60C5DAF8;
-  v5[0] = &g_vtable_forsead_SafeStringBase<char>;
-  v4[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v5[0] = &g_vtable_forsead_SafeStringBase_char;
+  v4[0] = &g_vtable_forsead_SafeStringBase_char;
   v5[1] = "result_sampler_linear";
   v4[1] = &unk_60AF17E9;
   v2 = sub_609419C8(a1 + 1732);
   *(_DWORD *)(a1 + 1732) = &off_60C5D848;
-  v6 = &g_vtable_forsead_SafeStringBase<char>;
+  v6 = &g_vtable_forsead_SafeStringBase_char;
   v7 = &byte_60ABC94D;
   sub_60941A08(v2, v5, v4, &v6, a1 + 1704);
   *(_BYTE *)(a1 + 1744) = 1;
   sub_609AA2F0(a1 + 1748, -1);
-  v6 = &g_vtable_forsead_SafeStringBase<char>;
+  v6 = &g_vtable_forsead_SafeStringBase_char;
   v7 = "Icon=LIGHT";
   sub_60969510(a1, &v6);
   *(_DWORD *)(a1 + 868) = 0;
@@ -49332,7 +49332,7 @@ int __fastcall sub_609A6DB0(int a1, void *a2)
     v21 = v4;
     sub_609A75EC(&v24, v2);
     (*(void (__fastcall **)(int *))(v24 + 12))(&v24);
-    v22 = &g_vtable_forsead_SafeStringBase<char>;
+    v22 = &g_vtable_forsead_SafeStringBase_char;
     v23 = v25;
     v7 = a1 + v3;
     sub_60947328(v20, a1 + v3);
@@ -49383,7 +49383,7 @@ int __fastcall sub_609A6DB0(int a1, void *a2)
   }
   while ( v2 != 7 );
   sub_609ACC34(a1 + 1640, 128, a2);
-  v22 = &g_vtable_forsead_SafeStringBase<char>;
+  v22 = &g_vtable_forsead_SafeStringBase_char;
   v23 = "mf_root_param";
   return sub_60947360(v20, a1 + 1704, &v22);
 }
@@ -49751,20 +49751,20 @@ _DWORD *__fastcall sub_609A75EC(_DWORD *result, int a2)
 {
   _DWORD v2[14]; // [sp+0h] [bp-38h] BYREF
 
-  v2[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v2[0] = &g_vtable_forsead_SafeStringBase_char;
   v2[1] = "reduce";
-  v2[2] = &g_vtable_forsead_SafeStringBase<char>;
-  *result = &g_vtable_forsead_SafeStringBase<char>;
+  v2[2] = &g_vtable_forsead_SafeStringBase_char;
+  *result = &g_vtable_forsead_SafeStringBase_char;
   v2[3] = "expand";
-  v2[4] = &g_vtable_forsead_SafeStringBase<char>;
+  v2[4] = &g_vtable_forsead_SafeStringBase_char;
   v2[5] = "blur";
-  v2[6] = &g_vtable_forsead_SafeStringBase<char>;
+  v2[6] = &g_vtable_forsead_SafeStringBase_char;
   v2[7] = "color_correction";
-  v2[8] = &g_vtable_forsead_SafeStringBase<char>;
+  v2[8] = &g_vtable_forsead_SafeStringBase_char;
   v2[9] = "change_format";
-  v2[10] = &g_vtable_forsead_SafeStringBase<char>;
+  v2[10] = &g_vtable_forsead_SafeStringBase_char;
   v2[11] = "color_drift";
-  v2[12] = &g_vtable_forsead_SafeStringBase<char>;
+  v2[12] = &g_vtable_forsead_SafeStringBase_char;
   v2[13] = "trimming";
   result[1] = v2[2 * a2 + 1];
   return result;
@@ -49803,37 +49803,37 @@ int __fastcall sub_609A76A8(int a1, int a2, int a3)
   *(_DWORD *)(a1 + 88) = 0;
   *(_DWORD *)(a1 + 92) = a2;
   *(_DWORD *)(a1 + 96) = ((a2 << 8) + 256) | (a3 + 1);
-  v13 = &g_vtable_forsead_SafeStringBase<char>;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
+  v13 = &g_vtable_forsead_SafeStringBase_char;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
   v14 = "enable";
   v12 = (const char *)&unk_60AEAF58;
   v7 = sub_609419C8(a1 + 100);
   *(_DWORD *)(a1 + 100) = &off_60C5D848;
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = &byte_60ABC94D;
   sub_60941A08(v7, &v13, &v11, &v15, a1 + 56);
   *(_BYTE *)(a1 + 112) = 0;
-  v13 = &g_vtable_forsead_SafeStringBase<char>;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
+  v13 = &g_vtable_forsead_SafeStringBase_char;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
   v14 = "active";
   v12 = "active";
   v8 = sub_609419C8(a1 + 116);
   *(_DWORD *)(a1 + 116) = &off_60C5D848;
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = &byte_60ABC94D;
   sub_60941A08(v8, &v13, &v11, &v15, a1 + 56);
   *(_BYTE *)(a1 + 128) = 0;
-  v13 = &g_vtable_forsead_SafeStringBase<char>;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
+  v13 = &g_vtable_forsead_SafeStringBase_char;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
   v14 = "save_index";
   v12 = "save_index";
   v9 = sub_609419C8(a1 + 132);
   *(_DWORD *)(a1 + 132) = &off_60C5E01C;
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = &byte_60ABC94D;
   sub_60941A08(v9, &v13, &v11, &v15, a1 + 56);
   *(_DWORD *)(a1 + 144) = -1;
-  v15 = &g_vtable_forsead_SafeStringBase<char>;
+  v15 = &g_vtable_forsead_SafeStringBase_char;
   v16 = "param_array";
   sub_60947360(v6, a1 + 56, &v15);
   return a1;
@@ -49899,23 +49899,23 @@ _DWORD *__fastcall sub_609A7954(int a1, int a2, void *a3)
       sub_609A76A8((int)v4, 0, a2);
       *v4 = off_60C60ECC;
       v4[5] = off_60C60EFC;
-      v14 = &g_vtable_forsead_SafeStringBase<char>;
-      v12 = &g_vtable_forsead_SafeStringBase<char>;
+      v14 = &g_vtable_forsead_SafeStringBase_char;
+      v12 = &g_vtable_forsead_SafeStringBase_char;
       v15 = "offset_adjust";
       v13 = &unk_60AF1A43;
       v5 = sub_609419C8(v4 + 37);
       v4[37] = &off_60C5DC9C;
-      v16 = &g_vtable_forsead_SafeStringBase<char>;
+      v16 = &g_vtable_forsead_SafeStringBase_char;
       v17 = &byte_60ABC94D;
       sub_60941A08(v5, &v14, &v12, &v16, v4 + 14);
       v4[40] = 0;
-      v14 = &g_vtable_forsead_SafeStringBase<char>;
-      v12 = &g_vtable_forsead_SafeStringBase<char>;
+      v14 = &g_vtable_forsead_SafeStringBase_char;
+      v12 = &g_vtable_forsead_SafeStringBase_char;
       v15 = "reduce_scale";
       v13 = &unk_60AF1A69;
       v6 = sub_609419C8(v4 + 41);
       v4[41] = &off_60C5E01C;
-      v16 = &g_vtable_forsead_SafeStringBase<char>;
+      v16 = &g_vtable_forsead_SafeStringBase_char;
       v17 = &byte_60ABC94D;
       sub_60941A08(v6, &v14, &v12, &v16, v4 + 14);
       goto LABEL_5;
@@ -49924,23 +49924,23 @@ _DWORD *__fastcall sub_609A7954(int a1, int a2, void *a3)
       sub_609A76A8((int)v4, 1, a2);
       *v4 = off_60C60F28;
       v4[5] = off_60C60F58;
-      v14 = &g_vtable_forsead_SafeStringBase<char>;
-      v12 = &g_vtable_forsead_SafeStringBase<char>;
+      v14 = &g_vtable_forsead_SafeStringBase_char;
+      v12 = &g_vtable_forsead_SafeStringBase_char;
       v15 = "offset_adjust";
       v13 = &unk_60AF1A43;
       v7 = sub_609419C8(v4 + 37);
       v4[37] = &off_60C5DC9C;
-      v16 = &g_vtable_forsead_SafeStringBase<char>;
+      v16 = &g_vtable_forsead_SafeStringBase_char;
       v17 = &byte_60ABC94D;
       sub_60941A08(v7, &v14, &v12, &v16, v4 + 14);
       v4[40] = 0;
-      v14 = &g_vtable_forsead_SafeStringBase<char>;
-      v12 = &g_vtable_forsead_SafeStringBase<char>;
+      v14 = &g_vtable_forsead_SafeStringBase_char;
+      v12 = &g_vtable_forsead_SafeStringBase_char;
       v15 = "reduce_scale";
       v13 = &unk_60AF1A9E;
       v8 = sub_609419C8(v4 + 41);
       v4[41] = &off_60C5E01C;
-      v16 = &g_vtable_forsead_SafeStringBase<char>;
+      v16 = &g_vtable_forsead_SafeStringBase_char;
       v17 = &byte_60ABC94D;
       sub_60941A08(v8, &v14, &v12, &v16, v4 + 14);
 LABEL_5:
@@ -49970,24 +49970,24 @@ LABEL_5:
       sub_609A76A8((int)v4, 6, a2);
       *v4 = off_60C610F4;
       v4[5] = off_60C61124;
-      v14 = &g_vtable_forsead_SafeStringBase<char>;
-      v12 = &g_vtable_forsead_SafeStringBase<char>;
+      v14 = &g_vtable_forsead_SafeStringBase_char;
+      v12 = &g_vtable_forsead_SafeStringBase_char;
       v15 = "trim_center";
       v13 = &unk_60AF1BFD;
       v9 = sub_609419C8(v4 + 37);
       v4[37] = &off_60C5E120;
-      v16 = &g_vtable_forsead_SafeStringBase<char>;
+      v16 = &g_vtable_forsead_SafeStringBase_char;
       v17 = &byte_60ABC94D;
       sub_60941A08(v9, &v14, &v12, &v16, v4 + 14);
       v4[40] = 0;
       v4[41] = 0;
-      v14 = &g_vtable_forsead_SafeStringBase<char>;
-      v12 = &g_vtable_forsead_SafeStringBase<char>;
+      v14 = &g_vtable_forsead_SafeStringBase_char;
+      v12 = &g_vtable_forsead_SafeStringBase_char;
       v15 = "trim_scale";
       v13 = &unk_60AEB989;
       v10 = sub_609419C8(v4 + 42);
       v4[42] = &off_60C5E120;
-      v16 = &g_vtable_forsead_SafeStringBase<char>;
+      v16 = &g_vtable_forsead_SafeStringBase_char;
       v17 = &byte_60ABC94D;
       sub_60941A08(v10, &v14, &v12, &v16, v4 + 14);
       v4[45] = 1056964608;
@@ -50258,7 +50258,7 @@ int __fastcall sub_609A80F8(int a1, int a2, int *a3, int a4)
   v12 = *(unsigned __int16 *)(v7 + 26);
   if ( v9 > (int)v12 )
     v12 = v9;
-  v64[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v64[0] = &g_vtable_forsead_SafeStringBase_char;
   if ( (int)(v12 >> a4) > 1 )
     v10 = v12 >> a4;
   v64[1] = "MultiFilterReduce";
@@ -50472,7 +50472,7 @@ int __fastcall sub_609A8610(int a1, int a2)
 {
   _DWORD v3[4]; // [sp+0h] [bp-10h] BYREF
 
-  v3[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v3[0] = &g_vtable_forsead_SafeStringBase_char;
   v3[1] = "Min=-10, Max=10";
   return ((int (__fastcall *)(int, int, _DWORD *))sub_60943B88)(a1 + 148, a2, v3);
 }
@@ -50621,7 +50621,7 @@ int __fastcall sub_609A8768(int a1, int a2, int *a3, int a4)
     v11 = v12;
   if ( v13 > v14 )
     v14 = v13;
-  v66[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v66[0] = &g_vtable_forsead_SafeStringBase_char;
   if ( v11 >= v14 << a4 )
     v11 = v14 << a4;
   if ( (unsigned int)v8 <= 1 )
@@ -50836,7 +50836,7 @@ int __fastcall sub_609A8C94(int a1, int a2, int a3, int a4)
 {
   _DWORD v5[4]; // [sp+0h] [bp-10h] BYREF
 
-  v5[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v5[0] = &g_vtable_forsead_SafeStringBase_char;
   v5[1] = "Min=-10, Max=10";
   return ((int (__fastcall *)(int, int, _DWORD *, int))sub_60943B88)(a1 + 148, a2, v5, a4);
 }
@@ -50861,33 +50861,33 @@ _DWORD *__fastcall sub_609A8CD4(_DWORD *a1, int a2)
   sub_609A76A8((int)a1, 2, a2);
   *a1 = off_60C60F84;
   a1[5] = off_60C60FB4;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
-  v7 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
+  v7 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "blur_type";
   v8 = &unk_60AF1ACD;
   v3 = sub_609419C8(a1 + 37);
   a1[37] = &off_60C5E01C;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
   v12 = &byte_60ABC94D;
   sub_60941A08(v3, &v9, &v7, &v11, a1 + 14);
   a1[40] = 4;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
-  v7 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
+  v7 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "blur_num";
   v8 = &unk_60AF1AE9;
   v4 = sub_609419C8(a1 + 41);
   a1[41] = &off_60C5E01C;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
   v12 = &byte_60ABC94D;
   sub_60941A08(v4, &v9, &v7, &v11, a1 + 14);
   a1[44] = 1;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
-  v7 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
+  v7 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "gaussian_kernel";
   v8 = &unk_60AF1B0F;
   v5 = sub_609419C8(a1 + 45);
   a1[45] = &off_60C5E01C;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
   v12 = &byte_60ABC94D;
   sub_60941A08(v5, &v9, &v7, &v11, a1 + 14);
   a1[48] = 9;
@@ -51017,7 +51017,7 @@ int __fastcall sub_609A8FA0(int a1, int a2, int *a3, int a4, int a5)
   v10 = *(unsigned __int16 *)(v7 + 26);
   if ( v9 > v10 )
     v10 = v9;
-  v46[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v46[0] = &g_vtable_forsead_SafeStringBase_char;
   v46[1] = "MultiFilterBlur";
   if ( (unsigned int)v8 <= 1 )
     v8 = 1;
@@ -51161,7 +51161,7 @@ int __fastcall sub_609A938C(int a1, int a2, int a3, int a4)
 {
   _DWORD v5[4]; // [sp+0h] [bp-10h] BYREF
 
-  v5[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v5[0] = &g_vtable_forsead_SafeStringBase_char;
   v5[1] = "Min=-0, Max=10";
   return ((int (__fastcall *)(int, int, _DWORD *, int))sub_60943B88)(a1 + 164, a2, v5, a4);
 }
@@ -51299,7 +51299,7 @@ int __fastcall sub_609A94E4(int a1, int a2, int *a3)
     if ( (*(_DWORD *)(v11 + 608 * CurrentCoreNumber + 624) & 1) == 0 )
       sub_609ABAC0(*(_DWORD *)(a1 + 148), a2);
     v47 = a1;
-    v49[0] = &g_vtable_forsead_SafeStringBase<char>;
+    v49[0] = &g_vtable_forsead_SafeStringBase_char;
     v49[1] = "MultiFilterColorCorrection";
     v46 = v8;
     v43 = a2;
@@ -51470,53 +51470,53 @@ _DWORD *__fastcall sub_609A986C(_DWORD *a1, int a2)
   sub_609A76A8((int)a1, 4, a2);
   *a1 = off_60C6103C;
   a1[5] = off_60C6106C;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v12 = "format";
   v10 = (__int16 *)&unk_60AF1B6C;
   v3 = sub_609419C8(a1 + 37);
   a1[37] = &off_60C5E01C;
-  v13 = &g_vtable_forsead_SafeStringBase<char>;
+  v13 = &g_vtable_forsead_SafeStringBase_char;
   v14 = &byte_60ABC94D;
   sub_60941A08(v3, &v11, &v9, &v13, a1 + 14);
   a1[40] = 4;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v12 = "comp_sel_r";
   v10 = (__int16 *)"R";
   v4 = sub_609419C8(a1 + 41);
   a1[41] = &off_60C5E01C;
-  v13 = &g_vtable_forsead_SafeStringBase<char>;
+  v13 = &g_vtable_forsead_SafeStringBase_char;
   v14 = &byte_60ABC94D;
   sub_60941A08(v4, &v11, &v9, &v13, a1 + 14);
   a1[44] = 0;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v12 = "comp_sel_g";
   v10 = &aDefghij[3];
   v5 = sub_609419C8(a1 + 45);
   a1[45] = &off_60C5E01C;
-  v13 = &g_vtable_forsead_SafeStringBase<char>;
+  v13 = &g_vtable_forsead_SafeStringBase_char;
   v14 = &byte_60ABC94D;
   sub_60941A08(v5, &v11, &v9, &v13, a1 + 14);
   a1[48] = 1;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v12 = "comp_sel_b";
   v10 = (__int16 *)"B";
   v6 = sub_609419C8(a1 + 49);
   a1[49] = &off_60C5E01C;
-  v13 = &g_vtable_forsead_SafeStringBase<char>;
+  v13 = &g_vtable_forsead_SafeStringBase_char;
   v14 = &byte_60ABC94D;
   sub_60941A08(v6, &v11, &v9, &v13, a1 + 14);
   a1[52] = 2;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v12 = "comp_sel_a";
   v10 = aAxswc;
   v7 = sub_609419C8(a1 + 53);
   a1[53] = &off_60C5E01C;
-  v13 = &g_vtable_forsead_SafeStringBase<char>;
+  v13 = &g_vtable_forsead_SafeStringBase_char;
   v14 = &byte_60ABC94D;
   sub_60941A08(v7, &v11, &v9, &v13, a1 + 14);
   a1[56] = 5;
@@ -51673,35 +51673,35 @@ _DWORD *__fastcall sub_609A9CBC(_DWORD *a1, int a2)
   sub_609A76A8((int)a1, 5, a2);
   *a1 = off_60C61098;
   a1[5] = off_60C610C8;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
-  v7 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
+  v7 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "drift_r";
   v8 = &unk_60AF1BB3;
   v3 = sub_609419C8(a1 + 37);
   a1[37] = &off_60C5E120;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
   v12 = &byte_60ABC94D;
   sub_60941A08(v3, &v9, &v7, &v11, a1 + 14);
   a1[40] = 0;
   a1[41] = 0;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
-  v7 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
+  v7 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "drift_g";
   v8 = &unk_60AF1BC3;
   v4 = sub_609419C8(a1 + 42);
   a1[42] = &off_60C5E120;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
   v12 = &byte_60ABC94D;
   sub_60941A08(v4, &v9, &v7, &v11, a1 + 14);
   a1[45] = 0;
   a1[46] = 0;
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
-  v7 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
+  v7 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "drift_b";
   v8 = &unk_60AF1BD3;
   v5 = sub_609419C8(a1 + 47);
   a1[47] = &off_60C5E120;
-  v11 = &g_vtable_forsead_SafeStringBase<char>;
+  v11 = &g_vtable_forsead_SafeStringBase_char;
   v12 = &byte_60ABC94D;
   sub_60941A08(v5, &v9, &v7, &v11, a1 + 14);
   a1[50] = 0;
@@ -51817,7 +51817,7 @@ int __fastcall sub_609A9F64(int a1, int a2, int *a3)
   v8 = *(unsigned __int16 *)(v5 + 26);
   if ( v7 > v8 )
     v8 = v7;
-  v42[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v42[0] = &g_vtable_forsead_SafeStringBase_char;
   v42[1] = "MultiFilterColorDrift";
   if ( (unsigned int)v6 <= 1 )
     v6 = 1;
@@ -51934,13 +51934,13 @@ int __fastcall sub_609AA280(int a1, int a2, int a3, int a4)
   int (**v9)(); // [sp+0h] [bp-20h] BYREF
   const char *v10; // [sp+4h] [bp-1Ch]
 
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "Min=-10, Max=10";
   ((void (__fastcall *)(int, int, int (***)(), int))sub_60943B88)(a1 + 148, a2, &v9, a4);
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "Min=-10, Max=10";
   ((void (__fastcall *)(int, int, int (***)(), int))sub_60943B88)(a1 + 168, a2, &v9, v6);
-  v9 = &g_vtable_forsead_SafeStringBase<char>;
+  v9 = &g_vtable_forsead_SafeStringBase_char;
   v10 = "Min=-10, Max=10";
   return ((int (__fastcall *)(int, int, int (***)(), int))sub_60943B88)(a1 + 188, a2, &v9, v7);
 }
@@ -51964,24 +51964,24 @@ _DWORD *__fastcall sub_609AA2F0(_DWORD *a1, int a2)
   sub_609A76A8((int)a1, 6, a2);
   *a1 = off_60C610F4;
   a1[5] = off_60C61124;
-  v8 = &g_vtable_forsead_SafeStringBase<char>;
-  v6 = &g_vtable_forsead_SafeStringBase<char>;
+  v8 = &g_vtable_forsead_SafeStringBase_char;
+  v6 = &g_vtable_forsead_SafeStringBase_char;
   v9 = "trim_center";
   v7 = &unk_60AF1BFD;
   v3 = sub_609419C8(a1 + 37);
   a1[37] = &off_60C5E120;
-  v10 = &g_vtable_forsead_SafeStringBase<char>;
+  v10 = &g_vtable_forsead_SafeStringBase_char;
   v11 = &byte_60ABC94D;
   sub_60941A08(v3, &v8, &v6, &v10, a1 + 14);
   a1[40] = 0;
   a1[41] = 0;
-  v8 = &g_vtable_forsead_SafeStringBase<char>;
-  v6 = &g_vtable_forsead_SafeStringBase<char>;
+  v8 = &g_vtable_forsead_SafeStringBase_char;
+  v6 = &g_vtable_forsead_SafeStringBase_char;
   v9 = "trim_scale";
   v7 = &unk_60AEB989;
   v4 = sub_609419C8(a1 + 42);
   a1[42] = &off_60C5E120;
-  v10 = &g_vtable_forsead_SafeStringBase<char>;
+  v10 = &g_vtable_forsead_SafeStringBase_char;
   v11 = &byte_60ABC94D;
   sub_60941A08(v4, &v8, &v6, &v10, a1 + 14);
   a1[45] = 1056964608;
@@ -52101,7 +52101,7 @@ int __fastcall sub_609AA528(int a1, int a2, int *a3)
   v42 = a1;
   v10 = *(float *)(a1 + 184);
   v11 = *(unsigned __int16 *)(v6 + 26);
-  v49[0] = &g_vtable_forsead_SafeStringBase<char>;
+  v49[0] = &g_vtable_forsead_SafeStringBase_char;
   v49[1] = "MultiFilterTrimming";
   if ( v8 <= 1 )
     v8 = 1;
@@ -52253,10 +52253,10 @@ int __fastcall sub_609AA8FC(int a1, int a2, int a3, int a4)
   int (**v8)(); // [sp+0h] [bp-18h] BYREF
   const char *v9; // [sp+4h] [bp-14h]
 
-  v8 = &g_vtable_forsead_SafeStringBase<char>;
+  v8 = &g_vtable_forsead_SafeStringBase_char;
   v9 = "Min=-1.0, Max=1.0";
   ((void (__fastcall *)(int, int, int (***)(), int))sub_60943B88)(a1 + 148, a2, &v8, a4);
-  v8 = &g_vtable_forsead_SafeStringBase<char>;
+  v8 = &g_vtable_forsead_SafeStringBase_char;
   v9 = "Min=0.0, Max=1.0";
   return ((int (__fastcall *)(int, int, int (***)(), int))sub_60943B88)(a1 + 168, a2, &v8, v6);
 }
@@ -52294,7 +52294,7 @@ int __fastcall sub_609AA978(int a1)
   char *v26; // [sp+38h] [bp-28h]
 
   *(_DWORD *)a1 = &off_60C5D53C;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
   v26 = "aglccr";
   v20 = a1 + 4;
   sub_6094688C(a1 + 4, &v25, 0);
@@ -52303,19 +52303,19 @@ int __fastcall sub_609AA978(int a1)
   *(_QWORD *)a1 = v2;
   sub_60947BCC(a1 + 400);
   *(_DWORD *)(a1 + 400) = &off_60C5DAF8;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v24 = "enable";
   v22 = (const char *)&unk_60AEAF58;
   v3 = sub_609419C8(a1 + 428);
   *(_DWORD *)(a1 + 428) = &off_60C5D848;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
   v26 = &byte_60ABC94D;
   sub_60941A08(v3, &v23, &v21, &v25, a1 + 400);
   *(_BYTE *)(a1 + 440) = 1;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v26 = "hue";
   v24 = (const char *)&unk_60AF1C57;
   v22 = "Min=-180, Max=180";
@@ -52323,9 +52323,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 444) = &off_60C5DC9C;
   sub_60941A08(v4, &v25, &v23, &v21, a1 + 400);
   *(_DWORD *)(a1 + 456) = 0;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v26 = "saturation";
   v24 = (const char *)&unk_60AEB732;
   v22 = "Min=0, Max=2";
@@ -52333,9 +52333,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 460) = &off_60C5DC9C;
   sub_60941A08(v5, &v25, &v23, &v21, a1 + 400);
   *(_DWORD *)(a1 + 472) = 1065353216;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v22 = "Min=0, Max=2";
   v26 = "brightness";
   v24 = (const char *)&unk_60AF1C86;
@@ -52343,9 +52343,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 476) = &off_60C5DC9C;
   sub_60941A08(v6, &v25, &v23, &v21, a1 + 400);
   *(_DWORD *)(a1 + 488) = 1065353216;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v26 = "gamma";
   v24 = (const char *)&unk_60AF1C93;
   v22 = "Min=0.25, Max=4";
@@ -52353,29 +52353,29 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 492) = &off_60C5DC9C;
   sub_60941A08(v7, &v25, &v23, &v21, a1 + 400);
   *(_DWORD *)(a1 + 504) = 1065353216;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v24 = "order_toycam_hsb";
   v22 = (const char *)&unk_60AF1CC4;
   v8 = sub_609419C8(a1 + 508);
   *(_DWORD *)(a1 + 508) = &off_60C5D848;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
   v26 = &byte_60ABC94D;
   sub_60941A08(v8, &v23, &v21, &v25, a1 + 400);
   *(_BYTE *)(a1 + 520) = 0;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v24 = "toycam_enable";
   v22 = (const char *)&unk_60AF1D06;
   v9 = sub_609419C8(a1 + 524);
   *(_DWORD *)(a1 + 524) = &off_60C5D848;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
   v26 = &byte_60ABC94D;
   sub_60941A08(v9, &v23, &v21, &v25, a1 + 400);
   *(_BYTE *)(a1 + 536) = 0;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v26 = "toycam_offset1";
   v24 = (const char *)&unk_60AF1D31;
   v22 = "Min=0, Max=1";
@@ -52390,9 +52390,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 556) = 0;
   *(_DWORD *)(a1 + 560) = 0;
   *(_DWORD *)(a1 + 564) = 1065353216;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v22 = "Min=0, Max=1";
   v26 = "toycam_offset2";
   v24 = (const char *)&unk_60AF1D5C;
@@ -52407,9 +52407,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 584) = 0;
   *(_DWORD *)(a1 + 588) = 0;
   *(_DWORD *)(a1 + 592) = 1065353216;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v26 = "toycam_level1";
   v22 = "Min=0, Max=2";
   v24 = (const char *)&unk_60AF1D86;
@@ -52424,9 +52424,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 612) = 1065353216;
   *(_DWORD *)(a1 + 616) = 1065353216;
   *(_DWORD *)(a1 + 620) = 1065353216;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v22 = "Min=0, Max=2";
   v26 = "toycam_level2";
   v24 = (const char *)&unk_60AF1DA7;
@@ -52441,9 +52441,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 640) = 1065353216;
   *(_DWORD *)(a1 + 644) = 1065353216;
   *(_DWORD *)(a1 + 648) = 1065353216;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v22 = "Min=0, Max=2";
   v26 = "toycam_saturation1";
   v24 = (const char *)&unk_60AF1DCD;
@@ -52451,9 +52451,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 652) = &off_60C5DC9C;
   sub_60941A08(v14, &v25, &v23, &v21, a1 + 400);
   *(_DWORD *)(a1 + 664) = 1065353216;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v22 = "Min=0, Max=2";
   v26 = "toycam_saturation2";
   v24 = (const char *)&unk_60AF1DEA;
@@ -52461,9 +52461,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 668) = &off_60C5DC9C;
   sub_60941A08(v15, &v25, &v23, &v21, a1 + 400);
   *(_DWORD *)(a1 + 680) = 1065353216;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v22 = "Min=0, Max=2";
   v26 = "toycam_brightness";
   v24 = (const char *)&unk_60AF1C86;
@@ -52471,9 +52471,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 684) = &off_60C5DC9C;
   sub_60941A08(v16, &v25, &v23, &v21, a1 + 400);
   *(_DWORD *)(a1 + 696) = 1065353216;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v22 = "Min=0, Max=2";
   v26 = "toycam_contrast";
   v24 = (const char *)&unk_60AF1E16;
@@ -52481,9 +52481,9 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 700) = &off_60C5DC9C;
   sub_60941A08(v17, &v25, &v23, &v21, a1 + 400);
   *(_DWORD *)(a1 + 712) = 1065353216;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
-  v21 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
+  v21 = &g_vtable_forsead_SafeStringBase_char;
   v26 = "toycam_mul_color";
   v24 = (const char *)&unk_60AF1E3A;
   v22 = "Min=0, Max=1";
@@ -52518,8 +52518,8 @@ int __fastcall sub_609AA978(int a1)
   *(_DWORD *)(a1 + 4296) = 0;
   *(_DWORD *)(a1 + 4292) = 0;
   *(_DWORD *)(a1 + 4288) = 0;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
-  v23 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
+  v23 = &g_vtable_forsead_SafeStringBase_char;
   v26 = "level";
   v24 = (const char *)&unk_60AF1E4A;
   sub_609ACF8C(a1 + 4456, &v25, &v23, a1 + 400);
@@ -52529,10 +52529,10 @@ int __fastcall sub_609AA978(int a1)
   *(_BYTE *)(a1 + 744) = 0;
   *(_BYTE *)(a1 + 745) = 0;
   *(_DWORD *)(a1 + 5028) = 3;
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
   v26 = "Icon=COLOR";
   sub_60969510(a1, &v25);
-  v25 = &g_vtable_forsead_SafeStringBase<char>;
+  v25 = &g_vtable_forsead_SafeStringBase_char;
   v26 = "color_correction";
   sub_60947360(v20, a1 + 400, &v25);
   sub_609AB258(a1);
@@ -52888,7 +52888,7 @@ int __fastcall sub_609AB778(_DWORD *a1, signed int a2, void *a3)
   a1[1074] = v55;
   a1[1073] = v15;
   a1[1072] = v14;
-  v53 = &g_vtable_forsead_SafeStringBase<char>;
+  v53 = &g_vtable_forsead_SafeStringBase_char;
   v54 = "agl_pfx_ColorCorrection";
   sub_60920600(a1 + 918, &v53);
   v16 = a1[1074];
@@ -54173,7 +54173,7 @@ int __fastcall sub_609AD124(int a1)
       {
         if ( *off_60C5CB34 )
         {
-          v4[0] = &g_vtable_forsead_SafeStringBase<char>;
+          v4[0] = &g_vtable_forsead_SafeStringBase_char;
           v4[1] = off_60C5CB34;
         }
         else
