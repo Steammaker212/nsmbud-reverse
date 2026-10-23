@@ -3081,7 +3081,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3300) = 12572012;
     *(_DWORD *)(a1 + 3336) = 0;
     *(_DWORD *)(a1 + 3340) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 3340, a1 + 6868, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 3340, a1 + 6868, 1) = 12570900;
     *(_DWORD *)(a1 + 6868) = 0;
     *(_DWORD *)(a1 + 6872) = 12321336;
     *(_DWORD *)(a1 + 6876) = 11778612;
@@ -3826,7 +3826,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13234200);
     *(_DWORD *)(a1 + 4) = 12572164;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -4546,7 +4546,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13234736);
     *(_DWORD *)(a1 + 4) = 12572292;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -7568,7 +7568,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 20), a1 + 4, 13235296);
     *(_DWORD *)a1 = 12573020;
     *(_DWORD *)(a1 + 36) = 12573112;
-    *Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 8) = 12573112;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 8) = 12573112;
     *(_DWORD *)(a1 + 3564) = 0;
     *(_DWORD *)(a1 + 3568) = 12321336;
     *(_DWORD *)(a1 + 3572) = 11778612;
@@ -15224,7 +15224,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 20), a1 + 4, 13238224);
     *(_DWORD *)a1 = 12573468;
     *(_DWORD *)(a1 + 36) = 12573560;
-    *Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 9) = 12573560;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 9) = 12573560;
     *(_DWORD *)(a1 + 3564) = 0;
     *(_DWORD *)(a1 + 3568) = 12321336;
     *(_DWORD *)(a1 + 3572) = 11778612;
@@ -18072,7 +18072,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 40), a1 + 24, 13239712);
     *(_DWORD *)(a1 + 20) = 12573668;
     *(_DWORD *)(a1 + 64) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 64, a1 + 3592, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 64, a1 + 3592, 2) = 12573760;
     *(_DWORD *)(a1 + 3592) = 0;
     *(_DWORD *)(a1 + 3596) = 12321336;
     *(_DWORD *)(a1 + 3600) = 11778612;
@@ -32527,7 +32527,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 20), a1 + 4, 13244328);
     *(_DWORD *)a1 = 12574320;
     *(_DWORD *)(a1 + 36) = 12574412;
-    *Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 5) = 12574412;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 5) = 12574412;
     *(_DWORD *)(a1 + 3564) = 0;
     *(_DWORD *)(a1 + 3568) = 12321336;
     *(_DWORD *)(a1 + 3572) = 11778612;
@@ -33025,7 +33025,7 @@ static inline unsigned int uxtb16(unsigned int x)
       MEMORY[0xCA190C] = v3;
       *(_DWORD *)v2 = 12574456;
       *(_DWORD *)(v2 + 20) = 12572560;
-      *Disposer_ctorWithRingOfChildren(v2 + 20, v2 + 3548, 3) = 12572560;
+      *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(v2 + 20, v2 + 3548, 3) = 12572560;
       *(_DWORD *)(v2 + 3548) = 0;
       *(_DWORD *)(v2 + 3552) = 12321336;
       *(_DWORD *)(v2 + 3556) = 11778612;
@@ -38237,7 +38237,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12574904;
     *(_DWORD *)(a1 + 4) = 12574936;
-    *Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 6) = 12574936;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 6) = 12574936;
     *(_DWORD *)(a1 + 3532) = 0;
     *(_DWORD *)(a1 + 3536) = 12321336;
     *(_DWORD *)(a1 + 3540) = 11778612;
@@ -39883,7 +39883,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13247872);
     *(_DWORD *)(a1 + 4) = 12575000;
     *(_DWORD *)(a1 + 40) = 12575092;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 4) = 12575092;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 4) = 12575092;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -40359,7 +40359,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr_ctor((_DWORD *)(v2 + 68), v2 + 52, 13248120);
       *(_DWORD *)(v2 + 48) = 12575156;
       *(_DWORD *)(v2 + 84) = 12570900;
-      *Disposer_ctorWithRingOfChildren(v2 + 84, v2 + 3612, 1) = 12570900;
+      *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(v2 + 84, v2 + 3612, 1) = 12570900;
       *(_DWORD *)(v2 + 3612) = 0;
       *(_DWORD *)(v2 + 3616) = 12321336;
       *(_DWORD *)(v2 + 3620) = 11778612;
@@ -40925,7 +40925,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3300) = 12575300;
     *(_DWORD *)(a1 + 3336) = 0;
     *(_DWORD *)(a1 + 3340) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 3340, a1 + 6868, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 3340, a1 + 6868, 1) = 12570900;
     *(_DWORD *)(a1 + 6868) = 0;
     *(_DWORD *)(a1 + 6872) = 12321336;
     *(_DWORD *)(a1 + 6876) = 11778612;
@@ -50389,7 +50389,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13250936);
     *(_DWORD *)(a1 + 4) = 12576436;
     *(_DWORD *)(a1 + 40) = 12573560;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 9) = 12573560;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 9) = 12573560;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -50511,7 +50511,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 21904) = 0;
     *(_BYTE *)(a1 + 21905) = 0;
     *(_DWORD *)(a1 + 21908) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 21908, a1 + 25436, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 21908, a1 + 25436, 2) = 12573760;
     *(_DWORD *)(a1 + 25436) = 0;
     *(_DWORD *)(a1 + 25440) = 12321336;
     *(_DWORD *)(a1 + 25444) = 11778612;
@@ -57784,7 +57784,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 37) = 0;
     *(_DWORD *)(a1 + 40) = 0;
     *(_DWORD *)(a1 + 44) = 12575092;
-    *Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 4) = 12575092;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 4) = 12575092;
     *(_DWORD *)(a1 + 3572) = 0;
     *(_DWORD *)(a1 + 3576) = 12321336;
     *(_DWORD *)(a1 + 3580) = 11778612;
@@ -61736,7 +61736,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13258716);
     *(_DWORD *)(a1 + 4) = 12576900;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -62131,7 +62131,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12576992;
     *(_DWORD *)(a1 + 4) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
     *(_DWORD *)(a1 + 3532) = 0;
     *(_DWORD *)(a1 + 3536) = 12321336;
     *(_DWORD *)(a1 + 3540) = 11778612;
@@ -63210,7 +63210,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13259408);
     *(_DWORD *)(a1 + 4) = 12577084;
     *(_DWORD *)(a1 + 40) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -64078,7 +64078,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13260092);
     *(_DWORD *)(a1 + 4) = 12577212;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -65499,7 +65499,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13260492);
     *(_DWORD *)(a1 + 4) = 12577340;
     *(_DWORD *)(a1 + 40) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -71122,7 +71122,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 10800) = 0;
     *(_DWORD *)(a1 + 10804) = 0;
     *(_DWORD *)(a1 + 10808) = 12572560;
-    *Disposer_ctorWithRingOfChildren(a1 + 10808, a1 + 14336, 3) = 12572560;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 10808, a1 + 14336, 3) = 12572560;
     *(_DWORD *)(a1 + 14336) = 0;
     *(_DWORD *)(a1 + 14340) = 12321336;
     *(_DWORD *)(a1 + 14344) = 11778612;
@@ -72428,7 +72428,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13263296);
     *(_DWORD *)(a1 + 4) = 12578068;
     *(_DWORD *)(a1 + 40) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -73998,7 +73998,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 42504), a1 + 42488, 13263744);
     *(_DWORD *)(a1 + 42484) = 12578196;
     *(_DWORD *)(a1 + 42520) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 42520, a1 + 46048, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 42520, a1 + 46048, 2) = 12573760;
     *(_DWORD *)(a1 + 46048) = 0;
     *(_DWORD *)(a1 + 46052) = 12321336;
     *(_DWORD *)(a1 + 46056) = 11778612;
@@ -76855,7 +76855,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13264892);
     *(_DWORD *)(a1 + 4) = 12578324;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -79690,7 +79690,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13266644);
     *(_DWORD *)(a1 + 4) = 12578480;
     *(_DWORD *)(a1 + 40) = 12575092;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 4) = 12575092;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 4) = 12575092;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -81223,7 +81223,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 4) = 12578608;
     sub_604B0E68(a1 + 40);
     *(_DWORD *)(a1 + 31900) = 12575092;
-    *Disposer_ctorWithRingOfChildren(a1 + 31900, a1 + 35428, 4) = 12575092;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 31900, a1 + 35428, 4) = 12575092;
     *(_DWORD *)(a1 + 35428) = 0;
     *(_DWORD *)(a1 + 35432) = 12321336;
     *(_DWORD *)(a1 + 35436) = 11778612;
@@ -82465,7 +82465,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12578732;
     *(_DWORD *)(a1 + 4) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
     *(_DWORD *)(a1 + 3532) = 0;
     *(_DWORD *)(a1 + 3536) = 12321336;
     *(_DWORD *)(a1 + 3540) = 11778612;
@@ -82835,7 +82835,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 52) = 0;
     SE_SYS_DECIDE_ref_50208C(a1 + 56);
     *(_DWORD *)(a1 + 2140) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 2140, a1 + 5668, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 2140, a1 + 5668, 1) = 12570900;
     *(_DWORD *)(a1 + 5668) = 0;
     *(_DWORD *)(a1 + 5672) = 12321336;
     *(_DWORD *)(a1 + 5676) = 11778612;
@@ -83811,7 +83811,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13268168);
     *(_DWORD *)(a1 + 4) = 12578896;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -96035,7 +96035,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 16) = 12581048;
     *(_DWORD *)(a1 + 52) = 0;
     *(_DWORD *)(a1 + 56) = 12574936;
-    *Disposer_ctorWithRingOfChildren(a1 + 56, a1 + 3584, 6) = 12574936;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 56, a1 + 3584, 6) = 12574936;
     *(_DWORD *)(a1 + 3584) = 0;
     *(_DWORD *)(a1 + 3588) = 12321336;
     *(_DWORD *)(a1 + 3592) = 11778612;
@@ -98904,7 +98904,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 40) = 0;
     *(_DWORD *)(a1 + 44) = 0;
     *(_DWORD *)(a1 + 48) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 48, a1 + 3576, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 48, a1 + 3576, 1) = 12570900;
     *(_DWORD *)(a1 + 3576) = 0;
     *(_DWORD *)(a1 + 3580) = 12321336;
     *(_DWORD *)(a1 + 3584) = 11778612;
@@ -100034,7 +100034,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 20), a1 + 4, 13272860);
     *(_DWORD *)a1 = 12581436;
     *(_DWORD *)(a1 + 36) = 12575092;
-    *Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 4) = 12575092;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 4) = 12575092;
     *(_DWORD *)(a1 + 3564) = 0;
     *(_DWORD *)(a1 + 3568) = 12321336;
     *(_DWORD *)(a1 + 3572) = 11778612;
@@ -100895,7 +100895,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)a1 = 12581548;
     *(_DWORD *)(a1 + 36) = 21;
     *(_DWORD *)(a1 + 40) = 12575092;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 4) = 12575092;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 4) = 12575092;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -101447,7 +101447,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13273436);
     *(_DWORD *)(a1 + 4) = 12581676;
     *(_DWORD *)(a1 + 40) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -101812,7 +101812,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 24) = 0;
     *(_DWORD *)(a1 + 28) = 0;
     *(_DWORD *)(a1 + 36) = 12574272;
-    *Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 7) = 12574272;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 7) = 12574272;
     *(_DWORD *)(a1 + 3564) = 0;
     *(_DWORD *)(a1 + 3568) = 12321336;
     *(_DWORD *)(a1 + 3572) = 11778612;
@@ -103136,7 +103136,7 @@ static inline unsigned int uxtb16(unsigned int x)
     do
     {
       *(_DWORD *)(v2 + 8) = 12574936;
-      *Disposer_ctorWithRingOfChildren(v2 + 8, v2 + 3536, 6) = 12574936;
+      *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(v2 + 8, v2 + 3536, 6) = 12574936;
       *(_DWORD *)(v2 + 3536) = 0;
       *(_DWORD *)(v2 + 3540) = 12321336;
       *(_DWORD *)(v2 + 3544) = 11778612;
@@ -103866,7 +103866,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 20), a1 + 4, 13274524);
     *(_DWORD *)a1 = 12582188;
     *(_DWORD *)(a1 + 36) = 12574412;
-    *Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 5) = 12574412;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 5) = 12574412;
     *(_DWORD *)(a1 + 3564) = 0;
     *(_DWORD *)(a1 + 3568) = 12321336;
     *(_DWORD *)(a1 + 3572) = 11778612;
@@ -105931,7 +105931,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13275124);
     *(_DWORD *)(a1 + 4) = 12582336;
     *(_DWORD *)(a1 + 40) = 12572560;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 3) = 12572560;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 3) = 12572560;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -106970,7 +106970,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 20), a1 + 4, 13275660);
     *(_DWORD *)a1 = 12582592;
     *(_DWORD *)(a1 + 36) = 12582684;
-    *Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 11) = 12582684;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 11) = 12582684;
     *(_DWORD *)(a1 + 3564) = 0;
     *(_DWORD *)(a1 + 3568) = 12321336;
     *(_DWORD *)(a1 + 3572) = 11778612;
@@ -110654,7 +110654,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 40) = 0;
     *(_BYTE *)(a1 + 41) = 0;
     *(_DWORD *)(a1 + 44) = 12574720;
-    *Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 10) = 12574720;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 10) = 12574720;
     *(_DWORD *)(a1 + 3572) = 0;
     *(_DWORD *)(a1 + 3576) = 12321336;
     *(_DWORD *)(a1 + 3580) = 11778612;
@@ -113899,7 +113899,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12583072;
     *(_DWORD *)(a1 + 4) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
     *(_DWORD *)(a1 + 3532) = 0;
     *(_DWORD *)(a1 + 3536) = 12321336;
     *(_DWORD *)(a1 + 3540) = 11778612;
@@ -115302,7 +115302,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_WORD *)(a1 + 56) = 0;
     *(_DWORD *)(a1 + 52) = 0;
     *(_DWORD *)(a1 + 72) = 12574272;
-    *Disposer_ctorWithRingOfChildren(a1 + 72, a1 + 3600, 7) = 12574272;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 72, a1 + 3600, 7) = 12574272;
     *(_DWORD *)(a1 + 3600) = 0;
     *(_DWORD *)(a1 + 3604) = 12321336;
     *(_DWORD *)(a1 + 3608) = 11778612;
@@ -116622,7 +116622,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13281280);
     *(_DWORD *)(a1 + 4) = 12583444;
     *(_DWORD *)(a1 + 40) = 12572560;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 3) = 12572560;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 3) = 12572560;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -121697,7 +121697,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60531904((_DWORD *)(a1 + 4068));
     sub_60531904((_DWORD *)(a1 + 8080));
     *(_DWORD *)(a1 + 12092) = 12575092;
-    *Disposer_ctorWithRingOfChildren(a1 + 12092, a1 + 15620, 4) = 12575092;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 12092, a1 + 15620, 4) = 12575092;
     *(_DWORD *)(a1 + 15620) = 0;
     *(_DWORD *)(a1 + 15624) = 12321336;
     *(_DWORD *)(a1 + 15628) = 11778612;
@@ -125128,7 +125128,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60531904((_DWORD *)(a1 + 4068));
     sub_60531904((_DWORD *)(a1 + 8080));
     *(_DWORD *)(a1 + 12092) = 12572560;
-    *Disposer_ctorWithRingOfChildren(a1 + 12092, a1 + 15620, 3) = 12572560;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 12092, a1 + 15620, 3) = 12572560;
     *(_DWORD *)(a1 + 15620) = 0;
     *(_DWORD *)(a1 + 15624) = 12321336;
     *(_DWORD *)(a1 + 15628) = 11778612;
@@ -127116,7 +127116,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 28108), a1 + 28092, 13286044);
     *(_DWORD *)(a1 + 28088) = 12584224;
     *(_DWORD *)(a1 + 28128) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 28128, a1 + 31656, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 28128, a1 + 31656, 2) = 12573760;
     *(_DWORD *)(a1 + 31656) = 0;
     *(_DWORD *)(a1 + 31660) = 12321336;
     *(_DWORD *)(a1 + 31664) = 11778612;
@@ -127799,7 +127799,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr_ctor((_DWORD *)(v2 + 44), v2 + 28, 13286888);
       *(_DWORD *)(v2 + 24) = 12584368;
       *(_DWORD *)(v2 + 60) = 12570900;
-      *Disposer_ctorWithRingOfChildren(v2 + 60, v2 + 3588, 1) = 12570900;
+      *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(v2 + 60, v2 + 3588, 1) = 12570900;
       *(_DWORD *)(v2 + 3588) = 0;
       *(_DWORD *)(v2 + 3592) = 12321336;
       *(_DWORD *)(v2 + 3596) = 11778612;
@@ -128133,7 +128133,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12584476;
     *(_DWORD *)(a1 + 4) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 2) = 12573760;
     *(_DWORD *)(a1 + 3532) = 0;
     *(_DWORD *)(a1 + 3536) = 12321336;
     *(_DWORD *)(a1 + 3540) = 11778612;
@@ -128248,7 +128248,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12584500;
     *(_DWORD *)(a1 + 4) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
     *(_DWORD *)(a1 + 3532) = 0;
     *(_DWORD *)(a1 + 3536) = 12321336;
     *(_DWORD *)(a1 + 3540) = 11778612;
@@ -128514,7 +128514,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12584524;
     *(_DWORD *)(a1 + 4) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
     *(_DWORD *)(a1 + 3532) = 0;
     *(_DWORD *)(a1 + 3536) = 12321336;
     *(_DWORD *)(a1 + 3540) = 11778612;
@@ -129986,7 +129986,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13287196);
     *(_DWORD *)(a1 + 4) = 12584576;
     *(_DWORD *)(a1 + 44) = 12572560;
-    *Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 3) = 12572560;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 3) = 12572560;
     *(_DWORD *)(a1 + 3572) = 0;
     *(_DWORD *)(a1 + 3576) = 12321336;
     *(_DWORD *)(a1 + 3580) = 11778612;
@@ -131869,7 +131869,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13288480);
     *(_DWORD *)(a1 + 4) = 12584820;
     *(_DWORD *)(a1 + 40) = 12574412;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 5) = 12574412;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 5) = 12574412;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -133195,7 +133195,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13289328);
     *(_DWORD *)(a1 + 4) = 12584948;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -133583,7 +133583,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 28), a1 + 12, 13289500);
     *(_DWORD *)(a1 + 8) = 12585076;
     *(_DWORD *)(a1 + 44) = 12572560;
-    *Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 3) = 12572560;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 3) = 12572560;
     *(_DWORD *)(a1 + 3572) = 0;
     *(_DWORD *)(a1 + 3576) = 12321336;
     *(_DWORD *)(a1 + 3580) = 11778612;
@@ -134168,7 +134168,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13289692);
     *(_DWORD *)(a1 + 4) = 12585204;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -134525,7 +134525,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13289844);
     *(_DWORD *)(a1 + 4) = 12585332;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -135028,7 +135028,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13290052);
     *(_DWORD *)(a1 + 4) = 12585460;
     *(_DWORD *)(a1 + 40) = 12575092;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 4) = 12575092;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 4) = 12575092;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -135518,7 +135518,7 @@ static inline unsigned int uxtb16(unsigned int x)
   {
     *(_DWORD *)a1 = 12585552;
     *(_DWORD *)(a1 + 4) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 4, a1 + 3532, 1) = 12570900;
     *(_DWORD *)(a1 + 3532) = 0;
     *(_DWORD *)(a1 + 3536) = 12321336;
     *(_DWORD *)(a1 + 3540) = 11778612;
@@ -136250,7 +136250,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13290828);
     *(_DWORD *)(a1 + 4) = 12585604;
     *(_DWORD *)(a1 + 40) = 12575092;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 4) = 12575092;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 4) = 12575092;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -137299,7 +137299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13291288);
     *(_DWORD *)(a1 + 4) = 12585732;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -137644,7 +137644,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 80) = 0;
     *(_DWORD *)(a1 + 44) = 12585860;
     *(_DWORD *)(a1 + 84) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 84, a1 + 3612, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 84, a1 + 3612, 1) = 12570900;
     *(_DWORD *)(a1 + 3612) = 0;
     *(_DWORD *)(a1 + 3616) = 12321336;
     *(_DWORD *)(a1 + 3620) = 11778612;
@@ -138661,7 +138661,7 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_BYTE *)(a1 + 40) = 0;
     *(_BYTE *)(a1 + 41) = 0;
     *(_DWORD *)(a1 + 44) = 12575092;
-    *Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 4) = 12575092;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 4) = 12575092;
     *(_DWORD *)(a1 + 3572) = 0;
     *(_DWORD *)(a1 + 3576) = 12321336;
     *(_DWORD *)(a1 + 3580) = 11778612;
@@ -141710,7 +141710,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13292648);
     *(_DWORD *)(a1 + 4) = 12586116;
     *(_DWORD *)(a1 + 44) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 2) = 12573760;
     *(_DWORD *)(a1 + 3572) = 0;
     *(_DWORD *)(a1 + 3576) = 12321336;
     *(_DWORD *)(a1 + 3580) = 11778612;
@@ -142645,7 +142645,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13293176);
     *(_DWORD *)(a1 + 4) = 12586244;
     *(_DWORD *)(a1 + 40) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -143457,7 +143457,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13293676);
     *(_DWORD *)(a1 + 4) = 12586392;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -143774,7 +143774,7 @@ static inline unsigned int uxtb16(unsigned int x)
       StateMgr_ctor((_DWORD *)(v2 + 48), v2 + 32, 13293836);
       *(_DWORD *)(v2 + 28) = 12586536;
       *(_DWORD *)(v2 + 64) = 12570900;
-      *Disposer_ctorWithRingOfChildren(v2 + 64, v2 + 3592, 1) = 12570900;
+      *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(v2 + 64, v2 + 3592, 1) = 12570900;
       *(_DWORD *)(v2 + 3592) = 0;
       *(_DWORD *)(v2 + 3596) = 12321336;
       *(_DWORD *)(v2 + 3600) = 11778612;
@@ -144223,7 +144223,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13293972);
     *(_DWORD *)(a1 + 4) = 12586664;
     *(_DWORD *)(a1 + 40) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 1) = 12570900;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -144744,7 +144744,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13294188);
     *(_DWORD *)(a1 + 4) = 12586792;
     *(_DWORD *)(a1 + 40) = 12573760;
-    *Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 40, a1 + 3568, 2) = 12573760;
     *(_DWORD *)(a1 + 3568) = 0;
     *(_DWORD *)(a1 + 3572) = 12321336;
     *(_DWORD *)(a1 + 3576) = 11778612;
@@ -145299,7 +145299,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 20), a1 + 4, 13294580);
     *(_DWORD *)a1 = 12586952;
     *(_DWORD *)(a1 + 36) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 36, a1 + 3564, 1) = 12570900;
     *(_DWORD *)(a1 + 3564) = 0;
     *(_DWORD *)(a1 + 3568) = 12321336;
     *(_DWORD *)(a1 + 3572) = 11778612;
@@ -146865,7 +146865,7 @@ static inline unsigned int uxtb16(unsigned int x)
     StateMgr_ctor((_DWORD *)(a1 + 24), a1 + 8, 13294960);
     *(_DWORD *)(a1 + 4) = 12587080;
     *(_DWORD *)(a1 + 44) = 12574936;
-    *Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 6) = 12574936;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 44, a1 + 3572, 6) = 12574936;
     *(_DWORD *)(a1 + 3572) = 0;
     *(_DWORD *)(a1 + 3576) = 12321336;
     *(_DWORD *)(a1 + 3580) = 11778612;
@@ -148939,56 +148939,56 @@ static inline unsigned int uxtb16(unsigned int x)
     *(_DWORD *)(a1 + 3540) = 0;
     *(_BYTE *)(a1 + 3544) = 0;
     *(_DWORD *)(a1 + 3548) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 3548, a1 + 7076, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 3548, a1 + 7076, 1) = 12570900;
     *(_DWORD *)(a1 + 7076) = 0;
     *(_DWORD *)(a1 + 7080) = 12321336;
     *(_DWORD *)(a1 + 7084) = 11778612;
     *(_DWORD *)(a1 + 7088) = 0;
     *(_BYTE *)(a1 + 7092) = 0;
     *(_DWORD *)(a1 + 7096) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 7096, a1 + 10624, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 7096, a1 + 10624, 1) = 12570900;
     *(_DWORD *)(a1 + 10624) = 0;
     *(_DWORD *)(a1 + 10628) = 12321336;
     *(_DWORD *)(a1 + 10632) = 11778612;
     *(_DWORD *)(a1 + 10636) = 0;
     *(_BYTE *)(a1 + 10640) = 0;
     *(_DWORD *)(a1 + 10644) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 10644, a1 + 14172, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 10644, a1 + 14172, 1) = 12570900;
     *(_DWORD *)(a1 + 14172) = 0;
     *(_DWORD *)(a1 + 14176) = 12321336;
     *(_DWORD *)(a1 + 14180) = 11778612;
     *(_DWORD *)(a1 + 14184) = 0;
     *(_BYTE *)(a1 + 14188) = 0;
     *(_DWORD *)(a1 + 14192) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 14192, a1 + 17720, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 14192, a1 + 17720, 1) = 12570900;
     *(_DWORD *)(a1 + 17720) = 0;
     *(_DWORD *)(a1 + 17724) = 12321336;
     *(_DWORD *)(a1 + 17728) = 11778612;
     *(_DWORD *)(a1 + 17732) = 0;
     *(_BYTE *)(a1 + 17736) = 0;
     *(_DWORD *)(a1 + 17740) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 17740, a1 + 21268, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 17740, a1 + 21268, 1) = 12570900;
     *(_DWORD *)(a1 + 21268) = 0;
     *(_DWORD *)(a1 + 21272) = 12321336;
     *(_DWORD *)(a1 + 21276) = 11778612;
     *(_DWORD *)(a1 + 21280) = 0;
     *(_BYTE *)(a1 + 21284) = 0;
     *(_DWORD *)(a1 + 21288) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 21288, a1 + 24816, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 21288, a1 + 24816, 1) = 12570900;
     *(_DWORD *)(a1 + 24816) = 0;
     *(_DWORD *)(a1 + 24820) = 12321336;
     *(_DWORD *)(a1 + 24824) = 11778612;
     *(_DWORD *)(a1 + 24828) = 0;
     *(_BYTE *)(a1 + 24832) = 0;
     *(_DWORD *)(a1 + 24836) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 24836, a1 + 28364, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 24836, a1 + 28364, 1) = 12570900;
     *(_DWORD *)(a1 + 28364) = 0;
     *(_DWORD *)(a1 + 28368) = 12321336;
     *(_DWORD *)(a1 + 28372) = 11778612;
     *(_DWORD *)(a1 + 28376) = 0;
     *(_BYTE *)(a1 + 28380) = 0;
     *(_DWORD *)(a1 + 28384) = 12570900;
-    *Disposer_ctorWithRingOfChildren(a1 + 28384, a1 + 31912, 1) = 12570900;
+    *(int *)(uintptr_t)Disposer_ctorWithRingOfChildren(a1 + 28384, a1 + 31912, 1) = 12570900;
     *(_DWORD *)(a1 + 31912) = 0;
     *(_DWORD *)(a1 + 31916) = 12321336;
     *(_DWORD *)(a1 + 31920) = 11778612;
