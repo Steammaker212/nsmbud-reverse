@@ -22,6 +22,9 @@ IMPLICIT = re.compile(r"call to undeclared function '([A-Za-z_]\w*)'")
 # Widths that indicate the identifier was used as a storage location.
 ASSIGN = re.compile(r"(?<![\w.>])([A-Za-z_]\w*)\s*=(?!=)")
 INC = re.compile(r"(?:\+\+|--)\s*([A-Za-z_]\w*)|([A-Za-z_]\w*)\s*(?:\+\+|--)")
+# `&sym` means a scalar: an array name would already be an address. `&sym[...]`
+# is excluded because that is how an array element is taken.
+ADDR = re.compile(r"&([A-Za-z_]\w*)\b(?!\s*\[)")
 
 HEADER = "nsmbudx_undeclared.h"
 # `too few arguments to function call, expected N, have M` and the inverse.
@@ -104,10 +107,14 @@ def main() -> int:
                     encoding="utf-8", errors="replace")))
         data -= declared_funcs
         funcs -= declared_funcs
+        # A global can be assigned with a cast that hides it from a naive scan
+        # (`StageActor_RTTI = (int)&off_...;`), and taking its address makes it
+        # a scalar too. Treat both as scalar evidence.
         for u in units:
             t = u.read_text(encoding="utf-8", errors="replace")
             assigned |= set(ASSIGN.findall(t))
             assigned |= {a or b for a, b in INC.findall(t)}
+            assigned |= set(ADDR.findall(t))
 
         lines = [
             "/* nsmbudx_undeclared.h -- symbols the decompiled bodies reference.",
