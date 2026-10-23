@@ -1,3 +1,4 @@
+#include "nsmbudx_value_types.h"
 /* NSMBU Deluxe (Switch) v1.0.0 -- recovered struct layouts
  *
  * GENERATED from constructor evidence. Two independent channels back every member:
@@ -719,7 +720,14 @@ typedef struct ColliderNodeUnk1 {
  */
 typedef struct CollisionActor {
     uint32_t field_0000;   /* +0x0000 */
-    uint8_t  _pad_1770[0x176C];
+    /* +0x0000..0x0284 is the embedded StageActor, and +0x0288 is collisionMgr (main.i64: `char[5352]`, i.e.
+     * 0x14E8 bytes, which lands exactly on field_1770). The intermediate padding is kept as one region because
+     * only the members the corpus names are being added -- the whole layout was previously an anonymous dword
+     * plus a 0x176C pad. */
+    uint8_t  _pad_0004[0x280];
+    int32_t  field_284;    /* +0x0284 */
+    uint8_t  collisionMgr[0x14E8];   /* +0x0288, 5352 bytes as main.i64 records it */
+    uint8_t  _pad_1770[0x0];
     uint32_t field_1770;   /* +0x1770 */
     uint32_t field_1774;   /* +0x1774 */
     uint32_t field_1778;   /* +0x1778 */
@@ -2448,71 +2456,75 @@ typedef struct SoundActor {
  *
  * Derived from: _ZN10StageActorC2EPK14ActorBuildInfo
  */
+/* StageActor -- every member and offset taken from main.i64.
+ *
+ * The previous definition was an anonymous dword plus a 0x176C pad, which is why `aCollider`, `position`,
+ * `field_248` and the rest reported "no member named". Recovering it also required the embedded base: `_`
+ * is an Actor at +0x000, and `aCollider` is an ActiveCollider at +0x0BC, both already defined above.
+ */
 typedef struct StageActor {
-    uint32_t field_0000;   /* +0x0000 */
-    uint8_t  _pad_0050[0x4C];
-    uint32_t field_0050;   /* +0x0050 */
-    uint16_t field_0054;   /* +0x0054 */
-    uint8_t field_0056;   /* +0x0056 */
-    uint8_t field_0057;   /* +0x0057 */
-    uint32_t field_0058;   /* +0x0058 */
-    uint32_t field_005C;   /* +0x005C */
-    uint32_t field_0060;   /* +0x0060 */
-    uint32_t field_0064;   /* +0x0064 */
-    uint32_t field_0068;   /* +0x0068 */
-    uint8_t  _pad_007C[0x10];
-    uint32_t field_007C;   /* +0x007C */
-    uint32_t field_0080;   /* +0x0080 */
-    uint32_t field_0084;   /* +0x0084 */
-    uint32_t field_0088;   /* +0x0088 */
-    uint32_t field_008C;   /* +0x008C */
-    uint32_t field_0090;   /* +0x0090 */
-    uint32_t field_0094;   /* +0x0094 */
-    uint32_t field_0098;   /* +0x0098 */
-    uint32_t field_009C;   /* +0x009C */
-    uint32_t field_00A0;   /* +0x00A0 */
-    uint32_t field_00A4;   /* +0x00A4 */
-    uint32_t field_00A8;   /* +0x00A8 */
-    uint32_t field_00AC;   /* +0x00AC */
-    uint32_t field_00B0;   /* +0x00B0 */
-    uint32_t field_00B4;   /* +0x00B4 */
-    uint32_t field_00B8;   /* +0x00B8 */
-    uint8_t  _pad_0129[0x6D];
-    uint8_t field_0129;   /* +0x0129 */
-    uint8_t  _pad_01FC[0xD2];
-    uint32_t field_01FC;   /* +0x01FC */
-    uint32_t field_0200;   /* +0x0200 */
-    uint8_t  _pad_0214[0x10];
-    uint8_t field_0214;   /* +0x0214 */
-    uint8_t field_0215;   /* +0x0215 */
-    uint8_t field_0216;   /* +0x0216 */
-    uint8_t field_0217;   /* +0x0217 */
-    uint8_t field_0218;   /* +0x0218 */
-    uint8_t field_0219;   /* +0x0219 */
-    uint8_t field_021A;   /* +0x021A */
-    uint8_t field_021B;   /* +0x021B */
-    uint8_t field_021C;   /* +0x021C */
-    uint8_t  _pad_021E[0x1];
-    uint16_t field_021E;   /* +0x021E */
-    uint32_t field_0220;   /* +0x0220 */
-    uint32_t field_0224;   /* +0x0224 */
-    uint8_t field_0228;   /* +0x0228 */
-    uint8_t  _pad_022C[0x3];
-    uint32_t field_022C;   /* +0x022C */
-    uint32_t field_0230;   /* +0x0230 */
-    uint32_t field_0234;   /* +0x0234 */
-    uint32_t field_0238;   /* +0x0238 */
-    uint32_t field_023C;   /* +0x023C */
-    uint32_t field_0240;   /* +0x0240 */
-    uint32_t field_0244;   /* +0x0244 */
-    uint8_t  _pad_0270[0x28];
-    uint32_t field_0270;   /* +0x0270 */
-    uint32_t field_0274;   /* +0x0274 */
-    uint32_t field_0278;   /* +0x0278 */
-    uint32_t field_027C;   /* +0x027C */
-    uint32_t field_0280;   /* +0x0280 */
-    /* struct size >= 0x284 (644) */
-} StageActor;
+    struct Actor _;   /* +0x000  from main.i64 */
+    int32_t direction;   /* +0x050  from main.i64 */
+    int8_t playerId;   /* +0x054  from main.i64 */
+    int8_t field_55;   /* +0x055  from main.i64 */
+    int8_t field_56;   /* +0x056  from main.i64 */
+    int8_t field_57;   /* +0x057  from main.i64 */
+    int32_t field_58;   /* +0x058  from main.i64 */
+    int32_t field_5C;   /* +0x05C  from main.i64 */
+    int32_t field_60;   /* +0x060  from main.i64 */
+    float field_64;   /* +0x064  from main.i64 */
+    float xAcceleration;   /* +0x068  from main.i64 */
+    Vec3 position;   /* +0x06C  from main.i64 */
+    Vec3 speed;   /* +0x078  from main.i64 */
+    Vec3 maxSpeed;   /* +0x084  from main.i64 */
+    Vec3 scale;   /* +0x090  from main.i64 */
+    Vec3i rotation;   /* +0x09C  from main.i64 */
+    int32_t field_A8;   /* +0x0A8  from main.i64 */
+    int32_t field_AC;   /* +0x0AC  from main.i64 */
+    int32_t field_B0;   /* +0x0B0  from main.i64 */
+    int32_t field_B4;   /* +0x0B4  from main.i64 */
+    int32_t field_B8;   /* +0x0B8  from main.i64 */
+    ActiveCollider aCollider;   /* +0x0BC  from main.i64 */
+    float field_1EC;   /* +0x1EC  from main.i64 */
+    int32_t field_1F0;   /* +0x1F0  from main.i64 */
+    float field_1F4;   /* +0x1F4  from main.i64 */
+    float field_1F8;   /* +0x1F8  from main.i64 */
+    float field_1FC;   /* +0x1FC  from main.i64 */
+    int32_t field_200;   /* +0x200  from main.i64 */
+    float field_204;   /* +0x204  from main.i64 */
+    float field_208;   /* +0x208  from main.i64 */
+    float field_20C;   /* +0x20C  from main.i64 */
+    float field_210;   /* +0x210  from main.i64 */
+    int8_t zoneId;   /* +0x214  from main.i64 */
+    int8_t type;   /* +0x215  from main.i64 */
+    int8_t field_216;   /* +0x216  from main.i64 */
+    int8_t field_217;   /* +0x217  from main.i64 */
+    int8_t field_218;   /* +0x218  from main.i64 */
+    int8_t field_219;   /* +0x219  from main.i64 */
+    int8_t field_21A;   /* +0x21A  from main.i64 */
+    int8_t eventId1;   /* +0x21B  from main.i64 */
+    int8_t eventId2;   /* +0x21C  from main.i64 */
+    int8_t field_21D;   /* +0x21D  from main.i64 */
+    int16_t field_21E;   /* +0x21E  from main.i64 */
+    int32_t field_220;   /* +0x220  from main.i64 */
+    int32_t field_224;   /* +0x224  from main.i64 */
+    int8_t field_228;   /* +0x228  from main.i64 */
+    uint8_t _pad_229[0x3];
+    int32_t field_22C;   /* +0x22C  from main.i64 */
+    int32_t field_230;   /* +0x230  from main.i64 */
+    int32_t field_234;   /* +0x234  from main.i64 */
+    int32_t profileFlags;   /* +0x238  from main.i64 */
+    Vec3 effectOffset;   /* +0x23C  from main.i64 */
+    Vec3 field_248;   /* +0x248  from main.i64 */
+    Vec3 field_254;   /* +0x254  from main.i64 */
+    Vec3 field_260;   /* +0x260  from main.i64 */
+    int32_t field_26C;   /* +0x26C  from main.i64 */
+    int32_t field_270;   /* +0x270  from main.i64 */
+    int32_t field_274;   /* +0x274  from main.i64 */
+    int32_t field_278;   /* +0x278  from main.i64 */
+    float field_27C;   /* +0x27C  from main.i64 */
+    int32_t field_280;   /* +0x280  from main.i64 */
+} StageActor;   /* sizeof 0x284 */
 
 /* StarCoinBase -- 7 member(s) proven
  *
@@ -2538,12 +2550,18 @@ typedef struct StarCoinBase {
  * Derived from: StateActor_ctor
  */
 typedef struct StateActor {
-    uint32_t field_0000;   /* +0x0000 */
-    uint8_t  _pad_17BC[0x17B8];
+    /* Embedded base object. main.i64 models StateActor's first member as `_` of type CollisionActor at +0x000;
+     * `structs.h` had an anonymous dword plus padding instead, so every `x->_` access in the recovered units
+     * failed with "no member named '_'". CollisionActor is already defined above at its recorded size, so the
+     * layout is unchanged -- only the member name is now available. */
+    CollisionActor _;      /* +0x0000, size 0x17B0 -- so the next member really is at 0x17B0, and the old
+                            * `field_17BC` label was 12 bytes further along than this layout implies */
+    uint8_t  _pad_17B0[0xC];   /* +0x17B0 (main.i64 puts StateWrapper `states` here) */
     uint32_t field_17BC;   /* +0x17BC */
     uint32_t field_17C0;   /* +0x17C0 */
-    /* struct size >= 0x17c4 (6084) */
-    uint8_t _pad_to_sizeof[0x10];   /* +0x17C4 .. total 0x17D4, matches main.i64 sizeof */
+    /* +0x17C4 .. 0x17D4. main.i64 records StateActor's length as 0x17D4 (6100) and its second member `states` is a
+     * StateWrapper at +0x17B0, which sits inside that tail. The explicit pad makes the total exact. */
+    uint8_t _pad_17C4[0x10];   /* +0x17C4 .. total 0x17D4 */
 } StateActor;
 
 /* StateMgr -- 4 member(s) proven
