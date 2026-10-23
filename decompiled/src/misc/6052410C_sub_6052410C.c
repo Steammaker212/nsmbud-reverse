@@ -30,7 +30,7 @@ StateMethodExecuter *__fastcall sub_6052410C(int a1)
           if ( FIELD_U8(a1, 4674) )
             v5 = (StateBase *)&unk_60CA9D04;
           else
-            v5 = (StateBase *)&unk_60CA9D84;
+            v5 = (StateBase *)&stru_60CA9D84;
         }
         else if ( FIELD_U8(a1, 4674) )
         {
@@ -38,7 +38,7 @@ StateMethodExecuter *__fastcall sub_6052410C(int a1)
         }
         else
         {
-          v5 = (StateBase *)&unk_60CA9CA4;
+          v5 = (StateBase *)&stru_60CA9CA4;
         }
       }
       else

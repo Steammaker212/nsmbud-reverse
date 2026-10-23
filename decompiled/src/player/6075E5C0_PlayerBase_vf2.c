@@ -14,7 +14,7 @@ Actor *__fastcall PlayerBase_vf2(int a1)
 
   *(_DWORD *)a1 = PlayerBase_vtable;
   v2 = (_DWORD *)(a1 + 840);
-  sub_607647C0(a1);
+  Player__vfC8(a1);
   FIELD_U32(a1, 11008) = EffectWrapper_vtable;
   sub_60237560(a1 + 11008);
   sead__IDisposer__dtor((_DWORD *)(a1 + 11008));

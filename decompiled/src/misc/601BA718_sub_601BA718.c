@@ -123,10 +123,10 @@ LABEL_34:
   if ( v7 <= 0.00000011921 && v7 >= -0.00000011921 )
   {
     sub_6019EC34((_DWORD *)(a1 + 1084), (_DWORD *)(a1 + 1160));
-    v8 = (*(int (**)(void))(dword_60C8ABD4 + 8))();
+    v8 = (*(int (**)(void))(stru_60C8ABD4 + 8))();
     if ( v8 != (*(int (**)(void))(dword_60C8AC40 + 8))() )
       FIELD_U16(a1, 440) &= ~4u;
-    v6 = &dword_60C8ABD4;
+    v6 = &stru_60C8ABD4;
     goto LABEL_34;
   }
 }

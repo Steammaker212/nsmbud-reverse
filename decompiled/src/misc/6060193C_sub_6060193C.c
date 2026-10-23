@@ -62,7 +62,7 @@ int __fastcall sub_6060193C(int a1)
   FIELD_U32(a1, 496) = 0;
   FIELD_U32(a1, 500) = 1149239296;
   FIELD_U32(a1, 504) = 1149239296;
-  v7 = (int *)((char *)&unk_60CB2884 + 16 * v3);
+  v7 = (int *)((char *)&dword_60CB2884 + 16 * v3);
   v8 = *v7;
   v9 = v7[1];
   v10 = v7[2];

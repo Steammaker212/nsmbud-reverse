@@ -32,5 +32,5 @@ void __fastcall sub_6099BBD4(int a1)
   }
   sub_608A99B0(a1);
   nn__os__FinalizeMutex(a1 + 1432);
-  nullsub_2232();
+  nn_atk_SoundArchive__vf0();
 }

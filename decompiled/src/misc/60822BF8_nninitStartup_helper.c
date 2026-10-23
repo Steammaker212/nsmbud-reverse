@@ -13,6 +13,6 @@ void *nninitStartup_helper()
   __int64 v1; // [sp+0h] [bp-10h] BYREF
 
   nn__os__GetSystemTick((nn__os *)&v1);
-  *(_QWORD *)&dword_60CC6DD8 = v1;
-  return &unk_60CC6DD0;
+  *(_QWORD *)&qword_60CC6DD8 = v1;
+  return &dword_60CC6DD0;
 }

@@ -214,7 +214,7 @@ int sub_604F5D38()
   dword_60CA6AB4[1] = "CheckOnOff";
   dword_60CA6ABC[0] = &sead__SafeStringBase__vtable;
   dword_60CA6ABC[1] = "TouchCheckOnOff";
-  unk_60CA6AC4 = &sead__SafeStringBase__vtable;
+  dword_60CA6AC4 = &sead__SafeStringBase__vtable;
   unk_60CA6AC8 = "Loop";
   dword_60CA6ACC[0] = (int)&sead__SafeStringBase__vtable;
   dword_60CA6AD0 = (int)"Kinoko";

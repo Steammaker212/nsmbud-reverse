@@ -92,6 +92,6 @@ __int64 registerProfile_raitokurage_2F8A64()
   dword_60C92A98 = 0;
   dword_60C92A9C = 0;
   sub_60000288();
-  unk_60C929F0 = 0x2000000080000000LL;
+  dword_60C929F0 = 0x2000000080000000LL;
   return 0x2000000080000000LL;
 }

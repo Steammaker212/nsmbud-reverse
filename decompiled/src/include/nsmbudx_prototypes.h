@@ -350,6 +350,7 @@ int __fastcall sub_6000F0F0(); /* 0x6000F0F0 */
 void nullsub_2467(); /* 0x6000F104 */
 LineFollower *__fastcall LineFollower_ctor(); /* 0x6000F108 */
 StateMethodExecuter *__fastcall LineFollower_init(); /* 0x6000F198 */
+int __fastcall sub_6000F338(); /* 0x6000F338 */
 int __fastcall sub_6000F350(); /* 0x6000F350 */
 unsigned int __fastcall sub_6000F7B8(); /* 0x6000F7B8 */
 signed int __fastcall sub_6000F8AC(); /* 0x6000F8AC */
@@ -6140,6 +6141,7 @@ int __fastcall sub_6014C61C(); /* 0x6014C61C */
 int __fastcall sub_6014C658(); /* 0x6014C658 */
 float __fastcall CollisionMgr_process(); /* 0x6014C6E4 */
 int __fastcall CollisionMgr_process_helper_14D020(); /* 0x6014D020 */
+int __fastcall sub_6014D680(); /* 0x6014D680 */
 int __fastcall CollisionMgr_process_helper_14DDD0(); /* 0x6014DDD0 */
 int __fastcall CollisionMgr_process_helper_14E8B8(); /* 0x6014E8B8 */
 float __fastcall CollisionMgr_process_helper_14F130(); /* 0x6014F130 */
@@ -6345,6 +6347,7 @@ TileCheck *__fastcall TileCheck_ctor(); /* 0x6015D0EC */
 TileCheck *__fastcall sub_6015D144(); /* 0x6015D144 */
 signed int __fastcall sub_6015D180(); /* 0x6015D180 */
 int __fastcall TileCheck_check(); /* 0x6015DA30 */
+int __fastcall sub_6015DBD8(); /* 0x6015DBD8 */
 int __fastcall sub_6015DD58(); /* 0x6015DD58 */
 int __fastcall sub_6015DF58(); /* 0x6015DF58 */
 void __fastcall ColliderNode_ctor(); /* 0x6015DF90 */
@@ -13693,6 +13696,7 @@ _DWORD *__fastcall sub_60334D68(); /* 0x60334D68 */
 int __fastcall sub_60334DE0(); /* 0x60334DE0 */
 int __fastcall SE_OBJ_KK_THUNDER_SEPARATE_ref(); /* 0x60334EBC */
 void nullsub_3365(); /* 0x60334F64 */
+float *__fastcall sub_60334F68(); /* 0x60334F68 */
 void nullsub_3366(); /* 0x60335180 */
 int __fastcall sub_60335184(); /* 0x60335184 */
 void nullsub_181(); /* 0x603351CC */
@@ -30554,6 +30558,7 @@ _DWORD *__fastcall sub_6068AFF4(); /* 0x6068AFF4 */
 void __fastcall sub_6068B02C(); /* 0x6068B02C */
 RevealMaskRelated *__fastcall LightMask__ctor(); /* 0x6068B068 */
 signed int __fastcall LightMask__init(); /* 0x6068B09C */
+int __fastcall LightMask__update(); /* 0x6068B108 */
 signed int __fastcall LightMask__draw(); /* 0x6068B35C */
 _DWORD *__fastcall sub_6068B390(); /* 0x6068B390 */
 int __fastcall MaskManager_ctor_helper_68B3C4(); /* 0x6068B3C4 */
@@ -35584,11 +35589,11 @@ int __fastcall sub_607C7F78(); /* 0x607C7F78 */
 int __fastcall sub_607C8004(); /* 0x607C8004 */
 StateActor *__fastcall Actor_totenPlayer_build(); /* 0x607C807C */
 int __fastcall sub_607C80E8(); /* 0x607C80E8 */
-int __fastcall sub_607C80F8(); /* 0x607C80F8 */
-bool __fastcall sub_607C80FC(); /* 0x607C80FC */
-int __fastcall sub_607C8100(); /* 0x607C8100 */
-int __fastcall sub_607C8104(); /* 0x607C8104 */
-int __fastcall sub_607C8108(); /* 0x607C8108 */
+int __fastcall j_Player__vf3C(); /* 0x607C80F8 */
+bool __fastcall j_Player__vf2C(); /* 0x607C80FC */
+int __fastcall j_Player__vf30(); /* 0x607C8100 */
+int __fastcall j_Player__vf1C(); /* 0x607C8104 */
+int __fastcall j_Player__vf24(); /* 0x607C8108 */
 int __fastcall sub_607C810C(); /* 0x607C810C */
 _DWORD *__fastcall sub_607C8118(); /* 0x607C8118 */
 int __fastcall sub_607C814C(); /* 0x607C814C */
@@ -35620,7 +35625,7 @@ int __fastcall sub_607C8BB8(); /* 0x607C8BB8 */
 bool __fastcall sub_607C8C90(); /* 0x607C8C90 */
 bool __fastcall sub_607C8C94(); /* 0x607C8C94 */
 int __fastcall sub_607C8C98(); /* 0x607C8C98 */
-bool sub_607C8C9C(); /* 0x607C8C9C */
+bool j_Player__vf98(); /* 0x607C8C9C */
 int __fastcall sub_607C8CA0(); /* 0x607C8CA0 */
 int *sub_607C8D30(); /* 0x607C8D30 */
 void sub_607C8DA4(); /* 0x607C8DA4 */
@@ -35739,7 +35744,7 @@ int *__fastcall sub_607CDF3C(); /* 0x607CDF3C */
 int __fastcall sub_607CDF9C(); /* 0x607CDF9C */
 int __fastcall sub_607CDFCC(); /* 0x607CDFCC */
 int __fastcall sub_607CDFEC(); /* 0x607CDFEC */
-int __fastcall sub_607CE01C(); /* 0x607CE01C */
+int __fastcall j_Player__vfD8(); /* 0x607CE01C */
 float __fastcall sub_607CE020(); /* 0x607CE020 */
 int __fastcall sub_607CE05C(); /* 0x607CE05C */
 int __fastcall sub_607CE0D8(); /* 0x607CE0D8 */

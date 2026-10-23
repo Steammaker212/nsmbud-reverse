@@ -38,7 +38,7 @@ int __fastcall sub_608D7830(int a1, int a2)
 
   sub_608BCDA8(&v28);
   v4 = 0;
-  if ( sub_608BCAEC(a1, &v28, (int)&unk_60CC9900, 0x5200u) == 1 )
+  if ( sub_608BCAEC(a1, &v28, (int)&byte_60CC9900, 0x5200u) == 1 )
   {
     v4 = 0;
     if ( sub_608BCEC4(&v28, (int)v17) == 1 )

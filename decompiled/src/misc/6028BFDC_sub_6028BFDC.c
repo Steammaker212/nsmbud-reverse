@@ -114,10 +114,10 @@ int __fastcall sub_6028BFDC(int a1)
   {
     v13 = FIELD_U32(a1, 80);
     speed[0] = 0x2000000;
-    moveValueTo((int *)(a1 + 164), (int *)&unk_60C8F4C0 + v13 + 10, speed);
+    moveValueTo((int *)(a1 + 164), (int *)&dword_60C8F4C0 + v13 + 10, speed);
     v14 = FIELD_U32(a1, 80);
     speed[0] = 0x4000000;
-    moveValueTo((int *)(a1 + 160), (int *)&unk_60C8F4C0 + v14 + 12, speed);
+    moveValueTo((int *)(a1 + 160), (int *)&dword_60C8F4C0 + v14 + 12, speed);
     v9 = FIELD_U16(a1, 6340);
     v11 = *v10;
     v7 = *v8;
@@ -133,7 +133,7 @@ int __fastcall sub_6028BFDC(int a1)
       * (float)(*(float *)((char *)&sinLutTable[2] + v15)
               + (float)((float)((float)v22 * *(float *)((char *)&sinLutTable[3] + v15)) * 0.000000059605));
   FIELD_F32(a1, 120) = v26;
-  v27 = *((float *)&unk_60C8F4C0 + v9 + 17);
+  v27 = *((float *)&dword_60C8F4C0 + v9 + 17);
   v28 = *(float *)((char *)sinLutTable + v23)
       + (float)((float)((float)_R2 * *(float *)((char *)&sinLutTable[1] + v23)) * 0.000000059605);
   v29 = -(float)(v27 * v28);

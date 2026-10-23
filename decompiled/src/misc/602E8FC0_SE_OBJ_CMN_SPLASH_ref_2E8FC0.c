@@ -153,13 +153,13 @@ LABEL_15:
   if ( sub_60003460(a1) == 1 )
   {
     v21 = (StateMgr *)(a1 + 6084);
-    v22 = &dword_60C925A4;
+    v22 = &stru_60C925A4;
   }
   else
   {
     FIELD_U32(a1, 124) = 0;
     v21 = (StateMgr *)(a1 + 6084);
-    v22 = &dword_60C92584;
+    v22 = &stru_60C92584;
   }
   return (int)StateMgr__changeState(v21, (StateBase *)v22);
 }

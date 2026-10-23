@@ -10,7 +10,7 @@
 
 int __fastcall PlantFireball_vf48(int a1)
 {
-  nullsub_6();
+  FireballBase__vfC0();
   FIELD_U32(a1, 6776) = 15;
   return 6776;
 }

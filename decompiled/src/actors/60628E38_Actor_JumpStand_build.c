@@ -13,7 +13,7 @@ int __fastcall Actor_JumpStand_build(ActorBuildInfo *a1)
   int v2; // r4
 
   v2 = operator_new(0x1860u);
-  sub_605CC1F8((StateActor *)v2, a1, (void **)&unk_60CB3D74);
+  sub_605CC1F8((StateActor *)v2, a1, (void **)&dword_60CB3D74);
   *(_DWORD *)v2 = off_60C11F8C;
   FIELD_U32(v2, 6156) = 0;
   FIELD_U16(v2, 6152) = 0;

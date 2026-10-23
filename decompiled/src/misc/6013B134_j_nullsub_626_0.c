@@ -11,5 +11,5 @@
 // attributes: thunk
 void j_nullsub_626_0()
 {
-  nullsub_626();
+  FireballBase__vfC8();
 }

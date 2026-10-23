@@ -12,6 +12,6 @@ void sub_608A8384()
 {
   void *v0; // r0
 
-  nullsub_2232();
+  nn_atk_SoundArchive__vf0();
   operator_delete(v0);
 }

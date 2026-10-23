@@ -28,7 +28,7 @@ int __fastcall sub_609A9B80(_DWORD *a1, int a2, int a3)
   v5 = a1[44];
   LOBYTE(v6) = 2;
   if ( v3 < 5 )
-    v4 = (int *)((char *)&unk_60B75470 + 4 * v3);
+    v4 = (int *)((char *)&dword_60B75470 + 4 * v3);
   v7 = *v4;
   if ( v5 <= 5 )
     v6 = dword_60B75450[v5];

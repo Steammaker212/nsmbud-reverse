@@ -19,7 +19,7 @@ StateMethodExecuter *__fastcall sub_604F4280(int a1)
     if ( FIELD_U32(a1, 9644) )
       v3 = (StateBase *)&unk_60CA68BC;
     else
-      v3 = (StateBase *)&unk_60CA68DC;
+      v3 = (StateBase *)&stru_60CA68DC;
     return StateMgr__changeState((StateMgr *)(a1 + 24), v3);
   }
   return result;

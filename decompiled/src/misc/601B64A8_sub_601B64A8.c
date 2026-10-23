@@ -264,10 +264,10 @@ int __fastcall sub_601B64A8(int a1)
   FIELD_U32(a1, 1144) = 0;
   if ( (FIELD_U32(a1, 264) | 1) == 7 && !(*(int (__fastcall **)(int))(*(_DWORD *)a1 + 92))(a1) )
   {
-    v7 = (*(int (**)(void))(dword_60C8AE50 + 8))();
+    v7 = (*(int (**)(void))(stru_60C8AE50 + 8))();
     if ( v7 != (*(int (**)(void))(dword_60C8AC40 + 8))() )
       FIELD_U16(a1, 440) &= ~4u;
-    v6 = &dword_60C8AE50;
+    v6 = &stru_60C8AE50;
   }
   else
   {

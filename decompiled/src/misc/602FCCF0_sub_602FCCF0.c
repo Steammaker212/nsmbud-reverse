@@ -24,7 +24,7 @@ int __fastcall sub_602FCCF0(int *a1)
   v3 = v7 < 0.0;
   a1[20] = v3;
   a1[40] += *((_DWORD *)&unk_60C92B34 + v3);
-  result = moveValueTo(a1 + 40, (int *)&unk_60C92B2C + v3, (int *)&unk_60C92B34);
+  result = moveValueTo(a1 + 40, (int *)&flt_60C92B2C + v3, (int *)&unk_60C92B34);
   v5 = a1[2125];
   if ( v5 )
   {

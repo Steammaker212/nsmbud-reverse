@@ -44,7 +44,7 @@ int *__fastcall sub_6028C664(int a1)
   sub_6083224C((int *)(a1 + 156), (int *)&v13, &v12);
   v7 = FIELD_U32(a1, 80);
   v12 = 0x4000000;
-  sub_6083224C((int *)(a1 + 160), (int *)&unk_60C8F4C0 + v7 + 6, &v12);
+  sub_6083224C((int *)(a1 + 160), (int *)&dword_60C8F4C0 + v7 + 6, &v12);
   v10 = *(int **)(a1 + 164);
   v9 = (int *)(a1 + 164);
   result = v10;

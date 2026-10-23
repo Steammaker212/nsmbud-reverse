@@ -14,7 +14,7 @@ int __fastcall SE_EMY_FIRE_BROS_FIRE_ref(int a1)
   Vec2 v4; // [sp+0h] [bp-20h] BYREF
   Vec3 position; // [sp+8h] [bp-18h] BYREF
 
-  nullsub_6();
+  FireballBase__vfC0();
   v2 = FIELD_F32(a1, 112);
   position.x = FIELD_F32(a1, 108);
   position.y = v2;

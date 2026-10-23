@@ -555,7 +555,7 @@ LABEL_91:
     FIELD_U32(a1, 6080) = 0;
     FIELD_U8(a1, 6137) = 0;
     if ( sub_60696A80(a1) )
-      v62 = (StateBase *)&unk_60CB92F0;
+      v62 = (StateBase *)&stru_60CB92F0;
     else
       v62 = (StateBase *)&unk_60CB9314;
     StateMgr__changeState((StateMgr *)(a1 + 6104), v62);

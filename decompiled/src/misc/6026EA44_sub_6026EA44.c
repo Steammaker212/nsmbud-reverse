@@ -26,10 +26,10 @@ int __fastcall sub_6026EA44(_DWORD *a1)
   float v15; // s3
   float v16; // s4
 
-  v2 = &unk_60AF5A5C;
+  v2 = &dword_60AF5A5C;
   v3 = 4 * a1[2369];
   if ( v3 < -2147483644 )
-    v2 = &unk_60AF2514;
+    v2 = &dword_60AF2514;
   v4 = a1 + 2367;
   v5 = (float *)(a1 + 2359);
   v6 = (float *)(a1 + 2358);

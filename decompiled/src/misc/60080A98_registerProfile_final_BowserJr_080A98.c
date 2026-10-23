@@ -261,7 +261,7 @@ int (*registerProfile_final_BowserJr_080A98())()
   dword_60C81CC0 = 0;
   dword_60C81CC4 = (int)nullsub_2626;
   dword_60C81CC8 = 0;
-  unk_60C81CCC = &off_60BC7614;
+  dword_60C81CCC = &off_60BC7614;
   unk_60C81CD0 = CurrentStateID + 28;
   dword_60C81CD4 = (int)SE_VOC_JR_RECORVER_ref;
   dword_60C81CD8 = 0;

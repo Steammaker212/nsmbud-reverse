@@ -14,6 +14,6 @@ int __fastcall sub_60237610(EffectData *a1, int a2, __int64 *a3, char a4)
   if ( EffectData_setEffectId(a1, a2) != 1 )
     return 0;
   if ( !a3 )
-    a3 = (__int64 *)&unk_60B3B8CC;
+    a3 = (__int64 *)&qword_60B3B8CC;
   return sub_60236A80((int)a1, a3, a4);
 }

@@ -38,7 +38,7 @@ bool __fastcall sub_6075FC38(int a1)
       v5[0] = 0;
       v5[1] = 1;
       v6 = 1;
-      sub_60773E6C(a1, &unk_60CBF840, v5);
+      sub_60773E6C(a1, &stru_60CBF840, v5);
       return v3;
     }
     return 0;

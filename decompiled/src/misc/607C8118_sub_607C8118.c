@@ -19,5 +19,5 @@ _DWORD *__fastcall sub_607C8118(int a1)
     FIELD_U32(a1, 256) = 0;
     FIELD_U32(a1, 7204) = 0;
   }
-  return sub_607B3698(a1);
+  return Player__vf84(a1);
 }

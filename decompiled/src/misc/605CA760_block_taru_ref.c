@@ -34,7 +34,7 @@ signed int __fastcall block_taru_ref(int a1)
   FIELD_U32(a1, 496) = 1094713344;
   FIELD_U32(a1, 500) = 1140850688;
   FIELD_U32(a1, 504) = 1140850688;
-  ActiveCollider__init((ActiveCollider *)(a1 + 188), (StageActor *)a1, (ActiveColliderInfo *)&unk_60CB0DB8, a1 + 6816);
+  ActiveCollider__init((ActiveCollider *)(a1 + 188), (StageActor *)a1, (ActiveColliderInfo *)&qword_60CB0DB8, a1 + 6816);
   v7 = ActiveColliderMgr_instance;
   if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, (ActiveCollider *)(a1 + 188))
     && !ActiveColliderMgr_isInCreateList(v7, (ActiveCollider *)(a1 + 188)) )

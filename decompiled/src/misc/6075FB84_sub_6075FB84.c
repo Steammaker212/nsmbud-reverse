@@ -31,7 +31,7 @@ int __fastcall sub_6075FB84(int a1, char a2, int a3)
       v10[0] = 0;
       v10[1] = a3;
       v11 = a2;
-      sub_60773E6C(a1, &unk_60CBF840, v10);
+      sub_60773E6C(a1, &stru_60CBF840, v10);
       return 1;
     }
     return v6;

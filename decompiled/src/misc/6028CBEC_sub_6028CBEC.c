@@ -20,7 +20,7 @@ int __fastcall sub_6028CBEC(int a1)
   FIELD_U32(a1, 152) = 1065353216;
   v2 = StageActor__directionToPlayerX((StateActor *)a1, (Vec3 *)(a1 + 108));
   FIELD_U32(a1, 80) = v2;
-  FIELD_U32(a1, 160) = *((_DWORD *)&unk_60C8F4C0 + v2 + 6);
+  FIELD_U32(a1, 160) = *((_DWORD *)&dword_60C8F4C0 + v2 + 6);
   FIELD_U32(a1, 572) = 0;
   FIELD_U32(a1, 576) = 0;
   FIELD_U32(a1, 580) = 0;

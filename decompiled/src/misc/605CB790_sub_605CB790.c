@@ -30,9 +30,9 @@ unsigned int __fastcall sub_605CB790(int a1)
   if ( sub_601536B0((int)ColliderMgr_instance, a1 + 6160) )
     ColliderMgr_removeRelated1(ColliderMgr_instance, (ColliderBase *)(a1 + 6160));
   if ( FIELD_U8(dword_60CC6D8C, 17) )
-    v3 = (ActiveColliderInfo *)&unk_60CB0E18;
+    v3 = (ActiveColliderInfo *)&qword_60CB0E18;
   else
-    v3 = (ActiveColliderInfo *)&unk_60CB0E48;
+    v3 = (ActiveColliderInfo *)&qword_60CB0E48;
   ActiveCollider__init((ActiveCollider *)(a1 + 188), (StageActor *)a1, v3, a1 + 6816);
   result = FIELD_U8(a1, 84);
   if ( result <= 3 )

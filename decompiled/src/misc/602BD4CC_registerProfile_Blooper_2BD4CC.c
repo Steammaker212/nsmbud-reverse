@@ -46,8 +46,8 @@ int *registerProfile_Blooper_2BD4CC()
   sub_60000288();
   unk_60C91518 = 131072000;
   dword_60C9151C = 2147418112;
-  unk_60C91520 = 0x2000000;
-  unk_60C91524 = 0x80000;
+  dword_60C91520 = 0x2000000;
+  dword_60C91524 = 0x80000;
   dword_60C91528 = 0x80000;
   dword_60C91240 = CurrentStateID + 1;
   dword_60C9123C = (int)&off_60BE4F48;

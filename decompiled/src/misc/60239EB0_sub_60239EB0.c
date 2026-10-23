@@ -132,13 +132,13 @@ int __fastcall sub_60239EB0(int a1)
   sead__BufferedSafeStringBase__assureTerminationImpl_const(a1 + 3596);
   **(_BYTE **)(a1 + 3600) = 0;
   FIELD_U32(a1, 3596) = &off_60BD4BF0;
-  FIELD_U64(a1, 2184) = unk_60B3B8CC;
+  FIELD_U64(a1, 2184) = qword_60B3B8CC;
   FIELD_U64(a1, 2192) = unk_60B3B8D4;
   FIELD_U64(a1, 2200) = unk_60B3B8DC;
   FIELD_U64(a1, 2208) = unk_60B3B8E4;
   FIELD_U64(a1, 2216) = unk_60B3B8EC;
   FIELD_U64(a1, 2224) = unk_60B3B8F4;
-  FIELD_U64(a1, 2252) = unk_60B3B8CC;
+  FIELD_U64(a1, 2252) = qword_60B3B8CC;
   FIELD_U64(a1, 2260) = unk_60B3B8D4;
   FIELD_U64(a1, 2268) = unk_60B3B8DC;
   FIELD_U64(a1, 2276) = unk_60B3B8E4;

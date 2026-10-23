@@ -10,5 +10,5 @@
 
 void *sub_601B6A5C()
 {
-  return &unk_60AFCF9C;
+  return &flt_60AFCF9C;
 }

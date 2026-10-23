@@ -14,7 +14,7 @@ int *sub_60290E50()
   dword_60C8F8D8 = 0;
   dword_60C8F8DC = 0;
   dword_60C8F8E0 = 0;
-  unk_60C8F8E4 = 835125248;
+  dword_60C8F8E4 = 835125248;
   unk_60C8F8E8 = -835125248;
   dword_60C8F8F0 = CurrentStateID + 1;
   dword_60C8F8F4 = 628;

@@ -11,5 +11,5 @@
 // attributes: thunk
 void __fastcall j_nullsub_2232(int a1)
 {
-  nullsub_2232();
+  nn_atk_SoundArchive__vf0();
 }

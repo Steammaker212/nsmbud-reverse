@@ -19,7 +19,7 @@ int __fastcall sub_6084E138(int a1)
   FIELD_U32(result, 64) = 0;
   FIELD_U32(result, 68) = 4;
   FIELD_U32(result, 72) = 0;
-  FIELD_U32(result, 76) = &unk_60CC7EF0;
+  FIELD_U32(result, 76) = &dword_60CC7EF0;
   FIELD_U16(result, 80) = 0;
   return result;
 }

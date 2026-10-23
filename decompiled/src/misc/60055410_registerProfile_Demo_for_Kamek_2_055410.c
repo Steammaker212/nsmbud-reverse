@@ -26,7 +26,7 @@ void (*registerProfile_Demo_for_Kamek_2_055410())()
   dword_60C808B4 = 0;
   dword_60C808B8 = (int)nullsub_2540;
   dword_60C808BC = 0;
-  unk_60C808C0 = &off_60BC4060;
+  dword_60C808C0 = &off_60BC4060;
   unk_60C808C4 = CurrentStateID + 2;
   dword_60C808C8 = (int)sub_600546D0;
   dword_60C808CC = 0;

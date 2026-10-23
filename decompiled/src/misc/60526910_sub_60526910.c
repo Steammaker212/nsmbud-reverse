@@ -81,7 +81,7 @@ int __fastcall sub_60526910(_DWORD *a1, int *a2, int a3)
   v9 = v7 - 1;
   v10 = 0;
   v11 = v38;
-  v33 = (char *)&unk_60B03878 + 16 * v9;
+  v33 = (char *)&dword_60B03878 + 16 * v9;
   v39 = 0;
   v35 = 0;
   do

@@ -53,7 +53,7 @@ int __fastcall sub_608F261C(int *a1, void *a2)
   a1[55] = v16;
   a1[56] = v17;
   nn__os__GetSystemTick((nn__os *)v15);
-  unk_60CCEC30 = v15[0];
+  qword_60CCEC30 = v15[0];
   dword_60CC75DC(v15);
   dword_60CC75D8(v15, a1[6]);
   dword_60CC7638(a1 + 28, v15);

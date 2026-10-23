@@ -11,5 +11,5 @@
 // attributes: thunk
 void j_nullsub_627()
 {
-  nullsub_627();
+  PlantFireball__vfD4();
 }

@@ -29,7 +29,7 @@ StateMethodExecuter *__fastcall sub_604868B0(int a1)
         if ( FIELD_U8(a1, 47792) )
           v3 = (StateBase *)&unk_60C9F720;
         else
-          v3 = (StateBase *)&unk_60C9F4C0;
+          v3 = (StateBase *)&stru_60C9F4C0;
         return StateMgr__changeState(v4, v3);
       }
       v3 = (StateBase *)&unk_60C9F6E0;

@@ -70,7 +70,7 @@ int __fastcall sub_6002D03C(int a1)
     _cxa_guard_release(&dword_60C7FBF4);
   }
   if ( v7 && (**(int (__fastcall ***)(int, int *))v7)(v7, &dword_60C7FBF0) == 1 )
-    (*(void (__fastcall **)(int, void *))(*(_DWORD *)v7 + 192))(v7, &unk_60C808C0);
+    (*(void (__fastcall **)(int, void *))(*(_DWORD *)v7 + 192))(v7, &dword_60C808C0);
   v9 = ActorMgrRelated_getById(ActorMgr__instance + 27168, FIELD_U32(a1, 7324));
   if ( ((unsigned int)&dword_60C7FC04 & ~(1610797456 << v10) & 1) == 0 && _cxa_guard_acquire(&dword_60C7FC04) )
   {

@@ -26,7 +26,7 @@ StateMethodExecuter *__fastcall sub_60523BE8(int a1)
     else
     {
       *v3 = 2;
-      v4 = (StateBase *)&unk_60CA9B04;
+      v4 = (StateBase *)&stru_60CA9B04;
     }
     return StateMgr__changeState((StateMgr *)(a1 + 24), v4);
   }

@@ -10,5 +10,5 @@
 
 void *sub_6046EAFC()
 {
-  return &unk_60C9D7E8;
+  return &dword_60C9D7E8;
 }

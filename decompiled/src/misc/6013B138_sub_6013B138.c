@@ -53,7 +53,7 @@ int __fastcall sub_6013B138(int a1)
         *v8 = v9 - 1;
     }
   }
-  nullsub_625();
+  FireballBase__vfC4();
   sub_600035C0(a1);
   CollisionActor__handleSpeed((CollisionActor *)a1);
   v11 = a1 + 648;

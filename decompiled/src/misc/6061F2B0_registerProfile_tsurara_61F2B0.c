@@ -68,7 +68,7 @@ int (*registerProfile_tsurara_61F2B0())()
   dword_60CB3768 = 0;
   dword_60CB376C = (int)nullsub_4921;
   dword_60CB3770 = 0;
-  unk_60CB3774 = &off_60C113AC;
+  dword_60CB3774 = &off_60C113AC;
   unk_60CB3778 = CurrentStateID + 4;
   dword_60CB377C = (int)nullsub_4922;
   dword_60CB3780 = 0;

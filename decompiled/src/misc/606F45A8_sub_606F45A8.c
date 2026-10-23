@@ -21,7 +21,7 @@ int __fastcall sub_606F45A8(int a1)
     v3 = (FIELD_U32(a1, 24) >> 28) & 7;
     FIELD_U8(a1, 6516) = v3;
     if ( v3 == 1 )
-      v4 = (StateBase *)&unk_60CBC398;
+      v4 = (StateBase *)&stru_60CBC398;
     else
       v4 = (StateBase *)&dword_60CBC374;
     StateMgr__changeState((StateMgr *)(a1 + 6084), v4);

@@ -18,7 +18,7 @@ int __fastcall sub_6076FB40(_DWORD *a1)
   {
     if ( ((int (__fastcall *)(_DWORD *))loc_60763E28)(a1) == 1 )
     {
-      v3 = (StateBase *)&unk_60CBF8AC;
+      v3 = (StateBase *)&stru_60CBF8AC;
       return Player_changeState((int)a1, v3, 1);
     }
     if ( sub_60793CA8(*(_DWORD *)(a1[162] + 4)) == 1 )

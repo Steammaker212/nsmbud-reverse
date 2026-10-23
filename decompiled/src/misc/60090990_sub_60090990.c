@@ -27,5 +27,5 @@ int __fastcall sub_60090990(int a1)
     sub_6040810C(dword_60C9A1E8);
     FIELD_U8(a1, 15260) = 0;
   }
-  return (*(int (__fastcall **)(int, void *))(*(_DWORD *)a1 + 192))(a1, &unk_60C82320);
+  return (*(int (__fastcall **)(int, void *))(*(_DWORD *)a1 + 192))(a1, &dword_60C82320);
 }

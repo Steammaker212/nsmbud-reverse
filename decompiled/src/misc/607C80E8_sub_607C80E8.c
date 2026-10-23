@@ -10,6 +10,6 @@
 
 int __fastcall sub_607C80E8(int a1)
 {
-  sub_6079569C(a1);
+  Player__vf14(a1);
   return 1;
 }

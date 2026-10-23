@@ -46,7 +46,7 @@ int __fastcall sub_601A2E00(int a1, _DWORD *a2)
     v6 = sub_608F4C38(v24, a2[10]);
     sub_608F4CA8(v6, a2[6]);
     sub_608F4CBC(v24, a2[7]);
-    sub_608F4CDC(v24, &unk_60B3B8CC);
+    sub_608F4CDC(v24, &qword_60B3B8CC);
     sub_608F4CE4(v24);
     memset(v23, 0, 12);
     v23[3] = 1132396544;

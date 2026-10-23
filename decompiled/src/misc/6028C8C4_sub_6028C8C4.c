@@ -52,7 +52,7 @@ int *__fastcall sub_6028C8C4(int a1)
   FIELD_F32(a1, 112) = FIELD_F32(a1, 112) + v17;
   FIELD_F32(a1, 116) = FIELD_F32(a1, 116) + FIELD_F32(a1, 128);
   FIELD_F32(a1, 108) = v18 + (float)(FIELD_F32(dword_60CC6484, 112) - FIELD_F32(dword_60CC6484, 56));
-  FIELD_U32(a1, 160) = *((_DWORD *)&unk_60C8F4C0 + FIELD_U32(a1, 80) + 6) + (v6 << 16);
+  FIELD_U32(a1, 160) = *((_DWORD *)&dword_60C8F4C0 + FIELD_U32(a1, 80) + 6) + (v6 << 16);
   v21 = *(int **)(a1 + 164);
   v20 = (int *)(a1 + 164);
   result = v21;

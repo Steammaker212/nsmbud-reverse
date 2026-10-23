@@ -18,7 +18,7 @@ int __fastcall sub_60420528(_DWORD *a1, int a2, int a3)
   const char *v11; // [sp+8h] [bp-28h]
 
   v10 = &sead__SafeStringBase__vtable;
-  v11 = (const char *)&unk_60AC7A9E;
+  v11 = (const char *)&byte_60AC7A9E;
   v9 = a1 + 19;
   ((void (*)(void))sub_609189A0)();
   v10 = &sead__SafeStringBase__vtable;

@@ -11,6 +11,6 @@
 int __fastcall sub_607CCEF0(int a1)
 {
   if ( FIELD_U32(a1, 11360) )
-    return sub_60763CF8(a1);
+    return Player__vfE8(a1);
   return a1;
 }

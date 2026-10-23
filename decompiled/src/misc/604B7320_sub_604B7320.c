@@ -24,7 +24,7 @@ int __fastcall sub_604B7320(_DWORD *a1)
     sead__SafeStringBase__operator_assign((int)v5, (int)v4);
   }
   a1[520] = sub_60502E60(a1, &dword_60CA2500);
-  a1[521] = sub_60502E60(a1, &unk_60CA2508);
+  a1[521] = sub_60502E60(a1, &dword_60CA2508);
   a1[522] = sub_60502E60(a1, &dword_60CA2510);
   a1[523] = sub_60502E60(a1, &dword_60CA2518);
   a1[524] = sub_60502E60(a1, &dword_60CA2520);

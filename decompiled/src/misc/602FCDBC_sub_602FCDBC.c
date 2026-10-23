@@ -39,7 +39,7 @@ int __fastcall sub_602FCDBC(int a1)
     v3 = 1;
   FIELD_U32(a1, 80) = v3;
   FIELD_U32(a1, 160) += *((_DWORD *)&unk_60C92B34 + v3);
-  result = moveValueTo((int *)(a1 + 160), (int *)&unk_60C92B2C + v3, (int *)&unk_60C92B34);
+  result = moveValueTo((int *)(a1 + 160), (int *)&flt_60C92B2C + v3, (int *)&unk_60C92B34);
   if ( result == 1 )
   {
     v6 = *(_DWORD **)(a1 + 6300);

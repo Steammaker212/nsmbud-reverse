@@ -31,8 +31,8 @@ int __fastcall sub_608E1C44(int a1)
     sead__ListNode__erase((_DWORD *)(a1 + 16));
     --FIELD_U32(v3, 8);
   }
-  FIELD_U32(a1, 28) = &unk_60CCEB24;
-  sead__ListNode__insertFront((sead_ListNode *)&unk_60CCEB24, (sead_ListNode *)(a1 + 16));
+  FIELD_U32(a1, 28) = &dword_60CCEB24;
+  sead__ListNode__insertFront((sead_ListNode *)&dword_60CCEB24, (sead_ListNode *)(a1 + 16));
   ++dword_60CCEB2C;
   FIELD_U8(a1, 56) = 1;
   return 1;

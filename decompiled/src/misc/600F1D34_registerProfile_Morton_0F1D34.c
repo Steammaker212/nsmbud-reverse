@@ -22,7 +22,7 @@ StateVirtual *registerProfile_Morton_0F1D34()
   dword_60C856EC = -1102196537;
   dword_60C856F0 = -1104290053;
   dword_60C856F4 = -1098067401;
-  unk_60C856F8 = (int)(float)((float)(2147500000.0 * 0.70312) / 180.0);
+  dword_60C856F8 = (int)(float)((float)(2147500000.0 * 0.70312) / 180.0);
   dword_60C856FC = (int)(float)((float)(2147500000.0 * 5.0) / 180.0);
   dword_60C857F0 = (int)&sead__SafeStringBase__vtable;
   dword_60C857F4 = (int)"jump_st";

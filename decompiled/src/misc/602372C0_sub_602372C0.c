@@ -26,7 +26,7 @@ int __fastcall sub_602372C0(int a1, int a2, __int64 *a3, char a4)
     if ( FIELD_U32(a1, 96) == a2 )
     {
       if ( !a3 )
-        v6 = (__int64 *)&unk_60B3B8CC;
+        v6 = (__int64 *)&qword_60B3B8CC;
       if ( sub_60236A80(a1 + 16, v6, a4) == 1 )
       {
         if ( !FIELD_U32(a1, 84) )
@@ -62,7 +62,7 @@ LABEL_20:
     if ( dword_60C8D9DC )
     {
       if ( !v6 )
-        v6 = (__int64 *)&unk_60B3B8CC;
+        v6 = (__int64 *)&qword_60B3B8CC;
       if ( sub_60236A80(a1 + 16, v6, a4) == 1 )
       {
         if ( !FIELD_U32(a1, 84) )
