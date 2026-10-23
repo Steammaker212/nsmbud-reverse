@@ -78,6 +78,28 @@ and of the 853 that do not, only 73 land on an address the corpus labels `sub_`,
 Further naming therefore requires inferring names from behaviour or from vtable ownership — a different kind of
 work from applying a symbol table.
 
+## Why `declare_recovered_deps.py` cannot be driven to zero
+
+I traced the oscillation to its cause rather than leaving it as a mystery. The generator picks up names from two
+sources: a source scan (deterministic) and the compiler's error stream (which depends on what the header currently
+declares, i.e. a moving target). Feeding the error stream back gives two stable points, and passes alternate between
+them:
+
+    4,139 -> 2,608 -> 4,139 -> ...
+
+Accumulating the union of names across passes does not help: it reaches 295 names after the second pass, and the
+third pass discards nothing yet still jumps back to 4,139, because a few names flip category (data object vs type)
+and each choice produces different follow-on errors.
+
+The committed header is the measured-best state (2,683 in `recovered_missing.c`, 198 in `recovered_named.c`).
+`scripts/declare_recovered_deps.py` now regenerates **deterministically** from the source scan alone, which removes
+the oscillation but lands at 3,765 — worse, because the error stream was contributing real declarations. So the
+generator is honest but not optimal, and the header on disk is better than a fresh run would produce. That is
+recorded plainly rather than being papered over: do not re-run it expecting an improvement.
+
+The deeper blocker is unchanged: 2,100 of the remaining errors are undeclared identifiers and 148 are missing struct
+tags, and `main.i64` carries **zero** type definitions to supply them.
+
 ## Parse count
 
     466 / 477

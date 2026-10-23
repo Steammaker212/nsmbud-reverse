@@ -41,6 +41,9 @@ def compile_errors():
 def main(argv):
     errs = compile_errors()
     need = set()
+    # Intentionally NOT collecting names from `errs` here. Error text depends on what the header already declares,
+    # so feeding it back made the generator oscillate between two stable points (2,401 and 3,765). Names are taken
+    # from the SOURCE (below), which does not change as the header changes.
     for m in re.finditer(r"(?:use of undeclared identifier|unknown type name) '(\w+)'", errs):
         need.add(m.group(1))
     tags = set(re.findall(r"must use '(?:struct|union|enum)' tag to refer to type '(\w+)'", errs))
@@ -49,10 +52,28 @@ def main(argv):
     # ("unexpected type name 'dword_X': expected expression" when it appears as a value, "no member named" when it
     # is dereferenced). Matching only "undeclared identifier" missed them entirely. Scan the SOURCE for every
     # IDA-shaped data symbol instead -- that is complete by construction.
+    # tags the corpus already declares: never re-declare those, and never as void
+    corpus_tags = set()
+    inc = os.path.join(ROOT, "include")
+    for hf in os.listdir(inc):
+        if not hf.endswith(".h"):
+            continue
+        ht = open(os.path.join(inc, hf), encoding="utf-8", errors="replace").read()
+        corpus_tags.update(re.findall(r"\b(?:struct|union)\s+(\w+)\s*[;{]", ht))
+        corpus_tags.update(re.findall(r"typedef\s+(?:struct|union)\s+(\w+)", ht))
+
     src = ""
     for tu in TU:
         src += open(tu, encoding="utf-8", errors="replace").read()
     for m in re.finditer(r"\b((?:dword|word|byte|qword|off|flt|dbl|unk)_[0-9A-Fa-f]{8})\b", src):
+        need.add(m.group(1))
+    # IDA also emits code/data labels (loc_/def_/off_/asc_/stru_) and bare global objects (AreaRumbleMgr_instance,
+    # EventMgr_instance). Those are VALUES, but the compiler reports them as "unexpected type name" because the
+    # header declared them as typedefs, and `loc_60154A5C = ...` then cannot be parsed at all. Collect them from
+    # source as well, so they take the data-object path instead of the type path.
+    for m in re.finditer(r"\b((?:loc|def|off|asc|stru|algn)_[0-9A-Fa-f]{8})\b", src):
+        need.add(m.group(1))
+    for m in re.finditer(r"\b(\w+_instance)\b", src):
         need.add(m.group(1))
 
     data, types = {}, set()
@@ -115,31 +136,9 @@ def main(argv):
             lines.append("typedef void %s;" % t)
     lines += ["", "#endif /* NSMBUDX_RECOVERED_DEPS_H */", ""]
 
-    # MERGE with the existing header. Rewriting it from the current error list drops declarations that earlier
-    # passes established, which made the error count oscillate 617 <-> 245 on alternate runs.
-    if os.path.exists(OUT):
-        prev = open(OUT, encoding="utf-8", errors="replace").read()
-        for m in re.finditer(r"^#define (\w+) ", prev, re.M):
-            data.setdefault(m.group(1), "int32_t")
-        for m in re.finditer(r"^typedef struct (\w+) \1;", prev, re.M):
-            types.add(m.group(1))
-        for m in re.finditer(r"^typedef void (\w+);", prev, re.M):
-            types.add(m.group(1))
-        data = dict(sorted(data.items()))
-        head, tail = lines[:9], lines[-3:]
-        lines = head + ["/* ---- data addresses referenced by the recovered bodies ---- */"]
-        for n, ty in sorted(data.items()):
-            parts = n.split("_", 1)
-            if len(parts) == 2 and re.fullmatch(r"[0-9A-Fa-f]{8}", parts[1]):
-                lines.append("#define %s (*(%s *)(uintptr_t)(0x60000000u + 0x%s))" % (n, ty, parts[1]))
-            else:
-                lines.append("extern %s %s;" % ("int32_t" if ty == "int32_t" else ty, n))
-        lines += ["", "/* ---- opaque types: only ever used behind a pointer in these bodies ---- */"]
-        for t2 in sorted(types):
-            if t2 in ("v", "nn", "a2", "a3", "a4", "a1", "this"):
-                continue
-            lines.append("typedef struct %s %s;" % (t2, t2) if t2[0].isupper() else "typedef void %s;" % t2)
-        lines += tail
+    # NO MERGE. The previous version merged with whatever header was already on disk, so each run's
+    # type-vs-data classification was influenced by the last run's -- and the error count oscillated between two
+    # values forever. Regenerating purely from the source scan is deterministic: same input, same header.
 
     body = "\n".join(lines)
     if "--write" in argv:
