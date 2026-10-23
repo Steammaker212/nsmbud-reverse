@@ -55,8 +55,10 @@ FIELD_RE = re.compile(
 MEM_RE = re.compile(r"MEMORY\[(0x[0-9A-Fa-f]+|\d+)\]")
 # C++ scope qualifiers left by Hex-Rays on globals/types (`sead::HeapMgr::sInstance`).
 SCOPE_RE = re.compile(r"\b([A-Za-z_]\w*(?:\s*::\s*[A-Za-z_]\w*)+)\b")
-# `&`vtable for'StageActor` -- Hex-Rays' rendering of a vtable address.
-VTABLE_RE = re.compile(r"&\s*`\s*vtable for'\s*([A-Za-z_]\w*)")
+# `&`vtable for'StageActor` -- Hex-Rays' rendering of a vtable address. The
+# ampersand is sometimes absent (`*(_DWORD *)a1 = `vtable for'X;`), so it is
+# optional and always supplied in the replacement.
+VTABLE_RE = re.compile(r"&?\s*`\s*vtable for'\s*([A-Za-z_]\w*)")
 # `&Class__vtable<char>` -- C++ template arguments on a vtable symbol.
 VTABLE_ARGS_RE = re.compile(r"(&\s*[A-Za-z_]\w*__vtable)\s*<[^<>;]*>")
 

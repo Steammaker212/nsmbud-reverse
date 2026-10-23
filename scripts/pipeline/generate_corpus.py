@@ -225,18 +225,33 @@ def widen_signature(sig: str) -> str:
 
     Hex-Rays prints a function's prototype from its own body but renders call
     sites independently, so the two disagree about arity for a few hundred
-    functions ("expected 2, have 3"). Under C89 an empty parameter list means
-    "unspecified arguments", and a trailing ``...`` accepts extras, so both
-    forms make every call site legal without discarding the printed types.
+    functions ("expected 2, have 3").
+
+    A trailing ``...`` still requires the named parameters, so it only fixes
+    "too many". An empty parameter list ``()`` means "unspecified arguments" in
+    C89, which accepts any count in either direction -- the only form that
+    makes both directions legal. The printed parameter types remain visible in
+    the prototype comment and in each definition's own body.
     """
     if not sig.endswith(")"):
         return sig
-    inner = sig[sig.rfind("(") + 1: -1].strip()
-    if inner in ("", "void"):
-        return sig[: sig.rfind("(") + 1] + ")"
-    if inner.endswith("..."):
+    # Find the parameter list's opening paren: the one at depth 0, scanning
+    # from the closing paren backwards. A plain rfind would hit the inner
+    # paren of a function-pointer parameter such as `int (*cb)()`.
+    depth = 0
+    open_idx = -1
+    for i in range(len(sig) - 1, -1, -1):
+        ch = sig[i]
+        if ch == ")":
+            depth += 1
+        elif ch == "(":
+            depth -= 1
+            if depth == 0:
+                open_idx = i
+                break
+    if open_idx < 0:
         return sig
-    return sig[:-1] + ", ...)"
+    return sig[: open_idx + 1] + ")"
 
 
 def sig_is_wellformed(sig: str) -> bool:
@@ -576,22 +591,21 @@ def main() -> int:
             if "*/" in rest.splitlines()[0]:
                 lines = rest.splitlines()
                 rest = "\n".join(lines[1:])
-            # The definition must accept the same argument counts as the
-            # prototype above, or the body conflicts with its own declaration.
+            # The definition keeps its real parameter list, because its body
+            # references those parameter names. The prototype in
+            # nsmbudx_prototypes.h is the bare `f()` form, which C89 treats as
+            # compatible with any definition and which makes call sites with any
+            # argument count legal. Widening the definition as well would strip
+            # the parameter names out from under the body.
             dl = rest.splitlines()
             for i, ln in enumerate(dl):
                 if "{" in ln or ln.rstrip().endswith(")"):
                     cand = ln.rstrip()
-                    if cand.endswith("{"):
-                        head, sep = cand[:-1].rstrip(), " {"
-                    else:
-                        head, sep = cand, ""
+                    head = cand[:-1].rstrip() if cand.endswith("{") else cand
                     head = re.sub(r"\b([A-Za-z_]\w*)\s*::\s*([A-Za-z_]\w*)", r"\1__\2", head)
                     head = sanitize_symbol(head)
-                    if head.endswith(")"):
-                        dl[i] = widen_signature(head) + sep
-                    if sep:
-                        pass
+                    if head != cand:
+                        dl[i] = head + (" {" if cand.endswith("{") else "")
                     break
             rest = "\n".join(dl)
             body_parts.append(rest.rstrip() + "\n")

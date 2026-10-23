@@ -23,7 +23,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from generate_corpus import route_class, owner_of  # noqa: E402
+from generate_corpus import route_class, owner_of, widen_signature  # noqa: E402
 
 SAFE = re.compile(r"[^A-Za-z0-9_]")
 
@@ -84,6 +84,11 @@ def main() -> int:
             text = body
             if "*/" in text.splitlines()[0]:
                 text = "\n".join(text.splitlines()[1:])
+            # The definition keeps its real parameter list: the body references
+            # those names. The prototype in nsmbudx_prototypes.h is the bare
+            # `f()` form, which C89 treats as compatible with any definition and
+            # which makes call sites with any argument count legal.
+            text = body
             (gdir / fname).write_text(head + text.rstrip() + "\n", encoding="utf-8")
             n += 1
 
