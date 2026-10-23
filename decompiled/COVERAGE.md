@@ -6,10 +6,27 @@ How much of `main.idb`/`main.i64` is now expressed as readable C.
 
     functions in main.i64                47,158
     recovered into the corpus            47,158   (100%)
+    addresses with no body                   0
+    bytes of code unaccounted for          0x0
 
     re-decompiled from main.i64, no ARM assembly in the output.
 
-Reaching this took three passes, and the first number that looked like "22% missing" was misleading:
+The last 11 addresses were absent for a while even though the counter read "100.0%". Three separate reasons, all in
+the measuring and export path rather than in the data:
+
+- the banner pattern required `\w+` for the name, so `nn::mii::Database::~Database` banners were invisible to the
+  counter — 27 phantom "missing" addresses that had been counted all along;
+- two signatures are not parseable as C at all, `hid::GetTouchScreenState<1u>()` (template argument in the name) and
+  `settings::operator==` (overloaded operator), so the merge silently skipped them;
+- destructors were excluded by the name pattern, dropping 11 more thunks.
+
+The 26 remaining bodies live in `recovered/recovered_tail_thunks.c` rather than inside `recovered_missing.c`:
+regenerating that file does not reproduce about a thousand lines of accumulated repair (the `arr_` subscript
+rewrites, the forward prototypes, the vtable members), because those were applied to its output. Sequencing the
+repairs into one pipeline (`scripts/rebuild_recovered.py`) was measured making things strictly worse, so the
+repaired file is left alone and the new bodies sit beside it.
+
+Reaching this still took three passes, and the first number that looked like "22% missing" was misleading:
 
 | category | count | why it was not "missing work" |
 |---|---:|---|
@@ -25,9 +42,10 @@ So the real gap was 1,362 functions, not 10,375. Everything is now emitted.
 
 | unit | bodies | compile errors | note |
 |---|---:|---:|---|
-| `recovered/recovered_named.c` | 472 | 171 | the named functions the corpus lacked |
+| `recovered/recovered_named.c` | 469 | 171 | the named functions the corpus lacked |
 | `recovered/recovered_missing.c` | 1,351 | 497 | the substantive bodies |
 | `recovered/recovered_stubs.c` | 9,000 | 85 | empty bodies, thunks, ≤8-byte functions |
+| `recovered/recovered_tail_thunks.c` | 26 | 0 | the last addresses: destructor and template/operator thunks |
 
 The nine large corpus aggregates total 4,301 errors (measured individually: `libs.c` 609, `states.c` 640,
 `actor_construction.c` 865, `actors_b.c` 729, `core.c` 514, `actors_a.c` 389, `systems.c` 372, `powerup.c` 136,
