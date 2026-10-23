@@ -7,10 +7,10 @@ Measured, not asserted. Every number below comes from a script in
 
 | Measure | Value |
 | --- | --- |
-| Functions in the database | 47,148 |
-| Carrying a real name | 7,466 (15.84%) |
-| Still `sub_`/`nullsub_` | 39,682 |
-| Code bytes under a real name | 24.11% |
+| Functions in the database | 47,153 |
+| Carrying a real name | 7,522 (15.95%) |
+| Still `sub_`/`nullsub_` | 39,631 |
+| Code bytes under a real name | 24.20% |
 
 Names come from the Deluxe database itself. Neither the shipped symbol file
 (`sweetdx/symbols/nsmbudx.sym`) nor codedx's `main.sym` adds a name that the
@@ -18,15 +18,27 @@ database does not already carry: the symbol file lands on 7,536 function starts
 but contributes 0 new names, and codedx's 413 entries contribute 0. Their value
 is in headers and the `ProfileId` enum, not in naming.
 
+### How names are earned
+
+Only two sources have produced new names so far, both measured:
+
+1. **The database's own analysis.** 7,466 names carried over from IDA and the
+   symbol file.
+2. **Vtable slot ownership.** 55 names, from reading the vtable words out of the
+   ELF and recording which class owns each slot (`Class__vf<byte offset>`).
+
+A function keeps its `sub_` name until evidence arrives. There is no
+`sub_XXXXXXXX` renaming for cosmetic reasons.
+
 ## Decompiled C
 
 Every function with a layout-independent body is emitted as readable C:
 
 | Measure | Value |
 | --- | --- |
-| Functions with layout-independent bodies | 44,049 |
+| Functions with layout-independent bodies | 44,054 |
 | Excluded: bodies that dereference named struct members | 3,099 |
-| Compiling clean, `clang -std=gnu89` | 36,727 (83.4%) |
+| Compiling clean, `clang -std=gnu89` | 36,720 (83.35%) |
 
 The 3,099 excluded functions are not missing — they exist in the database and
 their Hex-Rays output is in `_work/export/all_funcions.jsonl`. They are held back
