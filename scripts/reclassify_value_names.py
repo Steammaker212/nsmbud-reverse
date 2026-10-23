@@ -57,6 +57,14 @@ def main(argv):
     for it in range(8):
         errs = compile_errors()
         total = len(re.findall(r"error:", errs))
+        # Two more diagnostics prove a name is being used as a VALUE while declared as a type:
+        #   "use of undeclared identifier 'N'"        -- N is not declared at all yet
+        #   "member reference base type 'N' (aka 'N') is not a structure or union" -- N is a struct tag with no
+        #                                                 members, i.e. an opaque forward decl being dereferenced
+        # ONLY "unexpected type name" is used as the removal oracle. The other diagnostics do not prove a typedef
+        # should be dropped: `use of undeclared identifier 'N'` means N needs a declaration ADDED (nullsub_5476 is
+        # a function that is simply not declared yet), and dropping a typedef would not help. A wider oracle was
+        # tried and immediately proposed deleting int32_t and every nullsub_*, which would have been destructive.
         bad = sorted(set(re.findall(r"unexpected type name '(\w+)'", errs)))
         print("  pass %d: errors %d, wrongly-typed names %d" % (it, total, len(bad)))
         if not bad:

@@ -38,6 +38,12 @@ def main(argv):
         m = re.match(r"sub_([0-9A-Fa-f]{8})\.c$", fn)
         if m:
             have.add(int(m.group(1), 16))
+    # Also count the emitted stub unit as covered. Without this the script re-derived "0 remaining" from its own
+    # previous output and then truncated recovered_stubs.c to zero bodies on the next merge.
+    stubs_c = os.path.join(ROOT, "recovered", "recovered_stubs.c")
+    if os.path.exists(stubs_c):
+        st = open(stubs_c, encoding="utf-8", errors="replace").read()
+        have.update(int(m, 16) + BASE for m in re.findall(r"RVA 0x([0-9A-Fa-f]{8})", st))
 
     rows = []
     for ln in open(ALL, encoding="utf-8", errors="replace"):

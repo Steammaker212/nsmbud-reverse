@@ -113,6 +113,11 @@ def main(argv):
         ht = open(os.path.join(inc, hf), encoding="utf-8", errors="replace").read()
         for m in re.finditer(r"(?m)^\s*([A-Za-z_][\w \t\*]*?)\s+__\w+\s+(\w+)\s*\(", ht):
             declared.setdefault(m.group(2), m.group(1).strip())
+        # Also honour plain `extern uintptr_t N();` forms, which is how the dependency header declares names it
+        # synthesised. Without this the stub defined `void nullsub_655()` while the header said `uintptr_t`, and the
+        # two conflicted.
+        for m in re.finditer(r"(?m)^\s*extern\s+([A-Za-z_][\w \t\*]*?)\s+(\w+)\s*\(", ht):
+            declared.setdefault(m.group(2), m.group(1).strip())
 
     fixed = 0
     for i, (va, name, size, body) in enumerate(bodies):
