@@ -16,7 +16,7 @@ import subprocess
 import sys
 
 ROOT = r"C:\Users\Saif Khan\Downloads\nsmbud-reverse\decompiled"
-TU = os.path.join(ROOT, "recovered", "recovered_named.c")
+TU = tuple(os.path.join(ROOT, "recovered", f) for f in ("recovered_named.c", "recovered_missing.c"))
 OUT = os.path.join(ROOT, "include", "nsmbudx_recovered_deps.h")
 CLANG = r"C:\Program Files\LLVM\bin\clang.exe"
 INC = os.path.join(ROOT, "include")
@@ -29,9 +29,13 @@ DATA_TYPE = {"dword": "int32_t", "word": "int16_t", "byte": "uint8_t", "qword": 
 
 
 def compile_errors():
-    r = subprocess.run([CLANG, "-fsyntax-only", "-Wno-everything", "-ferror-limit=0", "-I", INC, TU],
-                       capture_output=True, text=True, errors="replace")
-    return r.stderr
+    """Errors from BOTH recovered units, so the dependency header serves each of them."""
+    out = ""
+    for tu in TU:
+        r = subprocess.run([CLANG, "-fsyntax-only", "-Wno-everything", "-ferror-limit=0", "-I", INC, tu],
+                           capture_output=True, text=True, errors="replace")
+        out += r.stderr
+    return out
 
 
 def main(argv):
@@ -41,13 +45,43 @@ def main(argv):
         need.add(m.group(1))
     tags = set(re.findall(r"must use '(?:struct|union|enum)' tag to refer to type '(\w+)'", errs))
 
+    # The compiler reports a data symbol under several different headings depending on how it is used
+    # ("unexpected type name 'dword_X': expected expression" when it appears as a value, "no member named" when it
+    # is dereferenced). Matching only "undeclared identifier" missed them entirely. Scan the SOURCE for every
+    # IDA-shaped data symbol instead -- that is complete by construction.
+    src = ""
+    for tu in TU:
+        src += open(tu, encoding="utf-8", errors="replace").read()
+    for m in re.finditer(r"\b((?:dword|word|byte|qword|off|flt|dbl|unk)_[0-9A-Fa-f]{8})\b", src):
+        need.add(m.group(1))
+
     data, types = {}, set()
     for n in sorted(need):
         dm = DATA.match(n)
         if dm:
             data[n] = DATA_TYPE[dm.group("kind")]
         elif TYPE.match(n):
+            # Only declare things that LOOK like data symbols or class types. IDA also emits short aliases for
+            # string literals (aAse64, aBase64, aCarrypWalk_0) and for globals initialised elsewhere
+            # (ActiveColliderMgr_instance). Declaring those as opaque types makes clang report
+            # "unexpected type name" at every use, because they are VALUES, not types -- that path took the header
+            # to 313 KB and produced 1,382 bogus errors.
+            # A name the compiler called "unexpected TYPE name" at an expression position is almost always a
+            # DATA OBJECT (Enemy_RTTI, ActiveColliderMgr_instance), not a type. Declaring those as typedefs turns
+            # every use into a syntax error, so only names that really are types -- those the corpus used as
+            # parameter or member types -- get a typedef. Data objects fall through to the macro path below.
             types.add(n)
+
+    # Reclassify: a name that appears on the LEFT of an assignment, or behind `&`, is a data object.
+    src_all = ""
+    for tu in TU:
+        src_all += open(tu, encoding="utf-8", errors="replace").read()
+    for n in list(types):
+        used_as_object = re.search(r"(?m)^\s*%s\s*=" % re.escape(n), src_all) or \
+                         re.search(r"&\s*%s\b" % re.escape(n), src_all)
+        if used_as_object and not DATA.match(n):
+            data.setdefault(n, "int32_t")
+            types.discard(n)
 
     lines = [
         "/* Dependencies of decompiled/recovered/recovered_named.c",
@@ -63,7 +97,14 @@ def main(argv):
         "/* ---- data addresses referenced by the recovered bodies ---- */",
     ]
     for n, ty in sorted(data.items()):
-        lines.append("#define %s (*(%s *)(uintptr_t)(0x60000000u + 0x%s))" % (n, ty, n.split("_", 1)[1]))
+        # Only IDA-shaped names carry an address in their suffix. A name that does not (a bare global such as
+        # Enemy_RTTI) has no address to synthesise, so it is declared as an ordinary extern instead of a macro.
+        # Splitting unconditionally raised IndexError and silently produced a header with no declarations at all.
+        parts = n.split("_", 1)
+        if len(parts) == 2 and re.fullmatch(r"[0-9A-Fa-f]{8}", parts[1]):
+            lines.append("#define %s (*(%s *)(uintptr_t)(0x60000000u + 0x%s))" % (n, ty, parts[1]))
+        else:
+            lines.append("extern %s %s;" % ("int32_t" if ty == "int32_t" else ty, n))
     lines += ["", "/* ---- opaque types: only ever used behind a pointer in these bodies ---- */"]
     for t in sorted(types):
         if t in ("v", "nn", "a2", "a3", "a4", "a1", "this"):
@@ -87,8 +128,12 @@ def main(argv):
         data = dict(sorted(data.items()))
         head, tail = lines[:9], lines[-3:]
         lines = head + ["/* ---- data addresses referenced by the recovered bodies ---- */"]
-        lines += ["#define %s (*(%s *)(uintptr_t)(0x60000000u + 0x%s))" % (n, ty, n.split("_", 1)[1])
-                  for n, ty in sorted(data.items())]
+        for n, ty in sorted(data.items()):
+            parts = n.split("_", 1)
+            if len(parts) == 2 and re.fullmatch(r"[0-9A-Fa-f]{8}", parts[1]):
+                lines.append("#define %s (*(%s *)(uintptr_t)(0x60000000u + 0x%s))" % (n, ty, parts[1]))
+            else:
+                lines.append("extern %s %s;" % ("int32_t" if ty == "int32_t" else ty, n))
         lines += ["", "/* ---- opaque types: only ever used behind a pointer in these bodies ---- */"]
         for t2 in sorted(types):
             if t2 in ("v", "nn", "a2", "a3", "a4", "a1", "this"):

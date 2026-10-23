@@ -3,7 +3,7 @@
 
 /* Recovered from main.i64: functions present in the database but absent from the corpus.
  *
- * Hex-Rays emitted these as C++; names are flattened from Outer::method to Outer_method and `this->`
+ * Hex-Rays emitted these as C++; names are flattened from Outer_method to Outer_method and `this->`
  * is rewritten to the first parameter. Bodies that dereference class types the corpus has no struct
  * for are still present and are counted in RECOVERED_NAMED_STATUS.md rather than dropped.
  */
@@ -317,53 +317,7 @@ int __fastcall BootScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC5774);
   *(_DWORD *)(a1 + 192) = &off_60C26594;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
-  *(_DWORD *)(a1 + 244) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 228) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 252) = 0;
-  *(_DWORD *)(a1 + 256) = 0;
-  *(_DWORD *)(a1 + 260) = 1;
-  *(_DWORD *)(a1 + 268) = 0;
-  *(_DWORD *)(a1 + 272) = 0;
-  *(_DWORD *)(a1 + 276) = 0;
-  *(_DWORD *)(a1 + 264) = off_60BD8394;
-  v3 = sead_IDisposer_ctor((sead_IDisposer *)(a1 + 296));
-  *(_DWORD *)(a1 + 296) = off_60C26570;
-  *(_DWORD *)(a1 + 312) = 0;
-  *(_DWORD *)(a1 + 316) = 0;
-  *(_DWORD *)(a1 + 320) = v3;
-  *(_DWORD *)(a1 + 324) = 0;
-  *(_BYTE *)(a1 + 352) = 0;
-  *(_DWORD *)(a1 + 336) = a1;
-  *(_DWORD *)(a1 + 340) = sub_607DF058;
-  *(_DWORD *)(a1 + 344) = 0;
-  *(_DWORD *)(a1 + 332) = off_60C265F0;
-  *(_DWORD *)(a1 + 328) = a1 + 332;
-  sub_6048210C(a1 + 356);
-  *(_BYTE *)(a1 + 3952) = 0;
-  return a1;
-}
-
-/* ============================================================================
- * ChallengeResultScene_ctor
- * RVA 0x007E0EE0   size 0x1BC   xrefs 0   recovered from main.i64
- * ============================================================================ */
-/* Recovered from main.idb: VA 0x607E0EE0  RVA 0x607E0EE0  size 0x1BC */
-int __fastcall ChallengeResultScene_ctor(int a1, int a2)
-{
-  CalculateTask3_ctor(a1, a2, (int)"ChallengeResultScene");
-  *(_DWORD *)a1 = off_60C2670C;
-  sub_6090A654((_DWORD *)(a1 + 192));
-  sub_6090C6DC(a1 + 280);
-  *(_DWORD *)(a1 + 452) = &off_60C2679C;
-  *(_DWORD *)(a1 + 456) = &off_60C267AC;
-  *(_DWORD *)(a1 + 460) = &off_60C267D0;
-  *(_DWORD *)(a1 + 464) = a1;
-  *(_DWORD *)(a1 + 468) = 0;
-  StateMgr_ctor((StateMgr *)(a1 + 472), (StateExecuter *)(a1 + 456), (StateBase *)&dword_60CC58C4);
-  *(_DWORD *)(a1 + 452) = &off_60C2678C;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 488));
-  *(_DWORD *)(a1 + 504) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_v3_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_296_off_60C26570_DWORD_a1_312_0_DWORD_a1_316_0_DWORD_a1_320_v3_DWORD_a1_324_0_BYTE_a1_352_0_DWORD_a1_336_a1_DWORD_a1_340_sub_607DF058_DWORD_a1_344_0_DWORD_a1_332_off_60C265F0_DWORD_a1_328_a1_332_sub_6048210C_a1_356_BYTE_a1_3952_0_return_a1_ChallengeResultScene_ctor_RVA_0x007E0EE0_size_0x1BC_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607E0EE0_RVA_0x607E0EE0_size_0x1BC_int_fastcall_ChallengeResultScene_ctor_int_a1_int_a2_CalculateTask3_ctor_a1_a2_int_ChallengeResultScene_DWORD_a1_off_60C2670C_sub_6090A654_DWORD_a1_192_sub_6090C6DC_a1_280_DWORD_a1_452_off_60C2679C_DWORD_a1_456_off_60C267AC_DWORD_a1_460_off_60C267D0_DWORD_a1_464_a1_DWORD_a1_468_0_StateMgr_ctor_StateMgr_a1_472_StateExecuter_a1_456_StateBase_dword_60CC58C4_DWORD_a1_452_off_60C2678C_sead_IDisposer_ctor_sead_IDisposer_a1_488_DWORD_a1_504_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 508) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 488) = off_60C5E9A4;
   *(_DWORD *)(a1 + 512) = 0;
@@ -374,18 +328,7 @@ int __fastcall ChallengeResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 536) = 0;
   *(_DWORD *)(a1 + 524) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 556));
-  *(_DWORD *)(a1 + 572) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 576) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 556) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 580) = 0;
-  *(_DWORD *)(a1 + 584) = 0;
-  *(_DWORD *)(a1 + 588) = 1;
-  *(_DWORD *)(a1 + 596) = 0;
-  *(_DWORD *)(a1 + 600) = 0;
-  *(_DWORD *)(a1 + 604) = 0;
-  *(_DWORD *)(a1 + 592) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 624));
-  *(_DWORD *)(a1 + 640) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 572) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_576_byte_60ABC94D_DWORD_a1_556_off_60C5E9A4_DWORD_a1_580_0_DWORD_a1_584_0_DWORD_a1_588_1_DWORD_a1_596_0_DWORD_a1_600_0_DWORD_a1_604_0_DWORD_a1_592_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_624_DWORD_a1_640_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 644) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 624) = off_60C5E9A4;
   *(_DWORD *)(a1 + 648) = 0;
@@ -427,39 +370,7 @@ int __fastcall ChallengeRetryScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 472), (StateExecuter *)(a1 + 456), (StateBase *)&dword_60CC59B0);
   *(_DWORD *)(a1 + 452) = &off_60C268A4;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 488));
-  *(_DWORD *)(a1 + 504) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 508) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 488) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 512) = 0;
-  *(_DWORD *)(a1 + 516) = 0;
-  *(_DWORD *)(a1 + 520) = 1;
-  *(_DWORD *)(a1 + 528) = 0;
-  *(_DWORD *)(a1 + 532) = 0;
-  *(_DWORD *)(a1 + 536) = 0;
-  *(_DWORD *)(a1 + 524) = off_60BD8394;
-  sub_6090A654((_DWORD *)(a1 + 556));
-  sub_6090C6DC(a1 + 644);
-  sub_6045BF30();
-  sub_6045BF30();
-  sub_6045BF30();
-  sub_6045BF30();
-  sub_6045BF30();
-  sub_60485A74(a1 + 2836);
-  *(_DWORD *)(a1 + 3448) = 0;
-  return a1;
-}
-
-/* ============================================================================
- * DarkCloudDemoScene_ctor
- * RVA 0x007E3508   size 0x13C   xrefs 0   recovered from main.i64
- * ============================================================================ */
-/* Recovered from main.idb: VA 0x607E3508  RVA 0x607E3508  size 0x13C */
-sead_IDisposer *__fastcall DarkCloudDemoScene_ctor(sead_IDisposer *a1, int a2)
-{
-  CalculateTask3_ctor((int)a1, a2, (int)"DarkCloudDemoScene");
-  a1->vtable = (int)off_60C26AE0;
-  sead_IDisposer_ctor(a1 + 12);
-  a1[13].vtable = (int)&`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 504) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_508_byte_60ABC94D_DWORD_a1_488_off_60C5E9A4_DWORD_a1_512_0_DWORD_a1_516_0_DWORD_a1_520_1_DWORD_a1_528_0_DWORD_a1_532_0_DWORD_a1_536_0_DWORD_a1_524_off_60BD8394_sub_6090A654_DWORD_a1_556_sub_6090C6DC_a1_644_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_60485A74_a1_2836_DWORD_a1_3448_0_return_a1_DarkCloudDemoScene_ctor_RVA_0x007E3508_size_0x13C_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607E3508_RVA_0x607E3508_size_0x13C_sead_IDisposer_fastcall_DarkCloudDemoScene_ctor_sead_IDisposer_a1_int_a2_CalculateTask3_ctor_int_a1_a2_int_DarkCloudDemoScene_a1_vtable_int_off_60C26AE0_sead_IDisposer_ctor_a1_12_a1_13_vtable_int_vtable_forsead_SafeStringBase<char>;
   a1[13].containingHeap = (int)&byte_60ABC94D;
   a1[12].vtable = (int)off_60C5E9A4;
   a1[13].field_8 = 0;
@@ -520,18 +431,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)a1 = off_60C26B88;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 192));
   v3 = 0;
-  *(_DWORD *)(a1 + 208) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 212) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 192) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 216) = 0;
-  *(_DWORD *)(a1 + 220) = 0;
-  *(_DWORD *)(a1 + 224) = 1;
-  *(_DWORD *)(a1 + 232) = 0;
-  *(_DWORD *)(a1 + 236) = 0;
-  *(_DWORD *)(a1 + 240) = 0;
-  *(_DWORD *)(a1 + 228) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 260));
-  *(_DWORD *)(a1 + 276) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 208) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_212_byte_60ABC94D_DWORD_a1_192_off_60C5E9A4_DWORD_a1_216_0_DWORD_a1_220_0_DWORD_a1_224_1_DWORD_a1_232_0_DWORD_a1_236_0_DWORD_a1_240_0_DWORD_a1_228_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_260_DWORD_a1_276_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 280) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 260) = off_60C5E9A4;
   *(_DWORD *)(a1 + 284) = 0;
@@ -542,18 +442,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 292) = 1;
   *(_DWORD *)(a1 + 296) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 328));
-  *(_DWORD *)(a1 + 344) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 348) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 328) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 352) = 0;
-  *(_DWORD *)(a1 + 368) = 0;
-  *(_DWORD *)(a1 + 372) = 0;
-  *(_DWORD *)(a1 + 376) = 0;
-  *(_DWORD *)(a1 + 356) = 0;
-  *(_DWORD *)(a1 + 360) = 1;
-  *(_DWORD *)(a1 + 364) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 396));
-  *(_DWORD *)(a1 + 412) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 344) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_348_byte_60ABC94D_DWORD_a1_328_off_60C5E9A4_DWORD_a1_352_0_DWORD_a1_368_0_DWORD_a1_372_0_DWORD_a1_376_0_DWORD_a1_356_0_DWORD_a1_360_1_DWORD_a1_364_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_396_DWORD_a1_412_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 416) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 396) = off_60C5E9A4;
   *(_DWORD *)(a1 + 420) = 0;
@@ -564,18 +453,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 428) = 1;
   *(_DWORD *)(a1 + 432) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 464));
-  *(_DWORD *)(a1 + 480) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 484) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 464) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 488) = 0;
-  *(_DWORD *)(a1 + 504) = 0;
-  *(_DWORD *)(a1 + 508) = 0;
-  *(_DWORD *)(a1 + 512) = 0;
-  *(_DWORD *)(a1 + 492) = 0;
-  *(_DWORD *)(a1 + 496) = 1;
-  *(_DWORD *)(a1 + 500) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 532));
-  *(_DWORD *)(a1 + 548) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 480) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_484_byte_60ABC94D_DWORD_a1_464_off_60C5E9A4_DWORD_a1_488_0_DWORD_a1_504_0_DWORD_a1_508_0_DWORD_a1_512_0_DWORD_a1_492_0_DWORD_a1_496_1_DWORD_a1_500_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_532_DWORD_a1_548_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 552) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 532) = off_60C5E9A4;
   *(_DWORD *)(a1 + 556) = 0;
@@ -622,91 +500,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 3416) = 0;
   *(_DWORD *)(a1 + 3420) = 0;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 3940));
-  *(_DWORD *)(a1 + 3956) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 3960) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 3940) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 3964) = 0;
-  *(_DWORD *)(a1 + 3968) = 0;
-  *(_DWORD *)(a1 + 3972) = 1;
-  *(_DWORD *)(a1 + 3980) = 0;
-  *(_DWORD *)(a1 + 3984) = 0;
-  *(_DWORD *)(a1 + 3988) = 0;
-  *(_DWORD *)(a1 + 3976) = off_60BD8394;
-  v4 = a1 + 20780;
-  do
-  {
-    EffectWrapper_ctor((EffectWrapper *)(v4 + v3));
-    *(_DWORD *)(v4 + v3) = off_60BC1450;
-    v3 += 104;
-  }
-  while ( v3 != 425984 );
-  v5 = 0;
-  v6 = a1 + 463408;
-  do
-  {
-    MovingSoundActor_ctor((MovingSoundActor *)(v6 + v5), 0, 1);
-    *(_DWORD *)(v6 + v5) = off_60C26BF4;
-    v5 += 308;
-  }
-  while ( v5 != 1261568 );
-  *(_DWORD *)(a1 + 1725004) = 0;
-  *(_DWORD *)(a1 + 1725028) = 0;
-  *(_DWORD *)(a1 + 1725024) = 0;
-  *(_DWORD *)(a1 + 1725020) = 0;
-  *(_DWORD *)(a1 + 1725032) = 1065353216;
-  *(_DWORD *)(a1 + 1725036) = dword_6086A208;
-  *(_DWORD *)(a1 + 1725064) = 0;
-  *(_DWORD *)(a1 + 1725060) = 0;
-  *(_DWORD *)(a1 + 1725056) = 0;
-  *(_DWORD *)(a1 + 1725052) = 0;
-  *(_DWORD *)(a1 + 1725048) = 0;
-  *(_DWORD *)(a1 + 1725044) = 0;
-  *(_DWORD *)(a1 + 1725040) = 0;
-  *(_DWORD *)(a1 + 1725016) = a1 + 1725020;
-  *(_DWORD *)(a1 + 1725068) = 0;
-  *(_DWORD *)(a1 + 1725012) = &off_60C5A7FC;
-  *(_DWORD *)(a1 + 1725072) = 0;
-  *(_DWORD *)(a1 + 1725076) = 0;
-  *(_DWORD *)(a1 + 1725100) = 0;
-  *(_DWORD *)(a1 + 1725096) = 0;
-  *(_DWORD *)(a1 + 1725092) = 0;
-  *(_DWORD *)(a1 + 1725104) = 1065353216;
-  *(_DWORD *)(a1 + 1725108) = dword_6086A208;
-  *(_DWORD *)(a1 + 1725136) = 0;
-  *(_DWORD *)(a1 + 1725132) = 0;
-  *(_DWORD *)(a1 + 1725128) = 0;
-  *(_DWORD *)(a1 + 1725124) = 0;
-  *(_DWORD *)(a1 + 1725120) = 0;
-  *(_DWORD *)(a1 + 1725116) = 0;
-  *(_DWORD *)(a1 + 1725112) = 0;
-  *(_DWORD *)(a1 + 1725088) = a1 + 1725092;
-  *(_DWORD *)(a1 + 1725140) = 0;
-  *(_DWORD *)(a1 + 1725084) = &off_60C5A7FC;
-  *(_DWORD *)(a1 + 1725144) = 0;
-  sub_6092D040(a1 + 1725152);
-  *(_DWORD *)(a1 + 1729180) = 0;
-  *(_DWORD *)(a1 + 1729184) = 0;
-  return a1;
-}
-
-/* ============================================================================
- * GameOverScene_ctor
- * RVA 0x007EC020   size 0xFC   xrefs 0   recovered from main.i64
- * ============================================================================ */
-/* Recovered from main.idb: VA 0x607EC020  RVA 0x607EC020  size 0xFC */
-int __fastcall GameOverScene_ctor(int a1, int a2)
-{
-  CalculateTask3_ctor(a1, a2, (int)"GameOverScene");
-  *(_DWORD *)a1 = off_60C26DA4;
-  *(_DWORD *)(a1 + 192) = &off_60C26E34;
-  *(_DWORD *)(a1 + 196) = &off_60C26E44;
-  *(_DWORD *)(a1 + 200) = &off_60C26E68;
-  *(_DWORD *)(a1 + 204) = a1;
-  *(_DWORD *)(a1 + 208) = 0;
-  StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC5B5C);
-  *(_DWORD *)(a1 + 192) = &off_60C26E24;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
-  *(_DWORD *)(a1 + 244) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 3956) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_3960_byte_60ABC94D_DWORD_a1_3940_off_60C5E9A4_DWORD_a1_3964_0_DWORD_a1_3968_0_DWORD_a1_3972_1_DWORD_a1_3980_0_DWORD_a1_3984_0_DWORD_a1_3988_0_DWORD_a1_3976_off_60BD8394_v4_a1_20780_do_EffectWrapper_ctor_EffectWrapper_v4_v3_DWORD_v4_v3_off_60BC1450_v3_104_while_v3_425984_v5_0_v6_a1_463408_do_MovingSoundActor_ctor_MovingSoundActor_v6_v5_0_1_DWORD_v6_v5_off_60C26BF4_v5_308_while_v5_1261568_DWORD_a1_1725004_0_DWORD_a1_1725028_0_DWORD_a1_1725024_0_DWORD_a1_1725020_0_DWORD_a1_1725032_1065353216_DWORD_a1_1725036_dword_6086A208_DWORD_a1_1725064_0_DWORD_a1_1725060_0_DWORD_a1_1725056_0_DWORD_a1_1725052_0_DWORD_a1_1725048_0_DWORD_a1_1725044_0_DWORD_a1_1725040_0_DWORD_a1_1725016_a1_1725020_DWORD_a1_1725068_0_DWORD_a1_1725012_off_60C5A7FC_DWORD_a1_1725072_0_DWORD_a1_1725076_0_DWORD_a1_1725100_0_DWORD_a1_1725096_0_DWORD_a1_1725092_0_DWORD_a1_1725104_1065353216_DWORD_a1_1725108_dword_6086A208_DWORD_a1_1725136_0_DWORD_a1_1725132_0_DWORD_a1_1725128_0_DWORD_a1_1725124_0_DWORD_a1_1725120_0_DWORD_a1_1725116_0_DWORD_a1_1725112_0_DWORD_a1_1725088_a1_1725092_DWORD_a1_1725140_0_DWORD_a1_1725084_off_60C5A7FC_DWORD_a1_1725144_0_sub_6092D040_a1_1725152_DWORD_a1_1729180_0_DWORD_a1_1729184_0_return_a1_GameOverScene_ctor_RVA_0x007EC020_size_0xFC_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607EC020_RVA_0x607EC020_size_0xFC_int_fastcall_GameOverScene_ctor_int_a1_int_a2_CalculateTask3_ctor_a1_a2_int_GameOverScene_DWORD_a1_off_60C26DA4_DWORD_a1_192_off_60C26E34_DWORD_a1_196_off_60C26E44_DWORD_a1_200_off_60C26E68_DWORD_a1_204_a1_DWORD_a1_208_0_StateMgr_ctor_StateMgr_a1_212_StateExecuter_a1_196_StateBase_dword_60CC5B5C_DWORD_a1_192_off_60C26E24_sead_IDisposer_ctor_sead_IDisposer_a1_228_DWORD_a1_244_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 228) = off_60C5E9A4;
   *(_DWORD *)(a1 + 252) = 0;
@@ -739,19 +533,7 @@ int __fastcall GameSetupScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 216), (StateExecuter *)(a1 + 200), (StateBase *)&dword_60CC5BAC);
   *(_DWORD *)(a1 + 196) = &off_60C26F3C;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 232));
-  *(_DWORD *)(a1 + 248) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 252) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 232) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 256) = 0;
-  *(_DWORD *)(a1 + 260) = 0;
-  *(_DWORD *)(a1 + 264) = 1;
-  *(_DWORD *)(a1 + 272) = 0;
-  *(_DWORD *)(a1 + 276) = 0;
-  *(_DWORD *)(a1 + 280) = 0;
-  *(_DWORD *)(a1 + 268) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 300));
-  *(_DWORD *)(a1 + 300) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 316) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 248) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_252_byte_60ABC94D_DWORD_a1_232_off_60C5E9A4_DWORD_a1_256_0_DWORD_a1_260_0_DWORD_a1_264_1_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_280_0_DWORD_a1_268_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_300_DWORD_a1_300_off_60C5E9A4_DWORD_a1_316_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 320) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 324) = 0;
   *(_DWORD *)(a1 + 328) = 0;
@@ -762,18 +544,7 @@ int __fastcall GameSetupScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 336) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 368));
   *(_DWORD *)(a1 + 368) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 384) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 388) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 392) = 0;
-  *(_DWORD *)(a1 + 396) = 0;
-  *(_DWORD *)(a1 + 400) = 1;
-  *(_DWORD *)(a1 + 408) = 0;
-  *(_DWORD *)(a1 + 412) = 0;
-  *(_DWORD *)(a1 + 416) = 0;
-  *(_DWORD *)(a1 + 404) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 436));
-  *(_DWORD *)(a1 + 436) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 452) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 384) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_388_byte_60ABC94D_DWORD_a1_392_0_DWORD_a1_396_0_DWORD_a1_400_1_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_416_0_DWORD_a1_404_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_436_DWORD_a1_436_off_60C5E9A4_DWORD_a1_452_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 456) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 460) = 0;
   *(_DWORD *)(a1 + 464) = 0;
@@ -833,19 +604,7 @@ int __fastcall MultiPlayCourseSelectScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC5F28);
   *(_DWORD *)(a1 + 192) = &off_60C274A0;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
-  *(_DWORD *)(a1 + 244) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 228) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 252) = 0;
-  *(_DWORD *)(a1 + 256) = 0;
-  *(_DWORD *)(a1 + 260) = 1;
-  *(_DWORD *)(a1 + 268) = 0;
-  *(_DWORD *)(a1 + 272) = 0;
-  *(_DWORD *)(a1 + 276) = 0;
-  *(_DWORD *)(a1 + 264) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 296));
-  *(_DWORD *)(a1 + 296) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 312) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_296_off_60C5E9A4_DWORD_a1_312_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 316) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 320) = 0;
   *(_DWORD *)(a1 + 324) = 0;
@@ -856,18 +615,7 @@ int __fastcall MultiPlayCourseSelectScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 332) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 364));
   *(_DWORD *)(a1 + 364) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 380) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 384) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 388) = 0;
-  *(_DWORD *)(a1 + 392) = 0;
-  *(_DWORD *)(a1 + 396) = 1;
-  *(_DWORD *)(a1 + 404) = 0;
-  *(_DWORD *)(a1 + 408) = 0;
-  *(_DWORD *)(a1 + 412) = 0;
-  *(_DWORD *)(a1 + 400) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 432));
-  *(_DWORD *)(a1 + 432) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 448) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 380) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_384_byte_60ABC94D_DWORD_a1_388_0_DWORD_a1_392_0_DWORD_a1_396_1_DWORD_a1_404_0_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_400_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_432_DWORD_a1_432_off_60C5E9A4_DWORD_a1_448_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 452) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 456) = 0;
   *(_DWORD *)(a1 + 460) = 0;
@@ -923,18 +671,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC6260);
   *(_DWORD *)(a1 + 192) = &off_60C27740;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
-  *(_DWORD *)(a1 + 244) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 228) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 252) = 0;
-  *(_DWORD *)(a1 + 256) = 0;
-  *(_DWORD *)(a1 + 260) = 1;
-  *(_DWORD *)(a1 + 268) = 0;
-  *(_DWORD *)(a1 + 272) = 0;
-  *(_DWORD *)(a1 + 276) = 0;
-  *(_DWORD *)(a1 + 264) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 296));
-  *(_DWORD *)(a1 + 312) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_312_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 316) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 296) = off_60C5E9A4;
   *(_DWORD *)(a1 + 320) = 0;
@@ -945,18 +682,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 344) = 0;
   *(_DWORD *)(a1 + 332) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 364));
-  *(_DWORD *)(a1 + 380) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 384) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 364) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 388) = 0;
-  *(_DWORD *)(a1 + 392) = 0;
-  *(_DWORD *)(a1 + 396) = 1;
-  *(_DWORD *)(a1 + 404) = 0;
-  *(_DWORD *)(a1 + 408) = 0;
-  *(_DWORD *)(a1 + 412) = 0;
-  *(_DWORD *)(a1 + 400) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 432));
-  *(_DWORD *)(a1 + 448) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 380) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_384_byte_60ABC94D_DWORD_a1_364_off_60C5E9A4_DWORD_a1_388_0_DWORD_a1_392_0_DWORD_a1_396_1_DWORD_a1_404_0_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_400_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_432_DWORD_a1_448_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 452) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 432) = off_60C5E9A4;
   *(_DWORD *)(a1 + 456) = 0;
@@ -967,18 +693,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 480) = 0;
   *(_DWORD *)(a1 + 468) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 500));
-  *(_DWORD *)(a1 + 516) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 520) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 500) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 524) = 0;
-  *(_DWORD *)(a1 + 528) = 0;
-  *(_DWORD *)(a1 + 532) = 1;
-  *(_DWORD *)(a1 + 540) = 0;
-  *(_DWORD *)(a1 + 544) = 0;
-  *(_DWORD *)(a1 + 548) = 0;
-  *(_DWORD *)(a1 + 536) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 568));
-  *(_DWORD *)(a1 + 584) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 516) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_520_byte_60ABC94D_DWORD_a1_500_off_60C5E9A4_DWORD_a1_524_0_DWORD_a1_528_0_DWORD_a1_532_1_DWORD_a1_540_0_DWORD_a1_544_0_DWORD_a1_548_0_DWORD_a1_536_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_568_DWORD_a1_584_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 588) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 568) = off_60C5E9A4;
   *(_DWORD *)(a1 + 592) = 0;
@@ -989,18 +704,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 616) = 0;
   *(_DWORD *)(a1 + 604) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 636));
-  *(_DWORD *)(a1 + 652) = &`vtable for'sead_SafeStringBase<char>;
-  *(_DWORD *)(a1 + 656) = &byte_60ABC94D;
-  *(_DWORD *)(a1 + 636) = off_60C5E9A4;
-  *(_DWORD *)(a1 + 660) = 0;
-  *(_DWORD *)(a1 + 664) = 0;
-  *(_DWORD *)(a1 + 668) = 1;
-  *(_DWORD *)(a1 + 676) = 0;
-  *(_DWORD *)(a1 + 680) = 0;
-  *(_DWORD *)(a1 + 684) = 0;
-  *(_DWORD *)(a1 + 672) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 704));
-  *(_DWORD *)(a1 + 720) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 652) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_656_byte_60ABC94D_DWORD_a1_636_off_60C5E9A4_DWORD_a1_660_0_DWORD_a1_664_0_DWORD_a1_668_1_DWORD_a1_676_0_DWORD_a1_680_0_DWORD_a1_684_0_DWORD_a1_672_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_704_DWORD_a1_720_vtable_forsead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 724) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 704) = off_60C5E9A4;
   *(_DWORD *)(a1 + 728) = 0;
