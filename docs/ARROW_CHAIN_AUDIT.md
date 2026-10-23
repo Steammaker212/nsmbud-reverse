@@ -359,8 +359,11 @@ function takes or what it returns.
 valid expressions of the same type. Both forms were compiled with
 `clang -std=gnu89 -fsyntax-only` against the corpus headers and both exit 0
 with only the pre-existing `aligned_alloc` declaration warning. The rewrite
-cannot move the 37,787/46,879 (80.61%) compile-clean figure in either
-direction, and this audit does not change it.
+cannot move the 37,789/45,148 (83.70%) compile-clean figure in either
+direction, and this audit does not change it. That figure is measured in
+[`COMPILE_FAILURES.md`](COMPILE_FAILURES.md); the 37,787/46,879 (80.61%) quoted
+in earlier revisions of this document predates both the veneer collapse and that
+measurement.
 
 ### Control-flow fidelity: **this is where it breaks.**
 

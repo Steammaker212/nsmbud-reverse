@@ -7,7 +7,7 @@ not; it is not a changelog.
 
 | Question | Answer |
 | --- | --- |
-| Can you read the game's C? | Yes — 46,879 functions, one file each |
+| Can you read the game's C? | Yes — 45,148 functions, one file each |
 | Can you find the function you want? | Yes — 9,671 have evidence-backed names |
 | Can you verify a hook will branch where you think? | Yes — `verify_hooks.py`, 80/80 |
 | Can you build a patch with it? | Yes — `loader/`, 14 hooks, links and verifies |
