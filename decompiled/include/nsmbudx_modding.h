@@ -74,15 +74,17 @@ enum PlayerPowerupMode {
  * The grant gate refuses a mode unless the player is already in a mode that permits the transition. The mask is a
  * bitmap where bit n corresponds to mode n + 1:
  *
- *      0x1FB  permits modes 1, 2, 4, 5, 6, 7, 8, 9   -- blocks mode 3 (Ice Flower)
- *      0x3FB  admits mode 3 as well
+ *      0x1FB  permits modes 1, 2, 4, 5, 6, 7, 8, 9   -- bit 2 is clear, so mode 3 (Ice Flower) is refused
+ *      0x1FF  the same mask with bit 2 set, which admits mode 3
  *
- * 0x1FB is the value the shipped game uses at all four item_grant hook sites, which is why Ice Flower does not
- * behave like the other power-ups. A mod that wants it to has to change this mask; no edit to the mode table will
- * do it.
+ * Do not reach for 0x3FB: it sets bit 9 (mode 10, which does not exist) and leaves mode 3 refused.
+ *
+ * 0x1FB is the value the shipped game uses at both sites in the grant gate, which is why Ice Flower does not behave
+ * like the other power-ups. A mod that wants it to has to change this mask; no edit to the mode table will do it.
+ * See decompiled/ICE_FLOWER_PATCH.md for the two instruction addresses.
  */
 #define MODE_GUARD_MASK_DEFAULT      0x1FB
-#define MODE_GUARD_MASK_WITH_ICE     0x3FB
+#define MODE_GUARD_MASK_WITH_ICE     0x1FF
 
 /* ---- data words that must keep their current values ------------------------------------------------------------ */
 #define MODE_DATA_FLOAT_ZERO_ADDR    0x60B0C2E4   /* 0.0f, used in the mode-transition compare */
