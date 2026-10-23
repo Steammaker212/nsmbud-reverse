@@ -10,5 +10,5 @@
 
 int __fastcall Actor__getProfileId(Actor *a1)
 {
-  return FIELD_U32(a1, 0x14);
+  return FIELD_U32(FIELD_U32(a1, 0xC), 0x8);
 }

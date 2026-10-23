@@ -53,7 +53,7 @@ LABEL_12:
     goto LABEL_12;
   }
   v9 = 0;
-  playerId = (unsigned __int8)FIELD_U8(acOther, 0x94);
+  playerId = (unsigned __int8)FIELD_U8(FIELD_U32(acOther, 0x40), 0x54);
   if ( playerId < 4 )
     v9 = (char)playerId;
   *((_WORD *)&FIELD_U32(acSelf, 0x40)[9].aCollider.info.callback + v9) = 5;

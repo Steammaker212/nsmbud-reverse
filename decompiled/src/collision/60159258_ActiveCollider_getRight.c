@@ -10,5 +10,5 @@
 
 float __fastcall ActiveCollider_getRight(ActiveCollider *result)
 {
-  return (float)(FIELD_F32(result, 0xAC) + FIELD_F32(result, 0x74)) + FIELD_F32(result, 0x7C);
+  return (float)(FIELD_F32(FIELD_U32(result, 0x40), 0x6C) + FIELD_F32(result, 0x74)) + FIELD_F32(result, 0x7C);
 }

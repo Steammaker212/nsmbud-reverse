@@ -15,7 +15,7 @@ int __fastcall Actor_kafugumannen_build(ActorBuildInfo *a1)
   v2 = operator_new(0x2EC0u);
   Enemy__ctor((Enemy *)v2, a1);
   *(_DWORD *)v2 = off_60BE3E5C;
-  FIELD_U32(v2, 6300) = FIELD_U32(a1, 0x14) == 550;
+  FIELD_U32(v2, 6300) = FIELD_U32(FIELD_U32(a1, 0xC), 0x8) == 550;
   FIELD_U32(v2, 6304) = 0;
   FIELD_U32(v2, 6308) = 2;
   FIELD_U32(v2, 6312) = 0;

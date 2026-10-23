@@ -50,7 +50,7 @@ LABEL_6:
     {
       memset(&buildInfo.settings2, 0, 40);
       buildInfo.settings1 = *((_DWORD *)v9 - 7) | defaultSettings;
-      buildInfo.parentId = FIELD_U32(this, 0x44);
+      buildInfo.parentId = FIELD_U32(FIELD_U32(this, 0x3C), 0x8);
       buildInfo.profile = Profile__get(0x188u);
       buildInfo.position = *(Vec3 *)(v9 - 2);
       iceActor = (Actor *)ActorMgr__create((void *)ActorMgr__instance, &buildInfo, 0);

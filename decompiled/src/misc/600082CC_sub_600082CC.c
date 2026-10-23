@@ -18,7 +18,7 @@ int __fastcall sub_600082CC(void *this, ActorBuildInfo *buildInfo, char a3)
   int v11; // r5
   sead__SafeString v13; // [sp+8h] [bp-18h] BYREF
 
-  porfileId = FIELD_U32(buildInfo, 0x14);
+  porfileId = FIELD_U32(FIELD_U32(buildInfo, 0xC), 0x8);
   if ( porfileId == 444 )
     goto LABEL_7;
   v7 = porfileId == 443;
@@ -43,7 +43,7 @@ LABEL_7:
   *((_DWORD *)this + 6798) = *((_DWORD *)this + 6796) | (*((_DWORD *)this + 6794) << 22);
   *((_BYTE *)this + 27196) = a3;
   v10 = sead__HeapMgr__setCurrentHeap(sead__HeapMgr__sInstance, v9);
-  v11 = ((int (__fastcall *)(ActorBuildInfo *))FIELD_U32(buildInfo, 0x10))(buildInfo);
+  v11 = ((int (__fastcall *)(ActorBuildInfo *))FIELD_U32(FIELD_U32(buildInfo, 0xC), 0x4))(buildInfo);
   sub_60008BC8((unsigned int *)this + 6792, v11);
   if ( v10 != 1 )
     sead__HeapMgr__setCurrentHeap(sead__HeapMgr__sInstance, v10);

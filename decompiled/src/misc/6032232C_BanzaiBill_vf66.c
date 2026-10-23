@@ -31,7 +31,7 @@ void __fastcall BanzaiBill_vf66(int a1, ActiveCollider *a2, ActiveCollider *a3)
   if ( owner && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) == 1 )
   {
     if ( FIELD_U32(a1, 6308) == 1
-      && FIELD_U8(a3, 0x255) == 1
+      && FIELD_U8(FIELD_U32(a3, 0x40), 0x215) == 1
       && sub_6075F914(owner) == 1
       && (owner[1].profileFlags & 0x20000) != 0 )
     {

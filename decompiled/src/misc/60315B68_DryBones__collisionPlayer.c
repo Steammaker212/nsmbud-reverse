@@ -104,7 +104,7 @@ void __fastcall DryBones__collisionPlayer(int *a1, ActiveCollider *a2, ActiveCol
   else
   {
     v10 = FIELD_U32(a2, 0x40);
-    if ( (float)(FIELD_F32(a3, 0xB0) - FIELD_F32(a3, 0x28C)) >= 0.0 )
+    if ( (float)(FIELD_F32(FIELD_U32(a3, 0x40), 0x70) - FIELD_F32(FIELD_U32(a3, 0x40), 0x24C)) >= 0.0 )
     {
       v11 = 12;
       if ( (float)(FIELD_F32(v10, 0x70) - FIELD_F32(v10, 0x24C)) > 0.0 )

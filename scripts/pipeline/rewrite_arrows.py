@@ -74,20 +74,28 @@ def width_macro(type_str: str) -> str:
 
 
 def load_types(path: str):
-    """type -> (size, {member: (byte offset, width macro, member type name)}).
+    """type -> (size, {member: (byte offset, width macro, member type, is_pointer)}).
 
     The member's own type is kept so a chain can be walked hop by hop: the
     offset of `m2` is relative to `m1`'s type, not to the base object. Without
     that, `this->_.vtable` cannot be resolved (`_` is an anonymous base of type
     Actor, and `vtable` lives on Actor, not on StageActor).
 
+    `is_pointer` is recorded rather than thrown away. A hop through a pointer
+    member dereferences: `a->p->x` is `*(*(a + off_p) + off_x)`, which is NOT
+    `*(a + off_p + off_x)`. Summing the offsets is only valid for anonymous
+    bases, which are embedded at offset 0 and not dereferenced. Dropping the
+    pointer-ness here is what produced the flattened chains in
+    docs/ARROW_CHAIN_AUDIT.md -- 42 confirmed cases across 35 functions, 10 of
+    which feed an indirect call whose target is therefore wrong.
+
     Only members whose bit offset is byte-aligned can be expressed as a byte
     offset. A bitfield stays out of the rewrite rather than being rounded.
     """
     data = json.loads(open(path, encoding="utf-8").read())
-    out: dict[str, tuple[int, dict[str, tuple[int, str, str]]]] = {}
+    out: dict[str, tuple[int, dict[str, tuple[int, str, str, bool]]]] = {}
     for t in data.get("types", []):
-        members: dict[str, tuple[int, str, str]] = {}
+        members: dict[str, tuple[int, str, str, bool]] = {}
         for m in t.get("members", []):
             name = m.get("name")
             if not name:
@@ -95,11 +103,16 @@ def load_types(path: str):
             bit = m.get("bit_offset", 0)
             if bit % 8:
                 continue
-            mt = (m.get("type") or "").strip()
+            raw = (m.get("type") or "").strip()
+            # Pointer-ness has to survive the strip below, because it decides
+            # whether the hop dereferences. Arrays decay to a pointer too, but
+            # an array member indexed by the chain is a different case and is
+            # left unrewritten rather than guessed at.
+            is_ptr = "*" in raw
             # Strip pointer/array decoration: the pointee type is what a chain
             # continues through.
-            mt = mt.replace("*", "").strip()
-            members[name] = (bit // 8, width_macro(m.get("type", "")), mt)
+            mt = raw.replace("*", "").strip()
+            members[name] = (bit // 8, width_macro(raw), mt, is_ptr)
         if members:
             out[t["name"]] = (t.get("size") or 0, members)
     return out
@@ -121,21 +134,35 @@ def var_types(body: str) -> dict[str, set[str]]:
 
 
 def rewrite_body(body: str, types):
-    """Resolve `base->m1->m2`-style chains to a single FIELD_ access.
+    """Resolve `base->m1->m2`-style chains into nested FIELD_ accesses.
 
-    Only chains that start with `->` are touched: a plain `a.field` is an access
-    on a real struct object and needs no rewrite.
+    Two kinds of hop exist and they are not interchangeable:
 
-    A chain resolves when every hop before the last is an anonymous base
-    (`_`, offset 0) and the last member's offset is known for the base's type.
-    Anything else is left exactly as it was, so a partial rewrite can never
-    produce a half-converted expression.
+      * an embedded hop (`a.m`, or an anonymous base at offset 0) contributes a
+        byte offset to the SAME object, so offsets add up;
+      * a pointer hop (`a->p`) dereferences, so the next offset is relative to
+        the pointed-to object and the read must be NESTED, not summed.
+
+    `a->p->x` is `FIELD_U32(FIELD_U32(a, off_p), off_x)`, never
+    `FIELD_U32(a, off_p + off_x)`. Summing is valid only for embedded hops.
+
+    The walk keeps two pieces of state: `expr`, the expression for the object
+    currently referenced (initially the bare base), and `pending`, the sum of
+    embedded offsets accumulated since the last dereference. A pointer hop
+    flushes `pending` through a read and resets it; an embedded hop only adds to
+    it. The final member is emitted the same way, which makes the zero-offset
+    case fall out instead of needing a special case.
+
+    A chain that cannot be fully resolved -- unknown member, unknown type,
+    non-byte-aligned bitfield -- is left exactly as it was, so a partial rewrite
+    can never emit a half-converted expression.
     """
     vt = var_types(body)
     resolved = 0
     unresolved = 0
+    PTR = "FIELD_U32"          # pointers are 32-bit in this ABI
 
-    def repl(m: re.Match) -> str:
+    def repl(m):
         nonlocal resolved, unresolved
         base, index, chain = m.group(1), m.group(2) or "", m.group(3) or ""
         toks = [t for t in re.split(r"->|\.", chain) if t.strip()]
@@ -143,50 +170,47 @@ def rewrite_body(body: str, types):
             unresolved += 1
             return m.group(0)
 
-        last = toks[-1]
-        hops = toks[:-1]
+        last, hops = toks[-1], toks[:-1]
 
         for t in vt.get(base, ()):
-            cur = t
-            total = 0
-            ok = True
-            # Walk every hop, accumulating its offset within the previous type.
+            cur, expr, pending, ok = t, base, 0, True
+
             for h in hops:
                 info = types.get(cur, (0, {}))[1].get(h)
                 if not info:
                     ok = False
                     break
-                off, _macro, mt = info
-                total += off
+                off, _macro, mt, is_ptr = info
+                if is_ptr:
+                    expr = "%s(%s, 0x%X)" % (PTR, expr, pending + off)
+                    pending = 0
+                else:
+                    pending += off
                 cur = mt
                 if not cur:
                     ok = False
                     break
             if not ok:
                 continue
+
             info = types.get(cur, (0, {}))[1].get(last)
             if not info:
                 continue
-            off, macro, _mt = info
-            total += off
+            off, macro, _mt, _last_is_ptr = info
+            total = pending + off
 
-            size = types.get(t, (0, {}))[0]
-            idx = index.strip()
-            if idx:
-                if not size:
-                    unresolved += 1
-                    return m.group(0)
-                inner = idx[1:-1].strip()
-                resolved += 1
-                return "%s(%s + (%s) * %d, 0x%X)" % (macro, base, inner, size, total)
+            if index.strip():
+                # An indexed access needs the element size of the object the
+                # index applies to, and this walker does not model which hop
+                # that is. Left verbatim rather than guessed.
+                unresolved += 1
+                return m.group(0)
+
             resolved += 1
-            return "%s(%s, 0x%X)" % (macro, base, total)
+            return "%s(%s, 0x%X)" % (macro, expr, total)
 
         unresolved += 1
         return m.group(0)
-
-    new = CHAIN.sub(repl, body)
-    return new, resolved, unresolved
 
     new = CHAIN.sub(repl, body)
     return new, resolved, unresolved

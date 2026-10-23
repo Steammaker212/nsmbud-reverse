@@ -64,11 +64,11 @@ StageActor *__fastcall StageActor__ctor(StageActor *this, ActorBuildInfo *buildI
   FIELD_U32(this, 0xB0) = 0;
   FIELD_U32(this, 0xB4) = 0;
   ActiveCollider_ctor(&FIELD_U32(this, 0xBC));
-  actorInfo_ = FIELD_U32(buildInfo, 0x18);
+  actorInfo_ = FIELD_U32(FIELD_U32(buildInfo, 0xC), 0xC);
   v8 = (float)FIELD_U32(actorInfo_, 0xC);
   FIELD_F32(this, 0x1EC) = (float)FIELD_U32(actorInfo_, 0x8);
   *(float *)&FIELD_U32(this, 0x1F0) = v8;
-  actorInfo = FIELD_U32(buildInfo, 0x18);
+  actorInfo = FIELD_U32(FIELD_U32(buildInfo, 0xC), 0xC);
   v10 = (float)FIELD_U32(actorInfo, 0x14) + (float)FIELD_U32(actorInfo, 0x14);
   FIELD_F32(this, 0x1F4) = (float)FIELD_U32(actorInfo, 0x10) + (float)FIELD_U32(actorInfo, 0x10);
   FIELD_F32(this, 0x1F8) = v10;
@@ -116,7 +116,7 @@ StageActor *__fastcall StageActor__ctor(StageActor *this, ActorBuildInfo *buildI
   FIELD_U32(this, 0x278) = FIELD_U32(buildInfo, 0x28);
   FIELD_F32(this, 0x27C) = 0.0;
   FIELD_U32(this, 0x280) = 0;
-  actorInfo_2 = FIELD_U32(buildInfo, 0x18);
+  actorInfo_2 = FIELD_U32(FIELD_U32(buildInfo, 0xC), 0xC);
   v19 = (unsigned __int16)FIELD_U32(actorInfo_2, 0x1E);
   v20 = (float)(unsigned __int16)FIELD_U32(actorInfo_2, 0x1A) + 256.0;
   v21 = (float)(unsigned __int16)FIELD_U32(actorInfo_2, 0x1C) + 80.0;

@@ -37,7 +37,7 @@ int __fastcall BobOmb_vf67(Enemy *a1, int a2, ActiveCollider *a3)
              v13 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v12, 0x0) + 2))(v12),
              v13 == (*(int (**)(void))(dword_60C8E2E0 + 8))()) )
   {
-    result = FIELD_U8(a3, 0x94);
+    result = FIELD_U8(FIELD_U32(a3, 0x40), 0x54);
     if ( (unsigned __int8)result <= 3u )
     {
       v14 = FIELD_F32(a2, 184);

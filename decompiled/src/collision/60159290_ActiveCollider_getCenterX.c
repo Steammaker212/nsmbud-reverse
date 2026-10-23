@@ -10,5 +10,5 @@
 
 float __fastcall ActiveCollider_getCenterX(ActiveCollider *result)
 {
-  return FIELD_F32(result, 0xAC) + FIELD_F32(result, 0x74);
+  return FIELD_F32(FIELD_U32(result, 0x40), 0x6C) + FIELD_F32(result, 0x74);
 }

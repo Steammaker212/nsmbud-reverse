@@ -10,5 +10,5 @@
 
 float __fastcall ActiveCollider_getBottom(ActiveCollider *result)
 {
-  return (float)(FIELD_F32(result, 0xB0) + FIELD_F32(result, 0x78)) - FIELD_F32(result, 0x80);
+  return (float)(FIELD_F32(FIELD_U32(result, 0x40), 0x70) + FIELD_F32(result, 0x78)) - FIELD_F32(result, 0x80);
 }
