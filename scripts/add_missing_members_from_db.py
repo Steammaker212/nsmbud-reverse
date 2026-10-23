@@ -169,11 +169,56 @@ def main(argv):
         if not keep:
             continue
         keep.sort()
+        # Preserve members the struct ALREADY had. Replacing the whole body silently dropped things like
+        # `StateMethodExecuter.vtable`, turning one fixed error into a new one. Existing named members are kept at
+        # their recorded offset when the body carries a `+0xNNN` comment, and positioned sequentially when it does
+        # not (the one-line spellings have no comments).
+        existing = {}
+        body_txt = struct_def(src, tag)
+        if body_txt:
+            cursor = 0
+            # These bodies come in two spellings: one member per line with a trailing `/* +0xNNN */`, and a single
+            # line holding several members. Splitting on newlines misses every member of the one-line form (it is
+            # all one "line" that ends in a pad), and splitting on `;` mis-attaches the trailing comments. Matching
+            # `declaration ; [comment]` handles both.
+            for m in re.finditer(r"([^;{}\n]+);\s*(?:/\*\s*\+0x([0-9A-Fa-f]+)[^*]*\*/)?", body_txt[0]):
+                decl = m.group(1).strip()
+                if not decl:
+                    continue
+                pm = re.search(r"\[0x([0-9A-Fa-f]+)\]", decl)
+                if "_opaque" in decl or "_pad_" in decl:
+                    if pm:
+                        cursor = int(m.group(2), 16) if m.group(2) else cursor + int(pm.group(1), 16)
+                    continue
+                if pm and decl.startswith("uint8_t"):
+                    continue
+                nm = re.findall(r"\w+", decl)
+                if len(nm) < 2:
+                    continue
+                name = nm[-1]
+                ty = decl[:decl.rfind(name)].strip()
+                off = int(m.group(2), 16) if m.group(2) else cursor
+                r = resolve(ty.replace("struct ", ""), db)
+                sz = r[1] if r else 4
+                existing[name] = (off, ty)
+                if off >= cursor:
+                    cursor = off + sz
+            # Track the running offset for members with no explicit comment.
+        for name, (off, ty) in existing.items():
+            if name not in [n for _o, n, _t in keep]:
+                keep.append((off, name, ty))
+        keep.sort()
+
         lines = []
         cursor = 0
         bad = False
         for off, nm, ty in keep:
-            c, sz = resolve(ty, db)
+            r = resolve(ty, db)
+            if r is None:
+                # already a C spelling taken from the existing header; emit it verbatim
+                c, sz = ty, 4
+            else:
+                c, sz = r
             if off < cursor or off + sz > size:
                 bad = True
                 break

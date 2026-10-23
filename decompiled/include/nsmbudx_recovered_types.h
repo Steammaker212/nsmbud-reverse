@@ -84,6 +84,7 @@ struct svuint32_t;
 struct svuint64_t;
 struct svuint8_t;
 
+
 typedef struct Vec2 {
     float x;   /* +0x000  from main.i64 */
     uint8_t _pad_004[0x4];
@@ -116,7 +117,10 @@ typedef struct ActorBuildInfo {
 typedef struct ActorInfo { uint8_t _opaque[0x24]; } ActorInfo;   /* sizeof 0x24 */
 typedef struct ActorScaler { uint8_t _opaque[0x20]; } ActorScaler;   /* sizeof 0x20 */
 typedef struct Amp { uint8_t _opaque[0x1B0D]; } Amp;   /* sizeof 0x1B0D */
-typedef struct AnimationsList { uint8_t _opaque[0x8]; } AnimationsList;   /* sizeof 0x8 */
+typedef struct AnimationsList {
+    uint8_t _pad_000[0x4];
+    void * animations;   /* +0x004  from main.i64 */
+} AnimationsList;   /* sizeof 0x8 */
 typedef struct BulletBillTemp { uint8_t _opaque[0x1C74]; } BulletBillTemp;   /* sizeof 0x1C74 */
 typedef struct CarryableEnemy { uint8_t _opaque[0x18CE]; } CarryableEnemy;   /* sizeof 0x18CE */
 typedef struct CircularColliderInfo { uint8_t _opaque[0x20]; } CircularColliderInfo;   /* sizeof 0x20 */
@@ -164,7 +168,7 @@ typedef struct State { uint8_t _opaque[0x20]; } State;   /* sizeof 0x20 */
 typedef struct StateBase { void *vtable; uint8_t _opaque[0x4]; } StateBase;   /* sizeof 0x8 */
 typedef struct StateExecuter { uint8_t _opaque[0x10]; } StateExecuter;   /* sizeof 0x10 */
 typedef struct StateMethodExecuter {
-    uint8_t _pad_000[0x4];
+    void * vtable;   /* +0x000  from main.i64 */
     void * owner;   /* +0x004  from main.i64 */
     int32_t currentState;   /* +0x008  from main.i64 */
 } StateMethodExecuter;   /* sizeof 0xC */
