@@ -707,12 +707,16 @@ typedef struct ColliderNode {
  * Derived from: ColliderNodeUnk1_ctor
  */
 typedef struct ColliderNodeUnk1 {
-    uint32_t field_0000;   /* +0x0000 */
-    uint32_t field_0004;   /* +0x0004 */
-    uint32_t field_0008;   /* +0x0008 */
-    uint32_t field_000C;   /* +0x000C */
-    /* struct size >= 0x10 (16) */
-} ColliderNodeUnk1;
+    int32_t field_0;   /* +0x000  int */
+    int32_t field_4;   /* +0x004  int */
+    float field_8;   /* +0x008  float */
+    int32_t field_C;   /* +0x00C  int */
+} ColliderNodeUnk1;   /* sizeof 0x10 */
+_Static_assert(offsetof(ColliderNodeUnk1, field_0) == 0x0, "ColliderNodeUnk1.field_0 offset");
+_Static_assert(offsetof(ColliderNodeUnk1, field_4) == 0x4, "ColliderNodeUnk1.field_4 offset");
+_Static_assert(offsetof(ColliderNodeUnk1, field_8) == 0x8, "ColliderNodeUnk1.field_8 offset");
+_Static_assert(offsetof(ColliderNodeUnk1, field_C) == 0xC, "ColliderNodeUnk1.field_C offset");
+_Static_assert(sizeof(ColliderNodeUnk1) == 0x10, "ColliderNodeUnk1 size");
 
 /* CollisionActor -- 16 member(s) proven
  *

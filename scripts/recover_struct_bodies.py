@@ -44,6 +44,9 @@ TARGETS = {
     "Vec2": (r"nsmbudx_value_types.h", True),
     "ActorBuildInfo": (r"nsmbudx_recovered_types.h", True),
     "TileCheck_Result": (r"nsmbudx_recovered_types.h", True),
+    "ActiveCollider": (r"structs.h", True),
+    "ColliderNodeUnk1": (r"structs.h", True),
+    "CollisionActor": (r"structs.h", True),
 }
 
 
