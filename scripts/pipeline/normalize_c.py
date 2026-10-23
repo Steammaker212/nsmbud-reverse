@@ -57,6 +57,8 @@ MEM_RE = re.compile(r"MEMORY\[(0x[0-9A-Fa-f]+|\d+)\]")
 SCOPE_RE = re.compile(r"\b([A-Za-z_]\w*(?:\s*::\s*[A-Za-z_]\w*)+)\b")
 # `&`vtable for'StageActor` -- Hex-Rays' rendering of a vtable address.
 VTABLE_RE = re.compile(r"&\s*`\s*vtable for'\s*([A-Za-z_]\w*)")
+# `&Class__vtable<char>` -- C++ template arguments on a vtable symbol.
+VTABLE_ARGS_RE = re.compile(r"(&\s*[A-Za-z_]\w*__vtable)\s*<[^<>;]*>")
 
 
 def flatten_scope(m: re.Match) -> str:
@@ -88,6 +90,8 @@ def rewrite(text: str) -> tuple[str, int]:
     n += n2
     out, n3 = VTABLE_RE.subn(lambda m: "&%s__vtable" % m.group(1), out)
     n += n3
+    out, n4 = VTABLE_ARGS_RE.subn(lambda m: m.group(1), out)
+    n += n4
     return out, n
 
 

@@ -1,99 +1,117 @@
-"""Emit declarations for every identifier the corpus references but never declares.
+"""Close the corpus symbol set using real compiler diagnostics.
 
-Rather than guessing which globals a body touches, this asks the compiler: it
-compiles the corpus, collects the "undeclared identifier" diagnostics, and
-writes declarations for exactly those names.
-
-The declarations are honest: each is a symbol whose *existence* is established
-by the decompiled body that references it (the name came from the database or
-from the object it points at). Width is deliberately not asserted.
+A pure static scan cannot tell a type name from a global, and guessing wrong
+produces thousands of bogus declarations. This asks clang instead: it compiles
+each unit, collects the identifiers clang reports as undeclared, and declares
+exactly those. Iterating to a fixed point converges quickly because each pass
+only adds names the compiler named.
 
 Usage:
-    python close_undeclared.py --dir <corpus> --out <include/nsmbudx_undeclared.h>
+    python close_undeclared.py --dir <per_fn> [--rounds 4] [--jobs 12]
 """
 from __future__ import annotations
 
 import argparse
 import re
 import subprocess
-import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-UNDECL_RE = re.compile(r"error: use of undeclared identifier '([A-Za-z_]\w*)'")
-IMPLICIT_RE = re.compile(r"error: call to undeclared function '([A-Za-z_]\w*)'")
+UNDECL = re.compile(r"use of undeclared identifier '([A-Za-z_]\w*)'")
+IMPLICIT = re.compile(r"call to undeclared function '([A-Za-z_]\w*)'")
+# Widths that indicate the identifier was used as a storage location.
+ASSIGN = re.compile(r"(?<![\w.>])([A-Za-z_]\w*)\s*=(?!=)")
+INC = re.compile(r"(?:\+\+|--)\s*([A-Za-z_]\w*)|([A-Za-z_]\w*)\s*(?:\+\+|--)")
+
+HEADER = "nsmbudx_undeclared.h"
+
+
+def compile_unit(u: Path, inc: Path) -> tuple[set[str], set[str], str]:
+    p = subprocess.run(
+        ["clang", "-fsyntax-only", "-std=gnu89", "-Wno-everything",
+         "-ferror-limit=0", "-I", str(inc), str(u)],
+        capture_output=True, text=True)
+    return set(UNDECL.findall(p.stderr)), set(IMPLICIT.findall(p.stderr)), p.stderr
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dir", required=True)
-    ap.add_argument("--out", required=True)
-    ap.add_argument("--clang", default="clang")
+    ap.add_argument("--rounds", type=int, default=4)
+    ap.add_argument("--jobs", type=int, default=12)
     args = ap.parse_args()
 
     d = Path(args.dir)
-    tu = d / "one.c"
-    if not tu.exists():
-        print("missing %s" % tu, file=sys.stderr)
-        return 1
+    inc = d / "include"
+    hdr = inc / HEADER
+    units = sorted(p for p in d.glob("*/*.c") if p.name != "g_image.c")
+    print("units: %d" % len(units))
 
-    proc = subprocess.run(
-        [args.clang, "-fsyntax-only", "-std=gnu89", "-Wno-everything",
-         "-ferror-limit=0", "-I", str(d / "include"), str(tu)],
-        capture_output=True, text=True,
-    )
-    errs = proc.stderr
-    data = set(UNDECL_RE.findall(errs))
-    funcs = set(IMPLICIT_RE.findall(errs))
+    data: set[str] = set()
+    funcs: set[str] = set()
+    if hdr.exists():
+        prev = hdr.read_text(encoding="utf-8", errors="replace")
+        data |= set(re.findall(r"extern unsigned char (\w+)\[\]", prev))
+        data |= set(re.findall(r"extern uintptr_t (\w+)", prev))
+        funcs |= set(re.findall(r"int (\w+)\(\)", prev))
+        print("carried over: %d data, %d funcs" % (len(data), len(funcs)))
 
-    # A name that is a known function should not be declared as data.
-    funcs |= data & {n for n in data if n.startswith(("sub_", "nullsub_"))}
-    data -= funcs
+    for rnd in range(args.rounds):
+        with ThreadPoolExecutor(max_workers=args.jobs) as pool:
+            results = list(pool.map(lambda u: compile_unit(u, inc), units))
 
-    # Accumulate: a header written by an earlier pass already declares names
-    # that stopped being "undeclared" once they were declared. Re-emitting an
-    # empty file would lose them and make the corpus regress.
-    out_path = Path(args.out)
-    if out_path.exists():
-        prev = out_path.read_text(encoding="utf-8", errors="replace")
-        prev_data = set(re.findall(r"extern unsigned char (\w+)\[\]", prev))
-        prev_scalar = set(re.findall(r"extern uintptr_t (\w+)", prev))
-        prev_funcs = set(re.findall(r"int (\w+)\(\)", prev))
-        data |= prev_data | prev_scalar
-        funcs |= prev_funcs
+        new_data: set[str] = set()
+        new_funcs: set[str] = set()
+        clean = 0
+        for ud, uf, raw in results:
+            if not ud and not uf:
+                clean += 1
+            new_funcs |= uf
+            new_data |= ud
+        new_funcs |= {n for n in new_data if n.startswith(("sub_", "nullsub_", "j_"))}
+        new_data -= new_funcs
+        added_d = new_data - data
+        added_f = new_funcs - funcs
+        data |= new_data
+        funcs |= new_funcs
+        print("round %d: clean %d/%d  +%d data  +%d funcs"
+              % (rnd + 1, clean, len(units), len(added_d), len(added_f)))
 
-    # A global that is the target of a plain assignment is a scalar variable,
-    # not an array: `dword_60C7B364 = 0;` cannot compile against `T x[]`.
-    body = tu.read_text(encoding="utf-8", errors="replace")
-    assigned = {
-        n for n in data
-        if re.search(r"(?<![\w.>])%s\s*=(?!=)" % re.escape(n), body)
-    }
+        # Globals the corpus assigns to are scalars, not arrays.
+        assigned: set[str] = set()
+        for u in units:
+            t = u.read_text(encoding="utf-8", errors="replace")
+            assigned |= set(ASSIGN.findall(t))
+            assigned |= {a or b for a, b in INC.findall(t)}
 
-    lines = [
-        "/* nsmbudx_undeclared.h -- symbols the corpus references.",
-        " *",
-        " * Generated by scripts/pipeline/close_undeclared.py from the compiler's",
-        " * own diagnostics: every name here is one a decompiled body actually",
-        " * uses. Globals that are assigned become scalars; the rest stay arrays so",
-        " * indexing parses. Widths are not asserted.",
-        " */",
-        "#ifndef NSMBUDX_UNDECLARED_H",
-        "#define NSMBUDX_UNDECLARED_H",
-        "",
-        '#include "nsmbudx_prelude.h"',
-        "",
-    ]
-    for n in sorted(data - assigned):
-        lines.append("extern unsigned char %s[];" % n)
-    for n in sorted(data & assigned):
-        lines.append("extern uintptr_t %s;" % n)
-    for n in sorted(funcs):
-        lines.append("int %s();" % n)
-    lines.append("")
-    lines.append("#endif")
-    Path(args.out).write_text("\n".join(lines))
-    print("undeclared data: %d (scalar %d, array %d)   functions: %d -> %s"
-          % (len(data), len(assigned), len(data) - len(assigned), len(funcs), args.out))
+        lines = [
+            "/* nsmbudx_undeclared.h -- symbols the decompiled bodies reference.",
+            " *",
+            " * Generated by scripts/pipeline/close_undeclared.py from clang's own",
+            " * diagnostics: every name here is one the compiler reported undeclared,",
+            " * so the list is measured, not guessed. Assigned globals are scalars,",
+            " * the rest arrays; no width or type is asserted.",
+            " */",
+            "#ifndef NSMBUDX_UNDECLARED_H",
+            "#define NSMBUDX_UNDECLARED_H",
+            "",
+            '#include "nsmbudx_prelude.h"',
+            "",
+        ]
+        for n in sorted(data - assigned):
+            lines.append("extern unsigned char %s[];" % n)
+        for n in sorted(data & assigned):
+            lines.append("extern uintptr_t %s;" % n)
+        for n in sorted(funcs):
+            lines.append("int %s();" % n)
+        lines += ["", "#endif"]
+        hdr.write_text("\n".join(lines), encoding="utf-8")
+
+        if not added_d and not added_f:
+            print("fixed point at round %d" % (rnd + 1))
+            break
+
+    print("total: %d data, %d funcs" % (len(data), len(funcs)))
     return 0
 
 

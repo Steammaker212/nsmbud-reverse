@@ -63,16 +63,24 @@ def index_declarations(inc: Path) -> tuple[set[str], set[str], set[str]]:
     return funcs, data, types
 
 
+DECL = re.compile(
+    r"\b(?:unsigned|signed|const|volatile|static|register|struct|union|enum|"
+    r"int|char|short|long|float|double|void|bool|_Bool|__int64|__int128|"
+    r"uintptr_t|intptr_t|size_t|ssize_t|__n128|__n64|"
+    r"[A-Za-z_]\w*(?:__\w+)*)\b(?:\s*\*+\s*|\s+)"
+    r"([A-Za-z_]\w*)\s*(?:\[[^\]]*\]\s*)?(?=[;=,)\[])"
+)
+# Declaration lists: `int a1, a2, a3;` -- the first name is matched by DECL,
+# the rest appear only as `, name`.
+DECL_TAIL = re.compile(r",\s*([A-Za-z_]\w*)\s*(?:\[[^\]]*\]\s*)?(?=[,;=)\[])")
+
+
 def scan_unit(path: Path) -> tuple[set[str], set[str]]:
     """Return (called names, other free names) used by one function file."""
     text = path.read_text(encoding="utf-8", errors="replace")
-    # Strip the leading comment block so its prose is not scanned.
     if "*/" in text:
         text = text.split("*/", 1)[1]
-    locals_: set[str] = set()
-    # Parameters and locals: `<type> name` declarations and `name =`.
-    for m in re.finditer(r"\b([A-Za-z_]\w*)\s*(?:,|\)|;|=|\[)", text):
-        locals_.add(m.group(1))
+    locals_ = set(DECL.findall(text)) | set(DECL_TAIL.findall(text))
     called = set(CALL.findall(text))
     others = set(IDENT.findall(text))
     return called, others - locals_
@@ -98,15 +106,17 @@ def main() -> int:
     for u in units:
         called, others = scan_unit(u)
         for c in called:
-            if c not in known:
+            if c not in known and c not in new_funcs:
                 new_funcs.add(c)
         for o in others:
-            if o in known or LOCAL.fullmatch(o):
+            if o in known or o in new_funcs or o in new_data:
                 continue
-            # A name used in a call is a function; anything else is data.
-            if o not in new_funcs and o not in called:
-                new_data.add(o)
-        # Names that were classified as functions should not also be data.
+            if LOCAL.fullmatch(o):
+                continue
+            if o in called:
+                continue
+            new_data.add(o)
+    new_data -= KEYWORDS | MACROS
     new_data -= new_funcs
     new_data -= KEYWORDS | MACROS
 

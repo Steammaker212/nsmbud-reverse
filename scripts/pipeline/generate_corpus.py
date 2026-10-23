@@ -440,17 +440,10 @@ def main() -> int:
             # them here conflicts with the real prototypes in <math.h> etc.
             continue
         seen_names[key] = ea
-        # Hex-Rays renders some variadic calls with fewer arguments than the
-        # prototype it also printed (printf-family and engine log helpers).
-        # Making the declaration variadic keeps the signature usable instead of
-        # rejecting the call site; the printed types are still there.
-        if s.endswith("(void)") or s.endswith("()"):
-            decl.append("%s; /* 0x%08X */" % (s, ea))
-        elif s[:-1].rstrip().endswith("..."):
-            # The parameter list already ends in `...`.
-            decl.append("%s; /* 0x%08X */" % (s, ea))
-        else:
-            decl.append("%s, ...); /* 0x%08X */" % (s[:-1], ea))
+        # Emit the exact printed signature. A definition in the corpus repeats
+        # this signature verbatim, so it must not be widened here: making it
+        # variadic would make every body conflict with its own prototype.
+        decl.append("%s; /* 0x%08X */" % (s, ea))
     decl.append("")
     decl.append("#endif")
     (inc / "nsmbudx_prototypes.h").write_text("\n".join(decl))
