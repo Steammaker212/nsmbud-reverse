@@ -93,6 +93,44 @@ typedef struct NsmbudxItemName {
 } NsmbudxItemName;
 
 /* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+/* MEASURED: the item-name order and the player-mode order are NOT the same.  */
+/* ------------------------------------------------------------------------- */
+/*
+ * These are two different numberings and conflating them is the reason a Fire
+ * Flower can end up behaving like a Mushroom.
+ *
+ * The item-name initialiser lists  0 Kinoko, 1 FireFlower, 2 Star, 3 IceFlower...
+ * The resolver table at RVA 0x00B0267C holds, as read from the shipped binary:
+ *
+ *      0, 3, 7, 0, 1, 4, 6, 5, 2, 2, 8, 9, then 0xFFFFFFFF x8
+ *
+ * and the mode tables are indexed by the PLAYER MODE, whose entries are:
+ *
+ *      mode  0  1  2  3  4  5  6  7  8  9
+ *      body  1  0  0  1  2  3  0  4  4  5
+ *      hgt  16 31 31  6 31 31 31 31 31 31
+ *
+ * Mode 3 is the only entry with height 6.0, which is the squashed/small collision
+ * height, not a Fire body. Feeding a raw item index into the mode field therefore
+ * does not select Fire Flower -- item index 1 lands on mode 1.
+ *
+ * Player_setPowerupMode (RVA 0x795CDC) stores its second argument verbatim:
+ *
+ *      *(_DWORD *)(a1 + 0x2C78) = *(_DWORD *)(a1 + 0x528);   // save previous
+ *      *(_DWORD *)(a1 + 0x528)  = a2;                          // no remap
+ *
+ * so any translation from the item's identity to the player mode has to happen at
+ * the CALLER, not in the setter. A patch that writes an item index straight into
+ * +0x528 will produce "wrong power-up" symptoms exactly like Fire acting as Super.
+ *
+ * This header does not assert a mapping it has not read. What is measured is the
+ * table contents above; what is NOT yet measured is which call site supplies the
+ * Fire Flower's mode. Find the caller that spawns the power-up and read the second
+ * argument it passes before adding another entry to any table.
+ */
+
+/* ------------------------------------------------------------------------- */
 /* Power-up mode tables. Read-only retail data; patch copies, never these.    */
 /* ------------------------------------------------------------------------- */
 
