@@ -713,7 +713,7 @@ int __fastcall Global_initMessageQueueSubsystem();  /* 2 cast site(s) */
 int __fastcall IceFragmentHeap_ref_3EE1B0();  /* 3 cast site(s) */
 int __fastcall Object_destroyViaGlobal();  /* 1 cast site(s) */
 int __fastcall Object_queryByteViaThreeArgSlot();  /* 1 cast site(s) */
-int __fastcall Resource_getModel();  /* 1 cast site(s) */
+int __fastcall Resource_getModel(int a1, _DWORD *a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10);  /* 1 cast site(s) */
 int __fastcall Resource_getModel2();  /* 2 cast site(s) */
 int __fastcall SE_EMY_DOWN_ref_3A1830();  /* 1 cast site(s) */
 int __fastcall SE_OBJ_BLOCK_BREAK_ref_2();  /* 2 cast site(s) */
@@ -760,7 +760,7 @@ int __fastcall loc_6099C15C();  /* 1 cast site(s) */
 int __fastcall logf_0();  /* 1 cast site(s) */
 int __fastcall param_root_ref();  /* 2 cast site(s) */
 int __fastcall result();  /* 14 cast site(s) */
-int __fastcall sub_60051794();  /* 3 cast site(s) */
+int __fastcall sub_60051794(int a1, int a2, int a3);  /* 3 cast site(s) */
 int __fastcall sub_60106C90(int a1, int a2, float *a3, int a4);  /* 4 cast site(s) */
 int __fastcall sub_60151960();  /* 1 cast site(s) */
 int __fastcall sub_60161E68(int a1, _DWORD *a2, _DWORD *a3, int a4);  /* 1 cast site(s) */
@@ -803,7 +803,7 @@ _BYTE * __fastcall sub_605BE5EC(_BYTE *result);  /* 1 cast site(s) */
 bool __fastcall sub_605BE6BC(unsigned __int8 *a1);  /* 1 cast site(s) */
 _DWORD * __fastcall sub_605CC1F8(_DWORD *a1, int a2, _DWORD *a3);  /* 1 cast site(s) */
 int __fastcall sub_605E9A4C(_DWORD *a1, unsigned int a2, _DWORD *a3, int a4);  /* 1 cast site(s) */
-int __fastcall sub_60644758();  /* 1 cast site(s) */
+int __fastcall sub_60644758(_DWORD **a1, float *a2, int a3);  /* 1 cast site(s) */
 int __fastcall sub_6068C8E0(int a1, int *a2, int *a3);  /* 4 cast site(s) */
 int __fastcall sub_606A7D14(int result, int a2);  /* 1 cast site(s) */
 int __fastcall sub_606B4E90(int a1, int a2, int a3, __int64 *a4);  /* 4 cast site(s) */
