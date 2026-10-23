@@ -24,14 +24,21 @@ ASSIGN = re.compile(r"(?<![\w.>])([A-Za-z_]\w*)\s*=(?!=)")
 INC = re.compile(r"(?:\+\+|--)\s*([A-Za-z_]\w*)|([A-Za-z_]\w*)\s*(?:\+\+|--)")
 
 HEADER = "nsmbudx_undeclared.h"
+# `too few arguments to function call, expected N, have M` and the inverse.
+ARITY = re.compile(
+    r"error: (?:too few|too many) arguments to function call, expected .*?'"
+    r"([A-Za-z_]\w*)'")
+ARITY2 = re.compile(r"error: (?:too few|too many) arguments to function call")
+CALLED = re.compile(r"error:.*?(?:call to undeclared function|arguments to function call).*?")
 
 
-def compile_unit(u: Path, inc: Path) -> tuple[set[str], set[str], str]:
+def compile_unit(u: Path, inc: Path) -> tuple[set[str], set[str], int, str]:
     p = subprocess.run(
         ["clang", "-fsyntax-only", "-std=gnu89", "-Wno-everything",
          "-ferror-limit=0", "-I", str(inc), str(u)],
         capture_output=True, text=True)
-    return set(UNDECL.findall(p.stderr)), set(IMPLICIT.findall(p.stderr)), p.stderr
+    n = p.stderr.count("error:")
+    return set(UNDECL.findall(p.stderr)), set(IMPLICIT.findall(p.stderr)), n, p.stderr
 
 
 def main() -> int:
@@ -51,7 +58,7 @@ def main() -> int:
     funcs: set[str] = set()
     if hdr.exists():
         prev = hdr.read_text(encoding="utf-8", errors="replace")
-        data |= set(re.findall(r"extern unsigned char (\w+)\[\]", prev))
+        data |= set(re.findall(r"extern unsigned char (\w+)\[", prev))
         data |= set(re.findall(r"extern uintptr_t (\w+)", prev))
         funcs |= set(re.findall(r"int (\w+)\(\)", prev))
         print("carried over: %d data, %d funcs" % (len(data), len(funcs)))
@@ -63,13 +70,23 @@ def main() -> int:
         new_data: set[str] = set()
         new_funcs: set[str] = set()
         clean = 0
-        for ud, uf, raw in results:
-            if not ud and not uf:
+        for ud, uf, n, raw in results:
+            if n == 0:
                 clean += 1
             new_funcs |= uf
             new_data |= ud
         new_funcs |= {n for n in new_data if n.startswith(("sub_", "nullsub_", "j_"))}
         new_data -= new_funcs
+        # A name that already has a real prototype is a function; declaring it
+        # as data too would make the two declarations conflict.
+        declared_funcs: set[str] = set()
+        proto = inc / "nsmbudx_prototypes.h"
+        if proto.exists():
+            declared_funcs = set(
+                re.findall(r"\b([A-Za-z_]\w*)\s*\(", proto.read_text(
+                    encoding="utf-8", errors="replace")))
+        new_data -= declared_funcs
+        new_funcs -= declared_funcs
         added_d = new_data - data
         added_f = new_funcs - funcs
         data |= new_data
@@ -79,6 +96,14 @@ def main() -> int:
 
         # Globals the corpus assigns to are scalars, not arrays.
         assigned: set[str] = set()
+        declared_funcs: set[str] = set()
+        proto = inc / "nsmbudx_prototypes.h"
+        if proto.exists():
+            declared_funcs = set(
+                re.findall(r"\b([A-Za-z_]\w*)\s*\(", proto.read_text(
+                    encoding="utf-8", errors="replace")))
+        data -= declared_funcs
+        funcs -= declared_funcs
         for u in units:
             t = u.read_text(encoding="utf-8", errors="replace")
             assigned |= set(ASSIGN.findall(t))
@@ -99,7 +124,11 @@ def main() -> int:
             "",
         ]
         for n in sorted(data - assigned):
-            lines.append("extern unsigned char %s[];" % n)
+            # `[1]` rather than `[]`: the decompiler takes `&sym + k`, and
+            # pointer arithmetic on a pointer to an incomplete array type is an
+            # error. One element makes the type complete without asserting the
+            # object's real size.
+            lines.append("extern unsigned char %s[1];" % n)
         for n in sorted(data & assigned):
             lines.append("extern uintptr_t %s;" % n)
         for n in sorted(funcs):

@@ -220,6 +220,25 @@ RESERVED_LIBC = {
 }
 
 
+def widen_signature(sig: str) -> str:
+    """Make a signature accept any argument count.
+
+    Hex-Rays prints a function's prototype from its own body but renders call
+    sites independently, so the two disagree about arity for a few hundred
+    functions ("expected 2, have 3"). Under C89 an empty parameter list means
+    "unspecified arguments", and a trailing ``...`` accepts extras, so both
+    forms make every call site legal without discarding the printed types.
+    """
+    if not sig.endswith(")"):
+        return sig
+    inner = sig[sig.rfind("(") + 1: -1].strip()
+    if inner in ("", "void"):
+        return sig[: sig.rfind("(") + 1] + ")"
+    if inner.endswith("..."):
+        return sig
+    return sig[:-1] + ", ...)"
+
+
 def sig_is_wellformed(sig: str) -> bool:
     """Reject signatures the decompiler could not render cleanly.
 
@@ -429,6 +448,7 @@ def main() -> int:
     # would not compile, so the first wins and the clash is reported.
     seen_names: dict[str, int] = {}
     clashes: list[tuple[str, int, int]] = []
+    variadic_decl: dict[str, str] = {}
     for ea in sorted(all_sigs):
         s = sanitize_symbol(all_sigs[ea])
         nm = re.search(r"([A-Za-z_]\w*)\s*\(", s)
@@ -440,10 +460,12 @@ def main() -> int:
             # them here conflicts with the real prototypes in <math.h> etc.
             continue
         seen_names[key] = ea
-        # Emit the exact printed signature. A definition in the corpus repeats
-        # this signature verbatim, so it must not be widened here: making it
-        # variadic would make every body conflict with its own prototype.
-        decl.append("%s; /* 0x%08X */" % (s, ea))
+        # Widen both the prototype and the definition identically (see
+        # widen_signature): Hex-Rays prints a callee's prototype from its body
+        # but renders call sites independently, so arity disagrees for a few
+        # hundred functions. Widening both keeps every call site legal and
+        # keeps the declaration consistent with the definition.
+        decl.append("%s; /* 0x%08X */" % (widen_signature(s), ea))
     decl.append("")
     decl.append("#endif")
     (inc / "nsmbudx_prototypes.h").write_text("\n".join(decl))
@@ -511,10 +533,14 @@ def main() -> int:
         ]
         h.extend(forward_decls(recs))
         h.append("")
+        protos: list[str] = []
         body_parts = [
             "/* %s -- generated from the Deluxe database. */" % group,
+            '#include "../include/nsmbudx_field.h"',
             '#include "../include/nsmbudx_prelude.h"',
-            '#include "auto_%s.h"' % group,
+            '#include "../include/nsmbudx_data_symbols.h"',
+            '#include "../include/nsmbudx_prototypes.h"',
+            '#include "../include/nsmbudx_undeclared.h"',
             "",
         ]
         for r in recs:
@@ -540,13 +566,34 @@ def main() -> int:
                 sig = sanitize_symbol(sig)
                 if not sig_is_wellformed(sig):
                     continue
-                h.append("%s;" % sig)
+                # nsmbudx_prototypes.h already declares every function; a
+                # second prototype here would conflict with it whenever the
+                # two spellings differ.
+                protos.append(sig)
             body_parts.append(banner)
             # Drop the redundant leading comment line, keep the rest verbatim.
             rest = src
             if "*/" in rest.splitlines()[0]:
                 lines = rest.splitlines()
                 rest = "\n".join(lines[1:])
+            # The definition must accept the same argument counts as the
+            # prototype above, or the body conflicts with its own declaration.
+            dl = rest.splitlines()
+            for i, ln in enumerate(dl):
+                if "{" in ln or ln.rstrip().endswith(")"):
+                    cand = ln.rstrip()
+                    if cand.endswith("{"):
+                        head, sep = cand[:-1].rstrip(), " {"
+                    else:
+                        head, sep = cand, ""
+                    head = re.sub(r"\b([A-Za-z_]\w*)\s*::\s*([A-Za-z_]\w*)", r"\1__\2", head)
+                    head = sanitize_symbol(head)
+                    if head.endswith(")"):
+                        dl[i] = widen_signature(head) + sep
+                    if sep:
+                        pass
+                    break
+            rest = "\n".join(dl)
             body_parts.append(rest.rstrip() + "\n")
 
         h.append("")
