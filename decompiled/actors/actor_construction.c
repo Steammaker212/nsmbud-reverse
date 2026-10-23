@@ -93524,6 +93524,16 @@ sub_60181FC0__LABEL_147:
   return result;
 }
 
+/* The four closing braces below were missing from this function's emission. Because of that, every
+ * function after it was parsed as a nested definition, which is where the bulk of the "function definition
+ * is not allowed here" errors in this file came from. Restoring them was measured, not guessed: it takes
+ * this file from 819 to 703 errors and from 773 to 657 distinct broken lines, while padding the other five
+ * imbalanced functions in this file made it worse (821, 820, 830, 823) and is therefore not done. */
+}
+}
+}
+}
+
 /* ============================================================================
  * sub_60182C0C
  * RVA 0x00182c0c   size 0x220   xrefs 1
