@@ -74,7 +74,7 @@ def parse_hooks(text: str):
         if m:
             cur["addr"] = int(m.group(1), 0)
             continue
-        m = re.match(r"^#\s*->\s*(\S+)\s*\(0x([0-9A-Fa-f]+)\)", s)
+        m = re.match(r"^[@#]\s*->\s*(\S+)\s*\(0x([0-9A-Fa-f]+)\)", s)
         if m:
             cur["target_name"] = m.group(1)
             cur["target_rva"] = int(m.group(2), 16)

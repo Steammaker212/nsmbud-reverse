@@ -1,0 +1,78 @@
+@ Verified hook sites, translated to sweet-dx's vocabulary.
+@
+@ `call` replaces a call instruction and forwards to a wrapper;
+@ `hook` replaces the function entry itself. Every wrapper here sits on a
+@ call site, so every entry is `call` -- except static_init, which really
+@ does replace the entry.
+@
+@ Deluxe (Switch) v1.0.0 only.
+
+static_init:
+    type:    hook
+    address: 0x0000019C
+    symbol:  static_init_hook
+
+Actor__getProfileId_hook:
+    type:    call
+    address: 0x00001BD4
+    symbol:  Actor__getProfileId_hook
+
+ActorMgr__create_hook:
+    type:    call
+    address: 0x00005664
+    symbol:  ActorMgr__create_hook
+
+Player_getActorSlotChecked_hook:
+    type:    call
+    address: 0x0007CF14
+    symbol:  Player_getActorSlotChecked_hook
+
+StateMgr_ctor_hook:
+    type:    call
+    address: 0x00009324
+    symbol:  StateMgr_ctor_hook
+
+StageActor__delete_hook:
+    type:    call
+    address: 0x0002DB34
+    symbol:  StageActor__delete_hook
+
+Enemy__endState_DieFall_hook:
+    type:    call
+    address: 0x0023F99C
+    symbol:  Enemy__endState_DieFall_hook
+
+ActorCollisionMgr_ctor_hook:
+    type:    call
+    address: 0x00003094
+    symbol:  ActorCollisionMgr_ctor_hook
+
+PlayerLookTargetList_add_hook:
+    type:    call
+    address: 0x00024C54
+    symbol:  PlayerLookTargetList_add_hook
+
+Actor__removeChild_hook:
+    type:    call
+    address: 0x00111DAC
+    symbol:  Actor__removeChild_hook
+
+Enemy__vf26C_hook:
+    type:    call
+    address: 0x00260C30
+    symbol:  Enemy__vf26C_hook
+
+CollisionActor__afterCreate_hook:
+    type:    call
+    address: 0x000637DC
+    symbol:  CollisionActor__afterCreate_hook
+
+CollisionActor__afterExecute_hook:
+    type:    call
+    address: 0x00024E34
+    symbol:  CollisionActor__afterExecute_hook
+
+Enemy__endState_DieFumi_hook:
+    type:    call
+    address: 0x0027C8B8
+    symbol:  Enemy__endState_DieFumi_hook

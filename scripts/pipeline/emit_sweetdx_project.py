@@ -1,0 +1,167 @@
+"""Emit sweet-dx's symbols/ and hooks/ files from our verified hook data.
+
+Two harnesses describe the same patch differently, and mixing their vocabularies
+is how a patch silently stops applying:
+
+  our loader (codedx lineage)   type: blal / bal          (branch kind)
+                                addr: site RVA
+                                func: hook symbol
+
+  sweet-dx                      type: hook  -> replaces a function ENTRY
+                                type: call  -> replaces a CALL SITE
+                                address: site RVA
+                                symbol:  hook symbol (optionally with prototype)
+
+So the translation is not a rename. `hook` in sweet-dx means "this branch
+replaces the function", which only holds when site == target entry; every one of
+our 13 wrappers sits on a *call site*, not an entry, and must therefore be
+`call`. Emitting `hook` for them would patch the function's own first
+instruction to branch to a wrapper that calls the function -- infinite recursion
+that crashes on the first actor spawn.
+
+Written from data/loader/hooks.json so the two harnesses cannot disagree about
+which RVAs are patched.
+
+Usage:
+    python emit_sweetdx_project.py --repo . --out sweetdx-test/source
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import re
+from pathlib import Path
+
+# Our branch-hook types -> sweet-dx hook types.
+# A "hook" replaces an entry point; a "call" replaces a call instruction.
+BRANCH_TO_SWEET = {
+    "bl": "call", "blal": "call", "bal": "call", "b": "call",
+}
+
+
+def parse_hks(path: Path):
+    """Parse hooks.hks.
+
+    `@` introduces a comment *and* carries the only record of the branch target,
+    so the raw line has to be inspected as well as the comment-stripped one.
+    Stripping first (the obvious implementation) silently loses every target and
+    produces an empty symbol table.
+    """
+    hooks, cur = [], None
+    for raw in path.read_text(errors="replace").splitlines():
+        s = raw.split("@")[0].strip()
+        m = re.match(r"^(\w+):$", s)
+        if m:
+            if cur:
+                hooks.append(cur)
+            cur = {"name": m.group(1)}
+            continue
+        if cur is None:
+            continue
+        for key in ("type", "func"):
+            m = re.match(r"^%s:\s*(\S+)" % key, s)
+            if m:
+                cur[key] = m.group(1)
+        m = re.match(r"^addr:\s*(0x[0-9A-Fa-f]+)", s)
+        if m:
+            cur["addr"] = int(m.group(1), 16)
+        # Target comment, indented: "    @ -> Name (0x00008138), N caller(s)".
+        m = re.search(r"@\s*->\s*(\S+)\s*\(0x([0-9A-Fa-f]+)\)", raw)
+        if m:
+            cur["target_name"] = m.group(1)
+            cur["target_rva"] = int(m.group(2), 16)
+    if cur:
+        hooks.append(cur)
+    return hooks
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--repo", required=True)
+    ap.add_argument("--out", required=True)
+    opt = ap.parse_args()
+
+    repo = Path(opt.repo)
+    out = repo / opt.out
+    hooks = parse_hks(repo / "hooks" / "hooks.hks")
+
+    typed = []
+    for h in hooks:
+        # `static_init` is special and is the one case a name cannot convey:
+        # sweet-dx's `hook` replaces the instruction AT the site with a branch to
+        # the symbol, and our crt0 supplies `static_init_hook`, whose whole job is
+        # to run static_init() and then replay the two instructions it displaced
+        # (`sub sp, fp, #8` / `pop {r4,r5,fp,pc}`). That is a replacement of the
+        # entry at 0x19C, so it must be `hook`, not `call`.
+        if h["name"] == "static_init":
+            typed.append({**h, "sweet_type": "hook"})
+            continue
+        sweet_type = BRANCH_TO_SWEET.get(h["type"], "call")
+        # A `hook` is only correct when the site *is* the function entry.
+        if h.get("target_rva") is not None and h["addr"] == h["target_rva"]:
+            sweet_type = "hook"
+        typed.append({**h, "sweet_type": sweet_type})
+
+    symdir = out / "symbols"
+    hookdir = out / "hooks"
+    symdir.mkdir(parents=True, exist_ok=True)
+    hookdir.mkdir(parents=True, exist_ok=True)
+
+    # --- symbols: the game functions our hooks call, by RVA ------------------
+    #
+    # sweet-dx uses a DIFFERENT comment character in each file type, and getting
+    # it wrong is not cosmetic:
+    #   .sym  -> '#'    (its parser rejects '@' outright: "Invalid symbol
+    #                    definition at line 1")
+    #   .hks  -> '@'    (codedx lineage; '#' is treated as hook syntax)
+    # This file is a .sym, so the header uses '#'.
+    covered = {}
+    for h in typed:
+        tgt = h.get("target_name")
+        rva = h.get("target_rva")
+        if tgt and rva is not None and "_hook" not in tgt:
+            covered[tgt] = rva
+
+    lines = [
+        "# Game symbols the loader's hooks call through.",
+        "# Generated by scripts/pipeline/emit_sweetdx_project.py from",
+        "# hooks/hooks.hks; do not edit by hand.",
+        "#",
+        "# Deluxe (Switch) v1.0.0 only. RVAs are relative to 0x60000000.",
+        "",
+    ]
+    for name in sorted(covered):
+        lines.append("%s = 0x%08X;" % (name, covered[name]))
+    (symdir / "nsmbudx_hooks.sym").write_text("\n".join(lines) + "\n")
+
+    # --- hooks: one file, sweet-dx vocabulary -------------------------------
+    hl = [
+        "@ Verified hook sites, translated to sweet-dx's vocabulary.",
+        "@",
+        "@ `call` replaces a call instruction and forwards to a wrapper;",
+        "@ `hook` replaces the function entry itself. Every wrapper here sits on a",
+        "@ call site, so every entry is `call` -- except static_init, which really",
+        "@ does replace the entry.",
+        "@",
+        "@ Deluxe (Switch) v1.0.0 only.",
+        "",
+    ]
+    for h in typed:
+        hl.append("%s:" % h["name"])
+        hl.append("    type:    %s" % h["sweet_type"])
+        hl.append("    address: 0x%08X" % h["addr"])
+        hl.append("    symbol:  %s" % h["func"])
+        hl.append("")
+
+    (hookdir / "nsmbudx_loader.hks").write_text("\n".join(hl))
+
+    print("wrote %s (%d symbols)" % (symdir / "nsmbudx_hooks.sym", len(covered)))
+    print("wrote %s (%d hooks)" % (hookdir / "nsmbudx_loader.hks", len(typed)))
+    for h in typed:
+        print("  %-10s 0x%06X %-34s -> %s"
+              % (h["sweet_type"], h["addr"], h["func"], h.get("target_name")))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
