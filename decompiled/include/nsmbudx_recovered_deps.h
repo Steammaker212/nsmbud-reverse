@@ -1948,7 +1948,7 @@ extern int32_t g_vtable_forsead_SafeStringBase;
 #define off_60C61168 (*(void * *)(uintptr_t)(0x60C61168))
 #define off_60C611A4 (*(void * *)(uintptr_t)(0x60C611A4))
 #define off_60C61284 (*(void * *)(uintptr_t)(0x60C61284))
-extern int32_t sinLutTable;
+extern int32_t sinLutTable[];   /* data label; subscripted, so declared as an array of unknown extent */
 #define stru_60B0D0E8 (*(int32_t *)(uintptr_t)(0x60B0D0E8))
 #define stru_60B0D0F4 (*(int32_t *)(uintptr_t)(0x60B0D0F4))
 #define stru_60B0D100 (*(int32_t *)(uintptr_t)(0x60B0D100))
@@ -2108,16 +2108,16 @@ extern uintptr_t MultiPlayCourseSelectScene_create;
 extern uintptr_t TitleScene_create;
 extern uintptr_t UserInfo_istance;
 extern uintptr_t YoshiFlame_YoshiFlame();
-extern uintptr_t aAse64;
-extern uintptr_t aBase64;
-extern uintptr_t aCarrypWalk_0;
-extern uintptr_t aCdata;
-extern uintptr_t aDoctypeDoc;
-extern uintptr_t aNtity;
-extern uintptr_t aOctype;
-extern uintptr_t aXmlVersion10En;
-extern uintptr_t asc_60AEA571;
-extern uintptr_t asc_60AF1758;
+extern uint8_t aAse64[];   /* data label; subscripted, so declared as an array of unknown extent */
+extern uint8_t aBase64[];   /* data label; subscripted, so declared as an array of unknown extent */
+extern uint8_t aCarrypWalk_0[];   /* data label; subscripted, so declared as an array of unknown extent */
+extern uint8_t aCdata[];   /* data label; subscripted, so declared as an array of unknown extent */
+extern uint8_t aDoctypeDoc[];   /* data label; subscripted, so declared as an array of unknown extent */
+extern uint8_t aNtity[];   /* data label; subscripted, so declared as an array of unknown extent */
+extern uint8_t aOctype[];   /* data label; subscripted, so declared as an array of unknown extent */
+extern uint8_t aXmlVersion10En[];   /* data label; subscripted, so declared as an array of unknown extent */
+extern uint8_t asc_60AEA571[];   /* data label; subscripted, so declared as an array of unknown extent */
+extern uint8_t asc_60AF1758[];   /* data label; subscripted, so declared as an array of unknown extent */
 extern uintptr_t loc_60154A5C;
 extern uintptr_t loc_6075FA7C;
 extern uintptr_t loc_60763E28;
@@ -2153,7 +2153,7 @@ extern uintptr_t loc_608023F0;
 extern uintptr_t loc_6080243C;
 extern uintptr_t loc_60803300;
 extern uintptr_t loc_6090E438;
-extern uintptr_t nn_hid_VibrationNode_DefaultVibrationSampleInterval;
+extern uint8_t nn_hid_VibrationNode_DefaultVibrationSampleInterval[];   /* data label; subscripted, so declared as an array of unknown extent */
 extern uintptr_t sead_GlobalRandom_sInstance;
 extern uintptr_t sead_HeapMgr_sInstance;
 
