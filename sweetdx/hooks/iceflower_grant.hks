@@ -1,0 +1,45 @@
+@ Ice Flower through the item-grant gate (? blocks, item pickups).
+@
+@ The gate refuses a power-up whose target mode is not a member of a bitmap.
+@ 0x1FB is 0b0_1111_1011: bit n is mode n+1, and bit 2 -- mode 3, Ice Flower -- is
+@ the one clear bit. Every other power-up is admitted, which is why an Ice Flower is
+@ picked up and discarded instead of applied.
+@
+@ 0x1FF sets that bit and admits modes 1..9, nothing else.
+@
+@ Two things this file deliberately does NOT do, both of which are easy to get wrong:
+@
+@   * It does not use 0x3FB. That is the obvious guess -- "the next free high bit" --
+@     but 0x3FB sets bit 9, not bit 2. Bit 2 stays clear, mode 3 stays refused, and
+@     the patch appears to work while changing nothing. 0x3FB belongs to the Hammer
+@     experiment in item_grant.hks, where it enables a different (mode 10) slot.
+@
+@   * It patches all THREE mask sites, not just the two in sub_60465E4C. sub_60465D70
+@     at 0x00465E18 holds its own copy of the mask and is the predicate the grant gate
+@     consults first; leaving it at 0x1FB means the gate still returns 0 for mode 3
+@     even after the other two are patched.
+@
+@ MOVW r1, #0x1FB is encoded E30011FB; MOVW r1, #0x1FF is E30011FF. The immediate is
+@ split into imm4/imm12, so only those fields change -- the condition and destination
+@ register are untouched.
+@
+@ SweetDX format: unindented 'name:' header, indented 'key: value' fields, '@'
+@ comments. 'instr' hooks are reassembled by clang.
+
+iceflower_gate_d70:
+    @ sub_60465D70: return (0x1FF >> (mode-1)) & 1 so mode 3 passes.
+    type:    instr
+    instruction: movw r1, #0x1ff
+    address: 0x00465E18
+
+iceflower_gate_mask:
+    @ sub_60465E4C: mask 0x1FF, admitting Ice Flower on the comparison path.
+    type:    instr
+    instruction: movw r1, #0x1ff
+    address: 0x00465F40
+
+iceflower_gate_mask_2:
+    @ sub_60465E4C: the same mask on the second exit path.
+    type:    instr
+    instruction: movw r1, #0x1ff
+    address: 0x0046600C
