@@ -19,7 +19,7 @@ StateMethodExecuter *__fastcall sub_605CD6E8(StateMethodExecuter *result)
   {
     vtable = (int)result[5].vtable;
     owner = result[5].owner;
-    if ( (*(_QWORD *)(EventMgr__instance + 16) & *(_QWORD *)&result[4].vtable) != 0 )
+    if ( (FIELD_U64(EventMgr__instance, 16) & *(_QWORD *)&result[4].vtable) != 0 )
       vtable = -vtable;
     if ( BYTE2(result[8].currentState) )
       vtable = -vtable;

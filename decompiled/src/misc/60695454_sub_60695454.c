@@ -490,8 +490,8 @@ LABEL_62:
     FIELD_U32(a1, 6120) = dword_60AF4D10[v47];
     FIELD_F32(a1, 6132) = *v46;
     v48 = FIELD_U8(a1, 28);
-    v49 = *(_DWORD *)(ActorMgr__instance + 27180);
-    v50 = sub_60008598(ActorMgr__instance, 51, *(_DWORD *)(ActorMgr__instance + 27172));
+    v49 = FIELD_U32(ActorMgr__instance, 27180);
+    v50 = sub_60008598(ActorMgr__instance, 51, FIELD_U32(ActorMgr__instance, 27172));
     if ( v50 == v49 )
     {
 LABEL_75:

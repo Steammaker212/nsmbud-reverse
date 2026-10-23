@@ -37,7 +37,7 @@ int *__fastcall sub_60112064(int a1)
   v15 = 0;
   sub_600CC2A8(&v14[7], v4, &v15);
   FIELD_U32(a1, 672) = 2139095039;
-  v5 = (int *)sub_60008598(ActorMgr__instance, 717, *(_DWORD *)(ActorMgr__instance + 27172));
+  v5 = (int *)sub_60008598(ActorMgr__instance, 717, FIELD_U32(ActorMgr__instance, 27172));
   for ( result = *(int **)(ActorMgr__instance + 27180); v5 != result; result = *(int **)(ActorMgr__instance + 27180) )
   {
     v8 = *v5;

@@ -37,8 +37,8 @@ int __fastcall sub_606044F8(int a1)
     v5 = 0;
   }
   result = EventMgr__instance;
-  v8 = *(_DWORD *)(EventMgr__instance + 16);
-  v9 = *(_DWORD *)(EventMgr__instance + 20);
+  v8 = FIELD_U32(EventMgr__instance, 16);
+  v9 = FIELD_U32(EventMgr__instance, 20);
   v10 = v6 & v9;
   v11 = FIELD_U32(a1, 6108) & v9;
   v12 = v5 & v8 | v10;

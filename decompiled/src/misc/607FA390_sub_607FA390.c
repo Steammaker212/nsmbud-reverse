@@ -54,7 +54,7 @@ int __fastcall sub_607FA390(int a1, int a2)
             v8 = 1 << v7;
             v9 = 0;
           }
-          if ( *(_DWORD *)(EventMgr__instance + 16) & v9 | *(_DWORD *)(EventMgr__instance + 20) & v8 )
+          if ( FIELD_U32(EventMgr__instance, 16) & v9 | FIELD_U32(EventMgr__instance, 20) & v8 )
           {
             v3 = 1;
             if ( sub_607FB148(FIELD_U32(a1, 40), v5) == 1 )

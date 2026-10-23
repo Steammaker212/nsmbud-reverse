@@ -74,7 +74,7 @@ signed int __fastcall sub_60566B48(int a1)
             HIDWORD(v8) = 1 << v7;
             LODWORD(v8) = 0;
           }
-          if ( (*(_QWORD *)(EventMgr__instance + 16) & v8) == 0 )
+          if ( (FIELD_U64(EventMgr__instance, 16) & v8) == 0 )
           {
             FIELD_U8(a1, 7312) = 0;
             if ( sub_601536B0((int)ColliderMgr_instance, a1 + 6120) )

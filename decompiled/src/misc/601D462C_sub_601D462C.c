@@ -111,7 +111,7 @@ char *__fastcall sub_601D462C(int a1, int a2)
   v11 = (int (__fastcall ****)(_DWORD, int *))sub_60008598(
                                                 ActorMgr__instance,
                                                 895,
-                                                *(_DWORD *)(ActorMgr__instance + 27172));
+                                                FIELD_U32(ActorMgr__instance, 27172));
   v13 = *(int (__fastcall *****)(_DWORD, int *))(ActorMgr__instance + 27180);
   if ( v11 != v13 )
   {

@@ -40,8 +40,8 @@ int __fastcall RedCoin_vf52(int a1)
     }
   }
   v9 = sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540));
-  result = *(_DWORD *)(EventMgr__instance + 16) & v9
-         | ((*(_QWORD *)(EventMgr__instance + 16) & (unsigned __int64)v9) >> 32);
+  result = FIELD_U32(EventMgr__instance, 16) & v9
+         | ((FIELD_U64(EventMgr__instance, 16) & (unsigned __int64)v9) >> 32);
   if ( result )
   {
     result = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 196))(a1);

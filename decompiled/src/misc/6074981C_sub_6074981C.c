@@ -17,7 +17,7 @@ int __fastcall sub_6074981C(int a1)
     v2 = &dword_60AF2DB4;
   else
     v2 = &dword_60AF2DB0;
-  v3 = *(_DWORD *)sub_60008598(ActorMgr__instance, *v2, *(_DWORD *)(ActorMgr__instance + 27172));
+  v3 = *(_DWORD *)sub_60008598(ActorMgr__instance, *v2, FIELD_U32(ActorMgr__instance, 27172));
   if ( v3 )
     sub_6074C858(v3, a1);
   return 1;

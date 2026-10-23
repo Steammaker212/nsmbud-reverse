@@ -38,7 +38,7 @@ int __fastcall sub_604BB2D0(int a1)
   v2 = &dword_60AF2D88;
   if ( FIELD_U8(dword_60CC6D8C, 17) )
     v2 = &dword_60AF2D8C;
-  v3 = (int *)sub_60008598(ActorMgr__instance, *v2, *(_DWORD *)(ActorMgr__instance + 27172));
+  v3 = (int *)sub_60008598(ActorMgr__instance, *v2, FIELD_U32(ActorMgr__instance, 27172));
   if ( !v3 )
     goto LABEL_12;
   v5 = *v3;

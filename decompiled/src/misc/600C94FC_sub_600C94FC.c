@@ -55,7 +55,7 @@ int __fastcall sub_600C94FC(int a1)
     result = sub_60008EB4(ActorMgr__instance + 27168, sub_600C9940);
     if ( v5 == 1 )
     {
-      result = *(unsigned __int8 *)(EventMgr__instance + 17);
+      result = FIELD_U8(EventMgr__instance, 17);
       if ( (result & 4) != 0 )
       {
         result = sub_600085D0(ActorMgr__instance, 264);
@@ -71,12 +71,12 @@ int __fastcall sub_600C94FC(int a1)
       FIELD_U32(dword_60C99DD4, 1376) |= 2u;
       (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 244))(a1);
     }
-    result = *(unsigned __int8 *)(EventMgr__instance + 17);
+    result = FIELD_U8(EventMgr__instance, 17);
     if ( (result & 0x40) != 0 )
     {
       if ( FIELD_U8(a1, 6120) )
         (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 244))(a1);
-      v7 = *(_DWORD *)sub_60008598(ActorMgr__instance, 349, *(_DWORD *)(ActorMgr__instance + 27172));
+      v7 = *(_DWORD *)sub_60008598(ActorMgr__instance, 349, FIELD_U32(ActorMgr__instance, 27172));
       if ( ((unsigned int)&dword_60C83FB4 & ~(1611437708 << v8) & 1) == 0 && _cxa_guard_acquire(&dword_60C83FB4) )
       {
         dword_60C83FB0 = (int)&off_60BC00C8;

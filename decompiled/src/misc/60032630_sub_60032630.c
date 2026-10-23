@@ -10,5 +10,5 @@
 
 int sub_60032630()
 {
-  return *(_DWORD *)sub_60008598(ActorMgr__instance, 709, *(_DWORD *)(ActorMgr__instance + 27172));
+  return *(_DWORD *)sub_60008598(ActorMgr__instance, 709, FIELD_U32(ActorMgr__instance, 27172));
 }

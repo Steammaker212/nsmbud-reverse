@@ -18,7 +18,7 @@ void __fastcall Iggy__vf66C(int a1)
   float v4; // s0
 
   sub_60421AE4(FIELD_U32(a1, 7096), FIELD_U32(a1, 7120) + 24, 0);
-  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 85, *(_DWORD *)(ActorMgr__instance + 27172));
+  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 85, FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C82848 & ~(1611265048 << v3) & 1) == 0 && _cxa_guard_acquire(&dword_60C82848) )
   {
     dword_60C82844 = (int)&off_60BC8348;

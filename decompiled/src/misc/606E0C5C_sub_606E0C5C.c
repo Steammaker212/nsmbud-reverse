@@ -28,7 +28,7 @@ ModelWrapper *__fastcall sub_606E0C5C(int a1)
     v2 = (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 212))(a1);
     if ( FIELD_U8(a1, 539) )
     {
-      *(_BYTE *)(EventMgr__instance + 2328) = FIELD_U8(a1, 6958);
+      FIELD_U8(EventMgr__instance, 2328) = FIELD_U8(a1, 6958);
       v3 = (_BYTE *)(a1 + 6917);
       if ( FIELD_U8(a1, 6917) )
       {

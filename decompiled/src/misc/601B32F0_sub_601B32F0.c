@@ -92,7 +92,7 @@ int __fastcall sub_601B32F0(_DWORD *a1)
         if ( sub_6019B154(FIELD_U32(v6, 240), FIELD_U32(v6, 252)) )
           goto LABEL_81;
         v30 = sub_601693A0(885);
-        v32 = *(_DWORD *)(ActorMgr__instance + 27180);
+        v32 = FIELD_U32(ActorMgr__instance, 27180);
         do
         {
           v33 = *(_DWORD *)v30;

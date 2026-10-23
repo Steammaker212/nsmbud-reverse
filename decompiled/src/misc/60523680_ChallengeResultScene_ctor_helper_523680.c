@@ -1,0 +1,25 @@
+/* ChallengeResultScene_ctor_helper_523680
+ * address: 0x60523680   size: 92   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+sead_IDisposer *__fastcall ChallengeResultScene_ctor_helper_523680(sead_IDisposer *a1)
+{
+  sead_IDisposer *result; // r0
+
+  FIELD_U32(a1, 0x0) = (int)&off_60BFD114;
+  result = sub_60475900(a1, (int)&a1[220].field_8, 1);
+  FIELD_U32(result, 0x0) = (int)&off_60BFD114;
+  result[220].field_8 = 0;
+  result[220].field_C = (int)&sead__SafeStringBase__vtable;
+  result[221].vtable = (int)&byte_60B3BA34;
+  result[221].containingHeap = 0;
+  LOBYTE(result[221].field_8) = 0;
+  LOBYTE(result[221].field_C) = 0;
+  return result;
+}

@@ -34,8 +34,8 @@ int __fastcall sub_606657C4(_DWORD *a1)
   a1[132] = 1140850688;
   a1[1913] = 0;
   v2 = a1[1912];
-  v3 = *(_DWORD *)(ActorMgr__instance + 27180);
-  v4 = sub_60008598(ActorMgr__instance, 197, *(_DWORD *)(ActorMgr__instance + 27172));
+  v3 = FIELD_U32(ActorMgr__instance, 27180);
+  v4 = sub_60008598(ActorMgr__instance, 197, FIELD_U32(ActorMgr__instance, 27172));
   if ( v4 == v3 )
     goto LABEL_7;
   while ( 1 )

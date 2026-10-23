@@ -20,7 +20,7 @@ int __fastcall sub_6065B0DC(_DWORD *a1)
   int (__fastcall *v9)(_DWORD *, int *); // r2
   int *v10; // r1
 
-  if ( a1[1539] && !*(_QWORD *)(EventMgr__instance + 16) )
+  if ( a1[1539] && !FIELD_U64(EventMgr__instance, 16) )
   {
     v9 = *(int (__fastcall **)(_DWORD *, int *))(*a1 + 192);
     v10 = &dword_60CB6650;

@@ -24,8 +24,8 @@ int __fastcall sub_60617320(int a1)
   v2 = sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540));
   if ( FIELD_S32(a1, 7180) <= 2 )
   {
-    result = *(_DWORD *)(EventMgr__instance + 16) & v2
-           | ((*(_QWORD *)(EventMgr__instance + 16) & (unsigned __int64)v2) >> 32);
+    result = FIELD_U32(EventMgr__instance, 16) & v2
+           | ((FIELD_U64(EventMgr__instance, 16) & (unsigned __int64)v2) >> 32);
     if ( result )
       return result;
     FIELD_U8(a1, 7080) = 4;

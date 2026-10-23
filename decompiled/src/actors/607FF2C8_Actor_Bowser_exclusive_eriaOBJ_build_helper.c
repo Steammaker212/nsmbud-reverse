@@ -39,7 +39,7 @@ int __fastcall Actor_Bowser_exclusive_eriaOBJ_build_helper(int result, int a2, i
       v7 = 1u >> (33 - v4);
       if ( v4 - 33 >= 0 )
         v7 = 1 << v6;
-      v9 = *(_QWORD *)(EventMgr__instance + 16);
+      v9 = FIELD_U64(EventMgr__instance, 16);
       v8 = HIDWORD(v9) & v7;
       HIDWORD(v9) = 1 << (v4 - 1);
       if ( v6 >= 0 )

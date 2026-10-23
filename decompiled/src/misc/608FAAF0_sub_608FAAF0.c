@@ -28,7 +28,7 @@ int *__fastcall sub_608FAAF0(int a1, int a2, int a3, int a4)
   v6 = sead__ThreadMgr__sInstance;
   if ( sead__ThreadMgr__sInstance )
   {
-    v7 = *(_DWORD *)(sead__ThreadMgr__sInstance + 68);
+    v7 = FIELD_U32(sead__ThreadMgr__sInstance, 68);
     if ( v7 )
     {
       v8 = (unsigned int *)(v7 + 104);

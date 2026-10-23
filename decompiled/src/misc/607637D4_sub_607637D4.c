@@ -38,7 +38,7 @@ int __fastcall sub_607637D4(int a1)
   {
     v7 = ActorMgr__instance;
     v8 = *(int **)(ActorMgr__instance + 27180);
-    v9 = (int *)sub_60008598(ActorMgr__instance, 748, *(_DWORD *)(ActorMgr__instance + 27172));
+    v9 = (int *)sub_60008598(ActorMgr__instance, 748, FIELD_U32(ActorMgr__instance, 27172));
     if ( v9 == v8 )
     {
 LABEL_15:

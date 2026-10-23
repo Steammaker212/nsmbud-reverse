@@ -73,7 +73,7 @@ unsigned int __fastcall SE_PLY_CANNON_SHOT_ref(int a1)
         v6 = 1 << v5;
         v7 = 0;
       }
-      if ( *(_DWORD *)(EventMgr__instance + 16) & v7 | *(_DWORD *)(EventMgr__instance + 20) & v6 )
+      if ( FIELD_U32(EventMgr__instance, 16) & v7 | FIELD_U32(EventMgr__instance, 20) & v6 )
         FIELD_U32(a1, 2936) = 1;
     }
   }

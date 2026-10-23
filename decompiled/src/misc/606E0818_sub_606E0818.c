@@ -35,7 +35,7 @@ int __fastcall sub_606E0818(int a1)
       HIDWORD(v4) = 1 << v3;
       LODWORD(v4) = 0;
     }
-    if ( (*(_QWORD *)(EventMgr__instance + 16) & v4) != 0 )
+    if ( (FIELD_U64(EventMgr__instance, 16) & v4) != 0 )
       goto LABEL_13;
   }
   else
@@ -50,7 +50,7 @@ int __fastcall sub_606E0818(int a1)
       HIDWORD(v6) = 1 << v5;
       LODWORD(v6) = 0;
     }
-    if ( (*(_QWORD *)(EventMgr__instance + 16) & v6) == 0 )
+    if ( (FIELD_U64(EventMgr__instance, 16) & v6) == 0 )
       goto LABEL_13;
   }
   if ( FIELD_U8(a1, 6917) )

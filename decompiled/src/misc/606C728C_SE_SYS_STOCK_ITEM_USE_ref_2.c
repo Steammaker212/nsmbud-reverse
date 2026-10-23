@@ -79,7 +79,7 @@ LABEL_27:
     v16 = *(void (__fastcall **)(int, int *))(*(_DWORD *)a1 + 192);
     goto LABEL_27;
   }
-  v9 = *(_QWORD *)(EventMgr__instance + 16)
+  v9 = FIELD_U64(EventMgr__instance, 16)
      & sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540));
   if ( v9 )
   {
@@ -94,8 +94,8 @@ LABEL_27:
       if ( v11 >= 0 )
         v13 = 0;
       v14 = EventMgr__instance;
-      v15 = *(_QWORD *)(EventMgr__instance + 16);
-      *(_DWORD *)(EventMgr__instance + 16) = v15 & ~v13;
+      v15 = FIELD_U64(EventMgr__instance, 16);
+      FIELD_U32(EventMgr__instance, 16) = v15 & ~v13;
       FIELD_U32(v14, 20) = HIDWORD(v15) & ~v12;
       if ( v10 >= 0x40 )
         v10 = 0;

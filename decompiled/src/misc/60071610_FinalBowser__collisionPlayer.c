@@ -50,7 +50,7 @@ void __fastcall FinalBowser__collisionPlayer(int a1, int a2, int a3)
       v9 = (char)v8;
     *(_WORD *)(a1 + 2 * v9 + 6140) = 32;
     (*(void (__fastcall **)(char *, int, _DWORD))(*(_DWORD *)v5 + 1172))(v5, a1, 0);
-    v10 = *(_DWORD *)sub_60008598(ActorMgr__instance, 373, *(_DWORD *)(ActorMgr__instance + 27172));
+    v10 = *(_DWORD *)sub_60008598(ActorMgr__instance, 373, FIELD_U32(ActorMgr__instance, 27172));
     if ( ((unsigned int)&dword_60C81104 & ~(1611077504 << v11) & 1) == 0 && _cxa_guard_acquire(&dword_60C81104) )
     {
       dword_60C81100 = (int)&off_60BC66E8;

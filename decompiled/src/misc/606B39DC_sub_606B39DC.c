@@ -413,7 +413,7 @@ LABEL_129:
   }
   v48 = *(_DWORD *)v56;
   result = EventMgr__instance;
-  v49 = *(_QWORD *)(EventMgr__instance + 16);
+  v49 = FIELD_U64(EventMgr__instance, 16);
   v50 = *((_DWORD *)v56 + 3) & HIDWORD(v49);
   v51 = *((_DWORD *)v56 + 2) & v49;
   if ( (unsigned __int8)v19 == 31 )

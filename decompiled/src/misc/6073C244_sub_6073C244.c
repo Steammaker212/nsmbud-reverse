@@ -19,7 +19,7 @@ StateMethodExecuter *__fastcall sub_6073C244(int a1)
   v2 = (StateMethodExecuter **)(a1 + 8092);
   if ( FIELD_U32(a1, 8092) )
     goto LABEL_14;
-  v3 = *(_DWORD *)sub_60008598(ActorMgr__instance, 831, *(_DWORD *)(ActorMgr__instance + 27172));
+  v3 = *(_DWORD *)sub_60008598(ActorMgr__instance, 831, FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C7B364 & ~(1618199192 << v4) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B364) )
   {
     StageActor_RTTI = (int)&off_60BC0098;

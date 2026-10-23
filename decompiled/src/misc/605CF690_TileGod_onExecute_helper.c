@@ -39,7 +39,7 @@ int __fastcall TileGod_onExecute_helper(int a1)
       v4 = 1 << v3;
       v5 = 0;
     }
-    v6 = *(_QWORD *)(EventMgr__instance + 16);
+    v6 = FIELD_U64(EventMgr__instance, 16);
     v7 = HIDWORD(v6) & v4;
     v8 = v6 & v5;
   }
@@ -59,7 +59,7 @@ int __fastcall TileGod_onExecute_helper(int a1)
       HIDWORD(v11) = 1 << v10;
       LODWORD(v11) = 0;
     }
-    v12 = *(_QWORD *)(EventMgr__instance + 16) & v11;
+    v12 = FIELD_U64(EventMgr__instance, 16) & v11;
     v7 |= HIDWORD(v12);
     v8 |= v12;
   }

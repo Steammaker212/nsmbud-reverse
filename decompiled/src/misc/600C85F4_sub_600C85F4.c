@@ -10,5 +10,5 @@
 
 int sub_600C85F4()
 {
-  return (*(unsigned __int8 *)(EventMgr__instance + 16) >> 6) & 1;
+  return (FIELD_U8(EventMgr__instance, 16) >> 6) & 1;
 }

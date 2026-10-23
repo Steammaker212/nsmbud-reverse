@@ -10,5 +10,5 @@
 
 int __fastcall sub_601693A0(int a1)
 {
-  return sub_60008598(ActorMgr__instance, a1, *(_DWORD *)(ActorMgr__instance + 27172));
+  return sub_60008598(ActorMgr__instance, a1, FIELD_U32(ActorMgr__instance, 27172));
 }

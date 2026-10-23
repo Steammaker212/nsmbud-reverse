@@ -60,7 +60,7 @@ int __fastcall sub_605A3B58(int a1)
       HIDWORD(v11) = 1 << v10;
       LODWORD(v11) = 0;
     }
-    if ( (*(_QWORD *)(EventMgr__instance + 16) & v11) != 0 )
+    if ( (FIELD_U64(EventMgr__instance, 16) & v11) != 0 )
     {
       v12 = FIELD_U16(a1, 6888);
       v13 = v12 == 0;
@@ -87,7 +87,7 @@ int __fastcall sub_605A3B58(int a1)
         v17 = 1 << v16;
         v18 = 0;
       }
-      v19 = *(_QWORD *)(EventMgr__instance + 16);
+      v19 = FIELD_U64(EventMgr__instance, 16);
       v20 = HIDWORD(v19) & v17;
       v7 = 2;
       if ( !((unsigned int)v19 & v18 | v20) )

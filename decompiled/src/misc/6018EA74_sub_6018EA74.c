@@ -18,7 +18,7 @@ int sub_6018EA74()
   _DWORD *v5; // r7
 
   v0 = ActorMgr__instance;
-  v1 = (_DWORD **)sub_60008598(ActorMgr__instance, 866, *(_DWORD *)(ActorMgr__instance + 27172));
+  v1 = (_DWORD **)sub_60008598(ActorMgr__instance, 866, FIELD_U32(ActorMgr__instance, 27172));
   v3 = 1;
   for ( i = *(_DWORD ***)(v0 + 27180); v1 != i; v1 = (_DWORD **)sub_60008598(v0, 866, (int)(v1 + 1)) )
   {

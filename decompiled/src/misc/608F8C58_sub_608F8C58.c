@@ -113,7 +113,7 @@ LABEL_29:
   v11 = 0;
   if ( sead__HeapMgr__sInstance )
   {
-    v8 = *(_DWORD *)(sead__HeapMgr__sInstance + 8);
+    v8 = FIELD_U32(sead__HeapMgr__sInstance, 8);
     v10 = v8 == 0;
   }
   if ( !v10 )

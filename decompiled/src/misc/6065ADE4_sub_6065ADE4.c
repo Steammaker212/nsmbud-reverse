@@ -18,7 +18,7 @@ int __fastcall sub_6065ADE4(int a1)
   int result; // r0
   bool v8; // zf
 
-  if ( FIELD_U32(a1, 6156) && !*(_QWORD *)(EventMgr__instance + 16) )
+  if ( FIELD_U32(a1, 6156) && !FIELD_U64(EventMgr__instance, 16) )
   {
     v3 = FIELD_U32(a1, 36);
     if ( v3 != a1 + 32 )

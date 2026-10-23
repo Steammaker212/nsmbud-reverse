@@ -188,7 +188,7 @@ signed int __fastcall Fuzzy__onCreate(int a1)
     HIDWORD(v16) = 1 << v15;
     LODWORD(v16) = 0;
   }
-  if ( (*(_QWORD *)(EventMgr__instance + 16) & v16) == 0 )
+  if ( (FIELD_U64(EventMgr__instance, 16) & v16) == 0 )
   {
     (*(void (__fastcall **)(int, int *))(*(_DWORD *)a1 + 192))(a1, &dword_60C8EC80);
   }

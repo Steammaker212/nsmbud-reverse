@@ -25,7 +25,7 @@ int __fastcall lkp_jump_st_ref(int a1)
   v2 = *(void (__fastcall ****)(_DWORD, int *))sub_60008598(
                                                  ActorMgr__instance,
                                                  373,
-                                                 *(_DWORD *)(ActorMgr__instance + 27172));
+                                                 FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C81104 & ~(1611042192 << v3) & 1) == 0 && _cxa_guard_acquire(&dword_60C81104) )
   {
     dword_60C81100 = (int)&off_60BC66E8;

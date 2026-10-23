@@ -33,7 +33,7 @@ void __fastcall sub_6054AC20(int a1)
   int v22; // [sp+14h] [bp-24h]
   _DWORD v23[8]; // [sp+18h] [bp-20h] BYREF
 
-  v2 = (int *)sub_60008598(ActorMgr__instance, 459, *(_DWORD *)(ActorMgr__instance + 27172));
+  v2 = (int *)sub_60008598(ActorMgr__instance, 459, FIELD_U32(ActorMgr__instance, 27172));
   if ( v2 != *(int **)(ActorMgr__instance + 27180) )
   {
     v4 = *v2;

@@ -23,13 +23,13 @@ int __fastcall sub_6067B9A4(int a1)
     HIDWORD(v1) = 1u >> (33 - FIELD_U8(a1, 539));
     if ( (int)v1 >= 0 )
       HIDWORD(v1) = 1 << v1;
-    v2 = *(_QWORD *)(EventMgr__instance + 16);
+    v2 = FIELD_U64(EventMgr__instance, 16);
     HIDWORD(v1) |= HIDWORD(v2);
     HIDWORD(v2) = 1 << (FIELD_U8(a1, 539) - 1);
     if ( (int)v1 >= 0 )
       HIDWORD(v2) = 0;
     LODWORD(v1) = HIDWORD(v2) | v2;
-    *(_QWORD *)(EventMgr__instance + 16) = v1;
+    FIELD_U64(EventMgr__instance, 16) = v1;
   }
   v3 = FIELD_U32(a1, 20);
   result = a1 + 6100;

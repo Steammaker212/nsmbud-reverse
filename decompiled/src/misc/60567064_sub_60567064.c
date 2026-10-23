@@ -27,7 +27,7 @@ int __fastcall sub_60567064(int a1)
         HIDWORD(v4) = 1 << v3;
         LODWORD(v4) = 0;
       }
-      if ( (*(_QWORD *)(EventMgr__instance + 16) & v4) != 0 )
+      if ( (FIELD_U64(EventMgr__instance, 16) & v4) != 0 )
       {
         FIELD_U8(a1, 7312) = 1;
         ColliderMgr_add(ColliderMgr_instance, (ColliderBase *)(a1 + 6120));

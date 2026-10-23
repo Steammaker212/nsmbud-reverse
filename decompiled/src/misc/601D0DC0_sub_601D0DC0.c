@@ -16,7 +16,7 @@ void __fastcall sub_601D0DC0(int a1, int a2)
   int v5; // r4
 
   v2 = sub_601693A0(885);
-  v4 = *(_DWORD *)(ActorMgr__instance + 27180);
+  v4 = FIELD_U32(ActorMgr__instance, 27180);
   while ( 1 )
   {
     v5 = *(_DWORD *)v2;

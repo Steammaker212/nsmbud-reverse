@@ -28,8 +28,8 @@ int (__fastcall ***__fastcall sub_603B27D8(int a1))(_DWORD, int *)
   v2 = FIELD_U32(a1, 6500);
   if ( !v2 )
   {
-    v8 = *(_DWORD *)(ActorMgr__instance + 27180);
-    v9 = sub_60008598(ActorMgr__instance, 13, *(_DWORD *)(ActorMgr__instance + 27172));
+    v8 = FIELD_U32(ActorMgr__instance, 27180);
+    v9 = sub_60008598(ActorMgr__instance, 13, FIELD_U32(ActorMgr__instance, 27172));
     if ( v9 == v8 )
     {
 LABEL_17:

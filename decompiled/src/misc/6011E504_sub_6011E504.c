@@ -82,7 +82,7 @@ int __fastcall sub_6011E504(float *a1, unsigned int a2, float *a3)
 
   if ( sqrtf((float)((float)(a3[1] * a3[1]) + (float)(*a3 * *a3)) + (float)(a3[2] * a3[2])) != 0.0 )
   {
-    v7 = (int *)sub_60008598(ActorMgr__instance, 823, *(_DWORD *)(ActorMgr__instance + 27172));
+    v7 = (int *)sub_60008598(ActorMgr__instance, 823, FIELD_U32(ActorMgr__instance, 27172));
     v8 = (int (__fastcall ***)(_DWORD, int *))*v7;
     if ( ((unsigned int)dword_60C86DB8 & ~(1611785624 << v9) & 1) == 0 && _cxa_guard_acquire(dword_60C86DB8) )
     {

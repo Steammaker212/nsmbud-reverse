@@ -27,7 +27,7 @@ int __fastcall sub_6060503C(int a1)
   if ( v4 )
   {
     v5 = FIELD_U8(a1, 6122);
-    if ( (FIELD_U64(a1, 6104) & *(_QWORD *)(EventMgr__instance + 16)) != 0 )
+    if ( (FIELD_U64(a1, 6104) & FIELD_U64(EventMgr__instance, 16)) != 0 )
     {
       EventMgr_set(EventMgr__instance, v5, 0, 0, 0, 0, 0, 0);
       v6 = FIELD_U8(a1, 23);

@@ -34,7 +34,7 @@ int __fastcall sub_60803B6C(_BYTE *a1, bool *a2)
     if ( sub_60008D1C(
            ActorMgr__instance + 27168,
            (int (__fastcall ***)(_DWORD))&v18,
-           *(_DWORD *)(ActorMgr__instance + 27172)) == *(_DWORD *)(ActorMgr__instance + 27180) )
+           FIELD_U32(ActorMgr__instance, 27172)) == FIELD_U32(ActorMgr__instance, 27180) )
       return -1;
     goto LABEL_3;
   }

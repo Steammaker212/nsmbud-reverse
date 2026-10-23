@@ -32,7 +32,7 @@ int __fastcall sub_605E118C(int a1)
     (*(void (__fastcall **)(int, float *))(*(_DWORD *)a1 + 408))(a1, v10);
     v4 = ActorMgr__instance;
     v5 = *(int **)(ActorMgr__instance + 27180);
-    v6 = (int *)sub_60008598(ActorMgr__instance, 748, *(_DWORD *)(ActorMgr__instance + 27172));
+    v6 = (int *)sub_60008598(ActorMgr__instance, 748, FIELD_U32(ActorMgr__instance, 27172));
     if ( v6 != v5 )
     {
       v7 = v3 + 40;

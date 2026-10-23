@@ -20,7 +20,7 @@ int sub_60115118()
   int v8; // r4
   int v9; // r5
 
-  for ( i = (int *)sub_60008598(ActorMgr__instance, 816, *(_DWORD *)(ActorMgr__instance + 27172));
+  for ( i = (int *)sub_60008598(ActorMgr__instance, 816, FIELD_U32(ActorMgr__instance, 27172));
         ;
         i = (int *)sub_60008598(ActorMgr__instance, 816, (int)(i + 1)) )
   {
@@ -40,7 +40,7 @@ int sub_60115118()
       return 1;
     }
   }
-  v6 = (int *)sub_60008598(ActorMgr__instance, 818, *(_DWORD *)(ActorMgr__instance + 27172));
+  v6 = (int *)sub_60008598(ActorMgr__instance, 818, FIELD_U32(ActorMgr__instance, 27172));
   v8 = 0;
   while ( 1 )
   {

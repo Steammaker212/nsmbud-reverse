@@ -33,7 +33,7 @@ int __fastcall sub_601E8A94(int a1, int a2)
       memset(&v11, 255, 12);
       sub_6019EC34(&v11, (_DWORD *)(v5 + 1032));
       v6 = sub_601693A0(883);
-      v8 = *(_DWORD *)(ActorMgr__instance + 27180);
+      v8 = FIELD_U32(ActorMgr__instance, 27180);
       while ( 1 )
       {
         v9 = *(_DWORD *)v6;

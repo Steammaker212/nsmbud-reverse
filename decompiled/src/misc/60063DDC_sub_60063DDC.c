@@ -19,7 +19,7 @@ int __fastcall sub_60063DDC(Enemy *a1, int a2, int a3)
   v4 = Enemy__vfC8(a1, a2, a3);
   if ( v4 == 1 )
   {
-    v5 = *(_DWORD *)sub_60008598(ActorMgr__instance, 373, *(_DWORD *)(ActorMgr__instance + 27172));
+    v5 = *(_DWORD *)sub_60008598(ActorMgr__instance, 373, FIELD_U32(ActorMgr__instance, 27172));
     if ( ((unsigned int)&dword_60C81104 & ~(1611021868 << v6) & 1) == 0 && _cxa_guard_acquire(&dword_60C81104) )
     {
       dword_60C81100 = (int)&off_60BC66E8;

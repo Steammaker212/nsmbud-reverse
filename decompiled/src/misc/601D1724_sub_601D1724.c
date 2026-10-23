@@ -35,7 +35,7 @@ int __fastcall sub_601D1724(int a1)
   v14 = 37;
   v15 = sub_601916C8(dword_60C8996C, 37);
   v2 = sub_601693A0(881);
-  v4 = *(_DWORD *)(ActorMgr__instance + 27180);
+  v4 = FIELD_U32(ActorMgr__instance, 27180);
   do
   {
     v5 = *(int (__fastcall ****)(_DWORD, int *))v2;
@@ -56,7 +56,7 @@ int __fastcall sub_601D1724(int a1)
   }
   while ( v2 != v4 );
   v7 = sub_601693A0(882);
-  v9 = *(_DWORD *)(ActorMgr__instance + 27180);
+  v9 = FIELD_U32(ActorMgr__instance, 27180);
   do
   {
     v10 = *(int (__fastcall ****)(_DWORD, int *))v7;

@@ -14,8 +14,8 @@ int __fastcall sub_6067CA4C(int a1, int a2)
   int v4; // r0
   int v5; // r1
 
-  v3 = *(_DWORD *)(ActorMgr__instance + 27180);
-  v4 = sub_60008598(ActorMgr__instance, 184, *(_DWORD *)(ActorMgr__instance + 27172));
+  v3 = FIELD_U32(ActorMgr__instance, 27180);
+  v4 = sub_60008598(ActorMgr__instance, 184, FIELD_U32(ActorMgr__instance, 27172));
   if ( v4 == v3 )
     return 0;
   while ( 1 )

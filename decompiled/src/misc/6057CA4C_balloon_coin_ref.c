@@ -1,0 +1,82 @@
+/* balloon_coin_ref
+ * address: 0x6057CA4C   size: 704   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+ModelAnimation *__fastcall balloon_coin_ref(_DWORD *a1)
+{
+  void *v2; // r5
+  void *Model2; // r6
+  ModelWrapper *v4; // r7
+  ModelWrapper *v5; // r0
+  int v6; // r5
+  int v7; // r0
+  int v8; // r5
+  int v9; // r0
+  void *v10; // r5
+  void *v11; // r6
+  ModelWrapper *v12; // r7
+  ModelWrapper *v13; // r0
+  int v14; // r5
+  int v15; // r0
+  sead__SafeString a2; // [sp+1Ch] [bp-34h] BYREF
+  int (**v18)(); // [sp+24h] [bp-2Ch] BYREF
+  const char *v19; // [sp+28h] [bp-28h]
+
+  v18 = &sead__SafeStringBase__vtable;
+  v19 = "obj_coin";
+  v2 = (void *)LoadResource(ResourceMgrRelated_instance, &v18);
+  a2.vtable = &sead__SafeStringBase__vtable;
+  a2.cstr = "balloon_coin";
+  Model2 = (void *)Resource_getModel2(v2, &a2, 1, 0, 1, 0, 0, 0, 0);
+  v4 = (ModelWrapper *)operator_new_8DE25C(0x30u, 0, 4);
+  v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 1, 0, 0);
+  ModelWrapper_setup(v5, v2, 0, 0);
+  a1[1871] = v4;
+  a1 += 1871;
+  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v18 = &sead__SafeStringBase__vtable;
+  v19 = "obj_coin";
+  v7 = LoadResource(ResourceMgrRelated_instance, &v18);
+  a2.vtable = &sead__SafeStringBase__vtable;
+  a2.cstr = "float";
+  SkeletalAnim_play(v6, v7, (const char **)&a2);
+  *(_DWORD *)(**(_DWORD **)(*a1 + 12) + 24) = 1065353216;
+  AnimationCtrl_setRepeat((ModelAnimation *)(**(_DWORD **)(*a1 + 12) + 4), 1);
+  sub_6041838C((ModelAnimation *)(**(_DWORD **)(*a1 + 12) + 4));
+  v8 = **(_DWORD **)(*a1 + 28);
+  a1[2] = v8;
+  v18 = &sead__SafeStringBase__vtable;
+  v19 = "obj_coin";
+  v9 = LoadResource(ResourceMgrRelated_instance, &v18);
+  a2.vtable = &sead__SafeStringBase__vtable;
+  a2.cstr = "float";
+  sub_60446088(v8, v9, &a2);
+  AnimationCtrl_setRepeat((ModelAnimation *)(a1[2] + 4), 1);
+  *(_DWORD *)(a1[2] + 24) = 1065353216;
+  v18 = &sead__SafeStringBase__vtable;
+  v19 = "obj_coin";
+  v10 = (void *)LoadResource(ResourceMgrRelated_instance, &v18);
+  a2.vtable = &sead__SafeStringBase__vtable;
+  a2.cstr = "balloon_coin_back";
+  v11 = (void *)Resource_getModel2(v10, &a2, 1, 0, 0, 0, 0, 0, 0);
+  v12 = (ModelWrapper *)operator_new_8DE25C(0x30u, 0, 4);
+  v13 = ModelWrapper_ctor(v12, v11, 1, 0, 0, 0, 0);
+  ModelWrapper_setup(v13, v10, 0, 0);
+  a1[1] = v12;
+  v14 = (int)*FIELD_U32(v12, 0x8).animations;
+  v18 = &sead__SafeStringBase__vtable;
+  v19 = "obj_coin";
+  v15 = LoadResource(ResourceMgrRelated_instance, &v18);
+  a2.vtable = &sead__SafeStringBase__vtable;
+  a2.cstr = "float_back";
+  SkeletalAnim_play(v14, v15, (const char **)&a2);
+  *(_DWORD *)(**(_DWORD **)(a1[1] + 12) + 24) = 1065353216;
+  AnimationCtrl_setRepeat((ModelAnimation *)(**(_DWORD **)(a1[1] + 12) + 4), 1);
+  return sub_6041838C((ModelAnimation *)(**(_DWORD **)(a1[1] + 12) + 4));
+}

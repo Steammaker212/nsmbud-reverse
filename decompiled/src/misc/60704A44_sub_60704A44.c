@@ -35,7 +35,7 @@ signed int __fastcall sub_60704A44(int a1)
     v4 = 0;
   }
   v6 = (char *)(a1 + 6312);
-  if ( *(_DWORD *)(EventMgr__instance + 16) & v4 | *(_DWORD *)(EventMgr__instance + 20) & v5 )
+  if ( FIELD_U32(EventMgr__instance, 16) & v4 | FIELD_U32(EventMgr__instance, 20) & v5 )
   {
     v7 = 0;
     if ( !FIELD_U8(a1, 6312) )

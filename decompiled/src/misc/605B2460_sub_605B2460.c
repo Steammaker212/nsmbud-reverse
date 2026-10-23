@@ -26,8 +26,8 @@ int __fastcall sub_605B2460(float *a1)
   float v15; // s4
   float v16; // s0
 
-  v2 = *(_DWORD *)(ActorMgr__instance + 27180);
-  v3 = sub_60008598(ActorMgr__instance, 187, *(_DWORD *)(ActorMgr__instance + 27172));
+  v2 = FIELD_U32(ActorMgr__instance, 27180);
+  v3 = sub_60008598(ActorMgr__instance, 187, FIELD_U32(ActorMgr__instance, 27172));
   result = 0;
   if ( v3 != v2 )
   {

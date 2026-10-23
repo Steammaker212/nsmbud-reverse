@@ -18,7 +18,7 @@ _DWORD *__fastcall sub_609022E8(_DWORD *a1)
   {
     dword_60CCEF78 = 0;
     v2 = sead__ResourceMgr__sInstance;
-    v3 = *(_DWORD *)(sead__ResourceMgr__sInstance + 40);
+    v3 = FIELD_U32(sead__ResourceMgr__sInstance, 40);
     if ( v3 )
     {
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 4))(v3);

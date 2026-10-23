@@ -52,7 +52,7 @@ int __fastcall lkp_demo_die_fall_ref(int a1)
   v9 = *(int (__fastcall ****)(_DWORD, int *))sub_60008598(
                                                 ActorMgr__instance,
                                                 726,
-                                                *(_DWORD *)(ActorMgr__instance + 27172));
+                                                FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C81760 & ~(1611064164 << v10) & 1) == 0 && _cxa_guard_acquire(&dword_60C81760) )
   {
     dword_60C8175C = (int)&off_60BC6E94;

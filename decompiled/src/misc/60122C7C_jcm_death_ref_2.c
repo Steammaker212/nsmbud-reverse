@@ -128,7 +128,7 @@ void __fastcall jcm_death_ref_2(_DWORD *a1)
   a1[26] = 0;
   a1[25] = -1105618534;
   a1[29] = 1167867904;
-  for ( i = (int *)sub_60008598(ActorMgr__instance, 279, *(_DWORD *)(ActorMgr__instance + 27172));
+  for ( i = (int *)sub_60008598(ActorMgr__instance, 279, FIELD_U32(ActorMgr__instance, 27172));
         ;
         i = (int *)sub_60008598(ActorMgr__instance, 279, (int)(i + 1)) )
   {

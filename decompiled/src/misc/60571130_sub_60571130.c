@@ -25,7 +25,7 @@ bool sub_60571130()
   v0 = (int (__fastcall ****)(_DWORD, int *))sub_60008598(
                                                ActorMgr__instance,
                                                854,
-                                               *(_DWORD *)(ActorMgr__instance + 27172));
+                                               FIELD_U32(ActorMgr__instance, 27172));
   if ( v0 == *(int (__fastcall *****)(_DWORD, int *))(ActorMgr__instance + 27180) )
   {
 LABEL_8:

@@ -81,7 +81,7 @@ int __fastcall SE_EMY_CHOROPU_APP_ref(int a1, float a2)
       *(_DWORD *)&position[4] = v9;
       mapPositionToScreen(&out, (Vec3 *)position);
       BasicSoundActor1_playSound(v10, "SE_EMY_CHOROPU_APP", (int)&out, 0);
-      v11 = (int *)sub_60008598(ActorMgr__instance, 612, *(_DWORD *)(ActorMgr__instance + 27172));
+      v11 = (int *)sub_60008598(ActorMgr__instance, 612, FIELD_U32(ActorMgr__instance, 27172));
       if ( v11 == *(int **)(ActorMgr__instance + 27180) )
       {
 LABEL_16:

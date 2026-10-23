@@ -1,0 +1,28 @@
+/* sub_606C6F18
+ * address: 0x606C6F18   size: 132   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+void __fastcall sub_606C6F18(Actor *a1)
+{
+  int *v2; // r5
+  Actor *v3; // r0
+
+  FIELD_U32(a1, 0x0) = (int)off_60C1C540;
+  a1[77].field_40 = (int)EffectWrapper_vtable;
+  v2 = &a1[77].field_40;
+  sub_60237560((int)&a1[77].field_40);
+  sead__IDisposer__dtor(v2);
+  a1[76].childCount = (int)EffectWrapper_vtable;
+  sub_60237560((int)&a1[76].childCount);
+  sead__IDisposer__dtor(&a1[76].childCount);
+  FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
+  CollisionMgr_dtor((int)&a1[8].id);
+  v3 = StageActor__dtor(a1);
+  operator_delete(v3);
+}

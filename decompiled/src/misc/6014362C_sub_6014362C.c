@@ -1,0 +1,27 @@
+/* sub_6014362C
+ * address: 0x6014362C   size: 160   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+Actor *__fastcall sub_6014362C(Actor *a1)
+{
+  ActiveCollider *p_movementId; // r5
+
+  FIELD_U32(a1, 0x0) = (int)off_60BD3758;
+  p_movementId = (ActiveCollider *)&a1[80].movementId;
+  sub_60026BFC(&a1[84].settings1);
+  FIELD_U32(a1, 0x0) = (int)off_60BD3600;
+  ActiveCollider_dtor(p_movementId);
+  LightSource__dtor(&a1[79].field_20.next);
+  a1[78].profile = (Profile *)EffectWrapper_vtable;
+  sub_60237560((int)&a1[78].profile);
+  sead__IDisposer__dtor(&a1[78].profile);
+  FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
+  CollisionMgr_dtor(&a1[8].id);
+  return StageActor__dtor(a1);
+}

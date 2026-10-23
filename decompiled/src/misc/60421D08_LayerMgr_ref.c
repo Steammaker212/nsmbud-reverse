@@ -1,0 +1,111 @@
+/* LayerMgr_ref
+ * address: 0x60421D08   size: 720   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+sead_IDisposer *__fastcall LayerMgr_ref(sead_IDisposer *a1, int **a2)
+{
+  void (__fastcall ***vtable)(_DWORD, int *, int); // r0
+  void (__fastcall ***v4)(_DWORD, int *, int); // r0
+  int (**v6)(); // [sp+4h] [bp-2Ch] BYREF
+  const char *v7; // [sp+8h] [bp-28h]
+
+  sead__TaskBase__ctor(a1, a2, (int)"LayerMgr");
+  FIELD_U32(a1, 0x0) = (int)off_60BF9F70;
+  LOBYTE(a1[7].vtable) = 0;
+  sead_IDisposer_ctor((sead_IDisposer *)((char *)a1 + 116));
+  a1[8].containingHeap = (int)&sead__SafeStringBase__vtable;
+  a1[8].field_8 = (int)&byte_60ABC94D;
+  a1[7].containingHeap = (int)off_60C5E9A4;
+  a1[8].field_C = 0;
+  a1[9].vtable = 0;
+  a1[9].containingHeap = 1;
+  a1[9].field_C = 0;
+  a1[10].vtable = 0;
+  a1[10].containingHeap = 0;
+  a1[9].field_8 = (int)off_60BD8394;
+  a1[11].field_8 = (int)off_60BFA048;
+  sead__TreeNode__ctor(&a1[12].field_8);
+  a1[13].field_8 = (int)&a1[11].field_8;
+  a1[13].field_C = (int)&sead__SafeStringBase__vtable;
+  a1[14].vtable = (int)&byte_60ABC94D;
+  sead_IDisposer_ctor((sead_IDisposer *)((char *)a1 + 184));
+  a1[11].field_8 = (int)off_60BFA048;
+  a1[16].vtable = 0;
+  a1[16].containingHeap = 0;
+  a1[15].containingHeap = 0;
+  a1[15].vtable = 0;
+  a1[14].field_C = 0;
+  a1[14].field_8 = 0;
+  a1[14].containingHeap = (int)off_60BFA060;
+  a1[15].field_C = 0;
+  a1[16].field_8 = (int)off_60BFA048;
+  sead__TreeNode__ctor(&a1[17].field_8);
+  a1[18].field_8 = (int)&a1[16].field_8;
+  a1[18].field_C = (int)&sead__SafeStringBase__vtable;
+  a1[19].vtable = (int)&byte_60ABC94D;
+  sead_IDisposer_ctor((sead_IDisposer *)((char *)a1 + 264));
+  a1[16].field_8 = (int)off_60BFA048;
+  a1[21].vtable = 0;
+  a1[21].containingHeap = 0;
+  a1[20].containingHeap = 0;
+  a1[20].vtable = 0;
+  a1[19].field_C = 0;
+  a1[19].field_8 = 0;
+  a1[19].containingHeap = (int)off_60BFA060;
+  a1[20].field_C = 0;
+  sub_6090E38C(&a1[21].field_8);
+  sub_6090C6DC((int)&a1[23]);
+  sub_6090A654(&a1[33].field_C);
+  LOBYTE(a1[39].containingHeap) = 0;
+  a1[39].field_8 = (int)&a1[39].field_8;
+  a1[39].field_C = (int)&a1[39].field_8;
+  a1[40].vtable = 0;
+  a1[40].containingHeap = -1;
+  sead__CriticalSection__ctor((sead_IDisposer *)((char *)a1 + 648));
+  a1[42].field_C = 1;
+  LOBYTE(a1[43].vtable) = 0;
+  BYTE1(a1[43].vtable) = 0;
+  a1[43].containingHeap = 0;
+  a1[43].field_8 = 1065353216;
+  sub_60443C10(&a1[44]);
+  a1[1070].containingHeap = (int)off_60BF9FD0;
+  sead__MethodTreeNode__lock(&a1[11].field_8);
+  vtable = (void (__fastcall ***)(_DWORD, int *, int))a1[16].vtable;
+  if ( vtable )
+    (**vtable)(vtable, &a1[11].field_8, 3);
+  a1[15].field_C = 3;
+  sead__MethodTreeNode__unlock(&a1[11].field_8);
+  sead__MethodTreeNode__lock(&a1[16].field_8);
+  v4 = (void (__fastcall ***)(_DWORD, int *, int))a1[21].vtable;
+  if ( v4 )
+    (**v4)(v4, &a1[16].field_8, 3);
+  a1[20].field_C = 3;
+  sead__MethodTreeNode__unlock(&a1[16].field_8);
+  sead__MethodTreeNode__lock(&a1[11].field_8);
+  a1[14].field_8 = (int)a1;
+  a1[14].field_C = (int)sub_60422010;
+  a1[15].vtable = 0;
+  a1[14].containingHeap = (int)off_60BFA094;
+  sead__MethodTreeNode__unlock(&a1[11].field_8);
+  v6 = &sead__SafeStringBase__vtable;
+  v7 = "LayerMgr";
+  sead__SafeStringBase__operator_assign((int)&a1[13].field_C, (int)&v6);
+  sead__MethodTreeNode__lock(&a1[16].field_8);
+  a1[19].field_8 = (int)a1;
+  a1[19].field_C = (int)sub_604221B4;
+  a1[20].vtable = 0;
+  a1[19].containingHeap = (int)off_60BFA094;
+  sead__MethodTreeNode__unlock(&a1[16].field_8);
+  v6 = &sead__SafeStringBase__vtable;
+  v7 = "LayerMgr";
+  sead__SafeStringBase__operator_assign((int)&a1[18].field_C, (int)&v6);
+  a1[40].containingHeap = 904;
+  a1[1070].field_8 = 0;
+  return a1;
+}

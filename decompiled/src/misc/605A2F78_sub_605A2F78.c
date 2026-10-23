@@ -80,7 +80,7 @@ int __fastcall sub_605A2F78(int a1)
     HIDWORD(v19) = FIELD_U32(a1, 72284);
     HIDWORD(v20) = FIELD_U32(a1, 72292);
     v21 = (__int64 *)(a1 + 72296);
-    v22 = *(_QWORD *)(EventMgr__instance + 16);
+    v22 = FIELD_U64(EventMgr__instance, 16);
     while ( 1 )
     {
       v23 = v20 & v22;
@@ -122,7 +122,7 @@ LABEL_28:
   v11 = FIELD_U32(a1, 72284);
   v12 = FIELD_U32(a1, 72292);
   v13 = (_QWORD *)(a1 + 72296);
-  v14 = *(_QWORD *)(EventMgr__instance + 16);
+  v14 = FIELD_U64(EventMgr__instance, 16);
   do
   {
     v15 = v10 & v14;

@@ -44,7 +44,7 @@ int __fastcall sub_605A38F0(int a1)
       v6 = 1 << v5;
       v7 = 0;
     }
-    v8 = *(_DWORD *)(EventMgr__instance + 16) & v7 | *(_DWORD *)(EventMgr__instance + 20) & v6;
+    v8 = FIELD_U32(EventMgr__instance, 16) & v7 | FIELD_U32(EventMgr__instance, 20) & v6;
     v3 = 2;
     if ( !v8 )
       v3 = 1;

@@ -91,7 +91,7 @@ int __fastcall sub_606E18AC(_DWORD *a1)
       HIDWORD(v11) = 1 << v10;
       LODWORD(v11) = 0;
     }
-    if ( (*(_QWORD *)(EventMgr__instance + 16) & v11) != 0 )
+    if ( (FIELD_U64(EventMgr__instance, 16) & v11) != 0 )
     {
 LABEL_21:
       *(_BYTE *)a1[158] = 1;
@@ -132,7 +132,7 @@ LABEL_21:
         HIDWORD(v15) = 1 << v14;
         LODWORD(v15) = 0;
       }
-      if ( (*(_QWORD *)(EventMgr__instance + 16) & v15) == 0 )
+      if ( (FIELD_U64(EventMgr__instance, 16) & v15) == 0 )
       {
 LABEL_34:
         if ( *v3 )
@@ -157,7 +157,7 @@ LABEL_34:
       HIDWORD(v17) = 1 << v16;
       LODWORD(v17) = 0;
     }
-    if ( (*(_QWORD *)(EventMgr__instance + 16) & v17) != 0 )
+    if ( (FIELD_U64(EventMgr__instance, 16) & v17) != 0 )
       goto LABEL_34;
   }
   (*(void (__fastcall **)(_DWORD *, int *))(*a1 + 192))(a1, &dword_60CBBD54);

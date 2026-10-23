@@ -27,7 +27,7 @@ int __fastcall SE_PLY_GET_OFF_CLOWN_ref_2(int a1)
     v2 = 1;
     if ( v3 <= (float)(FIELD_F32(dword_60CC6484, 120) + -80.0) )
     {
-      v4 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, *(_DWORD *)(ActorMgr__instance + 27172));
+      v4 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, FIELD_U32(ActorMgr__instance, 27172));
       if ( ((unsigned int)&dword_60C81738 & ~(1611198228 << v5) & 1) == 0 && _cxa_guard_acquire(&dword_60C81738) )
       {
         dword_60C81734 = (int)&off_60BC1FA8;

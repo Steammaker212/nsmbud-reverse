@@ -32,7 +32,7 @@ _DWORD *__fastcall lkpjc_wait_ref_81F28(int a1)
     if ( (**(int (__fastcall ***)(int, int *))v4)(v4, &dword_60C81100) == 1 )
       (*(void (__fastcall **)(int, void *))(*(_DWORD *)v4 + 192))(v4, &unk_60C82000);
   }
-  v5 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, *(_DWORD *)(ActorMgr__instance + 27172));
+  v5 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C81738 & ~(1611145272 << v6) & 1) == 0 && _cxa_guard_acquire(&dword_60C81738) )
   {
     dword_60C81734 = (int)&off_60BC1FA8;

@@ -22,7 +22,7 @@ int __fastcall sub_606EFFF0(float *a1, int a2)
   while ( 1 )
   {
     if ( !a2 )
-      a2 = *(_DWORD *)(ActorMgr__instance + 27172);
+      a2 = FIELD_U32(ActorMgr__instance, 27172);
     v4 = (int *)sub_60008598(ActorMgr__instance, 392, a2);
     v6 = *v4;
     if ( !*v4 )

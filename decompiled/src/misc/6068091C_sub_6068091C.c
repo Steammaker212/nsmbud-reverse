@@ -26,7 +26,7 @@ unsigned __int8 *__fastcall sub_6068091C(unsigned __int8 *result)
       v3 = 1 << v2;
       v4 = 0;
     }
-    if ( *(_DWORD *)(EventMgr__instance + 16) & v4 | *(_DWORD *)(EventMgr__instance + 20) & v3 )
+    if ( FIELD_U32(EventMgr__instance, 16) & v4 | FIELD_U32(EventMgr__instance, 20) & v3 )
       return (unsigned __int8 *)(*(int (__fastcall **)(unsigned __int8 *, int *))(*(_DWORD *)result + 192))(
                                   result,
                                   &dword_60CB8138);

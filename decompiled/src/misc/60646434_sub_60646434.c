@@ -14,8 +14,8 @@ StateMethodExecuter *__fastcall sub_60646434(int a1)
   StateMethodExecuter *result; // r0
 
   v2 = sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540));
-  result = (StateMethodExecuter *)(*(_DWORD *)(EventMgr__instance + 16) & v2
-                                 | ((*(_QWORD *)(EventMgr__instance + 16) & (unsigned __int64)v2) >> 32));
+  result = (StateMethodExecuter *)(FIELD_U32(EventMgr__instance, 16) & v2
+                                 | ((FIELD_U64(EventMgr__instance, 16) & (unsigned __int64)v2) >> 32));
   if ( result )
     return StateMgr__changeState((StateMgr *)(a1 + 6084), &stru_60CB5E8C);
   return result;

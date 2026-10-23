@@ -30,8 +30,8 @@ int __fastcall sub_606D8E5C(int a1)
     if ( FIELD_U32(a1, 6116) < 2u )
       v5 = (_DWORD *)(a1 + 108);
     FIELD_U32(a1, 6108) = *v5;
-    v6 = *(_DWORD *)(ActorMgr__instance + 27180);
-    v7 = sub_60008598(ActorMgr__instance, 51, *(_DWORD *)(ActorMgr__instance + 27172));
+    v6 = FIELD_U32(ActorMgr__instance, 27180);
+    v7 = sub_60008598(ActorMgr__instance, 51, FIELD_U32(ActorMgr__instance, 27172));
     if ( v7 == v6 )
       goto LABEL_10;
     while ( 1 )

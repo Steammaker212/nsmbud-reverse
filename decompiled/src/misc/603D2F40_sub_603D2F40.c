@@ -41,7 +41,7 @@ int __fastcall sub_603D2F40(int a1)
             HIDWORD(v6) = 1 << v5;
             LODWORD(v6) = 0;
           }
-          if ( (*(_QWORD *)(EventMgr__instance + 16) & v6) == 0 )
+          if ( (FIELD_U64(EventMgr__instance, 16) & v6) == 0 )
           {
             *((_BYTE *)v2 - 2) = 0;
             return 1;

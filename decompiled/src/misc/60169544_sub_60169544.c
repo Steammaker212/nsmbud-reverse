@@ -110,7 +110,7 @@ LABEL_26:
       v20 = sub_6040D864(a1);
       v19 = 0;
 LABEL_28:
-      v14 = (int *)sub_60008598(ActorMgr__instance, v13, *(_DWORD *)(ActorMgr__instance + 27172));
+      v14 = (int *)sub_60008598(ActorMgr__instance, v13, FIELD_U32(ActorMgr__instance, 27172));
       v16 = *(int **)(ActorMgr__instance + 27180);
       if ( v14 == v16 )
         goto LABEL_39;

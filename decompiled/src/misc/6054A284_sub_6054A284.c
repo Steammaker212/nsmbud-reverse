@@ -23,7 +23,7 @@ int **__fastcall sub_6054A284(int a1)
   FIELD_U8(a1, 3638) = 1;
   FIELD_U8(a1, 3637) = 1;
   v2 = &ActorMgr__instance;
-  result = (int **)sub_60008598(ActorMgr__instance, 459, *(_DWORD *)(ActorMgr__instance + 27172));
+  result = (int **)sub_60008598(ActorMgr__instance, 459, FIELD_U32(ActorMgr__instance, 27172));
   v5 = *(int ***)(ActorMgr__instance + 27180);
   v6 = result == v5;
   if ( result != v5 )

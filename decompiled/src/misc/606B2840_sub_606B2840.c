@@ -32,7 +32,7 @@ int __fastcall sub_606B2840(int a1)
       HIDWORD(v5) = 1 << v4;
       LODWORD(v5) = 0;
     }
-    result = (v5 & *(_QWORD *)(EventMgr__instance + 16)) != 0;
+    result = (v5 & FIELD_U64(EventMgr__instance, 16)) != 0;
     FIELD_U8(a1, 52) = result;
   }
   else

@@ -16,7 +16,7 @@ int *__fastcall sub_6063E0B8(int a1)
   int v4; // r7
 
   FIELD_U32(a1, 6172) = (FIELD_U32(a1, 20) >> 19) & 0x1FFE;
-  v1 = (int *)sub_60008598(ActorMgr__instance, 832, *(_DWORD *)(ActorMgr__instance + 27172));
+  v1 = (int *)sub_60008598(ActorMgr__instance, 832, FIELD_U32(ActorMgr__instance, 27172));
   result = *(int **)(ActorMgr__instance + 27180);
   if ( v1 != result )
   {

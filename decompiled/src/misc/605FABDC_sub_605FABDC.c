@@ -18,7 +18,7 @@ ActiveColliderMgr *__fastcall sub_605FABDC(int a1)
 
   if ( (FIELD_U8(a1, 21) & 2) != 0 )
   {
-    if ( (*(_QWORD *)(EventMgr__instance + 16)
+    if ( (FIELD_U64(EventMgr__instance, 16)
         & sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540))) != 0
       && !FIELD_U32(a1, 164) )
     {

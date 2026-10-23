@@ -22,7 +22,7 @@ int __fastcall sub_603E7AC8(int a1)
   int v11; // r5
   float v13[12]; // [sp+0h] [bp-30h] BYREF
 
-  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 457, *(_DWORD *)(ActorMgr__instance + 27172));
+  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 457, FIELD_U32(ActorMgr__instance, 27172));
   sub_603E7D14(a1, v2);
   v3 = FIELD_F32(v2, 112) + 192.0;
   v4 = dword_60CC6484;

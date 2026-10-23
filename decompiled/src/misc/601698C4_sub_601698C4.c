@@ -15,7 +15,7 @@ int __fastcall sub_601698C4(int a1, _DWORD *a2)
   int *v5; // r4
   int v6; // r7
 
-  v3 = (int *)sub_60008598(ActorMgr__instance, a1, *(_DWORD *)(ActorMgr__instance + 27172));
+  v3 = (int *)sub_60008598(ActorMgr__instance, a1, FIELD_U32(ActorMgr__instance, 27172));
   v5 = *(int **)(ActorMgr__instance + 27180);
   if ( v3 == v5 )
     return 0;

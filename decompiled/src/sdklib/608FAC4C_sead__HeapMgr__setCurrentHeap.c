@@ -13,7 +13,7 @@ int __fastcall sead__HeapMgr__setCurrentHeap(int a1, int a2)
   int TlsValue; // r0
   int v4; // r1
 
-  TlsValue = nn__os__GetTlsValue(*(_DWORD *)(sead__ThreadMgr__sInstance + 72));
+  TlsValue = nn__os__GetTlsValue(FIELD_U32(sead__ThreadMgr__sInstance, 72));
   v4 = FIELD_U32(TlsValue, 100);
   FIELD_U32(TlsValue, 100) = a2;
   return v4;

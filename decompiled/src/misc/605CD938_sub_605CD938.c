@@ -66,7 +66,7 @@ StateMethodExecuter *__fastcall sub_605CD938(
   FIELD_U32(a1, 84) = v22 - 0x40000000;
   *a2 = v22 - 0x40000000;
   FIELD_U8(a1, 96) = 0;
-  if ( (*(_QWORD *)(EventMgr__instance + 16) & *a4) == 0 )
+  if ( (FIELD_U64(EventMgr__instance, 16) & *a4) == 0 )
   {
     if ( a8 != 1 )
     {

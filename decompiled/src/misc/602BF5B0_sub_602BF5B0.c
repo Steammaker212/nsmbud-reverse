@@ -38,8 +38,8 @@ int __fastcall sub_602BF5B0(int a1)
   *v2 = v5;
 LABEL_8:
   v7 = sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540));
-  result = *(_DWORD *)(EventMgr__instance + 16) & v7
-         | ((*(_QWORD *)(EventMgr__instance + 16) & (unsigned __int64)v7) >> 32);
+  result = FIELD_U32(EventMgr__instance, 16) & v7
+         | ((FIELD_U64(EventMgr__instance, 16) & (unsigned __int64)v7) >> 32);
   if ( result )
   {
     if ( !FIELD_U8(a1, 6472) )

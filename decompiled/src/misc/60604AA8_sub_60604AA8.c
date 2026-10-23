@@ -51,7 +51,7 @@ int __fastcall sub_60604AA8(int a1)
     v15 = 1 << v8;
     if ( v13 >= 0 )
       v15 = 0;
-    if ( !(v15 & *(_DWORD *)(EventMgr__instance + 16) | v14 & *(_DWORD *)(EventMgr__instance + 20)) )
+    if ( !(v15 & FIELD_U32(EventMgr__instance, 16) | v14 & FIELD_U32(EventMgr__instance, 20)) )
     {
       *v7 = 3;
       goto LABEL_19;
@@ -103,11 +103,11 @@ int __fastcall sub_60604AA8(int a1)
     v10 = 1u >> (32 - v8);
     if ( v8 - 32 >= 0 )
       v10 = 1 << v9;
-    v11 = v10 & *(_DWORD *)(EventMgr__instance + 20);
+    v11 = v10 & FIELD_U32(EventMgr__instance, 20);
     v12 = 1 << v8;
     if ( v9 >= 0 )
       v12 = 0;
-    if ( v12 & *(_DWORD *)(EventMgr__instance + 16) | v11 )
+    if ( v12 & FIELD_U32(EventMgr__instance, 16) | v11 )
     {
       *v7 = 1;
 LABEL_19:

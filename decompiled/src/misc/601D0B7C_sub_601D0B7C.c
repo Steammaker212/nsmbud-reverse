@@ -27,7 +27,7 @@ int __fastcall sub_601D0B7C(int a1)
   sub_601905DC(v11);
   v11[0] = 85;
   v11[1] = sub_601916C8(dword_60C8996C, 85);
-  v1 = (int *)sub_60008598(ActorMgr__instance, 895, *(_DWORD *)(ActorMgr__instance + 27172));
+  v1 = (int *)sub_60008598(ActorMgr__instance, 895, FIELD_U32(ActorMgr__instance, 27172));
   v3 = *(int **)(ActorMgr__instance + 27180);
   if ( v1 != v3 )
   {

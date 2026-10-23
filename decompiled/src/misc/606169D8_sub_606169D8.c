@@ -26,7 +26,7 @@ unsigned int __fastcall sub_606169D8(int a1)
   v1 = sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540));
   v2 = v1;
   result = EventMgr__instance;
-  v4 = *(_QWORD *)(EventMgr__instance + 16);
+  v4 = FIELD_U64(EventMgr__instance, 16);
   v5 = v4 & __PAIR64__(HIDWORD(v1), v2);
   v6 = v5 | HIDWORD(v4) & HIDWORD(v1);
   if ( v6 )
@@ -42,8 +42,8 @@ unsigned int __fastcall sub_606169D8(int a1)
       if ( v7 >= 0 )
         v9 = 0;
       v10 = EventMgr__instance;
-      v11 = *(_DWORD *)(EventMgr__instance + 20);
-      *(_DWORD *)(EventMgr__instance + 16) &= ~v9;
+      v11 = FIELD_U32(EventMgr__instance, 20);
+      FIELD_U32(EventMgr__instance, 16) &= ~v9;
       FIELD_U32(v10, 20) = v11 & ~v8;
       if ( result >= 0x40 )
         result = 0;

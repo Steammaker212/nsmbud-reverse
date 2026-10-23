@@ -17,7 +17,7 @@ int *sub_600C86F0()
   int v4; // r6
   StateMgr *v5; // r0
 
-  v0 = (int *)sub_60008598(ActorMgr__instance, 265, *(_DWORD *)(ActorMgr__instance + 27172));
+  v0 = (int *)sub_60008598(ActorMgr__instance, 265, FIELD_U32(ActorMgr__instance, 27172));
   result = *(int **)(ActorMgr__instance + 27180);
   if ( v0 != result )
   {

@@ -19,7 +19,7 @@ int __fastcall sub_606768FC(unsigned __int8 *a1)
   v2 = a1[6130];
   v3 = sub_6072A6DC(EventMgr__instance, a1[539], a1[540]);
   v4 = EventMgr__instance;
-  v5 = *(_QWORD *)(EventMgr__instance + 16) & v3;
+  v5 = FIELD_U64(EventMgr__instance, 16) & v3;
   if ( v2 == 2 )
   {
     v6 = a1 + 6104;

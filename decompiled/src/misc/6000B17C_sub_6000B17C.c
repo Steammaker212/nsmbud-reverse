@@ -16,5 +16,5 @@ int sub_6000B17C()
   return *(_DWORD *)sub_60008D1C(
                       ActorMgr__instance + 27168,
                       (int (__fastcall ***)(_DWORD))&v1,
-                      *(_DWORD *)(ActorMgr__instance + 27172));
+                      FIELD_U32(ActorMgr__instance, 27172));
 }

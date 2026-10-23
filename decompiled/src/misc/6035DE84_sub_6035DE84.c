@@ -16,8 +16,8 @@ int __fastcall sub_6035DE84(int a1)
   ActiveColliderMgr *v5; // r6
 
   v2 = sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540));
-  result = *(_DWORD *)(EventMgr__instance + 16) & v2
-         | ((*(_QWORD *)(EventMgr__instance + 16) & (unsigned __int64)v2) >> 32);
+  result = FIELD_U32(EventMgr__instance, 16) & v2
+         | ((FIELD_U64(EventMgr__instance, 16) & (unsigned __int64)v2) >> 32);
   if ( result )
   {
     FIELD_U8(a1, 535) = 1;

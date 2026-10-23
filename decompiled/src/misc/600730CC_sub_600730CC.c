@@ -18,7 +18,7 @@ void __fastcall sub_600730CC(int a1)
     v2 = *(int (__fastcall ****)(_DWORD, int *))sub_60008598(
                                                   ActorMgr__instance,
                                                   374,
-                                                  *(_DWORD *)(ActorMgr__instance + 27172));
+                                                  FIELD_U32(ActorMgr__instance, 27172));
     if ( ((unsigned int)&dword_60C81738 & ~(1611084080 << v3) & 1) == 0 && _cxa_guard_acquire(&dword_60C81738) )
     {
       dword_60C81734 = (int)&off_60BC1FA8;

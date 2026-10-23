@@ -23,7 +23,7 @@ ModelWrapper *__fastcall sub_606E1290(int a1)
   if ( FIELD_U8(a1, 539) )
   {
     v3 = v2 - 33;
-    v4 = *(_QWORD *)(EventMgr__instance + 16);
+    v4 = FIELD_U64(EventMgr__instance, 16);
     v5 = 1u >> (33 - v2);
     v6 = 1 << (v2 - 1);
     if ( v3 >= 0 )

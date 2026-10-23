@@ -31,7 +31,7 @@ _DWORD *__fastcall sub_608FB24C(int a1, unsigned int a2, int a3)
     v10 = 0;
     if ( sead__HeapMgr__sInstance )
     {
-      v6 = *(_DWORD *)(sead__HeapMgr__sInstance + 8);
+      v6 = FIELD_U32(sead__HeapMgr__sInstance, 8);
       v11 = v6 == 0;
     }
     if ( !v11 )

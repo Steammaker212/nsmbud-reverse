@@ -25,7 +25,7 @@ int __fastcall sub_600D2980(int a1)
   v3 = *(int (__fastcall ****)(_DWORD, int *))sub_60008598(
                                                 ActorMgr__instance,
                                                 *((_DWORD *)&unk_60C84324 + FIELD_U8(a1, 6122) + 1),
-                                                *(_DWORD *)(ActorMgr__instance + 27172));
+                                                FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C7B364 & ~(1611475504 << v4) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B364) )
   {
     StageActor_RTTI = (int)&off_60BC0098;

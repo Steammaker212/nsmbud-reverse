@@ -23,7 +23,7 @@ bool sub_6054AA9C()
   float v10; // s0
   float v11; // s4
 
-  v1 = (int *)sub_60008598(ActorMgr__instance, 459, *(_DWORD *)(ActorMgr__instance + 27172));
+  v1 = (int *)sub_60008598(ActorMgr__instance, 459, FIELD_U32(ActorMgr__instance, 27172));
   v3 = 0;
   v4 = *(int **)(ActorMgr__instance + 27180);
   v5 = v1 == v4;

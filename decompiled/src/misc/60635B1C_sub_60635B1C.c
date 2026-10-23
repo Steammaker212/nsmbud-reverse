@@ -20,7 +20,7 @@ float __fastcall sub_60635B1C(int a1)
   float *v9; // r0
   int *v10; // r2
 
-  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 794, *(_DWORD *)(ActorMgr__instance + 27172));
+  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 794, FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C7B364 & ~(1617124192 << v3) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B364) )
   {
     StageActor_RTTI = (int)&off_60BC0098;

@@ -265,7 +265,7 @@ LABEL_39:
   FIELD_U32(a1, 6464) = -16776961;
   if ( FIELD_U32(a1, 6492) == 3 )
   {
-    v57 = *(_DWORD *)sub_60008598(ActorMgr__instance, 85, *(_DWORD *)(ActorMgr__instance + 27172));
+    v57 = *(_DWORD *)sub_60008598(ActorMgr__instance, 85, FIELD_U32(ActorMgr__instance, 27172));
     if ( ((unsigned int)&dword_60C82848 & ~(1617579664 << v58) & 1) == 0 && _cxa_guard_acquire(&dword_60C82848) )
     {
       dword_60C82844 = (int)&off_60BC8348;

@@ -34,7 +34,7 @@ void __fastcall SE_AMB_MAGMA_RISE_ref(int a1)
     position.y = v5;
     mapPositionToScreen(&out, &position);
     SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v4, "SE_AMB_MAGMA_RISE", v6, &out, 0);
-    v7 = *(_DWORD *)sub_60008598(ActorMgr__instance, 85, *(_DWORD *)(ActorMgr__instance + 27172));
+    v7 = *(_DWORD *)sub_60008598(ActorMgr__instance, 85, FIELD_U32(ActorMgr__instance, 27172));
     if ( ((unsigned int)&dword_60C82848 & ~(1611264016 << v8) & 1) == 0 && _cxa_guard_acquire(&dword_60C82848) )
     {
       dword_60C82844 = (int)&off_60BC8348;

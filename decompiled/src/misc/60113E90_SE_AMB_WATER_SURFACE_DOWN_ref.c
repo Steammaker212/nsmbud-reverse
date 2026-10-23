@@ -50,7 +50,7 @@ bool __fastcall SE_AMB_WATER_SURFACE_DOWN_ref(int *a1)
         (*(void (__fastcall **)(int *, int *))(*a1 + 192))(a1, &dword_60C86B04);
       break;
     case 2:
-      if ( (*(_QWORD *)(EventMgr__instance + 16)
+      if ( (FIELD_U64(EventMgr__instance, 16)
           & sub_6072A6DC(EventMgr__instance, *((unsigned __int8 *)a1 + 539), *((unsigned __int8 *)a1 + 540))) == 0 )
       {
         sub_60400BE4(AreaRumbleMgr_instance);

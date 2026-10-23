@@ -40,7 +40,7 @@ int __fastcall sub_60218EB0(_DWORD *a1)
     v3 = v2[22];
     v4 = v2[21];
     v5 = v2[24];
-    v6 = (_DWORD *)sub_60008598(ActorMgr__instance, 894, *(_DWORD *)(ActorMgr__instance + 27172));
+    v6 = (_DWORD *)sub_60008598(ActorMgr__instance, 894, FIELD_U32(ActorMgr__instance, 27172));
     v7 = *(_DWORD **)(ActorMgr__instance + 27180);
     if ( v6 != v7 )
     {

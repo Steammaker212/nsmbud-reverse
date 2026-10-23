@@ -37,9 +37,9 @@ int __fastcall sub_605E0EC0(float *a1)
     v4 = a1[27];
     v5 = v15;
     v6 = ActorMgr__instance;
-    v7 = *(_DWORD *)(ActorMgr__instance + 27180);
+    v7 = FIELD_U32(ActorMgr__instance, 27180);
     v8 = FIELD_F32(dword_60CC6484, 128);
-    v9 = sub_60008598(ActorMgr__instance, 748, *(_DWORD *)(ActorMgr__instance + 27172));
+    v9 = sub_60008598(ActorMgr__instance, 748, FIELD_U32(ActorMgr__instance, 27172));
     if ( v9 != v7 )
     {
       if ( v5 < v8 )

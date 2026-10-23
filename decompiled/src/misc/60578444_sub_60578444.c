@@ -26,7 +26,7 @@ int __fastcall sub_60578444(int a1)
       v4 = 1 << v3;
       v5 = 0;
     }
-    result = *(_DWORD *)(EventMgr__instance + 16) & v5 | *(_DWORD *)(EventMgr__instance + 20) & v4;
+    result = FIELD_U32(EventMgr__instance, 16) & v5 | FIELD_U32(EventMgr__instance, 20) & v4;
     if ( !result )
     {
       FIELD_U8(a1, 535) = 0;

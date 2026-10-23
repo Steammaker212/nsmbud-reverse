@@ -31,7 +31,7 @@ _DWORD *__fastcall sead__HeapMgr__findContainHeap_const(int a1, int a2)
   bool v22; // zf
   int v23; // r0
 
-  if ( sead__ThreadMgr__sInstance && (TlsValue = nn__os__GetTlsValue(*(_DWORD *)(sead__ThreadMgr__sInstance + 72))) != 0 )
+  if ( sead__ThreadMgr__sInstance && (TlsValue = nn__os__GetTlsValue(FIELD_U32(sead__ThreadMgr__sInstance, 72))) != 0 )
   {
     v4 = *(_DWORD **)(TlsValue + 100);
     v5 = (unsigned int *)(TlsValue + 104);

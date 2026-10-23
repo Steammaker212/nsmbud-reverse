@@ -31,7 +31,7 @@ int __fastcall SE_VOC_JR_PRE_RECORVER_ref(int a1)
     v6 = *(float *)(**(_DWORD **)(FIELD_U32(a1, 7612) + 12) + 8);
     if ( (float)v5 > v6 )
     {
-      v7 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, *(_DWORD *)(ActorMgr__instance + 27172));
+      v7 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, FIELD_U32(ActorMgr__instance, 27172));
       if ( ((unsigned int)&dword_60C81738 & ~(1611186424 << v8) & 1) == 0 && _cxa_guard_acquire(&dword_60C81738) )
       {
         dword_60C81734 = (int)&off_60BC1FA8;

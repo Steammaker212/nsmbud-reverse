@@ -36,7 +36,7 @@ int __fastcall sub_6007C5E4(int a1)
   FIELD_U8(dword_60C9CF0C, 1393) = 1;
   FIELD_U32(PlayerMgr_instance, 140) = -1;
   v2 = dword_60CC6484;
-  v3 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, *(_DWORD *)(ActorMgr__instance + 27172));
+  v3 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C81738 & ~(1611122316 << v4) & 1) == 0 && _cxa_guard_acquire(&dword_60C81738) )
   {
     dword_60C81734 = (int)&off_60BC1FA8;
@@ -89,7 +89,7 @@ int __fastcall sub_6007C5E4(int a1)
       HIDWORD(v14) = 1 << v13;
       LODWORD(v14) = 0;
     }
-    *(_QWORD *)(EventMgr__instance + 16) &= ~v14;
+    FIELD_U64(EventMgr__instance, 16) &= ~v14;
   }
   FIELD_U32(a1, 6168) = 1075838976;
   FIELD_U32(a1, 6172) = 1050253722;

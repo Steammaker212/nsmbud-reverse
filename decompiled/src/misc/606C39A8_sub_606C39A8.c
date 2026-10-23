@@ -32,7 +32,7 @@ int __fastcall sub_606C39A8(int a1)
       HIDWORD(v4) = 1 << v3;
       LODWORD(v4) = 0;
     }
-    result = (*(_QWORD *)(EventMgr__instance + 16) & v4) != 0;
+    result = (FIELD_U64(EventMgr__instance, 16) & v4) != 0;
   }
   else
   {
@@ -53,7 +53,7 @@ int __fastcall sub_606C39A8(int a1)
     v8 = 1 << v7;
     v9 = 0;
   }
-  result |= (*(_DWORD *)(EventMgr__instance + 16) & v9 | *(_DWORD *)(EventMgr__instance + 20) & v8) != 0;
+  result |= (FIELD_U32(EventMgr__instance, 16) & v9 | FIELD_U32(EventMgr__instance, 20) & v8) != 0;
   if ( result )
   {
 LABEL_12:

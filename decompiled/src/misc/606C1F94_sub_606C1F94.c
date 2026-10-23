@@ -47,7 +47,7 @@ int __fastcall sub_606C1F94(int a1)
   sub_607D8938(a1 + 6112, v10, (v4 >> 20) & 0xF, (v4 >> 19) & 1, HIWORD(v4) & 3, HIBYTE(v4), BYTE1(v4));
   if ( (FIELD_U8(a1, 20) & 8) != 0
     && (FIELD_U8(a1, 6245) = FIELD_U32(a1, 24) & 1,
-        (*(_QWORD *)(EventMgr__instance + 16)
+        (FIELD_U64(EventMgr__instance, 16)
        & sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540))) == 0) )
   {
     v7 = (StateMgr *)(a1 + 6084);

@@ -86,8 +86,8 @@ LABEL_20:
         return v2;
       case 30:
         (*(void (__fastcall **)(int))(*(_DWORD *)a1 + 72))(a1);
-        v10 = sub_60008598(ActorMgr__instance, 903, *(_DWORD *)(ActorMgr__instance + 27172));
-        v11 = *(_DWORD *)(ActorMgr__instance + 27180);
+        v10 = sub_60008598(ActorMgr__instance, 903, FIELD_U32(ActorMgr__instance, 27172));
+        v11 = FIELD_U32(ActorMgr__instance, 27180);
         if ( v10 == v11 )
           return v2;
         do

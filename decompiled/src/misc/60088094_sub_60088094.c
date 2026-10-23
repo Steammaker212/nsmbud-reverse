@@ -16,7 +16,7 @@ void __fastcall sub_60088094(int a1)
   signed int v5; // r2
   int v6; // r1
 
-  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, *(_DWORD *)(ActorMgr__instance + 27172));
+  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C81738 & ~(1611170008 << v3) & 1) == 0 && _cxa_guard_acquire(&dword_60C81738) )
   {
     dword_60C81734 = (int)&off_60BC1FA8;

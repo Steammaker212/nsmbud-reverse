@@ -51,7 +51,7 @@ void __fastcall sub_60067424(int a1)
   v15[0].z = 4500.0;
   EffectData_create(1097, v15, 0, v3 - 6968);
   *(_DWORD *)(v3 - 6988) = 0;
-  v10 = *(_DWORD *)sub_60008598(ActorMgr__instance, 373, *(_DWORD *)(ActorMgr__instance + 27172));
+  v10 = *(_DWORD *)sub_60008598(ActorMgr__instance, 373, FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C81104 & ~(1611036052 << v11) & 1) == 0 && _cxa_guard_acquire(&dword_60C81104) )
   {
     dword_60C81100 = (int)&off_60BC66E8;

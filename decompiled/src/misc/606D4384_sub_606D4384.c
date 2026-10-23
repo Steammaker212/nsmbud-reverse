@@ -22,8 +22,8 @@ int __fastcall sub_606D4384(signed int *a1, int a2)
   int v13; // r0
   int v14; // r9
 
-  v4 = *(_DWORD *)(ActorMgr__instance + 27180);
-  v5 = sub_60008598(ActorMgr__instance, 39, *(_DWORD *)(ActorMgr__instance + 27172));
+  v4 = FIELD_U32(ActorMgr__instance, 27180);
+  v5 = sub_60008598(ActorMgr__instance, 39, FIELD_U32(ActorMgr__instance, 27172));
   if ( v5 != v4 )
   {
     while ( 1 )
@@ -40,8 +40,8 @@ int __fastcall sub_606D4384(signed int *a1, int a2)
       goto LABEL_21;
   }
 LABEL_6:
-  v8 = *(_DWORD *)(ActorMgr__instance + 27180);
-  v9 = sub_60008598(ActorMgr__instance, 40, *(_DWORD *)(ActorMgr__instance + 27172));
+  v8 = FIELD_U32(ActorMgr__instance, 27180);
+  v9 = sub_60008598(ActorMgr__instance, 40, FIELD_U32(ActorMgr__instance, 27172));
   if ( v9 != v8 )
   {
     while ( 1 )
@@ -58,8 +58,8 @@ LABEL_6:
       goto LABEL_21;
   }
 LABEL_11:
-  v10 = *(_DWORD *)(ActorMgr__instance + 27180);
-  v11 = sub_60008598(ActorMgr__instance, 41, *(_DWORD *)(ActorMgr__instance + 27172));
+  v10 = FIELD_U32(ActorMgr__instance, 27180);
+  v11 = sub_60008598(ActorMgr__instance, 41, FIELD_U32(ActorMgr__instance, 27172));
   if ( v11 != v10 )
   {
     while ( 1 )
@@ -76,8 +76,8 @@ LABEL_11:
       goto LABEL_21;
   }
 LABEL_16:
-  v12 = *(_DWORD *)(ActorMgr__instance + 27180);
-  v13 = sub_60008598(ActorMgr__instance, 42, *(_DWORD *)(ActorMgr__instance + 27172));
+  v12 = FIELD_U32(ActorMgr__instance, 27180);
+  v13 = sub_60008598(ActorMgr__instance, 42, FIELD_U32(ActorMgr__instance, 27172));
   v14 = 0;
   if ( v13 != v12 )
   {

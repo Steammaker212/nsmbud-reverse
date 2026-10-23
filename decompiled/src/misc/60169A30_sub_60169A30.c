@@ -23,7 +23,7 @@ int __fastcall sub_60169A30(_DWORD *a1)
     v2 = sub_6021EE50(*a1, v1);
     if ( v2 != -1 )
     {
-      v3 = (int *)sub_60008598(ActorMgr__instance, v2, *(_DWORD *)(ActorMgr__instance + 27172));
+      v3 = (int *)sub_60008598(ActorMgr__instance, v2, FIELD_U32(ActorMgr__instance, 27172));
       v5 = *(int **)(ActorMgr__instance + 27180);
       if ( v3 != v5 )
         break;

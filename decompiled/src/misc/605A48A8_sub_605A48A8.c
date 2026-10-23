@@ -32,7 +32,7 @@ int __fastcall sub_605A48A8(__int64 a1)
     v4 = 1 << v3;
     HIDWORD(a1) = 0;
   }
-  if ( HIDWORD(a1) & *(_DWORD *)(EventMgr__instance + 16) | v4 & *(_DWORD *)(EventMgr__instance + 20) )
+  if ( HIDWORD(a1) & FIELD_U32(EventMgr__instance, 16) | v4 & FIELD_U32(EventMgr__instance, 20) )
   {
     v5 = FIELD_F32(a1, 6876) + -2.0;
     FIELD_F32(a1, 6876) = v5;
@@ -61,8 +61,8 @@ int __fastcall sub_605A48A8(__int64 a1)
         HIDWORD(v9) = 1 << v8;
         LODWORD(v9) = 0;
       }
-      a1 = *(_QWORD *)(EventMgr__instance + 16) & ~v9;
-      *(_QWORD *)(EventMgr__instance + 16) = a1;
+      a1 = FIELD_U64(EventMgr__instance, 16) & ~v9;
+      FIELD_U64(EventMgr__instance, 16) = a1;
     }
   }
   return a1;

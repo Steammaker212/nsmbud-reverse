@@ -27,7 +27,7 @@ StateMethodExecuter *__fastcall sub_606B243C(StateMethodExecuter *result)
     HIDWORD(v4) = 1 << v3;
     LODWORD(v4) = 0;
   }
-  if ( (v4 & *(_QWORD *)(EventMgr__instance + 16)) != 0 )
+  if ( (v4 & FIELD_U64(EventMgr__instance, 16)) != 0 )
   {
     if ( !BYTE1(result[4].owner) )
       return StateMgr__changeState((StateMgr *)&result[16].owner, &stru_60CBA30C);

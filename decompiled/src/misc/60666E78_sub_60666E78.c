@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_60666E78(StateMethodExecuter *result)
 {
-  if ( *(_QWORD *)(EventMgr__instance + 16) )
+  if ( FIELD_U64(EventMgr__instance, 16) )
     return StateMgr__changeState((StateMgr *)&result[507], (StateBase *)&dword_60CB6C74);
   return result;
 }

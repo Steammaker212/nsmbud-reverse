@@ -18,7 +18,7 @@ void __fastcall sub_60670C2C(int a1)
   v1 = (_DWORD *)(a1 + 8272);
   if ( FIELD_U32(a1, 8272) )
   {
-    for ( i = (int *)sub_60008598(ActorMgr__instance, 129, *(_DWORD *)(ActorMgr__instance + 27172));
+    for ( i = (int *)sub_60008598(ActorMgr__instance, 129, FIELD_U32(ActorMgr__instance, 27172));
           ;
           i = (int *)sub_60008598(ActorMgr__instance, 129, (int)(i + 1)) )
     {

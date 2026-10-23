@@ -16,7 +16,7 @@ unsigned int __fastcall sub_6007446C(int a1)
   int v5; // r6
   Vec2 v6; // [sp+0h] [bp-18h] BYREF
 
-  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 373, *(_DWORD *)(ActorMgr__instance + 27172));
+  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 373, FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C81104 & ~(1611089072 << v3) & 1) == 0 && _cxa_guard_acquire(&dword_60C81104) )
   {
     dword_60C81100 = (int)&off_60BC66E8;

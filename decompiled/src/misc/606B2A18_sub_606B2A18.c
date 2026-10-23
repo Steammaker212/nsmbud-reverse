@@ -109,7 +109,7 @@ void __fastcall sub_606B2A18(
       HIDWORD(v24) = 1 << v23;
       LODWORD(v24) = 0;
     }
-    if ( (v24 & *(_QWORD *)(EventMgr__instance + 16)) != 0 )
+    if ( (v24 & FIELD_U64(EventMgr__instance, 16)) != 0 )
       FIELD_U32(a1, 72) = 0;
   }
   JUMPOUT(0x606B2C4C);

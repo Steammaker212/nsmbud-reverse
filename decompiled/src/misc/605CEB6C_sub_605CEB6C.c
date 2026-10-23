@@ -18,8 +18,8 @@ int __fastcall sub_605CEB6C(int a1)
   v1 = FIELD_U32(a1, 20);
   if ( !(v1 >> 28) )
     return sub_606C12E0();
-  v2 = *(_DWORD *)(ActorMgr__instance + 27180);
-  result = sub_60008598(ActorMgr__instance, 41, *(_DWORD *)(ActorMgr__instance + 27172));
+  v2 = FIELD_U32(ActorMgr__instance, 27180);
+  result = sub_60008598(ActorMgr__instance, 41, FIELD_U32(ActorMgr__instance, 27172));
   for ( i = result; result != v2; i = result )
   {
     if ( v1 >> 28 == *(_DWORD *)(*(_DWORD *)i + 20) >> 28 )

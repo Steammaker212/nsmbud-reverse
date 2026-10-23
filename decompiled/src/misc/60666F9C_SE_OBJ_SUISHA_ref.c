@@ -89,7 +89,7 @@ StateMethodExecuter *__fastcall SE_OBJ_SUISHA_ref(int a1)
   Vec2 out; // [sp+38h] [bp-58h] BYREF
   Vec3 position; // [sp+40h] [bp-50h] BYREF
 
-  if ( FIELD_U32(a1, 8228) && !*(_QWORD *)(EventMgr__instance + 16) )
+  if ( FIELD_U32(a1, 8228) && !FIELD_U64(EventMgr__instance, 16) )
     return StateMgr__changeState((StateMgr *)(a1 + 6084), (StateBase *)&dword_60CB6C54);
   v2 = FIELD_U8(a1, 8244);
   v3 = (unsigned int *)(a1 + 8236);

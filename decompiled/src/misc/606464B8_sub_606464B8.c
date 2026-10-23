@@ -30,7 +30,7 @@ float __fastcall sub_606464B8(int a1)
   if ( ((int (__fastcall *)(int, int *, int))loc_6063B9B8)(a1 + 7016, a5, a1 + 7068) == 1 )
     FIELD_U32(a1, 80) = v2;
   if ( FIELD_U32(a1, 7104)
-    && (*(_QWORD *)(EventMgr__instance + 16)
+    && (FIELD_U64(EventMgr__instance, 16)
       & sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540))) == 0 )
   {
     StateMgr__changeState((StateMgr *)(a1 + 6084), (StateBase *)&dword_60CB5E6C);

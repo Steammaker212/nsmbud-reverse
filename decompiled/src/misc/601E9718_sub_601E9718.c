@@ -48,7 +48,7 @@ int sub_601E9718()
   v12[10] = *(_DWORD *)(*(_DWORD *)sub_601693A0(dword_60C8B1E8) + 8);
   v1 = sub_601693A0(885);
   v3 = 9;
-  v4 = *(_DWORD *)(ActorMgr__instance + 27180);
+  v4 = FIELD_U32(ActorMgr__instance, 27180);
   while ( 1 )
   {
     v5 = *(_DWORD *)v1;

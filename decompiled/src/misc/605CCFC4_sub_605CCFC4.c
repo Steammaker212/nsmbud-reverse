@@ -18,8 +18,8 @@ int __fastcall sub_605CCFC4(int a1, int a2)
   v2 = FIELD_U8(a1, 29);
   if ( !FIELD_U8(a1, 29) )
     return sub_605CDC78(a1 + 648, a2);
-  v4 = *(_DWORD *)(ActorMgr__instance + 27180);
-  v5 = sub_60008598(ActorMgr__instance, 40, *(_DWORD *)(ActorMgr__instance + 27172));
+  v4 = FIELD_U32(ActorMgr__instance, 27180);
+  v5 = sub_60008598(ActorMgr__instance, 40, FIELD_U32(ActorMgr__instance, 27172));
   for ( i = 0; v5 != v4; v5 = sub_60008598(ActorMgr__instance, 40, v5 + 4) )
   {
     if ( *(unsigned __int8 *)(*(_DWORD *)v5 + 29) == v2 )

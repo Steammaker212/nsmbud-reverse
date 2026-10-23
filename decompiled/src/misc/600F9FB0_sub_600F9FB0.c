@@ -42,7 +42,7 @@ int __fastcall sub_600F9FB0(int a1)
   int v32; // [sp+4h] [bp-6Ch]
   ActorBuildInfo v33[2]; // [sp+8h] [bp-68h] BYREF
 
-  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 736, *(_DWORD *)(ActorMgr__instance + 27172));
+  v2 = *(_DWORD *)sub_60008598(ActorMgr__instance, 736, FIELD_U32(ActorMgr__instance, 27172));
   if ( ((unsigned int)&dword_60C7B364 & ~(1611636732 << v3) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B364) )
   {
     StageActor_RTTI = (int)&off_60BC0098;

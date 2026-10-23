@@ -32,7 +32,7 @@ void __fastcall sub_60082364(_DWORD *a1)
         (*(void (__fastcall **)(int, int *))(*(_DWORD *)v4 + 192))(v4, &dword_60C85E94);
     }
     (*(void (__fastcall **)(_DWORD *, int *))(*a1 + 192))(a1, &dword_60C84148);
-    v5 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, *(_DWORD *)(ActorMgr__instance + 27172));
+    v5 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, FIELD_U32(ActorMgr__instance, 27172));
     if ( ((unsigned int)&dword_60C81738 & ~(1611146356 << v6) & 1) == 0 && _cxa_guard_acquire(&dword_60C81738) )
     {
       dword_60C81734 = (int)&off_60BC1FA8;

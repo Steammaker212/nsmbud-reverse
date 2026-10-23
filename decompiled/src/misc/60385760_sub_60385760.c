@@ -16,8 +16,8 @@ int __fastcall sub_60385760(int a1)
   int (__fastcall ***v5)(_DWORD, int *); // r7
   unsigned int v6; // r1
 
-  v2 = sub_60008598(ActorMgr__instance, 392, *(_DWORD *)(ActorMgr__instance + 27172));
-  result = *(_DWORD *)(ActorMgr__instance + 27180);
+  v2 = sub_60008598(ActorMgr__instance, 392, FIELD_U32(ActorMgr__instance, 27172));
+  result = FIELD_U32(ActorMgr__instance, 27180);
   if ( v2 != result )
   {
     while ( 1 )
@@ -34,7 +34,7 @@ int __fastcall sub_60385760(int a1)
           break;
       }
       v2 = sub_60008598(ActorMgr__instance, 392, v2 + 4);
-      result = *(_DWORD *)(ActorMgr__instance + 27180);
+      result = FIELD_U32(ActorMgr__instance, 27180);
       if ( v2 == result )
         return result;
     }

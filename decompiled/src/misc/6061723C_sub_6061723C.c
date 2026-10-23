@@ -29,8 +29,8 @@ int __fastcall sub_6061723C(int a1)
       sub_606C8B5C(a1);
   }
   v6 = sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540));
-  result = *(_DWORD *)(EventMgr__instance + 16) & v6
-         | ((*(_QWORD *)(EventMgr__instance + 16) & (unsigned __int64)v6) >> 32);
+  result = FIELD_U32(EventMgr__instance, 16) & v6
+         | ((FIELD_U64(EventMgr__instance, 16) & (unsigned __int64)v6) >> 32);
   if ( result )
   {
     v8 = FIELD_U32(a1, 7184);

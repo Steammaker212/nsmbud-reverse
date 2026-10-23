@@ -43,7 +43,7 @@ int __fastcall sub_6046E5D4(int (__fastcall **a1)(_DWORD))
   v4 = (int (__fastcall ****)(_DWORD, int *))sub_60008D1C(
                                                ActorMgr__instance + 27168,
                                                v18,
-                                               *(_DWORD *)(ActorMgr__instance + 27172));
+                                               FIELD_U32(ActorMgr__instance, 27172));
   v7 = *(int (__fastcall *****)(_DWORD, int *))(v2 + 27180);
   v6 = (_DWORD *)(v2 + 27180);
   if ( v4 != v7 )

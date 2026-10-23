@@ -24,7 +24,7 @@ int *__fastcall sub_6059EF1C(int a1)
   result = (int *)sub_60008D1C(
                     ActorMgr__instance + 27168,
                     (int (__fastcall ***)(_DWORD))&v7,
-                    *(_DWORD *)(ActorMgr__instance + 27172));
+                    FIELD_U32(ActorMgr__instance, 27172));
   v5 = *result;
   if ( *result )
   {

@@ -14,7 +14,7 @@ void __fastcall sub_606DB1A8(_DWORD *a1)
   char v3; // r12
   int v4; // r4
 
-  for ( i = (int *)sub_60008598(ActorMgr__instance, 808, *(_DWORD *)(ActorMgr__instance + 27172));
+  for ( i = (int *)sub_60008598(ActorMgr__instance, 808, FIELD_U32(ActorMgr__instance, 27172));
         ;
         i = (int *)sub_60008598(ActorMgr__instance, 808, (int)(i + 1)) )
   {

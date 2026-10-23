@@ -16,8 +16,8 @@ int __fastcall sub_605FE180(int a1)
   int (__fastcall ***v5)(_DWORD, int *); // r4
   int result; // r0
 
-  v2 = *(_DWORD *)(ActorMgr__instance + 27180);
-  v3 = sub_60008598(ActorMgr__instance, 52, *(_DWORD *)(ActorMgr__instance + 27172));
+  v2 = FIELD_U32(ActorMgr__instance, 27180);
+  v3 = sub_60008598(ActorMgr__instance, 52, FIELD_U32(ActorMgr__instance, 27172));
   if ( v3 == v2 )
   {
 LABEL_4:

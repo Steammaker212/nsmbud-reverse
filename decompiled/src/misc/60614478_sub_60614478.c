@@ -69,7 +69,7 @@ LABEL_47:
       FIELD_U8(v4, 19) = 1;
 LABEL_48:
       ++v2;
-      result = *(_DWORD *)(ActorMgr__instance + 27180);
+      result = FIELD_U32(ActorMgr__instance, 27180);
       if ( v2 == (int *)result )
         return result;
     }

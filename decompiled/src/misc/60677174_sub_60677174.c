@@ -23,7 +23,7 @@ int __fastcall sub_60677174(_BYTE *a1)
   {
     v5 = sub_6072A6DC(EventMgr__instance, (unsigned __int8)a1[539], (unsigned __int8)a1[540]);
     v6 = EventMgr__instance;
-    v7 = (*(_QWORD *)(EventMgr__instance + 16) & v5) == 0;
+    v7 = (FIELD_U64(EventMgr__instance, 16) & v5) == 0;
     v8 = a1 + 6104;
     if ( v7 )
     {
@@ -41,8 +41,8 @@ int __fastcall sub_60677174(_BYTE *a1)
   {
     v3 = sub_6072A6DC(EventMgr__instance, (unsigned __int8)a1[539], (unsigned __int8)a1[540]);
     v4 = EventMgr__instance;
-    result = *(_DWORD *)(EventMgr__instance + 16) & v3
-           | ((*(_QWORD *)(EventMgr__instance + 16) & (unsigned __int64)v3) >> 32);
+    result = FIELD_U32(EventMgr__instance, 16) & v3
+           | ((FIELD_U64(EventMgr__instance, 16) & (unsigned __int64)v3) >> 32);
     if ( result )
     {
       a1[6104] = 1;

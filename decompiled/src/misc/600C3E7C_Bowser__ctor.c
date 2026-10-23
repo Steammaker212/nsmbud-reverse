@@ -1,0 +1,201 @@
+/* Bowser__ctor
+ * address: 0x600C3E7C   size: 1692   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+Enemy *__fastcall Bowser__ctor(Enemy *a1, ActorBuildInfo *a2)
+{
+  float x; // r0
+  float y; // r1
+  int v6; // r1
+  int v7; // r2
+  int v8; // r3
+
+  BossBase__ctor((BossBase *)a1, a2);
+  FIELD_U32(a1, 0x0)._._._.vtable = (int)off_60BCA3E4;
+  *(_DWORD *)&a1[1]._._.collisionMgr[144] = LoadResource(ResourceMgrRelated_instance, &dword_60C83C30);
+  *(_DWORD *)&a1[1]._._.collisionMgr[148] = LoadResource(ResourceMgrRelated_instance, &dword_60C83C38);
+  *(_DWORD *)&a1[1]._._.collisionMgr[152] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[156] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[160] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[164] = -1;
+  *(_DWORD *)&a1[1]._._.collisionMgr[168] = -1;
+  *(_DWORD *)&a1[1]._._.collisionMgr[172] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[176] = 1;
+  *(_DWORD *)&a1[1]._._.collisionMgr[180] = 0;
+  a1[1]._._.collisionMgr[184] = 1;
+  *(_DWORD *)&a1[1]._._.collisionMgr[200] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[196] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[192] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[188] = 0;
+  *(_WORD *)&a1[1]._._.collisionMgr[204] = 1;
+  a1[1]._._.collisionMgr[206] = 0;
+  x = FIELD_U32(a2, 0x10).x;
+  y = FIELD_U32(a2, 0x10).y;
+  *(float *)&a1[1]._._.collisionMgr[216] = FIELD_U32(a2, 0x10).z;
+  *(float *)&a1[1]._._.collisionMgr[212] = y;
+  *(float *)&a1[1]._._.collisionMgr[208] = x;
+  *(_DWORD *)&a1[1]._._.collisionMgr[220] = 0;
+  sub_602F2C84(&a1[1]._._.collisionMgr[224]);
+  *(_DWORD *)&a1[1]._._.collisionMgr[788] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[792] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[804] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[800] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[796] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[812] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[808] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[816] = &ActorScaler_vtable;
+  *(_DWORD *)&a1[1]._._.collisionMgr[820] = 1065353216;
+  *(_DWORD *)&a1[1]._._.collisionMgr[824] = 1065353216;
+  *(_DWORD *)&a1[1]._._.collisionMgr[828] = 1065353216;
+  *(_DWORD *)&a1[1]._._.collisionMgr[832] = 1065353216;
+  *(_DWORD *)&a1[1]._._.collisionMgr[836] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[840] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[844] = a1;
+  v6 = dword_60C83CB8;
+  v7 = dword_60C83CBC;
+  v8 = dword_60C83CC0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[860] = dword_60C83CC4;
+  *(_DWORD *)&a1[1]._._.collisionMgr[856] = v8;
+  *(_DWORD *)&a1[1]._._.collisionMgr[852] = v7;
+  *(_DWORD *)&a1[1]._._.collisionMgr[848] = v6;
+  *(_DWORD *)&a1[1]._._.collisionMgr[864] = -1;
+  EffectWrapper_ctor((EffectWrapper *)&a1[1]._._.collisionMgr[868]);
+  *(_DWORD *)&a1[1]._._.collisionMgr[868] = off_60BC1450;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1024] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1028] = -1;
+  EffectData_ctor((EffectData *)&a1[1]._._.collisionMgr[972]);
+  *(_DWORD *)&a1[1]._._.collisionMgr[1036] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1048] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1044] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1040] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1060] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1056] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1052] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1064] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1068] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1080] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1076] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1072] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1092] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1088] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1084] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1096] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1100] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1112] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1108] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1104] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1124] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1120] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1116] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1128] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1132] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1144] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1140] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1136] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1156] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1152] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1148] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1160] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1164] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1176] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1172] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1168] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1188] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1184] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1180] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1192] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1196] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1208] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1204] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1200] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1220] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1216] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1212] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1224] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1228] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1240] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1236] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1232] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1252] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1248] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1244] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1256] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1260] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1272] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1268] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1264] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1284] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1280] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1276] = 0;
+  memset(&a1[1]._._.collisionMgr[1288], 0, 1524);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._.collisionMgr[1292]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._.collisionMgr[1596]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._.collisionMgr[1900]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._.collisionMgr[2204]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._.collisionMgr[2508]);
+  *(_DWORD *)&a1[1]._._.collisionMgr[2812] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[2816] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1060] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1056] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1052] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1048] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1044] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1040] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1064] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1092] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1088] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1084] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1080] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1076] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1072] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1096] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1124] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1120] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1116] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1112] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1108] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1104] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1128] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1156] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1152] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1148] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1144] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1140] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1136] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1160] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1188] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1184] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1180] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1176] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1172] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1168] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1192] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1220] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1216] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1212] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1208] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1204] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1200] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1224] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1252] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1248] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1244] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1240] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1236] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1232] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1256] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1288] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1284] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1280] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1276] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1272] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1268] = 0;
+  *(_DWORD *)&a1[1]._._.collisionMgr[1264] = 0;
+  return a1;
+}

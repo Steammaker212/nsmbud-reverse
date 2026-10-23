@@ -35,7 +35,7 @@ int *__fastcall sub_604E592C(int a1)
   v4 = &dword_60AF2D88;
   if ( FIELD_U8(dword_60CC6D8C, 17) )
     v4 = &dword_60AF2D8C;
-  v5 = (int *)sub_60008598(ActorMgr__instance, *v4, *(_DWORD *)(ActorMgr__instance + 27172));
+  v5 = (int *)sub_60008598(ActorMgr__instance, *v4, FIELD_U32(ActorMgr__instance, 27172));
   if ( v5 )
   {
     v7 = *v5;
@@ -69,7 +69,7 @@ int *__fastcall sub_604E592C(int a1)
           v13 = &dword_60AF2D88;
           if ( FIELD_U8(dword_60CC6D8C, 17) )
             v13 = &dword_60AF2D8C;
-          v12 = sub_60008598(ActorMgr__instance, *v13, *(_DWORD *)(ActorMgr__instance + 27172));
+          v12 = sub_60008598(ActorMgr__instance, *v13, FIELD_U32(ActorMgr__instance, 27172));
           if ( v12 )
           {
             v15 = *(_DWORD *)v12;

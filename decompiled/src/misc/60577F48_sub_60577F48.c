@@ -108,7 +108,7 @@ int __fastcall sub_60577F48(int a1)
       HIDWORD(v12) = 1 << v11;
       LODWORD(v12) = 0;
     }
-    if ( (*(_QWORD *)(EventMgr__instance + 16) & v12) == 0 )
+    if ( (FIELD_U64(EventMgr__instance, 16) & v12) == 0 )
     {
       FIELD_U8(a1, 535) = 0;
       (*(void (__fastcall **)(int, int *))(*(_DWORD *)a1 + 192))(a1, &dword_60CAEC7C);

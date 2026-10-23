@@ -10,5 +10,5 @@
 
 int __fastcall sub_60603854(int a1)
 {
-  return sub_6060426C(a1, (FIELD_U64(a1, 6104) & *(_QWORD *)(EventMgr__instance + 16)) == FIELD_U64(a1, 6104));
+  return sub_6060426C(a1, (FIELD_U64(a1, 6104) & FIELD_U64(EventMgr__instance, 16)) == FIELD_U64(a1, 6104));
 }

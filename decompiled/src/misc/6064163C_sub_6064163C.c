@@ -86,7 +86,7 @@ int __fastcall sub_6064163C(int a1)
   FIELD_U32(a1, 6992) = FIELD_U32(a1, 116);
   if ( v9 )
   {
-    if ( *(_QWORD *)(EventMgr__instance + 16) )
+    if ( FIELD_U64(EventMgr__instance, 16) )
     {
       ColliderMgr_add(ColliderMgr_instance, (ColliderBase *)(a1 + 6360));
       sub_6063938C(a1 + 6952);

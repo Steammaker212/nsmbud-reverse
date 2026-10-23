@@ -26,7 +26,7 @@ int sub_601D1A24()
   sub_601905DC(v10);
   v10[0] = 84;
   v10[1] = sub_601916C8(dword_60C8996C, 84);
-  v0 = (_DWORD **)sub_60008598(ActorMgr__instance, 895, *(_DWORD *)(ActorMgr__instance + 27172));
+  v0 = (_DWORD **)sub_60008598(ActorMgr__instance, 895, FIELD_U32(ActorMgr__instance, 27172));
   v2 = *(_DWORD ***)(ActorMgr__instance + 27180);
   if ( v0 != v2 )
   {

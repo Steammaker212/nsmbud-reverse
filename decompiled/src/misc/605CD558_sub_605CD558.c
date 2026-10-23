@@ -16,14 +16,14 @@ int __fastcall sub_605CD558(int a1)
   if ( FIELD_U8(a1, 103) )
   {
     if ( **(_DWORD **)(a1 + 36) == FIELD_U32(a1, 88)
-      && (*(_QWORD *)(EventMgr__instance + 16) & FIELD_U64(a1, 48)) != 0 )
+      && (FIELD_U64(EventMgr__instance, 16) & FIELD_U64(a1, 48)) != 0 )
     {
       FIELD_U32(a1, 84) += byte_60AFE3F4[FIELD_U8(a1, 106)] * FIELD_U32(a1, 76);
       v2 = &dword_60CB0FA4;
       return (int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v2);
     }
   }
-  else if ( (*(_QWORD *)(EventMgr__instance + 16) & FIELD_U64(a1, 48)) == 0 )
+  else if ( (FIELD_U64(EventMgr__instance, 16) & FIELD_U64(a1, 48)) == 0 )
   {
     FIELD_U8(a1, 95) = 1;
     FIELD_U8(a1, 98) = 0;

@@ -29,7 +29,7 @@ int __fastcall sub_607A9790(int a1)
       v5 = *(int (__fastcall ****)(_DWORD, int *))sub_60008598(
                                                     ActorMgr__instance,
                                                     796,
-                                                    *(_DWORD *)(ActorMgr__instance + 27172));
+                                                    FIELD_U32(ActorMgr__instance, 27172));
       if ( ((unsigned int)&dword_60CC4B78 & ~(1618647060 << v6) & 1) == 0 && _cxa_guard_acquire(&dword_60CC4B78) )
       {
         dword_60CC4B74 = (int)&off_60BC00BC;

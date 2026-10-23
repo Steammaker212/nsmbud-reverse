@@ -81,7 +81,7 @@ int __fastcall sub_605A3F40(int result)
   v15 = 1 << v13;
   if ( v11 >= 0 )
     v15 = 0;
-  if ( *(_DWORD *)(EventMgr__instance + 16) & v15 | *(_DWORD *)(EventMgr__instance + 20) & v14 )
+  if ( FIELD_U32(EventMgr__instance, 16) & v15 | FIELD_U32(EventMgr__instance, 20) & v14 )
   {
     if ( v5 == 1 )
       return (*(int (__fastcall **)(int, int *))(*(_DWORD *)result + 192))(result, &dword_60CAFF88);

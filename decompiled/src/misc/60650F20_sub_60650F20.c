@@ -14,8 +14,8 @@ int __fastcall sub_60650F20(int a1)
   int result; // r0
 
   v2 = sub_6072A6DC(EventMgr__instance, FIELD_U8(a1, 539), FIELD_U8(a1, 540));
-  result = *(_DWORD *)(EventMgr__instance + 16) & v2
-         | ((*(_QWORD *)(EventMgr__instance + 16) & (unsigned __int64)v2) >> 32);
+  result = FIELD_U32(EventMgr__instance, 16) & v2
+         | ((FIELD_U64(EventMgr__instance, 16) & (unsigned __int64)v2) >> 32);
   if ( result )
   {
     sub_60639354(a1 + 6812);

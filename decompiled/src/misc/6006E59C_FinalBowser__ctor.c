@@ -1,0 +1,144 @@
+/* FinalBowser__ctor
+ * address: 0x6006E59C   size: 1228   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+BossBase *__fastcall FinalBowser__ctor(BossBase *a1, ActorBuildInfo *a2)
+{
+  BossBase__ctor(a1, a2);
+  FIELD_U32(a1, 0x0)._._._._.vtable = (int)off_60BC68D0;
+  sead_IDisposer_ctor((sead_IDisposer *)&a1[1]);
+  a1[1]._._._._._.vtable = (int)off_60BC6E38;
+  a1[1]._._._._._.field_20.previous = 0;
+  *(_DWORD *)&a1[1]._._._._._.movementId = 0;
+  a1[1]._._._._._.settigns2 = 0;
+  a1[1]._._._._._.settings1 = 0;
+  *(_DWORD *)&a1[1]._._._._._.field_10 = 0;
+  a1[1]._._._._._.field_20.next = (sead_ListNode *)1028443341;
+  a1[1]._._._._._.childCount = 1028443341;
+  a1[1]._._._._._.field_2C = 1028443341;
+  a1[1]._._._._._.field_30 = 1053609165;
+  a1[1]._._._._._.field_34 = 1;
+  memset(&a1[1]._._._._.aCollider.field_5C, 0, 248);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._._.field_210);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[184]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[488]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[792]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[1096]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[1400]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[1704]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[2008]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[2312]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[2616]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[2920]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[3224]);
+  ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._.collisionMgr[3528]);
+  sub_6006EA78(&a1[1]._._._.collisionMgr[3832]);
+  CircularCollider_ctor((ColliderBase *)&a1[3]._._._.collisionMgr[1972]);
+  CircularCollider_ctor((ColliderBase *)&a1[3]._._._.collisionMgr[2372]);
+  RectCollider_ctor((RectCollider *)&a1[3]._._._.collisionMgr[2772]);
+  *(_DWORD *)&a1[3]._._._.collisionMgr[2772] = off_60BC30D8;
+  a1[3]._._._.collisionMgr[3428] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3432] = 8;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3436] = 8;
+  *(_WORD *)&a1[3]._._._.collisionMgr[3440] = 0;
+  a1[3]._._._.collisionMgr[3442] = 1;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3456] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3452] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3448] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3444] = 0;
+  EffectWrapper_ctor((EffectWrapper *)&a1[3]._._._.collisionMgr[3460]);
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3460] = off_60BC1450;
+  EffectWrapper_ctor((EffectWrapper *)&a1[3]._._._.collisionMgr[3564]);
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3564] = off_60BC1450;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3668] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3724] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3728] = -1;
+  EffectData_ctor((EffectData *)&a1[3]._._._.collisionMgr[3672]);
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3788] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3792] = -1;
+  EffectData_ctor((EffectData *)&a1[3]._._._.collisionMgr[3736]);
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3852] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3856] = -1;
+  EffectData_ctor((EffectData *)&a1[3]._._._.collisionMgr[3800]);
+  EffectWrapper_ctor((EffectWrapper *)&a1[3]._._._.collisionMgr[3864]);
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3864] = off_60BC1450;
+  a1[3]._._._.collisionMgr[3968] = 0;
+  EffectWrapper_ctor((EffectWrapper *)&a1[3]._._._.collisionMgr[3972]);
+  *(_DWORD *)&a1[3]._._._.collisionMgr[3972] = off_60BC1450;
+  EffectWrapper_ctor((EffectWrapper *)&a1[3]._._._.collisionMgr[4076]);
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4076] = off_60BC1450;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4180] = 1;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4200] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4196] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4192] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4188] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4184] = 0;
+  sub_602F2C84(&a1[3]._._._.collisionMgr[4204]);
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4768] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4772] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4776] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4780] = 1065353216;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4784] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4788] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4792] = 1065353216;
+  a1[1]._._._._.direction = 0;
+  a1[1]._._._._._.field_4C = 0;
+  a1[1]._._._._._.field_48 = 0;
+  a1[1]._._._._._.field_44 = 0;
+  a1[1]._._._._._.field_40 = 0;
+  a1[1]._._._._._.field_3C = 0;
+  a1[1]._._._._.position.x = 0.0;
+  a1[1]._._._._.xAcceleration = 0.0;
+  a1[1]._._._._.field_64 = 0.0;
+  a1[1]._._._._.field_60 = 0;
+  a1[1]._._._._.field_5C = 0;
+  a1[1]._._._._.field_58 = 0;
+  a1[1]._._._._.maxSpeed.y = 0.0;
+  a1[1]._._._._.maxSpeed.x = 0.0;
+  a1[1]._._._._.speed.z = 0.0;
+  a1[1]._._._._.speed.y = 0.0;
+  a1[1]._._._._.speed.x = 0.0;
+  a1[1]._._._._.position.z = 0.0;
+  a1[1]._._._._.rotation.z = 0;
+  a1[1]._._._._.rotation.y = 0;
+  a1[1]._._._._.rotation.x = 0;
+  a1[1]._._._._.scale.z = 0.0;
+  a1[1]._._._._.scale.y = 0.0;
+  a1[1]._._._._.scale.x = 0.0;
+  a1[1]._._._._.aCollider._.containingHeap = 0;
+  a1[1]._._._._.aCollider._.vtable = 0;
+  a1[1]._._._._.field_B8 = 0;
+  a1[1]._._._._.field_B4 = 0;
+  a1[1]._._._._.field_B0 = 0;
+  a1[1]._._._._.field_AC = 0;
+  a1[1]._._._._.aCollider.createNode.next = 0;
+  a1[1]._._._._.aCollider.createNode.owner = 0;
+  a1[1]._._._._.aCollider.activeNode.prev = 0;
+  a1[1]._._._._.aCollider.activeNode.next = 0;
+  a1[1]._._._._.aCollider.activeNode.owner = 0;
+  a1[1]._._._._.aCollider._.field_C = 0;
+  a1[1]._._._._.aCollider.node4.prev = 0;
+  a1[1]._._._._.aCollider.node4.next = 0;
+  a1[1]._._._._.aCollider.node4.owner = 0;
+  a1[1]._._._._.aCollider.node3.prev = 0;
+  a1[1]._._._._.aCollider.node3.next = 0;
+  a1[1]._._._._.aCollider.node3.owner = 0;
+  a1[1]._._._._.aCollider.field_58 = 0;
+  a1[1]._._._._.aCollider.field_54 = 0;
+  a1[1]._._._._.aCollider.field_50 = 0;
+  a1[1]._._._._.aCollider.field_4C = 0;
+  a1[1]._._._._.aCollider.field_48 = 0;
+  a1[1]._._._._.aCollider.field_44 = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4808] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4804] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4800] = 0;
+  *(_DWORD *)&a1[3]._._._.collisionMgr[4796] = 0;
+  sub_60002B50((int)&a1[1]);
+  return a1;
+}

@@ -47,7 +47,7 @@ int __fastcall sub_605A4244(int result)
     v6 = 1 << v5;
     v7 = 0;
   }
-  if ( !(*(_DWORD *)(EventMgr__instance + 16) & v7 | *(_DWORD *)(EventMgr__instance + 20) & v6) )
+  if ( !(FIELD_U32(EventMgr__instance, 16) & v7 | FIELD_U32(EventMgr__instance, 20) & v6) )
     return (*(int (__fastcall **)(int, int *))(*(_DWORD *)result + 192))(result, &dword_60CAFFC8);
   v8 = FIELD_U16(result, 6888);
   v9 = v8 == 0;

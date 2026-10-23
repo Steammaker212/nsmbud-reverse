@@ -10,6 +10,14 @@
 #define NSMBUDX_LAYOUT_ACTORBUILDINFO
 typedef struct ActorBuildInfo { unsigned char _unknown[]; } ActorBuildInfo;
 #endif
+#ifndef NSMBUDX_LAYOUT_COLLIDERBASE
+#define NSMBUDX_LAYOUT_COLLIDERBASE
+typedef struct ColliderBase { unsigned char _unknown[]; } ColliderBase;
+#endif
+#ifndef NSMBUDX_LAYOUT_SEAD_LISTNODE
+#define NSMBUDX_LAYOUT_SEAD_LISTNODE
+typedef struct sead_ListNode { unsigned char _unknown[]; } sead_ListNode;
+#endif
 
 
 #endif /* NSMBUDX_BLOCKS_H */

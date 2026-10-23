@@ -81,8 +81,8 @@ signed int __fastcall TileGod_onCreate(int a1)
       v10 = 1 << v9;
       v11 = 0;
     }
-    v12 = *(_DWORD *)(EventMgr__instance + 20) & v10;
-    v13 = *(_DWORD *)(EventMgr__instance + 16) & v11;
+    v12 = FIELD_U32(EventMgr__instance, 20) & v10;
+    v13 = FIELD_U32(EventMgr__instance, 16) & v11;
   }
   else
   {
@@ -100,8 +100,8 @@ signed int __fastcall TileGod_onCreate(int a1)
       v16 = 1 << v15;
       v17 = 0;
     }
-    v12 |= *(_DWORD *)(EventMgr__instance + 20) & v16;
-    v13 |= *(_DWORD *)(EventMgr__instance + 16) & v17;
+    v12 |= FIELD_U32(EventMgr__instance, 20) & v16;
+    v13 |= FIELD_U32(EventMgr__instance, 16) & v17;
   }
   FIELD_U32(a1, 6104) = v13;
   FIELD_U32(a1, 6108) = v12;

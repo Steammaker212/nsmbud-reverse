@@ -43,7 +43,7 @@ int __fastcall SE_OBJ_COIN_POP_UP_ref(int a1)
     v4 = 1 << v3;
     v5 = 0;
   }
-  result = v5 & *(_DWORD *)(EventMgr__instance + 16) | v4 & *(_DWORD *)(EventMgr__instance + 20);
+  result = v5 & FIELD_U32(EventMgr__instance, 16) | v4 & FIELD_U32(EventMgr__instance, 20);
   if ( result )
   {
     if ( FIELD_U8(a1, 6113) )

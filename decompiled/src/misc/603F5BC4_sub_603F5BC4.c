@@ -33,7 +33,7 @@ int __fastcall sub_603F5BC4(int a1, float *a2, float *a3, float *a4, float *a5)
   char v28; // r12
   int v29; // r0
 
-  v8 = (int *)sub_60008598(ActorMgr__instance, 440, *(_DWORD *)(ActorMgr__instance + 27172));
+  v8 = (int *)sub_60008598(ActorMgr__instance, 440, FIELD_U32(ActorMgr__instance, 27172));
   v9 = *v8;
   if ( ((unsigned int)&dword_60C99D90 & ~(1614765076 << v10) & 1) == 0 && _cxa_guard_acquire(&dword_60C99D90) )
   {

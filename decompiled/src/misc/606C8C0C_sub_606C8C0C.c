@@ -27,7 +27,7 @@ int __fastcall sub_606C8C0C(int a1)
   v2 = (int *)sub_60008598(
                 ActorMgr__instance,
                 *((_DWORD *)&unk_60CBAD00 + FIELD_U32(a1, 7076) + 3),
-                *(_DWORD *)(ActorMgr__instance + 27172));
+                FIELD_U32(ActorMgr__instance, 27172));
   result = 0;
   if ( v2 != *(int **)(ActorMgr__instance + 27180) )
   {

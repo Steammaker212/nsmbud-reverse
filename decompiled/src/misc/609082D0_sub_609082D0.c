@@ -13,7 +13,7 @@ int __fastcall sub_609082D0(_DWORD *a1)
   int v2; // r5
   int CurrentCoreNumber; // r0
 
-  nn__os__SetTlsValue(*(_DWORD *)(sead__ThreadMgr__sInstance + 72), a1);
+  nn__os__SetTlsValue(FIELD_U32(sead__ThreadMgr__sInstance, 72), a1);
   if ( (unsigned int)sub_60911400(a1 + 31) <= 1 )
   {
     v2 = dword_60CCFC58;

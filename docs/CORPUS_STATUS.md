@@ -32,34 +32,43 @@ A function keeps its `sub_` name until evidence arrives. There is no
 
 ## Decompiled C
 
-Every function with a layout-independent body is emitted as readable C:
+Every function whose body can be expressed without a struct layout is emitted as
+readable C:
 
 | Measure | Value |
 | --- | --- |
-| Functions with layout-independent bodies | 44,054 |
-| Excluded: bodies that dereference named struct members | 3,099 |
-| Compiling clean, `clang -std=gnu89` | 36,720 (83.35%) |
+| Functions in the corpus | 46,831 |
+| Compiling clean, `clang -std=gnu89` | 37,492 (80.06%) |
+| Excluded: no recoverable body | 322 |
 
-The 3,099 excluded functions are not missing — they exist in the database and
-their Hex-Rays output is in `_work/export/all_funcions.jsonl`. They are held back
-from the C corpus because their bodies use `->` on a struct whose layout has not
-been recovered, and emitting them with a guessed layout would produce C that
-compiles but is wrong. `data/recovered/member_evidence.json` records what *is*
-known about those structs: 57 classes, 887 member observations, 524 of them real
-names.
+The corpus grew from 44,054 to 46,831 units by recovering the functions that
+were previously held back for using `->`. Those arrows were the one thing
+blocking them, and the layouts were in the database all along: `export_types.py`
+reads the local type library and gets 176 types and 1,294 members at exact bit
+offsets (`StageActor` 60 members, `ColliderBase` 58, `FireballBase` 40).
+
+`rewrite_arrows.py` replaces each `base->member` with `FIELD_U32(base, 0xNN)`,
+the same macro the rest of the corpus uses for offset access. Measured coverage:
+3,055 of 3,097 arrow-using functions (98.6%) resolve completely, 11,935 of
+12,006 accesses (99.4%). No file in the corpus contains `->` any more.
+
+The clean percentage is lower than the previous 83.35% because the newly
+included functions are the harder ones — but the absolute number of compiling
+functions rose from 36,720 to 37,492, and 46,831 functions are now present as
+readable C rather than 44,054.
 
 ## What is still not decompiled to a clean compile
 
-The remaining 7,322 functions fail for reasons that are understood and listed
-here rather than hidden:
+The remaining 9,339 units fail for reasons that are understood and listed here
+rather than hidden:
 
-| Category | Count (per 1,500 sampled) | Cause |
-| --- | --- | --- |
-| Array assigned as scalar | 41 | A global that the decompiler treats as an array is assigned a value. Resolved by scalar detection; residual cases remain. |
-| Conflicting types | 22 | Two database functions share a name with different signatures. |
-| Incomplete type | 16 | A type the decompiler named but never defined. |
-| Not assignable | 11 | An lvalue the decompiler invented. |
-| Undeclared identifier | 10 | A name only reachable through a struct the corpus does not define. |
+| Category | Cause |
+| --- | --- |
+| Array assigned as scalar | A global the decompiler treats as an array is assigned a value. |
+| Conflicting types | Two database functions share a name with different signatures. |
+| Incomplete type | A type the decompiler named but never defined. |
+| Not assignable | An lvalue the decompiler invented. |
+| Undeclared identifier | A name only reachable through a type the corpus does not define. |
 
 ## Provenance
 

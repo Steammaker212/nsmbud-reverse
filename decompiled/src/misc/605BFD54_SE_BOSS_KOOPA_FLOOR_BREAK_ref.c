@@ -34,7 +34,7 @@ unsigned int __fastcall SE_BOSS_KOOPA_FLOOR_BREAK_ref(int a1)
   }
   else
   {
-    v3 = *(_DWORD *)sub_60008598(ActorMgr__instance, 349, *(_DWORD *)(ActorMgr__instance + 27172));
+    v3 = *(_DWORD *)sub_60008598(ActorMgr__instance, 349, FIELD_U32(ActorMgr__instance, 27172));
     if ( ((unsigned int)dword_60CB0990 & ~(1616641536 << v4) & 1) == 0 && _cxa_guard_acquire(dword_60CB0990) )
     {
       dword_60CB098C = (int)&off_60C09CE0;
@@ -70,7 +70,7 @@ unsigned int __fastcall SE_BOSS_KOOPA_FLOOR_BREAK_ref(int a1)
     v9 = 1 << v8;
     v10 = 0;
   }
-  result = v10 & *(_DWORD *)(EventMgr__instance + 16) | v9 & *(_DWORD *)(EventMgr__instance + 20);
+  result = v10 & FIELD_U32(EventMgr__instance, 16) | v9 & FIELD_U32(EventMgr__instance, 20);
   if ( result )
     return (*(int (__fastcall **)(int, void *))(*(_DWORD *)a1 + 192))(a1, &unk_60CB0944);
   return result;

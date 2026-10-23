@@ -12,7 +12,7 @@ int __fastcall sub_605CD420(int a1)
 {
   int result; // r0
 
-  if ( (*(_QWORD *)(EventMgr__instance + 16) & FIELD_U64(a1, 48)) != 0 )
+  if ( (FIELD_U64(EventMgr__instance, 16) & FIELD_U64(a1, 48)) != 0 )
     return (int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)&dword_60CB0FA4);
   result = FIELD_U8(a1, 92);
   if ( !FIELD_U8(a1, 92) )

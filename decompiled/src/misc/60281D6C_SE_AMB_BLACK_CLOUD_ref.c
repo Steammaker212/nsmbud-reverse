@@ -503,7 +503,7 @@ LABEL_54:
     v100 = a1;
     if ( (FIELD_U8(a1, 21) & 0xF0) != 0 || FIELD_F32(a1, 108) >= (float)(v127[28] + -600.0) )
       goto LABEL_97;
-    v101 = (int *)sub_60008598(ActorMgr__instance, 180, *(_DWORD *)(ActorMgr__instance + 27172));
+    v101 = (int *)sub_60008598(ActorMgr__instance, 180, FIELD_U32(ActorMgr__instance, 27172));
     v103 = *(int **)(ActorMgr__instance + 27180);
     v104 = v101 == v103;
     if ( v101 != v103 )

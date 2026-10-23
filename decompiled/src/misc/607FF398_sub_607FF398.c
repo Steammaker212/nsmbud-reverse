@@ -27,7 +27,7 @@ _BYTE *__fastcall sub_607FF398(_BYTE *result)
         HIDWORD(v3) = 1 << v2;
         LODWORD(v3) = 0;
       }
-      if ( (*(_QWORD *)(EventMgr__instance + 16) & v3) != 0 )
+      if ( (FIELD_U64(EventMgr__instance, 16) & v3) != 0 )
         result[1] = 1;
     }
     else

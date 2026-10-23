@@ -1,0 +1,10294 @@
+{
+ "types": [
+  {
+   "name": "__n64",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "__n128",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "int8x8_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "uint8x8_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "int16x4_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "int32x2_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "uint16x4_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "uint32x2_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "int8x16_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "int16x8_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "int32x4_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "int64x2_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "uint8x16_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "uint16x8_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "uint32x4_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "uint64x2_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "poly8x8_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "poly16x4_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "poly16x8_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "poly8x16_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "float32x2_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "float32x4_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "float64x2_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "poly128_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "Profile",
+   "size": 24,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "void *"
+    },
+    {
+     "name": "buildFunction",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "void *"
+    },
+    {
+     "name": "id",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "actorInfo",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "ActorInfo *"
+    },
+    {
+     "name": "hasResourceLoaded",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "flags",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "Actor",
+   "size": 80,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "heap",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "id",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "profile",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "Profile *"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_11",
+     "offset": 17,
+     "bit_offset": 136,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_12",
+     "offset": 18,
+     "bit_offset": 144,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "isDeleted",
+     "offset": 19,
+     "bit_offset": 152,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "settings1",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "settigns2",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "movementId",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "linkId",
+     "offset": 29,
+     "bit_offset": 232,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "initStateFlag",
+     "offset": 30,
+     "bit_offset": 240,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1F",
+     "offset": 31,
+     "bit_offset": 248,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_20",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 8,
+     "type": "sead_ListNode"
+    },
+    {
+     "name": "childCount",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2C",
+     "offset": 44,
+     "bit_offset": 352,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_30",
+     "offset": 48,
+     "bit_offset": 384,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "bit_offset": 416,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "parent",
+     "offset": 56,
+     "bit_offset": 448,
+     "size": 4,
+     "type": "Actor *"
+    },
+    {
+     "name": "field_3C",
+     "offset": 60,
+     "bit_offset": 480,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_40",
+     "offset": 64,
+     "bit_offset": 512,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_44",
+     "offset": 68,
+     "bit_offset": 544,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_48",
+     "offset": 72,
+     "bit_offset": 576,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_4C",
+     "offset": 76,
+     "bit_offset": 608,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "ActorBuildInfo",
+   "size": 44,
+   "is_union": false,
+   "members": [
+    {
+     "name": "settings1",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "settings2",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "parentId",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "profile",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "Profile *"
+    },
+    {
+     "name": "position",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_20",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "eventId1",
+     "offset": 33,
+     "bit_offset": 264,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "eventId2",
+     "offset": 34,
+     "bit_offset": 272,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_23",
+     "offset": 35,
+     "bit_offset": 280,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "movementId",
+     "offset": 36,
+     "bit_offset": 288,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "linkId",
+     "offset": 37,
+     "bit_offset": 296,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "initStateFlag",
+     "offset": 38,
+     "bit_offset": 304,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_27",
+     "offset": 39,
+     "bit_offset": 312,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_28",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "sead_ListNode",
+   "size": 8,
+   "is_union": false,
+   "members": [
+    {
+     "name": "previous",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "sead_ListNode *"
+    },
+    {
+     "name": "next",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "sead_ListNode *"
+    }
+   ]
+  },
+  {
+   "name": "StageActor",
+   "size": 644,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 80,
+     "type": "Actor"
+    },
+    {
+     "name": "direction",
+     "offset": 80,
+     "bit_offset": 640,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "playerId",
+     "offset": 84,
+     "bit_offset": 672,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_55",
+     "offset": 85,
+     "bit_offset": 680,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_56",
+     "offset": 86,
+     "bit_offset": 688,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_57",
+     "offset": 87,
+     "bit_offset": 696,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_58",
+     "offset": 88,
+     "bit_offset": 704,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_5C",
+     "offset": 92,
+     "bit_offset": 736,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_60",
+     "offset": 96,
+     "bit_offset": 768,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_64",
+     "offset": 100,
+     "bit_offset": 800,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "xAcceleration",
+     "offset": 104,
+     "bit_offset": 832,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "position",
+     "offset": 108,
+     "bit_offset": 864,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "speed",
+     "offset": 120,
+     "bit_offset": 960,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "maxSpeed",
+     "offset": 132,
+     "bit_offset": 1056,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "scale",
+     "offset": 144,
+     "bit_offset": 1152,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "rotation",
+     "offset": 156,
+     "bit_offset": 1248,
+     "size": 12,
+     "type": "Vec3i"
+    },
+    {
+     "name": "field_A8",
+     "offset": 168,
+     "bit_offset": 1344,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_AC",
+     "offset": 172,
+     "bit_offset": 1376,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_B0",
+     "offset": 176,
+     "bit_offset": 1408,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_B4",
+     "offset": 180,
+     "bit_offset": 1440,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_B8",
+     "offset": 184,
+     "bit_offset": 1472,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "aCollider",
+     "offset": 188,
+     "bit_offset": 1504,
+     "size": 304,
+     "type": "ActiveCollider"
+    },
+    {
+     "name": "field_1EC",
+     "offset": 492,
+     "bit_offset": 3936,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_1F0",
+     "offset": 496,
+     "bit_offset": 3968,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1F4",
+     "offset": 500,
+     "bit_offset": 4000,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_1F8",
+     "offset": 504,
+     "bit_offset": 4032,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_1FC",
+     "offset": 508,
+     "bit_offset": 4064,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_200",
+     "offset": 512,
+     "bit_offset": 4096,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_204",
+     "offset": 516,
+     "bit_offset": 4128,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_208",
+     "offset": 520,
+     "bit_offset": 4160,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_20C",
+     "offset": 524,
+     "bit_offset": 4192,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_210",
+     "offset": 528,
+     "bit_offset": 4224,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "zoneId",
+     "offset": 532,
+     "bit_offset": 4256,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "type",
+     "offset": 533,
+     "bit_offset": 4264,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_216",
+     "offset": 534,
+     "bit_offset": 4272,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_217",
+     "offset": 535,
+     "bit_offset": 4280,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_218",
+     "offset": 536,
+     "bit_offset": 4288,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_219",
+     "offset": 537,
+     "bit_offset": 4296,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_21A",
+     "offset": 538,
+     "bit_offset": 4304,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "eventId1",
+     "offset": 539,
+     "bit_offset": 4312,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "eventId2",
+     "offset": 540,
+     "bit_offset": 4320,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_21D",
+     "offset": 541,
+     "bit_offset": 4328,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_21E",
+     "offset": 542,
+     "bit_offset": 4336,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_220",
+     "offset": 544,
+     "bit_offset": 4352,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_224",
+     "offset": 548,
+     "bit_offset": 4384,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_228",
+     "offset": 552,
+     "bit_offset": 4416,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_22C",
+     "offset": 556,
+     "bit_offset": 4448,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_230",
+     "offset": 560,
+     "bit_offset": 4480,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_234",
+     "offset": 564,
+     "bit_offset": 4512,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "profileFlags",
+     "offset": 568,
+     "bit_offset": 4544,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "effectOffset",
+     "offset": 572,
+     "bit_offset": 4576,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_248",
+     "offset": 584,
+     "bit_offset": 4672,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_254",
+     "offset": 596,
+     "bit_offset": 4768,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_260",
+     "offset": 608,
+     "bit_offset": 4864,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_26C",
+     "offset": 620,
+     "bit_offset": 4960,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_270",
+     "offset": 624,
+     "bit_offset": 4992,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_274",
+     "offset": 628,
+     "bit_offset": 5024,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_278",
+     "offset": 632,
+     "bit_offset": 5056,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_27C",
+     "offset": 636,
+     "bit_offset": 5088,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_280",
+     "offset": 640,
+     "bit_offset": 5120,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "sead_IDisposer",
+   "size": 16,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "containingHeap",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "ActiveCollider",
+   "size": 304,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "sead_IDisposer"
+    },
+    {
+     "name": "activeNode",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 12,
+     "type": "ActiveColliderNode"
+    },
+    {
+     "name": "createNode",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 12,
+     "type": "ActiveColliderNode"
+    },
+    {
+     "name": "node3",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 12,
+     "type": "ActiveColliderNode"
+    },
+    {
+     "name": "node4",
+     "offset": 52,
+     "bit_offset": 416,
+     "size": 12,
+     "type": "ActiveColliderNode"
+    },
+    {
+     "name": "owner",
+     "offset": 64,
+     "bit_offset": 512,
+     "size": 4,
+     "type": "StageActor *"
+    },
+    {
+     "name": "field_44",
+     "offset": 68,
+     "bit_offset": 544,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_48",
+     "offset": 72,
+     "bit_offset": 576,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_4C",
+     "offset": 76,
+     "bit_offset": 608,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_50",
+     "offset": 80,
+     "bit_offset": 640,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_54",
+     "offset": 84,
+     "bit_offset": 672,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_58",
+     "offset": 88,
+     "bit_offset": 704,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_5C",
+     "offset": 92,
+     "bit_offset": 736,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_60",
+     "offset": 96,
+     "bit_offset": 768,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_64",
+     "offset": 100,
+     "bit_offset": 800,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_68",
+     "offset": 104,
+     "bit_offset": 832,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_6C",
+     "offset": 108,
+     "bit_offset": 864,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_6D",
+     "offset": 109,
+     "bit_offset": 872,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_6E",
+     "offset": 110,
+     "bit_offset": 880,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_70",
+     "offset": 112,
+     "bit_offset": 896,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "info",
+     "offset": 116,
+     "bit_offset": 928,
+     "size": 44,
+     "type": "ActiveColliderInfo"
+    },
+    {
+     "name": "trapezoidOffsetTopLeft",
+     "offset": 160,
+     "bit_offset": 1280,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "trapezoidOffsetTopRight",
+     "offset": 164,
+     "bit_offset": 1312,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "trapezoidOffsetBottomLeft",
+     "offset": 168,
+     "bit_offset": 1344,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "trapezoidOffsetBottomRight",
+     "offset": 172,
+     "bit_offset": 1376,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_B0",
+     "offset": 176,
+     "bit_offset": 1408,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_B4",
+     "offset": 180,
+     "bit_offset": 1440,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_B8",
+     "offset": 184,
+     "bit_offset": 1472,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "lastCollisionOffsetX",
+     "offset": 188,
+     "bit_offset": 1504,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_C0",
+     "offset": 192,
+     "bit_offset": 1536,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C4",
+     "offset": 196,
+     "bit_offset": 1568,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C8",
+     "offset": 200,
+     "bit_offset": 1600,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_CC",
+     "offset": 204,
+     "bit_offset": 1632,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_D0",
+     "offset": 208,
+     "bit_offset": 1664,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_D4",
+     "offset": 212,
+     "bit_offset": 1696,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_D8",
+     "offset": 216,
+     "bit_offset": 1728,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_DC",
+     "offset": 220,
+     "bit_offset": 1760,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_E0",
+     "offset": 224,
+     "bit_offset": 1792,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_E4",
+     "offset": 228,
+     "bit_offset": 1824,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_E8",
+     "offset": 232,
+     "bit_offset": 1856,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_EC",
+     "offset": 236,
+     "bit_offset": 1888,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_F0",
+     "offset": 240,
+     "bit_offset": 1920,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_F4",
+     "offset": 244,
+     "bit_offset": 1952,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_F8",
+     "offset": 248,
+     "bit_offset": 1984,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_FC",
+     "offset": 252,
+     "bit_offset": 2016,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_100",
+     "offset": 256,
+     "bit_offset": 2048,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_104",
+     "offset": 260,
+     "bit_offset": 2080,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_108",
+     "offset": 264,
+     "bit_offset": 2112,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_10C",
+     "offset": 268,
+     "bit_offset": 2144,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_110",
+     "offset": 272,
+     "bit_offset": 2176,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_114",
+     "offset": 276,
+     "bit_offset": 2208,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_118",
+     "offset": 280,
+     "bit_offset": 2240,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_11C",
+     "offset": 284,
+     "bit_offset": 2272,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_120",
+     "offset": 288,
+     "bit_offset": 2304,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_124",
+     "offset": 292,
+     "bit_offset": 2336,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_128",
+     "offset": 296,
+     "bit_offset": 2368,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_12C",
+     "offset": 300,
+     "bit_offset": 2400,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "Vec2",
+   "size": 8,
+   "is_union": false,
+   "members": [
+    {
+     "name": "x",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "y",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "float"
+    }
+   ]
+  },
+  {
+   "name": "Vec3",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "x",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "y",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "z",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "float"
+    }
+   ]
+  },
+  {
+   "name": "ActorInfo",
+   "size": 36,
+   "is_union": false,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_1A",
+     "offset": 26,
+     "bit_offset": 208,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_1E",
+     "offset": 30,
+     "bit_offset": 240,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_20",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_22",
+     "offset": 34,
+     "bit_offset": 272,
+     "size": 2,
+     "type": "__int16"
+    }
+   ]
+  },
+  {
+   "name": "CollisionActor",
+   "size": 6064,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 644,
+     "type": "StageActor"
+    },
+    {
+     "name": "field_284",
+     "offset": 644,
+     "bit_offset": 5152,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "collisionMgr",
+     "offset": 648,
+     "bit_offset": 5184,
+     "size": 5352,
+     "type": "char[5352]"
+    },
+    {
+     "name": "field_1770",
+     "offset": 6000,
+     "bit_offset": 48000,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1774",
+     "offset": 6004,
+     "bit_offset": 48032,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1778",
+     "offset": 6008,
+     "bit_offset": 48064,
+     "size": 4,
+     "type": "Vec3 *"
+    },
+    {
+     "name": "field_177C",
+     "offset": 6012,
+     "bit_offset": 48096,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1780",
+     "offset": 6016,
+     "bit_offset": 48128,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1784",
+     "offset": 6020,
+     "bit_offset": 48160,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_1788",
+     "offset": 6024,
+     "bit_offset": 48192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_178C",
+     "offset": 6028,
+     "bit_offset": 48224,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1790",
+     "offset": 6032,
+     "bit_offset": 48256,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1794",
+     "offset": 6036,
+     "bit_offset": 48288,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1798",
+     "offset": 6040,
+     "bit_offset": 48320,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_179C",
+     "offset": 6044,
+     "bit_offset": 48352,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_17A0",
+     "offset": 6048,
+     "bit_offset": 48384,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_17A4",
+     "offset": 6052,
+     "bit_offset": 48416,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_17A5",
+     "offset": 6053,
+     "bit_offset": 48424,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_17A6",
+     "offset": 6054,
+     "bit_offset": 48432,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_17A7",
+     "offset": 6055,
+     "bit_offset": 48440,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_17A8",
+     "offset": 6056,
+     "bit_offset": 48448,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17AC",
+     "offset": 6060,
+     "bit_offset": 48480,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "MultiStateActor",
+   "size": 6104,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6064,
+     "type": "CollisionActor"
+    },
+    {
+     "name": "states",
+     "offset": 6064,
+     "bit_offset": 48512,
+     "size": 36,
+     "type": "StateWrapper"
+    },
+    {
+     "name": "field_17D4",
+     "offset": 6100,
+     "bit_offset": 48800,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "StateBase",
+   "size": 8,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "void *"
+    },
+    {
+     "name": "id",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "signed int"
+    }
+   ]
+  },
+  {
+   "name": "State",
+   "size": 32,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "StateBase"
+    },
+    {
+     "name": "beginFunc",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 8,
+     "type": "unsigned __int64"
+    },
+    {
+     "name": "executeFunc",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 8,
+     "type": "unsigned __int64"
+    },
+    {
+     "name": "endFunc",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 8,
+     "type": "unsigned __int64"
+    }
+   ]
+  },
+  {
+   "name": "StateVirtual",
+   "size": 36,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 32,
+     "type": "State"
+    },
+    {
+     "name": "baseState",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 4,
+     "type": "StateBase *"
+    }
+   ]
+  },
+  {
+   "name": "StateMgr",
+   "size": 16,
+   "is_union": false,
+   "members": [
+    {
+     "name": "executer",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "StateExecuter *"
+    },
+    {
+     "name": "nextState",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "StateBase *"
+    },
+    {
+     "name": "currentMethodExecuter",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "StateMethodExecuter *"
+    },
+    {
+     "name": "lastState",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "StateBase *"
+    }
+   ]
+  },
+  {
+   "name": "StateMethodExecuter",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "void *"
+    },
+    {
+     "name": "owner",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "void *"
+    },
+    {
+     "name": "currentState",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "StateExecuter",
+   "size": 16,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "void *"
+    },
+    {
+     "name": "methodExecuter",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 12,
+     "type": "StateMethodExecuter"
+    }
+   ]
+  },
+  {
+   "name": "StateActor",
+   "size": 6100,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6064,
+     "type": "CollisionActor"
+    },
+    {
+     "name": "states",
+     "offset": 6064,
+     "bit_offset": 48512,
+     "size": 36,
+     "type": "StateWrapper"
+    }
+   ]
+  },
+  {
+   "name": "Enemy",
+   "size": 6300,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6104,
+     "type": "MultiStateActor"
+    },
+    {
+     "name": "field_17D8",
+     "offset": 6104,
+     "bit_offset": 48832,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_17DC",
+     "offset": 6108,
+     "bit_offset": 48864,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_17E0",
+     "offset": 6112,
+     "bit_offset": 48896,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_17E4",
+     "offset": 6116,
+     "bit_offset": 48928,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_17E8",
+     "offset": 6120,
+     "bit_offset": 48960,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17EC",
+     "offset": 6124,
+     "bit_offset": 48992,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17F0",
+     "offset": 6128,
+     "bit_offset": 49024,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17F4",
+     "offset": 6132,
+     "bit_offset": 49056,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17F8",
+     "offset": 6136,
+     "bit_offset": 49088,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_17FC",
+     "offset": 6140,
+     "bit_offset": 49120,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_17FE",
+     "offset": 6142,
+     "bit_offset": 49136,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_1800",
+     "offset": 6144,
+     "bit_offset": 49152,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_1802",
+     "offset": 6146,
+     "bit_offset": 49168,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_1804",
+     "offset": 6148,
+     "bit_offset": 49184,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "freezeMgr",
+     "offset": 6152,
+     "bit_offset": 49216,
+     "size": 77,
+     "type": "EnemyFreezeMgr"
+    },
+    {
+     "name": "field_1858",
+     "offset": 6232,
+     "bit_offset": 49856,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_185C",
+     "offset": 6236,
+     "bit_offset": 49888,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1860",
+     "offset": 6240,
+     "bit_offset": 49920,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1864",
+     "offset": 6244,
+     "bit_offset": 49952,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1868",
+     "offset": 6248,
+     "bit_offset": 49984,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_186C",
+     "offset": 6252,
+     "bit_offset": 50016,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1870",
+     "offset": 6256,
+     "bit_offset": 50048,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1874",
+     "offset": 6260,
+     "bit_offset": 50080,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1878",
+     "offset": 6264,
+     "bit_offset": 50112,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_187C",
+     "offset": 6268,
+     "bit_offset": 50144,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1880",
+     "offset": 6272,
+     "bit_offset": 50176,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1884",
+     "offset": 6276,
+     "bit_offset": 50208,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1888",
+     "offset": 6280,
+     "bit_offset": 50240,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_188C",
+     "offset": 6284,
+     "bit_offset": 50272,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1890",
+     "offset": 6288,
+     "bit_offset": 50304,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1894",
+     "offset": 6292,
+     "bit_offset": 50336,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1898",
+     "offset": 6296,
+     "bit_offset": 50368,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1899",
+     "offset": 6297,
+     "bit_offset": 50376,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_189A",
+     "offset": 6298,
+     "bit_offset": 50384,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_189B",
+     "offset": 6299,
+     "bit_offset": 50392,
+     "size": 1,
+     "type": "char"
+    }
+   ]
+  },
+  {
+   "name": "sead::SafeString",
+   "size": 8,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "void *"
+    },
+    {
+     "name": "cstr",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "char *"
+    }
+   ]
+  },
+  {
+   "name": "CooliganSunglasses",
+   "size": 748,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 644,
+     "type": "StageActor"
+    },
+    {
+     "name": "model",
+     "offset": 644,
+     "bit_offset": 5152,
+     "size": 4,
+     "type": "void *"
+    },
+    {
+     "name": "field_288",
+     "offset": 648,
+     "bit_offset": 5184,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_28C",
+     "offset": 652,
+     "bit_offset": 5216,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_290",
+     "offset": 656,
+     "bit_offset": 5248,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_294",
+     "offset": 660,
+     "bit_offset": 5280,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_298",
+     "offset": 664,
+     "bit_offset": 5312,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_29C",
+     "offset": 668,
+     "bit_offset": 5344,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2A0",
+     "offset": 672,
+     "bit_offset": 5376,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2A4",
+     "offset": 676,
+     "bit_offset": 5408,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2A8",
+     "offset": 680,
+     "bit_offset": 5440,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2AC",
+     "offset": 684,
+     "bit_offset": 5472,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2B0",
+     "offset": 688,
+     "bit_offset": 5504,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2B4",
+     "offset": 692,
+     "bit_offset": 5536,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2B8",
+     "offset": 696,
+     "bit_offset": 5568,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2BC",
+     "offset": 700,
+     "bit_offset": 5600,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2C0",
+     "offset": 704,
+     "bit_offset": 5632,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2C4",
+     "offset": 708,
+     "bit_offset": 5664,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2C8",
+     "offset": 712,
+     "bit_offset": 5696,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2CC",
+     "offset": 716,
+     "bit_offset": 5728,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2D0",
+     "offset": 720,
+     "bit_offset": 5760,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2D4",
+     "offset": 724,
+     "bit_offset": 5792,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2D8",
+     "offset": 728,
+     "bit_offset": 5824,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2DC",
+     "offset": 732,
+     "bit_offset": 5856,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2E0",
+     "offset": 736,
+     "bit_offset": 5888,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2E4",
+     "offset": 740,
+     "bit_offset": 5920,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2E8",
+     "offset": 744,
+     "bit_offset": 5952,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "int32x4x2_t",
+   "size": 32,
+   "is_union": false,
+   "members": [
+    {
+     "name": "val",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 32,
+     "type": "int32x4_t[2]"
+    }
+   ]
+  },
+  {
+   "name": "Seaweed",
+   "size": 664,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 644,
+     "type": "StageActor"
+    },
+    {
+     "name": "models",
+     "offset": 644,
+     "bit_offset": 5152,
+     "size": 12,
+     "type": "_UNKNOWN *[3]"
+    },
+    {
+     "name": "scaleIdx",
+     "offset": 656,
+     "bit_offset": 5248,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "numLeafs",
+     "offset": 660,
+     "bit_offset": 5280,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "AnimationsList",
+   "size": 8,
+   "is_union": false,
+   "members": [
+    {
+     "name": "count",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "animations",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "void **"
+    }
+   ]
+  },
+  {
+   "name": "ModelWrapper",
+   "size": 48,
+   "is_union": false,
+   "members": [
+    {
+     "name": "model",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "void *"
+    },
+    {
+     "name": "archive",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "void *"
+    },
+    {
+     "name": "sklAnims",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 8,
+     "type": "AnimationsList"
+    },
+    {
+     "name": "texAnims",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 8,
+     "type": "AnimationsList"
+    },
+    {
+     "name": "shuAnims",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 8,
+     "type": "AnimationsList"
+    },
+    {
+     "name": "visAnims",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 8,
+     "type": "AnimationsList"
+    },
+    {
+     "name": "shaAnims",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 8,
+     "type": "AnimationsList"
+    }
+   ]
+  },
+  {
+   "name": "Mtx34",
+   "size": 48,
+   "is_union": false,
+   "members": [
+    {
+     "name": "cells",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 48,
+     "type": "float[12]"
+    }
+   ]
+  },
+  {
+   "name": "Vec3i",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "x",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "y",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "z",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "StateWrapper",
+   "size": 36,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "executer",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 16,
+     "type": "StateExecuter"
+    },
+    {
+     "name": "manager",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 16,
+     "type": "StateMgr"
+    }
+   ]
+  },
+  {
+   "name": "ActiveColliderInfo",
+   "size": 44,
+   "is_union": false,
+   "members": [
+    {
+     "name": "distToCenter",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "distToEdge",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "category",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "mask",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_24",
+     "offset": 36,
+     "bit_offset": 288,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "callback",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 4,
+     "type": "void *"
+    }
+   ]
+  },
+  {
+   "name": "EnemyFreezeMgr",
+   "size": 77,
+   "is_union": false,
+   "members": [
+    {
+     "name": "iceActorCount",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "gap1",
+     "offset": 1,
+     "bit_offset": 8,
+     "size": 3,
+     "type": "_BYTE[3]"
+    },
+    {
+     "name": "iceActors",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 48,
+     "type": "_UNKNOWN *[12]"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "bit_offset": 416,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_35",
+     "offset": 53,
+     "bit_offset": 424,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_36",
+     "offset": 54,
+     "bit_offset": 432,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "gap37",
+     "offset": 55,
+     "bit_offset": 440,
+     "size": 1,
+     "type": "_BYTE"
+    },
+    {
+     "name": "field_38",
+     "offset": 56,
+     "bit_offset": 448,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "owner",
+     "offset": 60,
+     "bit_offset": 480,
+     "size": 4,
+     "type": "Enemy *"
+    },
+    {
+     "name": "field_40",
+     "offset": 64,
+     "bit_offset": 512,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_42",
+     "offset": 66,
+     "bit_offset": 528,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_44",
+     "offset": 68,
+     "bit_offset": 544,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_46",
+     "offset": 70,
+     "bit_offset": 560,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_48",
+     "offset": 72,
+     "bit_offset": 576,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_49",
+     "offset": 73,
+     "bit_offset": 584,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_4A",
+     "offset": 74,
+     "bit_offset": 592,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_4B",
+     "offset": 75,
+     "bit_offset": 600,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_4C",
+     "offset": 76,
+     "bit_offset": 608,
+     "size": 1,
+     "type": "char"
+    }
+   ]
+  },
+  {
+   "name": "EnemyFreezeMgr_Info",
+   "size": 32,
+   "is_union": false,
+   "members": [
+    {
+     "name": "settings",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "position",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "scale",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "CarryableEnemy",
+   "size": 6350,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6300,
+     "type": "Enemy"
+    },
+    {
+     "name": "field_189C",
+     "offset": 6300,
+     "bit_offset": 50400,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18A0",
+     "offset": 6304,
+     "bit_offset": 50432,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18A4",
+     "offset": 6308,
+     "bit_offset": 50464,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18A8",
+     "offset": 6312,
+     "bit_offset": 50496,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18AC",
+     "offset": 6316,
+     "bit_offset": 50528,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18B0",
+     "offset": 6320,
+     "bit_offset": 50560,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18B4",
+     "offset": 6324,
+     "bit_offset": 50592,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18B8",
+     "offset": 6328,
+     "bit_offset": 50624,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18BC",
+     "offset": 6332,
+     "bit_offset": 50656,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18C0",
+     "offset": 6336,
+     "bit_offset": 50688,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "carryingPlayerId",
+     "offset": 6340,
+     "bit_offset": 50720,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "gap18C5",
+     "offset": 6341,
+     "bit_offset": 50728,
+     "size": 3,
+     "type": "_BYTE[3]"
+    },
+    {
+     "name": "field_18C8",
+     "offset": 6344,
+     "bit_offset": 50752,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18CC",
+     "offset": 6348,
+     "bit_offset": 50784,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_18CD",
+     "offset": 6349,
+     "bit_offset": 50792,
+     "size": 1,
+     "type": "char"
+    }
+   ]
+  },
+  {
+   "name": "EnemyFreezeMgr_Flags",
+   "size": 3,
+   "is_union": false,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1",
+     "offset": 1,
+     "bit_offset": 8,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_2",
+     "offset": 2,
+     "bit_offset": 16,
+     "size": 1,
+     "type": "char"
+    }
+   ]
+  },
+  {
+   "name": "CollisionMgr",
+   "size": 5352,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "gap4",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 2192,
+     "type": "_BYTE[2192]"
+    },
+    {
+     "name": "owner",
+     "offset": 2196,
+     "bit_offset": 17568,
+     "size": 4,
+     "type": "StageActor *"
+    },
+    {
+     "name": "gap898",
+     "offset": 2200,
+     "bit_offset": 17600,
+     "size": 4,
+     "type": "_BYTE[4]"
+    },
+    {
+     "name": "position",
+     "offset": 2204,
+     "bit_offset": 17632,
+     "size": 4,
+     "type": "Vec3 *"
+    },
+    {
+     "name": "field_8A0",
+     "offset": 2208,
+     "bit_offset": 17664,
+     "size": 4,
+     "type": "Vec3 *"
+    },
+    {
+     "name": "field_8A4",
+     "offset": 2212,
+     "bit_offset": 17696,
+     "size": 4,
+     "type": "unsigned __int8 *"
+    },
+    {
+     "name": "field_8A8",
+     "offset": 2216,
+     "bit_offset": 17728,
+     "size": 4,
+     "type": "unsigned __int8 *"
+    },
+    {
+     "name": "playerId",
+     "offset": 2220,
+     "bit_offset": 17760,
+     "size": 4,
+     "type": "char *"
+    },
+    {
+     "name": "gap8B0",
+     "offset": 2224,
+     "bit_offset": 17792,
+     "size": 132,
+     "type": "_BYTE[132]"
+    },
+    {
+     "name": "rightSensor",
+     "offset": 2356,
+     "bit_offset": 18848,
+     "size": 12,
+     "type": "CollisionMgr_Sensor"
+    },
+    {
+     "name": "leftSensor",
+     "offset": 2368,
+     "bit_offset": 18944,
+     "size": 12,
+     "type": "CollisionMgr_Sensor"
+    },
+    {
+     "name": "aboveSensor",
+     "offset": 2380,
+     "bit_offset": 19040,
+     "size": 12,
+     "type": "CollisionMgr_Sensor"
+    },
+    {
+     "name": "belowSensor",
+     "offset": 2392,
+     "bit_offset": 19136,
+     "size": 12,
+     "type": "CollisionMgr_Sensor"
+    },
+    {
+     "name": "gap964",
+     "offset": 2404,
+     "bit_offset": 19232,
+     "size": 156,
+     "type": "_BYTE[156]"
+    },
+    {
+     "name": "field_A00",
+     "offset": 2560,
+     "bit_offset": 20480,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "gapA01",
+     "offset": 2561,
+     "bit_offset": 20488,
+     "size": 26,
+     "type": "_BYTE[26]"
+    },
+    {
+     "name": "field_A1B",
+     "offset": 2587,
+     "bit_offset": 20696,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "gapA1C",
+     "offset": 2588,
+     "bit_offset": 20704,
+     "size": 2763,
+     "type": "_BYTE[2763]"
+    },
+    {
+     "name": "field_14E7",
+     "offset": 5351,
+     "bit_offset": 42808,
+     "size": 1,
+     "type": "char"
+    }
+   ]
+  },
+  {
+   "name": "CollisionMgr_Sensor",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "a",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "b",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "c",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "float"
+    }
+   ]
+  },
+  {
+   "name": "TileCheck",
+   "size": 76,
+   "is_union": false,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1",
+     "offset": 1,
+     "bit_offset": 8,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_2",
+     "offset": 2,
+     "bit_offset": 16,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_3",
+     "offset": 3,
+     "bit_offset": 24,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_20",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_24",
+     "offset": 36,
+     "bit_offset": 288,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_28",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2C",
+     "offset": 44,
+     "bit_offset": 352,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_30",
+     "offset": 48,
+     "bit_offset": 384,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "bit_offset": 416,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_38",
+     "offset": 56,
+     "bit_offset": 448,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_3C",
+     "offset": 60,
+     "bit_offset": 480,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_40",
+     "offset": 64,
+     "bit_offset": 512,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_44",
+     "offset": 68,
+     "bit_offset": 544,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_48",
+     "offset": 72,
+     "bit_offset": 576,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "TileCheck_Param",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1",
+     "offset": 1,
+     "bit_offset": 8,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_2",
+     "offset": 2,
+     "bit_offset": 16,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_3",
+     "offset": 3,
+     "bit_offset": 24,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "TileCheck_Result",
+   "size": 36,
+   "is_union": false,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_C",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_20",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "FireballBase",
+   "size": 6760,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6100,
+     "type": "StateActor"
+    },
+    {
+     "name": "revealMaskRelated",
+     "offset": 6100,
+     "bit_offset": 48800,
+     "size": 40,
+     "type": "RevealMaskRelated"
+    },
+    {
+     "name": "field_17FC",
+     "offset": 6140,
+     "bit_offset": 49120,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1800",
+     "offset": 6144,
+     "bit_offset": 49152,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1804",
+     "offset": 6148,
+     "bit_offset": 49184,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1808",
+     "offset": 6152,
+     "bit_offset": 49216,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_180C",
+     "offset": 6156,
+     "bit_offset": 49248,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1810",
+     "offset": 6160,
+     "bit_offset": 49280,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1814",
+     "offset": 6164,
+     "bit_offset": 49312,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1818",
+     "offset": 6168,
+     "bit_offset": 49344,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_181C",
+     "offset": 6172,
+     "bit_offset": 49376,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1820",
+     "offset": 6176,
+     "bit_offset": 49408,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1824",
+     "offset": 6180,
+     "bit_offset": 49440,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1828",
+     "offset": 6184,
+     "bit_offset": 49472,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_182C",
+     "offset": 6188,
+     "bit_offset": 49504,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1830",
+     "offset": 6192,
+     "bit_offset": 49536,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1834",
+     "offset": 6196,
+     "bit_offset": 49568,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1838",
+     "offset": 6200,
+     "bit_offset": 49600,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_183C",
+     "offset": 6204,
+     "bit_offset": 49632,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1840",
+     "offset": 6208,
+     "bit_offset": 49664,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1844",
+     "offset": 6212,
+     "bit_offset": 49696,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1848",
+     "offset": 6216,
+     "bit_offset": 49728,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_184C",
+     "offset": 6220,
+     "bit_offset": 49760,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1850",
+     "offset": 6224,
+     "bit_offset": 49792,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1854",
+     "offset": 6228,
+     "bit_offset": 49824,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1858",
+     "offset": 6232,
+     "bit_offset": 49856,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_185C",
+     "offset": 6236,
+     "bit_offset": 49888,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1860",
+     "offset": 6240,
+     "bit_offset": 49920,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1864",
+     "offset": 6244,
+     "bit_offset": 49952,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1868",
+     "offset": 6248,
+     "bit_offset": 49984,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_186C",
+     "offset": 6252,
+     "bit_offset": 50016,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1870",
+     "offset": 6256,
+     "bit_offset": 50048,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "lightRelated2",
+     "offset": 6260,
+     "bit_offset": 50080,
+     "size": 104,
+     "type": "EffectWrapper"
+    },
+    {
+     "name": "lightRelated3",
+     "offset": 6364,
+     "bit_offset": 50912,
+     "size": 72,
+     "type": "LightSource"
+    },
+    {
+     "name": "field_1924",
+     "offset": 6436,
+     "bit_offset": 51488,
+     "size": 304,
+     "type": "ActiveCollider"
+    },
+    {
+     "name": "field_1A54",
+     "offset": 6740,
+     "bit_offset": 53920,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1A58",
+     "offset": 6744,
+     "bit_offset": 53952,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1A5C",
+     "offset": 6748,
+     "bit_offset": 53984,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1A60",
+     "offset": 6752,
+     "bit_offset": 54016,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1A64",
+     "offset": 6756,
+     "bit_offset": 54048,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "RevealMaskRelated",
+   "size": 40,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "position",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "shape",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_24",
+     "offset": 36,
+     "bit_offset": 288,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "EffectWrapper",
+   "size": 104,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "sead_IDisposer"
+    },
+    {
+     "name": "data",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 64,
+     "type": "EffectData"
+    },
+    {
+     "name": "field_50",
+     "offset": 80,
+     "bit_offset": 640,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_54",
+     "offset": 84,
+     "bit_offset": 672,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_58",
+     "offset": 88,
+     "bit_offset": 704,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_5C",
+     "offset": 92,
+     "bit_offset": 736,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "effectId",
+     "offset": 96,
+     "bit_offset": 768,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_64",
+     "offset": 100,
+     "bit_offset": 800,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "pad65",
+     "offset": 101,
+     "bit_offset": 808,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "pad66",
+     "offset": 102,
+     "bit_offset": 816,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "pad67",
+     "offset": 103,
+     "bit_offset": 824,
+     "size": 1,
+     "type": "char"
+    }
+   ]
+  },
+  {
+   "name": "LightSource",
+   "size": 72,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "sead_IDisposer"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "position",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_24",
+     "offset": 36,
+     "bit_offset": 288,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "attenuationRadius",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_2C",
+     "offset": 44,
+     "bit_offset": 352,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_30",
+     "offset": 48,
+     "bit_offset": 384,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "bit_offset": 416,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_38",
+     "offset": 56,
+     "bit_offset": 448,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_3C",
+     "offset": 60,
+     "bit_offset": 480,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_40",
+     "offset": 64,
+     "bit_offset": 512,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_44",
+     "offset": 68,
+     "bit_offset": 544,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "Amp",
+   "size": 6925,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6300,
+     "type": "Enemy"
+    },
+    {
+     "name": "field_189C",
+     "offset": 6300,
+     "bit_offset": 50400,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18A0",
+     "offset": 6304,
+     "bit_offset": 50432,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "effect",
+     "offset": 6316,
+     "bit_offset": 50528,
+     "size": 104,
+     "type": "EffectWrapper"
+    },
+    {
+     "name": "field_1914",
+     "offset": 6420,
+     "bit_offset": 51360,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1918",
+     "offset": 6424,
+     "bit_offset": 51392,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_191C",
+     "offset": 6428,
+     "bit_offset": 51424,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1920",
+     "offset": 6432,
+     "bit_offset": 51456,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1924",
+     "offset": 6436,
+     "bit_offset": 51488,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1928",
+     "offset": 6440,
+     "bit_offset": 51520,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_192C",
+     "offset": 6444,
+     "bit_offset": 51552,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1930",
+     "offset": 6448,
+     "bit_offset": 51584,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1934",
+     "offset": 6452,
+     "bit_offset": 51616,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1938",
+     "offset": 6456,
+     "bit_offset": 51648,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_193C",
+     "offset": 6460,
+     "bit_offset": 51680,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1940",
+     "offset": 6464,
+     "bit_offset": 51712,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1944",
+     "offset": 6468,
+     "bit_offset": 51744,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1948",
+     "offset": 6472,
+     "bit_offset": 51776,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_194C",
+     "offset": 6476,
+     "bit_offset": 51808,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1950",
+     "offset": 6480,
+     "bit_offset": 51840,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1954",
+     "offset": 6484,
+     "bit_offset": 51872,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1958",
+     "offset": 6488,
+     "bit_offset": 51904,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_195C",
+     "offset": 6492,
+     "bit_offset": 51936,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1960",
+     "offset": 6496,
+     "bit_offset": 51968,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1964",
+     "offset": 6500,
+     "bit_offset": 52000,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "lightRelated3",
+     "offset": 6504,
+     "bit_offset": 52032,
+     "size": 72,
+     "type": "LightSource"
+    },
+    {
+     "name": "field_19B0",
+     "offset": 6576,
+     "bit_offset": 52608,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_19B4",
+     "offset": 6580,
+     "bit_offset": 52640,
+     "size": 304,
+     "type": "ActiveCollider"
+    },
+    {
+     "name": "field_1AE4",
+     "offset": 6884,
+     "bit_offset": 55072,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1AE8",
+     "offset": 6888,
+     "bit_offset": 55104,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1AEC",
+     "offset": 6892,
+     "bit_offset": 55136,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1AF0",
+     "offset": 6896,
+     "bit_offset": 55168,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1AF4",
+     "offset": 6900,
+     "bit_offset": 55200,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1AF8",
+     "offset": 6904,
+     "bit_offset": 55232,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1AFC",
+     "offset": 6908,
+     "bit_offset": 55264,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1B00",
+     "offset": 6912,
+     "bit_offset": 55296,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1B04",
+     "offset": 6916,
+     "bit_offset": 55328,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1B08",
+     "offset": 6920,
+     "bit_offset": 55360,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1B0C",
+     "offset": 6924,
+     "bit_offset": 55392,
+     "size": 1,
+     "type": "char"
+    }
+   ]
+  },
+  {
+   "name": "struc_55",
+   "size": 104,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "sead_IDisposer"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_20",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_24",
+     "offset": 36,
+     "bit_offset": 288,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_28",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2C",
+     "offset": 44,
+     "bit_offset": 352,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_30",
+     "offset": 48,
+     "bit_offset": 384,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "bit_offset": 416,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_38",
+     "offset": 56,
+     "bit_offset": 448,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_3C",
+     "offset": 60,
+     "bit_offset": 480,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_40",
+     "offset": 64,
+     "bit_offset": 512,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_44",
+     "offset": 68,
+     "bit_offset": 544,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_48",
+     "offset": 72,
+     "bit_offset": 576,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_4C",
+     "offset": 76,
+     "bit_offset": 608,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_50",
+     "offset": 80,
+     "bit_offset": 640,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_54",
+     "offset": 84,
+     "bit_offset": 672,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_58",
+     "offset": 88,
+     "bit_offset": 704,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_5C",
+     "offset": 92,
+     "bit_offset": 736,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_60",
+     "offset": 96,
+     "bit_offset": 768,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_64",
+     "offset": 100,
+     "bit_offset": 800,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "pad65",
+     "offset": 101,
+     "bit_offset": 808,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "pad66",
+     "offset": 102,
+     "bit_offset": 816,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "pad67",
+     "offset": 103,
+     "bit_offset": 824,
+     "size": 1,
+     "type": "char"
+    }
+   ]
+  },
+  {
+   "name": "MovementHandler",
+   "size": 248,
+   "is_union": false,
+   "members": [
+    {
+     "name": "position",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_C",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_20",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_24",
+     "offset": 36,
+     "bit_offset": 288,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_28",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_2C",
+     "offset": 44,
+     "bit_offset": 352,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_30",
+     "offset": 48,
+     "bit_offset": 384,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "bit_offset": 416,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_38",
+     "offset": 56,
+     "bit_offset": 448,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_3C",
+     "offset": 60,
+     "bit_offset": 480,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_40",
+     "offset": 64,
+     "bit_offset": 512,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_44",
+     "offset": 68,
+     "bit_offset": 544,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "typeMask",
+     "offset": 72,
+     "bit_offset": 576,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "movementId",
+     "offset": 76,
+     "bit_offset": 608,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_50",
+     "offset": 80,
+     "bit_offset": 640,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_54",
+     "offset": 84,
+     "bit_offset": 672,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_58",
+     "offset": 88,
+     "bit_offset": 704,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_5C",
+     "offset": 92,
+     "bit_offset": 736,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_60",
+     "offset": 96,
+     "bit_offset": 768,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_64",
+     "offset": 100,
+     "bit_offset": 800,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_68",
+     "offset": 104,
+     "bit_offset": 832,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_6C",
+     "offset": 108,
+     "bit_offset": 864,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_70",
+     "offset": 112,
+     "bit_offset": 896,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_74",
+     "offset": 116,
+     "bit_offset": 928,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_78",
+     "offset": 120,
+     "bit_offset": 960,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_7C",
+     "offset": 124,
+     "bit_offset": 992,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_80",
+     "offset": 128,
+     "bit_offset": 1024,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_84",
+     "offset": 132,
+     "bit_offset": 1056,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_85",
+     "offset": 133,
+     "bit_offset": 1064,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_86",
+     "offset": 134,
+     "bit_offset": 1072,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_87",
+     "offset": 135,
+     "bit_offset": 1080,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_88",
+     "offset": 136,
+     "bit_offset": 1088,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_89",
+     "offset": 137,
+     "bit_offset": 1096,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_8C",
+     "offset": 140,
+     "bit_offset": 1120,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_90",
+     "offset": 144,
+     "bit_offset": 1152,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_94",
+     "offset": 148,
+     "bit_offset": 1184,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_98",
+     "offset": 152,
+     "bit_offset": 1216,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_9C",
+     "offset": 156,
+     "bit_offset": 1248,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_A0",
+     "offset": 160,
+     "bit_offset": 1280,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_A4",
+     "offset": 164,
+     "bit_offset": 1312,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_A8",
+     "offset": 168,
+     "bit_offset": 1344,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_AC",
+     "offset": 172,
+     "bit_offset": 1376,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_B0",
+     "offset": 176,
+     "bit_offset": 1408,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_B4",
+     "offset": 180,
+     "bit_offset": 1440,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_B8",
+     "offset": 184,
+     "bit_offset": 1472,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_BC",
+     "offset": 188,
+     "bit_offset": 1504,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C0",
+     "offset": 192,
+     "bit_offset": 1536,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C4",
+     "offset": 196,
+     "bit_offset": 1568,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C8",
+     "offset": 200,
+     "bit_offset": 1600,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_CC",
+     "offset": 204,
+     "bit_offset": 1632,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_D0",
+     "offset": 208,
+     "bit_offset": 1664,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "states",
+     "offset": 212,
+     "bit_offset": 1696,
+     "size": 36,
+     "type": "StateWrapper"
+    }
+   ]
+  },
+  {
+   "name": "BrosBase",
+   "size": 12472,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6300,
+     "type": "Enemy"
+    },
+    {
+     "name": "data",
+     "offset": 6300,
+     "bit_offset": 50400,
+     "size": 6172,
+     "type": "char[6172]"
+    }
+   ]
+  },
+  {
+   "name": "EffectData",
+   "size": 64,
+   "is_union": false,
+   "members": [
+    {
+     "name": "mtx",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 48,
+     "type": "Mtx34"
+    },
+    {
+     "name": "field_30",
+     "offset": 48,
+     "bit_offset": 384,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "bit_offset": 416,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_38",
+     "offset": 56,
+     "bit_offset": 448,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_3C",
+     "offset": 60,
+     "bit_offset": 480,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "UserInfo",
+   "size": 24,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "sead_IDisposer"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "handle",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "ColliderBase",
+   "size": 340,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "sead_IDisposer"
+    },
+    {
+     "name": "nodes",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 96,
+     "type": "ColliderListNode[8]"
+    },
+    {
+     "name": "field_70",
+     "offset": 112,
+     "bit_offset": 896,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_74",
+     "offset": 116,
+     "bit_offset": 928,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_78",
+     "offset": 120,
+     "bit_offset": 960,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_7C",
+     "offset": 124,
+     "bit_offset": 992,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_80",
+     "offset": 128,
+     "bit_offset": 1024,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_84",
+     "offset": 132,
+     "bit_offset": 1056,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_88",
+     "offset": 136,
+     "bit_offset": 1088,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_8C",
+     "offset": 140,
+     "bit_offset": 1120,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "owner",
+     "offset": 144,
+     "bit_offset": 1152,
+     "size": 4,
+     "type": "StageActor *"
+    },
+    {
+     "name": "field_94",
+     "offset": 148,
+     "bit_offset": 1184,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "ownerPositionPtr",
+     "offset": 152,
+     "bit_offset": 1216,
+     "size": 4,
+     "type": "Vec3 *"
+    },
+    {
+     "name": "owner248Ptr",
+     "offset": 156,
+     "bit_offset": 1248,
+     "size": 4,
+     "type": "Vec3 *"
+    },
+    {
+     "name": "owner56Ptr",
+     "offset": 160,
+     "bit_offset": 1280,
+     "size": 4,
+     "type": "char *"
+    },
+    {
+     "name": "owner57Ptr",
+     "offset": 164,
+     "bit_offset": 1312,
+     "size": 4,
+     "type": "char *"
+    },
+    {
+     "name": "ownerPlayerIdPtr",
+     "offset": 168,
+     "bit_offset": 1344,
+     "size": 4,
+     "type": "char *"
+    },
+    {
+     "name": "distToCenter",
+     "offset": 172,
+     "bit_offset": 1376,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "field_B4",
+     "offset": 180,
+     "bit_offset": 1440,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_B8",
+     "offset": 184,
+     "bit_offset": 1472,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_BC",
+     "offset": 188,
+     "bit_offset": 1504,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_C0",
+     "offset": 192,
+     "bit_offset": 1536,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_C4",
+     "offset": 196,
+     "bit_offset": 1568,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C8",
+     "offset": 200,
+     "bit_offset": 1600,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_CC",
+     "offset": 204,
+     "bit_offset": 1632,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_D0",
+     "offset": 208,
+     "bit_offset": 1664,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_D4",
+     "offset": 212,
+     "bit_offset": 1696,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_D8",
+     "offset": 216,
+     "bit_offset": 1728,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_DC",
+     "offset": 220,
+     "bit_offset": 1760,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_E0",
+     "offset": 224,
+     "bit_offset": 1792,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_E4",
+     "offset": 228,
+     "bit_offset": 1824,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_E8",
+     "offset": 232,
+     "bit_offset": 1856,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_EC",
+     "offset": 236,
+     "bit_offset": 1888,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_F0",
+     "offset": 240,
+     "bit_offset": 1920,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "rotation",
+     "offset": 244,
+     "bit_offset": 1952,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_F8",
+     "offset": 248,
+     "bit_offset": 1984,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_FC",
+     "offset": 252,
+     "bit_offset": 2016,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_100",
+     "offset": 256,
+     "bit_offset": 2048,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_104",
+     "offset": 260,
+     "bit_offset": 2080,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_108",
+     "offset": 264,
+     "bit_offset": 2112,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_10C",
+     "offset": 268,
+     "bit_offset": 2144,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_110",
+     "offset": 272,
+     "bit_offset": 2176,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_114",
+     "offset": 276,
+     "bit_offset": 2208,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_118",
+     "offset": 280,
+     "bit_offset": 2240,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_11C",
+     "offset": 284,
+     "bit_offset": 2272,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_120",
+     "offset": 288,
+     "bit_offset": 2304,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_124",
+     "offset": 292,
+     "bit_offset": 2336,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_128",
+     "offset": 296,
+     "bit_offset": 2368,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "type",
+     "offset": 300,
+     "bit_offset": 2400,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_130",
+     "offset": 304,
+     "bit_offset": 2432,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_134",
+     "offset": 308,
+     "bit_offset": 2464,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_138",
+     "offset": 312,
+     "bit_offset": 2496,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_13C",
+     "offset": 316,
+     "bit_offset": 2528,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_140",
+     "offset": 320,
+     "bit_offset": 2560,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_144",
+     "offset": 324,
+     "bit_offset": 2592,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_148",
+     "offset": 328,
+     "bit_offset": 2624,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_14C",
+     "offset": 332,
+     "bit_offset": 2656,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_150",
+     "offset": 336,
+     "bit_offset": 2688,
+     "size": 4,
+     "type": "void *"
+    }
+   ]
+  },
+  {
+   "name": "ModelAnimation",
+   "size": 28,
+   "is_union": false,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "BulletBillTemp",
+   "size": 7284,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6300,
+     "type": "Enemy"
+    },
+    {
+     "name": "field_189C",
+     "offset": 6300,
+     "bit_offset": 50400,
+     "size": 68,
+     "type": "char[68]"
+    },
+    {
+     "name": "aCollider2",
+     "offset": 6368,
+     "bit_offset": 50944,
+     "size": 304,
+     "type": "ActiveCollider"
+    },
+    {
+     "name": "field_1A10",
+     "offset": 6672,
+     "bit_offset": 53376,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "aCollider3",
+     "offset": 6676,
+     "bit_offset": 53408,
+     "size": 304,
+     "type": "ActiveCollider"
+    },
+    {
+     "name": "aCollider4",
+     "offset": 6980,
+     "bit_offset": 55840,
+     "size": 304,
+     "type": "ActiveCollider"
+    }
+   ]
+  },
+  {
+   "name": "FixedIcicle",
+   "size": 6616,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6300,
+     "type": "Enemy"
+    },
+    {
+     "name": "field_189C",
+     "offset": 6300,
+     "bit_offset": 50400,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "size",
+     "offset": 6304,
+     "bit_offset": 50432,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "aCollider2",
+     "offset": 6308,
+     "bit_offset": 50464,
+     "size": 304,
+     "type": "ActiveCollider"
+    },
+    {
+     "name": "field_19D4",
+     "offset": 6612,
+     "bit_offset": 52896,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "ActiveColliderMgr",
+   "size": 64,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "sead_IDisposer"
+    },
+    {
+     "name": "activeList",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 12,
+     "type": "ActiveColliderMgrList"
+    },
+    {
+     "name": "createList",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 12,
+     "type": "ActiveColliderMgrList"
+    },
+    {
+     "name": "list3",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 12,
+     "type": "ActiveColliderMgrList"
+    },
+    {
+     "name": "list4",
+     "offset": 52,
+     "bit_offset": 416,
+     "size": 12,
+     "type": "ActiveColliderMgrList"
+    }
+   ]
+  },
+  {
+   "name": "ActiveColliderMgrList",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "first",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "ActiveColliderNode *"
+    },
+    {
+     "name": "last",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "ActiveColliderNode *"
+    }
+   ]
+  },
+  {
+   "name": "ActiveColliderNode",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "owner",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "ActiveCollider *"
+    },
+    {
+     "name": "next",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "ActiveColliderNode *"
+    },
+    {
+     "name": "prev",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "ActiveColliderNode *"
+    }
+   ]
+  },
+  {
+   "name": "ColliderListNode",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "owner",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "ColliderBase *"
+    },
+    {
+     "name": "next",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "ColliderListNode *"
+    },
+    {
+     "name": "prev",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "ColliderListNode *"
+    }
+   ]
+  },
+  {
+   "name": "CircularCollider",
+   "size": 400,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 340,
+     "type": "ColliderBase"
+    },
+    {
+     "name": "field_154",
+     "offset": 340,
+     "bit_offset": 2720,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_158",
+     "offset": 344,
+     "bit_offset": 2752,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_15C",
+     "offset": 348,
+     "bit_offset": 2784,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_160",
+     "offset": 352,
+     "bit_offset": 2816,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_164",
+     "offset": 356,
+     "bit_offset": 2848,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_168",
+     "offset": 360,
+     "bit_offset": 2880,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_16C",
+     "offset": 364,
+     "bit_offset": 2912,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_170",
+     "offset": 368,
+     "bit_offset": 2944,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_174",
+     "offset": 372,
+     "bit_offset": 2976,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_178",
+     "offset": 376,
+     "bit_offset": 3008,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17C",
+     "offset": 380,
+     "bit_offset": 3040,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_180",
+     "offset": 384,
+     "bit_offset": 3072,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_184",
+     "offset": 388,
+     "bit_offset": 3104,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_188",
+     "offset": 392,
+     "bit_offset": 3136,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18C",
+     "offset": 396,
+     "bit_offset": 3168,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "RollingHill",
+   "size": 1082,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 644,
+     "type": "StageActor"
+    },
+    {
+     "name": "model",
+     "offset": 644,
+     "bit_offset": 5152,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "collider",
+     "offset": 648,
+     "bit_offset": 5184,
+     "size": 400,
+     "type": "CircularCollider"
+    },
+    {
+     "name": "unkSettings",
+     "offset": 1048,
+     "bit_offset": 8384,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "size",
+     "offset": 1049,
+     "bit_offset": 8392,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "gap41A",
+     "offset": 1050,
+     "bit_offset": 8400,
+     "size": 2,
+     "type": "_BYTE[2]"
+    },
+    {
+     "name": "field_41C",
+     "offset": 1052,
+     "bit_offset": 8416,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_420",
+     "offset": 1056,
+     "bit_offset": 8448,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_424",
+     "offset": 1060,
+     "bit_offset": 8480,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_428",
+     "offset": 1064,
+     "bit_offset": 8512,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_42C",
+     "offset": 1068,
+     "bit_offset": 8544,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_430",
+     "offset": 1072,
+     "bit_offset": 8576,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_434",
+     "offset": 1076,
+     "bit_offset": 8608,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_438",
+     "offset": 1080,
+     "bit_offset": 8640,
+     "size": 2,
+     "type": "__int16"
+    }
+   ]
+  },
+  {
+   "name": "ColliderOwnerInfo",
+   "size": 20,
+   "is_union": false,
+   "members": [
+    {
+     "name": "positionPtr",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "Vec3 *"
+    },
+    {
+     "name": "_248Ptr",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "Vec3 *"
+    },
+    {
+     "name": "_56Ptr",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "char *"
+    },
+    {
+     "name": "_57Ptr",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "char *"
+    },
+    {
+     "name": "playerIdPtr",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "char *"
+    }
+   ]
+  },
+  {
+   "name": "CircularColliderInfo",
+   "size": 32,
+   "is_union": false,
+   "members": [
+    {
+     "name": "distToCenter",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_C",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "radius",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "rotation",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "ColliderMgr",
+   "size": 100,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "sead_IDisposer"
+    },
+    {
+     "name": "lists",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 84,
+     "type": "ColliderList[7]"
+    }
+   ]
+  },
+  {
+   "name": "ColliderList",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "first",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "ColliderListNode *"
+    },
+    {
+     "name": "last",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "ColliderListNode *"
+    }
+   ]
+  },
+  {
+   "name": "RollingHill_TypeInfo",
+   "size": 24,
+   "is_union": false,
+   "members": [
+    {
+     "name": "resourceName",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "sead::SafeString"
+    },
+    {
+     "name": "modelName",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 8,
+     "type": "sead::SafeString"
+    },
+    {
+     "name": "size",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "surfaceType",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "SolidOnTopCollider",
+   "size": 372,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 340,
+     "type": "ColliderBase"
+    },
+    {
+     "name": "numPoints",
+     "offset": 340,
+     "bit_offset": 2720,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_158",
+     "offset": 344,
+     "bit_offset": 2752,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_15C",
+     "offset": 348,
+     "bit_offset": 2784,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_160",
+     "offset": 352,
+     "bit_offset": 2816,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_164",
+     "offset": 356,
+     "bit_offset": 2848,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_168",
+     "offset": 360,
+     "bit_offset": 2880,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_16C",
+     "offset": 364,
+     "bit_offset": 2912,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_170",
+     "offset": 368,
+     "bit_offset": 2944,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "TrampolineCloud",
+   "size": 6628,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6100,
+     "type": "StateActor"
+    },
+    {
+     "name": "field_17D4",
+     "offset": 6100,
+     "bit_offset": 48800,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17D8",
+     "offset": 6104,
+     "bit_offset": 48832,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17DC",
+     "offset": 6108,
+     "bit_offset": 48864,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17E0",
+     "offset": 6112,
+     "bit_offset": 48896,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17E4",
+     "offset": 6116,
+     "bit_offset": 48928,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17E8",
+     "offset": 6120,
+     "bit_offset": 48960,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17EC",
+     "offset": 6124,
+     "bit_offset": 48992,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17F0",
+     "offset": 6128,
+     "bit_offset": 49024,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17F4",
+     "offset": 6132,
+     "bit_offset": 49056,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17F8",
+     "offset": 6136,
+     "bit_offset": 49088,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17FC",
+     "offset": 6140,
+     "bit_offset": 49120,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1800",
+     "offset": 6144,
+     "bit_offset": 49152,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1804",
+     "offset": 6148,
+     "bit_offset": 49184,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1808",
+     "offset": 6152,
+     "bit_offset": 49216,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_180C",
+     "offset": 6156,
+     "bit_offset": 49248,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1810",
+     "offset": 6160,
+     "bit_offset": 49280,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1814",
+     "offset": 6164,
+     "bit_offset": 49312,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1818",
+     "offset": 6168,
+     "bit_offset": 49344,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_181C",
+     "offset": 6172,
+     "bit_offset": 49376,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1820",
+     "offset": 6176,
+     "bit_offset": 49408,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1824",
+     "offset": 6180,
+     "bit_offset": 49440,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1828",
+     "offset": 6184,
+     "bit_offset": 49472,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_182C",
+     "offset": 6188,
+     "bit_offset": 49504,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "effect",
+     "offset": 6192,
+     "bit_offset": 49536,
+     "size": 64,
+     "type": "EffectData"
+    },
+    {
+     "name": "collider",
+     "offset": 6256,
+     "bit_offset": 50048,
+     "size": 372,
+     "type": "SolidOnTopCollider"
+    }
+   ]
+  },
+  {
+   "name": "SolidOnTopColliderInfo",
+   "size": 24,
+   "is_union": false,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_C",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "points",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "Vec2 *"
+    },
+    {
+     "name": "rotation",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "ColliderNode",
+   "size": 32,
+   "is_union": false,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 16,
+     "type": "ColliderNodeUnk1"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "ColliderNodeUnk1",
+   "size": 16,
+   "is_union": false,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_C",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "ShapedCollider",
+   "size": 364,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 340,
+     "type": "ColliderBase"
+    },
+    {
+     "name": "nodeCount",
+     "offset": 340,
+     "bit_offset": 2720,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_158",
+     "offset": 344,
+     "bit_offset": 2752,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_15C",
+     "offset": 348,
+     "bit_offset": 2784,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_160",
+     "offset": 352,
+     "bit_offset": 2816,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_164",
+     "offset": 356,
+     "bit_offset": 2848,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_168",
+     "offset": 360,
+     "bit_offset": 2880,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "RectCollider",
+   "size": 656,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 364,
+     "type": "ShapedCollider"
+    },
+    {
+     "name": "field_16C",
+     "offset": 364,
+     "bit_offset": 2912,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_170",
+     "offset": 368,
+     "bit_offset": 2944,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_174",
+     "offset": 372,
+     "bit_offset": 2976,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_178",
+     "offset": 376,
+     "bit_offset": 3008,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17C",
+     "offset": 380,
+     "bit_offset": 3040,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_180",
+     "offset": 384,
+     "bit_offset": 3072,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_184",
+     "offset": 388,
+     "bit_offset": 3104,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_188",
+     "offset": 392,
+     "bit_offset": 3136,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18C",
+     "offset": 396,
+     "bit_offset": 3168,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "nodes",
+     "offset": 400,
+     "bit_offset": 3200,
+     "size": 256,
+     "type": "ColliderNode[8]"
+    }
+   ]
+  },
+  {
+   "name": "ShapedColliderInfo",
+   "size": 36,
+   "is_union": false,
+   "members": [
+    {
+     "name": "distToCenter",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "bit_offset": 64,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_C",
+     "offset": 12,
+     "bit_offset": 96,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "topLeft",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "bottomRight",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "rotation",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "StarCoinBase",
+   "size": 6188,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6104,
+     "type": "MultiStateActor"
+    },
+    {
+     "name": "model",
+     "offset": 6104,
+     "bit_offset": 48832,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17DC",
+     "offset": 6108,
+     "bit_offset": 48864,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17E0",
+     "offset": 6112,
+     "bit_offset": 48896,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17E4",
+     "offset": 6116,
+     "bit_offset": 48928,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17E8",
+     "offset": 6120,
+     "bit_offset": 48960,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17EC",
+     "offset": 6124,
+     "bit_offset": 48992,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17F0",
+     "offset": 6128,
+     "bit_offset": 49024,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17F4",
+     "offset": 6132,
+     "bit_offset": 49056,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17F8",
+     "offset": 6136,
+     "bit_offset": 49088,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_17FC",
+     "offset": 6140,
+     "bit_offset": 49120,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1800",
+     "offset": 6144,
+     "bit_offset": 49152,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1804",
+     "offset": 6148,
+     "bit_offset": 49184,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1808",
+     "offset": 6152,
+     "bit_offset": 49216,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_180C",
+     "offset": 6156,
+     "bit_offset": 49248,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1810",
+     "offset": 6160,
+     "bit_offset": 49280,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1814",
+     "offset": 6164,
+     "bit_offset": 49312,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1815",
+     "offset": 6165,
+     "bit_offset": 49320,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1818",
+     "offset": 6168,
+     "bit_offset": 49344,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_181C",
+     "offset": 6172,
+     "bit_offset": 49376,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1820",
+     "offset": 6176,
+     "bit_offset": 49408,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1824",
+     "offset": 6180,
+     "bit_offset": 49440,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1828",
+     "offset": 6184,
+     "bit_offset": 49472,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_1829",
+     "offset": 6185,
+     "bit_offset": 49480,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_182A",
+     "offset": 6186,
+     "bit_offset": 49488,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_182B",
+     "offset": 6187,
+     "bit_offset": 49496,
+     "size": 1,
+     "type": "char"
+    }
+   ]
+  },
+  {
+   "name": "StarCoin",
+   "size": 6200,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6188,
+     "type": "StarCoinBase"
+    },
+    {
+     "name": "field_182C",
+     "offset": 6188,
+     "bit_offset": 49504,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1830",
+     "offset": 6192,
+     "bit_offset": 49536,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1834",
+     "offset": 6196,
+     "bit_offset": 49568,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "LineFollower",
+   "size": 144,
+   "is_union": false,
+   "members": [
+    {
+     "name": "states",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 36,
+     "type": "StateWrapper"
+    },
+    {
+     "name": "field_24",
+     "offset": 36,
+     "bit_offset": 288,
+     "size": 56,
+     "type": "Vec2[7]"
+    },
+    {
+     "name": "speed",
+     "offset": 92,
+     "bit_offset": 736,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "position",
+     "offset": 100,
+     "bit_offset": 800,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "lastPosition",
+     "offset": 108,
+     "bit_offset": 864,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "blockPosition",
+     "offset": 116,
+     "bit_offset": 928,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "field_7C",
+     "offset": 124,
+     "bit_offset": 992,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_80",
+     "offset": 128,
+     "bit_offset": 1024,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "rotation",
+     "offset": 132,
+     "bit_offset": 1056,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "lineSpeed",
+     "offset": 136,
+     "bit_offset": 1088,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "noReverseOnStop",
+     "offset": 140,
+     "bit_offset": 1120,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "layer",
+     "offset": 141,
+     "bit_offset": 1128,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "reversed",
+     "offset": 142,
+     "bit_offset": 1136,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_8F",
+     "offset": 143,
+     "bit_offset": 1144,
+     "size": 1,
+     "type": "char"
+    }
+   ]
+  },
+  {
+   "name": "BossBase",
+   "size": 7092,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 6300,
+     "type": "Enemy"
+    },
+    {
+     "name": "field_189C",
+     "offset": 6300,
+     "bit_offset": 50400,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18A0",
+     "offset": 6304,
+     "bit_offset": 50432,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18A4",
+     "offset": 6308,
+     "bit_offset": 50464,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "isRumbleActive",
+     "offset": 6312,
+     "bit_offset": 50496,
+     "size": 1,
+     "type": "char"
+    },
+    {
+     "name": "field_18AC",
+     "offset": 6316,
+     "bit_offset": 50528,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18B0",
+     "offset": 6320,
+     "bit_offset": 50560,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18B4",
+     "offset": 6324,
+     "bit_offset": 50592,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_18B8",
+     "offset": 6328,
+     "bit_offset": 50624,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "soundActor",
+     "offset": 6332,
+     "bit_offset": 50656,
+     "size": 308,
+     "type": "MovingSoundActor"
+    },
+    {
+     "name": "field_19F0",
+     "offset": 6640,
+     "bit_offset": 53120,
+     "size": 2,
+     "type": "__int16"
+    },
+    {
+     "name": "playerLookTarget",
+     "offset": 6644,
+     "bit_offset": 53152,
+     "size": 44,
+     "type": "PlayerLookTarget"
+    },
+    {
+     "name": "scaler",
+     "offset": 6688,
+     "bit_offset": 53504,
+     "size": 32,
+     "type": "ActorScaler"
+    },
+    {
+     "name": "aColliderBoss",
+     "offset": 6720,
+     "bit_offset": 53760,
+     "size": 304,
+     "type": "ActiveCollider"
+    },
+    {
+     "name": "field_1B70",
+     "offset": 7024,
+     "bit_offset": 56192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "freezePosition",
+     "offset": 7028,
+     "bit_offset": 56224,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "freezeScale",
+     "offset": 7040,
+     "bit_offset": 56320,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "unkPosition",
+     "offset": 7052,
+     "bit_offset": 56416,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "unkSpeed",
+     "offset": 7064,
+     "bit_offset": 56512,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_1BA4",
+     "offset": 7076,
+     "bit_offset": 56608,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_1BA8",
+     "offset": 7080,
+     "bit_offset": 56640,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_1BAC",
+     "offset": 7084,
+     "bit_offset": 56672,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_1BB0",
+     "offset": 7088,
+     "bit_offset": 56704,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "PlayerLookTarget",
+   "size": 44,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "sead_IDisposer"
+    },
+    {
+     "name": "ownerId",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "position",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 8,
+     "type": "Vec2"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_20",
+     "offset": 32,
+     "bit_offset": 256,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_24",
+     "offset": 36,
+     "bit_offset": 288,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_28",
+     "offset": 40,
+     "bit_offset": 320,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "ActorScaler",
+   "size": 32,
+   "is_union": false,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "scale",
+     "offset": 4,
+     "bit_offset": 32,
+     "size": 12,
+     "type": "Vec3"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "bit_offset": 192,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "owner",
+     "offset": 28,
+     "bit_offset": 224,
+     "size": 4,
+     "type": "StageActor *"
+    }
+   ]
+  },
+  {
+   "name": "SoundActor",
+   "size": 140,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 124,
+     "type": "nn_atk_SoundActor"
+    },
+    {
+     "name": "field_7C",
+     "offset": 124,
+     "bit_offset": 992,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_80",
+     "offset": 128,
+     "bit_offset": 1024,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_84",
+     "offset": 132,
+     "bit_offset": 1056,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_88",
+     "offset": 136,
+     "bit_offset": 1088,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "MovingSoundActor",
+   "size": 308,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 140,
+     "type": "SoundActor"
+    },
+    {
+     "name": "field_8C",
+     "offset": 140,
+     "bit_offset": 1120,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_90",
+     "offset": 144,
+     "bit_offset": 1152,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_94",
+     "offset": 148,
+     "bit_offset": 1184,
+     "size": 4,
+     "type": "float"
+    },
+    {
+     "name": "field_98",
+     "offset": 152,
+     "bit_offset": 1216,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "handles",
+     "offset": 156,
+     "bit_offset": 1248,
+     "size": 144,
+     "type": "MovingSoundActorHandle[6]"
+    },
+    {
+     "name": "field_12C",
+     "offset": 300,
+     "bit_offset": 2400,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "field_130",
+     "offset": 304,
+     "bit_offset": 2432,
+     "size": 4,
+     "type": "int"
+    }
+   ]
+  },
+  {
+   "name": "MovingSoundActorHandle",
+   "size": 24,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "sead_IDisposer"
+    },
+    {
+     "name": "handle",
+     "offset": 16,
+     "bit_offset": 128,
+     "size": 4,
+     "type": "int"
+    },
+    {
+     "name": "unk",
+     "offset": 20,
+     "bit_offset": 160,
+     "size": 4,
+     "type": "float"
+    }
+   ]
+  },
+  {
+   "name": "nn_atk_SoundActor",
+   "size": 124,
+   "is_union": false,
+   "members": [
+    {
+     "name": "nn_atk_SoundActor_data",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 124,
+     "type": "char[124]"
+    }
+   ]
+  },
+  {
+   "name": "float16x4_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "float16x8_t",
+   "size": 16,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n128_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int64[2]"
+    },
+    {
+     "name": "n128_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int32[4]"
+    },
+    {
+     "name": "n128_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int16[8]"
+    },
+    {
+     "name": "n128_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "unsigned __int8[16]"
+    },
+    {
+     "name": "n128_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int64[2]"
+    },
+    {
+     "name": "n128_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int32[4]"
+    },
+    {
+     "name": "n128_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int16[8]"
+    },
+    {
+     "name": "n128_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "__int8[16]"
+    },
+    {
+     "name": "n128_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float[4]"
+    },
+    {
+     "name": "n128_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "double[2]"
+    }
+   ]
+  },
+  {
+   "name": "int16x2_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "uint16x2_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "float16x2_t",
+   "size": 8,
+   "is_union": true,
+   "members": [
+    {
+     "name": "n64_u64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    },
+    {
+     "name": "n64_u32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int32[2]"
+    },
+    {
+     "name": "n64_u16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int16[4]"
+    },
+    {
+     "name": "n64_u8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int8[8]"
+    },
+    {
+     "name": "n64_i64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    },
+    {
+     "name": "n64_i32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int32[2]"
+    },
+    {
+     "name": "n64_i16",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int16[4]"
+    },
+    {
+     "name": "n64_i8",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int8[8]"
+    },
+    {
+     "name": "n64_f32",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "float[2]"
+    },
+    {
+     "name": "n64_f64",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "svint8_t",
+   "size": 1,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 1,
+     "type": "__int8[1]"
+    }
+   ]
+  },
+  {
+   "name": "svuint8_t",
+   "size": 1,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 1,
+     "type": "unsigned __int8[1]"
+    }
+   ]
+  },
+  {
+   "name": "svint16_t",
+   "size": 2,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 2,
+     "type": "__int16[1]"
+    }
+   ]
+  },
+  {
+   "name": "svuint16_t",
+   "size": 2,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 2,
+     "type": "unsigned __int16[1]"
+    }
+   ]
+  },
+  {
+   "name": "svint32_t",
+   "size": 4,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "__int32[1]"
+    }
+   ]
+  },
+  {
+   "name": "svuint32_t",
+   "size": 4,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "unsigned __int32[1]"
+    }
+   ]
+  },
+  {
+   "name": "svint64_t",
+   "size": 8,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "__int64[1]"
+    }
+   ]
+  },
+  {
+   "name": "svuint64_t",
+   "size": 8,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "unsigned __int64[1]"
+    }
+   ]
+  },
+  {
+   "name": "svbool_t",
+   "size": 1,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 1,
+     "type": "unsigned __int8[1]"
+    }
+   ]
+  },
+  {
+   "name": "svfloat32_t",
+   "size": 4,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 4,
+     "type": "float[1]"
+    }
+   ]
+  },
+  {
+   "name": "svfloat64_t",
+   "size": 8,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 8,
+     "type": "double[1]"
+    }
+   ]
+  },
+  {
+   "name": "svfloat16_t",
+   "size": 2,
+   "is_union": false,
+   "members": [
+    {
+     "name": "body",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 2,
+     "type": "short float[1]"
+    }
+   ]
+  },
+  {
+   "name": "retval_600035C0",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6000BBD4",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6000E978",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6000EBE0",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6000EC7C",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6000ED20",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6000EE60",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_60024400",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_60045604",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_600637D4",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6008DD1C",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_600D8684",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_600E85F0",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_600EFAD8",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_60166A4C",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6016C7D4",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6016CC0C",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6016CDA0",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6016CF90",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6016D3EC",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6016D574",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6016D6F0",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6016D938",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6016DB58",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6016DCF4",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_601A02F8",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_601AC018",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_601C8F58",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6021C788",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_60248F30",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_60292ADC",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_602A8F40",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_602AD0EC",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_602AE264",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_602E74DC",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_60300338",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6035CD74",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_60375F5C",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6038FA88",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_60588188",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6060C7C8",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6069E178",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_606CA3C0",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_606D465C",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6075EC74",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_6075FEE4",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_60796A74",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_607FF8C4",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "retval_60833074",
+   "size": 12,
+   "is_union": false,
+   "members": [
+    {
+     "name": "_r0",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 12,
+     "type": "_BYTE[12]"
+    }
+   ]
+  },
+  {
+   "name": "float32x2x2_t",
+   "size": 16,
+   "is_union": false,
+   "members": [
+    {
+     "name": "val",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "float32x2_t[2]"
+    }
+   ]
+  },
+  {
+   "name": "int32x2x2_t",
+   "size": 16,
+   "is_union": false,
+   "members": [
+    {
+     "name": "val",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "int32x2_t[2]"
+    }
+   ]
+  },
+  {
+   "name": "int8x8x2_t",
+   "size": 16,
+   "is_union": false,
+   "members": [
+    {
+     "name": "val",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 16,
+     "type": "int8x8_t[2]"
+    }
+   ]
+  },
+  {
+   "name": "int8x8x4_t",
+   "size": 32,
+   "is_union": false,
+   "members": [
+    {
+     "name": "val",
+     "offset": 0,
+     "bit_offset": 0,
+     "size": 32,
+     "type": "int8x8_t[4]"
+    }
+   ]
+  }
+ ]
+}

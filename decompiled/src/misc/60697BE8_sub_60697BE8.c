@@ -37,7 +37,7 @@ void __fastcall sub_60697BE8(int a1)
       v5 = 1u >> (33 - v3);
       if ( v3 - 33 >= 0 )
         v5 = 1 << v4;
-      v6 = *(_QWORD *)(EventMgr__instance + 16);
+      v6 = FIELD_U64(EventMgr__instance, 16);
       v7 = HIDWORD(v6) & v5;
       v8 = 1 << (v3 - 1);
       if ( v4 >= 0 )
@@ -58,7 +58,7 @@ void __fastcall sub_60697BE8(int a1)
       v13 = 1 << (v10 - 1);
       if ( v11 >= 0 )
         v13 = 0;
-      v9 |= (*(_DWORD *)(EventMgr__instance + 16) & v13 | *(_DWORD *)(EventMgr__instance + 20) & v12) != 0;
+      v9 |= (FIELD_U32(EventMgr__instance, 16) & v13 | FIELD_U32(EventMgr__instance, 20) & v12) != 0;
     }
     if ( FIELD_U8(a1, 539) )
     {

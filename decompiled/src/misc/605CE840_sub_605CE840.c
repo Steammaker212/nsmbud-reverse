@@ -30,7 +30,7 @@ int __fastcall sub_605CE840(int result, _DWORD *a2, _QWORD *a3, int a4)
   }
   if ( !v6 )
   {
-    if ( a4 || (*(_QWORD *)(EventMgr__instance + 16) & *a3) == 0 )
+    if ( a4 || (FIELD_U64(EventMgr__instance, 16) & *a3) == 0 )
       goto LABEL_24;
     FIELD_U8(result, 20) = 1;
   }

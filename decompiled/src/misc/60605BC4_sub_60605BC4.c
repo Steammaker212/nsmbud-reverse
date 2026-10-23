@@ -17,7 +17,7 @@ int __fastcall sub_60605BC4(int a1)
   int v5; // r1
 
   v1 = FIELD_U32(a1, 6108);
-  v2 = *(_QWORD *)(EventMgr__instance + 16);
+  v2 = FIELD_U64(EventMgr__instance, 16);
   v3 = FIELD_U32(a1, 6104);
   HIDWORD(v4) = v1 & HIDWORD(v2);
   LODWORD(v4) = v3 & v2;
