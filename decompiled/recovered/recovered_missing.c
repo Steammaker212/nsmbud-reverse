@@ -603,7 +603,7 @@ int __fastcall sub_6029A6E4(int a1)
     return Enemy_vf25C((Enemy *)a1);
   *(_BYTE *)(a1 + 6672) = 1;
   v2 = *(_DWORD *)(a1 + 6284);
-  v3[0] = dword_60AFE3F8[v2];
+  v3[0] = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60AFE3F8))[v2];
   v3[1] = 1081711002;
   v3[2] = -1065353216;
   v3[3] = unk_60C906E8;
@@ -1019,7 +1019,7 @@ signed int __fastcall sub_6034E374(int a1, int *a2)
 int __fastcall sub_6035CBE0(ShellEnemy *a1, int a2)
 {
   if ( *((_DWORD *)a1 + 1869) == 1 )
-    return dword_60B00018[a2];
+    return ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B00018))[a2];
   else
     return ShellEnemy_vf2EC(a1);
 }
@@ -1032,7 +1032,7 @@ int __fastcall sub_6035CBE0(ShellEnemy *a1, int a2)
 int __fastcall sub_6035CC08(ShellEnemy *a1, int a2)
 {
   if ( *((_DWORD *)a1 + 1869) == 1 )
-    return dword_60B0004C[a2];
+    return ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0004C))[a2];
   else
     return ShellEnemy_vf300(a1);
 }
@@ -1194,25 +1194,25 @@ bool __fastcall sub_60428000(int a1, int *a2)
     }
     if ( a2 != &dword_60C8C1F8 )
     {
-      if ( ((unsigned int)&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo
+      if ( ((unsigned int)&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo
           & ~(1614971224 << v2)
           & 1) == 0
-        && _cxa_guard_acquire(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo) )
+        && _cxa_guard_acquire(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo) )
       {
-        sead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BD83C8;
-        _cxa_guard_release(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo);
+        sead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BD83C8;
+        _cxa_guard_release(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo);
       }
-      if ( a2 != &sead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo )
+      if ( a2 != &sead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo )
       {
-        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo
+        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo
             & ~(1614971316 << v2)
             & 1) == 0
-          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo) )
+          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo) )
         {
-          sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
-          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo);
+          sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
+          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo);
         }
-        return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo;
+        return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo;
       }
     }
   }
@@ -5762,7 +5762,7 @@ int __fastcall sub_607C37C0(int a1, int a2, double a3, float32x2_t a4, float32x2
     if ( v8 == 0.0 && !*(_BYTE *)(a1 + 12052) )
     {
       v25 = a1 + 11356;
-      v26 = dword_60AF22A8[*(_DWORD *)(a1 + 80)];
+      v26 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF22A8))[*(_DWORD *)(a1 + 80)];
       if ( a2 == 1 )
         return sub_607948E8(v25, v26);
       else
@@ -5774,7 +5774,7 @@ int __fastcall sub_607C37C0(int a1, int a2, double a3, float32x2_t a4, float32x2
       v21 = *(_DWORD *)(a1 + 80);
       *(float *)&a3 = 70.0 - (float)(v8 * flt_60B0A898[v21]);
       a4.n64_u32[0] = 1124859904;
-      v22 = dword_60AF22A0[v21];
+      v22 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF22A0))[v21];
       v23.n64_u64[0] = vmin_f32(vmax_f32(*(float32x2_t *)&a3, a5), a4).n64_u64[0];
       if ( *(_DWORD *)(*(_DWORD *)(a1 + 11360) + 28) == v22 )
       {
@@ -6558,8 +6558,8 @@ float __fastcall sub_607C4FA8(int a1)
   if ( sub_60155E7C(a1 + 1328, v17, v16, v5 * v8) == 1 )
   {
     v10 = *(_DWORD *)(a1 + 80);
-    *(_DWORD *)(a1 + 6900 + 4 * (dword_60AF2C34[v10] >> 5)) |= 1 << (dword_60AF2C34[v10] & 0x1F);
-    *(_DWORD *)(a1 + 6900 + 4 * (dword_60AF2C44[v10] >> 5)) |= 1 << (dword_60AF2C44[v10] & 0x1F);
+    *(_DWORD *)(a1 + 6900 + 4 * (((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF2C34))[v10] >> 5)) |= 1 << (((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF2C34))[v10] & 0x1F);
+    *(_DWORD *)(a1 + 6900 + 4 * (((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF2C44))[v10] >> 5)) |= 1 << (((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF2C44))[v10] & 0x1F);
     if ( (*(_BYTE *)(a1 + 1236) & 0x80) != 0 )
       *(float *)(a1 + 108) = v16[0] - v9;
   }
@@ -6572,8 +6572,8 @@ float __fastcall sub_607C4FA8(int a1)
   if ( sub_60155E7C(a1 + 1328, v16, &v18, v9) == 1 )
   {
     v15 = *(_DWORD *)(a1 + 80);
-    *(_DWORD *)(a1 + 6900 + 4 * (dword_60AF2C34[v15] >> 5)) |= 1 << (dword_60AF2C34[v15] & 0x1F);
-    *(_DWORD *)(a1 + 6900 + 4 * (dword_60AF2C44[v15] >> 5)) |= 1 << (dword_60AF2C44[v15] & 0x1F);
+    *(_DWORD *)(a1 + 6900 + 4 * (((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF2C34))[v15] >> 5)) |= 1 << (((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF2C34))[v15] & 0x1F);
+    *(_DWORD *)(a1 + 6900 + 4 * (((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF2C44))[v15] >> 5)) |= 1 << (((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF2C44))[v15] & 0x1F);
     if ( (*(_BYTE *)(a1 + 1236) & 0x80) != 0 )
     {
       result = v18 - v9;
@@ -6726,7 +6726,7 @@ bool __fastcall sub_607C651C(int a1, int a2)
     if ( v7 == (*(int (**)(void))(dword_60CC51AC + 8))() && *(_DWORD *)(a1 + 80) != a2 )
       return 0;
   }
-  v8 = dword_60AF22B0[*(_DWORD *)(a1 + 80)];
+  v8 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF22B0))[*(_DWORD *)(a1 + 80)];
   return (*(_DWORD *)(a1 + 4 * (v8 >> 5) + 6900) & (1 << (v8 & 0x1F))) != 0;
 }
 
@@ -6803,7 +6803,7 @@ float __fastcall sub_607C6730(int a1)
   else
   {
     sub_607734E8(a1, (int)"SE_PLY_MSSB_CATCHWALL", 0, 0);
-    sub_60236E40(*(char *)(a1 + 84), dword_60AF22B8[*(_DWORD *)(a1 + 80) ^ 1], a1 + 108, 0, 0);
+    sub_60236E40(*(char *)(a1 + 84), ((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF22B8))[*(_DWORD *)(a1 + 80) ^ 1], a1 + 108, 0, 0);
     *(_DWORD *)(a1 + 9940) = 1;
     *(_DWORD *)(a1 + 1208) |= 0x10000000u;
     *(_DWORD *)(a1 + 100) = 0;
@@ -6913,7 +6913,7 @@ int __fastcall sub_607C6E18(int a1)
   v15 = v8;
   v9 = *(char *)(a1 + 84);
   v10 = (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 156))(a1, *(_DWORD *)(a1 + 1320));
-  return sub_60236E40(v9, dword_60B0CF1C[v10], &v16, &v13, 0);
+  return sub_60236E40(v9, ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0CF1C))[v10], &v16, &v13, 0);
 }
 
 /* ============================================================================
@@ -7767,7 +7767,7 @@ int __fastcall sub_607C871C(int a1, int a2)
   if ( (result & 0x40) == 0 )
   {
     v4 = a1 + 11356;
-    v5 = dword_60AF22A8[*(_DWORD *)(a1 + 80)];
+    v5 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF22A8))[*(_DWORD *)(a1 + 80)];
     if ( a2 == 1 )
       return sub_607948E8(v4, v5);
     else
@@ -8667,7 +8667,7 @@ int __fastcall sub_607C9D48(int result)
 /* Recovered from main.idb: VA 0x607C9D78  RVA 0x007C9D78  size 0x18 */
 float __fastcall sub_607C9D78(int a1, int a2)
 {
-  return *(float *)&dword_60CC2C64[6 * a2 + 3];
+  return *(float *)&((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[6 * a2 + 3];
 }
 
 /* ============================================================================
@@ -8677,7 +8677,7 @@ float __fastcall sub_607C9D78(int a1, int a2)
 /* Recovered from main.idb: VA 0x607C9D94  RVA 0x007C9D94  size 0x18 */
 float __fastcall sub_607C9D94(int a1, int a2)
 {
-  return *(float *)&dword_60CC2C64[6 * a2 + 4];
+  return *(float *)&((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[6 * a2 + 4];
 }
 
 /* ============================================================================
@@ -8818,7 +8818,7 @@ unsigned int __fastcall sub_607C9DB0(int a1, int a2, float a3, float a4, float a
         {
 LABEL_41:
           v10 = a2;
-          if ( (dword_60CC2C64[6 * a2 + 5] & 2) == 0 )
+          if ( (((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[6 * a2 + 5] & 2) == 0 )
           {
             v28 = a2 - 5;
             v29 = *(_DWORD *)(a1 + 196);
@@ -8884,7 +8884,7 @@ LABEL_41:
     v13 = v10;
     *(_DWORD *)(a1 + 36) = -1;
     *(_DWORD *)(a1 + 28) = v10;
-    v14 = &dword_60CC2C64[6 * v10];
+    v14 = &((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[6 * v10];
     *(_DWORD *)(a1 + 196) = v14[5];
     v47 = v14 + 5;
     *(_DWORD *)(a1 + 200) = v14[5];
@@ -8893,7 +8893,7 @@ LABEL_41:
     v52 = &BufferedSafeStringBase_char_vtable_probably;
     v54 = 32;
     sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v52);
-    v15 = dword_60CC2C64[2 * v12];
+    v15 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[2 * v12];
     v51 = v12;
     v16 = v53;
     (*(void (__fastcall **)(int *))(v15 + 12))(v14);
@@ -8986,20 +8986,20 @@ LABEL_33:
       (*(void (__fastcall **)(int *))(dword_60CC5378 + 12))(&dword_60CC5378);
     }
     sub_6079104C(a1, &v56, &v52, v13, 0);
-    v38 = dword_60CC2C64[2 * v51 + 2];
+    v38 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[2 * v51 + 2];
     if ( a5 == 0.0 )
     {
       v39 = v49 == -1;
       if ( v49 != -1 )
         v39 = (*(_DWORD *)(a1 + 196) & 0x40) == 0;
-      if ( !v39 && (dword_60CC2C64[6 * v49 + 5] & 0x40) != 0 )
+      if ( !v39 && (((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[6 * v49 + 5] & 0x40) != 0 )
         a5 = sub_60793184(a1);
     }
     if ( sub_60793198(a1) == 1 )
     {
       if ( sub_607931A8(a1, v40) == 1 )
       {
-        v41 = &dword_60CBFBC4[13 * v48];
+        v41 = &((_DWORD *)(uintptr_t)(0x60000000u + 0x60CBFBC4))[13 * v48];
         *(_DWORD *)(a1 + 196) = v41[12];
         *(_DWORD *)(a1 + 200) = v41[12];
         *(_DWORD *)(a1 + 564) = v48;
@@ -9258,7 +9258,7 @@ int __fastcall sub_607CAA54(int a1, float a2)
       }
     }
     v10 = 3 * v7;
-    v11 = &dword_60CC2C64[6 * v7];
+    v11 = &((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[6 * v7];
     *(_DWORD *)(a1 + 200) = v11[5];
     v12 = *(_DWORD *)(a1 + 544);
     v25 = &v27;
@@ -9266,7 +9266,7 @@ int __fastcall sub_607CAA54(int a1, float a2)
     v26 = 32;
     sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v24);
     v13 = v25;
-    (*(void (__fastcall **)(int *))(dword_60CC2C64[2 * v10] + 12))(v11);
+    (*(void (__fastcall **)(int *))(((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[2 * v10] + 12))(v11);
     v14 = (char *)v11[1];
     if ( v13 != v14 )
     {
@@ -9308,7 +9308,7 @@ int __fastcall sub_607CAA54(int a1, float a2)
     }
     else
     {
-      v20 = dword_60CC2C64[2 * v10 + 2];
+      v20 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[2 * v10 + 2];
       v21 = *(void (__fastcall **)(int, int, int (***)(), int, float, float, float))(*(_DWORD *)a1 + 44);
       v22 = sub_607934C0(a1);
       v23 = sub_60793184(a1);
@@ -9332,11 +9332,11 @@ int __fastcall sub_607CACC4(_DWORD *a1, float a2)
   int result; // r0
 
   v3 = a1[7];
-  v4 = &dword_60CBFBC4[13 * a1[141]];
+  v4 = &((_DWORD *)(uintptr_t)(0x60000000u + 0x60CBFBC4))[13 * a1[141]];
   a1[49] = v4[12];
   a1[50] = v4[12];
   sub_607931B8(a1, *((float *)v4 + 9), a2, 0.0);
-  v5 = &dword_60CBFBC4[13 * v3];
+  v5 = &((_DWORD *)(uintptr_t)(0x60000000u + 0x60CBFBC4))[13 * v3];
   a1[49] = v5[12];
   result = v5[12];
   a1[50] = result;
@@ -10227,7 +10227,7 @@ float __fastcall sub_607CC268(int a1)
     {
       v5 = dword_607CC2D0;
       if ( !*(_BYTE *)(a1 + 86) )
-        v5 = &dword_607CC2D0[1];
+        v5 = &((_DWORD *)(uintptr_t)(0x60000000u + 0x607CC2D0))[1];
       v4 = *(float *)v5;
     }
     else
@@ -14076,7 +14076,7 @@ int sub_607D23B0()
 /* Recovered from main.idb: VA 0x607D2540  RVA 0x007D2540  size 0x18 */
 int __fastcall sub_607D2540(int a1)
 {
-  return dword_60B0D1E4[*(_DWORD *)(a1 + 7004)];
+  return ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0D1E4))[*(_DWORD *)(a1 + 7004)];
 }
 
 /* ============================================================================
@@ -14086,7 +14086,7 @@ int __fastcall sub_607D2540(int a1)
 /* Recovered from main.idb: VA 0x607D2564  RVA 0x007D2564  size 0x18 */
 int __fastcall sub_607D2564(int a1)
 {
-  return dword_60B0D21C[*(_DWORD *)(a1 + 7004)];
+  return ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0D21C))[*(_DWORD *)(a1 + 7004)];
 }
 
 /* ============================================================================
@@ -14096,7 +14096,7 @@ int __fastcall sub_607D2564(int a1)
 /* Recovered from main.idb: VA 0x607D2588  RVA 0x007D2588  size 0x18 */
 int __fastcall sub_607D2588(int a1)
 {
-  return dword_60B0D254[*(_DWORD *)(a1 + 7004)];
+  return ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0D254))[*(_DWORD *)(a1 + 7004)];
 }
 
 /* ============================================================================
@@ -14106,7 +14106,7 @@ int __fastcall sub_607D2588(int a1)
 /* Recovered from main.idb: VA 0x607D25A4  RVA 0x007D25A4  size 0x18 */
 int __fastcall sub_607D25A4(int a1)
 {
-  return dword_60B0D28C[*(_DWORD *)(a1 + 7004)];
+  return ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0D28C))[*(_DWORD *)(a1 + 7004)];
 }
 
 /* ============================================================================
@@ -14116,7 +14116,7 @@ int __fastcall sub_607D25A4(int a1)
 /* Recovered from main.idb: VA 0x607D25C0  RVA 0x007D25C0  size 0x18 */
 int __fastcall sub_607D25C0(int a1)
 {
-  return dword_60B0D2C4[*(_DWORD *)(a1 + 7004)];
+  return ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0D2C4))[*(_DWORD *)(a1 + 7004)];
 }
 
 /* ============================================================================
@@ -14126,7 +14126,7 @@ int __fastcall sub_607D25C0(int a1)
 /* Recovered from main.idb: VA 0x607D25DC  RVA 0x007D25DC  size 0x18 */
 int __fastcall sub_607D25DC(int a1)
 {
-  return dword_60B0D2FC[*(_DWORD *)(a1 + 7004)];
+  return ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0D2FC))[*(_DWORD *)(a1 + 7004)];
 }
 
 /* ============================================================================
@@ -14703,7 +14703,7 @@ int __fastcall sub_607D3560(int a1)
   v9 = v2;
   v10 = v3;
   v11 = v4;
-  sub_60236EC4(*(char *)(a1 + 84), a1 + 11716, dword_60B0D358[*(_DWORD *)(a1 + 7004)], &v9, 0, 0);
+  sub_60236EC4(*(char *)(a1 + 84), a1 + 11716, ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0D358))[*(_DWORD *)(a1 + 7004)], &v9, 0, 0);
   v5 = *(_DWORD *)(a1 + 80);
   v6 = flt_60B0A898[v5] + flt_60B0A898[v5];
   *(float *)(a1 + 88) = v6;
@@ -15502,7 +15502,7 @@ int __fastcall sub_607D4818(int a1, int a2)
   int v12; // [sp+20h] [bp-28h]
   int v13; // [sp+24h] [bp-24h] BYREF
 
-  sub_607929C0(a1, &dword_60CC5440[2 * a2 + 10], &dword_60CC5448);
+  sub_607929C0(a1, &((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC5440))[2 * a2 + 10], &dword_60CC5448);
   *(_DWORD *)a1 = off_60C261E4;
   *(_DWORD *)(a1 + 240) = 0;
   sub_6040E90C(a1 + 244, 25);
@@ -15639,7 +15639,7 @@ int __fastcall sub_607D4B8C(int a1, int a2, int a3, int a4, int a5, int a6)
   bool v16; // cc
   signed int v17; // r0
 
-  v8 = &dword_60CBFBC4[13 * a5];
+  v8 = &((_DWORD *)(uintptr_t)(0x60000000u + 0x60CBFBC4))[13 * a5];
   v10 = (_BYTE *)v8[5];
   v9 = (const void **)(v8 + 5);
   result = 0;
@@ -15900,7 +15900,7 @@ int __fastcall sub_607D57F0(int a1)
   v4 = *(float *)(a1 + 312);
   if ( v4 > 0.0 && (*(_BYTE *)(a1 + 200) & 0x20) == 0 )
   {
-    v3 = (int)(float)((float)dword_60CC5440[0] * v4);
+    v3 = (int)(float)((float)((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC5440))[0] * v4);
     v9 = v3;
   }
   v5 = *(float *)(a1 + 320);
@@ -16760,7 +16760,7 @@ int __fastcall sub_607D7688(int a1, int a2, float32x2_t a3, float32x2_t a4)
     if ( a2 == 1 )
     {
       a3.n64_u32[0] = 0;
-      a4.n64_u32[0] = dword_60CBFBC4[13 * v4 + 10];
+      a4.n64_u32[0] = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60CBFBC4))[13 * v4 + 10];
       LODWORD(v10) = vmax_f32(a4, a3).n64_u32[0];
     }
     else
@@ -19826,25 +19826,25 @@ bool __fastcall sub_607DC43C(int *a1)
     }
     if ( a1 != &dword_60C8C1F8 )
     {
-      if ( ((unsigned int)&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo
+      if ( ((unsigned int)&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo
           & ~(1618855184 << v1)
           & 1) == 0
-        && _cxa_guard_acquire(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo) )
+        && _cxa_guard_acquire(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo) )
       {
-        sead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BD83C8;
-        _cxa_guard_release(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo);
+        sead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BD83C8;
+        _cxa_guard_release(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo);
       }
-      if ( a1 != &sead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo )
+      if ( a1 != &sead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo )
       {
-        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo
+        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo
             & ~(1618855276 << v1)
             & 1) == 0
-          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo) )
+          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo) )
         {
-          sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
-          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo);
+          sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
+          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo);
         }
-        return a1 == &sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo;
+        return a1 == &sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo;
       }
     }
   }
@@ -22446,25 +22446,25 @@ bool __fastcall sub_607DFA5C(int a1, int *a2)
     }
     if ( a2 != &dword_60C8C1F8 )
     {
-      if ( ((unsigned int)&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo
+      if ( ((unsigned int)&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo
           & ~(1618869164 << v2)
           & 1) == 0
-        && _cxa_guard_acquire(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo) )
+        && _cxa_guard_acquire(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo) )
       {
-        sead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BD83C8;
-        _cxa_guard_release(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo);
+        sead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BD83C8;
+        _cxa_guard_release(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo);
       }
-      if ( a2 != &sead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo )
+      if ( a2 != &sead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo )
       {
-        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo
+        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo
             & ~(1618869256 << v2)
             & 1) == 0
-          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo) )
+          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo) )
         {
-          sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
-          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo);
+          sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
+          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo);
         }
-        return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo;
+        return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo;
       }
     }
   }
@@ -22974,15 +22974,15 @@ bool __fastcall sub_607E0414(int a1, int *a2)
     }
     if ( a2 != &dword_60CC5824 )
     {
-      if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo
+      if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo
           & ~(1618871528 << v2)
           & 1) == 0
-        && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo) )
+        && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo) )
       {
-        sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
-        _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo);
+        sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
+        _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo);
       }
-      return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo;
+      return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo;
     }
   }
   return v4;
@@ -23048,18 +23048,18 @@ int __fastcall sub_607E06A4(int a1, int a2)
 
   if ( a1 == a2 )
     return 1;
-  if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo
+  if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo
       & ~(1618872004 << v2)
       & 1) == 0 )
   {
-    if ( _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo) )
+    if ( _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo) )
     {
-      sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
-      _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo);
+      sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
+      _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo);
     }
   }
-  return (*(int (__fastcall **)(int *, int))sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo)(
-           &sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo,
+  return (*(int (__fastcall **)(int *, int))sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo)(
+           &sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo,
            a2);
 }
 
@@ -28661,8 +28661,8 @@ LABEL_144:
               v159 = dword_607EA10C;
               if ( v157 < 0.0 )
               {
-                v158 = &dword_607EA104[1];
-                v159 = &dword_607EA10C[1];
+                v158 = &((_DWORD *)(uintptr_t)(0x60000000u + 0x607EA104))[1];
+                v159 = &((_DWORD *)(uintptr_t)(0x60000000u + 0x607EA10C))[1];
               }
               if ( !*(_BYTE *)(dword_60CC6D8C + 17) || (*(_WORD *)(dword_60CC6D78 + 109048) & 0x7F) != 0xA )
                 goto LABEL_243;
@@ -29312,8 +29312,8 @@ int __fastcall sub_607EAF04(int a1)
   v2 = *(_DWORD *)(a1 + 7352);
   v3 = dword_60CC62E4;
   v4 = dword_60CC6D78;
-  *(_DWORD *)(dword_60CC6D78 + 412) = byte_60B0D9C2[v2];
-  *(_DWORD *)(v4 + 424) = byte_60B0D9C5[v2];
+  *(_DWORD *)(dword_60CC6D78 + 412) = ((_BYTE *)(uintptr_t)(0x60000000u + 0x60B0D9C2))[v2];
+  *(_DWORD *)(v4 + 424) = ((_BYTE *)(uintptr_t)(0x60000000u + 0x60B0D9C5))[v2];
   sub_607F67E8(v3, a1);
   *(_DWORD *)(v3 + 108) = 589824;
   return 589824;
@@ -33039,10 +33039,10 @@ int *sub_607F02DC()
 
   if ( ((unsigned int)&dword_60C9BB48 & ~(1618936560 << v0) & 1) == 0 && _cxa_guard_acquire(&dword_60C9BB48) )
   {
-    sead_MethodTreeMgr_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
+    sead_MethodTreeMgr_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
     _cxa_guard_release(&dword_60C9BB48);
   }
-  return &sead_MethodTreeMgr_getRuntimeTypeInfoStatic(void)::typeInfo;
+  return &sead_MethodTreeMgr_getRuntimeTypeInfoStatic_void__typeInfo;
 }
 
 /* ============================================================================
@@ -33322,17 +33322,17 @@ bool __fastcall sub_607F0850(int a1, int *a2)
   }
   if ( a2 == &dword_60CC5824 )
     return 1;
-  if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo
+  if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo
       & ~(1618938052 << v2)
       & 1) == 0 )
   {
-    if ( _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo) )
+    if ( _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo) )
     {
-      sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
-      _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo);
+      sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
+      _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo);
     }
   }
-  return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo;
+  return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo;
 }
 
 /* ============================================================================
@@ -33377,15 +33377,15 @@ bool __fastcall sub_607F09C8(int a1, int *a2)
     }
     if ( a2 != &dword_60CC5824 )
     {
-      if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo
+      if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo
           & ~(1618938524 << v2)
           & 1) == 0
-        && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo) )
+        && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo) )
       {
-        sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
-        _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo);
+        sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
+        _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo);
       }
-      return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo;
+      return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo;
     }
   }
   return v4;
@@ -35919,7 +35919,7 @@ StateMethodExecuter *__fastcall sub_607F40B8(StateMethodExecuter *result)
   v1 = *(_DWORD *)(dword_60C99DD0 + 3796);
   if ( v1 <= 3 )
   {
-    v2 = dword_60AF5A10[v1];
+    v2 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60AF5A10))[v1];
     if ( v2 == 1 )
     {
       *(_DWORD *)(dword_60C99DD0 + 3780) |= 1u;
@@ -38007,7 +38007,7 @@ int __fastcall sub_607F6EF8(int a1, unsigned int *a2)
 
   v2 = *a2;
   if ( v2 <= 3 )
-    return ((int (*)(void))((char *)dword_607F6F14 + dword_607F6F14[v2]))();
+    return ((int (*)(void))((char *)dword_607F6F14 + ((_DWORD *)(uintptr_t)(0x60000000u + 0x607F6F14))[v2]))();
   return result;
 }
 
@@ -38318,15 +38318,15 @@ bool __fastcall sub_607F73DC(int a1, int *a2)
       }
       if ( a2 != &dword_60CC5824 )
       {
-        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo
+        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo
             & ~(1618965896 << v2)
             & 1) == 0
-          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo) )
+          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo) )
         {
-          sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
-          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo);
+          sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
+          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo);
         }
-        return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo;
+        return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo;
       }
     }
   }
@@ -42585,8 +42585,8 @@ int __fastcall sub_607FDAD0(int a1, int a2, _BYTE *a3)
   }
   else
   {
-    *(_DWORD *)(a1 + 24) = dword_60B0D9DC[v8];
-    v7 = dword_60B0DA00[v8];
+    *(_DWORD *)(a1 + 24) = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0D9DC))[v8];
+    v7 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B0DA00))[v8];
   }
   *(_DWORD *)(a1 + 28) = v7;
   return a1;
@@ -43487,25 +43487,25 @@ bool __fastcall sub_6081964C(int a1, int *a2)
     }
     if ( a2 != &dword_60C8C1F8 )
     {
-      if ( ((unsigned int)&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo
+      if ( ((unsigned int)&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo
           & ~(1619105692 << v2)
           & 1) == 0
-        && _cxa_guard_acquire(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo) )
+        && _cxa_guard_acquire(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo) )
       {
-        sead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BD83C8;
-        _cxa_guard_release(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo);
+        sead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BD83C8;
+        _cxa_guard_release(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo);
       }
-      if ( a2 != &sead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo )
+      if ( a2 != &sead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo )
       {
-        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo
+        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo
             & ~(1619105784 << v2)
             & 1) == 0
-          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo) )
+          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo) )
         {
-          sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
-          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo);
+          sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
+          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo);
         }
-        return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo;
+        return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo;
       }
     }
   }
@@ -43537,25 +43537,25 @@ bool __fastcall sub_6081AB28(int a1, int *a2)
     }
     if ( a2 != &dword_60C8C1F8 )
     {
-      if ( ((unsigned int)&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo
+      if ( ((unsigned int)&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo
           & ~(1619111040 << v2)
           & 1) == 0
-        && _cxa_guard_acquire(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo) )
+        && _cxa_guard_acquire(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo) )
       {
-        sead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BD83C8;
-        _cxa_guard_release(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo);
+        sead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BD83C8;
+        _cxa_guard_release(&g_guard_variable_forsead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo);
       }
-      if ( a2 != &sead_CalculateTask_getRuntimeTypeInfoStatic(void)::typeInfo )
+      if ( a2 != &sead_CalculateTask_getRuntimeTypeInfoStatic_void__typeInfo )
       {
-        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo
+        if ( ((unsigned int)&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo
             & ~(1619111132 << v2)
             & 1) == 0
-          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo) )
+          && _cxa_guard_acquire(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo) )
         {
-          sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo = (int)&off_60BC00A4;
-          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo);
+          sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo = (int)&off_60BC00A4;
+          _cxa_guard_release(&g_guard_variable_forsead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo);
         }
-        return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic(void)::typeInfo;
+        return a2 == &sead_TaskBase_getRuntimeTypeInfoStatic_void__typeInfo;
       }
     }
   }
@@ -50947,7 +50947,7 @@ int __fastcall sub_609A8F28(_DWORD *a1, int a2, int a3)
   v6 = 3;
   v7 = a1[48] - 3;
   if ( v7 <= 0xA )
-    v6 = dword_60B75420[v7];
+    v6 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B75420))[v7];
   result = a1[44];
   if ( result >= 1 )
   {
@@ -51593,19 +51593,19 @@ int __fastcall sub_609A9B80(_DWORD *a1, int a2, int a3)
     v4 = (int *)((char *)&unk_60B75470 + 4 * v3);
   v7 = *v4;
   if ( v5 <= 5 )
-    v6 = dword_60B75450[v5];
+    v6 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B75450))[v5];
   v8 = a1[48];
   LOBYTE(v9) = 3;
   if ( v8 <= 5 )
-    v9 = dword_60B75450[v8];
+    v9 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B75450))[v8];
   v10 = a1[52];
   LOBYTE(v11) = 4;
   if ( v10 <= 5 )
-    v11 = dword_60B75450[v10];
+    v11 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B75450))[v10];
   v12 = a1[56];
   LOBYTE(a1) = 5;
   if ( v12 <= 5 )
-    a1 = (_DWORD *)dword_60B75450[v12];
+    a1 = (_DWORD *)((_DWORD *)(uintptr_t)(0x60000000u + 0x60B75450))[v12];
   *(_DWORD *)(a3 + 8) = v7;
   *(_BYTE *)(a3 + 340) = v6;
   *(_BYTE *)(a3 + 341) = v9;
@@ -51632,7 +51632,7 @@ unsigned int __fastcall sub_609A9C68(int a1, unsigned int *a2)
   result = *(_DWORD *)(a1 + 160);
   if ( result <= 4 )
   {
-    result = dword_60B75470[result];
+    result = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60B75470))[result];
     *a2 = result;
   }
   return result;

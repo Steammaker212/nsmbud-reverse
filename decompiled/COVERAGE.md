@@ -45,27 +45,38 @@ produced 110 "undeclared identifier 'v'" errors. Recorded because the mistake is
 | unit | bodies | errors |
 |---|---:|---:|
 | `recovered_named.c` | 472 | 198 |
-| `recovered_missing.c` | 1,351 | 2,802 |
+| `recovered_missing.c` | 1,351 | 2,683 |
 
-The remaining errors are not mechanical. They come from class-typed locals and members — `no member named X in Y`,
-`member reference base type is not a structure or union`, `expected expression` — which need real struct
-definitions. The corpus has none for these classes because its own functions only ever passed them as opaque
-pointers. Producing those structs means recovering field layout from the binary.
+`scripts/repair_cxx_leftovers.py` removed the last 78 `::` runs (identifiers that had been truncated at an embedded
+`(void)`) and rewrote 56 subscripted data macros to the pointer form the corpus uses, taking `recovered_missing.c`
+from 2,802 to 2,683.
 
-The bodies are kept rather than dropped: they are correct, readable C, and they compile once the structs exist.
+The remaining errors need class layouts, and **the database does not have them**. `main.i64`'s local type library
+holds 208 ordinal slots and zero struct, union and enum definitions — dumping it produced
+`/* Local types from main.i64: 0 definition(s) */`. The corpus has no layouts for these classes either, because its
+own functions only ever passed them as opaque pointers.
 
-## A caveat about the dependency generator
+So closing these two units fully means recovering field layout from the code that reads each field — real analysis
+work, not a formatting pass. Until then the bodies stay, because they are correct and readable, and they compile the
+moment layouts exist.
 
-`scripts/declare_recovered_deps.py` fills `decompiled/include/nsmbudx_recovered_deps.h` with the data-address
-macros and type declarations both units need. It is **not stable**: re-running it alternates the error count between
-2,802 and 3,421, because each pass reclassifies a handful of names as either data objects or types, and the two
-choices produce different follow-on errors. The committed header is the 2,802 state, which was measured as the
-better of the two. Anyone re-running the generator should compare the count afterwards and keep the better header,
-rather than assuming another pass improves things.
+## Naming: why 89.9% of functions are still `sub_*`
 
-Evidence gathering for the header is sound — the 1,990 data macros are found by scanning the source for
-`dword_`/`off_`/`byte_`-shaped names, which is complete by construction. It is the type-versus-data classification
-that oscillates.
+     corpus definitions   34,774
+     named                 3,504  (10.1%)
+     sub_XXXXXXXX         31,270  (89.9%)
+
+This is not a naming backlog that can be worked through. `main.i64` contains 47,158 functions and only **2,920**
+carry a meaningful name — the other 44,238 are IDA auto-names (`sub_` 35,414, `nullsub_` 6,710, `j_` 2,114). The
+corpus has already adopted every name the database has: of the 2,400 names shared between the two, 2,397 sit at
+identical addresses.
+
+The symbol file does not add coverage either. It holds 2,950 mangled C++ names; 2,097 already appear in the corpus,
+and of the 853 that do not, only 73 land on an address the corpus labels `sub_`, and those 73 are synthetic
+`_ZN..._helper` labels rather than real symbols.
+
+Further naming therefore requires inferring names from behaviour or from vtable ownership — a different kind of
+work from applying a symbol table.
 
 ## Parse count
 
