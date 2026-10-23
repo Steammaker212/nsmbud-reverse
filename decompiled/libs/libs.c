@@ -25911,7 +25911,7 @@ sub_6080C744__LABEL_131:
   int v46; // [sp+F8h] [bp-1B8h]
   int v47; // [sp+FCh] [bp-1B4h] BYREF
   _BYTE v48[32]; // [sp+1FCh] [bp-B4h] BYREF
-  sead::SafeString v49; // [sp+21Ch] [bp-94h] BYREF
+  sead__SafeString v49; // [sp+21Ch] [bp-94h] BYREF
   int v50; // [sp+224h] [bp-8Ch]
   int v51; // [sp+228h] [bp-88h]
   int v52; // [sp+22Ch] [bp-84h]
@@ -26006,7 +26006,7 @@ System_Revision_yml_ref__LABEL_19:
       v61 = 0;
       sead__SafeStringBase_char__operator=((int)&v49, (int)v62);
       v3 = (int (__fastcall ***)(_DWORD, int *))sead_ResourceMgr_OpenFileRelated(
-                                                  sead::ResourceMgr::sInstance,
+                                                  sead__ResourceMgr__sInstance,
                                                   (int)&v49);
       if ( ((unsigned int)&dword_60C9BB2C & ~(1619116548 << v4) & 1) == 0 && _cxa_guard_acquire(&dword_60C9BB2C) )
       {
@@ -32148,7 +32148,7 @@ sub_6081CA7C__LABEL_157:
     sub_6042B868(0);
     v41 = 1;
     v51[0] = 12321336;
-    v51[1] = (int)"Mii::CentralMgr";
+    v51[1] = (int)"Mii__CentralMgr";
     v42 = sead__ExpHeap__create(0, (int)v51, 0, 4, 1, 0);
     v43 = v42;
     if ( v42 )
@@ -184486,7 +184486,7 @@ sub_60899E38__LABEL_88:
       v3 = *(_DWORD *)(a1 + 116);
       v4 = *(_DWORD *)(a1 + 188);
       v9[0] = 12321336;
-      v9[1] = "sead::AudioTaskThread";
+      v9[1] = "sead__AudioTaskThread";
       *(_DWORD *)(a1 + 180) = sub_608DDE28(v2, v4, v3, (int)v9, 0x2000, 64);
     }
     if ( *(_BYTE *)(a1 + 192) )
@@ -195687,7 +195687,7 @@ sub_608DF448__LABEL_158:
     char v48; // [sp+38h] [bp-38h]
     char v49; // [sp+39h] [bp-37h]
   
-    ((void (__fastcall *)(nv *__hidden, void *(*)(unsigned int, unsigned int, void *), void (*)(void *, void *), void *(*)(void *, unsigned int, void *)))nv::SetGraphicsAllocator)(
+    ((void (__fastcall *)(nv *__hidden, void *(*)(unsigned int, unsigned int, void *), void (*)(void *, void *), void *(*)(void *, unsigned int, void *)))nv__SetGraphicsAllocator)(
       (nv *)sub_608EABF8,
       (void *(*)(unsigned int, unsigned int, void *))j_free,
       (void (*)(void *, void *))j_realloc,
@@ -197970,7 +197970,7 @@ sub_608DF448__LABEL_158:
     if ( MEMORY[0xCCEEA4] )
       v1 = *MEMORY[0xCCEEAC];
     v4[0] = 12321336;
-    v4[1] = "sead::ThreadMgr";
+    v4[1] = "sead__ThreadMgr";
     v2 = sead__ExpHeap__create(0, v4, v1, 4, 1, 0);
     sead__ThreadMgr__createInstance();
     sead__ThreadMgr__initialize(*(_DWORD *)off_60C79854, v2);
@@ -197993,7 +197993,7 @@ sub_608DF448__LABEL_158:
   
     (*(void (__fastcall **)(_DWORD *))(*a1 + 44))(a1);
     v10 = 12321336;
-    v11 = "sead::MethodTreeMgr";
+    v11 = "sead__MethodTreeMgr";
     v8 = sead__ExpHeap__create(0, (int)&v10, a2, 4, 1, 0);
     a1[8] = (*(int (__fastcall **)(_DWORD *, int))(*a1 + 56))(a1, v8);
     (*(void (__fastcall **)(int))(*(_DWORD *)v8 + 20))(v8);
@@ -198315,11 +198315,11 @@ sub_608DF448__LABEL_158:
     v2 = (*(int (__fastcall **)(_DWORD, int))(*(_DWORD *)*MEMORY[0xCCEEAC] + 64))(*MEMORY[0xCCEEAC], 4);
     v3 = 1;
     v11 = 12321336;
-    v12 = "sead::SystemManagers";
+    v12 = "sead__SystemManagers";
     v4 = sead__ExpHeap__create(v2, &v11, v1, 4, 1, 0);
     v5 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v4 + 64))(v4, 4);
     v11 = 12321336;
-    v12 = "sead::ResourceMgr";
+    v12 = "sead__ResourceMgr";
     v6 = sead__ExpHeap__create(v5, &v11, v4, 4, 1, 0);
     if ( v6 )
       v3 = sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
@@ -198330,7 +198330,7 @@ sub_608DF448__LABEL_158:
     v7 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v4 + 64))(v4, 4);
     v8 = 1;
     v11 = 12321336;
-    v12 = "sead::FileDeviceMgr";
+    v12 = "sead__FileDeviceMgr";
     v9 = sead__ExpHeap__create(v7, &v11, v4, 4, 1, 0);
     if ( v9 )
       v8 = sead__HeapMgr__setCurrentHeap_(MEMORY[0xCCEE90]);
@@ -198796,26 +198796,26 @@ sub_608DF448__LABEL_158:
     a1[141] = 12558432;
     a1[147] = 0;
     v17 = 12321336;
-    v18 = "sead::RootCalc";
+    v18 = "sead__RootCalc";
     sead__SafeStringBase_char__operator_assign(a1 + 19, &v17);
     v17 = 12321336;
-    v18 = "sead::SysCalc";
+    v18 = "sead__SysCalc";
     sead__SafeStringBase_char__operator_assign(a1 + 39, &v17);
     v17 = 12321336;
-    v18 = "sead::AppCalc";
+    v18 = "sead__AppCalc";
     sead__SafeStringBase_char__operator_assign(a1 + 59, &v17);
     v17 = 12321336;
-    v18 = "sead::RootDraw";
+    v18 = "sead__RootDraw";
     sead__SafeStringBase_char__operator_assign(a1 + 79, &v17);
     v17 = 12321336;
-    v18 = "sead::SysDraw";
+    v18 = "sead__SysDraw";
     sead__SafeStringBase_char__operator_assign(a1 + 99, &v17);
     v17 = 12321336;
-    v18 = "sead::AppDraw";
+    v18 = "sead__AppDraw";
     sead__SafeStringBase_char__operator_assign(a1 + 119, &v17);
     v17 = 12321336;
     v2 = (struct sead_MethodTreeNode *)(a1 + 50);
-    v18 = "sead::AppDrawFinal";
+    v18 = "sead__AppDrawFinal";
     sead__SafeStringBase_char__operator_assign(a1 + 139, &v17);
     v3 = (struct sead_MethodTreeNode *)(a1 + 30);
     sead__MethodTreeNode__pushBackChild((int)(a1 + 10), a1 + 30);
@@ -199841,7 +199841,7 @@ sub_608DF448__LABEL_158:
       {
         v15 = 0;
         v22[0] = 12321336;
-        v22[1] = "sead::TaskMgr";
+        v22[1] = "sead__TaskMgr";
         if ( v12 > i )
           v15 = *(_DWORD *)(MEMORY[0xCCEEAC] + 4 * i);
         a1[i + 31] = sead__ExpHeap__create(0, v22, v15, 4, 1, 0);
@@ -221113,7 +221113,7 @@ sub_608DF448__LABEL_158:
   
     sead_IDisposer_ctor(a1);
     *((_DWORD *)a1 + 4) = 12321336;
-    *((_DWORD *)a1 + 5) = "sead::MainThread";
+    *((_DWORD *)a1 + 5) = "sead__MainThread";
     v8 = dword_60C799D0 + 92;
     *(_DWORD *)a1 = dword_60C799D0 + 8;
     *((_DWORD *)a1 + 6) = v8;
@@ -222282,7 +222282,7 @@ sub_608DF448__LABEL_158:
   {
     _DWORD *result; // r0
   
-    result = sead__CalculateTask__CalculateTask(a1, a2, (int)"sead::ControllerMgr");
+    result = sead__CalculateTask__CalculateTask(a1, a2, (int)"sead__ControllerMgr");
     *result = dword_60C799F4 + 8;
     *((_BYTE *)result + 192) = 0;
     result[49] = result + 49;
@@ -242591,7 +242591,7 @@ sub_608DF448__LABEL_158:
     *(_WORD *)(a1 + 60) = 0;
     *(_BYTE *)(a1 + 62) = 1;
     sub_609175B8(a1 + 64);
-    *(_DWORD *)(a1 + 264) = "agl::TextureData";
+    *(_DWORD *)(a1 + 264) = "agl__TextureData";
     return a1;
   }
 
@@ -243080,7 +243080,7 @@ sub_608DF448__LABEL_158:
     v7[18] = 0;
     v8 = 1;
     sub_609175B8(v9);
-    v9[50] = "agl::TextureData";
+    v9[50] = "agl__TextureData";
     Texture_ctorWithDefaults(v10);
     agl_TextureSampler_ref(v12);
     sub_60919E88(v16);
@@ -243568,7 +243568,7 @@ sub_608DF448__LABEL_158:
     *(_DWORD *)(a1 + 328) = 255;
     v2 = (unsigned int *)(a1 + 328);
     *(_BYTE *)(a1 + 332) = 32;
-    *(_DWORD *)(a1 + 336) = "agl::TextureSampler";
+    *(_DWORD *)(a1 + 336) = "agl__TextureSampler";
     if ( MEMORY[0xCD0A14] )
     {
       v3 = *(_DWORD *)(MEMORY[0xCD0A14] + 28);
@@ -263818,7 +263818,7 @@ sub_60925854__LABEL_105:
       v48 = a1[615] + 344;
       do
       {
-        result = StringUtil_formatInto(v48, "agl::DTA[%d]", v47++);
+        result = StringUtil_formatInto(v48, "agl__DTA[%d]", v47++);
         v48 += 392;
       }
       while ( v46 != v47 );
@@ -270993,7 +270993,7 @@ sub_60945324__LABEL_155:
   
     v6 = *(_DWORD **)(MEMORY[0xCD0B50] + 60);
     v14 = 12321336;
-    v15 = "agl::Debug::xml";
+    v15 = "agl__Debug__xml";
     v7 = sead__ExpHeap__create(a3 + 1024, (int)&v14, v6, 4, 1, 0);
     v8 = sub_609A4754(0, v7, 0, a3);
     v9 = *(_DWORD *)(v8 + 4);
@@ -278558,7 +278558,7 @@ sub_60945324__LABEL_155:
     int v63; // [sp+198h] [bp-4h]
   
     v55[0] = 12321336;
-    v55[1] = (int)"agl::utl::PrimitiveTexture";
+    v55[1] = (int)"agl__utl__PrimitiveTexture";
     nullsub_123(a1 + 124, 1, v55, a2);
     agl_TextureData_ref((int)v55);
     v3 = 29;
@@ -282739,8 +282739,8 @@ s_sOrder_d_ref__LABEL_50:
           {
             v46 = *(float **)(a1 + 412);
             v47 = v46[227];
-            v48 = (void *)sead::GlobalRandom::sInstance;
-            U32 = sead__Random__getU32((void *)sead::GlobalRandom::sInstance);
+            v48 = (void *)sead__GlobalRandom__sInstance;
+            U32 = sead__Random__getU32((void *)sead__GlobalRandom__sInstance);
             v50 = *(float *)(*(_DWORD *)(a1 + 412) + 908);
             LODWORD(v51) = (sead__Random__getU32(v48) >> 9) | 0x3F800000;
             v52 = *(float *)(*(_DWORD *)(a1 + 412) + 908);
@@ -297741,7 +297741,7 @@ s_sOrder_d_ref__LABEL_111:
   
     v4 = a1;
     v9[0] = 12321336;
-    v9[1] = "agl::WorkHeap";
+    v9[1] = "agl__WorkHeap";
     a1[5] = sead__ExpHeap__create(a4, v9, a2, 4, 1, 1);
     v4[15] = a3;
     v4[26] = 0;
@@ -298486,7 +298486,7 @@ s_sOrder_d_ref__LABEL_111:
   v6 = (*(int (__fastcall **)(_DWORD *, int))(*a3 + 64))(a3, 4);
   v7 = 0;
   v51 = &vtable_sead_SafeStringBase_char;
-  v52 = "agl::detail::ShaderHolder";
+  v52 = "agl__detail__ShaderHolder";
   v50 = sead__ExpHeap__create(v6, (int)&v51, a3, 4, 1, 0);
   v49 = a1;
   v8 = a1 + 213;
@@ -302629,13 +302629,13 @@ sub_60970920__LABEL_129:
           break;
         case 2:
           v6 = 12321336;
-          v7 = "agl::lyr::Renderer::begin";
+          v7 = "agl__lyr__Renderer__begin";
           v4 = sub_60977248(v2, (int)v8, &v6, 0);
           sub_6097597C(*(_DWORD *)(a1 + 20), (int)v8);
           goto sub_609729F4__LABEL_8;
         case 3:
           v6 = 12321336;
-          v7 = "agl::lyr::Renderer::end";
+          v7 = "agl__lyr__Renderer__end";
           v4 = sub_60977248(v2, (int)v8, &v6, 131583);
           sub_609763D0(*(_DWORD *)(a1 + 20), (int)v8);
   sub_609729F4__LABEL_8:

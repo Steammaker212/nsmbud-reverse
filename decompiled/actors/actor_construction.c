@@ -75461,13 +75461,13 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
     }
     sub_6016A300(a1);
     v10 = 12321336;
-    v11 = "CourseSelectCacheMgr::CacheHeapA";
+    v11 = "CourseSelectCacheMgr__CacheHeapA";
     a1[428] = sead__ExpHeap__create(125829120, &v10, a1[427], 4, 1, 0);
     v10 = 12321336;
-    v11 = "CourseSelectCacheMgr::CacheHeapB";
+    v11 = "CourseSelectCacheMgr__CacheHeapB";
     a1[429] = sead__ExpHeap__create(54525952, &v10, a1[427], 4, 1, 0);
     v10 = 12321336;
-    v11 = "CourseSelectCacheMgr::ActorInstance";
+    v11 = "CourseSelectCacheMgr__ActorInstance";
     result = sead__ExpHeap__create(0, &v10, a1[427], 4, 1, 0);
     a1[430] = result;
     return result;
@@ -76010,7 +76010,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
     v4 = sub_6016AD7C((_DWORD *)a1, v3);
     *(_BYTE *)(a1 + 1704) = 1;
     v6[0] = 12321336;
-    v6[1] = "CourseSelectCacheMgr::ErrorViewer";
+    v6[1] = "CourseSelectCacheMgr__ErrorViewer";
     result = sead__ExpHeap__create(v3, v6, v4, 4, 1, 0);
     *(_DWORD *)(a1 + 1724) = result;
     return result;
@@ -87107,7 +87107,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
   int v111; // [sp+1Ch] [bp-14h]
   int (**v112)(); // [sp+20h] [bp-10h] BYREF
   const char *v113; // [sp+24h] [bp-Ch]
-  sead::SafeString identifier; // [sp+28h] [bp-8h] BYREF
+  sead__SafeString identifier; // [sp+28h] [bp-8h] BYREF
 
   v2 = *(_BYTE **)(a1 + 336);
   v3 = *(_BYTE **)(dword_60C8C188 + 3200);
@@ -87184,7 +87184,7 @@ sub_60178CF0__LABEL_37:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v20 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v20 == identifier.cstr )
     goto sub_60178CF0__LABEL_36;
   v21 = *(_DWORD *)(a1 + 336);
@@ -87261,7 +87261,7 @@ sub_60178CF0__LABEL_38:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v34 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v34 == identifier.cstr
     || (v35 = *(unsigned __int8 **)(a1 + 336), v36 = 0, *v35 == (unsigned __int8)*identifier.cstr)
     && (!*v35
@@ -87307,7 +87307,7 @@ sub_60178CF0__LABEL_38:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v41 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v41 == identifier.cstr )
   {
 sub_60178CF0__LABEL_66:
@@ -87338,7 +87338,7 @@ sub_60178CF0__LABEL_66:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v44 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v44 == identifier.cstr )
   {
 sub_60178CF0__LABEL_79:
@@ -87362,7 +87362,7 @@ sub_60178CF0__LABEL_79:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v47 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v47 == identifier.cstr )
   {
 sub_60178CF0__LABEL_88:
@@ -87635,7 +87635,7 @@ sub_60178CF0__LABEL_264:
       (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
       (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
       v80 = *(char **)(a1 + 336);
-      (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+      (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
       if ( v80 != identifier.cstr )
       {
         v81 = *(_DWORD *)(a1 + 336);
@@ -87795,7 +87795,7 @@ sub_60178CF0__LABEL_158:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v85 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v85 == identifier.cstr )
   {
 sub_60178CF0__LABEL_200:
@@ -138845,7 +138845,7 @@ sub_601CA03C__LABEL_153:
         sub_601C503C(a1);
         break;
       case 51:
-        v38 = (int (__fastcall ***)(_DWORD, int *))ActorMgrRelated_getById(ActorMgr::instance + 27168, a1[293]);
+        v38 = (int (__fastcall ***)(_DWORD, int *))ActorMgrRelated_getById(ActorMgr__instance + 27168, a1[293]);
         if ( ((unsigned int)&dword_60C88AA8 & ~(1612491404 << v39) & 1) == 0 && _cxa_guard_acquire(&dword_60C88AA8) )
         {
           dword_60C88AA4 = (int)&off_60BD4BA4;
@@ -143075,7 +143075,7 @@ sub_601D2928__LABEL_13:
         }
         if ( sub_601DA484(a1 + 1032) == 1 )
         {
-          v25 = ActorMgrRelated_getById(ActorMgr::instance + 27168, *(_DWORD *)(a1 + 1172));
+          v25 = ActorMgrRelated_getById(ActorMgr__instance + 27168, *(_DWORD *)(a1 + 1172));
           if ( ((unsigned int)&dword_60C88AA8 & ~(1612524752 << v26) & 1) == 0 && _cxa_guard_acquire(&dword_60C88AA8) )
           {
             dword_60C88AA4 = (int)&off_60BD4BA4;

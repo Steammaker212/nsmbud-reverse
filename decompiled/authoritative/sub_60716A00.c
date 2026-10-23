@@ -66,8 +66,8 @@ int __fastcall sub_60716A00(int a1)
   int v65; // [sp+3Ch] [bp-3Ch]
   int v66; // [sp+3Ch] [bp-3Ch]
   _DWORD *v67; // [sp+40h] [bp-38h]
-  sead::SafeString path; // [sp+44h] [bp-34h] BYREF
-  sead::SafeString identifier; // [sp+4Ch] [bp-2Ch] BYREF
+  sead__SafeString path; // [sp+44h] [bp-34h] BYREF
+  sead__SafeString identifier; // [sp+4Ch] [bp-2Ch] BYREF
 
   v1 = a1 + 16280;
   v2 = 1;

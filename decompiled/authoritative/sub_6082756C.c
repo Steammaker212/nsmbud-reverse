@@ -5,7 +5,7 @@ int *__fastcall sub_6082756C(int a1)
   int v4; // r7
   int v5; // r8
   int v6; // r0
-  nn::oe *v7; // r0
+  nn__oe *v7; // r0
   int OperationMode; // r2
   int v9; // r0
   int v10; // r10
@@ -55,7 +55,7 @@ int *__fastcall sub_6082756C(int a1)
     v6 = *(_DWORD *)(a1 + 40);
     v42 = &vtable_sead_SafeStringBase_char;
     v43 = "AppBootCnt";
-    v7 = (nn::oe *)sub_6074EC10(v3, &v42, *(_DWORD *)(v6 + 44124));
+    v7 = (nn__oe *)sub_6074EC10(v3, &v42, *(_DWORD *)(v6 + 44124));
     OperationMode = nn__oe__GetOperationMode(v7);
     v42 = &vtable_sead_SafeStringBase_char;
     if ( OperationMode != 1 )

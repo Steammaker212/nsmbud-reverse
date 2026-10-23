@@ -204,3 +204,29 @@ typedef SafeStringBase_char_t sead_SafeStringView;
  * NOTE: nsmbudx_recovered_deps.h, where these were first declared, is NOT included by the prelude -- nothing in the
  * tree includes it -- so declarations placed there had no effect. This header is on the include path. */
 extern uint8_t vtable_sead_SafeStringBase_char;
+
+/* Names Hex-Rays left in C++ scope-qualified spelling (`ns::Class::member`), flattened to this repository's
+ * `ns__Class__member` convention. The objects are singletons and static members; each is compared against or
+ * passed by address, never dereferenced into a field, so a byte-sized object is enough to give the name an
+ * address. `sead__SafeString` is a TYPE, not an object, and aliases the recovered SafeString view. */
+extern uint8_t sead__HeapMgr__sInstance;
+extern uint8_t sead__GlobalRandom__sInstance;
+extern uint8_t sead__ResourceMgr__sInstance;
+extern uint8_t ActorMgr__instance;
+extern uint8_t EventMgr__instance;
+/* sead::SafeString is a TYPE, not an object: it appears in local declarations. */
+typedef SafeStringBase_char_t sead__SafeString;
+extern int32_t BufferedSafeStringBase_char_vtable_probably;   /* int32_t to agree with deps.h, which some units include */
+
+/* ---- declarations recovered from nsmbudx_recovered_deps.h, which the prelude does not reach ---- */
+extern int32_t AreaTask_intance;
+extern int32_t sinLutTable[];
+extern uintptr_t PlayerMgr_instance;
+extern uintptr_t sub_600246FC;
+extern uintptr_t AreaTask_create;
+extern uintptr_t CourseSelectTask_create;
+extern int32_t StageActor_RTTI;
+extern int32_t Enemy_RTTI;
+extern uintptr_t Global_BasicSoundActor2;
+extern uintptr_t DemoScene_create;
+extern uintptr_t DarkCloudDemoScene_create;

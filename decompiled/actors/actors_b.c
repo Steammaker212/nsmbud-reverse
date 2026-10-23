@@ -9365,25 +9365,25 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     dword_60C9327C = (int)"wait_R";
     dword_60C93280 = 1;
     flt_60C93284 = 4.0;
-    Kanjibo::AnimNamesThrow1 = 12321336;
+    Kanjibo__AnimNamesThrow1 = 12321336;
     dword_60C9328C = (int)"throw_L1";
     dword_60C93290 = 12321336;
     dword_60C93294 = (int)"throw_R1";
     dword_60C93298 = 0;
     dword_60C9329C = 1082130432;
-    Kanjibo::AnimNamesThrow2 = 12321336;
+    Kanjibo__AnimNamesThrow2 = 12321336;
     dword_60C932A4 = (int)"throw_L2";
     dword_60C932A8 = 12321336;
     dword_60C932AC = (int)"throw_R2";
     dword_60C932B0 = 0;
     flt_60C932B4 = 4.0;
-    Kanjibo::AnimNamesDead = 12321336;
+    Kanjibo__AnimNamesDead = 12321336;
     dword_60C932BC = (int)"dead_L";
     dword_60C932C0 = 12321336;
     unk_60C932C4 = "dead_R";
     dword_60C932C8 = 1;
     flt_60C932CC = 0.0;
-    Kanjibo::AnimNamesFreeze = 12321336;
+    Kanjibo__AnimNamesFreeze = 12321336;
     dword_60C932D4 = (int)"freeze_L";
     dword_60C932D8 = 12321336;
     unk_60C932DC = "freeze_R";
@@ -9415,7 +9415,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v5 = MEMORY[0xC88234];
     if ( !ActiveColliderMgr_isInActiveList(MEMORY[0xC88234], a1 + 188) && !ActiveColliderMgr_isInCreateList(v5, a1 + 188) )
       ActiveColliderMgr_addToCreateList(v5, a1 + 188);
-    CollisionMgr_init(a1 + 648, a1, Kanibo::sBelowSensor, Kanibo::sAboveSensor, Kanibo::sAdjacentSensor);
+    CollisionMgr_init(a1 + 648, a1, Kanibo__sBelowSensor, Kanibo__sAboveSensor, Kanibo__sAdjacentSensor);
     *(_DWORD *)(a1 + 132) = 0;
     *(_DWORD *)(a1 + 136) = MEMORY[0xAFE3E0];
     *(_DWORD *)(a1 + 140) = 0;
@@ -150249,7 +150249,7 @@ sub_603F8408__LABEL_18:
   v12 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v13 = v12;
   if ( v12 )
-    v11 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v12);
+    v11 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v12);
   sub_60451FEC(0);
   if ( **(_BYTE **)(dword_60CC6D78 + 140) )
   {
@@ -150264,7 +150264,7 @@ sub_603F8408__LABEL_18:
   sub_6045217C(dword_60C9CF0C, v14, v15, 0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v13 + 20))(v13);
   if ( v11 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v11);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v11);
   sub_603E50C0(0);
   sub_600074EC();
   sub_60009B2C(0);
@@ -150299,22 +150299,22 @@ sub_603F8408__LABEL_18:
   v17 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v18 = v17;
   if ( v17 )
-    v16 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v17);
+    v16 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v17);
   sub_6044EE58(0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v18 + 20))(v18);
   if ( v16 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v16);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v16);
   v19 = 1;
   v71 = &vtable_sead_SafeStringBase_char;
   v72 = "MaskMgrInstance";
   v20 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v21 = v20;
   if ( v20 )
-    v19 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v20);
+    v19 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v20);
   MaskManager_createInstance_(0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v21 + 20))(v21);
   if ( v19 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v19);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v19);
   sub_603F5508(0);
   sub_606E69A0(0);
   sub_606E6A1C(dword_60CBBFA4);
@@ -150324,12 +150324,12 @@ sub_603F8408__LABEL_18:
   v23 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v24 = v23;
   if ( v23 )
-    v22 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v23);
+    v22 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v23);
   sub_604117C4(0);
   sub_60413E08(dword_60C9A698, 0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v24 + 20))(v24);
   if ( v22 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v22);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v22);
   sub_60731168(0);
   sub_60731290(dword_60CBDBF8);
   sub_6042F520(0);
@@ -150341,11 +150341,11 @@ sub_603F8408__LABEL_18:
     v26 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
     v27 = v26;
     if ( v26 )
-      v25 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v26);
+      v25 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v26);
     sub_6042F798(dword_60C9C2D0, 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)v27 + 20))(v27);
     if ( v25 != 1 )
-      sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v25);
+      sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v25);
   }
   sub_60726908(dword_60CBD894, 0);
   v28 = 1;
@@ -150354,7 +150354,7 @@ sub_603F8408__LABEL_18:
   v29 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v30 = v29;
   if ( v29 )
-    v28 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v29);
+    v28 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v29);
   if ( (unsigned int)(*(_DWORD *)(dword_60CC6C28 + 16) - 1) >= 2 )
   {
     v31 = LevelInfo_instance;
@@ -150443,7 +150443,7 @@ sub_603F8408__LABEL_18:
   }
   (*(void (__fastcall **)(int))(*(_DWORD *)v30 + 20))(v30);
   if ( v28 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v28);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v28);
   v41 = LevelInfo_instance;
   sub_6040D310(LevelInfo_instance);
   sub_6040D3F4(v41, *(_DWORD *)(v41 + 24));
@@ -150523,43 +150523,43 @@ sub_603F8408__LABEL_95:
 sub_603F8408__LABEL_96:
     sub_603FC56C(v54, v55);
   }
-  sub_60007B5C(ActorMgr::instance, 0);
+  sub_60007B5C(ActorMgr__instance, 0);
   sub_60787024(PlayerMgr_instance, v69);
   sub_605E7E8C(dword_60CB1BE4, v69);
-  sub_60729980(EventMgr::instance);
+  sub_60729980(EventMgr__instance);
   v56 = 1;
   v71 = &vtable_sead_SafeStringBase_char;
   v72 = "BgGlobal";
   v57 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v58 = v57;
   if ( v57 )
-    v56 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v57);
+    v56 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v57);
   sub_6071AA08(TilesetMgr_instance, 0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v58 + 20))(v58);
   if ( v56 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v56);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v56);
   v59 = 1;
   v71 = &vtable_sead_SafeStringBase_char;
   v72 = "BgRenderer";
   v60 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v61 = v60;
   if ( v60 )
-    v59 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v60);
+    v59 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v60);
   sub_6071C67C((_DWORD *)dword_60CBD830, 0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v61 + 20))(v61);
   if ( v59 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v59);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v59);
   v62 = 1;
   v71 = &vtable_sead_SafeStringBase_char;
   v72 = "TexQuad";
   v63 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v64 = v63;
   if ( v63 )
-    v62 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v63);
+    v62 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v63);
   sub_60450BAC(dword_60C9CEF0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v64 + 20))(v64);
   if ( v62 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v62);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v62);
   v65 = *(void (__fastcall ****)(_DWORD))(a1 + 196);
   if ( v65 )
     (**v65)(v65);
@@ -198956,7 +198956,7 @@ sub_603F8408__LABEL_96:
 PlayerStates_loadModelResources_helper_43B8B0__LABEL_35:
           sead__SafeStringBase_char__operator=((int)v58, (int)&v70);
           v21 = (int (__fastcall ***)(_DWORD, int *))sead_ResourceMgr_OpenFileRelated(
-                                                       sead::ResourceMgr::sInstance,
+                                                       sead__ResourceMgr__sInstance,
                                                        (int)v58);
           if ( ((unsigned int)&dword_60C9BB24 & ~(1615052296 << v22) & 1) == 0 && _cxa_guard_acquire(&dword_60C9BB24) )
           {
@@ -203779,7 +203779,7 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
     *((_DWORD *)v4 + 6) = 2;
     sub_609553AC((int)a1, (int)v4);
     v7 = 12321336;
-    v8 = "ReflectionRenderObjLayer::freeReflectionTexture_";
+    v8 = "ReflectionRenderObjLayer__freeReflectionTexture";
     a1[119] = a1;
     a1[120] = 4466724;
     a1[121] = 0;
@@ -207266,7 +207266,7 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_102:
     *((_DWORD *)v4 + 6) = 2;
     sub_609553AC((int)a1, (int)v4);
     v7 = 1.7266e-38;
-    v8 = COERCE_FLOAT("ShadowRenderObjLayer::freeShadowTexture_");
+    v8 = COERCE_FLOAT("ShadowRenderObjLayer__freeShadowTexture");
     a1[1349] = a1;
     a1[1350] = 4483404;
     a1[1351] = 0;

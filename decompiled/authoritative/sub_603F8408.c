@@ -136,7 +136,7 @@ LABEL_18:
   v12 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v13 = v12;
   if ( v12 )
-    v11 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v12);
+    v11 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v12);
   sub_60451FEC(0);
   if ( **(_BYTE **)(dword_60CC6D78 + 140) )
   {
@@ -151,7 +151,7 @@ LABEL_18:
   sub_6045217C(dword_60C9CF0C, v14, v15, 0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v13 + 20))(v13);
   if ( v11 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v11);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v11);
   sub_603E50C0(0);
   sub_600074EC();
   sub_60009B2C(0);
@@ -186,22 +186,22 @@ LABEL_18:
   v17 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v18 = v17;
   if ( v17 )
-    v16 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v17);
+    v16 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v17);
   sub_6044EE58(0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v18 + 20))(v18);
   if ( v16 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v16);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v16);
   v19 = 1;
   v71 = &vtable_sead_SafeStringBase_char;
   v72 = "MaskMgrInstance";
   v20 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v21 = v20;
   if ( v20 )
-    v19 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v20);
+    v19 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v20);
   MaskManager_createInstance_(0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v21 + 20))(v21);
   if ( v19 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v19);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v19);
   sub_603F5508(0);
   sub_606E69A0(0);
   sub_606E6A1C(dword_60CBBFA4);
@@ -211,12 +211,12 @@ LABEL_18:
   v23 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v24 = v23;
   if ( v23 )
-    v22 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v23);
+    v22 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v23);
   sub_604117C4(0);
   sub_60413E08(dword_60C9A698, 0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v24 + 20))(v24);
   if ( v22 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v22);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v22);
   sub_60731168(0);
   sub_60731290(dword_60CBDBF8);
   sub_6042F520(0);
@@ -228,11 +228,11 @@ LABEL_18:
     v26 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
     v27 = v26;
     if ( v26 )
-      v25 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v26);
+      v25 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v26);
     sub_6042F798(dword_60C9C2D0, 0);
     (*(void (__fastcall **)(int))(*(_DWORD *)v27 + 20))(v27);
     if ( v25 != 1 )
-      sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v25);
+      sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v25);
   }
   sub_60726908(dword_60CBD894, 0);
   v28 = 1;
@@ -241,7 +241,7 @@ LABEL_18:
   v29 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v30 = v29;
   if ( v29 )
-    v28 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v29);
+    v28 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v29);
   if ( (unsigned int)(*(_DWORD *)(dword_60CC6C28 + 16) - 1) >= 2 )
   {
     v31 = LevelInfo_instance;
@@ -330,7 +330,7 @@ LABEL_18:
   }
   (*(void (__fastcall **)(int))(*(_DWORD *)v30 + 20))(v30);
   if ( v28 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v28);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v28);
   v41 = LevelInfo_instance;
   sub_6040D310(LevelInfo_instance);
   sub_6040D3F4(v41, *(_DWORD *)(v41 + 24));
@@ -410,43 +410,43 @@ LABEL_95:
 LABEL_96:
     sub_603FC56C(v54, v55);
   }
-  sub_60007B5C(ActorMgr::instance, 0);
+  sub_60007B5C(ActorMgr__instance, 0);
   sub_60787024(PlayerMgr_instance, v69);
   sub_605E7E8C(dword_60CB1BE4, v69);
-  sub_60729980(EventMgr::instance);
+  sub_60729980(EventMgr__instance);
   v56 = 1;
   v71 = &vtable_sead_SafeStringBase_char;
   v72 = "BgGlobal";
   v57 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v58 = v57;
   if ( v57 )
-    v56 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v57);
+    v56 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v57);
   sub_6071AA08(TilesetMgr_instance, 0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v58 + 20))(v58);
   if ( v56 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v56);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v56);
   v59 = 1;
   v71 = &vtable_sead_SafeStringBase_char;
   v72 = "BgRenderer";
   v60 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v61 = v60;
   if ( v60 )
-    v59 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v60);
+    v59 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v60);
   sub_6071C67C((_DWORD *)dword_60CBD830, 0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v61 + 20))(v61);
   if ( v59 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v59);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v59);
   v62 = 1;
   v71 = &vtable_sead_SafeStringBase_char;
   v72 = "TexQuad";
   v63 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v64 = v63;
   if ( v63 )
-    v62 = sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v63);
+    v62 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v63);
   sub_60450BAC(dword_60C9CEF0);
   (*(void (__fastcall **)(int))(*(_DWORD *)v64 + 20))(v64);
   if ( v62 != 1 )
-    sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v62);
+    sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v62);
   v65 = *(void (__fastcall ****)(_DWORD))(a1 + 196);
   if ( v65 )
     (**v65)(v65);

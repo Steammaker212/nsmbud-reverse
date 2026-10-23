@@ -537,7 +537,7 @@ LABEL_90:
               v103.eventId1 = sub_6040D864(&buildInfo);
               v103.linkId = 0;
               v103.settings1 = 3;
-              ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
+              ActorMgr__create((void *)ActorMgr__instance, &v103, 0);
             }
             if ( v12 == 877 )
               v12 = -1;
@@ -630,7 +630,7 @@ LABEL_208:
             v103.eventId1 = sub_6040D864(&buildInfo);
             v103.linkId = 0;
             v103.settings1 = 3;
-            ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
+            ActorMgr__create((void *)ActorMgr__instance, &v103, 0);
           }
         }
         else
@@ -834,7 +834,7 @@ LABEL_256:
             }
           }
         }
-        ActorMgr__create((void *)ActorMgr::instance, &buildInfo, 0);
+        ActorMgr__create((void *)ActorMgr__instance, &buildInfo, 0);
       }
       result = v91;
       v7 = v98 + 1;
@@ -868,7 +868,7 @@ LABEL_256:
       v103.position.z = v59;
       v103.profile = Profile__get(0x371u);
 LABEL_187:
-      sub_600080BC((_DWORD *)ActorMgr::instance, &v103);
+      sub_600080BC((_DWORD *)ActorMgr__instance, &v103);
       goto LABEL_188;
     }
     if ( sub_60183054(v97, v51, 0x40000) )
@@ -895,7 +895,7 @@ LABEL_187:
       v103.position.z = v9;
       v103.profile = Profile__get(0x37Eu);
 LABEL_160:
-      ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
+      ActorMgr__create((void *)ActorMgr__instance, &v103, 0);
       goto LABEL_188;
     }
     if ( sub_601DA114(&buildInfo) == 1 )
@@ -909,7 +909,7 @@ LABEL_160:
       v103.position.z = v13;
       v103.settings1 = (unsigned __int8)v88;
       v103.profile = Profile__get(0x37Fu);
-      ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
+      ActorMgr__create((void *)ActorMgr__instance, &v103, 0);
       ++v88;
     }
     else

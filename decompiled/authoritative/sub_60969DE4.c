@@ -50,7 +50,7 @@ int __fastcall sub_60969DE4(_DWORD *a1, int a2, _DWORD *a3)
   v6 = (*(int (__fastcall **)(_DWORD *, int))(*a3 + 64))(a3, 4);
   v7 = 0;
   v51 = &vtable_sead_SafeStringBase_char;
-  v52 = "agl::detail::ShaderHolder";
+  v52 = "agl__detail__ShaderHolder";
   v50 = sead__ExpHeap__create(v6, (int)&v51, a3, 4, 1, 0);
   v49 = a1;
   v8 = a1 + 213;

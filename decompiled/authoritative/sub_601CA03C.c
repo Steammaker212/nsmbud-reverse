@@ -397,7 +397,7 @@ LABEL_153:
         sub_601C503C(a1);
         break;
       case 51:
-        v38 = (int (__fastcall ***)(_DWORD, int *))ActorMgrRelated_getById(ActorMgr::instance + 27168, a1[293]);
+        v38 = (int (__fastcall ***)(_DWORD, int *))ActorMgrRelated_getById(ActorMgr__instance + 27168, a1[293]);
         if ( ((unsigned int)&dword_60C88AA8 & ~(1612491404 << v39) & 1) == 0 && _cxa_guard_acquire(&dword_60C88AA8) )
         {
           dword_60C88AA4 = (int)&off_60BD4BA4;

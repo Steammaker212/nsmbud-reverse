@@ -47,7 +47,7 @@ int __fastcall sub_6081BFFC(int a1)
   int v46; // [sp+F8h] [bp-1B8h]
   int v47; // [sp+FCh] [bp-1B4h] BYREF
   _BYTE v48[32]; // [sp+1FCh] [bp-B4h] BYREF
-  sead::SafeString v49; // [sp+21Ch] [bp-94h] BYREF
+  sead__SafeString v49; // [sp+21Ch] [bp-94h] BYREF
   int v50; // [sp+224h] [bp-8Ch]
   int v51; // [sp+228h] [bp-88h]
   int v52; // [sp+22Ch] [bp-84h]
@@ -142,7 +142,7 @@ LABEL_19:
       v61 = 0;
       sead__SafeStringBase_char__operator=((int)&v49, (int)v62);
       v3 = (int (__fastcall ***)(_DWORD, int *))sead_ResourceMgr_OpenFileRelated(
-                                                  sead::ResourceMgr::sInstance,
+                                                  sead__ResourceMgr__sInstance,
                                                   (int)&v49);
       if ( ((unsigned int)&dword_60C9BB2C & ~(1619116548 << v4) & 1) == 0 && _cxa_guard_acquire(&dword_60C9BB2C) )
       {

@@ -164,7 +164,7 @@ int __fastcall sub_6027E874(int a1)
 
   v2 = *(_DWORD *)(a1 + 16544);
   *(_DWORD *)(a1 + 16508) = v2;
-  v3 = ActorMgrRelated_getById(ActorMgr::instance + 27168, v2);
+  v3 = ActorMgrRelated_getById(ActorMgr__instance + 27168, v2);
   v4 = a1;
   v5 = 0;
   v6 = a1 + 6480;

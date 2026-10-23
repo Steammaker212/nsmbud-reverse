@@ -166,7 +166,7 @@ signed int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, v
 LABEL_35:
           sead__SafeStringBase_char__operator=((int)v58, (int)&v70);
           v21 = (int (__fastcall ***)(_DWORD, int *))sead_ResourceMgr_OpenFileRelated(
-                                                       sead::ResourceMgr::sInstance,
+                                                       sead__ResourceMgr__sInstance,
                                                        (int)v58);
           if ( ((unsigned int)&dword_60C9BB24 & ~(1615052296 << v22) & 1) == 0 && _cxa_guard_acquire(&dword_60C9BB24) )
           {

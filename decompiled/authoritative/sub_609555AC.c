@@ -375,8 +375,8 @@ LABEL_50:
           {
             v46 = *(float **)(a1 + 412);
             v47 = v46[227];
-            v48 = (void *)sead::GlobalRandom::sInstance;
-            U32 = sead__Random__getU32((void *)sead::GlobalRandom::sInstance);
+            v48 = (void *)sead__GlobalRandom__sInstance;
+            U32 = sead__Random__getU32((void *)sead__GlobalRandom__sInstance);
             v50 = *(float *)(*(_DWORD *)(a1 + 412) + 908);
             LODWORD(v51) = (sead__Random__getU32(v48) >> 9) | 0x3F800000;
             v52 = *(float *)(*(_DWORD *)(a1 + 412) + 908);

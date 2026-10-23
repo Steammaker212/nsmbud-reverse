@@ -198,7 +198,7 @@ LABEL_13:
         }
         if ( sub_601DA484(a1 + 1032) == 1 )
         {
-          v25 = ActorMgrRelated_getById(ActorMgr::instance + 27168, *(_DWORD *)(a1 + 1172));
+          v25 = ActorMgrRelated_getById(ActorMgr__instance + 27168, *(_DWORD *)(a1 + 1172));
           if ( ((unsigned int)&dword_60C88AA8 & ~(1612524752 << v26) & 1) == 0 && _cxa_guard_acquire(&dword_60C88AA8) )
           {
             dword_60C88AA4 = (int)&off_60BD4BA4;

@@ -111,7 +111,7 @@ int __fastcall sub_60178CF0(int a1)
   int v111; // [sp+1Ch] [bp-14h]
   int (**v112)(); // [sp+20h] [bp-10h] BYREF
   const char *v113; // [sp+24h] [bp-Ch]
-  sead::SafeString identifier; // [sp+28h] [bp-8h] BYREF
+  sead__SafeString identifier; // [sp+28h] [bp-8h] BYREF
 
   v2 = *(_BYTE **)(a1 + 336);
   v3 = *(_BYTE **)(dword_60C8C188 + 3200);
@@ -188,7 +188,7 @@ LABEL_37:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v20 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v20 == identifier.cstr )
     goto LABEL_36;
   v21 = *(_DWORD *)(a1 + 336);
@@ -265,7 +265,7 @@ LABEL_38:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v34 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v34 == identifier.cstr
     || (v35 = *(unsigned __int8 **)(a1 + 336), v36 = 0, *v35 == (unsigned __int8)*identifier.cstr)
     && (!*v35
@@ -311,7 +311,7 @@ LABEL_38:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v41 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v41 == identifier.cstr )
   {
 LABEL_66:
@@ -342,7 +342,7 @@ LABEL_66:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v44 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v44 == identifier.cstr )
   {
 LABEL_79:
@@ -366,7 +366,7 @@ LABEL_79:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v47 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v47 == identifier.cstr )
   {
 LABEL_88:
@@ -639,7 +639,7 @@ LABEL_264:
       (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
       (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
       v80 = *(char **)(a1 + 336);
-      (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+      (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
       if ( v80 != identifier.cstr )
       {
         v81 = *(_DWORD *)(a1 + 336);
@@ -799,7 +799,7 @@ LABEL_158:
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   v85 = *(char **)(a1 + 336);
-  (*((void (__fastcall **)(sead::SafeString *))identifier.vtable + 3))(&identifier);
+  (*((void (__fastcall **)(sead__SafeString *))identifier.vtable + 3))(&identifier);
   if ( v85 == identifier.cstr )
   {
 LABEL_200:

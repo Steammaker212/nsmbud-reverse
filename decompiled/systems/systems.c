@@ -197636,7 +197636,7 @@ static inline unsigned int uxtb16(unsigned int x)
           v17 = v5;
           v18 = v6;
           v17 = *((float *)a1 + 1699) + v5;
-          ((void (__fastcall *)(_DWORD, int *, int, _DWORD))BlockCoinBase::executeState_BumpUp2)(
+          ((void (__fastcall *)(_DWORD, int *, int, _DWORD))BlockCoinBase__executeState_BumpUp2)(
             MEMORY[0xCAF15C],
             &v16,
             2,
@@ -207270,7 +207270,7 @@ sub_605C4308__LABEL_32:
                   if ( !v30 )
                     goto sub_605C4308__LABEL_32;
                 }
-                v31 = (void *)sead::GlobalRandom::sInstance;
+                v31 = (void *)sead__GlobalRandom__sInstance;
 sub_605C4308__LABEL_33:
                 v32 = sead__Random__getU32(v31);
                 v33 = *v203;
@@ -207309,7 +207309,7 @@ sub_605C4308__LABEL_33:
               if ( !v25 )
                 goto sub_605C4308__LABEL_21;
             }
-            v26 = (void *)sead::GlobalRandom::sInstance;
+            v26 = (void *)sead__GlobalRandom__sInstance;
             goto sub_605C4308__LABEL_22;
           }
         }
@@ -207321,7 +207321,7 @@ sub_605C4308__LABEL_33:
           if ( !v160 )
             goto sub_605C4308__LABEL_10;
         }
-        v21 = (void *)sead::GlobalRandom::sInstance;
+        v21 = (void *)sead__GlobalRandom__sInstance;
         goto sub_605C4308__LABEL_11;
       case 1:
 sub_605C4308__LABEL_46:
@@ -207502,7 +207502,7 @@ sub_605C4308__LABEL_91:
           if ( v82 )
           {
 sub_605C4308__LABEL_101:
-            v83 = (void *)sead::GlobalRandom::sInstance;
+            v83 = (void *)sead__GlobalRandom__sInstance;
             goto sub_605C4308__LABEL_103;
           }
         }
@@ -207527,7 +207527,7 @@ sub_605C4308__LABEL_103:
           if ( v87 )
           {
 sub_605C4308__LABEL_112:
-            v88 = (void *)sead::GlobalRandom::sInstance;
+            v88 = (void *)sead__GlobalRandom__sInstance;
             goto sub_605C4308__LABEL_114;
           }
         }
@@ -207638,7 +207638,7 @@ sub_605C4308__LABEL_129:
           if ( v120 )
           {
 sub_605C4308__LABEL_155:
-            v121 = (void *)sead::GlobalRandom::sInstance;
+            v121 = (void *)sead__GlobalRandom__sInstance;
             goto sub_605C4308__LABEL_157;
           }
         }
@@ -207716,7 +207716,7 @@ sub_605C4308__LABEL_177:
             v142 = (float *)(a1 + v12 + 11264);
             v143 = *v142;
             v144 = *v141;
-            v145 = ActorMgrRelated_getById(ActorMgr::instance + 27168, *(_DWORD *)(v189 + v13));
+            v145 = ActorMgrRelated_getById(ActorMgr__instance + 27168, *(_DWORD *)(v189 + v13));
             v146 = v145;
             if ( v145 )
             {

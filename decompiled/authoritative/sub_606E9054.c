@@ -177,7 +177,7 @@ LABEL_26:
           v70[0].eventId1 = 0;
           v70[0].eventId2 = 0;
           v70[0].field_28 = 0;
-          v26 = ActorMgr__create((void *)ActorMgr::instance, v70, 0);
+          v26 = ActorMgr__create((void *)ActorMgr__instance, v70, 0);
           if ( ((unsigned int)&dword_60C7B364 & ~(1617859460 << v27) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B364) )
           {
             StageActor_RTTI = (int)&off_60BC0098;

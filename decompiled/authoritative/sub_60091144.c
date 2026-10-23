@@ -224,7 +224,7 @@ LABEL_31:
                     v98 = 1;
                     if ( v95 <= (float)(*(float *)(dword_60CC6484 + 120) + -80.0) )
                     {
-                      v99 = *(_DWORD *)sub_60008598(ActorMgr::instance, 374, *(_DWORD *)(ActorMgr::instance + 27172));
+                      v99 = *(_DWORD *)sub_60008598(ActorMgr__instance, 374, *(_DWORD *)(ActorMgr__instance + 27172));
                       if ( ((unsigned int)&dword_60C81738 & ~(1611210248 << v100) & 1) == 0
                         && _cxa_guard_acquire(&dword_60C81738) )
                       {
@@ -361,9 +361,9 @@ LABEL_31:
         if ( v73 <= (float)(*(float *)(dword_60CC6484 + 120) + -80.0) )
         {
           v74 = *(int (__fastcall ****)(_DWORD, int *))sub_60008598(
-                                                         ActorMgr::instance,
+                                                         ActorMgr__instance,
                                                          374,
-                                                         *(_DWORD *)(ActorMgr::instance + 27172));
+                                                         *(_DWORD *)(ActorMgr__instance + 27172));
           v107 = v74;
           if ( ((unsigned int)&dword_60C81738 & ~(1611209492 << v75) & 1) == 0 )
           {
