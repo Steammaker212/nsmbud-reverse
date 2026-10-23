@@ -16,11 +16,103 @@
 
 #include "nsmbudx_types.h"
 
+/* Forward declarations. Splicing database members into these structs made some of them embed Vec3 by
+ * value; a struct that is embedded by value needs a complete type, so every tag must be declared before
+ * any of them is used. Declaring all of them up front removes the ordering dependency. */
+struct ActiveColliderInfo;
+struct ActiveColliderMgr;
+struct ActiveColliderMgrList;
+struct ActiveColliderNode;
+struct ActorBuildInfo;
+struct ActorInfo;
+struct ActorScaler;
+struct Amp;
+struct AnimationsList;
+struct BulletBillTemp;
+struct CarryableEnemy;
+struct CircularColliderInfo;
+struct ColliderList;
+struct ColliderListNode;
+struct ColliderMgr;
+struct ColliderOwnerInfo;
+struct CollisionMgr;
+struct CollisionMgr_Sensor;
+struct CooliganSunglasses;
+struct EnemyFreezeMgr_Flags;
+struct EnemyFreezeMgr_Info;
+struct FixedIcicle;
+struct ModelAnimation;
+struct ModelWrapper;
+struct MovingSoundActorHandle;
+struct Mtx34;
+struct Profile;
+struct RevealMaskRelated;
+struct RollingHill;
+struct RollingHill_TypeInfo;
+struct Seaweed;
+struct ShapedCollider;
+struct ShapedColliderInfo;
+struct SolidOnTopCollider;
+struct SolidOnTopColliderInfo;
+struct StarCoin;
+struct State;
+struct StateBase;
+struct StateExecuter;
+struct StateMethodExecuter;
+struct StateVirtual;
+struct StateWrapper;
+struct TileCheck_Param;
+struct TileCheck_Result;
+struct TrampolineCloud;
+struct UserInfo;
+struct Vec2;
+struct Vec3;
+struct Vec3i;
+struct _Unwind_Reason_Code;
+struct poly128_t;
+struct struc_55;
+struct svbool_t;
+struct svfloat16_t;
+struct svfloat32_t;
+struct svfloat64_t;
+struct svint16_t;
+struct svint32_t;
+struct svint64_t;
+struct svint8_t;
+struct svuint16_t;
+struct svuint32_t;
+struct svuint64_t;
+struct svuint8_t;
+
+typedef struct Vec2 {
+    float x;   /* +0x000  from main.i64 */
+    uint8_t _pad_004[0x4];
+} Vec2;   /* sizeof 0x8 */
+typedef struct Vec3 {
+    float x;   /* +0x000  from main.i64 */
+    float y;   /* +0x004  from main.i64 */
+    float z;   /* +0x008  from main.i64 */
+} Vec3;   /* sizeof 0xC */
+typedef struct Vec3i {
+    int32_t x;   /* +0x000  from main.i64 */
+    int32_t y;   /* +0x004  from main.i64 */
+    int32_t z;   /* +0x008  from main.i64 */
+} Vec3i;   /* sizeof 0xC */
+
 typedef struct ActiveColliderInfo { uint8_t _opaque[0x2C]; } ActiveColliderInfo;   /* sizeof 0x2C */
 typedef struct ActiveColliderMgr { uint8_t _opaque[0x40]; } ActiveColliderMgr;   /* sizeof 0x40 */
 typedef struct ActiveColliderMgrList { uint8_t _opaque[0xC]; } ActiveColliderMgrList;   /* sizeof 0xC */
 typedef struct ActiveColliderNode { uint8_t _opaque[0xC]; } ActiveColliderNode;   /* sizeof 0xC */
-typedef struct ActorBuildInfo { uint8_t _opaque[0x2C]; } ActorBuildInfo;   /* sizeof 0x2C */
+typedef struct ActorBuildInfo {
+    int32_t settings1;   /* +0x000  from main.i64 */
+    int32_t settings2;   /* +0x004  from main.i64 */
+    uint8_t _pad_008[0x4];
+    struct Profile * profile;   /* +0x00C  from main.i64 */
+    struct Vec3 position;   /* +0x010  from main.i64 */
+    int32_t field_1C;   /* +0x01C  from main.i64 */
+    int8_t field_20;   /* +0x020  from main.i64 */
+    uint8_t _pad_021[0xB];
+} ActorBuildInfo;   /* sizeof 0x2C */
 typedef struct ActorInfo { uint8_t _opaque[0x24]; } ActorInfo;   /* sizeof 0x24 */
 typedef struct ActorScaler { uint8_t _opaque[0x20]; } ActorScaler;   /* sizeof 0x20 */
 typedef struct Amp { uint8_t _opaque[0x1B0D]; } Amp;   /* sizeof 0x1B0D */
@@ -50,7 +142,12 @@ typedef struct EnemyFreezeMgr_Flags { uint8_t _opaque[0x3]; } EnemyFreezeMgr_Fla
 typedef struct EnemyFreezeMgr_Info { uint8_t _opaque[0x20]; } EnemyFreezeMgr_Info;   /* sizeof 0x20 */
 typedef struct FixedIcicle { uint8_t _opaque[0x19D8]; } FixedIcicle;   /* sizeof 0x19D8 */
 typedef struct ModelAnimation { uint8_t _opaque[0x1C]; } ModelAnimation;   /* sizeof 0x1C */
-typedef struct ModelWrapper { uint8_t _opaque[0x30]; } ModelWrapper;   /* sizeof 0x30 */
+typedef struct ModelWrapper {
+    void * model;   /* +0x000  from main.i64 */
+    uint8_t _pad_004[0x14];
+    struct AnimationsList shuAnims;   /* +0x018  from main.i64 */
+    uint8_t _pad_020[0x10];
+} ModelWrapper;   /* sizeof 0x30 */
 typedef struct MovingSoundActorHandle { uint8_t _opaque[0x18]; } MovingSoundActorHandle;   /* sizeof 0x18 */
 typedef struct Mtx34 { uint8_t _opaque[0x30]; } Mtx34;   /* sizeof 0x30 */
 typedef struct Profile { uint8_t _opaque[0x18]; } Profile;   /* sizeof 0x18 */
@@ -66,16 +163,17 @@ typedef struct StarCoin { uint8_t _opaque[0x1838]; } StarCoin;   /* sizeof 0x183
 typedef struct State { uint8_t _opaque[0x20]; } State;   /* sizeof 0x20 */
 typedef struct StateBase { void *vtable; uint8_t _opaque[0x4]; } StateBase;   /* sizeof 0x8 */
 typedef struct StateExecuter { uint8_t _opaque[0x10]; } StateExecuter;   /* sizeof 0x10 */
-typedef struct StateMethodExecuter { void *vtable; uint8_t _opaque[0x8]; } StateMethodExecuter;   /* sizeof 0xC */
+typedef struct StateMethodExecuter {
+    uint8_t _pad_000[0x4];
+    void * owner;   /* +0x004  from main.i64 */
+    int32_t currentState;   /* +0x008  from main.i64 */
+} StateMethodExecuter;   /* sizeof 0xC */
 typedef struct StateVirtual { uint8_t _opaque[0x24]; } StateVirtual;   /* sizeof 0x24 */
 typedef struct StateWrapper { uint8_t _opaque[0x24]; } StateWrapper;   /* sizeof 0x24 */
 typedef struct TileCheck_Param { uint8_t _opaque[0xC]; } TileCheck_Param;   /* sizeof 0xC */
 typedef struct TileCheck_Result { uint8_t _opaque[0x24]; } TileCheck_Result;   /* sizeof 0x24 */
 typedef struct TrampolineCloud { uint8_t _opaque[0x19E4]; } TrampolineCloud;   /* sizeof 0x19E4 */
 typedef struct UserInfo { uint8_t _opaque[0x18]; } UserInfo;   /* sizeof 0x18 */
-typedef struct Vec2 { uint8_t _opaque[0x8]; } Vec2;   /* sizeof 0x8 */
-typedef struct Vec3 { uint8_t _opaque[0xC]; } Vec3;   /* sizeof 0xC */
-typedef struct Vec3i { uint8_t _opaque[0xC]; } Vec3i;   /* sizeof 0xC */
 typedef struct _Unwind_Reason_Code { uint8_t _opaque[0x4]; } _Unwind_Reason_Code;   /* sizeof 0x4 */
 typedef struct poly128_t { uint8_t _opaque[0x10]; } poly128_t;   /* sizeof 0x10 */
 typedef struct struc_55 { uint8_t _opaque[0x68]; } struc_55;   /* sizeof 0x68 */

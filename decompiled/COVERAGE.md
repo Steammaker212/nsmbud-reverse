@@ -54,10 +54,20 @@ The nine large corpus aggregates total 4,301 errors (measured individually: `lib
 The error counts are honest: these units are **counted and failing**, not excluded to flatter the parse number.
 `scripts/check_corpus.py` reports 466 / 478 units parsing, and the three recovered units are among the failures.
 
-Errors here are almost entirely missing class layouts, not malformed code. `main.i64` carries **zero** struct,
-union and enum definitions — dumping its local type library produced
-`/* Local types from main.i64: 0 definition(s) */` — so field layouts must be recovered from the code that reads
-each field. The bodies are kept because they are correct C and compile the moment layouts exist.
+Errors here are almost entirely missing class layouts, not malformed code.
+
+**Correction to an earlier claim in this file.** It said `main.i64` carries zero struct definitions, citing
+`/* Local types from main.i64: 0 definition(s) */`. That was wrong. The database holds **125 struct and union types
+with full member offsets**, reachable through `til_t.get_numbered_type(i)` on the ARM idati; the earlier dump used an
+API signature that silently returned nothing. `C:\nsmbudx_types\structs.txt` is the real dump, and it is why the
+recovered bodies can write `StateMethodExecuter.currentState` and `ModelWrapper.shuAnims` at all — Hex-Rays only
+produced those names because the definitions were in scope.
+
+`scripts/add_missing_members_from_db.py` now uses that dump: it takes the (struct, member) pairs the compiler is
+complaining about and inserts each member at the offset the database records, padding every gap so `sizeof` never
+changes. It is deliberately narrow — `structs.h` is never edited. Replacing its definitions (even with layouts whose
+total size was right) took the corpus from 467/479 parsing units to **0/479**, because those structs carry member
+ordering and pad regions that every unit depends on.
 
 ## Fixes found while integrating
 
