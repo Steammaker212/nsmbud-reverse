@@ -230,3 +230,12 @@ extern int32_t Enemy_RTTI;
 extern uintptr_t Global_BasicSoundActor2;
 extern uintptr_t DemoScene_create;
 extern uintptr_t DarkCloudDemoScene_create;
+
+/* `&a0` in the aggregate files. Hex-Rays named an object `a0` and took its address, but the database has no data
+ * symbol by that name and the enclosing function (sub_604E0C28) takes no parameters, so it is not an argument.
+ * The sites store the address into a table of static records, which is all the evidence available: a one-byte
+ * object is enough to give the expression an address without claiming a layout nobody has recovered. */
+extern uint8_t a0;
+
+/* ---- data labels the corpus subscripts ---- */
+extern uint8_t asc_60AE4148[];   /* data label, subscripted: declared as an array of unknown extent */

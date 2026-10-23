@@ -418,3 +418,24 @@ static inline int32x4_t vrev64q_s32(int32x4_t a)
   return r;
 }
 #endif /* NSMBUDX_NEON_H */
+/* Hex-Rays vector spellings. `_OWORD` is its 16-byte anonymous aggregate and `_Q0`..`_Q15` are the quad
+ * registers it prints as named variables. Both are the same 128-bit value the corpus already models as
+ * nsmbudx_vec128_t, which carries the .n128_* member spellings these sites use (u64, f32, u32, i8, u8, i32, u16,
+ * i16, f64, i64). Spelling them as aliases keeps one representation rather than inventing a second. */
+typedef nsmbudx_vec128_t _OWORD;
+extern nsmbudx_vec128_t _Q0;
+extern nsmbudx_vec128_t _Q1;
+extern nsmbudx_vec128_t _Q2;
+extern nsmbudx_vec128_t _Q3;
+extern nsmbudx_vec128_t _Q4;
+extern nsmbudx_vec128_t _Q5;
+extern nsmbudx_vec128_t _Q6;
+extern nsmbudx_vec128_t _Q7;
+extern nsmbudx_vec128_t _Q8;
+extern nsmbudx_vec128_t _Q9;
+extern nsmbudx_vec128_t _Q10;
+extern nsmbudx_vec128_t _Q11;
+extern nsmbudx_vec128_t _Q12;
+extern nsmbudx_vec128_t _Q13;
+extern nsmbudx_vec128_t _Q14;
+extern nsmbudx_vec128_t _Q15;
