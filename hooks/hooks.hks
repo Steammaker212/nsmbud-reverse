@@ -17,23 +17,29 @@ static_init:
     addr:   0x0000019C
     @ -> static_init_hook (module) (0x0000019C), 1 caller(s)
 
+StageActor__dtor_hook:
+    type:   bal
+    func:   StageActor__dtor_hook
+    addr:   0x00003FBC
+    @ -> StageActor__dtor (0x00000500), 1118 caller(s)
+
 Actor__getProfileId_hook:
     type:   blal
     func:   Actor__getProfileId_hook
     addr:   0x00001BD4
     @ -> Actor__getProfileId (0x00002EEC), 669 caller(s)
 
-ActorMgr__create_hook:
-    type:   blal
-    func:   ActorMgr__create_hook
-    addr:   0x00005664
-    @ -> ActorMgr__create (0x00008138), 323 caller(s)
-
 Player_getActorSlotChecked_hook:
     type:   blal
     func:   Player_getActorSlotChecked_hook
     addr:   0x0007CF14
     @ -> Player_getActorSlotChecked (0x00788DFC), 290 caller(s)
+
+PlayerBase_dispatchVirtual3_hook:
+    type:   blal
+    func:   PlayerBase_dispatchVirtual3_hook
+    addr:   0x00404404
+    @ -> PlayerBase_dispatchVirtual3 (0x007948E8), 216 caller(s)
 
 StateMgr_ctor_hook:
     type:   blal
@@ -47,11 +53,29 @@ StageActor__delete_hook:
     addr:   0x0002DB34
     @ -> StageActor__delete (0x00000E90), 74 caller(s)
 
+PlayerLookTarget_vf0_hook:
+    type:   blal
+    func:   PlayerLookTarget_vf0_hook
+    addr:   0x00026350
+    @ -> PlayerLookTarget_vf0 (0x0000B29C), 38 caller(s)
+
+PlayerLookTargetMgr_remove_hook:
+    type:   blal
+    func:   PlayerLookTargetMgr_remove_hook
+    addr:   0x0000B2CC
+    @ -> PlayerLookTargetMgr_remove (0x0000B4FC), 35 caller(s)
+
 Enemy__endState_DieFall_hook:
     type:   bal
     func:   Enemy__endState_DieFall_hook
     addr:   0x0023F99C
     @ -> Enemy__endState_DieFall (0x002A7FF4), 34 caller(s)
+
+MovingSoundActor_ctor_hook:
+    type:   blal
+    func:   MovingSoundActor_ctor_hook
+    addr:   0x00024A50
+    @ -> MovingSoundActor_ctor (0x0080F088), 30 caller(s)
 
 ActorCollisionMgr_ctor_hook:
     type:   blal
@@ -65,11 +89,29 @@ PlayerLookTargetList_add_hook:
     addr:   0x00024C54
     @ -> PlayerLookTargetList_add (0x0000B4D4), 26 caller(s)
 
+Enemy_killWithState_hook:
+    type:   blal
+    func:   Enemy_killWithState_hook
+    addr:   0x0024FFFC
+    @ -> Enemy_killWithState (0x002A7164), 25 caller(s)
+
+Enemy_killYoshi_hook:
+    type:   blal
+    func:   Enemy_killYoshi_hook
+    addr:   0x00249D4C
+    @ -> Enemy_killYoshi (0x002A66F8), 24 caller(s)
+
 Actor__removeChild_hook:
     type:   blal
     func:   Actor__removeChild_hook
     addr:   0x00111DAC
     @ -> Actor__removeChild (0x00002E2C), 23 caller(s)
+
+Actor__ctor_hook:
+    type:   blal
+    func:   Actor__ctor_hook
+    addr:   0x000002AC
+    @ -> Actor__ctor (0x00002C54), 21 caller(s)
 
 Enemy__vf26C_hook:
     type:   blal
@@ -77,17 +119,47 @@ Enemy__vf26C_hook:
     addr:   0x00260C30
     @ -> Enemy__vf26C (0x002A9490), 17 caller(s)
 
+Player_stun_hook:
+    type:   blal
+    func:   Player_stun_hook
+    addr:   0x0002FAFC
+    @ -> Player_stun (0x007A1F5C), 13 caller(s)
+
 CollisionActor__afterCreate_hook:
     type:   blal
     func:   CollisionActor__afterCreate_hook
     addr:   0x000637DC
     @ -> CollisionActor__afterCreate (0x00003140), 12 caller(s)
 
+__Player__applyPowerUpTransform_hook:
+    type:   blal
+    func:   __Player__applyPowerUpTransform_hook
+    addr:   0x0049490C
+    @ -> __Player__applyPowerUpTransform (0x00475288), 12 caller(s)
+
+PlayerLookTarget_ctor_hook:
+    type:   blal
+    func:   PlayerLookTarget_ctor_hook
+    addr:   0x00024A78
+    @ -> PlayerLookTarget_ctor (0x0000B258), 11 caller(s)
+
 CollisionActor__afterExecute_hook:
     type:   blal
     func:   CollisionActor__afterExecute_hook
     addr:   0x00024E34
     @ -> CollisionActor__afterExecute (0x00003418), 11 caller(s)
+
+Enemy__collisionGroundPound_hook:
+    type:   bal
+    func:   Enemy__collisionGroundPound_hook
+    addr:   0x00264B6C
+    @ -> Enemy__collisionGroundPound (0x002A6454), 11 caller(s)
+
+BigBlockFragmentHeap_ref_hook:
+    type:   blal
+    func:   BigBlockFragmentHeap_ref_hook
+    addr:   0x0012C610
+    @ -> BigBlockFragmentHeap_ref (0x003EE4F4), 9 caller(s)
 
 Enemy__endState_DieFumi_hook:
     type:   bal

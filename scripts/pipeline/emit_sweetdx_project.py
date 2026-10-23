@@ -152,7 +152,6 @@ def main() -> int:
         hl.append("    address: 0x%08X" % h["addr"])
         hl.append("    symbol:  %s" % h["func"])
         hl.append("")
-
     (hookdir / "nsmbudx_loader.hks").write_text("\n".join(hl))
 
     print("wrote %s (%d symbols)" % (symdir / "nsmbudx_hooks.sym", len(covered)))

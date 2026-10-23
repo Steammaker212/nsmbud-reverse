@@ -5,15 +5,27 @@
 # Deluxe (Switch) v1.0.0 only. RVAs are relative to 0x60000000.
 
 ActorCollisionMgr_ctor = 0x00154120;
-ActorMgr__create = 0x00008138;
+Actor__ctor = 0x00002C54;
 Actor__getProfileId = 0x00002EEC;
 Actor__removeChild = 0x00002E2C;
+BigBlockFragmentHeap_ref = 0x003EE4F4;
 CollisionActor__afterCreate = 0x00003140;
 CollisionActor__afterExecute = 0x00003418;
+Enemy__collisionGroundPound = 0x002A6454;
 Enemy__endState_DieFall = 0x002A7FF4;
 Enemy__endState_DieFumi = 0x002A7F88;
 Enemy__vf26C = 0x002A9490;
+Enemy_killWithState = 0x002A7164;
+Enemy_killYoshi = 0x002A66F8;
+MovingSoundActor_ctor = 0x0080F088;
+PlayerBase_dispatchVirtual3 = 0x007948E8;
 PlayerLookTargetList_add = 0x0000B4D4;
+PlayerLookTargetMgr_remove = 0x0000B4FC;
+PlayerLookTarget_ctor = 0x0000B258;
+PlayerLookTarget_vf0 = 0x0000B29C;
 Player_getActorSlotChecked = 0x00788DFC;
+Player_stun = 0x007A1F5C;
 StageActor__delete = 0x00000E90;
+StageActor__dtor = 0x00000500;
 StateMgr_ctor = 0x00818168;
+__Player__applyPowerUpTransform = 0x00475288;
