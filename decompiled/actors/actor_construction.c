@@ -86995,6 +86995,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
  * ============================================================================ */
   int __fastcall sub_60178CF0(int a1)
 {
+  sead_SafeStringView identifier; /* used throughout but never declared by the emitter */
   _BYTE *v2; // r5
   _BYTE *v3; // r1
   signed int v4; // r6

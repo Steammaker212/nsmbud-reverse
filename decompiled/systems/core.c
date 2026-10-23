@@ -31,6 +31,10 @@ int * __fastcall sub_60813CA0();
 
 /* ---- forward declarations: these are called above where they are defined ---- */
 
+/* Called through an explicit per-site cast in this file; declared unprototyped so the
+ * symbol exists. main.i64 has a function at this address. */
+void __fastcall sub_60047464();
+
 int __fastcall sub_600010DC(int a1, int a2, float *a3);
 float *__fastcall sub_60001488(float *a1, int a2);
 bool __fastcall sub_60001928(int a1, int a2, int a3);
