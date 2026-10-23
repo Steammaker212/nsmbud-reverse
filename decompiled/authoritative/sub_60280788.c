@@ -363,9 +363,9 @@ LABEL_20:
           else
           {
             v34 = v17;
-            U32 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
-            v36 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
-            v37 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+            U32 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
+            v36 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
+            v37 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
             v38 = *v187;
             if ( *v188 > v25 )
               v38 = (float *)((char *)v38 + v216);
@@ -379,10 +379,10 @@ LABEL_20:
             {
               v50 = *(float *)(v197 + 104);
               v51 = *(float *)(v197 + 112);
-              LODWORD(v52) = (sead::Random::getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
+              LODWORD(v52) = (sead__Random__getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
               v53 = *v184;
               v54 = *v185;
-              LODWORD(v55) = (sead::Random::getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
+              LODWORD(v55) = (sead__Random__getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
               v47 = *v206;
               v48 = v51 + (float)(v50 * (float)((float)(v52 + -1.0) * 1.8));
               if ( *v205 > v25 )
@@ -394,10 +394,10 @@ LABEL_20:
             {
               v41 = *(float *)(a1 + 6472);
               v42 = *(float *)(a1 + 6464);
-              v43 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+              v43 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
               v44 = *v184;
               v45 = *v185;
-              v46 = COERCE_FLOAT((sead::Random::getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000) + -1.0;
+              v46 = COERCE_FLOAT((sead__Random__getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000) + -1.0;
               v47 = *v206;
               v48 = v42 + (float)((float)(v41 - v42) * (float)(COERCE_FLOAT((v43 >> 9) | 0x3F800000) + -1.0));
               if ( *v205 > v25 )
@@ -413,7 +413,7 @@ LABEL_20:
             if ( *(_DWORD *)(a1 + 6452) > v25 )
               v56 = (_DWORD *)((char *)v56 + v216);
             *v56 = 255;
-            v57 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+            v57 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
             v27 = (unsigned int *)(a1 + 6452);
             v28 = (int **)(a1 + 6456);
             v58 = *v204;

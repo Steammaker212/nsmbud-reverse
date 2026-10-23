@@ -113,7 +113,7 @@ unsigned int __fastcall sub_6017BE9C(int a1)
   v108 = &v110;
   v107 = &BufferedSafeStringBase_char_vtable_probably;
   v109 = 32;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v107);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v107);
   *(_BYTE *)v108 = 0;
   v106 = 0;
   v107 = &off_60BD4C20;
@@ -160,7 +160,7 @@ unsigned int __fastcall sub_6017BE9C(int a1)
   v100 = &v102;
   v99 = &BufferedSafeStringBase_char_vtable_probably;
   v101 = 4096;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v99);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v99);
   v99 = &off_60BD5118;
   v10 = v100;
   ((void (__fastcall *)(int (***)()))off_60BC0244)(&v94);
@@ -987,7 +987,7 @@ LABEL_337:
   v95 = &v97;
   v94 = &BufferedSafeStringBase_char_vtable_probably;
   v96 = 0x2000;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v94);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v94);
   v94 = &off_60BD5148;
   v85 = v95;
   if ( v95 != v84 )

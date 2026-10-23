@@ -268,7 +268,7 @@ int __fastcall sub_605C4308(
 LABEL_10:
             v21 = (void *)(dword_60C9CF0C + 1340);
 LABEL_11:
-            U32 = sead::Random::getU32(v21);
+            U32 = sead__Random__getU32(v21);
             v23 = *v204;
             if ( *v198 > v14 )
               v23 = (float *)((char *)v23 + v13);
@@ -281,7 +281,7 @@ LABEL_11:
 LABEL_21:
                 v26 = (void *)(dword_60C9CF0C + 1340);
 LABEL_22:
-                v27 = sead::Random::getU32(v26);
+                v27 = sead__Random__getU32(v26);
                 v28 = *v184;
                 if ( *v183 > v14 )
                   v28 = (float *)((char *)v28 + v13);
@@ -306,7 +306,7 @@ LABEL_32:
                 }
                 v31 = (void *)sead::GlobalRandom::sInstance;
 LABEL_33:
-                v32 = sead::Random::getU32(v31);
+                v32 = sead__Random__getU32(v31);
                 v33 = *v203;
                 if ( *v202 > v14 )
                   v33 = (unsigned int *)((char *)v33 + v13);
@@ -542,7 +542,7 @@ LABEL_101:
         }
         v83 = (void *)(dword_60C9CF0C + 1340);
 LABEL_103:
-        v84 = sead::Random::getU32(v83);
+        v84 = sead__Random__getU32(v83);
         v85 = *v204;
         if ( *v198 > v14 )
           v85 = (float *)((char *)v85 + v13);
@@ -567,7 +567,7 @@ LABEL_112:
         }
         v88 = (void *)(dword_60C9CF0C + 1340);
 LABEL_114:
-        v89 = sead::Random::getU32(v88);
+        v89 = sead__Random__getU32(v88);
         v90 = *v203;
         if ( *v202 > v14 )
           v90 = (unsigned int *)((char *)v90 + v13);
@@ -678,7 +678,7 @@ LABEL_155:
         }
         v121 = (void *)(dword_60C9CF0C + 1340);
 LABEL_157:
-        v122 = sead::Random::getU32(v121);
+        v122 = sead__Random__getU32(v121);
         v15 = v204;
         if ( v195 <= (6 * (unsigned __int64)v122) >> 32 )
         {

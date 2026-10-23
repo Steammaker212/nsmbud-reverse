@@ -242,7 +242,7 @@ int __fastcall sub_6011CB70(int a1)
   v32 = *(_QWORD *)(a1 + 9188);
   v100 = *(_QWORD *)(a1 + 9180);
   v101 = v32;
-  CurrentState = StateMgr::getCurrentState((StateMgr *)(a1 + 6084));
+  CurrentState = StateMgr__getCurrentState((StateMgr *)(a1 + 6084));
   v34 = (*((int (__fastcall **)(StateBase *))CurrentState->vtable + 2))(CurrentState);
   if ( v34 == (*(int (**)(void))(dword_60C86C24 + 8))() || *(_BYTE *)(a1 + 9318) )
   {
@@ -321,7 +321,7 @@ int __fastcall sub_6011CB70(int a1)
   *(_DWORD *)(a1 + 8928) = *(_DWORD *)(a1 + 6856);
   *(_DWORD *)(a1 + 8932) = *(_DWORD *)(a1 + 6872);
   *(_DWORD *)(a1 + 8936) = *(_DWORD *)(a1 + 6888);
-  v56 = StateMgr::getCurrentState((StateMgr *)(a1 + 6084));
+  v56 = StateMgr__getCurrentState((StateMgr *)(a1 + 6084));
   v57 = (*((int (__fastcall **)(StateBase *))v56->vtable + 2))(v56);
   if ( v57 == (*(int (**)(void))(dword_60C86D50 + 8))() )
     (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 9232) + 224))(*(_DWORD *)(a1 + 9232));
@@ -365,7 +365,7 @@ int __fastcall sub_6011CB70(int a1)
   v67 = (ModelWrapper **)(a1 + 6320);
   (*(void (__fastcall **)(_DWORD, float32x2_t *))(***(_DWORD ***)(a1 + 6320) + 60))(**(_DWORD **)(a1 + 6320), &v96);
   (*(void (__fastcall **)(void *, unsigned int *))(*(_DWORD *)(*v67)->model + 68))((*v67)->model, v78);
-  v68 = StateMgr::getCurrentState((StateMgr *)(a1 + 6084));
+  v68 = StateMgr__getCurrentState((StateMgr *)(a1 + 6084));
   v69 = (*((int (__fastcall **)(StateBase *))v68->vtable + 2))(v68);
   v70 = (*(int (**)(void))(dword_60C86D08 + 8))();
   v71 = *(_DWORD *)(a1 + 6328);

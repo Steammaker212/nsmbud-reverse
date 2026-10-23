@@ -376,18 +376,18 @@ LABEL_50:
             v46 = *(float **)(a1 + 412);
             v47 = v46[227];
             v48 = (void *)sead::GlobalRandom::sInstance;
-            U32 = sead::Random::getU32((void *)sead::GlobalRandom::sInstance);
+            U32 = sead__Random__getU32((void *)sead::GlobalRandom::sInstance);
             v50 = *(float *)(*(_DWORD *)(a1 + 412) + 908);
-            LODWORD(v51) = (sead::Random::getU32(v48) >> 9) | 0x3F800000;
+            LODWORD(v51) = (sead__Random__getU32(v48) >> 9) | 0x3F800000;
             v52 = *(float *)(*(_DWORD *)(a1 + 412) + 908);
-            v53 = sead::Random::getU32(v48);
+            v53 = sead__Random__getU32(v48);
             v46[36] = v47 * (float)(COERCE_FLOAT((U32 >> 9) | 0x3F800000) + -1.0);
             v46[37] = v50 * (float)(v51 + -1.0);
             v46[38] = v52 * (float)(COERCE_FLOAT((v53 >> 9) | 0x3F800000) + -1.0);
-            LODWORD(v54) = (sead::Random::getU32(v48) >> 9) | 0x3F800000;
-            v55 = (float)(COERCE_FLOAT((sead::Random::getU32(v48) >> 9) | 0x3F800000) + -1.0) + -0.5;
+            LODWORD(v54) = (sead__Random__getU32(v48) >> 9) | 0x3F800000;
+            v55 = (float)(COERCE_FLOAT((sead__Random__getU32(v48) >> 9) | 0x3F800000) + -1.0) + -0.5;
             v56 = (float)(v54 + -1.0) + -0.5;
-            v57 = (float)(COERCE_FLOAT((sead::Random::getU32(v48) >> 9) | 0x3F800000) + -1.0) + -0.5;
+            v57 = (float)(COERCE_FLOAT((sead__Random__getU32(v48) >> 9) | 0x3F800000) + -1.0) + -0.5;
             v58 = sqrtf((float)((float)(v55 * v55) + (float)(v56 * v56)) + (float)(v57 * v57));
             if ( v58 > 0.0 )
             {

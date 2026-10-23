@@ -37,7 +37,7 @@ void __fastcall sub_607523E4(int a1, int a2)
   v34 = &v36;
   v33 = &BufferedSafeStringBase_char_vtable_probably;
   v35 = 32;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v33);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v33);
   if ( *(_DWORD *)(a1 + 300) == 5 )
   {
     if ( !*(_DWORD *)(a1 + 24) )

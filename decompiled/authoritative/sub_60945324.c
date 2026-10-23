@@ -176,7 +176,7 @@ LABEL_26:
   v65 = (char *)&v67;
   v64 = &BufferedSafeStringBase_char_vtable_probably;
   v66 = 256;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v64);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v64);
   *v65 = 0;
   v64 = &off_60BD94BC;
   v14 = (char *)(v12 + 1);

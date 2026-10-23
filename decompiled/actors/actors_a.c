@@ -27339,7 +27339,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v105 = (char *)&v107;
       v104 = &BufferedSafeStringBase_char_vtable_probably;
       v106 = 32;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v104);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v104);
       v104 = &off_60BD4C38;
       v47 = v105;
       (*(void (__fastcall **)(ActorBuildInfo *))(v103.settings1 + 12))(&v103);
@@ -27716,7 +27716,7 @@ sub_60227F68__LABEL_90:
               v12 = arr_dword_60C8D840[n];
               v33 = sub_6022A7E4(*(_DWORD *)(v89 + 4), v98);
               memset(&v103, 0, sizeof(v103));
-              v103.profile = Profile::get(v12);
+              v103.profile = Profile__get(v12);
               v103.position.x = v96;
               v103.position.y = v99;
               v103.position.z = v95;
@@ -27727,7 +27727,7 @@ sub_60227F68__LABEL_90:
               v103.eventId1 = sub_6040D864(&buildInfo);
               v103.linkId = 0;
               v103.settings1 = 3;
-              ActorMgr::create((void *)ActorMgr::instance, &v103, 0);
+              ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
             }
             if ( v12 == 877 )
               v12 = -1;
@@ -27808,7 +27808,7 @@ sub_60227F68__LABEL_208:
           {
             v68 = sub_6022A7E4(*(_DWORD *)(v89 + 4), v98);
             memset(&v103, 0, sizeof(v103));
-            v103.profile = Profile::get(0x38Au);
+            v103.profile = Profile__get(0x38Au);
             v8 = v94;
             v103.position.x = v96;
             v103.position.y = v22;
@@ -27820,7 +27820,7 @@ sub_60227F68__LABEL_208:
             v103.eventId1 = sub_6040D864(&buildInfo);
             v103.linkId = 0;
             v103.settings1 = 3;
-            ActorMgr::create((void *)ActorMgr::instance, &v103, 0);
+            ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
           }
         }
         else
@@ -27851,7 +27851,7 @@ sub_60227F68__LABEL_208:
         v103.settings2 = (int)&v103.profile;
         v103.settings1 = (int)&BufferedSafeStringBase_char_vtable_probably;
         v103.parentId = 32;
-        sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v103);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v103);
         v103.settings1 = (int)&off_60BD4C38;
         v70 = (void *)v103.settings2;
         (*(void (__fastcall **)(ActorBuildInfo *))(buildInfo.settings1 + 12))(&buildInfo);
@@ -27893,7 +27893,7 @@ sub_60227F68__LABEL_208:
         if ( v73 || v12 == 861 )
           sub_60181BE0(v97, &v103, v12);
         memset(&buildInfo, 0, sizeof(buildInfo));
-        buildInfo.profile = Profile::get(v12);
+        buildInfo.profile = Profile__get(v12);
         v74 = v3;
         buildInfo.position.x = v96;
         buildInfo.position.y = v99;
@@ -28024,7 +28024,7 @@ sub_60227F68__LABEL_256:
             }
           }
         }
-        ActorMgr::create((void *)ActorMgr::instance, &buildInfo, 0);
+        ActorMgr__create((void *)ActorMgr::instance, &buildInfo, 0);
       }
       result = v91;
       v7 = v98 + 1;
@@ -28043,7 +28043,7 @@ sub_60227F68__LABEL_256:
       v103.movementId = v51;
       *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
       v103.position.z = v56;
-      v103.profile = Profile::get(0x363u);
+      v103.profile = Profile__get(0x363u);
       goto sub_60227F68__LABEL_160;
     }
     if ( sub_60183054(v97, v51, 0x20000) )
@@ -28056,7 +28056,7 @@ sub_60227F68__LABEL_256:
       v103.linkId = 0;
       *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
       v103.position.z = v59;
-      v103.profile = Profile::get(0x371u);
+      v103.profile = Profile__get(0x371u);
 sub_60227F68__LABEL_187:
       sub_600080BC((_DWORD *)ActorMgr::instance, &v103);
       goto sub_60227F68__LABEL_188;
@@ -28071,7 +28071,7 @@ sub_60227F68__LABEL_187:
       v103.linkId = 1;
       *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
       v103.position.z = v63;
-      v103.profile = Profile::get(0x372u);
+      v103.profile = Profile__get(0x372u);
       goto sub_60227F68__LABEL_187;
     }
     if ( sub_601DA52C(&buildInfo) == 1 )
@@ -28083,9 +28083,9 @@ sub_60227F68__LABEL_187:
       v103.movementId = v51;
       *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
       v103.position.z = v9;
-      v103.profile = Profile::get(0x37Eu);
+      v103.profile = Profile__get(0x37Eu);
 sub_60227F68__LABEL_160:
-      ActorMgr::create((void *)ActorMgr::instance, &v103, 0);
+      ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
       goto sub_60227F68__LABEL_188;
     }
     if ( sub_601DA114(&buildInfo) == 1 )
@@ -28098,8 +28098,8 @@ sub_60227F68__LABEL_160:
       *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
       v103.position.z = v13;
       v103.settings1 = (unsigned __int8)v88;
-      v103.profile = Profile::get(0x37Fu);
-      ActorMgr::create((void *)ActorMgr::instance, &v103, 0);
+      v103.profile = Profile__get(0x37Fu);
+      ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
       ++v88;
     }
     else
@@ -28113,7 +28113,7 @@ sub_60227F68__LABEL_160:
         v103.movementId = v51;
         *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
         v103.position.z = v14;
-        v103.profile = Profile::get(0x387u);
+        v103.profile = Profile__get(0x387u);
         goto sub_60227F68__LABEL_160;
       }
       v8 = v45;
@@ -81120,7 +81120,7 @@ sub_6027E874__LABEL_14:
         }
         goto sub_6027E874__LABEL_137;
       case 1:
-        U32 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+        U32 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
         v25 = *v131;
         v26 = (float)((float)(COERCE_FLOAT((U32 >> 9) | 0x3F800000) + v18) * 0.6) + 0.4;
         if ( *v132 > v20 )
@@ -81138,7 +81138,7 @@ sub_6027E874__LABEL_14:
         *v28 = v14->_._.position.x;
         v28[1] = y;
         v28[2] = z;
-        v31 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+        v31 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
         v32 = *v147;
         if ( *v146 > v20 )
           v32 += v20;
@@ -81177,7 +81177,7 @@ sub_6027E874__LABEL_14:
           v43 = *(float *)(v137 + 112);
           v44 = *(float *)(v137 + 108);
           v45 = (float)*(int *)(v137 + 160);
-          v46 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+          v46 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
           v47 = *v152;
           if ( *v156 > v20 )
             v47 += 3 * v20;
@@ -81283,7 +81283,7 @@ sub_6027E874__LABEL_56:
             v101 = v100 - 1;
             if ( v100 <= 0 )
             {
-              StageActor::delete(v153, 1);
+              StageActor__delete(v153, 1);
               v97 = *v144;
               v98 = *v143;
             }
@@ -82259,9 +82259,9 @@ sub_60280788__LABEL_20:
           else
           {
             v34 = v17;
-            U32 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
-            v36 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
-            v37 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+            U32 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
+            v36 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
+            v37 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
             v38 = *v187;
             if ( *v188 > v25 )
               v38 = (float *)((char *)v38 + v216);
@@ -82275,10 +82275,10 @@ sub_60280788__LABEL_20:
             {
               v50 = *(float *)(v197 + 104);
               v51 = *(float *)(v197 + 112);
-              LODWORD(v52) = (sead::Random::getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
+              LODWORD(v52) = (sead__Random__getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
               v53 = *v184;
               v54 = *v185;
-              LODWORD(v55) = (sead::Random::getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
+              LODWORD(v55) = (sead__Random__getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
               v47 = *v206;
               v48 = v51 + (float)(v50 * (float)((float)(v52 + -1.0) * 1.8));
               if ( *v205 > v25 )
@@ -82290,10 +82290,10 @@ sub_60280788__LABEL_20:
             {
               v41 = *(float *)(a1 + 6472);
               v42 = *(float *)(a1 + 6464);
-              v43 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+              v43 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
               v44 = *v184;
               v45 = *v185;
-              v46 = COERCE_FLOAT((sead::Random::getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000) + -1.0;
+              v46 = COERCE_FLOAT((sead__Random__getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000) + -1.0;
               v47 = *v206;
               v48 = v42 + (float)((float)(v41 - v42) * (float)(COERCE_FLOAT((v43 >> 9) | 0x3F800000) + -1.0));
               if ( *v205 > v25 )
@@ -82309,7 +82309,7 @@ sub_60280788__LABEL_20:
             if ( *(_DWORD *)(a1 + 6452) > v25 )
               v56 = (_DWORD *)((char *)v56 + v216);
             *v56 = 255;
-            v57 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+            v57 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
             v27 = (unsigned int *)(a1 + 6452);
             v28 = (int **)(a1 + 6456);
             v58 = *v204;
@@ -84121,7 +84121,7 @@ sub_60283D2C__LABEL_15:
           v149 = 0;
           while ( 1 )
           {
-            U32 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+            U32 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
             v25 = *v185;
             v26 = *v184;
             v27 = (unsigned int *)*v185;
@@ -84142,8 +84142,8 @@ sub_60283D2C__LABEL_15:
               }
               else
               {
-                LODWORD(v30) = (sead::Random::getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
-                v31 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+                LODWORD(v30) = (sead__Random__getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
+                v31 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
                 v32 = *v156;
                 v33 = (float)((float)(v30 + -1.0) * 0.9) + 0.1;
                 v34 = (v31 >> 9) | 0x3F800000;
@@ -84174,7 +84174,7 @@ sub_60283D2C__LABEL_15:
                 if ( *v181 > v23 )
                   v41 = (int *)((char *)v41 + v21);
                 *v41 = 255;
-                v42 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+                v42 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
                 v45 = *v165;
                 if ( *v164 > v23 )
                   v45 = (unsigned int *)((char *)v45 + v21);

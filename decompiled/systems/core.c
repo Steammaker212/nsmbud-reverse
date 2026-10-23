@@ -13440,7 +13440,7 @@ sub_6000FD08__LABEL_439:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = (int *)&stru_60C7B4A8;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -13576,7 +13576,7 @@ sub_6000FD08__LABEL_441:
                   *(float *)(a1 + 116) = v33;
 sub_6000FD08__LABEL_452:
                   *(float *)(a1 + 120) = v7;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -13614,7 +13614,7 @@ sub_6000FD08__LABEL_367:
           if ( result == 1 )
           {
             v199 = &dword_60C7B528;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v33;
           goto sub_6000FD08__LABEL_394;
@@ -13650,7 +13650,7 @@ sub_6000FD08__LABEL_442:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B4E8;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -13695,7 +13695,7 @@ sub_6000FD08__LABEL_442:
           if ( result != 1 )
             goto sub_6000FD08__LABEL_394;
           v199 = &dword_60C7B508;
-          return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+          return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
         case 7u:
           result = LODWORD(v210);
           v54 = v216 - v10;
@@ -13728,7 +13728,7 @@ sub_6000FD08__LABEL_443:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B588;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -13794,7 +13794,7 @@ sub_6000FD08__LABEL_444:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B568;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -13860,7 +13860,7 @@ sub_6000FD08__LABEL_445:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B5C8;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -14005,7 +14005,7 @@ sub_6000FD08__LABEL_447:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B5E8;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -14071,7 +14071,7 @@ sub_6000FD08__LABEL_448:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B608;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -14135,7 +14135,7 @@ sub_6000FD08__LABEL_449:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B628;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -14252,7 +14252,7 @@ sub_6000FD08__LABEL_397:
             *(float *)(a1 + 116) = v10;
             *(float *)(a1 + 120) = v7;
             v199 = &dword_60C7B668;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v10;
           goto sub_6000FD08__LABEL_394;
@@ -14286,7 +14286,7 @@ sub_6000FD08__LABEL_397:
             *(float *)(a1 + 116) = v10;
             *(float *)(a1 + 120) = v7;
             v199 = &dword_60C7B6E8;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v10;
           goto sub_6000FD08__LABEL_394;
@@ -14315,7 +14315,7 @@ sub_6000FD08__LABEL_397:
             *(float *)(a1 + 116) = v10;
             *(float *)(a1 + 120) = v7;
             v199 = &dword_60C7B6C8;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v10;
           goto sub_6000FD08__LABEL_394;
@@ -14394,7 +14394,7 @@ sub_6000FD08__LABEL_196:
             *(float *)(a1 + 116) = v10;
             *(float *)(a1 + 120) = v7;
             v199 = &dword_60C7B748;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v10;
           goto sub_6000FD08__LABEL_394;
@@ -14426,7 +14426,7 @@ sub_6000FD08__LABEL_196:
           *(float *)(a1 + 116) = v148;
           *(float *)(a1 + 120) = v7;
           v199 = &dword_60C7B768;
-          return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+          return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
         case 0x1Cu:
           v212 = v10;
           v213 = v7 + 16.0;
@@ -14454,7 +14454,7 @@ sub_6000FD08__LABEL_196:
             *(float *)(a1 + 116) = v10;
             *(float *)(a1 + 120) = v8;
             v199 = &dword_60C7B748;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v10;
           goto sub_6000FD08__LABEL_394;
@@ -14487,7 +14487,7 @@ sub_6000FD08__LABEL_196:
           *(float *)(a1 + 116) = v10 + -16.0;
           *(float *)(a1 + 120) = v8;
           v199 = &dword_60C7B748;
-          return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+          return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
         case 0x1Eu:
           v212 = v10;
           v213 = v7 + 16.0;
@@ -14517,7 +14517,7 @@ sub_6000FD08__LABEL_196:
           *(float *)(a1 + 116) = v10;
           *(float *)(a1 + 120) = v8;
           v199 = &dword_60C7B768;
-          return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+          return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
         case 0x1Fu:
           v160 = v10 + -16.0;
           v212 = v10 + -16.0;
@@ -14546,7 +14546,7 @@ sub_6000FD08__LABEL_196:
           *(float *)(a1 + 116) = v160;
           *(float *)(a1 + 120) = v8;
           v199 = &dword_60C7B768;
-          return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+          return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
         default:
 sub_6000FD08__LABEL_240:
           v13 = v10;
@@ -80000,12 +80000,12 @@ sub_60045DB4__LABEL_181:
   type = (unsigned __int8)v6->type;
   if ( !v6->type )
   {
-    if ( Actor::getProfileId(&v6->_) != 392 )
+    if ( Actor__getProfileId(&v6->_) != 392 )
     {
-      Enemy::collisionCallback(a1, a2);
+      Enemy__collisionCallback(a1, a2);
       return;
     }
-    if ( Actor::getProfileId(v6->_.parent) == 726 )
+    if ( Actor__getProfileId(v6->_.parent) == 726 )
       return;
     sub_602EE7B8(v6, v6->direction, v6->playerId);
 SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31:
@@ -80040,7 +80040,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31:
           {
             if ( a2->info.category == 7 )
             {
-              CurrentState = StateMgr::getCurrentState((StateMgr *)(v7 + 6084));
+              CurrentState = StateMgr__getCurrentState((StateMgr *)(v7 + 6084));
               v14 = (*((int (__fastcall **)(StateBase *))CurrentState->vtable + 2))(CurrentState);
               if ( v14 == (*(int (**)(void))(dword_60C82220 + 8))() )
               {
@@ -80066,10 +80066,10 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31:
             else if ( v6->position.y > (float)(*(float *)(v7 + 112) + 12.0) )
             {
               if ( *v12 >= 4
-                && ((v62 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+                && ((v62 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084)),
                      v63 = (*((int (__fastcall **)(StateBase *))v62->vtable + 2))(v62),
                      v63 == (*(int (**)(void))(dword_60C82060 + 8))())
-                 || (v64 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+                 || (v64 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084)),
                      v65 = (*((int (__fastcall **)(StateBase *))v64->vtable + 2))(v64),
                      v65 == (*(int (**)(void))(dword_60C82080 + 8))())) )
               {
@@ -80078,13 +80078,13 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31:
               }
               else
               {
-                v89 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084));
+                v89 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084));
                 v90 = (*((int (__fastcall **)(StateBase *))v89->vtable + 2))(v89);
                 if ( v90 == (*(int (**)(void))(dword_60C820E0 + 8))()
-                  || (v91 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+                  || (v91 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084)),
                       v92 = (*((int (__fastcall **)(StateBase *))v91->vtable + 2))(v91),
                       v92 == (*(int (**)(void))(dword_60C82200 + 8))())
-                  || (v93 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+                  || (v93 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084)),
                       v94 = (*((int (__fastcall **)(StateBase *))v93->vtable + 2))(v93),
                       v94 == (*(int (**)(void))(dword_60C820C0 + 8))()) )
                 {
@@ -80160,7 +80160,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31:
     }
     return;
   }
-  if ( Actor::getProfileId(&v6->_) != 726 )
+  if ( Actor__getProfileId(&v6->_) != 726 )
   {
     owner = (StageActor *)v7;
     goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_58;
@@ -80186,7 +80186,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31:
     owner = (StageActor *)v7;
     goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_40;
   }
-  v58 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084));
+  v58 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084));
   v59 = (*((int (__fastcall **)(StateBase *))v58->vtable + 2))(v58);
   if ( v59 == (*(int (**)(void))(dword_60C82260 + 8))() )
   {
@@ -80194,10 +80194,10 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31:
     goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_40;
   }
   if ( *(_DWORD *)(v7 + 15240) >= 4u
-    && ((v85 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+    && ((v85 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084)),
          v86 = (*((int (__fastcall **)(StateBase *))v85->vtable + 2))(v85),
          v86 == (*(int (**)(void))(dword_60C82220 + 8))())
-     || (v87 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084)),
+     || (v87 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084)),
          v88 = (*((int (__fastcall **)(StateBase *))v87->vtable + 2))(v87),
          v88 == (*(int (**)(void))(dword_60C82080 + 8))())) )
   {
@@ -80206,11 +80206,11 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31:
   }
   else
   {
-    v66 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084));
+    v66 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084));
     v67 = (*((int (__fastcall **)(StateBase *))v66->vtable + 2))(v66);
     if ( v67 != (*(int (**)(void))(dword_60C820E0 + 8))() )
     {
-      v68 = StateMgr::getCurrentState((StateMgr *)(v7 + 6084));
+      v68 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084));
       v69 = (*((int (__fastcall **)(StateBase *))v68->vtable + 2))(v68);
       if ( v69 != (*(int (**)(void))(dword_60C82200 + 8))() )
       {
@@ -80274,24 +80274,24 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31:
 SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_40:
   if ( !sub_6009219C(v6) && !LOBYTE(v6[11].rotation.z) )
   {
-    v28 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v28 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
     v29 = (*((int (__fastcall **)(StateBase *))v28->vtable + 2))(v28);
     if ( v29 != (*(int (**)(void))(dword_60C81D0C + 8))() )
     {
       if ( owner[23].aCollider.field_F0 < 4u )
         goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_47;
-      v30 = StateMgr::getCurrentState((StateMgr *)&owner[9].aCollider.field_64);
+      v30 = StateMgr__getCurrentState((StateMgr *)&owner[9].aCollider.field_64);
       v31 = (*((int (__fastcall **)(StateBase *))v30->vtable + 2))(v30);
       if ( v31 != (*(int (**)(void))(dword_60C82220 + 8))() )
       {
-        v32 = StateMgr::getCurrentState((StateMgr *)&owner[9].aCollider.field_64);
+        v32 = StateMgr__getCurrentState((StateMgr *)&owner[9].aCollider.field_64);
         v33 = (*((int (__fastcall **)(StateBase *))v32->vtable + 2))(v32);
         if ( v33 != (*(int (**)(void))(dword_60C82080 + 8))() )
           goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_47;
       }
     }
   }
-  v34 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+  v34 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
   v35 = (*((int (__fastcall **)(StateBase *))v34->vtable + 2))(v34);
   if ( v35 == (*(int (**)(void))(dword_60C81D8C + 8))() )
   {
@@ -80310,7 +80310,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_47:
       *(float *)&v6->field_B4 = *(float *)&v6->field_B4 + (float)(v25 * v39);
       *(float *)&v6->field_B8 = *(float *)&v6->field_B8 + (float)(v24 * v39);
     }
-    v40 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v40 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
     v41 = (*((int (__fastcall **)(StateBase *))v40->vtable + 2))(v40);
     if ( v41 == (*(int (**)(void))(dword_60C81D8C + 8))() )
       x = v6->speed.x;
@@ -80319,16 +80319,16 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_47:
     v6->speed.x = -x;
   }
 SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_58:
-  if ( Actor::getProfileId(&v6->_) != 728 )
+  if ( Actor__getProfileId(&v6->_) != 728 )
     goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65;
-  v45 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+  v45 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
   v46 = (*((int (__fastcall **)(StateBase *))v45->vtable + 2))(v45);
   if ( v46 == (*((int (**)(void))BobOmb_StateID_Kicked._._.vtable + 2))()
-    || (v47 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64),
+    || (v47 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64),
         v48 = (*((int (__fastcall **)(StateBase *))v47->vtable + 2))(v47),
         v48 == (*(int (**)(void))(dword_60C8E2E0 + 8))()) )
   {
-    v49 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v49 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
     v50 = (*((int (__fastcall **)(StateBase *))v49->vtable + 2))(v49);
     if ( v50 != (*((int (**)(void))stru_60C8E1CC._.vtable + 2))() )
 SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_62:
@@ -80336,22 +80336,22 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_62:
   }
   else
   {
-    v60 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v60 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
     v61 = (*((int (__fastcall **)(StateBase *))v60->vtable + 2))(v60);
     if ( v61 == (*((int (**)(void))stru_60C8EA70._.vtable + 2))() )
     {
       sub_602A58B4(v6, a1->owner);
       goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_64;
     }
-    v77 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v77 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
     v78 = (*((int (__fastcall **)(StateBase *))v77->vtable + 2))(v77);
     if ( v78 == (*(int (**)(void))(dword_60C810B8 + 8))() )
       goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_64;
-    v79 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v79 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
     v80 = (*((int (__fastcall **)(StateBase *))v79->vtable + 2))(v79);
     if ( v80 == (*(int (**)(void))(dword_60C810D8 + 8))() || owner->speed.y >= 0.0 )
       goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_64;
-    v81 = StateMgr::getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
+    v81 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
     v82 = (*((int (__fastcall **)(StateBase *))v81->vtable + 2))(v81);
     v83 = (*((int (**)(void))stru_60C8E1CC._.vtable + 2))();
     v84 = v82 == v83;
@@ -80367,7 +80367,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_62:
 SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_64:
   a2->field_6E |= 2u;
 SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
-  if ( Actor::getProfileId(&v6->_) == 441 )
+  if ( Actor__getProfileId(&v6->_) == 441 )
   {
     v54 = owner[23].aCollider.field_F0;
     if ( v54 <= 3 )
@@ -80385,7 +80385,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
           }
           if ( (*(int (__fastcall **)(StageActor *, int *))v6->_.vtable)(v6, &Enemy_RTTI) == 1 )
           {
-            Enemy::collisionCallback(a2, (ActiveCollider *)(v56 + 188));
+            Enemy__collisionCallback(a2, (ActiveCollider *)(v56 + 188));
             goto SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_31;
           }
         }

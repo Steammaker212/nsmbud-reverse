@@ -268,7 +268,7 @@ LABEL_15:
           v149 = 0;
           while ( 1 )
           {
-            U32 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+            U32 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
             v25 = *v185;
             v26 = *v184;
             v27 = (unsigned int *)*v185;
@@ -289,8 +289,8 @@ LABEL_15:
               }
               else
               {
-                LODWORD(v30) = (sead::Random::getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
-                v31 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+                LODWORD(v30) = (sead__Random__getU32((void *)(dword_60C9CF0C + 1340)) >> 9) | 0x3F800000;
+                v31 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
                 v32 = *v156;
                 v33 = (float)((float)(v30 + -1.0) * 0.9) + 0.1;
                 v34 = (v31 >> 9) | 0x3F800000;
@@ -321,7 +321,7 @@ LABEL_15:
                 if ( *v181 > v23 )
                   v41 = (int *)((char *)v41 + v21);
                 *v41 = 255;
-                v42 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+                v42 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
                 v45 = *v165;
                 if ( *v164 > v23 )
                   v45 = (unsigned int *)((char *)v45 + v21);

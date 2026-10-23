@@ -283,7 +283,7 @@ LABEL_14:
         }
         goto LABEL_137;
       case 1:
-        U32 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+        U32 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
         v25 = *v131;
         v26 = (float)((float)(COERCE_FLOAT((U32 >> 9) | 0x3F800000) + v18) * 0.6) + 0.4;
         if ( *v132 > v20 )
@@ -301,7 +301,7 @@ LABEL_14:
         *v28 = v14->_._.position.x;
         v28[1] = y;
         v28[2] = z;
-        v31 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+        v31 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
         v32 = *v147;
         if ( *v146 > v20 )
           v32 += v20;
@@ -340,7 +340,7 @@ LABEL_14:
           v43 = *(float *)(v137 + 112);
           v44 = *(float *)(v137 + 108);
           v45 = (float)*(int *)(v137 + 160);
-          v46 = sead::Random::getU32((void *)(dword_60C9CF0C + 1340));
+          v46 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
           v47 = *v152;
           if ( *v156 > v20 )
             v47 += 3 * v20;
@@ -446,7 +446,7 @@ LABEL_56:
             v101 = v100 - 1;
             if ( v100 <= 0 )
             {
-              StageActor::delete(v153, 1);
+              StageActor__delete(v153, 1);
               v97 = *v144;
               v98 = *v143;
             }

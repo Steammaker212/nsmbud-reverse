@@ -92,7 +92,7 @@ int __fastcall sub_60181FC0(int a1, int a2, _DWORD *a3, _DWORD *a4)
       v67 = &v69;
       v66 = &BufferedSafeStringBase_char_vtable_probably;
       v68 = 32;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)v6);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)v6);
       v66 = &off_60BD4C38;
       v14 = v67;
       ((void (__fastcall *)(int (***)()))v70[3])(&v70);
@@ -128,7 +128,7 @@ int __fastcall sub_60181FC0(int a1, int a2, _DWORD *a3, _DWORD *a4)
       }
       v6 = (int (***)())v13;
       v66 = &off_60BD4C20;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_(v13);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v13);
       v18 = 0;
       while ( 1 )
       {
@@ -305,13 +305,13 @@ LABEL_35:
                   v57 = (const char *)&v59;
                   v56 = &BufferedSafeStringBase_char_vtable_probably;
                   v58 = 5;
-                  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v56);
+                  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v56);
                   *v57 = 0;
                   v63 = &v65;
                   v62 = &BufferedSafeStringBase_char_vtable_probably;
                   v56 = &off_60BD4F38;
                   v64 = 5;
-                  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v62);
+                  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v62);
                   *(_BYTE *)v63 = 0;
                   v62 = &off_60BD4F38;
                   v34 = *(_DWORD *)(v49 + 40);

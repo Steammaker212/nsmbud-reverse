@@ -84,7 +84,7 @@ signed int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, v
   v71 = (char *)&v73;
   v70 = &BufferedSafeStringBase_char_vtable_probably;
   v72 = 256;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v70);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v70);
   *v71 = 0;
   v47 = a1;
   v70 = &off_60BD94BC;
@@ -112,7 +112,7 @@ signed int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, v
       v67 = &v69;
       v66 = &BufferedSafeStringBase_char_vtable_probably;
       v68 = 32;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v66);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v66);
       *(_BYTE *)v67 = 0;
       v58[0] = &`vtable for'sead::SafeStringBase_char;
       v66 = &off_60BD4C20;
@@ -130,7 +130,7 @@ signed int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, v
       v55 = &v57;
       v54 = &BufferedSafeStringBase_char_vtable_probably;
       v56 = 64;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v54);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v54);
       *(_BYTE *)v55 = 0;
       v54 = &off_60BD4BF0;
       if ( v16 >= 0 )
@@ -164,7 +164,7 @@ signed int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, v
         if ( v19 == "sarc" )
         {
 LABEL_35:
-          sead::SafeStringBase_char::operator=((int)v58, (int)&v70);
+          sead__SafeStringBase_char__operator=((int)v58, (int)&v70);
           v21 = (int (__fastcall ***)(_DWORD, int *))sead_ResourceMgr_OpenFileRelated(
                                                        sead::ResourceMgr::sInstance,
                                                        (int)v58);
@@ -333,7 +333,7 @@ LABEL_93:
                 v39[1].containingHeap = (int)&v39[1].field_C;
                 v39[1].vtable = (int)&BufferedSafeStringBase_char_vtable_probably;
                 v39[1].field_8 = 32;
-                sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v39[1]);
+                sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v39[1]);
                 *(_BYTE *)v39[1].containingHeap = 0;
                 v39[1].vtable = (int)&off_60BD4C20;
                 v39[3].field_C = v38;

@@ -56,7 +56,7 @@ int *__fastcall sub_6082756C(int a1)
     v42 = &`vtable for'sead::SafeStringBase_char;
     v43 = "AppBootCnt";
     v7 = (nn::oe *)sub_6074EC10(v3, &v42, *(_DWORD *)(v6 + 44124));
-    OperationMode = nn::oe::GetOperationMode(v7);
+    OperationMode = nn__oe__GetOperationMode(v7);
     v42 = &`vtable for'sead::SafeStringBase_char;
     if ( OperationMode != 1 )
       OperationMode = 0;

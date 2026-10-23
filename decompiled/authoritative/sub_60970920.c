@@ -191,7 +191,7 @@ _DWORD *__fastcall sub_60970920(int a1, int a2, int a3, signed int a4, void *a5,
             v81 = v17;
             v29 = v24;
             v92 = 1024;
-            sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v90);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v90);
             v30 = v29;
             *v91 = 0;
             v90 = &off_60BFA9DC;
@@ -312,7 +312,7 @@ LABEL_60:
             }
             else
             {
-              sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)v43);
+              sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)v43);
               v46 = (_BYTE *)v43[1];
             }
             *v43 = &off_60BFA9C4;

@@ -429,7 +429,7 @@ LABEL_308:
     v106 = (char *)&v108;
     v105 = &BufferedSafeStringBase_char_vtable_probably;
     v107 = 32;
-    sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v105);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v105);
     v105 = &off_60BD4C38;
     v50 = (unsigned __int8 *)v106;
     ((void (__fastcall *)(int (***)()))v103[3])(&v103);

@@ -9069,7 +9069,7 @@ LABEL_41:
     v53 = &v55;
     v52 = &BufferedSafeStringBase_char_vtable_probably;
     v54 = 32;
-    sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v52);
+    sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v52);
     v15 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[2 * v12];
     v51 = v12;
     v16 = v53;
@@ -9441,7 +9441,7 @@ int __fastcall sub_607CAA54(int a1, float a2)
     v25 = &v27;
     v24 = &BufferedSafeStringBase_char_vtable_probably;
     v26 = 32;
-    sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v24);
+    sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v24);
     v13 = v25;
     (*(void (__fastcall **)(int *))(((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[2 * v10] + 12))(v11);
     v14 = (char *)v11[1];
@@ -22471,7 +22471,7 @@ int __fastcall sub_607DF724(_DWORD *a1)
   a1[68] = sub_607DF868;
   a1[69] = 0;
   a1[66] = off_60C26618;
-  sead_SafeStringBase_char::operator=((int)(a1 + 61), (int)v6);
+  sead_SafeStringBase_char__operator=((int)(a1 + 61), (int)v6);
   a1[63] = 1;
   v2 = *(_DWORD **)(dword_60CD0B40 + 36);
   if ( *(_DWORD *)(dword_60CD0B40 + 32) > 0xEu )
@@ -23741,7 +23741,7 @@ int __fastcall sub_607E1218(int a1)
   *(_DWORD *)(a1 + 532) = sub_607E14F4;
   *(_DWORD *)(a1 + 536) = 0;
   *(_DWORD *)(a1 + 524) = off_60C267E8;
-  sead_SafeStringBase_char::operator=(a1 + 504, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 504, (int)&v17);
   *(_DWORD *)(a1 + 512) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -23753,7 +23753,7 @@ int __fastcall sub_607E1218(int a1)
   *(_DWORD *)(a1 + 600) = sub_607E14FC;
   *(_DWORD *)(a1 + 604) = 0;
   *(_DWORD *)(a1 + 592) = off_60C267E8;
-  sead_SafeStringBase_char::operator=(a1 + 572, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 572, (int)&v17);
   *(_DWORD *)(a1 + 580) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -23765,7 +23765,7 @@ int __fastcall sub_607E1218(int a1)
   *(_DWORD *)(a1 + 668) = sub_607E1548;
   *(_DWORD *)(a1 + 672) = 0;
   *(_DWORD *)(a1 + 660) = off_60C267E8;
-  sead_SafeStringBase_char::operator=(a1 + 640, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 640, (int)&v17);
   *(_DWORD *)(a1 + 648) = 1;
   sub_6095537C(**(_DWORD **)(v2 + 36), 0, a1 + 624);
   v5 = a1 + 280;
@@ -24281,7 +24281,7 @@ int __fastcall sub_607E1F54(int a1)
   *(_DWORD *)(a1 + 532) = sub_607E2120;
   *(_DWORD *)(a1 + 536) = 0;
   *(_DWORD *)(a1 + 524) = off_60C26900;
-  sead_SafeStringBase_char::operator=(a1 + 504, (int)v12);
+  sead_SafeStringBase_char__operator_assign(a1 + 504, (int)v12);
   *(_DWORD *)(a1 + 512) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -24870,7 +24870,7 @@ StateMethodExecuter *__fastcall sub_607E2B48(int a1)
   *(_DWORD *)(a1 + 272) = sub_607E2D18;
   *(_DWORD *)(a1 + 276) = 0;
   *(_DWORD *)(a1 + 264) = off_60C26A18;
-  sead_SafeStringBase_char::operator=(a1 + 244, (int)a5);
+  sead_SafeStringBase_char__operator_assign(a1 + 244, (int)a5);
   *(_DWORD *)(a1 + 252) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -25927,7 +25927,7 @@ int __fastcall sub_607E4720(float *a1)
   *((_DWORD *)a1 + 59) = sub_607E4B1C;
   a1[60] = 0.0;
   *((_DWORD *)a1 + 57) = off_60C26B4C;
-  sead_SafeStringBase_char::operator=((int)(a1 + 52), (int)v19);
+  sead_SafeStringBase_char__operator=((int)(a1 + 52), (int)v19);
   *((_DWORD *)a1 + 54) = 1;
   sub_609553AC(**(_DWORD **)(v2 + 36), a1 + 48);
   a1[655] = 0.0;
@@ -26686,7 +26686,7 @@ LABEL_43:
       a2.cstr = (char *)v186;
       a2.vtable = &BufferedSafeStringBase_char_vtable_probably;
       v185 = 64;
-      sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&a2);
+      sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&a2);
       v51 = &v10[v50];
       *a2.cstr = 0;
       a2.vtable = &off_60BD4BF0;
@@ -26903,7 +26903,7 @@ LABEL_85:
               path.cstr = (char *)v181;
               path.vtable = &BufferedSafeStringBase_char_vtable_probably;
               v180 = 16;
-              sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&path);
+              sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&path);
               *path.cstr = 0;
               path.vtable = &off_60BD54D4;
               v106 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v102 + 88))(v102, v105);
@@ -26955,7 +26955,7 @@ LABEL_189:
                   path.cstr = (char *)v181;
                   path.vtable = &BufferedSafeStringBase_char_vtable_probably;
                   v180 = 16;
-                  sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&path);
+                  sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&path);
                   *path.cstr = 0;
                   path.vtable = &off_60BD54D4;
                   v116 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v112 + 88))(v112, v115);
@@ -27348,7 +27348,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 372) = sub_607E792C;
   *(_DWORD *)(a1 + 376) = 0;
   *(_DWORD *)(a1 + 364) = off_60C26C3C;
-  sead_SafeStringBase_char::operator=(a1 + 344, (int)&v15);
+  sead_SafeStringBase_char__operator_assign(a1 + 344, (int)&v15);
   *(_DWORD *)(a1 + 352) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -27360,7 +27360,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 440) = sub_607E7AA8;
   *(_DWORD *)(a1 + 444) = 0;
   *(_DWORD *)(a1 + 432) = off_60C26C3C;
-  sead_SafeStringBase_char::operator=(a1 + 412, (int)&v15);
+  sead_SafeStringBase_char__operator_assign(a1 + 412, (int)&v15);
   *(_DWORD *)(a1 + 420) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -27372,7 +27372,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 236) = sub_607E7B48;
   *(_DWORD *)(a1 + 240) = 0;
   *(_DWORD *)(a1 + 228) = off_60C26C3C;
-  sead_SafeStringBase_char::operator=(a1 + 208, (int)&v15);
+  sead_SafeStringBase_char__operator_assign(a1 + 208, (int)&v15);
   *(_DWORD *)(a1 + 216) = 1;
   sub_609553AC(**(_DWORD **)(v2 + 36), a1 + 192);
   v15 = &g_vtable_forsead_SafeStringBase_char;
@@ -27381,7 +27381,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 304) = sub_607E8134;
   *(_DWORD *)(a1 + 308) = 0;
   *(_DWORD *)(a1 + 296) = off_60C26C3C;
-  sead_SafeStringBase_char::operator=(a1 + 276, (int)&v15);
+  sead_SafeStringBase_char__operator_assign(a1 + 276, (int)&v15);
   *(_DWORD *)(a1 + 284) = 1;
   v5 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -27393,7 +27393,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 3984) = sub_607E815C;
   *(_DWORD *)(a1 + 3988) = 0;
   *(_DWORD *)(a1 + 3976) = off_60C26C3C;
-  sead_SafeStringBase_char::operator=(a1 + 3956, (int)&v15);
+  sead_SafeStringBase_char__operator_assign(a1 + 3956, (int)&v15);
   *(_DWORD *)(a1 + 3964) = 1;
   v6 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 0xEu )
@@ -27409,7 +27409,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 508) = sub_607E81F0;
   *(_DWORD *)(a1 + 512) = 0;
   *(_DWORD *)(a1 + 500) = off_60C26C3C;
-  sead_SafeStringBase_char::operator=(a1 + 480, (int)&v15);
+  sead_SafeStringBase_char__operator_assign(a1 + 480, (int)&v15);
   *(_DWORD *)(a1 + 488) = 1;
   *(_DWORD *)(a1 + 492) = -300;
   v8 = *(_DWORD **)(v2 + 36);
@@ -27422,7 +27422,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 576) = sub_607E8204;
   *(_DWORD *)(a1 + 580) = 0;
   *(_DWORD *)(a1 + 568) = off_60C26C3C;
-  sead_SafeStringBase_char::operator=(a1 + 548, (int)&v15);
+  sead_SafeStringBase_char__operator_assign(a1 + 548, (int)&v15);
   *(_DWORD *)(a1 + 556) = 1;
   v9 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -28145,7 +28145,7 @@ int __fastcall sub_607E8220(int a1)
     s = (char *)v211;
     v208 = (int)&BufferedSafeStringBase_char_vtable_probably;
     v210 = 64;
-    sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v208);
+    sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v208);
     v66 = v12;
     *s = 0;
     v67 = v9;
@@ -28381,7 +28381,7 @@ LABEL_43:
             v204 = v206;
             v203 = COERCE_FLOAT(&BufferedSafeStringBase_char_vtable_probably);
             v205 = 16;
-            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v203);
+            sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v203);
             *v204 = 0;
             v203 = COERCE_FLOAT(&off_60BD54D4);
             v51 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v47 + 88))(v47, v49);
@@ -28427,7 +28427,7 @@ LABEL_43:
             v204 = v206;
             v203 = COERCE_FLOAT(&BufferedSafeStringBase_char_vtable_probably);
             v205 = 16;
-            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v203);
+            sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v203);
             *v204 = 0;
             v203 = COERCE_FLOAT(&off_60BD54D4);
             v60 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v57 + 88))(v57, v59 + 1);
@@ -28468,7 +28468,7 @@ LABEL_121:
   s = (char *)v211;
   v208 = (int)&BufferedSafeStringBase_char_vtable_probably;
   v210 = 64;
-  sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v208);
+  sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v208);
   *s = 0;
   v208 = (int)&off_60BD4BF0;
   sub_608FDDF4((int)&v208, "%03d_Camera_%03d", *(_WORD *)(dword_60CC6D78 + 109048) & 0x7F, *v7);
@@ -30344,7 +30344,7 @@ int __fastcall sub_607EC1F0(_DWORD *a1)
   a1[68] = sub_607EC29C;
   a1[69] = 0;
   a1[66] = off_60C26E80;
-  sead_SafeStringBase_char::operator=((int)(a1 + 61), (int)v4);
+  sead_SafeStringBase_char__operator=((int)(a1 + 61), (int)v4);
   a1[63] = 1;
   v2 = *(_DWORD **)(dword_60CD0B40 + 36);
   if ( *(_DWORD *)(dword_60CD0B40 + 32) > 0xEu )
@@ -31716,7 +31716,7 @@ int __fastcall sub_607EE160(int a1)
   *(_DWORD *)(a1 + 480) = sub_607EE584;
   *(_DWORD *)(a1 + 484) = 0;
   *(_DWORD *)(a1 + 472) = off_60C26F98;
-  sead_SafeStringBase_char::operator=(a1 + 452, (int)&v18);
+  sead_SafeStringBase_char__operator_assign(a1 + 452, (int)&v18);
   *(_DWORD *)(a1 + 460) = 2;
   sub_6095537C(**(_DWORD **)(v3 + 36), 0, a1 + 436);
   v18 = &g_vtable_forsead_SafeStringBase_char;
@@ -31725,7 +31725,7 @@ int __fastcall sub_607EE160(int a1)
   *(_DWORD *)(a1 + 276) = sub_607EE67C;
   *(_DWORD *)(a1 + 280) = 0;
   *(_DWORD *)(a1 + 268) = off_60C26FC0;
-  sead_SafeStringBase_char::operator=(a1 + 248, (int)&v18);
+  sead_SafeStringBase_char__operator_assign(a1 + 248, (int)&v18);
   *(_DWORD *)(a1 + 256) = 1;
   v4 = *(_DWORD **)(v3 + 36);
   if ( *(_DWORD *)(v3 + 32) > 5u )
@@ -31737,7 +31737,7 @@ int __fastcall sub_607EE160(int a1)
   *(_DWORD *)(a1 + 344) = sub_607EE820;
   *(_DWORD *)(a1 + 348) = 0;
   *(_DWORD *)(a1 + 336) = off_60C26FC0;
-  sead_SafeStringBase_char::operator=(a1 + 316, (int)&v18);
+  sead_SafeStringBase_char__operator_assign(a1 + 316, (int)&v18);
   *(_DWORD *)(a1 + 324) = 1;
   v5 = *(_DWORD **)(v3 + 36);
   if ( *(_DWORD *)(v3 + 32) > 6u )
@@ -31749,7 +31749,7 @@ int __fastcall sub_607EE160(int a1)
   *(_DWORD *)(a1 + 412) = sub_607EE85C;
   *(_DWORD *)(a1 + 416) = 0;
   *(_DWORD *)(a1 + 404) = off_60C26FC0;
-  sead_SafeStringBase_char::operator=(a1 + 384, (int)&v18);
+  sead_SafeStringBase_char__operator_assign(a1 + 384, (int)&v18);
   *(_DWORD *)(a1 + 392) = 1;
   v6 = *(_DWORD **)(v3 + 36);
   if ( *(_DWORD *)(v3 + 32) > 8u )
@@ -32587,7 +32587,7 @@ int __fastcall sub_607EF794(int a1)
   *(_DWORD *)(a1 + 2296) = sub_607EF984;
   *(_DWORD *)(a1 + 2300) = 0;
   *(_DWORD *)(a1 + 2288) = off_60C270D8;
-  sead_SafeStringBase_char::operator=(a1 + 2268, (int)&v12);
+  sead_SafeStringBase_char__operator_assign(a1 + 2268, (int)&v12);
   *(_DWORD *)(a1 + 2276) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -32599,7 +32599,7 @@ int __fastcall sub_607EF794(int a1)
   *(_DWORD *)(a1 + 2364) = sub_607EF990;
   *(_DWORD *)(a1 + 2368) = 0;
   *(_DWORD *)(a1 + 2356) = off_60C270D8;
-  sead_SafeStringBase_char::operator=(a1 + 2336, (int)&v12);
+  sead_SafeStringBase_char__operator_assign(a1 + 2336, (int)&v12);
   *(_DWORD *)(a1 + 2344) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -33170,7 +33170,7 @@ int __fastcall sub_607F01E8(_DWORD *a1)
   a1[136] = 100;
   a1[137] = 1;
   a1[134] = off_60C27290;
-  sead_SafeStringBase_char::operator=((int)(a1 + 129), (int)v4);
+  sead_SafeStringBase_char__operator=((int)(a1 + 129), (int)v4);
   a1[131] = 1;
   v2 = *(_DWORD **)(dword_60CD0B40 + 36);
   if ( *(_DWORD *)(dword_60CD0B40 + 32) > 0x12u )
@@ -34574,7 +34574,7 @@ int __fastcall sub_607F225C(int a1)
   *(_DWORD *)(a1 + 476) = sub_607F2624;
   *(_DWORD *)(a1 + 480) = 0;
   *(_DWORD *)(a1 + 468) = off_60C274FC;
-  sead_SafeStringBase_char::operator=(a1 + 448, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 448, (int)&v17);
   *(_DWORD *)(a1 + 456) = 2;
   sub_6095537C(**(_DWORD **)(v2 + 36), 0, a1 + 432);
   v17 = &g_vtable_forsead_SafeStringBase_char;
@@ -34583,7 +34583,7 @@ int __fastcall sub_607F225C(int a1)
   *(_DWORD *)(a1 + 272) = sub_607F271C;
   *(_DWORD *)(a1 + 276) = 0;
   *(_DWORD *)(a1 + 264) = off_60C27524;
-  sead_SafeStringBase_char::operator=(a1 + 244, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 244, (int)&v17);
   *(_DWORD *)(a1 + 252) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -34595,7 +34595,7 @@ int __fastcall sub_607F225C(int a1)
   *(_DWORD *)(a1 + 340) = sub_607F2730;
   *(_DWORD *)(a1 + 344) = 0;
   *(_DWORD *)(a1 + 332) = off_60C27524;
-  sead_SafeStringBase_char::operator=(a1 + 312, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 312, (int)&v17);
   *(_DWORD *)(a1 + 320) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -34607,7 +34607,7 @@ int __fastcall sub_607F225C(int a1)
   *(_DWORD *)(a1 + 408) = sub_607F27A8;
   *(_DWORD *)(a1 + 412) = 0;
   *(_DWORD *)(a1 + 400) = off_60C27524;
-  sead_SafeStringBase_char::operator=(a1 + 380, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 380, (int)&v17);
   *(_DWORD *)(a1 + 388) = 1;
   v5 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -36822,7 +36822,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   *(_DWORD *)(a1 + 272) = sub_607F5370;
   *(_DWORD *)(a1 + 276) = 0;
   *(_DWORD *)(a1 + 264) = off_60C2779C;
-  sead_SafeStringBase_char::operator=(a1 + 244, (int)&a5);
+  sead_SafeStringBase_char__operator_assign(a1 + 244, (int)&a5);
   *(_DWORD *)(a1 + 252) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -36834,7 +36834,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   *(_DWORD *)(a1 + 340) = sub_607F54F4;
   *(_DWORD *)(a1 + 344) = 0;
   *(_DWORD *)(a1 + 332) = off_60C2779C;
-  sead_SafeStringBase_char::operator=(a1 + 312, (int)&a5);
+  sead_SafeStringBase_char__operator_assign(a1 + 312, (int)&a5);
   *(_DWORD *)(a1 + 320) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -36846,7 +36846,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   *(_DWORD *)(a1 + 408) = sub_607F551C;
   *(_DWORD *)(a1 + 412) = 0;
   *(_DWORD *)(a1 + 400) = off_60C2779C;
-  sead_SafeStringBase_char::operator=(a1 + 380, (int)&a5);
+  sead_SafeStringBase_char__operator_assign(a1 + 380, (int)&a5);
   *(_DWORD *)(a1 + 388) = 1;
   v5 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -36858,7 +36858,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   *(_DWORD *)(a1 + 680) = sub_607F5530;
   *(_DWORD *)(a1 + 684) = 0;
   *(_DWORD *)(a1 + 672) = off_60C277D8;
-  sead_SafeStringBase_char::operator=(a1 + 652, (int)&a5);
+  sead_SafeStringBase_char__operator_assign(a1 + 652, (int)&a5);
   *(_DWORD *)(a1 + 660) = 2;
   v6 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -38919,7 +38919,7 @@ int __fastcall sub_607F7FB0(int a1)
   *(_DWORD *)(a1 + 9900) = nullsub_5605;
   *(_DWORD *)(a1 + 9904) = 0;
   *(_DWORD *)(a1 + 9892) = off_60C27AC0;
-  sead_SafeStringBase_char::operator=(a1 + 9872, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 9872, (int)&v17);
   *(_DWORD *)(a1 + 9880) = 2;
   sub_6095537C(**(_DWORD **)(v2 + 36), 0, a1 + 9856);
   v17 = &g_vtable_forsead_SafeStringBase_char;
@@ -38928,7 +38928,7 @@ int __fastcall sub_607F7FB0(int a1)
   *(_DWORD *)(a1 + 9696) = nullsub_5606;
   *(_DWORD *)(a1 + 9700) = 0;
   *(_DWORD *)(a1 + 9688) = off_60C27AE8;
-  sead_SafeStringBase_char::operator=(a1 + 9668, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 9668, (int)&v17);
   *(_DWORD *)(a1 + 9676) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -38940,7 +38940,7 @@ int __fastcall sub_607F7FB0(int a1)
   *(_DWORD *)(a1 + 9764) = nullsub_5607;
   *(_DWORD *)(a1 + 9768) = 0;
   *(_DWORD *)(a1 + 9756) = off_60C27AE8;
-  sead_SafeStringBase_char::operator=(a1 + 9736, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 9736, (int)&v17);
   *(_DWORD *)(a1 + 9744) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -38952,7 +38952,7 @@ int __fastcall sub_607F7FB0(int a1)
   *(_DWORD *)(a1 + 9832) = sub_607F83C8;
   *(_DWORD *)(a1 + 9836) = 0;
   *(_DWORD *)(a1 + 9824) = off_60C27AE8;
-  sead_SafeStringBase_char::operator=(a1 + 9804, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 9804, (int)&v17);
   *(_DWORD *)(a1 + 9812) = 1;
   v5 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -40087,7 +40087,7 @@ int __fastcall sub_607F982C(int a1)
   *(_DWORD *)(a1 + 804) = sub_607F9AFC;
   *(_DWORD *)(a1 + 808) = 0;
   *(_DWORD *)(a1 + 796) = off_60C27CF8;
-  sead_SafeStringBase_char::operator=(a1 + 776, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 776, (int)&v17);
   *(_DWORD *)(a1 + 784) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -40099,7 +40099,7 @@ int __fastcall sub_607F982C(int a1)
   *(_DWORD *)(a1 + 872) = sub_607F9BB4;
   *(_DWORD *)(a1 + 876) = 0;
   *(_DWORD *)(a1 + 864) = off_60C27D34;
-  sead_SafeStringBase_char::operator=(a1 + 844, (int)&v17);
+  sead_SafeStringBase_char__operator_assign(a1 + 844, (int)&v17);
   *(_DWORD *)(a1 + 852) = 2;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -44054,7 +44054,7 @@ int __fastcall sub_609A0208(_DWORD *a1, int a2, int a3, int a4, int a5)
           v39 = (const char *)&v41;
           v38 = &BufferedSafeStringBase_char_vtable_probably;
           v40 = 150;
-          sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v38);
+          sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v38);
           *v39 = 0;
           v38 = &off_60C60DF0;
           (*(void (__fastcall **)(_DWORD *))(*m + 12))(m);
@@ -44734,13 +44734,13 @@ unsigned int __fastcall sub_609A125C(_DWORD *a1, int a2, void *a3, int a4)
     v22 = &v24;
     v21 = &BufferedSafeStringBase_char_vtable_probably;
     v23 = 8;
-    sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v21);
+    sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v21);
     *(_BYTE *)v22 = 0;
     v21 = &off_60BD4B8C;
     v18 = &v20;
     v17 = &BufferedSafeStringBase_char_vtable_probably;
     v19 = 128;
-    sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v17);
+    sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v17);
     *(_BYTE *)v18 = 0;
     v16 = 0;
     v15 = 0;
@@ -44790,13 +44790,13 @@ LABEL_18:
         v30 = &v32;
         v29 = &BufferedSafeStringBase_char_vtable_probably;
         v31 = 1024;
-        sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v29);
+        sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v29);
         *(_BYTE *)v30 = 0;
         v26 = &v28;
         v25 = &BufferedSafeStringBase_char_vtable_probably;
         v29 = &off_60BFA9DC;
         v27 = 1024;
-        sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v25);
+        sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v25);
         *(_BYTE *)v26 = 0;
         v25 = &off_60BFA9DC;
         result = sub_609A4FC4(v10, a2, a3, &v29, &v25);
@@ -44987,10 +44987,10 @@ LABEL_99:
             v68 = (sead_ListNode *)&v70;
             v67 = &BufferedSafeStringBase_char_vtable_probably;
             v69 = 8;
-            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v67);
+            sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v67);
             LOBYTE(v68->previous) = 0;
             v67 = &off_60BD4B8C;
-            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v67);
+            sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v67);
             v50 = v69;
             if ( v69 < 1 )
               return -1;
@@ -45039,10 +45039,10 @@ LABEL_99:
             v64 = v59;
             v63 = &BufferedSafeStringBase_char_vtable_probably;
             v65 = 128;
-            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v63);
+            sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v63);
             LOBYTE(v64->previous) = 0;
             v63 = &off_60BD95A8;
-            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v63);
+            sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v63);
             v24 = v65;
             if ( v65 < 1 )
               return -1;
@@ -45094,13 +45094,13 @@ LABEL_99:
               next->previous = (sead_ListNode *)&BufferedSafeStringBase_char_vtable_probably;
               next->next = (sead_ListNode *)((char *)next + 12);
               next[1].previous = (sead_ListNode *)8;
-              sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)next);
+              sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)next);
               LOBYTE(next->next->previous) = 0;
               next->previous = (sead_ListNode *)&off_60BD4B8C;
               next[3].previous = next + 4;
               next[2].next = (sead_ListNode *)&BufferedSafeStringBase_char_vtable_probably;
               next[3].next = (sead_ListNode *)128;
-              sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&next[2].next);
+              sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&next[2].next);
               LOBYTE(next[3].previous->previous) = 0;
               next[2].next = (sead_ListNode *)&off_60BD95A8;
               next[20].previous = 0;
@@ -45569,12 +45569,12 @@ _DWORD *__fastcall sub_609A1EFC(int a1, int a2, int a3)
   v263 = &v265;
   v262 = &BufferedSafeStringBase_char_vtable_probably;
   v264 = 64;
-  sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v262);
+  sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v262);
   *(_BYTE *)v263 = 0;
   v248 = a1;
   v262 = &off_60BD4BF0;
   v10 = *(_DWORD *)(a1 + 16);
-  sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v262);
+  sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v262);
   v244 = v263;
   if ( !sub_6090552C(a2, &v271, 1) )
     goto LABEL_567;
@@ -46046,13 +46046,13 @@ LABEL_569:
         v259 = &v261;
         v258 = &BufferedSafeStringBase_char_vtable_probably;
         v260 = 1024;
-        sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v258);
+        sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v258);
         *(_BYTE *)v259 = 0;
         v255 = &v257;
         v254 = &BufferedSafeStringBase_char_vtable_probably;
         v258 = &off_60BFA9DC;
         v256 = 1024;
-        sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v254);
+        sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)&v254);
         *(_BYTE *)v255 = 0;
         v254 = &off_60BFA9DC;
         ((void (__fastcall *)(int (***)()))v258[3])(&v258);
@@ -46214,13 +46214,13 @@ LABEL_85:
                 *v45 = &BufferedSafeStringBase_char_vtable_probably;
                 v45[1] = v45 + 3;
                 v45[2] = 1024;
-                sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)v45);
+                sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)v45);
                 *(_BYTE *)v45[1] = 0;
                 *v45 = &off_60BFA9DC;
                 v45[260] = v45 + 262;
                 v45[259] = &BufferedSafeStringBase_char_vtable_probably;
                 v45[261] = 1024;
-                sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)(v45 + 259));
+                sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)(v45 + 259));
                 *(_BYTE *)v45[260] = 0;
                 v45[259] = &off_60BFA9DC;
                 if ( v266 < v267 )
@@ -48403,7 +48403,7 @@ int __fastcall sub_609A59D0(int a1)
   *(_DWORD *)(a1 + 24) = a1 + 32;
   *(_DWORD *)(a1 + 20) = &BufferedSafeStringBase_char_vtable_probably;
   *(_DWORD *)(a1 + 28) = 64;
-  sead_BufferedSafeStringBase_char::assureTerminationImpl_(a1 + 20);
+  sead_BufferedSafeStringBase_char__assureTerminationImpl_(a1 + 20);
   *(_DWORD *)(a1 + 20) = &off_60BD4C08;
   v2 = *(char **)(a1 + 24);
   if ( v2 != &byte_60ABC94D )
@@ -48735,13 +48735,13 @@ sead_ListNode *__fastcall sub_609A5D84(sead_ListNode *a1, int a2, int a3)
             *v15 = &BufferedSafeStringBase_char_vtable_probably;
             v15[1] = v15 + 3;
             v15[2] = 1024;
-            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)v15);
+            sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)v15);
             *(_BYTE *)v15[1] = 0;
             *v15 = &off_60BFA9DC;
             v15[260] = v15 + 262;
             v15[259] = &BufferedSafeStringBase_char_vtable_probably;
             v15[261] = 1024;
-            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)(v15 + 259));
+            sead_BufferedSafeStringBase_char__assureTerminationImpl_((int)(v15 + 259));
             *(_BYTE *)v15[260] = 0;
             v15[259] = &off_60BFA9DC;
             if ( v51 < v52 )

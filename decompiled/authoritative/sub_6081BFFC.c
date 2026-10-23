@@ -140,7 +140,7 @@ LABEL_19:
       v53 = 0;
       v60 = 1;
       v61 = 0;
-      sead::SafeStringBase_char::operator=((int)&v49, (int)v62);
+      sead__SafeStringBase_char__operator=((int)&v49, (int)v62);
       v3 = (int (__fastcall ***)(_DWORD, int *))sead_ResourceMgr_OpenFileRelated(
                                                   sead::ResourceMgr::sInstance,
                                                   (int)&v49);
@@ -163,13 +163,13 @@ LABEL_19:
       v45 = (char *)&v47;
       v44 = &BufferedSafeStringBase_char_vtable_probably;
       v46 = 256;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v44);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v44);
       *v45 = 0;
       v44 = &off_60BD94BC;
       v41 = &v43;
       v40 = &BufferedSafeStringBase_char_vtable_probably;
       v42 = 32;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v40);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v40);
       *(_BYTE *)v41 = 0;
       v40 = &off_60BD4C20;
       v6 = sub_608FD248();
@@ -189,7 +189,7 @@ LABEL_19:
       v37 = (char *)&v39;
       v36 = &BufferedSafeStringBase_char_vtable_probably;
       v38 = 32;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v36);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v36);
       *v37 = 0;
       v36 = &off_60BD4C20;
       v9 = sub_6081D7B4(i);
@@ -205,7 +205,7 @@ LABEL_39:
         v33 = v35;
         v32 = &BufferedSafeStringBase_char_vtable_probably;
         v34 = 64;
-        sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v32);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v32);
         *v33 = 0;
         v32 = &off_60BD4BF0;
         ((void (__fastcall *)(int (***)()))v44[3])(&v44);
@@ -328,7 +328,7 @@ LABEL_83:
       v33 = v35;
       v32 = &BufferedSafeStringBase_char_vtable_probably;
       v34 = 64;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v32);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v32);
       *v33 = 0;
       v32 = &off_60BD4BF0;
       ((void (__fastcall *)(int (***)()))v44[3])(&v44);

@@ -405,7 +405,7 @@ LABEL_56:
       v96 = (const char *)&v98;
       v95 = &BufferedSafeStringBase_char_vtable_probably;
       v97 = 64;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v95);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v95);
       *v96 = 0;
       v95 = &off_60BD4BF0;
       (*(void (__fastcall **)(_DWORD *))(*v66 + 12))(v66);

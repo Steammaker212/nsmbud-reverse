@@ -26004,7 +26004,7 @@ System_Revision_yml_ref__LABEL_19:
       v53 = 0;
       v60 = 1;
       v61 = 0;
-      sead::SafeStringBase_char::operator=((int)&v49, (int)v62);
+      sead__SafeStringBase_char__operator=((int)&v49, (int)v62);
       v3 = (int (__fastcall ***)(_DWORD, int *))sead_ResourceMgr_OpenFileRelated(
                                                   sead::ResourceMgr::sInstance,
                                                   (int)&v49);
@@ -26027,13 +26027,13 @@ System_Revision_yml_ref__LABEL_19:
       v45 = (char *)&v47;
       v44 = &BufferedSafeStringBase_char_vtable_probably;
       v46 = 256;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v44);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v44);
       *v45 = 0;
       v44 = &off_60BD94BC;
       v41 = &v43;
       v40 = &BufferedSafeStringBase_char_vtable_probably;
       v42 = 32;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v40);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v40);
       *(_BYTE *)v41 = 0;
       v40 = &off_60BD4C20;
       v6 = sub_608FD248();
@@ -26053,7 +26053,7 @@ System_Revision_yml_ref__LABEL_19:
       v37 = (char *)&v39;
       v36 = &BufferedSafeStringBase_char_vtable_probably;
       v38 = 32;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v36);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v36);
       *v37 = 0;
       v36 = &off_60BD4C20;
       v9 = sub_6081D7B4(i);
@@ -26069,7 +26069,7 @@ System_Revision_yml_ref__LABEL_39:
         v33 = v35;
         v32 = &BufferedSafeStringBase_char_vtable_probably;
         v34 = 64;
-        sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v32);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v32);
         *v33 = 0;
         v32 = &off_60BD4BF0;
         ((void (__fastcall *)(int (***)()))v44[3])(&v44);
@@ -26192,7 +26192,7 @@ System_Revision_yml_ref__LABEL_83:
       v33 = v35;
       v32 = &BufferedSafeStringBase_char_vtable_probably;
       v34 = 64;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v32);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v32);
       *v33 = 0;
       v32 = &off_60BD4BF0;
       ((void (__fastcall *)(int (***)()))v44[3])(&v44);
@@ -243715,7 +243715,7 @@ sub_608DF448__LABEL_158:
     *(_DWORD *)(a1 + 328) = 255;
     v4 = (unsigned int *)(a1 + 328);
     *(_BYTE *)(a1 + 332) = 32;
-    *(_DWORD *)(a1 + 336) = "agl::TextureSampler(copy)";
+    *(_DWORD *)(a1 + 336) = "agl__TextureSampler(copy)";
     v5 = *(_DWORD *)(a2 + 4);
     v6 = *(_DWORD *)(a2 + 8);
     v7 = *(_DWORD *)(a2 + 12);
@@ -247988,7 +247988,7 @@ sub_608DF448__LABEL_158:
   v90 = a2;
   v89 = a3;
   v68 = a1 + 512;
-  sead::CriticalSection::lock(a1 + 512);
+  sead__CriticalSection__lock(a1 + 512);
   if ( a5 <= 0.0 )
   {
     v9 = &v89;
@@ -248295,7 +248295,7 @@ sub_60925854__LABEL_103:
 sub_60925854__LABEL_105:
   *(_DWORD *)(a1 + 484) |= 1u;
   *(_WORD *)(a1 + 84) |= 1u;
-  return sead::CriticalSection::unlock(v68);
+  return sead__CriticalSection__unlock(v68);
 }
 
 /* ============================================================================
@@ -268648,7 +268648,7 @@ sub_6094428C__LABEL_26:
   v60 = (char *)&v62;
   v59 = &BufferedSafeStringBase_char_vtable_probably;
   v61 = 256;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v59);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v59);
   v14 = (char *)(v11 + 1);
   *v60 = 0;
   v15 = v63;
@@ -269507,7 +269507,7 @@ sub_60945324__LABEL_26:
   v65 = (char *)&v67;
   v64 = &BufferedSafeStringBase_char_vtable_probably;
   v66 = 256;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v64);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v64);
   *v65 = 0;
   v64 = &off_60BD94BC;
   v14 = (char *)(v12 + 1);
@@ -282740,18 +282740,18 @@ s_sOrder_d_ref__LABEL_50:
             v46 = *(float **)(a1 + 412);
             v47 = v46[227];
             v48 = (void *)sead::GlobalRandom::sInstance;
-            U32 = sead::Random::getU32((void *)sead::GlobalRandom::sInstance);
+            U32 = sead__Random__getU32((void *)sead::GlobalRandom::sInstance);
             v50 = *(float *)(*(_DWORD *)(a1 + 412) + 908);
-            LODWORD(v51) = (sead::Random::getU32(v48) >> 9) | 0x3F800000;
+            LODWORD(v51) = (sead__Random__getU32(v48) >> 9) | 0x3F800000;
             v52 = *(float *)(*(_DWORD *)(a1 + 412) + 908);
-            v53 = sead::Random::getU32(v48);
+            v53 = sead__Random__getU32(v48);
             v46[36] = v47 * (float)(COERCE_FLOAT((U32 >> 9) | 0x3F800000) + -1.0);
             v46[37] = v50 * (float)(v51 + -1.0);
             v46[38] = v52 * (float)(COERCE_FLOAT((v53 >> 9) | 0x3F800000) + -1.0);
-            LODWORD(v54) = (sead::Random::getU32(v48) >> 9) | 0x3F800000;
-            v55 = (float)(COERCE_FLOAT((sead::Random::getU32(v48) >> 9) | 0x3F800000) + -1.0) + -0.5;
+            LODWORD(v54) = (sead__Random__getU32(v48) >> 9) | 0x3F800000;
+            v55 = (float)(COERCE_FLOAT((sead__Random__getU32(v48) >> 9) | 0x3F800000) + -1.0) + -0.5;
             v56 = (float)(v54 + -1.0) + -0.5;
-            v57 = (float)(COERCE_FLOAT((sead::Random::getU32(v48) >> 9) | 0x3F800000) + -1.0) + -0.5;
+            v57 = (float)(COERCE_FLOAT((sead__Random__getU32(v48) >> 9) | 0x3F800000) + -1.0) + -0.5;
             v58 = sqrtf((float)((float)(v55 * v55) + (float)(v56 * v56)) + (float)(v57 * v57));
             if ( v58 > 0.0 )
             {
@@ -298487,7 +298487,7 @@ s_sOrder_d_ref__LABEL_111:
   v7 = 0;
   v51 = &`vtable for'sead::SafeStringBase_char;
   v52 = "agl::detail::ShaderHolder";
-  v50 = sead::ExpHeap::create(v6, (int)&v51, a3, 4, 1, 0);
+  v50 = sead__ExpHeap__create(v6, (int)&v51, a3, 4, 1, 0);
   v49 = a1;
   v8 = a1 + 213;
   v9 = 0x15F6F2u;
@@ -301020,7 +301020,7 @@ sub_60969DE4__LABEL_16:
             v81 = v17;
             v29 = v24;
             v92 = 1024;
-            sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v90);
+            sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v90);
             v30 = v29;
             *v91 = 0;
             v90 = &off_60BFA9DC;
@@ -301141,7 +301141,7 @@ sub_60970920__LABEL_60:
             }
             else
             {
-              sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)v43);
+              sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)v43);
               v46 = (_BYTE *)v43[1];
             }
             *v43 = &off_60BFA9C4;
@@ -304489,7 +304489,7 @@ sub_60970920__LABEL_129:
       v122 = 0;
       v123 = 0;
       v119 = 12321336;
-      v120 = "agl::RenderDisplay(color)";
+      v120 = "agl__RenderDisplay(color)";
       *(_DWORD *)(a1 + 12) = sub_6093EA20(
                                MEMORY[0xCD09F8],
                                0,
@@ -304517,7 +304517,7 @@ sub_60970920__LABEL_129:
       if ( !a8 )
         v32 = 0;
       v119 = 12321336;
-      v120 = "agl::RenderDisplay(depth)";
+      v120 = "agl__RenderDisplay(depth)";
       *(_DWORD *)(a1 + 16) = sub_6093EA20(
                                v29,
                                0,

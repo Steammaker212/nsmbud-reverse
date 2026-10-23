@@ -284,7 +284,7 @@ LABEL_439:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = (int *)&stru_60C7B4A8;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -420,7 +420,7 @@ LABEL_441:
                   *(float *)(a1 + 116) = v33;
 LABEL_452:
                   *(float *)(a1 + 120) = v7;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -458,7 +458,7 @@ LABEL_367:
           if ( result == 1 )
           {
             v199 = &dword_60C7B528;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v33;
           goto LABEL_394;
@@ -494,7 +494,7 @@ LABEL_442:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B4E8;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -539,7 +539,7 @@ LABEL_442:
           if ( result != 1 )
             goto LABEL_394;
           v199 = &dword_60C7B508;
-          return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+          return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
         case 7u:
           result = LODWORD(v210);
           v54 = v216 - v10;
@@ -572,7 +572,7 @@ LABEL_443:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B588;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -638,7 +638,7 @@ LABEL_444:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B568;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -704,7 +704,7 @@ LABEL_445:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B5C8;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -849,7 +849,7 @@ LABEL_447:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B5E8;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -915,7 +915,7 @@ LABEL_448:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B608;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -979,7 +979,7 @@ LABEL_449:
                   *(_DWORD *)(a1 + 116) = result;
                   *(float *)(a1 + 120) = v7;
                   v199 = &dword_60C7B628;
-                  return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+                  return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
                 }
               }
             }
@@ -1096,7 +1096,7 @@ LABEL_397:
             *(float *)(a1 + 116) = v10;
             *(float *)(a1 + 120) = v7;
             v199 = &dword_60C7B668;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v10;
           goto LABEL_394;
@@ -1130,7 +1130,7 @@ LABEL_397:
             *(float *)(a1 + 116) = v10;
             *(float *)(a1 + 120) = v7;
             v199 = &dword_60C7B6E8;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v10;
           goto LABEL_394;
@@ -1159,7 +1159,7 @@ LABEL_397:
             *(float *)(a1 + 116) = v10;
             *(float *)(a1 + 120) = v7;
             v199 = &dword_60C7B6C8;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v10;
           goto LABEL_394;
@@ -1238,7 +1238,7 @@ LABEL_196:
             *(float *)(a1 + 116) = v10;
             *(float *)(a1 + 120) = v7;
             v199 = &dword_60C7B748;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v10;
           goto LABEL_394;
@@ -1270,7 +1270,7 @@ LABEL_196:
           *(float *)(a1 + 116) = v148;
           *(float *)(a1 + 120) = v7;
           v199 = &dword_60C7B768;
-          return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+          return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
         case 0x1Cu:
           v212 = v10;
           v213 = v7 + 16.0;
@@ -1298,7 +1298,7 @@ LABEL_196:
             *(float *)(a1 + 116) = v10;
             *(float *)(a1 + 120) = v8;
             v199 = &dword_60C7B748;
-            return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+            return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
           }
           v13 = v10;
           goto LABEL_394;
@@ -1331,7 +1331,7 @@ LABEL_196:
           *(float *)(a1 + 116) = v10 + -16.0;
           *(float *)(a1 + 120) = v8;
           v199 = &dword_60C7B748;
-          return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+          return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
         case 0x1Eu:
           v212 = v10;
           v213 = v7 + 16.0;
@@ -1361,7 +1361,7 @@ LABEL_196:
           *(float *)(a1 + 116) = v10;
           *(float *)(a1 + 120) = v8;
           v199 = &dword_60C7B768;
-          return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+          return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
         case 0x1Fu:
           v160 = v10 + -16.0;
           v212 = v10 + -16.0;
@@ -1390,7 +1390,7 @@ LABEL_196:
           *(float *)(a1 + 116) = v160;
           *(float *)(a1 + 120) = v8;
           v199 = &dword_60C7B768;
-          return (unsigned int)StateMgr::changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
+          return (unsigned int)StateMgr__changeState((StateMgr *)(a1 + 20), (StateBase *)v199);
         default:
 LABEL_240:
           v13 = v10;

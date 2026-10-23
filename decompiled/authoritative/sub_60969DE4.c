@@ -51,7 +51,7 @@ int __fastcall sub_60969DE4(_DWORD *a1, int a2, _DWORD *a3)
   v7 = 0;
   v51 = &`vtable for'sead::SafeStringBase_char;
   v52 = "agl::detail::ShaderHolder";
-  v50 = sead::ExpHeap::create(v6, (int)&v51, a3, 4, 1, 0);
+  v50 = sead__ExpHeap__create(v6, (int)&v51, a3, 4, 1, 0);
   v49 = a1;
   v8 = a1 + 213;
   v9 = 0x15F6F2u;

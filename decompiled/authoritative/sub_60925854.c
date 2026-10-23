@@ -86,7 +86,7 @@ int __fastcall sub_60925854(int a1, int a2, int a3, unsigned int a4, float a5)
   v90 = a2;
   v89 = a3;
   v68 = a1 + 512;
-  sead::CriticalSection::lock(a1 + 512);
+  sead__CriticalSection__lock(a1 + 512);
   if ( a5 <= 0.0 )
   {
     v9 = &v89;
@@ -393,5 +393,5 @@ LABEL_103:
 LABEL_105:
   *(_DWORD *)(a1 + 484) |= 1u;
   *(_WORD *)(a1 + 84) |= 1u;
-  return sead::CriticalSection::unlock(v68);
+  return sead__CriticalSection__unlock(v68);
 }

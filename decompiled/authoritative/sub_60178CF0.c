@@ -144,7 +144,7 @@ int __fastcall sub_60178CF0(int a1)
     qmemcpy(v2, v3, v4);
     v2[v4] = 0;
   }
-  ResArchiveById = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 0);
+  ResArchiveById = (void *)Profile__getResArchiveById(*(Profile **)(a1 + 12), 0);
   *(_DWORD *)(a1 + 280) = ResArchiveById;
   identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "cobCourse";
@@ -155,7 +155,7 @@ int __fastcall sub_60178CF0(int a1)
   *(_DWORD *)(a1 + 268) = v9;
   if ( *(_DWORD *)(a1 + 240) == 8 )
   {
-    v11 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 2u);
+    v11 = (void *)Profile__getResArchiveById(*(Profile **)(a1 + 12), 2u);
     *(_DWORD *)(a1 + 288) = v11;
     identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobStarCoin";
@@ -164,7 +164,7 @@ int __fastcall sub_60178CF0(int a1)
     v14 = ModelWrapper_ctor(v13, v12, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v14, (int)v11, 0, 0);
     *(_DWORD *)(a1 + 276) = v13;
-    v15 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 1u);
+    v15 = (void *)Profile__getResArchiveById(*(Profile **)(a1 + 12), 1u);
     *(_DWORD *)(a1 + 284) = v15;
     identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobRing";
@@ -210,7 +210,7 @@ LABEL_37:
   if ( v23 == v113 )
   {
 LABEL_36:
-    v26 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 1u);
+    v26 = (void *)Profile__getResArchiveById(*(Profile **)(a1 + 12), 1u);
     *(_DWORD *)(a1 + 284) = v26;
     identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobRing";

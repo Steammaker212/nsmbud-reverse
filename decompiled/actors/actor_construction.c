@@ -25025,7 +25025,7 @@ sub_6011941C__LABEL_88:
   v32 = *(_QWORD *)(a1 + 9188);
   v100 = *(_QWORD *)(a1 + 9180);
   v101 = v32;
-  CurrentState = StateMgr::getCurrentState((StateMgr *)(a1 + 6084));
+  CurrentState = StateMgr__getCurrentState((StateMgr *)(a1 + 6084));
   v34 = (*((int (__fastcall **)(StateBase *))CurrentState->vtable + 2))(CurrentState);
   if ( v34 == (*(int (**)(void))(dword_60C86C24 + 8))() || *(_BYTE *)(a1 + 9318) )
   {
@@ -25104,7 +25104,7 @@ sub_6011941C__LABEL_88:
   *(_DWORD *)(a1 + 8928) = *(_DWORD *)(a1 + 6856);
   *(_DWORD *)(a1 + 8932) = *(_DWORD *)(a1 + 6872);
   *(_DWORD *)(a1 + 8936) = *(_DWORD *)(a1 + 6888);
-  v56 = StateMgr::getCurrentState((StateMgr *)(a1 + 6084));
+  v56 = StateMgr__getCurrentState((StateMgr *)(a1 + 6084));
   v57 = (*((int (__fastcall **)(StateBase *))v56->vtable + 2))(v56);
   if ( v57 == (*(int (**)(void))(dword_60C86D50 + 8))() )
     (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 9232) + 224))(*(_DWORD *)(a1 + 9232));
@@ -25148,7 +25148,7 @@ sub_6011941C__LABEL_88:
   v67 = (ModelWrapper **)(a1 + 6320);
   (*(void (__fastcall **)(_DWORD, float32x2_t *))(***(_DWORD ***)(a1 + 6320) + 60))(**(_DWORD **)(a1 + 6320), &v96);
   (*(void (__fastcall **)(void *, unsigned int *))(*(_DWORD *)(*v67)->model + 68))((*v67)->model, v78);
-  v68 = StateMgr::getCurrentState((StateMgr *)(a1 + 6084));
+  v68 = StateMgr__getCurrentState((StateMgr *)(a1 + 6084));
   v69 = (*((int (__fastcall **)(StateBase *))v68->vtable + 2))(v68);
   v70 = (*(int (**)(void))(dword_60C86D08 + 8))();
   v71 = *(_DWORD *)(a1 + 6328);
@@ -87143,7 +87143,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
     qmemcpy(v2, v3, v4);
     v2[v4] = 0;
   }
-  ResArchiveById = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 0);
+  ResArchiveById = (void *)Profile__getResArchiveById(*(Profile **)(a1 + 12), 0);
   *(_DWORD *)(a1 + 280) = ResArchiveById;
   identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "cobCourse";
@@ -87154,7 +87154,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
   *(_DWORD *)(a1 + 268) = v9;
   if ( *(_DWORD *)(a1 + 240) == 8 )
   {
-    v11 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 2u);
+    v11 = (void *)Profile__getResArchiveById(*(Profile **)(a1 + 12), 2u);
     *(_DWORD *)(a1 + 288) = v11;
     identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobStarCoin";
@@ -87163,7 +87163,7 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
     v14 = ModelWrapper_ctor(v13, v12, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v14, (int)v11, 0, 0);
     *(_DWORD *)(a1 + 276) = v13;
-    v15 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 1u);
+    v15 = (void *)Profile__getResArchiveById(*(Profile **)(a1 + 12), 1u);
     *(_DWORD *)(a1 + 284) = v15;
     identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobRing";
@@ -87209,7 +87209,7 @@ sub_60178CF0__LABEL_37:
   if ( v23 == v113 )
   {
 sub_60178CF0__LABEL_36:
-    v26 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 1u);
+    v26 = (void *)Profile__getResArchiveById(*(Profile **)(a1 + 12), 1u);
     *(_DWORD *)(a1 + 284) = v26;
     identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobRing";
@@ -89025,7 +89025,7 @@ sub_60178CF0__LABEL_96:
   v108 = &v110;
   v107 = &BufferedSafeStringBase_char_vtable_probably;
   v109 = 32;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v107);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v107);
   *(_BYTE *)v108 = 0;
   v106 = 0;
   v107 = &off_60BD4C20;
@@ -89072,7 +89072,7 @@ sub_60178CF0__LABEL_96:
   v100 = &v102;
   v99 = &BufferedSafeStringBase_char_vtable_probably;
   v101 = 4096;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v99);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v99);
   v99 = &off_60BD5118;
   v10 = v100;
   ((void (__fastcall *)(int (***)()))off_60BC0244)(&v94);
@@ -89899,7 +89899,7 @@ sub_6017BE9C__LABEL_337:
   v95 = &v97;
   v94 = &BufferedSafeStringBase_char_vtable_probably;
   v96 = 0x2000;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v94);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v94);
   v94 = &off_60BD5148;
   v85 = v95;
   if ( v95 != v84 )
@@ -90425,7 +90425,7 @@ sub_6017D65C__LABEL_308:
     v106 = (char *)&v108;
     v105 = &BufferedSafeStringBase_char_vtable_probably;
     v107 = 32;
-    sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v105);
+    sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v105);
     v105 = &off_60BD4C38;
     v50 = (unsigned __int8 *)v106;
     ((void (__fastcall *)(int (***)()))v103[3])(&v103);
@@ -93153,7 +93153,7 @@ sub_6017D65C__LABEL_307:
       v67 = &v69;
       v66 = &BufferedSafeStringBase_char_vtable_probably;
       v68 = 32;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)v6);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)v6);
       v66 = &off_60BD4C38;
       v14 = v67;
       ((void (__fastcall *)(int (***)()))v70[3])(&v70);
@@ -93189,7 +93189,7 @@ sub_6017D65C__LABEL_307:
       }
       v6 = (int (***)())v13;
       v66 = &off_60BD4C20;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_(v13);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_(v13);
       v18 = 0;
       while ( 1 )
       {
@@ -93366,13 +93366,13 @@ sub_60181FC0__LABEL_35:
                   v57 = (const char *)&v59;
                   v56 = &BufferedSafeStringBase_char_vtable_probably;
                   v58 = 5;
-                  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v56);
+                  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v56);
                   *v57 = 0;
                   v63 = &v65;
                   v62 = &BufferedSafeStringBase_char_vtable_probably;
                   v56 = &off_60BD4F38;
                   v64 = 5;
-                  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v62);
+                  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v62);
                   *(_BYTE *)v63 = 0;
                   v62 = &off_60BD4F38;
                   v34 = *(_DWORD *)(v49 + 40);

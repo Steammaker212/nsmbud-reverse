@@ -53,7 +53,7 @@ int __fastcall sub_60476A7C(int a1, int a2, int a3, char **a4)
     }
     v39 = &`vtable for'sead::SafeStringBase_char;
     v40 = "DecisionButton";
-    sead::SafeStringBase_char::assureTerminationImpl_(&v39);
+    sead__SafeStringBase_char__assureTerminationImpl_(&v39);
     result = (int)v40;
     if ( v7 != v40 )
     {
@@ -335,7 +335,7 @@ LABEL_90:
               }
               if ( !v34 )
               {
-                sead::ListNode::insertFront_((sead_ListNode *)(v9 + 12), (sead_ListNode *)(*(_DWORD *)(v9 + 24) + v14));
+                sead__ListNode__insertFront_((sead_ListNode *)(v9 + 12), (sead_ListNode *)(*(_DWORD *)(v9 + 24) + v14));
                 result = *(_DWORD *)(v9 + 20) + 1;
                 *(_DWORD *)(v9 + 20) = result;
               }

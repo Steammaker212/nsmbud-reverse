@@ -141946,7 +141946,7 @@ SE_SYS_CE_ref_3__LABEL_26:
           if ( v24 )
             v25 = 196613;
           v70[0].settings1 = v25;
-          v70[0].profile = Profile::get(0xAu);
+          v70[0].profile = Profile__get(0xAu);
           v70[0].position.x = v18;
           v70[0].position.y = v19;
           v70[0].position.z = 0.0;
@@ -141954,7 +141954,7 @@ SE_SYS_CE_ref_3__LABEL_26:
           v70[0].eventId1 = 0;
           v70[0].eventId2 = 0;
           v70[0].field_28 = 0;
-          v26 = ActorMgr::create((void *)ActorMgr::instance, v70, 0);
+          v26 = ActorMgr__create((void *)ActorMgr::instance, v70, 0);
           if ( ((unsigned int)&dword_60C7B364 & ~(1617859460 << v27) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B364) )
           {
             StageActor_RTTI = (int)&off_60BC0098;
@@ -174978,7 +174978,7 @@ sub_60721780__LABEL_56:
       v96 = (const char *)&v98;
       v95 = &BufferedSafeStringBase_char_vtable_probably;
       v97 = 64;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v95);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v95);
       *v96 = 0;
       v95 = &off_60BD4BF0;
       (*(void (__fastcall **)(_DWORD *))(*v66 + 12))(v66);
@@ -205741,7 +205741,7 @@ sub_60721780__LABEL_56:
   v34 = &v36;
   v33 = &BufferedSafeStringBase_char_vtable_probably;
   v35 = 32;
-  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v33);
+  sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v33);
   if ( *(_DWORD *)(a1 + 300) == 5 )
   {
     if ( !*(_DWORD *)(a1 + 24) )

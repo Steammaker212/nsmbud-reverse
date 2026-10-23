@@ -97,10 +97,10 @@ int __fastcall sub_603B7478(int a1)
   Vec2 position; // [sp+68h] [bp-8h] BYREF
 
   v2 = (StateMgr *)(a1 + 6084);
-  CurrentState = StateMgr::getCurrentState((StateMgr *)(a1 + 6084));
+  CurrentState = StateMgr__getCurrentState((StateMgr *)(a1 + 6084));
   v4 = (*((int (__fastcall **)(StateBase *))CurrentState->vtable + 2))(CurrentState);
   v5 = (*(int (**)(void))(dword_60C981CC + 8))();
-  v6 = StateMgr::getCurrentState(v2);
+  v6 = StateMgr__getCurrentState(v2);
   v93 = (*((int (__fastcall **)(StateBase *))v6->vtable + 2))(v6);
   v92 = (*(int (**)(void))(dword_60C981AC + 8))();
   v86 = *(_DWORD *)(a1 + 6480);

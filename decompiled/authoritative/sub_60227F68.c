@@ -149,7 +149,7 @@ int __fastcall sub_60227F68(int a1)
       v105 = (char *)&v107;
       v104 = &BufferedSafeStringBase_char_vtable_probably;
       v106 = 32;
-      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v104);
+      sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v104);
       v104 = &off_60BD4C38;
       v47 = v105;
       (*(void (__fastcall **)(ActorBuildInfo *))(v103.settings1 + 12))(&v103);
@@ -526,7 +526,7 @@ LABEL_90:
               v12 = arr_dword_60C8D840[n];
               v33 = sub_6022A7E4(*(_DWORD *)(v89 + 4), v98);
               memset(&v103, 0, sizeof(v103));
-              v103.profile = Profile::get(v12);
+              v103.profile = Profile__get(v12);
               v103.position.x = v96;
               v103.position.y = v99;
               v103.position.z = v95;
@@ -537,7 +537,7 @@ LABEL_90:
               v103.eventId1 = sub_6040D864(&buildInfo);
               v103.linkId = 0;
               v103.settings1 = 3;
-              ActorMgr::create((void *)ActorMgr::instance, &v103, 0);
+              ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
             }
             if ( v12 == 877 )
               v12 = -1;
@@ -618,7 +618,7 @@ LABEL_208:
           {
             v68 = sub_6022A7E4(*(_DWORD *)(v89 + 4), v98);
             memset(&v103, 0, sizeof(v103));
-            v103.profile = Profile::get(0x38Au);
+            v103.profile = Profile__get(0x38Au);
             v8 = v94;
             v103.position.x = v96;
             v103.position.y = v22;
@@ -630,7 +630,7 @@ LABEL_208:
             v103.eventId1 = sub_6040D864(&buildInfo);
             v103.linkId = 0;
             v103.settings1 = 3;
-            ActorMgr::create((void *)ActorMgr::instance, &v103, 0);
+            ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
           }
         }
         else
@@ -661,7 +661,7 @@ LABEL_208:
         v103.settings2 = (int)&v103.profile;
         v103.settings1 = (int)&BufferedSafeStringBase_char_vtable_probably;
         v103.parentId = 32;
-        sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v103);
+        sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v103);
         v103.settings1 = (int)&off_60BD4C38;
         v70 = (void *)v103.settings2;
         (*(void (__fastcall **)(ActorBuildInfo *))(buildInfo.settings1 + 12))(&buildInfo);
@@ -703,7 +703,7 @@ LABEL_208:
         if ( v73 || v12 == 861 )
           sub_60181BE0(v97, &v103, v12);
         memset(&buildInfo, 0, sizeof(buildInfo));
-        buildInfo.profile = Profile::get(v12);
+        buildInfo.profile = Profile__get(v12);
         v74 = v3;
         buildInfo.position.x = v96;
         buildInfo.position.y = v99;
@@ -834,7 +834,7 @@ LABEL_256:
             }
           }
         }
-        ActorMgr::create((void *)ActorMgr::instance, &buildInfo, 0);
+        ActorMgr__create((void *)ActorMgr::instance, &buildInfo, 0);
       }
       result = v91;
       v7 = v98 + 1;
@@ -853,7 +853,7 @@ LABEL_256:
       v103.movementId = v51;
       *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
       v103.position.z = v56;
-      v103.profile = Profile::get(0x363u);
+      v103.profile = Profile__get(0x363u);
       goto LABEL_160;
     }
     if ( sub_60183054(v97, v51, 0x20000) )
@@ -866,7 +866,7 @@ LABEL_256:
       v103.linkId = 0;
       *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
       v103.position.z = v59;
-      v103.profile = Profile::get(0x371u);
+      v103.profile = Profile__get(0x371u);
 LABEL_187:
       sub_600080BC((_DWORD *)ActorMgr::instance, &v103);
       goto LABEL_188;
@@ -881,7 +881,7 @@ LABEL_187:
       v103.linkId = 1;
       *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
       v103.position.z = v63;
-      v103.profile = Profile::get(0x372u);
+      v103.profile = Profile__get(0x372u);
       goto LABEL_187;
     }
     if ( sub_601DA52C(&buildInfo) == 1 )
@@ -893,9 +893,9 @@ LABEL_187:
       v103.movementId = v51;
       *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
       v103.position.z = v9;
-      v103.profile = Profile::get(0x37Eu);
+      v103.profile = Profile__get(0x37Eu);
 LABEL_160:
-      ActorMgr::create((void *)ActorMgr::instance, &v103, 0);
+      ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
       goto LABEL_188;
     }
     if ( sub_601DA114(&buildInfo) == 1 )
@@ -908,8 +908,8 @@ LABEL_160:
       *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
       v103.position.z = v13;
       v103.settings1 = (unsigned __int8)v88;
-      v103.profile = Profile::get(0x37Fu);
-      ActorMgr::create((void *)ActorMgr::instance, &v103, 0);
+      v103.profile = Profile__get(0x37Fu);
+      ActorMgr__create((void *)ActorMgr::instance, &v103, 0);
       ++v88;
     }
     else
@@ -923,7 +923,7 @@ LABEL_160:
         v103.movementId = v51;
         *(_QWORD *)&v103.position.x = sub_6019B73C(v92, v93);
         v103.position.z = v14;
-        v103.profile = Profile::get(0x387u);
+        v103.profile = Profile__get(0x387u);
         goto LABEL_160;
       }
       v8 = v45;

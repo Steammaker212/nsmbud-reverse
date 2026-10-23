@@ -418,7 +418,7 @@ LABEL_150:
       v64 = v56;
       v65 = v56;
     }
-    v57 = nn::hid::ShowControllerSupport(v62, &v64);
+    v57 = nn__hid__ShowControllerSupport(v62, &v64);
     v58 = *(_DWORD *)(v1 + 24);
     if ( v58 <= 1 && v57 && *(_BYTE *)(v1 + 81) )
       *(_BYTE *)(v1 + 85) = 1;
