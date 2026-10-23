@@ -115,3 +115,28 @@ for `0xE3500008` finds 8 occurrences and for `0xE30011FB` finds none, which sugg
 
 Until that is resolved, the safest statement is: **the 4-record build is the only configuration that
 has ever been reported to boot**, and it is now what the tree produces.
+
+---
+
+## CORRECTION (2026-10-22): the hooks were never wrong; the offset space was
+
+This document's "Finding 3" concluded that the address formula was *not* the problem, and that the `0xB49xxx` and
+`item_grant` addresses "do not exist in this image". Only the second half was right about the table addresses.
+
+The NSO has `flags = 0x3F`: all three segments are LZ4-compressed. Once the text segment is decompressed, every
+`item_grant` address resolves to exactly the instruction the hook expects:
+
+    RVA 0x465F34  0xE3500008  CMP R0, #8        (hook says: CMP R0, #8)     exact
+    RVA 0x465F40  0xE30011FB  MOVW R1, #0x1FB   (hook says: MOVW R1, #0x1FB) exact
+    RVA 0x466000  0xE3500008  CMP R0, #8                                   exact
+    RVA 0x46600C  0xE30011FB  MOVW R1, #0x1FB                               exact
+
+and all 121 words of the enclosing function match IDA byte for byte (`0 mismatches`). The retail values this document
+listed as "not those instructions" were read from the COMPRESSED file at `0x100 + RVA`, which is a different place.
+
+So the `item_grant` hooks are correct, and `0x100 + RVA` must not be used on a compressed NSO. See
+`BOOT_CRASH_COMPRESSION_ROOT_CAUSE.md` for the proof and the two safe ways to apply them. A verified 44-byte IPS for
+the decompressed image is at `output_verified/item_grant_decompressed.ips`; its four records were each checked against
+the retail word before being written (MD5 33A3EC5BCBD88F5E39A9028EF5A2F120).
+
+The `mode_tables.hks` records remain genuinely invalid: `0xB49xxx` is past even the decompressed data segment.
