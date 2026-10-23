@@ -77,23 +77,23 @@ typedef struct ActiveCollider {
  * Derived from: _ZN5ActorC1EPK14ActorBuildInfo
  */
 typedef struct Actor {
-    uint32_t field_0000;   /* +0x0000 */
-    uint32_t field_0004;   /* +0x0004 */
-    uint32_t field_0008;   /* +0x0008 */
+    int32_t vtable;   /* +0x0000  from main.i64 */
+    int32_t heap;   /* +0x0004  from main.i64 */
+    int32_t id;   /* +0x0008  from main.i64 */
     uint32_t field_000C;   /* +0x000C */
     uint8_t field_0010;   /* +0x0010 */
     uint8_t field_0011;   /* +0x0011 */
     uint8_t field_0012;   /* +0x0012 */
-    uint8_t field_0013;   /* +0x0013 */
-    uint32_t field_0014;   /* +0x0014 */
-    uint32_t field_0018;   /* +0x0018 */
-    uint8_t field_001C;   /* +0x001C */
-    uint8_t field_001D;   /* +0x001D */
-    uint8_t field_001E;   /* +0x001E */
+    int8_t isDeleted;   /* +0x0013  from main.i64 */
+    int32_t settings1;   /* +0x0014  from main.i64 */
+    int32_t settigns2;   /* +0x0018  from main.i64 */
+    int8_t movementId;   /* +0x001C  from main.i64 */
+    int8_t linkId;   /* +0x001D  from main.i64 */
+    int8_t initStateFlag;   /* +0x001E  from main.i64 */
     uint8_t  _pad_0020[0x1];
     uint32_t field_0020;   /* +0x0020 */
     uint32_t field_0024;   /* +0x0024 */
-    uint32_t field_0028;   /* +0x0028 */
+    int32_t childCount;   /* +0x0028  from main.i64 */
     uint32_t field_002C;   /* +0x002C */
     uint32_t field_0030;   /* +0x0030 */
     uint32_t field_0034;   /* +0x0034 */
@@ -673,7 +673,7 @@ typedef struct ColliderBase {
     uint32_t field_00E8;   /* +0x00E8 */
     uint32_t field_00EC;   /* +0x00EC */
     uint32_t field_00F0;   /* +0x00F0 */
-    uint32_t field_00F4;   /* +0x00F4 */
+    int32_t rotation;   /* +0x00F4  from main.i64 */
     uint32_t field_00F8;   /* +0x00F8 */
     uint32_t field_00FC;   /* +0x00FC */
     uint32_t field_0100;   /* +0x0100 */
@@ -1068,7 +1068,7 @@ typedef struct Enemy {
  * Derived from: EnemyFreezeMgr_ctor
  */
 typedef struct EnemyFreezeMgr {
-    uint8_t field_0000;   /* +0x0000 */
+    int8_t iceActorCount;   /* +0x0000  from main.i64 */
     uint8_t  _pad_0036[0x35];
     uint8_t field_0036;   /* +0x0036 */
     uint8_t  _pad_0038[0x1];
