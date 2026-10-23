@@ -26,6 +26,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from generate_corpus import route_class, owner_of, widen_signature  # noqa: E402
 
 SAFE = re.compile(r"[^A-Za-z0-9_]")
+# Names whose 4-byte forms are shared-veneer stubs, collapsed into a maplist.
+COLLAPSED = re.compile(r"^(operator_delete|operator_delete_array|"
+                       r"operator_new|operator_new_array)(_\w+)?$")
 
 
 def main() -> int:
@@ -51,6 +54,7 @@ def main() -> int:
 
     n = 0
     skipped = 0
+    collapsed = 0
     with open(args.jsonl, encoding="utf-8") as fh:
         for line in fh:
             line = line.strip()
@@ -65,6 +69,14 @@ def main() -> int:
                 skipped += 1
                 continue
             name = r["name"]
+            # A 4-byte veneer of a shared runtime function is not a distinct
+            # function. 1,789 of them all branch to one address, so emitting
+            # 1,789 near-identical files buries the real corpus. They are
+            # recorded once in decompiled/src/stubs/operator_delete_maplist.c
+            # and data/loader/stub_maplist.txt instead.
+            if r.get("size") == 4 and COLLAPSED.match(name):
+                collapsed += 1
+                continue
             group = route_class(name)
             gdir = out / group
             gdir.mkdir(parents=True, exist_ok=True)
@@ -92,7 +104,8 @@ def main() -> int:
             (gdir / fname).write_text(head + text.rstrip() + "\n", encoding="utf-8")
             n += 1
 
-    print("per-function files: %d (skipped %d) -> %s" % (n, skipped, out))
+    print("per-function files: %d (skipped %d, collapsed %d veneers) -> %s"
+          % (n, skipped, collapsed, out))
     return 0
 
 

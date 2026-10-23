@@ -1,0 +1,5 @@
+# string literals named by IDA (aThing). Data a mod may read, not
+# linker symbols: some sit in alignment holes between sections.
+rva,va,name
+0x00000008,0x60000008,aMod0
+0x00BBF966,0x60BBF966,aSdkMwNintendoN

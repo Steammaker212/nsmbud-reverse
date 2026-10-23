@@ -48,6 +48,21 @@ def demangle(name: str) -> str | None:
     if op:
         return op
 
+    # A trailing lowercase 'f' in an unqualified name is a `float` parameter
+    # list, and omitting it loses the distinction between the double and the
+    # float overload: `_Z3sinf` is `sinf`, not `sin`. The length prefix says
+    # exactly where the identifier ends, so the remainder is the parameter
+    # encoding -- read it from there instead of letting a greedy match swallow
+    # the 'f' into the name.
+    suffix = ""
+    if not body.startswith("N"):
+        m = re.match(r"(\d+)", body)
+        if m:
+            n = int(m.group(1))
+            rest = body[m.end() + n:]
+            if rest.startswith("f"):
+                suffix = "f"
+
     # Nested name: N <len><id> ... E
     if body.startswith("N"):
         body = body[1:]
@@ -80,7 +95,7 @@ def demangle(name: str) -> str | None:
             return None
         # Trailing parameter types mean it is a real function signature; the
         # bare name is still the best identifier, so drop the suffix.
-        out = ident
+        out = ident + suffix
 
     # Special names the ABI spells out.
     special = {

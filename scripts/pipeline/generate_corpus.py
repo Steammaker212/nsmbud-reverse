@@ -274,6 +274,12 @@ def sig_is_wellformed(sig: str) -> bool:
     return True
 
 
+# A 4-byte shared veneer is collapsed into one maplist rather than emitted as
+# its own function; 1,789 operator_delete stubs all branch to one address.
+COLLAPSED = re.compile(r"^(operator_delete|operator_delete_array|"
+                       r"operator_new|operator_new_array)(_\w+)?$")
+
+
 def route_class(name: str) -> str:
     for pat, group in ROUTES:
         if re.match(pat, name):
@@ -359,6 +365,7 @@ def main() -> int:
     groups: dict[str, list[dict]] = defaultdict(list)
     n = 0
     skipped = 0
+    collapsed = 0
 
     # Pass 0: index every function signature, including ones whose body will not
     # be emitted. A skipped body is still called by its neighbours, so its
@@ -407,6 +414,11 @@ def main() -> int:
                 continue
             if args.layout_free_only and "->" in r["c"]:
                 skipped += 1
+                continue
+            # A 4-byte shared veneer is collapsed into one maplist rather than
+            # emitted as its own function; see emit_per_function.COLLAPSED.
+            if r.get("size") == 4 and COLLAPSED.match(r["name"]):
+                collapsed += 1
                 continue
             name = r["name"]
             owner = owner_of(name)
@@ -617,7 +629,8 @@ def main() -> int:
         total_written += len(recs)
         print("%-12s %5d functions -> %s/%s.c" % (group, len(recs), group, group))
 
-    print("TOTAL %d functions written, %d unavailable" % (total_written, skipped))
+    print("TOTAL %d functions written, %d unavailable, %d veneers collapsed"
+          % (total_written, skipped, collapsed))
     return 0
 
 
