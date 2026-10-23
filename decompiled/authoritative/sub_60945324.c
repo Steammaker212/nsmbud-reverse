@@ -89,10 +89,10 @@ int __fastcall sub_60945324(int result, int a2)
   v59 = result;
   while ( 1 )
   {
-    v63[0] = &`vtable for'sead::SafeStringBase_char;
+    v63[0] = &vtable_sead_SafeStringBase_char;
     v63[1] = "name";
     sub_609A5C60(&v64, v2, v63);
-    v68 = (int (***)())&`vtable for'sead::SafeStringBase_char;
+    v68 = (int (***)())&vtable_sead_SafeStringBase_char;
     v69 = off_60C5CB34;
     ((void (__fastcall *)(int (***)()))v64[3])(&v64);
     ((void (__fastcall *)(int (***)()))v64[3])(&v64);
@@ -113,11 +113,11 @@ int __fastcall sub_60945324(int result, int a2)
       goto LABEL_22;
     }
 LABEL_13:
-    v74[0] = &`vtable for'sead::SafeStringBase_char;
+    v74[0] = &vtable_sead_SafeStringBase_char;
     v74[1] = "type";
     sub_609A5C60(&v75, v2, v74);
     v8 = (*(int (__fastcall **)(int))(*(_DWORD *)v59 + 28))(v59);
-    v72 = &`vtable for'sead::SafeStringBase_char;
+    v72 = &vtable_sead_SafeStringBase_char;
     v73 = arr_off_60C5E588[v8 - 9];
     ((void (__fastcall *)(int (***)()))v75[3])(&v75);
     ((void (__fastcall *)(int (***)()))v75[3])(&v75);
@@ -149,8 +149,8 @@ LABEL_26:
   v12 = 0;
   v68 = &v75;
   v69 = 0;
-  v75 = &`vtable for'sead::SafeStringBase_char;
-  v70 = &`vtable for'sead::SafeStringBase_char;
+  v75 = &vtable_sead_SafeStringBase_char;
+  v70 = &vtable_sead_SafeStringBase_char;
   v76 = v11;
   v71 = " \r\n\t";
   while ( v11[v12] )

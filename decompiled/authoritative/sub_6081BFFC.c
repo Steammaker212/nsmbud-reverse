@@ -120,13 +120,13 @@ LABEL_19:
       sub_6081CA7C(a1);
       memset(&v63[1], 0, 44);
       v63[0] = &off_60BF9CF0;
-      v62[0] = &`vtable for'sead::SafeStringBase_char;
+      v62[0] = &vtable_sead_SafeStringBase_char;
       v62[1] = "System/Revision.yml";
       sub_608E6578(*(_DWORD *)(dword_60CCEBD0 + 28));
       if ( !v63[1] )
         goto LABEL_120;
       sub_608E7A54(v63);
-      v49.vtable = &`vtable for'sead::SafeStringBase_char;
+      v49.vtable = &vtable_sead_SafeStringBase_char;
       v49.cstr = &byte_60B3BA34;
       v50 = 0;
       v51 = 0;
@@ -239,7 +239,7 @@ LABEL_50:
         v14 = off_60C5CB34;
 LABEL_51:
         v31 = v14;
-        v30 = &`vtable for'sead::SafeStringBase_char;
+        v30 = &vtable_sead_SafeStringBase_char;
         ((void (__fastcall *)(int (***)()))v44[3])(&v44);
         v15 = 0;
         while ( v45[v15] )
@@ -362,7 +362,7 @@ LABEL_94:
       v22 = off_60C5CB34;
 LABEL_95:
       v37 = v22;
-      v36 = &`vtable for'sead::SafeStringBase_char;
+      v36 = &vtable_sead_SafeStringBase_char;
       ((void (__fastcall *)(int (***)()))v44[3])(&v44);
       v23 = 0;
       while ( v45[v23] )

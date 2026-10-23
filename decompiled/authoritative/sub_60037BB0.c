@@ -113,18 +113,18 @@ void __fastcall sub_60037BB0(int a1, int a2, int a3, float a4, float a5)
       v11 = *((_DWORD *)v10 - 1);
       if ( v10[688] )
       {
-        v111 = &`vtable for'sead::SafeStringBase_char;
+        v111 = &vtable_sead_SafeStringBase_char;
         v12 = "jc_wait";
         goto LABEL_63;
       }
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v13 = "jcb_wait";
       goto LABEL_89;
     case 1:
       v10 = (_BYTE *)(a1 + 7100);
       v9 = *(_DWORD **)(a1 + 7100);
       v11 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v13 = "jcb_demo_battleA";
 LABEL_89:
       v112 = v13;
@@ -135,12 +135,12 @@ LABEL_89:
       v16 = *(_DWORD *)(a1 + 7096);
       if ( *(_BYTE *)(a1 + 7788) )
       {
-        v111 = &`vtable for'sead::SafeStringBase_char;
+        v111 = &vtable_sead_SafeStringBase_char;
         v17 = "jc_delight";
       }
       else
       {
-        v111 = &`vtable for'sead::SafeStringBase_char;
+        v111 = &vtable_sead_SafeStringBase_char;
         v17 = "jcb_delight";
       }
       v112 = v17;
@@ -174,7 +174,7 @@ LABEL_89:
         v19 += v20;
       v21 = *v19;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_straight_w_st";
       goto LABEL_54;
     case 4:
@@ -186,7 +186,7 @@ LABEL_89:
         v25 += v26;
       v21 = *v25;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_straight_w";
       goto LABEL_54;
     case 5:
@@ -198,7 +198,7 @@ LABEL_89:
         v28 += v29;
       v21 = *v28;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_attack_st";
       goto LABEL_54;
     case 6:
@@ -210,7 +210,7 @@ LABEL_89:
         v31 += v32;
       v21 = *v31;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_attack_st_wait";
       goto LABEL_54;
     case 7:
@@ -222,7 +222,7 @@ LABEL_89:
         v34 += v35;
       v21 = *v34;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_attack_ed_l";
       goto LABEL_54;
     case 8:
@@ -234,7 +234,7 @@ LABEL_89:
         v37 += v38;
       v21 = *v37;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_attack_ed_r";
       goto LABEL_54;
     case 9:
@@ -246,7 +246,7 @@ LABEL_89:
         v40 += v41;
       v21 = *v40;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_attack_ed_wait";
       goto LABEL_54;
     case 10:
@@ -258,7 +258,7 @@ LABEL_89:
         v43 += v44;
       v21 = *v43;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_throw_enemy_st";
       goto LABEL_54;
     case 11:
@@ -270,7 +270,7 @@ LABEL_89:
         v46 += v47;
       v21 = *v46;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_throw_enemy_ed";
       goto LABEL_54;
     case 12:
@@ -282,14 +282,14 @@ LABEL_89:
         v49 += v50;
       v21 = *v49;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_throw_enemy2_st";
       goto LABEL_54;
     case 13:
       v10 = (_BYTE *)(a1 + 7100);
       v9 = *(_DWORD **)(a1 + 7100);
       v11 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v51 = "jcb_throw_enemy2_ed";
       goto LABEL_72;
     case 14:
@@ -301,7 +301,7 @@ LABEL_89:
         v53 += v54;
       v21 = *v53;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_fire";
       goto LABEL_54;
     case 15:
@@ -313,7 +313,7 @@ LABEL_89:
         v56 += v57;
       v21 = *v56;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_damage_s";
       goto LABEL_54;
     case 16:
@@ -325,7 +325,7 @@ LABEL_89:
         v59 += v60;
       v21 = *v59;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_damage";
       goto LABEL_54;
     case 17:
@@ -337,7 +337,7 @@ LABEL_89:
         v62 += v63;
       v21 = *v62;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_squat";
       goto LABEL_54;
     case 18:
@@ -349,7 +349,7 @@ LABEL_89:
         v65 += v66;
       v21 = *v65;
       v22 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v23 = "jcb_damage_up";
 LABEL_54:
       v112 = v23;
@@ -359,7 +359,7 @@ LABEL_54:
       v68 = a1 + 7100;
       v67 = *(_DWORD **)(a1 + 7100);
       v69 = *(_DWORD *)(v68 - 4);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v112 = "jc_demo_W7_excite";
       sub_60421938(v67, v69, (int)&v111);
       v70 = *(int **)(*(_DWORD *)v68 + 12);
@@ -386,14 +386,14 @@ LABEL_54:
       v10 = (_BYTE *)(a1 + 7100);
       v9 = *(_DWORD **)(a1 + 7100);
       v11 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v12 = "jc_demo_W7_punch";
       goto LABEL_63;
     case 21:
       v78 = a1 + 7100;
       v77 = *(_DWORD **)(a1 + 7100);
       v79 = *(_DWORD *)(v78 - 4);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v112 = "jc_demo_W7_shock";
       sub_60421938(v77, v79, (int)&v111);
       v80 = *(int **)(*(_DWORD *)v78 + 12);
@@ -420,7 +420,7 @@ LABEL_54:
       v10 = (_BYTE *)(a1 + 7100);
       v9 = *(_DWORD **)(a1 + 7100);
       v11 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v51 = "jc_demo_W7_shock2";
 LABEL_72:
       v112 = v51;
@@ -429,7 +429,7 @@ LABEL_72:
       v88 = (_DWORD *)(a1 + 7100);
       v87 = *(_DWORD **)(a1 + 7100);
       v89 = *(v88 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v112 = "jc_demo_W7_panic";
       sub_60421938(v87, v89, (int)&v111);
       v90 = *(int **)(*v88 + 12);
@@ -456,7 +456,7 @@ LABEL_72:
       v10 = (_BYTE *)(a1 + 7100);
       v9 = *(_DWORD **)(a1 + 7100);
       v11 = *((_DWORD *)v10 - 1);
-      v111 = &`vtable for'sead::SafeStringBase_char;
+      v111 = &vtable_sead_SafeStringBase_char;
       v12 = "jcb_wait";
 LABEL_63:
       v112 = v12;

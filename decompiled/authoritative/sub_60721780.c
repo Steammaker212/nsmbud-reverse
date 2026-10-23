@@ -100,7 +100,7 @@ int __fastcall sub_60721780(int a1, int a2)
   const char *v102; // [sp+78h] [bp-28h]
 
   v3 = 0;
-  v95 = &`vtable for'sead::SafeStringBase_char;
+  v95 = &vtable_sead_SafeStringBase_char;
   v96 = "BgTexMgr";
   nullsub_123(a1 + 5456, 1, &v95, 0);
   v4 = a1 + 24;
@@ -251,7 +251,7 @@ int __fastcall sub_60721780(int a1, int a2)
   *(_DWORD *)(v92 + 5444) = 0;
   *(_DWORD *)(v92 + 5448) = 0;
   v47 = (_DWORD *)sub_6071B22C(v93, a2, 0);
-  v95 = &`vtable for'sead::SafeStringBase_char;
+  v95 = &vtable_sead_SafeStringBase_char;
   v96 = "Pa0_jyotyu";
   (*(void (__fastcall **)(_DWORD *))(*v47 + 12))(v47);
   (*(void (__fastcall **)(_DWORD *))(*v47 + 12))(v47);
@@ -307,7 +307,7 @@ LABEL_55:
       goto LABEL_31;
     v40 += 2;
   }
-  v101 = &`vtable for'sead::SafeStringBase_char;
+  v101 = &vtable_sead_SafeStringBase_char;
   v102 = "Pa0_jyotyu_chika";
   (*(void (__fastcall **)(_DWORD *))(*v47 + 12))(v47);
   (*(void (__fastcall **)(_DWORD *))(*v47 + 12))(v47);
@@ -332,7 +332,7 @@ LABEL_55:
         goto LABEL_54;
       v52 += 2;
     }
-    v99 = &`vtable for'sead::SafeStringBase_char;
+    v99 = &vtable_sead_SafeStringBase_char;
     v100 = "Pa0_jyotyu_setsugen";
     (*(void (__fastcall **)(_DWORD *))(*v47 + 12))(v47);
     (*(void (__fastcall **)(_DWORD *))(*v47 + 12))(v47);

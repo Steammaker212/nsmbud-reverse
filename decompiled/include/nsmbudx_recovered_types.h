@@ -181,3 +181,26 @@ typedef struct svuint16_t { uint8_t _opaque[0x2]; } svuint16_t;   /* sizeof 0x2 
 typedef struct svuint32_t { uint8_t _opaque[0x4]; } svuint32_t;   /* sizeof 0x4 */
 typedef struct svuint64_t { uint8_t _opaque[0x8]; } svuint64_t;   /* sizeof 0x8 */
 typedef struct svuint8_t { uint8_t _opaque[0x1]; } svuint8_t;   /* sizeof 0x1 */
+
+/* sead::SafeStringBase<char> -- reconstructed from use, not from the database (it has no entry).
+ *
+ * The only members the recovered code touches are `vtable` and `cstr`, and every use passes the object by address,
+ * which is sead's own ABI for a non-owning string view: a vtable pointer followed by a `char *`. Eight bytes and
+ * pointer-aligned, matching a 32-bit build. This lets the ~290 sites that build these objects inline compile; it
+ * does not claim to model the full sead class hierarchy.
+ */
+typedef struct SafeStringBase_char_t {
+    void *vtable;   /* +0x000 */
+    char *cstr;     /* +0x004 */
+} SafeStringBase_char_t;
+/* A distinct name: nsmbudx_recovered_deps.h already declares a VARIABLE called
+ * `sead_SafeStringBase_char`, so the type cannot share that spelling. */
+typedef SafeStringBase_char_t sead_SafeStringView;
+
+/* Vtable symbols. Hex-Rays rendered these as the literal `` &`vtable for'Type ``, which is IDA's internal name and
+ * not valid C. The expression means "the address of this type's vtable", so each becomes the address of a plain
+ * object of that name. They are only ever stored as pointers or compared; no field is read through them.
+ *
+ * NOTE: nsmbudx_recovered_deps.h, where these were first declared, is NOT included by the prelude -- nothing in the
+ * tree includes it -- so declarations placed there had no effect. This header is on the include path. */
+extern uint8_t vtable_sead_SafeStringBase_char;

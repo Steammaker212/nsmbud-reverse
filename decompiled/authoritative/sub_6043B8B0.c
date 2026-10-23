@@ -72,7 +72,7 @@ signed int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, v
   sub_6043C320(v76, v9);
   memset(&v75[1], 0, 40);
   v75[0] = &off_60BFAA14;
-  v70 = &`vtable for'sead::SafeStringBase_char;
+  v70 = &vtable_sead_SafeStringBase_char;
   v71 = &byte_60ABC94D;
   sub_608E6B4C(v76, v75, &v70);
   if ( !v75[1] )
@@ -99,7 +99,7 @@ signed int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, v
     {
       v51 = v11;
       v50 = v10;
-      v61.vtable = (int)&`vtable for'sead::SafeStringBase_char;
+      v61.vtable = (int)&vtable_sead_SafeStringBase_char;
       v61.containingHeap = (int)v10;
       v16 = sub_6043C4B4(&v70, &v61);
       v61.vtable = (int)off_60C5CB68;
@@ -114,7 +114,7 @@ signed int __fastcall sub_6043B8B0(int a1, int a2, int a3, int a4, _DWORD *a5, v
       v68 = 32;
       sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v66);
       *(_BYTE *)v67 = 0;
-      v58[0] = &`vtable for'sead::SafeStringBase_char;
+      v58[0] = &vtable_sead_SafeStringBase_char;
       v66 = &off_60BD4C20;
       v61.vtable = (int)off_60BF9EF4;
       v58[1] = &byte_60B3BA34;

@@ -101,14 +101,14 @@ LABEL_5:
   }
   if ( ((unsigned int)&dword_60CD09B0 & ~(1620203728 << v8) & 1) == 0 && _cxa_guard_acquire(&dword_60CD09B0) )
   {
-    v87 = &`vtable for'sead::SafeStringBase_char;
+    v87 = &vtable_sead_SafeStringBase_char;
     v88 = "name";
     dword_60CD09AC = sub_60941AB4(&v87);
     _cxa_guard_release(&dword_60CD09B0);
   }
   if ( ((unsigned int)&dword_60CD09B8 & ~(1620203832 << v8) & 1) == 0 && _cxa_guard_acquire(&dword_60CD09B8) )
   {
-    v87 = &`vtable for'sead::SafeStringBase_char;
+    v87 = &vtable_sead_SafeStringBase_char;
     v88 = "group";
     dword_60CD09B4 = sub_60941AB4(&v87);
     _cxa_guard_release(&dword_60CD09B8);
@@ -177,7 +177,7 @@ LABEL_104:
           if ( a4 != -1 )
           {
             v28 = *(_DWORD *)(v23 + 4);
-            v87 = &`vtable for'sead::SafeStringBase_char;
+            v87 = &vtable_sead_SafeStringBase_char;
             v88 = (const char *)(v23 + ((4 * v28) & 0x3FFFFFC));
             v29 = *(_DWORD *)(a1 + 48);
             if ( *(_DWORD *)(a1 + 44) > a4 )
@@ -205,7 +205,7 @@ LABEL_40:
           }
           v33 = *(_DWORD *)(v26 + 4);
           v34 = v27;
-          v87 = &`vtable for'sead::SafeStringBase_char;
+          v87 = &vtable_sead_SafeStringBase_char;
           v88 = (const char *)(v26 + ((4 * v33) & 0x3FFFFFC));
           v35 = v27[3];
           v36 = (unsigned __int16 *)v27[4];
@@ -349,7 +349,7 @@ LABEL_78:
                   if ( v62 != -1 )
                     v63 = (int)&v85[8 * v62 + ((4 * *((_DWORD *)v85 + 1)) & 0x3FFFC)];
                   v64 = *(_DWORD *)(v63 + 4);
-                  v83 = &`vtable for'sead::SafeStringBase_char;
+                  v83 = &vtable_sead_SafeStringBase_char;
                   v84 = v63 + ((4 * v64) & 0x3FFFFFC);
                   ((void (__fastcall *)(int (***)()))v87[3])(&v87);
                   ((void (__fastcall *)(int (***)()))v87[3])(&v87);

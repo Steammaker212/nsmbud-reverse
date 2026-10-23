@@ -150244,7 +150244,7 @@ sub_603F8408__LABEL_18:
   v69 = a1 + 272;
   *(_BYTE *)(a1 + 908) = v9;
   v11 = 1;
-  v71 = &`vtable for'sead::SafeStringBase_char;
+  v71 = &vtable_sead_SafeStringBase_char;
   v72 = "InputMgr";
   v12 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v13 = v12;
@@ -150294,7 +150294,7 @@ sub_603F8408__LABEL_18:
   sub_603F9738(a1);
   sub_603EFADC(0);
   v16 = 1;
-  v71 = &`vtable for'sead::SafeStringBase_char;
+  v71 = &vtable_sead_SafeStringBase_char;
   v72 = "TexQuadMgrInstance";
   v17 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v18 = v17;
@@ -150305,7 +150305,7 @@ sub_603F8408__LABEL_18:
   if ( v16 != 1 )
     sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v16);
   v19 = 1;
-  v71 = &`vtable for'sead::SafeStringBase_char;
+  v71 = &vtable_sead_SafeStringBase_char;
   v72 = "MaskMgrInstance";
   v20 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v21 = v20;
@@ -150319,7 +150319,7 @@ sub_603F8408__LABEL_18:
   sub_606E69A0(0);
   sub_606E6A1C(dword_60CBBFA4);
   v22 = 1;
-  v71 = &`vtable for'sead::SafeStringBase_char;
+  v71 = &vtable_sead_SafeStringBase_char;
   v72 = "DynamicLightMgr";
   v23 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v24 = v23;
@@ -150336,7 +150336,7 @@ sub_603F8408__LABEL_18:
   if ( sub_603FD554(a1 + 764) == 1 )
   {
     v25 = 1;
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = "WmModeDB";
     v26 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
     v27 = v26;
@@ -150349,7 +150349,7 @@ sub_603F8408__LABEL_18:
   }
   sub_60726908(dword_60CBD894, 0);
   v28 = 1;
-  v71 = &`vtable for'sead::SafeStringBase_char;
+  v71 = &vtable_sead_SafeStringBase_char;
   v72 = "CourseUnitData";
   v29 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v30 = v29;
@@ -150367,7 +150367,7 @@ sub_603F8408__LABEL_18:
     sub_60727C38(*(unsigned __int8 *)(v31 + 16), *(unsigned __int8 *)(v31 + 17), (int)&v71);
     v32 = ArchiveManagerMaybe_instance;
     ((void (__fastcall *)(int (***)()))v71[3])(&v71);
-    v70[0] = &`vtable for'sead::SafeStringBase_char;
+    v70[0] = &vtable_sead_SafeStringBase_char;
     v70[1] = v72;
     sub_60820F8C(v32, v70, 0);
     Level_createInstance(0);
@@ -150377,16 +150377,16 @@ sub_603F8408__LABEL_18:
   if ( Area )
   {
     v34 = *(const char **)(Area + 4);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v34;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v34 + 32;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v34 + 64;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v34 + 96;
     sub_603F9BD8(&v71);
   }
@@ -150394,16 +150394,16 @@ sub_603F8408__LABEL_18:
   if ( v35 )
   {
     v36 = *(const char **)(v35 + 4);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v36;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v36 + 32;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v36 + 64;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v36 + 96;
     sub_603F9BD8(&v71);
   }
@@ -150411,16 +150411,16 @@ sub_603F8408__LABEL_18:
   if ( v37 )
   {
     v38 = *(const char **)(v37 + 4);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v38;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v38 + 32;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v38 + 64;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v38 + 96;
     sub_603F9BD8(&v71);
   }
@@ -150428,16 +150428,16 @@ sub_603F8408__LABEL_18:
   if ( v39 )
   {
     v40 = *(const char **)(v39 + 4);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v40;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v40 + 32;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v40 + 64;
     sub_603F9BD8(&v71);
-    v71 = &`vtable for'sead::SafeStringBase_char;
+    v71 = &vtable_sead_SafeStringBase_char;
     v72 = v40 + 96;
     sub_603F9BD8(&v71);
   }
@@ -150528,7 +150528,7 @@ sub_603F8408__LABEL_96:
   sub_605E7E8C(dword_60CB1BE4, v69);
   sub_60729980(EventMgr::instance);
   v56 = 1;
-  v71 = &`vtable for'sead::SafeStringBase_char;
+  v71 = &vtable_sead_SafeStringBase_char;
   v72 = "BgGlobal";
   v57 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v58 = v57;
@@ -150539,7 +150539,7 @@ sub_603F8408__LABEL_96:
   if ( v56 != 1 )
     sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v56);
   v59 = 1;
-  v71 = &`vtable for'sead::SafeStringBase_char;
+  v71 = &vtable_sead_SafeStringBase_char;
   v72 = "BgRenderer";
   v60 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v61 = v60;
@@ -150550,7 +150550,7 @@ sub_603F8408__LABEL_96:
   if ( v59 != 1 )
     sead__HeapMgr__setCurrentHeap_(sead::HeapMgr::sInstance, v59);
   v62 = 1;
-  v71 = &`vtable for'sead::SafeStringBase_char;
+  v71 = &vtable_sead_SafeStringBase_char;
   v72 = "TexQuad";
   v63 = sead__ExpHeap__create(0, (int)&v71, 0, 4, 1, 0);
   v64 = v63;
@@ -198861,7 +198861,7 @@ sub_603F8408__LABEL_96:
   sub_6043C320(v76, v9);
   memset(&v75[1], 0, 40);
   v75[0] = &off_60BFAA14;
-  v70 = &`vtable for'sead::SafeStringBase_char;
+  v70 = &vtable_sead_SafeStringBase_char;
   v71 = &byte_60ABC94D;
   sub_608E6B4C(v76, v75, &v70);
   if ( !v75[1] )
@@ -198888,7 +198888,7 @@ sub_603F8408__LABEL_96:
     {
       v51 = v11;
       v50 = v10;
-      v61.vtable = (int)&`vtable for'sead::SafeStringBase_char;
+      v61.vtable = (int)&vtable_sead_SafeStringBase_char;
       v61.containingHeap = (int)v10;
       v16 = sub_6043C4B4(&v70, &v61);
       v61.vtable = (int)off_60C5CB68;
@@ -198903,7 +198903,7 @@ sub_603F8408__LABEL_96:
       v68 = 32;
       sead__BufferedSafeStringBase_char__assureTerminationImpl_((int)&v66);
       *(_BYTE *)v67 = 0;
-      v58[0] = &`vtable for'sead::SafeStringBase_char;
+      v58[0] = &vtable_sead_SafeStringBase_char;
       v66 = &off_60BD4C20;
       v61.vtable = (int)off_60BF9EF4;
       v58[1] = &byte_60B3BA34;

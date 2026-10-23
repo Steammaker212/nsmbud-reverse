@@ -87,7 +87,7 @@ int __fastcall sub_60181FC0(int a1, int a2, _DWORD *a3, _DWORD *a4)
       v54 = v9;
       v12 = (int *)(*(int (__fastcall **)(int, int))(*(_DWORD *)a2 + 88))(a2, v7);
       v13 = (int)v6;
-      v70 = &`vtable for'sead::SafeStringBase_char;
+      v70 = &vtable_sead_SafeStringBase_char;
       v71 = v12;
       v67 = &v69;
       v66 = &BufferedSafeStringBase_char_vtable_probably;
@@ -340,11 +340,11 @@ LABEL_126:
         }
       }
 LABEL_104:
-      v56 = &`vtable for'sead::SafeStringBase_char;
+      v56 = &vtable_sead_SafeStringBase_char;
       v57 = "start";
       if ( sub_6018506C(v13, &v56) == -1 )
       {
-        v56 = &`vtable for'sead::SafeStringBase_char;
+        v56 = &vtable_sead_SafeStringBase_char;
         v57 = "end";
         ((void (__fastcall *)(int))v66[3])(v13);
         ((void (__fastcall *)(int))v66[3])(v13);
@@ -375,13 +375,13 @@ LABEL_125:
       }
       if ( ((unsigned int)&dword_60C89484 & ~(1612195816 << v37) & 1) == 0 && _cxa_guard_acquire(&dword_60C89484) )
       {
-        arr_dword_60C89490[0] = &`vtable for'sead::SafeStringBase_char;
+        arr_dword_60C89490[0] = &vtable_sead_SafeStringBase_char;
         arr_dword_60C89490[1] = "start";
-        arr_dword_60C89490[2] = &`vtable for'sead::SafeStringBase_char;
+        arr_dword_60C89490[2] = &vtable_sead_SafeStringBase_char;
         arr_dword_60C89490[3] = "startPan";
-        arr_dword_60C89490[4] = &`vtable for'sead::SafeStringBase_char;
+        arr_dword_60C89490[4] = &vtable_sead_SafeStringBase_char;
         arr_dword_60C89490[5] = "startTilt";
-        arr_dword_60C89490[6] = &`vtable for'sead::SafeStringBase_char;
+        arr_dword_60C89490[6] = &vtable_sead_SafeStringBase_char;
         arr_dword_60C89490[7] = "startFix";
         sub_60000288();
         _cxa_guard_release(&dword_60C89484);

@@ -155,7 +155,7 @@ unsigned int __fastcall sub_6017BE9C(int a1)
     }
     v5 = a1;
   }
-  v94 = &`vtable for'sead::SafeStringBase_char;
+  v94 = &vtable_sead_SafeStringBase_char;
   v95 = v8;
   v100 = &v102;
   v99 = &BufferedSafeStringBase_char_vtable_probably;

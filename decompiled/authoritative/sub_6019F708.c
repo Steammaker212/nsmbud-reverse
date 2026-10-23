@@ -97,7 +97,7 @@ int __fastcall sub_6019F708(int a1)
                   v8 = (_DWORD *)sub_60182ED0(v6, 0, v3, i);
                   if ( ((v5 == 15) & (unsigned __int8)v41 & (v43 == 3)) != 0 )
                   {
-                    v52 = &`vtable for'sead::SafeStringBase_char;
+                    v52 = &vtable_sead_SafeStringBase_char;
                     v53 = "RW6J2W6J3";
                     (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
                     (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
@@ -116,7 +116,7 @@ int __fastcall sub_6019F708(int a1)
                         if ( !*(_BYTE *)(v11 + j) )
                           goto LABEL_42;
                       }
-                      v50 = &`vtable for'sead::SafeStringBase_char;
+                      v50 = &vtable_sead_SafeStringBase_char;
                       v51 = "RW6J3W6M0";
                       (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
                       (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
@@ -134,7 +134,7 @@ int __fastcall sub_6019F708(int a1)
                           if ( !*(_BYTE *)(v14 + k) )
                             goto LABEL_42;
                         }
-                        v48 = &`vtable for'sead::SafeStringBase_char;
+                        v48 = &vtable_sead_SafeStringBase_char;
                         v49 = "RW6M0W601";
                         (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
                         (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);

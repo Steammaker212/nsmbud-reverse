@@ -144,7 +144,7 @@ int __fastcall sub_60227F68(int a1)
       v93 = (const char *)v43;
       v99 = v110;
       v95 = v111;
-      v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+      v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
       v103.settings2 = v43;
       v105 = (char *)&v107;
       v104 = &BufferedSafeStringBase_char_vtable_probably;
@@ -219,7 +219,7 @@ int __fastcall sub_60227F68(int a1)
         goto LABEL_198;
       }
       v8 = v45;
-      v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+      v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
       v103.settings2 = (int)"cobPeachGates1st";
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -240,7 +240,7 @@ LABEL_169:
         if ( !v105[i] )
           goto LABEL_169;
       }
-      v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+      v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
       v103.settings2 = (int)"cobPeachGates2nd";
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -261,7 +261,7 @@ LABEL_180:
         if ( !v105[j] )
           goto LABEL_180;
       }
-      v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+      v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
       v103.settings2 = (int)"cobCastle";
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -282,7 +282,7 @@ LABEL_197:
         if ( !v105[k] )
           goto LABEL_197;
       }
-      v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+      v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
       v103.settings2 = (int)"cobToride";
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -306,7 +306,7 @@ LABEL_198:
         }
         goto LABEL_14;
       }
-      v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+      v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
       v103.settings2 = (int)"cobKinoko1up";
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -328,7 +328,7 @@ LABEL_24:
         }
         goto LABEL_24;
       }
-      v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+      v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
       v103.settings2 = (int)"cobKinokoShuffle";
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -350,7 +350,7 @@ LABEL_31:
         }
         goto LABEL_31;
       }
-      v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+      v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
       v103.settings2 = (int)"cobKinokoSlot";
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -372,7 +372,7 @@ LABEL_37:
         }
         goto LABEL_37;
       }
-      v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+      v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
       v103.settings2 = (int)"cobGhost";
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
       ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -401,7 +401,7 @@ LABEL_46:
           if ( !v105[m] )
             goto LABEL_46;
         }
-        v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+        v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
         v103.settings2 = (int)"cobFlag";
         ((void (__fastcall *)(int (***)()))v104[3])(&v104);
         ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -420,7 +420,7 @@ LABEL_46:
                || v105[4]
                && (v105[5] != *(_BYTE *)(v103.settings2 + 5) || v105[5] && v105[6] != *(_BYTE *)(v103.settings2 + 6))))))) )
         {
-          v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+          v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
           v103.settings2 = (int)"cobPakkun";
           ((void (__fastcall *)(int (***)()))v104[3])(&v104);
           ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -442,7 +442,7 @@ LABEL_67:
             }
             goto LABEL_67;
           }
-          v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+          v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
           v103.settings2 = (int)"cobUnizo";
           ((void (__fastcall *)(int (***)()))v104[3])(&v104);
           ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -467,7 +467,7 @@ LABEL_67:
             v12 = 902;
             goto LABEL_198;
           }
-          v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+          v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
           v103.settings2 = (int)"cobStarGate";
           ((void (__fastcall *)(int (***)()))v104[3])(&v104);
           ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -489,7 +489,7 @@ LABEL_90:
             }
             goto LABEL_90;
           }
-          v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+          v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
           v103.settings2 = (int)"cobShip";
           ((void (__fastcall *)(int (***)()))v104[3])(&v104);
           ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -532,7 +532,7 @@ LABEL_90:
               v103.position.z = v95;
               v103.eventId2 = v2;
               v103.field_20 = v94;
-              buildInfo.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+              buildInfo.settings1 = (int)&vtable_sead_SafeStringBase_char;
               buildInfo.settings2 = v33;
               v103.eventId1 = sub_6040D864(&buildInfo);
               v103.linkId = 0;
@@ -544,7 +544,7 @@ LABEL_90:
           }
           else
           {
-            v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+            v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
             v103.settings2 = (int)"lookW";
             ((void (__fastcall *)(int (***)()))v104[3])(&v104);
             ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -605,7 +605,7 @@ LABEL_127:
 LABEL_199:
       if ( v90 == 1 )
       {
-        v103.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+        v103.settings1 = (int)&vtable_sead_SafeStringBase_char;
         v103.settings2 = (int)"W8B1";
         ((void (__fastcall *)(int (***)()))v104[3])(&v104);
         ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -625,7 +625,7 @@ LABEL_208:
             v103.position.z = v95;
             v103.eventId2 = v2;
             v103.field_20 = v94;
-            buildInfo.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+            buildInfo.settings1 = (int)&vtable_sead_SafeStringBase_char;
             buildInfo.settings2 = v68;
             v103.eventId1 = sub_6040D864(&buildInfo);
             v103.linkId = 0;
@@ -656,7 +656,7 @@ LABEL_208:
       if ( v12 != -1 )
       {
         v69 = sub_6022A7E4(*(_DWORD *)(v89 + 4), v98);
-        buildInfo.settings1 = (int)&`vtable for'sead::SafeStringBase_char;
+        buildInfo.settings1 = (int)&vtable_sead_SafeStringBase_char;
         buildInfo.settings2 = v69;
         v103.settings2 = (int)&v103.profile;
         v103.settings1 = (int)&BufferedSafeStringBase_char_vtable_probably;
@@ -710,7 +710,7 @@ LABEL_208:
         buildInfo.position.z = v95;
         buildInfo.eventId2 = v2;
         buildInfo.field_20 = v3;
-        v100 = &`vtable for'sead::SafeStringBase_char;
+        v100 = &vtable_sead_SafeStringBase_char;
         v101 = "cob";
         ((void (__fastcall *)(int (***)()))v104[3])(&v104);
         ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -718,12 +718,12 @@ LABEL_208:
         ((void (__fastcall *)(int (***)()))v100[3])(&v100);
         if ( v75 == v101 || *v105 == *v101 && (!*v105 || v105[1] == v101[1] && (!v105[1] || v105[2] == v101[2])) )
         {
-          v100 = &`vtable for'sead::SafeStringBase_char;
+          v100 = &vtable_sead_SafeStringBase_char;
           v101 = (const char *)v69;
         }
         else
         {
-          v100 = &`vtable for'sead::SafeStringBase_char;
+          v100 = &vtable_sead_SafeStringBase_char;
           v101 = v93;
         }
         buildInfo.eventId1 = sub_6040D864(&v100);
@@ -793,7 +793,7 @@ LABEL_208:
           if ( v82 || v12 == 865 )
           {
 LABEL_256:
-            v100 = &`vtable for'sead::SafeStringBase_char;
+            v100 = &vtable_sead_SafeStringBase_char;
             v101 = "cob";
             ((void (__fastcall *)(int (***)()))v104[3])(&v104);
             ((void (__fastcall *)(int (***)()))v104[3])(&v104);
@@ -826,7 +826,7 @@ LABEL_256:
             v3 = v74;
             if ( (unsigned __int8)buildInfo.movementId == 255 )
             {
-              v100 = &`vtable for'sead::SafeStringBase_char;
+              v100 = &vtable_sead_SafeStringBase_char;
               v101 = "cob";
               ((void (__fastcall *)(int (***)()))v104[3])(&v104);
               ((void (__fastcall *)(int (***)()))v104[3])(&v104);

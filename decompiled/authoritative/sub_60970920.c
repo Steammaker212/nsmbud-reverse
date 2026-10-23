@@ -240,7 +240,7 @@ _DWORD *__fastcall sub_60970920(int a1, int a2, int a3, signed int a4, void *a5,
             while ( 1 )
             {
               v35 = *(char **)(a2 + 4 * v34);
-              v88 = &`vtable for'sead::SafeStringBase_char;
+              v88 = &vtable_sead_SafeStringBase_char;
               v89 = v35;
               ((void (__fastcall *)(int (***)()))v90[3])(&v90);
               ((void (__fastcall *)(int (***)()))v90[3])(&v90);

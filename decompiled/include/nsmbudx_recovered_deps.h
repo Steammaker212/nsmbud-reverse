@@ -2382,3 +2382,8 @@ void nullsub_5615();
 void nullsub_5616();
 void nullsub_5617();
 void nullsub_5618();
+
+/* Vtable symbols. Hex-Rays rendered these as the literal `` &`vtable for'Type ``, which is IDA's internal name and
+ * not valid C. The expression means "the address of this type's vtable", so each becomes the address of a plain
+ * object of that name. They are only ever compared or stored as pointers; no field is read through them. */
+extern uint8_t vtable_sead_SafeStringBase_char;	/* sead SafeString vtable base */
