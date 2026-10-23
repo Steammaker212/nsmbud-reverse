@@ -57,7 +57,7 @@ int __fastcall sub_60969DE4(_DWORD *a1, int a2, _DWORD *a3)
   v9 = 0x15F6F2u;
   do
   {
-    v10 = off_60C5EC2C[v7];
+    v10 = arr_off_60C5EC2C[v7];
     v11 = (const char *)sub_6091AE90(v9);
     sub_604209A4(&v51, "%s.%s", v10, v11);
     v12 = (*(int (__fastcall **)(int, int (***)(), _DWORD))(*(_DWORD *)a2 + 24))(a2, &v51, 0);

@@ -540,7 +540,7 @@ LABEL_285:
       if ( v64 < 8 )
       {
         v38 = 1.0;
-        v39 = dword_60AF7A60[v64];
+        v39 = arr_dword_60AF7A60[v64];
       }
       goto LABEL_96;
     }
@@ -875,8 +875,8 @@ LABEL_96:
   identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "cobCourse";
   v52 = LoadResource(ResourceMgrRelated_instance, &identifier);
-  ShuAnim_play((_DWORD *)v51, v52, (int)&dword_60C88E90[2 * *(_DWORD *)(a1 + 308) + 3]);
-  AnimationCtrl_setRepeat((ModelAnimation *)(v51 + 4), dword_60AF7A3C[*(_DWORD *)(a1 + 308)]);
+  ShuAnim_play((_DWORD *)v51, v52, (int)&arr_dword_60C88E90[2 * *(_DWORD *)(a1 + 308) + 3]);
+  AnimationCtrl_setRepeat((ModelAnimation *)(v51 + 4), arr_dword_60AF7A3C[*(_DWORD *)(a1 + 308)]);
   *(float *)(v51 + 24) = v38;
   if ( !v39 )
   {

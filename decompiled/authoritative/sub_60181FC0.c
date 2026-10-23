@@ -375,29 +375,29 @@ LABEL_125:
       }
       if ( ((unsigned int)&dword_60C89484 & ~(1612195816 << v37) & 1) == 0 && _cxa_guard_acquire(&dword_60C89484) )
       {
-        dword_60C89490[0] = &`vtable for'sead::SafeStringBase_char;
-        dword_60C89490[1] = "start";
-        dword_60C89490[2] = &`vtable for'sead::SafeStringBase_char;
-        dword_60C89490[3] = "startPan";
-        dword_60C89490[4] = &`vtable for'sead::SafeStringBase_char;
-        dword_60C89490[5] = "startTilt";
-        dword_60C89490[6] = &`vtable for'sead::SafeStringBase_char;
-        dword_60C89490[7] = "startFix";
+        arr_dword_60C89490[0] = &`vtable for'sead::SafeStringBase_char;
+        arr_dword_60C89490[1] = "start";
+        arr_dword_60C89490[2] = &`vtable for'sead::SafeStringBase_char;
+        arr_dword_60C89490[3] = "startPan";
+        arr_dword_60C89490[4] = &`vtable for'sead::SafeStringBase_char;
+        arr_dword_60C89490[5] = "startTilt";
+        arr_dword_60C89490[6] = &`vtable for'sead::SafeStringBase_char;
+        arr_dword_60C89490[7] = "startFix";
         sub_60000288();
         _cxa_guard_release(&dword_60C89484);
       }
       ((void (__fastcall *)(int))v66[3])(v13);
       ((void (__fastcall *)(int))v66[3])(v13);
       v38 = v67;
-      (*(void (__fastcall **)(_DWORD *))(dword_60C89490[0] + 12))(dword_60C89490);
+      (*(void (__fastcall **)(_DWORD *))(arr_dword_60C89490[0] + 12))(dword_60C89490);
       v9 = 0;
-      if ( v38 != (int *)dword_60C89490[1] )
+      if ( v38 != (int *)arr_dword_60C89490[1] )
       {
-        for ( j = 1; *((unsigned __int8 *)v67 + j - 1) == *(unsigned __int8 *)(dword_60C89490[1] + j - 1); j += 2 )
+        for ( j = 1; *((unsigned __int8 *)v67 + j - 1) == *(unsigned __int8 *)(arr_dword_60C89490[1] + j - 1); j += 2 )
         {
           if ( !*((_BYTE *)v67 + j - 1) )
             goto LABEL_146;
-          if ( j >= 524289 || *((unsigned __int8 *)v67 + j) != *(unsigned __int8 *)(dword_60C89490[1] + j) )
+          if ( j >= 524289 || *((unsigned __int8 *)v67 + j) != *(unsigned __int8 *)(arr_dword_60C89490[1] + j) )
             break;
           if ( !*((_BYTE *)v67 + j) )
             goto LABEL_146;
@@ -405,19 +405,19 @@ LABEL_125:
         ((void (__fastcall *)(int (***)()))v66[3])(v6);
         ((void (__fastcall *)(int (***)()))v66[3])(v6);
         v42 = v67;
-        (*(void (__fastcall **)(_DWORD *))(dword_60C89490[2] + 12))(&dword_60C89490[2]);
-        if ( v42 == (int *)dword_60C89490[3] )
+        (*(void (__fastcall **)(_DWORD *))(arr_dword_60C89490[2] + 12))(&arr_dword_60C89490[2]);
+        if ( v42 == (int *)arr_dword_60C89490[3] )
         {
           v9 = 1;
         }
         else
         {
-          for ( k = 1; *((unsigned __int8 *)v67 + k - 1) == *(unsigned __int8 *)(dword_60C89490[3] + k - 1); k += 2 )
+          for ( k = 1; *((unsigned __int8 *)v67 + k - 1) == *(unsigned __int8 *)(arr_dword_60C89490[3] + k - 1); k += 2 )
           {
             v9 = 1;
             if ( !*((_BYTE *)v67 + k - 1) )
               goto LABEL_146;
-            if ( k >= 524289 || *((unsigned __int8 *)v67 + k) != *(unsigned __int8 *)(dword_60C89490[3] + k) )
+            if ( k >= 524289 || *((unsigned __int8 *)v67 + k) != *(unsigned __int8 *)(arr_dword_60C89490[3] + k) )
               break;
             if ( !*((_BYTE *)v67 + k) )
               goto LABEL_146;
@@ -425,15 +425,15 @@ LABEL_125:
           ((void (__fastcall *)(int (***)()))v66[3])(v6);
           ((void (__fastcall *)(int (***)()))v66[3])(v6);
           v44 = v67;
-          (*(void (__fastcall **)(_DWORD *))(dword_60C89490[4] + 12))(&dword_60C89490[4]);
+          (*(void (__fastcall **)(_DWORD *))(arr_dword_60C89490[4] + 12))(&arr_dword_60C89490[4]);
           v9 = 2;
-          if ( v44 != (int *)dword_60C89490[5] )
+          if ( v44 != (int *)arr_dword_60C89490[5] )
           {
-            for ( m = 1; *((unsigned __int8 *)v67 + m - 1) == *(unsigned __int8 *)(dword_60C89490[5] + m - 1); m += 2 )
+            for ( m = 1; *((unsigned __int8 *)v67 + m - 1) == *(unsigned __int8 *)(arr_dword_60C89490[5] + m - 1); m += 2 )
             {
               if ( !*((_BYTE *)v67 + m - 1) )
                 goto LABEL_146;
-              if ( m >= 524289 || *((unsigned __int8 *)v67 + m) != *(unsigned __int8 *)(dword_60C89490[5] + m) )
+              if ( m >= 524289 || *((unsigned __int8 *)v67 + m) != *(unsigned __int8 *)(arr_dword_60C89490[5] + m) )
                 break;
               if ( !*((_BYTE *)v67 + m) )
                 goto LABEL_146;
@@ -441,15 +441,15 @@ LABEL_125:
             ((void (__fastcall *)(int (***)()))v66[3])(v6);
             ((void (__fastcall *)(int (***)()))v66[3])(v6);
             v10 = v67;
-            (*(void (__fastcall **)(_DWORD *))(dword_60C89490[6] + 12))(&dword_60C89490[6]);
+            (*(void (__fastcall **)(_DWORD *))(arr_dword_60C89490[6] + 12))(&arr_dword_60C89490[6]);
             v9 = 3;
-            if ( v10 != (int *)dword_60C89490[7] )
+            if ( v10 != (int *)arr_dword_60C89490[7] )
             {
-              for ( n = 1; *((unsigned __int8 *)v67 + n - 1) == *(unsigned __int8 *)(dword_60C89490[7] + n - 1); n += 2 )
+              for ( n = 1; *((unsigned __int8 *)v67 + n - 1) == *(unsigned __int8 *)(arr_dword_60C89490[7] + n - 1); n += 2 )
               {
                 if ( !*((_BYTE *)v67 + n - 1) )
                   goto LABEL_146;
-                if ( n >= 524289 || *((unsigned __int8 *)v67 + n) != *(unsigned __int8 *)(dword_60C89490[7] + n) )
+                if ( n >= 524289 || *((unsigned __int8 *)v67 + n) != *(unsigned __int8 *)(arr_dword_60C89490[7] + n) )
                   break;
                 if ( !*((_BYTE *)v67 + n) )
                   goto LABEL_146;

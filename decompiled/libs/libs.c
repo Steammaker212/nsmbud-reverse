@@ -268590,7 +268590,7 @@ sub_6094428C__LABEL_13:
     sub_609A5C60(&v70, v2, v69);
     v8 = (*(int (__fastcall **)(int))(*(_DWORD *)v56 + 28))(v56);
     v67 = &`vtable for'sead::SafeStringBase_char;
-    v68 = off_60C5E518[v8 - 9];
+    v68 = arr_off_60C5E518[v8 - 9];
     ((void (__fastcall *)(int (***)()))v70[3])(&v70);
     ((void (__fastcall *)(int (***)()))v70[3])(&v70);
     v9 = v71;
@@ -269449,7 +269449,7 @@ sub_60945324__LABEL_13:
     sub_609A5C60(&v75, v2, v74);
     v8 = (*(int (__fastcall **)(int))(*(_DWORD *)v59 + 28))(v59);
     v72 = &`vtable for'sead::SafeStringBase_char;
-    v73 = off_60C5E588[v8 - 9];
+    v73 = arr_off_60C5E588[v8 - 9];
     ((void (__fastcall *)(int (***)()))v75[3])(&v75);
     ((void (__fastcall *)(int (***)()))v75[3])(&v75);
     v9 = v76;
@@ -283078,7 +283078,7 @@ s_sOrder_d_ref__LABEL_111:
   *(_DWORD *)(a1 + 68) = *(_DWORD *)(a1 + 44);
   if ( *(_BYTE *)(a1 + 86) )
   {
-    v169 = flt_60B46820[*(char *)(a1 + 86)] * 0.5;
+    v169 = arr_flt_60B46820[*(char *)(a1 + 86)] * 0.5;
     v170 = (float)(v167 + v165) * 0.5;
     v171 = v169 * (float)(v167 - v165);
     v172 = (float)(v168 + v166) * 0.5;
@@ -298493,7 +298493,7 @@ s_sOrder_d_ref__LABEL_111:
   v9 = 0x15F6F2u;
   do
   {
-    v10 = off_60C5EC2C[v7];
+    v10 = arr_off_60C5EC2C[v7];
     v11 = (const char *)sub_6091AE90(v9);
     sub_604209A4(&v51, "%s.%s", v10, v11);
     v12 = (*(int (__fastcall **)(int, int (***)(), _DWORD))(*(_DWORD *)a2 + 24))(a2, &v51, 0);

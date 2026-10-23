@@ -10821,7 +10821,7 @@ Player_animSetCarry_load__LABEL_317:
     }
     if ( v10 == 3 )
     {
-      v11 = &dword_60CBFBC4[13 * a5];
+      v11 = &arr_dword_60CBFBC4[13 * a5];
       v13 = (_BYTE *)v11[7];
       v12 = (const void **)(v11 + 7);
       if ( *v13 )

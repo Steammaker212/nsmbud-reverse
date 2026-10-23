@@ -47428,3 +47428,24 @@
 #define arr_word_60CD08AA ((uint16_t *)(uintptr_t)(0x60CD08AA))
 
 #endif /* NSMBUDX_DATA_H */
+
+/* Array views for labels the recovered units subscript but the exporter listed without one. */
+#define arr_dword_6014E620 ((int32_t *)(uintptr_t)(0x6014E620))
+#define arr_dword_6014E8A0 ((int32_t *)(uintptr_t)(0x6014E8A0))
+#define arr_dword_60AF76E8 ((int32_t *)(uintptr_t)(0x60AF76E8))
+#define arr_dword_60AF7A60 ((int32_t *)(uintptr_t)(0x60AF7A60))
+#define arr_dword_60C89490 ((int32_t *)(uintptr_t)(0x60C89490))
+#define arr_dword_60C8D840 ((int32_t *)(uintptr_t)(0x60C8D840))
+#define arr_dword_60CBFBC4 ((int32_t *)(uintptr_t)(0x60CBFBC4))
+#define arr_flt_60B0A898 ((float *)(uintptr_t)(0x60B0A898))
+#define arr_flt_60B0D154 ((float *)(uintptr_t)(0x60B0D154))
+#define arr_flt_60B0D3C0 ((float *)(uintptr_t)(0x60B0D3C0))
+#define arr_flt_60B0D9D0 ((float *)(uintptr_t)(0x60B0D9D0))
+#define arr_flt_60B46820 ((float *)(uintptr_t)(0x60B46820))
+#define arr_off_60C5CB04 ((void * *)(uintptr_t)(0x60C5CB04))
+#define arr_off_60C5E518 ((void * *)(uintptr_t)(0x60C5E518))
+#define arr_off_60C5E588 ((void * *)(uintptr_t)(0x60C5E588))
+#define arr_off_60C5EC2C ((void * *)(uintptr_t)(0x60C5EC2C))
+#define arr_off_60C60D30 ((void * *)(uintptr_t)(0x60C60D30))
+#define arr_off_60C60DB8 ((void * *)(uintptr_t)(0x60C60DB8))
+#define arr_off_60C60DD0 ((void * *)(uintptr_t)(0x60C60DD0))

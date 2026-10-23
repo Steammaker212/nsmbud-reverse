@@ -512,18 +512,18 @@ LABEL_90:
               goto LABEL_127;
             if ( ((unsigned int)dword_60C8D840 & ~(1612877116 << v31) & 1) == 0 && _cxa_guard_acquire(dword_60C8D840) )
             {
-              dword_60C8D840[1] = 871;
-              dword_60C8D840[2] = 872;
-              dword_60C8D840[3] = 873;
-              dword_60C8D840[4] = 874;
-              dword_60C8D840[5] = 875;
-              dword_60C8D840[6] = 876;
-              dword_60C8D840[7] = 877;
+              arr_dword_60C8D840[1] = 871;
+              arr_dword_60C8D840[2] = 872;
+              arr_dword_60C8D840[3] = 873;
+              arr_dword_60C8D840[4] = 874;
+              arr_dword_60C8D840[5] = 875;
+              arr_dword_60C8D840[6] = 876;
+              arr_dword_60C8D840[7] = 877;
               _cxa_guard_release(dword_60C8D840);
             }
             for ( n = 1; n != 8; ++n )
             {
-              v12 = dword_60C8D840[n];
+              v12 = arr_dword_60C8D840[n];
               v33 = sub_6022A7E4(*(_DWORD *)(v89 + 4), v98);
               memset(&v103, 0, sizeof(v103));
               v103.profile = Profile::get(v12);

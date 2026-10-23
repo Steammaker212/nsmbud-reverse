@@ -175,13 +175,13 @@ int *__fastcall sub_6082756C(int a1)
       v25 = 0;
       if ( v19 <= 6 )
       {
-        v25 = dword_60B0DEC0[v19];
-        v24 = dword_60B0DEA0[v19];
-        v23 = dword_60B0DE80[v19];
-        v22 = dword_60B0DE60[v19];
-        v21 = dword_60B0DE40[v19];
-        v20 = dword_60B0DE20[v19];
-        v18 = dword_60B0DE00[v19];
+        v25 = arr_dword_60B0DEC0[v19];
+        v24 = arr_dword_60B0DEA0[v19];
+        v23 = arr_dword_60B0DE80[v19];
+        v22 = arr_dword_60B0DE60[v19];
+        v21 = arr_dword_60B0DE40[v19];
+        v20 = arr_dword_60B0DE20[v19];
+        v18 = arr_dword_60B0DE00[v19];
       }
     }
     else

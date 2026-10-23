@@ -513,7 +513,7 @@ LABEL_91:
                     v112 = 0;
                     v113 = *(_DWORD *)(a1 + 304);
                     v114 = *(_DWORD *)(a1 + 308);
-                    v137 = *(float *)&dword_60AF76E8[v6];
+                    v137 = *(float *)&arr_dword_60AF76E8[v6];
                     v91 = -1;
                     v107 = v108 + (float)(*v128 * 8.0);
                     v109 = v110 + (float)(*v130 * 8.0);

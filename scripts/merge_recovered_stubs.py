@@ -101,6 +101,29 @@ def main(argv):
         else:
             seen[name] = va
 
+    # A `j_` thunk such as `int j_nullsub_655() { return nullsub_655(); }` forwards to a nullsub that returns
+    # void, so the thunk's `return <void-expression>` is a type error. Rewrite forwarders whose single statement is
+    # `return TARGET();` and whose target returns void into plain calls followed by `return`.
+    void_names = set()
+    for _va, nm, _sz, bd in bodies:
+        if re.search(r"(?m)^void\s+(?:__\w+\s+)?%s\s*\(" % re.escape(nm), bd):
+            void_names.add(nm)
+
+    fixed_thunks = 0
+    for i, (va, nm, sz, bd) in enumerate(bodies):
+        m = re.search(r"\breturn\s+(\w+)\s*\(\s*\)\s*;", bd)
+        if m and m.group(1) in void_names:
+            # Make the THUNK void too, rather than inventing `return 0;`. A `j_` node has no independent
+            # signature of its own -- it is an alias for its target -- so matching the target is the faithful
+            # fix, and it avoids a fabricated return value implying behaviour the function does not have.
+            bd2 = re.sub(r"(?m)^([A-Za-z_][\w \t\*]*?)\s+((?:__\w+\s+)?%s)\s*\(" % re.escape(nm),
+                         lambda mm: "void " + mm.group(2) + "(", bd, count=1)
+            bd2 = bd2.replace(m.group(0), "%s();" % m.group(1))
+            bodies[i] = (va, nm, sz, bd2)
+            fixed_thunks += 1
+    if fixed_thunks:
+        print("  thunk return-type fixes: %d" % fixed_thunks)
+
     print("  stub bodies: %d" % len(bodies))
 
     # A name that the corpus headers already declare must keep THEIR signature, or clang reports a conflicting
@@ -142,6 +165,20 @@ def main(argv):
     if fixed:
         print("  signature-matched to corpus headers: %d" % fixed)
 
+        # A j_ thunk calls its target before the target is defined, so the call is an implicit `int` declaration
+        # and the later `void` definition conflicts (12+ errors). Emitting a prototype for every stub first fixes
+        # the whole class at once.
+        protos = []
+        for va, name, size, body in sorted(bodies, key=lambda b: b[0]):
+            mm = re.search(r"(?m)^([A-Za-z_][\w \t\*]*?)\s+((?:__\w+\s+)?[A-Za-z_]\w*)\s*\(", body)
+            if not mm:
+                continue
+            protos.append("%s %s();" % (mm.group(1).strip(), mm.group(2).split()[-1]))
+        protos = sorted(set(protos))
+        note = ("\n/* Forward prototypes. A j_ thunk calls its target before the target is defined, which would\n"
+                " * otherwise be an implicit `int` declaration and conflict with the `void` definition that follows. */\n"
+                + "\n".join(protos) + "\n")
+
     if write:
         os.makedirs(os.path.dirname(OUT), exist_ok=True)
         chunks = []
@@ -154,7 +191,7 @@ def main(argv):
                 "%s" % (name, va - BASE, size, body))
         open(OUT, "w", encoding="utf-8", newline="").write(
             '#include "nsmbudx_prelude.h"\n'
-            '#include "nsmbudx_recovered_deps.h"\n\n'
+            '#include "nsmbudx_recovered_deps.h"\n' + note + '\n'
             "/* Stub functions from main.i64: nullsub_N (empty), j_XXXX (jump thunk) and sub_ bodies of <= 8 bytes.\n"
             " *\n"
             " * They are emitted so that every function in the database has a readable definition. Their bodies are\n"

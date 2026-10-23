@@ -249,7 +249,7 @@ LABEL_44:
               {
                 v37 = dword_6014E620;
                 if ( v36 > 0.0 )
-                  v37 = &dword_6014E620[1];
+                  v37 = &arr_dword_6014E620[1];
                 v38 = *(float *)v37;
               }
               if ( v34 <= 0.0 )
@@ -410,7 +410,7 @@ LABEL_96:
   {
     v64 = dword_6014E8A0;
     if ( v63 > 0.0 )
-      v64 = &dword_6014E8A0[1];
+      v64 = &arr_dword_6014E8A0[1];
     v65 = *(float *)v64;
   }
   if ( v61 <= 0.0 )

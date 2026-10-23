@@ -113,7 +113,7 @@ LABEL_13:
     sub_609A5C60(&v70, v2, v69);
     v8 = (*(int (__fastcall **)(int))(*(_DWORD *)v56 + 28))(v56);
     v67 = &`vtable for'sead::SafeStringBase_char;
-    v68 = off_60C5E518[v8 - 9];
+    v68 = arr_off_60C5E518[v8 - 9];
     ((void (__fastcall *)(int (***)()))v70[3])(&v70);
     ((void (__fastcall *)(int (***)()))v70[3])(&v70);
     v9 = v71;
