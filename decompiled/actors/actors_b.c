@@ -9641,7 +9641,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v17 == (*(int (**)(void))(MEMORY[0xC908C0] + 8))()) )
       {
         if ( *(float *)(a1 + 108) <= *(float *)(MEMORY[0xCC6484] + 112) )
-          Kanibo__onExecute(MEMORY[0xC9A1F0], *(char *)(a1 + 6298));
+          Kanibo__onExecute(MEMORY[0xC9A1F0]); /* 1 trailing argument(s) dropped: callee takes 1 (*(char *)(a1 + 6298)) */
       }
     }
     return 1;
@@ -33960,12 +33960,12 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       {
   sub_6033A830__LABEL_8:
         if ( v9 == 0x80000000 )
-          return sub_6033AA2C(a1, 756416512) ^ 1;
+          return sub_6033AA2C(a1) /* 1 trailing argument(s) dropped: callee takes 1 (756416512) */ ^ 1;
         v9 = -v9;
       }
   sub_6033A830__LABEL_10:
       if ( v9 > 0x2D160000 )
-        return sub_6033AA2C(a1, 756416512) ^ 1;
+        return sub_6033AA2C(a1) /* 1 trailing argument(s) dropped: callee takes 1 (756416512) */ ^ 1;
   sub_6033A830__LABEL_12:
       v5 = 1;
       if ( v6 == v7 || !v8 && (v6 ^ 1) != 1 )
@@ -77816,7 +77816,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
   
     SE_EMY_DOWN_SYNC_ref(*(_DWORD *)(MEMORY[0xC7B420] + 240), (float *)(a1 + 108));
     sub_6000A454(MEMORY[0xC7B420]);
-    v2 = Pokey__vf15C(a1 + 6292, *(_DWORD *)(MEMORY[0xC7B420] + 240));
+    v2 = Pokey__vf15C(a1 + 6292); /* 1 trailing argument(s) dropped: callee takes 1 (*(_DWORD *)(MEMORY[0xC7B420] + 240)) */
     v4[0] = MEMORY[0xB3B944];
     v4[1] = MEMORY[0xB3B948];
     v4[2] = 0;
@@ -91839,7 +91839,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     v24 = *(unsigned __int16 *)(a1 + 6354);
     if ( *(_WORD *)(a1 + 6354) )
       *(_WORD *)(a1 + 6354) = --v24;
-    sub_6039A7B4(a1, v24);
+    sub_6039A7B4(a1); /* 1 trailing argument(s) dropped: callee takes 1 (v24) */
     sub_60378D2C(a1 + 6444);
     if ( v2 )
       v2 = 0x40000;
@@ -136103,7 +136103,7 @@ sub_603B7478__LABEL_57:
   {
     _DWORD *result; // r0
   
-    result = (_DWORD *)sub_603E4258(a1, 12962608);
+    result = (_DWORD *)sub_603E4258(a1); /* 1 trailing argument(s) dropped: callee takes 1 (12962608) */
     *result = 12553516;
     return result;
   }
@@ -136394,7 +136394,7 @@ sub_603B7478__LABEL_57:
   {
     _DWORD *result; // r0
   
-    result = (_DWORD *)sub_603E4258(a1, 12962608);
+    result = (_DWORD *)sub_603E4258(a1); /* 1 trailing argument(s) dropped: callee takes 1 (12962608) */
     *result = 12553660;
     result[6] = 0;
     return result;
@@ -136514,7 +136514,7 @@ sub_603B7478__LABEL_57:
   {
     int result; // r0
   
-    result = sub_603E4258(a1, 12962608);
+    result = sub_603E4258(a1); /* 1 trailing argument(s) dropped: callee takes 1 (12962608) */
     *(_DWORD *)result = 12553708;
     *(_DWORD *)(result + 24) = a2;
     *(_BYTE *)(result + 28) = 0;
@@ -137048,7 +137048,7 @@ sub_603B7478__LABEL_57:
   {
     _DWORD *result; // r0
   
-    result = (_DWORD *)sub_603E4258(a1, 12962608);
+    result = (_DWORD *)sub_603E4258(a1); /* 1 trailing argument(s) dropped: callee takes 1 (12962608) */
     *result = 12553820;
     result[6] = a2;
     return result;
@@ -137620,7 +137620,7 @@ sub_603B7478__LABEL_57:
  * ============================================================================ */
   _DWORD *__fastcall sub_603E6320(_DWORD *a1)
   {
-    sub_603E4258(a1, 12962608);
+    sub_603E4258(a1); /* 1 trailing argument(s) dropped: callee takes 1 (12962608) */
     *a1 = 12553916;
     a1[13] = 0;
     a1[14] = 12554000;
@@ -138482,7 +138482,7 @@ sub_603B7478__LABEL_57:
  * ============================================================================ */
   int __fastcall sub_603E75B8(int a1)
   {
-    sub_603E4258(a1, 12962608);
+    sub_603E4258(a1); /* 1 trailing argument(s) dropped: callee takes 1 (12962608) */
     *(_DWORD *)a1 = 12554076;
     *(_DWORD *)(a1 + 24) = -1;
     *(_DWORD *)(a1 + 148) = 0;
@@ -140294,7 +140294,7 @@ sub_603B7478__LABEL_57:
  * ============================================================================ */
   int __fastcall sub_603E9E40(int a1, int a2)
   {
-    sub_603E4258(a1, 12962608);
+    sub_603E4258(a1); /* 1 trailing argument(s) dropped: callee takes 1 (12962608) */
     *(_DWORD *)a1 = 12554332;
     *(_DWORD *)(a1 + 24) = 0;
     *(_DWORD *)(a1 + 28) = a2;
@@ -141206,7 +141206,7 @@ sub_603B7478__LABEL_57:
  * ============================================================================ */
   _DWORD *__fastcall sub_603EB260(_DWORD *a1, int a2)
   {
-    sub_603E4258(a1, 12962608);
+    sub_603E4258(a1); /* 1 trailing argument(s) dropped: callee takes 1 (12962608) */
     *a1 = 12554540;
     a1[6] = a2;
     a1[8] = 0;
@@ -145454,7 +145454,7 @@ sub_603B7478__LABEL_57:
     int v34; // [sp+4h] [bp-8h] BYREF
     const char *v35; // [sp+8h] [bp-4h]
   
-    if ( !*(_BYTE *)(MEMORY[0xC9A230] + 2084) && !sub_6040E510(MEMORY[0xC9A684], a2) )
+    if ( !*(_BYTE *)(MEMORY[0xC9A230] + 2084) && !sub_6040E510(MEMORY[0xC9A684]) /* 1 trailing argument(s) dropped: callee takes 1 (a2) */ )
       *(_BYTE *)(MEMORY[0xCC6C2C] + 286) |= 1u;
     Registry_iterateAndRegister(a1 + 196, 0);
     Registry_iterateAndRegister(a1 + 600, 1);
@@ -146614,7 +146614,7 @@ sub_603B7478__LABEL_57:
     }
     if ( sub_6040E3D0(MEMORY[0xC9A684]) != 1 )
     {
-      if ( sub_6040E510(MEMORY[0xC9A684], v10) != 1 || SE_SYS_SKIP_DEMO_ref(1) )
+      if ( sub_6040E510(MEMORY[0xC9A684]) /* 1 trailing argument(s) dropped: callee takes 1 (v10) */ != 1 || SE_SYS_SKIP_DEMO_ref(1) )
         goto sub_603F38C8__LABEL_68;
       goto sub_603F38C8__LABEL_33;
     }
@@ -150208,7 +150208,7 @@ sub_603B7478__LABEL_57:
     if ( v4 != -1 )
       v6 = v5;
     if ( v6 )
-      sub_603F692C(a1 + 272, v5);
+      sub_603F692C(a1 + 272); /* 1 trailing argument(s) dropped: callee takes 1 (v5) */
   }
   *(_BYTE *)(a1 + 733) = *(_BYTE *)(a1 + 288);
   *(_BYTE *)(a1 + 734) = *(_BYTE *)(a1 + 289);
@@ -150326,7 +150326,7 @@ sub_603F8408__LABEL_18:
   if ( v23 )
     v22 = sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v23);
   sub_604117C4(0);
-  sub_60413E08(dword_60C9A698, 0);
+  sub_60413E08(dword_60C9A698); /* 1 trailing argument(s) dropped: callee takes 1 (0) */
   (*(void (__fastcall **)(int))(*(_DWORD *)v24 + 20))(v24);
   if ( v22 != 1 )
     sead__HeapMgr__setCurrentHeap_(sead__HeapMgr__sInstance, v22);
@@ -150706,7 +150706,7 @@ sub_603F8408__LABEL_96:
         }
         v3 = MEMORY[0xC9A230];
         v4 = MEMORY[0xC9A684];
-        if ( !sub_6040E510(MEMORY[0xC9A684], a2) )
+        if ( !sub_6040E510(MEMORY[0xC9A684]) /* 1 trailing argument(s) dropped: callee takes 1 (a2) */ )
         {
           v6 = sub_6040E438(v4);
           v7 = v6 == 0;
@@ -150718,7 +150718,7 @@ sub_603F8408__LABEL_96:
             a1[49] = sub_604E52B8(v8);
           }
         }
-        if ( !sub_6040E510(v4, v5) && !sub_6040E3D0(v4) )
+        if ( !sub_6040E510(v4) /* 1 trailing argument(s) dropped: callee takes 1 (v5) */ && !sub_6040E3D0(v4) )
         {
           v9 = sub_6040E438(v4);
           v10 = v9 == 0;
@@ -150750,7 +150750,7 @@ sub_603F8408__LABEL_96:
           v38 = __operator_new(3608);
           a1[57] = sub_60549CD0(v38);
         }
-        if ( sub_6040E510(v4, v11) == 1 )
+        if ( sub_6040E510(v4) /* 1 trailing argument(s) dropped: callee takes 1 (v11) */ == 1 )
         {
           v39 = __operator_new(3632);
           a1[50] = sub_60550438(v39);
@@ -151118,7 +151118,7 @@ sub_603F8408__LABEL_96:
     sub_604091B0(MEMORY[0xC9A1F0]);
     if ( (*(_BYTE *)(MEMORY[0xCC6D78] + 44) & 1) != 0 )
       return nullsub_64(0);
-    result = sub_6040E510(MEMORY[0xC9A684], v8);
+    result = sub_6040E510(MEMORY[0xC9A684]); /* 1 trailing argument(s) dropped: callee takes 1 (v8) */
     if ( result == 1 )
       return nullsub_64(0);
     return result;
@@ -152694,7 +152694,7 @@ sub_603F8408__LABEL_96:
     sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1);
     *(_BYTE *)a1[1] = MEMORY[0xB3BA34];
     *a1 = 12555772;
-    sead__BufferedSafeStringBase_char__formatV(a1, a2);
+    sead__BufferedSafeStringBase_char__formatV(a1); /* 1 trailing argument(s) dropped: callee takes 1 (a2) */
     return a1;
   }
 
@@ -155108,7 +155108,7 @@ sub_603F8408__LABEL_96:
         *(v7 - 654) = v8;
         sub_6042BD4C(v7 - 206, v7 - 652);
         v13 = __operator_new(1224);
-        *v7 = sub_60436A4C(v13, -2, -2);
+        *v7 = sub_60436A4C(v13); /* 2 trailing argument(s) dropped: callee takes 1 (-2, -2) */
         sub_604186F8(v22);
         sub_6042A9E8(MEMORY[0xC9C0FC], v22, 4);
         v21 = v8;
@@ -172428,7 +172428,7 @@ sub_603F8408__LABEL_96:
     *(_BYTE *)v16 = MEMORY[0xB3BA34];
     v15 = 12424616;
     v5 = MEMORY[0xC9BBD4];
-    result = sub_60905394(a1, v6);
+    result = sub_60905394(a1); /* 1 trailing argument(s) dropped: callee takes 1 (v6) */
     if ( !result )
     {
       sub_60905500(a1, &v15, 128);
@@ -174218,7 +174218,7 @@ sub_603F8408__LABEL_96:
         (*(void (__fastcall **)(int))(*(_DWORD *)v4 + 4))(v4);
       a1[55] = 0;
     }
-    sub_6083EACC(a1 + 51, *(_DWORD *)(MEMORY[0xCCFC8C] + 24));
+    sub_6083EACC(a1 + 51); /* 1 trailing argument(s) dropped: callee takes 1 (*(_DWORD *)(MEMORY[0xCCFC8C] + 24)) */
     if ( a1[54] )
       __operator_delete(0);
     if ( a1[52] )
@@ -174226,7 +174226,7 @@ sub_603F8408__LABEL_96:
     sub_60916668(MEMORY[0xCCFC8C], a1[46]);
     a1[46] = -1;
     a1[47] = -1;
-    sub_6083B4C8(a1 + 16, *(_DWORD *)(MEMORY[0xCCFC8C] + 24));
+    sub_6083B4C8(a1 + 16); /* 1 trailing argument(s) dropped: callee takes 1 (*(_DWORD *)(MEMORY[0xCCFC8C] + 24)) */
     nullsub_1345(a1 + 8, *(_DWORD *)(MEMORY[0xCCFC8C] + 24));
     if ( a1[13] )
       __operator_delete(0);
@@ -176380,7 +176380,7 @@ sub_603F8408__LABEL_96:
     v13 = a1 + 406;
     do
     {
-      result = sub_6083E2DC(v11, v12);
+      result = sub_6083E2DC(v11); /* 1 trailing argument(s) dropped: callee takes 1 (v12) */
       if ( result )
       {
         *v13 = (unsigned int)sub_60916740(
@@ -177936,7 +177936,7 @@ sub_603F8408__LABEL_96:
       v7 = 0;
   sub_6041E21C__LABEL_28:
       v17 = sub_6083DBF4(a3, v7, 0);
-      v16 = *(_QWORD *)sub_6083DC04(a3, v7, 0);
+      v16 = *(_QWORD *)sub_6083DC04(a3); /* 2 trailing argument(s) dropped: callee takes 1 (v7, 0) */
       *(_DWORD *)a1 = v17;
       *(_QWORD *)(a1 + 8) = v16;
       return v16;
@@ -178436,7 +178436,7 @@ sub_603F8408__LABEL_96:
   sub_6041EAB4__LABEL_34:
       *(_BYTE *)a1 = 1;
       *(_DWORD *)(a1 + 4) = sub_6083DC18(a4, v9[6], *v24, v24[1], 0);
-      result = sub_6083DBE0(a4, *v24, v24[1]);
+      result = sub_6083DBE0(a4); /* 2 trailing argument(s) dropped: callee takes 1 (*v24, v24[1]) */
       *(_DWORD *)(a1 + 8) = result;
     }
     else
@@ -179977,7 +179977,7 @@ sub_603F8408__LABEL_96:
     sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1);
     *(_BYTE *)a1[1] = MEMORY[0xB3BA34];
     *a1 = 12557936;
-    sead__BufferedSafeStringBase_char__formatV(a1, a2);
+    sead__BufferedSafeStringBase_char__formatV(a1); /* 1 trailing argument(s) dropped: callee takes 1 (a2) */
     return a1;
   }
 
@@ -186761,7 +186761,7 @@ sub_603F8408__LABEL_96:
   
     v2 = a1 + 284;
     *a1 = 12559656;
-    sub_60908A98(a1 + 284, 0);
+    sub_60908A98(a1 + 284); /* 1 trailing argument(s) dropped: callee takes 1 (0) */
     v3 = a1[181];
     if ( v3 )
       (*(void (__fastcall **)(int))(*(_DWORD *)v3 + 4))(v3);
@@ -191044,7 +191044,7 @@ sub_603F8408__LABEL_96:
           if ( v23 > 14 )
             break;
           v25 = __operator_new_al(1224, a2, 4);
-          sub_60436A4C(v25, -2, -2);
+          sub_60436A4C(v25); /* 2 trailing argument(s) dropped: callee takes 1 (-2, -2) */
           v33 = v35[j] & 0xFFFFFF | 0x1000000;
           sub_604186F8((int)v32);
           sub_6042A9E8(MEMORY[0xC9C0FC], v32);
@@ -191137,7 +191137,7 @@ sub_603F8408__LABEL_96:
         if ( v3 > 14 )
           break;
         v6 = __operator_new_al(1224, a2, 4);
-        sub_60436A4C(v6, -2, -2);
+        sub_60436A4C(v6); /* 2 trailing argument(s) dropped: callee takes 1 (-2, -2) */
         v14 = v4 & 0xFFFFFF | 0x5000000;
         sub_604186F8((int)v13);
         sub_6042A9E8(MEMORY[0xC9C0FC], v13);
@@ -192804,7 +192804,7 @@ sub_603F8408__LABEL_96:
             v10 = *(_DWORD *)(v9 + 64);
             sub_60835494();
             if ( v10 )
-              sub_60836614(v10, *(_DWORD *)(MEMORY[0xCCFC8C] + 24));
+              sub_60836614(v10); /* 1 trailing argument(s) dropped: callee takes 1 (*(_DWORD *)(MEMORY[0xCCFC8C] + 24)) */
             if ( v6 == i )
               break;
             v3 = *v4;
@@ -193189,7 +193189,7 @@ sub_603F8408__LABEL_96:
     v171 = v169;
     v174 = 48;
     sub_6086C8F0(&v167);
-    result = sub_6042A0C8(&v214, v176, 16);
+    result = sub_6042A0C8(&v214); /* 2 trailing argument(s) dropped: callee takes 1 (v176, 16) */
     if ( result )
     {
       v26 = a1;

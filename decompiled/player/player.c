@@ -40803,7 +40803,7 @@ sub_60799BA0__LABEL_140:
     }
     if ( (v8 & 0x40000) != 0 )
     {
-      if ( sub_60786A8C(a1 + 688, v7) == 1 )
+      if ( sub_60786A8C(a1 + 688) /* 1 trailing argument(s) dropped: callee takes 1 (v7) */ == 1 )
       {
         Player_checkTwoFlagsAndDispatch((unsigned __int8 *)a1, (int)"SE_PLY_SWIM", 0, 0);
         if ( (*(_BYTE *)(a1 + 1216) & 1) != 0 )
@@ -40826,7 +40826,7 @@ sub_60799BA0__LABEL_140:
     v12 = *(_DWORD *)(a1 + 12396);
     if ( !v12 )
     {
-      if ( sub_60786A8C(a1 + 688, v7) == 1 )
+      if ( sub_60786A8C(a1 + 688) /* 1 trailing argument(s) dropped: callee takes 1 (v7) */ == 1 )
         goto SE_PLY_SWIM_ref_2__LABEL_44;
       if ( sub_607869C4(a1 + 688) != 1 )
         return;
@@ -40860,7 +40860,7 @@ sub_60799BA0__LABEL_140:
         }
         return;
       }
-      if ( sub_60786A8C(a1 + 688, v14) == 1 )
+      if ( sub_60786A8C(a1 + 688) /* 1 trailing argument(s) dropped: callee takes 1 (v14) */ == 1 )
       {
   SE_PLY_SWIM_ref_2__LABEL_44:
         *v13 = 1;
@@ -40887,7 +40887,7 @@ sub_60799BA0__LABEL_140:
     v20 = *(char *)(a1 + 84);
     v21 = (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 156))(a1, *(_DWORD *)(a1 + 1320));
     sub_60236F24(v20, a1 + 13464, arr_dword_60B0CF00[v21], (int)v28, 1);
-    if ( sub_60786A8C(a1 + 688, v22) == 1 )
+    if ( sub_60786A8C(a1 + 688) /* 1 trailing argument(s) dropped: callee takes 1 (v22) */ == 1 )
     {
       sub_60793184(*v17);
       if ( v1 > 9.0 )
@@ -41333,7 +41333,7 @@ sub_60799BA0__LABEL_140:
     int result; // r0
     const char *v5; // r1
   
-    v3 = sub_60786A8C(a1 + 688, a2);
+    v3 = sub_60786A8C(a1 + 688); /* 1 trailing argument(s) dropped: callee takes 1 (a2) */
     result = 0;
     if ( v3 == 1 )
     {

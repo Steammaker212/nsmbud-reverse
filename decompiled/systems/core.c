@@ -17131,7 +17131,7 @@ sub_6000FD08__LABEL_240:
     sead__BufferedSafeStringBase_char__assureTerminationImpl_(a1);
     *(_BYTE *)a1[1] = MEMORY[0xB3BA34];
     *a1 = 12322248;
-    sead__BufferedSafeStringBase_char__formatV(a1, a2);
+    sead__BufferedSafeStringBase_char__formatV(a1); /* 1 trailing argument(s) dropped: callee takes 1 (a2) */
     return a1;
   }
 
@@ -109785,7 +109785,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
       }
       else
       {
-        Bowser__onExecute(a1, v8);
+        Bowser__onExecute(a1); /* 1 trailing argument(s) dropped: callee takes 1 (v8) */
       }
     }
     v10 = *(float *)(a1 + 144);

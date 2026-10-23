@@ -5438,7 +5438,7 @@ static inline unsigned int uxtb16(unsigned int x)
         StateMgr__execute((_DWORD *)(a1 + 532));
         Table_getEntryById(*(_DWORD *)(a1 + 4), 14, 0);
       }
-      return sub_604DE9B0(a1, 1, 0);
+      return sub_604DE9B0(a1); /* 2 trailing argument(s) dropped: callee takes 1 (1, 0) */
     }
     return result;
   }
@@ -15745,7 +15745,7 @@ static inline unsigned int uxtb16(unsigned int x)
     {
       v9 = (int *)(a1 + 5968);
     }
-    result = sub_60834F1C(&dword_60CA04AC, v6, v4, v5);
+    result = sub_60834F1C(&dword_60CA04AC); /* 3 trailing argument(s) dropped: callee takes 1 (v6, v4, v5) */
     v11 = *v7;
     v12 = result;
     if ( v11 )
@@ -25886,7 +25886,7 @@ static inline unsigned int uxtb16(unsigned int x)
         v5 = 0;
         if ( *(float *)(v3 + 44) != 0.0 )
         {
-          v6 = sub_608502FC(v3, 0);
+          v6 = sub_608502FC(v3); /* 1 trailing argument(s) dropped: callee takes 1 (0) */
           v5 = 4;
           if ( !v6 )
           {
@@ -35795,7 +35795,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_604B4B80(a1);
     sub_604B4EE4(a1);
     if ( *(_BYTE *)(a1 + 14936) )
-      sub_604DE9B0(a1, 1, 1);
+      sub_604DE9B0(a1); /* 2 trailing argument(s) dropped: callee takes 1 (1, 1) */
     result = MEMORY[0xC99D70];
     *(_BYTE *)(MEMORY[0xC99D70] + 1872) = 0;
     return result;
@@ -46835,10 +46835,10 @@ static inline unsigned int uxtb16(unsigned int x)
       stub_return0_000288();
       _cxa_guard_release_0(&unk_60CA2EF0);
     }
-    sub_6050D95C(a1 + 14192, a1 + 48, &dword_60CA2F88);
-    sub_6050D95C(a1 + 17796, a1 + 48, &dword_60CA2F90);
-    sub_6050D95C(a1 + 21400, a1 + 48, &dword_60CA2F98);
-    return sub_6050D95C(a1 + 25004, a1 + 48, &dword_60CA2FA0);
+    sub_6050D95C(a1 + 14192); /* 2 trailing argument(s) dropped: callee takes 1 (a1 + 48, &dword_60CA2F88) */
+    sub_6050D95C(a1 + 17796); /* 2 trailing argument(s) dropped: callee takes 1 (a1 + 48, &dword_60CA2F90) */
+    sub_6050D95C(a1 + 21400); /* 2 trailing argument(s) dropped: callee takes 1 (a1 + 48, &dword_60CA2F98) */
+    return sub_6050D95C(a1 + 25004); /* 2 trailing argument(s) dropped: callee takes 1 (a1 + 48, &dword_60CA2FA0) */
   }
 
 /* ============================================================================
@@ -55964,7 +55964,7 @@ static inline unsigned int uxtb16(unsigned int x)
       a1[13158] = v8;
     }
     v9 = a1 + 13158;
-    v24 = sub_60834F1C(&dword_60CA4D60, v6, v4, v5);
+    v24 = sub_60834F1C(&dword_60CA4D60); /* 3 trailing argument(s) dropped: callee takes 1 (v6, v4, v5) */
     v10 = 0;
     v11 = 0;
     v12 = 13252152;
@@ -67146,7 +67146,7 @@ static inline unsigned int uxtb16(unsigned int x)
         if ( *(_BYTE *)(MEMORY[0xCC6D78] + 109032) )
           v4 = 2;
       }
-      return sub_604E633C(a1, v4);
+      return sub_604E633C(a1); /* 1 trailing argument(s) dropped: callee takes 1 (v4) */
     }
     return result;
   }
@@ -71491,7 +71491,7 @@ static inline unsigned int uxtb16(unsigned int x)
         *(_DWORD *)(a1 + 16492) = v10;
       }
     }
-    result = sub_60834F1C(&dword_60CA60D0, a2, a3, a4);
+    result = sub_60834F1C(&dword_60CA60D0); /* 3 trailing argument(s) dropped: callee takes 1 (a2, a3, a4) */
     v12 = *v6;
     v13 = result;
     if ( v12 )
@@ -88803,7 +88803,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = *(unsigned __int8 *)(a1 + 4);
     if ( (result & 1) != 0 )
     {
-      v4 = sub_6050DF0C(a1, a2);
+      v4 = sub_6050DF0C(a1); /* 1 trailing argument(s) dropped: callee takes 1 (a2) */
       return sub_60507044((_DWORD *)a1, v4);
     }
     return result;
@@ -88882,7 +88882,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60476388(v6, a2, a3);
     v10 = 1;
     sub_60474848((int)v6, &dword_60CA7A80, &v10);
-    v8 = sub_6050DF0C(a1, v7);
+    v8 = sub_6050DF0C(a1); /* 1 trailing argument(s) dropped: callee takes 1 (v7) */
     sub_60507044(a1, v8);
     v11 = 2;
     sub_604752D4((int)v6, (int)(a1 + 900), dword_60CA7A9C, &v11);
@@ -92243,7 +92243,7 @@ static inline unsigned int uxtb16(unsigned int x)
   
     if ( (*(_BYTE *)(a1 + 4) & 1) != 0 )
     {
-      v6 = sub_6050DF0C(a1, a2);
+      v6 = sub_6050DF0C(a1); /* 1 trailing argument(s) dropped: callee takes 1 (a2) */
       return sub_6050BDF8((_DWORD *)a1, v6);
     }
     else
@@ -92415,7 +92415,7 @@ static inline unsigned int uxtb16(unsigned int x)
     (*(void (__fastcall **)(_DWORD *, int *))(v16[0] + 8))(v16, &v12);
     v12 = 3;
     sub_60474848((int)v6, v14, &v12);
-    v10 = sub_6050DF0C(a1, v9);
+    v10 = sub_6050DF0C(a1); /* 1 trailing argument(s) dropped: callee takes 1 (v9) */
     return sub_6050BDF8(a1, v10);
   }
 
@@ -93509,7 +93509,7 @@ static inline unsigned int uxtb16(unsigned int x)
     result = a1[1];
     if ( (result & 1) != 0 )
     {
-      sub_6050DF0C(a1, a2);
+      sub_6050DF0C(a1); /* 1 trailing argument(s) dropped: callee takes 1 (a2) */
       v11 = 12321336;
       v12 = (const char *)dword_60CA8074;
       if ( ArrayOf20_insertEntry(a1 + 15, 0, &v11, (int)&dword_60CA8078, 0) == 1 )
@@ -93651,7 +93651,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60476388(v6, a2, a3);
     v14 = 1;
     sub_60474848((int)v6, &dword_60CA8070, &v14);
-    sub_6050DF0C(a1, v7);
+    sub_6050DF0C(a1); /* 1 trailing argument(s) dropped: callee takes 1 (v7) */
     v15 = 12321336;
     v16 = dword_60CA8074;
     result = ArrayOf20_insertEntry(v6, 0, &v15, (int)&dword_60CA8078, 0);
@@ -93995,7 +93995,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = a1[1];
     if ( (v4 & 1) != 0 )
     {
-      v5 = sub_6050DF0C(a1, a2);
+      v5 = sub_6050DF0C(a1); /* 1 trailing argument(s) dropped: callee takes 1 (a2) */
       sub_6050E6F8(a1, v5);
       v4 = a1[1];
     }
@@ -94120,7 +94120,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_60476388(v6, a2, a3);
     v10 = 3;
     sub_60474848((int)v6, &dword_60CA80DC, &v10);
-    v8 = sub_6050DF0C(a1, v7);
+    v8 = sub_6050DF0C(a1); /* 1 trailing argument(s) dropped: callee takes 1 (v7) */
     sub_6050E6F8(a1, v8);
     v10 = 1;
     sub_604751FC((int)v6, (int)(a1 + 910), &dword_60CA80B0, &v10);
@@ -140325,7 +140325,7 @@ static inline unsigned int uxtb16(unsigned int x)
     MessageQueue_postType3(v20, v17, 1);
     sub_60855928(*(_DWORD *)(a1 + 4), v17);
     sub_608589FC(a6, v17);
-    sub_608503F8(a1 + 52, *(_DWORD *)(MEMORY[0xCCF464] + 36), *(_DWORD *)(a8 + 36), *(_DWORD *)(a5 + 12));
+    sub_608503F8(a1 + 52); /* 3 trailing argument(s) dropped: callee takes 1 (*(_DWORD *)(MEMORY[0xCCF464] + 36), *(_DWORD *)(a8 + 36), *() */
     sub_60850940(a1 + 52, *(_DWORD *)(a1 + 4));
     return sub_608502F4(a1 + 52, 0);
   }
@@ -150808,7 +150808,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v3 = (int *)(a1 + 6856);
     if ( *(_DWORD *)(a1 + 6856) == 13 )
     {
-      v4 = BlockBase__vf16C(MEMORY[0xCB061C], a1 + 6980);
+      v4 = BlockBase__vf16C(MEMORY[0xCB061C]); /* 1 trailing argument(s) dropped: callee takes 1 (a1 + 6980) */
       v2 = 0;
       if ( (v4 | 1) == 3 )
       {
@@ -153689,7 +153689,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v2 = __operator_new(0x1CE0u);
-    result = (_DWORD *)sub_60562A9C(v2, a1);
+    result = (_DWORD *)sub_60562A9C(v2); /* 1 trailing argument(s) dropped: callee takes 1 (a1) */
     *result = 12590664;
     return result;
   }
@@ -154188,7 +154188,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v2 = __operator_new(7536);
-    result = (_DWORD *)sub_6056EA60(v2, a1);
+    result = (_DWORD *)sub_6056EA60(v2); /* 1 trailing argument(s) dropped: callee takes 1 (a1) */
     *result = 12592004;
     return result;
   }
@@ -154357,7 +154357,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v2 = __operator_new(7392);
-    result = (_DWORD *)sub_605736A4(v2, a1);
+    result = (_DWORD *)sub_605736A4(v2); /* 1 trailing argument(s) dropped: callee takes 1 (a1) */
     *result = 12592452;
     return result;
   }
@@ -158263,7 +158263,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v2 = __operator_new(0x1CE0u);
-    result = (_DWORD *)sub_60562A9C(v2, a1);
+    result = (_DWORD *)sub_60562A9C(v2); /* 1 trailing argument(s) dropped: callee takes 1 (a1) */
     *result = 12595776;
     return result;
   }
@@ -158724,7 +158724,7 @@ static inline unsigned int uxtb16(unsigned int x)
     _DWORD *result; // r0
   
     v2 = __operator_new(0x1CE0u);
-    result = (_DWORD *)sub_605736A4(v2, a1);
+    result = (_DWORD *)sub_605736A4(v2); /* 1 trailing argument(s) dropped: callee takes 1 (a1) */
     *result = 12597084;
     return result;
   }
@@ -179109,7 +179109,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v23 = v17 * v23;
     v27 = v27 * v17;
     sub_6059B974(a1 + 8036, (int)&v18);
-    return sub_6059BDC4(a1 + 8036, a1 + 144);
+    return sub_6059BDC4(a1 + 8036); /* 1 trailing argument(s) dropped: callee takes 1 (a1 + 144) */
   }
 
 /* ============================================================================
@@ -196985,7 +196985,7 @@ static inline unsigned int uxtb16(unsigned int x)
       case 6:
         v6 = a1[1715];
         v7 = a1[1716];
-        return (int)BlockCoinBase__executeState_BumpUp2(MEMORY[0xCAF15C], a2, v7, v6);
+        return (int)BlockCoinBase__executeState_BumpUp2(MEMORY[0xCAF15C]); /* 3 trailing argument(s) dropped: callee takes 1 (a2, v7, v6) */
       case 12:
       case 17:
         if ( sub_60465D70(MEMORY[0xC9D3E4], a1[1715]) )
@@ -196993,7 +196993,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *v4 = 12;
           v7 = a1[1716];
           v6 = a1[1715];
-          return (int)BlockCoinBase__executeState_BumpUp2(MEMORY[0xCAF15C], a2, v7, v6);
+          return (int)BlockCoinBase__executeState_BumpUp2(MEMORY[0xCAF15C]); /* 3 trailing argument(s) dropped: callee takes 1 (a2, v7, v6) */
         }
         result = 3;
         goto sub_605B5BDC__LABEL_10;
@@ -197003,7 +197003,7 @@ static inline unsigned int uxtb16(unsigned int x)
           *v4 = 12;
           v6 = a1[1715];
           v7 = a1[1716];
-          return (int)BlockCoinBase__executeState_BumpUp2(MEMORY[0xCAF15C], a2, v7, v6);
+          return (int)BlockCoinBase__executeState_BumpUp2(MEMORY[0xCAF15C]); /* 3 trailing argument(s) dropped: callee takes 1 (a2, v7, v6) */
         }
         else
         {
